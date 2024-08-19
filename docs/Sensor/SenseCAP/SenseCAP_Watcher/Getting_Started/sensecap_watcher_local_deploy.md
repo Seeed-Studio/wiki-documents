@@ -1,7 +1,7 @@
 ---
 description: This tutorial will guide on how to deploy Watcher's AI service locally off the SenseCraft service to use Watcher.
 title: 4# Deploy Watcher's AI capabilities locally
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/87.png
 slug: /watcher_local_deploy
 sidebar_position: 5
 last_update:
@@ -21,6 +21,10 @@ last_update:
     </a>
 </div><br />
 
+:::danger
+The content of this tutorial is not available at this time.
+:::
+
 SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. While Watcher can utilize SenseCraft AI services, it also provides the option to deploy AI capabilities locally on your own devices, giving you greater control, privacy, and flexibility.
 
 In this comprehensive guide, we will walk you through the process of setting up and deploying Watcher's AI services on your local devices. Whether you're using a Windows PC, a MacOS machine, or an NVIDIA® Jetson AGX Orin, we'll provide step-by-step instructions to help you harness the power of Watcher's AI capabilities in your own environment.
@@ -29,6 +33,10 @@ Throughout this guide, we'll cover the necessary software and hardware preparati
 
 
 ## Software Preparation
+
+:::danger
+The content of this tutorial is not available at this time.
+:::
 
 To utilize Watcher's local deployment capabilities, users first need to download the necessary software. The software package includes the Watcher application and the Device AI Service components, which enable users to set up and configure their local AI services.
 
@@ -118,6 +126,14 @@ Here's our response timeline after deploying AI services on some of our devices.
     </tr>
   </table>
 </div>
+
+When comparing NVIDIA Jetson AGX series products to consumer-grade graphics cards like the RTX 4090 for AI-related tasks, the Jetson AGX series offers several key advantages:
+
+1. Industrial-grade reliability: Jetson AGX series products are designed for industrial and commercial applications, which means they have a longer Mean Time Between Failures (MTBF). They are built to operate continuously, 24/7, without encountering issues. In contrast, consumer-grade graphics cards like the RTX 4090 are not designed for such demanding, round-the-clock operation and may not offer the same level of reliability.
+
+2. Compact size and low power consumption: Jetson AGX series products are designed with embedded and edge computing applications in mind. They have a smaller form factor and consume less power compared to high-end consumer graphics cards. This makes them more suitable for deployment in space-constrained environments and reduces the overall operating costs. The lower power consumption also means less heat generation, which is crucial for embedded systems and helps to minimize cooling requirements.
+
+In addition to these advantages, the Jetson AGX series offers a comprehensive software stack optimized for AI workloads, making it easier for developers to create and deploy AI applications efficiently. The combination of industrial-grade reliability, compact size, low power consumption, and optimized software stack makes the Jetson AGX series a compelling choice for AI-related projects and applications, especially when compared to consumer-grade graphics cards like the RTX 4090.
 
 ## Deployment on Windows
 

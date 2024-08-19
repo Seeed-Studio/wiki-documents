@@ -438,6 +438,12 @@ Each of these task templates has specific alarm triggering conditions based on t
 
 ## Run - Sending Task to Watcher via SenseCraft APP
 
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
+
 The SenseCraft APP allows you to send Tasks to your Watcher device. In this example, we will demonstrate the process of sending a task using one of the sample tasks provided by Watcher. Let's use the command *If you see a candles, please notify me*.
 
 **Step 1.** Open the SenseCraft APP and navigate to the chat window for your connected Watcher device.
@@ -479,6 +485,12 @@ By following these steps, you can effectively send commands to your Watcher usin
 Remember to regularly review and adjust your Watcher's settings and task flows to ensure optimal performance and alignment with your monitoring requirements. For a more detailed description and explanation of the APP's tasks and options, as well as a detailed description of the intervals, please read **[Watcher Quick Start Series 1# : Concepts and Classification of Tasks](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)** to learn more.
 
 ## Run - Sending Task to Watcher by Speaking
+
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
 
 The Watcher offers a convenient and intuitive way to send tasks or engage in conversation using voice commands, thanks to its "Push to Talk" feature. This functionality is accessible from any screen or interface on the device, making it easy to interact with the Watcher without navigating through menus. Here's a step-by-step guide on how to use this feature:
 
