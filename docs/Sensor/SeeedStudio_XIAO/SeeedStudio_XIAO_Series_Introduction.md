@@ -38,16 +38,16 @@ last_update:
 <font size={"2"}>
 	<tr>
         <th></th>
-	    <th>Seeed Studio XIAO SAMD21</th>
-	    <th>Seeed Studio XIAO RP2040</th>
-        <th>Seeed Studio XIAO RP2350</th>
-        <th>Seeed Studio XIAO nRF52840</th>
-        <th>Seeed Studio XIAO nRF52840 Sense</th>
-        <th>Seeed Studio XIAO ESP32C3</th>
-        <th>Seeed Studio XIAO ESP32C6</th>
-        <th>Seeed Studio XIAO ESP32S3</th>
-        <th>Seeed Studio XIAO ESP32S3 Sense</th>
-        <th>Seeed Studio XIAO RA4M1</th>
+	    <th><a href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">Seeed Studio XIAO SAMD21</a></th>
+	    <th><a href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">Seeed Studio XIAO RP2040</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html">Seeed Studio XIAO RP2350</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html">Seeed Studio XIAO nRF52840</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html">Seeed Studio XIAO nRF52840 Sense</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">Seeed Studio XIAO ESP32C3</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html">Seeed Studio XIAO ESP32C6</a></th>
+        <th><a href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">Seeed Studio XIAO ESP32S3</a></th>
+        <th><a href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">Seeed Studio XIAO ESP32S3 Sense</a></th>
+        <th><a href="https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html">Seeed Studio XIAO RA4M1</a></th>
 	</tr>
 	<tr>
 	    <th>SKU</th>
@@ -92,7 +92,7 @@ last_update:
 	    <th>Architecture</th>
 	    <td align="center">Cortex-M0+<br />running up to 48MHz</td>
 	    <td align="center">Dual-core Cortex-M0+<br />running up to 133 MHz</td>
-        <td align="center">Dual Cortex-M33<br />running up to 150 MHz with FPU</td>
+        <td align="center">Dual ARM Cortex-M33<br />running up to 150 MHz with FPU<br />switchable RISC‑V using dual Hazard3 RISC‑V cores</td>
 	    <td align="center">Cortex-M4<br />running up to 64 MHz</td>
 	    <td align="center">Cortex-M4<br />running up to 64 MHz</td>
         <td align="center">RISC-V<br/>running up to 160 MHz</td>
