@@ -999,6 +999,7 @@ const sidebars = {
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
+            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-60GHz',
           ],
         },{
           type: 'category',
