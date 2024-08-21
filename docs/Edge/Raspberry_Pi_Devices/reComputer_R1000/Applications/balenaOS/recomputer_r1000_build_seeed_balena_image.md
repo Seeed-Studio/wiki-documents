@@ -135,7 +135,7 @@ cp balena-image-seeed-recomputer-r100x.balenaos-img recomputer_balenaos-dev.img
 
 **Step 1**: Open the [**rpiboot**](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) software, and then the system will show the new disk
 
-**Step 2**: Open the flash tool [balenaEtcher](https://etcher.balena.io/), select the previously downloaded balena image file, then select the target disk, and finally click Burn.
+**Step 2**: Open the flash tool [balenaEtcher](https://etcher.balena.io/), select the balena image file, then select the target disk, and finally click Burn.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/burn_image.gif" alt="pir" width="700" height="auto" /></div>
 
