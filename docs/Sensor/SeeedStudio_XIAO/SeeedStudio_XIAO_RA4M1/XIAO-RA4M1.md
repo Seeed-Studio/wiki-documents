@@ -3,13 +3,13 @@ title: Getting Started with Seeed Studio XIAO RA4M1
 description: |
   XIAO RA4M1 - Smallest Dev Borad Based on 32-bit Renesas RA4M1, Arduino IDE-Ready, 19 GPIOs, RGB LED, CAN BUS, USB 2.0
 image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
-slug: /getting-started-xiao-ra4m1
+slug: /getting_started_xiao_ra4m1
 keywords:
   - XIAO
   - RA4M1
-author: Spencer
 last_update:
   date: 08/15/2024
+  author: Carla
 sidebar_position: 0
 ---
 
@@ -152,6 +152,8 @@ You need to prepare the following:
 - 1 x [Seeed Studio XIAO RA4M1](https://www.seeedstudio.com/Seeed-XIAO-RA4M1-p-5943.html?utm_source=seeed&utm_medium=wiki&utm&product=xiao-ra4m1)
 - 1 x Computer
 - 1 x USB Type-C cable
+
+<br></br>
 
 :::tip
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).

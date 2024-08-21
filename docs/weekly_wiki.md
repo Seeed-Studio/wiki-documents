@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/12/2024
+  date: 08/19/2024
   author: Frank
 ---
 
@@ -17,47 +17,86 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 12th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 19th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [reComputer R1000 with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_automation/)
+### [Start running with ESP-NOW protocol on XIAO Series](https://wiki.seeedstudio.com/xiao_esp32c3_espnow/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/HA.png" style={{width:600, height:450}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png" style={{width:800, height:'auto'}}/></div>
+<br />
 
-The reComputer r1000, designed for Building Automation Systems, features multiple isolated RS485 channels that support both high and low-speed communication. It is compatible with BACnet, Modbus RTU, and Modbus TCP/IP protocols, making it versatile for various automation needs. This guide provides a concise introduction to installing Home Assistant on the reComputer r1000, enabling seamless integration and control of your smart home devices.
+This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32 Series to communicate using this protocol,the process will be very simple,In order to enable everyone to utilize the ESP-NOW protocol in the XIAO ESP32 series,we prepare thress XIAO ESP32 types C6/C3/S3 to comuncate.
 
-### [reComputer R1000 and Modbus with Home Assistant](https://wiki.seeedstudio.com/recomputer_r1000_home_assistant_modbus/)
+### [ChatGPT - Raspberry Pi](https://wiki.seeedstudio.com/respeaker_lite_pi5/)
 
-In modern building management systems (BMS), integrating various protocols and devices is crucial for efficient monitoring and control. This guide focuses on leveraging the capabilities of Modbus communication protocols (Modbus TCP and Modbus RTU) with Home Assistant OS, using the powerful reComputer R1000, a Raspberry Pi-powered solution. Whether you're setting up a new system or enhancing an existing one, this guide will walk you through the process of connecting your Modbus devices to Home Assistant, ensuring seamless integration and control.
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-### [Use the Raspberry Pi as a NAS (Network-Attached Storage)](https://wiki.seeedstudio.com/Raspberry_Pi_as_a_NAS/)
+This project integrates voice input, large model response, and voice output functionalities using a Raspberry Pi 5. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Raspberry_Pi_NAS/Raspberry%20Pi.png" style={{width:600, height:450}}/></div>
+### [Watcher & Node-RED To p5.js Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
 
-The Raspberry Pi is a powerful microcomputer, popular among tech enthusiasts. It can be used for various DIY projects, including setting up a Network Attached Storage (NAS). In this , we will explore the following aspects:
+<div class="table-center">
+<iframe width="800" height="400" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-- Is Raspberry Pi good for NAS?
-- How to convert Raspberry Pi 5 to NAS?
-- Common Issues and Solutions When Using Raspberry Pi as a NAS
+p5.js is a JavaScript library that makes coding accessible for artists and designers. It provides an easy way to create graphics, animations, and interactive applications using a simple syntax. With features like drawing on a canvas, handling user input, and supporting multimedia, p5.js is ideal for creative coding projects, educational purposes, and digital art. Its vibrant community and extensive resources help users of all skill levels get started.
 
-### [Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection](https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/)
+### [AI NVR with reServer Jetson](https://wiki.seeedstudio.com/ai_nvr_with_jetson/)
 
-YOLOv8 (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The Raspberry-pi-AI-kit is used to accelerate inference speed, featuring a 13 tera-operations per second (TOPS) neural network inference accelerator built around the Hailo-8L chip.
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/vst.png" />
+</div>
 
-This wiki will guide you on how to use YOLOv8n for object detection with AI Kit on Raspberry Pi 5, from training to deployment.
+With the advancement of artificial intelligence technology, traditional video surveillance systems are evolving towards greater intelligence. AI NVR (Network Video Recorder) combines artificial intelligence with video surveillance technology, enabling not only the recording of video but also real-time analysis, recognition, and processing of video content. This enhances the efficiency and accuracy of security monitoring. This article will introduce how to implement an AI NVR using the NVIDIA Jetson platform.
 
-### [Seeed Studio XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/)
+### [reComputer R1000 act as OPC UA server with Node-RED](https://wiki.seeedstudio.com/recomputer_r1000_nodered_opcua_server/)
 
-The Pico SDK represents a comprehensive software development kit tailored for the Raspberry Pi RP-family of microcontrollers, with a particular focus on the XIAO RP2350 board. This SDK incorporates a wide range of libraries and tools designed to facilitate the development of advanced applications, serving both novice enthusiasts and experienced professionals. The SDK functions as a foundational platform for exploiting the extensive capabilities of the RP2350 microcontroller across various projects.
+The OPC Unified Architecture (UA), introduced in 2008, represents a significant evolution in industrial communication standards. Unlike its predecessors under the OPC Classic umbrella, OPC UA is a platform-independent, service-oriented architecture that unifies all the functionalities of previous OPC specifications into a single, extensible framework. This modern approach not only preserves the core capabilities of OPC Classic but also enhances them with a multi-layered design that meets the complex demands of today’s industrial environments.
 
-### [Seeed Studio XIAO RP2350 with MicroPython](https://wiki.seeedstudio.com/xiao-rp2350-micropython/)
+### [Micropython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
 
-Welcome to the guide on using MicroPython with the Seeed Studio XIAO RP2350! This guide will help you get started with setting up MicroPython, writing and running your first script, and exploring the capabilities of the XIAO RP2350 using the Thonny IDE.
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png" /></div>
 
+[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
 
+- [Micropython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
+- [Micropython with XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/)
 
+### [Circuitpython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
 
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/title.png" /></div>
+
+This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32C3 development board!
+
+- [Circuitpython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
+- [Circuitpython with XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_with_circuitpython/)
+
+### [Getting Started with Seeed Studio XIAO RA4M1](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)
+
+<div style={{ textAlign: 'center' }}>
+  <img 
+    src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" 
+    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
+  />
+</div>
+
+The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up to 48 MHz) into the classic XIAO form factor. This development board offers 256KB Flash, 32KB SRAM, 8KB EEPROM, a USB 2.0 connector, reset and boot buttons, 3 LEDs, a 14-bit A/D converter, a 12-bit D/A converter, and a CAN BUS interface. With onboard charging circuitry and low-power modes (as low as 45μA), it’s ideal for battery-powered applications. Sharing the same 32-bit R7FA4M1AB3CFM microcontroller as the Arduino Uno R4, it's natively compatible with Arduino IDE and the extensive XIAO accessories, making it the perfect starting point for electronics projects.
+
+### [SenseCraft Cloud Fee](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
+
+SenseCaft cloud service is based on hardware devices using the LoRaWAN IoT low-power communication protocol. The LoRaWAN devices require metered prepayment to enable the data communication function. Users can prepay monthly or annually based on their product usage needs.
+
+### [ReSpeaker Lite User Button Usage](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
+
+User button is connected to XMOS XU316 and it's not programmed yet(reserve for futurn usage). If you want to use this button with XIAO ESP32S3, connect the `Usr` pin to the `D2` or `D3` pin.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={600} height="auto" /></p>
+
+This example connects the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detect whether the button is pressed.
 
 
 
@@ -67,9 +106,24 @@ Welcome to the guide on using MicroPython with the Seeed Studio XIAO RP2350! Thi
 
 ## Existed Wiki Updated
 
-### [Flash JetPack OS to A608 Carrier Board (NVIDIA Jetson Orin NX/Nano supported)](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2)
+### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
-We have added an [example](https://wiki.seeedstudio.com/reComputer_A608_Flash_System/#download-the-system-image-package-to-the-pc-host-2) of installing JetPack 6.0 on an A608 carrier board with a Jetson Orin NX module using NVIDIA L4T 36.3.
+We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
+
+### [Raspberry pi support on Grove-OLED Display 1.12inch](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+
+We've added an [example](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-OLED Display 1.12inch.
+
+### [Raspberry pi support on Grove - Optical Rotary Encoder](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+
+We've added an [example](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove - Optical Rotary Encoder.
+
+### [Added Example for XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink)
+
+We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).
+
+
+
 
 
 ## The Efforts of Contributor
@@ -157,6 +211,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
 - [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
+- [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 
 </details>
 
