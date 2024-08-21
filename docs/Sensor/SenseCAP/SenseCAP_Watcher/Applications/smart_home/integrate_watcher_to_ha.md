@@ -11,6 +11,9 @@ last_update:
 
 # Integrate Watcher to Home Assistant
 
+:::danger
+The content of this tutorial is not available at this time.
+:::
 
 The integration of artificial intelligence (AI) has revolutionized the world of smart home technology, and Watcher, a cutting-edge AI-powered device, has emerged as a game-changer. By seamlessly integrating Watcher with Home Assistant, a popular open-source home automation platform, users can unlock a new level of convenience, security, and efficiency in their smart homes.
 
