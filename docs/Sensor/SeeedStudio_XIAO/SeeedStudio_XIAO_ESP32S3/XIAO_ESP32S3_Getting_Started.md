@@ -261,7 +261,7 @@ If you need to know the detailed parameter information of ov5640, you can refer 
 All the programs about cameras in the Wiki are compatible with both OV5640 and OV2640 cameras.
 :::
 
-<!-- #### Installing the Upgraded Heat Sink
+#### Installing the Upgraded Heat Sink
 
 Ensure optimal cooling for your XIAO ESP32S3 Sense by installing our upgraded heat sink. This new design is tailored to address the cooling deficiencies observed with the previous models, particularly during intensive operations like camera usage. Feedback highlighted that the original heat sink did not adequately dissipate heat, leading to the development of a more effective solution.
 
@@ -302,8 +302,7 @@ Ensure your device is powered off and unplugged from any power source before you
 
 ***Purchasing Note:*** When purchasing your XIAO ESP32S3 Sense, it's important to note that only **models equipped with a camera** come with a heat sink included. If you have a version of the ESP32S3 that does not include a camera, you will need to purchase a heat sink separately. 
 
-***Installation Tip:*** Prioritize covering the Thermal PAD with the heat sink, as it is directly above the ESP32S3 chip, the primary source of heat. Proper alignment ensures optimal heat dissipation.
-
+***Installation Tip:*** Prioritize covering the Thermal PAD with the heat sink, as it is directly above the ESP32S3 chip, the primary source of heat. Proper alignment ensures optimal heat dissipation, and note keep the BAT pins as unobstructed as possible.
 :::
 
 Now, let’s begin the installation process:
@@ -311,7 +310,8 @@ Now, let’s begin the installation process:
 ***Step 1. Prepare the Heat Sink:***
 Start by removing the protective cover from the heat sink to expose the thermal adhesive. This will prepare the heat sink for a secure attachment to the ESP32S3 chip.
 
-<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/remove-heat-sink-cover.gif" style={{width:400, height:'auto'}}/></div></td>
+<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/heat-sink.jpg" style={{width:400, height:'auto'}}/></div></td>
+<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/remove-heat-sink-cover.jpg" style={{width:400, height:'auto'}}/></div></td>
 
 ***Step 2. Pssemble the Heat Sink:***
 
@@ -320,31 +320,21 @@ Start by removing the protective cover from the heat sink to expose the thermal 
 
 This smaller, compact option is sufficient for regular use and allows full access to all GPIO pins.
 
-<table>
-<tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/clean-single-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
-</tr>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-single-heat-sink-install.jpg" style={{width:400, height:'auto'}}/></div>
 
   </TabItem>
   <TabItem value="dual" label="Dual Heat Sinks">
 
 The larger option provides superior cooling, which is ideal for high-performance tasks but may limit access to some GPIO pins.
 
-<table>
-<tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-dual-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/clean-dual-heat-sink-install.gif" style={{width:400, height:'auto'}}/></div></td>
-</tr>
-</table>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-dual-heat-sink-install.png" style={{width:400, height:'auto'}}/></div>
 
   </TabItem>
 </Tabs>
 
 ***Step 3: Final Inspection and Testing***
 
-After installation, ensure everything is properly secured with no risk of short circuits. Verify that the heat sink is properly aligned and securely attached. -->
+After installation, ensure everything is properly secured with no risk of short circuits. Verify that the heat sink is properly aligned and securely attached.
 
 ### Software Preparation
 

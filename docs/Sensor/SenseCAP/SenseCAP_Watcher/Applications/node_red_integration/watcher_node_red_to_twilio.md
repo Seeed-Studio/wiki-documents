@@ -75,11 +75,17 @@ If you don't know how to send message from watcher to Node_RED yet, [please clic
 
 ### Get all results
 
-**Step 1.** Drag sensecap **OpenStream** module and **debug** module to workspace and configure them. If you don't know how to configure, [please click here](https://wiki.seeedstudio.com/watcher_to_node_red/). Connect them and Click the **Deploy** button on the right upside coner.
+**Step 1.** Run a task in Watcher.
+
+First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+**Step 2.** Drag sensecap **OpenStream** module and **debug** module to workspace and configure them. If you don't know how to configure, [please click here](https://wiki.seeedstudio.com/watcher_to_node_red/). Connect them and Click the **Deploy** button on the right upside coner.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/101.png" style={{width:700, height:'auto'}}/></div>
-
-**Step 2.** Run a task in Watcher, if you don't know how to run a task, [please refer here.](https://wiki.seeedstudio.com/getting_started_with_watcher_task)
 
 **Step 3.** You will receive message at both **debug page** and **Twilio message** on your phone.
 
