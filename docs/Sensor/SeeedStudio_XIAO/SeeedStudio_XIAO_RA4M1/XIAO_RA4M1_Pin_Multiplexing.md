@@ -5,7 +5,7 @@ keywords:
 - ra4m1
 - xiao
 - pin multiple
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
+image: https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/1-102010551-Seeed-Studio-XIAO-RA4M1.jpg
 side_position: 1
 slug: /xiao_ra4m1_pin_multiplexing
 last_update:
@@ -304,18 +304,70 @@ void loop() {
 }
 ```
 
-In this code, we first initialize the Serial communication at a baud rate of **9600** using the `Serial.begin()` function in the `setup()` function. Then, in the `loop()` function, we use the `Serial.print()` function to send "Hello World!" to the Serial port.
+### Usage of Serial1
 
-We also use the `Serial.available()` function to check if there is any data available to be read from the Serial port. If there is, we read the incoming byte using the `Serial.read()` function and store it in a variable called incomingByte. We then use the `Serial.print()` and `Serial.println()` functions to print "I received: " followed by the value of incomingByte to the Serial monitor.
+According to the above XIAO RA4M1 Pin diagrams for specific parameters,we can observe that there are TX pin and RX pin,This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added,So nex,we will use the pins led out by the chip for serial communication
 
-Finally, we add a `delay()` function to wait for one second before repeating the loop. This code demonstrates how to use some of the commonly used Serial functions in Arduino IDE for sending and receiving data through the Serial port.
+```c
 
-After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 9600. You will see the following message on the serial monitor, which outputs 'Hello World!' every second. Also, you can send content to the XIAO RA4M1 through the serial monitor, and XIAO will print out each byte of the content you send.
+#define BAUD 115200
 
-If everything goes smoothly, after uploading the program, you should see the following effect.
+void setup() {
+    Serial1.begin(BAUD);
+}
+ 
+void loop() {
+  if(Serial1.available() > 0)
+  {
+    char incominByte = Serial1.read();
+    Serial1.print("I received : ");
+    Serial1.println(incominByte);
+  }
+  delay(1000);
+}
+```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/20.png" style={{width:600, height:'auto'}}/></div>
+### Usage of Software Serial
 
+```c
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(2, 3); // RX, TX
+
+void setup() {
+  // initialize serial communication
+  Serial.begin(9600);
+  while (!Serial);
+
+  // initialize software serial
+  mySerial.begin(9600);
+}
+
+void loop() {
+  // read data from software serial
+  if (mySerial.available()) {
+    char data = mySerial.read();
+    Serial.print("Received data: ");
+    Serial.println(data);
+  }
+
+  // write data to software serial
+  mySerial.print("Hello World!");
+
+  // wait for a second before repeating the loop
+  delay(1000);
+}
+```
+
+In this program, we first include the `SoftwareSerial.h` library to use software serial. Then, we create a new SoftwareSerial object called mySerial using pins 2 and 3 as RX and TX, respectively.
+
+In the `setup()` function, we initialize both the hardware serial (`Serial.begin()`) and the software serial (`mySerial.begin()`).
+
+In the `loop()` function, we use the `mySerial.available()` function to check if there is any data available to be read from the software serial. If there is, we read the incoming byte using the `mySerial.read()` function and store it in a variable called data. We then use the `Serial.print()` and `Serial.println()` functions to print "Received data: " followed by the value of data to the hardware serial.
+
+We also use the `mySerial.print()` function to write "Hello World!" to the software serial. This will send the data from the XIAO to the device connected to the software serial port.
+
+Finally, we add a `delay()` function to wait for one second before repeating the loop.
 
 ## IIC
 
@@ -580,3 +632,20 @@ void loop()
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/23.png" style={{width:800, height:'auto'}}/></div>
+
+## Tech Support & Product Discussion
+
+.
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
+
