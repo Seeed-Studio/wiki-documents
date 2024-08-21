@@ -1,6 +1,6 @@
 ---
 description: This wiki introduces the features of the J501 carrier board and explains how to flash the Jetpack system onto the J501 carrier board.
-title: Getting Started with reServer J501
+title: Flash Jetpack
 keywords:
 - reServer
 - Jetson
