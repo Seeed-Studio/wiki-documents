@@ -6,7 +6,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /SenseCraft_AI_Jetson
+slug: /sensecraft_ai_jetson
 last_update:
   date: 08/16/2024
   author: Frank

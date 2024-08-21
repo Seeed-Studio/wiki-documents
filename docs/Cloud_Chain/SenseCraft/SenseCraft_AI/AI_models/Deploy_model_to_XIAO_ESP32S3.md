@@ -6,7 +6,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /Deploy_model_to_XIAO_ESP32S3
+slug: /deploy_model_to_xiao_esp32s3
 last_update:
   date: 08/16/2024
   author: Frank

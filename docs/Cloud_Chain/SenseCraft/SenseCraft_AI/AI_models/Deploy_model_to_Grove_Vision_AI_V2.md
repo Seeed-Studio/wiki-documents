@@ -6,7 +6,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /Deploy_model_to_Grove_Vision_AI_V2
+slug: /deploy_model_to_grove_vision_ai_v2
 last_update:
   date: 08/16/2024
   author: Frank

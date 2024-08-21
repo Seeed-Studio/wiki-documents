@@ -6,7 +6,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /SenseCraft_AI
+slug: /sensecraft_ai
 last_update:
   date: 12/28/2023
   author: Seraphina

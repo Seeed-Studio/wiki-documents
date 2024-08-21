@@ -6,7 +6,7 @@ keywords:
 - SenseCraft
 - SenseCraft AI
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
-slug: /XIAO_ESP32S3_Workspace
+slug: /xiao_esp32s3_workspace
 last_update:
   date: 08/16/2024
   author: Frank

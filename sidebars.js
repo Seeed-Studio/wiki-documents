@@ -3752,7 +3752,7 @@ const sidebars = {
               items: [
                 'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/XIAO_ESP32S3_Workspace',
                 'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Grove_Vision_AI_v2_Workspace',
-                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Nvidia_Jeson_Workspace',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Nvidia_Jetson_Workspace',
               ],
             },
             'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI_Jetson',
