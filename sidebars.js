@@ -3710,6 +3710,25 @@ const sidebars = {
           label: 'SenseCraft AI',
           items: [
             'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+            {
+              type: 'category',
+              label: 'AI Models',
+              items: [
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_XIAO_ESP32S3',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_Grove_Vision_AI_V2',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_Jetson',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Device Workspace',
+              items: [
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/XIAO_ESP32S3_Workspace',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Grove_Vision_AI_v2_Workspace',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Nvidia_Jeson_Workspace',
+              ],
+            },
+            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI_Jetson',
           ],
         },
       ]
