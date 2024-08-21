@@ -1000,14 +1000,28 @@ const sidebars = {
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
-            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-60GHz',
           ],
-        },{
+        },
+        {
           type: 'category',
-          label: 'mmWave kit',
+          label: 'MR24HPC1 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mmwave-kit/mmwave_human_kit',
-            'Sensor/mmWave_radar_sensor/mmwave-kit/mmWave_Kit_And_Grove_Connect_To_ESPHome',
+            'Sensor/mmWave_radar_sensor/mr24hpc1-mmwave-kit/mr24hpc1-mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/mr24hpc1-mmwave-kit/mr24hpc1-mmWave_Kit_And_Grove_Connect_To_ESPHome',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MR60FDA2 mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MR60BHA2 mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',

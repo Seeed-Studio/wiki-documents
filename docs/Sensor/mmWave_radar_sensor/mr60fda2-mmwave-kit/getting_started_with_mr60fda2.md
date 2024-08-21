@@ -1,17 +1,18 @@
 ---
-description: Getting started with Seeed Studio 60GHz mmWave for XIAO
-title: 60GHz mmWave for XIAO
+description: Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)
+title: Getting started with MR60BHA2
 keywords:
 - mmwave
 - radar
+- MR60BHA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
-slug: /mmwave_for_xiao_60ghz
+slug: /getting_started_with_mr60bha2_mmwave_kit
 last_update:
   date: 08/19/2024
   author: Spencer
 ---
 
-# Seeed Studio 60GHz mmWave for XIAO
+# Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
 
