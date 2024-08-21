@@ -11,7 +11,7 @@ last_update:
   author: Citric
 ---
 
-# mmWave Human Detection Sensor Kit
+# MR24HPC1 mmWave Human Detection Sensor Kit
 
 <br />
 
