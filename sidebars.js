@@ -3082,7 +3082,8 @@ const sidebars = {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_build_seeed_balena_image',
                       
                     ],
                     },
@@ -3163,6 +3164,13 @@ const sidebars = {
               items: [
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J401/J401_carrierboard_Hardware_Interfaces_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'J501 Carrier Board',
+              items: [
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J501/reServer_Industrial_J501_Getting_Started',
               ],
             },
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
