@@ -527,9 +527,11 @@ Overall, this code demonstrates how to use the U8g2 library to control an OLED d
 <table align="center">
 	<tr>
 	    <th>Seeed Studio XIAO RA4M1</th>
+	    <th>XIAO CAN Bus Expansion Board</th>
 	</tr>
 	<tr>
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_can_bus_board/main.jpg" style={{width:500, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -537,101 +539,220 @@ Overall, this code demonstrates how to use the U8g2 library to control an OLED d
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     		</a>
 		</div></td>
+	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-CAN-Bus-Breakout-Board-for-XIAO-and-QT-Py-p-5702.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    		</a>
+		</div></td>
 	</tr>
 </table>
 
-:::tip
-For this CAN communication experiment, you need to purchase a "CAN Bus Transceiver board" yourself. Considering the size issue, XIAO RA4M1 requires additional functions to achieve CAN communication transmission and reception
-:::
+#### Step 1 . Prepare two CAN Bus Breakout Board and XIAO RA4M1 
+#### Step 2 . Insert these two XIAO RA4M1 separately in CAN Bus Breakout Board
+#### Step 3 . Prepare the DuPont line connection . 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/24.gif" style={{width:500, height:'auto'}}/></div>
-
-Two XIAO RA4M1 Develoopment Board and  Using two transceivers for CAN communication
-
-**Detail Pin Connect**
-Left is CAN Bus Transceiver Board Pin , Right is XIAO RA4M1 Board Pin
-- VDD -> 3.3V
-- GND -> GND 
-- R OUT -> CRX0(D9)
-- D IN -> CTX(D10)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/27.png" style={{width:800, height:'auto'}}/></div>
 
 ### Software Implementation
+
+:::tip
+It is not allowed to simultaneously power on and download programs for two XIAO RA4M1s, as this will result in errors when downloading the serial port. After downloading one, unplug it, then power on the other XIAO RA4M1 to download the program, and finally power on at the same time to check the serial port message
+:::
 
 **CAN Write Code**
 ```c
 
-#include <Arduino_CAN.h>
+/*  send a frame from can bus
 
-static uint32_t const CAN_ID = 0x20;
+    CAN Baudrate,
+    
+    #define CAN_5KBPS           1
+    #define CAN_10KBPS          2
+    #define CAN_20KBPS          3
+    #define CAN_25KBPS          4 
+    #define CAN_31K25BPS        5
+    #define CAN_33KBPS          6
+    #define CAN_40KBPS          7
+    #define CAN_50KBPS          8
+    #define CAN_80KBPS          9
+    #define CAN_83K3BPS         10
+    #define CAN_95KBPS          11
+    #define CAN_100KBPS         12
+    #define CAN_125KBPS         13
+    #define CAN_200KBPS         14
+    #define CAN_250KBPS         15
+    #define CAN_500KBPS         16
+    #define CAN_666KBPS         17
+    #define CAN_1000KBPS        18
+*/
+   
+#include <mcp_can.h>
+#include <SPI.h>
+
+/* Please modify SPI_CS_PIN to adapt to your board.
+
+   CANBed V1        - 17
+   CANBed M0        - 3
+   CAN Bus Shield   - 9
+   CANBed 2040      - 9
+   CANBed Dual      - 9
+   OBD-2G Dev Kit   - 9
+   OBD-II GPS Kit   - 9
+   Hud Dev Kit      - 9
+
+   Seeed Studio CAN-Bus Breakout Board for XIAO and QT Py - D7
+*/
+
+#define SPI_CS_PIN  D7 
+
+MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
 
 void setup()
 {
-  Serial.begin(115200);
-  while (!Serial) { }
-
-  if (!CAN.begin(CanBitRate::BR_250k))
-  {
-    Serial.println("CAN.begin(...) failed.");
-    for (;;) {}
-  }
+    Serial.begin(115200);
+    while(!Serial);
+    
+    // below code need for OBD-II GPS Dev Kit Atemga32U4 version
+    // pinMode(A3, OUTPUT);
+    // digitalWrite(A3, HIGH);
+    
+    // below code need for OBD-II GPS Dev Kit RP2040 version
+    // pinMode(12, OUTPUT);
+    // digitalWrite(12, HIGH);
+    
+    while (CAN_OK != CAN.begin(CAN_125KBPS))    // init can bus : baudrate = 500k
+    {
+        Serial.println("CAN BUS FAIL!");
+        delay(100);
+    }
+    Serial.println("CAN BUS OK!");
 }
 
-static uint32_t msg_cnt = 0;
-
+unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
 void loop()
 {
-  /* Assemble a CAN message with the format of
-   * 0xCA 0xFE 0x00 0x00 [4 byte message counter]
-   */
-  uint8_t const msg_data[] = {0xCA,0xFE,0,0,0,0,0,0};
-  memcpy((void *)(msg_data + 4), &msg_cnt, sizeof(msg_cnt));
-  CanMsg const msg(CanStandardId(CAN_ID), sizeof(msg_data), msg_data);
-
-  /* Transmit the CAN message, capture and display an
-   * error core in case of failure.
-   */
-  if (int const rc = CAN.write(msg); rc < 0)
-  {
-    Serial.print  ("CAN.write(...) failed with error code ");
-    Serial.println(rc);
-    for (;;) { }
-  }
-
-  /* Increase the message counter. */
-  msg_cnt++;
-
-  /* Only send one message per second. */
-  delay(1000);
+    CAN.sendMsgBuf(0x00, 0, 8, stmp);
+    delay(100);                       // send data per 100ms
 }
-```
+
+// END FILE
+
+
 
 **CAN Read Code**
 ```c
-#include <Arduino_CAN.h>
+/*  receive a frame from can bus
+
+    CAN Baudrate,
+    
+    #define CAN_5KBPS           1
+    #define CAN_10KBPS          2
+    #define CAN_20KBPS          3
+    #define CAN_25KBPS          4 
+    #define CAN_31K25BPS        5
+    #define CAN_33KBPS          6
+    #define CAN_40KBPS          7
+    #define CAN_50KBPS          8
+    #define CAN_80KBPS          9
+    #define CAN_83K3BPS         10
+    #define CAN_95KBPS          11
+    #define CAN_100KBPS         12
+    #define CAN_125KBPS         13
+    #define CAN_200KBPS         14
+    #define CAN_250KBPS         15
+    #define CAN_500KBPS         16
+    #define CAN_666KBPS         17
+    #define CAN_1000KBPS        18
+
+    CANBed V1: https://www.longan-labs.cc/1030008.html
+    CANBed M0: https://www.longan-labs.cc/1030014.html
+    CAN Bus Shield: https://www.longan-labs.cc/1030016.html
+    OBD-II CAN Bus GPS Dev Kit: https://www.longan-labs.cc/1030003.html
+*/
+
+#include <SPI.h>
+#include "mcp_can.h"
+
+/* Please modify SPI_CS_PIN to adapt to your board.
+
+   CANBed V1        - 17
+   CANBed M0        - 3
+   CAN Bus Shield   - 9
+   CANBed 2040      - 9
+   CANBed Dual      - 9
+   OBD-2G Dev Kit   - 9
+   OBD-II GPS Kit   - 9
+   Hud Dev Kit      - 9
+
+   Seeed Studio CAN-Bus Breakout Board for XIAO and QT Py - D7
+*/
+
+
+#define SPI_CS_PIN  D7 
+
+MCP_CAN CAN(SPI_CS_PIN);                                    // Set CS pin
+
 
 void setup()
 {
-  Serial.begin(115200);
-  while (!Serial) { }
-
-  if (!CAN.begin(CanBitRate::BR_250k))
-  {
-    Serial.println("CAN.begin(...) failed.");
-    for (;;) {}
-  }
+    Serial.begin(115200);
+    while(!Serial);
+    
+    // below code need for OBD-II GPS Dev Kit Atemga32U4 version
+    // pinMode(A3, OUTPUT);
+    // digitalWrite(A3, HIGH);
+    
+    // below code need for OBD-II GPS Dev Kit RP2040 version
+    // pinMode(12, OUTPUT);
+    // digitalWrite(12, HIGH);
+    
+    while (CAN_OK != CAN.begin(CAN_125KBPS))    // init can bus : baudrate = 500k
+    {
+        Serial.println("CAN BUS FAIL!");
+        delay(100);
+    }
+    Serial.println("CAN BUS OK!");
 }
+
 
 void loop()
 {
-  if (CAN.available())
-  {
-    CanMsg const msg = CAN.read();
-    Serial.println(msg);
-  }
-}
-```
+    unsigned char len = 0;
+    unsigned char buf[8];
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/23.png" style={{width:800, height:'auto'}}/></div>
+    if(CAN_MSGAVAIL == CAN.checkReceive())            // check if data coming
+    {
+        CAN.readMsgBuf(&len, buf);    // read data,  len: data length, buf: data buf
+
+        unsigned long canId = CAN.getCanId();
+        
+        Serial.println("-----------------------------");
+        Serial.print("Get data from ID: ");
+        Serial.println(canId, HEX);
+
+        for(int i = 0; i<len; i++)    // print the data
+        {
+            Serial.print(buf[i], HEX);
+            Serial.print("\t");
+        }
+        Serial.println();
+    }
+}
+
+// END FILE
+
+```
+:::tip
+The above code provides 18 CAN Baudrate options, but only  CAN Baudrate below 125 , including 125 , can be used
+:::
+
+
+
+*_Sender Code Result_*
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:800, height:'auto'}}/></div>
+
+*_Rceciver Code Result_ *
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/26.png" style={{width:800, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
