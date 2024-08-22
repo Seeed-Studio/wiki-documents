@@ -3082,7 +3082,8 @@ const sidebars = {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_build_seeed_balena_image',
                       
                     ],
                     },

@@ -15,11 +15,9 @@ last_update:
 
 ## Introduction
 This article mainly introduces how to use the 485 communication function of reComputer R1000, and tests the RS485 and Modbus communication functions.
-The work to use the RS485 function mainly lies in two points:
-- Turn on power to the 485 transceiver. By default the r1000 does not have the power pin turned on, so turn it on when needed
-- Controls the DE pin of the 485 transceiver, which is used by the device to switch between data sending mode and receiving mode. By default, R1000 does not control the DE pin, so when the user does not control this pin, the 485 can only communicate in one direction.
+We need to control the DE pin of the 485 transceiver, which is used by the device to switch between data sending mode and receiving mode. By default, R1000 does not control the DE pin, so when the user does not control this pin, the 485 can only communicate in one direction.
   
-We wrote a [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) to turn on the power and manage the DE pin, If your application is only responsible for receiving/sending data, you can use this program to ensure that the sending and receiving of the RS485 interface is normal.
+We wrote a [**C program**](https://github.com/Seeed-Studio/seeed-linux-dtoverlays/tree/master/tools/rs485_control_DE) to manage the DE pin, If your application is only responsible for receiving/sending data, you can use this program to ensure that the sending and receiving of the RS485 interface is normal.
 - In addition to the methods mentioned in this article, we also provide a script that you can execute using the following command. This script can automatically create a new /dev/ttyx and then use the newly created device number to perform rs485/modbus rtu communication is enough
   ```shell
   curl -sSL https://raw.githubusercontent.com/Seeed-Projects/R1000-RS485-Util/main/setup_rs485.sh | sudo bash
@@ -78,7 +76,7 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays
 cd seeed-linux-dtoverlays/tools/rs485_control_DE/
 sudo apt-get install libgpiod-dev
 gcc -o rs485_DE rs485_DE.c -lgpiod
-sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 /dev/gpiochip2 12
+sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 
 ```
 
 This program will create a new ttyAMAx device, where the device number depends on the parameters you enter when running the program.
@@ -104,22 +102,11 @@ Among them, `-D` is followed by the device number you want to open, `-b` refers 
 :::note
 - The above example shows how to use one RS485 interface. If you want to use three 485 interfaces, you can use the following script to achieve it:
 ```shell
-sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 /dev/gpiochip2 12 &
+sudo ./rs485_DE /dev/ttyAMA2 /dev/gpiochip0 6 /dev/ttyAMA10 &
 sudo ./rs485_DE /dev/ttyAMA3 /dev/gpiochip0 17 /dev/ttyAMA11 &
 sudo ./rs485_DE /dev/ttyAMA5 /dev/gpiochip0 24 /dev/ttyAMA12 &
 ```
 ttyAMA10~ttyAMA12 corresponds to ttyAMA2~ttyAMA5 one-to-one. Use ttyAMA10~ttyAMA12 in your application for normal communication (ttyAMA2~ttyAMA5 cannot be used, you need to use the device number newly created by the script)
-- If you just want to power on the RS485 transceiver, you can do it using the following script:
-```shell
-echo 590 > /sys/class/gpio/export
-echo out > /sys/class/gpio/gpio590/direction
-echo 1 > /sys/class/gpio/gpio590/value
-```
-At this time, the RS485 transceiver is turned on normally, but the DE pin is not controlled.If you want to use our c program to control the DE pin after executing these three commands, please restart or execute the following script:
-```shell
-echo 590 > /sys/class/gpio/unexport
-```
-This is because they use different file systems and there will be conflicts when accessing the same resource.
 :::
 
 ## Steps to use the  Modbus TCP testing
