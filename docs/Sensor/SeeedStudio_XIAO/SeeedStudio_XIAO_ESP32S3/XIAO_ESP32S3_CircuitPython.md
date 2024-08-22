@@ -4,7 +4,7 @@ title: CircuitPython for ESP32S3
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_ESP32S3_CircuitPython
 last_update:
-  date: 18/08/2024
+  date: 08/18/2024
   author: Isaac, Djair Guilherme
 ---
 
