@@ -1,6 +1,6 @@
 ---
-description: Grove Vision AI v2 Workspace
-title: Grove Vision AI v2 Workspace
+description: Grove Vision AI v2 Workspace on SenseCraft AI Platform
+title: Grove Vision AI v2 Workspace on SenseCraft AI Platform
 keywords:
 - Cloud and Chain
 - SenseCraft
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /grove_vision_ai_v2_workspace
 last_update:
-  date: 08/16/2024
+  date: 08/22/2024
   author: Frank
 ---
 

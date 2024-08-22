@@ -1,6 +1,6 @@
 ---
-description: Deploy model to Jetson
-title: Deploy model to Jetson
+description: Deploy model to Jetson on Sensecraft AI Platform
+title: Deploy model to Jetson on Sensecraft AI Platform
 keywords:
 - Cloud and Chain
 - SenseCraft
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /sensecraft_deploy_model_to_jetson
 last_update:
-  date: 08/16/2024
+  date: 08/22/2024
   author: Frank
 ---
 

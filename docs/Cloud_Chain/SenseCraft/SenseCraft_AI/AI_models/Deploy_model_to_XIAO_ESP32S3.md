@@ -1,6 +1,6 @@
 ---
-description: Deploy model to XIAO ESP32S3
-title: Deploy model to XIAO ESP32S3
+description: Deploy model to XIAO ESP32S3 on Sensecraft AI Platform
+title: Deploy model to XIAO ESP32S3 on Sensecraft AI Platform
 keywords:
 - Cloud and Chain
 - SenseCraft
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /deploy_model_to_xiao_esp32s3
 last_update:
-  date: 08/16/2024
+  date: 08/22/2024
   author: Frank
 ---
 

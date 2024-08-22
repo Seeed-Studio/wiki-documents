@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32S3 Workspace
-title: XIAO ESP32S3 Workspace
+description: XIAO ESP32S3 Workspace on SenseCraft AI Platform
+title: XIAO ESP32S3 Workspace on SenseCraft AI Platform
 keywords:
 - Cloud and Chain
 - SenseCraft
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /xiao_esp32s3_workspace
 last_update:
-  date: 08/16/2024
+  date: 08/22/2024
   author: Frank
 ---
 

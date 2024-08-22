@@ -1,6 +1,6 @@
 ---
-description: Nvidia Jetson Workspace
-title: Nvidia Jetson Workspace
+description: Nvidia Jetson Workspace on SenseCraft AI Platform
+title: Nvidia Jetson Workspace on SenseCraft AI Platform
 keywords:
 - Cloud and Chain
 - SenseCraft
@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png        
 slug: /nvidia_jetson_workspace
 last_update:
-  date: 08/16/2024
+  date: 08/22/2024
   author: Frank
 ---
 
