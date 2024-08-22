@@ -761,6 +761,7 @@ const sidebars = {
             items: [
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Datacake_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated',
+           'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/thingsboard_integrated', 
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Ubidots_Integrated(Helium)',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/Qubitro_Integrated',
            'Sensor/SenseCAP/SenseCAP_T1000_Tracker/Integrated_with_Popular_Dashboard/TagoIO_Integrated',
@@ -999,14 +1000,28 @@ const sidebars = {
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao_arduino',
             'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-connect-to-HA',
-            'Sensor/mmWave_radar_sensor/mmwave-for-XIAO/mmwave-for-xiao-60GHz',
           ],
-        },{
+        },
+        {
           type: 'category',
-          label: 'mmWave kit',
+          label: 'MR24HPC1 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mmwave-kit/mmwave_human_kit',
-            'Sensor/mmWave_radar_sensor/mmwave-kit/mmWave_Kit_And_Grove_Connect_To_ESPHome',
+            'Sensor/mmWave_radar_sensor/mr24hpc1-mmwave-kit/mr24hpc1-mmwave_human_kit',
+            'Sensor/mmWave_radar_sensor/mr24hpc1-mmwave-kit/mr24hpc1-mmWave_Kit_And_Grove_Connect_To_ESPHome',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MR60FDA2 mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'MR60BHA2 mmWave kit',
+          items: [
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -3067,7 +3082,8 @@ const sidebars = {
                     type: 'category',
                     label: 'Fleet Management',
                     items: [
-                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_balena',
+                      'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/balenaOS/recomputer_r1000_build_seeed_balena_image',
                       
                     ],
                     },
@@ -3148,6 +3164,13 @@ const sidebars = {
               items: [
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J401/reComputer_J4012_Flash_Jetpack',
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J401/J401_carrierboard_Hardware_Interfaces_Usage',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'J501 Carrier Board',
+              items: [
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J501/reServer_Industrial_J501_Getting_Started',
               ],
             },
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',

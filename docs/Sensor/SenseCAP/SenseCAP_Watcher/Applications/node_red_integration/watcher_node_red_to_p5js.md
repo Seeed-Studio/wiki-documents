@@ -23,7 +23,15 @@ last_update:
 
 ## Node-RED configuration
 
-### Step 1.Configuration
+### Step 1.Run task in Watcher
+
+First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+### Step 2.Configuration
 
 There are 4 modules you need to configure:
 
@@ -51,7 +59,7 @@ return msg;
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/4.png" style={{width:600, height:'auto'}}/></div>
 
-### Step 2.Deployment
+### Step 3.Deployment
 
 When finish configuration, don't forget to **Deploy** it.
 
@@ -59,13 +67,13 @@ When finish configuration, don't forget to **Deploy** it.
 
 ## Build a server
 
-### Step 3.Download server code
+### Step 4.Download server code
 
 [Please click this link](https://github.com/Seeed-Projects/SenseCAP_Watcher_WebSocket_P5js) to download the whole project code.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/7.png" style={{width:1000, height:'auto'}}/></div>
 
-### Step 4.Run the server
+### Step 5.Run the server
 
 Before running the server, you should install some packages first. 
 
@@ -81,13 +89,13 @@ Now the server is listening port 3000, so the message from [Node-RED](#post) wil
 
 ## VScode configuration
 
-### Step 5.Install extensions
+### Step 6.Install extensions
 
 You need to install 2 extensions, there are **Live Server** and **p5.vscode**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/6.png" style={{width:600, height:'auto'}}/></div>
 
-### Step 6.Open project
+### Step 7.Open project
 
 Open the project you just download.
 

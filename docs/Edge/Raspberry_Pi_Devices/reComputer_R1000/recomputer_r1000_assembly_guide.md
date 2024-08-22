@@ -44,6 +44,9 @@ You need to prepare the following hardware
 
 Following these steps should help you disassemble the device without any issues. 
 
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/Disassembly_guide.gif" /></div>
+
+
 **STEP 1:** Remove the Four Screws at the Bottom and Grounding Screw from Side Panels:
 
 - Locate and unscrew the four screws located at the bottom of the device using an appropriate screwdriver.
@@ -72,7 +75,11 @@ Following these steps should help you disassemble the device without any issues.
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass01.jpg" /></div>
 
+
+
 ### Assemble SSD
+
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/ssd.gif" /></div>
 
 **STEP 1:** Remove the back cover following the disassembly guide.
 
@@ -82,6 +89,8 @@ Following these steps should help you disassemble the device without any issues.
 
 ### Assemble Wi-Fi/BLE Antenna
 
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/Wifi_and_ble.gif" /></div>
+
 **STEP 1:** Disassemble the entire device following section [Disassembly Guide](/recomputer_r1000_assembly_guide/#assembly--disassembly-guide).
 
 **STEP 2:** Connect the feeder line from the CM4 module to antenna hole following the illustrastions below.
@@ -90,7 +99,15 @@ Following these steps should help you disassemble the device without any issues.
 
 <div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass08.jpg" /></div>
 
+### Install LTE and GNSS Antenna
+
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/LTE.gif" /></div>
+
 ### Assemble 4G/LoRa®/Zigbee Module and Antenna
+
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/LoRa.gif" /></div>
+
+
 
 **STEP 1:** Make sure the module for Mini-PCIe slots is loaded above the SSD card.
 
@@ -103,6 +120,8 @@ Following these steps should help you disassemble the device without any issues.
 
 ### Assemble TPM 2.0 Module
 
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/TPM2_0.gif" /></div>
+
 **STEP 1:** Remove the back cover following the disassembly guide.
 
 **STEP 2:** Load the TPM 2.0 module into the J13 socket.
@@ -110,6 +129,8 @@ Following these steps should help you disassemble the device without any issues.
 <div align="left"><img width={350} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/ass04.jpg" /></div>
 
 ### Assemble UPS and PoE module
+
+<div align="left"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-R1000/Assembly_Guide/UPS.gif" /></div>
 
 **STEP 1:** Before installing the UPS and PoE module on the CM4 module side of board, disassemble the entire device following the disassembly guide provided.
 

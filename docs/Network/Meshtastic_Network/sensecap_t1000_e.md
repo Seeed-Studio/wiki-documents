@@ -56,7 +56,6 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 | :- | :- |
 |**Temperature**|<p>Range: -20 to 60℃;</p><p>Accuracy: ± 1℃ (min ±0.5℃, max ±1℃)</p><p>Resolution: 0.1℃</p>|
 |**Light**|0 to 100% (0% is dark, 100% is brightest)|
-|**3-Axis Accelerometer**|3-Axis Accelerometer to detect movement|
 |**LED and Buzzer**|1\*LED and 1\* buzzer to indicate status|
 |**Button**|1\* Button to operate|
 |**Antenna**|Internal (GNSS/LoRa/Wi-Fi/BLE)|
@@ -77,12 +76,38 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 |**Power Input Voltage**|4\.7 to 5.5V DC|
 |**Charging Temperature Limit**|0 to +45℃|
 
-
 ### Hardware overview
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000-e.png" alt="pir" width={800} height="auto" /></p>
 
+### PIN
+
+|Power to Sensor|P0.4|GPIO|
+|- |- |- |
+|Temperature|P0.31|NTC (analog)|
+|Light|P0.29|LUX(analog)|
+|3-Axis Accelerometer<br/>(Not currently used in the Meshtastic firmware)|SDA: P0.26<br/>SCL: P0.27|Via IIC|
+|Power to Accelerometer|P1.7|GPIO|
+|LED|P0.24  |GPIO|
+|Buzzer|P0.25|GPIO|
+|Enable Buzzer|P1.05|GPIO|
+|Button|P0.6|GPIO|
+|Power to sensor|P1.6|GPIO|
+|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0\_DIO3\_TCXO\_VOLT<br/>AGE 1.6V|SPI|
+|GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>BAUDRATE:115200|
+
+
+
+
+### Button
+
+|Button action|Description|Buzzer|LED|
+|- |- |- |- |
+|Press once|Power on|Rising melody|The led lights up and then flashes quickly|
+|Press twice|Update node/location info|-|-|
+|Press three times|Switch on/off the GPS|-|-|
+|Press and hold for 5s|Power off|Falling melody||
 
 
 ## Get Started
@@ -196,6 +221,23 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 Now that you have set the LoRa region on your device, you can continue with configuring any [additional configs](https://meshtastic.org/docs/configuration/) to suit your needs.
 
 
+## Flash firmware
+
+
+
+* **Step 1**: Enter DFU mode
+Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the LED will be solid on, the device will enter the DFU mode, and there should be a driver named `T1000-E` display.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu2.gif" alt="pir" width={400} height="auto" /></p>
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
+
+* **Step 2**: Copy UF2 file
+
+Download and Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+
+* [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware-t1000-e-2.4.0.46d7b82_Alpha_pre_release.uf2)(Recommended version)
 
 ## FAQ
 
@@ -209,11 +251,15 @@ Click `Open Serial Monitor`, connect the device, and you will see the device nam
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name2.png" alt="pir" width={800} height="auto" /></p>
 
+* **How to check the battery?**
 
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/), check the log, keyword `batPct`.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/battery-level.png" alt="pir" width={800} height="auto" /></p>
 
 ## Resource
 
+[T1000-E Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader/tree/master/src/boards/t1000_e)
 [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 
 
