@@ -620,7 +620,7 @@ void setup()
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
     
-    while (CAN_OK != CAN.begin(CAN_125KBPS))    // init can bus : baudrate = 500k
+    while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
         delay(100);
@@ -706,7 +706,7 @@ void setup()
     // pinMode(12, OUTPUT);
     // digitalWrite(12, HIGH);
     
-    while (CAN_OK != CAN.begin(CAN_125KBPS))    // init can bus : baudrate = 500k
+    while (CAN_OK != CAN.begin(CAN_500KBPS))    // init can bus : baudrate = 500k
     {
         Serial.println("CAN BUS FAIL!");
         delay(100);
@@ -743,7 +743,18 @@ void loop()
 
 ```
 :::tip
-The above code provides 18 CAN Baudrate options, but only  CAN Baudrate below 125 , including 125 , can be used
+In this example , you need to solder one of the CAN Bus Breakout Board terminal pins P1 , Only then can any speed be used , otherwise you only can use below 125 CAN baudrate 
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/30.png" style={{width:600, height:'auto'}}/></div>
+
+***When do I need to connect the terminal resistor?***
+- 1. Long distance communication: If the CAN bus is long (e.g. more than 1 meter), terminal resistors must be connected at both ends of the bus to avoid communication problems caused by signal reflection.
+- 2. Multi node communication: If multiple nodes are connected to the same CAN bus, terminal resistors are also indispensable. They ensure the impedance stability of the bus, thereby preventing signal distortion.
+
+***When can the terminal resistor be disconnected?***
+- 1. Short distance communication: In some short distance applications (usually less than 1 meter), terminal resistors can be omitted because the impact of signal reflection on communication is relatively small.
+- 2. Single node communication: If there is only one node on the bus (such as in a debugging environment) and the distance is short, the terminal resistor can be temporarily disconnected.
 :::
 
 
