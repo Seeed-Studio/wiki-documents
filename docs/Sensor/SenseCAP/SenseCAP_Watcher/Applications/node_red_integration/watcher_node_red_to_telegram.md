@@ -126,7 +126,11 @@ Another **sender**'s configuration is similar, just following the below image.
 
 ### Step 5. Run a task in Watcher
 
-If you don't know how to run a task in Watcher, [please refer here.](https://wiki.seeedstudio.com/getting_started_with_watcher_task) Here provide very detailed steps for your reference.
+First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ### Step 6. Send message and photo to Telegram
 

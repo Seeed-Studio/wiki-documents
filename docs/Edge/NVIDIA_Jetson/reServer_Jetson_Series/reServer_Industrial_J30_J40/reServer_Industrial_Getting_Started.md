@@ -239,6 +239,10 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 
 ## Flash JetPack
 
+:::danger
+The device will come pre-installed with JetPack 5.1.1. If there are no special requirements, you don't need to reflash the system.
+:::
+
 reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps below. Currently we only provide guidance for JP5.1.1 and we will keep updating this in the future.
 
 :::note
@@ -313,14 +317,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EWxVw3rZF-JPuKp0ksJZkGABWmsSxVizaJIqQBL5TDL1JA?e=4JJ2XV" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-16g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdCn0yi0ArRKivHb3mKLrwcBmBEKXlGKLCnNkRQNzyylAw?e=QTnhQa" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -328,14 +332,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EW5Dood6aQ9DpT6ZaXWF50QBmyAyOowCktzqZj48sQeyhw?e=VVP56J" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nx-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQJBb6D2ISBEnoUnUkqVEgkB9npGJ48jw5p2DXFIWaNJxA?e=lOJiFM" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -343,14 +347,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eb6xTuWGRdlDpJfgLSWS7S4BpnKYxkI9RKl6tJbU0xI4FQ?e=m84vbP" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-8g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdqRMLVCzHtIkHUShgZ91xoBK367uzXyC_mTGQOzlfJhyQ?e=wgOhwj" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
@@ -358,14 +362,14 @@ import TabItem from '@theme/TabItem';
         <td>5.1.1</td>
         <td>35.3.1</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
       <tr>
         <td>6.0</td>
         <td>36.3</td>
         <td>
-          <a href="https://recomputer-jetson.oss-us-west-1.aliyuncs.com/reServer-Industrial/mfi_reserver-industrial-orin-nano-4g-j401-6.0-36.3.0-2024-07-03.tar.gz" target="_blank" rel="noopener noreferrer">Download</a>
+          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">Download</a>
         </td>
       </tr>
     </tbody>

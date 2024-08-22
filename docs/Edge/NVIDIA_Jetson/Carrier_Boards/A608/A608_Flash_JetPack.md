@@ -72,7 +72,7 @@ Here we will use NVIDIA L4T 35.3.1 to install Jetpack 5.1.1 on the A608 Carrier 
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/nvidia_driver.png" /></div>
 
-**Step 2.** [Download](http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A608/608_jp511.zip) peripheral drivers and put all the drivers in same folder.
+**Step 2.** [Download](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EVDZxNLtpM1LtnFeKTpW7FgBKwqrJG7osu55AhwbJzI_MQ?e=wAj0No) peripheral drivers and put all the drivers in same folder.
 
 
 
@@ -132,7 +132,7 @@ Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the A608 Carrier 
 **Step 1.** [Download](https://developer.nvidia.com/embedded/jetson-linux-r3541) the NVIDIA drivers on the host PC. The required drivers are shown below:
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P1.png" /></div>
 
-**Step 2.** [Download](http://recomputer-jetson.oss-us-west-1.aliyuncs.com/A608/608_jp512.zip) peripheral drivers and put all the drivers in same folder.
+**Step 2.** [Download](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EVeWisgX9ddHp3sqyloflwwBve6Pm_lhSBGTHv8cdYSJvg?e=oprLWU) peripheral drivers and put all the drivers in same folder.
 
 
 Now you will see three compressed files in the same folder:
@@ -192,7 +192,7 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the A608 Carrier Boar
 **Step 1.** [Download](https://developer.nvidia.com/embedded/jetson-linux-r363) the NVIDIA drivers on the host PC. The required drivers are shown below:
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/5.1.2_P1.png" /></div>
 
-**Step 2.** [Download](https://recomputer-jetson.oss-us-west-1.aliyuncs.com/A608/608_jp60.zip) peripheral drivers and put all the drivers in same folder.
+**Step 2.** [Download](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EbF6_Z1ocnZKnEfynnxDZ7UBkQTAHwq7H1dsga3RITPwhw?e=395QXx) peripheral drivers and put all the drivers in same folder.
 
 Now you will see three compressed files in the same folder:
 
