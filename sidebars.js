@@ -3166,6 +3166,13 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J401/J401_carrierboard_Hardware_Interfaces_Usage',
               ],
             },
+            {
+              type: 'category',
+              label: 'J501 Carrier Board',
+              items: [
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J501/reServer_Industrial_J501_Getting_Started',
+              ],
+            },
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A205/reComputer_A205_Flash_System',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
