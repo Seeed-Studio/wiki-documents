@@ -245,7 +245,7 @@ last_update:
         <td align="center"><font size={"3"}>✅</font></td>
 	</tr>
     <tr>
-	    <th>Baterry Charge LED and Chip</th>
+	    <th>Battery Charge LED and Chip</th>
 	    <td align="center"><font size={"3"}>❌</font></td>
 	    <td align="center"><font size={"3"}>❌</font></td>
         <td align="center"><font size={"3"}>✅</font></td>
