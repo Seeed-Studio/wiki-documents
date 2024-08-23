@@ -345,24 +345,24 @@ This code displays how to use deep sleep with an external trigger as a wake up s
 
 ```cpp
 /*
-=====================================
-This code is under Public Domain License.
-
 Hardware Connections
 ======================
-Push Button to GPIO 33 pulled down with a 10K Ohm
+Push Button to GPIO 0 pulled down with a 10K Ohm
 resistor
 
 NOTE:
 ======
-Only RTC IO can be used as a source for external wake
-source. They are pins: 0,2,4,12-15,25-27,32-39.
-
-Author:
-Pranav Cherukupalli <cherukupallip@gmail.com>
+Bit mask of GPIO numbers which will cause wakeup. Only GPIOs
+which have RTC functionality can be used in this bit map.
+For different SoCs, the related GPIOs are:
+- ESP32: 0, 2, 4, 12-15, 25-27, 32-39
+- ESP32-S2: 0-21
+- ESP32-S3: 0-21
+- ESP32-C6: 0-7
+- ESP32-H2: 7-14
 */
 
-#define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
+#define BUTTON_PIN_BITMASK (1ULL << GPIO_NUM_0) // GPIO 0 bitmask for ext1
 
 RTC_DATA_ATTR int bootCount = 0;
 
@@ -400,17 +400,12 @@ void setup(){
   /*
   First we configure the wake up source
   We set our ESP32 to wake up for an external trigger.
-  There are two types for ESP32, ext0 and ext1 .
-  ext0 uses RTC_IO to wakeup thus requires RTC peripherals
-  to be on while ext1 uses RTC Controller so doesnt need
-  peripherals to be powered on.
-  Note that using internal pullups/pulldowns also requires
-  RTC peripherals to be turned on.
+  There are two types for ESP32, ext0 and ext1, ext0 
+  don't support ESP32C6 so we use ext1.
   */
-  esp_sleep_enable_ext0_wakeup(GPIO_NUM_33,1); //1 = High, 0 = Low
 
   //If you were to use ext1, you would use it like
-  //esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
+  esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
 
   //Go to sleep now
   Serial.println("Going to sleep now");
