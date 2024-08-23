@@ -223,19 +223,21 @@ bash run.sh object-detection
 ## Result 
 
 <Tabs>
-<TabItem value="Method 1" label="Object Detection Benchmark">
+<TabItem value="Method 1" label="batchsize=1">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object-detection-benchmark.png" alt="pir" width={1000} height="auto"/></p>
-
-</TabItem>
-
-<TabItem value="Method 2" label="Pose Estimation Benchmark">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/pose-estimation-benchmark.png" alt="pir" width={1000} height="auto"/></p>
 
 </TabItem>
 
+<TabItem value="Method 2" label="batchsize=8">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_batch8.png" alt="pir" width={1000} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" alt="pir" width={1000} height="auto"/></p>
+
+</TabItem>
 </Tabs>
+
 
 ## Tech Support & Product Discussion
 
