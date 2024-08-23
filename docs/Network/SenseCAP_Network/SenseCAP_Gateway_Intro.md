@@ -193,40 +193,6 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
 
 
 
-
-
-
-
-
-
-
-
-## Hardware Products
-
-### LoRaWAN Gateway
-
-SenseCAP offers two types of gateways suitable for indoor and outdoor use, and users can choose cellular LTE or Ethernet to transmit data.
-
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
-
-
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
-
-### Hotspots
-
-
-SenseCAP M1 & M2 & M4 
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/helium-sensecap6.png" alt="pir" width={1000} height="auto" /></p>
-
-|SenseCAP M1|SenseCAP M2|SenseCAP M4|
-|------------------|--------------------------|-----------------------|
-|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/8/6/868ce_4.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-sensecap-m2-light-hotspot-software-license--first_1_.jpg" alt="pir" width={300} height="auto" />|<img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/s/e/sensecap-m4-2.png" alt="pir" width={300} height="auto" />|
-|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-EU868-p-5022.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-M4-p-5556.html)</p>|
-
-
-
-
 ## SenseCAP Cloud Services
 
 ### For LoRaWAN Gateway
