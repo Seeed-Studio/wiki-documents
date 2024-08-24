@@ -3760,13 +3760,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft',
+      label: 'SenseCraft AI',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+      },
       items: [
-        {
-          type: 'category',
-          label: 'SenseCraft AI',
-          items: [
-            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
             {
               type: 'category',
               label: 'AI Models',
@@ -3786,8 +3787,6 @@ const sidebars = {
               ],
             },
             'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI_Jetson',
-          ],
-        },
       ]
     },
     /*
