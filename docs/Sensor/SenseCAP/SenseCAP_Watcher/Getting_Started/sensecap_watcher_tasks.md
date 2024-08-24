@@ -79,8 +79,10 @@ Then, if you place a task that is judged to be using Local AI Services, then on 
 
 If you set "candle" as the object in a Watcher task, but there are no pre-trained models for candle detection available in the SenseCraft AI library, the device will **automatically switch to using the cloud-based Large Language Model (LLM) service for detection**.
 
-:::note
-It's important to note that whenever Watcher relies on cloud-based services, such as the LLM service, there may be additional usage costs involved. These costs are associated with the processing power, storage, and data transfer required to perform the detection and analysis in the cloud.
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_3.png" style={{width:1000, height:'auto'}}/></div>
@@ -90,10 +92,6 @@ As shown in the image, when the Watcher detects a candle using the LLM service, 
 By leveraging the power of cloud-based LLM services, Watcher can still accurately identify objects and trigger appropriate actions, even when a specific model is not available in the SenseCraft AI library. This fallback mechanism enhances the device's versatility and ensures that it can adapt to a wide range of detection scenarios.
 
 However, it's important to note that using the cloud-based LLM service may result in slightly slower response times compared to local detection, as the data needs to be processed remotely. Additionally, this mode requires an active internet connection for the device to communicate with the cloud services.
-
-:::tip
-Currently, Watcher is in a free public testing phase, which means that users can enjoy the benefits of cloud-based services without incurring any charges. This allows users to explore the full capabilities of Watcher, including its ability to detect objects that don't have corresponding models in the SenseCraft AI library, by leveraging the power of LLM services. However, once the public testing phase concludes, there will be updated pricing details for using the cloud-based services. Users will need to be aware of these costs and factor them into their decision-making process when setting up Watcher tasks that rely on LLM services.
-:::
 
 :::note
 Users only need to have a basic understanding of these three task modes without delving into the complete process and intricate details. The introduction of these modes is to ensure that users are not confused or worried when encountering different user interfaces during task configuration. Each mode has its unique app configuration page, which may vary depending on the selected mode. Users should follow the instructions based on their specific requirements to set up their Watcher tasks effectively.
@@ -112,6 +110,12 @@ This functionality allows you to interact with the LLM directly, without the nee
 
 The third mode of operation for the Watcher device is a combination of the Local AI service and the cloud-based LLM service. **This mode comes into play when the Watcher's local AI service recognizes the specified object, but requires further analysis from the LLM cloud service to determine the object's behavior or state**.
 
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_4.png" style={{width:1000, height:'auto'}}/></div>
 
 In the example shown in the image, the object is set to "cat" and the action is "flashing light". When the Watcher detects a cat using its local AI model for pet detection, it then calls upon the LLM cloud service to analyze the cat's behavior and determine whether it is "eating".
@@ -123,10 +127,6 @@ By leveraging both the Local AI service and the LLM cloud service, the Watcher c
 If you place a task that is judged to be using local + LLM, then on the SenseCraft APP, the Task Configuration page will display roughly as shown below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
-
-:::tip
-However, it's important to note that using the LLM cloud service in this combined mode may be subject to SenseCraft's pricing structure, similar to the fully cloud-based mode discussed earlier. Users should be aware that once the free public testing phase concludes, there may be associated costs for utilizing the LLM cloud service, even in combination with the Local AI service.
-:::
 
 ### Summaries
 
@@ -147,8 +147,8 @@ Here's a comparison table of the three modes based on efficiency, cost, and choo
 		<tr>
             <th>Efficiency</th>
 			<td align="center">Alarm time: <strong>2s</strong><br />Minimum time interval for triggering alarm: <strong>5s</strong></td>
-			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>60s</strong></td>
-			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>60s</strong></td>
+			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>30s</strong></td>
+			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>30s</strong></td>
 		</tr>
 		<tr>
             <th>Cost</th>
@@ -175,8 +175,10 @@ Here's a comparison table of the three modes based on efficiency, cost, and choo
 
 2. The "Minimum time interval for triggering alarm" setting is independent of the "Alarm Time" and does not represent a sequential relationship. This setting specifies the minimum time that must elapse between two consecutive alarm triggers. When configuring a task, users **are not allowed to** set an alarm time shorter than this minimum interval. This limitation ensures that the system has sufficient time to process and respond to each alarm event before another can be triggered. This limitation ensures the system has sufficient processing time and prevents excessive or continuous alarm triggers, promoting stable and reliable operation.
 
-:::note
-Please note that the actual performance and costs may vary depending on factors such as the complexity of the task, the size of the pre-trained models, the amount of data processed, and the specific pricing structure implemented by SenseCraft after the free public testing phase.
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 
@@ -211,6 +213,12 @@ The Pure Cloud-based LLM Service's text-based chatting feature opens up new poss
 Whether you have questions, need assistance with a particular topic, or just want to explore the capabilities of the LLM, the text-based chatting feature offers a seamless and intuitive way to communicate with the AI model.
 
 Feel free to leverage this feature whenever you require information, guidance, or simply want to engage in an informative conversation with the LLM.
+
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
 
 ### Identify or configure tasks for disassembly
 
