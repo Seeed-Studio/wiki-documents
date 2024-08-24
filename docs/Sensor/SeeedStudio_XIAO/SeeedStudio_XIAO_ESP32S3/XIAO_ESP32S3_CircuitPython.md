@@ -74,8 +74,9 @@ I am using Thonny IDE software(Windows) and some related libraries and files.
 ## Getting Started
 
 ### Download XIAO ESP32S3 Circuitpyhton Firmware
-The current
-[Circuitpython Firmwares 9.1.1 and 9.20 Alpha]([https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/related-mpy.zip](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense))
+
+[Circuitpython Firmwares 9.1.1 and 9.20 Alpha for XIAO ESP32S3 Sense](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense)
+
 
 ### Connect the XIAO ESP32S3 board to PC under the BootLoader Mode
 
