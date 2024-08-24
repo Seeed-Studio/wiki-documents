@@ -10,6 +10,8 @@ last_update:
 
 # Project Overview
 
+This wiki has been updated: https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/
+
 CircuitPython is an ideal programming language for XIAO ESP32S3 as it simplifies physical computing projects. Based on Python, it has beginner-friendly syntax and includes modules for accessing hardware like sensors and displays. Since CircuitPython already supports the ESP32S3 chip, this project attempts to compile CircuitPython on Seeed Studio XIAO ESP32S3 Board.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
