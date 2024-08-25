@@ -3838,7 +3838,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'TinyML Workshop',
+          label: 'AI Workshop',
           collapsed: true,
           collapsible: true,
           link: {
