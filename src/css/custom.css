@@ -1582,9 +1582,9 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	transform: scale(1.1);
 }
 
-.DocSearch-HitsFooter a {
+/* .DocSearch-HitsFooter a {
 	display: none;
-}
+} */
 @font-face {
 	font-family: 'Montserrat';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-Regular.otf');

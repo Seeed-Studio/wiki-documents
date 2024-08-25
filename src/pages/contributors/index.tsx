@@ -15,8 +15,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 
 
 // const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
-const baseUrl = 'http://relfusionapi.seeedstudio.com'//测试环境
-// const baseUrl='https://napi.seeedstudio.com'//正式
+// const baseUrl = 'http://relfusionapi.seeedstudio.com'//测试环境
+const baseUrl='https://napi.seeedstudio.com'//正式
 
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/contributor/${str}.png`
@@ -43,7 +43,7 @@ const rangerwhyRender = (isMobile) => {
 	return (
 		<div className={clsx(styles.why, styles.section, 'why')}>
 			<div className={styles.wrapper}>
-				<div className={styles.title}>Why join in <div className={styles.s_title}>Seeed Ranger?</div></div>
+				<div className={styles.title}>Greetings! From Seeed Studio <div className={styles.s_title}>Contributors</div></div>
 				<div className={styles.why_container}>
 					<Swiper
 						modules={[Navigation]}
@@ -168,7 +168,7 @@ const claimRender = (isMobile) => {
 	return (
 		<div className={clsx(styles.claim, styles.section)}>
 			<div className={styles.wrapper}>
-				<div className={styles.title}>Claim Our Tasks Now！</div>
+				<div className={styles.title}>Open Call!</div>
 				<div className={styles.claim_container}>
 					<div className={styles.claim_tab}>
 						<div className={clsx(styles.tab_btn, topicId === '' ? styles.active : '')} onClick={() => changeTopicId('')} >All</div>
@@ -214,7 +214,7 @@ const claimRender = (isMobile) => {
 										</div>
 										<div className={clsx(styles.item_bottom)}>
 											<div className={clsx(styles.item_bottom_wrapper)}>
-												<div className={clsx(styles.item_github)}>
+												<div className={clsx(styles.item_github)}  onClick={() => toUrl(item.url)}>
 													<GithubOutlined className={clsx(styles.github)} style={{ fontSize: '24px' }} />
 													<span className={clsx(styles.github_name)} >	Go to Github</span>
 													<RightOutlined />
@@ -441,9 +441,13 @@ const wishRender = (isMobile) => {
 											{item.desc
 											}
 										</div>
-										<div className={clsx(styles.item_img)}>
-											<img src={getImgUrl('accept')} alt="" />
-										</div>
+										{
+											item.status==2&&(
+												<div className={clsx(styles.item_img)}>
+													<img src={getImgUrl('accept')} alt="" />
+												</div>
+											)
+										}
 									</div>
 
 								</div>
