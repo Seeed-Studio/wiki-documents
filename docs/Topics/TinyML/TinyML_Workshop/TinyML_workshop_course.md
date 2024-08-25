@@ -15,11 +15,11 @@ last_update:
 
 ## The AI Workshop Overview
 
-Welcome to the course on using SenseCraft AI Platform and Edge Impulse for TinyML on the XIAO ESP32S3 Sense!
+Hosted by Seeed Studio, this hands-on workshop is specifically tailored for AI beginners and Arduino fans. 
 
-This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize SenseCraft AI Platform and Edge Impulse platforms effectively.
+Dive into the transformative world of TinyML using our XIAO ESP32S3 Sense, a thumb-sized yet powerful MCU. 
 
-We will explore the functionalities of SenseCraft AI Platform, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+This workshop will provide you with a practical, easy-to-understand introduction to machine learning while demystifying the world of AI.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/tinyml2.png" style={{width:1000, height:'auto'}}/></div>
 
