@@ -3355,7 +3355,14 @@ const sidebars = {
                 
               ]
             },
-            
+            {
+              type: 'category',
+              label: 'Multimodal AI',
+              items: [
+                // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
+              ]
+            },
             {
               type: 'category',
               label: 'Robotics',
