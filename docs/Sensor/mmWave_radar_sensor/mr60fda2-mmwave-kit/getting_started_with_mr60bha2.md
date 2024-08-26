@@ -38,8 +38,8 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
   - **WS2812 RGB LED**: Customizable LED for visual feedback and DIY projects.
 - **Expandable Connectivity**: Includes Grove GPIO ports for adding additional sensors and modules.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div> -->
 
 ### Specification
 
@@ -61,13 +61,13 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 - Smart home appliances
 - Intelligent security
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/application.jpg" style={{width:'auto', height:'auto', "border-radius": '2.8px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/application.jpg" style={{width:'auto', height:'auto', "border-radius": '2.8px'}}/></div> -->
 
 ## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/hardware-overview.jpg" style={{"border-radius": '12.8px'}}/></div><br />
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div> -->
 
 ## Getting Started
 
@@ -163,7 +163,11 @@ if (mmWave.update(100)) {
 }
 }
 ```
+The output will be as follows on Arduino Serial Monitor:
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/breathing_and_heartbeat_detection.png" style={{width:700, height:'auto'}}/></div>
+
+<!-- 
 ### Fall Module
 
 This example shows how to use the **MR60FDA2** sensor for fall detection.
@@ -234,7 +238,7 @@ if (mmWave.update(100)) {
  }
 }
 }
-```
+``` -->
 
 ### Blink RGB LED
 
@@ -273,6 +277,10 @@ for (int i = 255; i >= 0; i--) {
 }
 ```
 
+Once the program is successfully uploaded, you will see RGB LED on the right side of the mmWave Sensor Modules is blinking.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
+
 ### Light Sensor (BH1750)
 
 This example shows how to read light intensity values using the BH1750 sensor.
@@ -307,6 +315,10 @@ if (BH1750.hasValue()) {
 }
 ```
 
+The output will be as follows on Arduino Serial Monitor:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light_sensor.png" style={{width:700, height:'auto'}}/></div>
+
 ## API Explanation
 
 ### Breath Module API
@@ -332,6 +344,7 @@ This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sens
 - **`mmWave.getDistance(float &distance)`**:
   - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal.
 
+<!-- 
 ### Fall Module API
 
 This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here’s what each key function does:
@@ -355,8 +368,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Checks if a human presence is detected by the radar. Returns `true` if a human is detected, and `false` otherwise.
 
 - **`mmWave.getFall()`**:
-  - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.
-
+  - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.-->
 
 ## Resources
 

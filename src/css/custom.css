@@ -1190,7 +1190,7 @@ a.getting_started:hover .getting_started_label3 {
 
 .button_edgelab {
 	display: inline-block;
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai2.png');
 	background-size: cover;
 	background-position: center;
 	margin: auto;
@@ -1206,14 +1206,14 @@ a.getting_started:hover .getting_started_label3 {
 	border: 1px solid #ffffff;
 	border-radius: 8px;
 	transition: transform 0.2s ease-in-out;
-	width: 1000px; /* 按钮宽度 */
-	height: 500px; /* 按钮高度 */
+	width: 800px; /* 按钮宽度 */
+	height: 365px; /* 按钮高度 */
 }
 
 .button_edgelab:hover {
 	margin: auto;
 	transform: scale(1.1);
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai.png');
 	background-size: cover;
 }
 
