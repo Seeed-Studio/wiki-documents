@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/19/2024
+  date: 08/26/2024
   author: Frank
 ---
 
@@ -17,86 +17,58 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 19th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 26th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Start running with ESP-NOW protocol on XIAO Series](https://wiki.seeedstudio.com/xiao_esp32c3_espnow/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png" style={{width:800, height:'auto'}}/></div>
-<br />
-
-This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32 Series to communicate using this protocol,the process will be very simple,In order to enable everyone to utilize the ESP-NOW protocol in the XIAO ESP32 series,we prepare thress XIAO ESP32 types C6/C3/S3 to comuncate.
-
-### [ChatGPT - Raspberry Pi](https://wiki.seeedstudio.com/respeaker_lite_pi5/)
-
-<div class="table-center">
-<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-This project integrates voice input, large model response, and voice output functionalities using a Raspberry Pi 5. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
-
-### [Watcher & Node-RED To p5.js Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
-
-<div class="table-center">
-<iframe width="800" height="400" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-p5.js is a JavaScript library that makes coding accessible for artists and designers. It provides an easy way to create graphics, animations, and interactive applications using a simple syntax. With features like drawing on a canvas, handling user input, and supporting multimedia, p5.js is ideal for creative coding projects, educational purposes, and digital art. Its vibrant community and extensive resources help users of all skill levels get started.
-
-### [AI NVR with reServer Jetson](https://wiki.seeedstudio.com/ai_nvr_with_jetson/)
+### [Getting Started with reServer J501](https://wiki.seeedstudio.com/reserver_j501_getting_started/)
 
 <div align="center">
-    <img width={900} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/vst.png" />
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_J501.jpeg"/>
 </div>
 
-With the advancement of artificial intelligence technology, traditional video surveillance systems are evolving towards greater intelligence. AI NVR (Network Video Recorder) combines artificial intelligence with video surveillance technology, enabling not only the recording of video but also real-time analysis, recognition, and processing of video content. This enhances the efficiency and accuracy of security monitoring. This article will introduce how to implement an AI NVR using the NVIDIA Jetson platform.
+The J501 carrier board is a powerful extension board that supports NVIDIA Jetson AGX Orin modules. It features rich data ports and extension interfaces, completely unleashed the full performance of the AGX Orin module. Also it supports adding GMSL extension to connect up to 8 GMSL cameras.
 
-### [reComputer R1000 act as OPC UA server with Node-RED](https://wiki.seeedstudio.com/recomputer_r1000_nodered_opcua_server/)
+### [Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
 
-The OPC Unified Architecture (UA), introduced in 2008, represents a significant evolution in industrial communication standards. Unlike its predecessors under the OPC Classic umbrella, OPC UA is a platform-independent, service-oriented architecture that unifies all the functionalities of previous OPC specifications into a single, extensible framework. This modern approach not only preserves the core capabilities of OPC Classic but also enhances them with a multi-layered design that meets the complex demands of today’s industrial environments.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
 
-### [Micropython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png" /></div>
+### [Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/)
 
-[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
-- [Micropython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
-- [Micropython with XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/)
+### [Send message from Watcher & Node-RED to Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
 
-### [Circuitpython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/banner.png" style={{width:1000, height:'auto'}}/></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/title.png" /></div>
+Open Interpreter is an open-source tool that facilitates interaction between users and their computers by enabling natural language commands to execute code in various programming languages. It acts as a bridge, allowing users to write instructions in plain language, which the interpreter then translates into executable code. This enhances productivity and makes programming more accessible, especially for those who may not be familiar with coding syntax. We will show you how to configure it in following steps.
 
-This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32C3 development board!
+### [Build balenaOS for reComputer R1000](https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/)
 
-- [Circuitpython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
-- [Circuitpython with XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_with_circuitpython/)
+[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
 
-### [Getting Started with Seeed Studio XIAO RA4M1](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
 
-<div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" 
-    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
-  />
-</div>
+This tutorial will show you how to compile, configure and burn balenaOS for R1000.
 
-The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up to 48 MHz) into the classic XIAO form factor. This development board offers 256KB Flash, 32KB SRAM, 8KB EEPROM, a USB 2.0 connector, reset and boot buttons, 3 LEDs, a 14-bit A/D converter, a 12-bit D/A converter, and a CAN BUS interface. With onboard charging circuitry and low-power modes (as low as 45μA), it’s ideal for battery-powered applications. Sharing the same 32-bit R7FA4M1AB3CFM microcontroller as the Arduino Uno R4, it's natively compatible with Arduino IDE and the extensive XIAO accessories, making it the perfect starting point for electronics projects.
 
-### [SenseCraft Cloud Fee](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
+### [SenseCAP T1000 tracker and Thingsboard Integrated](https://wiki.seeedstudio.com/thingsboard_integrated/)
 
-SenseCaft cloud service is based on hardware devices using the LoRaWAN IoT low-power communication protocol. The LoRaWAN devices require metered prepayment to enable the data communication function. Users can prepay monthly or annually based on their product usage needs.
+[ThingsBoard](https://thingsboard.io/) is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications.
 
-### [ReSpeaker Lite User Button Usage](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
+The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to ThingsBoard through TTN.
 
-User button is connected to XMOS XU316 and it's not programmed yet(reserve for futurn usage). If you want to use this button with XIAO ESP32S3, connect the `Usr` pin to the `D2` or `D3` pin.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={600} height="auto" /></p>
 
-This example connects the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detect whether the button is pressed.
+### [SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)
+
+At Watcher, we believe in providing developers with a clear and transparent pricing structure for integrating artificial intelligence into their projects. We understand that every developer has unique requirements, which is why we offer a range of pricing plans designed to cater to various needs and budgets. To help you make an informed decision, we've outlined the key aspects of our pricing model and the specific features included in each plan.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
+
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
 
 
 
@@ -104,7 +76,7 @@ This example connects the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detec
 
 
 
-## Existed Wiki Updated
+<!-- ## Existed Wiki Updated
 
 ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
@@ -120,7 +92,7 @@ We've added an [example](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encod
 
 ### [Added Example for XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink)
 
-We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).
+We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).-->
 
 
 
@@ -212,6 +184,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
+- [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
 
 </details>
 
