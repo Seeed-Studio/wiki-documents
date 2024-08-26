@@ -1,6 +1,6 @@
 ---
 description: TinyML Workshop Course.
-title: TinyML Workshop Course
+title: AI Workshop - How to Add AI to Almost Everything
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -11,20 +11,27 @@ last_update:
 ---
 
 
-# TinyML Workshop Course
+# How to Add AI to Almost Everything
 
-Welcome to the course on using SenseCraft Model Assistant and Edge Impulse for TinyML on the XIAO ESP32S3 Sense! This course is a culmination of Seeed Studio's offline workshops, and it aims to provide you with a comprehensive understanding of how to utilize SenseCraft Model Assistant and Edge Impulse platforms effectively. We will explore the functionalities of SSCMA, learn about Edge Impulse's capabilities, and focus on implementing TinyML on the XIAO ESP32S3 development board.
+## The AI Workshop Overview
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/3.jpg" style={{width:1000, height:'auto'}}/></div>
+Hosted by Seeed Studio, this hands-on workshop is specifically tailored for AI beginners and Arduino fans. 
 
+Dive into the transformative world of TinyML using our XIAO ESP32S3 Sense, a thumb-sized yet powerful MCU. 
 
-Throughout this course, we will delve into the usage of SenseCraft Model Assistant(Beta) as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization. We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
+This workshop will provide you with a practical, easy-to-understand introduction to machine learning while demystifying the world of AI.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/tinyml2.png" style={{width:1000, height:'auto'}}/></div>
+
+Throughout this course, we will delve into the usage of SenseCraft AI Platform as a powerful online development environment. It will guide you through data management, preprocessing, feature engineering, model design, training, evaluation, and optimization.
+
+We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
 
 <div class="button_tech_support_container">
-<a href="/ModelAssistant_Introduce_Overview" class="button_edgelab"></a> 
+<a href="/sensecraft_ai" class="button_edgelab"></a> 
 </div>
 
-Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in SenseCraft Model Assistant to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
+Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in SenseCraft AI Platform to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
 
 <div class="button_tech_support_container">
 <a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
@@ -32,7 +39,7 @@ Next, we will shift our focus to the Edge Impulse platform. Designed specificall
 
 By participating in this course, you will gain the following skills and knowledge:
 
-- Familiarity with the fundamental features and workflow of SenseCraft Model Assistant.
+- Familiarity with the fundamental features and workflow of SenseCraft AI Platform.
 - Proficiency in essential steps such as data preprocessing, model training, and evaluation.
 - Understanding of TinyML concepts and their application scenarios.
 - Ability to deploy models to the XIAO ESP32S3 using the Edge Impulse platform.
@@ -49,7 +56,7 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft Model Assistant</a>
+          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft AI Platform</a>
           <br/>Use pre-made tinyML models and experiment quickly.
       </div>
   </div>
