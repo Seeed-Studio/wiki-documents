@@ -7,7 +7,7 @@ keywords:
 - TTS
 - STT
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /speech_vlm_jetson
+slug: /speech_vlm
 last_update:
   date: 08/23/2024
   author: YaoHui Zhu
