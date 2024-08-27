@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /tinyml_workshop_course_new
 last_update:
-  date: 08/09/2023
-  author: Citric
+  date: 08/27/2024
+  author: Citric, Matthew
 ---
 
 
@@ -15,9 +15,9 @@ last_update:
 
 ## The AI Workshop Overview
 
-Hosted by Seeed Studio, this hands-on workshop is specifically tailored for AI beginners and Arduino fans. 
+Hosted by Seeed Studio, this hands-on workshop is specifically tailored for AI beginners and Arduino fans.
 
-Dive into the transformative world of TinyML using our XIAO ESP32S3 Sense, a thumb-sized yet powerful MCU. 
+Dive into the transformative world of TinyML using our XIAO ESP32S3 Sense, a thumb-sized yet powerful MCU.
 
 This workshop will provide you with a practical, easy-to-understand introduction to machine learning while demystifying the world of AI.
 
@@ -50,6 +50,34 @@ Whether you are a beginner or an experienced developer with some machine learnin
 To complete the workshop, we need go through the instructions below, and each page you have a assignment to complete, make sure to done that before going next step.
 :::
 
+## Main Academic Reference from:
+
+<div class="button_tech_support_container">
+<a href="https://mlsysbook.ai/" class="button_ml_harvard_book"></a> 
+</div>
+
+## The Kit Used in Workshop
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg">One Apply for XIAO ESP32S3 Sense</th>
+      <th class="table-trnobg">Whole Workshop for ML Practical Class Kit</th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110992064-machine-learning-practical-class-kit-all.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Machine-Learning-Practical-Class-Kit-p-5951.html"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
+        </tr>
+    </table>
+</div>
+
+## Getting Started
 
 ### Step 1: Familiarize the tools that we are using. 
 
