@@ -245,7 +245,7 @@ last_update:
         <td align="center"><font size={"3"}>✅</font></td>
 	</tr>
     <tr>
-	    <th>Baterry Charge LED and Chip</th>
+	    <th>Battery Charge LED and Chip</th>
 	    <td align="center"><font size={"3"}>❌</font></td>
 	    <td align="center"><font size={"3"}>❌</font></td>
         <td align="center"><font size={"3"}>✅</font></td>
@@ -378,7 +378,7 @@ As a growing ecosystem of Seeed Studio XIAO, we offer a wide range of add-ons, w
 
 ### Seeed Series Kicad files
 
-- **[kicad_sym]** [Kicad Symbols](https://files.seeedstudio.com/wiki//XIAO/Seeed_Studio_XIAO_Series-20240814.kicad_sym)
+- **[kicad_sym]** [Kicad Symbols](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.kicad_sym)
 - **[ZIP]** [Kicad Footprints](https://files.seeedstudio.com/wiki/XIAO/Seeed_Studio_XIAO_Series-20240814.pretty.zip)
 
 ### Seeed Studio XIAO SMAD21 Open-Source Materials
