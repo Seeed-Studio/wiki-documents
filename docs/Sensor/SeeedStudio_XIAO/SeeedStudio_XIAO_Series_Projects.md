@@ -53,7 +53,7 @@ Here is a collection of hands-on preparation content for each XIAO, where you ca
         <tr>
 			<th>XIAO ESP32C3</th>
 			<th>XIAO ESP32S3 (Sense)</th>
-			<th>XIOA ESP32C6</th>
+			<th>XIAO ESP32C6</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/4.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -524,7 +524,7 @@ This section will list the major platforms supported by XIAO, including Platform
 		</tr>
         <tr>
 			<th>XIAO ESP32C3</th>
-			<th>XIOA ESP32C6</th>
+			<th>XIAO ESP32C6</th>
 		</tr>
 		<tr class="form_without_frame">
 			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_topicpage/circuitpython-esp32c3.png" style={{width:300, height:'auto'}}/></div></td>
