@@ -2,7 +2,7 @@
 description: MicroPython for XIAO ESP32S3 Sense
 title: MicroPython Project for XIAO ESP32S3 Sense(Camera, Wi-Fi)
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /XIAO_ESP32S3_Project_Micropython
+slug: /xiao_esp32s3_project_micropython
 last_update:
   date: 08/30/2023
   author: Hendra
