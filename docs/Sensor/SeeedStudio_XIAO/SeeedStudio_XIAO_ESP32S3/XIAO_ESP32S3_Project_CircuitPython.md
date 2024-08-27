@@ -2,7 +2,7 @@
 description: CircuitPython for XIAO ESP32S3
 title: CircuitPython Project for XIAO ESP32S3 Sense(Display)
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /xiao_esp32s3_project_circuitPython
+slug: /xiao_esp32s3_project_circuitpython
 last_update:
   date: 08/18/2024
   author: Isaac, Djair Guilherme
