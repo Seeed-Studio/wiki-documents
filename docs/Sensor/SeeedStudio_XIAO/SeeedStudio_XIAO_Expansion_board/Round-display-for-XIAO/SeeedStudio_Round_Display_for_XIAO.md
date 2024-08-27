@@ -251,7 +251,7 @@ On Windows, the root directory of the Arduino library is:
 
 #### Step 5. (Optional) Configure the usage environment
 
-Round Display currently adapts two different library-based displays, one **TFT_eSPI** and the other **Arduino GFX**. On the nRF52840, the Arduino GFX will have significantly better performance.
+Round Display currently adapts two different library-based displays, one **TFT_eSPI** and the other **Arduino GFX**. For the XIAO SAMD21 and XIAO nRF52840, there are not enough memory to run the TFT library, and the Arduino GFX will have significantly better performance.
 
 :::note
 If you need to use the **TFT_eSPI** library, then proceed to **step 5**. If you are using the Arduino GFX, then you can skip this step.
