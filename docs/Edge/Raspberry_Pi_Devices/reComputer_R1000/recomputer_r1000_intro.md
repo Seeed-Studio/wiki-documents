@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_intro
 last_update:
-  date: 7/19/2024
+  date: 8/27/2024
   author: Kasun Thushara
 ---
 
@@ -366,6 +366,57 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 		</tr>
 	</table>
 </div>
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>Benchmark on RPi5 and CM4 running yolov8s with rpi ai kit</font></th>
+      <th class="table-trnobg"><font size={"4"}>Install M.2 Coral to Raspberry Pi 5</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg"> 
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object-detection-benchmark.png" style={{width:300, height:'auto'}}/></div></td>
+            <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/pycoral_install.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  This wiki showcases benchmarking of YOLOv8s for pose estimation and object detection on Raspberry Pi 5 and Raspberry Pi Compute Module 4. All tests utilize the same model (YOLOv8s), quantized to int8, with an input size of 640x640 resolution, batch size set to 1, and input from the same video at 240 FPS.</font></td>
+       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  This wiki we will show you how to install Coral M.2 Accelerator to Raspberry Pi 5 and finally we will test Coral M.2 Accelerator.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/install_m2_coral_to_rpi5/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>Convert Model to Edge TPU TFlite Format for Google Coral</font></th>
+      <th class="table-trnobg"><font size={"4"}>Pose-Based Light Control with Node-Red and Raspberry Pi with AIkit</font></th>
+      <th class="table-trnobg"><font size={"4"}>Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/pycoral_install.gif" style={{width:300, height:'auto'}}/></div></td>
+     <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/pose_control_light/pose_control.jpeg" style={{width:300, height:'auto'}}/></div></td>
+     <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_compile.png" style={{width:300, height:'auto'}}/></div></td>
+				</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This wiki article will guide you through the process of compiling a model and running it on the Google Coral TPU, enabling you to leverage its capabilities for high-performance machine learning applications.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> his wiki will guide you on how to run YOLOv8 using an AI kit, use YOLOv8 to monitor your posture, and ultimately control your lights based on your posture. </font></td>
+     <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This wiki will guide you on how to use YOLOv8n for object detection with AI Kit on Raspberry Pi 5, from training to deployment.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/convert_model_to_edge_tpu_tflite_format_for_google_coral/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/pose_based_light_control_with_nodered_and_rpi_with_aikit/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
+	</table>
+</div>
+
 
 
 ## Tech Support & Product Discussion
