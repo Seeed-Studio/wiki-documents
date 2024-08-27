@@ -251,17 +251,22 @@ Click `Open Serial Monitor`, connect the device, and you will see the device nam
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name2.png" alt="pir" width={800} height="auto" /></p>
 
+* **How to reset?**
+
+Press and hold the button, then connect the charging cable.
+
 * **How to check the battery?**
 
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/), check the log, keyword `batPct`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/battery-level.png" alt="pir" width={800} height="auto" /></p>
 
+
+
 ## Resource
 
-[T1000-E Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader/tree/master/src/boards/t1000_e)
+[T1000-E Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.hex)
 [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
-
 
 ## Tech Support & Product Discussion
 

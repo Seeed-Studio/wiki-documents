@@ -69,7 +69,9 @@ You need to prepare the following hardware
         style={{ transform: 'rotate(90deg)' }} 
     />
 </div>
-  
+
+<br></br>
+
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that regardless of how the power supply's positive and negative terminals are connected, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
 :::

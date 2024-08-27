@@ -1014,14 +1014,14 @@ const sidebars = {
           type: 'category',
           label: 'MR60FDA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         {
           type: 'category',
           label: 'MR60BHA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -3369,7 +3369,14 @@ const sidebars = {
                 
               ]
             },
-            
+            {
+              type: 'category',
+              label: 'Multimodal AI',
+              items: [
+                // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
+              ]
+            },
             {
               type: 'category',
               label: 'Robotics',
@@ -3767,15 +3774,33 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft',
+      label: 'SenseCraft AI',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+      },
       items: [
-        {
-          type: 'category',
-          label: 'SenseCraft AI',
-          items: [
-            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
-          ],
-        },
+            {
+              type: 'category',
+              label: 'AI Models',
+              items: [
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_XIAO_ESP32S3',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_Grove_Vision_AI_V2',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/AI_models/Deploy_model_to_Jetson',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Device Workspace',
+              items: [
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/XIAO_ESP32S3_Workspace',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Grove_Vision_AI_v2_Workspace',
+                'Cloud_Chain/SenseCraft/SenseCraft_AI/Device_Workspace/Nvidia_Jetson_Workspace',
+              ],
+            },
+            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI_Jetson',
       ]
     },
     /*
@@ -3834,7 +3859,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'TinyML Workshop',
+          label: 'AI Workshop',
           collapsed: true,
           collapsible: true,
           link: {
