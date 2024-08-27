@@ -15,7 +15,7 @@ last_update:
 
 ## Digital
 
-The XIAO RA4M1 has up to 11 regular GPIO pins and 6 analog pins. In this example, we will use the XIAO RA4M1, XIAO expansion board, and a relay to demonstrate how to use different digital pins for reading and writing.
+The XIAO RA4M1 has up to 11 regular GPIO pins , 6 analog pins and 8 reusable IO ports behind it. In this example, we will use the XIAO RA4M1, XIAO expansion board, and a relay to demonstrate how to use different digital pins for reading and writing.
 
 ### Hardware Preparation
 
@@ -84,7 +84,7 @@ void loop() {
 
 If everything goes smoothly, after uploading the program, you should see the following effect.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/17.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/31.gif" style={{width:600, height:'auto'}}/></div>
 
 ## Digital as PWM
 
@@ -157,7 +157,7 @@ void loop() {
 
 If the program runs successfully, you will see the following running effect.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/19.gif" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/32.gif" style={{width:600, height:'auto'}}/></div>
 
 ## Analog
 
@@ -258,7 +258,7 @@ void Fourteen_Bite_ADC_Config() {
 ```
 If everything goes smoothly, after uploading the program, you should see the following effect.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/18.gif" style={{width:650, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/33.gif" style={{width:650, height:'auto'}}/></div>
 
 ## Serial
 
@@ -755,19 +755,19 @@ In this example , you need to solder one of the CAN Bus Breakout Board terminal 
 ***When can the terminal resistor be disconnected?***
 - 1. Short distance communication: In some short distance applications (usually less than 1 meter), terminal resistors can be omitted because the impact of signal reflection on communication is relatively small.
 - 2. Single node communication: If there is only one node on the bus (such as in a debugging environment) and the distance is short, the terminal resistor can be temporarily disconnected.
-:::
 
-
-
-*_Sender Code Result_*
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:800, height:'auto'}}/></div>
-
-*_Rceciver Code Result_ *
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/26.png" style={{width:800, height:'auto'}}/></div>
+<table align="center">
+	<tr>
+	    <th>Sender Code Result</th>
+	    <th>Rceciver Code Result</th>
+	</tr>
+	<tr>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/25.png" style={{width:500, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/26.png" style={{width:500, height:'auto'}}/></div></td>
+	</tr>
+</table>
 
 ## Tech Support & Product Discussion
-
-.
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

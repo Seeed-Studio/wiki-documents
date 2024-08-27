@@ -1139,6 +1139,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840_PlatformIO',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Hardware Usage',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
@@ -1236,6 +1243,13 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_CircuitPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_PlatformIO',
               ],
             },
             {
