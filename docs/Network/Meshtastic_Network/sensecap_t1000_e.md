@@ -12,8 +12,6 @@ last_update:
 
 ## Introduction
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/5/_/5_10.jpg" alt="pir" width={600} height="auto" /></p>
 
 It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
@@ -25,21 +23,94 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
     </a>
 </div>
 
-
----
+<br></br>
 
 :::tip Version Comparison
 
-||Compatible Network|Temperature|Light|Accelerometer|
-|--|--|--|--|--|
-|[SenseCAP T1000-A](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
-|[SenseCAP T1000-B](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|||
-|[SenseCAP T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)|<ul><li>Meshtastic</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>T1000-A</th>
+            <th>T1000-B</th>
+            <th>T1000-E</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Compatible Network</th>
+            <td><ul><li>LoRaWAN</li><li>Helium</li></ul></td>
+            <td><ul><li>LoRaWAN</li><li>Helium</li></ul></td>
+            <td><ul><li>Meshtastic</li></ul></td>
+        </tr>
+        <tr>
+            <th>Temperature Sensor</th>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+        </tr>
+        <tr>
+            <th>Light Sensor</th>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+        </tr>
+        <tr>
+            <th>Accelerometer</th>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+        </tr>
+        <tr>
+            <th>GPS</th>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+        </tr>
+        <tr>
+            <th>Bluetooth</th>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+            <td><p style={{textAlign: 'center'}}>✅</p></td>
+        </tr>
+        <tr>
+            <th>Battery Capacity</th>
+            <td colspan="3" Align="center">700mAh</td>
+        </tr>
+        <tr>
+            <th>IP Rating</th>
+            <td colspan="3" Align="center">IP65</td>
+        </tr>
+        <tr>
+            <th>Dimensions</th>
+            <td colspan="3" Align="center">85 x 55 x 6.5 mm</td>
+        </tr>
+        <tr>
+            <th>Weight</th>
+            <td colspan="3" Align="center">32g</td>
+        </tr>
+        <tr>
+            <th>Operating Temperature</th>
+            <td colspan="3" Align="center">-20°C to +60°C</td>
+        </tr>
+        <tr>
+            <th>Main Chip</th>
+            <td colspan="3" Align="center">LR1110 + nRF52840</td>
+        </tr>
+        <tr>
+            <th>Product Link</th>
+            <td><a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">T1000-A</a></td>
+            <td><a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html">T1000-B</a></td>
+            <td><a href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">T1000-E</a></td>
+        </tr>
+    </tbody>
+</table>
+
 :::
 
+
+
 ### Features
-
-
 
 * **Multi-Protocol Support**: Featuring nRF52840 and LR1110, it supports Bluetooth 5.0, Thread, Zigbee, and LoRa, ensuring compatibility with a wide range of devices and networks.
 * **Powerful Positioning Capabilities**: Integrated with the Mediatek‘s AG3335 GPS chip, it provides high-precision positioning services.
@@ -50,7 +121,6 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 ### Specification
 
 **General**
-
 
 |**Network protocol**|LoRa, Bluetooth v5.1|
 | :- | :- |
