@@ -551,7 +551,7 @@ Overall, this code demonstrates how to use the U8g2 library to control an OLED d
 #### Step 2 . Insert these two XIAO RA4M1 separately in CAN Bus Breakout Board
 #### Step 3 . Prepare the DuPont line connection . 
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/27.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/36.png" style={{width:400, height:'auto'}}/></div>
 
 ### Software Implementation
 

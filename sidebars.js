@@ -1272,6 +1272,7 @@ const sidebars = {
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Sense_Consumption',
   
             {
               type: 'category',
@@ -3145,6 +3146,25 @@ const sidebars = {
         ],
       },
 
+      {
+        type: 'category',
+        label: 'Hat',
+        collapsed: true,
+        collapsible: true,
+        items: [
+            {
+              type: 'category',
+              label: 'M.2 Hat',
+              items: [
+                    'Edge/M_2_Hat/m_2_hat_start_with_pi5',
+              ],
+            },
+          
+        ],
+      },
+
+
+
       ],
 
 
@@ -3628,6 +3648,7 @@ const sidebars = {
         },
       ],
     },
+
 
     {
       type: 'category',
