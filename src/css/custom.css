@@ -1190,7 +1190,7 @@ a.getting_started:hover .getting_started_label3 {
 
 .button_edgelab {
 	display: inline-block;
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai2.png');
 	background-size: cover;
 	background-position: center;
 	margin: auto;
@@ -1206,15 +1206,44 @@ a.getting_started:hover .getting_started_label3 {
 	border: 1px solid #ffffff;
 	border-radius: 8px;
 	transition: transform 0.2s ease-in-out;
-	width: 1000px; /* 按钮宽度 */
-	height: 500px; /* 按钮高度 */
+	width: 800px; /* 按钮宽度 */
+	height: 365px; /* 按钮高度 */
 }
 
 .button_edgelab:hover {
 	margin: auto;
 	transform: scale(1.1);
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai.png');
 	background-size: cover;
+}
+
+
+.button_ml_harvard_book {
+	display: inline-block;
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/machine_learnning_system.png');
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	/* margin-top: 8px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  margin-right: 2px; */
+	padding: 10px 20px;
+	/* color: rgb(0, 0, 0);text color */
+	font-size: 100px;
+	/* font-weight: 40%; */
+	text-decoration: none;
+	border: 1px solid #ffffff;
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 800px; /* 按钮宽度 */
+	height: 365px; /* 按钮高度 */
+}
+
+.button_ml_harvard_book:hover {
+	margin: auto;
+	transform: scale(1.1);
+
 }
 
 .button_edgeimpulse {
@@ -1582,9 +1611,9 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	transform: scale(1.1);
 }
 
-.DocSearch-HitsFooter a {
+/* .DocSearch-HitsFooter a {
 	display: none;
-}
+} */
 @font-face {
 	font-family: 'Montserrat';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-Regular.otf');

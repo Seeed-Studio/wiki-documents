@@ -1014,14 +1014,14 @@ const sidebars = {
           type: 'category',
           label: 'MR60FDA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         {
           type: 'category',
           label: 'MR60BHA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -1139,6 +1139,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840_PlatformIO',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Hardware Usage',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
@@ -1236,6 +1243,13 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_Embedded_Swift',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_CircuitPython',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_PlatformIO',
               ],
             },
             {
@@ -3374,7 +3388,14 @@ const sidebars = {
                 
               ]
             },
-            
+            {
+              type: 'category',
+              label: 'Multimodal AI',
+              items: [
+                // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
+              ]
+            },
             {
               type: 'category',
               label: 'Robotics',
@@ -3773,13 +3794,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft',
+      label: 'SenseCraft AI',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
+      },
       items: [
-        {
-          type: 'category',
-          label: 'SenseCraft AI',
-          items: [
-            'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI',
             {
               type: 'category',
               label: 'AI Models',
@@ -3799,8 +3821,6 @@ const sidebars = {
               ],
             },
             'Cloud_Chain/SenseCraft/SenseCraft_AI/SenseCraft_AI_Jetson',
-          ],
-        },
       ]
     },
     /*
@@ -3859,7 +3879,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'TinyML Workshop',
+          label: 'AI Workshop',
           collapsed: true,
           collapsible: true,
           link: {

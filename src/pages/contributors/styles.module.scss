@@ -1,0 +1,429 @@
+.claim_page {
+    width: 100%;
+    font-family: 'Montserrat';
+
+    background-color: #fff;
+    color: #000000;
+
+    .noData {
+        text-align: center;
+        margin: 60px 0;
+        font-weight: bold;
+    }
+
+    .cursor_pointer {
+        cursor: pointer;
+    }
+
+    .bold {
+        font-family: 'Montserrat-bold';
+        font-weight: 700;
+    }
+
+    .section {
+        padding: 5% 2%;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1288px;
+    }
+
+    .title {
+        font-family: 'Montserrat-bold';
+        font-weight: 700;
+        font-size: 38px;
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .sec_title {
+        font-family: 'Montserrat-bold';
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1.1;
+        margin: 16px 0;
+    }
+
+    .gray {
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .why {
+        // 标题
+        background: #33495b;
+        color: #fff;
+        background: url('https://files.seeedstudio.com/wiki/contributor/banner_bg.png') no-repeat;
+        background-size: cover;
+
+        .title {
+            color: #fff;
+
+            .s_title {
+                background-image: linear-gradient(to right, #a9de2c 20%, #fff 70%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent !important;
+                font-size: 58px;
+                margin-top: 10px;
+                line-height: 1.2;
+            }
+        }
+
+        .wrapper {
+            margin-top: 1%;
+            max-width: 1328px;
+        }
+
+        .project_desc {
+            font-size: 14px;
+            color: #000000;
+            text-decoration-line: underline;
+            text-transform: none;
+            text-align: left;
+            padding: 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+
+        .project_more {
+            text-align: right;
+            font-size: 14px;
+            margin-top: 26px;
+
+            .more_text {
+                margin-right: 4px;
+                cursor: pointer;
+            }
+        }
+
+        .why_container {
+            color: #000;
+            margin-top: 3.5%;
+            overflow: hidden;
+            padding: 0 24px;
+            box-sizing: border-box;
+
+            .why_item {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+                border-radius: 20px;
+                padding: 24px;
+                margin-bottom: 20px;
+                text-align: center;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+
+                .github {
+                    display: inline-block;
+                    width: 24px;
+                    margin-right: 8px;
+                    vertical-align: top;
+                }
+
+                .sec_desc {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: left;
+                    font-size: 14px;
+                }
+
+                .project_wrapper {
+                    text-align: left;
+                    font-size: 18px;
+
+                    .project_title {
+                        margin: 16px 0 6px 0;
+                        font-weight: 600;
+                    }
+
+                    .project_name {
+                        text-decoration: underline;
+                        font-size: 14px;
+                        cursor: pointer;
+
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+    .item_radio {
+        margin: 25px 0;
+        text-align: right;
+    }
+
+    .like {
+        align-self: center;
+        display: flex;
+        margin-right: 24px;
+        font-size: 16px;
+
+        .like_item {
+            margin-right: 20px;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .like_number {
+
+            margin-left: 6px;
+        }
+    }
+
+    .claim {
+        background-color: #fff;
+
+        .claim_tab {
+            display: flex;
+        }
+
+        .tab_btn {
+            padding: 10px 24px;
+            background: #F7F9F2;
+            border-radius: 90px;
+            font-weight: 500;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-right: 12px;
+            cursor: pointer;
+
+            &.small {
+                padding: 5px 16px;
+                font-size: 14px;
+            }
+
+            &.active {
+                background: #ECF4D9;
+                font-weight: 700;
+                color: #8FC31F;
+                font-family: 'Montserrat-bold';
+            }
+        }
+
+
+        .claim_container {
+            margin-top: 3.5%;
+            margin-bottom: 4.5%;
+        }
+
+        .claim_item {
+            display: flex;
+            border-bottom: 1px solid #E7E7E7;
+            padding-bottom: 5%;
+            margin-bottom: 5%;
+
+            .item_left {
+                flex: 2;
+
+            }
+
+            .item_right {
+                flex: 1;
+                max-width: 480px;
+                margin-left: 5%;
+
+                img {
+                    border-radius: 20px;
+                }
+
+            }
+
+            .item_tab {
+                margin: 24px 0;
+            }
+
+            .item_title {
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .item_desc {
+                margin-bottom: 3.5%;
+            }
+
+            .item_bottom {
+                display: flex;
+                justify-content: space-between;
+
+                .item_bottom_wrapper {
+                    display: flex;
+
+                }
+
+                .item_github {
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 90px;
+                    padding: 14px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-right: 4%;
+                    cursor: pointer;
+
+                    .github {
+                        margin-right: 6px;
+                    }
+
+                    .github_name {
+                        margin: 0 10px;
+                        width: max-content;
+                        align-self: center;
+                    }
+                }
+
+                .item_time {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+
+
+            }
+        }
+    }
+
+    .wishpool {
+        background: rgba(218, 237, 173, 0.25);
+
+        .title {}
+
+        .add {
+            padding: 20px 4%;
+            background: #8FC31F;
+            text-align: center;
+            border-radius: 90px;
+            color: #fff;
+            margin: 0 auto;
+            font-size: 24px;
+            margin-top: 24px;
+            width: fit-content;
+            font-weight: 500;
+        }
+
+        .wishpool_wrapper {
+            margin-bottom: 5%;
+        }
+
+        .wishpool_item {
+
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 3.5%;
+            margin-bottom: 16px;
+
+            .item_title {
+                display: flex;
+                justify-content: space-between;
+                font-weight: bold;
+                font-family: 'Montserrat-bold';
+                font-size: 24px;
+            }
+
+            .item_publish {
+                display: flex;
+                margin: 16px 0;
+
+                .item_time {
+                    margin-left: 36px;
+                }
+            }
+
+            .like {
+                margin-right: 0;
+
+                .like_item:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .item_introduce {
+                display: flex;
+
+                .item_desc {
+                    flex: 1;
+                }
+
+                .item_img {
+                    width: 98px;
+                    height: 70px;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 900px) {}
+
+    @media (max-width: 768px) {
+        .title {
+            font-size: 24px;
+            line-height: 1.1;
+        }
+
+        .sec_title {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .section {
+            padding: 5% 4%;
+        }
+
+
+
+        .why {
+            .why_container {
+                .why_item {
+                    padding: 20px;
+                }
+            }
+        }
+
+        .claim {
+            .claim_item {
+
+                flex-direction: column-reverse;
+
+                .item_right {
+                    margin-left: 0;
+                    margin-top: 20px;
+                }
+
+                .item_bottom {
+                    display: block;
+
+                    .item_bottom_wrapper {
+                        justify-content: space-between;
+
+                    }
+
+                    .item_time {
+                        margin-top: 10px;
+                    }
+
+                    .item_github {
+                        justify-content: space-between;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
