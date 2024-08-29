@@ -1014,14 +1014,14 @@ const sidebars = {
           type: 'category',
           label: 'MR60FDA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         {
           type: 'category',
           label: 'MR60BHA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -3146,6 +3146,25 @@ const sidebars = {
         ],
       },
 
+      {
+        type: 'category',
+        label: 'Hat',
+        collapsed: true,
+        collapsible: true,
+        items: [
+            {
+              type: 'category',
+              label: 'M.2 Hat',
+              items: [
+                    'Edge/M_2_Hat/m_2_hat_start_with_pi5',
+              ],
+            },
+          
+        ],
+      },
+
+
+
       ],
 
 
@@ -3629,6 +3648,7 @@ const sidebars = {
         },
       ],
     },
+
 
     {
       type: 'category',
