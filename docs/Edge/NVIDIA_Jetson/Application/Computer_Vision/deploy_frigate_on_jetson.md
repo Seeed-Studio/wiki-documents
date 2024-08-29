@@ -1,15 +1,16 @@
 ---
-description: Deploy Frigate On Jetson
+description: Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device.
 title: Deploy Frigate On Jetson 
-image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /Deploy_Frigate_On_Jetson
+image: https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png
+slug: /deploy_frigate_on_jetson
 last_update:
-  date: 08/09/2023
-  author: Example name
+  date: 08/29/2024
+  author: kourosh
 ---
 
 # Deploy Frigate On a reComputer(NVIDIA Jetson) device
-![image1](./3.png)
+
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png)
 
 Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device. NVIDIA Jetson is an edge AI platform that enables efficient deployment of AI workloads. Combining Frigate with Jetson leverages hardware-accelerated machine learning to efficiently process video streams and detect objects.
 
@@ -27,23 +28,27 @@ By the end of this project, users will have a fully operational surveillance sys
 To successfully deploy Frigate on an NVIDIA Jetson using a IP camera, you'll need to prepare the following hardware components. This section outlines the necessary equipment and provides brief descriptions to help you get started.
 
 ### 1. NVIDIA Jetson Device:
+
 An NVIDIA Jetson device serves as the central processing unit for running Frigate and performing real-time object detection. Depending on your requirements and budget, you can choose from several models:
 
 * Jetson Nano: A cost-effective option with sufficient processing power for small-scale surveillance setups with a few cameras.
 * Jetson Xavier NX: Offers more power and can handle larger-scale deployments or more complex object detection tasks.
 * Jetson Orin Series: The most powerful option, suitable for high-performance applications and multiple camera setups.
 
-####  Accessories Needed:
+:::info
+**Accessories Needed**:
+
 * Power supply appropriate for the Jetson model.
 * MicroSD card (for Jetson Nano and Orin) or eMMC (for Jetson Xavier NX/AGX Orin) with at least 32GB capacity.
 * A cooling solution (e.g., a fan or heatsink) to ensure optimal operating temperatures.
 Monitor, keyboard, and mouse for initial setup.
+:::
 
 
 ### 2. IP Camera:
 IP cameras provide high-quality video feeds essential for effective object detection. You will need at least one Dahua IP camera compatible with RTSP (Real-Time Streaming Protocol), which allows Frigate to receive video streams.
 
-####  Summary of Required Hardware:
+### 3. Summary of Required Hardware:
 
 * Jetson Device: Jetson Nano, Xavier NX, or Orin series
 * IP Camera: Compatible with RTSP
@@ -80,12 +85,14 @@ For Seeed Jetson-powered devices flashing guides, please refer to the below link
 
 After setting up the operating system, perform a system update and install required dependencies.
 
-##### Update the System: Open a terminal on the Jetson device and run:
+:::info
+**Update the System: Open a terminal on the Jetson device and run:**
+
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-##### Install Additional Dependencies: Install common dependencies required for building and running software on Jetson:
+**Install Additional Dependencies: Install common dependencies required for building and running software on Jetson:**
 ```
 sudo apt-get install -y \
 python3-pip \
@@ -96,6 +103,10 @@ libssl-dev \
 libffi-dev \
 git
 ```
+
+:::
+
+
 
 ### 2. Docker Installation:
 
@@ -314,7 +325,7 @@ docker ps
 ```
 4.  After running docker you can see Tensorrt logs that it means Frigate is running on GPU.
 
-![image1](./1.png)
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/1.png)
 
 
 ### 4. Access the Frigate Web Interface:
@@ -325,9 +336,9 @@ Once Frigate is up and running, you can access the web interface to monitor vide
 3. View the Dashboard: The Frigate dashboard will display live video feeds from the connected Dahua IP camera(s), detection events, and configuration options.
 4.  Now you can check the Jetson is using GPU for detection with jtop or in frigate system. below we can see the detection part is running about 33ms for each frame.
 
-![image1](./2.png)
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/2.png)
 
-![image1](./4.png)
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/4.png)
 
 ## Troubleshooting
 
@@ -354,12 +365,5 @@ Thank you for choosing our products! We are here to provide you with different s
 1.  [Frigate Website](https://frigate.video/)
 2.  [Frigate Github](https://github.com/blakeblackshear/frigate)
 3.  [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
-
-
-
-
-
-
-
 
 
