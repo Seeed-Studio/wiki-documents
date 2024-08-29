@@ -294,11 +294,15 @@ Now that you have set the LoRa region on your device, you can continue with conf
 
 ## Resource
 
+[Wio Tracker 1110 Dev Board v1.0_SCH](https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio%20Tracker%201110%20v1.0_SCH_PDF_20230822.pdf)
+
 [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 
+[Github-Meshtastic Firmware](https://github.com/meshtastic/firmware/blob/master/boards/wio-tracker-wm1110.json)
 
+[Enclosure File(3D-Print)](https://files.seeedstudio.com/products/E24070201/wio%20tracker%20723.stp)
 
-
+[Enclosure File(Acrylic)](https://files.seeedstudio.com/products/114993370/%E4%BA%9A%E5%85%8B%E5%8A%9B%E5%A4%96%E5%A3%B3%E5%9B%BE%E7%BA%B8.zip)
 
 ## Tech Support & Product Discussion
 

@@ -211,7 +211,7 @@ Servos are DC motors with gearing and feedback system.They are used in driving m
 
   - Compile and upload the following sketch:
 
-```c++
+```cpp
 //Blink a LED connected to Digital Pin 8 via a 330 Ohm resitors.
 
 void setup()   {
@@ -239,7 +239,7 @@ void loop()
 
   - Compile and upload the following sketch:
 
-```c++
+```cpp
 //Running LED display: Three LEDs connected to Digital Pin 9, 10 and 11.
 
 void setup()
@@ -285,7 +285,7 @@ void loop()
 
 - Compile and upload the following sketch:
 
-```c++
+```cpp
 //Pushbutton switch demo: LED is connected to digital pin 8 and Pushbutton is connected to digital pin 12.
 //The LED glows when the button is pressed.
 
@@ -316,7 +316,7 @@ void loop()
 
 - The above does demonstrate how to send a signal to the Arduino. In fact, you can  achieve the same goal without the Arduino. Just press the button to close the circuit, then, let's flip the HIGH/LOW values as follows:
 
-```c++
+```cpp
 void loop()
 {
     inputButtonState = digitalRead(12); //Read the Pushbutton state.
@@ -355,7 +355,7 @@ void loop()
   - Connect LED annode to digital pin 5 (instead of 5V).
   - Compile and Upload the following sketch:
 
-```c++
+```cpp
 //Varying the brightness of the LED using a Pot
 int value=0;
 int mval;
@@ -387,7 +387,7 @@ void loop()
 
 - Compile and upload the following sketch:
 
-```c++
+```cpp
 void setup()  {
 
 }
@@ -426,7 +426,7 @@ void loop()  {
 
   - Compile and upload the following sketch:
 
-```c++
+```cpp
 #define NOTE_D0 98
 #define NOTE_D1 294
 #define NOTE_D2 330

@@ -105,7 +105,7 @@ You can supply different frequency signal to this module with Arduino. Arduino g
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
 
-```C++
+```cpp
 /*macro definition of Speaker pin*/
 #define SPEAKER 3
 

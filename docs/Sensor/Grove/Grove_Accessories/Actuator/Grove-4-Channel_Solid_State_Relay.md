@@ -181,7 +181,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```c++
+```cpp
 #include <multi_channel_relay.h>
 
 Multi_Channel_Relay relay;
@@ -275,7 +275,7 @@ void loop()
   If every thing goes well, you will get the result. Meanwhile, you will see the on-board LEDs alternately lit and extinguished.
 :::
 
-```c++
+```cpp
 Scanning...
 I2C device found at address 0x12 !
 Found 1 I2C devices
@@ -343,7 +343,7 @@ Channel 2 on
 
 In case you want to change the address, you need to set the address before use. For example, we want to change it into 0x2f. We can use the following code.
 
-```C++
+```cpp
 #include <multi_channel_relay.h>
 
 Multi_Channel_Relay relay;

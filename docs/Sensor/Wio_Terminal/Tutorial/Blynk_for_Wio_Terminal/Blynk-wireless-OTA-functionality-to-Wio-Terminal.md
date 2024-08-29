@@ -37,7 +37,7 @@ Then edit the name and select the device and connection mode, in this case "Seee
 Make a note of BLYNK_TEMPLATE_ID and BLYNK_DEVICE_NAME.
 In the example, they are:
 
-```C++
+```cpp
 #define BLYNK_TEMPLATE_ID "TMPLCc16MxA1"
 #define BLYNK_DEVICE_NAME "WioTerminal"
 ```

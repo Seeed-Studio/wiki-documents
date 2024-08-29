@@ -149,7 +149,7 @@ The code here **WORKS** for the most classic YF – S201, YF - S402 and other Wa
 
 #### Software Code
 
-```C++
+```cpp
 /*
 YF‐ S201 Water Flow Sensor
 Water Flow Sensor output processed to read in litres/hour
@@ -203,7 +203,7 @@ If everything goes well, open the serial monitor tool and set the baud rate to 9
 
 In the code section, we used the following formula, so how did this formula come about?
 
-```C++
+```cpp
 l_hour = (flow_frequency * 60 / 7.5)
 ```
 
@@ -211,26 +211,26 @@ Earlier we mentioned that with each revolution of the wheel, the volume of fluid
 
 For the YF-S201, every liter of water that flows, the Hall Sensor outputs 450 pulses. Let’s do little math here. 450 pulse for 1 liter, so each pulse means 1/450 liter water flowing through. We take the total volume of liquid flowing through the water flow sensor at a certain time **t**(unit s) as **V_total**(unit L), and the total number of pulses detected as **N**. Then we get:
 
-```C++
+```cpp
 V_total(L) = N* 1/450(L) 
 ```
 
 Also, the total volume of fluid flowing through the water flow sensor is equal to the **water flow rate(Q - unit L/s)** multiplied by time **t**(unit s) .
 
-```C++
+```cpp
 V_total(L) = Q(L/s)*t(s) 
 ```
 
 So we get:
 
-```C++
+```cpp
 N* 1/450 = Q(L/s)*t(s) 
 N/t = 450 * Q(L/s) 
 ```
 
 **N/t** happen to be frequency **f**, so:
 
-```C++
+```cpp
 f = 450*Q(L/s); 
 Q(L/s) = f/450; 
 Q(L/min) = f*60/450 = f/7.5 
@@ -239,7 +239,7 @@ Q(L/hour) = f*60*60/450 = f*60 /7.5
 
 For the YF – S402, every liter of water that flows, the Hall Sensor outputs 4380 pulses. So, the formula should be:
 
-```C++
+```cpp
 f = 4380*Q(L/s); 
 Q(L/s) = f/4380; 
 Q(L/min) = f*60/4380 = f/73 

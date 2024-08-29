@@ -111,7 +111,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 - **Step 2**. Then open `12_Channel_Keypad.ino`, or you can just copy the following code into a new Arduino sketch.
 
-```c++
+```cpp
 #include "SoftwareSerial.h"
 
 #if defined(ARDUINO_ARCH_AVR)
@@ -279,7 +279,7 @@ For more detial, please check the official [Raspberry Pi UART Config](https://ww
 
 After the system environment is successfully configured, you can see a prompt like this:
 
-```C++
+```cpp
 Running setup.py install for grove.py ... done
 Successfully installed grove.py-0.6
 #######################################################
@@ -290,7 +290,7 @@ Successfully installed grove.py-0.6
 
 Now, tap 'ls', you can find the **grove.py** folder under the root directory.
 
-```c++
+```cpp
 pi@raspberrypi:~ $ ls
 01_HelloRPi            Desktop    MagPi         rpi_apa102driver
 01_HelloRPi.cpp        Documents  Music         Templates

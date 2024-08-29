@@ -2,12 +2,12 @@
 description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 title: Getting Started with XIAO nRF52840
 keywords:
-- xiao
+  - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_BLE
 last_update:
-  date: 1/11/2023
-  author: shuxu hu
+  date: 2024-07-16T06:09:39.067Z
+  author: Spencer
 ---
 
 # Getting Started with Seeed Studio XIAO nRF52840 (Sense)
@@ -39,7 +39,7 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 - Onboard 2 MB flash
 - Onboard PDM microphone (only in Seeed Studio XIAO nRF52840 Sense)
 - Onboard 6-axis LSM6DS3TR-C IMU (only in Seeed Studio XIAO nRF52840 Sense)
-- Ultra Small Size: 20 x 17.5mm, Seeed Studio XIAO series classic form-factor for wearable devices
+- Ultra Small Size: 21 x 17.8mm, Seeed Studio XIAO series classic form-factor for wearable devices
 - Rich interfaces: 1xUART, 1xI2C, 1xSPI, 1xNFC, 1xSWD, 11xGPIO(PWM), 6xADC
 - Single-sided components, surface mounting design
 
@@ -56,7 +56,7 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 |    Onboard Buttons    |                    N/A |               Reset/ Boot Button |                              Reset Button |                             Reset Button |
 |      Onboard LEDs     |                    N/A |       Full-color RGB/ 3-in-one LED |                              3-in-one LED/ Charge LED |                             3-in-one LED/ Charge LED |
 |    Battery Charge Chip   |                    N/A |                               N/A |                                   BQ25101 |                                  BQ25101 |
-| Programming Languages |                Arduino/ CircuitPython | Arduino/ MicroPython/ CircuitPython |         Arduino/ MicroPython/ CircuitPython |        Arduino/ MicroPython/ CircuitPython |
+| Programming Languages |                Arduino/ MicroPython/ CircuitPython | Arduino/ MicroPython/ CircuitPython |         Arduino/ MicroPython/ CircuitPython |        Arduino/ MicroPython/ CircuitPython |
 
 ## Hardware overview
 
@@ -270,16 +270,32 @@ Currently for this issue, we recommend that users do not turn off the ADC functi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/14.png" alt="pir" width={800} height="auto" /></p>
 
+### Q4: How does the red light behave when powered on?
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/nRF_RGB.png" alt="nRF52840 RGB Schematic" width="120" height="auto" /></p>
+
+The `P0.17` pin is used to control the red indicator light behavior, indicating the charging status:
+
+- Low level: when **charging** is in progress.
+- High level: when the battery is either **not charging** or **fully charged**.
+
+When it is at a low level, the `RED_CHG` LED will light up.
+
+For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/symlink/bq25100a.pdf) and [XIAO nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf).
+
 ## Resources
 
 ### Seeed Studio XIAO nRF52840
+
+- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
 - **[PDF]** [nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nRF52840_PS_v1.5.pdf)
 
 - **[PDF]** [Seeed Studio XIAO nRF52840 Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 
-<!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
+
+- **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF52840 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-DXF.zip)
 
@@ -295,8 +311,9 @@ Currently for this issue, we recommend that users do not turn off the ADC functi
 
 - **[PDF]** [Seeed Studio XIAO nRF52840 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed-Studio-XIAO-nRF52840-Sense-v1.1.pdf)
 
-<!-- - **[PDF]** [Seeed Studio XIAO Step By Step Course](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/Seeeduino-XIAO-in-Action-Minitype&Wearable-Projects-Step-by-Step.pdf) -->
-- **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 KiCAD file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_SCH&PCB.zip)
+
+- **[ZIP]** [Seeed Studio XIAO nRF52840 Eagle file](https://files.seeedstudio.com/wiki/XIAO-BLE/SeeedStudio_XIAO_nRF52840_v1.1_KiCAD.zip)
 
 - **[DXF]** [Seeed Studio XIAO nRF52840 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-DXF.zip)
 
@@ -304,9 +321,9 @@ Currently for this issue, we recommend that users do not turn off the ADC functi
 
 - **[XLSX]** [Seeed Studio XIAO nRF52840 Sense pinout sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Senese-pinout_sheet.xlsx)
 
-- **[ZIP]** [Seeed Studio XIAO nRF52840 Sense Certification files](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-Certification.zip)
+- **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D Model](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip)
 
-- **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D Model](https://grabcad.com/library/seeed-studio-xiao-nrf52840-sense-1)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 Sense Certification files](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-Sense-Certification.zip)
 
 ## Course Resources
 

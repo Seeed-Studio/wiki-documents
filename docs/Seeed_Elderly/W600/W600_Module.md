@@ -131,7 +131,7 @@ What ever, please make sure you have checked the option **AddCrLf**, and set the
 
 Tap **AT+** then click **SEND** or press ++enter++ key to to check if the connection was successfully established.
 
-```C
+```cpp
 AT+
 ```
 
@@ -141,19 +141,19 @@ When it returns **+OK**, you can use the AT command to control this module.
 
 - 1- **WPRT** sets the wireless network card working mode to SoftAP:
 
-```C
+```cpp
 AT+WPRT=2
 ```
 
 - 2- **APSSID** Set the AP SSID for the STA, e.g.*MyAP*:
 
-```C
+```cpp
 AT+APSSID=MyAp
 ```
 
 - 3- **APENCRY** Set the wireless network card security mode to WEP64:
 
-```C
+```cpp
 AT+APENCRY=1
 ```
 
@@ -163,7 +163,7 @@ open：0，WEP64：1，WEP128：2
 
 - 4- **APKEY** Set the wireless network card key to *12345*
 
-```C
+```cpp
 AT+APKEY=1,1,12345
 ```
 
@@ -175,7 +175,7 @@ Parameter 3：wireless key, e.g.：12345
 
 - 5- **APNIP** Set the ip address and subnet mask
 
-```C
+```cpp
 AT+APNIP=1,192.168.1.1,255.255.255.0,192.168.1.1,192.168.1.1
 ```
 
@@ -187,19 +187,19 @@ parameter 5：dns：192.168.1.1
 
 - 6- **PMTF** saves the above parameters to spi flash, just start from step 7 with the next boot.
 
-```C
+```cpp
 AT+PMTF
 ```
 
 - 7- **WJOIN** Create wireless network *MyAp*
 
-```C
+```cpp
 AT+WJOIN
 ```
 
 - 8- **SLIST**  Query the STA information which connected to your SoftAP.
 
-```C
+```cpp
 AT+SLIST
 ```
 
@@ -207,7 +207,7 @@ AT+SLIST
 
 Wireless network card scanning AP's AT command is ：
 
-```C
+```cpp
 AT+WSCAN
 ```
 
@@ -219,19 +219,19 @@ The last paremeter is the signal strength,  unit db
 
 - 1- **WPRT** Set the working mode to STA
 
-```C
+```cpp
 AT+WPRT=0
 ```
 
 - 2- **SSID** Set the AP name to join. e.g. *TEST_AP*
 
-```C
+```cpp
 AT+SSID=TEST_AP
 ```
 
 - 3- **KEY** Set the wireless key of the AP you want to join. e.g. *12345678*
 
-```C
+```cpp
 AT+KEY=1,0,12345678
 ```
 
@@ -243,19 +243,19 @@ parameter 3： Wireless key  e.g.：12345678
 
 - 4- **NIP** Enable DHCP
 
-```C
+```cpp
 AT+NIP=0
 ```
 
 - 5- PMTF Save the above parameters to spi flash, Just start from step 6 with the next boot
 
-```C
+```cpp
 AT+PMTF
 ```
 
 - 6- WJOIN Join the wireless network TEST_AP
 
-```C
+```cpp
 AT+WJOIN
 ```
 
@@ -265,19 +265,19 @@ AT+WJOIN
 
 - 1- **WPRT** Set the working mode to APSTA
 
-```C
+```cpp
 AT+WPRT=3
 ```
 
 - 2- **SSID** Set the AP name to be joined, such as *TEST_AP*
 
-```C
+```cpp
 AT+SSID=TEST_AP
 ```
 
 - 3- **KEY** Set the wireless key of the AP you want to join. e.g. *12345678*
 
-```C
+```cpp
 AT+KEY=1,0,12345678
 ```
 
@@ -289,37 +289,37 @@ parameter 3： Wireless key e.g.：12345678
 
 - 4- **APSSID** Set the network name of the created SOFTAP
 
-```C
+```cpp
 AT+APSSID=”MYSoftAP”
 ```
 
 - 5-  **APENCRY** Set the encryption type of SoftAP (such as WPA2-TKIP)
 
-```C
+```cpp
 AT+APENCRY=5
 ```
 
 - 6- **APKEY**  Set the password for SoftAP (e.g. ASCII code 87654321)
 
-```C
+```cpp
 AT+APKEY=1,0,87654321
 ```
 
 - 7- **APNIP**  Set the IP address and subnet mask
 
-```C
+```cpp
 AT+APNIP=1,192.168.1.1,255.255.255.0,192.168.1.1,192.168.1.1
 ```
 
 - 8- **PMTF** Save the above parameters to spi flash, just start from step 9
 
-```C
+```cpp
 AT+PMTF
 ```
 
 - 9- **WJOIN** Join the wireless network TEST_AP
 
-```C
+```cpp
 AT+WJOIN
 ```
 
@@ -339,7 +339,7 @@ For the firmware programming please check here：
 
 A: The wireless network card disconnects the AP's AT command:
 
-```C
+```cpp
 AT+WLEAV
 ```
 
@@ -347,7 +347,7 @@ AT+WLEAV
 
 A: The AT command of SoftAP disconnected network is:
 
-```C
+```cpp
 AT+WLEAV=2
 ```
 
@@ -355,7 +355,7 @@ AT+WLEAV=2
 
 A: The AT command for the wireless network card to view the status of the current network card is:
 
-```C
+```cpp
 AT+LKSTT
 ```
 
@@ -363,7 +363,7 @@ AT+LKSTT
 
 A: The AT command to view the current SoftAP status is:
 
-```C
+```cpp
 AT+APLKSTT
 ```
 

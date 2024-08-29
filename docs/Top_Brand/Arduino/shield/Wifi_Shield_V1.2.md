@@ -141,7 +141,7 @@ These are the most important/useful function in the library, we invite you to lo
   * **boolean:** true if the connection to the access point was successful, false otherwise.
 * **Example:**
 
-```C++
+```cpp
 #include <SoftwareSerial.h>
 #include "WiFly.h"
 
@@ -203,7 +203,7 @@ void loop()
   * **boolean:** true if the WiFi shield responded with the ack string, false otherwise.
 * **Example:**
 
-```C++
+```cpp
 // our join() function is wrapper for the join command, as seen below.
 //The string "Associated" is what the user manual says the RN171 will return on success.
 if(sendCommand("join\r", "Associated",DEFAULT_WAIT_RESPONSE_TIME*10))
@@ -238,7 +238,7 @@ In the sketch below we have created a UART object to allow us to send and receiv
 
 Upload the following code to your Arduino board:
 
-```C++
+```cpp
 #include <Arduino.h>
 
   #include <SoftwareSerial.h>
@@ -363,7 +363,7 @@ Now that you know how to connect to an access point by typing each command it's 
 
 To see code required to connect to an access point go to “File -> Examples -> Wifi_Shield -> wifi_test”. Change the code to use your own SSID (access point name), and KEY (your access point's password), then upload the sketch to your Arduino IDE.
 
-```C++
+```cpp
 #define SSID      " SEEED-MKT "
   #define KEY       " seeed-mkt "
 ```
@@ -419,7 +419,7 @@ This example will show you how a device such as your PC and/or phone may talk to
 
 7.Your Arduino's serial monitor window will display an HTTP response similar to the one below. This is the information that your browser sent to the shield to request data.
 
-```C++
+```cpp
 *OPEN*GET / HTTP/1.1
 Host: 192.168.0.10
 Connection: keep-alive
@@ -439,7 +439,7 @@ As you saw in Example 3, an internet/web browser is able to connect to the WiFi 
 
 Upload the following code to your Arduino board replacing "myssid" and "mypassword" with your accesspoint's values respectively:
 
-```C++
+```cpp
 #include <SoftwareSerial.h>
 #include "WiFly.h"
 
@@ -571,7 +571,7 @@ Connect three LEDs and resistor to digital pins 11, 12, and 13 as shown in the s
 
 Upload the following code to your Arduino board but replace "mySSID" and "myPassword" with your access point's SSID name and password:
 
-```C++
+```cpp
 #include <SoftwareSerial.h>
 #include "WiFly.h"
 
@@ -797,7 +797,7 @@ The RN-171 module in the WiFi shield has the ability to act as an HTML client (a
 
 The name of the API we'll use is [OpenWeatherMap](http://openweathermap.org/api), when you send the name of a city and country to this website it returns a JSON string with weather information. If you want to display the weather for London UK for example you would visit the following URL [http://api.openweathermap.org/data/2.5/weather?q=London,uk](http://api.openweathermap.org/data/2.5/weather?q=London,uk) which would return a JSON string like the following, where the weather data and other information is embedded.
 
-```C++
+```cpp
 {
 "coord":{"lon":-0.13,"lat":51.51},
 "sys":{"type":3,"id":60992,"message":0.0079,"country":"GB","sunrise":1421395087,"sunset":1421425352},
@@ -826,7 +826,7 @@ Section 13 of the [WiFly manual](https://files.seeedstudio.com/wiki/Wifi_shield_
 
 The commands we need to send to the WiFi shield to receive the JSON string from the OpenWeatherMap server are the following:
 
-```C++
+```cpp
 #include <SoftwareSerial.h>
 #include "WiFly.h"
 
@@ -918,7 +918,7 @@ In this example we'll show you how to send information from the WiFi shield to a
 
 Upload the code below to your Arduino board replacing "mySSID", "myPassword", and authentication code with your own access point's information:
 
-```C++
+```cpp
 #include <SoftwareSerial.h>
 #include "WiFly.h"
 
@@ -1155,7 +1155,7 @@ To use the shield in Adhoc mode, as an access point, simply connect pin IO9 from
 
 To obtain the shield's SSID upload the code in Example 1 to your Arduino and open the serial monitor, the shield will respond with it's SSID as in the example below, where in this case **WiFly-EZX-1b** is the SSID.
 
-```C++
+```cpp
 AP mode as WiFly-EZX-1b on chan 1
 ```
 

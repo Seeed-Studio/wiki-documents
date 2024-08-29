@@ -1,5 +1,5 @@
 ---
-title: Grove - Protoshield.md
+title: Grove - Protoshield
 nointro:
 keywords:
   - docs

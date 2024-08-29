@@ -87,7 +87,7 @@ we often use the hexadecimal address in the code, so let's convert the binary ad
  high level, we will get <mark>0001,1111</mark>, which is <mark>0x1F</mark>. So the I2C address range from 0x18 to 0x1F, among them, you can choose whatever you want, just make sure you will change
 the I2C address in the file **Seeed_MCP9808.h** in the **Grove_Temperature_sensor_MCP9808-master** library.
 
-```c++
+```cpp
 #define DEFAULT_IIC_ADDR  0X18
 ```
 
@@ -207,7 +207,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 The result sould be like
 
-```C++
+```cpp
 sensor init!!
 temperature value is: 29.31
 temperature value is: 29.31
@@ -225,7 +225,7 @@ temperature value is: 29.25
 
 The code in the demo **MCP9808_demo_with_limit**:
 
-```c++
+```cpp
 #include "Seeed_MCP9808.h"
 
 
@@ -268,7 +268,7 @@ When the temperature is higher than 30℃, the **<span style={{textDecoration: '
 
 So you may ask, what if i want to change the threshold temperature. OK, please come to the line 14:
 
-```c++
+```cpp
 sensor.set_upper_limit(SET_UPPER_LIMIT_ADDR,0x01e0);
 ```
 
@@ -295,7 +295,7 @@ Now we can set a condition zone by lower_limit and upper_limit, when the tempera
 For example, if you want the **<span style={{textDecoration: 'overline'}}>ALE</span> Pad** output high between 28℃ and 30℃, and output low when the tempareture is higer than 30℃ or lower than 28℃.
 The code should be like:
 
-```c++
+```cpp
 
 sensor.set_lower_limit(SET_LOWER_LIMIT_ADDR,0x01c0);
 delay(10);
@@ -328,60 +328,82 @@ delay(10);
 #### Software
 
 :::caution
-     If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
+If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
 
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment and install the grove.py to your raspberry pi.
+
+- **Step 2**. Excute below commands to run the code.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_high_accuracy_temperature
 ```
 
-- **Step 3**. Excute below commands to run the code.
-
-```
-cd grove.py/grove
-python3 grove_high_accuracy_temperature.py 
-
-```
-
-Following is the grove_high_accuracy_temperature.py code.
+Following is the mcp9808.py code.
 
 ```python
 
-import sys
-import time
-from grove.factory import Factory
+import math
+import threading
+from grove.i2c import Bus 
 from grove.temperature import Temper
 
-def main():
-    print("Insert Grove - I2C-High-Accuracy-Temperature")
-    print("  to Grove-Base-Hat any I2C slot")
+RES_LOW = 0x00
+RES_MEDIUM = 0x01
+RES_HIGH = 0x02
+RES_PRECISION = 0x03
 
-    sensor = Factory.getTemper("MCP9808-I2C")
-    sensor.resolution(Temper.RES_1_16_CELSIUS)
+MCP9808_REG_AMBIENT_TEMP = 0x05
 
-    print('Detecting temperature...')
-    while True:
-        print('{} Celsius'.format(sensor.temperature))
-        time.sleep(1)
+class TemperMCP9808(Temper):
+    def __init__(self, address=0x18):
+        self._addr = address
+        self._bus = Bus()
+        self._resolution = Temper.RES_1_2_CELSIUS
 
+    def _derive_res(self, res):
+        ares = -1
+        if res >= Temper.RES_1_2_CELSIUS:
+            ares = RES_LOW
+        elif res >= Temper.RES_1_4_CELSIUS:
+            ares = RES_MEDIUM
+        elif res >= Temper.RES_1_8_CELSIUS:
+            ares = RES_HIGH
+        elif res >= Temper.RES_1_16_CELSIUS:
+            ares = RES_PRECISION
 
-if __name__ == '__main__':
-    main()
+        if ares < 0:
+            return False
+        self._bus.write_byte(self._addr, ares)
+        # print("ares = {}".format(ares))
+        return True
 
+    @property
+    def temperature(self):
+        result = self._bus.read_word_data(self._addr, MCP9808_REG_AMBIENT_TEMP)
+        # Swap the bytes
+        data = (result & 0xff) << 8 | (result & 0xff00) >> 8
+        # print("data = {}".format(data))
+        # print("data = {}".format(hex(data)))
+        # Check if the temperature is negative
+        if data & 0x1000:
+            data = -((data ^ 0x0FFF) + 1)
+        else:
+            data = data & 0x0fff
+        return data / 16.0
 ```
 
-:::success
-    If everything goes well, you will be able to see the following result
+:::tip success
+If everything goes well, you will be able to see the following result
 :::
 
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python3 grove_high_accuracy_temperature.py 
+(env)pi@raspberrypi:~ grove_high_accuracy_temperature 
 Insert Grove - I2C-High-Accuracy-Temperature
   to Grove-Base-Hat any I2C slot
 Detecting temperature...
@@ -395,10 +417,9 @@ Detecting temperature...
     time.sleep(1)
 KeyboardInterrupt
 
-
 ```
 
-You can quit this program by simply press ++ctrl+c++.
+You can quit this program by simply press **ctrl+c**.
 
 ## Schematic Online Viewer
 

@@ -5,139 +5,98 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 07/08/2024
-  author: Seraphina
+  date: 08/26/2024
+  author: Frank
 ---
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/IndexWiki/logo.png" /></div>
 
 ## Greetings
 
-This is Seraphina in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
+This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each Monday, I will introduce you our latest wiki, including the ones related to our new products, the interesting projects published by Seeed Studio, and the tutorials, introductions, etc... You name it.
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is July 8th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 26th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-
-### [Watcher to Node-RED Quick Start](https://wiki.seeedstudio.com/watcher_to_node_red/)
-
-**Node-RED** is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
-
-It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/10.png" style={{width:1000, height:'auto'}}/></div>
-
-To make it easier for our users to **connect data from the Watcher to various other Paas platforms for more in-depth data processing**. For example. from Watcher to IFTTT, Telegram, Twilio etc. We will do a series of tutorials for **Watcher & Node-RED**.
-
-This tutorial, the first in a series, will walk you through installing and using Node-red and calling the Watcher API to connect to Node-RED.
-
-
-### [reComputer R1000 Walk Through](https://wiki.seeedstudio.com/recomputer_r1000_intro/)
-
-The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features a quad-core A72 processor, dual Ethernet, and multiple RS485 channels supporting BACnet, Modbus RTU, and Modbus TCP/IP. With versatile wireless options including 4G, LoRa®, and Wi-Fi/BLE, it ensures robust IoT network communication. Ideal for remote device and energy management, the R1000 is perfect for smart building applications.
-
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:800, height:'auto'}}/></div>
-
-### [reComputer R1000 with Node Red and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
-
-**MQTT (Message Queuing Telemetry Transport)** is a lightweight messaging protocol ideal for IoT (Internet of Things) applications due to its efficiency and low bandwidth requirements. It facilitates communication between devices in a publish-subscribe model, allowing for real-time data exchange over unreliable networks. With Node-RED, integrating MQTT enables seamless connectivity between edge devices and central servers or other devices, fostering efficient data transmission and processing reComputer R1000 Edge Controller, by supporting MQTT natively, eliminates the need for additional hardware gateways by allowing the installation of an MQTT broker directly on the reComputer R1000 itself. This reduces complexity, minimizes latency, and enhances reliability, as data can be processed and acted upon at the edge without relying on external intermediaries, thus optimizing IoT system architecture.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-mqtt.png" style={{width:800, height:'auto'}}/></div>
-
-### [reCoputer R1000 with Node Red and InfluxDB](https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/)
-
-Deploying [InfluxDB](https://www.influxdata.com/) on an reComputer R1000 , a Raspberry Pi-powered edge controller, enables robust time-series data collection and analysis at the edge of your network. This setup is ideal for IoT applications, providing real-time insights and monitoring capabilities. By leveraging the lightweight yet powerful InfluxDB database, you can efficiently manage and analyze sensor data directly on the reComputer R1000. The following guide outlines the steps to install, configure, and use InfluxDB on your reComputer R1000 , ensuring a seamless integration into your data infrastructure.
-
-
-### [reComputer R1000 with Grafana](https://wiki.seeedstudio.com/recomputer_r1000_grafana/)
-
-[Grafana](https://grafana.com/oss/grafana/) is an open-source visualization and analytics software that enables you to query, visualize, alert on, and explore your metrics, logs, and traces from any storage location. It offers tools to transform your time-series database (TSDB) data into insightful graphs and visualizations. As a powerful monitoring solution, Grafana helps in making informed decisions, enhancing system performance, and streamlining troubleshooting. In this wiki, we will guide you through the installation of Grafana on a Raspberry Pi-powered reComputer R1000 , connect it to an existing InfluxDB database, and create an illustrative dashboard.
-
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/grafana/grafana2.gif" /></center>
-
-
-### [reComputer R1000 with fuxa to achieve SCADA](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_achieve_scada/)
-
-FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
-
-This article mainly introduces how to use fuxa to achieve SCADA. In the article, fuxa receives data from `node-red` and `OPC UA Simulator`, and displays it using `chart` and `Circular Gauge`; at the same time, it draws a series of patterns to simulate industrial processes.
-
-
-### [SenseCAP Watcher - 1# Concepts and Classification of Tasks](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
-
-Watcher is a powerful tool that relies on user-issued commands to perform various monitoring and analysis tasks. By sending precise instructions to Watcher, you can direct it to focus on specific targets, collect data, and provide valuable insights.
-
-In the following sections, we will dive into the details of task categorization, model selection, and pricing information. Our goal is to equip you with the knowledge and skills necessary to efficiently assign tasks to Watcher and make the most of its functionalities. We will explore the different types of tasks available, guide you in selecting the appropriate models for your requirements, and provide clarity on the associated costs.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
-
-### [reComputer R1000 install fin](https://wiki.seeedstudio.com/reComputer_r1000_install_fin/)
-
-FIN Framework (FIN) is a software framework with application suites that can integrate, control, manage, analyze, visualize and connect. Its capabilities can be integrated by OEMs into a range of products and services.
-
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fin/FIN_framework.png" /></center>
-
-
-This article mainly introduces how to install Fin on reComputer R1000.
-
-
-### [Finetune with Llama-Factory](https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/)
-
-🚀Finetune LLM by Llama-Factory on Jetson! Now you can tailor a custom private local LLM to meet your requirements. 
+### [Getting Started with reServer J501](https://wiki.seeedstudio.com/reserver_j501_getting_started/)
 
 <div align="center">
-    <img width={800} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif" />
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_J501.jpeg"/>
 </div>
 
-Llama-Factory provides a highly convenient large language model fine-tuning tool that supports common large language models, datasets, and fine-tuning methods. With this platform, we can easily customize private large language models.
+The J501 carrier board is a powerful extension board that supports NVIDIA Jetson AGX Orin modules. It features rich data ports and extension interfaces, completely unleashed the full performance of the AGX Orin module. Also it supports adding GMSL extension to connect up to 8 GMSL cameras.
 
-In this wiki, we will learn how to deploy Llama-Factory on Nvidia Jetson and use Llama-Factory to train a large language model that supports Chinese Q&A.
+### [Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
 
-### [reComputer R1000 with N3uron](https://wiki.seeedstudio.com/recomputer_r1000_n3uron/)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
 
-N3uron is a complete Industrial Edge Platform for IIoT & DataOps that enables seamless integration between the industrial plant floor and third-party applications, whether on-premise or in the cloud.
-With N3uron, you can easily create bidirectional data pipelines between OT and IT systems and decouple devices from applications by consolidating, modeling, processing and visualizing all your operational data in a single source of truth and ultimately making all this data available across the entire organization.
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" alt="pir" width="700" height="auto" /></div>
+### [Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/)
 
-### [reComputer R1000 use bacnet MS/TP](https://wiki.seeedstudio.com/reComputer_r1000_use_bacnet_mstp/)
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
-This article mainly introduces how to perform functional testing of bacnet MS/TP protocol on reComputer R1000.We simulated a bacnet MS/TP server on reComputer R1000, and then used YABE on the W10 PC to check whether the device is present. If the device we simulated can be found normally, it means that the bacnet MS/TP communication is normal.
+### [Send message from Watcher & Node-RED to Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
 
-## Existed Wiki Updated
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/banner.png" style={{width:1000, height:'auto'}}/></div>
 
-### [reTerminal && reTerminal DM-FAQ - How to solve screen refresh rate is too low](https://wiki.seeedstudio.com/screen_refresh_rate_low/)
+Open Interpreter is an open-source tool that facilitates interaction between users and their computers by enabling natural language commands to execute code in various programming languages. It acts as a bridge, allowing users to write instructions in plain language, which the interpreter then translates into executable code. This enhances productivity and makes programming more accessible, especially for those who may not be familiar with coding syntax. We will show you how to configure it in following steps.
 
-Screen has noticeable refresh stutter stripes. If your situation is the same, you can follow this wiki to solve it.
+### [Build balenaOS for reComputer R1000](https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/FAQ/DM_bug.gif" alt="pir" width={600} height="auto" /></p>
+[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
 
-### recomputer J401 and industrial JetPack 6 Compatibility
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
 
-We've now updated the method for flashing Jetpack 6 on recomputer J401 and industrial.
+This tutorial will show you how to compile, configure and burn balenaOS for R1000.
 
-[recomputer J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
 
-[recomputer J401 industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started)
+### [SenseCAP T1000 tracker and Thingsboard Integrated](https://wiki.seeedstudio.com/thingsboard_integrated/)
 
-### [Installation to reTerminal DM Lorawan Module](https://wiki.seeedstudio.com/reterminal-dm/#lorawan--module)
- 
-We have updated packages installation to reterminal dm lorawan module.
+[ThingsBoard](https://thingsboard.io/) is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications.
+
+The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to ThingsBoard through TTN.
 
 
 
-### [Using Grove Vision AI V2 with AT Commands - Compatibility of different XIAO](https://wiki.seeedstudio.com/grove_vision_ai_v2_at/)
+### [SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)
 
-We've added a table of how the Grove Vision AI V2 pairs with the XIAO
+At Watcher, we believe in providing developers with a clear and transparent pricing structure for integrating artificial intelligence into their projects. We understand that every developer has unique requirements, which is why we offer a range of pricing plans designed to cater to various needs and budgets. To help you make an informed decision, we've outlined the key aspects of our pricing model and the specific features included in each plan.
 
-<!-- ### [Instantiate a WebVision module](https://wiki.seeedstudio.com/Edgebox-rpi-200-n3uron/#instantiate-a-webvision-module)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
 
-Integrate WebVision moduel with N3uron on EdgeBox RPI 200. -->
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+
+
+
+
+
+
+
+<!-- ## Existed Wiki Updated
+
+### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+
+We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
+
+### [Raspberry pi support on Grove-OLED Display 1.12inch](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+
+We've added an [example](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-OLED Display 1.12inch.
+
+### [Raspberry pi support on Grove - Optical Rotary Encoder](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+
+We've added an [example](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove - Optical Rotary Encoder.
+
+### [Added Example for XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink)
+
+We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).-->
+
+
+
+
 
 ## The Efforts of Contributor
 
@@ -219,6 +178,13 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
 - [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
+- [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
+- [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
+- [weekly wiki on 2024.7.22th](/Seeed_Elderly/weekly_wiki/wiki240722)
+- [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
+- [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
+- [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
+- [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
 
 </details>
 

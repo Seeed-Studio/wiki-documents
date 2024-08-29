@@ -58,7 +58,7 @@ Now you have successfully installed the CircuitPython to the Seeed Studio XIAO R
 
 **Step 3** Copy and upload the following codes:
 
-```c++
+```cpp
 """Example for Pico. Blinks the built-in LED."""
 import time
 import board

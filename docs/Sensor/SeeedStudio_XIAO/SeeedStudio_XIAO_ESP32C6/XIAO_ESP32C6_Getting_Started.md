@@ -10,7 +10,7 @@ slug: /xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 04/02/2024
+  date: 08/05/2024
   author: Spencer
 ---
 
@@ -108,7 +108,7 @@ export const Highlight = ({children, color}) => (
         </tr>
         <tr>
             <th colspan="2" rowspan="1">Dimensions</th>
-            <td colspan="3">21 x 17.5 mm</td>
+            <td colspan="3">21 x 17.8 mm</td>
         </tr>
         <tr>
             <th colspan="1" rowspan="3">Power</th>
@@ -161,7 +161,7 @@ export const Highlight = ({children, color}) => (
 - **Outstanding RF Performance**: Features an on-board antenna with up to *80m* BLE/Wi-Fi range and offers an interface for connecting an external UFL antenna, ensuring reliable connectivity.
 - **Leveraging Power Consumption**: Offers four working modes, including a deep sleep mode with consumption as low as *15* μA, along with support for lithium battery charge management.
 - **Dual RISC-V Processors**: Incorporates two 32-bit RISC-V processors, with the high-performance processor capable of running up to 160 MHz and the low-power processor up to *20 MHz*.
-- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.5mm and single-sided mount design, ideal for space-limited projects like wearable devices.
+- **Classic XIAO Designs**: Maintains the thumb-size form factor of 21 x 17.8mm and single-sided mount design, ideal for space-limited projects like wearable devices.
 
 ## Hardware overview
 
@@ -181,11 +181,14 @@ export const Highlight = ({children, color}) => (
 </table>
 
 :::tip
-There's an IO port 14 used to select between using the built-in antenna or an external antenna. If port 14 is at a low level, it uses the built-in antenna; if it's at a high level, it uses the external antenna. The default is low level. If you want to set it high, you can refer the code below.
+GPIO14 is used to select between using the built-in antenna or an external antenna. Before that, you need to set GPIO3 low level to turn on this function. If GPIO14 is set low level, it uses the built-in antenna; if it set to high level, it uses the external antenna. Default is low level. If you want to set it high, you can refer the code below.
 ```cpp
 void setup() {
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);//turn on this function
+  delay(100);
   pinMode(14, OUTPUT); 
-  digitalWrite(14, HIGH);
+  digitalWrite(14, HIGH);//use external antenna
 }
 ```
 :::
@@ -261,29 +264,30 @@ And the on-board package for XIAO ESP32C6 requires at least version **2.0.8** to
 
 #### Add the XIAO-C6 Board {#add-board}
 
-As of April 16, 2024, the most current stable release of Arduino-ESP32 is version `2.0.15`. Unfortunately, [this version does not support](https://docs.espressif.com/projects/arduino-esp32/en/latest/getting_started.html#supported-soc-s) the **ESP32-C6** chipset, which means it also does not support the `XIAO ESP32-C6` board. To work with XIAO-C6, you'll need to utilize the development release of [the board manager URL](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) provided below:
-
-```
-https://espressif.github.io/arduino-esp32/package_esp32_dev_index.json
-```
-
-
-if you've install the ESP32 board package before, you''ll need to remove it first.
-
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/remove_package.png" style={{width: 640, height: 'auto'}}/></div>
-
-
 To install the XIAO ESP32C6 board, follow these steps:
 
-1. Add the above board manager URL to your Arduino IDE preferences.
+```
+https://espressif.github.io/arduino-esp32/package_esp32_index.json
+```
+
+1. Add the above board manager URL to the preferences of your Arduino IDE, which is taken from the [Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide).
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
 2. Download the XIAO ESP32C6 board package.
 
-<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 640, height: 'auto'}}/></div>
+:::note
+Only available if the version of the esp32 board is greater than `3.0.0`.
+:::
 
-Additionally, the latest development release version (`3.0.0-rc1`) was released on April, 2024. And has supported XIAO ESP32C6.
+
+<div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 'auto', height: 'auto'}}/></div>
+
+3. Opt for `XIAO_ESP32C6` variant.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/select_xiao_c6.png" style={{width:1000, height:'auto'}}/></div>
+
+Now enjoy coding ✨.
 
 ## Run your first Blink program
 
@@ -291,7 +295,7 @@ Additionally, the latest development release version (`3.0.0-rc1`) was released 
 
 - **Step 2.** Navigate to **File > Examples > 01.Basics > Blink**, open the program.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/11.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
 - **Step 3.** Select the board model to **XIAO ESP32C6**, and select the correct port number to upload the program.
 
@@ -316,6 +320,21 @@ If you want to connect the battery for XIAO, we recommend you to purchase qualif
 When you use battery power, there will be no voltage on the 5V pin.
 :::
 
+:::tip red indicator light
+
+At the same time, we have the red indicator light for battery charging as [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage):
+
+The red light behavior for the XIAO ESP32 C6 is as follows:
+
+- When the XIAO ESP32 C6 is not connected to a battery:
+  - The red light comes on when the Type-C cable is connected and goes off after 30 seconds.
+- When the battery is connected and the Type-C cable is connected for charging:
+  - The red light flashes.
+- When the battery is fully charged via the Type-C connection:
+  - The red light turns off.
+
+:::
+
 ## Deep sleep mode and wake-up
 
 The XIAO ESP32C6 has a complete deep sleep mode and wake-up function. Here we will show two of the more common examples offered by the ESP.
@@ -326,24 +345,24 @@ This code displays how to use deep sleep with an external trigger as a wake up s
 
 ```cpp
 /*
-=====================================
-This code is under Public Domain License.
-
 Hardware Connections
 ======================
-Push Button to GPIO 33 pulled down with a 10K Ohm
+Push Button to GPIO 0 pulled down with a 10K Ohm
 resistor
 
 NOTE:
 ======
-Only RTC IO can be used as a source for external wake
-source. They are pins: 0,2,4,12-15,25-27,32-39.
-
-Author:
-Pranav Cherukupalli <cherukupallip@gmail.com>
+Bit mask of GPIO numbers which will cause wakeup. Only GPIOs
+which have RTC functionality can be used in this bit map.
+For different SoCs, the related GPIOs are:
+- ESP32: 0, 2, 4, 12-15, 25-27, 32-39
+- ESP32-S2: 0-21
+- ESP32-S3: 0-21
+- ESP32-C6: 0-7
+- ESP32-H2: 7-14
 */
 
-#define BUTTON_PIN_BITMASK 0x200000000 // 2^33 in hex
+#define BUTTON_PIN_BITMASK (1ULL << GPIO_NUM_0) // GPIO 0 bitmask for ext1
 
 RTC_DATA_ATTR int bootCount = 0;
 
@@ -381,17 +400,12 @@ void setup(){
   /*
   First we configure the wake up source
   We set our ESP32 to wake up for an external trigger.
-  There are two types for ESP32, ext0 and ext1 .
-  ext0 uses RTC_IO to wakeup thus requires RTC peripherals
-  to be on while ext1 uses RTC Controller so doesnt need
-  peripherals to be powered on.
-  Note that using internal pullups/pulldowns also requires
-  RTC peripherals to be turned on.
+  There are two types for ESP32, ext0 and ext1, ext0 
+  don't support ESP32C6 so we use ext1.
   */
-  esp_sleep_enable_ext0_wakeup(GPIO_NUM_33,1); //1 = High, 0 = Low
 
   //If you were to use ext1, you would use it like
-  //esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
+  esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
 
   //Go to sleep now
   Serial.println("Going to sleep now");
@@ -505,9 +519,15 @@ If you want to learn to use more of the deep sleep mode and wake-up functions, y
 
 ## Resources
 
+- **[PDF]** [ESP32C6 datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
+
 - **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32C6 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
+
+- **[XLSX]** [Seeed Studio XIAO ESP32C6 pinout sheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/XIAO_ESP32C6_Pinout.xlsx)
+
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 Certification files](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/SeeedStudio_XIAO_ESP32C6_Certification.zip)
 
 ## Course Resources
 

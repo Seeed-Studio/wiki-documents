@@ -141,7 +141,7 @@ The typical voltage of L221D is 3.3V, so we use the [XC6206P332MR](https://files
 
 - **Step 1.** Just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 /*macro definitions of PIR motion sensor pin and LED pin*/
 #define PIR_MOTION_SENSOR 2//Use pin 2 to receive the signal from the module 
 #define LED 4//the Grove - LED is connected to D4 of Arduino

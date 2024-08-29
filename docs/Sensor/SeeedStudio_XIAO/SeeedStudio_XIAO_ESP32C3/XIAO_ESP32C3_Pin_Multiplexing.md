@@ -6,8 +6,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /XIAO_ESP32C3_Pin_Multiplexing
 last_update:
-  date: 03/03/2023
-  author: Citric
+  date: 07/25/2024
+  author: Spencer
 ---
 
 # Pin Multiplexing
@@ -108,7 +108,7 @@ void loop() {
 }
 ```
 
-## Serial
+## Serial - UART
 
 ### Regular method - choose one of USB serial or UART0 serial to use
 
@@ -116,6 +116,15 @@ There are 2 serial interfaces on this board:
 
 - USB Serial
 - UART0 Serial
+
+:::note
+There is no `Serial2` for XIAO ESP32 C3. 
+Also If you need to use `Serial1`, you must define the pins; otherwise, it may not receive data. For XIAO ESP32 series, use `Serial1` as follows:
+
+```cpp
+Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
+```
+:::
 
 By default, USB serial is enabled, which means you can connect the board to a PC via USB Type-C and open serial monitor on Arduino IDE to view data sent via serial.
 
@@ -304,6 +313,46 @@ Next, we can connect the sensor to the XIAO ESP32C3 using the following connecti
 If all goes well, you will see data messages on the serial monitor.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/2.png" alt="pir" width="800" height="auto"/></div>
+
+### Serial1 Usage
+
+According to the above XIAO ESP32C3 Pin diagrams for specific parameters,we can observe that there are TX pin and RX pin,This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added,So nex,we will use the pins led out by the chip for serial communication
+
+Core Function that need to be include:
+
+- `Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);` -- enalbe Serial1,the function prototype : `<Serial.Type>.begin(unsigned long baud, uint32_t config, int8_t rxPin, int8_t txPin);`
+  - `baud`  :baud rate
+  - `config`:Configuration bit
+  - `rxPin` :Receive Pin
+  - `txPin` :Send Pin
+
+It is worth nothing that if we use digital pin port to define,this place should be`#define RX_PIN D7`、`#define TX_PIN D6`,please refer to the pin diagrams of different XIAO Series for specific parameters.
+
+Here is an example program:
+
+```c
+#define RX_PIN D7
+#define TX_PIN D6
+#define BAUD 115200
+
+void setup() {
+    Serial1.begin(BAUD,SERIAL_8N1,RX_PIN,TX_PIN);
+}
+ 
+void loop() {
+  if(Serial1.available() > 0)
+  {
+    char incominByte = Serial1.read();
+    Serial1.print("I received : ");
+    Serial1.println(incominByte);
+  }
+  delay(1000);
+}
+```
+
+After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200.then,you can send content you want in the XIAO ESP32C3 through the serial monitor Serial ,and XIAO will print out each byte of the content you send.,In here,the content i entered is "Hello Everyone",my result chart is as follows
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
 
 ## I2C
 

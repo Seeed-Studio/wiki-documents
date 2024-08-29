@@ -207,7 +207,7 @@ The radar has a complete set of built-in algorithms that can directly output the
 
 The code in this example is as follows.
 
-```c++
+```cpp
 #include <falldetectionradar.h>
 
 FallDetectionRadar radar;
@@ -262,7 +262,7 @@ The code in this example is as follows.
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/1.png"/></div>
 
-```c++
+```cpp
 //Physical_Parameters_Example.ino
 
 #include <sleepbreathingradar.h>

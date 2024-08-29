@@ -14,7 +14,7 @@ last_update:
 
 reServer J2032 is the new powerful Edge AI compute device that we proudly introduced to our reThings family, it adopted the sleek reServer form-factor case design which packed the powerful unit in an extremely compact shape. This smart tiny server is not only able to work easily and efficiently from the edge to the cloud but also adding AI processing power into the formula.
 
-reServer J2032 is equipped with the cutting edge Nvidia Jetson™ Xavier NX 16GB Module (Optinal Jetson™ Xavier NX 8GB Module) which can deliver up to 21 TOPS for processing common AI tasks, the extensive amount of GPU RAM allows parallel multi neural network process, It has dual Ethernet ports with consist of one high-speed 2.5 Gigabit Ethernet port and a 1 Gigabit and also supports hybrid connectivity including 5G, LoRa®, BLE and WiFi. reServer 2032 alsoHaving dual SATA III 6.0Gbps data connectors,  is able to equip up to two 3.5"/2.5" SATA internal hard disk drives to acquire more storage.
+reServer J2032 is equipped with the cutting edge Nvidia Jetson™ Xavier NX 16GB Module (Optinal Jetson™ Xavier NX 8GB Module) which can deliver up to 21 TOPS for processing common AI tasks, the extensive amount of GPU RAM allows parallel multi neural network process, It has dual Ethernet ports with consist of one high-speed 2.5 Gigabit Ethernet port and a 1 Gigabit and also supports hybrid connectivity including 5G, LoRa® and BLE. reServer 2032 alsoHaving dual SATA III 6.0Gbps data connectors,  is able to equip up to two 3.5"/2.5" SATA internal hard disk drives to acquire more storage.
 
 Meanwhile, reServer is of compact design to work efficiently in almost any server scenario. The neat structure of reServer also makes it simple to access to the hard drives, and extensive communication module extension slots which allows easy installation, upgrades and maintenance.
 
@@ -32,7 +32,7 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 - Compact design for a desktop server with an overall dimension of 132mm x124mm x233mm
 - Powered by the Nvidia Jetson™ Xavier NX 16Gb Module.
 - Rich peripherals including dual LAN port(1 x 2.5Gigabit port and 1 x 1 Gigabit port) , 2 x USB 3.2 gen 2 Type-A, HDMI port and DP port, 1 x M.2 Key B, 1 x Mini-PCIe port.
-- Support hybrid connectivity including 5G, LoRa®, BLE and WiFi (5G and LoRa® need additional modules)
+- Support hybrid connectivity including 5G, LoRa® and BLE (5G and LoRa® need additional modules)
 - Dual SATA III 6.0 Gbps data connectors for 3.5"/2.5" SATA hard disk drives with enough space inside the enclosure to store them both
 - M.2 B-Key for expandability such as 4G/5G modules.
 - Mini-PCIe port for expandability such as 4G/5G modules and LoRaWAN® module(**WM1302-USB-XXXX**)

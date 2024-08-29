@@ -192,7 +192,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
     3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "Seeed_MPR121_driver.h"
 
 Mpr121 mpr121;
@@ -257,7 +257,7 @@ void loop()
 If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **key ?pressed** and **key ?release**
 :::
 
-```C++
+```cpp
 mpr121 inmpr121 init OK!
 key 11pressed
 key 11release
@@ -413,7 +413,7 @@ if __name__  == '__main__':
 If everything goes well, you will get the result. When you touch the CH0 ~ CH11 pads, it will trigger **channel # pressed** and **Channel # released** with corresponding pressure values.
 :::
 
-```C++
+```cpp
 >>> %Run grove_12_chan_touch_sensor_MPR121.py
     Channel 8 is pressed, value is 308
     Channel 8 is released, value is 0

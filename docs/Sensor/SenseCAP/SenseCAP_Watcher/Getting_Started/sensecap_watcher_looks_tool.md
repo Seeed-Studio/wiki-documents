@@ -1,7 +1,7 @@
 ---
 description: Delves into the customization options available for Watcher's appearance and explores the various tools provided by the SenseCraft platform.
 title: 2# Watcher Looks & SenseCraft Tools
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/30.png
 slug: /getting_started_with_watcher_look_tool
 sidebar_position: 3
 last_update:
@@ -12,6 +12,14 @@ last_update:
 # Watcher Looks & SenseCraft Tools
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/30.png" style={{width:800, height:'auto'}}/></div>
+
+**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+</div><br />
 
 Welcome to the world of Watcher customization and SenseCraft tools! In this article, we'll dive into the exciting possibilities of personalizing your Watcher device and explore the powerful features offered by the SenseCraft APP. Whether you're a new user looking to give your Watcher a unique look or an experienced enthusiast seeking to unlock the full potential of your device, this guide will provide you with the knowledge and inspiration to make your Watcher truly your own. Get ready to embark on a creative journey as we uncover the secrets of Watcher expression design and SenseCraft APP settings.
 
@@ -58,6 +66,34 @@ However, if you choose to disable the SenseCraft Remote Control feature, your Wa
 
 To manage the SenseCraft Remote Control setting, simply navigate to the corresponding menu on your Watcher device and toggle the feature on or off as desired. By carefully considering your needs and weighing the benefits of cloud connectivity, you can make an informed decision on how to configure this essential setting for your Watcher.
 
+### HTTP Message Block
+
+The HTTP Message Block feature in Watcher is a localized alarm service that operates alongside other alarm methods such as RGB alarms, APP alarms, and UART alarms. Its primary purpose is to provide users with a fully localized message pushing service, aimed at protecting user privacy. Unlike other alarm services that may rely on external platforms or servers, the HTTP Message Block is designed to work exclusively with the user's own HTTP endpoint, ensuring that all data and notifications remain within the user's local environment.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/83.png" style={{width:250, height:'auto'}}/></div><br />
+
+To set up the HTTP Message Block, users need to configure two essential pieces of information: the **HTTP URL** and the **HTTP Token**. These details are provided either by your own HTTP server or by the locally deployed software, such as the [Watcher APP](https://wiki.seeedstudio.com/watcher_local_deploy/#software-preparation). If you choose to use your own HTTP server, ensure that it is set up correctly and provides the necessary URL and token. Alternatively, if you opt for the Watcher APP, the software will generate and manage these configuration details for you. By keeping the configuration data either on your own server or local to the Watcher APP, Watcher maintains a high level of privacy and security for its users, ensuring that sensitive information remains within your control.
+
+:::caution
+If you want to use completely local notification service without going through SenseCraft, then when you configure the message notification, please **don't** tick **APP Push Notification**, otherwise your notification will still go through SenseCraft and then pushed to your app. and remember to **tick the HTTP Push Notification option**.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/84.jpg" style={{width:300, height:'auto'}}/></div>
+:::
+
+### Device AI Server
+
+The Device AI Service in Watcher is a powerful feature that allows users to deploy AI capabilities directly on their local devices, such as PCs or high-performance machines like Jetson. To set up the Device AI Service, users need to provide the URL and the Watcher Service Token, which are displayed in the user interface of the accompanying Device AI Service software.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/82.png" style={{width:250, height:'auto'}}/></div>
+
+Once configured, the Device AI Service enables Watcher to leverage the user's local computing resources for a variety of AI-powered functionalities, including voice interaction, task decomposition, image analysis, and chatbot services.
+
+For users who value the flexibility and control of running AI services locally, the Device AI Service in Watcher offers a comprehensive and customizable solution. Detailed information on setting up and configuring the Device AI Service, along with in-depth explanations of each AI capability, can be found in the **[Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy/)**.
+
+:::caution
+If you have previously clicked Private Watcher Service, then you will not be able to use SenseCraft's cloud service. When you suddenly find that you can't get messages from the cloud service, please check if **SenseCraft** is not selected.
+:::
+
 ### Restore Device Setting
 
 The Restore Device Setting feature allows you to reset your Watcher to its default factory settings, which can be useful when encountering an issue that cannot be resolved through other means or when you want to start fresh with a clean slate.
@@ -92,10 +128,11 @@ The Check Update feature ensures that your Watcher is always running the latest 
 
 To check for updates, simply navigate to the Check Update menu on your Watcher device or within the SenseCraft APP. If an update is available, you will be prompted to download and install it. It is recommended to keep your Watcher updated to ensure optimal performance, stability, and security.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/57.png" style={{width:250, height:'auto'}}/></div>
+
 :::tip
 Some OTA versions may require Watcher users to force an update to continue using it. This may be due to fixing a major software bug or a service upgrade in the background.
 :::
-
 
 ### Delete Detected History
 
@@ -149,7 +186,7 @@ If your desired images are not already in the PNG format or don't meet the requi
 
 ### Uploading Your Custom Animation
 
-Once you have your series of PNG images ready, it's time to bring your custom animations to life on your Watcher. Connect your Watcher to the SenseCraft APP and navigate to the "Animation" page. Here, you'll find several Watcher states that allow for animation customization, including **Standby**, **Listening**, **Speaking**, **Watching Space**, and **Greeting**. Currently, the **Watching Space** and **Greeting** states are available for modification, while the others are still under development.
+Once you have your series of PNG images ready, it's time to bring your custom animations to life on your Watcher. Connect your Watcher to the SenseCraft APP and navigate to the "Animation" page. Here, you'll find several Watcher states that allow for animation customization, including **Standby**, **Listening**, **Speaking**, **Watching Space**, and **Greeting**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/43.png" style={{width:250, height:'auto'}}/></div>
 
@@ -181,17 +218,19 @@ Discover a world of creativity and inspiration in our Watcher Animation Showcase
 
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**Watcher Quick Start Series 3# : As a Grove sensor**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
+
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ## Tech Support & Product Discussion

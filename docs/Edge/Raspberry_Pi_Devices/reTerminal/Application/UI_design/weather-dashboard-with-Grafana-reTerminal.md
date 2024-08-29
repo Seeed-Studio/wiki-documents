@@ -127,7 +127,7 @@ To collect the weather data, we are going to be using an ESP32 with a DHT11 sens
 
 - **Step 2.** Copy the following codes in the skecth.
 
-```c++
+```cpp
 #include <Wire.h>                                                   //Import the required libraries
 #include "DHT.h"
 #include "Seeed_BMP280.h"

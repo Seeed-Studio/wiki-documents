@@ -104,7 +104,7 @@ Please plug the USB cable，Grove-AHT20 Temperature&Humidity Sensor Interface in
 
 #### Software Code
 
-```C++
+```cpp
 // ARDUINO DEMO FOR GROVE-AHT20
 //
 #include <Wire.h>

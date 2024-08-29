@@ -193,14 +193,15 @@ reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included 
 
 ### Prerequisites
 
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
+- Ubuntu 
 - reComputer J4012/ J4011/ J3010 and J3011
 - USB Type-C data transmission cable
 
 ### Enter Force Recovery Mode
 
 :::note
-Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
+- We do not recommend using virtual machines and ARM architecture Ubuntu for flashing.
+- Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
 :::
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
@@ -369,8 +370,8 @@ Here we will use NVIDIA L4T 35.4.1 to install Jetpack 5.1.2 on the reComputer
 **Step 2:** Extract **Jetson_Linux_R35.4.1_aarch64** and **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** by navigating to the folder containing these files, apply the changes and install the necessary prerequisites
 
 ```sh
-tar xf Jetson_Linux_R35.4.1_aarch64
-sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64 -C Linux_for_Tegra/rootfs/
+tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
+sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
 cd Linux_for_Tegra/
 sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
@@ -455,25 +456,26 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
   <tbody>
     <tr>
       <td>Jetson Orin NX 16GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-16g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001146&Signature=f1AjN08eNjFFXI7cBpAsMvyJJPc%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EbEZRxHDtgBDjBrHK_7ltfEB6JBa3VGXLx3meNc0OJUL_g?e=8MNsTg" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={4}>6.0</td>
       <td rowSpan={4}>36.3</td>
     </tr>
     <tr>
       <td>Jetson Orin NX 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nx-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001121&Signature=cMWZwS6tEdtQgnTIsuY6Tc3nb5Q%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQawJy3jmKBAmJgHght-vVUBHbsC3vtlvMsYfW7vsie3LQ?e=vor3t3" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 8GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001087&Signature=sQtF63h5xU6fv9d%2BqIdOGnkNHWI%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EeJP8SNF76BKiJg2e-FKNd4BhJwlWiMbLcT6Y286tRO7JQ?e=ct6qLf" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/J401/mfi_recomputer-orin-nano-4g-j401-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874001061&Signature=QJaisOOSM4tCDQHd94xVhVzL7jo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERQJluPq9X1LmpLXTSGZVMwBVg9ikWw8veG2aOdHv504Gw?e=hujab4" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>
 </div>
+
 
 **Step 2:** Extract the downloaded image file:
 ```bash
@@ -504,6 +506,14 @@ The flash command may run for 2-10 minutes.
 :::info
 Please complete the **System Configuration** according to your needs.
 :::
+
+**Step 5:** After starting the system, you need to execute the following command to reactivate the wireless network card driver:
+```bash
+sudo rm /lib/modules/5.15.136-tegra/build
+sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
+sudo apt install -y iwlwifi-modules
+```
+
 
 </TabItem>
 </Tabs>

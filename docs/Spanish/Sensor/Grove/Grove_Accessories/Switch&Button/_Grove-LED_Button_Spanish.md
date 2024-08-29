@@ -125,7 +125,7 @@ Si es la primera vez que utilizas Arduino, ampliamente te recomendamos ver [Prim
 
 - **Paso 1.** Abre el IDE Arduino y crea un archivo nuevo, copía el siguiente código en el archivo nuevo.
 
-```C++
+```cpp
 #include "Arduino.h"
 
 //1: toggle mode, 2: follow mode

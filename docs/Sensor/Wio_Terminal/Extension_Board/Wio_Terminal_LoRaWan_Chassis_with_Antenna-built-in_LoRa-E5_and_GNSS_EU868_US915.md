@@ -193,7 +193,7 @@ Step 5: Add the code for decode the data:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/LoRa_WioTerminal/TTN_decode1.png" /></div>
 
-```CPP
+```cpp
 function Decoder(bytes, port) {
  
   var decoded = {};
@@ -339,7 +339,7 @@ Step 5: Add the code for decode the data:
 
 <div align="center"><img width ={500} src="https://files.seeedstudio.com/wiki/LoRa_WioTerminal/TTN_decode1.png"/></div>
 
-```CPP
+```cpp
 function Decoder(bytes, port) {
  
   var decoded = {};

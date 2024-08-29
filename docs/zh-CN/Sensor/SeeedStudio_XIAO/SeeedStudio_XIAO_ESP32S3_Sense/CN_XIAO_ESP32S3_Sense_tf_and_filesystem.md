@@ -12,7 +12,7 @@ last_update:
 
 在本教程中，我们将重点介绍XIAO ESP32S3文件系统的使用，主要介绍Sense版本的microSD卡插槽的使用。同时，我们将介绍官方ESP文件系统SPIFFS、芯片内置Flash等。
 
-:::note
+:::tip提示
 本教程的microSD卡部分**仅**适用于**XIAO ESP32S3 Sense**，其余内容适用于ESP32-S3芯片，因此您可以在除microSD卡之外的XIAO ESP32S3上运行示例。
 :::
 
@@ -92,7 +92,7 @@ XIAO ESP32S3感知卡插槽占用ESP32-S3的4 GPIOs，占用的pin信息如下�
 
 
 
-也就是说，如果选择使用扩展板的microSD卡功能，则不能同时使用肖ESP32S3的SPI功能。您可以通过连接/切割J3的pad来开启/关闭microSD卡功能。
+也就是说，如果选择使用扩展板的microSD卡功能，则不能同时使用XIAO ESP32S3的SPI功能。您可以通过连接/切割J3的pad来开启/关闭microSD卡功能。
 
 <table align="center">
 	<tr>
@@ -116,7 +116,7 @@ XIAO ESP32S3感知卡插槽占用ESP32-S3的4 GPIOs，占用的pin信息如下�
 
 ## 修改microSD卡中的文件
 
-:::注意
+:::caution警告
 本节仅适用于XIAO ESP32S3 Sense。
 :::
 
@@ -335,8 +335,8 @@ void loop(){
 }
 ```
 
-:::提示
-请注意，您不能直接使用示例程序，您需要对程序进行小的修改以确保其正常工作。修改是将原始代码从'Setup（）'函数中的'SD.begin（）'到'SD.boot（21）'。指定用于初始化的端号。
+:::caution警告
+请注意，您不能直接使用示例程序，您需要对程序进行小的修改以确保其正常工作。修改是将原始代码从`Setup（）`函数中的`SD.begin（）`到`SD.boot（21）`。指定用于初始化的端号。
 :::
 
 将程序上传到XIAO ESP32S3 Sense，打开串行监视器，您将看到文件创建过程和写入过程。您还可以使用microSD转USB通过电脑访问新创建的文件和内容。
@@ -445,7 +445,7 @@ testFileIO(SD, "/test.txt");
 
 ## 基于MicroSD卡的瓦斯数据记录应用
 
-::注意
+:::caution警告
 本节仅适用于XIAO ESP32S3 Sense。
 :::
 
@@ -728,11 +728,11 @@ void appendFile(fs::FS &fs, const char * path, const char * message) {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/71.png" style={{width:500, height:'auto'}}/></div>
 
-:::笔记
+:::note注意
 为了便于测试，每分钟显示一次保存数据的效果，实际提供的示例代码为十分钟保存一次数据。
 :::
 
-::小心
+:::caution警告
 关于这个项目，有以下几点需要注意: 
 
 1. 多通道气体传感器需要一段预热时间才能得到准确的数值。因此，如果误差较大，可以认为前几组记录的数据可以被丢弃。 
@@ -790,7 +790,7 @@ esp_deep_sleep_start();
 
 ## 串行外围接口Flash文件系统(SPIFFS) 
 
-:::注意
+:::caution警告
 本节适用于XIAO ESP32C3、XIAO ESP32S3或XIAO ESP32S3 Sense，但本节不支持Arduino IDE 2.X。
 :::
 
@@ -814,13 +814,13 @@ SPIFFS允许您像在计算机中的普通文件系统中那样访问闪存，�
 
 幸运的是，Arduino IDE有一个插件，允许您从计算机上的文件夹直接将文件上传到ESP32文件系统。这使得处理文件非常容易和简单。让我们来安装它。
 
-:::注意
+:::note注意
 注意:在撰写本文时，Arduino 2.0**不支持ESP32文件系统上传插件**。
 :::
 
 #### Windows
 
-**Step 1.** 访问releases page](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) 然后点击 [ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) 文件进行下载
+**Step 1.** 访问 [releases page](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/) 然后点击 [ESP32FS-1.1.zip](https://github.com/me-no-dev/arduino-esp32fs-plugin/releases/download/1.1/ESP32FS-1.1.zip) 文件进行下载
 
 **Step 2.** 找到你的Sketchbook的位置。在您的Arduino IDE中，转到**File > Preferences**并检查您的Sketchbook位置。在我的例子中，它在以下路径中:`C:\Users\mengd\Documents\Arduino`
 
@@ -880,7 +880,7 @@ SPIFFS允许您像在计算机中的普通文件系统中那样访问闪存，�
 
 **Step 10.** 然后，要在Arduino IDE中上传文件，你只需要转到**Tools > ESP32 Sketch Data upload **。
 
-:::注意
+:::caution警告
 上传程序将覆盖你已经保存在文件系统中的所有内容。 
 :::
 
@@ -931,7 +931,7 @@ void loop() {
 
 ## Flash数据存储 
 
-:::注意
+:::caution警告
 本节内容适用于XIAO ESP32C3、XIAO ESP32S3、XIAO ESP32S3 Sense。 
 ::: 
 

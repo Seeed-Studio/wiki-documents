@@ -100,7 +100,7 @@ With robust IoT network communication capabilities, the R1000 series supports mu
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>Operating System</td>
-      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspbian, Debian</td>
+      <td data-style="height: 18px; width: 63.1933%;" colSpan={2} style={{height: 18, width: '63.1933%'}}>Raspberry Pi OS, Ubuntu</td>
     </tr>
     <tr data-style="height: 18px;" style={{height: 18}}>
       <td data-style="height: 18px; width: 35.4622%;" colSpan={1} style={{height: 18, width: '35.4622%'}}>RAM</td>
@@ -572,6 +572,10 @@ raspi-gpio set 21 op dh
 
 The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
+
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
+
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position2.png" /></div>
 
 :::note
 The RS485 interface uses an isolated power supply, which means that the ground signal for external devices connected to the RS485 interface should be connected to the GND_ISO pin.
@@ -1328,55 +1332,62 @@ Please note that if you require Zigbee functionality, it is necessary to purchas
 [Please click here for assemble instruction](/recomputer_r1000_assembly_guide/#assemble-4glorazigbee-module-and-antenna).
 :::
 
-#### To test Zigbee communication with two Zigbee modules, follow these steps:
+#### Set up reComputer R1000 with Zigbee module as Zigbee Coordinator:
 
 **Step 1.** Check Serial Ports:
 Use the following command to check available serial ports:
 
 ```bash
-cat /dev/ttyUSB*
+cat /dev/ttyACM*
 ```
 
-**Step 2.** Install Serial Communication Tool:
+**Step 2.** Install Serial Communication Tool, then enter *cutecom* open the UI:
 
 ```bash
-sudo apt install minicom
+sudo apt-get install cutecom
 ```
 
-**Step 3.** Open Serial Port for Coordinator (First Zigbee Module):
+**Step 3.** Configure the setting and Open communication:
+* Configure the baudrate as 115200
+* Tick 'Hex output' at the bottom
+* Select correct Device port, for example: /dev/ttyACM0
+* Then click 'Open' to set up communication
 
-```bash
-sudo minicom -D /dev/ttyUSB2 -b 1152008n1 -w -H
-```
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbee1.png" /></div>
 
-Follow these steps to configure the first Zigbee module:
+:::note
+For more detail information, please refer to [E18-MS1PA2-IPX](https://www.ebyte.com/product-view-news.html?id=894). For Hex command instruction, please refer to [Ebyte Zigbee 3.0 Module HEX Command Standard Specification](https://www.ebyte.com/pdf-down.aspx?id=2936).
+:::
+
+**Step 4.** Configure the Zigbee module as Coordinator
+Follow these steps to configure the first Zigbee module after checking module is at HEX code mode:
 
 - Set as coordinator: Send command `55 04 00 05 00 05`, expect response `55 04 00 05 00 05`.<br />
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand.png" /></div>
+
 - Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand2.png" /></div>
+
 - Network formation: Send command `55 03 00 02 02`.<br />
+  <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand3.png" /></div>
 
-**Step 4.** Open Serial Port for Router (Second Zigbee Module):
-
-Open another instance of minicom and configure it for the second serial port with the same settings as before.
-
-Follow these steps to configure the second Zigbee module:
-
-- Set as router: Send command `55 04 00 05 01 04`, expect response `55 04 00 05 00 05`.<br />
-- Reset device: Press reset button or send command `55 07 00 04 00 FF FF 00 04`.<br />
-- Network formation: Send command `55 03 00 02 02`.<br />
+:::note
+For check digit calculation, can use such [Block Check Character calculator](https://bcc.beyerleinf.de/) tool; Can also use serial communication tools like SSCOM and XCOM with BCC calculate.
+:::
 
 **Step 5.** Check Device Status:
-Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information.
+Send command `5 03 00 00 00` to check the device status. Expect a response similar to `55 2a 00 00 00 01 XX XX XX XX`, where `XX` represents device information. 
 
 **Step 6.** Enter Transparent Mode:
-If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. To exit transparent mode, send `+++`.
+If network formation is successful, enter transparent mode by sending command `55 07 00 11 00 03 00 01 13`. Both modules should be in transparent mode for direct communication. Don't forget to set Input mode as *None*. To exit transparent mode, send `+++`. 
+ <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/zigbeecommand4.png" /></div>
+
 
 **Step 7.** Additional Notes:
 - If router configuration fails, the device may already be a coordinator. Leave the network using command `55 07 00 04 02 xx xx xx`.
 - Test transmission power using commands `55 04 0D 00 00 0D` (query) and `55 04 0D 01 XX XX` (set).
 
-Ensure you replace /dev/ttyUSB* with the correct serial port for each Zigbee module. Follow these steps carefully to test Zigbee communication between the two modules successfully.
-
+Then can connect Zigbee device to reComputer R1000 via ZHA, zigbee2mqtt, Tasmota platforms,etc.
 
 ### PoE
 
@@ -1471,7 +1482,7 @@ Another way to use this function is Initiate a shutdown when GPIO pin changes. T
 Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`. 
 
 ```bash
-dtoverlay=gpio-shutdown, gpio_pin=GPIO25,active_low=1
+dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 ```
 
 :::note
@@ -1487,10 +1498,10 @@ import time,os
 
 num = 0
 
-GPIO.setmode(GPIO,BCM)
+GPIO.setmode(GPIO.BCM)
 #set GPIO25 as input mode
 #add 500ms jitter time for software stabilization
-GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_UP)
 GPIO.add_event_detect(25,GPIO.FALLING, bouncetime = 500) 
 while True:
   if GPIO.event_detected(25):

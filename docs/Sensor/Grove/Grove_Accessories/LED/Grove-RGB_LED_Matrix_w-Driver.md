@@ -222,7 +222,7 @@ e.g.
      in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
-```C++
+```cpp
 #include "grove_two_rgb_led_matrix.h"
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE
@@ -339,7 +339,7 @@ Let's begin DIY.
 
 
 
-```C++
+```cpp
 #include "grove_two_rgb_led_matrix.h"
 
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE

@@ -138,15 +138,17 @@ The first time you use NVIDIA SDK Manager, a web page will pop up prompting you 
 
 After logging in, you will be taken to the first screen where the first step of installing. Since we have already connected the reComputer J2021, there will be a window pop up to let you select the hardware device.
 
-The reComputer J2021 has equipped with **NVIDIA Jetson Xavier 8GB module**, so we can choose the first one.
+The reComputer J2021 has equipped with **NVIDIA Jetson Xavier 8GB module**, so we can choose `Jetson Xavier NX modules`.
 
-(要图)
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/select_target_device.png" />
+</div>
 
 There are more selections for you to choose in the first screen:
 
 - The **Jetson** in the Product Category panel need to be selected.
 - In the Hardware Configuration panel, we recommend that you **do not select Host Machine**. This will take more time to install the NVIDIA components for your current Ubuntu host. You can choose it if you need.
-- In the Target Operating System panel, we can select different **operating system** and **JetPack version**. But be careful the version of JetPack, different modules may support different type of JetPack. We recommand "JetPack 4.6.1" here.
+- In the Target Operating System panel, we can select different **operating system** and **JetPack version**. But be careful the version of JetPack, different modules may support different type of JetPack such as `JetPack 4.6.1`, `JetPack 5.1.1` . We recommand "JetPack 4.6.1" here.
 - In the Additional SDKs, since the storage space of eMMC is only 16GB, it will be out of memory if we install DeepStream here.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/7.png" /></div>

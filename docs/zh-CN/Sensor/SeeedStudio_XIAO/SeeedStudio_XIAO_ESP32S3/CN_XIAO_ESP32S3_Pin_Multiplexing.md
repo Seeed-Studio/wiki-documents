@@ -50,13 +50,13 @@ Seeed Studio XIAO ESP32S3是一款功能强大、用途广泛的开发板，具�
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应前端指示图</th>
 	</tr>
 	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/1.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应返回指示图</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/3.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应引脚列表</th>
@@ -1021,7 +1021,7 @@ A： 您可以尝试在Arduino IDE中使用以下方法关闭调试消息的输�
 
 ## 技术支持和产品讨论
 
-.
+
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺利。我们提供多种沟通渠道，以满足不同的偏好和需求。
 

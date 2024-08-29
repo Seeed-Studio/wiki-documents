@@ -113,7 +113,7 @@ Grove - IMU 9DOF v2.0 is an upgraded version of **Grove - IMU 9DOF v1.0** and it
 
 Here is the main part of the code
 
-```c++
+```cpp
 
 void setup() {
   // join I2C bus (I2Cdev library doesn't do this automatically)
