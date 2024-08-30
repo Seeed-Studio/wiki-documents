@@ -86,6 +86,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/0_build_balenaOS.gif" alt="pir" width="700" height="auto" /></div>
 
+**Step 3**: The compiled image is named `balena-image-seeed-recomputer-r100x.balenaos-img` and is in the `build/tmp/deploy/images/seeed-recomputer-r100x` directory. At this point, the image is Compilation is complete, the next step is to configure it.
 
 ### Configure R1000-balenaOS
 **Step 1**: Enter the directory where the compiled image is located, then enter the command line interface, enter `balena login`, and log in to `balena Cloud`.
@@ -144,14 +145,7 @@ cp balena-image-seeed-recomputer-r100x.balenaos-img recomputer_balenaos-dev.img
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/7_online.png" alt="pir" width="700" height="auto" /></div>
 
 
-:::note
-To use the rs485 function, you need to open the power pin of the 485 transceiver. This can be achieved through the following three lines of commands. We recommend that you write these three lines of commands into the startup script:
-```shell
-  echo 500 > /sys/class/gpio/export
-  echo out > /sys/class/gpio/gpio500/direction
-  echo 1 > /sys/class/gpio/gpio500/value
-```
-:::
+
 
 ## Tech Support & Product Discussion
 

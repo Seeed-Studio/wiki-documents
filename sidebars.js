@@ -3048,6 +3048,7 @@ const sidebars = {
                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_modbustcp',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_opcua_server',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_s7',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-influxdb',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000-grafana',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/flowfuse/recomputer_r1000_flowfuse_getting_start',
@@ -3212,6 +3213,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A607/A607_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A608/A608_Flash_JetPack',
+            
           ],
         },
 
@@ -3358,6 +3360,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
                 // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
               ]
             },
