@@ -46,8 +46,14 @@ For installation with a casing, you need to prepare the following materials:
 
 
 
-### Installation without housing
+### Installation
 
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Method 1" label="Installation without housing">
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/2.jpg" alt="pir" width="700" height="auto" /></div>
 
 **Step 1**: Insert the PCIe connection cable into the M.2 Hat, paying attention to the insertion direction of the cable. Insert the PCIe interface of the M.2 Hat with the metal side facing downwards, as shown in the figure after insertion:
@@ -81,9 +87,9 @@ Then insert the screws into the screw holes of Raspberry Pi 5 and M.2 Hat, as sh
 Then insert the fixing screws to secure the SSD and AI Kit in the M.2 Hat, as shown in the figure:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/11.jpg" alt="pir" width="700" height="auto" /></div>
+</TabItem>
 
-
-### Installation with housing
+<TabItem value="Method 2" label="Installation with housing">
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/2.jpg" alt="pir" width="700" height="auto" /></div>
 
 **Step 1**: Insert the PCIe connection cable into the M.2 Hat. Please pay attention to the insertion direction of the cable. Plug the metal side downward into the PCIe interface of the M.2 Hat. After insertion, as shown in the figure:
@@ -125,6 +131,9 @@ Place the overlapping M.2 Hat and Raspberry Pi into the case, with the Raspberry
 **Step 8**: Install the remaining shell
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/18.jpg" alt="pir" width="700" height="auto" /></div>
+</TabItem>
+</Tabs>
+
 
 
 
@@ -198,6 +207,28 @@ You will be asked whether you want to reboot now. Click `Yes`:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
 
+### Modify PCIe speed
+
+<Tabs>
+<TabItem value="Method 1" label="M.2 Hat">
+M.2 Hat supports PCIe Gen 2 and PCIe Gen 3 modes
+
+**Step 1**: Enter the following command to open the `/boot/firmware/config.txt` file
+```shell
+sudo nano /boot/firmware/config.txt
+```
+
+**Step 2**:Add the following to the [all] section at the end of the `/boot/firmware/config.txt` file:
+```shell
+dtparam=pciex1_gen=3
+```
+Save the file and reboot again, you may see a speed increase!.
+</TabItem>
+
+<TabItem value="Method 2" label="M.2 dual Hat">
+M.2 dual Hat does not support PCIe speed adjustment for the time being. We are further developing it and there will be corresponding updates in the future, so stay tuned!
+</TabItem>
+</Tabs>
 
 ## Tech Support & Product Discussion
 
