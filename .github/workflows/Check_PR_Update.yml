@@ -15,8 +15,8 @@ on:
       - "README_zh-CN.md"
     # Review gh actions docs if you want to further define triggers, paths, etc
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
-# env:
-#   NODE_OPTIONS: --max_old_space_size=4096
+env:
+  NODE_OPTIONS: --max_old_space_size=14336
   
 jobs:
   test-deploy:
