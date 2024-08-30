@@ -3212,6 +3212,7 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A607/A607_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A608/A608_Flash_JetPack',
+            
           ],
         },
 
@@ -3358,6 +3359,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
                 // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
               ]
             },
