@@ -13,7 +13,7 @@ last_update:
   author: YaoHui Zhu
 ---
 
-# How to run a multimodal visual language model with speech interaction on a reComputer Nvidia Jetson.
+# How to run VLM with speech interaction on reComputer Jetson
 
 ## Introduction
 
@@ -484,7 +484,7 @@ sudo python3 view_rtsp.py
 ### Demonstration
 
 <div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/watch?v=cJRiCTPrCYk" title="Multimodal Audio-Visual Large Language Model Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/eYaA9WGXh4Y" title="Run VLM with Speech Interaction on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 
