@@ -4018,6 +4018,8 @@ const sidebars = {
   },
   items: [
     'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+    'Contribution/Contributors/Contribution-Guide/full_steps_pull_request',
+    'Contribution/Contributors/Contribution-Guide/quick_pull_request',
 
   ],
 },
@@ -4025,7 +4027,7 @@ const sidebars = {
 
 
 
-'Contribution/Contributors/community_sourced_projects',
+// 'Contribution/Contributors/community_sourced_projects',
 'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
 

@@ -11,10 +11,15 @@ last_update:
   author: Matthew
 ---
 
+:::danger
+This page is obsoleted and you can view our fine contributors' work [here](/contributors).
+:::
 
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/contributors.png" alt="pir" width={800} height="auto" /></p>
 
 
 ### This page showcases some of the projects done by our community of Seeeders. 
+
 
 #### In Seeed, we deeply value our community of Seeeders and eagerly look forward to co-building innovative solutions together. We sincerely appreciate your efforts and are delighted to showcase your work, sharing it with the rest of our vibrant community.
 <div class="table-center">

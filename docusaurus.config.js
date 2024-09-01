@@ -383,7 +383,23 @@ const config = {
               },
               {
                 label: 'Contributors',
-                href: '/contributors',
+                to: '/contributors',
+              },
+              {
+                label: 'Apply for Rangers',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
+              },
+              {
+                label: 'Direct to Assignments',
+                href: 'https://github.com/orgs/Seeed-Studio/projects/6',
+              },
+              {
+                label: 'More about Rangers',
+                href: 'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
+              },
+              {
+                label: 'More about Contributors',
+                href: 'https://wiki.seeedstudio.com/Contributor',
               },
             ],
           },

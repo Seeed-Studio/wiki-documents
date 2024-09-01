@@ -1,11 +1,35 @@
-### Thank you for considering to contribute to our seeed-studio files! 
+---
+description: How To - Quick Streamlined
+title: Quick Pull Request
+keywords:
+- Community
+- Projects
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /quick_pull_request
+last_update:
+  date: 09/01/2024
+  author: Matthew
+---
 
-This streamlined contribution process, along with the use of sparse checkout and Lint Markdown, optimizes the workflow for contributors, making it more efficient and user-friendly. This is a simpler approach compared to the instructions in the how-to.md file.
+### Thank you for considering to contribute to our seeed-studio files!
 
-## All IN ONE
+This streamlined contribution process, is to be able to quickly PR files(no need deploy websites locally). If you want to check the changes or the page adding locally, you can click [here](/full_steps_pull_request).
+
+
+## All IN ONE code
+
+Image you only add md files and images:
+
+1. Please visit the [Seeed Studio Wiki Platform's Github Repository](https://github.com/Seeed-Studio/wiki-documents/tree/docusaurus-version) and then `fork` the 'wiki-documents' repository of your own.
+
+2. Copy all code in once and run the commands(remember replace `{your repo}` as your forked repo):
+
+:::tip
+For example, if my GitHub username is `MatthewJeffson`, my first command is: `git clone --no-checkout --depth 1 https://github.com/MatthewJeffson/wiki-documents.git`
+:::
 
 ```bash
-git clone --no-checkout --depth 1 https://github.com/Seeed-Studio/wiki-documents.git
+git clone --no-checkout --depth 1 https://github.com/{your repo}}/wiki-documents.git
 cd wiki-documents
 git sparse-checkout init --cone
 git sparse-checkout set sidebars.js docs 
@@ -13,7 +37,27 @@ git switch docusaurus-version
 git pull origin docusaurus-version
 ```
 
-## STEP BY STEP
+There will be a foler called "wiki-documents" in your PC.
+
+2. Store all files(The markdown files and pictures) in the "Contributor_Files" folder:
+
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/files_stored.png" alt="pir" width={800} height="auto" /></p>
+
+3. Push all files to the GitHub, running these commands:
+
+```
+git add .
+git commit -m "Add new document"
+git push origin docusaurus-version
+```
+
+4. Click "Pull Request" on your side repo and everything is done.
+
+<strong><font color={'8DC215'} size={"5"}>Done!</font></strong>
+
+## STEP BY STEP Introduction with Auto-Check
+
+Here are the introduction for the above, and presenting Auto-check codes.
 
 1. First, clone the repository using the following command:
 
