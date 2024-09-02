@@ -59,3 +59,8 @@ yarn start
 ```
 
 ![image3](./3.jpg)
+
+### 7. Now You can do the changes or add the files!
+
+- [Full steps to PR](/full_steps_pull_request)
+- [Quick steps to PR](/quick_pull_request)
