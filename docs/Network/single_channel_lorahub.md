@@ -39,12 +39,11 @@ cd esp-idf/
 ./install.sh
 ```
 
-#### Set up Environment Variables
 
-```
-source ./export.sh
-cd ..
-```
+
+### Start Project
+
+
 
 #### Install driver
 
@@ -56,25 +55,46 @@ cd ~/this_project_directory/components/radio_drivers
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
+```
+git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
+```
 
-### Start Project
+```
+git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
+```
+
+#### Start 
 
 ```
 cd ~/this_project_directory/lorahub
 ```
 
 
-Set the target device.
 
-```
-idf.py set-target esp32c6
-```
+* Set up Environment Variables:
+
+ This step can be skipped on Windows, as the installed "ESP-IDF x.x CMD" command will prepare it automatically.
+
+ ```
+ . ~/esp/esp-idf/export.sh
+ ```
+
+* Set the target device:
+
+ ```
+ idf.py set-target esp32c6
+ ```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/set-target.png" alt="pir" width={600} height="auto" /></p>
 
 
 Customize the build if necessary (it is configured for the Heltec board by default).
 ```
 idf.py menuconfig
 ```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/hub-config.png" alt="pir" width={600} height="auto" /></p>
+
 
 ### Build this Project
 
@@ -107,9 +127,9 @@ idf.py -p /dev/ttyUSB0 monitor
 
 #### Flash via ESPTOOL
 
-If not using the complete ESP-IDF environment,you can also flash the binary files using the esptool utility.
+If not using the complete ESP-IDF environment,you can also flash the binary files using the [esptool](https://docs.espressif.com/projects/esptool/en/latest/esp32/) utility.
 
-https://docs.espressif.com/projects/esptool/en/latest/esp32/
+
 
 for Linux/MacOS:
 ```
@@ -147,10 +167,6 @@ Click on the device name, enter the proof of possession PIN. Default is `abcd123
 
 Select the WiFi network to be joined and enter credentials.
 
-
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000-e.png" alt="pir" width={800} height="auto" /></p>
 
 
 
