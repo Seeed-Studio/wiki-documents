@@ -295,7 +295,124 @@ Now that you have set the LoRa region on your device, you can continue with conf
 
 
 
-* **Step 1**: Enter DFU mode
+### Flash the Bootloader
+
+:::danger note
+Not recommended to flash the bootloader unless advised by tech support!
+:::
+
+
+* [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+
+**Step1: Adafruit-nrfutil Installation**
+
+**Prerequisites**
+
+- [Python3](https://www.python.org/downloads/)
+- [pip3](https://pip.pypa.io/en/stable/installation/)
+
+
+
+<Tabs>
+<TabItem value="pypi" label="Installing from PyPI">
+
+This is recommended method, to install latest version:
+
+```
+pip3 install --user adafruit-nrfutil
+```
+
+
+  
+</TabItem>
+
+<TabItem value="sou" label="Installing from Source">
+
+Use this method if you have issue installing with PyPi or want to modify the tool. First clone this repo and go into its folder.
+
+```
+git clone https://github.com/adafruit/Adafruit_nRF52_nrfutil.git
+cd Adafruit_nRF52_nrfutil
+```
+
+Note: following commands use `python3`, however if you are on Windows, you may need to change it to `python` since windows installation of python 3.x still uses the name python.exe
+
+To install in user space in your home directory:
+
+```
+pip3 install -r requirements.txt
+python3 setup.py install
+```
+
+If you get permission errors when running `pip3 install`, your `pip3` is older
+or is set to try to install in the system directories. In that case use the
+`--user` flag:
+
+```
+pip3 install -r --user requirements.txt
+python3 setup.py install
+```
+
+If you want to install in system directories (generally not recommended):
+```
+sudo pip3 install -r requirements.txt
+sudo python3 setup.py install
+```
+
+
+To generate a self-contained executable binary of the utility (Windows and MacOS), run these commands:
+
+```
+pip3 install pyinstaller
+cd Adafruit_nRF52_nrfutil
+pip3 install -r requirements.txt
+cd Adafruit_nRF52_nrfutil\nordicsemi
+pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
+```
+You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on windows).
+Copy or move it elsewhere for your convenience, such as directory in your %PATH%.
+
+</TabItem>
+</Tabs>
+
+
+**Step2: Flash the bootloader**
+
+Connect the device to your PC and run the following command:
+
+* **For Windows**: 
+```
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200
+```
+
+* **For others**: 
+```
+adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
+```
+
+Replace the serial port with your device port. Example:
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
+
+
+
+
+
+
+
+### Flash the Application Firmware
+
+
+* **Step 1**: Download the firmware
+
+You may use the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) to download and copy firmware.
+
+Select the device to `Seeed Card Tracker T1000-E` and the latest firmware, and download the `UF2` file.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-uf2.png" alt="pir" width={800} height="auto" /></p>
+
+
+* **Step 2**: Enter DFU mode
+
 Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the LED will be solid on, the device will enter the DFU mode, and there should be a driver named `T1000-E` display.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu2.gif" alt="pir" width={400} height="auto" /></p>
@@ -303,11 +420,15 @@ Connect the USB cable to your PC, press and hold the device button, then **quick
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2**: Copy UF2 file
+* **Step 3**: 
 
 Download and Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
-* [Application Firmware](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/firmware-t1000-e-2.4.0.46d7b82_Alpha_pre_release.uf2)(Recommended version)
+
+
+
+
+
 
 ## FAQ
 
