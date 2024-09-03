@@ -12,9 +12,8 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/1.png" style={{width:700, height:'auto'}}/></div>
 
-ESP32 supports two major power saving modes: Light-sleep and Deep-sleep. According to the features used by an application, there are some sub sleep modes. See Sleep Modes for these sleep modes and sub sleep modes. Additionally, there are some power-down options that can be configured to further reduce the power consumption. See Power-down Options for more details.
 
-Here, I will use some simple examples to demonstrate the use of these low-power sleep modes. All ESP32s are universal, and the development board I am using here is XIAO ESP32S3 Sense
+Here, I will use some simple examples to demonstrate the use of these low-power sleep modes. All ESP32 are universal, and the development board I am using here is XIAO ESP32S3 Sense
 
 <div class="table-center">
   <table align="center">
@@ -44,53 +43,28 @@ Below, I have provided the redirect link
 - [MicroSD](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/)
 - [Camera Use](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)
 
-## Light Sleep-Mode
 
-### Introduce Light Sleep
+## Deep-Sleep
 
-In Light-sleep mode, the digital peripherals, most of the RAM, and CPUs are clock-gated and their supply voltage is reduced. Upon exit from Light-sleep, the digital peripherals, RAM, and CPUs resume operation and their internal states are preserved.
-
-### Wake-up Methods
-
-- Timer Wake-up
-- External interrupt Wake-up
-- Touch sensor Wake-up
-- ULP coprocessor Wake-up
-- GPIO Wake-up
-- UART Wake-up
-- UART target Wake-up
-- Network socket Wake-up
-
-Detail Wake up Source information , you can watch it from [**Here**](https://docs.espressif.com/projects/esp-idf/en/v5.3/esp32/api-reference/system/sleep_modes.html)
-
-### Use Light Sleep Code
-
-You can check the complete code on ESP IDF here, Because it's not very smooth to use on Arduino platform
-
-## Deep Sleep-Mode
-
-### Introduce Deep Sleep
-
+### Introduce Deep-Sleep
 In Deep-sleep mode, the CPUs, most of the RAM, and all digital peripherals that are clocked from APB_CLK are powered off. The only parts of the chip that remain powered on are:
 
-- RTC controller RTC
-
-- ULP coprocessor ULP
-
-- RTC FAST memory RTC
-
-- RTC SLOW memory RTC
+- RTC controller
+- ULP coprocessor
+- RTC FAST memory
+- RTC SLOW memory
 
 ### Wake-up Methods
 
 - Timer Wake-up
-- Touchpad Wake-up
-- External Wake-up(ext0)
-- External Wake-up(ext1)
-- ULP Coprocessor Wake-up
 
-Detail Wake up Source information , you can watch it from [**Here**](https://docs.espressif.com/projects/esp-idf/en/v5.3/esp32/api-reference/system/sleep_modes.html)
+- Touchpad Interrupt Wake-up
 
+- External Wake-up
+
+- ULP Coprocessor Activity Wake-up
+
+- GPIO  Wake-up
 
 ### Use Deep Sleep Code
 
@@ -573,16 +547,12 @@ void close_Microphone(){
 maximize power savings without compromising functionality, in order to extend the battery life of the device.
 Suitable scenarios: Applications where battery life is crucial, such as remote sensor nodes, wearable devices, and other low-power IoT devices. Although the wakeup time is relatively slow, this trade-off is worthwhile.
 
-### Why use Light Sleep mode
-reduce power consumption while still maintaining a certain level of responsiveness.
-Suitable scenarios: Applications that need to balance power consumption and performance, such as IoT devices with interactive interfaces and intermittently working sensor nodes. Compared to Deep Sleep, Light Sleep offers faster wakeup times.
-
 ### Why use Modem Sleep mode
 optimize the power consumption of the wireless communication module, while still maintaining network connectivity.
 Suitable scenarios: Applications that need to maintain network connection but also require low power, such as intermittently working IoT devices. Modem Sleep can significantly reduce the power consumption of the wireless module while still providing fast wakeup response.
 
 ### In summary
-these three sleep modes provide developers with different power/performance trade-off options that can be flexibly chosen based on the specific requirements of the application. For devices with battery life requirements, Deep Sleep mode is a good choice; for applications that need to balance power consumption and responsiveness, Light Sleep is a better option; and for IoT devices that need to maintain network connectivity, Modem Sleep mode is the optimal choice.
+these three sleep modes provide developers with different power/performance trade-off options that can be flexibly chosen based on the specific requirements of the application. For devices with battery life requirements, Deep Sleep mode is a good choice; and for IoT devices that need to maintain network connectivity, Modem Sleep mode is the optimal choice.
 
 ## Tech Support & Product Discussion
 
