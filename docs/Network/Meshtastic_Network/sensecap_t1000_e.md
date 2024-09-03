@@ -456,7 +456,6 @@ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/), check the log, 
 
 ## Resource
 
-[T1000-E Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.hex)
 [Meshtastic Doc](https://meshtastic.org/docs/introduction/)
 
 ## Tech Support & Product Discussion

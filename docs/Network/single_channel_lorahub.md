@@ -88,12 +88,32 @@ cd ~/this_project_directory/lorahub
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/set-target.png" alt="pir" width={600} height="auto" /></p>
 
 
-Customize the build if necessary (it is configured for the Heltec board by default).
-```
-idf.py menuconfig
-```
+* Customize the build configuration:
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/hub-config.png" alt="pir" width={600} height="auto" /></p>
+ ```
+ idf.py menuconfig
+ ```
+
+ 1) Set flash size.
+
+ `Serial flasher config` -> `Flash size` -> for XIAO ESP32C6 is `4MB`.
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/flash-size.png" alt="pir" width={600} height="auto" /></p>
+
+ 2) Set board type:
+
+ `LoRaWAN 1-CH HUB Configuration` -> `Hardware Configuration` -> `Board type` -> `Semtech DevKit`
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/board-type.png" alt="pir" width={600} height="auto" /></p>
+
+ :::tip
+ If you didn't connect the OLED display, please disable it.
+
+ `LoRaWAN 1-CH HUB Configuration` -> `Hardware Configuration` -> Disable `OLED Display`
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/lorahub/oled.png" alt="pir" width={600} height="auto" /></p>
+ :::
+
+
 
 
 ### Build this Project
