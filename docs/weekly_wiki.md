@@ -53,7 +53,9 @@ In this wiki , we wiil introduce how to install and run the sample code in Platf
 
 We also created a tutorial for using the [XIAO nRF52840 with PlatformIO](https://wiki.seeedstudio.com/xiao_nrf52840_with_platform_io/).
 
+### [Github Contribution(Pull Request) Guide](https://wiki.seeedstudio.com/Contribution-Guide/)
 
+We provide two tutorial documents: [**Full Steps Pull Request**](https://wiki.seeedstudio.com/full_steps_pull_request/) and [**Quick Pull Request**](https://wiki.seeedstudio.com/quick_pull_request/). You can follow the steps in these documents to upload your innovative solution. Thank you for considering contributing to our seeed-studio files!
 
 
 
