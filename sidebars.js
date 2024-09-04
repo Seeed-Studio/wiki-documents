@@ -3014,6 +3014,7 @@ const sidebars = {
             
             ],
           },
+
           {
             type: 'category',
             label: 'reComputer-R1000',
@@ -3124,20 +3125,6 @@ const sidebars = {
                       ],
                       },
 
-                    {
-                      type: 'category',
-                      label: 'Computer Vision',
-                      items: [
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection'
-                      ],
-                      },
-
                 ],
               },
 
@@ -3164,7 +3151,20 @@ const sidebars = {
         ],
       },
 
-
+      {
+        type: 'category',
+        label: 'Raspberry Pi with Ai',
+        collapsed: true,
+        collapsible: true,
+        items: [
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/convert_model_to_edge_tpu_tflite_format_for_google_coral',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/install_m.2_coral_to_rpi5',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', ]
+      },
 
       ],
 
