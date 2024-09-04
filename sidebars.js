@@ -3529,7 +3529,11 @@ const sidebars = {
         {
           type: 'category',
           label: 'Application',
-          items: ['Edge/Beagle_Bone/Application/BeagleBone_Solutions'],
+          items: [
+            'Edge/Beagle_Bone/Application/BeagleBone_Solutions',
+            'Edge/Beagle_Bone/Application/ChatGPT_and_BeagleBone',
+
+          ],
         },
         {
           type: 'category',
