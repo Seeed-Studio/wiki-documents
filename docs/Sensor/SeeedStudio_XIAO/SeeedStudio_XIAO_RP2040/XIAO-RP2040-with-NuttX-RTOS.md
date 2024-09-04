@@ -191,7 +191,81 @@ To check which options are accepted to interact with this application, type `gpi
 ```
 NuttShell (NSH) NuttX-12.5.1
 nsh> gpio -h
+USAGE: gpio [-t <pintype>] [-w <signo>] [-o <value>] <driver-path>
+       gpio -h
+Where:
+ <driver-path>: The full path to the GPIO pin driver.
+ -t <pintype>:  Change the pin to this pintype (0-10):
+ -w <signo>:    Wait for a signal if this is an interrupt pin.
+ -o <value>:    Write this value (0 or 1) if this is an output pin.
+mation and exit.
+Pintypes:
+  0: GPIO_INPUT_PIN
+  1: GPIO_INPUT_PIN_PULLUP
+IO_INPUT_PIN_PULLDOWN
+  3: GPIO_OUTPUT_PIN
+  4: GPIO_OUTPUT_PIN_OPENDRAIN
+  5: GPIO_INTERRUPT_PIN
+  6: GPIO_INTERRUPT_HIGH_PIN
+  7: GPIO_INTERRUPT_LOW_PIN
+  8: GPIO_INTERRUPT_RISING_PIN
+  9: GPIO_INTERRUPT_FALLING_PIN
+ 10: GPIO_INTERRUPT_BOTH_PIN
 ```
+
+To confirm the GPIO device files were created, type `ls/dev`. After typing, you can see some gpios were declared define on seed-studio-gpio.c, which represent :
+
+- 2 LED On board (gpio 17 and gpio 16).
+- 1 Intput (gpio 6)
+- 1 Interrupt Input (gpio 7)
+
+```
+nsh> ls /dev
+/dev:
+ console
+ gpio16
+ gpio17
+ gpio18
+ gpio6
+ gpio7
+ null
+ ttyACM0
+```
+According to the Seeed Studio RP2040 schematic, the board's LEDs turn on when the GPIO level is set to zero.
+
+To control the GPIO output, you must pass the parameter —o, a value (zero or one), and the path (/dev/gpio).
+
+Following these two commands you see the yellow LED blinking. 
+```
+nsh> gpio -o 0 /dev/gpio17
+Driver: /dev/gpio17
+  Output pin:    Value=1
+  Writing:       Value=0
+  Verify:        Value=0
+
+nsh> gpio -o 1 /dev/gpio17
+Driver: /dev/gpio17
+  Output pin:    Value=1
+  Writing:       Value=1
+  Verify:        Value=1
+```
+<div align="center"><img width ="{50}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-gpio-turn-on-led-green.jpg"/></div>
+
+The same way, you will have the same result to red LED.
+```
+nsh> gpio -o 0 /dev/gpio16
+Driver: /dev/gpio16
+  Output pin:    Value=1
+  Writing:       Value=0
+  Verify:        Value=0
+
+nsh> gpio -o 1 /dev/gpio16
+Driver: /dev/gpio16
+  Output pin:    Value=1
+  Writing:       Value=1
+  Verify:        Value=1
+```
+<div align="center"><img width ="{50}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
 
 
 ### USERLED
