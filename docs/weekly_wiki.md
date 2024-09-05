@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/19/2024
+  date: 09/02/2024
   author: Frank
 ---
 
@@ -17,94 +17,49 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 19th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 2nd and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Start running with ESP-NOW protocol on XIAO Series](https://wiki.seeedstudio.com/xiao_esp32c3_espnow/)
+### [Connecting Siemens PLCs Using the S7 Protocol with reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_nodered_s7/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/126.png" style={{width:800, height:'auto'}}/></div>
-<br />
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/final.PNG" /></center>
 
-This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32 Series to communicate using this protocol,the process will be very simple,In order to enable everyone to utilize the ESP-NOW protocol in the XIAO ESP32 series,we prepare thress XIAO ESP32 types C6/C3/S3 to comuncate.
+In this article, we'll explore how to use Node-RED, a popular flow-based development tool, on a Raspberry Pi-powered reComputer to interface with Siemens PLCs using the S7 Protocol. This setup allows for efficient and flexible integration of industrial automation systems with modern IoT platforms.
 
-### [ChatGPT - Raspberry Pi](https://wiki.seeedstudio.com/respeaker_lite_pi5/)
+### [Deploy Frigate On Jetson](https://wiki.seeedstudio.com/deploy_frigate_on_jetson/)
 
-<div class="table-center">
-<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png)
 
-This project integrates voice input, large model response, and voice output functionalities using a Raspberry Pi 5. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
+Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device. NVIDIA Jetson is an edge AI platform that enables efficient deployment of AI workloads. Combining Frigate with Jetson leverages hardware-accelerated machine learning to efficiently process video streams and detect objects.
 
-### [Watcher & Node-RED To p5.js Quick Start](https://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
+### [XIAO ESP32S3 Sense Sleep Modes](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/)
 
-<div class="table-center">
-<iframe width="800" height="400" src="https://files.seeedstudio.com/wiki/watcher_nodered_p5js_image/p5js_video.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/1.png" style={{width:700, height:'auto'}}/></div>
 
-p5.js is a JavaScript library that makes coding accessible for artists and designers. It provides an easy way to create graphics, animations, and interactive applications using a simple syntax. With features like drawing on a canvas, handling user input, and supporting multimedia, p5.js is ideal for creative coding projects, educational purposes, and digital art. Its vibrant community and extensive resources help users of all skill levels get started.
+ESP32 supports two major power saving modes: Light-sleep and Deep-sleep. According to the features used by an application, there are some sub sleep modes. See Sleep Modes for these sleep modes and sub sleep modes. Additionally, there are some power-down options that can be configured to further reduce the power consumption. See Power-down Options for more details.
 
-### [AI NVR with reServer Jetson](https://wiki.seeedstudio.com/ai_nvr_with_jetson/)
+### [Raspberry Pi 5 uses PCIe hat/dual hat](https://wiki.seeedstudio.com/raspberry_pi_5_uses_pcie_hat_dual_hat/)
 
-<div align="center">
-    <img width={900} 
-     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/vst.png" />
-</div>
+This tutorial mainly introduces the hardware connection configuration of M.2 Hat/dual Hat and how to make the Raspberry Pi boot from the SSD.And introduces two installation methods, with and without casing.
 
-With the advancement of artificial intelligence technology, traditional video surveillance systems are evolving towards greater intelligence. AI NVR (Network Video Recorder) combines artificial intelligence with video surveillance technology, enabling not only the recording of video but also real-time analysis, recognition, and processing of video content. This enhances the efficiency and accuracy of security monitoring. This article will introduce how to implement an AI NVR using the NVIDIA Jetson platform.
+### [XIAO ESP32C6 with PlatformIO](https://wiki.seeedstudio.com/xiao_esp32c6_with_platform_io/)
 
-### [reComputer R1000 act as OPC UA server with Node-RED](https://wiki.seeedstudio.com/recomputer_r1000_nodered_opcua_server/)
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/7.png" /></div>
 
-The OPC Unified Architecture (UA), introduced in 2008, represents a significant evolution in industrial communication standards. Unlike its predecessors under the OPC Classic umbrella, OPC UA is a platform-independent, service-oriented architecture that unifies all the functionalities of previous OPC specifications into a single, extensible framework. This modern approach not only preserves the core capabilities of OPC Classic but also enhances them with a multi-layered design that meets the complex demands of today’s industrial environments.
+PlatformIO is a development platform that integrates many types of development boards and has good scalability. If the platform does not have the type you need, you can manually add the type of development board yourself. The code you write on Arduino can use it, just add the corresponding library
 
-### [Micropython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
+In this wiki , we wiil introduce how to install and run the sample code in PlatformIO
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_micropython/title.png" /></div>
+We also created a tutorial for using the [XIAO nRF52840 with PlatformIO](https://wiki.seeedstudio.com/xiao_nrf52840_with_platform_io/).
 
-[MicroPython](https://github.com/micropython/micropython/wiki) is a Python interprer with a partial native code compilation feature. It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. It is different from CPython and you can read more about the differences [here](https://github.com/micropython/micropython/wiki/Differences).
+### [Github Contribution(Pull Request) Guide](https://wiki.seeedstudio.com/Contribution-Guide/)
 
-- [Micropython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/)
-- [Micropython with XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_with_micropython/)
-
-### [Circuitpython with XIAO ESP32](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
-
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/title.png" /></div>
-
-This wiki introduce how to install and run the official CircuitPython by Adafruit Industries on the Seeed Studio XIAO ESP32C3 development board!
-
-- [Circuitpython with XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_with_circuitpython/)
-- [Circuitpython with XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_with_circuitpython/)
-
-### [Getting Started with Seeed Studio XIAO RA4M1](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/)
-
-<div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/2-102010551-Seeed-Studio-XIAO-RA4M1-45font.jpg" 
-    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
-  />
-</div>
-
-The XIAO RA4M1 integrates Renesas' RA4M1 chip (32-bit ARM® Cortex®-M4 MCU up to 48 MHz) into the classic XIAO form factor. This development board offers 256KB Flash, 32KB SRAM, 8KB EEPROM, a USB 2.0 connector, reset and boot buttons, 3 LEDs, a 14-bit A/D converter, a 12-bit D/A converter, and a CAN BUS interface. With onboard charging circuitry and low-power modes (as low as 45μA), it’s ideal for battery-powered applications. Sharing the same 32-bit R7FA4M1AB3CFM microcontroller as the Arduino Uno R4, it's natively compatible with Arduino IDE and the extensive XIAO accessories, making it the perfect starting point for electronics projects.
-
-### [SenseCraft Cloud Fee](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
-
-SenseCaft cloud service is based on hardware devices using the LoRaWAN IoT low-power communication protocol. The LoRaWAN devices require metered prepayment to enable the data communication function. Users can prepay monthly or annually based on their product usage needs.
-
-### [ReSpeaker Lite User Button Usage](https://wiki.seeedstudio.com/sensecraft_cloud_fee/)
-
-User button is connected to XMOS XU316 and it's not programmed yet(reserve for futurn usage). If you want to use this button with XIAO ESP32S3, connect the `Usr` pin to the `D2` or `D3` pin.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={600} height="auto" /></p>
-
-This example connects the `Usr` pin to `D3`, and then uses XIAO ESP32S3 to detect whether the button is pressed.
+We provide two tutorial documents: [**Full Steps Pull Request**](https://wiki.seeedstudio.com/full_steps_pull_request/) and [**Quick Pull Request**](https://wiki.seeedstudio.com/quick_pull_request/). You can follow the steps in these documents to upload your innovative solution. Thank you for considering contributing to our seeed-studio files!
 
 
 
-
-
-
-
-## Existed Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
@@ -120,7 +75,7 @@ We've added an [example](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encod
 
 ### [Added Example for XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink)
 
-We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).
+We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).-->
 
 
 
@@ -212,6 +167,8 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.7.29th](/Seeed_Elderly/weekly_wiki/wiki240729)
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
+- [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 
 </details>
 

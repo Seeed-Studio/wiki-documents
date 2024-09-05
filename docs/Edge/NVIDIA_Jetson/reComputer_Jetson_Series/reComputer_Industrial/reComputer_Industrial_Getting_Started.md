@@ -259,6 +259,12 @@ You need to prepare the following hardware before getting started with reCompute
 - HDMI cable
 - Keyboard and Mouse
 
+:::info
+We recommend using a physical machine as the host rather than a virtual machine.
+
+Please ensure that your host machine has more than 50GB of free space.
+:::
+
 ### Enter Force Recovery Mode
 
 Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. 
@@ -296,7 +302,7 @@ Here we offer 2 different methods of flashing.
 2. Download official NVIDIA L4T, use the included hardware periheral drivers and flash to device
 
 :::note
-The first method download is around 14GB and the second method download is about 3GB
+The first method download is around 14GB and the second method download is about 3GB.
 :::
 
 <Tabs>
@@ -357,7 +363,7 @@ sudo tar -xvf <file_name>.tar.gz
 - **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
-cd mfi_p3509-a02+p3767-0000
+cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
@@ -531,7 +537,7 @@ sudo tar -xvf <file_name>.tar.gz
 - **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
-cd mfi_p3509-a02+p3767-0000
+cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 

@@ -4,8 +4,8 @@ title: CircuitPython for ESP32S3
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_ESP32S3_CircuitPython
 last_update:
-  date: 08/09/2023
-  author: Isaac
+  date: 08/18/2024
+  author: Isaac, Djair Guilherme
 ---
 
 # Project Overview
@@ -70,13 +70,15 @@ I am using Thonny IDE software(Windows) and some related libraries and files.
   </table>
 </div>
 
-:::info
-Before using it, it is required for me to state the software/firmware I'm using here is designed for the ESP32S3 chip. Hence when you are trying to use pin, make sure the General Purpose Input/Output instead of the pin on the board.<br/>
-For example, when you are trying to use the pin in the first row on the left. Make sure it is `GPIO1` instead of `A0` or `D0`.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:500, height:'auto'}}/></div>
-:::
+
 
 ## Getting Started
+
+### Download XIAO ESP32S3 Circuitpyhton Firmware
+
+[Circuitpython Firmwares 9.1.1 and 9.20 Alpha for XIAO ESP32S3 Sense](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense)
+
 
 ### Connect the XIAO ESP32S3 board to PC under the BootLoader Mode
 
@@ -110,7 +112,8 @@ The specific method is:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/07.png" /></div>
 
-3. Select the CircuitPython family as "ESP32-S3" and choose variant as "Espressif•ESP32-S3-DevKitC-1-N8".
+3. Select the CircuitPython family as "ESP32-S3" and Select the icon with the three horizontal lines next to the install button, to include the Firmware you downloaded.
+Eg. (seeed_xiao_esp32s3_911.bin or seeed_xiao_esp32s3_920.bin)
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/08.png" /></div>
 
@@ -172,6 +175,78 @@ display.show()
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
 
+:::note
+You allways could install CircuitPython libraries using the tool [circup](https://learn.adafruit.com/keep-your-circuitpython-libraries-on-devices-up-to-date-with-circup/install-circup), from Adafruit. When installed, you just type:
+```
+circup install gc9a01 adafruit_ticks 
+```
+to install any libraries.
+:::
+
+### Using XIAO Round Display with Sense Camera
+
+1. After install all libraries, needed, just type the code bellow to see Camera Frame at Round Display.
+
+```
+import board
+import busio
+import displayio
+import espcamera
+import adafruit_ticks
+import gc9a01
+import struct
+
+i2c = busio.I2C(board.SCL, board.SDA)
+spi = busio.SPI(clock=board.SCK, MOSI=board.MOSI)
+cam_i2c = busio.I2C(board.CAM_SCL, board.CAM_SDA)
+
+tft_dc  = board.D3
+tft_cs  = board.D1
+tft_bl  = board.D6
+
+display_bus = displayio.FourWire(spi, command=tft_dc, chip_select=tft_cs)
+display = gc9a01.GC9A01(display_bus, width=240, height=240, rotation=0)
+
+# Appears that this example does not use Displayio at all
+# print frame directly on display_bus to be faster
+# so, rotation setting not works...
+
+main = displayio.Group()
+display.root_group = main
+
+# Camera Init
+cam = espcamera.Camera(
+    data_pins=board.CAM_DATA,
+    external_clock_pin=board.CAM_XCLK,
+    pixel_clock_pin=board.CAM_PCLK,
+    vsync_pin=board.CAM_VSYNC,
+    href_pin=board.CAM_HREF,
+    pixel_format=espcamera.PixelFormat.RGB565,
+    frame_size=espcamera.FrameSize.R240X240,
+    i2c=cam_i2c,
+    external_clock_frequency=20_000_000,
+    framebuffer_count=2,
+    grab_mode=espcamera.GrabMode.WHEN_EMPTY)
+
+# Sending init bytes to display_bus
+display_bus.send(36, struct.pack(">hh", 0, 239))
+display_bus.send(42, struct.pack(">hh", 0, 239))
+display_bus.send(43, struct.pack(">hh", 0, 80+239))
+display.auto_refresh = False
+
+t0 = adafruit_ticks.ticks_ms()
+
+while True:
+    frame = cam.take(1)                                                         
+    if isinstance(frame, displayio.Bitmap):                                     
+        display_bus.send(44, frame)                                             
+        t1 = adafruit_ticks.ticks_ms()                                          
+        fps = 1000 / adafruit_ticks.ticks_diff(t1, t0)
+        print(f"{fps:3.1f}fps")  # typically runs at about 25fps
+        t0 = t1
+```
+
+
 ## What's more
 
 - The related files are all from the assembled [Adafruit CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/download/20230718/adafruit-circuitpython-bundle-8.x-mpy-20230718.zip) form https://circuitpython.org/libraries and you can find all the supported hardware files using CircuitPython.
@@ -181,6 +256,7 @@ display.show()
 
 - This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
 - Thanks [Isaac's efforts](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35178340) and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
+- And [Djair Guilherme](https://github.com/Seeed-Studio/wiki-documents/issues/1237#issuecomment-2295415274).
 
 ## Tech Support & Product Discussion
 

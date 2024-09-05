@@ -1,20 +1,20 @@
 ---
-description: Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)
-title: Getting started with MR60BHA2
+description: Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)
+title: Getting started with MR60FDA2
 keywords:
 - mmwave
 - radar
-- MR60BHA2
+- MR60FDA2
 image: https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg
-slug: /getting_started_with_mr60bha2_mmwave_kit
+slug: /getting_started_with_mr60fda2_mmwave_kit
 last_update:
   date: 08/19/2024
   author: Spencer
 ---
 
-# Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)
+# Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/">
@@ -22,7 +22,7 @@ last_update:
     </a>
 </div><br />
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and [heartbeat](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/) monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
 ### Features
 
@@ -30,46 +30,69 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 - **Fall Detection Module**:
   - **Precise Fall Detection**: Covers a 3x3x3 meter area with a 100° x 40° detection angle.
   - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away.
-- **Heartbeat Detection Module**:
+
+<!-- - **Heartbeat Detection Module**:
   - **Sensitive Heartbeat Monitoring**: Detects heartbeats from up to 1.5 meters.
-  - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away.
+  - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away. -->
+  
 - **Environmental Sensing**:
   - **BH1750 Light Sensor**: Measures ambient light from 1 to 65,535 lux.
   - **WS2812 RGB LED**: Customizable LED for visual feedback and DIY projects.
 - **Expandable Connectivity**: Includes Grove GPIO ports for adding additional sensors and modules.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div> -->
 
 ### Specification
 
 | **General Parameters**   |                                      |
 | ------------------------ | ------------------------------------ |
-| **mmWave Firmware**       | Fall Detection & Heartbeat Monitoring |
-| **Microcontroller Unit (MCU)**  | Seeed Studio XIAO ESP32 |
-| **LED Indicator**        | WS2812 RGB LED: Full-Color, Programmable Lighting |
-| **User Interface**       | Single-Button Interface for Reset |
-| **Ambient Light Sensor** | BH1750: High-Precision Digital Light Intensity Measurement |
-| **Connectivity**         | Grove Connector: 1 GPIO Port (D0, D10) for Versatile I/O Integration |
-| **Pin Header Spacing**   | Standard 2.54mm Female Header for Easy Prototyping |
-| **Power Supply**         | 5V/1A Input for Stable and Reliable Operation |
+| **mmWave Firmware**      | Fall Detection Monitoring |
+| **Detection Range**      | Human Static Presence Detection: up to 6 Meters<br />Fall Detection: <br />- 3x3x3 meter range<br />- Horizontal Field of View (FoV) of 120°<br />- Vertical FoV of 100° |
+| **MCU**                  | Seeed Studio XIAO ESP32C6 |
+| **LED**                  | WS2812 RGB LED |
+| **Button**               | Rest |
+| **Light Sensor**         | BH1750 Range: 1 to 65,535 lux with adjustable measurements up to 100,000 lux |
+| **Connectivity**         | 1 GPIO Port (D0, D10) |
+| **Pin Header Spacing**   | 2.54mm |
+| **Power Supply**         | 5V/1A Input |
+| **Power consumption**    | 0.5w: Standby Mode<br />0.8w: Activation Mode<br />1.4w: work with Grove Relay status |
 
 ### Application
 
-- Human body sensor light control
-- Life safety protection
-- Smart home appliances
-- Intelligent security
+- Security Systems
+- Haelthcare Monitoring
+- Smart Home Automation
+- Elderly Care
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/application.jpg" style={{width:'auto', height:'auto', "border-radius": '2.8px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/application.jpg" style={{width:'auto', height:'auto', "border-radius": '2.8px'}}/></div> -->
 
 ## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/hardware-overview.jpg" style={{"border-radius": '12.8px'}}/></div><br />
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div>
+<!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/6-mmWave-size.jpg" style={{width:'auto', height:'auto', "border-radius": '6.6px'}}/></div> -->
 
 ## Getting Started
+
+### Installation method and sensing range
+
+Top-mounted hanging height 2.2-3.0m, maximum sensing radius 2m, the side with the mmWave sensor needs to align with the direction of detection.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/top_installation.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/top_detect_distant.png" style={{width:600, height:'auto'}}/></div>
+
+:::note
+Please use this module in an open space, and stay out of the following scenarios within the detecting range to prevent interference with the module:
+
+- Multiple radars installed too close together  
+- Wind moves curtains and sways plants
+- Water flow and water film  
+- Large areas of metal and mirror reflections  
+- Detection through glass and thin wooden boards  
+- Installation location prone to vibrations  
+- Use of low-quality power supplies  
+:::
 
 ### Software Preparation (Arduino)
 
@@ -77,6 +100,7 @@ If this is your first time using Arduino with the XIAO series, follow the approp
 
 - **XIAO ESP32S3**: Refer to the [XIAO ESP32S3 Getting Started Guide](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/).
 - **XIAO ESP32C3**: Follow the [Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) guide.
+- **XIAO ESP32C6**: Follow the [Getting Started with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/) guide.
 
 Once your board is set up, proceed with the following steps:
 
@@ -101,7 +125,7 @@ Once your board is set up, proceed with the following steps:
 
 4. **Load an Example Sketch**:
    - Go to **File > Examples > Seeed Arduino mmWave**.
-   - Select the relevant example for either Fall Detection or Heartbeat Detection.
+   - Select the relevant example for either Fall Detection.
    - Review the code and make any necessary adjustments.
 
 5. **Upload the Sketch**:
@@ -112,8 +136,11 @@ Once your board is set up, proceed with the following steps:
 
 ### Usage
 
-This section provides example code snippets to help you quickly start using the Seeed Arduino mmWave Library with various functionalities, including breath monitoring, fall detection, RGB LED control, and light sensing.
+This section provides example code snippets to help you quickly start using the Seeed Arduino mmWave Library with various functionalities, including fall detection, RGB LED control, and light sensing.
 
+
+
+<!-- 
 ### Breath Module
 
 This example demonstrates how to use the **MR60BHA2** sensor for monitoring breathing and heartbeat.
@@ -162,9 +189,9 @@ if (mmWave.update(100)) {
  }
 }
 }
-```
+``` -->
 
-### Fall Module
+#### Fall Module
 
 This example shows how to use the **MR60FDA2** sensor for fall detection.
 
@@ -235,8 +262,11 @@ if (mmWave.update(100)) {
 }
 }
 ```
+The output will be as follows on Arduino Serial Monitor:
 
-### Blink RGB LED
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/fall_detection.png" style={{width:700, height:'auto'}}/></div>
+
+#### Blink RGB LED
 
 This example demonstrates how to control an RGB LED using the NeoPixel library.
 
@@ -272,8 +302,12 @@ for (int i = 255; i >= 0; i--) {
 }
 }
 ```
+Once the program is successfully uploaded, you will see RGB LED on the right side of the mmWave Sensor Modules is blinking.
 
-### Light Sensor (BH1750)
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
+
+
+#### Light Sensor (BH1750)
 
 This example shows how to read light intensity values using the BH1750 sensor.
 
@@ -306,9 +340,13 @@ if (BH1750.hasValue()) {
 }
 }
 ```
+The output will be as follows on Arduino Serial Monitor:
 
-## API Explanation
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light_sensor.png" style={{width:700, height:'auto'}}/></div>
 
+<!-- ## API Explanation -->
+
+<!-- 
 ### Breath Module API
 
 This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sensor for heart and breath monitoring. Here’s what each key function does:
@@ -330,23 +368,25 @@ This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sens
   - Retrieves the current heart rate detected by the sensor. The rate is returned in the reference variable `rate`.
 
 - **`mmWave.getDistance(float &distance)`**:
-  - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal.
+  - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal. -->
 
-### Fall Module API
+## Fall Module API
 
 This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sensor for fall detection. Here’s what each key function does:
 
 - **`mmWave.begin(&mmWaveSerial)`**:
-  - Initializes the sensor for communication, similar to the breath module, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
+  - Initializes the sensor for communication, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, with a valid range typically between 1 and 5 meters.
+  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization 
+setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
 
 - **`mmWave.setThreshold(float threshold)`**:
-  - Sets the fall detection threshold. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
+  - Sets the fall detection threshold. The default fall threshold of the radar is `0.6 m`. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**:
-  - Adjusts the sensitivity of the radar for fall detection. The sensitivity value typically ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
+  - Adjusts the sensitivity of the radar for fall detection. The sensitivity initial value is `3`, which 
+represents an average of 3 frames of data. And typically value ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
   - Retrieves the current configuration parameters of the radar, including installation height, fall detection threshold, and sensitivity settings. These parameters are returned via the reference variables.
@@ -356,6 +396,12 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 
 - **`mmWave.getFall()`**:
   - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.
+
+## Open for Customization
+
+Want to tailor-make the kit to fit your unique applications?
+
+For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at iot@seeed.cc to learn more.
 
 
 ## Resources

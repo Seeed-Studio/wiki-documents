@@ -1014,14 +1014,14 @@ const sidebars = {
           type: 'category',
           label: 'MR60FDA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
           ],
         },
         {
           type: 'category',
           label: 'MR60BHA2 mmWave kit',
           items: [
-            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -1139,6 +1139,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840_PlatformIO',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Hardware Usage',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE-Sense-IMU-Usage',
@@ -1240,6 +1247,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Platform',
+              items: [
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/XIAO_ESP32C6_with_PlatformIO',
+              ],
+            },
+            {
+              type: 'category',
               label: 'Application',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Application/xiao_esp32c6_aws_iot',
@@ -1258,6 +1272,7 @@ const sidebars = {
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Sense_Consumption',
   
             {
               type: 'category',
@@ -2280,7 +2295,19 @@ const sidebars = {
 
               ],
             },
-            'Network/Meshtastic_Network/sensecap_t1000_e',
+            {
+              type: 'category',
+              label: 'T1000-E Tracker',
+              items: [
+                'Network/Meshtastic_Network/T1000-E/t1000_e_intro',
+                {
+                  type: 'doc', 
+                  id:'Network/Meshtastic_Network/T1000-E/sensecap_t1000_e',
+                  label: 'Get Started with T1000-E', 
+                },
+
+              ],
+            },
           ],
     },
 
@@ -2999,6 +3026,7 @@ const sidebars = {
             
             ],
           },
+
           {
             type: 'category',
             label: 'reComputer-R1000',
@@ -3033,6 +3061,7 @@ const sidebars = {
                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_modbustcp',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_with_node_red_and_bacnet',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_opcua_server',
+                           'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000_nodered_s7',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer-r1000-nodered-influxdb',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Node-RED/recomputer_r1000-grafana',
                            'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/flowfuse/recomputer_r1000_flowfuse_getting_start',
@@ -3108,20 +3137,6 @@ const sidebars = {
                       ],
                       },
 
-                    {
-                      type: 'category',
-                      label: 'Computer Vision',
-                      items: [
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/install_m.2_coral_to_rpi5',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
-                        'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/Computer-Vision/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection'
-                      ],
-                      },
-
                 ],
               },
 
@@ -3129,6 +3144,38 @@ const sidebars = {
             ],
           },
         ],
+      },
+
+      {
+        type: 'category',
+        label: 'Hat',
+        collapsed: true,
+        collapsible: true,
+        items: [
+            {
+              type: 'category',
+              label: 'M.2 Hat',
+              items: [
+                    'Edge/M_2_Hat/m_2_hat_start_with_pi5',
+              ],
+            },
+          
+        ],
+      },
+
+      {
+        type: 'category',
+        label: 'Raspberry Pi with AI',
+        collapsed: true,
+        collapsible: true,
+        items: [
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/convert_model_to_edge_tpu_tflite_format_for_google_coral',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/install_m.2_coral_to_rpi5',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', ]
       },
 
       ],
@@ -3178,13 +3225,14 @@ const sidebars = {
             'Edge/NVIDIA_Jetson/Carrier_Boards/A603/A603_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A607/A607_Flash_JetPack',
             'Edge/NVIDIA_Jetson/Carrier_Boards/A608/A608_Flash_JetPack',
+            
           ],
         },
 
         // reComputer Jetson Series
         {
           type: 'category',
-          label: 'reComputer Jetson Series',
+          label: 'reComputer Jetson',
           link: {
             type: "doc",
             id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Intro',
@@ -3234,6 +3282,12 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'reComputer J20',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J20/reComputer_J20_with_Jetson_getting_start',
+              ]},
+            {
+              type: 'category',
               label: 'reComputer J30/40',
               // link: {
               //   type: "doc",
@@ -3248,7 +3302,7 @@ const sidebars = {
         // reServer Jetson Series
         {
           type: 'category',
-          label: 'reServer Jetson Series',
+          label: 'reServer Jetson',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_Getting_Started',
@@ -3324,6 +3378,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8-TRT-Jetson',
                 // 'Edge/NVIDIA_Jetson/Application/Computer_Vision/reComputer_Jetson_Series_Tutorials_Exercise',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/YOLOv8_custom_classification_model',
+                'Edge/NVIDIA_Jetson/Application/Computer_Vision/deploy_frigate_on_jetson',
                 'Edge/NVIDIA_Jetson/Application/Computer_Vision/AI-NVR_with_Jetson',
               ]
             },
@@ -3355,7 +3410,14 @@ const sidebars = {
                 
               ]
             },
-            
+            {
+              type: 'category',
+              label: 'Multimodal AI',
+              items: [
+                // Models
+                'Edge/NVIDIA_Jetson/Application/Multimodal_AI/Speech_vlm',
+              ]
+            },
             {
               type: 'category',
               label: 'Robotics',
@@ -3485,7 +3547,11 @@ const sidebars = {
         {
           type: 'category',
           label: 'Application',
-          items: ['Edge/Beagle_Bone/Application/BeagleBone_Solutions'],
+          items: [
+            'Edge/Beagle_Bone/Application/BeagleBone_Solutions',
+            'Edge/Beagle_Bone/Application/ChatGPT_and_BeagleBone',
+
+          ],
         },
         {
           type: 'category',
@@ -3607,6 +3673,7 @@ const sidebars = {
         },
       ],
     },
+
 
     {
       type: 'category',
@@ -3838,7 +3905,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'TinyML Workshop',
+          label: 'AI Workshop',
           collapsed: true,
           collapsible: true,
           link: {
@@ -3976,6 +4043,8 @@ const sidebars = {
   },
   items: [
     'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
+    'Contribution/Contributors/Contribution-Guide/full_steps_pull_request',
+    'Contribution/Contributors/Contribution-Guide/quick_pull_request',
     'Contribution/Contributors/file_transfer_station/XiaoS3(Sense)_Freertos/XIAO-ESP32S3-FreeRTOS',
   ],
 },
@@ -3983,7 +4052,7 @@ const sidebars = {
 
 
 
-'Contribution/Contributors/community_sourced_projects',
+// 'Contribution/Contributors/community_sourced_projects',
 'Contribution/Contributors/Scale-up-Your-Creation-with-Fusion',
 
 
