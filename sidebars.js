@@ -3153,7 +3153,7 @@ const sidebars = {
 
       {
         type: 'category',
-        label: 'Raspberry Pi with Ai',
+        label: 'Raspberry Pi with AI',
         collapsed: true,
         collapsible: true,
         items: [
