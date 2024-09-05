@@ -6,7 +6,7 @@ keywords:
 - LLM
 - ReSpeaker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /respeaker_lite_Beagley-ai_chatgpt
+slug: /respeaker_lite_beagley-ai_chatgpt
 last_update:
   date: 9/4/2024
   author: ShuishengPeng
