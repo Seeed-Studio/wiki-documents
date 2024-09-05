@@ -4045,7 +4045,7 @@ const sidebars = {
     'Contribution/Contributors/Deploy_Page_Locally/Deploy_Page_Locally',
     'Contribution/Contributors/Contribution-Guide/full_steps_pull_request',
     'Contribution/Contributors/Contribution-Guide/quick_pull_request',
-    'Contribution/Contributors/file_transfer_station/XiaoS3(Sense)_Freertos/XIAO-ESP32S3-FreeRTOS',
+
   ],
 },
 
