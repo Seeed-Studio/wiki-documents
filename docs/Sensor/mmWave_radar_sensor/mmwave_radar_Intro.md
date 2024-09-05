@@ -24,7 +24,168 @@ In Seeed, We have leveraged the power of mmWave to come up with various sensors 
 
 Our range of mmWave Radar Sensors are shown below, each with different features and functions. 
 
-### 24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)
+<table align="center">
+<font size={"2"}>
+    <tr>
+        <th></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/">Seeed Stduio <strong>MR60FDA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/">Seeed Stduio <strong>MR60BHA2</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_human_detection_kit/">Seeed Stduio mmWave Human Detection Sensor Kit</a></th>
+        <th><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">Seeed Studio <strong>24GHz XIAO</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR24HPC1/">Seeed Studio <strong>MR24HPC1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR24HPB1/">Seeed Studio <strong>MR24HPB1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR24BSD1/">Seeed Studio <strong>MR24BSD1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR60BHA1/">Seeed Studio <strong>MR60BHA1</strong></a></th>
+        <th><a href="https://wiki.seeedstudio.com/Radar_MR60FDA1/">Seeed Studio <strong>MR60FDA1</strong></a></th>
+    </tr>
+    <tr>
+        <th>Operating Frequency</th>
+        <td>60GHz</td>
+        <td>60GHz</td>
+        <td>24GHz</td>
+        <td>24GHz</td>
+        <td>24GHz</td>
+        <td>24GHz</td>
+        <td>24GHz</td>
+        <td>60GHz</td>
+        <td>60GHz</td>
+    </tr>
+    <tr>
+        <th>Transmit Power</th>
+        <td>/</td>
+        <td>/</td>
+        <td>8dBm</td>
+        <td>/</td>
+        <td>8dBm</td>
+        <td>10dBm</td>
+        <td>6dBm</td>
+        <td>6dBm</td>
+        <td>6dBm</td>
+    </tr>
+    <tr>
+        <th>Motion Range</th>
+        <td>6m</td>
+        <td>6m</td>
+        <td>5m</td>
+        <td>6m</td>
+        <td>5m</td>
+        <td>12m</td>
+        <td>2.75m</td>
+        <td>0.5m</td>
+        <td>6m</td>
+    </tr>
+    <tr>
+        <th>Presence Range</th>
+        <td>3m</td>
+        <td>1.5m</td>
+        <td>4m</td>
+        <td>4m</td>
+        <td>4m</td>
+        <td>5m</td>
+        <td>1.5m</td>
+        <td>1.5m</td>
+        <td>3m</td>
+    </tr>
+    <tr>
+        <th>Detection Angle</th>
+        <td>120x100°</td>
+        <td>120x100°</td>
+        <td>90×60°</td>
+        <td>60×60°</td>
+        <td>90×60°</td>
+        <td>90×60°</td>
+        <td>40×40°</td>
+        <td>20×20°</td>
+        <td>60×60°</td>
+    </tr>
+    <tr>
+        <th>Operating Voltage</th>
+        <td>5V</td>
+        <td>5V</td>
+        <td>4.5-6V</td>
+        <td>5V</td>
+        <td>4.5-6V</td>
+        <td>4.5-6V</td>
+        <td>4.5-6V</td>
+        <td>4.5-6V</td>
+        <td>4.5-6V</td>
+    </tr>
+    <tr>
+        <th>Pins Spacing</th>
+        <td>2.54mm</td>
+        <td>2.54mm</td>
+        <td>2.00mm</td>
+        <td>2.54mm</td>
+        <td>2.00mm</td>
+        <td>2.00mm</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <th>Size (WxH)</th>
+        <td>30x48mm</td>
+        <td>30x48mm</td>
+        <td>35x30mm</td>
+        <td>22x18mm</td>
+        <td>35x30mm</td>
+        <td>35x30mm</td>
+        <td>45x26mm</td>
+        <td>35x30mm</td>
+        <td>35x30mm</td>
+    </tr>
+    <tr>
+        <th>ESPHome Support</th>
+        <td>Native Firmware Support</td>
+        <td>Native Firmware Support</td>
+        <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
+        <td><a href="https://wiki.seeedstudio.com/mmwave_for_xiao/">Guide</a></td>
+        <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
+        <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
+        <td>/</td>
+        <td><a href="https://github.com/thefipster/esphome-mmwave-sensors">GitHub</a></td>
+        <td><a href="https://github.com/DuncanIdahoCT/espresence-mr60fda1-mmwave-sensor">GitHub</a></td>
+    </tr>
+    <tr>
+       <th>Category</th>
+       <td>Sensor with XIAO ESP32C6 as the MCU</td>
+       <td>Sensor with XIAO ESP32C6 as the MCU</td>
+       <td>Sensor with XIAO ESP32C3 as the MCU</td>
+       <td>Module</td>
+       <td>Module</td>
+       <td>Module</td>
+       <td>Module</td>
+       <td>Module</td>
+       <td>Module</td>
+    </tr>
+    <tr>
+        <th>Availability</th>
+        <td><a href="https://www.seeedstudio.com/"><strong>$24.9</strong> at Seeed Stduio</a></td>
+        <td><a href="https://www.seeedstudio.com/"><strong>$24.9</strong> at Seeed Stduio</a></td>
+        <td><a href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html"><strong>$26.99</strong> at Seeed Stduio</a></td>
+        <td><a href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html"><strong>$4.49</strong> at Seeed Studio</a></td>
+        <td><a href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html"><strong>$6.9</strong> at Seeed Studio</a></td>
+        <td><a href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Human-Static-Presence-Module-p-5267.html"><strong>$19.9</strong> at Seeed Studio</a></td>
+        <td><a href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html"><strong>$28</strong> at Seeed Studio</a><br /><br /><a href="https://amzn.to/45zzW52">Amazon</a></td>
+        <td><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Breathing-and-Heartbeat-Module-p-5305.html"><strong>$45</strong> at Seeed Studio</a></td>
+        <td><a href="https://www.seeedstudio.com/60GHz-mmWave-Radar-Sensor-Fall-Detection-Module-Pro-p-5375.html"><strong>$37</strong> at Seeed Studio </a><br /><br /><a href="https://amzn.to/3VycnFj">Amazon</a></td>
+    </tr>
+    <tr>
+        <th>Note</th>
+        <td>New Release</td>
+        <td>New Release</td>
+        <td>In Stock</td>
+        <td>In Stock</td>
+        <td>In Stock</td>
+        <td>In Stock</td>
+        <td>Out of Stock</td>
+        <td>Out of Stock</td>
+        <td>Out of Stock</td>
+    </tr>
+</font>
+</table>
+
+<!-- ### 24GHz mmWave Sensor - Human Static Presence Module Lite (MR24HPC1)
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -187,10 +348,10 @@ Our range of mmWave Radar Sensors are shown below, each with different features 
 |Speed|<p style={{textAlign: 'center'}}>✅</p>|||||
 |Breathing Rate|||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
 |Heartbeat|||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
-|Sleep State|||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
+|Sleep State|||<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|| -->
 
 
-## mmWave Radar Sensor: Typical Application Scenarios in our Life(这块的内容待完善)
+## mmWave Radar Sensor: Typical Application Scenarios in our Life
 
 mmWave radar sensors are utilized in a variety of innovative projects across different industries. Here are a few examples:
 
