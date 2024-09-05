@@ -4,7 +4,7 @@ title: Getting start with reComputer J20
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reComputer_J20_with_Jetson_getting_start
+slug: /recomputer_j20_with_jetson_getting_start
 last_update:
   date: 9/3/2024
   author: Yaohui
@@ -47,7 +47,7 @@ The full system includes one NVIDIA Jetson Xavier NX production module, a heatsi
       <td>Jetson Xavier NX 16GB</td>
       <td>Jetson Xavier NX 8GB</td>
       <td>Jetson Xavier NX 16GB</td>
-      <td>Jetson Orin NX 8G</td>
+      <td>Jetson Xavier NX 8G</td>
     </tr>
     <tr>
       <td>AI Performance</td>
