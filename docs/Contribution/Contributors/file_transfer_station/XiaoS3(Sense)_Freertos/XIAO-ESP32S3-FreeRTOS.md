@@ -50,6 +50,12 @@ I am using [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_es
   </table>
 </div>
 
+### Additional Components
+
+- [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display RTC & Button
+- [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Acrylic Case for Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/XIAO-p-4812.html)
+
 ## Software Preparation
 
 I am using Visual Studio Code (Windows) with ESP-IDF.
@@ -90,13 +96,17 @@ I am using Visual Studio Code (Windows) with ESP-IDF.
 
 ### Setting up ESP-IDF
 
-After setting up the [Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) open the terminal and past the following command to access the ESP-IDF Command Line Tools.
+After setting up the [Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) open the terminal and past the following command to access the ESP-IDF Command Line Tools from the normal terminal environment(outside of VScode).
 
-#### PowerShell (Windows)
+:::note
+The normal installation of [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) extension of VS-Code will take care of 90% of use cases do the following steps only if you need ESP Command line tools outside of the environment.
+:::  
+
+PowerShell (Windows)  
 ```shell
 .$HOME\esp\v5.3\esp-idf\export.ps1
 ```
-:::note
+:::info
 ".$HOME\esp\v5.3\esp-idf" may differ from user to user.This the default installation path.  
 Replace it wil the installation path on your device.
 :::
@@ -134,13 +144,27 @@ The void app_main(void) function acts as the entry point for user's application 
 :::
 I will be building the project in steps so thats easy to follow along and reduce the complicacy of the code.
 
-## Using the git repository
+<!-- ## Using the git repository
+
+### Installation
+Install git in your system.  
+:::info
+You can install from [here](https://git-scm.com/downloads)
+:::
+Restart your terminal then run  
+```shell
+git --version
+```  
+Output
+```shell
+git version 2.44.0.windows.1
+```
 
 ```shell
 git clone "https://github.com/Priyanshu0901/FreeRTOS-S3-Sense"
-```
+``` -->
 
-## Project 1
+## Visualization  of tasks
 I am creating four simple task to visualize how the FreeRTOS works.
 
 ### Visual Representation
@@ -258,8 +282,8 @@ I (14082) Task4: Hello from task 4
 
 </details>
 
-## Project 2
-I will be using FreeRTOS use the wifi.
+## Sensor polling using FreeRTOS   
+For this i am using an I2c based sensor
 ## What's more
 
 Something you want to add up, something you want to extend, like:
