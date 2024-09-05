@@ -3220,7 +3220,7 @@ const sidebars = {
         // reComputer Jetson Series
         {
           type: 'category',
-          label: 'reComputer Jetson Series',
+          label: 'reComputer Jetson',
           link: {
             type: "doc",
             id: 'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Intro',
@@ -3270,6 +3270,12 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'reComputer J20',
+              items: [
+                'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_J20/reComputer_J20_with_Jetson_getting_start',
+              ]},
+            {
+              type: 'category',
               label: 'reComputer J30/40',
               // link: {
               //   type: "doc",
@@ -3284,7 +3290,7 @@ const sidebars = {
         // reServer Jetson Series
         {
           type: 'category',
-          label: 'reServer Jetson Series',
+          label: 'reServer Jetson',
           // link: {
           //   type: "doc",
           //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_Getting_Started',
