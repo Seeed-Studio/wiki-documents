@@ -2295,7 +2295,19 @@ const sidebars = {
 
               ],
             },
-            'Network/Meshtastic_Network/sensecap_t1000_e',
+            {
+              type: 'category',
+              label: 'T1000-E Tracker',
+              items: [
+                'Network/Meshtastic_Network/T1000-E/t1000_e_intro',
+                {
+                  type: 'doc', 
+                  id:'Network/Meshtastic_Network/T1000-E/sensecap_t1000_e',
+                  label: 'Get Started with T1000-E', 
+                },
+
+              ],
+            },
           ],
     },
 
