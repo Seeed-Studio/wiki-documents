@@ -618,7 +618,7 @@ const config = {
         // Replace this with the name of your index/collection.
         // It should match the "index_name" entry in the scraper's "config.json" file.
         // typesenseCollectionName: 'wiki_platform_1713169217',
-        typesenseCollectionName: 'wiki_platform_1723968755',
+        typesenseCollectionName: 'wiki_platform_1725602541',
   
         typesenseServerConfig: {
           nodes: [
