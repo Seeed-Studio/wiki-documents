@@ -20,7 +20,7 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 
 FreeRTOS is a collection of C libraries comprised of a real-time kernel and a set of modular libraries that implement complementary functionality. The FreeRTOS kernel is a real-time kernel (or real-time scheduler) that enables applications built on FreeRTOS to meet their hard real-time requirements. It enables applications to be organized as a collection of independent threads of execution.
 
-*Reference : [**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/Mastering-the-FreeRTOS-Real-Time-Kernel.v1.0.pdf)*
+*Reference : [**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)*
 
 ## FreeRTOS ports
 
@@ -96,7 +96,7 @@ I am using Visual Studio Code (Windows) with ESP-IDF.
 
 ### Setting up ESP-IDF
 
-After setting up the [Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) open the terminal and past the following command to access the ESP-IDF Command Line Tools from the normal terminal environment(outside of VScode).
+After setting up the [Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md), open the terminal and paste the following command to access the ESP-IDF Command Line Tools from the normal terminal environment(outside of VScode).
 
 :::note
 The normal installation of [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) extension of VS-Code will take care of 90% of use cases do the following steps only if you need ESP Command line tools outside of the environment.
@@ -131,38 +131,20 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
 
   ESP-IDF CLI build management tool. For commands that are not known to idf.py an attempt to execute it as a build
   system target will be made. Selected target: None
-```
+```   
 
-:::info
-The void app_main(void) function acts as the entry point for user's application and is automatically invoked on ESP-IDF startup.
+## What are Task?   
+Tasks are small functions/ jobs that the the processor is requested to perform with a set of settings. Tasks can range from small functions to infinite looping functions.   
+Tasks are the fundamental units of execution in an ESP-IDF application. They are essentially functions that run concurrently with other tasks. This allows for efficient multitasking and responsiveness.   
+### What are task properties?
+Due to the vastness of this topic, i will be only covering a few of the properties we will be using for this guide.   
+- *TaskFunction*: This is the function that contains the actual logic of the task. It's the entry point for the task's execution.   
+- *StackSize*: This specifies the amount of memory allocated for the task's stack. The stack is used to store local variables, function return addresses, and temporary data.   
+- *TaskPriority*: This determines the relative importance of the task compared to other tasks. Higher-priority tasks have a greater chance of being executed before lower-priority ones.   
+- *TaskParameters*: These are optional arguments that can be passed to the task function when it's created. They can be used to provide additional context or configuration to the task.   
+- *CoreAffinity*: This specifies which CPU core the task should be assigned to. In systems with multiple cores, this can be used to optimize performance or balance the workload.   
 
-1. Typically, users would spawn the rest of their application's task from app_main.
-
-2. The app_main function is allowed to return at any point (i.e., before the application terminates).
-
-3. The app_main function is called from the main task.
-:::
-I will be building the project in steps so thats easy to follow along and reduce the complicacy of the code.
-
-<!-- ## Using the git repository
-
-### Installation
-Install git in your system.  
-:::info
-You can install from [here](https://git-scm.com/downloads)
-:::
-Restart your terminal then run  
-```shell
-git --version
-```  
-Output
-```shell
-git version 2.44.0.windows.1
-```
-
-```shell
-git clone "https://github.com/Priyanshu0901/FreeRTOS-S3-Sense"
-``` -->
+### How to create a Task
 
 ## Visualization  of tasks
 I am creating four simple task to visualize how the FreeRTOS works.
@@ -188,7 +170,7 @@ TaskHandle_t task;
 xTaskCreate(
         taskFunction,             /* Function that implements the task. */
         "taskName",               /* Text name for the task. */
-        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
         NULL,                     /* Parameter passed into the task. */
         tskIDLE_PRIORITY,         /* Priority at which the task is created. */
         &task1                    /* Used to pass out the created task's handle. */
@@ -204,7 +186,7 @@ TaskHandle_t task;
 xTaskCreatePinnedToCore(
         taskFunction,             /* Function that implements the task. */
         "taskName",               /* Text name for the task. */
-        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
         NULL,                     /* Parameter passed into the task. */
         tskIDLE_PRIORITY,         /* Priority at which the task is created. */
         &task,                    /* Used to pass out the created task's handle. */
