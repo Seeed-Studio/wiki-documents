@@ -53,6 +53,7 @@ I am using [Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_es
 ### Additional Components
 
 - [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C Display RTC & Button
+- [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
 - [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
 - [Acrylic Case for Seeed Studio XIAO Expansion board](https://www.seeedstudio.com/XIAO-p-4812.html)
 
@@ -69,7 +70,6 @@ I am using Visual Studio Code (Windows) with ESP-IDF.
     <tr>
         <th>VS Code</th>
         <th>ESP-IDF for VSCode</th>
-        <th>Project Files</th>
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -80,11 +80,6 @@ I am using Visual Studio Code (Windows) with ESP-IDF.
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md">
               <strong><span><font color={'FFFFFF'} size={"4"}> ESP-IDF Install ⏬</font></span></strong>
-          </a>
-      </div></td>
-      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://github.com/Priyanshu0901/FreeRTOS-S3-Sense">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Git Repository ⏬</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -144,8 +139,8 @@ Due to the vastness of this topic, i will be only covering a few of the properti
 - **TaskParameters**: These are optional arguments that can be passed to the task function when it's created. They can be used to provide additional context or configuration to the task.   
 - **CoreAffinity**: This specifies which CPU core the task should be assigned to. In systems with multiple cores, this can be used to optimize performance or balance the workload.   
 
-### How to create a Task   
-
+### Creating a task
+To create a task in FreeRTOS, the xTaskCreate function is used. This function takes several parameters, including the task function, task name, stack size, parameters, priority, and a handle to the created task.
 ```c
 TaskHandle_t task;
 xTaskCreate(
@@ -157,15 +152,33 @@ xTaskCreate(
         &task1                    /* Used to pass out the created task's handle. */
         );
 ```
+### Creating a task pinned to a core
+To create a task and pin it to a specific core (only if the chip in use is dual core), the xTaskCreatePinnedToCore function is used. This function is similar to xTaskCreate but includes an additional parameter for specifying the core.
+```c
+TaskHandle_t task;
+xTaskCreatePinnedToCore(
+        taskFunction,             /* Function that implements the task. */
+        "taskName",               /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
+        NULL,                     /* Parameter passed into the task. */
+        tskIDLE_PRIORITY,         /* Priority at which the task is created. */
+        &task,                    /* Used to pass out the created task's handle. */
+        0);                       /* Core ID */
+```
+
+### Task function call
+The task function is the actual code that will be executed by the task.
+```c
+void taskFunction(void * pvParameters) {
+  /*
+  Function definition goes here
+  */
+}
+```
 
 ## Visualization  of tasks
-I am creating four simple task to visualize how the FreeRTOS works.   
-![image1](./2.png)   
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>   
+I am creating four simple task to visualize how the FreeRTOS works.    
+![image2](./2.png)
 
 ### Visual Representation   
 ```shell
@@ -179,47 +192,85 @@ taskFunction2 (500ms delay)
 taskFunction3 (500ms delay)
 taskFunction4 (500ms delay)
 ```
-### Code Overview
-This section provides a brief overview of the code structure and key functions used in the project.
-#### Creating a task
-To create a task in FreeRTOS, the xTaskCreate function is used. This function takes several parameters, including the task function, task name, stack size, parameters, priority, and a handle to the created task.
+### Code
 ```c
-TaskHandle_t task;
-xTaskCreate(
-        taskFunction,             /* Function that implements the task. */
-        "taskName",               /* Text name for the task. */
-        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
-        NULL,                     /* Parameter passed into the task. */
-        tskIDLE_PRIORITY,         /* Priority at which the task is created. */
-        &task1                    /* Used to pass out the created task's handle. */
-        );
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "sdkconfig.h"
+#include "esp_log.h"
+
+TaskHandle_t task1,task2,task3,task4;
+
+void taskFunction1(void * pvParameters) {
+    while (true) {
+        ESP_LOGI("Task1", "Hello from task 1");
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Add a delay to avoid overwhelming the output
+    }
+}
+
+void taskFunction2(void * pvParameters) {
+    while (true) {
+        ESP_LOGI("Task2", "Hello from task 2");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
+    }
+}
+
+void taskFunction3(void * pvParameters) {
+    while (true) {
+        ESP_LOGI("Task3", "Hello from task 3");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
+    }
+}
+
+void taskFunction4(void * pvParameters) {
+    while (true) {
+        ESP_LOGI("Task4", "Hello from task 4");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
+    }
+}
+
+void app_main(void) {
+    xTaskCreatePinnedToCore(
+        taskFunction1, /* Function that implements the task. */
+        "task_1",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task1,         /* Used to pass out the created task's handle. */
+        0);              /* Core ID */
+
+    xTaskCreatePinnedToCore(
+        taskFunction2, /* Function that implements the task. */
+        "task_2",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task2,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
+    
+    xTaskCreatePinnedToCore(
+        taskFunction3, /* Function that implements the task. */
+        "task_3",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task3,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
+
+    xTaskCreatePinnedToCore(
+        taskFunction4, /* Function that implements the task. */
+        "task_4",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task4,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
+}
 ```
 :::tip
 configMINIMAL_STACK_SIZE can be changed in sdkconfig.
 :::
-#### Creating a task pinned to a core
-To create a task and pin it to a specific core, the xTaskCreatePinnedToCore function is used. This function is similar to xTaskCreate but includes an additional parameter for specifying the core.
-```c
-TaskHandle_t task;
-xTaskCreatePinnedToCore(
-        taskFunction,             /* Function that implements the task. */
-        "taskName",               /* Text name for the task. */
-        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
-        NULL,                     /* Parameter passed into the task. */
-        tskIDLE_PRIORITY,         /* Priority at which the task is created. */
-        &task,                    /* Used to pass out the created task's handle. */
-        0);                       /* Core ID */
-```
-
-#### Task function call
-The task function is the actual code that will be executed by the task.
-```c
-void taskFunction(void * pvParameters) {
-  /*
-  Function definition goes here
-  */
-}
-```
 
 1. Four Tasks: The code defines four tasks: taskFunction1, taskFunction2, taskFunction3, and taskFunction4.
 2. Task Priorities: All tasks are created with the tskIDLE_PRIORITY. This means they have the same priority.
@@ -250,11 +301,9 @@ Core: 1
 This is a simplified schedule. Actual task scheduling in a real-time system would involve more complex factors like task priorities, deadlines, and resource constraints.
 :::
 
-### Output
-
 <details>
 
-<summary> Sample Output</summary>
+<summary> Output</summary>
 
 ```shell
 I (11412) Task1: Hello from task 1
@@ -283,9 +332,16 @@ I (14082) Task4: Hello from task 4
 </details>
 
 ## Sensor polling using FreeRTOS   
-For this i am using a digital 
+For this i am using a analog sensor [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)   
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Priyanshu0901/Air_quality_Sensor_ESP-IDF.git">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>   
 
-![alt text](image-3.png)
+### Using the git repository
+After pulling the git repository, open the folder in VSCode. Go to View->Command Palette->ESP-IDF: Add vscode Configuration Folder.
+From the bottom panel select the correct COM port, chip (ESP-S3) and build flash monitor
 
 ## FreeRtos for Arduino IDE   
 
