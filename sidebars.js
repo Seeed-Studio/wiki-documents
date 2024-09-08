@@ -3218,6 +3218,7 @@ const sidebars = {
               label: 'J501 Carrier Board',
               items: [
                 'Edge/NVIDIA_Jetson/Carrier_Boards/J501/reServer_Industrial_J501_Getting_Started',
+                'Edge/NVIDIA_Jetson/Carrier_Boards/J501/Hardware_Interfaces_Usage',
               ],
             },
             'Edge/NVIDIA_Jetson/Carrier_Boards/A203v2/reComputer_A203_Flash_System',
