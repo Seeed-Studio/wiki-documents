@@ -4,7 +4,7 @@ title: XIAO ESP32S3(Sense) With FreeRTOS
 keywords:
   - Software, FreeRtos
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /XIAO-ESP32S3-FreeRTOS
+slug: /xiao-esp32s3-freertos
 last_update:
   date: 09/09/2024
   author: Priyanshu_Roy
@@ -16,7 +16,7 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 
 ## What is [FreeRTOS](https://www.freertos.org/index.html)
 
-![image1](./1.png)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
 FreeRTOS is a collection of C libraries comprised of a real-time kernel and a set of modular libraries that implement complementary functionality. The FreeRTOS kernel is a real-time kernel (or real-time scheduler) that enables applications built on FreeRTOS to meet their hard real-time requirements. It enables applications to be organized as a collection of independent threads of execution.
 
@@ -198,7 +198,8 @@ void taskFunction(void * pvParameters) {
 ## Visualization of tasks
 
 I am creating four simple task to visualize how the FreeRTOS works.  
-![image2](./2.png)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/2.png" alt="pir" width={700} height="auto" /></p>
 
 ### Visual Representation
 
@@ -371,7 +372,7 @@ For this I am using an analog sensor [Air Quality Sensor v1.3](https://www.seeed
 
 Attach the Xiao-S3 to the [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and connect the [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) to the digital connector.
 
-![image3](./3.jpeg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### Software Setup
 
@@ -442,7 +443,7 @@ FreeRtos can be used for Arduino-IDE based Xiao-S3 builds. It is similar to ESP-
 ### Hardware Setup
 Attach the Xiao-S3 to the [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) (OLED DIsplay and RTC) and connect the [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) to the I2c Bus.
 
-![image4](./4.jpeg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### Software Setup
 Install the arduino libraries for [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library), [U8x8lib](https://github.com/olikraus/U8g2_Arduino) and [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) library. Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to install library for Arduino.
@@ -683,7 +684,7 @@ void taskBME680(void* pvParameters) {
 
 ### Output
 
-![gif5](./5.gif)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/5.gif" alt="pir" width={600} height="auto" /></p>
 
 ### Serial Monitor Output
 
