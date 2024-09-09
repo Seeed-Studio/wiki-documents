@@ -145,5 +145,5 @@ Micro-USB 5V⎓2A</td>
 ## Flash JetPack to reComputer J1020v2
 
 :::info
-Please refer to this [wiki](/reComputer_J1010_J101_Flash_Jetpack) page for more information because J1020v2 use J202 carrier board.
+Please refer to this [wiki](/reComputer_J2021_J202_Flash_Jetpack) page for more information because J1020v2 use J202 carrier board.
 :::
