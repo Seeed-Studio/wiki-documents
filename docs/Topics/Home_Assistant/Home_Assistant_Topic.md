@@ -74,10 +74,19 @@ Home Assistant has evolved beyond home automation, expanding its reach into **sm
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
         <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now </font></span></strong></a></div></td>
+        <td class="table-trnobg"></td>
 		<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://yellow.home-assistant.io/power-supply/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 Getting Started Page</font></span></strong></a></div></td>
+     </tr>
+     <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+     <td class="table-trnobg"></td>
+     <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}> <a class="get_one_now_item" href="https://www.seeedstudio.com/blog/2024/07/23/home-assistant-green-vs-yellow-vs-blue/"><strong><span><font color={'FFFFFF'} size={"4"}> 🖥️ Comparison</font></span></strong></a></div></td>
+      <td class="table-trnobg"></td>
     </tr>
 	</table>
 </div>
+
+
 
 <br/>
 
