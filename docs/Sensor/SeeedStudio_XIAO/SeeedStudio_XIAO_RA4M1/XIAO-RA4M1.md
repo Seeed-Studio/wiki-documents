@@ -185,12 +185,11 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
     Navigate to **Tools > Board > Boards Manager...**, type the keyword **RA4M1** in the search box, select the latest version of **Seeed Renesas Board**, and install it.
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:700, height:'auto'}}/></div>
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
 - **Step 4.** Select your board and port.
 
-    On top of the Arduino IDE, you can select the port directly. Also, search for xiao in the development board on the left. select XIAO_RA4M1.
-
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/board_manager.png" style={{width:600, height:'auto'}}/></div>
+    On top of the Arduino IDE, you can search for **xiao** in the development board on the left, select XIAO_RA4M1, and select the port directly.
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/select_port.png" style={{width:800, height:'auto'}}/></div>
 
 
 ## BootLoader Mode

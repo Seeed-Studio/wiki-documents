@@ -168,7 +168,7 @@ const claimRender = (isMobile) => {
 	return (
 		<div className={clsx(styles.claim, styles.section)}>
 			<div className={styles.wrapper}>
-				<div className={styles.title}>Open Call!</div>
+				<div className={styles.title}>Open Call! Every Little Step Counts!</div>
 				<div className={styles.claim_container}>
 					<div className={styles.claim_tab}>
 						<div className={clsx(styles.tab_btn, topicId === '' ? styles.active : '')} onClick={() => changeTopicId('')} >All</div>
@@ -391,8 +391,8 @@ const wishRender = (isMobile) => {
 			{contextHolder}
 
 			<div className={styles.wrapper}>
-				<div className={styles.title}>Wish Pool</div>
-				<div className={clsx(styles.add, styles.cursor_pointer)} onClick={showModal}><PlusOutlined />&nbsp;Post a Wish </div>
+				<div className={styles.title}>Share Your Ideas - Achieve it - Get Rewarded</div>
+				<div className={clsx(styles.add, styles.cursor_pointer)} onClick={showModal}><PlusOutlined />&nbsp;Submit your projects </div>
 				<div className={styles.wishpool_container}>
 
 					<div className={styles.item_radio}>
