@@ -301,8 +301,22 @@ deepstream:
 </details>
 
 :::note
-Please note the model of your Jetson device. In this case, the Orin NX 16GB module is being used. If you are using a different model, please locate the corresponding configuration file and make the necessary modifications.
+Please note the model of your Jetson device. In this case, the Orin Nx 16GB module is being used. If you are using a different model, please locate the corresponding configuration file and make the necessary modifications.
 :::
+
+Add the WDM_WL_NAME_IGNORE_REGEX environment variable under SDR in compose file.
+Here, My Jetson device is reServer J4012 which powerd by Orin Nx 16GB, so I need to edit this compose file:
+
+`<path-of-ai_nvr>/compose_nx16.yaml`
+
+```yaml
+...
+WDM_CONSUMER_GRP_ID: sdr-deepstream-cg
+WDM_CLUSTER_CONTAINER_NAMES: '["deepstream", "vst"]'
+WDM_WL_NAME_IGNORE_REGEX: ".*deepstream.*"
+...
+```
+
 
 ### Step7. Start the AI NVR application
 
@@ -354,6 +368,10 @@ The DeepStream output stream is rtsp://192.168.49.161:8555/ds-test.
 This depends on the DeepStream configuration file, which can be modified according to your needs.
 :::
 
+:::danger
+When configuring the deepstream output stream , we need to add the `deepstream` field in camera name
+:::
+
 
 Once the configuration is successful, you can view all the feeds on the video wall.
 
@@ -364,11 +382,40 @@ Once the configuration is successful, you can view all the feeds on the video wa
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/result.png" />
 </div>
 
+### Close the ai-nvr application
 
+In the Jetson terminal, enter the appropriate command to close the AI NVR application.
+
+```bash
+cd <path-of-download>/files/ai_nvr
+
+# Orin AGX: 
+# sudo docker compose -f compose_agx.yaml down --remove-orphans
+
+# Orin NX16: 
+sudo docker compose -f compose_nx16.yaml down --remove-orphans
+
+# Orin NX8: 
+# sudo docker compose -f compose_nx8.yaml down --remove-orphans
+
+# Orin Nano: 
+# sudo docker compose -f compose_nano.yaml down --remove-orphans
+```
+
+The services may be stopped using the commands:
+
+`sudo systemctl stop <service-name>`
+
+such as:
+```bash
+sudo systemctl stop jetson-redis
+sudo systemctl stop jetson-ingress
+sudo systemctl stop jetson-vst
+```
 
 ## References
 - https://developer.nvidia.com/embedded/jetpack/jetson-platform-services-get-started
-
+- https://docs.nvidia.com/jetson/jps/moj-overview.html
 
 ## Tech Support & Product Discussion
 

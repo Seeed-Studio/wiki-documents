@@ -7,7 +7,7 @@ on:
     branches: [docusaurus-version]
     
 env:
-  NODE_OPTIONS: --max_old_space_size=4096
+  NODE_OPTIONS: --max_old_space_size=14336
 
 jobs:
   test-deploy:

@@ -53,151 +53,268 @@ The Base Shield is tested and fully compatible with [Pi Pico](https://www.seeeds
 
 ## Getting Started
 
-### Project of Different Sounds of Buzzer
+### Project 1: Different Sounds from a Buzzer
 
 #### Materials Required
 
-- Step 1. Prepare the below stuffs:
+**Step 1.** Prepare the following items:
 
-| Pi Pico | Grove Shield for Pi Pico|  Grove - Buzzer |Grove-Rotary-Angle-Sensor|
-|--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html)|
+| Pi Pico | Grove Shield for Pi Pico | Grove - Buzzer | Grove - Rotary Angle Sensor |
+|---------|--------------------------|----------------|-----------------------------|
+| ![Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg) | ![Grove Shield for Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png) | ![Grove Buzzer](https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Buzzer.png) | ![Grove Rotary Angle Sensor](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png) |
+| [Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html) |
 
-- Step 2. Connect Grove Buzzer to port A1 of Base Shield.
-- Step 3. Connect Grove Rotary Angle Sensor to port A0 of Base Shield.
-- Step 4. Plug Grove Shield for Pi Pico into Pi Pico.
-- Step 5. Connect Pi Pico to PC through a USB cable.
+**Step 2.** Connect the Grove Buzzer to port A1 of the Grove Shield.
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
+**Step 3.** Connect the Grove Rotary Angle Sensor to port A0 of the Grove Shield.
 
-#### Software
+**Step 4.** Plug the Grove Shield into the Pi Pico.
 
-- Step 1. Download Thonny([Windows](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.exe), [Mac](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.pkg))Integrated Development Environment(IDE) according to your computer system.
+**Step 5.** Connect the Pi Pico to your PC using a USB cable.
 
-**For linux develop environment**:
+![Hardware Setup](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/hardwareconnection.jpg)
 
-Binary bundle for PC (Thonny+Python):
+#### Software Setup
 
-```
-bash <(wget -O - https://thonny.org/installer-for-linux)
-```
+**Step 1.** Download Thonny IDE:
 
-With pip:
+- [Windows](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.exe)
+- [Mac](https://github.com/thonny/thonny/releases/download/v3.3.3/thonny-3.3.3.pkg)
 
-```
-pip3 install thonny
-```
+**For Linux Development Environment**:
 
-Debian, Rasbian, Ubuntu, Mint and others:
+You can install Thonny in different ways depending on your system:
 
-```
-sudo apt install thonny
-```
+- **Binary bundle for PC (Thonny + Python)**:
 
-Fedora:
+  ```bash
+  bash <(wget -O - https://thonny.org/installer-for-linux)
+  ```
 
-```
-sudo dnf install thonny
-```
+- **Using pip**:
 
-- Step 2. Start Thonny and Connect your computer and the Raspberry Pi Pico together, then open up the **Run** menu and select **Run**->"**Select Interpreter**", picking "**MicoPython(Raspberry Pi Pico)**" from the drop down, and select the com port of your Pi Pico.
-If you can't find "Micopython (Raspberry Pico)" in Select Interpreter, please download the latest version of Thonny.
+  ```bash
+  pip3 install thonny
+  ```
 
-![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
-![](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
+- **For Debian, Raspbian, Ubuntu, Mint, and similar distributions**:
 
-Hit "ok" if your Raspberry Pi Pico is plugged in and running MicroPython Thonny should automatically connect to the Repl.
+  ```bash
+  sudo apt install thonny
+  ```
 
-- Step 3. Copy below code to the Thonny IDE, and click the green run button.
+- **For Fedora**:
 
-```
-from machine import Pin,PWM,ADC
+  ```bash
+  sudo dnf install thonny
+  ```
+
+**Step 2.** Open Thonny and connect your computer to the Raspberry Pi Pico. In Thonny, go to the **Run** menu, select **Select Interpreter**, and choose "**MicroPython (Raspberry Pi Pico)**" from the dropdown. Then, select the COM port for your Pi Pico.
+
+**Note**: If you don't see "**MicroPython (Raspberry Pi Pico)**" in the interpreter list, ensure you have the latest version of Thonny installed.
+
+![Interpreter Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/interpreter.png)
+![COM Port Selection](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/comport.png)
+
+**Step 3.** If the Raspberry Pi Pico is connected and running MicroPython, Thonny should automatically connect to the REPL. Now, copy the following code into the Thonny IDE and press the green **Run** button.
+
+```python
+from machine import Pin, PWM, ADC
 from time import sleep
-adc = ADC(0) #ADC input (knob potentiometer) connected to A0
-pwm = PWM(Pin(27))#DAC output (buzzer) connected to A1
+
+adc = ADC(0)  # ADC input (knob potentiometer) connected to A0
+pwm = PWM(Pin(27))  # DAC output (buzzer) connected to A1
 pwm.freq(10000)
+
 while True:
-    
-    '''Analog port test'''
-    val = adc.read_u16()#Read A2 port adc value (65535~0)
-    #Drive the buzzer, turn off the buzzer when the adc value is less than 300
+    val = adc.read_u16()  # Read A0 port ADC value (65535~0)
+    # Drive the buzzer, turn off the buzzer when the ADC value is less than 300
     if val > 300:
-        pwm.freq(int(val/10))
+        pwm.freq(int(val / 10))
         pwm.duty_u16(10000)
     else:
         pwm.duty_u16(0)
+    
     print(val)
     sleep(0.05)
 ```
 
-Rotate Grove-Rotary-Angle-Sensor, you will hear different sounds from the buzzer.
+Now, rotate the **Grove Rotary Angle Sensor**, and you will hear different sounds from the buzzer as you adjust the angle.
 
-### Project of Detecting Temperature and Humidity
+### Project 2: Detecting Temperature and Humidity
 
 #### Materials Required
 
-- Step 1. Prepare the below stuffs:
+**Step 1.** Prepare the following items:
 
-| Pi Pico | Grove Shield for Pi Pico|  Grove-OLED-Display-0.96-SSD1315 |Grove-Temperature-Humidity-Sensor-DHT11|
-|--------------|-------------|-----------------|-----------------|
-|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/Grove-OLED-Displey-0.96-SSD1315-thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg)|
-|[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)|
+| Pi Pico | Grove Shield for Pi Pico | Grove OLED Display 0.96" (SSD1315) | Grove Temperature & Humidity Sensor (DHT11) |
+|---------|--------------------------|------------------------------------|--------------------------------------------|
+| ![Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/Picoboard1.jpg) | ![Grove Shield for Pi Pico](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/picobaseshield.png) | ![Grove OLED Display](https://files.seeedstudio.com/wiki/Grove-OLED-Display-0.96-SSD1315-/img/Grove-OLED-Displey-0.96-SSD1315-thumbnail.jpg) | ![Grove Temperature Humidity Sensor](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/list.jpg) |
+| [Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-Pico-p-4832.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Shield-for-Pi-Pico-v1-0-p-4846.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html) | [Get ONE Now](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html) |
 
 :::note
-In this kit, we have upgraded the Grove Temperature Humidity Sensor(DHT11) to [Grove Temperature Humidity Sensor(DHT20)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html). If you want to get started with Grove Temperature Humidity Sensor(DHT20), you can click [here](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/).
+In this kit, we have upgraded the Grove Temperature Humidity Sensor (DHT11) to [Grove Temperature Humidity Sensor (DHT20)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html). If you'd like to get started with the DHT20 sensor, click [here](https://wiki.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DH20/).
 :::
 
-- Step 2. Connect Grove OLED Display 0.96" to port I2C1 of Base Shield.
-- Step 3. Connect Grove Temperature Humidity Sensor DHT11 to port D18 of Base Shield.
-- Step 4. Plug Grove Shield for Pi Pico into Pi Pico.
-- Step 5. Connect Pi Pico to PC through a USB cable.
+**Step 2.** Connect the Grove OLED Display 0.96" to port I2C1 of the Grove Shield.
 
-#### Software
+**Step 3.** Connect the Grove Temperature Humidity Sensor (DHT11) to port D18 of the Grove Shield.
 
-Please refer to the demo1 software part.
+**Step 4.** Plug the Grove Shield into the Pi Pico.
 
-Copy below code to the Thonny IDE at first.
+**Step 5.** Connect the Pi Pico to your PC using a USB cable.
 
-```
+#### Software Setup
+
+Please refer to the software section of Demo 1.
+
+1. Copy the following code into Thonny IDE:
+
+```python
 from ssd1306 import SSD1306_I2C
 from dht11 import *
 from machine import Pin, I2C
 from time import sleep
 
-i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)#oled connect to I2C1
+i2c = I2C(1, scl=Pin(7), sda=Pin(6), freq=200000)  # OLED connected to I2C1
 oled = SSD1306_I2C(128, 64, i2c)
-dht2 = DHT(18) #temperature and humidity sensor connect to D18 port
+dht2 = DHT(18)  # Temperature and humidity sensor connected to D18
 
-
-while True:  
-
-    temp,humid = dht2.readTempHumid()#temp:  humid:
-    '''I2C port test'''    
-    ''' oled display test'''
-    oled.fill(0)#Clear screen
-    oled.text("Temp:  " + str(temp),0,0)#display tempearture on line 1
-    oled.text("Humid: " + str(humid),0,8)
+while True:
+    temp, humid = dht2.readTempHumid()  # Read temperature and humidity
+    '''I2C port test and OLED display test'''
+    oled.fill(0)  # Clear the screen
+    oled.text("Temp:  " + str(temp), 0, 0)  # Display temperature on line 1
+    oled.text("Humid: " + str(humid), 0, 8)  # Display humidity on line 2
     oled.show()
     sleep(0.5)
-    
 ```
 
-Then please download the [ssd1306.py](https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py)<!--链接缺失 -->  and [dht11.py](http://47.106.166.129/Embeded/pico-micropython-grove/blob/master/Digital/dht11.py) to your local. Use Thonny open dht11.py, click file->save as->MicroPython device.
+2. Download the following required Python files to your local machine:
+   - [ssd1306.py](https://github.com/micropython/micropython-lib/blob/master/micropython/drivers/display/ssd1306/ssd1306.py)
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/saveas.png)
+```python title=dht11.py
+import time
+from machine import Pin
 
-Input **dht11.py** in File name column, click "ok", then the file is saved at File->Open->MicroPython device, the same with the **ssd1306.py** file.
+MAXTIMINGS  = 85
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/open.png)
+DHT11 = 11
+DHT22 = 22
+DHT21 = 21
+AM2301 = 21
 
-After you have save both of the files to your MicroPython device, now please click the green button to run the demo code.
+class DHT(object):
+    def __init__(self, data_pin,Type=DHT11):
+        self.Data_pin = data_pin
+        self.__pinData = Pin(data_pin, Pin.OUT)
+        self.firstreading = True
+        self.__pinData.value(1)
+        self._lastreadtime = 0
+        self.data=[0]*5
+        self.temp = 0
+        self.humid = 0
 
-Then you can get the temperature and humidity displayed on the OLED as below.
+    def read(self):
+        i=0
+        j=0
+        self.__pinData.value(1) 
+        #time.sleep(0.25) 
 
-![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
+        self.data[0] =  self.data[1] =  self.data[2] =  self.data[3] =  self.data[4] = 0 
+        
+        # now pull it low for ~20 milliseconds
+        pinData = Pin(self.Data_pin, Pin.OUT, None)
+        pinData.value(0) 
+        time.sleep_ms(20)
+        pinData.value(1)
+        time.sleep_us(41)
+        pinData = Pin(self.Data_pin, Pin.IN)
+        DHT11_TIMEOUT = -1
+        time_cnt=0
+        while(0 ==pinData.value()):
+            time.sleep_us(5)  
+            time_cnt = time_cnt+1
+            if(time_cnt > 16): 
+                return
+        
+        # DHT11 pulls the bus up at least 80 US in preparation for sending sensor data.
+        time_cnt=0
+        while(1 == pinData.value()):
+            time.sleep_us(5)   
+            time_cnt = time_cnt+1
+            if(time_cnt > 16): 
+                return  
+        
+        
+        for j in range(5):
+            i = 0
+            result=0
+            PINC = 1
+            for i in range(8):
 
-### Project of Controling Led and Relay
+                while(not (PINC & pinData.value())):  # wait for 50us
+                    pass
+                    #print('wait 50us')
+                time.sleep_us(25)
+
+                if(PINC & pinData.value()):
+                    result |=(1<<(7-i))
+                while(PINC & pinData.value()):  # wait '1' finish
+                    pass
+                    #print('wait 1')
+            self.data[j] = result
+
+        pinData = Pin(self.Data_pin, Pin.OUT, None)
+        pinData.value(1)   
+
+        dht11_check_sum = (self.data[0]+self.data[1]+self.data[2]+self.data[3]&0xff)
+        # check check_sum
+        if(self.data[4] is not dht11_check_sum):
+            print("DHT11 checksum error")
+        #print(self.data) 
+        if ((j >= 4) and ( self.data[4] == dht11_check_sum)):
+            return True 
+        return False
+        
+    def readHumidity(self):
+        if (self.read()):
+            self.humid = float(self.data[0])
+            self.humid = self.humid + float(self.data[1]/10)
+        return self.humid
+
+    def readTemperature(self):
+        if (self.read()):
+            self.temp = float(self.data[2])
+            self.temp = self.temp + float(self.data[3]/10)
+        return self.temp
+    
+    def readTempHumid(self):
+        if (self.read()):        
+            self.temp = float(self.data[2])
+            self.temp = self.temp + float(self.data[3]/10)
+            self.humid = float(self.data[0])
+            self.humid = self.humid + float(self.data[1]/10)
+        return self.temp , self.humid
+```
+
+3. Open **dht11.py** in Thonny IDE, click `File -> Save As -> MicroPython device`, and save the file with the name **dht11.py** on your device.
+
+![Save as MicroPython device](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/saveas.png)
+
+4. Repeat the same process to save **ssd1306.py** to your MicroPython device.
+
+![Open MicroPython file](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/open.png)
+
+#### Running the Project
+
+Once both files are saved to your MicroPython device, run the demo code by pressing the green **Run** button in Thonny.
+
+You should now see the temperature and humidity displayed on the OLED screen, similar to the image below:
+
+![OLED Display Output](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/oled1.jpg)
+
+### Project 3: Controling Led and Relay
 
 #### Materials Required
 
@@ -220,7 +337,7 @@ Please refer to the demo1 software part.
 
 Copy below code to the Thonny IDE at first.
 
-```
+```python showLineNumbers
 from machine import Pin
 
 button = Pin(18, Pin.IN, Pin.PULL_UP)# button connect to D18
@@ -245,7 +362,7 @@ Then you can press the grove button, you can control the led and relay open and 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo3.jpg)
 
-### Project of Flashing Colors
+### Project 4: Flashing Colors
 
 #### Materials Required
 
@@ -266,7 +383,7 @@ Please refer to the demo1 software part.
 
 Copy below code to the Thonny IDE at first.
 
-```
+```python showLineNumbers
 from ws2812 import WS2812
 import time
 
@@ -310,7 +427,7 @@ Then you can get the RGB LED WS2813 mini flash beautiful color as below.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/ws2813mini.gif)
 
-### Project of Detecting Sound and Light
+### Project 5: Detecting Sound and Light
 
 #### Materials Required
 
@@ -333,7 +450,7 @@ Please refer to the demo1 software part.
 
 Copy below code to the Thonny IDE at first.
 
-```
+```python
 #from lcd1602 import LCD1602_RGB  #LCD1602 RGB grove
 from lcd1602 import LCD1602
 from machine import I2C,Pin,ADC
@@ -378,7 +495,7 @@ Then you can get the sound sensor and light sensor data as below.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/demo5.jpg)
 
-### Project of Detecting Motion
+### Project 6: Detecting Motion
 
 #### Materials Required
 
@@ -401,7 +518,7 @@ Please refer to the demo1 software part.
 
 Copy below code to the Thonny IDE at first.
 
-```
+```python
 from machine import Pin,ADC,PWM
 from time import sleep
 import utime
@@ -473,4 +590,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

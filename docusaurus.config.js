@@ -383,7 +383,23 @@ const config = {
               },
               {
                 label: 'Contributors',
-                href: '/contributors',
+                to: '/contributors',
+              },
+              {
+                label: 'Apply for Rangers',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
+              },
+              {
+                label: 'Direct to Assignments',
+                href: 'https://github.com/orgs/Seeed-Studio/projects/6',
+              },
+              {
+                label: 'More about Rangers',
+                href: 'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
+              },
+              {
+                label: 'More about Contributors',
+                href: 'https://wiki.seeedstudio.com/Contributor',
               },
             ],
           },
@@ -602,7 +618,7 @@ const config = {
         // Replace this with the name of your index/collection.
         // It should match the "index_name" entry in the scraper's "config.json" file.
         // typesenseCollectionName: 'wiki_platform_1713169217',
-        typesenseCollectionName: 'wiki_platform_1723968755',
+        typesenseCollectionName: 'wiki_platform_1725602541',
   
         typesenseServerConfig: {
           nodes: [
@@ -612,7 +628,7 @@ const config = {
               protocol: 'https',
             },
           ],
-          apiKey: 'xuJFbtMjiVfgegZANpcefadGJv5XRCdF',
+          apiKey: 'RWzz9wJKzXW2iBB8HgcCnZjnrytuWaYb',
         },
               // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {},

@@ -86,16 +86,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Method 1" label="CM4 Benchmark">
 
-For object detection please refer to the following wiki:
-[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
-
-For pose estimation Please refer to the following wiki:
-[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
-</TabItem>
-
-<TabItem value="Method 2" label="Pi5 Benchmark">
+<TabItem value="Method 1" label="Pi5 Benchmark">
 
 ### Install AI kit on RPi5
 Please refer to [this](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
@@ -157,8 +149,6 @@ The right result show as bellow:
 
 ### Run Project
 
-
-
 <Tabs>
 <TabItem value="Method 1" label="Run pose estimation">
 
@@ -217,13 +207,30 @@ bash run.sh object-detection
 </Tabs>
 
 </TabItem>
+
+<TabItem value="Method 2" label="CM4 Benchmark">
+
+For object detection please refer to the following wiki:
+[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
+
+For pose estimation Please refer to the following wiki:
+[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
+</TabItem>
+
 </Tabs>
 
 
 ## Result 
 
 <Tabs>
-<TabItem value="Method 1" label="batchsize=1">
+
+<TabItem value="Method 1" label="batchsize=8">
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_batch8.png" alt="pir" width={1000} height="auto"/></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" alt="pir" width={1000} height="auto"/></p>
+
+</TabItem>
+
+<TabItem value="Method 2" label="batchsize=1">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object-detection-benchmark.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -231,11 +238,6 @@ bash run.sh object-detection
 
 </TabItem>
 
-<TabItem value="Method 2" label="batchsize=8">
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/object_detection_batch8.png" alt="pir" width={1000} height="auto"/></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/poes_estimation_batch8.png" alt="pir" width={1000} height="auto"/></p>
-
-</TabItem>
 </Tabs>
 
 
