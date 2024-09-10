@@ -79,6 +79,12 @@ To ensure a smooth and optimal experience when deploying Watcher's AI capabiliti
       <td align="center">20 GB</td>
       <td align="center">20 GB</td>
     </tr>
+    <tr>
+      <th>Operation System (Minimum Configuration)</th>
+      <td align="center">Windows 11</td>
+      <td align="center">Sonoma</td>
+      <td align="center">Ubuntu 20.04</td>
+    </tr>
   </table>
 </div>
 
