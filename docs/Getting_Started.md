@@ -1,11 +1,9 @@
 ---
 description: Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
-title: Getting Started
-keywords:
-- weeely wiki
+title: Getting Started with Seeed Studio Wiki Platform
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
 last_update:
-  date: 05/23/2024
+  date: 08/30/2024
   author: Matthew
 ---
 
@@ -21,12 +19,15 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
 
 ## What does this Wiki Platform Cover?
 
-- This platform will focus on four main topics as shown in the sidebar, with up-to-date information on all of our products.
+- This platform will focus on main topics as shown in the sidebar, with up-to-date information on all of our products.
 
   - <strong><a href="/Sensor_Network"><span><font color={'8DC215'} size={"4"}> Sensors and Sensing</font></span></a></strong>
   - <strong><a href="/Network"><span><font color={'8DC215'} size={"4"}> Networking</font></span></a></strong>
   - <strong><a href="/Edge_Computing"><span><font color={'8DC215'} size={"4"}>  Edge Computing </font></span></a></strong>
   - <strong><a href="/Cloud"><span><font color={'8DC215'} size={"4"}>  Cloud Services</font></span></a></strong>
+  - <strong><a href="/topicintroduction"><span><font color={'8DC215'} size={"4"}>Technology Topics</font></span></a></strong>
+  - <strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}> Contributor Program</font></span></a></strong>
+  - <strong><a href="/weekly_wiki"><span><font color={'8DC215'} size={"4"}> Weekly Wiki </font></span></a></strong>
 
 - You will be able to find detailed documentation of our products for **practical usage** and **troubleshooting**, industrial IoT scenarios, as well as guides on open development tools to help you get started on your own projects.
 
@@ -135,19 +136,37 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
   </div>
 </div>
 
+### Browser-based AI Solution
+
+<strong><a href="https://sensecraft.seeed.cc/ai/#/model"><span><font color={'8DC215'} size={"4"}>Saying goodbye to complex configurations and coding!</font></span></a></strong>
+
+![](https://sensecraft.seeed.cc/wp-content/uploads/2023/11/%E5%88%87%E5%9B%BE-139@2x.png)
+
 ## ✨ Contributor Program ✨ 
 
 In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/08/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230817161402.png" alt="pir" width={800} height="auto" /></p>
+### [The Hero Wall](/contributors)
 
+Currently at `2024.9.1st`, we have total of 24 contributors and over 50 wiki contributions presented.
 
-<strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}>Discover how you can contribute and explore the opportunities we offer by clicking here!</font></span></a></strong>
+![](https://files.seeedstudio.com/wiki/wiki-platform/contributor/contributors.png)
 
+### [Assignments on GitHub](https://github.com/orgs/Seeed-Studio/projects/6/views/1)
+
+We will continue launch our projects wanted, or our contributors presented(suggesting updates, fixing typos, or accepting assignments) on our Wiki Platform GitHub repo.
+
+![](https://files.seeedstudio.com/wiki/wiki-platform/contributor/github_assignment_2.png)
+
+### More Introduction
+
+<strong><a href="/Contributor"><span><font color={'8DC215'} size={"4"}>Discover more about the Contributor Program by clicking here!</font></span></a></strong>
 
 ## Weekly Wiki
 
 [Seeed Studio Weekly Wiki](/weekly_wiki) will be published each Monday and it will introduce you to our latest content, such as our new products, interesting projects done by our team of Seeeders, tutorials, guides, introductions and anything interesting and relevant!
+
+![](https://files.seeedstudio.com/wiki/IndexWiki/logo.png)
 
 ## Tech Support & Product Discussion
 
