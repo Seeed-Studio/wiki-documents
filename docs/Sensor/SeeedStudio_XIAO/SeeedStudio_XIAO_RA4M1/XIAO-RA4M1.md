@@ -229,7 +229,13 @@ The LED will only turn off when the user LED pin on the XIAO RA4M1 is set to a h
 :::
 
 ## Play with RGB LEDs
-The XIAO RA4M1 comes with a build-in RGB LED that you can control, follow is a example of how to smoothly change the LED color between red, green, and blue:
+The XIAO RA4M1 comes with a build-in RGB LED that you can control, follow is a example of how to smoothly change the LED color between red, green, and blue.
+
+- **Step 1.** Download the `Adafruit_NeoPixel` library
+
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **Adafruit_NeoPixel**, install the lastest version.
+
+- **Step 2.** Copy following code to a new sketch:
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -269,6 +275,8 @@ void loop() {
 }
 
 ```
+- **Step 3.** Select the board model to **XIAO RA4M1**, and select the correct port number to upload the program. 
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
 
 ## Resources
