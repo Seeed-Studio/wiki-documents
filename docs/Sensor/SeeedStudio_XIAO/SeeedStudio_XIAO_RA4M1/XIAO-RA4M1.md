@@ -228,6 +228,49 @@ Congratulations, you've learned how to write and upload programs for the XIAO RA
 The LED will only turn off when the user LED pin on the XIAO RA4M1 is set to a high level, and it will only turn on when the pin is set to a low level.
 :::
 
+## Play with RGB LEDs
+The XIAO RA4M1 comes with a build-in RGB LED that you can control, follow is a example of how to smoothly change the LED color between red, green, and blue:
+
+```cpp
+#include <Adafruit_NeoPixel.h>
+
+#define LED_PIN RGB_BUILTIN  // Define the pin for the built-in RGB LED
+#define NUM_PIXELS 1         // Number of WS2812 LEDs
+
+Adafruit_NeoPixel pixels(NUM_PIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  pinMode(PIN_RGB_EN, OUTPUT); // Set up the power pin
+  digitalWrite(PIN_RGB_EN, HIGH); //Turn on power to the LED
+  pixels.begin();  // Initialize the NeoPixel library
+}
+
+void loop() {
+    // Transition from Red to Green
+  for (int i = 0; i <= 255; i++) {
+    pixels.setPixelColor(0, pixels.Color(255 - i, i, 0));  // Red decreases, Green increases
+    pixels.show();
+    delay(10);  // Adjust delay for smoothness
+  }
+
+  // Transition from Green to Blue
+  for (int i = 0; i <= 255; i++) {
+    pixels.setPixelColor(0, pixels.Color(0, 255 - i, i));  // Green decreases, Blue increases
+    pixels.show();
+    delay(10);  // Adjust delay for smoothness
+  }
+
+  // Transition from Blue to Red
+  for (int i = 0; i <= 255; i++) {
+    pixels.setPixelColor(0, pixels.Color(i, 0, 255 - i));  // Blue decreases, Red increases
+    pixels.show();
+    delay(10);  // Adjust delay for smoothness
+  }
+}
+
+```
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/rgb_led.gif" style={{width:600, height:'auto'}}/></div>
+
 ## Resources
 
 - 📄 **[PDF]** [RA4M1 datasheet](https://www.renesas.com/us/en/document/dst/ra4m1-group-datasheet)
@@ -243,8 +286,6 @@ The LED will only turn off when the user LED pin on the XIAO RA4M1 is set to a h
 
 
 ### Q1: What should I look for when soldering pins
-
-XIAO RA4M1 is shipped without soldering pin headers by default, you need to solder it to the corresponding pins of XIAO so that you can connect to the expansion board or sensor.
 
 Due to the miniature size of XIAO RA4M1, please be careful when soldering headers, do not stick different pins together, and do not stick solder to the shield or other components. Otherwise, it may cause XIAO to short circuit or not work properly, and the consequences caused by this will be borne by the user.
 
