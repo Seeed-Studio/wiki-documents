@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/02/2024
+  date: 09/09/2024
   author: Frank
 ---
 
@@ -17,45 +17,47 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 2nd and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 9th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Connecting Siemens PLCs Using the S7 Protocol with reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_nodered_s7/)
+### [Getting start with reComputer J20](https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/)
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/final.PNG" /></center>
+### [T1000-E Tracker](https://wiki.seeedstudio.com/t1000_e_intro/)
 
-In this article, we'll explore how to use Node-RED, a popular flow-based development tool, on a Raspberry Pi-powered reComputer to interface with Siemens PLCs using the S7 Protocol. This setup allows for efficient and flexible integration of industrial automation systems with modern IoT platforms.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
-### [Deploy Frigate On Jetson](https://wiki.seeedstudio.com/deploy_frigate_on_jetson/)
+It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
 
-![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png)
+<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110061363_preview-07_1.jpg"/></div>
 
-Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device. NVIDIA Jetson is an edge AI platform that enables efficient deployment of AI workloads. Combining Frigate with Jetson leverages hardware-accelerated machine learning to efficiently process video streams and detect objects.
+reComputer J20 Series built with Jetson Xavier NX is a powerful and compact intelligent edge box to bring up to 21TOPS modern AI performance to the edge. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
 
-### [XIAO ESP32S3 Sense Sleep Modes](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/)
+The full system includes one NVIDIA Jetson Xavier NX production module, a heatsink, and a power adapter. reComputer J20 is preinstalled with Jetpack 4.6, simplifies development, and fits for deployment for edge AI solution providers working in object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/1.png" style={{width:700, height:'auto'}}/></div>
+### [J501 Interface Usage](https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/)
 
-ESP32 supports two major power saving modes: Light-sleep and Deep-sleep. According to the features used by an application, there are some sub sleep modes. See Sleep Modes for these sleep modes and sub sleep modes. Additionally, there are some power-down options that can be configured to further reduce the power consumption. See Power-down Options for more details.
+<div align="center">
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/j501.png"/>
+</div>
 
-### [Raspberry Pi 5 uses PCIe hat/dual hat](https://wiki.seeedstudio.com/raspberry_pi_5_uses_pcie_hat_dual_hat/)
+This wiki introduces the various different hardware and interfaces on the J501 Carrier Board and how to use them to expand your project ideas.
 
-This tutorial mainly introduces the hardware connection configuration of M.2 Hat/dual Hat and how to make the Raspberry Pi boot from the SSD.And introduces two installation methods, with and without casing.
+### [ChatGPT - BeagleY-AI](https://wiki.seeedstudio.com/respeaker_lite_beagley-ai_chatgpt/)
 
-### [XIAO ESP32C6 with PlatformIO](https://wiki.seeedstudio.com/xiao_esp32c6_with_platform_io/)
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/Beaglebone_Solutions/bby_chatgpt.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/7.png" /></div>
+This project integrates voice input, large model response, and voice output functionalities using a BeagleY-AI. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
 
-PlatformIO is a development platform that integrates many types of development boards and has good scalability. If the platform does not have the type you need, you can manually add the type of development board yourself. The code you write on Arduino can use it, just add the corresponding library
+### [XIAO RA4M1 Mouse](https://wiki.seeedstudio.com/xiao_ra4m1_mouse/)
 
-In this wiki , we wiil introduce how to install and run the sample code in PlatformIO
+<div class="table-center">
+<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/xiao_mouse.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-We also created a tutorial for using the [XIAO nRF52840 with PlatformIO](https://wiki.seeedstudio.com/xiao_nrf52840_with_platform_io/).
-
-### [Github Contribution(Pull Request) Guide](https://wiki.seeedstudio.com/Contribution-Guide/)
-
-We provide two tutorial documents: [**Full Steps Pull Request**](https://wiki.seeedstudio.com/full_steps_pull_request/) and [**Quick Pull Request**](https://wiki.seeedstudio.com/quick_pull_request/). You can follow the steps in these documents to upload your innovative solution. Thank you for considering contributing to our seeed-studio files!
+Through this tutorial, you will learn how to create a simple mouse using the XIAO RA4M1 and Grove Thumb Joystick.
 
 
 
@@ -169,6 +171,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
 - [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
+- [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 
 </details>
 
