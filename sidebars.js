@@ -3187,7 +3187,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'NVIDIA Jetson®',
+      label: 'NVIDIA® Jetson™',
       collapsed: true,
       collapsible: true,
       link: {
