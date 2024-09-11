@@ -270,6 +270,12 @@ The output will be as follows on Arduino Serial Monitor:
 
 This example demonstrates how to control an RGB LED using the NeoPixel library.
 
+- **Step 1.** Download the `Adafruit_NeoPixel` library
+
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **Adafruit_NeoPixel**, install the lastest version.
+
+- **Step 2.** Copy following code to a new sketch:
+
 ```cpp
 #include <Adafruit_NeoPixel.h>
 #include <Arduino.h>
@@ -302,6 +308,8 @@ for (int i = 255; i >= 0; i--) {
 }
 }
 ```
+- **Step 3.** Select the correct board and port number to upload the program. 
+
 Once the program is successfully uploaded, you will see RGB LED on the right side of the mmWave Sensor Modules is blinking.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
@@ -310,6 +318,12 @@ Once the program is successfully uploaded, you will see RGB LED on the right sid
 #### Light Sensor (BH1750)
 
 This example shows how to read light intensity values using the BH1750 sensor.
+
+- **Step 1.** Download the `hp_BH1750` library
+
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **hp_BH1750**, install the lastest version.
+
+- **Step 2.** Copy following code to a new sketch:
 
 ```cpp
 #include <Arduino.h>
@@ -340,6 +354,9 @@ if (BH1750.hasValue()) {
 }
 }
 ```
+
+- **Step 3.** Select the correct board and port number to upload the program. 
+
 The output will be as follows on Arduino Serial Monitor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light_sensor.png" style={{width:700, height:'auto'}}/></div>
