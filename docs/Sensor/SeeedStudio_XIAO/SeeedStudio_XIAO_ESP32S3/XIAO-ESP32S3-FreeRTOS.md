@@ -6,7 +6,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiao-esp32s3-freertos
 last_update:
-  date: 09/09/2024
+  date: 09/11/2024
   author: Priyanshu_Roy
 ---
 
@@ -466,8 +466,8 @@ PCF8563 pcf;
 U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/D4, /* data=*/D5, /* reset=*/U8X8_PIN_NONE);  // OLEDs without Reset of the Display
 
 // WiFi network credentials
-const char* ssid = "myCrib";
-const char* password = "8697017290";
+const char* ssid = "REPLACE_WITH_YOUR_SSID";
+const char* password = "REPLACE_WITH_YOUR_PASSWORD";
 
 // NTP server for time synchronization
 const char* ntpServer = "pool.ntp.org";
