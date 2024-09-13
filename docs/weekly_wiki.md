@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/26/2024
+  date: 09/02/2024
   author: Frank
 ---
 
@@ -17,66 +17,49 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 26th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 2nd and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with reServer J501](https://wiki.seeedstudio.com/reserver_j501_getting_started/)
+### [Connecting Siemens PLCs Using the S7 Protocol with reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_nodered_s7/)
 
-<div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_J501.jpeg"/>
-</div>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/final.PNG" /></center>
 
-The J501 carrier board is a powerful extension board that supports NVIDIA Jetson AGX Orin modules. It features rich data ports and extension interfaces, completely unleashed the full performance of the AGX Orin module. Also it supports adding GMSL extension to connect up to 8 GMSL cameras.
+In this article, we'll explore how to use Node-RED, a popular flow-based development tool, on a Raspberry Pi-powered reComputer to interface with Siemens PLCs using the S7 Protocol. This setup allows for efficient and flexible integration of industrial automation systems with modern IoT platforms.
 
-### [Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
+### [Deploy Frigate On Jetson](https://wiki.seeedstudio.com/deploy_frigate_on_jetson/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
+![image1](https://files.seeedstudio.com/wiki/reComputer/Application/Deploy_Frigate_On_Jetson/3.png)
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+Frigate is an open-source NVR (Network Video Recorder) with Realtime Object Detection for IP cameras. In this guide, we'll walk through the steps to deploy Frigate on an NVIDIA Jetson device. NVIDIA Jetson is an edge AI platform that enables efficient deployment of AI workloads. Combining Frigate with Jetson leverages hardware-accelerated machine learning to efficiently process video streams and detect objects.
 
-### [Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/)
+### [XIAO ESP32S3 Sense Sleep Modes](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/)
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ESP32S3_Sense_SleepMode/1.png" style={{width:700, height:'auto'}}/></div>
 
-### [Send message from Watcher & Node-RED to Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
+ESP32 supports two major power saving modes: Light-sleep and Deep-sleep. According to the features used by an application, there are some sub sleep modes. See Sleep Modes for these sleep modes and sub sleep modes. Additionally, there are some power-down options that can be configured to further reduce the power consumption. See Power-down Options for more details.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/banner.png" style={{width:1000, height:'auto'}}/></div>
+### [Raspberry Pi 5 uses PCIe hat/dual hat](https://wiki.seeedstudio.com/raspberry_pi_5_uses_pcie_hat_dual_hat/)
 
-Open Interpreter is an open-source tool that facilitates interaction between users and their computers by enabling natural language commands to execute code in various programming languages. It acts as a bridge, allowing users to write instructions in plain language, which the interpreter then translates into executable code. This enhances productivity and makes programming more accessible, especially for those who may not be familiar with coding syntax. We will show you how to configure it in following steps.
+This tutorial mainly introduces the hardware connection configuration of M.2 Hat/dual Hat and how to make the Raspberry Pi boot from the SSD.And introduces two installation methods, with and without casing.
 
-### [Build balenaOS for reComputer R1000](https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/)
+### [XIAO ESP32C6 with PlatformIO](https://wiki.seeedstudio.com/xiao_esp32c6_with_platform_io/)
 
-[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c6_platformio/7.png" /></div>
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
+PlatformIO is a development platform that integrates many types of development boards and has good scalability. If the platform does not have the type you need, you can manually add the type of development board yourself. The code you write on Arduino can use it, just add the corresponding library
 
-This tutorial will show you how to compile, configure and burn balenaOS for R1000.
+In this wiki , we wiil introduce how to install and run the sample code in PlatformIO
 
+We also created a tutorial for using the [XIAO nRF52840 with PlatformIO](https://wiki.seeedstudio.com/xiao_nrf52840_with_platform_io/).
 
-### [SenseCAP T1000 tracker and Thingsboard Integrated](https://wiki.seeedstudio.com/thingsboard_integrated/)
+### [Github Contribution(Pull Request) Guide](https://wiki.seeedstudio.com/Contribution-Guide/)
 
-[ThingsBoard](https://thingsboard.io/) is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications.
-
-The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to ThingsBoard through TTN.
+We provide two tutorial documents: [**Full Steps Pull Request**](https://wiki.seeedstudio.com/full_steps_pull_request/) and [**Quick Pull Request**](https://wiki.seeedstudio.com/quick_pull_request/). You can follow the steps in these documents to upload your innovative solution. Thank you for considering contributing to our seeed-studio files!
 
 
 
-### [SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)
-
-At Watcher, we believe in providing developers with a clear and transparent pricing structure for integrating artificial intelligence into their projects. We understand that every developer has unique requirements, which is why we offer a range of pricing plans designed to cater to various needs and budgets. To help you make an informed decision, we've outlined the key aspects of our pricing model and the specific features included in each plan.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
-
-**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
-
-
-
-
-
-
-
-<!-- ## Existed Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
@@ -185,6 +168,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 
 </details>
 

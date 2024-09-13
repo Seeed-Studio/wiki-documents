@@ -13,17 +13,13 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/87.png" style={{width:800, height:'auto'}}/></div>
 
-**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+**SenseCAP Watcher will be live on Kickstarter on September 12, proudly featuring the official 'Project We Love' badge! Subscribe now to stay informed～**
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
 </div><br />
-
-:::danger
-The content of this tutorial is not available at this time.
-:::
 
 SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. While Watcher can utilize SenseCraft AI services, it also provides the option to deploy AI capabilities locally on your own devices, giving you greater control, privacy, and flexibility.
 
@@ -34,17 +30,33 @@ Throughout this guide, we'll cover the necessary software and hardware preparati
 
 ## Software Preparation
 
-:::danger
-The content of this tutorial is not available at this time.
-:::
-
 To utilize Watcher's local deployment capabilities, users first need to download the necessary software. The software package includes the Watcher application and the Device AI Service components, which enable users to set up and configure their local AI services.
 
 Users can download the Watcher APP through the following download links:
 
-- For Windows: 
-- For macOS: 
-- For Linux: 
+- For **Windows**:
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe">
+            <strong><span><font color={'FFFFFF'} size={"4"}> For Windows 🖱️</font></span></strong>
+    </a>
+</div>
+
+- For **macOS**: 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg">
+            <strong><span><font color={'FFFFFF'} size={"4"}> For macOS 🖱️</font></span></strong>
+    </a>
+</div>
+
+- For **Linux**: 
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb">
+            <strong><span><font color={'FFFFFF'} size={"4"}> For Linux 🖱️</font></span></strong>
+    </a>
+</div><br />
 
 
 Please choose the appropriate download link based on your operating system. The Watcher APP is compatible with Windows, macOS, and major Linux distributions, ensuring a seamless experience across different platforms.
@@ -141,10 +153,17 @@ To deploy Watcher's AI capabilities on a Windows device, follow these simple ste
 
 **Step 1**. Locate the downloaded `.exe` file in your computer's downloads folder or the specified location. Double-click on the `.exe` file to start the installation process. The installation wizard will guide you through the setup process. You don't need to make any additional selections or configurations during the installation.
 
-
-**Step 2**. When the installation is finished, launch the Watcher application. Upon launching the application for the first time, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+**Step 2**. When the installation is finished, launch the Watcher application. Upon launching the application for the first time, you will be prompted to choose the AI models you wish to use. Watcher provides two options.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/88.png" style={{width:800, height:'auto'}}/></div>
+
+1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+
+2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
+
+Choose the option that best suits your needs and resources. If you have ample storage space and a reliable internet connection, the Llama 3.1 + LLaVA option provides a self-contained solution. If you prefer the flexibility and power of OpenAI's models and have an API key ready, select the OpenAI option.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
 
 Once the model files are downloaded and installed, Watcher will be ready to use on your Windows device.
 
@@ -162,6 +181,14 @@ Once the copying process is complete, you can close the `.dmg` window.
 **Step 3**. Upon launching the application for the first time, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around 10 GB in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/90.png" style={{width:800, height:'auto'}}/></div>
+
+1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
+
+2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
+
+Choose the option that best suits your needs and resources. If you have ample storage space and a reliable internet connection, the Llama 3.1 + LLaVA option provides a self-contained solution. If you prefer the flexibility and power of OpenAI's models and have an API key ready, select the OpenAI option.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
 
 Once the model files are downloaded and installed, Watcher will be ready to use on your macOS device.
 
@@ -185,8 +212,15 @@ Replace `watcher_service_x.x.x_arm64.deb` with the actual name of the downloaded
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/92.png" style={{width:800, height:'auto'}}/></div>
 
-Similar to the Windows and macOS installations, Watcher will automatically start downloading the required AI models and associated.
+1. Llama 3.1 + LLaVA: If you select this option, Watcher will automatically start downloading the required AI models and associated files. These additional downloads may take some time, as they can be around **10 GB** in size. Ensure that you have a stable and fast internet connection during the model download process to avoid any interruptions or incomplete downloads.
 
+2. OpenAI: If you prefer to use OpenAI's models, you need to prepare your OpenAI API key in advance. Make sure you have a valid API key and sufficient credits to use the OpenAI models. When prompted, enter your API key to configure Watcher to use OpenAI's services.
+
+Choose the option that best suits your needs and resources. If you have ample storage space and a reliable internet connection, the Llama 3.1 + LLaVA option provides a self-contained solution. If you prefer the flexibility and power of OpenAI's models and have an API key ready, select the OpenAI option.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
+
+Similar to the Windows and macOS installations, Watcher will automatically start downloading the required AI models and associated.
 
 ## Configure the use of local AI services on the SenseCraft APP
 
@@ -207,6 +241,10 @@ To use the local AI services provided by Watcher in the SenseCraft APP, follow t
 **Step 5**. You can now assign tasks to Watcher through the SenseCraft APP, and Watcher will process them using its locally deployed AI capabilities.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/95.png" style={{width:800, height:'auto'}}/></div>
+
+:::caution
+Please note that it is important to make sure that your computer meets the recommended computer configurations in **[Hardware Preparation](#hardware-preparation)**. If it is below the recommended configuration, then you may not receive the recognition results and alarm messages on time, as your computer may be in full swing analysing one of your images, at which point Watcher will appear to be in a constant state of observation.
+:::
 
 By completing these steps, you can harness the power of Watcher's AI services directly on your device, ensuring enhanced privacy and the ability to conveniently customize your own integrated system. With Watcher's AI capabilities running locally, you can perform advanced tasks, analysis, and automation securely and efficiently, all while keeping your data under your control.
 

@@ -2,41 +2,150 @@
 description: reComputerJ2021 | J202
 title: J202 Carrier Board
 keywords:
-  - Edge
+  - Edge 
+  - Jetson
   - reComputer JetPack™_OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /reComputer_J2021_J202_Flash_Jetpack
 last_update:
-  date: 01/05/2023
-  author: w0x7ce
+  date: 08/27/2024
+  author: Youjiang
 
 no_comments: false # for Disqus
 
 ---
 
-# J202 carrier board
+# Getting Started with reComputer J202
 
-In this wiki, we will show you how to flash Jetpack OS to reComputer J2021. Since the carrier board of it is designed like the offical NVIDIA Xavier Developer Carrier Board, we can flash the JetPack in two ways.
 
-## Getting Started
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/carrier_board-Photoroom.png"/>
+</div>
 
-First of all we need the get the software and hardware ready in order to flash new Jetpack OS:
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-without-Power-Adapter-p-5637.html">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+  </a>
+</div>
+
+reComputer J202 has nearly the same design and function as NVIDIA® Jetson Xavier NX™ carrier board, perfectly works with Jetson Nano/Xavier NX/TX2 NX module, and consists of 4x USB 3.2 gen 2 ports, M.2 key E for WIFI, M.2 Key M for SSD, RTC, CAN, Raspberry Pi GPIO 40-pin, and so on.
+
+## Features 
+
+- **Perfectly Suited:** Design for Jetson Nano/Xavier NX/TX2 NX (260-pin SODIMM).
+- **Rich Peripherals:** Higher performance stability consists of USB 3.1 ports(4x), M.2 key E for WIFI, M.2 Key M for SSD, RTC, CAN, Raspberry Pi GPIO 40-pin, and so on.
+- **High Versatility:** Suitable for complicated AI graphical applications.
+- **Comprehensive Certificates:** includes FCC, CE, RoHS.
+- **Flexible Customization:** provides changing accessories modules, logo, and hardware interfaces modification services based on J202 original design.
+
+## Specifications
+<div class="table-center">
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+      <td colspan={2}>Storage</td>
+      <td>1x M.2 Key M</td>
+    </tr>
+    <tr>
+      <td rowspan={2}>Networking</td>
+      <td>Ethernet</td>
+      <td>1x RJ-45 Gigabit Ethernet (10/100/1000M)</td>
+    </tr>
+    <tr>
+      <td>M.2 KEY E</td>
+      <td>1x M.2 Key E for WiFi/Bluetooth module</td>
+    </tr>
+    <tr>
+      <td rowspan={7}>I/O</td>
+      <td>USB</td>
+      <td>4x USB 3.1 Type-A (10Gbps for Xavier NX, 5Gbps for Nano) <br/> 1x USB2.0 Type-C (Device Mode)</td>
+    </tr>
+    <tr>
+      <td>Camera</td>
+      <td>2x CSI</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>1x HDMI 2.1, 1x DP</td>
+    </tr>
+    <tr>
+      <td>Fan</td>
+      <td>1x Fan Connector</td>
+    </tr>
+    <tr>
+      <td>CAN</td>
+      <td>1x CAN</td>
+    </tr>
+    <tr>
+      <td>Multifunctional Port</td>
+      <td>1x 40-Pin Expansion header <br/> 1x 12-Pin Control and UART header</td>
+    </tr>
+    <tr>
+      <td>RTC</td>
+      <td>1x RTC 2-pin</td>
+    </tr>
+    <tr>
+      <td colspan={2}>Power</td>
+      <td>DC 12V/5A</td>
+    </tr>
+    <tr>
+      <td rowspan={2}>Mechanical</td>
+      <td>Dimensions (W x D)</td>
+      <td>100mm x 80mm</td>
+    </tr>
+    <tr>
+      <td>Installation</td>
+      <td>Desk, wall-mounting</td>
+    </tr>
+    <tr>
+      <td colspan={2}>Operating Temperature</td>
+      <td>10℃~60℃</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+## Hardware Overview 
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/J202_1.jpg"/></div>
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/J202_2.jpg"/></div>
+
+
+## Supported Module
+
+- [NVIDIA® Jetson Nano™ 4GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Nanotm-Module-1.html)
+- [NVIDIA® Jetson Xavier™ NX 8GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Xaviertm-NX-Module-1.html)
+- [NVIDIA® Jetson Xavier™ NX 16GB](https://www.seeedstudio.com/NVIDIAr-Jetson-Xaviertm-NX-Module-16GB-1.html)
+
+
+## Flash JetPack
+
+:::danger
+Flashing JetPack will erase all data on the device. Please proceed with caution.
+
+If you purchased the complete system rather than just the carrier board, it will come pre-installed with the JetPack operating system, allowing you to start it up and use it directly. However, you can also follow the tutorial below to install a new operating system if you prefer.
+:::
+
+The following content will demonstrate how to flash the JetPack 4.6.1 system onto the J2021. You can refer to this process to flash your desired JetPack version onto other device.
+
+:::info
+Refer [here](https://developer.nvidia.com/embedded/jetson-linux-archive) to determine the supported system versions for different [Jetson modules](#supported-module).
+:::
 
 ### Prerequisite
 
-Here is the list of required software and hardware:
-
-- **Host Computer** with **Ubuntu 18.04 operating system or above**
-- reComputer J2021 or J202 + Nvidia Xavier NX module
+- **Host Computer** with **Ubuntu 18.04 OS or Ubuntu 20.04 OS**
+- reComputer J1020/J2021/J2022 or J202 carrier board + Nvidia Jetson module
 - 9V-12V/5A Power Supply
 - USB Type-C cable
-- Jumper pin/cable
+- Jumper pin or Female-to-Female Dupont wire
 
-### Hardware Preparation (Force Recovery Mode)
+### EnterForce Recovery Mode
 
 Before we can move on to the installation steps, we need to make sure that our reComputer is in the force recovery mode.
 
-**Step 1.** Before you start, you need to disconnect power of the reComputer
+**Step 1.** Before you start, you need to disconnect power of the reComputer.
 
 **Step 2.** To enter recovery mode, you need to connect **FC REC** and **GND** using jumpers.
 
@@ -91,37 +200,41 @@ Before we can move on to the installation steps, we need to make sure that our r
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputerJ2021_J202_Flash_Jetpack.png" /></div>
 
-**Step 4.** On the Linux host PC screen, we can right click the mouse to open a Terminal and enter the command `lsusb`. When the returned content has the `ID 0955:7e19 NVidia Corp.` in it, it means that your Jetson-202 Carrier Board is in force recovery mode and you can proceed to the subsequent operations.
+**Step 4.** On the Linux host PC screen, we can right click the mouse to open a Terminal and enter the command `lsusb`. When the returned content has the `ID 0955:xxxx NVidia Corp.` in it, it means that your J202 Carrier Board is in force recovery mode and you can proceed to the subsequent operations.
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/5.png" /></div>
 
-### Software Preparation
+:::note
+- For NVIDIA® Jetson Nano™: 0955:7f21 NVidia Corp
+- For NVIDIA® Jetson Xavier™ NX: 0955:7e19 NVidia Corp
+:::
 
-- Linux Host Computer with Ubuntu 18.04 OS (or above)
-
-## Flashing JetPack OS
+### Flash to Jetson
 
 There are two optional ways of flash JetPack OS into the reComputer J2021, For the beginners to NVIDIA Jetson, we highly recommand NVIDIA SDK Manager:
 
 - [Flashing JetPack OS via NVIDIA SDK Manage](#flashing-jetpack-os-via-nvidia-sdk-manager)
 - [Flashing JetPack OS via Command Line](#flashing-to-emmc-with-command-line)
 
-!!!note
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="SDK Manager" label="SDK Manager">
+
+The NVIDIA SDK Manager is an all-in-one tool that bundles developer software and provides an end-to-end development environment setup solution for NVIDIA SDKs. Thus, it is recommended for the beginners.
+
+:::note
  In this tutorial, we will use Ubuntu 18.04 LTS operating system on the host computer and the Jetpack Verison to be install is 4.6.1 in this guide.
-
-### Flashing JetPack OS via NVIDIA SDK Manager
-
-Now we will go through the tutorial about installing the system via NVIDIA SDK Manager. The an NVIDIA SDK Manager all-in-one tool that bundles developer software and provides an end-to-end development environment setup solution for NVIDIA SDKs. Thus, it is recommended for the beginners.
+:::
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/5_3.png" /></div>
 
-#### Step 1.  Install NVIDIA SDK Manager on the Linux Host PC
+**Step 1.**  Install NVIDIA SDK Manager on the Linux Host PC
 
 First of all you need to create a  <a href="https://developer.nvidia.com/login" target="_blank">NVIDIA account</a> in order to use sdkmanager. Then on the Linux Host PC download the <a href="https://developer.nvidia.com/nvidia-sdk-manager" target="_blank">NVIDIA SDK Manager</a> from the NVIDIA official website.
 
-<!-- <div align=center><img width = 700 src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputerJ2021_J202_Flash_Jetpack1.png"/></div> -->
-
-#### Step 2.  Open NVIDIA SDK Manager and login
+**Step 2.**  Open NVIDIA SDK Manager and login
 
 On the Linux host PC screen, we can right click the mouse and open a Terminal. Then we can type the command below to start the SDK Manager:
 
@@ -129,33 +242,38 @@ On the Linux host PC screen, we can right click the mouse and open a Terminal. T
 sdkmanager
 ```
 
-as shown below:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputer_system_installation1.png" /></div>
-
+:::note
 The first time you use NVIDIA SDK Manager, a web page will pop up prompting you to log in with your previously registered NVIDIA account.
+:::
 
-#### Step 3.  Select the target device
+**Step 3.**  Select the target device
 
-After logging in, you will be taken to the first screen where the first step of installing. Since we have already connected the reComputer J2021, there will be a window pop up to let you select the hardware device.
+Since we have already connected the reComputer J2021, there will be a window pop up to let you select the hardware device.
 
-The reComputer J2021 has equipped with **NVIDIA Jetson Xavier 8GB module**, so we can choose `Jetson Xavier NX modules`.
+The reComputer J2021 has equipped with **NVIDIA Jetson Xavier 8GB module**, so we can choose `Jetson Xavier NX`(The first option).
 
-<div align="center">
+<!-- <div align="center">
   <img width={800} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/select_target_device.png" />
-</div>
+</div> -->
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J202/1.png"/></div>
+
+:::info
+Please note that the interface of different versions of SDK Manager may vary slightly. Choose the appropriate options based on your actual situation.
+:::
 
 There are more selections for you to choose in the first screen:
 
 - The **Jetson** in the Product Category panel need to be selected.
 - In the Hardware Configuration panel, we recommend that you **do not select Host Machine**. This will take more time to install the NVIDIA components for your current Ubuntu host. You can choose it if you need.
-- In the Target Operating System panel, we can select different **operating system** and **JetPack version**. But be careful the version of JetPack, different modules may support different type of JetPack such as `JetPack 4.6.1`, `JetPack 5.1.1` . We recommand "JetPack 4.6.1" here.
+- In the Target Operating System panel, we can select different **operating system** and **JetPack version**. But be careful the version of JetPack, different modules may support different type of JetPack such as `JetPack 4.6.1`, `JetPack 5.1.x` and so on. We recommand **JetPack 4.6.1** here.
 - In the Additional SDKs, since the storage space of eMMC is only 16GB, it will be out of memory if we install DeepStream here.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/7.png" /></div>
 
 Click Continue to proceed to the next step.
 
-#### Step 4.  Review wanted components
+**Step 4.**  Review wanted components
 
 From **Details and License**, you can expand the host components and target components panels to review the components that will be installed on your system.
 
@@ -170,8 +288,11 @@ When choosing which components to install, you may want to keep an eye on the ca
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/9.png" /></div>
 After actual testing, there is only about 500MB of eMMC space left after installing the full set of SDK components.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/10_1.jpg" /></div>
-If you want to check how to solve the problem of insufficient capacity, please refer to [Troubleshooting](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space).
+If you want to check how to solve the problem of insufficient capacity, please refer to:
+
+https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space .
 :::
+ 
 
 If you want SDK Manager to download all the files to a location other than the default path, go to the Download & Install Options located at the bottom of the screen, then select the path you wish to use.
 
@@ -179,7 +300,7 @@ If you want SDK Manager to download all the files to a location other than the d
 
 Select Continue to proceed to the next step.
 
-#### Step 5. Install the system
+**Step 5.** Install the system
 
 Before the installation begins, SDK Manager prompts you to enter your `sudo` password.
 
@@ -197,7 +318,7 @@ The display shows the progress of the download and installation of the software.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/14.png" /></div>
 
-#### (Optional)Step 6. Install the SDK components
+**(Optional)Step 6.** Install the SDK components
 
 If you checked the installation of the component in the previous **step 4**, you will need to go through this step.
 
@@ -220,12 +341,13 @@ When you see the following window appear, the installation has been done. You ca
 :::note
 Be sure to unplug the jumper and exit force recovery mode before re-powering into the system.
 :::
+</TabItem>
 
-### Flashing to eMMC with command-line
+<TabItem value="Command Line" label="Command Line">
 
 Thanks to the freedom to customize the BSP(NVIDIA Linux Driver Package), flashing JetPack OS via command line can be very easy for the Linux knowledge base users.
 
-#### Step 1. Download the proper NVIDIA Linux Driver Package
+**Step 1.** Download the proper NVIDIA Linux Driver Package
 
 On the **Linux host PC**, we need to open a browser and go the <a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a>. First we should check if the version of Jetson Linux is supported our reComputer Jetson module.
 
@@ -240,9 +362,11 @@ As the example, we choose the NVIDIA L4T 35.1 version since it is included as pa
 - Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2
 - Jetson_Linux_R35.1.0_aarch64.tbz2
 
+:::info
 You can also choose other version like NVIDIA L4T 32.7.2 which supports Jetpack 4.6.2.
+:::
 
-#### Step 2.  Unzip Package Files and Assemble the Rootfs via Command Line
+**Step 2.**  Unzip Package Files and Assemble the Rootfs via Command Line
 
 On the Linux host PC, we should find a folder and store the package files we download before. Then open a command line window(Terminal) at the folder and use the command line below to unzip the files and assemble the rootfs:
 
@@ -254,10 +378,11 @@ cd ..
 sudo ./apply_binaries.sh
 ```
 
-!!!Note
-    `${}` is where you put the names of the files.
+:::note
+`${}` is where you put the names of the files.
+:::
 
-*As the example of **NVIDIA L4T 35.1**, the downloaded files are stored in `/Desktop/L4T_Drivers`, so under the '/Desktop/L4T_Drivers' path we open the command line window(Terminal) and execute the following command.
+As the example of **NVIDIA L4T 35.1**, the downloaded files are stored in `/Desktop/L4T_Drivers`, so under the '/Desktop/L4T_Drivers' path we open the command line window(Terminal) and execute the following command.
 
 ```sh
 tar xf Jetson_Linux_R35.1.0_aarch64.tbz2
@@ -271,20 +396,24 @@ The output should be like:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/18.png" /></div>
 
-#### Step 3.  Flash the System to reComputer
+**Step 3.**  Flash the System to reComputer
 
-Since we alreadly force the reComputer J2021 into the recovery mode and the module is Jetson Nano. We can directly flash the system into the reComputer execute following command:
+Since we alreadly force the reComputer J2021 into the recovery mode and the module is Jetson Xavier NX. We can directly flash the system into the reComputer execute following command:
 
 ```sh
-sudo ./flash.sh jetson-nano-devkit-emmc mmcblk0p1
+sudo ./flash.sh jetson-xavier-nx-devkit-emmc mmcblk0p1
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/19.png" /></div>
 
-!!!Tip
-    Flashing L4T takes about 10 minutes, or more under a slow host computer.
+:::note
+Flashing L4T takes about 10 minutes, or more under a slow host computer.
+:::
 
 At this moment, we can unplug the jumper and then power up the reComputer again to use it.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
