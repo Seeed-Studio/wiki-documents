@@ -390,21 +390,90 @@ This code is designed to collect air quality data from a sensor, process the raw
 
 - Sensor Initialization:
 
-  - sensor_setup() function configures the sensor's I/O pins and ADC unit.
-  - It attempts to initialize the sensor using initialize_air_quality_sensor().
-  - If initialization is successful, the sensor is ready for data collection.
+```c
+air_quality_sensor_t air_quality_sensor;
+
+void sensor_setup()
+{
+    air_quality_sensor._io_num = ADC_CHANNEL_0;
+    air_quality_sensor._adc_num = ADC_UNIT_1;
+    printf("Starting Air Quality Sensor...\n");
+    if(!initialize_air_quality_sensor(&air_quality_sensor))
+    {
+        printf("Sensor ready.\n");
+    }
+    else{
+        printf("Sensor ERROR!\n");
+    }
+}
+```
+
+- sensor_setup() function configures the sensor's I/O pins and ADC unit.
+- It attempts to initialize the sensor using initialize_air_quality_sensor().
+- If initialization is successful, the sensor is ready for data collection.
 
 - Data Collection Task:
 
-  - poll_read_air_quality_sensor() task is created to continuously read raw data from the sensor.
-  - It calls air_quality_sensor_slope() to process the raw data and calculate the slope, which is an indicator of air quality.
-  - The task delays for 500 milliseconds before reading the next data point.
+```c
+void poll_read_air_quality_sensor(void *pvParameters)
+{
+    for (;;)
+    {
+        air_quality_sensor_slope(&air_quality_sensor);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
+    }
+}
+```
+
+- poll_read_air_quality_sensor() task is created to continuously read raw data from the sensor.
+- It calls air_quality_sensor_slope() to process the raw data and calculate the slope, which is an indicator of air quality.
+- The task delays for 500 milliseconds before reading the next data point.
 
 - Data Printing Task:
-  - print_read_air_quality_sensor() task is created to periodically print the collected data and calculated air quality.
-  - It retrieves the current time, slope, raw value, and air quality message using air_quality_error_to_message().
-  - The task prints the data to the console in a formatted manner.
-  - The task delays for 1000 milliseconds before printing the next data point.
+
+```c
+
+void print_read_air_quality_sensor(void *pvParameters)
+{
+    for (;;)
+    {
+        char buf[40];
+        air_quality_error_to_message(air_quality_sensor._air_quality,buf);
+        printf("Time : %lu\tSlope : %d\tRaw Value : %d\n%s\n", (uint32_t)esp_timer_get_time() / 1000, air_quality_sensor._air_quality, air_quality_sensor._sensor_raw_value,buf);
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+}
+```
+
+- print_read_air_quality_sensor() task is created to periodically print the collected data and calculated air quality.
+- It retrieves the current time, slope, raw value, and air quality message using air_quality_error_to_message().
+- The task prints the data to the console in a formatted manner.
+- The task delays for 1000 milliseconds before printing the next data point.
+
+```c
+
+void app_main(void)
+{
+    sensor_setup();
+    xTaskCreatePinnedToCore(
+        poll_read_air_quality_sensor,   /* Function that implements the task. */
+        "poll_read_air_quality_sensor", /* Text name for the task. */
+        configMINIMAL_STACK_SIZE * 2,   /* Stack size in words, not bytes. */
+        NULL,                           /* Parameter passed into the task. */
+        tskIDLE_PRIORITY,               /* Priority at which the task is created. */
+        NULL,                           /* Used to pass out the created task's handle. */
+        0);                             /* Core ID */
+
+    xTaskCreatePinnedToCore(
+        print_read_air_quality_sensor,   /* Function that implements the task. */
+        "print_read_air_quality_sensor", /* Text name for the task. */
+        configMINIMAL_STACK_SIZE * 2,    /* Stack size in words, not bytes. */
+        NULL,                            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY + 1,            /* Priority at which the task is created. */
+        NULL,                            /* Used to pass out the created task's handle. */
+        0);                              /* Core ID */
+}
+```
 
 ### Output
 
@@ -841,9 +910,9 @@ void app_main(void)
 
 ### Output
 
-<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/8.gif" alt="pir" width={400} height="auto" /></p>  
+<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/8.gif" alt="pir" width={400} height="auto" /></p>
 
-#### UART Output   
+#### UART Output
 
 ```shell
 I (26) boot: ESP-IDF v5.3 2nd stage bootloader
@@ -892,7 +961,7 @@ I (1002) app_init: Compile time:     Sep 14 2024 01:26:20
 I (1008) app_init: ELF file SHA256:  819293b15...
 I (1013) app_init: ESP-IDF:          v5.3
 I (1018) efuse_init: Min chip rev:     v0.0
-I (1023) efuse_init: Max chip rev:     v0.99 
+I (1023) efuse_init: Max chip rev:     v0.99
 I (1028) efuse_init: Chip rev:         v0.2
 I (1033) heap_init: Initializing. RAM available for dynamic allocation:
 I (1040) heap_init: At 3FC9A1C8 len 0004F548 (317 KiB): RAM
@@ -957,6 +1026,7 @@ I (33771) camera: Taking picture...
 I (34117) sdcard: JPEG saved as /sd/6_img.jpg
 I (34117) camera: Picture taken! Its size was: 51968 bytes
 ```
+
 #### Output Image
 
 <p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
