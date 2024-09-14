@@ -68,14 +68,14 @@ After formatting, you can insert the microSD card into the microSD card slot. Pl
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-If the microSD card is not being recognized by ESP32S3 but being recognized by your computer and error looks like : 
+If the microSD card is not being recognized by ESP32S3 but being recognized by your computer **and** error looks like :
 
 ```shell
 [  7273][E][sd_diskio.cpp:200] sdCommand(): Card Failed! cmd: 0x00
 [  7274][E][sd_diskio.cpp:759] sdcard_mount(): f_mount failed: (3) The physical drive cannot work
 [  7588][E][sd_diskio.cpp:200] sdCommand(): Card Failed! cmd: 0x00
 Card Mount Failed
-``` 
+```
 
 Do the following steps :
 
@@ -92,6 +92,7 @@ Do the following steps :
 - This process will take significantly longer time than Quick Format.
 
 - These cases arises if you are reusing microSD card which has been previously used for other purposes (i.e. when microSD card containing Linux OS being reused).
+
 :::
 
 ### Card slot circuit design for expansion boards
