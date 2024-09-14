@@ -10,8 +10,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_filesystem
 last_update:
-  date: 04/11/2023
-  author: Citric
+  date: 09/15/2024
+  author: Priyanshu Roy
 ---
 
 # File System and XIAO ESP32S3 Sense
@@ -66,6 +66,20 @@ XIAO ESP32S3 Sense supports microSD cards up to **32GB**, so if you are ready to
 After formatting, you can insert the microSD card into the microSD card slot. Please note the direction of insertion, the side with the gold finger should face inward.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
+
+:::tip
+If the microSD card is not being recognized by ESP32S3 but being recognized by your computer, do the following steps :   
+
+- Using Windows Formatter   
+
+<div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/1.png" style={{width:500, height:'auto'}}/></div>
+
+- Using [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) (third-Party software)   
+
+<div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/2.png" style={{width:500, height:'auto'}}/></div>
+
+Cases can arise if you are reusing microSD card used for other purposes i.e. microSD card containing Linux Operating systems being reused.
+:::
 
 ### Card slot circuit design for expansion boards
 

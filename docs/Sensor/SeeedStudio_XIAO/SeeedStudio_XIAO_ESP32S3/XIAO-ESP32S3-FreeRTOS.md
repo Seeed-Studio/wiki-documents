@@ -2,12 +2,15 @@
 description: XIAO ESP32S3(Sense) With FreeRTOS
 title: XIAO ESP32S3(Sense) With FreeRTOS
 keywords:
-  - Software, FreeRtos
+  - Software
+  - FreeRtos
+  - sd
+  - camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /xiao-esp32s3-freertos
 last_update:
-  date: 09/13/2024
-  author: Priyanshu_Roy
+  date: 09/14/2024
+  author: Priyanshu Roy
 ---
 
 # XIAO ESP32S3(Sense) With FreeRTOS
@@ -197,7 +200,7 @@ void taskFunction(void * pvParameters) {
 
 ## Visualization of tasks
 
-I am creating four simple task to visualize how the FreeRTOS works.  
+I am creating four simple task to visualize how the FreeRTOS works.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/2.png" alt="pir" width={700} height="auto" /></p>
 
@@ -386,11 +389,13 @@ This code is designed to collect air quality data from a sensor, process the raw
 #### Key Components:
 
 - Sensor Initialization:
+
   - sensor_setup() function configures the sensor's I/O pins and ADC unit.
   - It attempts to initialize the sensor using initialize_air_quality_sensor().
   - If initialization is successful, the sensor is ready for data collection.
 
 - Data Collection Task:
+
   - poll_read_air_quality_sensor() task is created to continuously read raw data from the sensor.
   - It calls air_quality_sensor_slope() to process the raw data and calculate the slope, which is an indicator of air quality.
   - The task delays for 500 milliseconds before reading the next data point.
@@ -438,41 +443,536 @@ Fresh air.
 
 ## Camera and SdCard usage in FreeRTOS
 
-For this I am using the onBoard Camera and sdCard along with ESP_IDF_v5.3.
+For this I am using the onBoard Camera and SdCard along with ESP_IDF_v5.3.
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Priyanshu0901/Air_quality_Sensor_ESP-IDF.git">
+    <a class="github_item" href="https://github.com/Priyanshu0901/Camera-and-SdCard-FreeRTOS.git">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
 ### Hardware Setup
 
-Attach the Xiao-S3 to the [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) and connect the [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) to the digital connector.
+Follow the [microSD card guide](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/) and [camera guide](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/) to attach the camera and microSD card extension board to the
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/3.jpg" alt="pir" width={600} height="auto" /></p>
+- Format microSD card (supported up to 32Gb)
+- Attach the microSD card to the extension board
+
+The setup would look something like this :
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>Front</th>
+        <th>Back</th>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/6.jpeg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/7.jpeg" style={{width:250, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
 
 ### Software Setup
 
 After pulling the git repository, open the folder in VSCode. Go to View->Command Palette->ESP-IDF: Add vscode Configuration Folder.
 From the bottom panel select the correct COM port, chip (ESP-S3) and build,flash and monitor.
 
-### Code Overview
+### Camera Component
 
-This code is designed to collect air quality data from a sensor, process the raw data to determine the air quality level, and periodically print the results to the console.
+- Camera Configuration:
+  - Defines the GPIO pins used for various camera functions (PWDN, RESET, XCLK, SIOD, SIOC, Y9-Y2, VSYNC, HREF, PCLK, LED).
+  - Sets default values for camera parameters (e.g., clock frequency, frame buffer location, pixel format, frame size, JPEG quality, frame buffer count, grab mode).
 
-#### Key Components:
+```c
+#ifndef CAMERA_CONFIG_H
+#define CAMERA_CONFIG_H
+
+#define PWDN_GPIO_NUM     -1
+#define RESET_GPIO_NUM    -1
+#define XCLK_GPIO_NUM     10
+#define SIOD_GPIO_NUM     40
+#define SIOC_GPIO_NUM     39
+
+#define Y9_GPIO_NUM       48
+#define Y8_GPIO_NUM       11
+#define Y7_GPIO_NUM       12
+#define Y6_GPIO_NUM       14
+#define Y5_GPIO_NUM       16
+#define Y4_GPIO_NUM       18
+#define Y3_GPIO_NUM       17
+#define Y2_GPIO_NUM       15
+#define VSYNC_GPIO_NUM    38
+#define HREF_GPIO_NUM     47
+#define PCLK_GPIO_NUM     13
+
+#define LED_GPIO_NUM      21
+
+#endif //CAMERA_CONFIG_H
+```
+
+- Camera Interface:  
+  Declares functions initialize_camera() and createCameraTask().
+
+- Camera Implementation:
+
+  - Initializes the camera using the defined configuration.
+
+  ```c
+  void initialize_camera(void)
+  {
+    camera_config_t camera_config = {
+        .pin_pwdn = PWDN_GPIO_NUM,
+        .pin_reset = RESET_GPIO_NUM,
+        .pin_xclk = XCLK_GPIO_NUM,
+        .pin_sccb_sda = SIOD_GPIO_NUM,
+        .pin_sccb_scl = SIOC_GPIO_NUM,
+        .pin_d7 = Y9_GPIO_NUM,
+        .pin_d6 = Y8_GPIO_NUM,
+        .pin_d5 = Y7_GPIO_NUM,
+        .pin_d4 = Y6_GPIO_NUM,
+        .pin_d3 = Y5_GPIO_NUM,
+        .pin_d2 = Y4_GPIO_NUM,
+        .pin_d1 = Y3_GPIO_NUM,
+        .pin_d0 = Y2_GPIO_NUM,
+        .pin_vsync = VSYNC_GPIO_NUM,
+        .pin_href = HREF_GPIO_NUM,
+        .pin_pclk = PCLK_GPIO_NUM,
+
+        .xclk_freq_hz = 20000000,          // The clock frequency of the image sensor
+        .fb_location = CAMERA_FB_IN_PSRAM, // Set the frame buffer storage location
+        .pixel_format = PIXFORMAT_JPEG,    // The pixel format of the image: PIXFORMAT_ + YUV422|GRAYSCALE|RGB565|JPEG
+        .frame_size = FRAMESIZE_UXGA,      // The resolution size of the image: FRAMESIZE_ + QVGA|CIF|VGA|SVGA|XGA|SXGA|UXGA
+        .jpeg_quality = 15,                // The quality of the JPEG image, ranging from 0 to 63.
+        .fb_count = 2,                     // The number of frame buffers to use.
+        .grab_mode = CAMERA_GRAB_LATEST    //  The image capture mode.
+    };
+
+    esp_err_t ret = esp_camera_init(&camera_config);
+    if (ret == ESP_OK)
+    {
+        ESP_LOGI(cameraTag, "Camera configured successful");
+    }
+    else
+    {
+        ESP_LOGI(cameraTag, "Camera configured unsuccessful");
+        return;
+    }
+  }
+  ```
+
+  - Sets camera parameters (brightness, contrast, saturation, special effect, white balance, exposure control, AEC, AE level, AEC value, gain control, AGC gain, gain ceiling, BPC, WPC, raw GMA, LENC, hmirror, vflip, DCW, colorbar).
+
+  ```c
+  sensor_t *s = esp_camera_sensor_get();
+
+    s->set_brightness(s, 0);                 // -2 to 2
+    s->set_contrast(s, 0);                   // -2 to 2
+    s->set_saturation(s, 0);                 // -2 to 2
+    s->set_special_effect(s, 0);             // 0 to 6 (0 - No Effect, 1 - Negative, 2 - Grayscale, 3 - Red Tint, 4 - Green Tint, 5 - Blue Tint, 6 - Sepia)
+    s->set_whitebal(s, 1);                   // 0 = disable , 1 = enable
+    s->set_awb_gain(s, 1);                   // 0 = disable , 1 = enable
+    s->set_wb_mode(s, 0);                    // 0 to 4 - if awb_gain enabled (0 - Auto, 1 - Sunny, 2 - Cloudy, 3 - Office, 4 - Home)
+    s->set_exposure_ctrl(s, 1);              // 0 = disable , 1 = enable
+    s->set_aec2(s, 0);                       // 0 = disable , 1 = enable
+    s->set_ae_level(s, 0);                   // -2 to 2
+    s->set_aec_value(s, 300);                // 0 to 1200
+    s->set_gain_ctrl(s, 1);                  // 0 = disable , 1 = enable
+    s->set_agc_gain(s, 0);                   // 0 to 30
+    s->set_gainceiling(s, (gainceiling_t)0); // 0 to 6
+    s->set_bpc(s, 0);                        // 0 = disable , 1 = enable
+    s->set_wpc(s, 1);                        // 0 = disable , 1 = enable
+    s->set_raw_gma(s, 1);                    // 0 = disable , 1 = enable
+    s->set_lenc(s, 1);                       // 0 = disable , 1 = enable
+    s->set_hmirror(s, 0);                    // 0 = disable , 1 = enable
+    s->set_vflip(s, 0);                      // 0 = disable , 1 = enable
+    s->set_dcw(s, 1);                        // 0 = disable , 1 = enable
+    s->set_colorbar(s, 0);                   // 0 = disable , 1 = enable
+  ```
+
+  - Defines a function takePicture() to capture an image and save it to SD card.
+
+  ```c
+  void takePicture()
+  {
+    ESP_LOGI(cameraTag, "Taking picture...");
+    camera_fb_t *pic = esp_camera_fb_get();
+
+    if (pic)
+    {
+        saveJpegToSdcard(pic);
+    }
+
+    ESP_LOGI(cameraTag, "Picture taken! Its size was: %zu bytes", pic->len);
+
+    esp_camera_fb_return(pic);
+  }
+  ```
+
+  - Creates a task cameraTakePicture_5_sec() to continuously take pictures every 5 seconds.
+
+  ```c
+  void cameraTakePicture_5_sec(void *pvParameters)
+  {
+      for (;;)
+      {
+          takePicture();
+          vTaskDelay(5000 / portTICK_PERIOD_MS);
+      }
+  }
+
+  void createCameraTask()
+  {
+      TaskHandle_t task;
+      xTaskCreate(
+          cameraTakePicture_5_sec,      /* Function that implements the task. */
+          "cameraTakePicture_5_sec",    /* Text name for the task. */
+          configMINIMAL_STACK_SIZE * 4, /* Stack size in words, or bytes. */
+          NULL,                         /* Parameter passed into the task. */
+          tskIDLE_PRIORITY,             /* Priority at which the task is created. */
+          &task                         /* Used to pass out the created task's handle. */
+      );
+  }
+  ```
+
+Code Structure:
+
+- Header files (camera_config.h, camera_interface.h) and implementation files (camera_interface.c).
+- The camera_config.h file defines the camera configuration parameters.
+- The camera_interface.h file declares the functions for camera initialization and task creation.
+- The camera_interface.c file implements the camera initialization, picture-taking, and task creation logic.
+
+### SdCard Component
+
+- SD Card Configuration:  
+  Defines the GPIO pins used for the SD card interface (MISO, MOSI, CLK, CS).
+
+```c
+#ifndef SDCARD_CONFIG_H
+#define SDCARD_CONFIG_H
+
+#define PIN_NUM_MISO  GPIO_NUM_8
+#define PIN_NUM_MOSI  GPIO_NUM_9
+#define PIN_NUM_CLK   GPIO_NUM_7
+#define PIN_NUM_CS    GPIO_NUM_21
+
+#endif //SDCARD_CONFIG_H
+```
+
+- SD Card Interface:  
+  Declares functions initialize_sdcard(), deinitialize_sdcard(), and saveJpegToSdcard().
+
+```c
+#ifndef SDCARD_INTERFACE_H
+#define SDCARD_INTERFACE_H
+
+#include "esp_camera.h"
+
+void initialize_sdcard(void);
+void deinitialize_sdcard();
+void saveJpegToSdcard(camera_fb_t *);
+
+#endif //SDCARD_INTERFACE_H
+```
+
+- SD Card Implementation:
+
+  - Initializes the SD card using the defined configuration and mounts the SD card as a FAT filesystem.
+
+  ```c
+  sdmmc_card_t *card;
+  sdmmc_host_t host = SDSPI_HOST_DEFAULT();
+  const char mount_point[] = "/sd";
+
+  void initialize_sdcard()
+  {
+      esp_err_t ret;
+
+      // If format_if_mount_failed is set to true, SD card will be partitioned and
+      // formatted in case when mounting fails.
+      esp_vfs_fat_sdmmc_mount_config_t mount_config = {
+  #ifdef FORMAT_IF_MOUNT_FAILED
+          .format_if_mount_failed = true,
+  #else
+          .format_if_mount_failed = false,
+  #endif // EXAMPLE_FORMAT_IF_MOUNT_FAILED
+          .max_files = 5,
+          .allocation_unit_size = 32 * 1024};
+
+      ESP_LOGI(sdcardTag, "Initializing SD card");
+
+      // Use settings defined above to initialize SD card and mount FAT filesystem.
+      // Note: esp_vfs_fat_sdmmc/sdspi_mount is all-in-one convenience functions.
+      // Please check its source code and implement error recovery when developing
+      // production applications.
+      ESP_LOGI(sdcardTag, "Using SPI peripheral");
+
+      // By default, SD card frequency is initialized to SDMMC_FREQ_DEFAULT (20MHz)
+      // For setting a specific frequency, use host.max_freq_khz (range 400kHz - 20MHz for SDSPI)
+      spi_bus_config_t bus_cfg = {
+          .mosi_io_num = PIN_NUM_MOSI,
+          .miso_io_num = PIN_NUM_MISO,
+          .sclk_io_num = PIN_NUM_CLK,
+          .quadwp_io_num = -1,
+          .quadhd_io_num = -1,
+          .max_transfer_sz = host.max_freq_khz,
+      };
+      ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
+      if (ret != ESP_OK)
+      {
+          ESP_LOGE(sdcardTag, "Failed to initialize bus.");
+          return;
+      }
+
+      // This initializes the slot without card detect (CD) and write protect (WP) signals.
+      // Modify slot_config.gpio_cd and slot_config.gpio_wp if your board has these signals.
+      sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
+      slot_config.gpio_cs = PIN_NUM_CS;
+      slot_config.host_id = host.slot;
+
+      ESP_LOGI(sdcardTag, "Mounting filesystem");
+      ret = esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card);
+
+      if (ret != ESP_OK)
+      {
+          if (ret == ESP_FAIL)
+          {
+              ESP_LOGE(sdcardTag, "Failed to mount filesystem. "
+                                  "If you want the card to be formatted, set the FORMAT_IF_MOUNT_FAILED in sdcard_config.h");
+          }
+          else
+          {
+              ESP_LOGE(sdcardTag, "Failed to initialize the card (%s). "
+                                  "Make sure SD card lines have pull-up resistors in place.",
+                      esp_err_to_name(ret));
+          }
+          return;
+      }
+      ESP_LOGI(sdcardTag, "Filesystem mounted");
+
+      // Card has been initialized, print its properties
+      sdmmc_card_print_info(stdout, card);
+
+      // Format FATFS
+  #ifdef FORMAT_SD_CARD
+      ret = esp_vfs_fat_sdcard_format(mount_point, card);
+      if (ret != ESP_OK)
+      {
+          ESP_LOGE(sdcardTag, "Failed to format FATFS (%s)", esp_err_to_name(ret));
+          return;
+      }
+
+      if (stat(file_foo, &st) == 0)
+      {
+          ESP_LOGI(sdcardTag, "file still exists");
+          return;
+      }
+      else
+      {
+          ESP_LOGI(sdcardTag, "file doesnt exist, format done");
+      }
+  #endif // CONFIG_EXAMPLE_FORMAT_SD_CARD
+  }
+  ```
+
+  - Provides functions to save JPEG images to the SD card.
+
+  ```c
+  uint16_t lastKnownFile = 0;
+
+  void saveJpegToSdcard(camera_fb_t *captureImage)
+  {
+    // Find the next available filename
+    char filename[32];
+
+    sprintf(filename, "%s/%u_img.jpg", mount_point, lastKnownFile++);
+
+    // Create the file and write the JPEG data
+    FILE *fp = fopen(filename, "wb");
+    if (fp != NULL)
+    {
+        fwrite(captureImage->buf, 1, captureImage->len, fp);
+        fclose(fp);
+        ESP_LOGI(sdcardTag, "JPEG saved as %s", filename);
+    }
+    else
+    {
+        ESP_LOGE(sdcardTag, "Failed to create file: %s", filename);
+    }
+  }
+  ```
+
+Component Structure:
+
+- Header files (sdcard_config.h, sdcard_interface.h) and implementation files (sdcard_interface.c).
+- The sdcard_config.h file defines the SD card configuration parameters.
+- The sdcard_interface.h file declares the functions for SD card initialization, deinitialization, and image saving.
+- The sdcard_interface.c file implements the SD card initialization, deinitialization, and image saving logic.
+
+### Main Function
+
+```c
+// main.c
+#include <stdio.h>
+#include "camera_interface.h"
+#include "sdcard_interface.h"
+
+void initialize_drivers()
+{
+    initialize_sdcard();
+    initialize_camera();
+}
+
+void start_tasks()
+{
+    createCameraTask();
+}
+
+void app_main(void)
+{
+    initialize_drivers();
+    start_tasks();
+}
+```
+
+- Includes necessary header files for camera and SD card interfaces.
+- Initializes both the SD card and camera using the provided functions.
+- Starts the camera task to continuously take pictures
+
+### Output
+
+<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/8.gif" alt="pir" width={400} height="auto" /></p>  
+
+#### UART Output   
+
+```shell
+I (26) boot: ESP-IDF v5.3 2nd stage bootloader
+I (27) boot: compile time Sep 14 2024 01:26:38
+I (27) boot: Multicore bootloader
+I (30) boot: chip revision: v0.2
+I (33) qio_mode: Enabling default flash chip QIO
+I (39) boot.esp32s3: Boot SPI Speed : 80MHz
+I (43) boot.esp32s3: SPI Mode       : QIO
+I (48) boot.esp32s3: SPI Flash Size : 8MB
+I (53) boot: Enabling RNG early entropy source...
+I (58) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (84) boot:  2 factory          factory app      00 00 00010000 00177000
+I (92) boot: End of partition table
+I (96) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=11604h ( 71172) map
+I (115) esp_image: segment 1: paddr=0002162c vaddr=3fc96700 size=03114h ( 12564) load
+I (118) esp_image: segment 2: paddr=00024748 vaddr=40374000 size=0b8d0h ( 47312) load
+I (130) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=315e4h (202212) map
+I (161) esp_image: segment 4: paddr=0006160c vaddr=4037f8d0 size=06d64h ( 28004) load
+I (175) boot: Loaded app from partition at offset 0x10000
+I (175) boot: Disabling RNG early entropy source...
+I (186) octal_psram: vendor id    : 0x0d (AP)
+I (187) octal_psram: dev id       : 0x02 (generation 3)
+I (187) octal_psram: density      : 0x03 (64 Mbit)
+I (192) octal_psram: good-die     : 0x01 (Pass)
+I (197) octal_psram: Latency      : 0x01 (Fixed)
+I (202) octal_psram: VCC          : 0x01 (3V)
+I (207) octal_psram: SRF          : 0x01 (Fast Refresh)
+I (213) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
+I (219) octal_psram: BurstLen     : 0x01 (32 Byte)
+I (224) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
+I (230) octal_psram: DriveStrength: 0x00 (1/1)
+I (236) esp_psram: Found 8MB PSRAM device
+I (240) esp_psram: Speed: 40MHz
+I (244) cpu_start: Multicore app
+I (979) esp_psram: SPI SRAM memory test OK
+I (988) cpu_start: Pro cpu start user code
+I (988) cpu_start: cpu freq: 160000000 Hz
+I (988) app_init: Application information:
+I (991) app_init: Project name:     Camera-and-SdCard-FreeRTOS
+I (997) app_init: App version:      1
+I (1002) app_init: Compile time:     Sep 14 2024 01:26:20
+I (1008) app_init: ELF file SHA256:  819293b15...
+I (1013) app_init: ESP-IDF:          v5.3
+I (1018) efuse_init: Min chip rev:     v0.0
+I (1023) efuse_init: Max chip rev:     v0.99 
+I (1028) efuse_init: Chip rev:         v0.2
+I (1033) heap_init: Initializing. RAM available for dynamic allocation:
+I (1040) heap_init: At 3FC9A1C8 len 0004F548 (317 KiB): RAM
+I (1046) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (1052) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (1059) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM
+I (1065) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
+I (1073) spi_flash: detected chip: gd
+I (1077) spi_flash: flash io: qio
+W (1081) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (1092) sleep: Configure to isolate all GPIO pins in sleep state
+I (1099) sleep: Enable automatic switching of GPIO sleep configuration
+I (1106) main_task: Started on CPU0
+I (1110) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (1119) main_task: Calling app_main()
+I (1123) sdcard: Initializing SD card
+I (1127) sdcard: Using SPI peripheral
+I (1132) sdcard: Mounting filesystem
+I (1137) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0
+I (1146) sdspi_transaction: cmd=52, R1 response: command not supported
+I (1195) sdspi_transaction: cmd=5, R1 response: command not supported
+I (1219) sdcard: Filesystem mounted
+Name: SD32G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 30448MB
+CSD: ver=2, sector_size=512, capacity=62357504 read_bl_len=9
+SSR: bus_width=1
+I (1226) s3 ll_cam: DMA Channel=1
+I (1230) cam_hal: cam init ok
+I (1234) sccb: pin_sda 40 pin_scl 39
+I (1238) sccb: sccb_i2c_port=1
+I (1252) camera: Detected camera at address=0x30
+I (1255) camera: Detected OV2640 camera
+I (1255) camera: Camera PID=0x26 VER=0x42 MIDL=0x7f MIDH=0xa2
+I (1344) cam_hal: buffer_size: 16384, half_buffer_size: 1024, node_buffer_size: 1024, node_cnt: 16, total_cnt: 375
+I (1344) cam_hal: Allocating 384000 Byte frame buffer in PSRAM
+I (1351) cam_hal: Allocating 384000 Byte frame buffer in PSRAM
+I (1357) cam_hal: cam config ok
+I (1361) ov2640: Set PLL: clk_2x: 0, clk_div: 0, pclk_auto: 0, pclk_div: 12
+I (1453) camera: Camera configured successful
+I (1487) main_task: Returned from app_main()
+I (1487) camera: Taking picture...
+I (1997) sdcard: JPEG saved as /sd/0_img.jpg
+I (1997) camera: Picture taken! Its size was: 45764 bytes
+I (6997) camera: Taking picture...
+I (7348) sdcard: JPEG saved as /sd/1_img.jpg
+I (7349) camera: Picture taken! Its size was: 51710 bytes
+I (12349) camera: Taking picture...
+I (12704) sdcard: JPEG saved as /sd/2_img.jpg
+I (12705) camera: Picture taken! Its size was: 51853 bytes
+I (17706) camera: Taking picture...
+I (18054) sdcard: JPEG saved as /sd/3_img.jpg
+I (18055) camera: Picture taken! Its size was: 51919 bytes
+I (23055) camera: Taking picture...
+I (23414) sdcard: JPEG saved as /sd/4_img.jpg
+I (23414) camera: Picture taken! Its size was: 51809 bytes
+I (28415) camera: Taking picture...
+I (28768) sdcard: JPEG saved as /sd/5_img.jpg
+I (28768) camera: Picture taken! Its size was: 51747 bytes
+I (33771) camera: Taking picture...
+I (34117) sdcard: JPEG saved as /sd/6_img.jpg
+I (34117) camera: Picture taken! Its size was: 51968 bytes
+```
+#### Output Image
+
+<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
 
 ## FreeRtos for Arduino IDE
 
-FreeRtos can be used for Arduino-IDE based Xiao-S3 builds. It is similar to ESP-IDF usable but it runs on only one core and is not optimized for ESP-IDF.
+FreeRtos can be used for Arduino-IDE based XIAO-S3 builds. It is similar to ESP-IDF usable but it runs on only one core and is not optimized for ESP-IDF.
 
 ### Hardware Setup
+
 Attach the Xiao-S3 to the [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) (OLED DIsplay and RTC) and connect the [Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) to the I2c Bus.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### Software Setup
+
 Install the arduino libraries for [pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library), [U8x8lib](https://github.com/olikraus/U8g2_Arduino) and [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) library. Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to install library for Arduino.
 
 ```cpp
@@ -711,7 +1211,7 @@ void taskBME680(void* pvParameters) {
 
 ### Output
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/5.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/5.gif" alt="pir" width={600} height="auto" /></p>
 
 ### Serial Monitor Output
 
@@ -737,7 +1237,7 @@ T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 
 ## Trouble Shooting
 
-Some problems might encounter in the process of hardware connection, software debugging or uploading.  
+Some problems might encounter in the process of hardware connection, software debugging or uploading.
 
 ## Tech Support & Product Discussion
 
