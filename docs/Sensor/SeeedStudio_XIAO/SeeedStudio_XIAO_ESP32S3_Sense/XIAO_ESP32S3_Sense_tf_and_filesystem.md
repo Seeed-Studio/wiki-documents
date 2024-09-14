@@ -2,11 +2,11 @@
 description: This tutorial describes how to use the microSD card and file system on the XIAO ESP32S3.
 title: MicroSD card for Sense Version
 keywords:
-- xiao esp32s3
-- esp32s3
-- tf
-- sd
-- file
+  - xiao esp32s3
+  - esp32s3
+  - tf
+  - sd
+  - file
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /xiao_esp32s3_sense_filesystem
 last_update:
@@ -68,17 +68,30 @@ After formatting, you can insert the microSD card into the microSD card slot. Pl
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/66.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-If the microSD card is not being recognized by ESP32S3 but being recognized by your computer, do the following steps :   
+If the microSD card is not being recognized by ESP32S3 but being recognized by your computer and error looks like : 
 
-- Using Windows Formatter   
+```shell
+[  7273][E][sd_diskio.cpp:200] sdCommand(): Card Failed! cmd: 0x00
+[  7274][E][sd_diskio.cpp:759] sdcard_mount(): f_mount failed: (3) The physical drive cannot work
+[  7588][E][sd_diskio.cpp:200] sdCommand(): Card Failed! cmd: 0x00
+Card Mount Failed
+``` 
+
+Do the following steps :
+
+- Using Windows Formatter
 
 <div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/1.png" style={{width:500, height:'auto'}}/></div>
 
-- Using [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) (third-Party software)   
+- Using [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) (third-Party software)
 
 <div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/2.png" style={{width:500, height:'auto'}}/></div>
 
-Cases can arise if you are reusing microSD card used for other purposes i.e. microSD card containing Linux Operating systems being reused.
+**Note : **
+
+- This process will take significantly longer time than Quick Format.
+
+- These cases arises if you are reusing microSD card which has been previously used for other purposes (i.e. when microSD card containing Linux OS being reused).
 :::
 
 ### Card slot circuit design for expansion boards
@@ -110,7 +123,6 @@ The XIAO ESP32S3 Sense card slot occupies 4 GPIOs of the ESP32-S3, and the pin d
     </table>
 </div>
 
-
 This also means that if you choose to use the microSD card function of the expansion board, you cannot also use the SPI function of the XIAO ESP32S3. You can turn on/off the microSD card function by connecting/cutting the pads of J3.
 
 <table align="center">
@@ -131,7 +143,6 @@ This also means that if you choose to use the microSD card function of the expan
 :::tip
 By default, the microSD card function is enabled after the expansion board is installed.
 :::
-
 
 ## Modify the files in the microSD card
 
@@ -408,7 +419,7 @@ Serial.printf("SD Card Size: %lluMB\n", cardSize);
 
 4. The `listDir()` function lists the directories on the SD card. This function accepts as arguments the filesystem (SD), the main directory’s name, and the levels to go into the directory.
 
-    Here’s an example of how to call this function. The `/` corresponds to the microSDcard root directory.
+   Here’s an example of how to call this function. The `/` corresponds to the microSDcard root directory.
 
 ```c
 listDir(SD, "/", 0);
@@ -506,7 +517,7 @@ To complete this project, you will need to prepare the following hardware in adv
 
 For the software, you need to install the following libraries for the Arduino IDE in advance.
 
--  NTPClient library forked by Taranais
+- NTPClient library forked by Taranais
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/taranais/NTPClient">
@@ -598,7 +609,7 @@ void setup() {
   timeClient.setTimeOffset(3600);
 
   // Initialize SD card
-  SD.begin(SD_CS);  
+  SD.begin(SD_CS);
   if(!SD.begin(SD_CS)) {
     Serial.println("Card Mount Failed");
     return;
@@ -623,7 +634,7 @@ void setup() {
     writeFile(SD, "/data.txt", "Reading ID, Date, Hour, NO2, C2H5CH, VOC, CO \r\n");
   }
   else {
-    Serial.println("File already exists");  
+    Serial.println("File already exists");
   }
   file.close();
 
@@ -633,16 +644,16 @@ void setup() {
   getReadings();
   getTimeStamp();
   logSDCard();
-  
+
   // Increment readingID on every new reading
   readingID++;
-  
+
   // Start deep sleep
   Serial.println("DONE! Going to sleep now.");
 
   // Enable Timer wake_up
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  esp_deep_sleep_start(); 
+  esp_deep_sleep_start();
 }
 
 void loop() {
@@ -660,13 +671,13 @@ void getReadings(){
   VOC_val = gas.getGM502B();
   // GM702B CO sensor
   CO_val = gas.getGM702B();
-  
+
   Serial.print("NO2 Value is: ");
   Serial.println(NO2_val);
-  
+
   Serial.print("C2H5CH Value is: ");
   Serial.println(C2H5CH_val);
-  
+
   Serial.print("VOC Value is: ");
   Serial.println(VOC_val);
 
@@ -696,8 +707,8 @@ void getTimeStamp() {
 
 // Write the sensor readings on the SD card
 void logSDCard() {
-  dataMessage = String(readingID) + "," + String(dayStamp) + "," + String(timeStamp) + "," + 
-                String(NO2_val) + "," + String(C2H5CH_val) + "," + String(VOC_val) + "," + 
+  dataMessage = String(readingID) + "," + String(dayStamp) + "," + String(timeStamp) + "," +
+                String(NO2_val) + "," + String(C2H5CH_val) + "," + String(VOC_val) + "," +
                 String(CO_val) + "\r\n";
   Serial.print("Save data: ");
   Serial.println(dataMessage);
@@ -753,9 +764,10 @@ In order to facilitate testing, the effect is shown every minute to save data, t
 
 :::caution
 There are the following things to note about this project:
+
 1. The Multichannel Gas Sensor needs a period of warm-up before the values obtained are accurate. So the first few sets of data recorded can be considered to be discarded if the error is large.
 2. The serial monitor will only output the saved information once, because this example uses the deep sleep function, it is equivalent to reset after waking up, that is, you need to reopen the serial port of Arduino to see the next debug information. But rest assured, if there is no problem with the card, the sensor data will be collected on time at the time you set.
-:::
+   :::
 
 ### Program annotation
 
@@ -801,7 +813,7 @@ Finally, the ESP32 starts the deep sleep.
 
 ```c
 esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-esp_deep_sleep_start(); 
+esp_deep_sleep_start();
 ```
 
 We recommend that you use these two functions together. Make sure that XIAO can enter deep sleep mode as soon as possible after setting the wake-up time.
@@ -848,7 +860,7 @@ Note: at the time of writing this post, the ESP32 Filesystem Uploader plugin **i
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/74.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 4.** Unzip the downloaded *.zip* folder. Open it and copy the ESP32FS folder to the tools folder you created in the previous step. You should have a similar folder structure:
+**Step 4.** Unzip the downloaded _.zip_ folder. Open it and copy the ESP32FS folder to the tools folder you created in the previous step. You should have a similar folder structure:
 
 `<Sketchbook-location>/tools/ESP32FS/tool/esp32fs.jar`
 
@@ -892,7 +904,7 @@ To upload files to the ESP32 filesystem follow the next instructions.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/79.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 9.** Inside the data folder is where you should put the files you want to save into the ESP32 filesystem. As an example, create a *.txt* file with some text called **test_example**.
+**Step 9.** Inside the data folder is where you should put the files you want to save into the ESP32 filesystem. As an example, create a _.txt_ file with some text called **test_example**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/80.png" style={{width:700, height:'auto'}}/></div>
 
@@ -906,18 +918,17 @@ The files were successfully uploaded to the ESP32 filesystem when you see the me
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/81.png" style={{width:800, height:'auto'}}/></div>
 
-
 ### Testing the Uploader
 
 Now, let’s just check if the file was actually saved into the ESP32 filesystem. Simply upload the following code to your ESP32 board.
 
 ```cpp
 #include "SPIFFS.h"
- 
+
 void setup() {
   Serial.begin(115200);
   while(!Serial);
-  
+
   if(!SPIFFS.begin(true)){
     Serial.println("An Error has occurred while mounting SPIFFS");
     return;
@@ -928,25 +939,23 @@ void setup() {
     Serial.println("Failed to open file for reading");
     return;
   }
-  
+
   Serial.println("File Content:");
   while(file.available()){
     Serial.write(file.read());
   }
   file.close();
-  
+
 }
- 
+
 void loop() {
-  
+
 }
 ```
 
-After uploading, open the Serial Monitor at a baud rate of 115200. It should print the content of your *.txt* file on the Serial Monitor.
+After uploading, open the Serial Monitor at a baud rate of 115200. It should print the content of your _.txt_ file on the Serial Monitor.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/82.png" style={{width:800, height:'auto'}}/></div>
-
-
 
 ## Flash Data Storage
 
@@ -966,12 +975,11 @@ This section has been written for the XIAO ESP32C3 and is fully compatible with 
 
 - [XIAO ESP32C3 Data Permanently in different ways](https://wiki.seeedstudio.com/xiaoesp32c3-flash-storage/)
 
-
 ## Troubleshooting
 
 ## Citations & References
 
-This article draws on the files system content **[Random Nerd Tutorials](https://randomnerdtutorials.com/)**' on ESP32 and uses it verified on the Seeed Studio XIAO ESP32S3 Sense. 
+This article draws on the files system content **[Random Nerd Tutorials](https://randomnerdtutorials.com/)**' on ESP32 and uses it verified on the Seeed Studio XIAO ESP32S3 Sense.
 
 Special thanks to the authors of **Random Nerd Tutorials** for their hard work!
 
@@ -984,7 +992,6 @@ The following is the reference link to the original article, you are welcome to 
 For more information about using the ESP32 development board, please read the official website of Random Nerd Tutorials.
 
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
-
 
 ## Tech Support & Product Discussion
 
@@ -1001,18 +1008,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
