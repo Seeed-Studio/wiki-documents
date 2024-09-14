@@ -915,67 +915,6 @@ void app_main(void)
 #### UART Output
 
 ```shell
-I (26) boot: ESP-IDF v5.3 2nd stage bootloader
-I (27) boot: compile time Sep 14 2024 01:26:38
-I (27) boot: Multicore bootloader
-I (30) boot: chip revision: v0.2
-I (33) qio_mode: Enabling default flash chip QIO
-I (39) boot.esp32s3: Boot SPI Speed : 80MHz
-I (43) boot.esp32s3: SPI Mode       : QIO
-I (48) boot.esp32s3: SPI Flash Size : 8MB
-I (53) boot: Enabling RNG early entropy source...
-I (58) boot: Partition Table:
-I (62) boot: ## Label            Usage          Type ST Offset   Length
-I (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000
-I (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000
-I (84) boot:  2 factory          factory app      00 00 00010000 00177000
-I (92) boot: End of partition table
-I (96) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=11604h ( 71172) map
-I (115) esp_image: segment 1: paddr=0002162c vaddr=3fc96700 size=03114h ( 12564) load
-I (118) esp_image: segment 2: paddr=00024748 vaddr=40374000 size=0b8d0h ( 47312) load
-I (130) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=315e4h (202212) map
-I (161) esp_image: segment 4: paddr=0006160c vaddr=4037f8d0 size=06d64h ( 28004) load
-I (175) boot: Loaded app from partition at offset 0x10000
-I (175) boot: Disabling RNG early entropy source...
-I (186) octal_psram: vendor id    : 0x0d (AP)
-I (187) octal_psram: dev id       : 0x02 (generation 3)
-I (187) octal_psram: density      : 0x03 (64 Mbit)
-I (192) octal_psram: good-die     : 0x01 (Pass)
-I (197) octal_psram: Latency      : 0x01 (Fixed)
-I (202) octal_psram: VCC          : 0x01 (3V)
-I (207) octal_psram: SRF          : 0x01 (Fast Refresh)
-I (213) octal_psram: BurstType    : 0x01 (Hybrid Wrap)
-I (219) octal_psram: BurstLen     : 0x01 (32 Byte)
-I (224) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)
-I (230) octal_psram: DriveStrength: 0x00 (1/1)
-I (236) esp_psram: Found 8MB PSRAM device
-I (240) esp_psram: Speed: 40MHz
-I (244) cpu_start: Multicore app
-I (979) esp_psram: SPI SRAM memory test OK
-I (988) cpu_start: Pro cpu start user code
-I (988) cpu_start: cpu freq: 160000000 Hz
-I (988) app_init: Application information:
-I (991) app_init: Project name:     Camera-and-SdCard-FreeRTOS
-I (997) app_init: App version:      1
-I (1002) app_init: Compile time:     Sep 14 2024 01:26:20
-I (1008) app_init: ELF file SHA256:  819293b15...
-I (1013) app_init: ESP-IDF:          v5.3
-I (1018) efuse_init: Min chip rev:     v0.0
-I (1023) efuse_init: Max chip rev:     v0.99
-I (1028) efuse_init: Chip rev:         v0.2
-I (1033) heap_init: Initializing. RAM available for dynamic allocation:
-I (1040) heap_init: At 3FC9A1C8 len 0004F548 (317 KiB): RAM
-I (1046) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
-I (1052) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
-I (1059) heap_init: At 600FE100 len 00001EE8 (7 KiB): RTCRAM
-I (1065) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator
-I (1073) spi_flash: detected chip: gd
-I (1077) spi_flash: flash io: qio
-W (1081) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
-I (1092) sleep: Configure to isolate all GPIO pins in sleep state
-I (1099) sleep: Enable automatic switching of GPIO sleep configuration
-I (1106) main_task: Started on CPU0
-I (1110) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
 I (1119) main_task: Calling app_main()
 I (1123) sdcard: Initializing SD card
 I (1127) sdcard: Using SPI peripheral
