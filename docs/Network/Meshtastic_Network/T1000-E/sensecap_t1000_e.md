@@ -28,9 +28,9 @@ Select device: `T1000-E Tracker Card`<br/>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
 
 
-Click `Open Serial Monitor`, connect the device to your PC, check the serial log and you will see the device name.
+Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name2.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
 
 
