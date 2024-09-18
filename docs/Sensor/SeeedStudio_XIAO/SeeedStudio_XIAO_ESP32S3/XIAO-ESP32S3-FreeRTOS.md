@@ -536,8 +536,8 @@ The setup would look something like this :
         <th>Back</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/6.jpeg" style={{width:250, height:'auto'}}/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/7.jpeg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/6.jpeg" style={{width:250, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/7.jpeg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
   </table>
 </div>
@@ -910,7 +910,7 @@ void app_main(void)
 
 ### Output
 
-<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/8.gif" alt="pir" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/8.gif" alt="pir" width={600} height="auto" /></p>
 
 #### UART Output
 
@@ -968,7 +968,7 @@ I (34117) camera: Picture taken! Its size was: 51968 bytes
 
 #### Output Image
 
-<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
 
 ## FreeRtos for Arduino IDE
 
@@ -1220,7 +1220,7 @@ void taskBME680(void* pvParameters) {
 
 ### Output
 
-<p style={{textAlign: 'center'}}><img src="../../../Contribution/Contributor_Files/xiao-esp32s3-freertos/5.gif" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/5.gif" alt="pir" width={600} height="auto" /></p>
 
 ### Serial Monitor Output
 

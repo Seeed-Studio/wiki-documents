@@ -81,11 +81,11 @@ Do the following steps :
 
 - Using Windows Formatter
 
-<div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/1.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/sdcard1.png" style={{width:500, height:'auto'}}/></div>
 
 - Using [SD Card Formatter](https://www.sdcard.org/downloads/formatter/) (third-Party software)
 
-<div style={{textAlign:'center'}}><img src="../../../Contribution/Contributor_Files/xiao_esp32s3_sense_filesystem/2.png" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/sdcard2.png" style={{width:500, height:'auto'}}/></div>
 
 **Note : **
 
