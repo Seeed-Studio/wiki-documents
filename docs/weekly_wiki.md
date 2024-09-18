@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/09/2024
+  date: 09/18/2024
   author: Frank
 ---
 
@@ -17,17 +17,18 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 9th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 16th and a brand new week has begun! Check out what Seeed Studio did last week!
 
-## Latest Wiki Launched
+<!-- ## Latest Wiki Launched
 
-### [Getting start with reComputer J20](https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/)
 
 ### [T1000-E Tracker](https://wiki.seeedstudio.com/t1000_e_intro/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
 
 It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
+
+### [Getting start with reComputer J20](https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/)
 
 <div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110061363_preview-07_1.jpg"/></div>
 
@@ -57,13 +58,18 @@ This project integrates voice input, large model response, and voice output func
 <iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/xiao_mouse.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-Through this tutorial, you will learn how to create a simple mouse using the XIAO RA4M1 and Grove Thumb Joystick.
+Through this tutorial, you will learn how to create a simple mouse using the XIAO RA4M1 and Grove Thumb Joystick.-->
 
 
 
-<!-- ## Existing Wiki Updated
+## Existing Wiki Updated
 
-### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+### [XIAO RA4M1 Play with RGB LEDs](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds)
+
+We've added an [example](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds) of XIAO RA4M1 Play with RGB LEDs.
+
+
+<!-- ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
 We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
 
@@ -85,13 +91,15 @@ We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-r
 
 ## The Efforts of Contributor
 
-<!-- ### [Train and deploy a custom classification model with YOLOv8](https://wiki.seeedstudio.com/train_and_deploy_a_custom_classification_model_with_yolov8/)
+### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
 
-Thanks our contributor Bruno to create the application tutorial for reComputer.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-On this guide we will explain how to train and deploy a custom classification model with YOLOv8
+FreeRTOS is a collection of C libraries comprised of a real-time kernel and a set of modular libraries that implement complementary functionality. The FreeRTOS kernel is a real-time kernel (or real-time scheduler) that enables applications built on FreeRTOS to meet their hard real-time requirements. It enables applications to be organized as a collection of independent threads of execution.
 
-<iframe width={560} height={315} src="https://www.youtube.com/embed/ovoSMaoA9As?si=-d2buntx0T5oRtr4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> -->
+This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.
+
+
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
@@ -172,6 +180,7 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
 - [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
+- [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 
 </details>
 

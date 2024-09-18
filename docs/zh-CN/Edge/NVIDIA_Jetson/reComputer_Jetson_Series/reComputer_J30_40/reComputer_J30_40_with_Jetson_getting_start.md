@@ -158,7 +158,7 @@ reComputer J3010是采用Jetson Orin Nano 4GB打造的强大且紧凑的智能�
       <td colSpan='4' align='center'>1* 40-Pin Expansion header,1* 12-Pin Control and UART header</td>
     </tr>
     <tr>
-  colSpan={4}    <td>RTC</td>
+      <td>RTC</td>
       <td colSpan='4' align='center'>RTC 2-pin, RTC socket (supports CR1220 but not included)</td>
     </tr>
     <tr>
