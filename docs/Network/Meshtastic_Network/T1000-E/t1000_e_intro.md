@@ -180,13 +180,3 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 |Press three times|Switch on/off the GPS|-|-|
 |Press and hold for 5s|Power off|Falling melody||
 
-
-## Get Started
-
-### Configuration
-
-
-Press the button once to power on the T1000-E tracker, the Bluetooth pairing will be activated automatically.
-
-#### Device Connection
-
