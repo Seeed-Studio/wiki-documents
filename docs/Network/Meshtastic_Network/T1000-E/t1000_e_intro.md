@@ -173,10 +173,19 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 
 ### Button
 
-|Button action|Description|Buzzer|LED|
-|- |- |- |- |
-|Press once|Power on|Rising melody|The led lights up and then flashes quickly|
-|Press twice|Update node/location info|-|-|
-|Press three times|Switch on/off the GPS|-|-|
-|Press and hold for 5s|Power off|Falling melody||
+|Button action|Description|Buzzer|
+|- |- |- |
+|Press once|Power on|Rising melody|
+|Press twice|Update node/location info|-|
+|Press three times|Switch on/off the GPS|-|
+|Press and hold for 5s|Power off|Falling melody|
 
+
+
+### LED
+
+|Device action|Description|
+|- |- |
+|Power on|Lights up and then flashes quickly|
+|DFU mode|Solid on|
+|Working|Random flashing|
