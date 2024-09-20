@@ -20,6 +20,9 @@ last_update:
     <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watch Video</font></span></strong>
+    </a>
 </div>
 
 ## Catalogue for SenseCAP Watcher
