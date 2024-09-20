@@ -1,7 +1,7 @@
 ---
 description: User will learn how to integrate Watcher with the Grove system, enabling them to expand its capabilities and connect with a wide range of sensors and peripherals.
-title: 3# As a Grove Sensor
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
+title: 3# As a sensor & Use Grove
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg
 slug: /watcher_as_grove
 sidebar_position: 4
 last_update:
@@ -9,11 +9,19 @@ last_update:
   author: Citric
 ---
 
-# As a Grove sensor
+# As a sensor & Use Grove
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
-In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a Grove sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
+**SenseCAP Watcher will be live on Kickstarter on September 12, proudly featuring the official 'Project We Love' badge! Subscribe now to stay informed～**
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+</div><br />
+
+In this wiki, we will explore the exciting possibilities that arise when Watcher, acting as a sensor, leverages its UART (Universal Asynchronous Receiver/Transmitter) functionality. By enabling UART communication, Watcher can transmit valuable data such as captured images and recognition results through its UART interface, located on the back of the device. This opens up a world of opportunities for integrating Watcher with various hardware platforms and creating innovative applications.
 
 Throughout this wiki, we will dive into the details of reading and interpreting the data output from Watcher's UART interface. Additionally, we will provide comprehensive tutorials on how to parse and utilize this data using popular development boards and platforms, including XIAO, Arduino, Raspberry Pi, and Jetson.
 
@@ -46,11 +54,17 @@ To enable the UART alarm function, you have two options:
 
    - Access the **Detail Config** of the task you want to configure.
    - Locate the **Action** section.
-   - Check the box to enable the Serial Port / UART.
+   - Check the box to enable the **Serial Port / UART Output**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/61.png" style={{width:250, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/86.png" style={{width:250, height:'auto'}}/></div><br />
+
+:::tip
+Please choose whether you need to enable the output of images according to your actual application scenario. If **Include base64 image** is enabled, then your MCU needs **at least 70k memory** to cache the image.
+:::
 
 Once you have enabled the UART alarm function using either of the above methods, Watcher will output the necessary alarm information via UART whenever it detects the specified alarm content. Ensure that Watcher is connected to the appropriate receiving device, such as a microcontroller or a computer with a serial terminal, to capture and process the alarm information transmitted through UART.
+
+
 
 ## Reading UART Output from Watcher
 
@@ -87,6 +101,10 @@ When `output_format` is set to 0, the structure of the UART output packet is as 
 - `Boxes Count`: The number of detected object boxes, 4-byte unsigned integer in little-endian. Only included when `include_boxes` is `true`.
 - `Box Structure`: The structure of a detected object box, each box occupies 10 bytes, including coordinates, score, and target class ID. Only included when `include_boxes` is `true`.
 
+:::note
+The recognised boxes (boxes) message will not be received at this time, as the corresponding feature of Watcher is still under development and has not yet been reported in the latest v1.1 release.
+:::
+
 ### JSON Output Format
 
 When `output_format` is set to 1, the structure of the UART output packet is as follows:
@@ -111,6 +129,10 @@ When `output_format` is set to 1, the structure of the UART output packet is as 
 
 The JSON packet is separated by `\r\n`.
 
+:::note
+The recognised boxes (boxes) message will not be received at this time, as the corresponding feature of Watcher is still under development and has not yet been reported in the latest v1.1 release.
+:::
+
 ### Configuration Options
 
 - `output_format`: Controls the format of the UART output, default is 1 (JSON format).
@@ -120,6 +142,10 @@ The JSON packet is separated by `\r\n`.
 - `include_boxes`: Boolean (true | false), controls whether the boxes are included in the output, default is `true`.
 
 Note: If any configuration field is omitted, the default value will be implied.
+
+:::note
+The recognised boxes (boxes) message will not be received at this time, as the corresponding feature of Watcher is still under development and has not yet been reported in the latest v1.1 release.
+:::
 
 ## XIAO ESP32 Series & Watcher
 
@@ -719,17 +745,19 @@ That's it! You have now learned how to connect the Watcher to a reComputer, read
 
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**[Watcher Quick Start Series 3# : As a Grove sensor](https://wiki.seeedstudio.com/watcher_as_grove)**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
+
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 
 ## Tech Support & Product Discussion

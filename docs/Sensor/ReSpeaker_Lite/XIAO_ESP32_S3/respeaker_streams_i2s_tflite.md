@@ -40,6 +40,59 @@ Open the `streams-generator-i2s.ino` sketch in the Arduino IDE.
 
 Upload the sketch to your reSpeaker Lite board.
 
+```cpp
+#include "AudioTools.h"
+#include "AudioLibs/TfLiteAudioStream.h"
+#include "model.h"  // tensorflow model
+
+I2SStream i2s;  // Audio source
+TfLiteAudioStream tfl;  // Audio sink
+const char* kCategoryLabels[4] = {
+    "silence",
+    "unknown",
+    "yes",
+    "no",
+};
+StreamCopy copier(tfl, i2s);  // copy mic to tfl
+int channels = 1;
+int samples_per_second = 16000;
+
+void respondToCommand(const char* found_command, uint8_t score,
+                      bool is_new_command) {
+//  if (is_new_command) {
+    char buffer[80];
+    sprintf(buffer, "Result: %s, score: %d, is_new: %s", found_command, score,
+            is_new_command ? "true" : "false");
+    Serial.println(buffer);
+//  }
+}
+
+void setup() {
+  Serial.begin(115200);
+  AudioLogger::instance().begin(Serial, AudioLogger::Warning);
+
+  // setup Audioi2s input
+  auto cfg = i2s.defaultConfig(RX_MODE);
+  cfg.channels = channels;
+  cfg.sample_rate = samples_per_second;
+  cfg.use_apll = false;
+  cfg.buffer_size = 512;
+  cfg.buffer_count = 16;
+  i2s.begin(cfg);
+
+  // Setup tensorflow output
+  auto tcfg = tfl.defaultConfig();
+  tcfg.setCategories(kCategoryLabels);
+  tcfg.channels = channels;
+  tcfg.sample_rate = samples_per_second;
+  tcfg.kTensorArenaSize = 10 * 1024;
+  tcfg.respondToCommand = respondToCommand;
+  tcfg.model = g_model;
+  tfl.begin(tcfg);
+}
+
+void loop() { copier.copy(); }
+```
 
 Open the `Serial Monitor` to view the output and any log messages.
 
@@ -74,3 +127,6 @@ Open the `Serial Monitor` to view the output and any log messages.
 * The TensorFlow Lite model can be replaced with your own trained model by updating the model.h file.
 
 
+### Resource
+
+[TensorFlow Lite library](https://github.com/limengdu/reSpeaker_Lite-Arduino-Library/tree/main/examples/streams-i2s-tflite)

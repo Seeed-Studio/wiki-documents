@@ -4,14 +4,22 @@
     "https://wiki.seeedstudio.com/"
   ],
   "selectors": {
-    "default": {
-      "lvl1": "header h1",
-      "lvl2": "article h2",
-      "lvl3": "article h3",
-      "lvl4": "article h4",
-      "lvl5": "article h5, article td:first-child",
-      "lvl6": "article h6",
-      "text": "article p, article li, article td:last-child"
+    "lvl0": {
+      "selector": "title",
+      "type": "css",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "h1.anchor",
+    "lvl2": "h2.anchor",
+    "lvl3": "h3.anchor",
+    "lvl4": "h4.anchor",
+    "text": "article p, article li",
+    "last_updated": {
+      "selector": "time[datetime]",
+      "type": "css",
+      "global": true,
+      "default_value": ""
     }
   },
   "stop_urls": [
@@ -44,6 +52,5 @@
       "type"
     ]
   },
-  "js_render": null,
-  "nb_hits": 865
+  "js_render": false
 }

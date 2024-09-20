@@ -17,9 +17,9 @@ last_update:
 <iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/watcher_ifttt.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## Part 1. What is IFTTT
+## Part 1. What is [IFTTT (If This Then That)](https://ifttt.com/)
 
-IFTTT (If This Then That) is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
+ IFTTT is a web-based service that allows developers to create automations and integrations between various apps, devices, and services without complex programming. It enables users to define simple conditional statements called "applets" that trigger actions based on specific events. It provides a user-friendly interface and a vast library of pre-built applets, making it accessible for developers to create powerful automations and integrations efficiently.
 
 ## Part 2. How to configure IFTTT
 
@@ -114,7 +114,11 @@ When finished, don't forget to **Deploy** it.
 
 ### Step 6.Send a task to Watcher
 
-If you don't know how to run a task in Watcher, [please refer here.](https://wiki.seeedstudio.com/getting_started_with_watcher_task) Here provide very detailed steps for your reference.
+First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 ### Step 7.Check those message in IFTTT and Phone
 
