@@ -16,7 +16,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/Watcher_MongoDB_Cover.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**MongoDB** is a powerful, cross-platform document database that excels in handling both structured and unstructured data. Its flexible, schema-less data model is based on JSON-like documents, making it an excellent choice for dynamic applications requiring ad hoc queries and indexing.
+[**MongoDB**](https://www.mongodb.com/) is a powerful, cross-platform document database that excels in handling both structured and unstructured data. Its flexible, schema-less data model is based on JSON-like documents, making it an excellent choice for dynamic applications requiring ad hoc queries and indexing.
 
 Using MongoDB provides a straightforward method to **store and utilize data from the Watcher for further processing or other project applications.**
 
@@ -25,6 +25,13 @@ This tutorial will guide you through using the Watcher API and Node-RED to seaml
 ## Part 1. Set up Watcher in Node-RED
 
 ### Step 1. Install Node-RED
+
+Fisrt of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
 Node-RED is required for this setup, along with the Watcher API. If you haven't installed Node-RED or connected it with the Watcher API, start here: [**Watcher to Node-RED Quick Start**](https://wiki.seeedstudio.com/watcher_to_node_red).
 
 ### Step 2. Prepare data for MongoDB

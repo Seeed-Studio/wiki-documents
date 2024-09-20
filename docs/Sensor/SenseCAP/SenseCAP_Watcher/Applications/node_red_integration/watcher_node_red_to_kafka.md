@@ -15,7 +15,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_kafka_image/head_image.png" style={{width:1000, height:'auto'}}/></div>
 
-## Part 1.What is Kafka
+## Part 1.What is [Kafka](https://kafka.apache.org/)
 
 Apache Kafka is a distributed event streaming platform designed for high-throughput, fault-tolerant data processing. It enables real-time data feeds by allowing producers to publish messages to topics, while consumers can subscribe to these topics to process the data. Kafka is widely used for building data pipelines, real-time analytics, and integrating various data sources. Its robust architecture ensures scalability and durability, making it a popular choice for modern data-driven applications.
 
@@ -168,7 +168,11 @@ Any change, you should click the **Deploy** button.
 
 ## Part 4.Run a task in Watcher
 
-1. Run a task in Watcher, if you don't know how to run a task, [please refer here.](https://wiki.seeedstudio.com/getting_started_with_watcher_task)
+1. First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
 2. When you finish running a task in watcher, you should [refer this link](https://wiki.seeedstudio.com/watcher_to_node_red/) to send watcher message to Node-RED.
 

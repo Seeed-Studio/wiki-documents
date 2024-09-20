@@ -5,7 +5,7 @@ keywords:
 - watcher
 - Node-Red
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/cover.png
-slug: /watcher_node_red
+slug: /watcher_to_node_red
 sidebar_position: 1
 last_update:
   date: 06/28/2024
@@ -14,7 +14,7 @@ last_update:
 
 # Watcher to Node-RED Quick Start
 
-**Node-RED** is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
+[**Node-RED**](https://nodered.org/) is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.
 
 It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.
 

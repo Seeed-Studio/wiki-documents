@@ -65,7 +65,7 @@ First of all, you need to install the peripheral drivers for this board. These a
     <tr>
       <td>6.0</td>
       <td>36.3</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/Orin-AGX-H01/AGX-Orin-H01-JP6.0.zip?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=5319384300&Signature=DzFtDLbO6tqFEA55OqageSQuJvo%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Ed8fVBfupt1Locb8RG9IvCUB5AsQ06SI9x_FJbJ7Batytw?e=Z8gTcZ" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
 </table>

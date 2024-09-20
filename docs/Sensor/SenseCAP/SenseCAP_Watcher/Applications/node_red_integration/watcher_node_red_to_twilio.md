@@ -14,10 +14,10 @@ last_update:
 # Watcher To Twilio Quick Start
 
 <div class="table-center">
-<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/watcher_twilio.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="800" height="450" src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/watcher_twilio.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## Part 1. What is Twilio
+## Part 1. What is [Twilio](https://www.twilio.com/)
 
 Twilio is a leading cloud communications platform for developers. It offers a set of APIs to integrate voice, video, and messaging capabilities into applications. With Twilio, developers can easily build powerful communication features such as voice calls, video chat, and SMS messaging. It provides user-friendly tools and reliable infrastructure, making it a top choice for developers to create innovative applications and improve user experiences. Twilio operates on a pay-as-you-go model, allowing developers to only pay for the specific communication services they use.
 
@@ -75,11 +75,17 @@ If you don't know how to send message from watcher to Node_RED yet, [please clic
 
 ### Get all results
 
-**Step 1.** Drag sensecap **OpenStream** module and **debug** module to workspace and configure them. If you don't know how to configure, [please click here](https://wiki.seeedstudio.com/watcher_to_node_red/). Connect them and Click the **Deploy** button on the right upside coner.
+**Step 1.** Run a task in Watcher.
+
+First of all, you need to run a task in Watcher following the video below. If you want to know more [please click here](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+<div class="table-center">
+<iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+**Step 2.** Drag sensecap **OpenStream** module and **debug** module to workspace and configure them. If you don't know how to configure, [please click here](https://wiki.seeedstudio.com/watcher_to_node_red/). Connect them and Click the **Deploy** button on the right upside coner.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_twilio_image/101.png" style={{width:700, height:'auto'}}/></div>
-
-**Step 2.** Run a task in Watcher, if you don't know how to run a task, [please refer here.](https://wiki.seeedstudio.com/getting_started_with_watcher_task)
 
 **Step 3.** You will receive message at both **debug page** and **Twilio message** on your phone.
 

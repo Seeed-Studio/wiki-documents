@@ -573,6 +573,10 @@ raspi-gpio set 21 op dh
 The reComputer R1000 is equipped with 3 sets of RS485 interface using 3-pin connector, which is isolated for both signal and power to ensure safe and reliable operation in industrial and automation applications. The RS485A and RS485B signals are isolated using capacitive isolation, which provides excellent EMI immunity and meets the high-speed communication requirements of the RS485 interface.
 By default, 120Ω terminal resistors is not installed. However, the packaging box includes five surface-mount resistors. If needed, users should solder the resistor onto the device themselves.
 
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position.png" /></div>
+
+<div align="left"><img width={200} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/resistors_position2.png" /></div>
+
 :::note
 The RS485 interface uses an isolated power supply, which means that the ground signal for external devices connected to the RS485 interface should be connected to the GND_ISO pin.
 
@@ -1478,7 +1482,7 @@ Another way to use this function is Initiate a shutdown when GPIO pin changes. T
 Use `/boot/overlays/README` as reference, then modify `/boot/config.txt`. 
 
 ```bash
-dtoverlay=gpio-shutdown, gpio_pin=GPIO25,active_low=1
+dtoverlay=gpio-shutdown,gpio_pin=25,active_low=1
 ```
 
 :::note
@@ -1494,10 +1498,10 @@ import time,os
 
 num = 0
 
-GPIO.setmode(GPIO,BCM)
+GPIO.setmode(GPIO.BCM)
 #set GPIO25 as input mode
 #add 500ms jitter time for software stabilization
-GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_DOWN)
+GPIO.setup(25,GPIO.IN,pull_up_down = GPIO.PUD_UP)
 GPIO.add_event_detect(25,GPIO.FALLING, bouncetime = 500) 
 while True:
   if GPIO.event_detected(25):

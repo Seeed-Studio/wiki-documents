@@ -258,59 +258,87 @@ sensor.set_interrupt(INT_102_STEP,ENABLE); // modified
 
 #### Software
 
-- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment install the grove.py to your raspberry pi.
+- **Step 2**. Excute below commands to run the code.
 
 ```
-cd ~
-git clone https://github.com/Seeed-Studio/grove.py
-
-```
-
-- **Step 3**. Excute below commands to run the code.
-
-```
-cd grove.py/grove
-python grove_uv_sensor.py 
-
+# virutalenv for Python3
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_uv_sensor
 ```
 
 Following is the grove_uv_sensor.py code.
 
 ```python
-
-
 from __future__ import print_function
-import time, sys, signal, atexit
-from upm import pyupm_veml6070 as veml6070
+from grove.i2c import Bus
+import time
+
+
+# I2C address of the device
+VEML6070_DEFAULT_ADDRESS				= 0x38
+
+# VEML6070 Command Set
+VEML6070_CMD_ACK_DISABLE				= 0x00 # Acknowledge Disable
+VEML6070_CMD_ACK_ENABLE					= 0x20 # Acknowledge Enable
+VEML6070_CMD_ACK_THD_102				= 0x00 # Acknowledge threshold 102 Steps
+VEML6070_CMD_ACK_THD_145				= 0x10 # Acknowledge threshold 145 Steps
+VEML6070_CMD_IT_1_2T					= 0x00 # Integration time = 1/2T
+VEML6070_CMD_IT_1T						= 0x04 # Integration time = 1T
+VEML6070_CMD_IT_2T						= 0x08 # Integration time = 2T
+VEML6070_CMD_IT_4T						= 0x0C # Integration time = 4T
+VEML6070_CMD_RESERVED					= 0x02 # Reserved, Set to 1
+VEML6070_CMD_SD_DISABLE					= 0x00 # Shut-down Disable
+VEML6070_CMD_SD_ENABLE					= 0x01 # Shut-down Enable
+VEML6070_CMD_READ_LSB					= 0x38 # Read LSB of the data
+VEML6070_CMD_READ_MSB					= 0x39 # Read MSB of the data
+
+class VEML6070():
+	def __init__(self, address = VEML6070_DEFAULT_ADDRESS):
+		self._addr = address
+		self._bus  = Bus()
+		self.write_command()
+	
+	def write_command(self):
+		"""Select the UV light command from the given provided values"""
+		COMMAND_CONFIG = (VEML6070_CMD_ACK_DISABLE | VEML6070_CMD_IT_1_2T | VEML6070_CMD_SD_DISABLE | VEML6070_CMD_RESERVED)
+		self._bus.write_byte(VEML6070_DEFAULT_ADDRESS, COMMAND_CONFIG)
+	
+	def read_uvlight(self):
+		"""Read data back VEML6070_CMD_READ_MSB(0x73) and VEML6070_CMD_READ_LSB(0x71), uvlight MSB, uvlight LSB"""
+		data0 = self._bus.read_byte(VEML6070_CMD_READ_MSB)
+		data1 = self._bus.read_byte(VEML6070_CMD_READ_LSB)
+		
+		# Convert the data
+		uvlight = data0 * 256 + data1
+		
+		return {'u' : uvlight}
+
 
 def main():
-    # Instantiate a Vishay UV Sensor on the I2C bus 0
-    veml6070_sensor = veml6070.VEML6070(0);
 
-    ## Exit handlers ##
-    # This function stops python from printing a stacktrace when you hit control-C
-    def SIGINTHandler(signum, frame):
-        raise SystemExit
+	veml6070 = VEML6070()
 
-    # This function lets you run code on exit, including functions from abpdrrt005pg2a5
-    def exitHandler():
-        print("Exiting")
-        sys.exit(0)
+	## Exit handlers ##
+	# This function stops python from printing a stacktrace when you hit control-C
+	def SIGINTHandler(signum, frame):
+		raise SystemExit
 
-    # Register exit handlers
-    atexit.register(exitHandler)
-    signal.signal(signal.SIGINT, SIGINTHandler)
-
-    # Read the value every second and detect the pressure
-    while(1):
-        print("UV Value: {0}".format(veml6070_sensor.getUVIntensity()))
-        time.sleep(1)
+	# This function lets you run code on exit, including functions from abpdrrt005pg2a5
+	def exitHandler():
+		print("Exiting")
+		sys.exit(0)
+	
+	while True:
+		light = veml6070.read_uvlight()
+		print("UV Value: {0}".format(light['u']))
+		print(" *********************************** ")
+		time.sleep(1)
 
 if __name__ == '__main__':
-    main()
-
-
+	main()
 ```
 
 :::tipsuccess
@@ -319,7 +347,7 @@ If everything goes well, you will be able to see the following result
 
 ```python
 
-pi@raspberrypi:~/grove.py/grove $ python grove_uv_sensor.py 
+(env)pi@raspberrypi:~ grove_uv_sensor
 UV Value: 0
 UV Value: 0
 UV Value: 0

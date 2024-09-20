@@ -11,7 +11,7 @@ last_update:
 ---
 
 <div class="table-center">
-<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/kafka_xiao.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/kafka_xiao.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
 Our cutting-edge processing node, Kafka-ESP32, combines the power of Apache Kafka and ESP32C6 microcontrollers to deliver an efficient solution for handling IoT data streams. By using the XIAO ESP32C6 with the DHT20 environmental sensor, data is collected and seamlessly sent to Apache Kafka via the ESP32C6. Kafka's high-throughput, low-latency messaging capabilities enable real-time data processing and analysis, while its distributed architecture allows for effortless scalability. Kafka-ESP32 empowers you to develop custom applications and integrations, revolutionizing the way you manage and utilize your IoT assets in today's data-driven landscape.

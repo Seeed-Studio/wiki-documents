@@ -259,6 +259,12 @@ You need to prepare the following hardware before getting started with reCompute
 - HDMI cable
 - Keyboard and Mouse
 
+:::info
+We recommend using a physical machine as the host rather than a virtual machine.
+
+Please ensure that your host machine has more than 50GB of free space.
+:::
+
 ### Enter Force Recovery Mode
 
 Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. 
@@ -296,7 +302,7 @@ Here we offer 2 different methods of flashing.
 2. Download official NVIDIA L4T, use the included hardware periheral drivers and flash to device
 
 :::note
-The first method download is around 14GB and the second method download is about 3GB
+The first method download is around 14GB and the second method download is about 3GB.
 :::
 
 <Tabs>
@@ -315,32 +321,33 @@ The first method download is around 14GB and the second method download is about
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-orin-nx-16g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870281&Signature=1fgbjlXkxxYq0nbbI82JAFjPLWk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EcXVegQs83tJpv3kmJPMmSEB8M9djK_gWgJapIJnOJQeUw?e=ntbXLi" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={6}>5.1.1</td>
       <td rowSpan={6}>35.3.1</td>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-orin-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870306&Signature=9pyAF3uj9maweRP4SL0shHIfOX8%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EStCSSWeyUtLkJXMj5Y6tXcBru2PIQNHLl6p2BZsRbzxjA?e=Gaaa6m" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-orin-nano-8g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870345&Signature=nhhVPgAWEUcC0AJIORTh3ckFHmI%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ERgyc60CqY9Aog6BMW9-yqQBj8pMaakSFTzHHvb4edt_eg?e=9qFHKp" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-orin-nano-4g-industrial-5.1-35.3.1-2023-08-05.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870368&Signature=5QiXDpPFnURBZJr8zstGORsjTNs%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eb7J_TSNsDBCrvc1RbSOmnoBqmjR9jYhkvZpdQJOzkH5KA?e=h4r74v" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J2012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-xavier-nx-16g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870405&Signature=FOv7yPe1l09UWA5vjxgOUUlq7sg%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Ef_fEAq0aA5JksfnEz62JKABfYTUzlTdOxkiKwoThp17xg?e=UlSs7A" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J2011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp5.1.1/mfi_recomputer-xavier-nx-8g-industrial-5.1-35.3.1-2023-08-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4874870442&Signature=EZx1%2FL8fEozgcAlqbv32XPEQaww%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EVVUAexfVKxDnjbUGtYrJhEB1He6ZXIAD4uriNP76fxbMg?e=kGYF6h" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
   </table>
+
 
 
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
@@ -356,7 +363,7 @@ sudo tar -xvf <file_name>.tar.gz
 - **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
-cd mfi_p3509-a02+p3767-0000
+cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
@@ -498,21 +505,21 @@ sudo apt install nvidia-jetpack -y
   <tbody>
     <tr>
       <td>reComputer Industrial J4012</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-16g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638275&Signature=9oCr9TTuvLArIg3Vi3dP8JWPWds%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfJqxgk9wHVEjvu6W0qOe5YBjqKtnimUodCivWsMMzrcxA?e=ijoe7Z" target="_blank" rel="noopener noreferrer">Download</a></td>
       <td rowSpan={6}>6.0</td>
       <td rowSpan={6}>36.3.0</td>
     </tr>
     <tr>
       <td>reComputer Industrial J4011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nx-8g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=5321639726&Signature=xfU99UHgmquTIs90AnoLkO%2F4Tbk%3D" target="_blank" rel="noopener noreferrer">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETCtbIlpQKRBvcFKPDSF7j4BNIUPZdS7RP6J9c0Zk9-zlQ?e=sTSh1W" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3011</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-8g-j201-6.0-36.3.0-2024-07-04.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638465&Signature=8EhQ0tZkKpSlppRJ2LLg1%2BAjdmI%3D">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EeGh5q1ztmBLrWfC5pbwsEcBbopBGR4M614-xi-ePlla8w?e=YFPGII" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
     <tr>
       <td>reComputer Industrial J3010</td>
-      <td><a href="https://nv-jetson-images.oss-us-west-1.aliyuncs.com/reComputer-Industrial/jp6.0/mfi_recomputer-industrial-orin-nano-4g-j201-6.0-36.3.0-2024-07-03.tar.gz?OSSAccessKeyId=LTAI5tKm7UD2hmuFW85cz42T&Expires=4721638490&Signature=VLhKyqalDMVYiRy%2B6%2B10Wj3hVCY%3D">Download</a></td>
+      <td><a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/ETRks_NJG45HrCP514NlI_4BKna6iH3B4zAQQdwMbGS04g?e=UYihom" target="_blank" rel="noopener noreferrer">Download</a></td>
     </tr>
   </tbody>
   </table> 
@@ -530,7 +537,7 @@ sudo tar -xvf <file_name>.tar.gz
 - **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
 
 ```sh
-cd mfi_p3509-a02+p3767-0000
+cd mfi_xxxx
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
 ```
 
