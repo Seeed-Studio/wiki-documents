@@ -184,7 +184,7 @@ Navigate to `Settings` -> `External Notification` -> Enable `GPIO` -> Set `Outpu
 
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={500} height="auto" /></p>
 
 
 </TabItem>
