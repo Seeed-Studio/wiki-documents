@@ -193,9 +193,41 @@ reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included 
 
 ### Prerequisites
 
-- Ubuntu 
-- reComputer J4012/ J4011/ J3010 and J3011
+- Ubuntu Host Computer
+- reComputer J4012/ J4011/ J3010 or J3011
 - USB Type-C data transmission cable
+
+:::info
+We recommend that you use physical ubuntu host devices instead of virtual machines.
+Please refer to the table below to prepare the host machine.
+        
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+        <td  rowspan="2"> JetPack Version </td>
+        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+    </tr>
+    <tr>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
+    </tr>
+    <tr>
+        <td >JetPack 5.x</td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+    </tr>
+  </tbody>
+</table>
+
+:::
 
 ### Enter Force Recovery Mode
 
@@ -519,6 +551,16 @@ sudo apt install -y iwlwifi-modules
 </Tabs>
 
 <!-- Code END -->
+
+
+## Resources
+- [Product details page](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html)
+- [reComputer J30/J40 3D File](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
+- [reComputer J401X Datasheet](http://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-Jetson-J401-w_o-power-adapter-datasheet.pdf)
+- [NVIDIA Jetson Devices and Carrier Boards Comparisions](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed NVIDIA Jetson Product Catalog](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Jetson examples](https://github.com/Seeed-Projects/jetson-examples)
+- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
 ## Tech Support & Product Discussion
 
