@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx'
 import styles from './index.module.scss'
-import { hadwareList, communityList } from './config'
+import { listData,listData1, communityList } from './config'
 import {
   useThemeConfig,
   useColorMode,
@@ -72,7 +72,7 @@ const usageRender = (obj) => {
       </div>
       <div className={clsx(styles.com_wrapper, styles.flex, styles.section_wrapper)}>
         <div className={styles.left_container}>
-          {hadwareList.map((item,index) => {
+          {obj.list.map((item,index) => {
             return (
               <div  className={clsx( styles.flex, styles.tab,activeIndex==index&&styles.active)} onClick={()=>{
                 setActiveIndex(index)
@@ -86,7 +86,7 @@ const usageRender = (obj) => {
         <div className={styles.right_container}>
         <div className={styles.right_wrapper}>
          
-        {hadwareList[activeIndex].brands.map((item) => {
+        {obj.list[activeIndex].brands.map((item) => {
             return (
               <div  className={clsx( styles.prod_item,styles.cursor)}  onClick={()=>toUrl(item.URL)}>
                 <img src={require(`../../../assets/recomputer/${item.img}`).default} alt="" />
@@ -113,14 +113,16 @@ const computerPageA = () => {
         title: 'Jetpack Flash and Hardware Usage',
         desc: `
         Most of our reComputer Jetson products come with NVIDIA JetPack system pre-installed on the device. However, if you want to flash these devices again or flash other devices which do not come with JetPack system, you can follow the below links for step-by-step guidance. We have also included guidance on how to use different hardware peripherals on these NVIDIA Jetson powered devices.
-        `
+        `,
+        list:listData
       })}
        {usageRender({
        class:styles.gray,
         title: 'Jetpack Flash and Hardware Usage',
         desc: `
         Most of our reComputer Jetson products come with NVIDIA JetPack system pre-installed on the device. However, if you want to flash these devices again or flash other devices which do not come with JetPack system, you can follow the below links for step-by-step guidance. We have also included guidance on how to use different hardware peripherals on these NVIDIA Jetson powered devices.
-        `
+        `,
+        list:listData1
       })}
       {communityRender()}
 

@@ -1,4 +1,98 @@
-export const hadwareList = [
+export const listData = [
+  {
+    id: 1,
+    name: 'reComputer',
+    img: '17.png',
+    brands: [
+      {
+        name: 'reComputer J10 SerieseComputer J10 Series',
+        img: '17.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+        href: 'https://www.seeedstudio.com/',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Mini AI PC',
+    img: '17.png',
+    brands: [
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Mini AI PC',
+    img: '17.png',
+    brands: [
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '18.png',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Mini AI PC',
+    img: '17.png',
+    brands: [
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+      },
+      {
+        name: 'reComputer J10 Series',
+        img: '17.png',
+      },
+    ],
+  },
+]
+export const listData1 = [
   {
     id: 1,
     name: 'reComputer',
