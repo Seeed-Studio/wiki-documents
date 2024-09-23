@@ -11,10 +11,12 @@ function getImgUrl(str: string, suffix?: string) {
   return `https://files.seeedstudio.com/wiki/Jetson/${str}.${suffix || 'png'}`
 }
 
-const toUrl=(url:string)=>{
-if(!url) return
-  window.open(url,'_blank')
+const toUrl = (url: string) => {
+  if (!url) return;
+  window.location.href(url, '_blank');  // 在新窗口打开链接
 }
+
+
 const bannerRender = () => {
   return (
     <div className={styles.banner}>
@@ -49,7 +51,7 @@ const communityRender = () => {
           communityList.map((item) => {
             return (
               <div className={clsx(styles.com_item)} onClick={()=>toUrl(item.URL)}>
-                <img src={getImgUrl(item.img)} alt="" />
+                <img src={item.img} alt="" />
                 <div className={clsx(styles.com_title,styles.cursor)} >{item.name}</div>
               </div>
             )
@@ -60,10 +62,10 @@ const communityRender = () => {
   )
 }
 const usageRender = (obj) => {
-  const [activeIndex,setActiveIndex]=useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className={clsx(styles.section, styles.usage,obj.class)}>
+    <div className={clsx(styles.section, styles.usage, obj.class)}>
       <div className={styles.title}>
         {obj.title}
       </div>
@@ -72,34 +74,48 @@ const usageRender = (obj) => {
       </div>
       <div className={clsx(styles.com_wrapper, styles.flex, styles.section_wrapper)}>
         <div className={styles.left_container}>
-          {obj.list.map((item,index) => {
+          {obj.list.map((item, index) => {
             return (
-              <div  className={clsx( styles.flex, styles.tab,activeIndex==index&&styles.active)} onClick={()=>{
-                setActiveIndex(index)
-              }}>
-                <img src={require(`../../../assets/recomputer/${item.img}`).default} alt="" />
-                <div className={styles.name}>{item.name}</div>
+              <div 
+                className={clsx(styles.flex, styles.tab, activeIndex === index && styles.active)}
+                onClick={() => setActiveIndex(index)} // 选中不同的品牌
+              >
+                {/* 上级的 img 和 name 不进行跳转 */}
+                <img 
+                  src={require(`../../../assets/recomputer/${item.img}`).default} 
+                  alt={item.name} 
+                />
+                <div className={styles.name}>
+                  {item.name}
+                </div>
               </div>
             )
           })}
         </div>
         <div className={styles.right_container}>
-        <div className={styles.right_wrapper}>
-         
-        {obj.list[activeIndex].brands.map((item) => {
-            return (
-              <div  className={clsx( styles.prod_item,styles.cursor)}  onClick={()=>toUrl(item.URL)}>
-                <img src={require(`../../../assets/recomputer/${item.img}`).default} alt="" />
-                <div className={styles.name}>{item.name}</div>
-              </div>
-            )
-          })}
-        </div>
+          <div className={styles.right_wrapper}>
+            {/* 只对 brands 的 img 和 name 进行跳转 */}
+            {obj.list[activeIndex].brands.map((brand) => {
+              return (
+                <div 
+                  className={clsx(styles.prod_item, styles.cursor)}  
+                  onClick={() => toUrl(brand.href)} // 点击整个品牌项时跳转
+                >
+                  <img 
+                    src={require(`../../../assets/recomputer/${brand.img}`).default} 
+                    alt={brand.name} 
+                  />
+                  <div className={styles.name}>{brand.name}</div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
   )
 }
+
 const computerPageA = () => {
 
 
