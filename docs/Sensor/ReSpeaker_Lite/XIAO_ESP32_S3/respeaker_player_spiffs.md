@@ -19,6 +19,7 @@ This project demonstrates how to use the reSpeaker Lite board to play MP3 files 
 
 ### Library Required
 
+* [ReSpeaker Lite library](https://github.com/limengdu/reSpeaker_Lite-Arduino-Library.git)
 * [ReSpeaker Lite arduino libhelix](https://github.com/limengdu/reSpeaker_Lite-arduino-libhelix)
 
 ### Functionality
@@ -29,6 +30,15 @@ This project demonstrates how to use the reSpeaker Lite board to play MP3 files 
 * Easy-to-use AudioPlayer class for seamless audio playback
 
 
+### Uploading Files to SPIFFS
+
+You can refer to the [Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/#serial-peripheral-interface-flash-file-system-spiffs) here.
+
+Make sure you have the necessary tools to upload files to SPIFFS. You can use the "ESP32 Sketch Data Upload" tool in the Arduino IDE or an external tool like "ESP32 File Uploader".
+
+Create a folder named "data" in your sketch directory and place the MP3 files you want to play inside it.
+
+Upload the files to SPIFFS using the chosen tool.
 
 ### Code
 
@@ -73,31 +83,14 @@ void loop() {
 
 ### Configuration
 
+`startFilePath`: The directory path where the MP3 files are located in SPIFFS (default: "/").
 
-* Uploading Files to SPIFFS
+`ext`: The file extension of the audio files (default: "mp3").
 
-SPIFFS is a file system intended for SPI NOR flash devices on embedded targets. It supports wear levelling, file system consistency checks, and more.
+You can modify these constants in the sketch to match your specific file structure and requirements.
 
+### Customization
 
+`printMetaData`: This function is called when metadata is extracted from the audio file. You can customize the function to handle the metadata according to your needs.
 
-
-Make sure you have the necessary tools to upload files to SPIFFS. 
-You can use the `ESP32 Sketch Data Upload` tool in the Arduino IDE 1.x or other tools.
-
-:::tip For Arduino IDE 2.x
-**Install**:
-
-Copy the [VSIX file](https://github.com/earlephilhower/arduino-littlefs-upload/releases) to `~/.arduinoIDE/plugins/` on Mac and Linux <br/>
-or `C:\Users\<username>\.arduinoIDE\plugins\` on Windows (you may need to make this directory yourself beforehand). <br/>
-Then restart the IDE.
-
-**Usage**:
-
-For windows: [Ctrl] + [Shift] + [P], then `Upload LittleFS to Pico/ESP8266/ESP32`.<br/>
-For macOS, [⌘] + [Shift] + [P], then `Upload LittleFS to Pico/ESP8266/ESP32`.
-:::
-
-
-Create a folder named "data" in your sketch directory and place the MP3 files you want to play inside it.
-
-Upload the files to SPIFFS using the chosen tool.
+`AudioSourceSPIFFS`: You can change the file filter by uncommenting the line //source.setFileFilter("*Bob Dylan*"); and replacing the filter with your desired criteria.

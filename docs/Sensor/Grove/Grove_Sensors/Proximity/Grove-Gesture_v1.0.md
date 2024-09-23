@@ -7,19 +7,28 @@ keywords:
 image: https://wiki.seeedstudio.com/Grove-Gesture_v1.0/
 slug: /Grove-Gesture_v1.0
 last_update:
-  date: 01/05/2022
+  date: 09/23/2024
   author: gunengyu
 ---
 
-![](https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/400px-Gesture_sensor_3.png)
+<div style={{ textAlign: 'center' }}>
+  <img 
+    src="https://files.seeedstudio.com/wiki/Grove_Gesture_V_1.0/img/400px-Gesture_sensor_3.png" 
+    style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
+  />
+</div>
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Gesture-p-2463.html">
+  <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+  </a>
+</div><br></br>
 
 The sensor on Grove - Gesture is PAJ7620U2 that integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures, and these gestures information can be simply accessed via the I2C bus.
 
 Application: You can use Gesture as an input device to control another grove, or a computer, mobile phone, smart car, robot, and more with a simple swipe of your hand.
 
-<iframe width={800} height={450} src="https://www.youtube.com/embed/i9hnRPuCx-Q" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-
-<p style={{}}><a href="https://www.seeedstudio.com/Grove-Gesture-p-2463.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<iframe class="youtube-video-r" src="https://www.youtube.com/embed/i9hnRPuCx-Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Features
 
@@ -106,7 +115,7 @@ Software Installation.
 - **Step 4.** Start the Arduino IDE, Let's try the up/down demo.
 - **Step 5.** Copy below code and paste to arduino IDE.
 
-```cpp
+```cpp showLineNumbers
 /*
 The following simple demo will show you a very easy application: When you move up, the red led will be turned on, otherwise the red led will be turned off.
 */
@@ -138,7 +147,7 @@ void loop()
 
 - **Step 8.** Let's try the 9 gestures by select **File->Example->Grove_Gesture->paj7620_9gestures**, then select Seeeduino v4 as board manager and correct COM port.
 
-```cpp
+```cpp title="paj7620_9gestures" showLineNumbers
 #include <Wire.h>
 #include "paj7620.h"
 
@@ -281,7 +290,7 @@ void loop()
 - **Step 9.** Click upload and open the Serial Monitor port.
 - **Step 10.** This example can recognize 9 gestures and output the result, including move up, move down, move left, move right, move forward, move backward, circle-clockwise, circle-counter clockwise, and wave. Let's try and see COM port output as below.
 
-```cpp
+```shell
 PAJ7620U2 TEST DEMO: Recognize 9 gestures.
 INIT SENSOR...
 Addr0 =20,  Addr1 =76
@@ -360,24 +369,21 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
 - **Step 2**. Download the source file by cloning the grove.py library.
 
-```
+```shell
 cd ~
 git clone https://github.com/Seeed-Studio/grove.py
-
 ```
 
 - **Step 3**. Excute below commands to run the code.
 
-```
+```shell
 cd grove.py/grove
 python3 grove_gesture_sensor.py 
-
 ```
 
 Following is the grove_gesture_sensor.py  code.
 
-```python
-
+```python title="grove_gesture_sensor.py" showLineNumbers
 import time,sys
 import RPi.GPIO as GPIO
 from grove.i2c import Bus
@@ -900,8 +906,7 @@ if __name__ == "__main__":
     If everything goes well, you will be able to see the following result
 :::
  
-```python
-
+```shell
 pi@raspberrypi:~/grove.py/grove $ python3 grove_gesture_sensor.py 
 wake-up finish.
 Paj7620 initialize register finished.
@@ -912,12 +917,6 @@ Backward
 Right
 Up
 Down
-^CTraceback (most recent call last):
-  File "grove_gesture_sensor.py", line 555, in <module>
-    time.sleep(.1)
-KeyboardInterrupt
-
-
 ```
 
 You can quit this program by simply press ++ctrl+c++.
@@ -962,7 +961,7 @@ python3 gesture_value.py
 
 Here is the code of gesture_value.py
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the Grove - Gesture Sensor v1.0(https://www.seeedstudio.com/depot/Grove-Gesture-p-2463.html)
@@ -1030,7 +1029,7 @@ while True:
 
 - **Step 4.** Here is the screen output.
 
-```cpp
+```cpp showLineNumbers
 pi@raspberrypi:~/Dexter/GrovePi/Software/Python/grove_gesture_sensor $ python3 gesture_value.py 
 wake-up finish.
 Paj7620 initialize register finished.

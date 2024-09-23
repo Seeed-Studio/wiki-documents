@@ -112,7 +112,7 @@ Copy the following codes to Thonny.
 
 We can see that the blue RX_LED is lit up and blinks once per second
 
-```Python
+```python
 from machine import Pin, Timer
  
 led = Pin(18, Pin.OUT)
@@ -138,7 +138,7 @@ We need to prepare:
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-```Python
+```python
 from machine import Pin, Timer
 
 output_4 = Pin(8, Pin.OUT)
@@ -175,7 +175,7 @@ We need to prepare:
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-```Python
+```python
 from machine import Pin, Timer
 
 led = Pin(8, Pin.OUT)
@@ -209,7 +209,7 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
 
 ### I2C Support
 
-```Python
+```python
 from machine import Pin, SoftI2C
 
 i2c = SoftI2C(scl=Pin(9), sda=Pin(8), freq=100000)

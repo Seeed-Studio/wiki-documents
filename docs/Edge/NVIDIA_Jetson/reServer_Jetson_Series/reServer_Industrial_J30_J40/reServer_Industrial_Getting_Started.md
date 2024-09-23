@@ -542,14 +542,29 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 
 - Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
 
-  ```sh
-  sudo -i
-  cd /sys/class/gpio
-  echo 315 > export 
-  cd gpio315
-  echo "out" > direction
-  echo 1 > value
-  ```
+  <Tabs>
+  <TabItem value="Jetpack 5.1.x" label="Jetpack 5.1.x">
+
+    ```sh
+    sudo -i
+    cd /sys/class/gpio
+    echo 315 > export 
+    cd gpio315
+    echo "out" > direction
+    echo 1 > value
+    ```
+
+  </TabItem>
+  <TabItem value="Jetpack 6" label="Jetpack 6">
+
+    ```sh
+    sudo apt update
+    sudo apt install gpiod
+    gpioset gpiochip2 15=1
+    ```
+    
+  </TabItem>
+  </Tabs>
 
 - If you need to configure different IP addresses for each POE interface, follow these instructions:
 
