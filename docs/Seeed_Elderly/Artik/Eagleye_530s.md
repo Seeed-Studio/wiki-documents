@@ -865,7 +865,7 @@ For more information, such as play with Alexa/DuerOS, please refer to [ReSpeaker
 
 - Start recording using the Command Line
 
-```Python
+```python
 arecord -D plughw:1,0 -f cd test.wav # record, please use the arecord -l to check the card and hardware first
 aplay -D plughw:1,0 -f cd test.wav # play, please use the aplay -l to check the card and hardware first
 arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the same time
@@ -875,7 +875,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
 
   - Step 1, We need to run the following script to get the device index number of Mic Array:
 
-    ```Python
+    ```python
     apt install python-pip
     pip install pyaudio
     cd ~
@@ -884,7 +884,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
 
   - Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/get_index.py).
 
-```Python
+```python
 import pyaudio
 
 p = pyaudio.PyAudio()
@@ -910,7 +910,7 @@ Input Device id  8  -  default
 
 - Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://files.seeedstudio.com/wiki/Eagleye_530s/res/record.py) to record a speech.
 
-```Python
+```python
 import pyaudio
 import wave
 
