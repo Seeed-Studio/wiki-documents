@@ -7,7 +7,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /mmwave_for_xiao_to_ha_bt
 last_update:
-  date: 14/09/2024
+  date: 09/14/2024
   author: Allen, Djair
 ---
 
