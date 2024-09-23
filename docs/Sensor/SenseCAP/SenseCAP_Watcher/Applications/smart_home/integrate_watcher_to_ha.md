@@ -185,6 +185,10 @@ Inside the next page, please enter the Watcher's device EUI, you can find Watche
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/5.png" style={{width:500, height:'auto'}}/></div>
 
+:::note
+Please make sure the EUI is all capitalized!
+:::
+
 After **SUBMIT**, Watcher's Home Assistant component will be automatically added to display inside the Dashboard, which should be in a state of no data right now.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/6.png" style={{width:1000, height:'auto'}}/></div>
