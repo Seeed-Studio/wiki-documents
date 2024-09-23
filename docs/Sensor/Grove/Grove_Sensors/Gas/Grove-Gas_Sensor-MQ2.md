@@ -421,7 +421,7 @@ python grove_gas_sensor.py
 
 Here is code of grove_gas_sensor.py:
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the  Grove Gas Sensor
@@ -527,7 +527,7 @@ python grove_gas_sensor.py
 ```
 
 Here is code of grove_gas_sensor.py:
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the  Grove Gas Sensor

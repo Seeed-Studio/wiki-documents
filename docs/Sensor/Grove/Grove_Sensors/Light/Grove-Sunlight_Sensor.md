@@ -295,7 +295,7 @@ pip3 install --upgrade seeed-python-si114x
 
 **Software**
 
-```Python
+```python
 import seeed_si114x
 import time
 import signal

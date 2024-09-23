@@ -414,6 +414,7 @@ i2c:
 
 sensor:
   - platform: aht10
+    variant: AHT20
     temperature:
       name: "Temperature"
     humidity:
