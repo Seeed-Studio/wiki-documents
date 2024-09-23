@@ -596,50 +596,59 @@ When you connect your Watcher via USB, Windows registers two new serial ports. I
 
 Right away, the terminal displays a series of information about the device's memory. If you press enter, a prompt appears and you can type some commands that I list below:
 
-```help  [<string>]``` Print the summary of all registered commands if no arguments are given, otherwise print summary of given command, where <string> is the name of command
+```
+help  [<string>] 
+Print the summary of all registered commands if no arguments are given, otherwise print summary of given command, where <string> is the name of command
 
-```wifi_sta  [-s <ssid>] [-p <password>]``` WiFi is station mode, join specified soft-AP
+wifi_sta  [-s <ssid>] [-p <password>]
+WiFi is station mode, join specified soft-AP
 s <ssid> SSID of AP
 p <password> password of AP
 ota  [-t <int>] [--url=<string>] force ota, ignoring version check
 -t, --ota_type=<int> 0: ai model, 1: himax, 2: esp32
 -url=<string> url for ai model, himax or esp32 firmware
 
-```taskflow  [-iej] [-f <string>]```
+taskflow  [-iej] [-f <string>]
 i, --import import taskflow
 e, --export export taskflow
 f, --file=<string> File path, import or export taskflow json string by SD, eg: test.json
 j, --json import taskflow json string by stdin
 
-**Example: Import taskflow by json string or SD file:**
-```taskflow -i -f "test.json".```
+Example: Import taskflow by json string or SD file: taskflow -i -f "test.json".
+Example: Export taskflow to stdout or SD file: taskflow -e -f "test.json"
 
-**Example: Export taskflow to stdout or SD file:**
-```taskflow -e -f "test.json" ```
+factory_info
+Get factory infomation
 
-```factory_info``` Get factory infomation
+battery
+Get battery percent
 
-```battery``` Get battery percent
+bsp  subcmd [subcmd args] 
+Bsp call bsp functions
 
-```bsp  subcmd [subcmd args]``` Bsp call bsp functions
-** Example Scan the specified i2c bus: **
+Example Scan the specified i2c bus:
 ```bsp i2cdetect <0|1>```
 
-```reboot``` Reboot the device
+reboot 
+Reboot the device
 
-```factory_reset``` Factory reset and reboot the device
+factory_reset 
+Factory reset and reboot the device
 
-```record  [-t <int>] [-f <string>]``` Record audio and save to SD.
+record  [-t <int>] [-f <string>]
+Record audio and save to SD.
 -t, --time=<int> record time, s
 -f, --file=<string> File path, Store PCM audio data in SD card
 
-```vi_ctrl  [-sec] [-z <int>]``` Voice interaction ctrl (Probably will be used with Push to Talk function)
+vi_ctrl  [-sec] [-z <int>] 
+Voice interaction ctrl (Probably will be used with Push to Talk function)
 -s, --start start wakeup, and start record
 -e, --end end record
 -c, --stop stop voice interaction when analyzing or palying, Put it into idle.
 -z, --exit=<int> 0: exit vi, 1:exit vi then run new taskflow
 
-```iperf  [-suVa] [-c <ip>] [-p <port>] [-l <length>] [-i <interval>] [-t <time>] [-b <bandwidth>]``` Check conection performance. Similar to iperf linux command.
+iperf  [-suVa] [-c <ip>] [-p <port>] [-l <length>] [-i <interval>] [-t <time>] [-b <bandwidth>]
+Check conection performance. Similar to iperf linux command.
 -c, --client=<ip> run in client mode, connecting to <host>
 -s, --server run in server mode
 -u, --udp use UDP rather than TCP
@@ -651,14 +660,15 @@ j, --json import taskflow json string by stdin
 -b, --bandwidth=<bandwidth> bandwidth to send at in Mbits/sec
 -a, --abort abort running iperf
 
-```rgb  [-r <int>] [-g <int>] [-b <int>] [-m <int>] [-v <int>] [-t <int>]``` Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
+rgb  [-r <int>] [-g <int>] [-b <int>] [-m <int>] [-v <int>] [-t <int>]
+Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
 -r, --red=<int> red value, 0~255
 -g, --green=<int> green value, 0~255
 -b, --blue=<int> blue value, 0~255
 -m, --mode=<int> 1: breath, 2: blink, 3:solid, default 3
 -v, --step_value=<int> RGB step value, default 3
 -t, --step_time_ms=<int> RGB step time(ms), default 5
-
+``` 
 
 ## Resources
 
