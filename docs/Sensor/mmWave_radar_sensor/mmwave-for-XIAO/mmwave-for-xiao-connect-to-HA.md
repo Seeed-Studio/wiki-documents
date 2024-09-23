@@ -120,7 +120,8 @@ Finally, click **overview** in the upper left corner, you will see the mmwave-fo
 Next, you can get creative with your automation!
 
 # mmWave for XIAO to Home Assistant via Wifi using ESPHome
-The following yaml file connects a Seeed Xiao ESP32-S3 Sense with Radar module to HomeAssistant, using the ESPHome firmware:
+The following yaml file connects a Seeed XIAO ESP32S3 Sense with Radar module to Home Assistant, using the ESPHome firmware:
+
 ```
 # Configuration for ESPHome
 esphome:
