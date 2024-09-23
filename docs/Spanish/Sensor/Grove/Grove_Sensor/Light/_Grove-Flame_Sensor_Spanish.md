@@ -309,7 +309,7 @@ python grove_flame_sensor.py
 
 Aquí está el código de ejemplo:
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Ejemplo para usar el Sensor de Flama Grove (http://www.seeedstudio.com/wiki/Grove_-_Flame_Sensor)

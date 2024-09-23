@@ -50,7 +50,7 @@ Infineon’s Wi-Fi  solution supports Wi-Fi 6/6E features, is tri-band capable (
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/download_package.png"/></div>
 
-**Step 2.** Run the following command to run Infineon WiFi driver, you need to run this step after system boot up every time.
+**Step 2.** Run the following command to run Infineon WiFi driver.
 
 For Jetpack 5.1.x:
 

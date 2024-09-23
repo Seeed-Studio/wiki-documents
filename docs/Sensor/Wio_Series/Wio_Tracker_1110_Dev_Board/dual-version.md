@@ -617,7 +617,7 @@ To register your Sidewalk endpoint, either use automatic touchless registration 
 
  The default is LoRaWAN network, click the `User Button` to switch network.
 
- <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/click-button.png"/></div>
+ <div align="center"><img width="{400}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/click-button.png"/></div>
 
 
 ### View Message
@@ -1140,4 +1140,4 @@ Navigate to `Geofence collections`, and click `create geofence collection`.
 
 [SWDM016](https://drive.google.com/drive/folders/1vHJVEFgyx4arHHPlSjdMkffVStnTpHqg?usp=sharing)
 
-[template_lbm_wio_tracker](https://drive.google.com/drive/folders/1Mw96m4--9e5O926HFzhK868hmiP4SNFm?usp=sharing)
+[template_lbm_wio_tracker](https://drive.google.com/drive/folders/1UVte1UbfFor1remgAcpfmCHSKXvOGyYn)
