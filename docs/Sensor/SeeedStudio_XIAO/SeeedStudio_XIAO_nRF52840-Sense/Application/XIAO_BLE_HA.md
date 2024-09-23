@@ -138,7 +138,7 @@ Here's the CircuitPython code.
 <details>
 <summary>Click to copy the CircuitPython code</summary>
 
-```Python
+```python
 # BTHome with DHT20
 # This code is based on the excelent code by Koen Vervloesem
 # https://github.com/koenvervloesem/BTHome-Inertial-Sensor-in-CircuitPython

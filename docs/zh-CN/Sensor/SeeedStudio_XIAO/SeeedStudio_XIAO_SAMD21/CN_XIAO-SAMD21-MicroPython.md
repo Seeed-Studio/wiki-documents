@@ -112,7 +112,7 @@ cp SEEED_XIAO-20220618-v1.19.1.uf2 /media/$USER/Arduino/
 
 我们可以看到蓝色的RX_LED被点亮并每秒闪烁一次
 
-```Python
+```python
 from machine import Pin, Timer
  
 led = Pin(18, Pin.OUT)
@@ -138,7 +138,7 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-```Python
+```python
 from machine import Pin, Timer
 
 output_4 = Pin(8, Pin.OUT)
@@ -175,7 +175,7 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
-```Python
+```python
 from machine import Pin, Timer
 
 led = Pin(8, Pin.OUT)
@@ -209,7 +209,7 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
 
 ### I2C Support（12C的支持）
 
-```Python
+```python
 from machine import Pin, SoftI2C
 
 i2c = SoftI2C(scl=Pin(9), sda=Pin(8), freq=100000)
