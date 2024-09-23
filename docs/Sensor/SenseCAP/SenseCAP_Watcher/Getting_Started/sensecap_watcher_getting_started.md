@@ -626,8 +626,7 @@ Get battery percent
 bsp  subcmd [subcmd args] 
 Bsp call bsp functions
 
-Example Scan the specified i2c bus:
-```bsp i2cdetect <0|1>```
+Example Scan the specified i2c bus: bsp i2cdetect <0|1>
 
 reboot 
 Reboot the device
