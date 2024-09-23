@@ -209,7 +209,7 @@ python grove_electricity_sensor.py
 
 以下是示例代码：
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the Grove Electricity Sensor (https://www.seeedstudio.com/wiki/Grove_-_Electricity_Sensor)

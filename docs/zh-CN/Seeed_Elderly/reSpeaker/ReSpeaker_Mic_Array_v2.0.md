@@ -312,7 +312,7 @@ cd pixel_ring/pixel_ring
 
 用下面的代码创建一个 [led_control.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/led_control.py) 并运行 'python led_control.py'
 
-```Python
+```python
 from usb_pixel_ring_v2 import PixelRing
 import usb.core
 import usb.util
@@ -376,7 +376,7 @@ sudo apt-get install pavucontrol
 
 **对于 Linux 系统 :** 可以使用下面的命令来录制或播放语音。
 
-```Python
+```python
 arecord -D plughw:1,0 -f cd test.wav # record, please use the arecord -l to check the card and hardware first
 aplay -D plughw:1,0 -f cd test.wav # play, please use the aplay -l to check the card and hardware first
 arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the same time
@@ -386,7 +386,7 @@ arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the 
 
 - 步骤 1，我们需要运行以下脚本来获取麦克风阵列的设备索引号 :
 
-```Python
+```python
 sudo pip install pyaudio
 cd ~
 nano get_index.py
@@ -394,7 +394,7 @@ nano get_index.py
 
 - Step 2, 复制下面的代码并粘贴到 [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py).
 
-```Python
+```python
 import pyaudio
 
 p = pyaudio.PyAudio()
@@ -416,7 +416,7 @@ Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:1,0)
 
 - Step 5, 将 `RESPEAKER_INDEX = 2` 更改为索引号。运行 python 脚本 [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) 来录制语音。
 
-```Python
+```python
 import pyaudio
 import wave
 

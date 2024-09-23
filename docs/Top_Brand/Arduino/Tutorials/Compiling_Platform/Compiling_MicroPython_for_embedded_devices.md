@@ -86,7 +86,7 @@ sudo cp ~/micropython/ports/samd/build-SEEED_XIAO/firmware.uf2 /media/$USER/Ardu
 
 Copy the code below and you will see the blue led flashing
 
-```Python3
+```python3
 from machine import Pin, Timer
 
 led = Pin(19, Pin.OUT)
