@@ -3480,6 +3480,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Managed_Services',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/alwaysAI-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Cochl.Sense-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/CVEDIA-Jetson-Getting-Started',

@@ -299,7 +299,7 @@ python grove_6axis_accel_compass_example.py
 
 
 Here is the code of example:
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi example for using the Grove - 6-Axis Accelerometer&Compass v2.0(https://www.seeedstudio.com/depot/Grove-6Axis-AccelerometerCompass-v20-p-2476.html)

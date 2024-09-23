@@ -306,7 +306,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 python grove_touch_sensor.py
 ```
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi ejemplo para usar el Sensor Touch Grove (http://www.seeedstudio.com/wiki/Grove_-_Touch_Sensor)

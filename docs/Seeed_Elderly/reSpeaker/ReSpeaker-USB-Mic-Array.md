@@ -285,7 +285,7 @@ cd pixel_ring/pixel_ring
 
 - Step 2. Create a [led_control.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/led_control.py) with below code and run 'python led_control.py'
 
-```Python
+```python
 from usb_pixel_ring_v2 import PixelRing
 import usb.core
 import usb.util
@@ -418,7 +418,7 @@ We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to
 
 **For Linux:**  We can use below commands to record or play the voice.
 
-```Python
+```python
 arecord -D plughw:1,0 -f cd test.wav # record, please use the arecord -l to check the card and hardware first
 aplay -D plughw:1,0 -f cd test.wav # play, please use the aplay -l to check the card and hardware first
 arecord -D plughw:1,0 -f cd |aplay -D plughw:1,0 -f cd # record and play at the same time
@@ -428,7 +428,7 @@ We also can use python script to extract voice.
 
 - Step 1, We need to run the following script to get the device index number of Mic Array:
 
-```Python
+```python
 sudo pip install pyaudio
 cd ~
 nano get_index.py
@@ -436,7 +436,7 @@ nano get_index.py
 
 - Step 2, copy below code and paste on [get_index.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/get_index.py).
 
-```Python
+```python
 import pyaudio
 
 p = pyaudio.PyAudio()
@@ -458,7 +458,7 @@ Input Device id  2  -  ReSpeaker 4 Mic Array (UAC1.0): USB Audio (hw:1,0)
 
 - Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script [record.py](https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/res/record.py) to record a speech.
 
-```Python
+```python
 import pyaudio
 import wave
 

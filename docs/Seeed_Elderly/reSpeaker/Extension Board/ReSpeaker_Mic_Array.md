@@ -82,7 +82,7 @@ Here is an example also based on Pyaudio:
 
 First, you need to run the following script to get the device index number of Mic Array:
 
-```Python
+```python
 import pyaudio
 
 p = pyaudio.PyAudio()
@@ -96,7 +96,7 @@ for i in range(0, numdevices):
 
 Then, change `RESPEAKER_INDEX = 1` to your index number. Run the script to record a speech.
 
-```Python
+```python
 import pyaudio
 import wave
 
@@ -158,7 +158,7 @@ Note that if you are using the lastest *raw version*, you could only control the
 
 And here is an python example :
 
-```Python
+```python
 #!/usr/bin/env python
 
 import respeaker.usb_hid as usb_hid
