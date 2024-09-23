@@ -59,21 +59,21 @@ We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from 
 
 :::note
 
-Need to have installed Node Version 14.21.3. Execute below commands one by one in terminal.
+Need to have installed Node Version 18. Execute below commands one by one in terminal.
 
 :::
 
 ```sh
-wget https://nodejs.org/dist/v14.21.3/node-v14.21.3-linux-arm64.tar.xz
+wget https://nodejs.org/dist/v18.20.3/node-v18.20.3-linux-arm64.tar.xz
 
-tar -xf node-v14.21.3-linux-arm64.tar.xz
+tar -xf node-v18.20.3-linux-arm64.tar.xz
 
-cd node-v14.21.3-linux-arm64
-
+cd node-v18.20.3-linux-arm64
+    
 sudo cp -R * /usr/local/
-
+    
 node -v
-
+    
 npm -v
 
 ```
@@ -81,7 +81,7 @@ npm -v
 **Next Install FUXA from NPM**
 
 ```sh
-sudo npm install -g --unsafe-perm @frangoteam/fuxa
+sudo npm install -g --unsafe-perm @frangoteam/fuxa-min
 
 sudo fuxa
 

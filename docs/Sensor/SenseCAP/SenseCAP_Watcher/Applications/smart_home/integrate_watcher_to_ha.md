@@ -1,7 +1,7 @@
 ---
-description: Describes how to plug Watcher into Home Assistant both locally and via SenseCraft.
+description: Describes how to plug Watcher into Home Assistant locally.
 title: Integrate Watcher to Home Assistant
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/45.png
+image: https://files.seeedstudio.com/wiki/watcher_ha/10.png
 slug: /integrate_watcher_to_ha
 sidebar_position: 1
 last_update:
@@ -11,9 +11,7 @@ last_update:
 
 # Integrate Watcher to Home Assistant
 
-:::danger
-The content of this tutorial is not available at this time.
-:::
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/10.png" style={{width:1000, height:'auto'}}/></div>
 
 The integration of artificial intelligence (AI) has revolutionized the world of smart home technology, and Watcher, a cutting-edge AI-powered device, has emerged as a game-changer. By seamlessly integrating Watcher with Home Assistant, a popular open-source home automation platform, users can unlock a new level of convenience, security, and efficiency in their smart homes.
 
@@ -23,8 +21,7 @@ Below is the main content framework of this article.
 
 1. [Installing the HACS plugin](#installing-the-hacs-plugin): Install the Home Assistant Community Store (HACS) to enable the installation of Seeed Studio's SenseCraft plugin within Home Assistant.
 2. [Installing the SenseCraft plugin](#installing-the-sensecraft-plugin): Install the SenseCraft plugin by Seeed Studio, which allows for the swift deployment of Seeed Studio's products into Home Assistant.
-3. [Building MQTT Services at Home Assistant](#building-mqtt-services-at-home-assistant): Leverage a local MQTT service to transmit data from the Watcher to Home Assistant.
-4. [Integrate SenseCAP Watcher into Home Assistant](#integrate-sensecap-watcher-into-home-assistant): Integrate SenseCAP Watcher into Home Assistant and set up a visual dashboard for configuration.
+3. [Integrate SenseCAP Watcher into Home Assistant](#integrate-sensecap-watcher-into-home-assistant): Integrate SenseCAP Watcher into Home Assistant and set up a visual dashboard for configuration.
 
 
 ## Getting Started
@@ -162,49 +159,9 @@ Locate the SenseCraft integration and click "DOWNLOAD".
 
 By this point, we have successfully completed the installation of the SenseCraft plugin.
 
-## Building MQTT Services at Home Assistant
-
-### Step 9. Install EMQX
-
-Click on **Settings** in the sidebar to access the settings menu. Click on **Add-ons** to access the add-on store.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/3.png" style={{width:1000, height:'auto'}}/></div>
-
-Use the search bar or browse through the available add-ons to find **emqx**.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/51.png" style={{width:1000, height:'auto'}}/></div>
-
-Once you've located **EMQX**, click on it to view the details. On the add-on's page, you'll see an overview, documentation, and configuration options. To install the add-on, click the **Install** button.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/50.png" style={{width:1000, height:'auto'}}/></div>
-
-Once the EMQX Add-on is installed, turn on the **Start on boot**, **Watchdog** and **Show in sidebar** toggles. Click **Start** to start EMQX.
-
-In the EMQX Dashboard login page, enter the default username and password.
-
-- Default username: **admin**
-- Default password: **public**
-
-Click on the "Login" button to access the EMQX Dashboard.
-
-In the EMQX Dashboard, navigate to the **Authentication** section from the left sidebar menu. Click on the **Databases** tab.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/11.png" style={{width:900, height:'auto'}}/></div>
-
-Click on the **Create** button. In the **Mechanism** dropdown, select **Password-Based**, In the **Backend** dropdown, select **Built-in Database**. Click on the "Create" button to create the Built-in Database.
-
-After creating the Built-in Database, click on the **Users** tab in the "Authentication" section. Click on the "Add User" button.
-
-- In the "Username" field, enter "seeed".
-- In the "Password" field, enter "seeed".
-
-Go back to the "Databases" tab in the "Authentication" section. Locate the previously created database in the list of databases.
-
-Click on the toggle switch next to the database to enable it. The database status should change to "Enabled".
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/12.png" style={{width:900, height:'auto'}}/></div>
-
 ## Integrate SenseCAP Watcher into Home Assistant
+
+### Step 5. Adding Watcher from SenseCraft
 
 In the **Settings** page, choose **Devices & Services**.
 
@@ -212,13 +169,88 @@ Then click the **ADD INTEGRATION** button in the bottom right corner and search 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/38.png" style={{width:1000, height:'auto'}}/></div>
 
-Click on SenseCraft and select Action as **Add device using SenseCraft Account (账号集成)**.
+Click on SenseCraft and select Action as **Add device using host/id (局域网集成)**.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/39.png" style={{width:500, height:'auto'}}/></div>
 
+:::note
+Currently, **Add devices using SenseCraft Account（账号集成）** is not available.
+:::
 
+Then select **Watcher** in the device options.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/4.png" style={{width:500, height:'auto'}}/></div>
+
+Inside the next page, please enter the Watcher's device EUI, you can find Watche's EUI inside the [SenseCraft APP's Watcher's Setting](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool/#other-settings). 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/5.png" style={{width:500, height:'auto'}}/></div>
+
+After **SUBMIT**, Watcher's Home Assistant component will be automatically added to display inside the Dashboard, which should be in a state of no data right now.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/6.png" style={{width:1000, height:'auto'}}/></div>
+
+### Step 6. Place the task and configure the HTTP Message Block
+
+For Watcher's data to reach Home Assistant, then you need to have Watcher in a state where the task is running and configure the HTTP Message Block to send a stream of alarms to Home Assistant.
+
+For example, I'm now placing a task on Watcher to detect if a cat is eating.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/23.png" style={{width:250, height:'auto'}}/></div><br />
+
+Inside **Detail Config**, find ‘If yes, then do the following’ and tick the **HTTP Push Notification** box below.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/7.png" style={{width:250, height:'auto'}}/></div><br />
+
+Then click on the **Go Setup** button and configure the Home Assistant information in there to make sure the data can reach the Home Assistant.
+
+- **HTTP URL**: Fill in Home Assistant's IP address in full, port number 8887. e.g. `http://192.168.1.151:8887`.
+
+- **HTTP Token**: leave blank spaces in writing.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/8.png" style={{width:250, height:'auto'}}/></div><br />
+
+After confirming that it is filled out correctly, click Update Now at the bottom. then the task is sent down to Watcher.
+
+Next, when Watcher detects your cat eating, it triggers an alarm and reports the data from the sensor to Home Assistant. based on this, you are free to set up the automation of your smart home next.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/10.png" style={{width:1000, height:'auto'}}/></div>
+
+<details>
+
+<summary>Click to view the sample Dashboard code</summary>
+
+```javascript
+views:
+  - type: sections
+    title: Home Assistant
+    path: home
+    icon: mdi:home-assistant
+    sections:
+      - cards:
+          - type: tile
+            entity: sensor.air_humidity
+            name: SenseCAP Watcher Air Humidity
+            color: blue
+            show_entity_picture: true
+          - type: tile
+            entity: sensor.co2
+            name: SenseCAP Watcher CO2
+            color: deep-orange
+          - type: tile
+            entity: sensor.temperature
+            name: SenseCAP Watcher Air Temperature
+            color: purple
+            show_entity_picture: true
+          - type: tile
+            entity: sensor.alarm
+            name: SenseCAP Watcher Alarm Message
+            color: red
+            show_entity_picture: true
+          - type: picture
+            image_entity: image.alarm_image
+```
+
+</details>
 
 ## Tech Support & Product Discussion
 

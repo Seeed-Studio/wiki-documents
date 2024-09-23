@@ -22,14 +22,14 @@ last_update:
     </a>
 </div><br />
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both [fall detection](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/) and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
 ### Features
 
 - **Wi-Fi & Bluetooth Enabled**: Both modules are powered by XIAO ESP32 with pre-flashed ESPHome firmware, ensuring quick setup and customization.
-- **Fall Detection Module**:
+<!-- - **Fall Detection Module**:
   - **Precise Fall Detection**: Covers a 3x3x3 meter area with a 100° x 40° detection angle.
-  - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away.
+  - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away. -->
 - **Heartbeat Detection Module**:
   - **Sensitive Heartbeat Monitoring**: Detects heartbeats from up to 1.5 meters.
   - **Static Presence Detection**: Monitors stationary individuals up to 6 meters away.
@@ -45,21 +45,24 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 
 | **General Parameters**   |                                      |
 | ------------------------ | ------------------------------------ |
-| **mmWave Firmware**       | Fall Detection & Heartbeat Monitoring |
-| **Microcontroller Unit (MCU)**  | Seeed Studio XIAO ESP32 |
-| **LED Indicator**        | WS2812 RGB LED: Full-Color, Programmable Lighting |
-| **User Interface**       | Single-Button Interface for Reset |
-| **Ambient Light Sensor** | BH1750: High-Precision Digital Light Intensity Measurement |
-| **Connectivity**         | Grove Connector: 1 GPIO Port (D0, D10) for Versatile I/O Integration |
-| **Pin Header Spacing**   | Standard 2.54mm Female Header for Easy Prototyping |
-| **Power Supply**         | 5V/1A Input for Stable and Reliable Operation |
+| **mmWave Firmware**      | Breathing and Heartbeat Detection |
+| **Detection Range**      | Human Static Presence Detection: up to 6 Meters<br />Breathing and Heartbeat Detection: 1.5 Meters|
+| **MCU**                  | Seeed Studio XIAO ESP32C6 |
+| **LED**                  | WS2812 RGB LED |
+| **Button**               | Rest |
+| **Light Sensor**         | BH1750 Range: 1 to 65,535 lux with adjustable measurements up to 100,000 lux |
+| **Connectivity**         | 1 GPIO Port (D0, D10) |
+| **Pin Header Spacing**   | 2.54mm |
+| **Power Supply**         | 5V/1A Input |
+| **Power consumption**    | 0.5w: Standby Mode<br />0.8w: Activation Mode<br />1.4w: work with Grove Relay status |
+
 
 ### Application
 
-- Human body sensor light control
-- Life safety protection
-- Smart home appliances
-- Intelligent security
+- Security Systems
+- Haelthcare Monitoring
+- Smart Home Automation
+- Elderly Care
 
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/application.jpg" style={{width:'auto', height:'auto', "border-radius": '2.8px'}}/></div> -->
 
@@ -71,12 +74,38 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 
 ## Getting Started
 
+### Installation method and sensing range
+
+**Method 1.**Side-mounted, it is recommended that the radar installation height be consistent with the chest height of the person being measured, and the module position and chest position ≤ 1.5m
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_mounting.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/side_detect_distance.png" style={{width:600, height:'auto'}}/></div>
+
+
+
+**Method 2.** Inclined installation. For sleep breathing and heart rate detection needs, an inclined installation method can be adopted. The radar is required to be installed at a height of 1m directly above the head of the bed, tilted downward at 45 ° towards the middle of the bed, and the distance between the radar and the chest cavity is controlled to be within 1.5m. The radar normal direction is aligned with the main detection position to ensure that the radar can detect respiratory and heartbeat data.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/tilt_installation.png" style={{width:600, height:'auto'}}/></div>
+
+:::note
+Please use this module in an open space, and stay out of the following scenarios within the detecting range to prevent interference with the module:
+
+- Multiple radars installed too close together  
+- Wind moves curtains and sways plants
+- Water flow and water film  
+- Large areas of metal and mirror reflections  
+- Detection through glass and thin wooden boards  
+- Installation location prone to vibrations  
+- Use of low-quality power supplies  
+:::
+
 ### Software Preparation (Arduino)
 
 If this is your first time using Arduino with the XIAO series, follow the appropriate setup guide for your board:
 
 - **XIAO ESP32S3**: Refer to the [XIAO ESP32S3 Getting Started Guide](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/).
 - **XIAO ESP32C3**: Follow the [Getting Started with Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/) guide.
+- **XIAO ESP32C6**: Follow the [Getting Started with Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/) guide.
 
 Once your board is set up, proceed with the following steps:
 
@@ -101,7 +130,7 @@ Once your board is set up, proceed with the following steps:
 
 4. **Load an Example Sketch**:
    - Go to **File > Examples > Seeed Arduino mmWave**.
-   - Select the relevant example for either Fall Detection or Heartbeat Detection.
+   - Select the relevant example for Heartbeat Detection.
    - Review the code and make any necessary adjustments.
 
 5. **Upload the Sketch**:
@@ -112,9 +141,11 @@ Once your board is set up, proceed with the following steps:
 
 ### Usage
 
-This section provides example code snippets to help you quickly start using the Seeed Arduino mmWave Library with various functionalities, including breath monitoring, fall detection, RGB LED control, and light sensing.
+This section provides example code snippets to help you quickly start using the Seeed Arduino mmWave Library with various functionalities, including breath monitoring, RGB LED control, and light sensing.
 
-### Breath Module
+
+
+#### Breath Module
 
 This example demonstrates how to use the **MR60BHA2** sensor for monitoring breathing and heartbeat.
 
@@ -166,6 +197,8 @@ if (mmWave.update(100)) {
 The output will be as follows on Arduino Serial Monitor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/breathing_and_heartbeat_detection.png" style={{width:700, height:'auto'}}/></div>
+
+If the returned data is not `0`, indicate the existence of a living thing inside the detection's range.
 
 <!-- 
 ### Fall Module
@@ -240,9 +273,15 @@ if (mmWave.update(100)) {
 }
 ``` -->
 
-### Blink RGB LED
+#### Blink RGB LED
 
 This example demonstrates how to control an RGB LED using the NeoPixel library.
+
+- **Step 1.** Download the `Adafruit_NeoPixel` library
+
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **Adafruit_NeoPixel**, install the lastest version.
+
+- **Step 2.** Copy following code to a new sketch:
 
 ```cpp
 #include <Adafruit_NeoPixel.h>
@@ -276,14 +315,21 @@ for (int i = 255; i >= 0; i--) {
 }
 }
 ```
+- **Step 3.** Select the correct board and port number to upload the program. 
 
 Once the program is successfully uploaded, you will see RGB LED on the right side of the mmWave Sensor Modules is blinking.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
 
-### Light Sensor (BH1750)
+#### Light Sensor (BH1750)
 
 This example shows how to read light intensity values using the BH1750 sensor.
+
+- **Step 1.** Download the `hp_BH1750` library
+
+Navigate to **Sketch > Include Liarbry > Manage Libraries...**, and search **hp_BH1750**, install the lastest version.
+
+- **Step 2.** Copy following code to a new sketch:
 
 ```cpp
 #include <Arduino.h>
@@ -314,14 +360,15 @@ if (BH1750.hasValue()) {
 }
 }
 ```
+- **Step 3.** Select the correct board and port number to upload the program. 
 
 The output will be as follows on Arduino Serial Monitor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/light_sensor.png" style={{width:700, height:'auto'}}/></div>
 
-## API Explanation
+<!-- ## API Explanation -->
 
-### Breath Module API
+## Breath Module API
 
 This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sensor for heart and breath monitoring. Here’s what each key function does:
 
@@ -343,6 +390,7 @@ This example uses the `SEEED_MR60BHA2` class to interface with the MR60BHA2 sens
 
 - **`mmWave.getDistance(float &distance)`**:
   - Gets the distance from the sensor to the detected object (e.g., human body). This function is useful for understanding the range of the detected signal.
+
 
 <!-- 
 ### Fall Module API
@@ -369,6 +417,12 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
 
 - **`mmWave.getFall()`**:
   - Determines whether a fall has been detected. This function returns `true` if a fall is detected and `false` if not.-->
+
+## Open for Customization
+
+Want to tailor-make the kit to fit your unique applications?
+
+For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at iot@seeed.cc to learn more.
 
 ## Resources
 

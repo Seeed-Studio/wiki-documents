@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/26/2024
+  date: 09/18/2024
   author: Frank
 ---
 
@@ -17,68 +17,59 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 26th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 16th and a brand new week has begun! Check out what Seeed Studio did last week!
 
-## Latest Wiki Launched
+<!-- ## Latest Wiki Launched
 
-### [Getting Started with reServer J501](https://wiki.seeedstudio.com/reserver_j501_getting_started/)
+
+### [T1000-E Tracker](https://wiki.seeedstudio.com/t1000_e_intro/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
+
+It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
+
+### [Getting start with reComputer J20](https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/)
+
+<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110061363_preview-07_1.jpg"/></div>
+
+reComputer J20 Series built with Jetson Xavier NX is a powerful and compact intelligent edge box to bring up to 21TOPS modern AI performance to the edge. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
+
+The full system includes one NVIDIA Jetson Xavier NX production module, a heatsink, and a power adapter. reComputer J20 is preinstalled with Jetpack 4.6, simplifies development, and fits for deployment for edge AI solution providers working in object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
+
+### [J501 Interface Usage](https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/)
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_J501.jpeg"/>
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/j501.png"/>
 </div>
 
-The J501 carrier board is a powerful extension board that supports NVIDIA Jetson AGX Orin modules. It features rich data ports and extension interfaces, completely unleashed the full performance of the AGX Orin module. Also it supports adding GMSL extension to connect up to 8 GMSL cameras.
+This wiki introduces the various different hardware and interfaces on the J501 Carrier Board and how to use them to expand your project ideas.
 
-### [Getting started with 60GHz mmWave Fall Detection Sensor Kit with XIAO ESP32C6 (MR60FDA2)](https://wiki.seeedstudio.com/getting_started_with_mr60fda2_mmwave_kit/)
+### [ChatGPT - BeagleY-AI](https://wiki.seeedstudio.com/respeaker_lite_beagley-ai_chatgpt/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/2-mmWave-45font.jpg" style={{width:'auto', height:'auto', "border-radius": '12.8px'}}/></div>
+<div class="table-center">
+<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/Beaglebone_Solutions/bby_chatgpt.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+This project integrates voice input, large model response, and voice output functionalities using a BeagleY-AI. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
 
-### [Getting started with 60GHz mmWave Breathing and Heartbeat Detection Sensor Kit with XIAO ESP32C6 (MR60BHA2)](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/)
+### [XIAO RA4M1 Mouse](https://wiki.seeedstudio.com/xiao_ra4m1_mouse/)
 
-Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and heartbeat monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
+<div class="table-center">
+<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/xiao_mouse.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-### [Send message from Watcher & Node-RED to Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/banner.png" style={{width:1000, height:'auto'}}/></div>
-
-Open Interpreter is an open-source tool that facilitates interaction between users and their computers by enabling natural language commands to execute code in various programming languages. It acts as a bridge, allowing users to write instructions in plain language, which the interpreter then translates into executable code. This enhances productivity and makes programming more accessible, especially for those who may not be familiar with coding syntax. We will show you how to configure it in following steps.
-
-### [Build balenaOS for reComputer R1000](https://wiki.seeedstudio.com/build_balenaOS_for_reComputer_r1000/)
-
-[balena](https://www.balena.io/) is an Internet of Things (IoT) platform designed to help developers build, deploy, and manage IoT  applications across a fleet of devices. It supports a wide range of device architectures and includes features for containerized application deployment, making it possible to easily update your IoT software and HostOS, fix bugs and introduce new features on your IoT applications. balena provides a unified way to push code updates, manage device configurations and ensure devices run reliably and securely in the field, regardless of their location or network conditions.
-
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/balena/balena.png" alt="pir" width="700" height="auto" /></div>
-
-This tutorial will show you how to compile, configure and burn balenaOS for R1000.
-
-
-### [SenseCAP T1000 tracker and Thingsboard Integrated](https://wiki.seeedstudio.com/thingsboard_integrated/)
-
-[ThingsBoard](https://thingsboard.io/) is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications.
-
-The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to ThingsBoard through TTN.
+Through this tutorial, you will learn how to create a simple mouse using the XIAO RA4M1 and Grove Thumb Joystick.-->
 
 
 
-### [SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)
+## Existing Wiki Updated
 
-At Watcher, we believe in providing developers with a clear and transparent pricing structure for integrating artificial intelligence into their projects. We understand that every developer has unique requirements, which is why we offer a range of pricing plans designed to cater to various needs and budgets. To help you make an informed decision, we've outlined the key aspects of our pricing model and the specific features included in each plan.
+### [XIAO RA4M1 Play with RGB LEDs](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
-
-**SenseCAP Watcher, is now pre-launched on Kickstarter proudly with the official KS badge of "Project We Love"!**
+We've added an [example](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds) of XIAO RA4M1 Play with RGB LEDs.
 
 
-
-
-
-
-
-<!-- ## Existed Wiki Updated
-
-### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+<!-- ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
 We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
 
@@ -100,13 +91,15 @@ We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-r
 
 ## The Efforts of Contributor
 
-<!-- ### [Train and deploy a custom classification model with YOLOv8](https://wiki.seeedstudio.com/train_and_deploy_a_custom_classification_model_with_yolov8/)
+### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
 
-Thanks our contributor Bruno to create the application tutorial for reComputer.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-On this guide we will explain how to train and deploy a custom classification model with YOLOv8
+FreeRTOS is a collection of C libraries comprised of a real-time kernel and a set of modular libraries that implement complementary functionality. The FreeRTOS kernel is a real-time kernel (or real-time scheduler) that enables applications built on FreeRTOS to meet their hard real-time requirements. It enables applications to be organized as a collection of independent threads of execution.
 
-<iframe width={560} height={315} src="https://www.youtube.com/embed/ovoSMaoA9As?si=-d2buntx0T5oRtr4" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /> -->
+This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.
+
+
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us! 
@@ -185,6 +178,9 @@ On this guide we will explain how to train and deploy a custom classification mo
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
+- [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
+- [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 
 </details>
 
