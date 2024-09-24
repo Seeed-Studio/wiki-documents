@@ -4,10 +4,10 @@ title: AI Workshop - How to Add AI to Almost Everything
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /tinyml_workshop_course_ne
+slug: /tinyml_workshop_course_new
 last_update:
-  date: 08/27/2024
-  author: Citric, Matthew
+  date: 09/24/2024
+  author: Citric, Matthew,Frank
 ---
 
 
