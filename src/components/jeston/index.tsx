@@ -199,11 +199,7 @@ const computerPageA = () => {
        class:styles.gray,
         title: 'AI Developer Tools',
         desc: `
-        After you have access to an NVIDIA Jetson device, you can start developing different AI applications to suite different scenarios. The very first step of an AI project is to 
-      obtain data for training. Then you need to label the data and train an AI model. After that, you can optimize this model to make sure the model runs the best on the selected
-      device. Finally, you deploy this AI model to the NVIDIA Jetson device so that you can start building applications. You can also manage these applications remotely so that,
-      you can track the device performance metrics to ensure the device is performing well in the field.
-      We have prepared wiki guides that covers the entire AI workflow as explained above using different software providers and tools. 
+        After accessing an NVIDIA Jetson device, the AI development process involves several key steps: obtaining and labeling data for training, training and optimizing the AI model to ensure optimal performance on the device, and finally deploying the model to build applications. Additionally, applications can be managed remotely, allowing for tracking of device performance metrics to ensure field efficiency. Comprehensive wiki guides are available to support this AI workflow using various software tools. 
         `,
         list:listData1
       })}
