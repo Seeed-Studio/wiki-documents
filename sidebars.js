@@ -1306,6 +1306,20 @@ const sidebars = {
               type: 'category',
               label: 'Applications',
               items: [
+                {
+                  type: 'category',
+                  label: 'Edge Impulse',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/EdgeImpulse',
+                  },
+                  items: [
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/Key_Word_Spotting',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/Image_classification_project',
+                  ],
+                },
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
@@ -3917,9 +3931,7 @@ const sidebars = {
           },
           items: [
               'Topics/TinyML/TinyML_Workshop/sscma',
-               'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
-              'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
-               'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+              'Topics/TinyML/TinyML_Workshop/TrainModel',
           ],
         },
 

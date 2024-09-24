@@ -4,7 +4,7 @@ title: AI Workshop - How to Add AI to Almost Everything
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
-slug: /tinyml_workshop_course_new
+slug: /tinyml_workshop_course_ne
 last_update:
   date: 08/27/2024
   author: Citric, Matthew
@@ -31,18 +31,11 @@ We will emphasize its graphical interface, which simplifies tasks such as data c
 <a href="/sensecraft_ai" class="button_edgelab"></a> 
 </div>
 
-Next, we will shift our focus to the Edge Impulse platform. Designed specifically for embedded devices, Edge Impulse offers an end-to-end solution for developing and deploying TinyML models. We will learn how to export models trained in SenseCraft AI Platform to Edge Impulse and deploy them on the XIAO ESP32S3. Additionally, we will explore Edge Impulse's features, including real-time data collection, model quantization and optimization, and the ability to perform real-time inference on the device.
-
-<div class="button_tech_support_container">
-<a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
-</div>
-
 By participating in this course, you will gain the following skills and knowledge:
 
 - Familiarity with the fundamental features and workflow of SenseCraft AI Platform.
 - Proficiency in essential steps such as data preprocessing, model training, and evaluation.
 - Understanding of TinyML concepts and their application scenarios.
-- Ability to deploy models to the XIAO ESP32S3 using the Edge Impulse platform.
 
 Whether you are a beginner or an experienced developer with some machine learning background, this course will provide you with invaluable practical experience and skills to apply TinyML in IoT projects. Let's embark on this exciting learning journey together!
 
@@ -84,14 +77,8 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft AI Platform</a>
+          <a href= "/sscma" class="getting_started_label2">1 SenseCraft AI Platform</a>
           <br/>Use pre-made tinyML models and experiment quickly.
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "/edgeimpulse" class="getting_started_label2">1.2 Edge Impulse</a>
-          <br/>Create ML model and generate arduino libraries. 
       </div>
   </div>
 </div>
@@ -101,14 +88,8 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/edgeimpulse#speech-keyword-recognition-yes--no-arduino-library" class="getting_started_label2">2.1 Control Lights with Voice </a>
-          <br/>Learn how to intergrate arduino tinyML libraries. 
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "/edgeimpulse#fruit-identification-apples-bananas-grapes-arduino-library" class="getting_started_label2">2.2 Fruit identification </a>
-          <br/>Classify Apples, Banana and Grapes images using computervision. 
+          <a href= "/sscma" class="getting_started_label2">2 The AI "Blink" </a>
+          <br/>Learn how to easily deploy public AI model libraries on edge devices. 
       </div>
   </div>
 </div>
@@ -118,19 +99,24 @@ To complete the workshop, we need go through the instructions below, and each pa
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/tinyml_course_Key_Word_Spotting" class="getting_started_label2">3.1 Build Your own key word based project </a>
-          <br/>Learn how to build voice recognition tinyML project scratch.  
-      </div>
-  </div>
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "/tinyml_course_Image_classification_project" class="getting_started_label2">3.2 Build Your own Image classification project </a>
-          <br/>Learn how to build Image classification project from scratch. 
+          <a href= "/train_and_deploy_model" class="getting_started_label2">3 Build Your own project </a>
+          <br/>Learn how to easily train and deploy your own models.  
       </div>
   </div>
 </div>
 
 Please go one by one to the above topic and complete the ToDo to go to the next level. All the best and happy making 🙌.
+
+
+## Edge Impulse
+
+<div class="button_tech_support_container">
+<a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
+</div>
+
+Edge Impulse is a platform designed for developing and deploying TinyML models specifically for embedded devices. It provides tools for real-time data collection, model quantization, and optimization, enabling efficient deployment on devices like the XIAO ESP32S3. 
+
+For more details, you can refer to our [documentation here](https://wiki.seeedstudio.com/edgeimpulse/). When performing [Key Word Spotting](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/) and [Image Classification](https://wiki.seeedstudio.com/tinyml_course_Image_classification_project/), make sure to replace the default ESP NN folder with [the version we provide during deployment](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip).
 
 
 ## Tech Support & Product Discussion
