@@ -263,45 +263,147 @@ export const listData1 = [
   },
 ]
 
-export const communityList = [
+export const communityList_cv = [
   {
-    name: 'Qualia S3 Fireplace',
-    img: 'com1',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Train and Deploy YOLOv8 on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/reComputer_is_all_you_need/inference.jpeg',
+    URL: 'https://wiki.seeedstudio.com/How_to_Train_and_Deploy_YOLOv8_on_reComputer/',
   },
   {
-    name: 'Simplifying Qualia CircuitPython Projects',
-    img: 'com2',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Few-Shot Object Detection with YOLOv5 and Roboflow',
+    img: 'https://files.seeedstudio.com/wiki/YOLOV5/pink-flowers-2.gif',
+    URL: 'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/',
   },
   {
-    name: 'Adafruit Qualia ESP32-S3 for RGB-666 Displays',
-    img: 'com3',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Deploy YOLOv8 using TensorRT and DeepStream',
+    img: 'https://files.seeedstudio.com/wiki/YOLOV8/car.gif',
+    URL: 'https://wiki.seeedstudio.com/YOLOv8-DeepStream-TRT-Jetson/',
   },
   {
-    name: 'Edge-Lit Tavern Sign with WLED - Control with WiFi...',
-    img: 'com4',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Maskcam - Crowd Face Mask Usage Monitoring',
+    img: 'https://files.seeedstudio.com/wiki/Jetson-Nano-MaskCam/tu3.png',
+    URL: 'https://wiki.seeedstudio.com/Jetson-Nano-MaskCam/',
   },
   {
-    name: 'ESP32-S2 Reverse TFT Digital Clock Display featuring...',
-    img: 'com5',
-    href: 'https://www.seeedstudio.com/',
+    name: 'AI NVR with reServer Jetson',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/ai-nvr/result.png',
+    URL: 'https://wiki.seeedstudio.com/ai_nvr_with_jetson/',
   },
   {
-    name: 'No-Code IKEA Vindriktning Air Quality Sensor Hack...',
-    img: 'com6',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Deploy Frigate On a reComputer(NVIDIA Jetson) device',
+    img: 'https://docs.frigate.video/assets/images/media_browser-min-1f8a7c629d1bdbee1c78f99a97a0219a.png',
+    URL: 'https://wiki.seeedstudio.com/deploy_frigate_on_jetson/',
   },
   {
-    name: 'LEGO Set Lighting',
-    img: 'com7',
-    href: 'https://www.seeedstudio.com/',
+    name: 'Quickly Experience YOLOv10 on reComputer',
+    img: 'https://github.com/ZhuYaoHui1998/jetson-examples/raw/main/reComputer/scripts/yolov10/assets/webui.png',
+    URL: 'https://github.com/ZhuYaoHui1998/jetson-examples/blob/main/reComputer/scripts/yolov10/README.md',
   },
   {
-    name: 'Qualia S3 Space Clock',
-    img: 'com8',
-    href: 'https://www.seeedstudio.com/',
+    name: 'One-Click Quick Deployment of Plug-and-Play Ultralytics YOLOv8',
+    img: 'https://github.com/ZhuYaoHui1998/jetson-examples/raw/main/reComputer/scripts/ultralytics-yolo/images/Ultralytics-yolo.gif',
+    URL: 'https://github.com/ZhuYaoHui1998/jetson-examples/blob/main/reComputer/scripts/ultralytics-yolo/README.md',
+  },
+]
+
+export const communityList_gen = [
+  {
+    name: 'Custom Local LLM: Fine-tune LLM by Llama-Factory on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif',
+    URL: 'https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/',
+  },
+  {
+    name: 'Quantized Llama2-7B with MLC LLM on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif',
+    URL: 'https://wiki.seeedstudio.com/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/',
+  },
+  {
+    name: 'Run a Local LLM Text-to-Image on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/30_cyberpunkGirl.png',
+    URL: 'https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/',
+  },
+  {
+    name: 'Deploy Whisper on reComputer for Real time Speech to Text',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Real-Time-Whisper.gif',
+    URL: 'https://wiki.seeedstudio.com/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/',
+  },
+  {
+    name: 'Local RAG based on Jetson with LlamaIndex',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/RAG-MLC-Jetson.gif',
+    URL: 'https://wiki.seeedstudio.com/Local_RAG_based_on_Jetson_with_LlamaIndex/',
+  },
+  {
+    name: 'Zero-Shot Detection on reComputer with Jetson Platform Services',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/zero_shot_detection/fig1.gif',
+    URL: 'https://wiki.seeedstudio.com/run_zero_shot_detection_on_recomputer/',
+  },
+  {
+    name: 'Run VLM on reComputer with Jetson Platform Services',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/vlm/vlmgif.gif',
+    URL: 'https://wiki.seeedstudio.com/run_vlm_on_recomputer/',
+  },
+  {
+    name: 'Format Output with Langchain',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/format_llm_opt.gif',
+    URL: 'https://wiki.seeedstudio.com/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/',
+  },
+  {
+    name: 'Local Voice Chatbot : Deploy Riva and Llama2 on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png',
+    URL: 'https://wiki.seeedstudio.com/Local_Voice_Chatbot/',
+  },
+  {
+    name: 'Speech Subtitle Generation on Nvidia Jetson',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recoder.gif',
+    URL: 'https://wiki.seeedstudio.com/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/',
+  },
+  {
+    name: 'Local AI Assistant : Deploy Ollama and AnytingLLM on Jetson',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/ai-assistant.png',
+    URL: 'https://wiki.seeedstudio.com/local_ai_ssistant/',
+  },
+  {
+    name: 'Run VLM with speech interaction on reComputer Jetson',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/vlmgif.gif',
+    URL: 'https://wiki.seeedstudio.com/speech_vlm/',
+  },
+  {
+    name: 'One click Using Llama-Factory',
+    img: 'https://github.com/Seeed-Projects/jetson-examples/raw/main/reComputer/scripts/llama-factory/assets/training.gif',
+    URL: 'https://github.com/Seeed-Projects/jetson-examples/tree/main/reComputer/scripts/llama-factory',
+  },
+  {
+    name: 'One click Deploy Deep-Live-Cam AI face-swapping',
+    img: 'https://github.com/Seeed-Projects/jetson-examples/raw/main/reComputer/scripts/deep-live-cam/images/WebUI.png',
+    URL: 'https://github.com/Seeed-Projects/jetson-examples/blob/main/reComputer/scripts/deep-live-cam/README.md',
+  },
+  {
+    name: 'Run ComfyUI (Stable Diffusion GUI) on reComputer',
+    img: 'https://github.com/Seeed-Projects/jetson-examples/raw/main/reComputer/scripts/comfyui/images/comfyui.png',
+    URL: 'https://github.com/Seeed-Projects/jetson-examples/blob/main/reComputer/scripts/comfyui/README.md',
+  },
+
+]
+
+export const communityList_robot = [
+  {
+    name: 'Install ROS1 on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/robotics/software/install_ros1/fig2.png',
+    URL: 'https://wiki.seeedstudio.com/installing_ros1/',
+  },
+  {
+    name: 'Use RoboSense LiDAR on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig10.png',
+    URL: 'https://wiki.seeedstudio.com/robosense_lidar/',
+  },
+  {
+    name: 'Use Multiple CSI Cameras on reComputer with ROS',
+    img: 'https://files.seeedstudio.com/wiki/robotics/hardware/csi_camera/fig2.png',
+    URL: 'https://wiki.seeedstudio.com/csi_camera_on_ros/',
+  },
+  {
+    name: 'Run A-LOAM 3D SLAM on reComputer',
+    img: 'https://files.seeedstudio.com/wiki/robotics/software/aloam/fig0.gif',
+    URL: 'https://wiki.seeedstudio.com/a_loam/',
   },
 ]

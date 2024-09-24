@@ -46,6 +46,7 @@
       flex: 1;
     }
 
+    
     .banner_right {
       flex: 1;
     }
@@ -107,7 +108,14 @@
 
   .community {
     // background-color: #fff;
-
+    .subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      color: #555; // 自定义颜色
+    }
+    
     .com_wrapper {
       flex-wrap: wrap;
 
@@ -118,13 +126,17 @@
         background: #F3F5F8;
         margin-right: 24px;
         margin-bottom: 24px;
+        text-align: center;
 
         &:nth-child(4n) {
           margin-right: 0;
         }
 
         img {
-          border-radius: 10px;
+          width: 450px; /* 固定宽度 */
+          height: 150px; /* 固定高度 */
+          object-fit: cover; /* 保持图片比例，裁剪过大的部分 */
+          border-radius: 10px; /* 可选，给图片添加圆角 */
         }
 
         .com_title {
@@ -272,6 +284,7 @@
         flex-wrap: wrap;
 
         .com_item {
+          
           background: #242526;
         }
       }
