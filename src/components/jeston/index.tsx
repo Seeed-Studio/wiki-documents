@@ -145,7 +145,7 @@ const usageRender = (obj) => {
               >
                 {/* 上级的 img 和 name 不进行跳转 */}
                 <img 
-                  src={require(`../../../assets/recomputer/${item.img}`).default} 
+                  src={item.img} 
                   alt={item.name} 
                 />
                 <div className={styles.name}>
@@ -165,7 +165,7 @@ const usageRender = (obj) => {
                   onClick={() => toUrl(brand.href)} // 点击整个品牌项时跳转
                 >
                   <img 
-                    src={require(`../../../assets/recomputer/${brand.img}`).default} 
+                    src={brand.img} 
                     alt={brand.name} 
                   />
                   <div className={styles.name}>{brand.name}</div>
