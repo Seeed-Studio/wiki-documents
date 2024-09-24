@@ -156,6 +156,7 @@
   }
 
   .usage {
+
     .left_container {
       width: 280px;
       margin-right: 24px;
@@ -168,7 +169,7 @@
         padding: 0 20px;
 
         &.active {
-          background: #8FC31F;
+          background: #8a8a8a;
           border-radius: 8px;
           color: #fff;
         }
@@ -235,13 +236,17 @@
 
         .right_wrapper {
           .prod_item {
-            display: flex;
-            text-align: left;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            margin-right: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            width: calc(33% - 24px);
 
             img {
-              width: 38px;
-              height: 38px;
-              margin-right: 8px;
+              width: 2000px;
+              height: 40px;
             }
 
           }

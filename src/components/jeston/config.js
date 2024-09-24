@@ -171,93 +171,161 @@ export const listData = [
 export const listData1 = [
   {
     id: 1,
-    name: 'reComputer',
-    img: '17.png',
+    name: 'Data Upload & Label',
+    img: 'label.png',
     brands: [
       {
-        name: 'reComputer J10 SerieseComputer J10 Series',
-        img: '17.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'always_ai.png',
+        href: 'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'roboflow.png',
+        href: '/tags/Roboflow/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'edge impulse.png',
+        href: 'https://wiki.seeedstudio.com/HardHat/',
+      }
+    ],
+  },
+  {
+    id: 2,
+    name: 'AI Model Train',
+    img: 'train.png',
+    brands: [
+      {
+        name: ' ',
+        img: 'always_ai.png',
+        href: 'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'roboflow.png',
+        href: '/tags/Roboflow/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'edge impulse.png',
+        href: 'https://wiki.seeedstudio.com/HardHat/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'ultralytics.png',
+        href: '/tags/yolov-8/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
-        href: 'https://www.seeedstudio.com/',
+        name: ' ',
+        img: 'yolov5.png',
+        href: 'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
-        href: 'https://www.seeedstudio.com/',
-      },
+        name: ' ',
+        img: 'deci.png',
+        href: 'https://wiki.seeedstudio.com/DeciAI-Getting-Started/',
+      }
     ],
   },
   {
     id: 3,
-    name: 'Mini AI PC',
-    img: '17.png',
+    name: 'AI Model Optimize',
+    img: 'optimize.png',
     brands: [
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
+        name: ' ',
+        img: 'deci.png',
+        href: 'https://wiki.seeedstudio.com/DeciAI-Getting-Started/',
+      }
+    ],
+  },
+  {
+    id: 4,
+    name: 'AI Model Deploy',
+    img: 'deploy.png',
+    brands: [
+      {
+        name: ' ',
+        img: 'yolov5.png',
+        href: 'https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
+        name: ' ',
+        img: 'ultralytics.png',
+        href: '/tags/yolov-8/',
+      },
+      {
+        name: ' ',
+        img: 'deci.png',
+        href: 'https://wiki.seeedstudio.com/DeciAI-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'roboflow.png',
+        href: '/tags/Roboflow/',
+      },
+      {
+        name: ' ',
+        img: 'edge impulse.png',
+        href: 'https://wiki.seeedstudio.com/HardHat/',
+      },
+      {
+        name: ' ',
+        img: 'always_ai.png',
+        href: 'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'Cochl.png',
+        href: 'https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'Scailable.png',
+        href: 'https://wiki.seeedstudio.com/Scailable-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'CVEDIA.png',
+        href: 'https://wiki.seeedstudio.com/CVEDIA-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'Lumeo.png',
+        href: 'https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started/',
       },
     ],
   },
   {
-    id: 3,
-    name: 'Mini AI PC',
-    img: '17.png',
+    id: 5,
+    name: 'Remote Manage',
+    img: 'manage.png',
     brands: [
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
+        name: ' ',
+        img: 'Lumeo.png',
+        href: 'https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '18.png',
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: 'Mini AI PC',
-    img: '17.png',
-    brands: [
-      {
-        name: 'reComputer J10 Series',
-        img: '17.png',
+        name: ' ',
+        img: 'always_ai.png',
+        href: 'https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/',
       },
       {
-        name: 'reComputer J10 Series',
-        img: '17.png',
+        name: ' ',
+        img: 'Cochl.png',
+        href: 'https://wiki.seeedstudio.com/Cochl.Sense-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'Scailable.png',
+        href: 'https://wiki.seeedstudio.com/Scailable-Jetson-Getting-Started/',
+      },
+      {
+        name: ' ',
+        img: 'Allxon.png',
+        href: 'https://wiki.seeedstudio.com/Update-Jetson-Linux-OTA-Using-Allxon/',
       },
     ],
   },
