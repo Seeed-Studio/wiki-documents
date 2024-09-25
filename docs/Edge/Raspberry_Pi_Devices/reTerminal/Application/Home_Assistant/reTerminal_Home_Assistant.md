@@ -1,5 +1,5 @@
 ---
-description: reTerminal-Home-Assistant
+description: How to install Home Assistant on reTerminal
 title: Getting Started with Home Assistant
 image: https://avatars.githubusercontent.com/u/4452826?s=400&amp;v=4
 slug: /reTerminal_Home_Assistant
