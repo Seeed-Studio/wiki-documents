@@ -183,6 +183,9 @@ If you are using the factory firmware of the Seeed Studio XIAO nRF52840 or have 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528403.png" alt="pir" width={800} height="auto" /></p>
 
+<<<<<<< HEAD
+- **Step 3.** Upload the [Low Power demo](https://files.seeedstudio.com/wiki/XIAO-BLE/PowerTests.zip) here and run it with **Arduino**
+=======
 - **Step 3.** Upload the deep_sleep demo here and run it with **Arduino**
 
 ```cpp
@@ -284,22 +287,14 @@ void loop()
   // nothing to do
 }
 ```
+>>>>>>> docusaurus-version
 
-- **Step 4.** Adjust the voltage of the digital source meter to 3.6V constant voltage
+:::tip
+Here , We would like to express our special thanks to the author for providing the code  -> ***daCoder*** <-
+:::
 
-- **Step 5.** Touch the red test pen to BAT+ and black test pen to BAT-
+**If you want to know about this example more detail inforation , Click [Here](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerposition.png" alt="pir" width={500} height="auto" /></p>
-
-- **Step 6.** The output shows the current is at about **3 μA**
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerresult.jpg" alt="pir" width={500} height="auto" /></p>
-
-### Accelerometer Examples and Low Power
-
-We are very grateful to our community partner **[daCoder](https://forum.seeedstudio.com/u/daCoder)** for his contribution to the XIAO nRF52840 low power consumption mode.
-
-You can find out more about the content of the projects he has worked on by clicking **[HERE](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**.
 
 ## Battery Charging current
 
