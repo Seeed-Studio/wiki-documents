@@ -377,17 +377,17 @@ export const communityList_cv = [
 export const communityList_gen = [
   {
     name: 'Custom Local LLM: Fine-tune LLM by Llama-Factory on reComputer',
-    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/training.png',
     URL: 'https://wiki.seeedstudio.com/Finetune_LLM_on_Jetson/',
   },
   {
     name: 'Quantized Llama2-7B with MLC LLM on reComputer',
-    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/MLC_LLM.gif',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Llama-2-7b-chat-hf-q4f16_ft.png',
     URL: 'https://wiki.seeedstudio.com/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/',
   },
   {
     name: 'Run a Local LLM Text-to-Image on reComputer',
-    img: 'https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/30_cyberpunkGirl.png',
+    img: 'https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Nvidia_Jetson_recomputer_LLM_texto-to-image/27_dreamshaperxl.png',
     URL: 'https://wiki.seeedstudio.com/How_to_run_local_llm_text_to_image_on_reComputer/',
   },
   {
@@ -397,7 +397,7 @@ export const communityList_gen = [
   },
   {
     name: 'Local RAG based on Jetson with LlamaIndex',
-    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/RAG-MLC-Jetson.gif',
+    img: 'https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Llama-2-7b-chat-hf-q4f16_ft.png',
     URL: 'https://wiki.seeedstudio.com/Local_RAG_based_on_Jetson_with_LlamaIndex/',
   },
   {
@@ -412,7 +412,7 @@ export const communityList_gen = [
   },
   {
     name: 'Format Output with Langchain',
-    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/format_llm_opt.gif',
+    img: 'https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/ai_assistant.png',
     URL: 'https://wiki.seeedstudio.com/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/',
   },
   {
@@ -437,7 +437,7 @@ export const communityList_gen = [
   },
   {
     name: 'One click Using Llama-Factory',
-    img: 'https://github.com/Seeed-Projects/jetson-examples/raw/main/reComputer/scripts/llama-factory/assets/training.gif',
+    img: 'https://github.com/Seeed-Projects/jetson-examples/raw/main/reComputer/scripts/llama-factory/assets/llama-factory-Jetson.png',
     URL: 'https://github.com/Seeed-Projects/jetson-examples/tree/main/reComputer/scripts/llama-factory',
   },
   {
