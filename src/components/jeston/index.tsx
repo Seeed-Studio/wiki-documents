@@ -197,9 +197,9 @@ const computerPageA = () => {
       })}
        {usageRender({
        class:styles.gray,
-        title: 'Jetpack Flash and Hardware Usage',
+        title: 'AI Developer Tools',
         desc: `
-        Most of our reComputer Jetson products come with NVIDIA JetPack system pre-installed on the device. However, if you want to flash these devices again or flash other devices which do not come with JetPack system, you can follow the below links for step-by-step guidance. We have also included guidance on how to use different hardware peripherals on these NVIDIA Jetson powered devices.
+        After accessing an NVIDIA Jetson device, the AI development process involves several key steps: obtaining and labeling data for training, training and optimizing the AI model to ensure optimal performance on the device, and finally deploying the model to build applications. Additionally, applications can be managed remotely, allowing for tracking of device performance metrics to ensure field efficiency. Comprehensive wiki guides are available to support this AI workflow using various software tools. 
         `,
         list:listData1
       })}
