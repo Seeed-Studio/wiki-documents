@@ -72,43 +72,56 @@ To complete the workshop, we need go through the instructions below, and each pa
 
 ## Getting Started
 
-### Step 1: Familiarize the tools that we are using. 
+### Step 1: The AI "Blink": Quickly Using AI
 
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">1 SenseCraft AI Platform</a>
-          <br/>Use pre-made tinyML models and experiment quickly.
+          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft AI Platform Introduction</a>
+          <br/>Familiarize the tools that we are using.
+      </div>
+  </div>
+    <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/sscma/#the-ai-blink-quickly-using-ai" class="getting_started_label2">1.2 The AI "Blink" </a>
+          <br/>Learn how to easily deploy public AI model libraries on edge devices, XIAO ESP32S3 Sense.
       </div>
   </div>
 </div>
 
-### Step 2: Experiment tinyML models with pre-built arduino library
+### Step 2: Train and Deploy Your Own AI Model
 
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">2 The AI "Blink" </a>
-          <br/>Learn how to easily deploy public AI model libraries on edge devices. 
-      </div>
-  </div>
-</div>
-
-### Step 3: Make your own tinyML project by collecting data and training your own. 
-
-<div class="all_container">
-  <div class="getting_started">
-      <div class="start_card_wrapper">
-          <a href= "/train_and_deploy_model" class="getting_started_label2">3 Build Your own project </a>
+          <a href= "/train_and_deploy_model" class="getting_started_label2">2. Build Your own project </a>
           <br/>Learn how to easily train and deploy your own models.  
+      </div>
+  </div>
+</div>
+
+### Step 3: Federate(Optional)
+
+<div class="all_container">
+  <div class="getting_started">
+      <div class="start_card_wrapper">
+          <a href= "/train_and_deploy_model/#optional-federate-transmit-data-wide-away" class="getting_started_label2">3. Transmit data wide away </a>
+          <br/>Learn how to federate your models wide away in SenseCraft.
       </div>
   </div>
 </div>
 
 Please go one by one to the above topic and complete the ToDo to go to the next level. All the best and happy making 🙌.
 
+## ✨ Collaborations ✨
 
-## Edge Impulse
+This course is open source and we welcome more collaboration! You can refer to [here](https://wiki.seeedstudio.com/Contribution-Guide/) to see the Contribution(Pull Request) Guide.
+
+:::info
+These files are under the relative path of `docs/Topics/TinyML/TinyML_Workshop`.
+:::
+
+## (Other Method)Edge Impulse
 
 <div class="button_tech_support_container">
 <a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 

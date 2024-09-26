@@ -6,19 +6,112 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /sscma
 last_update:
-  date: 08/25/2024
-  author: Salman
+  date: 08/26/2024
+  author: Matthew
 ---
 
-## SenseCraft AI Platform
+## Familiarize the tools that we are using
 
-Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution. 
+### SenseCraft AI Platform
+
+Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution.
 
 It empowers users to effortlessly deploy a vast library of publicly available AI models onto their edge devices provides a seamless and user-friendly experience, allowing you to deploy public AI models directly onto your edge devices with **just a few clicks**.
 
 :::info
 The core of it is an open source project and we have share it on the [GitHub](https://github.com/Seeed-Studio/ModelAssistant) and offer the [development method](/ModelAssistant_Introduce_Overview) as well.
 :::
+
+#### User Account
+
+[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) is an open platform that allows users to browse all public AI models and Home pages without logging in. You need to sign up and sign in only when you need to deploy a model, or share your own model.
+
+[SenseCraft AI](https://sensecraft.seeed.cc/ai/#/model) and [SenseCraft Data Platform](https://sensecap.seeed.cc/portal/#/login) ( original SenseCAP Cloud Platform) are both software services provided by seeed studio for users, users only need to sign up for an account on any one of the platforms, and then they can use the same account to sign in on both platforms.
+
+#### Sign up
+
+1. Enter your name and valid email,and then click "get capcha"<br />
+
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/1.png)
+
+2. Get the verification code from your email and enter it on sign up page
+
+:::note
+verification code is valid for 10min, please complete the registration within 10 minutes
+:::
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/2.png)
+
+3. Enter your password and other user information to complete your registration. <br />
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/3.png)
+
+#### Sign in
+
+Sign in with your registered email account
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/4.png)
+
+More about SenseCraft AI platform you can refer to [here](https://wiki.seeedstudio.com/sensecraft_ai/).
+
+## AI Models on SenseCraft AI Platform
+
+### Model list
+
+Public AI models show all published AI models；Custom AI models show all your own uploaded AI models.  The model is displayed on the list as follows
+
+- Model inference example image
+- Model Name
+- Model describe
+- This model task type like detection,classification,segmentation,pose, generation
+- Supported Device:Device that support deployment of this model
+- The username that published this model
+
+**Search model**<br/>
+Provides search feature based on various types of key information in the model like model name, model task, surpported device,model publisher
+
+**Favorite model**<br/>
+Users can favorite public models
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/7.png)
+
+More information about AI Models in SenseCraft AI platform you can refer to [here](https://wiki.seeedstudio.com/sensecraft_ai/#ai-models).
+
+## Device Workspace
+
+The SenseCraft AI platform provides an AI model zoo for users to share and download AI models, and also has a device workspace where users can view the inference results of their devices in real time and manage their devices to improve the convenience and flexibility of device management.
+
+### XIAO ESP32S3 Workspace
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image4.png)
+
+You can learn more through the [XIAO ESP32S3 Workspace documentation](https://wiki.seeedstudio.com/XIAO_ESP32S3_Workspace/).
+
+### Grove-Vision AI v2 Workspace
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image10.png)
+
+You can learn more through the [Grove-Vision AI v2 Workspace documentation](https://wiki.seeedstudio.com/Grove_Vision_AI_v2_Workspace/).
+
+### Nvidia Jeson Workspace
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/35.png)
+
+You can learn more through the [Nvidia Jeson Workspace documentation](https://wiki.seeedstudio.com/Nvidia_Jeson_Workspace/).
+
+#### SenseCraft AI-Jetson
+
+SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks! 
+
+In addition to the various built-in AI models we offer out-of-the-box,  you can access to a large number of public models on SenseCraft AI platform and you will be able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs. SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and efficient inferencing and solution building capabilities.
+
+![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif)
+
+
+You can learn more through the [SenseCraft AI-Jetson documentation](https://wiki.seeedstudio.com/SenseCraft_AI_Jetson/).
+
+## The AI "Blink": Quickly Using AI
 
 ### 1. Get started with Face Recognition
 

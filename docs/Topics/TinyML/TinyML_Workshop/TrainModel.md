@@ -100,12 +100,114 @@ If you have more time, you can try using [the `Output` operation you've learned 
 :::
 
 
+
 # ToDo
 - [ ] Train and deploy models using the SenseCraft AI platform.
 - [ ] Setup a Trigger and **Control LED** for your trained models with SenseCraft AI Platform.
 
+## (Optional) Federate: Transmit data wide away
+
+In this step, we are trying to transmit our data from XIAO ESP32S3 Sense to a remote device, using Wi-Fi and MQTT, helping us see its deployment remotely.
+
+### Step 1. Setup MQTT on a device and test
+
+As example, we are using NVIDIA Jetson reComputer J4012 for it. It supports MQTT broker installation and the most important thing is that it offers 100 TOPS AI Power, for us applying LLM locally.
+
+The SenseCraft AI Platform is supporting Wi-Fi and MQTT connection.
+
+<iframe width={800} height={480} src="https://www.youtube.com/embed/-KAyUHzRxHc" title="Unboxing & Plug in reComputer J4012 - Powered by NVIDIA Jetson Orin NX" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+First we need to install the MQTT broker(Mosquitto) and then try to setup the MQTT server.
+
+```
+sudo apt-get update
+sudo apt-get install mosquitto
+```
+
+and get the Mosquitto installation done on the reComputer(Linux).
+
+Then run the commend:
+
+```
+sudo service mosquitto start
+```
+
+to start it.
+
+Later we can run this commend:
+
+```
+sudo service mosquitto status
+```
+
+to see whether it is been activited:
+
+![image](https://fabacademy.org/2024/labs/chaihuo/students/matthew-yu/assets/images/mqtt_docusaurus_xiao_1-3919de85499db74b41cf3057bcdfe6bd.png)
 
 
+:::info
+Testing:
 
+For creating/subcribing a topic:
 
+```
+mosquitto_sub -h localhost -t "LED"
+```
 
+For sending/publishing some data:
+
+```
+mosquitto_pub -h localhost -t "LED" -m "1"
+mosquitto_pub -h localhost -t "LED" -m "test"
+```
+
+Getting the results and it seems all good:
+
+![image](https://fabacademy.org/2024/labs/chaihuo/students/matthew-yu/assets/images/mqtt_docusaurus_xiao_3-281bf87c08ecdb601595625229a7e1df.png)
+:::
+
+And the `localhost` is `192.168.66.184`(as reComputer):
+
+![image](https://fabacademy.org/2024/labs/chaihuo/students/matthew-yu/assets/images/mqtt_docusaurus_xiao_2-8202adc158ca9aa540a264c288c431ed.jpg)
+
+### Step 3. Configure XIAO ESP32S3 Sense on SenseCraft AI Platform
+
+On the SenseCraft AI Platform, you can refer to the "Configuration" page:
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/xiao_mqtt_1.png" style={{width:800, height:'auto'}}/></div>
+
+:::info
+- SSID: (Wi-Fi name same as your MQTT device)
+- Password: (Wi-Fi passowrd as your MQTT device)
+- Encryption: AUTO
+- MQTT: Yes
+- Host: (IP address from your MQTT device) 
+- Port: 1883
+
+In this exaple, the MQTT device is the reComputer like above.
+:::
+
+### Step 3. Receive data from XIAO ESP32S3 Sense and Display
+
+In the receive part, you can install a client with command:
+
+```
+pip install python-sscma
+```
+
+This is an integrated client for the [sscma_micro](https://github.com/Seeed-Studio/sscma_micro), which is a microcontroller at server for the [SSCMA](https://github.com/Seeed-Studio/SSCMA) models.
+
+And then receive the data using:
+
+```
+sscma.cli client --broker mqtt.broker.com --device device_id 
+```
+
+:::info
+In this case, `mqtt.broker.com` is 192.168.66.184, `device_id` is from XIAO ESP32S3 Sense on SenseCraft AI Platform.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/xiao_mqtt_2.png" style={{width:300, height:'auto'}}/></div>
+:::
+
+### Step 4. (comming soon)Federate multiple XIAOs on one page
+
+### Step 5. (comming soon)Enable LLM to automatically watch images from XIAO
