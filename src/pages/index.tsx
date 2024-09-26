@@ -63,7 +63,7 @@ const renderBanner = () => {
           class: 'green'
         },
         {
-          text: 'Topics',
+          text: 'Technology',
           link: 'https://wiki.seeedstudio.com/topicintroduction/'
         },
         {
