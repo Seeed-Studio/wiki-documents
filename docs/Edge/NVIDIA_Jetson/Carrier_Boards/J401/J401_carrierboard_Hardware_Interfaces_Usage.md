@@ -390,7 +390,7 @@ cat /sys/class/hwmon/hwmon0/rpm
 
 ## GPIO
 
-### The detail of 40-pin header is shown below:
+**The detail of 40-pin header is shown below:**
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -947,6 +947,11 @@ Your channel may be different from mine in the commmand: ```i2cdetect -y -r x```
 You will see the result as below, before connecting to the I2C, no I2C device was detected on channel 7, but afterwards an I2C device with the address 0x19 was detected.:
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
+
+:::info
+If you want to use general IO pins for logic control, please refer to [this wiki](/reComputer_Jetson_GPIO).
+:::
+
 
 ## Tech Support & Product Discussion
 
