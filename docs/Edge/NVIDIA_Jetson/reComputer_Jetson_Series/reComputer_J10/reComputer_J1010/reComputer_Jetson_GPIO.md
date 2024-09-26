@@ -167,6 +167,51 @@ cd ..
 echo 433 > unexport
 ```
 
+### For Jetpack6+
+Similar to method 2, we need to refer to another document (pinmux) and obtain this pin label information. Refer the links below according to the SoM.
+
+- [Jetson Nano](https://developer.nvidia.com/jetson-nano-pinmux)
+- [Jetson Xavier NX](https://developer.nvidia.com/jetson-xavier-nx-pinmux-configuration-template-v106)
+- [Jetson Orin NX/ Nano](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)
+
+**Step 1:** Download the pinmux document according to the SoM you are using. Here we choose the [Jetson Orin NX/ Nano](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template) document
+
+**Step 2:** Find the GPIO label (under Customer Usage column) corresponding to the Module Pin Name that we got before. For example, for **GPIO12**, it is **GPIO3_PN.01** and here we refer to **PN.01**
+
+<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-GPIO/4.png" /></div>
+
+**Step 3:** Enter the terminal of the Jetson device and execute this command
+
+```bash
+sudo apt update
+sudo apt install gpiod
+
+gpioinfo
+```
+
+**Step 4:** Find the **GPIO number** corresponding to the **GPIO label** that we got before
+
+<div align="center">
+  <img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gpio/gpioinfo1.png" />
+  <img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gpio/gpioinfo2.png" />
+</div>
+
+In this case, it is **gpiochip0 line85** corresponding to **PN.01** which is also equal to **GPIO12**
+
+**Step 5:** Then we can use the **gpioset** command to configure the working mode of the GPIO.
+
+```bash
+# To set GPIO12 to HIGH
+sudo gpioset --mode=wait gpiochip0 85=1
+# To set GPIO12 to LOW
+sudo gpioset --mode=wait gpiochip0 85=0 
+```
+
+:::info
+If you want to learn more about the **gpioset** command, please refer to this:
+https://www.acmesystems.it/gpiod
+:::
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

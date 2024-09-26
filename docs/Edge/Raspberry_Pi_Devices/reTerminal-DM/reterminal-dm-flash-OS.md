@@ -444,6 +444,8 @@ Then reboot:
 sudo reboot
 ```
 
+If the screen orientation is still incorrect, additional options for the `ENV{LIBINPUT_CALIBRATION_MATRIX}` can be found [here](https://wayland.freedesktop.org/libinput/doc/1.11.3/udev_config.html).
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

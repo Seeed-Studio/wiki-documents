@@ -1,6 +1,6 @@
 ---
 description: This is an open-source project / platform focused on embedded AI.
-title: SenseCraft AI Platform
+title: The AI "Blink"
 keywords:
 - tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
