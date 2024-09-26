@@ -64,11 +64,11 @@ const renderBanner = () => {
         },
         {
           text: 'Topics',
-          link: 'https://sensecraftma.seeed.cc/introduction/installation'
+          link: 'https://wiki.seeedstudio.com/topicintroduction/'
         },
         {
           text: 'GitHub',
-          link: 'https://sensecraftma.seeed.cc/introduction/installation'
+          link: 'https://github.com/Seeed-Studio/wiki-documents'
         },
       ]
     },
