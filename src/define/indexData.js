@@ -71,7 +71,7 @@ export const startedList = [
       },
       {
         title: 'Edge Controller',
-        link: 'https://wiki.seeedstudio.com/Edge_Box_RPI_Intro',
+        link: 'https://wiki.seeedstudio.com/Edge_Box_intro/',
       },
       {
         title: 'Raspberry Pi Official',
@@ -86,28 +86,24 @@ export const startedList = [
     children: [
       {
         title: 'reComputer Jetson Series',
-        link: 'https://wiki.seeedstudio.com/reComputer_Jetson_Intro/',
+        link: 'https://wiki.seeedstudio.com/reComputer_Intro/',
       },
       {
         title: 'reComputer Jetson Industrial Series',
         link:
-          'https://wiki.seeedstudio.com/reComputer_Jetson_Industrial_Intro/',
-      },
-      {
-        title: 'reServer Jetson',
-        link: 'https://wiki.seeedstudio.com/reServer_Jetson_Intro/',
+          'https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/',
       },
       {
         title: 'reServer Jetson Industrial',
-        link: 'https://wiki.seeedstudio.com/reServer_Jetson_Industrial_Intro/',
+        link: 'https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/',
       },
       {
         title: 'Mini PC',
-        link: 'https://wiki.seeedstudio.com/AI_PC_Jetson_Intro/',
+        link: 'https://wiki.seeedstudio.com/reComputer_A203E_Flash_System/',
       },
       {
         title: 'Carrier Boards',
-        link: 'https://wiki.seeedstudio.com/Other_Jetson_Boards_Intro/',
+        link: 'https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack/',
       },
     ],
   },
@@ -136,7 +132,7 @@ export const startedList = [
       },
       {
         title: 'Edge Controller',
-        link: 'https://wiki.seeedstudio.com/ESP_Edge_Controller_Intro/',
+        link: 'https://wiki.seeedstudio.com/Edgebox-ESP-100-Arduino/',
       },
     ],
   },
@@ -155,7 +151,7 @@ export const startedList = [
       },
       {
         title: 'LinkStar Router Series',
-        link: 'https://wiki.seeedstudio.com/LinkStar_Router_Intro/',
+        link: 'https://wiki.seeedstudio.com/Linkstar_Intro/',
       },
     ],
   },
@@ -170,7 +166,7 @@ export const startedList = [
       },
       {
         title: 'Arduino Shields',
-        link: 'https://wiki.seeedstudio.com/Arduino_Shields_Intro/',
+        link: 'https://wiki.seeedstudio.com/Shield/',
       },
       {
         title: 'mmWave Radar Sensor',
@@ -178,7 +174,7 @@ export const startedList = [
       },
       {
         title: 'Arduino Kits withs Courses',
-        link: 'https://wiki.seeedstudio.com/Arduino_Kit_Intro/',
+        link: 'https://wiki.seeedstudio.com/Grove-Beginner-Kit-For-Arduino/',
       },
     ],
   },
@@ -196,7 +192,7 @@ export const startedList = [
         link: 'https://wiki.seeedstudio.com/BitMaker/',
       },
       {
-        title: 'BitMkaer Lite',
+        title: 'BitMaker Lite',
         link: 'https://wiki.seeedstudio.com/BitMaker_Lite/',
       },
       {
@@ -223,38 +219,48 @@ export const exploreList = [
     children: [
       {
         title: 'Awaken Your Home',
-        link: 'https://wiki.seeedstudio.com/home_assistant_topic/#jump2',
+        link: 'https://wiki.seeedstudio.com/home_assistant_topic/',
       },
       {
         title: 'Home Assistant Projects',
-        link: 'https://wiki.seeedstudio.com/home_assistant_topic/#jump2',
+        link: 'https://wiki.seeedstudio.com/home_assistant_topic/#what-is-home-assistant',
         children: [
           {
-            title: 'presented by Seeed Studio',
+            title: 'SenseCAP Integration for Home Assistant',
             link:
-              'https://wiki.seeedstudio.com/home_assistant_topic/#-presented-by-seeed-studio-',
+              'https://wiki.seeedstudio.com/home_assistant_sensecap/',
           },
           {
-            title: 'presented by Community',
+            title: 'Extend Home Assistant with LoRaWAN device',
             link:
-              'https://wiki.seeedstudio.com/home_assistant_topic/#-home-assistant-application-presented-by-our-friends--',
+              'https://wiki.seeedstudio.com/ha_xiao_esp32/',
           },
           {
-            title: 'presented by Contributors',
+            title: 'SenseCraft-HomeAssistant User Manual',
             link:
-              'https://wiki.seeedstudio.com/home_assistant_topic/#-collaborate-more-home-assistant-projects-with-us-',
+              'https://wiki.seeedstudio.com/sensecraft_homeassistant_userguide/',
           },
         ],
       },
       {
-        title: 'Devices for Home Assistant',
+        title: 'Home Assistant Official devices',
         link:
-          'https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-',
+          'https://wiki.seeedstudio.com/home_assistant_topic/#top-picks-form-home-assistant-official',
       },
       {
-        title: 'Peripherals for Home Assistant',
+        title: 'Popular Add-ons',
         link:
-          'https://wiki.seeedstudio.com/home_assistant_topic/#peripherals-for-enhancing-home-assistant-devices',
+          'https://wiki.seeedstudio.com/home_assistant_topic/#popular-add-onsv',
+      },
+      {
+        title: 'Seeed-powered Home Assistant Devices',
+        link:
+          'https://wiki.seeedstudio.com/home_assistant_topic/#getting-started-with-seeed-devices-a-quick-setup-guide',
+      },
+      {
+        title: 'Seeed powered Home Assistant Applications',
+        link:
+          'https://wiki.seeedstudio.com/home_assistant_topic/#seeed-powered-home-assistant-applications',
       },
     ],
   },
@@ -320,22 +326,22 @@ export const exploreList = [
     ],
   },
   {
-    title: 'Workshop',
+    title: 'TinyML Workshop',
     img: 'grove',
-    link: 'https://wiki.seeedstudio.com/Seeed_Studio_WorkShop_Intro/',
+    link: 'https://wiki.seeedstudio.com/tinyml_workshop_course_new/',
     children: [
       {
         title: 'Course & Workshop',
-        link: 'https://wiki.seeedstudio.com/home_assistant_topic/#jump2',
+        link: 'https://wiki.seeedstudio.com/tinyml_workshop_course_new/',
         children: [
           {
-            title: 'TinyML Workshop',
-            link: 'https://wiki.seeedstudio.com/tinyml_workshop_course_new/',
+            title: 'SenseCraft AI Platform',
+            link: 'https://wiki.seeedstudio.com/sscma/',
           },
           {
-            title: 'Perception System Workshop',
+            title: 'Edge Impulse',
             link:
-              'https://wiki.seeedstudio.com/perception_system_workshop_course',
+              'https://wiki.seeedstudio.com/edgeimpulse/',
           },
         ],
       },
@@ -344,16 +350,24 @@ export const exploreList = [
   {
     title: 'Edge AI Solutions',
     img: 'grove',
-    link: 'https://wiki.seeedstudio.com/Edge_AI_Solutions_Intro/',
+    link: 'https://wiki.seeedstudio.com/edge_ai_topic/',
     children: [
       {
-        title: 'Vision',
-        link: 'https://wiki.seeedstudio.com/Edge_AI_Vision_Solutions',
+        title: 'Generative AI',
+        link: 'https://wiki.seeedstudio.com/edge_ai_topic/#generative-ai',
       },
       {
-        title: 'Words',
-        link: 'https://wiki.seeedstudio.com/Edge_AI_Words_Solutsions',
+        title: 'Object Recognition',
+        link: 'https://wiki.seeedstudio.com/edge_ai_topic/#object-recognition',
       },
+      {
+        title: 'Sound Recognition',
+        link: 'https://wiki.seeedstudio.com/edge_ai_topic/#sound-recognition',
+      },
+      {
+        title: 'Enhance Deep Learning Model',
+        link: 'https://wiki.seeedstudio.com/edge_ai_topic/#enhance-deep-learning-model',
+      },      
     ],
   },
   {
@@ -364,12 +378,24 @@ export const exploreList = [
       {
         title: 'Hardware',
         link:
-          'https://wiki.seeedstudio.com/Seeed_Studio_Open_Souce_Intro/#Hardware',
+          'https://wiki.seeedstudio.com/open_source_topic/#open-source-hardware',
       },
       {
         title: 'Software',
         link:
-          'https://wiki.seeedstudio.com/Seeed_Studio_Open_Souce_Intro/#Software',
+          'https://wiki.seeedstudio.com/open_source_topic/#open-source-software',
+      },
+    ],
+  },
+  {
+    title: '矽递科技Wiki文档平台',
+    img: 'grove',
+    link: 'https://wiki.seeedstudio.com/cn/Getting_Started/',
+    children: [
+      {
+        title: '矽递科技Wiki文档平台',
+        link:
+          'https://wiki.seeedstudio.com/cn/Getting_Started/',
       },
     ],
   },

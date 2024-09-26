@@ -233,78 +233,174 @@ const config = {
             label: 'Quick Links',
             to: '/Getting_Started',
             position: 'left',
-            className: 'navbar_dorp_items home_nav js_getting_started',
+            className: 'navbar_dorp_items js_getting_started',
           },
           {
-            label: 'Explore with Topics',
-            to: '/Getting_Started',
+            label: 'Technology',
+            to: '/topicintroduction',
             position: 'left',
-            className: 'navbar_dorp_items home_nav js_explore_learn',
+            className: 'navbar_dorp_items js_explore_learn',
+          },
+          {
+            type: 'dropdown',
+            label: 'FAQs',
+            to: '/knowledgebase',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'NVIDIA Jetson Series',
+                to: '/Jetson_FAQ',
+              },
+              {
+                label: 'Seeed Studio XIAO Series',
+                to: '/XIAO_FAQ',
+              },
+              {
+                label: 'reComputer R1000 Series',
+                to: '/reComputer_R1000_FAQ',
+              },
+              {
+                label: 'reTerminal',
+                to: '/reTerminal-new_FAQ',
+              },
+              {
+                label: 'reRouter',
+                to: '/FAQs_For_openWrt',
+              },
+              {
+                label: 'Odyssey',
+                to: '/ODYSSEY_FAQ',
+              },
+              {
+                label: 'Wio Terminal',
+                to: '/wio_terminal_faq',
+              },
+              // 添加分割线
+              {
+                type: 'html',
+                value: '<hr style="margin: 8px 0;">', // 调整样式根据你的需求
+              },
+              // 添加新的菜单项
+              {
+                label: 'Discord',
+                href: 'https://discord.com/invite/eWkprNDMU7',
+              },
+              {
+                label: 'Email',
+                href: 'https://www.seeedstudio.com/contacts',
+              },
+              {
+                label: 'Forum',
+                href: 'https://forum.seeedstudio.com/',
+              },
+              {
+                label: 'Have Suggestions?',
+                href: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
+              },
+
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'Rangers',
+            to: '/ranger',
+            position: 'left',
+            className: 'navbar_dorp_items',
+            items: [
+              {
+                label: 'Rangers',
+                to: '/ranger',
+              },
+              {
+                label: 'Contributors',
+                to: '/contributors',
+              },
+              {
+                label: 'Apply for Rangers',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
+              },
+              {
+                label: 'Direct to Assignments',
+                href: 'https://github.com/orgs/Seeed-Studio/projects/6',
+              },
+              {
+                label: 'More about Rangers',
+                href: 'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
+              },
+              {
+                label: 'More about Contributors',
+                href: 'https://wiki.seeedstudio.com/Contributor',
+              },
+            ],
           },
           // wiki documents navigation
-          {
-            type: 'dropdown',
-            label: 'Getting Started',
-            to: '/Getting_Started',
-            position: 'left',
-            className: 'navbar_dorp_items doc_nav',
-            items: [
-              {
-                label: 'Sensing and Connectivity',
-                to: 'Sensor_Network',
-              },
-              {
-                label: 'Edge Computing',
-                to: 'Edge_Computing',
-              },
-              {
-                label: 'Cloud and Chain',
-                to: 'CloudnChain',
-              },
-            ],
-          },
-          {
-            type: 'dropdown',
-            label: 'Topics',
-            to: '/Getting_Started',
-            position: 'left',
-            className: 'navbar_dorp_items doc_nav',
-            items: [
-              {
-                label: 'TinyML',
-                to: '/tinyml_topic',
-              },
-              {
-                label: 'Home Assistant',
-                to: '/home_assistant_topic',
-              },
-              {
-                label: 'Open Source',
-                to: '/open_source_topic',
-              },
-              {
-                label: 'Edge AI',
-                to: '/edge_ai_topic',
-              },
-            ],
-          },
-          {
-            type: 'dropdown',
-            label: '文/A',
-            to: '/Getting_Started',
-            position: 'left',
-            className: 'navbar_dorp_items doc_nav',
-            items: [
-              {
-                label: 'Seeed Studio Wiki Platform',
-                to: '/Getting_Started',
-              },
-              {
-                label: '矽递科技 Wiki 文档平台（测试）',
-                to: '/cn/Getting_Started',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Getting Started',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'Sensing and Connectivity',
+          //       to: 'Sensor_Network',
+          //     },
+          //     {
+          //       label: 'Edge Computing',
+          //       to: 'Edge_Computing',
+          //     },
+          //     {
+          //       label: 'Cloud and Chain',
+          //       to: 'CloudnChain',
+          //     },
+          //   ],
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Topics',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'TinyML',
+          //       to: '/tinyml_topic',
+          //     },
+          //     {
+          //       label: 'Home Assistant',
+          //       to: '/home_assistant_topic',
+          //     },
+          //     {
+          //       label: 'Open Source',
+          //       to: '/open_source_topic',
+          //     },
+          //     {
+          //       label: 'Edge AI',
+          //       to: '/edge_ai_topic',
+          //     },
+          //   ],
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: '文/A',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'Seeed Studio Wiki Platform',
+          //       to: '/Getting_Started',
+          //     },
+          //     {
+          //       label: '矽递科技 Wiki 文档平台（测试）',
+          //       to: '/cn/Getting_Started',
+          //     },
+          //   ],
+          // },
+
+
+
 
           // {
           //   label: 'Contribution',
@@ -331,12 +427,18 @@ const config = {
           //   label: 'Solutions',
           //   className: 'navbar_doc_items'
           // },
-          // {
-          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
-          //   label: 'Chat 🤖️',
-          //   position: 'right',
-          //   className: 'navbar_doc_right_items',
-          // },
+          {
+            to: 'https://wiki-gpt.seeedstudio.com/chat',
+            label: 'AI Bot 🤖️',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
+          {
+            to: 'https://sensecraft.seeed.cc/ai/#/home',
+            label: 'SenseCraft AI',
+            position: 'right',
+            className: 'navbar_doc_right_items',
+          },
           // {
           //   to: 'https://wiki-gpt.seeedstudio.com/chat',
           //   label: 'Rangers ✨',
@@ -349,22 +451,22 @@ const config = {
           //   position: 'right',
           //   className: 'navbar_doc_right_items',
           // },
-          {
-            type: 'dropdown',
-            label: 'Collaborations ✨',
-            to: '/Getting_Started',
-            position: 'right',
-            items: [
-              {
-                label: 'Rangers',
-                to: '/knowledgebase/',
-              },
-              {
-                label: 'Contributors',
-                to: '/cn/Getting_Started',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Collaborations ✨',
+          //   to: '/Getting_Started',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       label: 'Rangers',
+          //       to: '/knowledgebase/',
+          //     },
+          //     {
+          //       label: 'Contributors',
+          //       to: '/cn/Getting_Started',
+          //     },
+          //   ],
+          // },
           {
             href:
               'https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process',
@@ -545,7 +647,8 @@ const config = {
         id: 'support_us',
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-          'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
+          //'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
+          'Collaborating with us! Join the Seeed Studio <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger Program</a> or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor Program</a>!',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,

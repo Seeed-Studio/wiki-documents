@@ -1,47 +1,55 @@
-import React, { useState, useRef } from 'react';
-import css from './form.module.scss'
-import clsx from 'clsx'
-
-import { useForm } from 'react-hook-form';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-// import getLatestDocs from '../../utils/getLatestDocs';
-// import fs from 'fs-extra';
-// import * as path from 'path';
-// import fm from 'front-matter';
+import React, { useState, useRef, useEffect } from 'react';
+import css from './form.module.scss';
+import clsx from 'clsx';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import docList from '../../utils/wiki'
-const getIndexImage = (src) => {
-  return src && require(`../../../assets/index/${src}`).default;
-}
+import docList from '../../utils/wiki';
 
 function IndexLatestedViki() {
-  const numLatestDocs = 10; // 获取的最新文档数量
-  // getLatestDocs(10)
-  // const docsDir = path.join(__dirname, '..', 'docs')
-  const [tabActive, setTabActive] = useState('Contributors')
-  const [loading, setLoading] = useState(false)
-  const [docs, setDocs] = React.useState([]);
+  const [tabActive, setTabActive] = useState('Contributors');
+  const [loading, setLoading] = useState(false);
+  const [docs, setDocs] = useState([]);
   const swiperRef = useRef(null);
   const [canGoPrev, setCanGoPrev] = useState(false);
-  const [canGoNext, setCanGoNext] = useState((docList.length/8)>0);
-  // 示例：滑动到下一个 slide
+  const [canGoNext, setCanGoNext] = useState(false);
+
+  useEffect(() => {
+    // 展平 `docList`，将所有子数组合并为一个数组
+    const flattenedDocs = docList.flat();
+
+    // 按日期排序，假设每个文档都有 `date` 属性
+    const sortedDocs = flattenedDocs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    // 截取前 10 个文档
+    const topDocs = sortedDocs.slice(0, 12);
+
+    // 将文档按每两个分成一组
+    const groupedDocs = [];
+    for (let i = 0; i < topDocs.length; i += 2) {
+      groupedDocs.push(topDocs.slice(i, i + 2)); // 每次取两个文档
+    }
+
+    // 更新 state
+    setDocs(groupedDocs);
+
+    // 如果分组后的文档超过一行，允许向后滑动
+    setCanGoNext(groupedDocs.length > 1);
+  }, []);
+
   const handleNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
 
-  // 示例：滑动到上一个 slide
   const handlePrev = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
   const handleSlideChange = () => {
-    console.log(swiperRef.current.swiper )
     if (swiperRef.current && swiperRef.current.swiper) {
       setCanGoPrev(!swiperRef.current.swiper.isBeginning);
       setCanGoNext(!swiperRef.current.swiper.isEnd);
@@ -56,46 +64,44 @@ function IndexLatestedViki() {
             Latest Wiki
           </div>
           <div className={css.arrow}>
-            <button className={clsx(css.arrow_left,css.arrow_btn)} onClick={handlePrev} disabled={!canGoPrev}><FaChevronLeft /></button>
-            <button className={clsx(css.arrow_right,css.arrow_btn)} onClick={handleNext} disabled={!canGoNext}> <FaChevronRight /></button>
+            <button className={clsx(css.arrow_left, css.arrow_btn)} onClick={handlePrev} disabled={!canGoPrev}>
+              <FaChevronLeft />
+            </button>
+            <button className={clsx(css.arrow_right, css.arrow_btn)} onClick={handleNext} disabled={!canGoNext}>
+              <FaChevronRight />
+            </button>
           </div>
         </div>
       </div>
       <div className={css.latested_container}>
         <Swiper
-         ref={swiperRef} 
-         autoplay={{
-          delay: 1000, // 每个幻灯片之间的延迟时间（毫秒）
-          disableOnInteraction: false, // 用户交互时是否禁用自动播放
-        }}
-          slidesPerView={4} // 每次显示的幻灯片数量
+          ref={swiperRef}
+          autoplay={{
+            delay: 1000, // 每个幻灯片之间的延迟时间（毫秒）
+            disableOnInteraction: false, // 用户交互时是否禁用自动播放
+          }}
+          slidesPerView={4} // 每个滑动页显示一个 group
           spaceBetween={24}
-          pagination={{ clickable: false }} // 显示分页器
-          scrollbar={{ draggable: false }} // 显示滚动条
+          pagination={{ clickable: false }} // 不显示分页器
+          scrollbar={{ draggable: false }} // 不显示滚动条
           onSlideChange={handleSlideChange}
         >
-    
-          {docList.map((arr, index) => {
-            return (
-              <SwiperSlide>
-                {
-                  arr.map((item, index) => {
-                    return (
-                      <a className={css.wiki_item} href={item.path}>
-                        <img src={item.image} alt="" />
-                        <div className={css.wiki_name}>{item.title}</div>
-                      </a>
-                    )
-                  })
-                }
-              </SwiperSlide>
-            )
-
-          })}
+          {docs.map((group, index) => (
+            <SwiperSlide key={index}>
+              <div className={css.wiki_group}>
+                {group.map((doc, subIndex) => (
+                  <a className={css.wiki_item} href={doc.path} key={subIndex}>
+                    <img src={doc.image} alt={doc.title} />
+                    <div className={css.wiki_name}>{doc.title}</div>
+                  </a>
+                ))}
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>
-  )
+  );
 }
 
 export default IndexLatestedViki;

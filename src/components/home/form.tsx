@@ -78,7 +78,7 @@ function IndexForm() {
           })}
         </div>
         <div className={css.tab_tip}>
-        We really appreciate if you can <a href="https://github.com/orgs/Seeed-Studio/projects/6/views/1for">contribute in any way</a>   the wiki platform, suggesting updates, fixing typos, accepting the assignments in demand, etc. Join us and get your reward!
+        We really appreciate if you can <a href="https://wiki.seeedstudio.com/Contributor/">contribute in any way</a>   the wiki platform, suggesting updates, fixing typos, accepting the assignments in demand, etc. Join us and get your reward!
         </div>
       </div>
       <form className={css.form_container} onSubmit={handleSubmit(onSubmit)}>
