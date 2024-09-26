@@ -1022,6 +1022,7 @@ const sidebars = {
           label: 'MR60BHA2 mmWave kit',
           items: [
             'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/ha_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
