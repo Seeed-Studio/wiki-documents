@@ -17,7 +17,7 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/S.png',
-  themes: ['docusaurus-theme-search-typesense'],
+
   scripts: [
     // String format.
     // 'https://viewer.altium.com/client/static/js/embed.js',
@@ -156,11 +156,6 @@ const config = {
           dark: 'rgb(50, 50, 50)',
           light: 'rgb(255, 255, 255)',
         },
-
-        zoom: {
-          selector: '.markdown :not(a) > img', // Exclude images inside links
-          
-        },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
         config: {},
@@ -200,7 +195,7 @@ const config = {
             'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
           srcDark:
             'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
-          href: 'Getting_Started',
+          href: '/',
           className: 'navbar_logo_items',
         },
         items: [
@@ -232,65 +227,20 @@ const config = {
           //   label: 'Cloud',
           //   className: 'navbar_doc_items',
           // },
+
+          // home navigation
           {
-            type: 'dropdown',
-            label: 'Getting Started',
+            label: 'Quick Links',
             to: '/Getting_Started',
             position: 'left',
-            className: 'navbar_dorp_items',
-            items: [
-              {
-                label: 'Sensor and Sensing',
-                to: 'Sensor_Network',
-              },
-              {
-                label: 'Networking',
-                to: 'Network',
-              },
-              {
-                label: 'Edge Computing',
-                to: 'Edge_Computing',
-              },
-              {
-                label: 'Cloud',
-                to: 'Cloud',
-              },
-            ],
+            className: 'navbar_dorp_items js_getting_started',
           },
           {
-            type: 'dropdown',
             label: 'Technology',
             to: '/topicintroduction',
             position: 'left',
-            className: 'navbar_dorp_items',
-            items: [
-              {
-                label: 'TinyML',
-                to: '/tinyml_topic',
-              },
-              {
-                label: 'SenseCraft Model Assistant',
-                to: '/ModelAssistant_Introduce_Overview',
-              },
-              {
-                label: 'Home Assistant',
-                to: '/home_assistant_topic',
-              },
-              {
-                label: 'Open Source',
-                to: '/open_source_topic',
-              },
-              {
-                label: 'Edge AI',
-                to: '/edge_ai_topic',
-              },
-              {
-                label: '矽递科技 Wiki 文档平台（测试）',
-                to: '/cn/Getting_Started',
-              },
-            ],
+            className: 'navbar_dorp_items js_explore_learn',
           },
-
           {
             type: 'dropdown',
             label: 'FAQs',
@@ -351,25 +301,6 @@ const config = {
 
             ],
           },
-
-          // {
-          //   type: 'dropdown',
-          //   label: '文/A',
-          //   to: '/Getting_Started',
-          //   position: 'left',
-          //   className: 'navbar_dorp_items',
-          //   items: [
-          //     {
-          //       label: 'Seeed Studio Wiki Platform',
-          //       to: '/Getting_Started',
-          //     },
-          //     {
-          //       label: '矽递科技 Wiki 文档平台（测试）',
-          //       to: '/cn/Getting_Started',
-          //     },
-          //   ],
-          // },
-
           {
             type: 'dropdown',
             label: 'Rangers',
@@ -403,6 +334,73 @@ const config = {
               },
             ],
           },
+          // wiki documents navigation
+          // {
+          //   type: 'dropdown',
+          //   label: 'Getting Started',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'Sensing and Connectivity',
+          //       to: 'Sensor_Network',
+          //     },
+          //     {
+          //       label: 'Edge Computing',
+          //       to: 'Edge_Computing',
+          //     },
+          //     {
+          //       label: 'Cloud and Chain',
+          //       to: 'CloudnChain',
+          //     },
+          //   ],
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Topics',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'TinyML',
+          //       to: '/tinyml_topic',
+          //     },
+          //     {
+          //       label: 'Home Assistant',
+          //       to: '/home_assistant_topic',
+          //     },
+          //     {
+          //       label: 'Open Source',
+          //       to: '/open_source_topic',
+          //     },
+          //     {
+          //       label: 'Edge AI',
+          //       to: '/edge_ai_topic',
+          //     },
+          //   ],
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: '文/A',
+          //   to: '/Getting_Started',
+          //   position: 'left',
+          //   className: 'navbar_dorp_items doc_nav',
+          //   items: [
+          //     {
+          //       label: 'Seeed Studio Wiki Platform',
+          //       to: '/Getting_Started',
+          //     },
+          //     {
+          //       label: '矽递科技 Wiki 文档平台（测试）',
+          //       to: '/cn/Getting_Started',
+          //     },
+          //   ],
+          // },
+
+
+
 
           // {
           //   label: 'Contribution',
@@ -441,8 +439,37 @@ const config = {
             position: 'right',
             className: 'navbar_doc_right_items',
           },
+          // {
+          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
+          //   label: 'Rangers ✨',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          // },
+          // {
+          //   to: 'https://wiki-gpt.seeedstudio.com/chat',
+          //   label: 'Collaborations ✨',
+          //   position: 'right',
+          //   className: 'navbar_doc_right_items',
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Collaborations ✨',
+          //   to: '/Getting_Started',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       label: 'Rangers',
+          //       to: '/knowledgebase/',
+          //     },
+          //     {
+          //       label: 'Contributors',
+          //       to: '/cn/Getting_Started',
+          //     },
+          //   ],
+          // },
           {
-            href: 'https://sensecraft.seeed.cc/ai/#/home',
+            href:
+              'https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process',
             position: 'right',
             className: 'header-SSCMA',
           },
@@ -495,20 +522,16 @@ const config = {
                 to: '/Getting_Started',
               },
               {
-                label: 'Sensor and Sensing',
+                label: 'Sensor Network',
                 to: '/Sensor_Network',
-              },
-              {
-                label: 'Network',
-                to: '/Network',
               },
               {
                 label: 'Edge Computing',
                 to: '/Edge_Computing',
               },
               {
-                label: 'Cloud',
-                to: '/Cloud',
+                label: 'Cloud & Chain',
+                to: '/CloudnChain',
               },
               {
                 label: 'Solutions',
@@ -591,54 +614,29 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: 'AKPIWVFYW0',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'AKPIWVFYW0',
 
-      //   // Public API key: it is safe to commit it
-      //   apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
+        // Public API key: it is safe to commit it
+        apiKey: 'dd2e490797af4d0ef1afdd73f66e3174',
 
-      //   indexName: 'wiki_update',
+        indexName: 'wiki_update',
 
-      //   // Optional: see doc section below
-      //   contextualSearch: false,
+        // Optional: see doc section below
+        contextualSearch: false,
 
-      //   // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-      //   // externalUrlRegex: 'external\\.com|domain\\.com',
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
 
-      //   // Optional: Algolia search parameters
-      //   searchParameters: {},
+        // Optional: Algolia search parameters
+        searchParameters: {},
 
-      //   // Optional: path for search page that enabled by default (`false` to disable it)
-      //   searchPagePath: 'search',
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
 
-      //   //... other Algolia params
-      // },
-      typesense: {
-        // Replace this with the name of your index/collection.
-        // It should match the "index_name" entry in the scraper's "config.json" file.
-        // typesenseCollectionName: 'wiki_platform_1713169217',
-        typesenseCollectionName: 'wiki_platform_1725602541',
-  
-        typesenseServerConfig: {
-          nodes: [
-            {
-              host: 'search.seeedstudio.com',
-              // port: 443,
-              protocol: 'https',
-            },
-          ],
-          apiKey: 'RWzz9wJKzXW2iBB8HgcCnZjnrytuWaYb',
-        },
-              // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
-      "query_by": "hierarchy.lvl0,hierarchy.lvl2,content",
-      "sort_by": "",
-      
-      // Optional
-      contextualSearch: true,
-    },
-
+        //... other Algolia params
+      },
       mermaid: {
         options: {
           maxTextSize: 50,
@@ -649,7 +647,7 @@ const config = {
         id: 'support_us',
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
-          // 'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
+          //'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
           'Collaborating with us! Join the Seeed Studio <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger Program</a> or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor Program</a>!',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
