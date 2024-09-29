@@ -200,7 +200,7 @@ const config = {
             'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
           srcDark:
             'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
-          href: 'Getting_Started',
+          href: '/',
           className: 'navbar_logo_items',
         },
         items: [
@@ -232,65 +232,22 @@ const config = {
           //   label: 'Cloud',
           //   className: 'navbar_doc_items',
           // },
+
+          // home navigation
           {
-            type: 'dropdown',
-            label: 'Getting Started',
+            label: 'Quick Links',
             to: '/Getting_Started',
             position: 'left',
-            className: 'navbar_dorp_items',
-            items: [
-              {
-                label: 'Sensor and Sensing',
-                to: 'Sensor_Network',
-              },
-              {
-                label: 'Networking',
-                to: 'Network',
-              },
-              {
-                label: 'Edge Computing',
-                to: 'Edge_Computing',
-              },
-              {
-                label: 'Cloud',
-                to: 'Cloud',
-              },
-            ],
+            className: 'navbar_dorp_items js_getting_started',
           },
           {
-            type: 'dropdown',
-            label: 'Technology',
+            label: 'Explore with Topics',
             to: '/topicintroduction',
             position: 'left',
-            className: 'navbar_dorp_items',
-            items: [
-              {
-                label: 'TinyML',
-                to: '/tinyml_topic',
-              },
-              {
-                label: 'SenseCraft Model Assistant',
-                to: '/ModelAssistant_Introduce_Overview',
-              },
-              {
-                label: 'Home Assistant',
-                to: '/home_assistant_topic',
-              },
-              {
-                label: 'Open Source',
-                to: '/open_source_topic',
-              },
-              {
-                label: 'Edge AI',
-                to: '/edge_ai_topic',
-              },
-              {
-                label: '矽递科技 Wiki 文档平台（测试）',
-                to: '/cn/Getting_Started',
-              },
-            ],
+            className: 'navbar_dorp_items js_explore_learn',
           },
 
+          // wiki documents navigation
           {
             type: 'dropdown',
             label: 'FAQs',

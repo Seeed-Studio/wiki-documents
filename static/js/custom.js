@@ -29,38 +29,39 @@ window.onload = function () {
     }
     const child = document.createElement('div')
     child.innerHTML = `
-    <p>We could not find what you were looking for.</p>
-    <p>Please contact the owner of the site that linked you to the original URL and let them know their link is broken.</p>
-    <a
-     href="/Getting_Started/"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="get_one_now_item text--center"
-   >
-     <strong>
-       <span>
-         <font color="FFFFFF" size="4">
-         Back to the Start
-         </font>
-       </span>
-     </strong>
-   </a>
+            <p>We could not find what you were looking for.</p>
+            <p>Please contact the owner of the site that linked you to the original URL and let them know their link is broken.</p>
+            <a
+            href="/Getting_Started/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="get_one_now_item text--center"
+          >
+            <strong>
+              <span>
+                <font color="FFFFFF" size="4">
+                Back to the Start
+                </font>
+              </span>
+            </strong>
+          </a>
 
-   <a
-   href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34122324"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="get_one_now_item text--center"
- >
-   <strong>
-     <span>
-       <font color="FFFFFF" size="4">
-        Report on GitHub
-       </font>
-     </span>
-   </strong>
- </a>
+          <a
+          href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34122324"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="get_one_now_item text--center"
+        >
+          <strong>
+            <span>
+              <font color="FFFFFF" size="4">
+                Report on GitHub
+              </font>
+            </span>
+          </strong>
+        </a>
    `
     parent.appendChild(child)
   }
 }
+
