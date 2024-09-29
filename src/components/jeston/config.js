@@ -295,6 +295,11 @@ export const listData1 = [
         img: 'https://files.seeedstudio.com/wiki/reComputer/home_page/Lumeo.png',
         href: 'https://wiki.seeedstudio.com/Lumeo-Jetson-Getting-Started/',
       },
+      {
+        name: ' ',
+        img: 'https://files.seeedstudio.com/wiki/reComputer/home_page/GenAINerdsLogo1.png',
+        href: 'https://wiki.seeedstudio.com/gapi_getting_started-with_jetson/',
+      },
     ],
   },
   {
