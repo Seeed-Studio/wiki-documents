@@ -10,8 +10,37 @@ last_update:
   author: Jessie
 ---
 
+## Video Tutorial
 
-## Preparation
+
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=9sCHpWPSPcw" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/9sCHpWPSPcw/0.jpg" alt="Unboxing Setup" width="320" height="180" />
+    </a>
+    <center><b><font size="4。5">Unboxing Setup</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=8p34S_9DDEQ" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/8p34S_9DDEQ/0.jpg" alt="Status Indicators" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Status Indicators</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=li6DTOeXK3M" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/li6DTOeXK3M/0.jpg" alt="Flash New Firmware" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Flash New Firmware</font></b></center>
+  </div>
+</div>
+
+
+
+
+## Get Started
 
 Download `Meshtastic` App:
 
