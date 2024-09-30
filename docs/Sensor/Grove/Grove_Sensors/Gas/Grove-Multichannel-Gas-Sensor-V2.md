@@ -39,7 +39,7 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
 |:--------------:|:----------------------------------:|
 |       MCU      |              STM32F030             |
 |    Interface   |              Grove I2C             |
-|   I2C address  |                0x55                |
+|   I2C address  |                0x08                |
 | Output voltage |               3.3V~5V              |
 |     Sensors    | GM-102B; GM-302B; GM-502B; GM-702B |
 
