@@ -10,28 +10,57 @@ last_update:
   author: Jessie
 ---
 
+## Video Tutorial
 
-### Preparation
+
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=9sCHpWPSPcw" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/9sCHpWPSPcw/0.jpg" alt="Unboxing Setup" width="320" height="180" />
+    </a>
+    <center><b><font size="4。5">Unboxing Setup</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=8p34S_9DDEQ" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/8p34S_9DDEQ/0.jpg" alt="Status Indicators" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Status Indicators</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=li6DTOeXK3M" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/li6DTOeXK3M/0.jpg" alt="Flash New Firmware" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Flash New Firmware</font></b></center>
+  </div>
+</div>
+
+
+
+
+## Get Started
 
 Download `Meshtastic` App:
 
 * [IOS App](https://meshtastic.org/docs/category/apple-apps/)
 * [Android App](https://meshtastic.org/docs/category/android-app/)
 
-### Device Connection
 
-**Check the device name**
-
-Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
-Select device: `T1000-E Tracker Card`<br/>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
-
-Click `Open Serial Monitor`, connect the device, and you will see the device name.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name2.png" alt="pir" width={800} height="auto" /></p>
+## Get Started
 
 
-Press the button once to power on the T1000-E tracker, the Bluetooth pairing will be activated automatically.
+### Power on the device
+
+
+Press once to power on the device, there will be a rising melody, and the LED light will stay on for about 1s.
+
+:::tip
+If the device doesn't respond when you press the button, please charge it first.
+:::
+
+### Connect via App
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -39,7 +68,6 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 
 <TabItem value="ios" label="IOS App">
-
 
 * Select the target device on the Bluetooth panel.
 
@@ -69,7 +97,10 @@ import TabItem from '@theme/TabItem';
 </Tabs>
 
 
-#### Parameters Configuration
+
+
+
+### Configure the Parameters
 
 
 
@@ -99,39 +130,26 @@ In order to start communicating over the mesh, you must set your region. This se
 
 **Region List**
 
-Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
 
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Unset|N/A|N/A|N/A|
 |US|United States|902\.0 - 928.0|100|30|
-|EU\_433|European Union 433MHz|433\.0 - 434.0|10|12|
 |EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
-|CN|China|470\.0 - 510.0|100|19|
-|JP|Japan|920\.8 - 927.8|100|16|
-|ANZ|Australia & New Zealand|915\.0 - 928.0|100|30|
-|KR|Korea|920\.0 - 923.0|100||
-|TW|Taiwan|920\.0 - 925.0|100|27|
-|RU|Russia|868\.7 - 869.2|100|20|
-|IN|India|865\.0 - 867.0|100|30|
-|NZ\_865|New Zealand 865MHz|864\.0 - 868.0|100|36|
-|TH|Thailand|920\.0 - 925.0|100|16|
-|UA\_433|Ukraine 433MHz|433\.0 - 434.7|10|10|
-|UA\_868|Ukraine 868MHz|868\.0 - 868.6|1|14|
-|MY\_433|Malaysia 433MHz|433\.0 - 435.0|100|20|
-|MY\_919|Malaysia 919MHz|919\.0 - 924.0|100|27|
-|SG\_923|Singapore 923MHz|917\.0 - 925.0|100|20|
-|LORA\_24|2\.4 GHz band worldwide|2400\.0 - 2483.5|100|10|
+
+
+Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
+
 
 :::info
-**EU_433** and **EU_868** have to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
+**EU_868** has to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
 
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-#### Sensor Configuration
+### Sensor Configuration
 
 |Sensor|Description|
 |-|-|
@@ -183,7 +201,7 @@ Navigate to `Settings` -> `Telemetry(Sensors)` -> Enable sensors.
 
 Navigate to `Settings` -> `External Notification` -> Enable `GPIO` -> Set `Output Pin GPIO`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-ios.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
 
 
@@ -205,29 +223,70 @@ Navigate to `Settings` -> `External Notification` -> Enable `GPIO` -> Set `Outpu
 
 Check [External Notification Config](https://meshtastic.org/docs/configuration/module/external-notification/) for more details.
 
+:::tip
+After you update the device configuration, the device will restart, which may take some time.
+:::
 
-## Flash firmware
+
+## Flash Firmware
+
+### Check the Firmware Version
+
+Navigate to `Settings` -> `Firmware Updates`, check the current firmware version.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
 
 ### Flash the Application Firmware
 
-* **Step 1**: Download the firmware
 
-You may use the [Meshtastic Web Flasher](https://flasher.meshtastic.org/) to download and copy firmware.
-
-Select the device to `Seeed Card Tracker T1000-E` and the latest firmware, and download the `UF2` file.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-uf2.png" alt="pir" width={800} height="auto" /></p>
+* **Step 1**: Enter DFU mode
 
 
-* **Step 2**: Enter DFU mode
-
-Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the LED will be solid on, the device will enter the DFU mode, and there should be a driver named `T1000-E` display.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu2.gif" alt="pir" width={400} height="auto" /></p>
+<Tabs>
+<TabItem value="method1" label="Method 1">
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
+Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
+
+Connect the device to your PC, select the device to `Seeed Card Tracker T1000-E` and choose the latest firmware, then click `Flash`.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
+
+Click `Enter DFU Mode`, there will be a serial port named `T1000-E xxx` display, click and connect it, the green LED will be solid, and there should be a driver named `T1000-E` display.
+
+
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+</TabItem>
+
+<TabItem value="method2" label="Method 2">
+
+
+Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the green LED will be solid, and there should be a driver named `T1000-E` display.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
+
+</TabItem>
+</Tabs>
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+* **Step 2**: Download the firmware
+
+
+
+Select the latest firmware, and download the `UF2` file.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
+
 
 * **Step 3**: 
 
@@ -238,10 +297,16 @@ Download and Copy UF2 file to the DFU drive. Firmware should be flashed after th
 
 ### Flash the Bootloader
 
-:::danger note
-Not recommended to flash the bootloader unless advised by tech support!
+:::tip note
+Please flash the bootloader if your device:
+- Can not pair with your App
+- No LED
 :::
 
+
+:::danger note
+When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
+:::
 
 * [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
@@ -336,14 +401,87 @@ Replace the serial port with your device port. Example:
 
 
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
+
+
+
+
+
+**Step3: Flash facotry erase**
+
+Click the `trash` symbol.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
+
+Enter DFU Mode, download the erase firmware and copy to the driver.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
+
+
+This process may take some time, please wait until the driver pops up again.
+
+When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-application-firmware) to flash the application firmware.
+
 
 ## FAQ
 
+* **How to check the device name**
 
 
-* **How to reset the device?**
+ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
-Press and hold the button, then connect the charging cable.
+ Select device: `T1000-E Tracker Card`<br/>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
+
+
+ Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
+
+* **How to reboot the device?**
+
+ Press and hold the button, then connect the charging cable.
+
+## Troubleshooting
+
+### Device never turns on
+
+* Charge the device for 1~2 hours
+
+* Change the charging cable
+
+
+### Device not responding, no LED
+
+* 1) Device can still enter the DFU mode, then try to [flash the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
+
+* 2) Device can not enter DFU mode and no serial port display, please contact the tech support: support@sensecapmx.com
+
+
+### Firmware flashing failed
+
+
+
+* **No data received on serial port**
+
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
+
+ Check if the device is in the DFU mode, the green light will be solid when the device is in DFU mode.
+
+* **Can't open serial port**
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
+
+ Check if the port is correct, or try another port.
+
+### Serial port connection is unstable
+
+ 
+ * Long press the button for 9s to power off the device, and then press it once to power on the device.
+
+ 
+
 
 
 

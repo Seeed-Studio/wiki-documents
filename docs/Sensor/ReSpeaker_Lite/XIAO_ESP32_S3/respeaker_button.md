@@ -15,7 +15,9 @@ last_update:
 
 User button is connected to XMOS XU316 and it's not programmed yet(reserve for futurn usage). If you want to use this button with XIAO ESP32S3, connect the `Usr` pin to the `D2` or `D3` pin.
 
-
+:::tip
+The mute button usage is the same.
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usr.png" alt="pir" width={600} height="auto" /></p>
 

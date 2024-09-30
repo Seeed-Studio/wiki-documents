@@ -177,7 +177,7 @@ You can create a new python file and copy the following code into the new file, 
 
 **Sending Code.**
 
-```Python
+```python
 
 #!/usr/bin/env python
 
@@ -203,7 +203,7 @@ while 1:
 
 **Receive Code**
 
-```Python
+```python
 
 #!/usr/bin/env python
 

@@ -1,0 +1,341 @@
+.jeston_page {
+  .flex {
+    display: flex;
+  }
+
+  .cursor {
+    cursor: pointer;
+
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    /*滚动条宽度*/
+    height: 5px;
+    /*滚动条高度*/
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #eee;
+    border-radius: 10px;
+    /*滚动条的背景区域的圆角*/
+    background-color: rgba(255, 255, 255, 0.8);
+    /*滚动条的背景颜色*/
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /*滚动条的圆角*/
+    -webkit-box-shadow: inset 0 0 6px #333;
+    background-color: #555;
+    /*滚动条的背景颜色*/
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://files.seeedstudio.com/wiki/Jetson/banner_bg.png?v=2');
+    background-size: cover;
+    background-color: #EEF4DF;
+    padding: 70px 60px;
+
+    .banner_left {
+      flex: 1;
+    }
+
+    
+    .banner_right {
+      flex: 1;
+    }
+
+    .title {
+      font-family: Montserrat;
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .bottom {
+      margin-top: 26px;
+      font-weight: 500;
+      align-items: center;
+
+
+      span {
+        line-height: 1.2;
+        flex: 1;
+      }
+    }
+
+    .right {
+      width: 38px;
+      height: 38px;
+      background: #89B929;
+      border-radius: 50%;
+      margin-right: 12px;
+      justify-content: center;
+
+      img {
+        width: 24px;
+      }
+
+    }
+  }
+
+  .section {
+    padding: 40px 30px;
+
+    .title {
+      font-size: 32px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .desc {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .section_wrapper {
+      margin-top: 50px;
+    }
+  }
+
+  .community {
+    // background-color: #fff;
+    .subtitle {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      color: #555; // 自定义颜色
+    }
+    
+    .com_wrapper {
+      flex-wrap: wrap;
+
+      .com_item {
+        width: calc(25% - 18px);
+        padding: 20px 8px;
+        border-radius: 20px;
+        background: #F3F5F8;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        text-align: center;
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+
+        img {
+          width: 450px; /* 固定宽度 */
+          height: 150px; /* 固定高度 */
+          object-fit: cover; /* 保持图片比例，裁剪过大的部分 */
+          border-radius: 10px; /* 可选，给图片添加圆角 */
+        }
+
+        .com_title {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          /* 限制显示的行数 */
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .usage {
+
+    .left_container {
+      width: 280px;
+      margin-right: 24px;
+
+      .tab {
+        height: 76px;
+        align-items: center;
+        cursor: pointer;
+
+        padding: 0 20px;
+
+        &.active {
+          background: #8a8a8a;
+          border-radius: 8px;
+          color: #fff;
+        }
+
+        img {
+          width: 40px;
+
+          height: auto;
+          margin-right: 14px;
+        }
+      }
+
+      .name {
+
+        flex: 1;
+      }
+    }
+
+    .right_container {
+      flex: 1;
+      border-radius: 8px;
+      background: #F3F5F8;
+      padding: 24px;
+      padding-right: 0;
+      height: 100%;
+
+      .right_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        height: 100%;
+        max-height: 494px;
+
+        .prod_item {
+          background-color: #fff;
+          text-align: center;
+          border-radius: 8px;
+          margin-right: 24px;
+          padding: 24px;
+          margin-bottom: 20px;
+          width: calc(33% - 24px);
+
+          img {
+            height: 99px;
+          }
+
+          .name {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    &.gray {
+
+      background: #F3F5F8;
+
+      .right_container {
+        background-color: #fff;
+
+        .right_wrapper {
+          .prod_item {
+            background-color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            margin-right: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            width: calc(33% - 24px);
+
+            img {
+              width: 2000px;
+              height: 40px;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+
+  &.dark {
+    .banner {
+      background-color: #1B1B1D;
+      // background-color: linear-gradient(270deg, #000000 2%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    .usage {
+      .right_container {
+        background: #242526;
+
+        .prod_item {
+          background: rgba(255, 255, 255, 0.05);
+        }
+      }
+
+      &.gray {
+        background: #1B1B1D;
+
+        .right_container {
+          background: #242526;
+
+          .prod_item {
+            background: rgba(255, 255, 255, 0.05);
+          }
+        }
+      }
+    }
+
+    .community {
+      .com_wrapper {
+        flex-wrap: wrap;
+
+        .com_item {
+          
+          background: #242526;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      padding: 20px 10px;
+    }
+
+    .section {
+      padding: 20px 10px;
+
+
+    }
+
+    .usage {
+      .left_container {
+        width: 100%;
+      }
+
+      .com_wrapper {
+        flex-direction: column;
+
+        .right_container {
+          .prod_item {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .community {
+      .com_wrapper {
+
+        .com_item {
+          width: calc(50% - 12px);
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+
+        }
+      }
+    }
+  }
+}

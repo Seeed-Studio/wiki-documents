@@ -1287,8 +1287,9 @@ const sidebars = {
               label: 'Programming Language',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-Zephyr-RTOS',
-                //'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO-ESP32S3-FreeRTOS',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_with_MicroPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Micropython',
               ],
             },
@@ -1305,6 +1306,20 @@ const sidebars = {
               type: 'category',
               label: 'Applications',
               items: [
+                {
+                  type: 'category',
+                  label: 'Edge Impulse',
+                  collapsed: true,
+                  collapsible: true,
+                  link: {
+                    type: "doc",
+                    id: 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/EdgeImpulse',
+                  },
+                  items: [
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/Key_Word_Spotting',
+                    'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/Edgeimpulse/Image_classification_project',
+                  ],
+                },
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Speech2chatgpt',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_EdgeLab',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/XIAO_ESP32S3_Geolocation',
@@ -1751,6 +1766,8 @@ const sidebars = {
           },
           items: [
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
            // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb',
@@ -3186,7 +3203,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'NVIDIA Jetson®',
+      label: 'NVIDIA® Jetson™',
       collapsed: true,
       collapsible: true,
       link: {
@@ -3479,6 +3496,7 @@ const sidebars = {
               //   id: 'Edge/NVIDIA_Jetson/Application/Managed_Services',
               // },
               items: [
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Gapi-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/alwaysAI-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Cochl.Sense-Jetson-Getting-Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/CVEDIA-Jetson-Getting-Started',
@@ -3915,9 +3933,7 @@ const sidebars = {
           },
           items: [
               'Topics/TinyML/TinyML_Workshop/sscma',
-               'Topics/TinyML/TinyML_Workshop/EdgeImpulse',
-              'Topics/TinyML/TinyML_Workshop/Key_Word_Spotting',
-               'Topics/TinyML/TinyML_Workshop/Image_classification_project',
+              'Topics/TinyML/TinyML_Workshop/TrainModel',
           ],
         },
 
@@ -5188,6 +5204,9 @@ const sidebars = {
              'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/CN_XIAO_ESP32S3_EdgeLab',
              'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Geolocation',
              'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Keyword_Spotting',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Baidu',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Voice_Recognition_MiniMax',
+             'zh-CN/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/Application/CN_XIAO_ESP32S3_Voice_Recognition_MiniMax_tts',
            ],
          },
        ],

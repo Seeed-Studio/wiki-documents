@@ -215,7 +215,7 @@ pip3 install --upgrade seeed-python-Ds18b20
 
 #### Software
 
-```Python
+```python
 import seeed_ds18b20
 import time
 

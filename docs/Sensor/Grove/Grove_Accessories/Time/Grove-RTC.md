@@ -208,7 +208,7 @@ python grove_i2c_rtc.py
 
 Here is the code
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the Grove I2C RTC (https://www.seeedstudio.com/wiki/Grove_-_RTC)

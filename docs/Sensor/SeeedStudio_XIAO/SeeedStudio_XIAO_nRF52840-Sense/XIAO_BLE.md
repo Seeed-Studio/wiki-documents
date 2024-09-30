@@ -183,23 +183,118 @@ If you are using the factory firmware of the Seeed Studio XIAO nRF52840 or have 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nrf528403.png" alt="pir" width={800} height="auto" /></p>
 
-- **Step 3.** Upload the [deep_sleep demo](https://github.com/0hotpotman0/BLE_52840_Core/blob/main/libraries/Bluefruit52Lib/examples/Hardware/deep_Sleep/deep_Sleep.ino) here and run it with **Arduino**
+<<<<<<< HEAD
+- **Step 3.** Upload the [Low Power demo](https://files.seeedstudio.com/wiki/XIAO-BLE/PowerTests.zip) here and run it with **Arduino**
+=======
+- **Step 3.** Upload the deep_sleep demo here and run it with **Arduino**
 
-- **Step 4.** Adjust the voltage of the digital source meter to 3.6V constant voltage
+```cpp
+// The MIT License (MIT)
+// Copyright (c) 2019 Ha Thach for Adafruit Industries
 
-- **Step 5.** Touch the red test pen to BAT+ and black test pen to BAT-
+#include "SdFat.h"
+#include "Adafruit_SPIFlash.h"
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerposition.png" alt="pir" width={500} height="auto" /></p>
+// Uncomment to run example with custom SPI and SS e.g with FRAM breakout
+// #define CUSTOM_CS   A5
+// #define CUSTOM_SPI  SPI
 
-- **Step 6.** The output shows the current is at about **3 μA**
+#if defined(CUSTOM_CS) && defined(CUSTOM_SPI)
+  Adafruit_FlashTransport_SPI flashTransport(CUSTOM_CS, CUSTOM_SPI);
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEpowerresult.jpg" alt="pir" width={500} height="auto" /></p>
+#elif defined(ARDUINO_ARCH_ESP32)
+  // ESP32 use same flash device that store code.
+  // Therefore there is no need to specify the SPI and SS
+  Adafruit_FlashTransport_ESP32 flashTransport;
 
-### Accelerometer Examples and Low Power
+#else
+  // On-board external flash (QSPI or SPI) macros should already
+  // defined in your board variant if supported
+  // - EXTERNAL_FLASH_USE_QSPI
+  // - EXTERNAL_FLASH_USE_CS/EXTERNAL_FLASH_USE_SPI
+  #if defined(EXTERNAL_FLASH_USE_QSPI)
+    Adafruit_FlashTransport_QSPI flashTransport;
 
-We are very grateful to our community partner **[daCoder](https://forum.seeedstudio.com/u/daCoder)** for his contribution to the XIAO nRF52840 low power consumption mode.
+  #elif defined(EXTERNAL_FLASH_USE_SPI)
+    Adafruit_FlashTransport_SPI flashTransport(EXTERNAL_FLASH_USE_CS, EXTERNAL_FLASH_USE_SPI);
 
-You can find out more about the content of the projects he has worked on by clicking **[HERE](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**.
+  #else
+    #error No QSPI/SPI flash are defined on your board variant.h !
+  #endif
+#endif
+
+Adafruit_SPIFlash flash(&flashTransport);
+
+
+/*  If you want to use a specific flash device, for example for a custom built board, first look for it in Adafruit_SPIFlash\src\flash_devices.h
+ *  If it isn't in there you need to create your own definition like the W25Q80DLX_EXAMPLE example below.
+ *  These definitions need to be edited to match information on the data sheet of the flash device that you want to use.
+ *  If you are not sure what the manufacture ID, memory type and capacity values should be, try running the sketch anyway and look at the serial output
+ *  The flash device will report these values to you as a single hexadecimal value (the JDEC ID)
+ *  For example, the first device on the list - the W25Q80DLX - will report its JDEC ID as 0xef4014, which is made of these three values:
+ *  manufacturer_id = 0xef
+ *  memory_type     = 0x40
+ *  capacity        = 0x14
+ *  With this macro properly defined you can then create an array of device definitions as shown below, this can include any from the list of devices in flash_devices.h, and any you define yourself here
+ *  You need to update the variable on line 71 to reflect the number of items in the array
+ *  You also need to uncomment line 84 and comment out line 81 so this array will be passed to the flash memory driver. 
+ */
+//Example of a user defined flash memory device:
+//#define W25Q80DLX_EXAMPLE                                                               \
+//  {                                                                            \
+//    .total_size = (1 << 20), /* 1 MiB */                                       \
+//        .start_up_time_us = 5000, .manufacturer_id = 0xef,                     \
+//    .memory_type = 0x40, .capacity = 0x14, .max_clock_speed_mhz = 80,         \
+//    .quad_enable_bit_mask = 0x02, .has_sector_protection = false,              \
+//    .supports_fast_read = true, .supports_qspi = true,                         \
+//    .supports_qspi_writes = false, .write_status_register_split = false,       \
+//    .single_status_byte = false, .is_fram = false,                             \
+//  }
+
+/*
+ * Create an array of data structures and fill it with the settings we defined above.
+ * We are using two devices, but more can be added if you want.
+ */
+//static const SPIFlash_Device_t my_flash_devices[] = {
+//    W25Q80DLX_EXAMPLE,
+//};
+/*
+ * Specify the number of different devices that are listed in the array we just created. If you add more devices to the array, update this value to match.
+ */
+//const int flashDevices = 1;
+
+
+#include <bluefruit.h>
+void setup()
+{
+  flash.begin();
+  Bluefruit.begin(); 
+  if(flash.deepPowerDown() == false){
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, LOW);
+    while(1)
+    {
+      yield();
+    }
+  }
+  flash.end();
+
+  sd_power_system_off(); 
+}
+
+void loop()
+{
+  // nothing to do
+}
+```
+>>>>>>> docusaurus-version
+
+:::tip
+Here , We would like to express our special thanks to the author for providing the code  -> ***daCoder*** <-
+:::
+
+**If you want to know about this example more detail inforation , Click [Here](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
+
 
 ## Battery Charging current
 

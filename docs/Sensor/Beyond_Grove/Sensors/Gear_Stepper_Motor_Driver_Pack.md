@@ -234,7 +234,7 @@ You can do this yourself by powering the pins one by one, or using a library suc
 
 1. Upload the following code to Thonny and run it.
 
-```Python
+```python
 from gpiozero import Button, LED
 from time import sleep
 

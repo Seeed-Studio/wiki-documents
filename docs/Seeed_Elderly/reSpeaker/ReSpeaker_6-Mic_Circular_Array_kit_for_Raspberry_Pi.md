@@ -363,7 +363,7 @@ We use [PyAudio python library](https://people.csail.mit.edu/hubert/pyaudio/) to
 
 - Step 1, We need to run the following script to get the device index number of 6 Mic pi hat:
 
-```Python
+```python
 sudo pip install pyaudio
 cd ~
 nano get_index.py
@@ -371,7 +371,7 @@ nano get_index.py
 
 - Step 2, copy below code and paste on get_index.py.
 
-```Python
+```python
 import pyaudio
 
 p = pyaudio.PyAudio()
@@ -393,7 +393,7 @@ Input Device id  2  -  seeed-8mic-voicecard: - (hw:1,0)
 
 - Step 5, change `RESPEAKER_INDEX = 2` to index number. Run python script record.py to record a speech.
 
-```Python
+```python
 import pyaudio
 import wave
 

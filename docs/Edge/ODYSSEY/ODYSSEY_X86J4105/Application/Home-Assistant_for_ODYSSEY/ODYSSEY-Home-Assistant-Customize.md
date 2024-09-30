@@ -17,7 +17,7 @@ last_update:
 
 ## Introduction
 
-In previous wikis, we explained how to install Home Assistant on the [reTerminal](https://wiki.seeedstudio.com/reTerminal-Home-Assistant), [ODYSSEY-X86](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant) and display the dashboard UI on PC, smartphones, tablets and Kiosk mode on the reTerminal LCD.
+In previous wikis, we explained how to install Home Assistant on the [reTerminal](https://wiki.seeedstudio.com/reTerminal_Home_Assistant), [ODYSSEY-X86](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant) and display the dashboard UI on PC, smartphones, tablets and Kiosk mode on the reTerminal LCD.
 
 This wiki will walkthrough step-by-step on how to build out the dashboard by doing the necessary configurations and also how to use some of the important add-ons that comes with Home Assistant. So let's get started!
 

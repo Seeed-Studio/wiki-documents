@@ -75,7 +75,17 @@ Before we start this chapter, please make sure the ReSpeaker Lite's firmware is 
 * [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_i2s_v1.0.5.bin)
 
 
-Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_lite_introduction/#update-firmware) to flash the firmware.
+Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
+
+```
+dfu-util -e -a 1 -D ffva_i2s_v1.0.5.bin
+```
+
+:::tip
+After flashing is completed, please restart the board.
+:::
+
+
 
 
 ### Software Preparation

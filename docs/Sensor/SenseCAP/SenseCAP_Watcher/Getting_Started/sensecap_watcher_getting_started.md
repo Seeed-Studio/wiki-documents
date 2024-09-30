@@ -5,8 +5,8 @@ image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
 slug: /getting_started_with_watcher
 sidebar_position: 1
 last_update:
-  date: 06/17/2024
-  author: Citric
+  date: 09/14/2024
+  author: Citric, Djair
 ---
 
 # Getting Started with SenseCAP Watcher
@@ -590,7 +590,84 @@ This guide will walk you through the various settings options available on your 
 
 By familiarizing yourself with these settings options, you can customize and optimize your Watcher experience to best suit your needs. Keep in mind that certain settings, such as Wi-Fi and Bluetooth configuration, can only be accessed and modified through the companion mobile app.
 
+## Connecting to Serial Console
 
+When you connect your Watcher via USB, Windows registers two new serial ports. In my case, COM23 and COM24. I decided to do an experiment and see what would appear on a serial terminal, because I am a Circuitpython fan, and I love the REPL! For this I used Putty and configured it to use the serial port at 115200 baud rate (I was lucky, the first COM23 port was already the one I needed to discover the command console). But the other one, COM24 is used to upgrade firmware using Xmodem protocol in the same way as Grove Vision AI V2.
+
+Right away, the terminal displays a series of information about the device's memory. If you press enter, a prompt appears and you can type some commands that I list below:
+
+```
+help  [<string>] 
+Print the summary of all registered commands if no arguments are given, otherwise print summary of given command, where <string> is the name of command
+
+wifi_sta  [-s <ssid>] [-p <password>]
+WiFi is station mode, join specified soft-AP
+s <ssid> SSID of AP
+p <password> password of AP
+ota  [-t <int>] [--url=<string>] force ota, ignoring version check
+-t, --ota_type=<int> 0: ai model, 1: himax, 2: esp32
+-url=<string> url for ai model, himax or esp32 firmware
+
+taskflow  [-iej] [-f <string>]
+i, --import import taskflow
+e, --export export taskflow
+f, --file=<string> File path, import or export taskflow json string by SD, eg: test.json
+j, --json import taskflow json string by stdin
+
+Example: Import taskflow by json string or SD file: taskflow -i -f "test.json".
+Example: Export taskflow to stdout or SD file: taskflow -e -f "test.json"
+
+factory_info
+Get factory infomation
+
+battery
+Get battery percent
+
+bsp  subcmd [subcmd args] 
+Bsp call bsp functions
+
+Example Scan the specified i2c bus: bsp i2cdetect <0|1>
+
+reboot 
+Reboot the device
+
+factory_reset 
+Factory reset and reboot the device
+
+record  [-t <int>] [-f <string>]
+Record audio and save to SD.
+-t, --time=<int> record time, s
+-f, --file=<string> File path, Store PCM audio data in SD card
+
+vi_ctrl  [-sec] [-z <int>] 
+Voice interaction ctrl (Probably will be used with Push to Talk function)
+-s, --start start wakeup, and start record
+-e, --end end record
+-c, --stop stop voice interaction when analyzing or palying, Put it into idle.
+-z, --exit=<int> 0: exit vi, 1:exit vi then run new taskflow
+
+iperf  [-suVa] [-c <ip>] [-p <port>] [-l <length>] [-i <interval>] [-t <time>] [-b <bandwidth>]
+Check conection performance. Similar to iperf linux command.
+-c, --client=<ip> run in client mode, connecting to <host>
+-s, --server run in server mode
+-u, --udp use UDP rather than TCP
+-V, --ipv6_domain use IPV6 address rather than IPV4
+-p, --port=<port> server port to listen on/connect to
+-l, --len=<length> Set read/write buffer size
+-i, --interval=<interval> seconds between periodic bandwidth reports
+-t, --time=<time> time in seconds to transmit for (default 10 secs)
+-b, --bandwidth=<bandwidth> bandwidth to send at in Mbits/sec
+-a, --abort abort running iperf
+
+rgb  [-r <int>] [-g <int>] [-b <int>] [-m <int>] [-v <int>] [-t <int>]
+Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
+-r, --red=<int> red value, 0~255
+-g, --green=<int> green value, 0~255
+-b, --blue=<int> blue value, 0~255
+-m, --mode=<int> 1: breath, 2: blink, 3:solid, default 3
+-v, --step_value=<int> RGB step value, default 3
+-t, --step_time_ms=<int> RGB step time(ms), default 5
+``` 
 
 ## Resources
 
@@ -624,5 +701,3 @@ Thank you for choosing our products! We are here to provide you with different s
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
