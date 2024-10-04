@@ -45,13 +45,26 @@ If you don't want to connect a monitor, you must use an **`HDMI Dummy Plug`** to
   sudo apt install vino
  ```
 
- **Step 2.** Configure VNC Server
+ **Step 2.** Enable the VNC server to start each time you log in:
+ ```bash
+  cd /usr/lib/systemd/user/graphical-session.target.wants
+  sudo ln -s ../vino-server.service ./.
+ ```
+
+ **Step 3.** Configure VNC Server
  ```bash
   gsettings set org.gnome.Vino prompt-enabled false
   gsettings set org.gnome.Vino require-encryption false
  ```
 
- **Step 3.** Edit `org.gnome` to add a parameter for the `enabled key`
+ **Step 4.** Configure VNC Server
+ ```bash
+ # Replace thepassword with your desired password
+  gsettings set org.gnome.Vino authentication-methods "['vnc']"
+  gsettings set org.gnome.Vino vnc-password $(echo -n 'thepassword'|base64)
+ ```
+
+ **Step 5.** Edit `org.gnome` to add a parameter for the `enabled key`
  ```bash
   cd /usr/share/glib-2.0/schemas
   sudo cp org.gnome.Vino.gschema.xml org.gnome.Vino.gschema.xml.old
@@ -77,9 +90,15 @@ Paste the following code into the location below, ensuring the format is the sam
   </div>
 
 ### Compile and start
+ Compile:
 
  ```bash
   sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+  sudo reboot
+ ```
+ start:
+ 
+ ```bash
   /usr/lib/vino/vino-server
  ```
 
