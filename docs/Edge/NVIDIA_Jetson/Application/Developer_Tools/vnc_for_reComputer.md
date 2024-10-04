@@ -57,7 +57,7 @@ If you don't want to connect a monitor, you must use an **`HDMI Dummy Plug`** to
   gsettings set org.gnome.Vino require-encryption false
  ```
 
- **Step 4.** Configure VNC Server
+ **Step 4.** Set a password to access the VNC server
  ```bash
  # Replace thepassword with your desired password
   gsettings set org.gnome.Vino authentication-methods "['vnc']"
@@ -97,7 +97,7 @@ Paste the following code into the location below, ensuring the format is the sam
   sudo reboot
  ```
  start:
- 
+
  ```bash
   /usr/lib/vino/vino-server
  ```
