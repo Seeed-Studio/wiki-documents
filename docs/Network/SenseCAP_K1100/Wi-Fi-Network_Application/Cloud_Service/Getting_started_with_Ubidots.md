@@ -206,7 +206,7 @@ To establish an MQTT connection, we will need to prepare the following informati
 
 At the beginning of the program below, we will define for these requirements at the top of the code, please fill in your own information as appropriate.
 
-```c++
+```cpp
 //examples
 #define WIFISSID "<YOUR-WIFISSD>" // Put your WifiSSID here
 #define PASSWORD "<YOUR-WIFI-PASSWORD" // Put your wifi password here
@@ -220,7 +220,7 @@ At the beginning of the program below, we will define for these requirements at 
 
 If you want to send detection data from the Wio Terminal's built-in sensors to Ubidots, paste the complete code below into the Arduino and upload it to the Wio Terminal.
 
-```c++
+```cpp
 #include <PubSubClient.h>
 #include <rpcWiFi.h>
 #include <TFT_eSPI.h>
@@ -420,7 +420,7 @@ void loop() {
 
 If you want to send Grove Soil Moisture Sensor data to Ubidots, paste the complete code below into the Arduino and upload it to the Wio Terminal.
 
-```c++
+```cpp
 #include <PubSubClient.h>
 #include <rpcWiFi.h>
 #include <TFT_eSPI.h>
@@ -553,7 +553,7 @@ void loop() {
 
 If you want to send Grove VOC and eCO2 Gas Sensor data to Ubidots, paste the complete code below into the Arduino and upload it to the Wio Terminal.
 
-```c++
+```cpp
 #include <PubSubClient.h>
 #include <rpcWiFi.h>
 #include <TFT_eSPI.h>
@@ -711,7 +711,7 @@ void loop() {
 
 If you want to send Grove Temp&Humi Sensor data to Ubidots, paste the complete code below into the Arduino and upload it to the Wio Terminal.
 
-```c++
+```cpp
 #include <PubSubClient.h>
 #include <rpcWiFi.h>
 #include <TFT_eSPI.h>
@@ -866,7 +866,7 @@ void loop() {
 
 If you want to send Grove Vision Ai Module data to Ubidots, paste the complete code below into the Arduino and upload it to the Wio Terminal.
 
-```c++
+```cpp
 #include <PubSubClient.h>
 #include <rpcWiFi.h>
 #include <TFT_eSPI.h>

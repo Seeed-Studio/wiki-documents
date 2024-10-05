@@ -77,6 +77,14 @@ If you notice an erroneous screen orientation after installing **Raspberry Pi OS
 
 - **Step 1.** After flashing **Raspberry Pi OS Bookworm** to reTerminal eMMC, follow [this guide](https://wiki.seeedstudio.com/reTerminal/#install-reterminal-drivers-after-flashing-new-raspberry-pi-os-ubuntu-os-or-other-os) to install the necessary drivers
 
+
+If you configured a user other than root, and the Bookworm image from July 24,  I found I had to do:
+```sh
+sudo chown $USER ~/.config
+sudo chgrp $USER ~/.config
+sudo chmod u+rwx ~/.config
+```
+
 - **Step 2.** Open .config/wayfire.ini
 
 ```sh
@@ -90,6 +98,7 @@ sudo vi ~/.config/wayfire.ini
 mode = 720x1280@60
 transform = 270
 ```
+
 
 - **Step 4.** Open **/boot/config.txt**
 

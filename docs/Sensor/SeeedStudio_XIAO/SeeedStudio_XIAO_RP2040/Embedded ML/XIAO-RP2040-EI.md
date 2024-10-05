@@ -48,7 +48,7 @@ Open the Arduino IDE, navigate to Sketch -> Include Library -> Manage Libraries.
 
 After the installation, copy the following code run it.
 
-```c++
+```cpp
 #include <Wire.h>
 #include "MMA7660.h"
 MMA7660 accelemeter;

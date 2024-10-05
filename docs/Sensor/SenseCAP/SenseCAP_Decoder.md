@@ -32,7 +32,7 @@ SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCA
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -3353,7 +3353,7 @@ With its compact size and rich interfaces, the Wio Tracker 1110 Dev Board is con
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -5301,7 +5301,7 @@ import TabItem from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 /**
@@ -6365,7 +6365,7 @@ import TabItem2 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 /**
@@ -7629,7 +7629,7 @@ import TabItem3 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 /**
@@ -8673,7 +8673,7 @@ import TabItem4 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN</summary>
+<summary>For TTN(ChirpStack V4)</summary>
 
 ```cpp
 /**

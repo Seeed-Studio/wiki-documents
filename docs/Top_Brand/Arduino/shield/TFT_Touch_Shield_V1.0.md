@@ -219,7 +219,7 @@ p.y = map(p.y, TS_MINY, TS_MAXY, 320, 0);
 
 #### Touch Screen Demo Sketch ####
 
-```c++
+```cpp
 // Paint application - Demonstate both TFT and Touch Screen
 //  This library is free software; you can redistribute it and/or
 //  modify it under the terms of the GNU Lesser General Public

@@ -157,7 +157,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 - **Step 2.** Copy all the code below, or you can just click the icon ![](https://github.com/SeeedDocument/wiki_english/raw/master/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into the new sketch.
 
-```C++
+```cpp
 // constants won't change. They're used here to set pin numbers:
 const int buttonPin = 2;     // the number of the pushbutton pin
 const int buzzer =  3;      // the number of the buzzer pin

@@ -546,7 +546,7 @@ OK, let's embed Speech Recognizer and Grove - MP3 together. The following demo c
 
 * Plug Base Shield onto the Arduino UNO,and plug the Grove - MP3 v2 onto the D2 port of Base Shield.
 
-```c++
+```cpp
 # include <SoftwareSerial.h>
 
 # include <MP3Player_KT403A.h>

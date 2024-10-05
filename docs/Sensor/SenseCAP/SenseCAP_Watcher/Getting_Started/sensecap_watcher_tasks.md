@@ -1,7 +1,7 @@
 ---
 description: You will gain a solid foundation in understanding the different types of tasks that Watcher can perform and how they are organized within the SenseCraft ecosystem.
 title: 1# How to assign tasks to Watcher
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/20.png
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/85.png
 slug: /getting_started_with_watcher_task
 sidebar_position: 2
 last_update:
@@ -12,7 +12,15 @@ last_update:
 
 # How to assign tasks to Watcher
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/20.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/85.png" style={{width:1000, height:'auto'}}/></div>
+
+**SenseCAP Watcher will be live on Kickstarter on September 12, proudly featuring the official 'Project We Love' badge! Subscribe now to stay informed～**
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+</div><br />
 
 Welcome to the tutorial on assigning tasks to Watcher. In this guide, we will walk you through the process of issuing commands to Watcher, enabling you to effectively utilize its capabilities for your monitoring needs.
 
@@ -69,23 +77,21 @@ Then, if you place a task that is judged to be using Local AI Services, then on 
 
 #### Pure Cloud-based LLM Service
 
-If you set "fire" as the object in a Watcher task, but there are no pre-trained models for fire detection available in the SenseCraft AI library, the device will **automatically switch to using the cloud-based Large Language Model (LLM) service for detection**.
+If you set "candle" as the object in a Watcher task, but there are no pre-trained models for candle detection available in the SenseCraft AI library, the device will **automatically switch to using the cloud-based Large Language Model (LLM) service for detection**.
 
-:::note
-It's important to note that whenever Watcher relies on cloud-based services, such as the LLM service, there may be additional usage costs involved. These costs are associated with the processing power, storage, and data transfer required to perform the detection and analysis in the cloud.
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_3.png" style={{width:1000, height:'auto'}}/></div>
 
-As shown in the image, when the Watcher detects a fire using the LLM service, it executes the specified action, which in this case is sending a push notification to the connected mobile app. **This ensures that the user is promptly alerted about the presence of fire, even though the device couldn't perform the detection locally**.
+As shown in the image, when the Watcher detects a candle using the LLM service, it executes the specified action, which in this case is sending a push notification to the connected mobile app. **This ensures that the user is promptly alerted about the presence of candle, even though the device couldn't perform the detection locally**.
 
 By leveraging the power of cloud-based LLM services, Watcher can still accurately identify objects and trigger appropriate actions, even when a specific model is not available in the SenseCraft AI library. This fallback mechanism enhances the device's versatility and ensures that it can adapt to a wide range of detection scenarios.
 
 However, it's important to note that using the cloud-based LLM service may result in slightly slower response times compared to local detection, as the data needs to be processed remotely. Additionally, this mode requires an active internet connection for the device to communicate with the cloud services.
-
-:::tip
-Currently, Watcher is in a free public testing phase, which means that users can enjoy the benefits of cloud-based services without incurring any charges. This allows users to explore the full capabilities of Watcher, including its ability to detect objects that don't have corresponding models in the SenseCraft AI library, by leveraging the power of LLM services. However, once the public testing phase concludes, there will be updated pricing details for using the cloud-based services. Users will need to be aware of these costs and factor them into their decision-making process when setting up Watcher tasks that rely on LLM services.
-:::
 
 :::note
 Users only need to have a basic understanding of these three task modes without delving into the complete process and intricate details. The introduction of these modes is to ensure that users are not confused or worried when encountering different user interfaces during task configuration. Each mode has its unique app configuration page, which may vary depending on the selected mode. Users should follow the instructions based on their specific requirements to set up their Watcher tasks effectively.
@@ -104,6 +110,12 @@ This functionality allows you to interact with the LLM directly, without the nee
 
 The third mode of operation for the Watcher device is a combination of the Local AI service and the cloud-based LLM service. **This mode comes into play when the Watcher's local AI service recognizes the specified object, but requires further analysis from the LLM cloud service to determine the object's behavior or state**.
 
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_4.png" style={{width:1000, height:'auto'}}/></div>
 
 In the example shown in the image, the object is set to "cat" and the action is "flashing light". When the Watcher detects a cat using its local AI model for pet detection, it then calls upon the LLM cloud service to analyze the cat's behavior and determine whether it is "eating".
@@ -115,10 +127,6 @@ By leveraging both the Local AI service and the LLM cloud service, the Watcher c
 If you place a task that is judged to be using local + LLM, then on the SenseCraft APP, the Task Configuration page will display roughly as shown below.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
-
-:::tip
-However, it's important to note that using the LLM cloud service in this combined mode may be subject to SenseCraft's pricing structure, similar to the fully cloud-based mode discussed earlier. Users should be aware that once the free public testing phase concludes, there may be associated costs for utilizing the LLM cloud service, even in combination with the Local AI service.
-:::
 
 ### Summaries
 
@@ -139,8 +147,8 @@ Here's a comparison table of the three modes based on efficiency, cost, and choo
 		<tr>
             <th>Efficiency</th>
 			<td align="center">Alarm time: <strong>2s</strong><br />Minimum time interval for triggering alarm: <strong>5s</strong></td>
-			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>60s</strong></td>
-			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>60s</strong></td>
+			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>30s</strong></td>
+			<td align="center">Alarm time: <strong>10s</strong><br />Minimum time interval for triggering alarm: <strong>30s</strong></td>
 		</tr>
 		<tr>
             <th>Cost</th>
@@ -167,8 +175,10 @@ Here's a comparison table of the three modes based on efficiency, cost, and choo
 
 2. The "Minimum time interval for triggering alarm" setting is independent of the "Alarm Time" and does not represent a sequential relationship. This setting specifies the minimum time that must elapse between two consecutive alarm triggers. When configuring a task, users **are not allowed to** set an alarm time shorter than this minimum interval. This limitation ensures that the system has sufficient time to process and respond to each alarm event before another can be triggered. This limitation ensures the system has sufficient processing time and prevents excessive or continuous alarm triggers, promoting stable and reliable operation.
 
-:::note
-Please note that the actual performance and costs may vary depending on factors such as the complexity of the task, the size of the pre-trained models, the amount of data processed, and the specific pricing structure implemented by SenseCraft after the free public testing phase.
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 
@@ -183,10 +193,6 @@ After understanding the classification and basic concepts of tasks, let's take a
 Each Watcher device has its own dedicated chat window within the SenseCraft APP. To issue commands to a specific Watcher, navigate to its chat window and use the input field to enter your desired command. You can type the command manually or use your keyboard's voice input functionality for added convenience.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/21.png" style={{width:250, height:'auto'}}/></div>
-
-:::note
-Push to talk is still in development.
-:::
 
 When composing a command, it's crucial to provide clear and detailed instructions to ensure that the Watcher understands and executes the task accurately. Your command should include the following information:
 
@@ -207,6 +213,12 @@ The Pure Cloud-based LLM Service's text-based chatting feature opens up new poss
 Whether you have questions, need assistance with a particular topic, or just want to explore the capabilities of the LLM, the text-based chatting feature offers a seamless and intuitive way to communicate with the AI model.
 
 Feel free to leverage this feature whenever you require information, guidance, or simply want to engage in an informative conversation with the LLM.
+
+:::danger
+Fees may apply for using some of SenseCraft AI's services, please refer to the documentation below for details:
+
+**[SenseCraft AI for Watcher Plans and Benefits](https://wiki.seeedstudio.com/watcher_price/)**
+:::
 
 ### Identify or configure tasks for disassembly
 
@@ -232,7 +244,7 @@ After completing your task command input, follow these steps to confirm and exec
 
     If you discover any misinterpretations or wish to make changes to the task configuration, use the "Detail Config" option to manually modify the settings according to your requirements. As described in the [Concept of the Tash chapter](#concept-of-the-task), the Detail Config page varies from mode to mode. You just need to select or modify the configuration items according to the actual situation.
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:1000, height:'auto'}}/></div>
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:800, height:'auto'}}/></div>
 
     In the "Detail Config" section, you can find various settings that allow you to fine-tune your task configuration. Here's an overview of the available settings:
 
@@ -339,20 +351,66 @@ Option 2: Ending the Task directly on the Watcher Device
 
 Both methods provide a simple and intuitive way to stop the task execution when needed. Choose the method that is most convenient for you based on your current situation and proximity to the Watcher device.
 
+## Sending Task by Speaking
+
+The Watcher offers a convenient and intuitive way to send tasks using voice commands, thanks to its "Push to Talk" feature. This functionality is accessible from any screen or interface on the device, making it easy to interact with the Watcher without navigating through menus. Here's a step-by-step guide on how to use this feature:
+
+1. Activate Push to Talk:
+
+   - Locate the Wheel Button on the top-right corner of the Watcher.
+   - Press and hold the Wheel Button to enter the voice input interface.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
+
+2. Speak Your Command or Message:
+
+   - While holding the Wheel Button, clearly speak your task or message to the Watcher.
+   - You can assign tasks, such as "Tell me if the baby is crying" or "If the dog is stealing food, say stop copper".
+   - Alternatively, you can engage in conversation by asking questions or making statements, like "Tell me a joke".
+
+3. Release the Wheel Button:
+
+   - Once you have finished speaking, release the Wheel Button.
+   - The Watcher will process your voice input and determine whether it is a task assignment or a conversation.
+
+4. Task Assignment:
+
+   - If the Watcher recognizes your voice input as a task assignment, it will automatically break down your task into relevant components.
+   - The Watcher will display cards on its screen, showing the **Object** (what to monitor), **Behavior** (what action to look for), **Notification** (how to alert you), **Time Range** (when to monitor), and **Frequency** (how often to monitor).
+   - Review the displayed information to ensure it accurately represents your intended task.
+   - If the details are correct, confirm the task, and the Watcher will begin executing it according to the specified parameters.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/80.jpg" style={{width:650, height:'auto'}}/></div>
+
+Tips for Optimal Usage:
+
+- Speak clearly and at a moderate pace to ensure accurate voice recognition.
+- When speaking, please get as close to Watcher as possible, about **3 ~ 10cm** distance speaking recognition accuracy is best.
+- Minimize background noise to improve the Watcher's ability to understand your voice commands.
+- Be specific and concise when assigning tasks to help the Watcher accurately interpret your intentions.
+- If the Watcher misinterprets your task or conversation, simply press and hold the Wheel Button again to provide clarification or corrections.
+
+By leveraging the Push to Talk feature, you can effortlessly send tasks and engage in conversations with the Watcher, making your interaction with the device more natural and efficient.
+
+:::note
+If you encounter an error of **0x7002**, it means that the current Watcher's network status is not good and the audio service call failed, please change the network or location and retry again.
+:::
+
 ## Resources
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
 
-**Watcher Quick Start Series 3# : As a Grove sensor**
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-**Watcher Quick Start Series 4# : Training a model for Watcher**
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-**[Watcher Quick Start Series 5# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- Watcher Quick Start Series 5# : Training a model for Watcher
 
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## Tech Support & Product Discussion
 

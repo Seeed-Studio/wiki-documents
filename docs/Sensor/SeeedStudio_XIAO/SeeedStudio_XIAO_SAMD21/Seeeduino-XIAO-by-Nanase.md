@@ -32,7 +32,7 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 * 256 KB Flash, 32 KB SRAM
 * USB Type-C
 * SPI, I2C, UART, DMA available
-* coin size(20mm x 17.5mm)
+* coin size(21mm x 17.8mm)
 * Logic level:3.3V
 
 There are no components on the backside of the board, and all pins have castellated holes, making it easy to solder onto another board.
@@ -62,7 +62,7 @@ Castellated holes:
 | Logic level | 3.3V |
 | LEDs: |1 user LED, 1 power LED, two LEDs for serial port downloading   |
 | Power | USB Type-C interface, power pads at the back|
-| Size | 20x17.5x3.5mm |
+| Size | 21x17.8x3.5mm |
 
 
 As you can see, it is a SAMD type Arduino and is similar to the Arduino MKR series, so technically, any library written for them can be used on Seeed Studio XIAO SAMD21. On the other hand, since it is different from the ATmega type Arduino like Arduino Uno, the library which depends on some specific register of ATmega cannot be used.
@@ -115,7 +115,7 @@ Contrary to the original Arduino, it is turned on at LOW and turned off at HIGH.
 
 The official website describes two other built-in LEDs as `two LEDs for serial port downloading`. However, looking at the schematic, there is no physical pin connected to these RX and TX LEDs.
 
-If you look at [USBCore.cpp](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/1.7.2/cores/arduino/USB/USBCore.cpp#L622-L627) here, you can see that they are turned on by `digitalWrite` every time serial USB transmission / reception occurs, which means that the two LEDs are are programmable.
+If you look at [USBCore.cpp](https://github.com/Seeed-Studio/ArduinoCore-samd/blob/1.7.2/cores/arduino/USB/USBCore.cpp#L622-L627) here, you can see that they are turned on by `digitalWrite` every time serial USB transmission / reception occurs, which means that the two LEDs are programmable.
 
 ```cpp
 uint32_t USBDeviceClass::recv(uint32_t ep, void *_data, uint32_t len)
@@ -305,7 +305,7 @@ Temp: 22.05 °C, Humidity: 44.72 %, Pressure: 1008.9 hPa
 Temp: 22.06 °C, Humidity: 44.81 %, Pressure: 1008.9 hPa
 ```
 
-## UART
+### UART
 
 As mentioned earlier, the physical UART pins are different from those on the USB CDC. `Serial1` is used for serial communication using the TX and RX pins.
 

@@ -1,14 +1,16 @@
 name: Typesense Docsearch Action
 
-on: 
+# on: 
   # schedule:
   #   - cron: "0 2 15 * *"
   # push:
   #   branches:
   #     - docusaurus-version
-   push:
-    branches:
-      - main
+   # push:
+   #  branches:
+   #    - main
+on: 
+  workflow_dispatch:
 
 jobs:
   scrape:
@@ -17,11 +19,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Run DocSearch Scraper
-        uses: celsiusnarhwal/typesense-scraper@v2
+      - name: Run Typesense DocSearch Scraper
+        uses: celsiusnarhwal/typesense-scraper@v2.0.1
         with:
           api-key: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
           host: search.seeedstudio.com
-          port:
+          # port:
           protocol: https
           config: docsearch.json

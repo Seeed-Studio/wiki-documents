@@ -104,7 +104,7 @@ Refer How to install library to [install library](https://wiki.seeedstudio.com/H
 
 The readAngle Example code is as follow:
 
-```C++
+```cpp
 #include <Wire.h>
 #include <AS5600.h>
 #ifdef ARDUINO_SAMD_VARIANT_COMPLIANCE

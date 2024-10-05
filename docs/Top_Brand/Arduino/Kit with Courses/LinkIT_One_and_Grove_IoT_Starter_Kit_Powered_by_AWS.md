@@ -247,7 +247,7 @@ You can check the status of Touch Sensor now. Try press the Touch Sensor, and up
 
 **4.** And replace the code with below code(replace all existing code):
 
-```C++
+```cpp
 {
       "desired": {
         "ledBarStatus": 5

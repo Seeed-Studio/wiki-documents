@@ -10,6 +10,8 @@ last_update:
 
 # XIAO ESP32C3 Wi-Fi Tracker using MicroPython
 
+This wiki has been updated: https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/
+
 In this tutorial, I will provide a concise overview of utilizing the XIAO ESP32C3 with Micropython. Furthermore, I will explore the practical application of a Wi-Fi signal strength tracker, which proves invaluable when establishing a high-speed, high-quality family network.
 Consequently, by adhering to the Wi-Fi tracker's guidance, we can effectively optimize the placement of the Wi-Fi signal enhancer, ensuring optimal signal coverage.
 

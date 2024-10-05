@@ -707,7 +707,7 @@ These allow the users to develop the EdgeBox-ESP-100 in bare meta.
 
 ### How-to Power
 
-**image here**
+<div align="center"><img src="https://files.seeedstudio.com/wiki/edge_box_esp/Edgebox-esp-how-to-power.png" alt="pir" width={500} height="auto" /></div>
 
 ### Power consumption
 

@@ -96,7 +96,7 @@ Once uploaded, you should be able to see the pin 25 Green (USER) LED on the boar
 If uploading the Arduino program fails, try holding down the "BOOT" button and then clicking the "RUN" button. At this point, Seeed Studio XIAO RP2040 will enter boot mode (your computer will load a removable disk), and you will be able to upload the Arduino program again.
 :::
 
-## **Pin Multuiplexing on the Seeed Studio XIAO RP2040**
+## **Pin Multiplexing on the Seeed Studio XIAO RP2040**
 
 The Seeed Studio XIAO RP2040 contains 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface. We are going to provide the tutorials about these interfaces to make it helpful for your projects.
 
@@ -108,7 +108,7 @@ Connect a pushbutton to Pin D0 and an LED to Pin 25. Then upload the following c
 Please note that the operating voltage of the Seeed Studio XIAO RP2040 is 3.3V, if you connect the sensor to 5V incorrectly, the motherboard may not work properly.
 :::
 
-```c++
+```cpp
 const int buttonPin = D0;     // the number of the pushbutton pin
 const int ledPin =  25;      // the number of the LED pin
  
@@ -140,7 +140,7 @@ void loop() {
 
 Connect a potentiometer to Pin A0 and an LED to Pin 25. Then upload the following code to control the blinking interval of the LED by rotating the potentiometer knob.
 
-```c++
+```cpp
 const int sensorPin = A0;
 const int ledPin =  25; 
 void setup() {
@@ -167,7 +167,7 @@ int sensorValue = analogRead(sensorPin);
 
 Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message
 
-```c++
+```cpp
 void setup() {
     Serial.begin(115200);
     while (!Serial);
@@ -193,7 +193,7 @@ Type the keyword "Adafruit_NeoPixel" library in Ardunio library Manager and inst
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <Adafruit_NeoPixel.h>
 
 int Power = 11;
@@ -257,7 +257,7 @@ Type the keyword "U8G2" library in Ardunio library Manager and install the laste
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <Arduino.h>
 #include <U8g2lib.h>
  
@@ -314,7 +314,7 @@ Type the keyword "Adafruit_SSD1306" library in Ardunio library Manager and insta
 
 - **Step 2.** Copy the codes to Arduino and click the **Upload** button to upload.
 
-```c++
+```cpp
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

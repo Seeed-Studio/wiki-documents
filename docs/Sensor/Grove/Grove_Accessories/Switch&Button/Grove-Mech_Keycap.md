@@ -30,7 +30,7 @@ You will find that this is an interesting and stable module to make some really 
 20,000,000 cycles of operation shall be performed continuously at a rate of 300 cycles per minute without load.
 :::
 
-<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
+<p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Mech-Keycap.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
 ## Features
 
@@ -131,7 +131,7 @@ If we don't have Grove Base Shield, We also can directly connect Grove-Mech keyc
 
 - **Step 3.** Open the Arduino IDE and create a new file, then copy the following code into the new file.
 
-```c++
+```cpp
 /**
  * This is an exmaple of the Grove - Mech Keycap.
  * Every press of the key will change the color the SK6805 RGB LED. The SK6805 is a NeoPixel compatible chip.

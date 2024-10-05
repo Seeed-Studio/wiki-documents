@@ -140,7 +140,7 @@ BTHome 是一个通用而强大的标准，用于广播传感器数据和在BLE�
 <summary>单击此处复制CircuitPython代码</summary>
 
 
-```Python
+```python
 # BTHome with DHT20
 # This code is based on the excelent code by Koen Vervloesem
 # https://github.com/koenvervloesem/BTHome-Inertial-Sensor-in-CircuitPython

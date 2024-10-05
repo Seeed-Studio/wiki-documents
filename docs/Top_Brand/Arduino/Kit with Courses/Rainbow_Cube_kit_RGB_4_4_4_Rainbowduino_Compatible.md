@@ -237,7 +237,7 @@ Let us get started with a simple example:
 
 * Compile and upload the sketch
 
-```C++
+```cpp
 /*
  Rainbowduino v3.0 Library examples:  Cube1
 
@@ -286,7 +286,7 @@ First we need to initialize the driver using _init()_
 
 Usage:
 
-```C++
+```cpp
 Rb.init();//initialize Rainbowduino driver. This should be placed inside setup()
 ```
 
@@ -298,7 +298,7 @@ To set a LED (Z,X,Y) we use _setPixelZXY(Z,X,Y,R,G,B)_.
 
 Usage:
 
-```C++
+```cpp
 Rb.setPixelZXY(unsigned char x, unsigned char y, unsigned char  colorR,  unsigned char colorG, unsigned char colorB); //This sets the pixel (z,x,y) by specifying each channel(color) with a 8bit number.
 ```
 
@@ -308,7 +308,7 @@ Alternatively a LED (Z,X,Y) can be set by using _setPixelZXY(Z,X,Y,24bRGB)_.
 
 Usage:
 
-```C++
+```cpp
 Rb.setPixelZXY(unsigned char z, unsigned char x, unsigned char y, uint32_t colorRGB /*24-bit RGB Color*/) //This sets the LED (z,x,y) by specifying a 24bit RGB color code
 ```
 
@@ -318,7 +318,7 @@ At times, it useful to blank all the LEDs. For this there is an **API blankDispl
 
 Usage:
 
-```C++
+```cpp
 Rb.blankDisplay();
 //Clear the LEDs (make all LEDs blank)
 ```
@@ -327,7 +327,7 @@ Rb.blankDisplay();
 
 * To understand the (Z,X,Y) pixel addressing let us see the another example. In this demo, the Layer 0 (i.e Z-0) is painted Green and Layer 3 is painted Blue.
 
-```C++
+```cpp
 /*
  Rainbowduino v3.0 Library examples:  Cube2
 
@@ -372,7 +372,7 @@ Output
 
 * In this demo, all LEDs are painted with some random color. After five seconds of delay, the whole cube is repainted with random colors.
 
-```C++
+```cpp
 /*
  Rainbowduino v3.0 Library examples:  Cube3
 

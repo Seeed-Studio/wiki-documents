@@ -28,7 +28,7 @@ Connect the Buzzer to the D6/D7 Digital I/O Jack.  The sketch uses Arduino Pin D
 
 _**Now upload the following Arduino sketch:**_
 
-```c++
+```cpp
 // Project Four - Noise maker
 //
 

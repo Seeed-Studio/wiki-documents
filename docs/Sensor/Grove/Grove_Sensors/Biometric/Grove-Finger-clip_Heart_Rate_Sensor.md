@@ -66,7 +66,7 @@ Link the Sensor to I2C port of Seeeduino with Grove Cable.
 Copy the following code into a new sketch of Arduino and upload the sketch, then you can get heart rate from the Serial Monitor.
 It may take about a minute to get valid heart rate after you touch your finger with sensor.
 
-```c++
+```cpp
 #include <Wire.h>
 void setup() {
     Serial.begin(9600);
@@ -88,7 +88,7 @@ void loop() {
 The standard I2C library for the Arduino is the Wire Library. While this library does not work when the I2C pins SDA/SCL are in use already for other purposes. So you can use the SoftwareI2C. You can connect the SCL to D2 and SDA to D3. Please download the [SoftI2CMaster library](https://github.com/felias-fogg/SoftI2CMaster) and follow [How to install arduino library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/) to setup the library. Copy the following code into a new sketch of Arduino and upload the sketch, then you can get heart rate from the Serial Monitor.
 It may take about a minute to get valid heart rate after you touch your finger with sensor.
 
-```c++
+```cpp
 #define SDA_PORT PORTD
 #define SDA_PIN 3
 #define SCL_PORT PORTD
@@ -116,7 +116,7 @@ void loop() {
 
 Read a byte from I2C device 0xA0 (8 bit address), it's the heart rate.
 
-```c++
+```cpp
 #include "mbed.h"
 
 I2C i2c(I2C_SDA, I2C_SCL);

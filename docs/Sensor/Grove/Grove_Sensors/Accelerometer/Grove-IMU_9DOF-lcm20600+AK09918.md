@@ -187,7 +187,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 
-```C++
+```cpp
 #include "AK09918.h"
 #include "ICM20600.h"
 #include <Wire.h>
@@ -389,7 +389,7 @@ void calibrate(uint32_t timeout, int32_t *offsetx, int32_t *offsety, int32_t*off
      If every thing goes well, when you open the Serial Monitor, the notice will pop up--*Start figure-8 calibration after 2 seconds.*  Which means in order to calibrate this module, you should move it and draw the number 8 trajectory in the air. When the "......." appears, you can start your calibration.
 :::
 
-```C++
+```cpp
 Start figure-8 calibration after 2 seconds.
 .......................................................................
 A:  -362,  -205,  738 mg

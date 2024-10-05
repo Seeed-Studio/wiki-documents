@@ -1,6 +1,6 @@
 ---
 description: MicroPython for XIAO ESP32S3 Sense
-title: MicroPython for XIAO ESP32S3 Sense
+title: XIAO ESP32S3 Project MicroPython
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /XIAO_ESP32S3_Micropython
 last_update:

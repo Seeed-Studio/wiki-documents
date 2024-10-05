@@ -291,7 +291,7 @@ xx status:
 The following sketch configures **Bluetooth Bee** for [Transportunternehmen](http://aps-solver.de/leistungen/) as Slave Device and waits for connection request from PC or other master device.
 Bluetooth Bee is  connected to Seeeduino via XBee Shield as shown above. Bluetooth Bee is connected to digital Pins 11 and 12 of Arduino / Seeduino. We use NewSoftSerial library for supporting serial communication on these pins. The hardware serial port of Arduino is available for uploading sketch or debugging. This sketch uses a flow control mechanism using CheckOK(). It avoids using arbitrary delay between each command. If CheckOK() is not required, use a delay of at least 3 seconds between commands.
 
-```c++
+```cpp
 /*
 BluetoothBee Demo Code - Flowcontrol Based Implementation
 2010,2011 Copyright (c) Seeed Technology Inc.  All right reserved.
@@ -408,7 +408,7 @@ void sendBlueToothCommand(char command[])
 
 The following sketch is a modification of above program using delay() instead of CheckOK(). In this case the hardware serial port is used for debugging purpose. Open serial monitor with setting 9600 baud. The complete communication between MCU and Bluetooth Bee will be visible in serial monitor.
 
-```c++
+```cpp
 /*
 BluetoothBee Demo Code - Delay Based Implementaion
 2011 Copyright (c) Seeed Technology Inc.  All right reserved.

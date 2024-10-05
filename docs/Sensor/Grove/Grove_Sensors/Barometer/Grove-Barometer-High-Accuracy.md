@@ -373,7 +373,7 @@ python high_accuracy_barometer_example.py
 
 Here is the code :
 
-```Python
+```python
 #!/usr/bin/env python
 #
 # GrovePi Example for using the Grove - Barometer (High-Accuracy)(https://www.seeedstudio.com/depot/Grove-Barometer-HighAccuracy-p-1865.html

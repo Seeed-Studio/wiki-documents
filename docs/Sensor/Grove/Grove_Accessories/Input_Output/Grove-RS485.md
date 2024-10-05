@@ -92,7 +92,7 @@ The Grove - NFC supports I2C and UART, [Seeed Arduino NFC Library](https://githu
 
 - **Step 1.**  Open two Arduino IDE windows and copy these codes as below separately. One of the device is using as master device and the other one is using as slave device.
 
-```c++
+```cpp
 /*      Slave     */
 #include <SoftwareSerial.h>
 SoftwareSerial Slave(6, 7);  
@@ -117,7 +117,7 @@ void loop() {
 }
 ```
 
-```c++
+```cpp
 /*      Master      */
 #include <SoftwareSerial.h>
 SoftwareSerial Master(6, 7);

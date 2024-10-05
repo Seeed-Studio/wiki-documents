@@ -108,7 +108,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 **Software Code**
 
-```C++
+```cpp
 // Include the libraries we need
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -215,7 +215,7 @@ pip3 install --upgrade seeed-python-Ds18b20
 
 #### Software
 
-```Python
+```python
 import seeed_ds18b20
 import time
 

@@ -146,7 +146,7 @@ First you have to make sure that Arduino1.0 has already been installed on your c
 Download the wifishield library here [Wifi Shield Library](https://github.com/Seeed-Studio/WiFi_Shield) and unzip it into the libraries file of Arduino via this path: ..\arduino-1.0\libraries
 Open a new sketch in Arduino-1.0, then copy the following code to your sketch.
 
-```c++
+```cpp
 #include "Wifly.h"
 #include <SoftwareSerial.h>
 WiflyClass Wifly(2,3);

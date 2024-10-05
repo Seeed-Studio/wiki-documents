@@ -46,28 +46,39 @@ Infineon’s Wi-Fi  solution supports Wi-Fi 6/6E features, is tri-band capable (
 
 ## Install the software driver
 
-**Step 1.** Download and upload the Infineon [WiFi driver](https://community.infineon.com/gfawx74859/attachments/gfawx74859/WiFiBluetoothLinux/2968/2/cyw55573-jetson-orin-agx-1.0-1-arm64.deb.zip) and [hostap installation package](https://community.infineon.com/gfawx74859/attachments/gfawx74859/WiFiBluetoothLinux/2968/1/ifx-hostap-jetson-2.10-arm64.deb.zip) to reComputer.
+**Step 1.** Download and upload the Infineon [WiFi driver](https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQzCwQWQOwhNhhW-VHhKqogBYhan7liy9UY44QE4vhq95A?e=qq0ANC) to reComputer.
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/download_package.png"/></div>
 
-**Step 2.** Open a terminal on reComputer and run the following command to install the Infineon hostap(wpa_supplicant/hostapd) package，you only need to run this step once:
+**Step 2.** Run the following command to run Infineon WiFi driver.
+
+For Jetpack 5.1.x:
 
 ```sh
-sudo killall wpa_supplicant
-sudo dpkg -i  ifx-hostap-jetson-2.10-arm64.deb
+sudo dpkg -i cyw55573-nvidia-jetson-v5.15.58-backports-2.0-1-arm64.deb
 ```
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/install_hostap.png"/></div>
-
-**Step 3.** Run the following command to run Infineon WiFi driver, you need to run this step after system boot up every time:
+For Jetpack 6:
 
 ```sh
-sudo dpkg -i cyw55573-jetson-orin-agx-1.0-1-arm64.deb
+sudo rm /lib/modules/5.15.136-tegra/build
+
+sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
+
+sudo dpkg -i cyw55573-nvidia-jetson-v5.15.58-backports-2.0-1-arm64.deb
 ```
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/install_driver.png"/></div>
 
-**Step 4.** Use the following command to check if the wlan0 interface is available:
+It takes a while for driver to compile.
+
+Then, you need to reboot the reComptuer:
+
+```sh
+sudo reboot
+```
+
+**Step 3.** Use the following command to check if the wlan0 interface is available:
 
 ```sh
 ifconfig
@@ -75,8 +86,24 @@ ifconfig
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/ifconfig.png"/></div>
 
+:::caution
+  If you installed the Intel wireless drivers via `sudo apt-get install iwlwifi-modules -y` previously, you need to uninstall this package before you proceed. There is a known issue with backport compatibilities. 
 
-**Step 5.** Connect to  Wi-Fi network
+  Both Intel and Infineon’s wireless driver used the backport compat module, you can’t install all of them, otherwise kernel will rise an error of `compat: exports duplicate symbol backport dependency symbol (owned by iwlwifi compat)`.
+
+  By uninstalling the Intel's wireless drivers, you can use Infineon’s wireless driver:
+
+  ```sh
+  sudo apt-get remove backport-iwlwifi-dkms
+  ```
+  By uninstalling Infineon's wireless driver, you can use Intel's wireless drivers:
+  ```sh
+  sudo dpkg -r cyw55573-nvidia-jetson-v5.15.58-backports
+  ```
+
+:::
+
+**Step 4.** Connect to  Wi-Fi network
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/connect_to_wifi.png"/></div>
 

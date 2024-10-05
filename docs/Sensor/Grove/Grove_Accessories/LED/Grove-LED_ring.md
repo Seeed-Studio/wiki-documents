@@ -167,7 +167,7 @@ Now, we will demonstrate you how to run the code 'buttoncycler'. This is a demon
 #### ⁨buttoncycler⁩
 After run this code, when you press the button it will change to a new pixel animation.  Note that you need to press the button once to start the first animation!
 
-```C++
+```cpp
 
 #include "Adafruit_NeoPixel.h"
 
@@ -344,7 +344,7 @@ uint32_t Wheel(byte WheelPos) {
 
 **RGBW strand test**
 
-```C++
+```cpp
 
 #include "Adafruit_NeoPixel.h"
 #ifdef __AVR__
@@ -613,7 +613,7 @@ uint8_t blue(uint32_t c) {
 
 **Simple**
 
-```C++
+```cpp
 
 #include "Adafruit_NeoPixel.h"
 #ifdef __AVR__
@@ -665,7 +665,7 @@ void loop() {
 
 **Simple New Operator**
 
-```C++
+```cpp
 
 #include "Adafruit_NeoPixel.h"
 #ifdef __AVR__
@@ -723,7 +723,7 @@ void loop() {
 
 **Strand test**
 
-```C++
+```cpp
 
 #include "Adafruit_NeoPixel.h"
 #ifdef __AVR__

@@ -20,13 +20,13 @@ last_update:
 
 本文将介绍两种定位方式，一种是从XIAO所连接的网络的IP地址中获取位置信息，实现定位。另一种是使用Wi-Fi定位系统(通常称为wps或WFPS)
 
-- **方法一:根据IP地址定位**
+- **方法1:根据IP地址定位**
 
 定位IP地址的原理是使用数据库将IP地址映射到物理位置。这个过程通常被称为地理定位。
 
 IP地址查找包括使用反向DNS查找来检索与IP地址关联的域名。然后，域名可以用来识别托管网站或服务的服务器的地理位置。
 
-IP地址映射
+IP地址映射涉及使用一个数据库，该数据库将IP地址映射到物理位置。数据库可能包含与每个IP地址相关的城市、地区和国家等信息。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/iplocation.png" style={{width:700, height:'auto'}}/></div>
 
 IP地址地理定位的准确性取决于使用的方法和可用数据的质量。一般来说，IP地址地理定位对于固定设备(如桌面计算机和服务器)是最精确的，它们通常与固定的物理位置相关联。智能手机和平板电脑等移动设备可能更难准确定位，因为它们可以四处移动并连接不同的Wi-Fi网络。
@@ -34,6 +34,7 @@ IP地址地理定位的准确性取决于使用的方法和可用数据的质量
 - **方法2:通过[WFPS](https://en.wikipedia.org/wiki/Wi-Fi_positioning_system)**
 
 Wi-Fi定位系统是一种利用附近Wi-Fi热点和其他无线接入点的特征来发现设备所在位置的地理定位系统。
+
 由于多径和室内信号堵塞等各种原因，GPS等卫星导航不完善，或获取卫星定位需要很长时间。这些系统包括辅助GPS、通过热点数据库的城市定位服务和室内定位系统。Wi-Fi定位利用了21世纪初城市无线接入点的快速增长。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/wfps.png" style={{width:700, height:'auto'}}/></div>
@@ -92,7 +93,7 @@ Wi-Fi定位系统是一种利用附近Wi-Fi热点和其他无线接入点的特�
 
 ## 使用XIAO ESP32S3连接网络，获取公网IP地址
 
-:::提示
+:::tip提示
 如果您不熟悉XIAO ESP32S3的网络功能，您可以阅读有关[Seeed Studio XIAO ESP32S3 (Sense)的WiFi使用情况](https://wiki.seeedstudio.com/xiao_esp32s3_wifi_usage/)。
 :::
 
@@ -143,7 +144,7 @@ if (WiFi.hostByName("ip-api.com", publicIP)) {
 
 ## 通过ipstack平台获取位置坐标
 
-使用IP地址的位置通常是一些公共图书馆服务器所需的信息。我们可以获取该服务器信息的帮助下一些平台的API接口。例如,在本教程中,我们将使用这个平台(ipstack) (https://ipstack.com)。
+使用IP地址的位置通常是一些公共图书馆服务器所需的信息。我们可以获取该服务器信息的帮助下一些平台的API接口。例如,在本教程中,我们将使用这个平台 [ipstack](https://ipstack.com) 。
 
 ipstack提供了一个强大的、实时的IP到地理定位API，能够查找准确的位置数据，并评估来自风险IP地址的安全威胁。结果以JSON或XML格式在毫秒内交付。
 
@@ -268,14 +269,14 @@ bool getLocation(){
 
 一旦你有了API，请把它放在一个安全的地方，我们将在后面的编程步骤中使用它。
 
-:::请注意
+:::note注意
 如果您对当前使用API的环境有顾虑，可以打开API调用的限制，以避免因滥用而产生的额外费用。打开某些限制可能需要更改程序。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/4.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
 ## 在圆形显示屏上显示位置地图
-:::tip
+:::tip提示
 如果您第一次为XIAO使用圆形显示器，那么您可能需要参考[Wiki此处](https://wiki.seeedstudio.com/get_start_round_display/)以配置圆形屏幕的Arduino环境。
 :::
 
@@ -314,7 +315,7 @@ https://maps.googleapis.com/maps/api/staticmap?parameters
 
 - `key` (required)允许您在谷歌云控制台监控您的应用程序的API使用情况，并确保谷歌在必要时可以联系您有关您的应用程序。
 
-:::提示
+:::tip提示
 上面只显示了最基本的参数，如果您需要定制此静态映射，您可以单击 **[此处](https://developers.google.com/maps/documentation/maps-static/start)** 以阅读参数的完整列表。
 :::
 
@@ -581,7 +582,7 @@ void getLocation(){
 ## 最新位置的实时更新
 
 因此最后一步，让我们包装这个全球定位跟踪器。让它实现一个自动的地图刷新。
-:::tip
+:::tip提示
 使用本程序时，请预估您的谷歌云服务资费消耗，否则频繁的API调用可能会导致大量计费!
 :::
 
@@ -629,7 +630,7 @@ void loop() {
 
 ## 故障排除
 
-### Q1:为什么我没有使用 ` WiFi.hostByName() ` 函数获得确切的IP地址?
+### 问题1:为什么我没有使用 ` WiFi.hostByName() ` 函数获得确切的IP地址?
 
 当使用WiFi.hostByName()函数查询路由器的公共IP地址时，请确保您的路由器可以通过DNS解析器解析到相应的IP地址。如果路由器使用ISP提供的DNS服务器，可能会遇到DNS解析失败。在这种情况下，您可以尝试使用备选DNS服务器，例如b谷歌的公共DNS服务器8.8.8.8或8.8.4.4。
 
@@ -639,7 +640,7 @@ void loop() {
 
 2. 检查路由器配置:检查路由器配置，确保NAT和端口转发功能配置正确，没有阻断外部网络的访问。您也可以尝试在路由器上启用UPnP功能，以自动配置端口转发。
 
-3.重启路由器和ESP32S3设备:有时，重启路由器和ESP32S3设备可以解决网络连接和配置问题。
+3. 重启路由器和ESP32S3设备:有时，重启路由器和ESP32S3设备可以解决网络连接和配置问题。
 
 如果这仍然不能解决问题，我们建议使用第二种方法，或者在路由器查询公网IP后直接为XIAO赋值。
 

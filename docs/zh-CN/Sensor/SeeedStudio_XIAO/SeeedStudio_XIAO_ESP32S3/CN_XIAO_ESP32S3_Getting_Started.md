@@ -139,13 +139,13 @@ Seeed Studio XIAO ESP32S3 Sense集成了摄像头传感器、数字麦克风和S
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应前端指示图</th>
 	</tr>
 	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/1.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应返回指示图</th>
 	</tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/3.png" style={{width:700, height:'auto'}}/></div></td>
+	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
     <tr>
 	    <th>XIAO ESP32S3/SIAO ESP32S3感应引脚列表</th>
@@ -411,11 +411,11 @@ XIAO ESP32S3系列内置电源管理芯片，可使用电池独立供电，或�
 
 同时，我们设计了一个用于电池充电的红色指示灯，通过指示灯显示屏告知用户电池在充电中的当前状态。
 
-1.当XIAO ESP32S3未连接到电池时，当连接Type-C电缆时红灯亮起，30秒后熄灭。
+1. 当XIAO ESP32S3未连接到电池时，当连接Type-C电缆时红灯亮起，30秒后熄灭。
 
-2.当连接电池并连接C型电缆进行充电时，红灯会闪烁。
+2. 当连接电池并连接C型电缆进行充电时，红灯会闪烁。
 
-3.当连接Type-C为电池充满电时，红灯熄灭。
+3. 当连接Type-C为电池充满电时，红灯熄灭。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/104.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -679,7 +679,7 @@ XIAO ESP32S3是所有XIAO中最复杂的一个，因为它的集成度很高，�
 
 ### For Seeed Studio XIAO ESP32S3
 
-- **[PDF]** [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.1.pdf)
+- **[PDF]** [Seeed Studio XIAO ESP32S3 Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_SCH_v1.2.pdf)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Eagle Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_v1.1_SCH&PCB_230327.zip)
 

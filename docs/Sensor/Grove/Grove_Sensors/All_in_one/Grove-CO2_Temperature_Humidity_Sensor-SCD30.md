@@ -182,7 +182,7 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
     c. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 #include "SCD30.h"
 
 #if defined(ARDUINO_ARCH_AVR)

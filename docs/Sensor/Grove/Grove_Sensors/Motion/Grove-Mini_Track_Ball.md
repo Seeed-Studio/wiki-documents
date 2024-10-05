@@ -93,7 +93,7 @@ Interface to control motions.
 
 
 
-```c++
+```cpp
 
 
 #include <Wire.h>

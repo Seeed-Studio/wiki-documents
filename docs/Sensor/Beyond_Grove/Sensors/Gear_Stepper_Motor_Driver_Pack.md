@@ -120,7 +120,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 - **Step 1.** Click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 int pwm1=9;
 int pwm2=10;
 int ctr_a =9;
@@ -234,7 +234,7 @@ You can do this yourself by powering the pins one by one, or using a library suc
 
 1. Upload the following code to Thonny and run it.
 
-```Python
+```python
 from gpiozero import Button, LED
 from time import sleep
 

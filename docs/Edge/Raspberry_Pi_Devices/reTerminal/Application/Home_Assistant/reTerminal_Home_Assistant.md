@@ -1,5 +1,5 @@
 ---
-description: reTerminal-Home-Assistant
+description: How to install Home Assistant on reTerminal
 title: Getting Started with Home Assistant
 image: https://avatars.githubusercontent.com/u/4452826?s=400&amp;v=4
 slug: /reTerminal_Home_Assistant
@@ -54,6 +54,13 @@ If we install Home Assistant Container on reTerminal, we will be missing out on 
 ### Why Home Assistant Supervised?
 
 If we install Home Assistant Supervised on reTerminal, we will be able to use all the features of Home Assistant and be able to view the dashboard UI on reTerminal LCD as well! But the installation of this will involve more steps in comparison with OS and Container methods. However, if you carefully follow along this wiki, you will be able to successfully achieve it!
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+
+<TabItem value="Method 1" label="Bullseye">
 
 ## Let's build it
 
@@ -303,6 +310,101 @@ After integrating smart lights, temperature, humidity sensors, CCTV and more, a 
   <source id="mp4" src="https://files.seeedstudio.com/wiki/Home-Assistant/HA-dashboard.mp4" type="video/mp4" />
 </video>
 <br />
+
+</TabItem>
+
+
+
+<TabItem value="Method 2" label="Bookworm">
+
+:::note
+During the HA installation process, we tested using wireless connectivity.
+:::
+
+## Home Assistant Supervised Installation - Bookworm
+
+#### Step 1: Update and Install Dependencies
+
+```bash
+sudo apt update
+sudo apt-get install -y jq wget curl udisks2 apparmor-utils libglib2.0-bin network-manager dbus systemd-journal-remote systemd-resolved
+```
+
+#### Step 2: Start and Enable Network Manager
+
+Check the status of Network Manager
+
+```bash
+sudo systemctl status NetworkManager.service
+```
+
+NetworkManager does not start, start and enable
+
+```bash
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+```
+
+#### Step 3: Modify Boot Parameters
+
+Edit the `cmdline.txt` file:
+```bash
+sudo nano /boot/firmware/cmdline.txt
+```
+
+Add the following at the end of the line:
+
+```bash
+systemd.unified_cgroup_hierarchy=false lsm=apparmor
+```
+
+Reboot the system:
+```bash
+sudo reboot
+```
+
+#### Step 4: Install Docker
+
+```bash
+sudo curl -fsSL get.docker.com | sh
+sudo gpasswd -a $USER docker
+newgrp docker
+```
+
+#### Step 5: Install OS Agent
+
+```bash
+wget https://github.com/home-assistant/os-agent/releases/download/1.6.0/os-agent_1.6.0_linux_aarch64.deb
+sudo dpkg -i os-agent_1.6.0_linux_aarch64.deb
+```
+
+#### Step 6: Install Home Assistant Supervised
+
+```bash
+wget https://github.com/home-assistant/supervised-installer/releases/download/1.6.0/homeassistant-supervised.deb
+sudo dpkg -i homeassistant-supervised.deb
+```
+
+Upon successful correction, a blue screen will appear, allowing you to select **Raspberry Pi4 64** model.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" style={{width:600}}/></div>
+
+After a few minutes, the installation will begin.
+
+You can then view the Home Assistant Dashboard UI on a web browser using `<your_reTerminal_ip>:8123`.
+
+It will take some time to finish the initial startup process. Once it has finished starting up, create an account and follow the initial setup instructions
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" style={{width:600}}/></div>
+
+:::note
+If there are warnings in notifications, please reboot the reTerminal.
+:::
+
+
+</TabItem>
+
+</Tabs>
 
 # Tech support
 

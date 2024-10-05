@@ -382,8 +382,24 @@ const config = {
                 to: '/ranger',
               },
               {
-                label: 'Contributors(GitHub)',
-                href: 'https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479',
+                label: 'Contributors',
+                to: '/contributors',
+              },
+              {
+                label: 'Apply for Rangers',
+                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
+              },
+              {
+                label: 'Direct to Assignments',
+                href: 'https://github.com/orgs/Seeed-Studio/projects/6',
+              },
+              {
+                label: 'More about Rangers',
+                href: 'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
+              },
+              {
+                label: 'More about Contributors',
+                href: 'https://wiki.seeedstudio.com/Contributor',
               },
             ],
           },
@@ -602,7 +618,7 @@ const config = {
         // Replace this with the name of your index/collection.
         // It should match the "index_name" entry in the scraper's "config.json" file.
         // typesenseCollectionName: 'wiki_platform_1713169217',
-        typesenseCollectionName: 'wiki_platform_1715763811',
+        typesenseCollectionName: 'wiki_platform_1725602541',
   
         typesenseServerConfig: {
           nodes: [
@@ -612,11 +628,13 @@ const config = {
               protocol: 'https',
             },
           ],
-          apiKey: 'uy6PqV2Weyfz1P7Oh7p2Ik0K5VCwyQ5b',
+          apiKey: 'RWzz9wJKzXW2iBB8HgcCnZjnrytuWaYb',
         },
               // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {},
-
+      "query_by": "hierarchy.lvl0,hierarchy.lvl2,content",
+      "sort_by": "",
+      
       // Optional
       contextualSearch: true,
     },
@@ -632,7 +650,7 @@ const config = {
         content:
           // 'We are looking forward to your contribution! Welcome to check our <a target="_blank" rel="https://github.com/orgs/Seeed-Studio/projects/3/views/1" href="https://github.com/BilltheWorld/wiki-documents/blob/docusaurus-version/TASK.md">task lists</a>！',
           // 'All planned updates to the wiki platform has been publicly availble. Your <a target="_blank" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=30957479">contributions</a> will be essential to us!',
-          'Building Sustainable Growth, Strengthening Local Partnerships. Join   the <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Seeed Studio Ranger Program</a> now! ',
+          'Collaborating with us! Join the Seeed Studio <a target="_blank" href="https://wiki.seeedstudio.com/ranger/">Ranger Program</a> or <a target="_blank" href="https://wiki.seeedstudio.com/contributors/">Contributor Program</a>!',
         backgroundColor: '#013949',
         textColor: '#FFFFFF',
         isCloseable: false,

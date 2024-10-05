@@ -145,7 +145,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>
  in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
-```C++
+```cpp
 
 #include "BMI088.h"
 
@@ -215,7 +215,7 @@ void loop(void)
      If every thing goes well, when you open the Serial Monitor, it may show as below:
 :::
 
-```c++
+```cpp
 BMI088 Raw Data
 BMI088 is connected
 394.41,-383.06,818.66,1.71,-4.88,-2.93,27

@@ -43,7 +43,7 @@ Grove - 3-Axis Digital Accelerometer(LIS3DHTR) is a low-cost 3 - Axis accelerome
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) | -->
 |Arduino|Raspberry Pi|
 |---|---|
-|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
 
 ## Getting Started
 
@@ -65,7 +65,7 @@ Connect the Grove - 3-Axis Digital Accelerometer (LIS3DHTR) with Seeeduino XIAO'
 
 #### Software Code
 
-```C++
+```cpp
 // This example use I2C.
 #include "LIS3DHTR.h"
 #include <Wire.h>
@@ -148,146 +148,144 @@ Connect the LIS3DHTR sensor to any I2C interface on the Grove Base Hat for Raspb
 
 #### Code
 
+- **Step 1** Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment and install the grove.py to your raspberry pi.
+- **Step 2** Excute below commands to run the code.
+
+```
+virtualenv -p python3 env
+source env/bin/activate
+#enter commmand
+grove_3_axis_digital_accelerometer
+```
+Following is grove_3_axis_digital_accelerometer.py code:
+
 ```python
-#!/usr/bin/env python
-
-# Distributed with a free-will license.
-# Use it any way you want, profit or free, provided it fits in the licenses of its associated works.
-# LIS3DHTR
-# This code is designed to work with the LIS3DHTR_I2CS I2C Mini Module available from ControlEverything.com.
-# https://www.controleverything.com/content/Accelorometer?sku=LIS3DHTR_I2CS#tabs-0-product_tabset-2
-
-import smbus
+from __future__ import print_function
+from grove.i2c import Bus
 import time
 
-# Get I2C bus
-bus = smbus.SMBus(1)
-
 # I2C address of the device
-LIS3DHTR_DEFAULT_ADDRESS   = 0x19
+H3LIS331DL_DEFAULT_ADDRESS			= 0x19
 
-# LIS3DHTR Register Map
-LIS3DHTR_REG_WHOAMI     = 0x0F # Who Am I Register
-LIS3DHTR_REG_CTRL1     = 0x20 # Control Register-1
-LIS3DHTR_REG_CTRL2     = 0x21 # Control Register-2
-LIS3DHTR_REG_CTRL3     = 0x22 # Control Register-3
-LIS3DHTR_REG_CTRL4     = 0x23 # Control Register-4
-LIS3DHTR_REG_CTRL5     = 0x24 # Control Register-5
-LIS3DHTR_REG_CTRL6     = 0x25 # Control Register-6
-LIS3DHTR_REG_REFERENCE    = 0x26 # Reference
-LIS3DHTR_REG_STATUS     = 0x27 # Status Register
-LIS3DHTR_REG_OUT_X_L    = 0x28 # X-Axis LSB
-LIS3DHTR_REG_OUT_X_H    = 0x29 # X-Axis MSB
-LIS3DHTR_REG_OUT_Y_L    = 0x2A # Y-Axis LSB
-LIS3DHTR_REG_OUT_Y_H    = 0x2B # Y-Axis MSB
-LIS3DHTR_REG_OUT_Z_L    = 0x2C # Z-Axis LSB
-LIS3DHTR_REG_OUT_Z_H    = 0x2D # Z-Axis MSB
+# H3LIS331DL Register Map
+H3LIS331DL_REG_WHOAMI					= 0x0F # Who Am I Register
+H3LIS331DL_REG_CTRL1					= 0x20 # Control Register-1
+H3LIS331DL_REG_CTRL2					= 0x21 # Control Register-2
+H3LIS331DL_REG_CTRL3					= 0x22 # Control Register-3
+H3LIS331DL_REG_CTRL4					= 0x23 # Control Register-4
+H3LIS331DL_REG_CTRL5					= 0x24 # Control Register-5
+H3LIS331DL_REG_REFERENCE				= 0x26 # Reference
+H3LIS331DL_REG_STATUS					= 0x27 # Status Register
+H3LIS331DL_REG_OUT_X_L					= 0x28 # X-Axis LSB
+H3LIS331DL_REG_OUT_X_H					= 0x29 # X-Axis MSB
+H3LIS331DL_REG_OUT_Y_L					= 0x2A # Y-Axis LSB
+H3LIS331DL_REG_OUT_Y_H					= 0x2B # Y-Axis MSB
+H3LIS331DL_REG_OUT_Z_L					= 0x2C # Z-Axis LSB
+H3LIS331DL_REG_OUT_Z_H					= 0x2D # Z-Axis MSB
 
 # Accl Datarate configuration
-LIS3DHTR_ACCL_DR_PD     = 0x00 # Power down mode
-LIS3DHTR_ACCL_DR_1     = 0x10 # ODR = 1 Hz
-LIS3DHTR_ACCL_DR_10     = 0x20 # ODR = 10 Hz
-LIS3DHTR_ACCL_DR_25     = 0x30 # ODR = 25 Hz
-LIS3DHTR_ACCL_DR_50     = 0x40 # ODR = 50 Hz
-LIS3DHTR_ACCL_DR_100    = 0x50 # ODR = 100 Hz
-LIS3DHTR_ACCL_DR_200    = 0x60 # ODR = 200 Hz
-LIS3DHTR_ACCL_DR_400    = 0x70 # ODR = 400 Hz
-LIS3DHTR_ACCL_DR_1620    = 0x80 # ODR = 1.620 KHz
-LIS3DHTR_ACCL_DR_1344    = 0x90 # ODR = 1.344 KHz
+H3LIS331DL_ACCL_PM_PD					= 0x00 # Power down Mode
+H3LIS331DL_ACCL_PM_NRMl					= 0x20 # Normal Mode
+H3LIS331DL_ACCL_PM_0_5					= 0x40 # Low-Power Mode, ODR = 0.5Hz
+H3LIS331DL_ACCL_PM_1					= 0x60 # Low-Power Mode, ODR = 1Hz
+H3LIS331DL_ACCL_PM_2					= 0x80 # Low-Power Mode, ODR = 2Hz
+H3LIS331DL_ACCL_PM_5					= 0xA0 # Low-Power Mode, ODR = 5Hz
+H3LIS331DL_ACCL_PM_10					= 0xC0 # Low-Power Mode, ODR = 10Hz
+H3LIS331DL_ACCL_DR_50					= 0x00 # ODR = 50Hz
+H3LIS331DL_ACCL_DR_100					= 0x08 # ODR = 100Hz
+H3LIS331DL_ACCL_DR_400					= 0x10 # ODR = 400Hz
+H3LIS331DL_ACCL_DR_1000					= 0x18 # ODR = 1000Hz
 
 # Accl Data update & Axis configuration
-LIS3DHTR_ACCL_LPEN     = 0x00 # Normal Mode, Axis disabled
-LIS3DHTR_ACCL_XAXIS     = 0x04 # X-Axis enabled
-LIS3DHTR_ACCL_YAXIS     = 0x02 # Y-Axis enabled
-LIS3DHTR_ACCL_ZAXIS     = 0x01 # Z-Axis enabled
+H3LIS331DL_ACCL_LPEN					= 0x00 # Normal Mode, Axis disabled
+H3LIS331DL_ACCL_XAXIS					= 0x04 # X-Axis enabled
+H3LIS331DL_ACCL_YAXIS					= 0x02 # Y-Axis enabled
+H3LIS331DL_ACCL_ZAXIS					= 0x01 # Z-Axis enabled
 
 # Acceleration Full-scale selection
-LIS3DHTR_BDU_CONT     = 0x00 # Continuous update, Normal Mode, 4-Wire Interface
-LIS3DHTR_BDU_NOT_CONT    = 0x80 # Output registers not updated until MSB and LSB reading
-LIS3DHTR_ACCL_BLE_MSB    = 0x40 # MSB first
-LIS3DHTR_ACCL_RANGE_16G    = 0x30 # Full scale = +/-16g
-LIS3DHTR_ACCL_RANGE_8G    = 0x20 # Full scale = +/-8g
-LIS3DHTR_ACCL_RANGE_4G    = 0x10 # Full scale = +/-4g
-LIS3DHTR_ACCL_RANGE_2G    = 0x00 # Full scale = +/-2g, LSB first
-LIS3DHTR_HR_DS      = 0x00 # High-Resolution Disabled
-LIS3DHTR_HR_EN      = 0x08 # High-Resolution Enabled
-LIS3DHTR_ST_0      = 0x02 # Self Test 0
-LIS3DHTR_ST_1      = 0x04 # Self Test 1
-LIS3DHTR_SIM_3      = 0x01 # 3-Wire Interface
+H3LIS331DL_ACCL_BDU_CONT				= 0x00 # Continuous update, Normal Mode, 4-Wire Interface, LSB first
+H3LIS331DL_ACCL_BDU_NOT_CONT			= 0x80 # Output registers not updated until MSB and LSB reading
+H3LIS331DL_ACCL_BLE_MSB					= 0x40 # MSB first
+H3LIS331DL_ACCL_RANGE_400G				= 0x30 # Full scale = +/-400g
+H3LIS331DL_ACCL_RANGE_200G				= 0x10 # Full scale = +/-200g
+H3LIS331DL_ACCL_RANGE_100G				= 0x00 # Full scale = +/-100g
+H3LIS331DL_ACCL_SIM_3					= 0x01 # 3-Wire Interface
+H3LIS331DL_RAW_DATA_MAX					= 65536
 
+H3LIS331DL_DEFAULT_RANGE = H3LIS331DL_ACCL_RANGE_100G
+H3LIS331DL_SCALE_FS = H3LIS331DL_RAW_DATA_MAX / 4 / ((H3LIS331DL_DEFAULT_RANGE >> 4) + 1)
 
-class LIS3DHTR():
- def __init__ (self):
-  self.select_datarate()
-  self.select_data_config()
- 
- def select_datarate(self):
+class H3LIS331DL(object):
+	def __init__ (self, address=H3LIS331DL_DEFAULT_ADDRESS):
+		self._addr = address
+		self._bus  = Bus()
+		self.select_datarate()
+		self.select_data_config()
+	
+	def select_datarate(self):
+		"""Select the data rate of the accelerometer from the given provided values"""
+		DATARATE_CONFIG = (H3LIS331DL_ACCL_PM_NRMl | H3LIS331DL_ACCL_DR_50 | H3LIS331DL_ACCL_XAXIS | H3LIS331DL_ACCL_YAXIS | H3LIS331DL_ACCL_ZAXIS)
+		self._bus.write_byte_data(self._addr, H3LIS331DL_REG_CTRL1, DATARATE_CONFIG)
+	
+	def select_data_config(self):
+		"""Select the data configuration of the accelerometer from the given provided values"""
+		DATA_CONFIG = (H3LIS331DL_DEFAULT_RANGE | H3LIS331DL_ACCL_BDU_CONT)
+		self._bus.write_byte_data(self._addr, H3LIS331DL_REG_CTRL4, DATA_CONFIG)
+	
+	def read_accl(self):
+		"""Read data back from H3LIS331DL_REG_OUT_X_L(0x28), 2 bytes
+		X-Axis Accl LSB, X-Axis Accl MSB"""
+		data0 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_X_L)
+		data1 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_X_H)
+		
+		xAccl = data1 * 256 + data0
+		if xAccl > H3LIS331DL_RAW_DATA_MAX / 2:
+			xAccl -= H3LIS331DL_RAW_DATA_MAX
+		
+		"""Read data back from H3LIS331DL_REG_OUT_Y_L(0x2A), 2 bytes
+		Y-Axis Accl LSB, Y-Axis Accl MSB"""
+		data0 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_Y_L)
+		data1 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_Y_H)
+		
+		yAccl = data1 * 256 + data0
+		if yAccl > H3LIS331DL_RAW_DATA_MAX / 2 :
+			yAccl -= H3LIS331DL_RAW_DATA_MAX
+		
+		"""Read data back from H3LIS331DL_REG_OUT_Z_L(0x2C), 2 bytes
+		Z-Axis Accl LSB, Z-Axis Accl MSB"""
+		data0 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_Z_L)
+		data1 = self._bus.read_byte_data(self._addr, H3LIS331DL_REG_OUT_Z_H)
+		
+		zAccl = data1 * 256 + data0
+		if zAccl > H3LIS331DL_RAW_DATA_MAX / 2 :
+			zAccl -= H3LIS331DL_RAW_DATA_MAX
+		
+		return {'x' : xAccl, 'y' : yAccl, 'z' : zAccl}
 
-  DATARATE_CONFIG = (LIS3DHTR_ACCL_DR_10 | LIS3DHTR_ACCL_XAXIS | LIS3DHTR_ACCL_YAXIS | LIS3DHTR_ACCL_ZAXIS)
-  bus.write_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_CTRL1, DATARATE_CONFIG)
- 
- def select_data_config(self):
-  DATA_CONFIG = (LIS3DHTR_ACCL_RANGE_2G | LIS3DHTR_BDU_CONT | LIS3DHTR_HR_DS)
-  bus.write_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_CTRL4, DATA_CONFIG)
- 
- def read_accl(self):
-  data0 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_X_L)
-  data1 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_X_H)
-  
-  xAccl = data1 * 256 + data0
-  if xAccl > 32767 :
-   xAccl -= 65536
-  xAccl /= 16000
+def main():
+	h3lis331dl = H3LIS331DL()
+	while True:
+		h3lis331dl.select_datarate()
+		h3lis331dl.select_data_config()
+		time.sleep(0.2)
+		accl = h3lis331dl.read_accl()
+		print("Raw:    X = {0:6}   Y = {1:6}   Z = {2:6}"
+			.format(accl['x'], accl['y'], accl['z']))
+		print("Accel: AX = {0:6.3}g AY = {1:6.3}g AZ = {2:6.3}g"
+			.format(accl['x'] / H3LIS331DL_SCALE_FS, accl['y'] / H3LIS331DL_SCALE_FS, accl['z'] / H3LIS331DL_SCALE_FS))
+		time.sleep(.5)
 
-  data0 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_Y_L)
-  data1 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_Y_H)
-  
-  yAccl = data1 * 256 + data0
-  if yAccl > 32767 :
-   yAccl -= 65536
-  yAccl /= 16000
-
-  data0 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_Z_L)
-  data1 = bus.read_byte_data(LIS3DHTR_DEFAULT_ADDRESS, LIS3DHTR_REG_OUT_Z_H)
-  
-  zAccl = data1 * 256 + data0
-  if zAccl > 32767 :
-   zAccl -= 65536
-  zAccl /= 16000
-  return {'x' : xAccl, 'y' : yAccl, 'z' : zAccl}
-
-from LIS3DHTR import LIS3DHTR
-lis3dhtr = LIS3DHTR()
-
-while True:
- lis3dhtr.select_datarate()
- lis3dhtr.select_data_config()
- time.sleep(0.1)
- accl = lis3dhtr.read_accl()
- print ("Acceleration in X-Axis : %d" %(accl['x']))
- print ("Acceleration in Y-Axis : %d" %(accl['y']))
- print ("Acceleration in Z-Axis : %d" %(accl['z']))
- print (" ************************************ ")
- time.sleep(1)
-
+if __name__ == '__main__':
+    main()
 ```
-
-- **Step 1** Create a python file.
-
-```
-sudo nano LIS3DHTR.py
-```
-
-- **Step 2** Copy the above code to the python file.
-
-- **Step 3** Run the python.
-
-```
-sudo python LIS3DHTR.py
-```
+:::tip
+If everything goes well, you will be able to see the following result
+:::
 
 <!-- ![](https://files.seeedstudio.com/products/114020121/img/python_result.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/114020121/img/python_result.png" alt="pir" width={600} height="auto" /></p>
+
+You can quit this program by simply press **ctrl+c**.
 
 ## Schematic Online Viewer
 

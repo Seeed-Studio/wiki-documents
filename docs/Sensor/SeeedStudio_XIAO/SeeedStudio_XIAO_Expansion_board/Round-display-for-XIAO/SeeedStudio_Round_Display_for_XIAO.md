@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /get_start_round_display
 last_update:
-  date: 03/017/2023
-  author: Citric
+  date: 07/11/2024
+  author: Spencer
 ---
 
 # Getting Started with Seeed Studio Round Display for XIAO
@@ -25,6 +25,28 @@ last_update:
 ## Introduction
 
 Seeed Studio Round Display for XIAO is an expansion board compatible with all XIAO development boards. It features a fully covered touch screen on one side, designed as a 39mm disc. It contains onboard RTC, charge chip, TF card slot within its compact size, perfect for interactive displays in smart home, wearables and more.
+
+<table align="center">
+	<tr>
+		<th>REV</th>
+		<th>Description</th>
+		<th>DATE</th>
+		<th>BY</th>
+	</tr>
+	<tr>
+		<td>v1.0</td>
+		<td>Initial Version</td>
+		<td>2023/1/29</td>
+		<td>Linus.Liao</td>
+	</tr>
+	<tr>
+		<td>v1.1</td>
+		<td>1.Change Li Battery Charge IC<br />2.Add a switch to A0 and D6</td>
+		<td>2023/4/7</td>
+		<td>Linus.Liao</td>
+	</tr>
+</table>
+
 
 ### Specification
 
@@ -166,6 +188,12 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](http://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
 
+:::tip
+ESP32 development board package not compatible with TFT library when ESP32 development board package update to version 3.0.X，so we recommend you use ESP32 deveopment board package version 2.0.X to use XIAO Round Display.
+
+Besides, ESP32C6 is not support version 2.0.X package, so we not recommend you use XIAO ESP32C6 with XIAO Round Display.
+:::
+
 #### Step 4. Add the library of Round Display to Arduino.
 
 First, you need to search and download the latest version **TFT_eSPI** and **LVGL** libraries in the Arduino IDE.
@@ -223,7 +251,7 @@ On Windows, the root directory of the Arduino library is:
 
 #### Step 5. (Optional) Configure the usage environment
 
-Round Display currently adapts two different library-based displays, one **TFT_eSPI** and the other **Arduino GFX**. On the nRF52840, the Arduino GFX will have significantly better performance.
+Round Display currently adapts two different library-based displays, one **TFT_eSPI** and the other **Arduino GFX**. For the XIAO SAMD21 and XIAO nRF52840, there are not enough memory to run the TFT library, and the Arduino GFX will have significantly better performance.
 
 :::note
 If you need to use the **TFT_eSPI** library, then proceed to **step 5**. If you are using the Arduino GFX, then you can skip this step.
@@ -327,8 +355,11 @@ Updates to the TFT library and the LVGL library may cause the procedures in the 
 - **[PDF]** [RTC PCF8563 datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/RTC-PCF8563-datasheet.pdf)
 - **[PDF]** [1.28'' a-Si TFT Liquid Crystal Display datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
 - **[PDF]** [Seeed Studio Round Display for XIAO SCH](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH_230308.pdf)
+- **[PDF]** [Seeed Studio Round Display for XIAO SCH v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH_230407.pdf)
 - **[PDF]** [GJX0128A4-15HY Datasheet](https://files.seeedstudio.com/wiki/round_display_for_xiao/GJX0128A4-15HY_Datasheet.pdf)
 - **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.0_SCH&PCB_230308.zip)
+- **[ZIP]** [Seeed Studio Round Display for XIAO SCH&PCB v1.1](https://files.seeedstudio.com/wiki/round_display_for_xiao/SeeedStudio_Round_Display_for_XIAO_v1.1_SCH&PCB_230407.zip)
+- **[3DM]** [The 3D model of the Round Display for XIAO](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 - **[STL]** [The 3D model diagram of the shell for Round Display](https://files.seeedstudio.com/wiki/round_display_for_xiao/Round-Display-shell-3D-Model.stl)
 - **[STL]** [Seeed Studio XIAO ESP32 S3 Sense Case With Round Screen](https://files.seeedstudio.com/wiki/round_display_for_xiao/Seeed_Studio-XIAO-ESP32-S3-Sense-Case-With-Round-Screen.stl)
 

@@ -99,7 +99,7 @@ Copy the following **Send Example Code** to the Arduino IDE:
 
 **Send Example Code:**
 
-```c++
+```cpp
 /* send.ino Example sketch for IRLib2
  *  Illustrates how to send a code.
  */
