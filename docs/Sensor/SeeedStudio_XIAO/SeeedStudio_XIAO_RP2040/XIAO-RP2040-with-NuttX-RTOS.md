@@ -85,7 +85,7 @@ Successful compilation was guaranteed, the next goal it's programming using BOOT
 
 **Step 4**: Open a serial communication with Seed Stduio XIAO RP2040.
 
-## Hand-on
+## Hands-on
 
 It's time to explore NuttX practically. In this session, four applications are available: USB NSH, GPIO, USERLEDS, and WS2812 driver.
 
@@ -213,9 +213,9 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-To confirm the GPIO device files were created, type `ls/dev`. After typing, you can see some gpios were declared define on seed-studio-gpio.c, which represent :
+To confirm the GPIO device files were created, type `ls/dev`. After typing, you can see some gpios were declared define on [seed-studio-gpio.c](https://github.com/apache/nuttx/blob/9d5b9b7c056e59c2fcc81e7029c95a995140063c/boards/arm/rp2040/seeed-xiao-rp2040/src/rp2040_gpio.c#L49-L61), which represent :
 
-- 2 LED On board (gpio 17 and gpio 16).
+- 3 LED On board (gpio 18, gpio 17 and gpio 16).
 - 1 Intput (gpio 6)
 - 1 Interrupt Input (gpio 7)
 
