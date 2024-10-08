@@ -3,6 +3,8 @@ description: Seeed Studio XIAO RP2040 with NuttX
 title: NuttX
 keywords:
 - xiao
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /xiao-rp2040-with-nuttx
 last_update:
     date: 8/18/2024
     author: halyssonJr
@@ -14,7 +16,7 @@ last_update:
 
 [NuttX](https://nuttx.apache.org/) is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
 
-<div align="center"><img width ="{200}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/nuttx.svg"/></div>
+<div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
 Additionally, NuttX offers many advanced and useful features, such as USB, Ethernet, Audio, and Graphics subsystems. These characteristics make NuttX an attractive choice for developers seeking a versatile, robust RTOS capable of operating on various types of hardware.
 
@@ -249,7 +251,7 @@ Driver: /dev/gpio17
   Writing:       Value=1
   Verify:        Value=1
 ```
-<div align="center"><img width ="{50}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-gpio-turn-on-led-green.jpg"/></div>
+<div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-green.jpg"/></div>
 
 The same way, you will have the same result to red LED.
 ```
@@ -265,7 +267,7 @@ Driver: /dev/gpio16
   Writing:       Value=1
   Verify:        Value=1
 ```
-<div align="center"><img width ="{50}" src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
+<div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
 
 
 ### USERLED
@@ -319,7 +321,7 @@ led_daemon: LED set 0x01
 led_daemon: LED set 0x00
 ```
 
-<div style={{textAlign:'center'}}><img src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-userleds.gif" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-userleds.gif" style={{width:300, height:'auto'}}/></div>
 
 ## WS2812 LED
 
@@ -394,7 +396,7 @@ Let's start our application, type `ws2812` and you see the LEDs changing the col
 ```
 nsh> ws2812
 ```
-<div style={{textAlign:'center'}}><img src="/home/halysson/Documents/wiki-documents/docs/Contribution/files_transportion/seeed-studio-rp2040-rgb.gif" style={{width:200, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-rgb.gif" style={{width:400, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
