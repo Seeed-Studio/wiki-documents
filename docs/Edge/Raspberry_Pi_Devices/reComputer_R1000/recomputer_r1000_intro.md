@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /recomputer_r1000_intro
 last_update:
-  date: 8/27/2024
+  date: 10/08/2024
   author: Kasun Thushara
 ---
 
@@ -129,6 +129,34 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reComputer_r1000_node_red_bacnet_ip/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_node_red_influxdb/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_grafana/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>reComputer R1000 with Node Red and OPC UA server with Node-RED</font></th>
+      <th class="table-trnobg"><font size={"4"}>Connecting Siemens PLCs Using the S7 Protocol with reComputer R1000</font></th>
+        <th class="table-trnobg"><font size={"4"}>reComputer R1000 with FlowFuse</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/opcua.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/recomputer-S7.png" style={{width:300, height:'auto'}}/></div></td>
+      <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/flowfuse.gif" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This wiki will guide you through creating an OPC UA server in the Node-RED environment, integrating various protocols for improved interoperability across the automation hierarchy. </font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>This article explains how to use Node-RED, a flow-based development tool, on a Raspberry Pi-powered reComputer to communicate with Siemens PLCs via the S7 Protocol. </font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>FlowFuse extends Node-RED with tools for collaborative development, remote deployments, and DevOps pipelines, making it easier to manage and deliver Node-RED applications. This wiki will explore how FlowFuse streamlines these processes for development teams.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_nodered_opcua_server/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_nodered_s7/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_flow_fuse/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
