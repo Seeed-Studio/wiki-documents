@@ -453,6 +453,13 @@ The device can be customized by editing the endpoint/device_type creating in the
    endpoint_t *endpoint = on_off_light::create(node, &light_config, ENDPOINT_FLAG_NONE);
 ```
 
+-  temperature_sensor:
+
+```cpp
+    esp_matter::endpoint::temperature_sensor::config_t temperature_sensor_config;
+    endpoint_t *endpoint = temperature_sensor::create(node, &temperature_sensor_config, ENDPOINT_FLAG_NONE, NULL);
+```
+
 -  fan:
 
 ```cpp
