@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/23/2024
+  date: 09/30/2024
   author: Frank
 ---
 
@@ -17,30 +17,30 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 23th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 30th and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Gapi on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/gapi_getting_started-with_jetson/)
+### [Train and Deploy Your Own AI Model with SenseCraft AI Platform](https://wiki.seeedstudio.com/train_and_deploy_model/)
 
-[Gapi](https://genainerds.com/#/Gapi) is an embeddable API gateway that creates streaming integrations between AI micro services and the systems that users leverage everyday.
+Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution. 
 
-<div align="center"><img width ="800" src="https://genainerds.com/assets/img/GapiGIF.gif"/></div>
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/tinyml-topic/trainingmodel/7.gif"/></div>
 
-The project's goal is to accelerate the speed of creating pilots and demos of Jetson AI Lab achievements into real world environments. "On Device" generative AI doesn't mean it has to live on an island!
+It empowers users to effortlessly train and deploy their own models onto their edge devices, providing a seamless and user-friendly experience, allowing you to train and deploy your own models directly onto your edge devices with **just a few clicks**.
+
 
 
 
 ## Existing Wiki Updated
 
-### [Getting Started with reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/)
+### [How to use 40-Pin GPIO on reComputer Jetson Boards](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/)
 
-We've updated an [example](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#usage) of reServer Industrial Jetpack 6 POE enable.
+We've updated an [example](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/#for-jetpack6) for accessing and controlling GPIO for Jetpack 6+.
 
+### [Get Started with T1000-E Tracker](https://wiki.seeedstudio.com/sensecap_t1000_e/)
 
-### [Flash JetPack OS to J401 Carrier Board](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
-
-We've added some [resources](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#resources) of J401 Carrier Board.
+We provide troubleshooting [methods](https://wiki.seeedstudio.com/sensecap_t1000_e/#troubleshooting) for some common issues.
 
 
 <!-- ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
@@ -156,6 +156,7 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
+- [weekly wiki on 2024.9.23th](/Seeed_Elderly/weekly_wiki/wiki240923)
 
 </details>
 
