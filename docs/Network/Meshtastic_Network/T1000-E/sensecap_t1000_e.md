@@ -10,8 +10,37 @@ last_update:
   author: Jessie
 ---
 
+## Video Tutorial
 
-## Preparation
+
+
+<div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=9sCHpWPSPcw" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/9sCHpWPSPcw/0.jpg" alt="Unboxing Setup" width="320" height="180" />
+    </a>
+    <center><b><font size="4。5">Unboxing Setup</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=8p34S_9DDEQ" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/8p34S_9DDEQ/0.jpg" alt="Status Indicators" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Status Indicators</font></b></center>
+  </div>
+  
+  <div style={{ textAlign: 'center' }}>
+    <a href="https://www.youtube.com/watch?v=li6DTOeXK3M" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.youtube.com/vi/li6DTOeXK3M/0.jpg" alt="Flash New Firmware" width="320" height="180" />
+    </a>
+    <center><b><font size="4.5">Flash New Firmware</font></b></center>
+  </div>
+</div>
+
+
+
+
+## Get Started
 
 Download `Meshtastic` App:
 
@@ -172,7 +201,7 @@ Navigate to `Settings` -> `Telemetry(Sensors)` -> Enable sensors.
 
 Navigate to `Settings` -> `External Notification` -> Enable `GPIO` -> Set `Output Pin GPIO`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-ios.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
 
 
@@ -184,7 +213,7 @@ Navigate to `Settings` -> `External Notification` -> Enable `GPIO` -> Set `Outpu
 
 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
 
 
 </TabItem>
@@ -224,7 +253,7 @@ Connect the device to your PC, select the device to `Seeed Card Tracker T1000-E`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-2.png" alt="pir" width={800} height="auto" /></p>
 
-Click `Enter DFU Mode`, there will be a serial port named `T1000-E xxx` display, click and connect it, the LED will be solid on, and there should be a driver named `T1000-E` display.
+Click `Enter DFU Mode`, there will be a serial port named `T1000-E xxx` display, click and connect it, the green LED will be solid, and there should be a driver named `T1000-E` display.
 
 
 
@@ -238,9 +267,9 @@ Click `Enter DFU Mode`, there will be a serial port named `T1000-E xxx` display,
 <TabItem value="method2" label="Method 2">
 
 
-Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the LED will be solid on, and there should be a driver named `T1000-E` display.
+Connect the USB cable to your PC, press and hold the device button, then **quickly** connect the charging cable twice, the green LED will be solid, and there should be a driver named `T1000-E` display.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu2.gif" alt="pir" width={400} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
 </TabItem>
 </Tabs>
@@ -396,22 +425,63 @@ When you have completed the above steps, then you can follow this [step](https:/
 
 ## FAQ
 
-* **Check the device name**
+* **How to check the device name**
 
 
-Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
+ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
-Select device: `T1000-E Tracker Card`<br/>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
+ Select device: `T1000-E Tracker Card`<br/>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
 
 
-Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
+ Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
 * **How to reboot the device?**
 
-Press and hold the button, then connect the charging cable.
+ Press and hold the button, then connect the charging cable.
+
+## Troubleshooting
+
+### Device never turns on
+
+* Charge the device for 1~2 hours
+
+* Change the charging cable
+
+
+### Device not responding, no LED
+
+* 1) Device can still enter the DFU mode, then try to [flash the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
+
+* 2) Device can not enter DFU mode and no serial port display, please contact the tech support: support@sensecapmx.com
+
+
+### Firmware flashing failed
+
+
+
+* **No data received on serial port**
+
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
+
+ Check if the device is in the DFU mode, the green light will be solid when the device is in DFU mode.
+
+* **Can't open serial port**
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
+
+ Check if the port is correct, or try another port.
+
+### Serial port connection is unstable
+
+ 
+ * Long press the button for 9s to power off the device, and then press it once to power on the device.
+
+ 
+
 
 
 

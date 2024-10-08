@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/18/2024
+  date: 09/30/2024
   author: Frank
 ---
 
@@ -17,56 +17,30 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 16th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 30th and a brand new week has begun! Check out what Seeed Studio did last week!
 
-<!-- ## Latest Wiki Launched
+## Latest Wiki Launched
 
+### [Train and Deploy Your Own AI Model with SenseCraft AI Platform](https://wiki.seeedstudio.com/train_and_deploy_model/)
 
-### [T1000-E Tracker](https://wiki.seeedstudio.com/t1000_e_intro/)
+Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution. 
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/intro-e.png" alt="pir" width={800} height="auto" /></p>
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/tinyml-topic/trainingmodel/7.gif"/></div>
 
-It is a high-performance tracker designed for Meshtastic, as small as a credit card, effortlessly fitting in your pocket or attaching to your assets. It embeds Semtech's LR1110, Nordic's nRF52840, and Mediatek's AG3335 GPS module, providing Meshtastic users with a high-precision, low-power positioning and communication solution.
+It empowers users to effortlessly train and deploy their own models onto their edge devices, providing a seamless and user-friendly experience, allowing you to train and deploy your own models directly onto your edge devices with **just a few clicks**.
 
-### [Getting start with reComputer J20](https://wiki.seeedstudio.com/recomputer_j20_with_jetson_getting_start/)
-
-<div align="center"><img width ="800" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/110061363_preview-07_1.jpg"/></div>
-
-reComputer J20 Series built with Jetson Xavier NX is a powerful and compact intelligent edge box to bring up to 21TOPS modern AI performance to the edge. While combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability.
-
-The full system includes one NVIDIA Jetson Xavier NX production module, a heatsink, and a power adapter. reComputer J20 is preinstalled with Jetpack 4.6, simplifies development, and fits for deployment for edge AI solution providers working in object detection, natural language processing, medical imaging, and robotics across industries of smart cities, security, industrial automation, smart factories.
-
-### [J501 Interface Usage](https://wiki.seeedstudio.com/j501_carrier_board_interfaces_usage/)
-
-<div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/j501.png"/>
-</div>
-
-This wiki introduces the various different hardware and interfaces on the J501 Carrier Board and how to use them to expand your project ideas.
-
-### [ChatGPT - BeagleY-AI](https://wiki.seeedstudio.com/respeaker_lite_beagley-ai_chatgpt/)
-
-<div class="table-center">
-<iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/Beaglebone_Solutions/bby_chatgpt.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-This project integrates voice input, large model response, and voice output functionalities using a BeagleY-AI. It employs the ReSpeaker Lite as the audio input and output device, enabling seamless interaction with ChatGPT and speech-to-text conversion services.
-
-### [XIAO RA4M1 Mouse](https://wiki.seeedstudio.com/xiao_ra4m1_mouse/)
-
-<div class="table-center">
-<iframe width="800" height="500" src="https://files.seeedstudio.com/wiki/xiao_ra4m1_mouse_image/xiao_mouse.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-Through this tutorial, you will learn how to create a simple mouse using the XIAO RA4M1 and Grove Thumb Joystick.-->
 
 
 
 ## Existing Wiki Updated
 
-### [XIAO RA4M1 Play with RGB LEDs](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds)
+### [How to use 40-Pin GPIO on reComputer Jetson Boards](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/)
 
-We've added an [example](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#play-with-rgb-leds) of XIAO RA4M1 Play with RGB LEDs.
+We've updated an [example](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/#for-jetpack6) for accessing and controlling GPIO for Jetpack 6+.
+
+### [Get Started with T1000-E Tracker](https://wiki.seeedstudio.com/sensecap_t1000_e/)
+
+We provide troubleshooting [methods](https://wiki.seeedstudio.com/sensecap_t1000_e/#troubleshooting) for some common issues.
 
 
 <!-- ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
@@ -91,13 +65,13 @@ We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-r
 
 ## The Efforts of Contributor
 
-### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
+<!-- ### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
 FreeRTOS is a collection of C libraries comprised of a real-time kernel and a set of modular libraries that implement complementary functionality. The FreeRTOS kernel is a real-time kernel (or real-time scheduler) that enables applications built on FreeRTOS to meet their hard real-time requirements. It enables applications to be organized as a collection of independent threads of execution.
 
-This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.
+This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/). With the assistance of this guide you will be able to utilize the feature set available to the board.     -->
 
 
 
@@ -181,6 +155,8 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 - [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
+- [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
+- [weekly wiki on 2024.9.23th](/Seeed_Elderly/weekly_wiki/wiki240923)
 
 </details>
 

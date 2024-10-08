@@ -14,7 +14,7 @@ const computerPageA = () => {
       <div style={{ color: "#8DC215", fontStyle: 'italic'}}>
       Note: Hover your mouse over the product name on the left hand side and click it to enter the relevant wiki pages. Also hover your mouse over the product series name
       on the right hand side to have a glimpse of the products included in that series. 
-      </div>
+      </div> 
       <HardwarePage></HardwarePage>
       <div id="NVIDIA_index_software" style={{ textAlign: "center", color: "#8DC215", fontSize: "3.2rem", fontWeight: "bold" }}>AI Developer Tools</div>
       After you have access to an NVIDIA Jetson device, you can start developing different AI applications to suite different scenarios. The very first step of an AI project is to 
