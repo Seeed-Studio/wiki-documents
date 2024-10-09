@@ -182,6 +182,12 @@ Connect the XIAO ESP32C3 to your computer using a suitable USB-C cable. Ensure t
 
 Open the [SenseCraft Model Assistant Tool](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool) in your web browser.
 
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/tool/tool">
+            <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI Tool</font></span></strong>
+    </a>
+</div>
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/22.png" style={{width:1000, height:'auto'}}/></div>
 
 
@@ -205,28 +211,28 @@ Finally, click the **Flash** button and wait for the programme to be uploaded su
 
 ### Step 6. Connect the Grove Vision AI V2 to the SenseCraft AI Model Assistant
 
-First, we need to open the main SenseCraft AI Model Assistant page.
+First, we need to open the main SenseCraft AI page.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home"><strong><span><font color={'FFFFFF'} size={"4"}>Go to SenseCraft AI</font></span></strong></a>
 </div>
 <br />
 
+Click on **Vision Workspace -> Grove Vision AI V2** in the navigation menu.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/52.png" style={{width:1000, height:'auto'}}/></div>
+
 Please use a Type-C type cable to connect **Grove Vision AI V2** to your computer.
 
-In the upper right corner of the SenseCraft AI Model Assistant page, you can select **Grove Vision AI (WE2)**. Then click the **Connect** button on the far right.
+Then click the **Connect** button in the upper left corner and select the port number of the device.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/2.png" style={{width:1000, height:'auto'}}/></div>
-
-In the new window that pops up, select the correct COM port for the device and click the Connect button.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/53.png" style={{width:500, height:'auto'}}/></div>
 
 ### Step 7. Upload a suitable model
 
-Then, just select a model you want to use and click the **Send** button below. Here is an example of Gesture Detection.
+Then, please select the appropriate model you want to use after clicking **Select Model** to upload it to Grove Vision AI V2.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/54.png" style={{width:1000, height:'auto'}}/></div>
 
 Wait for 1~2 minutes for the model to be uploaded.
 
@@ -234,7 +240,7 @@ Wait for 1~2 minutes for the model to be uploaded.
 
 Once the model is uploaded successfully, you will be able to see the live feed from the Grove Vision AI V2 camera in the Preview on the right.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/a3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <br />
 
@@ -290,9 +296,11 @@ Click on the toggle switch next to the database to enable it. The database statu
 
 ### Step 10. Configuring the network for Grove Vision AI V2 & XIAO
 
-Connect the Grove Vision AI V2 to your computer and open the [Model Assistant's configuration page](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/config).
+Connect the Grove Vision AI V2 to your computer and open the Grove Vision AI V2 configuration page.
 
-After clicking on the top right corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/56.png" style={{width:1000, height:'auto'}}/></div>
+
+After clicking on the top left corner to connect to Grove Vision AI V2, please turn on the MQTT button and enter the following information that you need to fill in the page.
 
 - **SSID & Password**: The device needs to be on the same LAN as the host where the Home Asistant is installed. So please configure the network under the same LAN. XIAO only supports 2.4G WiFi, 5G network is not available.
 - **Encryption**: Select **AUTO**.
@@ -302,11 +310,9 @@ After clicking on the top right corner to connect to Grove Vision AI V2, please 
 - **username**: The name of the EMQX database you just create.
 - **password**: The password of the EMQX database you just create.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/vision_ai_v2_heatmap/13.png" style={{width:900, height:'auto'}}/></div>
+Then click the **Apply** button below. After saving, it **does not mean that Grove Vision AI is connected to the network**, please go back to **Process** in the left menu bar and check if the IP address of the device has appeared and if the status of the MQTT connection is correct.
 
-Then click the Save button below. After saving, it **does not mean that Grove Vision AI V2 has been written correctly**, please go back to **Process** in the left menu bar and check if the IP address of the device has appeared and if the status of the MQTT connection is correct.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/33.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/57.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
 When IP Address is displayed, it means there is no problem with WIFI, and Service status must be the text in the figure to represent normal, note that if WIFI is not normal, MQTT is definitely not normal; when you just switch over, it may show unconnected, and you need to wait for about 10s or so, you don't need to refresh to see the status, and it will show the newest status after the change of the status automatically.
@@ -314,7 +320,11 @@ When IP Address is displayed, it means there is no problem with WIFI, and Servic
 
 ### Step 11. Integration into Home Assistant
 
-#### Method 1: If the device has been found
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Scenario 1. If the device has been found" label="Scenario 1. If the device has been found">
 
 By this point, normally, you can already search for Grove Vision AI V2 inside **Settings->Devices & services** in Home Assistant.
 
@@ -335,7 +345,9 @@ In **Settings->Devices & services**, you will be able to see the details of the 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/42.png" style={{width:600, height:'auto'}}/></div>
 :::
 
-#### Method 2: If the device is not found
+</TabItem>
+
+<TabItem value="Scenario 2. If the device is not found" label="Scenario 2. If the device is not found">
 
 If there are too many devices in your home, they may not be directly searchable by Home Assistant sometimes. Then at this time you may need to add devices manually.
 
@@ -345,20 +357,31 @@ Then click the **ADD INTEGRATION** button in the bottom right corner and search 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/38.png" style={{width:1000, height:'auto'}}/></div>
 
-Click on SenseCraft and select Action as **Add device using host/id (局域网集成)**.
+Click on SenseCraft and select Action as **Add device using host/id**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/39.png" style={{width:500, height:'auto'}}/></div>
 
 Click **SUBMIT**, then select your device type from the dropdown menu, such as `grove_vision_ai_we2`, and click **SUBMIT** again.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/40.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/40.png" style={{width:500, height:'auto'}}/></div>
 
-In the following input field, enter the exact ID of your device. This ID is usually found on the device itself or on the [SenseCraft AI](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process) website.
+In the following input field, enter the exact ID of your device. This ID is usually found on the device itself or on the SenseCraft AI website.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/41.png" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/58.png" style={{width:1000, height:'auto'}}/></div>
 
 The next step is to configure the MQTT service. Enter the information that matches the MQTT service details you have set up on the website. If you haven't set up a username and password previously, you don't need to fill them in here. Then click **SUBMIT**.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/59.png" style={{width:500, height:'auto'}}/></div>
+
+- **Broker**: Home Assistant's IP address.
+- **Port**: `1883`.
+- **clientId**: For the device identification number, please prefix it with `grove_vision_ai_v2_` followed by the custom ID number.
+- **username**: The name of the EMQX database you just create.
+- **password**: The password of the EMQX database you just create.
+
+</TabItem>
+
+</Tabs>
 
 If the setup is successful, the system will usually prompt you to select a location for your device. Choose the appropriate room or area based on your actual situation and click **Finish**.
 
@@ -372,7 +395,7 @@ Following these steps should allow you to successfully add the "SenseCraft" devi
 
 ### Q1: What should I do if I never see the data messages in HA again after the Grove Vision AI V2 drops?
 
-You may need to delete the device and re-add it in SenseCraft. After deleting it may not be able to be automatically searched again and you will need to manually add the device. Please refer to the **[steps here](#method-2-if-the-device-is-not-found)** to re-add the device.
+You may need to delete the device and re-add it in SenseCraft. After deleting it may not be able to be automatically searched again and you will need to manually add the device. Please refer to the **[steps here](#step-11-integration-into-home-assistant)** to re-add the device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/44.png" style={{width:1000, height:'auto'}}/></div>
 
