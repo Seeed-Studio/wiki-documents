@@ -42,16 +42,16 @@ Before you start this project, you may need to prepare your hardware and softwar
 ## Software Preparation
 
 * [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
-* [CODESYS Control for Linux ARM SL](https://store.codesys.com/de/codesys-control-for-linux-arm-sl-1.html)
+* [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
 
 ## Getting Start
 
 ### Install CODESYS
-**Step 1**: Go to the CODESYS store, find `CODESYS Development System V3` and download it, then find `CODESYS Control for Linux ARM SL` and download it.
+**Step 1**: Go to the CODESYS store, find `CODESYS Development System V3` and download it, then find `CODESYS Control for Raspberry Pi SL` and download it.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/1.png" /></center>
 
-<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_package/2.1.png" /></center>
+<center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/2.png" /></center>
 
 **Step 2**: Double-click the downloaded `CODESYS 64 3.5.20.30.exe` file and click `install` to download the `CODESYS Installer`.
 
@@ -121,7 +121,7 @@ CODESYS Runtime refers to the CODESYS runtime system, which is the software inst
 
 **Step 1**: Make sure reComputer R1000 and the host computer are in the same network segment
 
-**Step 2**: Click `Tools`--->`Update Linux ARM64`
+**Step 2**: Click `Tools`--->`Update Raspberry Pi`
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/deploy_run_time/r1.png" /></center>
 
@@ -144,7 +144,7 @@ CODESYS Runtime refers to the CODESYS runtime system, which is the software inst
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/deploy_new_project/n2.png" /></center>
 
-**Step 3**: Select `CODESYS Control for Linux ARM64 SL (CODESYS)` in the `Device` column, select `Structured Text (ST)` in `PLC_PRG in`, and finally click `OK`. A new project is created. Later, we will demonstrate how to deploy the project.
+**Step 3**: Select `CODESYS Control for Raspberry Pi 64 SL (CODESYS)` in the `Device` column, select `Structured Text (ST)` in `PLC_PRG in`, and finally click `OK`. A new project is created. Later, we will demonstrate how to deploy the project.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/deploy_new_project/n3.png" /></center>
 
