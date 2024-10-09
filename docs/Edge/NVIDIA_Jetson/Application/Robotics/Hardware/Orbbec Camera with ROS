@@ -1,0 +1,35 @@
+---
+description: This wiki provides a step-by-step guide to use multiple CSI cameras on reComputer by ROS.
+title: CSI Camera with ROS
+keywords:
+- Jetson Nano
+- reComputer
+- CSI
+- Camera
+- ROS
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /orbbec_depth_camera_with_ros
+last_update:
+  date: 05/7/2024
+  author: Lidayu
+---
+# Orbbec Depth Camera
+
+
+This wiki provides a step-by-step guide to install and set up RoboSense LiDAR on [reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) Jetson using ROS, and visualize point cloud data.
+<div align="center">
+    <img width={700} 
+     src="https://files.seeedstudio.com/wiki/robotics/hardware/robosense/fig1.gif" />
+</div>
+
+
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>
