@@ -2304,7 +2304,7 @@ const sidebars = {
               label: 'XIAO ESP32S3 for Meshtastic and LoRa',
               items: [
                 'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
-               // 'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started',
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
               ],
             },
 

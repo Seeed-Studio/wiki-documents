@@ -1,8 +1,8 @@
 ---
 description: The introduction of Meshtastic based on Wio SX1262 with XIAO esp32s3 module
-title: XIAO ESP32S3 for Meshtastic & LoRa Introduction
+title: Wio Sx1262 XIAO ESP32S3 Kit Introduction
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /wio_sx1262_xiao_esp32s3_for_meshtastic
+slug: /wio_sx1262_xiao_esp32s3
 last_update:
   date: 09/30/2024
   author: Evelyn Chen
@@ -21,6 +21,10 @@ last_update:
 
 This thumb-sized LoRa development kit, which consists of the XIAO ESP32S3 and the Wio-SX1262 LoRa module, is an ideal starter kit for Meshtastic and LoRa/LoRaWAN projects. Supporting WiFi, BLE, and LoRa, it includes a built-in power management chip and can be extended via IIC, UART, and other GPIO interfaces, and is compatible with Arduino development.
 The XIAO ESP32S3 with wio-sx1262 is a single-channel LoRaWAN LoRa module with a low price and high cost performance. It is suitable for application scenarios with long distance, low power consumption, and small data volume. It supports more than 30 node devices (depending on upload interval, data payload, etc.).
+
+Seeed provides 2 applications for this Wio SX1262 XIAO ESP32S3 kit. 
+- Using Meshtastic for network communication
+- Configuring as Lora/Lorawan node or gateway
 
 ## Features
 
@@ -117,30 +121,6 @@ Compatible with XIAO Expansion Board for adding screens and sensors, and add Gro
 	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:700, height:'auto'}}/></div></td>
 	</tr>
 </table>
-
-## Flash Firmware
-
-**Step 1**: Firstly, open a browser and visit https://flasher.meshtastic.org/# requires Chrome or Edge browser.
-
-**Step 2**: Then, use a suitable USB cable to connect the device to the PC. You may need to turn off, then **press and hold the BOOT button** while plugging in the USB cable.
-
-**Step 3**: Follow the following instruction provided to perform the subsequent flashing operations. Select the Device as "**Seeed XIAO S3**", Firmware as **the lastest** one, and then click "**Flash**". Don't forget to tick "Full Erase and Install" if you want to cover previous firmware.
-
-<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div></td>
-
-
-## Software Overview
-
-Meshtastic provides multiple platform softwares for users to choose from, including Android app, Apple app, web client. It also provides Python CLI, Linux Native and integration methods for developers to use.
-
-For specific information, please refer to [the official website of Meshtastic](https://meshtastic.org/docs/software/).
-
-* [Android App](https://meshtastic.org/docs/category/android-app/): Android application is available on F-Droid repo and Google Play Store. This allows you to connect to your Meshtastic device from your Android phone via Bluetooth, Wi-Fi (if on the same network) or USB On-The-Go (OTG).
-* [Apple App](https://meshtastic.org/docs/category/apple-apps/): It is available on app store. By default, the Meshtastic app for iOS supports the use of native offline Apple Maps.
-* [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web is a Meshtastic client that runs directly in your browser.
-* [Python CLI](https://meshtastic.org/docs/software/python/cli/): The python pip package installs a "meshtastic" command line executable, which displays packets sent over the network as JSON and lets you see serial debugging information from the meshtastic devices.
-* [Linux Native](https://meshtastic.org/docs/software/linux-native/): The device software can also run on a native Linux machine thanks to the Portduino framework.
-* [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): The Meshtastic ecosystem is highly extensible and allows easy integration with a number of existing software products and projects.
 
 ## Resource
 
