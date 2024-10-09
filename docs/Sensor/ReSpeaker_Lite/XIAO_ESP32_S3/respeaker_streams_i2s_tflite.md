@@ -35,7 +35,7 @@ This project demonstrates how to perform keyword spotting using the reSpeaker Li
 
 ### Code
 
-Open the `streams-generator-i2s.ino` sketch in the Arduino IDE.
+Open the `streams-i2s-tflite.ino` sketch in the Arduino IDE.
 
 
 Upload the sketch to your reSpeaker Lite board.
