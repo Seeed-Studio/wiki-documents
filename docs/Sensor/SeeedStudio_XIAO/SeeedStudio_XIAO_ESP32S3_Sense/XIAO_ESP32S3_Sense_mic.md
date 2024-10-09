@@ -186,7 +186,6 @@ In this next project, we will guide you how to combine the functions of the micr
 If this is your first time using a microSD card on the XIAO ESP32S3, you can read the [file system Wiki](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/#prepare-the-microsd-card) content to learn about microSD card installation and preparation.
 
 The following is the Arduino program for this project.
-
 :::tip
 Check and make sure which version of `esp32` you are using, the following example is for 2.0.x the one below is for 3.0.x and later
 :::
@@ -344,7 +343,7 @@ void setup() {
   Serial.println("SD card initialized.");
   Serial.println("Recording 20 seconds of audio data...");
 
-  // Record 5 seconds of audio data
+  // Record 20 seconds of audio data
   wav_buffer = i2s.recordWAV(20, &wav_size);
 
   // Create a file on the SD card
