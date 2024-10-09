@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /reComputer_r1000_fuxa_achieve_scada
 last_update:
-  date: 07/3/2024
+  date: 10/8/2024
   author: ShuishengPeng
 ---
 
@@ -45,7 +45,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     </div>
 
 ### Software Preparation
-
+* Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
 * Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
   ```shell
     ## You need to have installed Node Version 14 || 16 || 18.
