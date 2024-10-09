@@ -1,17 +1,17 @@
 ---
 description: This wiki provides a step-by-step guide to use multiple CSI cameras on reComputer by ROS.
-title: CSI Camera with ROS
+title: Orbbec Camera with ROS
 keywords:
 - Jetson Nano
 - reComputer
-- CSI
+- Orbbec
 - Camera
 - ROS
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /csi_camera_on_ros
+slug: /orbbec_camera_on_ros
 last_update:
   date: 05/7/2024
-  author: ZhuYaoHui
+  author: LiDayu
 ---
 # How to Use Multiple CSI Cameras on reComputer with ROS
 
