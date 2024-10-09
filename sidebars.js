@@ -3698,6 +3698,19 @@ const sidebars = {
       ],
     },
 
+    {
+      type: 'category',
+      label: 'reCamera',
+      items: [
+        {
+          type: 'category',
+          label: 'reCamera sg200x',
+          items: [
+            'Edge/reCamera/reCamera_Getting_Started',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'category',
@@ -3711,16 +3724,12 @@ const sidebars = {
               'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
             ],
           },
-          {
-            type: 'category',
-            label: 'reCamera',
-            items: [
-              'Edge/reCamera/reCamera_Getting_Started',
-            ],
-          },
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
+
+
+    
 
     // {
 
