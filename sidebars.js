@@ -3711,6 +3711,13 @@ const sidebars = {
               'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
             ],
           },
+          {
+            type: 'category',
+            label: 'reCamera',
+            items: [
+              'Edge/reCamera/reCamera_Getting_Started',
+            ],
+          },
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
