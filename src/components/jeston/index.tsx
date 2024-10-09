@@ -204,7 +204,7 @@ const computerPageA = () => {
         list:listData1
       })}
       {communityRender()}
-
+ 
     </div>
   );
 };

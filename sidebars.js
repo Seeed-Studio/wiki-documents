@@ -1022,6 +1022,7 @@ const sidebars = {
           label: 'MR60BHA2 mmWave kit',
           items: [
             'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/ha_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -1102,6 +1103,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-NuttX-RTOS',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-Zephyr-RTOS',
@@ -1766,6 +1768,8 @@ const sidebars = {
           },
           items: [
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
            // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb',
@@ -3466,6 +3470,7 @@ const sidebars = {
                         // },
                   items: [
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar',
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/MID360',
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/CSI_Camera'
                       ]},
                 
@@ -3508,7 +3513,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/reComputer_Jetson_Series_Resource',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/NVStreamer_Getting_Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/vnc_for_reComputer'
+
               ]
             },
           ]
@@ -3704,6 +3711,13 @@ const sidebars = {
             items: [
               'Edge/reServer/reServer_X86/reServer-Getting-Started',
               'Edge/reServer/reServer_X86/reServer-Update-BIOS-Install-Drivers',
+            ],
+          },
+          {
+            type: 'category',
+            label: 'reCamera',
+            items: [
+              'Edge/reCamera/reCamera_Getting_Started',
             ],
           },
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',

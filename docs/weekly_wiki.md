@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/23/2024
+  date: 10/08/2024
   author: Frank
 ---
 
@@ -17,33 +17,47 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 23th and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Gapi on NVIDIA® Jetson Devices](https://wiki.seeedstudio.com/gapi_getting_started-with_jetson/)
+### [Using VNC on reComputer Jetson](https://wiki.seeedstudio.com/vnc_for_recomputer/) 
 
-[Gapi](https://genainerds.com/#/Gapi) is an embeddable API gateway that creates streaming integrations between AI micro services and the systems that users leverage everyday.
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Application/vnc_for_jetson/fig4.png"/></div>
 
-<div align="center"><img width ="800" src="https://genainerds.com/assets/img/GapiGIF.gif"/></div>
+VNC is a remote desktop tool that allows you to remotely control your reComputer Nvidia Jetson form ohter PC devices, with real-time access to the graphical desktop. This wiki describes how to install and use VNC on the reComputer Nvidia Jetson.
 
-The project's goal is to accelerate the speed of creating pilots and demos of Jetson AI Lab achievements into real world environments. "On Device" generative AI doesn't mean it has to live on an island!
+### [Using MID360 LiDAR on reComputer Jetson](https://wiki.seeedstudio.com/mid360/) 
+
+MID360 LIDAR sensors provide high-precision 3D point cloud data for various applications. This guide focuses on setting up the MID360 on a [reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) device running ROS Noetic.
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/robotics/hardware/MID360/reesult.png"/></div>
+
+This wiki provides a step-by-step guide to install and set up MID360 LiDAR on [reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) Jetson using ROS, and visualize point cloud data.
+
+### [MR60BHA2 mmWave Sensor with Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60bha2/) 
+
+The MR60BHA2 is a 60GHz mmWave Breathing and Heartbeat Detection Sensor module designed for integration with the XIAO ESP32C6 microcontroller. This advanced sensor utilizes millimeter-wave technology to provide non-invasive monitoring of vital signs and presence detection.
+
+<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-light-on.jpg"/></div>
+
+This guide aims to provide a clear and comprehensive walkthrough for integrating the MR60BHA2 mmWave Sensor with Home Assistant using the XIAO ESP32C6 microcontroller. By following this guide, users will learn how to set up the sensor for heartbeat detection, connect it to their Home Assistant environment, and utilize ESPHome to manage and monitor the device effectively. 
 
 
 
-## Existing Wiki Updated
 
-### [Getting Started with reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/)
+<!-- ## Existing Wiki Updated
 
-We've updated an [example](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#usage) of reServer Industrial Jetpack 6 POE enable.
+### [How to use 40-Pin GPIO on reComputer Jetson Boards](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/)
+
+We've updated an [example](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/#for-jetpack6) for accessing and controlling GPIO for Jetpack 6+.
+
+### [Get Started with T1000-E Tracker](https://wiki.seeedstudio.com/sensecap_t1000_e/)
+
+We provide troubleshooting [methods](https://wiki.seeedstudio.com/sensecap_t1000_e/#troubleshooting) for some common issues.
 
 
-### [Flash JetPack OS to J401 Carrier Board](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
-
-We've added some [resources](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#resources) of J401 Carrier Board.
-
-
-<!-- ### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
 
 We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
 
@@ -64,6 +78,16 @@ We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-r
 
 
 ## The Efforts of Contributor
+
+### [Seeed Studio XIAO RP2040 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/) 
+
+[NuttX](https://nuttx.apache.org/) is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
+
+<div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
+
+Additionally, NuttX offers many advanced and useful features, such as USB, Ethernet, Audio, and Graphics subsystems. These characteristics make NuttX an attractive choice for developers seeking a versatile, robust RTOS capable of operating on various types of hardware.
+
+NuttX supports a vast and continually expanding number of boards. [The official documentation](https://nuttx.apache.org/docs/latest/platforms/) provides a comprehensive list of supported boards, organized by architecture and System-on-Chip (SoC) series. For instance, the [Seeed Studio Xiao RP2040](https://nuttx.apache.org/docs/latest/platforms/arm/rp2040/boards/seeed-xiao-rp2040/index.html) page in the NuttX documentation offers detailed descriptions of each supported feature and instructions on how to utilize them.
 
 <!-- ### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
 
@@ -156,6 +180,8 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
+- [weekly wiki on 2024.9.23th](/Seeed_Elderly/weekly_wiki/wiki240923)
+- [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
 
 </details>
 

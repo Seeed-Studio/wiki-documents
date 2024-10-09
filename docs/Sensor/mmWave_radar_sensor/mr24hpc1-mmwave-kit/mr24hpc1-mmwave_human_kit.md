@@ -116,9 +116,7 @@ In addition to this, the XIAO ESP32C3 relies on the open source project ESPHome 
 
 Out of the factory kit, the XIAO ESP32C3 has been flashed with firmware that is ready to power up, and we were able to get the kit working on Home Assistant in a very short time. The video below will show you the exact steps to get started quickly.
 
-<div class="table-center">
-<iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/mmwave_kit/2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+<iframe class="youtube-video-r" src="https://files.seeedstudio.com/wiki/mmwave_kit/2.mp4" frameborder="0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 Below are the graphic step-by-step details, please refer to the following to complete the quick start.
 
@@ -375,9 +373,7 @@ If you don't have any experience with ESPHome before this, you can read [**this 
 
 When the product was designed, we wanted it to be a continuously powered and fixed in one location monitoring device. At the same time, we will continue to update and maintain its software, and we envisioned a situation where we don't need to change its location, and you can implement OTA updates over the LAN.
 
-<div class="table-center">
-<iframe width="700" height="400" src="https://files.seeedstudio.com/wiki/mmwave_kit/ota.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
+<iframe class="youtube-video-r" src="https://files.seeedstudio.com/wiki/mmwave_kit/ota.mp4" frameborder="0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 Please click on the main screen of ESPHome.
 
@@ -509,19 +505,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
