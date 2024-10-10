@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /reComputer_r1000_fuxa_mqtt_client
 last_update:
-  date: 07/1/2024
+  date: 10/8/2024
   author: ShuishengPeng
 ---
 
@@ -45,6 +45,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     </div>
 
 ### Software Preparation
+* Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
 * Using [modbusmechanic](https://modbusmechanic.scifidryer.com/) on W10 PC.You can also use other modbus testing tools
 * Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
   ```shell
