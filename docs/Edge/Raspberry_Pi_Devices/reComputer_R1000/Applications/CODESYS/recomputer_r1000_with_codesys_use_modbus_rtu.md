@@ -8,7 +8,7 @@ keywords:
   - CODESYS
   - Modbus
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /reComputer_r1000_use_modbus_rtu_with_codesys
+slug: /recomputer_r1000_use_modbus_rtu_with_codesys
 last_update:
   date: 10/10/2024
   author: ShuishengPeng
