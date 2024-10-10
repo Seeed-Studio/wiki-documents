@@ -1768,7 +1768,7 @@ const sidebars = {
           },
           items: [
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+            //'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
@@ -2301,6 +2301,15 @@ const sidebars = {
         id: 'Network/Meshtastic_Network/meshtastic_intro',
       },
       items: [
+            {
+              type: 'category',
+              label: 'XIAO ESP32S3 for Meshtastic and LoRa',
+              items: [
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
+              ],
+            },
+
             {
               type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',

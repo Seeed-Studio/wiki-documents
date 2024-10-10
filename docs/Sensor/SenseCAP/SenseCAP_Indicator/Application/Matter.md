@@ -150,4 +150,4 @@ In general the following considerations must be made when updating the UI and pe
 
 If you encounter any issues or have any questions while following this tutorial, please feel free to reach out to our tech support. We are always here to help!
 
-Visit our [Seeed Official Discord Channel](https://discord.com/invite/QqMgVwHT3X) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
+Visit our [Seeed Official Discord Channel](https://discord.gg/kpY74apCWj) to ask your questions or the [GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) to share all you want!
