@@ -72,19 +72,34 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 
 Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
-* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_i2s_v1.0.5.bin)
+
+* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_i2s_v1.0.7.bin)
+
+:::tip
+**Change log**:
+**v1.0.7**: support i2c control speaker mute and output channels
+**v1.0.6**: change PRODUCT_STR to ReSpeaker Lite, fix ws2812 control bug
+**v1.0.5**: support i2c read vnr value
+:::
 
 
 Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
 
 ```
-dfu-util -e -a 1 -D ffva_i2s_v1.0.5.bin
+dfu-util -e -a 1 -D ffva_i2s_v1.0.7.bin
 ```
 
 :::tip
 After flashing is completed, please restart the board.
 :::
 
+* Check the firmware version:
+
+```
+dfu-util -l
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver.png" alt="pir" width={500} height="auto" /></p>
 
 
 
