@@ -12,12 +12,8 @@ last_update:
 
 This wiki introduces the various different hardware and interfaces on the reComputer Industrial J4012, J4011, J3011, J3010 and how to use them to expand your project ideas.
 
-## Disassemble reComputer Industrial
+<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-First of all,it is better to disassemble the outer enclosure to access all the interfaces
-. Unscrew the 4 screws located at the back as follows in order to disassemble reComputer Industrial
-
-<div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/98.png"/></div>
 
 ## CSI Cameras
 
@@ -26,14 +22,10 @@ reComputer Industrial is equipped with **2x 2-lane 15pin MIPI CSI camera connect
 - IMX219 cameras
 
   - [Raspberry Pi Camera V2](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)
-  - [IMX219-130 8MP Camera with 130° FOV](https://www.seeedstudio.com/IMX219-130-Camera-130-FOV-Applicable-for-Jetson-Nano-p-4606.html)
-  - [IMX219-160 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160-Camera-160-FOV-Applicable-for-Jetson-Nano-p-4603.html)
-  - [IMX219-200 8MP Camera with 200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html)
   - [IMX219-77 8MP Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77-Camera-77-FOV-Applicable-for-Jetson-Nano-p-4608.html)
   - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
   - [IMX219-83 8MP 3D Stereo Camera Module](https://www.seeedstudio.com/IMX219-83-Stereo-Camera-8MP-Binocular-Camera-Module-Depth-Vision-Applicable-for-Jetson-Nano-p-4610.html)
   - [IMX219-77IR 8MP IR Night Vision Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
-  - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
   - [IMX219 M12/CS mount CMOS Camera Module](https://www.seeedstudio.com/IMX-219-CMOS-camera-module-M12-and-CS-camera-available-p-5372.html)
 
 - IMX477 cameras
@@ -42,19 +34,24 @@ reComputer Industrial is equipped with **2x 2-lane 15pin MIPI CSI camera connect
   - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
   - [High Quality Camera for Raspberry Pi](https://www.seeedstudio.com/High-Quality-Camera-For-Raspberry-Pi-Compute-Module-Jetson-Nano-p-4729.html)
 
+<!-- - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html) -->
+<!-- - [IMX219-130 8MP Camera with 130° FOV](https://www.seeedstudio.com/IMX219-130-Camera-130-FOV-Applicable-for-Jetson-Nano-p-4606.html) -->
+<!-- - [IMX219-160 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160-Camera-160-FOV-Applicable-for-Jetson-Nano-p-4603.html)
+- [IMX219-200 8MP Camera with 200° FOV](https://www.seeedstudio.com/IMX219-200-Camera-200-FOV-Applicable-for-Jetson-Nano-p-4609.html) -->
+
 ### Connection Overview
 
 Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either connect one camera to any connector out of the 2 or connect 2 cameras to both the connectors at the same time.
 
-- **Step 1:** Gently pull out the black color lock on the CSI connector
+**Step 1:** Gently pull out the black color lock on the CSI connector
 
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/5.png"/></div>
 
-- **Step 2:** Insert the 15-pin ribbon cable into the connector making sure the gold fingers are facing downwards
+**Step 2:** Insert the 15-pin ribbon cable into the connector making sure the gold fingers are facing downwards
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/6.png"/></div>
 
-- **Step 3:** Push in the black color lock to lock the ribbon cable in place
+**Step 3:** Push in the black color lock to lock the ribbon cable in place
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/10.png"/></div>
 
@@ -62,39 +59,43 @@ Here the 2 CSI camera connectors are marked as **CAM0 and CAM1**. You can either
 
 First you need to configure the board to load the appropriate driver for the specific camera that you will be using. For this JetPack system has an in-built tool to support IMX219 an IMX477 cameras.
 
-- **Step 1:** Open the terminal and execute the following
+**Step 1:** Open the terminal and execute the following
 
 ```sh
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-- **Step 2:** Select **Configure Jetson Nano CSI Connector**
+**Step 2:** Select **Configure Jetson Nano CSI Connector**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/119.jpg"/></div>
 
-- **Step 3:** Select **Configure for compatible hardware**
+**Step 3:** Select **Configure for compatible hardware**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/120.jpg"/></div>
 
-- **Step 4:** Select the camera that you want to use
+**Step 4:** Select the camera that you want to use
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/121.jpg"/></div>
 
-- **Step 5:** Select **Save pin changes**
+**Step 5:** Select **Save pin changes**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/122.jpg"/></div>
 
-- **Step 6:** Select **Save and reboot to reconfigure pins**
+**Step 6:** Select **Save and reboot to reconfigure pins**
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/123.jpg"/></div>
 
-- **Step 7:** Press any key on the keyboard and the device will reboot with the applied camera configuration
+**Step 7:** Press any key on the keyboard and the device will reboot with the applied camera configuration
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/124.jpg"/></div>
 
-You can use CSI cameras in 2 different methods. Follow the below commands according to the camera connector 
+You can use CSI cameras in 2 different methods. Follow the below commands according to the camera connector.
 
-- Method 1:
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="Method 1" label="Method 1">
 
 For CAM0 port
 
@@ -112,23 +113,29 @@ nvgstcapture-1.0 sensor-id=1
 If you want to change further settings of the camera, you can type **"nvgstcapture-1.0 --help"** to access all the configurable options available
 :::
 
-- Method 2:
+</TabItem>
+
+<TabItem value="Method 2" label="Method 2">
 
 For CAM0 port
 
-```sh
+```bash
 gst-launch-1.0 nvarguscamerasrc sensor-id=0 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
 For CAM1 port
 
-```sh
+```bash
 gst-launch-1.0 nvarguscamerasrc sensor-id=1 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
 :::note
 If you want to change further settings of the camera, you can update the arguments such as **width, height, framerate, format**, etc.
 :::
+
+</TabItem>
+</Tabs>
+
 
 ## RTC
 
@@ -323,9 +330,12 @@ If you want to remove the SIM card, push the card in to hit the internal spring 
 
 When using the EC25 module, the module will automatically start and will be ready to use. However, when using the EC20 module, you need to reset the module for it to work
 
-- **Step 1:** If you are using EC25 module, you can skip this step. However if you are using EC20 module, enter the following commands to access GPIO309 pin which is responsible to reset the 4G module
+**Step 1:** If you are using EC25 module, you can skip this step. However if you are using EC20 module, enter the following commands to access GPIO309 pin which is responsible to reset the 4G module.
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo su 
 cd /sys/class/gpio
 echo 309 > export 
@@ -334,34 +344,45 @@ echo out > direction
 echo 1 > value
 ```
 
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo gpioset --mode=wait gpiochip2 9=1
+```
+
+</TabItem>
+</Tabs>
+
 For EC25 module, LED2 will light up in green as soon as the board is booted up. For EC20 module, LED2 will light up in green after resetting the module as explained above
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/118.jpg"/></div>
 
-- **Step 2:** Install minicom
+**Step 2:** Install minicom
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **Step 3:** Enter the serial console of the connected 4G module so that we can enter AT commands and interact with the 4G module
+**Step 3:** Enter the serial console of the connected 4G module so that we can enter AT commands and interact with the 4G module
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo 
+**Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo 
 
-- **Step 5:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 4G module is working properly
+**Step 5:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 4G module is working properly
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/></div>
 
-- **Step 6:** Enter the command **"ATI"** to check the module information
+**Step 6:** Enter the command **"ATI"** to check the module information
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-- **Step 7:** To test the module, enter the below command to call another phone number 
+**Step 7:** To test the module, enter the below command to call another phone number 
 
 ```sh
 ATD<phone_number>;
@@ -477,7 +498,11 @@ If you see the below output, the module is detected by the system
 
 - **Step 2:** Enter the below commands to compile and build the LoRa signals transmitting tool
 
-```sh
+:::danger
+Please note that this **LoRa signals transmitting tool** is only applicable to Jetpack5. If you want to test the LoRa module functionality in Jetpack6, please refer to the [schematic](https://github.com/Seeed-Studio/OSHW-Jetson-Series/blob/main/reComputer%20Jetson%20carrier%20board/reComputer%20Industrial%20J201/Schematic/reComputer%20Industrial%20J201_V1.2.pdf) and [pinmux](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template) to determine the pin names, and use the `gpioset` command to set the pin state.
+:::
+
+```bash
 git clone https://github.com/lakshanthad/sx1302_hal
 cd sx1302_hal
 make
@@ -614,9 +639,12 @@ If you want to remove the SIM card, push the card in to hit the internal spring 
 
 When using the SIM8202G-M2 5G module, the module will not automatically start. So we first need to toggle a few GPIOs to make it start
 
-- **Step 1:** Enter the following to start the 5G module
+**Step 1:** Enter the following to start the 5G module
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo su 
 cd /sys/class/gpio
 echo 309 > export 
@@ -637,33 +665,51 @@ echo out > direction
 echo 0 > value
 ```
 
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo gpioset --mode=wait gpiochip2 9=0
+sudo gpioset --mode=wait gpiochip1 25=1
+sudo gpioset --mode=wait gpiochip1 14=0
+```
+
+:::note
+Please open multiple terminals to run these commands, and make sure each terminal window remains active.
+:::
+
+</TabItem>
+</Tabs>
+
+
 Once the above is executed, LED2 will light up in green as below 
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/117.jpg"/></div>
 
-- **Step 2:** Install minicom
+**Step 2:** Install minicom
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-- **Step 3:** Enter the serial console of the connected 5G module so that we can enter AT commands and interact with the 5G module
+**Step 3:** Enter the serial console of the connected 5G module so that we can enter AT commands and interact with the 5G module
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Step 4:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 5G module is working properly
+**Step 4:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 5G module is working properly
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/107.png"/></div>
 
-- **Step 6:** Enter the command **"ATI"** to check the module information
+**Step 5:** Enter the command **"ATI"** to check the module information
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
 
-- **Step 7:** To test the module, enter the below command to call another phone number 
+**Step 6:** To test the module, enter the below command to call another phone number 
 
 ```sh
 ATD<phone_number>;
@@ -673,9 +719,6 @@ And you will see the below output
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
-### 5G Module Usage - Connect to Internet
-
-Coming soon
 
 ## DI/ DO 
 
@@ -790,6 +833,13 @@ reComputer Industrial supports 4 digital input and 4 digital output channels, al
   </tbody>
 </table>
 
+:::danger
+Please note that the pin numbers in the table above are only valid for Jetpack5. We can obtain the pin numbers for Jetpack6 in the following ways:
+
+1. Use the `gpioinfo` command to get the GPIO table.
+2. Check the **BGA Number** to find the corresponding pin number on Jetpack6.
+
+:::
 
 ### Connection Overview for DI
 
@@ -801,26 +851,37 @@ You can make the connection for DI by following the diagram below. It is better 
 
 You need to input a voltage of 12V on the DI line in order to get detected as an input
 
-- **Step 1:** Make the connetions as shown above to **DI1 pin** and input **12V**
+**Step 1:** Make the connetions as shown above to **DI1 pin** and input **12V**
 
-- **Step 2:** Open the GPIO for DI1 as follows
+**Step 2:** Open and check the status for DI1 as follows:
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo su 
 cd /sys/class/gpio
 echo 453 > export 
 cd PQ.05
+
+cat value
 ```
 
 :::note
 You can refer the **DI/ DO Pin Assignment Table** to find the GPIO number and BGA number. In the above example, for DI1 pin, GPIO number is 453 and BGA number is PQ.05
 :::
 
-- **Step 3:** Execute the following to check the status
+</TabItem>
 
-```sh
-cat value
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo gpioget gpiochip0 105
 ```
+
+</TabItem>
+</Tabs>
+
 
 If it outputs 0, that means there is 12V input. If it outputs 1, that means there is no input voltage.
 
@@ -834,9 +895,12 @@ You can make the connection for DO by following the diagram below. It is better 
 
 Here you need to connect a load as mentioned in the above diagram. The easiest way to test this would be to connect a multimeter if you have access to one, or else connect a load that requires less than 40V maximum voltage
 
-- **Step 1:** Make the connetions as shown above to **DO1 pin** and input **40V as max**
+**Step 1:** Make the connetions as shown above to **DO1 pin** and input **40V as max**
 
-- **Step 2:** Open the GPIO for D01 as follows
+**Step 2:** Open and turn on the GPIO for D01 as follows:
+
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
 
 ```sh
 sudo su 
@@ -844,17 +908,25 @@ cd /sys/class/gpio
 echo 399 > export 
 cd PI.00
 echo out > direction
+
+echo 1 > value
 ```
 
 :::note
 You can refer the **DI/ DO Pin Assignment Table** to find the GPIO number and BGA number. In the above example, for DO1 pin, GPIO number is 399 and BGA number is PI.00
 :::
 
-- **Step 3:** Execute the following to turn on the pin
+</TabItem>
 
-```sh
-echo 1 > value
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo gpioset --mode=wait gpiochip0 51=1
 ```
+
+</TabItem>
+</Tabs>
+
 
 If the load is turned on or the multimeter outputs the voltage that you have input, the test it is functioning properly.
 
@@ -1214,57 +1286,86 @@ You can refer to the pin numbering of DB9 connector and the table to make the co
 
 Here you can use a USB to RS232 adapter to test the interface. We have used [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) for our testing.
 
-- **Step 1:** Turn off the board
+**Step 1:** Turn off the board
 
-- **Step 2:** Here we have 2 options to set the DIP switches. Either in 001 mode or 101 mode. The switch positions for each mode is shown below
+**Step 2:** Here we have 2 options to set the DIP switches. Either in 001 mode or 101 mode. The switch positions for each mode is shown below
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-- **Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above 
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/68.jpg"/></div>
 
-- **Step 4:** Connect the other end to one of the USB ports on your PC
+**Step 4:** Connect the other end to one of the USB ports on your PC
 
-- **Step 5:** Turn on the board
+**Step 5:** Turn on the board
 
 ### RS232 Usage
 
-- **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
+**Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly 
+**Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly 
 
-- **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
+**Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
+**Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/71.jpg"/></div>
 
-- **Step 4:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
+**Step 5:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo chmod 777 /dev/ttyTHS0
 sudo echo "RS232 message from reComputer Industrial" > /dev/ttyTHS0
 ```
+
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo chmod 777 /dev/ttyTHS1
+sudo echo "RS232 message from reComputer Industrial" > /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
 
 Now you will see this message displayed on Putty
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/72.jpg"/></div>
 
-- **Step 5:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
+**Step 6:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo cat /dev/ttyTHS0
 ```
 
-- **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo cat /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
+
+On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
@@ -1272,96 +1373,128 @@ sudo cat /dev/ttyTHS0
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
-- **Step 1:** Turn off the board
+**Step 1:** Turn off the board
 
-- **Step 2:** Here we have 2 options to set the DIP switches. Either in 000 mode or 100 mode. The switch positions for each mode is shown below
+**Step 2:** Here we have 2 options to set the DIP switches. Either in 000 mode or 100 mode. The switch positions for each mode is shown below
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
-- **Step 4:** Connect the other end to one of the USB ports on your PC
+**Step 4:** Connect the other end to one of the USB ports on your PC
 
-- **Step 5:** Turn on the board
+**Step 5:** Turn on the board
 
 ### RS422 Usage
 
-- **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the connected adapter as a COM device.
+**Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the connected adapter as a COM device.
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
+**Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
 
-- **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
+**Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
+**Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Step 4:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
+**Step 5:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo chmod 777 /dev/ttyTHS0
 sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS0
 ```
 
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo chmod 777 /dev/ttyTHS1
+sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
+
 Now you will see this message displayed on Putty
 
-- **Step 5:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
+**Step 6:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo cat /dev/ttyTHS0
 ```
 
-- **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo cat /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
+
+On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
 
 ### RS485 Connection Overview 
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
-- **Step 1:** Turn off the board
+**Step 1:** Turn off the board
 
-- **Step 2:** Here we have 3 options to set the DIP switches. Either in 010 mode or 011 mode or 110 mode. The switch positions for each mode is shown below
+**Step 2:** Here we have 3 options to set the DIP switches. Either in 010 mode or 011 mode or 110 mode. The switch positions for each mode is shown below
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
-- **Step 4:** Connect the other end to one of the USB ports on your PC
+**Step 4:** Connect the other end to one of the USB ports on your PC
 
-- **Step 5:** Turn on the board
+**Step 5:** Turn on the board
 
 ### RS485 Usage
 
-- **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
+**Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
+**Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)
 
-- **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
+**Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
   - Local echo: Force on
   - Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-- **Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
+**Step 4:** Select **Session**, under **Coonection type**, select **Serial**, set the serial port number according to what you see on **Device Manager**, keep the Speed as default (9600) and click **Open**
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-- **Step 4:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
+**Step 5:** On the reTerminal Industrial terminal window, type the following to send a signal from the reComputer to the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo su 
 cd /sys/class/gpio 
 echo 460 > export 
@@ -1371,11 +1504,27 @@ echo 0 > value
 echo "RS485 message from reComputer Industrial" > /dev/ttyTHS0
 ```
 
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo chmod 777 /dev/ttyTHS1
+sudo gpioset gpiochip0 112=0
+echo "RS485 message from reComputer Industrial" > /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
+
 Now you will see this message displayed on Putty
 
-- **Step 5:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
+**Step 6:** On the reTerminal Industrial terminal window, type the following to wait for receiving signals from the PC
 
-```sh
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+```bash
 sudo su
 cd /sys/class/gpio
 echo 460 > export
@@ -1385,7 +1534,20 @@ echo 1 > value
 cat /dev/ttyTHS0
 ```
 
-- **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+```bash
+sudo chmod 777 /dev/ttyTHS1
+sudo gpioset gpiochip0 112=1
+cat /dev/ttyTHS1
+```
+
+</TabItem>
+</Tabs>
+
+On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
 
 ## Gigabit Ethernet Connectors
 
@@ -1437,7 +1599,10 @@ There is a Green color LED located on the board as shown below. By default it is
 
 ### Usage 
 
-- **Step 1:** Enter the following commands on a terminal window to access the Green color LED
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
+**Step 1:** Enter the following commands on a terminal window to access the Green color LED
 
 ```sh
 sudo -i
@@ -1447,13 +1612,13 @@ cd PCC.01
 echo out > direction 
 ```
 
-- **Step 2:** Turn OFF the LED
+**Step 2:** Turn OFF the LED
 
 ```sh
 echo 0 > value 
 ```
 
-- **Step 3:** Turn ON the LED
+**Step 3:** Turn ON the LED
 
 ```sh
 echo 1 > value 
@@ -1465,6 +1630,25 @@ If you have finished using the LED, you can execute the following
 cd ..
 echo 329 > unexport
 ```
+
+</TabItem>
+
+<TabItem value="Jetpack6" label="Jetpack6">
+
+Turn OFF the LED:
+
+```sh
+sudo gpioset gpiochip1 13=0
+```
+
+Turn ON the LED:
+
+```bash
+sudo gpioset gpiochip1 13=1
+```
+
+</TabItem>
+</Tabs>
 
 ## Monitor System Performance
 
@@ -1574,15 +1758,18 @@ sudo jetson_clocks
 
 You can access the GPIO table of the reComputer Industrial to get familiar with all the pin mappings.
 
+<Tabs>
+<TabItem value="Jetpack5" label="Jetpack5">
+
 Execute the following inside a terminal to access it
 
-```sh
+```bash
 sudo cat /sys/kernel/debug/gpio
 ```
 
 And you will see the output as follows
 
-```sh
+```bash
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:
  gpio-300 (wl_dis              |gpio_xten_pin@0     ) out hi
  gpio-301 (hst_wake_wl         |gpio_xten_pin@1     ) out hi
@@ -1801,10 +1988,253 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
  gpio-511 (PAG.07              )
 ```
 
-## Tech Support
+</TabItem>
 
-Please do not hesitate to submit issues into our [forum](https://forum.seeedstudio.com/).
+<TabItem value="Jetpack6" label="Jetpack6">
 
-<div>
-  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+Execute the following inside a terminal to access it.
+
+```bash
+gpioinfo
+```
+
+And you will see the output as follows
+
+```bash
+seeed@seeed-desktop:~$ gpioinfo 
+gpiochip0 - 164 lines:
+	line   0:      "PA.00" "regulator-vdd-3v3-sd" output active-high [used]
+	line   1:      "PA.01"       unused   input  active-high 
+	line   2:      "PA.02"       unused   input  active-high 
+	line   3:      "PA.03"       unused   input  active-high 
+	line   4:      "PA.04"       unused   input  active-high 
+	line   5:      "PA.05"       unused   input  active-high 
+	line   6:      "PA.06"       unused   input  active-high 
+	line   7:      "PA.07"       unused   input  active-high 
+	line   8:      "PB.00"       unused   input  active-high 
+	line   9:      "PC.00"       unused   input  active-high 
+	line  10:      "PC.01"       unused   input  active-high 
+	line  11:      "PC.02"       unused   input  active-high 
+	line  12:      "PC.03"       unused   input  active-high 
+	line  13:      "PC.04"       unused   input  active-high 
+	line  14:      "PC.05"       unused   input  active-high 
+	line  15:      "PC.06"       unused   input  active-high 
+	line  16:      "PC.07"       unused   input  active-high 
+	line  17:      "PD.00"       unused   input  active-high 
+	line  18:      "PD.01"       unused   input  active-high 
+	line  19:      "PD.02"       unused   input  active-high 
+	line  20:      "PD.03"       unused   input  active-high 
+	line  21:      "PE.00"       unused   input  active-high 
+	line  22:      "PE.01"       unused   input  active-high 
+	line  23:      "PE.02"       unused   input  active-high 
+	line  24:      "PE.03"       unused   input  active-high 
+	line  25:      "PE.04"       unused   input  active-high 
+	line  26:      "PE.05"       unused   input  active-high 
+	line  27:      "PE.06"       unused   input  active-high 
+	line  28:      "PE.07"       unused   input  active-high 
+	line  29:      "PF.00"       unused   input  active-high 
+	line  30:      "PF.01"       unused   input  active-high 
+	line  31:      "PF.02"       unused   input  active-high 
+	line  32:      "PF.03"       unused   input  active-high 
+	line  33:      "PF.04"       unused   input  active-high 
+	line  34:      "PF.05"       unused   input  active-high 
+	line  35:      "PG.00" "Force Recovery" input active-low [used]
+	line  36:      "PG.01"       unused   input  active-high 
+	line  37:      "PG.02"    "Suspend"   input   active-low [used]
+	line  38:      "PG.03"       unused   input  active-high 
+	line  39:      "PG.04"       unused   input  active-high 
+	line  40:      "PG.05"       unused   input  active-high 
+	line  41:      "PG.06"       unused   input  active-high 
+	line  42:      "PG.07"       unused   input  active-high 
+	line  43:      "PH.00"       unused   input  active-high 
+	line  44:      "PH.01"       unused   input  active-high 
+	line  45:      "PH.02"       unused   input  active-high 
+	line  46:      "PH.03" "camera-control-output-low" output active-high [used]
+	line  47:      "PH.04"       unused   input  active-high 
+	line  48:      "PH.05"       unused   input  active-high 
+	line  49:      "PH.06"       unused  output  active-high 
+	line  50:      "PH.07"       unused   input  active-high 
+	line  51:      "PI.00"       unused  output  active-high 
+	line  52:      "PI.01"       unused   input  active-high 
+	line  53:      "PI.02"       unused   input  active-high 
+	line  54:      "PI.03"       unused   input  active-high 
+	line  55:      "PI.04"       unused   input  active-high 
+	line  56:      "PI.05"       kernel   input  active-high [used]
+	line  57:      "PI.06"       unused   input  active-high 
+	line  58:      "PJ.00"       unused   input  active-high 
+	line  59:      "PJ.01"       unused   input  active-high 
+	line  60:      "PJ.02"       unused   input  active-high 
+	line  61:      "PJ.03"       unused   input  active-high 
+	line  62:      "PJ.04"       unused   input  active-high 
+	line  63:      "PJ.05"       unused   input  active-high 
+	line  64:      "PK.00"       unused   input  active-high 
+	line  65:      "PK.01"       unused   input  active-high 
+	line  66:      "PK.02"       unused   input  active-high 
+	line  67:      "PK.03"       unused   input  active-high 
+	line  68:      "PK.04"       unused  output  active-high 
+	line  69:      "PK.05"       unused  output  active-high 
+	line  70:      "PK.06"       unused   input  active-high 
+	line  71:      "PK.07"       unused   input  active-high 
+	line  72:      "PL.00"       unused   input  active-high 
+	line  73:      "PL.01"       unused   input  active-high 
+	line  74:      "PL.02"       unused   input  active-high 
+	line  75:      "PL.03"       unused   input  active-high 
+	line  76:      "PM.00"       kernel   input  active-high [used]
+	line  77:      "PM.01"       unused   input  active-high 
+	line  78:      "PM.02"       unused   input  active-high 
+	line  79:      "PM.03"       unused   input  active-high 
+	line  80:      "PM.04"       unused   input  active-high 
+	line  81:      "PM.05"       unused   input  active-high 
+	line  82:      "PM.06"       unused   input  active-high 
+	line  83:      "PM.07"       unused   input  active-high 
+	line  84:      "PN.00"       unused   input  active-high 
+	line  85:      "PN.01"  "interrupt"   input  active-high [used]
+	line  86:      "PN.02"       unused   input  active-high 
+	line  87:      "PN.03"       unused   input  active-high 
+	line  88:      "PN.04"       unused   input  active-high 
+	line  89:      "PN.05"       unused   input  active-high 
+	line  90:      "PN.06"       unused   input  active-high 
+	line  91:      "PN.07"       unused   input  active-high 
+	line  92:      "PP.00"       unused   input  active-high 
+	line  93:      "PP.01"       unused   input  active-high 
+	line  94:      "PP.02"       unused   input  active-high 
+	line  95:      "PP.03"       unused   input  active-high 
+	line  96:      "PP.04"       unused   input  active-high 
+	line  97:      "PP.05"       unused   input  active-high 
+	line  98:      "PP.06"       unused   input  active-high 
+	line  99:      "PP.07"       unused   input  active-high 
+	line 100:      "PQ.00"       unused   input  active-high 
+	line 101:      "PQ.01"       unused   input  active-high 
+	line 102:      "PQ.02"       unused   input  active-high 
+	line 103:      "PQ.03"       unused  output  active-high 
+	line 104:      "PQ.04"       unused   input  active-high 
+	line 105:      "PQ.05"       unused   input  active-high 
+	line 106:      "PQ.06"       unused   input  active-high 
+	line 107:      "PQ.07"       unused   input  active-high 
+	line 108:      "PR.00"       unused   input  active-high 
+	line 109:      "PR.01"       unused   input  active-high 
+	line 110:      "PR.02"       unused   input  active-high 
+	line 111:      "PR.03"       unused   input  active-high 
+	line 112:      "PR.04"       unused   input  active-high 
+	line 113:      "PR.05"       unused   input  active-high 
+	line 114:      "PX.00"       kernel   input  active-high [used]
+	line 115:      "PX.01"       kernel   input  active-high [used]
+	line 116:      "PX.02"       unused   input  active-high 
+	line 117:      "PX.03"       unused   input  active-high 
+	line 118:      "PX.04"       unused   input  active-high 
+	line 119:      "PX.05"       unused   input  active-high 
+	line 120:      "PX.06"       unused   input  active-high 
+	line 121:      "PX.07"       unused   input  active-high 
+	line 122:      "PY.00"       unused   input  active-high 
+	line 123:      "PY.01"       unused   input  active-high 
+	line 124:      "PY.02"       unused   input  active-high 
+	line 125:      "PY.03"       unused   input  active-high 
+	line 126:      "PY.04"       unused   input  active-high 
+	line 127:      "PY.05"       unused   input  active-high 
+	line 128:      "PY.06"       unused   input  active-high 
+	line 129:      "PY.07"       unused   input  active-high 
+	line 130:      "PZ.00"       unused   input  active-high 
+	line 131:      "PZ.01"       "vbus"   input   active-low [used]
+	line 132:      "PZ.02"       unused   input  active-high 
+	line 133:      "PZ.03"       unused   input  active-high 
+	line 134:      "PZ.04"       unused   input  active-high 
+	line 135:      "PZ.05"       unused   input  active-high 
+	line 136:      "PZ.06"   "spi0 CS0"  output   active-low [used]
+	line 137:      "PZ.07"       unused   input  active-high 
+	line 138:     "PAC.00"       unused  output  active-high 
+	line 139:     "PAC.01"       unused   input  active-high 
+	line 140:     "PAC.02"       unused   input  active-high 
+	line 141:     "PAC.03"       unused   input  active-high 
+	line 142:     "PAC.04"       unused   input  active-high 
+	line 143:     "PAC.05"       unused   input  active-high 
+	line 144:     "PAC.06"       unused   input  active-high 
+	line 145:     "PAC.07"       unused   input  active-high 
+	line 146:     "PAD.00"       unused   input  active-high 
+	line 147:     "PAD.01"       unused   input  active-high 
+	line 148:     "PAD.02"       unused   input  active-high 
+	line 149:     "PAD.03"       unused   input  active-high 
+	line 150:     "PAE.00"       unused   input  active-high 
+	line 151:     "PAE.01"       unused   input  active-high 
+	line 152:     "PAF.00"       unused   input  active-high 
+	line 153:     "PAF.01"       unused   input  active-high 
+	line 154:     "PAF.02"       unused   input  active-high 
+	line 155:     "PAF.03"       unused   input  active-high 
+	line 156:     "PAG.00"       unused   input  active-high 
+	line 157:     "PAG.01"       unused   input  active-high 
+	line 158:     "PAG.02"       unused   input  active-high 
+	line 159:     "PAG.03"       unused   input  active-high 
+	line 160:     "PAG.04"       unused   input  active-high 
+	line 161:     "PAG.05"       unused   input  active-high 
+	line 162:     "PAG.06"       unused   input  active-high 
+	line 163:     "PAG.07"       unused   input  active-high 
+gpiochip1 - 32 lines:
+	line   0:     "PAA.00"       unused   input  active-high 
+	line   1:     "PAA.01"       unused   input  active-high 
+	line   2:     "PAA.02"       unused   input  active-high 
+	line   3:     "PAA.03"       unused   input  active-high 
+	line   4:     "PAA.04"       unused  output  active-high 
+	line   5:     "PAA.05" "regulator-vdd-3v3-pcie" output active-high [used]
+	line   6:     "PAA.06"       unused   input  active-high 
+	line   7:     "PAA.07"       unused   input  active-high 
+	line   8:     "PBB.00"       unused   input  active-high 
+	line   9:     "PBB.01"       unused   input  active-high 
+	line  10:     "PBB.02"       unused   input  active-high 
+	line  11:     "PBB.03"       unused  output  active-high 
+	line  12:     "PCC.00"       unused  output  active-high 
+	line  13:     "PCC.01"       unused  output  active-high 
+	line  14:     "PCC.02"       unused  output  active-high 
+	line  15:     "PCC.03"        "mux"  output  active-high [used]
+	line  16:     "PCC.04"       unused   input  active-high 
+	line  17:     "PCC.05"       unused   input  active-high 
+	line  18:     "PCC.06"       unused   input  active-high 
+	line  19:     "PCC.07"       unused   input  active-high 
+	line  20:     "PDD.00"       unused   input  active-high 
+	line  21:     "PDD.01"       unused   input  active-high 
+	line  22:     "PDD.02"       unused   input  active-high 
+	line  23:     "PEE.00"       unused   input  active-high 
+	line  24:     "PEE.01"       unused   input  active-high 
+	line  25:     "PEE.02"       unused   input  active-high 
+	line  26:     "PEE.03"       unused   input  active-high 
+	line  27:     "PEE.04"      "Power"   input   active-low [used]
+	line  28:     "PEE.05"       unused   input  active-high 
+	line  29:     "PEE.06"       unused   input  active-high 
+	line  30:     "PEE.07"       unused   input  active-high 
+	line  31:     "PGG.00"       unused   input  active-high 
+gpiochip2 - 16 lines:
+	line   0:     "wl_dis" "gpio_xten_pin@0" output active-high [used]
+	line   1: "hst_wake_wl" "gpio_xten_pin@1" output active-high [used]
+	line   2: "wl_wake_hst" "gpio_xten_pin@2" output active-low [used]
+	line   3:     "bt_dis" "gpio_xten_pin@3" output active-high [used]
+	line   4: "hst_wake_bt" unused input active-high 
+	line   5: "bt_wake_hst" unused input active-high 
+	line   6: "spi0_rst_3v3" "gpio_xten_pin@6" output active-low [used]
+	line   7:  "gpio_pin7" "gpio_xten_pin@7" output active-low [used]
+	line   8: "can_120R_en" unused input active-high 
+	line   9: "M2B_PCIe_rst" unused input active-high 
+	line  10: "USB_HUB_rst" "gpio_xten_pin@10" output active-high [used]
+	line  11: "PCIe_ETH_rst" unused input active-high 
+	line  12: "M2B_WOWWAN"       unused   input  active-high 
+	line  13: "M2B_DPR_3V3" unused input active-high 
+	line  14: "SIM_MUX_SEL" unused input active-high 
+	line  15: "gpio_pin15"       unused   input  active-high 
+```
+
+</TabItem>
+</Tabs>
+
+
+
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

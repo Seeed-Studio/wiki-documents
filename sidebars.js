@@ -3121,6 +3121,13 @@ const sidebars = {
                                  'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_modbus_mqtt',
                                 ],
                               },
+                              {
+                                type: 'category',
+                                label: 'CODESYS',
+                                items: [
+                                   'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_install_codesys',
+                                  ],
+                                },
    
                           
                     ],

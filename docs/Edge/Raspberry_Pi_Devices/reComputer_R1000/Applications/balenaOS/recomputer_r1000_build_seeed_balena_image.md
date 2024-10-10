@@ -8,7 +8,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /build_balenaOS_for_reComputer_r1000
 last_update:
-  date: 08/19/2024
+  date: 10/8/2024
   author: ShuishengPeng
 ---
 
@@ -87,6 +87,10 @@ Before you start this project, you may need to prepare your hardware and softwar
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/0_build_balenaOS.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 3**: The compiled image is named `balena-image-seeed-recomputer-r100x.balenaos-img` and is in the `build/tmp/deploy/images/seeed-recomputer-r100x` directory. At this point, the image is Compilation is complete, the next step is to configure it.
+
+:::note
+The default balenaOS version of this warehouse is 5.3.27+rev1. The version information is located in the `VERSION` file. If you need to compile other versions of balenaOS, please change the content in the `VERSION` file.
+:::
 
 ### Configure R1000-balenaOS
 **Step 1**: Enter the directory where the compiled image is located, then enter the command line interface, enter `balena login`, and log in to `balena Cloud`.
