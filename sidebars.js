@@ -2303,6 +2303,15 @@ const sidebars = {
       items: [
             {
               type: 'category',
+              label: 'XIAO ESP32S3 for Meshtastic and LoRa',
+              items: [
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
+              ],
+            },
+
+            {
+              type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',
               items: [
                 'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',

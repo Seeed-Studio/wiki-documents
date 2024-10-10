@@ -278,7 +278,7 @@ The basic operating idea is: The battery voltage was divided by 1/2 with 200k an
 
 The datasheet says nominally 2500mV full scale AD conversion, but there is a large variation from chip to chip, actually ±10%. My chip was 2700mV full scale.
 
-Fortunately, the calibrated correction value for each chip is written in the fuse area, and by using the function `alalogReadMilliVolts()`, I can read the corrected voltage value without doing anything special.
+Fortunately, the calibrated correction value for each chip is written in the fuse area, and by using the function `analogReadMilliVolts()`, I can read the corrected voltage value without doing anything special.
 
 The result of AD conversion and the voltage measured by the multimeter agree well with each other with an error of about 5 mV, which is not a problem in practical use.
 
