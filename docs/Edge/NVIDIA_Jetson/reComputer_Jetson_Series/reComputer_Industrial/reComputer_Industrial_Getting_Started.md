@@ -260,9 +260,34 @@ You need to prepare the following hardware before getting started with reCompute
 - Keyboard and Mouse
 
 :::info
-We recommend using a physical machine as the host rather than a virtual machine.
-
-Please ensure that your host machine has more than 50GB of free space.
+We recommend that you use physical ubuntu host devices instead of virtual machines.
+Please refer to the table below to prepare the host machine.
+        
+<table style={{textAlign: 'center'}}>
+  <tbody>
+    <tr>
+        <td  rowspan="2"> JetPack Version </td>
+        <td class="dbon" colspan="3"> Ubuntu Version (Host Computer) </td>
+    </tr>
+    <tr>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
+    </tr>
+    <tr>
+        <td >JetPack 5.x</td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
+    </tr>
+    <tr>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+    </tr>
+  </tbody>
+</table>
 :::
 
 ### Enter Force Recovery Mode
@@ -383,7 +408,7 @@ After that, the board will reboot and will be ready to use!
   </TabItem>
 <TabItem value="Method 2" label="Method 2">
 
-#### Download and Prepare NVIDIA L4T and rootfs
+**Download and Prepare NVIDIA L4T and rootfs**
 
 ```sh
 wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/jetson_linux_r35.3.1_aarch64.tbz2
@@ -395,7 +420,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-#### Download and Prepare Drivers
+**Download and Prepare Drivers**
 
 - **Step 1:** Download the driver files to your Ubuntu PC corresponding to the board you are using
 
@@ -525,8 +550,9 @@ sudo apt install nvidia-jetpack -y
   </table> 
 
 
-
-The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
+:::info
+The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra).
+:::
 
 - **Step 2:** Extract the generated file 
 
@@ -573,10 +599,16 @@ To learn more about how to use all the hardware and interfaces on the reComputer
 - [NVIDIA Jetson Devices and Carrier Boards Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)
 - [reComputer Industrial 3D File](https://files.seeedstudio.com/products/NVIDIA/Industrial/reComputer-Industrial.stp)
 
-## Tech Support
+## Tech Support & Product Discussion
 
-Please do not hesitate to submit issues into our [forum](https://forum.seeedstudio.com/).
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
-<div>
-  <br /><p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p>
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

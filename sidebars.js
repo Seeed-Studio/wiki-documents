@@ -1022,6 +1022,7 @@ const sidebars = {
           label: 'MR60BHA2 mmWave kit',
           items: [
             'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/getting_started_with_mr60bha2',
+            'Sensor/mmWave_radar_sensor/mr60bha2-mmwave-kit/ha_with_mr60bha2',
           ],
         },
         'Sensor/mmWave_radar_sensor/Radar_MR24HPC1',
@@ -1102,6 +1103,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-NuttX-RTOS',
               ],
             },
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-Zephyr-RTOS',
@@ -2301,6 +2303,15 @@ const sidebars = {
       items: [
             {
               type: 'category',
+              label: 'XIAO ESP32S3 for Meshtastic and LoRa',
+              items: [
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
+              ],
+            },
+
+            {
+              type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',
               items: [
                 'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
@@ -3119,6 +3130,13 @@ const sidebars = {
                                  'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_modbus_mqtt',
                                 ],
                               },
+                              {
+                                type: 'category',
+                                label: 'CODESYS',
+                                items: [
+                                   'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_install_codesys',
+                                  ],
+                                },
    
                           
                     ],
@@ -3192,7 +3210,9 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/pose_based_light_control_with_nodered_and_rpi_with_aikit',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', ]
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', 
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/clip_application_on_rpi_with_ai_kit'
+        ]
       },
 
       ],
@@ -3466,6 +3486,7 @@ const sidebars = {
                         // },
                   items: [
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar',
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/MID360',
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/CSI_Camera'
                       ]},
                 
@@ -3508,7 +3529,9 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/reComputer_Jetson_Series_Resource',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/NVStreamer_Getting_Started',
-                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started'
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/vnc_for_reComputer'
+
               ]
             },
           ]
@@ -3693,6 +3716,19 @@ const sidebars = {
       ],
     },
 
+    {
+      type: 'category',
+      label: 'reCamera',
+      items: [
+        {
+          type: 'category',
+          label: 'reCamera sg200x',
+          items: [
+            'Edge/reCamera/reCamera_Getting_Started',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'category',
@@ -3709,6 +3745,9 @@ const sidebars = {
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
+
+
+    
 
     // {
 

@@ -310,25 +310,25 @@ Once the program is successfully uploaded, you will see the following output mes
 	</tr>
 </table>
 
-## Battery Usage
+# Battery Usage
 
-The XIAO ESP32C6 series has a built-in power management chip that allows the XIAO ESP32C6 to be powered independently by using a battery or to charge the battery through the XIAO ESP32C6's USB port.
+The XIAO ESP32C6 series features a built-in power management chip, allowing it to be powered independently by a battery or to charge the battery through its USB port.
 
-If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable 3.7V lithium battery. When soldering the battery, please be careful to distinguish between the positive and negative terminals. The negative terminal of the power supply should be the side closest to the USB port, and the positive terminal of the power supply is the side away from the USB port.
+For connecting a battery to your XIAO, we recommend using a qualified rechargeable 3.7V lithium battery. When soldering the battery, carefully distinguish between the positive and negative terminals. The negative terminal should be on the side closest to the USB port, while the positive terminal should be on the side farthest from the USB port.
 
 :::caution
-When you use battery power, there will be no voltage on the 5V pin.
+When using battery power, no voltage will be present on the 5V pin.
 :::
 
-:::tip red indicator light
+:::tip Red Indicator Light
 
-At the same time, we have the red indicator light for battery charging as [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage):
+The XIAO ESP32C6 has a red indicator light for battery charging, similar to the [XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage):
 
-The red light behavior for the XIAO ESP32 C6 is as follows:
+The red light behavior for the XIAO ESP32C6 is as follows:
 
-- When the XIAO ESP32 C6 is not connected to a battery:
-  - The red light comes on when the Type-C cable is connected and goes off after 30 seconds.
-- When the battery is connected and the Type-C cable is connected for charging:
+- When no battery is connected:
+  - The red light turns on when the Type-C cable is connected and turns off after 30 seconds.
+- When a battery is connected and the Type-C cable is plugged in for charging:
   - The red light flashes.
 - When the battery is fully charged via the Type-C connection:
   - The red light turns off.
