@@ -3121,6 +3121,13 @@ const sidebars = {
                                  'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_modbus_mqtt',
                                 ],
                               },
+                              {
+                                type: 'category',
+                                label: 'CODESYS',
+                                items: [
+                                   'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_install_codesys',
+                                  ],
+                                },
    
                           
                     ],
@@ -3194,7 +3201,9 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/pose_based_light_control_with_nodered_and_rpi_with_aikit',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', ]
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', 
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/clip_application_on_rpi_with_ai_kit'
+        ]
       },
 
       ],
@@ -3698,6 +3707,19 @@ const sidebars = {
       ],
     },
 
+    {
+      type: 'category',
+      label: 'reCamera',
+      items: [
+        {
+          type: 'category',
+          label: 'reCamera sg200x',
+          items: [
+            'Edge/reCamera/reCamera_Getting_Started',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'category',
@@ -3714,6 +3736,9 @@ const sidebars = {
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
+
+
+    
 
     // {
 
