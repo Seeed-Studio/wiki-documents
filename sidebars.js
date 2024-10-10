@@ -1768,7 +1768,7 @@ const sidebars = {
           },
           items: [
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-            //'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
             'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
