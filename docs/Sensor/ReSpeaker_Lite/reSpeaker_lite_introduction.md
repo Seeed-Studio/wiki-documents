@@ -84,6 +84,10 @@ Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio
 
 * [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_ua_v2.0.5.bin)
 
+:::tip
+`ffva_ua_v2.0.5.bin` is the USB version, if you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
+:::
+
 #### Wiring
 
 Connect the ReSpeaker Lite Board to your PC via the USB cable.
@@ -171,6 +175,7 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 * Connect the ReSpeaker board to your PC.
 
 * Run the following command:
+
 ```
 dfu-util -e -a 1 -D ffva_ua_v2.0.5.bin
 ```
@@ -179,6 +184,14 @@ dfu-util -e -a 1 -D ffva_ua_v2.0.5.bin
 :::tip
 After flashing is completed, please restart the board.
 :::
+
+* Check the firmware version:
+
+```
+dfu-util -l
+```
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={500} height="auto" /></p>
 
 
 ### Out of Box Usage
