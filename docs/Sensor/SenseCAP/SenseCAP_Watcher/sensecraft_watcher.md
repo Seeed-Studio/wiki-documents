@@ -60,7 +60,7 @@ After Training , you need to click "Click here"tags Under Start Training.
 you can see your Model file after training completion
 
 - click your Mode file
-- click "Save to SebseCraft"
+- click "Save to SenseCraft"
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/4.png" style={{width:800, height:'auto'}}/></div>
 
