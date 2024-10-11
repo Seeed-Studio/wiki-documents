@@ -139,7 +139,7 @@ This wiki will show you how you can quickly get started with XIAO ESP32C3!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:1000, height:'auto'}}/></div>
 
-> *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reiable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
+> *A3(GP105) - Uses ADC2, which may become inoperative due to false sampling signals. For reliable analog reads, use ADC1(A0/A1/A2) instead. Refer to the ESP32-C3 datasheet.
 
 ### Component overview
 
@@ -278,7 +278,7 @@ The basic operating idea is: The battery voltage was divided by 1/2 with 200k an
 
 The datasheet says nominally 2500mV full scale AD conversion, but there is a large variation from chip to chip, actually ±10%. My chip was 2700mV full scale.
 
-Fortunately, the calibrated correction value for each chip is written in the fuse area, and by using the function `alalogReadMilliVolts()`, I can read the corrected voltage value without doing anything special.
+Fortunately, the calibrated correction value for each chip is written in the fuse area, and by using the function `analogReadMilliVolts()`, I can read the corrected voltage value without doing anything special.
 
 The result of AD conversion and the voltage measured by the multimeter agree well with each other with an error of about 5 mV, which is not a problem in practical use.
 

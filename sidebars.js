@@ -2303,6 +2303,15 @@ const sidebars = {
       items: [
             {
               type: 'category',
+              label: 'XIAO ESP32S3 for Meshtastic and LoRa',
+              items: [
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
+                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
+              ],
+            },
+
+            {
+              type: 'category',
               label: 'Wio Tracker 1110 Meshtastic Kit',
               items: [
                 'Network/Meshtastic_Network/wio_tracker_kit/meshtastic_kit_wio_tracker_1110',
@@ -3121,6 +3130,14 @@ const sidebars = {
                                  'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/n3uron/recomputer_r1000_n3uron_modbus_mqtt',
                                 ],
                               },
+                              {
+                                type: 'category',
+                                label: 'CODESYS',
+                                items: [
+                                   'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_install_codesys',
+                                   'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_with_codesys_use_modbus_rtu',
+                                  ],
+                                },
    
                           
                     ],
@@ -3194,7 +3211,9 @@ const sidebars = {
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/pose_based_light_control_with_nodered_and_rpi_with_aikit',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
           'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', ]
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l', 
+          'Edge/Raspberry_Pi_Devices/Raspberry_Pi_with_AI/clip_application_on_rpi_with_ai_kit'
+        ]
       },
 
       ],
@@ -3698,6 +3717,19 @@ const sidebars = {
       ],
     },
 
+    {
+      type: 'category',
+      label: 'reCamera',
+      items: [
+        {
+          type: 'category',
+          label: 'reCamera sg200x',
+          items: [
+            'Edge/reCamera/reCamera_Getting_Started',
+          ],
+        },
+      ]
+    },
 
     {
       type: 'category',
@@ -3714,6 +3746,9 @@ const sidebars = {
         'Edge/Quantum_Development_Board/Quantum-Mini-Linux-Development-Kit',
       ],
     },
+
+
+    
 
     // {
 
