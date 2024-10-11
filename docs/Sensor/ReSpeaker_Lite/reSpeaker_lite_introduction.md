@@ -79,6 +79,18 @@ Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio
 
 ## Get Started
 
+
+
+### Out of Box Usage
+
+
+ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, just plug it to your PC, you will see a voice device named 'ReSpeaker Lite'.
+
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pc.png" alt="pir" width={500} height="auto" /></p>
+
+
+
 ### Update firmware
 
 
@@ -115,6 +127,9 @@ Please note that paths in the variable `Path` are seperated by semicolon `;`. Th
 
 * Install the [driver](https://zadig.akeo.ie/)
 
+
+Choose `WinUSB`, nd click `Install Driver`.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/WinUSB.png" alt="pir" width={500} height="auto" /></p>
 
 </TabItem>
 
@@ -181,7 +196,7 @@ dfu-util -e -a 1 -D ffva_ua_v2.0.5.bin
 ```
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/flash-done.png" alt="pir" width={500} height="auto" /></p>
 
-:::tip
+:::caution
 After flashing is completed, please restart the board.
 :::
 
@@ -192,17 +207,6 @@ dfu-util -l
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={500} height="auto" /></p>
-
-
-### Out of Box Usage
-
-
-ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, just plug it to your PC, you will see a voice device named 'ReSpeaker Lite'.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pc.png" alt="pir" width={500} height="auto" /></p>
-
-
 
 
 ## Comparison
@@ -219,3 +223,20 @@ ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, j
 |<p style={{textAlign: 'center'}}>Onboard Audio Processing Algorithms</p>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Interference Cancellation (IC)</li><li>Voice-to-Noise Ratio (VNR)</li></ul>|<ul><li>Acoustic Echo Cancellation (AEC)</li><li>Automatic Gain Control (AGC)</li><li>Noise Suppression (NS)</li><li>Beamforming</li><li>Direction of Arrival (DoA)</li><li>De-Reverberation</li><li>Voice Activity Detection (VAD)</li></ul>|<p style={{textAlign: 'center'}}>-</p>|
 |<p style={{textAlign: 'center'}}>Compatible Hardware</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py via I2S</li><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|<ul><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|Raspberry Pi ONLY|
 |<p style={{textAlign: 'center'}}>Perfect for</p>|Directional sound capture, ideal for linear or elongated setups|Omnidirectional sound capture and localization, best placed in the center of open and multi-directional environments|Directional sound capture, ideal for linear or elongated setups|
+
+
+
+
+
+### FAQ
+
+* **Can't find the `ReSpeaker Lite` sound device.**
+
+ Check the firmware version, make sure it's `2.0.5`.
+ ```
+ dfu-util -l
+ ```
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={500} height="auto" /></p>
+
+ If it's not the 2.0.5, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
