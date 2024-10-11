@@ -86,9 +86,23 @@ This will allow you to see the Node-RED editor on http://localhost:1880.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100-nodered/4.png" /></div>
 
-## Part 3. Get Watcher API Key
+## Part 3. Run a task in Watcher
 
-Open your SenseCraft APP and follow the steps below to get **Organization ID** and **API Key**.
+Tell Watcher what you want it to help you. You just need to input some commands in the input box. For example, **Notify me when detect people** or **Tell me if there is a fire**, etc. If you want to know more, [**please jump here**](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
+
+So Watcher will notify you via SenseCraft APP as well as audio alerts and flashing RGB light when it detects a fire.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/svg10.svg" style={{width:600, height:'auto'}}/></div>
+
+## Part 4. Watcher send message to Node-RED
+
+We provide two methods to send message from watcher to Node-RED, SenseCAP Node and HTTP potocol. You can choose any method you like.
+
+### Method 1: Use SenseCAP node
+
+#### Step 1. Get Watcher API Key
+
+Open your SenseCraft APP and follow the steps below to get **Organization ID** and **API Key**. We will use them later.
 
 <div class="table-center">
   <table align="center">
@@ -115,51 +129,159 @@ Open your SenseCraft APP and follow the steps below to get **Organization ID** a
   </table>
 </div>
 
-## Part 4. Run a task in Watcher
+#### Step 2. Install SenseCAP node
 
-Tell Watcher what you want it to help you. You just need to input some commands in the input box. For example, **Notify me when detect people** or **Tell me if there is a fire**. If you want to know more, [**please jump here**](https://wiki.seeedstudio.com/getting_started_with_watcher_task/).
-
-So Watcher will notify you via SenseCraft APP as well as audio alerts and flashing RGB light when it detects a fire.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/svg10.svg" style={{width:600, height:'auto'}}/></div>
-
-## Part 5. Create a SenseCAP node
-
-### Install SenseCAP Module
-
-**Step 1.** Click the three bars icon and then click **Manage palette** option.
+Click the three bars icon and then click **Manage palette** option.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/1.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 2.** Click **Install** option, input **sensecap** to search, and then **install** it.
+Click **Install** option, input **sensecap** to search, and then **install** it.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/2.png" style={{width:600, height:'auto'}}/></div>
 
-### sensecap node
-
-**Step 1.** Drag **OpenStream** and **debug** module to workspace area and then **connect** them with line.
+Drag **OpenStream** and **debug** module to workspace area and then **connect** them with line.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/3.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 2.** **Double click** OpenStram module and then it will open a side window. Give it a name and create a new account.
+**Double click** OpenStram module and then it will open a side window. Give it a name and create a new account.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/4.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 3.** Name your account and input your **Organization ID** and **API key** you got just now.
+Name your account and input your **Organization ID** and **API key** you got just now.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/5.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 4.** Click the **Done** button to get all message from platfrom or you can select specified message you want to receive. For example, if you just want to receive your Watcher message, you can fill in the **EUI** code that can be found in device **Setting** -> **About Device** or the message in **Step 6**.
+Click the **Done** button to get all message from platfrom or you can select specified message you want to receive. For example, if you just want to receive your Watcher message, you can fill in the **EUI** code that can be found in device **Setting** -> **About Device** or the message in **Step 6**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/6.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 5.** Click the **Deploy** button. This button just like compile and run button. Whatever you change, you need to click this button.
+Click the **Deploy** button. This button just like compile and run button. Whatever you change, you need to click this button.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/7.png" style={{width:800, height:'auto'}}/></div>
 
-**Step 6.** After that, you will see a connected sign, which means it works as expected. When Watcher sends messages you will receive them in Node-RED.
+After that, you will see a connected sign, which means it works as expected. When Watcher sends messages you will receive them in Node-RED.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/9.png" style={{width:800, height:'auto'}}/></div>
+
+### Method 2: Use HTTP potocol
+
+#### Step 1.Open HTTP block funciton
+
+When you run a task, click **Detail Configs** button, and then open **HTTP Push Notification** and click **Go Setup**. You need to fill in **your computer IP address** and **Node-RED access port**(default port is 1880). And then click **Update Now** and **Run Task**.
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>Page 1</th>
+      <th>Page 2</th>
+      <th>Page 3</th>
+      <th>Page 4</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/26.png" style={{width:200, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/27.png" style={{width:200, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/28.png" style={{width:200, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/29.png" style={{width:200, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
+
+#### Step 2.Configuration in Node-RED
+
+First, you need to import work flow in your Node-RED.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/24.png" style={{width:600, height:'auto'}}/></div>
+
+Paste the following code into it and click **Import** button.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/25.png" style={{width:600, height:'auto'}}/></div>
+
+```
+[
+    {
+        "id": "c467e3e4e56d1d02",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "150e7b4abd714e24",
+        "type": "http in",
+        "z": "c467e3e4e56d1d02",
+        "name": "watcher message",
+        "url": "/",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "9dee08ae69fa7a80"
+            ]
+        ]
+    },
+    {
+        "id": "9dee08ae69fa7a80",
+        "type": "function",
+        "z": "c467e3e4e56d1d02",
+        "name": "",
+        "func": "// process data in here,for example, get alert message:\n// msg.payload = {\n//     alertMsg: msg.payload.events.text\n// }\n msg.payload = {\n    code: 200,\n    msg:\"ok\",\n    data: msg.payload\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "ee52b368d8b7a1ba",
+                "2fca38184da8b0f6"
+            ]
+        ]
+    },
+    {
+        "id": "2fca38184da8b0f6",
+        "type": "debug",
+        "z": "c467e3e4e56d1d02",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ee52b368d8b7a1ba",
+        "type": "http response",
+        "z": "c467e3e4e56d1d02",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 660,
+        "y": 260,
+        "wires": []
+    }
+]
+```
+
+Now, when watcher detect people, it will send message to Node-RED automatically~
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/23.png" style={{width:800, height:'auto'}}/></div>
+
+
+
+
 
 Congratulations！Now the data is transmit from Watcher to Node-RED successfully. Next wiki we will walk you through how the data from Watcher to other platform, welcome to try~
 
