@@ -662,6 +662,31 @@
 	}
 }
 
+.video-mp4 {
+	width: 100%;
+	max-width: 800px;
+	margin: -10px auto;
+	display: block;
+	border-radius: 24px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	aspect-ratio: 9 / 9;
+}
+
+/* 中等屏幕（例如平板电脑）的响应式设计 */
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+	.video-mp4 {
+		width: 80%;
+	}
+}
+
+/* 小屏幕（例如手机）的响应式设计 */
+@media only screen and (max-width: 599px) {
+	.video-mp4 {
+		width: 100%;
+		margin: 10px 0;
+	}
+}
+
 .button-container {
 	display: flex; /* 使用flex布局 */
 	justify-content: center; /* 水平居中 */
