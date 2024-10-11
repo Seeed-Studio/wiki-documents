@@ -256,7 +256,7 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  This article mainly introduces how to use FUXA for WebAPI communication.At this stage, FUXA only supports the GET function, and the data packet is in Json format.We will use FUXA's GET function to obtain the datagram of postman.</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> his article mainly introduces how to use FUXA to achieve SCADA. In the article, FUXA receives data from node-red and OPC UA Simulator, and displays it using chart and Circular Gauge; at the same time, it draws a series of patterns to simulate industrial processes.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This article mainly introduces how to use FUXA to achieve SCADA. In the article, FUXA receives data from node-red and OPC UA Simulator, and displays it using chart and Circular Gauge; at the same time, it draws a series of patterns to simulate industrial processes.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
@@ -265,6 +265,34 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 		</tr>
 	</table>
 </div>
+
+<strong><span><font color={'4ec354'} size={"5"}>CODESYS</font></span></strong>
+
+<div class="table-center">
+	<table class="table-nobg">
+    <tr class="table-trnobg">
+      <th class="table-trnobg"><font size={"4"}>How to install CODESYS for reComputer R1000</font></th>
+      <th class="table-trnobg"><font size={"4"}>How to use CODESYS to configure the Modbus RTU function of R1000</font></th>
+		</tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg"> 
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/4.png" style={{width:300, height:'auto'}}/></div></td>
+			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/deploy/hardware.png" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+    <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> CODESYS, developed by 3S-Smart Software Solutions, is a widely used automation software platform for industrial control systems. This article focuses on how to download, install CODESYS, and deploy a project to the reComputer R1000.</font></td>
+      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> This article mainly introduces how to use the modbus rtu function of reComputer R1000 based on CODESYS. We will use the two rs485 ports of reComputer R1000, one port is used for Modbus master and the other port is used for Modbus slave.</font></td>
+    </tr>
+    <tr class="table-trnobg"></tr>
+		<tr class="table-trnobg">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reComputer_r1000_install_codesys/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_use_modbus_rtu_with_codesys/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+		</tr>
+	</table>
+</div>
+
+
 
 <strong><span><font color={'4ec354'} size={"5"}>FIN</font></span></strong>
 
