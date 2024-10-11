@@ -94,10 +94,10 @@ ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, j
 ### Update firmware
 
 
-* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_ua_v2.0.5.bin)
+* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_usb_xmos_v2.0.5.bin)
 
 :::tip
-`ffva_ua_v2.0.5.bin` is the USB version, if you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
+`dfu-util -e -a 1 -D respeaker_lite_usb_xmos_v2.0.5.bin` is the USB version, if you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
 :::
 
 #### Wiring
@@ -192,9 +192,9 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 * Run the following command:
 
 ```
-dfu-util -e -a 1 -D ffva_ua_v2.0.5.bin
+dfu-util -e -a 1 -D respeaker_lite_usb_xmos_v2.0.5.bin
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/flash-done.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xmos-2.0.5.png" alt="pir" width={600} height="auto" /></p>
 
 :::caution
 After flashing is completed, please restart the board.
@@ -206,7 +206,7 @@ After flashing is completed, please restart the board.
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={600} height="auto" /></p>
 
 
 ## Comparison
@@ -237,6 +237,6 @@ dfu-util -l
  dfu-util -l
  ```
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={500} height="auto" /></p>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={600} height="auto" /></p>
 
  If it's not the 2.0.5, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
