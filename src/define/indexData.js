@@ -326,7 +326,7 @@ export const exploreList = [
     ],
   },
   {
-    title: 'TinyML Workshop',
+    title: 'Workshop',
     img: 'grove',
     link: 'https://wiki.seeedstudio.com/tinyml_workshop_course_new/',
     children: [
