@@ -1,8 +1,8 @@
 ---
-description: The introduction of Meshtastic based on Wio SX1262 with XIAO esp32s3 module
-title: Wio Sx1262 XIAO ESP32S3 Kit Introduction
+description: The introduction of Wio SX1262 with XIAO esp32s3 Kit
+title: Wio SX1262 with XIAO ESP32S3 Kit Introduction
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
-slug: /wio_sx1262_xiao_esp32s3
+slug: /wio_sx1262_with_xiao_esp32s3_kit
 last_update:
   date: 09/30/2024
   author: Evelyn Chen
@@ -22,9 +22,10 @@ last_update:
 This thumb-sized LoRa development kit, which consists of the XIAO ESP32S3 and the Wio-SX1262 LoRa module, is an ideal starter kit for Meshtastic and LoRa/LoRaWAN projects. Supporting WiFi, BLE, and LoRa, it includes a built-in power management chip and can be extended via IIC, UART, and other GPIO interfaces, and is compatible with Arduino development.
 The XIAO ESP32S3 with wio-sx1262 is a single-channel LoRaWAN LoRa module with a low price and high cost performance. It is suitable for application scenarios with long distance, low power consumption, and small data volume. It supports more than 30 node devices (depending on upload interval, data payload, etc.).
 
-Seeed provides 2 applications for this Wio SX1262 XIAO ESP32S3 kit. 
+Seeed provides 3 applications for this Wio SX1262 XIAO ESP32S3 kit. 
 - Using Meshtastic for network communication
-- Configuring as Lora/Lorawan node or gateway
+- Configuring as Lora/Lorawan node 
+- Configuring as Lora/Lorawan gateway
 
 ## Features
 
