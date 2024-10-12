@@ -3497,6 +3497,7 @@ const sidebars = {
                   items: [
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Robosense_Lidar',
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/MID360',
+                    'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/Orbbec_Depth_Camera',
                     'Edge/NVIDIA_Jetson/Application/Robotics/Hardware/CSI_Camera'
                       ]},
                 
