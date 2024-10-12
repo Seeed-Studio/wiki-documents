@@ -153,13 +153,13 @@ If not using the complete ESP-IDF environment,you can also flash the binary file
 
 for Linux/MacOS:
 ```
-esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader.bin 0x10000 lorahub.bin 0x8000 partition-table.bin
+esptool.py --chip esp32c6 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader.bin 0x10000 lorahub.bin 0x8000 partition-table.bin
 ```
 
 for Windows:
 
 ```
-py -m esptool --chip esp32s3 -p COM14 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader.bin 0x10000 lorahub.bin 0x8000 partition-table.bin
+py -m esptool --chip esp32c6 -p COM14 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader.bin 0x10000 lorahub.bin 0x8000 partition-table.bin
 ```
 
 ### Wi-Fi Configuration
