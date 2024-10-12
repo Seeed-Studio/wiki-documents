@@ -157,11 +157,15 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 
 ### Usage
 
-- **Step 1:** Connect an RTC battery as mentioned above
+:::danger
+Please note that if your reComputer device has already been updated to JetPack 6 or later, the RTC will function normally without any additional configuration. If you are using JetPack 5, you will need to refer to the following content to configure the clock synchronization service.
+:::
 
-- **Step 2:** Turn on reComputer Industrial
+**Step 1:** Connect an RTC battery as mentioned above
 
-- **Step 3:** On the Ubuntu Desktop, click the drop-down menu at the top right corner, navigate to `Settings > Date & Time`, connect to a network via an Ethernet cable and select **Automatic Date & Time** to obtain the date/ time automatically
+**Step 2:** Turn on reComputer Industrial
+
+**Step 3:** On the Ubuntu Desktop, click the drop-down menu at the top right corner, navigate to `Settings > Date & Time`, connect to a network via an Ethernet cable and select **Automatic Date & Time** to obtain the date/ time automatically
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
@@ -169,7 +173,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 If you have not connected to internet via Ethernet, you can manually set the date/ time here
 :::
 
-- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time 
+**Step 4:** Open a terminal window, and execute the below command to check the hardware clock time 
 
 ```sh
 sudo hwclock
@@ -179,29 +183,29 @@ You will see the output something like below which is not the correct date/ time
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/14.png"/></div>
 
-- **Step 5:** Change the hardware clock time to the current system clock time by entering the below command
+**Step 5:** Change the hardware clock time to the current system clock time by entering the below command
 
 ```sh
 sudo hwclock --systohc
 ```
 
-- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board 
+**Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board 
 
 ```sh
 sudo reboot
 ```
 
-- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
+**Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
 
 Now we will create a script to always sync the system clock from the hardware clock in each boot.
 
-- **Step 8:** Create a new shell script using any text editor of your preference. Here we use **vi** text editor
+**Step 8:** Create a new shell script using any text editor of your preference. Here we use **vi** text editor
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **Step 9:** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file
+**Step 9:** Enter **insert mode** by pressing **i**, copy and paste the following content inside the file
 
 ```sh
 #!/bin/bash
@@ -209,19 +213,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **Step 10:** Make the script executable
+**Step 10:** Make the script executable
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-- **Step 11:** Create a systemd file
+**Step 11:** Create a systemd file
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file 
+**Step 12:** Add the following inside the file 
 
 ```sh
 [Unit]
@@ -234,26 +238,26 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **Step 13:** Reload systemctl daemon
+**Step 13:** Reload systemctl daemon
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-- **Step 14:** Enable the newly created service to start on boot and start the service
+**Step 14:** Enable the newly created service to start on boot and start the service
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **Step 15:** Verify the script is up and running as a systemd service
+**Step 15:** Verify the script is up and running as a systemd service
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
+**Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
 
 ## M.2 Key M
 
