@@ -73,7 +73,7 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
 
-* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/ffva_i2s_v1.0.7.bin)
+* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_i2s_xiao_1.0.7.bin)
 
 :::tip
 **Change log**:<br/>
@@ -86,7 +86,7 @@ Before we start this chapter, please make sure the ReSpeaker Lite's firmware is 
 Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
 
 ```
-dfu-util -e -a 1 -D ffva_i2s_v1.0.7.bin
+dfu-util -e -a 1 -D respeaker_lite_i2s_xiao_1.0.7.bin
 ```
 
 :::caution
@@ -99,7 +99,7 @@ Check the firmware version:
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver.png" alt="pir" width={500} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver.png" alt="pir" width={600} height="auto" /></p>
 
 
 
