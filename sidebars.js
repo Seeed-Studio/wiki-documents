@@ -1974,6 +1974,23 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Wio-SX1262',
+              items: [
+                'Sensor/Wio_Series/Wio_SX1262/Introduction',
+                //'Sensor/Wio_Series/Wio_SX1262/How_to_build_a_lora_sensor',
+                {
+                  type: 'category',
+                  label: 'Wio SX1262 with XIAO ESP32S3 Kit',
+                  items: [
+                    'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Introduction',
+                    'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Get_Started_meshtastic',
+                    //'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Get_Started_lora',
+                  ],
+                },
+              ],
+            },
+                        {
+              type: 'category',
               label: 'Wio Tracker 1110 Dev Board',
               items: [
                 'Sensor/Wio_Series/Wio_Tracker_1110_Dev_Board/Introduction',
@@ -2301,14 +2318,6 @@ const sidebars = {
         id: 'Network/Meshtastic_Network/meshtastic_intro',
       },
       items: [
-            {
-              type: 'category',
-              label: 'XIAO ESP32S3 for Meshtastic and LoRa',
-              items: [
-                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Introduction',
-                'Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_meshtastic',
-              ],
-            },
 
             {
               type: 'category',
