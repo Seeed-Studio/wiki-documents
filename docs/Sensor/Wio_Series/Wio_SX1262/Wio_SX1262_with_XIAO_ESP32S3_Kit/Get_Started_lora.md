@@ -1,11 +1,3 @@
-<!--
- * @Author: cure123123 72863081+cure123123@users.noreply.github.com
- * @Date: 2024-10-09 10:33:57
- * @LastEditors: cure123123 72863081+cure123123@users.noreply.github.com
- * @LastEditTime: 2024-10-10 12:58:14
- * @FilePath: /wiki-documents/docs/Network/Meshtastic_Network/XIAO_ESP32S3_for_Meshtastic_and_LoRa/Get_Started_lora.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 ---
 description: Lorawan based on Wio SX1262 with XIAO esp32s3 module
 title: Get Started for Lora
