@@ -1,0 +1,92 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+
+.index_container {
+  // max-width: 1440px;
+  // margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
+
+  .index_banner {
+    .banner_item {
+      display: flex;
+      padding: 6% 0;
+
+      .banner_item_info {
+        flex: 1;
+        align-self: center;
+
+        .banner_item_info_title {
+          font-size: 38px;
+          font-weight: 600;
+          line-height: 1.3;
+          margin-bottom: 0;
+        }
+
+        .green {
+          color: #89b929;
+        }
+
+        .banner_description {
+          margin: 20px 0;
+        }
+      }
+
+      .banner_item_img {
+        flex: 1;
+
+        img {}
+      }
+
+      .banner_btn {
+
+        .banner_btn_item {
+          color: var(--ifm-heading-color);
+          padding: 8px 16px;
+          margin-right: 20px;
+          background-color: var(--ifm-navbar-background-color);
+          border-radius: 50px;
+        }
+
+        .green {
+          background-color: #8FC31F;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+html[data-theme='light'] {
+  
+
+  .index_container {
+    background-color: #F3F5F8;
+
+    .index_banner {
+
+      background-color: #fff;
+
+      .banner_btn {
+
+        .banner_btn_item {
+          background: #F5F5F5;
+        }
+
+        .green {
+          background-color: #8FC31F;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+}
