@@ -3148,6 +3148,13 @@ const sidebars = {
                                    'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_with_codesys_use_modbus_rtu',
                                   ],
                                 },
+                                {
+                                  type: 'category',
+                                  label: 'ThingsBoard',
+                                  items: [
+                                     'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/tb/recomputer_r1000_thingsboard_ce',
+                                    ],
+                                  },
    
                           
                     ],
