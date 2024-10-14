@@ -9,7 +9,7 @@ image: https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Mod
 slug: /get_start_l76k_gnss
 sidebar_position: 0
 last_update:
-  date: 2024-07-25T09:03:13.513Z
+  date: 2024-10-14
   author: Spencer
 ---
 
@@ -349,8 +349,10 @@ struct CASIC_Messages {
 
 ## Resources
 
+- **PDF**: [L76K GNSS Module for Seeed Studio XIAO Schematic](https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/L76K/109100021-L76K-GNSS-Module-for-Seeed-Studio-XIAO-Schematic.pdf)
 - **PDF**: [Quectel_L76K_GNSS_协议规范_V1.0](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_协议规范_V1.0.pdf)
 - **PDF**: [Quectel_L76K_GNSS_Protocol_Specification_V1.1](https://raw.githubusercontent.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO/fb74b715224e0ac153c3884e578ee8e024ed8946/docs/Quectel_L76K_GNSS_Protocol_Specification_V1.1.pdf)
+- **GitHub**: [Seeed_L76K-GNSS_for_XIAO](https://github.com/Seeed-Projects/Seeed_L76K-GNSS_for_XIAO)
 
 ## Troubleshooting
 
