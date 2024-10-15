@@ -46,7 +46,7 @@ last_update:
 Hardware requirements depend on the chosen database and the number of devices connected to the system. To run ThingsBoard with PostgreSQL, you will need **at least 4GB of RAM**.
 :::
 
-### Step 1: Install Java 17 (OpenJDK)
+## Step 1: Install Java 17 (OpenJDK)
 
 ThingsBoard requires Java 17 to run.Open Terminal.
 
@@ -67,7 +67,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    java -version
 
 
-### Step 2: Install ThingsBoard Service
+## Step 2: Install ThingsBoard Service
 
 1. Download the ThingsBoard `.deb` package:
    ```bash
@@ -77,7 +77,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    ```bash
    sudo dpkg -i thingsboard-3.8.deb
 
-### Step 3: Install PostgreSQL Database
+## Step 3: Install PostgreSQL Database
 
 1. Install **wget** if not already installed:
    ```bash
@@ -104,7 +104,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    CREATE DATABASE thingsboard;
    ```
 
-### Step 4: Configure ThingsBoard
+## Step 4: Configure ThingsBoard
 
 1. Open the ThingsBoard configuration file:
    ```bash
@@ -126,7 +126,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    export JAVA_OPTS="$JAVA_OPTS -Xms2G -Xmx2G"
    ```
 
-### Step 5: Run Installation Script
+## Step 5: Run Installation Script
 
 1. Execute the ThingsBoard installation script:
    ```bash
@@ -135,7 +135,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
 
    The `--loadDemo` option will load demo data such as users, devices, assets, and more.
 
-### Step 6: Start ThingsBoard Service
+## Step 6: Start ThingsBoard Service
 
 Start the ThingsBoard service:
 ```bash
@@ -164,3 +164,17 @@ For additional log files:
 /var/log/thingsboard
 ```
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/openingwindow.PNG" style={{width:600}}/></div>
+
+## Tech Support & Product Discussion
+
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+
+<div class="button_tech_support_container">
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
+</div>
+
+<div class="button_tech_support_container">
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
+</div>

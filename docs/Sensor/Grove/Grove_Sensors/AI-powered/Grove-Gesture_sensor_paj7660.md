@@ -568,7 +568,7 @@ There are three different modes of the Grove Gesture Sensor. We have completed t
 
 - **[ZIP]** [Grove Gesture Sensor SCH&PCB](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/Grove-Smart-IR-Gesture-Sensor_v1.0_SCH&PCB.zip)
 - **[PDF]** [Grove Gesture Sensor SCH](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/Grove-Smart-IR-Gesture-Sensor_v1.0_SCH_PDF.pdf)
-- **[Datasheet]** [PAG7661QN_FW_Datasheet_V1.0.pdf](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/PAG7661QN_FW-DS_V0.8_05072022_Confidential.pdf)
+- **[Datasheet]** [PAG7661QN_FW-DS_V0.8_05072022_Confidential.pdf](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/PAG7661QN_FW-DS_V0.8_05072022_Confidential.pdf)
 
 
 ## Tech Support & Product Discussion
