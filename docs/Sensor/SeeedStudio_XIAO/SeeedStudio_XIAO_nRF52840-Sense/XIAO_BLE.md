@@ -3,10 +3,10 @@ description: Getting Started with Seeed Studio XIAO nRF52840 (Sense)
 title: Getting Started with XIAO nRF52840
 keywords:
   - xiao
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg
 slug: /XIAO_BLE
 last_update:
-  date: 2024-07-16T06:09:39.067Z
+  date: 2024-10-15T11:15:24+08:00
   author: Spencer
 ---
 
@@ -14,7 +14,12 @@ last_update:
 
 <meta name="google-site-verification" content="2bq3L0F_PFVokQM-qT-al7x9FcSNJOO8TtJfAHW43lE" />
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" alt="pir" width={700} height="auto" /></p>
+<div style={{ textAlign: 'center' }}>
+  <img src="https://files.seeedstudio.com/wiki/XIAO-BLE/1-102010469-Seeed-Studio-XIAO-nRF52840-Sense-45font.jpg" 
+  style={{ width: 480, height: 'auto', "border-radius": '12.8px' }} 
+  />
+</div>
+<br></br>
 
 As the first wireless product in the Seeed Studio XIAO family, **Seeed Studio XIAO nRF52840** is equipped with a powerful **Nordic nRF52840 MCU** which integrates **Bluetooth 5.0** connectivity. Meanwhile, it has a **small and exquisite form-factor** which can be used for wearable devices and Internet of Things projects. The **single-sided surface-mountable design** and the onboard **Bluetooth antenna** can greatly facilitate the rapid deployment of IoT projects.
 
