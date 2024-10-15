@@ -1215,7 +1215,7 @@ a.getting_started:hover .getting_started_label3 {
 
 .button_edgelab {
 	display: inline-block;
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai2.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
 	background-size: cover;
 	background-position: center;
 	margin: auto;
@@ -1231,14 +1231,14 @@ a.getting_started:hover .getting_started_label3 {
 	border: 1px solid #ffffff;
 	border-radius: 8px;
 	transition: transform 0.2s ease-in-out;
-	width: 800px; /* 按钮宽度 */
-	height: 365px; /* 按钮高度 */
+	width: 1000px; /* 按钮宽度 */
+	height: 500px; /* 按钮高度 */
 }
 
 .button_edgelab:hover {
 	margin: auto;
 	transform: scale(1.1);
-	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/sensecraftai.png');
+	background-image: url('https://files.seeedstudio.com/wiki/tinyml-topic/edgelab.png');
 	background-size: cover;
 }
 
@@ -1270,7 +1270,6 @@ a.getting_started:hover .getting_started_label3 {
 	transform: scale(1.1);
 
 }
-
 .button_edgeimpulse {
 	margin: auto;
 	display: inline-block;
@@ -1636,10 +1635,6 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	transform: scale(1.1);
 }
 
-/* .DocSearch-HitsFooter a {
-	display: none;
-} */
-
 [data-theme='light'] .DocSearch {
 	/* --docsearch-primary-color: var(--ifm-color-primary); */
 	/* --docsearch-text-color: var(--ifm-font-color-base); */
@@ -1684,7 +1679,6 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 	font-family: 'Montserrat';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-Regular.otf');
 }
-
 @font-face {
 	font-family: 'Montserrat-SemiBold';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-SemiBold.otf');
@@ -1693,4 +1687,17 @@ a.reComputer_compare:hover .reComputer_compare_label3 {
 @font-face {
 	font-family: 'Montserrat-bold';
 	src: url('https://files.seeedstudio.com/wiki/Montserrat-bold.otf');
+}
+
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 显示的行数 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ellipsis-1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
