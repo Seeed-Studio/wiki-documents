@@ -1794,6 +1794,7 @@ const sidebars = {
                 'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
               ],
         },
+        'Sensor/ReSpeaker_Lite/respeaker_enclosure',
           ],
     },
 
