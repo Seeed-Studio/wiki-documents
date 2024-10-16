@@ -258,7 +258,7 @@ When multiple light panels are spliced together, they may become hot and under-p
 ## Resources
 
 - **[ZIP]** [PCB&SCH Eagle file](https://files.seeedstudio.com/wiki/xiao-rgb-matrix/EAGLE_XIAO_MATRIX.zip)
-- **[PDF]** [Datasheet - WS2812B](https://files.seeedstudio.com/wiki/xiao-rgb-matrix/WS2812B-1010-DATASHEET.pdf")
+- **[PDF]** [Datasheet - WS2812B](https://files.seeedstudio.com/wiki/xiao-rgb-matrix/WS2812B-1010-DATASHEET.pdf)
 
 ## Tech Support & Product Discussion
 
