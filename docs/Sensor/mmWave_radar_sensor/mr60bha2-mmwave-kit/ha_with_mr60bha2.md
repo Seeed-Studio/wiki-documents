@@ -38,7 +38,7 @@ This integration empowers users to enhance their smart home systems with advance
       <tr>
          <td>
             <div class="get_one_now_container" style={{textAlign: 'center'}}>
-               <a class="get_one_now_item" href="https://www.seeedstudio.com"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+               <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html?utm_source=wiki"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
             </div>
          </td>
       </tr>
@@ -213,7 +213,7 @@ To get started with ESPHome, follow these steps:
 
    ```yaml showLineNumbers title=example/mr60bha2.yaml
    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-   
+
    substitutions:
      name: "seeedstudio-mr60bha2-kit"
      friendly_name: "Seeed Studio MR60BHA2 Kit"
