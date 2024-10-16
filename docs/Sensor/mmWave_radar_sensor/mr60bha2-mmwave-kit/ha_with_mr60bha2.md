@@ -201,7 +201,7 @@ Here's how to implement automations step-by-step:
 
 By leveraging Home Assistant's automation capabilities, you can create a truly smart environment that responds to your movements and health metrics, ensuring that your living space adapts to your lifestyle seamlessly.
 
-### Modifying the Firmware with ESPHome
+## Modifying the Firmware with ESPHome
 
 One of the significant advantages of using the XIAO ESP32C6 is its compatibility with ESPHome, a powerful tool for managing and customizing your microcontroller firmware. With ESPHome, you can directly modify the firmware to tailor the functionality of the MR60BHA2 mmWave Sensor to your specific needs.
 
@@ -211,8 +211,9 @@ To get started with ESPHome, follow these steps:
 
 2. **Create a New Configuration**: Click on the device to open its configuration. Here, you can adjust settings such as the sensor's sensitivity, reporting intervals, and output formats. ESPHome uses a YAML configuration format, which is user-friendly and allows you to define various parameters. You can use the following template YAML file as a starting point for your configuration, which is designed specifically for the MR60BHA2 Sensor:
 
-   ```yaml showLineNumbers title=example/mr60bha2-card.yaml
+   ```yaml showLineNumbers title=example/mr60bha2.yaml
    # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
+   
    substitutions:
      name: "seeedstudio-mr60bha2-kit"
      friendly_name: "Seeed Studio MR60BHA2 Kit"
