@@ -16,6 +16,8 @@ last_update:
   author: Kasun Thushara
 ---
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/thingsboard_blue.png" style={{width:600}}/></div>
+
 ## Introduction
 
 [ThingsBoard](https://thingsboard.io/) is an open-source IoT platform designed for rapid development, management, and scaling of IoT projects. It offers an out-of-the-box solution for both cloud and on-premises IoT infrastructure, enabling you to provision devices, manage assets, collect and visualize data, and analyze telemetry with ease. In this guide, we will walk through the installation of ThingsBoard Community Edition on a reComputer, providing a robust foundation for your IoT applications.
