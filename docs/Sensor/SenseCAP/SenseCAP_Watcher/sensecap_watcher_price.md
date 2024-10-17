@@ -3,7 +3,7 @@ description: This article describes Watcher's charging plan on using SenseCraft 
 title: Price and Benefits
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png
 slug: /watcher_price
-sidebar_position: 2
+sidebar_position: 3
 last_update:
   date: 08/19/2024
   author: Citric
