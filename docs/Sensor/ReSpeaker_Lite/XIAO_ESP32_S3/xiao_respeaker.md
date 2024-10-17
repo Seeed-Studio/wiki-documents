@@ -62,10 +62,11 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/front.png" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/back.png" alt="pir" width={800} height="auto" /></p>
 
+### Schematic
 
-### Hardware Flowchart
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_v1.0_sch_1.png" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/flow-chart.png" alt="pir" width={800} height="auto" /></p>
+
 
 ### Flash the I2S firmware
 
@@ -73,10 +74,10 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
 
-* [I2S Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_i2s_xiao_1.0.7.bin)
+* [I2S 1.0.8 Version Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_i2s_dfu_firmware_v1.0.8.bin)
 
-:::tip
-**Change log**:<br/>
+:::tip Change log
+**v1.0.8**: support new flash ZB25VQ32D<br/>
 **v1.0.7**: support i2c control speaker mute and output channels<br/>
 **v1.0.6**: change PRODUCT_STR to ReSpeaker Lite, fix ws2812 control bug<br/>
 **v1.0.5**: support i2c read vnr value
@@ -86,7 +87,7 @@ Before we start this chapter, please make sure the ReSpeaker Lite's firmware is 
 Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
 
 ```
-dfu-util -e -a 1 -D respeaker_lite_i2s_xiao_1.0.7.bin
+dfu-util -e -a 1 -D respeaker_lite_i2s_dfu_firmware_v1.0.8.bin
 ```
 
 :::caution
@@ -99,7 +100,7 @@ Check the firmware version:
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/i2s108-version.png" alt="pir" width={600} height="auto" /></p>
 
 
 

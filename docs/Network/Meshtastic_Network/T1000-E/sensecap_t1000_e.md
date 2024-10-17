@@ -13,29 +13,17 @@ last_update:
 ## Video Tutorial
 
 
+### Part 1: Unboxing Setup
 
-<div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
-  <div style={{ textAlign: 'center' }}>
-    <a href="https://www.youtube.com/watch?v=9sCHpWPSPcw" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.youtube.com/vi/9sCHpWPSPcw/0.jpg" alt="Unboxing Setup" width="320" height="180" />
-    </a>
-    <center><b><font size="4。5">Unboxing Setup</font></b></center>
-  </div>
-  
-  <div style={{ textAlign: 'center' }}>
-    <a href="https://www.youtube.com/watch?v=8p34S_9DDEQ" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.youtube.com/vi/8p34S_9DDEQ/0.jpg" alt="Status Indicators" width="320" height="180" />
-    </a>
-    <center><b><font size="4.5">Status Indicators</font></b></center>
-  </div>
-  
-  <div style={{ textAlign: 'center' }}>
-    <a href="https://www.youtube.com/watch?v=li6DTOeXK3M" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.youtube.com/vi/li6DTOeXK3M/0.jpg" alt="Flash New Firmware" width="320" height="180" />
-    </a>
-    <center><b><font size="4.5">Flash New Firmware</font></b></center>
-  </div>
-</div>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Part 2: Status Indicators
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/8p34S_9DDEQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Part 3: Flash New Firmware
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/li6DTOeXK3M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
@@ -48,7 +36,6 @@ Download `Meshtastic` App:
 * [Android App](https://meshtastic.org/docs/category/android-app/)
 
 
-## Get Started
 
 
 ### Power on the device
