@@ -109,34 +109,33 @@ When `output_format` is set to 1, the structure of the UART output packet is as 
 
 ```json
 {
-      "prompt": "monitor a cat",
+      "prompt": "People detected",
       "big_image": "base64 encoded JPG image, if include_big_image is enabled, otherwise this field is omitted",
-      "small_image": "base64 encoded JPG image, if include_small_image is enabled, otherwise this field is omitted",
-      "boxes": [
-         {
-            "x": 100,
-            "y": 100,
-            "w": 50,
-            "h": 60,
-            "score": 0.8,
-            "target_cls_id": 1
-         }
-      ]
+      "inference":{
+        "boxes": [
+            {
+                "x": 100,
+                "y": 100,
+                "w": 50,
+                "h": 60,
+                "score": 0.8,
+                "target_cls_id": 1
+            }
+        ],
+        "classes_name": ["person"]
+      },
+
 }
 ```
+Among them, **(x,y)** is the center point position of the recognized object, and **(w,h)** is the height and width of the recognition box, as shown in the figure below. **score** is confidence level, **target_cls_id** is recognized object id.
 
-The JSON packet is separated by `\r\n`.
-
-:::note
-The recognised boxes (boxes) message will not be received at this time, as the corresponding feature of Watcher is still under development and has not yet been reported in the latest v1.1 release.
-:::
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/xyhw.png" style={{width:400, height:'auto'}}/></div>
 
 ### Configuration Options
 
 - `output_format`: Controls the format of the UART output, default is 1 (JSON format).
 - `text`: Used to fill the `prompt` field of the output packet.
 - `include_big_image`: Boolean (true | false), controls whether the big image is included in the output, default is `true`.
-- `include_small_image`: Boolean (true | false), controls whether the small image is included in the output, default is `true`.
 - `include_boxes`: Boolean (true | false), controls whether the boxes are included in the output, default is `true`.
 
 Note: If any configuration field is omitted, the default value will be implied.
@@ -242,39 +241,41 @@ void loop() {
       Serial.println(doc["prompt"].as<String>());
     }
 
+    if (doc.containsKey("inference")) {
+      Serial.print("inference: ");
+      Serial.println(doc["inference"].as<String>());
+    }
+
+   if (doc.containsKey("inference")) {
+     JsonArray boxes = doc["inference"]["boxes"][0].as<JsonArray>();
+      Serial.println();
+      Serial.println("You can get the number inside the boxes.");
+      Serial.print("Box -> ");
+      Serial.print("x: ");
+      Serial.print(boxes[0].as<int>());
+      Serial.print(", y: ");
+      Serial.print(boxes[1].as<int>());
+      Serial.print(", widths: ");
+      Serial.print(boxes[2].as<int>());
+      Serial.print(", height: ");
+      Serial.print(boxes[3].as<int>());
+      Serial.print(", score: ");
+      Serial.print(boxes[4].as<int>());
+      Serial.print(", target_cls_id: ");
+      Serial.println(boxes[5].as<int>());
+   }
+    
+    // You need to turn on "Inculde base64 iamge" button in your app, default is off.
+    //And then, uncomment the following code.
+    /*
     if (doc.containsKey("big_image")) {
       Serial.print("big_image: ");
       String big_imageData = doc["big_image"].as<String>();
       // Print only the first 100 characters of the image data for example
       Serial.println(big_imageData.substring(0, 100) + "...");
     }
+    */
 
-    if (doc.containsKey("small_image")) {
-      Serial.print("small_image: ");
-      String small_imageData = doc["small_image"].as<String>();
-      // Print only the first 100 characters of the image data for example
-      Serial.println(small_imageData.substring(0, 100) + "...");
-    }
-
-    // Watcher has not yet been developed and will not output this message at this time
-//    if (doc.containsKey("boxes")) {
-//      JsonArray boxes = doc["boxes"].as<JsonArray>();
-//      for (JsonObject box : boxes) {
-//        Serial.print("Box - ");
-//        Serial.print("x: ");
-//        Serial.print(box["x"].as<int>());
-//        Serial.print(", y: ");
-//        Serial.print(box["y"].as<int>());
-//        Serial.print(", widths: ");
-//        Serial.print(box["w"].as<int>());
-//        Serial.print(", height: ");
-//        Serial.print(box["h"].as<int>());
-//        Serial.print(", score: ");
-//        Serial.print(box["score"].as<float>());
-//        Serial.print(", target_cls_id: ");
-//        Serial.println(box["target_cls_id"].as<int>());
-//      }
-//    }
 
     count++;
     if(count > 2147483646){  // Spillage prevention
@@ -287,7 +288,6 @@ void loop() {
   }
 }
 ```
-
 The provided code demonstrates how to receive and parse JSON data from Watcher using the Arduino IDE and the ArduinoJson library. Here's a brief explanation of the code:
 
 1. The necessary library, **ArduinoJson**, is included to handle JSON parsing. You can search for and install it in Arduino's library manager.
