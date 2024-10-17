@@ -245,6 +245,25 @@ void loop() {
       Serial.print("inference: ");
       Serial.println(doc["inference"].as<String>());
     }
+
+   if (doc.containsKey("inference")) {
+     JsonArray boxes = doc["inference"]["boxes"][0].as<JsonArray>();
+      Serial.println();
+      Serial.println("You can get the number inside the boxes.");
+      Serial.print("Box -> ");
+      Serial.print("x: ");
+      Serial.print(boxes[0].as<int>());
+      Serial.print(", y: ");
+      Serial.print(boxes[1].as<int>());
+      Serial.print(", widths: ");
+      Serial.print(boxes[2].as<int>());
+      Serial.print(", height: ");
+      Serial.print(boxes[3].as<int>());
+      Serial.print(", score: ");
+      Serial.print(boxes[4].as<int>());
+      Serial.print(", target_cls_id: ");
+      Serial.println(boxes[5].as<int>());
+   }
     
     // You need to turn on "Inculde base64 iamge" button in your app, default is off.
     //And then, uncomment the following code.
