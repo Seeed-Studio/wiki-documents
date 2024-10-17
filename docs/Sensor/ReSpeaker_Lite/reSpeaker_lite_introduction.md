@@ -94,10 +94,18 @@ ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, j
 ### Update firmware
 
 
-* [Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_usb_xmos_v2.0.5.bin)
+* [USB 2.0.7 version Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_usb_dfu_firmware_v2.0.7.bin)
 
-:::tip
-`dfu-util -e -a 1 -D respeaker_lite_usb_xmos_v2.0.5.bin` is the USB version, if you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
+
+:::tip Change log
+**v2.0.7**: support new flash ZB25VQ32D<br/>
+**v2.0.6**: set high to WS2812_PIN to give up the control of WS2812 after boot
+:::
+
+:::caution tip
+`respeaker_lite_usb_dfu_firmware_v2.0.7.bin` is the USB version
+
+If you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
 :::
 
 #### Wiring
@@ -192,9 +200,9 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 * Run the following command:
 
 ```
-dfu-util -e -a 1 -D respeaker_lite_usb_xmos_v2.0.5.bin
+dfu-util -e -a 1 -D respeaker_lite_usb_dfu_firmware_v2.0.7.bin
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/xmos-2.0.5.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207.png" alt="pir" width={600} height="auto" /></p>
 
 :::caution
 After flashing is completed, please restart the board.
@@ -206,7 +214,7 @@ After flashing is completed, please restart the board.
 dfu-util -l
 ```
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
 
 ## Comparison
@@ -232,11 +240,12 @@ dfu-util -l
 
 * **Can't find the `ReSpeaker Lite` sound device.**
 
- Check the firmware version, make sure it's `2.0.5`.
+ Check the firmware version, make sure the firmware is USB version and above`2.0.5`.
+
  ```
  dfu-util -l
  ```
 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/check-ver2.png" alt="pir" width={600} height="auto" /></p>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
 
- If it's not the 2.0.5, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
+ If it's not USB version, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
