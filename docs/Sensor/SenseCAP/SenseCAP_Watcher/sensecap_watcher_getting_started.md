@@ -1,7 +1,7 @@
 ---
 description: SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
 title: Quick Start Guide
-image: https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG
+image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg
 slug: /getting_started_with_watcher
 sidebar_position: 2
 last_update:
@@ -59,6 +59,10 @@ If the device won't turn on with a long press, the device may be low on power an
 :::
 
 ### Step 3. Device Binding
+
+:::caution
+[SenseCraft Pro](https://wiki.seeedstudio.com/watcher_price/) will automatically activate the trial service when your device is tethered to the SenseCraft APP.
+:::
 
 After powering on your Watcher, if it has not been previously bound to a device, it will prompt you to connect to the SenseCraft app. Alternatively, you can find the "Connect to APP" option in the Settings menu. The Watcher will then display a QR code to download the SenseCraft app.
 

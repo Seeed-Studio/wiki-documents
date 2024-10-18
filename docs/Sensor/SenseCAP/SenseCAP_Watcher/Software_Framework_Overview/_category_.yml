@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: 'Software Framework Overview'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: 'watcher_software_framework_overview'
+link:
+  type: generated-index
+  slug: watcher_software_framework_overview
+  title: Watcher Software Framework Overview
+  description: This section focuses on Watcher's software framework, including how to deploy Watcher's AI services locally, task flow, and more.
