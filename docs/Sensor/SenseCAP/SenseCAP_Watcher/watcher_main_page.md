@@ -19,7 +19,10 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Watch Video</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div>
 

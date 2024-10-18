@@ -1,22 +1,28 @@
 ---
 description: You will gain a solid foundation in understanding the different types of tasks that Watcher can perform and how they are organized within the SenseCraft ecosystem.
-title: 1# How to assign tasks to Watcher
+title: Task Assignment Guideline
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/85.png
 slug: /getting_started_with_watcher_task
-sidebar_position: 2
+sidebar_position: 3
 last_update:
-  date: 07/02/2024
+  date: 10/18/2024
   author: Citric
 ---
 
 
-# How to assign tasks to Watcher
+# Task Assignment Guideline
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/85.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div><br />
 
@@ -393,22 +399,6 @@ By leveraging the Push to Talk feature, you can effortlessly send tasks and enga
 :::note
 If you encounter an error of **0x7002**, it means that the current Watcher's network status is not good and the audio service call failed, please change the network or location and retry again.
 :::
-
-## Resources
-
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
-
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
-
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
-
-- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
-
-- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
-
-- Watcher Quick Start Series 5# : Training a model for Watcher
-
-- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## Tech Support & Product Discussion
 
