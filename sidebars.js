@@ -1015,6 +1015,7 @@ const sidebars = {
           label: 'MR60FDA2 mmWave kit',
           items: [
             'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/ha_with_mr60fda2',
           ],
         },
         {
