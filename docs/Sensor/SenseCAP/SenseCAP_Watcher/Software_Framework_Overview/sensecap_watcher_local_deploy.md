@@ -1,11 +1,11 @@
 ---
 description: This tutorial will guide on how to deploy Watcher's AI service locally off the SenseCraft service to use Watcher.
-title: 4# Deploy Watcher's AI capabilities locally
+title: Deploy Watcher's AI capabilities locally
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/87.png
 slug: /watcher_local_deploy
-sidebar_position: 5
+sidebar_position: 1
 last_update:
-  date: 07/10/2024
+  date: 10/18/2024
   author: Citric
 ---
 
@@ -17,6 +17,12 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
+    </a>
 </div><br />
 
 SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. While Watcher can utilize SenseCraft AI services, it also provides the option to deploy AI capabilities locally on your own devices, giving you greater control, privacy, and flexibility.
@@ -24,7 +30,6 @@ SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space a
 In this comprehensive guide, we will walk you through the process of setting up and deploying Watcher's AI services on your local devices. Whether you're using a Windows PC, a MacOS machine, or an NVIDIA® Jetson AGX Orin, we'll provide step-by-step instructions to help you harness the power of Watcher's AI capabilities in your own environment.
 
 Throughout this guide, we'll cover the necessary software and hardware preparations, the deployment process for each supported platform, and how to effectively utilize Watcher's local AI services to unlock new possibilities and enhance your productivity. By the end of this guide, you'll have a solid understanding of how to leverage Watcher's AI capabilities on your own devices, empowering you to create intelligent and personalized solutions tailored to your needs.
-
 
 ## Software Preparation
 
@@ -247,23 +252,6 @@ Please note that it is important to make sure that your computer meets the recom
 By completing these steps, you can harness the power of Watcher's AI services directly on your device, ensuring enhanced privacy and the ability to conveniently customize your own integrated system. With Watcher's AI capabilities running locally, you can perform advanced tasks, analysis, and automation securely and efficiently, all while keeping your data under your control.
 
 We will continue to add tutorials on using **[HTTP Message Block](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool/#http-message-block)** for message push after localised deployment in the Application directory, so stay tuned!
-
-## Resources
-
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
-
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
-
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
-
-- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
-
-- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
-
-- Watcher Quick Start Series 5# : Training a model for Watcher
-
-- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
-
 
 ## Tech Support & Product Discussion
 

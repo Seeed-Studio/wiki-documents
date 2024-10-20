@@ -1,9 +1,9 @@
 ---
 description: This article provides a detailed setup guide for configuring the Watcher device in three different processing deployment flows,including Cloud Efficient Processing Flow, Hybrid Smart Processing Flow, and Local Secure Processing Flow. It offers an overview of the Watcher software service framework, illustrating the interactions between the user, SenseCraft Mate app, and Watcher device.
-title: 7# Watcher Software Service Framework
+title: Watcher Software Service Framework
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
 slug: /watcher_software_service_framework
-sidebar_position: 7
+sidebar_position: 2
 last_update:
   date: 10/09/2024
   author: Evelyn Chen
@@ -11,6 +11,7 @@ last_update:
 
 
 # Framework Overview
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.png" style={{width:800, height:'auto'}}/></div>
 
 This is the software service framework for the Watcher, illustrating the interactions and task flow between the user, the SenseCraft Mate app, and the Watcher device. We offer multiple configuration options that allow users to customize their service deployment based on their data security and service quality requirements.
@@ -182,26 +183,6 @@ Watcher can notify users or local systems using the following methods:
 
 Additionally, Watcher can send data to local servers, third-party applications, or alert services such as Discord, Home Assistant, and IFTTT.
 For more details, refer to section HTTP Proxy Application.
-
-## Resources
-
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
-
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
-
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
-
-- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
-
-- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
-
-- Watcher Quick Start Series 5# : Training a model for Watcher
-
-- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
-
-- [Watcher Quick Start Series 7# : Watcher software service framework](https://wiki.seeedstudio.com/watcher_software_service_framework)
-
-- Watcher Quick Start Series 8# : Watcher http proxy application
 
 ## Tech Support & Product Discussion
 

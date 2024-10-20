@@ -1,14 +1,15 @@
 ---
 description: Deploy AI model from SenseCraft on Watcher
-title: SenseCraft Watcher
+title: Training Model for Watcher
 image: "https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png"
-slug: /sensecraft_ai_for_watcher
-sidebar_position: 7
+slug: /training_model_for_watcher
+sidebar_position: 2
 last_update:
   date: 10/9/2024
   author: Jason
 ---
-# SenseCraft Deploy your AI Model on Watcher
+
+# Training Model for Watcher
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png" style={{width:1000, height:'auto'}}/></div>
 

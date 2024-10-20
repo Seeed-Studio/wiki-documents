@@ -3,9 +3,9 @@ description: This article describes Watcher's charging plan on using SenseCraft 
 title: Price and Benefits
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png
 slug: /watcher_price
-sidebar_position: 2
+sidebar_position: 3
 last_update:
-  date: 08/19/2024
+  date: 10/18/2024
   author: Citric
 ---
 
@@ -15,12 +15,72 @@ At Watcher, we believe in providing developers with a clear and transparent pric
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
 
+## Our Pricing Plans
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
-    </a>
-</div><br />
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<th> </th>
+      <th>On-Premise</th>
+			<th>SenseCraft Standard</th>
+      <th>SenseCraft Pro</th>
+		</tr>
+		<tr>
+			<th>Data Retention</th>
+			<td align="center">Save by user</td>
+			<td align="center">3 Months</td>
+			<td align="center">3 Months</td>
+		</tr>
+		<tr>
+			<th>Data API</th>
+			<td align="center">Local HTTP API</td>
+			<td align="center">MQTT/HTTP API</td>
+			<td align="center">MQTT/HTTP API</td>
+		</tr>
+		<tr>
+			<th>Task Analysis</th>
+			<td align="center">Unlimited</td>
+			<td align="center">Unlimited</td>
+			<td align="center">Unlimited</td>
+		</tr>
+		<tr>
+			<th>Image Analysis</th>
+			<td align="center">Unlimited</td>
+			<td align="center">15 Minutes/Request</td>
+			<td align="center">20000 Requests</td>
+		</tr>
+		<tr>
+			<th>Chat with LLM</th>
+			<td align="center">Unlimited</td>
+			<td align="center">200 Requests/Month</td>
+			<td align="center">1000 Requests</td>
+		</tr>
+		<tr>
+			<th>TinyML Model and Model Training</th>
+			<td align="center">Unlimited</td>
+			<td align="center">Unlimited</td>
+			<td align="center">Unlimited</td>
+		</tr>
+    <tr>
+			<th>Price</th>
+			<td align="center">Free</td>
+			<td align="center">Free</td>
+			<td align="center">One free trial & 6.9 USD Plan</td>
+		</tr>
+	</table>
+</div>
+
+:::caution
+1. SenseCraft Pro's paid plans are tied to the EUI of each device. This means that if you have five devices that all want to use SenseCraft Pro, you will need to pay for them separately.
+
+2. SenseCraft Pro's billing service is based on the number of Requests. When you purchase the service, you will get the number of Requests provided by the service, in which there is no expiry date.
+
+3. SenseCraft Pro will automatically activate the trial service when your device is tethered to the SenseCraft APP.
+
+4. SenseCraft Pro activates the trial and accounts for all the Requests in the form at once, and then automatically switches to SenseCraft Standard when you're done using it.
+:::
+
+At Watcher, we believe in empowering developers with the flexibility and scalability they need to succeed with AI integration. Our pricing plans are designed to accommodate a wide range of needs, from casual experimentation to large-scale deployment. Choose the plan that best aligns with your AI usage intensity and project requirements, and let Watcher help you unlock the full potential of SenseCraft AI. Get started today and experience the power of AI on your own terms!
 
 ## Understanding Our Pricing Model
 
@@ -56,76 +116,25 @@ Once this count runs out, it is not possible to chat with Watcher.
 
 Access to our extensive [Model Repository](https://sensecraft.seeed.cc/ai/#/model?redirect=%2Fdevice), as well as the ability to train and upload your own models, is provided free of charge across all plans.
 
-## Our Pricing Plans
+## How to subscribe?
 
-### Free Tier
+If you need to subscribe to SenseCraft Pro, then you need to do it inside the SenseCraft APP. The first step should be to [bind your SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/#step-3-device-binding) on the APP. Currently, SenseCraft Pro subscription is only available for SenseCAP Watcher users.
 
-:::tip
-When you receive SenseCAP Watcher and sign up for the SenseCraft APP, you will get a one month free trial of SenseCraft Pro. During this month, you can use all the services mentioned in the Subscription.
-:::
+Go to SenseCAP Watcher's chat screen, click on the Settings gear button in the top right corner, and then near the bottom, there will be an option for **Subscription**.
 
-Perfect for developers who want to explore and experiment with AI capabilities, test out basic functionalities, and get a feel for the Watcher service before committing to a paid plan. With the Free Tier, you get:
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/subscription.png" style={{width:250, height:'auto'}}/></div>
 
-- **3 months data retention**
-- **Unlimited task analysis**
-- **Minimum interval of image analysis - 15 mins**
-- **200 requests/month for chat with LLM (Large Language Model)**
-- **Unlimited Model Training and Export**
+Here you can see the number of Requests left for your current subscription service. And you can complete your subscription here. Currently we offer three different prices for subscription services, please choose different plans according to your actual usage.
 
-### On-Premise
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page1.png" style={{width:250, height:'auto'}}/></div>
 
-Designed for developers who prefer to have full control over their AI deployment, maintain data privacy, and integrate AI capabilities into their own infrastructure without usage limitations. The On-Premise plan offers:
+Once you have confirmed the plan you want, please agree to the service agreement to proceed to the payment screen.
 
-- **Unlimited data retention**
-- **Unlimited task analysis**
-- **Unlimited image analysis**
-- **Unlimited LLM usage**
-- **Unlimited Model Training and Export**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page2.png" style={{width:250, height:'auto'}}/></div>
 
-### Monthly Subscription to SenseCraft Pro
+Currently SenseCraft APP supports payment using Palpay. Once the payment is successful, you will see your purchased Requests updated on the Subscription's page.
 
-:::tip
-When you receive SenseCAP Watcher and sign up for the SenseCraft APP, you will get a one month free trial of SenseCraft Pro. During this month, you can use all the services mentioned in the Subscription.
-:::
-
-Ideal for developers who have ongoing AI integration needs, require a steady stream of API calls, and prefer the flexibility of a monthly subscription. At just **$6.90** per month ($82.8 billed yearly), you get:
-
-- **3 months data retention**
-- **Unlimited task analysis**
-- **Minimum interval of image analysis - 30s, up to 20,000 requests/month**
-- **1000 requests/month for chat with LLM**
-- **Unlimited Model Training and Export**
-
-### Semi-Annual Subscription to SenseCraft Pro
-
-:::tip
-When you receive SenseCAP Watcher and sign up for the SenseCraft APP, you will get a one month free trial of SenseCraft Pro. During this month, you can use all the services mentioned in the Subscription.
-:::
-
-Perfect for developers who have consistent AI usage requirements over an extended period, want to secure a larger API call allowance, and enjoy the benefits of a longer-term commitment. At **$6.65** per month ($79.8 billed yearly), you receive:
-
-- **3 months data retention**
-- **Unlimited task analysis**
-- **Minimum interval of image analysis - 30s, up to 20,000 requests/month**
-- **1000 requests/month for chat with LLM**
-- **Unlimited Model Training and Export**
-
-### Annual Subscription to SenseCraft Pro
-
-:::tip
-When you receive SenseCAP Watcher and sign up for the SenseCraft APP, you will get a one month free trial of SenseCraft Pro. During this month, you can use all the services mentioned in the Subscription.
-:::
-
-Best suited for developers with intensive AI integration needs, large-scale projects, and those seeking the best value for their API usage over a year-long period. At just **$5.57** per month ($69 billed yearly), you get:
-
-- **3 months data retention**
-- **Unlimited task analysis**
-- **Minimum interval of image analysis - 30s, up to 20,000 requests/month**
-- **1000 requests/month for chat with LLM**
-- **Unlimited Model Training and Export**
-
-
-At Watcher, we believe in empowering developers with the flexibility and scalability they need to succeed with AI integration. Our pricing plans are designed to accommodate a wide range of needs, from casual experimentation to large-scale deployment. Choose the plan that best aligns with your AI usage intensity and project requirements, and let Watcher help you unlock the full potential of SenseCraft AI. Get started today and experience the power of AI on your own terms!
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page3.png" style={{width:250, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
