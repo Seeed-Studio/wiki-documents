@@ -54,11 +54,10 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 // import IndexForm from '../components/home/form'
 import IndexLatestedViki from '../components/home/lasted'
+import TopNav from '../components/topNav';
 import IndexPlatform from '../components/home/platform'
 import IndexBrowseBy from '../components/home/browseBy'
 import { judgeHomePath } from '../utils/jsUtils'
-import { startedList, exploreList } from '../define/indexData'
-import { log } from 'console';
 // import { useThemeConfig,useColorMode} from '@docusaurus/theme-common';
 const getIndexImage = (src) => {
   return src && require(`../../assets/index/${src}`).default;
@@ -157,93 +156,13 @@ const renderBanner = () => {
     </div>
   )
 }
-const renderNa = (list, isExplore?: boolean) => {
-  const htmlElement = document.documentElement;
-  const dataTheme = htmlElement.getAttribute('data-theme');
-  var navbar = document.querySelector('.navbar');
-  var navContainer = navbar.querySelector('.nav_container');
-  if (isExplore) {
-    navContainer.classList.add('explore')
-  } else {
-    navContainer.classList.remove('explore')
-  }
-  let html = ''
-  list.forEach((item, index) => {
-    let cHtm = ''
-    item.children.forEach((cItem, index) => {
-      cHtm += `<a class="home_nav_item_a" href="${cItem.link}" target="_blank" >${cItem.title}</a>`
-      if (cItem.children && cItem.children.length > 0) {
-        cItem.children.forEach((ccItem, index) => {
-          cHtm += `<a class="home_nav_item_a sub  ${cItem.split ? 'split' : ''}" href="${ccItem.link}" target="_blank" > - ${ccItem.title}</a>`
-        })
-      }
-    })
-    html += `
-        <div class="home_nav_item">
-        <a href="${item.link}" class="home_nav_item_img" target="_blank" > <img src="${getIndexImage(item.img + `${dataTheme === 'light' ? '_light' : ''}.png`)}" alt="" /></a>
-        <div class="nav_item_box">
-        ${cHtm}
-        </div>
-      </div>
-        `
-  })
-  navContainer.innerHTML = html
-  var container = navbar.querySelector('.nav_container');
-  container.style.display = 'flex';
-  // 监听移出事件
-  container.addEventListener('mouseleave', () => {
-    container.style.display = 'none';
-  });
-}
 
 
 
 function Home() {
   const [theme, setTheme] = useState('light');
-  // setTimeout(() => {
-  //   renderNa(exploreList,true)
-  // }, 1000);
 
   useEffect(() => {
-    var navbar = document.querySelector('.navbar');
-    var navContainer = navbar.querySelector('.nav_container');
-    if (!navContainer) {
-      var newNavContainer: any = document.createElement('div');
-      newNavContainer.className = 'nav_container com_module';
-      navbar.appendChild(newNavContainer);
-      navbar.querySelector('.js_getting_started').addEventListener('mouseenter', () => {
-        renderNa(startedList)
-        navbar.querySelector('.js_getting_started').classList.add('active')
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-
-      });
-      navbar.querySelector('.js_explore_learn').addEventListener('mouseenter', () => {
-        renderNa(exploreList, true)
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-        navbar.querySelector('.js_explore_learn').classList.add('active')
-
-      });
-      navbar.addEventListener('mouseleave', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-
-      });
-    
-      navbar.querySelector('.dropdown').addEventListener('mouseenter', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-      document.querySelector('.navbar__items--right').addEventListener('mouseenter', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-
-    }
-
-
     judgeHomePath()
     const htmlElement = document.documentElement;
     const dataTheme = htmlElement.getAttribute('data-theme');
@@ -252,6 +171,7 @@ function Home() {
   return (
     <Layout>
       <div className={clsx(css.index_container, css[theme])}>
+        <TopNav></TopNav>
         {renderBanner()}
         <IndexLatestedViki ></IndexLatestedViki>
         <IndexBrowseBy theme={theme}></IndexBrowseBy>
