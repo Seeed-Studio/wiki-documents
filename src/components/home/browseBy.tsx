@@ -264,7 +264,7 @@ function IndexLatestedViki(props) {
   }, [props.theme])
 
   return (
-    <div className={clsx(css.browseBy, 'com_module')}>
+    <div className={clsx(css.browseBy,css[theme], 'com_module')}>
       <div className={css.latested_header}>
         <div className={css.latested_header_left}>
           <div className={css.latested_header_title}>
@@ -288,7 +288,7 @@ function IndexLatestedViki(props) {
             return (
               <a className={css.doc_item} href={item.path}>
                 <img src={item.image} alt="" />
-                <div className={css.wiki_name}>{item.title}</div>
+                <div className={clsx(css.wiki_name,'ellipsis-2')}>{item.title}</div>
               </a>
             )
           })}

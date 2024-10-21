@@ -39,9 +39,10 @@
 //   );
 // }
 
-import React, { useEffect ,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Redirect } from '@docusaurus/router';
 import css from './index.module.scss'
+import '../css/indexPage.css'
 import clsx from 'clsx'
 import {
   ColorModeProvider,
@@ -51,13 +52,12 @@ import Layout from '@theme/Layout'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import IndexForm from '../components/home/form'
+// import IndexForm from '../components/home/form'
 import IndexLatestedViki from '../components/home/lasted'
+import TopNav from '../components/topNav';
 import IndexPlatform from '../components/home/platform'
 import IndexBrowseBy from '../components/home/browseBy'
-import {judgeHomePath} from '../utils/jsUtils'
-import { startedList, exploreList } from '../define/indexData'
-import { log } from 'console';
+import { judgeHomePath } from '../utils/jsUtils'
 // import { useThemeConfig,useColorMode} from '@docusaurus/theme-common';
 const getIndexImage = (src) => {
   return src && require(`../../assets/index/${src}`).default;
@@ -115,10 +115,10 @@ const renderBanner = () => {
     },
   ]
   return (
-    <div className={clsx(css.index_banner, 'com_module')}>
+    <div className={clsx(css.index_banner)}>
       <Swiper
-      modules={[Autoplay]}
-      loop
+        modules={[Autoplay]}
+        loop
         autoplay={{ delay: 5000, disableOnInteraction: true }}
         slidesPerView={1} // 每次显示的幻灯片数量
         pagination={{ clickable: true }} // 显示分页器
@@ -128,8 +128,8 @@ const renderBanner = () => {
 
         {bannerList.map((item, index) => {
           return (
-            <SwiperSlide >
-              <div className={css.banner_item}>
+            <SwiperSlide className="com_module">
+              <div className={clsx(css.banner_item)}>
                 <div className={css.banner_item_info}>
                   <h1 className={clsx(css.banner_item_info_title, css.green)}>{item.title1}</h1>
                   <h2 className={css.banner_item_info_title}>{item.title}</h2>
@@ -156,92 +156,13 @@ const renderBanner = () => {
     </div>
   )
 }
-const renderNa = (list, isExplore?: boolean) => {
-  const htmlElement = document.documentElement;
-  const dataTheme = htmlElement.getAttribute('data-theme');
-  var navbar = document.querySelector('.navbar');
-  var navContainer = navbar.querySelector('.nav_container');
-  if (isExplore) {
-    navContainer.classList.add('explore')
-  } else {
-    navContainer.classList.remove('explore')
-  }
-  let html = ''
-  list.forEach((item, index) => {
-    let cHtm = ''
-    item.children.forEach((cItem, index) => {
-      cHtm += `<a class="home_nav_item_a" href="${cItem.link}" target="_blank" >${cItem.title}</a>`
-      if (cItem.children && cItem.children.length > 0) {
-        cItem.children.forEach((ccItem, index) => {
-          cHtm += `<a class="home_nav_item_a sub  ${cItem.split ? 'split' : ''}" href="${ccItem.link}" target="_blank" > - ${ccItem.title}</a>`
-        })
-      }
-    })
-    html += `
-        <div class="home_nav_item">
-        <a href="${item.link}" class="home_nav_item_img" target="_blank" > <img src="${getIndexImage(item.img+`${dataTheme==='light'?'_light':''}.png`)}" alt="" /></a>
-        <div class="nav_item_box">
-        ${cHtm}
-        </div>
-      </div>
-        `
-  })
-  navContainer.innerHTML = html
-  var container = navbar.querySelector('.nav_container');
-  container.style.display = 'flex';
-  // 监听移出事件
-  container.addEventListener('mouseleave', () => {
-    container.style.display = 'none';
-  });
-}
 
 
 
 function Home() {
   const [theme, setTheme] = useState('light');
-  // setTimeout(() => {
-  //   renderNa(exploreList,true)
-  // }, 1000);
 
   useEffect(() => {
-    var navbar = document.querySelector('.navbar');
-    var navContainer = navbar.querySelector('.nav_container');
-    if (!navContainer) {
-      var newNavContainer: any = document.createElement('div');
-      newNavContainer.className = 'nav_container com_module';
-      navbar.appendChild(newNavContainer);
-      navbar.querySelector('.js_getting_started').addEventListener('mouseenter', () => {
-        renderNa(startedList)
-        navbar.querySelector('.js_getting_started').classList.add('active')
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-
-      });
-      navbar.querySelector('.js_explore_learn').addEventListener('mouseenter', () => {
-        renderNa(exploreList, true)
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-        navbar.querySelector('.js_explore_learn').classList.add('active')
-
-      });
-      navbar.addEventListener('mouseleave', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-
-      });
-      navbar.querySelector('.dropdown').addEventListener('mouseleave', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-      document.querySelector('.navbar__items--right').addEventListener('mouseenter', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-
-    }
-
-
     judgeHomePath()
     const htmlElement = document.documentElement;
     const dataTheme = htmlElement.getAttribute('data-theme');
@@ -249,12 +170,25 @@ function Home() {
   }, [])
   return (
     <Layout>
-      <div className={clsx(css.index_container,css[theme])}>
+      <div className={clsx(css.index_container, css[theme])}>
+        <TopNav></TopNav>
         {renderBanner()}
         <IndexLatestedViki ></IndexLatestedViki>
         <IndexBrowseBy theme={theme}></IndexBrowseBy>
         <IndexPlatform></IndexPlatform>
-        <IndexForm ></IndexForm>
+        {/* <IndexForm ></IndexForm> */}
+
+        <div className={clsx(css.tech_container,'com_module')}>
+          <div className={clsx(css.tech_wrapper,"button_tech_support_container")} >
+            <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
+            <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
+          </div>
+
+          <div className={clsx(css.tech_wrapper,"button_tech_support_container")}>
+            <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
+            <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
+          </div>
+        </div>
       </div>
     </Layout>
   )

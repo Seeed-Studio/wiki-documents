@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import docList from '../../utils/wiki';
+import { judgeIsMobile } from '../../utils/jsUtils';
 
 function IndexLatestedViki() {
   const [tabActive, setTabActive] = useState('Contributors');
@@ -13,6 +14,7 @@ function IndexLatestedViki() {
   const swiperRef = useRef(null);
   const [canGoPrev, setCanGoPrev] = useState(false);
   const [canGoNext, setCanGoNext] = useState(false);
+	const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     // 展平 `docList`，将所有子数组合并为一个数组
@@ -35,6 +37,9 @@ function IndexLatestedViki() {
 
     // 如果分组后的文档超过一行，允许向后滑动
     setCanGoNext(groupedDocs.length > 1);
+
+		setIsMobile(judgeIsMobile())
+
   }, []);
 
   const handleNext = () => {
@@ -80,7 +85,7 @@ function IndexLatestedViki() {
             delay: 1000, // 每个幻灯片之间的延迟时间（毫秒）
             disableOnInteraction: false, // 用户交互时是否禁用自动播放
           }}
-          slidesPerView={4} // 每个滑动页显示一个 group
+          slidesPerView={isMobile?2:4} // 每个滑动页显示一个 group
           spaceBetween={24}
           pagination={{ clickable: false }} // 不显示分页器
           scrollbar={{ draggable: false }} // 不显示滚动条

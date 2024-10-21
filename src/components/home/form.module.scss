@@ -108,9 +108,10 @@
 
 
 .latested {
-  margin: 6% 0;
+  // margin: 6% 0;
 
   .latested_header {
+    margin-top: 6%;
     margin-bottom: 30px;
 
     .latested_header_title {
@@ -171,12 +172,26 @@
 
     .wiki_name {
       height: 56px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* 显示的行数 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &:nth-child(4n) {
       margin-right: 0;
     }
 
+  }
+
+  @media (max-width: 768px) {
+    .wiki_item {
+      img {
+        height: 100px;
+      }
+    }
   }
 }
 
@@ -211,10 +226,19 @@
       margin: 0 20px;
       opacity: 0.5;
       cursor: pointer;
-
+      border-radius: 50%;
+      background-color: #fff;
 
       &.active {
         opacity: 1;
+      }
+    }
+  }
+
+  &.dark {
+    .browseBy_header {
+      .browseBy_item {
+        background-color: transparent;
       }
     }
   }
@@ -246,7 +270,7 @@
 
       img {
         border-radius: 12px;
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         height: 200px;
         width: 100%;
 
@@ -274,14 +298,44 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .browseBy_box {
+      padding: 10px;
+      // padding-top: 6%;
+    }
+
+    .browseBy_header {
+
+      .browseBy_item {
+        margin: 0 10px;
+
+      }
+    }
+
+    .browseBy_container {
+
+      .doc_item {
+        width: calc(50% - 10px);
+
+        img {
+          height: 100px;
+        }
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 
 
 .index_platform {
-  margin: 6% 0;
+  // margin: 6% 0 3% 0;
 
   .platform_header {
+    margin-top: 6%;
     font-size: 28px;
     color: #8CC020;
     font-weight: 500;
@@ -342,6 +396,27 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .platform_container {
+
+      .platform_item {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .platform_btn {
+
+          display: flex;
+          flex-wrap: wrap;
+
+          .platform_btn_item {
+            margin-right: 4px;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 
@@ -390,5 +465,17 @@ html[data-theme='light'] {
         }
       }
     }
+  }
+
+  .index_platform {
+    .platform_container {
+      .platform_item {
+        .platform_btn_item {
+          border: 1px solid #000000;
+          color: #000;
+        }
+      }
+    }
+
   }
 }

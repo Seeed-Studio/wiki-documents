@@ -16,6 +16,8 @@ import styles from './styles.module.css';
 import Comment from '../../../components/comment';
 import { useLocation } from '@docusaurus/router'
 import {judgeHomePath} from '../../../utils/jsUtils'
+import TopNav from '../../../components/topNav';
+
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -64,6 +66,7 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         </div>
         {!hideComment && <Comment />}
       </div>
+      <TopNav></TopNav>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
     </div>
   );
