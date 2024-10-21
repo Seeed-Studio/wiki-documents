@@ -1,8 +1,8 @@
 
 .com_module {
 	padding: 0 6%;
-	/* max-width: 1440px;
-	margin: 0 auto; */
+	max-width: 1440px;
+	margin: 0 auto;
 }
 .swiper-scrollbar {
 	display: none;

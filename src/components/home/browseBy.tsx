@@ -264,7 +264,7 @@ function IndexLatestedViki(props) {
   }, [props.theme])
 
   return (
-    <div className={clsx(css.browseBy, 'com_module')}>
+    <div className={clsx(css.browseBy,css[theme], 'com_module')}>
       <div className={css.latested_header}>
         <div className={css.latested_header_left}>
           <div className={css.latested_header_title}>

@@ -235,6 +235,14 @@
     }
   }
 
+  &.dark {
+    .browseBy_header {
+      .browseBy_item {
+        background-color: transparent;
+      }
+    }
+  }
+
   .browseBy_container {
     display: flex;
     flex-wrap: wrap;
