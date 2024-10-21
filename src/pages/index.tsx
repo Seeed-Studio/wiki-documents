@@ -116,7 +116,7 @@ const renderBanner = () => {
     },
   ]
   return (
-    <div className={clsx(css.index_banner, 'com_module')}>
+    <div className={clsx(css.index_banner)}>
       <Swiper
         modules={[Autoplay]}
         loop
@@ -129,8 +129,8 @@ const renderBanner = () => {
 
         {bannerList.map((item, index) => {
           return (
-            <SwiperSlide >
-              <div className={css.banner_item}>
+            <SwiperSlide className="com_module">
+              <div className={clsx(css.banner_item)}>
                 <div className={css.banner_item_info}>
                   <h1 className={clsx(css.banner_item_info_title, css.green)}>{item.title1}</h1>
                   <h2 className={css.banner_item_info_title}>{item.title}</h2>
@@ -229,7 +229,8 @@ function Home() {
         navbar.querySelector('.js_getting_started').classList.remove('active')
 
       });
-      navbar.querySelector('.dropdown').addEventListener('mouseleave', () => {
+    
+      navbar.querySelector('.dropdown').addEventListener('mouseenter', () => {
         newNavContainer.style.display = 'none';
         navbar.querySelector('.js_explore_learn').classList.remove('active')
         navbar.querySelector('.js_getting_started').classList.remove('active')
@@ -257,7 +258,7 @@ function Home() {
         <IndexPlatform></IndexPlatform>
         {/* <IndexForm ></IndexForm> */}
 
-        <div className={clsx(css.tech_container)}>
+        <div className={clsx(css.tech_container,'com_module')}>
           <div className={clsx(css.tech_wrapper,"button_tech_support_container")} >
             <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
             <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
