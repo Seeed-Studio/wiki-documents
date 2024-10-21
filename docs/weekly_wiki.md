@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/14/2024
+  date: 10/21/2024
   author: Frank
 ---
 
@@ -17,94 +17,68 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 14th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 21th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Clip Application on Raspberry Pi with AI Kit](https://wiki.seeedstudio.com/clip_application_on_rpi5_with_ai_kit/) 
+### [Enclosure Installation Guide with ReSpeaker Lite](https://wiki.seeedstudio.com/respeaker_enclosure/) 
 
-[CLIP](https://github.com/openai/CLIP)(Contrastive Language-Image Pre-Training) is a neural network trained on a variety of (image, text) pairs. It can be instructed in natural language to predict the most relevant text snippet, given an image, without directly optimizing for the task, similarly to the zero-shot capabilities of GPT-2 and 3. We found CLIP matches the performance of the original ResNet50 on ImageNet “zero-shot” without using any of the original 1.28M labeled examples, overcoming several major challenges in computer vision.
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/tTrhbSSWpeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe width="800" height="400" src="https://www.youtube.com/embed/JMHtqSmAGCA" title="CLIP Zero Shot Classification" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen style={{ maxWidth: '100%', width: '800px', height: '400px' }} />
+This wiki will provide you with a detailed, easy-to-follow guide for enclosure installation, helping you safely assemble the [ReSpeaker Lite voice kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-Full-Kit-of-2-Mic-Array-pre-soldered-XIAO-ESP32S3-Mono-Enclosed-Speaker-and-Enclosure.html) setup.
 
+### [SenseCAP Watcher Quick Start Guide](https://wiki.seeedstudio.com/getting_started_with_watcher/) 
 
-This wiki will teach you how to deploy the clip application on a [Raspberry Pi5](https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html) or [Recomputer r1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html), clip will inference on [AI kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html).
+SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
-### [reCamera Getting Started](https://wiki.seeedstudio.com/recamera_getting_started/) 
+As a new comer for smart building / smart home system, SenseCAP Watcher is far more intelligent compared to current sensors and actuators. It understands what is happening within the space and then takes actions accordingly.
 
-reCamera is a combination of a **processor** and a camera **sensor**.
+### [Hardware components of the SenseCAP Watcher](https://wiki.seeedstudio.com/watcher_hardware_overview/) 
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/001.jpg" /></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview.jpg" style={{width:1000, height:'auto'}}/></div>
 
-This combination makes reCamera a standalone system that can handle basic detection and control tasks on its own.
+In this section of the Wiki, we will focus on the hardware components of the SenseCAP Watcher, its construction and the use of additional accessories.
 
-### [How to install CODESYS for reComputer R1000](https://wiki.seeedstudio.com/reComputer_r1000_install_codesys/) 
+### [Operation guideline of the SenseCAP Watcher](https://wiki.seeedstudio.com/watcher_operation_guideline/) 
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/1.png" /></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG" style={{width:800, height:'auto'}}/></div>
 
-CODESYS is a popular automation software development platform widely used in industrial control and automation systems. Its full name is Controller Development System, which was first developed by the German company 3S-Smart Software Solutions.
-This article mainly introduces how to download and install CODESYS, and finally deploy the CODESYS project to reComputer R1000
+Inside this section of the Wiki, we will provide you with information on the SenseCAP Watcher's operating logic, tasking, and the use of the device's features.
 
-### [How to use CODESYS to configure the Modbus rtu function of R1000](https://wiki.seeedstudio.com/recomputer_r1000_use_modbus_rtu_with_codesys/) 
+### [Connect to Chirpstack with Wio-SX1262 with XIAO ESP32S3 Kit](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/) 
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/deploy/5.png" /></div>
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
-This article mainly introduces how to use the modbus rtu function of reComputer R1000 based on CODESYS. We will use the two rs485 ports of reComputer R1000, one port is used for Modbus master and the other port is used for Modbus slave. This article will detail how to configure Modbus master and Modbus slave on CODESYS and show how to deploy them on reComputer R1000.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/51.png" alt="pir" width={900} height="auto" /></p>
 
-### [SenseCraft Deploy your AI Model on Watcher](https://wiki.seeedstudio.com/sensecraft_ai_for_watcher/) 
+This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3 kit as single channel gateway exchange data. And also connect the Sensecap S210x lora sensor node to Wio-SX1262 with XIAO ESP32S3 kit and transmit the sensor data to Chirpstack.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png" style={{width:1000, height:'auto'}}/></div>
+### [Connect to TTN with Wio-SX1262 with XIAO ESP32S3 Kit](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/) 
 
-This WiKi article will teach you how to use our SenseCraft to train your own AI model and deploy it on our Watcher. It will be a very interesting process. If you still don't know what SenseCraft is, please click [here](https://sensecraft.seeed.cc/). This is a platform that allows us to deploy various open-source AI models on Seeed Studio devices.
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
-### [Wio-SX1262 Introduction](https://wiki.seeedstudio.com/wio_sx1262/) 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/40.png" alt="pir" width={900} height="auto" /></p>
 
-<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/33.png" style={{width:900, height:'auto'}}/></div></td>
+This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3 kit as single channel gateway exchange data with TTN. And also connect the Sensecap S210x lora sensor node to Wio-SX1262 with XIAO ESP32S3 kit and transmit the sensor data to TTN(The Things Network).
 
-The Wio-SX1262 is a low-cost, ultra-low-power, and ultra-compact LoRa® Pure RF module based on the high-performance Semtech SX1262 LoRa® wireless communication IC, supporting LoRa & LoRaWAN frequency from 868 to 915 MHz and up tp +22 dBm highly efficient transmitted power. Equipped with an onboard IPEX antenna connector and high-quality oscillator of the TCXO(Temperature Compensate Crystal Oscillator), it ensures stable operation at the high and low temperature environment of industry. It is designed for wireless  sensor networks and other IoT devices, especially those requiring battery-powered, low-power  consumption, and long-range connectivity. Ideal for applications such as wireless meter reading,  agriculture sensor, LoRaWAN single channel gateway etc.
+### [Lorawan Based on Wio SX1262 with XIAO ESP32S3 Module](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_lora_get_started/#flash-firmware) 
 
-### [Wio-SX1262 with XIAO ESP32S3 Kit Introduction](https://wiki.seeedstudio.com/wio_sx1262_with_xiao_esp32s3_kit/) 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png" style={{width:600, height:'auto'}}/></div>
-
-This thumb-sized LoRa development kit, which consists of the XIAO ESP32S3 and the Wio-SX1262 LoRa module, is an ideal starter kit for Meshtastic and LoRa/LoRaWAN projects. Supporting WiFi, BLE, and LoRa, it includes a built-in power management chip and can be extended via IIC, UART, and other GPIO interfaces, and is compatible with Arduino development. The XIAO ESP32S3 with Wio-SX1262 is a single-channel LoRaWAN LoRa module with a low price and high cost performance. It is suitable for application scenarios with long distance, low power consumption, and small data volume. It supports more than 30 node devices (depending on upload interval, data payload, etc.).
-
-### [Get Started for Meshtastic](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/) 
-
-<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/flashfirmware1.gif" style={{width:700, height:'auto'}}/></div></td>
-
-Meshtastic is an open source, off-grid, decentralized, mesh network built to run on affordable, low-power devices. Seeed Studio provides a comprehensive range of ready-to-go Meshtastic devices for hobbyists and industrial users. Wio-SX1262 with XIAO ESP32S3 kit is flexible solution for meshtastic developer and maker.
-
-### [How to Use Orbbec Depth Cameras on reComputer with ROS](https://wiki.seeedstudio.com/orbbec_depth_camera_on_ros/) 
-
-<div style={{textAlign:'center'}}><img src="https://i.imgur.com/0gAng8s.jpg" style={{width:600, height:'auto'}}/></div>
-
-This tutorial provides a step-by-step guide on how to use Orbbec Depth Camera through ROS on  [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices. We will take Orbbec Gemini 2 as an example, obtain topic data of depth images and point clouds, and visualize them on rviz.
-
-### [Getting Started ThingsBoard With reComputer R1000](https://wiki.seeedstudio.com/recomputer_r1000_thingsboard_ce/) 
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/openingwindow.PNG" style={{width:600, height:'auto'}}/></div>
-
-[ThingsBoard](https://thingsboard.io/) is an open-source IoT platform designed for rapid development, management, and scaling of IoT projects. It offers an out-of-the-box solution for both cloud and on-premises IoT infrastructure, enabling you to provision devices, manage assets, collect and visualize data, and analyze telemetry with ease. In this guide, we will walk through the installation of ThingsBoard Community Edition on a reComputer, providing a robust foundation for your IoT applications.
+The XIAO ESP32S3 as host MCU and Wio SX1262 LoRa radio kit can be configured to function as single channel gateway for connecting to The Things Network. This kit offers a practical solution for those interested in delving into LoRa technology and establishing connections to LNS(lora network server).
 
 
 
 ## Existing Wiki Updated
 
-### [Watcher to Node-RED Quick Start](https://wiki.seeedstudio.com/watcher_to_node_red/)
+### [Wio-SX1262 Introduction](https://wiki.seeedstudio.com/wio_sx1262/#resource)
 
-We provide a [method](https://wiki.seeedstudio.com/watcher_to_node_red/#method-2-use-http-potocol) for Watcher to send messages to Node-RED using the HTTP protocol.
-
-### [Usage of Seeed Studio XIAO ESP32S3 microphone](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/#getting-started)
-
-We provide an [example](https://wiki.seeedstudio.com/xiao_esp32s3_sense_mic/#save-recorded-sound-to-microsd-card) of saving recorded sound to a microSD card in the ESP32 version 3.0.x.
-
+We provide a [link](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_symbol_and_package_file.zip) for Wio SX1262 symbol and package file.
 
 
 ## The Efforts of Contributor
 
-<!-- ### ### [Seeed Studio XIAO RP2040 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/) 
+<!-- ### [Seeed Studio XIAO RP2040 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/) 
 
 [NuttX](https://nuttx.apache.org/) is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
 
@@ -208,6 +182,7 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 - [weekly wiki on 2024.9.23th](/Seeed_Elderly/weekly_wiki/wiki240923)
 - [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
 - [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
+- [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
 
 </details>
 
