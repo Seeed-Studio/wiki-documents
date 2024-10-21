@@ -7,8 +7,8 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /grove_vision_ai_v2_demo
 last_update:
-  date: 04/16/2024
-  author: Citric
+  date: 09/14/2024
+  author: Citric, Djair
 ---
 
 # Examples for Grove Vision AI V2 and XIAO ESP32
@@ -574,6 +574,152 @@ To customize the code according to your requirements, you can make the following
 4. Integrate additional functionality:
    - You can extend the code to include keyboard controls, media controls, or any other desired features by utilizing the appropriate libraries and functions.
 
+## Project IV: Paper, Rock and Scissor Game
+
+Challenge artificial intelligence with a game of Paper, Rock, Scissors.
+
+This is a very simple application, which infers the user's gestures in front of the camera. And it detects gestures referring to Paper, Rock and Scissors (in this order). It then makes a random choice and compares it with the player's choice and checks who is the winner.
+
+```
+/**
+  Simple Paper, Rock, Scissor Game
+  2024 - By Djair Guilherme @nicolaudosbrinquedos
+  Using Grove Vision AI V2 - with Seeed XIAO ESP32-S3
+  and Gesture Detection Model
+
+  https://github.com/Seeed-Studio/sscma-model-zoo/blob/main/docs/en/Gesture_Detection_Swift-YOLO_192.md
+*/
+
+String myGame, yourGame;
+
+#ifdef ESP32
+#include <HardwareSerial.h>
+HardwareSerial atSerial(0);
+
+#else
+#define atSerial Serial1
+#endif
+
+// Communication with Grove Vision AI V2
+
+#include <Seeed_Arduino_SSCMA.h>
+SSCMA GrooveAI;
+
+// The inference returns Index of Object, not String
+
+#define  PAPER_TARGET   0
+#define  ROCK_TARGET   1
+#define  SCISSOR_TARGET   2
+
+bool is_paper = false;
+bool is_rock = false;
+bool is_scissor = false;
+
+int computerGuess = -1;
+int score = 0;
+int found = -1;
+int lastGuess = -1;
+unsigned long lastGuessTime = 0;
+
+void setup()
+{
+  randomSeed(analogRead(0));
+  GrooveAI.begin(&atSerial, D3);
+  Serial.begin(115200);
+  delay(2000);
+  Serial.println("PAPER ROCK SCISSOR GAME WITH AI");
+}
+
+
+void loop() {
+
+  if (!GrooveAI.invoke(1, false, true)) {
+    bool found = false;
+    int playerGuess = -1;
+
+    // Last Guess Time
+    unsigned long currentTime = millis();
+    unsigned long elapsedTime = currentTime - lastGuessTime;
+
+    // For each Box, detect if is PAPER ROCK or SCISSOR
+    for (int i = 0; i < GrooveAI.boxes().size(); i++) {
+
+      if (GrooveAI.boxes()[i].target == ROCK_TARGET) {
+        is_rock = true;
+        playerGuess = ROCK_TARGET;
+      } else if (GrooveAI.boxes()[i].target == PAPER_TARGET) {
+        is_paper = true;
+        playerGuess = PAPER_TARGET;
+      } else if (GrooveAI.boxes()[i].target == SCISSOR_TARGET) {
+        is_scissor = true;
+        playerGuess = SCISSOR_TARGET;
+      } else {
+        is_rock = false;
+        is_paper = false;
+        is_scissor = false;
+        found = false;
+      }
+    }
+
+    // Update 'found' only if playerGuess is different than before or if 3s of last guess
+    if ((playerGuess != lastGuess || elapsedTime > 3000)  && playerGuess != -1) {
+      found = true;
+      lastGuess = playerGuess;
+    }
+
+    if (found) {
+      // Create Computer Guess after inference
+      computerGuess = random(0, 3);
+      Serial.println("+++++++++++++++");
+      String yourGame = (playerGuess == 0) ? "PAPER" :
+                       (playerGuess == 1) ? "ROCK" : "SCISSOR";
+      String myGame = (computerGuess == 0) ? "PAPER" :
+                       (computerGuess == 1) ? "ROCK" : "SCISSOR";
+
+      int result = determine_winner(playerGuess, computerGuess);
+
+      if (result == 2) {
+        Serial.println("DRAW");
+      } else if (result == 1) {
+        Serial.println("Human WIN");
+      } else {
+        Serial.println("AI WIN");
+      }
+
+      Serial.print("Your guess is ");
+      Serial.print(yourGame);
+      Serial.print(" and mine is ");
+      Serial.println(myGame);
+      Serial.println("+++++++++++++++");
+      Serial.println();
+      
+      // Reset conditions
+      is_rock = false;
+      is_paper = false;
+      is_scissor = false;
+      found = false;    
+    }
+  }
+  delay(1000);
+}
+
+// WINNING CONDITIONS
+
+int determine_winner(int playerGuess, int computerGuess) {
+  if (playerGuess == computerGuess) {
+    return 2; // Empate
+  } else if ((playerGuess == 0 && computerGuess == 1) || // Papel contra Pedra
+             (playerGuess == 1 && computerGuess == 2) || // Pedra contra Tesoura
+             (playerGuess == 2 && computerGuess == 0)) { // Tesoura contra Papel
+    return 1; // playerGuess vence
+  } else {
+    return 0; // computerGuess vence
+  }
+}
+```
+
+
+### Step 1. Upload gesture recognition models to Grove Vision AI V2
 
 ## Tech Support & Product Discussion
 
