@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import type { Props } from '@theme/DocItem/Layout';
+import '../../css/indexPage.css'
 
 import { exploreList ,startedList} from '../../define/indexData'
 
