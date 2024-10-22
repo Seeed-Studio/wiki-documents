@@ -23,7 +23,7 @@ no_comments: false # for Disqus
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-without-Power-Adapter-p-5637.html">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/recomputer-j202-carrier-board-for-jetson-nano-xavier-nx-without-power-adapter-p-5435.html">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
   </a>
 </div>
@@ -37,6 +37,13 @@ reComputer J202 has nearly the same design and function as NVIDIA® Jetson Xavie
 - **High Versatility:** Suitable for complicated AI graphical applications.
 - **Comprehensive Certificates:** includes FCC, CE, RoHS.
 - **Flexible Customization:** provides changing accessories modules, logo, and hardware interfaces modification services based on J202 original design.
+
+:::note
+
+Since the Jetson Nano has only one PCIe lane, if the module uses the Jetson Nano to connect to the J202 carrier board, it can only select the M.2 Key M for SSD.
+
+:::
+
 
 ## Specifications
 <div class="table-center">

@@ -566,12 +566,113 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   </TabItem>
   </Tabs>
 
-- If you need to configure different IP addresses for each POE interface, follow these instructions:
+
+### Binding Physical Network Ports to eth Numbers
+
+- Step 1: Create udev Rule File
+
+  Create a file in the `/etc/udev/rules.d/` directory named `10-persistent-net.rules` with the following content:
+
+  ```bash
+  SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", KERNELS=="0008:01:00.0", NAME="eth0"
+  SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", KERNELS=="0001:01:00.0", NAME="eth1"
+  SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", KERNELS=="0007:03:00.0", NAME="eth2"
+  SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", KERNELS=="0007:04:00.0", NAME="eth3"
+  SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", KERNELS=="0007:05:00.0", NAME="eth4"
+  ```
+
+-  Step 2: Create Network Configuration Files
+
+    In the `/etc/systemd/network/` directory, create the following files for each `eth` interface:
+
+    - `eth1.network`
+    - `eth2.network`
+    - `eth3.network`
+    - `eth4.network`
+
+    #### Sample Content for Each `.network` File
+
+    For **eth1**:
+
+    ```ini
+    [Match]
+    Name=eth1
+
+    [Link]
+    MACAddress=<MAC address of the first port from the right>
+
+    [Network]
+    DHCP=yes
+    ```
+
+    For **eth2**:
+
+    ```ini
+    [Match]
+    Name=eth2
+
+    [Link]
+    MACAddress=<MAC address of the second port from the right>
+
+    [Network]
+    DHCP=yes
+    ```
+
+    For **eth3**:
+
+    ```ini
+    [Match]
+    Name=eth3
+
+    [Link]
+    MACAddress=<MAC address of the third port from the right>
+
+    [Network]
+    DHCP=yes
+    ```
+
+    For **eth4**:
+
+    ```ini
+    [Match]
+    Name=eth4
+
+    [Link]
+    MACAddress=<MAC address of the fourth port from the right>
+
+    [Network]
+    DHCP=yes
+    ```
+
+    You can copy the MAC address for each port from the system settings and paste it in the relevant `[Link]` section.
+
+-  Step 3: Enable and Start the systemd-networkd Service
+
+    Enable and start the `systemd-networkd` service with the following commands:
+
+    ```bash
+    sudo systemctl enable systemd-networkd
+    sudo systemctl start systemd-networkd
+    ```
+
+  -  Step 4: Reboot the System
+
+      Finally, reboot the system to apply the changes:
+
+      ```bash
+      sudo reboot
+      ```
+
+      Once the system restarts, the new eth interface bindings will take effect.
+
+### Binding Physical Network IP to eth Numbers
+  If you need to configure different IP addresses for each POE interface, follow these instructions:
 
   **Step 1**: Connect the POE to the reServer Industrial device. For example, to configure eth3, set the name of eth3 to POE3.
-    ```bash
+
+  ```bash
   sudo nmcli connection add type ethernet ifname eth3 con-name POE3
-    ```
+  ```
 
   **Step 2**: Configure the IP address of POE3 to **192.168.6.6**. The IP address can be customized according to actual usage.
   ```bash
@@ -579,7 +680,8 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   ```
 
   **Step3**: To set POE3's IPv4 address to manual configuration.
-    ```bash
+
+  ```bash
   sudo nmcli connection modify POE3 ipv4.method manual
   ```
 
