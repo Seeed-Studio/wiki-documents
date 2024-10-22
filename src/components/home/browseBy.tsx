@@ -17,7 +17,7 @@ function IndexLatestedViki(props) {
       docList: [
         {
           "path": "/xiao_esp32s3_getting_started",
-          "image": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif",
+          "image": "https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg",
           "title": "Seeed Studio XIAO ESP32S3 (Sense)",
         },
         {

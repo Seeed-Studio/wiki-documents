@@ -5,7 +5,7 @@ title: Fan is not turning on
 image: https://files.seeedstudio.com/wiki/wiki-platform/S.png
 slug: /Turn_on_the_Fan
 last_update:
-  date: 2025.6.25   
+  date: 2023.6.25   
   author: cheng.tang
 ---
 
