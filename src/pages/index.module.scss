@@ -6,7 +6,9 @@
 
 .index_container {
   // max-width: 1440px;
+  // padding: 0 20px;
   // margin: 0 auto;
+  // width: 100%;
 
   a {
     text-decoration: none;
@@ -60,13 +62,43 @@
       }
     }
   }
+
+  .tech_container {
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .tech_wrapper {
+    justify-content: center;
+
+  }
+
+
+  @media (max-width: 768px) {
+    // padding: 20px;
+
+    .index_banner {
+      .banner_item {
+        flex-direction: column-reverse;
+
+        .banner_btn {
+          display: flex;
+          flex-wrap: wrap;
+
+          .banner_btn_item {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 
 
 
 html[data-theme='light'] {
-  
+
 
   .index_container {
     background-color: #F3F5F8;
@@ -88,5 +120,5 @@ html[data-theme='light'] {
       }
     }
   }
-  
+
 }

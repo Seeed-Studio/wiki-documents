@@ -12,6 +12,7 @@ import { Pagination as AntdPagination, Popover, Segmented, Modal, Button, Space,
 import { GithubOutlined, ArrowRightOutlined, LikeOutlined, RightOutlined, HeartOutlined, PlusOutlined } from '@ant-design/icons';
 import moment from 'moment';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import IndexForm from './form'
 
 
 // const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
@@ -566,6 +567,7 @@ export default function Ranger(): JSX.Element {
 						{claimRender(isMobile)}
 						{wishRender(isMobile)}
 
+          <IndexForm ></IndexForm>
 					</div>
 				</Layout>
 			)}
