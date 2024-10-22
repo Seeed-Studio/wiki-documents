@@ -266,7 +266,7 @@ export const exploreList = [
   },
   {
     title: 'TinyMl',
-    img: 'grove',
+    img: 'tinyml',
     link: 'https://wiki.seeedstudio.com/tinyml_topic/',
     children: [
       {
@@ -327,7 +327,7 @@ export const exploreList = [
   },
   {
     title: 'Workshop',
-    img: 'grove',
+    img: 'workshop',
     link: 'https://wiki.seeedstudio.com/tinyml_workshop_course_new/',
     children: [
       {
@@ -349,7 +349,7 @@ export const exploreList = [
   },
   {
     title: 'Edge AI Solutions',
-    img: 'grove',
+    img: 'edgeai',
     link: 'https://wiki.seeedstudio.com/edge_ai_topic/',
     children: [
       {
@@ -372,7 +372,7 @@ export const exploreList = [
   },
   {
     title: 'Open Source',
-    img: 'grove',
+    img: 'opensource',
     link: 'https://wiki.seeedstudio.com/Seeed_Studio_Open_Souce_Intro',
     children: [
       {
@@ -389,7 +389,7 @@ export const exploreList = [
   },
   {
     title: '矽递科技Wiki文档平台',
-    img: 'grove',
+    img: 'language',
     link: 'https://wiki.seeedstudio.com/cn/Getting_Started/',
     children: [
       {
