@@ -177,6 +177,12 @@ function Home() {
         <IndexPlatform></IndexPlatform>
         {/* <IndexForm ></IndexForm> */}
 
+        <div className={clsx(css.tech_container, 'com_module')}>
+        <h2>Tech Support & Product Discussion</h2>
+        <p>
+          Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
+        </p>
+
         <div className={clsx(css.tech_container,'com_module')}>
           <div className={clsx(css.tech_wrapper,"button_tech_support_container")} >
             <a href="https://forum.seeedstudio.com/" className="button_forum"></a>
@@ -187,6 +193,7 @@ function Home() {
             <a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
             <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
           </div>
+        </div>
         </div>
       </div>
     </Layout>
