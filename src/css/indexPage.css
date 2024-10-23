@@ -84,3 +84,22 @@
 html[data-theme='light'] .home_nav_item_a:hover {
 	background: rgba(140, 192, 32, 0.05);
 }
+
+
+.js_getting_started  +  .dropdown__menu {
+  display: none!important;
+}
+
+
+.js_explore_learn  +  .dropdown__menu {
+  display: none!important;
+}
+/* 在移动设备上展示子菜单项 */
+@media (max-width: 960px) {
+  .js_getting_started + .dropdown__menu {
+    display: block;
+  }
+	.js_explore_learn + .dropdown__menu {
+    display: block;
+  }
+}

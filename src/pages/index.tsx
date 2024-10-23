@@ -42,7 +42,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from '@docusaurus/router';
 import css from './index.module.scss'
-import '../css/indexPage.css'
 import clsx from 'clsx'
 import {
   ColorModeProvider,
