@@ -236,7 +236,7 @@ const config = {
 
           {
             label: 'Quick Links',
-            // to: '/Getting_Started',
+            to: '/Getting_Started',
             position: 'left',
             className: 'navbar_dorp_items js_getting_started',
             items: [
@@ -260,7 +260,7 @@ const config = {
           },
           {
             label: 'Explore with Topics',
-            // to: '/topicintroduction',
+            to: '/topicintroduction',
             position: 'left',
             className: 'navbar_dorp_items js_explore_learn',
             items: [
@@ -285,7 +285,7 @@ const config = {
                 to: '/edge_ai_topic',
               },
               {
-                label: '矽递科技 Wiki 文档平台（测试）',
+                label: '矽递科技 Wiki 文档平台',
                 to: '/cn/Getting_Started',
               },
             ],
