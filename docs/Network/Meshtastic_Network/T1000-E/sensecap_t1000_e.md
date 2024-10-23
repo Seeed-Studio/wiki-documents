@@ -217,6 +217,8 @@ After you update the device configuration, the device will restart, which may ta
 
 ## Flash Firmware
 
+
+
 ### Check the Firmware Version
 
 Navigate to `Settings` -> `Firmware Updates`, check the current firmware version.
@@ -224,10 +226,31 @@ Navigate to `Settings` -> `Firmware Updates`, check the current firmware version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
 
+
+### <div class="danger">⚠️DO NOT FLASH THE FOLLOWING FIRMWARE</div>
+
+
+:::danger
+DO NOT FLASH OTHER FIRMWARE OTHER THAN T1000-E FIRMWARE, THIS MAY CAUSE THE DEVICE TO FREEZE.
+:::
+
+The following firmware will brick your device：
+
+
+* nrf52_promicro_diy_tcxo<br/>
+* nrf52_promicro_diy_xtal<br/>
+* Dongle_nRF52840-pca10059-v1<br/>
+* feather_diy<br/>
+* TWC_mesh_v4<br/>
+* wio-sdk-wm1110<br/>
+* wio-tracker-wm1110<br/>
+* xiao_ble
+
+
 ### Flash the Application Firmware
 
 
-* **Step 1**: Enter DFU mode
+#### Step 1: Enter DFU mode
 
 
 <Tabs>
@@ -265,7 +288,26 @@ Connect the USB cable to your PC, press and hold the device button, then **quick
 
 
 
-* **Step 2**: Download the firmware
+#### Step 2: Flash erase
+
+
+:::caution note
+Before flashing the firmware, please flash the erased firmware first!
+:::
+
+Click the `trash` symbol.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
+
+Download the erase firmware and copy to the driver.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
+
+
+This process may take some time, wait for the drive to disappear, then open a serial monitor to complete the erase process.
+
+
+#### Step 3: Flash firmware
 
 
 
@@ -275,9 +317,7 @@ Select the latest firmware, and download the `UF2` file.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
 
-* **Step 3**: 
-
-Download and Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
 
 
@@ -423,20 +463,6 @@ Replace the serial port with your device port. Example:
 
 
 
-
-
-**Step3: Flash facotry erase**
-
-Click the `trash` symbol.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
-
-Download the erase firmware and copy to the driver.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
-
-
-This process may take some time, please wait until the driver pops up again.
 
 When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-application-firmware) to flash the application firmware.
 
