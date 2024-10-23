@@ -1,9 +1,9 @@
 ---
 description: Delves into the customization options available for Watcher's appearance and explores the various tools provided by the SenseCraft platform.
-title: SenseCraft APP Guideline
+title: SenseCraft APP Introduction
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/30.png
-slug: /getting_started_with_watcher_look_tool
-sidebar_position: 4
+slug: /sensecap_app_introduction
+sidebar_position: 1
 last_update:
   date: 10/18/2024
   author: Citric
@@ -116,7 +116,7 @@ After Restore Device, you need to manually delete the corresponding device in th
 
 The following settings do not rely on a Bluetooth connection to the phone, just make sure that both the Watcher and the phone are connected to the Internet and that the SenseCraft Remote Control feature is turned on.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/36.png" style={{width:250, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/subscription2.png" style={{width:250, height:'auto'}}/></div>
 
 ### Device Name & Device Group
 
@@ -125,6 +125,13 @@ The Device Name & Device Group settings allow you to personalize your Watcher an
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/37.png" style={{width:250, height:'auto'}}/></div>
 
 Additionally, you can assign your Watcher to a specific Device Group, which is useful when managing a large number of devices for different purposes or locations. For example, you might create separate Device Groups for home, office, or outdoor monitoring. By grouping your Watcher devices logically, you can easily locate, configure, and control them based on their designated purpose or location.
+
+### Subscription
+
+By subscribing, you gain access to our advanced language model capabilities. Whether you want to analyze images or engage in intelligent conversations, our platform has you covered. Explore the full range of features and see how our technology can enhance your experience. Click to learn more!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price.png" style={{width:250, height:'auto'}}/></div>
+
 
 ### Check Update
 

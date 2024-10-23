@@ -1,9 +1,9 @@
 ---
 description: User will learn how to integrate Watcher with the Grove system, enabling them to expand its capabilities and connect with a wide range of sensors and peripherals.
-title: As a sensor & Use Grove
+title: UART output
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg
-slug: /watcher_as_grove
-sidebar_position: 5
+slug: /uart_output
+sidebar_position: 1
 last_update:
   date: 07/10/2024
   author: Citric
