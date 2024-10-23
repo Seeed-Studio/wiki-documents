@@ -93,6 +93,18 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         navbar.querySelector('.js_getting_started').classList.remove('active')
       });
 
+      navbar.querySelector('.js_getting_started').addEventListener('mouseleave', () => {
+        newNavContainer.style.display = 'none';
+        navbar.querySelector('.js_explore_learn').classList.remove('active')
+        navbar.querySelector('.js_getting_started').classList.remove('active')
+      });
+      navbar.querySelector('.js_explore_learn').addEventListener('mouseleave', () => {
+        newNavContainer.style.display = 'none';
+        navbar.querySelector('.js_explore_learn').classList.remove('active')
+        navbar.querySelector('.js_getting_started').classList.remove('active')
+
+      });
+
     }
 
 

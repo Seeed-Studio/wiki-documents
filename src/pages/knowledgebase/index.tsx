@@ -19,6 +19,7 @@ import ShowcaseFilterToggle, {
 	readOperator,
 } from './_components/ShowcaseFilterToggle';
 import { usePluralForm } from '@docusaurus/theme-common';
+import TopNav from '../../components/topNav';
 
 const SearchNameQueryKey = 'name';
 
@@ -408,6 +409,7 @@ function ShowcaseCards() {
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
+			<TopNav></TopNav>
 			<div className={styles.knowledgebase}>
 				<div className={styles.wrapper}>
 					<ShowcaseHeader />

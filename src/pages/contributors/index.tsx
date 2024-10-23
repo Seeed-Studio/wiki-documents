@@ -13,6 +13,7 @@ import { GithubOutlined, ArrowRightOutlined, LikeOutlined, RightOutlined, HeartO
 import moment from 'moment';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import IndexForm from './form'
+import TopNav from '../../components/topNav';
 
 
 // const baseUrl = 'http://sapi-new.seeedstudio.local' //本地环境
@@ -562,6 +563,7 @@ export default function Ranger(): JSX.Element {
 		<BrowserOnly >
 			{() => (
 				<Layout>
+					<TopNav></TopNav>
 					<div className={clsx(styles.claim_page, 'claim_page')}>
 						{rangerwhyRender(isMobile)}
 						{claimRender(isMobile)}
