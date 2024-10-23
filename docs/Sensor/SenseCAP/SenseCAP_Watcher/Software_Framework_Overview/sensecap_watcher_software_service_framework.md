@@ -1,6 +1,6 @@
 ---
 description: This article provides a detailed setup guide for configuring the Watcher device in three different processing deployment flows,including Cloud Efficient Processing Flow, Hybrid Smart Processing Flow, and Local Secure Processing Flow. It offers an overview of the Watcher software service framework, illustrating the interactions between the user, SenseCraft Mate app, and Watcher device.
-title: Watcher Software Service Framework
+title: Watcher Software Service Introduction
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
 slug: /watcher_software_service_framework
 sidebar_position: 2
@@ -10,7 +10,7 @@ last_update:
 ---
 
 
-# Framework Overview
+## Framework Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -54,7 +54,7 @@ For alert notifications, Watcher allows multiple options, including app push not
 
 You have the flexibility to choose from multiple deployment options and easily configure your personalized Watcher assistant. Whether your priority is data security or processing efficiency, we offer three adaptable solutions: Cloud Efficient Processing Flow, Hybrid Smart Processing Flow, and Local Secure Processing Flow. Tailor your Watcher assistant to provide you with the best smart service experience!
 
-# Cloud Efficient Processing Flow
+## Cloud Efficient Processing Flow
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/20.png" style={{width:500, height:'auto'}}/></div>
 
@@ -102,7 +102,7 @@ The Watcher can notify the user or a local system using various methods:
 Watcher can also send data to local servers, third-party applications, or alert services like Discord, Home Assistant, or IFTTT.
 For more details, refer to section HTTP Proxy Application.
 
-# Hybrid Smart Processing Flow
+## Hybrid Smart Processing Flow
 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/3.png" style={{width:800, height:'auto'}}/></div>
@@ -148,7 +148,7 @@ The Watcher can notify the user or a local system using various methods:
 Watcher can also send data to local servers, third-party applications, or alert services like Discord, Home Assistant, or IFTTT.
 For more details, refer to section HTTP Proxy Application.
 
-# Local Secure Processing Flow
+## Local Secure Processing Flow
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/4.png" style={{width:800, height:'auto'}}/></div>
 
