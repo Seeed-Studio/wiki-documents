@@ -109,6 +109,17 @@
 .start_card_wrapper {
 }
 
+/* red text */
+
+.danger {
+    color: red;
+    font-weight: bold;
+}
+
+.red-text {
+    color: red;
+}
+
 /* inroduced production */
 
 .intro_container {

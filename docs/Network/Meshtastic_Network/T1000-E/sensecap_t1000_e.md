@@ -217,6 +217,8 @@ After you update the device configuration, the device will restart, which may ta
 
 ## Flash Firmware
 
+
+
 ### Check the Firmware Version
 
 Navigate to `Settings` -> `Firmware Updates`, check the current firmware version.
@@ -224,10 +226,31 @@ Navigate to `Settings` -> `Firmware Updates`, check the current firmware version
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
 
+
+### <div class="danger">⚠️DO NOT FLASH THE FOLLOWING FIRMWARE</div>
+
+
+:::danger
+DO NOT FLASH OTHER FIRMWARE OTHER THAN T1000-E FIRMWARE, THIS MAY CAUSE THE DEVICE TO FREEZE.
+:::
+
+The following firmware will brick your device：
+
+
+* nrf52_promicro_diy_tcxo<br/>
+* nrf52_promicro_diy_xtal<br/>
+* Dongle_nRF52840-pca10059-v1<br/>
+* feather_diy<br/>
+* TWC_mesh_v4<br/>
+* wio-sdk-wm1110<br/>
+* wio-tracker-wm1110<br/>
+* xiao_ble
+
+
 ### Flash the Application Firmware
 
 
-* **Step 1**: Enter DFU mode
+#### Step 1: Enter DFU mode
 
 
 <Tabs>
@@ -265,7 +288,26 @@ Connect the USB cable to your PC, press and hold the device button, then **quick
 
 
 
-* **Step 2**: Download the firmware
+#### Step 2: Flash erase
+
+
+:::caution note
+Before flashing the firmware, please flash the erased firmware first!
+:::
+
+Click the `trash` symbol.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
+
+Download the erase firmware and copy to the driver.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
+
+
+This process may take some time, wait for the drive to disappear, then open a serial monitor to complete the erase process.
+
+
+#### Step 3: Flash firmware
 
 
 
@@ -275,21 +317,49 @@ Select the latest firmware, and download the `UF2` file.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
 
-* **Step 3**: 
-
-Download and Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
+Copy UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
 
 
 
-### Flash the Bootloader
+## FAQ
 
-:::tip note
-Please flash the bootloader if your device:
-- Can not pair with your App
-- No LED
-:::
+* **How to check the device name**
 
+
+ Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
+
+ Select device: `T1000-E Tracker Card`<br/>
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
+
+
+ Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
+
+* **How to reboot the device?**
+
+ Press and hold the button, then connect the charging cable.
+
+## Troubleshooting
+
+### 
+
+### Device never turns on
+
+* Charge the device for 1~2 hours
+
+* Change the charging cable
+
+
+### Device not responding
+
+Device not responding, no LED, can not pair with your App.
+
+
+* 1) Device can still enter the DFU mode, then try to **flash the bootloader**.
+
+#### Flash the Bootloader
 
 :::danger note
 When you are flashing the bootloader, please make sure the cable connection is stable and **DO NOT** disconnect it during the flash process.
@@ -371,7 +441,7 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 **Step2: Flash the bootloader**
 
-Connect the device to your PC and run the following command:
+Enable the DFU mode of your device and connect it to your PC, run the following command:
 
 * **For Windows**: 
 ```
@@ -384,6 +454,7 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 ```
 
 Replace the serial port with your device port. Example:
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
 
@@ -393,54 +464,9 @@ Replace the serial port with your device port. Example:
 
 
 
-
-**Step3: Flash facotry erase**
-
-Click the `trash` symbol.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase1.png" alt="pir" width={800} height="auto" /></p>
-
-Enter DFU Mode, download the erase firmware and copy to the driver.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
-
-
-This process may take some time, please wait until the driver pops up again.
-
 When you have completed the above steps, then you can follow this [step](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-application-firmware) to flash the application firmware.
 
 
-## FAQ
-
-* **How to check the device name**
-
-
- Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
-
- Select device: `T1000-E Tracker Card`<br/>
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name1.png" alt="pir" width={800} height="auto" /></p>
-
-
- Click `Open Serial Monitor`, connect the device to your PC, check the serial log, keyword `using nodenum`.
-
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
-
-* **How to reboot the device?**
-
- Press and hold the button, then connect the charging cable.
-
-## Troubleshooting
-
-### Device never turns on
-
-* Charge the device for 1~2 hours
-
-* Change the charging cable
-
-
-### Device not responding, no LED
-
-* 1) Device can still enter the DFU mode, then try to [flash the bootloader](https://wiki.seeedstudio.com/sensecap_t1000_e/#flash-the-bootloader).
 
 * 2) Device can not enter DFU mode and no serial port display, please contact the tech support: support@sensecapmx.com
 
