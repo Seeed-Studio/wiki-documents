@@ -24,7 +24,7 @@ last_update:
 
 Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide cutting-edge monitoring solutions for both fall detection and [heartbeat](https://wiki.seeedstudio.com/getting_started_with_mr60bha2_mmwave_kit/) monitoring. Powered by the robust XIAO ESP32 microcontroller with built-in Wi-Fi and Bluetooth connectivity, these modules offer precise and reliable detection capabilities. Whether you need to monitor falls in real-time or track heartbeats with sensitive accuracy, our modules are equipped with state-of-the-art technology, including customizable RGB LEDs and ambient light sensing. With easy expansion options through Grove GPIO ports, these versatile modules are perfect for a wide range of applications, from smart home integration to healthcare monitoring.
 
-### Features
+## Features
 
 - **Wi-Fi & Bluetooth Enabled**: Both modules are powered by XIAO ESP32 with pre-flashed ESPHome firmware, ensuring quick setup and customization.
 - **Fall Detection Module**:
@@ -43,7 +43,7 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 <!-- <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/human-caring.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/environmental-inductor.jpg" style={{height:'auto', "border-radius": '3.8px'}}/></div> -->
 
-### Specification
+## Specification
 
 | **General Parameters**   |                                      |
 | ------------------------ | ------------------------------------ |
@@ -58,7 +58,7 @@ Introducing our advanced **mmWave Sensor Modules** for XIAO, designed to provide
 | **Power Supply**         | 5V/1A Input |
 | **Power consumption**    | 0.5w: Standby Mode<br />0.8w: Activation Mode<br />1.4w: work with Grove Relay status |
 
-### Application
+## Application
 
 - Security Systems
 - Haelthcare Monitoring
@@ -92,9 +92,16 @@ Please use this module in an open space, and stay out of the following scenarios
 - Detection through glass and thin wooden boards  
 - Installation location prone to vibrations  
 - Use of low-quality power supplies  
+
 :::
 
 ### Software Preparation (Arduino)
+
+:::info Attention
+
+By default, the MR60BHA2 comes pre-assembled with the [XIAO ESP32C6](/xiao_esp32c6_getting_started), but it's compatible with various other microcontrollers for communication and integration.
+
+:::
 
 If this is your first time using Arduino with the XIAO series, follow the appropriate setup guide for your board:
 
@@ -107,27 +114,23 @@ Once your board is set up, proceed with the following steps:
 1. **Download the Seeed mmWave Library**:
    - Download the [Seeed mmWave library](https://github.com/Love4yzp/Seeed-mmWave-library) from GitHub.
 
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Love4yzp/Seeed-mmWave-library">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div>
-
+  <div class="github_container" style={{textAlign: 'center'}}>
+      <a class="github_item" href="https://github.com/Love4yzp/Seeed-mmWave-library">
+      <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+      </a>
+  </div>
 2. **Install the Library in Arduino IDE**:
    - Open the Arduino IDE.
    - Navigate to **Sketch > Include Library > Add .ZIP Library...**.
    - Select the downloaded `.zip` file to install the library.
-
 3. **Connect Your XIAO Board**:
    - Plug your XIAO board into your computer via USB.
    - In the Arduino IDE, go to **Tools > Board** and select your XIAO board model.
    - Choose the correct port under **Tools > Port**.
-
 4. **Load an Example Sketch**:
    - Go to **File > Examples > Seeed Arduino mmWave**.
    - Select the relevant example for either Fall Detection.
    - Review the code and make any necessary adjustments.
-
 5. **Upload the Sketch**:
    - Click **Upload** to flash the code to your XIAO board.
    - Open the **Serial Monitor** in the Arduino IDE to view real-time sensor data.
@@ -137,8 +140,6 @@ Once your board is set up, proceed with the following steps:
 ### Usage
 
 This section provides example code snippets to help you quickly start using the Seeed Arduino mmWave Library with various functionalities, including fall detection, RGB LED control, and light sensing.
-
-
 
 <!-- 
 ### Breath Module
@@ -262,6 +263,7 @@ if (mmWave.update(100)) {
 }
 }
 ```
+
 The output will be as follows on Arduino Serial Monitor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/fall_detection.png" style={{width:700, height:'auto'}}/></div>
@@ -308,12 +310,12 @@ for (int i = 255; i >= 0; i--) {
 }
 }
 ```
-- **Step 3.** Select the correct board and port number to upload the program. 
+
+- **Step 3.** Select the correct board and port number to upload the program.
 
 Once the program is successfully uploaded, you will see RGB LED on the right side of the mmWave Sensor Modules is blinking.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/blink_rgb_led.gif" style={{width:700, height:'auto'}}/></div>
-
 
 #### Light Sensor (BH1750)
 
@@ -355,7 +357,7 @@ if (BH1750.hasValue()) {
 }
 ```
 
-- **Step 3.** Select the correct board and port number to upload the program. 
+- **Step 3.** Select the correct board and port number to upload the program.
 
 The output will be as follows on Arduino Serial Monitor:
 
@@ -395,15 +397,14 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Initializes the sensor for communication, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization 
+  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization
 setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
 
 - **`mmWave.setThreshold(float threshold)`**:
   - Sets the fall detection threshold. The default fall threshold of the radar is `0.6 m`. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
 
 - **`mmWave.setSensitivity(uint32_t sensitivity)`**:
-  - Adjusts the sensitivity of the radar for fall detection. The sensitivity initial value is `3`, which 
-represents an average of 3 frames of data. And typically value ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
+  - Adjusts the sensitivity of the radar for fall detection. The sensitivity initial value is `3`, which represents an average of 3 frames of data. And typically value ranges from 3 to 10, with higher values making the sensor more responsive to potential falls.
 
 - **`mmWave.getRadarParameters(float &height, float &threshold, uint32_t &sensitivity)`**:
   - Retrieves the current configuration parameters of the radar, including installation height, fall detection threshold, and sensitivity settings. These parameters are returned via the reference variables.
@@ -418,14 +419,13 @@ represents an average of 3 frames of data. And typically value ranges from 3 to 
 
 Want to tailor-make the kit to fit your unique applications?
 
-For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at iot@seeed.cc to learn more.
-
+For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at <iot@seeed.cc> to learn more.
 
 ## Resources
 
+- **STP**: [mmWave 3D Case](https://files.seeedstudio.com/wiki/mmwave-for-xiao/xiao_mm_wave.stp)
 - **GitHub Repository**: Access the full codebase and documentation at the [Seeed mmWave Library GitHub page](https://github.com/Love4yzp/Seeed-mmWave-library).
 - **ESPHome Documentation**: For further customization and integration, refer to the [ESPHome documentation](https://esphome.io/).
-
 
 ## Tech Support & Product Discussion
 
@@ -433,12 +433,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
