@@ -74,9 +74,10 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
 
-* [I2S 1.0.8 Version Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_i2s_dfu_firmware_v1.0.8.bin)
+* [I2S Version Firmware Download](https://github.com/respeaker/ReSpeaker_Lite/blob/master/xmos_firmwares/respeaker_lite_i2s_dfu_firmware_v1.0.9.bin)
 
 :::tip Change log
+**v1.0.9**: change default DAC output gain(volume) from 0dB to -2dB; support i2c read mute_status
 **v1.0.8**: support new flash ZB25VQ32D<br/>
 **v1.0.7**: support i2c control speaker mute and output channels<br/>
 **v1.0.6**: change PRODUCT_STR to ReSpeaker Lite, fix ws2812 control bug<br/>
@@ -84,10 +85,15 @@ Before we start this chapter, please make sure the ReSpeaker Lite's firmware is 
 :::
 
 
-Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
+Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool.<br/>
+Connect the ReSpeaker Lite Board to your PC via the USB cable.
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
+
+Run the following command:
 
 ```
-dfu-util -e -a 1 -D respeaker_lite_i2s_dfu_firmware_v1.0.8.bin
+dfu-util -e -a 1 -D respeaker_lite_i2s_dfu_firmware_v1.0.9.bin
 ```
 
 :::caution
@@ -176,3 +182,7 @@ Or download the library as `zip` file and add it to the library in Arduino IDE.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/uninstall.png" alt="pir" width={600} height="auto" /></p>
 
 
+
+### Resource
+
+[ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
