@@ -1540,7 +1540,7 @@ One DSI (J24)and one 4-pin Spearker (J7)interfaces are reserved on board, for sp
 *  [reComputer R1000 Schematic Desing, PCB Desing](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_schematic_design_files.zip)
 *  [reComputer R1000 Flyer](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer.pdf)
 *  [reComputer R1000 Flyer in Chinese](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_flyer_CN.pdf)
-
+*  [reComputer R1000 v1.1 Pin Assignment](https://files.seeedstudio.com/wiki/reComputer-R1000/reComputer_R1000_v1_1_Pin_Assignment.xlsx)
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

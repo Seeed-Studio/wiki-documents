@@ -13,15 +13,16 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
-**SenseCAP Watcher will be live on Kickstarter on September 12, proudly featuring the official 'Project We Love' badge! Subscribe now to stay informed～**
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Watch Video</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div>
 
@@ -31,104 +32,68 @@ Introducing the Watcher Product Catalogue, your comprehensive guide to setting u
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Infrastructure.png" style={{width:1000, height:'auto'}}/></div>
 
-### Getting Started
+### [Quick start guide](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-**[Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)**
+### [Price and benefits](https://wiki.seeedstudio.com/watcher_price/)
 
-**[Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**
+### [Product Overview](http://wiki.seeedstudio.com/product_overview_with_watcher/)
 
-**[Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)**
+- [Hardware Overview](http://wiki.seeedstudio.com/watcher_hardware_overview/)
 
-**[Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)**
+- [Operation Guideline](http://wiki.seeedstudio.com/watcher_operation_guideline/)
 
-**[Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)**
+- [Task Assignment Guideline](http://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-Watcher Quick Start Series 5# : Training a model for Watcher *(Coming Soon)*
+### [Software Framework Overview](http://wiki.seeedstudio.com/watcher_software_framework_overview/)
 
-**[Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)**
+- [SenseCraft APP Introduction](http://wiki.seeedstudio.com/sensecap_app_introduction/)
 
-### API Core
+- [Watcher Software Service Introduction](http://wiki.seeedstudio.com/watcher_software_service_framework/)
 
-- Watcher API Essentials Series 1# : Peripherals *(Coming Soon)*
+- [Deploy Watcher's AI Capabilities Locally](http://wiki.seeedstudio.com/watcher_local_deploy/)
 
-- Watcher API Essentials Series 2# : UI *(Coming Soon)*
+### [Notification](http://wiki.seeedstudio.com/notifications_with_watcher_main_page/)
 
-- Watcher API Essentials Series 3# : Audio *(Coming Soon)*
+#### [UART Output](http://wiki.seeedstudio.com/uart_output/)
 
-- Watcher API Essentials Series 4# : Wireless *(Coming Soon)*
+#### [HTTP Proxy Notification](http://wiki.seeedstudio.com/http_proxy_notification/)
 
-- Watcher API Essentials Series 5# : SenseCAP Data Stream *(Coming Soon)*
+##### [Smart Home](http://wiki.seeedstudio.com/smart_main_page/)
 
-- Watcher API Essentials Series 6# : Tasks Flow *(Coming Soon)*
+- [Integrate Watcher to Home Assistant](http://wiki.seeedstudio.com/integrate_watcher_to_ha/)
 
-### Application
+##### [Node-RED Integration](http://wiki.seeedstudio.com/notification_with_watcher/)
+
+- [Watcher to Node-RED](http://wiki.seeedstudio.com/watcher_to_node_red/)
+
+- [Watcher & Node-RED to IFTTT](http://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
+
+- [Watcher & Node-RED to Kafka](http://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
+
+- [Watcher & Node-RED to Open Interpreter](http://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
+
+- [Watcher & Node-RED to P5JS](http://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
+
+- [Watcher & Node-RED to Telegram](http://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
+
+- [Watcher & Node-RED to Twilio](http://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
+
+- [Watcher & Node-RED to Discord](http://wiki.seeedstudio.com/watcher_node_red_to_discord/)
+
+- [Watcher & Node-RED to MongoDB](http://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
+
+- [Watcher & Node-RED to WhatsApp](http://wiki.seeedstudio.com/watcher_node_red_to_whatsapp/)
+
+### [Application](http://wiki.seeedstudio.com/applications_with_watcher_main_page/)
+
+#### [Use Case](http://wiki.seeedstudio.com/use_case/)
+
+#### [Development](http://wiki.seeedstudio.com/development/)
+
+- [Traning Model For Watcher](http://wiki.seeedstudio.com/training_model_for_watcher/)
 
 
-#### Base Part
 
-- Building development environment for Watcher based on ESP-IDF *(Planning)*
-
-#### Designer Part
-
-- UI design for Watcher using SquareLine Studio *(Planning)*
-
-- Watcher with P5JS shocking effect display *(Maybe)*
-
-#### SNS Integration Part
-
-- Watcher & Twillio Message Alerts *(Planning)*
-
-- Watcher & Telegram Message Alerts *(Planning)*
-
-- Watcher & Discord Message Alerts *(Planning)*
-
-- Watcher & Whatsapp Message Alerts *(Planning)*
-
-- Watcher & X (Twitter) Message Alerts *(Planning)*
-
-- Watcher & Google Mail Message Alerts *(Planning)*
-
-- Watcher does schedule management with IFTTT *(Planning)*
-
-#### Smart Home Part
-
-- [Integrate Watcher into Home Assistant](https://wiki.seeedstudio.com/integrate_watcher_to_ha/)
-
-#### IoT Platform Part
-
-- Watcher Data Streaming to Blynk Hosting *(Planning)*
-
-- Watcher Data Streaming to Ubidots Hosting *(Planning)*
-
-- Watcher Data Streaming to Losant Hosting *(Planning)*
-
-- Watcher Data Streaming to SenseCAP Hosting *(Maybe)*
-
-#### Simulator Part
-
-- Developing Watcher with CodeCraft *(Maybe)*
-
-- Developing Watcher with Wokwi *(Maybe)*
-
-#### Node-RED Integration Part
-
-- [Watcher Data Streaming to Node-RED](https://wiki.seeedstudio.com/watcher_to_node_red/)
-
-- [Watcher & Node-RED to p5.js](https://wiki.seeedstudio.com/watcher_node_red_to_p5js)
-
-- [Watcher & Node-RED to MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb)
-
-- [Watcher & Node-RED to Twillio Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
-
-- [Watcher & Node-RED to Telegram Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
-
-- [Watcher & Node-RED to IFTTT Gmail Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
-
-- [Watcher & Node-RED Data Streaming to Apache Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
-
-- [Watcher & Node-RED to Discord Message Alerts](https://wiki.seeedstudio.com/watcher_node_red_to_discord)
-
-### Open Source Material
 
 
 **In Preparation...**

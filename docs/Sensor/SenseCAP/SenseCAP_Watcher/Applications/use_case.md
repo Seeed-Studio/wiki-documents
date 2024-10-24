@@ -1,9 +1,9 @@
 ---
 description: Provides an in-depth look at the various applications and use cases for Watcher, showcasing its versatility and potential in different monitoring scenarios.
-title: 6# What does Watcher do
+title: Use Case
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/50.jpg
-slug: /what_does_watcher_do
-sidebar_position: 6
+slug: /use_case
+sidebar_position: 1
 last_update:
   date: 07/08/2024
   author: Citric

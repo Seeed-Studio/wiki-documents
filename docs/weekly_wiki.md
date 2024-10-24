@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 10/08/2024
+  date: 10/21/2024
   author: Frank
 ---
 
@@ -17,69 +17,68 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is October 7th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is October 21th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Using VNC on reComputer Jetson](https://wiki.seeedstudio.com/vnc_for_recomputer/) 
+### [Enclosure Installation Guide with ReSpeaker Lite](https://wiki.seeedstudio.com/respeaker_enclosure/) 
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Application/vnc_for_jetson/fig4.png"/></div>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/tTrhbSSWpeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-VNC is a remote desktop tool that allows you to remotely control your reComputer Nvidia Jetson form ohter PC devices, with real-time access to the graphical desktop. This wiki describes how to install and use VNC on the reComputer Nvidia Jetson.
+This wiki will provide you with a detailed, easy-to-follow guide for enclosure installation, helping you safely assemble the [ReSpeaker Lite voice kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-Full-Kit-of-2-Mic-Array-pre-soldered-XIAO-ESP32S3-Mono-Enclosed-Speaker-and-Enclosure.html) setup.
 
-### [Using MID360 LiDAR on reComputer Jetson](https://wiki.seeedstudio.com/mid360/) 
+### [SenseCAP Watcher Quick Start Guide](https://wiki.seeedstudio.com/getting_started_with_watcher/) 
 
-MID360 LIDAR sensors provide high-precision 3D point cloud data for various applications. This guide focuses on setting up the MID360 on a [reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) device running ROS Noetic.
+SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/robotics/hardware/MID360/reesult.png"/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
-This wiki provides a step-by-step guide to install and set up MID360 LiDAR on [reComputer J30/40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) Jetson using ROS, and visualize point cloud data.
+As a new comer for smart building / smart home system, SenseCAP Watcher is far more intelligent compared to current sensors and actuators. It understands what is happening within the space and then takes actions accordingly.
 
-### [MR60BHA2 mmWave Sensor with Home Assistant](https://wiki.seeedstudio.com/ha_with_mr60bha2/) 
+### [Hardware components of the SenseCAP Watcher](https://wiki.seeedstudio.com/watcher_hardware_overview/) 
 
-The MR60BHA2 is a 60GHz mmWave Breathing and Heartbeat Detection Sensor module designed for integration with the XIAO ESP32C6 microcontroller. This advanced sensor utilizes millimeter-wave technology to provide non-invasive monitoring of vital signs and presence detection.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview.jpg" style={{width:1000, height:'auto'}}/></div>
 
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60bha2/ha-sensor-light-on.jpg"/></div>
+In this section of the Wiki, we will focus on the hardware components of the SenseCAP Watcher, its construction and the use of additional accessories.
 
-This guide aims to provide a clear and comprehensive walkthrough for integrating the MR60BHA2 mmWave Sensor with Home Assistant using the XIAO ESP32C6 microcontroller. By following this guide, users will learn how to set up the sensor for heartbeat detection, connect it to their Home Assistant environment, and utilize ESPHome to manage and monitor the device effectively. 
+### [Operation guideline of the SenseCAP Watcher](https://wiki.seeedstudio.com/watcher_operation_guideline/) 
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/0.JPG" style={{width:800, height:'auto'}}/></div>
 
+Inside this section of the Wiki, we will provide you with information on the SenseCAP Watcher's operating logic, tasking, and the use of the device's features.
 
+### [Connect to Chirpstack with Wio-SX1262 with XIAO ESP32S3 Kit](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/) 
 
-<!-- ## Existing Wiki Updated
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
-### [How to use 40-Pin GPIO on reComputer Jetson Boards](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/51.png" alt="pir" width={900} height="auto" /></p>
 
-We've updated an [example](https://wiki.seeedstudio.com/reComputer_Jetson_GPIO/#for-jetpack6) for accessing and controlling GPIO for Jetpack 6+.
+This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3 kit as single channel gateway exchange data. And also connect the Sensecap S210x lora sensor node to Wio-SX1262 with XIAO ESP32S3 kit and transmit the sensor data to Chirpstack.
 
-### [Get Started with T1000-E Tracker](https://wiki.seeedstudio.com/sensecap_t1000_e/)
+### [Connect to TTN with Wio-SX1262 with XIAO ESP32S3 Kit](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/) 
 
-We provide troubleshooting [methods](https://wiki.seeedstudio.com/sensecap_t1000_e/#troubleshooting) for some common issues.
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/40.png" alt="pir" width={900} height="auto" /></p>
 
-### [Raspberry Pi support on Grove-16x2 LCD Series](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
+This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3 kit as single channel gateway exchange data with TTN. And also connect the Sensecap S210x lora sensor node to Wio-SX1262 with XIAO ESP32S3 kit and transmit the sensor data to TTN(The Things Network).
 
-We've added an [example](https://wiki.seeedstudio.com/Grove-16x2_LCD_Series/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-16x2 LCD Series.
+### [Lorawan Based on Wio SX1262 with XIAO ESP32S3 Module](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_lora_get_started/#flash-firmware) 
 
-### [Raspberry pi support on Grove-OLED Display 1.12inch](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
-
-We've added an [example](https://wiki.seeedstudio.com/Grove-OLED_Display_1.12inch/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove-OLED Display 1.12inch.
-
-### [Raspberry pi support on Grove - Optical Rotary Encoder](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi)
-
-We've added an [example](https://wiki.seeedstudio.com/Grove-Optical_Rotary_Encoder-TCUT1600X01/#play-with-raspberry-pi-with-grove-base-hat-for-raspberry-pi) of Raspberry Pi support for the Grove - Optical Rotary Encoder.
-
-### [Added Example for XIAO RP2350 with C/C++ SDK](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink)
-
-We’ve added examples for XIAO: [RGB Blink](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#example-2-rgb-blink), [UART Print](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-3-uart-print), and [Read Battery Voltage](https://wiki.seeedstudio.com/xiao-rp2350-c-cpp-sdk/#exmaple-4-read-battery-voltage).-->
+The XIAO ESP32S3 as host MCU and Wio SX1262 LoRa radio kit can be configured to function as single channel gateway for connecting to The Things Network. This kit offers a practical solution for those interested in delving into LoRa technology and establishing connections to LNS(lora network server).
 
 
 
+## Existing Wiki Updated
+
+### [Wio-SX1262 Introduction](https://wiki.seeedstudio.com/wio_sx1262/#resource)
+
+We provide a [link](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_symbol_and_package_file.zip) for Wio SX1262 symbol and package file.
 
 
 ## The Efforts of Contributor
 
-### [Seeed Studio XIAO RP2040 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/) 
+<!-- ### [Seeed Studio XIAO RP2040 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-rp2040-with-nuttx/) 
 
 [NuttX](https://nuttx.apache.org/) is a mature real-time operating system (RTOS) widely recognized for its standards compliance and small footprint. One of NuttX's main features is its scalability, which allows it to be used in environments ranging from 8-bit microcontrollers to 64-bit systems. This flexibility is achieved through adherence to POSIX and ANSI standards, enabling you to experiment with similar NuttX features across a wide range of chips from different architectures, families, and semiconductor vendors.
 
@@ -89,7 +88,7 @@ Additionally, NuttX offers many advanced and useful features, such as USB, Ether
 
 NuttX supports a vast and continually expanding number of boards. [The official documentation](https://nuttx.apache.org/docs/latest/platforms/) provides a comprehensive list of supported boards, organized by architecture and System-on-Chip (SoC) series. For instance, the [Seeed Studio Xiao RP2040](https://nuttx.apache.org/docs/latest/platforms/arm/rp2040/boards/seeed-xiao-rp2040/index.html) page in the NuttX documentation offers detailed descriptions of each supported feature and instructions on how to utilize them.
 
-<!-- ### [IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
+[IAO ESP32S3(Sense) With FreeRTOS](https://wiki.seeedstudio.com/xiao-esp32s3-freertos/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -182,6 +181,8 @@ This wiki covers [FreeRTOS](https://freertos.org/) support for the [Seeed Studio
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
 - [weekly wiki on 2024.9.23th](/Seeed_Elderly/weekly_wiki/wiki240923)
 - [weekly wiki on 2024.9.30th](/Seeed_Elderly/weekly_wiki/wiki240930)
+- [weekly wiki on 2024.10.07th](/Seeed_Elderly/weekly_wiki/wiki241007)
+- [weekly wiki on 2024.10.14th](/Seeed_Elderly/weekly_wiki/wiki241014)
 
 </details>
 

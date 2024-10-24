@@ -86,7 +86,7 @@ Once you installed, getting into this page means you can go to next step.
 Once you installed the Home Assistant, check [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) for details.
 :::
 
-### Step 1: Install Install Add-ons {#mqtt-addons}
+### Step 1: Install Add-ons {#mqtt-addons}
 
 :::caution Add-ons feature required
 Home Assistant Yellow comes with **Home Assistant Operating System** can be easily installed Add-ons. However, **Home Assistant Container** does not support Add-ons, which means you need to install a MQTT broker application aside from Home Assistant. For details, check the [installation Methods](https://www.home-assistant.io/installation/#compare-installation-methods).

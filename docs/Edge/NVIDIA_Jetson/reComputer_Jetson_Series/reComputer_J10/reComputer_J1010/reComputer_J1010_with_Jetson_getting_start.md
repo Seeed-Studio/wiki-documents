@@ -24,7 +24,7 @@ reComputer J1010 is a compact edge computer built with NVIDIA Jetson Nano 4GB  p
 
 Besides the Jetson module, reComputer J1010 also includes [J101 carrier board](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html) with onboard microSD card slot, 1*USB 3.0, 2*USB2.0, HDMI, M.2 Key E for WiFI, LTE and Bluetooth, RTC, Raspberry Pi GPIO 40-pin, and so on, as well as a heatsink, and aluminum case. The device has been pre-installed Jetpack 4.6.1, just plug in a USB C 5V/3A power supply, keyboard, mouse, and ethernet cable, you are ready to start your embedded AI journey! If you need more USB 3.0 and onboard M.2 key M for attaching SSD, you can choose reComputer J1020. 
 
-Note: We received customer inquiries they need more storage than 16GB eMMC offered. For orders after July 30th, 2022, we have included the microSD card slot on the [carrier board](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html) of reComputer J1010. Please check the [guide](https://wiki.seeedstudio.com/Flash_System_on_SD_card/#step-1-clone-this-repo) on boot image to microSD card and adjust I/O speed. 
+Note: We received customer inquiries they need more storage than 16GB eMMC offered. For orders after July 30th, 2022, we have included the microSD card slot on the [carrier board](https://www.seeedstudio.com/reComputer-J101-v2-Carrier-Board-for-Jetson-Nano-p-5396.html) of reComputer J1010. Please check the [guide](https://wiki.seeedstudio.com/J1010_Boot_From_SD_Card/#flashing-system-from-j101-to-sd-card) on boot image to microSD card and adjust I/O speed. 
 
 ## Features
 

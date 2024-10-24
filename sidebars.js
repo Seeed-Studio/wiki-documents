@@ -1015,6 +1015,7 @@ const sidebars = {
           label: 'MR60FDA2 mmWave kit',
           items: [
             'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/getting_started_with_mr60fda2',
+            'Sensor/mmWave_radar_sensor/mr60fda2-mmwave-kit/ha_with_mr60fda2',
           ],
         },
         {
@@ -1793,6 +1794,7 @@ const sidebars = {
                 'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
               ],
         },
+        'Sensor/ReSpeaker_Lite/respeaker_enclosure',
           ],
     },
 
@@ -1984,7 +1986,15 @@ const sidebars = {
                   items: [
                     'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Introduction',
                     'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Get_Started_meshtastic',
-                    //'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Get_Started_lora',
+                    'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Get_Started_lora',
+                    {
+                      type: 'category',
+                      label: 'Lora Network Server',
+                      items: [
+                        'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Lorawan_network_server/TTN',
+                        'Sensor/Wio_Series/Wio_SX1262/Wio_SX1262_with_XIAO_ESP32S3_Kit/Lorawan_network_server/Chirpstack',
+                      ],
+                    },
                   ],
                 },
               ],
@@ -3147,6 +3157,13 @@ const sidebars = {
                                    'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/CODESYS/recomputer_r1000_with_codesys_use_modbus_rtu',
                                   ],
                                 },
+                                {
+                                  type: 'category',
+                                  label: 'ThingsBoard',
+                                  items: [
+                                     'Edge/Raspberry_Pi_Devices/reComputer_R1000/Applications/tb/recomputer_r1000_thingsboard_ce',
+                                    ],
+                                  },
    
                           
                     ],

@@ -1,23 +1,27 @@
 ---
 description: Delves into the customization options available for Watcher's appearance and explores the various tools provided by the SenseCraft platform.
-title: 2# Watcher Looks & SenseCraft Tools
+title: SenseCraft APP Introduction
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/30.png
-slug: /getting_started_with_watcher_look_tool
-sidebar_position: 3
+slug: /sensecap_app_introduction
+sidebar_position: 1
 last_update:
-  date: 07/05/2024
+  date: 10/18/2024
   author: Citric
 ---
 
-# Watcher Looks & SenseCraft Tools
+# SenseCraft APP Guideline
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/30.png" style={{width:800, height:'auto'}}/></div>
-
-**SenseCAP Watcher will be live on Kickstarter on September 12, proudly featuring the official 'Project We Love' badge! Subscribe now to stay informed～**
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/30.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.kickstarter.com/projects/seeed/sensecap-watcher-open-source-ai-assistant-for-smarter-spaces?ref=aulzfo">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher's Video</font></span></strong>
+    </a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Github Repository</font></span></strong>
     </a>
 </div><br />
 
@@ -112,7 +116,7 @@ After Restore Device, you need to manually delete the corresponding device in th
 
 The following settings do not rely on a Bluetooth connection to the phone, just make sure that both the Watcher and the phone are connected to the Internet and that the SenseCraft Remote Control feature is turned on.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/36.png" style={{width:250, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/subscription2.png" style={{width:250, height:'auto'}}/></div>
 
 ### Device Name & Device Group
 
@@ -121,6 +125,13 @@ The Device Name & Device Group settings allow you to personalize your Watcher an
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/37.png" style={{width:250, height:'auto'}}/></div>
 
 Additionally, you can assign your Watcher to a specific Device Group, which is useful when managing a large number of devices for different purposes or locations. For example, you might create separate Device Groups for home, office, or outdoor monitoring. By grouping your Watcher devices logically, you can easily locate, configure, and control them based on their designated purpose or location.
+
+### Subscription
+
+By subscribing, you gain access to our advanced language model capabilities. Whether you want to analyze images or engage in intelligent conversations, our platform has you covered. Explore the full range of features and see how our technology can enhance your experience. Click to learn more!
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price.png" style={{width:250, height:'auto'}}/></div>
+
 
 ### Check Update
 
@@ -215,23 +226,6 @@ By working together and leveraging the power of collaboration, we can push the b
 Discover a world of creativity and inspiration in our Watcher Animation Showcase! This is where we celebrate the incredible talent and imagination of our designer community, featuring some of the most stunning and innovative custom animations created for the Watcher.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/45.png" style={{width:1000, height:'auto'}}/></div>
-
-## Resources
-
-- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
-
-- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
-
-- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/getting_started_with_watcher_look_tool)
-
-- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
-
-- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
-
-- Watcher Quick Start Series 5# : Training a model for Watcher
-
-- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
-
 
 ## Tech Support & Product Discussion
 
