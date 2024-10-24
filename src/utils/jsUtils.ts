@@ -19,6 +19,38 @@ export function toggleListItem<T>(list: T[], item: T): T[] {
   newList.splice(itemIndex, 1)
   return newList
 }
+
+
+export const judgeHomePath = () => {
+  const docList = document.querySelectorAll('.doc_nav')
+  const homeList = document.querySelectorAll('.home_nav')
+  if (location.pathname === '/') {
+    docList &&
+      docList.forEach((el: HTMLElement) => {
+        el.style.display = 'none'
+        console.log(el.parentNode)
+        el.parentNode.style.display = 'none'
+      })
+    homeList &&
+      homeList.forEach((el: HTMLElement) => {
+        el.style.display = 'inline-block'
+      })
+    document.body.classList.add('home_page')
+  } else {
+    document.body.classList.remove('home_page')
+    homeList &&
+      homeList.forEach((el: HTMLElement) => {
+        el.style.display = 'none'
+      })
+    docList &&
+      docList.forEach((el: HTMLElement) => {
+        el.style.display = 'inline-block'
+      })
+  }
+}
+
+
+
 export function judgeIsMobile() {
   const userAgent = navigator.userAgent
   const mobileKeywords = [

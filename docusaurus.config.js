@@ -159,7 +159,6 @@ const config = {
 
         zoom: {
           selector: '.markdown :not(a) > img', // Exclude images inside links
-          
         },
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         // https://github.com/gabrielcsapo/docusaurus-plugin-image-zoom
@@ -200,7 +199,7 @@ const config = {
             'https://files.seeedstudio.com/wiki/wiki-platform/SeeedStudio.png',
           srcDark:
             'https://files.seeedstudio.com/wiki/wiki-platform/seeed_white_logo.png',
-          href: 'Getting_Started',
+          href: '/',
           className: 'navbar_logo_items',
         },
         items: [
@@ -232,12 +231,14 @@ const config = {
           //   label: 'Cloud',
           //   className: 'navbar_doc_items',
           // },
+
+          // home navigation
+
           {
-            type: 'dropdown',
-            label: 'Getting Started',
+            label: 'Quick Links',
             to: '/Getting_Started',
             position: 'left',
-            className: 'navbar_dorp_items',
+            className: 'navbar_dorp_items js_getting_started',
             items: [
               {
                 label: 'Sensor and Sensing',
@@ -258,11 +259,10 @@ const config = {
             ],
           },
           {
-            type: 'dropdown',
-            label: 'Technology',
+            label: 'Explore with Topics',
             to: '/topicintroduction',
             position: 'left',
-            className: 'navbar_dorp_items',
+            className: 'navbar_dorp_items js_explore_learn',
             items: [
               {
                 label: 'TinyML',
@@ -285,12 +285,13 @@ const config = {
                 to: '/edge_ai_topic',
               },
               {
-                label: '矽递科技 Wiki 文档平台（测试）',
+                label: '矽递科技 Wiki 文档平台',
                 to: '/cn/Getting_Started',
               },
             ],
           },
 
+          // wiki documents navigation
           {
             type: 'dropdown',
             label: 'FAQs',
@@ -346,9 +347,9 @@ const config = {
               },
               {
                 label: 'Have Suggestions?',
-                href: 'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
+                href:
+                  'https://github.com/Seeed-Studio/wiki-documents/discussions/69',
               },
-
             ],
           },
 
@@ -387,7 +388,8 @@ const config = {
               },
               {
                 label: 'Apply for Rangers',
-                href: 'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
+                href:
+                  'https://docs.google.com/forms/d/e/1FAIpQLSdiAWHmRJqgVNTJyJDkzhufc1dygFyhWFyEtUTm-mrgSKaEgg/viewform',
               },
               {
                 label: 'Direct to Assignments',
@@ -395,7 +397,8 @@ const config = {
               },
               {
                 label: 'More about Rangers',
-                href: 'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
+                href:
+                  'https://www.seeedstudio.com/blog/2023/09/15/join-the-seeed-ranger-program-empowering-developers-and-building-communities/',
               },
               {
                 label: 'More about Contributors',
@@ -619,7 +622,7 @@ const config = {
         // It should match the "index_name" entry in the scraper's "config.json" file.
         // typesenseCollectionName: 'wiki_platform_1713169217',
         typesenseCollectionName: 'wiki_platform_1725602541',
-  
+
         typesenseServerConfig: {
           nodes: [
             {
@@ -630,14 +633,14 @@ const config = {
           ],
           apiKey: 'RWzz9wJKzXW2iBB8HgcCnZjnrytuWaYb',
         },
-              // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
-      "query_by": "hierarchy.lvl0,hierarchy.lvl2,content",
-      "sort_by": "",
-      
-      // Optional
-      contextualSearch: true,
-    },
+        // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+        typesenseSearchParameters: {},
+        query_by: 'hierarchy.lvl0,hierarchy.lvl2,content',
+        sort_by: '',
+
+        // Optional
+        contextualSearch: true,
+      },
 
       mermaid: {
         options: {

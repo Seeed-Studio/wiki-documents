@@ -13,6 +13,7 @@ import { useState, useRef, useEffect } from 'react'
 import ThirdPartyComponent from './_components/map';
 import { judgeIsMobile } from '../../utils/jsUtils';
 import './style.css'
+import TopNav from '../../components/topNav';
 
 function getImgUrl(str) {
 	return `https://files.seeedstudio.com/wiki/ranger/${str}.png`
@@ -314,6 +315,7 @@ export default function Ranger(): JSX.Element {
 	},[])
 	return (
 		<Layout>
+			<TopNav></TopNav>
 			<div className={clsx(styles.ranger_page, 'ranger_page')}>
 				{bannerRender()}
 				{topJoinRender()}

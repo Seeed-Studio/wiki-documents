@@ -7,7 +7,7 @@ keywords:
   - reComputer R1000
   - CODESYS
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
-slug: /reComputer_r1000_install_codesys
+slug: /recomputer_r1000_install_codesys
 last_update:
   date: 10/8/2024
   author: ShuishengPeng
