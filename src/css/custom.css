@@ -36,18 +36,20 @@
 	font-size: 0.85rem;
 	font-weight: bold;
 }
-
-.navbar_dorp_items {
-	display: inline-block;
-	color: var(--text-color);
-	font-size: 0.92rem;
-	font-weight: bold;
+@media (min-width: 768px) {
+	.navbar_dorp_items {
+		display: inline-block;
+		color: var(--text-color);
+		font-size: 0.92rem;
+		font-weight: bold;
+	}
+	
+	.navbar_doc_right_items {
+		display: inline-block;
+		color: var(--text-color);
+	}
 }
 
-.navbar_doc_right_items {
-	display: inline-block;
-	color: var(--text-color);
-}
 .header-SSCMA {
 	margin-left: -10px;
   }

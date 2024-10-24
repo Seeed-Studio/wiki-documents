@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
-import {useWindowSize} from '@docusaurus/theme-common';
-import {useDoc} from '@docusaurus/theme-common/internal';
+import { useWindowSize } from '@docusaurus/theme-common';
+import { useDoc } from '@docusaurus/theme-common/internal';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import DocVersionBadge from '@theme/DocVersionBadge';
@@ -10,16 +10,19 @@ import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
-import type {Props} from '@theme/DocItem/Layout';
+import type { Props } from '@theme/DocItem/Layout';
 
 import styles from './styles.module.css';
 import Comment from '../../../components/comment';
+import { useLocation } from '@docusaurus/router'
+import {judgeHomePath} from '../../../utils/jsUtils'
+import TopNav from '../../../components/topNav';
 
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
 function useDocTOC() {
-  const {frontMatter, toc} = useDoc();
+  const { frontMatter, toc } = useDoc();
   const windowSize = useWindowSize();
 
   const hidden = frontMatter.hide_table_of_contents;
@@ -39,11 +42,14 @@ function useDocTOC() {
   };
 }
 
-export default function DocItemLayout({children}: Props): JSX.Element {
+export default function DocItemLayout({ children }: Props): JSX.Element {
   const docTOC = useDocTOC();
   const { frontMatter } = useDoc();
   const { hide_comment: hideComment } = frontMatter;
-
+  const location = useLocation()
+  useEffect(() => {
+    judgeHomePath()
+  }, [location.pathname])
   return (
     <div className="row">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
@@ -60,6 +66,7 @@ export default function DocItemLayout({children}: Props): JSX.Element {
         </div>
         {!hideComment && <Comment />}
       </div>
+      <TopNav></TopNav>
       {docTOC.desktop && <div className="col col--3">{docTOC.desktop}</div>}
     </div>
   );
