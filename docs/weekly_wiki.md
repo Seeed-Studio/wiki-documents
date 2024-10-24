@@ -4,6 +4,7 @@ title: Weekly Wiki
 keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
+slug: /weekly_wiki
 last_update:
   date: 10/21/2024
   author: Frank
