@@ -23,10 +23,10 @@ function processDirectory(directory) {
 
       // 判断是否有 date 字段
       if (data.last_update && data.last_update.date) {
-        const fileName = path.basename(filePath) // 获取文件名，包括后缀
-        const fileNameWithoutExt = path.parse(fileName).name // 去掉文件后缀
+        // 使用 slug 字段作为路径
+        const slug = data.slug || '';
         docList.push({
-          path: '/' + fileNameWithoutExt,
+          path: slug,
           image: data.image || '',
           title: data.title || '',
           date: data.last_update.date,
@@ -41,7 +41,7 @@ processDirectory(docsDirectory)
 // 根据 date 字段进行降序排序
 docList.sort((a, b) => new Date(b.date) - new Date(a.date))
 
-// 获取最新的 10 条文档
+// 获取最新的 12 条文档
 const latestDocs = docList.slice(0, 12)
 
 // 将文档信息按照每个子数组最多包含 2 个文档的方式重新组织

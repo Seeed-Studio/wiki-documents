@@ -63,6 +63,14 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
       var newNavContainer: any = document.createElement('div');
       newNavContainer.className = 'nav_container com_module';
       navbar.appendChild(newNavContainer);
+      document.querySelectorAll('.navbar_dorp_items').forEach((item)=>{
+        item.addEventListener('mouseenter', () => {
+          console.log('.dropdown mouseenter' )
+          newNavContainer.style.display = 'none';
+          navbar.querySelector('.js_explore_learn').classList.remove('active')
+          navbar.querySelector('.js_getting_started').classList.remove('active')
+        });
+      })
       navbar.querySelector('.js_getting_started').addEventListener('mouseenter', () => {
         renderNa(startedList)
         navbar.querySelector('.js_getting_started').classList.add('active')
@@ -91,18 +99,6 @@ export default function DocItemLayout({ children }: Props): JSX.Element {
         newNavContainer.style.display = 'none';
         navbar.querySelector('.js_explore_learn').classList.remove('active')
         navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-
-      navbar.querySelector('.js_getting_started').addEventListener('mouseleave', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-      });
-      navbar.querySelector('.js_explore_learn').addEventListener('mouseleave', () => {
-        newNavContainer.style.display = 'none';
-        navbar.querySelector('.js_explore_learn').classList.remove('active')
-        navbar.querySelector('.js_getting_started').classList.remove('active')
-
       });
 
     }
