@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: 'Development'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: development
+link:
+  type: generated-index
+  slug: development
+  title: development
+  description: This part focus on how to use watcher capability to help your development.

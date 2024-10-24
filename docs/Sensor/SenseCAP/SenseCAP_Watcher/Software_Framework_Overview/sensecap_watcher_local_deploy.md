@@ -3,7 +3,7 @@ description: This tutorial will guide on how to deploy Watcher's AI service loca
 title: Deploy Watcher's AI capabilities locally
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/87.png
 slug: /watcher_local_deploy
-sidebar_position: 1
+sidebar_position: 3
 last_update:
   date: 10/18/2024
   author: Citric
