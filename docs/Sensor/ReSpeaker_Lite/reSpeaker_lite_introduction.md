@@ -100,24 +100,25 @@ ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, j
 
 ### Update firmware
 
+#### [Firmware Download](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
 
-* [USB 2.0.7 version Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_usb_dfu_firmware_v2.0.7.bin)
 
 
-:::tip Change log
-**v2.0.7**: support new flash ZB25VQ32D<br/>
-**v2.0.6**: set high to WS2812_PIN to give up the control of WS2812 after boot
-:::
+:::tip note
+There are 2 versions for the ReSpeaker Lite board:
 
-:::caution tip
-`respeaker_lite_usb_dfu_firmware_v2.0.7.bin` is the USB version
+To use it as a USB sound device, please flash the USB version firmware(default firmware).
 
-If you want to use it with XIAO ESP32S3, please check: [I2S firmware flash](https://wiki.seeedstudio.com/xiao_respeaker/#flash-the-i2s-firmware).
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-version.png" alt="pir" width={300} height="auto" /></p>
+
+To use it with XIAO ESP32S3, please flash the I2S version firmware.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/i2s-version.png" alt="pir" width={300} height="auto" /></p>
 :::
 
 #### Wiring
 
 Connect the ReSpeaker Lite Board to your PC via the USB cable.
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
 
@@ -132,66 +133,116 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="win" label="Windows">
 
-* Download the latest version of [dfu-util](http://dfu-util.sourceforge.net/releases) to your local system, e.g., under `D:\dfu-util`.
+* Download `dfu-util-0.11-binaries.tar.xz` and extract it to your local system, 
+  e.g., D:\
 
-* Install `dfu-util.exe`
+* Change directory to the `dfu-util.exe`<br/>
+  e.g., D:\dfu-util-0.11-binaries\win64\(if you are using win32, please change win64 to win32)
 
-* Append the path of the `dfu-util.exe` to the system environment variable `Path`: "My Computer" > "Properties" > "Advanced" > "Environment Variables" > "Path". 
+* Append the path of the `dfu-util.exe` to the system environment variable Path: `My Computer` > `Properties` > `Advanced` > `Environment Variables` > `Path`.      
+ Please note that paths in the variable Path are seperated by semicolon ;. 
+ This will allow dfu-util to be executed globally in command prompt.
 
-Please note that paths in the variable `Path` are seperated by semicolon `;`. This will allow dfu-util to be executed globally in command prompt.
+* Open the start menu and type cmd. Press the enter key. In the terminal that comes up, check if dfu-util.exe path is set with dfu-util -V command:
 
-* Install the [driver](https://zadig.akeo.ie/)
+```
+C:\Users\yiping>dfu-util -V
+dfu-util 0.11
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+```
 
 
-Choose `WinUSB`, nd click `Install Driver`.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/WinUSB.png" alt="pir" width={500} height="auto" /></p>
+- Run `dfu-util -l` to check if ReSpeaker Lite is detected: 
+```
+C:\Users\yiping>dfu-util -l
+dfu-util 0.11
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Found DFU: [2886:0019] ver=0205, devnum=9, cfg=1, intf=0, path="1-1.4.1", alt=2, name="DFU DATAPARTITION", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=9, cfg=1, intf=0, path="1-1.4.1", alt=1, name="DFU UPGRADE", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=9, cfg=1, intf=0, path="1-1.4.1", alt=0, name="DFU FACTORY", serial="0000000001"
+```
+
+:::tip
+If you get a "Cannot open DFU device" error like this, please keep following this step. If not, please go to Step 3 to flash firmware.
+:::
+
+```
+C:\Users\yiping>dfu-util -l
+dfu-util 0.11
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
+```
+- Install [Zadig](https://zadig.akeo.ie/) and open it. Click `Options` -> `List All Devices`.
+
+- Find `ReSpeaker 2 Mics Array` or `ReSpeaker Lite` or DFU `FACTORY (Interface 3)` from the device list, install `WINUSB v6.x.xxxx.xxxxx` driver. 
+
+<p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-2mic.png" alt="pir" width={500} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-lite.png" alt="pir" width={500} height="auto" /></p>
+
+<p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-fac.png" alt="pir" width={500} height="auto" /></p>
+
+
+- After installation is completed(that will take a few minutes), please do power-cycle and run `dfu-util -l` again, ReSpeaker Lite should be detected right now
 
 </TabItem>
 
 <TabItem value="mac" label="MacOS">
 
-Use "brew" to install or follow the instructions from [the official website](http://dfu-util.sourceforge.net/).
+- Install dfu-util with [brew](https://brew.sh/): `brew install dfu-util`
 
-* Install [brew](http://brew.sh/) or start the Terminal to install it directly:
-
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-* In the Teminal, type this command to install the dfu-util:
+- Run `dfu-util -l` to check if ReSpeaker Lite is detected: 
 
 ```
-brew install dfu-util
-```
+➜  ~ dfu-util -l
+dfu-util 0.11
 
-* Add the path of `dfu-util` to `PATH`:
-```
-export PATH=$PATH:PATH_TO_DFU_UTIL
-```
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 
-This will allow dfu-util to be executed globally in command prompt.
+Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=2, name="DFU DATAPARTITION", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=1, name="DFU UPGRADE", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=0, name="DFU FACTORY", serial="0000000001"
+```
 
 
 </TabItem>
 
 <TabItem value="lin" label="Linux">
 
-* Download the [dfu-util](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/linux-i386/) or use the package manager of your distribution to get the latest version:
+- Install dfu-util with apt: `sudo apt install dfu-util`
+
+- Run `sudo dfu-util -l` to check if ReSpeaker Lite is detected: 
 
 ```
-$ sudo apt-get install dfu-util
+pi@raspberrypi:~ $ sudo dfu-util -l
+dfu-util 0.9
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2016 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=2, name="DFU DATAPARTITION", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=1, name="DFU UPGRADE", serial="0000000001"
+Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, name="DFU FACTORY", serial="0000000001"
 ```
-* Add UDEV rule:
-
-```
-sudo nano /etc/udev/rules.d/77-mm-usb-device-blacklist.rules
-```
-
-Simply add this single line:
-
-ATTRS{idProduct}=="d058", ATTRS{idVendor}=="2b04", MODE="664", GROUP="plugdev"
-
-If it prompts "Cannot open DFU device", just reboot to try again.
 </TabItem>
 
 </Tabs>
@@ -204,12 +255,41 @@ If it prompts "Cannot open DFU device", just reboot to try again.
 
 * Connect the ReSpeaker board to your PC.
 
-* Run the following command:
+- Run the following command `dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`:
+    - On Linux please run `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`
+
+
+
 
 ```
-dfu-util -e -a 1 -D respeaker_lite_usb_dfu_firmware_v2.0.7.bin
+C:\Users\yiping>dfu-util -R -e -a 1 -D D:\Downloads\respeaker_lite_i2s_dfu_firmware_v1.0.7.bin
+dfu-util 0.11
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2021 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+Warning: Invalid DFU suffix signature
+A valid DFU suffix will be required in a future dfu-util release
+Opening DFU capable USB device...
+Device ID 2886:0019
+Device DFU version 0101
+Claiming USB DFU Interface...
+Setting Alternate Interface #1 ...
+Determining device status...
+DFU state(2) = dfuIDLE, status(0) = No error condition is present
+DFU mode device DFU version 0101
+Device returned transfer size 4096
+Copying data from PC to DFU device
+Download        [=========================] 100%       270336 bytes
+Download done.
+DFU state(7) = dfuMANIFEST, status(0) = No error condition is present
+DFU state(2) = dfuIDLE, status(0) = No error condition is present
+Done!
+Resetting USB to switch back to Run-Time mode
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207.png" alt="pir" width={600} height="auto" /></p>
+
 
 :::caution
 After flashing is completed, please restart the board.
@@ -258,6 +338,15 @@ dfu-util -l
  If it's not USB version, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
 
 
+* **Can't detect ReSpeaker Lite USB sound device on Windows after flashing USB firmware?**
+
+
+- Open the start menu and type `Device manager`. Press the enter key. Find `ReSpeaker Lite` device, right click it and select `Uninstall device`. Select   `Delete the driver software for this device` and click `Uninstall`. After that, restart the device and Windows will re-install the right sound card driver for it.
+
+ <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
+
+
 ### Resource
 
 [ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
+
