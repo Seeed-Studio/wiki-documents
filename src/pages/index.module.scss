@@ -109,7 +109,7 @@ html[data-theme='light'] {
 
       .banner_btn {
 
-        .banner_btn_item {
+        .banner_btn_item:not(.green) {
           background: #F5F5F5;
         }
 
