@@ -71,36 +71,9 @@ Powered by XMOS XU316 AI Sound and Audio chipset, it is a high-performance open 
 ### Flash the I2S firmware
 
 
-Before we start this chapter, please make sure the ReSpeaker Lite's firmware is the I2S version.
+To use the ReSpeaker Lite with XIAO ESP32S3, please make sure the ReSpeaker Lite's firmware is the I2S version.
 
-
-* [I2S 1.0.8 Version Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/respeaker_lite_i2s_dfu_firmware_v1.0.8.bin)
-
-:::tip Change log
-**v1.0.8**: support new flash ZB25VQ32D<br/>
-**v1.0.7**: support i2c control speaker mute and output channels<br/>
-**v1.0.6**: change PRODUCT_STR to ReSpeaker Lite, fix ws2812 control bug<br/>
-**v1.0.5**: support i2c read vnr value
-:::
-
-
-Check [Get Started](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to set up the tool, and run the following command:
-
-```
-dfu-util -e -a 1 -D respeaker_lite_i2s_dfu_firmware_v1.0.8.bin
-```
-
-:::caution
-After flashing is completed, please restart the board.
-:::
-
-Check the firmware version:
-
-```
-dfu-util -l
-```
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/i2s108-version.png" alt="pir" width={600} height="auto" /></p>
+Check [Firmware Flash](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#update-firmware) to flash the latest I2S firmware.
 
 
 
@@ -167,12 +140,14 @@ Or download the library as `zip` file and add it to the library in Arduino IDE.
 
 ### FAQ
 
-* If you want to use it as a sound device
-
- Please [flash the USB version firmware](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware).
- 
- For Windows users, after flashing the USB firmware, need to uninstall the device, then you can use it as a sound device.
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/uninstall.png" alt="pir" width={600} height="auto" /></p>
+* **Can't detect ReSpeaker Lite USB sound device on Windows after flashing USB firmware?**
 
 
+- Open the start menu and type `Device manager`. Press the enter key. Find `ReSpeaker Lite` device, right click it and select `Uninstall device`. Select   `Delete the driver software for this device` and click `Uninstall`. After that, restart the device and Windows will re-install the right sound card driver for it.
+
+ <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
+
+
+### Resource
+
+[ReSpeaker Lite XMOS Firmware](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)

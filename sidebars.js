@@ -1762,7 +1762,7 @@ const sidebars = {
         'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
         {
           type: 'category',
-          label: 'ReSpeaker Lite Voice Assistant Kit',
+          label: 'ReSpeaker Lite with XIAO ESP32S3',
           link: {
             type: "doc",
             id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
