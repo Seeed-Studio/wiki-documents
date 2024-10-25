@@ -23,19 +23,19 @@ function IndexPlatform() {
       btnList: [
         {
           label: 'SenseCraft DATA',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/'
         }, {
           label: 'SenseCraft EDGE',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/sensecraft_ai/'
         }, {
           label: 'Model Assistant',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Introduce_Overview/'
         }, {
           label: 'SenseCraft AI',
-          link: ''
+          link: 'https://sensecraft.seeed.cc/ai/#/home'
         }, {
           label: 'SenseCAP AI',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/'
         }
       ]
     },
@@ -47,19 +47,19 @@ function IndexPlatform() {
       btnList: [
         {
           label: 'SenseCraft DATA',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/'
         }, {
           label: 'SenseCraft EDGE',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/sensecraft_ai/'
         }, {
           label: 'Model Assistant',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Introduce_Overview/'
         }, {
           label: 'SenseCraft AI',
-          link: ''
+          link: 'https://sensecraft.seeed.cc/ai/#/home'
         }, {
           label: 'SenseCAP AI',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/'
         }
       ]
     },
@@ -71,19 +71,19 @@ function IndexPlatform() {
       btnList: [
         {
           label: 'SenseCraft DATA',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/'
         }, {
           label: 'SenseCraft EDGE',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/sensecraft_ai/'
         }, {
           label: 'Model Assistant',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Introduce_Overview/'
         }, {
           label: 'SenseCraft AI',
-          link: ''
+          link: 'https://sensecraft.seeed.cc/ai/#/home'
         }, {
           label: 'SenseCAP AI',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/'
         }
       ]
     }, {
@@ -94,19 +94,19 @@ function IndexPlatform() {
       btnList: [
         {
           label: 'SenseCraft DATA',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/'
         }, {
           label: 'SenseCraft EDGE',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/sensecraft_ai/'
         }, {
           label: 'Model Assistant',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Introduce_Overview/'
         }, {
           label: 'SenseCraft AI',
-          link: ''
+          link: 'https://sensecraft.seeed.cc/ai/#/home'
         }, {
           label: 'SenseCAP AI',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/'
         }
       ]
     },
@@ -118,19 +118,19 @@ function IndexPlatform() {
       btnList: [
         {
           label: 'SenseCraft DATA',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Tutorials_Datasets/'
         }, {
           label: 'SenseCraft EDGE',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/sensecraft_ai/'
         }, {
           label: 'Model Assistant',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/ModelAssistant_Introduce_Overview/'
         }, {
           label: 'SenseCraft AI',
-          link: ''
+          link: 'https://sensecraft.seeed.cc/ai/#/home'
         }, {
           label: 'SenseCAP AI',
-          link: ''
+          link: 'https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/'
         }
       ]
     },
