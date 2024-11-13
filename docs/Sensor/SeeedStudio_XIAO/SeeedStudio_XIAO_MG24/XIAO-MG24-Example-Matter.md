@@ -165,6 +165,8 @@ After scanning the QR code, the Matter controller(HomeKit) will prompt you to co
 
 <iframe class="youtube-video-r" src="https://youtube.com/embed/tmCpIWuRojQ" title="MG24 Matter Lightbulb Example" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<iframe class="youtube-video-r" src="https://youtube.com/embed/tmCpIWuRojQ" title="MG24 Matter Lightbulb Example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="width: 380px; height: 640px;"></iframe>
+
 ## Reference & Resources
 
 If you're new to Matter, the following resources provide foundational knowledge and development support for working within the Matter ecosystem:
