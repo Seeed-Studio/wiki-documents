@@ -48,10 +48,6 @@ We have added several [FAQs for Jetson Usage](https://wiki.seeedstudio.com/Jetso
 
 We have added an example for [reCamera Factory Reset](https://wiki.seeedstudio.com/recamera_getting_started/#factory-reset).
 
-### Added Resources for XIAO ESP32S3 Plus & nRF52840 (Sense) Plus
-
-We have added resources files for [XIAO ESP32S3 Plus](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#for-seeed-studio-xiao-esp32s3-plus) and [XIAO nRF52840 (Sense) Plus](https://wiki.seeedstudio.com/XIAO_BLE/#seeed-studio-xiao-nrf52840-sense-plus).
-
 ## The Efforts of Contributor
 
 <!-- ### [Seeed Studio Round Display for XIAO Christmas Ball](https://wiki.seeedstudio.com/round_display_christmas_ball/)
