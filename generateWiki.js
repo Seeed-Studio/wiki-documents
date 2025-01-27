@@ -11,11 +11,9 @@ const excludedPaths = [
   path.join(docsDirectory, 'zh-CN'), // 排除中文文档的目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
   
-  // path.join(docsDirectory, 'Edge', 'reCamera', 'reCamera_model_conversion.md'), // 排除指定文档
-  // path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft', 'SenseCraft_AI', 'SenseCraft_AI_main_page.md'),
-  // path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft', 'SenseCraft_AI', 'Output', 'xiao_esp32s3_sense', 'sensecraft_xiao_esp32s3_libraries.md'),
-  // path.join(docsDirectory, 'Cloud_Chain', 'SenseCraft', 'SenseCraft_AI', 'Output', 'xiao_esp32s3_sense', 'sensecraft_xiao_esp32s3_mqtt.md'),
-  // path.join(docsDirectory, 'FAQ', 'reTerminal', 'Wakeup_reTerminal_LCD_after_sleep.md'),
+
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'USB_Timeout_during_Flashing.md'), // 排除指定文档
+  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Get_System_Log_of_reComputer_J30_and_J40.md'),
 ];
 
 // 递归函数，用于遍历多层文件夹
