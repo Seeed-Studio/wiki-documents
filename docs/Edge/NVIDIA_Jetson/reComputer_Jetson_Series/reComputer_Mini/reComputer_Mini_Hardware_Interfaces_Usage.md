@@ -209,7 +209,7 @@ The read and write speeds for a 1GB data transfer on an external SSD connected v
 The program is also applicable for testing other USB interfaces.
 
 :::info
-For the usage of the USB Micro-B interface, please refer to [this wiki](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/) for a detailed tutorial.
+For the usage of the USB Micro-B interface, please refer to [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_getting_started/) for a detailed tutorial.
 :::
 
 ## UART
