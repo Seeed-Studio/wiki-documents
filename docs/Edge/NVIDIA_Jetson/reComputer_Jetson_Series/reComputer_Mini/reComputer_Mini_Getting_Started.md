@@ -212,7 +212,7 @@ reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX
 ## Hardware Overview 
 
 <div align="center">
-  <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/hardware.png"/>  
+  <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_mini/hardware_overview.png"/>  
 </div>
 
 
