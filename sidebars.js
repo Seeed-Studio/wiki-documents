@@ -1166,7 +1166,6 @@ const sidebars = {
           label: 'XIAO nRF52840 Series',
           items: [
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840-NuttX-RTOS',
             'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-nRF52840-Zephyr-RTOS',
             {
               type: 'category',
@@ -2855,17 +2854,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Other Network Devices',
-      items: [
-        'Network/TTN_Gateway/The-Things-Indoor-Gateway',
-        {
-          type: 'category',
-          label: 'Wio-WM6180 WiFi-Halow Devices',
-          items: [
-            'Network/WiFi-Halow/wifi-halow-module-for-xiao',
-            'Network/WiFi-Halow/wifi-halow-mini-pcie-module',
-          ],
-        },
-      ],
+      items: ['Network/TTN_Gateway/The-Things-Indoor-Gateway'],
     },
 
     // {
@@ -3569,21 +3558,27 @@ const sidebars = {
                   label: 'reComputer Mini',
                   items: [
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/reComputer_Mini_Getting_Started',
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/reComputer_Mini_Hardware_Interfaces_Usage'
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/reComputer_Mini_Hardware_Interfaces_Usage',
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Mini/test'
                   ],
                 },
             ]},
             
             // reServer Jetson Series
             {
-              type: 'category',
-              label: 'reServer Jetson',
               // link: {
               //   type: "doc",
               //   id: 'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_Getting_Started',
               // },
               items: [
-                'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
+                {
+                  type: 'category',
+                  label: 'reServer_Industrial',
+                  items: [
+                  'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Industrial_Getting_Started',
+                  'Edge/NVIDIA_Jetson/reServer_Jetson_Series/reServer_Industrial_J30_J40/reServer_Hardware_Interface_Usage'
+                  ],
+                },
                 // {
                 //   type: 'category',
                 //   label: 'reServer Industrial J30/40',
@@ -3686,8 +3681,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Riva_and_Llama2_on_reComputer',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Real_Time_Subtitle_Recoder_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Ollama_and_AnythingLLM_on_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/Quickly_Deploy_DeepSeek_on_reComputer_Jetson',
-                'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_DeepSeek_on_reComputer_Jetson_with_MLC',
+                
               ]
             },
             {
@@ -3776,7 +3770,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Jetson-AI-developer-tools',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/jetson-docker-getting-started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Lumeo-Jetson-Getting-Started',
-                // 'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
+                'Edge/NVIDIA_Jetson/Application/Developer_Tools/No-code-Edge-AI-Tool',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/reComputer_Jetson_Series_Resource',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/NVStreamer_Getting_Started',
                 'Edge/NVIDIA_Jetson/Application/Developer_Tools/Roboflow-Jetson-Getting-Started',

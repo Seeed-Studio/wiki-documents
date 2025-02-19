@@ -1,33 +1,30 @@
 ---
-description: reServer Industrial Getting Started
-title: reServer Industrial Getting Started
+description: reServer Hardware Interface Usage
+title: reServer Hardware Interface Usage
 keywords:
 - reServer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
-slug: /reServer_Industrial_Getting_Started
+slug: /reserver_hardware_interface_usage
 last_update:
   date: 09/22/2023
   author: Lakshantha
 ---
 
-# Getting Started with reServer Industrial
+# Hardware and Interfaces Usage
 
-<div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reServer-Industrial/1.png"/></div>
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
 
-reServer Industrial series offers fanless, compact, AI-enabled NVR (Network Video Recorder) servers including NVIDIA Jetson™ Orin Nano/Orin NX modules, ranging from 20 TOPS to 100 TOPS AI performance. reServer Industrial is preinstalled with Jetpack 5.1.1, simplifies development, ideal for bulding VMS (Video Management System) together with powerful AI capabilities, which brings digital transformantion across industries of smart cities, security, industrial automation, smart factories.
+
+<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
+
+
+To learn more about how to use all the hardware and interfaces on the reServer Industrial board, we recommend you to follow the below section of the wiki.
 
 reServer Industrial features 2x 2.5" SATA HDD/ SSD drive bays to easily store hundreds of local video footages in a video analytics application. Also it enables multiple connectivity options including 5 RJ-45 Ethernet ports, 1 RS232/422/485, 4x Isolated DI/DO, 1x CAN, 4* USB3.1. Fanless design with versatile mounting options allows deployment from -20 to 60 ℃, which is ideal for more harsh environments and heavier loads.
 
 reServer Industrial comes with a passive heatsink and a fanless design, making it ideal for use in demanding environments. The passive heatsink allows for efficient cooling without the need for a fan, reducing the risk of component failure due to dust or other contaminants. The fanless design also reduces noise levels and power consumption, making it suitable for use in noise-sensitive environments and minimizing energy costs.
 
 reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The remaining GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
-
-<div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-</a></div>
-
-## Features
 
 - **Fanless Compact Edge AI Server:** Powered by NVIDIA Jetson™ Orin Nano/Orin NX modules, ranging from 20 TOPS to 100 TOPS AI performance, wider temperature range from -20 ~ 60°C with 0.7m/s airflow
 - **Multi-Stream Processing:** 5* GbE RJ45(4 for 802.3af PSE ), handles multiple streams with real-time processing
@@ -36,573 +33,18 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 - **Hybrid Connectivity:** Supports 5G/4G/LTE/LoRaWAN® (module optional) with Nano SIM card slot
 - **Certifications:** FCC, CE, UKCA, ROHS, KC
 
-## Specifications
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+</a></div>
 
-<table>
-  <thead>
-    <tr>
-      <th colSpan={2}>Product Name </th>
-      <th><a href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">reServer Industrial</a><br /><a href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">J4012</a></th>
-      <th><a href="https://www.seeedstudio.com/reServer-industrial-J4011-p-5748.html">reServer Industrial</a><br /><a href="https://www.seeedstudio.com/reServer-industrial-J4011-p-5748.html">J4011</a></th>
-      <th><a href="https://www.seeedstudio.com/reServer-industrial-J3011-p-5750.html">reServer Industrial</a><br /><a href="https://www.seeedstudio.com/reServer-industrial-J3011-p-5750.html">J3011</a></th>
-      <th><a href="https://www.seeedstudio.com/reServer-industrial-J3010-p-5749.html">reServer Industrial</a><br /><a href="https://www.seeedstudio.com/reServer-industrial-J3010-p-5749.html">J3010</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td colSpan={2}>NVIDIA Jetson Module</td>
-      <td>Orin NX 16GB</td>
-      <td>Orin NX 8GB</td>
-      <td>Orin Nano 8GB</td>
-      <td>Orin Nano 4GB</td>
-    </tr>
-    <tr>
-      <td colSpan={2}>SKU</td>
-      <td>114110247</td>
-      <td>114110248</td>
-      <td>114110249</td>
-      <td>114110250</td>
-    </tr>
-    <tr>
-      <td rowSpan={6}>Processor<br />System</td>
-      <td>AI Performance</td>
-      <td>100 TOPS</td>
-      <td>70 TOPS</td>
-      <td>40 TOPS</td>
-      <td>20 TOPS</td>
-    </tr>
-    <tr>
-      <td>GPU</td>
-      <td colSpan={3}>1024-core NVIDIA Ampere architecture GPU with 32 Tensor Cores </td>
-      <td>512-core NVIDIA Ampere architecture GPU with 16 Tensor Cores</td>
-    </tr>
-    <tr>
-      <td>CPU</td>
-      <td>8-core Arm® Cortex®-A78AE v8.2 64- bit CPU; 2MB L2 + 4MB L3 </td>
-      <td colSpan={3}>6-core Arm® Cortex®-A78AE v8.2 64-bit CPU 1.5MB L2 + 4MB L3</td>
-    </tr>
-    <tr>
-      <td>Memory</td>
-      <td>16GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>8GB 128-bit LPDDR5 102.4GB/s</td>
-      <td>8GB 128-bit LPDDR5 68 GB/s</td>
-      <td>4GB 64-bit LPDDR5 34 GB/s</td>
-    </tr>
-    <tr>
-      <td>Video Encode</td>
-      <td colSpan={2}>Standards supported: H.265 (HEVC), H.264, AV1 1*4K60 (H.265) | 3*4K30 (H.265) | 6*1080p60 (H.265) | 12*1080p30 (H.265)</td>
-      <td colSpan={2}>1080p30 supported by 1-2 CPU cores </td>
-    </tr>
-    <tr>
-      <td>Video Decode</td>
-      <td colSpan={2}>Standards supported: H.265 (HEVC), H.264, VP9, AV1 1*8K30 (H.265) | 2*4K60 (H.265) | 4*4K30 (H.265) | 9*1080p60 (H.265) | 18*1080p30 (H.265) </td>
-      <td colSpan={2}>Standards supported: H.265 (HEVC), H.264, VP9, AV1 1*4K60 (H.265) | 2*4K30 (H.265) | 5*1080p60 (H.265) | 11*1080p30 (H.265)</td>
-    </tr>
-    <tr>
-      <td rowSpan={2}>Storage</td>
-      <td>eMMC</td>
-      <td colSpan={4}>-</td>
-    </tr>
-    <tr>
-      <td>Expansion</td>
-      <td colSpan={4}>M.2 Key M (2280) PCIe Gen4.0 SSD (M.2 NVMe SSD 128G included)</td>
-    </tr>
-    <tr>
-      <td rowSpan={9}>I/O</td>
-      <td>Ethernet</td>
-      <td colSpan={4}>1* LAN0 RJ45 GbE (10/100/1000Mbps)</td>
-    </tr>
-    <tr>
-      <td> </td>
-      <td colSpan={4}>4* LAN RJ45 GbE PoE(PSE 802.3 af 15 W, 10/100/1000Mbps)</td>
-    </tr>
-    <tr>
-      <td>USB</td>
-      <td colSpan={4}>4* USB3.1, 1* USB2.0 Type C(Device mode), 1* USB2.0 Type C For Debug UART &amp; RP2040</td>
-    </tr>
-    <tr>
-      <td>DI/DO</td>
-      <td colSpan={4}>4*DI,4*DO,3*GND_DI,2*GND_DO,1*GND_ISO,1*CAN</td>
-    </tr>
-    <tr>
-      <td>COM</td>
-      <td colSpan={4}>1* DB9 (RS232/RS422/RS485)</td>
-    </tr>
-    <tr>
-      <td>Display</td>
-      <td colSpan={2}>1*HDMI 2.1 Type A 7680x4320 at 30 Hz</td>
-      <td colSpan={2}>1*HDMI 1.4 Type A 3840x2160 at 30 Hz</td>
-    </tr>
-    <tr>
-      <td>SATA</td>
-      <td colSpan={4}>2 Drive Bays to support 2.5" SATA HDD/SSD(SATA III 6.0Gbps)</td>
-    </tr>
-    <tr>
-      <td>SIM</td>
-      <td colSpan={4}>1* Nano SIM card slot</td>
-    </tr>
-    <tr>
-      <td>Button</td>
-      <td colSpan={4}>Reset Button, Recovery Button</td>
-    </tr>
-    <tr>
-      <td rowSpan={5}>Expansion</td>
-      <td>Mini PCIe</td>
-      <td colSpan={4}>Mini PCIe for LoRaWAN®/4G/Series Wireless (Module optional)</td>
-    </tr>
-    <tr>
-      <td>M.2 Key B</td>
-      <td colSpan={4}>M.2 Key B (3042/3052) support 4G/5G (Module optional) </td>
-    </tr>
-    <tr>
-      <td>Fan</td>
-      <td colSpan={4}>Fanless, passive heatsink; 1*Fan connectors(5V PWM)</td>
-    </tr>
-    <tr>
-      <td>TPM</td>
-      <td colSpan={4}>1* TPM 2.0 connector (Module optional)</td>
-    </tr>
-    <tr>
-      <td>RTC</td>
-      <td colSpan={4}>1* RTC socket (CR1220 included),*RTC 2-pin</td>
-    </tr>
-    <tr>
-      <td rowSpan={2}>Power</td>
-      <td>Power Supply</td>
-      <td colSpan={4}>DC 12V-36V Terminal block 2 pin</td>
-    </tr>
-    <tr>
-      <td>Power Adapter</td>
-      <td colSpan={4}>24V /5A Power Adapter(Without power cord)</td>
-    </tr>
-    <tr>
-      <td rowSpan={9}>Mechanical</td>
-      <td>Dimensions (W x D x H)</td>
-      <td colSpan={4}>194.33mm*187mm*95.5mm</td>
-    </tr>
-    <tr>
-      <td>Weight</td>
-      <td colSpan={4}>2.8kg</td>
-    </tr>
-    <tr>
-      <td>Installation</td>
-      <td colSpan={4}>Desk, DIN rail, VESA</td>
-    </tr>
-    <tr>
-      <td>Operating Temperature</td>
-      <td colSpan={4}>-20 ~ 60°C with 0.7m/s</td>
-    </tr>
-    <tr>
-      <td>Operating Humidity</td>
-      <td colSpan={4}>95% @ 40 °C (Non-condensing)</td>
-    </tr>
-    <tr>
-      <td>Storage temperature</td>
-      <td colSpan={4}>-40 ~ 85°C</td>
-    </tr>
-    <tr>
-      <td>Storage humidity</td>
-      <td colSpan={4}>60°C@ 95% RH(Non-condensing)</td>
-    </tr>
-    <tr>
-      <td>Vibration</td>
-      <td colSpan={4}>3 Grms @ 5 ~ 500 Hz, random, 1 hr/axis</td>
-    </tr>
-    <tr>
-      <td>Shock</td>
-      <td colSpan={4}>50G peak acceleration (11 msec. duration,eMMC,microSD, or mSATA)</td>
-    </tr>
-    <tr>
-      <td colSpan={2}>OS</td>
-      <td colSpan={4}>Pre-installed Jetpack 5.1.1 (above) (provide Linux OS with board support package) </td>
-    </tr>
-    <tr>
-      <td colSpan={2}>Certification</td>
-      <td colSpan={4}>FCC, CE, RoHS, UKCA, KC</td>
-    </tr>
-    <tr>
-      <td colSpan={2}>Warranty</td>
-      <td colSpan={4}>2 Years</td>
-    </tr>
-  </tbody>
-</table>
 
-## Hardware Overview 
-
-### Full System
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
-
-### Carrier Board
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
-
-## Flash JetPack
-
-:::danger
-The device will come pre-installed with JetPack 5.1.1. If there are no special requirements, you don't need to reflash the system.
-:::
-
-reServer Industrial comes pre-installed with JetPack 5.1.1 on a 128GB SSD along with the necessary drivers. This includes SDK components such as CUDA, CUDNN and TensorRT. However, if you want to reflash Jetpack to the included SSD or to a new SSD, you can follow the steps below. Currently we only provide guidance for JP5.1.1 and we will keep updating this in the future.
-
-:::note
-If you want to use SSDs with reServer Industrial, we only recommend you choose the [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), the [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html), and the [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) versions from Seeed.
-:::
-
-### Prerequisites
-
-You need to prepare the following hardware before getting started with reServer Industrial
-
-- reServer Industrial
-- Provided Power Adapter with power cord ([US version](https://www.seeedstudio.com/AC-US-p-5122.html) or [EU version](https://www.seeedstudio.com/AC-EU-p-5121.html))
-- Ubuntu Host PC (native or VM using VMware Workstation Player)
-- USB Type-C data transmission cable
-- External monitor
-- HDMI cable
-- Keyboard and Mouse
-
-### Enter Force Recovery Mode
-
-Now you need to enter recovery mode on the reServer Industrial board in order to flash the device. Connect a USB Type-C cable between **DEVICE** port and your PC. Use a pin and insert into the **REC** hole to press the recovery button and while holding this, connect the included **2-Pin Terminal block power connector** to the power connector on the board (make sure to use the 2 screws to screw the terminal in place) and connect the included power adapter with a power cord to turn on the board
-
-<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reServer-Industrial/4.jpg"/></div>
-
-:::note
-Make sure you power on the device while holding the RECOVERY button or otherwise it will not enter recovery mode
-:::
-
-On the Ubuntu host PC, open a Terminal window and enter the command **lsusb**. If the returned content has one of the following outputs according to the Jetson SoM you use, then the board is in force recovery mode.
-
-- For Orin NX 16GB: **0955:7323 NVidia Corp**
-- For Orin NX 8GB: **0955:7423 NVidia Corp**
-- For Orin Nano 8GB: **0955:7523 NVidia Corp**
-- For Orin Nano 4GB: **0955:7623 NVidia Corp**
-
-### Different Methods of Flashing
-
-Here we offer 2 different methods of flashing.
-
-1. Download the entire system image we have prepared which includes NVIDIA JetPack, hardware periheral drivers and flash to device
-2. Download official NVIDIA L4T, use the included hardware periheral drivers and flash to device
-
-:::note
-The first method download is around 14GB and the second method download is about 3GB
-:::
-
-<!-- Code -->
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-<Tabs>
-<TabItem value="method1" label="Method 1">
-
-#### Download System Image
-
-- **Step 1:** Download the system image to your Ubuntu PC corresponding to the board you are using.
-
-<div class="table-center">
-  <table style={{textAlign: 'center'}}>
-    <thead>
-      <tr>
-        <th>Device</th>
-        <th>JetPack Version</th>
-        <th>L4T Version</th>
-        <th>Image Link</th>
-        <th>Alternative Image Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td rowSpan={3}>reServer Industrial J4012</td>
-        <td>5.1.1</td>
-        <td>35.3.1</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWoMiCYaghJGsmgX8ki3lrwB67RFYkI9zvBW6t86w_7chg?e=afbbOs" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EWxVw3rZF-JPuKp0ksJZkGABWmsSxVizaJIqQBL5TDL1JA?e=4JJ2XV" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.0</td>
-        <td>36.3</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EV0nlnSfW3NEmcDq4l3u1M4BrzThb0-y44qa4hGXk-XfWg?e=G9ub1C" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdCn0yi0ArRKivHb3mKLrwcBmBEKXlGKLCnNkRQNzyylAw?e=QTnhQa" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.1</td>
-        <td>36.4</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ES_8t6K7-0tJmkfcrTs0rgoBGvrBiq4Tr6X6ZTU3SjXxjQ?e=vuiqGS" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td>
-        <td>
-          -
-        </td>
-      </tr>
-      <tr>
-        <td rowSpan={3}>reServer Industrial J4011</td>
-        <td>5.1.1</td>
-        <td>35.3.1</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EY9t48fwnJVLraZyoVzYe2gB5RMb9FMXqKxVT9_WBFnnzQ?e=rcBfY5" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EW5Dood6aQ9DpT6ZaXWF50QBmyAyOowCktzqZj48sQeyhw?e=VVP56J" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.0</td>
-        <td>36.3</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EZlrBLKGf5VDiczIJaPNpNoBcby3urzv85oWmS34pKtcGg?e=u7aWDL" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EQJBb6D2ISBEnoUnUkqVEgkB9npGJ48jw5p2DXFIWaNJxA?e=lOJiFM" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.1</td>
-        <td>36.4</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERd_GV-EQGtIiqm90pnmAisBKIuOgZnCISP783um9r7OJw?e=nYL7oz" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          -
-        </td>
-      </tr>
-      <tr>
-        <td rowSpan={3}>reServer Industrial J3011</td>
-        <td>5.1.1</td>
-        <td>35.3.1</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EZDbctjmL2tAtpW_gaqhylABEE5UT2chlro5vi20sFKygA?e=yE5NfC" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/Eb6xTuWGRdlDpJfgLSWS7S4BpnKYxkI9RKl6tJbU0xI4FQ?e=m84vbP" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.0</td>
-        <td>36.3</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EY0cen9MPIhJpM2LBfm2edEBZtw53n2C9PwqsY2XaiSH_w?e=LWQren" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EdqRMLVCzHtIkHUShgZ91xoBK367uzXyC_mTGQOzlfJhyQ?e=wgOhwj" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.1</td>
-        <td>36.4</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EXv18M5S-gNGvFVyCgUIfOMBveES_RLF25qpEP1uMLGrBA?e=d7b2j7" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          -
-        </td>
-      </tr>
-      <tr>
-        <td rowSpan={3}>reServer Industrial J3010</td>
-        <td>5.1.1</td>
-        <td>35.3.1</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EeCYmkCdhqRGrh2idfcueV0B4btw0JAzCt8i7ePWZwSeng?e=XH9HDx" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EfzhFgx4V3NGu3q1MBtdqFkBdIxC0emeKmE22AHQL1GxhQ?e=KNHsQm" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.0</td>
-        <td>36.3</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EQgrBDUICyZCnKBI_qVeupoBYqQJ1dP7_lcxUwxUphg6Qw?e=ObUzPI" target="_blank" rel="noopener noreferrer">Download1</a>
-        </td>
-        <td>
-          <a href="https://szseeedstudio-my.sharepoint.cn/:u:/g/personal/youjiang_yu_szseeedstudio_partner_onmschina_cn/EXxmIAk7sGdOnPcaZHvz7ykB36pGkNwZscpdu3ZytrfD0Q?e=ElJ2bb" target="_blank" rel="noopener noreferrer">Download2</a>
-        </td>
-      </tr>
-      <tr>
-        <td>6.1</td>
-        <td>36.4</td>
-        <td>
-          <a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYKvmiXvDrZKnyrWpGDKBXMByXVFfgOkbl0NyF3LY8bEWQ?e=ydwLF5" target="_blank" rel="noopener noreferrer">Download1
-          </a>
-        </td>
-        <td>
-          -
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<p style={{ fontSize: '0.9em', color: 'yellow' , textAlign: 'center'}}>
-  * The image files from both Download1 and Download2 are the same. You can choose the link with the faster download speed.
-</p>
-
-<!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
-
-- **Step 2:** Extract the generated file 
-
-```sh
-tar -xvf <file_name>.tar.gz
-```
-
-#### Flash to Jetson
-
-- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows 
-
-```sh
-cd mfi_reserver-orin-industrial
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0 --showlogs
-```
-
-Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
-
-<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
-
-- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
-
-After that, the board will reboot and will be ready to use!
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
-
----
-
-</TabItem>
-<TabItem value="method2" label="Method 2">
-
-#### Download and Prepare NVIDIA L4T and rootfs
-
-```sh
-wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/jetson_linux_r35.3.1_aarch64.tbz2
-wget https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/release/tegra_linux_sample-root-filesystem_r35.3.1_aarch64.tbz2
-tar xf jetson_linux_r35.3.1_aarch64.tbz2
-sudo tar xpf tegra_linux_sample-root-filesystem_r35.3.1_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
-cd Linux_for_Tegra/
-sudo ./apply_binaries.sh
-sudo ./tools/l4t_flash_prerequisites.sh
-```
-
-#### Download and Prepare Drivers
-
-- **Step 1:** Download the driver files to your Ubuntu PC corresponding to the board you are using
-
-<table>
-  <thead>
-    <tr>
-      <th>Jetson Module</th>
-      <th>Download Link</th>
-      <th>JetPack Version</th>
-      <th>L4T Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan={2}>Jetson Orin NX 8GB/ 16GB</td>
-      <td rowSpan={2}><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nx-8-16-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td rowSpan={4}>5.1.1</td>
-      <td rowSpan={4}>35.3.1</td>
-    </tr>
-    <tr>
-    </tr>
-    <tr>
-      <td>Jetson Orin Nano 8GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-8-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-    <tr>
-      <td>Jetson Orin Nano 4GB</td>
-      <td><a href="https://sourceforge.net/projects/nvidia-jetson/files/reServer-Industrial/orin-nano-4-reserver-industrial.zip/download" target="_blank" rel="noopener noreferrer">Download</a></td>
-    </tr>
-  </tbody>
-</table>
-
-- **Step 2:** Move the downloaded peripheral drivers into the same folder with **Linux_For_Tegra** directory
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
-
-- **Step 3:** Extract the downloaded driver .zip file. Here we additionally install the **unzip** package which is needed to decompress the .zip file
-
-```sh
-sudo apt install unzip
-sudo unzip xxxx.zip # Replace xxxx with the driver file name
-```
-
-Here it will ask whether to replace the files. Type A and press ENTER to replace the necessary files
-
-<div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/30.png"/></div>
-
-#### Flash to Jetson
-
-- **Step 1:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
-
-```sh
-cd Linux_for_Tegra
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_nvme.xml -S 80GiB  -p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml --no-systemimg" --network usb0  reserver-orin-industrial external
-```
-
-Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
-
-<div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
-
-- **Step 2:** Connect the board to a display using the HDMI connector on the board and finish the initial configuration setup
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/104.png"/></div>
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/105.png"/></div>
-
-After that, the board will reboot and you will see the following
-
-<div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/106.png"/></div>
-
-- **Step 3:** Open a terminal window inside the device, execute the following, the device will reboot and ready to use!
-
-```sh
-systemctl disable nvgetty.service
-sudo depmod -a
-sudo reboot
-```
-
-Futhermore, if you want to install SDK components such as CUDA, cuDNN, TensorRT, please execute the following
-
-```sh
-sudo apt update
-sudo apt install nvidia-jetpack -y
-```
-
----
-
-</TabItem>
-</Tabs>
-
-<!-- Code END -->
-
-## Hardware and Interfaces Usage
-
-To learn more about how to use all the hardware and interfaces on the reServer Industrial board, we recommend you to follow the below section of the wiki:
-
-### Disassemble reServer Industrial
+## Disassemble reServer Industrial
 
 First of all, it is better to disassemble the outer enclosure to access all the interfaces. Follow [this document](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) to learn more. 
 
 
-### Gigabit Ethernet Connectors
+## Gigabit Ethernet Connectors
 
 There are 5 Ethernet ports on the reServer Industrial with 10/100/1000Mbps specification and 4 of them are rated with PSE 802.3 af 15 W where you can directly connect PoE cameras to these ports (LAN1-LAN4). These are connected via a PCIe to Ethernet (LAN7430-I/Y9X) module. However, the remaining Ethernet port (LAN0) on the leftmost side is only used to connect to a router for internet.
 
@@ -613,7 +55,7 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 - Green LED: ON only when connected to 1000M network
 - Yellow LED: Shows the network activity status
  
-#### Usage
+### Usage
 
 - Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
 
@@ -667,13 +109,13 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   ```bash
   sudo nmcli connection up POE3
   ```
-### SATA Connectors
+## SATA Connectors
 
 reServer Industrial supports 2 SATA 2.5" HDD/SSD and comes with both SATA data and power connectors. You can connect to HDD/ SSD as follows
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/23.jpg"/></div>
 
-#### Usage
+### Usage
 
 After the system boots up, you can verify the connected SATA drives by 
 
@@ -683,11 +125,11 @@ lsblk
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/28.png"/></div>
 
-### RTC
+## RTC
 
 reServer Industrial is equipped with 2 different ways to connect to an RTC battery
 
-#### Connection Overview
+### Connection Overview
 
 - Method 1:
 
@@ -701,7 +143,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reServer-Industrial/7.jpg"/></div>
 
-#### Usage
+### Usage
 
 - **Step 1:** Connect an RTC battery as mentioned above
 
@@ -805,7 +247,7 @@ sudo systemctl status hwtosys.service
 
 Out of the box, reServer Industrial includes a 128GB SSD connected to the M.2 Key M slot, which is pre-installed with JetPack system.
 
-#### Connection Overview 
+### Connection Overview 
 
 If you want to remove the included SSD and install a new one, you can follow the steps below. Here we only recommend to use Seeed SSDs with [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) and [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) storage because we have only tested those SSDs. Further this interface supports PCIe Gen4.0 SSDs.
 
@@ -819,7 +261,7 @@ If you want to remove the included SSD and install a new one, you can follow the
 
 - **Step 3:** Insert a new SSD and tighten back the screw
 
-#### Usage
+### Usage
 
 We will explain how to do a simple benchmark on the connected SSD 
 
@@ -1162,11 +604,11 @@ If you see the below output, that means the device has successfully connected wi
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/88.jpg"/></div>
 
-### M.2 Key B
+## M.2 Key B
 
 reServer Industrial comes with a M.2 Key B connector that supports 4G and 5G modules. Currently we have tested **SIM8202G-M2 5G module**
 
-#### 5G Module Connection Overview
+### 5G Module Connection Overview
 
 - **Step 1:** Power off the board if it is already on
 
@@ -1192,7 +634,7 @@ If you want to remove the SIM card, push the card in to hit the internal spring 
 
 - **Step 5:** Power on the board
 
-#### 5G Module Usage - Test Dialing
+### 5G Module Usage - Test Dialing
 
 When using the SIM8202G-M2 5G module, the module will not automatically start. So we first need to toggle a few GPIOs to make it start
 
@@ -1255,17 +697,17 @@ And you will see the below output
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
-#### 5G Module Usage - Connect to Internet
+### 5G Module Usage - Connect to Internet
 
 Coming soon
 
-### DI/ DO 
+## DI/ DO 
 
 reServer Industrial supports 4 digital input and 4 digital output channels, all of which are optically isolated to effectively protect the mainboard from voltage spikes or other electrical disturbances. There is also a CAN interface on this same connector which we will discuss later in this wiki
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/37.png"/></div>
 
-#### DI/ DO Pin Assignment Table
+### DI/ DO Pin Assignment Table
 
 <table>
   <thead>
@@ -1373,13 +815,13 @@ reServer Industrial supports 4 digital input and 4 digital output channels, all 
 </table>
 
 
-#### Connection Overview for DI
+### Connection Overview for DI
 
 You can make the connection for DI by following the diagram below. It is better to add a resistor in series for the DI line. Here we have tested with a 4.7kΩ resistor connected to the DI1 pin.
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/38.png"/></div>
 
-#### Usage for DI
+### Usage for DI
 
 You need to input a voltage of 12V on the DI line in order to get detected as an input
 
@@ -1406,13 +848,13 @@ cat value
 
 If it outputs 0, that means there is 12V input. If it outputs 1, that means there is no input voltage.
 
-#### Connection Overview for DO
+### Connection Overview for DO
 
 You can make the connection for DO by following the diagram below. It is better to add a resistor in series for the DO line. Here we have tested with a 4.7kΩ resistor
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/39.png"/></div>
 
-#### Usage for DO
+### Usage for DO
 
 Here you need to connect a load as mentioned in the above diagram. The easiest way to test this would be to connect a multimeter if you have access to one, or else connect a load that requires less than 40V maximum voltage
 
@@ -1440,13 +882,13 @@ echo 1 > value
 
 If the load is turned on or the multimeter outputs the voltage that you have input, the test it is functioning properly.
 
-### CAN
+## CAN
 
 reServer Industrial features a CAN interface that supports the CAN FD (Controller Area Network Flexible Data-Rate) protocol at 5Mbps. The CAN interface is isolated using capacitive isolation, which provides excellent EMI protection and ensures reliable communication in industrial and automation applications. A terminal resistor of 120Ω has been installed by default and you can toggle this resistor ON and OFF using GPIO.
 
 Note: The CAN interface uses an isolated power supply, which means that the ground signal for external devices connected to the CAN interface should be connected to the CG pin
 
-#### Connection Overview with USB to CAN Adapter
+### Connection Overview with USB to CAN Adapter
 
 To test and interface with CAN bus, connect a USB to CAN adapter to the CAN connectors on the board as shown below
 
@@ -1454,7 +896,7 @@ To test and interface with CAN bus, connect a USB to CAN adapter to the CAN conn
 
 Here we have used [USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html) available on our Bazaar.
 
-#### Usage with USB to CAN Adapter
+### Usage with USB to CAN Adapter
 
 - **Step 1:** Download the driver for the USB to CAN adapter you are using from the manufacturer's website and install it. In our case, according to the adapter that we used, the drivers can be found [here](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)
 
@@ -1520,7 +962,7 @@ Refer to the below image to connect reServer Industrial and reTerminal DM via CA
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/49.png"/></div>
 
-#### Usage with reTerminal DM
+### Usage with reTerminal DM
 
 - **Step 1:** Before using reTerminal DM, visit [this wiki](https://wiki.seeedstudio.com/reterminal-dm) to get started with reTerminal DM
 
@@ -1570,7 +1012,7 @@ Now you will see it received by reTerminal DM as follows
 
 - **Step 8:** Repeat **step 6 and step 7** but interchanging the devices. Use reTerminal DM to send CAN signals and use reServer Industrial to receive them
 
-### RS232/ RS422/ RS485 interfaces
+## RS232/ RS422/ RS485 interfaces
 
 reServer Industrial has a DB9 connector which supports RS232, RS422 and RS485 communication protocols and there is a DIP switch panel onboard to switch between the different interface options
 
@@ -1709,7 +1151,7 @@ Here we have selected Putty according to the PC that we used which is a X86 wind
 
 - **Step 2:** Open the downloaded setup and go through the prompts to install the application
 
-#### General Connection Overview
+### General Connection Overview
 
 You can refer to the pin numbering of DB9 connector and the table to make the connections
 
@@ -1788,7 +1230,7 @@ You can refer to the pin numbering of DB9 connector and the table to make the co
   </tbody>
 </table>
 
-#### RS232 Connection Overview 
+### RS232 Connection Overview 
 
 Here you can use a USB to RS232 adapter to test the interface. We have used [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) for our testing.
 
@@ -1804,7 +1246,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 - **Step 5:** Turn on the board
 
-#### RS232 Usage
+### RS232 Usage
 
 - **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
 
@@ -1844,7 +1286,7 @@ sudo cat /dev/ttyTHS0
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-#### RS422 Connection Overview 
+### RS422 Connection Overview 
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1862,7 +1304,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 - **Step 5:** Turn on the board
 
-#### RS422 Usage
+### RS422 Usage
 
 - **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the connected adapter as a COM device.
 
@@ -1898,7 +1340,7 @@ sudo cat /dev/ttyTHS0
 
 - **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reServer Industrial terminal window
 
-#### RS485 Connection Overview 
+### RS485 Connection Overview 
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1916,7 +1358,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 - **Step 5:** Turn on the board
 
-#### RS485 Usage
+### RS485 Usage
 
 - **Step 1:** You may need to install a driver for the adapter that you are using or windows will automatically install the driver for you. Go to Device Manager by typing **Device Manager** inside windows search and check whether you can see the conenected adapter as a COM device.
 
@@ -1963,7 +1405,7 @@ cat /dev/ttyTHS0
 
 - **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reServer Industrial terminal window
 
-### USB
+## USB
 
 reServer Industrial comes with 3x USB3.2 connectors onboard and has the following features:
 - On the dual stacked USB connectors, the upper and lower USB ports share a current-limiting IC, with a total power supply capacity of 2.1A maximum output current (single can also be 2.1A). If over 2.1A, it will enter the over-current protection state.
@@ -1974,7 +1416,7 @@ x1 -J3).
 - Provide 5V 2.1A
 - Hot-swappable
 
-#### Usage 
+### Usage 
 
 We will explain how to do a simple benchmark on a connected USB flash drive
 
@@ -1997,7 +1439,7 @@ There is a Green color LED located on the board as shown below. By default it is
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/22.jpg"/></div>
 
-#### Usage 
+### Usage 
 
 - **Step 1:** Enter the following commands on a terminal window to access the Green color LED
 
@@ -2028,7 +1470,7 @@ cd ..
 echo 329 > unexport
 ```
 
-### Monitor System Performance
+## Monitor System Performance
 
 We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
 
@@ -2063,19 +1505,19 @@ Now **jtop** application will open as follows
 
 - **Step 4:** Here you can cycle through the different pages of the applications and explore all the features!
 
-### TPM
+## TPM
 
 reServer Industrial comes with a TPM interface to connect an external TPM module. Here we have tested with a Infineon SLB9670 based TPM2.0 Module.
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/24.jpg"/></div>
 
-#### Connection Overview 
+### Connection Overview 
 
 Connect the TPM module to the TPM connector as shown below 
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/27.jpg"/></div>
 
-#### Usage
+### Usage
 
 Check whether the TPM module is loaded properly by executing the below commands
 
@@ -2088,7 +1530,7 @@ And you will see the output as follows
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/116.png"/></div>
 
-### Max Performance on reServer Industrial
+## Max Performance on reServer Industrial
 
 If you want to enable maximum performance on the reServer Industrial, please follow the below instructions 
 
@@ -2108,7 +1550,7 @@ Here it will ask to type **YES** in order to reboot the board
 sudo jetson_clocks
 ```
 
-### GPIO Table 
+## GPIO Table 
 
 You can access the GPIO table of the reServer Industrial to get familiar with all the pin mappings.
 
