@@ -35,21 +35,7 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 
 
 
-:::caution note
-During the process of continuous optimization and testing of the SenseCAP Indicator for Meshtastic, we found a situation that may affect your experience. In order to ensure that you can continue to enjoy the best product performance, we are currently optimizing this feature, so shipments may be delayed.
 
-**Identified Issue**<br/>
-In the `LONGFAST`, `LONGSLOW`, and `MIDSLOW` settings, message content exceeding `50 bytes` may result in instability and CRC errors, and message sending may fail.
-
-**Special Service for Previous Purchasers**<br/>
-If you are a previous purchaser and have the same issue, we are offering a special service to assist you. Please contact us at `sensecap@seeed.cc` and include your order number for support.
-
-**Version Upgrading**
-
-We are currently upgrading the version to fix these issues. The new version is expected to be released in `mid-to-late February`.
-
-Thank you for your understanding as we work to provide the best possible user experience.
-:::
 
 ## Introduction
 
@@ -87,8 +73,10 @@ Thank you for your understanding as we work to provide the best possible user ex
 
 ## Flash Firmware
 
-:::tip
-The Fancy-UI firmware has not been officially released yet, it's recommended to flash the Classic-UI firmware described in this wiki.
+:::tip NEW MUI(Fancy UI)
+To enter the 2.6 MUI preview page, press keys on your computer keyboard: ↑&nbsp;↑&nbsp;↓&nbsp;↓&nbsp;←&nbsp;→&nbsp;←&nbsp;→&nbsp;b&nbsp;a<br/>
+Then the page will turn black, you can see the pre-release option now.
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/2.6-ver.png" alt="pir" width={800} height="auto" /></p>
 :::
 
 ### Flash Application Firmware
@@ -260,21 +248,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
-### Keyboard usage
 
-**Step 1**: Navigate to `Settings` -> `Canned Messages`, and enable it.
-
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/canned.png" alt="pir" width={500} height="auto" /></p>
-
-**Step 2**
-
-On the node page, slide the screen from top to bottom and the keyboard will appear.
-
-
-<div class="table-center">
-    <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" autoplay> </iframe>
-</div>
 
 ### Precautions
 
@@ -291,6 +265,4 @@ DO NOT select the Repeater role, which will cause the device to repeatedly reboo
 If you didn't connect the GPS module, please disable the GPS function in the `Meshtastic` App, otherwise the device will keep trying to find the GPS module, which will cause the device to take a long time to boot up the screen.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
-
-
 

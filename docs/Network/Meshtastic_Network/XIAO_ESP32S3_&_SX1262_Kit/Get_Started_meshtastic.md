@@ -1,6 +1,6 @@
 ---
 description: Meshtastic based on XIAO ESP32S3 & Wio-SX1262 Kit
-title: Get Started for Meshtastic
+title: XIAO ESP32-S3 & Wio-SX1262 Kit
 image: https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/2.png
 slug: /xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic
 last_update:
