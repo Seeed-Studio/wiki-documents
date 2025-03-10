@@ -12,12 +12,23 @@ last_update:
 
 <!-- # Flash JetPack to NVIDIA® Jetson AGX Orin 32GB H01 Kit  -->
 
+
+
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/6.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+
+:::info
+Please note, the following updates were made to the product on November 25, 2024:
+
+1. The 5V power supply scheme has been changed (the power IC was replaced from ONNCP3020ADR2G to TI TPS53015DGS, and the peripheral components have been adjusted accordingly), which resolves the issue of device rebooting when using certain USB devices with high dynamic current.
+2. The board layout has been optimized to enlarge the slot for the fan cable to accommodate the fan wiring.
+3. To stabilize accessory supply, the WiFi module model has been changed from 8265.NGW to BL-M8822CP1, and the software drivers have been updated accordingly.
+:::
 
 This wiki will guide you how to install JetPack to Jetson AGX Orin 32GB H01 Kit.
 
@@ -252,6 +263,29 @@ sudo ./tooLs/kerneL_fash/L4t_initrd_fash.sh --externaL-device nvme0nlp1 -c tools
 </TabItem>
 
 </Tabs>
+
+## Developer Tools
+### Pre-installed Jetpack for fast development and edge AI integration
+[Jetson Software](https://developer.nvidia.com/embedded/develop/software) begins with NVIDIA JetPack™ SDK which provides a full development environment and includes CUDA-X accelerated libraries and other NVIDIA technologies to kickstart your development. JetPack includes the Jetson Linux Driver package which provides the Linux kernel, bootloader, NVIDIA drivers, flashing utilities, sample filesystem, and toolchains for the Jetson platform. It also includes security features, over-the-air update capabilities, and much more.
+
+### Computer Vision and embedded machine learning
+- [Deepstream](https://developer.nvidia.com/deepstream-sdk) delivers a complete streaming analytics toolkit for AI-based multi-sensor processing and video and image understanding on Jetson.
+- [TAO](https://developer.nvidia.com/tao-toolkit), built on TensorFlow and PyTorch, is a low-code version of the NVIDIA TAO framework that accelerates the model training
+- [alwaysAI](https://alwaysai.co/blog/getting-started-with-the-jetson-nano-using-alwaysai): build, train, and deploy computer vision applications directly at the edge of reComputer. Get free access to 100+ pre-trained Computer Vision Models and train custom AI models in the cloud in a few clicks via enterprise subscription. Check out our [wiki](https://wiki.seeedstudio.com/alwaysAI-Jetson-Getting-Started/#object-detection-on-pre-loaded-video-file) guide to get started with alwaysAI.
+- [edge impulse](https://www.edgeimpulse.com/) : the easiest embedded machine learning pipeline for deploying audio, classification, and object detection applications at the edge with zero dependencies on the cloud.
+- [Roboflow](https://blog.roboflow.com/deploy-to-nvidia-jetson/) provides tools to convert raw images into a custom-trained computer vision model of object detection and classification and deploy the model for use in applications. See the https://docs.roboflow.com/inference/nvidia-jetson  for deploying to NVIDIA Jetson with Roboflow.
+- [ultralytics yolo](https://github.com/ultralytics/yolov5): use transfer learning to realize few-shot object detection with YOLOv5 which needs only a very few training samples. See our step-by-step [wiki](https://wiki.seeedstudio.com/YOLOv5-Object-Detection-Jetson/) tutorials.
+- [Deep Learning](https://deci.ai/blog/jetson-machine-learning-inference/): optimize your models on NVIDIA Jetson Nano. Check [here](https://info.deci.ai/benchmark-optimize-runtime-performance-nvidia-jetson) at Deci of Automatically Benchmark and Optimize Runtime Performance on NVIDIA Jetson Nano and Xavier NX Devices
+
+### Speech AI
+- [Riva](https://developer.nvidia.com/riva) is a GPU-accelerated SDK for building Speech AI applications that are customized for your use case and deliver real-time performance.
+
+### Remote Fleet Management
+Enable secure OTA and remote device management with [allxon](https://www.allxon.com/). Unlock 90 days free trial with code H4U-NMW-CPK.
+
+### Robot and ROS Development
+- NVIDIA Isaac ROS GEMs are hardware-accelerated packages that make it easier for ROS developers to build high-performance solutions on NVIDIA hardware. Learn more about [NVIDIA Isaac](https://developer.nvidia.com/embedded/develop/software).
+- [Cogniteam Nimbus](https://www.cogniteam.com/nimbus) is a cloud-based solution that allows developers to manage autonomous robots more effectively. Nimbus platform supports NVIDIA® Jetson™ and ISAAC SDK and GEMs out-of-the-box. Check out our [webinar](https://www.seeedstudio.com/blog/2022/04/21/webinar-connect-your-ros-project-to-the-cloud-with-nimbus/) on connecting your ROS Project to the Cloud with Nimbus.
 
 
 ## Tech Support & Product Discussion

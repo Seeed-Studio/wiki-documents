@@ -115,7 +115,7 @@ last_update:
 	    <th>RAM</th>
 	    <td align="center">32 KB SRAM</td>
 	    <td align="center">264 KB SRAM</td>
-        <td align="center">520kB SRAM<br/>2MB PSRAM</td>
+        <td align="center">520kB SRAM<br/>2MB Flash</td>
 	    <td align="center">256 KB RAM</td>
 	    <td align="center">256 KB RAM</td>
         <td align="center">400 KB SRAM</td>

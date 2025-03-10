@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/7-114993588_6_CH_Relay_Sensor_feature.webp" style={{width:640, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/?utm_source=wiki">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/6-Channel-Wi-Fi-5V-DC-Relay-p-6373.html?utm_source=wiki">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -170,9 +170,9 @@ With either method, you'll have your firmware updated and ready for integration 
 ### Step 3: Network Configuration
 
 1. **Enable Access Point**:
-   - Upon powering up for the first time, the module will create a Wi-Fi network (SSID: `seeedstudio-2-channel-relay`).
+   - Upon powering up for the first time, the module will create a Wi-Fi network (SSID: `seeedstudio-6-channel-relay`).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/2_channel_ac_relay/2ch_relay_wifi_list.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap-from-xiao-esp32c6-seeedstudio-6-channel-relay.png" style={{width:680, height:'auto', "border-radius": '15px'}}/></div>
 
 2. **Access Configuration**:
    - Connect to the network using a phone or PC.

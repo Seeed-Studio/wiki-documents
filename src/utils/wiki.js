@@ -1,6 +1,48 @@
 const docList = [
   [
     {
+      "path": "/use_cursor_create_zigbee_prj",
+      "image": "https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/13.webp",
+      "title": "Using Cursor to Create Zigbee Projects with XIAO ESP32C6",
+      "date": "03/04/2025"
+    },
+    {
+      "path": "/recomputer_r1100_flash_OS",
+      "image": "https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.webp",
+      "title": "reComputer R1100 Flash OS",
+      "date": "3/3/2025"
+    }
+  ],
+  [
+    {
+      "path": "/SenseCAP_Indicator_ESP32_Arduino",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.webp",
+      "title": "Develop SenseCAP Indicator both chips with Arduino",
+      "date": "2/28/2025"
+    },
+    {
+      "path": "/recamera_gimbal_getting_started",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.webp",
+      "title": "Getting Started with reCamera Gimbal",
+      "date": "02/27/2025"
+    }
+  ],
+  [
+    {
+      "path": "/get_started_with_lorawan_tracker",
+      "image": "https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp",
+      "title": "Get Started with LoRaWAN Tracker",
+      "date": "2/27/2025"
+    },
+    {
+      "path": "/recamera_hardware_and_specs",
+      "image": "https://files.seeedstudio.com/wiki/reCamera/image.webp",
+      "title": "reCamera Overview",
+      "date": "02/18/2025"
+    }
+  ],
+  [
+    {
       "path": "/WM1302_module",
       "image": "https://files.seeedstudio.com/wiki/WM1302_module/WM1302_3.webp",
       "title": "LoRaWAN® Gateway Module WM1302",
@@ -39,48 +81,6 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.webp",
       "title": "Deploy DeepSeek on reComputer Jetson with MLC",
       "date": "02/13/2025"
-    }
-  ],
-  [
-    {
-      "path": "/getting_started_with_wifi_halow_mini_pcie_module",
-      "image": "https://files.seeedstudio.com/wiki/wifi_halow/pic/0.webp",
-      "title": "Getting Started with Wi-Fi HaLow Mini PCIe Module",
-      "date": "02/12/2025"
-    },
-    {
-      "path": "/getting_started_with_wifi_halow_module_for_xiao",
-      "image": "https://files.seeedstudio.com/wiki/wifi_halow/pic/20.webp",
-      "title": "Getting Started with Wi-Fi HaLow Module for XIAO",
-      "date": "02/12/2025"
-    }
-  ],
-  [
-    {
-      "path": "/xiao-nrf52840-nuttx",
-      "image": "https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp",
-      "title": "Seeed Studio XIAO nRF52840 with NuttX(RTOS)",
-      "date": "02/12/2025"
-    },
-    {
-      "path": "/SenseCAP_Indicator_Single_Channel_Gateway",
-      "image": "https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/61.webp",
-      "title": "Single Channel LoRaWAN Gateway - SenseCAP Indicator",
-      "date": "02/11/2025"
-    }
-  ],
-  [
-    {
-      "path": "/deploy_deepseek_on_jetson",
-      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/deepseek.webp",
-      "title": "Quickly Deploy DeepSeek on reComputer Jetson",
-      "date": "02/08/2025"
-    },
-    {
-      "path": "/xiao_mg24_bluetooth",
-      "image": "https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/ble-cover.webp",
-      "title": "Bluetooth Usage with Seeed Studio XIAO MG24",
-      "date": "02/8/2025"
     }
   ]
 ];

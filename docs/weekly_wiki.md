@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 02/24/2025
+  date: 03/03/2025
   author: Frank
 ---
 
@@ -17,65 +17,59 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is February 24th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is March 3rd, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with Wi-Fi HaLow Mini PCIe Module](https://wiki.seeedstudio.com/getting_started_with_wifi_halow_mini_pcie_module/)
+### [Getting Started with reCamera Gimbal](https://wiki.seeedstudio.com/recamera_gimbal_getting_started/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/0.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera-Gimbal.png" style={{width:600, height:'auto'}}/></div>
 
-This guide will walk you through setting up and using the Wi-Fi HaLow Mini PCIe Module to build a Wi-Fi HaLow gateway. The Mini PCIe form factor makes it easy to integrate Wi-Fi HaLow connectivity into existing systems and create IoT gateways that can connect numerous low-power devices over long distances.
+The reCamera gimbal 2002 series is the first open-source camera control system, composed of one tiny AI camera - reCamera 2002w 8GB/64GB, and one compatible 2-Axis gimbal basement with 2 brushless motors. It is powered by an RISC-V SoC, providing 1 TOPS AI performance with video encoding at 5MP @ 30 FPS. It offers a Lego-like self-assembly package and integrates the Sensecraft AI platform and Node-RED platform for smooth graphical programming and pipeline construction, enabling rapid self-training, model conversion, and deployment of AI models such as Yolo v5/v8/11.
 
-### [Getting Started with Wi-Fi HaLow Module for XIAO](https://wiki.seeedstudio.com/getting_started_with_wifi_halow_module_for_xiao/)
+### [reComputer R1100 Getting Started](https://wiki.seeedstudio.com/recomputer_r1100_intro/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/20.jpg" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/reComputer-R1125-1.jpg" style={{width:600, height:'auto'}}/></div>
 
-This tutorial will guide you through setting up and using the Wio-WM6180 Wi-Fi HaLow Module with a XIAO ESP32S3 to build a Wi-Fi HaLow client. Wi-Fi HaLow (IEEE 802.11ah) is designed for long-range, low-power IoT applications, operating in the sub-1 GHz frequency band. We'll walk through the hardware setup, software configuration, and demonstrate how to establish Wi-Fi HaLow connectivity for your IoT projects.
+The reComputer R1100, powered by the Raspberry Pi CM4, is a versatile edge IoT gateway with AI capabilities. It features a comprehensive range of industrial interfaces, including **2x Ethernet, 2x USB, 2x RS485, 2x RS232, 2x DI, and 2x DO**, along with flexible wireless connectivity options such as **4G, LoRa®, and Wi-Fi/BLE**. These features make it an ideal choice for various industrial applications.
 
-### [reServer Industrial Hardware Interface Usage](https://wiki.seeedstudio.com/reserver_industrial_hardware_interface_usage/)
+### [reComputer R1100 Assembly Guide](https://wiki.seeedstudio.com/recomputer_r1100_assembly_guide/)
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/R1100/dissambly_guide.PNG" style={{width:600, height:'auto'}}/></div>
 
-This guide covers the key features and setup of the reServer Industrial board, which offers versatile connectivity options, including 5 RJ-45 Ethernet ports (4 PoE PSE), and supports 2.5" SATA HDD/SSD storage. With its fanless design and passive heatsink, it’s built for harsh environments, offering efficient cooling and low power consumption, making it ideal for demanding, noise-sensitive applications.
+This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting.
 
-### [reCamera Software Structure](https://wiki.seeedstudio.com/recamera_os_structure/)
+### [Configure reComputer R1100](https://wiki.seeedstudio.com/recomputer_r1100_configure_system/)
 
-The software comes with a stable reCamera OS that supports firmware OTA updates. Additionally, Node-RED and Sensecraft AI platform is integrated in the device for easier deployment experience. This integration offers novice developers a modular programming experience based on Node-RED nodes.  For advanced developers, the in-depth Linux-based development and python are also there for twist and play.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/recam_OS_structure.png" style={{width:800, height:'auto'}}/></div>
-
-We warmly welcome developers proficient in JavaScript, C/C++, Python, Linux OS, buildroot, as well as geeks, students, and beginners, to engage in further development and explore applications.
-
-### [Develop reCamera with Node-RED](https://wiki.seeedstudio.com/recamera_develop_with_node-red/)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reCamera/example_flow.png" style={{width:800, height:'auto'}}/></div>
-
-Node-RED's goal is to enable anyone to build applications that collect, transform and visualize their data; building flows that can automate their world. Its low-code nature makes it accessible to users of any background, whether for home automation, industrial control systems or anything in between. By integrated Node-RED with reCamera, it provides a beginner-friendly development method that can let users drag and play with the device right the way. You can learn the [Node-RED Concept](https://nodered.org/docs/user-guide/concepts#:~:text=A%20Flow%20is%20represented%20as,(sets%20of%20connected%20nodes).) here or start with a [video tutorial](https://www.youtube.com/watch?v=DFNv91TTt68).
-
-### [Develop reCamera with c&cpp](https://wiki.seeedstudio.com/recamera_develop_with_c_cpp/)
-
-reCamera has limited resources and no compilation environment for C code is configured. If you want to use `C&CPP` to develop applications on the reCamera, you need to configure the cross-compilation environment on a linux machine. This wiki provides a simple example for configuring the compilation environment to help you get started quickly.
+Learn how to configure and test hardware components on the reComputer R1100 series after installing devices. This wiki covers GPIO mapping, USER LED testing, SPI communication, Wi-Fi and Bluetooth scanning, LoRa®, 4G, Zigbee over Mini-PCIe, RS485, RS232, DI/DO testing,UPS for safe shutdown and more.
 
 ## Existing Wiki Updated
 
-### [LoRaWAN® Gateway Module WM1302](https://wiki.seeedstudio.com/WM1302_module/)
+### [XIAO ESP32S3 Sense Sleep Modes](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/)
 
-We have added the [Run Semtech SX1302 packet forwarder example](https://wiki.seeedstudio.com/WM1302_module/#step4-run-semtech-sx1302-packet-forwarder).
+We have updated the example code for the [Deep-Sleep](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/#deep-sleep), [Light-Sleep](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/#light-sleep), and [Modem-Sleep](https://wiki.seeedstudio.com/XIAO_ESP32S3_Consumption/#modem-sleep) modes of the XIAO ESP32S3 Sense.
 
-### [reComputer Mini Hardware and Interfaces Usage](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/)
+### [reComputer R1000 Raspbian OS to eMMC](https://wiki.seeedstudio.com/recomputer_r1000_flash_OS/)
 
-We have added the [Ethernet](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/#ethernet), [USB](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/#usb), [UART](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/#uart), and other examples for reComputer Mini hardware and interface usage.
+We have added an operation example for [Boot from NVME](https://wiki.seeedstudio.com/recomputer_r1000_flash_OS/#boot-from-nvme).
 
-### [Flash JetPack OS to J401 Carrier Board](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
+### [Flash JetPack OS to A603 Carrier Board](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/)
 
-We have added the [flashing JP6.2 example](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#flash-the-device-step-by-step).
+We have added an example for using [CAN Interfaces](https://wiki.seeedstudio.com/reComputer_A603_Flash_System/#can-interfaces).
 
-### [Getting Started with Seeed Studio XIAO MG24](https://wiki.seeedstudio.com/xiao_mg24_getting_started/)
+### [NVIDIA® Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
 
-We have added the [Preventing XIAO MG24 from Bricking During Deep Sleep](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#preventing-xiao-mg24-from-bricking-during-deep-sleep) and [Unbricking example](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#unbricking).
+We have added relevant information about [Developer Tools](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#developer-tools).
 
 ## The Efforts of Contributor
+
+### [Develop both chips with Arduino](https://wiki.seeedstudio.com/SenseCAP_Indicator_ESP32_Arduino/#hardware-preparation)
+
+<div style={{textAlign:'center'}}>
+  <img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png" style={{width:800, height:'auto'}}/>
+</div>
+
+This tutorial will guide you to develop your own custom project/firmware for the Sensecap Indicator using the simplicity and Flexibility of the Arduino Framework.
 
 <!-- ### [Seeed Studio XIAO nRF52840 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-nrf52840-nuttx/)
 
@@ -186,5 +180,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO nRF52840 boa
 - [weekly wiki on 2025.1.27th](/Seeed_Elderly/weekly_wiki/wiki250127)
 - [weekly wiki on 2025.2.10th](/Seeed_Elderly/weekly_wiki/wiki250210)
 - [weekly wiki on 2025.2.17th](/Seeed_Elderly/weekly_wiki/wiki250217)
+- [weekly wiki on 2025.2.24th](/Seeed_Elderly/weekly_wiki/wiki250224)
 
 </details>

@@ -4,7 +4,7 @@ title: Get Started with LoRaWAN Tracker
 keywords:
 - Tracker
 - LoRaWAN
-image: https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Tracker/lorawan_tracker.webp
+image: https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/intro-e.webp
 slug: /get_started_with_lorawan_tracker
 sidebar_position: 1
 last_update:

@@ -3,7 +3,6 @@ description: Getting Started with Wi-Fi HaLow Mini PCIe Module
 title: Getting Started with Wi-Fi HaLow Mini PCIe Module 
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/0.webp
 slug: /getting_started_with_wifi_halow_mini_pcie_module
-sidebar_class_name: hidden # 有文件但是不显示在左侧目录
 last_update:
   date: 02/12/2025
   author: Citric
@@ -14,7 +13,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/0.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/getting_started_with_wifi_halow_mini_pcie_module">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -117,7 +116,7 @@ Here are the materials needed to run this tutorial.
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-                <a class="get_one_now_item" href="/getting_started_with_wifi_halow_mini_pcie_module">
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html">
                 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>

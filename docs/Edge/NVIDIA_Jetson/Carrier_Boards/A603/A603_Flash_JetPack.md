@@ -581,6 +581,69 @@ If you flashed the system onto the SSD, run the following commands:
 
 </Tabs>
 
+
+## CAN Interfaces
+
+Since there is a CAN transceiver on A603 carrier board, you don’t extra transceiver like dev kit. 
+
+**Step1.** Install `devmem2` to write values to registers:
+```sh
+sudo apt-get install devmem2
+```
+**Step2.** Write values according to [here](https://docs.nvidia.com/jetson/archives/r36.4/DeveloperGuide/HR/ControllerAreaNetworkCan.html#jetson-platform-details).
+```sh
+sudo devmem2 0x0c303010 w 0xc400
+sudo devmem2 0x0c303018 w 0xc458
+```
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/send1.png"/>
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/send2.png"/>
+</div>
+
+**Step3.** Load Kernel modules:
+```bash
+sudo modprobe can
+sudo modprobe can_raw
+sudo modprobe mttcan
+```
+After loading these modules, you should be able to see these logs in `sudo dmesg`:
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/check_can.png"/>
+</div>
+
+**Step4.** Bring up can0 interface:
+```sh
+sudo ip link set can0 type can bitrate 500000
+```
+Optionally, you can change the bitrate to 1000000. Then, bring up can0:
+```sh
+sudo ip link set can0 up
+```
+Check the interface with `ifconfig`:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/ifconfig.png"/>
+</div>
+
+**Step5.** Sending data (require can-utils installed). On the other side, we used a MCU with CAN Expansion board to receive data.
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/hardware.png"/>
+</div>
+
+Run `cansend can0 123#11.22.33.50` on jetson terminal:
+
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/cansend.png"/>
+</div>
+
+**Step6.** Receiving data. On the other side, we used a MCU with CAN Expansion board to send data.
+
+Run `candump can0` on jetson terminal:
+<div align="center">
+  <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/candump.png"/>
+</div>
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

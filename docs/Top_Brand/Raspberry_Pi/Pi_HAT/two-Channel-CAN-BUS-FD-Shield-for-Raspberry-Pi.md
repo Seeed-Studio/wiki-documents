@@ -109,6 +109,9 @@ You can see that we used nylon columns during assembly to avoid short-circuiting
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-thumbnail.png)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![](https://files.seeedstudio.com/wiki/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/img/CAN_BUS_Shield_V2.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi-p-4072.html)|[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html)|
 
+:bulb: **Note:** The 2 Channel CAN BUS FD Shield for Pi is only supported on kernel version 6.6.42 and below.
+
+
 Also we need to two [male to male jumper](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-241mm-200mm-160mm-117m-p-234.html) and power cables to power those boards.
 
 ### Hardware Connection
@@ -130,7 +133,7 @@ Also we need to two [male to male jumper](https://www.seeedstudio.com/Breadboard
 
 - **Step 4**. Power the Raspberry Pi and Seeeduino.
 
-![](https://github.com/Seeed-Studio/pi-hats/raw/master/images/can_hat_and_arduinno_hardware.jpg)
+![](https://files.seeedstudio.com/pi_hat_hardware_connection.jpg)
 
 ### Software
 

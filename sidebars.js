@@ -1307,6 +1307,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Zigbee/xiao_esp32c6_zigbee',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Zigbee/xiao_esp32c6_zigbee_arduino',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Zigbee/xiaoc6_zigbee_led_ha',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C6/Zigbee/use_cursor_create_zigbee_prj',
               ],
             },
             {
@@ -3421,6 +3422,7 @@ const sidebars = {
             collapsible: true,
             items: [
                   'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/reComputer_R1100',
+                  'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/recomputer_r1100_flash_os',
                   'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/recomputer_r1100_configure_system',
                   'Edge/Raspberry_Pi_Devices/Edge_Controller/reComputer_R1100/recomputer_r1100_assembly_guide',
             ],

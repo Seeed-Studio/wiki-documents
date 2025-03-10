@@ -92,33 +92,17 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 
 ### For Windows host computer
 
-- **Step 1.** Download the **rpiboot setup installer** by click **[here](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)** to install the necessary drivers and the boot tool
+- **Step 1.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
 
-- **Step 2.** Connect reComputer R1000 the PC via USB Type-C cable
-
-Windows will now find the hardware and install the necessary drivers
-
-- **Step 3.** Search for **rpiboot** tool that we installed before and open it
-
-- **Step 4.** Open **file explorer** and you will see the eMMC of the Computer Module 4 shown as a **USB mass storage device**
-
-- **Step 5.** Download **Raspberry Pi Imager** software from **[here](https://www.raspberrypi.org/software/)**
-
-- **Step 6.** Open Raspberry Pi Imager software
+- **Step 2.** Open Raspberry Pi Imager software
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 7.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+- **Step 3.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
-
-:::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000.
-:::
-
-- **Step 8.** Click **CHOOSE OS** and select your preferred OS
+- **Step 4.** Click **CHOOSE OS** and select your preferred OS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -130,17 +114,13 @@ Or you can use this link to download the image file:
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 9.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 5.** Click **CHOOSE STORAGE**
 
-- **Step 10.** Finally, click **WRITE**
+- **Step 6.** Finally, click **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
 Please wait a few minutes until the flashing process is complete.
-
-- **Step 11.** Flip the **Boot Mode switch** back to the **Normal mode** position
-
-Now you can skip to **[here](#install-drivers)**
 
 ### For MAC host computer
 
@@ -149,55 +129,19 @@ Now you can skip to **[here](#install-drivers)**
 Please open a terminal and type ```brew -V``` to check if you have setup the correct homebrew environment, you should see the version of the homebrew environment you have installed.
 :::
 
-- **Step 1.** Clone the **usbboot** repository
+- **Step 1.** Download and Install **Raspberry Pi Imager** Application by visiting [this link](https://www.raspberrypi.org/software/)
 
-```sh
-git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-```
-
-- **Step 2.** Install **libusb**
-
-```sh
-brew install libusb
-```
-
-- **Step 3.** Install **pkg-config**
-
-```sh
-brew install pkg-config
-```
-
-- **Step 4.** Build using make
-
-```sh
-make
-```
-
-- **Step 5.** Run the binary
-
-```sh
-sudo ./rpiboot
-```
-
-- **Step 6.** Connect reComputer R1000 to the your Mac computer via USB Type-C cable
-
-- **Step 7.** Download and Install **Raspberry Pi Imager** Application by visiting [this link](https://www.raspberrypi.org/software/)
-
-- **Step 8.** Open the **Raspberry Pi Imager** Application
+- **Step 2.** Open the **Raspberry Pi Imager** Application
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager.png" alt="pir" width="600" height="auto"/></p>
 
-- **Step 9.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+- **Step 3.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
-:::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000.
-:::
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set local settings** and more
 
-- **Step 10.** Click **CHOOSE OS** and select your preferred OS
+- **Step 4.** Click **CHOOSE OS** and select your preferred OS
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/OS-select.png" alt="pir" width="600" height="auto"/></p>
 
@@ -209,79 +153,27 @@ Or you can use this link to download the image file:
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 11.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 5.** Click **CHOOSE STORAGE**
 
-- **Step 12.** Finally, click **WRITE**
+- **Step 6.** Finally, click **WRITE**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/102110497/RPI_Imager_Final.png" alt="pir" width="600" height="auto"/></p>
 
-Please wait a few minutes until the flashing process is complete.
-
-- **Step 13.** Flip the **Boot Mode switch** back to the **Normal mode** position
-
-Now you can skip to **[here](#install-drivers)**
-
 ### For Linux host computer
 
-We will use Git to obtain the **rpiboot** source code, so make sure Git is installed
-
-- **Step 1.** Open a **Terminal** window and type the following to update the **packages list**
-
-```sh
-sudo apt-get update
-```
-
-- **Step 2.** Install **Git** by the following command
-
-```sh
-sudo apt install git pkg-config make gcc libusb-1.0-0-dev
-```
-
-- **Step 3.** Git might produce an error if the date is not set properly. Type the following to correct this
-
-```sh
-sudo date MMDDhhmm
-```
-
-**NOTE:** Where **MM** is the month, **DD** is the date, and **hh** and **mm** are hours and minutes respectively.
-
-- **Step 4.** Clone the **usbboot** tool repository
-
-```sh
-git clone --depth=1 https://github.com/raspberrypi/usbboot
-cd usbboot
-```
-
-- **Step 5.** Build and install the usbboot tool
-
-```sh
-make
-```
-
-- **Step 6.** Connect reComputer R1000 to the PC via USB Type-C cable
-
-- **Step 7.** Run the usbboot tool and it will wait for a connection
-
-```sh
-sudo ./rpiboot
-```
-
-The result is shown as below:
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
-
-- **Step 8.** Download snap
+- **Step 1.** Download snap
 
 ```sh
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager**
+- **Step 2.** Download **rpi-imager**
 
 ```sh
 snap install rpi-imager
 ```
 
-- **Step 10.** Open Raspberry Pi Imager software
+- **Step 3.** Open Raspberry Pi Imager software
 
 ```sh
 rpi-imager
@@ -290,22 +182,13 @@ rpi-imager
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 11.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
+- **Step 4.** Press **CTRL + SHIFT + X** on the keyboard to open **Advanced options** window
 
-Set a hostname, set a password, configure wifi, set locale settings
+<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/ReTerminal/rpi-imager-advanced.png" alt="pir" width="600" height="auto"/></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/cltaltx.png" alt="pir" width="600" height="auto"/></p>
+Here you can **set a hostname, enable SSH, set a password, configure wifi, set local settings** and more
 
-Enable SSH
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/enable_ssh.png" alt="pir" width="600" height="auto"/></p>
-
-Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
-:::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1000.
-:::
-
-- **Step 11.** Click **CHOOSE OS** and select your preferred OS
+- **Step 5.** Click **CHOOSE OS** and select your preferred OS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
 
@@ -319,9 +202,9 @@ Or you can use this link to download the image file:
 
 [Ubuntun for raspberry-pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=24.04&architecture=desktop-arm64+raspi)
 
-- **Step 12.** Click **CHOOSE STORAGE** and select the connected eMMC drive
+- **Step 6.** Click **CHOOSE STORAGE** and select the connected eMMC drive
 
-- **Step 13.** Finally, click **NEXT** and **YES**
+- **Step 7.** Finally, click **NEXT** and **YES**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/next-yes.png" alt="pir" width="600" height="auto"/></p>
 

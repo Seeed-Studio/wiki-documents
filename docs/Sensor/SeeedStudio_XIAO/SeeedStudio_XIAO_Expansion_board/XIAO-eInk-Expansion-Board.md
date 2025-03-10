@@ -1,6 +1,6 @@
 ---
-description: Getting Started XIAO eInk Expansion Board
-title: ePaper Driver Board for XIAO
+description: Getting Started with ePaper Breakout Board
+title: ePaper Breakout Board
 keywords:
 - XIAO eInk Expansion
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
@@ -10,7 +10,7 @@ last_update:
   author: Carla
 ---
 
-# Getting Started XIAO eInk Expansion Board
+# Getting Started with ePaper Breakout Board
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/4/-/4-105990172-epaper-breakout-board-45back.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -77,9 +77,11 @@ This breakout board does not include an eInk display; the display must be purcha
 4. [2.9 inch E-paper - Monocolor 128x296](https://www.seeedstudio.com/2-9-Monochrome-ePaper-Display-with-296x128-Pixels-p-5782.html)
 5. [2.9-inch e-paper - Quadruple color 128x296](https://www.seeedstudio.com/2-9-Quadruple-Color-ePaper-Display-with-128x296-Pixels-p-5783.html)
 6. [4.2-inch E-Paper - Monocolor 400x300](https://www.seeedstudio.com/4-2-Monochrome-ePaper-Display-with-400x300-Pixels-p-5784.html)
-7. [5.65-inch E-paper -  Sevencolor 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
-8. [5.83-inch E-paper - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
-9. [7.5-inch E-paper - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+7. [4.26-inch E-Paper - Monocolor 800x480](https://www.seeedstudio.com/4-26-Monochrome-SPI-ePaper-Display-p-6398.html)
+8. [5.65-inch E-paper -  Sevencolor 600x480](https://www.seeedstudio.com/5-65-Seven-Color-ePaper-Display-with-600x480-Pixels-p-5786.html)
+9. [5.83-inch E-paper - Monocolor 648x480](https://www.seeedstudio.com/5-83-Monochrome-ePaper-Display-with-648x480-Pixels-p-5785.html)
+10. [7.5-inch E-paper - Monocolor 800x480](https://www.seeedstudio.com/7-5-Monochrome-ePaper-Display-with-800x480-Pixels-p-5788.html)
+11. [7.5-inch E-paper - Tri-Color 800x480](https://www.seeedstudio.com/7-5-3-Color-SPI-ePaper-Display-p-6399.html)
 
 
 ## Use of the Image2lcd software
@@ -105,9 +107,11 @@ The colors of the picture should be consistent with the standard colors of the d
 |2.9 inch E-paper - Monocolor 128x296           | pure black and white          |
 |2.9-inch e-paper - Quadruple color 128x296     | black, white, red, and yellow |
 |4.2-inch E-Paper - Monocolor 400x300           | pure black and white          |
+|4.26-inch E-Paper - Monocolor 800x480          | pure black and white          |
 |5.65-inch E-paper -  Sevencolor 600x480        | black, white, red, yellow, blue, green, orange|
 |5.83-inch E-paper - Monocolor 648x480          | pure black and white          |
 |7.5-inch E-paper - Monocolor 800x480           | pure black and white          |
+|7.5-inch E-paper - Tri-Color 800x480           | pure black and white          |
 
 </div>
 
@@ -162,33 +166,47 @@ The colors of the picture should be consistent with the standard colors of the d
         <td align="center">/</td>
         <td align="center">Normal</td>       
     </tr>
-      <tr>
+    <tr>
         <th>4.2-inch E-Paper - Monocolor 400x300</th>
         <td align="center">Monochrome</td>
         <td align="center">400x300</td>
         <td align="center">✅</td>
         <td align="center">Mirror left-right</td>        
     </tr>
-      <tr>
+    <tr>
+        <th>4.26-inch E-Paper - Monocolor 800x480</th>
+        <td align="center">Monochrome</td>
+        <td align="center">800x480</td>
+        <td align="center">/</td>
+        <td align="center">Mirror left-right</td>        
+    </tr>
+    <tr>
         <th>5.65-inch E-paper -  Sevencolor 600x480</th>
         <td align="center">256 colors</td>
         <td align="center">600x448</td>
         <td align="center">/</td>
         <td align="center">Normal</td>        
     </tr>
-      <tr>
+    <tr>
         <th>5.83-inch E-paper - Monocolor 648x480</th>
         <td align="center">Monochrome</td>
         <td align="center">600x480</td>
         <td align="center">✅</td>
         <td align="center">Mirror left-right</td>        
     </tr>
-        <tr>
+    <tr>
         <th>7.5-inch E-paper - Monocolor 800x480</th>
         <td align="center">Monochrome</td>
         <td align="center">800x480</td>
         <td align="center">✅</td>
         <td align="center">Mirror left-right</td>     
+    </tr>
+    <tr>
+        <th>7.5-inch E-paper - Tri-Color 800x480</th>
+        <td align="center">Monochrome</td>
+        <td align="center">800x480</td>
+        <td align="center">/</td>
+        <td align="center">Normal</td>     
     </tr>
   </table>
 </div>
@@ -218,9 +236,11 @@ The colors of the picture should be consistent with the standard colors of the d
 |2.9 inch E-paper - Monocolor 128x296           | ✅ | ✅ | ✅ | ✅ | ✅ |
 |2.9-inch e-paper - Quadruple color 128x296     | ✅ | ✅ | ✅ | ✅ | ✅ |
 |4.2-inch E-Paper - Monocolor 400x300           | ✅ | ✅ | ✅ | ✅ | ✅ |
+|4.26-inch E-Paper - Monocolor 800x480          | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
 |5.65-inch E-paper -  Sevencolor 600x480        | FLASH overflowd | ✅ | ✅ | ✅ | ✅ |
 |5.83-inch E-paper - Monocolor 648x480          | ✅ | ✅ | ✅ | ✅ | ✅ |
 |7.5-inch E-paper - Monocolor 800x480           | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
+|7.5-inch E-paper - Tri-Color 800x480           | RAM overflowed | ✅ | ✅ | ✅ | ✅ |
 
 </div>
 
@@ -356,7 +376,7 @@ Before we get started developing a sketch, let's look at the available functions
 **Step 1.** Download the Demo Code, and open the code for your specific eInk Screen. 
 
 <div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Allen-Kuang/e-ink_Demo">
+    <a class="github_item" href="https://github.com/Seeed-Projects/Seeed_ePaper-Breakout-Board">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
