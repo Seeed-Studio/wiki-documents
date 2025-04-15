@@ -283,11 +283,10 @@ You can, of course, open the serial monitor to view the voltage values stream by
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/XIAO_DAC_wave.gif" /></div>
 
-**Code**
+#### **DAC**
 
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
-
 float x = 0; // Value to take the sin of
 float increment = 0.02;  // Value to increment x by each time
 int frequency = 440; // Frequency of sine wave
@@ -320,6 +319,9 @@ void loop()
 }
 ```
 
+**Result**
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/THonny_DAC.jpg" alt="pir" width={600} height="auto" /></p>
 ## **Getting Started**
 
 ### **Hardware**
