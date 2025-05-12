@@ -144,6 +144,12 @@ You will see the following output if the flashing process is successful
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/9.jpg"/></div>
 
+**Encountered Errors**:
+- **ERROR: failed to read rcm_state** on **AGX Orin** and **NX Orin** for *Jetpack 5.1.1*
+  - There is PCN changes on Jetson AGX Orin made by NVidia, but it's not Seeed's PCN changes.
+  - Beside materials mentioned in Wiki, please download [Overlay_PCN210361_PCN210100_r35.3.1.tbz2](https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/overlay_pcn210361_pcn210100_r35.3.1.tbz2) at bottom of the page Jetson Linux 35.3.1.
+  - After extracting *Jetson_Linux* and before applying binaries, please extract *Overlay_PCN210361_PCN210100_r35.3.1.tbz2*. Then copy all files, folders to *Linux_For_Tegra* (merge, not skip).
+  - Then continue remaining steps in guidances.
 </TabItem>
 
 <TabItem value="JP6.0" label="JP6.0">
