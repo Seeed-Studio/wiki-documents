@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 05/05/2025
+  date: 05/12/2025
   author: Frank
 ---
 
@@ -17,43 +17,33 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is May 5th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is May 12th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Flash Watcher Agent Firmware](https://wiki.seeedstudio.com/flash_watcher_agent_firmware/)
+### [Seeed Studio XIAO MG24 Connect HomeAssistant With Matter](https://wiki.seeedstudio.com/xiao_mg24_ha_openthread/)
 
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/Group10.png" alt="pir" width={800} height="auto" /></p>
 
-This guide provides instructions for flashing the Watcher Agent firmware to your SenseCAP Watcher device using Espressif's Flash Download Tool.
-
-### [Network Setup Guide for Watcher Agent](https://wiki.seeedstudio.com/device_network_setup/)
-
-<p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/wifi%20config.jpg" alt="pir" width={300} height="auto" /></p>
-
-This document will guide you through the network configuration process for your SenseCAP Watcher Agent. Follow these steps to easily connect your device to your network and get started.
-
-### [Web Control Panel Guide for Watcher Agent(Beta)](https://wiki.seeedstudio.com/watcher_web_control_panel/)
-
-The SenseCAP Watcher Web Control Panel (Beta) provides a web-based interface for managing your Watcher device and configuring its Agent settings. This beta version includes essential features for device management and Agent customization.
+In this wiki, we will utilize the Sonoff Zigbee 3.0 USB Dongle to access the HomeAssistant and thus act as a border router, while the Seeed Studio XIAO MG24 will act as a Matter protocol device with the Thread network.
 
 ## Existing Wiki Updated
 
-### [How to use the SO-ARM100 and SO-ARM101 robotic arm in Lerobot](https://wiki.seeedstudio.com/lerobot_so100m/)
+<!-- ### [How to use the SO-ARM100 and SO-ARM101 robotic arm in Lerobot](https://wiki.seeedstudio.com/lerobot_so100m/)
 
 We added examples related to [Configure the motors](https://wiki.seeedstudio.com/lerobot_so100m/#configure-the-motors).
 
 ### [Camera Usage in Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)
 
-We added examples related to [OV5640 AutoFocus operations](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#ov5640-autofocus).
+We added examples related to [OV5640 AutoFocus operations](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#ov5640-autofocus). -->
 
 ## The Efforts of Contributor
 
-<!-- ### [Seeed Studio XIAO ESP32C3 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao-esp32c3-nuttx/)
+### [Seeed Studio XIAO ESP32C6 with NuttX(RTOS)](https://wiki.seeedstudio.com/xiao_esp32c6_nuttx/)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/nuttx.svg" style={{width:400, height:'auto'}}/></div>
 
-This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C3 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control. -->
+This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 board. NuttX is a lightweight, scalable real-time operating system known for its small footprint and broad hardware support. The guide walks through installing necessary tools, configuring the board, building the system, and flashing firmware. It includes examples for using NuttShell (NSH), USBNSH, and JUMBO applications, with a focus on practical tasks like GPIO and LED control.
 
 - Check on [GitHub](https://github.com/orgs/Seeed-Studio/projects/6) for more information.
 - We will be really appreciate if you can [share your ideas](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35179519) with us!
@@ -166,5 +156,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C3 boar
 - [weekly wiki on 2025.4.14th](/Seeed_Elderly/weekly_wiki/wiki250414)
 - [weekly wiki on 2025.4.21th](/Seeed_Elderly/weekly_wiki/wiki250421)
 - [weekly wiki on 2025.4.28th](/Seeed_Elderly/weekly_wiki/wiki250428)
+- [weekly wiki on 2025.5.05th](/Seeed_Elderly/weekly_wiki/wiki250505)
 
 </details>
