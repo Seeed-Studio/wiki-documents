@@ -3475,7 +3475,8 @@ const sidebars = {
                   label: 'reComputer Super',
                   items: [
                   'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_Getting_Started',
-                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_Hardware_Interfaces_Usage'
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_Hardware_Interfaces_Usage',
+                  'Edge/NVIDIA_Jetson/reComputer_Jetson_Series/reComputer_Super/reComputer_Super_vs_Classic_Next-Gen_AI_Performance_in_Edge_Inferencing'
                   ],
                 },
             ]},
