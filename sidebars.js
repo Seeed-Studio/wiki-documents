@@ -3999,7 +3999,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'Cloud',
-      label: 'Cloud',
+      label: 'SenseCraft & Cloud',
       className: 'sideboard_calss',
     },
     {
@@ -4020,7 +4020,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCAP Dashboard',
+      label: 'Blockchain Dashboard',
       items: [
         'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Basics',
         'Cloud_Chain/SenseCAP_Dashboard/Dashboard_Registration',
@@ -4029,7 +4029,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCAP Portal',
+      label: 'SenseCraft Data Platform',
       items: [
         'Cloud_Chain/SenseCAP_Portal/QuickStart',
         {
@@ -4072,7 +4072,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCAP AI',
+      label: 'SenseCraft AI',
       items: [
         'Cloud_Chain/SenseCAP_AI/How_to_Use SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP',
         'Cloud_Chain/SenseCAP_AI/xiao-esp32c3-sensecapai',
@@ -4080,7 +4080,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCAP API',
+      label: 'SenseCraft Data Platform API',
       items: [
         'Cloud_Chain/SenseCAP_API/SenseCAP_API_Introduction',
         'Cloud_Chain/SenseCAP_API/API_pricing',
@@ -11812,7 +11812,7 @@ const sidebars = {
     {
       type: 'doc',
       id: 'ja/ja_Cloud',
-      label: 'クラウド',
+      label: 'SenseCraft & クラウド',
       className: 'sideboard_calss',
     },
     {
