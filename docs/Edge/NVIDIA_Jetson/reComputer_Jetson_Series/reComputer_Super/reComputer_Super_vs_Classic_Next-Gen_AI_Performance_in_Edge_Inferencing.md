@@ -8,7 +8,7 @@ tags:
   - yolo
   - Jetson
   - AI
-image: https://files.seeedstudio.com/wiki/reComputer-Jetson/super/super2.webp
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/super2.webp
 slug: /recomputer_jetson_super_performance
 last_update:
   date: 06/04/2025
