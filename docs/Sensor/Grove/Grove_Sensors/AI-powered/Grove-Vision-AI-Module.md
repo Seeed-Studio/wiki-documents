@@ -12,11 +12,17 @@ last_update:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/camera.jpg" /></div>
 
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-p-5457.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
+
+
+:::warning **[Hardware Version Updated]** 
+As part of our commitment to continuous improvement, we've evolved our product line, and support for this version has now concluded. We encourage you to explore and purchase the **Grove Vison AI V2** for an enhanced experience. If you're currently using V1 and experiencing any difficulties, please don't hesitate to reach out to our after-sales support team. We're committed to providing you with our best  assistance.
+:::
 
 ## Introduction
 
