@@ -20,7 +20,7 @@ last_update:
 </div>
 
 
-:::warning **[Board Version Updated]** 
+:::warning **[Hardware Version Updated]** 
 As part of our commitment to continuous improvement, we've evolved our product line, and support for this version has now concluded. We encourage you to explore and purchase the **Grove Vison AI V2** for an enhanced experience. If you're currently using V1 and experiencing any difficulties, please don't hesitate to reach out to our after-sales support team. We're committed to providing you with our best  assistance.
 :::
 
