@@ -1,7 +1,7 @@
 ---
 title: Seeed Studio XIAO nRF54L15(Sense)
 description: |
-image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
+image: https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1-101991422-XIAO-nRF54L15-Sense.webp
 slug: /xiao_nrf54l15_sense_getting_started
 keywords:
   - XIAO
@@ -85,24 +85,24 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>Wireless Connectivity</th>
       <td align="center">
-        - Bluetooth 5.3<br/>
-        - BLE<br/>
-        - NFC
+        Bluetooth 5.3<br/>
+        BLE<br/>
+        NFC
       </td>
       <td align="center">
-        - Bluetooth 5.3<br/>
-        - BLE<br/>
-        - NFC
+        Bluetooth 5.3<br/>
+        BLE<br/>
+        NFC
       </td>
       <td align="center">
-        - Bluetooth 5.4<br/>
-        - BLE<br/>
-        - NFC<br/>
+        Bluetooth 5.4<br/>
+        BLE<br/>
+        NFC<br/>
       </td>
       <td align="center">
-        - Bluetooth 5.4<br/>
-        - BLE<br/>
-        - NFC<br/>
+        Bluetooth 5.4<br/>
+        BLE<br/>
+        NFC<br/>
       </td>
   </tr>
   <tr>
@@ -150,22 +150,22 @@ export const Highlight = ({children, color}) => (
   <tr>
       <th>Power</th>
       <td align="center">
-        - USB Type-C interface power supply<br/>
-        - Support lithium battery power collection
+        USB Type-C interface power supply<br/>
+        Support lithium battery power collection
       </td>
       <td align="center">
-        - USB Type-C interface power supply<br/>
-        - Support lithium battery power collection
+        USB Type-C interface power supply<br/>
+        Support lithium battery power collection
       </td>
       <td align="center">
-        - USB Type-C interface power supply<br/>
-        - Internal PMIC supports lithium battery power supply<br/>
-        - Support lithium battery power collection
+        USB Type-C interface power supply<br/>
+        Internal PMIC supports lithium battery power supply<br/>
+        Support lithium battery power collection
       </td>
       <td align="center">
-        - USB Type-C interface power supply<br/>
-        - Internal PMIC supports lithium battery power supply<br/>
-        - Support lithium battery power collection
+        USB Type-C interface power supply<br/>
+        Internal PMIC supports lithium battery power supply<br/>
+        Support lithium battery power collection
       </td>
   </tr>
   <tr>
@@ -211,11 +211,9 @@ export const Highlight = ({children, color}) => (
 - **Powerful CPU**: 128 MHz Arm® Cortex®-M33 processor with support for DSP instructions and FPU floating-point operations, 32-bit RISC architecture, and integrated 128 MHz RISC-V co-processor.
 - **Ultra-low Power**: Designed for superior ultra-low power consumption, significantly extends battery life and includes advanced power management.
 - **Multi-Mode Wireless Transmission**: Integrated 2.4 GHz multi-protocol wireless transceiver supports Bluetooth Low Energy (including Channel Sounding), 802.15.4-2020, Matter, Thread, Zigbee, and 2.4 GHz proprietary modes (up to 4 Mbps).
-- **Better RF Performance**: Powerful 2.4 GHz multi-protocol radio with support for high throughput modes (up to 4 Mbps).
 - **Robust Security**: Advanced security features including TrustZone® isolation, tamper detection, and channel leakage protection on the encryption engine side.
-- **Ultra-Small Form Factor**: Ultra-compact WLCSP package (2.4 x 2.2 mm) and QFN package (6.0 x 6.0 mm).
 - **Rich on-chip resources**: Scalable memory configurations up to 1.5 MB NVM and 256 KB RAM provide ample storage space.
-- **Rich Interfaces88**: Comprehensive peripheral set including the new Global RTC (available in System OFF mode), 14-bit ADC, and high-speed serial interfaces. Built-in lithium battery management.
+- **Rich Interfaces**: Comprehensive peripheral set including the new Global RTC (available in System OFF mode), 14-bit ADC, and high-speed serial interfaces. Built-in lithium battery management.
 
 
 ## Hardware Overview
@@ -227,19 +225,19 @@ export const Highlight = ({children, color}) => (
     <th>XIAO nRF54L15 Pin List</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/ll.png" style={{width:700, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/whitepinout.png" style={{width:800, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 front indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new4.png" style={{width:700, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/whitenotsense.png" style={{width:1000, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 back indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/backnew.png" style={{width:1000, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/backwhite.png" style={{width:850, height:'auto'}}/></div></td>
   </tr>
 </table>
 
@@ -251,19 +249,19 @@ export const Highlight = ({children, color}) => (
     <th>XIAO nRF54L15 Sense Pin List</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/new/sensepinout_modify.png" style={{width:700, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/whitepinout2.png" style={{width:800, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 Sense front indication diagram</th>
   </tr>
     <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/newsense4.png" style={{width:700, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/sensewhite.png" style={{width:1000, height:'auto'}}/></div></td>
   </tr>
   <tr>
     <th>XIAO nRF54L15 Sense back indication diagram</th>
   </tr>
   <tr>
-    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/backnew.png" style={{width:1000, height:'auto'}}/></div></td>
+    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/backwhite.png" style={{width:850, height:'auto'}}/></div></td>
   </tr>
  </table>
 
@@ -311,6 +309,7 @@ west --version
 - VSCode nRF Connect plugin
 
 ***If you have pre-installed it on your computer, you can check the version number of your tool by following the command below***
+
 </details>
 
 
@@ -514,7 +513,6 @@ brew install openocd
 </Tabs>
 
 
-
 #### West Flash burn-in program
 
 - Open the nRF terminal
@@ -545,7 +543,7 @@ To truly master the nRF Connect SDK, you need to understand its building blocks 
 ## Battery Powered Board
 The XIAO nRF54L15 has a built-in power management chip that allows the XIAO nRF54L15 to be powered independently by using a battery or to charge the battery through the XIAO nRF54L15's USB port.
 
-If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable 3.7V lithium battery. When soldering the battery, please be careful to distinguish between the positive and negative terminals. The negative terminal of the power supply should be the side closest to the USB port, and the positive terminal of the power supply is the side away from the USB port.
+If you want to connect the battery for XIAO, we recommend you to purchase qualified rechargeable 3.7V lithium battery. When soldering the battery, please be careful to distinguish between the positive and negative terminals. 
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/battery_connect.jpg" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:500, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
@@ -557,7 +555,6 @@ If you want to connect the battery for XIAO, we recommend you to purchase qualif
 1. Please use qualified batteries that meet the specifications.
 2. XIAO can be connected to your computer device via data cable while using the battery, rest assured that XIAO has a built-in circuit protection chip, which is safe.
 3. The XIAO nRF54L15 will not have any LED on when it is battery powered (unless you have written a specific program), please do not judge whether the XIAO nRF54L15 is working or not by the condition of the LED, please judge it reasonably by your program.
-4. Sorry, we currently have no way to help you check the remaining battery level through software (because there are no more chip pins available), you need to charge the battery regularly or use a multimeter to check the battery level.
 
 At the same time, we designed a red indicator light for battery charging, through the indicator light display to inform the user of the current state of the battery in the charge.
 
@@ -693,6 +690,7 @@ int main(void)
 
 - [Seeed Studio XIAO nRF54L15](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)
 - [Jlink](https://www.segger.com/downloads/jlink/)
+
 :::tip
 You need to download the latest version of J-Link to have the nRF54L15 model board support.
 :::
@@ -722,7 +720,7 @@ It is required to download the [Segger](https://www.segger.com/downloads/jlink/)
 
 ## Onboard Keys
 
-Your development board typically comes equipped with two important physical buttons that play crucial roles in device operation and firmware programming: the **Reset Button** and the **Boot Button**. Understanding their functions is essential for daily use and firmware updates.
+XIAO nRF54L15(Sense) comes equipped with two important physical buttons that play crucial roles in device operation and firmware programming: the **Reset Button** and the **Boot Button**. Understanding their functions is essential for daily use and firmware updates.
 
 ---
 
@@ -730,7 +728,6 @@ Your development board typically comes equipped with two important physical butt
 
 The Reset button is used to perform a hard reset operation on the device.
 
-* **Location:** (Please describe the specific physical location of the Reset button on your development board model here. For example: "Typically labeled `RST` or `RESET`, located near the on-board debug interface.")
 * **Functionality:**
     * **Forced Restart:** Pressing this button immediately interrupts all current device operations and causes it to restart, similar to a power cycle.
     * **Resolving Stuck Programs:** When the device's running program crashes, enters an infinite loop, or becomes unresponsive, pressing the Reset button is the quickest way to force it back to a normal operating state.
@@ -745,7 +742,6 @@ The Reset button is used to perform a hard reset operation on the device.
 
 The Boot button is used to place the device into a specific boot mode, typically for firmware updates or to enter the Bootloader mode.
 
-* **Location:** (Please describe the specific physical location of the Boot button on your development board model here. For example: "Typically labeled `BOOT` or `DFU`, it might be shared with a user button like `SW0`, or it could be a standalone button.")
 * **Functionality:**
     * **Entering Bootloader Mode:** This is its primary function. By following a specific sequence (usually holding down the Boot button, then pressing and releasing the Reset button, and finally releasing the Boot button), the device enters Bootloader mode. In this mode, the device can receive new firmware images, typically programmed via USB DFU (Device Firmware Update) or other programming interfaces.
     * **Firmware Updates:** Users can flash new application firmware, fix bugs, or upgrade functionalities through Bootloader mode.
@@ -773,15 +769,16 @@ The following graph illustrates the typical power consumption profile when the d
 As shown in the graph, the device exhibits periodic current peaks corresponding to each advertising event, followed by periods of lower current consumption. The average power consumption during advertising is higher than in System Off mode, reflecting the active radio operations required for broadcasting.
 
 ---
- 
 #### BLE Advertising Code Example
 
+ 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-ble">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
+ 
 Below is the code used to test the power consumption during BLE advertising:
 
 ```c
@@ -985,6 +982,8 @@ As shown in the graph, after entering System Off mode, the power consumption is 
     </a>
 </div><br />
 
+
+
 Below is the code used to test the power consumption in the System Off mode described above:
 
 ```c
@@ -1065,7 +1064,7 @@ int main(void)
 ```
 
 
- ### For Seeed Studio XIAO nRF54L15
+### Seeed Studio XIAO nRF54L15
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Schematic.pdf)
 
@@ -1073,10 +1072,10 @@ int main(void)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 
-- **[XLSX]** [Seeed Studio XIAO nRF54L15 pinout sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_nRF54L10_nRF54L05_Datasheet_v0.8.pdf)
+- **[XLSX]** [Seeed Studio XIAO nRF54L15 pinout sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
 
 
-### For Seeed Studio XIAO nRF54L15 Sense
+### Seeed Studio XIAO nRF54L15 Sense
 
 - **[PDF]** [Seeed Studio XIAO nRF54L15 Sense Schematic](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_Sense_Schematic.pdf)
 
@@ -1084,7 +1083,7 @@ int main(void)
 
 - **[DXF]** [Seeed Studio XIAO nRF54L15 Sense Dimension in DXF](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15(Sense)_DXF.zip)
 
-- **[XLSX]** [Seeed Studio XIAO nRF54L15 Sense pinout sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nRF54L15_nRF54L10_nRF54L05_Datasheet_v0.8.pdf)
+- **[XLSX]** [Seeed Studio XIAO nRF54L15 Sense pinout sheet](https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/XIAO_nRF54L15datasheet.xlsx)
 
 
 ## Tech Support & Product Discussion

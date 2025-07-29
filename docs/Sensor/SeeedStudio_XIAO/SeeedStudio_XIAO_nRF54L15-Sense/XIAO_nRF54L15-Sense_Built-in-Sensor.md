@@ -12,7 +12,7 @@ last_update:
 sidebar_position: 1
 ---
 
-# Usage of Seeed Studio XIAO MG24 Sense built-in Sensor
+# Usage of Seeed Studio XIAO nRF54L15 Sense built-in Sensor
 
 ## XIAO nRF54L15 Sense IMU
 
@@ -34,15 +34,41 @@ sidebar_position: 1
 - The **Y-axis angle ( Pitch )** is the angle in the direction of rotation around the Y-axis.
 - The **Z-axis angle ( Yaw )** is the angle in the direction of rotation around the Z-axis.
 
+### IMU Driver
 
-```cpp
-#ifndef APP_SRC_IMU_H_
-#define APP_SRC_IMU_H_
+To simplify your development experience and ensure a quick start with this IMU program, we've leveraged the PlatformIO platform for writing the necessary driver code. PlatformIO offers a comprehensive and efficient environment for embedded development, making it an ideal choice for the XIAO nRF54L15 Sense.
 
-int imu_init(void);
+Before proceeding, please ensure that your development environment is correctly set up. If you haven't yet added the Seeed Studio XIAO nRF54L15 development board to your PlatformIO configuration, kindly refer to this [link](http://localhost:3000/xiao_nrf54l15_with_platform_io/) for detailed instructions on how to configure it. This crucial step will enable PlatformIO to properly recognize and compile code for your board.
 
-#endif /* APP_SRC_IMU_H_ */
-```
+- Once your environment is ready, the IMU driver will allow you to read raw sensor data from the LSM6DS3TR-C. This data includes:
+
+- Accelerometer raw values (accel raw): Representing the acceleration along the X, Y, and Z axes.
+
+- Gyroscope raw values (gyro raw): Indicating the angular velocity around the X, Y, and Z axes.
+
+Trigger count (trig_cnt): A counter that increments with each new data sample.
+
+
+Below is an example of the serial output you can expect to see from the IMU, as displayed in the PlatformIO Device Monitor. This output provides real-time readings of the accelerometer and gyroscope data, which are fundamental for understanding the motion and orientation of your device.
+
+
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Real-time IMU Data Output from PlatformIO Device Monitor, displaying raw accelerometer and gyroscope readings.</em></p>
+</div>
+
+
+This raw data forms the basis for various applications, from simple motion detection to complex orientation tracking, by applying appropriate algorithms (e.g., filtering, sensor fusion).
+
+---
+ 
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-imu">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+
 
 ```cpp
 #include <zephyr/drivers/sensor.h>
@@ -147,35 +173,41 @@ int imu_init(void)
 
 ## XIAO nRF54L15 Sense MIC
 
-Microphone Sensors like the MSM261DGT006 are designed to capture sound by converting sound waves into electrical signals. This allows for the detection and recording of audio information from the environment. Specifically, the MSM261DGT006 has the following features:
+The **MSM261DGT006** is a Digital Microphone (DMIC) that outputs Pulse Density Modulation (PDM) data, making it suitable for direct digital interfacing with microcontrollers like the XIAO nRF54L15 Sense. Our DMIC driver is specifically designed to handle this PDM output, convert it into usable audio samples, and process it for various applications.
 
-**Sound Capture Function:**
+The driver initiates the microphone, sets the appropriate sampling rate (e.g., 16000 Hz for standard audio), and configures the PDM clock frequency. It then continuously reads sample buffers from the microphone, allowing for real-time audio capture.
 
-- Converts acoustic energy (sound waves) into an electrical signal. It is able to sense ambient sounds (e.g., speech, music, noise) and changes in sound intensity.
+The output from the DMIC driver, when viewed in the PlatformIO Device Monitor, provides crucial information about the microphone's operation and the incoming audio data. Key messages you will observe include:
 
-- It can be used for voice control, audio recording, environmental sound monitoring, etc.
+- `DMIC sample=:` Indicates the start of the DMIC sampling process.
 
-**Signal Output and Processing Function:**
+- `PCM output rate:` 16000, channels: 1: Confirms the audio output settings, typically a sample rate of 16 kHz and a single channel (mono) audio.
 
-- Outputs electrical signals corresponding to the captured sound, often in digital format (e.g., PDM or I2S) for direct interface with microcontrollers.
+- `dmic_nrf_pdm:` PDM clock frequency: 1280000, actual PCM rate: 16000: Shows the internal PDM clock frequency and the resulting PCM audio sample rate.
 
-- Can be used for speech recognition, noise cancellation, sound event detection, and audio analysis.
+- `got buffer 0x... of 3200 bytes:` Confirms that the driver successfully received a buffer of audio data from the microphone. The hexadecimal address (e.g., 0x20004C8) and size in bytes (e.g., 3200 bytes) are shown. These buffers contain the raw audio samples that can then be processed or analyzed.
 
-- Frequency Response: Refers to the range of sound frequencies the microphone can accurately capture (e.g., from low bass to high treble).
+- `dmix_sample: Exiting:` Indicates that the DMIC sampling process has been stopped.
 
-- Sensitivity: Indicates how efficiently the microphone converts sound pressure into an electrical signal (i.e., how "loud" the output signal is for a given sound input).
+Below is an example of the typical output you can expect to see in the PlatformIO Device Monitor when the DMIC driver is running, illustrating the successful capture and buffering of audio data.
 
-- Signal-to-Noise Ratio (SNR): Measures the ratio of the desired audio signal to unwanted background noise produced by the microphone itself, indicating clarity.
+### DMIC Driver
 
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/mic_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Real-time DMIC Data Output from PlatformIO Device Monitor, displaying microphone initialization and buffer reception</em></p>
+</div>
 
-```cpp
-#ifndef APP_SRC_MIC_H_
-#define APP_SRC_MIC_H_
+This raw audio data, once captured, can be used for a wide range of applications, including voice commands, sound event detection, environmental noise monitoring, and more complex audio processing tasks.
 
-int mic_init(void);
+---
+ 
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-dmic">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
 
-#endif /* APP_SRC_MIC_H_ */
-```
 
 ```cpp
 #include <stdio.h>

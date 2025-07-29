@@ -16,88 +16,11 @@ last_update:
 sidebar_position: 3
 ---
 
-<!-- ## Bluetooth Low Energy (BLE) Usage
-
-Bluetooth Low Energy, BLE for short, is a power-conserving variant of Bluetooth. BLE’s primary application is short distance transmission of small amounts of data (low bandwidth). Unlike Bluetooth that is always on, BLE remains in sleep mode constantly except for when a connection is initiated.
-
-Due to its properties, BLE is suitable for applications that need to exchange small amounts of data periodically running on a coin cell. For example, BLE is of great use in healthcare, fitness, tracking, beacons, security, and home automation industries.
-
-This makes it consume very low power. BLE consumes approximately 100x less power than Bluetooth (depending on the use case).
-
-About the BLE part of XIAO nRF54L15, we will introduce its use in the following three sections.
-
-- [Some fundamental concepts](#some-fundamental-concepts) -- We will first get to know some concepts that may be used frequently in BLE in order to help us understand the execution process and thinking of BLE programs.
-- [BLE Scanner](#ble-scanner) -- This section will explain how to search for nearby Bluetooth devices and print them out in the serial monitor.
-- [BLE server/client](#ble-serverclient) -- This section will explain how to use XIAO nRF54L15 as Server and Client to send and receive specified data messages. It will also use to receive or send messages from the phone to XIAO.
-- [BLE Sensor Data Exchange](#ble-sensor-data-exchange) -- This is the last section of the full tutorial where we will go through a sensor example to explain how to send the sensor data through BLE.
-
-### Some fundamental concepts
-
-#### Server and Client
-
-With Bluetooth Low Energy, there are two types of devices: the server and the client. The XIAO nRF54L15 can act either as a client or as a server.
-
-The server advertises its existence, so it can be found by other devices, and contains the data that the client can read. The client scans the nearby devices, and when it finds the server it is looking for, it establishes a connection and listens for incoming data. This is called point-to-point communication.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/49.png" style={{width:800, height:'auto'}}/></div>
-
-#### Attribute
-
-Attribute is actually a piece of data. Each Bluetooth device is used to provide a service, and the service is a collection of data, the collection can be called a database, each entry in the database is an Attribute, so here I translate Attribute into data entries. You can imagine a Bluetooth device as a table, each row inside the table is an Attribute.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/52.png" style={{width:600, height:'auto'}}/></div>
-
-#### GATT
-
-When two Bluetooth devices establish a connection, they need a protocol to determine how to communicate. GATT (Generic Attribute Profile) is such a protocol that defines how data is transmitted between Bluetooth devices.
-
-In the GATT protocol, the functions and properties of a device are organized into structures called services, characteristics, and descriptors. A service represents a set of related functions and features provided by a device. Each service can include multiple characteristics, which define a certain property or behavior of the service, such as sensor data or control commands. Each characteristic has a unique identifier and a value, which can be read or written to communicate. Descriptors are used to describe metadata of characteristics, such as format and access permission of characteristic values.
-
-By using the GATT protocol, Bluetooth devices can communicate in different application scenarios, such as transmitting sensor data or controlling remote devices.
-
-#### BLE Characteristic
-
-ATT, full name attribute protocol. In the end, ATT is composed of a group of ATT commands, that is, request and response commands, ATT is also the uppermost layer of the Bluetooth null packet, that is, ATT is where we analyze the Bluetooth packet the most.
-
-ATT command, formally known as ATT PDU (Protocol Data Unit). It includes 4 categories: read, write, notify and indicate. These commands can be divided into two types: if it requires a response, then it will be followed by a request; on the contrary, if it only requires an ACK but not a response, then it will not be followed by a request. 
-
-Service and Characteristic are defined in the GATT layer. The Service side provides the Service, the Service is the data, and the data is the attribute, and the Service and Characteristic are the logical presentation of the data, or the data that the user can see are eventually transformed into the Service and Characteristic.
-
-Let's take a look at what the service and characteristic look like from a mobile perspective. nRF Connect is an application that shows us very visually how each packet should look like.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/62.png" style={{width:400, height:'auto'}}/></div>
-
-As you can see, in the Bluetooth specification, each specific Bluetooth application is composed of multiple Services, and each Service is composed of multiple Characteristics. A Characteristic consists of a UUID, Properties, and a Value.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/50.png" style={{width:300, height:'auto'}}/></div>
-
-Properties are used to describe the types and permissions of operations on a characteristic, such as whether it supports read, write, notify, and so on. This is similar to the four categories included in an ATT PDU.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/51.png" style={{width:800, height:'auto'}}/></div>
-
-#### UUID
-
-Each service, characteristic and descriptor have an UUID (Universally Unique Identifier). An UUID is a unique 128-bit (16 bytes) number. For example:
-
-```
-ea094cbd-3695-4205-b32d-70c1dea93c35
-```
-
-There are shortened UUIDs for all types, services, and profiles specified in the [SIG (Bluetooth Special Interest Group)](https://www.bluetooth.com/specifications/gatt/services). But if your application needs its own UUID, you can generate it using this [UUID generator website](https://www.uuidgenerator.net/).
 
 
+## nRF COnnect SDK
 
-
-## Basic BLE Advertising Example
-
-<!-- <div class="table-center">
-	<table align="center">
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/1.jpg" style={{width:400, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2.jpg" style={{width:400, height:'auto'}}/></div></td>
-		</tr>
-	</table>
-</div> -->
+This Bluetooth advertising tutorial is based on the official [sample](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/lessons/lesson-2-bluetooth-le-advertising/topic/blefund-lesson-2-exercise-1/) code modified to run on the Nordic Connect SDK. With our development board combined with the official documentation, you can dive into more Bluetooth [applications](https://academy.nordicsemi.com/courses/bluetooth-low-energy-fundamentals/).
 
 While the phone is not connected to the XIAO nRF54L15, the on-board indicator will remain permanently lit. Once the phone is successfully connected, the indicator will begin flashing to indicate that a connection has been established.
 
@@ -106,41 +29,43 @@ While the phone is not connected to the XIAO nRF54L15, the on-board indicator wi
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Cell Phone Connection XIAO nRF54L15</em></p>
 </div>
 
-### BLE Advertising Code
-<div className="download_platformio_container" style={{ textAlign: 'center' }}>
-    <a
-        className="download_platformio_item"
-        href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-lowpower"
-        style={{
-            backgroundColor: '#FFA500',
-            color: '#FFFFFF',
-            padding: '10px 20px',
-            textDecoration: 'none',
-            borderRadius: '5px',
-            fontWeight: 'bold',
-            fontSize: '16px',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-        }}
-    >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="50"
-            height="50"
-            fill="currentColor"
-            style={{ verticalAlign: 'middle', marginRight: '8px' }} 
-        >
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414L12 15z"/>
-            <path d="M19 19H5v-4h2v2h10v-2h2v4zm0-14v10h-2V7h-4v2h-2V7H7v10H5V5h14zm-2 2H7v2h10V7z"/>
-        </svg>
-        <span>Download Source Code</span>
+### BLE Advertising Software Install
+
+For this example, you'll need to download the official Bluetooth testing [app](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-mobile), nRF Connect, on your mobile phone.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrfconnect_app.png" style={{width:600, height:'auto'}}/></div>
+
+Once you've flashed the program onto your XIAO nRF52840 Sense board, you can open the nRF Connect app's main page to interact with it.
+
+- Step 1 . in the nRF Connect app, click the scan button in the top right corner to start scanning for Bluetooth devices.
+
+- Step 2 .Next, enter the name of your XIAO nRF52840 Sense device  into the "Name" field. This will help you filter and quickly locate your device.
+
+- Step 3 .In the scan results area, find your XIAO nRF52840 Sense device and click the "Connect" button next to it .
+
+Upon successful connection, you will be directed to the device details page. On this page, you can observe the Bluetooth signal strength (RSSI) distribution over different time periods , which helps you understand the stability of the device's connection.
+
+
+<div class="table-center">
+	<table align="center">
+		<tr>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/ble_image.jpg" style={{width:300, height:'auto'}}/></div></td>
+			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/ble_image2.jpg" style={{width:300, height:'auto'}}/></div></td>
+		</tr>
+	</table>
+</div>
+
+### Add XIAO nRF54L15 Board
+
+To add the XIAO nRF52840 Sense board to NCS (nRF Connect SDK), you can refer to the ["Getting Started"](https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/) guide on the Seeed Studio Wiki. This guide will provide detailed instructions on the process.
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/zephyr/boards">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div>
 
-<br></br>
+### BLE Advertising Code
 
 ```c
 #include <zephyr/kernel.h>
@@ -251,6 +176,131 @@ int main(void)
 ```
 
 
+## PlatformIO
+
+This Bluetooth radio example program is specifically designed for development on the PlatformIO platform. The main advantage of choosing PlatformIO is that it provides an integrated development environment that greatly simplifies the setup, compilation and burn-in process of embedded projects, making it easier and faster for even beginners to start developing Bluetooth applications.
+
+<div style={{textAlign:'center'}}>
+    <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/BLE.gif" alt="XIAO nRF54L15 Ultra-low Power Consumption in System Off Mode" style={{width:600, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
+    <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em>Cell Phone Connection XIAO nRF54L15</em></p>
+</div>
+
+
+### BLE Advertising Code
+
+```cpp
+#include <stdio.h>
+
+#include <zephyr/bluetooth/bluetooth.h>
+#include <zephyr/bluetooth/hci.h>
+#include <zephyr/bluetooth/conn.h>
+#include <zephyr/bluetooth/uuid.h>
+#include <zephyr/bluetooth/gatt.h>
+
+#define BT_UUID_ONOFF_VAL BT_UUID_128_ENCODE(0x8e7f1a23, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+#define BT_UUID_ONOFF     BT_UUID_DECLARE_128(BT_UUID_ONOFF_VAL)
+#define BT_UUID_ONOFF_ACTION_VAL \
+    BT_UUID_128_ENCODE(0x8e7f1a24, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120002)
+#define BT_UUID_ONOFF_ACTION BT_UUID_DECLARE_128(BT_UUID_ONOFF_ACTION_VAL)
+
+#define BT_UUID_ONOFF_READ_VAL \
+    BT_UUID_128_ENCODE(0x8e7f1a25, 0x4b2c, 0x11ee, 0xbe56, 0x0242ac120003)
+#define BT_UUID_ONOFF_READ BT_UUID_DECLARE_128(BT_UUID_ONOFF_READ_VAL)
+
+static uint8_t onoff_flag = 0;
+
+static const struct bt_data ad[] = {
+	BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
+	BT_DATA(BT_DATA_NAME_COMPLETE, CONFIG_BT_DEVICE_NAME, sizeof(CONFIG_BT_DEVICE_NAME) - 1),
+};
+
+static const struct bt_data sd[] = {
+	BT_DATA_BYTES(BT_DATA_UUID128_ALL, BT_UUID_ONOFF_VAL),
+};
+
+static ssize_t read_onoff_val(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+                  void *buf, uint16_t len, uint16_t offset)
+{
+    const uint8_t *value = attr->user_data;
+    return bt_gatt_attr_read(conn, attr, buf, len, offset, value, sizeof(*value));
+}
+
+static ssize_t write_onoff_val(struct bt_conn *conn, const struct bt_gatt_attr *attr,
+			       const void *buf, uint16_t len, uint16_t offset, uint8_t flags)
+{
+	uint8_t val;
+
+	if (len != 1U) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_ATTRIBUTE_LEN);
+	}
+
+	if (offset != 0) {
+		return BT_GATT_ERR(BT_ATT_ERR_INVALID_OFFSET);
+	}
+
+	val = *((uint8_t *)buf);
+
+	if (val == 0x00U) {
+		printf("Write: 0\n");
+		onoff_flag = 0;
+	} else if (val == 0x01U) {
+		printf("Write: 1\n");
+		onoff_flag = 1;
+	} else {
+		return BT_GATT_ERR(BT_ATT_ERR_VALUE_NOT_ALLOWED);
+	}
+
+	return len;
+}
+
+BT_GATT_SERVICE_DEFINE(lbs_svc, 
+    BT_GATT_PRIMARY_SERVICE(BT_UUID_ONOFF),
+    BT_GATT_CHARACTERISTIC(BT_UUID_ONOFF_ACTION, BT_GATT_CHRC_WRITE,
+        BT_GATT_PERM_WRITE, NULL, write_onoff_val, NULL),
+    BT_GATT_CHARACTERISTIC(BT_UUID_ONOFF_READ, BT_GATT_CHRC_READ,
+        BT_GATT_PERM_READ, read_onoff_val, NULL, &onoff_flag),
+);
+
+static void connected(struct bt_conn *conn, uint8_t err)
+{
+	if (err != 0U) {
+		printf("Connection failed (%02x, %s)\n", err, bt_hci_err_to_str(err));
+		return;
+	}
+
+	printf("Connected\n");
+}
+
+static void disconnected(struct bt_conn *conn, uint8_t reason)
+{
+	printf("Disconnected (%02x, %s)\n", reason, bt_hci_err_to_str(reason));
+}
+
+BT_CONN_CB_DEFINE(conn_callbacks) = {
+	.connected = connected,
+	.disconnected = disconnected,
+};
+
+int main(void)
+{
+	int err;
+
+	err = bt_enable(NULL);
+	if (err < 0) {
+		printf("Bluetooth enable failed (err %d)", err);
+		return err;
+	}
+
+	err = bt_le_adv_start(BT_LE_ADV_CONN_FAST_1, ad, ARRAY_SIZE(ad), sd, ARRAY_SIZE(sd));
+	if (err < 0) {
+		printf("Advertising failed to start (err %d)", err);
+		return err;
+	}
+
+	printf("Bluetooth enabled");
+	return 0;
+}
+```
 
 ## Tech Support & Product Discussion
 
