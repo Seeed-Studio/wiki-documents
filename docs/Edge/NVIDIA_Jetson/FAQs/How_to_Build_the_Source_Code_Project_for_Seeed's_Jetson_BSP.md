@@ -95,7 +95,7 @@ cd source
 ./nvbuild.sh
 ```
 
-install new kernel dtbs and drivers:
+Install new kernel dtbs and drivers:
 ```bash
 ./do_copy.sh
 export INSTALL_MOD_PATH=/your_path/Linux_for_Tegra/rootfs/
