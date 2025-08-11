@@ -94,6 +94,14 @@ Compile and build kernel:
 cd source
 ./nvbuild.sh
 ```
+
+install new kernel dtbs and drivers:
+```bash
+./do_copy.sh
+export INSTALL_MOD_PATH=/your_path/Linux_for_Tegra/rootfs/
+./nvbuild.sh -i
+```
+
 :::tip
 For JetPack 5, since the file paths are different, you need to modify the `-p` parameter to:
 `-p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml"`
@@ -102,9 +110,9 @@ For JetPack 5, since the file paths are different, you need to modify the `-p` p
 
 For **Jetpack 6**, flashing the device(take **recomputer-orin-j401** for example):
 ```bash
-sudo ./tools/kernel_flash/l4t_initrd_flash.sh 
---external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml 
--p "-c bootloader/generic/cfg/flash_t234_qspi.xml"  --showlogs 
+sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
+--external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
+-p "-c bootloader/generic/cfg/flash_t234_qspi.xml"  --showlogs \
 --network usb0 recomputer-orin-j401 internal
 ```
 
