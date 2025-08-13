@@ -70,6 +70,7 @@ function chunkDocument(content, maxTokens = 15000) {
   let frontMatter = '';
   let inFrontMatter = false;
   let frontMatterEnded = false;
+  let contentStartIndex = 0;
   
   // 首先提取Front Matter
   for (let i = 0; i < lines.length; i++) {
@@ -86,11 +87,18 @@ function chunkDocument(content, maxTokens = 15000) {
       if (line.trim() === '---') {
         inFrontMatter = false;
         frontMatterEnded = true;
+        contentStartIndex = i + 1;
+        break;
       }
       continue;
     }
-    
-    // 处理正文内容
+  }
+  
+  // 处理正文内容（跳过Front Matter部分）
+  const contentLines = lines.slice(contentStartIndex);
+  
+  for (let i = 0; i < contentLines.length; i++) {
+    const line = contentLines[i];
     const lineWithNewline = line + '\n';
     const potentialChunk = currentChunk + lineWithNewline;
     
@@ -115,11 +123,22 @@ function chunkDocument(content, maxTokens = 15000) {
     chunks.push(currentChunk.trim());
   }
   
-  // 如果只有一个chunk且不超限制，直接返回原内容
-  if (chunks.length <= 1 && estimateTokens(content) <= maxTokens) {
+  // 如果没有内容需要分块，返回完整文档
+  if (chunks.length === 0) {
     return [{
       content: content,
-      frontMatter: frontMatter,
+      frontMatter: '',
+      isComplete: true,
+      index: 0,
+      total: 1
+    }];
+  }
+  
+  // 如果只有一个chunk且不超限制，直接返回原内容
+  if (chunks.length === 1 && estimateTokens(content) <= maxTokens) {
+    return [{
+      content: content,
+      frontMatter: '',
       isComplete: true,
       index: 0,
       total: 1
@@ -129,7 +148,7 @@ function chunkDocument(content, maxTokens = 15000) {
   // 为每个chunk添加元数据
   return chunks.map((chunk, index) => ({
     content: chunk,
-    frontMatter: index === 0 ? frontMatter : '',
+    frontMatter: index === 0 ? frontMatter : '', // 只有第一个chunk包含Front Matter
     isComplete: false,
     index: index,
     total: chunks.length
@@ -167,8 +186,8 @@ Front Matter 处理规则：
 - 如果文档开头有 Front Matter（被 --- 包围的 YAML 部分），请按以下规则处理：
   - last_update 字段完全不翻译：包括 date 和 author 的值都必须保持原文不变
   - keywords 字段不翻译：保持原始英文关键词
-  - slug 字段不翻译：URL路径保持不变
   - image 字段不翻译：图片链接保持不变
+  - slug 字段需要添加语言前缀：如果是 "/hello" 改为 "${pathPrefix}/hello"，如果是 "/path/to/page" 改为 "${pathPrefix}/path/to/page"
   - 只翻译 description 和 title 字段的值
   - 保持 Front Matter 的 YAML 结构和缩进完全不变
 
@@ -185,13 +204,33 @@ Front Matter 处理规则：
 - 逐句对应翻译，确保译文的每一句都对应原文的特定句子
 - 代码块标记和编程代码本身保持不变，绝对不能省略代码块内容
 - 不要输出"内容同原文档"或类似的省略说明
+- 不要重复输出Front Matter，整个文档只能有一个Front Matter部分
 
 术语保护（保持不变）：
 ${termsList}${chunkInstructions}`;
 }
 
-// 处理内部链接
-function processInternalLinks(content, targetLang) {
+// 生成目标文件路径（添加语言前缀）
+function generateTargetPath(originalPath, targetLang) {
+  const langConfig = LANGUAGE_CONFIG[targetLang];
+  const relativePath = path.relative('docs', originalPath);
+  
+  // 解析文件路径
+  const parsedPath = path.parse(relativePath);
+  
+  // 为文件名添加语言前缀
+  const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
+                    targetLang === 'ja' ? 'ja_' : 
+                    targetLang === 'es' ? 'es_' : '';
+  
+  const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
+  const newRelativePath = path.join(parsedPath.dir, newFileName);
+  
+  // 构造最终目标路径
+  const targetPath = path.join('docs', langConfig.folder, newRelativePath);
+  
+  return targetPath;
+}
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig || !langConfig.pathPrefix) return content;
   
@@ -293,11 +332,13 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     console.log(`📄 翻译块 ${i + 1}/${chunks.length} (${estimateTokens(chunk.content)} tokens)`);
     
     try {
-      let contentToTranslate = chunk.content;
+      let contentToTranslate;
       
-      // 如果是第一个chunk且有Front Matter，包含在翻译中
-      if (i === 0 && chunk.frontMatter) {
-        contentToTranslate = chunk.frontMatter + '\n' + chunk.content;
+      // 只有在处理完整文档或第一个块时才包含Front Matter
+      if (chunk.isComplete || (i === 0 && chunk.frontMatter)) {
+        contentToTranslate = chunk.frontMatter + chunk.content;
+      } else {
+        contentToTranslate = chunk.content;
       }
       
       const translatedContent = await translateWithClaude(
@@ -329,16 +370,22 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
   if (chunks.length === 1) {
     finalContent = translatedChunks[0];
   } else {
-    // 如果第一个chunk包含Front Matter，需要特殊处理
+    // 多块情况下，第一块包含Front Matter，后续块只是内容
     const firstChunk = translatedChunks[0];
+    const otherChunks = translatedChunks.slice(1);
+    
+    // 检查第一块是否包含Front Matter
     const frontMatterMatch = firstChunk.match(/^---\n[\s\S]*?\n---\n/);
     
     if (frontMatterMatch) {
       const frontMatter = frontMatterMatch[0];
       const firstContent = firstChunk.replace(frontMatterMatch[0], '').trim();
-      const otherChunks = translatedChunks.slice(1);
       
-      finalContent = frontMatter + '\n' + [firstContent, ...otherChunks].join('\n\n');
+      // 确保内容连接正确
+      finalContent = frontMatter + '\n' + firstContent;
+      if (otherChunks.length > 0) {
+        finalContent += '\n\n' + otherChunks.join('\n\n');
+      }
     } else {
       finalContent = translatedChunks.join('\n\n');
     }
@@ -362,10 +409,8 @@ async function handleNewFile(filePath, targetLang) {
     
     const translatedContent = await translateDocumentChunks(chunks, targetLang, filePath);
     
-    // 构造目标路径
-    const relativePath = path.relative('docs', filePath);
-    const langConfig = LANGUAGE_CONFIG[targetLang];
-    const targetPath = path.join('docs', langConfig.folder, relativePath);
+    // 使用新的路径生成逻辑
+    const targetPath = generateTargetPath(filePath, targetLang);
     
     // 确保目录存在
     await fs.mkdir(path.dirname(targetPath), { recursive: true });
@@ -398,10 +443,8 @@ async function handleModifiedFile(filePath, targetLang) {
     
     const translatedContent = await translateDocumentChunks(chunks, targetLang, filePath);
     
-    // 构造目标路径
-    const relativePath = path.relative('docs', filePath);
-    const langConfig = LANGUAGE_CONFIG[targetLang];
-    const targetPath = path.join('docs', langConfig.folder, relativePath);
+    // 使用新的路径生成逻辑
+    const targetPath = generateTargetPath(filePath, targetLang);
     
     // 确保目录存在
     await fs.mkdir(path.dirname(targetPath), { recursive: true });

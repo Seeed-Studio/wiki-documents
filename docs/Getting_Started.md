@@ -8,6 +8,8 @@ last_update:
   author: Matthew
 ---
 
+<strong><a href="/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> Sensors and Sensing</span></a></strong>
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 ## Seeed Studio 
