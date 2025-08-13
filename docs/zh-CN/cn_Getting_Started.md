@@ -1,5 +1,5 @@
 ---
-description: 作为自2008年以来值得信赖的物联网(IOT)硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
+description: 作为自2008年以来值得信赖的物联网（IOT）硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
 title: Seeed Studio Wiki平台入门指南
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
 slug: /cn/Getting_Started
@@ -8,30 +8,30 @@ last_update:
   author: Matthew
 ---
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器和感知</span></a></strong>
+
+[xxx](/cn/Sensor_Network)
+
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+
+
+
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
-<strong><font color={'8DC215'} size={"5"}>欢迎来到矽递科技 wiki 文档平台</font></strong>
+## Seeed Studio 
 
-作为一家创新型物联网科技公司，矽递科技秉承着“让科技随手可得”的使命，以软硬件设计研发能力为核心，与全球开发者共同合作创新，致力于整合新一代信息技术，为广域物联网场景打造完整开放的"模组-设备-解决方案"的产品体系。
-
-我们的 wiki 文档平台是一个综合性的信息交流和知识分享平台，旨在为用户提供详尽的产品说明、使用指南和应用项目文档。我们会不断努力，提供清晰、准确且易于理解的文档，以帮助您更好地了解和使用我们的产品。
+作为自2008年以来值得信赖的物联网（IOT）硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
 
 {/* We here also present you our current accomplishments and <strong><a href="/cn/Solutions"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Solution </span></a></strong> and we are looking for your contributions. */}
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
-## 本Wiki平台涵盖哪些内容？
+## 这个Wiki平台涵盖什么内容？
 
-- 本平台将专注于侧边栏中显示的主要主题，提供我们所有产品的最新信息。
+- 该平台将专注于侧边栏中显示的主要主题，提供我们所有产品的最新信息。
 
-  - <strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
-  - <strong><a href="/cn/Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 网络</span></a></strong>
-  - <strong><a href="/cn/Edge_Computing"><span style={{color: '8DC215', fontSize: '1.2em'}}>  边缘计算 </span></a></strong>
-  - <strong><a href="/cn/Cloud"><span style={{color: '8DC215', fontSize: '1.2em'}}>  云服务</span></a></strong>
-  - <strong><a href="/cn/topicintroduction"><span style={{color: '8DC215', fontSize: '1.2em'}}>技术主题</span></a></strong>
-  - <strong><a href="/cn/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}> 贡献者计划</span></a></strong>
-
-- 您将能够找到我们产品的详细文档，用于**实际使用**和**故障排除**、工业物联网场景，以及开放开发工具指南，帮助您开始自己的项目。
+  - <strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器和感知</span></a></strong>
 
 
 ## 感知与数据通信
@@ -201,3 +201,23 @@ last_update:
     </tr>
   </tbody>
 </table>
+</tr>
+    <tr>
+      <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/hackster1.png" alt="pir" width={200} height="auto" /></p></td>
+      <td align="left"><strong>Seeed on Hackster</strong><br />一个社区，您可以在这里找到和分享由Seeed产品驱动的项目。立即探索！<p><a href="https://www.hackster.io/seeed" target="_blank">点击这里</a></p></td>
+    </tr>
+    <tr>
+      <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/YouTube.png" alt="pir" width={300} height="auto" /></p></td>
+      <td align="left"><strong>Seeed on Youtube</strong><br />关于Seeed最新动态的视频更新。订阅我们的频道了解更多。<p><a href="http://www.youtube.com/c/SeeedStudioSZ" target="_blank">点击这里</a></p></td>
+    </tr>
+    <tr>
+      <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/LinkedIn_Logo.png" alt="pir" width={300} height="auto" /></p></td>
+      <td align="left"><strong>Seeed on LinkedIn</strong><br />数字化转型正在发生。关注我们，在LinkedIn上了解IoT行业新闻、见解、案例研究等更多内容。<p><a href="https://www.linkedin.com/company/seeedstudio" target="_blank">点击这里</a></p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
