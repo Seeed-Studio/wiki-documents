@@ -1,5 +1,5 @@
 ---
-description: 作为自2008年以来值得信赖的物联网（IOT）硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
+description: 作为自2008年以来值得信赖的物联网(IOT)硬件合作伙伴，Seeed Studio致力于实现我们物理世界的交互式数字副本。本网站是一个开源平台，收集了Seeed Studio目前发布的所有wiki，每周更新以展示我们的产品范围和研究，包括自然环境的数字化。
 title: Seeed Studio Wiki平台入门指南
 image: https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg
 slug: /cn/Getting_Started
@@ -8,15 +8,11 @@ last_update:
   author: Matthew
 ---
 
-<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器和感知</span></a></strong>
-
-[xxx](/cn/Sensor_Network)
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 <strong><font color={'8DC215'} size={"5"}>欢迎来到矽递科技 wiki 文档平台</font></strong>
 
-作为一家创新型物联网科技公司，矽递科技秉承着"让科技随手可得"的使命，以软硬件设计研发能力为核心，与全球开发者共同合作创新，致力于整合新一代信息技术，为广域物联网场景打造完整开放的"模组-设备-解决方案"的产品体系。
+作为一家创新型物联网科技公司，矽递科技秉承着“让科技随手可得”的使命，以软硬件设计研发能力为核心，与全球开发者共同合作创新，致力于整合新一代信息技术，为广域物联网场景打造完整开放的"模组-设备-解决方案"的产品体系。
 
 我们的 wiki 文档平台是一个综合性的信息交流和知识分享平台，旨在为用户提供详尽的产品说明、使用指南和应用项目文档。我们会不断努力，提供清晰、准确且易于理解的文档，以帮助您更好地了解和使用我们的产品。
 
@@ -151,7 +147,7 @@ last_update:
 
 在Seeed，我们非常重视我们的Seeeders社区。Seeed Studio贡献者计划是一个协作项目，旨在团结来自世界各地的亲爱朋友们，共同构建创新解决方案。
 
-### [英雄墙](/cn/contributors)
+### [英雄墙](/contributors)
 
 截至`2024年9月1日`，我们总共有24位贡献者和超过50个wiki贡献。
 
@@ -205,6 +201,3 @@ last_update:
     </tr>
   </tbody>
 </table>
-
-你好世界
-[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
