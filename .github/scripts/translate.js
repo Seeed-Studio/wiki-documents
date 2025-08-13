@@ -289,7 +289,265 @@ function processInternalLinks(content, targetLang) {
   return content;
 }
 
-// 获取文件的修改行信息
+// 提取文档的结构标记用于匹配
+function extractStructuralMarkers(content) {
+  const lines = content.split('\n');
+  const markers = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    
+    // 提取标题
+    const headerMatch = line.match(/^(#{1,6})\s+(.+)$/);
+    if (headerMatch) {
+      markers.push({
+        type: 'header',
+        level: headerMatch[1].length,
+        text: headerMatch[2].replace(/[^\w\s]/g, '').toLowerCase(),
+        line: i
+      });
+    }
+    
+    // 提取代码块标记
+    if (line.startsWith('```')) {
+      markers.push({
+        type: 'codeblock',
+        text: line,
+        line: i
+      });
+    }
+    
+    // 提取图片或链接
+    const linkMatch = line.match(/!\[([^\]]*)\]\([^)]+\)|<img[^>]+src="([^"]+)"/);
+    if (linkMatch) {
+      markers.push({
+        type: 'image',
+        text: linkMatch[1] || linkMatch[2] || '',
+        line: i
+      });
+    }
+    
+    // 提取HTML标签
+    const htmlMatch = line.match(/<(\w+)[^>]*>/);
+    if (htmlMatch) {
+      markers.push({
+        type: 'html',
+        tag: htmlMatch[1],
+        line: i
+      });
+    }
+  }
+  
+  return markers;
+}
+
+// 在目标语言文件中找到对应的上下文片段
+async function findCorrespondingTargetContext(englishContext, targetPath, contextPadding = 5) {
+  try {
+    // 检查目标文件是否存在
+    const targetContent = await fs.readFile(targetPath, 'utf8');
+    const englishLines = englishContext.content.split('\n');
+    const targetLines = targetContent.split('\n');
+    
+    // 提取英文上下文的结构标记
+    const englishMarkers = extractStructuralMarkers(englishContext.content);
+    const targetMarkers = extractStructuralMarkers(targetContent);
+    
+    console.log(`🔍 英文上下文包含 ${englishMarkers.length} 个结构标记`);
+    
+    if (englishMarkers.length === 0) {
+      console.warn(`⚠️ 无法找到结构标记，使用模糊匹配`);
+      return await findByFuzzyMatch(englishContext, targetContent, contextPadding);
+    }
+    
+    // 尝试匹配第一个和最后一个标记
+    const firstMarker = englishMarkers[0];
+    const lastMarker = englishMarkers[englishMarkers.length - 1];
+    
+    let startLine = -1;
+    let endLine = -1;
+    
+    // 查找开始位置
+    for (const targetMarker of targetMarkers) {
+      if (markersMatch(firstMarker, targetMarker)) {
+        startLine = Math.max(0, targetMarker.line - contextPadding);
+        console.log(`✅ 找到开始标记匹配: "${firstMarker.text}" 在第 ${targetMarker.line + 1} 行`);
+        break;
+      }
+    }
+    
+    // 查找结束位置
+    if (startLine >= 0) {
+      for (let i = targetMarkers.length - 1; i >= 0; i--) {
+        const targetMarker = targetMarkers[i];
+        if (targetMarker.line > startLine && markersMatch(lastMarker, targetMarker)) {
+          endLine = Math.min(targetLines.length - 1, targetMarker.line + contextPadding);
+          console.log(`✅ 找到结束标记匹配: "${lastMarker.text}" 在第 ${targetMarker.line + 1} 行`);
+          break;
+        }
+      }
+    }
+    
+    if (startLine >= 0 && endLine >= 0 && endLine > startLine) {
+      const matchedContent = targetLines.slice(startLine, endLine + 1).join('\n');
+      console.log(`✅ 成功匹配目标上下文: 第 ${startLine + 1}-${endLine + 1} 行`);
+      
+      return {
+        content: matchedContent,
+        startLine: startLine,
+        endLine: endLine,
+        matchType: 'structural'
+      };
+    }
+    
+    console.warn(`⚠️ 结构匹配失败，尝试模糊匹配`);
+    return await findByFuzzyMatch(englishContext, targetContent, contextPadding);
+    
+  } catch (error) {
+    console.warn(`⚠️ 无法读取目标文件或匹配失败: ${error.message}`);
+    return null;
+  }
+}
+
+// 检查两个标记是否匹配
+function markersMatch(marker1, marker2) {
+  if (marker1.type !== marker2.type) return false;
+  
+  switch (marker1.type) {
+    case 'header':
+      return marker1.level === marker2.level && 
+             similarity(marker1.text, marker2.text) > 0.6;
+    case 'codeblock':
+      return marker1.text === marker2.text;
+    case 'image':
+      return similarity(marker1.text, marker2.text) > 0.8;
+    case 'html':
+      return marker1.tag === marker2.tag;
+    default:
+      return false;
+  }
+}
+
+// 计算文本相似度（简单的编辑距离）
+function similarity(str1, str2) {
+  if (!str1 || !str2) return 0;
+  
+  const len1 = str1.length;
+  const len2 = str2.length;
+  const matrix = Array(len1 + 1).fill().map(() => Array(len2 + 1).fill(0));
+  
+  for (let i = 0; i <= len1; i++) matrix[i][0] = i;
+  for (let j = 0; j <= len2; j++) matrix[0][j] = j;
+  
+  for (let i = 1; i <= len1; i++) {
+    for (let j = 1; j <= len2; j++) {
+      const cost = str1[i - 1] === str2[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+  
+  const distance = matrix[len1][len2];
+  const maxLen = Math.max(len1, len2);
+  return maxLen === 0 ? 1 : (maxLen - distance) / maxLen;
+}
+
+// 模糊匹配方案（备用）
+async function findByFuzzyMatch(englishContext, targetContent, contextPadding) {
+  const englishLines = englishContext.content.split('\n');
+  const targetLines = targetContent.split('\n');
+  
+  // 提取英文上下文的关键文本（去除标记）
+  const englishText = englishLines
+    .map(line => line.replace(/[#*`\[\]()]/g, '').trim())
+    .filter(line => line.length > 10)
+    .slice(0, 3); // 取前3行有意义的文本
+  
+  if (englishText.length === 0) {
+    console.warn(`⚠️ 无法提取关键文本进行模糊匹配`);
+    return null;
+  }
+  
+  let bestMatch = null;
+  let bestScore = 0;
+  
+  // 在目标文件中搜索相似的文本片段
+  for (let i = 0; i < targetLines.length - englishText.length; i++) {
+    const targetSegment = targetLines.slice(i, i + englishText.length)
+      .map(line => line.replace(/[#*`\[\]()]/g, '').trim());
+    
+    let totalScore = 0;
+    for (let j = 0; j < englishText.length; j++) {
+      totalScore += similarity(englishText[j], targetSegment[j] || '');
+    }
+    const avgScore = totalScore / englishText.length;
+    
+    if (avgScore > bestScore && avgScore > 0.3) {
+      bestScore = avgScore;
+      const startLine = Math.max(0, i - contextPadding);
+      const endLine = Math.min(targetLines.length - 1, i + englishText.length + contextPadding);
+      
+      bestMatch = {
+        content: targetLines.slice(startLine, endLine + 1).join('\n'),
+        startLine: startLine,
+        endLine: endLine,
+        matchType: 'fuzzy',
+        confidence: avgScore
+      };
+    }
+  }
+  
+  if (bestMatch) {
+    console.log(`✅ 模糊匹配成功: 第 ${bestMatch.startLine + 1}-${bestMatch.endLine + 1} 行 (置信度: ${(bestMatch.confidence * 100).toFixed(1)}%)`);
+  } else {
+    console.warn(`⚠️ 模糊匹配失败`);
+  }
+  
+  return bestMatch;
+}
+
+// 生成上下文翻译prompt
+function generateContextualPrompt(targetLang, pathPrefix, englishContext, targetContext) {
+  const langName = LANGUAGE_CONFIG[targetLang].name;
+  const termsList = Object.entries(PRESERVE_TERMS)
+    .map(([original, preserved]) => `- ${original} → ${preserved}`)
+    .join('\n');
+
+  return `你是一个专业的技术文档翻译专家。你需要更新一个现有的${langName}翻译文档中的特定部分。
+
+## 任务说明
+以下是英文原文的一个修改片段及其上下文，以及对应的现有${langName}翻译片段。请根据英文的修改，更新${langName}翻译，保持与现有翻译风格的一致性。
+
+## 英文上下文（包含修改）：
+\`\`\`
+${englishContext.content}
+\`\`\`
+
+## 现有${langName}翻译上下文：
+\`\`\`
+${targetContext.content}
+\`\`\`
+
+## 翻译要求：
+1. **风格一致性**：参考现有翻译的用词和语言风格
+2. **只更新修改部分**：保持其他内容基本不变，除非有明显的翻译错误
+3. **保持格式**：所有Markdown格式、HTML标签、代码块必须完全保持
+4. **链接处理**：
+   - 内部链接添加语言前缀：/path → ${pathPrefix}/path
+   - seeedstudio.com链接：https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
+5. **术语保护**：以下术语保持不变
+${termsList}
+
+## 输出要求：
+- 输出完整的更新后的${langName}上下文片段
+- 保持相同的行数和结构
+- 不要添加任何解释或注释
+
+请开始翻译：`;
+}
 async function getModifiedLines(filePath, baseSha) {
   try {
     // 获取文件的diff信息，显示行号
@@ -399,7 +657,7 @@ async function mergeTranslatedContent(originalContent, translatedRanges, targetP
     throw error;
   }
 }
-async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null) {
+async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
@@ -563,7 +821,7 @@ async function handleNewFile(filePath, targetLang) {
   }
 }
 
-// 处理修改文件（增量翻译）
+// 处理修改文件（智能上下文匹配翻译）
 async function handleModifiedFile(filePath, targetLang) {
   try {
     console.log(`✏️ 翻译文件修改: ${filePath} -> ${targetLang}`);
@@ -579,6 +837,16 @@ async function handleModifiedFile(filePath, targetLang) {
       return await handleNewFile(filePath, targetLang);
     }
     
+    // 检查目标翻译文件是否存在
+    let targetExists = false;
+    try {
+      await fs.access(targetPath);
+      targetExists = true;
+    } catch (error) {
+      console.log(`📄 翻译文件不存在，将进行完整文档翻译`);
+      return await handleNewFile(filePath, targetLang);
+    }
+    
     // 获取修改的行信息
     const modifiedRanges = await getModifiedLines(filePath, baseSha);
     if (!modifiedRanges || modifiedRanges.length === 0) {
@@ -589,41 +857,69 @@ async function handleModifiedFile(filePath, targetLang) {
     console.log(`📊 检测到 ${modifiedRanges.length} 个修改区域`);
     
     // 提取修改部分的上下文
-    const contextRanges = extractModifiedContext(content, modifiedRanges, 15);
-    if (!contextRanges || contextRanges.length === 0) {
+    const englishContextRanges = extractModifiedContext(content, modifiedRanges, 15);
+    if (!englishContextRanges || englishContextRanges.length === 0) {
       console.log(`ℹ️ 无法提取修改上下文，将进行完整文档翻译`);
       return await handleNewFile(filePath, targetLang);
     }
     
-    console.log(`🔍 将翻译 ${contextRanges.length} 个上下文区域`);
+    console.log(`🔍 将处理 ${englishContextRanges.length} 个上下文区域`);
     
-    // 翻译每个修改区域
-    const translatedRanges = [];
-    for (let i = 0; i < contextRanges.length; i++) {
-      const range = contextRanges[i];
-      const estimatedTokens = estimateTokens(range.content);
+    // 处理每个修改区域
+    const updatedRanges = [];
+    let totalTokensUsed = 0;
+    let totalTokensSaved = 0;
+    
+    for (let i = 0; i < englishContextRanges.length; i++) {
+      const englishContext = englishContextRanges[i];
+      const estimatedTokens = estimateTokens(englishContext.content);
+      totalTokensUsed += estimatedTokens;
       
-      console.log(`📄 翻译区域 ${i + 1}/${contextRanges.length} (行 ${range.originalStart + 1}-${range.originalEnd + 1}, ${estimatedTokens} tokens)`);
+      console.log(`\n📄 处理区域 ${i + 1}/${englishContextRanges.length} (行 ${englishContext.originalStart + 1}-${englishContext.originalEnd + 1})`);
+      console.log(`📏 英文上下文: ${estimatedTokens} tokens`);
       
       try {
-        const translatedContent = await translateWithClaude(
-          range.content,
-          targetLang,
-          3,
-          false,
-          null,
-          true // isIncremental = true
-        );
+        // 在目标文件中找到对应的上下文
+        const targetContext = await findCorrespondingTargetContext(englishContext, targetPath);
         
-        translatedRanges.push({
-          ...range,
-          translatedContent: translatedContent
+        if (!targetContext) {
+          console.warn(`⚠️ 无法找到对应的${LANGUAGE_CONFIG[targetLang].name}上下文，跳过此区域`);
+          continue;
+        }
+        
+        console.log(`✅ 找到对应${LANGUAGE_CONFIG[targetLang].name}上下文: 第 ${targetContext.startLine + 1}-${targetContext.endLine + 1} 行 (${targetContext.matchType}匹配)`);
+        
+        // 使用上下文翻译
+        const contextualPrompt = generateContextualPrompt(targetLang, LANGUAGE_CONFIG[targetLang].pathPrefix, englishContext, targetContext);
+        
+        console.log(`📡 调用Claude进行上下文翻译...`);
+        const updatedContent = await anthropic.messages.create({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 20000,
+          temperature: 0.05,
+          system: contextualPrompt,
+          messages: [
+            { role: 'user', content: `请更新以下${LANGUAGE_CONFIG[targetLang].name}翻译片段：\n\n${targetContext.content}` }
+          ]
+        });
+        
+        let translatedContent = updatedContent.content[0].text;
+        
+        // 后处理：确保链接正确
+        translatedContent = processInternalLinks(translatedContent, targetLang);
+        
+        updatedRanges.push({
+          originalStart: targetContext.startLine,
+          originalEnd: targetContext.endLine,
+          newContent: translatedContent,
+          tokensUsed: estimatedTokens
         });
         
         translationStatus.completed++;
+        console.log(`✅ 区域 ${i + 1} 翻译完成`);
         
         // API限流延迟
-        if (i < contextRanges.length - 1) {
+        if (i < englishContextRanges.length - 1) {
           console.log('⏳ API限流延迟 2秒...');
           await new Promise(resolve => setTimeout(resolve, 2000));
         }
@@ -631,46 +927,55 @@ async function handleModifiedFile(filePath, targetLang) {
       } catch (error) {
         console.error(`❌ 区域 ${i + 1} 翻译失败: ${error.message}`);
         translationStatus.failed++;
-        throw error;
+        // 继续处理其他区域，不要因为一个区域失败就整个失败
       }
     }
     
-    // 检查目标文件是否存在
-    let existingTargetContent = '';
-    let targetExists = false;
-    try {
-      existingTargetContent = await fs.readFile(targetPath, 'utf8');
-      targetExists = true;
-      console.log(`📄 找到现有翻译文件，将进行增量更新`);
-    } catch (error) {
-      console.log(`📄 翻译文件不存在，将创建新文件`);
-      // 如果目标文件不存在，先完整翻译一次
+    if (updatedRanges.length === 0) {
+      console.warn(`⚠️ 没有成功处理任何区域，回退到完整文档翻译`);
       return await handleNewFile(filePath, targetLang);
     }
     
-    // 合并翻译结果
-    let finalContent;
-    if (targetExists) {
-      finalContent = await mergeTranslatedContent(existingTargetContent, translatedRanges, targetPath);
-    } else {
-      // 如果目标文件不存在，使用完整翻译
-      finalContent = await translateDocumentChunks(chunkDocument(content), targetLang, filePath);
+    // 读取现有的目标文件
+    const existingTargetContent = await fs.readFile(targetPath, 'utf8');
+    const targetLines = existingTargetContent.split('\n');
+    
+    // 从后往前替换，避免行号偏移
+    updatedRanges.sort((a, b) => b.originalStart - a.originalStart);
+    
+    for (const range of updatedRanges) {
+      const newLines = range.newContent.split('\n');
+      const replaceCount = range.originalEnd - range.originalStart + 1;
+      
+      console.log(`🔄 替换第 ${range.originalStart + 1}-${range.originalEnd + 1} 行 (${replaceCount} → ${newLines.length} 行)`);
+      targetLines.splice(range.originalStart, replaceCount, ...newLines);
     }
     
-    // 确保目录存在
-    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    const finalContent = targetLines.join('\n');
     
-    // 写入翻译文件
+    // 计算token节省
+    const fullDocTokens = estimateTokens(content);
+    totalTokensSaved = fullDocTokens - totalTokensUsed;
+    const savingsPercent = Math.round((totalTokensSaved / fullDocTokens) * 100);
+    
+    // 写入更新后的文件
     await fs.writeFile(targetPath, finalContent, 'utf8');
     
-    const tokensSaved = estimateTokens(content) - translatedRanges.reduce((sum, range) => sum + estimateTokens(range.content), 0);
-    console.log(`✅ 增量翻译完成: ${targetPath}`);
-    console.log(`💰 节省 tokens: ${tokensSaved} (约 ${Math.round(tokensSaved / estimateTokens(content) * 100)}%)`);
+    console.log(`✅ 智能增量翻译完成: ${targetPath}`);
+    console.log(`📊 处理了 ${updatedRanges.length}/${englishContextRanges.length} 个区域`);
+    console.log(`💰 节省 tokens: ${totalTokensSaved} (约 ${savingsPercent}%)`);
     
-    return { success: true, path: targetPath, incremental: true, tokensSaved };
+    return { 
+      success: true, 
+      path: targetPath, 
+      incremental: true, 
+      tokensSaved: totalTokensSaved,
+      regionsProcessed: updatedRanges.length,
+      totalRegions: englishContextRanges.length
+    };
     
   } catch (error) {
-    console.error(`❌ 增量翻译失败 ${filePath}:`, error.message);
+    console.error(`❌ 智能增量翻译失败 ${filePath}:`, error.message);
     console.log(`🔄 回退到完整文档翻译...`);
     
     // 回退到完整翻译
@@ -700,7 +1005,7 @@ function generateProgressReport(languages, results) {
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
   report += `- 📊 总计: ${successCount + failCount}\n`;
-  report += `- 🔄 增量翻译: ${incrementalCount}\n`;
+  report += `- 🔄 智能增量翻译: ${incrementalCount}\n`;
   if (totalTokensSaved > 0) {
     report += `- 💰 节省 Tokens: ${totalTokensSaved}\n`;
   }
@@ -710,9 +1015,15 @@ function generateProgressReport(languages, results) {
     report += `**成功翻译的文件:**\n`;
     results.filter(r => r.success).forEach(r => {
       const typeIcon = r.type === 'new' ? '🆕' : '✏️';
-      const incrementalInfo = r.incremental ? ' (增量)' : '';
+      let info = '';
+      if (r.incremental) {
+        info += ' (智能增量)';
+        if (r.regionsProcessed && r.totalRegions) {
+          info += ` [${r.regionsProcessed}/${r.totalRegions}区域]`;
+        }
+      }
       const tokenInfo = r.tokensSaved ? ` [节省${r.tokensSaved} tokens]` : '';
-      report += `- ${typeIcon} ${r.path}${incrementalInfo}${tokenInfo}\n`;
+      report += `- ${typeIcon} ${r.path}${info}${tokenInfo}\n`;
     });
     report += '\n';
   }
