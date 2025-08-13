@@ -657,7 +657,7 @@ async function mergeTranslatedContent(originalContent, translatedRanges, targetP
     throw error;
   }
 }
-async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null) {
+async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
@@ -821,10 +821,209 @@ async function handleNewFile(filePath, targetLang) {
   }
 }
 
-// 处理修改文件（智能上下文匹配翻译）
+// 提取确切的修改内容（不是上下文）
+async function extractExactModifications(filePath, baseSha) {
+  try {
+    // 获取详细的diff，显示具体修改的内容
+    const diffOutput = execSync(
+      `git diff --no-index --word-diff=porcelain ${baseSha}:${filePath} ${filePath}`,
+      { encoding: 'utf8' }
+    ).catch(() => {
+      // 如果上面的命令失败，尝试另一种方式
+      return execSync(
+        `git show ${baseSha}:${filePath} > /tmp/old_file.md && git diff --no-index --word-diff=porcelain /tmp/old_file.md ${filePath}`,
+        { encoding: 'utf8' }
+      );
+    });
+    
+    const modifications = [];
+    const lines = diffOutput.split('\n');
+    
+    let currentMod = null;
+    let lineNumber = 0;
+    
+    for (const line of lines) {
+      if (line.startsWith('@@')) {
+        // 解析行号信息
+        const match = line.match(/@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/);
+        if (match) {
+          lineNumber = parseInt(match[3]) - 1; // 转换为0-based
+        }
+      } else if (line.startsWith('-')) {
+        // 删除的内容（在旧文件中）
+        if (currentMod && currentMod.type !== 'delete') {
+          modifications.push(currentMod);
+          currentMod = null;
+        }
+        if (!currentMod) {
+          currentMod = {
+            type: 'delete',
+            oldContent: line.substring(1),
+            newContent: '',
+            lineNumber: lineNumber
+          };
+        } else {
+          currentMod.oldContent += '\n' + line.substring(1);
+        }
+      } else if (line.startsWith('+')) {
+        // 添加的内容（在新文件中）
+        if (currentMod && currentMod.type !== 'add') {
+          modifications.push(currentMod);
+          currentMod = null;
+        }
+        if (!currentMod) {
+          currentMod = {
+            type: 'add',
+            oldContent: '',
+            newContent: line.substring(1),
+            lineNumber: lineNumber
+          };
+        } else {
+          currentMod.newContent += '\n' + line.substring(1);
+        }
+        lineNumber++;
+      } else if (line.startsWith(' ')) {
+        // 未修改的内容
+        if (currentMod) {
+          modifications.push(currentMod);
+          currentMod = null;
+        }
+        lineNumber++;
+      }
+    }
+    
+    if (currentMod) {
+      modifications.push(currentMod);
+    }
+    
+    return modifications;
+  } catch (error) {
+    console.warn(`⚠️ 无法获取精确修改信息: ${error.message}`);
+    return null;
+  }
+}
+
+// 在目标文件中找到对应的具体内容片段
+async function findExactTargetMatch(modification, targetPath, contextLines = 3) {
+  try {
+    const targetContent = await fs.readFile(targetPath, 'utf8');
+    const targetLines = targetContent.split('\n');
+    
+    // 如果是删除操作，寻找要删除的内容
+    const searchContent = modification.type === 'delete' ? modification.oldContent : modification.oldContent;
+    
+    if (!searchContent.trim()) {
+      console.warn(`⚠️ 搜索内容为空，跳过`);
+      return null;
+    }
+    
+    // 将搜索内容按行分割
+    const searchLines = searchContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+    
+    if (searchLines.length === 0) {
+      console.warn(`⚠️ 没有有效的搜索行，跳过`);
+      return null;
+    }
+    
+    console.log(`🔍 搜索内容: "${searchLines[0].substring(0, 50)}..."`);
+    
+    // 在目标文件中搜索匹配的内容
+    for (let i = 0; i < targetLines.length; i++) {
+      let matchedLines = 0;
+      let matchStart = i;
+      
+      // 尝试匹配连续的行
+      for (let j = 0; j < searchLines.length && i + j < targetLines.length; j++) {
+        const targetLine = targetLines[i + j].trim();
+        const searchLine = searchLines[j];
+        
+        // 使用相似度匹配，允许一定的翻译差异
+        if (similarity(normalizeForComparison(targetLine), normalizeForComparison(searchLine)) > 0.6) {
+          matchedLines++;
+        } else {
+          break;
+        }
+      }
+      
+      // 如果找到了足够的匹配行
+      if (matchedLines >= Math.min(2, searchLines.length)) {
+        const matchEnd = matchStart + matchedLines - 1;
+        console.log(`✅ 找到匹配内容: 第 ${matchStart + 1}-${matchEnd + 1} 行`);
+        
+        return {
+          startLine: matchStart,
+          endLine: matchEnd,
+          originalContent: targetLines.slice(matchStart, matchEnd + 1).join('\n'),
+          confidence: matchedLines / searchLines.length
+        };
+      }
+    }
+    
+    console.warn(`⚠️ 未找到匹配的内容`);
+    return null;
+  } catch (error) {
+    console.warn(`⚠️ 查找目标匹配失败: ${error.message}`);
+    return null;
+  }
+}
+
+// 标准化文本用于比较（去除格式，保留核心内容）
+function normalizeForComparison(text) {
+  return text
+    .toLowerCase()
+    .replace(/[#*`\[\]()]/g, '') // 移除markdown标记
+    .replace(/\s+/g, ' ') // 标准化空格
+    .replace(/[^\w\s]/g, '') // 移除标点符号
+    .trim();
+}
+
+// 生成精确修改的翻译prompt
+function generatePreciseModificationPrompt(targetLang, pathPrefix, modification, targetMatch) {
+  const langName = LANGUAGE_CONFIG[targetLang].name;
+  const termsList = Object.entries(PRESERVE_TERMS)
+    .map(([original, preserved]) => `- ${original} → ${preserved}`)
+    .join('\n');
+
+  let taskDescription = '';
+  if (modification.type === 'add') {
+    taskDescription = `请将以下新增的英文内容翻译成${langName}：`;
+  } else if (modification.type === 'delete') {
+    taskDescription = `以下英文内容被删除了，请告诉我应该删除对应的${langName}内容：`;
+  } else {
+    taskDescription = `请将以下修改后的英文内容翻译成${langName}，替换现有的译文：`;
+  }
+
+  return `你是一个专业的技术文档翻译专家。
+
+## 任务
+${taskDescription}
+
+## 英文修改内容：
+\`\`\`
+${modification.newContent || modification.oldContent}
+\`\`\`
+
+${targetMatch ? `## 现有的${langName}内容（将被替换）：
+\`\`\`
+${targetMatch.originalContent}
+\`\`\`` : ''}
+
+## 翻译要求：
+1. **保持格式**：所有Markdown格式、HTML标签、代码块必须完全保持
+2. **链接处理**：
+   - 内部链接添加语言前缀：/path → ${pathPrefix}/path
+   - seeedstudio.com链接：https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
+3. **术语保护**：以下术语保持不变
+${termsList}
+4. **简洁输出**：只输出翻译结果，不要添加任何解释
+
+${modification.type === 'delete' ? '如果是删除操作，请输出"DELETE"' : '请开始翻译：'}`;
+}
+
+// 处理修改文件（精确修改翻译）
 async function handleModifiedFile(filePath, targetLang) {
   try {
-    console.log(`✏️ 翻译文件修改: ${filePath} -> ${targetLang}`);
+    console.log(`✏️ 精确翻译文件修改: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
     const content = await fs.readFile(filePath, 'utf8');
@@ -847,111 +1046,98 @@ async function handleModifiedFile(filePath, targetLang) {
       return await handleNewFile(filePath, targetLang);
     }
     
-    // 获取修改的行信息
-    const modifiedRanges = await getModifiedLines(filePath, baseSha);
-    if (!modifiedRanges || modifiedRanges.length === 0) {
-      console.log(`ℹ️ 未检测到具体修改，将进行完整文档翻译`);
+    // 获取精确的修改信息
+    const exactModifications = await extractExactModifications(filePath, baseSha);
+    if (!exactModifications || exactModifications.length === 0) {
+      console.log(`ℹ️ 未检测到精确修改，将进行完整文档翻译`);
       return await handleNewFile(filePath, targetLang);
     }
     
-    console.log(`📊 检测到 ${modifiedRanges.length} 个修改区域`);
+    console.log(`📊 检测到 ${exactModifications.length} 个精确修改`);
     
-    // 提取修改部分的上下文
-    const englishContextRanges = extractModifiedContext(content, modifiedRanges, 15);
-    if (!englishContextRanges || englishContextRanges.length === 0) {
-      console.log(`ℹ️ 无法提取修改上下文，将进行完整文档翻译`);
-      return await handleNewFile(filePath, targetLang);
-    }
+    // 读取现有的目标文件
+    const targetContent = await fs.readFile(targetPath, 'utf8');
+    let targetLines = targetContent.split('\n');
     
-    console.log(`🔍 将处理 ${englishContextRanges.length} 个上下文区域`);
-    
-    // 处理每个修改区域
-    const updatedRanges = [];
+    let modificationsProcessed = 0;
     let totalTokensUsed = 0;
     let totalTokensSaved = 0;
     
-    for (let i = 0; i < englishContextRanges.length; i++) {
-      const englishContext = englishContextRanges[i];
-      const estimatedTokens = estimateTokens(englishContext.content);
-      totalTokensUsed += estimatedTokens;
+    // 从后往前处理修改，避免行号偏移
+    for (let i = exactModifications.length - 1; i >= 0; i--) {
+      const modification = exactModifications[i];
       
-      console.log(`\n📄 处理区域 ${i + 1}/${englishContextRanges.length} (行 ${englishContext.originalStart + 1}-${englishContext.originalEnd + 1})`);
-      console.log(`📏 英文上下文: ${estimatedTokens} tokens`);
+      console.log(`\n📝 处理修改 ${exactModifications.length - i}/${exactModifications.length} (${modification.type})`);
+      console.log(`📄 修改内容: "${(modification.newContent || modification.oldContent).substring(0, 100)}..."`);
       
       try {
-        // 在目标文件中找到对应的上下文
-        const targetContext = await findCorrespondingTargetContext(englishContext, targetPath);
+        // 在目标文件中找到对应的内容
+        const targetMatch = await findExactTargetMatch(modification, targetPath);
         
-        if (!targetContext) {
-          console.warn(`⚠️ 无法找到对应的${LANGUAGE_CONFIG[targetLang].name}上下文，跳过此区域`);
+        if (!targetMatch) {
+          console.warn(`⚠️ 无法找到对应的${LANGUAGE_CONFIG[targetLang].name}内容，跳过此修改`);
           continue;
         }
         
-        console.log(`✅ 找到对应${LANGUAGE_CONFIG[targetLang].name}上下文: 第 ${targetContext.startLine + 1}-${targetContext.endLine + 1} 行 (${targetContext.matchType}匹配)`);
+        console.log(`✅ 找到对应内容 (置信度: ${(targetMatch.confidence * 100).toFixed(1)}%)`);
         
-        // 使用上下文翻译
-        const contextualPrompt = generateContextualPrompt(targetLang, LANGUAGE_CONFIG[targetLang].pathPrefix, englishContext, targetContext);
+        // 生成精确修改的翻译
+        if (modification.type === 'delete') {
+          // 删除操作：直接删除对应的行
+          console.log(`🗑️ 删除第 ${targetMatch.startLine + 1}-${targetMatch.endLine + 1} 行`);
+          targetLines.splice(targetMatch.startLine, targetMatch.endLine - targetMatch.startLine + 1);
+        } else {
+          // 添加或修改操作：翻译新内容
+          const prompt = generatePreciseModificationPrompt(targetLang, LANGUAGE_CONFIG[targetLang].pathPrefix, modification, targetMatch);
+          
+          console.log(`📡 调用Claude翻译精确修改...`);
+          const response = await anthropic.messages.create({
+            model: 'claude-sonnet-4-20250514',
+            max_tokens: 10000,
+            temperature: 0.05,
+            system: prompt,
+            messages: [
+              { role: 'user', content: modification.newContent || modification.oldContent }
+            ]
+          });
+          
+          let translatedContent = response.content[0].text.trim();
+          
+          // 后处理：确保链接正确
+          translatedContent = processInternalLinks(translatedContent, targetLang);
+          
+          const newLines = translatedContent.split('\n');
+          const oldLineCount = targetMatch.endLine - targetMatch.startLine + 1;
+          
+          console.log(`🔄 替换第 ${targetMatch.startLine + 1}-${targetMatch.endLine + 1} 行 (${oldLineCount} → ${newLines.length} 行)`);
+          
+          // 替换对应的行
+          targetLines.splice(targetMatch.startLine, oldLineCount, ...newLines);
+          
+          const tokensUsed = estimateTokens(modification.newContent || modification.oldContent);
+          totalTokensUsed += tokensUsed;
+        }
         
-        console.log(`📡 调用Claude进行上下文翻译...`);
-        const updatedContent = await anthropic.messages.create({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 20000,
-          temperature: 0.05,
-          system: contextualPrompt,
-          messages: [
-            { role: 'user', content: `请更新以下${LANGUAGE_CONFIG[targetLang].name}翻译片段：\n\n${targetContext.content}` }
-          ]
-        });
-        
-        let translatedContent = updatedContent.content[0].text;
-        
-        // 后处理：确保链接正确
-        translatedContent = processInternalLinks(translatedContent, targetLang);
-        
-        updatedRanges.push({
-          originalStart: targetContext.startLine,
-          originalEnd: targetContext.endLine,
-          newContent: translatedContent,
-          tokensUsed: estimatedTokens
-        });
-        
+        modificationsProcessed++;
         translationStatus.completed++;
-        console.log(`✅ 区域 ${i + 1} 翻译完成`);
         
         // API限流延迟
-        if (i < englishContextRanges.length - 1) {
-          console.log('⏳ API限流延迟 2秒...');
-          await new Promise(resolve => setTimeout(resolve, 2000));
+        if (i > 0) {
+          console.log('⏳ API限流延迟 1秒...');
+          await new Promise(resolve => setTimeout(resolve, 1000));
         }
         
       } catch (error) {
-        console.error(`❌ 区域 ${i + 1} 翻译失败: ${error.message}`);
+        console.error(`❌ 修改 ${exactModifications.length - i} 处理失败: ${error.message}`);
         translationStatus.failed++;
-        // 继续处理其他区域，不要因为一个区域失败就整个失败
+        // 继续处理其他修改，不要因为一个修改失败就整个失败
       }
     }
     
-    if (updatedRanges.length === 0) {
-      console.warn(`⚠️ 没有成功处理任何区域，回退到完整文档翻译`);
+    if (modificationsProcessed === 0) {
+      console.warn(`⚠️ 没有成功处理任何修改，回退到完整文档翻译`);
       return await handleNewFile(filePath, targetLang);
     }
-    
-    // 读取现有的目标文件
-    const existingTargetContent = await fs.readFile(targetPath, 'utf8');
-    const targetLines = existingTargetContent.split('\n');
-    
-    // 从后往前替换，避免行号偏移
-    updatedRanges.sort((a, b) => b.originalStart - a.originalStart);
-    
-    for (const range of updatedRanges) {
-      const newLines = range.newContent.split('\n');
-      const replaceCount = range.originalEnd - range.originalStart + 1;
-      
-      console.log(`🔄 替换第 ${range.originalStart + 1}-${range.originalEnd + 1} 行 (${replaceCount} → ${newLines.length} 行)`);
-      targetLines.splice(range.originalStart, replaceCount, ...newLines);
-    }
-    
-    const finalContent = targetLines.join('\n');
     
     // 计算token节省
     const fullDocTokens = estimateTokens(content);
@@ -959,10 +1145,11 @@ async function handleModifiedFile(filePath, targetLang) {
     const savingsPercent = Math.round((totalTokensSaved / fullDocTokens) * 100);
     
     // 写入更新后的文件
+    const finalContent = targetLines.join('\n');
     await fs.writeFile(targetPath, finalContent, 'utf8');
     
-    console.log(`✅ 智能增量翻译完成: ${targetPath}`);
-    console.log(`📊 处理了 ${updatedRanges.length}/${englishContextRanges.length} 个区域`);
+    console.log(`✅ 精确增量翻译完成: ${targetPath}`);
+    console.log(`📊 处理了 ${modificationsProcessed}/${exactModifications.length} 个修改`);
     console.log(`💰 节省 tokens: ${totalTokensSaved} (约 ${savingsPercent}%)`);
     
     return { 
@@ -970,12 +1157,12 @@ async function handleModifiedFile(filePath, targetLang) {
       path: targetPath, 
       incremental: true, 
       tokensSaved: totalTokensSaved,
-      regionsProcessed: updatedRanges.length,
-      totalRegions: englishContextRanges.length
+      modificationsProcessed: modificationsProcessed,
+      totalModifications: exactModifications.length
     };
     
   } catch (error) {
-    console.error(`❌ 智能增量翻译失败 ${filePath}:`, error.message);
+    console.error(`❌ 精确增量翻译失败 ${filePath}:`, error.message);
     console.log(`🔄 回退到完整文档翻译...`);
     
     // 回退到完整翻译
@@ -1005,7 +1192,7 @@ function generateProgressReport(languages, results) {
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
   report += `- 📊 总计: ${successCount + failCount}\n`;
-  report += `- 🔄 智能增量翻译: ${incrementalCount}\n`;
+  report += `- 🎯 精确增量翻译: ${incrementalCount}\n`;
   if (totalTokensSaved > 0) {
     report += `- 💰 节省 Tokens: ${totalTokensSaved}\n`;
   }
@@ -1017,9 +1204,9 @@ function generateProgressReport(languages, results) {
       const typeIcon = r.type === 'new' ? '🆕' : '✏️';
       let info = '';
       if (r.incremental) {
-        info += ' (智能增量)';
-        if (r.regionsProcessed && r.totalRegions) {
-          info += ` [${r.regionsProcessed}/${r.totalRegions}区域]`;
+        info += ' (精确增量)';
+        if (r.modificationsProcessed && r.totalModifications) {
+          info += ` [${r.modificationsProcessed}/${r.totalModifications}修改]`;
         }
       }
       const tokenInfo = r.tokensSaved ? ` [节省${r.tokensSaved} tokens]` : '';
