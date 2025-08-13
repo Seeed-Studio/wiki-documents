@@ -6,6 +6,9 @@ slug: /cn/Getting_Started
 last_update:
   date: 08/30/2024
   author: Matthew
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
+[xxx](/cn/Sensor_Network)
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
 ---
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
@@ -201,3 +204,6 @@ last_update:
     </tr>
   </tbody>
 </table>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
