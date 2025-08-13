@@ -1,6 +1,7 @@
 const Anthropic = require('@anthropic-ai/sdk');
 const fs = require('fs').promises;
 const path = require('path');
+const { execSync } = require('child_process');
 
 const anthropic = new Anthropic({
   apiKey: process.env.TRANSLATION_API_KEY
@@ -178,7 +179,7 @@ function chunkDocument(content, maxTokens = 15000) {
 }
 
 // 生成翻译prompt
-function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
+function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null, isIncremental = false) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
     .map(([original, preserved]) => `- ${original} → ${preserved}`)
@@ -192,7 +193,14 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
 - 如果chunk开头或结尾的内容看起来不完整，请根据上下文合理处理
 - 保持原有的Markdown结构和格式` : '';
 
-  return `你是一个专业的技术文档翻译专家。请将以下${isChunk ? '部分' : '完整的'} Markdown 文档从英文翻译成${langName}。
+  const incrementalInstructions = isIncremental ? `
+
+**增量翻译说明：**
+- 这是文档中被修改的部分及其上下文
+- 请只翻译修改的内容，保持上下文部分与原有翻译风格一致
+- 确保翻译结果与文档其他部分保持连贯性` : '';
+
+  return `你是一个专业的技术文档翻译专家。请将以下${isChunk ? '部分' : isIncremental ? '修改部分' : '完整的'} Markdown 文档从英文翻译成${langName}。
 
 重要规则：
 1. 保持所有 Markdown 格式不变（链接、代码块、标题等）
@@ -201,8 +209,11 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
 4. 对于内部链接（以 / 开头的链接），请在路径前添加 "${pathPrefix}" 前缀
 5. 例如：href="/Sensor_Network" 应该改为 href="${pathPrefix}/Sensor_Network"
 6. [链接文本](/path) 应该改为 [链接文本](${pathPrefix}/path)
-7. 外部链接（http开头）和已有语言前缀的链接保持不变
-8. 只翻译人类可读的文本内容
+7. 对于 seeedstudio.com wiki 链接，请添加语言前缀：
+   - https://wiki.seeedstudio.com/Sensor_Network 改为 https://wiki.seeedstudio.com${pathPrefix}/Sensor_Network
+   - https://wiki.seeedstudio.com/guides/getting-started 改为 https://wiki.seeedstudio.com${pathPrefix}/guides/getting-started
+8. 外部链接（其他http开头）和已有语言前缀的链接保持不变
+9. 只翻译人类可读的文本内容
 
 Front Matter 处理规则：
 - 如果文档开头有 Front Matter（被 --- 包围的 YAML 部分），请按以下规则处理：
@@ -229,29 +240,41 @@ Front Matter 处理规则：
 - 不要重复输出Front Matter，整个文档只能有一个Front Matter部分
 
 术语保护（保持不变）：
-${termsList}${chunkInstructions}`;
+${termsList}${chunkInstructions}${incrementalInstructions}`;
 }
 
-// 处理内部链接
+// 处理内部链接和seeedstudio.com链接
 function processInternalLinks(content, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig || !langConfig.pathPrefix) return content;
   
   const pathPrefix = langConfig.pathPrefix;
   
-  // 处理 HTML 格式的链接：<a href="/path">
+  // 处理 seeedstudio.com wiki 链接
   content = content.replace(
-    /<a\s+href="(\/[^"]*)"([^>]*)>/gi, 
-    (match, url, attrs) => {
+    /https:\/\/wiki\.seeedstudio\.com\/((?!zh-CN|ja|Spanish|cn)[^#\s"')]*)/gi,
+    (match, path) => {
+      // 移除路径开头的斜杠（如果有）
+      const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+      return `https://wiki.seeedstudio.com${pathPrefix}/${cleanPath}`;
+    }
+  );
+  
+  // 处理 HTML 格式的相对路径链接：<a href="/path">
+  content = content.replace(
+    /<a\s+([^>]*\s+)?href="(\/[^"]*)"([^>]*)>/gi, 
+    (match, beforeAttrs, url, afterAttrs) => {
       if (url.startsWith('http') || url.match(/^\/(zh-CN|ja|es|cn)\//)) {
         return match;
       }
       const newUrl = pathPrefix + url;
-      return `<a href="${newUrl}"${attrs}>`;
+      const before = beforeAttrs || '';
+      const after = afterAttrs || '';
+      return `<a ${before}href="${newUrl}"${after}>`;
     }
   );
   
-  // 处理 Markdown 格式的链接：[text](/path)
+  // 处理 Markdown 格式的相对路径链接：[text](/path)
   content = content.replace(
     /\[([^\]]*)\]\((\/[^)]*)\)/gi,
     (match, text, url) => {
@@ -266,8 +289,117 @@ function processInternalLinks(content, targetLang) {
   return content;
 }
 
-// 使用Claude翻译（带重试机制）
-async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null) {
+// 获取文件的修改行信息
+async function getModifiedLines(filePath, baseSha) {
+  try {
+    // 获取文件的diff信息，显示行号
+    const diffOutput = execSync(
+      `git diff -U0 ${baseSha}..HEAD -- "${filePath}"`,
+      { encoding: 'utf8' }
+    );
+    
+    const modifiedRanges = [];
+    const lines = diffOutput.split('\n');
+    
+    for (const line of lines) {
+      // 匹配 @@ -老行号,老行数 +新行号,新行数 @@ 格式
+      const match = line.match(/^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@/);
+      if (match) {
+        const newStart = parseInt(match[3]);
+        const newCount = parseInt(match[4] || '1');
+        
+        modifiedRanges.push({
+          start: newStart,
+          end: newStart + newCount - 1
+        });
+      }
+    }
+    
+    return modifiedRanges;
+  } catch (error) {
+    console.warn(`⚠️ 无法获取文件差异信息: ${error.message}`);
+    return null;
+  }
+}
+
+// 提取修改行的上下文
+function extractModifiedContext(content, modifiedRanges, contextLines = 15) {
+  if (!modifiedRanges || modifiedRanges.length === 0) {
+    return null;
+  }
+  
+  const lines = content.split('\n');
+  const extractedRanges = [];
+  
+  for (const range of modifiedRanges) {
+    const start = Math.max(0, range.start - contextLines - 1); // -1 because line numbers start from 1
+    const end = Math.min(lines.length - 1, range.end + contextLines - 1);
+    
+    extractedRanges.push({
+      originalStart: start,
+      originalEnd: end,
+      modifiedStart: range.start - 1, // Convert to 0-based
+      modifiedEnd: range.end - 1,
+      content: lines.slice(start, end + 1).join('\n'),
+      lineCount: end - start + 1
+    });
+  }
+  
+  // 合并重叠的范围
+  const mergedRanges = [];
+  extractedRanges.sort((a, b) => a.originalStart - b.originalStart);
+  
+  for (const range of extractedRanges) {
+    if (mergedRanges.length === 0) {
+      mergedRanges.push(range);
+    } else {
+      const lastRange = mergedRanges[mergedRanges.length - 1];
+      if (range.originalStart <= lastRange.originalEnd + 1) {
+        // 合并重叠范围
+        lastRange.originalEnd = Math.max(lastRange.originalEnd, range.originalEnd);
+        lastRange.modifiedEnd = Math.max(lastRange.modifiedEnd, range.modifiedEnd);
+        lastRange.content = lines.slice(lastRange.originalStart, lastRange.originalEnd + 1).join('\n');
+        lastRange.lineCount = lastRange.originalEnd - lastRange.originalStart + 1;
+      } else {
+        mergedRanges.push(range);
+      }
+    }
+  }
+  
+  return mergedRanges;
+}
+
+// 将翻译结果合并回原文件
+async function mergeTranslatedContent(originalContent, translatedRanges, targetPath) {
+  try {
+    // 检查翻译目标文件是否已存在
+    let existingContent = '';
+    try {
+      existingContent = await fs.readFile(targetPath, 'utf8');
+    } catch (error) {
+      // 文件不存在，使用原文件作为基础
+      console.log(`📄 目标文件不存在，将创建新文件: ${targetPath}`);
+      return originalContent; // 如果目标文件不存在，返回完整翻译
+    }
+    
+    const existingLines = existingContent.split('\n');
+    
+    // 从后往前替换，避免行号偏移问题
+    for (let i = translatedRanges.length - 1; i >= 0; i--) {
+      const range = translatedRanges[i];
+      const translatedLines = range.translatedContent.split('\n');
+      
+      // 替换对应的行
+      existingLines.splice(range.originalStart, range.lineCount, ...translatedLines);
+    }
+    
+    return existingLines.join('\n');
+  } catch (error) {
+    console.error(`❌ 合并翻译内容失败: ${error.message}`);
+    throw error;
+  }
+}
+async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
@@ -431,37 +563,124 @@ async function handleNewFile(filePath, targetLang) {
   }
 }
 
-// 处理修改文件
+// 处理修改文件（增量翻译）
 async function handleModifiedFile(filePath, targetLang) {
   try {
     console.log(`✏️ 翻译文件修改: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
     const content = await fs.readFile(filePath, 'utf8');
-    console.log(`📏 文件大小: ${content.length} 字符 (约 ${estimateTokens(content)} tokens)`);
-    
-    // 分块处理
-    const chunks = chunkDocument(content);
-    console.log(`📦 文档分为 ${chunks.length} 块`);
-    
-    const translatedContent = await translateDocumentChunks(chunks, targetLang, filePath);
-    
-    // 使用新的路径生成逻辑
     const targetPath = generateTargetPath(filePath, targetLang);
+    
+    // 获取基础SHA
+    const baseSha = process.env.BASE_SHA;
+    if (!baseSha) {
+      console.warn(`⚠️ 无法获取基础SHA，将进行完整文档翻译`);
+      return await handleNewFile(filePath, targetLang);
+    }
+    
+    // 获取修改的行信息
+    const modifiedRanges = await getModifiedLines(filePath, baseSha);
+    if (!modifiedRanges || modifiedRanges.length === 0) {
+      console.log(`ℹ️ 未检测到具体修改，将进行完整文档翻译`);
+      return await handleNewFile(filePath, targetLang);
+    }
+    
+    console.log(`📊 检测到 ${modifiedRanges.length} 个修改区域`);
+    
+    // 提取修改部分的上下文
+    const contextRanges = extractModifiedContext(content, modifiedRanges, 15);
+    if (!contextRanges || contextRanges.length === 0) {
+      console.log(`ℹ️ 无法提取修改上下文，将进行完整文档翻译`);
+      return await handleNewFile(filePath, targetLang);
+    }
+    
+    console.log(`🔍 将翻译 ${contextRanges.length} 个上下文区域`);
+    
+    // 翻译每个修改区域
+    const translatedRanges = [];
+    for (let i = 0; i < contextRanges.length; i++) {
+      const range = contextRanges[i];
+      const estimatedTokens = estimateTokens(range.content);
+      
+      console.log(`📄 翻译区域 ${i + 1}/${contextRanges.length} (行 ${range.originalStart + 1}-${range.originalEnd + 1}, ${estimatedTokens} tokens)`);
+      
+      try {
+        const translatedContent = await translateWithClaude(
+          range.content,
+          targetLang,
+          3,
+          false,
+          null,
+          true // isIncremental = true
+        );
+        
+        translatedRanges.push({
+          ...range,
+          translatedContent: translatedContent
+        });
+        
+        translationStatus.completed++;
+        
+        // API限流延迟
+        if (i < contextRanges.length - 1) {
+          console.log('⏳ API限流延迟 2秒...');
+          await new Promise(resolve => setTimeout(resolve, 2000));
+        }
+        
+      } catch (error) {
+        console.error(`❌ 区域 ${i + 1} 翻译失败: ${error.message}`);
+        translationStatus.failed++;
+        throw error;
+      }
+    }
+    
+    // 检查目标文件是否存在
+    let existingTargetContent = '';
+    let targetExists = false;
+    try {
+      existingTargetContent = await fs.readFile(targetPath, 'utf8');
+      targetExists = true;
+      console.log(`📄 找到现有翻译文件，将进行增量更新`);
+    } catch (error) {
+      console.log(`📄 翻译文件不存在，将创建新文件`);
+      // 如果目标文件不存在，先完整翻译一次
+      return await handleNewFile(filePath, targetLang);
+    }
+    
+    // 合并翻译结果
+    let finalContent;
+    if (targetExists) {
+      finalContent = await mergeTranslatedContent(existingTargetContent, translatedRanges, targetPath);
+    } else {
+      // 如果目标文件不存在，使用完整翻译
+      finalContent = await translateDocumentChunks(chunkDocument(content), targetLang, filePath);
+    }
     
     // 确保目录存在
     await fs.mkdir(path.dirname(targetPath), { recursive: true });
     
     // 写入翻译文件
-    await fs.writeFile(targetPath, translatedContent, 'utf8');
+    await fs.writeFile(targetPath, finalContent, 'utf8');
     
-    console.log(`✅ 文件翻译更新完成: ${targetPath}`);
-    return { success: true, path: targetPath };
+    const tokensSaved = estimateTokens(content) - translatedRanges.reduce((sum, range) => sum + estimateTokens(range.content), 0);
+    console.log(`✅ 增量翻译完成: ${targetPath}`);
+    console.log(`💰 节省 tokens: ${tokensSaved} (约 ${Math.round(tokensSaved / estimateTokens(content) * 100)}%)`);
+    
+    return { success: true, path: targetPath, incremental: true, tokensSaved };
     
   } catch (error) {
-    console.error(`❌ 文件翻译失败 ${filePath}:`, error.message);
-    translationStatus.failed++;
-    return { success: false, error: error.message, path: filePath };
+    console.error(`❌ 增量翻译失败 ${filePath}:`, error.message);
+    console.log(`🔄 回退到完整文档翻译...`);
+    
+    // 回退到完整翻译
+    try {
+      return await handleNewFile(filePath, targetLang);
+    } catch (fallbackError) {
+      console.error(`❌ 完整翻译也失败: ${fallbackError.message}`);
+      translationStatus.failed++;
+      return { success: false, error: fallbackError.message, path: filePath };
+    }
   }
 }
 
@@ -469,6 +688,10 @@ async function handleModifiedFile(filePath, targetLang) {
 function generateProgressReport(languages, results) {
   const successCount = results.filter(r => r.success).length;
   const failCount = results.filter(r => !r.success).length;
+  const incrementalCount = results.filter(r => r.success && r.incremental).length;
+  const totalTokensSaved = results
+    .filter(r => r.success && r.tokensSaved)
+    .reduce((sum, r) => sum + r.tokensSaved, 0);
   
   let report = `## 📊 翻译完成报告\n\n`;
   report += `**目标语言:** ${languages.map(l => LANGUAGE_CONFIG[l]?.name || l).join(', ')}\n`;
@@ -476,12 +699,20 @@ function generateProgressReport(languages, results) {
   report += `**统计信息:**\n`;
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
-  report += `- 📊 总计: ${successCount + failCount}\n\n`;
+  report += `- 📊 总计: ${successCount + failCount}\n`;
+  report += `- 🔄 增量翻译: ${incrementalCount}\n`;
+  if (totalTokensSaved > 0) {
+    report += `- 💰 节省 Tokens: ${totalTokensSaved}\n`;
+  }
+  report += '\n';
   
   if (results.some(r => r.success)) {
     report += `**成功翻译的文件:**\n`;
     results.filter(r => r.success).forEach(r => {
-      report += `- ✅ ${r.path}\n`;
+      const typeIcon = r.type === 'new' ? '🆕' : '✏️';
+      const incrementalInfo = r.incremental ? ' (增量)' : '';
+      const tokenInfo = r.tokensSaved ? ` [节省${r.tokensSaved} tokens]` : '';
+      report += `- ${typeIcon} ${r.path}${incrementalInfo}${tokenInfo}\n`;
     });
     report += '\n';
   }

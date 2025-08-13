@@ -10,6 +10,13 @@ last_update:
 
 <strong><a href="/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> Sensors and Sensing</span></a></strong>
 
+[xxx](/Sensor_Network)
+
+[xxx](https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors)
+
+
+
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 ## Seeed Studio 
@@ -209,3 +216,8 @@ If you have any questions or comments, please do not hesitate to hop on to our f
     </tr>
   </tbody>
 </table>
+
+
+
+hello world
+[abc](https://wiki.seeedstudio.com/Edge_Computing/#application--software)
