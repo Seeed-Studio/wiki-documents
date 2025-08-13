@@ -62,6 +62,28 @@ function estimateTokens(text) {
   return Math.ceil(text.length * 0.75);
 }
 
+// 生成目标文件路径（添加语言前缀）
+function generateTargetPath(originalPath, targetLang) {
+  const langConfig = LANGUAGE_CONFIG[targetLang];
+  const relativePath = path.relative('docs', originalPath);
+  
+  // 解析文件路径
+  const parsedPath = path.parse(relativePath);
+  
+  // 为文件名添加语言前缀
+  const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
+                    targetLang === 'ja' ? 'ja_' : 
+                    targetLang === 'es' ? 'es_' : '';
+  
+  const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
+  const newRelativePath = path.join(parsedPath.dir, newFileName);
+  
+  // 构造最终目标路径
+  const targetPath = path.join('docs', langConfig.folder, newRelativePath);
+  
+  return targetPath;
+}
+
 // 按Markdown结构分块文档
 function chunkDocument(content, maxTokens = 15000) {
   const lines = content.split('\n');
@@ -210,27 +232,8 @@ Front Matter 处理规则：
 ${termsList}${chunkInstructions}`;
 }
 
-// 生成目标文件路径（添加语言前缀）
-function generateTargetPath(originalPath, targetLang) {
-  const langConfig = LANGUAGE_CONFIG[targetLang];
-  const relativePath = path.relative('docs', originalPath);
-  
-  // 解析文件路径
-  const parsedPath = path.parse(relativePath);
-  
-  // 为文件名添加语言前缀
-  const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
-                    targetLang === 'ja' ? 'ja_' : 
-                    targetLang === 'es' ? 'es_' : '';
-  
-  const newFileName = langPrefix + parsedPath.name + parsedPath.ext;
-  const newRelativePath = path.join(parsedPath.dir, newFileName);
-  
-  // 构造最终目标路径
-  const targetPath = path.join('docs', langConfig.folder, newRelativePath);
-  
-  return targetPath;
-}
+// 处理内部链接
+function processInternalLinks(content, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig || !langConfig.pathPrefix) return content;
   
@@ -264,7 +267,7 @@ function generateTargetPath(originalPath, targetLang) {
 }
 
 // 使用Claude翻译（带重试机制）
-async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null) {
+async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
