@@ -340,17 +340,45 @@ function similarity(str1, str2) {
   return maxLen === 0 ? 1 : (maxLen - distance) / maxLen;
 }
 
-// 标准化文本用于比较（去除格式，保留核心内容）
+// 🔧 改进的文本标准化函数 - 更好地处理HTML和Markdown内容
 function normalizeForComparison(text) {
-  return text
-    .toLowerCase()
-    .replace(/[#*`\[\]()]/g, '') // 移除markdown标记
-    .replace(/\s+/g, ' ') // 标准化空格
-    .replace(/[^\w\s]/g, '') // 移除标点符号
-    .trim();
+  // 先保存一些关键信息
+  const originalText = text;
+  
+  // 提取HTML标签内的文本内容
+  let cleanText = text.replace(/<[^>]*>/g, ' '); // 移除HTML标签但保留内容
+  
+  // 处理Markdown链接，保留链接文本
+  cleanText = cleanText.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1'); // [text](url) -> text
+  
+  // 处理其他Markdown标记
+  cleanText = cleanText.replace(/[#*`]/g, ''); // 移除markdown标记
+  
+  // 标准化空格和标点
+  cleanText = cleanText.replace(/\s+/g, ' '); // 标准化空格
+  cleanText = cleanText.replace(/[^\w\s]/g, ' '); // 标点替换为空格
+  cleanText = cleanText.replace(/\s+/g, ' '); // 再次标准化空格
+  
+  const result = cleanText.toLowerCase().trim();
+  
+  // 如果清理后的文本太短，尝试使用原始文本的部分内容
+  if (result.length < 3 && originalText.length > 10) {
+    // 对于很短的清理结果，尝试保留更多原始特征
+    const fallbackText = originalText
+      .replace(/<[^>]*>/g, ' ') // 只移除HTML标签
+      .replace(/\s+/g, ' ')
+      .toLowerCase()
+      .trim();
+    
+    if (fallbackText.length >= 3) {
+      return fallbackText;
+    }
+  }
+  
+  return result;
 }
 
-// 🔧 修复后的查找修改上下文函数 - 不排除Front Matter
+// 🔧 修复后的查找修改上下文函数 - 包含HTML匹配优化
 async function findModificationContext(filePath, modification, contextLines = 8) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
@@ -369,24 +397,82 @@ async function findModificationContext(filePath, modification, contextLines = 8)
       
       console.log(`📄 搜索新增内容: "${newContentLines[0].substring(0, 50)}..." (${newContentLines.length} 行)`);
       
+      // 🆕 输出调试信息
+      console.log(`📝 新增内容详细分析:`);
+      newContentLines.forEach((line, idx) => {
+        const normalized = normalizeForComparison(line);
+        console.log(`   第${idx + 1}行: "${line.substring(0, 60)}..."`);
+        console.log(`   标准化后: "${normalized}" (长度: ${normalized.length})`);
+      });
+      
       let bestMatch = null;
       let bestScore = 0;
       
-      // 🔧 修复：不跳过任何行，包括Front Matter
+      // 🔧 改进的匹配逻辑
       for (let i = 0; i <= lines.length - newContentLines.length; i++) {
         let matchScore = 0;
         let totalWeight = 0;
+        let validLines = 0;
         
         for (let j = 0; j < newContentLines.length; j++) {
           if (i + j >= lines.length) break;
           
-          const originalLine = normalizeForComparison(lines[i + j]);
-          const newLine = normalizeForComparison(newContentLines[j]);
+          const originalLine = lines[i + j].trim();
+          const newLine = newContentLines[j];
           
-          if (newLine.length > 3) { // 只考虑有意义的行
-            const lineScore = similarity(originalLine, newLine);
-            const weight = Math.min(newLine.length / 10, 3); // 根据行长度加权
+          // 🔧 改进的匹配策略
+          let lineScore = 0;
+          let weight = 1;
+          
+          // 策略1: 直接文本匹配（最高优先级）
+          if (originalLine === newLine) {
+            lineScore = 1.0;
+            weight = 3;
+            validLines++;
+          }
+          // 策略2: 标准化后的文本匹配
+          else {
+            const normalizedOriginal = normalizeForComparison(originalLine);
+            const normalizedNew = normalizeForComparison(newLine);
             
+            if (normalizedOriginal.length > 2 && normalizedNew.length > 2) {
+              const textSimilarity = similarity(normalizedOriginal, normalizedNew);
+              if (textSimilarity > 0.6) {
+                lineScore = textSimilarity;
+                weight = Math.min(Math.max(normalizedNew.length / 10, 1), 2);
+                validLines++;
+              }
+            }
+            
+            // 策略3: 对于HTML内容，检查关键词匹配
+            if (lineScore < 0.5 && (originalLine.includes('<') || newLine.includes('<'))) {
+              // 提取HTML中的关键词
+              const extractKeywords = (text) => {
+                return text.replace(/<[^>]*>/g, ' ')
+                          .replace(/[^\w\s]/g, ' ')
+                          .split(/\s+/)
+                          .filter(word => word.length > 2)
+                          .map(word => word.toLowerCase());
+              };
+              
+              const originalKeywords = extractKeywords(originalLine);
+              const newKeywords = extractKeywords(newLine);
+              
+              if (originalKeywords.length > 0 && newKeywords.length > 0) {
+                const commonKeywords = originalKeywords.filter(word => newKeywords.includes(word));
+                const keywordScore = commonKeywords.length / Math.max(originalKeywords.length, newKeywords.length);
+                
+                if (keywordScore > 0.5) {
+                  lineScore = keywordScore;
+                  weight = 1.5;
+                  validLines++;
+                  console.log(`🔗 HTML关键词匹配: ${commonKeywords.join(', ')} (得分: ${keywordScore.toFixed(2)})`);
+                }
+              }
+            }
+          }
+          
+          if (lineScore > 0) {
             matchScore += lineScore * weight;
             totalWeight += weight;
           }
@@ -394,24 +480,30 @@ async function findModificationContext(filePath, modification, contextLines = 8)
         
         const avgScore = totalWeight > 0 ? matchScore / totalWeight : 0;
         
-        if (avgScore > bestScore && avgScore > 0.7) { // 保持高阈值确保精确匹配
+        // 🔧 调整匹配阈值和要求
+        const minValidLines = Math.max(1, Math.floor(newContentLines.length * 0.3)); // 至少30%的行匹配
+        const minScore = newContentLines.some(line => line.includes('<')) ? 0.5 : 0.7; // HTML内容降低阈值
+        
+        if (avgScore > bestScore && avgScore > minScore && validLines >= minValidLines) {
           bestScore = avgScore;
           bestMatch = {
             startLine: i,
             endLine: i + newContentLines.length - 1,
             score: avgScore,
-            // 精确记录行数信息
+            validLines: validLines,
             absoluteLineNumber: i,
             relativePosition: i / lines.length,
             totalLines: lines.length
           };
+          
+          console.log(`🎯 发现候选匹配: 第${i + 1}行, 得分: ${avgScore.toFixed(3)}, 有效行: ${validLines}/${newContentLines.length}`);
         }
       }
       
       if (bestMatch) {
         console.log(`✅ 找到新增内容位置: 第 ${bestMatch.startLine + 1}-${bestMatch.endLine + 1} 行`);
         console.log(`📊 相对位置: ${(bestMatch.relativePosition * 100).toFixed(1)}% (${bestMatch.absoluteLineNumber}/${bestMatch.totalLines})`);
-        console.log(`🎯 匹配度: ${(bestMatch.score * 100).toFixed(1)}%`);
+        console.log(`🎯 匹配度: ${(bestMatch.score * 100).toFixed(1)}% (${bestMatch.validLines}/${newContentLines.length} 行匹配)`);
         
         // 提取上下文
         const contextStart = Math.max(0, bestMatch.startLine - contextLines);
@@ -429,6 +521,16 @@ async function findModificationContext(filePath, modification, contextLines = 8)
         };
       } else {
         console.warn(`⚠️ 无法在原文中找到新增内容的精确位置 (最高得分: ${(bestScore * 100).toFixed(1)}%)`);
+        
+        // 🆕 额外的调试信息
+        console.log(`🔍 调试信息 - 搜索了 ${lines.length} 行，候选窗口大小: ${newContentLines.length}`);
+        console.log(`📝 前5行原文内容:`);
+        for (let i = 0; i < Math.min(5, lines.length); i++) {
+          const line = lines[i];
+          console.log(`   第${i + 1}行: "${line.substring(0, 80)}..."`);
+          console.log(`   标准化: "${normalizeForComparison(line)}"`);
+        }
+        
         return null;
       }
     }
