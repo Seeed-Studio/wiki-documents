@@ -163,6 +163,10 @@ last_update:
 
 <strong><a href="/cn/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}>点击这里了解更多关于贡献者计划的信息！</span></a></strong>
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
+[xxx](/cn/Sensor_Network)
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们提供多种形式的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
@@ -186,6 +190,10 @@ last_update:
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/Twitter1.png" alt="pir" width={60} height="auto" /></p></td>
       <td align="left"><strong>Seeed Twitter</strong><br />关注我们获取第一手产品更新和活动信息<p><a href="https://twitter.com/seeedstudio" target="_blank">点击这里</a></p></td>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
+
     </tr>
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/hackster1.png" alt="pir" width={200} height="auto" /></p></td>
