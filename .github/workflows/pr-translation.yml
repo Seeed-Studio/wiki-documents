@@ -277,6 +277,10 @@ jobs:
           NEW_FILES: ${{ steps.pr-changes.outputs.new_files }}
           MODIFIED_FILES: ${{ steps.pr-changes.outputs.modified_files }}
           BASE_SHA: ${{ steps.pr-changes.outputs.base_sha }}
+          # 🆕 AI插入位置控制
+          USE_AI_INSERTION: 'true'        # 启用AI分析插入位置
+          AI_INSERTION_WINDOW: '30'       # AI分析的候选区域大小（行数）
+          DEBUG_AI_INSERTION: 'true'      # 显示AI分析详情（可选）
         run: |
           echo "🚀 开始翻译任务..."
           echo "目标语言: $TARGET_LANGUAGES"
