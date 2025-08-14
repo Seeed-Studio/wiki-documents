@@ -163,6 +163,11 @@ last_update:
 
 <strong><a href="/cn/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}>点击这里了解更多关于贡献者计划的信息！</span></a></strong>
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
+[xxx](/cn/Sensor_Network)
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+XIAO ESP32S3 是一款开发板型号。
+
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们提供多种形式的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
@@ -201,3 +206,6 @@ last_update:
     </tr>
   </tbody>
 </table>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
