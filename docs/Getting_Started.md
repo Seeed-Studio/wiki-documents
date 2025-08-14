@@ -14,7 +14,7 @@ last_update:
 
 [xxx](https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors)
 
-
+The XIAO ESP32S3 is a development board model.
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>

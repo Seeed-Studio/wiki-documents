@@ -214,6 +214,7 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
    - https://wiki.seeedstudio.com/guides/getting-started 改为 https://wiki.seeedstudio.com${pathPrefix}/guides/getting-started
 8. 外部链接（其他http开头）和已有语言前缀的链接保持不变
 9. 只翻译人类可读的文本内容
+10. **中英文混排规则**：确保中文和英文之间有适当的空格分隔
 
 Front Matter 处理规则：
 - 如果文档开头有 Front Matter（被 --- 包围的 YAML 部分），请按以下规则处理：
@@ -289,6 +290,29 @@ function processInternalLinks(content, targetLang) {
   return content;
 }
 
+// 🆕 中英文混排处理 - 确保中英文之间有空格
+function addChineseEnglishSpacing(content) {
+  // 匹配中文字符后面紧跟英文字母的情况，添加空格
+  content = content.replace(/([一-龯])([a-zA-Z])/g, '$1 $2');
+  
+  // 匹配英文字母后面紧跟中文字符的情况，添加空格
+  content = content.replace(/([a-zA-Z])([一-龯])/g, '$1 $2');
+  
+  // 匹配中文字符后面紧跟数字的情况，添加空格
+  content = content.replace(/([一-龯])(\d)/g, '$1 $2');
+  
+  // 匹配数字后面紧跟中文字符的情况，添加空格
+  content = content.replace(/(\d)([一-龯])/g, '$1 $2');
+  
+  // 处理已经有空格但是多余空格的情况，确保只有一个空格
+  content = content.replace(/([一-龯])\s+([a-zA-Z])/g, '$1 $2');
+  content = content.replace(/([a-zA-Z])\s+([一-龯])/g, '$1 $2');
+  content = content.replace(/([一-龯])\s+(\d)/g, '$1 $2');
+  content = content.replace(/(\d)\s+([一-龯])/g, '$1 $2');
+  
+  return content;
+}
+
 // 计算文本相似度（简单的编辑距离）
 function similarity(str1, str2) {
   if (!str1 || !str2) return 0;
@@ -326,13 +350,13 @@ function normalizeForComparison(text) {
     .trim();
 }
 
-// 改进的查找修改上下文函数
+// 🔧 修复后的查找修改上下文函数 - 不排除Front Matter
 async function findModificationContext(filePath, modification, contextLines = 8) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
     const lines = content.split('\n');
     
-    console.log(`🔍 在原文中查找修改内容的精确位置`);
+    console.log(`🔍 在原文中查找修改内容的精确位置 (包含Front Matter)`);
     
     // 对于新增内容，找到它在文档中的位置
     if (modification.type === 'add' && modification.newContent) {
@@ -348,7 +372,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
       let bestMatch = null;
       let bestScore = 0;
       
-      // 使用滑动窗口查找最佳匹配位置
+      // 🔧 修复：不跳过任何行，包括Front Matter
       for (let i = 0; i <= lines.length - newContentLines.length; i++) {
         let matchScore = 0;
         let totalWeight = 0;
@@ -370,7 +394,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
         
         const avgScore = totalWeight > 0 ? matchScore / totalWeight : 0;
         
-        if (avgScore > bestScore && avgScore > 0.7) { // 提高阈值
+        if (avgScore > bestScore && avgScore > 0.7) { // 保持高阈值确保精确匹配
           bestScore = avgScore;
           bestMatch = {
             startLine: i,
@@ -458,7 +482,7 @@ async function findInsertionPointWithAI(englishContext, targetContent, newConten
     const targetLines = targetContent.split('\n');
     const englishRelativePos = englishContext.relativePosition;
     
-    // 1. 基于英文位置确定中文候选区域（前后25行）
+    // 1. 基于英文位置确定中文候选区域（前后30行）
     const windowSize = parseInt(process.env.AI_INSERTION_WINDOW) || 30;
     const estimatedLine = Math.round(englishRelativePos * targetLines.length);
     const startLine = Math.max(0, estimatedLine - windowSize);
@@ -502,19 +526,25 @@ ${candidateRegion.content}
 1. **内容逻辑关系**: 新增内容在英文中的逻辑位置和上下文关系
 2. **段落结构**: 保持翻译文档的段落完整性  
 3. **语义连贯**: 确保插入后语义流畅自然
-4. **文档结构**: 考虑标题、列表、代码块等Markdown结构元素
+4. **文档结构**: 考虑标题、列表、代码块、表格等Markdown/HTML结构元素
 5. **翻译对应**: 找到英文上下文在中文译文中的对应位置
+6. **结构完整性**: 避免在HTML标签（如\`</table>\`、\`</div>\`等）内部插入，应该在完整的结构块之后插入
 
 ## 输出格式
 请严格按照以下格式输出：
 
-ANALYSIS: [简要说明你的分析思路，包括你识别的关键结构和对应关系]
+ANALYSIS: [详细说明你的分析思路，包括识别的关键结构和对应关系]
 
-POSITION: LINE: X [X为相对于候选区域的行号，从1开始计数，表示在第X行之前插入]
+POSITION: AFTER_LINE: X [X为相对于候选区域的行号，从1开始计数，表示在第X行之后插入新内容]
 
 CONFIDENCE: [1-10分的信心程度]
 
-REASON: [详细解释为什么选择这个位置，包括与英文上下文的对应关系]`;
+REASON: [详细解释为什么选择这个位置，包括与英文上下文的对应关系和结构考虑]
+
+## 重要提示
+- 如果目标位置是HTML标签（如\`</table>\`、\`</div>\`等），请选择在完整标签结构之后插入
+- 确保不会破坏现有的文档结构完整性
+- 优先选择段落之间、章节之间或完整结构块之间的位置`;
     
     // 3. 调用AI分析
     console.log(`📤 发送AI分析请求...`);
@@ -533,24 +563,32 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
     const aiResponse = response.content[0].text;
     console.log(`🤖 AI分析结果:\n${aiResponse}`);
     
-    // 5. 提取位置信息
-    const positionMatch = aiResponse.match(/POSITION:\s*LINE:\s*(\d+)/i);
+    // 5. 🔧 修复位置解析逻辑 - 支持 AFTER_LINE 格式
+    let positionMatch = aiResponse.match(/POSITION:\s*AFTER_LINE:\s*(\d+)/i);
+    if (!positionMatch) {
+      // 兼容原来的 LINE 格式
+      positionMatch = aiResponse.match(/POSITION:\s*LINE:\s*(\d+)/i);
+    }
+    
     const confidenceMatch = aiResponse.match(/CONFIDENCE:\s*(\d+)/i);
     
     if (positionMatch) {
       const relativeLine = parseInt(positionMatch[1]);
       const confidence = confidenceMatch ? parseInt(confidenceMatch[1]) : 5;
-      const absoluteLine = candidateRegion.startLine + relativeLine - 1;
       
-      console.log(`✅ AI推荐插入位置: 第 ${absoluteLine + 1} 行 (置信度: ${confidence}/10)`);
+      // 🔧 修复位置计算：AFTER_LINE 意思是在该行之后插入
+      const targetLineInRegion = aiResponse.includes('AFTER_LINE') ? relativeLine : relativeLine - 1;
+      const absoluteLine = candidateRegion.startLine + targetLineInRegion;
       
-      // 6. 验证位置安全性
-      const validatedPoint = validateInsertionPointSafety(targetLines, absoluteLine);
-      if (validatedPoint !== absoluteLine) {
-        console.log(`🛡️ 安全调整: 第 ${absoluteLine + 1} 行 → 第 ${validatedPoint + 1} 行`);
+      console.log(`✅ AI推荐插入位置: 第 ${absoluteLine + 1} 行 (候选区域第 ${relativeLine} 行${aiResponse.includes('AFTER_LINE') ? '之后' : '之前'}) (置信度: ${confidence}/10)`);
+      
+      // 6. 🔧 增强的位置安全性验证 - 特别处理表格和HTML结构
+      const safePoint = validateAndAdjustInsertionPoint(targetLines, absoluteLine, aiResponse);
+      if (safePoint !== absoluteLine) {
+        console.log(`🛡️ 结构安全调整: 第 ${absoluteLine + 1} 行 → 第 ${safePoint + 1} 行`);
       }
       
-      return validatedPoint;
+      return safePoint;
     } else {
       console.warn(`⚠️ 无法解析AI位置响应，使用相对位置备用策略`);
       return Math.round(englishRelativePos * targetLines.length);
@@ -563,11 +601,24 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
   }
 }
 
-// 验证插入位置的安全性
-function validateInsertionPointSafety(targetLines, insertionPoint) {
+// 🔧 增强的插入位置验证和调整函数
+function validateAndAdjustInsertionPoint(targetLines, insertionPoint, aiAnalysis = '') {
   let safePoint = Math.max(0, Math.min(insertionPoint, targetLines.length));
   
-  // 避免在Front Matter内部插入
+  console.log(`🔍 验证插入位置安全性: 第 ${safePoint + 1} 行`);
+  
+  // 检查插入点的内容
+  if (safePoint < targetLines.length) {
+    const currentLine = targetLines[safePoint].trim();
+    const nextLine = safePoint + 1 < targetLines.length ? targetLines[safePoint + 1].trim() : '';
+    
+    console.log(`📝 目标位置内容: "${currentLine}"`);
+    if (nextLine) {
+      console.log(`📝 下一行内容: "${nextLine}"`);
+    }
+  }
+  
+  // 1. 避免在Front Matter内部插入
   if (targetLines[0] && targetLines[0].trim() === '---') {
     let frontMatterEnd = -1;
     for (let i = 1; i < targetLines.length; i++) {
@@ -579,11 +630,11 @@ function validateInsertionPointSafety(targetLines, insertionPoint) {
     
     if (frontMatterEnd >= 0 && safePoint <= frontMatterEnd) {
       safePoint = frontMatterEnd + 1;
-      console.log(`🛡️ 调整到Front Matter之后`);
+      console.log(`🛡️ 调整到Front Matter之后: 第 ${safePoint + 1} 行`);
     }
   }
   
-  // 避免在代码块中间插入
+  // 2. 避免在代码块中间插入
   let inCodeBlock = false;
   for (let i = 0; i <= safePoint && i < targetLines.length; i++) {
     if (targetLines[i] && targetLines[i].trim().startsWith('```')) {
@@ -595,13 +646,75 @@ function validateInsertionPointSafety(targetLines, insertionPoint) {
     for (let i = safePoint; i < targetLines.length; i++) {
       if (targetLines[i] && targetLines[i].trim().startsWith('```')) {
         safePoint = i + 1;
-        console.log(`🛡️ 调整到代码块结束后`);
+        console.log(`🛡️ 调整到代码块结束后: 第 ${safePoint + 1} 行`);
         break;
       }
     }
   }
   
-  return safePoint;
+  // 3. 🔧 新增：特别处理HTML表格和标签结构
+  if (safePoint < targetLines.length) {
+    const currentLine = targetLines[safePoint].trim();
+    
+    // 检查是否在HTML标签位置
+    const isClosingTag = currentLine.match(/^<\/\w+>$/);
+    const isOpeningTag = currentLine.match(/^<\w+[^>]*>$/);
+    const isTableRelated = currentLine.includes('</table>') || currentLine.includes('</tr>') || currentLine.includes('</td>');
+    
+    if (isClosingTag || isTableRelated) {
+      console.log(`🔧 检测到HTML结构标签: "${currentLine}"`);
+      
+      // 如果是 </table> 等结束标签，插入到该行之后
+      if (currentLine.includes('</table>') || currentLine.includes('</div>') || currentLine.includes('</section>')) {
+        safePoint = safePoint + 1;
+        console.log(`🛡️ 调整到HTML结构块结束后: 第 ${safePoint + 1} 行`);
+      }
+    }
+    
+    // 检查是否在表格行中间
+    let inTable = false;
+    let tableStart = -1;
+    for (let i = 0; i <= safePoint && i < targetLines.length; i++) {
+      const line = targetLines[i].trim();
+      if (line.includes('<table>') || line.includes('<table ')) {
+        inTable = true;
+        tableStart = i;
+      } else if (line.includes('</table>')) {
+        if (i >= safePoint) {
+          // 插入点在表格结束之前，调整到表格之后
+          safePoint = i + 1;
+          console.log(`🛡️ 调整到表格完全结束后: 第 ${safePoint + 1} 行`);
+        }
+        inTable = false;
+        tableStart = -1;
+      }
+    }
+  }
+  
+  // 4. 寻找合适的空行位置（优化）
+  const originalPoint = safePoint;
+  
+  // 向下查找最近的空行（在3行范围内）
+  for (let i = safePoint; i < Math.min(targetLines.length, safePoint + 3); i++) {
+    if (!targetLines[i] || targetLines[i].trim() === '') {
+      safePoint = i;
+      console.log(`🛡️ 优化到空行位置: 第 ${safePoint + 1} 行`);
+      break;
+    }
+  }
+  
+  // 如果向下没找到空行，向上查找（在3行范围内）
+  if (safePoint === originalPoint) {
+    for (let i = Math.max(0, safePoint - 3); i < safePoint; i++) {
+      if (!targetLines[i] || targetLines[i].trim() === '') {
+        safePoint = i + 1;
+        console.log(`🛡️ 优化到空行后: 第 ${safePoint + 1} 行`);
+        break;
+      }
+    }
+  }
+  
+  return Math.max(0, Math.min(safePoint, targetLines.length));
 }
 
 // 回退插入点查找
@@ -785,9 +898,10 @@ ${targetMatch.originalContent}
 2. **链接处理**：
    - 内部链接添加语言前缀：/path → ${pathPrefix}/path
    - seeedstudio.com链接：https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
-3. **术语保护**：以下术语保持不变
+3. **中英文混排**：确保中文和英文之间有适当的空格分隔
+4. **术语保护**：以下术语保持不变
 ${termsList}
-4. **简洁输出**：只输出翻译结果，不要添加任何解释
+5. **简洁输出**：只输出翻译结果，不要添加任何解释
 
 ${modification.type === 'delete' ? '如果是删除操作，请输出"DELETE"' : '请开始翻译：'}`;
 }
@@ -818,6 +932,11 @@ async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = f
       
       // 后处理：确保链接正确
       translatedContent = processInternalLinks(translatedContent, targetLang);
+      
+      // 🆕 后处理：添加中英文之间的空格
+      if (targetLang === 'zh-CN') {
+        translatedContent = addChineseEnglishSpacing(translatedContent);
+      }
       
       console.log(`✅ Claude翻译成功 (尝试 ${attempt})`);
       return translatedContent;
@@ -1159,6 +1278,11 @@ async function handleModifiedFile(filePath, targetLang) {
           let translatedContent = response.content[0].text.trim();
           translatedContent = processInternalLinks(translatedContent, targetLang);
           
+          // 🆕 添加中英文空格处理
+          if (targetLang === 'zh-CN') {
+            translatedContent = addChineseEnglishSpacing(translatedContent);
+          }
+          
           // 🆕 使用AI判断插入位置
           const currentTargetContent = targetLines.join('\n');
           const insertionPoint = await findTargetInsertionPoint(currentTargetContent, englishContext, modification);
@@ -1223,6 +1347,11 @@ async function handleModifiedFile(filePath, targetLang) {
             } else {
               // 后处理：确保链接正确
               translatedContent = processInternalLinks(translatedContent, targetLang);
+              
+              // 🆕 添加中英文空格处理
+              if (targetLang === 'zh-CN') {
+                translatedContent = addChineseEnglishSpacing(translatedContent);
+              }
               
               const newLines = translatedContent.split('\n');
               const oldLineCount = targetMatch.endLine - targetMatch.startLine + 1;
