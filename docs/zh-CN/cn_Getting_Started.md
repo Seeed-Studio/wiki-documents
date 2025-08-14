@@ -12,6 +12,11 @@ last_update:
 
 <strong><font color={'8DC215'} size={"5"}>欢迎来到矽递科技 wiki 文档平台</font></strong>
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
+[xxx](/cn/Sensor_Network)
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+XIAO ESP32S3 是一款开发板型号。
+
 作为一家创新型物联网科技公司，矽递科技秉承着“让科技随手可得”的使命，以软硬件设计研发能力为核心，与全球开发者共同合作创新，致力于整合新一代信息技术，为广域物联网场景打造完整开放的"模组-设备-解决方案"的产品体系。
 
 我们的 wiki 文档平台是一个综合性的信息交流和知识分享平台，旨在为用户提供详尽的产品说明、使用指南和应用项目文档。我们会不断努力，提供清晰、准确且易于理解的文档，以帮助您更好地了解和使用我们的产品。
@@ -201,3 +206,6 @@ last_update:
     </tr>
   </tbody>
 </table>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
