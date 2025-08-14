@@ -8,8 +8,6 @@ last_update:
   author: Matthew
 ---
 
-你好世界
-[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
 <strong><font color={'8DC215'} size={"5"}>欢迎来到矽递科技 wiki 文档平台</font></strong>
@@ -27,9 +25,6 @@ last_update:
 - 本平台将专注于侧边栏中显示的主要主题，提供我们所有产品的最新信息。
 
   - <strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
-<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
-[xxx](/cn/Sensor_Network)
-[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
   - <strong><a href="/cn/Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 网络</span></a></strong>
   - <strong><a href="/cn/Edge_Computing"><span style={{color: '8DC215', fontSize: '1.2em'}}>  边缘计算 </span></a></strong>
   - <strong><a href="/cn/Cloud"><span style={{color: '8DC215', fontSize: '1.2em'}}>  云服务</span></a></strong>
