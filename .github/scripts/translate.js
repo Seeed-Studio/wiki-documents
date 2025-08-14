@@ -1099,76 +1099,90 @@ async function findExactTargetMatch(modification, targetContent, contextLines = 
   }
 }
 
-// 在英文原文中找到修改内容的上下文位置
-async function findModificationContext(filePath, modification, contextLines = 5) {
+// 在英文原文中找到修改内容的精确位置
+async function findModificationContext(filePath, modification, contextLines = 3) {
   try {
     const content = await fs.readFile(filePath, 'utf8');
     const lines = content.split('\n');
     
-    // 对于新增内容，需要找到它在文档中的位置
+    // 对于新增内容，精确匹配其在文档中的位置
     if (modification.type === 'add' && modification.newContent) {
-      console.log(`🔍 查找新增内容在原文中的位置`);
+      console.log(`🎯 精确查找新增内容在原文中的位置`);
       
-      // 在原文中搜索新增的内容
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        const newContentLines = modification.newContent.split('\n').map(l => l.trim());
+      const newContentLines = modification.newContent.split('\n').map(l => l.trim());
+      
+      // 尝试精确匹配整个新增内容块
+      for (let i = 0; i < lines.length - newContentLines.length + 1; i++) {
+        let exactMatch = true;
         
-        // 尝试匹配新增内容的第一行
-        if (newContentLines.length > 0 && line.includes(newContentLines[0].substring(0, 20))) {
-          console.log(`✅ 找到新增内容位置: 第 ${i + 1} 行`);
+        for (let j = 0; j < newContentLines.length; j++) {
+          const originalLine = lines[i + j].trim();
+          const newLine = newContentLines[j];
           
-          // 提取上下文
+          // 要求完全匹配或高度相似
+          if (originalLine !== newLine && similarity(originalLine, newLine) < 0.95) {
+            exactMatch = false;
+            break;
+          }
+        }
+        
+        if (exactMatch) {
+          console.log(`✅ 找到新增内容精确位置: 第 ${i + 1}-${i + newContentLines.length} 行`);
+          
+          // 提取紧邻的上下文
           const start = Math.max(0, i - contextLines);
-          const end = Math.min(lines.length - 1, i + contextLines);
+          const end = Math.min(lines.length - 1, i + newContentLines.length + contextLines);
           
           return {
             insertLine: i,
+            insertLength: newContentLines.length,
             beforeContext: lines.slice(start, i).join('\n'),
             afterContext: lines.slice(i + newContentLines.length, end + 1).join('\n'),
-            fullContext: lines.slice(start, end + 1).join('\n')
+            exactMatch: true
           };
         }
       }
+      
+      console.warn(`⚠️ 无法找到新增内容的精确位置`);
+      return null;
     }
     
-    // 对于修改内容，搜索原有内容的位置
+    // 对于修改和删除，精确匹配原有内容
     if ((modification.type === 'modify' || modification.type === 'delete') && modification.oldContent) {
-      const searchLines = modification.oldContent.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+      console.log(`🎯 精确查找原有内容在原文中的位置`);
       
-      if (searchLines.length > 0) {
-        console.log(`🔍 查找原有内容在原文中的位置`);
+      const searchLines = modification.oldContent.split('\n').map(l => l.trim());
+      
+      for (let i = 0; i < lines.length - searchLines.length + 1; i++) {
+        let exactMatch = true;
         
-        for (let i = 0; i < lines.length; i++) {
-          let matchCount = 0;
-          
-          for (let j = 0; j < searchLines.length && i + j < lines.length; j++) {
-            if (similarity(normalizeForComparison(lines[i + j]), normalizeForComparison(searchLines[j])) > 0.7) {
-              matchCount++;
-            } else {
-              break;
-            }
-          }
-          
-          if (matchCount >= Math.min(2, searchLines.length)) {
-            console.log(`✅ 找到原有内容位置: 第 ${i + 1} 行`);
-            
-            const start = Math.max(0, i - contextLines);
-            const end = Math.min(lines.length - 1, i + searchLines.length + contextLines);
-            
-            return {
-              matchLine: i,
-              matchLength: searchLines.length,
-              beforeContext: lines.slice(start, i).join('\n'),
-              afterContext: lines.slice(i + searchLines.length, end + 1).join('\n'),
-              fullContext: lines.slice(start, end + 1).join('\n')
-            };
+        for (let j = 0; j < searchLines.length; j++) {
+          if (similarity(lines[i + j].trim(), searchLines[j]) < 0.9) {
+            exactMatch = false;
+            break;
           }
         }
+        
+        if (exactMatch) {
+          console.log(`✅ 找到原有内容精确位置: 第 ${i + 1}-${i + searchLines.length} 行`);
+          
+          const start = Math.max(0, i - contextLines);
+          const end = Math.min(lines.length - 1, i + searchLines.length + contextLines);
+          
+          return {
+            matchLine: i,
+            matchLength: searchLines.length,
+            beforeContext: lines.slice(start, i).join('\n'),
+            afterContext: lines.slice(i + searchLines.length, end + 1).join('\n'),
+            exactMatch: true
+          };
+        }
       }
+      
+      console.warn(`⚠️ 无法找到原有内容的精确位置`);
+      return null;
     }
     
-    console.warn(`⚠️ 无法确定修改内容在原文中的位置`);
     return null;
     
   } catch (error) {
@@ -1177,85 +1191,71 @@ async function findModificationContext(filePath, modification, contextLines = 5)
   }
 }
 
-// 在译文中找到对应的插入/替换位置
+// 在译文中找到精确的插入位置
 async function findTargetInsertionPoint(targetContent, englishContext, modification) {
   try {
     const targetLines = targetContent.split('\n');
     
-    if (!englishContext) {
-      console.warn(`⚠️ 没有英文上下文，无法定位插入点`);
+    if (!englishContext || !englishContext.exactMatch) {
+      console.warn(`⚠️ 没有精确的英文匹配信息，无法定位插入点`);
       return null;
     }
     
-    // 使用前后上下文来定位插入点
+    console.log(`🎯 使用精确匹配信息定位插入点`);
+    
+    // 使用前后上下文进行精确匹配
     let insertionPoint = null;
     
-    // 如果有前置上下文，尝试匹配
+    // 优先使用前置上下文匹配
     if (englishContext.beforeContext && englishContext.beforeContext.trim()) {
       const beforeLines = englishContext.beforeContext.split('\n')
-        .map(l => l.trim())
-        .filter(l => l.length > 10)
-        .slice(-2); // 取最后2行有意义的内容
+        .filter(l => l.trim().length > 0);
       
       if (beforeLines.length > 0) {
-        console.log(`🔍 使用前置上下文定位: "${beforeLines[beforeLines.length - 1].substring(0, 30)}..."`);
+        const lastBeforeLine = beforeLines[beforeLines.length - 1].trim();
+        console.log(`🔍 查找前置标记: "${lastBeforeLine.substring(0, 50)}..."`);
         
+        // 在译文中查找对应的行
         for (let i = 0; i < targetLines.length; i++) {
-          let matchScore = 0;
+          const targetLine = targetLines[i].trim();
           
-          for (let j = 0; j < beforeLines.length; j++) {
-            const targetIdx = i - beforeLines.length + j + 1;
-            if (targetIdx >= 0 && targetIdx < targetLines.length) {
-              const targetLine = normalizeForComparison(targetLines[targetIdx]);
-              const beforeLine = normalizeForComparison(beforeLines[j]);
-              
-              if (similarity(targetLine, beforeLine) > 0.5) {
-                matchScore++;
-              }
-            }
-          }
-          
-          if (matchScore >= Math.min(1, beforeLines.length)) {
+          // 精确匹配或高相似度匹配
+          if (similarity(normalizeForComparison(targetLine), normalizeForComparison(lastBeforeLine)) > 0.8) {
             insertionPoint = i + 1; // 在匹配行之后插入
-            console.log(`✅ 通过前置上下文找到插入点: 第 ${insertionPoint + 1} 行`);
+            console.log(`✅ 通过前置上下文找到精确插入点: 第 ${insertionPoint + 1} 行`);
+            console.log(`   匹配的行: "${targetLine.substring(0, 50)}..."`);
             break;
           }
         }
       }
     }
     
-    // 如果前置上下文没找到，尝试后置上下文
-    if (!insertionPoint && englishContext.afterContext && englishContext.afterContext.trim()) {
+    // 如果前置匹配失败，使用后置上下文匹配
+    if (insertionPoint === null && englishContext.afterContext && englishContext.afterContext.trim()) {
       const afterLines = englishContext.afterContext.split('\n')
-        .map(l => l.trim())
-        .filter(l => l.length > 10)
-        .slice(0, 2); // 取前2行有意义的内容
+        .filter(l => l.trim().length > 0);
       
       if (afterLines.length > 0) {
-        console.log(`🔍 使用后置上下文定位: "${afterLines[0].substring(0, 30)}..."`);
+        const firstAfterLine = afterLines[0].trim();
+        console.log(`🔍 查找后置标记: "${firstAfterLine.substring(0, 50)}..."`);
         
+        // 在译文中查找对应的行
         for (let i = 0; i < targetLines.length; i++) {
-          let matchScore = 0;
+          const targetLine = targetLines[i].trim();
           
-          for (let j = 0; j < afterLines.length; j++) {
-            const targetIdx = i + j;
-            if (targetIdx < targetLines.length) {
-              const targetLine = normalizeForComparison(targetLines[targetIdx]);
-              const afterLine = normalizeForComparison(afterLines[j]);
-              
-              if (similarity(targetLine, afterLine) > 0.5) {
-                matchScore++;
-              }
-            }
-          }
-          
-          if (matchScore >= Math.min(1, afterLines.length)) {
+          // 精确匹配或高相似度匹配
+          if (similarity(normalizeForComparison(targetLine), normalizeForComparison(firstAfterLine)) > 0.8) {
             insertionPoint = i; // 在匹配行之前插入
-            console.log(`✅ 通过后置上下文找到插入点: 第 ${insertionPoint + 1} 行`);
+            console.log(`✅ 通过后置上下文找到精确插入点: 第 ${insertionPoint + 1} 行`);
+            console.log(`   匹配的行: "${targetLine.substring(0, 50)}..."`);
             break;
           }
         }
       }
+    }
+    
+    if (insertionPoint === null) {
+      console.warn(`⚠️ 无法通过上下文匹配找到精确插入点`);
     }
     
     return insertionPoint;
@@ -1459,7 +1459,7 @@ async function handleModifiedFile(filePath, targetLang) {
         
         // 处理新增操作
         if (modification.type === 'add') {
-          console.log(`➕ 新增操作，定位插入位置`);
+          console.log(`➕ 新增操作，要求精确定位插入位置`);
           
           // 翻译新增内容
           const prompt = generatePreciseModificationPrompt(targetLang, LANGUAGE_CONFIG[targetLang].pathPrefix, modification, null);
@@ -1478,7 +1478,7 @@ async function handleModifiedFile(filePath, targetLang) {
           let translatedContent = response.content[0].text.trim();
           translatedContent = processInternalLinks(translatedContent, targetLang);
           
-          // 在译文中找到对应的插入位置
+          // 在译文中找到精确的插入位置
           const currentTargetContent = targetLines.join('\n');
           const insertionPoint = await findTargetInsertionPoint(currentTargetContent, englishContext, modification);
           
@@ -1486,14 +1486,15 @@ async function handleModifiedFile(filePath, targetLang) {
             console.log(`📍 在第 ${insertionPoint + 1} 行处插入新增内容`);
             const newLines = translatedContent.split('\n');
             targetLines.splice(insertionPoint, 0, ...newLines);
+            
+            const tokensUsed = estimateTokens(modification.newContent);
+            totalTokensUsed += tokensUsed;
+            modificationsProcessed++;
           } else {
-            console.warn(`⚠️ 无法确定插入位置，添加到文档末尾`);
-            targetLines.push('', ...translatedContent.split('\n'));
+            console.error(`❌ 无法找到精确的插入位置，跳过此新增操作`);
+            console.error(`   新增内容: "${modification.newContent.substring(0, 100)}..."`);
+            continue;
           }
-          
-          const tokensUsed = estimateTokens(modification.newContent);
-          totalTokensUsed += tokensUsed;
-          modificationsProcessed++;
           
         } else {
           // 处理修改和删除操作
