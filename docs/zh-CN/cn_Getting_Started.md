@@ -167,6 +167,11 @@ last_update:
 
 感谢您选择我们的产品！我们提供多种形式的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多个沟通渠道，以满足不同的偏好和需求。
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器与感知</span></a></strong>
+[xxx](/cn/Sensor_Network)
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+XIAO ESP32S3 是一款开发板型号。
+
 <div className="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" className="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
@@ -181,8 +186,13 @@ last_update:
 
 如果您有任何问题或意见，请随时访问我们的论坛，与我们直接讨论并联系我们！我们重视所有反馈和意见，并相信与我们的用户和社区一起成长和繁荣是正确的道路！
 
+这是一个测试。
+
 <table align="center">
   <tbody>
+
+这也是一个测试。
+
     <tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/IndexWiki/Twitter1.png" alt="pir" width={60} height="auto" /></p></td>
       <td align="left"><strong>Seeed Twitter</strong><br />关注我们获取第一手产品更新和活动信息<p><a href="https://twitter.com/seeedstudio" target="_blank">点击这里</a></p></td>
@@ -201,3 +211,6 @@ last_update:
     </tr>
   </tbody>
 </table>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
