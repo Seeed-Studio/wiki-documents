@@ -378,6 +378,70 @@ function normalizeForComparison(text) {
   return result;
 }
 
+// 🆕 文档结构分析函数 - 识别关键结构元素
+function analyzeDocumentStructure(lines) {
+  const structure = {
+    frontMatterEnd: -1,
+    firstImage: -1,
+    firstTitle: -1,
+    majorSections: [],
+    htmlBlocks: []
+  };
+  
+  // 识别Front Matter
+  if (lines[0] && lines[0].trim() === '---') {
+    for (let i = 1; i < lines.length; i++) {
+      if (lines[i] && lines[i].trim() === '---') {
+        structure.frontMatterEnd = i;
+        break;
+      }
+    }
+  }
+  
+  // 识别第一张图片
+  for (let i = structure.frontMatterEnd + 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (line && (line.includes('<img') || line.match(/!\[.*\]\(.*\)/))) {
+      structure.firstImage = i;
+      break;
+    }
+  }
+  
+  // 识别第一个主要标题
+  for (let i = structure.frontMatterEnd + 1; i < lines.length; i++) {
+    const line = lines[i];
+    if (line && (line.match(/^#+\s/) || line.includes('<strong>') && line.includes('font'))) {
+      structure.firstTitle = i;
+      break;
+    }
+  }
+  
+  // 识别主要章节
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line && line.match(/^##?\s/)) {
+      structure.majorSections.push(i);
+    }
+  }
+  
+  // 识别HTML块结构
+  let inHtmlBlock = false;
+  let blockStart = -1;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line && line.match(/<(table|div|section)/)) {
+      blockStart = i;
+      inHtmlBlock = true;
+    }
+    if (inHtmlBlock && line && line.match(/<\/(table|div|section)>/)) {
+      structure.htmlBlocks.push({ start: blockStart, end: i });
+      inHtmlBlock = false;
+    }
+  }
+  
+  return structure;
+}
+
 // 🔧 修复后的查找修改上下文函数 - 包含HTML匹配优化
 async function findModificationContext(filePath, modification, contextLines = 8) {
   try {
@@ -398,7 +462,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
       console.log(`📄 搜索新增内容: "${newContentLines[0].substring(0, 50)}..." (${newContentLines.length} 行)`);
       
       // 🆕 输出调试信息
-      console.log(`📝 新增内容详细分析:`);
+      console.log(`🔍 新增内容详细分析:`);
       newContentLines.forEach((line, idx) => {
         const normalized = normalizeForComparison(line);
         console.log(`   第${idx + 1}行: "${line.substring(0, 60)}..."`);
@@ -524,7 +588,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
         
         // 🆕 额外的调试信息
         console.log(`🔍 调试信息 - 搜索了 ${lines.length} 行，候选窗口大小: ${newContentLines.length}`);
-        console.log(`📝 前5行原文内容:`);
+        console.log(`🔍 前5行原文内容:`);
         for (let i = 0; i < Math.min(5, lines.length); i++) {
           const line = lines[i];
           console.log(`   第${i + 1}行: "${line.substring(0, 80)}..."`);
@@ -576,17 +640,50 @@ async function findModificationContext(filePath, modification, contextLines = 8)
   }
 }
 
-// 🤖 使用AI判断最佳插入位置的核心函数
+// 🆕 改进的AI插入位置分析 - 更精确的结构对应
 async function findInsertionPointWithAI(englishContext, targetContent, newContent, targetLang) {
   try {
-    console.log(`🤖 使用AI分析最佳插入位置...`);
+    console.log(`🤖 使用改进的AI分析最佳插入位置...`);
     
     const targetLines = targetContent.split('\n');
     const englishRelativePos = englishContext.relativePosition;
     
-    // 1. 基于英文位置确定中文候选区域（前后30行）
-    const windowSize = parseInt(process.env.AI_INSERTION_WINDOW) || 30;
-    const estimatedLine = Math.round(englishRelativePos * targetLines.length);
+    // 🆕 分析文档结构
+    const englishStructure = analyzeDocumentStructure(englishContext.beforeContext.split('\n').concat(
+      englishContext.matchedContent.split('\n'),
+      englishContext.afterContext.split('\n')
+    ));
+    const targetStructure = analyzeDocumentStructure(targetLines);
+    
+    console.log(`📐 结构分析:`);
+    console.log(`  英文: Front Matter结束=${englishStructure.frontMatterEnd}, 首图=${englishStructure.firstImage}, 首标题=${englishStructure.firstTitle}`);
+    console.log(`  中文: Front Matter结束=${targetStructure.frontMatterEnd}, 首图=${targetStructure.firstImage}, 首标题=${targetStructure.firstTitle}`);
+    
+    // 1. 基于英文位置和结构特征确定中文候选区域
+    const windowSize = parseInt(process.env.AI_INSERTION_WINDOW) || 40; // 稍微增大窗口
+    
+    let estimatedLine;
+    
+    // 🆕 特殊处理：如果英文新增内容在文档前部（前20%），使用结构锚点对应
+    if (englishRelativePos < 0.2) {
+      console.log(`🎯 检测到前置区域插入，使用结构锚点定位...`);
+      
+      // 根据结构锚点进行更精确的对应
+      if (targetStructure.frontMatterEnd >= 0 && targetStructure.firstImage >= 0) {
+        // 如果英文插入在front matter之后，图片之前或之后
+        if (englishContext.absoluteLineNumber <= 15) { // 假设前15行为前置区域
+          estimatedLine = Math.max(targetStructure.frontMatterEnd + 1, targetStructure.firstImage);
+          console.log(`📍 使用结构锚点定位: Front Matter后=${targetStructure.frontMatterEnd + 1}, 首图=${targetStructure.firstImage}`);
+        } else {
+          estimatedLine = Math.round(englishRelativePos * targetLines.length);
+        }
+      } else {
+        estimatedLine = Math.round(englishRelativePos * targetLines.length);
+      }
+    } else {
+      estimatedLine = Math.round(englishRelativePos * targetLines.length);
+    }
+    
     const startLine = Math.max(0, estimatedLine - windowSize);
     const endLine = Math.min(targetLines.length - 1, estimatedLine + windowSize);
     
@@ -597,16 +694,16 @@ async function findInsertionPointWithAI(englishContext, targetContent, newConten
       estimatedInsertionLine: estimatedLine
     };
     
-    console.log(`📍 英文新增位置: 第 ${englishContext.absoluteLineNumber + 1} 行 (${(englishRelativePos * 100).toFixed(1)}%)`);
+    console.log(`🔍 英文新增位置: 第 ${englishContext.absoluteLineNumber + 1} 行 (${(englishRelativePos * 100).toFixed(1)}%)`);
     console.log(`🎯 中文候选区域: 第 ${candidateRegion.startLine + 1}-${candidateRegion.endLine + 1} 行 (共 ${endLine - startLine + 1} 行)`);
     
-    // 2. 构造AI分析prompt
+    // 2. 构造改进的AI分析prompt
     const langName = LANGUAGE_CONFIG[targetLang].name;
-    const analysisPrompt = `你是一个专业的文档结构分析专家。我需要你帮我确定在${langName}翻译文档中插入新内容的最佳位置。
+    const analysisPrompt = `你是一个专业的文档结构分析专家，专门负责确定多语言文档中内容插入的最佳位置。
 
 ## 背景信息
 - 这是一个英文技术文档的${langName}翻译版本
-- 英文原文中在第 ${englishContext.absoluteLineNumber + 1} 行（文档 ${(englishContext.relativePosition * 100).toFixed(1)}% 位置）新增了内容
+- 英文原文在第 ${englishContext.absoluteLineNumber + 1} 行（文档 ${(englishContext.relativePosition * 100).toFixed(1)}% 位置）新增了内容
 - 需要在${langName}译文的对应位置插入翻译后的内容
 
 ## 英文原文上下文（包含新增位置）:
@@ -623,10 +720,22 @@ ${englishContext.afterContext}
 ${candidateRegion.content}
 \`\`\`
 
+## 结构分析要点
+${englishRelativePos < 0.2 ? `
+**重要**：新增内容位于文档前置区域（${(englishRelativePos * 100).toFixed(1)}%位置），需要特别注意以下结构对应：
+1. **Front Matter区域**: 英文和中文都有---包围的YAML配置区域
+2. **首个图片**: 通常在Front Matter之后
+3. **欢迎标题**: 通常在图片之后
+4. **内容链接**: 主要内容开始前的导航链接
+5. **正文开始**: 实际的介绍性段落开始
+
+请特别关注英文新增内容相对于这些结构元素的位置关系，确保中文插入位置保持相同的逻辑关系。
+` : ''}
+
 ## 分析要求
 请仔细分析上述内容，考虑以下因素：
-1. **内容逻辑关系**: 新增内容在英文中的逻辑位置和上下文关系
-2. **段落结构**: 保持翻译文档的段落完整性  
+1. **精确结构对应**: 新增内容在英文中的确切结构位置（相对于Front Matter、图片、标题等）
+2. **段落完整性**: 保持翻译文档的段落完整性，不要在段落中间插入
 3. **语义连贯**: 确保插入后语义流畅自然
 4. **文档结构**: 考虑标题、列表、代码块、表格等Markdown/HTML结构元素
 5. **翻译对应**: 找到英文上下文在中文译文中的对应位置
@@ -635,25 +744,26 @@ ${candidateRegion.content}
 ## 输出格式
 请严格按照以下格式输出：
 
-ANALYSIS: [详细说明你的分析思路，包括识别的关键结构和对应关系]
+ANALYSIS: [详细说明你的分析思路，包括识别的关键结构和对应关系，特别是前置区域的结构匹配]
 
 POSITION: AFTER_LINE: X [X为相对于候选区域的行号，从1开始计数，表示在第X行之后插入新内容]
 
 CONFIDENCE: [1-10分的信心程度]
 
-REASON: [详细解释为什么选择这个位置，包括与英文上下文的对应关系和结构考虑]
+REASON: [详细解释为什么选择这个位置，包括与英文上下文的对应关系和结构考虑，特别说明结构锚点的匹配]
 
 ## 重要提示
 - 如果目标位置是HTML标签（如\`</table>\`、\`</div>\`等），请选择在完整标签结构之后插入
+- 对于文档前置区域，优先基于结构锚点（Front Matter、图片、标题）进行精确对应
 - 确保不会破坏现有的文档结构完整性
 - 优先选择段落之间、章节之间或完整结构块之间的位置`;
     
     // 3. 调用AI分析
-    console.log(`📤 发送AI分析请求...`);
+    console.log(`📤 发送改进的AI分析请求...`);
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 1500,
-      temperature: 0.1,
+      max_tokens: 2000,
+      temperature: 0.05, // 更低的温度以获得更一致的结果
       system: analysisPrompt,
       messages: [{
         role: 'user', 
@@ -665,7 +775,7 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
     const aiResponse = response.content[0].text;
     console.log(`🤖 AI分析结果:\n${aiResponse}`);
     
-    // 5. 🔧 修复位置解析逻辑 - 支持 AFTER_LINE 格式
+    // 5. 解析位置信息
     let positionMatch = aiResponse.match(/POSITION:\s*AFTER_LINE:\s*(\d+)/i);
     if (!positionMatch) {
       // 兼容原来的 LINE 格式
@@ -678,13 +788,13 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
       const relativeLine = parseInt(positionMatch[1]);
       const confidence = confidenceMatch ? parseInt(confidenceMatch[1]) : 5;
       
-      // 🔧 修复位置计算：AFTER_LINE 意思是在该行之后插入
+      // 计算绝对位置
       const targetLineInRegion = aiResponse.includes('AFTER_LINE') ? relativeLine : relativeLine - 1;
       const absoluteLine = candidateRegion.startLine + targetLineInRegion;
       
       console.log(`✅ AI推荐插入位置: 第 ${absoluteLine + 1} 行 (候选区域第 ${relativeLine} 行${aiResponse.includes('AFTER_LINE') ? '之后' : '之前'}) (置信度: ${confidence}/10)`);
       
-      // 6. 🔧 增强的位置安全性验证 - 特别处理表格和HTML结构
+      // 6. 位置安全性验证和调整
       const safePoint = validateAndAdjustInsertionPoint(targetLines, absoluteLine, aiResponse);
       if (safePoint !== absoluteLine) {
         console.log(`🛡️ 结构安全调整: 第 ${absoluteLine + 1} 行 → 第 ${safePoint + 1} 行`);
@@ -714,9 +824,9 @@ function validateAndAdjustInsertionPoint(targetLines, insertionPoint, aiAnalysis
     const currentLine = targetLines[safePoint].trim();
     const nextLine = safePoint + 1 < targetLines.length ? targetLines[safePoint + 1].trim() : '';
     
-    console.log(`📝 目标位置内容: "${currentLine}"`);
+    console.log(`🔍 目标位置内容: "${currentLine}"`);
     if (nextLine) {
-      console.log(`📝 下一行内容: "${nextLine}"`);
+      console.log(`🔍 下一行内容: "${nextLine}"`);
     }
   }
   
@@ -842,7 +952,7 @@ function findFallbackInsertionPoint(targetLines) {
     insertionPoint = Math.floor(targetLines.length * 0.8);
   }
   
-  console.log(`📍 回退插入点: 第 ${insertionPoint + 1} 行`);
+  console.log(`🔍 回退插入点: 第 ${insertionPoint + 1} 行`);
   return insertionPoint;
 }
 
@@ -854,11 +964,11 @@ async function findTargetInsertionPoint(targetContent, englishContext, modificat
       return findFallbackInsertionPoint(targetContent.split('\n'));
     }
     
-    // 检查是否启用AI分析（默认启用）
+    // 检查是否可用AI分析（默认可用）
     const useAI = process.env.USE_AI_INSERTION !== 'false';
     
     if (useAI) {
-      console.log(`🤖 启用AI插入位置分析...`);
+      console.log(`🤖 可用AI插入位置分析...`);
       const targetLang = global.currentTargetLang || 'zh-CN';
       return await findInsertionPointWithAI(
         englishContext, 
@@ -868,10 +978,10 @@ async function findTargetInsertionPoint(targetContent, englishContext, modificat
       );
     } else {
       // 备用：使用相对位置策略
-      console.log(`📍 使用相对位置策略...`);
+      console.log(`🔍 使用相对位置策略...`);
       const targetLines = targetContent.split('\n');
       const relativePoint = Math.round(englishContext.relativePosition * targetLines.length);
-      console.log(`📍 相对位置插入点: 第 ${relativePoint + 1} 行`);
+      console.log(`🔍 相对位置插入点: 第 ${relativePoint + 1} 行`);
       return relativePoint;
     }
     
@@ -1150,7 +1260,7 @@ async function handleNewFile(filePath, targetLang) {
     translationStatus.total++;
     
     const content = await fs.readFile(filePath, 'utf8');
-    console.log(`📏 文件大小: ${content.length} 字符 (约 ${estimateTokens(content)} tokens)`);
+    console.log(`🔍 文件大小: ${content.length} 字符 (约 ${estimateTokens(content)} tokens)`);
     
     // 分块处理
     const chunks = chunkDocument(content);
@@ -1180,7 +1290,7 @@ async function handleNewFile(filePath, targetLang) {
 // 提取确切的修改内容
 async function extractExactModifications(filePath, baseSha) {
   try {
-    console.log(`📍 分析文件修改: ${filePath} (基于 ${baseSha})`);
+    console.log(`🔍 分析文件修改: ${filePath} (基于 ${baseSha})`);
     
     // 使用更简单可靠的git diff命令
     const diffOutput = execSync(
@@ -1385,7 +1495,7 @@ async function handleModifiedFile(filePath, targetLang) {
             translatedContent = addChineseEnglishSpacing(translatedContent);
           }
           
-          // 🆕 使用AI判断插入位置
+          // 🆕 使用改进的AI判断插入位置
           const currentTargetContent = targetLines.join('\n');
           const insertionPoint = await findTargetInsertionPoint(currentTargetContent, englishContext, modification);
           
@@ -1514,7 +1624,7 @@ async function handleModifiedFile(filePath, targetLang) {
     
   } catch (error) {
     console.error(`❌ 精确增量翻译失败 ${filePath}:`, error.message);
-    console.log(`📄 回退到完整文档翻译...`);
+    console.log(`🔄 回退到完整文档翻译...`);
     
     // 回退到完整翻译
     try {
