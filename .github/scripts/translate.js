@@ -340,42 +340,69 @@ function similarity(str1, str2) {
   return maxLen === 0 ? 1 : (maxLen - distance) / maxLen;
 }
 
-// 🔧 改进的文本标准化函数 - 更好地处理HTML和Markdown内容
+// 🔧 改进的文本标准化函数 - 更好地处理中英文混合内容
 function normalizeForComparison(text) {
+  if (!text) return '';
+  
   // 先保存一些关键信息
   const originalText = text;
   
-  // 提取HTML标签内的文本内容
-  let cleanText = text.replace(/<[^>]*>/g, ' '); // 移除HTML标签但保留内容
+  // 提取主要文本内容，移除标记但保留核心信息
+  let cleanText = text
+    .replace(/<[^>]*>/g, ' ') // 移除HTML标签
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1') // 保留链接文本：[text](url) -> text
+    .replace(/[#*`_]/g, '') // 移除markdown标记
+    .replace(/[^\w\s\u4e00-\u9fff]/g, ' ') // 保留字母数字中文，其他转为空格
+    .replace(/\s+/g, ' ') // 标准化空格
+    .toLowerCase()
+    .trim();
   
-  // 处理Markdown链接，保留链接文本
-  cleanText = cleanText.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1'); // [text](url) -> text
-  
-  // 处理其他Markdown标记
-  cleanText = cleanText.replace(/[#*`]/g, ''); // 移除markdown标记
-  
-  // 标准化空格和标点
-  cleanText = cleanText.replace(/\s+/g, ' '); // 标准化空格
-  cleanText = cleanText.replace(/[^\w\s]/g, ' '); // 标点替换为空格
-  cleanText = cleanText.replace(/\s+/g, ' '); // 再次标准化空格
-  
-  const result = cleanText.toLowerCase().trim();
-  
-  // 如果清理后的文本太短，尝试使用原始文本的部分内容
-  if (result.length < 3 && originalText.length > 10) {
-    // 对于很短的清理结果，尝试保留更多原始特征
-    const fallbackText = originalText
-      .replace(/<[^>]*>/g, ' ') // 只移除HTML标签
-      .replace(/\s+/g, ' ')
+  // 如果清理后太短且原文较长，尝试提取更多有用信息
+  if (cleanText.length < 5 && originalText.length > 20) {
+    // 提取所有有意义的词汇
+    const keywords = originalText
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+      .split(/\s+/)
+      .filter(word => word.length > 2)
+      .join(' ')
       .toLowerCase()
       .trim();
     
-    if (fallbackText.length >= 3) {
-      return fallbackText;
+    if (keywords.length > cleanText.length) {
+      cleanText = keywords;
     }
   }
   
-  return result;
+  return cleanText;
+}
+
+// 🆕 改进的相似度计算 - 支持中英文混合
+function enhancedSimilarity(str1, str2) {
+  if (!str1 || !str2) return 0;
+  
+  // 标准化文本
+  const norm1 = normalizeForComparison(str1);
+  const norm2 = normalizeForComparison(str2);
+  
+  if (!norm1 || !norm2) return 0;
+  
+  // 基于编辑距离的相似度
+  const editDistance = similarity(norm1, norm2);
+  
+  // 基于关键词重叠的相似度
+  const words1 = norm1.split(/\s+/).filter(w => w.length > 2);
+  const words2 = norm2.split(/\s+/).filter(w => w.length > 2);
+  
+  if (words1.length === 0 || words2.length === 0) {
+    return editDistance;
+  }
+  
+  const commonWords = words1.filter(word => words2.includes(word));
+  const keywordSimilarity = commonWords.length / Math.max(words1.length, words2.length);
+  
+  // 组合相似度（编辑距离权重0.6，关键词权重0.4）
+  return editDistance * 0.6 + keywordSimilarity * 0.4;
 }
 
 // 🆕 文档结构分析函数 - 识别关键结构元素
@@ -500,7 +527,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
             const normalizedNew = normalizeForComparison(newLine);
             
             if (normalizedOriginal.length > 2 && normalizedNew.length > 2) {
-              const textSimilarity = similarity(normalizedOriginal, normalizedNew);
+              const textSimilarity = enhancedSimilarity(originalLine, newLine); // 使用增强的相似度
               if (textSimilarity > 0.6) {
                 lineScore = textSimilarity;
                 weight = Math.min(Math.max(normalizedNew.length / 10, 1), 2);
@@ -607,7 +634,7 @@ async function findModificationContext(filePath, modification, contextLines = 8)
         let matchScore = 0;
         
         for (let j = 0; j < searchLines.length; j++) {
-          if (similarity(normalizeForComparison(lines[i + j]), normalizeForComparison(searchLines[j])) > 0.8) {
+          if (enhancedSimilarity(lines[i + j], searchLines[j]) > 0.8) {
             matchScore++;
           }
         }
@@ -762,7 +789,7 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
     console.log(`📤 发送改进的AI分析请求...`);
     const response = await anthropic.messages.create({
       model: 'claude-sonnet-4-20250514',
-      max_tokens: 2000,
+      max_tokens: 10000,
       temperature: 0.05, // 更低的温度以获得更一致的结果
       system: analysisPrompt,
       messages: [{
@@ -788,11 +815,21 @@ REASON: [详细解释为什么选择这个位置，包括与英文上下文的�
       const relativeLine = parseInt(positionMatch[1]);
       const confidence = confidenceMatch ? parseInt(confidenceMatch[1]) : 5;
       
-      // 计算绝对位置
-      const targetLineInRegion = aiResponse.includes('AFTER_LINE') ? relativeLine : relativeLine - 1;
-      const absoluteLine = candidateRegion.startLine + targetLineInRegion;
+      // 🔧 修复位置计算：AI返回的是候选区域内的行号（从1开始），需要转换为绝对行号
+      let absoluteLine;
+      if (aiResponse.includes('AFTER_LINE')) {
+        // AFTER_LINE: X 表示在候选区域第X行之后插入
+        absoluteLine = candidateRegion.startLine + relativeLine;
+      } else {
+        // LINE: X 表示在候选区域第X行插入（兼容旧格式）
+        absoluteLine = candidateRegion.startLine + relativeLine - 1;
+      }
+      
+      // 确保不超出范围
+      absoluteLine = Math.max(0, Math.min(absoluteLine, targetLines.length));
       
       console.log(`✅ AI推荐插入位置: 第 ${absoluteLine + 1} 行 (候选区域第 ${relativeLine} 行${aiResponse.includes('AFTER_LINE') ? '之后' : '之前'}) (置信度: ${confidence}/10)`);
+      console.log(`🔧 位置计算: 候选区域起始=${candidateRegion.startLine + 1}, 相对位置=${relativeLine}, 绝对位置=${absoluteLine + 1}`);
       
       // 6. 位置安全性验证和调整
       const safePoint = validateAndAdjustInsertionPoint(targetLines, absoluteLine, aiResponse);
@@ -824,9 +861,9 @@ function validateAndAdjustInsertionPoint(targetLines, insertionPoint, aiAnalysis
     const currentLine = targetLines[safePoint].trim();
     const nextLine = safePoint + 1 < targetLines.length ? targetLines[safePoint + 1].trim() : '';
     
-    console.log(`🔍 目标位置内容: "${currentLine}"`);
+    console.log(`🔍 目标位置内容: "${currentLine.substring(0, 80)}"`);
     if (nextLine) {
-      console.log(`🔍 下一行内容: "${nextLine}"`);
+      console.log(`🔍 下一行内容: "${nextLine.substring(0, 80)}"`);
     }
   }
   
@@ -864,7 +901,7 @@ function validateAndAdjustInsertionPoint(targetLines, insertionPoint, aiAnalysis
     }
   }
   
-  // 3. 🔧 新增：特别处理HTML表格和标签结构
+  // 3. 🔧 特别处理HTML表格和标签结构
   if (safePoint < targetLines.length) {
     const currentLine = targetLines[safePoint].trim();
     
@@ -882,47 +919,17 @@ function validateAndAdjustInsertionPoint(targetLines, insertionPoint, aiAnalysis
         console.log(`🛡️ 调整到HTML结构块结束后: 第 ${safePoint + 1} 行`);
       }
     }
-    
-    // 检查是否在表格行中间
-    let inTable = false;
-    let tableStart = -1;
-    for (let i = 0; i <= safePoint && i < targetLines.length; i++) {
-      const line = targetLines[i].trim();
-      if (line.includes('<table>') || line.includes('<table ')) {
-        inTable = true;
-        tableStart = i;
-      } else if (line.includes('</table>')) {
-        if (i >= safePoint) {
-          // 插入点在表格结束之前，调整到表格之后
-          safePoint = i + 1;
-          console.log(`🛡️ 调整到表格完全结束后: 第 ${safePoint + 1} 行`);
-        }
-        inTable = false;
-        tableStart = -1;
-      }
-    }
   }
   
-  // 4. 寻找合适的空行位置（优化）
+  // 4. 🔧 改进的空行优化 - 但不要过度调整
   const originalPoint = safePoint;
   
-  // 向下查找最近的空行（在3行范围内）
-  for (let i = safePoint; i < Math.min(targetLines.length, safePoint + 3); i++) {
+  // 只在很近的范围内（1-2行）寻找更好的位置
+  for (let i = safePoint; i < Math.min(targetLines.length, safePoint + 2); i++) {
     if (!targetLines[i] || targetLines[i].trim() === '') {
       safePoint = i;
       console.log(`🛡️ 优化到空行位置: 第 ${safePoint + 1} 行`);
       break;
-    }
-  }
-  
-  // 如果向下没找到空行，向上查找（在3行范围内）
-  if (safePoint === originalPoint) {
-    for (let i = Math.max(0, safePoint - 3); i < safePoint; i++) {
-      if (!targetLines[i] || targetLines[i].trim() === '') {
-        safePoint = i + 1;
-        console.log(`🛡️ 优化到空行后: 第 ${safePoint + 1} 行`);
-        break;
-      }
     }
   }
   
@@ -991,7 +998,7 @@ async function findTargetInsertionPoint(targetContent, englishContext, modificat
   }
 }
 
-// 在目标文件中找到对应的具体内容片段
+// 🔧 增强的目标内容匹配函数 - 改进中英文匹配
 async function findExactTargetMatch(modification, targetContent, contextLines = 3) {
   try {
     const targetLines = targetContent.split('\n');
@@ -1026,45 +1033,123 @@ async function findExactTargetMatch(modification, targetContent, contextLines = 
     let bestMatch = null;
     let bestScore = 0;
     
-    // 在目标文件中搜索匹配的内容
-    for (let i = 0; i <= targetLines.length - searchLines.length; i++) {
-      let totalScore = 0;
-      let matchedLines = 0;
-      
-      // 尝试匹配连续的行
-      for (let j = 0; j < searchLines.length && i + j < targetLines.length; j++) {
-        const targetLine = normalizeForComparison(targetLines[i + j]);
-        const searchLine = normalizeForComparison(searchLines[j]);
+    // 🆕 多重匹配策略
+    console.log(`🔍 使用增强匹配算法搜索对应内容...`);
+    
+    // 策略1: 尝试完整匹配（适用于较短的内容）
+    if (searchLines.length <= 3) {
+      for (let i = 0; i <= targetLines.length - searchLines.length; i++) {
+        let totalScore = 0;
+        let matchedLines = 0;
         
-        // 使用相似度匹配，允许一定的翻译差异
-        const lineScore = similarity(targetLine, searchLine);
-        if (lineScore > 0.5) { // 降低阈值，更容易匹配
-          totalScore += lineScore;
-          matchedLines++;
+        for (let j = 0; j < searchLines.length && i + j < targetLines.length; j++) {
+          const targetLine = targetLines[i + j].trim();
+          const searchLine = searchLines[j].trim();
+          
+          // 使用增强的相似度匹配
+          const lineScore = enhancedSimilarity(targetLine, searchLine);
+          
+          if (lineScore > 0.4) { // 降低阈值以适应翻译差异
+            totalScore += lineScore;
+            matchedLines++;
+          }
         }
-      }
-      
-      const avgScore = matchedLines > 0 ? totalScore / searchLines.length : 0;
-      
-      // 如果找到了较好的匹配
-      if (avgScore > bestScore && avgScore > 0.4 && matchedLines >= Math.min(1, searchLines.length)) {
-        bestScore = avgScore;
-        const matchEnd = i + searchLines.length - 1;
-        bestMatch = {
-          startLine: i,
-          endLine: matchEnd,
-          originalContent: targetLines.slice(i, matchEnd + 1).join('\n'),
-          confidence: avgScore,
-          matchedLines: matchedLines
-        };
+        
+        const avgScore = matchedLines > 0 ? totalScore / searchLines.length : 0;
+        
+        if (avgScore > bestScore && avgScore > 0.3 && matchedLines >= Math.min(1, searchLines.length)) {
+          bestScore = avgScore;
+          const matchEnd = i + searchLines.length - 1;
+          bestMatch = {
+            startLine: i,
+            endLine: matchEnd,
+            originalContent: targetLines.slice(i, matchEnd + 1).join('\n'),
+            confidence: avgScore,
+            matchedLines: matchedLines,
+            strategy: 'complete'
+          };
+        }
       }
     }
     
+    // 策略2: 关键词匹配（适用于无法完整匹配的情况）
+    if (!bestMatch || bestScore < 0.5) {
+      console.log(`🔍 尝试关键词匹配策略...`);
+      
+      // 提取搜索内容的关键词
+      const searchKeywords = searchLines.join(' ')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+        .split(/\s+/)
+        .filter(word => word.length > 2)
+        .map(word => word.toLowerCase());
+      
+      if (searchKeywords.length > 0) {
+        for (let i = 0; i < targetLines.length; i++) {
+          const targetLine = targetLines[i].trim();
+          if (!targetLine) continue;
+          
+          // 提取目标行的关键词
+          const targetKeywords = targetLine
+            .replace(/<[^>]*>/g, ' ')
+            .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+            .split(/\s+/)
+            .filter(word => word.length > 2)
+            .map(word => word.toLowerCase());
+          
+          if (targetKeywords.length === 0) continue;
+          
+          // 计算关键词重叠度
+          const commonKeywords = searchKeywords.filter(word => 
+            targetKeywords.some(tword => 
+              tword.includes(word) || word.includes(tword) || enhancedSimilarity(word, tword) > 0.8
+            )
+          );
+          
+          const keywordScore = commonKeywords.length / Math.max(searchKeywords.length, targetKeywords.length);
+          
+          if (keywordScore > bestScore && keywordScore > 0.3) {
+            bestScore = keywordScore;
+            bestMatch = {
+              startLine: i,
+              endLine: i,
+              originalContent: targetLine,
+              confidence: keywordScore,
+              matchedLines: 1,
+              strategy: 'keyword',
+              commonKeywords: commonKeywords
+            };
+          }
+        }
+      }
+    }
+    
+    // 策略3: 模糊位置匹配（基于相对位置）
+    if (!bestMatch || bestScore < 0.4) {
+      console.log(`🔍 尝试位置辅助匹配...`);
+      
+      // 这里可以基于git diff的上下文信息来辅助定位
+      // 暂时跳过，但为将来扩展留出接口
+    }
+    
     if (bestMatch) {
-      console.log(`✅ 找到匹配内容: 第 ${bestMatch.startLine + 1}-${bestMatch.endLine + 1} 行 (置信度: ${(bestMatch.confidence * 100).toFixed(1)}%, 匹配行数: ${bestMatch.matchedLines})`);
+      console.log(`✅ 找到匹配内容: 第 ${bestMatch.startLine + 1}-${bestMatch.endLine + 1} 行 (置信度: ${(bestMatch.confidence * 100).toFixed(1)}%, 策略: ${bestMatch.strategy})`);
+      if (bestMatch.commonKeywords) {
+        console.log(`🔗 匹配关键词: ${bestMatch.commonKeywords.join(', ')}`);
+      }
       return bestMatch;
     } else {
       console.warn(`⚠️ 未找到匹配的内容 (最高得分: ${(bestScore * 100).toFixed(1)}%)`);
+      
+      // 🆕 调试信息：显示搜索关键词
+      const debugKeywords = searchLines.join(' ')
+        .replace(/<[^>]*>/g, ' ')
+        .replace(/[^\w\s\u4e00-\u9fff]/g, ' ')
+        .split(/\s+/)
+        .filter(word => word.length > 2)
+        .slice(0, 5);
+      console.log(`🔍 搜索关键词: ${debugKeywords.join(', ')}`);
+      
       return null;
     }
     
@@ -1287,14 +1372,14 @@ async function handleNewFile(filePath, targetLang) {
   }
 }
 
-// 提取确切的修改内容
+// 🔧 增强的修改提取函数 - 改进git diff解析
 async function extractExactModifications(filePath, baseSha) {
   try {
     console.log(`🔍 分析文件修改: ${filePath} (基于 ${baseSha})`);
     
-    // 使用更简单可靠的git diff命令
+    // 使用更详细的git diff命令获取行级别的变化
     const diffOutput = execSync(
-      `git diff ${baseSha}..HEAD --word-diff=porcelain -- "${filePath}"`,
+      `git diff ${baseSha}..HEAD --unified=3 -- "${filePath}"`,
       { encoding: 'utf8' }
     );
     
@@ -1308,90 +1393,61 @@ async function extractExactModifications(filePath, baseSha) {
     const modifications = [];
     const lines = diffOutput.split('\n');
     
-    let currentMod = null;
-    let addedContent = '';
-    let removedContent = '';
-    let isInHunk = false;
+    let currentHunkStart = -1;
+    let removedLines = [];
+    let addedLines = [];
+    let contextBefore = [];
+    let contextAfter = [];
+    let inHunk = false;
     
-    for (const line of lines) {
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
       if (line.startsWith('@@')) {
-        // 新的diff块开始
-        if (currentMod) {
-          modifications.push(currentMod);
-          currentMod = null;
+        // 处理前一个hunk的累积变化
+        if (inHunk && (removedLines.length > 0 || addedLines.length > 0)) {
+          processHunkChanges(removedLines, addedLines, contextBefore, contextAfter, modifications);
         }
-        isInHunk = true;
-        addedContent = '';
-        removedContent = '';
+        
+        // 新的hunk开始
+        inHunk = true;
+        removedLines = [];
+        addedLines = [];
+        contextBefore = [];
+        contextAfter = [];
         console.log(`📍 进入新的diff块: ${line}`);
         continue;
       }
       
-      if (!isInHunk) continue;
+      if (!inHunk) continue;
       
-      if (line.startsWith('~')) {
-        // 这是word-diff的分隔符，忽略
-        continue;
-      } else if (line.startsWith('-')) {
-        // 删除的内容
-        removedContent += line.substring(1) + '\n';
+      if (line.startsWith('-')) {
+        // 删除的行
+        removedLines.push(line.substring(1));
       } else if (line.startsWith('+')) {
-        // 添加的内容
-        addedContent += line.substring(1) + '\n';
+        // 添加的行
+        addedLines.push(line.substring(1));
       } else if (line.startsWith(' ')) {
-        // 未修改的内容 - 如果有累积的修改，处理它们
-        if (removedContent || addedContent) {
-          if (removedContent && addedContent) {
-            // 修改操作
-            modifications.push({
-              type: 'modify',
-              oldContent: removedContent.trim(),
-              newContent: addedContent.trim()
-            });
-          } else if (removedContent) {
-            // 删除操作
-            modifications.push({
-              type: 'delete',
-              oldContent: removedContent.trim(),
-              newContent: ''
-            });
-          } else if (addedContent) {
-            // 添加操作
-            modifications.push({
-              type: 'add',
-              oldContent: '',
-              newContent: addedContent.trim()
-            });
-          }
-          
-          // 重置
-          addedContent = '';
-          removedContent = '';
+        // 上下文行 - 如果有累积的变化，先处理
+        if (removedLines.length > 0 || addedLines.length > 0) {
+          processHunkChanges(removedLines, addedLines, contextBefore, contextAfter, modifications);
+          removedLines = [];
+          addedLines = [];
+          contextBefore = [];
+          contextAfter = [];
+        }
+        
+        // 保存上下文（最多保留3行）
+        contextBefore.push(line.substring(1));
+        if (contextBefore.length > 3) {
+          contextBefore.shift();
         }
       }
     }
     
-    // 处理最后的修改
-    if (removedContent || addedContent) {
-      if (removedContent && addedContent) {
-        modifications.push({
-          type: 'modify',
-          oldContent: removedContent.trim(),
-          newContent: addedContent.trim()
-        });
-      } else if (removedContent) {
-        modifications.push({
-          type: 'delete',
-          oldContent: removedContent.trim(),
-          newContent: ''
-        });
-      } else if (addedContent) {
-        modifications.push({
-          type: 'add',
-          oldContent: '',
-          newContent: addedContent.trim()
-        });
-      }
+    // 处理最后的变化
+    if (inHunk && (removedLines.length > 0 || addedLines.length > 0)) {
+      processHunkChanges(removedLines, addedLines, contextBefore, contextAfter, modifications);
     }
     
     console.log(`✅ 检测到 ${modifications.length} 个修改:`);
@@ -1408,6 +1464,40 @@ async function extractExactModifications(filePath, baseSha) {
   } catch (error) {
     console.warn(`⚠️ Git diff失败: ${error.message}`);
     return null;
+  }
+}
+
+// 🆕 处理hunk中的变化的辅助函数
+function processHunkChanges(removedLines, addedLines, contextBefore, contextAfter, modifications) {
+  if (removedLines.length === 0 && addedLines.length === 0) return;
+  
+  if (removedLines.length > 0 && addedLines.length > 0) {
+    // 修改操作
+    modifications.push({
+      type: 'modify',
+      oldContent: removedLines.join('\n').trim(),
+      newContent: addedLines.join('\n').trim(),
+      contextBefore: contextBefore.join('\n'),
+      contextAfter: contextAfter.join('\n')
+    });
+  } else if (removedLines.length > 0) {
+    // 删除操作
+    modifications.push({
+      type: 'delete',
+      oldContent: removedLines.join('\n').trim(),
+      newContent: '',
+      contextBefore: contextBefore.join('\n'),
+      contextAfter: contextAfter.join('\n')
+    });
+  } else if (addedLines.length > 0) {
+    // 添加操作
+    modifications.push({
+      type: 'add',
+      oldContent: '',
+      newContent: addedLines.join('\n').trim(),
+      contextBefore: contextBefore.join('\n'),
+      contextAfter: contextAfter.join('\n')
+    });
   }
 }
 
@@ -1524,10 +1614,74 @@ async function handleModifiedFile(filePath, targetLang) {
           
           if (!targetMatch) {
             console.warn(`⚠️ 无法找到对应的${LANGUAGE_CONFIG[targetLang].name}内容，跳过此修改`);
+            
+            // 🆕 增强的调试信息
+            console.log(`🔍 调试信息:`);
+            console.log(`   修改类型: ${modification.type}`);
+            console.log(`   搜索内容长度: ${(modification.oldContent || modification.newContent || '').length} 字符`);
+            
+            if (modification.contextBefore) {
+              console.log(`   上下文线索: "${modification.contextBefore.substring(0, 100)}..."`);
+            }
+            
+            // 🆕 如果是modify操作且有新内容，尝试作为add操作处理
+            if (modification.type === 'modify' && modification.newContent && modification.newContent.trim()) {
+              console.log(`🔄 尝试将modify操作转为add操作...`);
+              
+              // 使用英文上下文查找插入位置
+              const insertionPoint = await findTargetInsertionPoint(currentTargetContent, englishContext, {
+                type: 'add',
+                newContent: modification.newContent,
+                oldContent: ''
+              });
+              
+              // 翻译新内容
+              const prompt = generatePreciseModificationPrompt(targetLang, LANGUAGE_CONFIG[targetLang].pathPrefix, {
+                type: 'add',
+                newContent: modification.newContent,
+                oldContent: ''
+              }, null);
+              
+              console.log(`📡 调用Claude翻译modify转add的内容...`);
+              const response = await anthropic.messages.create({
+                model: 'claude-sonnet-4-20250514',
+                max_tokens: 10000,
+                temperature: 0.05,
+                system: prompt,
+                messages: [{ role: 'user', content: modification.newContent }]
+              });
+              
+              let translatedContent = response.content[0].text.trim();
+              translatedContent = processInternalLinks(translatedContent, targetLang);
+              
+              if (targetLang === 'zh-CN') {
+                translatedContent = addChineseEnglishSpacing(translatedContent);
+              }
+              
+              const newLines = translatedContent.split('\n');
+              console.log(`📍 在第 ${insertionPoint + 1} 行处插入转换的内容`);
+              
+              // 确保适当的空行间距
+              if (insertionPoint > 0 && targetLines[insertionPoint - 1] && targetLines[insertionPoint - 1].trim() !== '') {
+                newLines.unshift('');
+              }
+              if (insertionPoint < targetLines.length && targetLines[insertionPoint] && targetLines[insertionPoint].trim() !== '') {
+                newLines.push('');
+              }
+              
+              targetLines.splice(insertionPoint, 0, ...newLines);
+              
+              const tokensUsed = estimateTokens(modification.newContent);
+              totalTokensUsed += tokensUsed;
+              modificationsProcessed++;
+              
+              console.log(`✅ modify转add操作成功完成`);
+            }
+            
             continue;
           }
           
-          console.log(`✅ 找到对应内容 (置信度: ${(targetMatch.confidence * 100).toFixed(1)}%)`);
+          console.log(`✅ 找到对应内容 (置信度: ${(targetMatch.confidence * 100).toFixed(1)}%, 策略: ${targetMatch.strategy || 'default'})`);
           
           if (modification.type === 'delete') {
             // 删除操作：直接删除对应的行
