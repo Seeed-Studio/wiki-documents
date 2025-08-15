@@ -39,8 +39,6 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
   - <strong><a href="/Contributor"><span style={{color: '8DC215', fontSize: '1.2em'}}> Contributor Program</span></a></strong>
   - <strong><a href="/weekly_wiki"><span style={{color: '8DC215', fontSize: '1.2em'}}> Weekly Wiki </span></a></strong>
 
-- You will be able to find detailed documentation of our products for **practical usage** and **troubleshooting**, industrial IoT scenarios, as well as guides on open development tools to help you get started on your own projects.
-
 
 
 ## Sensing and Data Communicating
@@ -60,7 +58,7 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
       <div className="start_card_wrapper">
           <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-ecosystem-sensors" className="getting_started_label2">Grove Entry-level Sensors</a>
           <br/>          <br/>
-          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" className="getting_started_label2">Grove Network Modules </a>
+          <a href= "https://wiki.seeedstudio.com/Sensor_Network/#grove-communication-modules" className="getting_started_label2">Grove test </a>
       </div>
   </div>
 </div>
@@ -154,7 +152,7 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
 
 ## ✨ Contributor Program ✨ 
 
-In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
+In Seeed, we greatly value our community of Seeeders. This is a test. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
 ### [The Hero Wall](/contributors)
 
@@ -195,6 +193,8 @@ Thank you for choosing our products! We provide many forms of support to ensure 
 ## Socials
 
 If you have any questions or comments, please do not hesitate to hop on to our forum and discuss with us directly and contact us! We value all feedbacks and opinions and believe that the way to grow and prosper is together with our users and the community!
+
+This is a test too.
 
 <table align="center">
   <tbody>
