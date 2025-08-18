@@ -41,55 +41,84 @@ jobs:
           
           # 获取基础SHA
           base_sha="${{ github.event.pull_request.base.sha }}"
+          echo "🔍 基础SHA: $base_sha"
           
-          # 使用git diff --name-status检测操作类型
-          operations=$(git diff --name-status $base_sha..HEAD -- docs/ | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)')
-          
+          # 初始化计数器
           added_count=0
           modified_count=0
           deleted_count=0
           renamed_count=0
-          
           all_files=""
           
-          while IFS=$'\t' read -r status file rest; do
-            if [[ -n "$status" && -n "$file" ]]; then
-              case "$status" in
-                A*) 
-                  ((added_count++))
-                  all_files="$all_files$file "
-                  ;;
-                M*) 
-                  ((modified_count++))
-                  all_files="$all_files$file "
-                  ;;
-                D*) 
-                  ((deleted_count++))
-                  all_files="$all_files$file "
-                  ;;
-                R*) 
-                  ((renamed_count++))
-                  all_files="$all_files$file "
-                  if [[ -n "$rest" ]]; then
-                    all_files="$all_files$rest "
-                  fi
-                  ;;
-              esac
+          # 使用git diff --name-status检测操作类型，添加错误处理
+          if operations=$(git diff --name-status $base_sha..HEAD -- docs/ 2>/dev/null); then
+            echo "📄 Git diff输出:"
+            echo "$operations"
+            
+            # 过滤md/mdx文件，排除翻译目录
+            filtered_operations=$(echo "$operations" | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' || true)
+            
+            if [[ -n "$filtered_operations" ]]; then
+              echo "📋 过滤后的操作:"
+              echo "$filtered_operations"
+              
+              # 处理每一行
+              while IFS=$'\t' read -r status file rest || [[ -n "$status" ]]; do
+                # 跳过空行
+                [[ -z "$status" ]] && continue
+                
+                echo "🔍 处理: status='$status' file='$file' rest='$rest'"
+                
+                case "$status" in
+                  A*)
+                    added_count=$((added_count + 1))
+                    all_files="$all_files$file "
+                    echo "  ➕ 新增: $file"
+                    ;;
+                  M*)
+                    modified_count=$((modified_count + 1))
+                    all_files="$all_files$file "
+                    echo "  ✏️ 修改: $file"
+                    ;;
+                  D*)
+                    deleted_count=$((deleted_count + 1))
+                    all_files="$all_files$file "
+                    echo "  🗑️ 删除: $file"
+                    ;;
+                  R*)
+                    renamed_count=$((renamed_count + 1))
+                    all_files="$all_files$file "
+                    [[ -n "$rest" ]] && all_files="$all_files$rest "
+                    echo "  📁 移动: $file -> $rest"
+                    ;;
+                  *)
+                    echo "  ❓ 未知操作: $status $file $rest"
+                    ;;
+                esac
+              done <<< "$filtered_operations"
+            else
+              echo "ℹ️ 没有检测到符合条件的文档变更"
             fi
-          done <<< "$operations"
+          else
+            echo "❌ Git diff命令失败"
+            exit 1
+          fi
           
           total_count=$((added_count + modified_count + deleted_count + renamed_count))
           
+          # 输出结果
           echo "changed_files=$all_files" >> $GITHUB_OUTPUT
           echo "total_files=$total_count" >> $GITHUB_OUTPUT
           echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count" >> $GITHUB_OUTPUT
           
+          echo ""
           echo "📋 文档变更统计："
           echo "  新增文件: $added_count"
           echo "  修改文件: $modified_count"
           echo "  删除文件: $deleted_count" 
           echo "  移动文件: $renamed_count"
           echo "  总计: $total_count"
+          echo "  文件列表: $all_files"
 
   # 添加翻译提示评论
   add-translation-comment:
@@ -260,7 +289,7 @@ jobs:
             [[ "$comment" == *" es"* ]] && languages="$languages es" && echo "🇪🇸 添加西班牙语翻译"
           fi
           
-          languages=$(echo $languages | xargs)  # 去除多余空格
+          languages=$(echo $languages | xargs)
           echo "languages=$languages" >> $GITHUB_OUTPUT
           echo "🎯 最终翻译语言: $languages"
       
@@ -292,7 +321,6 @@ jobs:
           echo "目标语言: $TARGET_LANGUAGES"
           echo "基础SHA: $BASE_SHA"
           
-          # 检查API密钥
           if [ -z "$TRANSLATION_API_KEY" ]; then
             echo "❌ 错误: 缺少TRANSLATION_API_KEY，请在仓库Settings > Secrets中配置"
             exit 1
