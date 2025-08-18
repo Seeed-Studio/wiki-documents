@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has-docs-changes: ${{ steps.changes.outputs.any_changed }}
-      new-files: ${{ steps.analyze.outputs.new_files }}
-      modified-files: ${{ steps.analyze.outputs.modified_files }}
+      changed-files: ${{ steps.analyze.outputs.changed_files }}
       total-files: ${{ steps.analyze.outputs.total_files }}
+      operation-summary: ${{ steps.analyze.outputs.operation_summary }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,22 +37,59 @@ jobs:
         id: analyze
         if: steps.changes.outputs.any_changed == 'true'
         run: |
-          new_files=$(git diff --name-status origin/${{ github.base_ref }}..HEAD -- docs/ | grep '^A' | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' | cut -f2 | tr '\n' ' ')
-          modified_files=$(git diff --name-status origin/${{ github.base_ref }}..HEAD -- docs/ | grep '^M' | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' | cut -f2 | tr '\n' ' ')
+          echo "📊 分析文档变更..."
           
-          # 统计文件数量
-          new_count=$(echo "$new_files" | wc -w)
-          modified_count=$(echo "$modified_files" | wc -w)
-          total_count=$((new_count + modified_count))
+          # 获取基础SHA
+          base_sha="${{ github.event.pull_request.base.sha }}"
           
-          echo "new_files=$new_files" >> $GITHUB_OUTPUT
-          echo "modified_files=$modified_files" >> $GITHUB_OUTPUT
+          # 使用git diff --name-status检测操作类型
+          operations=$(git diff --name-status $base_sha..HEAD -- docs/ | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)')
+          
+          added_count=0
+          modified_count=0
+          deleted_count=0
+          renamed_count=0
+          
+          all_files=""
+          
+          while IFS=$'\t' read -r status file rest; do
+            if [[ -n "$status" && -n "$file" ]]; then
+              case "$status" in
+                A*) 
+                  ((added_count++))
+                  all_files="$all_files$file "
+                  ;;
+                M*) 
+                  ((modified_count++))
+                  all_files="$all_files$file "
+                  ;;
+                D*) 
+                  ((deleted_count++))
+                  all_files="$all_files$file "
+                  ;;
+                R*) 
+                  ((renamed_count++))
+                  all_files="$all_files$file "
+                  if [[ -n "$rest" ]]; then
+                    all_files="$all_files$rest "
+                  fi
+                  ;;
+              esac
+            fi
+          done <<< "$operations"
+          
+          total_count=$((added_count + modified_count + deleted_count + renamed_count))
+          
+          echo "changed_files=$all_files" >> $GITHUB_OUTPUT
           echo "total_files=$total_count" >> $GITHUB_OUTPUT
+          echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count" >> $GITHUB_OUTPUT
           
-          echo "📊 检测到文档变更："
-          echo "新增文件: $new_count"
-          echo "修改文件: $modified_count"
-          echo "总计: $total_count"
+          echo "📋 文档变更统计："
+          echo "  新增文件: $added_count"
+          echo "  修改文件: $modified_count"
+          echo "  删除文件: $deleted_count" 
+          echo "  移动文件: $renamed_count"
+          echo "  总计: $total_count"
 
   # 添加翻译提示评论
   add-translation-comment:
@@ -67,22 +104,12 @@ jobs:
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
             
-            const newFiles = '${{ needs.detect-docs-changes.outputs.new-files }}'.trim();
-            const modifiedFiles = '${{ needs.detect-docs-changes.outputs.modified-files }}'.trim();
             const totalFiles = '${{ needs.detect-docs-changes.outputs.total-files }}';
+            const operationSummary = '${{ needs.detect-docs-changes.outputs.operation-summary }}';
             
             let comment = `## 🌍 检测到文档变更 - 可进行多语言翻译\n\n`;
-            comment += `**统计信息:** 共 ${totalFiles} 个文件需要翻译\n\n`;
-            
-            if (newFiles) {
-              const fileList = newFiles.split(' ').filter(f => f.trim());
-              comment += `### 🆕 新增文件 (${fileList.length} 个):\n\`\`\`\n${fileList.join('\n')}\n\`\`\`\n\n`;
-            }
-            
-            if (modifiedFiles) {
-              const fileList = modifiedFiles.split(' ').filter(f => f.trim());
-              comment += `### ✏️ 修改文件 (${fileList.length} 个):\n\`\`\`\n${fileList.join('\n')}\n\`\`\`\n\n`;
-            }
+            comment += `**统计信息:** 共 ${totalFiles} 个文件需要处理\n`;
+            comment += `**操作类型:** ${operationSummary}\n\n`;
             
             comment += `### 🚀 开始翻译\n`;
             comment += `在此评论回复以下命令之一：\n\n`;
@@ -94,10 +121,9 @@ jobs:
             comment += `- \`/translate zh es\` - 翻译到中文和西班牙语\n\n`;
             comment += `### ⚠️ 注意事项\n`;
             comment += `- 只有仓库管理员和维护者可以触发翻译\n`;
-            comment += `- 使用 Claude Sonnet 4 进行高质量翻译\n`;
             comment += `- 大文档会自动分块处理，避免超出限制\n`;
             comment += `- 翻译过程中如有错误会详细反馈\n\n`;
-            comment += `> 💡 **提示:** 翻译大约需要 ${Math.ceil(parseInt(totalFiles) * 0.5)} 分钟完成`;
+            comment += `> 💡 **提示:** 翻译大约需要 ${Math.ceil(parseInt(totalFiles) * 1)} 分钟完成`;
             
             github.rest.issues.createComment({
               owner,
@@ -113,7 +139,7 @@ jobs:
       github.event.issue.pull_request &&
       startsWith(github.event.comment.body, '/translate')
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -134,7 +160,7 @@ jobs:
               `**开始时间:** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n` +
               `**命令:** \`${context.payload.comment.body.trim()}\`\n\n` +
               `⏳ 正在检查权限和初始化翻译环境...\n\n` +
-              `> 📝 翻译完成后会在此更新详细报告`;
+              `> 🔍 翻译完成后会在此更新详细报告`;
             
             const response = await github.rest.issues.createComment({
               owner,
@@ -208,7 +234,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "🔄 切换到PR分支..."
+          echo "📄 切换到PR分支..."
           gh pr checkout ${{ github.event.issue.number }}
       
       - name: Setup Node.js
@@ -222,7 +248,7 @@ jobs:
         id: parse
         run: |
           comment="${{ github.event.comment.body }}"
-          echo "📝 解析翻译命令: $comment"
+          echo "🔍 解析翻译命令: $comment"
           
           if [[ "$comment" == *"/translate all"* ]]; then
             languages="zh-CN ja es"
@@ -238,30 +264,16 @@ jobs:
           echo "languages=$languages" >> $GITHUB_OUTPUT
           echo "🎯 最终翻译语言: $languages"
       
-      - name: Get PR changes
+      - name: Get PR base SHA
         if: steps.check-permissions.outputs.has_permission == 'true'
-        id: pr-changes
+        id: pr-info
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "📊 分析PR变更..."
+          echo "📊 获取PR基础信息..."
           base_sha=$(gh pr view ${{ github.event.issue.number }} --json baseRefOid --jq '.baseRefOid')
-          new_files=$(git diff --name-status $base_sha..HEAD -- docs/ | grep '^A' | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' | cut -f2 | tr '\n' ' ')
-          modified_files=$(git diff --name-status $base_sha..HEAD -- docs/ | grep '^M' | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' | cut -f2 | tr '\n' ' ')
-          
-          new_count=$(echo "$new_files" | wc -w)
-          modified_count=$(echo "$modified_files" | wc -w)
-          total_count=$((new_count + modified_count))
-          
-          echo "new_files=$new_files" >> $GITHUB_OUTPUT
-          echo "modified_files=$modified_files" >> $GITHUB_OUTPUT
           echo "base_sha=$base_sha" >> $GITHUB_OUTPUT
-          echo "total_count=$total_count" >> $GITHUB_OUTPUT
-          
-          echo "📋 变更统计:"
-          echo "  新增文件: $new_count"
-          echo "  修改文件: $modified_count"
-          echo "  总计: $total_count"
+          echo "🔍 基础SHA: $base_sha"
       
       - name: Install dependencies
         if: steps.check-permissions.outputs.has_permission == 'true'
@@ -274,17 +286,11 @@ jobs:
         env:
           TRANSLATION_API_KEY: ${{ secrets.TRANSLATION_API_KEY }}
           TARGET_LANGUAGES: ${{ steps.parse.outputs.languages }}
-          NEW_FILES: ${{ steps.pr-changes.outputs.new_files }}
-          MODIFIED_FILES: ${{ steps.pr-changes.outputs.modified_files }}
-          BASE_SHA: ${{ steps.pr-changes.outputs.base_sha }}
-          # 🆕 AI插入位置控制
-          USE_AI_INSERTION: 'true'        # 启用AI分析插入位置
-          AI_INSERTION_WINDOW: '30'       # AI分析的候选区域大小（行数）
-          DEBUG_AI_INSERTION: 'true'      # 显示AI分析详情（可选）
+          BASE_SHA: ${{ steps.pr-info.outputs.base_sha }}
         run: |
           echo "🚀 开始翻译任务..."
           echo "目标语言: $TARGET_LANGUAGES"
-          echo "文件总数: ${{ steps.pr-changes.outputs.total_count }}"
+          echo "基础SHA: $BASE_SHA"
           
           # 检查API密钥
           if [ -z "$TRANSLATION_API_KEY" ]; then
@@ -297,7 +303,7 @@ jobs:
       - name: Commit and push changes
         if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
-          echo "📝 提交翻译结果..."
+          echo "🔄 提交翻译结果..."
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           
@@ -323,7 +329,6 @@ jobs:
             
             const success = '${{ job.status }}' === 'success';
             const languages = '${{ steps.parse.outputs.languages }}';
-            const totalFiles = '${{ steps.pr-changes.outputs.total_count }}';
             const hasChanges = process.env.HAS_CHANGES === 'true';
             
             let status, statusIcon;
@@ -340,18 +345,22 @@ jobs:
             
             let comment = `## ${statusIcon} ${status}\n\n`;
             comment += `**翻译语言:** ${languages || '无'}\n`;
-            comment += `**处理文件:** ${totalFiles} 个\n`;
             comment += `**完成时间:** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n`;
             comment += `**触发者:** @${{ github.event.comment.user.login }}\n\n`;
             
             if (success && hasChanges) {
               comment += `### 🎉 翻译成功！\n\n`;
               comment += `翻译文件已自动提交到当前PR分支。请检查翻译质量，如有需要可手动调整。\n\n`;
+              comment += `**处理的操作类型:**\n`;
+              comment += `- 📝 **全文翻译**: 新增和修改的文件\n`;
+              comment += `- 📁 **文件移动**: 自动同步移动翻译文件\n`;
+              comment += `- 🗑️ **文件删除**: 自动删除对应的翻译文件\n\n`;
             } else if (success && !hasChanges) {
-              comment += `### 📝 没有检测到需要翻译的内容\n\n`;
+              comment += `### 🔍 没有检测到需要翻译的内容\n\n`;
               comment += `可能的原因：\n`;
               comment += `- 目标语言的翻译文件已经是最新的\n`;
-              comment += `- 没有检测到有效的文档变更\n\n`;
+              comment += `- 没有检测到有效的文档变更\n`;
+              comment += `- 所有操作都已正确同步\n\n`;
             } else {
               comment += `### 💔 翻译失败\n\n`;
               comment += `请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }}) 了解详细错误信息。\n\n`;
