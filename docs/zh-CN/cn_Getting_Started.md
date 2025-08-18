@@ -10,6 +10,14 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
+<strong><a href="/cn/Sensor_Network"><span style={{color: '8DC215', fontSize: '1.2em'}}> 传感器和传感</span></a></strong>
+
+[xxx](/cn/Sensor_Network)
+
+[xxx](https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors)
+
+XIAO ESP32S3 是一个开发板型号。
+
 <strong><font color={'8DC215'} size={"5"}>欢迎来到矽递科技 wiki 文档平台</font></strong>
 
 作为一家创新型物联网科技公司，矽递科技秉承着“让科技随手可得”的使命，以软硬件设计研发能力为核心，与全球开发者共同合作创新，致力于整合新一代信息技术，为广域物联网场景打造完整开放的"模组-设备-解决方案"的产品体系。
@@ -49,7 +57,9 @@ last_update:
   </div>
   <div className="getting_started">
       <div className="start_card_wrapper">
-          <a href= "https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-ecosystem-sensors" className="getting_started_label2">Grove 入门级传感器</a>
+```
+<a href= "https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-communication-modules" className="getting_started_label2">Grove 测试</a>
+```
           <br/>          <br/>
           <a href= "https://wiki.seeedstudio.com/cn/Sensor_Network/#grove-communication-modules" className="getting_started_label2">Grove 网络模块 </a>
       </div>
@@ -145,7 +155,7 @@ last_update:
 
 ## ✨ 贡献者计划 ✨ 
 
-在Seeed，我们非常重视我们的Seeeders社区。Seeed Studio贡献者计划是一个协作项目，旨在团结来自世界各地的亲爱朋友们，共同构建创新解决方案。
+在 Seeed，我们非常重视我们的 Seeeders 社区。这是一个测试。Seeed Studio 贡献者计划是一个协作项目，旨在团结来自世界各地的亲爱朋友们，共同构建创新解决方案。
 
 ### [英雄墙](/contributors)
 
@@ -201,3 +211,8 @@ last_update:
     </tr>
   </tbody>
 </table>
+
+你好世界
+[abc](https://wiki.seeedstudio.com/cn/Edge_Computing/#application--software)
+
+这也是一个测试。
