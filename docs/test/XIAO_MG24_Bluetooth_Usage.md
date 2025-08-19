@@ -16,28 +16,28 @@ last_update:
 # Bluetooth Usage with Seeed Studio XIAO MG24
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO MG24</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO MG24</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 The Seeed Studio XIAO MG24 is a robust development board that supports Bluetooth LE 5.3 and Bluetooth mesh, making it an ideal choice for a wide array of IoT applications requiring wireless connectivity. Leveraging its exceptional RF performance, the XIAO MG24 delivers reliable, high-speed wireless communication over various distances, making it a versatile solution for both short-range and long-range applications. In this tutorial, we will explore the fundamental features of the XIAO MG24's Bluetooth capabilities, including how to scan for nearby Bluetooth devices, establish a Bluetooth connection, and transmit and receive data over that connection.
@@ -47,6 +47,7 @@ The Seeed Studio XIAO MG24 is a robust development board that supports Bluetooth
 The Seeed Studio XIAO MG24 has two antenna options: an internal antenna and an external antenna. For convenience, you can choose to use the internal antenna, and to enhance signal strength, you can opt for the external antenna. Below are the method for switching between the two antennas.
 
 PB04 is used to select between using the built-in antenna or an external antenna. Before that, you need to set PB05 high level to turn on this function. If PB04 is set low level, it uses the built-in antenna; if it set to high level, it uses the external antenna. Default is low level. If you want to set it high, you can refer the code below.
+
 ```cpp
 #define RF_SW_PW_PIN PB5
 #define RF_SW_PIN PB4
@@ -106,7 +107,7 @@ By using the GATT protocol, Bluetooth devices can communicate in different appli
 
 ATT, full name attribute protocol. In the end, ATT is composed of a group of ATT commands, that is, request and response commands, ATT is also the uppermost layer of the Bluetooth null packet, that is, ATT is where we analyze the Bluetooth packet the most.
 
-ATT command, formally known as ATT PDU (Protocol Data Unit). It includes 4 categories: read, write, notify and indicate. These commands can be divided into two types: if it requires a response, then it will be followed by a request; on the contrary, if it only requires an ACK but not a response, then it will not be followed by a request. 
+ATT command, formally known as ATT PDU (Protocol Data Unit). It includes 4 categories: read, write, notify and indicate. These commands can be divided into two types: if it requires a response, then it will be followed by a request; on the contrary, if it only requires an ACK but not a response, then it will not be followed by a request.
 
 Service and Characteristic are defined in the GATT layer. The Service side provides the Service, the Service is the data, and the data is the attribute, and the Service and Characteristic are the logical presentation of the data, or the data that the user can see are eventually transformed into the Service and Characteristic.
 
@@ -597,12 +598,12 @@ Meanwhile, you can search and download the **nRF Connect** app in major mobile a
 After downloading the software, follow the steps shown below to search for and connect XIAO_MG24, and you will see the advertised "Hello World".
 
 <table align="center">
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-1.jpg" style={{width:200, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-2.jpg" style={{width:200, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-3.jpg" style={{width:200, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-4.jpg" style={{width:200, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-1.jpg" style={{width:200, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-2.jpg" style={{width:200, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-3.jpg" style={{width:200, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEServer-4.jpg" style={{width:200, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 If you want to use another XIAO MG24 as a client to receive messages from the server, then you can use the following procedure for the client XIAO.
@@ -879,9 +880,7 @@ static bool find_complete_local_name_in_advertisement(sl_bt_evt_scanner_legacy_a
 
 The above program will turn XIAO into a client and search for nearby Bluetooth devices. When the UUID of the Bluetooth device matches the UUID you provided, it will connect to the device and obtain its characteristic value.
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Bluetooth/BLEClient_result.png" style={{width:800, height:'auto'}}/></div>
-
 
 #### Program annotation
 
@@ -996,16 +995,15 @@ ble_start_advertising();
 
 This is just a simple example on how to create a BLE server. The function of this program is to send notifications every two seconds, with the content being "Hello World".
 
-
-
 ### BLE Sensor Data Exchange
 
 Next, we'll come to the real world to complete a case. In this case, we will use the function `getCPUTemp()` of XIAO MG24 to measure the temperature of the current MCU, and then send the temperature value of the MCU to another XIAO MG24 via Bluetooth to simulate a health thermometer.
 
-We need to prepare two XIAO, one as server and one as client. Here is the sample program as a server. XIAO as a server has the following main tasks. 
-- First, use the function `getCPUTemp()` to get the current temperature of MCU; 
-- Second, create the Bluetooth server; 
-- Third, advertise the temperature values through Bluetooth; 
+We need to prepare two XIAO, one as server and one as client. Here is the sample program as a server. XIAO as a server has the following main tasks.
+
+- First, use the function `getCPUTemp()` to get the current temperature of MCU;
+- Second, create the Bluetooth server;
+- Third, advertise the temperature values through Bluetooth;
 - Fourth, show the real-time temperature.
 
 ```c
@@ -1747,25 +1745,23 @@ void sl_bt_on_event(sl_bt_msg_t *evt)
 }
 ```
 
-
 :::tip
 The above example gives the simplest example of a single value for a single sensor, sourced from Silicon Labs. If you would like to gain a deeper understanding of the usage of the SiliconLabs BLE API, we recommend reading the tutorial here.
 
 - [SiliconLabs Bluetooth Stack API Reference](https://docs.silabs.com/bluetooth/latest/bluetooth-stack-api/)
+
 :::
-
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
