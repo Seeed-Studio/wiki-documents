@@ -5,6 +5,7 @@ on:
    paths-ignore:
       - "ISSUE_TEMPLATE/**"
       - ".github/**.md"
+      - ".github/translation-trigger"
       - ".gitignore"
       - "demo/**"
       - "docker/**"
@@ -35,4 +36,3 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Test build website
         run: yarn docusaurus build
-        

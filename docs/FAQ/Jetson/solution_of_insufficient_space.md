@@ -9,8 +9,6 @@ last_update:
   author: Seraphina
 ---
 
-hello, hello. This is a test to check whether ```#define RF_SW_PIN PB4``` will be translated correctly.
-
 <!-- ### Q1: The remaining space in the eMMC in the received reComputer is only about 2GB, how can I solve the problem of insufficient space? -->
 
 We currently offer three ways to deal with this particular situation, and you can choose the right solution for you based on the actual situation.

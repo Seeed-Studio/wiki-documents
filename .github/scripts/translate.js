@@ -316,7 +316,7 @@ ${termsList}
 请只输出翻译后的YAML内容，不要添加任何解释。`;
 }
 
-// 🆕 更严格的翻译prompt（针对换行问题）
+// 简化并强化的翻译prompt
 function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
@@ -327,172 +327,103 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
 
 **分块翻译说明：**
 - 这是文档的第 ${chunkInfo.index + 1} 部分，共 ${chunkInfo.total} 部分
-- 请保持与前后部分的连贯性
-- 如果chunk开头或结尾的内容看起来不完整，请根据上下文合理处理
-- 保持原有的Markdown结构和格式` : '';
+- 请保持与前后部分的连贯性` : '';
 
-  return `你是一个专业的技术文档翻译专家。请将以下${isChunk ? '部分' : '完整的'} Markdown 文档从英文翻译成${langName}。
+  return `请将以下 Markdown 文档从英文翻译成${langName}。
 
-**🚨 CRITICAL FORMATTING RULES - 这些规则是强制性的，违反将导致翻译失败：**
+**STEP 1: 严格保持格式**
+- 每一行的换行位置必须与原文完全一致
+- Front Matter 中每个字段独占一行
+- 标题与正文之间的空行必须保持
+- 不要合并或拆分任何行
 
-1. **Front Matter 严格格式要求**：
-   - 每个字段必须独占一行
-   - keywords: 后面必须换行，然后每个关键词单独一行，以 "- " 开头
-   - title: 翻译后必须在同一行，不能换行
-   - description: 翻译后必须在同一行，不能换行
-   - 其他字段保持原格式不变
+**STEP 2: 翻译规则** 
+- 只翻译 title 和 description 字段的值
+- 标题和正文内容翻译为${langName}
+- 代码、链接、文件名保持不变
+- slug 字段：/path → ${pathPrefix}/path
 
-2. **标题换行严格要求**：
-   - 每个标题（# ## ### 等）后必须有一个空行
-   - 标题与下方内容之间必须有空行分隔
-   - 绝对禁止标题与正文在同一行
+**STEP 3: 术语保护**
+${termsList}
 
-3. **段落换行严格要求**：
-   - 段落之间必须有空行
-   - 列表项之间的换行保持原样
-   - 代码块前后的换行保持原样
-
-**MARKDOWN 格式规则：**
-- 严格保持所有 Markdown 格式不变（链接、代码块、标题等）
-- 代码块（\`\`\`包围的内容）：完全不翻译，包括其中的注释
-- 行内代码（单个\`包围的内容）：完全不翻译
-- 不要翻译：代码示例、文件名、API 名称、URL、专有技术术语
-
-**链接处理规则：**
-- 以 / 开头的链接，在路径前添加 "${pathPrefix}" 前缀
-- 例如：href="/Sensor_Network" → href="${pathPrefix}/Sensor_Network"
-- seeedstudio.com wiki 链接：https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
-- 外部链接和已有语言前缀的链接保持不变
-
-**Front Matter 处理示例：**
-
-输入：
----
-description: Some description here.
-title: Some title here
-keywords:
-- keyword1
-- keyword2
-image: some-image.jpg
-slug: /some-slug
----
-
-输出：
----
-description: 这里是描述翻译。
-title: 这里是标题翻译
-keywords:
-- keyword1
-- keyword2
-image: some-image.jpg
-slug: ${pathPrefix}/some-slug
----
-
-**标题处理示例：**
-
-输入：
-## Some Title
-
-Content here.
-
-输出：
-## 标题翻译
-
-内容翻译在这里。
-
-**术语保护（保持不变）：**
-${termsList}${chunkInstructions}
-
-**🚨 最重要的要求：**
-请逐行检查你的输出，确保：
-1. Front Matter中每个字段都正确换行
-2. 每个标题后都有空行
-3. 段落之间有适当的空行
-4. 格式与输入完全一致
-
-如果发现任何格式问题，立即修正！`;
+**重要：请逐行对照原文，确保换行位置完全一致！**${chunkInstructions}`;
 }
 
-// 🆕 强化的后处理函数
+// 🆕 强化的格式严格检查和修复
 function strictFormatPostProcess(translatedContent, originalContent) {
   try {
-    console.log('🔧 开始格式后处理...');
+    console.log('🔧 开始严格格式检查和修复...');
     
     let fixed = translatedContent;
     
-    // 1. 修复 Front Matter 格式问题
-    fixed = fixFrontMatterFormat(fixed, originalContent);
+    // 1. 强制修复 Front Matter 格式问题
+    fixed = forceFixFrontMatter(fixed, originalContent);
     
-    // 2. 修复标题换行问题
-    fixed = fixHeaderLineBreaks(fixed, originalContent);
+    // 2. 强制修复标题换行问题  
+    fixed = forceFixHeaders(fixed, originalContent);
     
-    // 3. 修复段落间距问题
-    fixed = fixParagraphSpacing(fixed);
+    // 3. 检查并报告格式问题
+    validateFormat(fixed, originalContent);
     
-    console.log('✅ 格式后处理完成');
+    console.log('✅ 严格格式检查完成');
     return fixed;
     
   } catch (error) {
-    console.warn(`⚠️ 格式后处理失败: ${error.message}`);
+    console.warn(`⚠️ 格式修复失败: ${error.message}`);
     return translatedContent;
   }
 }
 
-// 🆕 修复 Front Matter 格式
-function fixFrontMatterFormat(content, originalContent) {
+// 🆕 强制修复 Front Matter 格式
+function forceFixFrontMatter(content, originalContent) {
   const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
   if (!frontMatterMatch) return content;
   
   const originalFrontMatterMatch = originalContent.match(/^---\n([\s\S]*?)\n---\n/);
   if (!originalFrontMatterMatch) return content;
   
-  const frontMatterContent = frontMatterMatch[1];
-  const originalFrontMatterContent = originalFrontMatterMatch[1];
+  const frontMatterLines = frontMatterMatch[1].split('\n');
+  const originalLines = originalFrontMatterMatch[1].split('\n');
   
-  // 检查原文的换行模式
-  const originalLines = originalFrontMatterContent.split('\n');
-  const translatedLines = frontMatterContent.split('\n');
-  
+  // 确保每个字段都在独立的行上
   const fixedLines = [];
-  let translatedIndex = 0;
+  let i = 0;
   
-  for (let i = 0; i < originalLines.length && translatedIndex < translatedLines.length; i++) {
-    const originalLine = originalLines[i];
-    const translatedLine = translatedLines[translatedIndex];
+  while (i < frontMatterLines.length) {
+    const line = frontMatterLines[i];
     
-    if (originalLine.startsWith('title:') || originalLine.startsWith('description:')) {
-      // 这些字段应该在同一行
-      if (translatedLine.includes(':')) {
-        fixedLines.push(translatedLine);
-        translatedIndex++;
-      }
-    } else if (originalLine.trim() === '' || originalLine.startsWith(' ') || originalLine.startsWith('-')) {
-      // 空行、缩进行或列表项
-      if (translatedIndex < translatedLines.length) {
-        fixedLines.push(translatedLines[translatedIndex]);
-        translatedIndex++;
+    // 检查是否是字段开始行（包含冒号）
+    if (line.includes(':') && !line.trim().startsWith('-')) {
+      const [field, ...valueParts] = line.split(':');
+      const value = valueParts.join(':').trim();
+      
+      // 如果字段是 title 或 description，确保值在同一行
+      if (field.trim() === 'title' || field.trim() === 'description') {
+        fixedLines.push(`${field}: ${value}`);
+      } else if (field.trim() === 'keywords') {
+        fixedLines.push(`${field}:`);
+        // 添加关键词列表
+        i++;
+        while (i < frontMatterLines.length && (frontMatterLines[i].startsWith('-') || frontMatterLines[i].startsWith(' '))) {
+          fixedLines.push(frontMatterLines[i]);
+          i++;
+        }
+        continue;
+      } else {
+        fixedLines.push(line);
       }
     } else {
-      // 其他字段
-      if (translatedIndex < translatedLines.length) {
-        fixedLines.push(translatedLines[translatedIndex]);
-        translatedIndex++;
-      }
+      fixedLines.push(line);
     }
-  }
-  
-  // 添加剩余的翻译行
-  while (translatedIndex < translatedLines.length) {
-    fixedLines.push(translatedLines[translatedIndex]);
-    translatedIndex++;
+    i++;
   }
   
   const fixedFrontMatter = `---\n${fixedLines.join('\n')}\n---\n`;
   return content.replace(frontMatterMatch[0], fixedFrontMatter);
 }
 
-// 🆕 修复标题换行问题
-function fixHeaderLineBreaks(content, originalContent) {
+// 🆕 强制修复标题格式
+function forceFixHeaders(content, originalContent) {
   const lines = content.split('\n');
   const originalLines = originalContent.split('\n');
   const fixedLines = [];
@@ -501,22 +432,35 @@ function fixHeaderLineBreaks(content, originalContent) {
     const line = lines[i];
     fixedLines.push(line);
     
-    // 如果是标题行
-    if (line.match(/^#{1,6}\s+/)) {
-      // 检查下一行是否应该是空行
+    // 如果是标题行且下一行不是空行
+    if (line.match(/^#{1,6}\s+/) && i + 1 < lines.length) {
       const nextLine = lines[i + 1];
-      if (nextLine && nextLine.trim() !== '') {
-        // 在原文中查找对应的标题
-        const headerText = line.replace(/^#{1,6}\s+/, '').trim();
-        const originalHeaderIndex = findOriginalHeaderIndex(originalLines, headerText, line.match(/^(#{1,6})/)[1].length);
-        
-        if (originalHeaderIndex >= 0 && originalHeaderIndex + 1 < originalLines.length) {
-          const originalNextLine = originalLines[originalHeaderIndex + 1];
-          if (originalNextLine.trim() === '') {
-            // 原文中标题后有空行，添加空行
-            fixedLines.push('');
+      
+      // 在原文中找对应的标题位置
+      const headerLevel = line.match(/^(#{1,6})/)[1].length;
+      let foundOriginalHeader = false;
+      
+      for (let j = 0; j < originalLines.length; j++) {
+        const origLine = originalLines[j];
+        if (origLine.match(/^#{1,6}\s+/)) {
+          const origHeaderLevel = origLine.match(/^(#{1,6})/)[1].length;
+          if (origHeaderLevel === headerLevel) {
+            // 检查原文标题后是否有空行
+            if (j + 1 < originalLines.length && originalLines[j + 1].trim() === '') {
+              // 如果译文标题后没有空行，添加空行
+              if (nextLine && nextLine.trim() !== '') {
+                fixedLines.push('');
+              }
+            }
+            foundOriginalHeader = true;
+            break;
           }
         }
+      }
+      
+      // 如果没找到对应的原文标题，默认添加空行
+      if (!foundOriginalHeader && nextLine && nextLine.trim() !== '') {
+        fixedLines.push('');
       }
     }
   }
@@ -524,29 +468,45 @@ function fixHeaderLineBreaks(content, originalContent) {
   return fixedLines.join('\n');
 }
 
-// 🆕 查找原文中对应的标题
-function findOriginalHeaderIndex(originalLines, headerText, headerLevel) {
-  for (let i = 0; i < originalLines.length; i++) {
-    const line = originalLines[i];
-    if (line.match(/^#{1,6}\s+/)) {
-      const lineHeaderLevel = line.match(/^(#{1,6})/)[1].length;
-      if (lineHeaderLevel === headerLevel) {
-        return i;
+// 🆕 验证格式是否正确
+function validateFormat(content, originalContent) {
+  const issues = [];
+  
+  // 检查 Front Matter 格式
+  const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+  if (frontMatterMatch) {
+    const frontMatterLines = frontMatterMatch[1].split('\n');
+    
+    frontMatterLines.forEach((line, index) => {
+      if (line.includes(':') && !line.trim().startsWith('-')) {
+        const [field, ...valueParts] = line.split(':');
+        const value = valueParts.join(':').trim();
+        
+        if ((field.trim() === 'title' || field.trim() === 'description') && !value) {
+          issues.push(`第${index + 1}行: ${field}字段值不应为空`);
+        }
+      }
+    });
+  }
+  
+  // 检查标题格式
+  const lines = content.split('\n');
+  lines.forEach((line, index) => {
+    if (line.match(/^#{1,6}\s+/) && index + 1 < lines.length) {
+      const nextLine = lines[index + 1];
+      if (nextLine && nextLine.trim() !== '' && !nextLine.match(/^#{1,6}\s+/)) {
+        // 这可能是一个问题，但不一定，因为有些情况下标题后确实不需要空行
+        console.log(`⚠️ 注意: 第${index + 1}行标题后可能缺少空行`);
       }
     }
+  });
+  
+  if (issues.length > 0) {
+    console.warn('🚨 发现格式问题:');
+    issues.forEach(issue => console.warn(`  - ${issue}`));
+  } else {
+    console.log('✅ 格式验证通过');
   }
-  return -1;
-}
-
-// 🆕 修复段落间距
-function fixParagraphSpacing(content) {
-  // 确保段落之间有适当的空行
-  let fixed = content;
-  
-  // 修复连续的多个空行
-  fixed = fixed.replace(/\n{3,}/g, '\n\n');
-  
-  return fixed;
 }
 
 // 处理内部链接和seeedstudio.com链接
@@ -609,7 +569,7 @@ function addChineseEnglishSpacing(content) {
 }
 
 // Claude翻译函数
-async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null, isCategory = false) {
+async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
@@ -627,7 +587,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = f
       const response = await anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 20000,
-        temperature: 0.0, // 🆕 设为0以获得最一致的格式
+        temperature: 0, // 🔥 完全确定性输出
         system: systemPrompt,
         messages: [
           { role: 'user', content: text }

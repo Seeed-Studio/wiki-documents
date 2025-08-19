@@ -363,6 +363,12 @@ jobs:
             git push
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
             echo "✅ 翻译结果已提交并推送"
+            
+            # 创建触发文件来启动PR工作流
+            echo "$(date)" > .github/translation-trigger
+            git add .github/translation-trigger
+            git commit -m "触发PR工作流验证翻译结果"
+            git push
           fi
       
       - name: Check completion status
@@ -467,33 +473,3 @@ jobs:
                 body: comment
               });
             }
-
-  # 触发部署验证工作流
-  trigger-deploy-workflows:
-    needs: manual-translate
-    if: needs.manual-translate.outputs.translation-completed == 'true' && needs.manual-translate.outputs.has-changes == 'true'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Trigger deployment workflows
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            
-            // 触发测试部署工作流
-            await github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
-              workflow_id: 'Check_PR_Update.yml',
-              ref: context.ref
-            });
-            
-            // 延迟后触发主部署工作流
-            await new Promise(resolve => setTimeout(resolve, 5000));
-            
-            await github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
-              workflow_id: 'deploy.yml', 
-              ref: context.ref
-            });
