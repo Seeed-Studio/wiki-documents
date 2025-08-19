@@ -21,7 +21,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/A603_Carrier_Board.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 A603 キャリアボードは、Jetson Orin™ NX/Nano モジュールをサポートする強力な拡張ボードです。1 GbE ポート、SSD 用の M.2 Key M、WiFi/BlueTooth 用の M.2 Key E、CSI、HDMI を備え、高品質なビデオキャプチャと表示が可能です。また、4 つの USB ポート、ファン、RTC、柔軟な 9-20V 電源供給を備えています。コンパクトな設計により、さまざまなエッジコンピューティングアプリケーションに柔軟かつ簡単に統合できます。この Wiki では、A603 キャリアボードに接続された NVMe SSD および USB フラッシュドライブに [Jetpack](https://developer.nvidia.com/embedded/jetpack) をフラッシュする方法を説明します。

@@ -14,7 +14,7 @@ last_update:
 Grove Arduino 初学者套件是最适合初学者的 Arduino 初学者套件之一。它包含一个 Arduino 兼容板和 10 个额外的 Arduino 传感器，全部采用一体化 PCB 设计。**所有模块都通过 PCB 邮票孔连接到 Seeeduino，因此无需 Grove 线缆连接**。当然，您也可以将模块取出并使用 Grove 线缆连接模块。您可以使用这个 Grove Arduino 初学者套件构建任何您喜欢的 Arduino 项目。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

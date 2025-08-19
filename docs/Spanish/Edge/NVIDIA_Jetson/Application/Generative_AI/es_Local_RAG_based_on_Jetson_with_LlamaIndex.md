@@ -40,7 +40,7 @@ Y aquí les presentamos [RAG basado en la Jetson](https://github.com/Seeed-Proje
     </tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Conseguir una 🖱️</font></span></strong>
 				</a>
 			</div></td>

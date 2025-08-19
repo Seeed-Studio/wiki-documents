@@ -24,7 +24,7 @@ last_update:
 本指南将帮助您快速设置设备并开始使用，解锁强大的 AI 视觉功能。无论您是初学者还是经验丰富的用户，这份分步指南都将引导您完成安装、配置和首次使用。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱</font></span></strong>
     </a>
 </div>

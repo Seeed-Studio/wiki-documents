@@ -23,7 +23,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 このWikiでは、reComputer J401Bのさまざまなハードウェアおよびインターフェースを紹介し、それらを使用してプロジェクトアイデアを拡張する方法を説明します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J401B-optional-accessories.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 

@@ -19,7 +19,7 @@ last_update:
 La serie EdgeBox-RPi-200 son controladores industriales de computación en el borde (Edge Computing) basados en Raspberry Pi, diseñados para múltiples propósitos en entornos industriales. Diseñados como hardware industrial de alta escalabilidad y robustez, con una amplia variedad de recursos de entrada y salida (I/O), y respaldados por el sólido ecosistema de software industrial de Raspberry Pi, son una opción ideal para la automatización inteligente y soluciones del Internet Industrial de las Cosas (IIoT).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consíguelo Ya! 🖱️</font></span></strong>
     </a>
 </div>
@@ -67,7 +67,7 @@ import TabItem from '@theme/TabItem';
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114992991-wio-wm1302-lorawan-gateway-module-_spi_---us915-m---first.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-Without-SX1262-USB-US915-p-5602.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consíguelo ya! 🖱️</font></span></strong>
     </a>
 </div>
@@ -174,7 +174,7 @@ Por último, elige tu servidor de red LoRa® preferido y usa el `EUI ID` mostrad
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/1/114992967-spi-us915.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM1302-LoRaWAN-Gateway-Module-SPI-US-915-p-5454.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
     </a>
 </div>

@@ -20,7 +20,7 @@ El router LinkStar-H68K, impulsado por el chip quad-core Cortex-A55 RK3568, cuen
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/file_11.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Linkstar_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Conoce Más</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/Linkstar_Intro/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Conoce Más</font></span></strong></a></div>
 
 ## LinkStar-H28K
 
@@ -28,7 +28,7 @@ El LinkStar-H28K cuenta con dos puertos de red Gigabit que utilizan tecnología 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/H28K_Datasheet/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Conoce Más</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/es/H28K_Datasheet/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Conoce Más</font></span></strong></a></div>
 
 ## Soporte Técnico y Discusión de Producto
 

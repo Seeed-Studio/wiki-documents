@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 単色バックライトに飽きていませんか？この Grove モジュールを使用すると、シンプルで簡潔な Grove インターフェースを介して好きな色に設定できます。このモジュールは、マイクロコントローラーとの通信方法として I2C を採用しています。そのため、データ交換とバックライト制御に必要なピン数が約10本から2本に減少し、他の複雑なタスクのために IO を解放します。さらに、Grove - LCD RGB バックライトはユーザー定義の文字をサポートしています。ハート型やその他の外国語の文字を表示したいですか？この機能を活用してデザインしてください！この製品は Grove - Serial LCD の代替品です。もし基本的な16x2 LCDモジュールを探している場合は、緑黄色バックライトバージョンや青色バックライトバージョンも販売しています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

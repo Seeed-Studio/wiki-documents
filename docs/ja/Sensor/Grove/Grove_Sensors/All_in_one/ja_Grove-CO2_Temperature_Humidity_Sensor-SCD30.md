@@ -21,7 +21,7 @@ Grove - CO2 & 温度 & 湿度センサー (SCD30) は、高精度の二酸化炭
 このセンサーは、二酸化炭素検出のための非分散型赤外線 (NDIR) 測定技術に加え、Sensirion の湿度および温度センサーを同じセンサーモジュールに統合しています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

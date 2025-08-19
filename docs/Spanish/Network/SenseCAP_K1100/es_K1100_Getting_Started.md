@@ -18,7 +18,7 @@ En la era digital, donde el IoT y el big data están cada vez más presentes, se
 **SenseCAP - El Kit de Prototipos de Sensores con LoRa® y AI** te permite digitalizar rápidamente el mundo usando LoRaWAN® y resolver desafíos reales. Con este kit plug-and-play, cualquiera puede agregar AI a sus dispositivos de borde y desbloquear el potencial del AIoT.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

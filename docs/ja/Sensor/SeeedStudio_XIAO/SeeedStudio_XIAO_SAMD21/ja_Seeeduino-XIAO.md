@@ -23,7 +23,7 @@ Seeed Studio XIAO SAMD21（以前は Seeeduino XIAO と呼ばれていました�
 Seeed Studio XIAO SAMD21 には 14 本のピンがあり、11 のデジタルインターフェース、11 のアナログインターフェース、10 の PWM インターフェース（d1-d10）、1 つの DAC 出力ピン D0、1 つの SWD パッドインターフェース、1 つの I2C インターフェース、1 つの SPI インターフェース、1 つの UART インターフェース、シリアル通信インジケーター（T/R）、ピン多重化を通じたブリンクライト（L）として使用できます。LED（電源、L、RX、TX）の色は緑、黄、青、青です。さらに、Seeed Studio XIAO SAMD21 には Type-C インターフェースがあり、電源供給とコードのダウンロードが可能です。リセットボタンが 2 つあり、それらを短絡させてボードをリセットできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

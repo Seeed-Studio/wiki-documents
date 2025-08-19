@@ -23,10 +23,10 @@ Unlike traditional displays that consume power continuously, the reTerminal E10x
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.png" style={{width:500, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/reterminal_e10xx_main_page">
+  <a class="get_one_now_item" href="/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
@@ -44,20 +44,20 @@ The reTerminal E1001 features a 7.5-inch monochrome ePaper display with 4-level 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.png" style={{width:500, height:'auto'}}/></div><br />
 
-The reTerminal E1002 features a vibrant 7.3-inch six-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
+The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/reterminal_e10xx_main_page">
+  <a class="get_one_now_item" href="/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
 
 ### Key Features
 
-- 7.3-inch six-color ePaper display with ACeP technology
+- 7.3-inch full-color ePaper display with ACeP technology
 - 800×480 resolution
 - Rich color representation while maintaining low power consumption
 - Perfect for gallery displays, colorful dashboards, and visually oriented applications
@@ -67,10 +67,10 @@ The reTerminal E1002 features a vibrant 7.3-inch six-color ePaper display with A
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_hmi_overview">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI Wiki</font></span></strong>
   </a>
 </div><br />
@@ -110,6 +110,24 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 - [SenseCraft HMI Documentation](/reterminal_e10xx_main_page)
 - [ESP32S3 Datasheet](/reterminal_e10xx_main_page)
 - [GitHub Repository](/reterminal_e10xx_main_page)
+
+## FCC Notice
+
+Any changes or modifications not expressly approved by the party responsible for compliance could void the user’s authority to operate the equipment. This device complies with Part 15 of the FCC Rules. Operation is subject to the following two conditions:
+
+(1) this device may not cause harmful interference, and
+
+(2) this device must accept any interference received, including interference that may cause undesired operation. This transmitter must not be co-located or operating in conjunction with any other antenna or transmitter. 
+
+Note: This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to Part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy, and if not installed and used in accordance with the instructions, may cause harmful interference to radio communications. However, there is no guarantee that interference will not occur in a particular installation. If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures: 
+
+– Reorient or relocate the receiving antenna.
+
+– Increase the separation between the equipment and receiver. 
+
+– Connect the equipment into an outlet on a circuit different from that to which the receiver is connected. 
+
+– Consult the dealer or an experienced radio/TV technician for help. This device complies with FCC radiation exposure limits set forth for an uncontrolled environment. This device should be installed and operated with minimum distance 20cm between the radiator & your body.
 
 ## Tech Support & Product Discussion
 

@@ -17,7 +17,7 @@ Un **Beacon de ubicación BLE (Bluetooth Low Energy)** es un pequeño dispositiv
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/E5-Location-Beacon-p-5791.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/E5-Location-Beacon-p-5791.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora </font></span></strong>
     </a>
 </div>

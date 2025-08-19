@@ -30,7 +30,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </div>
 <br/> <br/>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/xiao-series-page"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 詳細を見る </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/xiao-series-page" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 詳細を見る </font></span></strong></a>
 </div>
 
 <br/> <br/>
@@ -310,7 +310,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         <td align="center">1.95μA</td>
 	</tr>
    <tr>
-	    <td colspan="11"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/xiao_topic_page/"><strong><span><font color={'FFFFFF'} size={"3"}>📚 互換プロジェクト</font></span></strong></a></div></td>        
+	    <td colspan="11"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/xiao_topic_page/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"3"}>📚 互換プロジェクト</font></span></strong></a></div></td>        
 	</tr>
     <tr>
 	    <th>Arduino</th>
@@ -414,11 +414,11 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         <td>Maker100-Eco (エコノミー) ロボティクス、IoT、TinyML機械学習コース<br />Jeremy Ellisによる</td>
     </tr>
     <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/xiao_topic_page/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki</font></span></strong></a></div></td>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/XIAO-Kit-Courses/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 コース</font></span></strong></a></div></td> 
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://fabacademy.org/2020/labs/leon/students/adrian-torres/fabxiao.html"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Fab-Xiao</font></span></strong></a></div></td> 
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=ZsQ0-jXdnRY"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Part1</font></span></strong></a></div><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=-1EP3iqYYdU"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Part2</font></span></strong></a></div></td> 
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/hpssjellis/maker100-eco"><strong><span><font color={'FFFFFF'} size={"4"}>📚 GitHub</font></span></strong></a></div></td>  
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/xiao_topic_page/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wiki</font></span></strong></a></div></td>
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/XIAO-Kit-Courses/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 コース</font></span></strong></a></div></td> 
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://fabacademy.org/2020/labs/leon/students/adrian-torres/fabxiao.html" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Fab-Xiao</font></span></strong></a></div></td> 
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=ZsQ0-jXdnRY" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Part1</font></span></strong></a></div><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.youtube.com/watch?v=-1EP3iqYYdU" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Part2</font></span></strong></a></div></td> 
+        <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://github.com/hpssjellis/maker100-eco" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 GitHub</font></span></strong></a></div></td>  
     </tr>
 </font>
 </table>

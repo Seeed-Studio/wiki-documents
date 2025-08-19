@@ -24,7 +24,7 @@ LinkStar-H68Kルーターは、クアッドコアCortex-A55 RK3568チップに�
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/file_11.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Linkstar_Intro/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細はこちら</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Linkstar_Intro/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細はこちら</font></span></strong></a></div>
 
 ## LinkStar-H28K
 
@@ -32,7 +32,7 @@ LinkStar-H28Kは、PCIE/RGMIIギガビット技術を利用した2つのギガ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/H28K/Overview.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/H28K_Datasheet/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細はこちら</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/H28K_Datasheet/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細はこちら</font></span></strong></a></div>
 
 ## 技術サポートと製品ディスカッション
 

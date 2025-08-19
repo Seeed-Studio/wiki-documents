@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-08-07 16:59:32 (北京时间)
-// 多语言页面: 1999 个
+// 生成时间: 2025-08-18 15:40:27 (北京时间)
+// 多语言页面: 2003 个
 
 (function() {
   'use strict';
@@ -32,10 +32,6 @@
     "cn",
     "en"
   ],
-  "/sensecraft-ai/grove-vision-ai-v2-workspace": [
-    "cn",
-    "en"
-  ],
   "/sensecraft-ai/overview": [
     "cn",
     "en"
@@ -56,11 +52,7 @@
     "cn",
     "en"
   ],
-  "/sensecraft-ai/tutorials/nvidia-jetson-workspace": [
-    "cn",
-    "en"
-  ],
-  "/sensecraft-ai/tutorials/sensecraft-ai-jetson": [
+  "/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library": [
     "cn",
     "en"
   ],
@@ -69,10 +61,6 @@
     "en"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection": [
-    "cn",
-    "en"
-  ],
-  "/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library": [
     "cn",
     "en"
   ],
@@ -89,6 +77,18 @@
     "en"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao": [
+    "cn",
+    "en"
+  ],
+  "/sensecraft-ai/grove-vision-ai-v2-workspace": [
+    "cn",
+    "en"
+  ],
+  "/sensecraft-ai/tutorials/nvidia-jetson-workspace": [
+    "cn",
+    "en"
+  ],
+  "/sensecraft-ai/tutorials/sensecraft-ai-jetson": [
     "cn",
     "en"
   ],
@@ -208,6 +208,14 @@
     "cn",
     "en"
   ],
+  "/sensecraft-fee/sensecraft-cloud-fee": [
+    "cn",
+    "en"
+  ],
+  "/sensecraft-fee/sensecraft-data-platform-api-pricing": [
+    "cn",
+    "en"
+  ],
   "/cloud/sensecraft-data/sensecraft-data-platform/overview": [
     "cn",
     "en"
@@ -221,14 +229,6 @@
     "en"
   ],
   "/sensecraft-data-platform/tutorials/device-management": [
-    "cn",
-    "en"
-  ],
-  "/sensecraft-fee/sensecraft-cloud-fee": [
-    "cn",
-    "en"
-  ],
-  "/sensecraft-fee/sensecraft-data-platform-api-pricing": [
     "cn",
     "en"
   ],
@@ -2215,207 +2215,258 @@
   ],
   "/solution_of_insufficient_space": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Troubleshooting_Installation": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Fan_Pinout": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/not_recognize-onboard-microcontroller": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Power_button": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/power_up": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/reinstall_the_Original_Windows": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/TPM": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Troubleshooting_BIOS-Related_Issues": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Turn_on_the_Fan": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/change_default_gateway_IP": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/fix_device_ReadOnlyRootFilesystem": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/set_up_Rclone_from_web_UI": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/use_a_CM4_witout_eMMC": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/R1000_default_username_password": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/black_glue_around_CM4": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Boot_OS_from_USB_flash_drive": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/buzzer-leds-not-work_by_drivers": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/check_Encryption_Chip": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/disable_screen_rotation_on_reTerminal": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/flashing_os_on_non-eMMC_CM4_replacement": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/flash_different_os_to_emmc": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Incorrect_screen_orientation_on_RPiOS_Bullseye": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/install-ubuntu-on-reterminal": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Logging_in_OS_using_USB_to_serial_converter": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/log_rpios_use_ssh_over_wifi_ethernet": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/reterminal_black_screen": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/screen_refresh_rate_low": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/troubleshooting-touch-screen-inaccuracy": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/upgrade-rpiOS_installed-packages": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Wakeup_reTerminal_LCD_after_sleep": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Program_loss_by_repeated_power": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/battery_charging_considerations": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/bat_5vNo_OUTPUT": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/check_battery_voltage": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/DO_NOT_display": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/error_when_use_XIAOnRF52840": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/error_when_using_the_code": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/exp32c3_d9_d6_d8": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/in_other_microcontrollers_or_development_boards": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/limitations_on_the_maximum_cable_length": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/multiple_in_the_same_CAN": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/noport_upload_fails": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/not_being_flush": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/pin_definition_error": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/reflash_the_bootloader": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/TFT_or_LVGL_program": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/the_maximum_baud_rate": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/troubleshoot_CAN_communication_issues": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/two_TF_card": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/uploading_while_an_error-rp2040": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/Getting_Started": [
     "cn",
@@ -4048,11 +4099,6 @@
     "ja"
   ],
   "/ReSpeaker-USB-Mic-Array": [
-    "cn",
-    "en",
-    "ja"
-  ],
-  "/ReSpeaker": [
     "cn",
     "en",
     "ja"
@@ -9550,6 +9596,22 @@
     "es",
     "ja"
   ],
+  "/solutions/jetson-crowd-tracking": [
+    "cn",
+    "en"
+  ],
+  "/mission_pack_features_v3": [
+    "cn",
+    "en"
+  ],
+  "/mission_pack_intro_v3": [
+    "cn",
+    "en"
+  ],
+  "/non_invasive_ct_energy_consumption": [
+    "cn",
+    "en"
+  ],
   "/ha_dify_watcher_llms": [
     "cn",
     "en"
@@ -10692,6 +10754,10 @@
     "cn",
     "ja"
   ],
+  "/ReSpeaker": [
+    "cn",
+    "ja"
+  ],
   "/raspberry_pi_4g_lte_hat_mbim": [
     "es",
     "ja"
@@ -10699,18 +10765,6 @@
   "/xiao_075inch_epaper_panel": [
     "es",
     "ja"
-  ],
-  "/non_invasive_ct_energy_consumption": [
-    "cn",
-    "en",
-  ],
-  "/mission_pack_intro_v3":[
-    "cn",
-    "en",
-  ],
-  "/mission_pack_features_v3":[
-    "cn",
-    "en",
   ]
 };
 

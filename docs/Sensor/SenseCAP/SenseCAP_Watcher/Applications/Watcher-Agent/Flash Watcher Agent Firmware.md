@@ -23,11 +23,6 @@ Special thanks to [XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32) for 
 
 This guide provides instructions for flashing the Watcher Agent firmware to your SenseCAP Watcher device using Espressif's Flash Download Tool.
 
-:::danger Warning
-Flashing this firmware will erase the factory information of the Watcher, you can use the following command to back up:
-
-esptool.py --chip esp32s3 --baud 2000000 --before default_reset --after hard_reset --no-stub read_flash 0x9000 204800 nvsfactory.bin
-:::
 ## Prerequisites
 
 ### Required Hardware
@@ -83,12 +78,12 @@ Configure the following settings:
 - SPI SPEED: 80MHz
 - SPI MODE: DIO
 - FLASH SIZE: 32Mbit
-- COM: Select the appropriate COM port (Note: Your device will show two COM ports)
-
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+- COM: In Device Manager, find the COM port whose name ends with “B” — select this one for flashing.
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::note
-If flashing doesn't start after clicking START, click STOP and try the other COM port. Only one of the two COM ports will work for flashing.
+If flashing doesn’t start after clicking START, click STOP and confirm you have selected the COM port ending with “B”.
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 :::
 
 ### Step 6. Erase Flash

@@ -23,10 +23,10 @@ reTerminal E10xx 系列代表了 Seeed Studio 的电子纸显示终端产品系�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.png" style={{width:500, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/cn/reterminal_e10xx_main_page">
+  <a class="get_one_now_item" href="/cn/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>立即获取</font></span></strong>
   </a>
 </div><br />
@@ -47,10 +47,10 @@ reTerminal E1001 配备 7.5 英寸单色电子纸显示屏，具有 4 级灰度�
 reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACeP（高级彩色电子纸）技术。这种彩色显示屏提供与电子纸技术相同的功耗效率优势，同时允许使用多种颜色创建更具视觉吸引力的内容，使其成为视觉区分和美观外观很重要的应用的理想选择。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002">
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/cn/reterminal_e10xx_main_page">
+  <a class="get_one_now_item" href="/cn/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>立即获取</font></span></strong>
   </a>
 </div><br />
@@ -67,10 +67,10 @@ reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACe
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/23.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_hmi_overview" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI Wiki</font></span></strong>
   </a>
 </div><br />

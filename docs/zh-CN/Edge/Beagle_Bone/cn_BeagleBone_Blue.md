@@ -17,7 +17,7 @@ BeagleBone® Blue 基于 BeagleBone® Black 的极其成功的开源硬件设计
 BeagleBone® Blue 结合了 BeagleBone® Black Wireless 的高性能灵活 WiFi/Bluetooth WiLink™ 接口和 Strawson Design 的 Robotics Cape 的机器人功能。BeagleBone® Blue 配备了板载 2 节（2S）LiPo 电池管理系统，带有充电器和电池电量指示灯，8 个舵机输出，4 个直流电机驱动器，4 个正交编码器输入，以及包括 CAN 在内的多种 GPIO 和串行协议连接器，9 轴 IMU 和气压计，4 个 ADC 输入，PC USB 接口，USB 2.0 主机端口，复位按钮，电源按钮，两个用户可配置按钮和六个指示 LED。基于 Octavo Systems 的系统级封装（System-In-Package），集成了高性能 TI ARM 处理器和 512MB DDR3，BeagleBone® Blue 在大约 10 秒内启动 Linux，并通过单根 USB 数据线在不到 5 分钟内通过 Web 浏览器开始开发。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

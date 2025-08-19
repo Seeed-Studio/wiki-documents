@@ -13,7 +13,7 @@ last_update:
   author: ZhuYaoHui
 ---
 
-# 如何从0搭建具身智能Lerobot SO-ARM100和SO-ARM101机械臂并完成自定义抓取任务
+# 如何从0搭建具身智能老版本Lerobot SO-ARM100和SO-ARM101机械臂并完成自定义抓取任务
 
 :::tip
 
@@ -34,7 +34,7 @@ SO-ARM10x 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://s.click.taobao.com/j6b5cCs">
+<a class="get_one_now_item" href="https://s.click.taobao.com/j6b5cCs" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
 </a></div>
 
@@ -163,13 +163,13 @@ For Ubuntu X86:
   - Ubuntu 22.04
   - CUDA 12+
   - Python 3.10
-  - Troch 2.6
+  - Troch 2.6+
 
 
 For Jetson Orin:
-  - Jetson Jetpack 6.2
+  - Jetson Jetpack 6.0+
   - Python 3.10
-  - Torch 2.6
+  - Torch 2.3
 
 ## 3D打印参考参数
 

@@ -1891,106 +1891,147 @@ const sidebars = {
     // },
 
 
-    {
-      type: 'category',
-      label: 'ReSpeaker 2-Mics Pi HAT',
-        items: [
-        'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
-        {
-          type: 'category',
-          label: 'For v1 Users \(Deprecated\)',
-          items: [
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Jetson',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'For v2 Users',
-          items: [
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
-            'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
-          ],
-        },
-        'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
-      ],
-    },
-      
 
     {
-      type: 'category',
-      label: 'ReSpeaker Lite',
-      items: [
-        'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
-        {
-          type: 'category',
-          label: 'ReSpeaker Lite with XIAO ESP32S3',
-          link: {
-            type: "doc",
-            id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
-          },
-          items: [
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
-           // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb',
-            {
-              type: 'doc', 
-              id:'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
-              label: 'Streams Generator', 
+    type: 'category',
+    label: 'ReSpeaker',
+    collapsed: true,
+    collapsible: true,
+    link: {
+      type: 'doc',
+      id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/ReSpeaker',
+    },
+    items: [
+      {
+        type: 'category',
+        label: 'ReSpeaker XVF 3800',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: 'doc',
+          id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
+        },
+        items: [
+          {
+            type: 'category',
+            label: 'ReSpeaker XVF 3800 with XIAO Intro',
+            collapsed: true,
+            collapsible: true,
+            link: {
+              type: 'doc',
+              id: 'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
             },
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',    
-            'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
-          ],
+            items: [
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_i2s_test',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_rgb_test',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_volume',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_record_playback',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_gpio',
+              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
+              {
+                type: 'category',
+                label: 'Application',
+                items: [
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
+                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: 'category',
+        label: 'ReSpeaker Lite',
+        collapsed: true,
+        collapsible: true,
+        link: {
+          type: 'doc',
+          id: 'Sensor/ReSpeaker_Lite/reSpeaker_lite_introduction',
         },
-        {
-              type: 'category',
-              label: 'Application',
-              items: [
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
-                'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
-              ],
-        },
-        'Sensor/ReSpeaker_Lite/respeaker_enclosure',
-          ],
-    },
-
- {
-      type: 'category',
-      label: 'reSpeaker XVF3800 USB 4 Mic Array',
         items: [
-        'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_usb_4_mic_array',
+          {
+            type: 'category',
+            label: 'ReSpeaker Lite with XIAO ESP32S3',
+            link: {
+              type: 'doc',
+              id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/xiao_respeaker',
+            },
+            items: [
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_test',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_rgb_test',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_volume',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_button',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_record_and_play',
+              // 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_i2s_rgb', // commented out
+              {
+                type: 'doc',
+                id: 'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_generator',
+                label: 'Streams Generator',
+              },
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_print',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_memory',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_player_spiffs',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_mqtt',
+              'Sensor/ReSpeaker_Lite/XIAO_ESP32_S3/respeaker_streams_i2s_tflite',
+            ],
+          },
+          {
+            type: 'category',
+            label: 'Application',
+            items: [
+              'Sensor/ReSpeaker_Lite/Application/respeaker_lite_ha',
+              'Sensor/ReSpeaker_Lite/Application/respeaker_lite_pi5',
+            ],
+          },
+          'Sensor/ReSpeaker_Lite/respeaker_enclosure',
+        ],
+      },
+      {
+        type: 'category',
+        collapsed: true,
+        collapsible: true,
+        label: 'ReSpeaker 2-Mics Pi HAT',
+        link: {
+          type: 'doc',
+          id:   'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT',
+        },
+        items: [
+          {
+            type: 'category',
+            label: 'For v1 Users (Deprecated)',
+            items: [
+              'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Raspberry',
+              'Sensor/ReSpeaker_2-Mics_Pi_HAT/v1-deprecated/ReSpeaker_2_Mics_Pi_HAT_Jetson',
+            ],
+          },
+          {
+            type: 'category',
+            label: 'For v2 Users',
+            items: [
+              'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_HAT_Raspberry_v2',
+              'Sensor/ReSpeaker_2-Mics_Pi_HAT/v2/ReSpeaker_2_Mics_Pi_Hat_v2_Speech_Recognition',
+            ],
+          },
+          'Sensor/ReSpeaker_2-Mics_Pi_HAT/ReSpeaker_2_Mics_Pi_HAT-Hardware-Revisions',
+        ],
+      },
+       {
+        type: 'category',
+        label: 'ReSpeaker XVF 3000',
+        collapsed: true,
+        collapsible: true,
+        items: [
+          'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v3.0',
+          'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
+          'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+        ],
+      },
+    ],
+  },
 
-         {
-              type: 'category',
-              label: 'reSpeaker XVF3800 USB 4 Mic Array with XIAO',
-              items: [
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_with_xiao_intro',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf3800_i2s_test',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_rgb_test',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_volume',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_record_playback',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_gpio',
-                  'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_mqtt_stream',
-                  
-              ],
-        },
-           {
-              type: 'category',
-              label: 'Application',
-              items: [
-              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_ha',
-              'Sensor/reSpeaker_XVF3800_USB_4_Mic_Array/respeaker_xvf_3800_edgeimpulse',
-              ],
-        },
-        
-      ],
-    },
+
+
 
 
     {
@@ -3696,6 +3737,7 @@ const sidebars = {
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_Ollama_and_AnythingLLM_on_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Quickly_Deploy_DeepSeek_on_reComputer_Jetson',
                 'Edge/NVIDIA_Jetson/Application/Generative_AI/Deploy_DeepSeek_on_reComputer_Jetson_with_MLC',
+                'Edge/NVIDIA_Jetson/Application/Generative_AI/GPT_OSS_Running_Live_on_reComputer_Jetson',
               ]
             },
             {
@@ -4049,7 +4091,7 @@ const sidebars = {
                   'Robotics/Robot_Sensor/Lidar/MID360',
                   'Robotics/Robot_Sensor/Lidar/A_Loam',
                   'Robotics/Robot_Sensor/Lidar/SLAMTEC',
-                    ]},
+                ]},
             {
               type: 'category',
               label: 'Camera',
@@ -4059,8 +4101,9 @@ const sidebars = {
                 // },
                 items: [
                   'Robotics/Robot_Sensor/Camera/Orbbec_Depth_Camera',
+                  'Robotics/Robot_Sensor/Camera/Orbbec_Gemini_335Lg',
                   'Robotics/Robot_Sensor/Camera/CSI_Camera'
-                    ]},
+                ]},
             {
               type: 'category',
               label: 'IMU',
@@ -4168,22 +4211,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'Cloud_Chain/SenseCraft_HMI/sensecraft_hmi_overview',
-      },
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'Cloud_Chain/SenseCraft_HMI',
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'SenseCraft APP',
       collapsed: true,
       collapsible: true,
@@ -4208,6 +4235,22 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'SenseCraft HMI',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'Cloud_Chain/SenseCraft_HMI/sensecraft_hmi_overview',
+      },
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'Cloud_Chain/SenseCraft_HMI',
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'SenseCraft Blockchain',
       collapsed: true,
       collapsible: true,
@@ -4215,18 +4258,6 @@ const sidebars = {
         {
           type: 'autogenerated',
           dirName: 'Cloud_Chain/SenseCraft_Blockchain',
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'SenseCraft Fee',
-      collapsed: true,
-      collapsible: true,
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'Cloud_Chain/SenseCraft_Fee',
         },
       ],
     },
@@ -4259,7 +4290,7 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
+      type: 'category', 
       label: 'Mission Pack',
       items:[
         {
@@ -4268,6 +4299,7 @@ const sidebars = {
         }
       ],
     },
+    'Solutions/jetson-crowd-tracking',
     // END OF Solution
 
     {
@@ -4835,7 +4867,7 @@ const sidebars = {
           label: 'reSpeaker',
           items: [
             //'Seeed_Elderly/reSpeaker/reSpeaker_Getting_Started',
-            'Seeed_Elderly/reSpeaker/ReSpeaker',
+            //'Seeed_Elderly/reSpeaker/ReSpeaker',
             'Seeed_Elderly/reSpeaker/ReSpeaker_Product_Guide',
             {
               type: 'category',
@@ -4852,7 +4884,7 @@ const sidebars = {
               label: 'Extension Board',
               items: [
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Drive_Unit',
-                'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
+                //'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array_v2.0',
                 'Seeed_Elderly/reSpeaker/Extension Board/ReSpeaker_Mic_Array',
               ],
             },
@@ -4861,7 +4893,7 @@ const sidebars = {
             'Seeed_Elderly/reSpeaker/ReSpeaker_6-Mic_Circular_Array_kit_for_Raspberry_Pi',
             'Seeed_Elderly/reSpeaker/ReSpeaker_Core',
             'Seeed_Elderly/reSpeaker/ReSpeaker_Core_v2.0',
-            'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
+            //'Seeed_Elderly/reSpeaker/ReSpeaker-USB-Mic-Array',
           ],
         },
 
@@ -8728,22 +8760,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'SenseCraft HMI',
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: 'zh-CN/Cloud_Chain/SenseCraft_HMI/cn_sensecraft_hmi_overview',
-      },
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'zh-CN/Cloud_Chain/SenseCraft_HMI',
-        },
-      ],
-    },
-    {
-      type: 'category',
       label: 'SenseCraft 应用程序',
       collapsed: true,
       collapsible: true,
@@ -8768,6 +8784,22 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'SenseCraft HMI',
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'zh-CN/Cloud_Chain/SenseCraft_HMI/cn_sensecraft_hmi_overview',
+      },
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'zh-CN/Cloud_Chain/SenseCraft_HMI',
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'SenseCraft 区块链',
       collapsed: true,
       collapsible: true,
@@ -8778,19 +8810,6 @@ const sidebars = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: 'SenseCraft 费用',
-      collapsed: true,
-      collapsible: true,
-      items: [
-        {
-          type: 'autogenerated',
-          dirName: 'zh-CN/Cloud_Chain/SenseCraft_Fee',
-        },
-      ],
-    },
-
         
     // START OF zh-hans SOLUTION
     {
@@ -8819,6 +8838,7 @@ const sidebars = {
         }
       ],
     },
+    'zh-CN/Solutions/jetson-crowd-tracking',
     // END OF Solutions
 
     {

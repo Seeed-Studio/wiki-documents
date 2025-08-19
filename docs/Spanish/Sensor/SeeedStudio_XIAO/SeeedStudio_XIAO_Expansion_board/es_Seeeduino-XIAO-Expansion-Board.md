@@ -21,7 +21,7 @@ Debido al formato de XIAO de Seeed Studio, todas las placas XIAO de Seeed Studio
 La Seeed Studio XIAO SAMD21, la Seeed Studio XIAO RP2040 y la Seeed Studio XIAO nRF52840 son compatibles con la Placa de Expansión Seeed Studio para XIAO.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

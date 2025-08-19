@@ -17,7 +17,7 @@ Wio Terminal Battery Chassis 是 [Wio-Terminal](https://www.seeedstudio.com/Wio-
 新版本的 Wio Terminal Battery Chassis 增加了 **德州仪器的 [BQ27441-G1A](http://www.ti.com/product/BQ27441-G1)** - 用于锂聚合物 (LiPo) 电池的自校准、基于 I2C 的燃料计量器，可用于测量电池电压以估算其充电百分比和剩余容量！
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
 </div>
 
 ## **特性**

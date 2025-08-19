@@ -17,7 +17,7 @@ last_update:
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/A603_Carrier_Board.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
 A603 Carrier Board is a powerful extension board that supports Jetson Orin™ NX/Nano modules. It features 1 GbE port, M.2 Key M for SSD, M.2 Key E for WiFi/BlueTooth, CSI, and HDMI for high-quality video capture and display. It also contains 4x USB ports, fan, RTC, flexible 9-20V power supply. By the compact design, it can be flexible and easy to integrate into a variety of edge computing applications. In this wiki, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetpack) to an NVMe SSD and a USB Flash drive connected to the A603 Carrier Board.

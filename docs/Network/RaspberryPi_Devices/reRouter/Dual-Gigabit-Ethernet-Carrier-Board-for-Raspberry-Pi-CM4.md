@@ -20,7 +20,7 @@ The Dual Gigabit Carrier Board powered by Raspberry Pi Compute Module 4 is equip
 It features a variety of I/O peripherals such as MIPI CSI, MIPI DSI, micro-HDMI to connect displays/ cameras, a standard 9-pin USB 3.0 header for more USB expansion, a micro-SD card slot, and an FPC connector, while maintaining a compact form factor! This board is ideal for HTPC makers, Linux developers, software router enthusiasts, and the majority of regular Raspberry Pi users.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

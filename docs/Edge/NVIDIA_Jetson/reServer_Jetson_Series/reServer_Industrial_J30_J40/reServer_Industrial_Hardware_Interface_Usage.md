@@ -37,7 +37,7 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 - **Certifications:** FCC, CE, UKCA, ROHS, KC
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 

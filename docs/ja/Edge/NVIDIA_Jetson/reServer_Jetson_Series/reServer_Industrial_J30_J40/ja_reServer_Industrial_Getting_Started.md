@@ -25,7 +25,7 @@ reServer Industrial はパッシブヒートシンクとファンレス設計を
 reServer Industrial は5つのRJ45 GbEポートを備えており、そのうち4つはPoE PSEポートで、IPカメラなどのデバイスにイーサネット経由で電力を供給します。これにより、別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でのネットワークデバイスの展開が簡単になります。残りのGbEポートはネットワークスイッチやルーターに接続するために使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 </a></div>
 

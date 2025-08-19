@@ -15,7 +15,7 @@ last_update:
 Grove - 二氧化碳、温度和湿度传感器 - SCD41 是由 Sensirion 制造的小型但功能强大的模块。它是一款多功能传感器，可以同时测量温度、压力、湿度和二氧化碳。基于 SCD41 模块，您可以将此传感器用于 GPS、物联网设备或其他需要这四个参数的设备。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

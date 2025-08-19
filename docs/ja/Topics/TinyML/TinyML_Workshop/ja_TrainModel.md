@@ -45,7 +45,7 @@ Seeed Studio [SenseCraft AIプラットフォーム](https://sensecraft.seeed.cc
 以下のボタンをクリックしてSenseCraft AIプラットフォームのホームページにアクセスします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AIプラットフォーム</font></span></strong></a>
+	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AIプラットフォーム</font></span></strong></a>
 </div><br />
 
 #### ステップ4. モデルのトレーニングを開始する

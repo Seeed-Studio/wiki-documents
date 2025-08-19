@@ -13,11 +13,11 @@ last_update:
 
 ## Introduction
 
-The reTerminal E1002 is a 7.3-inch six-color ePaper display terminal designed for low-power information display applications. Unlike traditional e-readers, the reTerminal E1002 is optimized for displaying vibrant text and graphical information in various environments such as desktops, walls, and retail shelves. Its power-efficient design and wireless connectivity make it an ideal solution for smart home dashboards, information displays, digital signage, and electronic photo frames, with the added benefit of full color visualization.
+The reTerminal E1002 is a 7.3-inch full-color ePaper display terminal designed for low-power information display applications. Unlike traditional e-readers, the reTerminal E1002 is optimized for displaying vibrant text and graphical information in various environments such as desktops, walls, and retail shelves. Its power-efficient design and wireless connectivity make it an ideal solution for smart home dashboards, information displays, digital signage, and electronic photo frames, with the added benefit of full color visualization.
 
 ### Features
 
-- **7.3-inch Six-Color ePaper Display**: 800×480 resolution with ACeP (Advanced Color ePaper) technology
+- **7.3-inch full-Color ePaper Display**: 800×480 resolution with ACeP (Advanced Color ePaper) technology
 - **ESP32S3 Controller**: Powerful main controller with built-in Wi-Fi connectivity
 - **Ultra-Low Power Consumption**: Designed for extended battery operation
 - **Integrated Buzzer**: For notifications and alerts
@@ -33,7 +33,7 @@ The reTerminal E1002 is a 7.3-inch six-color ePaper display terminal designed fo
 
 The reTerminal E1002 hardware includes:
 
-1. **7.3-inch Six-Color ePaper Display**: Full-color display with 800×480 resolution
+1. **7.3-inch full-Color ePaper Display**: Full-color display with 800×480 resolution
 2. **Refresh Button**: Located at the top of the device for manual screen refresh
 3. **Navigation Buttons**: Left and right buttons for page navigation
 4. **Power Switch**: Located on the back for powering the device on/off
@@ -61,7 +61,19 @@ The reTerminal E1002 hardware includes:
 The reTerminal E10xx only supports MicroSD cards up to 64GB in Fat32 format.
 :::
 
-**Step 3.** Update the firmware to ensure your device is running the latest version:
+**Step 3.** (Optional) Install USB drivers if needed:
+
+Depending on your operating system, you may need to install USB drivers to ensure proper communication with your reTerminal E1002:
+
+- **For Mac computers**: Download and install the CH34X driver from [WCH official website](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)
+
+- **For Windows computers**: 
+  - Windows 11 systems typically include the driver by default
+  - For Windows 10 and earlier versions, you may need to download and install the CH341 driver from [WCH official website](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)
+
+- **For Linux systems**: Most modern Linux distributions include the necessary drivers by default
+
+**Step 4.** Update the firmware to ensure your device is running the latest version:
 
 1. Connect your reTerminal E1002 to your computer using the USB-C cable
 
@@ -70,7 +82,7 @@ The reTerminal E10xx only supports MicroSD cards up to 64GB in Fat32 format.
 3. Visit **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** and sign in to your account
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -134,7 +146,7 @@ The reTerminal E10xx series only supports 2.4GHz WiFi networks, not 5GHz or othe
 **Step 1.** Visit [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) in your web browser and create an account or sign in.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
 </div><br />

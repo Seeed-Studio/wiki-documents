@@ -45,7 +45,7 @@ XIAO ESP32S3 作为主控 MCU 和 Wio-SX1262 LoRa 无线电套件可以配置为
 点击下载固件：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/seeed_xiao_esp32s3_one_chanel_hub_2024_12_09_01.rar"><strong><span><font color={'FFFFFF'} size={"4"}> 下载 ⏬ </font></span></strong></a>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/seeed_xiao_esp32s3_one_chanel_hub_2024_12_09_01.rar" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 下载 ⏬ </font></span></strong></a>
 </div>
 
 **步骤 1**：下载 Esptool，更多信息请参考 [Esptool 文档](https://docs.espressif.com/projects/esptool/en/latest/esp32/)。

@@ -48,12 +48,12 @@ Para seguir este tutorial necesitarás preparar lo siguiente. Además del XIAO E
  </tr>
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -72,7 +72,7 @@ El contenido de este tutorial cubrirá ampliamente los siguientes pasos:
 Hemos creado una página para flashear rápidamente el firmware para el XIAO. Puedes usar el sitio siguiente para flashear el firmware del relay sin programación. El sitio detectará automáticamente el chip ESP32 de tu XIAO y flasheará la versión de firmware correspondiente.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Flasheador de Firmware 🖱️</font></span></strong>
     </a>
 </div>
@@ -108,7 +108,7 @@ Busca e instala ESPHome desde la Tienda de Complementos.
 Usa la página rápida para flashear firmware de XIAO mencionada antes. El sitio detectará el chip y flasheará el firmware adecuado sin necesidad de programar.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Flasheador de Firmware 🖱️</font></span></strong>
     </a>
 </div>

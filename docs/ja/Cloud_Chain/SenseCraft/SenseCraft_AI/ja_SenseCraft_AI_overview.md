@@ -22,7 +22,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 SenseCraft AI は、開発者やクリエイターが AI プロジェクトを簡単に構築および展開できるように設計されたオールインワンプラットフォームです。このウェブサイトは、AI 開発プロセスを効率化するための幅広いツールと機能を提供し、さまざまな専門知識レベルのユーザーが利用できるようにしています。本 Wiki では、SenseCraft AI ウェブサイトの主なセクションを探り、それらの主要な機能と特徴について概観します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>ワンクリックで直接アクセス 🖱️</font></span></strong>
     </a>
 </div>

@@ -19,7 +19,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Grove - CO2 & 温度 & 湿度センサー - SCD41 は、Sensirion によって製造された小型で高性能なモジュールです。このセンサーは、温度、圧力、湿度、CO2 を同時に測定できる多機能センサーです。SCD41 モジュールをベースにしており、GPS、IoT デバイス、またはこれら4つのパラメータを必要とする他のデバイスで使用することができます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

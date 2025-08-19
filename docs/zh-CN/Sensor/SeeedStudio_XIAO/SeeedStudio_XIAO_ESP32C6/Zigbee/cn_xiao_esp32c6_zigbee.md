@@ -43,7 +43,7 @@ Zigbee 是一种广泛采用的无线通信协议，在家庭自动化、智能�
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
-        ">
+        " target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -60,7 +60,7 @@ Zigbee 是一种广泛采用的无线通信协议，在家庭自动化、智能�
 要使用 Zigbee SDK，建议使用 Espressif 的 ESP-IDF 开发框架。ESP-IDF 的安装和环境配置在 Espressif 官网提供了针对不同系统的详细安装过程，您可以通过下面的按钮跳转阅读。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation">
+    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 前往页面 🖱️</font></span></strong>
     </a>
 </div>

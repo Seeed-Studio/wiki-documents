@@ -135,7 +135,7 @@ Seeed Studio XIAO RP2040 と比較すると、Seeed Studio XIAO nRF52840 は **�
 Seeed Studio XIAO nRF52840 Sense は、Seeed Studio XIAO 拡張ボードと互換性があります。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

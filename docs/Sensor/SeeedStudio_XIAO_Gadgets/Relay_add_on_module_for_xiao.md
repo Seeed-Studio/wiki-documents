@@ -48,12 +48,12 @@ If you want to follow this tutorial through everything, you will need to prepare
  </tr>
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -72,7 +72,7 @@ The content of this tutorial will broadly go through the following steps.
 We've created a quick flash firmware page for the XIAO, you can use the site below directly to flash Relay's firmware for the XIAO you have without programming. The site will automatically detect the chip of the XIAO you are connecting to, without having to choose, and directly flash the XIAO firmware version that corresponds to the ESP32 chip.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Firmware Flasher 🖱️</font></span></strong>
     </a>
 </div>
@@ -109,7 +109,7 @@ In the Add-on Store, you can search for and install ESPHome.
 We've created a quick flash firmware page for the XIAO, you can use the site below directly to flash Relay's firmware for the XIAO you have without programming. The site will automatically detect the chip of the XIAO you are connecting to, without having to choose, and directly flash the XIAO firmware version that corresponds to the ESP32 chip.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Firmware Flasher 🖱️</font></span></strong>
     </a>
 </div>

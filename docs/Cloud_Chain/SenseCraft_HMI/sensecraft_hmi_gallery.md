@@ -31,7 +31,7 @@ This article will use the [reTerminal E1002](https://wiki.seeedstudio.com/gettin
 Step 1. Navigate to the SenseCraft HMI platform below.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
 </div><br />

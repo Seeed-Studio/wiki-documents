@@ -23,7 +23,7 @@ Seeed Studio XIAO RP2040 有 14 个 GPIO 引脚，其中包括 11 个数字引�
 Seeed Studio XIAO RP2040 兼容 Seeed Studio XIAO 扩展板。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

@@ -20,7 +20,7 @@ La serie EdgeBox-RPI-200 funciona como un controlador industrial de computación
 Los controladores perimetrales, como alternativas versátiles a los PLC y PAC tradicionales, abordan tanto las necesidades de tecnología operacional (OT) como de tecnología de la información (IT) a través de sistemas operativos cuidadosamente diseñados. Garantizan un tiempo de ejecución determinista y proporcionan un entorno de computación para tareas avanzadas como análisis, mejorando la utilidad en diversos escenarios industriales. Con la fuerza laboral contemporánea familiarizada con lenguajes de programación modernos y entornos de kits de desarrollo debido a la era de los smartphones, la serie EdgeBox-RPI-200 ofrece una interfaz fácil de usar. Su factor de forma compacto permite operación en tiempo real y control multiproceso, sirviendo a una amplia variedad de propósitos industriales, incluidos PLC, PAC, puertas de enlace IIoT, servidores OPC UA y computadoras industriales.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong>
     </a>
 </div>

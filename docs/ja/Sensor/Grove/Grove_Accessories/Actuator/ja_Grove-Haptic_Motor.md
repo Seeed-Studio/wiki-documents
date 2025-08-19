@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Grove - ハプティックモーターは、[DRV2605L](http://www.ti.com/product/DRV2605L)を統合したGroveモジュールで、プロジェクトにより多くの感覚を与えることができます。このモーターは、振動レベルを上下させるなどのさまざまな効果を実現するために特別に設計されており、ウェアラブルやその他のIoTデバイスに適しています。現在、123種類の振動モードをシミュレートする使いやすいライブラリを開発しており、これによりプロトタイピングが迅速になります。また、DRV2605Lドライバーを使用して、加速度の一貫性、開始時間、停止時間の観点でアクチュエータの性能を向上させる高度な機能を開発することができます。このドライバーは、共有I2C互換バスまたはPWM入力信号を介してアクセス可能です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Haptic-Motor-p-2546.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Haptic-Motor-p-2546.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 ## 特徴

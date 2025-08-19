@@ -21,7 +21,7 @@ reServer Industrial comes with a passive heatsink and a fanless design, making i
 reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for providing power over Ethernet to devices like IP cameras. This eliminates the need for a separate power source and makes it easier to deploy network devices in areas without readily available power outlets. The remaining GbE port is used to connect to a network switch or router, enabling communication with other devices on the network and access to the Internet.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 

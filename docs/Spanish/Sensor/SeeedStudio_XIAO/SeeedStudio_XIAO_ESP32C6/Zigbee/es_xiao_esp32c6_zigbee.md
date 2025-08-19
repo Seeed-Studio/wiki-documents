@@ -43,7 +43,7 @@ En este tutorial utilizaremos **dos** XIAO ESP32C6 como ejemplos para explicar Z
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
-        ">
+        " target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -60,7 +60,7 @@ En esta sección, te guiaremos a través de la configuración del entorno de des
 Para utilizar el SDK de Zigbee, se recomienda usar el marco de desarrollo ESP-IDF de Espressif. La instalación de ESP-IDF y la configuración del entorno están detalladas en el sitio web oficial de Espressif, donde se proporciona un proceso de instalación para diferentes sistemas operativos. Puedes leerlo a través del botón de abajo para acceder a la documentación completa.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation">
+    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Ve a la página 🖱️</font></span></strong>
     </a>
 </div>

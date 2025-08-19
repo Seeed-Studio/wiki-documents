@@ -29,7 +29,7 @@ Wio Terminal バッテリーチャーシスは、[Wio-Terminal](https://www.seee
 [Wio-Terminal 開発ボード](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) + Wio Terminal バッテリーチャーシスを使用することで、最も強力でコンパクトなIoTプロジェクトを簡単に構築できます。拡張されたGroveポートを使用して、[Groveエコシステム](https://www.seeedstudio.com/category/Grove-c-1003.html)のプラグアンドプレイ機能を楽しむことができます！
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
     
 </div>
 

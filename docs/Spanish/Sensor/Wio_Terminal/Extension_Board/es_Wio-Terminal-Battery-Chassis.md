@@ -17,7 +17,7 @@ El Chasis de Batería para Wio Terminal es una placa de expansión imprescindibl
 Con el [Wio Terminal Dev Board](https://www.seeedstudio.com/Wio-Terminal-p-4509.html) + el Chasis de Batería para Wio Terminal, puedes construir proyectos IoT compactos y potentes fácilmente. Gracias a los puertos Grove extendidos, podrás disfrutar de las funcionalidades plug and play del [ecosistema Grove](https://www.seeedstudio.com/category/Grove-c-1003.html).
 
 <div class="get_one_now_container" style={{ textAlign: "center"}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html" target="_blank">
     <strong><span><font color="FFFFFF" size="4">¡Consíguelo ahora!</font></span></strong>
   </a>
 </div>

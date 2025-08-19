@@ -26,7 +26,7 @@ reServer 基于 ODYSSEY X86 v2 主板，搭载最新的第 11 代 Intel® Core�
 通过双 SATA III 6.0Gbps 数据连接器，reServer 可支持最多两个 3.5"/2.5" SATA 内部硬盘驱动器以获得更多存储空间。它还配备了 M.2 接口，可连接各种 SSD 以实现更快的读写速度。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

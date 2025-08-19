@@ -26,7 +26,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html?utm_source=seeed&utm_medium=wiki">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html?utm_source=seeed&utm_medium=wiki" target="_blank">
   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
   </a>
 </div><br></br>
@@ -174,8 +174,12 @@ To install the MicroPython firmware on the XIAO RP2350, follow these steps:
 
 **Step 1.1. Download the MicroPython Firmware:**  
 
-- Navigate to the [MicroPython Downloads](https://micropython.org/download/RPI_PICO2/) page.
+- Navigate to the [MicroPython Downloads](https://micropython.org/download/SEEED_XIAO_RP2350/) page.
 - Download the latest `.uf2` firmware file compatible with the XIAO RP2350.
+
+:::tip
+The default firmware is for ARM architecture, if you want to use RISC-V, please use the corresponding firmware version in the link.
+:::
 
 **Step 1.2 Enter BOOTSEL Mode:**  
 

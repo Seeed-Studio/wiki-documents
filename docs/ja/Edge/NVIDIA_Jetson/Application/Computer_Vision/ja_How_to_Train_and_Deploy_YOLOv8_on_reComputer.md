@@ -26,7 +26,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 本ドキュメントでは、[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=f6de8f6c8d814c021e13f4455d041d03&objectID=5586&indexName=bazaar_retailer_products)を使用して交通シーンの物体検出モデルをトレーニングおよびデプロイします。本ドキュメントでは、[YOLOv8](https://www.ultralytics.com/)物体検出アルゴリズムを例として使用し、全プロセスの詳細な概要を提供します。以下に記載されているすべての操作は、Jetsonエッジコンピューティングデバイス上で行われることに注意してください。Jetsonデバイスには、[JetPack 5.0](https://wiki.seeedstudio.com/ja/NVIDIA_Jetson/)以上のオペレーティングシステムがインストールされている必要があります。

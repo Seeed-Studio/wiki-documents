@@ -35,12 +35,12 @@ Grove Vision AI V2 は、人工知能を統合してセキュリティと運用�
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -57,7 +57,7 @@ Grove Vision AI V2 は、人工知能を統合してセキュリティと運用�
 まず、SenseCraft AI モデルアシスタントのメインページを開きます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI へ移動</font></span></strong></a>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI へ移動</font></span></strong></a>
 </div>
 
 Type-C ケーブルを使用して Grove Vision AI V2 をコンピュータに接続してください。
@@ -89,7 +89,7 @@ SenseCraft AI モデルアシスタントページの右上隅で、**Grove Visi
 ### ステップ 4. SSCMA パッケージをダウンロードして Arduino IDE にアップロード
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA"><strong><span><font color={'FFFFFF'} size={"4"}>SSCMA Zip をダウンロード</font></span></strong></a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>SSCMA Zip をダウンロード</font></span></strong></a>
 </div>
 
 ここから zip パッケージをダウンロードしてください。

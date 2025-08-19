@@ -42,7 +42,7 @@ Seeed Studio [SenseCraft AI平台](https://sensecraft.seeed.cc/ai/#/model)是一
 点击下面的按钮进入SenseCraft AI平台主页。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI平台</font></span></strong></a>
+	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI平台</font></span></strong></a>
 </div><br />
 
 

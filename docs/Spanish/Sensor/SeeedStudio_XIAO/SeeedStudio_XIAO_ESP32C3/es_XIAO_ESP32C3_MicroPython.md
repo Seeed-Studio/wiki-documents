@@ -33,12 +33,12 @@ Estoy utilizando la Seeed Studio XIAO ESP32C3 y la placa de expansión Base para
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -56,12 +56,12 @@ Estoy utilizando la Seeed Studio XIAO ESP32C3 y la placa de expansión Base para
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://thonny.org/">
+          <a class="get_one_now_item" href="https://thonny.org/" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> Descarga ⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://github.com/espressif/esptool">
+          <a class="get_one_now_item" href="https://github.com/espressif/esptool" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> Git clone aquí ⏬</font></span></strong>
           </a>
       </div></td>

@@ -30,7 +30,7 @@ reServer は ODYSSEY X86 v2 ボードをベースにしており、最新の Int
 デュアルSATA III 6.0Gbpsデータコネクタを備えたreServer は、最大2つの3.5インチ/2.5インチSATA内部ハードディスクドライブを装備して、より多くのストレージを確保できます。また、M.2コネクタを備えており、より高速な読み書き速度を実現するためにさまざまなSSDを接続できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-X86-i3-8G-256SSD-p-4965.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

@@ -13,7 +13,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/SPA06-003.jpg" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
@@ -30,7 +30,7 @@ As the sensor is quite sensitive to the environmental conditions, **please DO NO
 
 ## Feature
 
--   **Wide measurement range:**  Pressure measurements range from 300hPa~1100hPa and temperature measurements range from -40℃~+85℃.
+-   **Wide measurement range:**  Pressure measurements range from 300hPa - 1100hPa and temperature measurements range from -40℃ - +85℃.
 -   **High accuracy:** The absolute accuracy of ±0.3 hPa for pressure measurement and ±1 ℃ accuracy for temperature measurement.
 -   **Long standby time**: Using the FIFO allows the host processor to stay in sleep mode for longer periods between readouts, reducing overall system power consumption and achieving a standby current as low as 0.5 μA.
 -   **Grove Interface:** Features a [Grove 4-pin connector, ensuring a "Plug and Play"](https://wiki.seeedstudio.com/Grove_System/) experience to connect with mainstream hardware platforms like Arduino, Raspberry Pi, Micro:bit and many more.
@@ -223,18 +223,74 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width="400" height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width="400" height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/small.jpg" alt="pir" width="350" height="auto" /></p> |
 | [Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html) | [Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html) | [Get One Now](https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html) |
 
-- *Connect Grove with Arduino*
 
-<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/grove_with_arduino.png" /></div>
 
-- *Play with XIAO ESP32 Series*
+- *Play with XIAO Series*
 
 | Seeed Studio Grove Base for XIAO                             | XIAO ESP32-S3                                                | Grove-Barometer Sensor SPA06-003                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Thumbnail-27.png"/></div> | <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" /></div> | <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/small.jpg" /></div> |
 | [Get One Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) | [Get One Now](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) | [Get One Now](https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html) |
 
-- _Connect Grove with ESP32 Series_
+
+
+
+
+
+### Software
+
+
+**Step 1.** Launch the Arduino application.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg" style={{width:800, height:'auto'}}/></div>
+
+<div class="download_arduino_container" style={{textAlign: 'center'}}>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
+        <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
+</div>
+
+<br></br>
+
+**Step 2.** Select your development board model and add it to the Arduino IDE.
+
+- If you want to use **Seeed Studio XIAO SAMD21** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO RP2040** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO RP2350** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_rp2350_arduino/#setting-up-the-software)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO nRF52840** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO ESP32C3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO ESP32C6** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/#software-preparation)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO RA4M1** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/#software-preparation)** to finish adding.
+
+- If you want to use **Seeed Studio XIAO MG24** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)** to finish adding.
+
+
+**Step 3.** Download the library from Github, and refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SPA06" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div><br />
+
+
+#### Use I2C Bus
+
+**Step 1.** Connect your Grove with controller
+
+- *Connect Grove with Arduino*
+
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/grove_with_arduino.png" /></div>
+
+
+- *Connect Grove and XIAO*
 
 <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/grove_with_esp32.png" /></div>
 
@@ -278,23 +334,11 @@ This connection table applies to all boards with I2C support.
 </div>
 
 
+**Step 2.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Seeed Arduino SPA06>Example1_BasicRead
 
-### Software
+**Step 3.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-**Step 1.** Download the [library](https://github.com/Seeed-Studio/Seeed_Arduino_SPA06) from Github.
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SPA06">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
-
-**Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-
-**Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Seeed Arduino SPA06>Example1_BasicRead
-
-**Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
-**Step 5.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
+**Step 4.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
 
 :::success
 The outcome will display on the **Serial Port** as following if everything goes well.
@@ -302,7 +346,7 @@ The outcome will display on the **Serial Port** as following if everything goes 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/outcome.png" style={{width:400, height:'auto'}}/></div>
 
-### Fuction
+
 
 **Here is the code:**
 
@@ -380,23 +424,105 @@ void loop() {
 }//loop()
 ```
 
-The following functions are used in the example code above. Here's a breakdown of what each function does:
-```cpp
-Serial.begin(115200)
-```
-Initializes serial communication between the ESP32 and your computer, with a baud rate of 115200. This allows debug messages to be printed to the Serial Monitor.
-```cpp
-Wire.begin()
-```
-Initializes the I²C bus using default pins (on most platforms: SDA and SCL). This is required before communicating with the SPL07-003 sensor.
-```cpp
-spl.begin(SPL07_ADDR)
-```
-Initializes the SPL07-003 sensor using the specified I²C address. It returns false if the sensor is not found on the bus.
+#### Use SPI Bus
 
-- Parameter: SPL07_ADDR – the I²C address (0x76 or 0x77)
+**Step 1.** Connect Grove Barometer Sensor SPA06-003 with your controller
 
-- Return: true on success, false if the sensor is not detected
+<div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/connect_grove_with_xiao.png" /></div>
+
+:::tip
+
+- To select SPI bus, please use a sharp knife or a soldering iron to cut the two pads in the Interface Bus Configuration Area.
+
+- Do not touch or shake or let this product in vibration when it works. This will cause interference and will affect the accuracy of data collected.
+
+:::
+
+**Step 2.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Seeed Arduino SPA06>Example3_SPIRead
+
+**Step 3.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+
+**Step 4.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, and altitude.
+
+:::success
+The outcome will display on the **Serial Port** as following if everything goes well.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/spi_outcome.png" style={{width:400, height:'auto'}}/></div>
+
+**Here is the code:**
+
+```cpp
+#include <SPI.h>
+#include "SPL07-003.h"
+
+
+// Define SPL07-006 I2C address
+#define SPL07_ADDR SPL07_ADDR_DEF // Default I2C address (SDO=high)
+// #define SPL07_ADDR SPL07_ADDR_ALT // Alternate I2C address (SDO=low)
+#define SS 1 //Define your own SPI pins
+
+// Create SPL07-003 sensor instance
+SPL07_003 spl;
+
+//HardwareSerial SerialOut(PA10, PA9); //for STM32F103C8Tx
+
+// Runs at startup
+void setup() {
+
+  // Begin Serial
+  Serial.begin(115200);
+
+  // Configure & start SPI
+  SPI.begin();
+
+  // Connect to SPL07-003
+  if (spl.begin(SS,&SPI) == false) {
+    Serial.println("Error initializing SPL07-003 :(");
+    while (1) {}
+  }//if
+  Serial.println("Connected to SPL07-003! :)");
+
+  // Set pressure & temperature sampling settings
+  spl.setPressureConfig(SPL07_4HZ, SPL07_32SAMPLES);
+  spl.setTemperatureConfig(SPL07_4HZ, SPL07_1SAMPLE);
+
+  // Set SPL07-003 to continuous measurements
+  spl.setMode(SPL07_CONT_PRES_TEMP);
+
+}//setup()
+
+
+// Runs continuously
+void loop() {
+
+  // Wait for available reading
+  if (spl.pressureAvailable() || spl.temperatureAvailable()) {
+    // Read latest values
+    double pres = spl.readPressure();
+    double temp = spl.readTemperature();
+    double altitude = spl.calcAltitude();
+    // Print to serial
+    Serial.print("Pres: ");
+    Serial.print(pres, 3);
+    Serial.print(" Pa, Temp: ");
+    Serial.print(temp, 3);
+    Serial.print(" C, Altitude: ");
+    Serial.print(altitude, 3);
+    Serial.println(" m");
+  }//if
+
+}//loop()
+
+```
+#### Fuction
+
+The following functions are used in the example code above.
+
+```cpp
+spl.begin(SPL07_ADDR) / spl.begin(SS,&SPI)
+```
+Initializes the SPL07-003 sensor. It returns false if the sensor is not found on the bus.
 
 ```cpp
 spl.setPressureConfig(SPL07_4HZ, SPL07_32SAMPLES)
@@ -435,6 +561,7 @@ spl.calcAltitude()
 ```
 Estimates altitude (in meters) based on the current pressure reading using the standard atmosphere model.
 Useful in applications like barometric altitude estimation for drones or weather stations.
+
 
 ## Resources
 

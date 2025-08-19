@@ -188,32 +188,44 @@ substitutions:
   hidden_ssid: "false"
 
 esphome:
-  name: respeaker-satellite
-  friendly_name: respeaker-satellite
+  name: respeaker-lite
+  friendly_name: respeaker-lite
   project: 
-    name: formatbce.Respeaker Lite Satellite
-    version: 2025.2.2
-  min_version: 2025.2.0
+    name: seeed.Respeaker Lite 
+    version: 2025.7.0
+  min_version: 2025.6.2
   on_boot:
-    priority: 375
-    then:
-      - sensor.template.publish:
-          id: next_timer
-          state: -1
-      # Run the script to refresh the LED status
-      - script.execute: control_leds
-      # If after 10 minutes, the device is still initializing (It did not yet connect to Home Assistant), turn off the init_in_progress variable and run the script to refresh the LED status
-      - delay: 10min
-      - if:
-          condition:
-            lambda: return id(init_in_progress);
-          then:
-            - lambda: id(init_in_progress) = false;
-            - script.execute: control_leds
+    - priority: 375
+      then:
+        - sensor.template.publish:
+            id: next_timer
+            state: -1
+        # Run the script to refresh the LED status
+        - script.execute: control_leds
+        # If after 10 minutes, the device is still initializing (It did not yet connect to Home Assistant), turn off the init_in_progress variable and run the script to refresh the LED status
+        - delay: 10min
+        - if:
+            condition:
+              lambda: return id(init_in_progress);
+            then:
+              - lambda: id(init_in_progress) = false;
+              - script.execute: control_leds
+    - priority: -100
+      then:
+        - lambda: |-
+            id(alarm_time).publish_state(id(saved_alarm_time));
+        - lambda: |-
+            auto call = id(alarm_action).make_call();
+            call.set_option(id(saved_alarm_action));
+            call.perform();
+        - lambda: |-
+            setenv("TZ", id(saved_time_zone).c_str(), 1);
+            tzset();
   on_shutdown:
     then:
       # Prevent loud noise on software restart
       - lambda: id(respeaker).mute_speaker();
+
 
 esp32:
   board: esp32-s3-devkitc-1
@@ -252,11 +264,6 @@ logger:
     sensor: WARN  # avoids logging debug sensor updates
 #  hardware_uart: uart0  #Uncomment to see serial logs via USB connection. Comment out after debufgging - this line introduces noise on speaker...
 
-select:
-  - platform: logger
-    id: logger_select
-    name: Logger Level
-    disabled_by_default: true
 
 api:
   id: api_id
@@ -267,6 +274,27 @@ api:
     - action: stop_va
       then:
         - voice_assistant.stop
+    - action: set_alarm_time
+      variables:
+        alarm_time_hh_mm: string
+      then:
+        - lambda: |-
+            if (alarm_time_hh_mm.length() == 5 &&
+              isdigit(alarm_time_hh_mm[0]) && isdigit(alarm_time_hh_mm[1]) &&
+              isdigit(alarm_time_hh_mm[3]) && isdigit(alarm_time_hh_mm[4])) {
+                id(alarm_time).publish_state(alarm_time_hh_mm);
+                id(saved_alarm_time) = alarm_time_hh_mm;
+              }
+    - action: set_time_zone
+      variables:
+        posix_time_zone: string
+      then:
+        - lambda: |-
+            setenv("TZ", posix_time_zone.c_str(), 1);
+            tzset();
+            id(saved_time_zone) = posix_time_zone;
+            id(publish_current_time).execute();
+
   on_client_connected:
     - script.execute: control_leds
   on_client_disconnected:
@@ -276,9 +304,7 @@ api:
 # http_request:
 #   verify_ssl: false
 
-ota:
-  - platform: esphome
-    id: ota_esphome
+
 
 i2c:
   - id: internal_i2c
@@ -305,19 +331,44 @@ globals:
     type: int
     restore_value: no
     initial_value: ${voice_assist_not_ready_phase_id}
+  - id: saved_alarm_time
+    type: std::string
+    restore_value: yes
+    initial_value: '"Unknown"'
+  - id: saved_time_zone
+    type: std::string
+    restore_value: yes
+    initial_value: '"UTC0"'
+  - id: saved_alarm_action
+    type: std::string
+    restore_value: yes
+    initial_value: '"Play sound"'
   # Global variable storing the first active timer
   - id: first_active_timer
     type: voice_assistant::Timer
-    restore_value: false
+    restore_value: no
   # Global variable storing if a timer is active
   - id: is_timer_active
     type: bool
-    restore_value: false
+    restore_value: no
   # Global variable storing if a factory reset was requested. If it is set to true, the device will factory reset once the center button is released
   - id: factory_reset_requested
     type: bool
     restore_value: no
     initial_value: 'false'
+
+# Time sync from Home Assistant
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+    on_time:
+      # Every 1 minute
+      - seconds: 0
+        minutes: /1
+        then:
+          - script.execute: check_alarm
+    on_time_sync:
+      - script.execute: publish_current_time
 
 switch:
   # Hardware speaker mute
@@ -327,10 +378,10 @@ switch:
     icon: mdi:volume-mute
     internal: true
     optimistic: true
-    turn_on_action:
-      - lambda: id(respeaker).mute_speaker();
-    turn_off_action:
-      - lambda: id(respeaker).unmute_speaker();
+    # turn_on_action:
+    #   - lambda: id(respeaker).mute_speaker();
+    # turn_off_action:
+    #   - lambda: id(respeaker).unmute_speaker();
   # stateless momentary mic mute switch
   - platform: gpio
     internal: true
@@ -346,12 +397,12 @@ switch:
     id: mic_mute_switch
     name: Mic mute
     icon: mdi:microphone-off
-    lambda: |-
-      if (id(mute_state).state) {
-        return true;
-      } else {
-        return false;
-      }
+    # lambda: |-
+    #   if (id(mute_state).state) {
+    #     return true;
+    #   } else {
+    #     return false;
+    #   }
     on_turn_on:
       - if:
           condition:
@@ -410,7 +461,7 @@ switch:
     restore_mode: ALWAYS_OFF
     on_turn_off:
       # Disable stop wake word
-      - lambda: id(stop).disable();
+      - micro_wake_word.disable_model: stop
       - script.execute: disable_repeat
       # Stop any current annoucement (ie: stop the timer ring mid playback)
       - if:
@@ -433,7 +484,7 @@ switch:
           decibel_reduction: 20
           duration: 0.0s
       # Enable stop wake word
-      - lambda: id(stop).enable();
+      - micro_wake_word.enable_model: stop
       # Ring timer
       - script.execute: ring_timer
       # Refresh LED
@@ -441,7 +492,18 @@ switch:
       # If 15 minutes have passed and the timer is still ringing, stop it.
       - delay: 15min
       - switch.turn_off: timer_ringing
-
+  # Defines if alarm is active
+  - platform: template
+    optimistic: true
+    restore_mode: RESTORE_DEFAULT_OFF
+    id: alarm_on
+    icon: mdi:bell-badge
+    name: "Alarm on"
+    on_turn_on:
+      - script.execute: control_leds
+    on_turn_off:
+      - script.execute: control_leds
+      
 binary_sensor:
   # User Button. Used for many things (See on_multi_click)
   - platform: gpio
@@ -453,30 +515,127 @@ binary_sensor:
 
 light:
   - platform: esp32_rmt_led_strip
-    id: led_respeaker_onboard
-    name: LED Respeaker onboard
-    disabled_by_default: true
-    internal: false
+    id: led_internal
+    internal: true
     rgb_order: GRB
     pin: GPIO1
     num_leds: 1
     rmt_symbols: 192
     chipset: ws2812
-    entity_category: config
     default_transition_length: 0s
     effects:
-      - pulse:
+      - addressable_lambda:
           name: "Fast Pulse"
-          transition_length: 100ms
-          update_interval: 100ms
-          min_brightness: 50%
-          max_brightness: 100%
-      - pulse:
+          update_interval: 10ms
+          lambda: |-
+            static float fraction = 0.0;
+            static float step = 0.05;
+            static bool increasing = true;
+
+            auto values = id(led_internal)->current_values;
+            Color color(values.get_red() * 255, values.get_green() * 255, values.get_blue() * 255);
+            it[0].set_rgb(color.red * fraction, 
+                             color.green * fraction, 
+                             color.blue * fraction);
+            
+            fraction += (step * (increasing ? 1 : -1));
+            if (fraction > 1.0) {
+              fraction = 1.0;
+              increasing = !increasing;
+            } else if (fraction < 0.0) {
+              fraction = 0.0;
+              increasing = !increasing;
+            }
+
+      - addressable_lambda:
           name: "Slow Pulse"
-          transition_length: 500ms
-          update_interval: 500ms
-          min_brightness: 50%
-          max_brightness: 100%
+          update_interval: 30ms
+          lambda: |-
+            static float fraction = 0.0;
+            static float step = 0.05;
+            static bool increasing = true;
+
+            auto values = id(led_internal)->current_values;
+            Color color(values.get_red() * 255, values.get_green() * 255, values.get_blue() * 255);
+            it[0].set_rgb(color.red * fraction, 
+                             color.green * fraction, 
+                             color.blue * fraction);
+            
+            fraction += (step * (increasing ? 1 : -1));
+            if (fraction > 1.0) {
+              fraction = 1.0;
+              increasing = !increasing;
+            } else if (fraction < 0.0) {
+              fraction = 0.0;
+              increasing = !increasing;
+            }
+  # User facing LED.
+  # Exposed to be used by the user.
+  - platform: partition
+    id: led_respeaker_onboard
+    name: LED Respeaker onboard
+    entity_category: config
+    icon: "mdi:circle-outline"
+    default_transition_length: 0ms
+    restore_mode: RESTORE_DEFAULT_OFF
+    on_turn_off:
+      - script.execute: control_leds
+    initial_state:
+      color_mode: rgb
+      brightness: 100%
+      red: 9.4%
+      green: 73.3%
+      blue: 94.9%
+    segments:
+      - id: led_internal
+        from: 0
+        to: 0
+    effects:
+      - addressable_lambda:
+          name: "Fast Pulse"
+          update_interval: 10ms
+          lambda: |-
+            static float fraction = 0.0;
+            static float step = 0.05;
+            static bool increasing = true;
+
+            auto values = id(led_respeaker_onboard)->current_values;
+            Color color(values.get_red() * 255, values.get_green() * 255, values.get_blue() * 255);
+            it[0].set_rgb(color.red * fraction, 
+                             color.green * fraction, 
+                             color.blue * fraction);
+            
+            fraction += (step * (increasing ? 1 : -1));
+            if (fraction > 1.0) {
+              fraction = 1.0;
+              increasing = !increasing;
+            } else if (fraction < 0.0) {
+              fraction = 0.0;
+              increasing = !increasing;
+            }
+
+      - addressable_lambda:
+          name: "Slow Pulse"
+          update_interval: 30ms
+          lambda: |-
+            static float fraction = 0.0;
+            static float step = 0.05;
+            static bool increasing = true;
+
+            auto values = id(led_respeaker_onboard)->current_values;
+            Color color(values.get_red() * 255, values.get_green() * 255, values.get_blue() * 255);
+            it[0].set_rgb(color.red * fraction, 
+                             color.green * fraction, 
+                             color.blue * fraction);
+            
+            fraction += (step * (increasing ? 1 : -1));
+            if (fraction > 1.0) {
+              fraction = 1.0;
+              increasing = !increasing;
+            } else if (fraction < 0.0) {
+              fraction = 0.0;
+              increasing = !increasing;
+            }
 
 sensor:
   - platform: template
@@ -495,9 +654,13 @@ text_sensor:
     icon: "mdi:timer"
     disabled_by_default: true
   - platform: template
-    id: tts_uri
-    name: "TTS URI"
-    disabled_by_default: true
+    name: "Alarm time"
+    id: alarm_time
+    icon: mdi:bell-ring
+  - platform: template
+    name: "Current device time"
+    id: current_time
+    icon: mdi:clock
 
 event:
   # Event entity exposed to the user to automate on complex center button presses.
@@ -529,6 +692,8 @@ script:
             id(control_leds_init_state).execute();
           } else if (!id(wifi_id).is_connected() || !id(api_id).is_connected()){
             id(control_leds_no_ha_connection_state).execute();
+          } else if (id(user_button).state) {
+            id(control_leds_center_button_touched).execute();
           } else if (id(timer_ringing).state) {
             id(control_leds_timer_ringing).execute();
           } else if (id(voice_assistant_phase) == ${voice_assist_waiting_for_command_phase_id}) {
@@ -545,6 +710,8 @@ script:
             id(control_leds_voice_assistant_not_ready_phase).execute();
           } else if (id(is_timer_active)) {
             id(control_leds_timer_ticking).execute();
+          } else if (id(alarm_on).state && !id(led_respeaker_onboard).remote_values.is_on()) {
+            id(control_leds_alarm_active).execute();
           } else if (id(voice_assistant_phase) == ${voice_assist_idle_phase_id}) {
             id(control_leds_voice_assistant_idle_phase).execute();
           }
@@ -554,11 +721,11 @@ script:
   - id: control_leds_improv_ble_state
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 100%
           green: 89%
           blue: 71%
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed during initialization
@@ -570,48 +737,53 @@ script:
             wifi.connected:
           then:
             - light.turn_on:
-                brightness: 50%
-                red: 9.4%
-                green: 73.3%
-                blue: 94.9%
-                id: led_respeaker_onboard
-                effect: "Fast pulse"
+                brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
+                red: 9%
+                green: 73%
+                blue: 95%
+                id: led_internal
+                effect: "Fast Pulse"
           else:
             - light.turn_on:
-                brightness: 50%
-                red: 9.4%
-                green: 73.3%
-                blue: 94.9%
-                id: led_respeaker_onboard
+                brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
+                red: 9%
+                green: 73%
+                blue: 95%
+                id: led_internal
                 effect: "Slow Pulse"
   # Script executed when the device has no connection to Home Assistant
   # Red slow pulse (This will be visible during HA updates for example)
   - id: control_leds_no_ha_connection_state
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0
           blue: 0
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed when the voice assistant is idle (waiting for a wake word)
   # Nothing
   - id: control_leds_voice_assistant_idle_phase
     then:
-      - light.turn_off: led_respeaker_onboard
+      - light.turn_off: led_internal
+      - if:
+          condition:
+            light.is_on: led_respeaker_onboard
+          then:
+            light.turn_on: led_respeaker_onboard
 
   # Script executed when the voice assistant is waiting for a command (After the wake word)
   # Slow purple pulse
   - id: control_leds_voice_assistant_waiting_for_command_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0.2
           blue: 1
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed when the voice assistant is listening to a command
@@ -619,11 +791,11 @@ script:
   - id: control_leds_voice_assistant_listening_for_command_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0.2
           blue: 1
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed when the voice assistant is thinking to a command
@@ -631,11 +803,11 @@ script:
   - id: control_leds_voice_assistant_thinking_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0.2
           blue: 1
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Fast Pulse"
 
   # Script executed when the voice assistant is replying to a command
@@ -643,11 +815,11 @@ script:
   - id: control_leds_voice_assistant_replying_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 0.2
           green: 1
           blue: 1
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed when the voice assistant is in error
@@ -655,22 +827,22 @@ script:
   - id: control_leds_voice_assistant_error_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0
           blue: 0
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Fast Pulse"
 
   # Script executed when the voice assistant is not ready
   - id: control_leds_voice_assistant_not_ready_phase
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 1
           green: 0
           blue: 0
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
 
   # Script executed when the center button is touched
@@ -678,22 +850,23 @@ script:
   - id: control_leds_center_button_touched
     then:
       - light.turn_on:
-          brightness: 80%
+          brightness: !lambda return min ( max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f ) + 0.1f , 1.0f );
           red: 0
           green: 0
           blue: 1
-          id: led_respeaker_onboard
+          id: led_internal
+          effect: "None"
 
   # Script executed when the timer is ringing, to control the LEDs
   # The LED blinks green.
   - id: control_leds_timer_ringing
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return min ( max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f ) + 0.1f , 1.0f );
           red: 0
           green: 1
           blue: 0
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Fast Pulse"
 
   # Script executed when the timer is ticking, to control the LEDs
@@ -701,12 +874,24 @@ script:
   - id: control_leds_timer_ticking
     then:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 0.3
           green: 0.3
           blue: 0.3
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
+  
+  # Script executed when the alarm is active
+  # The LED turns on dim green
+  - id: control_leds_alarm_active
+    then:
+      - light.turn_on:
+          brightness: !lambda return 0.3f;
+          red: 0
+          green: 1
+          blue: 0
+          id: led_internal
+          effect: "None"
 
 
   # Script executed when the timer is ringing, to playback sounds.
@@ -793,12 +978,81 @@ script:
   # Why is this wrapped on a script?
   #   Becasue we want to stop the sequence if the TTS step is faster than that.
   #   This allows us to prevent having the deactivation of the stop word before its own activation.
-  - id: activate_stop_word_if_tts_step_is_long
+  - id: activate_stop_word_once
     then:
       - delay: 1s
       # Enable stop wake word
-      - lambda: id(stop).enable();
+      - if:
+          condition:
+            switch.is_off: timer_ringing
+          then:
+            - micro_wake_word.enable_model: stop
+            - wait_until:
+                not:
+                  media_player.is_announcing:
+            - if:
+                condition:
+                  switch.is_off: timer_ringing
+                then:
+                  - micro_wake_word.disable_model: stop
 
+  - id: check_alarm
+    then:
+      - lambda: |-
+          id(publish_current_time).execute();
+          // Check alarm
+          if (id(alarm_on).state && id(alarm_time).has_state()) {
+            // Get the stored alarm time from the sensor
+            auto set_alarm_time = id(alarm_time).state;
+            if (set_alarm_time.length() == 5 &&
+              isdigit(set_alarm_time[0]) && isdigit(set_alarm_time[1]) &&
+              isdigit(set_alarm_time[3]) && isdigit(set_alarm_time[4])) {
+              auto alarm_hour = std::stoi(set_alarm_time.substr(0, 2));
+              auto alarm_minute = std::stoi(set_alarm_time.substr(3, 2));
+
+              // Trigger action if current time matches alarm time
+              auto time_now = id(homeassistant_time).now();
+              if (time_now.hour == alarm_hour && time_now.minute == alarm_minute) {
+                auto action = id(alarm_action).state;
+                if (action == "Play sound") {
+                  id(timer_ringing).turn_on();
+                } else if (action == "Send event") {
+                  id(send_alarm_event).execute();
+                } else if (action == "Sound and event") {
+                  id(timer_ringing).turn_on();
+                  id(send_alarm_event).execute();
+                } 
+              }
+            } else {
+              ESP_LOGW("alarm", "Incorrect alarm time setting");
+            }
+          }
+  - id: send_alarm_event
+    then:
+      - homeassistant.event:
+          event: esphome.alarm_ringing
+  - id: send_tts_uri_event
+    parameters:
+      tts_uri: string
+    then:
+      - homeassistant.event:
+          event: esphome.tts_uri
+          data:
+            uri: !lambda return tts_uri;
+  - id: send_stt_text_event
+    parameters:
+      stt_text: string
+    then:
+      - homeassistant.event:
+          event: esphome.stt_text
+          data:
+            text: !lambda return stt_text;
+  - id: publish_current_time
+    then:
+      - lambda: |-
+          // Publish current time
+          auto time_now = id(homeassistant_time).now();
+          id(current_time).publish_state(time_now.strftime("%H:%M"));
 i2s_audio:
   - id: i2s_output
     i2s_lrclk_pin: 
@@ -822,8 +1076,10 @@ i2s_audio:
       number: GPIO9
       allow_other_uses: true
 
+
 microphone:
-  - platform: nabu_microphone
+  - platform: i2s_audio
+    id: i2s_mics
     i2s_din_pin: GPIO44
     adc_type: external
     pdm: false
@@ -831,12 +1087,7 @@ microphone:
     bits_per_sample: 32bit
     i2s_mode: secondary
     i2s_audio_id: i2s_input
-    channel_0:
-      id: nabu_mic_va
-      amplify_shift: 0
-    channel_1:
-      id: nabu_mic_mww
-      amplify_shift: 2
+    channel: stereo
       
 speaker:
   # Hardware speaker output
@@ -936,6 +1187,8 @@ media_player:
         file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/timer_finished.flac
       - id: wake_word_triggered_sound
         file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/wake_word_triggered.flac
+      - id: error_cloud_expired
+        file: https://github.com/esphome/home-assistant-voice-pe/raw/dev/sounds/error_cloud_expired.mp3
 
 respeaker_lite:
   id: respeaker
@@ -949,60 +1202,51 @@ respeaker_lite:
     internal: false
     id: firmware_version
   firmware:
-    url: https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration/raw/refs/heads/main/respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin
+    url: https://github.com/KasunThushara/Respeaker-Lite-ESPHome-integration/raw/refs/heads/main/respeaker_lite_i2s_dfu_firmware_48k_v1.1.0.bin
     version: "1.1.0"
     md5: 9297155d1bf3eb21a9d4db52a89ea0c6
     on_begin:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 50%
           green: 50%
           blue: 50%
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Slow Pulse"
     on_end:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 0%
           green: 100%
           blue: 0%
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Fast Pulse"
       - delay: 3s
       - light.turn_off:
-          id: led_respeaker_onboard
+          id: led_internal
     on_error:
       - light.turn_on:
-          brightness: 50%
+          brightness: !lambda return max( id(led_respeaker_onboard).current_values.get_brightness() , 0.2f );
           red: 100%
           green: 0%
           blue: 0%
-          id: led_respeaker_onboard
+          id: led_internal
           effect: "Fast Pulse"
       - delay: 3s
       - light.turn_off:
-          id: led_respeaker_onboard
+          id: led_internal
 
 external_components:
   - source:
       type: git
-      url: https://github.com/esphome/home-assistant-voice-pe
-      ref: dev
+      url: https://github.com/KasunThushara/esphome
+      ref: respeaker_microphone
     components:
-      - micro_wake_word
-      - microphone
-      - voice_assistant
+      - i2s_audio
     refresh: 0s
   - source:
       type: git
-      url: https://github.com/formatBCE/home-assistant-voice-pe
-      ref: 48kHz_mic_support
-    components:
-      - nabu_microphone
-    refresh: 0s
-  - source:
-      type: git
-      url: https://github.com/formatBCE/Respeaker-Lite-ESPHome-integration
+      url: https://github.com/KasunThushara/Respeaker-Lite-ESPHome-integration
       ref: main
     components: 
       - respeaker_lite
@@ -1015,10 +1259,17 @@ audio_dac:
 
 micro_wake_word:
   id: mww
+  microphone:
+    microphone: i2s_mics
+    channels: 1
+    gain_factor: 4
+  stop_after_detection: false
   models:
     - model: https://github.com/kahrendt/microWakeWord/releases/download/okay_nabu_20241226.3/okay_nabu.json
       # probability_cutoff: 0.8
       id: okay_nabu
+    - model: https://raw.githubusercontent.com/KasunThushara/Respeaker-Lite-ESPHome-integration/refs/heads/main/microwakeword/models/v2/kenobi.json
+      id: kenobi
     - model: hey_jarvis
       id: hey_jarvis
     - model: hey_mycroft
@@ -1027,7 +1278,7 @@ micro_wake_word:
       id: stop
       internal: true
   vad:
-  microphone: nabu_mic_mww
+    probability_cutoff: 0.05
   on_wake_word_detected:
     # If the wake word is detected when the device is muted (Possible with the software mute switch): Do nothing
     - if:
@@ -1040,30 +1291,89 @@ micro_wake_word:
                 switch.is_on: timer_ringing
               then:
                 - switch.turn_off: timer_ringing
-              # Start voice assistant, stop current announcement.
+              # Stop voice assistant if running
               else:
                 - if:
                     condition:
-                      media_player.is_announcing:
+                      voice_assistant.is_running:
                     then:
-                      media_player.stop:
-                        announcement: true
+                      voice_assistant.stop:
+                    # Stop any other media player announcement
                     else:
                       - if:
                           condition:
-                            switch.is_on: wake_sound
+                            media_player.is_announcing:
                           then:
-                            - script.execute:
-                                id: play_sound
-                                priority: true
-                                sound_file: !lambda return id(wake_word_triggered_sound);
-                            - delay: 300ms
-                      - voice_assistant.start:
-                          wake_word: !lambda return wake_word;
+                            - media_player.stop:
+                                announcement: true
+                          # Start the voice assistant and play the wake sound, if enabled
+                          else:
+                            - if:
+                                condition:
+                                  switch.is_on: wake_sound
+                                then:
+                                  - script.execute:
+                                      id: play_sound
+                                      priority: true
+                                      sound_file: !lambda return id(wake_word_triggered_sound);
+                                  - delay: 300ms
+                            - voice_assistant.start:
+                                wake_word: !lambda return wake_word;
+
+select:
+  - platform: template
+    name: "Wake word sensitivity"
+    optimistic: true
+    initial_option: Slightly sensitive
+    restore_value: true
+    entity_category: config
+    options:
+      - Slightly sensitive
+      - Moderately sensitive
+      - Very sensitive
+    on_value:
+      # Sets specific wake word probabilities computed for each particular model
+      # Note probability cutoffs are set as a quantized uint8 value, each comment has the corresponding floating point cutoff
+      # False Accepts per Hour values are tested against all units and channels from the Dinner Party Corpus.
+      # These cutoffs apply only to the specific models included in the firmware: okay_nabu@20241226.3, hey_jarvis@v2, hey_mycroft@v2
+      lambda: |-
+        if (x == "Slightly sensitive") {
+          id(okay_nabu).set_probability_cutoff(217);    // 0.85 -> 0.000 FAPH on DipCo (Manifest's default)
+          id(hey_jarvis).set_probability_cutoff(247);   // 0.97 -> 0.563 FAPH on DipCo (Manifest's default)
+          id(hey_mycroft).set_probability_cutoff(253);  // 0.99 -> 0.567 FAPH on DipCo
+        } else if (x == "Moderately sensitive") {
+          id(okay_nabu).set_probability_cutoff(176);    // 0.69 -> 0.376 FAPH on DipCo
+          id(hey_jarvis).set_probability_cutoff(235);   // 0.92 -> 0.939 FAPH on DipCo
+          id(hey_mycroft).set_probability_cutoff(242);  // 0.95 -> 1.502 FAPH on DipCo (Manifest's default)
+        } else if (x == "Very sensitive") {
+          id(okay_nabu).set_probability_cutoff(143);    // 0.56 -> 0.751 FAPH on DipCo
+          id(hey_jarvis).set_probability_cutoff(212);   // 0.83 -> 1.502 FAPH on DipCo
+          id(hey_mycroft).set_probability_cutoff(237);  // 0.93 -> 1.878 FAPH on DipCo
+        }
+  - platform: logger
+    id: logger_select
+    name: Logger Level
+    disabled_by_default: true
+  - platform: template
+    optimistic: true
+    name: "Alarm action"
+    id: alarm_action
+    icon: mdi:bell-plus
+    options:
+      - "Play sound"
+      - "Send event"
+      - "Sound and event"
+    initial_option: "Play sound"
+    on_value:
+      then:
+        - lambda: |-
+            id(saved_alarm_action) = x;
 
 voice_assistant:
   id: va
-  microphone: nabu_mic_va
+  microphone:
+    microphone: i2s_mics
+    channels: 0
   media_player: external_media_player
   micro_wake_word: mww
   use_wake_word: false
@@ -1086,6 +1396,8 @@ voice_assistant:
     - lambda: id(voice_assistant_phase) = ${voice_assist_not_ready_phase_id};
     - script.execute: control_leds
   on_error:
+    # Only set the error phase if the error code is different than duplicate_wake_up_detected or stt-no-text-recognized
+    # These two are ignored for a better user experience
     - if:
         condition:
           and:
@@ -1095,6 +1407,15 @@ voice_assistant:
         then:
           - lambda: id(voice_assistant_phase) = ${voice_assist_error_phase_id};
           - script.execute: control_leds
+    # If the error code is cloud-auth-failed, serve a local audio file guiding the user.
+    - if:
+        condition:
+          - lambda: return code == "cloud-auth-failed";
+        then:
+          - script.execute:
+              id: play_sound
+              priority: true
+              sound_file: !lambda return id(error_cloud_expired);
   # When the voice assistant starts: Play a wake up sound, duck audio.
   on_start:
     - mixer_speaker.apply_ducking:
@@ -1110,15 +1431,34 @@ voice_assistant:
   on_stt_vad_end:
     - lambda: id(voice_assistant_phase) = ${voice_assist_thinking_phase_id};
     - script.execute: control_leds
+  on_intent_progress:
+    - if:
+        condition:
+          # A nonempty x variable means a streaming TTS url was sent to the media player
+          lambda: 'return !x.empty();'
+        then:
+          - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
+          - script.execute: control_leds
+          # Start a script that would potentially enable the stop word if the response is longer than a second
+          - script.execute: activate_stop_word_once
   on_tts_start:
-    - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
-    - script.execute: control_leds
-    # Start a script that would potentially enable the stop word if the response is longer than a second
-    - script.execute: activate_stop_word_if_tts_step_is_long
+    - if:
+        condition:
+          # The intent_progress trigger didn't start the TTS Reponse
+          lambda: 'return id(voice_assistant_phase) != ${voice_assist_replying_phase_id};'
+        then:
+          - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
+          - script.execute: control_leds
+          # Start a script that would potentially enable the stop word if the response is longer than a second
+          - script.execute: activate_stop_word_once
   on_tts_end:
-    - text_sensor.template.publish:
-        id: tts_uri
-        state: !lambda 'return x;'
+    - script.execute:
+        id: send_tts_uri_event
+        tts_uri: !lambda 'return x;'
+  on_stt_end:
+    - script.execute:
+        id: send_stt_text_event
+        stt_text: !lambda 'return x;'
     
   # When the voice assistant ends ...
   on_end:
@@ -1130,14 +1470,6 @@ voice_assistant:
         id: media_mixing_input
         decibel_reduction: 0
         duration: 1.0s
-    # Stop the script that would potentially enable the stop word if the response is longer than a second
-    - script.stop: activate_stop_word_if_tts_step_is_long
-    # Disable the stop word (If the tiemr is not ringing)
-    - if:
-        condition:
-          switch.is_off: timer_ringing
-        then:
-          - lambda: id(stop).disable();
     # If the end happened because of an error, let the error phase on for a second
     - if:
         condition:
@@ -1190,7 +1522,7 @@ button:
 
 debug:
   update_interval: 5s
-```
+  ```
 </details>
 
 

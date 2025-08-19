@@ -20,7 +20,7 @@ EdgeBox-RPI-200 系列是一款基于树莓派的工业边缘计算控制器，�
 边缘控制器作为传统 PLC 和 PAC 的多功能替代品，通过精心设计的操作系统满足操作技术（OT）和信息技术（IT）的需求。它们确保确定性运行时，并为高级任务（如分析）提供计算环境，从而在各种工业场景中增强实用性。随着现代劳动力因智能手机时代而熟悉现代编程语言和开发工具包环境，EdgeBox-RPI-200 系列控制器提供了用户友好的界面。其紧凑的外形设计支持实时操作和多进程控制，适用于多种工业用途，包括 PLC、PAC、IIoT 网关、OPC UA 服务器和工业 PC。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

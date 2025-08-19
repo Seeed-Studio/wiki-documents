@@ -30,7 +30,7 @@ En esta wiki, te mostraremos cómo actualizar Jetpack OS en la Carrier Board A20
 ![image](https://files.seeedstudio.com/wiki/reComputer_Carrier_Board/A203/Flash_A203.jpeg)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A203-Carrier-Board-for-Jetson-Nano-Xavier-NX-V2-p-5214.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A203-Carrier-Board-for-Jetson-Nano-Xavier-NX-V2-p-5214.html" target="_blank">
       <strong><span><font color="FFFFFF" size="4"> Conseguir una ahora 🖱️</font></span></strong>
     </a>
 </div>

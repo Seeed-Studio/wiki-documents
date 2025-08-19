@@ -17,7 +17,7 @@ ReSpeaker 2-Mics Pi HAT 是一款专为 Raspberry Pi 设计的双麦克风扩展
 该板基于 WM8960 开发，这是一款低功耗立体声编解码器。板子两侧有 2 个麦克风用于收集声音，还提供 3 个 APA102 RGB LED、1 个用户按钮和 2 个板载 Grove 接口来扩展您的应用。此外，3.5mm 音频插孔或 JST 2.0 扬声器输出都可用于音频输出。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
 </div>
 
 ## 特性

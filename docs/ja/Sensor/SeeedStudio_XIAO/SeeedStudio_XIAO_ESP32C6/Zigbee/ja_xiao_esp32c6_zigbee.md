@@ -47,7 +47,7 @@ Zigbee開発を深く掘り下げるために、ESP Zigbee SDKが提供する2�
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
-        ">
+        " target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -64,7 +64,7 @@ Zigbee開発を深く掘り下げるために、ESP Zigbee SDKが提供する2�
 Zigbee SDK を使用するには、Espressif の ESP-IDF 開発フレームワークを使用することをお勧めします。Espressif の公式ウェブサイトでは、さまざまなシステム向けの詳細なインストール手順が提供されています。以下のボタンをクリックしてページに移動してください。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation">
+    <a class="get_one_now_item" href="https://docs.espressif.com/projects/esp-idf/en/v5.1.3/esp32h2/get-started/index.html#installation" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> ページに移動 🖱️</font></span></strong>
     </a>
 </div>

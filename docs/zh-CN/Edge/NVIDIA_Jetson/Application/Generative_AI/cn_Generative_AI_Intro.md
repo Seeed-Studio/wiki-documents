@@ -50,8 +50,8 @@ last_update:
         </tr>
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
-            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/local_ai_ssistant/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
-            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Local_Voice_Chatbot/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/local_ai_ssistant/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Local_Voice_Chatbot/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
@@ -81,7 +81,7 @@ last_update:
         <tr class="table-trnobg">
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/How_to_run_local_llm_text_to_image_on_reComputer/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/How_to_run_local_llm_text_to_image_on_reComputer/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
                 </div>
             </td>
         </tr>
@@ -118,10 +118,10 @@ last_update:
         </tr>
         <tr class="table-trnobg"></tr>
         <tr class="table-trnobg">
-            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+            <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Real%20Time%20Subtitle%20Recoder%20on%20Nvidia%20Jetson/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Edge/NVIDIA_Jetson/Application/Generative_AI/Whisper_on_Jetson_for_Real_Time_Speech_to_Text/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
                 </div>
             </td>
         </tr>
@@ -157,7 +157,7 @@ last_update:
         <tr class="table-trnobg">
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_vlm_on_recomputer/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_vlm_on_recomputer/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -210,7 +210,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
         <tr class="table-trnobg">
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/local_ai_ssistant/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/local_ai_ssistant/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -221,7 +221,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
             </td>
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Local_RAG_based_on_Jetson_with_LlamaIndex/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Local_RAG_based_on_Jetson_with_LlamaIndex/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -283,7 +283,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
         <tr class="table-trnobg">
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Finetune_LLM_on_Jetson/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Finetune_LLM_on_Jetson/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -294,7 +294,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
             </td>
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Quantized_Llama2_7B_with_MLC_LLM_on_Jetson/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -305,7 +305,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
             </td>
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_zero_shot_detection_on_recomputer/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/run_zero_shot_detection_on_recomputer/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>
@@ -339,7 +339,7 @@ RAG（检索增强生成）是一种结合检索机制与生成模型的技术�
         <tr class="table-trnobg">
             <td class="table-trnobg">
                 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/">
+                    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson/" target="_blank" rel="noopener noreferrer">
                         <strong>
                             <span>
                                 <font color={'FFFFFF'} size={"4"}>📚 了解更多</font>

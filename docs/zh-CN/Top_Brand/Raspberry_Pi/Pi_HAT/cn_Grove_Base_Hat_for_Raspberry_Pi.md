@@ -22,7 +22,7 @@ Grove Base Hat for Raspberry Pi 提供数字/模拟/I2C/PWM/UART 端口来满足
 坦率地说，目前大约有 60 个 Grove 模块支持 Grove Base Hat for Raspberry Pi。但是，我们将继续添加新的兼容模块，您使用得越多，添加的 Grove 模块就越多。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

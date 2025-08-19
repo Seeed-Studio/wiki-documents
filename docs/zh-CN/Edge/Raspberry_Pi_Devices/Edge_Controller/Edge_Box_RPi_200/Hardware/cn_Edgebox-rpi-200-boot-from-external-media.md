@@ -20,7 +20,7 @@ last_update:
 EdgeBox-RPi-200 系列是基于树莓派的多合一工业边缘计算控制器，结合了多种工业用途。它设计为高扩展性和坚固的工业硬件，配备丰富的 IO 资源，并由强大的树莓派工业软件生态系统支持，是智能自动化和工业物联网 (IIoT) 解决方案的理想选择。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

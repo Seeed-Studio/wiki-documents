@@ -27,7 +27,7 @@ EdgeBox-ESP-100 是一款基于 ESP32 的控制器，专为轻量级自动化解
 这款便携式设备配备了坚固的硬件、电气设计和铝合金外壳，能够在宽温范围内保持功能，并提供高浪涌和短路保护，适用于基于业务的多种部署方式。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

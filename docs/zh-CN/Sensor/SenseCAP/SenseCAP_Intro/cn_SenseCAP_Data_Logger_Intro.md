@@ -24,8 +24,8 @@ SenseCAP 传感器集线器是一个用于远程环境监测的紧凑解决方�
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hub.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong></a>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong></a>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
 </div>
 
 [SesneCAP 移动应用](https://solution.seeedstudio.com/product/software-cloud-sensecap-app/)、[SenseCAP 网页门户](https://solution.seeedstudio.com/product/software-cloud-sensecap-portal/)、[SenseCAP API](https://sensecap-docs.seeed.cc/introduction.html)和[SenseCAP 仪表板](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/)也可用于快速配置和设备+数据管理。
@@ -39,8 +39,8 @@ SenseCAP 传感器集线器是一个用于远程环境监测的紧凑解决方�
 SenseCAP S2100 数据记录器是一个多功能设备，可以连接MODBUS-RTU RS485/模拟/GPIO传感器，允许轻松将数据传输到LoRaWAN网络。凭借其LoRa和IP66设计，该设备具有令人印象深刻的稳定性和可靠性，可以覆盖长传输距离，同时保持超低功耗。它非常适合户外使用，可以由电池供电或连接到12V外部电源以获得更大的灵活性。当连接到12V电源时，可更换的内置电池充当备用电源。此外，S2100数据记录器针对OTA进行了优化，内置蓝牙，使设置和更新快速简单。最重要的是，S2110转换器使S2100数据记录器能够连接到Grove传感器，使其成为DIY工业级LoRaWAN传感器和小规模部署的绝佳选择。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong></a>
-  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即购买</font></span></strong></a>
+  <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 了解更多</font></span></strong></a>
 </div>
 
 

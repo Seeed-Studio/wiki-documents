@@ -21,7 +21,7 @@ The EdgeBox-RPI-200 series serves as an all-in-one Raspberry Pi-based industrial
 Edge controllers, as versatile alternatives to traditional PLCs and PACs, address both operational technology (OT) and information technology (IT) needs through carefully-designed operating systems. They ensure deterministic runtime and provide a computing environment for advanced tasks like analytics, enhancing utility across various industrial scenarios. With the contemporary workforce familiar with modern programming languages and developer kit environments due to the smartphone age, EdgeBox-RPI-200 series controllers offer a user-friendly interface. Their compact form factor enables real-time operation and multi-process control, serving diverse industrial purposes, including PLCs, PACs, IIoT Gateways, OPC UA Servers, and Industry PCs.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

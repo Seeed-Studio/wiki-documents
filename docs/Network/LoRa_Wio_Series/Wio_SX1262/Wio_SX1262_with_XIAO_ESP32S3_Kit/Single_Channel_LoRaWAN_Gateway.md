@@ -48,7 +48,7 @@ If you don't use the complete ESP-IDF environment, it is also possible to flash 
 Click to download the firmware:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/seeed_xiao_esp32s3_one_chanel_hub_2024_12_09_01.rar"><strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬ </font></span></strong></a>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/seeed_xiao_esp32s3_one_chanel_hub_2024_12_09_01.rar" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬ </font></span></strong></a>
 </div>
 
 **Step 1**: Download Esptool, for more information please refer to the [Esptool documentation](https://docs.espressif.com/projects/esptool/en/latest/esp32/).

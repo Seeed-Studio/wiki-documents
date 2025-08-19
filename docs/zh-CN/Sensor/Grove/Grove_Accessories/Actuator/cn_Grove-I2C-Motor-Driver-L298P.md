@@ -16,7 +16,7 @@ last_update:
 Grove - I2C 电机驱动器 (L298P) 是一款通用的步进电机和伺服电机驱动器。它内嵌 STM32 芯片，用于烧录代码以控制电机驱动器。这是一款双通道电机驱动器，每个通道支持最高 1A 电流。您还可以使用 I2C 接口从外围微控制器传输数据。默认的 I2C 地址为 0x0f，您可以通过连接 I2C 线帽来更改电机驱动器的地址。I2C 地址可在 0x00 到 0x0f 之间选择。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
   </a>
 </div>

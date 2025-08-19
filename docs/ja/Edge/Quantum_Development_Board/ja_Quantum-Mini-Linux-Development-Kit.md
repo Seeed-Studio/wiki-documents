@@ -25,7 +25,7 @@ SoM（System on Module）は**Quark-N**と呼ばれ、**Allwinner H3、クアッ
 キャリアボードは**Atom-N**と呼ばれ、Quark-NはM.2インターフェースを介してAtom-Nに接続されます。Atom-Nは一列の金指ピンを引き出してI/O拡張を実現し、**SPI、I2C、UART、GPIOなどのインターフェースを拡張して独自の設計を完成させることができます**。さらに、**マイク、MPU6050モーションセンサー（加速度計とジャイロスコープ）、オンボード4つのボタン（GPIO-KEY、Uboot、Recovery、Reset）、IPSディスプレイ、Wi-Fi/Bluetooth接続を備えており、この製品の可能性を大幅に拡張します**。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

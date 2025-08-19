@@ -17,7 +17,7 @@ BeagleBone® Blue is based on the extremely successful open-source hardware desi
 BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink™ interface of the BeagleBone® Black Wireless and the robotics capabilities of the Robotics Cape from Strawson Design.  BeagleBone® Blue has onboard 2 cell (2S) LiPo battery management with charger and battery level LEDs, 8 servo motor outputs, 4 DC motor drivers, 4 quadrature encoder inputs, a wide array of GPIO and serial protocol connectors including CAN, a 9 axis IMU and barometer, 4 ADC inputs, a PC USB interface, an USB 2.0 host port, a reset button, a power button, two user configurable buttons and six indicating LEDs.  Built on Octavo Systems' System-In-Package that integrates a high-performance TI ARM processor and 512MB of DDR3, BeagleBone® Blue boots Linux in around 10 seconds and gets you started developing through your web browser in less than 5 minutes with just a single USB cable.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

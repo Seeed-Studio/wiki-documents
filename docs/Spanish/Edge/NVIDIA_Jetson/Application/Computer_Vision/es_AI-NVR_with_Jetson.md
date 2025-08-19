@@ -54,7 +54,7 @@ Puedes seguir las instrucciones en [esta wiki](https://wiki.seeedstudio.com/reSe
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consigue Una 🖱️</font></span></strong>
     </a>
 </div>

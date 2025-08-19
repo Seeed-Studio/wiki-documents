@@ -47,10 +47,10 @@ Wild IoT refers to the technology of deploying sensor networks in natural enviro
 [**SenseCAP T1000**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecap_t1000_tracker/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecap_t1000_tracker/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -74,7 +74,7 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2108-Soil-Moisture-Temperature-and-Pore-EC-Sensor-p-5825.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2105-LoRaWAN-Soil-Temperature-Moisture-and-EC-Sensor-p-5358.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2106-p-5647.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2107-Temperature-Sensor-p-5807.html)</p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -87,10 +87,10 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 [SenseCAP LoRaWAN S2120 Weather Station](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html) collects and uploads air temperature, humidity, wind speed/direction, Rainfall Intensity, light intensity, UV index, and barometric pressure data supported by worldwide LoRaWAN networks. The S2120 weather station is suitable for applications in gardens, agriculture, meteorology, urban environmental monitoring, and other scenarios. It also enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth for OTA configuration and remote device management.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -102,10 +102,10 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 [The SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - LoRaWAN Vision AI Sensor is a TinyML Edge AI enabled smart image sensor. It supports a variety of AI models such as image recognition, people counting, target detection, meter recoignition etc. It also supports training models with TensorFlow Lite.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP-Vision-AI-Get-Started/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -130,7 +130,7 @@ SenseCAP ONE is a series of all-in-one compact weather sensors, that integrate m
 |<p style={{textAlign: 'center'}}>[S1000](https://www.seeedstudio.com/SenseCAP-S1000-10-in-1-Compact-Weather-Station-p-5654.html)</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>||
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP-ONE-Compact-Weather-Station-Introduction/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP-ONE-Compact-Weather-Station-Introduction/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -157,7 +157,7 @@ To bring more convenience for your applications, we also provide RS485 sensor pr
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-9-p-4744.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/Water-Leak-Detector-p-4620.html)</p>|
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Sensor_Probes_Product_Catalogue/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Sensor_Probes_Product_Catalogue/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -171,10 +171,10 @@ To bring more convenience for your applications, we also provide RS485 sensor pr
 SenseCAP S2110 Sensor Builder a groundbreaking solution that enables the fusion of industrial-grade modules and maker-level modules. It is an open-source tool which has the ability to build RS485 functional modules with 500+ Grove modules.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Builder_build_LoRaWAN_Sensors/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Builder_build_LoRaWAN_Sensors/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -197,7 +197,7 @@ SenseCAP offers two types of Data logger:
 SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCAP LoRaWAN® devices. After decoding, users' applications will get more friendly and readable messages.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Decoder/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Decoder/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -256,7 +256,7 @@ When prototyping for a commercial data acquisition project, it takes a lot of ti
 Today, we can use a wireless LoRa collector, set up sensors to connect to an app via Bluetooth and build a product in five minutes, directly into a commercial project.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/develop_an_industrial_lorawan_sensor/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/develop_an_industrial_lorawan_sensor/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>
@@ -269,7 +269,7 @@ Today, we can use a wireless LoRa collector, set up sensors to connect to an app
 In this series of articles, I will share how I build a decent smart home in Home Assistant and use sensors from Seeed Studio SenseCAP products. And this is the first milestone.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_with_sensecap_lorawan_sensors/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_with_sensecap_lorawan_sensors/" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong>
     </a>
 </div>

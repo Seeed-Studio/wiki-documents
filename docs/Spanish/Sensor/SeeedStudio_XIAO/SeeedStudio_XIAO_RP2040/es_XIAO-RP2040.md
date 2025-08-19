@@ -23,7 +23,7 @@ En el XIAO RP2040 de Seeed Studio hay 14 pines GPIO, de los cuales 11 son digita
 El XIAO RP2040 de Seeed Studio es compatible con la placa de expansión Seeed Studio XIAO.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

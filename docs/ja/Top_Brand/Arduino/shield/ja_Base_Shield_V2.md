@@ -21,7 +21,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Arduino Unoはこれまでで最も人気のあるArduinoボードですが、プロジェクトで多くのセンサーやLEDを必要とする場合、ジャンパーワイヤーが混乱してしまうことがあります。Base Shieldを作成した目的は、ブレッドボードやジャンパーワイヤーを取り除くことです。Base Shield上の豊富なGroveコネクタを使用することで、Arduino UnoにすべてのGroveモジュールを簡単に追加できます！Base Shield V2のピン配置はArduino Uno R3と同じです。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/base-shield-v13-p-1378.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/base-shield-v13-p-1378.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

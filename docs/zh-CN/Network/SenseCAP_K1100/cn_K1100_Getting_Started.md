@@ -21,7 +21,7 @@ last_update:
 **SenseCAP - 配备 LoRa® 和 AI 的传感器原型套件** 使您能够使用 LoRaWAN® 快速实现世界的数字化，并解决现实世界中的挑战。通过这个即插即用的工具包，任何人都可以为其边缘设备添加 AI 功能，释放 AIoT 的潜力。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-LoRaWAN-Dev-Kit-p-5370.html" target="_blank">
             <strong><span><font color="FFFFFF" size="4"> 立即获取 🖱️</font></span></strong>
     </a>
 </div>

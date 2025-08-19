@@ -20,7 +20,7 @@ El **Wio Terminal** es un microcontrolador basado en SAMD51 con conectividad ina
 El Wio Terminal está equipado con **una pantalla LCD de 2.4”, IMU incorporado (LIS3DHTR), micrófono, buzzer, ranura para microSD, sensor de luz y emisor infrarrojo (IR 940nm)**. Además, cuenta con dos puertos Grove multifuncionales para el [ecosistema Grove](https://www.seeedstudio.com/grove.html) y 40 pines GPIO compatibles con Raspberry Pi para más extensiones.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

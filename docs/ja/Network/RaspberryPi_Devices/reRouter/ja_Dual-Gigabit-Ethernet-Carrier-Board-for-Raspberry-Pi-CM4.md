@@ -23,7 +23,7 @@ Raspberry Pi Compute Module 4を搭載したデュアルギガビットキャリ
 MIPI CSI、MIPI DSI、micro-HDMIを使用してディスプレイやカメラを接続できるほか、標準的な9ピンUSB 3.0ヘッダーによるUSB拡張、micro-SDカードスロット、FPCコネクタなど、多様なI/O周辺機器を備えています。また、コンパクトなフォームファクターを維持しています。このボードは、HTPCメーカー、Linux開発者、ソフトウェアルーター愛好家、そして一般的なRaspberry Piユーザーに最適です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

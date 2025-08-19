@@ -43,7 +43,7 @@ Viene con un amplio conjunto de interfaces industriales: 1x RS232 estándar, 1x 
 Cubierto por una aleación de aluminio súper resistente y liviana, está diseñado con IP55 para un alto grado de protección y está diseñada con disipación de calor pasiva con dos ventiladores integrados para una fuerte función de enfriamiento. Con Jetpack 5.0.2 preinstalado, esta excelente plataforma informática está lista para implementarse en vehículos de limpieza no tripulados, vehículos de reparto no tripulados, inspección inteligente, AGV y otros campos de conducción no tripulados.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Conseguir una 🖱️</font></span></strong>
     </a>
 </div>

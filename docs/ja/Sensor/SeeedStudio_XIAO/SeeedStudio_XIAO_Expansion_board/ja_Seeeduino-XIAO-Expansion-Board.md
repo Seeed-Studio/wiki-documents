@@ -25,7 +25,7 @@ Seeed Studio XIAO のフォームファクタに基づき、すべての Seeed S
 Seeed Studio XIAO SAMD21、Seeed Studio XIAO RP2040、および Seeed Studio XIAO nRF52840 は、Seeed Studio Expansion Base for XIAO と互換性があります。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

@@ -22,7 +22,7 @@ SenseCAP LoRaWAN 版本的产品包括 LoRaWAN 网关和传感器节点。基于
 SenseCAP 提供了一个易于使用的云平台。用户可以通过 SenseCAP App 扫描二维码，将设备绑定到相应的账户以管理设备，并在 SenseCAP Portal 上查看传感器节点数据。SenseCAP Portal 提供 API，用户可以基于 Portal 上的数据进行进一步开发。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>

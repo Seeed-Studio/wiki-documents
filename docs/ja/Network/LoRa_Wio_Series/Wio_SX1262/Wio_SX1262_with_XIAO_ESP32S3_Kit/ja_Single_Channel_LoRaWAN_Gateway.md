@@ -49,7 +49,7 @@ XIAO ESP32S3 をホスト MCU とし、Wio-SX1262 LoRa ラジオキットを使�
 ファームウェアをダウンロードするには以下をクリックしてください：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_2024120201.zip"><strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬ </font></span></strong></a>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_2024120201.zip" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬ </font></span></strong></a>
 </div>
 
 **ステップ 1**: Esptool をダウンロードします。詳細については [Esptool ドキュメント](https://docs.espressif.com/projects/esptool/en/latest/esp32/) を参照してください。

@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/11/2025
+  date: 08/18/2025
   author: Frank
 ---
 
@@ -17,51 +17,63 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 11th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is August 18th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Getting Started with reComputer Robotics](https://wiki.seeedstudio.com/recomputer_robotics_j401_getting_started/)
+### [ReSpeaker Mic Array v3.0](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/107990053/01.png" alt="pir" width={800} height="auto" /></p>
 
-The reComputer Robotics J401 is a compact, high-performance edge AI carrier board designed for advanced robotics. Compatible with NVIDIA Jetson Orin Nano/Orin NX modules in Super/MAXN mode, it delivers up to 157 TOPS of AI performance. Equipped with extensive connectivity options—including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/BT modules, 6 USB 3.2 ports, CAN, GMSL2 (via optional expansion), I2C, and UART—it serves as a powerful robotic brain capable of processing complex data from various sensors. Pre-installed with JetPack 6 and Linux BSP, it ensures seamless deployment.​
+ReSpeaker Mic Array v3.0 is the next evolution of Seeed Studio’s USB microphone arrays, following the ReSpeaker Mic Array v2.0. While the v2.0 was built on XMOS’s XVF-3000 chipset and designed as a major upgrade from v1.0, the v3.0 focuses on refining audio quality and algorithm performance, even with a smaller physical microphone count.
 
-### [Getting Started with AI Assistant](https://wiki.seeedstudio.com/ai_assistant_getting_started/)
+### [Orbbec Gemini 335Lg Stereo Camera](https://wiki.seeedstudio.com/orbbec_gemini_335lg/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/1-114993645-Al-Assistant-v1.1.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini-335Lg_Front.webp" alt="pir" width={800} height="auto" /></p>
 
-The AI Assistant development kit, jointly created by Seeed Studio and STMicroelectronics. This is an development platform designed for cutting-edge edge AI applications. Centered around the high-performance STM32N657 MCU with its integrated ST Neural-ART AI accelerator, it perfectly blends powerful AI computing capabilities with the classic MCU advantages of low power consumption, a small form factor, and cost-effectiveness. The kit comes equipped with an onboard global shutter camera, an IMU sensor with an AI processing unit, a high-definition touchscreen, and a Wi-Fi module, offering a complete hardware and software solution for developing next-generation smart vision and voice interaction products.
+Gemini 335Lg is a standout model in the Gemini 330 series, serving as the GMSL2/FAKRA version of the industry-proven Gemini 335L. The GMSL2 serializer combined with the FAKRA connector ensures secure and reliable connectivity for autonomous mobile robots (AMRs) navigating complex environments and robotic arms requiring flexible cabling.
 
-### [Edge Impulse-Based Speech Recognition Using TinyML on ReSpeaker XVF3800 with XIAO ESP32S3](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_edge_impulse/)
+### [No-Code Vibration Anomaly Detection with SenseCraft AI](https://wiki.seeedstudio.com/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image.png" alt="pir" width={800} height="auto" /></p>
 
-Unlock hands-free control with real-time voice command detection using a Keyword Spotting (KWS) system powered by TinyML. By combining the high-performance ReSpeaker XVF3800 microphone array with the efficient XIAO ESP32S3 and the Edge Impulse platform, we bring voice recognition to compact, low-power devices. Train, deploy, and listen—your device is always ready for your next command!
+This tutorial demonstrates how to use the SenseCraft AI platform with the XIAO ESP32-S3 and a 3-axis accelerometer to build a zero-code abnormal vibration detection solution. Through SenseCraft AI, users can handle firmware deployment, device setup, learning of normal vibration patterns, and real-time monitoring entirely via a web interface. The device runs the GEDAD algorithm at the edge to automatically detect abnormal vibrations and trigger alerts, making it suitable for predictive maintenance in motors, HVAC systems, robots, and other equipment.
 
-### [Getting Started with TRMNL 7.5" (OG) DIY Kit in Arduino](https://wiki.seeedstudio.com/ogdiy_kit_works_with_arduino/)
+### [The Hazard Response Mission Pack](https://wiki.seeedstudio.com/mission_pack_intro_v3/)
 
-<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/x/1x1a0509.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2024/10/0-114993391-Mission-Pack-Early-Access1-768x576.jpg" alt="pir" width={800} height="auto" /></p>
 
-This guide focuses on programming the TRMNL DIY Kit using the Arduino framework, providing you with the essential knowledge to utilize its various hardware features.
+The Hazard Response Mission Pack is a comprehensive solution that leverages cutting-edge technologies to address various hazard scenarios. This portable pack comprises a network of sensors, edge computing devices, and communication tools that cover remote sensing, data transmission, data processing, inference, and analysis.
 
-### [Object Tracking with reComputer Jetson and PX4](https://wiki.seeedstudio.com/object_tracking_with_reComputer_jetson_and_pX4/)
+### [GPT-OSS Running Live on reComputer Jetson](https://wiki.seeedstudio.com/deploy_gptoss_on_jetson/)
 
 <div class="video-container">
-  <iframe width="853" height="480" src="https://www.youtube.com/embed/YG1XmZL6kpU" title="🚁 Autonomous Drone Target Tracking by reComputer Mini" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="800" height="450" src="https://www.youtube.com/embed/kcN731Jyce4" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance. Thanks to its compact design, it is highly suitable for being installed on drones to handle some AI tasks.This Wiki will show you how to use reComputer and px4 to achieve real-time target tracking on drone.
+This is far more than a simple technical porting exercise - it's an exploration of what's possible at the edge. In this article, We'll demonstrate how a 20B-parameter open-source large language model comes to life on edge devices like Nvidia Jetson Orin Nx.
+
+### [Firearm detection with Frigate NVR on R2000](https://wiki.seeedstudio.com/firearm_detection_with_frigate_nvr_on_r2000/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={800} height="auto" /></p>
+
+For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a firearm is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
+
+### [Edge AI Crowd Tracking & Counting with SenseCraft on NVIDIA Jetson”](https://wiki.seeedstudio.com/solutions/jetson-crowd-tracking/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Web%20Interface%20%28Example%29.png" alt="pir" width={800} height="auto" /></p>
+
+This tutorial shows how to deploy a real-time crowd tracking and counting system on NVIDIA Jetson devices using the SenseCraft AI platform. With a single installation script, users can automatically set up Docker, the NVIDIA container toolkit, an MQTT broker, and the SenseCraft AI server running a YOLOv11 model. The solution enables edge-side people detection and analytics for applications such as smart buildings, retail insights, public safety, and traffic management.
 
 ## Existing Wiki Updated
 
-<!-- ### [reComputer Jetson Robotics J401 Hardware and Getting Started](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/)
+### [XIAO ESP32S3-Sense Key Word Spotting](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/)
 
-We added [documentation](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#can) related to CAN.
+We have added example code for **[ESP32 Boards Manager version 3.x.x](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/#step-1-save-recorded-sound-samples-as-wav-audio-files-to-a-microsd-card)**.
 
-### [NVIDIA® Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/)
+### [Grove - Barometer Sensor (SPA06-003)](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/)
 
-We added [operational example](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack/#flash-to-jetson) for flashing JetPack 6.2. -->
+We have updated the [example code](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/#software) related to software usage.
 
 ## The Efforts of Contributor
 
@@ -197,5 +209,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.7.21st](/Seeed_Elderly/weekly_wiki/wiki250721)
 - [weekly wiki on 2025.7.28th](/Seeed_Elderly/weekly_wiki/wiki250728)
 - [weekly wiki on 2025.8.04th](/Seeed_Elderly/weekly_wiki/wiki250804)
+- [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/wiki250811)
 
 </details>

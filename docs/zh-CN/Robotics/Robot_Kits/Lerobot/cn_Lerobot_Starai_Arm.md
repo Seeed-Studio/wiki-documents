@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /cn/lerobot_starai_arm
 last_update:
-  date: 7/29/2025
+  date: 8/15/2025
   author: LiShanghang
 ---
 
@@ -129,7 +129,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3.克隆 LeRobot 仓库：
 
 ```bash
-https://github.com/servodevelop/lerobot-starai.git
+git clone https://github.com/servodevelop/lerobot-starai.git
 ```
 
 4.使用 miniconda 时，在环境中安装 ffmpeg：
@@ -149,7 +149,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 5.安装带有 fashionstar 电机依赖的 LeRobot：
 
 ```bash
-cd ~/lerobot && pip install -e ".[starai]"
+cd ~/lerobot-starai && pip install -e ".[starai]"
 ```
 
 对于 Jetson Jetpack 6.2 设备（请确保在执行此步骤前按照[此链接教程](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)第 5 步安装了 Pytorch-gpu 和 Torchvision）：
@@ -214,17 +214,9 @@ python lerobot/scripts/find_motors_bus_port.py
 1. 识别Leader时端口的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0031751`，或在 Linux 上可能为 `/dev/ttyUSB0`） 
 2. 识别Reader时端口的示例输出（例如，在 Mac 上为 `/dev/tty.usbmodem575E0032081`，或在 Linux 上可能为 `/dev/ttyUSB1`）
 
-打开文件
-
-```bash
-lerobot\lerobot\common\robot_devices\robots\configs.py
-```
+打开文件 `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
 使用ctrl+F搜索快捷键搜索 starai ，可以定位到如下代码，修改fallower_arms和leader_arms下的port参数与实际一致。
-
-
-
-
 
 ```py
 @RobotConfig.register_subclass("starai")
@@ -274,11 +266,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
 
 ### 运行效果设置
 
-打开文件
-
-```bash
-lerobot\lerobot\common\robot_devices\robots\configs.py
-```
+打开文件 `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
 使用ctrl+F搜索快捷键搜索 starai ，可以定位到如下代码，修改fallower_arms下的interval参数。
 
@@ -439,7 +427,7 @@ Frame: 0046 Latency (ms): 40.07
 Images have been saved to outputs/images_from_opencv_cameras
 ```
 
-您可以在 `outputs/images_from_opencv_cameras` 目录中找到每个摄像头拍摄的图片，并确认不同位置摄像头对应的端口索引信息。然后，完成 `lerobot/lerobot/common/robot_devices/robots/configs.py` 文件中摄像头参数的对齐。
+您可以在 `outputs/images_from_opencv_cameras` 目录中找到每个摄像头拍摄的图片，并确认不同位置摄像头对应的端口索引信息。然后，完成 `lerobot-starai/lerobot/common/robot_devices/robots/configs.py` 文件中摄像头参数的对齐。
 
 <div align="center">
     <img width={400}
@@ -484,7 +472,7 @@ python lerobot/scripts/control_robot.py \
 ```
 
 
-## Record the dataset
+## 数据集制作采集
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/OpaC0CA3-Mc?si=rbNhJJRkG9zngQB-" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -506,10 +494,10 @@ echo $HF_USER
 ```
 
 :::tip
-如果你不想使用 Hugging Face Hub 的上传数据集功能，可以选择 `--control.push_to_hub=false`.
+如果你不想使用 Hugging Face Hub 的上传数据集功能，可以选择 `--control.push_to_hub=false`。同时将 `--control.repo_id=${HF_USER}/starai` 替换为一个自定义的本地文件夹名称，例如 `--control.repo_id=starai/starai`。数据将存储在系统主目录下的 `~/.cache/huggingface/lerobot`。
 :::
 
-记录 20 个回合但不上传数据集到 Hub：
+记录 20 个回合并上传数据集到 Hub：
 
 ```bash
 python lerobot/scripts/control_robot.py \
@@ -524,10 +512,29 @@ python lerobot/scripts/control_robot.py \
   --control.reset_time_s=30 \
   --control.num_episodes=20 \
   --control.display_data=true \
-  --control.push_to_hub=false
+  --control.push_to_hub=ture
 ```
 
-You will see a lot of lines appearing like this one:
+不上传到Hub:
+**（推荐，下文的教程会以本地数据为主）** 
+
+```bash
+python lerobot/scripts/control_robot.py \
+  --robot.type=starai \
+  --control.type=record \
+  --control.fps=30 \
+  --control.single_task="Grasp a lego block and put it in the bin." \
+  --control.repo_id=starai/starai \#给本地存储文件自己取一个名字
+  --control.tags='["starai","tutorial"]' \
+  --control.warmup_time_s=5 \
+  --control.episode_time_s=30 \
+  --control.reset_time_s=30 \
+  --control.num_episodes=20 \
+  --control.display_data=true \
+  --control.push_to_hub=false #修改push_to_hub为false
+```
+
+你会看到类似如下数据:
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
@@ -543,7 +550,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 
 :::tip
 
-- 如果你希望将数据保存在本地（`--control.push_to_hub=false`），请将 `--control.repo_id=${HF_USER}/so101_test` 替换为一个自定义的本地文件夹名称，例如 `--control.repo_id=seeed_123/so101_test`。数据将存储在系统主目录下的 `~/.cache/huggingface/lerobot`。
+- **再次提醒**: 如果你希望将数据保存在本地（`--control.push_to_hub=false`），请将 `--control.repo_id=${HF_USER}/starai` 替换为一个自定义的本地文件夹名称，例如 `--control.repo_id=starai/starai`。数据将存储在系统主目录下的 `~/.cache/huggingface/lerobot`。
 
 - 如果你通过 `--control.push_to_hub=true` 将数据集上传到了 Hugging Face Hub，可以通过 [在线可视化你的数据集](https://huggingface.co/spaces/lerobot/visualize_dataset)，只需复制粘贴你的 repo id。
 
@@ -567,15 +574,14 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 
 ## 可视化数据集
 
-数据集保存在本地，并且数据采集时运行超参数为 `--control.push_to_hub=false` ，您也可以使用以下命令在本地进行可视化：
+数据集保存在本地后，您可以使用以下命令在本地进行可视化：
 
 ```bash
 python lerobot/scripts/visualize_dataset_html.py \
-  --repo-id starai/starai_test \
+  --repo-id starai/starai \
 ```
 
-这里的`starai`为采集数据时候自定义的repo_id名。
-
+这里的`starai/starai`为采集数据时候自定义的`repo_id`名。
 
 ## 重播一个回合
 
@@ -587,12 +593,12 @@ python lerobot/scripts/control_robot.py \
   --control.type=replay \
   --control.fps=30 \
   --control.repo_id=starai/starai \
-  --control.episode=0
+  --control.episode=0 \0 表示第一个回合
   --control.local_files_only=true
 ```
 
 :::tip
-如果您不选择上传数据集, 请添加 `--control.local_files_only=true` 。
+这个参数 `--control.local_files_only=true` 是告知程序使用本地的数据集而非Hub的。
 :::
 
 
@@ -602,7 +608,7 @@ python lerobot/scripts/control_robot.py \
 
 ```bash
 python lerobot/scripts/train.py \
-  --dataset.repo_id=${HF_USER}/starai \
+  --dataset.repo_id=starai/starai \
   --policy.type=act \
   --output_dir=outputs/train/act_starai \
   --job_name=act_starai \
@@ -614,19 +620,19 @@ python lerobot/scripts/train.py \
 
 1. 我们使用本地数据集`--dataset.repo_id=starai/starai`作为参数 。
 
-2. 我们使用 `policy.type=act` 提供了策略。这将从 [`lerobot/lerobot/common/policies/act /configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/common/policies/act/configuration_act.py) 加载配置。目前测试了ACT，你也可以选择diffusion、pi0、pi0fast、tdmpc、vqbet等策略进行尝试。
+2. 我们使用 `policy.type=act` 提供了策略。这将从 [`lerobot-starai/lerobot/common/policies/act/configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/common/policies/act/configuration_act.py) 加载配置。目前测试了ACT，你也可以选择diffusion、pi0、pi0fast、tdmpc、vqbet等策略进行尝试。
 
 3. 我们提供了 `device=cuda`，因为我们在 Nvidia GPU 上训练，但如果您使用的是带有 Apple Silicon 的 Mac，可以使用 `device=mps`，否则使用 `device=cpu`。
 
 4. 我们提供了`wandb.enable=true`使用权重和偏差[Weights and Biases](https://docs.wandb.ai/quickstart)来可视化训练图。这是可选的，但如果您使用它，请确保您已通过运行`wandb login`登录。
 
-如果要在本地数据集上进行训练，请确保`repo_id`与数据收集期间使用的数据集匹配。培训应该需要几个小时。您可以在`outputs/train/act_starai_test/checkpoints`中找到检查点。
+如果要在本地数据集上进行训练，请确保`repo_id`与数据收集期间使用的数据集匹配。培训应该需要几个小时。您可以在`outputs/train/act_starai/checkpoints`中找到检查点。
 
 要从某个检查点恢复训练，下面是一个示例命令，用于从`act_starai`策略的最后一个检查点恢复：
 
 ```bash
 python lerobot/scripts/train.py \
-  --config_path=outputs/train/act_starai_test/checkpoints/last/pretrained_model/train_config.json \
+  --config_path=outputs/train/act_starai/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
 
@@ -646,18 +652,26 @@ python lerobot/scripts/control_robot.py \
   --control.episode_time_s=30 \
   --control.reset_time_s=30 \
   --control.num_episodes=10 \
-  --control.push_to_hub=false \
-  --control.policy.path=outputs/train/act_starai_test/checkpoints/last/pretrained_model
+  --control.push_to_hub=false \#这里选择不上传Hub
+  --control.policy.path=outputs/train/act_starai/checkpoints/last/pretrained_model
 ```
 
 如您所见，这几乎与之前用于记录训练数据集的命令相同。只有两处变化：
 
-1. 增加了 `--control.policy.path` 参数，指示您的策略检查点的路径（例如`outputs/train/eval_act_starai/checkpoints/last/pretrained_model`）。如果您将模型检查点上传到 Hub，也可以使用模型仓库（例如 `${HF_USER}/eval_act_starai`）。
-2. 数据集的名称以 `eval` 开头，以反映您正在运行推理（例如 `${HF_USER}/eval_act_starai`）。
+1. 增加了 `--control.policy.path` 参数，指示您的策略检查点的路径（例如`outputs/train/act_starai/checkpoints/last/pretrained_model`）。
+2. 评估数据集的名称 **必须** 以 `eval` 开头，以反映您正在运行推理（例如 `--control.repo_id=starai/eval_act_starai`）。该操作会在你评估的时候，为你单独录制评估时候的视频和数据，并保存至`eval_act_starai`。
+
+:::warning
+若第二次执行评估命令报错，需要删除对应的`eval_act_starai`文件，保证`~/.cache/huggingface/lerobot/starai/`目录下没有相同命名的文件。
+:::
+
+:::tip
+如果您将模型检查点上传到 Hub，也可以使用模型仓库（例如 `--control.repo_id=${HF_USER}/eval_act_starai`），同时修改`--control.push_to_hub=true`。
+:::
 
 ## FAQ
 
-- 如果你正在按照这份文档/教程操作，请克隆推荐的GitHub仓库：`https://github.com/Seeed-Projects/lerobot.git`。
+- 如果你正在按照这份文档/教程操作，请克隆推荐的GitHub仓库：`git clone https://github.com/servodevelop/lerobot-starai.git`。
 
 - 如果遇到以下报错，需要检查对应端口号的机械臂是否接通电源，总线舵机是否出现数据线松动或者脱落。
 
@@ -673,19 +687,15 @@ python lerobot/scripts/control_robot.py \
   conda install libtiff==4.5.0  #for Ubuntu 22.04 is libtiff==4.5.1
   ```
 
-  
-
 - 执行完安装LeRobot可能会自动卸载gpu版本的pytorch，所以需要在手动安装torch-gpu。
 
 - 对于Jetson，请先安装[Pytorch和Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson)再执行`conda install -y -c conda-forge ffmpeg`,否则编译torchvision的时候会出现ffmpeg版本不匹配的问题。
 
-- 如果出现如下问题，是电脑的不支持此格式的视频编码，需要修改`lerobot/lerobot/common/datasets /video_utils.py`文件134行`vcodec: str = "libsvtav1"`的值修改为`libx264`或者`libopenh264`,不同电脑参数不同，可以进行尝试。 [Issues 705](https://github.com/huggingface/lerobot/issues/705)
+- 如果出现如下问题，是电脑的不支持此格式的视频编码，需要修改`lerobot-starai/lerobot/common/datasets/video_utils.py`文件134行`vcodec: str = "libsvtav1"`的值修改为`libx264`或者`libopenh264`,不同电脑参数不同，可以进行尝试。 [Issues 705](https://github.com/huggingface/lerobot/issues/705)
 
   ```bash
   [vost#0:0 @ 0x13207240] Unknown encoder 'libsvtav1' [vost#0:0 @ 0x13207240] Error selecting an encoder Error opening output file /home/han/.cache/huggingface/lerobot/lyhhan/so100_test/videos/chunk-000/observation.images.laptop/episode_000000.mp4. Error opening output files: Encoder not found
   ```
-
-  
 
 - 在3060的8G笔记本上训练ACT的50组数据的时间大概为6小时，在4090和A100的电脑上训练50组数据时间大概为2~3小时。
 

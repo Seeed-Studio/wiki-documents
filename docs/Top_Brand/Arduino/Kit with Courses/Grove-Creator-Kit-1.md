@@ -25,7 +25,7 @@ The Grove - Creator Kit is one of the best kits for creators of any age, whether
 Here is an introductory video of the Grove Creator Kit! -->
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Creator-Kit-g-p-5192.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Creator-Kit-g-p-5192.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

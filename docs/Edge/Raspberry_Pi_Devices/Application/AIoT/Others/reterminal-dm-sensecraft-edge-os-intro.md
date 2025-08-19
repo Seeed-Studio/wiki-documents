@@ -18,7 +18,7 @@ last_update:
 SenseCraft Edge OS is a cutting-edge operating system meticulously designed for reTerminal DM's 10.1" Human Machine Interface (HMI) device, featuring an array of integrated functionalities that elevate user experience to new heights. This groundbreaking OS boasts an intuitive interface with built-in setting and control functions, empowering users to effortlessly configure and manage their devices. Furthermore, it seamlessly integrates with Node-RED editor and Node-RED Dashboard, enabling users to unlock unparalleled customization and automation capabilities. Harnessing the power of Node-RED's visual programming and automation tools, this operating system empowers users to create intricate workflows and deploy sophisticated control systems with ease. With its unmatched fusion of intuitive HMI controls and the versatility of Node-RED, SenseCraft Edge OS sets a new standard for enhanced functionality and unparalleled user-friendliness in the realm of HMI devices in all kinds of use case scenarios. The built-in OSTree versioned file system provides a robust framework for managing and deploying Linux-based operating systems in a scalable and reliable manner, with a focus on atomicity, immutability, and efficient storage usage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"2"}> Get reTerminal DM Now 🖱️</font></span></strong>
     </a>
 </div>

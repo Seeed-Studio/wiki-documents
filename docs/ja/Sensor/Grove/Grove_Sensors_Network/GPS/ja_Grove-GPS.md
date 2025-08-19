@@ -21,7 +21,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 この Grove - GPS モジュールは、SIM28（旧バージョンは u-blox 6）とシリアル通信構成を備えた、コスト効率が高くフィールドプログラム可能なデバイスです。22トラッキング / 66アクイジションチャンネルのGPS受信機を搭載しています。トラッキングとアクイジションの感度はどちらも-160dBmに達し、個人用ナビゲーションプロジェクトや位置情報サービスに最適で、同価格帯の製品の中でも優れた選択肢となっています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 

@@ -17,7 +17,7 @@ no_comments: false # for Disqus
 Arduino Uno 是迄今为止最受欢迎的 Arduino 开发板，但是当您的项目需要大量传感器或 LED 时，跳线杂乱无章会让人感到沮丧。创建 Base Shield 的目的是帮助您摆脱面包板和跳线。通过底板上丰富的 Grove 连接器，您可以方便地将所有 Grove 模块添加到 Arduino Uno 上！Base Shield V2 的引脚排列与 Arduino Uno R3 相同。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/base-shield-v13-p-1378.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/base-shield-v13-p-1378.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>

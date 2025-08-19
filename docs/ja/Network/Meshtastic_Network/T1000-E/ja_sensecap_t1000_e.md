@@ -37,8 +37,8 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 `Meshtastic` アプリをダウンロードしてください：
 
-* [IOS アプリ](https://meshtastic.org/docs/category/apple-apps/)
-* [Android アプリ](https://meshtastic.org/docs/category/android-app/)
+- [IOS アプリ](https://meshtastic.org/docs/category/apple-apps/)
+- [Android アプリ](https://meshtastic.org/docs/category/android-app/)
 
 ### デバイスの電源を入れる
 
@@ -57,11 +57,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS アプリ">
 
-* Bluetooth パネルでターゲットデバイスを選択します。
+- Bluetooth パネルでターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-* コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスを接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスを接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -69,11 +69,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android アプリ">
 
-* `+` をクリックしてターゲットデバイスを選択します。
+- `+` をクリックしてターゲットデバイスを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-* コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスを接続します。
+- コード（デフォルトコードは `123456`）を入力し、`OK` をクリックしてデバイスを接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
@@ -188,14 +188,14 @@ T1000-E ファームウェア以外のファームウェアを書き込まない
 
 以下のファームウェアはデバイスを破損させます：
 
-* nrf52_promicro_diy_tcxo<br/>
-* nrf52_promicro_diy_xtal<br/>
-* Dongle_nRF52840-pca10059-v1<br/>
-* feather_diy<br/>
-* TWC_mesh_v4<br/>
-* wio-sdk-wm1110<br/>
-* wio-tracker-wm1110<br/>
-* xiao_ble
+- nrf52_promicro_diy_tcxo<br/>
+- nrf52_promicro_diy_xtal<br/>
+- Dongle_nRF52840-pca10059-v1<br/>
+- feather_diy<br/>
+- TWC_mesh_v4<br/>
+- wio-sdk-wm1110<br/>
+- wio-tracker-wm1110<br/>
+- xiao_ble
 
 ### アプリケーションファームウェアの書き込み
 
@@ -257,7 +257,7 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルがダ�
 
 ## FAQ
 
-* **デバイス名を確認する方法**
+- **デバイス名を確認する方法**
 
  [Meshtastic Web Flasher](https://flasher.meshtastic.org/) を訪問してください。<br/>
 
@@ -267,7 +267,7 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルがダ�
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-* **デバイスを再起動する方法**
+- **デバイスを再起動する方法**
 
  ボタンを押し続けたまま、充電ケーブルを接続してください。
 
@@ -275,9 +275,9 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルがダ�
 
 ### デバイスが全く起動しない
 
-* デバイスを1～2時間充電してください。
+- デバイスを1～2時間充電してください。
 
-* 充電ケーブルを交換してください。
+- 充電ケーブルを交換してください。
 
 ### デバイスがブートループに陥る
 
@@ -287,7 +287,7 @@ UF2 ファイルを DFU ドライブにコピーします。ファイルがダ�
 
 **解決策:**
 
-* ステップ1: 手動でDFUモードに入ることを試みます。デバイスのボタンを押し続けたまま、充電ケーブルを**素早く**2回接続してください。緑色のLEDが点灯します。
+- ステップ1: 手動でDFUモードに入ることを試みます。デバイスのボタンを押し続けたまま、充電ケーブルを**素早く**2回接続してください。緑色のLEDが点灯します。
 
 :::note
 DFUモードに成功するには、この操作を迅速に行う必要があります。複数回試す必要があるかもしれません。
@@ -295,9 +295,9 @@ DFUモードに成功するには、この操作を迅速に行う必要があ�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-* ステップ2: [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)。
+- ステップ2: [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase)。
 
-* ステップ3: [ファームウェアのフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)。
+- ステップ3: [ファームウェアのフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)。
 
 ### デバイスが壊れた（ブリック状態）
 
@@ -309,7 +309,7 @@ DFUモードに成功するには、この操作を迅速に行う必要があ�
 
 #### ブートローダーのフラッシュ
 
-* [ブートローダーダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [ブートローダーダウンロード](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -363,6 +363,7 @@ python3 setup.py install
 ```
 
 システムディレクトリにインストールする場合（一般的には推奨されません）:
+
 ```
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
@@ -377,6 +378,7 @@ pip3 install -r requirements.txt
 cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
+
 `.exe` ファイルは `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` にあります（Windowsの場合は `.exe` が付きます）。
 便利なように、%PATH% にあるディレクトリにコピーまたは移動してください。
 
@@ -394,12 +396,14 @@ pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 
 ターミナルまたはコマンドプロンプトで、ブートローダーZIPパッケージをダウンロードしたディレクトリに移動し、以下のコマンドを実行します。デバイスに適したポートを置き換えてください。
 
-* **Windowsの場合**: 
+- **Windowsの場合**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-* **その他の場合**: 
+- **その他の場合**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
 ```
@@ -410,41 +414,36 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 
 **2) デバイスがDFUモードに入れないが、シリアルポートが検出される場合。**
 
-* シリアルポートツールを開きます。
+- シリアルポートツールを開きます。
 
-* ボーレートを `1200` に設定します。
+- ボーレートを `1200` に設定します。
 
-* デバイスを接続します。
+- デバイスを接続します。
    接続時にライトが一瞬点滅します。ライトが点灯し続けるまで試行を繰り返してください。これによりデバイスがDFUモードに戻ることを意味します。その後、[ブートローダーをフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#flash-the-bootloader) -> [フラッシュの消去](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-2-flash-erase) -> [ファームウェアのフラッシュ](https://wiki.seeedstudio.com/ja/sensecap_t1000_e/#step-3-flash-firmware)を行います。
 
-<div class="table-center">
+<div class="video-container">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-**3) デバイスがDFUモードに入らず、シリアルポートが表示されない場合は、技術サポート（support@sensecapmx.com）にお問い合わせください。**
+**3) デバイスが DFU モードに入らず、シリアルポートが表示されない場合**
 
+- 充電ケーブルを外し、数日間放置してバッテリーが完全に放電するまで待ってから、再び充電ケーブルを接続して再ペアリングを試してください。
+
+**4) 上記の手順がすべてうまくいかない場合は、テクニカルサポートにご連絡ください：support@sensecapmx.com**
 
 ### ファームウェアの書き込みに失敗しました
 
-
-
-* **シリアルポートでデータが受信されない**
+- **シリアルポートでデータが受信されない**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
  デバイスがDFUモードにあるか確認してください。デバイスがDFUモードにある場合、緑色のライトが点灯します。
 
-* **シリアルポートを開けない**
+- **シリアルポートを開けない**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
  ポートが正しいか確認するか、別のポートを試してください。
-
-
-
-
-
-
 
 ## リソース
 
@@ -455,11 +454,11 @@ adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g4887
 弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

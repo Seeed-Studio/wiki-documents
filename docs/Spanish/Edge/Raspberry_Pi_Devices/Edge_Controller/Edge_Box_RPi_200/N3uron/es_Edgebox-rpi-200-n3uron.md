@@ -39,7 +39,7 @@ Con N3uron, puedes crear fácilmente canalizaciones de datos bidireccionales ent
 La serie EdgeBox-RPI-200 son controladores de computación perimetral industrial todo en uno basados en Raspberry Pi, que combinan múltiples propósitos industriales. Diseñados como hardware industrial de alta escalabilidad y robustez, montados con una gran cantidad de recursos de E/S y respaldados por el sólido ecosistema de software industrial de Raspberry Pi, son una elección ideal para soluciones de automatización inteligente e Internet Industrial de las Cosas (IIoT).
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ya! 🖱️</font></span></strong>
     </a>
 </div>

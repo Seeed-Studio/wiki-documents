@@ -17,7 +17,7 @@ last_update:
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A603/A603_Carrier_Board.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A603-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5635.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
 A603 扩展板是一款强大的扩展板，支持 Jetson Orin™ NX/Nano 模块。它配备了 1 个 GbE 端口、用于 SSD 的 M.2 Key M、用于 WiFi/蓝牙的 M.2 Key E、CSI 和 HDMI 接口，用于高质量视频捕获和显示。它还包含 4 个 USB 端口、风扇、RTC 和灵活的 9-20V 电源。凭借紧凑的设计，它可以灵活且轻松地集成到各种边缘计算应用中。在本教程中，我们将向您展示如何将 [Jetpack](https://developer.nvidia.com/embedded/jetpack) 刷入连接到 A603 扩展板的 NVMe SSD 和 USB 闪存驱动器。

@@ -127,7 +127,7 @@ Las versiones recién mejoradas **XIAO nRF52840 Plus y XIAO nRF52840 Sense Plus*
 El Seeed Studio XIAO nRF52840 Sense es compatible con la placa de expansión Seeed Studio XIAO.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html" target="_blank">
             <strong><span><font color="#FFFFFF" size="4"> Consigue Uno Ahora 🖱️</font></span></strong>
     </a>
 </div>

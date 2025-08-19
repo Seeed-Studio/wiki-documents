@@ -36,8 +36,8 @@ Here are some compelling projects that you can undertake using the Linkstar rout
             <td><font size={"2"}>Explore the future of home entertainment with the LinkStar-H68K Router and Plex Media Server – this guide will walk you through the steps to create your own media server at home.</font></td>
         </tr>
 		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/h68k-ha-esphome/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/plex_media_server/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/h68k-ha-esphome/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/plex_media_server/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>Streamlining Web Development The Perfect Duo - Linkstar and WordPress</th>
@@ -52,8 +52,8 @@ Here are some compelling projects that you can undertake using the Linkstar rout
             <td><font size={"2"}>Delve into this wiki where we showcase the integration of Grocy and BookStack in a self-hosted office server, empowered by a LinkStar router, providing a compelling solution for streamlined and organized operations.</font></td>
         </tr>
         <tr class="form_without_frame">
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/wordpress_linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grocy-bookstack-linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/wordpress_linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/grocy-bookstack-linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -75,8 +75,8 @@ Here are some compelling projects that you can undertake using the Linkstar rout
         <td><font size={"2"}> Credit to </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> In this project, you will be explored the step-by-step process of installing and configuring Adblock on the Linkstar router. </font></td>
         </tr>
 		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/integrate-adblock-with-linkstar-router-for-ad-free-browsing-7db452"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/integrate-adblock-with-linkstar-router-for-ad-free-browsing-7db452" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
 		</tr>
     </table>
     </div>

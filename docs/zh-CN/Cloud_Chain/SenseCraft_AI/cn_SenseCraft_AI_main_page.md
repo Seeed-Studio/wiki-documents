@@ -19,7 +19,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/55.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_overview/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_overview/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>概述 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -31,7 +31,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/13.png" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_main_page/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_main_page/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>预训练模型 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -41,7 +41,7 @@ last_update:
 - **针对 XIAO ESP32S3 Sense**：此子部分列出了与 XIAO ESP32S3 Sense 开发板兼容的预训练模型，以及它们的描述和使用案例。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_xiao/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>针对 XIAO ESP32S3 Sense</font></span></strong>
     </a>
 </div><br />
@@ -49,7 +49,7 @@ last_update:
 - **针对 Grove Vision AI V2**：此处可以找到专为 Grove Vision AI V2 设备设计的预训练模型。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_grove_visionai_v2/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_grove_visionai_v2/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>针对 Grove Vision AI V2</font></span></strong>
     </a>
 </div><br />
@@ -57,7 +57,7 @@ last_update:
 - **针对 SenseCAP Watcher**：此子部分提供了可用于 SenseCAP Watcher 设备的预训练模型信息，支持各种监控和检测功能。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_watcher/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_pretrained_models_for_watcher/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>针对 SenseCAP Watcher</font></span></strong>
     </a>
 </div><br />
@@ -65,7 +65,7 @@ last_update:
 - **针对 reComputer Jetson**：reComputer Jetson 子部分包含针对强大的 reComputer Jetson 平台优化的预训练模型，适用于更高要求的 AI 应用。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_deploy_model_to_jetson/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_deploy_model_to_jetson/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>针对 reComputer Jetson</font></span></strong>
     </a>
 </div><br />
@@ -76,7 +76,7 @@ last_update:
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_main_page/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_main_page/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>训练 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -86,7 +86,7 @@ last_update:
 - 分类：此子部分提供使用 SenseCraft AI 训练图像分类模型的分步教程和最佳实践。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_classification/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_classification/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>分类 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -94,7 +94,7 @@ last_update:
 - 目标检测：在这里，您可以找到使用 SenseCraft AI 训练目标检测模型的详细指南。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_object_detection/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_training_object_detection/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>目标检测 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -102,7 +102,7 @@ last_update:
 ## 模型输出
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_main_page/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_main_page/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>模型输出 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -112,7 +112,7 @@ last_update:
 - **Grove Vision AI V2 模型输出**：此子部分解释如何配置和访问部署在 Grove Vision AI V2 设备上的模型输出。内容包括设置触发器、与外部系统集成以及可视化模型预测。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_grove_visionai/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_grove_visionai/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Grove Vision AI V2</font></span></strong>
     </a>
 </div><br />
@@ -122,28 +122,28 @@ last_update:
   - **通过 GPIO**：此部分提供如何将模型输出映射到 XIAO ESP32S3 Sense 的 GPIO 引脚的指南，从而根据模型预测控制外部硬件。
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_gpio_xiao/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_gpio_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>通过 GPIO</font></span></strong>
     </a></div><br />
 
   - **通过 MQTT**：在这里，您可以学习如何使用 MQTT 协议将 XIAO ESP32S3 Sense 的模型输出发送到其他设备或系统，实现无缝集成和通信。
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_mqtt_xiao/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_mqtt_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>通过 MQTT</font></span></strong>
     </a></div><br />
 
   - **作为传感器**：此部分将解释如何使用已上传模型的 XIAO 作为传感器。可能需要使用额外的 XIAO 或 Arduino 设备。
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_libraries_xiao/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_output_libraries_xiao/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>作为传感器</font></span></strong>
     </a></div><br />
 
   - **使用 SSCMACore 库输出模型信息**：如果您不想使用额外的 XIAO 来接收模型输出数据，那么这里的教程可能适合您。
 
   <br /><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_sscmacore_library/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_sscmacore_library/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>使用 SSCMACore</font></span></strong>
     </a></div><br />
 
@@ -154,7 +154,7 @@ last_update:
 ## 应用
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_applications_main_page/">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/sensecraft_ai_applications_main_page/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>应用 🖱️</font></span></strong>
     </a>
 </div><br />

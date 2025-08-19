@@ -48,12 +48,12 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
  </tr>
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -72,7 +72,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 芯片，无需选择，直接刷写对应 ESP32 芯片的 XIAO 固件版本。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>固件刷写工具 🖱️</font></span></strong>
     </a>
 </div>
@@ -109,7 +109,7 @@ XIAO 继电器扩展模块是 Seeed Studio 设计的智能模块，用于控制�
 我们为 XIAO 创建了一个快速刷写固件页面，您可以直接使用下面的网站为您拥有的 XIAO 刷写继电器固件，无需编程。该网站将自动检测您连接的 XIAO 的芯片，无需选择，直接刷写与 ESP32 芯片对应的 XIAO 固件版本。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>固件刷写器 🖱️</font></span></strong>
     </a>
 </div>
