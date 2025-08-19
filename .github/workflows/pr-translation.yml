@@ -28,6 +28,7 @@ jobs:
         with:
           files: |
             docs/**/*.{md,mdx}
+            docs/**/_category_.yml
           files_ignore: |
             docs/zh-CN/**
             docs/ja/**
@@ -55,8 +56,8 @@ jobs:
             echo "📄 Git diff输出:"
             echo "$operations"
             
-            # 过滤md/mdx文件，排除翻译目录
-            filtered_operations=$(echo "$operations" | grep -E '\.(md|mdx)$' | grep -v -E '(zh-CN|ja|Spanish)' || true)
+            # 处理md/mdx和_category.yml文件，排除翻译目录
+            filtered_operations=$(echo "$operations" | grep -E '\.(md|mdx)$|_category_\.yml$' | grep -v -E '(zh-CN|ja|Spanish)' || true)
             
             if [[ -n "$filtered_operations" ]]; then
               echo "📋 过滤后的操作:"
@@ -340,7 +341,7 @@ jobs:
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
             git add docs/      
-            git commit -m "自动翻译文档"
+            git commit -m "自动翻译文档: 支持Markdown和Category文件"
             git push
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
             echo "✅ 翻译结果已提交并推送"
@@ -380,22 +381,26 @@ jobs:
               comment += `### 🎉 翻译成功！\n\n`;
               comment += `翻译文件已自动提交到当前PR分支。请检查翻译质量，如有需要可手动调整。\n\n`;
               comment += `**处理的操作类型:**\n`;
-              comment += `- 📝 **全文翻译**: 新增和修改的文件\n`;
+              comment += `- 📝 **Markdown翻译**: 新增和修改的 .md/.mdx 文件\n`;
+              comment += `- 📋 **Category翻译**: _category_.yml 文件的智能翻译\n`;
               comment += `- 📁 **文件移动**: 自动同步移动翻译文件\n`;
-              comment += `- 🗑️ **文件删除**: 自动删除对应的翻译文件\n\n`;
+              comment += `- 🗑️ **文件删除**: 自动删除对应的翻译文件\n`;
+              comment += `- 🛡️ **文档保护**: 跳过受保护的文件\n\n`;
             } else if (success && !hasChanges) {
               comment += `### 🔍 没有检测到需要翻译的内容\n\n`;
               comment += `可能的原因：\n`;
               comment += `- 目标语言的翻译文件已经是最新的\n`;
               comment += `- 没有检测到有效的文档变更\n`;
-              comment += `- 所有操作都已正确同步\n\n`;
+              comment += `- 所有操作都已正确同步\n`;
+              comment += `- 文件受到保护机制保护\n\n`;
             } else {
               comment += `### 💔 翻译失败\n\n`;
               comment += `请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }}) 了解详细错误信息。\n\n`;
               comment += `常见问题：\n`;
               comment += `- API密钥未配置或已过期\n`;
               comment += `- 文档内容过大导致处理超时\n`;
-              comment += `- 网络连接问题\n\n`;
+              comment += `- 网络连接问题\n`;
+              comment += `- 代码块或格式解析错误\n\n`;
             }
             
             // 读取详细报告（如果存在）

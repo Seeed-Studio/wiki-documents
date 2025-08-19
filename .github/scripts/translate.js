@@ -38,7 +38,6 @@ const PRESERVE_TERMS = {
     'IoT': 'IoT',
     'WiFi': 'WiFi',
     'USB': 'USB',
-    'Bluetooth': 'Bluetooth',
     'reComputer': 'reComputer',
     'XIAO': 'XIAO',
     'ReSpeaker': 'ReSpeaker',
@@ -50,6 +49,17 @@ const PRESERVE_TERMS = {
     'Home Assistant': 'Home Assistant'
 };
 
+// 🆕 文档保护列表 - 这些文件和目录不进行翻译
+const PROTECTED_PATHS = [
+  'docs/Getting_Started.md',           // 各语言首页有不同内容
+  'docs/index.md',                     // 首页
+  'docs/README.md',                    // README
+  'docs/CONTRIBUTING.md',              // 贡献指南
+  'docs/LICENSE.md',                   // 许可证
+  // 可以添加目录保护，以/结尾
+  // 'docs/special-folder/',           // 整个目录
+];
+
 // 翻译状态跟踪
 const translationStatus = {
   total: 0,
@@ -57,6 +67,7 @@ const translationStatus = {
   failed: 0,
   moved: 0,
   deleted: 0,
+  protected: 0,
   errors: []
 };
 
@@ -65,12 +76,40 @@ function estimateTokens(text) {
   return Math.ceil(text.length * 0.75);
 }
 
-// 生成目标文件路径（添加语言前缀）
+// 🆕 检查文件是否受保护
+function isProtectedPath(filePath) {
+  // 标准化路径
+  const normalizedPath = filePath.replace(/\\/g, '/');
+  
+  for (const protectedPath of PROTECTED_PATHS) {
+    const normalizedProtected = protectedPath.replace(/\\/g, '/');
+    
+    // 检查精确匹配
+    if (normalizedPath === normalizedProtected) {
+      return true;
+    }
+    
+    // 检查目录匹配（以/结尾的保护路径）
+    if (normalizedProtected.endsWith('/') && normalizedPath.startsWith(normalizedProtected)) {
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+// 生成目标文件路径
 function generateTargetPath(originalPath, targetLang) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   const relativePath = path.relative('docs', originalPath);
   
   const parsedPath = path.parse(relativePath);
+  
+  // 🆕 特殊处理_category.yml文件
+  if (parsedPath.base === '_category_.yml') {
+    const targetPath = path.join('docs', langConfig.folder, relativePath);
+    return targetPath;
+  }
   
   const langPrefix = targetLang === 'zh-CN' ? 'cn_' : 
                     targetLang === 'ja' ? 'ja_' : 
@@ -89,7 +128,6 @@ async function detectFileOperations(baseSha) {
   try {
     console.log(`🔍 检测文件操作 (基于 ${baseSha})...`);
     
-    // 使用git diff --name-status检测文件状态
     const statusOutput = execSync(
       `git diff --name-status ${baseSha}..HEAD -- docs/`,
       { encoding: 'utf8' }
@@ -109,22 +147,19 @@ async function detectFileOperations(baseSha) {
       const status = parts[0];
       const file = parts[1];
       
-      // 只处理docs目录下的md/mdx文件，排除翻译文件
-      if (!file.match(/\.mdx?$/) || file.match(/\/(zh-CN|ja|Spanish)\//)) {
+      // 🆕 处理md/mdx和_category.yml文件，排除翻译文件
+      if ((!file.match(/\.(md|mdx)$/) && !file.endsWith('_category_.yml')) || 
+          file.match(/\/(zh-CN|ja|Spanish)\//)) {
         continue;
       }
       
       if (status === 'A') {
-        // 新增文件
         operations.added.push(file);
       } else if (status === 'M') {
-        // 修改文件
         operations.modified.push(file);
       } else if (status === 'D') {
-        // 删除文件
         operations.deleted.push(file);
       } else if (status.startsWith('R')) {
-        // 重命名/移动文件 (R100, R90等)
         const oldFile = file;
         const newFile = parts[2];
         operations.renamed.push({ from: oldFile, to: newFile });
@@ -232,6 +267,38 @@ function chunkDocument(content, maxTokens = 15000) {
   }));
 }
 
+// 🆕 生成_category.yml翻译prompt
+function generateCategoryPrompt(targetLang, pathPrefix) {
+  const langName = LANGUAGE_CONFIG[targetLang].name;
+  const termsList = Object.entries(PRESERVE_TERMS)
+    .map(([original, preserved]) => `- ${original} → ${preserved}`)
+    .join('\n');
+
+  return `你是一个专业的技术文档翻译专家。请将以下 _category_.yml 文件从英文翻译成${langName}。
+
+重要规则：
+1. **保持YAML格式完全不变**：缩进、冒号、引号等格式必须完全保持
+2. **只翻译以下字段的值**：
+   - label: 标签名称（如果不是专有产品名）
+   - title: 标题
+   - description: 描述
+   - 注释内容（# 开头的行）
+3. **不要翻译以下内容**：
+   - 专有产品名称和品牌名
+   - 数字、布尔值、技术参数
+   - position、collapsible、collapsed、className等字段名
+   - type、slug等技术字段
+4. **link字段特殊处理**：
+   - 如果有slug字段，在其值前添加 "${pathPrefix}/" 前缀
+   - 例如：slug: applications → slug: ${pathPrefix}/applications
+   - 翻译title和description字段的值
+5. **术语保护**（保持不变）：
+${termsList}
+6. **换行保持**：确保输出的换行结构与输入完全一致
+
+请只输出翻译后的YAML内容，不要添加任何解释。`;
+}
+
 // 生成翻译prompt
 function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
@@ -250,45 +317,54 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
   return `你是一个专业的技术文档翻译专家。请将以下${isChunk ? '部分' : '完整的'} Markdown 文档从英文翻译成${langName}。
 
 重要规则：
-1. 保持所有 Markdown 格式不变（链接、代码块、标题等）
-2. 不要翻译代码示例、文件名、API 名称等技术术语
-3. 保持相同的结构和格式
-4. 对于内部链接（以 / 开头的链接），请在路径前添加 "${pathPrefix}" 前缀
-5. 例如：href="/Sensor_Network" 应该改为 href="${pathPrefix}/Sensor_Network"
-6. [链接文本](/path) 应该改为 [链接文本](${pathPrefix}/path)
-7. 对于 seeedstudio.com wiki 链接，请添加语言前缀：
-   - https://wiki.seeedstudio.com/Sensor_Network 改为 https://wiki.seeedstudio.com${pathPrefix}/Sensor_Network
-   - https://wiki.seeedstudio.com/guides/getting-started 改为 https://wiki.seeedstudio.com${pathPrefix}/guides/getting-started
-8. 外部链接（其他http开头）和已有语言前缀的链接保持不变
-9. 只翻译人类可读的文本内容
-10. **中英文混排规则**：确保中文和英文之间有适当的空格分隔
+1. **严格保持所有 Markdown 格式不变**（链接、代码块、标题等）
+2. **严格保持换行结构**：输出的换行必须与输入完全一致
+   - 标题后的换行数量保持不变
+   - 段落间的空行数量保持不变
+   - 列表项的换行保持不变
+3. **代码块处理规则**：
+   - 多行代码块（\`\`\`包围的内容）：完全不翻译，包括其中的注释
+   - 行内代码（单个\`包围的内容）：完全不翻译
+   - 代码相关的技术术语：保持原文
+4. **不要翻译**：代码示例、文件名、API 名称、URL、专有技术术语
+5. **内部链接处理**：
+   - 以 / 开头的链接，在路径前添加 "${pathPrefix}" 前缀
+   - 例如：href="/Sensor_Network" → href="${pathPrefix}/Sensor_Network"
+   - [链接文本](/path) → [链接文本](${pathPrefix}/path)
+6. **seeedstudio.com wiki 链接处理**：
+   - https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
+7. **外部链接和已有语言前缀的链接保持不变**
+8. **中英文混排**：确保中文和英文之间有适当的空格分隔
 
-Front Matter 处理规则：
-- 如果文档开头有 Front Matter（被 --- 包围的 YAML 部分），请按以下规则处理：
-  - last_update 字段完全不翻译：包括 date 和 author 的值都必须保持原文不变
-  - keywords 字段不翻译：保持原始英文关键词
-  - image 字段不翻译：图片链接保持不变
-  - slug 字段需要添加语言前缀：如果是 "/hello" 改为 "${pathPrefix}/hello"，如果是 "/path/to/page" 改为 "${pathPrefix}/path/to/page"
-  - 只翻译 description 和 title 字段的值
-  - 保持 Front Matter 的 YAML 结构和缩进完全不变
+**Front Matter 处理规则：**
+- 保持 YAML 结构和缩进完全不变
+- **不翻译**：last_update（包括date和author）、keywords、image字段
+- **slug字段**：添加语言前缀 "/hello" → "${pathPrefix}/hello"
+- **只翻译**：description 和 title 字段的值
+- **保持每个字段独占一行**
 
-格式保持铁律：
-- Markdown表格（| 列1 | 列2 |）必须保持为Markdown表格格式，绝对不能转换为HTML表格
-- HTML表格（<table><tr><td>）必须保持为HTML表格格式，绝对不能转换为Markdown表格
-- 空行数量必须与原文完全一致
-- 缩进空格数量必须与原文完全一致
-- 所有特殊字符的位置必须与原文完全一致
+**格式保持铁律：**
+- Markdown表格保持为Markdown格式，HTML表格保持为HTML格式
+- 空行数量与原文完全一致
+- 缩进空格数量与原文完全一致
+- 所有特殊字符位置与原文完全一致
 
-严格要求：
+**严格要求：**
 - 绝对不能添加、删除或修改任何标题
-- 绝对不能改变文档结构，包括段落顺序、列表顺序、表格行列顺序等
-- 逐句对应翻译，确保译文的每一句都对应原文的特定句子
-- 代码块标记和编程代码本身保持不变，绝对不能省略代码块内容
-- 不要输出"内容同原文档"或类似的省略说明
-- 不要重复输出Front Matter，整个文档只能有一个Front Matter部分
+- 绝对不能改变文档结构、段落顺序、列表顺序
+- 逐句对应翻译，确保译文每一句对应原文特定句子
+- 不要输出"内容同原文档"或类似省略说明
+- 整个文档只能有一个Front Matter部分
 
-术语保护（保持不变）：
-${termsList}${chunkInstructions}`;
+**术语保护（保持不变）：**
+${termsList}${chunkInstructions}
+
+**换行要求再次强调：**
+请确保输出内容的每一个换行都与输入内容完全对应，特别注意：
+- 标题与下方内容之间的换行
+- Front Matter中每个字段的换行
+- 段落之间的空行
+- 列表项之间的换行`;
 }
 
 // 处理内部链接和seeedstudio.com链接
@@ -351,22 +427,25 @@ function addChineseEnglishSpacing(content) {
 }
 
 // Claude翻译函数
-async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null) {
+async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null, isCategory = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
   }
   
-  const systemPrompt = generatePrompt(targetLang, langConfig.pathPrefix, isChunk, chunkInfo);
+  // 🆕 选择合适的prompt
+  const systemPrompt = isCategory ? 
+    generateCategoryPrompt(targetLang, langConfig.pathPrefix) :
+    generatePrompt(targetLang, langConfig.pathPrefix, isChunk, chunkInfo);
   
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
+      console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})${isCategory ? ' [Category]' : ''}...`);
       
       const response = await anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 20000,
-        temperature: 0.05,
+        temperature: 0.02, // 🆕 降低温度以保持格式一致性
         system: systemPrompt,
         messages: [
           { role: 'user', content: text }
@@ -375,12 +454,15 @@ async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = f
       
       let translatedContent = response.content[0].text;
       
-      // 后处理：确保链接正确
-      translatedContent = processInternalLinks(translatedContent, targetLang);
-      
-      // 中英文混排处理
-      if (targetLang === 'zh-CN') {
-        translatedContent = addChineseEnglishSpacing(translatedContent);
+      // 🆕 对非category文件进行后处理
+      if (!isCategory) {
+        // 后处理：确保链接正确
+        translatedContent = processInternalLinks(translatedContent, targetLang);
+        
+        // 中英文混排处理
+        if (targetLang === 'zh-CN') {
+          translatedContent = addChineseEnglishSpacing(translatedContent);
+        }
       }
       
       console.log(`✅ Claude翻译成功 (尝试 ${attempt})`);
@@ -430,6 +512,7 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
         contentToTranslate = chunk.content;
       }
       
+      // 🆕 直接翻译，通过prompt指导AI正确处理代码块
       const translatedContent = await translateWithClaude(
         contentToTranslate, 
         targetLang, 
@@ -480,9 +563,57 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
   return finalContent;
 }
 
-// 🆕 处理文件翻译
+// 🆕 翻译_category.yml文件
+async function translateCategoryFile(filePath, targetLang) {
+  try {
+    console.log(`📋 翻译Category文件: ${filePath} -> ${targetLang}`);
+    translationStatus.total++;
+    
+    const content = await fs.readFile(filePath, 'utf8');
+    console.log(`🔍 文件大小: ${content.length} 字符`);
+    
+    const translatedContent = await translateWithClaude(
+      content, 
+      targetLang, 
+      3, 
+      false, 
+      null, 
+      true  // isCategory = true
+    );
+    
+    const targetPath = generateTargetPath(filePath, targetLang);
+    
+    // 确保目录存在
+    await fs.mkdir(path.dirname(targetPath), { recursive: true });
+    
+    // 写入翻译文件
+    await fs.writeFile(targetPath, translatedContent, 'utf8');
+    
+    console.log(`✅ Category文件翻译完成: ${targetPath}`);
+    return { success: true, path: targetPath, fileType: 'category' };
+    
+  } catch (error) {
+    console.error(`❌ Category文件翻译失败 ${filePath}:`, error.message);
+    translationStatus.failed++;
+    return { success: false, error: error.message, path: filePath, fileType: 'category' };
+  }
+}
+
+// 🆕 处理文件翻译（支持md和_category.yml）
 async function translateFile(filePath, targetLang) {
   try {
+    // 🆕 检查文件是否受保护
+    if (isProtectedPath(filePath)) {
+      console.log(`🛡️ 文件受保护，跳过翻译: ${filePath}`);
+      translationStatus.protected++;
+      return { success: true, path: filePath, action: 'protected' };
+    }
+    
+    // 🆕 根据文件类型选择处理方式
+    if (filePath.endsWith('_category_.yml')) {
+      return await translateCategoryFile(filePath, targetLang);
+    }
+    
     console.log(`📝 翻译文件: ${filePath} -> ${targetLang}`);
     translationStatus.total++;
     
@@ -516,6 +647,13 @@ async function translateFile(filePath, targetLang) {
 // 🆕 处理文件移动
 async function moveTranslationFile(oldPath, newPath, targetLang) {
   try {
+    // 🆕 检查文件是否受保护
+    if (isProtectedPath(oldPath) || isProtectedPath(newPath)) {
+      console.log(`🛡️ 文件受保护，跳过移动: ${oldPath} -> ${newPath}`);
+      translationStatus.protected++;
+      return { success: true, path: newPath, action: 'protected' };
+    }
+    
     console.log(`📁 移动翻译文件: ${oldPath} -> ${newPath} (${targetLang})`);
     
     const oldTargetPath = generateTargetPath(oldPath, targetLang);
@@ -556,6 +694,13 @@ async function moveTranslationFile(oldPath, newPath, targetLang) {
 // 🆕 处理文件删除
 async function deleteTranslationFile(filePath, targetLang) {
   try {
+    // 🆕 检查文件是否受保护
+    if (isProtectedPath(filePath)) {
+      console.log(`🛡️ 文件受保护，跳过删除: ${filePath}`);
+      translationStatus.protected++;
+      return { success: true, path: filePath, action: 'protected' };
+    }
+    
     console.log(`🗑️ 删除翻译文件: ${filePath} (${targetLang})`);
     
     const targetPath = generateTargetPath(filePath, targetLang);
@@ -594,8 +739,10 @@ function generateProgressReport(languages, results) {
   const successCount = results.filter(r => r.success).length;
   const failCount = results.filter(r => !r.success).length;
   const translatedCount = results.filter(r => r.success && r.action === 'translated').length;
+  const categoryCount = results.filter(r => r.success && r.fileType === 'category').length;
   const movedCount = results.filter(r => r.success && r.action === 'moved').length;
   const deletedCount = results.filter(r => r.success && r.action === 'deleted').length;
+  const protectedCount = results.filter(r => r.success && r.action === 'protected').length;
   
   let report = `## 📊 翻译完成报告\n\n`;
   report += `**目标语言:** ${languages.map(l => LANGUAGE_CONFIG[l]?.name || l).join(', ')}\n`;
@@ -604,22 +751,29 @@ function generateProgressReport(languages, results) {
   report += `- ✅ 成功: ${successCount}\n`;
   report += `- ❌ 失败: ${failCount}\n`;
   report += `- 📊 总计: ${successCount + failCount}\n`;
-  report += `- 📝 翻译: ${translatedCount}\n`;
+  report += `- 📝 文档翻译: ${translatedCount}\n`;
+  report += `- 📋 Category翻译: ${categoryCount}\n`;
   report += `- 📁 移动: ${movedCount}\n`;
   report += `- 🗑️ 删除: ${deletedCount}\n`;
+  report += `- 🛡️ 保护跳过: ${protectedCount}\n`;
   report += '\n';
   
   if (results.some(r => r.success)) {
     report += `**成功处理的文件:**\n`;
     results.filter(r => r.success).forEach(r => {
       let icon = '📝';
-      if (r.action === 'moved') icon = '📁';
+      if (r.fileType === 'category') icon = '📋';
+      else if (r.action === 'moved') icon = '📁';
       else if (r.action === 'deleted') icon = '🗑️';
+      else if (r.action === 'protected') icon = '🛡️';
       else if (r.action === 'skipped') icon = 'ℹ️';
       
       report += `- ${icon} ${r.path}`;
       if (r.action && r.action !== 'translated') {
         report += ` (${r.action})`;
+      }
+      if (r.fileType === 'category') {
+        report += ` [Category]`;
       }
       report += '\n';
     });
@@ -654,6 +808,7 @@ async function main() {
   
   console.log('🌍 开始翻译任务...');
   console.log('目标语言:', languages);
+  console.log('🛡️ 保护路径:', PROTECTED_PATHS);
   
   // 验证API密钥
   if (!process.env.TRANSLATION_API_KEY) {
@@ -691,7 +846,7 @@ async function main() {
       const result = await translateFile(file, lang);
       allResults.push({
         ...result, 
-        action: 'translated', 
+        action: result.action || 'translated', 
         language: lang,
         operation: operations.added.includes(file) ? 'added' : 'modified'
       });
