@@ -18,7 +18,7 @@ last_update:
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Industrial-J501-Carrier-Board-Add-on.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Conseguir una ahora 🖱️</font></span></strong>
   </a>
 </div>

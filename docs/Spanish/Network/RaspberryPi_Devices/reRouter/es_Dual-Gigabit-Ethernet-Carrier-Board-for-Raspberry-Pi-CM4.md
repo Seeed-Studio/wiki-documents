@@ -20,7 +20,7 @@ La placa carrier con doble Ethernet Gigabit, impulsada por Raspberry Pi Compute 
 Incluye una variedad de periféricos de entrada/salida como MIPI CSI, MIPI DSI, micro-HDMI para conectar pantallas/cámaras, un header estándar USB 3.0 de 9 pines para más expansión USB, una ranura para tarjeta micro-SD y un conector FPC, ¡todo ello manteniendo un factor de forma compacto! Esta placa es ideal para creadores de HTPC, desarrolladores Linux, entusiastas de routers software y la mayoría de usuarios regulares de Raspberry Pi.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

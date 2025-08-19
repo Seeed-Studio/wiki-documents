@@ -38,7 +38,7 @@ This wiki provides the assembly and debugging tutorial for the SO ARM10x and rea
   </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
@@ -150,38 +150,38 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 - Ubuntu 22.04  
 - CUDA 12+  
 - Python 3.10  
-- Torch 2.6  
+- Torch 2.6+  
 
 **For Jetson Orin:**
-- Jetson JetPack 6.0+  
+- Jetson JetPack 6.0 and 6.1, not support 6.1
 - Python 3.10  
-- Torch 2.6  
+- Torch 2.3+
 
 
 ## Table of Contents
-  [A. 3D Printing Guide](https://wiki.seeedstudio.com/lerobot_so100m/#install-lerobot)
+  [A. 3D Printing Guide](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
 
-  [B. Install LeRobot](https://wiki.seeedstudio.com/lerobot_so100m/#install-lerobot)
+  [B. Install LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
 
-  [C. Configure the motors](https://wiki.seeedstudio.com/lerobot_so100m/#configure-the-motors)
+  [C. Configure the motors](https://wiki.seeedstudio.com/lerobot_so100m_new/#configure-the-motors)
 
-  [D. Assembly](https://wiki.seeedstudio.com/lerobot_so100m/#assembly)
+  [D. Assembly](https://wiki.seeedstudio.com/lerobot_so100m_new/#assembly)
 
-  [E. Calibrate](https://wiki.seeedstudio.com/lerobot_so100m/#calibrate)
+  [E. Calibrate](https://wiki.seeedstudio.com/lerobot_so100m_new/#calibrate)
 
-  [F. Teleoperate](https://wiki.seeedstudio.com/lerobot_so100m/#teleoperate)
+  [F. Teleoperate](https://wiki.seeedstudio.com/lerobot_so100m_new/#teleoperate)
 
-  [G. Add cameras](https://wiki.seeedstudio.com/lerobot_so100m/#add-cameras)
+  [G. Add cameras](https://wiki.seeedstudio.com/lerobot_so100m_new/#add-cameras)
 
-  [H. Record the dataset](https://wiki.seeedstudio.com/lerobot_so100m/#record-the-dataset)
+  [H. Record the dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#record-the-dataset)
 
-  [I. Visualize the dataset](https://wiki.seeedstudio.com/lerobot_so100m/#visualize-the-dataset)
+  [I. Visualize the dataset](https://wiki.seeedstudio.com/lerobot_so100m_new/#visualize-the-dataset)
 
-  [J. Replay an episode](https://wiki.seeedstudio.com/lerobot_so100m/#replay-an-episode)
+  [J. Replay an episode](https://wiki.seeedstudio.com/lerobot_so100m_new/#replay-an-episode)
 
-  [K. Train a policy](https://wiki.seeedstudio.com/lerobot_so100m/#train-a-policy)
+  [K. Train a policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#train-a-policy)
 
-  [L. Evaluate your policy](https://wiki.seeedstudio.com/lerobot_so100m/#evaluate-your-policy)
+  [L. Evaluate your policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#evaluate-your-policy)
 
 
 ## 3D Printing Guide
@@ -346,27 +346,6 @@ You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3
 </div>
 
 
-:::danger
-Please use a 5V power supply for calibrating Leader motors (ST-3215-C046, C044, 001).
-:::
-
-| **Leader Arm Joint 1 Calibration** | **Leader Arm Joint 2 Calibration** | **Leader Arm Joint 3 Calibration** | **Leader Arm Joint 4 Calibration** | **Leader Arm Joint 5 Calibration** | **Leader Arm Joint 6 Calibration** |
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) |
-
-
-:::danger
-If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy the Arm Kit Pro version, please use a 12V power supply to calibrate the servo (ST-3215-C047/ST-3215-C018).
-:::
-
-| **Follower Arm Joint 1 Calibration** | **Follower Arm Joint 2 Calibration** | **Follower Arm Joint 3 Calibration** | **Follower Arm Joint 4 Calibration** | **Follower Arm Joint 5 Calibration** | **Follower Arm Joint 6 Calibration** |
-|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
-| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) |
-
-:::tip
-Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
-:::
-
 ***The following are the code calibration steps, please calibrate with the reference wiring servo in the picture above***
 
 Find USB ports associated to your arms
@@ -405,12 +384,33 @@ sudo chmod 666 /dev/ttyACM1
 
 **Configure your motors**
 
+:::danger
+Please use a 5V power supply for calibrating Leader motors (ST-3215-C046, C044, 001).
+:::
+
+| **Leader Arm Joint 6 Calibration** | **Leader Arm Joint 5 Calibration** | **Leader Arm Joint 4 Calibration** | **Leader Arm Joint 3 Calibration** | **Leader Arm Joint 2 Calibration** | **Leader Arm Joint 1 Calibration** |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
+
+
+:::danger
+If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy the Arm Kit Pro version, please use a 12V power supply to calibrate the servo (ST-3215-C047/ST-3215-C018).
+:::
+
+| **Follower Arm Joint 6 Calibration** | **Follower Arm Joint 5 Calibration** | **Follower Arm Joint 4 Calibration** | **Follower Arm Joint 3 Calibration** | **Follower Arm Joint 2 Calibration** | **Follower Arm Joint 1 Calibration** |
+|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_F1.jpg) |
+
+:::tip
+Again, please make sure that the servo joint IDs and gear ratios strictly correspond to those of the SO-ARM101.
+:::
+
 Connect the usb cable from your computer and the power supply to the follower arm’s controller board. Then, run the following command.
 
 ```bash
 python -m lerobot.setup_motors \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem585A0076841  # <- paste here the port found at previous step
+    --robot.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```
 
 You should see the following instruction.
@@ -448,7 +448,7 @@ Do the same steps for the leader arm.
 ```bash
 python -m lerobot.setup_motors \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem575E0031751  # <- paste here the port found at previous step
+    --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
 ```    
 
 <div class="video-container">
@@ -535,8 +535,8 @@ sudo chmod 666 /dev/ttyACM*
 ```python
 python -m lerobot.calibrate \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem58760431551 \# <- The port of your robot
-    --robot.id=my_awesome_follower_arm # <- Give the robot a unique name
+    --robot.port=/dev/ttyACM0 \
+    --robot.id=my_awesome_follower_arm
 ```
 
 The video below shows how to perform the calibration. First you need to move the robot to the position where all joints are in the middle of their ranges. Then after pressing enter you have to move each joint through its full range of motion.
@@ -548,8 +548,8 @@ Do the same steps to calibrate the leader arm, run the following command or API 
 ```python
 python -m lerobot.calibrate \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem58760431551 \# <- The port of your robot
-    --teleop.id=my_awesome_leader_arm # <- Give the robot a unique name
+    --teleop.port=/dev/ttyACM0 \
+    --teleop.id=my_awesome_leader_arm
 ```
 
 <div class="video-container">
@@ -565,12 +565,16 @@ Then you are ready to teleoperate your robot! Run this simple script (it won't c
 Note that the id associated with a robot is used to store the calibration file. It’s important to use the same id when teleoperating, recording, and evaluating when using the same setup.
 
 ```bash
+sudo chmod 666 /dev/ttyACM*
+```
+
+```bash
 python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem58760431541 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem58760431551 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm
 ```
 
@@ -629,11 +633,11 @@ Then you will be able to display the cameras on your computer while you are tele
 ```bash
 python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem58760431541 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem58760431551 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -644,11 +648,11 @@ For example, you want to add a side camera:
 ```bash
 python -m lerobot.teleoperate \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem58760431541 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}, side: {type: opencv, index_or_path: 1, width: 1920, height: 1080, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem58760431551 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true
 ```
@@ -664,14 +668,31 @@ python -m lerobot.teleoperate \
 
 
 ## Record the dataset
-:::tip
-The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
-:::
+
+- If you want to save the dataset locally, you can run it directly:
 
 
-Once you're familiar with teleoperation, you can record your first dataset with SO-10x.
+```bash
+python -m lerobot.record \
+    --robot.type=so101_follower \
+    --robot.port=/dev/ttyACM1 \
+    --robot.id=my_awesome_follower_arm \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+    --teleop.type=so101_leader \
+    --teleop.port=/dev/ttyACM0 \
+    --teleop.id=my_awesome_leader_arm \
+    --display_data=true \
+    --dataset.repo_id=seeedstudio123/test \
+    --dataset.num_episodes=5 \
+    --dataset.single_task="Grab the black cube" \
+    --dataset.push_to_hub=false \
+    --dataset.episode_time_s=30 \
+    --dataset.reset_time_s=30 
+```
 
-If you want to use the Hugging Face hub features for uploading your dataset and you haven't previously done it, make sure you've logged in using a write-access token, which can be generated from the [Hugging Face settings](https://huggingface.co/settings/tokens):
+Among them, `repo_id` can be modified customarily, and `push_to_hub=false`. Finally, the dataset will be saved in the `~/.cache/huggingface/lerobot` directory in the home folder, where the aforementioned `seeedstudio123/test` folder will be created.
+
+- If you want to use the Hugging Face hub features for uploading your dataset and you haven't previously done it, make sure you've logged in using a write-access token, which can be generated from the [Hugging Face settings](https://huggingface.co/settings/tokens):
 
 ```bash
 huggingface-cli login --token ${HUGGINGFACE_TOKEN} --add-to-git-credential
@@ -689,19 +710,19 @@ Record 5 episodes and upload your dataset to the hub:
 ```bash
 python -m lerobot.record \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem585A0076841 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
-    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30}}" \
+    --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
     --teleop.type=so101_leader \
-    --teleop.port=/dev/tty.usbmodem58760431551 \
+    --teleop.port=/dev/ttyACM0 \
     --teleop.id=my_awesome_leader_arm \
     --display_data=true \
     --dataset.repo_id=${HF_USER}/record-test \
     --dataset.num_episodes=5 \
     --dataset.single_task="Grab the black cube" \
-    --dataset.push_to_hub=true \# You can choose false if you want to save the data locally
+    --dataset.push_to_hub=true \
     --dataset.episode_time_s=30 \
-    --dataset.reset_time_s=30
+    --dataset.reset_time_s=30 
 ```
 
 You will see a lot of lines appearing like this one:
@@ -784,10 +805,10 @@ Now try to replay the first episode on your robot:
 ```bash
 python -m lerobot.replay \
     --robot.type=so101_follower \
-    --robot.port=/dev/tty.usbmodem58760431541 \
+    --robot.port=/dev/ttyACM1 \
     --robot.id=my_awesome_follower_arm \
     --dataset.repo_id=${HF_USER}/record-test \
-    --dataset.episode=0 # choose the episode you want to replay
+    --dataset.episode=0
 ```
 
 ## Train a policy
@@ -804,21 +825,35 @@ python -m lerobot.scripts.train \
   --output_dir=outputs/train/act_so101_test \
   --job_name=act_so101_test \
   --policy.device=cuda \
-  --wandb.enable=true \
+  --wandb.enable=false \
+  --steps=300000 
 ```
 
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
 
+```bash
+python -m lerobot.scripts.train \
+  --dataset.repo_id=seeedstudio123/test \
+  --policy.type=act \
+  --output_dir=outputs/train/act_so101_test \
+  --job_name=act_so101_test \
+  --policy.device=cuda \
+  --wandb.enable=false \
+  --policy.push_to_hub=false\
+  --steps=300000 
+```
+
+
 Let's explain it:
 
-1. We provided the dataset as argument with `--dataset.repo_id=${HF_USER}/so101_test`.
-2. We provide the policy using `policy.type=act`, which will load the configuration from [`configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/src/lerobot/policies/act/configuration_act.py). Importantly, this policy will automatically adapt to the number of motor states, motor actions and cameras of your robot (e.g. `laptop` and `phone`) which have been saved in your dataset.
-3. We provided `policy.device=cuda` since we are training on a Nvidia GPU, but you could use `policy.device=mps` to train on Apple silicon.
-5. We provided `wandb.enable=true` to use [Weights and Biases](https://docs.wandb.ai/quickstart) for visualizing training plots. This is optional but if you use it, make sure you are logged in by running `wandb login`.
+* **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=${HF_USER}/so101_test`.
+* **Training steps**: We modify the number of training steps using `--steps=300000`. The algorithm defaults to 800000 steps, and you can adjust it based on the difficulty of your task and by observing the loss during training.
+* **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
+* **Device selection**: We provide `policy.device=cuda` because we are training on an Nvidia GPU, but you can use `policy.device=mps` for training on Apple Silicon.
+* **Visualization tool**: We provide `wandb.enable=true` to visualize training charts using [Weights and Biases](https://docs.wandb.ai/quickstart). This is optional, but if you use it, ensure you have logged in by running `wandb login`.
 
-<details>
-<summary>stack() error</summary>
+
 
 If you encounter the following error:
 
@@ -833,7 +868,6 @@ Try running the following command to resolve it:
 pip install datasets==2.19
 ```
 
-</details>
 
 Training should take several hours. You will find checkpoints in `outputs/train/act_so100_test/checkpoints`.
 
@@ -880,10 +914,27 @@ python -m lerobot.record  \
   --policy.path=${HF_USER}/my_policy
 ```
 
-As you can see, it's almost the same command as previously used to record your training dataset. Two things changed:
+such as:
 
-1. There is an additional `--policy.path` argument which indicates the path to your policy checkpoint with  (e.g. `outputs/train/eval_act_so100_test/checkpoints/last/pretrained_model`). You can also use the model repository if you uploaded a model checkpoint to the hub (e.g. `${HF_USER}/act_so100_test`).
-2. The name of dataset begins by `eval` to reflect that you are running inference (e.g. `${HF_USER}/eval_act_so100_test`).
+```bash
+python -m lerobot.record  \
+  --robot.type=so101_follower \
+  --robot.port=/dev/ttyACM1 \
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30},   side: {type: opencv, index_or_path: 2, width: 640, height: 480, fps: 30}}" \
+  --robot.id=my_awesome_follower_arm \
+  --display_data=false \
+  --dataset.repo_id=seeed/eval_test123 \
+  --dataset.single_task="Put lego brick into the transparent box" \
+  --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
+``` 
+
+1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `${HF_USER}/act_so100_test`).
+
+2. The dataset name `dataset.repo_id` starts with `eval_`. This operation will separately record videos and data during evaluation, which will be saved in the folder starting with `eval_`, such as `seeed/eval_test123`.
+
+3. If you encounter `File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'` during the evaluation phase, please delete the folder starting with `eval_` first and then run the program again.
+
+4. When encountering `mean is infinity. You should either initialize with stats as an argument or use a pretrained model`, please note that keywords like front and side in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/wc-qh7UFkuQ?si=Y2SXU9T0DSmtz4ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -893,55 +944,62 @@ As you can see, it's almost the same command as previously used to record your t
 
 - If you are following this documentation/tutorial, please git clone the recommended GitHub repository `https://github.com/Seeed-Projects/lerobot.git`. The repository recommended in this documentation is a verified stable version; the official Lerobot repository is continuously updated to the latest version, which may cause unforeseen issues such as different dataset versions, different commands, etc.
 
-- If you encounter an error like this, you should use this command. 
+- If you encounter the following error when calibrating servo IDs:
+  ```bash
+  `Motor ‘gripper’ was not found, Make sure it is connected`
+  ```
+  Please carefully check whether the communication cable is properly connected to the servo and whether the power supply is providing the correct voltage.
+
+- If you encounter:
+  ```bash
+  Could not connect on port "/dev/ttyACM0"
+  ```
+  And you can see ACM0 exists when running `ls /dev/ttyACM*`, it means you forgot to grant serial port permissions. Enter `sudo chmod 666 /dev/ttyACM*` in the terminal to fix it.
+
+- If you encounter:
+  ```bash
+  No valid stream found in input file. Is -1 of the desired media type?
+  ```
+  Please install ffmpeg 7.1.1 using `conda install ffmpeg=7.1.1 -c conda-forge`.
 
 <div align="center">
     <img width={800} 
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
 </div>
 
-```bash
-conda install ffmpeg=7.1.1 -c conda-forge
-```
-
-- If you encounter the following error, you need to check whether the robotic arm connected to the corresponding port is powered on and whether the bus servos have any loose or disconnected cables.
+- If you encounter:
   ```bash
-  ConnectionError: Read failed due to comunication eror on port /dev/ttyACM0 for group key Present_Position_Shoulder_pan_Shoulder_lift_elbow_flex_wrist_flex_wrist_roll_griper: [TxRxResult] There is no status packet!
+  ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!
   ```
+  You need to check whether the robotic arm on the corresponding port is powered on, and whether the data cables of the bus servos are loose or disconnected. If a servo's light is not on, it means the cable of the previous servo is loose.
 
-- If you have repaired or replaced any robotic arm parts, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, an error prompt will appear. The calibration information for the robotic arm will be stored in the JSON files under this directory.
-
-- If the remote control functions normally but the remote control with Camera fails to display the image interface, you can find [here](https://github.com/huggingface/lerobot/pull/757/files)
-
-- If you encounter libtiff issues during dataset remote operation, please update the libtiff version.
+- If you encounter the following error when calibrating the robotic arm:
   ```bash
-  conda install libtiff==4.5.0  #for Ubuntu 22.04 is libtiff==4.5.1
+  Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
   ```
+  Power off and restart the robotic arm, then try calibrating again. This method can also be used if the MAX angle reaches a value of tens of thousands during calibration. If this doesn't work, you need to recalibrate the corresponding servos, including median calibration and ID writing.
 
-- After executing the [Lerobot Installation](https://wiki.seeedstudio.com/lerobot_so100m/#install-lerobot), the GPU version of pytorch may be automatically uninstalled, so you need to manually install torch-gpu.
-
-- For Jetson, please first install [Pytorch and Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) before executing `conda install -y -c conda-forge ffmpeg`, otherwise, when compiling torchvision, an ffmpeg version mismatch issue may occur.
-
-- If the following problem occurs, it means that your computer does not support this video codec format. You need to modify line 134 in the file `lerobot/lerobot/common/datasets
-/video_utils.py` by changing the value of `vcodec: str = "libsvtav1"` to `libx264` or `libopenh264`. Different computers may require different parameters, so you can try various options. [Issues 705](https://github.com/huggingface/lerobot/issues/705)
-  
+- If you encounter during the evaluation phase:
   ```bash
-  [vost#0:0 @ 0x13207240] Unknown encoder 'libsvtav1' [vost#0:0 @ 0x13207240] Error selecting an encoder Error opening output file /home/han/.cache/huggingface/lerobot/lyhhan/so100_test/videos/chunk-000/observation.images.laptop/episode_000000.mp4. Error opening output files: Encoder not found
-  ``` 
-
-- Important!!! If during execution the servo's cable becomes loose, please restore the servo to its initial position and then reconnect the servo cable. You can also individually calibrate a servo using the [Servo Initialization Command](https://wiki.seeedstudio.com/lerobot_so100m/#configure-the-motors), ensuring that only one cable is connected between the servo and the driver board during individual calibration. If you encounter
-  ```bash
-  Auto-correct calibration of motor 'wrist roll' by shifting value by 1 full turns, from '-270 < -312.451171875 < 270degrees' to'-270<-312.451171875 < 270 degrees'.
+  File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
   ```
-  or other errors during the robotic arm calibration process related to angles and exceeding limit values, this method is still applicable.
+  Please delete the folder starting with `eval_` first and then run the program again.
 
-- Training 50 sets of ACT data on an 8G 3060 laptop takes approximately 6 hours, while on a 4090 or A100 computer, training 50 sets of data takes about 2–3 hours.
+- If you encounter during the evaluation phase:
+  ```bash
+  `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
+  ```
+  Please note that keywords like "front" and "side" in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
-- During data collection, ensure that the camera's position, angle, and environmental lighting remain stable, and minimize capturing excessive unstable backgrounds and pedestrians; otherwise, significant environmental changes during deployment may cause the robotic arm to fail to grasp properly.
+- If you have repaired or replaced parts of the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, error messages may appear, as calibration information is stored in JSON files in these directories.
 
-- Ensure that the `num-episodes` parameter in the data collection command is set to collect sufficient data, and do not manually pause midway. This is because the mean and variance of the data are calculated only after data collection is complete, which is necessary for training.
+- Training ACT on 50 sets of data takes approximately 6 hours on a laptop with an RTX 3060 (8GB), and about 2-3 hours on computers with RTX 4090 or A100 GPUs.
 
-- If the program prompts that it cannot read the USB camera image data, please ensure that the USB camera is not connected to a hub. The USB camera must be directly connected to the device to ensure a fast image transmission rate.
+- During data collection, ensure the camera position, angle, and ambient lighting are stable. Reduce the amount of unstable background and pedestrians captured by the camera, as excessive changes in the deployment environment may cause the robotic arm to fail to grasp properly.
+
+- For the data collection command, ensure the `num-episodes` parameter is set to collect sufficient data. Do not manually pause midway, as the mean and variance of the data are calculated only after data collection is complete, which are necessary for training.
+
+- If the program indicates it cannot read image data from the USB camera, ensure the USB camera is not connected through a hub. The USB camera must be directly connected to the device to ensure fast image transmission speed.
 
 :::tip
 If you encounter software issues or environment dependency problems that cannot be resolved, in addition to checking the FAQ section at the end of this tutorial, please promptly report the issue to the [LeRobot platform](https://github.com/huggingface/lerobot) or the [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU).

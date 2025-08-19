@@ -18,7 +18,7 @@ SenseCAP M4 Square funciona con un procesador Intel® Celeron® J4125 de cuatro 
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora </font></span></strong>
     </a>
 </div>

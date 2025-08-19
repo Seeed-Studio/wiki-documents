@@ -49,12 +49,12 @@ Antes de comenzar, es posible que necesites preparar el siguiente equipo.
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -151,7 +151,7 @@ Aquí, utilizaré la imagen del gesto de piedra, papel o tijera como demostraci�
 Te recomendamos encarecidamente que utilices el XIAO ESP32S3 para tomar las fotos de tu conjunto de datos, ya que es el más adecuado para el XIAO ESP32S3. Un programa de muestra para el XIAO ESP32S3 Sense para tomar fotos se puede encontrar en el enlace de Wiki a continuación.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Go to Wiki</font></span></strong>
     </a>
 </div>
@@ -486,7 +486,7 @@ Con los pasos realizados aquí, hemos exportado con éxito los archivos del mode
 A continuación, llegamos a la página del **SenseCraft Model Assistant**.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process">
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Model Assistant 🖱️</font></span></strong>
     </a>
 </div>
@@ -534,7 +534,7 @@ Durante el proceso de subida de un modelo personalizado, además de los archivos
 Debido a limitaciones de espacio, no vamos a expandirnos sobre los detalles de estos protocolos en este wiki. Detallaremos esta sección a través de la documentación en Github. Si estás interesado en un desarrollo más profundo, por favor visita este enlace.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Protocols</font></span></strong>
     </a>
 </div>

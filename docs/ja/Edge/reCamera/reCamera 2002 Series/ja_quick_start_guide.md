@@ -23,7 +23,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 reCameraへようこそ！このガイドでは、デバイスを迅速にセットアップし、強力なAIビジョン機能を活用する方法を説明します。初心者でも経験豊富なユーザーでも、このステップバイステップの手順でインストール、設定、初回使用までをサポートします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-2002w-8GB-p-6250.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱</font></span></strong>
     </a>
 </div>

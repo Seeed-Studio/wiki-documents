@@ -28,7 +28,7 @@ last_update:
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" /></a></p> -->
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Consigue el Kit</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-Starter-Kit-p-5378.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Consigue el Kit</font></span></strong></a></div>
 
 ## Introducción
 

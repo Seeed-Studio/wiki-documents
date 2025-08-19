@@ -38,21 +38,21 @@ ODYSSEY - X86J41x5 SBCシリーズは、ODYSSEY - X86J4105、ODYSSEY - X86J4125�
     <tr>
       <td>
       <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
       </div>
       </td>
       <td>
       <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4125800-p-4915.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4125800-p-4915.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
       </div>
       </td>
       <td>
       <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4125800-v2-p-5531.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ODYSSEY-X86J4125800-v2-p-5531.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
       </div>

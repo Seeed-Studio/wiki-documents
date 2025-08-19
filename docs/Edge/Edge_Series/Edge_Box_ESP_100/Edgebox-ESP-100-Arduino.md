@@ -27,7 +27,7 @@ Since it contains on-chip Wi-Fi and BLE functions, and also includes a 4G LTE mo
 This portable box comes with rugged hardware, an electrical design, and an aluminum alloy enclosure, by which it maintains its function in a wide temperature range and provides high surge and short circuit protection, for diverse deployment methods based on your business.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

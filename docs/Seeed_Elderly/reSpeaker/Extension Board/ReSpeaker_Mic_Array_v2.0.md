@@ -628,42 +628,6 @@ MacBook-Air:Desktop XXX$ python record.py
 * done recording
 ```
 
-### Realtime Sound Source Localization and Tracking
-
-[ODAS](https://github.com/introlab/odas) stands for Open embeddeD Audition System. This is a library dedicated to perform sound source localization, tracking, separation and post-filtering. Let's have a fun with it.
-
-**For Linux:**
-
-- Step 1. Get ODAS and build it.
-
-```
-sudo apt-get install libfftw3-dev libconfig-dev libasound2-dev libgconf-2-4
-sudo apt-get install cmake
-git clone https://github.com/introlab/odas.git
-mkdir odas/build
-cd odas/build
-cmake ..
-make
-```
-
-- Step 2. Get [ODAS Studio](https://github.com/introlab/odas_web/releases)  and open it.
-
-```
-sudo apt install nodejs
-sudo apt install npm
-git clone https://github.com/introlab/odas_web
-cd odas_web
-npm install
-npm start
-```
-
-- Step 3. The odascore will be at **odas/bin/odaslive**, the **config file** is [odas.cfg](https://raw.githubusercontent.com/respeaker/usb_4_mic_array/master/odas.cfg).
-
-- Step 4. Upgrade mic array with 6_channels_firmware.bin which includes 4 channels raw audio data.
-
-<iframe width="800" height="500" src="https://www.youtube.com/embed/K5gZabfaaPI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-**For Windows/Mac:** Please refer to [ODAS](https://github.com/introlab/odas).
 
 ## FAQ
 

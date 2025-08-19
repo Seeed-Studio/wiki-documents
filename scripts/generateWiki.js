@@ -16,10 +16,7 @@ const excludedPaths = [
 
 
   // 排除指定文档
-  path.join(docsDirectory, 'Edge', 'reCamera', 'software_documents', 'Make_the_Cpp_program_auto_start_on_boot.md'), //7.26
-  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'), //7.26
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'How_to_Build_the_Source_Code_Project_for_Seeed_Jetson_BSP.md'), //8.4
-  path.join(docsDirectory, 'Edge', 'NVIDIA_Jetson', 'FAQs', 'Issue_of_JetPack5_Failing_to_Boot_from_Certain_SSDs.md'), //7.30
+  path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'), //8.15
 ];
 
 // 递归函数，用于遍历多层文件夹

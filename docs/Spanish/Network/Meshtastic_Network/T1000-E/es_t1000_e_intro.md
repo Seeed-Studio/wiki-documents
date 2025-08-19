@@ -18,7 +18,7 @@ last_update:
 Es un rastreador de alto rendimiento diseñado para Meshtastic, tan pequeño como una tarjeta de crédito, que cabe fácilmente en tu bolsillo o se puede sujetar a tus objetos. Incorpora el LR1110 de Semtech, el nRF52840 de Nordic y el módulo GPS AG3335 de Mediatek, proporcionando a los usuarios de Meshtastic una solución de posicionamiento y comunicación de alta precisión y bajo consumo.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

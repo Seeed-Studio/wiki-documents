@@ -19,7 +19,7 @@ last_update:
 LinkIt Smart 7688（一个紧凑型控制板）是一款基于 OpenWrt Linux 发行版和 MT7688（[数据手册](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/MT7688_datasheet.pdf)）的开放开发板。该板专为智能家居丰富应用物联网设备的原型设计而打造。该板提供了充足的内存和存储空间以支持强大的视频处理功能。该平台还提供了使用 Python、Node.js 和 C 编程语言创建设备应用程序的选项。此开发板是 MediaTek LinkIt Smart 7688 平台的一部分，该平台还包括其他开发板。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

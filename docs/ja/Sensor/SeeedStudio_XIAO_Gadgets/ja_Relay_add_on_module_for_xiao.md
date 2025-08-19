@@ -52,12 +52,12 @@ XIAO用リレーアドオンモジュールは、Seeed Studioが設計したAC�
  </tr>
  <tr>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
     </div></td>
     <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html">
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Relay-add-on-module-for-XIAO-p-6310.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
     </div></td>
@@ -76,7 +76,7 @@ XIAO用リレーアドオンモジュールは、Seeed Studioが設計したAC�
 XIAO用に高速ファームウェアフラッシュページを作成しました。以下のサイトを直接使用して、プログラミングなしでお持ちのXIAOにリレーのファームウェアをフラッシュできます。このサイトは接続しているXIAOのチップを自動的に検出し、選択する必要なく、ESP32チップに対応するXIAOファームウェアバージョンを直接フラッシュします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>ファームウェアフラッシャー 🖱️</font></span></strong>
     </a>
 </div>
@@ -112,7 +112,7 @@ Add-on Store で ESPHome を検索してインストールできます。
 XIAO 用のクイックフラッシュファームウェアページを作成しました。以下のサイトを直接使用して、プログラミングなしで XIAO 用のリレーのファームウェアをフラッシュできます。このサイトは接続している XIAO のチップを自動的に検出し、ESP32 チップに対応する XIAO ファームウェアバージョンを直接フラッシュします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/">
+    <a class="get_one_now_item" href="https://limengdu.github.io/Relay_Module_for_XIAO/" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>ファームウェアフラッシャー 🖱️</font></span></strong>
     </a>
 </div>

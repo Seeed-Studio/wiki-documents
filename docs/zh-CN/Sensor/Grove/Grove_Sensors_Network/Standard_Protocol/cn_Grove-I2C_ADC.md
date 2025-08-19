@@ -16,7 +16,7 @@ last_update:
 Grove - I2C ADC 是一个基于 ADC121C021 的 12 位精度 ADC 模块。它通过提供恒定的参考电压来帮助您提高从模拟传感器收集的数值精度。由于其地址可变，您最多可以同时使用 9 个 I2C ADC。另一方面，该模块提供自动休眠功能，大大降低了功耗。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong></a>
 </div>
 
 ## 版本

@@ -16,7 +16,7 @@ last_update:
 厌倦了单调的单色背光？这个 Grove 模块让您可以通过简单明了的 Grove 接口设置任意您喜欢的颜色。它使用 I2C 作为与微控制器的通信方式。因此，数据交换和背光控制所需的引脚数量从约 10 个减少到 2 个，为其他具有挑战性的任务释放了 IO 资源。此外，Grove - LCD RGB 背光支持用户定义字符。想要显示一个爱心或其他特殊字符？只需利用此功能并设计它即可！该产品是 Grove - 串行 LCD 的替代品。如果您正在寻找传统的 16x2 LCD 模块，我们也有绿色黄色背光版本和蓝色背光版本出售。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

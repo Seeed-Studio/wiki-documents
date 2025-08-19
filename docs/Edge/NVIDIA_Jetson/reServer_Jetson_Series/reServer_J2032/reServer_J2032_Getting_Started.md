@@ -22,7 +22,7 @@ Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to tw
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

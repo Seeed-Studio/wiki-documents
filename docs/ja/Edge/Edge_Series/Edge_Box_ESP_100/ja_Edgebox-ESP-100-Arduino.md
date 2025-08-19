@@ -31,7 +31,7 @@ EdgeBox-ESP-100のほかにも、Raspberry Piを搭載したエッジファミ�
 このポータブルボックスは、堅牢なハードウェア、電気設計、およびアルミニウム合金製の筐体を備えており、広い温度範囲で機能を維持し、高いサージおよび短絡保護を提供します。これにより、ビジネスに基づいた多様な展開方法が可能です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-ESP-100-p-5490.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

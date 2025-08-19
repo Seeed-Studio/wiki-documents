@@ -70,7 +70,7 @@ reTerminal E10xx 仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
 3. 访问 **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)** 并登录您的账户
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -134,7 +134,7 @@ reTerminal E10xx 系列仅支持 2.4GHz WiFi 网络，不支持 5GHz 或其他�
 **步骤 1.** 在您的网络浏览器中访问 [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) 并创建账户或登录。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> SenseCraft HMI 🖱️</font></span></strong>
     </a>
 </div><br />

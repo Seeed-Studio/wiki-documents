@@ -24,7 +24,7 @@ SenseCraft AI モデルリポジトリからカスタムモデルを使用する
 - **SenseCraft APP**: SenseCraft APP をモバイルデバイスにインストールしてください。このアプリは iOS および Android プラットフォームで利用可能で、それぞれのアプリストアからダウンロードできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc">
+    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> アプリをダウンロード 🖱️</font></span></strong>
     </a>
 </div>
@@ -38,13 +38,13 @@ SenseCraft AI モデルリポジトリからカスタムモデルを使用する
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher のビデオを見る</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Github リポジトリ</font></span></strong>
     </a>
 </div>

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 3
 description: How to use Training(Object Detection)
 title: Training - Object Detection
 image: https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/1.9.webp
@@ -37,7 +37,7 @@ With these two methods, the SenseCraft platform caters to diverse object detecti
 We will create a simple demo for **recognising human**. The quick training feature leverages the following core characteristics of the YOLO – World object detection model:
 
 The quick training feature uses YOLO’s strengths to efficiently create single-class detection models. By combining pretrained weights, text semantics, and efficient feature extraction, it generates a tailored model, such as for "human", without requiring image data.
-
+ç
 ### Step 1. Determine the object name
 
 Enter the target name in the text box. Then click on **'Start Training'**.

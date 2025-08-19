@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /lerobot_starai_arm
 last_update:
-  date: 7/29/2025
+  date: 8/15/2025
   author: LiShanghang
 ---
 
@@ -128,7 +128,7 @@ conda create -y -n lerobot python=3.10 && conda activate lerobot
 3. Clone Lerobot:
 
 ```bash
-git clone https://github.com/Seeed-Projects/lerobot.git ~/lerobot
+git clone https://github.com/servodevelop/lerobot-starai.git
 ```
 
 4. When using miniconda, install ffmpeg in your environment:
@@ -150,7 +150,7 @@ conda install ffmpeg=7.1.1 -c conda-forge
 5. Install LeRobot with dependencies for the feetech motors:
 
 ```bash
-cd ~/lerobot && pip install -e ".[feetech]"
+cd ~/lerobot-starai && pip install -e ".[feetech]"
 ```
 
 
@@ -226,11 +226,7 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
 
-Open-file
-
-```bash
-lerobot\lerobot\common\robot_devices\robots\configs.py
-```
+Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
 Use the Ctrl+F to search for starai and locate the following code. Then, you need to modify the port settings of follower_arms and leader_arms to match the actual port settings.
 
@@ -282,11 +278,7 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
 
 ### Set Runtime Parameters
 
-Open-file
-
-```bash
-lerobot\lerobot\common\robot_devices\robots\configs.py
-```
+Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
 
 Use the Ctrl + F to search for starai and locate the following code. Then, you need modify the interval setting of follower_arms.
 
@@ -450,7 +442,7 @@ Frame: 0046 Latency (ms): 40.07
 Images have been saved to outputs/images_from_opencv_cameras
 ```
 
-You can find the pictures taken by each camera in the `outputs/images_from_opencv_cameras` directory, and confirm the port index information corresponding to the cameras at different positions. Then complete the alignment of the camera parameters in the `lerobot/lerobot/common/robot_devices/robots/configs.py` file.
+You can find the pictures taken by each camera in the `outputs/images_from_opencv_cameras` directory, and confirm the port index information corresponding to the cameras at different positions. Then complete the alignment of the camera parameters in the `lerobot-starai/lerobot/common/robot_devices/robots/configs.py` file.
 
 <div align="center">
     <img width={400}
@@ -516,10 +508,10 @@ echo $HF_USER
 ```
 
 :::tip
-If you don't want to use the Hugging Face hub features for uploading your dataset. You can choose `--control.push_to_hub=false`.
+If you do not wish to use the Hugging Face Hub's dataset upload feature, you can opt for `--control.push_to_hub=false`. Additionally, replace `--control.repo_id=${HF_USER}/starai` with a custom local folder name, such as `--control.repo_id=starai/starai`. The data will be stored in the `~/.cache/huggingface/lerobot` directory under the system's home directory.
 :::
 
-Record 20 episodes and don't upload your dataset to the hub:
+Record 20 episodes and upload your dataset to the hub:
 
 ```bash
 python lerobot/scripts/control_robot.py \
@@ -534,10 +526,29 @@ python lerobot/scripts/control_robot.py \
   --control.reset_time_s=30 \
   --control.num_episodes=20 \
   --control.display_data=true \
-  --control.push_to_hub=false
+  --control.push_to_hub=ture
 ```
 
-You will see a lot of lines appearing like this one:
+Don't upload to Hub:
+**(Recommended, the following tutorials will mainly focus on local data)** 
+
+```bash
+python lerobot/scripts/control_robot.py \
+  --robot.type=starai \
+  --control.type=record \
+  --control.fps=30 \
+  --control.single_task="Grasp a lego block and put it in the bin." \
+  --control.repo_id=starai/starai \#Assign a name to the local storage file yourself
+  --control.tags='["starai","tutorial"]' \
+  --control.warmup_time_s=5 \
+  --control.episode_time_s=30 \
+  --control.reset_time_s=30 \
+  --control.num_episodes=20 \
+  --control.display_data=true \
+  --control.push_to_hub=false #set push_to_hub to false
+```
+
+You will see data similar to the following:
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
@@ -553,7 +564,9 @@ Parameter Explanations
 
 :::tip
 
-- "If you want to save the data locally (`--control.push_to_hub=false`), replace `--control.repo_id=${HF_USER}/so101_test` with a custom local folder name, such as `--control.repo_id=seeed_123/so101_test`. It will then be stored in the system's home directory at `~/.cache/huggingface/lerobot`."
+- **Again**: "If you want to save the data locally (`--control.push_to_hub=false`), replace `--control.repo_id=${HF_USER}/starai` with a custom local folder name, such as `--control.repo_id=starai/starai`. It will then be stored in the system's home directory at `~/.cache/huggingface/lerobot`."
+
+- Note: You can resume recording by adding `--control.resume=true`. Also if you didn't push your dataset yet, add `--control.local_files_only=true`. You will need to manually delete the dataset directory if you want to start recording from scratch.
 
 - If you uploaded your dataset to the hub with `--control.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
 
@@ -562,8 +575,6 @@ Parameter Explanations
 - Press left arrow ← at any time during episode recording or resetting to early stop, cancel the current episode, and re-record it.
 
 - Press escape ESC at any time during episode recording to end the session early and go straight to video encoding and dataset uploading.
-
-- Note: You can resume recording by adding --control.resume=true. Also if you didn't push your dataset yet, add --control.local_files_only=true. You will need to manually delete the dataset directory if you want to start recording from scratch.
 
 - Once you're comfortable with data recording, you can create a larger dataset for training. A good starting task is grasping an object at different locations and placing it in a bin. We suggest recording at least 50 episodes, with 10 episodes per location. Keep the cameras fixed and maintain consistent grasping behavior throughout the recordings. Also make sure the object you are manipulating is visible on the camera's. A good rule of thumb is you should be able to do the task yourself by only looking at the camera images.
 
@@ -578,16 +589,14 @@ Parameter Explanations
 
 ## Visualize the dataset
 
-The dataset is saved locally. If you upload with `--control.push_to_hub=false` , you can also visualize it locally with:
+The dataset is saved locally. You can visualize it locally with:
 
 ```bash
 python lerobot/scripts/visualize_dataset_html.py \
-  --repo-id starai/starai_test \
+  --repo-id starai/starai \
 ```
 
-Here, `starai` is the custom `repo_id` name defined when collecting data.
-
-
+Here, `starai/starai` is the custom `repo_id` name defined when collecting data.
 
 ## Replay an episode
 
@@ -599,12 +608,12 @@ python lerobot/scripts/control_robot.py \
   --control.type=replay \
   --control.fps=30 \
   --control.repo_id=starai/starai \
-  --control.episode=0
+  --control.episode=0 \# 0 is the first episode
   --control.local_files_only=true
 ```
 
 :::tip
-If you didn't push your dataset yet, add `--control.local_files_only=true` .
+The parameter `--control.local_files_only=true` is used to instruct the program to utilize local datasets rather than those from the Hub.
 :::
 
 ## Train a policy
@@ -624,17 +633,17 @@ python lerobot/scripts/train.py \
 Let's explain it:
 
 1. We use our local dataset as argument `--dataset.repo_id=starai/starai`.
-2. We provide the policy using `policy.type=act`, which will load the configuration from [`lerobot/lerobot/common/policies/act/configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/common/policies/act/configuration_act.py). Currently, ACT has been tested, but you can also try other policies such as diffusion, pi0, pi0fast, tdmpc, and vqbet.
+2. We provide the policy using `policy.type=act`, which will load the configuration from [`lerobot-starai/lerobot/common/policies/act/configuration_act.py`](https://github.com/huggingface/lerobot/blob/main/lerobot/common/policies/act/configuration_act.py). Currently, ACT has been tested, but you can also try other policies such as diffusion, pi0, pi0fast, tdmpc, and vqbet.
 3. We provided policy.device=cuda since we are training on a Nvidia GPU, but you could use policy.device=mps to train on Apple silicon.
 4. We provided `wandb.enable=true` to use [Weights and Biases](https://docs.wandb.ai/quickstart) for visualizing training plots. This is optional but if you use it, make sure you are logged in by running `wandb login`.
 
-If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection. Training should take several hours. You will find checkpoints in`outputs/train/act_starai_test/checkpoints` .
+If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection. Training should take several hours. You will find checkpoints in`outputs/train/act_starai/checkpoints` .
 
 To resume training from a checkpoint, below is an example command to resume from last checkpoint of the `act_starai` :
 
 ```bash
 python lerobot/scripts/train.py \
-  --config_path=outputs/train/act_starai_test/checkpoints/last/pretrained_model/train_config.json \
+  --config_path=outputs/train/act_starai/checkpoints/last/pretrained_model/train_config.json \
   --resume=true
 ```
 
@@ -654,18 +663,26 @@ python lerobot/scripts/control_robot.py \
   --control.episode_time_s=30 \
   --control.reset_time_s=30 \
   --control.num_episodes=10 \
-  --control.push_to_hub=false \
-  --control.policy.path=outputs/train/act_starai_test/checkpoints/last/pretrained_model
+  --control.push_to_hub=false \#Choose don't upload to Hub
+  --control.policy.path=outputs/train/act_starai/checkpoints/last/pretrained_model
 ```
 
 As you can see, this is almost identical to the command previously used to record the training dataset. There are only two differences:
 
-1. There is an additional `--control.policy.path` argument which indicates the path to your policy checkpoint (e.g. `outputs/train/eval_act_starai/checkpoints/last/pretrained_model`). You can also use the model repository if you uploaded a model checkpoint to the hub (e.g. `${HF_USER}/eval_act_starai`).
-2. The name of dataset begins by `eval` to reflect that you are running inference (e.g. `${HF_USER}/eval_act_starai`).
+1. The `--control.policy.path` parameter has been added to indicate the path of your policy checkpoint (for example, `outputs/train/act_starai/checkpoints/last/pretrained_model`).
+2. The name of the evaluation dataset **must** start with `eval` to reflect that you are running inference (for example, `--control.repo_id=starai/eval_act_starai`). This operation will record videos and data specifically during evaluation and save them to `eval_act_starai`.
+
+:::warning
+If an error occurs when you run the evaluation command for the second time, you need to delete the corresponding `eval_act_starai` file to ensure that there are no files with the same name under the directory `~/.cache/huggingface/lerobot/starai/`.
+:::
+
+:::tip
+If you upload your model checkpoint to the Hub, you can also use the model repository (for example, `--control.repo_id=${HF_USER}/eval_act_starai`), while setting `--control.push_to_hub=true`.
+:::
 
 ## FAQ
 
-- If you are following this documentation/tutorial, please git clone the recommended GitHub repository `https://github.com/Seeed-Projects/lerobot.git`.
+- If you are following this documentation/tutorial, please git clone the recommended GitHub repository `git clone https://github.com/servodevelop/lerobot-starai.git`.
 
 - If you encounter the following error, you need to check whether the robotic arm connected to the corresponding port is powered on and whether the bus servos have any loose or disconnected cables.
   ```bash
@@ -685,8 +702,7 @@ As you can see, this is almost identical to the command previously used to recor
 
 - For Jetson, please first install [Pytorch and Torchvsion](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) before executing `conda install -y -c conda-forge ffmpeg`, otherwise, when compiling torchvision, an ffmpeg version mismatch issue may occur.
 
-- If the following problem occurs, it means that your computer does not support this video codec format. You need to modify line 134 in the file `lerobot/lerobot/common/datasets
-/video_utils.py` by changing the value of `vcodec: str = "libsvtav1"` to `libx264` or `libopenh264`. Different computers may require different parameters, so you can try various options. [Issues 705](https://github.com/huggingface/lerobot/issues/705)
+- If the following problem occurs, it means that your computer does not support this video codec format. You need to modify line 134 in the file `lerobot-starai/lerobot/common/datasets/video_utils.py` by changing the value of `vcodec: str = "libsvtav1"` to `libx264` or `libopenh264`. Different computers may require different parameters, so you can try various options. [Issues 705](https://github.com/huggingface/lerobot/issues/705)
   
   ```bash
   [vost#0:0 @ 0x13207240] Unknown encoder 'libsvtav1' [vost#0:0 @ 0x13207240] Error selecting an encoder Error opening output file /home/han/.cache/huggingface/lerobot/lyhhan/so100_test/videos/chunk-000/observation.images.laptop/episode_000000.mp4. Error opening output files: Encoder not found

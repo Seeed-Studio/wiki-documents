@@ -27,7 +27,7 @@ SenseCAP M2 is now providing US915 and EU868 versions with FCC and CE certificat
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>

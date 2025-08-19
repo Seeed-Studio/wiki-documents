@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Grove - I2C ADC は、ADC121C021 をベースにした 12 ビット精度の ADC モジュールです。このモジュールは、一定の基準電圧を提供することで、アナログセンサーから収集される値の精度を向上させます。また、アドレスが変更可能であるため、最大で 9 つの I2C ADC を同時に使用することができます。さらに、このモジュールは自動スリープ機能を備えており、電力消費を大幅に削減します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-ADC.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 ## バージョン

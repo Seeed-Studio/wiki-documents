@@ -23,7 +23,7 @@ MediaTek Labsの閉鎖により、関連リンクはすべて無効になりま�
 LinkIt Smart 7688（コンパクトなコントローラーボード）は、OpenWrt LinuxディストリビューションとMT7688（[データシート](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/MT7688_datasheet.pdf)）に基づいたオープン開発ボードです。このボードは、スマートホーム向けのリッチアプリケーションIoTデバイスのプロトタイピングに特化して設計されています。ボードは十分なメモリとストレージを提供し、堅牢なビデオ処理を可能にします。また、Python、Node.js、Cプログラミング言語でデバイスアプリケーションを作成するオプションも提供します。このボードは、MediaTek LinkIt Smart 7688プラットフォームの一部であり、他の開発ボードも含まれています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

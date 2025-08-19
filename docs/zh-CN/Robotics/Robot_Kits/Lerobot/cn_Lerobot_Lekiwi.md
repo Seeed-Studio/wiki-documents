@@ -29,7 +29,7 @@ last_update:
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.png" />
 </div>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/SO-ARM100-Low-Cost-AI-Arm-Kit.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 </a></div>
 
@@ -97,7 +97,7 @@ Seeed Studio 仅对硬件本身的质量负责。教程严格按照官方文档�
 **对于 Jetson Orin:**
 - Jetson JetPack 6.2  
 - Python 3.10  
-- Torch 2.6  
+- Torch 2.3+  
 
 **对于树莓派:**
 - 树莓派5 4G~16G

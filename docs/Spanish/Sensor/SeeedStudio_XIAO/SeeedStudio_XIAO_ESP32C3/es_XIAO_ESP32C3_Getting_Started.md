@@ -20,7 +20,7 @@ Con respecto a las características mencionadas anteriormente, la XIAO ESP32C3 e
 ¡Esta wiki te mostrará cómo puedes comenzar rápidamente con el XIAO ESP32C3!
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html"><strong><span><font color={'FFFFFF'} size={"4"}> Consígue uno ahora 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consígue uno ahora 🖱️</font></span></strong></a>
 </div>
 
 ## Características

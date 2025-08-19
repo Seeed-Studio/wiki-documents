@@ -46,7 +46,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
 超強力で軽量なアルミニウム合金で覆われており、高い保護等級のIP55として設計され、2つのオンボードファンによる強力な冷却機能を備えたパッシブ熱放散として設計されています。Jetpack 5.0.2がプリインストールされており、この優れたコンピューティングプラットフォームは無人清掃車、無人配送車、インテリジェント検査、AGV、その他の無人運転分野での展開準備が整っています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

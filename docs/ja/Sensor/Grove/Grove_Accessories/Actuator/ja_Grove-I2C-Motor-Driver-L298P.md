@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Grove - I2C モータードライバー (L298P) は、ステッピングモーターやサーボモーター用の汎用モータードライバーです。STM32 チップを内蔵しており、コードを焼き込んでモータードライバーを制御することができます。このモータードライバーは2チャンネル仕様で、各チャンネルは最大1Aの電流をサポートします。また、I2Cインターフェースを使用して周辺マイクロコントローラーからデータを送信することができます。デフォルトのI2Cアドレスは0x0fであり、I2Cワイヤーハットを接続することでモータードライバーのアドレスを変更することが可能です。I2Cアドレスは0x00から0x0fまで選択可能です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 </a>
 </div>

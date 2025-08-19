@@ -22,7 +22,7 @@ Los productos de la versión **SenseCAP LoRaWAN** incluyen **gateways LoRaWAN** 
 **SenseCAP** ofrece una plataforma en la nube fácil de usar. Los usuarios pueden escanear el código QR con la app **SenseCAP App** para vincular el dispositivo a su cuenta, administrar los dispositivos y revisar los datos del nodo sensor desde el **SenseCAP Portal**. Este portal también ofrece una API para que los usuarios desarrollen aplicaciones basadas en los datos disponibles.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

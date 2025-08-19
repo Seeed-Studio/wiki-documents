@@ -42,7 +42,7 @@ Para aplicaciones inalámbricas de largo alcance (LoRaWAN®), los desarrolladore
 
 El producto incluye una carcasa IP66 de grado industrial, además de pads y tornillos de montaje para un despliegue fácil y seguro en exteriores.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html"><strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong></a> <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-outdoor-lorawan-sensor-kit-based-on-grove-p-5503.html"><strong><span><font color={'FFFFFF'} size={"4"}> Kit LoRaWAN 🖱️</font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora 🖱️</font></span></strong></a> <a class="get_one_now_item" href="https://www.seeedstudio.com/sensecap-outdoor-lorawan-sensor-kit-based-on-grove-p-5503.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Kit LoRaWAN 🖱️</font></span></strong></a> </div>
 
 ## Primeros Pasos con el Builder de diferentes maneras
 
@@ -54,19 +54,19 @@ Siendo una solución innovadora que fusiona módulos industriales y de nivel mak
 
 Puedes construir un sensor LoRaWAN personalizado, rentable y de grado industrial usando sensores Grove, conectarlo a SenseCAP Cloud con SenseCAP Data Logger, y habilitar la transmisión de datos inalámbrica de largo alcance.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Consíguelo ahora </font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Consíguelo ahora </font></span></strong></a> </div>
 
 ### Añadir más sensores Grove industriales LoRaWAN
 
 Estamos buscando añadir más módulos Grove al Builder. ¡Nos encantaría que te unas! Consulta la información abajo y contribuye con tu trabajo (esto es parte del [Programa de Contribuidores de Seeed Studio](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=34120904)).
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/list_of_supported_grove_n_adding_more"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Primeros Pasos </font></span></strong></a> <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_S2110"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Código Fuente </font></span></strong></a> <a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904"><strong><span><font color={'FFFFFF'} size={"4"}> 🙋 Contribuye </font></span></strong></a> </div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="/list_of_supported_grove_n_adding_more" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Primeros Pasos </font></span></strong></a> <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_S2110" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Código Fuente </font></span></strong></a> <a class="get_one_now_item" href="https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 🙋 Contribuye </font></span></strong></a> </div>
 
 ### Desarrollo con la placa XIAO RP2040 usando RS485
 
 Como está impulsado por Seeed Studio XIAO RP2040 y cuenta con un conector Grove a bordo, puedes usarlo directamente como un dispositivo de desarrollo normal. Junto con conectividad RS485, puedes añadir más sensores RS485 a XIAO y expandir tus ideas de proyecto.
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Arduino </font></span></strong></a> <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 MicroPython </font></span></strong></a> <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-CircuitPython/"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 CircuitPython </font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Arduino </font></span></strong></a> <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-MicroPython/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 MicroPython </font></span></strong></a> <a class="get_one_now_item" href="https://wiki.seeedstudio.com/XIAO-RP2040-with-CircuitPython/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 CircuitPython </font></span></strong></a></div>
 
 ## Flasheo del Firmware de Fábrica
 

@@ -21,7 +21,7 @@ Wio Terminal バッテリーシャーシは、[Wio-Terminal](https://www.seeedst
 新しいバージョンのWio Terminal バッテリーシャーシには、**Texas Instrumentの[BQ27441-G1A](http://www.ti.com/product/BQ27441-G1)** が追加されました。この自己校正型、I2Cベースの燃料ゲージはリチウムポリマー（LiPo）バッテリー用で、バッテリーの電圧を測定して充電率と残容量を推定することができます！
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-Chassis-Battery-650mAh-p-4756.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
     
 </div>
 

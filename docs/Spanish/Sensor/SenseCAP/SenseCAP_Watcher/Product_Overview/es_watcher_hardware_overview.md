@@ -15,13 +15,13 @@ last_update:
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Video del Watcher</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio de Github</font></span></strong>
     </a>
 </div><br />
@@ -163,7 +163,7 @@ Ten en cuenta que el cuerpo del Watcher solo viene con el soporte giratorio de 3
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/threaded_bracket.gif" style={{width:650, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-Tripod-p-5978.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-Tripod-p-5978.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Cómpralo ahora</font></span></strong>
     </a>
 </div>
@@ -240,7 +240,7 @@ Por favor usa un enchufe de alimentación compatible con el Watcher; el Watcher 
 La tabla arriba muestra las especificaciones recomendadas del adaptador. Si no sabes dónde comprar el adaptador correcto, puedes adquirirlo directamente en el enlace siguiente.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

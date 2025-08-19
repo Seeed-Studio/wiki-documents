@@ -26,7 +26,7 @@ Raspberry Pi用のGrove Base Hatは、デジタル、アナログ、I2C、PWM、
 率直に言えば、現在約60のGroveモジュールがRaspberry Pi用のGrove Base Hatをサポートしています。しかし、私たちは新しい互換性のあるモジュールを追加し続けます。使用すればするほど、Groveが追加されます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

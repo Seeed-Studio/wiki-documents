@@ -15,13 +15,13 @@ last_update:
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher视频</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Github仓库</font></span></strong>
     </a>
 </div>
@@ -62,7 +62,7 @@ Watcher配有独特的包装，可兼作时尚的日历式支架。通过将Watc
 上图显示了推荐的适配器规格。如果您不知道在哪里可以购买合适的适配器，可以选择通过以下链接直接购买。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
@@ -91,7 +91,7 @@ Watcher配有独特的包装，可兼作时尚的日历式支架。通过将Watc
 您可以扫描二维码或使用提供的链接下载应用程序。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc">
+    <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 下载APP 🖱️</font></span></strong>
     </a>
 </div>

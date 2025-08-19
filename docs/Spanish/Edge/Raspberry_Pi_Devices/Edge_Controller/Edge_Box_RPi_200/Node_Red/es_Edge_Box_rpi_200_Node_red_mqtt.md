@@ -36,7 +36,7 @@ Antes de iniciar este proyecto, puede que necesites preparar tu hardware y softw
 		</tr>
     <tr class="table-trnobg"></tr>
 		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Consigue el tuyo! 🖱️</font></span></strong>
           </a></div></td>
         </tr>

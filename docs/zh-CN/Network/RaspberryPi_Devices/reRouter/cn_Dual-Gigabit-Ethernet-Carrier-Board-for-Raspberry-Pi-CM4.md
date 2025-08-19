@@ -19,7 +19,7 @@ last_update:
 它具有多种 I/O 外设，例如 MIPI CSI、MIPI DSI、micro-HDMI 用于连接显示器/摄像头，一个标准的 9 针 USB 3.0 接口用于更多 USB 扩展，一个 micro-SD 卡插槽和一个 FPC 接口，同时保持紧凑的外形尺寸！该板非常适合 HTPC 制作者、Linux 开发者、软路由爱好者以及大多数普通的 Raspberry Pi 用户。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Rapberry-Pi-CM4-Dual-GbE-Carrier-Board-p-4874.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

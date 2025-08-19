@@ -28,7 +28,7 @@ reCamera Gimbalへようこそ！reCamera gimbal 2002シリーズは、初のオ
 このガイドでは、デバイスを迅速にセットアップし、強力なAIビジョン機能を活用する方法を説明します。初心者でも経験豊富なユーザーでも、このステップバイステップの手順に従うことで、インストール、設定、初回使用をスムーズに進めることができます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reCamera-gimbal-2002w-optional-accessories.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱</font></span></strong>
     </a>
 </div>

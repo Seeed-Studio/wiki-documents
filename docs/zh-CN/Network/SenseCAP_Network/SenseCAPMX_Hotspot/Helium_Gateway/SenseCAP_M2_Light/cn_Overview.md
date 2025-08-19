@@ -21,7 +21,7 @@ SenseCAP 软件许可证针对 SenseCAP M2 **低至** **\$0.05** **每天**，�
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 </font></span></strong>
     </a>
 </div>

@@ -196,7 +196,7 @@ Si todo funciona correctamente, verás el texto "Hello, World!" mostrado en la p
 
 Nuestro socio **Neil** ha escrito un programa de consola de línea de comandos para XIAO utilizando MicroPython. Con este programa, puedes cargar, descargar y eliminar archivos fácilmente. ¡Le agradecemos por su contribución a XIAO!
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Aprende Más</font></span></strong></a></div>
 
 ## Recursos adicionales
 

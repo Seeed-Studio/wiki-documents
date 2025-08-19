@@ -25,7 +25,7 @@ reServer J2032 配备了先进的 Nvidia Jetson™ Xavier NX 16GB 模块（可�
 通过双 SATA III 6.0Gbps 数据连接器，reServer 能够安装最多两个 3.5"/2.5" SATA 内部硬盘驱动器以获取更多存储空间。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

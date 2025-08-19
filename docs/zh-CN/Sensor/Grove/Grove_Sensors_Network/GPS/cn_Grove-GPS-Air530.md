@@ -17,7 +17,7 @@ last_update:
 是否困惑于您的GPS在城市或户外环境下仅在一个或少数几个卫星模块下工作不佳？那么您不应该错过我们新的Grove-GPS (Air530 / Air530Z)。它是一个高性能、高度集成的多模式卫星定位和导航模块。它支持GPS / 北斗 / Glonass / Galileo / QZSS / SBAS，这使其适用于汽车导航、智能穿戴和无人机等GNSS定位应用。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div>

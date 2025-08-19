@@ -14,13 +14,13 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/87.png" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
         <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo ahora</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE">
+    <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Video de Watcher</font></span></strong>
     </a>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Repositorio en GitHub</font></span></strong>
     </a>
 </div><br />
@@ -40,7 +40,7 @@ Puedes descargar la aplicación Watcher desde los siguientes enlaces:
 - Para **Windows**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Para Windows 🖱️</font></span></strong>
     </a>
 </div>
@@ -48,7 +48,7 @@ Puedes descargar la aplicación Watcher desde los siguientes enlaces:
 - Para **macOS**: 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Para macOS 🖱️</font></span></strong>
     </a>
 </div>
@@ -56,7 +56,7 @@ Puedes descargar la aplicación Watcher desde los siguientes enlaces:
 - Para **Linux**: 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb">
+    <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb" target="_blank" rel="noopener noreferrer">
         <strong><span><font color={'FFFFFF'} size={"4"}> Para Linux 🖱️</font></span></strong>
     </a>
 </div><br />

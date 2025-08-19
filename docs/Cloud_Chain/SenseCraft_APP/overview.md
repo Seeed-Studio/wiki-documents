@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-description: SenseCraft APP
+description: SenseCraft App
 title:  Overview
 keywords:
 - App
@@ -20,10 +20,10 @@ SenseCAP Mate App is officially renamed as `SenseCraft` App!
 :::
 
 
-SenseCraft APP is a powerful APP for data visualization and device management.
 # Introduction and Usage
+SenseCraft APP is a powerful APP for data visualization and device management.
 
-## Features
+## App Highlights
 
 * Save time - provides a scan-and-play experience to enable users to complete the whole configuration in 4 steps
 * Works for people with less or no technical background to get started with sensor data easily
@@ -64,17 +64,6 @@ Please select `Global` of Server Location. You can also create an account via th
 * Click the bell icon in the upper right corner to enter the message center.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/message-center.png" alt="pir" width={500} height="auto" /></p>
-
-
-## AIGC
-
-AIGC is the AI-powered solution that helps you make the most of your sensor data and unlock the full potential of your sensor data. <br/>
-By connecting your SenseCAP sensors to the SenseCAP platform, you can easily collect and analyze data on environmental factors such as temperature, humidity, light, and air quality. Meanwhile, our powerful AI algorithms then use this data to provide you with actionable insights and recommendations that can help you optimize your operations, reduce costs, and improve efficiency.
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/AIGC.PNG" alt="pir" width={300} height="auto" /></p>
-
-
-Click [here](https://wiki.seeedstudio.com/How_to_Use_SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP/) for more details.
-
 
 ## MALL
 

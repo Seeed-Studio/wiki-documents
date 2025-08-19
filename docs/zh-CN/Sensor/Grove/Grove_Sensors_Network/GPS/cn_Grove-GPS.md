@@ -17,7 +17,7 @@ last_update:
 这款 Grove - GPS 模块是一个成本效益高且可现场编程的设备，配备了 SIM28（u-blox 6 是旧版本）和串行通信配置。它具有 22 个跟踪 / 66 个捕获通道的 GPS 接收器。跟踪和捕获的灵敏度都达到了 -160dBm，使其成为个人导航项目和位置服务的绝佳选择，也是同价位产品中的杰出产品。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-GPS-Module.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong></a>
 </div>
 
 

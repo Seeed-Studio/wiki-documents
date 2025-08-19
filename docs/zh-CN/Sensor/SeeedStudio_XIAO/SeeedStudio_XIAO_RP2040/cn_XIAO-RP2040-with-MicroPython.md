@@ -196,7 +196,7 @@ while True:
 
 我们的合作伙伴 **Neil** 为 XIAO 编写了一个使用 MicroPython 的命令行控制台程序。通过这个程序，您可以轻松地上传、下载和删除文件。我们感谢他对 XIAO 的贡献！
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div>
 
 ## 其他资源
 

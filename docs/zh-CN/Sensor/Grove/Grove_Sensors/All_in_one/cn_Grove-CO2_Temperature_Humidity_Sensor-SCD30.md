@@ -17,7 +17,7 @@ Grove - 二氧化碳、温度和湿度传感器 (SCD30) 是一款高精度的二
 除了用于二氧化碳检测的非分散红外 (NDIR) 测量技术外，SCD30 还在同一传感器模块中集成了 Sensirion 的湿度和温度传感器。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD30-p-2911.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

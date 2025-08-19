@@ -21,7 +21,7 @@ ReSpeaker 2-Mics Pi HATは、Raspberry Pi向けに設計されたAIおよび音�
 このボードは低消費電力ステレオコーデックであるWM8960を基に開発されています。ボードの両側には音声を収集するための2つのマイクが搭載されており、さらに3つのAPA102 RGB LED、1つのユーザーボタン、2つのオンボードGroveインターフェースが提供されており、アプリケーションを拡張することができます。さらに、3.5mmオーディオジャックまたはJST 2.0スピーカー出力のどちらも音声出力に利用可能です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-2-Mics-Pi-HAT-p-2874.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 ## 特徴

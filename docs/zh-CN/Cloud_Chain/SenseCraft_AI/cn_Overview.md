@@ -20,7 +20,7 @@ last_update:
 SenseCraft AI 是一个一体化平台，旨在帮助开发者和创作者轻松构建和部署 AI 项目。该网站提供了广泛的工具和功能，以简化 AI 开发过程，使不同水平的用户都能轻松使用。在本 Wiki 中，我们将探索 SenseCraft AI 网站的主要部分，并概述其关键功能和特点。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home">
+    <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>一键直达 🖱️</font></span></strong>
     </a>
 </div>

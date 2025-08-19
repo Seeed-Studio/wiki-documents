@@ -21,7 +21,7 @@ La reComputer industrial viene con un disipador de calor pasivo y un diseño sin
 La reComputer industrial tiene 2 puertos RJ45 GbE, uno de los cuales es un puerto PoE PSE para proporcionar alimentación a través de Ethernet a dispositivos como cámaras IP. Esto elimina la necesidad de una fuente de alimentación separada y facilita la implementación de dispositivos de red en áreas sin tomas de corriente disponibles. El otro puerto GbE se utiliza para conectarse a un conmutador o enrutador de red, lo que permite la comunicación con otros dispositivos en la red y el acceso a Internet.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue una ahora 🖱️</font></span></strong>
 </a></div>
 

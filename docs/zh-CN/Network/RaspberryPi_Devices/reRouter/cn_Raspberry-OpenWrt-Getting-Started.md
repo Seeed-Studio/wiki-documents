@@ -18,7 +18,7 @@ last_update:
 这款迷你路由器配备了双千兆以太网端口和双 USB 3.0 端口，非常适合软路由应用，同时将硬件保持在最低限度。我们预装了一块带有 4GB RAM 和 32GB eMMC 的 Raspberry Pi Compute Module 4，以实现快速启动和流畅的整体体验。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

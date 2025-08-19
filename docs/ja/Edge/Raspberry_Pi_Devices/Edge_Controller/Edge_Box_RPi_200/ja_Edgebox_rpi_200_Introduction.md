@@ -24,7 +24,7 @@ EdgeBox-RPI-200シリーズは、Raspberry Piをベースとしたオールイ�
 エッジコントローラーは、従来のPLCやPACの多用途な代替品として、運用技術（OT）と情報技術（IT）の両方のニーズに対応する慎重に設計されたオペレーティングシステムを提供します。これにより、決定論的なランタイムを確保し、分析などの高度なタスクのためのコンピューティング環境を提供します。スマートフォン時代により現代のプログラミング言語や開発キット環境に慣れた労働力にとって、EdgeBox-RPI-200シリーズコントローラーは使いやすいインターフェースを提供します。そのコンパクトな形状により、リアルタイム操作やマルチプロセス制御が可能となり、PLC、PAC、IIoTゲートウェイ、OPC UAサーバー、産業用PCなどの多様な産業用途に対応します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

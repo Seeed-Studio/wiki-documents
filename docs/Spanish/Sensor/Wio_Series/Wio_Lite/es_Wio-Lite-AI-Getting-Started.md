@@ -15,7 +15,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wio_lite_ai/1.png" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Lite-AI-p-5119.html?queryID=8ef9dd1be1efc25a4672fa94cf6a80b6&objectID=5119&indexName=bazaar_retailer_products">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Lite-AI-p-5119.html?queryID=8ef9dd1be1efc25a4672fa94cf6a80b6&objectID=5119&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

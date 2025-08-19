@@ -34,7 +34,7 @@ MicroPython は、Python 3 プログラミング言語の軽量で効率的な�
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -54,12 +54,12 @@ MicroPython は、Python 3 プログラミング言語の軽量で効率的な�
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://thonny.org/">
+          <a class="get_one_now_item" href="https://thonny.org/" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_Micropython.zip">
+          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/XIAO_ESP32S3_Micropython.zip" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬</font></span></strong>
           </a>
       </div></td>

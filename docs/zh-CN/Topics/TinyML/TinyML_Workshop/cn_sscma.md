@@ -133,7 +133,7 @@ SenseCraft AI-Jetson 是专为 NVIDIA Jetson 边缘 AI 设备设计的开发工�
 点击下面的按钮访问 SenseCraft AI 平台主页。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI 平台</font></span></strong></a>
+	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI 平台</font></span></strong></a>
 </div><br />
 
 一旦我们进入 SenseCraft AI 平台的主页，我们首先需要连接 XIAO ESPS3，为此，点击 **Connect** 按钮。
@@ -211,7 +211,7 @@ SenseCraft AI-Jetson 是专为 NVIDIA Jetson 边缘 AI 设备设计的开发工�
 请点击下面的按钮进入SenseCraft AI平台烧录工具页面。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace"><strong><span><font color={'FFFFFF'} size={"4"}>前往SenseCraft AI平台</font></span></strong></a>
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>前往SenseCraft AI平台</font></span></strong></a>
 </div><br />
 
 进入网页后，请从**部署**中点击**连接**按钮，然后选择您的XIAO的端口号。同样，它应该清楚地标记为**USB JTAG**。

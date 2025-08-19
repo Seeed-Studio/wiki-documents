@@ -120,8 +120,8 @@ prodimagename:
 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=xiao"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/catalogsearch/result/?q=xiao" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/SeeedStudio_XIAO_Series_Introduction/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a>
 </div>
 
 <br />
@@ -140,8 +140,8 @@ prodimagename:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wio Terminal</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Wio-Terminal-Getting-Started/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Wio Terminal</font></span></strong></a>
 </div>
 
 <br />
@@ -160,8 +160,8 @@ prodimagename:
 <br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Develop_with_SenseCAP_Indicator/"><strong><span><font color={'FFFFFF'} size={"4"}>📚SenseCAP Indicator</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 立即获取 </font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/Develop_with_SenseCAP_Indicator/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚SenseCAP Indicator</font></span></strong></a>
 </div>
 
 #### 更多

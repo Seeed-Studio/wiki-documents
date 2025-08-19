@@ -21,7 +21,7 @@ reComputer Industrial 配备被动散热器和无风扇设计，非常适合在�
 reComputer Industrial 配备 2 个 RJ45 GbE 接口，其中一个是 PoE PSE 接口，可为 IP 摄像头等设备提供以太网供电。这消除了单独电源的需求，使得在没有电源插座的区域更容易部署网络设备。另一个 GbE 接口用于连接网络交换机或路由器，从而实现与网络上其他设备的通信以及访问互联网。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 

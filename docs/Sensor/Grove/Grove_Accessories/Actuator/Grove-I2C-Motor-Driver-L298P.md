@@ -17,7 +17,7 @@ Grove - I2C Motor Driver(L298P) is a common-use motor driver for stepping motor 
 motor driver. This is a 2-channel motor driver, each channel can support up to 1A current. You can also use the I2C interface to transmit data from the peripheral microcontroller. The default I2C address is 0x0f and you are able to change the address of Motor driver by connecting the I2C wire hat. The I2C address is selectable from 0x00 to 0x0f.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-Motor-Driver-L298P-p-4534.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
   </a>
 </div>

@@ -21,7 +21,7 @@ BeagleBone® Blueは、BeagleBoard.Org Foundationによって作成された、�
 BeagleBone® Blueは、BeagleBone® Black Wirelessの高性能で柔軟なWiFi/Bluetooth WiLink™インターフェースと、Strawson DesignのRobotics Capeのロボティクス機能を組み合わせています。BeagleBone® Blueには、充電器とバッテリーレベルLEDを備えた2セル（2S）LiPoバッテリー管理、8つのサーボモーター出力、4つのDCモータードライバー、4つのエンコーダ入力、多数のGPIOおよびシリアルプロトコルコネクタ（CANを含む）、9軸IMUと気圧計、4つのADC入力、PC USBインターフェース、USB 2.0ホストポート、リセットボタン、電源ボタン、2つのユーザー設定可能なボタン、6つのインジケータLEDが搭載されています。高性能なTI ARMプロセッサと512MBのDDR3を統合したOctavo SystemsのSystem-In-Packageを基盤としており、BeagleBone® Blueは約10秒でLinuxを起動し、単一のUSBケーブルで5分以内にウェブブラウザを通じて開発を開始できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/BeagleBone-Blue-p-2809.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

@@ -21,7 +21,7 @@ reServer Industrial 配备被动散热器和无风扇设计，非常适合在苛
 reServer Industrial 配备 5 个 RJ45 GbE 端口，其中 4 个为 PoE PSE 端口，可为 IP 摄像头等设备提供以太网供电。这消除了单独电源的需求，使得在没有电源插座的区域更容易部署网络设备。剩余的 GbE 端口用于连接网络交换机或路由器，实现与网络中其他设备的通信以及访问互联网。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
 </a></div>
 

@@ -24,7 +24,7 @@ Está disponible para todos los sistemas operativos, es decir, Mac, Windows, Lin
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-wio.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.arduino.cc/en/software">
+    <a class="get_one_now_item" href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Descarga Arduino IDE </font></span></strong>
     </a>
 </div>

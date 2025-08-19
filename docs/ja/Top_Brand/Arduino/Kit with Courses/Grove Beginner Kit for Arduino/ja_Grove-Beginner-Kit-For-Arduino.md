@@ -19,7 +19,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 Grove Beginner Kit for Arduino は、初心者向けの最高の Arduino 初心者キットの一つです。このキットには、Arduino 互換ボードと 10 個の追加 Arduino センサーが含まれており、すべてが一体型の PCB デザインに収められています。**すべてのモジュールは、PCB のスタンプホールを介して Seeeduino に接続されているため、Grove ケーブルを使用して接続する必要はありません**。もちろん、モジュールを取り外して Grove ケーブルを使用して接続することも可能です。この Grove Beginner Kit For Arduino を使用して、好きな Arduino プロジェクトを構築できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

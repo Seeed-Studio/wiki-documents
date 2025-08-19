@@ -35,7 +35,7 @@ tags:
 EdgeBox-RPi-200シリーズは、複数の産業用途を統合したオールインワンのRaspberry Piベースの産業用エッジコンピューティングコントローラーです。高い拡張性と堅牢な産業用ハードウェアとして設計され、豊富なIOリソースを搭載し、優れたRaspberry Pi産業用ソフトウェアエコシステムに対応しています。スマートオートメーションや産業用IoT（IIoT）ソリューションに最適な選択肢です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

@@ -20,7 +20,7 @@ last_update:
 本 Wiki 介绍了 reComputer Mini J40 系列的各种硬件和接口，以及如何使用它们来扩展您的项目创意。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Mini-optional-accessories.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱</font></span></strong>
     </a>
 </div>

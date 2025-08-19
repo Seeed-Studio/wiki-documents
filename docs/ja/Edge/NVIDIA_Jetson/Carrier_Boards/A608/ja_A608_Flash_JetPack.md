@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/A608CB.jpg" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-A608-Carrier-Board-for-Orin-NX-Orin-Nano-Series-p-5853.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-A608-Carrier-Board-for-Orin-NX-Orin-Nano-Series-p-5853.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 このWikiでは、NVIDIA Jetson Orin NXモジュールおよびNVIDIA Jetson Orin Nanoモジュールの両方をサポートするA608キャリアボードに接続されたNVMe SSDおよびUSBフラッシュドライブにJetPackをフラッシュする方法を説明します。

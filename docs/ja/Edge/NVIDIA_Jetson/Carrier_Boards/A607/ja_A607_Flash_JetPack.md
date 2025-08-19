@@ -20,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/1.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
 この Wiki では、NVIDIA Jetson Orin NX モジュールおよび NVIDIA Jetson Orin Nano モジュールの両方をサポートする A607 キャリアボードに接続された NVMe SSD に [Jetpack](https://developer.nvidia.com/embedded/jetpack) をフラッシュする方法を説明します。

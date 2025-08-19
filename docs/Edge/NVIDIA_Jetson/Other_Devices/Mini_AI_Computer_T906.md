@@ -43,7 +43,7 @@ It comes with a rich set of industrial interfaces: 1x standard RS232, 1x RS232 f
 Covered by super strong and lightweight aluminum alloy, it is designed as IP55 for a high degree of protection and it is designed as passive heat dissipation with two onboard fans for a strong cooling function. With pre-installed Jetpack 5.0.2, this great computing platform is ready to deploy on unmanned cleaning cars, unmanned delivery cars, intelligent inspection, AGV, and other unmanned driving fields.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

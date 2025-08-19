@@ -134,7 +134,7 @@ SenseCraft AI-Jetsonは、NVIDIA Jetson Edge AIデバイス向けに設計され
 以下のボタンをクリックしてSenseCraft AIプラットフォームのホームページに移動します。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AIプラットフォーム</font></span></strong></a>
+	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AIプラットフォーム</font></span></strong></a>
 </div><br />
 
 SenseCraft AIプラットフォームのホームページに移動したら、まずXIAO ESP32S3を接続する必要があります。そのためには、**Connect**ボタンをクリックします。
@@ -210,7 +210,7 @@ SenseCraft AIプラットフォームのホームページに移動したら、�
 以下のボタンをクリックして、SenseCraft AI Platform Flash Tools ページに移動してください。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace">
+	<a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace" target="_blank" rel="noopener noreferrer">
 	<strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft AI Platform へ移動</font></span></strong></a>
 </div><br />
 

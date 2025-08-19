@@ -1,6 +1,48 @@
 const docList = [
   [
     {
+      "path": "/solutions/jetson-crowd-tracking",
+      "image": "https://files.seeedstudio.com/wiki/solution/crowd_tracking/crowd%20tracking.webp",
+      "title": "Crowd Tracking & Counting",
+      "date": "08/15/2025"
+    },
+    {
+      "path": "/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection",
+      "image": "https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image_title.webp",
+      "title": "Vibration Anomaly Detection",
+      "date": "08/14/2025"
+    }
+  ],
+  [
+    {
+      "path": "/deploy_gptoss_on_jetson",
+      "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/gptoss-running-live.webp",
+      "title": "GPT-OSS Running Live on reComputer Jetson!",
+      "date": "08/14/2025"
+    },
+    {
+      "path": "/respeaker_mic_array_v3.0",
+      "image": "https://files.seeedstudio.com/wiki/ReSpeaker_Mic_Array_V2/img/v3/ReSpeaker_Mic_Array_v3.0.webp",
+      "title": "ReSpeaker Mic Array v3.0",
+      "date": "8/13/2025"
+    }
+  ],
+  [
+    {
+      "path": "/firearm_detection_with_frigate_nvr_on_r2000",
+      "image": "https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.webp",
+      "title": "Firearm detection with Frigate NVR on R2000",
+      "date": "08/12/2025"
+    },
+    {
+      "path": "/respeaker_xvf3800_xiao_i2s",
+      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.webp",
+      "title": "reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 I2S Test",
+      "date": "8/11/2025"
+    }
+  ],
+  [
+    {
       "path": "/lerobot_lekiwi",
       "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/lekiwi_cad_v1.webp",
       "title": "How to use the Lekiwi in Lerobot",
@@ -23,7 +65,7 @@ const docList = [
     {
       "path": "/respeaker_xvf3800_xiao_edge_impulse",
       "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "Edge Impulse-Based Speech Recognition Using TinyML on ReSpeaker XVF3800 with XIAO ESP32S3",
+      "title": "TinyML Speech Recognition with Edge Impulse",
       "date": "8/7/2025"
     }
   ],
@@ -39,48 +81,6 @@ const docList = [
       "image": "https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/image-_J4011-3.webp",
       "title": "reComputer Robotics Hardware and Interfaces Usage",
       "date": "08/06/2025"
-    }
-  ],
-  [
-    {
-      "path": "/starai_arm_ros_moveit",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp",
-      "title": "Starai Arm Manipulator - ROS2 MoveIt Guide",
-      "date": "8/1/2025"
-    },
-    {
-      "path": "/simulate_soarm101_by_leisaac",
-      "image": "https://files.seeedstudio.com/wiki/robotics/isaac_lab/simulate_soarm101_by_leisaac.webp",
-      "title": "Get started with Lightwheel LeIsaac — Open-source workflow combining Hugging Face LeRobot x GR00T N1.5 x Isaac Sim!",
-      "date": "8/1/2025"
-    }
-  ],
-  [
-    {
-      "path": "/respeaker_xvf3800_xiao_home_assistant",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.webp",
-      "title": "Voice-Controlled Smart Home with ReSpeaker XVF3800 and Home Assistant",
-      "date": "7/30/2025"
-    },
-    {
-      "path": "/yolov8_on_ai_box_for_fall_climbing_tracking",
-      "image": "https://files.seeedstudio.com/wiki/YOLOv8_AI_Box/recompuer_ai_box.webp",
-      "title": "YOLOv8 AI Box: Fall, Climb & Track",
-      "date": "07/29/2025"
-    }
-  ],
-  [
-    {
-      "path": "/respeaker_xvf3800_xiao_mqtt_audio_stream",
-      "image": "https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.webp",
-      "title": "reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 MQTT Audio Streaming",
-      "date": "7/29/2025"
-    },
-    {
-      "path": "/lerobot_so100m_new",
-      "image": "https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp",
-      "title": "How to use the SO-ARM100 and SO-ARM101 robotic arm in the latest version of Lerobot",
-      "date": "7/26/2025"
     }
   ]
 ];

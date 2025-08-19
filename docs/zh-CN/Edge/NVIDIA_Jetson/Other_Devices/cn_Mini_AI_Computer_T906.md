@@ -42,7 +42,7 @@ Mini AI Computer T906 配备 10GbE 和 1GbE 的以太网端口，可实现高速
 采用超强且轻便的铝合金外壳，设计为 IP55 等级以提供高防护等级，并采用被动散热设计，配备两个板载风扇以实现强大的冷却功能。预装 Jetpack 5.0.2，这款强大的计算平台已准备好部署在无人清扫车、无人配送车、智能巡检、AGV 和其他无人驾驶领域。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

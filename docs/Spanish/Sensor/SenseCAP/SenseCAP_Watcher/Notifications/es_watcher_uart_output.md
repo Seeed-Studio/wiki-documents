@@ -14,7 +14,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora</font></span></strong>
     </a>
 </div><br />
@@ -169,17 +169,17 @@ Este tutorial soporta la serie XIAO:
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -296,7 +296,7 @@ El siguiente código demuestra cómo recibir y analizar datos JSON desde Watcher
 1. Se incluye la biblioteca necesaria, **ArduinoJson**, para el manejo del análisis de datos JSON. Puedes buscarla e instalarla desde el gestor de bibliotecas del IDE de Arduino.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/bblanchon/ArduinoJson">
+    <a class="get_one_now_item" href="https://github.com/bblanchon/ArduinoJson" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Ir a Github 🖱️</font></span></strong>
     </a>
 </div>
@@ -358,7 +358,7 @@ Explora el proceso de conexión entre Watcher y una Raspberry Pi, y cómo utiliz
 Esta sección usa como ejemplo la Raspberry Pi 5. Si la necesitas, puedes adquirirla a través del siguiente enlace:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}>Comprar Raspberry Pi 🖱️</font></span></strong>
     </a>
 </div>
@@ -635,7 +635,7 @@ Explora el proceso de conexión entre Watcher y un reComputer (dispositivo basad
 Este tutorial usa como ejemplo la placa base J401 del reComputer, adecuada para desarrolladores. Si deseas adquirir el reComputer, puedes hacerlo en el siguiente enlace:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}>Comprar reComputer 🖱️</font></span></strong>
     </a>
 </div>

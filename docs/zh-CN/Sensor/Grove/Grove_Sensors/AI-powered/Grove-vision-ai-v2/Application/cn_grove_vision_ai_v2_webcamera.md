@@ -31,12 +31,12 @@ Grove Vision AI V2 可以作为先进的监控设备，集成人工智能以增�
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}>立即购买 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}>立即购买 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -53,7 +53,7 @@ Grove Vision AI V2 可以作为先进的监控设备，集成人工智能以增�
 首先，我们需要打开 SenseCraft AI 模型助手的主页面。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process"><strong><span><font color={'FFFFFF'} size={"4"}>前往 SenseCraft AI</font></span></strong></a>
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>前往 SenseCraft AI</font></span></strong></a>
 </div>
 
 请使用 Type-C 类型的电缆将 Grove Vision AI V2 连接到您的电脑。
@@ -85,7 +85,7 @@ Grove Vision AI V2 可以作为先进的监控设备，集成人工智能以增�
 ### 第 4 步：下载 SSCMA 包并上传到 Arduino IDE
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA"><strong><span><font color={'FFFFFF'} size={"4"}>下载 SSCMA 压缩包</font></span></strong></a>
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SSCMA" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>下载 SSCMA 压缩包</font></span></strong></a>
 </div>
 
 从此处下载压缩包。

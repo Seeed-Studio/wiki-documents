@@ -20,7 +20,7 @@ last_update:
 La serie **EdgeBox-RPi-200** son controladores industriales de cómputo en el borde (*edge computing*) todo-en-uno basados en Raspberry Pi, diseñados para múltiples propósitos industriales. Con un hardware industrial altamente escalable y resistente, equipado con una amplia gama de interfaces de E/S y respaldado por el sólido ecosistema de software industrial de Raspberry Pi, es una opción ideal para soluciones de **automatización inteligente** e **Internet Industrial de las Cosas (IIoT)**.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> ¡Consíguelo ahora! 🖱️</font></span></strong>
     </a>
 </div>

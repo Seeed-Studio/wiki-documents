@@ -49,12 +49,12 @@ last_update:
 		</tr>
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html">
+				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
 				<strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
 				</a>
 			</div></td>
@@ -152,7 +152,7 @@ Roboflow 提供过滤器和搜索功能来帮助您找到数据集。您可以�
 我们强烈建议您使用 XIAO ESP32S3 拍摄数据集照片，这对 XIAO ESP32S3 来说是最好的。XIAO ESP32S3 Sense 拍照的示例程序可以在下面的 Wiki 链接中找到。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera">
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/xiao_esp32s3_camera_usage/#taking-photos-with-the-camera" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>前往 Wiki</font></span></strong>
     </a>
 </div>
@@ -488,7 +488,7 @@ FPS: 128.350449 fram/s
 接下来，我们来到 Model Assistant 页面。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process">
+    <a class="get_one_now_item" href="https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/setup/process" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>Model Assistant 🖱️</font></span></strong>
     </a>
 </div>
@@ -537,7 +537,7 @@ FPS: 128.350449 fram/s
 由于篇幅问题，我们不会在这个 wiki 中展开这些协议的具体内容，我们将通过 Github 上的文档详细介绍这一部分。如果您对更深入的开发感兴趣，请前往这里。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md">
+    <a class="get_one_now_item" href="https://github.com/Seeed-Studio/SSCMA-Micro/blob/dev/docs/protocol/at_protocol.md" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}>SenseCraft Protocols</font></span></strong>
     </a>
 </div>

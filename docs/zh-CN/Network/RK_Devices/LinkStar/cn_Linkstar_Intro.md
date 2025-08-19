@@ -36,8 +36,8 @@ last_update:
             <td><font size={"2"}>探索家庭娱乐的未来，使用 LinkStar-H68K 路由器和 Plex 媒体服务器——本指南将引导您创建自己的家庭媒体服务器。</font></td>
         </tr>
 		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/h68k-ha-esphome/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/plex_media_server/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/h68k-ha-esphome/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/plex_media_server/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
 		</tr>
         <tr>
 			<th>简化 Web 开发：Linkstar 与 WordPress 的完美组合</th>
@@ -52,8 +52,8 @@ last_update:
             <td><font size={"2"}>深入了解本 Wiki，我们展示了在 LinkStar 路由器支持下，集成 Grocy 和 BookStack 的自托管办公服务器，为高效和有序的操作提供了一个引人注目的解决方案。</font></td>
         </tr>
         <tr class="form_without_frame">
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/wordpress_linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
-            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/grocy-bookstack-linkstar/"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/wordpress_linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+            <td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/grocy-bookstack-linkstar/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
 		</tr>
 	</table>
 </div>
@@ -75,8 +75,8 @@ last_update:
         <td><font size={"2"}> 感谢 </font><strong><font color={'8DC215'} size={"2"}>Kasun Thushara</font></strong><br /><font size={"2"}> 在此项目中，您将学习在 LinkStar 路由器上安装和配置广告拦截的分步过程。 </font></td>
         </tr>
 		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/integrate-adblock-with-linkstar-router-for-ad-free-browsing-7db452"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/secure-remote-access-linkstar-tailscale-vpn-a0d1c9" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
+			<td><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.hackster.io/kasunthushara1800/integrate-adblock-with-linkstar-router-for-ad-free-browsing-7db452" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 了解更多</font></span></strong></a></div></td>
 		</tr>
     </table>
     </div>

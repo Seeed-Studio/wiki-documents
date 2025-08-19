@@ -22,7 +22,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 **Wio Terminal** は、ArduinoおよびMicroPythonに対応した**Realtek RTL8720DN**によるワイヤレス接続を備えたSAMD51ベースのマイクロコントローラーです。現在、ワイヤレス接続はArduinoでのみサポートされています。動作速度は**120MHz**（最大200MHzまでブースト可能）、**4MB**の外部フラッシュと**192KB**のRAMを搭載しています。BluetoothとWi-Fiの両方をサポートしており、IoTプロジェクトの基盤を提供します。Wio Terminal自体には、**2.4インチLCDスクリーン、オンボードIMU（LIS3DHTR）、マイク、ブザー、microSDカードスロット、光センサー、赤外線エミッター（IR 940nm）**が装備されています。さらに、[Grove Ecosystem](https://www.seeedstudio.com/grove.html)用の多機能Groveポート2つと、追加機能のための40ピンのRaspberry Pi互換GPIOも備えています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

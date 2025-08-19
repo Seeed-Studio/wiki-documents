@@ -31,7 +31,7 @@ reTerminal se envía con Raspberry Pi OS preinstalado. ¡Simplemente conéctalo 
 | 11/02/2021           | 2021-09-14-Raspbian(modified)-32-bit | V1.8                        | v1.6             |                                                                                                                                                        |
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> ¡Cómpralo Ahora 🖱️</font></span></strong>
     </a>
 </div>

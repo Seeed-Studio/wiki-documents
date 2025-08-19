@@ -30,7 +30,7 @@ Estoy utilizando la placa Seeed Studio XIAO ESP32C6 aquí.
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html">
+          <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno aquí 🖱️</font></span></strong>
           </a>
       </div></td>
@@ -51,12 +51,12 @@ En esta guía estaré utilizando **Windows 10** junto con el IDE Thonny y esptoo
     </tr>
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://thonny.org/">
+          <a class="get_one_now_item" href="https://thonny.org/" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> Descarga ⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/ESP32C6-MicroPy/XIAO_ESP32C6_Micropython.zip">
+          <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/ESP32C6-MicroPy/XIAO_ESP32C6_Micropython.zip" target="_blank" rel="noopener noreferrer">
               <strong><span><font color={'FFFFFF'} size={"4"}> Descarga ⏬</font></span></strong>
           </a>
       </div></td>

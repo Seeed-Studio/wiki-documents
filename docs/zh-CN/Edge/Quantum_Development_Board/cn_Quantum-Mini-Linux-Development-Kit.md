@@ -21,7 +21,7 @@ last_update:
 载板被称为 **Atom-N，Quark-N 通过 M.2 接口连接到 Atom-N**。Atom-N 引出一排金手指引脚以实现 I/O 扩展，**扩展 SPI、I2C、UART、GPIO 和其他接口，方便完成您自己的设计**。此外，它配备了 **麦克风、MPU6050 运动传感器（加速度计和陀螺仪）、板载 4 个按钮（GPIO-KEY、Uboot、Recovery、Reset）、IPS 显示屏、Wi-Fi/蓝牙连接，大大扩展了该产品的可能性**。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Quantum-Mini-Linux-Development-Kit-p-4749.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

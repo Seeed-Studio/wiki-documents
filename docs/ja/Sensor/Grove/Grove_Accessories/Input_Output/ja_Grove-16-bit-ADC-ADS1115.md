@@ -31,7 +31,7 @@ sku: 109020041
 このモジュールには、Groveポートも含まれており、内部的にチャンネル0とチャンネル1に接続されています。これにより、Groveエコシステムとの連携が容易になります。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADS1115-16-bit-ADC-p-4599.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADS1115-16-bit-ADC-p-4599.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
     </a>
 </div>

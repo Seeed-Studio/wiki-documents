@@ -23,7 +23,7 @@ There are 14 GPIO PINs on Seeed Studio XIAO RP2040, on which there are 11 digita
 Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board. 
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
     <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>

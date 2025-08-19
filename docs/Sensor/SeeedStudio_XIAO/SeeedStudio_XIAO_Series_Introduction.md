@@ -26,7 +26,7 @@ last_update:
 </div>
 <br/> <br/>
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/xiao-series-page"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Learn More </font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/xiao-series-page" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Learn More </font></span></strong></a>
 </div>
 
 <br/> <br/>

@@ -28,8 +28,8 @@ SenseCAP センサーハブは、遠隔環境モニタリングのためのコ�
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hub.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入</font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/SenseCAP-Sensor-Hub-Data-Logger/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
 [SesneCAP モバイルアプリ](https://solution.seeedstudio.com/product/software-cloud-sensecap-app/)、[SenseCAP ウェブポータル](https://solution.seeedstudio.com/product/software-cloud-sensecap-portal/)、[SenseCAP API](https://sensecap-docs.seeed.cc/introduction.html)、および [SenseCAP Dashboard](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/) も利用可能で、迅速な設定やデバイス＋データ管理を提供します。
@@ -43,8 +43,8 @@ SenseCAP センサーハブは、遠隔環境モニタリングのためのコ�
 SenseCAP S2100 データロガーは、MODBUS-RTU RS485/アナログ/GPIOセンサーに接続できる多用途デバイスで、LoRaWAN ネットワークへのデータ送信を容易にします。LoRaとIP66設計により、このデバイスは優れた安定性と信頼性を備え、超低消費電力を維持しながら長距離伝送範囲をカバーします。屋外での使用に最適で、バッテリーで駆動するか、12V外部電源に接続してさらに柔軟性を高めることができます。12V電源に接続すると、交換可能な内蔵バッテリーがバックアップ電源として機能します。さらに、S2100 データロガーは内蔵BluetoothによるOTAに最適化されており、セットアップや更新が迅速かつ簡単です。加えて、S2110コンバーターを使用することで、S2100 データロガーはGroveセンサーに接続できるようになり、DIY産業レベルのLoRaWANセンサーや小規模展開に最適な選択肢となります。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入</font></span></strong></a>
-    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/" ><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ 今すぐ購入</font></span></strong></a>
+    <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/Sensor/SenseCAP/SenseCAP_Data_Logger/Data_Logger/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 詳細を見る</font></span></strong></a>
 </div>
 
 

@@ -25,7 +25,7 @@ reComputer Industrialはパッシブヒートシンクとファンレス設計�
 reComputer Industrialには2つのRJ45 GbEポートがあり、そのうち1つはPoE PSEポートで、IPカメラなどのデバイスにEthernet経由で電力を供給します。これにより、別途電源を用意する必要がなくなり、電源コンセントが容易に利用できない場所でのネットワークデバイスの展開が簡単になります。もう1つのGbEポートはネットワークスイッチやルーターに接続するために使用され、ネットワーク上の他のデバイスとの通信やインターネットへのアクセスを可能にします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Industrial-J4011-p-5681.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
 </a></div>
 

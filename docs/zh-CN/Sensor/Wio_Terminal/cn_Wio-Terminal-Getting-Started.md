@@ -18,7 +18,7 @@ last_update:
 **Wio Terminal** 是一款基于 SAMD51 的微控制器，具有由 **Realtek RTL8720DN** 提供的无线连接功能，兼容 Arduino 和 MicroPython。目前，无线连接功能仅支持 Arduino。它运行在 **120MHz**（可提升至 200MHz），具有 **4MB** 外部闪存和 **192KB** RAM。它支持蓝牙和 Wi-Fi，为物联网项目提供骨干支持。Wio Terminal 本身配备了 **2.4" LCD 屏幕、板载 IMU(LIS3DHTR)、麦克风、蜂鸣器、microSD 卡槽、光传感器和红外发射器(IR 940nm)。** 除此之外，它还有两个多功能 Grove 端口用于 [Grove 生态系统](https://www.seeedstudio.com/grove.html) 和 40 个兼容树莓派的引脚 GPIO 用于更多扩展。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-Terminal-p-4509.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>

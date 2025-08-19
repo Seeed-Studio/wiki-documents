@@ -13,7 +13,6 @@ last_update:
 
 ## Video Tutorial
 
-
 ### Parte 1: Desmpaquetado y Configuración
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/9sCHpWPSPcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -30,15 +29,12 @@ last_update:
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/iWahTuXwYnU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 ## Comenzar
 
 Descarga la app `Meshtastic`:
 
-* [App para IOS](https://meshtastic.org/docs/category/apple-apps/)
-* [App para Android](https://meshtastic.org/docs/category/android-app/)
-
-
+- [App para IOS](https://meshtastic.org/docs/category/apple-apps/)
+- [App para Android](https://meshtastic.org/docs/category/android-app/)
 
 ### Encender el dispositivo
 
@@ -57,11 +53,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-* Selecciona el dispositivo objetivo en el panel de Bluetooth.
+- Selecciona el dispositivo objetivo en el panel de Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-* Ingresa el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
+- Ingresa el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -69,18 +65,16 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android App">
 
-* Haz clic en `+` y selecciona el dispositivo objetivo.
+- Haz clic en `+` y selecciona el dispositivo objetivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-* Ingresa el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
+- Ingresa el código (el código predeterminado es `123456`) y luego haz clic en `OK` para conectar el dispositivo.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
-  
 </TabItem>
 </Tabs>
-
 
 ### Configura los Parámetros
 
@@ -89,22 +83,15 @@ Para comenzar a comunicarte a través de la red mesh, debes establecer tu regió
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 </TabItem>
 
 <TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
-
 </TabItem>
 </Tabs>
-
-
-
 
 **Lista de Regiones**
 
@@ -147,10 +134,8 @@ Ve a `Configuración` -> `Telemetría (Sensores)` -> Habilitar sensores.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/temp-an.png" alt="pir" width={500} height="auto" /></p>
 
-
 </TabItem>
 </Tabs>
-
 
 **Configuración del Buzzer y LED**
 
@@ -159,8 +144,6 @@ Ve a `Configuración` -> `Telemetría (Sensores)` -> Habilitar sensores.
 |Buzzer|Buzzer PWM|25|
 |LED|-|24|
 
-
-
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
@@ -168,21 +151,16 @@ Ve a `Configuración` -> `Notificación Externa` -> Habilita `GPIO` -> Establece
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-en.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 </TabItem>
 
 <TabItem value="android" label="Android App">
 
 Ve a `Configuración` -> `Notificación Externa` -> Habilita `GPIO` -> Establece `Pin de Salida GPIO`.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/buzzer-an.png" alt="pir" width={500} height="auto" /></p>
-
 
 </TabItem>
 </Tabs>
-
 
 Consulta la [Configuración de Notificación Externa](https://meshtastic.org/docs/configuration/module/external-notification/) para más detalles.
 
@@ -198,10 +176,7 @@ Ve a `Configuración` -> `Actualizaciones de Firmware`, y revisa la versión act
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/check-version.png" alt="pir" width={400} height="auto" /></p>
 
-
-
 ### <div class="danger">⚠️NO FLASHEES EL SIGUIENTE FIRMWARE</div>
-
 
 :::danger
 NO FLASHEES NINGÚN FIRMWARE QUE NO SEA EL FIRMWARE T1000-E, ESTO PUEDE HACER QUE EL DISPOSITIVO SE CONGELE.
@@ -209,16 +184,14 @@ NO FLASHEES NINGÚN FIRMWARE QUE NO SEA EL FIRMWARE T1000-E, ESTO PUEDE HACER QU
 
 The following firmware will brick your device：
 
-
-* nrf52_promicro_diy_tcxo<br/>
-* nrf52_promicro_diy_xtal<br/>
-* Dongle_nRF52840-pca10059-v1<br/>
-* feather_diy<br/>
-* TWC_mesh_v4<br/>
-* wio-sdk-wm1110<br/>
-* wio-tracker-wm1110<br/>
-* xiao_ble
-
+- nrf52_promicro_diy_tcxo<br/>
+- nrf52_promicro_diy_xtal<br/>
+- Dongle_nRF52840-pca10059-v1<br/>
+- feather_diy<br/>
+- TWC_mesh_v4<br/>
+- wio-sdk-wm1110<br/>
+- wio-tracker-wm1110<br/>
+- xiao_ble
 
 ### Flashear el Firmware de la Aplicación
 
@@ -241,8 +214,6 @@ Haz clic en `Enter DFU Mode`, aparecerá un puerto serial llamado `T1000-E xxx`,
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-serial.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 </TabItem>
 
 <TabItem value="method2" label="Método 2">
@@ -255,8 +226,6 @@ Conecta el cable USB a tu PC, mantén presionado el botón del dispositivo y lue
 </Tabs>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 #### Paso 2: Borrado del Firmware
 
@@ -272,13 +241,11 @@ Descarga el firmware de borrado y cópialo al controlador.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/erase-uf2.png" alt="pir" width={800} height="auto" /></p>
 
-
 Este proceso puede tardar un poco. Espera a que la unidad desaparezca, luego abre un monitor serial para completar el proceso de borrado.
 
 #### Paso 3: Flashear el Firmware
 
 Selecciona la versión más reciente del firmware y descarga el archivo `UF2`.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/down-uf2.png" alt="pir" width={800} height="auto" /></p>
 
@@ -286,7 +253,7 @@ Copia el archivo UF2 a la unidad DFU. El firmware se instalará automáticamente
 
 ## Preguntas Frecuentes (FAQ)
 
-* **¿Cómo verificar el nombre del dispositivo?**
+- **¿Cómo verificar el nombre del dispositivo?**
 
  Visita [Meshtastic Web Flasher](https://flasher.meshtastic.org/).<br/>
 
@@ -296,7 +263,7 @@ Copia el archivo UF2 a la unidad DFU. El firmware se instalará automáticamente
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name3.png" alt="pir" width={800} height="auto" /></p>
 
-* **¿Cómo reiniciar el dispositivo?**
+- **¿Cómo reiniciar el dispositivo?**
 
  Mantén presionado el botón, luego conecta el cable de carga.
 
@@ -304,9 +271,9 @@ Copia el archivo UF2 a la unidad DFU. El firmware se instalará automáticamente
 
 ### El dispositivo nunca enciende
 
-* Carga el dispositivo durante 1 a 2 horas
+- Carga el dispositivo durante 1 a 2 horas
 
-* Cambia el cable de carga
+- Cambia el cable de carga
 
 ### El dispositivo queda atascado en bucle de arranque (boot loop)
 
@@ -316,7 +283,7 @@ El dispositivo se reinicia repetidamente, y el puerto serial se conecta y descon
 
 **Solución:**
 
-* Paso 1: Intenta ingresar manualmente al modo DFU: mantén presionado el botón del dispositivo y **conecta rápidamente** el cable de carga dos veces. El LED verde quedará encendido de forma continua.
+- Paso 1: Intenta ingresar manualmente al modo DFU: mantén presionado el botón del dispositivo y **conecta rápidamente** el cable de carga dos veces. El LED verde quedará encendido de forma continua.
 
 :::note
 Para ingresar correctamente al modo DFU, debes realizar esta operación rápidamente. Puede que necesites intentarlo varias veces.
@@ -324,10 +291,9 @@ Para ingresar correctamente al modo DFU, debes realizar esta operación rápidam
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/dfu-mode2.gif" alt="pir" width={600} height="auto" /></p>
 
-* Paso 2: [Borrar el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-del-firmware).
+- Paso 2: [Borrar el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-2-borrado-del-firmware).
 
-* Paso 3: [Flashear el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-el-firmware).
-
+- Paso 3: [Flashear el firmware](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso-3-flashear-el-firmware).
 
 ### Dispositivo bloqueado (bricked)
 
@@ -339,7 +305,7 @@ El dispositivo no responde, no hay LED encendido, y no se puede emparejar con la
 
 #### Flashear el Bootloader
 
-* [Descargar Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
+- [Descargar Bootloader](https://files.seeedstudio.com/wiki/SenseCAP/lorahub/t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip)
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash%20bootloader.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -356,8 +322,6 @@ Cuando flashees el bootloader, asegúrate de que la conexión del cable sea esta
 - [Python3](https://www.python.org/downloads/)
 - [pip3](https://pip.pypa.io/en/stable/installation/)
 
-
-
 <Tabs>
 <TabItem value="pypi" label="Installing from PyPI">
 
@@ -367,7 +331,6 @@ Este es el método recomendado para instalar la última versión:
 pip3 install --user adafruit-nrfutil
 ```
 
-  
 </TabItem>
 
 <TabItem value="sou" label="Installing from Source">
@@ -396,6 +359,7 @@ python3 setup.py install
 ```
 
 Si deseas instalar en los directorios del sistema (generalmente no recomendado):
+
 ```
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
@@ -417,7 +381,6 @@ Cópialo o muévelo a otro lugar de tu conveniencia, como un directorio que est�
 </TabItem>
 </Tabs>
 
-
 **Paso 2: Verifica el número de puerto**
 
 Conecta tu dispositivo a tu PC y verifica el número de puerto.
@@ -429,22 +392,19 @@ Ejemplo:
 
 En la terminal o símbolo del sistema, navega al directorio donde descargaste el paquete zip del bootloader y ejecuta el siguiente comando, reemplazando el puerto correcto de tu dispositivo:
 
-* **Para Windows**: 
+- **Para Windows**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p COMxx -b 115200 --singlebank --touch 1200
 ```
 
-* **Para otros**: 
+- **Para otros**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package t1000_e_bootloader-0.9.1-5-g488711a_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200 --singlebank --touch 1200
 ```
 
-
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-success.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flashear_el_firmware_de_la_aplicacion) para flashear el firmware de la aplicación.
 
@@ -452,51 +412,49 @@ Cuando hayas completado los pasos anteriores, puedes seguir este [paso](https://
 
 **2) El dispositivo no puede entrar en modo DFU, pero el puerto serial puede ser detectado**.
 
-* Abre una herramienta de puerto serial.
-* Establece la velocidad en `1200`.
-* Conecta el dispositivo.  
+- Abre una herramienta de puerto serial.
+- Establece la velocidad en `1200`.
+- Conecta el dispositivo.  
   La luz parpadeará brevemente al conectarlo. Sigue intentando hasta que la luz se mantenga encendida; esto significa que el dispositivo ha vuelto al modo DFU. Entonces [flashea el bootloader](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#flash-the-bootloader) -> [borra la memoria flash](https://wiki.seeedstudio.com/es/sensecap_t1000_e/#paso_2_borrado_del_firmware) -> [flashea el firmware](https://wiki.seeedstudio.com/sensecap_t1000_e/#paso_2_flashear_el_firmware).
-
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/reset%20via%20serial%20tool.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
- **3) El dispositivo no puede entrar en modo DFU y no se muestra ningún puerto serial. Por favor, contacta al soporte técnico: support@sensecapmx.com**
+**3) El dispositivo no puede entrar en modo DFU y no aparece el puerto serie**
 
+- Desconecte el cable de carga y deje el dispositivo durante unos días hasta que la batería se descargue por completo, luego conecte el cable de carga nuevamente e intente emparejarlo otra vez.
 
- ### Fallo al flashear el firmware
+**4) Si ninguno de los pasos anteriores funciona, póngase en contacto con el soporte técnico: support@sensecapmx.com**
 
- * **No se recibió datos en el puerto serial**
+### Fallo al flashear el firmware
+
+- **No se recibió datos en el puerto serial**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/no-dfu-device.png" alt="pir" width={500} height="auto" /></p>
 
  Verifica si el dispositivo está en modo DFU; la luz verde debe permanecer encendida cuando el dispositivo está en este modo.
 
-* **No se puede abrir el puerto serial**
+- **No se puede abrir el puerto serial**
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/wrong-port.png" alt="pir" width={500} height="auto" /></p>
 
  Verifica si el puerto es el correcto o intenta con otro puerto.
 
-
 ## Recursos
 
 [Documentación de Meshtastic](https://meshtastic.org/docs/introduction/)
-
 
 ## Soporte Técnico y Discusión de Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

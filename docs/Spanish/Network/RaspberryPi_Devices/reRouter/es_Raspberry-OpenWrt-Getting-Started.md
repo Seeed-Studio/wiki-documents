@@ -18,7 +18,7 @@ last_update:
 Este Mini Router está equipado con puertos duales Gigabit Ethernet y puertos duales USB 3.0, lo que lo hace adecuado para aplicaciones de router por software, manteniendo el hardware al mínimo. Hemos preinstalado un Raspberry Pi Compute Module 4 con 4 GB de RAM y 32 GB eMMC para permitir tiempos de arranque rápidos y una experiencia general fluida.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Dual-GbE-Carrier-Board-with-4GB-RAM-32GB-eMMC-RPi-CM4-Case-p-5029.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
     </a>
 </div>

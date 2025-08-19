@@ -22,7 +22,7 @@ SenseCAP LoRaWAN version products include LoRaWAN Gateways and Sensor Nodes. Bas
 SenseCAP provides an easy-to-use cloud platform. Users can scan the QR code with the SenseCAP App to bind the device with its respective account to manage the devices, and check Sensor Node data on the SenseCAP Portal. SenseCAP Portal provides API for users to further develop based on the data on the Portal.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-c-1339.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
