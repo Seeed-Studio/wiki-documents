@@ -359,16 +359,10 @@ jobs:
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
             git add docs/      
-            git commit -m "🌍 自动翻译文档: 修复格式问题并智能处理文件操作"
-            git push
+            git commit -m "🌍 自动翻译文档"
+            git push origin HEAD
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
             echo "✅ 翻译结果已提交并推送"
-            
-            # 创建触发文件来启动PR工作流
-            echo "$(date)" > .github/translation-trigger
-            git add .github/translation-trigger
-            git commit -m "触发PR工作流验证翻译结果"
-            git push
           fi
       
       - name: Check completion status

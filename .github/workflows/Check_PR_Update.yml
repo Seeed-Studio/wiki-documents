@@ -5,7 +5,6 @@ on:
    paths-ignore:
       - "ISSUE_TEMPLATE/**"
       - ".github/**.md"
-      - ".github/translation-trigger"
       - ".gitignore"
       - "demo/**"
       - "docker/**"

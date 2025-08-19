@@ -316,7 +316,7 @@ ${termsList}
 请只输出翻译后的YAML内容，不要添加任何解释。`;
 }
 
-// 简化并强化的翻译prompt
+// 重新设计的翻译prompt - 专门解决换行问题
 function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
@@ -326,46 +326,81 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
   const chunkInstructions = isChunk ? `
 
 **分块翻译说明：**
-- 这是文档的第 ${chunkInfo.index + 1} 部分，共 ${chunkInfo.total} 部分
-- 请保持与前后部分的连贯性` : '';
+- 这是文档的第 ${chunkInfo.index + 1} 部分，共 ${chunkInfo.total} 部分` : '';
 
-  return `请将以下 Markdown 文档从英文翻译成${langName}。
+  return `请将以下Markdown文档从英文翻译成${langName}。
 
-**STEP 1: 严格保持格式**
-- 每一行的换行位置必须与原文完全一致
-- Front Matter 中每个字段独占一行
-- 标题与正文之间的空行必须保持
-- 不要合并或拆分任何行
+**关键要求：逐行对照翻译，每一行必须独立处理**
 
-**STEP 2: 翻译规则** 
-- 只翻译 title 和 description 字段的值
-- 标题和正文内容翻译为${langName}
-- 代码、链接、文件名保持不变
-- slug 字段：/path → ${pathPrefix}/path
+示例正确格式：
+原文：
+---
+description: Some description.
+title: Some title here
+keywords:
+- keyword1
+- keyword2
+slug: /some-path
+---
 
-**STEP 3: 术语保护**
+译文：
+---
+description: 这里是描述翻译。
+title: 这里是标题翻译
+keywords:
+- keyword1
+- keyword2
+slug: ${pathPrefix}/some-path
+---
+
+**绝对禁止的错误示例：**
+❌ title: 标题翻译 keywords:  (两个字段在同一行)
+❌ ## 标题翻译 正文内容...     (标题和正文在同一行)
+
+**翻译规则：**
+1. 只翻译title、description字段的值和正文内容
+2. keywords、slug、image等其他字段保持不变
+3. slug字段：/path → ${pathPrefix}/path
+4. 代码块、链接、文件名保持不变
+
+**术语保护：**
 ${termsList}
 
-**重要：请逐行对照原文，确保换行位置完全一致！**${chunkInstructions}`;
+**最重要：每一行都必须独立处理，保持原文的行结构！**${chunkInstructions}`;
 }
 
-// 🆕 强化的格式严格检查和修复
+// 强化的格式后处理 - 真正修复换行问题
 function strictFormatPostProcess(translatedContent, originalContent) {
   try {
     console.log('🔧 开始严格格式检查和修复...');
     
     let fixed = translatedContent;
+    let attempt = 0;
+    const maxAttempts = 3;
     
-    // 1. 强制修复 Front Matter 格式问题
-    fixed = forceFixFrontMatter(fixed, originalContent);
+    while (attempt < maxAttempts) {
+      attempt++;
+      console.log(`🔍 格式检查第${attempt}次...`);
+      
+      // 先进行修复
+      fixed = forceFixFrontMatter(fixed, originalContent);
+      fixed = forceFixHeaders(fixed, originalContent);
+      
+      // 然后验证
+      const isValid = validateFormat(fixed, originalContent);
+      
+      if (isValid) {
+        console.log(`✅ 格式验证通过 (第${attempt}次尝试)`);
+        break;
+      } else {
+        console.warn(`❌ 格式验证失败 (第${attempt}次尝试)，继续修复...`);
+        
+        if (attempt === maxAttempts) {
+          console.error('🚨 经过多次尝试仍有格式问题，请检查翻译结果');
+        }
+      }
+    }
     
-    // 2. 强制修复标题换行问题  
-    fixed = forceFixHeaders(fixed, originalContent);
-    
-    // 3. 检查并报告格式问题
-    validateFormat(fixed, originalContent);
-    
-    console.log('✅ 严格格式检查完成');
     return fixed;
     
   } catch (error) {
@@ -374,59 +409,48 @@ function strictFormatPostProcess(translatedContent, originalContent) {
   }
 }
 
-// 🆕 强制修复 Front Matter 格式
+// 强化的 Front Matter 修复
 function forceFixFrontMatter(content, originalContent) {
   const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
   if (!frontMatterMatch) return content;
   
-  const originalFrontMatterMatch = originalContent.match(/^---\n([\s\S]*?)\n---\n/);
-  if (!originalFrontMatterMatch) return content;
+  let frontMatterContent = frontMatterMatch[1];
+  let isFixed = false;
   
-  const frontMatterLines = frontMatterMatch[1].split('\n');
-  const originalLines = originalFrontMatterMatch[1].split('\n');
-  
-  // 确保每个字段都在独立的行上
-  const fixedLines = [];
-  let i = 0;
-  
-  while (i < frontMatterLines.length) {
-    const line = frontMatterLines[i];
-    
-    // 检查是否是字段开始行（包含冒号）
-    if (line.includes(':') && !line.trim().startsWith('-')) {
-      const [field, ...valueParts] = line.split(':');
-      const value = valueParts.join(':').trim();
-      
-      // 如果字段是 title 或 description，确保值在同一行
-      if (field.trim() === 'title' || field.trim() === 'description') {
-        fixedLines.push(`${field}: ${value}`);
-      } else if (field.trim() === 'keywords') {
-        fixedLines.push(`${field}:`);
-        // 添加关键词列表
-        i++;
-        while (i < frontMatterLines.length && (frontMatterLines[i].startsWith('-') || frontMatterLines[i].startsWith(' '))) {
-          fixedLines.push(frontMatterLines[i]);
-          i++;
-        }
-        continue;
-      } else {
-        fixedLines.push(line);
-      }
-    } else {
-      fixedLines.push(line);
+  // 修复字段合并问题
+  frontMatterContent = frontMatterContent.replace(
+    /^(\w+):\s*(.+?)\s+(\w+):/gm, 
+    (match, field1, value1, field2) => {
+      console.log(`🔧 修复字段合并: ${field1} 和 ${field2}`);
+      isFixed = true;
+      return `${field1}: ${value1.trim()}\n${field2}:`;
     }
-    i++;
+  );
+  
+  // 特别处理title字段中包含其他字段的情况
+  frontMatterContent = frontMatterContent.replace(
+    /^(title|description):\s*(.+?)\s+(keywords|image|slug|last_update):/gm,
+    (match, field1, value1, field2) => {
+      console.log(`🔧 修复${field1}字段包含${field2}字段的问题`);
+      isFixed = true;
+      return `${field1}: ${value1.trim()}\n${field2}:`;
+    }
+  );
+  
+  if (isFixed) {
+    const fixedFrontMatter = `---\n${frontMatterContent}\n---\n`;
+    return content.replace(frontMatterMatch[0], fixedFrontMatter);
   }
   
-  const fixedFrontMatter = `---\n${fixedLines.join('\n')}\n---\n`;
-  return content.replace(frontMatterMatch[0], fixedFrontMatter);
+  return content;
 }
 
-// 🆕 强制修复标题格式
+// 强化的标题格式修复
 function forceFixHeaders(content, originalContent) {
   const lines = content.split('\n');
   const originalLines = originalContent.split('\n');
   const fixedLines = [];
+  let isFixed = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
@@ -436,76 +460,119 @@ function forceFixHeaders(content, originalContent) {
     if (line.match(/^#{1,6}\s+/) && i + 1 < lines.length) {
       const nextLine = lines[i + 1];
       
-      // 在原文中找对应的标题位置
-      const headerLevel = line.match(/^(#{1,6})/)[1].length;
-      let foundOriginalHeader = false;
-      
-      for (let j = 0; j < originalLines.length; j++) {
-        const origLine = originalLines[j];
-        if (origLine.match(/^#{1,6}\s+/)) {
-          const origHeaderLevel = origLine.match(/^(#{1,6})/)[1].length;
-          if (origHeaderLevel === headerLevel) {
-            // 检查原文标题后是否有空行
-            if (j + 1 < originalLines.length && originalLines[j + 1].trim() === '') {
-              // 如果译文标题后没有空行，添加空行
-              if (nextLine && nextLine.trim() !== '') {
-                fixedLines.push('');
-              }
+      // 检查下一行是否直接是内容（不是空行，也不是另一个标题）
+      if (nextLine && nextLine.trim() !== '' && !nextLine.match(/^#{1,6}\s+/)) {
+        // 在原文中找对应的标题位置
+        const headerLevel = line.match(/^(#{1,6})/)[1].length;
+        let shouldHaveEmptyLine = false;
+        
+        // 检查原文中同级别标题后是否有空行
+        for (let j = 0; j < originalLines.length - 1; j++) {
+          const origLine = originalLines[j];
+          if (origLine.match(/^#{1,6}\s+/)) {
+            const origHeaderLevel = origLine.match(/^(#{1,6})/)[1].length;
+            if (origHeaderLevel === headerLevel && originalLines[j + 1].trim() === '') {
+              shouldHaveEmptyLine = true;
+              break;
             }
-            foundOriginalHeader = true;
-            break;
           }
         }
-      }
-      
-      // 如果没找到对应的原文标题，默认添加空行
-      if (!foundOriginalHeader && nextLine && nextLine.trim() !== '') {
-        fixedLines.push('');
+        
+        if (shouldHaveEmptyLine) {
+          console.log(`🔧 修复标题后缺少空行: "${line.substring(0, 30)}..."`);
+          fixedLines.push('');
+          isFixed = true;
+        }
       }
     }
+  }
+  
+  if (isFixed) {
+    console.log('✅ 标题格式已修复');
   }
   
   return fixedLines.join('\n');
 }
 
-// 🆕 验证格式是否正确
+// 重新设计的格式验证 - 真正检测换行问题
 function validateFormat(content, originalContent) {
   const issues = [];
   
-  // 检查 Front Matter 格式
+  // 检查 Front Matter 中最常见的换行问题
   const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
   if (frontMatterMatch) {
-    const frontMatterLines = frontMatterMatch[1].split('\n');
+    const frontMatterContent = frontMatterMatch[1];
+    const lines = frontMatterContent.split('\n');
     
-    frontMatterLines.forEach((line, index) => {
-      if (line.includes(':') && !line.trim().startsWith('-')) {
-        const [field, ...valueParts] = line.split(':');
-        const value = valueParts.join(':').trim();
+    lines.forEach((line, index) => {
+      // 检查是否有字段合并到同一行的问题
+      const fieldMatches = line.match(/^(\w+):\s*(.+?)\s+(\w+):/);
+      if (fieldMatches) {
+        issues.push(`🚨 严重错误: 第${index + 1}行字段合并: "${fieldMatches[1]}" 和 "${fieldMatches[3]}" 在同一行`);
+      }
+      
+      // 检查title字段后是否有其他字段
+      if (line.startsWith('title:')) {
+        const afterColon = line.substring(6); // "title:".length = 6
+        const wordsAfterTitle = afterColon.trim().split(/\s+/);
+        if (wordsAfterTitle.length > 10) { // 如果title后面有很多词，可能是合并了其他字段
+          issues.push(`⚠️ 警告: title字段可能过长或包含其他字段: "${line}"`);
+        }
         
-        if ((field.trim() === 'title' || field.trim() === 'description') && !value) {
-          issues.push(`第${index + 1}行: ${field}字段值不应为空`);
+        // 检查是否包含其他字段关键词
+        const otherFields = ['keywords', 'description', 'image', 'slug', 'last_update'];
+        for (const field of otherFields) {
+          if (afterColon.includes(field + ':')) {
+            issues.push(`🚨 严重错误: title字段包含"${field}"字段: "${line}"`);
+          }
+        }
+      }
+      
+      // 检查description字段
+      if (line.startsWith('description:')) {
+        const afterColon = line.substring(12); // "description:".length = 12
+        const otherFields = ['title', 'keywords', 'image', 'slug', 'last_update'];
+        for (const field of otherFields) {
+          if (afterColon.includes(field + ':')) {
+            issues.push(`🚨 严重错误: description字段包含"${field}"字段: "${line}"`);
+          }
         }
       }
     });
   }
   
-  // 检查标题格式
-  const lines = content.split('\n');
-  lines.forEach((line, index) => {
-    if (line.match(/^#{1,6}\s+/) && index + 1 < lines.length) {
-      const nextLine = lines[index + 1];
+  // 检查标题后是否直接跟正文（没有空行）
+  const allLines = content.split('\n');
+  allLines.forEach((line, index) => {
+    if (line.match(/^#{1,6}\s+/) && index + 1 < allLines.length) {
+      const nextLine = allLines[index + 1];
       if (nextLine && nextLine.trim() !== '' && !nextLine.match(/^#{1,6}\s+/)) {
-        // 这可能是一个问题，但不一定，因为有些情况下标题后确实不需要空行
-        console.log(`⚠️ 注意: 第${index + 1}行标题后可能缺少空行`);
+        // 检查原文中对应位置是否应该有空行
+        const originalLines = originalContent.split('\n');
+        let shouldHaveEmptyLine = false;
+        
+        // 简单匹配：如果原文中同级别标题后有空行，译文也应该有
+        for (let i = 0; i < originalLines.length - 1; i++) {
+          if (originalLines[i].match(/^#{1,6}\s+/) && originalLines[i + 1].trim() === '') {
+            shouldHaveEmptyLine = true;
+            break;
+          }
+        }
+        
+        if (shouldHaveEmptyLine) {
+          issues.push(`⚠️ 警告: 第${index + 1}行标题后可能缺少空行: "${line}"`);
+        }
       }
     }
   });
   
   if (issues.length > 0) {
-    console.warn('🚨 发现格式问题:');
-    issues.forEach(issue => console.warn(`  - ${issue}`));
+    console.error('🚨 发现格式问题:');
+    issues.forEach(issue => console.error(`  ${issue}`));
+    return false; // 返回false表示验证失败
   } else {
     console.log('✅ 格式验证通过');
+    return true; // 返回true表示验证通过
   }
 }
 
