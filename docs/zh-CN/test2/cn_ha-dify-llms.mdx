@@ -1,0 +1,528 @@
+---
+description: 使用 Dify、小智后端服务和 SenseCAP Watcher 集成一个 AI 助手——具备上下文理解、设备控制、状态查询功能，将其集成到您的 Home Assistant 中。
+title: 将 AI 空间管家集成到 Home Assistant
+keywords:
+- Home Assistant
+- Jarvis
+- SenseCAP Watcher
+- xiaozhi
+- AI
+- LLM
+- Chat-Bot
+image: https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/xiaozhi_sensecap_watcher.jpg
+slug: /cn/ha_dify_watcher_llms
+sidebar_position: 1
+last_update:
+  date: 05/11/2025
+  author: Spencer
+---
+
+import { Tweet } from 'react-tweet'
+import LoomEmbed from '@site/src/components/utils/LoomEmbed';
+
+:::info 为您的智能家居构建语音控制的 AI 助手。
+想象一下，您可以简单地对床边的设备轻声说："Jarvis，早上好。今天天气怎么样？请打开咖啡机。"作为回应，您的 AI 助手确认天气预报，同时您的咖啡机开始在厨房里冲泡咖啡。
+
+这不仅仅是电影中的概念；这是您可以自己构建和部署的实际应用。本指南提供了将本地 AI 助手与智能家居设备集成的分步解决方案。在本教程结束时，您将拥有一个功能齐全的语音激活智能家居中心。
+:::
+
+<center>
+<Tweet id="1910315965675712738" /> 
+</center>
+
+本文将提供分步指南，介绍如何使用 Dify、小智后端服务和 SenseCAP Watcher 集成一个 AI 助手——具备上下文理解、设备控制、状态查询，甚至基于知识的问答功能——到您的 Home Assistant 智能家居系统中。您将学习如何通过简单的语音交互让 AI 成为您智能生活中真正有效的助手。
+
+## 前提条件
+
+请准备好以下物品和条件：
+
+| 设备 | 用途 |
+| :--- | :--- |
+| Home Assistant Green | 预部署的 Home Assistant 系统 |
+| reComputer R1000 | 用于部署 Dify、小智服务，并与 Watcher 交互 |
+| SenseCAP Watcher | 人机交互界面 |
+| 一台计算机 | 用于访问已安装的应用程序 |
+
+此外，需要稳定的网络连接。
+
+## Ⅰ. 安装和部署
+
+在本节中，我们将通过三个步骤安装和配置核心组件：
+
+1.  安装 Dify - AI 应用程序的大脑 2.  安装 `xiaozhi-esp32-server` - 连接 AI 和硬件的桥梁 3.  配置 SenseCAP Watcher - 让语音助手能够听到您的声音
+
+如果您已经安装并配置了 Dify、小智后端服务和 SenseCAP Watcher，可以跳过以下步骤，直接转到 [Dify 应用编排](https://www.google.com/search?q=%23dify-app)。
+
+### 安装 Dify
+
+> 如果您还没有安装 Docker，请先[安装 Docker](https://docs.docker.com/engine/install/)。
+
+:::tip 对于中国大陆用户，您可能需要更新 Docker 镜像源：
+
+`bash <(curl -sSL https://linuxmirrors.cn/docker.sh)`
+
+注意：此脚本由[第三方](https://linuxmirrors.cn/)提供。此参考仅供示例使用。请自行评估其适用性和风险。
+
+:::
+
+执行以下命令安装 Dify。详细信息请参见 [Dify 安装](https://docs.dify.ai/en/getting-started/install-self-hosted/docker-compose)：
+
+```shell
+git clone https://github.com/langgenius/dify.git --branch 1.5.0 # 下载 Dify 版本 1.5.0 的代码，请查看仓库获取最新版本。
+cd dify/docker       # 切换到 Dify 的 Docker 配置目录 cp .env.example .env # 对于初学者，无需修改此文件 docker compose up -d
+```
+
+命令成功执行后，Dify 应该已经启动并运行。现在，您需要找到运行 Docker 的计算机的 IP 地址。
+
+:::tip 查找 IP 地址
+
+  - 在 Windows 上，打开命令提示符（CMD）或 PowerShell，输入 `ipconfig`，查找"IPv4 地址"。
+  - 在 macOS 或 Linux 上，打开终端，输入 `ip addr` 或 `ifconfig`，找到对应网络接口的 IP 地址（通常以 `192.168.x.x` 或 `10.x.x.x` 开头）。
+
+:::
+
+假设您的计算机 IP 地址是 `192.168.101.109`，打开浏览器并导航到 `http://192.168.101.109/install`（首次访问将重定向到初始设置页面）。
+
+按照屏幕上的说明完成管理员账户的创建。之后，您可以在 `http://192.168.101.109` 访问 Dify 主仪表板。
+
+#### 配置模型提供商
+
+要让您的 Dify AI 应用程序能够思考和响应，您需要将其连接到至少一个"大语言模型提供商"。
+
+  - 登录 Dify 后，在顶部导航栏中找到您的头像并点击"设置"。
+  - 从左侧菜单中选择"模型供应商"。
+  - 这将列出 Dify 支持的各种模型提供商（如 OpenAI、Azure OpenAI、火山引擎、MiniMax 等）。选择您有账户并希望使用的提供商，然后点击"添加"。
+  - 按照屏幕提示输入您的模型提供商的授权信息，如 API Key。例如，本指南使用"火山引擎"作为模型提供商。
+
+![Dify MCP authorize](https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/Model-supplier.png)
+
+详细说明请参考 [大模型接入介绍 - Dify Docs](https://docs.dify.ai/zh-hans/guides/model-configuration/readme)：
+
+#### 创建新的 Agent 应用
+
+在 Dify 中，AI 助手以"应用"的形式存在。我们需要创建一个"Agent"类型的应用。
+
+  - 在 Dify 主仪表板上，点击"创建应用"。
+  - 选择应用类型为"Agent"。
+  - 给您的应用起个名字（例如"我的智能管家"），然后点击"创建"。
+
+#### 获取应用 API Key 为了让"小智后端服务"与这个 Dify 应用通信，我们需要获取应用的 API key。
+
+  - 进入您刚创建的 Agent 应用。
+  - 在应用内的左侧导航栏中，找到并点击看起来像终端的图标，即"API 访问"。
+  - 在 API 访问页面，点击右上角的"API Key"，然后点击出现的"创建密钥"按钮。
+  - 系统将生成一个 API key（也称为 Token），例如 `app-T9jHW9pCtj3NVMHHPAPrNFAg`。
+
+
+:::note 重要
+
+立即复制此 API key 并粘贴到安全的地方（如记事本），因为我们稍后会需要它。
+
+:::
+
+<LoomEmbed
+  id="b2f1c852b0e04ad383f894b5b105985d"
+  sid="c56f7759-a7cc-4000-856a-ff88d11a6910"
+  muted={true}
+  autoplay={false}
+/>
+
+### 安装小智后端服务
+
+小智后端服务是专为 ESP32 系列微控制器（SenseCAP Watcher 基于 ESP32-S3）设计的程序。它接收来自硬件的语音数据，执行识别，并将其转发到我们刚在 Dify 上创建的 AI 应用。
+
+小智后端服务提供两种安装方法：简化安装和全模块安装。详细信息请参考[选择部署方式](https://github.com/xinnan-tech/xiaozhi-esp32-server#-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F%E9%80%89%E6%8B%A9)。
+
+我们推荐使用 `full-module` 安装以获得更便捷的体验。
+
+执行以下快速安装脚本：
+
+```bash
+curl -L -o xiaozhi-server-docker-setup.sh https://raw.githubusercontent.com/xinnan-tech/xiaozhi-esp32-server/main/docker-setup.sh
+chmod +x xiaozhi-server-docker-setup.sh
+./xiaozhi-server-docker-setup.sh
+```
+
+脚本执行完成后，将在当前目录创建一个名为 `xiaozhi-server` 的文件夹，并自动下载小智后端服务的必要文件和基础语音识别模型。
+
+为了获得完整的功能体验，我们需要使用全模块配置文件进行安装。请再次执行以下命令：
+
+```bash
+cd xiaozhi-server
+wget https://raw.githubusercontent.com/xinnan-tech/xiaozhi-esp32-server/refs/heads/main/main/xiaozhi-server/docker-compose_all.yml
+wget https://raw.githubusercontent.com/xinnan-tech/xiaozhi-esp32-server/refs/heads/main/main/xiaozhi-server/config_from_api.yaml
+mv data/.config.yaml data/.config.yaml.bk
+mv config_from_api.yaml data/.config.yaml
+```
+
+现在，尝试启动全模块小智后端服务的容器：
+
+```bash
+docker compose -f docker-compose_all.yml up -d
+```
+
+完成后，执行以下命令查看日志信息。
+
+```bash
+docker logs -f xiaozhi-esp32-server-web
+```
+
+当您看到日志输出时，说明您的控制台已成功启动。
+
+```shell
+2025-xx-xx 22:11:12.445 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2025-xx-xx 21:28:53.873 [main] INFO  xiaozhi.AdminApplication - Started AdminApplication in 16.057 seconds (process running for 17.941)
+http://localhost:8002/xiaozhi/doc.html
+```
+
+现在，您可以访问 `http://localhost:8002` 登录控制台并注册第一个用户。第一个用户将是超级管理员；后续的普通用户只能由超级管理员创建。
+
+<details>
+
+<summary>解决 Docker 服务端口冲突</summary>
+
+小智后端服务默认使用几个网络端口（例如，WebSocket 服务默认将主机的 8000 端口映射到容器的 8000 端口）。如果这些端口已被您计算机上的其他程序使用，`docker compose up -d` 命令可能会因端口冲突错误而失败。
+
+在这种情况下，您需要编辑位于 `xiaozhi-server` 文件夹中的 `docker-compose_all.yml` 文件。
+
+找到 `xiaozhi-esp32-server` 和 `xiaozhi-esp32-server-web` 服务的 `ports:` 部分，例如：
+
+```yaml
+xiaozhi-esp32-server:
+  ports:
+    - "8088:8000" # 左边是主机端口，右边是容器端口 xiaozhi-esp32-server-web:
+  ports:
+    - "8002:8002"
+```
+
+  - 如果端口 `8000` 冲突，您可以将其更改为另一个未使用的端口，如 `8088`，因此配置变为 `- "8088:8000"`。更改后保存文件并再次运行 `docker compose up -d`。
+  - **注意**：如果您在这里更改了主机端口（例如，从 `8000` 改为 `8088`），那么在配置 `/data.config.yaml` 和 SenseCAP Watcher 时必须使用相应的新端口号。
+
+</details>
+
+#### 步骤 1：参数管理
+
+使用超级管理员账户登录后，在控制台顶部菜单中导航到"参数管理"。找到列表中的第一项，参数代码为 `server.secret`，复制其"参数值"。
+
+修改 `xiaozhi-server` 下 `data` 目录中的 `.config.yaml` 文件。找到 `manager-api` 配置项，将 `secret` 值更改为您刚复制的参数值。
+同时，将 URL 更改为 `http://xiaozhi-esp32-server-web:8002/xiaozhi`。
+
+```yaml
+manager-api:
+  url: http://xiaozhi-esp32-server-web:8002/xiaozhi
+  secret: 12345678-xxxx-xxxx-xxxx-123456789000 # 请将此替换为您的 server.secret 值
+```
+
+#### 步骤 2：配置容器间通信
+
+由于 Dify 和小智后端服务是通过 Docker 分别启动的，它们默认可能在不同的"虚拟网络"中，无法直接通信。我们需要将 Dify API 服务容器连接到小智服务的网络。
+
+```shell
+docker network connect xiaozhi-server_default docker-api-1
+```
+
+执行此命令后，小智服务可以通过地址 `http://dify-api-1:5001/v1` 访问 Dify API 服务。
+
+<details>
+
+<summary>为什么不使用 host.docker.internal？</summary>
+
+您可能考虑使用 `host.docker.internal`（从 Docker 容器内访问主机的特殊 DNS 名称）作为连接解决方案。但是，请注意，如果 `docker-api-1` 服务（Dify API 容器）没有将其端口映射到主机，或者服务本身不直接监听主机的网络接口，`xiaozhi-server` 容器将无法通过 `host.docker.internal:5001` 成功访问 `docker-api-1`。因此，确保两个容器在同一个 Docker 网络上并通过服务名称通信是更推荐和可靠的配置方法，特别是当 `docker-api-1` 服务主要在容器网络内运行时。
+
+</details>
+
+#### 步骤 3：重启 xiaozhi-esp32-server 配置上述信息后，您需要重启小智后端服务以使更改生效。这是因为安装过程使用 `server.secret` 连接到服务。
+
+```bash
+docker restart xiaozhi-esp32-server
+```
+
+检查小智后端服务日志（可选）：
+
+如果您想确认小智服务已启动并正常运行，可以执行以下命令查看实时日志：
+
+```
+docker logs -f xiaozhi-esp32-server
+```
+
+（`xiaozhi-esp32-server` 是服务容器的默认名称。按 `Ctrl+C` 退出日志查看。）
+
+如果您看到类似以下的日志，表示服务器已成功启动。
+
+```shell
+25-02-23 12:01:09[core.websocket_server] - INFO - Websocket address is      ws://xxx.xx.xx.xx:8000/xiaozhi/v1/
+25-02-23 12:01:09[core.websocket_server] - INFO - =======The address above is a websocket protocol address, please do not access it with a browser=======
+25-02-23 12:01:09[core.websocket_server] - INFO - To test the websocket, please open test_page.html in the test directory with Google Chrome
+25-02-23 12:01:09[core.websocket_server] - INFO - =======================================================
+```
+
+假设您的计算机 IP 地址是 `192.168.101.109`，您的小智后端服务的 OTA 和 WebSocket 接口现在应该是：
+
+OTA 接口：
+
+```bash
+http://192.168.101.109:8002/xiaozhi/ota/
+```
+
+WebSocket 接口：
+
+```html
+ws://192.168.101.109:8000/xiaozhi/v1/
+```
+
+> 记住将 `192.168.101.109` 替换为运行小智服务的 IP 地址。
+
+#### 步骤 4：配置服务连接到 Dify 我们需要告诉小智后端服务如何找到并使用我们在 Dify 中创建的 AI 应用。这涉及通过修改大语言模型配置将所有 LLM 请求路由到 Dify。
+
+再次登录小智后端服务的控制台。在顶部菜单中，找到"模型配置"，然后点击左侧边栏中的"大语言模型"。找到第一个条目"Dify"，点击修改按钮。在弹出的对话框中，填入您在 Dify 中创建的应用的 API Key。同时，将 Base URL 更改为 `http://dify-api-1:5001/v1`。
+
+> [\!tip]
+> 您也可以创建多个 Dify 应用，然后在控制台中配置多个 Dify 大语言模型。
+
+#### 步骤 5：添加 Agent 在顶部菜单中点击"智能体"，然后点击"添加智能体"。输入任意名称，例如 `Dify_Agent`。
+
+对于新添加的 `Dify_Agent`，点击"配置角色"进入角色配置。然后，在右侧边栏中，将"大语言模型（LLM）"更改为"Dify"（您之前配置的 Dify 连接）。根据需要修改其他功能并点击"保存配置"。
+
+我们将在下一节配置 Watcher 助手时使用此设置。
+
+## Ⅱ. 配置 SenseCAP Watcher 现在，我们需要配置 SenseCAP Watcher 设备，让它知道连接到我们刚设置的小智后端服务的位置。
+
+:::note 注意
+本指南使用 SenseCAP Watcher 的 [小智 AI 聊天机器人](https://github.com/78/xiaozhi-esp32) 版本 `1.6.2`。如果您使用的是不同版本，可能需要相应调整配置。
+:::
+
+### 修改 OTA 地址
+
+给 SenseCAP Watcher 通电，并从任何设备连接到其 WiFi 网络。
+
+成功连接后，访问 `192.168.4.1` 配置 WiFi 连接和 OTA 地址。
+
+OTA 地址应该是：
+
+```bash
+http://<IP_Address>:<Port_Number>/xiaozhi/ota/
+```
+
+  - **`<IP_Address>`**：将此替换为运行小智后端服务的计算机的本地网络 IP 地址（例如 `192.168.101.109`）。
+  - **`<Port_Number>`**：将此替换为小智后端服务公开的 OTA 端口号。如果您之前没有修改 `xiaozhi-server` 的 `docker-compose.yaml` 文件，这将是 `8002`。如果您确实更改了它（例如改为 `8088`），您必须在这里使用您修改的端口号。
+
+例如：
+
+```
+http://192.168.101.109:8002/xiaozhi/ota/
+```
+
+完成配置并确认后，设备将自动重启并尝试连接到小智后端服务。
+
+一旦成功连接到 OTA 服务，Watcher 设备将播报一个验证码。
+
+然后，在控制台中，在您创建的 `Dify_Agent` 下，点击"设备管理"。点击"新增"，输入设备播报的验证码，然后点击"保存"。
+
+按照上述描述完成配置后，Watcher 将能够连接到小智后端服务。
+
+🎉 至此，所有软件安装和基本硬件配置都已完成！接下来，我们将专注于在 Dify 平台上"编排"我们的 AI 应用程序，使其能够理解并响应我们的智能家居控制命令。
+
+## Ⅲ. Dify 应用编排 {#dify-app}
+
+让我们回到 Dify 平台，配置我们之前创建的 Agent 应用，使其能够与 Home Assistant 通信并理解我们的命令。
+
+### Ⅰ. 添加 MCP 工具
+
+要让 Dify 能够控制 Home Assistant 中的设备，我们需要为其添加一个"工具"。这个工具基于 MCP（Meta Control Protocol）。
+
+在 Dify 应用页面的顶部导航栏中，找到"**工具**"选项，搜索"**MCP SSE**"，并下载相应的插件。
+
+![](https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/Install-MCP.png)
+
+#### 配置 MCP 工具连接到 HA 安装后，再次点击此工具。它将提示您提供 MCP 服务配置信息，以便 Dify 可以通过 MCP 与其通信。按照模板和 [MCP Server - Home Assistant](https://www.home-assistant.io/integrations/mcp_server/) 文档，您通常需要输入类似以下 JSON 格式的配置：
+
+```json
+{
+  "Home Assistant": {
+      "url": "http://your_ha_ip:8123/mcp_server/sse",
+      "headers": {
+          "Authorization": "Bearer your_ha_token"
+      },
+      "timeout": 10,
+      "sse_read_timeout": 60
+  }
+}
+```
+
+![](https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/Dify-MCP-authorize.png)
+
+##### 获取 Home Assistant IP 地址（`your_ha_ip`）
+
+<details>
+
+<summary>HA IP 地址</summary>
+
+如果您的 Home Assistant 运行在 `http://homeassistant.local:8123`，您可以尝试从计算机的命令行 ping `homeassistant.local` 来获取其 IP 地址。
+
+您也可以在 `http://homeassistant.local:8123/config/network` 的 IPv4 网络接口设置中找到 `homeassistant.local` 的 IP 地址。
+
+或者，登录您的 Home Assistant；您通常可以在"设置" \> "系统" \> "网络"下找到其 IPv4 地址。
+
+</details>
+
+假设您当前的 Home Assistant 地址是 `192.168.101.160`，那么您的 SSE URL 将是：
+
+```bash
+http://192.168.101.160:8123/mcp_server/sse
+```
+
+##### 获取 Home Assistant 长期访问令牌（`your_ha_token`）
+
+登录您的 Home Assistant。
+
+- 点击左下角的用户名转到"个人资料"页面，或直接转到 [http://homeassistant.local:8123/profile/security](https://www.google.com/search?q=http://homeassistant.local:8123/profile/security)。
+- 滚动到页面底部找到"长期访问令牌"部分。
+- 点击"创建令牌"，给它起个名字（例如 `Dify_MCP`），然后点击"确定"。
+  ![](https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/HA-authorize.png)
+
+##### 完成配置
+
+假设您的 Home Assistant IP 是 `192.168.101.160`，您获得的令牌是 `eyJhbGciOi...G4s6IQw`（实际的长令牌在此处缩写），那么完整的 JSON 配置应该是：
+
+```json
+{
+  "Home Assistant": {
+      "url": "http://192.168.101.160:8123/mcp_server/sse",
+      "headers": {
+          "Authorization": "Bearer eyJhbGciOi...G4s6IQw"
+      },
+      "timeout": 10,
+      "sse_read_timeout": 60
+  }
+}
+```
+
+将此完整的 JSON 配置复制并粘贴到 Dify 中 MCP 工具的授权配置输入框中（替换输入框中的原始模板内容）。然后，点击"保存"或"确定"。如果配置正确，您应该会看到一个通知，表明授权成功或工具可用。
+
+这将允许您在创建的应用中调用 MCP 工具。
+
+### Ⅱ. 编写提示词
+
+提示词是您给 AI Agent 的指令，告诉它要扮演什么角色、如何工作，以及它的能力和限制是什么。
+
+  - 在您的 Dify Agent 应用的"**编排**"或"**提示词**"设置区域中，您会看到一个文本框，可以在其中输入您的提示词。
+  - 对于智能家居场景，您可以设计一个简单的提示词，告诉 AI 它可以调用 Home Assistant 工具来控制设备或查询设备状态。
+
+**简单提示词示例**：
+
+```
+# 角色
+您是一个有用的智能家居助手。
+
+# 工作流程 1. 当用户请求控制家中设备（如开关灯、调节空调）或查询设备状态时，您必须使用名为"Home Assistant"的工具来完成。
+2. 首先，分析用户的意图，确定要控制哪个设备以及要执行什么操作。
+3. 然后，生成命令语句来调用"Home Assistant"工具。
+4. 如果用户只是在闲聊，或询问与智能家居控制无关的问题，请以友好的方式与用户对话。
+
+# 要求
+- 您的回答应该尽可能简洁明了。
+- 您只能通过"Home-Assistant"工具控制连接的设备。
+- 清楚地告知用户操作是否成功或提供查询到的信息。
+```
+
+![](https://files.seeedstudio.com/wiki/solution/application/dify-ha-mcp/dify-app-1.png)
+
+
+:::tip 上面的提示词是一个非常基础的框架。您可以根据您实际的 Home Assistant 设备和想要实现的功能来修改和扩展这个提示词，以更好地满足您的需求。
+
+例如，您可以添加更具体的设备名称、房间区域，甚至为 AI 设置特定的"个性"。
+
+Dify 的提示词编排功能非常强大，支持变量、上下文和知识库等高级功能。您可以查阅 [Dify 官方文档](https://docs.dify.ai/zh-hans/introduction) 并学习 [提示词工程](https://www.promptingguide.ai/zh) 来构建更强大的 AI 应用。
+
+:::
+
+编写并保存提示词后，您的 AI 智能家居应用基本就设置完成了！
+
+## 试用
+
+现在，拿起您的 SenseCAP Watcher，尝试对它说话，看看您的 AI 智能家居助手是否能正确响应您的命令并通过 Home Assistant 控制您的智能设备！
+
+例如，您可以尝试说："打开客厅的灯"，或"现在卧室的温度是多少？"（这假设您已经在 Home Assistant 中配置了这些设备，并且您的提示词和 Dify Agent 能够正确理解和处理这些命令）。
+
+<center>
+<Tweet id="1910315965675712738" /> 
+</center>
+
+## 参考资料
+
+- [小智 AI 聊天机器人](https://github.com/78/xiaozhi-esp32)
+- [小智后端服务](https://github.com/xinnan-tech/xiaozhi-esp32-server)
+- [Dify](https://docs.dify.ai/zh-hans/introduction)
+- [Home Assistant MCP Server](https://www.home-assistant.io/integrations/mcp_server/)
+
+## 问答
+
+<details>
+
+<summary>如何升级 xiaozhi-esp32-server？</summary>
+
+进入您的小智服务器后端 Docker 文件存储的文件夹。
+
+```bash
+docker compose -f docker-compose_all.yml down
+docker rmi ghcr.nju.edu.cn/xinnan-tech/xiaozhi-esp32-server:server_latest
+docker rmi ghcr.nju.edu.cn/xinnan-tech/xiaozhi-esp32-server:web_latest
+```
+
+然后，更新 compose 文件（如果已更新）并拉取新的镜像文件。
+
+可选：更新配置文件。对于主要版本更新，配置文件可能有所不同。将下面的内容复制作为您的更新脚本：
+
+```bash
+#!/bin/bash
+
+# 通用函数来更新文件 update_file() {
+    local FILE="$1"
+    local URL="$2"
+    local BACKUP_SUFFIX=$(date +%Y%m%d%H%M%S).bk
+    local TEMP_FILE="/tmp/$(basename "$FILE")"
+
+    # 确保目标目录存在 local DIR=$(dirname "$FILE")
+    [ ! -d "$DIR" ] && mkdir -p "$DIR"
+
+    # 如果文件不存在，直接下载 if [ ! -f "$FILE" ]; then
+        wget -O "$FILE" "$URL" && echo "$FILE 不存在，已下载。" && return
+    fi
+
+    # 下载到临时文件并比较差异 wget -O "$TEMP_FILE" "$URL" && diff "$FILE" "$TEMP_FILE" >/dev/null && { 
+        echo "$FILE 无差异，无需更新。"; 
+        rm "$TEMP_FILE"; 
+        return; 
+    }
+    echo "$FILE 有差异："
+    diff "$FILE" "$TEMP_FILE"
+
+    # 提示用户是否覆盖 echo -n "覆盖当前文件？(y/n): "
+    read CONFIRM
+    if [ "$CONFIRM" != "y" ]; then
+        echo "$FILE 的更新已取消。"
+        rm "$TEMP_FILE"
+        return
+    fi
+
+    # 备份旧文件并替换 cp "$FILE" "$FILE.$BACKUP_SUFFIX" && mv "$TEMP_FILE" "$FILE" && echo "$FILE 已更新并备份为 $FILE.$BACKUP_SUFFIX"
+}
+
+# 更新 data/.config.yaml
+CONFIG_FILE="data/.config.yaml"
+CONFIG_URL="https://raw.githubusercontent.com/xinnan-tech/xiaozhi-esp32-server/refs/heads/main/main/xiaozhi-server/config_from_api.yaml"
+update_file "$CONFIG_FILE" "$CONFIG_URL"
+
+# 更新 docker-compose_all.yml
+DOCKER_COMPOSE_FILE="docker-compose_all.yml"
+DOCKER_COMPOSE_URL="https://raw.githubusercontent.com/xinnan-tech/xiaozhi-esp32-server/refs/heads/main/main/xiaozhi-server/docker-compose_all.yml"
+update_file "$DOCKER_COMPOSE_FILE" "$DOCKER_COMPOSE_URL"
+
+echo "所有文件更新完成！"
+```
+
+```bash
+docker compose -f docker-compose_all.yml up -d
+```
+
+</details>
