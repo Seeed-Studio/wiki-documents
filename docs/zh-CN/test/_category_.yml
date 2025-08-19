@@ -1,5 +1,0 @@
-position: 2 # 支持浮点数位置
-label: 'XIAO MG24'
-collapsible: true # 使分类可折叠
-collapsed: true # 默认保持分类展开
-className: xiao_mg24
