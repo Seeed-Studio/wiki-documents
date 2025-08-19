@@ -5,6 +5,7 @@ on:
     branches: [docusaurus-version]
   push:
     branches: [docusaurus-version]
+  workflow_dispatch:
     
 env:
   NODE_OPTIONS: --max_old_space_size=20480
@@ -43,3 +44,4 @@ jobs:
           git config --global user.name "MatthewJeffson"
           yarn install --frozen-lockfile
           yarn deploy
+          

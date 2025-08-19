@@ -49,10 +49,11 @@ jobs:
           modified_count=0
           deleted_count=0
           renamed_count=0
+          renamed_modified_count=0
           all_files=""
           
-          # 使用git diff --name-status检测操作类型，添加错误处理
-          if operations=$(git diff --name-status $base_sha..HEAD -- docs/ 2>/dev/null); then
+          # 使用更详细的git diff检测重命名和修改
+          if operations=$(git diff --name-status --find-renames=90 $base_sha..HEAD -- docs/ 2>/dev/null); then
             echo "📄 Git diff输出:"
             echo "$operations"
             
@@ -86,6 +87,19 @@ jobs:
                     all_files="$all_files$file "
                     echo "  🗑️ 删除: $file"
                     ;;
+                  R[0-9][0-9])
+                    # 检查重命名的相似度
+                    similarity=${status#R}
+                    if [ "$similarity" -lt 100 ]; then
+                      renamed_modified_count=$((renamed_modified_count + 1))
+                      echo "  🔄 移动+修改: $file -> $rest (相似度: ${similarity}%)"
+                    else
+                      renamed_count=$((renamed_count + 1))
+                      echo "  📁 纯移动: $file -> $rest"
+                    fi
+                    all_files="$all_files$file "
+                    [[ -n "$rest" ]] && all_files="$all_files$rest "
+                    ;;
                   R*)
                     renamed_count=$((renamed_count + 1))
                     all_files="$all_files$file "
@@ -105,19 +119,20 @@ jobs:
             exit 1
           fi
           
-          total_count=$((added_count + modified_count + deleted_count + renamed_count))
+          total_count=$((added_count + modified_count + deleted_count + renamed_count + renamed_modified_count))
           
           # 输出结果
           echo "changed_files=$all_files" >> $GITHUB_OUTPUT
           echo "total_files=$total_count" >> $GITHUB_OUTPUT
-          echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count" >> $GITHUB_OUTPUT
+          echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count 移动+修改:$renamed_modified_count" >> $GITHUB_OUTPUT
           
           echo ""
           echo "📋 文档变更统计："
           echo "  新增文件: $added_count"
           echo "  修改文件: $modified_count"
           echo "  删除文件: $deleted_count" 
-          echo "  移动文件: $renamed_count"
+          echo "  纯移动文件: $renamed_count"
+          echo "  移动+修改文件: $renamed_modified_count"
           echo "  总计: $total_count"
           echo "  文件列表: $all_files"
 
@@ -170,6 +185,9 @@ jobs:
       startsWith(github.event.comment.body, '/translate')
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    outputs:
+      translation-completed: ${{ steps.check-completion.outputs.completed }}
+      has-changes: ${{ steps.check-completion.outputs.has_changes }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -341,10 +359,24 @@ jobs:
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
             git add docs/      
-            git commit -m "自动翻译文档: 支持Markdown和Category文件"
+            git commit -m "🌍 自动翻译文档: 修复格式问题并智能处理文件操作"
             git push
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
             echo "✅ 翻译结果已提交并推送"
+          fi
+      
+      - name: Check completion status
+        id: check-completion
+        if: always() && steps.check-permissions.outputs.has_permission == 'true'
+        run: |
+          if [ "${{ job.status }}" = "success" ] && [ "$HAS_CHANGES" = "true" ]; then
+            echo "completed=true" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ 翻译完成且有内容变更"
+          else
+            echo "completed=false" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 翻译未完成或无内容变更"
           fi
 
       - name: Update completion comment
@@ -384,6 +416,7 @@ jobs:
               comment += `- 📝 **Markdown翻译**: 新增和修改的 .md/.mdx 文件\n`;
               comment += `- 📋 **Category翻译**: _category_.yml 文件的智能翻译\n`;
               comment += `- 📁 **文件移动**: 自动同步移动翻译文件\n`;
+              comment += `- 🔄 **移动+修改**: 智能重新翻译修改过的移动文件\n`;
               comment += `- 🗑️ **文件删除**: 自动删除对应的翻译文件\n`;
               comment += `- 🛡️ **文档保护**: 跳过受保护的文件\n\n`;
             } else if (success && !hasChanges) {
@@ -434,3 +467,33 @@ jobs:
                 body: comment
               });
             }
+
+  # 触发部署验证工作流
+  trigger-deploy-workflows:
+    needs: manual-translate
+    if: needs.manual-translate.outputs.translation-completed == 'true' && needs.manual-translate.outputs.has-changes == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deployment workflows
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            
+            // 触发测试部署工作流
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: 'Check_PR_Update.yml',
+              ref: context.ref
+            });
+            
+            // 延迟后触发主部署工作流
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            
+            await github.rest.actions.createWorkflowDispatch({
+              owner,
+              repo,
+              workflow_id: 'deploy.yml', 
+              ref: context.ref
+            });

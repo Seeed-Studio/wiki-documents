@@ -123,7 +123,7 @@ function generateTargetPath(originalPath, targetLang) {
   return targetPath;
 }
 
-// 检测文件操作类型
+// 🆕 检测文件操作类型（改进版）
 async function detectFileOperations(baseSha) {
   try {
     console.log(`🔍 检测文件操作 (基于 ${baseSha})...`);
@@ -137,7 +137,8 @@ async function detectFileOperations(baseSha) {
       added: [],
       modified: [],
       deleted: [],
-      renamed: []
+      renamed: [],
+      renamedAndModified: []  // 🆕 新增：重命名且修改的文件
     };
     
     const lines = statusOutput.split('\n').filter(line => line.trim());
@@ -162,7 +163,19 @@ async function detectFileOperations(baseSha) {
       } else if (status.startsWith('R')) {
         const oldFile = file;
         const newFile = parts[2];
-        operations.renamed.push({ from: oldFile, to: newFile });
+        
+        // 🆕 检查重命名的文件是否也有内容修改
+        const similarity = status.match(/R(\d+)/);
+        const similarityScore = similarity ? parseInt(similarity[1]) : 100;
+        
+        if (similarityScore < 100) {
+          // 相似度小于100%，说明除了重命名还有内容修改
+          operations.renamedAndModified.push({ from: oldFile, to: newFile, similarity: similarityScore });
+          console.log(`📝 检测到重命名+修改: ${oldFile} -> ${newFile} (相似度: ${similarityScore}%)`);
+        } else {
+          // 纯重命名，无内容修改
+          operations.renamed.push({ from: oldFile, to: newFile });
+        }
       }
     }
     
@@ -171,6 +184,7 @@ async function detectFileOperations(baseSha) {
     console.log(`  修改: ${operations.modified.length} 个`);
     console.log(`  删除: ${operations.deleted.length} 个`);
     console.log(`  移动: ${operations.renamed.length} 个`);
+    console.log(`  移动+修改: ${operations.renamedAndModified.length} 个`);
     
     return operations;
     
@@ -302,7 +316,7 @@ ${termsList}
 请只输出翻译后的YAML内容，不要添加任何解释。`;
 }
 
-// 生成翻译prompt
+// 🆕 更严格的翻译prompt（针对换行问题）
 function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = null) {
   const langName = LANGUAGE_CONFIG[targetLang].name;
   const termsList = Object.entries(PRESERVE_TERMS)
@@ -319,68 +333,220 @@ function generatePrompt(targetLang, pathPrefix, isChunk = false, chunkInfo = nul
 
   return `你是一个专业的技术文档翻译专家。请将以下${isChunk ? '部分' : '完整的'} Markdown 文档从英文翻译成${langName}。
 
-重要规则：
-1. **严格保持所有 Markdown 格式不变**（链接、代码块、标题等）
-2. **严格保持换行结构**：输出的换行必须与输入完全一致
-   - 标题后的换行数量保持不变
-   - 段落间的空行数量保持不变
-   - 列表项的换行保持不变
-   - **特别注意**：标题（#、##、###等）与下方内容之间的换行必须完全一致
-   - **绝对禁止**：将标题与正文内容合并到同一行
-3. **代码块处理规则**：
-   - 多行代码块（\`\`\`包围的内容）：完全不翻译，包括其中的注释
-   - 行内代码（单个\`包围的内容）：完全不翻译
-   - 代码相关的技术术语：保持原文
-4. **不要翻译**：代码示例、文件名、API 名称、URL、专有技术术语
-5. **内部链接处理**：
-   - 以 / 开头的链接，在路径前添加 "${pathPrefix}" 前缀
-   - 例如：href="/Sensor_Network" → href="${pathPrefix}/Sensor_Network"
-   - [链接文本](/path) → [链接文本](${pathPrefix}/path)
-6. **seeedstudio.com wiki 链接处理**：
-   - https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
-7. **外部链接和已有语言前缀的链接保持不变**
-8. **中英文混排**：确保中文和英文之间有适当的空格分隔
+**🚨 CRITICAL FORMATTING RULES - 这些规则是强制性的，违反将导致翻译失败：**
 
-**Front Matter 处理规则：**
-- 保持 YAML 结构和缩进完全不变
-- **不翻译**：last_update（包括date和author）、keywords、image字段
-- **slug字段**：添加语言前缀 "/hello" → "${pathPrefix}/hello"
-- **只翻译**：description 和 title 字段的值
-- **保持每个字段独占一行**
+1. **Front Matter 严格格式要求**：
+   - 每个字段必须独占一行
+   - keywords: 后面必须换行，然后每个关键词单独一行，以 "- " 开头
+   - title: 翻译后必须在同一行，不能换行
+   - description: 翻译后必须在同一行，不能换行
+   - 其他字段保持原格式不变
 
-**格式保持铁律：**
-- Markdown表格保持为Markdown格式，HTML表格保持为HTML格式
-- 空行数量与原文完全一致
-- 缩进空格数量与原文完全一致
-- 所有特殊字符位置与原文完全一致
+2. **标题换行严格要求**：
+   - 每个标题（# ## ### 等）后必须有一个空行
+   - 标题与下方内容之间必须有空行分隔
+   - 绝对禁止标题与正文在同一行
 
-**严格要求：**
-- 绝对不能添加、删除或修改任何标题
-- 绝对不能改变文档结构、段落顺序、列表顺序
-- 逐句对应翻译，确保译文每一句对应原文特定句子
-- 不要输出"内容同原文档"或类似省略说明
-- 整个文档只能有一个Front Matter部分
+3. **段落换行严格要求**：
+   - 段落之间必须有空行
+   - 列表项之间的换行保持原样
+   - 代码块前后的换行保持原样
+
+**MARKDOWN 格式规则：**
+- 严格保持所有 Markdown 格式不变（链接、代码块、标题等）
+- 代码块（\`\`\`包围的内容）：完全不翻译，包括其中的注释
+- 行内代码（单个\`包围的内容）：完全不翻译
+- 不要翻译：代码示例、文件名、API 名称、URL、专有技术术语
+
+**链接处理规则：**
+- 以 / 开头的链接，在路径前添加 "${pathPrefix}" 前缀
+- 例如：href="/Sensor_Network" → href="${pathPrefix}/Sensor_Network"
+- seeedstudio.com wiki 链接：https://wiki.seeedstudio.com/path → https://wiki.seeedstudio.com${pathPrefix}/path
+- 外部链接和已有语言前缀的链接保持不变
+
+**Front Matter 处理示例：**
+
+输入：
+---
+description: Some description here.
+title: Some title here
+keywords:
+- keyword1
+- keyword2
+image: some-image.jpg
+slug: /some-slug
+---
+
+输出：
+---
+description: 这里是描述翻译。
+title: 这里是标题翻译
+keywords:
+- keyword1
+- keyword2
+image: some-image.jpg
+slug: ${pathPrefix}/some-slug
+---
+
+**标题处理示例：**
+
+输入：
+## Some Title
+
+Content here.
+
+输出：
+## 标题翻译
+
+内容翻译在这里。
 
 **术语保护（保持不变）：**
 ${termsList}${chunkInstructions}
 
-**换行要求再次强调（这是最重要的）：**
-请确保输出内容的每一个换行都与输入内容完全对应，特别注意：
-- 标题（# ## ### 等）与下方内容之间的换行
-- Front Matter中每个字段的换行
-- 段落之间的空行
-- 列表项之间的换行
-- 代码块前后的换行
-- 表格前后的换行
+**🚨 最重要的要求：**
+请逐行检查你的输出，确保：
+1. Front Matter中每个字段都正确换行
+2. 每个标题后都有空行
+3. 段落之间有适当的空行
+4. 格式与输入完全一致
 
-**绝对禁止的行为：**
-- 将标题与正文内容写在同一行
-- 删除或添加任何空行
-- 改变任何换行的位置
-- 合并原本分开的段落
-- 分割原本连续的段落
+如果发现任何格式问题，立即修正！`;
+}
 
-请严格按照以上要求进行翻译，确保格式与原文完全一致。`;
+// 🆕 强化的后处理函数
+function strictFormatPostProcess(translatedContent, originalContent) {
+  try {
+    console.log('🔧 开始格式后处理...');
+    
+    let fixed = translatedContent;
+    
+    // 1. 修复 Front Matter 格式问题
+    fixed = fixFrontMatterFormat(fixed, originalContent);
+    
+    // 2. 修复标题换行问题
+    fixed = fixHeaderLineBreaks(fixed, originalContent);
+    
+    // 3. 修复段落间距问题
+    fixed = fixParagraphSpacing(fixed);
+    
+    console.log('✅ 格式后处理完成');
+    return fixed;
+    
+  } catch (error) {
+    console.warn(`⚠️ 格式后处理失败: ${error.message}`);
+    return translatedContent;
+  }
+}
+
+// 🆕 修复 Front Matter 格式
+function fixFrontMatterFormat(content, originalContent) {
+  const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/);
+  if (!frontMatterMatch) return content;
+  
+  const originalFrontMatterMatch = originalContent.match(/^---\n([\s\S]*?)\n---\n/);
+  if (!originalFrontMatterMatch) return content;
+  
+  const frontMatterContent = frontMatterMatch[1];
+  const originalFrontMatterContent = originalFrontMatterMatch[1];
+  
+  // 检查原文的换行模式
+  const originalLines = originalFrontMatterContent.split('\n');
+  const translatedLines = frontMatterContent.split('\n');
+  
+  const fixedLines = [];
+  let translatedIndex = 0;
+  
+  for (let i = 0; i < originalLines.length && translatedIndex < translatedLines.length; i++) {
+    const originalLine = originalLines[i];
+    const translatedLine = translatedLines[translatedIndex];
+    
+    if (originalLine.startsWith('title:') || originalLine.startsWith('description:')) {
+      // 这些字段应该在同一行
+      if (translatedLine.includes(':')) {
+        fixedLines.push(translatedLine);
+        translatedIndex++;
+      }
+    } else if (originalLine.trim() === '' || originalLine.startsWith(' ') || originalLine.startsWith('-')) {
+      // 空行、缩进行或列表项
+      if (translatedIndex < translatedLines.length) {
+        fixedLines.push(translatedLines[translatedIndex]);
+        translatedIndex++;
+      }
+    } else {
+      // 其他字段
+      if (translatedIndex < translatedLines.length) {
+        fixedLines.push(translatedLines[translatedIndex]);
+        translatedIndex++;
+      }
+    }
+  }
+  
+  // 添加剩余的翻译行
+  while (translatedIndex < translatedLines.length) {
+    fixedLines.push(translatedLines[translatedIndex]);
+    translatedIndex++;
+  }
+  
+  const fixedFrontMatter = `---\n${fixedLines.join('\n')}\n---\n`;
+  return content.replace(frontMatterMatch[0], fixedFrontMatter);
+}
+
+// 🆕 修复标题换行问题
+function fixHeaderLineBreaks(content, originalContent) {
+  const lines = content.split('\n');
+  const originalLines = originalContent.split('\n');
+  const fixedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    fixedLines.push(line);
+    
+    // 如果是标题行
+    if (line.match(/^#{1,6}\s+/)) {
+      // 检查下一行是否应该是空行
+      const nextLine = lines[i + 1];
+      if (nextLine && nextLine.trim() !== '') {
+        // 在原文中查找对应的标题
+        const headerText = line.replace(/^#{1,6}\s+/, '').trim();
+        const originalHeaderIndex = findOriginalHeaderIndex(originalLines, headerText, line.match(/^(#{1,6})/)[1].length);
+        
+        if (originalHeaderIndex >= 0 && originalHeaderIndex + 1 < originalLines.length) {
+          const originalNextLine = originalLines[originalHeaderIndex + 1];
+          if (originalNextLine.trim() === '') {
+            // 原文中标题后有空行，添加空行
+            fixedLines.push('');
+          }
+        }
+      }
+    }
+  }
+  
+  return fixedLines.join('\n');
+}
+
+// 🆕 查找原文中对应的标题
+function findOriginalHeaderIndex(originalLines, headerText, headerLevel) {
+  for (let i = 0; i < originalLines.length; i++) {
+    const line = originalLines[i];
+    if (line.match(/^#{1,6}\s+/)) {
+      const lineHeaderLevel = line.match(/^(#{1,6})/)[1].length;
+      if (lineHeaderLevel === headerLevel) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
+
+// 🆕 修复段落间距
+function fixParagraphSpacing(content) {
+  // 确保段落之间有适当的空行
+  let fixed = content;
+  
+  // 修复连续的多个空行
+  fixed = fixed.replace(/\n{3,}/g, '\n\n');
+  
+  return fixed;
 }
 
 // 处理内部链接和seeedstudio.com链接
@@ -442,87 +608,8 @@ function addChineseEnglishSpacing(content) {
   return content;
 }
 
-// 修复换行问题的函数
-function fixLineBreakIssues(translatedContent, originalContent) {
-  try {
-    const originalLines = originalContent.split('\n');
-    const translatedLines = translatedContent.split('\n');
-    
-    // 检查并修复标题后缺少换行的问题
-    const fixedLines = [];
-    
-    for (let i = 0; i < translatedLines.length; i++) {
-      const line = translatedLines[i];
-      
-      // 检查是否是标题行
-      if (line.match(/^#{1,6}\s+/) && i < translatedLines.length - 1) {
-        fixedLines.push(line);
-        
-        // 确保标题后有适当的换行
-        const nextLine = translatedLines[i + 1];
-        if (nextLine && !nextLine.trim() === '') {
-          // 检查原文中对应位置是否有空行
-          const correspondingOriginalIndex = findCorrespondingLineIndex(i, originalLines, translatedLines);
-          if (correspondingOriginalIndex >= 0 && 
-              correspondingOriginalIndex + 1 < originalLines.length &&
-              originalLines[correspondingOriginalIndex + 1].trim() === '') {
-            fixedLines.push(''); // 添加空行
-          }
-        }
-      } else {
-        fixedLines.push(line);
-      }
-    }
-    
-    return fixedLines.join('\n');
-  } catch (error) {
-    console.warn(`⚠️ 换行修复失败，返回原译文: ${error.message}`);
-    return translatedContent;
-  }
-}
-
-// 查找对应行索引的辅助函数
-function findCorrespondingLineIndex(translatedIndex, originalLines, translatedLines) {
-  // 简单的启发式方法：根据标题模式匹配
-  const translatedLine = translatedLines[translatedIndex];
-  if (translatedLine.match(/^#{1,6}\s+/)) {
-    const headerLevel = translatedLine.match(/^(#{1,6})/)[1].length;
-    
-    // 在原文中查找相同级别的标题
-    let headerCount = 0;
-    for (let i = 0; i < originalLines.length; i++) {
-      const originalLine = originalLines[i];
-      if (originalLine.match(/^#{1,6}\s+/)) {
-        const originalHeaderLevel = originalLine.match(/^(#{1,6})/)[1].length;
-        if (originalHeaderLevel === headerLevel) {
-          headerCount++;
-          if (headerCount === getHeaderCountInTranslated(translatedLines, translatedIndex, headerLevel)) {
-            return i;
-          }
-        }
-      }
-    }
-  }
-  return -1;
-}
-
-// 获取译文中到指定位置的同级标题数量
-function getHeaderCountInTranslated(translatedLines, currentIndex, headerLevel) {
-  let count = 0;
-  for (let i = 0; i <= currentIndex; i++) {
-    const line = translatedLines[i];
-    if (line.match(/^#{1,6}\s+/)) {
-      const lineHeaderLevel = line.match(/^(#{1,6})/)[1].length;
-      if (lineHeaderLevel === headerLevel) {
-        count++;
-      }
-    }
-  }
-  return count;
-}
-
 // Claude翻译函数
-async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false) {
+async function translateWithClaude(text, targetLang, maxRetries = 3, isChunk = false, chunkInfo = null, isCategory = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
@@ -540,7 +627,7 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
       const response = await anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 20000,
-        temperature: 0.01, // 降低温度以保持格式一致性
+        temperature: 0.0, // 🆕 设为0以获得最一致的格式
         system: systemPrompt,
         messages: [
           { role: 'user', content: text }
@@ -551,11 +638,11 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
       
       // 对非category文件进行后处理
       if (!isCategory) {
-        // 后处理：确保链接正确
-        translatedContent = processInternalLinks(translatedContent, targetLang);
+        // 🆕 强化的格式后处理
+        translatedContent = strictFormatPostProcess(translatedContent, text);
         
-        // 强化换行格式检查和修复
-        translatedContent = fixLineBreakIssues(translatedContent, text);
+        // 处理链接
+        translatedContent = processInternalLinks(translatedContent, targetLang);
         
         // 中英文混排处理
         if (targetLang === 'zh-CN') {
@@ -610,7 +697,6 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
         contentToTranslate = chunk.content;
       }
       
-      // 直接翻译，通过prompt指导AI正确处理代码块
       const translatedContent = await translateWithClaude(
         contentToTranslate, 
         targetLang, 
@@ -742,6 +828,44 @@ async function translateFile(filePath, targetLang) {
   }
 }
 
+// 🆕 处理重命名+修改的文件
+async function translateRenamedAndModifiedFile(oldPath, newPath, targetLang) {
+  try {
+    console.log(`🔄 处理重命名+修改文件: ${oldPath} -> ${newPath} (${targetLang})`);
+    
+    // 检查文件是否受保护
+    if (isProtectedPath(oldPath) || isProtectedPath(newPath)) {
+      console.log(`🛡️ 文件受保护，跳过处理: ${oldPath} -> ${newPath}`);
+      translationStatus.protected++;
+      return { success: true, path: newPath, action: 'protected' };
+    }
+    
+    // 先删除旧的翻译文件
+    const oldTargetPath = generateTargetPath(oldPath, targetLang);
+    try {
+      await fs.access(oldTargetPath);
+      await fs.unlink(oldTargetPath);
+      console.log(`🗑️ 已删除旧翻译文件: ${oldTargetPath}`);
+    } catch (error) {
+      console.log(`ℹ️ 旧翻译文件不存在: ${oldTargetPath}`);
+    }
+    
+    // 重新翻译新文件
+    const result = await translateFile(newPath, targetLang);
+    
+    if (result.success) {
+      result.action = 'renamed_and_retranslated';
+      console.log(`✅ 重命名+修改文件处理完成: ${newPath}`);
+    }
+    
+    return result;
+    
+  } catch (error) {
+    console.error(`❌ 处理重命名+修改文件失败: ${error.message}`);
+    return { success: false, error: error.message, path: newPath, action: 'rename_modify_failed' };
+  }
+}
+
 // 处理文件移动
 async function moveTranslationFile(oldPath, newPath, targetLang) {
   try {
@@ -836,10 +960,11 @@ async function deleteTranslationFile(filePath, targetLang) {
 function generateProgressReport(languages, results) {
   const successCount = results.filter(r => r.success).length;
   const failCount = results.filter(r => !r.success).length;
-  const translatedCount = results.filter(r => r.success && r.action === 'translated').length;
+  const translatedCount = results.filter(r => r.success && (r.action === 'translated' || !r.action)).length;
   const categoryCount = results.filter(r => r.success && r.fileType === 'category').length;
   const movedCount = results.filter(r => r.success && r.action === 'moved').length;
   const deletedCount = results.filter(r => r.success && r.action === 'deleted').length;
+  const renamedAndModifiedCount = results.filter(r => r.success && r.action === 'renamed_and_retranslated').length;
   const protectedCount = results.filter(r => r.success && r.action === 'protected').length;
   
   let report = `## 📊 翻译完成报告\n\n`;
@@ -851,7 +976,8 @@ function generateProgressReport(languages, results) {
   report += `- 📊 总计: ${successCount + failCount}\n`;
   report += `- 📝 文档翻译: ${translatedCount}\n`;
   report += `- 📋 Category翻译: ${categoryCount}\n`;
-  report += `- 📁 移动: ${movedCount}\n`;
+  report += `- 📁 纯移动: ${movedCount}\n`;
+  report += `- 🔄 移动+重译: ${renamedAndModifiedCount}\n`;
   report += `- 🗑️ 删除: ${deletedCount}\n`;
   report += `- 🛡️ 保护跳过: ${protectedCount}\n`;
   report += '\n';
@@ -862,6 +988,7 @@ function generateProgressReport(languages, results) {
       let icon = '📝';
       if (r.fileType === 'category') icon = '📋';
       else if (r.action === 'moved') icon = '📁';
+      else if (r.action === 'renamed_and_retranslated') icon = '🔄';
       else if (r.action === 'deleted') icon = '🗑️';
       else if (r.action === 'protected') icon = '🛡️';
       else if (r.action === 'skipped') icon = 'ℹ️';
@@ -950,7 +1077,13 @@ async function main() {
       });
     }
     
-    // 处理文件移动
+    // 🆕 处理重命名+修改文件（需要重新翻译）
+    for (const rename of operations.renamedAndModified) {
+      const result = await translateRenamedAndModifiedFile(rename.from, rename.to, lang);
+      allResults.push({...result, language: lang, operation: 'renamed_and_modified'});
+    }
+    
+    // 处理纯重命名文件（只移动）
     for (const rename of operations.renamed) {
       const result = await moveTranslationFile(rename.from, rename.to, lang);
       allResults.push({...result, language: lang, operation: 'renamed'});
@@ -969,6 +1102,15 @@ async function main() {
   
   // 保存报告到文件供GitHub Action使用
   await fs.writeFile('/tmp/translation-report.md', report, 'utf8');
+  
+  // 🆕 设置输出变量来指示是否需要触发其他工作流
+  const hasChanges = allResults.some(r => r.success && 
+    (r.action === 'translated' || r.action === 'renamed_and_retranslated'));
+  
+  if (hasChanges) {
+    console.log('\n🚀 设置触发其他工作流标志...');
+    await fs.writeFile('/tmp/trigger-deploy.txt', 'true', 'utf8');
+  }
   
   if (allResults.some(r => !r.success)) {
     console.log('⚠️ 部分操作失败，请查看详细错误信息');
