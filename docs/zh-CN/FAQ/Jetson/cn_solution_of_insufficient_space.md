@@ -40,7 +40,7 @@ sudo ./flash.sh [options] <board> <rootdev>
 
 其中：
 
-1. `[options]` 是一个或多个命令行选项。所有选项都是可选的。有关选项的信息，请参阅[刷写脚本用法](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html#flashing-script-usage)。
+1. `[options]` 是一个或多个命令行选项。所有选项都是可选的。有关选项的信息，请参阅[刷写脚本使用](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/SD/FlashingSupport.html#flashing-script-usage)。
 
 2. `<board>` 指定要应用于要刷写的设备的配置。值列在[Jetson 模块和配置](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/IN/QuickStart.html#in-quickstart-jetsonmodulesandconfigurations-configurations)主题[快速入门](https://docs.nvidia.com/jetson/archives/r34.1/DeveloperGuide/text/IN/QuickStart.html#in-quickstart)的表格中。`flash.sh` 从名为 `<board>.conf` 的配置文件中获取配置。
 
@@ -68,7 +68,7 @@ NVIDIA JetPack SDK 是构建端到端加速 AI 应用程序的最全面解决方
 
 JetPack SDK 包括带有 Linux 操作系统的 Jetson Linux 驱动程序包 (L4T) 和用于深度学习、计算机视觉、加速计算和多媒体的 CUDA-X 加速库和 API。它还包括主机计算机和开发套件的示例、文档和开发工具，并支持更高级别的 SDK，如用于流视频分析的 DeepStream 和用于机器人技术的 Isaac。
 
-[此表格](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html#jetpack-ota-packages)列出了 JetPack 4.6 中包含的所有组件。
+[此表](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html#jetpack-ota-packages)列出了 JetPack 4.6 中包含的所有组件。
 
 <table align="center">
   <tbody><tr>
