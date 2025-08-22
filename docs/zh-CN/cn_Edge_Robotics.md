@@ -1,21 +1,21 @@
 ---
 description: 本主题介绍 Seeed Studio 的机器人产品文档。
-title: 机器人页面
+title: 机器人技术
 keywords:
-- 机器人
+- robotics
 - nvidia
 - ros
 - isaac
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/robotics_page
 last_update:
-  date: 2025/05/29
+  date: 05/29/2025
   author: ZhuYaohui
 ---
 
-# 🤖 机器人导航 
+# 🤖 机器人技术 
 
-> *“今天的科学就是明天的技术。” - 爱德华·泰勒*
+> *"今天的科学就是明天的技术。" - Edward Teller*
 
 <div className="quick-nav-container">
   <nav className="quick-nav">
@@ -26,7 +26,7 @@ last_update:
     </a>
     <a href="#actuators" className="nav-item">
       <span className="icon">⚙️</span>
-      <span className="text">关节模组</span>
+      <span className="text">关节执行器</span>
       <div className="hover-effect"></div>
     </a>
     <a href="#sensors" className="nav-item">
@@ -42,120 +42,122 @@ last_update:
   </nav>
 </div>
 
+
 <div className="nav-grid">
 
 ## 📦 机器人套件 {#robot-kits}
 
 <div class="category-group">
-  <div className="category-card robot-kits">
+  <div class="category-card robot-kits">
 
 ## 🤗 Lerobot
 
 <div className="card-container">
     <a href="/cn/lerobot_starai_arm/" className="nav-item">
-      <span className="text">华馨京starai arm</span>
-      <span className="tag stable">更新</span>
+      <span className="text">Starai 机械臂</span>
+      <span className="tag recommended">新</span>
     </a>
     <a href="/cn/starai_arm_ros_moveit/" className="nav-item">
-      <span className="text">华馨京starai arm Moveit</span>
-      <span className="tag stable">更新</span>
+      <span className="text">Starai 机械臂 Moveit</span>
+      <span className="tag recommended">新</span>
     </a>
     <a href="/cn/lerobot_so100m_new/" className="nav-item">
-      <span className="text">SO100/101 机械臂(新版)</span>
+      <span className="text">SO100/101 机械臂</span>
       <span className="tag stable">更新</span>
     </a>
-    <a href="/cn/lerobot_so100m/" className="nav-item">
-      <span className="text">SO100/101 机械臂(旧版)</span>
-      <span className="tag stable">更新</span>
-    </a>
-    <a href="/cn/lerobot_so100m_isaacsim/" className="nav-item">
+    <a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
       <span className="text">SO100 机械臂与 IsaacSim</span>
+      <span className="tag recommended">新</span>
     </a>
     <a href="/cn/lerobot_lekiwi/" className="nav-item">
       <span className="text">Lekiwi 移动底盘</span>
        <span className="tag recommended">新</span>
     </a>
+    <a href="/cn/sound_follow_robot/" className="nav-item">
+      <span className="text">Lekiwi 声音跟随</span>
+    </a>
+    <a href="/cn/control_robotic_arm_via_phospho/" className="nav-item">
+      <span className="text">Phospho Lerobot</span>
+       <span className="tag recommended">新</span>
+    </a>
 </div>
-
 
 </div>
 </div>
 
 ## ⚙️ 执行器 {#actuators}
-
 <div class="category-group">
-  <div className="category-card actuators">
+<div className="category-card actuators">
 
 <div className="card-container">
-    <a href="/cn/myactuator_series" className="nav-item">
-      <span className="text">脉塔X系列关节模组</span>
-      <span className="tag recommended">新</span>
+    <a href="/cn/myactuator_series/" className="nav-item">
+      <span className="text">MyActuator X 系列</span>
     </a>
     <a href="/cn/damiao_series/" className="nav-item">
-      <span className="text">达妙43系列关节模组</span>
-      <span className="tag recommended">新</span>
+      <span className="text">达妙 DM43 系列</span>
     </a>
     <a href="/cn/feetech_servo/" className="nav-item">
-      <span className="text">飞特STS3215舵机</span>
-      <span className="tag recommended">New</span>
+      <span className="text">飞特 STS3215 舵机</span>
     </a>
     <a href="/cn/hightorque_series/" className="nav-item">
-      <span className="text">高擎系列关节模组</span>
-      <span className="tag recommended">New</span>
+      <span className="text">高扭矩系列</span>
     </a>
 </div>
-
 
 </div>
 </div>
 
 ## 👁️ 传感器 {#sensors}
-
 <div class="category-group">
-  <div className="category-card sensors">
+<div className="category-card sensors">
 
 **激光雷达**  
 
 <div className="card-container">
-    <a href="/cn/myactuator_series" className="nav-item">
-      <span className="text">Robosense速腾聚创</span>
+    <a href="/cn/robosense_lidar/" className="nav-item">
+      <span className="text">速腾聚创</span>
     </a>
     <a href="/cn/mid360/" className="nav-item">
       <span className="text">MID360</span>
     </a>
-    <a href="/cn/slamtec/" className="nav-item">
-      <span className="text">思岚系列雷达</span>
-      <span className="tag recommended">新</span>
-    </a>
     <a href="/cn/a_loam/" className="nav-item">
       <span className="text">A-LOAM 算法</span>
     </a>
+    <a href="/cn/slamtec/" className="nav-item">
+      <span className="text">思岚科技系列</span>
+    </a>
 </div>
 
-**视觉系统**  
+
+**摄像头**  
 
 <div className="card-container">
+    <a href="/cn/orbbec_gemini2/" className="nav-item">
+      <span className="text">奥比中光 Gemini2 3D 摄像头入门</span>
+    </a>
     <a href="/cn/orbbec_depth_camera_on_ros/" className="nav-item">
-      <span className="text"> 奥比中光深度相机</span>
+      <span className="text">奥比中光深度摄像头</span>
+    </a>
+    <a href="/cn/orb_slam3_orbbec_gemini2/" className="nav-item">
+      <span className="text">ORB-SLAM3 与奥比中光 Gemini2</span>
     </a>
     <a href="/cn/csi_camera_on_ros/" className="nav-item">
-      <span className="text">CSI 相机设置</span>
+      <span className="text">CSI 摄像头</span>
     </a>
 </div>
 
-**麦克风阵列** 
+**语音**  
+
 <div className="card-container">
     <a href="/cn/ReSpeaker_Core_v2.0/" className="nav-item">
       <span className="text">ReSpeaker Core v2.0</span>
-      <span className="tag recommended">New</span>
     </a>
     <a href="/cn/ReSpeaker_Mic_Array_v2.0/" className="nav-item">
-      <span className="text">ReSpeaker Mic Array v2.0</span>
-      <span className="tag recommended">New</span>
+      <span className="text">ReSpeaker 麦克风阵列 v2.0</span>
     </a>
 </div>
 
-**陀螺仪**  
+**IMU**  
 
 <div className="card-container">
     <a href="/cn/hexfellow_y200/" className="nav-item">
@@ -163,24 +165,25 @@ last_update:
     </a>
 </div>
 
+
 </div>
 </div>
 
 ## 💻 软件 {#software}
-
 <div class="category-group">
-  <div className="category-card software">
+<div className="category-card software">
 
-**ROS**  
+**ROS 生态系统**  
+
 <div className="card-container">
     <a href="/cn/installing_ros1/" className="nav-item">
       <span className="text">ROS1 安装</span>
     </a>
-    <a href="/cn/install_isaacros/" className="nav-item">
-      <span className="text">IsaacROS 安装</span>
-    </a>
     <a href="/cn/install_ros2_humble/" className="nav-item">
       <span className="text">ROS2 安装</span>
+    </a>
+    <a href="/cn/install_isaacros/" className="nav-item">
+      <span className="text">IsaacROS 安装</span>
     </a>
     <a href="/cn/isaac_ros_apriltag/" className="nav-item">
       <span className="text">AprilTag</span>
@@ -190,18 +193,46 @@ last_update:
     </a>
 </div>
 
-**NVIDIA Isaac**  
-
+**PX4**  
 <div className="card-container">
-    <a href="/cn/install_isaaclab/" className="nav-item">
-      <span className="text">Isaac Lab 安装</span>
-    </a>
+<a href="/cn/control_px4_with_recomputer_jetson/" className="nav-item">
+  <span className="text">PX4 与 Jetson</span>
+  <span className="tag recommended">新</span>
+</a>
+
+<a href="/cn/object_tracking_with_reComputer_jetson_and_pX4/" className="nav-item">
+  <span className="text">PX4 目标跟踪</span>
+  <span className="tag recommended">新</span>
+</a>
+
 </div>
+
+
+**NVIDIA Isaac**  
+<div className="card-container">
+<a href="/cn/install_isaaclab/" className="nav-item">
+  <span className="text">Isaac Lab 安装</span>
+</a>
+<a href="/cn/simulate_soarm101_by_leisaac/" className="nav-item">
+  <span className="text">SO100 机械臂与 IsaacSim</span>
+  <span className="tag recommended">新</span>
+</a>
+</div>
+
+
+**VLA**  
+<div className="card-container">
+<a href="/cn/control_robotic_arm_via_gr00t" className="nav-item">
+  <span className="text">NVIDIA 的 GR00T</span>
+</a>
+</div>
+
 
 </div>
 </div>
 
 </div>
+
 
 
 
@@ -218,12 +249,12 @@ last_update:
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Dark模式 - 导航容器 */
+/* Dark 模式 - 导航容器 */
 html[data-theme='dark'] .quick-nav-container {
   background: 
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-    linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
   box-shadow: 
     0 4px 6px rgba(0, 0, 0, 0.3),
     inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
@@ -253,10 +284,10 @@ html[data-theme='dark'] .quick-nav-container {
   z-index: 1;
 }
 
-/* Dark模式 - 导航项 */
+/* Dark 模式 - 导航项 */
 html[data-theme='dark'] .nav-item {
   color: #e5e7eb;
-  background: #374151;
+  background:rgb(47, 50, 57);
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 }
 
@@ -293,7 +324,7 @@ html[data-theme='dark'] .nav-item {
   color: white;
 }
 
-/* Dark模式 - 悬浮动画 */
+/* Dark 模式 - 悬浮动画 */
 html[data-theme='dark'] .nav-item:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
   color: white;
@@ -346,9 +377,9 @@ html[data-theme='dark'] .nav-item:hover {
   z-index: 1;
 }
 
-/* Dark模式 - 内容卡片 */
+/* Dark 模式 - 内容卡片 */
 html[data-theme='dark'] .category-card {
-  background: #374151;
+  background:rgb(30, 30, 32);
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
   color: #e5e7eb;
 }
@@ -378,7 +409,7 @@ html[data-theme='dark'] .category-card {
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 悬浮特效 */
+/* Dark 模式 - 悬浮特效 */
 html[data-theme='dark'] .category-card:hover {
   box-shadow: 0 12px 20px rgba(0,0,0,0.6);
 }
@@ -394,7 +425,8 @@ html[data-theme='dark'] .category-card:hover {
   z-index: -1;
 }
 
-/* Dark模式 - 悬浮光效 */
+/* Dark 模式 - 悬浮光效 */
+
 html[data-theme='dark'] .category-card:hover::after {
   background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
 }
@@ -408,7 +440,7 @@ html[data-theme='dark'] .category-card:hover::after {
   color: #333;
 }
 
-/* Dark模式 - 链接 */
+/* Dark 模式 - 链接 */
 html[data-theme='dark'] .category-card a {
   color: #d1d5db;
 }
@@ -418,7 +450,7 @@ html[data-theme='dark'] .category-card a {
   transform: translateX(5px);
 }
 
-/* Dark模式 - 链接悬浮 */
+/* Dark 模式 - 链接悬浮 */
 html[data-theme='dark'] .category-card a:hover {
   color: #60a5fa;
 }
@@ -434,7 +466,7 @@ html[data-theme='dark'] .category-card a:hover {
   transition: width 0.3s;
 }
 
-/* Dark模式 - 链接下划线 */
+/* Dark 模式 - 链接下划线 */
 html[data-theme='dark'] .category-card a::after {
   background: #60a5fa;
 }
@@ -444,7 +476,7 @@ html[data-theme='dark'] .category-card a::after {
 }
 
 .card-container {
-  margin-bottom: 1.5rem; /* 原为0.1rem */
+  margin-bottom: 1.5rem; /* 原为 0.1rem */
 }
 
 /* 标签样式增强 */
@@ -462,7 +494,7 @@ html[data-theme='dark'] .category-card a::after {
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
 
-/* Dark模式 - Stable标签 */
+/* Dark 模式 - Stable 标签 */
 html[data-theme='dark'] .stable {
   background: #065f46;
   color: #a7f3d0;
@@ -475,7 +507,7 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }
 
-/* Dark模式 - Recommended标签 */
+/* Dark 模式 - Recommended 标签 */
 html[data-theme='dark'] .recommended {
   background: #7f1d1d;
   color: #fca5a5;
@@ -487,7 +519,7 @@ html[data-theme='dark'] .recommended {
   box-shadow: 0 6px 10px rgba(0,0,0,0.1);
 }
 
-/* Dark模式 - 点击效果 */
+/* Dark 模式 - 点击效果 */
 html[data-theme='dark'] .category-card:active {
   box-shadow: 0 6px 10px rgba(0,0,0,0.4);
 }
@@ -497,14 +529,14 @@ html[data-theme='dark'] .category-card:active {
   .nav-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .category-card {
     width: 100%;
     margin-top: 0.5rem; /* 卡片紧贴标题 */
   }
 }
 
-/* Dark模式 - 标题文字 */
+/* Dark 模式 - 标题文字 */
 html[data-theme='dark'] h1,
 html[data-theme='dark'] h2,
 html[data-theme='dark'] h3,
@@ -514,14 +546,14 @@ html[data-theme='dark'] h6 {
   color: #f9fafb;
 }
 
-/* Dark模式 - 正文文字 */
+/* Dark 模式 - 正文文字 */
 html[data-theme='dark'] p,
 html[data-theme='dark'] li,
 html[data-theme='dark'] strong {
   color: #e5e7eb;
 }
 
-/* Dark模式 - 引用块 */
+/* Dark 模式 - 引用块 */
 html[data-theme='dark'] blockquote {
   color: #9ca3af;
   border-left-color: #4b5563;
