@@ -43,7 +43,7 @@ This wiki provides the assembly and debugging tutorial for the SO ARM10x and rea
 </a></div>
 
 ## Main Features
- 
+
 1. **Open-source and low-cost**:  It is an open-source, low-cost robotic arm solution from [TheRobotStudio](https://github.com/TheRobotStudio/SO-ARM100)
 2. **Integration with LeRobot**: Designed for integration with [LeRobot platform](https://github.com/huggingface/lerobot)
 3. **Abundant learning resources**: Provides comprehensive open-source learning resources like assembly and calibration guides, and tutorials for testing, data collection, training and deployment to assist users in quickly getting started and developing robotic applications.
@@ -51,10 +51,10 @@ This wiki provides the assembly and debugging tutorial for the SO ARM10x and rea
 5. **Multi-Scene Application**: It is applicable to fields such as education, scientific research, automated production, and robotics, helping users achieve efficient and precise robot operations in various complex tasks.
 
 ## What's news：
+
 - Wiring optimization: Compared to SO-ARM100, SO-ARM101 features improved wiring that prevents disconnection issues previously seen at joint 3. The new wiring design also no longer limits the range of motion of the joints.
 - Different gear ratios for the leader arm: The leader arm now uses motors with optimized gear ratios, improving performance and eliminating the need for external gearboxes.
 - New functionality support: The leader arm can now follow the follower arm in real-time, which is crucial for the upcoming learning policy, where a human can intervene and correct the robot’s actions.
-
 
 :::caution
 
@@ -67,6 +67,7 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 </div>
 
 ## Specification
+
 <table>
   <thead>
     <tr>
@@ -132,7 +133,6 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
 :::
 
-
 ## Bill of Materials(BOM)
 
 | Part | Amount | Included|
@@ -147,18 +147,20 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 ## Initial System Environment
 
 **For Ubuntu x86:**
+
 - Ubuntu 22.04  
 - CUDA 12+  
 - Python 3.10  
 - Torch 2.6+  
 
 **For Jetson Orin:**
+
 - Jetson JetPack 6.0 and 6.1, not support 6.1
 - Python 3.10  
 - Torch 2.3+
 
-
 ## Table of Contents
+
   [A. 3D Printing Guide](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
 
   [B. Install LeRobot](https://wiki.seeedstudio.com/lerobot_so100m_new/#install-lerobot)
@@ -183,18 +185,17 @@ If you purchase the Arm Kit version, both power supplies are 5V. If you purchase
 
   [L. Evaluate your policy](https://wiki.seeedstudio.com/lerobot_so100m_new/#evaluate-your-policy)
 
-
 ## 3D Printing Guide
 
 :::caution
 Following the official update of SO101, SO100 will no longer support it and the source files will be deleted as per the official, but the source files can still be found in our [Makerworld](https://makerworld.com/zh/models/908660). However, for users who have previously purchased SO100, the tutorials and installation methods remain compatible. The print of SO101 is fully compatible with the motor kit installation of SO100.
 :::
 
-
 ### Step 1: Choose a printer
 
 The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
-- Material: PLA+ 
+
+- Material: PLA+
 - Nozzle Diameter and Precision: 0.4mm nozzle diameter at 0.2mm layer height or 0.6mm nozzle at 0.4mm layer height.
 - Infill Density: 15%  
 
@@ -209,6 +210,7 @@ The STL files provided are ready to print on many FDM printers. Below are the te
 - There should be no supports in the screw holes with horizontal axes.
 
 ### Step 3: Print the parts
+
 All the parts for the leader or follower are for easy 3D printing already contained in a single file, correctly orientated for z upwards to minimize supports.
 
 - For printer bed sizes of 220mmx220mm (such as the Ender), print these files:
@@ -219,11 +221,10 @@ All the parts for the leader or follower are for easy 3D printing already contai
   - [Follower](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Follower/Prusa_Follower_SO101.stl)
   - [Leader](https://github.com/TheRobotStudio/SO-ARM100/blob/main/STL/SO101/Leader/Prusa_Leader_SO101.stl)
 
-
-
 ## Install LeRobot
 
 Environments such as pytorch and torchvision need to be installed based on your CUDA.
+
 1. Install Miniconda:
 For Jetson:
 
@@ -235,6 +236,7 @@ source ~/.bashrc
 ```
 
 Or, For X86 Ubuntu 22.04:
+
 ```bash
 mkdir -p ~/miniconda3
 cd miniconda3
@@ -265,16 +267,19 @@ conda install ffmpeg -c conda-forge
 
 :::tip
 This usually installs ffmpeg 7.X for your platform compiled with the libsvtav1 encoder. If libsvtav1 is not supported (check supported encoders with ffmpeg -encoders), you can:
+
 - [On any platform] Explicitly install ffmpeg 7.X using:
+
 ```bash
 conda install ffmpeg=7.1.1 -c conda-forge
 ```
+
 - [On Linux only] Install ffmpeg build dependencies and compile ffmpeg from source with libsvtav1, and make sure you use the corresponding ffmpeg binary to your install with which ffmpeg.
 
-If you encounter an error like this, you can use this command too. 
+If you encounter an error like this, you can use this command too.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
 </div>
 
@@ -286,7 +291,6 @@ If you encounter an error like this, you can use this command too.
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
-
 For Jetson Jetpack 6.0+ devices (please make sure to install [Pytorch-gpu and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson) from step 5 before executing this step):
 
 ```bash
@@ -297,7 +301,6 @@ conda install -y -c conda-forge ffmpeg
 conda uninstall numpy
 pip3 install numpy==1.26.0  # This should match torchvision
 ```
-
 
 6. Check Pytorch and Torchvision
 
@@ -312,7 +315,6 @@ If the printed result is False, you need to reinstall Pytorch and Torchvision ac
 
 If you are using a Jetson device, install Pytorch and Torchvision according to [this tutorial](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md#installing-pytorch-on-recomputer-nvidia-jetson).
 
-
 ## Configure the motors
 
 import Tabs from '@theme/Tabs';
@@ -320,9 +322,7 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-
 <TabItem value="SO101" label="SO101">
-
 
 The servo calibration and initialization process for SO-ARM101 is the same as that of SO-ARM100 in terms of both method and code. However, please note that the gear ratios for the first three joints of the SO-ARM101 Leader Arm differ from those of SO-ARM100, so it’s important to distinguish and calibrate them carefully.
 
@@ -341,10 +341,9 @@ You now should plug the 5V or 12V power supply to the motor bus. 5V for the STS3
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/all_motos.png" />
 </div>
-
 
 ***The following are the code calibration steps, please calibrate with the reference wiring servo in the picture above***
 
@@ -367,6 +366,7 @@ Remove the usb cable from your MotorsBus and press Enter when done.
 The port of this MotorsBus is /dev/ttyACM1
 Reconnect the USB cable.
 ```
+
 :::tip
 Remember to remove the usb, otherwise the interface will not be detected.
 :::
@@ -391,7 +391,6 @@ Please use a 5V power supply for calibrating Leader motors (ST-3215-C046, C044, 
 | **Leader Arm Joint 6 Calibration** | **Leader Arm Joint 5 Calibration** | **Leader Arm Joint 4 Calibration** | **Leader Arm Joint 3 Calibration** | **Leader Arm Joint 2 Calibration** | **Leader Arm Joint 1 Calibration** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L5.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L4.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L3.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L2.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/cal_L1.jpg) |
-
 
 :::danger
 If you buy the Arm Kit version (ST-3215-C001), use a 5V power supply. If you buy the Arm Kit Pro version, please use a 12V power supply to calibrate the servo (ST-3215-C047/ST-3215-C018).
@@ -449,7 +448,7 @@ Do the same steps for the leader arm.
 python -m lerobot.setup_motors \
     --teleop.type=so101_leader \
     --teleop.port=/dev/ttyACM0  # <- paste here the port found at previous step
-```    
+```
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -459,12 +458,13 @@ python -m lerobot.setup_motors \
 
 </Tabs>
 
-
 ## Assembly
 
 :::tip
+
 - The dual-arm assembly process of SO-ARM101 is the same as that of SO-ARM100. The only differences are the addition of cable clips on SO-ARM101 and the different gear ratios of the joint servos on the Leader Arm. So both SO100 and SO101 can be installed by referring to the following content
-- Before assembly, please check your motor model and reduction ratio again. If you have purchased SO100, you can ignore this step. If you have purchased SO101, please check the following table to distinguish F1 to F6 and L1 to L6. 
+- Before assembly, please check your motor model and reduction ratio again. If you have purchased SO100, you can ignore this step. If you have purchased SO101, please check the following table to distinguish F1 to F6 and L1 to L6.
+
 :::
 
   | Servo Model                            | Gear Ratio | Corresponding Joints         |
@@ -488,24 +488,24 @@ If you purchased the **SO101 Arm Kit Standard Edition**, all power supplies are 
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L7.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L8.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L9.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L10.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L12.jpg) |
 | **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** | **Step 18** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L18.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L21.jpg) |
-| **Step 19** | **Step 20** | 
+| **Step 19** | **Step 20** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L22.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_L23.jpg) |
 
 **Assemble Follower Arm**
 
 :::tip
-- The steps for assembling the Follower Arm are generally the same as those for the Leader Arm. The only difference lies in the installation method of the end-effector (gripper and handle) after Step 12.
-:::
 
+- The steps for assembling the Follower Arm are generally the same as those for the Leader Arm. The only difference lies in the installation method of the end-effector (gripper and handle) after Step 12.
+
+:::
 
 | **Step 1** | **Step 2** | **Step 3** | **Step 4** | **Step 5** | **Step 6** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F1.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F2.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F3.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F3.5.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F4.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F5.jpg) |
 | **Step 7** | **Step 8** | **Step 9** | **Step 10** | **Step 11** | **Step 12** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F6.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F7.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F8.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F9.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F11.jpg) |![fig6](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F12.jpg) |
-| **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** | 
+| **Step 13** | **Step 14** | **Step 15** | **Step 16** | **Step 17** |
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F15.jpg) |![fig4](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F16.jpg) |![fig5](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/install_F17.jpg) |
-
 
 ## Calibrate
 
@@ -522,7 +522,6 @@ Next, you need to connect the power supply and data cable to your SO-10x robot f
 **Manual calibration of follower arm**
 
 Please connect the interfaces of the 6 robot servos via a 3-pin cable and connect the chassis servo to the servo drive plate, then run the following command or API example to calibrate the robot arm:
-
 
 ***Interface permissions are given first***
 
@@ -556,7 +555,6 @@ python -m lerobot.calibrate \
 <iframe width="900" height="600" src="https://www.youtube.com/embed/22n6f5xH9Dk?si=2QTzn1CDbsSv6Y_H" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Teleoperate
 
 **Simple teleop**
@@ -586,8 +584,6 @@ The teleoperate command will automatically:
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/hnRwfcyX1ZI?si=RuzYjP_FUTK16lfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
-
 
 ## Add cameras
 
@@ -627,7 +623,6 @@ You can find the pictures taken by each camera in the `outputs/captured_images` 
 When using Intel RealSense cameras in , you could get this error: , this can be solved by running the same command with permissions. Note that using RealSense cameras in is unstable.macOSError finding RealSense cameras: failed to set power statesudomacOS.
 :::
 
-
 Then you will be able to display the cameras on your computer while you are teleoperating by running the following code. This is useful to prepare your setup before recording your first dataset.
 
 ```bash
@@ -645,6 +640,7 @@ python -m lerobot.teleoperate \
 If you have more cameras, you can change `--robot.cameras` to add cameras. You should note the format of the index_or_path, which is determined by the last digit of the camera ID output by `python -m lerobot.find_cameras opencv`.
 
 For example, you want to add a side camera:
+
 ```bash
 python -m lerobot.teleoperate \
     --robot.type=so101_follower \
@@ -673,17 +669,13 @@ pip3 install rerun-sdk==0.23
 
 :::
 
-
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/EUcXlLlOjGE?si=6ncQ7o5ZFLR4PGTU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-
 ## Record the dataset
 
 - If you want to save the dataset locally, you can run it directly:
-
 
 ```bash
 python -m lerobot.record \
@@ -739,16 +731,17 @@ python -m lerobot.record \
 ```
 
 You will see a lot of lines appearing like this one:
+
 ```bash
 INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5hz) dtWfoll: 0.25 (3963.7hz) dtRfoll: 6.22 (160.7hz) dtRlaptop: 32.57 (30.7hz) dtRphone: 33.84 (29.5hz)
 ```
 
-
 **Parameter Explanations**
+
 - episode-time-s: It represents the time for collecting data each time.
 - reset-time-s: It is the preparation time between each data collection.
 - num-episodes: It indicates how many groups of data are expected to be collected.
-- push-to-hub: It determines whether to upload the data to the HuggingFace Hub. 
+- push-to-hub: It determines whether to upload the data to the HuggingFace Hub.
 
 :::tip
 
@@ -779,6 +772,7 @@ INFO 2024-08-10 15:02:58 ol_robot.py:219 dt:33.34 (30.0hz) dtRlead: 5.06 (197.5h
 </div>
 
 ## Visualize the dataset
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -800,6 +794,7 @@ If you upload with `--dataset.push_to_hub=false`, you can also visualize it loca
 python -m lerobot.scripts.visualize_dataset_html \
   --repo-id seeed_123/so101_test \
 ```
+
 **Here, `seeed_123` is the custom `repo_id` name defined when collecting data.**
 
 <div align="center">
@@ -807,8 +802,8 @@ python -m lerobot.scripts.visualize_dataset_html \
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/visualize_datasets.png" />
 </div>
 
-
 ## Replay an episode
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -825,6 +820,7 @@ python -m lerobot.replay \
 ```
 
 ## Train a policy
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -844,7 +840,6 @@ python -m lerobot.scripts.train \
 
 **If you want to train on a local dataset, make sure the `repo_id` matches the one used during data collection and add `--policy.push_to_hub=False`.**
 
-
 ```bash
 python -m lerobot.scripts.train \
   --dataset.repo_id=seeedstudio123/test \
@@ -857,21 +852,18 @@ python -m lerobot.scripts.train \
   --steps=300000 
 ```
 
-
 Let's explain it:
 
-* **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=${HF_USER}/so101_test`.
-* **Training steps**: We modify the number of training steps using `--steps=300000`. The algorithm defaults to 800000 steps, and you can adjust it based on the difficulty of your task and by observing the loss during training.
-* **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
-* **Device selection**: We provide `policy.device=cuda` because we are training on an Nvidia GPU, but you can use `policy.device=mps` for training on Apple Silicon.
-* **Visualization tool**: We provide `wandb.enable=true` to visualize training charts using [Weights and Biases](https://docs.wandb.ai/quickstart). This is optional, but if you use it, ensure you have logged in by running `wandb login`.
-
-
+- **Dataset specification**: We provide the dataset via the parameter `--dataset.repo_id=${HF_USER}/so101_test`.
+- **Training steps**: We modify the number of training steps using `--steps=300000`. The algorithm defaults to 800000 steps, and you can adjust it based on the difficulty of your task and by observing the loss during training.
+- **Policy type**: We provide the policy with `policy.type=act`. Similarly, you can switch between policies such as [act, diffusion, pi0, pi0fast, pi0fast, sac, smolvla]., which will load the configuration from `configuration_act.py`. Importantly, this policy will automatically adapt to your robot's (e.g., `laptop` and `phone`) motor states, motor actions, and the number of cameras, as this information is already stored in your dataset.
+- **Device selection**: We provide `policy.device=cuda` because we are training on an Nvidia GPU, but you can use `policy.device=mps` for training on Apple Silicon.
+- **Visualization tool**: We provide `wandb.enable=true` to visualize training charts using [Weights and Biases](https://docs.wandb.ai/quickstart). This is optional, but if you use it, ensure you have logged in by running `wandb login`.
 
 If you encounter the following error:
 
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/so101/stack_bug.png" />
 </div>
 
@@ -881,10 +873,10 @@ Try running the following command to resolve it:
 pip install datasets==2.19
 ```
 
-
 Training should take several hours. You will find checkpoints in `outputs/train/act_so100_test/checkpoints`.
 
 To resume training from a checkpoint, below is an example command to resume from last checkpoint of the `act_so101_test` policy:
+
 ```bash
 python -m lerobot.scripts.train \
   --config_path=outputs/train/act_so101_test/checkpoints/last/pretrained_model/train_config.json \
@@ -909,6 +901,7 @@ huggingface-cli upload ${HF_USER}/act_so101_test${CKPT} \
 ```
 
 ## Evaluate your policy
+
 :::tip
 The SO100 and SO101 codes are compatible. Users of SO100 can directly utilize SO101's parameters and code for operation.
 :::
@@ -939,7 +932,7 @@ python -m lerobot.record  \
   --dataset.repo_id=seeed/eval_test123 \
   --dataset.single_task="Put lego brick into the transparent box" \
   --policy.path=outputs/train/act_so101_test/checkpoints/last/pretrained_model
-``` 
+```
 
 1. The `--policy.path` parameter indicates the path to the weight file of your policy training results (e.g., `outputs/train/act_so101_test/checkpoints/last/pretrained_model`). If you upload the model training result weight file to Hub, you can also use the model repository (e.g., `${HF_USER}/act_so100_test`).
 
@@ -958,50 +951,64 @@ python -m lerobot.record  \
 - If you are following this documentation/tutorial, please git clone the recommended GitHub repository `https://github.com/Seeed-Projects/lerobot.git`. The repository recommended in this documentation is a verified stable version; the official Lerobot repository is continuously updated to the latest version, which may cause unforeseen issues such as different dataset versions, different commands, etc.
 
 - If you encounter the following error when calibrating servo IDs:
+
   ```bash
   `Motor ‘gripper’ was not found, Make sure it is connected`
   ```
+
   Please carefully check whether the communication cable is properly connected to the servo and whether the power supply is providing the correct voltage.
 
 - If you encounter:
+
   ```bash
   Could not connect on port "/dev/ttyACM0"
   ```
+
   And you can see ACM0 exists when running `ls /dev/ttyACM*`, it means you forgot to grant serial port permissions. Enter `sudo chmod 666 /dev/ttyACM*` in the terminal to fix it.
 
 - If you encounter:
+
   ```bash
   No valid stream found in input file. Is -1 of the desired media type?
   ```
+
   Please install ffmpeg 7.1.1 using `conda install ffmpeg=7.1.1 -c conda-forge`.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/No valid stream.png" />
 </div>
 
 - If you encounter:
+
   ```bash
   ConnectionError: Failed to sync read 'Present_Position' on ids=[1,2,3,4,5,6] after 1 tries. [TxRxResult] There is no status packet!
   ```
+
   You need to check whether the robotic arm on the corresponding port is powered on, and whether the data cables of the bus servos are loose or disconnected. If a servo's light is not on, it means the cable of the previous servo is loose.
 
 - If you encounter the following error when calibrating the robotic arm:
+
   ```bash
   Magnitude 30841 exceeds 2047 (max for sign_bit_index=11)
   ```
+
   Power off and restart the robotic arm, then try calibrating again. This method can also be used if the MAX angle reaches a value of tens of thousands during calibration. If this doesn't work, you need to recalibrate the corresponding servos, including median calibration and ID writing.
 
 - If you encounter during the evaluation phase:
+
   ```bash
   File exists: 'home/xxxx/.cache/huggingface/lerobot/xxxxx/seeed/eval_xxxx'
   ```
+
   Please delete the folder starting with `eval_` first and then run the program again.
 
 - If you encounter during the evaluation phase:
+
   ```bash
   `mean` is infinity. You should either initialize with `stats` as an argument or use a pretrained model
   ```
+
   Please note that keywords like "front" and "side" in the `--robot.cameras` parameter must be strictly consistent with those used when collecting the dataset.
 
 - If you have repaired or replaced parts of the robotic arm, please completely delete the files under `~/.cache/huggingface/lerobot/calibration/robots` or `~/.cache/huggingface/lerobot/calibration/teleoperators` and recalibrate the robotic arm. Otherwise, error messages may appear, as calibration information is stored in JSON files in these directories.

@@ -316,7 +316,6 @@ El montaje vertical también es adecuado para el reComputer R1000, sin embargo, 
 
   </tbody>
 </table>
-
 </div>
 
 ## Soporte Técnico y Discusión de Productos

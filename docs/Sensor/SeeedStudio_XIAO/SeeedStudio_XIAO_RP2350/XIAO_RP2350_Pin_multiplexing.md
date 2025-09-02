@@ -84,12 +84,12 @@ void loop() {
   delay(1000);                      // wait for a second
 }
 ```
+
 ### Effect
 
 If everything goes smoothly, after uploading the program, you should see the following effect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/1.gif" style={{width:500, height:'auto'}}/></div>
-
 
 ## Digital as PWM
 
@@ -159,6 +159,7 @@ void loop() {
   }
 }
 ```
+
 ### Effect
 
 If the program runs successfully, you will see the following running effect.
@@ -169,7 +170,7 @@ If the program runs successfully, you will see the following running effect.
 
 XIAO MG24(Sense) Development Board  have to 12 bit ADC for high-resolution reading of analog sensor values , it can help us to read more accurate values.
 
-Next , We will choose two sensors to reflect the characteristics of ADC . 
+Next , We will choose two sensors to reflect the characteristics of ADC .
 
 ### Hadware Preparation
 
@@ -203,7 +204,6 @@ Next , We will choose two sensors to reflect the characteristics of ADC .
   </tr>
 </table>
 
-
 ### Software Implementation
 
 ``` cpp
@@ -221,26 +221,28 @@ void loop()
     delay(200);
 }
 ```
+
 ### Effect
+
 If everything goes smoothly, after uploading the program, you should see the following effect.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/xiao_rp2350_pins/V2/5.png" style={{width:800, height:'auto'}}/></div>
 
 ## UART
 
-When working with Arduino IDE, Serial communication is an essential part of many projects. To 
+When working with Arduino IDE, Serial communication is an essential part of many projects. To
 use Serial in Arduino IDE, you need to start by opening the Serial Monitor window. This can be done by clicking on the **Serial Monitor** icon in the toolbar or by pressing the **Ctrl+Shift+M** shortcut key.
 
 ### General Usage
 
 Some of the commonly used Serial functions include:
 
-- `Serial.begin()` -- which initializes the communication at a specified baud rate; 
-- `Serial.print()` -- which sends data to the Serial port in a readable format; 
+- `Serial.begin()` -- which initializes the communication at a specified baud rate;
+- `Serial.print()` -- which sends data to the Serial port in a readable format;
 - `Serial.write()` -- which sends binary data to the Serial port;
-- `Serial.available()` -- which checks if there is any data available to be read from the Serial port; 
-- `Serial.read()` -- which reads a single byte of data from the Serial port; 
-- `Serial.flush()` -- which waits for the transmission of outgoing serial data to complete. 
+- `Serial.available()` -- which checks if there is any data available to be read from the Serial port;
+- `Serial.read()` -- which reads a single byte of data from the Serial port;
+- `Serial.flush()` -- which waits for the transmission of outgoing serial data to complete.
 
 By using these Serial functions, you can send and receive data between the Arduino board and your computer, which opens up many possibilities for creating interactive projects.
 
@@ -278,8 +280,8 @@ If everything goes smoothly, after uploading the program, you should see the fol
 
 ### Usage of Serial1
 
-According to the above XIAO RP2350 Pin diagrams for specific parameters, we can observe that there are TX and RX pin(D6,D7). 
-The usage is also very similar, but we need to use **serial port monitoring tool** to monitor D6,D7 pins to get data. 
+According to the above XIAO RP2350 Pin diagrams for specific parameters, we can observe that there are TX and RX pin(D6,D7).
+The usage is also very similar, but we need to use **serial port monitoring tool** to monitor D6,D7 pins to get data.
 So next, we will use the D6,D7 pins to use **serial1**.
 
 :::tip
@@ -456,26 +458,26 @@ The XIAO RP2350 chip integrates multiple peripherals, including an SPI interface
 ### Hadware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO RP2350</th>
+ <tr>
+     <th>Seeed Studio XIAO RP2350</th>
       <th>Grove - OLED Display 1.12 (SH1107) V3.0 - SPI/IIC</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-OLED-Display-1.12-(SH1107)_V3.0/img/10402050_Main-02.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 After preparing the hardware as mentioned above, use jumper wires to connect the SPI interface of the XIAO and OLED. Please refer to the following table to wire.
@@ -534,23 +536,21 @@ Overall, this code demonstrates how to use the U8g2 library to control an OLED d
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-R4AM1/img/15.png" style={{width:700, height:'auto'}}/></div>
 
-
 ## Finish up
+
 You have learned the basic functions of the XIAO RP2350 pins. Now, let's have fun with it~
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/6.png" style={{width:1000, height:'auto'}}/></div>
-
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

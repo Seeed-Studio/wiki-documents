@@ -10,21 +10,22 @@ last_update:
   author: Matthew
 ---
 
-# ✨ Contributor Program ✨ 
+# ✨ Contributor Program ✨
 
 In Seeed, we greatly value our community of Seeeders. The [Seeed Studio Contributor Program](/contributors) is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
 <p style={{textAlign: 'center'}}><img src="http://files.seeedstudio.com/wiki/wiki-platform/contributor/contributors.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## How can you contribute and be part of our team?
 
 As an open sourced platform, we welcome contributions from all individuals who wish to help us improve our wiki platform.
 
 :::info
-1. We have **a bunch of assignments available(shown below)** on GitHub that our team needs help with to enhance our wiki platform, each with detailed description of what is required. 
+
+1. We have **a bunch of assignments available(shown below)** on GitHub that our team needs help with to enhance our wiki platform, each with detailed description of what is required.
 2. Once completed, the contributor can submit their content via "Pull Request"
 3. Upon approval, Our team of maintainers will merge the submission and record the contributions and provide tokens of appreciations.
+
 :::
 
 ### [Assignmnents on GitHub](https://github.com/orgs/Seeed-Studio/projects/6)
@@ -93,12 +94,12 @@ We’ve already listed some tasks on GitHub. Currently, the task types include:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

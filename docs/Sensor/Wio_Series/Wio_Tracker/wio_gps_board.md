@@ -30,38 +30,38 @@ We have prepared everything, the last thing we need is your creative projects, s
 
 ## Features
 
-* Multi-GNSS engine for combined GPS and BeiDou, higher precision location
-* EPO™ Technology, providing predicted Extended Prediction Orbit to speed up TTFF without need of extra server
-* Based on EPO™ data, QuecFastFix™ Online function further reduces TTFF in cold start, making cold start TTFF comparable to that in hot start
-* GLP(GNSS Low Power) Mode, 40% power consumption for normal mode and slightly lower precision
-* Period Mode, also reduce power consumption by controlling the sleep time
-* Always Locate™ Technology, an intelligent algorithm for power saving
-* Easy™(Embedded Assist System) Technology, self-generated orbit prediction for instant positioning fix, reducing the Time To First Fix(TTFF)
-* LOCUS™ Technology, innate navigation data logger solution with no need for host and external flash
-* AT Command: GSM 07.07, 07.05 and enhanced AT Command
-* Bluetooth 3.0 with SPP and HFP-AG
-* 6 Grove Connectors
-* Nano SIM and TF card 2 in 1 socket
-* Arduino IDE compatible
-* Low power and small size
-
+- Multi-GNSS engine for combined GPS and BeiDou, higher precision location
+- EPO™ Technology, providing predicted Extended Prediction Orbit to speed up TTFF without need of extra server
+- Based on EPO™ data, QuecFastFix™ Online function further reduces TTFF in cold start, making cold start TTFF comparable to that in hot start
+- GLP(GNSS Low Power) Mode, 40% power consumption for normal mode and slightly lower precision
+- Period Mode, also reduce power consumption by controlling the sleep time
+- Always Locate™ Technology, an intelligent algorithm for power saving
+- Easy™(Embedded Assist System) Technology, self-generated orbit prediction for instant positioning fix, reducing the Time To First Fix(TTFF)
+- LOCUS™ Technology, innate navigation data logger solution with no need for host and external flash
+- AT Command: GSM 07.07, 07.05 and enhanced AT Command
+- Bluetooth 3.0 with SPP and HFP-AG
+- 6 Grove Connectors
+- Nano SIM and TF card 2 in 1 socket
+- Arduino IDE compatible
+- Low power and small size
 
 ### Quectel MC20 Module
 
-* Ultra compact size: 18.7 × 16.0 × 2.1mm
-* Multi navigation constellation: GPS/ BeiDou/ QZSS
-* GNSS receiver channels: 99 acquisition/ 33 tracking channels
-* Powerful AGPS functions: Autonomous AGPS EASY™/ Offline AGPS EPO™/ Online AGPS QuecFastFix
-* Built-in LNA for better GNSS sensitivity (-167dBm@Tracking): able to use passive GNSS antenna without the need of any extra LNA
-* Enhanced GNSS features: SDK command/ AIC/ LOCUS/ GLP
-* GSM quad-band: 850/900/1800/1900MHz
-* Multi internet protocols: TCP/ UDP/ PPP/ HTTP/ FTP/ SSL
-* Support Voice, SMS, QuecFOTATM, DSSS, OpenCPU
-* Support Bluetooth V3.0: SPP & HFP-AG profiles
+- Ultra compact size: 18.7 × 16.0 × 2.1mm
+- Multi navigation constellation: GPS/ BeiDou/ QZSS
+- GNSS receiver channels: 99 acquisition/ 33 tracking channels
+- Powerful AGPS functions: Autonomous AGPS EASY™/ Offline AGPS EPO™/ Online AGPS QuecFastFix
+- Built-in LNA for better GNSS sensitivity (-167dBm@Tracking): able to use passive GNSS antenna without the need of any extra LNA
+- Enhanced GNSS features: SDK command/ AIC/ LOCUS/ GLP
+- GSM quad-band: 850/900/1800/1900MHz
+- Multi internet protocols: TCP/ UDP/ PPP/ HTTP/ FTP/ SSL
+- Support Voice, SMS, QuecFOTATM, DSSS, OpenCPU
+- Support Bluetooth V3.0: SPP & HFP-AG profiles
 
 :::caution
     Unlike most Arduino & Genuino boards, the Wio Tracker runs at 3.3V. The maximum voltage that the I/O pins can tolerate is 3.3V. Applying voltages higher than 3.3V to any I/O pin could damage the board.
 :::
+
 ## Specification
 
 | Item|Function|Value|
@@ -71,7 +71,7 @@ We have prepared everything, the last thing we need is your creative projects, s
 ||SRAM|32KB|
 ||Operating Voltage|3.3V|
 ||DC Current per I/O Pin|7 mA|
-||Clock Speed	|48 MHz|
+||Clock Speed |48 MHz|
 |GSM/GPRS|GSM|850／900／1800／1900MHz, Class 4 (2W @850／900MHz), Class 1 (1W @1800／1900MHz)|
 |||AT Command: GSM 07.07, 07.05 and enhanced AT Command|
 |||Low Power Consumption: 1.2mA@DRX=5|
@@ -101,16 +101,14 @@ We have prepared everything, the last thing we need is your creative projects, s
 ||Width|48.2mm|
 ||Weight||
 
-
 ## Application Ideas
 
-* Intelligent Transportation
-* Pet Tracker
-* Outdoor sports equipments
-* Driving recorder
-* Wearable device
-* Property Security
-
+- Intelligent Transportation
+- Pet Tracker
+- Outdoor sports equipments
+- Driving recorder
+- Wearable device
+- Property Security
 
 :::tip
     Use Grove modules to expand your application
@@ -124,10 +122,10 @@ In brief, Groves is hundreds of sensor that in standard style, which is consist 
 
 ![](https://files.seeedstudio.com/wiki/GPS_Tracker/images/GPS_Tracker_v1.2_bottom.png)
 
-
 :::tip
     If you want to use the on-board Grove connector, please use digitalWrite(12, HIGH) to open 3V3_B. Otherwise you can't provide power to Grove modules.
 :::
+
 ## Pin Map
 
 |Pin Name|External Interrupt|PWM|Analog In|Analog Out|Function|
@@ -167,14 +165,11 @@ First you need to install the latest Arduino IDE, and [ADD Seeeduino SAMD to you
 
 When the first time to insert the board, you should get a USB COM device name Wio Tracker that need to install a driver. Click [here](https://files.seeedstudio.com/wiki/Seeeduino_LoRa/res/driver.zip) to download driver for the board.
 
-
-
 To make sure the driver was installed successful, open your Device Manager to see if **Wio Tracker** exists.
 
 ### Install the library of Wio Tracker(For Windows, Linux and Mac)
 
 Click [here](https://github.com/Seeed-Studio/Seeed_Wio_GPS_Board/archive/master.zip) to download the library(zip file) of Wio Tracker and import the zip library into your Arduino IDE. If you are new to this, please click [here](https://www.arduino.cc/en/Guide/Libraries#toc4) for more information.
-
 
 ### Blink
 
@@ -215,16 +210,12 @@ void loop() {
 
 And Then,
 
-* Click on **Tools > Board > Wio Tracker**
-* Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
-
+- Click on **Tools > Board > Wio Tracker**
+- Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
 Then click on the **Upload** button on the left-top of Arduino IDE, seconds later the sketch was uploaded successful.
 
-
 If the uploading is success, you should the some info in red and you will see the User LED, it's blinking in blue.
-
-
 
 ### Check battery
 
@@ -261,7 +252,7 @@ void loop() {
 
 To use 6 Grove connectors on Wio Tracker, we have to use `digitalWrite(12, HIGH)` to open 3V3\_B to power the Grove modules(D12 defaults to LOW in order to reduce consumption).
 
-* The following code shows how to use Analog and Digital Grove modules:
+- The following code shows how to use Analog and Digital Grove modules:
 
 Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > Button\_LightSensor** to open the sketch or copy the blow code:
 
@@ -292,7 +283,7 @@ void loop() {
 }   
 ```
 
-* The following code shows how to use Grove UART port:
+- The following code shows how to use Grove UART port:
 
 ```c
 #define GrovePowerPin   12
@@ -316,6 +307,7 @@ Please use [USB To Uart](https://www.seeedstudio.com/USB-To-Uart-5V%263V3-p-1832
 :::caution
     If both SerialUSB and SerialDBG are used in the code, please open SerialUSB's com port when using, otherwise SerialDBG will not work.
 :::
+
 ### GNSS
 
 MC20 module provides the AT Commands Set for MCU to communicate with its GSM/GPRS, GNSS and Bluetooth modules.
@@ -367,7 +359,6 @@ void loop() {
   delay(1000);
 }
 ```
-
 
 ### SMS Message Read
 
@@ -477,12 +468,11 @@ void loop() {
 
 ### SD Card
 
-- **Step 1.** Plug SD card to Wio GPS board. 
-- **Step 2.** Use the usb cable to connect Wio GPS board to PC. 
+- **Step 1.** Plug SD card to Wio GPS board.
+- **Step 2.** Use the usb cable to connect Wio GPS board to PC.
 - **Step 3.** Open your Arduino IDE, Select **Tools** -> **Board** -> **Wio GPS board**.
 - **Step 4.** Click on **File > Examples > Seeed_Wio_GPS_Board\SD_Card_Test_DumpFile** to open the sketch or copy the blow code.
 - **Step 5.** Upload code to Wio GPS board, it shows how to read a file from the SD card using the SD library and send it over the serial port.
-
 
 ```cpp
 /*
@@ -552,24 +542,21 @@ void loop() {
 }
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
-* [Schematics in Eagle](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker_Eagle.zip)
-* [Sketchup file(3D)](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker.skp)
-* [GSM Bluetooth Application Note](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_BT_Application_Note_V1.2(C).pdf)
-* [GSM File AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_FILE_AT_Commands_Manual_V1.5.pdf)
-* [MC20 AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_AT_Commands_Manual_V1.1.pdf)
-* [MC20 GNSS AGPS ApplicationGuide](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
-* [MC20 GNSS AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
-* [MC20 GNSS Protocol Specification](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
+- [Schematics in Eagle](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker_Eagle.zip)
+- [Sketchup file(3D)](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/GPS_Tracker.skp)
+- [GSM Bluetooth Application Note](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_BT_Application_Note_V1.2(C).pdf)
+- [GSM File AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_GSM_FILE_AT_Commands_Manual_V1.5.pdf)
+- [MC20 AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_AT_Commands_Manual_V1.1.pdf)
+- [MC20 GNSS AGPS ApplicationGuide](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AGPS_ApplicationGuide_V1.1.pdf)
+- [MC20 GNSS AT Commands Manual](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_AT_Commands_Manual_V1.1.pdf)
+- [MC20 GNSS Protocol Specification](https://files.seeedstudio.com/wiki/GPS_Tracker/resources/Quectel_MC20_GNSS_Protocol_Specification_V1.0.pdf)
 
 ## Tech Support & Product Discussion
 
@@ -577,11 +564,11 @@ If you have any technical issues, please submit them to our [forum](http://forum
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

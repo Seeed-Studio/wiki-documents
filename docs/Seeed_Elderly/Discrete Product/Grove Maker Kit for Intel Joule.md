@@ -22,10 +22,10 @@ The Grove maker kit for Intel Joule is the best kit for fast building prototype 
 
 ## Features
 
-
 ## Part Introduction
 
 ### [Grove Shield for Intel Joule](https://www.seeedstudio.com/Grove-Shield-for-Intel-Joule-p-2782.html)
+
 ![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/grove%20shield%20for%20intel%20joule.jpg)
 
 The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the family of Grove modules. by simplely plugging it onto your Joule board, you can have 8 solid and easy-to-use Grove connectors which includes interfaces like I2C, UART, digital I/Os and analog inputs right away. It also keeps the 2x20 pin headers in case you want more GPIOs for the project. A switch is integrated on board for selecting the working voltage at either 5V or 3.3 V.
@@ -42,9 +42,8 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 |[**Grove - Touch Sensor**](https://www.seeedstudio.com/Grove-Touch-Sensor-p-747.html)|![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/Grove%20-%20Touch%20Sensor.jpg)|It can detect the change in capacitance when a finger is nearby. You can use it as a button that allows you to replace press with touch. Connect it to any digital connector on Grove Shield for Intel Joule.|
 |[**Grove - Rotary Angle Sensor(P)**](https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor(P)-p-1242.html)|![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/Grove%20-%20Rotary%20Angle%20Sensor.jpg)|It can convert the analog signal(from 0 to 300 degrees) to a linear change analog output between 0 and Vcc. Connect it to an analog connector on Grove Shield for Intel Joule.|
 
-
-
 ### Grove Actuators
+
 |Item|Pic.|Description|
 |--|--|--|
 |[**Grove - LCD RGB Backlight**](https://www.seeedstudio.com/Grove-LCD-RGB-Backlight-p-1643.html)|![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/Grove%20-%20LCD%20RGB%20Backlight.jpg)|A simple user interface that supports user-defined characters and a colorful RGB backlight. Connect it to an I2C on Grove Shield for Intel Joule to display the information you need.|
@@ -54,14 +53,13 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 |[**Grove - Blue LED**](https://www.seeedstudio.com/Grove-Blue-LED-p-1139.html)|![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/Grove%20-%20Blue%20LED.jpg)|This is a group of simple LEDs. Connect them to any digital port on Grove Shield for Intel Joule to light them up with a HIGH output.|
 |[**Gear Stepper Motor with Driver**](https://www.seeedstudio.com/Gear-Stepper-Motor-with-Driver-p-1685.html)|![](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/img/Motor%20with%20Driver.jpg)|It allows you to drive a stepper motor by connecting the stepper motor to the driver board, and connect the driver to any digital port on Grove Shield for Intel Joule that has a PWM output. Then you can control your stepper motor easily with lines of code.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
+
 - [Grove Shield for Intel Joule v1.0.pdf](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/res/Grove%20Shield%20for%20Intel%20Joule%20v1.0.pdf)
 - [Grove Shield for Intel Joule_eagle.zip](https://files.seeedstudio.com/wiki/Grove_Maker_Kit_for_Intel_Joule/res/Grove%20Shield%20for%20Intel%20Joule_eagle.zip)
 
@@ -70,11 +68,11 @@ The Grove Shield for Intel Joule is the key to bridge the Intel Joule to the fam
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

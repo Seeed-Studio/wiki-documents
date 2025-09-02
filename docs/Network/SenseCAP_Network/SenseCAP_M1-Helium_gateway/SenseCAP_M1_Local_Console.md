@@ -25,21 +25,21 @@ last_update:
 
 **1\. Get your Hotspot's CPU ID and S/N**
 
-*   If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the device label of your SenseCAP M1, and get the S/N and CPU ID
+- If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the device label of your SenseCAP M1, and get the S/N and CPU ID
 
 ![Local Console Login Details](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-16.png)
 
-*   If you already have registered an account of SenseCAP M1 Dashboard and added your Hotspot, you can copy your Hotspot's CPU ID and S/N from the dashboard.
+- If you already have registered an account of SenseCAP M1 Dashboard and added your Hotspot, you can copy your Hotspot's CPU ID and S/N from the dashboard.
 
 ![Local Console Login Details 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
 
 **2\. Get the IP Address of your hotspot**
 
-*   If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the IP Address of your hotspot in your router admin page, or run diagnostic on your Helium APP to get the IP Address. Then type the IP Address in a browser to enter the Local Console page.
-*   If you already have registered an account of SenseCAP M1 Dashboard and added your Hotspot, you can find your Hotspot's IP Address from the dashboard:
-    *   Click the "**Wi-Fi IP Address**" or "**LAN IP Address**" link which directs to the Turbo Sync Local Console page.
-    *   If you are connected via Wi-Fi, you will see the Hotspots Wi-Fi IP address to click.
-    *   If you are connected via Ethernet cable or local LAN, you will see the Hotspot's LAN address to click.
+- If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the IP Address of your hotspot in your router admin page, or run diagnostic on your Helium APP to get the IP Address. Then type the IP Address in a browser to enter the Local Console page.
+- If you already have registered an account of SenseCAP M1 Dashboard and added your Hotspot, you can find your Hotspot's IP Address from the dashboard:
+  - Click the "**Wi-Fi IP Address**" or "**LAN IP Address**" link which directs to the Turbo Sync Local Console page.
+  - If you are connected via Wi-Fi, you will see the Hotspots Wi-Fi IP address to click.
+  - If you are connected via Ethernet cable or local LAN, you will see the Hotspot's LAN address to click.
 
 ![Local Console Login Details 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
 
@@ -88,8 +88,8 @@ The Turbo Sync process may take a while to complete and depends on the network s
 
 Click the orange "Reboot" button to start the reboot process.
 
-*   When you see \[reboot\] request sent + \[reboot going\], the process as started.
-*   When you see "----log stream disconnected from the host----" and "----log stream connected to the host----", you have finished the reboot process.
+- When you see \[reboot\] request sent + \[reboot going\], the process as started.
+- When you see "----log stream disconnected from the host----" and "----log stream connected to the host----", you have finished the reboot process.
 
 ![Reboot SenseCAP Hotspot](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4-2.png)
 
@@ -112,8 +112,8 @@ The shutdown feature is suggested to use before unplugging the device in order t
 
 Click the "**Shutdown**" button and accept the prompt.
 
-*   The shutdown will take a few minutes.
-*   You will see the blue led and the Ethernet port LEDs are off when the shutdown is finished.
+- The shutdown will take a few minutes.
+- You will see the blue led and the Ethernet port LEDs are off when the shutdown is finished.
 
 ![SenseCAP Shutdown Feature](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5-2.png)
 

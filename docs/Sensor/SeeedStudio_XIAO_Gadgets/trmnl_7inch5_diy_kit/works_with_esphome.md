@@ -25,7 +25,6 @@ import TabItem from '@theme/TabItem';
     <a class="get_one_now_item" href="https://www.seeedstudio.com/TRMNL-7-5-Inch-OG-DIY-Kit-p-6481.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-
 ## Introduction to [Home Assistant](https://www.home-assistant.io/)
 
 Home Assistant is a powerful open-source home automation platform that allows you to control and monitor your smart home devices from a single, unified interface. It acts as the central hub for your smart home, enabling you to automate routines, monitor sensors, and create a more intelligent living space.
@@ -194,7 +193,6 @@ display:
       it.print(0, 0, id(font1), "Hello World!");
 ```
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/BYOD_helloworld.png" style={{width:1000, height:'auto'}}/></div>
 
 Click **INSTALL** to install the code to the device and you will see the following image.
@@ -289,7 +287,6 @@ Wait a moment and you will see the feedback like the following image. If it fail
 </TabItem>
 </Tabs>
 
-
 ## Basic usages
 
 ### 1. Display shape
@@ -328,7 +325,6 @@ When you see the feedback like the following image, it means the code is running
 You can also [click here](https://esphome.io/components/display/) to see more usages.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/37.png" style={{width:600, height:'auto'}}/></div>
-
 
 ### 2. Display information in HA
 
@@ -404,7 +400,6 @@ display:
       it.printf(100, 200, id(myFont), "%.1f", id(myPressure).state);
 ```
 
-
 Install those codes to your device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
@@ -425,8 +420,6 @@ When you see the feedback like the following image, it means the code is running
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/34.png" style={{width:'80%', height:'auto'}}/></div>
 </div>
-
-
 
 ### 3. Display icon {#ttf}
 
@@ -706,13 +699,11 @@ You'll see a counter. It will increment by one every time it wakes up.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/90.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 ## Demo 3. Comprehensive example
 
 :::tip
 For you to understand better, we strongly recommend that you run the basic usages above first.
 :::
-
 
 This example demonstrates a comprehensive ESPHome configuration for the TRMNL 7.5-inch e-paper DIY kit. The YAML code integrates multiple features to create a smart, interactive display panel that works seamlessly with Home Assistant.
 
@@ -1051,7 +1042,6 @@ display:
 
 </details>
 
-
 When you see the feedback like the following image, it means the code is running successfully.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/esphome_demo3_byod.jpg" style={{width:800, height:'auto'}}/></div>
@@ -1069,7 +1059,6 @@ In this case, you should go to Settings -> Devices & Services -> Integrations to
 In this case, you should go to Settings -> Devices & Services -> Integrations to **ADD** your device to HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
-
 
 ### <span id="deepmode">Q3</span>: How can I upload a new program when device in deep sleep mode?
 

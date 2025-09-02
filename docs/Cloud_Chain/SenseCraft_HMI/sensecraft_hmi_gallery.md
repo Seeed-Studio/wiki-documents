@@ -76,17 +76,17 @@ Step 3. Click "Select Photos" and choose the images you want to upload from your
 
 Step 4. Important image requirements and limitations:
 
-  - Supports JPG, PNG, and GIF formats
+- Supports JPG, PNG, and GIF formats
 
-  - Photos over 2MB will be automatically compressed
+- Photos over 2MB will be automatically compressed
 
-  - Non-5:3 aspect ratios will be adjusted with white padding
+- Non-5:3 aspect ratios will be adjusted with white padding
 
-  - Target resolution: 800x480 pixels (or your device's native resolution)
+- Target resolution: 800x480 pixels (or your device's native resolution)
 
-  - Without a MicroSD card, you can upload a maximum of 3 photos
+- Without a MicroSD card, you can upload a maximum of 3 photos
 
-  - With a MicroSD card, you can upload up to 20 photos
+- With a MicroSD card, you can upload up to 20 photos
 
 Step 5. Select multiple files using Ctrl/Cmd + Click if desired
 
@@ -128,9 +128,9 @@ Step 1. Find the "Dither Mode:" dropdown in the control panel
 
 Step 2. Select the appropriate option for your device:
 
-  - **Full Color**: Best for color LCD displays, preserves all color information
+- **Full Color**: Best for color LCD displays, preserves all color information
 
-  - **Black and White**: Converts images to pure black and white, ideal for monochrome e-paper displays
+- **Black and White**: Converts images to pure black and white, ideal for monochrome e-paper displays
 
 :::tip
 For e-paper/e-ink displays, select "Black and White" mode for optimal display quality and faster refresh rates. For LCD screens, "Full Color" will provide the best visual experience.
@@ -267,9 +267,9 @@ For the best visual results on your device's display:
 
 3. **Optimize for display type**:
 
-  - For color LCD: Standard color images work well
-  - For e-paper/e-ink: Higher contrast images with fewer color gradients
-  - For 2-color e-paper: Black and white or high contrast images
+- For color LCD: Standard color images work well
+- For e-paper/e-ink: Higher contrast images with fewer color gradients
+- For 2-color e-paper: Black and white or high contrast images
 
 4. **File size**: Keep images under 2MB to avoid automatic compression
 
@@ -281,33 +281,33 @@ For the best visual results on your device's display:
 
 1. **Images not uploading**:
 
-  - Check that your image is in a supported format (JPG, PNG, GIF)
+- Check that your image is in a supported format (JPG, PNG, GIF)
 
-  - Ensure the file size is not too large (ideally under 2MB)
+- Ensure the file size is not too large (ideally under 2MB)
 
-  - Try a different browser or clear your browser cache
+- Try a different browser or clear your browser cache
 
 2. **Cannot upload more than 3 images**:
 
-  - Verify that you have a properly formatted MicroSD card inserted in your device
+- Verify that you have a properly formatted MicroSD card inserted in your device
 
-  - Check that the MicroSD card is formatted as FAT32
+- Check that the MicroSD card is formatted as FAT32
 
-  - Ensure the device is properly detecting the MicroSD card
+- Ensure the device is properly detecting the MicroSD card
 
 3. **Images display incorrectly**:
 
-  - Adjust the brightness/contrast using the image toolbar
+- Adjust the brightness/contrast using the image toolbar
 
-  - Prepare images that match your device's resolution
+- Prepare images that match your device's resolution
 
 4. **Deployment fails**:
 
-  - Ensure your device is properly connected to SenseCraft HMI
+- Ensure your device is properly connected to SenseCraft HMI
 
-  - Check that your device has sufficient storage space
+- Check that your device has sufficient storage space
   
-  - Restart your device and try deploying again
+- Restart your device and try deploying again
 
 ## Conclusion
 
@@ -318,7 +318,7 @@ Remember that for storing more than 3 images, you'll need a properly formatted M
 ## Resources
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [Compatible Devices - reTerminal E10xx](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
 
@@ -326,12 +326,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

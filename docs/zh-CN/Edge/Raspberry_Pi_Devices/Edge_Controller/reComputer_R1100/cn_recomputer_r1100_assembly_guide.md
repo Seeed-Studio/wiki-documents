@@ -335,7 +335,6 @@ reComputer R1100 支持 **垂直壁挂安装**，但 **安装支架** **不包�
     </tr>
   </tbody>
 </table>
-
 </div>
 
 

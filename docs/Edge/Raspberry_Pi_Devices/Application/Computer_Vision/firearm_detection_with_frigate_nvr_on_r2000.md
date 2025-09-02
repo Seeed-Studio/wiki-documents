@@ -25,6 +25,7 @@ no_comments: false # for Disqus
 For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a firearm is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
 
 ## Prerequisites
+
 ### Hardware Requirements
 
 <div class="table-center">
@@ -34,7 +35,7 @@ For this deployment, we expanded Frigate's existing model library and added a cu
          <th>reComputer AI R2000</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -81,6 +82,7 @@ sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
+
 ### Creating a yml file
 
 Create the `frigate.yml` file so that Docker Compose can run Frigate.
@@ -89,6 +91,7 @@ Create the `frigate.yml` file so that Docker Compose can run Frigate.
 cd ~
 sudo nano frigate.yml
 ```
+
 Here is an example of `frigate.yml`:
 
 ```bash
@@ -410,7 +413,8 @@ lpr:
   enabled: false
 ```
 
-## Run the project 
+## Run the project
+
 Pull and run the project:
 
 ```bash
@@ -418,41 +422,43 @@ cd ~
 sudo docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml up -d
 ```
+
 Then open **localhost:5000** in the web browser of the AI box:
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/first.png" 
-    style={{ width: 1000}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/first.png"
+    style={{ width: 1000}}
   />
 </div>
 
 Select one of the videos to start debugging, select the display box, and the results will be automatically displayed:
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_1.png" 
-    style={{ width: 1000}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_1.png"
+    style={{ width: 1000}}
   />
 </div>
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_2.png" 
-    style={{ width: 1000}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_2.png"
+    style={{ width: 1000}}
   />
 </div>
 
 Switch tabs to view past test results:
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.png" 
-    style={{ width: 1000}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/setting_3.png"
+    style={{ width: 1000}}
   />
 </div>
 
 ## Result
+
 When it sees someone holding a gun, the model will identify it and select it.
 Switch to debug mode, select the display box, and the results will be automatically displayed; switch tabs to view past detection results.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={1000} height="auto"/></p>

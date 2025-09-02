@@ -37,6 +37,7 @@ Whether you're looking to monitor air quality, optimize crop growth, or improve 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png"/></div>
 
 ## Measurements
+
 SenseCraft AI Advisor currently analyzes the following measurements and device types. Users can select devices that include the following measurements.
 
 | Measurement             | Device Types                                        |

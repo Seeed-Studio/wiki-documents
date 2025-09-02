@@ -54,7 +54,6 @@ The Pretrained Models section contains information about the readily available m
     </a>
 </div><br />
 
-
 - **for SenseCAP Watcher**: This subsection provides information about the pretrained models that can be used with the SenseCAP Watcher device, enabling various monitoring and detection functionalities.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -74,7 +73,6 @@ The Pretrained Models section contains information about the readily available m
 ## Training
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/40.png" style={{width:1000, height:'auto'}}/></div>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/sensecraft_ai_training_main_page/" target="_blank" rel="noopener noreferrer">
@@ -162,8 +160,6 @@ The Models Output section focuses on how to configure and utilize the output of 
 
 The Application section showcases real-world examples and case studies demonstrating how SenseCraft AI can be used to solve various problems across different domains. It includes detailed project write-ups, code samples, and best practices to inspire and guide users in developing their own AI applications using SenseCraft AI.
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -177,4 +173,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

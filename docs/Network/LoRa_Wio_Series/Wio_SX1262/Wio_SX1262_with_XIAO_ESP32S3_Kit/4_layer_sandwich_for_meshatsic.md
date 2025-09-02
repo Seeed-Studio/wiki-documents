@@ -27,8 +27,10 @@ A full-featured meshtastic node is developed based on XIAO ESP32S3 & Wio-SX1262 
 |  | 403040-450mA LiPo battery with JST connector |
 
 :::note
+
 1. The GNSS module needs to have the conflicting pins modified on its predecessor so that it can be connected to the XIAO ESP32S3 module in a pin-to-pin manner. Therefore, please purchase the newly stocked GNSS modules after **December 22th, 2024**.
 2. The DXF file of the Acrylic case is provided. You can use 3mm-thick acrylic boards to cut and assemble it by yourself.
+
 :::
 
 <div class="table-center">
@@ -62,7 +64,6 @@ A full-featured meshtastic node is developed based on XIAO ESP32S3 & Wio-SX1262 
     </tr>
   </table>
 </div>
-
 
 <div class="table-center">
   <table align="center">
@@ -118,21 +119,19 @@ The dxf file provided for laser cutting.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/4_layer_kit/1.png" alt="pir" width={400} height="auto" /></p>
 
-
-* [dxf file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/4_layer_kit/4_layer_sandwich_Casing.dxf)
-* [dwg file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/4_layer_kit/4_layer_sandwich_Casing.dwg)
-
+- [dxf file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/4_layer_kit/4_layer_sandwich_Casing.dxf)
+- [dwg file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/4_layer_kit/4_layer_sandwich_Casing.dwg)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

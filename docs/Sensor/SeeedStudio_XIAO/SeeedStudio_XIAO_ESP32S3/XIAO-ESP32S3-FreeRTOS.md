@@ -386,7 +386,7 @@ From the bottom panel select the correct COM port, chip (ESP-S3) and build,flash
 
 This code is designed to collect air quality data from a sensor, process the raw data to determine the air quality level, and periodically print the results to the console.
 
-#### Key Components:
+#### Key Components
 
 - Sensor Initialization:
 
@@ -565,7 +565,6 @@ If you are using the OV3660 model, you need to set it up in the IDF to be able t
     </tr>
   </table>
 </div>
-
 
 ### Camera Component
 
@@ -1245,9 +1244,9 @@ void taskBME680(void* pvParameters) {
 ### Serial Monitor Output
 
 ```shell
-09/09/24	03:17:20
+09/09/24 03:17:20
 T: 29.01 C  P: 90.86 KPa  H: 63.41 %  G: 47.41 Kohms
-09/09/24	03:17:21
+09/09/24 03:17:21
 T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 ```
 
@@ -1273,11 +1272,11 @@ Some problems might encounter in the process of hardware connection, software de
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

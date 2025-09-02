@@ -80,7 +80,7 @@ Para más detalles, por favor haz clic [**aquí**](/check_Encryption_Chip)
 
 Para más detalles, por favor haz clic [**aquí**](/screen_refresh_rate_low)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para ofrecerte diferentes opciones de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para cubrir distintas preferencias y necesidades.
 

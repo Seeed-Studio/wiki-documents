@@ -1,6 +1,6 @@
 ---
-description: 本文是 reTerminal E10xx 系列的汇总页面。
-title: reTerminal E10xx 系列
+description: 本文是 reTerminal E Series ePaper Display 系列的汇总页面。
+title: reTerminal E Series ePaper Display 系列
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/reterminal_e10xx_main_page
 sidebar_position: 1
@@ -9,18 +9,18 @@ last_update:
   author: Citric
 ---
 
-# reTerminal E10xx 系列概述
+# reTerminal E Series ePaper Display 系列概述
 
 ## 简介
 
-reTerminal E10xx 系列代表了 Seeed Studio 的电子纸显示终端产品系列，专为低功耗信息显示应用而设计。这些设备将电子纸技术的功耗效率与无线连接相结合，为智能家居、零售环境、办公空间等创造了多功能显示器。
+reTerminal E Series ePaper Display 系列代表了 Seeed Studio 的电子纸显示终端产品系列，专为低功耗信息显示应用而设计。这些设备将电子纸技术的功耗效率与无线连接相结合，为智能家居、零售环境、办公空间等创造了多功能显示器。
 
-与持续消耗电力的传统显示器不同，reTerminal E10xx 系列仅在更改内容时才使用电力，使其成为需要延长电池寿命和始终显示信息的应用的理想选择。
+与持续消耗电力的传统显示器不同，reTerminal E Series ePaper Display 系列仅在更改内容时才使用电力，使其成为需要延长电池寿命和始终显示信息的应用的理想选择。
 
 
 ## reTerminal E1001
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.png" style={{width:500, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/cn/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
@@ -42,7 +42,7 @@ reTerminal E1001 配备 7.5 英寸单色电子纸显示屏，具有 4 级灰度�
 
 ## reTerminal E1002
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.png" style={{width:500, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACeP（高级彩色电子纸）技术。这种彩色显示屏提供与电子纸技术相同的功耗效率优势，同时允许使用多种颜色创建更具视觉吸引力的内容，使其成为视觉区分和美观外观很重要的应用的理想选择。
 
@@ -75,7 +75,7 @@ reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACe
   </a>
 </div><br />
 
-所有 reTerminal E10xx 设备都设计为与 SenseCraft HMI 平台配合使用，提供直观的 Web 界面来创建和部署内容到您的设备。主要功能包括：
+所有 reTerminal E Series ePaper Display 设备都设计为与 SenseCraft HMI 平台配合使用，提供直观的 Web 界面来创建和部署内容到您的设备。主要功能包括：
 
 - **AI 生成器**：使用文本提示创建仪表板
 - **图库**：显示图片和幻灯片
@@ -85,17 +85,17 @@ reTerminal E1002 配备鲜艳的 7.3 英寸六色电子纸显示屏，采用 ACe
 
 ## 应用
 
-reTerminal E10xx 系列支持多种开发平台和框架：
+reTerminal E Series ePaper Display 系列支持多种开发平台和框架：
 
-- [reTerminal E10xx 与 ESPHome 配合用于 Home Assistant](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)
+- [reTerminal E Series ePaper Display 与 ESPHome 配合用于 Home Assistant](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)
 
-  解释如何将 reTerminal E10xx 插入 Home Assistant 并编写简单程序，通过 YAML 在 ESPHome 中绘制简单图形。
+  解释如何将 reTerminal E Series ePaper Display 插入 Home Assistant 并编写简单程序，通过 YAML 在 ESPHome 中绘制简单图形。
 
-- [reTerminal E10xx 在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)
+- [reTerminal E Series ePaper Display 在 Home Assistant 中的高级 ESPHome 用法](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced)
 
   解释如何使用 reTerminal 的硬件和高级功能，如深度睡眠以及在 Home Assistant 中的综合用例。
 
-- [reTerminal E10xx 与 TRMNL 配合使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl)
+- [reTerminal E Series ePaper Display 与 TRMNL 配合使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_trmnl)
 
   利用专用的 TRMNL 框架进行简化开发和快速部署。
 

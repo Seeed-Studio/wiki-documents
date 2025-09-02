@@ -13,9 +13,7 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Bazaar_doc/101020492/main_page.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Bazaar_doc/101020492/main_page.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The Grove - 3-Axis Digital Compass is a digital compass sensor based on Bosch BMM150. It allows measurement of the magnatic field in three perpendicular axes and the output can be read out over I2C and SPI interface, perfectly suitable for 3-Axis mobile applications.
-
 
 This is the second generation of Grove - 3-Axis Digital Compass, comparing to the first version, this version can perfectly match the demanding requirements of all 3-Axis applications while the price is almost half of the first version, very cost effective.
 
@@ -28,7 +26,6 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 - Easy to use
 
 ## Specifications
-
 
 | Item                         | Valnue                                |
 |------------------------------|---------------------------------------|
@@ -47,8 +44,8 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-## Platforms Supported
 
+## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -63,9 +60,9 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 
 ## Getting started
 
-
 ### Play with Arduino
-####　Hardware
+
+#### 　Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
@@ -82,9 +79,8 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 <!-- ![with_ardu](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/with_ardu.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/with_ardu.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 :::note
-    	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+     If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
 
 | Seeeduino_v4 | Grove-3-Axis_Digitial_Compass_v2.0  |
@@ -94,27 +90,21 @@ This is the second generation of Grove - 3-Axis Digital Compass, comparing to th
 | SDA         | SDA                      |
 | SCL         | SCL                      |
 
-
-
-
-
 <div class="admonition warning">
 <p class="admonition-title">Caution</p>
 Please plug the USB cable gently, otherwise you may damage the interface.Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click <a href="https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html">here</a> to buy
 </div>
 
-
-
 #### Software
+
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150) from Github.
 
 **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path: **File->Examples->Grove_3_Axis_Compass_V2.0_BMM150-master->compass**
 
-
 Here is the code
+
 ```c
 /**
  * This example
@@ -169,17 +159,12 @@ void loop()
 }
 ```
 
-
 **Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 **Step 5.** Open the serial monitor to receive the sensor's data
 
-
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/ardu_serial.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/img/ardu_serial.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 **Step 6.** Within these 3 seconds， please tilt and rotate the compass back and forth on every axis, as shown in the picture below.
 
@@ -202,8 +187,6 @@ The calibration period time can be changed through the parameter timeout in the 
 :::
 Enjoy your compass!
 
-
-
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -219,18 +202,12 @@ Enjoy your compass!
 - **Step 3**. Connect the 3-axis compass to I2C port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Compass_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Compass_V1.0/img/Compass_Hat.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
-
 #### Software
 
-
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment and install the grove.py to your raspberry pi.
-
 
 - **Step 2**. Excute below commands to run the code.
 
@@ -274,6 +251,7 @@ if __name__ == '__main__':
 :::success
     If everything goes well, you will be able to see the following result
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ grove_3_axis_compass_bmm150
@@ -296,16 +274,12 @@ heading(axis_Y point to): 325.42 degree
 
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Eagle File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -314,16 +288,16 @@ You can quit this program by simply press ++ctrl+c++.
 
 - **[Zip]** [Grove-3-Axis Digital Compass v2_Eagle File](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digitial_Compass_v2.0/res/Eagle File.zip)
 
-
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

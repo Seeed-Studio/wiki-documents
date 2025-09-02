@@ -96,7 +96,7 @@ Para más detalles, por favor haz clic [**aquí**](/limitations_on_the_maximum_c
 
 Para más detalles, por favor haz clic [**aquí**](/troubleshoot_CAN_communication_issues)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para brindarte el soporte necesario y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

@@ -12,9 +12,6 @@ last_update:
 
 ## Introduction
 
-
-
-
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-107990273-respeaker-lite-45font.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -25,16 +22,14 @@ last_update:
 
 Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio processing with its integrated dual microphone array, ideal for speech recognition and voice control. Featuring advanced onboard audio front-end algorithms, the XU316 chip provides interference cancellation, echo cancellation, and noise suppression. It supports I2S and USB connections and is compatible with Seeed Studio XIAO ESP32S3 (Sense), Adafruit QT Py, Raspberry Pi, and PC.
 
-
-
 ## Features
 
-* **Dual Microphone Array for Far-Field Voice Capture**: The 2 high performance digital microphones capture and extract far-field speech and voice (up to 3 meters) even in noisy environments as it cancels point noise using two microphone input.
-* **Onboard AI ASR Algorithms**: Powered by XMOS XU-316 AI sound and audio chip, the kit includes Natural Language Understanding algorithms for Interference Cancellation (IC) , Acoustic Echo Cancellation, Noise Suppression, Voice-to-Noise Ratio (VNR), and Automatic Gain Control (AGC), enabling high quality voice capture.
-* **Embracing Open Source**：This board is compatible with popular hardware platforms (XIAO ESP32S3 (Sense), Adafruit QT Py) via I2S, and compatible with Raspberry Pi, PC via USB (Audio Class 2.0 (UAC2)).
-* **Onboard RGB LED**: the board features a programmable WS2812 RGB LED, supporting custom effects and offering a visual interface for your applications.
-* **External Power Supply Support**: this board supports external 5V power supply, which can be flexibly applied in different scenarios.
-* **DFU for Custom Development**: the board supports custom firmware update via DFU-Util.
+- **Dual Microphone Array for Far-Field Voice Capture**: The 2 high performance digital microphones capture and extract far-field speech and voice (up to 3 meters) even in noisy environments as it cancels point noise using two microphone input.
+- **Onboard AI ASR Algorithms**: Powered by XMOS XU-316 AI sound and audio chip, the kit includes Natural Language Understanding algorithms for Interference Cancellation (IC) , Acoustic Echo Cancellation, Noise Suppression, Voice-to-Noise Ratio (VNR), and Automatic Gain Control (AGC), enabling high quality voice capture.
+- **Embracing Open Source**：This board is compatible with popular hardware platforms (XIAO ESP32S3 (Sense), Adafruit QT Py) via I2S, and compatible with Raspberry Pi, PC via USB (Audio Class 2.0 (UAC2)).
+- **Onboard RGB LED**: the board features a programmable WS2812 RGB LED, supporting custom effects and offering a visual interface for your applications.
+- **External Power Supply Support**: this board supports external 5V power supply, which can be flexibly applied in different scenarios.
+- **DFU for Custom Development**: the board supports custom firmware update via DFU-Util.
 
 ## Specification
 
@@ -50,20 +45,15 @@ Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio
 |**Maximum Sampling Rate**|16Khz|
 |**Speaker**|Supports 5W Amplifier Speakers.|
 
-
-
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-9.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-10.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 ## Pin Out
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/pinout.png" alt="pir" width={600} height="auto" /></p>
-
 
 |**1**|**Dual Microphone Array**|Provides high-quality audio input.|
 | :- | :- | :- |
@@ -82,27 +72,17 @@ Powered by XMOS XU316 AI Sound and Audio chipset, this dev board excels in audio
 |**14**|**External power pad 2**|Unused IO pins on the XU316.|
 |**15**|**JTAG**|For debugging and programming the XU316.|
 
-
-
 ## Get Started
-
-
 
 ### Out of Box Usage
 
-
 ReSpeaker Lite is a plug-and-play modular voice interface, no driver required, just plug it to your PC, you will see a voice device named 'ReSpeaker Lite'.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/pc.png" alt="pir" width={500} height="auto" /></p>
-
-
 
 ### Update firmware
 
 #### [Firmware Download](https://github.com/respeaker/ReSpeaker_Lite/tree/master/xmos_firmwares)
-
-
 
 :::tip note
 There are 2 versions for the ReSpeaker Lite board:
@@ -119,9 +99,7 @@ To use it with XIAO ESP32S3, please flash the I2S version firmware.
 
 Connect the ReSpeaker Lite Board to your PC via the USB cable.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb-connect.png" alt="pir" width={500} height="auto" /></p>
-
 
 #### Install DFU Util
 
@@ -133,17 +111,17 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="win" label="Windows">
 
-* Download `dfu-util-0.11-binaries.tar.xz` and extract it to your local system, 
+- Download `dfu-util-0.11-binaries.tar.xz` and extract it to your local system,
   e.g., D:\
 
-* Change directory to the `dfu-util.exe`<br/>
+- Change directory to the `dfu-util.exe`<br/>
   e.g., D:\dfu-util-0.11-binaries\win64\(if you are using win32, please change win64 to win32)
 
-* Append the path of the `dfu-util.exe` to the system environment variable Path: `My Computer` > `Properties` > `Advanced` > `Environment Variables` > `Path`.      
- Please note that paths in the variable Path are seperated by semicolon ;. 
+- Append the path of the `dfu-util.exe` to the system environment variable Path: `My Computer` > `Properties` > `Advanced` > `Environment Variables` > `Path`.
+ Please note that paths in the variable Path are seperated by semicolon ;.
  This will allow dfu-util to be executed globally in command prompt.
 
-* Open the start menu and type cmd. Press the enter key. In the terminal that comes up, check if dfu-util.exe path is set with dfu-util -V command:
+- Open the start menu and type cmd. Press the enter key. In the terminal that comes up, check if dfu-util.exe path is set with dfu-util -V command:
 
 ```
 C:\Users\yiping>dfu-util -V
@@ -155,8 +133,8 @@ This program is Free Software and has ABSOLUTELY NO WARRANTY
 Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 ```
 
+- Run `dfu-util -l` to check if ReSpeaker Lite is detected:
 
-- Run `dfu-util -l` to check if ReSpeaker Lite is detected: 
 ```
 C:\Users\yiping>dfu-util -l
 dfu-util 0.11
@@ -186,16 +164,16 @@ Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
 
 Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 ```
+
 - Install [Zadig](https://zadig.akeo.ie/) and open it. Click `Options` -> `List All Devices`.
 
-- Find `ReSpeaker 2 Mics Array` or `ReSpeaker Lite` or DFU `FACTORY (Interface 3)` from the device list, install `WINUSB v6.x.xxxx.xxxxx` driver. 
+- Find `ReSpeaker 2 Mics Array` or `ReSpeaker Lite` or DFU `FACTORY (Interface 3)` from the device list, install `WINUSB v6.x.xxxx.xxxxx` driver.
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-2mic.png" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-lite.png" alt="pir" width={500} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/dfu-fac.png" alt="pir" width={500} height="auto" /></p>
-
 
 - After installation is completed(that will take a few minutes), please do power-cycle and run `dfu-util -l` again, ReSpeaker Lite should be detected right now
 
@@ -205,7 +183,7 @@ Cannot open DFU device 2886:0019 found on devnum 9 (LIBUSB_ERROR_NOT_SUPPORTED)
 
 - Install dfu-util with [brew](https://brew.sh/): `brew install dfu-util`
 
-- Run `dfu-util -l` to check if ReSpeaker Lite is detected: 
+- Run `dfu-util -l` to check if ReSpeaker Lite is detected:
 
 ```
 ➜  ~ dfu-util -l
@@ -221,14 +199,13 @@ Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=1, nam
 Found DFU: [2886:0019] ver=0205, devnum=1, cfg=1, intf=3, path="1-1", alt=0, name="DFU FACTORY", serial="0000000001"
 ```
 
-
 </TabItem>
 
 <TabItem value="lin" label="Linux">
 
 - Install dfu-util with apt: `sudo apt install dfu-util`
 
-- Run `sudo dfu-util -l` to check if ReSpeaker Lite is detected: 
+- Run `sudo dfu-util -l` to check if ReSpeaker Lite is detected:
 
 ```
 pi@raspberrypi:~ $ sudo dfu-util -l
@@ -243,23 +220,17 @@ Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=2, n
 Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=1, name="DFU UPGRADE", serial="0000000001"
 Found DFU: [2886:0019] ver=0205, devnum=5, cfg=1, intf=3, path="1-1.1", alt=0, name="DFU FACTORY", serial="0000000001"
 ```
+
 </TabItem>
 
 </Tabs>
 
-
-
-
 #### Flash Firmware
 
-
-* Connect the ReSpeaker board to your PC.
+- Connect the ReSpeaker board to your PC.
 
 - Run the following command `dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`:
-    - On Linux please run `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`
-
-
-
+  - On Linux please run `sudo dfu-util -R -e -a 1 -D /path/to/dfu_firmware.bin`
 
 ```
 C:\Users\yiping>dfu-util -R -e -a 1 -D D:\Downloads\respeaker_lite_i2s_dfu_firmware_v1.0.7.bin
@@ -290,19 +261,17 @@ Done!
 Resetting USB to switch back to Run-Time mode
 ```
 
-
 :::caution
 After flashing is completed, please restart the board.
 :::
 
-* Check the firmware version:
+- Check the firmware version:
 
 ```
 dfu-util -l
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/usb207-version.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## Comparison
 
@@ -319,13 +288,9 @@ dfu-util -l
 |<p style={{textAlign: 'center'}}>Compatible Hardware</p>|<ul><li>XIAO ESP32S3(Sense)</li><li>Adafruit QT Py via I2S</li><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|<ul><li>Raspberry Pi</li><li>Any computer or SBC running Linux, macOS, and Windows via USB</li></ul>|Raspberry Pi ONLY|
 |<p style={{textAlign: 'center'}}>Perfect for</p>|Directional sound capture, ideal for linear or elongated setups|Omnidirectional sound capture and localization, best placed in the center of open and multi-directional environments|Directional sound capture, ideal for linear or elongated setups|
 
-
-
-
-
 ### FAQ
 
-* **Can't find the `ReSpeaker Lite` sound device.**
+- **Can't find the `ReSpeaker Lite` sound device.**
 
  Check the firmware version, make sure the firmware is USB version and above`2.0.5`.
 
@@ -337,14 +302,11 @@ dfu-util -l
 
  If it's not USB version, please follow [this step](https://wiki.seeedstudio.com/reSpeaker_usb_v3/#flash-firmware) to flash the firmware.
 
-
-* **Can't detect ReSpeaker Lite USB sound device on Windows after flashing USB firmware?**
-
+- **Can't detect ReSpeaker Lite USB sound device on Windows after flashing USB firmware?**
 
 - Open the start menu and type `Device manager`. Find `ReSpeaker Lite` device, right click it and select `Uninstall device`. Select   `Delete the driver software for this device` and click `Uninstall`. After that, restart the device and Windows will re-install the right sound card driver for it.
 
  <p style={{textAlign: 'center'}}><img src="https://github.com/respeaker/ReSpeaker_Lite/raw/master/doc/images/dfu/delete-driver.png" alt="pir" width={600} height="auto" /></p>
-
 
 ### Resource
 

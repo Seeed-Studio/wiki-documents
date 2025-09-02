@@ -18,7 +18,6 @@ last_update:
     </a>
 </div>
 
-
 ## Description
 
 **Grove - Temperature and Barometer Sensor(SPA06-003)** is a high-precision and a low-current environmental sensor measures the temperature and barometer. It supports both I2C and SPI communication and we provide the SPA06-003 Arduino library.
@@ -30,10 +29,10 @@ As the sensor is quite sensitive to the environmental conditions, **please DO NO
 
 ## Feature
 
--   **Wide measurement range:**  Pressure measurements range from 300hPa - 1100hPa and temperature measurements range from -40℃ - +85℃.
--   **High accuracy:** The absolute accuracy of ±0.3 hPa for pressure measurement and ±1 ℃ accuracy for temperature measurement.
--   **Long standby time**: Using the FIFO allows the host processor to stay in sleep mode for longer periods between readouts, reducing overall system power consumption and achieving a standby current as low as 0.5 μA.
--   **Grove Interface:** Features a [Grove 4-pin connector, ensuring a "Plug and Play"](https://wiki.seeedstudio.com/Grove_System/) experience to connect with mainstream hardware platforms like Arduino, Raspberry Pi, Micro:bit and many more.
+- **Wide measurement range:**  Pressure measurements range from 300hPa - 1100hPa and temperature measurements range from -40℃ - +85℃.
+- **High accuracy:** The absolute accuracy of ±0.3 hPa for pressure measurement and ±1 ℃ accuracy for temperature measurement.
+- **Long standby time**: Using the FIFO allows the host processor to stay in sleep mode for longer periods between readouts, reducing overall system power consumption and achieving a standby current as low as 0.5 μA.
+- **Grove Interface:** Features a [Grove 4-pin connector, ensuring a "Plug and Play"](https://wiki.seeedstudio.com/Grove_System/) experience to connect with mainstream hardware platforms like Arduino, Raspberry Pi, Micro:bit and many more.
 
 :::tip
 More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/).
@@ -57,7 +56,7 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
     </tr>
     <tr>
       <td>I2C address</td>
-  	  <td>0x77 (default)<br />0x76</td>
+     <td>0x77 (default)<br />0x76</td>
     </tr>
     <tr>
       <th colspan="2">Barometric Pressure Measure</th>
@@ -87,9 +86,6 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
     </tr>
   </table>
 </div>
-
-
-
 
 ### **BMP280 vs. BME280 vs. DPS310 vs. SPA06-003**
 
@@ -168,8 +164,6 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
   </table>
 </div>
 
-
-
 ### **Part List**
 
 <div class="table-center">
@@ -200,9 +194,9 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/Grove-Barometer_Sensor-SPA06-003-Components.png" style={{width:800, height:'auto'}}/></div>
 
--   **SPI soldering pads**.
--   **Interface bus selection pads** , to select I<sup>2</sup>C bus, connect the two pads by soldering (this is connected by default); to select SPI bus, cut the two pads with a sharp knife or a soldering iron.
--   **Slave board address selection pads**, to select slave board address to avoid address collision.
+- **SPI soldering pads**.
+- **Interface bus selection pads** , to select I<sup>2</sup>C bus, connect the two pads by soldering (this is connected by default); to select SPI bus, cut the two pads with a sharp knife or a soldering iron.
+- **Slave board address selection pads**, to select slave board address to avoid address collision.
 
 :::tip
 
@@ -223,8 +217,6 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width="400" height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width="400" height="auto" /></p> | <p><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/small.jpg" alt="pir" width="350" height="auto" /></p> |
 | [Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html) | [Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html) | [Get One Now](https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html) |
 
-
-
 - *Play with XIAO Series*
 
 | Seeed Studio Grove Base for XIAO                             | XIAO ESP32-S3                                                | Grove-Barometer Sensor SPA06-003                             |
@@ -232,13 +224,7 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 | <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Thumbnail-27.png"/></div> | <div align="center"><img width="700" src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" /></div> | <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/small.jpg" /></div> |
 | [Get One Now](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) | [Get One Now](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) | [Get One Now](https://www.seeedstudio.com/Grove-Temperature-and-Barometer-Sensor-SPA06-003-p-6441.html) |
 
-
-
-
-
-
 ### Software
-
 
 **Step 1.** Launch the Arduino application.
 
@@ -272,14 +258,12 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 
 - If you want to use **Seeed Studio XIAO MG24** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)** to finish adding.
 
-
 **Step 3.** Download the library from Github, and refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_SPA06" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
 
 #### Use I2C Bus
 
@@ -288,7 +272,6 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 - *Connect Grove with Arduino*
 
 <div align="center"><img width="500" src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/grove_with_arduino.png" /></div>
-
 
 - *Connect Grove and XIAO*
 
@@ -333,7 +316,6 @@ This connection table applies to all boards with I2C support.
   </table>
 </div>
 
-
 **Step 2.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Seeed Arduino SPA06>Example1_BasicRead
 
 **Step 3.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
@@ -345,8 +327,6 @@ The outcome will display on the **Serial Port** as following if everything goes 
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-SPA06-003/img/outcome.png" style={{width:400, height:'auto'}}/></div>
-
-
 
 **Here is the code:**
 
@@ -515,6 +495,7 @@ void loop() {
 }//loop()
 
 ```
+
 #### Fuction
 
 The following functions are used in the example code above.
@@ -522,46 +503,59 @@ The following functions are used in the example code above.
 ```cpp
 spl.begin(SPL07_ADDR) / spl.begin(SS,&SPI)
 ```
+
 Initializes the SPL07-003 sensor. It returns false if the sensor is not found on the bus.
 
 ```cpp
 spl.setPressureConfig(SPL07_4HZ, SPL07_32SAMPLES)
 ```
+
 Configures the pressure sensor with:
 
 - 4 Hz output data rate
 - 32 samples averaging for noise reduction
 
 Higher sample count improves accuracy but increases response time.
+
 ```cpp
 spl.setTemperatureConfig(SPL07_4HZ, SPL07_1SAMPLE)
 ```
+
 Configures the temperature sensor with:
 
 - 4 Hz update rate
 - 1 sample averaging (faster response, less smoothing)
+
 ```cpp
 spl.setMode(SPL07_CONT_PRES_TEMP)
 ```
+
 Sets the SPL07-003 to continuous pressure and temperature measurement mode, so it updates data automatically without manual triggering.
+
 ```cpp
 spl.pressureAvailable(), spl.temperatureAvailable()
 ```
+
 Checks if a new pressure or temperature measurement is available from the sensor. These return true when fresh data is ready to read.
+
 ```cpp
 spl.readPressure()
 ```
+
 Reads the latest pressure value from the sensor in Pascals (Pa).
+
 ```cpp
 spl.readTemperature()
 ```
+
 Reads the current temperature in degrees Celsius (°C).
+
 ```cpp
 spl.calcAltitude()
 ```
+
 Estimates altitude (in meters) based on the current pressure reading using the standard atmosphere model.
 Useful in applications like barometric altitude estimation for drones or weather stations.
-
 
 ## Resources
 
@@ -575,12 +569,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

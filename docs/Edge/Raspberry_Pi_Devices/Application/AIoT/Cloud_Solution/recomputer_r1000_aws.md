@@ -12,7 +12,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our reComputer R1000 to the AWS IoT cloud.
 
@@ -23,29 +23,28 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
-## Create AWS Account 
+## Create AWS Account
 
 If you don't have an AWS account, you can easily create one. Please follow [**this link**](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html) for guidance on how to set up your account.
 
-## Register the device 
-
+## Register the device
 
 - **Step 1**: Search IoT core and navigate to it.
 
@@ -79,13 +78,13 @@ AWS IoT refers to Internet of Things (IoT) devices as "things" on the AWS platfo
 
 Thing types enable you to store descriptions and configuration information that are common to all things associated with the same thing type. This simplifies the management of things in the registry. For instance, you can define a 'Factory_HMI' thing type. For this demonstration we used edge_controller as a thing type.
 
-
 :::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/thingtype.PNG" style={{width:600, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/createthingtype.PNG" style={{width:400, height:400}}/></div>
 
-- **Step 7** : Generate Certificates 
+- **Step 7** : Generate Certificates
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/configurecertificate.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -118,11 +117,11 @@ The policy includes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/policycreatething.PNG" style={{width:600, height:'auto'}}/></div>
 
-- **Step 11**:Next you can download certificates and keys. Make sure to download **Device certificate, Private and Public keys and Root CA certificate.** 
+- **Step 11**:Next you can download certificates and keys. Make sure to download **Device certificate, Private and Public keys and Root CA certificate.**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/certicates.PNG" style={{width:600, height:450}}/></div>
 
-- **Step 12** : Attach to the thing (reComputer R1000) 
+- **Step 12** : Attach to the thing (reComputer R1000)
 For that go to **Security** >> **Certificates**
 
 :::info
@@ -132,13 +131,11 @@ When you create and enroll a certificate independently from an AWS IoT thing, it
 
 After selecting the thing that you made from **Actions** drop down menu then press **Attach to thing**.
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/attach_policy1.png" style={{width:800, height:'auto'}}/></div>
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/attach_thing.PNG" style={{width:600, height:'auto'}}/></div>
 
-- **Step 13**: Attach the policy also. 
+- **Step 13**: Attach the policy also.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/attach_policy2.png" style={{width:800, height:'auto'}}/></div>
 
@@ -154,11 +151,13 @@ cd AWS_project
 python -m venv --system-site-packages env
 source env/bin/activate
 ```
+
 - **Step 02**: Install Mqtt library
 
 ```sh
 pip3 install "paho-mqtt<2.0.0"
 ```
+
 ## Run the code
   
 To accomplish this, download our [test Python file](https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/AWStest.py). Ensure that your device certificates, key files (public and private keys), root access file, and this Python file are in the same folder on your Device. Additionally, you need to modify the connection URL.
@@ -166,9 +165,11 @@ To accomplish this, download our [test Python file](https://files.seeedstudio.co
 To do that :
 
 - **Step 01**: Go to Settings
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/settings.PNG" style={{width:200, height:300}}/></div>
 
-- **Step 02** : Then you will find the URL 
+- **Step 02** : Then you will find the URL
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/weburl.PNG" style={{width:600, height:'auto'}}/></div>
 
 - **Step 03** : Replace those file names with yours and run the file
@@ -179,7 +180,7 @@ To do that :
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/AWS/cmd.PNG" style={{width:600, height:'auto'}}/></div>
 
-## Test the Connection 
+## Test the Connection
 
 Go to MQTT test Client under the **Test** tab and type the topic name to subscribe. In this case it is device/data.
 
@@ -194,13 +195,11 @@ The output is some thing like this. The massage from reComputer-R1000 is pop up 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

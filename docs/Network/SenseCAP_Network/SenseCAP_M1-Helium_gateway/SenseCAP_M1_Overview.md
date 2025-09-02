@@ -11,12 +11,10 @@ last_update:
 ---
 
 
-
 **SenseCAP M1** is a high-performing, ready-to-use **LoRaWAN indoor gateway** connected to the **Helium LongFi™ Network.**  
 It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/SX1303) LoRa concentrator. It provides built-in BLE, which helps you set up the device in a few simple steps and supports connecting to the internet via Wi-Fi or Ethernet.
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapm1.webp" alt="pir" width={600} height="auto" /></p>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-EU868-p-5022.html" target="_blank">
@@ -29,27 +27,26 @@ It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/
 
 ![SenseCAP M1 Features](https://www.sensecapmx.com/wp-content/uploads/2022/06/features.jpg)
 
-*   **Handy Setup to Helium Network:** Ready to go within simple steps.
-*   **Powered by Mature Hardware Solutions:** Raspberry Pi 4(2G/4G/8G RAM, 64G storage) and WM1302/WM1303 (Semtech SX1302/SX1303) baseband LoRa chip.
-*   **Secure and Reliable:** Built-in ECC608 crypto chip, high-security authentication, and reliable connectivity.
-*   **Automatic Online Upgrades**: Automatic OTA upgrades, without manual operation.
-*   **Remote Diagnosis**: Built-in remote diagnostics mechanism, efficient online support.
-*   **64GB Large Storage**: 64GB MicroSD card large storage, extending the lifetime of the gateway, fulfilling the memory requirement of potential upgrade.
-*   **Efficient Cooling Solution**: Aluminum enclosure with a heatsink and cooling fan inside, ensuring long-term and stable operation.
-*   **Multiple Accessories**: Fiberglass antenna, slider pad for sliding rod installation, and upcoming outdoor enclosure, etc.
-*   **FCC and CE Certificated**: Available for personal and commercial use.  
-    
+- **Handy Setup to Helium Network:** Ready to go within simple steps.
+- **Powered by Mature Hardware Solutions:** Raspberry Pi 4(2G/4G/8G RAM, 64G storage) and WM1302/WM1303 (Semtech SX1302/SX1303) baseband LoRa chip.
+- **Secure and Reliable:** Built-in ECC608 crypto chip, high-security authentication, and reliable connectivity.
+- **Automatic Online Upgrades**: Automatic OTA upgrades, without manual operation.
+- **Remote Diagnosis**: Built-in remote diagnostics mechanism, efficient online support.
+- **64GB Large Storage**: 64GB MicroSD card large storage, extending the lifetime of the gateway, fulfilling the memory requirement of potential upgrade.
+- **Efficient Cooling Solution**: Aluminum enclosure with a heatsink and cooling fan inside, ensuring long-term and stable operation.
+- **Multiple Accessories**: Fiberglass antenna, slider pad for sliding rod installation, and upcoming outdoor enclosure, etc.
+- **FCC and CE Certificated**: Available for personal and commercial use.  
+
     * * *
-    
 
 **Package Contents**
 ====================
 
-*   SenseCAP M1 LoRaWAN Indoor Gateway (EU868/US915) \*1
-*   Power Adapter (EU/US)\*1
-*   Antenna (EU868/US915) \*1
-*   64GB MicroSD Card \*1
-*   Quick Start Guide \*1
+- SenseCAP M1 LoRaWAN Indoor Gateway (EU868/US915) \*1
+- Power Adapter (EU/US)\*1
+- Antenna (EU868/US915) \*1
+- 64GB MicroSD Card \*1
+- Quick Start Guide \*1
 
 ![SenseCAP M1 Package Contents](https://www.sensecapmx.com/wp-content/uploads/2022/06/package-contents.png)
 
@@ -78,13 +75,12 @@ It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/
 
 ![SenseCAP M1 Dimensions](https://www.sensecapmx.com/wp-content/uploads/2022/06/dimensions-1.webp)
 
-*   **Device Size (/pcs):** 154\*100\*44 mm
-*   **Device Weight (/pcs)**: 370g
-*   **Package Size (/pcs)**: 274\*175\*60 mm
-*   **Package Weight (/pcs)**: 675g  
-    
+- **Device Size (/pcs):** 154\*100\*44 mm
+- **Device Weight (/pcs)**: 370g
+- **Package Size (/pcs)**: 274\*175\*60 mm
+- **Package Weight (/pcs)**: 675g  
+
     * * *
-    
 
 **Block Diagram**
 =================
@@ -114,11 +110,11 @@ It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/
 
 These two labels on the bottom indicate important information of the unit including:
 
-*   Model
-*   S/N
-*   WiFi MAC
-*   ETH MAC
-*   CPU ID
+- Model
+- S/N
+- WiFi MAC
+- ETH MAC
+- CPU ID
 
 This information will be required when registering for the **SenseCAP Dashboard**.
 

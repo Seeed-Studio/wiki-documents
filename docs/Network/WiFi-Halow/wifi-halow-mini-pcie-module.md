@@ -124,7 +124,6 @@ Here are the materials needed to run this tutorial.
     </table>
 </div>
 
-
 Additionally, you will need the following items:
 
 - **[Mini PCIe to PCIe adapter](https://www.seeedstudio.com/WM1302-Pi-Hat-p-4897.html)** - For connecting the Wi-Fi HaLow Mini PCIe Module to Raspberry Pi.
@@ -187,7 +186,6 @@ If you are using it for the first time, you can refer to the following video for
 <iframe width="600" height="350" src="https://files.seeedstudio.com/wiki/wifi_halow/pic/install_pcie_wifi_halow_module.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-
 ## Installing WiFi Halow for OpenWrt to Raspberry Pi
 
 This section will guide you through setting up a Raspberry Pi 4 as a Wi-Fi HaLow gateway using a pre-built OpenWrt firmware image.
@@ -230,17 +228,21 @@ Download the pre-built OpenWrt Image with Wi-Fi HaLow support from:
 
 :::note
 The default login credentials are:
+
 - Username: root
 - No need to enter a password
+
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/1.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
 If you cannot access the interface:
+
 - Verify your Ethernet connection
 - Check that your computer is receiving an IP address
 - Try pinging 10.42.0.1 to verify connectivity
+
 :::
 
 ## Configure the Raspberry Pi as an Access Point

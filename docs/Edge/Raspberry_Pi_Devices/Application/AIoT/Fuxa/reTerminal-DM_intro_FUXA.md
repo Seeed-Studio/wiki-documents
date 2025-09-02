@@ -33,27 +33,26 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
 We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)
-
 
 ## Installation FUXA on reTerminal DM
 
@@ -86,6 +85,7 @@ sudo npm install -g --unsafe-perm @frangoteam/fuxa-min
 sudo fuxa
 
 ```
+
 FUXA UI will be available using the URL: **http://localhost:1881**.
 
 Principally FUXA web server performs two page:
@@ -119,7 +119,7 @@ Select the device type, set the polling interval to your desired number of secon
 
 <center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/mqqtdevice.PNG" /></center>
 
-## Select Tags 
+## Select Tags
 
 **Step 1**
 
@@ -127,14 +127,11 @@ Following that, you'll observe a green indicator confirming the successful conne
 
 <center><img width={300} img height={350} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/mqqtgreen.PNG" /></center>
 
-
 **Step 2**
 
 Click on the "+" icon to add an MQTT broker. Subscribe to relevant topics, and then proceed by clicking on the search icon.
 
-
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/mqttsubscribe.png" /></center>
-
 
 **Step 3**
 
@@ -142,14 +139,13 @@ Next, choose the desired topic from the list for subscription. Provide a name an
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/mqttsubscribe2.png" /></center>
 
-
 To publish a topic, you need to specify it. Provide a name for identification and specify the topic.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/publishmqqt.png" /></center>
 
 Afterward, you will have a list of topics, allowing you to choose whether to publish or subscribe.
 
-## Adjust the value sent to the end device using the slider.
+## Adjust the value sent to the end device using the slider
 
 In this example, we'll bind the controllers to the device tag. The Control tab offers various features for inputting values, and in this case, we'll use a slider. The slider can be customized to suit your specific requirements.
 
@@ -177,13 +173,13 @@ First you design your pipe form and then you define the action by bind the Devic
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-pipe.gif" /></center>
 
-## How to Add a Chart 
+## How to Add a Chart
 
 To add a Chart Control to a View. going in editor and select the View.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-chart.gif" /></center>
 
-## How to Add an Alarm 
+## How to Add an Alarm
 
 To add an alarm, you need to navigate to the settings in the editor window and select **Alarms**.
 
@@ -193,7 +189,7 @@ Next, there are a few options for setting alarms: High-High, High, Low, and Mess
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/fuxa-alarms.gif" /></center>
 
-To view the alarms, you may need to adjust the layout slightly because it's hidden by default. To do that, go to the **Layout** and navigate to the **Header Navigation Bar**. 
+To view the alarms, you may need to adjust the layout slightly because it's hidden by default. To do that, go to the **Layout** and navigate to the **Header Navigation Bar**.
 
 <center><img width={400} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/Layout1.PNG" /></center>
 
@@ -203,13 +199,11 @@ Then, ensure that **Alarms notification mode** is set to **fixed** and **Info no
 
 <center><img width={750} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/alrmnotification.PNG" /></center>
 
-
 ## Demo
 
 In this comprehensive demonstration, the setup includes three tanks, with two of them filled with various solutions. Additionally, two independent valves and pumps are present to transfer the solutions into a mixing tank. Following the mixing process, a separate valve is in place to obtain the resultant solution. Throughout this operation, the temperature of the mixing tank is continuously monitored.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/FUXA/demo-fuxa.gif" /></center>
-
 
 We extend our sincere gratitude to the **frangoteam** for their support and guidance throughout the creation of this wiki. For more details on the FUXA project, please refer to the resources tab below.
 
@@ -217,28 +211,16 @@ We extend our sincere gratitude to the **frangoteam** for their support and guid
 
 - **[Web Page]** [FUXA Official Documentation](https://github.com/frangoteam/FUXA/wiki)
 
-
-# Tech support
-
-
+## Tech Support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-

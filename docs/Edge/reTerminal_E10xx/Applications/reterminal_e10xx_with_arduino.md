@@ -1,6 +1,6 @@
 ---
-description: This article describes how to get the reTerminal E10xx series to work with Arduino.
-title: reTerminal E10xx Work with Arduino
+description: This article describes how to get the reTerminal E Series ePaper Display to work with Arduino.
+title: reTerminal E Series ePaper Display Work with Arduino
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_arduino
 sidebar_position: 4
@@ -9,7 +9,7 @@ last_update:
   author: Allen
 ---
 
-# Getting Started with reTerminal E10xx in Arduino
+# Getting Started with reTerminal E Series ePaper Display in Arduino
 
 ## What is [Arduino](https://www.arduino.cc/)
 
@@ -17,11 +17,11 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
 
 ## Getting Started
 
-Before diving into the specific features, let's set up our development environment for reTerminal E10xx.
+Before diving into the specific features, let's set up our development environment for reTerminal E Series.
 
 ### Environmental Preparation
 
-To program reTerminal E10xx with Arduino, you'll need to set up the Arduino IDE with ESP32 support.
+To program reTerminal E Series ePaper Display with Arduino, you'll need to set up the Arduino IDE with ESP32 support.
 
 :::tip
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -53,7 +53,7 @@ Navigate to **Tools > Board > Boards Manager**, search for "esp32" and install t
 
 Go to **Tools > Board > ESP32 Arduino** and select "XIAO_ESP32S3".
 
-**Step 5.** Connect your reTerminal E10xx to your computer using a USB-C cable.
+**Step 5.** Connect your reTerminal E Series ePaper Display to your computer using a USB-C cable.
 
 **Step 6.** Select the correct port from **Tools > Port**.
 

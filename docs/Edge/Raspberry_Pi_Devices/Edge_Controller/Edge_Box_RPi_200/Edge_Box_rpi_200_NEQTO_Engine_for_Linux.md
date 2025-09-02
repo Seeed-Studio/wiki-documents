@@ -21,17 +21,17 @@ Devices installed with NEQTO can be managed through API or the ready-to-use NEQT
 ### Hardware supported
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">EdgeBox-RPI-200</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPI4-A-4G32G-WiFi-p-4971.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
@@ -41,22 +41,26 @@ Devices installed with NEQTO can be managed through API or the ready-to-use NEQT
 - (Any Linux machine)
 
 :::tip
+
 - Supported Architectures: armv6l(32bit), armv7l(32bit), aarch64(64bit), x86_64(64bit)
 - Required disk space: ≥ 32 MB
 - Required RAM space: ≥ 4MB (In default settings)
 - Network Communication Interfaces: A physical network adapter must be on board.
 - Monitor, keyboard, mouse (optional)
+
 :::
 
 ## Getting Started
+
 ### Hardware Connection
 
 Please refer to Getting Started Edge Box RPI-200 (https://wiki.seeedstudio.com/Edge_Box_introduction/)
 
-### Sign Up for a NEQTO Account:
+### Sign Up for a NEQTO Account
+
 - Step 1. Visit this page (https://console.neqto.com/register) to sign up for a NEQTO account
 - Step 2. Enter your email address, create a password, and proceed
-- Step 3. Verify the account from the activation email you receive 
+- Step 3. Verify the account from the activation email you receive
 
 ### Installation of NEQTO Linux
 
@@ -76,7 +80,6 @@ And then the API Key will be displayed
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/65efff33ccae06004c6d94a5.png" alt="pir" width={600} height="auto" /></p>
 
-
 3. Download `NEQTO Engine Linux Installer` by curl or wget.
 
     This time, use the wget command.
@@ -95,13 +98,11 @@ Installer downloads successfully
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/660be308ccae06004c6d9726.png" alt="pir" width={600} height="auto" /></p>
 
-
 <!--<div style="page-break-before:always"></div>-->
 
-5. Copy the `API Key` from `API Keys for NEQTO Engine for Linux` in the NEQTO Console and paste it after `sudo ./neqto-daemon-install.latest.sh -k `.
+5. Copy the `API Key` from `API Keys for NEQTO Engine for Linux` in the NEQTO Console and paste it after `sudo ./neqto-daemon-install.latest.sh -k`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/660be313ccae06004c6d9727.png" alt="pir" width={600} height="auto" /></p>
-
 
 6. Just after execution, important notes will be displayed. Please check it and enter "agree" if you agree. Thereafter, device registration will be executed, and software installation will continue.
 
@@ -199,13 +200,13 @@ And then click on `ADD NODE`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/660bd1c8ccae06004c6d9720.png" alt="pir" width={600} height="auto" /></p>
 
-13. Type `tail -F /tmp/neqto/log/neqto.log` on the terminal on EdgeBox-RPI-200 
+13. Type `tail -F /tmp/neqto/log/neqto.log` on the terminal on EdgeBox-RPI-200
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/660be347ccae06004c6d972b.png" alt="pir" width={600} height="auto" /></p>
 
 <!--<div style="page-break-before:always"></div>-->
 
-14. After running `Reload Script` on NEQTO Console, you can see `Hello World!!!` on the terminal of EdgeBox-RPI-200 
+14. After running `Reload Script` on NEQTO Console, you can see `Hello World!!!` on the terminal of EdgeBox-RPI-200
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/neqto_engine_for_linux_EdgeBox-RPI-200/660bd1eaccae06004c6d9721.png" alt="pir" width={600} height="auto" /></p>
 
@@ -225,12 +226,11 @@ And then click on `ADD NODE`
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

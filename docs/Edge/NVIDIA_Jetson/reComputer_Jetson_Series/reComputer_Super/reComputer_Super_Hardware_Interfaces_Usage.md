@@ -23,13 +23,12 @@ This wiki introduces the various different hardware and interfaces on the reComp
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
-
 ## CSI Camera
 
 The reComputer Super supports standard 4 MIPI CSI cameras for image and video capture. Please follow the steps below to connect and test your camera.
 
 ### Hardware Connection
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/sci.jpg"/>  
 </div>
@@ -63,6 +62,7 @@ sudo apt install v4l-utils
 ```bash
 nvgstcapture-1.0 --sensor-id=0
 ```
+
 :::info
 Change `--sensor-id` to the appropriate value if you have multiple cameras.
 :::
@@ -71,12 +71,10 @@ Change `--sensor-id` to the appropriate value if you have multiple cameras.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/csi.png"/>
 </div>
 
-
 ---
 
+## USB
 
-
-## USB 
 The reComputer Super has a total of 4 USB 3.2 ports and 1 USB 2.0 Type-C port for debugging.
 
 ### USB 3.2 port
@@ -90,21 +88,24 @@ We can enter `watch -n 1 lsusb -tv` in the Jetson terminal to probe the USB port
 Additionally, you can  test the read and write speed of USB storage devices by using the `dd` command:
 
 - **Read:**
+
   ```bash
   sudo dd if=/dev/sda of=/dev/null bs=1024M count=5 iflag=direct
   ```
+
  <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_read.png"/>
 </div>
 
 - **Write:**
+
   ```bash
   sudo dd if=/dev/zero of=/dev/sda bs=1024M count=5 conv=fdatasync
   ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/usb_w.png"/>
 </div>
-
 
 ### USB 2.0 Type-C port
 
@@ -154,7 +155,6 @@ Using this serial port, via the USB C data cable, you can monitor the debugging 
 
 **Step8.** Login your reComputer Super with the username and password.
 
-
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4.png"/>
 </div>
@@ -163,14 +163,16 @@ Using this serial port, via the USB C data cable, you can monitor the debugging 
 
 M.2 Key M is an interface designed for high-speed solid-state drives (SSDs), providing ultra-fast data transfer speeds, ideal for high-performance applications.
 
+### Supported SSD are as follows
 
-### Supported SSD are as follows:
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
 - [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
 - [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 - [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
+
 ### Hardware Connection
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/ssd.jpg"/>  
 </div>
@@ -212,6 +214,7 @@ After installing the Wi-Fi module and powering on the device, we can configure t
 </div>
 
 Of course, we can also check the device's operating status using the following commands.
+
 ```bash
 ifconfig
 ```
@@ -220,17 +223,19 @@ ifconfig
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/wifi_ifconfig.png"/>
 </div>
 
-
 **Bluetooth:**
+
   ```bash
   bluetoothctl
   scan on
   ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/bluetooth.png"/>
 </div>
 
 ## Mini PCIe
+
 The reComputer super comes with a mini-PCIe for LTE 4G module.
 
 #### Hardware Connection
@@ -272,16 +277,13 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
   <img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/>
 </div>
 
-
 Using 4G network for internet access
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/4g2.png"/>
 </div>
 
-
 ## RTC
-
 
 The reComputer Super features RTC interfaces, providing accurate timekeeping even when the system is powered off.
 
@@ -292,7 +294,6 @@ Connect a 3V CR1225 coin cell battery to the RTC socket on the board as shown be
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc.jpg"/>
 </div>
-
 
 ### Usage Instruction
 
@@ -315,6 +316,7 @@ If you have not connected to internet via Ethernet, you can manually set the dat
 ```bash
 cat /sys/devices/platform/bpmp/bpmp\:i2c/i2c-4/4-003c/nvvrs-pseq-rtc/rtc/rtc0/time
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/rtc_time1(1).png"/>
 </div>
@@ -333,6 +335,7 @@ There are 2 RJ45 Gigabit Ethernet on reComputer Super supported 10/100/1000M. ET
 </div>
 
 There are 2 LEDs (green and yellow) on each Ethernet port:
+
 - Green LED: ON only when connected to 1000M/10G network.
 - Yellow LED: Shows the network activity status.
 
@@ -346,8 +349,6 @@ iperf3 -c 192.168.254.100 -R
 -c `<ip address>` is the server IP address, and -R means reverse mode.
 :::
 
-
-
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_a.png"/>
 </div>
@@ -355,7 +356,6 @@ iperf3 -c 192.168.254.100 -R
 ```bash
 iperf3 -c 192.168.254.100
 ```
-
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/eth_p.png"/>
@@ -370,12 +370,12 @@ The reComputer Super is equipped with 2 LED indicators (PWR and ACT) to show pow
 </div>
 
 ## Fan
+
 The reComputer Super is equipped with two types of fan connectors to meet different voltage and cooling needs:
 
 - 1x 4-Pin Fan Connector (5V PWM): Designed for low-voltage, low-power silent fans, this connector supports PWM speed control, allowing intelligent fan speed adjustment based on system temperature to improve energy efficiency and reduce noise.
 
 - 1x 4-Pin Fan Connector (12V PWM): Compatible with standard 12V PWM fans, it also supports precise speed control, making it ideal for high-performance cooling requirements.
-
 
 ### Hardware Connection
 
@@ -388,15 +388,20 @@ For more information, please check [here](https://docs.nvidia.com/jetson/archive
 :::
 
 **Set fan speed:**
+
   ```bash
   sudo -i
   echo 100 > /sys/bus/platform/devices/pwm-fan/hwmon/hwmon1/pwm1
   ```
+
 Additionally, we can manually set the fan speed using the jtop tool.
 
 ## CAN
+
 The CAN (Controller Area Network) interface is a serial communication protocol used for communication between microcontrollers and devices, featuring high speed, strong anti-interference capability, and support for multi-node communication.
+
 ### Hardware Connection
+
 - Please note the sequence of the connected lines (R OUT ↔ RX, D IN ↔ TX), and then convert them to CAN_L and CAN_H through the CAN bus transceiver.
 
 <div align="center">
@@ -446,6 +451,7 @@ sudo ip link set can0 up
 sudo ip link set can1 up
 
 ```
+
 Then, run the file we just created in the Jetson terminal window:
 
 ```bash
@@ -528,10 +534,13 @@ The Extension Port includes a 40-pin extension header and a 12-pin control and U
 The 40-Pin Extension Header is a versatile expansion interface that provides various functions such as GPIO, I2C, SPI, and UART, making it convenient for connecting sensors, peripherals, or other modules.
 
 ### Usage Instruction
+
 **Enable 40-Pin Header:**
+
   ```bash
   sudo /opt/nvidia/jetson-io/jetson-io.py
   ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer-super/40_1.png"/>
 </div>
@@ -577,30 +586,41 @@ sudo /opt/nvidia/jetson-io/config-by-hardware.py -n "seeed gpio config Overlay"
 #Reboot system to reconfigure.
 
 ```
+
 The following are command examples for operating GPIO pins using the gpiod toolkit.
 
 **Step 1.** Install gpiod:
+
   ```bash
   sudo apt-get install gpiod
   ```
+
 **Step 2.** Find pin number:
+
   ```bash
   sudo gpiofind PH.00
   ```
+
 **Step 3.** Set pin high:
+
   ```bash
   sudo gpioset --mode=wait 0 43=1
   ```
+
 **Step 4.** Set pin low:
+
   ```bash
   sudo gpioset --mode=wait 0 43=0
   ```
+
 **Step 5.** Read input:
+
   ```bash
   gpioget 0 4
   ```
 
 GPIO Control Script Example
+
 ```bash
 #!/bin/bash
 
@@ -657,6 +677,7 @@ case $COMMAND in
 esac
 
 ```
+
 12-Pin Control and UART Header
 
 <div align="center">
@@ -665,21 +686,20 @@ esac
 
 The 12-Pin Control and UART Header provides essential control signals and UART communication interfaces for connecting and managing external devices.
 
-
 ## HDMI
-reComputer Super is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
 
+reComputer Super is equipped with an HDMI 2.1 Type A port, which supports a resolution of 7680x4320. This allows for ultra-high-definition video output.
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

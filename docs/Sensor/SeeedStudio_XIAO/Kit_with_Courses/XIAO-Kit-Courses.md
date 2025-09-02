@@ -151,25 +151,25 @@ Since its launch, the Seeed Studio XIAO series has been widely acclaimed for its
 
 ### Online Courses
 
--   [Harvard School of Engineering and Applied Sciences - CS249r: Tiny Machine Learning](https://sites.google.com/g.harvard.edu/tinyml/home)
--   [Professional Certificate in Tiny Machine Learning (TinyML) -- edX/Harvard](https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning)
--   [Introduction to Embedded Machine Learning - Coursera/Edge Impulse](https://www.coursera.org/learn/introduction-to-embedded-machine-learning)
--   [Computer Vision with Embedded Machine Learning - Coursera/Edge Impulse](https://www.coursera.org/learn/computer-vision-with-embedded-machine-learning)
--   [UNIFEI-IESTI01 TinyML: "Machine Learning for Embedding Devices"](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2023.1)
+- [Harvard School of Engineering and Applied Sciences - CS249r: Tiny Machine Learning](https://sites.google.com/g.harvard.edu/tinyml/home)
+- [Professional Certificate in Tiny Machine Learning (TinyML) -- edX/Harvard](https://www.edx.org/professional-certificate/harvardx-tiny-machine-learning)
+- [Introduction to Embedded Machine Learning - Coursera/Edge Impulse](https://www.coursera.org/learn/introduction-to-embedded-machine-learning)
+- [Computer Vision with Embedded Machine Learning - Coursera/Edge Impulse](https://www.coursera.org/learn/computer-vision-with-embedded-machine-learning)
+- [UNIFEI-IESTI01 TinyML: "Machine Learning for Embedding Devices"](https://github.com/Mjrovai/UNIFEI-IESTI01-TinyML-2023.1)
 
 ### Books
 
--   ["Python for Data Analysis by Wes McKinney"](https://wesmckinney.com/book/)
--   ["Deep Learning with Python" by François Chollet](https://www.manning.com/books/deep-learning-with-python) - [GitHub Notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
--   ["TinyML" by Pete Warden, Daniel Situnayake](https://www.oreilly.com/library/view/tinyml/9781492052036/)
--   ["TinyML Cookbook" by Gian Marco Iodice](https://github.com/PacktPublishing/TinyML-Cookbook)
--   ["Technical Strategy for AI Engineers, In the Era of Deep Learning" by Andrew Ng](https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf)
--   ["AI at the Edge" book by Daniel Situnayake, Jenny Plunkett](https://www.oreilly.com/library/view/ai-at-the/9781098120191/)
--   ["MACHINE LEARNING SYSTEMS for TinyML" Collaborative effort](https://harvard-edge.github.io/cs249r_book/)
+- ["Python for Data Analysis by Wes McKinney"](https://wesmckinney.com/book/)
+- ["Deep Learning with Python" by François Chollet](https://www.manning.com/books/deep-learning-with-python) - [GitHub Notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
+- ["TinyML" by Pete Warden, Daniel Situnayake](https://www.oreilly.com/library/view/tinyml/9781492052036/)
+- ["TinyML Cookbook" by Gian Marco Iodice](https://github.com/PacktPublishing/TinyML-Cookbook)
+- ["Technical Strategy for AI Engineers, In the Era of Deep Learning" by Andrew Ng](https://github.com/ajaymache/machine-learning-yearning/blob/master/full%20book/machine-learning-yearning.pdf)
+- ["AI at the Edge" book by Daniel Situnayake, Jenny Plunkett](https://www.oreilly.com/library/view/ai-at-the/9781098120191/)
+- ["MACHINE LEARNING SYSTEMS for TinyML" Collaborative effort](https://harvard-edge.github.io/cs249r_book/)
 
 ### Projects Repository
 
--   [Edge Impulse Expert Network](https://docs.edgeimpulse.com/experts/)
+- [Edge Impulse Expert Network](https://docs.edgeimpulse.com/experts/)
 
 ## About the authors
 
@@ -196,11 +196,11 @@ In addition to his professional pursuits, he is dedicated to educational outreac
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

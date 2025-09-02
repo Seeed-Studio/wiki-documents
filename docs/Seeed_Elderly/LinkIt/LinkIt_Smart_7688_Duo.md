@@ -18,12 +18,11 @@ Due to the closure of MediaTek Labs, all related links have become invalid. If y
 
 LinkItTM Smart 7688 Duo(a compact controller board) is an open development board based on MT7688([datasheet](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/MT7688_datasheet.pdf)) and ATmega32u4. The board is compatible with Arduino Yun sketches and is based on the OpenWrt Linux distribution. The board is designed especially to enable prototyping of Rich Application IoT devices for smart home or office[1]. As it is compatible well with Arduino, you can use different features from Arduino Yun and LinkIt Smart 7688 Duo[2]. This will help you build rich applications based on various, robust and compiled Arduino Yun sketches. The board offers you the memory and packet storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
 
-
 :::note
-* Only one controller can be the main controller of the board at a time.
-* This board is only a part of MediaTek LinkItTM Smart 7688 platform which includes other development boards.
-:::
+- Only one controller can be the main controller of the board at a time.
+- This board is only a part of MediaTek LinkItTM Smart 7688 platform which includes other development boards.
 
+:::
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-Duo-p-2574.html" target="_blank">
@@ -33,65 +32,64 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 ## Features
 
-* 580 MHz MIPS CPU
-* Single input single output(1T1R) Wi-Fi 802.11 b/g/n (2.4G)
-* Pin-out for GPIO, I2C, I2S, SPI, SPIS, UART, PWM and Ethernet Port
-* 32MB Flash and 128MB DDR2 RAM
-* USB host
-* Micro SD slot
-* Support for Arduino API (ATmega32U4)
+- 580 MHz MIPS CPU
+- Single input single output(1T1R) Wi-Fi 802.11 b/g/n (2.4G)
+- Pin-out for GPIO, I2C, I2S, SPI, SPIS, UART, PWM and Ethernet Port
+- 32MB Flash and 128MB DDR2 RAM
+- USB host
+- Micro SD slot
+- Support for Arduino API (ATmega32U4)
 
 ## Application ideas
 
-* IoT/Gateway Device
-* Robotics
-* Teaching and learning
-
+- IoT/Gateway Device
+- Robotics
+- Teaching and learning
 
 ## Specification
 
-* MPU
-    * Chipset: MT7688AN
-    * Core: MIPS24KEc
-    * Clock Speed: 580MHz
-    * Working Voltage: 3.3V
-* MCU
-    * Chipset: ATmega32U4
-    * Core: Atmel AVR
-    * Clock Speed: 8MHz
-    * Working Voltage: 3.3V
-* Memory
-    * Flash: 32MB
-    * RAM: 128MB DDR2
-* GPIO
-    * Pin Count: 3(MT7688AN), 24(ATmega32U4)
-    * Voltage: 3.3V
-* PWM
-    * Pin Count: 8(Atmega32U4)
-    * Voltage: 3.3V
-    * Max. Resolution: 16 bits(customizable)
-* ADC
-    * Pin Count 12(ATmega32U4)
-    * Resolution: 10 bits
-* External Interrupts: 8
-* SPI/SPIS
-    * Pin numbers: S0, S1, S2, S3
-    * Max Speed: 4MHz
-* I2C
-    * Pin Number: D2/D3
-    * Speed: 400KHz
-* UART Lite
-    * 1 for ATmega32U4, 1 for MT7688AN
-    * Pin Number: P8/P9(MT7688AN), D0/D1(ATmega32U4)
-* USB Host
-    * Pin Number: P6/P7
-    * Connector Type: Micro-AB
-* Communication
-    * Wi-Fi: 1T1R 802.11 b/g/n (2.4G)
-    * Ethernet: 1-port 10/100 FE PHY
-    * Pin Numbers: P2/P3/P4/P5
-* User Storage: SD Card	Micro SD/SDXC
-* Size: 60.8x26.0mm
+- MPU
+  - Chipset: MT7688AN
+  - Core: MIPS24KEc
+  - Clock Speed: 580MHz
+  - Working Voltage: 3.3V
+- MCU
+  - Chipset: ATmega32U4
+  - Core: Atmel AVR
+  - Clock Speed: 8MHz
+  - Working Voltage: 3.3V
+- Memory
+  - Flash: 32MB
+  - RAM: 128MB DDR2
+- GPIO
+  - Pin Count: 3(MT7688AN), 24(ATmega32U4)
+  - Voltage: 3.3V
+- PWM
+  - Pin Count: 8(Atmega32U4)
+  - Voltage: 3.3V
+  - Max. Resolution: 16 bits(customizable)
+- ADC
+  - Pin Count 12(ATmega32U4)
+  - Resolution: 10 bits
+- External Interrupts: 8
+- SPI/SPIS
+  - Pin numbers: S0, S1, S2, S3
+  - Max Speed: 4MHz
+- I2C
+  - Pin Number: D2/D3
+  - Speed: 400KHz
+- UART Lite
+  - 1 for ATmega32U4, 1 for MT7688AN
+  - Pin Number: P8/P9(MT7688AN), D0/D1(ATmega32U4)
+- USB Host
+  - Pin Number: P6/P7
+  - Connector Type: Micro-AB
+- Communication
+  - Wi-Fi: 1T1R 802.11 b/g/n (2.4G)
+  - Ethernet: 1-port 10/100 FE PHY
+  - Pin Numbers: P2/P3/P4/P5
+- User Storage: SD Card Micro SD/SDXC
+- Size: 60.8x26.0mm
 
 ## Hardware Overview
 
@@ -99,13 +97,11 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_backview_with_text_1200.jpg)
 
-
 :::note
     * In order to protect the product from improper operation, please pay attention to below notes.Choose more reliable power adapter with stable output.Recommended conditions of power input source for 7688:
           * Overshoot voltage of power input should not over 5.5.
           * Voltage wave should be within ±100mV of rated voltage.
 :::
-
 
 ## Getting started
 
@@ -114,12 +110,13 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 :::note
     There are two ways described in the manual. In this case, we only show an advanced method (using USB to Serial adapter) which might seem a little harder. But, you will benefit a lot from it in the long run.
 :::
+
 #### Materials required
 
-* LinkIt Smart 7688 x 1
-* USB cable (type A to micro type-B) x 1
-* USB to Serial adapter x 1
-* Jumper wires x 3
+- LinkIt Smart 7688 x 1
+- USB cable (type A to micro type-B) x 1
+- USB to Serial adapter x 1
+- Jumper wires x 3
 
 ### On Windows
 
@@ -131,12 +128,11 @@ LinkItTM Smart 7688 Duo(a compact controller board) is an open development board
 
 **4.** Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
 
-
-| Pin on USB adapter |	Corresponding Pin to be connected on LinkIt Smart 7688 |
+| Pin on USB adapter | Corresponding Pin to be connected on LinkIt Smart 7688 |
 |-----------------------------------|--------------------------------------------------------|
-| Pin RX	| Pin 8 |
-| Pin TX	| Pin 9 |
-| Pin GND |	Pin GND |
+| Pin RX | Pin 8 |
+| Pin TX | Pin 9 |
+| Pin GND | Pin GND |
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/7688_duo_demo_view_1200_s.jpg)
 
@@ -176,13 +172,17 @@ $ls /dev/cu*
 ```
 
 **5.** Use the screen utility to connect to the serial port and set the baudrate to 57600. This is because the baudrate of the system console is 57600 by default. For example:
+
 ```
 $screen /dev/cu.usbserial-XXXXXXXX 57600
 ```
+
 **6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become different from your OS X Terminal application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+
 ```
   root@myLinkIt:/#
 ```
+
 **7.** You are ready to make changes to the LinkIt Smart 7688 system through this console.
 
 ### On Linux
@@ -194,33 +194,38 @@ $screen /dev/cu.usbserial-XXXXXXXX 57600
 **3.** Open a Terminal session.
 
 **4.** Type **ls /dev/ttyUSB*** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console. For example:
+
 ```
 $ls /dev/ttyUSB*
 /dev/ttyUSB0
 ```
+
 **5.** Use the **screen** utility to connect to the serial port and set the baudrate to **57600**. This is because the baudrate of the system console is 57600 by default. For example:
+
 ```
 $sudo screen /dev/ttyUSB0 57600
 ```
+
 **6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become a different regular application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+
 ```
   root@myLinkIt:/#
 ```
+
 **7.** You are ready to make changes to the LinkIt Smart 7688 system through this console.
 
 ### Running the Blink example
 
 #### Materials Required
 
-* LinkIt Smart 7688 x 1
-* USB cable (type A to micro type-B) x 1
-* USB to Serial adapter x 1
-* Jumper wires x 3
+- LinkIt Smart 7688 x 1
+- USB cable (type A to micro type-B) x 1
+- USB to Serial adapter x 1
+- Jumper wires x 3
 
 #### Get Blink RUN
 
 **1.** Power up your board with a micro-USB cable (only connect the USB Power interface, rather than the USB Host interface).
-
 
 **2.** Launch PuTTy and connect to system with USB to Serial adapter as shown in previous sections.
 
@@ -269,7 +274,6 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer here for the 
 
 **9.** Now you can use internet to configure your system on development board.
 
-
 ### Installing Arduino programming environment
 
 This development board has features that are compatible with Arduino. So you can apply your Arduino code to 7688 platforms which makes prototyping process quicker. In this section, we will show you how to build an Arduino programming environment.
@@ -310,8 +314,8 @@ to the Additional Boards Manager URLs field:
 
 After installing the board package, connect LinkIt Smart 7688 Duo to your computer and you should see a USB serial COM port in the device manager with the following port ID:
 
-* Boot loader COM port: VID=0x0E8D, PID=0xAB00
-* Arduino Sketch COM port: VID=0x0E8D, PID=0xAB01
+- Boot loader COM port: VID=0x0E8D, PID=0xAB00
+- Arduino Sketch COM port: VID=0x0E8D, PID=0xAB01
 
 Next, you will need to install drivers depending on your operating system. The steps are:
 
@@ -333,23 +337,24 @@ Right click on the linkit_smart_7688.inf and select install, a security windows 
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Driver_inst_alert.jpg)
 
-* For Ubuntu Linux, it should work without installing a driver. LinkIt Smart 7688 should be in /dev folder and mounted as ttyUSB0. The number 0 may be different on each Ubuntu machine.
-* For OS X, it is also not required to install a driver, LinkIt Smart 7688 Duo is mounted as a serial device under/dev/tty.usbmodem1413. The number 1413 may be different on each OS X machine.
+- For Ubuntu Linux, it should work without installing a driver. LinkIt Smart 7688 should be in /dev folder and mounted as ttyUSB0. The number 0 may be different on each Ubuntu machine.
+- For OS X, it is also not required to install a driver, LinkIt Smart 7688 Duo is mounted as a serial device under/dev/tty.usbmodem1413. The number 1413 may be different on each OS X machine.
 
-
-##Demo: A Hello world example
+## Demo: A Hello world example
 
 :::note
     To avoid running out of memory during native application developments, you should setup the native application development environment in a more powerful host environment that enables you to cross-compile the executable format of the LinkIt Smart 7688 target instead. The following table shows an overview of the LinkIt Smart 7688 programming languages and the related development environments on host computer.
 :::
-###Python
+### Python
 
 **1.** Use FileZilla and refer to this [tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29), the server IP(replace **host name**) address is the inet addr found in previous [Switch to Station mode](https://seeeddoc.github.io/LinkIt_Smart_7688_Duo#Switch_to_Station_mode) section, the username is root and password is password you set in that section.
 
 **2.** Open a text editor, copy and paste the below example code and save it as **helloworld.py**.
+
 ```
 print "Hello World!"
 ```
+
 **3.** Copy the file **helloworld.py** into system on target development environment (LinkIt Smart 7688) with FileZilla, place it under the folder **root**.
 
 **4.** Launch PuTTy and connect to system with USB to Serial adapter.
@@ -358,9 +363,9 @@ print "Hello World!"
 
 **6.** Now you can see **Hello World**! printed in console.
 
-###Arduino
+### Arduino
 
-####On host computer(Arduino side)
+#### On host computer(Arduino side)
 
 The MCU side is written as an Arduino sketch. In this example, the sketch simply listens to the command sent from the MPU (Linux) side and switches the on-board LED accordingly.
 
@@ -394,11 +399,9 @@ void loop() {
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/img/Blink_in_arduino.jpg)
 
-
-####On development board(Linux side)
+#### On development board(Linux side)
 
 **1.** Use a text editor of your choice and create a new file(a Python file), then copy the following code and save it.
-
 
 ```
 import serial
@@ -428,27 +431,24 @@ loop()
 
 You can now extend the Arduino sketch to drive other devices such as PWM, I2C devices and synchronize the states by extending the command messages between Arduino and the Linux side. If more peripheral types need to be included, you can use some external libraries to implement the communication protocol. One such protocol - Firmata is described in the following section.
 
-
 ## FAQs
 
-[Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek. 
-
+[Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek.
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/317080023_DIP_Module;LinkIt_Smart_7688_Duo;2x20P.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
 
-* [Hardware Schematic files](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Hardware_Schematics.zip)
-* [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Manual.zip)
-* [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
-* [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
-* [How to flash the firmware via a USB drive](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Linkit_Smart_7688_DUO_Firmware.pdf)
-* [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt_Smart_7688_Duo-Certificate.zip)
-* [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
+- [Hardware Schematic files](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Hardware_Schematics.zip)
+- [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Manual.zip)
+- [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
+- [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
+- [How to flash the firmware via a USB drive](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/Linkit_Smart_7688_DUO_Firmware.pdf)
+- [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688_Duo/res/LinkIt_Smart_7688_Duo-Certificate.zip)
+- [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
 
 ## Project
 
@@ -477,11 +477,11 @@ You can now extend the Arduino sketch to drive other devices such as PWM, I2C de
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

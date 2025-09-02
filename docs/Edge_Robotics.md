@@ -13,7 +13,7 @@ last_update:
   author: ZhuYaohui
 ---
 
-# 🤖 Robotics 
+# 🤖 Robotics
 
 > *"The science of today is the technology of tomorrow." - Edward Teller*
 
@@ -41,7 +41,6 @@ last_update:
     </a>
   </nav>
 </div>
-
 
 <div className="nav-grid">
 
@@ -86,6 +85,7 @@ last_update:
 </div>
 
 ## ⚙️ Actuators {#actuators}
+
 <div class="category-group">
 <div className="category-card actuators">
 
@@ -108,6 +108,7 @@ last_update:
 </div>
 
 ## 👁️ Sensors {#sensors}
+
 <div class="category-group">
 <div className="category-card sensors">
 
@@ -127,7 +128,6 @@ last_update:
       <span className="text">Slamtec Series</span>
     </a>
 </div>
-
 
 **Camera**  
 
@@ -173,11 +173,11 @@ last_update:
     </a>
 </div>
 
-
 </div>
 </div>
 
 ## 💻 Software {#software}
+
 <div class="category-group">
 <div className="category-card software">
 
@@ -215,7 +215,6 @@ last_update:
 
 </div>
 
-
 **NVIDIA Isaac**  
 <div className="card-container">
 <a href="/install_isaaclab/" className="nav-item">
@@ -227,7 +226,6 @@ last_update:
 </a>
 </div>
 
-
 **VLA**  
 <div className="card-container">
 <a href="/control_robotic_arm_via_gr00t" className="nav-item">
@@ -235,21 +233,17 @@ last_update:
 </a>
 </div>
 
-
 </div>
 </div>
 
 </div>
-
-
-
 
 <style>{`
 /* 导航容器 */
 .quick-nav-container {
   margin: 2rem 0;
   padding: 1rem;
-  background: 
+  background:
   radial-gradient(at 10% 20%, #f0fdf4 0%, transparent 50%),
   radial-gradient(at 90% 80%, #f0f7ff 0%, transparent 50%),
   white;
@@ -259,11 +253,11 @@ last_update:
 
 /* Dark模式 - 导航容器 */
 html[data-theme='dark'] .quick-nav-container {
-  background: 
+  background:
     radial-gradient(at 10% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
     radial-gradient(at 90% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
     linear-gradient(135deg,rgb(42, 44, 49) 0%,rgb(32, 32, 33) 100%);
-  box-shadow: 
+  box-shadow:
     0 4px 6px rgba(0, 0, 0, 0.3),
     inset 0 0 12px rgba(99, 102, 241, 0.1); /* 内发光增强深度 */
 }
@@ -363,7 +357,6 @@ html[data-theme='dark'] .nav-item:hover {
   }
 }
 `}</style>
-
 
 <style>{`
 /* 内容卡片增强版样式 */
@@ -495,8 +488,8 @@ html[data-theme='dark'] .category-card a::after {
   transition: all 0.3s;
 }
 
-.stable { 
-  background: #e6f4ea; 
+.stable {
+  background: #e6f4ea;
   color: #137333;
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
@@ -508,8 +501,8 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(0,100,0,0.3);
 }
 
-.recommended { 
-  background: #fce8e6; 
+.recommended {
+  background: #fce8e6;
   color: #a50e0e;
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }

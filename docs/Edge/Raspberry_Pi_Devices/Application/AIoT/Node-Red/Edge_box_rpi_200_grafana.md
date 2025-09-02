@@ -20,29 +20,28 @@ last_update:
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Edge Box RPi 200</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
 It is recommended to refer to a previous tutorial on [How to create the InfluxDB database](https://wiki.seeedstudio.com/edge_box_rpi_200_node_red_influxdb/). In this tutorial, we will use an existing InfluxDB connection for the setup.
 
 ## Adding Grafana Repository
-
 
 **Ensure all currently installed packages on your Raspberry Pi are up to date**:
 
@@ -119,64 +118,62 @@ The default username and password are:
 
 Once you have logged in, you will be prompted to change the default password.
 
-
-
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/updatepsw.PNG" /></center>
 
 ## Create Your First Dashboard
 
 **Navigate to Dashboards:**
-   
+
 Click on **Dashboards** in the left-side menu.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/dashboard1.PNG" /></center>
 
 **Create a New Dashboard:**
-   
+
 On the Dashboards page, click **New** and select **New Dashboard**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/dashboard2.PNG" /></center>
 
 **Add a Visualization:**
-   
+
 On the dashboard, click **+ Add visualization**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/dashboard3.PNG" /></center>
 
 **Select Data Source:**
-   
+
 You will be redirected to select a data source. In the last tutorial, we created an InfluxDB database. Click on **Configure a new data source**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/configuresource.PNG" /></center>
 
 **Configure InfluxDB:**
-   
-   - Select **InfluxDB** under time series databases.
+
+- Select **InfluxDB** under time series databases.
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/addsource.PNG" /></center>
 
-   - Provide the **URL**, **database name**, and **user privileges**.
+- Provide the **URL**, **database name**, and **user privileges**.
   
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/configuresource2.PNG" /></center>
 
-   - Click **Save & Test**. If there are no warnings, you are good to go.
+- Click **Save & Test**. If there are no warnings, you are good to go.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/saveandtest.PNG" /></center>
 
-
 **Build Your Dashboard:**
-   
+
 You will see a message confirming the data source configuration. Click on **Building a dashboard**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/saveandtest2.png" /></center>
 
 **Add Visualization:**
-   
+
 You will be redirected to the new dashboard page. Click on **Add visualization**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/dashboard3.PNG" /></center>
 
 **Select Data Source:**
-   
+
 You will be redirected to select a data source. we created an InfluxDB database connection. Click on **InfluxDB**.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/grafana/datasource.PNG" /></center>
@@ -194,11 +191,11 @@ For more detailed settings and customization, refer to the [Grafana documentatio
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

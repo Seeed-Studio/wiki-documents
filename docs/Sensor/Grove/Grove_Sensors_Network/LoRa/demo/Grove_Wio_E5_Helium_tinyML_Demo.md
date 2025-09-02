@@ -13,15 +13,14 @@ last_update:
 
 ## Getting Started
 
-Here, we are going build a project that utilize tinyML and helium LoRa IoT network to prevent illegal wood logging. 
+Here, we are going build a project that utilize tinyML and helium LoRa IoT network to prevent illegal wood logging.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/illegalWoodlogging.png
-" alt="pir" width={1000} height="auto" /></p> 
-
+" alt="pir" width={1000} height="auto" /></p>
 
 ## Flowchart
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/ForestKeeperAlgoritham.png" alt="pir" width={1000} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/lora%2Btinyml/ForestKeeperAlgoritham.png" alt="pir" width={1000} height="auto" /></p>
 
 ### Hardware Required
 
@@ -29,22 +28,20 @@ Here, we are going build a project that utilize tinyML and helium LoRa IoT netwo
 |--------------|--------------|--------------|
 |  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" alt="pir" width={600} height="auto" /></p>|   <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/9d0ce51a71ce6a79dfa2a98d65a0f0bd/1/1/11302009_preview-34.png" alt="pir" width={600} height="auto" /></p>| <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" alt="pir" width={600} height="auto" /></p>|
 
-### Software Tools/Service Required 
+### Software Tools/Service Required
+
 1. 1x Ardunino IDE
-2. 1x [Helium IoT Console](https://console.helium.com/) . 
+2. 1x [Helium IoT Console](https://console.helium.com/) .
 3. 1 x Computer
 4. 1 x USB Type-C cable
 
-
-
-## Setup XIAO nRF52840 Sense on Arduino IDE 
+## Setup XIAO nRF52840 Sense on Arduino IDE
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/front-pinout-4.jpg" alt="pir" width={700} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/XIAO-BLE/pinout2.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https:///files.seeedstudio.com/wiki/XIAO-BLE/back-pinout-5.jpg" alt="pir" width={700} height="auto" /></p>
-
 
 :::tip
 Some USB cables can only supply power and cannot transfer data. If you don't have a USB cable or don't know if your USB cable can transmit data, you can check [Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html).
@@ -96,9 +93,7 @@ Navigate to **Tools > Port** and select the serial port name of the connected Se
 
 Once uploaded, you will see the built-in red LED blinking with a 1-second delay between each blink. This means the connection is successful and now you can explore more projects with the Seeed Studio XIAO nRF52840 (Sense)!
 
-
-## Setup Helium LoRa WAN Console.  
-
+## Setup Helium LoRa WAN Console  
 
 :::note
 Make sure you are inside the helium network coverage. You can find the network coverage at [explorer.helium.com](https://explorer.helium.com/)
@@ -109,17 +104,15 @@ Please ensure the consistent of the frequency band among the end nodes, gateway,
 The frequency plan this demo applied is for **IN865**.
 :::
 
-
 The Helium IOT Network uses the LoRaWAN protocol to provide internet connectivity to "Internet of Things" devices and is the original sub network in the Helium ecosystem. Developers and companies around the world rely on the Helium IOT Network for connectivity.
 
-
-### Helium IoT Console Prepration 
+### Helium IoT Console Prepration
 
 - **Step 1.** Visit [Helium Console](https://console.helium.com/welcome ) website and sign up for a new account
 
-<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Helium-login.png" alt="pir" width={500} height="auto" /></p> 
+<p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Helium-login.png" alt="pir" width={500} height="auto" /></p>
 
-- **Step 2.** After logging in, click "Devices" to manage devices. 
+- **Step 2.** After logging in, click "Devices" to manage devices.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Device.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -131,30 +124,27 @@ The Helium IOT Network uses the LoRaWAN protocol to provide internet connectivit
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Id01.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 5.** Now you can see the device under the "Devices" section. 
+- **Step 5.** Now you can see the device under the "Devices" section.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/resource/main/Images/LoRa/Helium/Networksetup/Device02.png" alt="pir" width="1000" height="auto"/></p>
 
-Now, the helium console setup is done. we can move to the Software part and upload data to the helium console over the helium LoRa network. 
+Now, the helium console setup is done. we can move to the Software part and upload data to the helium console over the helium LoRa network.
 
+## Hardware Preparation
 
-
-## Hardware Preparation. 
-
-Place the XIAO nRF52840 BLE Sense to the Seeeduino XIAO Expansion board and then Connect the Grove - Wio E5  to the XIAO Expansion board UART Port. 
+Place the XIAO nRF52840 BLE Sense to the Seeeduino XIAO Expansion board and then Connect the Grove - Wio E5  to the XIAO Expansion board UART Port.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-nRF52840-Sense/src/img/XIAO_LoRa.png" alt="pir" width={400} height="auto" /></p>
 
+## Software Preparation
 
-## Software Preparation.
-
-We developed the tinyML model using the Edge impulse tool, and you can find the dataset and project details [here](https://studio.edgeimpulse.com/public/283541/latest), you can also clone the project and do the modfications as per your need. 
+We developed the tinyML model using the Edge impulse tool, and you can find the dataset and project details [here](https://studio.edgeimpulse.com/public/283541/latest), you can also clone the project and do the modfications as per your need.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-nRF52840-Sense/src/img/Edge_Impulse_project.png" alt="pir" width={800} height="auto" /></p>
 
 For now, download the Edge Impulse tinyML library from [here](https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-nRF52840-Sense/src/lib/ei-illegal-logging-detection--vehicle-sound-xiao-nrf52-arduino-1.0.4.zip) and add it the arduino. Follow [this guide](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/#1add-zip-library) to learn how to add ZIP libraries.
 
-After adding the library, copy the code below and past in to your arduino sketch and **replace the helium LoRa WAN Credentials**. 
+After adding the library, copy the code below and past in to your arduino sketch and **replace the helium LoRa WAN Credentials**.
 
 ```cpp
 /* Edge Impulse ingestion SDK
@@ -575,8 +565,7 @@ static void microphone_inference_end(void) {
 
 ```
 
-
-Reaplace the **DevEUI , AppEUI** and **APPKEY** with your credentails obtained from the Helium console. Also make sure to replace the **IN865** as per your region FREQ plan. 
+Reaplace the **DevEUI , AppEUI** and **APPKEY** with your credentails obtained from the Helium console. Also make sure to replace the **IN865** as per your region FREQ plan.
 
 ```cpp
 at_send_check_response("+ID: DevEui", 1000, "AT+ID=DevEui,\"xxxxxxxxxxx\"\r\n");
@@ -590,7 +579,8 @@ at_send_check_response("+CH: NUM", 1000, "AT+CH=NUM,0-2\r\n");
 at_send_check_response("+CLASS: A", 1000, "AT+CLASS=A\r\n");
 at_send_check_response("+PORT: 8", 1000, "AT+PORT=8\r\n");
 ```
-In the below section, you can see the XIAO will check if there any **Vehicle sound detected** and if it's detected,it will establish an LoRa WAN Connection to the helium console and send data **1** as **Vehicle Sound is Detected** symbol. 
+
+In the below section, you can see the XIAO will check if there any **Vehicle sound detected** and if it's detected,it will establish an LoRa WAN Connection to the helium console and send data **1** as **Vehicle Sound is Detected** symbol.
 
 ```cpp
 // Display inference result and Send message to Helium Console. 
@@ -650,21 +640,20 @@ In the below section, you can see the XIAO will check if there any **Vehicle sou
 Make sure you are inside the helium network coverage. You can find the network coverage at [explorer.helium.com](https://explorer.helium.com/)
 :::
 
-After uploading the code, The XIAO nRF52840 Sense will capture sound and check if there is any engine sound using tinyML, so try to play engine sound to trigger the action. Once it's detect the engine sound (1), XIAO will establish the Helium LoRa network connection and send command "1" as **Vehicle Sound is Detected** symbol (2). 
+After uploading the code, The XIAO nRF52840 Sense will capture sound and check if there is any engine sound using tinyML, so try to play engine sound to trigger the action. Once it's detect the engine sound (1), XIAO will establish the Helium LoRa network connection and send command "1" as **Vehicle Sound is Detected** symbol (2).
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-nRF52840-Sense/src/img/Infer_engine_sound.png" alt="pir" width={1000} height="auto" /></p>
 
-You can see the data over the helium console and it's debug window. 
+You can see the data over the helium console and it's debug window.
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-nRF52840-Sense/src/img/helium-debug.png" alt="pir" width={1000} height="auto" /></p>
 
 ## ToDo
 
-So far, we made intergration with tinyML and LoRa. and we have few to-dos that you can work as exercise to improve the project. 
+So far, we made intergration with tinyML and LoRa. and we have few to-dos that you can work as exercise to improve the project.
 
-- [ ] Intergrate the helium console with dashboard and vishualize the data 
-- [ ] Create Email/SMS/Phone Alert with custom dashboard to inform forest ranger. 
-
+- [ ] Intergrate the helium console with dashboard and vishualize the data
+- [ ] Create Email/SMS/Phone Alert with custom dashboard to inform forest ranger.
 
 ## Resources
 
@@ -700,16 +689,14 @@ Relevant SDK:
 
 ## Tech Support & Product Discussion
 
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

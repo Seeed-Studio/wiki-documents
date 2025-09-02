@@ -11,27 +11,19 @@ last_update:
 ---
 
 
-
 The Wio WM1110 Dev Kit is an open source platform for building IoT projects. It provides low-power loRa network connection and a full range of location coverage services. This kit also includes a range of sensors and peripherals, making it a versatile platform for building IoT projects.
 
-In this tutorial, we will introduce the hardware overview and how to develop your own application! 
-
+In this tutorial, we will introduce the hardware overview and how to develop your own application!
 
 ## Hardware Overview
 
 The Wio-WM1110 Dev Kit is based on [Wio-WM1110 Module](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html),integrates Semtech's LoRa® transceiver and a multi-purpose radio front-end for geolocation, the board has a built-in TH sensor and a 3-axis Accelerometer, also providing connectivity options for a variety of peripherals.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/hardware_overview1.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ## Pinout
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/PIN.png" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ## LoRaWAN® Communication
 
@@ -44,8 +36,8 @@ Wio-WM1110 DK allows users to set the DevEUI, AppEUI, and AppKey, so you can set
 ```cpp
 ...\Seeed_Wio_WM1110_Dev_Board\apps\common\lorawan_key_config.h
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/keys.png" alt="pir" width={800} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/keys.png" alt="pir" width={800} height="auto" /></p>
 
 **LoRa Basics Modem LoRaWAN® Class A/C example**
 
@@ -67,10 +59,9 @@ Several parameters can be updated in `main_lorawan.h` header file:
 | `LORAWAN_CONFIRMED_MSG_ON` | Request a confirmation from the LNS that the uplink message has been received |
 | `APP_TX_DUTYCYCLE`         | Delay in second between two uplinks                                           |
 
-
 ## Positioning
 
-### GNSS 
+### GNSS
 
 By capturing a short portion of the signal broadcast by the GNSS satellites, and extracting the information required to calculate the device position - the pseudo-ranges. This information is aggregated into a NAV message which can be sent to a back-end system to compute the device position.
 
@@ -81,10 +72,9 @@ The GNSS scanner of the Wio-WM1110 has two modes of operations: autonomous and a
 **GNSS autonomous mode:** Does not require any assistance location or almanac data, and aims to detect strong satellite signals. Therefore it is suitable for outdoor conditions with good sky visibility.
 
 **GNSS assisted mode**：It allows the most efficient GNSS geolocation. Assistance information can build a list of the satellites in view at the current time and location, in order to reduce the GNSS satellites search space, and therefore optimize the time and energy spent geolocating. The assistance information is tailored to an LPWAN network, limiting the data sent, especially the downlink size and frequency. It consists of:  
-* LR1110 approximate position 
-* Current time 
-* Up-to-date reduced size Almanac information (less than 3 months old)
-
+- LR1110 approximate position
+- Current time
+- Up-to-date reduced size Almanac information (less than 3 months old)
 
 **Geolocation GNSS Example**
 
@@ -92,9 +82,6 @@ This example illustrates the GNSS scan procedure:
 
 - configuration of the LoRa Basics Modem library; and
 - execution of GNSS *scan & send* feature using the *GNSS geolocation middleware*.
-
-
-
 
 **GNSS demonstration related configuration**
 
@@ -122,16 +109,11 @@ If manual mode is selected for assistance position, the following constants defi
 The GNSS scan mode selected by default is `GNSS_MW_MODE_STATIC`, meaning that
 this application example targets non-mobile objects.
 
-
-
-
 ### Wi-Fi
 
 By discovering the Wi-Fi b/g/n access points available in the vicinity of the device, and extract MAC addresses allowing to geolocate the device. The objective is to obtain at least 2 MAC addresses, which can be used to position the device, after they have been sent to an online Wi-Fi lookup service
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Schematic02.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Geolocation Wi-Fi Example**
 
@@ -142,7 +124,6 @@ This example illustrates the Wi-Fi scan procedure:
 - configuration of the LoRa Basics Modem library; and
 - execution of Wi-Fi *scan & send* feature using the *Wi-Fi geolocation middleware*.
 
-
 **Wi-Fi demonstration related configuration**
 
 The `main_geolocation_wifi.h` header file defines several constants which can be
@@ -152,10 +133,6 @@ set to define the configurable parameters of the application.
 | ------------------ | --------------------------------------------------------------------------------------------- | --------------- | ------------- |
 | `WIFI_SCAN_PERIOD` | Defines the duration between the end of a scan & send sequence and the start of next sequence | `uint32_t`      | 30            |
 
-
-
-
-
 ### GNSS and Wi-Fi
 
 **Geolocation GNSS and Wi-Fi example**
@@ -164,8 +141,6 @@ This example illustrates the combination of GNSS and Wi-Fi scan procedures:
 - configuration of the LoRa Basics Modem library; and
 - concurrent execution of GNSS and Wi-Fi *scan & send* features using the
 *GNSS geolocation middleware* and the *Wi-Fi geolocation middleware*.
-
-
 
 **Geolocation demonstration related configuration**
 
@@ -192,13 +167,11 @@ If manual mode is selected for assistance position, the following constants defi
 
 The GNSS scan mode selected by default is `GNSS_MW_MODE_MOBILE`, meaning that this application example targets mobile objects.
 
-
 ## BLE
 
 Low Energy Bluetooth (BLE), also known as Bluetooth Low Energy, is a wireless communication technology designed to provide a low-power and low-complexity communication method for devices that require long-term power supply, low data transfer rates, and short communication distances. Optimized based on Bluetooth technology, BLE has lower power consumption and a simpler protocol stack, making it suitable for low-power and Internet of Things (IoT) applications.
 
 The Wio-WM1110 has a Low Energy Bluetooth based on the nRF52840 chip.
-
 
 **Testing with the Bluetooth routine**
 
@@ -207,14 +180,9 @@ There is a 'Bluetooth: Peripheral UART' sample on the SDK. The test requires tha
 The BLE demo located at:
 `nRF5_SDK_17.1.0_ddde560/examples/ble_peripheral/ble_app_uart/pca10056/s140/ses/`
 
+- [Testing with a mobile device](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_mobile.html)
 
-* [Testing with a mobile device](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_mobile.html)
-
-* [Testing with a computer](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_desktop.html)
-
-
-
-
+- [Testing with a computer](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_desktop.html)
 
 ## On-board Sensors
 
@@ -224,20 +192,16 @@ SHT41 is a digital humidity and temperature sensor, it communicates with a micro
 
 The SHT41 sensor is commonly used in a wide range of applications, including HVAC systems, weather stations, indoor air quality monitoring, and industrial process control. Its small size, low power consumption, and high accuracy make it a popular choice for many different types of projects.
 
-
 |  | Range | Accuracy |
 | -------- | -------- | -------- |
 |Temperature  | -40~125°C |0.2°C|
 | Humidity | 0~100%RH |1.8%RH|
-
-
 
 **Code:**
 
 This example provides functions for initializing the sensor, reading temperature and humidity values, and setting the temperature unit.
 
 Here's a brief summary of the functions defined in this code:
-
 
 **SHT41Init**: a function that initializes the sensor by resetting it and waiting for 1ms before proceeding.
 
@@ -246,34 +210,25 @@ Here's a brief summary of the functions defined in this code:
 **SHT41SetTemperatureUnit and SHT41GetTemperatureUnit**: functions for setting and getting the temperature unit.
 crc8: an internal function that calculates the CRC-8 checksum of a byte array.
 
-
-    
 ### 3-axis Accelerometer(LIS3DHTR)
-
 
 The LIS3DHTR is a high-performance sensor that measures acceleration in three dimensions and provides accurate and reliable readings.
 
 The LIS3DHTR sensor communicates with a microcontroller or other digital device through an I2C or SPI interface. It also includes advanced features such as programmable interrupts and a wide range of power-saving modes to help minimize power consumption.
 
-
-
 | Range | Bandwidth | Sensitivity(LSB/g) |
-| -------- | -------- | -------- | 
+| -------- | -------- | -------- |
 | ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz |1000 (±2g) ~ 83 (±16g)
 
-
-    
 ## Grove
-
 
 There are 3 Grove interfaces in the DK, which can be connected to 400+ Grove modules, and supports ADC/UART and IIC transmission protocols.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" alt="pir" width={600} height="auto" /></p>
 
-
 ### Grove IIC
 
-There is a Grove IIC port on the DK, with `SDA` on pin 27 and `SCL` on pin 26. 
+There is a Grove IIC port on the DK, with `SDA` on pin 27 and `SCL` on pin 26.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_iic.png" alt="pir" width={300} height="auto" /></p>
 
@@ -282,6 +237,7 @@ To connect to a Grove IIC module, the sensor power must be enabled：`I2C_PWR` (
 ```cpp
 #define IIC_POWER          7
 ```
+
 TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 ```cpp
@@ -315,7 +271,6 @@ TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 This example reads the value of the [SHT41 Temperature and Humidity sensor](https://wiki.seeedstudio.com/Grove-SHT4x/) through the IIC interface, and prints it to the serial monitor.
 
-
 ```cpp
 #include "nrf_gpio.h"
 #include "nrf_gpiote.h"
@@ -348,17 +303,13 @@ Then you will get the temperature and humidity values:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/valueSHT41.png" alt="pir" width={500} height="auto" /></p>
 
-
 ### Grove UART
-
 
 The Wio-WM1110 DK has two UART peripherals, namely `uart0` and `uart1`.  `uart0` pins are connected to the CH340C for debugging purposes, while `uart1` serves as a Grove UART Port.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_uart.png" alt="pir" width={300} height="auto" /></p>
 
-
-Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6. 
-
+Referring to the schematic, TXD is located on pin 8 and RXD is on pin 6.
 
 ```cpp
 #define     LED1                      13
@@ -397,12 +348,9 @@ UART needs to be enabled in the `sdk_config.h` file before usage:
 #endif
 ```
 
-
-
 **Example code**
 
 The following sample code implements the functions of serial port transmission and reception with feedback.
-
 
 ```cpp
 #include "nrf_gpio.h"
@@ -461,7 +409,7 @@ int main(void)
             
 void uart_handleEvent(app_uart_evt_t * p_event)
 {
-	uint8_t dat;
+ uint8_t dat;
     if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
     {
         APP_ERROR_HANDLER(p_event->data.error_communication);
@@ -470,25 +418,22 @@ void uart_handleEvent(app_uart_evt_t * p_event)
     {
         APP_ERROR_HANDLER(p_event->data.error_code);
     }
-	
+ 
     else if (p_event->evt_type == APP_UART_DATA_READY)
-	{
-		app_uart_get(&uart,&dat); 
-		app_uart_put(&uart,dat); 
-	}
+ {
+  app_uart_get(&uart,&dat); 
+  app_uart_put(&uart,dat); 
+ }
     else if (p_event->evt_type == APP_UART_TX_EMPTY) 
-	{
-		nrf_gpio_pin_toggle(LED1);
-	}
+ {
+  nrf_gpio_pin_toggle(LED1);
+ }
 }
 ```
 
-
-
-
 ### Grove ADC
 
-There are eight ADC peripherals (0~7) on the DK, `ADC6` and `ADC7` are used as the Grove ADCT Port. 
+There are eight ADC peripherals (0~7) on the DK, `ADC6` and `ADC7` are used as the Grove ADCT Port.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_adc.png" alt="pir" width={300} height="auto" /></p>
 
@@ -498,11 +443,9 @@ ADC pins are fixed and cannot be remapped.
 
 The corresponding relationships for ADC pins are shown in the table below:
 
-
 |ADC0|ADC1|ADC2|ADC3|ADC4|ADC5|ADC6|ADC7|
 |:-------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 |2|3|4|5|28|29|30|31
-
 
 SAADC needs to be enabled in the `sdk_config.h` file before usage:
 
@@ -532,8 +475,6 @@ SAADC needs to be enabled in the `sdk_config.h` file before usage:
 **Example code**
 
 This is an example program for ADC6, which implements the function of reading the analog input value of a single channel of the ADC6 pin and outputting the measured ADC value through the UART:
-
-
 
 ```cpp
 #include "nrf_gpio.h"
@@ -580,7 +521,7 @@ void ADC_Interrupt(nrfx_saadc_evt_t const *p_event){
 
 void uart_handleEvent(app_uart_evt_t * p_event)
 {
-	uint8_t dat;
+ uint8_t dat;
     if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
     {
         APP_ERROR_HANDLER(p_event->data.error_communication);
@@ -589,16 +530,16 @@ void uart_handleEvent(app_uart_evt_t * p_event)
     {
         APP_ERROR_HANDLER(p_event->data.error_code);
     }
-	
+ 
     else if (p_event->evt_type == APP_UART_DATA_READY)
-	{
-		app_uart_get(&uart,&dat); 
-		//app_uart_put(&uart,dat); 
-	}
+ {
+  app_uart_get(&uart,&dat); 
+  //app_uart_put(&uart,dat); 
+ }
     else if (p_event->evt_type == APP_UART_TX_EMPTY) 
-	{
-		//nrf_gpio_pin_toggle(LED1);
-	}
+ {
+  //nrf_gpio_pin_toggle(LED1);
+ }
 }
 
 int main(void)
@@ -637,24 +578,15 @@ int main(void)
 
 ```
 
-
-
-
-
-
 ## Resources
 
 [Seeed_Wio_WM1110_Dev_Board](https://github.com/Seeed-Studio/Seeed_Wio_WM1110_Dev_Board)
 
 [nRF5-SDK](https://www.nordicsemi.com/Products/Development-software/nRF5-SDK/Download#infotabs)
 
-
 ## Tech Support
 
 **Need help with your Wio-WM1110 Dev Kit? We're here to assist you!**
-
-
-
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>

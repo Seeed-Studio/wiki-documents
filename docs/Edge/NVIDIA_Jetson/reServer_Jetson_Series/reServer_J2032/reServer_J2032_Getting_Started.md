@@ -20,7 +20,6 @@ Meanwhile, reServer is of compact design to work efficiently in almost any serve
 
 Having dual SATA III 6.0Gbps data connectors, reServer is able to equip up to two 3.5"/2.5" SATA internal hard disk drives to acquire more storage.
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -542,17 +541,13 @@ The LoRa® Mark is a trademark of Semtech Corporation or its subsidiaries.
   </div>
 </div>
 
-
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/reComputerJ2032hardware.png" alt="pir" width={1000} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/reComputerJ2032hardware1.png" alt="pir" width={1000} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/reComputerJ2032hardware2.png" alt="pir" width={1000} height="auto" /></p>
-
 
 ## Dimensions
 
@@ -591,15 +586,12 @@ You might follow the **Assembly Guide Manual** attached at the end of this page 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_wm1302_minipcie.png" alt="pir" width={500} height="auto" /></p>
 
-
 - **Step 2.** Connect the antenna cable and locate the antenna mounting slot on the back of the reServer J2032 case which should have a rubber insert blocking the hole.
 
 !!! Note:
      reServer J2032 does not shipped with Antenna Adapters and Antenna.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
-
 
 - **Step 3.** mod reServer J2032 to be used with LoRaWAN® module by type following command into the `Terminal`:
 
@@ -609,41 +601,42 @@ cd /sys/class/gpio/
 echo 268 > export; echo out > gpio268/direction; echo 1 > gpio268/value
 echo 495 > export; echo out > gpio495/direction; echo 0 > gpio495/value
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/enable_lorawan.png" alt="pir" width={700} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/enable_lorawan.png" alt="pir" width={700} height="auto" /></p>
 
 - **Step 4.** check if the LoRaWAN® module is connected properly，open `Terminal` and type following command:
   
 !!! Note:
-    The following steps on enabling the LoRaWAN® module only tested and applied on the Factory Default Jetpack 4.6.1 
+    The following steps on enabling the LoRaWAN® module only tested and applied on the Factory Default Jetpack 4.6.1
 
 ```
 ls /dev/ttyACM*
 ```
+
 You should see following output as following:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lsusb_lorawan.png" alt="pir" width={500} height="auto" /></p>
-
 
 OR
 
 ```
 lsusb -t
 ```
+
 You should see following output as following:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lsusb_t_lorawan.png" alt="pir" width={700} height="auto" /></p>
 
-
-
 - **Step 5.** To use the LoRaWAN® Module please download the source code:
 
 Now let's install git and download sx1302_hal(library and programs for SX1302 LoRa® Gateway) from github:
+
 ```
 sudo apt update
 sudo apt install -y git
 git clone https://github.com/Lora-net/sx1302_hal
 ```
+
 Move to sx1302_hal folder and build the program:
 
 ```
@@ -652,18 +645,19 @@ make
 ```
 
 Start to run the LoRaWAN® gateway application, here is an example of using the [WM1302-USB-868](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4892&indexName=bazaar_retailer_products) module, where the config file `global_conf.json.sx1250.EU868.USB` has been choosen:
+
 ```
 cd packet_forwarder/
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
+
 You should see similar output like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lorawan_start.png" alt="pir" width={800} height="auto" /></p>
 
-
 #### 4G/5G Module Mini-PCIe Installation
 
-!!! Note: 
+!!! Note:
      **QC25-EUX 4G module** is used with the following setup guide and the module does not included.
 
 - **Step 1.** Locate the Mini-PCIe slot on the back of the carrier board and install LoRaWAN® Module.
@@ -674,14 +668,12 @@ You should see similar output like this:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_sim2_minipcie.png" alt="pir" width={550} height="auto" /></p>
 
-
 - **Step 2.** Connect the antenna cable and locate the antenna mounting slot on the back of the reServer J2032 case which should have a rubber insert blocking the hole.
 
 !!! Note:
      reServer J2032 does not shipped with Antenna Adapters and Antenna.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
-
 
 - **Step 3.** mod reServer J2032 to be used with **QC25-EUX 4G module** by type following command into the `Terminal`:
 
@@ -699,7 +691,7 @@ echo 0 > gpio495/value
 - **Step 4.** check if the **QC25-EUX 4G module** is connected properly by power up and boot into the system, then open `Terminal` and type following command:
   
 !!! Note:
-    The following steps on enabling the **QC25-EUX 4G module** only tested and applied on the **Factory Default Jetpack OS Version 4.6.1** 
+    The following steps on enabling the **QC25-EUX 4G module** only tested and applied on the **Factory Default Jetpack OS Version 4.6.1**
 
 ```
 lsusb -t
@@ -709,53 +701,56 @@ You should see following output as following:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/4G_lsusb_t.png" alt="pir" width={650} height="auto" /></p>
 
-
 - **Step 5.** Enable **QC25-EUX 4G module** to connect to 4G network, please open ```Terminal``` and type:
 
 Open minicom serial moniter with the 4G module plugged in
+
 ```
 sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB2 -b 115200m1
 ```
+
 once the serial connection opened, Type in AT and press 'Enter', and you should see OK.
 
 At the same minicom serial window please type:
+
 ```
 AT+QCFG="usbnet"
 ```
+
 It will return something like +QCFG: "usbnet",0, but we need that to be set to 1 (ECM mode), so enter the following command:
+
 ```
 AT+QCFG="usbnet",1
 ```
+
 Then enter the following command to force the modem to reboot:
+
 ```
 AT+CFUN=1,1
 ```
+
 Then you could reboot or wait for a while for the moudel to get internet from your sim card carrier.
 
 Now if you type `ifconfig` in `Terminal` you should see the similar output as image shown below which you have assigned an ip address from your SIM Card mobile carrier:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/4Gnetwork.png" alt="pir" width={700} height="auto" /></p>
 
-
 #### 4G/5G Module M.2 B-key Port Installation
 
-!!! Note: 
+!!! Note:
     The M.2 B-Key on reServer J2032 support 3042/3052(USB3.2 GEN2) format supports 4G/5G Wireless Module **(4G/5G Module is not included in reServer)**. The SIM8202G-M2 5G module is used in the following steps.
 
 - **Step 1.** Install SIM8202G-M2 Module to M.2 B-Key.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_installM2.png" alt="pir" width={500} height="auto" /></p>
 
-
 - **Step 2.** Connect the antenna cable to the Module.
 
 !!! Note:
      reServer J2032 does not shipped with Antenna Adapters and Antenna, For using the **SIM8202G-M2** 5G Module to connect network you need to have Antennas attached to the module.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
-
 
 - **Step 3.** Mod reServer J2032 to be used with **SIM8202G-M2 5G module** on the M.2 B-Key port by type following command into the `Terminal`:
 
@@ -770,7 +765,7 @@ echo 266 > export; echo out > gpio266/direction; echo 1 > gpio266/value
 - **Step 4.** check if the **SIM8202G-M2 5G module** is connected properly by power up and boot into the system, then open `Terminal` and type following command:
   
 !!! Note:
-    The following steps on enabling the **SIM8202G-M2 5G module** only tested and applied on the **Factory Default Jetpack OS Version 4.6.1** 
+    The following steps on enabling the **SIM8202G-M2 5G module** only tested and applied on the **Factory Default Jetpack OS Version 4.6.1**
 
 ```
 lsusb -t
@@ -780,7 +775,6 @@ You should see similar outputs as shown below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/enable5G.png" alt="pir" width={700} height="auto" /></p>
 
-
 **Step 5.** Enable **SIM8202G-M2** 5G Module to connect to 5G network
 
 !!! Note:
@@ -789,15 +783,16 @@ You should see similar outputs as shown below:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_sim1.png" alt="pir" width={500} height="auto" /></p>
 
-
 Open minicom serial moniter with the SIM8202G-M2 5G module plugged in
+
 ```
 sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB2 -b 115200m1
 ```
+
 Once the serial connection opened, Type in `AT` and press 'Enter' you should see `OK` in the next line.
- 
-Now, to be able to connect to 4G/5G network, please follow the command to install the required driver for SIM8202G-M2 5G module to enable the network connection: 
+
+Now, to be able to connect to 4G/5G network, please follow the command to install the required driver for SIM8202G-M2 5G module to enable the network connection:
 
 ```
 cd ~
@@ -815,12 +810,12 @@ Now if you type `ifconfig` in `Terminal` you should see the similar output as im
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/5Gnetwork.png" alt="pir" width={700} height="auto" /></p>
 
-
 #### HDD Installation
 
-reServer supports installing two 3.5"/2.5" internal hard disk drives to acquire more storage. 
+reServer supports installing two 3.5"/2.5" internal hard disk drives to acquire more storage.
 Please follow the steps to install the HDDs.
-- **Step 1.** Remove the screws and pull out the brackets 
+
+- **Step 1.** Remove the screws and pull out the brackets
 
 - **Step 2.** Attach the HHDs to the brackets with screws
 
@@ -830,10 +825,9 @@ Please follow the steps to install the HDDs.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/07.png" alt="pir" width height="auto" /></p>
 
-
 ### Hardware Interface
 
-For this part, we will introduce the interface connection of reServer. 
+For this part, we will introduce the interface connection of reServer.
 
 #### Power Connection
 
@@ -856,15 +850,11 @@ There are two methods for reServer to connect to a display.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/reserver_display.png" alt="pir" width={300} height="auto" /></p>
 
-
-
 #### Ethernet Connection
 
-reServer J2032 comes with two ethernet ports which the connection speed are 1000BASE-T and 2.5GBASE-T respectively, 
+reServer J2032 comes with two ethernet ports which the connection speed are 1000BASE-T and 2.5GBASE-T respectively,
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/ethernetport.png" alt="pir" width={300} height="auto" /></p>
-
-
 
 ## Resources
 
@@ -874,17 +864,16 @@ reServer J2032 comes with two ethernet ports which the connection speed are 1000
 - [Seeed Jetson Serials Comparision](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

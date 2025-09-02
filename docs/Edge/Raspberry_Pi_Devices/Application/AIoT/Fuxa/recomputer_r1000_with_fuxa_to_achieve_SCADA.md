@@ -14,11 +14,11 @@ last_update:
   author: ShuishengPeng
 ---
 
-## Introduction 
-FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols. 
+## Introduction
+
+FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. With FUXA you can create modern process visualizations with individual designs for your machines and real-time data display.It supports Modbus RTU/TCP, Siemens S7 Protocol, OPC-UA, BACnet IP, MQTT, and other protocols.
 
 This article mainly introduces how to use fuxa to achieve SCADA. In the article, fuxa receives data from `node-red` and `OPC UA Simulator`, and displays it using `chart` and `Circular Gauge`; at the same time, it draws a series of patterns to simulate industrial processes.
-
 
 ## Getting Start
 
@@ -27,26 +27,28 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
+
 * Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.
-* Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
+- Using [fuxa](https://github.com/frangoteam/FUXA) on reComputer R1000.You can refer to the following steps to install fuxa on reComputer R1000
+
   ```shell
     ## You need to have installed Node Version 14 || 16 || 18.
     wget https://nodejs.org/dist/v18.20.3/node-v18.20.3-linux-arm64.tar.xz
@@ -59,14 +61,17 @@ Before you start this project, you may need to prepare your hardware and softwar
     sudo npm install -g --unsafe-perm @frangoteam/fuxa
     sudo fuxa
   ```
+
 * Regarding how to use fuxa to implement OPC-UA data interaction, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/).
-* Regarding how to use fuxa to implement data interaction with mqtt client, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/).Unlike this wiki, the data we publish in `node-red` is processed by the `function` module, and the `loop` module is used for continuous publishing.The code of the `function` module is as follows:
+- Regarding how to use fuxa to implement data interaction with mqtt client, you can refer to this [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/).Unlike this wiki, the data we publish in `node-red` is processed by the `function` module, and the `loop` module is used for continuous publishing.The code of the `function` module is as follows:
+
   ```java
   ## On Start
     global.set('firstTank', '10000');
     global.set('secondTank', '0');
     global.set('thirdTank', '0');
   ```
+
   ```java
   ## On Message
     var firstTank = global.get('firstTank');
@@ -96,6 +101,7 @@ Before you start this project, you may need to prepare your hardware and softwar
     msg.payload = data;
     return msg;
   ```
+
   The main thing is to encapsulate firstTank, secondTank, and thirdTank into json format, and then let the mqtt-out module publish it.
 
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/node-red-mqtt.png" /></center>
@@ -111,7 +117,9 @@ We use Ethernet cables to connect the W10 PC and reComputer R1000 to a switch to
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/r1000_connection.png" alt="pir" width="500" height="auto" /></div>
 
 ## Introduction to visual display and main controls
+
 ### Chart
+
 There are curve charts and histograms available in fuxa. Take the curve chart as an example. The properties of `Chart` are as shown in the figure. You can set the `Name`、`font size`、`data format`、`time format`、`X axis and Y axis styles` of `Chart` and other properties. The most important thing is `Chart to show`, which determines the data source we want to display and the format of lines.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/chart_property.png" /></center>
@@ -125,6 +133,7 @@ We use `Chart` here to display data from `Prosys OPC UA Simulation Server`.You c
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_chart.gif" /></center>
 
 ### Swich
+
 The attributes of the switch are as shown in the figure. We select a boolean data named `swich_1` as the swich state. You can configure the display state of the `swich` when it is on or off, including color configuration, text display, etc.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/swich_property.png" /></center>
@@ -132,6 +141,7 @@ The attributes of the switch are as shown in the figure. We select a boolean dat
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_swich.gif" /></center>
 
 ### Shape
+
 Fuxa provides a variety of `shape` for users to draw industrial visualization interfaces. Each `shape` has three attributes, namely `Property`, `Events`, and `Actions`.
 Among them, `Property` is mainly used to configure the color of `shape`. By binding a `Tag`, `shape` displays different colors according to the change of the `Tag` value. You can click the `+` in the upper right corner to set different colors.
 
@@ -154,7 +164,8 @@ Here we take a warehouse pattern as an example, controlling its rotation and sto
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/turn_use_action.gif" /></center>
 
 ### Pipe
-When displaying industrial processes, you can use `pipe` to represent the flow direction of industrial materials. The properties of the pipe are as shown in the figure. 
+
+When displaying industrial processes, you can use `pipe` to represent the flow direction of industrial materials. The properties of the pipe are as shown in the figure.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/pipe_prorety.png" /></center>
 
@@ -166,9 +177,9 @@ To simulate the industrial process, we added patterns such as two tanks and some
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/after_add.gif" /></center>
 
-
 ### Circular Gauge
-In addition to `charts`, `Circular Gauge` can also display data in real time. There are three `Circular Gauge` available. 
+
+In addition to `charts`, `Circular Gauge` can also display data in real time. There are three `Circular Gauge` available.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/three_gauge.png" /></center>
 
@@ -181,6 +192,7 @@ After that, the data of `Tank2` and `Tank3` are also displayed through the `Circ
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/add_gauge.gif" /></center>
 
 ### Slider
+
 Use the slider to adjust variables such as flow、pressure.etc. Its properties are as shown in the figure. You can set its color and format. When using it, you need to bind a `Tag`. Then the slider can adjust the value of the `Tag` in real time. Here we bind a custom `Flow control 1` tag
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/slider_property.png" /></center>
@@ -188,6 +200,7 @@ Use the slider to adjust variables such as flow、pressure.etc. Its properties a
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/slider.gif" /></center>
 
 ### Alarm
+
 In the industrial process, excessive certain parameters (such as pressure) may cause some dangers. At this time, an alarm is needed to remind the staff that there may be some problems here. Fuxa supports real-time monitoring of a certain value and triggers an alarm when the value reaches a certain dangerous range.
 By default, fuxa's interface does not open the alarm bar. You need to set it up to open the alarm bar.
 
@@ -201,17 +214,16 @@ After the alarm bar is opened, you can set the alarm. Click the settings button 
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/final_demo.gif" /></center>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

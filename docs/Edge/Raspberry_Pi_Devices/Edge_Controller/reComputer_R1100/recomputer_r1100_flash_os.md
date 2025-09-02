@@ -32,13 +32,12 @@ You need to prepare the following hardware
 - Host Computer (Windows/Mac/Linux) x 1
 - Ethernet cable x 1
 - Power adapter (12V-24V) BYO
-- USB Type-C cable x 1 
+- USB Type-C cable x 1
 
 ## Software Requirements
 
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
-
 
 ## Boot from NVME
 
@@ -49,6 +48,7 @@ Please refer this [link](https://wiki.seeedstudio.com/recomputer_r1100_assembly_
 ### Boot from emmc and update eeprom
 
 Use command like below to open the file
+
 ```
 sudo nano /etc/default/rpi-eeprom-update
 ```
@@ -60,12 +60,15 @@ FIRMWARE_RELEASE_STATUS="latest"
 RPI_EEPROM_USE_FLASHROM=1
 CM4_ENABLE_RPI_EEPROM_UPDATE=1
 ```
+
 Use `Ctrl`+`x` to save the file.
 
 Use command like below to open the file
+
 ```
 sudo nano /boot/firmware/config.txt
 ```
+
 Modify `[cm4]` part as shown below:
 
 ```
@@ -74,15 +77,19 @@ dtparam=spi=on
 dtoverlay=audremap
 dtoverlay=spi-gpio40-45
 ```
+
 Use `Ctrl`+`x` to save the file, and reboot the machine use command:
+
 ```
 sudo reboot
 ```
+
 Then update the eeprom use command like below:
 
 ```
 sudo rpi-eeprom-update -a
 ```
+
 The output is like below:
 
 ```
@@ -106,6 +113,7 @@ Use command like below to open the raspi-config:
 ```
 sudo raspi-config 
 ```
+
 Scroll down to `Advanced Options` and press Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_1.png" alt="pir" width="700" height="auto" /></div>
 
@@ -134,6 +142,7 @@ Then modify the boot order with command like below:
 ```
 sudo -E rpi-eeprom-config --edit
 ```
+
 Modify the file like below:
 
 ```
@@ -143,14 +152,12 @@ WAKE_ON_GPIO=1
 POWER_OFF_ON_HALT=0
 BOOT_ORDER=0xf416
 ```
+
 Use `Ctrl`+`x` to save the file, and then reboot your machine.
-
-
 
 ## Steps for Flashing Raspbian OS
 
 > **Note:** The latest system image packaged by Seeed, including the appropriate drivers: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
-
 
 - **Step 1.** Make sure switch is set to `Flash mode` according to the diagram below:
 
@@ -170,10 +177,10 @@ Use `Ctrl`+`x` to save the file, and then reboot your machine.
 - **Step 3.** Please connect the Power Cord from the power supply to the reComputer R1100 power port.
 
 <div style={{ textAlign: 'left', marginLeft: '40px' }}>
-    <img 
-        width="100" 
-        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png" 
-        style={{ transform: 'rotate(90deg)' }} 
+    <img
+        width="100"
+        src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/fig18.png"
+        style={{ transform: 'rotate(90deg)' }}
     />
 </div>
 
@@ -182,10 +189,6 @@ Use `Ctrl`+`x` to save the file, and then reboot your machine.
 :::note
 The power solution utilizes a bridge rectifier diode for reverse polarity protection and is compatible with both AC and DC inputs. This ensures that regardless of how the power supply's positive and negative terminals are connected, the circuit will not be damaged. By using a bridge rectifier, the output voltage polarity remains fixed irrespective of the input DC polarity, providing effective reverse polarity protection.
 :::
-
-
-
-
 
 Now let's move on to software set up on your host computer. Please follow the steps according to your desired operating system
 
@@ -214,7 +217,7 @@ Windows will now find the hardware and install the necessary drivers
 Here you can **set a hostname, enable SSH, set a password, configure wiFi, set locale settings** and more
 
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100. 
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100.
 :::
 
 - **Step 8.** Click **CHOOSE OS** and select your preferred OS
@@ -293,7 +296,7 @@ sudo ./rpiboot
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100. 
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100.
 :::
 
 - **Step 10.** Click **CHOOSE OS** and select your preferred OS
@@ -319,7 +322,6 @@ Please wait a few minutes until the flashing process is complete.
 - **Step 13.** Flip the **Boot Mode switch** back to the **Normal mode** position
 
 Now you can skip to **[here](#install-drivers)**
-
 
 ### For Linux
 
@@ -357,6 +359,7 @@ cd usbboot
 ```sh
 make
 ```
+
 - **Step 6.** Connect reComputer R1100 to the PC via USB Type-C cable
 
 - **Step 7.** Run the usbboot tool and it will wait for a connection
@@ -364,14 +367,18 @@ make
 ```sh
 sudo ./rpiboot
 ```
+
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
-- **Step 8.** Download snap 
+- **Step 8.** Download snap
+
 ```sh
 sudo apt install snap
 ```
-- **Step 9.** Download **rpi-imager** 
+
+- **Step 9.** Download **rpi-imager**
+
 ```sh
 snap install rpi-imager
 ```
@@ -381,6 +388,7 @@ snap install rpi-imager
 ```sh
 rpi-imager
 ```
+
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/linux_interface.png" alt="pir" width="1000" height="auto"/></p>
 
@@ -396,7 +404,7 @@ Enable SSH
 
 Here you can **set a hostname, enable SSH, set a password, configure wifi, set locale settings** and more
 :::note
-The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100. 
+The system has preset a username and password. Please set the default username to "**recomputer**" and the default password to "**12345678**" when logging in. If you set different credentials and encounter issues, please reflash OS if your purchase the first batch of reComputer R1100.
 :::
 
 - **Step 11.** Click **CHOOSE OS** and select your preferred OS
@@ -513,6 +521,7 @@ Please follow the [**Access reComputer R1100 via SSH**](#access-recomputer-r1100
 ```sh
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 ```
+
 Then continue the [**Install drivers after flashing new Raspbian OS process**](#install-recomputer-r1100-drivers-after-flashing-new-raspbian-os)
 
 :::
@@ -548,19 +557,16 @@ sudo reboot
 
 This process will ensure that your drivers are update before updating the firmware.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

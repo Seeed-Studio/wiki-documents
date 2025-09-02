@@ -303,7 +303,6 @@ This portable box comes with rugged hardware, an electrical design, and an alumi
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## Hardware overview

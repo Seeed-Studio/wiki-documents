@@ -22,32 +22,31 @@ no_comments: false # for Disqus
 
 This wiki demonstrates pose estimation using YOLOv8 on [reComputer R1000](https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html) with and without Raspberry-pi-AI-kit acceleration. The Raspberry Pi AI Kit enhances the performance of the Raspberry Pi and unlock its potential in artificial intelligence and machine learning applications, like smart retail, smart traffic and more. Although the Raspberry AI Kit is designed for Raspberry Pi 5, we have experimented it on our CM4-powered edge gateway. Excited about turning our edge device into an intelligent IoT gateway!
 
-
 ## Prepare Hardware
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer r1000</th>
-		<th>Raspberry Pi AI Kit</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer r1000</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113060086-raspberry-pi-ai-kit-45font.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113060086-raspberry-pi-ai-kit-45font.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Run this project
@@ -58,7 +57,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="Method 1" label="Run with Hailo-8L">
 
-### Step 1: Install AI kit 
+### Step 1: Install AI kit
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/install_AIkit.gif" alt="pir" width={1000} height="auto"/></p>
 
@@ -72,6 +71,7 @@ Open terminal on the reComputer R1000, and input command as follows to update yo
 sudo apt update
 sudo apt full-upgrade
 ```
+
 #### Set pcie to gen3
 
 Open terminal on the reComputer R1000, and input command as follows to config reComputer R1000.
@@ -106,6 +106,7 @@ Open terminal on the reComputer R1000, and input command as follows to install H
 sudo apt install hailo-all
 sudo reboot
 ```
+
 #### Check Software and Hardware
 
 Open terminal on the reComputer R1000, and input command as follows to check if hailo-all have been installed.
@@ -117,7 +118,6 @@ hailortcli fw-control identify
 The right result show as bellow:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
-
 
 Open terminal on the reComputer R1000, and input command as follows to check if hailo-8L have been connected.
 
@@ -138,6 +138,7 @@ git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 bash ./run.sh pose-estimation-hailo
 ```
+
 ### Result
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/YOLOv8-pose-estimation-with-AIkit.gif" alt="pir" width={1000} height="auto"/></p>
@@ -154,14 +155,14 @@ git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 bash ./run.sh pose-estimation
 ```
+
 ### Result
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/YOLOv8-pose-estimation-without-AIkit.gif" alt="pir" width={1000} height="auto"/></p>
 </TabItem>
 </Tabs>
 
-
-## Result 
+## Result
 
 We compared the inference speed of YOLOv8 for pose estimation with input 640*640 resolution before and after acceleration using the AI kit. The results show that prior to acceleration, the inference speed was only 0.5 FPS, whereas after acceleration, it reached 27 FPS.
 
@@ -178,11 +179,11 @@ In this project, we benchmark the running speed of YOLOv8 on pose estimation wit
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

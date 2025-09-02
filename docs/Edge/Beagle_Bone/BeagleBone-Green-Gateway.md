@@ -25,34 +25,33 @@ Boot Linux in less 10 seconds and get started on development in less than 5 minu
     </a>
 </div>
 
-
 ## Features
 
-* **Fully Compatible with BeagleBone® Black and Seeed Studio BeagleBone® Green**
-* **Processor: AM3358 1GHz ARM® Cortex-A8**
-  * 2×32-bit 200-MHz programmable real-time units (PRUs)
-  * 512MB DDR3 RAM
-  * 4KB EEPROM
-  * 4GB 8-bit eMMC on-board flash storage
-  * 3D graphics accelerator
-  * NEON floating-point accelerator
+- **Fully Compatible with BeagleBone® Black and Seeed Studio BeagleBone® Green**
+- **Processor: AM3358 1GHz ARM® Cortex-A8**
+  - 2×32-bit 200-MHz programmable real-time units (PRUs)
+  - 512MB DDR3 RAM
+  - 4KB EEPROM
+  - 4GB 8-bit eMMC on-board flash storage
+  - 3D graphics accelerator
+  - NEON floating-point accelerator
 
-* **Connectivity**
-  * Ethernet 10/100M bit
-  * WiFi 802.11 b/g/n 2.4GHz
-  * USB client for power & communications
-  * USB host
-  * SD/MMC Connector for microSD
-  * Bluetooth 4.1 with BLE
-  * 2x 46 pin headers
-  * 2x Grove connectors (I2C and UART)
-  * DC Jack for power, 12V
-* **Software Compatibility**
-  * Debian
-  * Android
-  * Ubuntu
-  * Cloud9 IDE on Node.js w/ BoneScript library
-  * plus much more
+- **Connectivity**
+  - Ethernet 10/100M bit
+  - WiFi 802.11 b/g/n 2.4GHz
+  - USB client for power & communications
+  - USB host
+  - SD/MMC Connector for microSD
+  - Bluetooth 4.1 with BLE
+  - 2x 46 pin headers
+  - 2x Grove connectors (I2C and UART)
+  - DC Jack for power, 12V
+- **Software Compatibility**
+  - Debian
+  - Android
+  - Ubuntu
+  - Cloud9 IDE on Node.js w/ BoneScript library
+  - plus much more
 
 ## Specification
 
@@ -73,13 +72,13 @@ Boot Linux in less 10 seconds and get started on development in less than 5 minu
 
 ## Application Ideas
 
-* Internet of Things
-* Smart House
-* Industrial
-* Automation & Process Control
-* Human Machine Interface
-* Sensor Hub
-* Robot
+- Internet of Things
+- Smart House
+- Industrial
+- Automation & Process Control
+- Human Machine Interface
+- Sensor Hub
+- Robot
 
 ### Community Projects
 
@@ -116,7 +115,7 @@ Here are some tutorials from the communities using the Seeed Studio BeagleBone®
 
 The Dimensions for Seeed Studio BeagleBone® Green Gateway is:
 
-* **89.0mm x 54.6mm x 19.6mm**
+- **89.0mm x 54.6mm x 19.6mm**
 
 ![BeagleBoneGreenGateway](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/img/dimensions.png)
 
@@ -182,10 +181,10 @@ Seeed Studio BeagleBone® Green will operate as a flash drive providing you with
 
 You'll see the PWR LED lit steadily. Within 10 seconds, you should see the other LEDs blinking in their default configurations.
 
-* D2 is configured at boot to blink in a heartbeat pattern
-* D3 is configured at boot to light during microSD card accesses
-* D4 is configured at boot to light during CPU activity
-* D5 is configured at boot to light during eMMC accesses
+- D2 is configured at boot to blink in a heartbeat pattern
+- D3 is configured at boot to light during microSD card accesses
+- D4 is configured at boot to light during CPU activity
+- D5 is configured at boot to light during eMMC accesses
 
 **STEP2. Install Drivers**
 
@@ -201,11 +200,12 @@ Install the drivers for your operating system to give you network-over-USB acces
 :::note
     For window system, please note that:
 
-* Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"
-* To check if you're running 32 or 64-bit Windows see [this](https://support.microsoft.com/kb/827218).
-* On systems without the latest service release, you may get an error (0xc000007b). In that case, please [install](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) and retry:
-* You may need to reboot Windows.
-* These drivers have been tested to work up to Windows 10
+- Windows Driver Certification warning may pop up two or three times. Click "Ignore", "Install" or "Run"
+- To check if you're running 32 or 64-bit Windows see [this](https://support.microsoft.com/kb/827218).
+- On systems without the latest service release, you may get an error (0xc000007b). In that case, please [install](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13523) and retry:
+- You may need to reboot Windows.
+- These drivers have been tested to work up to Windows 10
+
 :::
 
 **STEP3. Browse to your Beagle**
@@ -394,41 +394,40 @@ You will need some expansion board when you start a project. There're many cape 
 ## FAQ
 
 1. 2 x 46 Pin headers and 2x Grove connectors are the same as Seeed Studio BeagleBone® Green and Seeed Studio BeagleBone® Green Wireless, with the same considerations, as followed:
-   * Maximum input voltage for AD analog interface is 1.8V.
-   * Please do not input more than 3.3V, otherwise it may damage the CPU.
-   * The external I2C RTC battery power connector can only be connected to a 3V button battery, the voltage must not exceed 5V.
+   - Maximum input voltage for AD analog interface is 1.8V.
+   - Please do not input more than 3.3V, otherwise it may damage the CPU.
+   - The external I2C RTC battery power connector can only be connected to a 3V button battery, the voltage must not exceed 5V.
 
 ## References
 
 There're many references to help you to get more information about the board.
 
-* [BeagleBoard Main Page](https://beagleboard.org/)
-* [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
-* [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
-* [Hardware documentation](https://beagleboard.org/getting-started#hardware)
-* [Projects of BeagleBoard](https://beagleboard.org/project)
+- [BeagleBoard Main Page](https://beagleboard.org/)
+- [BeagleBoard Getting Started](https://beagleboard.org/getting-started)
+- [Troubleshooting](https://beagleboard.org/getting-started#troubleshooting)
+- [Hardware documentation](https://beagleboard.org/getting-started#hardware)
+- [Projects of BeagleBoard](https://beagleboard.org/project)
 
 ## Resources
 
 -----
 
-* **[PDF]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.pdf)
+- **[PDF]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.pdf)
 
-* **[ZIP]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip)
+- **[ZIP]** [Seeed Studio BeagleBone® Green Gateway Schematic](https://files.seeedstudio.com/wiki/BeagleBone-Green-Gateway/SeeedStudio-BeagleBoneGreemGateway-SCH.zip)
 
-* **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
+- **[Zip]** [AM335X Datasheet](https://files.seeedstudio.com/wiki/Bazaar_file/102010027/AM335x.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -21,9 +21,7 @@ SenseCAP Platform is officially renamed as `SenseCraft Data Platform`!
 
 # Using XIAO ESP32C3 to connect to SenseCraft Data Platform for planting advice
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-connect-sensecap/1.png" style={{width:1000, height:'auto'}}/></div>
-
 
 During this time, Seeed Studio's SenseCraft Data platform developed and released new AI features. Currently the main features of AI Advisor on SenseCraft Data Platform are focused on providing constructive planting advice to growers, and will be updated with richer AI features in the near future!
 
@@ -64,8 +62,6 @@ The three pieces of hardware that will be used in this tutorial are the XIAO ESP
     </div></td>
   </tr>
 </table>
-
-
 
 ### Software Preparation
 
@@ -151,7 +147,6 @@ Open the serial monitor of Arduino IDE and select the baud rate as 115200 and ob
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/166.png" style={{width:700, height:'auto'}}/></div>
 
-
 ## Introduction to SenseCraft Data Platform HTTPS API -- Upload Sensor Data
 
 Now that we know how to get data from the SHT40 sensor, let's start by learning the following API call rules for `SenseCraft Data Platform`. You can read about using the `SenseCraft Data Platform`s API by clicking the button below to jump directly to the SenseCraft Documentation Center.
@@ -160,7 +155,7 @@ Now that we know how to get data from the SHT40 sensor, let's start by learning 
 
 The basic principle of SenseCraft Data Platform to receive sensor data is to use EUI, Key as the authentication information and report the device data by POST.
 
-HTTPS Server Address: 
+HTTPS Server Address:
 
 ```
 https://sensecap.seeed.cc/deviceapi
@@ -179,56 +174,56 @@ authorization = Device base64(EUI:Key)
 The server path to be used by the device to report sensor data is: `/kit/message_uplink`, the mode is **POST**, and the following request parameters are available and allowed.
 
 <table align="center">
-	<tr>
-	    <th>Name</th>
+ <tr>
+     <th>Name</th>
         <th>Type</th>
         <th>Description</th>
-	</tr>
-	<tr>
-	    <td align="center">- requestId</td>
-	    <td align="center">string</td>
-	    <td align="center">The uuidv4 is generated on the device side each time data is reported, ensuring that the value is different for each message.</td>
-	</tr>
-	<tr>
-	    <td align="center">- timestamp</td>
-	    <td align="center">string</td>
-	    <td align="center">Millisecond timestamp when the message was sent.</td>
-	</tr>
-	<tr>
-	    <td align="center">- intent</td>
-	    <td align="center">string</td>
-	    <td align="center">Currently fixed to "event".</td>
-	</tr>
-	<tr>
-	    <td align="center">- deviceEui</td>
-	    <td align="center">string</td>
-	    <td align="center">Device EUI.</td>
-	</tr>
-	<tr>
-	    <td align="center">- deviceKey</td>
-	    <td align="center">string</td>
-	    <td align="center">Device Key.</td>
-	</tr>
+ </tr>
+ <tr>
+     <td align="center">- requestId</td>
+     <td align="center">string</td>
+     <td align="center">The uuidv4 is generated on the device side each time data is reported, ensuring that the value is different for each message.</td>
+ </tr>
+ <tr>
+     <td align="center">- timestamp</td>
+     <td align="center">string</td>
+     <td align="center">Millisecond timestamp when the message was sent.</td>
+ </tr>
+ <tr>
+     <td align="center">- intent</td>
+     <td align="center">string</td>
+     <td align="center">Currently fixed to "event".</td>
+ </tr>
+ <tr>
+     <td align="center">- deviceEui</td>
+     <td align="center">string</td>
+     <td align="center">Device EUI.</td>
+ </tr>
+ <tr>
+     <td align="center">- deviceKey</td>
+     <td align="center">string</td>
+     <td align="center">Device Key.</td>
+ </tr>
     <tr>
-	    <td align="center">- events</td>
-	    <td align="center">[object]</td>
-	    <td align="center">An array of events where data collection and device status is reported.</td>
-	</tr>
+     <td align="center">- events</td>
+     <td align="center">[object]</td>
+     <td align="center">An array of events where data collection and device status is reported.</td>
+ </tr>
     <tr>
-	    <td align="center">-- name</td>
-	    <td align="center">string</td>
-	    <td align="center">Event Name.</td>
-	</tr>
+     <td align="center">-- name</td>
+     <td align="center">string</td>
+     <td align="center">Event Name.</td>
+ </tr>
     <tr>
-	    <td align="center">-- value</td>
-	    <td align="center">[object]</td>
-	    <td align="center">Event Value.</td>
-	</tr>
+     <td align="center">-- value</td>
+     <td align="center">[object]</td>
+     <td align="center">Event Value.</td>
+ </tr>
     <tr>
-	    <td align="center">-- timestamp</td>
-	    <td align="center">string</td>
-	    <td align="center">Millisecond timestamp at the time of data collection.</td>
-	</tr>
+     <td align="center">-- timestamp</td>
+     <td align="center">string</td>
+     <td align="center">Millisecond timestamp at the time of data collection.</td>
+ </tr>
 </table>
 
 The following is an example of sending sensor upload data.
@@ -513,12 +508,14 @@ The minimum time interval for SenseCraft to receive data uploads is five minutes
 Next, let's learn how to use `SenseCraft Data Platform`'s API below. Use our sensor data over time as a reference to get suggestions from the AI.
 
 The interface call process for SenseCraft AI is roughly as follows.
+
 - Obtain the device and measurement value IDs under the account that are supported for use in AIGC via the interface I.
 - Using the result obtained by interface I as one of the parameters, interface II is called to obtain the AIGC result.
   - Since the AIGC generation time may be long, the interface I will return a **resource_id** when it is called for the first time, and then the front-end will use the **resource_id** to poll for the result of the response. When the code of the response is **11338**, it means that the AIGC is still in the process of inference, and the interface II needs to be called again with the **resource_id** until the final result is returned.
   - Interface II has a flow limit of up to ten requests within five minutes for the same account.
 
 HTTPS Server Address:
+
 ```
 https://sensecap.seeed.cc/openapi
 ```
@@ -528,56 +525,56 @@ https://sensecap.seeed.cc/openapi
 The server path to be used by the device to report sensor data is: `/ai/view_suggestion_by_measurements`, the mode is **POST**, and the following request parameters are available and allowed.
 
 <table align="center">
-	<tr>
-	    <th>Name</th>
+ <tr>
+     <th>Name</th>
         <th>Description</th>
         <th>Note</th>
-	</tr>
-	<tr>
-	    <td align="center">- lang</td>
-	    <td align="center">Select language</td>
-	    <td align="center">1:Chinese, 2:English. Default Chinese.</td>
-	</tr>
-	<tr>
-	    <td align="center">- location</td>
-	    <td align="center">Location</td>
-	    <td align="center">Location, e.g. "Shenzhen".</td>
-	</tr>
-	<tr>
-	    <td align="center">- crop</td>
-	    <td align="center">Crop or animal</td>
-	    <td align="center">Crop or animal to be consulted, e.g. "apple".</td>
-	</tr>
-	<tr>
-	    <td align="center">- time_range</td>
-	    <td align="center">Device data inquiry time</td>
-	    <td align="center">1: 30 days 2: 180 days 3: 360 days. Default 30 days</td>
-	</tr>
-	<tr>
-	    <td align="center">- measurements</td>
-	    <td align="center">Device measurement types</td>
-	    <td align="center">Up to six</td>
-	</tr>
+ </tr>
+ <tr>
+     <td align="center">- lang</td>
+     <td align="center">Select language</td>
+     <td align="center">1:Chinese, 2:English. Default Chinese.</td>
+ </tr>
+ <tr>
+     <td align="center">- location</td>
+     <td align="center">Location</td>
+     <td align="center">Location, e.g. "Shenzhen".</td>
+ </tr>
+ <tr>
+     <td align="center">- crop</td>
+     <td align="center">Crop or animal</td>
+     <td align="center">Crop or animal to be consulted, e.g. "apple".</td>
+ </tr>
+ <tr>
+     <td align="center">- time_range</td>
+     <td align="center">Device data inquiry time</td>
+     <td align="center">1: 30 days 2: 180 days 3: 360 days. Default 30 days</td>
+ </tr>
+ <tr>
+     <td align="center">- measurements</td>
+     <td align="center">Device measurement types</td>
+     <td align="center">Up to six</td>
+ </tr>
     <tr>
-	    <td align="center">-- dev_eui</td>
-	    <td align="center">Device EUI</td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">-- dev_eui</td>
+     <td align="center">Device EUI</td>
+     <td align="center"></td>
+ </tr>
     <tr>
-	    <td align="center">-- channel_measurement</td>
-	    <td align="center"></td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">-- channel_measurement</td>
+     <td align="center"></td>
+     <td align="center"></td>
+ </tr>
     <tr>
-	    <td align="center">--- channel_index</td>
-	    <td align="center">Channel number</td>
-	    <td align="center">This value is currently fixed at 1.</td>
-	</tr>
+     <td align="center">--- channel_index</td>
+     <td align="center">Channel number</td>
+     <td align="center">This value is currently fixed at 1.</td>
+ </tr>
     <tr>
-	    <td align="center">--- measurement_ids</td>
-	    <td align="center">Measurement value number</td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">--- measurement_ids</td>
+     <td align="center">Measurement value number</td>
+     <td align="center"></td>
+ </tr>
 </table>
 
 The following is an example of calling the Interface I.
@@ -621,61 +618,61 @@ The following is an example of calling the Interface I.
 The structure and framework of Interface I is largely the same as Interface II, with the only difference being the addition of an extra **resource_id** at the end. The following request parameters are available and allowed.
 
 <table align="center">
-	<tr>
-	    <th>Name</th>
+ <tr>
+     <th>Name</th>
         <th>Description</th>
         <th>Note</th>
-	</tr>
-	<tr>
-	    <td align="center">- lang</td>
-	    <td align="center">Select language</td>
-	    <td align="center">1:Chinese, 2:English. Default Chinese.</td>
-	</tr>
-	<tr>
-	    <td align="center">- location</td>
-	    <td align="center">Location</td>
-	    <td align="center">Location, e.g. "Shenzhen".</td>
-	</tr>
-	<tr>
-	    <td align="center">- crop</td>
-	    <td align="center">Crop or animal</td>
-	    <td align="center">Crop or animal to be consulted, e.g. "apple".</td>
-	</tr>
-	<tr>
-	    <td align="center">- time_range</td>
-	    <td align="center">Device data inquiry time</td>
-	    <td align="center">1: 30 days 2: 180 days 3: 360 days. Default 30 days</td>
-	</tr>
-	<tr>
-	    <td align="center">- measurements</td>
-	    <td align="center">Device measurement types</td>
-	    <td align="center">Up to six</td>
-	</tr>
+ </tr>
+ <tr>
+     <td align="center">- lang</td>
+     <td align="center">Select language</td>
+     <td align="center">1:Chinese, 2:English. Default Chinese.</td>
+ </tr>
+ <tr>
+     <td align="center">- location</td>
+     <td align="center">Location</td>
+     <td align="center">Location, e.g. "Shenzhen".</td>
+ </tr>
+ <tr>
+     <td align="center">- crop</td>
+     <td align="center">Crop or animal</td>
+     <td align="center">Crop or animal to be consulted, e.g. "apple".</td>
+ </tr>
+ <tr>
+     <td align="center">- time_range</td>
+     <td align="center">Device data inquiry time</td>
+     <td align="center">1: 30 days 2: 180 days 3: 360 days. Default 30 days</td>
+ </tr>
+ <tr>
+     <td align="center">- measurements</td>
+     <td align="center">Device measurement types</td>
+     <td align="center">Up to six</td>
+ </tr>
   <tr>
-	    <td align="center">-- dev_eui</td>
-	    <td align="center">Device EUI</td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">-- dev_eui</td>
+     <td align="center">Device EUI</td>
+     <td align="center"></td>
+ </tr>
   <tr>
-	    <td align="center">-- channel_measurement</td>
-	    <td align="center"></td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">-- channel_measurement</td>
+     <td align="center"></td>
+     <td align="center"></td>
+ </tr>
   <tr>
-	    <td align="center">--- channel_index</td>
-	    <td align="center">Channel number</td>
-	    <td align="center">This value is currently fixed at 1.</td>
-	</tr>
+     <td align="center">--- channel_index</td>
+     <td align="center">Channel number</td>
+     <td align="center">This value is currently fixed at 1.</td>
+ </tr>
   <tr>
-	    <td align="center">--- measurement_ids</td>
-	    <td align="center">Measurement value number</td>
-	    <td align="center"></td>
-	</tr>
+     <td align="center">--- measurement_ids</td>
+     <td align="center">Measurement value number</td>
+     <td align="center"></td>
+ </tr>
   <tr>
-	    <td align="center">- resource_id</td>
-	    <td align="center">Cached Credentials</td>
-	    <td align="center">In the case where a question has been asked and the returned result is obtained, carry this parameter to poll the backend until the result of the AI is returned.</td>
-	</tr>
+     <td align="center">- resource_id</td>
+     <td align="center">Cached Credentials</td>
+     <td align="center">In the case where a question has been asked and the returned result is obtained, carry this parameter to poll the backend until the result of the AI is returned.</td>
+ </tr>
 </table>
 
 The following is an example of getting AI advice.
@@ -726,7 +723,6 @@ If you want to call the AIGC interface of SenseCraft, then you need to prepare t
 Copy the created **Access Key ID** and **Access API Key**. Please keep them safe and we will use them in the following steps.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-connect-sensecap/13.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ### Step 7. Write and upload programs
 
@@ -942,6 +938,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

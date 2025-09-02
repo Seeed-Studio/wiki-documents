@@ -26,29 +26,28 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software
 
-* [yocto](https://docs.yoctoproject.org/4.0.20/brief-yoctoprojectqs/index.html) environment
-* [docker](https://www.docker.com/) environment
-* [balenaEtcher](https://etcher.balena.io/) to flash the CM4 memory.
-
+- [yocto](https://docs.yoctoproject.org/4.0.20/brief-yoctoprojectqs/index.html) environment
+- [docker](https://www.docker.com/) environment
+- [balenaEtcher](https://etcher.balena.io/) to flash the CM4 memory.
 
 ### Hardware Configuration
 
@@ -68,13 +67,16 @@ Before you start this project, you may need to prepare your hardware and softwar
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/type-cport.png" alt="pir" width="250" height="auto" /></div>
 
 ### Compile R1000-balenaOS
+
 **Step 1**: Download the following libraries and ensure that the current environment supports compiling the yocto project
+
 ```shell
  sudo apt install gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 python3-subunit zstd liblz4-tool file locales libacl1 jq nodejs npm
  sudo locale-gen en_US.UTF-8
 ```
 
 **Step 2**: Enter the following instructions to download and configure `balena-seeed-cm4`, and finally compile the yocto project.
+
 ```shell
   git clone https://github.com/Seeed-Studio/balena-seeed-cm4.git
   cd balena-seeed-cm4
@@ -93,6 +95,7 @@ The default balenaOS version of this warehouse is 5.3.27+rev1. The version infor
 :::
 
 ### Configure R1000-balenaOS
+
 **Step 1**: Enter the directory where the compiled image is located, then enter the command line interface, enter `balena login`, and log in to `balena Cloud`.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/1_login_balena.gif" alt="pir" width="700" height="auto" /></div>
@@ -102,6 +105,7 @@ The default balenaOS version of this warehouse is 5.3.27+rev1. The version infor
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/2.1new_fleet.png" alt="pir" width="700" height="auto" /></div>
 
 **Step 3**: Enter the following command to preload the image
+
 ```shell
   balena preload ./balena-image-seeed-recomputer-r100x.balenaos-img --fleet [fleet name]
 ```
@@ -109,6 +113,7 @@ The default balenaOS version of this warehouse is 5.3.27+rev1. The version infor
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/2_preload_image.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 4**: Register the new device with Fleet and generate a device ID
+
 ```shell
 balena device register [fleet name]
 ```
@@ -116,6 +121,7 @@ balena device register [fleet name]
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/3_regester_dev.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 5**: Generate configuration file.
+
 ```shell
 balena config generate --device [uuid] --version 3.0.15+atsss --dev -o config.json
 ```
@@ -123,6 +129,7 @@ balena config generate --device [uuid] --version 3.0.15+atsss --dev -o config.js
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/4_generate_config.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 6**: Load the configuration file.
+
 ```shell
 balena os configure balena-image-seeed-recomputer-r100x.balenaos-img --config config.json  --device [uuid] --version 3.0.15+atsss --dev
 ```
@@ -130,6 +137,7 @@ balena os configure balena-image-seeed-recomputer-r100x.balenaos-img --config co
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/5_config_image.gif" alt="pir" width="700" height="auto" /></div>
 
 **Step 7**: Copy the final image file,this image can be burned into reComputer R1000
+
 ```shell
 cp balena-image-seeed-recomputer-r100x.balenaos-img recomputer_balenaos-dev.img
 ```
@@ -148,19 +156,16 @@ cp balena-image-seeed-recomputer-r100x.balenaos-img recomputer_balenaos-dev.img
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/7_online.png" alt="pir" width="700" height="auto" /></div>
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

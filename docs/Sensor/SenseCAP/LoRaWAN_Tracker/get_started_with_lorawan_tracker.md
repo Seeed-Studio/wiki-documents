@@ -15,20 +15,13 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114993591-t1000-e-lorawan.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-LoRaWAN-p-6408.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
-
 T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user experience, we provide demo firmware pre-installed on factory-produced devices. Users can explore the demo firmware for an initial experience and also develop your own custom firmware. For details on custom development, please refer to the [LoRaWAN Open Source Firmware](https://wiki.seeedstudio.com/open_source_lorawan/).
-
-
-
-
-
 
 **T1000 Series Version Comparison**
 
@@ -36,13 +29,11 @@ T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user e
 
 ## Hardware Overview
 
-
 ### Diagram
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/diagram.png" alt="pir" width={800} height="auto" /></p>
 
 ### Pin Descriptions
-
 
 |No.|Name|Function|Description|
 | :- | :- | :- | :- |
@@ -95,21 +86,15 @@ T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user e
 |47|P1.14|Digital I/O|AG3335 RESETB OUT|
 |48|P1.15|Digital I/O|AG3335 Reset|
 
-
-
 ## Demo Firmware Overview
 
 ### Positioning Description
-
 
 |**Location**|**Description**|
 | - | - |
 |GNSS|Upload longitude and latitude info.<br/>(There is usually no GPS signal indoors, so it's recommended to test the device outdoors to get the location)|
 |Wi-Fi|Upload the MAC address and RSSI info of the Wi-Fi AP.|
 |Bluetooth|Upload the MAC address and RSSI info of the Bluetooth beacon.|
-
-
-
 
 ### Button
 
@@ -160,9 +145,6 @@ T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user e
   </tr>
 </table>
 
-
-
-
 ### Sensor Function
 
 The SenseCAP T1000 Tracker is equipped with 3 sensors: Temperature sensor, Light sensor and 3-Axis Accelerometer.
@@ -178,18 +160,11 @@ When the sensors are turned on, the device will consume more power.
 |Light|<p>The light sensor is not the actual lumen value monitored, but a percentage of the light from dark to amount. Mainly can be used for anti-demolition monitoring and some light sensitive monitoring.</p><p>Range: 0 to 100%, (0% is dark, 100% is brightest)</p>|
 |3-Axis Accelerometer|By setting the value of acceleration, motion event and shock event are triggered.|
 
-
-
-
-
-
-
 ### Battery
 
 Battery life depends on factors such as uplink interval, sensor usage, LoRa transmission distance, and operating temperature. Predicted battery life is based on a typical working environment (25°C) and serves as a reference. Actual battery life may vary.
 
 **EU868(1C/SF12)**
-
 
 |Upload Interval|1 minute|5 minutes |60 minutes|1 day|
 |--|--|--|--|--|
@@ -201,64 +176,46 @@ Battery life depends on factors such as uplink interval, sensor usage, LoRa tran
 |--|--|--|--|--|
 |Battery Life(day)|2.89|13.66|92.59|186.83|
 
-
-
-
 ## Get Started
-
-
 
 Press the button for 3s to power on the device, a rising melody indicates that the device has been successfully powered on.
 
 ### Connect via App
 
-* **Step 1:** Download `SenseCraft` App
+- **Step 1:** Download `SenseCraft` App
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={500} height="auto" /></p>
 
-Login to the SenseCraft APP. 
+Login to the SenseCraft APP.
 
 :::tip
 Select Server Location as `Global`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/global-version.png" alt="pir" width={200} height="auto" /></p>
 :::
 
-
-* **Step 2:** Add Device
+- **Step 2:** Add Device
 
 Click `Add Device` tab on the top right, then scan the QR code on the device label.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config.png" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ### Configure the Device
 
-
-* Navigate to `User` -> `Device Bluetooth Configuration` page.
+- Navigate to `User` -> `Device Bluetooth Configuration` page.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/config-ppa.png" alt="pir" width={200} height="auto" /></p>
 
-
-* **Click the button 3 times** to enter the configuration mode. Device name: **T1000-E xxxx**(the last four digits of the MAC address).
-
-
+- **Click the button 3 times** to enter the configuration mode. Device name: **T1000-E xxxx**(the last four digits of the MAC address).
 
 #### Quick Configuration
 
-
 For quick start with the `SenseCAP cloud`, you can select `Quick Configuration`.
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/quick-config.png" alt="pir" width={800} height="auto" /></p>
 
 Configure the `Frequency Plan` according to your region, and set up the `Uplink Interval` you want.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/quick-1.png" alt="pir" width={200} height="auto" /></p>
-
 
 #### Advanced Configuration
 
@@ -268,15 +225,13 @@ For advanced usage, please select `Advanced Configuration`.
 
 You can see the current device information, which includes the `device EUI`, `hardware/software version`, `battery`, etc.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/info-dev.png" alt="pir" width={250} height="auto" /></p>
 
 Navigate to `Settings` to set up the parameters.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/setting-page.png" alt="pir" width={600} height="auto" /></p>
 
-
-* **LoRa Setup**
+- **LoRa Setup**
 
 <table>
   <tr>
@@ -334,11 +289,7 @@ Navigate to `Settings` to set up the parameters.
   </tr>
 </table>
 
-
-
-* **General Setup**
-
-
+- **General Setup**
 
 <table>
   <tr>
@@ -419,8 +370,6 @@ Navigate to `Settings` to set up the parameters.
   </tr>
 </table>
 
-
-
 ### Device Data View
 
 #### SenseCAP Mate App
@@ -428,7 +377,6 @@ Navigate to `Settings` to set up the parameters.
 Check the Location on the APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_view.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### SenseCAP Portal
 
@@ -448,12 +396,11 @@ Log in [SenseCAP Portal](http://sensecap.seeed.cc)
 
 If you have created an account through the APP, you can log in directly.
 
-1)  Select register account, enter email information, and click "register", the registered email will be sent to the user's mailbox
+1) Select register account, enter email information, and click "register", the registered email will be sent to the user's mailbox
 
-2)  Open the "SenseCAP…"Email, click the jump link, fill in the relevant information, and complete the registration
+2) Open the "SenseCAP…"Email, click the jump link, fill in the relevant information, and complete the registration
 
-3)  Return to the login interface and complete the login
-
+3) Return to the login interface and complete the login
 
 Check [SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.html) for more details.
 
@@ -461,24 +408,21 @@ Check [SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.htm
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map_view2.png" alt="pir" width={800} height="auto" /></p>
 
-## SenseCAP API 
+## SenseCAP API
 
 SenseCAP API is for users to manage IoT devices and data. It includes 3 types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
-* With HTTP API, users can manage LoRa devices, to get raw data or historical data.
-* With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
-* With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
+- With HTTP API, users can manage LoRa devices, to get raw data or historical data.
+- With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
+- With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
 
 Please check [API User Guide](https://sensecap-docs.seeed.cc/) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/api_page.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 ## Decoder
 
-* **[Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/TTN/SenseCAP_T1000E_TTN_Decoder.js)**
-* **[Decoder for Helium](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000E_Helium_Decoder.js)**
-
+- **[Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/TTN/SenseCAP_T1000E_TTN_Decoder.js)**
+- **[Decoder for Helium](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000E_Helium_Decoder.js)**
 
 ## Resource
 

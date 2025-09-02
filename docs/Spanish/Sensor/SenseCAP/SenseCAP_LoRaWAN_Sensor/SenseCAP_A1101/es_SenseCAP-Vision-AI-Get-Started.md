@@ -76,7 +76,7 @@ Como aquí nos enfocamos en describir el proceso de entrenamiento de modelos, no
 
 ![p22](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte distintos canales de soporte y asegurar que tu experiencia sea lo más fluida posible. Ofrecemos múltiples vías de comunicación que se adaptan a tus preferencias y necesidades.
 

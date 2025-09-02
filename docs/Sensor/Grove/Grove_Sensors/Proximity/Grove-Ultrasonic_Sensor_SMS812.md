@@ -97,35 +97,35 @@ This interface is PH1.0-4P plug connector. And the definition of the pin is belo
 This routine will introduce the use of this ultrasonic radar using the XIAO SAMD21 as the master control. For the convenience of wiring, we will also use the Grove expansion board. You can choose one according to your actual needs.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO SAMD21</th>
-			<th>Grove Base for XIAO</th>
+ <table align="center">
+  <tr>
+   <th>XIAO SAMD21</th>
+   <th>Grove Base for XIAO</th>
             <th>Grove Ultrasonic Sensor (SMS812)</th>
-		</tr>
+  </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ultrasonic-sms812/4.jpg" style={{width:250, height:'auto'}}/></div></td>
         </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="/grove_ultrasonic_sensor_sms812" target="_blank" rel="noopener noreferrer">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="/grove_ultrasonic_sensor_sms812" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 Then, connect the ultrasonic radar to the UART interface of the XIAO.
@@ -160,20 +160,20 @@ Before we get started developing a sketch, let's look at the available functions
 
     **Input Parameters**
 
-    - `delaytime`: The default value is 0. This parameter controls the time in milliseconds for the query command to be issued.
-    - `showSwitch`: The default is on. This parameter controls whether the original data frame is printed out.
+  - `delaytime`: The default value is 0. This parameter controls the time in milliseconds for the query command to be issued.
+  - `showSwitch`: The default is on. This parameter controls whether the original data frame is printed out.
 
 - `bool getFrame(bool showSwitch = true)` —— This function is used to get the original data frame.
 
     **Input Parameters**
 
-    - `showSwitch`: The default is on. This parameter controls whether the original data frame is printed out.
+  - `showSwitch`: The default is on. This parameter controls whether the original data frame is printed out.
 
 - `bool parseDatagram(bool showSwitch = false)` —— This function is used to parse the original data frame.
 
     **Input Parameters**
 
-    - `showSwitch`: The default is off. This parameter controls whether the original data frame is printed out.
+  - `showSwitch`: The default is off. This parameter controls whether the original data frame is printed out.
 
 ### Installation
 
@@ -213,7 +213,6 @@ For **XIAO nRF52840**, please select **Seeed nRF52 mbed-enabled Boards**, otherw
 :::
 
 **Step 4.** Install the Arduino code library.
-
 
 ### Demo 1: IO Mode Usage
 
@@ -269,50 +268,49 @@ So, when you move the sensor in front of the will see the serial output like bel
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ultrasonic-sms812/6.png" style={{width:700, height:'auto'}}/></div>
 
-
 ### Demo 2: UART Mode Usage
 
 For UART mode, the radar outputs measurements at a rate of 100Hz. The format of the data telegram is shown in the table below.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Header frame</th>
-			<th>Command frame</th>
+ <table align="center">
+  <tr>
+   <th>Header frame</th>
+   <th>Command frame</th>
             <th>Data length frame</th>
             <th>Data frame</th>
             <th>Checksum frame</th>
-		</tr>
-		<tr>
-			<td align="center">0xAA 0xAA</td>
-			<td align="center">0xFD</td>
+  </tr>
+  <tr>
+   <td align="center">0xAA 0xAA</td>
+   <td align="center">0xFD</td>
             <td align="center">0x04</td>
             <td align="center">--</td>
             <td align="center">CS</td>
-		</tr>
-	</table>
+  </tr>
+ </table>
 </div>
 
 The data bits occupy 4 Byte. the first 1 Byte is the material flag bit, 0 means hard material and 1 means soft material. For soft materials, it will be impossible to measure the distance. Then there is the distance value, which accounts for 2 Byte in millimeters. The last 1Byte is the intensity value, indicating the strength of the received ultrasonic signal.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Material flag bit</th>
-			<th>Distance value</th>
+ <table align="center">
+  <tr>
+   <th>Material flag bit</th>
+   <th>Distance value</th>
             <th>Strength</th>
-		</tr>
-		<tr>
-			<td align="center">1 Byte</td>
-			<td align="center">2 Byte</td>
+  </tr>
+  <tr>
+   <td align="center">1 Byte</td>
+   <td align="center">2 Byte</td>
             <td align="center">1 Byte</td>
-		</tr>
-	</table>
+  </tr>
+ </table>
 </div>
 
 In this example, we will use the functions in the library to parse the received data frames and print out all the feature data reported by the Sensor active via the serial port.
 
-The **hardware serial port **on the board XIAO SAMD21 is the UART interface pin **A6** and **A7**.You can also use any two pins as the software serial.
+The **hardware serial port**on the board XIAO SAMD21 is the UART interface pin **A6** and **A7**.You can also use any two pins as the software serial.
 
 ```c
 #include "sms812.h"
@@ -365,7 +363,7 @@ void loop() {
 }
 ```
 
-After upload the code to the board, you move the sensor in front of the **hard material**(soft material will not output the parsed data), you can see the parsed data below: 
+After upload the code to the board, you move the sensor in front of the **hard material**(soft material will not output the parsed data), you can see the parsed data below:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ultrasonic-sms812/7.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -422,12 +420,10 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ultrasonic-sms812/7.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Resources
 
 - **[PDF]** [Development Manual Alpha V0.2.0](https://files.seeedstudio.com/wiki/ultrasonic-sms812/sms812_Development_Manual_Alpha_V0.2.0.pdf)
 - **[PDF]** [DataSheet Alpha V0.1.3](https://files.seeedstudio.com/wiki/ultrasonic-sms812/sms812_DataSheet_Alpha_V0.1.3.pdf)
-
 
 ## Tech Support & Product Discussion
 

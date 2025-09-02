@@ -39,12 +39,13 @@ LinkIt Smart 7688 Duo is an open development board based on the OpenWrt Linux di
 
 ## Specifications
 
-- **Input voltage**	:5.0V (With USB Power port)
-- **Operating voltage**	:3.3V
+- **Input voltage** :5.0V (With USB Power port)
+- **Operating voltage** :3.3V
 
 :::note
     Debug pins connect with MT7688, Other pins connect with ATmega32U4.
 :::
+
 ## Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/Arduino_Breakout_for_LinkIt_Smart_7688_Duo_components_with_text_1200_s.jpg)
@@ -56,8 +57,8 @@ LinkIt Smart 7688 Duo is an open development board based on the OpenWrt Linux di
 |ICSP port|1|Ethernet Port|1|
 |Reset Button(ATmega32u4)|1|Port to be plugged with LinkIt Smart 7688 Duo|1|
 
-
 ## Get Started
+
 In this simple application, you are going to make a buzzer to buzz different sounds. Before getting started, Apart from Arduino Breakout for LinkIt Smart 7688 Duo, please check if you have below materials on hand. You can get them from our Bazaar.
 
 |LinkIt Smart 7688 Duo|USB cable|UARTBee |Jumper wires x 3|Grove - Buzzer
@@ -71,6 +72,7 @@ In this simple application, you are going to make a buzzer to buzz different sou
     * You can find Pin 8, Pin 9 and Pin GND close to the port to be connected LinkIt Smart 7688.
     * You can plug jumper wires into MT7688 UART2 port instead of soldering them to Pin 8, Pin 9 and Pin GND.
 :::
+
 - Step2. Open a console after connecting an USB to Serial adapter to LinkIt Smart 7688 Duo.
 - Step3 Connect all parts as shown below:
 
@@ -85,6 +87,7 @@ In this simple application, you are going to make a buzzer to buzz different sou
 :::note
     Following steps should be carried out on embedded OS(OpenWRT). Please make sure you have Python in your system and installed pip.
 :::
+
 - Step8: Type pip install pyfirmata into console and press Enter to install python library pyfirmata.
 - Step9: Create a file named **buzzer.py** with typing **vi buzzer.py** in console, copy the code below into it.
 
@@ -103,23 +106,19 @@ while True:
 - Step10: Save **buzzer.py** and type **python buzzer.py** to run the example code.
 - Step11: Now you will hear the buzzing sound.
 
-
 ## Make It Now
-Have you successfully make the buzzer to buzz? Here are 2 more awesome projects that use LinkIt Smart 7688 Duo. Let's make them now!
 
+Have you successfully make the buzzer to buzz? Here are 2 more awesome projects that use LinkIt Smart 7688 Duo. Let's make them now!
 
 |Smart Router With  WiFi Connection Visualization|Facebook Like Monitor|
 |:---:|:---:|
 |![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9SCHIKIPH4SPTP.MEDIUM.jpg)|![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/F9MQJJOIHQOBV4Q.MEDIUM.jpg)|
 |[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/ReRouter-Make-an-Extensible-IoT-Router/)|[![](https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/images/200px-Wiki_makeitnow_logo.png)](https://www.instructables.com/id/Facebook-Like-Monitor/)|
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Arduino_Breakout_for_LinkIt_Smart_7688_Duo/resources/Schematic_files_for_Arduino_Breakout_for_LinkIt_Smart_7688_Duo.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -132,11 +131,11 @@ Have you successfully make the buzzer to buzz? Here are 2 more awesome projects 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

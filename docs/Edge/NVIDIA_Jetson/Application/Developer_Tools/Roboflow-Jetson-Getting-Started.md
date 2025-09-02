@@ -162,7 +162,6 @@ inference.Stream(
 
 </details>
 
-
 Finally, you will see the result as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/11.gif

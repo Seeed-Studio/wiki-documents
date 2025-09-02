@@ -12,13 +12,13 @@ last_update:
 
 **Below you will find the required steps to easily set up your hotspot in a few minutes!**
 
-1.  Download the Helium App and create a Helium Wallet
-2.  Attach the antenna and power adapter to the SenseCAP M1 and power it on.
-3.  Press the small button on the back for 6-10 seconds until the Blue LED light begins to flash slowly
-4.  Click "Setup Hotspot" and choose "SenseCAP M1" from the list
-5.  Click "Scan for my Hotspot" from the Bluetooth page and connect to the SenseCAP M1
-6.  Select the Wi-Fi and enter the password OR use an Ethernet cable
-7.  Set Hotspot Location and submit location fee
+1. Download the Helium App and create a Helium Wallet
+2. Attach the antenna and power adapter to the SenseCAP M1 and power it on.
+3. Press the small button on the back for 6-10 seconds until the Blue LED light begins to flash slowly
+4. Click "Setup Hotspot" and choose "SenseCAP M1" from the list
+5. Click "Scan for my Hotspot" from the Bluetooth page and connect to the SenseCAP M1
+6. Select the Wi-Fi and enter the password OR use an Ethernet cable
+7. Set Hotspot Location and submit location fee
 
 **What You Will Need**![SenseCAP M1 Quick Start](https://www.sensecapmx.com/wp-content/uploads/2022/06/what-youll-need.webp)
 
@@ -29,8 +29,8 @@ last_update:
 
 ![SenseCAP MX App](https://www.sensecapmx.com/wp-content/uploads/2022/06/sensecapmx-app.png)
 
-*   [**Hotspot App for iOS**](https://apps.apple.com/us/app/sensecap-hotspot/id1600051150) on the iTunes App Store
-*   [**Hotspot App for Android**](https://play.google.com/store/apps/details?id=com.sensecapmx.hotspot) on the Google Play Store
+- [**Hotspot App for iOS**](https://apps.apple.com/us/app/sensecap-hotspot/id1600051150) on the iTunes App Store
+- [**Hotspot App for Android**](https://play.google.com/store/apps/details?id=com.sensecapmx.hotspot) on the Google Play Store
 
 * * *
 
@@ -91,10 +91,10 @@ After firmware updates complete, you need to press the button for 6-10 seconds u
 **Step 7: Set Hotspot Location and Pay Location Fee**
 =====================================================
 
-*   After setting up the gateway, you may be asked to set a location for your hotspot.
-*   The SenseCAP M1 has covered the \$40 Helium network activation fee and the first location assert fee of \$10 (worth \$50 in total) in the purchase price.
-*   You could set up the location and change to another location if needed, but you will need to pay the \$10 location assert fee again every time you move your gateway to a new location.
-*   Choose the location on the map and confirm the location of your hotspot, and the setup would be completed.
+- After setting up the gateway, you may be asked to set a location for your hotspot.
+- The SenseCAP M1 has covered the \$40 Helium network activation fee and the first location assert fee of \$10 (worth \$50 in total) in the purchase price.
+- You could set up the location and change to another location if needed, but you will need to pay the \$10 location assert fee again every time you move your gateway to a new location.
+- Choose the location on the map and confirm the location of your hotspot, and the setup would be completed.
 
 ![SenseCAP M1 Register Hotspot](https://www.sensecapmx.com/wp-content/uploads/2022/06/register-hotspot.png)
 

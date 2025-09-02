@@ -17,11 +17,10 @@ The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C
 
 [![Get one now](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/ODYSSEY-STM32MP157C-p-4464.html)
 
-
 ## Features
 
 - Dual-core Arm-Cortex-A7 core processor with Cortex-M4 integrated
-- SoM(system on module) includes MPU, PMIC, RAM. 
+- SoM(system on module) includes MPU, PMIC, RAM.
 - Raspberry Pi 40-Pin Compatible Carrier Board.
 - Compact size and powerful
 - open source hardware/SDK/API/BSP/OS
@@ -38,8 +37,6 @@ The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C
 |dimension|56mm x 85mm|
 |Operating temperature | 0 ~ 75 ℃ |
 
-
-
 ## Application
 
 - Industrial (CAN-Ethernet gateways etc )
@@ -51,7 +48,6 @@ The ODYSSEY – STM32MP157C is a single board computer that based on STM32MP157C
 ## Hardware Overview
 
 <iframe src="https://3dwarehouse.sketchup.com/embed/6eecf961-5dd1-4baf-94e4-72f130c5542d" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0} width={580} height={326} allowFullScreen />
-
 
 ODYSSEY – STM32MP157C consists of two parts: Carrier board and Seeed SoM - STM32MP157C.
 
@@ -71,7 +67,7 @@ Carrier board hardware details follow:
 
 - **5.USB Device:** USB 2.0 Type C. If Type C is used as board power input, a 5V/3A power adapter should be used.
 
-- **6.Digital Grove Interface:** Connect the Grove interface to the digital pin. 
+- **6.Digital Grove Interface:** Connect the Grove interface to the digital pin.
 
 - **7.IIC Grove Interface:** Connect the Grove interface to the IIC pin.
 
@@ -156,7 +152,6 @@ Like Raspberry Pi, you need to install the ODYSSEY – STM32MP157C image from yo
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/stm32_flash_sd.png)
 
-
 - **Step 4.** After writing the image to the SD card, insert the SD card into ODYSSEY – STM32MP157C. Use USB type-c port to power the Carrier board. Do not take out the SD card during writing. ODYSSEY – STM32MP157C will boot from the SD card, you can see the PWR and USER LED lighting on SOM. Now, go to the next section: the serial console.
 
 <div class="admonition note" >
@@ -194,7 +189,6 @@ Now your ODYSSEY – STM32MP157C is up, you may want to access your Linux system
 
 - UART port - Used to debug low-level problems.(recommend)
 
-
 **Connect via UART port**
 
 In this section, we'll walk you through the use of the USB to TTL adapter, which connects to the ODYSSEY – STM32MP157C's Uart port(Located at the upper right of ODYSSEY – STM32MP157C), to establish a connection between your computer and ODYSSEY -STM32MP157C.
@@ -204,9 +198,9 @@ In this section, we'll walk you through the use of the USB to TTL adapter, which
 - **Step 1.** Connect Uart port To PC/Mac using USB To TTL Adapter.If you don't have USB To TTL Adapter, click [HERE](https://www.seeedstudio.com/catalogsearch/result/?q=UART) to buy.（RX->TX,TX->RX）
 
 - **Step 2.** Using the following serial debugging tools, the baud rate is 115200:
-    - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to ODYSSEY -STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
-    - Linux : Depending on the USB To TTL Adapter, should be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
-    - Mac : Depending on the USB To TTL Adapter, should be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
+  - Windows : Use [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), select ```Serial``` protocol, fill in the COM port corresponding to ODYSSEY -STM32MP157C,```115200``` baud rate, 8 bit, no parity bits, a stop bit 1, no flow control.
+  - Linux : Depending on the USB To TTL Adapter, should be ```screen /dev/ttyACM0(,1, and so on) 115200``` or ```screen /dev/ttyUSB0(,1, and so on) 115200```.
+  - Mac : Depending on the USB To TTL Adapter, should be ```screen /dev/cu.usbserial1412(,1422, and so on) 115200``` or ```screen /dev/cu.usbmodem1412(,1422, and so on) 115200```.
 
 - **Step 3.** The default user name is ```debian```, the password is ```temppwd```
 
@@ -216,12 +210,14 @@ In this section, we'll walk you through the use of the USB to TTL adapter, which
 ls /dev/cu.usb* (Mac)
 ls /dev/ttyACM* (Linux)
 ```
+
 You should get feedback like this:
 
 ```
 /dev/cu.usbmodem14XX where XX will vary depending on which USB port you used (on Mac)
 /dev/ttyACMX where X will vary depending on which USB port you used  (on Linux)
 ```
+
 Now follow the steps above to connect to ODYSSEY – STM32MP157C via a serial connection. This is usually what we need to do when we first boot up, as you will then set up ODYSSEY – STM32MP157C for Wi-Fi connection and then SSH connection.
 
 **Network Settings**
@@ -261,7 +257,7 @@ sudo reboot
 
 - **Step 4.** Connect the wifi
 
-Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the ODYSSEY -STM32MP157C image. Follow these instructions to easily complete the configuration. 
+Configure the ODYSSEY – STM32MP157C network through the network management tool `connmanctl`, which has been installed on the ODYSSEY -STM32MP157C image. Follow these instructions to easily complete the configuration.
 
 ```
 robot@ev3dev:~$ sudo connmanctl
@@ -288,7 +284,8 @@ Connected wifi_e8de27077de3_41483034303434393134_managed_psk
 connmanctl> quit
 ```
 
-Now use the following command to find ODYSSEY – STM32MP157C's IP address. 
+Now use the following command to find ODYSSEY – STM32MP157C's IP address.
+
 ```
 ifconfig
 ```
@@ -308,6 +305,7 @@ Next, we'll use SSH to access ODYSSEY – STM32MP157C. Windows users can use thi
 - Windows users : Use PUTTY, select SSH protocol, fill in the correct IP address and click open. The user name is debian and the password is temppwd.
 
 - Linux/Mac users :
+
 ```
 ssh debian@IP
 // password: temppwd
@@ -480,6 +478,7 @@ sudo apt update
 sudo apt install python3 python3-distutils python3-pyqt5  python3-pip python3-numpy -y
 sudo pip3 install python-can pyqtgraph
 ```
+
 - **Step 2.** Install `git`.
 
 ```bsah
@@ -576,7 +575,6 @@ Run [CanBus_SendForArduino.ino](https://files.seeedstudio.com/wiki/Seeed-NPi-STM
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/IMG/can_bus_demo.png)
 
-
 ## Play with GPIO
 
 This part will introduce how to use **grove.py** to control GPIO and Grove Socket on ODYSSEY STM32MP157C.there exists two way to connect with the Grove Socket in this board. the one hand is using the Digital Grove Interface and  IIC Grove Interface, the other is using ODYSSEY - STM32MP157C's 40-pin. The description of the PIN defines for the ODYSSEY - STM32MP157C's 40-pin please refer to [Pin Function](#Pin Function).It is convenient for you to use this ODYSSEY - STM32MP157C's 40-pin.So,Let's go.
@@ -612,7 +610,7 @@ sudo reboot
 sudo apt install python3 python3-pip -y
 ```
 
-###  Digital output on Basehat by using Grove.py
+### Digital output on Basehat by using Grove.py
 
 #### Hardware
 
@@ -656,7 +654,7 @@ sudo python3 grove_gpio.py 5
 we will hear sound from the buzzer if everything has been well.
 </div>
 
-###  Digital Input on Basehat by using Grove.py
+### Digital Input on Basehat by using Grove.py
 
 #### Hardware
 
@@ -700,7 +698,7 @@ sudo python3 grove_button.py 5
 we will view some information at the terminal if the button has been pressed.
 </div>
 
-###  ADC on Basehat by using Grove.py
+### ADC on Basehat by using Grove.py
 
 #### Hardware
 
@@ -744,7 +742,7 @@ sudo python3 grove_temperature_sensor.py 0
 we will view temperature data at the terminal if everything has been well.
 </div>
 
-###  UART on Basehat by using Grove.py
+### UART on Basehat by using Grove.py
 
 #### Hardware
 
@@ -784,7 +782,6 @@ python uart.py
 ```
 
 if we connect the TX to RX we will get `hello seeder` at terminal.and the location of TX and RX we can view [Pin Function](https://wiki.seeedstudio.com/ODYSSEY-STM32MP157C/#pin-function).
-
 
 ### I2S on ODYSSEY-STM32MP157C
 
@@ -835,7 +832,7 @@ dtb=stm32mp1-seeed-npi-full-rpi-exp.dtb
 ```
 sudo reboot
 ```
- 
+
 - **Step 5.** Go into the `seeed-linux-dtverleys` folder and configure soundstate as follow：
 
 ```sh
@@ -887,7 +884,9 @@ if you cannot get any sound maybe you can reboot again.
 For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](https://wiki.seeedstudio.com/ReSpeaker_2_Mics_Pi_HAT/)
 
 ## Resourses
+
 -----
+
 - **[PDF]** [STM32MP157C Datasheet](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/stm32mp157c.pdf)
 - **[SCH]** [Seeed SoM - STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20SoM%20-%20STM32MP157C%20v1.0_191212.pdf)
 - **[SCH]** [ODYSSEY-STM32MP157C](https://files.seeedstudio.com/wiki/Seeed-NPi-STM32MP157C/Hardware/Seeed%20NPi%20-%20STM32MP157C%20v1.0_191212.pdf)
@@ -898,8 +897,8 @@ For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http
 - **[PDF]** [STM32 Reference Guide](https://files.seeedstudio.com/wiki/ODYSSEY-STM32MP157C/STM32+Reference+Guide+V1.0.pdf)
 - **[URL]** [Advanced system development](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C)
 
-
 # ODYSSEY-STM32MP157C Advanced system development
+
 - [Availability](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Availability)
 - [Vendor Documentation](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-VendorDocumentation)
 - [Basic Requirements](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-BasicRequirements)
@@ -921,17 +920,16 @@ For more information about the ReSpeaker 2-Mics Pi HAT you can visit [wiki](http
 - [Remove microSD/SD card](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-RemovemicroSD/SDcard)
 - [Comments](https://www.digikey.com/eewiki/display/linuxonarm/ODYSSEY-STM32MP157C#ODYSSEY-STM32MP157C-Comments)
 
-
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

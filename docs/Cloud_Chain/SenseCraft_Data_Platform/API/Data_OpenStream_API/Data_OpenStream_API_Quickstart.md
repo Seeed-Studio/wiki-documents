@@ -115,10 +115,11 @@ mosquitto_sub \
 ```
 
 Received the data:
+
 ```cpp
 /device_sensor_data/521853156991/2CF7F12210400083/1/vs/4097 {"value":28,"timestamp":1561373812474}
 ```
-Congratulations! Now you know how to monitor and receive messages via MQTT. Go build something awesome!
 
+Congratulations! Now you know how to monitor and receive messages via MQTT. Go build something awesome!
 
 </div>

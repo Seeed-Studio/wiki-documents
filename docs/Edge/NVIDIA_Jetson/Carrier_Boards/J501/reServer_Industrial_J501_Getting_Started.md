@@ -25,13 +25,12 @@ last_update:
 
 The J501 carrier board is a powerful extension board that supports NVIDIA Jetson AGX Orin modules. It features rich data ports and extension interfaces, completely unleashed the full performance of the AGX Orin module. Also it supports adding GMSL extension to connect up to 8 GMSL cameras.
 
-## Features 
+## Features
 
 - **Build most powerful AI computer for edge computing:** Design to intgerate with  Jetson AGX Orin module, with up to 275 TOPS AI performance, 8 times AI performance compared to Jetson AGX Xavier. Power configurable between 15W and 60W.
 - **High-speed interface support for multiple sensors:** 22 lanes of PCIe Gen4, 1x 10GbE, a Display Port, 16 lanes of MIPI CSI-2, USB 3.2 interfaces, and a 40-pin header.
 - **Low-speed interface support for multiple IO:** 4x DI, 4x DO, 3x GND_DI, 2x GND_DO, 1x GND_ISO, 1x CAN, 1x RS232/RS422/RS485.
 <!-- - **BSP ready for development:** Jetpack 6 supported Board BSP ready for developing your custom system image. -->
-
 
 ## Specifications
 
@@ -127,20 +126,20 @@ The J501 carrier board is a powerful extension board that supports NVIDIA Jetson
 </table>
 </div>
 
-## Hardware Overview 
+## Hardware Overview
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/hardware_overview.jpeg"/>
 </div>
-
 
 ## Flash JetPack OS to J501 Carrier Board
 
 Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embedded/jetson-linux-archive) to an NVMe SSD connected to the reServer J501.
 
 ### Supported Module
-- [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5458.html) 
-- [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-JETSON-AGX-ORIN-64GB-Module-p-5552.html) 
+
+- [NVIDIA® Jetson AGX Orin™ Module 32GB](https://www.seeedstudio.com/NVIDIA-Jetson-AGX-Orin-Module-32GB-p-5458.html)
+- [NVIDIA® Jetson AGX Orin™ Module 64GB](https://www.seeedstudio.com/NVIDIA-JETSON-AGX-ORIN-64GB-Module-p-5552.html)
 
 ### Prerequisites
 
@@ -155,7 +154,7 @@ Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embed
 
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -297,7 +296,7 @@ The jetpack5 image file is approximately **4.5GB** in size and should take aroun
 :::
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -351,7 +350,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -386,7 +385,6 @@ sudo apt update
 sudo apt install nvidia-jetpack
 ```
 
-
 ## Resources
 
 - [reServer Industrial J501 Carrier Board Datasheet](https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/reServer_Industrial_J501_Carrier_Board_Datasheet.pdf)
@@ -397,18 +395,16 @@ sudo apt install nvidia-jetpack
 - [Seeed Jetson Serials Comparision](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

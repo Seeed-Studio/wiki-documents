@@ -374,12 +374,14 @@ Please note the second command, There are two parameters after the file name:
 - <font style={{fontWeight: 'bold', color: '#AE0000'}}>0</font> means the sensor is connected to port A0. If you connect the sensor to port A2, then you need to change this parameter to 2.  This parameter has a range of 0-7, but if you use the Grove base hat, you can only use 0/2/4/6 because of the physical limitations of the interface.  
 
 - <font style={{fontWeight: 'bold', color: '#AE0000'}}>2.5A</font> means the current sensor type is 2.5A DC
+
 :::
 
 Sensor                                     |Current type|Parameter Value
 -------------------------------------------|------------|----
 Grove - 2.5A DC Current Sensor(ACS70331)   |DC          |2.5A
 Grove - 2.5A DC Current Sensor (ACS725)|DC          |5A_DC
+
                                            |AC          |5A_AC
 Grove - 10A DC Current Sensor (ACS725)     |DC          |10A
 
@@ -704,11 +706,11 @@ So, in the figure 6, when we set the **Vref** to 283.20, the **Ip** turns to 0mA
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

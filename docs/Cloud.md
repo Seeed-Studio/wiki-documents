@@ -71,7 +71,7 @@ Cloud services are a vital component that enable processed data management from 
             <br/>
             <a href="/sensecraft-data-platform/tutorials/device-management#settings" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Settings</strong> - Adjust data collection frequency and other settings.</font></span></a>
             <br/>
-            <a href="/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Location</strong></font></span></a> 
+            <a href="/sensecraft-data-platform/tutorials/device-management#location" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Location</strong></font></span></a>
             /
             <a href="/sensecraft-data-platform/tutorials/device-management#bind-device" target="_blank"><span><font color={'FFFFFF'} size={"2"}><strong>Device Binding</strong></font></span></a>
             /
@@ -110,7 +110,7 @@ Cloud services are a vital component that enable processed data management from 
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"6"}>SenseCraft AI</font></div>
             <p>SenseCraft AI can be accessed on the SenseCraft Data Platform and SenseCraft App.</p>
             <br/>
-            > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a> 
+            > <a href="/sensecraft-data-platform/applications/ai-advisor" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Getting Started</font></span></a>
             > <a href="/sensecraft-data-platform/applications/planting-advice" target="_blank"><span><font color={'FFFFFF'} size={"3"}>Connecting XIAO ESP32C3</font></span></a>
     </div>
 </div>

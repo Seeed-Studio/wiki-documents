@@ -26,20 +26,19 @@ La nueva versión del Wio Terminal Battery Chassis incluye el medidor de baterí
   </a>
 </div>
 
-
 ## Feature
 
-* Batería recargable integrada de 650mAh
-* LED indicador de estado de carga/descarga
-* Botón On/OFF de la batería
-* Medidor de combustible integrado BQ27441-G1A para baterías LiPo
-* Carga por USB Tipo-C
-* Protección contra sobrecorriente
-* Modo Hiccup / Protección Hiccup
-* 4 puertos Grove Analógico/Digital
-* 1 puerto Grove I2C
-* 1 puerto Grove UART
-* Imanes ocultos dentro de la carcasa para pegar en pizarras blancas
+- Batería recargable integrada de 650mAh
+- LED indicador de estado de carga/descarga
+- Botón On/OFF de la batería
+- Medidor de combustible integrado BQ27441-G1A para baterías LiPo
+- Carga por USB Tipo-C
+- Protección contra sobrecorriente
+- Modo Hiccup / Protección Hiccup
+- 4 puertos Grove Analógico/Digital
+- 1 puerto Grove I2C
+- 1 puerto Grove UART
+- Imanes ocultos dentro de la carcasa para pegar en pizarras blancas
 
 ## Especificación
 
@@ -51,7 +50,7 @@ La nueva versión del Wio Terminal Battery Chassis incluye el medidor de baterí
 | **Battery board mode** | Verde encendido: carga activa.<br />Rojo encendido: OTG (descarga batería) activo.<br />Amarillo encendido: interfaz macho salida/entrada 5V. |
 | **GPIO output**            | Max voltaje: 5.15V<br />Max corriente: 380mA                                                                                                |
 | **Trickle charge current** | 30mA                                                                                                                                      |
-| **Grove Interface**        | Grove Analógico/Digital \*4, Grove I2C \*1, Grove UART \*1                                                                                |
+| **Grove Interface**        | Grove Analógico/Digital *4, Grove I2C*1, Grove UART *1                                                                                |
 
 ## Hardware Overview
 
@@ -61,12 +60,12 @@ La nueva versión del Wio Terminal Battery Chassis incluye el medidor de baterí
 
 ## Precautions
 
-* Si la batería se retira mientras la placa está en modo de carga, la placa entrará en modo fallo y el LED verde parpadeará a 1 Hz.
-* Cuando la placa no esté en uso, presiona el botón para entrar en modo suspensión y todos los LEDs se apagarán.
+- Si la batería se retira mientras la placa está en modo de carga, la placa entrará en modo fallo y el LED verde parpadeará a 1 Hz.
+- Cuando la placa no esté en uso, presiona el botón para entrar en modo suspensión y todos los LEDs se apagarán.
 
 ## Detectar el estado de la batería LiPo
 
-1. Descarga la librería [SparkFun\_BQ27441\_Arduino\_Library](https://github.com/sparkfun/SparkFun_BQ27441_Arduino_Library) desde su repositorio oficial.
+1. Descarga la librería [SparkFun_BQ27441_Arduino_Library](https://github.com/sparkfun/SparkFun_BQ27441_Arduino_Library) desde su repositorio oficial.
 
 2. Instala la librería en el Arduino IDE abriendo `Sketch` → `Include Library` → `Add .ZIP Library` y selecciona el archivo ZIP descargado.
 
@@ -166,18 +165,18 @@ void loop()
 
 ## Recursos
 
-* **\[ZIP]** [Archivo de diseño esquemático del Wio Terminal Battery Chassis](https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/res/WioTerminal_battry_650mAh.rar)
+- **[ZIP]** [Archivo de diseño esquemático del Wio Terminal Battery Chassis](https://files.seeedstudio.com/wiki/Wio-Terminal-Battery-Chassis/res/WioTerminal_battry_650mAh.rar)
 
 ## Soporte Técnico
 
 Gracias por elegir nuestros productos. Estamos aquí para brindarte soporte para que tu experiencia sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes necesidades y preferencias.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

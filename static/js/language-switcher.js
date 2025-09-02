@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-08-25 14:38:12 (北京时间)
-// 多语言页面: 2003 个
+// 生成时间: 2025-09-01 14:48:07 (北京时间)
+// 多语言页面: 2007 个
 
 (function() {
   'use strict';
@@ -2211,6 +2211,7 @@
   "/robotics_page": [
     "cn",
     "en",
+    "es",
     "ja"
   ],
   "/solution_of_insufficient_space": [
@@ -3447,7 +3448,31 @@
     "es",
     "ja"
   ],
+  "/orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/orbbec_depth_camera_on_ros": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/orbbec_gemini_335lg": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/orb_slam3_orbbec_gemini2": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/sensing_gmsl_cameras": [
     "cn",
     "en",
     "es",
@@ -7501,7 +7526,8 @@
   ],
   "/xiao_nrf54l15_sense_getting_started": [
     "cn",
-    "en"
+    "en",
+    "ja"
   ],
   "/xiao_nrf54l15_sense_pin_multiplexing": [
     "cn",

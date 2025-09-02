@@ -199,21 +199,38 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 - If you want to use **Seeed Studio XIAO ESP32S3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** to finish adding.
 
 
-## Using the Seeed_Arduino_LCD Library
+## Install Seeed Arduino LCD Library
 
 **Step 3.** Install Seeed Arduino LCD Library
 
 :::tip
-This library has same function as TFT library and no compatible with this library. If you have installed TFT library, please uninstall it first.
+This library has same function as TFT library and no compatible with it. If you have installed TFT library or other similary display libraries, please uninstall it first.
 :::
 
-Download and install the Seeed Arduino LCD library from GitHub.
+Download and install the Seeed GFX library from GitHub.
 
-<div class="github_container" style={{textAlign: 'center'}}>
-    <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
-    </a>
-</div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div> 
+
+<div align="center">
+<a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>Click here to download</button></p>
+</a>
+</div>
+
+Scroll down and open this link. 
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div> 
+
+Select your device type and it will generate some code. Copy those code and we will use them later.
+
+:::tip
+If you make the wrong choice, the screen will display nothing. 
+
+So please make sure your devices or components type.
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/epaper_display.jpg" style={{width:600, height:'auto'}}/></div>
+
 
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 
@@ -223,24 +240,25 @@ There are 4 basic examples, open a basic example you like:
 1. Bitmap: Display a bitmap image.
 2. Clock: Display a clock.
 3. Clock_digital: Display a digital clock.
-4. HelloWorld: Display basic patterns and text of different sizes on the e-ink screen.
-5. Shape: Display different sizes of words and shape randomly.
+4. Shape: Display different sizes of words and shape randomly.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/150.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Step 4.** Upload the Code
+### Upload the Code
 
-Before uploading the code, you need to open **User_Setup_Select.h** in Seeed_Arduino_LCD library.
+Create a **new "driver.h" file** and paste those code into it. The code should be like:
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/53.png" style={{width:800, height:'auto'}}/></div>
-
-Since this example uses a 2.9-inch e-ink screen, we need to comment out line 160 `#include <User_Setups/Setup666_XIAO_ILI9341.h>` in this file, and uncomment line 165 `#include <User_Setups/Setup504_Seeed_XIAO_EPaper_2inch9.h>`. If you are using other e-ink screens, please follow this approach to make modifications.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/151.png" style={{width:1000, height:'auto'}}/></div>
+```cpp
+#define BOARD_SCREEN_COMBO 504 // 2.9 inch monochrome ePaper Screen （SSD1680）
+#define USE_XIAO_EPAPER_BREAKOUT_BOARD
+```
 
 After that, go to **Tools** -> **Board** -> **XIAO ESP32C6** and **Tools** -> **Port** -> **Select the port your board is connected to**. Then click **Upload** to upload the code.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/152.png" style={{width:1000, height:'auto'}}/></div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/table.jpg" style={{width:1000, height:'auto'}}/></div>
+
+
 
 Now you will see the feedback in your epaper screen! Following are the results of Helloworld examples.
 

@@ -24,7 +24,7 @@ This guide provides a detailed explanation on how to run a multimodal Visual Lan
 The Visual Language Model (VLM) is a multimodal model optimized for the Nvidia Jetson platform. It combines visual and language processing to handle complex tasks, such as object recognition and generating descriptive language. VLM is applicable in fields like autonomous driving, intelligent surveillance, and smart homes, offering intelligent and intuitive solutions.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/vlmgif.gif" />
 </div>
 
@@ -33,7 +33,7 @@ The Visual Language Model (VLM) is a multimodal model optimized for the Nvidia J
 SenseVoice is an open-source model focused on high-accuracy multilingual speech recognition, speech emotion recognition, and audio event detection. Trained on over 400,000 hours of data, it supports 50+ languages and outperforms the Whisper model. The SenseVoice-Small model delivers ultra-low latency, processing 10 seconds of audio in just 70ms. It also provides convenient finetuning and supports deployment in multiple languages, including Python, C++, HTML, Java, and C#.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/sensevoice2.png" />
 </div>
 
@@ -42,7 +42,7 @@ SenseVoice is an open-source model focused on high-accuracy multilingual speech 
 The TTS model is a high-performance deep learning model for text-to-speech tasks. It includes various models like Tacotron2 and vocoders such as MelGAN and WaveRNN. The TTS model supports multi-speaker TTS, efficient training, and offers tools for dataset curation and model testing. Its modular codebase allows easy implementation of new features.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://raw.githubusercontent.com/coqui-ai/TTS/main/images/coqui-log-green-TTS.png" />
 </div>
 
@@ -57,7 +57,7 @@ We have already tested the feasibility of this wiki on reComputer [Orin NX 16GB]
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/agx_orin.png" />
 </div>
 
@@ -75,12 +75,14 @@ We have already tested the feasibility of this wiki on reComputer [Orin NX 16GB]
 
 2. Install `python3-pip`, `jtop`, and `docker-ce`.
 3. Install the necessary dependencies by running the following commands:
+
     ```bash
     sudo apt-get install libportaudio2 libportaudiocpp0 portaudio19-dev
     sudo pip3 install pyaudio playsound subprocess wave keyboard
     sudo pip3 --upgrade setuptools
     sudo pip3 install sudachipy==0.5.2
     ```
+
 4. Check that the audio input and output, as well as the USB speaker microphone, are functioning properly and that the network connection is stable.
 
 ### Install VLM
@@ -92,25 +94,32 @@ The core functionality of this project is the visual language model (VLM). We ha
 We have provided an Nvidia Jetson AI course for beginners, which includes instructions on [how to install PyTorch, Torchaudio, and Torchvision](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners/blob/main/3-Basic-Tools-and-Getting-Started/3.3-Pytorch-and-Tensorflow/README.md). Please download and install these packages according to your system environment.
 
 ### Install Speech_vlm (Based on SenseVoice)
+
 1. Clone Speech_vlm packages:
+
     ```bash
     cd ~/
     git clone https://github.com/ZhuYaoHui1998/speech_vlm.git
     ```
+
 2. Install Speech_vlm environment:
+
     ```bash
     cd ~/speech_vlm
     sudo pip3 install -r requement.txt
     ```
 
 ### Install TTS (Based on Coqui-ai)
+
 ```bash
 cd ~/speech_vlm/TTS
 sudo pip3 install .[all]
 ```
 
 ## Usage
+
 The structure of the speech_vlm repository is as follows:
+
 ```bash
 speech_vlm/
 ├── /TTS   # Coqui-ai TTS program
@@ -129,13 +138,14 @@ speech_vlm/
 ```
 
 1. Start the VLM
+
     ```bash
     cd ~/speech_vlm
     sudo docker compose up -d
     ```
 
     <div align="center">
-        <img width={800} 
+        <img width={800}
         src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/dockerps.png" />
     </div>
 
@@ -149,19 +159,23 @@ curl --location 'http://0.0.0.0:5010/api/v1/live-stream' \
 --header 'Content-Type: application/json' \
 --data '{"liveStreamUrl": "RTSP stream address"}'
 ```
+
 Replace `0.0.0.0` with the IP address of the Jetson device and replace `RTSP stream address` with the camera's RTSP stream address.
 For example:
+
 ```sh
 #!/bin/bash
 curl --location 'http://192.168.49.227:5010/api/v1/live-stream' \
 --header 'Content-Type: application/json' \
 --data '{"liveStreamUrl": "rtsp://admin:IHFXnM8k@192.168.49.15:554//Streaming/Channels/1"}'
 ```
+
 :::note
 If you don't have an RTSP camera, we have provided instructions on [how to use NVStreamer to stream local videos as RTSP](../Developer_Tools/NVStreamer_Getting_Started.md) and [add them to the VLM](../Generative_AI/How_to_run_VLM_on_reComputer.md).
 :::
 
 Run set_streamer_id.sh
+
 ```bash
 cd ~/speech_vlm
 sudo chmod +x ./set_streamer_id.sh
@@ -171,7 +185,7 @@ sudo chmod +x ./set_streamer_id.sh
 We will obtain a camera ID, this ID is very important and needs to be recorded, like this:
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/set_id.png" />
 </div>
 
@@ -416,21 +430,22 @@ while True:
         
     time.sleep(0.1)  # Reduce CPU usage
 ```
+
 </details>
 
 Run python:
+
 ```bash
 cd ~/speech_vlm
 sudo python3 vlm_voice.py
 ```
+
 After the program starts, it will scan all audio input and output devices. You will need to manually select the index ID of the desired audio device. The program is about to start working, then press `1` to record and `2` to send.
 
-
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/select_mic.png" />
 </div>
-
 
 4. View result
 
@@ -468,6 +483,7 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+
 </details>
 
 ```bash
@@ -477,7 +493,7 @@ sudo python3 view_rtsp.py
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer/Application/Multimodal_ai/audio_vlm/view_result.png" />
 </div>
 
@@ -487,17 +503,16 @@ sudo python3 view_rtsp.py
   <iframe width="800" height="450" src="https://www.youtube.com/embed/eYaA9WGXh4Y" title="Run VLM with Speech Interaction on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

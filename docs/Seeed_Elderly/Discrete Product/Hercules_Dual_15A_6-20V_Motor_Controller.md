@@ -23,10 +23,10 @@ This motor controller is Arduino compatible. Best of all, it is focusing on high
 Features
 --------
 
--   Full bridge drive circuit based on MOSFET supports two independent channels， each channel up to 15A
--   LED shows fuse protection status
--   Several Grove ports, conveniently connect with servo, encoder and sensors
--   ATMega328 controller, Arduino compatible
+- Full bridge drive circuit based on MOSFET supports two independent channels， each channel up to 15A
+- LED shows fuse protection status
+- Several Grove ports, conveniently connect with servo, encoder and sensors
+- ATMega328 controller, Arduino compatible
 
 Specifications
 --------------
@@ -98,12 +98,12 @@ The controller cannot be powered directly from the programming connector which c
 
 The controller must be powered from the Power screw J1, by batteries or a DC supply (6-20V). The controller uses 2 15A slow blow fuses to protect the “H” bridges. After connecting the power supply:
 
--   Connect a DC Motor to Channel 1 Screw Terminals.
--   Connect the controller to your computer with UartSBee V4 and a USB cable.
+- Connect a DC Motor to Channel 1 Screw Terminals.
+- Connect the controller to your computer with UartSBee V4 and a USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/IMG_0204-1-.JPG)
 
--   Load the [Motor Controller Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motor_Controller_Library.zip) and run the "motorDriverDemo" program.
+- Load the [Motor Controller Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motor_Controller_Library.zip) and run the "motorDriverDemo" program.
 
 ```
     #include "motordriver_4wd.h"
@@ -128,10 +128,9 @@ The controller must be powered from the Power screw J1, by batteries or a DC sup
   The motor has two run direction: DIRF(forward) and DIRR(backward).If the motor runs in the opposite way, you may reverse the motor wires to reverse rotation.
 </div>
 
-
--   Disconnect the controller from your computer.
--   Connect the controller to a battery or DC supply by the battery input screw terminals.
--   Now you can see the motor rotate at a speed.
+- Disconnect the controller from your computer.
+- Connect the controller to a battery or DC supply by the battery input screw terminals.
+- Now you can see the motor rotate at a speed.
 
 ### Reference
 
@@ -182,11 +181,11 @@ Grove - XBee Carrier: Offers convenience to use RFbee. We can use the MiniUSB So
 You can connect to PC using USB cable to replace Battery.
 </div>
 
--   Plug RFBee into Bee Socket of Grove - XBee Carrier.
--   Download the [RFBee Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/RFBee_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
--   Download and Upload the demo: [Remote lvc](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Remote_lvc.zip) to one RFbee. Before uploading, you need to select Tools->Board->Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega168 and choose the correct serial port from the Tools menu.
--   Connect Grove - Thumb Joystick to IIC Grove Connector of Grove - XBee Carrier.
--   Connect battery into Battery Connector of Grove - XBee Carrier.
+- Plug RFBee into Bee Socket of Grove - XBee Carrier.
+- Download the [RFBee Library](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/RFBee_Library.zip) and Unzip it into the libraries file of Arduino IDE by the path: ..\arduino-1.0.1\libraries.
+- Download and Upload the demo: [Remote lvc](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Remote_lvc.zip) to one RFbee. Before uploading, you need to select Tools->Board->Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega168 and choose the correct serial port from the Tools menu.
+- Connect Grove - Thumb Joystick to IIC Grove Connector of Grove - XBee Carrier.
+- Connect battery into Battery Connector of Grove - XBee Carrier.
 
 ![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/Remote_Control.jpg)
 
@@ -195,8 +194,8 @@ You can connect to PC using USB cable to replace Battery.
   You can refer the Interface function of Grove - XBee Carrier wiki for connector.
 </div>
 
-
 ### Receiver
+
 **Items Required:**
 
 - RFBee Module
@@ -209,14 +208,15 @@ Grove - XBee Carrier: Offers convenience to use RFbee. We can use the MiniUSB So
 
 The 15A 6-20V Motor Controller: Drive Motor to rotate.
 
--   Plug RFBee into Bee Socket of Grove - XBee Carrier.
--   Connect IIC of Grove - XBee Carrier to IIC Connector of Motor Controller.
--   Connect four motor to Motor1A/Motor1B(Motor2A/Motor2B).
+- Plug RFBee into Bee Socket of Grove - XBee Carrier.
+- Connect IIC of Grove - XBee Carrier to IIC Connector of Motor Controller.
+- Connect four motor to Motor1A/Motor1B(Motor2A/Motor2B).
 
 We use the **4WD hercules mobile robotic platform** for the motor controller as shown below:
 ![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/4WD_Robot_Car_Body.jpg)
 
--   Upload The code to another RFBee module.
+- Upload The code to another RFBee module.
+
 ```
     // demo of rfbee send and recv
     #include <Arduino.h>
@@ -275,7 +275,7 @@ We use the **4WD hercules mobile robotic platform** for the motor controller as 
     }
 ```
 
--   The Library [Motodriver 4wd.zip](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motodriver_4wd.zip) for Motor Controller. Before uploading, you need to select Tools->Board->Arduino Duemilanove w/ ATmega328.
+- The Library [Motodriver 4wd.zip](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Motodriver_4wd.zip) for Motor Controller. Before uploading, you need to select Tools->Board->Arduino Duemilanove w/ ATmega328.
 
 ### Result
 
@@ -283,13 +283,10 @@ The Remote Control Car based on the Hercules Dual 15A 6-20V Motor Controller and
 
 ![](https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/img/4WD_Robot.jpg)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Hercules_Dual_15A_6-20V_Motor_Controller/res/Source_file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 Resources
 ---------
@@ -305,11 +302,11 @@ Resources
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

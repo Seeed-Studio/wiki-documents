@@ -16,7 +16,7 @@ Este documento contiene todas las preguntas frecuentes relacionadas con la serie
 
 Para más detalles, haz clic [**aquí**](/R1000_default_username_password).
 
-# Soporte Técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para brindarte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

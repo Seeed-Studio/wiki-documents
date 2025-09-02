@@ -43,16 +43,16 @@ Since MQTT node is built-in with Node-RED you can use the MQTT node with any ext
 
 ### Hardware
 
-* 1 x reTerminal DM
-* 1 x Host Computer
+- 1 x reTerminal DM
+- 1 x Host Computer
 
 :::note
 The Host Comupter should be able to have internet connection to the reTerminal DM to perform the follow setup steps.
 :::
 
-### Software 
+### Software
 
-* MQTT Broker [Eclipse Mosquitto](https://mosquitto.org/)
+- MQTT Broker [Eclipse Mosquitto](https://mosquitto.org/)
 
 ## Install MQTT Broker [Eclipse Mosquitto](https://mosquitto.org/)
 
@@ -79,6 +79,7 @@ STEP 3: Install the Mosquitto client tools by running the following command:
 ```sh
 sudo apt-get install mosquitto-clients
 ```
+
 STEP 4: Once the installation is complete, you can start the Mosquitto service by running the following command:
 
 ```sh
@@ -98,6 +99,7 @@ Open a new SSH session and run the following command to subscribe to a topic:
 ```sh
 mosquitto_sub -h localhost -t test
 ```
+
 In another SSH session, run the following command to publish a message to the same topic:
 
 ```sh
@@ -121,7 +123,6 @@ In Node-RED, there are MQTT in and MQTT out which represent Subscribe and Publis
 The following steps just for tutorial purpose, where we will use mqtt-in to subscribe the message from the mqtt out published message to the same topic.
 
 :::
-
 
 STEP 1: Drag `mqtt in` to the `Flow Editor` panel
 
@@ -173,7 +174,7 @@ Since we have not setup any mqtt topic publisher yet, so there will be no messag
 
 :::
 
-STEP 3: Setup the `mqtt out` node 
+STEP 3: Setup the `mqtt out` node
 
 STEP 3-1: Double click on the `mqtt out` node to open the `Node editor panel`
 
@@ -222,7 +223,6 @@ STEP 4-2-5: Connect to the `inject` node with `mqtt out` node and click `Delpoy`
 Congratulations, you have successfully experienced and learned how to use MQTT protocol with reTerminal DM and node-RED now, your final results should be similar as the image shown below
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-result-mqtt.png" /></div>
-
 
 You can copy the following JSON code to import the Nodes
 
@@ -345,23 +345,23 @@ You can copy the following JSON code to import the Nodes
     }
 ]
 
-``` 
+```
 
 # Explore more nodes on reTerminal DM with node-RED
 
-* [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
+- [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

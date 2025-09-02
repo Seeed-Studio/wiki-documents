@@ -16,7 +16,6 @@ last_update:
 
 [FlowFuse](https://flowfuse.com/) enhances Node-RED by adding features for collaborative development, managing remote deployments, supporting DevOps delivery pipelines, and hosting Node-RED applications. It serves as a DevOps platform specifically designed for the development and delivery of Node-RED applications, making it easier for teams to work together and deploy their projects efficiently.
 
-
 ## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
@@ -24,22 +23,22 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ## Software Preparation
 
@@ -55,6 +54,7 @@ First, update your package list and install the necessary certificates and tools
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg
 ```
+
 2. **Setting Up the NodeSource Repository**
 
 Next, set up the NodeSource repository on your reComputer:
@@ -76,11 +76,13 @@ Add the Node.js repository to your reComputer’s sources list:
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
+
 Update your package list again to include the Node.js repository:
 
 ```sh
 sudo apt update
 ```
+
 4. **Installing Node.js**
 
 Finally, install Node.js:
@@ -88,6 +90,7 @@ Finally, install Node.js:
 ```sh
 sudo apt install nodejs
 ```
+
 Now you have Node.js version 20 installed on your device.
 
 To start using FlowFuse, you'll need to create an account and verify your email. Follow these simple steps:
@@ -124,7 +127,7 @@ To start using FlowFuse, you'll need to create an account and verify your email.
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/email.PNG" /></center>
 
 8. **Login**:
-   - Click on the `Login` button to access your FlowFuse account. and you may ask to create a team. 
+   - Click on the `Login` button to access your FlowFuse account. and you may ask to create a team.
 
 ## Creating an Application in FlowFuse
 
@@ -275,26 +278,28 @@ Let's create a flow in Node-RED to generate a random number and display it on a 
     }
 ]
 ```
+
 4. **Deploy the Flow**:
    -Click on the `Deploy` button in the top-right corner to deploy your flow.
 
 ## Adding and Configuring a Device in FlowFuse
 
 1. **To add and configure a device in FlowFuse, follow these steps**:
- - In the FlowFuse dashboard, navigate to the `Devices` section.
- - Click on the `Add Device` button.
+
+- In the FlowFuse dashboard, navigate to the `Devices` section.
+- Click on the `Add Device` button.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/device.PNG" /></center>
 
- - Fill in Device Details
- - Click the `Add` button to create your device.
+- Fill in Device Details
+- Click the `Add` button to create your device.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_device.PNG" /></center>
 
 2. **Copy the Device Configuration**
 
-  - After adding the device, you will be presented with a Device Configuration.
-  - Under the manual instructions, copy the provided code snippet. You will need these credentials to connect the device with the FlowFuse cloud.
+- After adding the device, you will be presented with a Device Configuration.
+- Under the manual instructions, copy the provided code snippet. You will need these credentials to connect the device with the FlowFuse cloud.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_device2.PNG" /></center>
 
@@ -305,6 +310,7 @@ On your reComputer terminal, run the following command to install the FlowFuse d
 ```sh
 sudo npm install -g @flowfuse/device-agent
 ```
+
 ### Configuring the Device Agent
 
 1. **Create Configuration Directory**:  - Run the following command one by one to create the configuration directory and set the appropriate permissions:
@@ -316,18 +322,21 @@ sudo npm install -g @flowfuse/device-agent
    cd /
    cd opt/flowfuse-device
 ```
+
 2. Create and Edit Configuration File:**  - Open a new configuration file named `device.yml`:
-   
+
 ```sh
 nano device.yml
-``` 
+```
+
 - Paste the copied device configuration into this file and save it by pressing `Ctrl + X`, then `Y`, and `Enter`.
 
 3. Run the Device Agent:  - Execute the following command to start the FlowFuse device agent:
-   
+
 ```sh
 flowfuse-device-agent --port=1881
 ```
+
 Your device is now configured and connected to the FlowFuse cloud, ready for use.
 
 ## Deploying the Flow to a Device
@@ -369,28 +378,33 @@ To deploy the flow to your device, you need to create a snapshot of your Node-RE
 To deploy the snapshot to your device, follow these steps:
 
 1. **Go to the Device Section**
-  - In the FlowFuse dashboard, go to the `Devices` section.
+
+- In the FlowFuse dashboard, go to the `Devices` section.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/device_add_sanp.PNG" /></center>
 
 2. **Select the Device**
-  - Find the device you created and configured earlier.
-  - Tap on the three dots next to the device name.
-  - Click on `Add Instance`.
+
+- Find the device you created and configured earlier.
+- Tap on the three dots next to the device name.
+- Click on `Add Instance`.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_instance.PNG" /></center>
 
 3. **Add the Instance to the Device**
-  - Choose the application and instance you created earlier.
-  - Click the `Add` button.
+
+- Choose the application and instance you created earlier.
+- Click the `Add` button.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_instance2.PNG" /></center>
 
 4. **Deploy the Flow**
-  - Your flow will be deployed to the device within a few seconds. It will run with the configurations and settings captured in the snapshot.
+
+- Your flow will be deployed to the device within a few seconds. It will run with the configurations and settings captured in the snapshot.
 
 5. **Access the Device**
-  - Go to your device by navigating to `<ip_address_recomputer>:1881/ui` in your web browser.
+
+- Go to your device by navigating to `<ip_address_recomputer>:1881/ui` in your web browser.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/gauge.PNG" /></center>
 
@@ -399,21 +413,11 @@ To deploy the snapshot to your device, follow these steps:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-

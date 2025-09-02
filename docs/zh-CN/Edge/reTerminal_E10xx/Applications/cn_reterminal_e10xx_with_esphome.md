@@ -1,6 +1,6 @@
 ---
-description: 本文介绍如何让 reTerminal E10xx 系列与 Home Assistant 和 ESPHome 协同工作。
-title: reTerminal E10xx 与 ESPHome 配合 Home Assistant 使用
+description: 本文介绍如何让 reTerminal E Series ePaper Display 系列与 Home Assistant 和 ESPHome 协同工作。
+title: reTerminal E Series ePaper Display 与 ESPHome 配合 Home Assistant 使用
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /cn/reterminal_e10xx_with_esphome
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E10xx 与 ESPHome 配合 Home Assistant 使用
+# reTerminal E Series ePaper Display 与 ESPHome 配合 Home Assistant 使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -42,9 +42,9 @@ Home Assistant 是一个功能强大的开源家庭自动化平台，允许您�
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 了解更多 🖱️</font></span></strong></a>
 </div>
 
-### 为什么 reTerminal E10xx 适合与 Home Assistant 配合使用？
+### 为什么 reTerminal E Series ePaper Display 适合与 Home Assistant 配合使用？
 
-reTerminal E10xx 是 Home Assistant 的绝佳伴侣，原因如下：
+reTerminal E Series ePaper Display 是 Home Assistant 的绝佳伴侣，原因如下：
 
 1. **节能高效**：电子纸显示屏仅在更新内容时消耗电力，非常适合显示持久信息，如天气预报、日历事件或系统状态。
 
@@ -54,11 +54,11 @@ reTerminal E10xx 是 Home Assistant 的绝佳伴侣，原因如下：
 
 4. **灵活集成**：通过 ESPHome，显示屏与 Home Assistant 无缝集成，允许您以优雅、始终可见的格式显示智能家居系统中的任何数据。
 
-这些优势使 reTerminal E10xx 成为为您的 Home Assistant 设置创建节能、始终在线信息显示屏的理想选择。
+这些优势使 reTerminal E Series ePaper Display 成为为您的 Home Assistant 设置创建节能、始终在线信息显示屏的理想选择。
 
 ### ESPHome 集成
 
-ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 reTerminal E10xx，ESPHome 充当重要的中间件，实现设备与 Home Assistant 之间的通信。
+ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允许您使用简单的 YAML 配置文件创建自定义固件，然后可以刷写到您的设备上。对于 reTerminal E Series，ESPHome 充当重要的中间件，实现设备与 Home Assistant 之间的通信。
 
 该系统通过将您的 YAML 配置转换为在 ESP 设备上运行的功能齐全的固件来工作。该固件处理连接到网络、与 Home Assistant 通信以及控制电子纸显示屏的所有复杂任务。当与 Home Assistant 结合使用时，ESPHome 为创建复杂的家庭自动化显示屏和控制器提供了强大的平台。
 
@@ -73,7 +73,7 @@ ESPHome 是专为 ESP8266/ESP32 设备设计的开源固件创建工具。它允
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>reTerminal E10xx</th>
+      <th>reTerminal E Series</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -280,7 +280,7 @@ display:
 
 ### 绘制简单图形
 
-这个示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E10xx。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
+这个示例 YAML 代码为 ESPHome 项目配置了 SPI 接口和 reTerminal E Series。`lambda` 部分包含在屏幕上渲染简单形状的绘图命令：
 
 - 两个矩形（一个位于位置 (10, 10)，大小为 100x50，另一个位于 (150, 10)，大小为 50x50）
 - 一个位于 (250, 35) 的圆，半径为 25
@@ -325,7 +325,7 @@ display:
 
 ### 从 Home Assistant 获取值用于显示
 
-要在您的 reTerminal E10xx 设备上显示天气数据，您需要从 Home Assistant 访问温度、天气状况和风速数据。Open-Meteo 集成提供可靠的天气数据，可以通过开发者工具访问。
+要在您的 reTerminal E Series ePaper Display 设备上显示天气数据，您需要从 Home Assistant 访问温度、天气状况和风速数据。Open-Meteo 集成提供可靠的天气数据，可以通过开发者工具访问。
 
 #### 安装 Open-Meteo 集成
 
@@ -359,7 +359,7 @@ display:
 
 #### 在 ESPHome 中使用天气数据
 
-要在您的 reTerminal E10xx 的 ESPHome 配置中使用此天气数据，您需要在 ESPHome YAML 配置中设置 Home Assistant API 连接：
+要在您的 reTerminal E Series ePaper Display 的 ESPHome 配置中使用此天气数据，您需要在 ESPHome YAML 配置中设置 Home Assistant API 连接：
 
 ```yaml
 # 检索天气数据的示例 ESPHome 配置
@@ -384,7 +384,7 @@ sensor:
     internal: true
 ```
 
-此配置在您的 ESPHome 设备中创建传感器实体，从 Home Assistant 天气集成中提取数据。然后您可以使用这些传感器来更新您的 reTerminal E10xx 显示屏上的当前天气信息。
+此配置在您的 ESPHome 设备中创建传感器实体，从 Home Assistant 天气集成中提取数据。然后您可以使用这些传感器来更新您的 reTerminal E Series ePaper Display 显示屏上的当前天气信息。
 
 :::tip
 对于预报数据，您需要使用包含未来几天预测值的 `weather.open_meteo_forecast` 实体。
@@ -451,19 +451,19 @@ display:
 
 编译上述代码并上传到您的设备后，您可能首先会看到屏幕上显示 **NaN**，请不要担心，这是正常的。这是因为设备尚未添加到 Home Assistant 环境中，所以 reTerminal 还无法获取 Home Assistant 数据。我们只需要按照以下步骤添加设备即可。
 
-#### 将 reTerminal E10xx 添加到 Home Assistant
+#### 将 reTerminal E Series ePaper Display 添加到 Home Assistant
 
 步骤 1. 刷写设备后，返回 Home Assistant 并导航到 **设置 → 设备与服务**。
 
-步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 reTerminal E10xx 设备。如果它出现在已发现设备部分，请点击配置来添加它。
+步骤 3. Home Assistant 应该会通过 mDNS 自动发现您的 reTerminal E Series ePaper Display 设备。如果它出现在已发现设备部分，请点击配置来添加它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 步骤 4. 如果设备没有自动发现，请点击添加集成并搜索"ESPHome"。
 
-步骤 5. 输入您的 reTerminal E10xx 设备的 IP 地址，如果您设置了 API 加密密钥，也请输入。
+步骤 5. 输入您的 reTerminal E Series ePaper Display 设备的 IP 地址，如果您设置了 API 加密密钥，也请输入。
 
-步骤 6. 连接后，您的 reTerminal E10xx 将作为设备出现在 Home Assistant 中，其所有传感器和组件都可用。
+步骤 6. 连接后，您的 reTerminal E Series ePaper Display 将作为设备出现在 Home Assistant 中，其所有传感器和组件都可用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -471,7 +471,7 @@ display:
 
 ### 绘制 TrueType 字体
 
-此示例演示如何使用 TrueType 字体在您的 reTerminal E10xx 上显示自定义图标。Material Design Icons 提供了大量可缩放的符号，非常适合电子纸显示器。
+此示例演示如何使用 TrueType 字体在您的 reTerminal E Series ePaper Display 上显示自定义图标。Material Design Icons 提供了大量可缩放的符号，非常适合电子纸显示器。
 
 #### 安装所需工具
 
@@ -542,7 +542,7 @@ display:
 `glyphs` 部分定义了要从字体文件中加载哪些图标。仅加载您需要的图标可以节省设备内存。
 :::
 
-步骤 7. 保存您的配置并将其上传到您的 reTerminal E10xx。当您看到如下图所示的反馈时，表示代码运行成功。
+步骤 7. 保存您的配置并将其上传到您的 reTerminal E Series。当您看到如下图所示的反馈时，表示代码运行成功。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -594,7 +594,7 @@ lambda: |-
 
 ### 显示自定义图像
 
-此示例演示如何在您的 reTerminal E10xx 电子纸显示屏上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
+此示例演示如何在您的 reTerminal E Series ePaper Display 电子纸显示屏上显示自定义图像。您可以使用此功能显示徽标、图标或任何增强仪表板体验的图形。
 
 #### 准备工作
 
@@ -660,7 +660,7 @@ display:
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-步骤 6. 保存您的配置并将其上传到您的 reTerminal E10xx。更新完成后，您的电子纸显示屏将显示图像。
+步骤 6. 保存您的配置并将其上传到您的 reTerminal E Series。更新完成后，您的电子纸显示屏将显示图像。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -717,11 +717,11 @@ lambda: |-
 请记住，电子纸显示屏的刷新率有限。`update_interval: 30s` 设置意味着您的显示屏只会每 30 秒刷新一次。根据您的需要调整此值，但请注意频繁刷新可能会缩短电子纸显示屏的使用寿命。
 :::
 
-通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 reTerminal E10xx 上创建丰富、信息丰富的仪表板。
+通过将图像与前面示例中涵盖的文本和其他显示元素相结合，您可以在 reTerminal E Series ePaper Display 上创建丰富、信息丰富的仪表板。
 
 ## 继续阅读
 
-由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E10xx 在 Home Assistant 中的高级 ESPHome 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) 的 Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
+由于篇幅限制，本文仅涵盖了设备的一些基本用例和绘图示例。我们将在 [reTerminal E Series ePaper Display 在 Home Assistant 中的高级 ESPHome 使用](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome_advanced) 的 Wiki 中更详细地介绍 reTerminal 硬件在 ESPHome 上的使用，您可以继续阅读。
 
 ## FAQ
 
@@ -738,7 +738,7 @@ lambda: |-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 
-### Q3: reTerminal E10xx 无法连接到您的计算机？
+### Q3: reTerminal E Series ePaper Display 无法连接到您的计算机？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 

@@ -13,33 +13,34 @@ last_update:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/main.jpg" />
 </div>
 
-
 Our new 1.12” OLED displays are perfect when you need a small display with 16 grayscale. The visible portion of the OLED measures 1.12” diagonal and contains 96x96(version 1.0) |  128x128(version 2.0) grayscale pixels. Because the display uses OLEDs, there is no backlight, and the contrast is very high.
 
 This OLED uses the SSD1327(V1.0) or SH1107G(V2.1) driver chip, which manages the display. You can talk to the driver chip using 4-wire I2C (clock, data, power, and GND pins).
 
-
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-OLED-Display-1.12%27%27-V2-p-3031.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-OLED-Display-1.12%27%27-V2-p-3031.html)
+
 ## Specification
 
-* Communicate Mode: I2C
-* Grayscale Display: 16 Gray shades.
-* Supports both Normal and Inverse Color Display.
-* Supports Continuous Horizontal Scrolling.
-* Grove compatible Interface
-
+- Communicate Mode: I2C
+- Grayscale Display: 16 Gray shades.
+- Supports both Normal and Inverse Color Display.
+- Supports Continuous Horizontal Scrolling.
+- Grove compatible Interface
 
 ## Version
+
   ---
+
   | Product Version              | Changes                                                                                                                                                                                    | Released Date |
   |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
   |Grove - OLED Display 1.12" V1.0 | Initial                                                                                                                                                                                    | Mar 2012      |
   |Grove - OLED Display 1.12" V2.1 | Change the driver IC from SSD1327 to SH1107G, upgrade the grayscale pixels from 96X96 to 128X128 | Nov 2015     |
 
-
 ## Specifications
+
 ---
+
 |Item|Value|
 |-----|------|
 |Operating Voltage | 3.3/5 V|
@@ -64,12 +65,15 @@ This OLED uses the SSD1327(V1.0) or SH1107G(V2.1) driver chip, which manages the
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Getting Started
+
 ### Play with Arduino
+
 #### Hardware
 
 Here we will show you how this Grove - OLED Display works via a simple demo. First of all, you need to prepare the below stuffs:
@@ -83,16 +87,15 @@ This is an easy-to-use module, what you need to do is connect the module to I2C 
 
 |pin|Function  | Note   | Cable color |
 |--------|------|-----|---------------|
-|pin1	| SCL | I2C Clock | YELLOW |
+|pin1 | SCL | I2C Clock | YELLOW |
 |pin2   | SDA| I2C Data| WHITE|
 |pin3   | VCC  | Power, 5V/3.3V| RED |
-|pin4	| GND  | Ground | BLACK |
+|pin4 | GND  | Ground | BLACK |
 
 **Hardware Overview**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/connection.jpg" />
 </div>
-
 
 #### Software
 
@@ -103,12 +106,10 @@ This is an easy-to-use module, what you need to do is connect the module to I2C 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-OLED_Display_1.12inch/img/arduino_ide_manage_lib.png" />
 </div>
 
-
 - **Step 3.** Enter "**u8g2**" into the search field and select latest version and Cclick "Install" button.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-OLED_Display_1.12inch/img/arduino_ide_search_u8g2.png" />
 </div>
-
 
 - **Step 4.** Upload the demo code below in your Arduino IDE.
 
@@ -139,7 +140,6 @@ void loop(void) {
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Grove-OLED_Display_1.12inch/img/outcome.jpg" />
 </div>
 
-
 :::note
         If there's no Base Shield with you, [Seeeduino Vx Series](https://www.seeedstudio.com/catalogsearch/result/index/?q=Seeeduino+v&product_list_limit=all) with **I2C interface** do work as well.
 :::
@@ -165,40 +165,41 @@ The Arduino library U8g2 can be installed from the library manager of the Arduin
 Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki) as well as the [U8g2 API Reference](https://github.com/olikraus/u8g2/wiki/u8g2reference) page.
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
+
 #### Hardware
 
 - **Step 1.** Things used in this project:
 
 <div class="table-center">
-	<table>
-		<tr>
-			<th>Raspberry pi</th>
-      <th>Grove Base Hat for RasPi	</th>
+ <table>
+  <tr>
+   <th>Raspberry pi</th>
+      <th>Grove Base Hat for RasPi </th>
       <th>Grove - OLED Display 1.12''</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/images/product.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-1-12-V2.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 - **Step 2.** Plug the Grove Base Hat into Raspberry.
@@ -206,6 +207,7 @@ Here provides the [**U8g2 Library wiki**](https://github.com/olikraus/u8g2/wiki)
 - **Step 4.** Connect the Raspberry Pi to PC through USB cable.
 
 #### Software
+
 - **Step 1.** Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment install the grove.py to your raspberry pi.
 - **Step 2.** Excute below commands to run the code.
 
@@ -216,6 +218,7 @@ source env/bin/activate
 #enter commmand
 grove_lcd_1.2inches
 ```
+
 Following is the sh1107g.py code.
 
 ```python
@@ -512,8 +515,8 @@ class SH1107G(Display):
             row   (int): the row at which to position cursor, with 0 being the first row
             column(int): the column at which to position cursor, with 0 being the first column
 
-	Returns:
-	    None
+ Returns:
+     None
         '''
         self._cmd(self._BASE_PAGE_START_ADDR + row)
         self._cmd(0x08 if column % 2 else self._BASE_LOW_COLUMN_ADDR)
@@ -576,6 +579,7 @@ if __name__ == '__main__':
 ```python
 （env）pi@raspberrypi:~ grove_lcd_1.2inches
 ```
+
 :::tip success
 
 If everything goes well, you will be able to see the following result
@@ -592,17 +596,17 @@ You can quit this program by simply press `ctrl`+`c`.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/OLED%20Display.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 ---------
-* **[Eagle]** [Grove-OLED Display 1.12inch in Eagle](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/OLED%20Display.zip)
-* **[PDF]** [Grove-OLED Display 1.12inch Sch](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20Sch.pdf)
-* **[PDF]** [Grove-OLED Display 1.12inch PCB](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20PCB.pdf)
-* **[Datasheet]** [SSD1327 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SSD1327_datasheet.pdf)
-*  **[Datasheet]** [LY120 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/308010007_LCD-22P-0.7.pdf)
-* **[Datasheet]** [SH1107G_datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SH1107G_datasheet.pdf)
-* **[Tool]** [Reference for Make a 96x96 Image](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Make_A_96X96_Image1.zip)
+
+- **[Eagle]** [Grove-OLED Display 1.12inch in Eagle](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/OLED%20Display.zip)
+- **[PDF]** [Grove-OLED Display 1.12inch Sch](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20Sch.pdf)
+- **[PDF]** [Grove-OLED Display 1.12inch PCB](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Grove%20-%2096x96%20OLED%20Display%20v2.1%20PCB.pdf)
+- **[Datasheet]** [SSD1327 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SSD1327_datasheet.pdf)
+- **[Datasheet]** [LY120 Datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/308010007_LCD-22P-0.7.pdf)
+- **[Datasheet]** [SH1107G_datasheet](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/SH1107G_datasheet.pdf)
+- **[Tool]** [Reference for Make a 96x96 Image](https://files.seeedstudio.com/wiki/Grove_OLED_1.12/resources/Make_A_96X96_Image1.zip)
 
 ## Project
 
@@ -619,14 +623,15 @@ You can quit this program by simply press `ctrl`+`c`.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/mirkix/flying-beaglebone-green-448b60/embed' width='350'></iframe>
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -302,7 +302,6 @@ EdgeBox-ESP-100 是一款基于 ESP32 的控制器，专为轻量级自动化解
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## 硬件概览

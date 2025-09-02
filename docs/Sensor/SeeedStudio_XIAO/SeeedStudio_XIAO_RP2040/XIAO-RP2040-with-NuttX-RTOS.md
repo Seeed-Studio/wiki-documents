@@ -42,6 +42,7 @@ git clone -b 1.1.2 https://github.com/raspberrypi/pico-sdk.git
 ```
 export PICO_SDK_PATH=<absolute_path_to_pico-sdk_directory>
 ```
+
 2. Create a workspace
 
 ```
@@ -55,18 +56,20 @@ cd nuttxspace
 git clone https://github.com/apache/nuttx.git nuttx
 git clone https://github.com/apache/nuttx-apps apps
 ```
-The Apache Nuttx it's divided into two project: 
+
+The Apache Nuttx it's divided into two project:
 
 - Nuttx: contains implemented the kernel, driver and subsystems.
 - Apps: contains a collection of tools, shells, network utilities, libraries and interpreters.
 
 ## Applications
 
-To start an application it's necessary to load a configuration on NuttX, calling the command: 
+To start an application it's necessary to load a configuration on NuttX, calling the command:
 
 ```
 ./tools/configurate.sh board_name:your_application
 ```
+
 Also it's possible to check the list of board-supported a running the command:
 
 ```
@@ -81,7 +84,7 @@ Successful compilation was guaranteed, the next goal it's programming using BOOT
 
 **Step 1**: Connect the Seed Stduio XIAO RP2040 to USB port while pressing button `B` (boot). The board will be detected as USB Mass Storage Device `RPI-RP2`.
 
-**Step 2**: In the workspace, go to `nuttx` and copy `nuttx.uf2` into the Seed Stduio XIAO RP2040. 
+**Step 2**: In the workspace, go to `nuttx` and copy `nuttx.uf2` into the Seed Stduio XIAO RP2040.
 
 **Step 3**: Search for a new USB device on your computer.
 
@@ -95,27 +98,26 @@ It's time to explore NuttX practically. In this session, four applications are a
 
 The NuttXShell(NSH) is a shell system to be used in NuttX, similar to bash and other similar options. It supports a rich set of included commands, scripting and the ability to run your own applications as “builtin” (part of the same NuttX binary).
 
-
 We can start the build process clearing the previous configuration
 
 ```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
+cd ~/nuttxspace/nuttx
+make distclean
 ```
 
 Now we select the USBNSH configuration to the seeed-xiao-rp2040 board:
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:usbnsh
+./tools/configurate.sh seeed-xiao-rp2040:usbnsh
 ```
 
 Compile the source code.
 
 ```
-$  make -j
+make -j
 ```
 
-After programming and open serial communication 
+After programming and open serial communication
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -127,6 +129,7 @@ You must to press Enter 3 times, and then this message will show in the terminal
 NuttShell (NSH) NuttX-12.5.1
 nsh> 
 ```
+
 Typing `?`, you will access the available options for commands and built-in applications.
 
 ```
@@ -145,14 +148,15 @@ help usage: [-v] [<cmd>]
 
 Builtin Apps:
     getprime    hello       nsh         ostest      sh 
-``` 
+```
 
 Let's say hello to NuttX, type `hello` and then it executes the command:
 
-```      
+```
 nsh> hello
 Hello, World!!
 ```
+
 Congratulations, your first interation with NuttX was completed.
 
 ### GPIO Driver
@@ -160,22 +164,23 @@ Congratulations, your first interation with NuttX was completed.
 The General Purpose Input/Output (GPIO) is a microcontroller's most fundamental part, allowing it to connect to the external world. This way we will use the NSH to access and configure those pins as we wish. But first, let's clear the previous configuration.
 
 ```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
+cd ~/nuttxspace/nuttx
+make distclean
 ```
+
 Select the gpio configuration to the seeed-xiao-rp2040 board.
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:gpio
+./tools/configurate.sh seeed-xiao-rp2040:gpio
 ```
 
 Compile de the source code.
 
 ```
-$  make -j
+make -j
 ```
 
-After programming and open serial communication 
+After programming and open serial communication
 
 ```
 picocom -b 115200 /dev/ttyACM0
@@ -233,11 +238,13 @@ nsh> ls /dev
  null
  ttyACM0
 ```
+
 According to the Seeed Studio RP2040 schematic, the board's LEDs turn on when the GPIO level is set to zero.
 
 To control the GPIO output, you must pass the parameter —o, a value (zero or one), and the path (/dev/gpio).
 
-Following these two commands you see the yellow LED blinking. 
+Following these two commands you see the yellow LED blinking.
+
 ```
 nsh> gpio -o 0 /dev/gpio17
 Driver: /dev/gpio17
@@ -251,9 +258,11 @@ Driver: /dev/gpio17
   Writing:       Value=1
   Verify:        Value=1
 ```
+
 <div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-green.jpg"/></div>
 
 The same way, you will have the same result to red LED.
+
 ```
 nsh> gpio -o 0 /dev/gpio16
 Driver: /dev/gpio16
@@ -267,8 +276,8 @@ Driver: /dev/gpio16
   Writing:       Value=1
   Verify:        Value=1
 ```
-<div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
 
+<div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
 
 ### USERLED
 
@@ -277,23 +286,25 @@ The USERLEDS is a subsystem that allows to control of the LEDs with single opera
 First, clear the previous configuration.
 
 ```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
+cd ~/nuttxspace/nuttx
+make distclean
 ```
+
 Configure the board for userled application using the command:
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:userleds
+./tools/configurate.sh seeed-xiao-rp2040:userleds
 ```
 
 Compile de the source code.
 
 ```
-$  make -j
+make -j
 ```
+
 After programming, open serial communication and press Enter 3 times, following the same steps showed previous application.
 
-If you type: ` ls /dev/`, will show a list of devices, and observe `userleds` file was created.
+If you type: `ls /dev/`, will show a list of devices, and observe `userleds` file was created.
 
 ```
 nsh> ls /dev/
@@ -304,6 +315,7 @@ nsh> ls /dev/
  ttyACM0
  ttyS0
 ```
+
 Typing `leds`, you observe the LEDs blinky same time.
 
 ```
@@ -330,18 +342,20 @@ The WS2812 driver allows control of any smart pixels that use the ws2812 protoco
 Clear the previous configuration
 
 ```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
+cd ~/nuttxspace/nuttx
+make distclean
 ```
+
 Select the ws2812 configuration to the seeed-xiao-rp2040 board.
+
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:ws2812
+./tools/configurate.sh seeed-xiao-rp2040:ws2812
 ```
 
 Compile de the source code.
 
 ```
-$  make -j
+make -j
 ```
 
 Compile finished, go to programming the board, open serial communication and press Enter 3 times, following the same steps showed previous application. Typing `?`, will see the ws2812 application available.
@@ -367,7 +381,7 @@ nsh>
 
 ```
 
-Before running the application, it's important to confirm that the folder ` ls /dev/` was created the `leds0` file, which will be used for the ws2812 drive.
+Before running the application, it's important to confirm that the folder `ls /dev/` was created the `leds0` file, which will be used for the ws2812 drive.
 
 ```
 nsh> ls /dev/
@@ -379,7 +393,9 @@ nsh> ls /dev/
  ttyS0
 
 ```
+
 Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
+
 ```
 nsh> ws2812 -h
 Usage: ws2812 [OPTIONS]
@@ -392,10 +408,13 @@ specified, that path will be re-used until it is changed.
   [-d delay] selects delay between updates.  Default: 20000 us Current: 20000 us
 
 ```
+
 Let's start our application, type `ws2812` and you see the LEDs changing the color.
+
 ```
 nsh> ws2812
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-rgb.gif" style={{width:400, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
@@ -403,11 +422,11 @@ nsh> ws2812
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -18,38 +18,45 @@ last_update:
   <img src="https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball.gif" style={{width:400, height:'auto'}}/>
 </div>
 
-On this tutorial I'm going to show you how you can create a Christmas ball with falling snow and changing background images. 
+On this tutorial I'm going to show you how you can create a Christmas ball with falling snow and changing background images.
 
 The program performs the following:
+
 - Displays a background image stored as a C array.
 - Simulates snow particles falling over the image, with a wind effect.
 - Detects touch input and cycles through a set of background images.
 - Uses double-buffering for smooth animations.
 
 ## Environment Preparation
+
 ### Hardware
+
 For the project, we're going to need:
+
 - [Seeed Studio Round Display For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 - [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
 
-I'm using the XIAO ESP32S3 because of the memory. The PNGDEC requires a bit of memory to run ~40kbytes. 
+I'm using the XIAO ESP32S3 because of the memory. The PNGDEC requires a bit of memory to run ~40kbytes.
 
 ### Software Preparation
 
-To use the Round Display, head to [Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started) to install the necessary libraries. 
+To use the Round Display, head to [Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started) to install the necessary libraries.
 
 Try some of the examples to see if everything is working well.
 
 ### Libraries
+
 For this project, we're going to use the libraries that come bundled with the [Seeed Studio Round Display For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 
 Install all the libraries like specified in the tutorial [Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started).
 After that, you need the following:
-- PNGdec library . 
+
+- PNGdec library .
 - **Update LVGL library** (or not install the one from Seeed Studio github)
 
 ## Images
-Our images are PNG images stored in Flash Arrays. They are displayed using PNGdec library. 
+
+Our images are PNG images stored in Flash Arrays. They are displayed using PNGdec library.
 
 **All images must be PNG**
 
@@ -63,62 +70,77 @@ Here are the images that I've used - all are AI generated
 Our background images need to be prepared for that TFT_eSPI can display them and they fit well on the Round Display for XIAO.
 
 ### Prepare images
+
 #### Resize Images
+
 Our Round Display for XIAO has a 240x240 resolution. We need to resize the images.  I'm going to show how to do it using [GIMP](https://www.gimp.org/)
 
 1. Open the image
 2. Go to **Image > Scale Image**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot1.jpg" style={{width:600, height:'auto'}}/></div>
 
-3. Set Width and Height to 240. Because the **Keep Ratio** is selected (the chain), once you change the **width**, the **height** should also change. 
+3. Set Width and Height to 240. Because the **Keep Ratio** is selected (the chain), once you change the **width**, the **height** should also change.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot2.jpg" style={{width:400, height:'auto'}}/></div>
 
-4. Press the **Scale** button. 
+4. Press the **Scale** button.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot3.jpg" style={{width:400, height:'auto'}}/></div>
 
 5. Save the image (I'm going to override the old one)
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot4.jpg" style={{width:400, height:'auto'}}/></div>
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot4.jpg" style={{width:400, height:'auto'}}/></div>
 
 #### Create the Flash Arrays
 
-**NOTE:** This instructions are inside the TFT_eSPI Flash_PNG example. 
+**NOTE:** This instructions are inside the TFT_eSPI Flash_PNG example.
 
 To create the flash array, go to [File to C style array converter](https://notisrac.github.io/FileToCArray/)
 
 The steps now are:
+
 1. Upload the image using **Browse** . After uploading the image
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot5.jpg" style={{width:800, height:'auto'}}/></div>
 
 2. We need to set some options
+
 - **Treat as binary**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot6.jpg" style={{width:800, height:'auto'}}/></div>
 
-All the other options gray out. 
+All the other options gray out.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot7.jpg" style={{width:600, height:'auto'}}/></div>
 
 3. Let's change the **Data type** to **char**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot8.jpg" style={{width:800, height:'auto'}}/></div>
 
-4. Press convert. This will convert the image to an array. 
+4. Press convert. This will convert the image to an array.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot9.jpg" style={{width:800, height:'auto'}}/></div>
 
-5. You can now press the button **Save as file** to save your image and add it to your Arduino Sketch or press the button **Copy to clipboard** 
+5. You can now press the button **Save as file** to save your image and add it to your Arduino Sketch or press the button **Copy to clipboard**
 If you **Copy to clipboard**, you'll have to press the 3 dots on the right side of the Arduino editor and choose **New Tab**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot10.jpg" style={{width:400, height:'auto'}}/></div>
 
 Give it a name (generally your image name with .h extension)
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot11.jpg" style={{width:600, height:'auto'}}/></div>
 
-You'll end up with all your images as *.h* files. 
+You'll end up with all your images as *.h* files.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot12.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## Code
+
 Here's the code for the Christmas ball.
 A little explanation of the principal functions of the code.  The code also includes some comments.
 
 ### Headers and libraries
+
 We start by including some libraries.
+
 ```cpp
 #include <PNGdec.h>
 #include <TFT_eSPI.h>
@@ -131,10 +153,13 @@ We start by including some libraries.
 #define USE_TFT_ESPI_LIBRARY
 #include "lv_xiao_round_screen.h"
 ```
-Remember that you need to have the Seeed Studio libraries installed. 
+
+Remember that you need to have the Seeed Studio libraries installed.
 
 ### Background images
+
 Here are the functions to manage the background images
+
 ```cpp
 struct Background {
   const uint8_t *data;
@@ -148,6 +173,7 @@ const Background backgrounds[] = {
 };
 
 ```
+
 - Struct: Each background image is stored as a Background struct containing:
   - data: Pointer to the PNG data.
   - size: Size of the PNG file.
@@ -155,7 +181,9 @@ const Background backgrounds[] = {
 - Array: The backgrounds array stores all the background images. The currentBackground variable tracks the currently displayed background.
 
 ### Snow particles Simulation
+
 1. Initialization of particles
+
 ```cpp
 void initParticles() {
   for (int i = 0; i < numParticles; i++) {
@@ -165,9 +193,11 @@ void initParticles() {
   }
 }
 ```
-- It initializes *numParticles* with random positions and speeds. 
+
+- It initializes *numParticles* with random positions and speeds.
 
 2. Particle updates
+
 ```cpp
 void updateParticles() {
   for (int i = 0; i < numParticles; i++) {
@@ -186,13 +216,14 @@ void updateParticles() {
   }
 }
 ```
+
 - Updates particle positions with:
   - Falling Effect: Each particle moves down.
   - Wind Effect: Adds a slight horizontal drift.
   - Wrap Around: Particles reset to the top when they exit the bottom.
 
-
 3. Rendering particles:
+
 ```cpp
 void renderParticlesToSprite() {
   for (int i = 0; i < numParticles; i++) {
@@ -200,9 +231,11 @@ void renderParticlesToSprite() {
   }
 }
 ```
+
 - It renders each particle as a small white circle
 
 ### PNG Decoding
+
 ```cpp
 int16_t rc = png.openFLASH((uint8_t *)backgrounds[currentBackground].data,
                            backgrounds[currentBackground].size,
@@ -213,19 +246,24 @@ if (rc != PNG_SUCCESS) {
 }
 png.decode(NULL, 0);
 ```
+
 - Loads and decodes the current background PNG using the *png.openFLASH()* function
 
 ### Touch interaction
+
 ```cpp
 if (chsc6x_is_pressed()) {
   currentBackground = (currentBackground + 1) % numBackgrounds; // Cycle backgrounds
   delay(300); // Debounce
 }
 ```
+
 - Detects a touch event using the *chsc6x_is_pressed()* and changes the background image by incrementing *currentBackground*
 
 ### Setup and loop
+
 - **Setup:**
+
 ```cpp
 void setup() {
   Serial.begin(115200);
@@ -237,9 +275,11 @@ void setup() {
   initParticles();
 }
 ```
+
 - Initializes the display, touch input and snow particles
 
 - **Main loop:**
+
 ```cpp
 void loop() {
   sprite.fillScreen(TFT_BLACK);
@@ -261,44 +301,62 @@ void loop() {
   delay(10); // ~100 FPS
 }
 ```
-- Clears the sprite, renders the current frame (background + particles), and checks for user input. 
+
+- Clears the sprite, renders the current frame (background + particles), and checks for user input.
 
 ### Double buffering
+
 To reduce the flickering and improving animation smoothness of the snow flakes, we use **double buffering**.
 
 This allows us to draw in an off-screen buffer before displaying it on the screen.
+
 #### Double buffering here
+
 In this project, the TFT_eSPI library's TFT_eSprite class implements double buffering.
+
 1. **Sprite creation**
+
 - The sprite (off-screen buffer) is created in the setup() function:
+
 ```cpp
 sprite.createSprite(240, 240); // Match display size
 ```
+
 2. **Drawing the buffer**
+
 - All drawing operations (background rendering and snow particle animation) are done on the sprite:
+
 ```cpp
 sprite.fillScreen(TFT_BLACK); // Clear the sprite
 renderParticlesToSprite();   // Draw snow particles
 ```
 
 3. **Updating the display**
+
 - After the frame is fully drawn in the sprite, it is pushed to the display in one operation:
+
 ```cpp
 sprite.pushSprite(0, 0);
 ```
-- This transfers the buffer's contents to the screen instantly. 
+
+- This transfers the buffer's contents to the screen instantly.
 
 4. **Reuse**
+
 - The sprite is reused for every frame by clearing it at the start of the *loop()*:
+
 ```cpp
 sprite.fillScreen(TFT_BLACK);
 ```
+
 ### Advantages of Using Double Buffering
+
 - Smooth Snow Animation: The falling snow particles are updated seamlessly without flickering.
 - Dynamic Background Switching: The touch-triggered background changes happen without visible delays or artifacts.
 - Efficient Rendering: Drawing in memory (RAM) is faster than directly updating the display line by line.
 
 **Here's the complete code for the project**:
+
 ```cpp
 /**
 *
@@ -453,11 +511,11 @@ Now you can use your own pictures to create a magical Christmas Ball.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

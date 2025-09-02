@@ -19,19 +19,22 @@ last_update:
 
 Before adding a Jetson device to workspace, please first install the SenseCraft AI app to the jetson.
 
-SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks! 
+SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks!
 
 **Hardware Requirements**
+
 - NVIDIA Jetson device
 - Internet connectivity via Ethernet/ WiFi
 - Display
 
 **Software Requirements**
+
 - JetPack 5.1.2 (L4T 35.4.1)
 - JetPack 5.1.1 (L4T 35.3.1)
 - JetPack 5.1 (L4T 35.2.1)
 
 **Quick Start**<br />
+
 1. Connect Jetson to a display and power it on<br />
 2. Plug a mouse and keyboard into the device and type the following command on a terminal to run the application
 
@@ -39,7 +42,7 @@ SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA J
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
 ```
 
-3. During application installation, you need to set the following optional configurations, so please set them according to your needs 
+3. During application installation, you need to set the following optional configurations, so please set them according to your needs
 
 - **[Optional] Enable jetson_clocks script to maximize Jetson performance by setting max frequency to CPU, GPU, and EMC clocks? [y/n] (default: y): y**<br />
 provides the jetson_clocks script to maximize Jetson  performance by setting static max frequency to CPU, GPU, and EMC clocks.
@@ -78,11 +81,11 @@ The edge ai program requires a minimum of 32G of storage space to run, if not, y
 
 4. enter the correct and valid bind code and click "Comfirm" button
 
-5. Bind successfully,now you can manage the device 
+5. Bind successfully,now you can manage the device
 
 :::note
 
-every account only add 5 free device 
+every account only add 5 free device
 
 :::
 
@@ -96,7 +99,7 @@ The device information is divided into three parts, general information, video s
 
 ### General Info
 
-The device information is divided into three parts, general information, Video stream information and AI model. Please check the table below for details 
+The device information is divided into three parts, general information, Video stream information and AI model. Please check the table below for details
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image33.png)
 
@@ -115,7 +118,7 @@ The device information is divided into three parts, general information, Video s
 | **SenseCraft AI Version** | Version of the SenseCraft AI Application installed on the device |
 | **Collect Time** | The time when the last information was collected from the device |
 
-### Delete Device 
+### Delete Device
 
 If you have completed the deployment of the AI Model and do not need to manage the device remotely, you can remove the device from the platform and the device can do local inference, stream management and AI model management independently on the edge.
 
@@ -125,7 +128,7 @@ If you have completed the deployment of the AI Model and do not need to manage t
 
 Video Stream can view the real-time inference results remote and manage device video stream. supported add stream, edit stream  view stream,and delete stream.
 
-#### Real-time inference 
+#### Real-time inference
 
 If video streams have been added to the device, users can view real-time inference results for all streams on the platform. Enables real-time monitoring of inference results and exceptions
 
@@ -155,7 +158,7 @@ The device must be online to add a new stream
 | **Display Frame Rate** | 1 Whether to display the frame rate of the stream<br />2 Format:Bool [True,False]<br />● True: display FPS<br />● False: do not display FPS |
 | **Display Clock** | 1 Whether to display the time<br />2 Format:Bool [True,False]<br />● True: display time<br />● False: do not display time |
 
-#### Stream detail 
+#### Stream detail
 
 Click the stream "Eye" icon,you will view the stream  detail info
 
@@ -168,17 +171,16 @@ Click the stream "Edit" icon, users can edit all configurations of the stream an
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image37.png)
 
 #### Delete Stream
+
 Click the stream "Delete" icon to delete the stream. It takes time for the device to delete stream, the platform information will be updated later
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image38.png)
 
-### Device AI Model 
+### Device AI Model
 
 Manage all AI models that have been downloaded on the device and support add model , view the model detail and delete model.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image39.png)
-
-
 
 ## **Tech Support**
 

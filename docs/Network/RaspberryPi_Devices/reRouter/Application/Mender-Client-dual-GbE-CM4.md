@@ -11,7 +11,6 @@ last_update:
 ---
 
 
-
 We can setup Mender Client on a Dual Gigabit Ethernet Carrier Board for Raspberry Pi Compute Module 4 and then receive OTA updates from a Hosted or Self-Hosted Mender Server.
 
 This guide focuses on using a Dual Gigabit Ethernet Carrier Board for RPi CM4 running a custom Linux System compiled using the Yocto Project.
@@ -218,11 +217,11 @@ root@dual-gbe-cm4-mender:~#
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

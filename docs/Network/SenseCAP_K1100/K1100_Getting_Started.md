@@ -10,13 +10,11 @@ last_update:
 ---
 
 
-
 # SenseCAP - The Sensor Prototype Kit Overview
 
 In the digital age where IoT and big data are becoming more prevalent, massive data collection through sensors is required to facilitate digital transformation. Under such a background, SenseCAP K1100 comes with all the essential sensors and devices, including a Wio Terminal, an AI Vision Sensor, and a LoRa®-enabled module - that together allows users of all backgrounds and levels to create DIY sensors for data collection and solving real-world challenges.
 
 <div align="center"><img width="1000" src="https://files.seeedstudio.com/wiki/K1100/banner.png" /></div>
-
 
 **SenseCAP - The Sensor Prototype Kit with LoRa® and AI** enables you to rapidly digitize the world using LoRaWAN® and solve real-world challenges. With this plug-and-play toolkit, anyone can add AI to their edge devices and unlock the potential of AIoT.
 
@@ -291,7 +289,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
 
 ## <span id="jump1">Introduction</span>
 
-
 ### Quick Start With SenseCAP - K1100
 
 <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
@@ -551,7 +548,7 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
         </tr>
         <tr>
             <td colspan="3"><div align="center"><img width="800" src="https://files.seeedstudio.com/wiki/Wio-Terminal-Developer-for-helium/113.png" /></div></td>
-        </tr>   
+        </tr>
 </tbody></table>
 
 ### The Things Network Section
@@ -663,7 +660,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </tr>
   </tbody></table>
 
-
 <table align="center">
   <tbody><tr>
       <td align="center"><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoraWANdevKit/lorawandevkit33.jpg" alt="pir" width="1100" height="auto" /></p></td>
@@ -675,7 +671,6 @@ The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN
     </tr>
   </tbody></table>
 
-
 We hope you enjoy your learning journey in IoT!
 
 ## Course Code Library
@@ -686,7 +681,6 @@ All libraries and code for this course can be found at the following address Bef
   <p style={{}}><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank" /></p><div align="center"><a href="https://github.com/limengdu/Seeed-Studio-LoRaWAN-Dev-Kit" target="_blank"><img width="500" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></a></div><p />
 </div>
 
-
 ## Helium LoRaWAN®
 
 For more details, please read [Helium LoRaWAN®: Public Infrastructure with Private Network Servers](https://blog.helium.com/helium-lorawan-public-infrastructure-with-ultimate-privacy-9132560e4ae6).
@@ -695,20 +689,17 @@ For more details, please read [Helium LoRaWAN®: Public Infrastructure with Priv
 
 For more details, please read [TTN offcial website](https://www.thethingsnetwork.org/docs/).
 
-
 ## Tech Support & Product Discussion
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 

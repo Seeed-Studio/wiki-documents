@@ -28,13 +28,15 @@ last_update:
 24GHz mmWave Sensor for XIAO - Human Static Presence is a expansion board for Seeed Studio XIAO series. It is an antenna-integrated, high-sensitivity mmwave radar sensor that is based on the FMCW principle. Combined with radar signal processing and accurate human body sensing algorithms, it can identify human bodies in motion and stationary states.
 
 ### Feature
+
 - **Based on the FMCW principle**: highly sensitive and immune to environmental interferences
-- **Comprehensive Human Body Detection**: The sensor not only detects moving human bodies with high sensitivity but also exhibits sensitivity to static individuals, micro-movements, as well as individuals in sitting or lying positions. 
+- **Comprehensive Human Body Detection**: The sensor not only detects moving human bodies with high sensitivity but also exhibits sensitivity to static individuals, micro-movements, as well as individuals in sitting or lying positions.
 - **Multi-Level Intelligent Parameter Adjustment**: Adjusted using Bluetooth or a serial port, providing flexibility to meet varying environmental conditions and scene changes. Additionally, it supports direct parameter configuration through an app, eliminating the need for a serial port connection.
 - **Wide Detection Angle and Long Sensing Distance**: With a field of vision of up to 60 degrees, the sensor can detect movement from a wide angle. Furthermore, it can detect things up to 5 meters away.
 - **Excellent Shell Penetration and Aesthetics Enhancement**: Has good shell penetration, allowing it to work discreetly inside the product's casing without the need for surface perforations.
 
 ### Application
+
 - Human body sensor light control
 - Life safety protection
 - Smart home appliances
@@ -137,7 +139,6 @@ The software HLKRadarTool can be used to observe the sensor values of the radar 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/3.png" style={{width:500, height:'auto'}}/></div>
 
-
 - [Download HLKRadarTool for Windows](https://files.seeedstudio.com/wiki/mmwave-for-xiao/HLKRadarTool.zip)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/4.png" style={{width:250, height:'auto'}}/></div>
@@ -164,11 +165,9 @@ The use distance of the APP should not exceed the Bluetooth signal range (within
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/8.png" style={{width:400, height:'auto'}}/></div>
 
-
 :::tip
 Before modifying these parameters and settings, we recommend that you read the [User Protocol Manual](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf) carefully and refer to the manual's instructions for modifying these. For more details on the meaning of the values displayed by the software and the setting parameters please read the [User Protocol Manual](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf).
 :::
-
 
 ### Windows Software Operation Guide
 
@@ -177,30 +176,30 @@ In order to facilitate the user to test and configure the module quickly and eff
 **Step 1.** Use the USB to serial port tool to connect the module serial port correctly.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th> </th>
-			<th>USB to serial port tool</th>
+ <table align="center">
+  <tr>
+   <th> </th>
+   <th>USB to serial port tool</th>
             <th>mmWave Sensor</th>
-		</tr>
-		<tr>
-			<td rowspan="5"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/9.jpg" style={{width:600, height:'auto'}}/></div></td>
-			<td align="center">3V3</td>
-			<td align="center">3V3</td>
-		</tr>
-		<tr>
-			<td align="center">GND</td>
-			<td align="center">GND</td>
-		</tr>
-		<tr>
-			<td align="center">RX</td>
-			<td align="center">TX</td>
-		</tr>
-		<tr>
-			<td align="center">TX</td>
-			<td align="center">RX</td>
-		</tr>
-	</table>
+  </tr>
+  <tr>
+   <td rowspan="5"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/9.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td align="center">3V3</td>
+   <td align="center">3V3</td>
+  </tr>
+  <tr>
+   <td align="center">GND</td>
+   <td align="center">GND</td>
+  </tr>
+  <tr>
+   <td align="center">RX</td>
+   <td align="center">TX</td>
+  </tr>
+  <tr>
+   <td align="center">TX</td>
+   <td align="center">RX</td>
+  </tr>
+ </table>
 </div>
 
 **Step 2.** Select the corresponding serial port number in the host computer tool, set the baud rate to **256000**, select the **Engineering Mode**, and click to **Connect** the device.
@@ -229,8 +228,6 @@ The method to recover the firmware is to use the mobile phone APP with Bluetooth
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/14.png" style={{width:500, height:'auto'}}/></div>
 
-
-
 ## OTA Upgrade
 
 When the firmware of the device has been updated, the word **upgradeable** will appear on the firmware version, long press the version number to enter the upgrade interface; only **V1.07.22091516** or newer versions support the upgrade.
@@ -251,7 +248,6 @@ Click the device to be upgraded to re-upgrade, and the radar function can be res
 - **[PDF]** [24GHz mmWave for XIAO User Protocol Manual](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf)
 - **[PDF]** [24GHz mmWave for XIAO SCH](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz-mmWave-for-xiao-SCH.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -265,10 +261,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-

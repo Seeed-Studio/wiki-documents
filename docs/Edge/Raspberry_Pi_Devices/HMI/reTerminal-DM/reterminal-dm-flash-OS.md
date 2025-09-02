@@ -11,7 +11,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 ---
-#  reTerminal DM Flash Raspbian OS to eMMC
+# reTerminal DM Flash Raspbian OS to eMMC
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -21,7 +21,7 @@ Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one 
 
 It is equipped with rich scalability and hybrid connectivity, supporting CAN bus, RS485, RS232, Gigabit Ethernet port, and other interfaces, as well as powerful wireless communication capabilities such as 4G, LoRa®, WiFi, and BLE.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for 
+> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for
 > [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -42,7 +42,7 @@ You need to prepare the following hardware
 - Host Computer (Windows/Mac/Linux) x 1
 - Ethernet cable x 1
 - Power adapter (12V-24V) BYO
-- USB Type-C cable x 1 
+- USB Type-C cable x 1
 
 ## Software Requirements
 
@@ -52,7 +52,6 @@ You need to prepare the following hardware
 ## Steps for Flashing Raspbian OS
 
 > **Note:** The latest system image packaged by Seeed, including the appropriate drivers: [pi-gen-expand](https://github.com/Seeed-Studio/pi-gen-expand)
-
 
 - **Step 1.** Flip the `boot mode switch` located next to the USB Type-C port, make sure switch is set to `disable eMMC boot mode` according to the diagram below:
 
@@ -64,7 +63,7 @@ You need to prepare the following hardware
   
 :::danger
 
-Please make sure you have connected the power cord in the right polarity. 
+Please make sure you have connected the power cord in the right polarity.
 
 :::
   
@@ -242,18 +241,19 @@ make
 ```sh
 sudo ./rpiboot
 ```
+
 The result is shown as below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/result_of_command.png" alt="pir" width="1000" height="auto"/></p>
 
 - **Step 7.** Connect reTerminal to the PC via USB Type-C cable
 
-- **Step 8.** Download snap 
+- **Step 8.** Download snap
 
 ```sh
 sudo apt install snap
 ```
 
-- **Step 9.** Download **rpi-imager** 
+- **Step 9.** Download **rpi-imager**
 
 ```sh
 snap install rpi-imager
@@ -435,7 +435,7 @@ Now your screen should light up and run normally.
 
 ### Touch Screen orientation
 
-**Q: The screen touch panel is orientate differently from the screen display?** 
+**Q: The screen touch panel is orientate differently from the screen display?**
 
 **A: Please carefully follow the steps below:**
 
@@ -444,6 +444,7 @@ Please follow the [access reTerminal DM via SSH](#access-reterminal-dm-via-ssh) 
 ```sh
 echo 'ATTRS{name}=="gt9271", ENV{LIBINPUT_CALIBRATION_MATRIX}="0  1.0  0 -1.0 0 1.0 0 0 1.0"' | sudo tee -a /etc/udev/rules.d/98-touchscreen-cal.rules
 ```
+
 Then reboot:
 
 ```sh
@@ -457,11 +458,11 @@ If the screen orientation is still incorrect, additional options for the `ENV{LI
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

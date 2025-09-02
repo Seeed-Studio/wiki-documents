@@ -14,17 +14,12 @@ last_update:
 
 
 
-The Wio Tracker 1110 Dev board is using the onboard LoRa antenna by default, to get a better signal, we may need an external antenna, this chapter will guide users to change the antenna path to connect an external LoRa antenna. 
+The Wio Tracker 1110 Dev board is using the onboard LoRa antenna by default, to get a better signal, we may need an external antenna, this chapter will guide users to change the antenna path to connect an external LoRa antenna.
 
-
-* Remove `R3`.
-* Change `R4` to 0R.
+- Remove `R3`.
+- Change `R4` to 0R.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/path.png" alt="pir" width={600} height="auto" /></p>
-
-
-
-
 
 <div style={{ textAlign: 'center' }}>
   <iframe
@@ -37,6 +32,3 @@ The Wio Tracker 1110 Dev board is using the onboard LoRa antenna by default, to 
       allowFullScreen
   ></iframe>
 </div>
-
-
-

@@ -15,7 +15,7 @@ last_update:
   author: Frank
 ---
 
-SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks! 
+SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks!
 
 In addition to the various built-in AI models we offer out-of-the-box,  you can access to a large number of public models on SenseCraft AI platform and you will be able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs. SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and efficient inferencing and solution building capabilities.
 
@@ -24,16 +24,19 @@ In addition to the various built-in AI models we offer out-of-the-box,  you can 
 ## Install SenseCraft AI-Jetson
 
 **Hardware Requirements**
+
 - NVIDIA Jetson device
 - Internet connectivity via Ethernet/ WiFi
 - Display
 
 **Software Requirements**
+
 - JetPack 5.1.2 (L4T 35.4.1)
 - JetPack 5.1.1 (L4T 35.3.1)
 - JetPack 5.1 (L4T 35.2.1)
 
 **Quick Start**<br />
+
 1. Connect Jetson to a display and power it on<br />
 2. Plug a mouse and keyboard into the device and type the following command on a terminal to run the application
 
@@ -41,7 +44,7 @@ In addition to the various built-in AI models we offer out-of-the-box,  you can 
 bash <(wget -qO- https://sensecraft-statics.seeed.cc/edge-ai/init-script/edge-ai-setup.sh)
 ```
 
-3. During application installation, you need to set the following optional configurations, so please set them according to your needs 
+3. During application installation, you need to set the following optional configurations, so please set them according to your needs
 
 - **[Optional] Enable jetson_clocks script to maximize Jetson performance by setting max frequency to CPU, GPU, and EMC clocks? [y/n] (default: y): y**<br />
 provides the jetson_clocks script to maximize Jetson  performance by setting static max frequency to CPU, GPU, and EMC clocks.
@@ -63,6 +66,7 @@ The edge ai program requires a minimum of 32G of storage space to run, if not, y
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/35.png)
 
 ### **Deploy new models**
+
 1. Visis “AI Models“ Page  and select a AI model you need<br />
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/36.png)
@@ -75,13 +79,13 @@ The edge ai program requires a minimum of 32G of storage space to run, if not, y
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/38.png)
 
-4. Select a online device 
+4. Select a online device
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/39.png)
 
 5. AI model need apply a video stream, if there is no stream please add a valid stream firstly. Model zoo will send the stream info to the device directly.
 
-:::note 
+:::note
 more stream info describe please check Streams Management
 :::
 
@@ -90,7 +94,6 @@ more stream info describe please check Streams Management
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/41.png)
 
 6. Send the AI model and stream info to device. AI model deployment takes a few minutes, so you can leave the current page and go to the device after a few minutes to view the deployed AI model
-
 
 ### **Streams management**
 
@@ -104,7 +107,7 @@ The number of video streams that can be added depends on the CPU and memory reso
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/42.png)
 
-2.  Setup the new video stream valid message, please check the table below for details<br />
+2. Setup the new video stream valid message, please check the table below for details<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/43.png)
 
 | **Fields** | **Content** |
@@ -127,8 +130,8 @@ The number of video streams that can be added depends on the CPU and memory reso
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/45.png)
 
-
 #### **Delete Stream**
+
 Go to the stream details and click "Delete" icon to delete the stream<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/46.png)
 
@@ -162,6 +165,7 @@ The device info, more info please check the follow table <br />
 | **Jetpack version** | The version of jetpack installed on the device |
 
 #### **Bind to SenseCraft AI platform**
+
 SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream processing is done locally on the device, only if you need to download more AI models you need to bind the device to the [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home), and you can remove the device from the platform once downloaded.
 
 1. Visist [SenseCraft AI-Model Zoo](https://sensecraft.seeed.cc/ai/#/home)<br />
@@ -191,6 +195,7 @@ SenseCraft AI -Jetson is designed for edge AI. AI inference and video stream pro
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/54.png)
 
 #### **Ubind**
+
 If you no need remote manage your device on AI platform you can detele the device from your AI platform's accout. You can unbind from the device or on the platform<br />
 
 - Unbind the device from AI mode zoo, Click "Delete"<br />
@@ -198,7 +203,6 @@ If you no need remote manage your device on AI platform you can detele the devic
 
 - Unbind the device by disable "Bind to SenseCraft AI platform"<br />
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/55.png)
-
 
 ### **App Update**
 
@@ -213,8 +217,6 @@ SenseCraft AI App updates are categorized into automatic and manual updates, whi
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/57.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/58.png)
-
-
 
 ## **Tech Support**
 

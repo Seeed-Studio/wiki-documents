@@ -4004,7 +4004,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reTerminal E10xx',
+      label: 'reTerminal E Series',
       collapsed: true,
       collapsible: true,
       link: {
@@ -8626,7 +8626,7 @@ const sidebars = {
 
     {
       type: 'category',
-      label: 'reTerminal E10xx',
+      label: 'reTerminal E Series',
       collapsed: true,
       collapsible: true,
       link: {

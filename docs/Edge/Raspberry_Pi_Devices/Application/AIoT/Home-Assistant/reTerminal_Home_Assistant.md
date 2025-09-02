@@ -137,25 +137,31 @@ If you see an output like below, that means Docker is installed properly
 ```
 Docker version 20.10.18, build b40c2f6
 ```
+
 :::note
 
 Home Assistant Supervisor's compatibility hinges on a specific Docker CGroup v1. To ensure this compatibility, the following changes need to be made:
 
 :::
+
 - **Open this file using editor**
 
 ```sh
 sudo nano /etc/default/grub
 ```
+
 - **Add this line and save it.**
 
 ```sh
 systemd.unified_cgroup_hierarchy=false
 ```
+
 - **Open this file**
+
 ```sh
 sudo nano /boot/cmdline.txt
 ```
+
 - **Add this line end of the phrase and save it.**
 
 ```sh
@@ -230,24 +236,30 @@ If you encounter Wi-Fi connectivity issues after rebooting, follow these steps
 
 :::
 
-
 - To enable 'dhcpcd', execute the following command:
+
 ```sh
 sudo systemctl enable dhcpcd
 ```
+
 - Disable the networking service with the command:
+
 ```sh
 sudo systemctl disable networking
 ```
+
 - Reboot the Raspberry Pi to apply the changes:
+
 ```sh
 sudo reboot
 ```
+
 :::note
 
 To resolve the "Network Manager issues,"(find in settings) you can rectify the situation by initiating and subsequently enabling the Network Manager. Utilize the following command to accomplish this:
 
 :::
+
 ```sh
 sudo systemctl enable NetworkManager
 ```
@@ -313,8 +325,6 @@ After integrating smart lights, temperature, humidity sensors, CCTV and more, a 
 
 </TabItem>
 
-
-
 <TabItem value="Method 2" label="Bookworm">
 
 :::note
@@ -348,6 +358,7 @@ sudo systemctl enable NetworkManager
 #### Step 3: Modify Boot Parameters
 
 Edit the `cmdline.txt` file:
+
 ```bash
 sudo nano /boot/firmware/cmdline.txt
 ```
@@ -359,6 +370,7 @@ systemd.unified_cgroup_hierarchy=false lsm=apparmor
 ```
 
 Reboot the system:
+
 ```bash
 sudo reboot
 ```
@@ -401,23 +413,20 @@ It will take some time to finish the initial startup process. Once it has finish
 If there are warnings in notifications, please reboot the reTerminal.
 :::
 
-
 </TabItem>
 
 </Tabs>
 
-# Tech support
-
-
+## Tech Support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

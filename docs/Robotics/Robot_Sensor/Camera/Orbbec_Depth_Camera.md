@@ -16,14 +16,16 @@ last_update:
 # How to Use Orbbec Depth Cameras on reComputer with ROS
 
 ## Introduction
+
 This tutorial provides a step-by-step guide on how to use Orbbec Depth Camera through ROS on  [reComputer J30/J40](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) series devices. We will take Orbbec Gemini 2 as an example, obtain topic data of depth images and point clouds, and visualize them on rviz.
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/recomputerj4012.jpg" />
 </div>
 
 ## Prerequisites
+
 - __[reComputer J30/40 series](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)__:  We conduct tutorials based on the [JetPack 5.x system](/reComputer_J4012_Flash_Jetpack) and the [ROS Noetic environment](/installing_ros1).
 
 - Install dependencies (be careful with your ROS distribution):
@@ -35,20 +37,21 @@ This tutorial provides a step-by-step guide on how to use Orbbec Depth Camera th
   ros-$ROS_DISTRO-diagnostic-updater ros-$ROS_DISTRO-diagnostic-msgs libdw-dev
   ```
 
-
 ## Getting Started
+
 ### Connecting the Cameras
+
 Connect Orbbec Depth Camera to Jetson via USB Type-C, and ensure that [ROS is already installed](/installing_ros1) on your system.
 
 <div align="center">
-      <img width={700} 
+      <img width={700}
       src="https://i.imgur.com/0gAng8s.jpg" />
   </div>
 
 ### Installation
-**If you have cloned OBcamera_ws from our project, you don't need to clone from the link below.**
+__If you have cloned OBcamera_ws from our project, you don't need to clone from the link below.__
 
-- **Step 1:**Create a ROS workspace (**if you don't have one**):
+- **Step 1:**Create a ROS workspace (__if you don't have one__):
 
 ```bash
 mkdir -p OBcamera_ws/src
@@ -78,7 +81,7 @@ sudo bash ./scripts/install_udev_rules.sh
 
 ### Start the Camera
 
-For the camera model **Gemini2**, enter the following in terminal 1:
+For the camera model __Gemini2__, enter the following in terminal 1:
 
 ```bash
 source ./devel/setup.bash
@@ -91,6 +94,7 @@ In terminal 2:
 source ./devel/setup.bash
 rviz
 ```
+
 You can enter the `rostpoic list` command in the third terminal to view the topics published by Orbbec Camera. Available Topics are as follows:
 
 - `/camera/color/camera_info`: The color camera info.
@@ -105,13 +109,11 @@ You can enter the `rostpoic list` command in the third terminal to view the topi
 - `/camera/right_ir/image_raw`: The right IR stream image.
 - `/diagnostics`: The diagnostic information of the camera. Currently, the diagnostic information only includes the temperature of the camera.
 
-
 Start RVIZ and add topic via the button in the lower left corner of the RVIZ interface, you can get a rendering similar to the following:
 <div align="center">
-      <img width={700} 
+      <img width={700}
       src="https://i.imgur.com/7jmfnZ4.png" />
   </div>
-
 
 If the camera model you are using is different, find the corresponding launch file name from the table below and replace `gemini2.launch` in terminal 1 accordingly.
 
@@ -146,17 +148,18 @@ If the camera model you are using is different, find the corresponding launch fi
 | gemini ew lite                      | gemini_ew_lite.launch    |
 | gemini 330 series                   | gemini_330_series.launch |
 
-**All launch files are essentially similar, with the primary difference being the default values of the parameters set for different models within the same series. Differences in USB standards, such as USB 2.0 versus USB 3.0, may require adjustments to these parameters. If you encounter a startup failure, please carefully review the specification manual. Pay special attention to the resolution settings in the launch file, as well as other parameters, to ensure compatibility and optimal performance.**
+__All launch files are essentially similar, with the primary difference being the default values of the parameters set for different models within the same series. Differences in USB standards, such as USB 2.0 versus USB 3.0, may require adjustments to these parameters. If you encounter a startup failure, please carefully review the specification manual. Pay special attention to the resolution settings in the launch file, as well as other parameters, to ensure compatibility and optimal performance.__
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

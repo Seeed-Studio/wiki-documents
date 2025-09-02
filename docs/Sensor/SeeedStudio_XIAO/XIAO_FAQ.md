@@ -96,7 +96,7 @@ For details, please click [**here**](/limitations_on_the_maximum_cable_length)
 
 For details, please click [**here**](/troubleshoot_CAN_communication_issues)
 
-# Tech support
+## Tech Support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

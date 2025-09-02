@@ -27,7 +27,6 @@ last_update:
 
 Welcome to the world of Watcher customization and SenseCraft tools! In this article, we'll dive into the exciting possibilities of personalizing your Watcher device and explore the powerful features offered by the SenseCraft APP. Whether you're a new user looking to give your Watcher a unique look or an experienced enthusiast seeking to unlock the full potential of your device, this guide will provide you with the knowledge and inspiration to make your Watcher truly your own. Get ready to embark on a creative journey as we uncover the secrets of Watcher expression design and SenseCraft APP settings.
 
-
 ## Watcher Bluetooth-based settings
 
 This part of the setting must be available with Bluetooth enabled on both the device and the phone.
@@ -132,7 +131,6 @@ By subscribing, you gain access to our advanced language model capabilities. Whe
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price.png" style={{width:250, height:'auto'}}/></div>
 
-
 ### Check Update
 
 The Check Update feature ensures that your Watcher is always running the latest firmware and software versions. By regularly checking for updates, you can access new features, performance improvements, bug fixes, and security enhancements as soon as they become available.
@@ -165,7 +163,6 @@ To delete a device, locate the Delete Device option within the Watcher's setting
 After the app deletes the device and you want to rebind the device, you also need to do a Factory Reset in the device's settings.
 :::
 
-
 ## Watcher Animation
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/44.png" style={{width:650, height:'auto'}}/></div>
@@ -183,7 +180,6 @@ There are several ways to create custom animations for your Watcher, depending o
 - **Using Existing GIFs**: If you find a GIF online that you'd like to use for your Watcher's custom animation, you can easily convert it into a series of PNG images. Use a free online tool like [EZGif](https://www.ezgif.com/split) to split your GIF into individual frames. Select up to 5 frames that best represent the animation you want to achieve, then upload these PNG images using the SenseCraft APP.
 
 Regardless of the method you choose, each image should be in **PNG** format and have a resolution of **412x412** pixels to ensure optimal display quality on the Watcher's screen. When uploaded, these images will be combined to form a seamless animation, bringing your Watcher to life with your personalized expressions.
-
 
 ### Converting and Resizing Images
 
@@ -207,7 +203,7 @@ To replace the animations for the Watching Space or Greeting states, simply sele
 When uploading your custom animations, keep in mind that each image should be in **PNG** format and have a resolution of **412x412** pixels for optimal display quality on the Watcher's screen. Your uploaded images will replace the default animations for the selected Watcher states, allowing you to personalize your device's expressions and add a unique touch to your monitoring experience.
 :::
 
-## A Call to Designers: Let Your Creativity Shine!
+## A Call to Designers: Let Your Creativity Shine
 
 At SenseCraft, we believe that the power of creativity and collaboration can lead to incredible innovations. That's why we're inviting designers from all backgrounds to contribute their unique perspectives and skills to help expand the animation possibilities for the Watcher.
 
@@ -240,5 +236,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

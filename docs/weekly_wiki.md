@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/25/2025
+  date: 09/01/2025
   author: Frank
 ---
 
@@ -17,29 +17,21 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 25th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Control Motor by Voice LLM on Jetson](https://wiki.seeedstudio.com/control_motor_by_voice_llm_on_jetson/)
+### [Use uv on reComputer](https://wiki.seeedstudio.com/use_uv_to_build_package_on_recomputer/)
 
-<div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/ORv8x0aSXfQ" title="🤖 Voice-Controlled Robot: Full Pipeline from Speech Recognition to Motor Control!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_result.png" alt="pir" width={800} height="auto" /></p>
 
-This wiki builds an end-to-end voice-controlled motor system based on the Jetson platform (reComputer Robotics J4012), integrating speech recognition, edge large language model (LLM) intent understanding, and hardware control to enable natural human-machine interaction—users can control MyActuator X Series Motors with simple voice commands (e.g., "Rotate 90 degrees clockwise").
+This wiki explains how to use the [uv](https://github.com/astral-sh/uv) on reComputer box. uv is a fast, modern, and lightweight package manager and resolver for Python. It is designed to be a drop-in replacement for traditional Python package management tools like ```pip``` and ```pip-tools```, offering significant improvements in speed, efficiency, and usability.
 
-### [reSpeaker XVF3800 USB Mic Array with XIAO ESP32S3 UDP Audio Streaming](https://wiki.seeedstudio.com/respeaker_xvf3800_xiao_udp_audio_stream/)
+### [Use docker on reComputer](https://wiki.seeedstudio.com/use_docekr_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_result.png" alt="pir" width={800} height="auto" /></p>
 
-This project demonstrates real-time audio streaming using the ReSpeaker XVF3800 microphone array with a XIAO ESP32S3 board. The audio is captured via I2S, and transmitted over UDP to a server running on a local machine, where it can be stored and processed as a .wav file.
-
-### [Getting Started with reTerminal E10xx in Arduino](https://wiki.seeedstudio.com/reterminal_e10xx_with_arduino/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/screen2.jpeg" alt="pir" width={800} height="auto" /></p>
-
-This article describes how to get the reTerminal E10xx series to work with Arduino.
+This wiki explains how to use the [docker](https://www.docker.com) on reComputer box. Docker is an open-source platform used to automate the deployment, scaling, and management of applications inside lightweight, portable containers. Containers allow developers to package applications and their dependencies together in a consistent environment, ensuring that they run smoothly across different computing environments.
 
 <!-- ## Existing Wiki Updated
 
@@ -187,5 +179,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.04th](/Seeed_Elderly/weekly_wiki/wiki250804)
 - [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/wiki250811)
 - [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/wiki250818)
+- [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 
 </details>

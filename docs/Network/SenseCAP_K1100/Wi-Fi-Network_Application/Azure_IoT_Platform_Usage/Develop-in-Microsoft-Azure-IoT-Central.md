@@ -11,7 +11,6 @@ last_update:
 ---
 # Develop in Microsoft Azure IoT Central
 
-
 ### Add a Rule to Send an Email
 
 Rules in IoT Central serve as a customizable response tool that trigger on actively monitored events from connected devices.
@@ -21,12 +20,11 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 - **STEP 2:** Click on **+New** or **Create a rule**
 
-- **STEP 3:** Enter a name for the rule 
+- **STEP 3:** Enter a name for the rule
 
 - **STEP 4:** Under **Device template**, select **Seeed Wio Terminal**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/rule_1.png" alt="pir" width={830} height="auto" /></p>
-
 
 - **STEP 5:** Under **Conditions**, turn on **time aggregation** and select a **time window** of your choosing. Here we will set it as **5 minutes**
 
@@ -42,13 +40,11 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/conditions_1.png" alt="pir" width={1200} height="auto" /></p>
 
-
 - **STEP 10:** Under **Actions**, click on **Email**
 
-- **STEP 11:** Type a **Display name**, **To address** and **Note** for the email 
+- **STEP 11:** Type a **Display name**, **To address** and **Note** for the email
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/email_3.png" alt="pir" width={1200} height="auto" /></p>
-
 
 **Note:** Please note that the **email address** here should be added to this **Azure IoT Central Application** and also have signed-in at lease once.
 
@@ -56,14 +52,13 @@ For example, in this demo, we can set IoT Central to send an email when the ligh
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/assign_user.png" alt="pir" width={800} height="auto" /></p>
 
-
 - **STEP 12:** Click on **Done**
 
 - **STEP 13:** Finally, click **Save**
 
 Now we have successfully created a rule to send an email
 
-### Control Hardware from Microsoft Azure IoT Central 
+### Control Hardware from Microsoft Azure IoT Central
 
 You can not only view the telemetry data on Azure IoT Central, but also use it to control hardware as well. In this demo, we will be able to control the built-in buzzer on the Wio Terminal and specify a time duration in which the buzzer will beep
 
@@ -77,9 +72,6 @@ You can not only view the telemetry data on Azure IoT Central, but also use it t
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/1000.png" alt="pir" width={500} height="auto" /></p>
 
-
-
-
 ## How to Add Other Sensors?
 
 You can add any sensor to the Wio Terminal and send telemetry data from the connected sensor to Azure IoT Central. We will connect a [Grove - Temperature & Humidity Sensor (DHT11)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html) to the Wio Terminal and send temperature and humidity data to Azure IoT Central to visualize on dashboards!
@@ -88,7 +80,7 @@ You can add any sensor to the Wio Terminal and send telemetry data from the conn
 
 #### Download, Install and Configure Visual Studio Code
 
-If we want to add more sensors to the Wio Terminal in order to send telemetry data to Azure IoT Central, we cannot easily use the .uf2 file as we did before. Because the codes are already compiled inside that .uf2 file. So, if we want to add more codes to the demo, we need to use an IDE called Microsoft Visual Studio Code, add the necessary codes and finally upload them to the Wio Terminal. 
+If we want to add more sensors to the Wio Terminal in order to send telemetry data to Azure IoT Central, we cannot easily use the .uf2 file as we did before. Because the codes are already compiled inside that .uf2 file. So, if we want to add more codes to the demo, we need to use an IDE called Microsoft Visual Studio Code, add the necessary codes and finally upload them to the Wio Terminal.
 
 So now, let's move on to installing Microsoft Visual Studio Code on the computer
 
@@ -104,11 +96,9 @@ So now, let's move on to installing Microsoft Visual Studio Code on the computer
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio.png" alt="pir" width={380} height="auto" /></p>
 
-
-- **STEP 5:** Click **install** 
+- **STEP 5:** Click **install**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio_install.png" alt="pir" width={550} height="auto" /></p>
-
 
 #### Code for the Demo on Visual Studio Code
 
@@ -116,7 +106,7 @@ So now, let's move on to installing Microsoft Visual Studio Code on the computer
 
 - **STEP 2:** Navigate to the **Latest release** and under **Assets**, click on **Source code (zip)**. This will download the source code as a .zip file
 
-- **STEP 3:** Extract the **.zip file** 
+- **STEP 3:** Extract the **.zip file**
 
 - **STEP 4:** Go back to Visual Studio Code and navigate to `File > Open Folder...`
 
@@ -126,7 +116,7 @@ So now, let's move on to installing Microsoft Visual Studio Code on the computer
 
 - **STEP 7:** Once **config.h** is open, look for **"dtmi:seeedkk:wioterminal:wioterminal_aziot_example;5"** and change it to **"dtmi:local:wioterminal_aziot_example;5"**
 
-**Note:** **dtmi:local:wioterminal_aziot_example;5** is the Model ID 
+**Note:** **dtmi:local:wioterminal_aziot_example;5** is the Model ID
 
 - **STEP 8:** Navigate to `wioterminal-aziot-example-0.10 > seeedkk-wioterminal-wioterminal_aziot_example.json` from the left navigation menu
 
@@ -134,7 +124,7 @@ So now, let's move on to installing Microsoft Visual Studio Code on the computer
 
 **Note:** **seeedkk-wioterminal-wioterminal_aziot_example.json** is the DTDL model that we have mentioned before
 
-Currently the model is defined for **acceleration, light intensity and button count** data. We will go ahead to add **temperature and humidity** to this DTDL model. 
+Currently the model is defined for **acceleration, light intensity and button count** data. We will go ahead to add **temperature and humidity** to this DTDL model.
 
 - **STEP 10:** Add the following codes below **"contents": [**:
 
@@ -170,10 +160,11 @@ Currently the model is defined for **acceleration, light intensity and button co
 
 - **STEP 12:** Once **platformio.ini** is open, under **lib_deps**, add **https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor**
 
-```sh 
+```sh
 lib_deps = 
     https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor
 ```
+
 **Note:** This is the library for Grove - Temperature and Humidity Sensor (DHT11)
 
 - **STEP 13:** Navigate to `wioterminal-aziot-example-0.10 > src > main.cpp` from the left navigation menu
@@ -185,8 +176,9 @@ lib_deps =
 #include "DHT.h"
 ```
 
-- **STEP 15:** Add the DHT11 definitions and the initializations after the line 
+- **STEP 15:** Add the DHT11 definitions and the initializations after the line
 **LIS3DHTR  AccelSensor;**
+
 ```cpp
 LIS3DHTR<TwoWire> AccelSensor;
 
@@ -239,12 +231,11 @@ static az_result SendTelemetry()
 dht.begin(); //start DHT sensor
 ```
 
-Now we have completed all the codes for this demo. 
+Now we have completed all the codes for this demo.
 
 - **STEP 18:** Click **PlatformIO icon** from the left navigation menu and click **Build**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformio_build.png" alt="pir" width={400} height="auto" /></p>
-
 
 If you see the following message, you have successfully compiled the code:
 
@@ -266,7 +257,7 @@ Now we need to create a custom device template so that the data from the Wio Ter
 
 - **STEP 4:** Click **Create**
 
-#### Importing a Custom Device Model 
+#### Importing a Custom Device Model
 
 - **STEP 1:** Click **Import a model**
 
@@ -297,7 +288,6 @@ Now we need to create a custom device template so that the data from the Wio Ter
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard.png" alt="pir" width={1000} height="auto" /></p>
 
-
 - **STEP 8:** Click **Save** and **Publish**
 
 ### Wio Terminal Set Up
@@ -307,7 +297,6 @@ Now we need to create a custom device template so that the data from the Wio Ter
 - Connect the **Grove - Temperature and Humidity Sensor (DHT11)** to **Grove Digital Port** on the Wio Terminal
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/connection.png" alt="pir" width={380} height="auto" /></p>
-
 
 #### Software Set Up
 
@@ -319,7 +308,6 @@ Now we need to upload the code to the Wio Terminal to send the telemetry data to
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/platformIO_upload.png" alt="pir" width={380} height="auto" /></p>
 
-
 ##### Wi-Fi and Azure IoT Configuration
 
 Next, let's move on to configuring Wi-Fi and Azure IoT connection just like we did before
@@ -327,7 +315,6 @@ Next, let's move on to configuring Wi-Fi and Azure IoT connection just like we d
 - **STEP 1:** Hold down on the 3 buttons and turn ON the Wio Terminal to enter the configuration mode
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/config.png" alt="pir" width={700} height="auto" /></p>
-
 
 - **STEP 2:** Open a serial console application such as [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
@@ -345,14 +332,13 @@ Next, let's move on to configuring Wi-Fi and Azure IoT connection just like we d
 
 - **STEP 7:** Click on **SAS-IoT-Devices** and copy the **primary key** into **notepad**
 
-- **STEP 8:** Visit previously opened serial terminal and type **set_az_iotc** `your_ID_scope` `your_primary_key` `your_device_name` 
+- **STEP 8:** Visit previously opened serial terminal and type **set_az_iotc** `your_ID_scope` `your_primary_key` `your_device_name`
 
 **Note:** Make sure to add a single space between each field and you can decide on a `device name` of your choice.
 
-- **STEP 9:** Reset the Wio Terminal by sliding down the switch further away from the ON position and releasing 
+- **STEP 9:** Reset the Wio Terminal by sliding down the switch further away from the ON position and releasing
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-Reset.png" alt="pir" width={500} height="auto" /></p>
-
 
 Now you will be able to see the Wio Terminal LCD displaying that it's connecting to Wi-Fi and then Azure IoT Hub. After that, it will show the telemetry data being sent to Azure IoT Central.
 
@@ -363,17 +349,3 @@ Go back to Azure IoT Central and from the left navigation menu, click **Devices*
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Azure_IoTc_WT/dashboard_final1.png" alt="pir" width={1000} height="auto" /></p>
 
 Now you will be able to visualize all the sensor data from the Wio Terminal on Microsoft Azure IoT Central Dashboard!
-
-
-
-
-
-
-
-
-
-
-
-
-
-

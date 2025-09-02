@@ -13,6 +13,7 @@ last_update:
   author: Kasun Thushara
 ---
 # Taking Control: Self-Hosted Solutions for Office Management with LinkStar, Grocy, and BookStack
+
 The integration of Grocy and BookStack within a self-hosted office server powered by a LinkStar router offers a compelling solution for efficient and organized operations. With Grocy, businesses can effectively manage their groceries, shopping lists, and tasks, ensuring streamlined processes and reduced waste. On the other hand, BookStack provides a centralized documentation platform that promotes collaboration, knowledge sharing, and easy access to important information. By hosting both applications on the LinkStar router, businesses gain control over their data, enhance security, and eliminate the reliance on external services. This self-hosted setup empowers offices to optimize workflows, improve productivity, and create a well-structured and productive work environment. In this blog post, we will delve into the importance of integrating Grocy and BookStack within a LinkStar-powered office server, exploring the benefits and showcasing how this combination revolutionizes office management.
 
 ## What is Docker ?
@@ -22,11 +23,12 @@ The integration of Grocy and BookStack within a self-hosted office server powere
 [Docker](https://docs.docker.com/) is an open-source platform that enables developers to automate the deployment and management of applications within lightweight, isolated containers. Containers are self-contained units that package an application along with its dependencies, libraries, and configuration files, allowing it to run consistently across different environments. Docker simplifies the process of creating, distributing, and running applications, making it easier to develop and deploy software in a consistent and reproducible manner. With Docker, developers can encapsulate their applications and ensure that they run smoothly across different operating systems and infrastructure setups, making it an invaluable tool for building portable and scalable applications, streamlining development workflows, and enabling efficient collaboration among team members.
 
 ## What is Portainer ?
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/wordpress/pontainer-bg.png" alt="pir" width="200" height="auto"/></p>
 
 [Portainer](https://www.portainer.io/) is a powerful and intuitive open-source management interface designed specifically for Docker. With its user-friendly web-based GUI, Portainer simplifies the deployment and administration of Docker containers, images, networks, and volumes. It offers a visual representation of the container environment, allowing users to easily create, start, stop, and remove containers with just a few clicks. Monitoring resource usage, viewing logs, and accessing container terminals are made effortless within the Portainer interface. Additionally, Portainer supports role-based access control, providing granular control over user privileges. Whether you're a beginner or an experienced Docker user, Portainer is an invaluable tool that streamlines container management, making it accessible and efficient for everyone.
 
-## What is Bookstack? 
+## What is Bookstack?
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/bookstackicon.png" alt="pir" width="200" height="auto"/></p>
 
@@ -38,16 +40,18 @@ The integration of Grocy and BookStack within a self-hosted office server powere
 
 [Grocy](https://grocy.info/) is a self-hosted, open-source web application that helps users manage their groceries, household items, and tasks. It provides features for tracking food inventory, creating shopping lists, managing recipes, and keeping track of expiration dates.
 
-## Set up the Docker environment on the LinkStar OpenWRT router.
+## Set up the Docker environment on the LinkStar OpenWRT router
 
 By default, the Docker installation on LinkStar has a storage capacity of around 250MB, which may not be sufficient for installing images. Therefore, we need to allocate more space to Docker to accommodate our requirements. As same as [Plex media server WiKi](https://wiki.seeedstudio.com/plex_media_server/) you need to follow steps.If you have already done it, please skip this step.
 
 **Note:** For that make sure to follow the [Set up the docker environment on the linkstar openwrt router](https://wiki.seeedstudio.com/plex_media_server/#set-up-the-docker-environment-on-the-linkstar-openwrt-router) before going through this guide.
 
 ## Install Portainer container
+
 This topic is discussed in the WordPress integration to Linkstar.  So you need to follow these steps if you are installing the Portainer for the first time. Here is the link for [installing Portainer container](https://wiki.seeedstudio.com/wordpress_linkstar/#install-portainer-container).
 
-## Install BookStack 
+## Install BookStack
+
 ### Step 01: Create a new stack
 
 In the context of application usage, a stack refers to a set of related services. Therefore, our first step is to establish a new stack. To do this, navigate to the sidebar and locate the **Stacks** option. Click on it and select **Add Stack** to proceed.
@@ -96,7 +100,6 @@ services:
 
 ```
 
-
 The provided docker-compose file includes two distinct docker containers: one for the Bookstack application and another for the SQL database. This is the recommended method for installing Bookstack. However, there are a few crucial changes that need to be made before proceeding.
 
 Firstly, replace "yourappurl" with the desired URL through which you intend to access the Bookstack application. Additionally, modify "yourdbpass" to a password of your preference. It's essential to ensure that the same password is used for both containers to maintain consistency.
@@ -105,9 +108,10 @@ Finally, remember to adjust the "TZ" variable to match your specific [Timezone](
 
 By making these necessary modifications, you can successfully configure the docker-compose file for your Bookstack installation.
 
-Under the page you can found **Deploy Stack** button and click on it. 
+Under the page you can found **Deploy Stack** button and click on it.
 
-### Step 03: Access to BookStack. 
+### Step 03: Access to BookStack
+
 After the deploying process is done you can see a new stack is created. In our case, it is bookstack and click on it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/bookstack3.PNG" alt="pir" width="600" height="auto"/></p>
@@ -134,12 +138,11 @@ Then you can access successfully to home page of BookStack.
 
 ### Step 01: Create a new stack
 
-Same as the first step of the installation of Bookstack, we need to create a new stack. So you can use the above guide line on how to create a new stack. 
+Same as the first step of the installation of Bookstack, we need to create a new stack. So you can use the above guide line on how to create a new stack.
 
+### Step 02: Installing Grocy using web editor
 
-### Step 02: Installing Grocy using web editor.
-
-Same as the second step of installation of BookStack, you need to provide a stack name. Then copy and paste the following docker-compose text to the web editor. 
+Same as the second step of installation of BookStack, you need to provide a stack name. Then copy and paste the following docker-compose text to the web editor.
 
 ```sh
 ---
@@ -157,9 +160,11 @@ services:
     restart: unless-stopped
 
 ```
-Under the page you can found **Deploy Stack** button and click on it. 
 
-### Step 03: Access to Grocy.
+Under the page you can found **Deploy Stack** button and click on it.
+
+### Step 03: Access to Grocy
+
  After the deploying process is done you can see a new stack is created. In our case, it is grocy and click on it.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LinkStar/grocy_bookstack/grocy1.PNG" alt="pir" width="600" height="auto"/></p>
@@ -170,7 +175,6 @@ Then you can observe grocy container is running, and the port number is 9283.
 
  Next open your web browser and type 192.168.100.1:9283. Then you will navigate to login page.
 
-
 :::note
 
 Username: admin
@@ -178,7 +182,6 @@ Username: admin
 Password: admin
 
 :::
-
 
 Then you can access successfully to home page of BookStack.
 
@@ -196,17 +199,16 @@ Then you can access successfully to home page of BookStack.
 
 - **[Web Page]** [Grocy](https://grocy.info/)
 
-
-## Tech Support & Product Discussion 
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -146,7 +146,7 @@ Conecta la batería al detector como se muestra en la imagen. Los LEDs encendido
 
 ![](https://files.seeedstudio.com/wiki/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V/img/Battery_Detector_with_Polymer_Lithium_Ion_5100mAh_3.8V_700_s.jpg)
 
-<!-- \[\[|600px|none|Front view \]\] -->
+<!-- [[|600px|none|Front view ]] -->
 
 ## Visor Esquemático en Línea
 

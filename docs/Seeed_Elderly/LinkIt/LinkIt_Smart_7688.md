@@ -19,7 +19,6 @@ Due to the closure of MediaTek Labs, all related links have become invalid. If y
 LinkIt Smart 7688 (a compact controller board) is an open development board, based on the OpenWrt Linux distribution and MT7688 ([datasheet](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/MT7688_datasheet.pdf)). The board is designed especially for the prototyping of Rich Application IoT devices for Smart-Home. The board offers sufficient memory and storage to enable robust video processing. The platform also offers options to create device applications in Python, Node.js and C programming languages.
 This board is only a part of MediaTek LinkIt Smart 7688 platform which includes other development boards.
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LinkIt-Smart-7688-p-2573.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -27,20 +26,23 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
 </div>
 
 ## Features
+
 ---
-*   Single input single output (1T1R) Wi-Fi 802.11 b/g/n.
-*   Pin-out for GPIO, I<sup>2</sup>C, I<sup>2</sup>S, SPI, UART, PWM and Ethernet Port.
-*   580 MHz MIPS CPU.
-*   32MB Flash and 128MB DDR2 RAM.
-*   USB host.
-*   Micro SD slot.
+- Single input single output (1T1R) Wi-Fi 802.11 b/g/n.
+- Pin-out for GPIO, I<sup>2</sup>C, I<sup>2</sup>S, SPI, UART, PWM and Ethernet Port.
+- 580 MHz MIPS CPU.
+- 32MB Flash and 128MB DDR2 RAM.
+- USB host.
+- Micro SD slot.
 
 ## Application ideas
+
 ---
-*   Rich application IoT Devices for Smart-Home
-*   Robotics
+- Rich application IoT Devices for Smart-Home
+- Robotics
 
 ## Specification
+
 ---
 <table>
   <tr>
@@ -238,11 +240,11 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
 </table>
 
 ## Hardware Overview
+
 ----
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Component_intro_with_text_1200.jpg)
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/Back_hardware_view_with_text_1200_s.jpg)
-
 
 :::note
     * In order to protect the product from improper operation, please pay attention to below notes.Choose more reliable power adapter with stable output.Recommended conditions of power input source for 7688:
@@ -250,7 +252,7 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
       * - Voltage wave should be within ±100mV of rated voltage.
 :::
 
-###  Parts list
+### Parts list
 
 <table>
 <tr>
@@ -268,19 +270,21 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
 </table>
 
 ## Getting started
+
 ----
-###  Connect to the embedded operating system
+
+### Connect to the embedded operating system
 
 :::note
     There are two ways described in the manual. Here, we only show the advanced way (using a USB to Serial adapter) which seems a little harder. But, you will benefit a lot from it in the long run.
 :::
-####  Materials required
 
-*   LinkIt Smart 7688 × 1
-*   USB cable (type A to micro type-B) × 2
-*   USB to Serial adapter× 1
-*   Jumper wires × 3
+#### Materials required
 
+- LinkIt Smart 7688 × 1
+- USB cable (type A to micro type-B) × 2
+- USB to Serial adapter× 1
+- Jumper wires × 3
 
 ### On Windows
 
@@ -292,11 +296,11 @@ This board is only a part of MediaTek LinkIt Smart 7688 platform which includes 
 
 **4.** Next, you need to connect the Serial-to-USB cable to LinkIt Smart 7688's UART pins as shown in the following table:
 
-| Pin on USB adapter |	Corresponding Pin to be connected on LinkIt Smart 7688 |
+| Pin on USB adapter | Corresponding Pin to be connected on LinkIt Smart 7688 |
 |-----------------------------------|--------------------------------------------------------|
-| Pin RX	| Pin 8 |
-| Pin TX	| Pin 9 |
-| Pin GND |	Pin GND |
+| Pin RX | Pin 8 |
+| Pin TX | Pin 9 |
+| Pin GND | Pin GND |
 
 ![enter image description here](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/img/LinkIt_Smart_7688_demo_connection_1200_s.jpg)
 
@@ -333,11 +337,13 @@ $ls /dev/cu*
 ```
 
 **5.** Use the screen utility to connect to the serial port and set the baudrate to 57600. This is because the baudrate of the system console is 57600 by default. For example:
+
 ```
 $screen /dev/cu.usbserial-XXXXXXXX 57600
 ```
 
 **6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become different from your OS X Terminal application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+
 ```
   root@myLinkIt:/#
 ```
@@ -353,28 +359,34 @@ $screen /dev/cu.usbserial-XXXXXXXX 57600
 **3.** Open a Terminal session.
 
 **4.** Type **ls /dev/ttyUSB*** in the Terminal. You should see a list of devices. Look for something like cu.usbserial-XXXXXXXX where XXXXXXXX is usually a random identifier. This is the serial device used to access the system console. For example:
+
 ```
 $ls /dev/ttyUSB*
 /dev/ttyUSB0
 ```
+
 **5.** Use the **screen** utility to connect to the serial port and set the baudrate to **57600**. This is because the baudrate of the system console is 57600 by default. For example:
+
 ```
 $sudo screen /dev/ttyUSB0 57600
 ```
+
 **6.** Now you should be connected to the system console. Press ENTER in the Terminal to bring up the prompt. You will notice that the prompt has become a different regular application, it is the LinkIt Smart 7688 prompt and it looks like the following:
+
 ```
   root@myLinkIt:/#
 ```
+
 **7.** You are ready to make changes to the LinkIt Smart 7688 system through this console.
 
 ### Running the Blink example
 
 #### Materials Required
 
-* LinkIt Smart 7688 x 1
-* USB cable (type A to micro type-B) x 1
-* USB to Serial adapter x 1
-* Jumper wires x 3
+- LinkIt Smart 7688 x 1
+- USB cable (type A to micro type-B) x 1
+- USB to Serial adapter x 1
+- Jumper wires x 3
 
 #### Get Blink RUN
 
@@ -427,8 +439,8 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer [this](https:
 
 **9.** Now you can use internet to configure your system on development board.
 
-
 ## Demo: A Hello world example
+
 ---
 
 :::note
@@ -441,11 +453,12 @@ There are two kind of Wi-Fi modes: AP mode and Station mode. Refer [this](https:
 | Python               | Python runtime on LinkIt Smart 7688  | Prototyping Network Arduino bridge library | OS X Linux Windows       |
 | Node.js              | Node.js runtime on LinkIt Smart 7688 | Prototyping Network                       | OS X Linux  Windows      |
 
-###  A Hello world example in Python
+### A Hello world example in Python
 
 **1.** Use FileZilla and refer to this [tutorial](https://wiki.filezilla-project.org/FileZilla_Client_Tutorial_%28en%29), the server IP(replace **host name**) address is the inet addr found in previous [Switch to Station mode](https://seeeddoc.github.io/LinkIt_Smart_7688_Duo#Switch_to_Station_mode) section, the username is root and password is password you set in that section.
 
 **2.** Open a text editor, copy and paste the below example code and save it as **helloworld.py**.
+
 ```
 print "Hello World!"
 ```
@@ -458,30 +471,27 @@ print "Hello World!"
 
 **6.** Now you can see **Hello World**! printed in console.
 
-
 ## FAQs
 
-[Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek. 
-
+[Here](https://docs.labs.mediatek.com/resource/linkit-smart-7688/en/faq) is the FAQ from Mediatek.
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Hardware_Schematics.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
+
 ----
-* **[Eagle]** [LinkIt_Smart_7688](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Hardware_Schematics.zip)
-* **[PDF]** [LinkIt_Smart_7688 PCB](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt%20Smart%207688%20Layout.pdf)
-* **[PDF]** [LinkIt_Smart_7688 Schematic](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt%20Smart%207688.pdf)
-* **[Document]** [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Manual.zip)
-* **[Document]** [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
-* **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
-* **[Document]** [Firmware_upgrade_Instruction](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
-* **[Document]** [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688-Certificate.zip)
-* **[Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
+- **[Eagle]** [LinkIt_Smart_7688](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Hardware_Schematics.zip)
+- **[PDF]** [LinkIt_Smart_7688 PCB](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt%20Smart%207688%20Layout.pdf)
+- **[PDF]** [LinkIt_Smart_7688 Schematic](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt%20Smart%207688.pdf)
+- **[Document]** [Manual](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/Manual.zip)
+- **[Document]** [OpenWrt](http://wiki.openwrt.org/doc/howto/user.beginner)
+- **[Document]** [MediaTek LinkIt? Smart 7688 Resources:](https://labs.mediatek.com/site/global/developer_tools/mediatek_linkit_smart_7688/hdk_intro/index.gsp)
+- **[Document]** [Firmware_upgrade_Instruction](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688_Firmware_upgrade.zip)
+- **[Document]** [Certificates](https://files.seeedstudio.com/wiki/LinkIt_Smart_7688/res/LinkIt_Smart_7688-Certificate.zip)
+- **[Document]** [Mediatek](https://labs.mediatek.com/en/platform/linkit-smart-7688)
 
 ## Projects
 
@@ -494,11 +504,11 @@ print "Hello World!"
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -11,14 +11,25 @@ last_update:
 
 # Getting Started with reTerminal E1002
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:700, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/getting_started_with_reterminal_e1002" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
-</div>
+</div><br />
 
+:::caution Update Firmware Tips
+We recommend that you **[complete your product's firmware update](#preliminary)** as soon as you receive it for the best experience.
+:::
+
+:::danger Screen life warning
+1. If your reTerminal has been idle for a long time, you can long press the green button on the device for 5 seconds to clear the screen content (using the factory firmware), which can effectively prevent the residual shadow and increase the screen life.
+
+2. Whenever possible, do not display a screen for a long period of time (more than 1 day), as this may create a residual image, and it is recommended that the screen's image be refreshed at least once a day. If the device is not used for a long time, it is recommended to clear the device display content.
+
+3. Please refresh the screen as infrequently as possible when using and debugging the program. Refreshing the screen at high speed for a long period of time may also reduce the service life of the screen.
+:::
 
 ## Introduction
 
@@ -63,7 +74,7 @@ The reTerminal E1002 hardware includes:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-The reTerminal E10xx only supports MicroSD cards up to 64GB in Fat32 format.
+The reTerminal E Series ePaper Display only supports MicroSD cards up to 64GB in Fat32 format.
 :::
 
 **Step 3.** (Optional) Install USB drivers if needed:
@@ -147,7 +158,7 @@ So, we need to complete the next steps of configuring the network during this ti
 **Step 3.** Select your local Wi-Fi network and enter the password, then click "Connect".
 
 :::note
-The reTerminal E10xx series only supports 2.4GHz WiFi networks, not 5GHz or other bands.
+The reTerminal E Series ePaper Display only supports 2.4GHz WiFi networks, not 5GHz or other bands.
 :::
 
 **Step 4.** Upon successful connection, the device will emit a confirmation beep and display a pairing code screen.
@@ -407,8 +418,8 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 
 ## Resources
 
-- [reTerminal E1002 Schematic (PDF)](/getting_started_with_reterminal_e1002)
-- [ESP32S3 Datasheet](/getting_started_with_reterminal_e1002)
+- [reTerminal E1002 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1.0_SCH_250805.pdf)
+- [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
 - [GitHub Repository](/getting_started_with_reterminal_e1002)
 

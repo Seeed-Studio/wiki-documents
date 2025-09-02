@@ -45,7 +45,7 @@ Users can download the Watcher APP through the following download links:
     </a>
 </div>
 
-- For **macOS**: 
+- For **macOS**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg" target="_blank" rel="noopener noreferrer">
@@ -53,14 +53,13 @@ Users can download the Watcher APP through the following download links:
     </a>
 </div>
 
-- For **Linux**: 
+- For **Linux**:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> For Linux 🖱️</font></span></strong>
     </a>
 </div><br />
-
 
 Please choose the appropriate download link based on your operating system. The Watcher APP is compatible with Windows, macOS, and major Linux distributions, ensuring a seamless experience across different platforms.
 
@@ -96,7 +95,6 @@ To ensure a smooth and optimal experience when deploying Watcher's AI capabiliti
     </tr>
   </table>
 </div>
-
 
 It's important to note that these are the minimum requirements, and having higher specifications can significantly improve the performance and responsiveness of Watcher's AI services. If you plan to deploy multiple AI services simultaneously or process large amounts of data, we recommend using devices with more advanced hardware configurations.
 
@@ -284,5 +282,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

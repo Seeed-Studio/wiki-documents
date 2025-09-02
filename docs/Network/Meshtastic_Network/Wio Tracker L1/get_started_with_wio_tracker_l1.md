@@ -12,11 +12,7 @@ last_update:
 ---
 
 
-
-
-
 ## Get Started
-
 
 :::note
 Do not erase the flash, as this may damage the device.
@@ -30,8 +26,6 @@ Select the target device to `Seeed Wio Tracker L1` and choose the latest firmwar
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/select-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/flash-wio-tracker.png" alt="pir" width={800} height="auto" /></p>
 
 Switch on the device, click `Enter DFU Mode`, there will be a serial port named `Tracker L1`, click and connect it, and there should be a driver named `Tracker L1` display.
@@ -40,11 +34,9 @@ Switch on the device, click `Enter DFU Mode`, there will be a serial port named 
 
 Drag the UF2 file to the DFU drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
-
 ### Power on the device
 
 Connect the USB cable to activate the device.
-
 
 ### Connect via App
 
@@ -55,12 +47,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-* Select the target device on the Bluetooth panel.
+- Select the target device on the Bluetooth panel.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-
-* Enter the code on the display and then click `OK` to connect the device.
+- Enter the code on the display and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -68,55 +59,35 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android App">
 
-
-* Click `+` and choose the target device.
+- Click `+` and choose the target device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-
-* Enter the code(default code is `123456`) and then click `OK` to connect the device.
+- Enter the code(default code is `123456`) and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
-  
 </TabItem>
 </Tabs>
 
-
-
-
-
 ### Configure the Parameters
 
-
-
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
-
-
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 </TabItem>
 
 <TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
-
 </TabItem>
 </Tabs>
 
-
-
-
 **Region List**
-
-
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
@@ -124,19 +95,13 @@ In order to start communicating over the mesh, you must set your region. This se
 |US|United States|902\.0 - 928.0|100|30|
 |EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
 
-
 Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
-
 
 :::info
 **EU_868** has to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
 
-
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
-
-
-
 
 ### FAQ
 

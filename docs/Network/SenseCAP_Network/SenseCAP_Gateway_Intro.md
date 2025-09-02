@@ -12,11 +12,9 @@ last_update:
 ---
 
 
-
 With a range of products that cater to the needs of different users, from hobbyists to industrialists, SenseCAP product line offers a comprehensive suite of solutions for digitalizing the world around us.
 
 In addition to the LoRaWAN sensors, SenseCAP also provides different types of gateway, including hotspots for web3 and LoRaWAN gateways for the LoRaWAN sensing solutions, and an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services enables users to quickly respond to changes in their environment and make data-driven decisions.
-
 
 ## Introduction
 
@@ -45,15 +43,11 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
 5. Secure Communication: LoRa provides strong security features, including end-to-end encryption, ensuring data integrity and confidentiality.
 6. LoRa is typically used in a star-of-stars topology where gateways relay messages between end-devices and a central network server. The gateway acts as a transparent bridge, converting RF packets to IP packets and vice versa.
 
-
-
 ## Hardware Products
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/029cab35952193f5e1ea3c80fda40937-2.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
 
-
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/1ef6149dd438035c41238babee3f27e5-1.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></a></p>
-
 
 ### SenseCAP M2 Multi-Platform Gateway
 
@@ -63,18 +57,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP M2 Multi-Platform LoRaWAN Gateway is a standard LoRaWAN® gateway that supports connecting to different network servers. It supports global LoRaWAN® frequency plans from 865 MHz to 923 MHz and can be used in multiple LoRaWAN® applications like smart building, environmental monitoring systems, precision farming, etc. It has wide-range coverage and strong signal output capability and other features, making it the perfect gateway for building a LoRaWAN® network. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_Multi_Platform_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
-
 
 ### Helium Gateway
 
@@ -86,17 +77,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP M1 is a high-performing, ready-to-use LoRaWAN indoor gateway connected to the Helium LongFi™ Network.It is based on Raspberry Pi 4 and embedded with a WM1302/WM1303 (Semtech SX1302/SX1303) LoRa concentrator. It provides built-in BLE, which helps you set up the device in a few simple steps and supports connecting to the internet via Wi-Fi or Ethernet. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-EU868-p-5022.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 #### SenseCAP M2 Data Only
 
@@ -106,17 +95,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP M2 Data Only is a LoRaWAN Gateway connected to the Helium LongFi Network and able to provide miles of wireless network coverage and data transmission capacity for Long Range/LoRaWAN devices. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 #### SenseCAP M2 Light Gateway
 
@@ -126,18 +113,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP M2 Light Hotspot is a high-performance Helium LoRaWAN gateway that allows users to join the Helium network at a minimal cost. Flexible SenseCAP Licence plans down to $0.05 per day are provided to enable users to enjoy the benefits of PoC and data transfer with minimal investment and more flexibility. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
-
 
 ### Flux Gateway
 
@@ -149,17 +133,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP M4 Square is a device designed to run multiple Web 3.0 Apps. No code seamless set up the CUMULUS FluxNode and Helium light hotspot provides a scalable, decentralized computational network for Flux and miles of wireless network coverage and data transmission capacity for LoRa/LoRaWAN devices. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M4-Sqaure-Bundle.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 ### Outdoor Gateway
 
@@ -169,18 +151,15 @@ LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol designed for
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>SenseCAP Gateway - LoRaWAN is an IP66 industrial-grade outdoor product, supports an extended operating temperature range, making it applicable for low-power consumption, long-range data collection IoT scenarios like smart farming. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_LoRaWAN_Outdoor_Gateway/SenseCAP_LoRaWAN_Outdoor_Gateway_Overview/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
-
 
 ## SenseCAP Cloud Services
 
@@ -192,11 +171,9 @@ SenseCAP Mate APP is a powerful APP for data visualization and remote LoRaWAN de
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-12.png" alt="pir" width={200} height="auto" /></p>
 
-
 ### SenseCAP Portal
 
 SenseCAP Portal
-
 
 ### For Hotspots
 
@@ -205,7 +182,6 @@ SenseCAP Portal
 SenseCAP Hotspot App is an all-in-one App that helps users purchase, deploy, and manage their Web 3.0 devices (Helium, Flux, and more).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/hotspot-app.png" alt="pir" width={1000} height="auto" /></p>
-
 
 #### SenseCAP Dashbaord
 
@@ -220,8 +196,6 @@ An efficient way to manage your SenseCAP devices and rewards, SenseCAP Dashbaord
 ## SenseCAP Tech Support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
-
-
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>

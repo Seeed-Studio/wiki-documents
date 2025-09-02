@@ -14,18 +14,16 @@ last_update:
 ---
 
 # How to use the Lekiwi in Lerobot
- 
+
 :::tip
 
 This tutorial repository maintains the verified stable release of Lerobot as of June 5, 2025. Currently, ​Hugging Face​ has rolled out a ​major upgrade​ to Lerobot, introducing many new features. If you want to experience the latest tutorials, please follow the [​official documentation​ for guidance](https://huggingface.co/docs/lerobot/index).
 
 :::
 
-
-
 ## Introduction
 
-The [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi) is a fully open-source robotic car project launched by [SIGRobotics-UIUC](https://github.com/SIGRobotics-UIUC). It includes the detailed 3D printing files and operation guides, designed to be compatible with the [LeRobot](https://github.com/huggingface/lerobot/tree/main) imitation learning framework. It supports the SO101 robotic arm to enable a complete imitation learning pipeline, 
+The [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi) is a fully open-source robotic car project launched by [SIGRobotics-UIUC](https://github.com/SIGRobotics-UIUC). It includes the detailed 3D printing files and operation guides, designed to be compatible with the [LeRobot](https://github.com/huggingface/lerobot/tree/main) imitation learning framework. It supports the SO101 robotic arm to enable a complete imitation learning pipeline,
 
   <div align="center">
       <img width={800}
@@ -36,9 +34,8 @@ The [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi) is a fully open-source 
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Main Features
- 
+
 1. **Open-source and low-cost**:  It is an open-source, low-cost robotic car solution from The [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)
 2. **Integration with LeRobot**: Designed for integration with [LeRobot platform](https://github.com/huggingface/lerobot)
 3. **Abundant learning resources**: Provides comprehensive open-source learning resources like assembly and calibration guides, and tutorials for testing, data collection, training and deployment to assist users in quickly getting started and developing robotic applications.
@@ -57,20 +54,19 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 - A 12V power supply - You may select this option at checkout if needed. If you already own a 12V power supply, you may skip this option and simply convert your power supply's output connector to a 5521 DC plug.
 
 - Raspberry Pi controller and camera - These must be purchased separately through the order interface.
-:::
 
+:::
 
 ## Specification
 
-| Type | Lekiwi | 
+| Type | Lekiwi |
 |--|--|
-|  Servo Motos | 3x 12v STS3215 1:345 Gear Rate| 
+|  Servo Motos | 3x 12v STS3215 1:345 Gear Rate|
 | Power Supply | 12V DC or Battery |
-| Angle sensor| 12-bit magnetic encoder | 
-| Recommended Operating Temperature Range | 0℃～40℃ | 
-| Communication Method| UART | 
+| Angle sensor| 12-bit magnetic encoder |
+| Recommended Operating Temperature Range | 0℃～40℃ |
+| Communication Method| UART |
 | Control Method | PC |
-
 
 ## Bill of Materials(BOM)
 
@@ -95,26 +91,29 @@ Seeed Studio is only responsible for the quality of the hardware itself. The tut
 ## Initial System Environment
 
 **For Ubuntu x86:**
+
 - Ubuntu 22.04  
 - CUDA 12+  
 - Python 3.10  
 - Torch 2.6  
 
 **For Jetson Orin:**
+
 - Jetson JetPack 6.0+
 - Python 3.10  
 - Torch 2.6  
 
 **For Raspberry Pi:**
-- Raspberry Pi5 4G~16G
 
+- Raspberry Pi5 4G~16G
 
 ## 3D Printing Guide
 
 ### Parts
+
 We provide ready-to-print STL files for the 3D-printed parts below. These can be printed with generic PLA filament on consumer-grade FDM printers. We tested on a Bambu Lab P1S printer. For all components, we just load into bambuslicer, auto-rotate and auto-arrange, enable any recommended supports, and print.
 
-| Item | Quantity | Notes | 
+| Item | Quantity | Notes |
 |:---|:---:|:---:|
 | [Base plate Top](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_plate_layer2.stl) | 1 | |
 | [Base plate Bottom](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_plate_layer1.stl) | 1 | |
@@ -125,11 +124,11 @@ We provide ready-to-print STL files for the 3D-printed parts below. These can be
 | Arducam [base mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/base_camera_mount.stl) and [Wrist mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/wrist_camera_mount.stl)| 1 | **Compatible with [this camera](https://www.amazon.com/Arducam-Camera-Computer-Without-Microphone/dp/B0972KK7BC)** |
 | Webcam [base mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/webcam_mount/webcam_mount.stl), [gripper insert](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/webcam_mount/so100_gripper_cam_mount_insert.stl), and [wrist mount](https://github.com/SIGRobotics-UIUC/LeKiwi/blob/main/3DPrintMeshes/webcam_mount/webcam_mount_wrist.stl) | 1 | **Compatible with [this camera](https://www.amazon.fr/Vinmooog-equipement-Microphone-Enregistrement-conférences/dp/B0BG1YJWFN/)** |
 
-
 ### Printing Parameters
 
 The STL files provided are ready to print on many FDM printers. Below are the tested and suggested settings though others may work.
-- Material: PLA+ 
+
+- Material: PLA+
 - Nozzle Diameter and Precision: 0.2mm nozzle diameter at 0.2mm layer height
 - Infill Density: 15%  
 - Printing Speed: 150 mm/s
@@ -139,7 +138,8 @@ The STL files provided are ready to print on many FDM printers. Below are the te
 
 On your Raspberry Pi:
 
-### 1. [Install Miniconda](https://docs.anaconda.com/miniconda/install/#quick-command-line-install):
+### 1. [Install Miniconda](https://docs.anaconda.com/miniconda/install/#quick-command-line-install)
+
 ```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
@@ -148,6 +148,7 @@ rm ~/miniconda3/miniconda.sh
 ```
 
 ### 2. Restart shell
+
 Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile` or `source ~/.zshrc` if you're using zshell
 
 ### 3. Create and activate a fresh conda environment for lerobot
@@ -157,27 +158,33 @@ conda create -y -n lerobot python=3.10
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):
+
 ```bash
 conda activate lerobot
 ```
 
-### 4. Clone LeRobot:
+### 4. Clone LeRobot
+
 ```bash
 git clone https://github.com/huggingface/lerobot.git ~/lerobot
 ```
 
-### 5. Install ffmpeg in your environment:
+### 5. Install ffmpeg in your environment
+
 When using `miniconda`, install `ffmpeg` in your environment:
+
 ```bash
 conda install ffmpeg -c conda-forge
 ```
 
-### 6. Install LeRobot with dependencies for the feetech motors:
+### 6. Install LeRobot with dependencies for the feetech motors
+
 ```bash
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
 
 ## Install LeRobot on laptop(PC)
+
 If you already have install LeRobot on your laptop you can skip this step, otherwise please follow along as we do the same steps we did on the Pi.
 
 :::tip
@@ -186,35 +193,40 @@ We use the Command Prompt (cmd) quite a lot. If you are not comfortable using th
 
 On your computer:
 
-### 1. [Install Miniconda](https://docs.anaconda.com/miniconda/install/#quick-command-line-install):
+### 1. [Install Miniconda](https://docs.anaconda.com/miniconda/install/#quick-command-line-install)
 
 ### 2. Restart shell
+
 Copy paste in your shell: `source ~/.bashrc` or for Mac: `source ~/.bash_profile` or `source ~/.zshrc` if you're using zshell
 
 ### 3. Create and activate a fresh conda environment for lerobot
-
 
 ```bash
 conda create -y -n lerobot python=3.10
 ```
 
 Then activate your conda environment (do this each time you open a shell to use lerobot!):
+
 ```bash
 conda activate lerobot
 ```
 
-### 4. Clone LeRobot:
+### 4. Clone LeRobot
+
 ```bash
 git clone https://github.com/ZhuYaoHui1998/lerobot ~/lerobot
 ```
 
-### 5. Install ffmpeg in your environment:
+### 5. Install ffmpeg in your environment
+
 When using `miniconda`, install `ffmpeg` in your environment:
+
 ```bash
 conda install ffmpeg -c conda-forge
 ```
 
-### 6. Install LeRobot with dependencies for the feetech motors:
+### 6. Install LeRobot with dependencies for the feetech motors
+
 ```bash
 cd ~/lerobot && pip install -e ".[feetech]"
 ```
@@ -224,7 +236,7 @@ cd ~/lerobot && pip install -e ".[feetech]"
 <details>
 <summary>Assemble Lekiwi</summary>
 
-### video tutorial:
+### video tutorial
 
 <div class="video-container">
 <iframe width="900" height="600" src="https://www.youtube.com/embed/_QjhOMSnobU?si=xjhfCztoWZcFwW6j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -250,8 +262,7 @@ cd ~/lerobot && pip install -e ".[feetech]"
 <iframe width="900" height="600" src="https://www.youtube.com/embed/q7zp4qIFdnM?si=fIYgI_3xbrWL7wUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
-### The following is a photo tutorial:
+### The following is a photo tutorial
 
 You can refer official [assemble tutorial](https://github.com/SIGRobotics-UIUC/LeKiwi).
 
@@ -304,7 +315,6 @@ Remember the ID arrangement: 8 represents the rear wheel, while 7 and 9 correspo
 |:---------:|:---------:|:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/13.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/14.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/15.jpg) |
 
-
 **H. Add the servo driver and connect all circuits.**
 
 | **Step 1** | **Step 2** |**Step 3** |**Step 4** |
@@ -318,6 +328,7 @@ Remember the ID arrangement: 8 represents the rear wheel, while 7 and 9 correspo
 The **Power IN** connects directly to the power supply, like Step8, while the **USB-C** port provides 5V power to the Raspberry Pi.  
 
 For the additional **2-pin terminals (5V & 12V)**:  
+
 - If using a **7.4V SO10x robotic arm**, power the **Servo Motors Board** via the **5V output**.  
 - If using a **12V robotic arm**, power the **Servo Motors Board** directly from the **DC power splitter**, like Step 8.
 
@@ -361,7 +372,7 @@ For the additional **2-pin terminals (5V & 12V)**:
 
 And ensure both the servo control cable and USB camera are connected to the Raspberry Pi.
 
-|  | 
+|  |
 |:---------:|
 | ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/31.jpg) |
 
@@ -375,10 +386,9 @@ Check the circuit connections; after assembly, the Lekiwi should be connected to
 | Leader arm --> PC                |
 :::
 
-
 ## Configure the motors
 
-### Leader arm:
+### Leader arm
 
 To find the port for each bus servo adapter, run this script:
 
@@ -404,11 +414,13 @@ Example output when identifying the port (e.g., `/dev/tty.usbmodem575E0031751` o
 Example output when identifying the port (e.g., `/dev/tty.usbmodem575E0032081`, or possibly `/dev/ttyACM1` on Linux):
 
 :::tip
+
 ```bash
 Finding all available ports for the MotorBus.
 ['/dev/tty.usbmodem575E0032081']
 Remove the USB cable from your MotorsBus and press Enter when done.
 ```
+
 Remember to remove the usb, then Press Enter, otherwise the interface will not be detected.
 :::
 
@@ -461,9 +473,9 @@ When you are done, the script will simply finish, at which point the motors are 
 <iframe width="900" height="600" src="https://www.youtube.com/embed/hbW6eFYkHTg?si=jKdpTyI8wRC-iHxO" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-### Lekiwi:
+### Lekiwi
 
-You should follow the previous command to find the correct USB and setup motors. 
+You should follow the previous command to find the correct USB and setup motors.
 
 The instructions for configuring the motors can be found in the SO101 [docs](https://huggingface.co/docs/lerobot/so101#configure-the-motors) (Same as leader arm). Besides the ids for the arm motors, we also need to set the motor ids for the mobile base. These need to be in a specific order to work. Below an image of the motor ids and motor mounting positions for the mobile base. Note that we only use one Motor Control board on LeKiwi. This means the motor ids for the wheels are 7, 8 and 9.
 
@@ -476,13 +488,12 @@ python -m lerobot.setup_motors \
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/lekiwi/motor_ids.png" />
 </div>
 
-
-
 ## Calibration
+
 Now we have to calibrate the leader arm and the follower arm. The wheel motors don’t have to be calibrated. The calibration process is very important because it allows a neural network trained on one robot to work on another.
 
 ### Calibrate follower arm (on mobile base)
@@ -547,7 +558,6 @@ You should see on your laptop something like this: ```[INFO] Connected to remote
 | Medium     | 0.25               | 60                     |
 | Slow       | 0.1                | 30                     |
 
-
 | Key | Action         |
 | --- | -------------- |
 | W   | Move forward   |
@@ -567,43 +577,55 @@ If you use a different keyboard you can change the keys for each command in the 
 
 If you have the **wired** LeKiwi version please run all commands including both these teleoperation commands on your laptop.
 
-
 ## Troubleshoot communication
 
 If you are having trouble connecting to the Mobile SO100, follow these steps to diagnose and resolve the issue.
 
 ### 1. Verify IP Address Configuration
+
 Make sure that the correct ip for the Pi is set in the configuration file. To check the Raspberry Pi's IP address, run (on the Pi command line):
+
 ```bash
 hostname -I
 ```
 
 ### 2. Check if Pi is reachable from laptop/pc
+
 Try pinging the Raspberry Pi from your laptop:
+
 ```bach
 ping <your_pi_ip_address>
 ```
 
 If the ping fails:
+
 - Ensure the Pi is powered on and connected to the same network.
 - Check if SSH is enabled on the Pi.
 
 ### 3. Try SSH connection
+
 If you can't SSH into the Pi, it might not be properly connected. Use:
+
 ```bash
 ssh <your_pi_user_name>@<your_pi_ip_address>
 ```
+
 If you get a connection error:
+
 - Ensure SSH is enabled on the Pi by running:
+
   ```bash
   sudo raspi-config
   ```
+
   Then navigate to: **Interfacing Options -> SSH** and enable it.
 
 ### 4. Same config file
+
 Make sure the configuration file on both your laptop/pc and the Raspberry Pi is the same.
 
 ## Record a dataset
+
 Once you're familiar with teleoperation, you can record your first dataset with LeKiwi.
 
 We use the Hugging Face hub features for uploading your dataset. If you haven’t previously used the Hub, make sure you can login via the cli using a write-access token, this token can be generated from the [Hugging Face settings](https://huggingface.co/settings/tokens).
@@ -620,6 +642,7 @@ Then store your Hugging Face repository name in a variable:
 HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
+
 Now you can record a dataset. To record episodes and upload your dataset to the hub, execute this API example tailored for LeKiwi. Make sure to first adapt the `remote_ip`, `repo_id`, `port` and `task` in the script. If you would like to run the script for longer you can increase `NB_CYCLES_CLIENT_CONNECTION`.
 
 <div align="center">
@@ -630,6 +653,7 @@ Now you can record a dataset. To record episodes and upload your dataset to the 
 ```bash
 python examples/lekiwi/record.py
 ```
+
 Dataset upload
 
 Locally, your dataset is stored in this folder: `~/.cache/huggingface/lerobot/{repo-id}`. At the end of data recording, your dataset will be uploaded on your Hugging Face page (e.g. https://huggingface.co/datasets/cadene/so101_test) that you can obtain by running:
@@ -654,23 +678,26 @@ Avoid adding too much variation too quickly, as it may hinder your results.
 
 If you want to dive deeper into this important topic, you can check out the [blog](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) [post](https://huggingface.co/blog/lerobot-datasets#what-makes-a-good-dataset) we wrote on what makes a good dataset.
 
-### Troubleshooting:
+### Troubleshooting
 
 On Linux, if the left and right arrow keys and escape key don’t have any effect during data recording, make sure you’ve set the `$DISPLAY` environment variable. See [pynput limitations](https://pynput.readthedocs.io/en/latest/limitations.html#linux).
 
 :::
 
 ### Wired version
+
 If you have the **wired** LeKiwi version please run all commands including both these record dataset commands on your laptop.
 
 ## Visualize the dataset
 
 If you uploaded your dataset to the hub with `--dataset.push_to_hub=true`, you can [visualize your dataset online](https://huggingface.co/spaces/lerobot/visualize_dataset) by copy pasting your repo id given by:
+
 ```bash
 echo ${HF_USER}/lekiwi_test
 ```
 
 If you didn't upload with `--dataset.push_to_hub=false`, you can also visualize it locally with (a window can be opened in the browser `http://127.0.0.1:9090` with the visualization tool):
+
 ```bash
 python -m lerobot.scripts.visualize_dataset_html \
   --repo-id ${HF_USER}/lekiwi_test \# <-change to your repo-id
@@ -678,6 +705,7 @@ python -m lerobot.scripts.visualize_dataset_html \
 ```
 
 ## Replay an episode
+
 To replay an episode run the API example below, make sure to change `remote_ip`, `port`, LeRobotDatasetId and episode index. The file is under that path `examples/lekiwi/replay.py`.
 
 <div align="center">
@@ -706,6 +734,7 @@ python lerobot/scripts/train.py \
 ```
 
 Let's explain it:
+
 1. We provided the dataset as argument with `--dataset.repo_id=${HF_USER}/lekiwi_test`.
 2. We provided the policy with `policy.type=act`. This loads configurations from `configuration_act.py`. Importantly, this policy will automatically adapt to the number of motor states, motor actions and cameras of your robot (e.g. `laptop` and `phone`) which have been saved in your dataset.
 4. We provided `policy.device=cuda` since we are training on a Nvidia GPU, but you could use `policy.device=mps` to train on Apple silicon.
@@ -728,6 +757,7 @@ python examples/lekiwi/evaluate.py
 ```
 
 As you can see, it's almost the same command as previously used to record your training dataset. Two things changed:
+
 1. There is an additional `policy` argument which indicates the path to your policy checkpoint with  (e.g. `outputs/train/eval_act_lekiwi_test/checkpoints/last/pretrained_model`). You can also use the model repository if you uploaded a model checkpoint to the hub (e.g. `${HF_USER}/act_lekiwi_test`).
 2. The name of dataset begins by `eval` to reflect that you are running inference (e.g. `${HF_USER}/eval_act_lekiwi_test`).
 
@@ -735,7 +765,7 @@ As you can see, it's almost the same command as previously used to record your t
 
 For hardware issues, please contact customer service. For usage questions, join Discord.
 
-[LeRobot platform](https://github.com/huggingface/lerobot) 
+[LeRobot platform](https://github.com/huggingface/lerobot)
 
 [LeRobot Discord channel](https://discord.gg/8TnwDdjFGU)
 

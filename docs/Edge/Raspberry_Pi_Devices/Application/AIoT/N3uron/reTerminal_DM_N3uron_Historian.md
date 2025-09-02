@@ -21,27 +21,25 @@ Introducing [N3uron](https://n3uron.com/) Historian: a powerful time-series stor
 
 ## Prerequisites
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
-
-
+</div>
 
 ### Software
 
@@ -55,7 +53,6 @@ In x32 and ARM architectures, the user requires first to install MongoDB and con
 
 Place the provided [files](https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/n3uron_historian.zip) (install.sh, uninstall.sh, libcryto.so.1.1, and libssl.so1.1) in a separate folder on your reterminal DM desktop or any other preferred location.
 
-
 - **Step 2**: Navigate to the Folder
 
 Open a terminal and navigate to the folder containing the files.
@@ -63,7 +60,6 @@ Open a terminal and navigate to the folder containing the files.
 ```sh
 cd your/folder/path
 ```
-
 
 - **Step 3**: Run Installation Script
 
@@ -75,29 +71,28 @@ Execute the install.sh file to install MongoDB.
 
 You may be prompted to enter your sudo password during the installation process.
 
-
 - **Step 4**: Verify Installation
 
 After the installation is complete, enter the following command to access MongoDB:
 
-
 ```sh
 mongo
 ```
+
 This will open the MongoDB shell.
 
 - **Step 5**: Create a Database
 
 Inside the MongoDB shell, enter the following command to create a database named "mongo" if it doesn't exist:
 
-
 ```sh
 use mongo
 ```
+
 Now, MongoDB is installed on your reTerminal DM, and you have created a database named "mongo".
 
 - **Step 6**: If your distribution doesn't provide this libraries, place them in this libcryto.so.1.1, and libssl.so1.1 on  respective folders /usr/lib and /lib.
-Use this commands  for this 
+Use this commands  for this
 
 ```sh
 sudo cp /path/to/your/folder/libcryto.so.1.1 /usr/lib
@@ -107,12 +102,12 @@ sudo cp /path/to/your/folder/ libssl.so1.1 /usr/lib
 sudo cp /path/to/your/folder/ libssl.so1.1 /lib
 
 ```
-## Create Historian Module 
+
+## Create Historian Module
 
 - **Step 1**: Access N3uron Interface
 
 Go to http://localhost:8003 in your web browser.
-
 
 - **Step 2**: Navigate to Configuration
 
@@ -132,11 +127,11 @@ Click on the Historian module you just created. Change the Database type to Exte
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/historianconfig.PNG" /></center>
 
-## Enable Node History mode 
+## Enable Node History mode
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/nodemode.PNG" /></center>
 
-## Create a Historian tag 
+## Create a Historian tag
 
 - **Step 01**: Within the **Explorer panel**, select **Tags**.
 
@@ -162,7 +157,7 @@ Ensure that **History** is **Enabled**, the module name is set to **Historian**
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/historyenabled.png" /></center>
 
-## Visualization 
+## Visualization
 
 If you have created a **WebVision** module, you can follow these steps:
 
@@ -188,7 +183,6 @@ Under the **New component** section, add a **Chart** and give it a name.
 
 Within the chart, locate the datasets. Tap on the three dots and select **New Dataset**, then choose **HistoricalDataSet**.
 
-
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/newhistorian.PNG" /></center>
 
 **Step 5**: Configure Historical Dataset
@@ -207,7 +201,7 @@ Under the chart, select **New chartSeries** to add a new chart series.
 
 **Step 7**: Link Historian Dataset to Chart
 
-To link the historian dataset to the chart, select **Link dataset** and choose the Historian dataset you just created. 
+To link the historian dataset to the chart, select **Link dataset** and choose the Historian dataset you just created.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/linkdataset.PNG" /></center>
 
@@ -221,7 +215,7 @@ For a deeper understanding of chart attributes, it's recommended to refer to the
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron_Historian/graph.gif" /></center>
 
-## Using the Historian Module generate the graph 
+## Using the Historian Module generate the graph
 
 For this task, we'll utilize the Historian module to load data. Unlike previous methods where we started from scratch, this approach offers a much easier way to retrieve data in CSV format for future analysis.
 
@@ -296,13 +290,11 @@ Press the button provided to download the data in CSV format.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

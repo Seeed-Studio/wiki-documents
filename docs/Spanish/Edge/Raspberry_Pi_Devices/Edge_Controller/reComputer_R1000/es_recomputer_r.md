@@ -352,7 +352,6 @@ Este controlador es ideal para la gestión remota de dispositivos, la administra
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## Visión General del Hardware
@@ -483,7 +482,6 @@ Después de apagar el sistema, espera al menos 10 segundos antes de reiniciarlo 
     </tr>
   </tbody>
 </table>
-
 </div>
 
 Para obtener un mapa de GPIO y offsets, usa el siguiente comando:
@@ -987,7 +985,6 @@ Aquí está la lista de accesorios y módulos opcionales:
 
   </tbody>
 </table>
-
 </div>
 
 ### Ranuras Mini-PCIe
@@ -1435,7 +1432,6 @@ El reComputer R1000 admite SSD NVMe 2280 y aceleradores de IA (Hailo) mediante u
   </tr>
   </tbody>
 </table>
-
 </div>
 
 :::note

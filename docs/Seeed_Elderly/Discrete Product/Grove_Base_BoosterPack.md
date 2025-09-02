@@ -25,20 +25,22 @@ Grove is a modular, ready-to-use tool set that takes a building block approach t
 
 The LaunchPad is a set of Evaluation Kits from Texas Instruments. To introduce new functionality to the LaunchPad evaluation kits, we present the BoosterPack which acts as a plug-in board that fit on top of the LaunchPad baseboards. It offers a convenient and easy way for you to use more than one hundred Grove modules with standardized connectors, including sensors, actuators, displays, lights, motors and so on.
 
+## Features
 
-##   Features
 ---
-*   Seeedstudio presents the newly launched Grove Base BoosterPack allowing Texas Instruments Launchpad to be connected closed with our Groves Family,further enabling rapid prototype and combinations with a range of Sensors, actuators,displays,lights,motors and etc.
+- Seeedstudio presents the newly launched Grove Base BoosterPack allowing Texas Instruments Launchpad to be connected closed with our Groves Family,further enabling rapid prototype and combinations with a range of Sensors, actuators,displays,lights,motors and etc.
 
-*   The Grove Base BoosterPack has thirteen Groves 4-pin standard interfaces ,including five analog, five digital and three serial port, acting as a plug-n-play expansion module on Launchpad based on MSP430 launchpad.It also provides various of tutorials on how to connect with TI MSP430, there are 11 different kinds of projects for reference prototype ,which offers a convenient way to guide your creativity.
+- The Grove Base BoosterPack has thirteen Groves 4-pin standard interfaces ,including five analog, five digital and three serial port, acting as a plug-n-play expansion module on Launchpad based on MSP430 launchpad.It also provides various of tutorials on how to connect with TI MSP430, there are 11 different kinds of projects for reference prototype ,which offers a convenient way to guide your creativity.
 
-*   There is a RED LED on the Grove BoosterPack. It will indicate the power supply.
+- There is a RED LED on the Grove BoosterPack. It will indicate the power supply.
 
 ![](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/img/BoosterpackpinMapping.jpg)
 
-##   Using the Grove Base BoosterPack
+## Using the Grove Base BoosterPack
+
 ---
-###   Using a 40-pin LaunchPad
+
+### Using a 40-pin LaunchPad
 
 i.e. MSP-EXP430F5529LP, EK-TM4C123GXL, etc
 
@@ -161,7 +163,7 @@ Using the table below, developers should be able to read an analog value from a 
 </tr>
 </table>
 
-###   Using a 20-pin LaunchPad
+### Using a 20-pin LaunchPad
 
 If you are using a 20-pin LaunchPad, you can use jumpers or jumper wire to make the appropriate connections between a Grove connector &amp; the BoosterPack connector.
 
@@ -170,9 +172,11 @@ Using your specific LaunchPad's pin out diagram, you can physically/electrically
 
 With the help of these pin diagrams, you know which pin has the function you need. If you want to use Grove connector J5 for an analog Grove module (i.e. potentiometer knob), you can use the Energia pin maps to identify an analog-capable pin of the BoosterPack connector. Using a jumper of wire, you can connect pin number 22 with the analog-capable pin that is available. For example, if you are using an MSP-EXP430G2 LaunchPad, you can use a jumper or a cable to connect pin 22 with pin 2.
 
-##   Supported Products
+## Supported Products
+
 ---
-###   Grove List
+
+### Grove List
 
 <!-- *   [1. Buzzer](/Grove-Buzzer#With_TI_LaunchPad)
 
@@ -194,16 +198,15 @@ With the help of these pin diagrams, you know which pin has the function you nee
 
 *   [10. Temperature Humidity Sensor ](/Grove-TemperatureAndHumidity_Sensor) -->
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove_Base_BoosterPack_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##   Resources
 ---
+
 - [Hardware eagle files](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove_Base_BoosterPack_v1.0.zip)
 
 - [Grove Starter Kit For LaunchPad User's Manual](https://files.seeedstudio.com/wiki/Grove_Base_BoosterPack/res/Grove%20Starter%20Kit%20Manual.pdf)
@@ -213,11 +216,11 @@ With the help of these pin diagrams, you know which pin has the function you nee
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

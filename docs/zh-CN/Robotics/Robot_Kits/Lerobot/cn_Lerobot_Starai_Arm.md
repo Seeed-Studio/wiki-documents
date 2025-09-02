@@ -1,6 +1,6 @@
 ---
-description: 本维基提供 Starai robotic arm 的调试教程，并在 Lerobot 框架内实现数据收集和训练。
-title: 如何在Lerobot中使用 Starai robotic arm 
+description: 本维基提供华馨京 StarAI 机械臂的调试教程，并在 Lerobot 框架内实现数据收集和训练。
+title: 基于 LeRobot 的华馨京 StarAI 机械臂入门教程
 keywords:
 - Lerobot
 - Huggingface
@@ -9,11 +9,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /cn/lerobot_starai_arm
 last_update:
-  date: 8/20/2025
+  date: 9/1/2025
   author: LiShanghang
 ---
 
-# 如何在Lerobot中使用 Starai robotic arm
+# 基于 LeRobot 的华馨京 StarAI 机械臂入门教程
 
 :::tip
 [LeRobot](https://github.com/huggingface/lerobot/tree/main) 致力于为真实世界的机器人提供 PyTorch 中的模型、数据集和工具。其目标是降低机器人学的入门门槛，使每个人都能通过共享数据集和预训练模型进行贡献和受益。LeRobot 集成了经过验证的前沿方法，专注于模仿学习和强化学习。它提供了一套预训练模型、包含人类收集的示范数据集和仿真环境，使用户无需进行机器人组装即可开始使用。未来几周，计划在当前最具成本效益和性能的机器人上增强对真实世界机器人的支持。
@@ -731,15 +731,23 @@ pip3 install rerun-sdk==0.23
 
 矽递科技中文Wiki文档：[如何在最新版Lerobot中使用SO10xArm机械臂](https://wiki.seeedstudio.com/cn/lerobot_so100m_new/)
 
-Huggingface Project:[Lerobot](https://github.com/huggingface/lerobot/tree/main)
+lerobot-starai github: [lerobot-starai](https://github.com/Welt-liu/lerobot-starai)
 
-ACT or ALOHA:[Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 
-VQ-BeT:[VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_description)
 
-Diffusion Policy:[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
+StarAI Robot Arm moveit2: [star-arm-moveit2](https://github.com/Welt-liu/star-arm-moveit2)
 
-TD-MPC:[TD-MPC](https://www.nicklashansen.com/td-mpc/)
+Huggingface Project: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
+
+ACT or ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+
+VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+
+Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
+
+TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
 
 ## 技术支持与产品讨论

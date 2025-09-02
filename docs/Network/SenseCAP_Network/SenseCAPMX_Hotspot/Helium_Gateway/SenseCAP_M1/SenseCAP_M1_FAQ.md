@@ -201,7 +201,7 @@ When using an Ethernet cable, please firmly press the Ethernet cable into the po
 
 ---
 
-# Steps to check your Hotspot Firmware version:
+# Steps to check your Hotspot Firmware version
 
 1. Long press the Hotspot Bluetooth button for 6-10s, the blue LED will be flashing slowly, then pair your hotspot.
 2. Run Diagnostics and find the Hotspot Firmware version. Alternatively you can use the SenseCAP Dashboard once registered to check your firmware.
@@ -218,15 +218,10 @@ When using an Ethernet cable, please firmly press the Ethernet cable into the po
 
 <table style={{borderCollapse: 'collapse', width: '100%', height: 125}} border={1}><tbody><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Frequency Plan</strong></td><td style={{width: '33.3333%', height: 21}}>EU868</td><td style={{width: '33.3333%', height: 21}}>US915</td></tr><tr style={{height: 20}}><td style={{width: '33.3333%', height: 20}}><strong>Certification</strong></td><td style={{width: '33.3333%', height: 20}}>CE</td><td style={{width: '33.3333%', height: 20}}>FCC</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Regulation Max Transmit Power</strong></td><td style={{width: '33.3333%', height: 21}}>14 dBm</td><td style={{width: '33.3333%', height: 21}}>30 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Transmit Power With Stock Antenna</strong></td><td style={{width: '33.3333%', height: 21}}>13.487 dBm</td><td style={{width: '33.3333%', height: 21}}>26.7 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Transmit Power Without Antenna</strong></td><td style={{width: '33.3333%', height: 21}}>10.687 dBm</td><td style={{width: '33.3333%', height: 21}}>25 dBm</td></tr><tr style={{height: 21}}><td style={{width: '33.3333%', height: 21}}><strong>Stock Antenna Gain</strong></td><td style={{width: '33.3333%', height: 21}}>2.8 dBi</td><td style={{width: '33.3333%', height: 21}}>2.6 dBi</td></tr></tbody></table>
 
-
-* * *
-
 **What is the FAN Auto Control Rules?**
 ---------------------------------------
 
 ![SenseCAP M1 Fan Auto Control Logic](https://www.sensecapmx.com/wp-content/uploads/2022/07/fan-control-logic-1.png)
-
-* * *
 
 **What should I do if my SD card usage is above 85%?**
 ------------------------------------------------------

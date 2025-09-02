@@ -42,7 +42,7 @@ Before you start this project, you may need to prepare your hardware and softwar
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 * Python 3.11 may be incompatible with fuxa. If your Python version is 3.11, please consider changing to a different Python version.

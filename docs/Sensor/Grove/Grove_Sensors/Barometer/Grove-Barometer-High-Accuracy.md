@@ -22,17 +22,16 @@ The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit ad
 
 ## Features
 
-
--   Digital two wire (I2C) interface
--   Command-based Reading, Compensated (Optional)
--   Programmable Events and Interrupt Controls
--   Full Data Compensation
--   Wide barometric pressure range
--   Flexible supply voltage range
--   Ultra-low power consumption
--   Altitude Resolution down to 0.01 meter
--   Temperature measurement included
--   I2C Address: 0x76
+- Digital two wire (I2C) interface
+- Command-based Reading, Compensated (Optional)
+- Programmable Events and Interrupt Controls
+- Full Data Compensation
+- Wide barometric pressure range
+- Flexible supply voltage range
+- Ultra-low power consumption
+- Altitude Resolution down to 0.01 meter
+- Temperature measurement included
+- I2C Address: 0x76
 
 :::note
     If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
@@ -40,27 +39,27 @@ The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit ad
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Application Ideas
 
-
--   High Precision Mobile Altimeter / Barometer
--   Industrial Pressure and Temperature Sensor System
--   Automotive Systems
--   Personal Electronics Altimetry
--   Adventure and Sports watches
--   Medical Gas Control System
--   Weather Station Equipment
--   Indoor Navigation and Map Assist
--   Heating, Ventilation, Air Conditioning
+- High Precision Mobile Altimeter / Barometer
+- Industrial Pressure and Temperature Sensor System
+- Automotive Systems
+- Personal Electronics Altimetry
+- Adventure and Sports watches
+- Medical Gas Control System
+- Weather Station Equipment
+- Indoor Navigation and Map Assist
+- Heating, Ventilation, Air Conditioning
 
 ## Specifications
 
 <div class="table-center">
 <table align="center">
-	<tr>
-	    <th style={{width:300, height:'auto'}}>Parameter</th>
+ <tr>
+     <th style={{width:300, height:'auto'}}>Parameter</th>
       <th style={{width:300, height:'auto'}}>Description</th>
-	</tr>
+ </tr>
   <tr>
     <td>Supply Voltage</td>
     <td>1.8v~3.6v</td>
@@ -85,7 +84,8 @@ The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit ad
     <td>Dimension</td>
     <td>20.4 × 41.8 × 9.7 mm</td>
   </tr>
-</table></div>
+</table>
+</div>
 
 ## Platforms Supported
 
@@ -96,6 +96,7 @@ The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit ad
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
+
 ## Hardware Overview
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/dimensions.jpg) -->
 
@@ -107,55 +108,52 @@ The chip only accepts 1.8V to 3.6V input voltage. However, with outer circuit ad
 
 Barometric condition is one of the criteria used to predict coming change in weather and altitude above sea level. Here is a demo to show you how to read the barometric data from this Grove - Barometer Sensor.
 
-
 #### Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeeduino V4.2</th>
-			<th>Base Shield</th>
-			<th>Grove-Barometer-High-Accuracy</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Base-Shield-V2.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-High-Accuracy.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeeduino V4.2</th>
+   <th>Base Shield</th>
+   <th>Grove-Barometer-High-Accuracy</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Base-Shield-V2.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-High-Accuracy.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 - **Step 2.** Connect Grove-Barometer-High-Accuracy to port **I2C** of Grove-Base Shield.
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-
 <!--link-->
 <!-- ![with_ardu](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/with_ardu.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/with_ardu.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 :::note
-	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
 <!--I2C-->
 | seeeduino_v4 | Grove-Barometer-High-Accuracy  |
@@ -165,16 +163,13 @@ Barometric condition is one of the criteria used to predict coming change in wea
 | SDA         | SDA                      |
 | SCL         | SCL                      |
 
-
 #### Software
 
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/Grove_Barometer_HP20x) from Github.
 
 **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example -> Grove barometer HP20x -> HP20x_demo.
-
 
 Here is the code
 
@@ -268,55 +263,50 @@ void loop()
 
 **Step 4.** Open the serial monitor to receive the sensor's data including temperature, barometric pressure value, relative atmosphere pressure and altitude.
 
-
 ### Play With Raspberry Pi
 
 #### Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
-
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>SRaspberry pi</th>
-			<th>Grove Base Hat for Raspberry Pi</th>
-			<th>Grove-Barometer-High-Accuracy</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-High-Accuracy.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>SRaspberry pi</th>
+   <th>Grove Base Hat for Raspberry Pi</th>
+   <th>Grove-Barometer-High-Accuracy</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Barometer-High-Accuracy.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 - **Step 2.** Plug the Grove Base Hat for Raspberry Pi into Raspberry.
 - **Step 3.** Connect Grove-Barometer-High-Accuracy  to **I2C** port of Grove Base Hat for Raspberry Pi.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-
 <!-- ![with_rpi](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/with_rpi.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/img/with_rpi.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 #### Software
 
@@ -331,8 +321,7 @@ cd grove.py
 sudo pip3 install .
 ```
 
--	**Step 3.** Excute below commands to use this sensor
-
+- **Step 3.** Excute below commands to use this sensor
 
 ```bash
 sudo apt install python3-virtualenv
@@ -590,19 +579,16 @@ if __name__ == "__main__":
     
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High_Accuracy_v1.0_sch_pcb.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
--  **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High_Accuracy_ v1.0_sch_pcb.zip)
--  **[Datasheet]** [HP206F Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/HP206F_Datasheet.pdf)
--  **[Library]** [Github repository for Grove\_Barometer\_HP20x with arduino](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
+- **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High_Accuracy_ v1.0_sch_pcb.zip)
+- **[Datasheet]** [HP206F Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/HP206F_Datasheet.pdf)
+- **[Library]** [Github repository for Grove\_Barometer\_HP20x with arduino](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
 
 ## Projects
 
@@ -614,20 +600,19 @@ Our mission with nature is to preserve it, designing and implementing technologi
 ## Tech Support & Product Discussion
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-
-

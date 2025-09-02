@@ -225,7 +225,7 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
   </tbody>
 </table>
 
-## Hardware Overview 
+## Hardware Overview
 
 ### Full System
 
@@ -525,7 +525,7 @@ import TabItem from '@theme/TabItem';
 
 <!-- The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra) -->
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 tar -xvf <file_name>.tar.gz
@@ -533,7 +533,7 @@ tar -xvf <file_name>.tar.gz
 
 #### Flash to Jetson
 
-- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 1:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_reserver-orin-industrial
@@ -621,7 +621,7 @@ Here it will ask whether to replace the files. Type A and press ENTER to replace
 
 #### Flash to Jetson
 
-- **Step 1:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
+- **Step 1:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows
 
 ```sh
 cd Linux_for_Tegra
@@ -665,6 +665,7 @@ sudo apt install nvidia-jetpack -y
 <!-- Code END -->
 
 ## Hardware and Interfaces Usage
+
 :::info
   To learn more about how to use all the hardware and interfaces on the reServer Industrial board, you need to follow this [**wiki**](/reserver_industrial_hardware_interface_usage):
 :::
@@ -672,6 +673,7 @@ sudo apt install nvidia-jetpack -y
 ## Resources
 
 (change the links)
+
 - [reServer Industrial Datasheet](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [reServer Industrial Reference Guide](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
 - [NVIDIA Jetson Devices and Carrier Boards Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)

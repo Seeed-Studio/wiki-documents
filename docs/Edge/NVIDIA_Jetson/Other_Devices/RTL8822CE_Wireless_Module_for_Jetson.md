@@ -22,9 +22,8 @@ last_update:
 
 The RTL8822CE is a compact Dual-band WLAN+Bluetooth Combo M.2 Card that integrates a 2T2R Dual-band WLAN subsystem with PCI Express controllers and a Bluetooth v5.0 subsystem with USB support. Compatible with IEEE 802.11 a/b/g/n/ac standards, it delivers a maximum PHY rate of up to 867 Mbps and supports Bluetooth dual mode (v5.0/v4.2/v2.1). Ideal for high-performance wireless and Bluetooth connectivity for using with embedded devices such as [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html).
 
-
-
 ## Features
+
 - Supports 2.4G/5GHz dual-band
 - Wireless PHY rate can reach up to 867Mbps
 - IEEE Standards: IEEE 802.11a/b/g/n/ac
@@ -119,19 +118,16 @@ Additionally, we can configure the wireless module via the command line, such as
 
 :::
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

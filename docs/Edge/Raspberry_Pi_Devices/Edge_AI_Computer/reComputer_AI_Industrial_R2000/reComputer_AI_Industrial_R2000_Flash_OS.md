@@ -11,7 +11,7 @@ last_update:
   date: 05/06/2025
   author: Jiahao Li
 ---
-#  reComputer AI Industrial R2000 Flash OS
+# reComputer AI Industrial R2000 Flash OS
 
 <div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/7/-/7-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -31,12 +31,13 @@ You need to prepare the following hardware
 - Host Computer (Windows/Mac/Linux) x 1
 - Ethernet cable x 1
 - Power adapter (12V-24V) BYO
-- USB Type-C cable x 1 
+- USB Type-C cable x 1
 
 ## Software Requirements
 
 - [usbboot tool](https://github.com/raspberrypi/usbboot)
 - [Raspberry Pi Imager APP](https://www.raspberrypi.com/software/)
+
 ## Flash OS
 
 ### For Windows host computer
@@ -140,7 +141,6 @@ Here you can **set a hostname, enable SSH, set a password, configure wifi, set l
 - **Step 5.** Click **CHOOSE OS** and select your preferred OS
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/system.png" /></div>
-
 
 **NOTE:** You can select other OS such as **64-bit Ubuntu** by navigating into **Other general purpose OS**
 
@@ -274,7 +274,6 @@ Finally, click `Next` and wait for the flashing process to complete.
 
 Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
 
-
 Copy pcie-fix.dtbo to /overlays file like below:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>
@@ -285,17 +284,16 @@ Modify the `config.txt`, add `dtoverlay=pcie-fix` at the end of the file like be
 
 And then Use `Ctrl+X` and input `y` to store this file.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

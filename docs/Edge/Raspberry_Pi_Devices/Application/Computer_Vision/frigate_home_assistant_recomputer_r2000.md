@@ -16,7 +16,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-#  Frigate NVR and Hailo on reComputer R2000 connect with Home Assistant
+# Frigate NVR and Hailo on reComputer R2000 connect with Home Assistant
 
 ## Introduction
 
@@ -28,7 +28,7 @@ In this guide, we'll walk you through how to install **Frigate on a reComputer A
 
 ## Prerequisites
 
-### Hardware Requirements 
+### Hardware Requirements
 
 <div class="table-center">
   <table align="center">
@@ -37,7 +37,7 @@ In this guide, we'll walk you through how to install **Frigate on a reComputer A
          <th>reComputer AI R2000</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-114993595-recomputer-ai-industrial-r2135-12.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -55,24 +55,23 @@ In this guide, we'll walk you through how to install **Frigate on a reComputer A
   </table>
 </div>
 
-##  Install Hailo PCIe Driver
+## Install Hailo PCIe Driver
 
-### Step 1: Raspberry Pi Configuration 
+### Step 1: Raspberry Pi Configuration
 
 ```bash
 sudo apt update
 sudo raspi-config
 ```
 
-* Navigate to `6 Advanced Options > A8 PCIe Speed`
-* Select `Yes` to enable PCIe Gen 3
-* Exit and select `Finish`
+- Navigate to `6 Advanced Options > A8 PCIe Speed`
+- Select `Yes` to enable PCIe Gen 3
+- Exit and select `Finish`
   
-
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/pcie.png" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/pcie.png"
+    style={{ width: 600}}
   />
 </div>
 
@@ -190,7 +189,6 @@ services:
       - 5000:5000
 ```
 
-
 ### Create Frigate Config File (config/config.yml)
 
 ```bash
@@ -247,14 +245,12 @@ docker compose -f frigate.yml up -d
 
 Visit: `http://<your-device-ip>:5000`
 
-
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/frigate_web.png" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/frigate_web.png"
+    style={{ width: 600}}
   />
 </div>
-
 
 ## Home Assistant Integration
 
@@ -265,12 +261,12 @@ Assuming you're running Home Assistant (HA Green, HA Yellow, or similar standalo
 - Install [HACS](https://hacs.xyz/docs/use/) if not already installed.
 - In HACS, install the **Frigate integration** from the community store.
 
-Configure it using the IP d port of your Frigate AI box 
+Configure it using the IP d port of your Frigate AI box
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/config_frigate.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/config_frigate.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -360,17 +356,15 @@ sudo docker compose -f frigate.yml up -d
 
 ### Step 5: Confirm MQTT is Working (optional)
 
-* Check HA logs or MQTT add-on logs to verify messages from Frigate
-* In HA, you can now use Frigate events in automations, e.g., motion alerts, detected objects, etc.
+- Check HA logs or MQTT add-on logs to verify messages from Frigate
+- In HA, you can now use Frigate events in automations, e.g., motion alerts, detected objects, etc.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/reComputer-R2000/frigateHA/HA_interface.PNG"
+    style={{ width: 600}}
   />
 </div>
-
-
 
 ## Tech Support & Product Discussion
 
@@ -385,4 +379,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

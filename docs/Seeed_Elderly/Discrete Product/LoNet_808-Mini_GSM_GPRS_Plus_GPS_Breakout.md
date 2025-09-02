@@ -24,32 +24,32 @@ The board uses the 2G (not 3G or LTE) GSM networks.
 
 ## Features
 
-*   Quad-band 850/900/1800/1900MHz
-*   GPRS multi-slot class12 connectivity: max. 85.6kbps(download/upload)
-*   GPRS mobile station class B
-*   Controlled by AT Command (3GPP TS 27.007, 27.005 and SIMCOM enhanced AT Commands)
-*   Supports charging control for Li-Ion battery
-*   Supports Real Time Clock
-*   Supply voltage range 3.4V ~ 4.4V
-*   Integrated GPS/CNSS and supports A-GPS
-*   Supports 3.0V to 5.0V logic level
-*   Low power consumption, 1mA in sleep mode
-*   Supports GPS NMEA protocol
-*   Compact size 27mm × 46mm × 10mm
-*   Standard SIM Card
+- Quad-band 850/900/1800/1900MHz
+- GPRS multi-slot class12 connectivity: max. 85.6kbps(download/upload)
+- GPRS mobile station class B
+- Controlled by AT Command (3GPP TS 27.007, 27.005 and SIMCOM enhanced AT Commands)
+- Supports charging control for Li-Ion battery
+- Supports Real Time Clock
+- Supply voltage range 3.4V ~ 4.4V
+- Integrated GPS/CNSS and supports A-GPS
+- Supports 3.0V to 5.0V logic level
+- Low power consumption, 1mA in sleep mode
+- Supports GPS NMEA protocol
+- Compact size 27mm × 46mm × 10mm
+- Standard SIM Card
 
 ## GPS Specifications
 
-*   Receiver channels: 22 tracking / 66 acquisition
-*   Coarse/Acquisition code: GPS L1
-*   Tracking sensitivity: -165dBm
-*   Cold start time: 30s (typ.)
-*   Hot start time: 1s (typ.)
-*   Warm start time: 28s (typ.)
-*   Horizontal position accuracy: &lt;2.5m CEP
-*   Power consumption - Acquisition: 42mA
-*   Power consumption - Continuous tracking: 24mA
-*   Update rate: 5Hz
+- Receiver channels: 22 tracking / 66 acquisition
+- Coarse/Acquisition code: GPS L1
+- Tracking sensitivity: -165dBm
+- Cold start time: 30s (typ.)
+- Hot start time: 1s (typ.)
+- Warm start time: 28s (typ.)
+- Horizontal position accuracy: &lt;2.5m CEP
+- Power consumption - Acquisition: 42mA
+- Power consumption - Continuous tracking: 24mA
+- Update rate: 5Hz
 
 ## Interfaces
 
@@ -185,26 +185,26 @@ It is recommended to execute this process when first time to use the module. In 
 
 ## Downloads
 
-*   [LoNet_808_Schematic](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/LoNet_808_Schematic.pdf)
-*   [SIM800_ATCommand_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM800_ATCommand_Manual_V1.02.pdf)
-*   [SIM808_HardwareDesign_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_Hardware_Design_V1.00.pdf)
-*   [SIM808_GPSApplication_Note](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_GPS_Application_Note_V1.00.pdf)
+- [LoNet_808_Schematic](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/LoNet_808_Schematic.pdf)
+- [SIM800_ATCommand_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM800_ATCommand_Manual_V1.02.pdf)
+- [SIM808_HardwareDesign_Manual](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_Hardware_Design_V1.00.pdf)
+- [SIM808_GPSApplication_Note](https://files.seeedstudio.com/wiki/LoNet_808-Mini_GSM_GPRS_Plus_GPS_Breakout/res/SIM808_GPS_Application_Note_V1.00.pdf)
 
 ## Resources
 
-*   [GPRS_Shield library on gitHub](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
-*   [Adafruit_FONA_Library](https://github.com/adafruit/Adafruit_FONA_Library/)
+- [GPRS_Shield library on gitHub](https://github.com/Seeed-Studio/GPRS_Shield_Suli)
+- [Adafruit_FONA_Library](https://github.com/adafruit/Adafruit_FONA_Library/)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

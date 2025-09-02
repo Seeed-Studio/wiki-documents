@@ -26,7 +26,7 @@ You can explore three main sections on this page:
 - Applications based on different devices
 - Software deployments
 - OS installations
-- Device specific extension boards or carrier boards 
+- Device specific extension boards or carrier boards
 - Tutorials and guides
 
 <div class="intro_container">
@@ -65,7 +65,6 @@ You can explore three main sections on this page:
     </div>
 </div>
 
-
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Edge Series</font></div>
@@ -94,7 +93,6 @@ You can explore three main sections on this page:
             <br/>
     </div>
 </div>
-
 
 ### Application / Software
 
@@ -162,7 +160,7 @@ You can explore three main sections on this page:
     </div>
     <div class="independent_item" style={{textAlign: 'center'}}>
             <div class="independent_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>Software for reComputer</font></div>
-            <a href="/CVEDIA-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  CVEDIA-RT </font></span></a> , 
+            <a href="/CVEDIA-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  CVEDIA-RT </font></span></a> ,
             <a href="/Cochl.Sense-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Cochl.Sense </font></span></a> ,
             <a href="/Lumeo-Jetson-Getting-Started" target="_blank"><span><font color={'FFFFFF'} size={"2"}>  Lumeo </font></span></a>
             <br/>
@@ -290,7 +288,7 @@ You can explore three main sections on this page:
 <strong><font color={'8DC215'} size={"4"}>This section provides details about embedded computing modules. You can discover more on:</font></strong>
 
 - Microcontrollers with embedded computing
-- IoT and ML based applications 
+- IoT and ML based applications
 - Extension board and accessories for the modules
 - Kit with courses
 - Tutorials
@@ -547,7 +545,7 @@ You can explore three main sections on this page:
 
 <!-- Application -->
 
-### Application 
+### Application
 
 ### Easy IoT Applications
 
@@ -559,7 +557,6 @@ You can explore three main sections on this page:
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'FFFFFF'} size={"3"}>This is the introduction of IoT Application easily applied and deployed.</font></div>
     </div>
 </div>
-
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'left'}}>
@@ -708,7 +705,7 @@ You can explore three main sections on this page:
     </div>
 </div>
 
-### Accessories 
+### Accessories
 
 <!-- Grove Accessories -->
 
@@ -867,7 +864,7 @@ You can explore three main sections on this page:
 
 <!-- Kit with Courses -->
 
-### Kit with Courses 
+### Kit with Courses
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -1014,7 +1011,6 @@ You can explore three main sections on this page:
     </div>
 </div>
 
-
 ## Single Board Computers
 
 <strong><font color={'8DC215'} size={"4"}>This section is about using the Single Board Computer for fundamental development. You can explore the following:</font></strong>
@@ -1073,7 +1069,7 @@ You can explore three main sections on this page:
      </div>
 </div>
 
-### Application / Software 
+### Application / Software
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -1105,7 +1101,7 @@ You can explore three main sections on this page:
     </div>
 </div>
 
-### OS Installation / Firmware Updating 
+### OS Installation / Firmware Updating
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>
@@ -1214,4 +1210,3 @@ You can explore three main sections on this page:
             <a href="/Raspberry_pi_CM4_update_eeprom" target="_blank"><span><font color={'FFFFFF'} size={"2"}> Update eeprom on Raspberry pi CM4</font></span></a>
     </div>
 </div>
-

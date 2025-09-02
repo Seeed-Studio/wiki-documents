@@ -35,6 +35,7 @@ Create a cyberpunk-style PC monitoring system using Wio Terminal as a display te
 ### 1. Environment Setup
 
 - Install Python packages:
+
   ```bash
   pip install psutil pyserial GPUtil wmi pywin32
   ```
@@ -193,12 +194,15 @@ void loop() {
 ```
 
 ### 4. Run the Project
+
 1. Upload the code to the Wio Terminal  
 2. Run **OpenHardwareMonitor**  
 3. Run the Python script:
+
    ```bash
    python pc_stats.py
    ```
+
 4. Use the buttons on Wio Terminal to switch between pages:  
    - **Button A:** System Status  
    - **Button B:** Performance Monitoring  
@@ -220,6 +224,7 @@ void loop() {
 ---
 
 ## Troubleshooting
+
 1. **Serial Connection Issues:**  
    - Check if the COM port is correct  
    - Confirm baud rate settings (115200)  

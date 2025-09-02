@@ -17,6 +17,7 @@ sku:
 --- -->
 
 # Introduction
+
 In this wiki, we will show you how to flash NVIDIA Jetpack Operating System on to the Jetson Xavier NX module with reServer J2032.
 
 Here is the overview of the reServer J2030 carrier board for reference:  
@@ -42,7 +43,6 @@ Here is the overview of the reServer J2030 carrier board for reference:
     </tbody></table>
 </div>
 
-
 ## Getting Started
 
 We can use **NVIDIA SDK manager** to flash the system, or we can easily do this by using the **Command Line Script**. For people who have Linux knowledge base, we highly recommend using **Command Line Script** which provides much more functionality.
@@ -58,7 +58,7 @@ There are still some preparation that needed:
 - Linux Host Computer with Ubuntu 18.04 OS (or above)
 
 !!!note
-	In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
+ In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
 
 ### Hardware Preparation (Force Recovery Mode)
 
@@ -66,11 +66,11 @@ Before we can move on to the installation steps, we need to make sure that the r
 
 **Step 1.** Before you start, you need to disconnect power of the reServer J2032.
 
-**Step 2.** To enter recovery mode, you need to connect **FC REC** and **GND** pins using jumpers. The pins can be located as shown below: 
+**Step 2.** To enter recovery mode, you need to connect **FC REC** and **GND** pins using jumpers. The pins can be located as shown below:
 
 <div align="center">
   <p style={{fontSize: 'x-large', fontWeight: 'bold'}}>
-    Force Recovery Jumper Setting Guide 
+    Force Recovery Jumper Setting Guide
   </p><table>
     <tbody><tr>
       </tr>
@@ -86,12 +86,9 @@ Before we can move on to the installation steps, we need to make sure that the r
     </tbody></table>
 </div>
 
-
-
 **Step 3.** Using a Type-C cable to connect to the Linux Host PC with the `NX USB` (as shown in the image below) usb type C port on the reServer J2032, plug in the 12V/5A DC cable and then press the power button from the front to turn the the power for reServer J2032.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/back_type_c.png" /></div>
-
 
 <!-- !!!Attention
     Before wiring, please pay attention to the power connector and data connector, please do not connect the data connector directly to DC power. -->
@@ -102,22 +99,19 @@ Before we can move on to the installation steps, we need to make sure that the r
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/A203E/NX_lsusb.png" /></div>
 
-
 ## Flashing JetPack OS via NVIDIA SDK Manager
 
 Next we will go through the tutorial about installing the system via NVIDIA SDK Manager. The an NVIDIA SDK Manager all-in-one tool that bundles developer software and provides an end-to-end development environment setup solution for NVIDIA SDKs. Thus, it is recommanded for the beginners.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/5_3.png" /></div>
 
-
-### Step 1.  Install NVIDIA SDK Manager on the Linux Host PC.
+### Step 1.  Install NVIDIA SDK Manager on the Linux Host PC
 
 We need to open the browser on the Linux Host PC and <a href="https://developer.nvidia.com/nvidia-sdk-manager" target="_blank"><span>download the NVIDIA SDK Manager</span></a> from the NVIDIA official website.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputer_Jetson_Series_sdk.png" /></div>
 
-
-### Step 2.  Open NVIDIA SDK Manager and login.
+### Step 2.  Open NVIDIA SDK Manager and login
 
 On the Linux host PC screen, we can right click the mouse and open a `Terminal`. Then we can type the command below to start the SDK Manager:
 
@@ -125,17 +119,15 @@ On the Linux host PC screen, we can right click the mouse and open a `Terminal`.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputer_system_installation1.png" /></div>
 
-
 The first time you use NVIDIA SDK Manager, a web page will pop up prompting you to log in with your previously registered NVIDIA account.
 
-### Step 3.  Select the target device.
+### Step 3.  Select the target device
 
-After logging in, you will be taken to the first screen where the first step of installing. Since we have already connected the reServer J2032, there will be a window pop up to let you select the hardware device. 
+After logging in, you will be taken to the first screen where the first step of installing. Since we have already connected the reServer J2032, there will be a window pop up to let you select the hardware device.
 
 The reServer J2032 has equipped with **NVIDIA Jetson NX module**, so we can choose the first one.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/6.jpg" /></div>
-
 
 There are more selections for you to choose in the first screen:
 
@@ -146,20 +138,17 @@ There are more selections for you to choose in the first screen:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/7.png" /></div>
 
-
 Click Continue to proceed to the next step.
 
-### Step 4.  Review wanted components.
+### Step 4.  Review wanted components
 
 From **Details and License**, you can expand the host components and target components panels to review the components that will be installed on your system.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/8.png" /></div>
 
-
 If you only need to install the system, you can uncheck the SDK component.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/8_1.png" /></div>
-
 
 !!!Tip
     When choosing which components to install, you may want to keep an eye on the capacity used. The built-in eMMC size is only 16GB, please allocate and use this space wisely according to your actual needs.
@@ -176,20 +165,17 @@ If you want SDK Manager to download all the files to a location other than the d
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/11.png" /></div>
 
-
 Select Continue to proceed to the next step.
 
-### Step 5. Install the system.
+### Step 5. Install the system
 
 Before the installation begins, SDK Manager prompts you to enter your `sudo` password.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/12.png" /></div>
 
-
 After a while, we will be asked to set up the new system for our reServer J2032. Since we manually force into recovery mode, we select `Manual setup: set the target to Force Recovery Mode via manual operations` here. Meanwhile, we choose the default **Pre-Config**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/13.png" /></div>
-
 
 After that, we need to enter the name and password of our new Jetson system to our reServer J2032, it is set by yourself.
 
@@ -199,15 +185,13 @@ The display shows the progress of the download and installation of the software.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/14.png" /></div>
 
-
-### (Optional)Step 6. Install the SDK components.
+### (Optional)Step 6. Install the SDK components
 
 If you checked the installation of the component in the previous **step 4**, you will need to go through this step.
 
 After a moment, you will be able to see a new window pop up in the NVIDIA SDK Manager, prompting you that you need to connect to your device via IP address. It means the system has been alreadly installed and the components installing will be proceeded.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/15.png" /></div>
-
 
 In this case, we can **pull out the jumper** and restart the reServer J2032. Then we need to connect the reServer J2032 to a monitor via HDMI/Display Port, enter the password you entered in **step 4**, and log in to the main interface.
 
@@ -217,11 +201,9 @@ Go back to the Linux host PC and enter the IP address you just obtained. NVIDIA 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/16.png" /></div>
 
-
 When you see the following window appear, the installation has been done. You can start using Jetson or continue to follow the steps below to complete some basic configuration of your new system.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17.png" /></div>
-
 
 !!!Attention
     Be sure to unplug the jumper and exit force recovery mode before re-powering into the system.
@@ -232,18 +214,15 @@ Thanks to the freedom to customize the BSP(NVIDIA Linux Driver Package), flashin
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17_3.png" /></div>
 
-
 ### Step 1. Download the proper NVIDIA Linux Driver Package
 
 On the **Linux host PC**, we need to open a browser and go the <a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a>. First we should check if the version of Jetson Linux is supported our reServer J2032 Jetson module.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/select_L4T.png" /></div>
 
-
 Once you find the proper version, click to go to the downloaded page. Find and click the "L4T Driver Package (BSP)" and "Sample Root Filesystem" to download the driver files. The names of the files are like `Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2` and `Jetson-210_Linux_Rxx.x.x_aarch64.tbz2`.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/download_file.png" /></div>
-
 
 As the example, we choose the NVIDIA L4T 32.7.1 version since it is included as part of JetPack4.6.1 and supports the Jetson Nano module. The names of the files:
 
@@ -255,11 +234,11 @@ As the example, we choose the NVIDIA L4T 32.7.1 version since it is included as 
 On the Linux host PC, we should find a folder and store the package files we download before. Then open a command line window(Terminal) at the folder and use the command line below to unzip the files and assemble the rootfs:
 
 ```sh
-$ tar xf ${L4T_RELEASE_PACKAGE}
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
-$ cd ..
-$ sudo ./apply_binaries.sh
+tar xf ${L4T_RELEASE_PACKAGE}
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
+cd ..
+sudo ./apply_binaries.sh
 ```
 
 !!!Note
@@ -268,17 +247,16 @@ $ sudo ./apply_binaries.sh
 *As the example of **NVIDIA L4T 32.7.1**, the downloaded files are stored in `/Desktop/L4T_Drivers`, so under the '/Desktop/L4T_Drivers' path we open the command line window(Terminal) and execute the following command.
 
 ```sh
-$ tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
-$ cd ..
-$ sudo ./apply_binaries.sh
+tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
+cd ..
+sudo ./apply_binaries.sh
 ```
 
 The output should be like:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/18.png" /></div>
-
 
 ### Step 3.  Flash the System to reComputer
 
@@ -290,7 +268,6 @@ sudo ./flash.sh -r jetson-xavier-nx-devkit-emmc mmcblk0p1
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/19.png" /></div>
 
-
 !!!Tip
     Flashing L4T takes about 10 minutes, or more under a slow host computer.
 
@@ -301,11 +278,11 @@ At this moment, we can unplug the jumper and then power up the reComputer again 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

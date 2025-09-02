@@ -169,7 +169,7 @@ Esta acción hará que el modelo se construya y descargue. Luego se ejecutará e
 
 En conclusión, la integración perfecta de reTerminal y Edge Impulse capacita a los desarrolladores para desbloquear todo el potencial de la IA en el borde. reTerminal, con su hardware robusto y capacidades versátiles, sirve como una excelente plataforma para ejecutar soluciones de detección de objetos en tiempo real. Al combinarse con Edge Impulse, que simplifica la creación e implementación de modelos de aprendizaje automático en dispositivos con recursos limitados, las posibilidades se vuelven ilimitadas. Ya sea que trabajes en aplicaciones IoT, robótica o cualquier proyecto que requiera IA eficiente en el dispositivo, esta poderosa sinergia entre reTerminal y Edge Impulse abre un mundo de innovación en el borde de la tecnología.
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

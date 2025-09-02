@@ -14,19 +14,17 @@ last_update:
 ---
 
 # Damiao 43 Series Motors Getting Start
+
 This article will introduce how to get started with Damiao 43 series motors and how to use them with C++ and Python on the reComputer Mini Jetson Orin.
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/damiao.png" />
 </div>
 
-
 ## Specification
 
- 
 Here's the completed table with all parameters filled in for all motor models:
-
 
  Motor Model | Rated Torque (Nm) | Peak Torque (Nm) | No-load Speed (rpm) | Rated Speed (rpm) | Reduction Ratio | Size Diameter*Height (mm) | Weight (g) | Supply Voltage (V) | Recommended Voltage Range (V) | Rated Phase Current (A) | Peak Phase Current (A) | Rated Power (W) | Pole Pairs | Communication Method | Encoder Type | Installation | Phase Resistance (Ω) | Phase Inductance (uH) | Flux Linkage (Wb) | Rotational Inertia (Kg*m²) | Torque Constant (Nm/A) | Drive Max Current (A) | Speed Loop KP | Default PMAX (rad) | Default VMAX (rad/s) | Default TMAX (Nm) | Speed Constant |
 ------------|------------------|-----------------|---------------------|------------------|----------------|--------------------------|-----------|-------------------|-----------------------------|------------------------|----------------------|----------------|-----------|---------------------|-------------|-------------|----------------------|---------------------|------------------|--------------------------|----------------------|---------------------|--------------|------------------|------------------|----------------|---------------|
@@ -37,20 +35,20 @@ J4340-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 53.3 | ~362 | 48 | 15-52 | 2.5 | 
 J4340P-2EC | 9 | 27 | 52.5 | 36 | 40 | 57 * 56.5 | ~375 | 24 | 15-32 | 3 | 8 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
 J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 | 9 | 33.929201 | 14 | CAN, CANFD | Magnetic, Dual | Built-in | 0.88 | 360 | 0.00485 | 2.00E-05 | 4.074 | 10.261194 | 9.59E-05 | 12.5 | 8 | 28 | 81.197186 |
 
-
-
 ## Main Features
- 
+
 1. **CAN BUS & CANFD**
 2. **Dual Encoder**
 3. **High Torque Density**
 4. **High Precision**
 5. **Hollow Design**
 
-
 ## Getting Start
+
 ### Environmental Preparation Before Use
+
 **Windows System in PC**
+
 - Download the [Download the Damiao Debugging Tools](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/Debugging_Tools_v.1.6.8.8.exe).
 - Downlaod the [USB2CAN Tools](https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/USB2CAN_2.0.0.3.exe)
 
@@ -59,14 +57,14 @@ J4340P-2EC(48V) | 9 | 27 | 100 | 36 | 40 | 57 * 56.5 | ~375 | 48 | 15-52 | 2.5 |
 We use the CAN communication method, which requires an additional USB-CAN interface for debugging via an upper computer on Windows.
 
 <div align="center">
-    <img width={500} 
+    <img width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/circcuit.jpg" />
 </div>
 
 Here, you need to provide a separate 24V power supply for the motor and connect the USB to your computer.
 
+### Use the `Debugging_Tools_v.1.6.8.8.exe` to Test the Motor
 
-### Use the `Debugging_Tools_v.1.6.8.8.exe` to Test the Motor.
 You can switch between Chinese and English at the bottom of the app.
 
 | **Configure serial port connection parameters** | **connect to motor** | **Read Param** | **Set CAN ID** |**Write Param.** |
@@ -93,8 +91,8 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 ​Do not set Master ID to 0x00!!!
 :::
 
-
 #### **(1) Basic Parameters**  
+
 - **NPP**: The number of motor pole pairs, automatically determined through calibration.  
 - **UV**: If the supply voltage drops below the threshold (minimum **15V**), the drive will stop operating.  
 - **OV**: Sets the upper voltage limit. The drive checks the supply voltage at power-up and disables operation if exceeded (checked only once at startup).  
@@ -108,9 +106,11 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 - **Overcurrent**: Maximum phase current limit (percentage).  
 
 #### **(2) Motor Parameters**  
+
 - Automatically identified by the drive. **Recalibration required when replacing the drive board**. Stored persistently in the drive.  
 
 #### **(3) Command Scaling (Amplitude Settings)**  
+
 - **PMAX**: In **MIT mode**, scales command input; in other modes, scales feedback output. Refer to CAN protocol for mapping rules.  
 - **VMAX**: Same as PMAX.  
 - **TMAX**: Same as PMAX.  
@@ -120,6 +120,7 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 > **Note**: The drive uses the **MIT communication protocol format**.  
 
 #### **(4) Control Settings**  
+
 - **Control Modes**:  
   - **MIT Mode**  
   - **Position-Velocity Mode** (trapezoidal acceleration/deceleration)  
@@ -127,8 +128,8 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 - **Current Bandwidth**: Current loop gain (default: `1000`).  
 - **Speed KP/KI, Position KP/KI**: PID parameters for speed and position loops.  
 
-
 ### MIT Control Mode
+
 **1. MIT Torque Control Mode:**
 
 1. In the Set Parameters section, click ​Read Param to display current motor parameters.
@@ -140,40 +141,43 @@ A good practice is to set the ​Master ID higher than the ​CAN_ID by ​0x10 
 4. Click ​Write Param to save all settings.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/7.png" />
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
 
 6. In the ​MIT Control section:
- - Set ​Torque (Nm) to ​1.
- - Click ​Update → ​Send.
+
+- Set ​Torque (Nm) to ​1.
+- Click ​Update → ​Send.
 
 The motor will start rotating.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/6.png" />
 </div>
 
 You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/8.png" />
 </div>
 
 **2. MIT Speed Control Mode:**
+
 1. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
 
 2. In the ​MIT Control section:
- - Set Vel (rad/s) to ​5.
- - Set KD (N*s/r) to ​1.
- - Click ​Update → ​Send.
+
+- Set Vel (rad/s) to ​5.
+- Set KD (N*s/r) to ​1.
+- Click ​Update → ​Send.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/9.png" />
 </div>
 
@@ -181,19 +185,20 @@ The motor will start rotating.
 You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
 
 **3. MIT Position Control Mode:**
+
 1. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
 
 2. You can use ​**"SaveZero"** to set the current position as the zero point.
 
-
 3. In the ​MIT Control section:
- - Set Pos (rad) to 3.14.
- - Set KP (N/r) to ​2.
- - Set KD (N*s/r) to ​1.
- - Click ​Update → ​Send.
+
+- Set Pos (rad) to 3.14.
+- Set KP (N/r) to ​2.
+- Set KD (N*s/r) to ​1.
+- Click ​Update → ​Send.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/10.png" />
 </div>
 
@@ -211,18 +216,19 @@ You can also copy the CAN data (in hexadecimal format) and use a serial port deb
 4. Click ​Write Param to save all settings.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/11.png" />
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
 
 6. In the Vel Control section:
- - Set Vel (rad/s) to 5.
- - Click ​Update → ​Send.
+
+- Set Vel (rad/s) to 5.
+- Click ​Update → ​Send.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/12.png" />
 </div>
 
@@ -240,27 +246,25 @@ You can also copy the CAN data (in hexadecimal format) and use a serial port deb
 4. Click ​Write Param to save all settings.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/13.png" />
 </div>
 
 5. In the ​Test tab, click the ​**"Enable Motor"** button (Ente).
 
 6. In the Pos Control section:
- - Set Pos to 3.14.
- - Set Vel (rad/s) to 5.
- - Click ​Update → ​Send.
+
+- Set Pos to 3.14.
+- Set Vel (rad/s) to 5.
+- Click ​Update → ​Send.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/14.png" />
 </div>
 
 The motor will start rotating.
 You can also copy the CAN data (in hexadecimal format) and use a serial port debugging tool to drive the motor.
-
-
-
 
 ## Control the Motor Using the [​reComputer Mini Jetson Orin.](/recomputer_jetson_mini_getting_started)
 
@@ -276,7 +280,6 @@ Currently, the most common CAN communication interfaces for motors in the market
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-
 For more details on CAN usage, you can refer to this [wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
 
 ### Enable CAN Interfaces
@@ -284,7 +287,7 @@ For more details on CAN usage, you can refer to this [wiki](https://wiki.seeedst
 **Step1:** Before using CAN0 and CAN1, please remove the bottom cover and set both 120Ω termination resistors to the ​ON position.
 
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
@@ -298,9 +301,8 @@ For the reComputer Mini's CAN interface, the H/L pins are inverted compared to t
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png"/>
 </div>
 
-
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/damiao/15.jpg" />
 </div>
 
@@ -308,42 +310,49 @@ For the reComputer Mini's CAN interface, the H/L pins are inverted compared to t
 This power supply is only for single-motor learning and testing. For multiple motors, please design a separate power board and isolate the Jetson's power supply from the motor power supply to avoid high current passing directly through the Jetson.
 :::
 
-
 #### Enable Jetson CAN communication
+
 Open a terminal and enter the following command to pull the GPIO pin high and activate CAN0:
+
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
 If you are using the JST-interface CAN1, pull pin 106 high.
+
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
 Keep this terminal open, launch a new terminal, and configure CAN0.
+
 ```bash
 sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### For C++ Examples.
+### For C++ Examples
 
 #### Installation and Compilation  
 
 - **Install CMake**  
+
 ```shell
 sudo apt update  
 sudo apt install cmake  
 ```  
 
 - **Install CAN Tools**  
+
 ```shell
 sudo apt install can-utils  
 ```  
 
 - **Download and Compile the Program**  
+
 1. Create a workspace and clone the repository:  
+
 ```shell
 mkdir -p ~/orin_ws/src  
 cd ~/orin_ws/src  
@@ -351,6 +360,7 @@ git clone https://gitee.com/xauter/orin-control.git
 ```  
 
 2. Compile:  
+
 ```shell
 cd ~/orin_ws/src/orin-control/dm_hw  
 mkdir build  
@@ -363,28 +373,31 @@ make
 
 1. **Check CAN Devices**  
 Open a terminal and run:  
+
 ```shell
 ip -brief link | grep can  
 ```  
 
 2. **Run the Program**  
 In the `build` folder, execute:  
+
 ```shell
 cd ~/orin_ws/src/orin-control/dm_hw/build  
 ./dm_main  
 ```  
-The motor will light up **green** and rotate at a **sinusoidal speed**.
 
+The motor will light up **green** and rotate at a **sinusoidal speed**.
 
 ### Control Using Python
 
 - **Install Python Environment**  
+
 ```bash
 pip install python-can numpy
 ```
 
-
 - **Create a folder named scripts under the directory `~/damiao/scripts` to store Python scripts.**
+
 ```bash
 mkdir -p ~/damiao/scripts
 ```
@@ -395,6 +408,7 @@ mkdir -p ~/damiao/scripts
 cd ~/damiao/scripts
 touch damiao_motor.py
 ```
+
 Copy the following code to damiao_motor.py
 
 <details>
@@ -1328,6 +1342,7 @@ if __name__ == "__main__":
 </details>
 
 - **Run damiao_test.py**
+
 ```bash
 python damiao_test.py
 ```
@@ -1341,11 +1356,11 @@ The motor will light up **green** and rotate at a **sinusoidal speed**.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -19,30 +19,29 @@ no_comments: false # for Disqus
 
 **Frigate NVR** is an open-source network video recorder designed for real-time object detection with AI models. Paired with the **Raspberry Pi 5**, it enables efficient video surveillance at the edge. This guide will walk you through the installation and configuration process for an optimal setup.
 
-## Official Frigate 
+## Official Frigate
 
 ### Prepare Hardware
 
 #### Recommended Components
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer AI R2130</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 **Alternatively, you also need at least one camera for video streaming. You can refer to [Recommended hardware](https://docs.frigate.video/frigate/hardware#cameras) to see the recommended cameras.**
 
@@ -53,8 +52,8 @@ no_comments: false # for Disqus
 Open a terminal and run the following command.
 
 ```bash
-$ sudo apt update
-$ sudo raspi-config
+sudo apt update
+sudo raspi-config
 ```
 
 In the dialog, select **6 Advanced Options** and then **A8 PCIe Speed**.
@@ -79,31 +78,31 @@ dtoverlay=pciex1-compat-pi5,no-mip
 Install the dkms package. This package is required to install the Hailo PCIe driver.
 
 ```bash
-$ sudo apt update
-$ sudo apt install dkms
+sudo apt update
+sudo apt install dkms
 ```
 
 Get Hailo PCIe Driver from [GitHub](https://github.com/hailo-ai/hailort-drivers).
 
 ```bash
-$ git clone https://github.com/hailo-ai/hailort-drivers
-$ cd hailort-drivers/linux/pcie
-$ git checkout 24e7ff2fb58fab7029024c1a1d3f2d1914f56d7b
+git clone https://github.com/hailo-ai/hailort-drivers
+cd hailort-drivers/linux/pcie
+git checkout 24e7ff2fb58fab7029024c1a1d3f2d1914f56d7b
 ```
 
 Then, install the Hailo PCIe driver.
 
 ```bash
-$ sudo make install_dkms
+sudo make install_dkms
 ```
 
 After installation, download firmware for Hailo and copy it to the `/lib/firmware/hailo` directory.
 
 ```bash
-$ cd ../..
-$ ./download_firmware.sh
-$ sudo mkdir -p /lib/firmware/hailo
-$ sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
+cd ../..
+./download_firmware.sh
+sudo mkdir -p /lib/firmware/hailo
+sudo cp hailo8_fw*.bin /lib/firmware/hailo/hailo8_fw.bin
 ```
 
 To avoid PCIe max_desc_page_size issue, we also need to create a rule in `/etc/modprobe.d/hailo_pci.conf` with the following content.
@@ -115,7 +114,7 @@ options hailo_pci force_desc_page_size=4096
 Restart the system to take effect.
 
 ```bash
-$ sudo reboot
+sudo reboot
 ```
 
 After the system is restarted, the Hailo PCIe driver is installed successfully. The `/dev/hailo0` device will be created. Check the device by running the following command.
@@ -136,20 +135,20 @@ In this part, we assume you have your camera set up and ready to stream with RTS
 1. **Update your system:**
 
    ```bash
-   $ sudo apt update
+   sudo apt update
    ```
 
 2. **Install Docker:**
 
    ```bash
-   $ curl -fsSL get.docker.com | bash
-   $ sudo usermod -aG docker $USER
+   curl -fsSL get.docker.com | bash
+   sudo usermod -aG docker $USER
    ```
 
 3. **Reboot the system:**
 
    ```
-   $ sudo reboot
+   sudo reboot
    ```
 
 #### Step 2: Deploying Frigate
@@ -159,7 +158,7 @@ In this part, we assume you have your camera set up and ready to stream with RTS
     Go to [Package frigate](https://github.com/blakeblackshear/frigate/pkgs/container/frigate/versions), choose one image with `-h8l` suffix. In this example, we choose `ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l`.
 
     ```bash
-    $ docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
+    docker pull ghcr.io/blakeblackshear/frigate:0.15.0-rc2-h8l
     ```
 
 2. **Create Docker Compose File:**
@@ -236,27 +235,30 @@ In this part, we assume you have your camera set up and ready to stream with RTS
 4. **Start Docker Instance:**
 
     ```bash
-    $ docker compose -f frigate.yml up -d
+    docker compose -f frigate.yml up -d
     ```
 
     After the Frigate is up and running, you can access the Frigate web UI at `http://<your-raspberry-pi-ip>:5000` to check the camera stream.
 
     ![frigate-web](https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/frigate_web.webp)
 
-## Seeed Frigate 
+## Seeed Frigate
 
 ### Modify PCIe settings
 
 Open config.txt
+
 ```
 sudo nano /boot/firmware/config.txt 
 ```
 
 Add the following text to config.txt
+
 ```
 dtparam=pciex1_gen=3
 dtoverlay=pciex1-compat-pi5,no-mip
 ```
+
 Then use `Ctrl+x` to save the file and reboot the AI box
 
 ### Install docker and hailo-all
@@ -270,15 +272,17 @@ sudo usermod -aG docker $USER
 sudo apt install docker-compose-plugin
 ```
 
-### Create yml file 
-
+### Create yml file
 
 Create frigate.yml for docker compose to run frigate
+
 ```
 cd ~
 sudo nano frigate.yml
 ```
+
 Here is an example of frigate.yml
+
 ```
 version: "3.9"
 services:
@@ -309,12 +313,14 @@ services:
 ```
 
 Download yolo model and create config.yml.
+
 ```
 mkdir config && cd config && mkdir model_cache
 cd model_cache && wget https://hailo-model-zoo.s3.eu-west-2.amazonaws.com/ModelZoo/Compiled/v2.14.0/hailo8/yolov8n.hef
 
 cd .. && nano config.yml
 ```
+
 Here is an example of config.yml
 
 ```yml
@@ -410,7 +416,7 @@ camera_groups:
       - home1
       - yard
       - yard1
-``` 
+```
 
 ### Pull docker image and run frigate
 
@@ -421,20 +427,20 @@ cd ~
 docker pull mjqx2023/frigate_seeed
 docker compose -f frigate.yml start 
 ```
+
 Then open `localhost:5000` on your AI box web browser:
  ![frigate-web](https://files.seeedstudio.com/wiki/AI_box_deepseek/seeed_frigate.png)
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

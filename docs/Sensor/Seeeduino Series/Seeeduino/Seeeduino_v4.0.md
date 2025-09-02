@@ -21,101 +21,101 @@ The Seeeduino v4.0 inherits all of Arduino Duemilanove's and Uno's features but 
 
 For a detailed explanation and overview of all the features see the section in this WiKi titled [Board Interface, Features, and Components](https://seeeddoc.github.io/Seeeduino_v4.0/#Board_Interface.2C_Features.2C_and_Components).
 
-##   Board Interface, Features, and Components
+## Board Interface, Features, and Components
 
 The Seeeduino board offers a variety of features, some of which are not found in other duino boards (e.g. 5V or 3.3V logic, extra header pads, direct USB-to-UART connectors). See below for a detailed description of the board's interface and its unique features.
 
 ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_0_board_sections.png)
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_0_board_sections.png" alt="pir" width={600} height="auto" /></p>
 
-###   1. J2 Pads
+### 1. J2 Pads
 
 Connected to the ATMEGA16U2's (U5 chip) pins PB4, PB5, PB6, and PB7 pins.
 
-###   2. LEDs L, TX, RX
+### 2. LEDs L, TX, RX
 
 The "L" LED is connected to digital pin 13, it can be used a "status" LED in your projects. The TX and RX LEDs work automatically, they let you know when the board is sending or receiving information respectively.
 
-###   3. Micro USB Port
+### 3. Micro USB Port
 
 Port used to connect the board to your PC for programming. Micro USB is the ubiquitous version of USB, found in most Android phones, and other devices. You probably have dozens of these cables laying around your house.
 
-###   4. SW2 Slide Switch (5V 3V3)
+### 4. SW2 Slide Switch (5V 3V3)
 
 Slide switch used to change the logic level and power output of the board to either 5V or 3.3V. Nowadays many new and great sensors are being develop to work with 3.3V, with other duino boards you would need to place a logic level converter between the board and these sensor(s), with the Seeeduino V4.0 board all you have to do is slide the switch!
 
-###   5. DC Power Jack
+### 5. DC Power Jack
 
 The DC power jack allows your Seeeduino board to be powered from a wall adapter so that you can supply more power to your project if needed, for example when using DC motors or other high power devices. The DC input can be 7V-12V.
 
-###   6. U5 ICSP
+### 6. U5 ICSP
 
 ICSP and SPI port for the ATMEGA16U2 chip.
 
-###   7. U5
+### 7. U5
 
 ATMEGA16U2 chip. This chip is charge of the USB to UART connection which is used to program the ATMEGA328P-MU (U1) and can also use the FTDI-like port.
 
-###   8. SW1 Button (Reset)
+### 8. SW1 Button (Reset)
 
 This button is conveniently placed on the side to allow you to reset the Seeeduino board even when a shield placed on top. This isn't the case in other duino boards where the button is placed on top making it hard to access.
 
-###   9. Extra Header Pads (Digital)
+### 9. Extra Header Pads (Digital)
 
 Sometimes it is very convenient to connect a sensor/device to your board directly instead of going through a breadboard, or perhaps you want to solder the sensor directly to the board once you've completed your project, or maybe you want to monitor the output of the pins while they're been used by other devices. In any case we have added these extra pads to help you along the way.
 
-###   10. U1
+### 10. U1
 
 The ATmega328P-MU chip, this is the brain of the board, where the code you write goes to be executed.
 
-###   11. Extra Header Pads (Power and Analog)
+### 11. Extra Header Pads (Power and Analog)
 
 Just like the Extra Header Digital Pads, these extra connections are something we've personally come to realize people need in their projects, specially the power connections if you want to power more than one sensor/device without the use of a breadboard.
 
-###   12. UART-to-USB (FTDI) Pads/Port
+### 12. UART-to-USB (FTDI) Pads/Port
 
 This is the output/input of the UART-to-USB function of the ATMEGA16U2 (U5) chip. You can use this port to communicate directly with devices that require a UART to serial connection, it is great for quick testing these devices without writing any code. This port makes the Seeeduino board work essentially like an FTDI chip if needed.
 
 The output voltage of VCC will be either 5V or 3.3V, whatever you have selected using SW2.
 
-###   13. U1 ICSP
+### 13. U1 ICSP
 
 This is the ICSP connection for the ATmega328P-MU, it is located in the standard ICSP/SPI position for Arduino Uno, Due, Mega, and Leonardo compatible hardware (e.g. shields) that may use this connector. The SPI pins in this port: MISO, SCK, and MOSI, are also connected to digital pins 12, 13, and 11 respectively just like those of the Arduino Uno.
 
-###   14. Grove Connectors
+### 14. Grove Connectors
 
 [Our depot](https://www.seeedstudio.com/depot/) has a variety of sensors/devices that can make use of this I2C or UART connection. In addition we sell independent Grove connectors to help you make our own sensor connections. The I2C Grove connector is also connected to analog pins 4 and 5 for SDA and SCL respectively if you would like to use those pins instead. The UART Grove connector is connected to digital pins 0 and 1 for RX and TX respectively.
 
-###   15. PWM Pins
+### 15. PWM Pins
 
 Digital pins 3, 5, 6, 8, 9, and 10 can be used for pulse width modulation (PWM).
 
-##  Specification
+## Specification
 
-*   Microcontroller: ATmega328P-MU
+- Microcontroller: ATmega328P-MU
 
-*   Operating Voltage: 5V or 3.3V(choice by slide switch)
-*   Digital I/O Pins:14
+- Operating Voltage: 5V or 3.3V(choice by slide switch)
+- Digital I/O Pins:14
 
-*   PWM Channels:6
+- PWM Channels:6
 
-*   Analog Input Channels:6
+- Analog Input Channels:6
 
-*   DC Jack Input:7v-12v
+- DC Jack Input:7v-12v
 
-*   DC Current per I/O Pin: 40 mA
+- DC Current per I/O Pin: 40 mA
 
-*   Flash Memory: 32 KB (ATmega328P-MU)
+- Flash Memory: 32 KB (ATmega328P-MU)
 
-*   RAM: 2 KB (ATmega328P-MU)
+- RAM: 2 KB (ATmega328P-MU)
 
-*   EEPROM:1 KB (ATmega328P-MU)
+- EEPROM:1 KB (ATmega328P-MU)
 
-*   Clock Speed:16 MHz
+- Clock Speed:16 MHz
 
-##   Driver Installation  
+## Driver Installation  
 
-###   Automatic
+### Automatic
 
 The Arduino/Seeeduino drivers are included with the [Arduino Software](https://arduino.cc/en/main/software).  In Windows, once the Arduino Software is installed, plug in your Seeeduino board to your PC's USB port and the driver installation will begin automatically as shown in the screenshot below:
 
@@ -132,14 +132,13 @@ Seeeduino V4 driver installation complete window as it appears in Windows.
 
 At this point the Seeeduino V4.0 is ready to use.
 
-###   Manual
+### Manual
 
 In Windows, if the automatic driver installation fails you can install the drivers manually, they are located in the Arduino Software folder, to do so follow these steps:
 
 **1.** Open the "Device Manager" window by searching for it, and clicking "Device Manager" as shown in the animated image below. Alternatively, if this does not work for you, you may right click "My Computer"-&gt;Manage-&gt;Device Manager.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_how_to_open_device_manager_window.gif)  
-
 
 **2.** In the "Device Manager" window, under "Ports (COM&amp;LPT)" or "Other Devices" look for "USB Serial Port", this is the Seeeduino board but hasn't been recognized by Windows yet. Right click and select "Update Driver Software..."
 
@@ -171,9 +170,9 @@ In Windows, if the automatic driver installation fails you can install the drive
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver6.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Driver6.jpg" alt="pir" width={600} height="auto" /></p>
 
-##   Examples/Applications
+## Examples/Applications
 
-###   Example 1: Your First Arduino/Seeeduino Program (LED Blink)
+### Example 1: Your First Arduino/Seeeduino Program (LED Blink)
 
 As described in the "Board Interface, Features, and Components" section of this WiKi, the Seeeduino board has an on-board LED connected to pin 13. In this example we'll show you how to blink that LED. Blinking an LED is the simplest program one can write to get acquainted with a board's hardware, and software.
 
@@ -210,7 +209,7 @@ Or if you prefer we have listed and described each of the steps:
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_led_blink.gif)  -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_led_blink.gif" alt="pir" width={600} height="auto" /></p>
 
-###   Example 2: UART-to-USB (FTDI) and 3.3V Logic - Getting Started With The ESP8266 WiFi Module Without Extra Circuitry and Without Writing Software
+### Example 2: UART-to-USB (FTDI) and 3.3V Logic - Getting Started With The ESP8266 WiFi Module Without Extra Circuitry and Without Writing Software
 
 Two great features of the Seeeduino V4.0 board when compared to its competitors is its ability to switch between 5V and 3.3V logic, and its USB-to-UART port essentially making it an FTDI like device great for quickly getting started with devices that use the UART protocol/interface.
 
@@ -258,7 +257,6 @@ Connect your ESP8266 WiFi module to the Seeeduino board as follows (See the phot
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_esp8266_schematic.png)  -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4_esp8266_schematic.png" alt="pir" width={600} height="auto" /></p>
 
-
 **Step 3: Sending Commands**
 
 **1.** Connect your Seeeduino board to the USB port of your PC.
@@ -277,7 +275,6 @@ void setup()
     }
 ```
 
-
 **4.** Open the Arduino "Serial Monitor" window.
 
 **5.** In the Serial Monitor window change your settings to "Both NL &amp;CR" and baud rate to "9600", or the correct baud rate for your ESP8266 since it might be different.
@@ -287,8 +284,7 @@ void setup()
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Esp8266-output.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Esp8266-output.png" alt="pir" width={600} height="auto" /></p>
 
-
-##  Version Tracker  
+## Version Tracker  
 
 Below is a list of changes that have been made to the Seeeduino board over all the versions.
 
@@ -369,41 +365,37 @@ Below is a list of changes that have been made to the Seeeduino board over all t
   </tbody>
 </table>
 
+## Bug Report
 
-##  Bug Report
-
-*   The silk printed of PWM has an error.Pin of PWM  should be D9,D10,D11. We will fix this error asap.
+- The silk printed of PWM has an error.Pin of PWM  should be D9,D10,D11. We will fix this error asap.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_bug.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/img/Seeeduino_v4.0_bug.png" alt="pir" width={600} height="auto" /></p>
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_Eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-##   Resources/References
+## Resources/References
 
 - **[Eagle]**  [Seeeduino v4.0 Eagle file](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_Eagle.zip)
 - **[PDF]**[Seeeduino v4.0 pdf](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino%20v4.0.pdf)
 - **[EAGLE]**[Seeeduino v4.0 sch](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino%20v4.0.sch)
-- **[PDF]**  [Seeeduino v4.0 SCH file ](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_pdf.pdf)
+- **[PDF]**  [Seeeduino v4.0 SCH file](https://files.seeedstudio.com/wiki/Seeeduino_v4.0/res/Seeeduino_v4.0_pdf.pdf)
 - **[Datasheet]**  [ATMEGA328P-MU Summary](http://www.atmel.com/Images/Atmel-8271-8-bit-AVR-Microcontroller-ATmega48A-48PA-88A-88PA-168A-168PA-328-328P_datasheet_Summary.pdf)
--  **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
+- **[Datasheet]** [ATMEGA16U2 Summary](http://www.atmel.com/Images/7799S.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div className="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" className="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
 <div className="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>

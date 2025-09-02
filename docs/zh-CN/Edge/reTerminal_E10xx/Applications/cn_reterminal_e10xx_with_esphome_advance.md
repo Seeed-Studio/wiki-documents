@@ -1,6 +1,6 @@
 ---
-description: 本文介绍如何在 Home Assistant 中利用 reTerminal E10xx 系列的硬件功能在 ESPHome 上。
-title: reTerminal E10xx 在 Home Assistant 中的高级 ESPHome 使用方法
+description: 本文介绍如何在 Home Assistant 中利用 reTerminal E Series ePaper Display 系列的硬件功能在 ESPHome 上。
+title: reTerminal E Series ePaper Display 在 Home Assistant 中的高级 ESPHome 使用方法
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /cn/reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
@@ -9,15 +9,15 @@ last_update:
   author: Citric
 ---
 
-# reTerminal E10xx 在 Home Assistant 中的高级 ESPHome 使用方法
+# reTerminal E Series ePaper Display 在 Home Assistant 中的高级 ESPHome 使用方法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-本文探讨了 reTerminal E10xx 设备的高级 ESPHome 配置，基于我们的[基础 ESPHome 使用指南](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)中涵盖的基础概念。如果您是 ESPHome 或 reTerminal E10xx 的新手，我们建议在深入了解这些高级应用之前先从基础指南开始。
+本文探讨了 reTerminal E Series ePaper Display 设备的高级 ESPHome 配置，基于我们的[基础 ESPHome 使用指南](https://wiki.seeedstudio.com/cn/reterminal_e10xx_with_esphome)中涵盖的基础概念。如果您是 ESPHome 或 reTerminal E Series ePaper Display 的新手，我们建议在深入了解这些高级应用之前先从基础指南开始。
 
 ## 硬件功能
 
-reTerminal E10xx 包含几个硬件组件，可以通过 ESPHome 在 Home Assistant 中利用：
+reTerminal E Series ePaper Display 包含几个硬件组件，可以通过 ESPHome 在 Home Assistant 中利用：
 
 - 三个可编程按钮（GPIO3、GPIO4、GPIO5）
 
@@ -31,13 +31,13 @@ reTerminal E10xx 包含几个硬件组件，可以通过 ESPHome 在 Home Assist
 
 让我们探讨如何在实际应用中使用这些组件。
 
-## reTerminal E10xx 硬件组件控制
+## reTerminal E Series ePaper Display 硬件组件控制
 
-让我们探讨如何在 Home Assistant 中使用 reTerminal E10xx 上的每个硬件组件。
+让我们探讨如何在 Home Assistant 中使用 reTerminal E Series ePaper Display 上的每个硬件组件。
 
 ### 按钮和 LED
 
-此示例演示如何使用 reTerminal E10xx 上的三个按钮来控制功能，并通过板载 LED 提供视觉反馈。
+此示例演示如何使用 reTerminal E Series ePaper Display 上的三个按钮来控制功能，并通过板载 LED 提供视觉反馈。
 
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中的 `captive_portal` 代码行之后来使用此示例。
 
@@ -115,7 +115,7 @@ light:
 
 ### 蜂鸣器控制
 
-reTerminal E10xx 在 GPIO45 上包含一个蜂鸣器，可用于提供声音反馈。以下是配置方法：
+reTerminal E Series ePaper Display 在 GPIO45 上包含一个蜂鸣器，可用于提供声音反馈。以下是配置方法：
 
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
@@ -180,7 +180,7 @@ binary_sensor:
 
 ### 电池监控
 
-reTerminal E10xx 可以通过 GPIO1 上的模拟输入监控其电池电量。以下是设置方法：
+reTerminal E Series ePaper Display 可以通过 GPIO1 上的模拟输入监控其电池电量。以下是设置方法：
 
 ```yaml
 esphome:
@@ -279,7 +279,7 @@ sensor:
 
 ## 演示 2. 将 Home Assistant 仪表板截图
 
-此示例演示如何捕获您的 Home Assistant 仪表板截图并在 reTerminal E10xx 上显示。
+此示例演示如何捕获您的 Home Assistant 仪表板截图并在 reTerminal E Series ePaper Display 上显示。
 
 ### 安装 [Puppet](https://github.com/balloob/home-assistant-addons) 插件
 
@@ -327,7 +327,7 @@ Puppet 插件在端口 10000 上启动一个服务器，生成任何 Home Assist
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-此 URL 将以 800x480 分辨率（非常适合 reTerminal E10xx）捕获您默认仪表板的屏幕截图。
+此 URL 将以 800x480 分辨率（非常适合 reTerminal E Series）捕获您默认仪表板的屏幕截图。
 
 #### 电子纸优化：
 
@@ -405,7 +405,7 @@ display:
 如果本地DNS解析在您的网络中不起作用，请将 `homeassistant.local` 替换为您的 Home Assistant 的实际IP地址。
 :::
 
-当您的配置成功上传并运行时，您的 reTerminal E10xx 将显示您的 Home Assistant 仪表板的截图：
+当您的配置成功上传并运行时，您的 reTerminal E Series ePaper Display 将显示您的 Home Assistant 仪表板的截图：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -415,7 +415,7 @@ display:
 如果您开始使用深度睡眠程序，我们建议您优先使用右侧的白色按钮，并将右侧的白色按钮设置为睡眠唤醒按钮。这样，当您想要更新程序时，就不会遇到设备正在睡眠而无法通过串口上传程序的尴尬情况。
 :::
 
-此示例演示如何使用深度睡眠模式来显著降低功耗，使您的 reTerminal E10xx 适用于电池供电的应用。
+此示例演示如何使用深度睡眠模式来显著降低功耗，使您的 reTerminal E Series ePaper Display 适用于电池供电的应用。
 
 您可以通过复制下面的代码并将其粘贴到 Yaml 文件中 `captive_portal` 代码行之后来使用此示例。
 
@@ -488,7 +488,7 @@ display:
 为了更好地理解，我们强烈建议您在尝试这个综合示例之前先运行上面的基础示例。
 :::
 
-这个高级示例将多个功能组合成一个完整的 reTerminal E10xx 仪表板解决方案。它演示了：
+这个高级示例将多个功能组合成一个完整的 reTerminal E Series ePaper Display 仪表板解决方案。它演示了：
 
 1. 天气和室内气候显示
 2. 带图标的电池监控
@@ -820,7 +820,7 @@ display:
 
 </details>
 
-当您的配置成功上传并运行时，您的 reTerminal E10xx 将显示一个包含环境数据、时间和电池状态的综合仪表板：
+当您的配置成功上传并运行时，您的 reTerminal E Series ePaper Display 将显示一个包含环境数据、时间和电池状态的综合仪表板：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 

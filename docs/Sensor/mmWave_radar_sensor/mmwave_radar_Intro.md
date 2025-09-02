@@ -33,51 +33,50 @@ Schematic Diagram of Millimeter Wave Frequency Band, credit: <a href="https://ww
 Millimeter-wave (mmWave) radar sensors are capable of detecting objects, measuring their distance, speed, and angle, and can penetrate various materials such as plastic, clothing, and drywall, making them suitable for a wide range of applications.
 In Seeed, We have leveraged the power of mmWave to come up with various sensors that can perform a variety of actions, such as fall detection and sleep breathing monitoring.
 
-Our range of mmWave Radar Sensors are shown below, each with different features and functions. 
-
+Our range of mmWave Radar Sensors are shown below, each with different features and functions.
 
 <table align="center">
-	<tr>
-		<th>XIAO 60GHz mmWave Human Fall Detection Sensor MR60FDA2</th>
-		<th>XIAO 60GHz mmWave Human Breathing and Heartbeat Sensor MR60BHA2</th>
-		<th>24Ghz mmwave Human Static Presence Sensor for XIAO</th>
-		<th>mmWave Human Detection Sensor Kit MR24HPC1</th>
+ <tr>
+  <th>XIAO 60GHz mmWave Human Fall Detection Sensor MR60FDA2</th>
+  <th>XIAO 60GHz mmWave Human Breathing and Heartbeat Sensor MR60BHA2</th>
+  <th>24Ghz mmwave Human Static Presence Sensor for XIAO</th>
+  <th>mmWave Human Detection Sensor Kit MR24HPC1</th>
         <th>24GHz mmWave Human Static Presence Sensor Module MR24HPC1 Lite</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101010001-seeed-studio-24ghz-mmwave-for-xiao-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-human-detection-sensor-kit-45font.jpg" style={{width:450, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/22-114993387-mr60bha2-60ghz-mmwave-45font.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101010001-seeed-studio-24ghz-mmwave-for-xiao-45font_1.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-human-detection-sensor-kit-45font.jpg" style={{width:450, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-101991030-24ghz-mmwave-sensor-45font_1.jpg" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60FDA2-60GHz-mmWave-Sensor-Fall-Detection-Module-p-5946.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/MR60BHA2-60GHz-mmWave-Sensor-Breathing-and-Heartbeat-Module-p-5945.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-24GHz-mmWave-for-XIAO-p-5830.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/mmWave-Human-Detection-Sensor-Kit-p-5773.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
         </div></td>
-	</tr>
+ </tr>
 </table>
 
 <table align="center">
@@ -357,6 +356,7 @@ Our range of mmWave Radar Sensors are shown below, each with different features 
 The comparison table highlights mmWave radar's advantages over cameras, ultrasonic sensors, LiDAR, and PIR sensors. It offers stable performance in diverse environments, making it effective for fall detection, respiratory and heart rate monitoring, and human presence detection. Additionally, mmWave radar protects privacy by not capturing identifiable images, ensuring user confidentiality.
 
 ### Comparison of 24 GHz and 60 GHz
+
 The 24 GHz and 60 GHz millimeter-wave radars differ significantly in their characteristics. The 24 GHz radar offers strong penetration and a longer detection range, making it effective for human presence detection, particularly in automotive radar systems. In contrast, the 60 GHz radar, with weaker penetration but higher angular resolution, is ideal for precise applications like fall detection and heart rate monitoring, commonly found in smart home devices. Ultimately, selecting the right frequency depends on specific application needs, including detection range and target characteristics.
 
 ### Comparison of the Human Presence Detection Functions between mmWave Radar Sensors
@@ -458,6 +458,7 @@ Please use this module in an open space, and stay out of the following scenarios
 ## Open Source the Seeed Studio mmWave Radar Sensors
 
 ### Seeed Studio MR60FDA2 mmWave kit Open-Source Materials
+
 - **STL**: [mmWave 3D Case](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
 - **GitHub Repository**: Access the full codebase and documentation at the [Seeed mmWave Library GitHub page](https://github.com/Love4yzp/Seeed-mmWave-library).
 - **ESPHome Documentation**: For further customization and integration, refer to the [ESPHome documentation](https://esphome.io/).
@@ -469,6 +470,7 @@ Please use this module in an open space, and stay out of the following scenarios
 - **MR60FDA2 Tiny Frame Interface Manual**: [Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_TinyFrame_Interface_Fall_detection_V1.1.pdf)
 
 ### Seeed Studio MR60BHA2 mmWave kit Open-Source Materials
+
 - **STL**: [mmWave 3D Case](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)
 - **GitHub Repository**: Access the full codebase and documentation at the [Seeed mmWave Library GitHub page](https://github.com/Love4yzp/Seeed-mmWave-library).
 - **ESPHome Documentation**: For further customization and integration, refer to the [ESPHome documentation](https://esphome.io/).
@@ -480,21 +482,25 @@ Please use this module in an open space, and stay out of the following scenarios
 - **MR60BHA2 Tiny Frame Interface Manual**: [Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/datasheet/Seeed_Studio_Tiny_Frame_Interface_Breathing_and_Heartbeat.pdf)
 
 ### Seeed Studio 24GHz mmWave for XIAO Open-Source Materials
+
 - **24GHz mmWave for XIAO Technical Specification**: [24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Datasheet-V1.00.pdf)
 - **24GHz mmWave for XIAO User Manual**: [24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz_mmWave_for_XIAO-Usermanual-V1.00.pdf)
 - **24GHz mmWave for XIAO SCH**: [24GHz-mmWave-for-xiao-SCH.pdf](https://files.seeedstudio.com/wiki/mmwave-for-xiao/24GHz-mmWave-for-xiao-SCH.pdf)
 
 ### Seeed Studio MR24HPC1 mmWave kit Open-Source Materials
+
 - **GitHub Repository**: Access the full codebase and documentation at the [Project open source](https://github.com/limengdu/mmwave-kit-external-components).
 - **MR24HPC1 Module Quick Setup Template**: [MR24HPC1_Quick_Setup_Template-V1.0.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
 - **MR24HPC1 Module Technical Specification**: [24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/24GHz_mmWave_Sensor-Human_Static_Presence_Module_Lite_Datasheet.pdf)
 - **MR24HPC1 Module User Manual V1.5**: [MR24HPC1_User_Manual-V1.5.pdf](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
 
 #### Version 1
+
 - **MR24HPC1 Module SCH&PCB V1.0**: [mmWare-kit_sch&pcb.zip](https://files.seeedstudio.com/wiki/mmwave_kit/mmWare-kit_sch&pcb.zip)
 - **MR24HPC1 Module SCH V1.0**: [sch_mmware_kit.pdf](https://files.seeedstudio.com/wiki/mmwave_kit/sch_mmware_kit.pdf)
 
 #### Version 2
+
 - **MR24HPC1 Module SCH&PCB V2.0**: [Human_Detection_Sensor_Board_V2.zip](https://files.seeedstudio.com/wiki/mmwave_kit/Human_Detection_Sensor_Board_V2.zip)
 - **MR24HPC1 Module SCH V2.0**: [mmwave_kit_sch_V2.pdf](https://files.seeedstudio.com/wiki/mmwave_kit/mmwave_kit_sch_V2.pdf)
 
@@ -522,11 +528,11 @@ The raw data and algorithms in the Seeed Studio mmWave Radar Sensors are non-ope
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

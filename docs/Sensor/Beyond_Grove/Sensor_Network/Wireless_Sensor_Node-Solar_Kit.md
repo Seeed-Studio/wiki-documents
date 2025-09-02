@@ -14,9 +14,9 @@ last_update:
 
 **Wireless Sensor Node - Solar Kit** is an easy to use bundle created for experimenting with XBee and **XBee** compatible standalone wireless modules like RFBee and [Wifi Bee](/Wifi_Bee "Wifi Bee"). Every **maker** is confronted with the question of selection the right set of components to build **Wireless Sensor Node**. **Wireless Sensor Node - Solar Kit** fills this place very appropriately. The Grove - XBee Carrier provides LDO power supply, charger for LiPo Battery and programming port for **XBee** compatible modules. The **Solar Panel** provides the required charging voltage in remote areas. The **500 mAH LiPo Battery** provides the backup when the Sun is away. A properly designed and configured wireless module could provide very long hours of usage. For this, put the node to sleep when not transmitting the sensor value. This kit comes with a perfectly made **Transparent Box** , sets of **Screws** and **Plastic Rivets**.
 
-* We suggest you to buy more than one kit to create a distributed array of Sensor Nodes.
+- We suggest you to buy more than one kit to create a distributed array of Sensor Nodes.
 
-* Bees Shield along with **Seeeduino** and **Wifi Bee** can act as Wireless internet Gateway for these nodes.
+- Bees Shield along with **Seeeduino** and **Wifi Bee** can act as Wireless internet Gateway for these nodes.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Wireless-Sensor-Node-Solar-Kit-p-919.html)
 
@@ -110,21 +110,21 @@ last_update:
 
 ---
 
-* Distributed Wireles Sensor Nodes with **XBee** or **WifiBee** or **RFBee**.
+- Distributed Wireles Sensor Nodes with **XBee** or **WifiBee** or **RFBee**.
 
-* Build **Data Loggers** when connected with Wireless Gateway.
+- Build **Data Loggers** when connected with Wireless Gateway.
 
-* Intelligent Home Network
+- Intelligent Home Network
 
-* Industrial Automation
+- Industrial Automation
 
-* **SCADA** (Supervisory control and data acquisition.) systems
+- **SCADA** (Supervisory control and data acquisition.) systems
 
 ## Cautions
 
 ---
 
-* Insert the Bees in the right direction.
+- Insert the Bees in the right direction.
 
 ## Specification
 
@@ -175,9 +175,9 @@ This section provides a Step-by-Step construction of a Wireless Sensor Node. Ima
 
 Information on how to setup / program Bee Modules are available in
 
-* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+- [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
+- [Wifi Bee Page](/Wifi_Bee "Wifi Bee")
 
 ## Image Gallery
 
@@ -188,30 +188,30 @@ Information on how to setup / program Bee Modules are available in
 
 ## See Also
 
-* [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
+- [Grove - XBee_Carrier](/Grove-XBee_Carrier "Grove - XBee Carrier")
 
-* [Bees Shield](/Bees_Shield "Bees Shield")
+- [Bees Shield](/Bees_Shield "Bees Shield")
 
-* [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
+- [XBee](/XBee_Shield_V2.0 "XBee_Shield_V2.0")
 
-* [Wifi Bee](/Wifi_Bee "Wifi Bee")
+- [Wifi Bee](/Wifi_Bee "Wifi Bee")
 
-* [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
+- [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee_V1.1-Wireless_Arduino_compatible_node")
 
-* [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
+- [UartSBee](/UartSBee_V3.1 "UartSBee_V3.1")
 
-* <a href="/Seeeduino_V2.2" ><span><font color={'000000'} size={"3"}> Seeeduino V2.2</font></span></a>
+- <a href="/Seeeduino_V2.2" ><span><font color={'000000'} size={"3"}> Seeeduino V2.2</font></span></a>
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -5,7 +5,7 @@ keywords:
   - Edge
   - RasberryPi 5
   - Docker
-image: https://files.seeedstudio.com/wiki/AI_Sensing/Application/docker/docker.webp
+image: https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/recomputer_use_docker.webp
 slug: /use_docekr_on_recomputer
 last_update:
   date: 08/25/2025
@@ -18,7 +18,7 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Sensing/Application/docker/docker.png" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker.png" style={{width:300, height:'auto'}}/></div>
 
 This wiki explains how to use the [docker](https://www.docker.com) on reComputer box. Docker is an open-source platform used to automate the deployment, scaling, and management of applications inside lightweight, portable containers. Containers allow developers to package applications and their dependencies together in a consistent environment, ensuring that they run smoothly across different computing environments.
 

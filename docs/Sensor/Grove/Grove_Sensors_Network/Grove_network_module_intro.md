@@ -26,7 +26,6 @@ Overall, Grove network modules significantly lower the barrier to electronic pro
 
 - Diversity: The Grove series includes a variety of sensors, actuators, and communication modules, suitable for multiple application scenarios.
 
-
 ## Different types of Grove network modules
 
 We have various types of Grove network modules that can be applied to different scenarios such as IoT projects, wireless sensor networks, and smart homes.
@@ -34,7 +33,6 @@ We have various types of Grove network modules that can be applied to different 
 ### LoRa®
 
 #### Grove Wio-E5
-
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -45,14 +43,12 @@ We have various types of Grove network modules that can be applied to different 
     </div>
 </div>
 
-
 <br /><br /><br /><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="/Grove_LoRa_E5_New_Version/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 ### Bluetooth
 
@@ -61,10 +57,10 @@ We have various types of Grove network modules that can be applied to different 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
         <img src="https://files.seeedstudio.com/wiki/Grove-BLE-dual_model-v1.0/img/Grove-BLE-dual_model-v1.0.jpg" style={{width:900, height:'auto'}}/>
-    </div>   
+    </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>Grove - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip. The chip is based on ARM architecture and supports AT instructions. Users can develop flexibly according to the serial baud rate, equipment name, pairing password. </font>
-    </div>   
+    </div>
 
 </div>
 
@@ -75,9 +71,7 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="/Grove-BLE-dual_model-v1.0/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
 #### Grove - Serial Bluetooth v3.0
-
 
 <div class="all_container">
     <div class="xiao_topic_page_pic">
@@ -103,7 +97,7 @@ We have various types of Grove network modules that can be applied to different 
     </div>
     <div class="xiao_topic_page_font1">
         <font size={"2.1"}>Grove - BLE v1 (Grove - Bluetooth Low Energy v1) uses a Low Energy Bluetooth module -- HM-11, based on TI CC2540 chip, which has AT command support. As a Grove product it's convenient to use Grove - BLE with Arduino board via Base Shield. </font>
-    </div> 
+    </div>
 </div>
 
 <br /><br /><br /><br />
@@ -112,9 +106,6 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Blueseeed-HM11.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="/Grove-BLE_v1/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
-
-
 
 ### Wi-Fi
 
@@ -136,8 +127,6 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="/Grove-UART_Wifi_V2/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
-
 ### NFC
 
 #### Grove - NFC (ST25DV64)
@@ -157,7 +146,6 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="/grove-nfc-st25dv64/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
 #### Grove - NFC(PN532)
 
 <div class="all_container">
@@ -175,7 +163,6 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-NFC.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="/Grove_NFC/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 #### Grove - NFC_tag
 
@@ -233,9 +220,6 @@ We have various types of Grove network modules that can be applied to different 
     <a class="get_one_now_item" href="/Grove-GPS-Air530/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
-
-
 ### RF
 
 #### Grove - 125KHz RFID Reader
@@ -250,7 +234,6 @@ We have various types of Grove network modules that can be applied to different 
 </div>
 
 <br /><br /><br /><br />
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-125KHz-RFID-Reader.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
@@ -297,22 +280,21 @@ We have various types of Grove network modules that can be applied to different 
 
 Grove is a very powerful platform developed by Seeed Studio to simplify your IoT projects.We have integrated the grove connector to most boards produced by Seeed to make them become a system. This time, we combined Grove with LoRa to provide an ultra-long-range wireless module for you.
 
-
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Grove - Long Range 433MHz</th>
       <th class="table-trnobg">Grove - Long Range 868MHz</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-12fpmeipvyrqyuj01mq9hmgyvz.jpg" style={{width:900, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/img/cover.jpg" style={{width:900, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-12fpmeipvyrqyuj01mq9hmgyvz.jpg" style={{width:900, height:'auto'}}/></div></td>
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_LoRa_Radio/img/cover.jpg" style={{width:900, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LoRa-Radio-868MHz.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LoRa-Radio-433MHz-p-2777.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-LoRa-Radio-868MHz.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
@@ -320,7 +302,6 @@ Grove is a very powerful platform developed by Seeed Studio to simplify your IoT
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove_LoRa_Radio/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 #### Grove - Serial RF Pro
 
@@ -339,7 +320,6 @@ Grove is a very powerful platform developed by Seeed Studio to simplify your IoT
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Serial-RF-Pro.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="/Grove-Serial_RF_Pro/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 ### Other Standard Protocol
 
@@ -360,8 +340,6 @@ Grove is a very powerful platform developed by Seeed Studio to simplify your IoT
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-DMX512.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="/Grove-DMX512/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
-
 
 #### Grove- I2C ADC
 
@@ -386,20 +364,20 @@ Grove is a very powerful platform developed by Seeed Studio to simplify your IoT
 Grove - I2C FM Receiver is a wideband FM receiver module, this module is based on RDA5807M. It has a headset jack, so it can connect to earphones or audio.
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Grove - I2C FM Receiver v1.0</th>
       <th class="table-trnobg">Grove - I2C FM Receiver v1.1</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver/img/Grove-I2C_FM_Receiver_Photo.jpg" style={{width:900, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver_v1.1/img/IMG_0027a.JPG" style={{width:900, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver/img/Grove-I2C_FM_Receiver_Photo.jpg" style={{width:900, height:'auto'}}/></div></td>
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-I2C_FM_Receiver_v1.1/img/IMG_0027a.JPG" style={{width:900, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-FM-Receiver.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-FM-Receiver-v1-1.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-FM-Receiver.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-I2C-FM-Receiver-v1-1.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
@@ -407,7 +385,6 @@ Grove - I2C FM Receiver is a wideband FM receiver module, this module is based o
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="/Grove-I2C_FM_Receiver/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 #### Grove - Protoshield
 
@@ -445,9 +422,6 @@ Grove - I2C FM Receiver is a wideband FM receiver module, this module is based o
     <a class="get_one_now_item" href="/Grove-RJ45_Adapter/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
-
-
 ## Co-Create Grvoe sensors with Seeed Studio Fusion
 
 Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engineers turn their Grove designs into real products. Participants can have their designs manufactured and sold on Seeed Studio Bazaar (Product purchase page).
@@ -459,7 +433,6 @@ Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engine
     <a class="get_one_now_item" href="https://www.seeedstudio.com/co-create.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 More Information</font></span></strong></a>
 </div>
 
-
 ## ✨ Contributor Project
 
 - We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
@@ -470,11 +443,11 @@ Seeed Studio Fusion has launched a Grove Sensor Co-brand Campaign to help engine
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

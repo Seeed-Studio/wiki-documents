@@ -70,7 +70,6 @@ Select the XIAO ESP32S3 Sense board from the available devices.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
 
-
 Using the USB-C cable, connect your XIAO ESP32S3 Sense board to your computer. Once connected, click the **Connect** button located in the top-left corner of the SenseCraft AI Vision Workspace page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
@@ -98,17 +97,17 @@ On the right side of the page, click the **Trigger action when event conditions 
 
 A dialog box will appear, prompting you to input various parameters that will serve as the trigger conditions for changing the GPIO level. These parameters include:
 
-   - **Object**: Specify the object that your model should detect to trigger the GPIO level change. For example, "face" if you want the GPIO to change when a face is detected.
+- **Object**: Specify the object that your model should detect to trigger the GPIO level change. For example, "face" if you want the GPIO to change when a face is detected.
 
-   - **Condition**: Choose the condition that must be met for the trigger to occur. Options include "Greater than", "Less than", "Equal to", etc. For instance, selecting "Greater than" means the GPIO will change when the detected object's confidence level is greater than the specified value.
+- **Condition**: Choose the condition that must be met for the trigger to occur. Options include "Greater than", "Less than", "Equal to", etc. For instance, selecting "Greater than" means the GPIO will change when the detected object's confidence level is greater than the specified value.
 
-   - **Confidence**: Set the minimum confidence level required for the object detection to trigger the GPIO change. This value ranges from 1 to 100, with 100 being the highest confidence.
+- **Confidence**: Set the minimum confidence level required for the object detection to trigger the GPIO change. This value ranges from 1 to 100, with 100 being the highest confidence.
 
-   - **GPIO**: Select the specific GPIO pin on the XIAO ESP32S3 Sense that you want to control. Available options include GPIO1(DO), GPIO2(D1), etc.
+- **GPIO**: Select the specific GPIO pin on the XIAO ESP32S3 Sense that you want to control. Available options include GPIO1(DO), GPIO2(D1), etc.
 
-   - **Default Status**: Choose the default state of the selected GPIO pin. Options include "Low Level" and "High Level".
+- **Default Status**: Choose the default state of the selected GPIO pin. Options include "Low Level" and "High Level".
 
-   - **Active Status**: Specify the state that the GPIO pin should change to when the trigger conditions are met. Options include "Low Level" and "High Level".
+- **Active Status**: Specify the state that the GPIO pin should change to when the trigger conditions are met. Options include "Low Level" and "High Level".
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/47.png" style={{width:600, height:'auto'}}/></div>
 

@@ -31,11 +31,13 @@ The XIAO Soil Moisture Sensor is a compact, low-power environmental monitor powe
 ## Features
 
 **1.Three-Level Soil Moisture Monitoring**  
+
 - 🌿 **Normal:** Soil moisture is optimal, no watering needed.  
 - 🌤 **Almost Dry:** Moisture is decreasing, prepare to water soon.  
 - 🌵 **Dry:** Critically low, water immediately.
 
 Default thresholds:
+
 - **60%** → Green to Yellow transition.
 - **20%** → Yellow to Red transition.
 
@@ -45,11 +47,13 @@ Default thresholds:
 Preloaded with ESPHome — works out of the box with Home Assistant, letting you monitor and automate directly from your smart home dashboard.
 
 **3.Adaptive Monitoring & Instant Readout**  
+
 - Automatically adjusts check intervals (8h → 1h → 15min) depending on moisture level.  
 - Press the button once for an instant moisture reading anytime.
 
 **4.Simple Calibration (Optional)**  
 Quick triple-press the button to recalibrate for your specific soil: dry reading + wet reading → system adjusts automatically.
+
 - Triple short press → Enter calibration mode:
   - Red LED flashes → Within 10 seconds, insert the sensor into completely dry soil.
   - Wait until the red LED stops flashing, then wait 3 seconds.
@@ -62,7 +66,6 @@ Quick triple-press the button to recalibrate for your specific soil: dry reading
 Note: During calibration, initial readings may be unstable if the sensor is not inserted promptly. The system will take multiple samples, apply filtering, and average the readings for reliable calibration.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
-
 
 **5.Long Battery Life**  
 Powered by a single AA battery, designed to last up to three months thanks to optimized power management.
@@ -120,7 +123,6 @@ If you are not using a Seeed Studio product, you can also check and learn how to
 - **[Home Assistant Installation](https://www.home-assistant.io/installation/)**
 :::
 
-
 ### Step 1. Install ESPHome
 
 If you have already installed ESPHome, you can skip this step.
@@ -147,7 +149,7 @@ And then, ESPHome Builder will appear at the sidebar.
 
 By default, your device (XIAO ESP32C6) comes pre-flashed with firmware for XIAO Soil Moisture Sensor.However, if you need to modify or upgrade the default firmware, a factory YAML configuration file is available in the Resources section below. You can customize the logic as needed and flash it via Home Assistant.
 
-:::tip 
+:::tip
 To ensure accurate readings, just perform a quick calibration of the sensor before use.
 :::
 
@@ -155,7 +157,6 @@ To ensure accurate readings, just perform a quick calibration of the sensor befo
 
 1. **Enable Access Point**:
    - Upon powering up for the first time, the module will create a Wi-Fi network (SSID: `Xiao-Soil-Moisture-Monitor`).
-
 
 2. **Access Configuration**:
    - Connect to the network using a phone or PC.
@@ -193,6 +194,7 @@ Now that your soil sensor is up and running, go ahead and have fun monitoring yo
 You can modify the original firmware logic and flash your customized version of the soil sensor directly through Home Assistant.
 
 ### Step 1. Install ESPHome
+
 See the installation guide in Step 1 above.
 
 ### Step 2. Add a new device
@@ -263,14 +265,14 @@ esp32:
     sdkconfig_options:
       CONFIG_ESPTOOLPY_FLASHSIZE_4MB: y
 
-# LED Yellow	D10 18
-# LED RED	D9  20
-# LED Green	D8 19
-# button	D2  2
+# LED Yellow D10 18
+# LED RED D9  20
+# LED Green D8 19
+# button D2  2
 
-# Battery	D0 0
-# PWM out	D3 21
-# Soil sensor	D1  1
+# Battery D0 0
+# PWM out D3 21
+# Soil sensor D1  1
 
 output:
   - platform: gpio
@@ -642,58 +644,68 @@ wifi:
 
 captive_portal:
 ```
+
 </details>
 
 <details>
 <summary>Here’s an overview of the key functions and logic used in the YAML configuration.</summary>
 
 `on_boot` – Defines what happens when the device boots.
+
 - **Input parameters**: None.
 - **Action**: Turns on GPIO 14, sets PWM LED brightness, checks Wi-Fi status, and triggers the first moisture check.
 
 `scripts (red_led_blink, green_led_blink, fast_blink_green, fast_blink_red, etc.)` – Predefined LED blinking patterns.
+
 - **Input parameters**: None.
 - **Action**: Blinks LEDs in various patterns to indicate status or calibration steps.
 
 `do_calibration` – Runs the calibration process for dry and wet soil.
+
 - **Input parameters**: None.
 - **Action**: Blinks red LED, waits for dry reading; then blinks green LED, waits for wet reading; stores average values and confirms success or failure.
 
 `check_moisture_once` – Reads and evaluates soil moisture levels.
+
 - **Input parameters**: None.
 - **Action**: Takes multiple ADC readings, averages them, compares against calibrated thresholds, decides moisture state, triggers LED and deep sleep settings accordingly.
 
 `binary_sensor (GPIO2)` – Handles physical button press logic.
+
 - **Input parameters**: None.
 - **Action**: Counts button presses; single press triggers a moisture check, triple press triggers calibration.
 
 `globals` – Stores system state and calibration data.
+
 - **Variables**:
-    - `button_press_count`: Tracks button press count.
-    - `dry_value`, `wet_value`: Stores calibrated dry/wet ADC values.
-    - `wifi_net_status`: Tracks Wi-Fi connection state.
-    - `ref_dry`, `ref_wet`: Reference scaling factors for threshold calculations.
+  - `button_press_count`: Tracks button press count.
+  - `dry_value`, `wet_value`: Stores calibrated dry/wet ADC values.
+  - `wifi_net_status`: Tracks Wi-Fi connection state.
+  - `ref_dry`, `ref_wet`: Reference scaling factors for threshold calculations.
 
 `deep_sleep` – Manages power-saving sleep cycles.
+
 - **Input parameters**: None.
 - **Action**: Runs for 120 seconds, then sleeps for up to 180 minutes; wakes up on button press or interval.
 
 `sensor (ADC)` – Reads analog values from the soil sensor and battery.
+
 - **Input parameters**: None.
 - **Action**: Measures soil moisture and battery voltage; battery is scaled to show percentage.
 
 `text_sensor` – Publishes human-readable soil moisture status.
+
 - **Input parameters**: None.
 - **Action**: Displays "Dry", "Almost Dry", or "Normal Moisture" in Home Assistant.
 
 `wifi` + `api` + `ota` – Manages network connection, Home Assistant integration, and over-the-air firmware updates.
+
 - **Input parameters**: Wi-Fi SSID and password.
 - **Action**: Connects the device to the network, exposes its API, and enables remote updates.
 
 </details>
 
 Click **INSTALL** to install the code to the device and you will see the following image.
-
 
 <Tabs>
 <TabItem value='Install through browser'>
@@ -777,6 +789,7 @@ Wait a moment and you will see the feedback like the following image. If it fail
 </Tabs>
 
 ## Reset
+
 If the firmware needs to be reflashed, you can use the following link to restore the default firmware:  
 [https://gadgets.seeed.cc/](https://gadgets.seeed.cc/)
 
@@ -798,12 +811,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

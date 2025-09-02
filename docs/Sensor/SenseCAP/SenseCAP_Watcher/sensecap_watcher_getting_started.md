@@ -13,7 +13,6 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
@@ -36,7 +35,7 @@ This is SenseCAP Watcher Quick Starter Guide which will help you unbox and get h
 
 ## Introduction
 
-SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs. 
+SenseCAP Watcher is an AI watcher to help you monitor anomalies within a space and then take actions. Simply speak to Watcher to give commands, and it will execute your desired tasks when the event occurs.
 
 As a new comer for smart building / smart home system, SenseCAP Watcher is far more intelligent compared to current sensors and actuators. It understands what is happening within the space and then takes actions accordingly.
 
@@ -132,7 +131,6 @@ Once the setup is complete, the app will open a chat window to communicate with 
 
 With the binding process finished, your Watcher is now connected to the SenseCraft app, and you can start exploring its features and capabilities. The app serves as a convenient way to interact with your Watcher, adjust settings, and receive notifications remotely.
 
-
 ## Schedule a task for Watcher
 
 Next, select the method you want to use to schedule an executable task for Watcher.
@@ -166,20 +164,20 @@ If the target object moves out of the Watcher's view or is no longer detected, t
 Task Templates:
 
 - Human Detection:
-   - This task template is designed to detect the presence of human beings.
-   - When the Watcher identifies a **person**, it will trigger an alarm notification.
+  - This task template is designed to detect the presence of human beings.
+  - When the Watcher identifies a **person**, it will trigger an alarm notification.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task-temp-people-detected.png" style={{width:210, height:'auto'}}/></div><br />
 
 - Pet Detection:
-   - The Pet Detection task template focuses on recognizing cats or dogs.
-   - If the Watcher detects a **cat**, it will trigger an alarm notification.
+  - The Pet Detection task template focuses on recognizing cats or dogs.
+  - If the Watcher detects a **cat**, it will trigger an alarm notification.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task-temp-pet.png" style={{width:210, height:'auto'}}/></div><br />
 
 - Gesture Detection:
-   - This task template is configured to identify the "paper" hand gesture.
-   - When the Watcher recognizes the **paper gesture**, it will trigger an alarm notification.
+  - This task template is configured to identify the "paper" hand gesture.
+  - When the Watcher recognizes the **paper gesture**, it will trigger an alarm notification.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task-temp-gesture.png" style={{width:210, height:'auto'}}/></div><br />
 
@@ -290,7 +288,6 @@ If you encounter an error of **0x7002**, it means that the current Watcher's net
 </TabItem>
 
 </Tabs>
-
 
 ## To end a running task
 

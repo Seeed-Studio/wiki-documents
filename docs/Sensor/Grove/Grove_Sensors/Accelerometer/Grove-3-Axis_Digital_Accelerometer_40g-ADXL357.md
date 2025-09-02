@@ -15,8 +15,6 @@ last_update:
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/101020639-preview.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/101020639-preview.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 You can find a variety of [3-axis accelerometers](https://www.seeedstudio.com/tag/accelerometer.html) on our website that can meet different scenarios and needs. This time, we bring you the industrial grade, high stability, high precision and low power ADI ADXL series three-axis accelerometers.  
 
 The Grove - 3-Axis Digital Accelerometer ±40g (ADXL357) is a digital output [MEMS](https://www.seeedstudio.com/tag/MEMS.html)  Accelerometer. This sensor has three different selectable measuring ranges and accuracies: ±10g@51200 LSB/g,  ±20g@25600 LSB/g, ±40g@12800 LSB/g. You just need to do little calibration work to get a relatively accurate result. It output all the data via grove I2C port, and the I2C address is also selectable. What's more, we also provide two interrupt output pins which can be configured into 4 modes.
@@ -30,7 +28,6 @@ Product|Measurement Range|Output Port
 [Grove - 3-Axis Digital Accelerometer ±40g (ADXL357)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-40g-ADXL357-p-4005.html)|±10g@51200 LSB/g / ±20g@25600 LSB/g / ±40g@12800 LSB/g|Digital I2C
 [Grove - 3-Axis Digital Accelerometer ±200g (ADXL372)](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-200g-ADXL372-p-4003.html)|±200g|Digital I2C
 
- 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-40g-ADXL357-p-4005.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-40g-ADXL357-p-4005.html)
 
@@ -43,9 +40,6 @@ Product|Measurement Range|Output Port
 - Low drift, low noise, and low power
 - Support two channel interrupt output
 - Support FIFO(96*21-bit)
-
-
-
 
 ## APPLICATIONS
 
@@ -73,12 +67,8 @@ Product|Measurement Range|Output Port
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/pinout1.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/pinout1.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/pinout2.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/pinout2.jpg" alt="pir" width={600} height="auto" /></p>
-
-
-
 
 ## Platforms Supported
 
@@ -89,33 +79,26 @@ Product|Measurement Range|Output Port
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
 
-
 ## Getting Started
 
 ### Play With Arduino
 
-
 **Materials required**
-
 
 | Seeeduino V4.2 | Base Shield |Grove 3-aixs Accelermeter ADXL357|
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-40g-ADXL357-p-4005.html)|
 
-
-
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
 
-
 :::note
-		**1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
+  **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
     
-	**2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+ **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
 #### Hardware Connection
-
 
 - **Step 1.** Connect the Grove - 3-Axis Analog Accelerometer ±20g (ADXL357) to the **I2c** port of the Base Shield.
 
@@ -123,21 +106,20 @@ Product|Measurement Range|Output Port
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/_DAS3077.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/_DAS3077.png" alt="pir" width={600} height="auto" /></p>
-
 
 #### Software
 
 :::note
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
-:::      
+:::
+
 - **Step 1.** Download the [Seeed_ADXL_357 library](https://github.com/Seeed-Studio/Seeed_ADXL357B) from Github.
 
 - **Step 2**. Refer to How to [install library](https://github.com/Seeed-Studio/Multi_Channel_Relay_Arduino_Library) to install library for Arduino.
 
-- **Step 3**. Then open `example/ADXL_357/basic_demo` 
+- **Step 3**. Then open `example/ADXL_357/basic_demo`
 <!-- ![Alt text](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/1555916779373.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/img/1555916779373.png" alt="pir" width={600} height="auto" /></p>
 
@@ -147,20 +129,20 @@ Product|Measurement Range|Output Port
 
 
 #if defined(ARDUINO_ARCH_AVR)
-	#pragma message("Defined architecture for ARDUINO_ARCH_AVR.")
-	#define SERIAL Serial
+ #pragma message("Defined architecture for ARDUINO_ARCH_AVR.")
+ #define SERIAL Serial
 #elif defined(ARDUINO_ARCH_SAM)
-	#pragma message("Defined architecture for ARDUINO_ARCH_SAM.")
-	#define SERIAL SerialUSB
+ #pragma message("Defined architecture for ARDUINO_ARCH_SAM.")
+ #define SERIAL SerialUSB
 #elif defined(ARDUINO_ARCH_SAMD)
-	#pragma message("Defined architecture for ARDUINO_ARCH_SAMD.")	
-	#define SERIAL SerialUSB
+ #pragma message("Defined architecture for ARDUINO_ARCH_SAMD.") 
+ #define SERIAL SerialUSB
 #elif defined(ARDUINO_ARCH_STM32F4)
-	#pragma message("Defined architecture for ARDUINO_ARCH_STM32F4.")
-	#define SERIAL SerialUSB
+ #pragma message("Defined architecture for ARDUINO_ARCH_STM32F4.")
+ #define SERIAL SerialUSB
 #else
-	#pragma message("Not found any architecture.")
-	#define SERIAL Serial
+ #pragma message("Not found any architecture.")
+ #define SERIAL Serial
 #endif
 
 
@@ -176,108 +158,103 @@ Adxl357b  adxl357b;
 
 int32_t deal_cali_buf(int32_t *buf)
 {
-	int32_t cali_val = 0;
-	
-	for(int i = 0;i < CALI_BUF_LEN;i++)
-	{
-		cali_val += buf[i];
-	}
-	cali_val = cali_val/CALI_BUF_LEN;
-	return (int32_t)cali_val;
+ int32_t cali_val = 0;
+ 
+ for(int i = 0;i < CALI_BUF_LEN;i++)
+ {
+  cali_val += buf[i];
+ }
+ cali_val = cali_val/CALI_BUF_LEN;
+ return (int32_t)cali_val;
 }
 
 
 void calibration(void)
 {
-	int32_t x;
-	SERIAL.println("Please Place the module horizontally!");
-	delay(1000);
-	SERIAL.println("Start calibration........");
-	
-	for(int i=0;i<CALI_BUF_LEN;i++)
-	{
-		if(adxl357b.checkDataReady())
-		{
-			if(adxl357b.readXYZAxisResultData(cali_buf[0][i],cali_buf[1][i],cali_buf[2][i]))
-			{
-			}
-		}
-		delay(CALI_INTERVAL_TIME);
-		// SERIAL.print('.');
-	}
-	// SERIAL.println('.');
-	for(int i=0;i<3;i++)
-	{
-		cali_data[i] =  deal_cali_buf(cali_buf[i]);
-		SERIAL.println(cali_data[i]);
-	}
-	x = (((cali_data[2] - cali_data[0]) + (cali_data[2] - cali_data[1]))/2);
-	factory = 1.0 / (float)x;
-	// SERIAL.println(x);
-	SERIAL.println("Calibration OK!!");
+ int32_t x;
+ SERIAL.println("Please Place the module horizontally!");
+ delay(1000);
+ SERIAL.println("Start calibration........");
+ 
+ for(int i=0;i<CALI_BUF_LEN;i++)
+ {
+  if(adxl357b.checkDataReady())
+  {
+   if(adxl357b.readXYZAxisResultData(cali_buf[0][i],cali_buf[1][i],cali_buf[2][i]))
+   {
+   }
+  }
+  delay(CALI_INTERVAL_TIME);
+  // SERIAL.print('.');
+ }
+ // SERIAL.println('.');
+ for(int i=0;i<3;i++)
+ {
+  cali_data[i] =  deal_cali_buf(cali_buf[i]);
+  SERIAL.println(cali_data[i]);
+ }
+ x = (((cali_data[2] - cali_data[0]) + (cali_data[2] - cali_data[1]))/2);
+ factory = 1.0 / (float)x;
+ // SERIAL.println(x);
+ SERIAL.println("Calibration OK!!");
 }
-
-
-
-
 
 
 void setup(void)
 {
-	uint8_t value = 0;
-	float t;
-	
-	SERIAL.begin(115200);
-	if(adxl357b.begin())
-	{
-		SERIAL.println("Can't detect ADXL357B device .");
-		while(1);
-	}
-	SERIAL.println("Init OK!");
-	/*Set full scale range to ±40g*/
-	adxl357b.setAdxlRange(FOURTY_G);
-	/*Switch standby mode to measurement mode.*/
-	adxl357b.setPowerCtr(0);
-	delay(100);
-	/*Read Uncalibration temperature.*/
-	adxl357b.readTemperature(t);
-	
-	SERIAL.print("Uncalibration  temp = ");
-	SERIAL.println(t);
-	/**/
-	calibration();
+ uint8_t value = 0;
+ float t;
+ 
+ SERIAL.begin(115200);
+ if(adxl357b.begin())
+ {
+  SERIAL.println("Can't detect ADXL357B device .");
+  while(1);
+ }
+ SERIAL.println("Init OK!");
+ /*Set full scale range to ±40g*/
+ adxl357b.setAdxlRange(FOURTY_G);
+ /*Switch standby mode to measurement mode.*/
+ adxl357b.setPowerCtr(0);
+ delay(100);
+ /*Read Uncalibration temperature.*/
+ adxl357b.readTemperature(t);
+ 
+ SERIAL.print("Uncalibration  temp = ");
+ SERIAL.println(t);
+ /**/
+ calibration();
 
 }
 
 
 void loop(void)
 {
-	int32_t x,y,z;
-	uint8_t entry = 0;
-	if(adxl357b.checkDataReady())
-	{
-		if(adxl357b.readXYZAxisResultData(x,y,z))
-		{
-			SERIAL.println("Get data failed!");
-		}
-		SERIAL.print("X axis = ");
-		SERIAL.print(x*factory);
-		SERIAL.println('g');
-		SERIAL.print("Y axis = ");
-		SERIAL.print(y*factory);
-		SERIAL.println('g');
-		SERIAL.print("Z axis = ");
-		SERIAL.print(z*factory);
-		SERIAL.println('g');
-		
-	}
-	delay(100);
+ int32_t x,y,z;
+ uint8_t entry = 0;
+ if(adxl357b.checkDataReady())
+ {
+  if(adxl357b.readXYZAxisResultData(x,y,z))
+  {
+   SERIAL.println("Get data failed!");
+  }
+  SERIAL.print("X axis = ");
+  SERIAL.print(x*factory);
+  SERIAL.println('g');
+  SERIAL.print("Y axis = ");
+  SERIAL.print(y*factory);
+  SERIAL.println('g');
+  SERIAL.print("Z axis = ");
+  SERIAL.print(z*factory);
+  SERIAL.println('g');
+  
+ }
+ delay(100);
 }
 
 
-
-
 ```
+
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
@@ -285,7 +262,6 @@ void loop(void)
 - **Step 6. Calibration** wait for calibration, just few seconds the calibration will be finished
 
 - **Step 7.** Now you can use this sensor, and the output will be like this:
-
 
 ```cpp
 Start calibration.......Init OK!
@@ -304,38 +280,26 @@ Y axis = 8.43g
 
 ```
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/res/Grove%20-%203-Axis%20Digital%20Accelerometer%20%C2%B140g%20(ADXL357).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
-
-
-
 
 ## Resources
 
 - **[ZIP]** [Grove-3-Axis_Digital_Accelerometer-40g-ADXL357 Schematic file](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/res/Grove%20-%203-Axis%20Digital%20Accelerometer%20%C2%B140g%20(ADXL357).zip)
 - **[PDF]** [ADXL 357 Datasheet](https://files.seeedstudio.com/wiki/Grove-3-Axis_Digital_Accelerometer-40g-ADXL357/res/ADXL357.pdf)
 
-
-
 ## Tech Support & Product Discussion
-
-
-
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -31,18 +31,16 @@ Meshtastic provides multiple platform softwares for users to choose from, includ
 
 For specific information, please refer to [the official website of Meshtastic](https://meshtastic.org/docs/software/).
 
-* [Android App](https://meshtastic.org/docs/category/android-app/): Android application is available on F-Droid repo and Google Play Store. This allows you to connect to your Meshtastic device from your Android phone via Bluetooth, Wi-Fi (if on the same network) or USB On-The-Go (OTG).
-* [Apple App](https://meshtastic.org/docs/category/apple-apps/): It is available on app store. By default, the Meshtastic app for iOS supports the use of native offline Apple Maps.
-* [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web is a Meshtastic client that runs directly in your browser.
-* [Python CLI](https://meshtastic.org/docs/software/python/cli/): The python pip package installs a "meshtastic" command line executable, which displays packets sent over the network as JSON and lets you see serial debugging information from the meshtastic devices.
-* [Linux Native](https://meshtastic.org/docs/software/linux-native/): The device software can also run on a native Linux machine thanks to the Portduino framework.
-* [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): The Meshtastic ecosystem is highly extensible and allows easy integration with a number of existing software products and projects.
-
+- [Android App](https://meshtastic.org/docs/category/android-app/): Android application is available on F-Droid repo and Google Play Store. This allows you to connect to your Meshtastic device from your Android phone via Bluetooth, Wi-Fi (if on the same network) or USB On-The-Go (OTG).
+- [Apple App](https://meshtastic.org/docs/category/apple-apps/): It is available on app store. By default, the Meshtastic app for iOS supports the use of native offline Apple Maps.
+- [Web Client](https://meshtastic.org/docs/software/web-client/): Meshtastic Web is a Meshtastic client that runs directly in your browser.
+- [Python CLI](https://meshtastic.org/docs/software/python/cli/): The python pip package installs a "meshtastic" command line executable, which displays packets sent over the network as JSON and lets you see serial debugging information from the meshtastic devices.
+- [Linux Native](https://meshtastic.org/docs/software/linux-native/): The device software can also run on a native Linux machine thanks to the Portduino framework.
+- [Meshtastic Integrations](https://meshtastic.org/docs/software/integrations/): The Meshtastic ecosystem is highly extensible and allows easy integration with a number of existing software products and projects.
 
 ## Device Connection
 
-Before using Meshtastic, the device needs to be connected first. There are two connection methods. The first one is to use an expansion board, and the corresponding information will be displayed on the display. Then, the configuration can be carried out on the corresponding platform according to the reflected information. The second one is to connect the XIAO and the Wio-SX1262 module, and use a serial port tool to obtain the node ID and password. 
-
+Before using Meshtastic, the device needs to be connected first. There are two connection methods. The first one is to use an expansion board, and the corresponding information will be displayed on the display. Then, the configuration can be carried out on the corresponding platform according to the reflected information. The second one is to connect the XIAO and the Wio-SX1262 module, and use a serial port tool to obtain the node ID and password.
 
 ### Method 1: Connected to Expansion board
 
@@ -57,9 +55,9 @@ After flashing firmware and downloading Meshtastic app, Expansion board would be
 
 **Button Functions:**
 
-* Press once to switch the screen.
-* Press twice to broadcast.
-* Press three times to switch the GPS mode.
+- Press once to switch the screen.
+- Press twice to broadcast.
+- Press three times to switch the GPS mode.
 
 **Step 4**: Set the Lora region, then the device will reboot.
 
@@ -68,6 +66,7 @@ After flashing firmware and downloading Meshtastic app, Expansion board would be
 <iframe class="youtube-video-r" src="https://www.youtube.com/embed/dzqx32lBJso" title="Configuring Wio-SX1262 with XIAO ESP32S3 kit as Meshtastic device" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Method 2: Serial port tool
+
 Select a serial port debugging tool you like. I will take Comtool on mac as an example below. Select the **serial** connection, choose **the corresponding port**, configure the baud rate as **115200**, and turn on **RTS and DTR**. Open the connection and you can see the connection data.
 Search for "**nodenum**" to find the corresponding node ID. Its default **password is 123456**.
 
@@ -76,25 +75,27 @@ Search for "**nodenum**" to find the corresponding node ID. Its default **passwo
 :::tip
 The last four digits of nodenum are the device number ID discovered by the meshtastic app. For example, "nodenum 0x9e20d02c" is "Meshtastic_d02c" in meshtastic.
 :::
- 
+
 ## Communicate with Wio Tracker T1000-E
 
 **Step 1**. Connect Wio Tracker T1000-E following [wiki](https://wiki.seeedstudio.com/sensecap_t1000_e/#get-started-1).
 
-**Step 2**. Make sure the following setting is same as your configuration on XIAO ESP32S3 for Meshatastic. 
+**Step 2**. Make sure the following setting is same as your configuration on XIAO ESP32S3 for Meshatastic.
 
 1. Device activation and setup
+
 - Ensure that both devices are turned on and in normal working condition.
 - The wireless communication function of the device (such as Bluetooth, LoRa, etc.) should be enabled. Check the relevant settings to ensure that it is not accidentally turned off or restricted.
 
 2. Distance and signal strength
+
 - The distance between the two devices cannot be too far. After initail testing, the communication distance of XIAO ESP32S3 for Meshtastic with 2 dbm IPEX antenna is over 2.5 km. Generally speaking, in a more open environment, can be over 20 km.
 
 3. Network Settings
+
 - Ensure that the devices are in the same network mode or channel setting. Easily set to same 'lora region' and 'Modem preset' using Meshtastic APP.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/12.png" style={{width:350, height:'auto'}}/></div>
-
 
 **Step 3**. Communicate with Wio Tracker T1000-E
 
@@ -128,13 +129,11 @@ In the meshtastic application, the Wio-SX1262 with XIAO esp32s3 kit is capable o
   </table>
 </div>
 
-
 **Step 1**: Connect the Grove DHT20 sensor of the XIAO Expansion Board
 
 **Step 2**: Enable `Detection Sensor` in Meshtastic APP
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/13.PNG" style={{width:350, height:'auto'}}/></div>
-
 
 ### GNSS Sensor
 
@@ -156,8 +155,6 @@ In the meshtastic application, the Wio-SX1262 with XIAO esp32s3 kit is capable o
   </table>
 </div>
 
-
-
 ## Initial Configuration
 
 :::note
@@ -166,7 +163,7 @@ For more details, please refer to [Meshtastic](https://meshtastic.org/docs).
 
 ### Radio Configuration
 
-There are several config sections in the Meshtastic firmware, these are broken out so they can be sent as small admin messages over the mesh. 
+There are several config sections in the Meshtastic firmware, these are broken out so they can be sent as small admin messages over the mesh.
 
 | Name | Description |
 | ---- | ---- |
@@ -201,7 +198,6 @@ Modules are included in the firmware and allow users to extend the functionality
 | [Telemetry](https://meshtastic.org/docs/configuration/module/telemetry/) | Attach sensors to the device and transmit readings on a regular interval to the mesh. |
 | [Traceroute](https://meshtastic.org/docs/configuration/module/traceroute/) | Track which nodes are used to hop a message to a certain destination. |
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -215,5 +211,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

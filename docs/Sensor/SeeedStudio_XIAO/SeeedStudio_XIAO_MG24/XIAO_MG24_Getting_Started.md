@@ -15,86 +15,81 @@ sidebar_position: 0
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg" style={{width:600, height:'auto'}}/></div>
 <br />
 
-
 # Getting Started with Seeed Studio XIAO MG24(Sense)
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO MG24</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO MG24</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
-
-
 
 ## Introduction
 
 **Seeed Studio XIAO MG24** is a mini development board based on Silicon Labs' MG24. XIAO MG24 is based on **ARM Cortex-M33 core**, **32-bit RISC** architecture with a maximum clock speed of 78MHz, supporting DSP instructions and FPU floating-point operations, possessing powerful computing power, and built-in **AL/ML hardware accelerator MVP**, which can efficiently process AI/machine learning algorithms. Secondly, it has excellent RF performance, with a transmission **power of up to+19.5 dBm** and a reception sensitivity as **low as -105.4 dBm**. It supports multiple IoT and wireless transmission protocols such as **Matter, Thread, Zigbee, Bluetooth LE 5.3,Bluetooth mesh** etc.
 
-
 ### Specification
 
 <table align="center">
-	<tr>
-	    <th>Item</th>
-	    <th>Seeed Studio XIAO MG24</th>
+ <tr>
+     <th>Item</th>
+     <th>Seeed Studio XIAO MG24</th>
         <th>Seeed Studio XIAO MG24 Sense</th>
-	</tr>
-	<tr>
-	    <th>Processor</th>
-	    <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
-	</tr>
-	<tr>
-	    <th>Wireless</th>
-	    <td align="center" colspan="2">Proprietary 2.4 GHz <br></br> Zigbee PRO/Green Power protocols <br></br> BLE: Bluetooth 5.3, Bluetooth mesh</td>
-	</tr>
+ </tr>
+ <tr>
+     <th>Processor</th>
+     <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
+ </tr>
+ <tr>
+     <th>Wireless</th>
+     <td align="center" colspan="2">Proprietary 2.4 GHz <br></br> Zigbee PRO/Green Power protocols <br></br> BLE: Bluetooth 5.3, Bluetooth mesh</td>
+ </tr>
     <tr>
-	    <th>Built-in Sensors</th>
-	    <td align="center"> - </td>
+     <th>Built-in Sensors</th>
+     <td align="center"> - </td>
         <td align="center">6-Axis IMU(LSM6DS3TR-C) <br></br>Analog Microphone(MSM381ACT001)</td>
-	</tr>
+ </tr>
     <tr>
-	    <th>Memory</th>
-	    <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
+     <th>Memory</th>
+     <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
         <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
-	</tr>
+ </tr>
     <tr>
-	    <th>Interface</th>
-	    <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
-	    <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
-	</tr>
+     <th>Interface</th>
+     <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
+     <td>2x UART, 1x IIC, 2x SPI, 18x Analog, 18x Digital, ALL PWM, 1x User LED, 1x Charge LED <br></br> 1x Reset button, </td>
+ </tr>
     <tr>
-	    <th>Dimensions</th>
-	    <td align="center">21 x 17.8mm</td>
+     <th>Dimensions</th>
+     <td align="center">21 x 17.8mm</td>
         <td align="center">21 x 17.8mm</td>
-	</tr>
+ </tr>
     <tr>
-	    <th rowspan="2">Power</th>
-	    <td colspan="2" align="center">Input voltage (Type-C): 5V@14mA <br></br> Input voltage (BAT): 3.7V@7mA</td>
-	</tr>
+     <th rowspan="2">Power</th>
+     <td colspan="2" align="center">Input voltage (Type-C): 5V@14mA <br></br> Input voltage (BAT): 3.7V@7mA</td>
+ </tr>
     <tr>
-	    <td align="center">Charging battery current: <strong>200mA</strong></td>
-		<td align="center">Charging battery current: <strong>200mA</strong></td>
-	</tr>
+     <td align="center">Charging battery current: <strong>200mA</strong></td>
+  <td align="center">Charging battery current: <strong>200mA</strong></td>
+ </tr>
     <tr>
         <th>Low Power Consumption Model</th>
         <td>Normal: <strong>3.7V/6.71 mA</strong> <br></br> Sleep Mode: <strong>3.7V/1.91mA</strong> <br></br> Deep Sleep Mode: <strong>3.7V/1.95μA</strong></td>
@@ -105,7 +100,6 @@ sidebar_position: 0
         <td colspan="2" align="center">-20°C ~ 70°C</td>
     </tr>
 </table>
-
 
 ### Features
 
@@ -119,30 +113,27 @@ sidebar_position: 0
 - **Rich on-chip resources**:Maximum 1536KB Flash and 256KB RAM, with ample storage space.
 - **Rich interfaces**:Integrated with 12 bit 1Msps ADC, temperature sensor, analog comparator, DCDC and other rich peripherals, and up to 22 Pin, 2 USART, 2 low-power UART, 1 IIC and other interfaces.
 
-
-
-
 ## Hardware overview
 
 <table align="center">
-	<tr>
-	    <th>XIAO MG24 Sense indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24sense_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
-  	<tr>
-	    <th>XIAO MG24 indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>XIAO MG24 Sense indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24sense_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+   <tr>
+     <th>XIAO MG24 indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO MG24/ XIAO MG24(Sense) Pin List</th>
-	</tr>
+     <th>XIAO MG24/ XIAO MG24(Sense) Pin List</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/modifyMG24.png" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/modifyMG24.png" style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 :::tip
@@ -152,9 +143,6 @@ sidebar_position: 0
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 - 3V3 - This is the regulated output from the onboard regulator.
 - GND - Power/data/signal ground
-
-
-
 
 ## Getting started
 
@@ -196,7 +184,6 @@ The recommended programming tool for the XIAO MG24 is the Arduino IDE, so you ne
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 :::
 
-
 - **Step 1.** Download and Install the stable version of Arduino IDE according to your operating system.
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
@@ -227,9 +214,10 @@ https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/14(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
-:::tip 
+:::tip
 If you cannot find it after entering, please reopen the Arduino IDE.
 :::
+
 3. Opt for `XIAO_MG24` variant.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/15.png" style={{width:1000, height:'auto'}}/></div>
@@ -250,19 +238,17 @@ Now enjoy coding ✨.
 
 Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO MG24 is blinking.
 
-
-
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>MG24 BLink Code</th>
-			<th>LED BLink DisPlay</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/8.gif" style={{width:400, height:'auto'}}/></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>MG24 BLink Code</th>
+   <th>LED BLink DisPlay</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/8.gif" style={{width:400, height:'auto'}}/></div></td>
+  </tr>
+ </table>
 </div>
 
 ## Battery Usage
@@ -276,8 +262,6 @@ If you want to connect the battery for XIAO, we recommend you to purchase qualif
 :::caution
 Please be careful not to short-circuit the positive and negative terminals and burn the battery and equipment when soldering.
 :::
-
-
 
 **Instructions on the use of batteries:**
 
@@ -297,6 +281,7 @@ At the same time, we designed a red indicator light for battery charging, throug
 ## Reading Battery Voltage
 
 **Software code**
+
 ```cpp
 /*
   AnalogReadSerial
@@ -327,6 +312,7 @@ void loop() {
   delay(1000);  // delay in between reads for stability
 }
 ```
+
 **Display Result**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/55.png" alt="pir" width="800" height="auto"/></div>
@@ -407,7 +393,6 @@ void loop()
   Serial.printf("Going to deep sleep for 10s at %lu\n", millis());
   LowPower.deepSleep(10000);
 }
-
 
 
 ```
@@ -510,9 +495,7 @@ void loop()
 
 The **XIAO MG24** is a powerful microcontroller board from Seeed Studio, but users have reported issues where the device becomes unresponsive ("bricked") after entering Deep Sleep mode. This tutorial explains the cause of the problem, provides a detailed recovery method, and offers preventive measures to avoid bricking your XIAO MG24.
 
-
 The XIAO MG24 enters a **Deep Sleep mode** (EM4) to conserve power, but in some cases, it fails to wake up properly, preventing new sketches from being uploaded. Unlike other XIAO boards, the MG24 does not have a dedicated **BOOT button** or a documented method to enter boot mode, making recovery challenging.
-
 
 #### Preventive Measures
 
@@ -521,6 +504,7 @@ To avoid bricking your XIAO MG24 while using Deep Sleep mode, follow these steps
 1. Use the Escape Pin (PC0)
 
 The XIAO MG24 has a built-in **escape mechanism** to prevent bricking. If **PC0** is pulled **LOW** during reset, the device enters an infinite loop, allowing you to upload a new sketch.  
+
 - Connect **PC0** to **GND** before resetting the device.  
 - After resetting, upload your sketch while the device is in the loop.  
 
@@ -551,6 +535,7 @@ void setup() {
 Ensure that your sketch does not put the flash memory into sleep mode (`Deep Power Down`) unless absolutely necessary. This can prevent issues with uploading new sketches.
 
 #### Acknowledgments
+
 Special thanks to the **Seeed Studio community** for their valuable contributions and solutions to this issue. The recovery methods and preventive measures discussed in this tutorial were developed based on insights from community members like **[msfujino](https://forum.seeedstudio.com/u/msfujino)** and **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)**.  
 
 For more details and discussions, visit the original forum thread:  
@@ -564,6 +549,7 @@ The XIAO MG24 is currently the only XIAO model equipped with a serial port chip.
 
 1. **Download and Extract the Package**  
    - Download the provided ZIP file.
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_MG24/xiao_mg24_flash_erase_windows.zip" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Download the ZIP 🖱️</font></span></strong>
@@ -586,6 +572,7 @@ The XIAO MG24 is currently the only XIAO model equipped with a serial port chip.
 
 1. **Download and Extract the Package**  
    - Download the provided ZIP file (link will be added here).
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_MG24/xiao_mg24_flash_erase_macos.zip" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Download the ZIP 🖱️</font></span></strong>
@@ -604,21 +591,27 @@ The XIAO MG24 is currently the only XIAO model equipped with a serial port chip.
 4. **Run the Script**  
    - Open **Terminal**.  
    - Navigate to the extracted folder using the `cd` command. For example:  
+
      ```bash
      cd /path/to/extracted/folder
      ```  
+
    - Run the script `xiao_mg24_erase.sh` using the following command:  
+
      ```bash
      ./xiao_mg24_erase.sh
      ```  
+
    - The script will use OpenOCD to erase the flash memory and reset the device.  
 
 5. **Verify Recovery**  
    - After the script completes, the XIAO MG24 should be restored and ready for use.
 
 :::note
+
 - If macOS fails to recognize OpenOCD, ensure OpenOCD is installed and the correct path is used in the script.  
 - The scripts provided are designed specifically for the XIAO MG24 and should not be used with other XIAO models.  
+
 :::
 
 ## Resources
@@ -631,25 +624,24 @@ The XIAO MG24 is currently the only XIAO model equipped with a serial port chip.
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
-
 ### For Seeed Studio XIAO MG24
+
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 datasheet](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Schematic](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Wireless SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 - 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

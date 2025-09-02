@@ -20,25 +20,29 @@ Kit is come with Mini Embedded Antenna U.FL for GPS，you can also purchase anot
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/gps-bee-kit-with-mini-embedded-antenna-p-560.html?cPath=144_145)
 
-##   Features
----
-*   50-channel u-blox 5 engine with over 1 million effective correlators
-*   &lt;1 second Time To First Fix for Hot and Aided Starts
-*   -160dBm SuperSense® acquisition and tracking sensitivity
-*   Accelerated startup at weak signals for modules with KickStart feature
-*   Supports AssistNow Online and AssistNow Offline A-GPS services; OMA SUPL compliant
-*   High immunity to jamming
-*   4 Hz position update rate
-*   Miniature 2.0mm pitch header, compatible with Xbee sockets
-*   UART, USB, DDC and SPI interfaces
-*   RoHS compliant
+## Features
 
-##   Application Ideas
 ---
-*   Any position system
+- 50-channel u-blox 5 engine with over 1 million effective correlators
+- &lt;1 second Time To First Fix for Hot and Aided Starts
+- -160dBm SuperSense® acquisition and tracking sensitivity
+- Accelerated startup at weak signals for modules with KickStart feature
+- Supports AssistNow Online and AssistNow Offline A-GPS services; OMA SUPL compliant
+- High immunity to jamming
+- 4 Hz position update rate
+- Miniature 2.0mm pitch header, compatible with Xbee sockets
+- UART, USB, DDC and SPI interfaces
+- RoHS compliant
 
-##   Specification
+## Application Ideas
+
 ---
+- Any position system
+
+## Specification
+
+---
+
 | Item | Symbol | Min | Typ | Max | Unit |
 |------|--------|-----|-----|-----|------|
 | Power Supply | Vcc | 2.7 | 3.0 | 3.6 | V |
@@ -76,7 +80,8 @@ Kit is come with Mini Embedded Antenna U.FL for GPS，you can also purchase anot
 | 19 | SCL | I2C clock pin (configuration only) |
 | 20 | SDA | I2C data pin (configuration only) |
 
-##   Usage
+## Usage
+
 ---
 1.General purpose GPS shield Benefiting from XBee compatible pinout and voltage, GPS Bee could re-use any Xbee socket, from Xbee shield to Xbee explore. For example, you may just mount the Xbee module to Arduino projects by a Xbee shield.
 
@@ -94,7 +99,7 @@ Kit is come with Mini Embedded Antenna U.FL for GPS，you can also purchase anot
 
 Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see the legible and complete image.
 
-### SIM28 module Note:
+### SIM28 module Note
 
 1. GPS Bee has change the module as SIM28 which the same footprint as origin version.
 
@@ -108,8 +113,7 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 
 ![](https://files.seeedstudio.com/wiki/GPS_Bee_kit/img/SIM28_module_tools_pannel.jpg)
 
-
-##   Version Tracker
+## Version Tracker
 
 | Revision | Descriptions | Release |
 |----------|-------------|----------|
@@ -119,44 +123,42 @@ Click [here](http://garden.seeedstudio.com/images/2/20/GPSBee-exam-3.jpg) to see
 | v1.2 | change the GPS module to SIM28 | Dec 5,2013 |
 | v1.3 | change the GPS module to SIM28, change the LED to the bottom side. | Jan 10,2014 |
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPS_Bee_v1.3_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##   Resources
 ---
-*   [NEO-5 DataSheet Of U-blox](https://www.seeedstudio.com/depot/datasheet/NEO-5x_Data_Sheet(GPS.G5-MS5-07025).pdf)
+- [NEO-5 DataSheet Of U-blox](https://www.seeedstudio.com/depot/datasheet/NEO-5x_Data_Sheet(GPS.G5-MS5-07025).pdf)
 
-*   [NEO-6 DataSheet Of U-blox](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/NEO-6_DataSheet-GPS.G6-HW-09005-.pdf)
+- [NEO-6 DataSheet Of U-blox](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/NEO-6_DataSheet-GPS.G6-HW-09005-.pdf)
 
-*   [LEA-6 NEO-6 HardwareIntegrationManual](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/LEA-6_NEO-6_HardwareIntegrationManual.pdf)
+- [LEA-6 NEO-6 HardwareIntegrationManual](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/LEA-6_NEO-6_HardwareIntegrationManual.pdf)
 
-*   [U-center](https://www.seeedstudio.com/depot/datasheet/u-center_5.07_Installer.rar)
+- [U-center](https://www.seeedstudio.com/depot/datasheet/u-center_5.07_Installer.rar)
 
-*   [GPSBee Schematic v1.2.pdf](http://garden.seeedstudio.com/images/5/58/GPSBee_v1.2.pdf)
+- [GPSBee Schematic v1.2.pdf](http://garden.seeedstudio.com/images/5/58/GPSBee_v1.2.pdf)
 
-*   [GPSBee v1.2 Eagle file](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPSBee_v1.2_eagle.zip)
+- [GPSBee v1.2 Eagle file](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPSBee_v1.2_eagle.zip)
 
-*   [SIM28_DATA_File](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/SIM28_DATA_File.zip)
+- [SIM28_DATA_File](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/SIM28_DATA_File.zip)
 
-*   [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/SIMCom_GPS_DEMO_V1.07.zip)
+- [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/SIMCom_GPS_DEMO_V1.07.zip)
 
-*   [GPSBee V1.3 Eagle File](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPS_Bee_v1.3_eagle.zip)
+- [GPSBee V1.3 Eagle File](https://files.seeedstudio.com/wiki/GPS_Bee_kit/res/GPS_Bee_v1.3_eagle.zip)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

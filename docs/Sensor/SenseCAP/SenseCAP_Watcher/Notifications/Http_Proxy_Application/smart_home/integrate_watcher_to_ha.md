@@ -23,7 +23,6 @@ Below is the main content framework of this article.
 2. [Installing the SenseCraft plugin](#installing-the-sensecraft-plugin): Install the SenseCraft plugin by Seeed Studio, which allows for the swift deployment of Seeed Studio's products into Home Assistant.
 3. [Integrate SenseCAP Watcher into Home Assistant](#integrate-sensecap-watcher-into-home-assistant): Integrate SenseCAP Watcher into Home Assistant and set up a visual dashboard for configuration.
 
-
 ## Getting Started
 
 Before the tutorial content of this article begins, you may need to have the following hardware ready.
@@ -181,7 +180,7 @@ Then select **Watcher** in the device options.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/4.png" style={{width:500, height:'auto'}}/></div>
 
-Inside the next page, please enter the Watcher's device EUI, you can find Watche's EUI inside the [SenseCraft APP's Watcher's Setting](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block). 
+Inside the next page, please enter the Watcher's device EUI, you can find Watche's EUI inside the [SenseCraft APP's Watcher's Setting](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_ha/5.png" style={{width:500, height:'auto'}}/></div>
 
@@ -269,5 +268,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

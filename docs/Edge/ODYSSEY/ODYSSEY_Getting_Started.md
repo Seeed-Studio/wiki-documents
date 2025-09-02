@@ -23,7 +23,7 @@ sku: 102110399
 
 The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU that bursts up to 2.5GHz. It has all the great features that a standard Computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(optional), onboard Wi-Fi/BLE, Dual Gigabit Ethernet Ports, Audio Input and Output, USB Ports, HDMI, SATA Connectors, PCIe, etc.
 
-## Key Features:
+## Key Features
 
 - Intel® Celeron® J4105, Quad-Core 1.5-2.5GHZ
 - Dual-Band Frequency 2.5GHz/5GHz WiFi/ Bluetooth 5.0
@@ -36,7 +36,6 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 - Compatible with Grove Ecosystem
 
 <p style={{}}><a href="https://www.seeedstudio.com/ODYSSEY-X86J4105800-p-4445.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
-
 
 ## Hardware Specifications
 
@@ -63,7 +62,7 @@ The ODYSSEY - X86J4105, is based on Intel Celeron J4105, a Quad-Core 1.5GHz CPU 
 | Certifications   | FCC, CE                                                                                                                                                 |
 
 !!!Note
-        If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
+        If you are using 3.5inch HDD drives with the ODYSSEY – X86J4105, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A.
 
 !!!Note
         You can power the X86 using a power bank, but you need to make sure to use a power bank with USB PD protocol and connect via USB C. Also, you can seamlessly switch between USB C power and DC power with no issue.
@@ -228,7 +227,7 @@ The ODYSSEY - X86J4105 is built with Arduino Core(ATSAMD21G18) which provides mo
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoBoard.png)
 
-3. Select the right Port and Board before uploading. 
+3. Select the right Port and Board before uploading.
 
 - `Port` -> `COMxx(Seeeduno Zero)`
 
@@ -330,7 +329,6 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Auto-power.png" /></div>
 
-
 ### Fan is not turning on
 
 Odyssey fan is controlled by Embedded controller (EC) which role as initialize the device before system is up. The temperature in BIOS is detected by EC and the temperature sensor place close to the intel CPU which do not have the sensor pin. In another word, the temperature is not the CPU's direct value, maybe 5 degrees centigrade error. What you saw the temperature value in system is feedback by CPU internal, temperature in BIOS screen feedback by EC, fan run or stop according the EC value.
@@ -349,16 +347,15 @@ Some of you may need to know the 5V PWM fan pinout in order to DIY/replace to yo
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/x86-fan.png" /></div>
 
-
-### Re-Installing the Original Windows 
+### Re-Installing the Original Windows
 
 The eMMC versions of ODYSSEY-X86 will have Windows 10 pre-installed into the device. If you install another OS and wanting to go back to the original Windows 10 please check here:
 
 - [**Original Windows 10 Image**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Ant-image/SD-JX-CJ41G-M-101-H.zip)
 
-    - This image supports **Auto Flash**. Simply download the above image and unzip the files and place in the **root location of a USB drive**.
+  - This image supports **Auto Flash**. Simply download the above image and unzip the files and place in the **root location of a USB drive**.
 
-    - Plug in the USB drive to ODYSSEY-X86 and boot up from the USB Drive. This will auto flash the Original Windows 10 Image back in the eMMC.
+  - Plug in the USB drive to ODYSSEY-X86 and boot up from the USB Drive. This will auto flash the Original Windows 10 Image back in the eMMC.
 
 ### Does Odyssey have TPM?
 
@@ -393,11 +390,11 @@ To set this up, you need to [update to the latest BIOS](https://wiki.seeedstudio
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

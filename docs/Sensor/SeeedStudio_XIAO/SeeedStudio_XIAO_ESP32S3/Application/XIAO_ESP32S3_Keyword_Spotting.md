@@ -53,7 +53,7 @@ If this is your first time using XIAO ESP32S3 Sense, then before you start, we s
 
 ## Capturing (offline) Audio Data
 
-### Step 1. Save recorded sound samples as .wav audio files to a microSD card.
+### Step 1. Save recorded sound samples as .wav audio files to a microSD card
 
 Let's use the onboard SD Card reader to save.wav audio files, we need to habilitate the XIAO PSRAM first.
 
@@ -406,7 +406,6 @@ The next step is to create the images to be trained in the next phase. We can ke
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/7.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Building a mechine learning model
 
 ### Step 5. Model Design and Training
@@ -416,7 +415,6 @@ We will use a Convolution Neural Network (CNN) model. The basic architecture is 
 As hyper-parameters, we will have a Learning Rate of 0.005 and a model that will be trained by 100 epochs. We will also include data augmentation, as some noise. The result seems OK.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/8.png" style={{width:600, height:'auto'}}/></div>
-
 
 ## Deploying to XIAO ESP32S3 Sense
 
@@ -1042,24 +1040,16 @@ MJRoBot also has very many interesting projects about the XIAO ESP32S3.
 - **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
 - **[EDGE-IMPULSE]** [edge impulse demo](https://studio.edgeimpulse.com/public/256022/latest)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-

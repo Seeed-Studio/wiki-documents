@@ -77,8 +77,18 @@ board = seeed-xiao-nrf54l15
 ```
 
 :::tip
-Crucial Step: After pasting the code, remember to save the platformio.ini file (Ctrl+S or Cmd+S). PlatformIO will automatically detect the changes and begin downloading the necessary Zephyr framework and board-specific tools from the platform-seeedboards GitHub repository. This process might take a few moments.
+If you previously downloaded other XIAO libraries, you must manually delete them before modifying the platform.ini file and re-downloading the required libraries.
 :::
+
+Mac Path：
+`/Users/YourName/.platformio/platforms`
+
+Window Path：
+`C:\Users\000\.platformio\platforms\Seeed Studio`
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
+platformmodify.jpg" style={{width:600, height:'auto'}}/></div>
+
 
 
 ### Compile and Upload Your First Blink Example
@@ -114,9 +124,6 @@ Replace the content of your src/main.cpp (or src/main.c) file with the following
  /* The devicetree node identifier for the "led0" alias. */
  #define LED0_NODE DT_ALIAS(led0)
  
- /*
-  * 获取 LED 的 GPIO 规范
-  */
  static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
  
  int main(void)

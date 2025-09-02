@@ -20,22 +20,20 @@ last_update:
 
 The reCamera Gimbal 2002 Series is the first open-source camera control system with 1TOPS AI camera (reCamera) and 2-axis gimbal. Its dual brushless motors enable 360° yaw and 180° pitch for full coverage.
 
-
 ## Feature
 
 - Fully Open-Source Ecosystem on Hardware and Software
-  * [Developer Portal](https://github.com/Seeed-Studio/OSHW-reCamera-Series?tab=readme-ov-file#recamera-software-development-guide)
+  - [Developer Portal](https://github.com/Seeed-Studio/OSHW-reCamera-Series?tab=readme-ov-file#recamera-software-development-guide)
 - Quick Setup & Precision Movement
-  * Lego-like assemble package support
-  * 360° yaw Rotation Full coverage and 180° pitch Range From floor to ceiling
-  * Brushless Motor Precision: 0.01° stepping accuracy for smooth target tracking.
+  - Lego-like assemble package support
+  - 360° yaw Rotation Full coverage and 180° pitch Range From floor to ceiling
+  - Brushless Motor Precision: 0.01° stepping accuracy for smooth target tracking.
 - AI-Powered Motion Control
-  * Ready Custom AI Models: Built-in YOLO11 with commercial license, Roboflow & SenseCraft AI support.
-  * Smart Tracking: AI auto-adjusts gimbal movement.
+  - Ready Custom AI Models: Built-in YOLO11 with commercial license, Roboflow & SenseCraft AI support.
+  - Smart Tracking: AI auto-adjusts gimbal movement.
 - Flexible Development for All Skill Levels
-  * Built-in Node-RED for low-code flow customization on gimbal movement.
-  * C++ SDK supported for deeper development.
-
+  - Built-in Node-RED for low-code flow customization on gimbal movement.
+  - C++ SDK supported for deeper development.
 
 ## Specifications
 
@@ -51,7 +49,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 | **Memory**             | 256 MB                                                                  |
 | **Video Encoder**      | 5MP @ 30Fps                                                              |
 
-
 ### Basic
 
 | **Parameter**          | **Value**                                                                 |
@@ -59,7 +56,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 | **eMMC**               | 8GB / 64GB                                                               |
 | **Power Supply**       | 12V DC Jack to XT30 connector                                             |
 | **Power Consumption**  | 12V, 185mA (static)                                                      |
-
 
 ### Camera
 
@@ -77,7 +73,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 | **Distortion**         | &lt;1%                                                                      |
 | **Lens Structure**     | 5P                                                                        |
 
-
 ### Interface
 
 | **Parameter**          | **Value**                                                                 |
@@ -89,7 +84,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 | **LED**                | 1 × Power Indicator, 2 × IO Programmable Indicator                        |
 | **Mic**                | On-Board Mic                                                              |
 | **Speaker**            | External Speaker                                                          |
-
 
 ### Motor Spec
 
@@ -113,11 +107,11 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 | **Control Mode**       | Open Loop(24KHz) / Speed Loop(4KHz) / Position Loop(2KHz)                | Open Loop(24KHz) / Speed Loop(4KHz) / Position Loop(2KHz)                |
 
 ### Gimbal Spec
+
 | **Parameter**          | **Value**                                                                 |
 |------------------------|---------------------------------------------------------------------------|
 | **Pitch Range**        | 0～180°                                                                    |
 | **Yaw Range**          | 0～360°                                                                    |
-
 
 ### Ambient Conditions
 
@@ -125,7 +119,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 |------------------------|---------------------------------------------------------------------------|
 | **Operating Temperature** | -20～50 ℃                                                                 |
 | **Operating Humidity**  | 0～90%                                                                    |
-
 
 ### Mechanical
 
@@ -145,7 +138,6 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Interface.png" /></div>
 
-
 ### Core Board-C101
 
 [**Click to download PCBA file of 8GB**](https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera_Gimbal_Core_2002w_8GB_v1.zip)
@@ -154,11 +146,12 @@ The reCamera Gimbal 2002 Series is the first open-source camera control system w
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 #### Block Diagram
 
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/C101_block.png" /></div> 
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/C101_block.png" /></div>
 
 ### Sensor Board-S101
 
@@ -166,8 +159,8 @@ Top View             |  Bottom View
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
 
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
 
 ### Base Board-B401
 
@@ -175,17 +168,19 @@ Top View             |  Bottom View
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/B401_Top.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/B401_Bottom.png" /></div>
 
-
 #### Block Diagram
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/B401_block.png" /></div> 
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/B401_block.png" /></div>
 
 ### Power Supply Board
 
 This power supply board provides dual functions of stable power delivery and overvoltage protection. It supports 12V DC input to power both motors and reCamera systems.
 
 **Overvoltage Protection Thresholds**:
+
 - Maximum Trip Voltage: 25.66V
 - Normal Operation Voltage: 25.54V
 - Minimum Safe Voltage: 25.4V
@@ -193,7 +188,8 @@ This power supply board provides dual functions of stable power delivery and ove
 [**Click to download PCBA file**](https://files.seeedstudio.com/wiki/reCamera/Gimbal/reCamera_Gimbal_power_supply_board_v1.zip)
 
 #### Block Diagram
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/power_supply_block.png" /></div> 
+
+<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/power_supply_block.png" /></div>
 
 ## Hardware Interface
 
@@ -217,11 +213,13 @@ There are 3 indicators on the recamera, **red and blue** light are programmable 
 | LED3 - Blue | Flashing | eMMC Reading/Writing |
 
 Example 1: Use linux command change the **red led** brightness to zero
+
 ``` bash
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
 Example 2: completely turn **red light** off
+
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger
 ```
@@ -236,7 +234,6 @@ echo 0 > /sys/devices/platform/leds/leds/white/brightness //light off
 ### <span id="jump2">Mic & Speaker</span>
 
 The recamera has a microphone and a speaker. You can invoke the microphone and speaker by following the command. The recamera can play audio files in **wav** format.
-
 
 ```bash
 sudo arecord -D hw:0,0 -r 16000 -f S16_LE -c 1 -d 5 /home/recamera/test.wav //Record five seconds of audio
@@ -284,13 +281,11 @@ wpa_cli status                                  # Checking connection status
 
 ### <span id="jump4">Button</span>
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Interface.png" /></div>
 
 #### User Button
 
 The **10 User Button** is located on the **reCamera Gimbal** Board-B401. If you would like to reset the device such as forgetting your device's passcode, you can long pressing the User button and then connecting the device to power. When the red light of the device is constantly on instead of blinking, release the User button.
-
 
 If you want to restore the firmware of your device to a specific version, please visit [os version control](https://wiki.seeedstudio.com/recamera_os_version_control).
 
@@ -336,18 +331,16 @@ Use the `candump can0` command to receive can messages:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_Partlist.png" /></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

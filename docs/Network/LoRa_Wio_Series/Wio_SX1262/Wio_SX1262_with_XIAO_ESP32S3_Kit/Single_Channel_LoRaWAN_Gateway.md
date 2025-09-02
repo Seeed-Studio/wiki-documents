@@ -14,11 +14,9 @@ last_update:
 
 Single channel gateways(called One-Channel Hub) are low-cost tools that enable users to begin exploring the LoRa realm. These gateways can receive LoRa packets on a specific spreading factor and channel and facilitate the exchange of these packets with the network. Due to their affordability, many users have embarked on building their own single-channel gateways to experiment with LoRa.
 
-
 The XIAO ESP32S3 as host MCU and Wio-SX1262 LoRa radio kit can be configured to function as single channel gateway. This kit offers a practical solution for those interested in delving into LoRa technology and establishing connections to LNS(lora network server).
 
 This is the github project: [One Channel Hub](https://github.com/Seeed-Studio/one_channel_hub/tree/xiao-esp32s3-sx1262-bt-config).
-
 
 ## Flash Firmware
 
@@ -30,6 +28,7 @@ XIAO ESP32S3 & Wio-SX1262 Kit with 3D case is pre-flashed as a Single Channel Lo
 
 :::note
 This firmware build with:
+
 - Select Seeed XIAO ESP32S3 Gateway board
 - Modify the Flash size to 8 MB
 - Enable Get config from flash
@@ -37,11 +36,12 @@ This firmware build with:
 - Disable OLED Display
 
 Usage:
+
 - Enable/disable config through user button
 - Bluetooth broadcast name by "GW-XIAO-ESP32S3"
 - Connect through SenseCraft APP and config Wi-Fi/LoRa
-:::
 
+:::
 
 If you don't use the complete ESP-IDF environment, it is also possible to flash the provided binary files using the **esptool** utility.
 
@@ -54,12 +54,12 @@ Click to download the firmware:
 **Step 1**: Download Esptool, for more information please refer to the [Esptool documentation](https://docs.espressif.com/projects/esptool/en/latest/esp32/).
 
 ```python
-$ pip install esptool
+pip install esptool
 ```
 
 **Step 2**: Connect the XIAO ESP32S3 to your PC.
 
-**Step 3**: Navigate to the downloaded file and open the terminal/Command, then run **esptool.py** commands. 
+**Step 3**: Navigate to the downloaded file and open the terminal/Command, then run **esptool.py** commands.
 
 - For Linux/macOS
 
@@ -110,16 +110,15 @@ idf.py -p port monitor
 
 ### Flash with esptool
 
-If not using the complete ESP-IDF environment, can just download the provided binary files following [the first section](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#flash-firmware). 
+If not using the complete ESP-IDF environment, can just download the provided binary files following [the first section](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/#flash-firmware).
 
 ### Flash with esptool-JS
 
-[Online esptool](https://espressif.github.io/esptool-js/) is recommended for flashing. 
+[Online esptool](https://espressif.github.io/esptool-js/) is recommended for flashing.
 
 **Step1**: Set Baud rate to 115200 and connect to correct port.
 
 **Step2**: Choose bin file and fill in coresponding flash address.
-
 
 |**Flash Address**|**File**|
 |----|----|
@@ -129,10 +128,10 @@ If not using the complete ESP-IDF environment, can just download the provided bi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/70.png" alt="pir" width={600} height="auto" /></p>
 
-
 ## Configuration via Sensecraft APP
 
 ### WiFi & LoRaWAN Configuration
+
 **Step 1**: Download `SenseCraft` App: [Download Link](https://sensecap-mate-download.seeed.cn/)
 
 **Step 2**: Connect the XIAO ESP32S3 & Wio-SX1262 Kit to power.
@@ -164,14 +163,12 @@ If you want to configure Wi-Fi using **ESP BLE prov** and configure LoRaWAN usin
 
 **Step 1**: Download `ESP BLE prov` App:
 
-* [for Android](https://play.google.com/store/apps/details?id=com.espressif.provble)
-* [for IOS](https://apps.apple.com/in/app/esp-ble-provisioning/id1473590141)
+- [for Android](https://play.google.com/store/apps/details?id=com.espressif.provble)
+- [for IOS](https://apps.apple.com/in/app/esp-ble-provisioning/id1473590141)
 
+Press the `RST` button on the board, and then press the `BOOT` button, the LED will be on.
 
-Press the `RST` button on the board, and then press the `BOOT` button, the LED will be on. 
-
-
-**Step 2**: Connect the XIAO to your PC and open a serial port tool, like PuTTY, COMTOOL, or any other tools you prefered. 
+**Step 2**: Connect the XIAO to your PC and open a serial port tool, like PuTTY, COMTOOL, or any other tools you prefered.
 
 **Step 3**: Open terminal communication
 
@@ -193,10 +190,9 @@ Press the `RST` button on the board, and then press the `BOOT` button, the LED w
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/26.png" alt="pir" width={500} height="auto" /></p>
 
-
 **Step 4**: Click 'Provison Device' on ESP BLE prov app
 
-Once connected successfully, The wifi connection information and lora gateway ID will show up on terminal. 
+Once connected successfully, The wifi connection information and lora gateway ID will show up on terminal.
 
 <div class="table-center">
 <iframe width="700" height="600" src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/wifi.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>
@@ -204,11 +200,12 @@ Once connected successfully, The wifi connection information and lora gateway ID
 
 :::tip
 Please take the notes, it is useful for Lora configuration.
+
 1. IP address: 192.168.1.44
 2. Port: 8000
 3. Gateway EUI: 0xF09E9EFFFE20D02C
-:::
 
+:::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/24.png" alt="pir" width={600} height="auto" /></p>
 
@@ -218,19 +215,20 @@ The lora package forwarder's message which in Json format can be checked on Term
 
 ### LoRaWAN Configuration
 
-As the IP address and port we taken down, the web interface is available at: `http://ip_address:8000`, and open it on browser. 
-
+As the IP address and port we taken down, the web interface is available at: `http://ip_address:8000`, and open it on browser.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/28.png" alt="pir" width={400} height="auto" /></p>
 
 The web interface allows to configure the following parameters:
 
-Channel parameters: 
+Channel parameters:
+
 - Frequency
 - Spreading Factor
 - Bandwidth
 
-LoRaWAN network server: 
+LoRaWAN network server:
+
 - Address
 - Port
 
@@ -241,23 +239,21 @@ There are 2 buttons at the bottom of the configuration form:
 `Configure`: when pressed, the parameters set in the HTML form are written to flash memory (NVS).<br/>
 `Reboot`: when pressed, a reboot command is triggered, the LoRaHub will restart and the new configuration is applied.
 
-
 :::note
 Note that the configuration written in flash memory is only taken into account on the next reboot.
 :::
 
-
 All are set down. Now we can connect the XIAO ESP32S3 & SX1262 Kit lora kit to Lora Network Server like TTN(The things network) and Chirpstack.
 
-* [Connect to TTN](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)
-* [Connect to Chirpstack](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/)
-
+- [Connect to TTN](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)
+- [Connect to Chirpstack](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_Chirpstack/)
 
 ## Customize and build firmware
 
 If you want to reset the configuration, the following instruction can help you build the firmware by yourself under ESP-IDF environment.
 
 ### Setup environment
+
 This project is based on the Espressif ESP-IDF development, check this [guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation ) to setup the environment.
 
 #### Get ESP-IDF
@@ -288,16 +284,19 @@ cd ~/this_project_directory
 **Step 2**: Install required driver
 
 - SX126x driver(sx1261, sx1262, sx1268):
+
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
 - llcc68 driver:
+
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
 ```
 
 - lr11xx driver(lr1121):
+
 ```
 git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ```
@@ -305,6 +304,7 @@ git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ### Build Firmware
 
 **Step 1**: Enter the lorahub directory.
+
 ```
 cd lorahub
 ```
@@ -346,10 +346,10 @@ Don't forget to disable the OLED Display.
  (3) Set **Wi-Fi Provisionning**:
 
 - Set the Wi-Fi Provisionning via **SenseCraft APP**:
- `LoRaWAN 1-CH HUB Configuration` → `WiFi Configuration` → `Disable WiFi Provisionning over BLE` 
+ `LoRaWAN 1-CH HUB Configuration` → `WiFi Configuration` → `Disable WiFi Provisionning over BLE`
 
 - Set the Wi-Fi Provisionning via **ESP BLE prov**:
- `LoRaWAN 1-CH HUB Configuration` → `WiFi Configuration` → `Enable WiFi Provisionning over BLE` 
+ `LoRaWAN 1-CH HUB Configuration` → `WiFi Configuration` → `Enable WiFi Provisionning over BLE`
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/100.png" alt="pir" width={800} height="auto" /></p>
 
@@ -361,9 +361,9 @@ idf.py all
 
 ## Resource
 
-* [One Channel Hub Firmware for XIAO ESP32S3 & Wio-SX1262 Kit via SenseCraft APP](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_2024120201.zip)
-* [One Channel Hub Firmware for XIAO ESP32S3 & Wio-SX1262 Kit via ESP BLE prov ](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_20241016.zip)
-* [Github Repository](https://github.com/Seeed-Studio/one_channel_hub/tree/xiao-esp32s3-sx1262-bt-config)
+- [One Channel Hub Firmware for XIAO ESP32S3 & Wio-SX1262 Kit via SenseCraft APP](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_2024120201.zip)
+- [One Channel Hub Firmware for XIAO ESP32S3 & Wio-SX1262 Kit via ESP BLE prov](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/seeed_xiao_esp32s3_one_chanel_hub_20241016.zip)
+- [Github Repository](https://github.com/Seeed-Studio/one_channel_hub/tree/xiao-esp32s3-sx1262-bt-config)
 
 ## Tech Support & Product Discussion
 
@@ -378,8 +378,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-

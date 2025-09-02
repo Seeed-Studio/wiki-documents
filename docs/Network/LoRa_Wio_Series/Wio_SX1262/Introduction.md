@@ -28,7 +28,7 @@ The Wio-SX1262 is a low-cost, ultra-low-power, and ultra-compact LoRa® Pure RF 
 - Wio SX1262 support LoRa® modulation for LPWAN use cases and (G)FSK modulation for legacy use cases.
 - Frequency coverage from 868 MHz to 960 MHz.
 - With SPI interface.
-- Wio SX1272-N has SMT-packaged RF pins for easy PCB design, which is means it does not contain IPEX connector. 
+- Wio SX1272-N has SMT-packaged RF pins for easy PCB design, which is means it does not contain IPEX connector.
 
 ### Comparison with other modules
 

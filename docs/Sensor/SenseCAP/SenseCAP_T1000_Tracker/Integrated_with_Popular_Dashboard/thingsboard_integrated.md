@@ -14,28 +14,23 @@ last_update:
 
 [ThingsBoard](https://thingsboard.io/) is an open-source IoT platform that enables rapid development, management, and scaling of IoT projects. Our goal is to provide the out-of-the-box IoT cloud or on-premises solution that will enable server-side infrastructure for your IoT applications.
 
-
 The content of this chapter will guide users how to connect the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to ThingsBoard through TTN.
-
 
 ## Get Started
 
 Before starting the setup, please check [Connect SenseCAP T1000 to TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN) to connect your SenseCAP T1000 Tracker to TTS first.
 
-
 ## Configura the ThingsBoard
 
-
-To get started, create an account with [ThingsBoard](https://thingsboard.cloud/). 
+To get started, create an account with [ThingsBoard](https://thingsboard.cloud/).
 
 ### Create Converter
 
-First, we need to create an Uplink Data Converter which will be used for receiving messages from the TTS. 
+First, we need to create an Uplink Data Converter which will be used for receiving messages from the TTS.
 
 Navigate to `Data converters`, click `Create new converter`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/converter.png" alt="pir" width={800} height="auto" /></p>
-
 
 Name the converter, enable `Debug mode`, copy the following code and click `Add`.
 
@@ -84,13 +79,11 @@ return result;
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/converter2.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Add integration
 
 Navigate to `Integration`, click `Add Integration`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/integrate1.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Type**: `The Things Stack Community`<br/>
 **Enable**: `Enable integration`  `Debug mode`  `Allow create devices or assets`
@@ -102,7 +95,6 @@ Choose `Select existing`, and select the one we create before.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/choose-converter.png" alt="pir" width={800} height="auto" /></p>
 
 Skip the `Downlink data converter`.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/skip-down.png" alt="pir" width={800} height="auto" /></p>
 
@@ -118,17 +110,14 @@ Info can be found in TTS MQTT integration.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-inte2.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Data view
 
 Navigate to `Entities` -> `Devices`, here you can see that:
 
-* a new device was registered in Thingsboard
-* in the `Latest Telemetry` section you will the update data from the device.
-
+- a new device was registered in Thingsboard
+- in the `Latest Telemetry` section you will the update data from the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/telemetry.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Add Dashboard
 
@@ -144,7 +133,6 @@ Add `widget`, select widget to add.
 Select a `map` widget.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map1.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Type**: `Device`<br/>
 **Device**: The device we created.<br/>
@@ -163,13 +151,10 @@ Refer to the above steps to add other widgets.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-temp.png" alt="pir" width={800} height="auto" /></p>
 
-
 #### Battery
 
 **Device**: The device we created.<br/>
 **Data key**: `battery`
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-battery.png" alt="pir" width={800} height="auto" /></p>
 

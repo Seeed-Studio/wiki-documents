@@ -31,54 +31,58 @@ last_update:
 </div>
 
 # HighTorque Series Motor Quick Start Guide
+
 This document will introduce how to quickly get started with the HighTorque series motors.
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/hightorque.png" />
 </div>
 
 ## Technical Specifications
 
 ### Planetary Joint Module Parameter Comparison Table
+
 | **Technical Specification Download** | **[HTDW-5047-36-NE](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/HTDW-5047-36-NE.pdf)** |  **[HTDW-4438-32-NE](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/HTDW-4438-32-NE.pdf)** |  
 |------------------------|------------------|---------------------|
-| **Reduction Ratio**    | 36               | 30                  | 
-| **Peak Torque (Nm)**   | 16               | 6                   | 
-| **Rated Torque (Nm)**  | 4                | 1.5                 | 
-| **Stall Torque (Nm)**  | 24               | 10                  | 
-| **Rated Speed (RPM)**  | 40               | 36                  | 
+| **Reduction Ratio**    | 36               | 30                  |
+| **Peak Torque (Nm)**   | 16               | 6                   |
+| **Rated Torque (Nm)**  | 4                | 1.5                 |
+| **Stall Torque (Nm)**  | 24               | 10                  |
+| **Rated Speed (RPM)**  | 40               | 36                  |
 | **No-load Speed (RPM)**| 60               | 75                  |
-| **Rated Power (W)**    | 17               | 13                  | 
-| **Torque Constant (Nm/A)** | 0.062        | 0.039               | 
+| **Rated Power (W)**    | 17               | 13                  |
+| **Torque Constant (Nm/A)** | 0.062        | 0.039               |
 | **Pole Pairs**         | 14               | -                   |
-| **Rated Voltage (V)**  | 12-48            | 12-48               | 
-| **Rated Current (A)**  | 2                | 1                   | 
-| **Peak Current (A)**   | 10               | 5                   | 
+| **Rated Voltage (V)**  | 12-48            | 12-48               |
+| **Rated Current (A)**  | 2                | 1                   |
+| **Peak Current (A)**   | 10               | 5                   |
 | **Torque Control Accuracy** | ±10%         | ±20%                |
 | **Speed Control Accuracy** | ±8%           | ±10%                |
 | **Response Time (μs)** | ≤200             | ≤200                |
-| **High-speed Encoder Resolution** | 14bit | 14bit               | 
+| **High-speed Encoder Resolution** | 14bit | 14bit               |
 | **Low-speed Encoder Resolution** | 12bit  | 12bit               |
 | **Communication Baud Rate (Mbps)** | 5 | 5                   |
-| **Control Frequency (Hz)** | 3k      | 3k                  | 
+| **Control Frequency (Hz)** | 3k      | 3k                  |
 
 ### Motor Installation Dimensions
+
 - **HTDM-4438-32**:
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/4438_install.png" />
 </div>
 
 - **HTDM-5047-36**:
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/5047_install.png" />
 </div>
 
 **Windows PC Preparation**
+
 - Download [Motor Debugging Assistant v1.2.1](https://www.hightorque.cn/wp-content/uploads/2025/03/%E9%AB%98%E6%93%8E%E7%94%B5%E6%9C%BA%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8Bv1.2.1.zip)
 - Download [PC Debugging Manual](https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/Hightorque_Motor_Debugging_Manual_EN.pdf)
 - Purchase CAN-USB Driver Board
@@ -87,7 +91,9 @@ This document will introduce how to quickly get started with the HighTorque seri
 <summary>Protocol Analysis</summary>
 
 # Protocol Analysis
+
 ## 1.1 CAN Related Instructions
+
 1. CAN baud rate:
    - Arbitration segment: 1 Mbps
    - Data segment: 1 Mbps
@@ -101,6 +107,7 @@ This document will introduce how to quickly get started with the HighTorque seri
      - The remaining 7 bits represent the destination address.
 
 For example:
+
 1. ID: 0x8001
    - Signal source address is 0.
    - Destination address is 1.
@@ -111,6 +118,7 @@ For example:
    - The highest bit is 0, indicating no response is needed, i.e., the response master switch is turned off.
 
 ## 1.2 Mode Instructions
+
 ### 1.2.1 Normal Mode (Position and speed cannot be controlled simultaneously)
 
 ```bash
@@ -124,6 +132,7 @@ The normal protocol is composed of: command bits (2 bytes) + position (2 bytes) 
 The position, speed, and torque data in the protocol are in little-endian mode, meaning the low byte is sent first, followed by the high byte. For example, if pos = 0x1234, then pos1 = 0x34 and pos2 = 0x12.
 
 This mode can be divided into two control methods:
+
 - Position and torque control (at this time, val = 0x8000, indicating no limit).
 - Speed and torque control (at this time, pos = 0x8000, indicating no limit).
 
@@ -145,7 +154,6 @@ The torque data in the protocol is in little-endian mode, i.e., the low byte is 
 uint8_t cmd[] = {0x07, 0x35, val1, val2, tqe1, teq2, pos1, pos2};
 ```
 
-
 The cooperative control mode protocol: command bits (2 bytes) + speed (2 bytes) + torque (2 bytes) + position (2 bytes), totaling 8 bytes.
 
 0x07 0x35: Cooperative control mode, which specifies rotating at a specified speed to a specified position and limiting the maximum torque.
@@ -155,6 +163,7 @@ In this mode, using the parameter 0x8000 indicates no limit (no limit on speed a
 The position, speed, and torque data in the protocol are all in little-endian mode, that is, the low byte is sent first, followed by the high byte. For example, if pos = 0x1234, then pos1 = 0x34 and pos2 = 0x12.
 
 ## 1.3 Motor Status Data Reading
+
 1. The protocol for reading the motor status part is the same as the protocol in CAN-FD, with the only difference being that CAN is limited by an 8-byte data segment.
 2. For the register address and function instructions, please refer to the "Register Function, Motor Operation Mode, Error Code Instructions.xlsx" file.
 3. Due to the 8-byte data segment limitation of CAN, a single CAN frame can return a limited amount of motor information:
@@ -169,10 +178,10 @@ The position, speed, and torque data in the protocol are all in little-endian mo
 uint8_t tdata[] = {cmd, addr, cmd1, addr1, cmd2, add2};
 ```
 
-
 The general meaning is: Read cmd[0, 1] number of cmd[3, 2] type data from addr.
 
 cmd:
+
 - High four bits [7, 4]: 0001 indicates reading.
 - Bits 2-3 [3, 2]: Indicate the type.
   - 00: int8_t type.
@@ -189,6 +198,7 @@ addr: The starting address to acquire.
 Multiple cmds and addrs can be concatenated to read data with discontinuous addresses and different types at one time.
 
 ### 1.3.2 Receiving Protocol Instructions
+
 Assume the acquired data is uint16_t.
 
 ```bash
@@ -196,6 +206,7 @@ uint8_t rdata[] = {cmd, addr, a1, a2, b1, b2, ..., cmd1, addr1, c1, c2, c3, c4}
 ```
 
 cmd:
+
 - High four bits [7, 4]: 0010 indicates response.
 - Bits 2-3 [3, 2]: Indicate the type.
   - 00: int8_t type.
@@ -214,6 +225,7 @@ a1, a2: Data 1, in little-endian mode.
 b1, b2: Data 2, in little-endian mode.
 
 ### 1.3.3 Example
+
 1. We need to read position, speed, and torque data.
 2. From the register excel table, we know that the data addresses for position, speed, and torque are: 01, 02, 03.
 3. From this, we can see that we can read 3 consecutive data starting from address 01. Considering that CAN can transmit a maximum of 8 bytes of data at a time, and cmd + addr occupies two bytes, the data type can at most be int16_t type.
@@ -250,7 +262,9 @@ uint8_t rdata[] = {0x27, 0x01, 0x38, 0xf6, 0x09, 0x00, 0x00, 0x00};
 0x27: Corresponding to the sent 0x17. 0x01: Start from address 0x01. 0x38 0xf6: Position data: 0xf638, i.e., -2505. 0x09 0x00: Speed data: 0x0009, i.e., 9. 0x00 0x00: Torque data: 0x0000, i.e., 0.
 
 ## 1.4 Motor Stop
+
 Instructions:
+
 1. Stop the motor.
 2. Corresponding to the host computer instruction d stop.
 
@@ -266,7 +280,9 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ## 1.5 Reset Motor Zero Position
+
 Instructions:
+
 1. Set the current position as the motor's zero position.
 2. This instruction only modifies it in RAM and needs to be used with the conf write instruction to save it to flash.
 3. It is recommended to send the conf write instruction about 1s after using this instruction.
@@ -282,7 +298,9 @@ conf_write(id); // Save the settings
 ```
 
 ## 1.6 Save Motor Settings (conf write)
+
 Instructions:
+
 1. Save the motor settings in RAM to flash.
 2. It is recommended to power cycle the motor after using this instruction.
 
@@ -295,7 +313,9 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ## 1.7 Read Motor Status
+
 Instructions:
+
 1. Read motor position, speed, and torque data once.
 2. For the parsing of the motor feedback status information data, refer to the code in the interrupt function HAL_FDCAN_RxFifo0Callback in the example.
 
@@ -311,7 +331,9 @@ can_send(hcan, 0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ## 1.8 Periodically Return Motor Status Data
+
 Instructions:
+
 1. Periodically return motor position, speed, and torque data.
 2. The returned data format is the same as that obtained using the 0x17, 0x01 instruction (i.e., 1.7 Reading Position Status).
 3. The period unit is ms.
@@ -329,7 +351,9 @@ CAN_Send_Msg(0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ## 2. Sample Functions
+
 ### 2.1 Normal Mode
+
 #### 2.1.1 Position Control
 
 ```c
@@ -403,7 +427,9 @@ CAN_Send_Msg(0x8000 | id, tdata, 8);
 ```
 
 ### 2.5 DQ Voltage Mode
+
 Instructions:
+
 1. Can control the Q-phase voltage, unit: 0.1v, e.g., vol = 10 means the Q-phase voltage is 1V.
 
 ```c
@@ -415,7 +441,9 @@ can_send(hfdcanx, 0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ### 2.6 DQ Current Mode
+
 Instructions:
+
 1. Can control the Q-phase current, unit: 0.1A, e.g., cur = 10 means the Q-phase voltage is 1A.
 
 ```c
@@ -428,7 +456,9 @@ can_send(hfdcanx, 0x8000 | id, tdata, sizeof(tdata));
 ```
 
 ### 2.7 Brake
+
 Instructions:
+
 1. Motor braking, rotating the motor will have damping.
 
 ```c
@@ -444,7 +474,9 @@ can_send(fdcanHandle, 0x8000 | id, cmd, sizeof(cmd));
 ```
 
 ### 2.8 Stop
+
 Instructions:
+
 1. The motor stops and loses the force to maintain the position.
 
 ```c
@@ -461,7 +493,9 @@ can_send(fdcanHandle, 0x8000 | id, cmd, sizeof(cmd));
 ```
 
 ## 3. Instructions for Common Types (Units)
+
 ### 3.1 Current (A)
+
 | Data Type | LSB | Actual (A) |
 | --- | --- | --- |
 | int8 | 1 | 1 |
@@ -470,6 +504,7 @@ can_send(fdcanHandle, 0x8000 | id, cmd, sizeof(cmd));
 | float | 1 | 1 |
 
 ### 3.2 Voltage (V)
+
 | Data Type | LSB | Actual (V) |
 | --- | --- | --- |
 | int8 | 1 | 0.5 |
@@ -478,9 +513,11 @@ can_send(fdcanHandle, 0x8000 | id, cmd, sizeof(cmd));
 | float | 1 | 1 |
 
 ### 3.3 Torque (Nm)
+
 True torque = k * tqe + d
 
 #### 3.3.1 5046 Torque (Nm)
+
 | Data Type | Slope (k) | Offset (d) |
 | --- | --- | --- |
 | int16 | 0.005397 | -0.455107 |
@@ -488,6 +525,7 @@ True torque = k * tqe + d
 | float | 0.533654 | -0.519366 |
 
 #### 3.3.2 4538 Torque (Nm)
+
 | Data Type | Slope (k) | Offset (d) |
 | --- | --- | --- |
 | int16 | 0.004587 | -0.290788 |
@@ -495,6 +533,7 @@ True torque = k * tqe + d
 | float | 0.493835 | -0.473398 |
 
 #### 3.3.2 5047/6056 (Bipolar, 36 Gear Ratio) Torque (Nm)
+
 | Data Type | Slope (k) | Offset (d) |
 | --- | --- | --- |
 | int16 | 0.004563 | -0.493257 |
@@ -502,6 +541,7 @@ True torque = k * tqe + d
 | float | 0.465293 | -0.554848 |
 
 #### 3.3.3 5047 (Unipolar, 9 Gear Ratio) Torque (Nm)
+
 | Data Type | Slope (k) | Offset (d) |
 | --- | --- | --- |
 | int16 | 0.005332 | -0.072956 |
@@ -509,6 +549,7 @@ True torque = k * tqe + d
 | float | 0.547474 | -0.150232 |
 
 ### 3.4 Temperature (℃)
+
 | Data Type | LSB | Actual (℃) |
 | --- | --- | --- |
 | int8 | 1 | 1 |
@@ -517,6 +558,7 @@ True torque = k * tqe + d
 | float | 1 | 1 |
 
 ### 3.5 Time (s)
+
 | Data Type | LSB | Actual (s) |
 | --- | --- | --- |
 | int8 | 1 | 0.01 |
@@ -525,6 +567,7 @@ True torque = k * tqe + d
 | float | 1 | 1 |
 
 ### 3.6 Position (rotations)
+
 | Data Type | LSB | Actual (rotations) | Actual (°) |
 | --- | --- | --- | --- |
 | int8 | 1 | 0.01 | 3.6 |
@@ -533,6 +576,7 @@ True torque = k * tqe + d
 | float | 1 | 1 | 360 |
 
 ### 3.7 Speed (rotations/second)
+
 | Data Type | LSB | Actual (rotations/second) |
 | --- | --- | --- |
 | int8 | 1 | 0.01 |
@@ -541,6 +585,7 @@ True torque = k * tqe + d
 | float | 1 | 1 |
 
 ### 3.8 Acceleration (rotations/second²)
+
 | Data Type | LSB | Actual (rotations/second²) |
 | --- | --- | --- |
 | int8 | 1 | 0.05 |
@@ -549,6 +594,7 @@ True torque = k * tqe + d
 | float | 1 | 1 |
 
 ### 3.9 PWM Scale (unitless)
+
 | Data Type | LSB | Actual |
 | --- | --- | --- |
 | int8 | 1 | 1/127 - 0.007874 |
@@ -557,6 +603,7 @@ True torque = k * tqe + d
 | float | 1 | 1 |
 
 ### 3.10 Kp, Kd Scale (unitless)
+
 | Data Type | LSB | Actual |
 | --- | --- | --- |
 | int8 | 1 | 1/127 - 0.007874 |
@@ -566,13 +613,12 @@ True torque = k * tqe + d
 
 </details>
 
-
 ## C++ Example
 
 C++ control requires an additional CAN-USB driver board. Please refer to [livelybot_hardware_sdk](https://github.com/HighTorque-Robotics/livelybot_hardware_sdk)
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/USB-CAN.png" />
 </div>
 
@@ -597,7 +643,7 @@ For more details on CAN usage, please refer to this [wiki](https://wiki.seeedstu
 **Step 1:** Before using CAN0 and CAN1, remove the bottom cover and set both 120Ω termination resistors to the ON position.
 
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
@@ -612,7 +658,7 @@ The H/L pins of the reComputer Mini's CAN interface are opposite to those of the
 </div>
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/hightorque/reComputer_mini_control.png" />
 </div>
 
@@ -621,17 +667,21 @@ This power solution is only suitable for single-motor learning and testing. For 
 :::
 
 #### Enabling Jetson CAN Communication
+
 Open a terminal and enter the following command to pull the GPIO pin high to activate CAN0:
+
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
 If using the JST interface's CAN1, pull pin 106 high:
+
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
 Keep this terminal open and create a new terminal to configure CAN0:
+
 ```bash
 sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 1000000
@@ -641,11 +691,13 @@ sudo ip link set can0 up
 ### Python Control
 
 - **Install Python Environment**  
+
 ```bash
 pip install python-can numpy
 ```
 
 - **Create Script Directory**  
+
 ```bash
 mkdir -p ~/hightorque/scripts
 ```
@@ -656,6 +708,7 @@ mkdir -p ~/hightorque/scripts
 cd ~/hightorque/scripts
 touch hightorque_motor.py
 ```
+
 Copy the following code into hightorque_motor.py.
 
 <details>
@@ -948,6 +1001,7 @@ if __name__ == "__main__":
 </details>
 
 - **Run hightorque_test.py**
+
 ```bash
 python hightorque_test.py
 ```
@@ -961,15 +1015,14 @@ python hightorque_test.py
 Thank you for choosing our products! We provide various support channels to ensure you have the best experience.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
 
 <style>{`
 /* 导航容器 */
@@ -1098,7 +1151,6 @@ html[data-theme='dark'] .nav-item:hover {
 }
 `}</style>
 
-
 <style>{`
 /* 内容卡片增强版样式 */
 .nav-grid {
@@ -1225,8 +1277,8 @@ html[data-theme='dark'] .category-card a::after {
   transition: all 0.3s;
 }
 
-.stable { 
-  background: #e6f4ea; 
+.stable {
+  background: #e6f4ea;
   color: #137333;
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
@@ -1238,8 +1290,8 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(0,100,0,0.3);
 }
 
-.recommended { 
-  background: #fce8e6; 
+.recommended {
+  background: #fce8e6;
   color: #a50e0e;
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }

@@ -274,7 +274,6 @@ Está equipado con una gran escalabilidad y conectividad híbrida, soportando bu
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## Descripción General del Hardware

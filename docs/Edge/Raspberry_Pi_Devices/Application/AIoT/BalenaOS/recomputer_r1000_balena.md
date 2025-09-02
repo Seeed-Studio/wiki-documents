@@ -25,28 +25,27 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software
 
-* A [balenaCloud](https://balena.io) account (sign up here) and get the first 10 devices free.
-* [balenaEtcher](https://etcher.balena.io/) to flash the CM4 memory.
-
+- A [balenaCloud](https://balena.io) account (sign up here) and get the first 10 devices free.
+- [balenaEtcher](https://etcher.balena.io/) to flash the CM4 memory.
 
 ### Hardware Configuration
 
@@ -87,13 +86,14 @@ It is recommended to download the balenaOS image file first and then burn it. If
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/burn_image.gif" alt="pir" width="700" height="auto" /></div>
 
-
 ### Change Configure
+
 **Step 1**:Copy the [reComputer-R100x.dtbo](https://files.seeedstudio.com/wiki/reComputer-R1000/balena/reComputer-R100x.dtbo) file to the `resin-boot => overlays` folder
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/dtbo_file.png" alt="pir" width="700" height="auto" /></div>
 
 **Step 2**:Add the following content to the `config.txt` file:
+
 ```shell
 dtparam=i2c_arm=on
 dtoverlay=i2c1,pins_44_45
@@ -111,15 +111,17 @@ dtoverlay=reComputer-R100x,uart2
 
 If the device is `Online (Heartbeat only)`. This is due to the firewall restrictions in my area. If you have the same problem, you can connect a VPN to the device so that it can be displayed normally`Online`.
 
-
 ### Deployment test
+
 **Step 1**:Enter the following command to download the resources and deploy them:
+
 ```shell
 balena login
 git clone https://github.com/mpous/seeed-recomputer-r100x.git
 cd seeed-recomputer-r100x
 balena push recomputerR1000
 ```
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/push_program.png" alt="pir" width="700" height="auto" /></div>
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/balena/updating_two.png" alt="pir" width="700" height="auto" /></div>
@@ -135,11 +137,11 @@ balena push recomputerR1000
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

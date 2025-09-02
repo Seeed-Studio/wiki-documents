@@ -21,7 +21,7 @@ last_update:
 
 The J401 carrier board is a powerful extension board that supports NVIDIA Jetson Orin NX/Nano modules. It features 1xGbE port, 1x CAN for data transfer, M.2 Key M for SSD, M.2 Key E for WiFi/BlueTooth, 2 CSI, and 1 HDMI for high-quality video capture and display. It also contains 4x USB 3.2 ports, a fan, RTC, and a flexible 9-19V power supply. All of these make it reliable for a variety of industrial automation systems, building powerful AI applications.
 
-## Features 
+## Features
 
 - **Exceptional Performance Carrier Board:** Support the NVIDIA Jetson Orin NX/Nano module, leveraging powerful computing power to take on tough tasks with ease
 - **Versatile Connectivity:** Offer 1x Gigabit Ethernet port for networking, 4x USB 3.2 Type-A (10Gbps) ports,1x USB2.0 Type-C port, 1x CAN connector for fast data transfer
@@ -175,7 +175,7 @@ The J401 carrier board is a powerful extension board that supports NVIDIA Jetson
   </tbody>
 </table>
 
-## Hardware Overview 
+## Hardware Overview
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-J4012/6.png"/></div>
 
@@ -186,10 +186,11 @@ Here, we will show you how to flash [Jetpack](https://developer.nvidia.com/embed
 reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included NVMe SSD, so that you do not need to flash it. However, if you want to flash it again with JetPack, you can follow this guide.
 
 ### Supported Module
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
+
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerequisites
 
@@ -200,7 +201,7 @@ reComputer J40/ J30 series comes with JetPack 5.1 pre-installed on the included 
 :::info
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -232,8 +233,10 @@ Please refer to the table below to prepare the host machine.
 ### Enter Force Recovery Mode
 
 :::note
+
 - We do not recommend using virtual machines and ARM architecture Ubuntu for flashing.
 - Before we can move on to the installation steps, we need to make sure that the board is in force recovery mode.
+
 :::
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
@@ -314,15 +317,13 @@ The below image is for Orin NX 16GB
 
 </details>
 
-
-### Flash the device with a single command.
+### Flash the device with a single command
 
 <details>
 
 <summary> Flash the device with a single command. </summary>
 
-
-The reComputer Jetson J30/40 has launched a one-click flashing script, which supports flashing Jetpack 5.1.1, 5.1.2 and 6.0. Currently, the one-click flashing for Jetpack 6.1 and other series of reComputer Jetson is under testing and will be available to everyone in the near future. 
+The reComputer Jetson J30/40 has launched a one-click flashing script, which supports flashing Jetpack 5.1.1, 5.1.2 and 6.0. Currently, the one-click flashing for Jetpack 6.1 and other series of reComputer Jetson is under testing and will be available to everyone in the near future.
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
@@ -331,12 +332,12 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 <iframe width="960" height="480" src="https://www.youtube.com/embed/_YfpJAhhT-g?si=OJxCcPqWauYEp9LR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 :::caution
-Disclaimer: The one-click flashing script aims to make jetpack flashing quicker. The current version is a beta one and may have many problems. We hope for your understanding. If there are flashing issues, follow the `Flash The Device Step by Step` below and give feedback in our [Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152). We'll fix them promptly and improve this function in the near future. 
+Disclaimer: The one-click flashing script aims to make jetpack flashing quicker. The current version is a beta one and may have many problems. We hope for your understanding. If there are flashing issues, follow the `Flash The Device Step by Step` below and give feedback in our [Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152). We'll fix them promptly and improve this function in the near future.
 :::
 
 </details>
 
-### Flash the device step by step.
+### Flash the device step by step
 
 :::note
 Before moving onto flashing, it should be noted that Jetson Orin NX module only supports JetPack 5.1 and above, while Jetson Orin Nano module only supports JetPack 5.1.1 and above.
@@ -415,7 +416,6 @@ Please open the terminal on the **Jetson device** and execute the following comm
 sudo apt update
 sudo apt install nvidia-jetpack
 ```
-
 
 </TabItem>
 
@@ -546,21 +546,20 @@ Here we will install Jetpack 5.1.3 on the reComputer.
 </table>
 </div>
 
-
-
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
 
 **Step 2:** Extract the downloaded image file:
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -646,18 +645,19 @@ Here we will use NVIDIA L4T 36.3 to install Jetpack 6.0 on the reComputer
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
 
 **Step 2:** Extract the downloaded image file:
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -682,6 +682,7 @@ Please complete the **System Configuration** according to your needs.
 :::
 
 **Step 5:** After starting the system, you need to execute the following command to reactivate the wireless network card driver:
+
 ```bash
 sudo rm /lib/modules/5.15.136-tegra/build
 sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
@@ -739,18 +740,19 @@ Here we will use NVIDIA L4T 36.4 to install Jetpack 6.1 on the reComputer
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
 
 **Step 2:** Extract the downloaded image file:
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-6.1-36.4.0-2024-12-04.tar
 ```
 
-**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -811,7 +813,7 @@ Here we will use NVIDIA L4T 36.4.3 to install Jetpack 6.2 on the reComputer
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -822,12 +824,13 @@ We are currently designing a new version of reComputer. Stay tuned!
 :::
 
 **Step 2:** Extract the downloaded image file:
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2025-04-07.tar.gz
 ```
 
-**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 3:** Navigate to the unzipped directory and execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -857,8 +860,8 @@ Please complete the **System Configuration** according to your needs.
 
 <!-- Code END -->
 
-
 ## Resources
+
 - [reComputer J30x Datasheet](https://files.seeedstudio.com/products/NVIDIA/reComputer-J301x-datasheet.pdf)
 - [reComputer J40x Datasheet](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [reComputer J30/J40 Schematic](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)
@@ -875,11 +878,11 @@ Please complete the **System Configuration** according to your needs.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

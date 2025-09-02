@@ -22,56 +22,55 @@ The Carbon comes pre-installed with Zephyr. When future OS become available, you
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/BLE-Carbon-p-2710.html)
 
-##Features
+## Features
 
-###Microcontroller features
-* STM32F401RET6 in LQFP64 package
-* ARM?32-bit Cortex?-M4 CPU with FPU
-* 84 MHz max CPU frequency
-* VDD from 1.7 V to 3.6 V
-* 512 KB Flash
-* 96 KB SRAM
-* GPIO (50) with external interrupt capability
-* 12-bit ADC with 16 channels
-* RTC
-* Advanced-control Timer
-* General Purpose Timers (7)
-* Watchdog Timers (2)
-* USART/UART (4)
-* I2C (3)
-* SPI (3)
-* SDIO
-* USB 2.0 OTG FS
+### Microcontroller features
+- STM32F401RET6 in LQFP64 package
+- ARM?32-bit Cortex?-M4 CPU with FPU
+- 84 MHz max CPU frequency
+- VDD from 1.7 V to 3.6 V
+- 512 KB Flash
+- 96 KB SRAM
+- GPIO (50) with external interrupt capability
+- 12-bit ADC with 16 channels
+- RTC
+- Advanced-control Timer
+- General Purpose Timers (7)
+- Watchdog Timers (2)
+- USART/UART (4)
+- I2C (3)
+- SPI (3)
+- SDIO
+- USB 2.0 OTG FS
 
-###Board features
-* STM32F401 microcontroller with 512kB Flash, 96kB ram
-* USB power supply with fuse protect
-* 6LEDs
-    * USR1, USR2, BT, PWR, RX, TX
-* Two push buttons
-    * USR and RESET
-* SWD debug connectors
-* On board chip antenna
-* 3.3V work voltage
-* 2x15pin 2.54mm pitch Low speed connector
-* Fully compatible with 96Boards IoT standards
+### Board features
+- STM32F401 microcontroller with 512kB Flash, 96kB ram
+- USB power supply with fuse protect
+- 6LEDs
+  - USR1, USR2, BT, PWR, RX, TX
+- Two push buttons
+  - USR and RESET
+- SWD debug connectors
+- On board chip antenna
+- 3.3V work voltage
+- 2x15pin 2.54mm pitch Low speed connector
+- Fully compatible with 96Boards IoT standards
 
-##Specifications
+## Specifications
 
 |Parameter|Value|
 |------------|------|
-|Chipset	|STM32F401|
-|BT	|nRF51822|
-|Clock Speed|	84MHz max CPU frequency|
-|Flash|	512KB|
-|SRAM	|96KB|
-|Digital Output Voltage	|3.3V|
-|Analog Pins|	6|
-|Analog Input Voltage|	0~3.3V|
-|Dimensions|	60x30mm|
+|Chipset |STM32F401|
+|BT |nRF51822|
+|Clock Speed| 84MHz max CPU frequency|
+|Flash| 512KB|
+|SRAM |96KB|
+|Digital Output Voltage |3.3V|
+|Analog Pins| 6|
+|Analog Input Voltage| 0~3.3V|
+|Dimensions| 60x30mm|
 
-
-##Hardware Overview
+## Hardware Overview
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/hw.png)
 
@@ -79,12 +78,12 @@ The Carbon comes pre-installed with Zephyr. When future OS become available, you
 
 2.**LED Indicators**
 
-* *USR1* - User controlled led, connected to PD2
-* *USR2* - User controlled led, connected to PA15
-* *BT* - Bluetooth indicator, connected to PB5. This led will light up when connect to a device.
-* *PWR* - Light up when Power on.
-* *RX* - Indicator of FT230X - RX
-* *TX* - Indicator of FT230X - TX
+- *USR1* - User controlled led, connected to PD2
+- *USR2* - User controlled led, connected to PA15
+- *BT* - Bluetooth indicator, connected to PB5. This led will light up when connect to a device.
+- *PWR* - Light up when Power on.
+- *RX* - Indicator of FT230X - RX
+- *TX* - Indicator of FT230X - TX
 
 3.**UART** - for debugging or firmware update, connected to USART1.
 
@@ -104,70 +103,70 @@ A.**IC2** - STM32F401
 
 B.**IC3** - nRF51822
 
-
-##Pin Map
+## Pin Map
 
 [![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/pinout.png)](https://files.seeedstudio.com/wiki/BLE-Carbon/img/pinout.png)
 
 :::note
     Click to view larger image.
 :::
-##Connection between nRF51822 and STM32F401
+## Connection between nRF51822 and STM32F401
 
 If you want to use a BLE SoftDevice in applications that cannot be ported to nRF5, for example because they use specific peripherals or need more resources like RAM, flash memory, or CPU sped, you should consider using serialization.
 
-###Hardware connection
+### Hardware connection
 Hardware connection as below:
 
-|STM32F401	|nRF51822|	function |
+|STM32F401 |nRF51822| function |
 |----------------|------------|-------------|
-|PA4	|P0.25	|SPI_CSN |
-|PB1	|P0.28	|SPI_REQ |
-|PB0	|P0.29	|SPI_RDY |
-|PA7	|P0.00	|SPI_MOSI |
-|PA6	|P0.30	|SPI_MISO |
-|PA5	|P0.07	|SPI_CLK |
-|PB2	|SWDIO/NRESET|	RESET |
+|PA4 |P0.25 |SPI_CSN |
+|PB1 |P0.28 |SPI_REQ |
+|PB0 |P0.29 |SPI_RDY |
+|PA7 |P0.00 |SPI_MOSI |
+|PA6 |P0.30 |SPI_MISO |
+|PA5 |P0.07 |SPI_CLK |
+|PB2 |SWDIO/NRESET| RESET |
 
-###Serialization software setup
+### Serialization software setup
 Prepare the connectivity board by performing the following steps:
 
-1.	Connect the board to the computer and make sure that the RESET wire is disconnected.
-2.	Program the SoftDevice on the connectivity board. See Programming SoftDevices for instructions.
-3.	In Keil, open the Connectivity Example for the physical transport layer that you want to use: \examples\ble_central_and_peripheral\ble_connectivity\board\ser_s13x_spi
-4.	 Compile the application and download the created.hex file to the connectivity board.
+1. Connect the board to the computer and make sure that the RESET wire is disconnected.
+2. Program the SoftDevice on the connectivity board. See Programming SoftDevices for instructions.
+3. In Keil, open the Connectivity Example for the physical transport layer that you want to use: \examples\ble_central_and_peripheral\ble_connectivity\board\ser_s13x_spi
+4.  Compile the application and download the created.hex file to the connectivity board.
 
 For more details, please refer to [Running a serialized application](http://infocenter.nordicsemi.com/index.jsp?topic=/com.nordic.infocenter.s130.api.v2.0.0/index.html)
 
-##How to upgrade firmware
+## How to upgrade firmware
 
-###DfuSe demonstration procedures
-####How to download a DFU file
-1.	Press BOOT0 button and connect OTG to your PC.
-2.	Run the **DfuSe demonstration** application (Start -> All Programs -> STMicroelectronics -> DfuSe Demonstration).
-3.	Click the **Choose** button (Item 1 in following figure) to select a DFU file. the displayed Information such as VID, PID, Version and target number is read from the DFU file.
-4.	Check the **Optimize upgrade duration** checkbox to ignore FF blocks during the upload.
-5.	Check the **Verify after download** checkbox if you want to launch the verification process after downloading data.
-6.	Click the **Upgrade** button (Item 2 in following figure) to start upgrading file content to the memory.
-7.	Click the **Verify** button (Item 3 in following figure) to verify if the data was successfully downloaded.
+### DfuSe demonstration procedures
+#### How to download a DFU file
+
+1. Press BOOT0 button and connect OTG to your PC.
+2. Run the **DfuSe demonstration** application (Start -> All Programs -> STMicroelectronics -> DfuSe Demonstration).
+3. Click the **Choose** button (Item 1 in following figure) to select a DFU file. the displayed Information such as VID, PID, Version and target number is read from the DFU file.
+4. Check the **Optimize upgrade duration** checkbox to ignore FF blocks during the upload.
+5. Check the **Verify after download** checkbox if you want to launch the verification process after downloading data.
+6. Click the **Upgrade** button (Item 2 in following figure) to start upgrading file content to the memory.
+7. Click the **Verify** button (Item 3 in following figure) to verify if the data was successfully downloaded.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_1.png)
 
-####How to generate DFU files from S19/Hex/Bin files
-1.	Run the **DFU File Manager** application (Start -> All Programs -> STMicroelectronics -> DFU File Manager).
-2.	Select **I want to GENERATE a DFU file from S19, HEX or BIN files** item in the **Want to do** dialog box hen click **OK**.
-3.	To create the image from an S19 or Hex file, click the **S19 or Hex** button and select your file, a DFU image will be created for each added file.
-4.	To create the DFU file, click **Generate**.
+#### How to generate DFU files from S19/Hex/Bin files
 
+1. Run the **DFU File Manager** application (Start -> All Programs -> STMicroelectronics -> DFU File Manager).
+2. Select **I want to GENERATE a DFU file from S19, HEX or BIN files** item in the **Want to do** dialog box hen click **OK**.
+3. To create the image from an S19 or Hex file, click the **S19 or Hex** button and select your file, a DFU image will be created for each added file.
+4. To create the DFU file, click **Generate**.
 
 :::note
      For more details, please to read the user manual([UM0412](http://www.st.com/content/ccc/resource/technical/document/user_manual/3f/61/72/ff/c5/5a/4a/7b/CD00155676.pdf/files/CD00155676.pdf/jcr:content/translations/en.CD00155676.pdf)) from ST.
 :::
-###6.2	Download a hex file through UART
+### 6.2 Download a hex file through UART
 
-1.	Press BOOT0 button and connect UART to your PC.
-2.	Run the **Demonstrator GUI** application (Start -> All Programs -> STMicroelectronics -> Demonstrator GUI).
-3.	Follow the steps below to download the firmware.
+1. Press BOOT0 button and connect UART to your PC.
+2. Run the **Demonstrator GUI** application (Start -> All Programs -> STMicroelectronics -> Demonstrator GUI).
+3. Follow the steps below to download the firmware.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_1.png)
 
@@ -179,29 +178,26 @@ For more details, please refer to [Running a serialized application](http://info
 
 ![enter image description here](https://files.seeedstudio.com/wiki/BLE-Carbon/img/6_2_5.png)
 
-
-
 ## Schematic Online Viewer
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BLE-Carbon/res/eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##Resources
-
-* [Schematics in Eagle](https://files.seeedstudio.com/wiki/BLE-Carbon/res/eagle.zip)
-* [Schematics in PDF](https://files.seeedstudio.com/wiki/BLE-Carbon/res/BLE%20Carbon%20v1.0_SCH.pdf)
+- [Schematics in Eagle](https://files.seeedstudio.com/wiki/BLE-Carbon/res/eagle.zip)
+- [Schematics in PDF](https://files.seeedstudio.com/wiki/BLE-Carbon/res/BLE%20Carbon%20v1.0_SCH.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

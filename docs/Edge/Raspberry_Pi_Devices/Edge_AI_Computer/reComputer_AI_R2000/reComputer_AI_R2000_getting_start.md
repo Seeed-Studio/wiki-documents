@@ -326,7 +326,6 @@ Finally, click `Next` and wait for the flashing process to complete.
 
 Install `pcie-fix.dtbo` with this [link](https://files.seeedstudio.com/wiki/reComputer-R2000/pcie-fix.dtbo)
 
-
 Copy pcie-fix.dtbo to /overlays file like below:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R2000/replace_file1.png" alt="pir" width="700" height="auto" /></div>

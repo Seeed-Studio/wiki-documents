@@ -767,7 +767,7 @@ Si ves `0x35`, es **ATECC608A-TNGTLSS-G**; de lo contrario, **ATECC608A-SSHDA-B*
 - **[PDF]** [Datasheet CM4 de Raspberry Pi](https://datasheets.raspberrypi.org/cm4/cm4-datasheet.pdf)
 - **[Web Page]** [Documentación oficial Raspberry Pi](https://www.raspberrypi.org/documentation/)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes soportes y asegurar que tu experiencia sea fluida. Ofrecemos varios canales de comunicación para distintas preferencias.
 

@@ -13,7 +13,8 @@ last_update:
   author: ShuishengPeng
 ---
 
-## Introduction 
+## Introduction
+
 CODESYS is a popular automation software development platform widely used in industrial control and automation systems. Its full name is Controller Development System, which was first developed by the German company 3S-Smart Software Solutions.
 This article mainly introduces how to download and install CODESYS, and finally deploy the CODESYS project to reComputer R1000
 
@@ -22,31 +23,32 @@ Before you start this project, you may need to prepare your hardware and softwar
 ## Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ## Software Preparation
 
-* [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
-* [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
+- [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
+- [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
 
 ## Getting Start
 
 ### Install CODESYS
+
 **Step 1**: Go to the CODESYS store, find `CODESYS Development System V3` and download it, then find `CODESYS Control for Raspberry Pi SL` and download it.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/install_codesys/1.png" /></center>
@@ -133,7 +135,6 @@ CODESYS Runtime refers to the CODESYS runtime system, which is the software inst
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/deploy_run_time/r3.png" /></center>
 
-
 ### Deploy a new project
 
 **Step 1**: Click `File`--->`New project` to create a new project
@@ -183,11 +184,11 @@ CODESYS Runtime refers to the CODESYS runtime system, which is the software inst
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

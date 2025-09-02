@@ -41,7 +41,6 @@ Before proceeding, ensure that you have the following:
   </table>
 </div>
 
-
 ## Step 1. Ensure a Model is Loaded on the XIAO ESP32S3 Sense
 
 Before proceeding, make sure that your XIAO ESP32S3 Sense board has a trained model loaded. If you haven't loaded a model yet, refer to the SenseCraft AI documentation on how to train and deploy models to your device.
@@ -65,10 +64,10 @@ Download the [Seeed_Arduino_SSCMACore](https://github.com/Seeed-Studio/Seeed_Ard
 
 Add the downloaded library to your Arduino environment by following these steps:
 
-   - Open the Arduino IDE.
-   - Go to **Sketch -> Include Library -> Add .ZIP Library**.
-   - Navigate to the downloaded **Seeed_Arduino_SSCMACore** library and select it.
-   - Click **Open** to add the library to your Arduino environment.
+- Open the Arduino IDE.
+- Go to **Sketch -> Include Library -> Add .ZIP Library**.
+- Navigate to the downloaded **Seeed_Arduino_SSCMACore** library and select it.
+- Click **Open** to add the library to your Arduino environment.
 
 ## Step 3. Choose and Configure the Example Code
 
@@ -236,9 +235,10 @@ You can modify the callback functions to perform specific actions or further pro
 Connect your XIAO ESP32S3 Sense board to your computer using the USB-C data cable. Open the selected example code (`inference.ino` or `inference_cb.ino`) in the Arduino IDE.
 
 Select the appropriate board and port in the Arduino IDE:
-   - Go to **Tools -> Board** and select "XIAO ESP32S3 Sense".
-   - Go to **Tools -> Port** and select the port to which your XIAO ESP32S3 Sense is connected.
-   - Go to **Tools -> PSRAM -> OPI PSRAM**. Be sure to turn on PSRAM!
+
+- Go to **Tools -> Board** and select "XIAO ESP32S3 Sense".
+- Go to **Tools -> Port** and select the port to which your XIAO ESP32S3 Sense is connected.
+- Go to **Tools -> PSRAM -> OPI PSRAM**. Be sure to turn on PSRAM!
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/75.png" style={{width:600, height:'auto'}}/></div>
 
@@ -256,8 +256,6 @@ If you encounter any issues or have further questions, please refer to the Sense
 
 Happy coding and exploring the world of computer vision and machine learning with your XIAO ESP32S3 Sense board!
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -271,4 +269,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -16,9 +16,8 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:700, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+ <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
-
 
 The Grove - ADC for Load Cell (HX711) is a 24-bit A/D converter designed specifically for the load cell. It contains an on-chip low noise programmable amplifier with an optional gain of 32, 64 and 128. The HX711 chip integrates a regulated power supply, an on-chip clock oscillator, and other peripheral circuits, which have the advantages of high integration, fast response, and strong anti-interference.
 
@@ -30,37 +29,36 @@ With the Grove connector and 4-pin screw terminal, it becomes quite easy to conn
 
 <div class="table-center">
  <table align="center">
-	<tr>
-		<th>Item</th>
-		<th>Value</th>
-	</tr>
-	<tr>
-		<td>Battery</td>
-		<td>Exclude</td>
-	</tr>
-	<tr>
-		<td>Working voltage</td>
-		<td>2.6V--5.5V</td>
-	</tr>
-	<tr>
-		<td>Working current</td>
-		<td>Less than 1.5A</td>
-	</tr>
-	<tr>
-		<td>Detection accuracy</td>
-		<td>24 bits</td>
-	</tr>
-	<tr>
-		<td>Output date rate </td>
-		<td>10SPS or 80SPS</td>
-	</tr>
-	<tr>
-		<td>Optional gain</td>
-		<td>32 for Channel B/ 64 and 128 for Channel A</td>
-	</tr>
+ <tr>
+  <th>Item</th>
+  <th>Value</th>
+ </tr>
+ <tr>
+  <td>Battery</td>
+  <td>Exclude</td>
+ </tr>
+ <tr>
+  <td>Working voltage</td>
+  <td>2.6V--5.5V</td>
+ </tr>
+ <tr>
+  <td>Working current</td>
+  <td>Less than 1.5A</td>
+ </tr>
+ <tr>
+  <td>Detection accuracy</td>
+  <td>24 bits</td>
+ </tr>
+ <tr>
+  <td>Output date rate </td>
+  <td>10SPS or 80SPS</td>
+ </tr>
+ <tr>
+  <td>Optional gain</td>
+  <td>32 for Channel B/ 64 and 128 for Channel A</td>
+ </tr>
  </table>
 </div>
-
 
 ## Application
 
@@ -72,36 +70,35 @@ With the Grove connector and 4-pin screw terminal, it becomes quite easy to conn
 
 ## Hardware Overview
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-pin.jpg" style={{width:700, height:'auto'}}/></div>
 
 ## Platforms Supported
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Arduino</th>
-			<th>Raspberry Pi</th>
-			<th> </th>
-			<th> </th>
-			<th> </th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Arduino</th>
+   <th>Raspberry Pi</th>
+   <th> </th>
+   <th> </th>
+   <th> </th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+ </table>
 </div>
-
 
 :::caution
 The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Getting Started
+
 In this part, we will use a **Arduino UNO R4 WiFi** as a controller,show how to use a **Grove - ADC for Load Cell (HX711)** and a **Weight Sensor (Load Cell) 0-500g** make a weight measuring module.
 
 ### Hardaware Preparation
@@ -110,100 +107,101 @@ In this part, we will use a **Arduino UNO R4 WiFi** as a controller,show how to 
 
 <div class="table-center">
  <table align="center">
-	<tr>
-		<th>Arduino UNO R4 WIFi</th>
-		<th>Grove - ADC for Load Cell (HX711)</th>
-		<th>Weight Sensor (Load Cell) 0-500g</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/1.png" style={{width:250, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:250, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/2.jpg" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-	</tr>
+ <tr>
+  <th>Arduino UNO R4 WIFi</th>
+  <th>Grove - ADC for Load Cell (HX711)</th>
+  <th>Weight Sensor (Load Cell) 0-500g</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/1.png" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/Grove-ADC-for-Load-Cell-HX711-wiki.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/2.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Arduino-Uno-Rev4-WiFi-p-5717.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-ADC-for-Load-Cell-HX711-p-4361.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Weight-Sensor-Load-Cell-0-500g-p-525.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+ </tr>
  </table>
 </div>
 
 :::note
+
 - Weight sensor output 0V when the load less than 150g, it not directly measure the load .So it suggests using a 200g local avoid measure blind spot.Read the analog data of 200g weight as no-load(0g),read the analog data of 700g weight as full load(500g).
 - ADC for Load Cell (HX711) uses channel A by default, if you want to use other channels, it will require you to weld it yourself.
+
 :::
 
 And the **Grove - ADC for Load Cell (HX711)** is also suitable for our XIAO development board.
 
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO SAMD21</th>
-		<th>Seeed Studio XIAO RP2040</th>
-		<th>Seeed Studio XIAO nRF52840 (Sense)</th>
-		<th>Seeed Studio XIAO ESP32C3</th>
-	    <th>Seeed Studio XIAO ESP32S3 (Sense)</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>Seeed Studio XIAO SAMD21</th>
+  <th>Seeed Studio XIAO RP2040</th>
+  <th>Seeed Studio XIAO nRF52840 (Sense)</th>
+  <th>Seeed Studio XIAO ESP32C3</th>
+     <th>Seeed Studio XIAO ESP32S3 (Sense)</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
-		</div></td>
-	</tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
+  </div></td>
+ </tr>
 </table>
 
 **Step 2.** Hardware Connection
 
  Connect the Grove Gesture Sensor to the IIC port of Arduino UNO R4 WiFi, connect the Arduino to PC via a USB cable, and the connection bettewn Grove - ADC for Load Cell (HX711) and Weight Sensor (Load Cell) 0-500g is show below:
- 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/9.png" style={{width:700, height:'auto'}}/></div>
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/9.png" style={{width:700, height:'auto'}}/></div>
 
 <div class="table-center">
  <table align="center">
-	<tr>
-	    <th>Grove - ADC for Load Cell (HX711)</th>
-		<th>Weight Sensor (Load Cell) 0-500</th>
-	</tr>
+ <tr>
+     <th>Grove - ADC for Load Cell (HX711)</th>
+  <th>Weight Sensor (Load Cell) 0-500</th>
+ </tr>
     <tr>
-	    <td>E+</td>
-		<td>Red</td>
+     <td>E+</td>
+  <td>Red</td>
     </tr>
-	<tr>
-		<td>E-</td>
-		<td>Black</td>
-	</tr>
-	<tr>
-		<td>INA-</td>
-		<td>White</td>
-	</tr>
-	<tr>
-		<td>INA+</td>
-		<td>Green/Blue</td>
-	</tr>
+ <tr>
+  <td>E-</td>
+  <td>Black</td>
+ </tr>
+ <tr>
+  <td>INA-</td>
+  <td>White</td>
+ </tr>
+ <tr>
+  <td>INA+</td>
+  <td>Green/Blue</td>
+ </tr>
  </table>
 </div>
 
@@ -240,10 +238,9 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - If you want to use **Seeeduino V4.3** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/Seeeduino_v4.2/)** to finish adding.
 
-- If you want to use **Arduino UNO R4 WiFi** for the later routines, please click **Tools-> Board-> Boards Manager...**, print keyword "UNO R4 WiFi" in the searching blank and install the latest version (or the version you want to use). 
+- If you want to use **Arduino UNO R4 WiFi** for the later routines, please click **Tools-> Board-> Boards Manager...**, print keyword "UNO R4 WiFi" in the searching blank and install the latest version (or the version you want to use).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-mp3-v4/4.png" style={{width:800, height:'auto'}}/></div>
-
 
 ### HX711 Arduino Library Overview
 
@@ -252,41 +249,41 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 Before we get started developing a sketch, let's look at the available functions.
 
 - `void begin(byte dout, byte pd_sck, byte gain )` —— Initialize library with data output pin, clock input pin and gain factor.Channel selection is made by passing the appropriate gain, the library default is "128" (Channel A).
-	- **Input Parameters:**
-		- **byte dout：** Passed as dout (converted to byte) HX711 circuit wiring.
-		- **byte pd_sck：** Passed as pd_sck (converted to byte) HX711 circuit wiring.
-		- **byte gain = 128：**
-			- With a gain factor of 64 or 128, channel A is selected.
-			- With a gain factor of 32, channel B is selected.
+ 	- **Input Parameters:**
+  		- **byte dout：** Passed as dout (converted to byte) HX711 circuit wiring.
+  		- **byte pd_sck：** Passed as pd_sck (converted to byte) HX711 circuit wiring.
+  		- **byte gain = 128：**
+   			- With a gain factor of 64 or 128, channel A is selected.
+   			- With a gain factor of 32, channel B is selected.
 
 - `bool is_ready()` —— Check if HX711 is ready. From the datasheet: When output data is not ready for retrieval, digital output pin DOUT is high. Serial clock input PD_SCK should be low. When DOUT goes to low, it indicates data is ready for retrieva.
 
 - `void wait_ready(unsigned long delay_ms = 0);` —— Wait for the chip to become ready.
 
-- `bool wait_ready_retry(int retries = 3, unsigned long delay_ms = 0)` —— 	Wait for the chip to become ready by retrying for a specified amount of attempts.
+- `bool wait_ready_retry(int retries = 3, unsigned long delay_ms = 0)` ——  Wait for the chip to become ready by retrying for a specified amount of attempts.
 
 - `bool wait_ready_timeout(unsigned long timeout = 1000, unsigned long delay_ms = 0)` —— Wait for the chip to become ready until timeout.
 
 - `void set_gain(byte gain = 128)` —— set the gain factor; takes effect only after a call to read().
-	- **Input Parameters:**
-		- **byte gain = 128：** Channel A can be set for a 128 or 64 gain; channel B has a fixed 32 gain.
+ 	- **Input Parameters:**
+  		- **byte gain = 128：** Channel A can be set for a 128 or 64 gain; channel B has a fixed 32 gain.
 
 - `long read()` —— waits for the chip to be ready and returns a reading
 
 - `long read_average(byte times = 10)` —— returns an average reading.
-	- **Input Parameters:**
-		- **byte times = 10:** times = how many times to read.
+ 	- **Input Parameters:**
+  		- **byte times = 10:** times = how many times to read.
 
 - `double get_value(byte times = 1)` ——  returns (read_average() - OFFSET), that is the current value without the tare weight.
-	- **Input Parameters:**
-		- **byte times = 1:** times = how many readings to do.
+ 	- **Input Parameters:**
+  		- **byte times = 1:** times = how many readings to do.
 - `float get_units(byte times = 1)` —— returns get_value() divided by SCALE, that is the raw value divided by a value obtained via calibration.
-	- **Input Parameters:**
-		- **byte times = 1:** times = how many readings to do.
+ 	- **Input Parameters:**
+  		- **byte times = 1:** times = how many readings to do.
 
 - `void tare(byte times = 10)` —— set the OFFSET value for tare weight.
-	- **Input Parameters:**
-		- **byte times = 10:** times = how many times to read the tare value.
+ 	- **Input Parameters:**
+  		- **byte times = 10:** times = how many times to read the tare value.
 
 - `void set_scale(float scale = 1.f)` —— set the SCALE value; this value is used to convert the raw data to "human readable" data (measure units)
 
@@ -296,7 +293,7 @@ Before we get started developing a sketch, let's look at the available functions
 
 - `long get_offset()` —— get the current OFFSET
 
-- `void power_down() ` —— puts the chip into power down mode
+- `void power_down()` —— puts the chip into power down mode
 
 - `void power_up()` —— wakes up the chip after power down mode
 
@@ -348,20 +345,20 @@ void setup() {
     Serial.println(reading);
   } else {
     Serial.println("HX711 not found.");
-  }	  // print a raw reading from the ADC
+  }   // print a raw reading from the ADC
 
   Serial.print("read average: \t\t");
-  Serial.println(scale.read_average(20));  	// print the average of 20 readings from the ADC
+  Serial.println(scale.read_average(20));   // print the average of 20 readings from the ADC
 
   Serial.print("get value: \t\t");
-  Serial.println(scale.get_value(5));		// print the average of 5 readings from the ADC minus the tare weight (not set yet)
+  Serial.println(scale.get_value(5));  // print the average of 5 readings from the ADC minus the tare weight (not set yet)
 
   Serial.print("get units: \t\t");
-  Serial.println(scale.get_units(5), 1);	// print the average of 5 readings from the ADC minus tare weight (not set) divided
-						// by the SCALE parameter (not set yet)
+  Serial.println(scale.get_units(5), 1); // print the average of 5 readings from the ADC minus tare weight (not set) divided
+      // by the SCALE parameter (not set yet)
 
   scale.set_scale(2280.f);                      // this value is obtained by calibrating the scale with known weights; see the README for details
-  scale.tare();				        // reset the scale to 0
+  scale.tare();            // reset the scale to 0
 
   Serial.println("After setting up the scale:");
 
@@ -372,11 +369,11 @@ void setup() {
   Serial.println(scale.read_average(20));       // print the average of 20 readings from the ADC
 
   Serial.print("get value: \t\t");
-  Serial.println(scale.get_value(5));		// print the average of 5 readings from the ADC minus the tare weight, set with tare()
+  Serial.println(scale.get_value(5));  // print the average of 5 readings from the ADC minus the tare weight, set with tare()
 
   Serial.print("get units: \t\t");
   Serial.println(scale.get_units(5), 1);        // print the average of 5 readings from the ADC minus tare weight, divided
-						// by the SCALE parameter set with set_scale
+      // by the SCALE parameter set with set_scale
 
   Serial.println("Readings:");
 }
@@ -387,7 +384,7 @@ void loop() {
   Serial.print("\t| average:\t");
   Serial.println(scale.get_units(10), 1);
 
-  scale.power_down();			        // put the ADC in sleep mode
+  scale.power_down();           // put the ADC in sleep mode
   delay(5000);
   scale.power_up();
 }
@@ -397,7 +394,7 @@ void loop() {
 **Step 2.**  Please click the Board selection dropdown menu, and then click on "Select other board and port...".
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/4.png" style={{width:400, height:'auto'}}/></div>
 
-**Step 3.** And then search and select "Arduino UNO R4 WiFi". 
+**Step 3.** And then search and select "Arduino UNO R4 WiFi".
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/5.png" style={{width:600, height:'auto'}}/></div>
 
 **Step 4.** Please click "upload" to flash the firmware on to Arduino.
@@ -409,7 +406,6 @@ void loop() {
 
 **Step 6.** The result should look like below.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-ADC-for-Load-Cell-HX711-/img/7.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## Resource
 
@@ -424,12 +420,11 @@ void loop() {
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

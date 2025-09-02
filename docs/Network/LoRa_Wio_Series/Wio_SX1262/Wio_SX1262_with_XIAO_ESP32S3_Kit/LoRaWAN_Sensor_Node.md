@@ -19,11 +19,11 @@ This wiki provides a step-by-step guide on configuring the XIAO ESP32S3 & Wio-SX
 
 ## Prerequisites
 
-* XIAO ESP32S3 & Wio-SX1262 Kit
-* DHT20 temperature and humidity sensor
-* XIAO Expansion Board
-* M2 LoRaWAN Indoor gateway
-* Access to The Things Network account
+- XIAO ESP32S3 & Wio-SX1262 Kit
+- DHT20 temperature and humidity sensor
+- XIAO Expansion Board
+- M2 LoRaWAN Indoor gateway
+- Access to The Things Network account
 
 <div class="table-center">
   <table align="center">
@@ -79,10 +79,11 @@ This wiki provides a step-by-step guide on configuring the XIAO ESP32S3 & Wio-SX
 
 Go to https://www.thethingsnetwork.org/get-started and register - just like any other website. These instructions are for TTS Sandbox.
 
-Go to [the instruction of TTS Sandbox](https://www.thethingsnetwork.org/get-started) and register. 
+Go to [the instruction of TTS Sandbox](https://www.thethingsnetwork.org/get-started) and register.
 Once you have confirmed your email address, you can log in to the [console](https://console.cloud.thethings.network/). If you have any doubts, you can ask on [the things network forum](https://www.thethingsnetwork.org/forum/). You log in with exactly the same details.
 
 ### Register gateway on TTN
+
 It is simpler to register your gateway first. I got [SenseCAP M2 LoRaWAN Indoor Gateway(SX1302)](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-AS923-p-5473.html) as an example.
 
 For your personal LoRaWAN Gateway, you can read up on key concepts and troubleshooting [here](https://www.thethingsindustries.com/docs/gateways/).
@@ -127,18 +128,17 @@ You then need to copy over the device details in to the **config file** for Radi
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/64.png" style={{width:400, height:'auto'}}/></div>
 
-
 ## Configure XIAO ESP32S3 & Wio-SX1262 Kit as LoRaWAN Sensor Node
 
 The code is written in Arduino and is designed to configure a Wio-SX1262 module along with an XIAO ESP32S3 board to act as a LoRaWAN sensor node. It connects a DHT20 sensor to read temperature and humidity data and sends this data via LoRaWAN to The Things Network.
 
 ### Install the necessary libraries for XIAO ESP32S3 and DHT20 sensor
 
-* Install Arduino Environnment for XIAO ESP32S3
+- Install Arduino Environnment for XIAO ESP32S3
 
 Refer to https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation.
 
-* Install `DHT20` sensor library
+- Install `DHT20` sensor library
 package:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -147,7 +147,7 @@ package:
     </a>
 </div>
 
-* Install `RadioLib` library
+- Install `RadioLib` library
 Note. Install **version 6.6.0**, otherwise the code will not compile.
 
 ### Setup
@@ -160,7 +160,7 @@ Note. Install **version 6.6.0**, otherwise the code will not compile.
 
 Just **copy** the parameter from TTN to the config file.
 
-1. Here, a macro named `RADIOLIB_LORAWAN_JOIN_EUI` is defined. If this macro is not defined elsewhere, it will be set to a hexadecimal `all-zero` value. 
+1. Here, a macro named `RADIOLIB_LORAWAN_JOIN_EUI` is defined. If this macro is not defined elsewhere, it will be set to a hexadecimal `all-zero` value.
   
 ```cpp
 #ifndef RADIOLIB_LORAWAN_JOIN_EUI
@@ -176,7 +176,7 @@ Just **copy** the parameter from TTN to the config file.
 #endif
 ```
 
-1. The `RADIOLIB_LORAWAN_APP_KEY` and `RADIOLIB_LORAWAN_NWK_KEY` macros are defined, representing the AppKey and NwkKey, respectively, used for security authentication and network access control. 
+1. The `RADIOLIB_LORAWAN_APP_KEY` and `RADIOLIB_LORAWAN_NWK_KEY` macros are defined, representing the AppKey and NwkKey, respectively, used for security authentication and network access control.
 
 ```cpp
 #ifndef RADIOLIB_LORAWAN_APP_KEY
@@ -202,7 +202,6 @@ Just **copy** the parameter from TTN to the config file.
 **Step 2**. Select the LoRaWAN regional parameters
 
 There are several regional choices available for LoRaWAN communication, including `EU868` (European 868 MHz band), `US915` (United States 915 MHz band), `AU915` (Australian 915 MHz band), `AS923` (Asian 923 MHz band), `IN865` (Indian 865 MHz band), `KR920` (South Korean 920 MHz band), `CN780` (Chinese 780 MHz band), and `CN500`.
-
 
 The line const `LoRaWANBand_t Region = EU868;` sets the region for the LoRaWAN communication to EU868. This means that the device will be configured to operate in the European 868 MHz frequency band.
 
@@ -239,7 +238,7 @@ Read and send sensor data via LoRa communication. The conversion to bytes with d
 
 ## Flash Firmware
 
-The completed firmware package here: 
+The completed firmware package here:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Wio_SX1262_XIAO_ESP32S3_code_package_20241025.zip" target="_blank" rel="noopener noreferrer">
@@ -250,6 +249,7 @@ The completed firmware package here:
 Please download and flash it to the XIAO ESP32S3. For the first use of XIAO ESP32S3, refer to [the flashing tutorial](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/#software-preparation) here.
 
 ## Setup Payload Formatter
+
 The payload formatter is used to convert the raw data received from the sensor into a human-readable format. In this case, the payload formatter is used to convert the raw data received from the DHT20 sensor into a JSON format.
 
 Formatter type: `Custom Javascript formatter`
@@ -282,9 +282,7 @@ For specific device activity, click the device in the middle list. A device's ma
 
 ## Resource
 
-* [Code Package](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Wio_SX1262_XIAO_ESP32S3_code_package_20241025.zip)
-
-
+- [Code Package](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/Wio_SX1262_XIAO_ESP32S3_code_package_20241025.zip)
 
 ## Tech Support & Product Discussion
 
@@ -299,4 +297,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

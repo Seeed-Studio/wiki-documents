@@ -53,7 +53,7 @@ Model: [ARD104D2P](https://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.
 
 - Please disable bluetooth serial ports when using a Windows based development machine to prevent the Arduino IDE from freezing.
 
-##   Specifications   ##
+## Specifications ##
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.2_diagram.jpg)
 
@@ -83,17 +83,17 @@ Model: [ARD104D2P](https://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.
 
 - Solar JST Input voltage: 4.6-6V
 
-- Global Current Consumption: See [note ](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3)
+- Global Current Consumption: See [note](https://wiki.seeedstudio.com/Seeeduino_Stalker_v2.3)
 
 - UART Baud Rate (while programming): 115200 bps
 
-##   Demonstration   ##
+## Demonstration ##
 
-###   Getting Started   ###
+### Getting Started ###
 
 The following steps will help you assemble the hardware and software resources to get you started with Seeeduino Stalker
 
-####   Step 1: Acquiring the Hardware   ####
+#### Step 1: Acquiring the Hardware ####
 
 You will require the following hardware for running your first program.
 
@@ -103,7 +103,7 @@ You will require the following hardware for running your first program.
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Miniusb.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/JumperWire100n.jpg)|
 |**Mini USB Cable**      You would probably have this one lying around,or if not, buy one[here](https://www.seeedstudio.com/depot/mini-usb-cable-110cm-p-252.html). We would use this to connect the UartsBee to one of theUSB ports on your computer.|**1 pin dual-female jumper wire** Required for connecting the UartsBee to Seeeduino Stalker.You might already have few lying around your workspace. If not, you can buy a colourful one [here](https://www.seeedstudio.com/depot/1-pin-dualfemale-jumper-wire-100mm-50pcs-pack-p-260.html?cPath=175_187).|
 
-####   Step 2: Installing the drivers and plugging in the hardware   ####
+#### Step 2: Installing the drivers and plugging in the hardware ####
 
 1.[UartSBee](https://seeeddoc.github.io/UartSBee/)  is like the multi-purpose Swiss Army knife of the Physical Computing world. There is a very detailed procedure to use UartSBee for both Windows and GNU/Linux users [here](https://seeeddoc.github.io/UartSBee/) . In our case it will perform three functions:
 
@@ -125,7 +125,6 @@ You will require the following hardware for running your first program.
 
  Jumper Wire connections
 
-
  |Seeeduino Stalker||UartSBee|
  |---|---|---|
  |USB5V| ↔  |VCC|
@@ -134,7 +133,7 @@ You will require the following hardware for running your first program.
 | GND| ↔  |GND|
  |DTR| ↔  |DTR|
 
-###   Connection Notes   ###
+### Connection Notes ###
 
 - **Bee series socket** - 2*10 pin 2.0mm pitch (which will mate with - one at a time - any of the **wireless modules** : **XBee** , [BluetoothBee](https://seeeddoc.github.io/Bluetooth_Bee/) , **GPSBee** or **RFBee**.) Communication with these modules are done through UART.
 
@@ -146,11 +145,11 @@ You will require the following hardware for running your first program.
 
 - **Grove interface** – Add Grove interface which is using D7/D8 .This allows you to connect 3.3V and 5.0V Grove module to Stalker when the it operating on 3.3 Volts.Grove module operating voltage depends on external voltage(LIPO_BAT and USB5V).
 
-###   Jumpers and Connectors   ###
+### Jumpers and Connectors ###
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.3_bottom.jpg)
 
-####   microSD Card (TransFlash Card) Related   ####
+#### microSD Card (TransFlash Card) Related ####
 
 - **CS_TF**(Jumper type: **older bridge - 2 way**, Location: **Bottom**, Factory state: **SS and PB2 connected by a thin track**)
 This jumper is a two way jumper made up of three pads: PB1, SS and PB2. SS is the Chip Select signal of the the microSD card. By default SS is connected by a thin track to PB2 - Digital Pin 10 (PB2) of the microcontroller. If instead you want to connect the Chip Select signal from the microSD card to Digital pin 9 (PB1), just cut the track between PB2 and SS and put a solder blob between SS and PB1.
@@ -159,12 +158,12 @@ This jumper is a two way jumper made up of three pads: PB1, SS and PB2. SS is th
 
   By default EN is connected to VCC to always power TF card. If you want to control the TF card power with digital pin 4(PD4) of microcontroller, just put a solder blob between EN and PD4.   Conversely, if you want TF card is always available default to be powered, cut the solder you had put.
 
-####   Bee Module Related   ####
+#### Bee Module Related ####
 
 - **POWER_BEE**(Jumper type: **Solder bridge**, Location: **Bottom**, Factory state: **Disconnected**)
 By default EN is connected to VCC to always power xbee. If you want to control the xbee power with digital pin 5(PD5) of microcontroller, just put a solder blob between EN and PD5. Conversely, if you want xbee is always available default to be powered, cut the solder you had put.
 
-####   Bee Module Related - Only XBee related   ####
+#### Bee Module Related - Only XBee related ####
 
 - **WIRELESS_PROGRAMMING**(Jumper type: **Solder bridge**, Location: **Bottom**, Factory state: **Connected by a thin track**)
 You can use Digi's XBee modules to wirelessly program the ATmega328P on your Seeeduino Stalker. An XBee module must be configured and installed on your Seeeduino Stalker and another XBee module must be connected to your Laptop via a UartSBee. The pin DIO3 on the Seeeduino Stalker will be used to control the Reset Pin of ATmega328P. This jumper allows you to enable or disable (default: enabled) the control of the Reset Pin of ATmega328P by the DIO3 pin of the XBee module. You can cut the track between the pads of this jumper if you don't want the DIO3 pin to control the Reset pin of ATmega328P. Lady Ada has a nice [tutorial](http://www.ladyada.net/make/xbee/arduino.html) on how to remotely program your Arduino based product using XBee. (NOTE: Both the XBee - the one on Stalker and the one connected to the PC must be pre-configured once using the X-CTU software before use.)
@@ -172,17 +171,17 @@ You can use Digi's XBee modules to wirelessly program the ATmega328P on your See
 - **RSSI_STATUS**(Jumper type: **Solder bridge**, Location: **Top**, Factory state: **connected by a thin track**)
 A red LED present on the top side of the PCB is connected to the RSSI (Received Signal Strength Indicator) pin of the XBee module. XBee outputs a PWM signal on this pin which is directly proportional to the quality of the RF link when the last packet was received by it. This PWM signal when applied to the LED would vary its brightness as per the quality of the RF link - better the link, brighter the LED. Since this LED would consume power, you can cut the track between the pads of this jumper to conserve battery power out in the field. RSSI value is also available over the UART using the DB command (measured in -dBm). (NOTE: The DB value only indicates the received signal strength of the last hop. If a transmission spans multiple hops, the DB value provides no indication of the overall transmission path, or the quality of the worst link – it only indicates the quality of the last link and should be used sparingly.)
 
-####   User LED Related   ####
+#### User LED Related ####
 
 - **D13_LED**(Jumper type: **Solder bridge**, Location: **Bottom**, Factory state: **connected by a thin track**)
 A red LED present on the top side of the PCB is connected to the Digital Pin 13 (PB5) of the microcontroller. The LED is free for use by you in your program for any purpose you desire. Since this LED would consume power, you can cut the track between the pads of this jumper to conserve battery power out in the field and use Digital Pin 13 for other purposes like controlling a shield.
 
-####   Battery Related   ####
+#### Battery Related ####
 
 - **CH_STATUS**(Jumper type: **Solder bridge**, Location: **Top**, Factory state: **connected by a thin track**)
 Two LEDs present on board Seeeduino Stalker indicate the charging status of the LiPo Battery. The Red SMD LED is connected to the CHRG (or CH) pin of the Lithium Battery charger IC (CN3083 or CN3063) which when glowing, indicates that the charging cycle of the battery is active. The Green SMD LED is connected to the DONE (or OK) pin of the Lithium Battery charger IC (CN3083 or CN3063) which when glowing, indicates that the battery is now fully charged. When operating Seeeduino Stalker out in the field, you can cut the track connecting the CH_STATUS pads to disconnect these LEDs from C_VIN and hence conserve power which would have otherwise been consumed in lighting these LEDs.
 
-####   Real Time Clock (RTC) Related   ####
+#### Real Time Clock (RTC) Related ####
 
 - **INT**(Jumper type: **Solder bridge**, Location: **Bottom**, Factory state: **Disconnected**)
 Close this jumper to allow the Real Time Clock (RTC) to wake the ATmega328P at a specified time. This jumper will connect INT of the RTC Chip (DS3231) to PD2 (INT0) of ATmega328P.
@@ -191,16 +190,16 @@ Close this jumper to allow the Real Time Clock (RTC) to wake the ATmega328P at a
 If solder bridge is connectet to RST, the RTC will be resetted if PD3 (Digital Pin 3) goes LOW.
 The 32K is a 32kHz Output from the RTC on PD3 (Digital Pin 3 / INT1).
 
-##   Programming   ##
+## Programming ##
 
 You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega 328**
 
-###   RTC And Temperature   ###
+### RTC And Temperature ###
 
 - Download and install the DS3231 library and sketches available in the resources section. DS3231 library includes modified version DateTime class by Jean-Claude Wippler at **JeeLabs**
 - The demo sketches makes use of the fat16lib Arduino Library for accessing SD Card. Please install FAT16 Library from **fat16lib's project page**.
 
-####   Adjust Date/Time   ####
+#### Adjust Date/Time ####
 
 - Set Arduino board as `Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega 328` from Tools-->Board Menu of Arduino IDE.
 
@@ -208,7 +207,7 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 - Set the current date/time using the DateTime Class object dt in the example:
 
-- `DateTime dt(year, month, date, hour, min, sec,week-day(starts from 0 and goes to 6)); `
+- `DateTime dt(year, month, date, hour, min, sec,week-day(starts from 0 and goes to 6));`
     Ex:-`DateTime dt(2011, 11, 10, 15, 18, 0, 5);`
 - `DateTime dt(__DATE__, __TIME__); // Uses the compile time to set the clock`
 
@@ -216,15 +215,13 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_adjust.png)
 
-
-####   Get Current Date/Time   ####
-
+#### Get Current Date/Time ####
 
 - Set Arduino board as `Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega 328` from Tools-->Board Menu of Arduino IDE.
 
 - Open now.pde example from DS3231 library
 
-- The current date/time is read from DS3231 using `RTC.now() ` function.
+- The current date/time is read from DS3231 using `RTC.now()` function.
 
     Ex:- `DateTime now = RTC.now();`
 
@@ -232,8 +229,7 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_now.png)
 
-
-####   DS3231 Read Temperature   ####
+#### DS3231 Read Temperature ####
 
 ---
 
@@ -241,7 +237,7 @@ You must set your board type to **Arduino Pro or Pro Mini (3.3V, 8MHz) w/ ATmega
 
 - Open temperature.pde example from DS3231 library
 
-- The current temperature in deg C is read from DS3231 using `RTC.getTemperature() ` function.
+- The current temperature in deg C is read from DS3231 using `RTC.getTemperature()` function.
 
 - The temperature register of DS3231 is normally updated only once in 64 Seconds.
 
@@ -259,8 +255,7 @@ Serial.println("deg C");
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_temp.png)
 
-
-####   DS3231 Interrupts   ####
+#### DS3231 Interrupts ####
 
 This example is a demonstration of interrupt detection from DS3231 INT output. This feature is useful for data-logger functionality where the MCU is put to sleep mode when not in use and DS3231 INT wakes up the CPU periodically. This extends battery power. The complete operation is documented in the code.
 
@@ -276,7 +271,7 @@ This example is a demonstration of interrupt detection from DS3231 INT output. T
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Seeeduino_Stalker_v2.1_interrupts.png)
 
-###   Reading Charging Status   ###
+### Reading Charging Status ###
 
 Connected battery and solar pannel to Stalker,the battery could be charged via solar panel and USB5v. The lowest input voltage for charging battery is 4.4v, so if you are using solar panel, you should take it to an open-air place with enough sunshine. Afterwards, uploading the the follwing code to Staler to read the charging status of Stalker.
 
@@ -326,7 +321,7 @@ unsigned char read_charge_status(void)
 
 ```
 
-###   Reading Battery Voltage   ###
+### Reading Battery Voltage ###
 
 If you want to know your battery voltage on Analog Pin 7, this is a simple example.
 
@@ -354,7 +349,7 @@ int BatteryValue;
 
 ```
 
-###   Using a Battery Library  ###
+### Using a Battery Library ###
 
 There is a library available for battery voltage, percentage and more.
 
@@ -405,7 +400,7 @@ void loop(){
 }
 ```
 
-###   Data Logger Examples   ###
+### Data Logger Examples ###
 
 The principal application of Stalker is data-logging of sensor signal like temperature along with the time-stamp. We have provided 3 sketches along with the DS3231 library demonstrating 3 different implementation. These sketches puts the MCU in sleep mode when not performing data sampling / logging operation. The complete implementation is documented very well in the code. The following section gives an overview :
 
@@ -413,23 +408,26 @@ The principal application of Stalker is data-logging of sensor signal like tempe
 Seeeduino Stalker v2.1 SolarPanel.png
 
 1.StalkerV21_DataLogger_Periodic.pde
-  - This sketch logs temperature data periodically to SD card configured by `RTC.enableInterrupts(periodicity)` function.
-  - The periodicity is provided using predefined constants EverySecond or EveryMinute or EveryHour
-  - This sketch produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
+
+- This sketch logs temperature data periodically to SD card configured by `RTC.enableInterrupts(periodicity)` function.
+- The periodicity is provided using predefined constants EverySecond or EveryMinute or EveryHour
+- This sketch produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
 
 2.StalkerV21_DataLogger_5min.pde
-  - This sketch logs temperature data using to SD card configured by `RTC.enableInterrupts(h, m, s)` function.
-  - The periodicity is provided using h, m and s. Once an interrupt is detected, the next interrupt time is updated by advancing the h,m and s value. The DateTime Class comes handy for this.
-  - ex:- `interruptTime = DateTime(interruptTime.get() + 300); //decide the time for next interrupt`
-  - This sketch also produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
+
+- This sketch logs temperature data using to SD card configured by `RTC.enableInterrupts(h, m, s)` function.
+- The periodicity is provided using h, m and s. Once an interrupt is detected, the next interrupt time is updated by advancing the h,m and s value. The DateTime Class comes handy for this.
+- ex:- `interruptTime = DateTime(interruptTime.get() + 300); //decide the time for next interrupt`
+- This sketch also produces verbose output i.e the various events happening inside MCU are displayed in serial terminal.
 
 3.StalkerV21_DataLogger_15Sec_NoSerialPort.pde
-  - This is similar to previous sketch with different data-log interval. All Serial Port related code is commented to reduce power consumption.
-  - There is no significant reduction in power consumption by removing Serial Port related code.
+
+- This is similar to previous sketch with different data-log interval. All Serial Port related code is commented to reduce power consumption.
+- There is no significant reduction in power consumption by removing Serial Port related code.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Stalker_v2.1_datalogger_flowchart.png)
 
-#####   A note on power consumption   #####
+##### A note on power consumption #####
 
 The following screenshot shows the current consumption measurement of **Stalker** @ 3.3V input connected to LIPO_BAT. In actual application LIPO_BAT is connected to a 3.7V LiPo battery. Hence, consider the following measurement with a pinch of salt!!!
 Here in the [forum](https://forum.seeedstudio.com/viewtopic.php?f=16&amp;t=3911&amp;hilit=Stalker) are some discussions about power consumption.
@@ -451,9 +449,9 @@ But don't be sad now, even if you get down to an average draw of 1mA, you get 98
 
  Note: If you buy the "microSD Card Reader (in a capsule)", you would not need the "Mini USB cable" since the former also doubles up
 
-##   Resources   ##
+## Resources ##
 
-###  Accessories ###
+### Accessories ###
 
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/StalkerEnclosure600.jpg) |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Microsdcard2gb.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Smartcable_04_LRG.jpg) |
 |---|---|---|
@@ -463,16 +461,13 @@ But don't be sad now, even if you get down to an average draw of 1mA, you get 98
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Lithium-lon-polymer-batteries2A.jpg) |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/img/Solar-panel55.jpg) |
 |[Lithium Polymer (LiPo) Battery](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=Lithium+Ion+polymer+Battery&amp;x=51&amp;y=12)|[Solar Panel for charging LiPo Battery via Stalker](https://www.seeedstudio.com/depot/index.php?main_page=advanced_search_result&amp;search_in_description=0&amp;keyword=solar+panel&amp;x=0&amp;y=0)|
 
+### Datasheets of Components ###
 
-
-###   Datasheets of Components   ###
-
-
-- [DS3231 ](http://datasheets.maxim-ic.com/en/ds/DS3231.pdf) - Real Time Clock with Digital Temperature sensor on board Seeeduino Stalker v2.1
--  [CN3063](http://www.openhacks.com/uploadsproductos/dse-cn3063.pdf) - Charger controller for Lithium batteries (charging using solar panel)
+- [DS3231](http://datasheets.maxim-ic.com/en/ds/DS3231.pdf) - Real Time Clock with Digital Temperature sensor on board Seeeduino Stalker v2.1
+- [CN3063](http://www.openhacks.com/uploadsproductos/dse-cn3063.pdf) - Charger controller for Lithium batteries (charging using solar panel)
 - [Si2305DS](http://www.vishay.com/docs/70833/70833.pdf) - P-Channel 1.25-W, 1.8-V (G-S) MOSFET.
 
-##   FAQ   ##
+## FAQ ##
 
 Here is the Seeeduino Stalker FAQ, users can list the Frequently Asked Questions here, example as below:
 
@@ -500,26 +495,22 @@ Here is the Seeeduino Stalker FAQ, users can list the Frequently Asked Questions
 
    CH_STATUS - The above two signals (CH_READ and OK_READ) also have LEDs connected to them. CH_STATUS jumper allows you to disable these LEDs and decrease power consumption.
 
-##   Licensing   ##
+## Licensing ##
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under various open source license, see source code files for details.
-
-
 
 ## Stalker v2.3 Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker_v2.3_Eagle_Files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Stalker v2.2 Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/Stalker_v2.2_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+### Library and Eagle File ###
 
-
-###  Library and Eagle File ###
 **Note:** If you want to use Datalogger Sketches, you should first download and install Fat16lib Arduino 1.0 Version from **fat16lib**
 
 - **[Software]** [SeeeduinoStalker_Software(Arduino_1.0).zip](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v2.3/res/SeeeduinoStalkerV2.1_Software-Arduino_1.0-.zip)
@@ -539,11 +530,11 @@ This documentation is licensed under the Creative Commons [Attribution-ShareAlik
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

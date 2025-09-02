@@ -15,7 +15,8 @@ last_update:
 no_comments: false # for Disqus
 ---
 
-# Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection 
+# Tutorial of AI Kit with Raspberry Pi 5 about YOLOv8n object detection
+
 ## Introduction
 
 [YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html) is used to accelerate inference speed, featuring a 13 TOPS neural network inference accelerator built around the Hailo-8L chip.
@@ -25,51 +26,51 @@ This wiki will guide you on how to use YOLOv8n for object detection with AI Kit 
 ## Prepare Hardware
 
 ### For Hailo8L 13 TOPS
+
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>Raspberry Pi5 8GB</th>
-		<th>Raspberry Pi AI Kit</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>Raspberry Pi5 8GB</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### For Hailo8 26 TOPS
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer AI R2130</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ## Install Hardware
 
@@ -81,9 +82,10 @@ Please refer to [this](https://www.raspberrypi.com/documentation/accessories/ai-
 We will install hailo software, make sure you have a hailo account.
 :::
 
-### Install Ultralytics and train model:
+### Install Ultralytics and train model
 
 Install python3.11
+
 ```
 sudo apt install python3.11
 ```
@@ -121,6 +123,7 @@ You will get the `best.pt` model after your training, as shown below:
 cd ./runs/detect/retrain_yolov8n/weights/
 ls
 ```
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/train_result.png" alt="pir" width={1000} height="auto"/></p>
 
 Convert the `.pt` model to `.onnx`.
@@ -128,10 +131,11 @@ Convert the `.pt` model to `.onnx`.
 ```
 yolo export model=./best.pt imgsz=640 format=onnx opset=11 
 ```
+
 Result like below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/convert_onnx.png" alt="pir" width={1000} height="auto"/></p>
 
-### Install hailo software:
+### Install hailo software
 
 Install python 3.8
 
@@ -156,10 +160,11 @@ Install [Hailo Dataflow Compiler 3.27](https://hailo.ai/developer-zone/software-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/HDF_install.png" alt="pir" width={1000} height="auto"/></p>
 
-``` 
+```
 pip install hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl 
 
 ```
+
 Install [Model zoo](https://hailo.ai/developer-zone/software-downloads/), here you need to register Hailo and login, and download the software.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_zoo.png" alt="pir" width={1000} height="auto"/></p>
@@ -173,8 +178,8 @@ Test whether `hailo_model_zoo` is functioning correctly.
 ```
 hailomz -h
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_zoo_test.png" alt="pir" width={1000} height="auto"/></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/model_zoo_test.png" alt="pir" width={1000} height="auto"/></p>
 
 Install `hailo_model_zoo` github file
 
@@ -191,7 +196,7 @@ python hailo_model_zoo/datasets/create_coco_tfrecord.py val2017
 python hailo_model_zoo/datasets/create_coco_tfrecord.py calib2017
 ```
 
-### Use `hailo_model_zoo` to parse the model:
+### Use `hailo_model_zoo` to parse the model
 
 ```
 hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8n
@@ -199,7 +204,7 @@ hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8n
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/parse_model.png" alt="pir" width={1000} height="auto"/></p>
 
-### Use `hailo_model_zoo` to optimize the model:
+### Use `hailo_model_zoo` to optimize the model
 
 :::note
 If you execute the following command, you may encounter some errors. However, you can copy `./hailo_model_zoo/hailo_model_zoo` to your local library. If the error indicates that the dataset cannot be found, you can navigate to `~/.hailomz`, locate the dataset, and copy it to your local dataset directory.
@@ -211,7 +216,7 @@ hailomz optimize --hw-arch hailo8l --har ./yolov8n.har yolov8n
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/hailo-tutorial/optimize_model.png" alt="pir" width={1000} height="auto"/></p>
 
-### Use `hailo_model_zoo` to compile the model:
+### Use `hailo_model_zoo` to compile the model
 
 ```
 hailomz compile  yolov8n --hw-arch hailo8l --har ./yolov8n.har 
@@ -229,14 +234,14 @@ ls
 
 ## On Raspberry Pi5
 
-### update the system:
+### update the system
 
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-### Set pcie to gen2/gen3(gen3 is faster than gen2):
+### Set pcie to gen2/gen3(gen3 is faster than gen2)
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -250,11 +255,12 @@ dtparam=pciex1
 dtparam=pciex1_gen=3
 
 ```
+
 :::note
 If you want to use `gen2`, please comment `dtparam=pciex1_gen=3`
 :::
 
-### Install hailo-all and reboot:
+### Install hailo-all and reboot
 
 Open the terminal on the Raspberry Pi 5 and enter the following command to install the Hailo software
 
@@ -262,7 +268,8 @@ Open the terminal on the Raspberry Pi 5 and enter the following command to insta
 sudo apt install hailo-all
 sudo reboot
 ```
-### Check Software and Hardware:
+
+### Check Software and Hardware
 
 Open terminal on the Raspberry Pi5, and input command as follows to check if hailo-all have been installed.
 
@@ -282,15 +289,14 @@ lspci | grep Hailo
 The right result show as bellow:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_hardware.png" alt="pir" width={1000} height="auto"/></p>
 
-
-### Clone the project:
+### Clone the project
 
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 ```
 
-### Copy your model to the raspberry pi5:
+### Copy your model to the raspberry pi5
 
 Make a directory named `hailomodel`
 
@@ -309,17 +315,19 @@ scp -r ./yolomodel/runs/detect/retrain_yolov8n/weights/yolov8n.hef username@ip /
 ### Change code
 
 Find line 105 and 106 in `object-detection-hailo.py`, and change the code like below:
+
 ```
         elif args.network == "yolov8n":
             self.hef_path = os.path.join(self.current_path, './hailomodel/yolov8n.hef')   
 ```
 
 Find line 172 in `object-detection-hailo.py`, and change the code like below:
+
 ```
     parser.add_argument("--network", default="yolov8n", choices=['yolov6n', 'yolov8s', 'yolox_s_leaky'], help="Which Network to use, defult is yolov6n")
 ```
 
-### Run the code:
+### Run the code
 
 ```
 bash run.sh object-detection-hailo
@@ -333,17 +341,16 @@ Here is the video in which we demonstrate the process of training the YOLOv8n mo
 <iframe width="800" height="400" src="https://www.youtube.com/embed/mVNrEVpvvuc" title="YOLOv8n Object Detection on Raspberry Pi 5 with AI Kit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

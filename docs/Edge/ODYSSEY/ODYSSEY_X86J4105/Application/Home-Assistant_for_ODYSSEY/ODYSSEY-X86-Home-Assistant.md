@@ -14,14 +14,13 @@ last_update:
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/thumb.png" /></div>
 
-
 ## Introduction
 
 This wiki will walkthrough step-by-step on how you can turn your ordinary house into a smart one just by using an [ODYSSEY-X86](https://www.seeedstudio.com/ODYSSEY-X86J4125800-p-4915.html)! By the end of this wiki, you will be able to view a beautiful dashboard on your PC, tablet, smartphone, reTerminal and be able to control your home appliances and view other information such as sensor data right at your fingertips. So, let's get started!
 
 ## What is Home Assistant?
 
-[Home Assistant](https://www.home-assistant.io) is a free and open-source software for home automation designed to be a central control system for smart home devices, which can be referred to as a smart home hub. It offers you home automation without needing the cloud, which means your home automation system is not dependent on remote servers or an internet connection. This local control means, you can have far better security than cloud connected devices. Also, it offers greater reliability when it comes to keep it running 24x7. 
+[Home Assistant](https://www.home-assistant.io) is a free and open-source software for home automation designed to be a central control system for smart home devices, which can be referred to as a smart home hub. It offers you home automation without needing the cloud, which means your home automation system is not dependent on remote servers or an internet connection. This local control means, you can have far better security than cloud connected devices. Also, it offers greater reliability when it comes to keep it running 24x7.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" /></div>
 
@@ -49,13 +48,13 @@ According to Home Assistant, the two recommended methods of Home Assistant insta
 
 If we install Home Assistant Container on ODYSSEY-X86, we will be missing out on several Home Assistant features. So we will skip on that installation. However, if you want to explore this installation method, you can follow [this guide](https://www.home-assistant.io/installation/generic-x86-64#install-home-assistant-container).
 
-## Let's build it!
+## Let's build it
 
-Now let's go through the process of installing Home Assistant OS on ODYSSEY-X86. 
+Now let's go through the process of installing Home Assistant OS on ODYSSEY-X86.
 
 There are different ways to install Home Assistant OS on ODYSSEY-X86. The most simplest way would be to directly flash the Home Assistant OS image to a USB flash drive, connect the USB drive to ODYSSEY-X86 and run Home Assistant from it.
 
-The other way would be to install Home Assistant OS on a different storage device such as an external HDD, SSD, M.2 SSD and the onboard eMMC(for ODYSSEY-X86 eMMC version). This method can guarantee that you have a reliable storage device in comparison with a USB drive. 
+The other way would be to install Home Assistant OS on a different storage device such as an external HDD, SSD, M.2 SSD and the onboard eMMC(for ODYSSEY-X86 eMMC version). This method can guarantee that you have a reliable storage device in comparison with a USB drive.
 
 We will explain how to install Home Assistant OS in both methods!
 
@@ -65,7 +64,7 @@ We will explain how to install Home Assistant OS in both methods!
 
 **Note:** It is recommended to use a flash drive with at least 16GB of storage capacity
 
-- **Step 2.** Download and install [Balena Etcher](https://www.balena.io/etcher) according to your operating system 
+- **Step 2.** Download and install [Balena Etcher](https://www.balena.io/etcher) according to your operating system
 
 - **Step 3.** Open Balena Etcher and select **Flash from URL**
 
@@ -91,7 +90,7 @@ If the flashing process is successful, you will see the below output
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/25.png" /></div>
 
-- **Step 7.** Connect this USB flash drive to one of the USB ports on the ODYSSEY-X86 and turn on the board 
+- **Step 7.** Connect this USB flash drive to one of the USB ports on the ODYSSEY-X86 and turn on the board
 
 - **Step 8.** Keep pressing **DELETE** key to enter BIOS
 
@@ -103,7 +102,7 @@ If the flashing process is successful, you will see the below output
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/10.jpg" /></div>
 
-Now ODYSSEY-X86 will reboot and use the connected USB drive as the boot device. After successful booting into Home Assistant OS, you will see the below output 
+Now ODYSSEY-X86 will reboot and use the connected USB drive as the boot device. After successful booting into Home Assistant OS, you will see the below output
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/19.png" /></div>
 
@@ -113,11 +112,11 @@ In this method, we will first create a bootable USB drive with Ubuntu Desktop an
 
 - **Step 1.** Download the latest Ubuntu Desktop image from [here](https://ubuntu.com/download/desktop)
 
-- **Step 2.** Connect a USB flash drive to your PC 
+- **Step 2.** Connect a USB flash drive to your PC
 
 **Note:** It is recommended to use a flash drive with at least 8GB of storage capacity
 
-- **Step 3.** Download and install [Balena Etcher](https://www.balena.io/etcher) according to your operating system 
+- **Step 3.** Download and install [Balena Etcher](https://www.balena.io/etcher) according to your operating system
 
 - **Step 4.** Open Balena Etcher, select **Flash from file**
 
@@ -159,7 +158,7 @@ If the flashing process is successful, you will see the below output
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant-X86/10.jpg" /></div>
 
-Now ODYSSEY-X86 will reboot and use the connected USB drive as the boot device. 
+Now ODYSSEY-X86 will reboot and use the connected USB drive as the boot device.
 
 - **Step 12.** Select **Try or Install Ubuntu**
 
@@ -227,7 +226,7 @@ Now ODYSSEY-X86 will reboot and use the connected drive as the boot device. Afte
 
 ## View Home Assistant Dashboard UI on web browser
 
-- **Step 1.** Open a web browser on a PC, tablet, smartphone type the following URL 
+- **Step 1.** Open a web browser on a PC, tablet, smartphone type the following URL
 
 ```sh
 homeassistant.local:8123
@@ -235,7 +234,7 @@ homeassistant.local:8123
 
 It will take some time to finish the initial start up process
 
-- **Step 2.** Once finished starting up, create an account and follow through the initial set up instuctions 
+- **Step 2.** Once finished starting up, create an account and follow through the initial set up instuctions
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/13.png" /></div>
 
@@ -267,7 +266,7 @@ sudo nano autostart
 @chromium-browser --kiosk --incognito --disable-pinch --overscroll-history-navigation=0 homeassistant.local:8123
 ```
 
-- **Step 5.** Reboot reTerminal 
+- **Step 5.** Reboot reTerminal
 
 ```sh
 sudo reboot 
@@ -277,7 +276,7 @@ Now when reTerminal boots up, Home Assistant dashboard UI will open in full-scre
 
 ## Bonus
 
-After integrating smart lights, temperature, humidity sensors, CCTV and more, a complete Smart Home dashboard on Home Assistant will look like below 
+After integrating smart lights, temperature, humidity sensors, CCTV and more, a complete Smart Home dashboard on Home Assistant will look like below
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Home-Assistant/16.png" /></div>
 
@@ -290,11 +289,11 @@ After integrating smart lights, temperature, humidity sensors, CCTV and more, a 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

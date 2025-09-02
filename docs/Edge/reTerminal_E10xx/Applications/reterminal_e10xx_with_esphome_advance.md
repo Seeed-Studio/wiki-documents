@@ -1,6 +1,6 @@
 ---
-description: This article describes how to utilise the hardware capabilities of the reTerminal E10xx series on ESPHome.
-title: Advanced ESPHome Usage of reTerminal E10xx in Home Assistant
+description: This article describes how to utilise the hardware capabilities of the reTerminal E Series ePaper Display on ESPHome.
+title: Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.webp
 slug: /reterminal_e10xx_with_esphome_advanced
 sidebar_position: 3
@@ -9,15 +9,18 @@ last_update:
   author: Citric
 ---
 
-# Advanced ESPHome Usage of reTerminal E10xx in Home Assistant
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/27.jpg" style={{width:700, height:'auto'}}/></div><br />
 
-This article explores advanced ESPHome configurations for your reTerminal E10xx device, building upon the foundational concepts covered in our [Basic ESPHome Usage guide](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome). If you're new to ESPHome or the reTerminal E10xx, we recommend starting with the basic guide before diving into these advanced applications.
+This article explores advanced ESPHome configurations for your reTerminal E Series ePaper Display device, building upon the foundational concepts covered in our [Basic ESPHome Usage guide](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome). If you're new to ESPHome or the reTerminal E Series, we recommend starting with the basic guide before diving into these advanced applications.
 
 ## Hardware Capabilities
 
-The reTerminal E10xx includes several hardware components that can be leveraged in Home Assistant through ESPHome:
+The reTerminal E Series ePaper Display includes several hardware components that can be leveraged in Home Assistant through ESPHome:
 
 - Three programmable buttons (GPIO3, GPIO4, GPIO5)
 
@@ -31,13 +34,13 @@ The reTerminal E10xx includes several hardware components that can be leveraged 
 
 Let's explore how to use each of these components in practical applications.
 
-## reTerminal E10xx Hardware Component Control
+## reTerminal E Series ePaper Display Hardware Component Control
 
-Let's explore how to use each of the hardware components on the reTerminal E10xx in Home Assistant.
+Let's explore how to use each of the hardware components on the reTerminal E Series ePaper Display in Home Assistant.
 
 ### Buttons and LED
 
-This example demonstrates how to use the three buttons on your reTerminal E10xx to control functions and provide visual feedback with the on-board LED.
+This example demonstrates how to use the three buttons on your reTerminal E Series ePaper Display to control functions and provide visual feedback with the on-board LED.
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
 
@@ -115,7 +118,7 @@ This configuration:
 
 ### Buzzer Control
 
-The reTerminal E10xx includes a buzzer on GPIO45 that can be used to provide audible feedback. Here's how to configure it:
+The reTerminal E Series ePaper Display includes a buzzer on GPIO45 that can be used to provide audible feedback. Here's how to configure it:
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
 
@@ -180,7 +183,7 @@ You can adjust the `frequency` parameter to change the tone of the buzzer. Highe
 
 ### Battery Monitoring
 
-The reTerminal E10xx can monitor its battery level through the analog input on GPIO1. Here's how to set it up:
+The reTerminal E Series ePaper Display can monitor its battery level through the analog input on GPIO1. Here's how to set it up:
 
 ```yaml
 esphome:
@@ -276,10 +279,9 @@ To measure the battery level, you need to enable the **GPIO21** pin. Otherwise i
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/46.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Demo 2. Take the Home Assistant Dashboard as a Screenshot
 
-This example demonstrates how to capture screenshots of your Home Assistant dashboard and display them on your reTerminal E10xx.
+This example demonstrates how to capture screenshots of your Home Assistant dashboard and display them on your reTerminal E Series.
 
 ### Installing the [Puppet](https://github.com/balloob/home-assistant-addons) Add-on
 
@@ -321,15 +323,15 @@ Step 7. Save the configuration and restart the Puppet add-on.
 
 The Puppet add-on launches a server on port 10000 that generates screenshots of any Home Assistant page. Here's how to use it:
 
-#### Basic Screenshot URL Format:
+#### Basic Screenshot URL Format
 
 ```
 http://homeassistant.local:10000/lovelace/0?viewport=800x480
 ```
 
-This URL will capture a screenshot of your default dashboard at 800x480 resolution (perfect for reTerminal E10xx).
+This URL will capture a screenshot of your default dashboard at 800x480 resolution (perfect for reTerminal E Series).
 
-#### E-Paper Optimization:
+#### E-Paper Optimization
 
 For e-paper displays, add the `eink` parameter to reduce the color palette:
 
@@ -339,7 +341,7 @@ http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2
 
 The value `2` represents a 2-color (black and white) palette.
 
-#### Inverting Colors:
+#### Inverting Colors
 
 Add the `invert` parameter to invert black and white:
 
@@ -347,7 +349,7 @@ Add the `invert` parameter to invert black and white:
 http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert
 ```
 
-#### Capturing Different Pages:
+#### Capturing Different Pages
 
 You can capture any Home Assistant page by changing the URL path:
 
@@ -362,6 +364,9 @@ Step 10. Test your screenshot URL by entering it in a web browser. You should se
 ### ESPHome Configuration
 
 Step 11. Add the following code to your ESPHome configuration after the `captive_portal` section:
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 http_request:
@@ -401,11 +406,55 @@ display:
       it.image(0, 0, id(dashboard_image));
 ```
 
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+http_request:
+  verify_ssl: false
+  timeout: 10s
+  watchdog_timeout: 15s
+
+online_image:
+  - id: dashboard_image
+    format: PNG
+    type: BINARY
+    buffer_size: 30000
+    url: http://homeassistant.local:10000/lovelace/0?viewport=800x480&eink=2&invert  # Replace with your Home Assistant address
+    update_interval: 30s
+    on_download_finished:
+      - delay: 0ms
+      - component.update: main_display
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: never
+    lambda: |-
+      it.image(0, 0, id(dashboard_image));
+```
+
+</TabItem>
+</Tabs>
+
 :::caution
 Replace `homeassistant.local` with your Home Assistant's actual IP address if local DNS resolution doesn't work in your network.
 :::
 
-When your configuration is successfully uploaded and running, your reTerminal E10xx will display a screenshot of your Home Assistant dashboard:
+When your configuration is successfully uploaded and running, your reTerminal E Series ePaper Display will display a screenshot of your Home Assistant dashboard:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/54.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -415,9 +464,12 @@ When your configuration is successfully uploaded and running, your reTerminal E1
 If you start using the Deep Sleep program, we recommend that you use it preferably with the white button on the right side and set the white button on the right side as the Sleep Wake button. This way, when you want to update the program, you won't encounter the awkward situation where the device is sleeping and you can't upload the program through the serial port.
 :::
 
-This example demonstrates how to use deep sleep mode to significantly reduce power consumption, making your reTerminal E10xx suitable for battery-powered applications.
+This example demonstrates how to use deep sleep mode to significantly reduce power consumption, making your reTerminal E Series ePaper Display suitable for battery-powered applications.
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 globals:
@@ -430,7 +482,7 @@ globals:
 deep_sleep:
   id: deep_sleep_1
   run_duration: 30s  # Device remains awake for 30 seconds
-  sleep_duration: 3min  # Then sleeps for 3 minutes
+  sleep_duration: 5min  # Then sleeps for 5 minutes
   # Optional: Use a button to wake from sleep
   wakeup_pin: GPIO4
   wakeup_pin_mode: INVERT_WAKEUP
@@ -461,12 +513,68 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 3min
+    update_interval: 5min
     lambda: |-
       id(sleep_counter) += 1;
       ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+globals:
+  - id: sleep_counter
+    type: int
+    restore_value: yes  # Use RTC storage to maintain counter during sleep
+    initial_value: '0'
+
+# Deep sleep configuration
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 30s  # Device remains awake for 30 seconds
+  sleep_duration: 5min  # Then sleeps for 5 minutes
+  # Optional: Use a button to wake from sleep
+  wakeup_pin: GPIO4
+  wakeup_pin_mode: INVERT_WAKEUP
+
+interval:
+  - interval: 29s  # Schedule sleep just before run_duration ends
+    then:
+      - logger.log: "Entering deep sleep now..."
+
+font:
+  - file: "gfonts://Inter@700"
+    id: font1
+    size: 24
+
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 5min
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      id(sleep_counter) += 1;
+      ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
+      it.printf(100, 100, id(font1), BLACK, "Wakeup count: %d", id(sleep_counter));
+```
+
+</TabItem>
+</Tabs>
 
 This configuration:
 
@@ -488,7 +596,7 @@ When running, you'll see a counter increment each time the device wakes from sle
 For a better understanding, we strongly recommend that you run the basic examples above first before trying this comprehensive example.
 :::
 
-This advanced example combines multiple features into a complete dashboard solution for the reTerminal E10xx. It demonstrates:
+This advanced example combines multiple features into a complete dashboard solution for the reTerminal E Series. It demonstrates:
 
 1. Weather and indoor climate display
 2. Battery monitoring with icons
@@ -499,10 +607,13 @@ This advanced example combines multiple features into a complete dashboard solut
 <details>
 <summary>Click here to view the full code</summary>
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
 ```yaml
 esphome:
-  name: reterminal
-  friendly_name: reTerminal
+  name: reterminal_e1001
+  friendly_name: reTerminal_E1001
   on_boot:
     priority: 600
     then:
@@ -818,9 +929,340 @@ display:
       }
 ```
 
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+esphome:
+  name: reterminal_e1002
+  friendly_name: reTerminal_E1002
+  on_boot:
+    priority: 600
+    then:
+      - output.turn_on: bsp_sd_enable
+      - output.turn_on: bsp_battery_enable
+      - delay: 200ms
+      - component.update: battery_voltage
+      - component.update: battery_level
+
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "g93yP72UIyVsz9WfffaDMK+JeIQYROIFRK+VIQjkM+g="
+
+ota:
+  - platform: esphome
+    password: "1ff187393ee444aa2e892779dc78e488"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "reTerminal-E1002"
+    password: "yoUkaGlJaDpC"
+
+captive_portal:
+
+# Deep-sleep, wake by GPIO4
+deep_sleep:
+  id: deep_sleep_1
+  run_duration: 1min
+  sleep_duration: 60min
+  wakeup_pin: GPIO4          # Right white button
+  wakeup_pin_mode: INVERT_WAKEUP
+
+# SPI / I²C
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+i2c:
+  scl: GPIO20
+  sda: GPIO19
+
+# Fonts
+font:
+  - file: "gfonts://Inter@700"
+    id: small_font
+    size: 24
+  - file: "gfonts://Inter@700"
+    id: mid_font
+    size: 36
+  - file: "gfonts://Inter@700"
+    id: big_font
+    size: 180
+  - file: "gfonts://Inter@700"
+    id: time_font
+    size: 96      # for the big time display
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_large
+    size: 70
+    glyphs:
+      - "\U000F050F"  # thermometer
+      - "\U000F058E"  # humidity
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_bat_icon
+    size: 24
+    glyphs:
+      - "\U000F007A"  # mdi-battery-10
+      - "\U000F007B"  # mdi-battery-20
+      - "\U000F007C"  # mdi-battery-30
+      - "\U000F007D"  # mdi-battery-40
+      - "\U000F007E"  # mdi-battery-50
+      - "\U000F007F"  # mdi-battery-60
+      - "\U000F0080"  # mdi-battery-70
+      - "\U000F0081"  # mdi-battery-80
+      - "\U000F0082"  # mdi-battery-90
+      - "\U000F0079"  # mdi-battery
+
+globals:
+  - id: page_index
+    type: int
+    restore_value: true
+    initial_value: '0'
+  - id: battery_glyph
+    type: std::string
+    restore_value: no
+    initial_value: "\"\\U000F0079\""   # default full battery
+
+sensor:
+  - platform: sht4x
+    temperature:
+      name: "Temperature"
+      id: temp_sensor
+    humidity:
+      name: "Relative Humidity"
+      id: hum_sensor
+  - platform: adc
+    pin: GPIO1
+    name: "Battery Voltage"
+    id: battery_voltage
+    update_interval: 60s
+    attenuation: 12db
+    filters:
+      - multiply: 2.0
+  - platform: template
+    name: "Battery Level"
+    id: battery_level
+    unit_of_measurement: "%"
+    icon: "mdi:battery"
+    device_class: battery
+    state_class: measurement
+    lambda: 'return id(battery_voltage).state;'
+    update_interval: 60s
+    on_value:
+      then:
+        - lambda: |-
+            int pct = int(x);
+            if (pct <= 10)      id(battery_glyph) = "\U000F007A";
+            else if (pct <= 20) id(battery_glyph) = "\U000F007B";
+            else if (pct <= 30) id(battery_glyph) = "\U000F007C";
+            else if (pct <= 40) id(battery_glyph) = "\U000F007D";
+            else if (pct <= 50) id(battery_glyph) = "\U000F007E";
+            else if (pct <= 60) id(battery_glyph) = "\U000F007F";
+            else if (pct <= 70) id(battery_glyph) = "\U000F0080";
+            else if (pct <= 80) id(battery_glyph) = "\U000F0081";
+            else if (pct <= 90) id(battery_glyph) = "\U000F0082";
+            else                id(battery_glyph) = "\U000F0079";
+    filters:
+      - calibrate_linear:
+          - 4.15 -> 100.0
+          - 3.96 -> 90.0
+          - 3.91 -> 80.0
+          - 3.85 -> 70.0
+          - 3.80 -> 60.0
+          - 3.75 -> 50.0
+          - 3.68 -> 40.0
+          - 3.58 -> 30.0
+          - 3.49 -> 20.0
+          - 3.41 -> 10.0
+          - 3.30 -> 5.0
+          - 3.27 -> 0.0
+      - clamp:
+          min_value: 0
+          max_value: 100
+
+output:
+  - platform: gpio
+    pin: GPIO6
+    id: bsp_led
+    inverted: true
+  - platform: gpio
+    pin: GPIO16
+    id: bsp_sd_enable
+  - platform: gpio
+    pin: GPIO21
+    id: bsp_battery_enable
+
+# Onboard LED
+light:
+  - platform: binary
+    name: "Onboard LED"
+    output: bsp_led
+    id: onboard_led
+    
+binary_sensor:
+  - platform: gpio    # Next page
+    pin:
+      number: GPIO3
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key1
+    name: "Key1"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) + 1) % 2;
+            id(epaper_display).update();
+
+  - platform: gpio     # Prev page
+    pin:
+      number: GPIO5
+      mode: INPUT_PULLUP
+      inverted: true
+    id: key2
+    name: "Key2"
+    on_press:
+      then:
+        - lambda: |-
+            id(page_index) = (id(page_index) - 1 + 2) % 2;
+            id(epaper_display).update();
+
+  # - platform: gpio
+  #   pin:
+  #     number: GPIO4
+  #     mode: INPUT_PULLUP
+  #     inverted: true
+  #   id: key2
+  #   name: "Key2"
+  #   on_press:
+  #     then:
+  #       - lambda: |-
+  #           id(page_index) = (id(page_index) - 1 + 3) % 3;
+  #           id(epaper_display).update();
+
+# Home Assistant time
+time:
+  - platform: homeassistant
+    id: ha_time
+
+# e-paper
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: never
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+
+      // ----------  PAGE 0  ----------
+      if (id(page_index) == 0) {
+        const int scr_w = 800;
+        const int scr_h = 480;
+
+        // Battery in upper-right corner
+        it.printf(670, 13, id(font_bat_icon), GREEN, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), GREEN, "%.0f%%", id(battery_level).state);
+
+        //line
+        it.filled_rectangle(400, 100, 2, 280, BLACK);
+
+        // Convert °C to °F
+        float temp_f = id(temp_sensor).state * 9.0 / 5.0 + 32.0;
+
+        // ---------------------------------------------------------
+        // Horizontal split: two 400 px columns
+        const int col_w = scr_w / 2;
+
+        const int icon_y   = 100;   // Icon baseline
+        const int value_y  = 220;   // Number baseline
+        const int unit_y   = 300;   // Unit baseline
+        const int label_y  = 380;   // Text label baseline
+
+        const int icon_size = 70;   // icon font size
+        const int val_size  = 120;  // number font size
+        const int unit_size = 44;   // unit font size
+        const int label_size= 36;   // label font size
+
+        // --- Left column : Temperature -----------------------------
+        const int left_mid = col_w / 2 - 30;   // 200 px
+
+        // Icon
+        it.printf(left_mid, icon_y, id(font_mdi_large), BLUE, TextAlign::CENTER, "\U000F050F");
+        // Value
+        it.printf(left_mid, value_y, id(big_font), BLUE, TextAlign::CENTER, "%.0f", temp_f);
+        // Unit
+        it.printf(left_mid + 150, unit_y, id(mid_font), RED, TextAlign::CENTER, "°F");
+        // Label
+        it.printf(left_mid, label_y, id(mid_font), RED, TextAlign::CENTER, "Temperature");
+
+        // --- Right column : Humidity -------------------------------
+        const int right_mid = col_w + col_w / 2;   // 600 px
+
+        // Icon
+        it.printf(right_mid, icon_y, id(font_mdi_large), YELLOW, TextAlign::CENTER, "\U000F058E");
+        // Value
+        it.printf(right_mid, value_y, id(big_font), YELLOW, TextAlign::CENTER, "%.0f", id(hum_sensor).state);
+        // Unit
+        it.printf(right_mid + 150, unit_y, id(mid_font), GREEN, TextAlign::CENTER, "%%");
+        // Label
+        it.printf(right_mid, label_y, id(mid_font), GREEN, TextAlign::CENTER, "Humidity");
+      }
+      // ----------  PAGE 1  ----------
+      else{
+        // Battery top-right
+        it.printf(670, 13, id(font_bat_icon), BLUE, "%s", id(battery_glyph).c_str());
+        it.printf(700, 10, id(small_font), BLUE, "%.0f%%", id(battery_level).state);
+
+        auto now = id(ha_time).now();
+        struct tm timeinfo = now.to_c_tm();
+
+        // centering time HH:MM
+        char timeStr[6];
+        strftime(timeStr, sizeof(timeStr), "%H:%M", &timeinfo);
+        it.printf(400, 180, id(time_font), BLUE, TextAlign::CENTER, timeStr);
+
+        // Date: Day of week
+        const char *weekday[] = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+        const char *wday = weekday[timeinfo.tm_wday];
+
+        // Date: month - day
+        char dateStr[12];
+        strftime(dateStr, sizeof(dateStr), "%b %d", &timeinfo);  // e.g. Jun 15
+
+        // Day of the week + date below the time
+        it.printf(400, 280, id(mid_font), YELLOW, TextAlign::CENTER, "%s, %s", wday, dateStr);
+      }
+```
+
+</TabItem>
+</Tabs>
+
 </details>
 
-When your configuration is successfully uploaded and running, your reTerminal E10xx will display a comprehensive dashboard with environment data, time, and battery status:
+When your configuration is successfully uploaded and running, your reTerminal E Series ePaper Display will display a comprehensive dashboard with environment data, time, and battery status:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/55.gif" style={{width:800, height:'auto'}}/></div>
 
@@ -883,12 +1325,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

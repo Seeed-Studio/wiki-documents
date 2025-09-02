@@ -26,18 +26,18 @@ This wiki introduces the various different hardware and interfaces on the reComp
 </div>
 
 ## Hardware Interface Overview
+
 <div align="center">
   <img width ="700" src="https://files.seeedstudio.com/wiki/recomputer_mini/hardware_overview.png"/>
 </div>
 
-## Power 
+## Power
 
 reComputer Mini is equipped with a **12-54V (XT30)** power interface, compatible with a wide voltage input range (12V to 54V), making it suitable for various power supply environments.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/power.png"/>  
 </div>
-
 
 ## Display
 
@@ -46,7 +46,6 @@ The product is equipped with a Type-C port featuring Host + DP (DisplayPort) fun
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/display.png"/>  
 </div>
-
 
 ## M.2 Key E for WIFI and Bluetooth
 
@@ -69,6 +68,7 @@ After installing the Wi-Fi module and powering on the device, we can configure t
 </div>
 
 Of course, we can also check the device's operating status using the following commands.
+
 ```bash
 ifconfig
 ```
@@ -96,7 +96,7 @@ Out of the box, reComputer Industrial includes a 128GB industrial-grade SSD conn
 If you want to remove the included SSD and install a new one, you need to ensure that your SSD meets the following two conditions:
 
 - Support the **M.2 Key M slot with x4 PCIe Gen3** interface.
--  Conform to the **2242** size specification.
+- Conform to the **2242** size specification.
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/ssd.png"/>
@@ -118,33 +118,38 @@ sudo dd if=/dev/zero of=tempfile bs=1M count=1024 conv=fdatasync
 Please run `sudo rm tempfile` command to delete the cache files after the test is complete.
 :::
 
-
 ## Ethernet
+
 ### Hardware Connection
+
 The reComputer Mini features an **RJ45 Gigabit Ethernet port (10/100/1000M)** on the expansion board.
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/network_photo.png"/>
 </div>
 
 ### Usage Instruction
-Enter `ifconfig` in the terminal, and you can see the device name mapped by the Ethernet interface is `eth0`: 
+
+Enter `ifconfig` in the terminal, and you can see the device name mapped by the Ethernet interface is `eth0`:
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_mini/network_ifconfig.png"/>
 </div>
 
-Connect the **reComputer Mini** to **PC** using a Gigabit Ethernet RJ45 cable. With the tool `iperf`, we can briefly test the transmission rate of the Ethernet interface. 
+Connect the **reComputer Mini** to **PC** using a Gigabit Ethernet RJ45 cable. With the tool `iperf`, we can briefly test the transmission rate of the Ethernet interface.
 Open a terminal and install `iperf3` on both the **PC** and the **reComputer Mini**.
+
 ```bash
 sudo apt update
 sudo apt install iperf3
 ```
+
 Open the terminal on the PC and enter `iperf3 -s`.
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/recomputer_mini/iperf3PC.jpg"/>
 </div>
 
-Then, open the terminal on the **reComputer Mini** and enter `iperf3 -c <IP of your PC>`. 
+Then, open the terminal on the **reComputer Mini** and enter `iperf3 -c <IP of your PC>`.
 In this case, the IP address of my PC's network interface is `192.168.12.211`. The example command is as follows:
+
 ```bash
 iperf3 -c 192.168.12.211
 ```
@@ -185,9 +190,11 @@ We can enter `watch -n 1 lsusb -tv` in the Jetson terminal to probe the USB port
 </div>
 
 After connecting the storage device via USB 3.2/USB 2.0/USB 3.0, enter the following command in the terminal to view the partition mapped by the storage device:
+
 ```bash
 ls /dev/sd*
 ```
+
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/sda1.png"/>
 </div>
@@ -196,12 +203,14 @@ ls /dev/sd*
 
 Pull and run the test program from **GitHub** to measure the write and read speeds of the USB. The program will write and then read **1GB** of temporary data, which will be deleted after the test is completed.
 The parameter after `sudo ./USBIO` depends on the mapped partition of the storage device connected via USB.
+
 ```bash
 git clone https://github.com/jjjadand/Mini_USBIO_test.git
 cd Mini_USBIO_test/
 gcc -o USBIO USB_test.c
 sudo ./USBIO /dev/sda1
 ```
+
 The read and write speeds for a 1GB data transfer on an external SSD connected via USB 3.2 are as follows:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/usb-write-read.jpg"/>
@@ -213,13 +222,16 @@ For the usage of the USB Micro-B interface, please refer to [this wiki](https://
 :::
 
 ## UART
+
 The reComputer Mini carrier board has two 4-pin GH-1.25 UART interfaces: **UART1** and **UART-DEBUG**.
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/uart_photo.png"/>
 </div>
 
 ### UART1
+
 #### Hardware Connection
+
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf), you can find the wiring diagram for the **UART1** 4-pin GH-1.25 interface as shown below:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/uart1_datasheet.png"/>
@@ -237,20 +249,25 @@ The Usage Instruction will display the next steps.
 </div>
 
 #### Usage Instruction
+
 The serial port number recognized by the system for UART1 is: **/dev/ttyTHS1**. You can check it by entering the following command in the terminal:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/ttyTHS.png"/>
 </div>
 
-Install **Cutecom** to test **UART1** data transmission and reception: 
+Install **Cutecom** to test **UART1** data transmission and reception:
+
 ```bash
 sudo apt update
 sudo apt install cutecom
 ```
+
 Open **Cutecom** in two different terminals.
+
 ```bash
 sudo cutecom
 ```
+
 Set the parameters according to the figure below: In one terminal, select **/dev/ttyTHS1** for the “device” option. In the other terminal, the “device” should be chosen **based on the UART-to-USB module you are using**. You can enter messages in the “Input” field to test the transmission and reception of data.
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/cutecom_uart1.png"/>
@@ -260,7 +277,9 @@ Set the parameters according to the figure below: In one terminal, select **/dev
 </div>
 
 ### UART-DEBUG
+
 #### Hardware Connection
+
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf), you can find the wiring diagram for the UART-DEBUG 4-pin GH-1.25 interface as shown below:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/UART-DEBUG.png"/>
@@ -275,9 +294,10 @@ To test **UART-DEBUG**, you also need a **UART-to-USB** module, which should be 
 </div>
 
 #### Usage Instruction
+
 After completing the hardware connections.
 
-Install the serial port login tool [**MobaXterm**](https://mobaxterm.mobatek.net/) on your PC firstly. 
+Install the serial port login tool [**MobaXterm**](https://mobaxterm.mobatek.net/) on your PC firstly.
 Then open the **“Device Manager”** on your PC to check the COM port mapped by the **UART-to-USB** module.
 To test **UART-DEBUG**, you also need a **UART-to-USB** module, which should be connected to your **PC** as shown in the figure below.
 <div align="center">
@@ -308,7 +328,6 @@ Connect a 3V CR2032 coin cell battery with JST connector to the 2-pin 1.25mm JST
 
 <!-- #### Usage Instruction -->
 
-
 ## FAN
 
 The onboard fan interface of the reComputer Mini is managed by the nvfancontrol daemon, which adaptively adjusts the fan speed based on the operating status of the Jetson module. We can configure the working mode of the daemon through its configuration file `/etc/nvfancontrol.conf`.
@@ -326,11 +345,15 @@ sudo apt update
 sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
+
 Then reboot your reComputer Mini:
+
 ```bash
 sudo reboot
 ```
-After installing **jtop**, you can lanch it in terminal: 
+
+After installing **jtop**, you can lanch it in terminal:
+
 ```bash
 jtop
 ```
@@ -339,19 +362,19 @@ jtop
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J501/jtop.png"/>
 </div>
 
-
 <!-- ### 5G module -->
 
-
-
 ## CAN
+
 The reComputer mini features two CAN interfaces, with four external CAN interfaces on the expansion board. **CAN0** consists of two **XT30 connectors (2+2)**, while **CAN1** consists of two **4-pin GH-1.25** connectors.
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can-photo.png"/>
 </div>
 
 ### CAN0/CAN1 Communication
+
 #### Hardware Connection
+
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf), you can find the wiring diagram for the CAN0/CAN1 interface as shown below:
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can1-datasheet.png"/>
@@ -363,7 +386,7 @@ In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComput
 
 Before using CAN0 and CAN1, please remove the bottom cover and set both 120Ω termination resistors to the ​ON position.
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
@@ -376,40 +399,44 @@ First, as shown in the figure below, connect the signal lines of CAN0 to those o
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/CAN0toCAN1.jpg"/>
 </div>
- 
+
 #### Usage Instruction
+
 After completing the hardware connections.
 
-
 Enter the following command in the terminal to view the device names mapped to CAN0 and CAN1:
+
 ```bash
 ifconfig -a
 ```
+
 Here, `can0` corresponds to the **CAN0** interface, and `can1` corresponds to the **CAN1** interface.
-
-
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can_express.jpg"/>
 </div>
 
 Install `can-utils` in terminal:
+
 ```bash
 sudo apt-get update
 sudo apt-get install can-utils
 ```
 
 Open a **Terminal 1** and enter the following command to monitor the number of bytes of data sent from `can0`:
+
 ```bash
 watch -n 1 'ifconfig can0 | grep "TX packets"'
 ```
 
-Open a **Terminal 2** . Pull the script for testing CAN communication from GitHub and run it: 
+Open a **Terminal 2** . Pull the script for testing CAN communication from GitHub and run it:
+
 ```bash
 git clone https://github.com/jjjadand/Mini_CANtest.git
 cd Mini_CANtest
 sudo ./canTest.sh
 ```
+
 By observing the two terminals, you can see that in **Terminal 1**, the number of bytes sent from **CAN0** is increasing.
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/canTX.jpg"/>
@@ -421,7 +448,8 @@ By observing the two terminals, you can see that in **Terminal 1**, the number o
 </div>
 
 ### CAN0 Power Output
-The output voltage of **CAN0-PPOWER** theoretically equals the current **DC** input voltage of the reComputer Mini. The **DC** input voltage range is `12-54V`. Therefore, the power output range of **CAN0 XT30 (2+2)** is also `12-54V`. 
+
+The output voltage of **CAN0-PPOWER** theoretically equals the current **DC** input voltage of the reComputer Mini. The **DC** input voltage range is `12-54V`. Therefore, the power output range of **CAN0 XT30 (2+2)** is also `12-54V`.
 
 We will supply different voltages to the **DC** input and then measure the output voltage of **CAN0-PPOWER**.
 Use a stable power supply and a multimeter, and connect according to the diagram below.
@@ -439,12 +467,13 @@ When the **DC** input is `12.6V`, the multimeter measures the **CAN0-POWER** out
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/CAN0-power2.jpg"/>
 </div>
 
-
-Based on the test results above, it can be seen that the output of **CAN0-POWER** is close to the **DC** input. 
+Based on the test results above, it can be seen that the output of **CAN0-POWER** is close to the **DC** input.
 If you want to know more details, you can refer to the [schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z).
 
 ## I2C
+
 ### Hardware Connection
+
 The expansion board of the reComputer features two **4-pin GH-1.25** IIC interfaces, IIC0 and IIC1.
 
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf), you can find the wiring diagram for the IIC0/IIC1 4-pin GH-1.25 interface as shown below:
@@ -457,24 +486,23 @@ In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComput
 
 Select an IIC interface device for testing; the choice is up to you. Here, an [IIC interface sensor](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6IkkyYyIsImNfc2VhcmNoX3Jlc3VsdF9wb3MiOjQ3LCJjX3RvdGFsX3Jlc3VsdHMiOjUxLCJjX3NlYXJjaF9yZXN1bHRfdHlwZSI6IlByb2R1Y3QiLCJjX3NlYXJjaF9maWx0ZXJzIjoic3RvcmVDb2RlOltyZXRhaWxlcl0gJiYgcXVhbnRpdHlfYW5kX3N0b2NrX3N0YXR1czpbMV0ifQ%3D%3D) is connected to I2C0/I2C1 for testing purposes.
 
-
 The testing process here involves scanning for the addresses of externally connected devices on IIC0/IIC1.
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/IICdraw.png"/>
 </div>
 
-
 ### Usage Instruction
 
 After completing the hardware connections.
 
+We need to install the tools for IIC testing. Enter the following in the terminal before scanning device:
 
-We need to install the tools for IIC testing. Enter the following in the terminal before scanning device: 
 ```bash
 sudo apt update
 sudo apt-get install i2c-tools
 ```
+
 Then, enter the following command in the terminal to view the mapped names on the IIC bus.
 
 ```bash
@@ -486,12 +514,13 @@ The external interface **IIC0-J7** on the expansion board corresponds to `i2c-1 
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/iic-l.jpg"/>
 </div>
 
-
 After connecting the external I2C device and setting its address, open two different terminals and enter the following commands to scan on I2C0 and I2C1:
+
 ```bash
 sudo i2cdetect -y -r 1
 sudo i2cdetect -y -r 7
 ```
+
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/iic0-addr.png"/>
 </div>
@@ -501,9 +530,10 @@ sudo i2cdetect -y -r 7
 
 We can see that the device connected to **I2C0** is set to address `0x15`, and the device connected to **I2C1** is set to address `0x19`.
 
-
 ## SPI
+
 ### Hardware Connection
+
 The expansion board of the reComputer features a **6-pin GH-1.25** external SPI interface.
 
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf), you can find the wiring diagram for the SPI 6-pin GH-1.25 interface as shown below:
@@ -522,17 +552,19 @@ The wiring diagram is as follows:
 </div>
 
 ### Usage Instruction
+
 After completing the hardware connections.
 
-
-Then, pull the code for SPI testing from GitHub and compile it: 
+Then, pull the code for SPI testing from GitHub and compile it:
 
 ```bash
 git clone https://github.com/rm-hull/spidev-test
 cd spidev-test
 gcc spidev_test.c -o spidev_test
 ```
+
 Enter the following command in the terminal to view the device name mapped by SPI. For example, `/dev/spidev0.0` corresponds to SPI0 on the Extension Board (J17).
+
 ```bash
 ls -l /dev/spi*
 ```
@@ -542,6 +574,7 @@ ls -l /dev/spi*
 </div>
 
 Enter the following command in the terminal to run the program  for SPI testing：
+
 ```bash
 sudo ./spidev_test -v
 ```
@@ -552,21 +585,21 @@ You can observe the data being transmitted and received on SPI0 on the Extension
 </div>
 
 ## Resources
+
 - [reComputer Mini Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
 - [reComputer Mini Schemetics](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
 - [reComputer Mini 3D Model](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

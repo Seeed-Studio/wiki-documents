@@ -11,8 +11,6 @@ last_update:
 ---
 
 
-
-
 **What Is SenseCAP M2 Data Only**
 
 SenseCAP M2 Data Only is a LoRaWAN Gateway connected to the Helium LongFi Network and able to provide miles of wireless network coverage and data transmission capacity for Long Range /LoRaWAN devices.
@@ -24,7 +22,6 @@ As a gateway supporting the Helium LongFi network, it could help you build the l
 SenseCAP M2 is now providing US915 and EU868 versions with FCC and CE certificates. And it will have more frequency band versions and corresponding certificates available for different countries and regions in the near future.
 
 <p style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/07/09.png" alt="pir" width={600} height="auto" /></p>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5339.html" target="_blank">
@@ -69,10 +66,10 @@ Besides the powerful features of the SenseCAP device itself, SenseCAP has been p
 **Package Contents**
 ====================
 
-*   SenseCAP M2 LoRaWAN Indoor Gateway \*1
-*   Power Adapter (EU/US) \*1
-*   3dBi Antenna with Base \*1
-*   Quick Start Guide \*1
+- SenseCAP M2 LoRaWAN Indoor Gateway \*1
+- Power Adapter (EU/US) \*1
+- 3dBi Antenna with Base \*1
+- Quick Start Guide \*1
 
 **Note:**
 
@@ -89,9 +86,9 @@ Besides the powerful features of the SenseCAP device itself, SenseCAP has been p
 
 **Note:**
 
-*   The MicroSD card slot is spared for future use. No Micro SD card is needed for SenseCAP M2 as a LoRaWAN gateway.
-*   Nano SIM card slot will only be available in 4G version hotspot. SIM card is not included in the device.
-*   The Type-C interface is spared for advanced developer management. Please do not use it to power the device.
+- The MicroSD card slot is spared for future use. No Micro SD card is needed for SenseCAP M2 as a LoRaWAN gateway.
+- Nano SIM card slot will only be available in 4G version hotspot. SIM card is not included in the device.
+- The Type-C interface is spared for advanced developer management. Please do not use it to power the device.
 
 * * *
 
@@ -100,10 +97,10 @@ Besides the powerful features of the SenseCAP device itself, SenseCAP has been p
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/07/dimensions.jpg)
 
-*   **Device Size (/pcs):**  
+- **Device Size (/pcs):**  
     143.6x135x34mm (connector not included)     150.6x135x34mm (connector included)
-*   **Package Size (/pcs)**: 340*230*65mm
-*   **Package Weight (/pcs)**: approx. 950g
+- **Package Size (/pcs)**: 340*230*65mm
+- **Package Weight (/pcs)**: approx. 950g
 
 * * *
 
@@ -128,12 +125,12 @@ Button Mode
 
 These labels on the bottom indicate important information about the unit including:
 
-*   Model
-*   Device Serial Number (S/N)
-*   WiFi MAC
-*   ETH MAC
-*   AP IP Address
-*   Username and Password to login the local console
+- Model
+- Device Serial Number (S/N)
+- WiFi MAC
+- ETH MAC
+- AP IP Address
+- Username and Password to login the local console
 
 **Note: Please DO NOT share the label with any third party.**
 
@@ -149,9 +146,4 @@ These labels on the bottom indicate important information about the unit includi
 **Datasheet**
 =============
 
-
-
 <table style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 1084px;"><tbody style={{fontStyle: 'inherit', fontWeight: 'inherit'}}><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Processor</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">MT7628(MIPS24KEc@580MHz)</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">RAM</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">DDR2 128MB</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Flash</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">32MB</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Long Range Gateway Chip</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">SX1302 / SX1303</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} rowSpan={2} data-style="height: 92px; width: 199px;">Long Range Sensitivity</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">-125dBm @125KHz/SF7</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">-139dBm @125KHz/SF12</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Long Range TX Power</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">Up to 26 dBm</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px; width: 199px;">Antenna</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px; width: 385px;"><p>Long Range: 3dBi External Antenna with Base</p><p>Wi-Fi: Internal Antenna</p><p>BLE: Ceramic Antenna</p></td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Antenna Impedance</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">50 Ohm</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Wi-Fi</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">Support 2.4 GHz 802.11 b/g/n</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Bluetooth</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">Dual-Module, Bluetooth V2.1 + EDR and V5.2</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Ethernet</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">RJ45 (10M / 100 M)</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">LoRaWAN</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">Supports Class A, C</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 78px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 78px; width: 199px;">Input Voltage</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 78px; width: 385px;"><p>DC 12V - 2A</p><p>PoE (IEEE 802.3 af), 40V-57V DC</p></td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 142px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 142px; width: 199px;">Interfaces</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 142px; width: 385px;"><p>Ethernet RJ45 * 1</p><p>RP-SMA Female Antenna Connector * 1</p><p>Micro SD Card Slot (Future use) * 1</p><p>USB Type-C (Console) * 1</p></td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px; width: 199px;">Dimension</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 110px; width: 385px;"><p>143.6x135x34mm (connector not included)</p><p>150.6x135x34mm (connector included)</p><p>Package: 340*230*65mm</p></td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Operating Temperature</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">-20°C to 55°C</td></tr><tr style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px;"><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 199px;">Relative Humidity</td><td style={{fontStyle: 'inherit', fontWeight: 'inherit'}} data-style="height: 46px; width: 385px;">0% - 85% (non-condensing)</td></tr></tbody></table>
-
-
-

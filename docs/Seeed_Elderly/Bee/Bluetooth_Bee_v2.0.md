@@ -22,58 +22,62 @@ It uses CSR Bluecore 04-External single chip Bluetooth system with CMOS technolo
 
 ##   Features
 ---
-###   Hardware Features
+### Hardware Features
 
-*   Typical -80dBm sensitivity.
+- Typical -80dBm sensitivity.
 
-*   Up to +4dBm RF transmit power.
+- Up to +4dBm RF transmit power.
 
-*   Fully Qualified Bluetooth V2.0+EDR 3Mbps Modulation.
+- Fully Qualified Bluetooth V2.0+EDR 3Mbps Modulation.
 
-*   Low Power 1.8V Operation, 1.8 to 3.6V I/O.
+- Low Power 1.8V Operation, 1.8 to 3.6V I/O.
 
-*   PIO control.
+- PIO control.
 
-*   UART interface with programmable baud rate.
+- UART interface with programmable baud rate.
 
-*   Integrated PCB antenna.
+- Integrated PCB antenna.
 
-*   Bee compatible headers.
+- Bee compatible headers.
 
-###   Software Features
+### Software Features
 
-*   Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: has.
+- Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: has.
 
-*   Supported baud rate: 9600,19200,38400,57600,115200,230400,460800.
+- Supported baud rate: 9600,19200,38400,57600,115200,230400,460800.
 
-*   Use CTS and RTS to control the data stream.
+- Use CTS and RTS to control the data stream.
 
-*   When a rising pulse is detected in PIO0, device will be disconnected.
+- When a rising pulse is detected in PIO0, device will be disconnected.
 
-*   Status instruction port PIO1: low-disconnected, high-connected;
+- Status instruction port PIO1: low-disconnected, high-connected;
 
-*   PIO10 is connected to red led, PIO11 is connected to green led. When master and slave are paired, red and green led blinks 1time / 2s in interval, while disconnected only green led blinks 2 times/ s.
+- PIO10 is connected to red led, PIO11 is connected to green led. When master and slave are paired, red and green led blinks 1time / 2s in interval, while disconnected only green led blinks 2 times/ s.
 
-*   Auto-connect the last device on power as default.
+- Auto-connect the last device on power as default.
 
-*   Permit matched device connect by default.
+- Permit matched device connect by default.
 
-*   Default PINCODE:0000.
+- Default PINCODE:0000.
 
-*   Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
+- Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
 
 :::caution
     The supply voltage of this module is 3.3V, higher than this may cause permanent damage to the device.
 c;;;
-##   Hardware Installation
+
+## Hardware Installation
+
 ---
-###   Connecting Bluetooth to PC through Uart Bee
+
+### Connecting Bluetooth to PC through Uart Bee
 
 <!-- The Bluetooth provides a standard XBee socket. In here we use a [UartSBee V5](/UartSBee_v5) to connect Bluetooth and PC, ensure the supply voltage was selected as 3.3V by slider. -->
 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPC.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToPCSet.jpg)
 |---|---|
-###   Connecting Bluetooth to Arduino
+
+### Connecting Bluetooth to Arduino
 
 <!-- Here we use [XBee Shield](/XBee_Shield_V2.0) as a bridge between Bluetooth and [Seeeduino Lotus](/Seeeduino_Lotus). -->
 
@@ -82,26 +86,28 @@ Since the hardware UART of Seeedino was used as debug with PC, We choose D2 and 
 |![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduino.jpg)|![](https://files.seeedstudio.com/wiki/Bluetooth_Bee_v2.0/img/Bluetooth_Bee_v2.0_ConnectToArduinoSet.jpg)
 |---|---|
 
-##   Software Instruction
+## Software Instruction
+
 ---
-###   Conventions
 
-*   Factory default setting:
+### Conventions
 
-    *   Name: HMSoft;
+- Factory default setting:
 
-        *   Baud: 9600, N, 8, 1;
+  - Name: HMSoft;
 
-        *   Pin code: 1234;
+    - Baud: 9600, N, 8, 1;
 
-        *   transmit Version.
+    - Pin code: 1234;
 
-*   AT Command format:
-    *   Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
+    - transmit Version.
 
-        *   Any incorrect command would be no response.
+- AT Command format:
+  - Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
 
-###   AT Commands(to be continued...)
+    - Any incorrect command would be no response.
+
+### AT Commands(to be continued...)
 
 **1. Test Command**
 
@@ -1014,9 +1020,9 @@ Default: 0
 
 </td></tr></table> -->
 
-##   Programming
+## Programming
 
-###   Configure the Bluetooth module with Serial Port under Windows
+### Configure the Bluetooth module with Serial Port under Windows
 
 This section shows how to configure Bluetooth with PC, some basic methods of setting could be learn.
 

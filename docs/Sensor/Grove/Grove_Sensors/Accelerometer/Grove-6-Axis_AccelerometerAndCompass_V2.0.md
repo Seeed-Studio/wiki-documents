@@ -19,14 +19,13 @@ The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combine
 
 ## Specifications
 
-
--   Input Voltage: 5V
--   I2C Interface and selectable SPI Interface
--   Measuring scale selectable
--   6D orientation detection
--   2 independent programmable interrupt generators
--   Power-down mode
--   I2C Address  0x1E(default), or 0x1D
+- Input Voltage: 5V
+- I2C Interface and selectable SPI Interface
+- Measuring scale selectable
+- 6D orientation detection
+- 2 independent programmable interrupt generators
+- Power-down mode
+- I2C Address  0x1E(default), or 0x1D
 
 :::note
     If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
@@ -34,8 +33,8 @@ The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combine
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-## Platforms Supported
 
+## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -47,20 +46,18 @@ The Grove –6-Axis Accelerometer&Compass V2.0 is a 3-axis accelerometer combine
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-##Hardware Overview
-
+## Hardware Overview
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Grove-6-Axis_AccelerometerAndCompass_V2.0_inter.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Grove-6-Axis_AccelerometerAndCompass_V2.0_inter.jpg" alt="pir" width={600} height="auto" /></p>
 
--   ①Grove interface, connect to I2C
--   ②SPI Interface
--   ③I2C or SPI select pad(default is I2C), if want to use SPI, disconnect this pad
--   ④Interrupt digital output
--   ⑤Address select pad, default connected b and a address is 0x1E, if connect b and c address is 0x1D, if want to use SPI, disconnect this pad to either side.
+- ①Grove interface, connect to I2C
+- ②SPI Interface
+- ③I2C or SPI select pad(default is I2C), if want to use SPI, disconnect this pad
+- ④Interrupt digital output
+- ⑤Address select pad, default connected b and a address is 0x1E, if connect b and c address is 0x1D, if want to use SPI, disconnect this pad to either side.
 
 ## Getting started
-
 
 The LSM303D is a 6D sensor module that contains a 3D accelerometer and a 3D magnetic sensor. It has an I2C digital interface so that the analog to digital converter is avoided.
 
@@ -87,7 +84,7 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/with_ardu.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
 <!--I2C-->
 
@@ -98,20 +95,18 @@ The MCU can collect 6D sensor data directly through the I2C interface.OK, let's 
 | SDA         | SDA                      |
 | SCL         | SCL                      |
 
-
-
 #### Software
+
 **Step 1.** Download the [library](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2) from Github.
 
 **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
-
-
 
 **Step 3.** Create a new Arduino sketch and paste the codes below to it or open the code directly by the path:File -> Example ->Accelerometer_Compass->Accelerometer_Compass.
 
 **Step 4.** Upload the code. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 Here is the code
+
 ```c
 /* LSM303DLM Example Code base on LSM303DLH example code by Jim Lindblom SparkFun Electronics
 
@@ -181,67 +176,65 @@ float heading, titleHeading;
 
 void setup()
 {
-	char rtn = 0;
+ char rtn = 0;
     Serial.begin(9600);  // Serial is used for debugging
     Serial.println("\r\npower on");
     rtn = Lsm303d.initI2C();
     //rtn = Lsm303d.initSPI(SPI_CS);
     if(rtn != 0)  // Initialize the LSM303, using a SCALE full-scale range
-	{
-		Serial.println("\r\nLSM303D is not found");
-		while(1);
-	}
-	else
-	{
-		Serial.println("\r\nLSM303D is found");
-	}
+ {
+  Serial.println("\r\nLSM303D is not found");
+  while(1);
+ }
+ else
+ {
+  Serial.println("\r\nLSM303D is found");
+ }
 }
 
 void loop()
 {
-	Serial.println("\r\n**************");
-	//getLSM303_accel(accel);  // get the acceleration values and store them in the accel array
-	Lsm303d.getAccel(accel);
-	while(!Lsm303d.isMagReady());// wait for the magnetometer readings to be ready
-	Lsm303d.getMag(mag);  // get the magnetometer values, store them in mag
+ Serial.println("\r\n**************");
+ //getLSM303_accel(accel);  // get the acceleration values and store them in the accel array
+ Lsm303d.getAccel(accel);
+ while(!Lsm303d.isMagReady());// wait for the magnetometer readings to be ready
+ Lsm303d.getMag(mag);  // get the magnetometer values, store them in mag
 
-	for (int i=0; i<3; i++)
-	{
-		realAccel[i] = accel[i] / pow(2, 15) * ACCELE_SCALE;  // calculate real acceleration values, in units of g
-	}
-	heading = Lsm303d.getHeading(mag);
-	titleHeading = Lsm303d.getTiltHeading(mag, realAccel);
+ for (int i=0; i<3; i++)
+ {
+  realAccel[i] = accel[i] / pow(2, 15) * ACCELE_SCALE;  // calculate real acceleration values, in units of g
+ }
+ heading = Lsm303d.getHeading(mag);
+ titleHeading = Lsm303d.getTiltHeading(mag, realAccel);
 
-	printValues();
+ printValues();
 
-	delay(200);  // delay for serial readability
+ delay(200);  // delay for serial readability
 }
 
 void printValues()
 {  
-	Serial.println("Acceleration of X,Y,Z is");
-	for (int i=0; i<3; i++)
-	{
-		Serial.print(realAccel[i]);
-		Serial.println("g");
-	}
-	//print both the level, and tilt-compensated headings below to compare
-	Serial.println("The clockwise angle between the magnetic north and x-axis: ");
-	Serial.print(heading, 3); // this only works if the sensor is level
-	Serial.println(" degrees");
-	Serial.print("The clockwise angle between the magnetic north and the projection");
-	Serial.println(" of the positive x-axis in the horizontal plane: ");
-	Serial.print(titleHeading, 3);  // see how awesome tilt compensation is?!
-	Serial.println(" degrees");
+ Serial.println("Acceleration of X,Y,Z is");
+ for (int i=0; i<3; i++)
+ {
+  Serial.print(realAccel[i]);
+  Serial.println("g");
+ }
+ //print both the level, and tilt-compensated headings below to compare
+ Serial.println("The clockwise angle between the magnetic north and x-axis: ");
+ Serial.print(heading, 3); // this only works if the sensor is level
+ Serial.println(" degrees");
+ Serial.print("The clockwise angle between the magnetic north and the projection");
+ Serial.println(" of the positive x-axis in the horizontal plane: ");
+ Serial.print(titleHeading, 3);  // see how awesome tilt compensation is?!
+ Serial.println(" degrees");
 }
 ```
-
 
  **Step 5.** Open the serial monitor, you will see the output result of Color Sensor as shown below:
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/6-Axis_AccelerometerAndCompass_V2.0_demo.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/6-Axis_AccelerometerAndCompass_V2.0_demo.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 **Step 6.** You can see the acceleration values and the clockwise angle between the magnetic north and x-axis.
 
@@ -249,39 +242,28 @@ The X/Y/Z shows the 3 axis acceleration; and then the angle between the magnetic
 
 And also the the angle between the magnetic north and the projection of positive x-axis calculated.
 
-
-
-
-
 ### Play With Raspberry Pi
 
 #### Hardware
 
 - **Step 1.** Prepare the below stuffs:
 
-
 | Raspberry pi | GrovePi_Plus | Grove-6-Axis_AccelerometerAndCompass_V2.0 |
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/45d_small.JPG" alt="pir" width={200} height="auto" /></p>|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-6-Axis-Accelerometer%26Compass-v2.0-p-2476.html)|
 
-
-
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 - **Step 3.** Connect Grove-6-Axis_AccelerometerAndCompass_V2.0  to **I2C** port of GrovePi_Plus.
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/with_rpi.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/with_rpi.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 #### Software
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 - **Step 2.** Git clone the Github repository.
-
 
 ```bash
 cd ~
@@ -289,16 +271,15 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 3.** Excute below commands to use this sensor
-
+- **Step 3.** Excute below commands to use this sensor
 
 ```bash
 cd ~/GrovePi/Software/Python/grove_6axis_acc_compass
 python grove_6axis_accel_compass_example.py
 ```
 
-
 Here is the code of example:
+
 ```python
 #!/usr/bin/env python
 #
@@ -332,28 +313,29 @@ THE SOFTWARE.
 import lsm303d
 
 try:
-	acc_mag=lsm303d.lsm303d()
+ acc_mag=lsm303d.lsm303d()
 
-	while True:
+ while True:
 
-		# Get accelerometer values
-		acc=acc_mag.getRealAccel()
+  # Get accelerometer values
+  acc=acc_mag.getRealAccel()
 
-		# Wait for compass to get ready
-		while True:
-			if acc_mag.isMagReady():
-				break
+  # Wait for compass to get ready
+  while True:
+   if acc_mag.isMagReady():
+    break
 
-		# Read the heading
-		heading= acc_mag.getHeading()
+  # Read the heading
+  heading= acc_mag.getHeading()
 
-		print("Acceleration of X,Y,Z is %.3fg, %.3fg, %.3fg" %(acc[0],acc[1],acc[2]))
-		print("Heading %.3f degrees\n" %(heading))
+  print("Acceleration of X,Y,Z is %.3fg, %.3fg, %.3fg" %(acc[0],acc[1],acc[2]))
+  print("Heading %.3f degrees\n" %(heading))
 
 except IOError:
-	print("Unable to read from accelerometer, check the sensor and try again")
+ print("Unable to read from accelerometer, check the sensor and try again")
 
 ```
+
 Here is the result:
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/rpi_result.jpg) -->
@@ -379,29 +361,26 @@ Click [here](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCom
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Testing.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/img/Testing.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
 ## Resources
 
-
--  **[Library]** [6-Axis Accelerometer&Compass v2.0 Library for arduino](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
+- **[Library]** [6-Axis Accelerometer&Compass v2.0 Library for arduino](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
 
 - **[Library]** [6-Axis Accelerometer&Compass v2.0 Library for raspberry pi](https://github.com/DexterInd/GrovePi/blob/master/Software/Python/grove_6axis_acc_compass)
--  **[Datasheet]** [LSM303D\_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
--  **[Eagle]** [6-Axis Accelerometer&Compass v2.0 eagle file](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
+- **[Datasheet]** [LSM303D\_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
+- **[Eagle]** [6-Axis Accelerometer&Compass v2.0 eagle file](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->
 
-
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

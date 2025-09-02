@@ -18,18 +18,17 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/master/docs/images/get_one_now.png)](https://www.seeedstudio.com/Seeeduino-Lotus-ATMega328-Board-with-Grove-Interface-p-1942.html)
 
-
 :::warning
     This kit **DOES NOT** include a controller and motor driver.
 :::
-##Features
+## Features
 
 - Multi-platform supportted
 - Grove Compatible Shores
 - Easy-to-assemble
 - RF/BLE/Wi-Fi Control Choices
 
-##Part List
+## Part List
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/4.jpg)
 
@@ -57,43 +56,37 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 |Wrench    |/            |2       |
 |ScrewDriver|/           |1       |
 
-
 **This kit does not include the Arduino/Genuino 101 and breadboard.**
 
-
-##Assembly Introdutions
+## Assembly Introdutions
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/1.png)
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/2.png)
 
-
 You could fix any boards you like on Tricycle Bot to drive this Robot Platform, such as Arduino, Raspberry Pi and BeagleBone. And to drive the DC motors and Grove modules, motor cape and Grove cape are good helper for you.
 
 As there are so many boards to choose, here we will make a introduction of how to choose the suitable board for you between Arduino, Raspberry and BeagleBone.
 
-
-##Work with Arduino
+## Work with Arduino
 
 Arduino is the most famous open-source prototyping platform as its easy-to-use hardware and software. We believe that you could DIY a funny and creative robot car with Arduino easily. And as we have so much Grove modules for Arduino, it is convenient to expand function for your robot car, such as LED effect, obstacle detection or remote control(RF/Bluetooth/Wi-Fi).
 
-###[Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
+### [Seeeduino V4.2](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)
 Seeeduino v4 is an Open Source, Arduino-compatible ATmega328 MCU development board. We think Seeeduino v4 is one of the best Arduino derivatives/compatibles available. Seeeduino v4 is feature rich, much more stable, easy-to-use and even good looking.
 
 <div className="text-center">
   <img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/master/images/cover.JPG" width="50%" height="50%" />
 </div>
 
-
-###[Motor Shield V2.0](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)
+### [Motor Shield V2.0](https://www.seeedstudio.com/Motor-Shield-V2.0-p-1377.html)
 The Motor Shield is a driver module for motors that allows you to use Arduino to control the working speed and direction of the motor.
 
 <div className="text-center">
   <img src="https://github.com/SeeedDocument/Motor_Shield_V2.0/image/500px-Motorshield_01.jpg" width="50%" height="50%" />
 </div>
 
-
-###[Base Shield V2](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)
+### [Base Shield V2](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)
 
 As an expansion board, Base Shield v2 has many Grove connectors, making it convenient for you to use Grove module together. And It is compatible with a series of Arduino products.
 
@@ -101,8 +94,7 @@ As an expansion board, Base Shield v2 has many Grove connectors, making it conve
   <img src="https://files.seeedstudio.com/wiki/Base_Shield_V2/img/Base_Shield_v2-1.png" width="50%" height="50%" />
 </div>
 
-
-###Recommendation Grove Modules
+### Recommendation Grove Modules
 
 |W2812B LED Strip|Ultrasonic Sensor|Line Finder|
 |----------------|-----------------|-----------|
@@ -117,11 +109,11 @@ As an expansion board, Base Shield v2 has many Grove connectors, making it conve
 :::tip
     Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 :::
-##Work with Raspberry Pi
+## Work with Raspberry Pi
 
 The Raspberry Pi is one of the most popular single-board computer now, it has much more powerful computing performance than Arduino. As Raspberry Pi is so popular, you can easily find many tutorials of funny projects.  
 
-###[Raspberry Pi 3](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
+### [Raspberry Pi 3](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
 
 The Raspberry Pi 3 has included integrated 802.11 b/g/n wireless LAN, Bluetooth Classical and LE. You didn’t need additional peripherals to make it wireless. It is 10x the performance of Raspberry Pi 1.
 
@@ -129,9 +121,7 @@ The Raspberry Pi 3 has included integrated 802.11 b/g/n wireless LAN, Bluetooth 
   <img src="https://statics3.seeedstudio.com/seeed/img/2016-08/xuZp3Msf6xeHp96wPFjInzco.jpg" width="50%" height="50%" />
 </div>
 
-
-
-###[Raspberry Pi Motor Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
+### [Raspberry Pi Motor Board v1.0](https://www.seeedstudio.com/Raspberry-Pi-Motor-Board-v1.0-p-2411.html)
 
 Raspberry Pi Motor Board lets you drive two DC motors with your Raspberry Pi, controlling the speed and direction of each one independently.
 
@@ -139,7 +129,7 @@ Raspberry Pi Motor Board lets you drive two DC motors with your Raspberry Pi, co
   <img src="https://statics3.seeedstudio.com/images/product/103030031%201.jpg" width="50%" height="50%" />
 </div>
 
-###[GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)
+### [GrovePi+](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)
 
 GrovePi+ is a system that brings Grove Modules to the Raspberry Pi. It adds support for the newly RaspberryPi Model B+ and Model A+.
 
@@ -147,9 +137,7 @@ GrovePi+ is a system that brings Grove Modules to the Raspberry Pi. It adds supp
   <img src="https://statics3.seeedstudio.com/product/110060049%2010_03.jpg" width="50%" height="50%" />
 </div>
 
-
-
-###Recommendation Modules
+### Recommendation Modules
 
 |USB Webcam|OLED Dispaly|GPS Module|
 |----------------|-----------------|-----------|
@@ -160,37 +148,32 @@ GrovePi+ is a system that brings Grove Modules to the Raspberry Pi. It adds supp
     Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 :::
 
-##Work with BeagleBone Board
+## Work with BeagleBone Board
 
 BeagleBone is also one of the most popular linux single-board computer. Compared with Raspberry, BeagleBone has an advantage on programming Grove module, as its Mraa and UPM library.
 
-###[BeagleBone Green Wireless](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
+### [BeagleBone Green Wireless](https://www.seeedstudio.com/SeeedStudio-BeagleBone-Green-Wireless-p-2650.html)
 SeeedStudio BeagleBone Green Wireless is based on the open-source hardware design of BeagleBone Black, but it has a high-performance flexible WiFi/Bluetooth interface, making it easier to develop remote controlled, such as [BBGW Wi-Fi Car](https://www.instructables.com/id/Super-Quickly-DIY-Web-RC-Car-With-Python-and-Beagl/).
 
 <div className="text-center">
   <img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_Wireless/images/BBGW_cover.png" width="50%" height="50%" />
 </div>
 
-
-###[Motor Bridge Cape v1.0](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)
+### [Motor Bridge Cape v1.0](https://www.seeedstudio.com/Motor-Bridge-Cape-p-2569.html)
 The Motor Bridge Cape can control two stepper motors or four brushed DC motors with 6~15V DC power and about 1A current draw per motor. It also has six servo control interfaces and six expand I\O, which means that you could expand one more robot arm on your robot car.  
 
 <div className="text-center">
   <img src="https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/master/img/Motor_bridge_driver.jpg" width="50%" height="50%" />
 </div>
 
-
-
-###[Grove Base Cape for BeagleBone v2](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)
+### [Grove Base Cape for BeagleBone v2](https://www.seeedstudio.com/Grove-Base-Cape-for-Beaglebone-v2.0-p-2644.html)
 Grove Base Cape for BeagleBone v2 is a Grove system expansion board for BeagleBone platform. This cape makes it convenient to connect many transducers (sensors and actuators) available as Grove modules with BeagleBone platform.
 
 <div className="text-center">
   <img src="https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg" width="50%" height="50%" />
 </div>
 
-
-
-###Recommendation Grove Modules
+### Recommendation Grove Modules
 
 |USB WEBCAM|W2812B LED STRIP|IMU 9DOF|
 |----------------|-----------------|-----------|
@@ -205,11 +188,11 @@ Grove Base Cape for BeagleBone v2 is a Grove system expansion board for BeagleBo
 :::tip
     Click on [Grove System](https://wiki.seeedstudio.com/Grove_System/) to get more available modules.
 :::
-##Simple Example
+## Simple Example
 
 Here is a simple example of making a Tricycle Bot with Arduino UNO.
 
-###Things we need
+### Things we need
 
 ![](https://files.seeedstudio.com/wiki/Tricycle_Bot/img/7.png)
 
@@ -221,12 +204,11 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
 - [Grove - Ultrasonic Ranger](https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html) *1
 - [Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) *1
 
-###Assemble
+### Assemble
 
 <div className="text-center">
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/5.jpg" width="50%" height="50%" />
 </div>
-
 
 1. [Assemble the Tricycle Bot.](https://files.seeedstudio.com/wiki/Tricycle_Bot/Tricycle_Bot.md#assembly-introdutions)
 2. Fix the Grove modules on the shores and top plate.
@@ -237,7 +219,7 @@ Here is a simple example of making a Tricycle Bot with Arduino UNO.
   <img src="https://files.seeedstudio.com/wiki/Tricycle_Bot/img/6.jpg" width="50%" height="50%" />
 </div>
 
-###Show
+### Show
 
 This is the [video](http://ohpam657y.bkt.clouddn.com/IMG_1346%202.MOV) of this simple example.
 
@@ -245,14 +227,12 @@ This is the [video](http://ohpam657y.bkt.clouddn.com/IMG_1346%202.MOV) of this s
   <video ng-src="http://ohpam657y.bkt.clouddn.com/IMG_1346%202.MOV" width={700} controls src="http://ohpam657y.bkt.clouddn.com/IMG_1346%202.MOV" />
 </div>
 
-
 - This demo Tricycle Bot car is able to detect the obstacle before it, and make a turn when their distances are less than 35CM.
 - When the car goes straight, the LED strip will flash in blue，while the car is making a turn, the LED strip will flash in red and the Grove Buzzer will make a noise to warn.
 
-###Coding
+### Coding
 
 - Download the Arduino Library of [Motor Shield V2](https://github.com/Seeed-Studio/SeeedMotorShieldV2), [Grove - Ultrasonic Ranger](https://github.com/Seeed-Studio/Seeed_Arduino_UltrasonicRanger) and [LED Strip](https://github.com/adafruit/Adafruit_NeoPixel).
-
 
 ```
  /*
@@ -374,20 +354,20 @@ void beep() {
 }
 ```
 
-##Attachments
+## Attachments
 
-* [Tricycle Bot Assembly Instructions(pdf)](https://files.seeedstudio.com/wiki/Tricycle_Bot/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
+- [Tricycle Bot Assembly Instructions(pdf)](https://files.seeedstudio.com/wiki/Tricycle_Bot/res/Tricycle%20Bot%20Assembly%20Instructions.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

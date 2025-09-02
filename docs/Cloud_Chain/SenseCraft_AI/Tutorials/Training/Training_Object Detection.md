@@ -38,6 +38,7 @@ We will create a simple demo for **recognising human**. The quick training featu
 
 The quick training feature uses YOLO’s strengths to efficiently create single-class detection models. By combining pretrained weights, text semantics, and efficient feature extraction, it generates a tailored model, such as for "human", without requiring image data.
 ç
+
 ### Step 1. Determine the object name
 
 Enter the target name in the text box. Then click on **'Start Training'**.
@@ -100,7 +101,6 @@ The more image material, the better the recognition of model.
 
 ### Step 3. Train and upload models
 
-
 Click on **'Training'** and then wait patiently for the model to finish training.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.5.png" style={{width:1000, height:'auto'}}/></div>
@@ -114,7 +114,6 @@ And finally it's time for model deployment.
 Once the above steps are completed, the model will be successfully trained and deployed.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img3/object%20detection/3.7.gif" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Tech Support & Product Discussion
 

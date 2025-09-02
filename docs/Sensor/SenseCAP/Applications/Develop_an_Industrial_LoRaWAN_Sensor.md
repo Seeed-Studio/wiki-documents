@@ -14,7 +14,6 @@ last_update:
 
 Let's quickly build an industrial-grade LoRaWAN wireless sensor for direct commercial use in 5 minutes.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519816/_CFY3itZc4v.blob?auto=compress%2Cformat&w=900&h=675&fit=min" alt="pir" width={600} height="auto" /></p>
 
 When prototyping for a commercial data acquisition project, it takes a lot of time and cost to prototype. For example, we need to make a wireless pH sensor for an agricultural project. We need to 1) Find the development board and sensor probe. 2) Write code. 3) 3D print the shell. 4) Final assembly test. By the time we complete the prototype, it can take days or even weeks.
@@ -24,6 +23,7 @@ Today, we can use a wireless LoRa collector, set up sensors to connect to an app
 ### Preparation
 
 Prepare data logger, sensor probe, gateway, and tools.
+
 1) [Data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html): It is a LoRaWAN converter that converts MODBUS RS485/Analog/GPIO sensors into LoRa-enabled sensors and therefore transfers data through the LoRaWAN protocol.
 
 2) Sensor probe: prepare a sensor probe with a cable and output one of the signals of RS485 / 4-20mA /0-10V / pulse/level. The tutorial uses an RS485 ultrasonic sensor for liquid-level measurement.
@@ -38,7 +38,6 @@ Prepare data logger, sensor probe, gateway, and tools.
 **Option 2**: Buy a [gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html).
 5) Download the SenseCAP Mate App for configuration:
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519867/image_hQX9CstNtP.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={500} height="auto" /></p>
 
 The preparation is done. Let's get started!
@@ -49,18 +48,15 @@ Let's start with LoRaWAN network.
 
 The data logger converts sensor data into LoRa data and uploads the data to the gateway. The gateway uploads the data to the server.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519879/image_SUwd9Yyglx.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 ### Hook up the Sensor
 
 1) Disassemble the Data Logger.
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519881/image_TmNcqHz98z.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 2) Connect the sensor to the terminal, and power the sensor via a built-in battery.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519884/image_XZETiBWTBz.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
@@ -68,20 +64,12 @@ The data logger converts sensor data into LoRa data and uploads the data to the 
 If you are using another protocol, such as 4-20mA, please refer to the pin table:
 :::
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519889/image_RHiaxQkid9.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 3) Assemble the sensor.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519904/image_6qTGLlXoOZ.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
-
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519908/image_LDPEOEC9ik.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519912/image_jStYF3uKW6.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
@@ -91,8 +79,6 @@ If you are using another protocol, such as 4-20mA, please refer to the pin table
 
 2) Select "S2100 Data Logger" and Click “Setup” on the config page.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519915/image_au0YfmfVoo.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 3) Press the button and hold for 3 seconds, the green LED will flash at 1s frequency. Then click “Scan” to start scanning the data logger's Bluetooth.
 
@@ -100,10 +86,7 @@ If you are using another protocol, such as 4-20mA, please refer to the pin table
 <iframe width="220" height="380" src="https://hackster.imgix.net/uploads/attachments/1520082/video_ZKG2GDw54j.gif?auto=compress&gifq=35&w=740&h=555&fit=max&fm=mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 
-
 4) Configure the lorawan and sensor parameters(includes RS485 Modbus-RTU command).
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1520084/image_tAKr7NohSn.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
@@ -149,7 +132,6 @@ Write Strategy: None
 
 5) Click Send and Test the sensor by clicking "Measure"
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1520088/image_iAmOflFRIQ.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 The distance and temperature of the sensor are obtained successfully!
@@ -167,31 +149,23 @@ Join LoRa network success: green LED flashes fast for 2s
 <iframe width="220" height="380" src="https://hackster.imgix.net/uploads/attachments/1520108/video(1)_yWY0orezqU.gif?auto=compress&gifq=35&w=740&h=555&fit=max&fm=mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </center>
 
-
 2) Binding the data logger via scanning the QR code.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1520115/image_9JdYx3MCrg.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
 3) Check the data on App and Portal (https://sensecap.seeed.cc/).
 
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1520128/image_K6j6TDHXX4.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-### Test the sensor in a real environment.
+### Test the sensor in a real environment
 
 Fast application to the outdoor real scene for long-term monitoring.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1520150/image_MoA2h9E8lq.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
-
 
 At present, a LoRaWAN sensor has been developed.
 
 Come and try new solutions for your project!
-
-
 
 ### Resource
 

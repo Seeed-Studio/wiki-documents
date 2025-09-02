@@ -31,7 +31,6 @@ tags:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Jetson-Xavier-AGX-H01-Kit-p-5283.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-
 This wiki will show you how to install driver to Jetson Xavier AGX H01 Kit. There are server ways to accomplish that.
 
 ## Install Jetson Xavier AGX H01 with Command Line
@@ -47,17 +46,16 @@ This is the installation through command lines, with stabilized steps.
 ### Driver Installation
 
 Before will install the driver, it is required to set the board into the Force Recovery Model.
+
 #### Force Recovery Model
 
 There is a recovery button on the board, which is in the middle of three buttons. Hold the recovery button and then power it up, which will enter the Force Recovery Model.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/driver1.png" /></div>
 
-
 Connect Jetson Xavier AGX H01 with the Ubuntu host PC with a Type-C data transmit cable.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/driver.png" /></div>
-
 
 #### Driver Required
 
@@ -118,31 +116,27 @@ The example here is using **NVIDIA L4T 32.7.1** to install **Jetpack 4.6.1** on 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/H01Driver/h01driver4.png" /></div>
 
-
 - **Step 2**. [Download](https://files.seeedstudio.com/wiki/H01Driver/H01_Driver.zip) additional required installation files **H01_Drivers** on the host PC.
 
 Move downloaded files at **Step 1** into the same folder with **H01_Drivers**. Now you will see three unzipped files in the same folder.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/H01Driver/h01drivera.png" /></div>
 
-
 - **Step 3**. Unzip the file of **AGX_H01_Drivers.zip**.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/H01Driver/h01driver1b.png" /></div>
 
-
 - **Step 4**. Open terminal in the folder and unzip the rest files. Execute the command below:
 
 ```
-$ tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
-$ cd Linux_for_tegra/rootfs
-$ sudo tar xfp ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
-$ cd ..
-$ sudo  ./apply_binaries.sh
+tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
+cd Linux_for_tegra/rootfs
+sudo tar xfp ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
+cd ..
+sudo  ./apply_binaries.sh
 ```
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/H01Driver/h01driver5.png" /></div>
-
 
 !!!Note
     If you donwnload files in somewhere else, make sure you add the path to the files. Like example here is "/Desktop/AGX/". If you directly open the terminal in the file, the path will be automatically added.
@@ -151,43 +145,37 @@ The command lines should be like:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/agx0.png" /></div>
 
-
 - **Step 5**. Move back and copy & paste the file from downloaded **H01_Driver** file to the unzipped file **Jetson_Linux_R32.6.1_aarch64.tbz2**.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/H01Driver/h01driver6.png" /></div>
 
-
 Here are the commands below:
 
 ```
-$ cd ..
-$ cp -a -f H01_Driver/Linux_for_Tegra/kernel Linux_for_Tegra/
-$ cd Linux_for_Tegra/
-$ sudo ./flash.sh jetson-xavier mmcblk0p1
+cd ..
+cp -a -f H01_Driver/Linux_for_Tegra/kernel Linux_for_Tegra/
+cd Linux_for_Tegra/
+sudo ./flash.sh jetson-xavier mmcblk0p1
 ```
 
 The flash will be running and the progress is like:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/agx2.png" /></div>
 
-
 The final result shoule be like:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/recomputerzhongwen/agx3.png" /></div>
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

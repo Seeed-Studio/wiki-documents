@@ -13,11 +13,13 @@ last_update:
 ---
 
 ## Introduction
+
 This article demonstrates how NVIDIA's GR00T AI platform enables advanced, autonomous control of StarAI Robotic Arm. Combining real-time perception and adaptive decision-making, GR00T bridges AI and robotics for precision tasks in industrial and research applications.
 
 ## Prerequisites
-- StarAI Robotic Arm 
-- Orbbec Gemini 2 
+
+- StarAI Robotic Arm
+- Orbbec Gemini 2
 - NVIDIA GPU-accelerated Linux host
   - ubuntu 20.04
   - VRAM >32GB
@@ -31,7 +33,6 @@ This article demonstrates how NVIDIA's GR00T AI platform enables advanced, auton
 ### Setup Lerobot Env
 
 The StarAI robotic arm can be driven using the lerobot project. Please refer to this [wiki](https://wiki.seeedstudio.com/lerobot_so100m/) to configure your StarAI robotic arm operating environment. Once everything is ready, you can control the Follow Arm using the command below.
-
 
 ```bash
 python lerobot/scripts/control_robot.py \
@@ -81,10 +82,11 @@ sudo bash ./scripts/install_udev_rules.sh
 sudo udevadm control --reload-rules && sudo udevadm trigger
 python3 examples/depth.py
 ```
+
 If everything goes well, the depth information captured by the depth camera will be printed on the desktop.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/ob_camera.png" />
 </div>
 
@@ -117,7 +119,7 @@ Here is the dataset we collected.
 [https://huggingface.co/datasets/youjiang97/starai02](https://huggingface.co/datasets/youjiang97/starai02)
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/dataset.png" />
 </div>
 
@@ -233,7 +235,7 @@ python scripts/gr00t_finetune.py \
 ```
 
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/train.png" />
 </div>
 
@@ -261,11 +263,12 @@ python scripts/inference_service.py --server \
 ```
 
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gr00t/server.png" />
 </div>
 
 #### Client
+
 ```bash
 python getting_started/examples/eval_gr00t_so100.py  --use_policy
 ```
@@ -652,6 +655,7 @@ if __name__ == "__main__":
 :::
 
 ## Effect Demonstration
+
 Our inference tests were conducted on a laptop equipped with an RTX 4080 GPU. While the inference accuracy proved excellent, we observed noticeable arm movement jitter due to the large VLA model size. Nevertheless, the system successfully accomplishes all intended tasks.
 
 <div align="center">
@@ -660,24 +664,22 @@ Our inference tests were conducted on a laptop equipped with an RTX 4080 GPU. Wh
 
 ## References
 
-- [https://wiki.seeedstudio.com/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/) 
+- [https://wiki.seeedstudio.com/lerobot_so100m/](https://wiki.seeedstudio.com/lerobot_so100m/)
 - [https://github.com/NVIDIA/Isaac-GR00T/tree/main](https://github.com/NVIDIA/Isaac-GR00T/tree/main)
 - [https://github.com/huggingface/lerobot](https://github.com/huggingface/lerobot)
 - [https://github.com/Dao-AILab/flash-attention](https://github.com/Dao-AILab/flash-attention])
 - [https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning](https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning)
-
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

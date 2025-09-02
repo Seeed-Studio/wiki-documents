@@ -25,7 +25,6 @@ sku:
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/4/-/4-114110168_-mini-ai-computer-t906-45back.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 Mini AI Computer T906 built with the Jetson AGX Orin 32GB Module that delivers up to 200TOPS AI performance, ready for the most complex AI workloads at the edge. Pre-installed Jetpack 5.0.2, supported by NVIDIA JetPack and DeepStream SDKs, TensorRT, RIVA, Issac software libraries, and leading AI platform-tools from the Seeed Edge AI ecosystem, you can easily develop and deploy AI applications for manufacturing, delivery, retail, and smart cities, and more.
 
 You can access a speed network access with ethernet ports of 10GbE and 1GbE at Mini AI Computer T906. You can enable up to 10 streams for video analytics.
@@ -50,15 +49,15 @@ Covered by super strong and lightweight aluminum alloy, it is designed as IP55 f
 
 ## Features
 
-* It is embedded with NVIDIA® JETSON AGX ORIN™
-* It supports M.2 KEY M (PCIEX4 NVME 2280)
-* It supports M.2 KEY E (PCIEX1 2230)
-* It supports 8 GMSL2 cameras* (GMSL2 adaptor board need to be purchased separately)
-* It supports multiple interfaces (e.g. CAN/USB/Ethernet/Synchronous Signal/Serial/GPIO, etc.)
-* It supports dual-band WIFI/Bluetooth/4G/5G module
-* Japan JAE automotive grade IO plug (1xPOWER, 3xCAN, 2xGPIO)
-* Fan and passive cooling design
-* It has built-in ubuntu 20.04 system and JETPACK SDKS
+- It is embedded with NVIDIA® JETSON AGX ORIN™
+- It supports M.2 KEY M (PCIEX4 NVME 2280)
+- It supports M.2 KEY E (PCIEX1 2230)
+- It supports 8 GMSL2 cameras* (GMSL2 adaptor board need to be purchased separately)
+- It supports multiple interfaces (e.g. CAN/USB/Ethernet/Synchronous Signal/Serial/GPIO, etc.)
+- It supports dual-band WIFI/Bluetooth/4G/5G module
+- Japan JAE automotive grade IO plug (1xPOWER, 3xCAN, 2xGPIO)
+- Fan and passive cooling design
+- It has built-in ubuntu 20.04 system and JETPACK SDKS
 
 ## Specifications
 
@@ -334,23 +333,17 @@ Covered by super strong and lightweight aluminum alloy, it is designed as IP55 f
   </table>
 </center>
 
-
 ## Hardware Overview
-
 
 <center>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/image_3.png" alt="pir" width={600} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_993556_gptApDMPltVJB-Sv_1667353575?w=817&h=407" alt="pir" width={600} height="auto" /></p>
-
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/image_4.png" alt="pir" width={600} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_35550_jEJeygKqw0R2wDo3_1667459768?w=823&h=620" alt="pir" width={600} height="auto" /></p>
-
 
 </center>
 
@@ -358,30 +351,24 @@ Covered by super strong and lightweight aluminum alloy, it is designed as IP55 f
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/dimensions.png" /></div>
 
-
-
 ## Hardware Description
 
 ### Serial Port
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/serial.png" /></div>
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/serial_pin.png" /></div>
-
 
 ### Multifunctional Interface
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/multifunc.png" /></div>
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/multifunc_pin.png" /></div>
-
 
 ## Flash Operating System
 
 !!! Note
-    Mini AI Computer T906 will come with **Jetpack 5.0.2 preinstalled** on the EMMC of the Jetson AGX Orin module which means you could directly start to develop your own application with it. You can skip to [next section](#peripherals). 
+    Mini AI Computer T906 will come with **Jetpack 5.0.2 preinstalled** on the EMMC of the Jetson AGX Orin module which means you could directly start to develop your own application with it. You can skip to [next section](#peripherals).
     If you want to proceed to flash OS to this device, you need to be noted that the carrier board of this system is customize designed therefore the relevant drivers need to be downloaded and installed.
 
 ### Hardware Required
@@ -414,7 +401,7 @@ You need to prepare the following hardware before getting started
 - **Step 1.** Download the system image files from our [Source Forge Repo](https://sourceforge.net/projects/mini-ai-computer-t906/files/)
 
 - **Step 2.** Execute the following command in your Ubuntu Host Computer `Terminal`:
- 
+
 ```shell
 #extract archive 
 sudo tar -zxvf T906_JP5.0.2.tar.gz
@@ -430,8 +417,6 @@ You should see similar message at `Terminal` ouput.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/flash_success.png" /></div>
 
-
-
 ## Peripherals
 
 ### Wi-Fi Connection
@@ -443,23 +428,17 @@ You should see similar message at `Terminal` ouput.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/settings.png" /></div>
 
-
 - **Step 2.** Under Wi-Fi section please select and click `Select Network`.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi.png" /></div>
-
-
 
 - **Step 3.** Select your Wi-Fi network at the prompt window and click `connect`.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi_select.png" /></div>
 
-
-
 - **Step 4.** Please Enter the Wi-Fi Password at the `Authentication required` window.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi_pass.png" /></div>
-
 
 ### 4G Dial-up Networking
 
@@ -502,7 +481,6 @@ sudo ./ppp-kill.sh
 - **Step 3.** If you want to implement the 4G auto-connect feature, you need to set up the rc.local startup script to increase the number of applications on system boot.
 
 - **Step 3-1.**  Add rc-local.service
-
 
 ```shell
 
@@ -647,11 +625,9 @@ sudo cat /sys/kernel/debug/gpio| grep '326'
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_antenna.png" /></div>
 
-
 - **Step 2.** After bootup the system, you can find the twork folderat the home location, double click into it and right click mouse button and select `Open in Terminal`.
   
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_folder.png" /></div>
-
 
 - **Step 3.** At the `Terminal` window, please Enter following command:
 
@@ -663,23 +639,18 @@ sudo ./bd.gps_serialport
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_script.png" /></div>
 
-
 the correct result should be as similar:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_info.png" /></div>
 
-  
 if you see following output it means that the location is not successful, which might be the signal is weak to lock the location, please go to an open area to expose the unit to gain more signals to get posititon locked.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_error.png" /></div>
-
-
 
 ## Using NVMe SSD as a System Rootfs Drive
 
 !!!Note
     This is the step for setting NVMe SSD as the system disk to expand the storage size of the rootfs, along side the EMMC or SD Card as system boot partiton. Note the NVMe SSD is not included in the standard product, you need to supply on your own.
-
 
 - **Step 1.** Install the SSD
   
@@ -691,31 +662,25 @@ if you see following output it means that the location is not successful, which 
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/1.png" /></div>
 
-
   Select your SSD on the left side and then select **Format Disk** in the upper right corner under the menu bar.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd1.jpg" /></div>
-
 
   Format your SSD to GPT format. A pop-up window will appear asking you to confirm and enter your user password.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd3.png" /></div>
 
-
   Then, we click on the middle **+** to add a disk character.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd6.png" /></div>
-
 
   Click on "Next".
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd7.png" /></div>
 
-
   Please give your SSD a name and select **Ext4** in the type and click "Create". At this point we have completed the SSD prep according to the expansion requirements.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd8.png" /></div>
-
 
 - **Step 3.** Build the root directory to the SSD
 
@@ -749,21 +714,16 @@ cd rootOnNVMe/
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/9.png" /></div>
 
-
   When you restart reComputer, you will see that the eMMC has become an external storage device on the main interface, and you will see that the system footprint has been reduced, so the expansion was successful.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/11.png" /></div>
-
 
 !!!Attention
     The default SSD path in the script file is `/dev/nvme0n1p1`, which is also the path assigned by default by reComputer. If you find that your SSD path does not match this with the command `sudo fdisk -l`, change the path of all `/dev/nvme0n1p1` in the files **copy-rootfs-ssd.sh**, **data/setssdroot.service**, and **data/setssdroot.sh** in rootOnNVMe to the path where your SSD is located.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/21.png" /></div>
 
-
-
 The above expansion will not remove the original root directory contents from the eMMC. If you do not want to boot from the SSD, you can remove the SSD and the system will still boot from the eMMC.
-
 
 ## Resources
 
@@ -774,11 +734,11 @@ The above expansion will not remove the original root directory contents from th
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

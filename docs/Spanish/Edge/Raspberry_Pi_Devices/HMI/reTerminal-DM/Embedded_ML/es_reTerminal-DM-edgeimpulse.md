@@ -175,7 +175,7 @@ Want to see a feed of the camera and live classification in your browser? Go to 
 
 En conclusión, la integración fluida de reTerminal DM y Edge Impulse permite a los desarrolladores explotar todo el potencial de la IA en el edge. reTerminal DM, con su robusto hardware y capacidades versátiles, es una plataforma excelente para ejecutar soluciones de detección de objetos en tiempo real. Combinado con Edge Impulse —que simplifica la creación e implementación de modelos de aprendizaje automático en dispositivos con recursos limitados— las posibilidades se vuelven infinitas. Ya sea en aplicaciones IoT, robótica o cualquier proyecto que requiera IA en el dispositivo, esta potente sinergia entre reTerminal DM y Edge Impulse abre un mundo de innovación en la vanguardia de la tecnología.
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte soporte y asegurar que tu experiencia sea lo más fluida posible. Ofrecemos varios canales de comunicación para distintas preferencias.
 

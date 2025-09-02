@@ -482,7 +482,7 @@ El controlador IoT Edge reComputer R1000, impulsado por Raspberry Pi CM4, cuenta
 
 
 
-# Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión de Productos
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para brindarte diferentes tipos de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

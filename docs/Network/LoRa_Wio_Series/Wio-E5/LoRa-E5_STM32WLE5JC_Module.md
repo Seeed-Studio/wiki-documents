@@ -47,25 +47,25 @@ If you are not quite familiar with LoRa® and LoRaWAN®, check out this article 
 
 ## Features
 
-* **Ultra-low Power Consumption**: as low as 2.1uA sleep current (WOR mode)
+- **Ultra-low Power Consumption**: as low as 2.1uA sleep current (WOR mode)
 
-* **Extremely Compacted Size**: 12mm *12mm* 2.5mm 28 pins SMT
+- **Extremely Compacted Size**: 12mm *12mm* 2.5mm 28 pins SMT
 
-* **High Performance**: TXOP=22dBm@868/915MHz; -136.5dBm sensitivity for SF12 with 125KHz BW
+- **High Performance**: TXOP=22dBm@868/915MHz; -136.5dBm sensitivity for SF12 with 125KHz BW
 
-* **Long Distance Use**: 158dB link budget
+- **Long Distance Use**: 158dB link budget
 
-* **Wireless Connectivity**: Embedded LoRaWAN® protocol, AT command, support global LoRaWAN® frequency plan
+- **Wireless Connectivity**: Embedded LoRaWAN® protocol, AT command, support global LoRaWAN® frequency plan
 
-* **Worldwide Compatibility**: wide frequency range; EU868 / US915 / AU915 / AS923 / KR920 / IN865
+- **Worldwide Compatibility**: wide frequency range; EU868 / US915 / AU915 / AS923 / KR920 / IN865
 
-* **Great Flexibility**: For users who want to develop software on the MCU of the module, other GPIOs of the MCU can be easily manipulated, including UART, I2C, ADC, etc. These rich GPIO interfaces are useful for users who need to expand peripherals.
+- **Great Flexibility**: For users who want to develop software on the MCU of the module, other GPIOs of the MCU can be easily manipulated, including UART, I2C, ADC, etc. These rich GPIO interfaces are useful for users who need to expand peripherals.
 
-* **FCC, CE, IC and Telec Certified**
+- **FCC, CE, IC and Telec Certified**
 
 ## Applications
 
-* Works for LoRaWAN® sensor nodes and any wireless communication application.
+- Works for LoRaWAN® sensor nodes and any wireless communication application.
 
 ![applications](https://files.seeedstudio.com/products/317990687/image/application.png)
 
@@ -79,9 +79,9 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 :::note
 
-* Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
+- Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.
 
-* The "PB13/SPI_SCK/BOOT" pin on the Wio-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.
+- The "PB13/SPI_SCK/BOOT" pin on the Wio-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.
 
 :::
 
@@ -89,21 +89,21 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 2.1 HSE
 
-* 32MHz TCXO
+- 32MHz TCXO
 
-* TCXO power supply: PB0-VDD_TCXO
+- TCXO power supply: PB0-VDD_TCXO
 
 2.2 LSE
 
-* 32.768KHz crystal oscillator
+- 32.768KHz crystal oscillator
 
 **3. RF Switch**
 
 **Wio-E5 module ONLY transmits through RFO_HP:**
 
-* Receive: PA4=1, PA5=0
+- Receive: PA4=1, PA5=0
 
-* Transmit(high output power, SMPS mode): PA4=0, PA5=1
+- Transmit(high output power, SMPS mode): PA4=0, PA5=1
 
 ## Hardware Pinout
 
@@ -253,37 +253,37 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 ## Sources
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Wio-E5 datasheet and specifications</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.1.pdf">Wio-E5 datasheet and specifications</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/RHF0M0E5-HF22-BOM20211111.pdf"> Wio-E5 BOM</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/RHF0M0E5-HF22-BOM20211111.pdf"> Wio-E5 BOM</a></p>
 
 Certifications:
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">Wio-E5-HF Certification CE-VOC-RED</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">Wio-E5-HF Certification CE-VOC-RED</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Wio-E5-HF FCC Certification -DSS</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">Wio-E5-HF FCC Certification -DSS</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Wio-E5-HF FCC Certification -DTS</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">Wio-E5-HF FCC Certification -DTS</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">Wio-E5-HF TELEC Certification</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/Telec.zip">Wio-E5-HF TELEC Certification</a></p>
 
-* <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Wio-E5-HF IC Certification</a></p>
+- <p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20IC%20ID.pdf">Wio-E5-HF IC Certification</a></p>
 
 Library:
 
-* [Wio-E5 kicad library](https://files.seeedstudio.com/products/317990687/res/LoRa-E5_kicad_Library.zip)
+- [Wio-E5 kicad library](https://files.seeedstudio.com/products/317990687/res/LoRa-E5_kicad_Library.zip)
 
-* [Wio-E5 HF 3D File](https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF_3D_File.stp)
+- [Wio-E5 HF 3D File](https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF_3D_File.stp)
 
-* [Wio-E5 Eagle Library](https://files.seeedstudio.com/wiki/Wio-E5/LORA-E5_Eagle_Library.lbr)
+- [Wio-E5 Eagle Library](https://files.seeedstudio.com/wiki/Wio-E5/LORA-E5_Eagle_Library.lbr)
 
 Relevant SDK:
 
-* <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
+- <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
 
 <div id="gtx-trans" style={{position: 'absolute', left: '-36px', top: '48.875px'}}>
   <div className="gtx-trans-icon" />
@@ -295,76 +295,76 @@ Relevant SDK:
 
 #### 1.1 Preparation
 
-* **Step 1.** Connect Wio-E5 Development Board to PC via a Type-C cable
+- **Step 1.** Connect Wio-E5 Development Board to PC via a Type-C cable
 
-* **Step 2.** Open a serial tool(eg. Arudino Serial Monitor), select the right COM port, set baudrate to 9600 and select Both NL & CR
+- **Step 2.** Open a serial tool(eg. Arudino Serial Monitor), select the right COM port, set baudrate to 9600 and select Both NL & CR
 
-* **Step 3.** Try to send "AT" and you will see the response.
+- **Step 3.** Try to send "AT" and you will see the response.
 
 <!-- ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/4.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/4.png" alt="pir" width={600} height="auto" /></p>
 
 #### 1.2 Basic AT Commands
 
-* AT+ID // Read all, DevAddr(ABP), DevEui(OTAA), AppEui(OTAA)
+- AT+ID // Read all, DevAddr(ABP), DevEui(OTAA), AppEui(OTAA)
 
-* AT+ID=DevAddr // Read DevAddr
+- AT+ID=DevAddr // Read DevAddr
 
-* AT+ID=DevEui // Read DevEui
+- AT+ID=DevEui // Read DevEui
 
-* AT+ID=AppEui // Read AppEui
+- AT+ID=AppEui // Read AppEui
 
-* AT+ID=DevAddr,"devaddr" // Set new DevAddr
+- AT+ID=DevAddr,"devaddr" // Set new DevAddr
 
-* AT+ID=DevEui,"deveui" // Set new DevEui
+- AT+ID=DevEui,"deveui" // Set new DevEui
 
-* AT+ID=AppEui,"appeui" // Set new AppEui
+- AT+ID=AppEui,"appeui" // Set new AppEui
 
-* AT+KEY=APPKEY,"16 bytes length key" // Change application session key
+- AT+KEY=APPKEY,"16 bytes length key" // Change application session key
 
-* AT+DR=band // Change the Band Plans
+- AT+DR=band // Change the Band Plans
 
-* AT+DR=SCHEME // Check current band
+- AT+DR=SCHEME // Check current band
 
-* AT+CH=NUM, 0-7 // Enable channel 0~7
+- AT+CH=NUM, 0-7 // Enable channel 0~7
 
-* AT+MODE="mode" // Select work mode: LWOTAA, LWABP or TEST
+- AT+MODE="mode" // Select work mode: LWOTAA, LWABP or TEST
 
-* AT+JOIN // Send JOIN request
+- AT+JOIN // Send JOIN request
 
-* AT+MSG="Data to send" // Use to send string format frame which is no need to be confirmed by the server
+- AT+MSG="Data to send" // Use to send string format frame which is no need to be confirmed by the server
 
-* AT+CMSG="Data to send" // Use to send string format frame which must be confirmed by the server
+- AT+CMSG="Data to send" // Use to send string format frame which must be confirmed by the server
 
-* AT+MSGHEX="xx xx xx xx" // Use to send hex format frame which is no need to be confirmed by the server
+- AT+MSGHEX="xx xx xx xx" // Use to send hex format frame which is no need to be confirmed by the server
 
-* AT+CMSGHEX="xx xx xx xx" // Use to send hex format frame which must be confirmed by the server
+- AT+CMSGHEX="xx xx xx xx" // Use to send hex format frame which must be confirmed by the server
 
 #### 1.3 Connect and send data to The Things Network
 
-* **Step 1.** Visit [The Things Network](https://www.thethingsnetwork.org) website and sign up for a new account
+- **Step 1.** Visit [The Things Network](https://www.thethingsnetwork.org) website and sign up for a new account
 
-* **Step 2.** After logging in, click your profile and select **Console**
+- **Step 2.** After logging in, click your profile and select **Console**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/1.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/1.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 3.** Select a cluster to start adding devices and gateways
+- **Step 3.** Select a cluster to start adding devices and gateways
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/2.png" alt="pir" width="600" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/2.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 4.** Click **Go to applications**
+- **Step 4.** Click **Go to applications**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/4.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/4.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 5.** Click **+ Add application**
+- **Step 5.** Click **+ Add application**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/5.png" alt="pir" width="400" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/5.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 6.** Fill **Application ID** and click **Create application**
+- **Step 6.** Fill **Application ID** and click **Create application**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/6.png" alt="pir" width="500" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/6.png" alt="pir" width={600} height="auto" /></p>
@@ -377,26 +377,26 @@ The following is the newly created application
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/7.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 7.** Click **+ Add end device**
+- **Step 7.** Click **+ Add end device**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width="500" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/8.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 8.** Click **Manually**, to enter the registration credentials manually
+- **Step 8.** Click **Manually**, to enter the registration credentials manually
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width="420" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/9.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 9.** Select the **Frequency plan** according to your region. Also make sure you use the same frequency as the gateway in which you will connect this device to. Select **MAC V1.0.2** as the **LoRaWAN® version** and **PHY V1.0.2 REV B** as the **Regional Parameters version**. These settings are according to the LoraWAN® stack of Wio-E5.
+- **Step 9.** Select the **Frequency plan** according to your region. Also make sure you use the same frequency as the gateway in which you will connect this device to. Select **MAC V1.0.2** as the **LoRaWAN® version** and **PHY V1.0.2 REV B** as the **Regional Parameters version**. These settings are according to the LoraWAN® stack of Wio-E5.
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/10.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 10.** While the Wio-E5 module is still accessible over the serial console, send the following AT commands on the serial monitor:
+- **Step 10.** While the Wio-E5 module is still accessible over the serial console, send the following AT commands on the serial monitor:
 
-  * `AT+ID=DevEui` to get your Device EUI
-  * `AT+ID=AppEui`, to get your App EUI
-  * `AT+KEY=APPKEY,"2B7E151628AED2A6ABF7158809CF4F3C"` to set the App Key
+  - `AT+ID=DevEui` to get your Device EUI
+  - `AT+ID=AppEui`, to get your App EUI
+  - `AT+KEY=APPKEY,"2B7E151628AED2A6ABF7158809CF4F3C"` to set the App Key
 
 The output will be as follows:
 
@@ -409,14 +409,14 @@ Tx: AT+KEY=APPKEY,"2B7E151628AED2A6ABF7158809CF4F3C"
 Rx: +KEY: APPKEY 2B7E151628AED2A6ABF7158809CF4F3C
 ```
 
-* **Step 11.** Copy and paste the above information into **DevEUI**, **AppEUI** and **AppKey** fields. **End device ID** field will be automatically filled when we fill **DevEUI**. Finally click **Register end device**
+- **Step 11.** Copy and paste the above information into **DevEUI**, **AppEUI** and **AppKey** fields. **End device ID** field will be automatically filled when we fill **DevEUI**. Finally click **Register end device**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width="450" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/12.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 12.** Register your LoRaWAN® Gateway with TTN Console. Please refer to the instructions shown [here](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)
+- **Step 12.** Register your LoRaWAN® Gateway with TTN Console. Please refer to the instructions shown [here](https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console)
 
-* **Step 13.** Type the following AT commmands to connect to TTN
+- **Step 13.** Type the following AT commmands to connect to TTN
 
 ```
 // If you are using US915
@@ -457,7 +457,7 @@ You can also check your device status on the **End devices** page
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/13.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-Module/13.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 14.** Type the following AT commands to send data to TTN
+- **Step 14.** Type the following AT commands to send data to TTN
 
 ```
 // send string "HELLO" to TTN 
@@ -488,21 +488,21 @@ Please read [Erase Factory AT Firmware](https://wiki.seeedstudio.com/LoRa_E5_min
 
 Software:
 
-* [STM32CubeIDE](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html): for compilation and debugging
+- [STM32CubeIDE](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html): for compilation and debugging
 
-* [STM32CubeProgrammer](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.license=1614563305396.product=STM32CubePrg-W64.version=2.6.0.html): for programming STM32 devices
+- [STM32CubeProgrammer](https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.license=1614563305396.product=STM32CubePrg-W64.version=2.6.0.html): for programming STM32 devices
 
 Hardware:
 
-* LoRaWAN® Gateway connected to LoRaWAN® Network Server (e.g. TTN)
+- LoRaWAN® Gateway connected to LoRaWAN® Network Server (e.g. TTN)
 
-* A USB Type-C cable and a ST-LINK. Connect the Type-C cable to the Type-C port of the board for power and serial communication. Connect the ST-LINK to the SWD pins as follows
+- A USB Type-C cable and a ST-LINK. Connect the Type-C cable to the Type-C port of the board for power and serial communication. Connect the ST-LINK to the SWD pins as follows
 
 ![connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png)
 
 #### GPIO Configuration Overview
 
-* As the hardware design of Wio-E5 series is a bit different with NUCLEO-WL55JC, the official STM32WL55JC development board from ST, developers need to reconfigure some gpios, to adapt the SDK example to Wio-E5 series. We have already reconfigured GPIOs, but we think it is nessary to point out the difference.
+- As the hardware design of Wio-E5 series is a bit different with NUCLEO-WL55JC, the official STM32WL55JC development board from ST, developers need to reconfigure some gpios, to adapt the SDK example to Wio-E5 series. We have already reconfigured GPIOs, but we think it is nessary to point out the difference.
 
 |SDK Example Label|GPIO of NUCLEO-WL55JC|GPIO of Wio-E5 mini/ Wio-E5 Development Kit|
 |---------|---------------------|------------------------------------------|
@@ -529,34 +529,34 @@ Now we will explore several applications for Wio-E5 mini/ Wio-E5 Development Kit
 
 This application will connect Wio-E5 mini/ Wio-E5 Development Kit with TTN (The Things Network) and send data after connecting with a LoRaWAN® gateway.
 
-* **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
+- **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2.** Extract the ZIP file and navigate to `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node > STM32CubeIDE`
+- **Step 2.** Extract the ZIP file and navigate to `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node > STM32CubeIDE`
 
-* **Step 3.** Double click the **.project** file
+- **Step 3.** Double click the **.project** file
 
   **Note:** For MAC, it should take one of the options below to open the project:
 
-  * **1.** Navigate to `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node`. Doulble click file "LoRaWAN_End_Node.ioc".
+  - **1.** Navigate to `Wio-E5-Node > Projects > Applications > LoRaWAN > LoRaWAN_End_Node`. Doulble click file "LoRaWAN_End_Node.ioc".
 
-  * **2.** Use "Import Projects from File System or Archieve" like below images.
+  - **2.** Use "Import Projects from File System or Archieve" like below images.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/MAC.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 4.** Right click on the project and click **Properties**
+- **Step 4.** Right click on the project and click **Properties**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/properties-open-2.jpg" alt="pir" width="280" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/properties-open-2.jpg" alt="pir" width={600} height="auto" /></p>
 
-* **Step 5.** Navigate to `C/C++ Build > Settings > MCU Post build outputs`, tick **Convert to Intel Hex file (-O ihex)** and click **Apply and Close**
+- **Step 5.** Navigate to `C/C++ Build > Settings > MCU Post build outputs`, tick **Convert to Intel Hex file (-O ihex)** and click **Apply and Close**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/set-hex.png" alt="pir" width="600" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/set-hex.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 6.** Click **Build 'Debug'**, and it should compile without any errors
+- **Step 6.** Click **Build 'Debug'**, and it should compile without any errors
 
 ![build](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png)
 
@@ -565,7 +565,7 @@ This application will connect Wio-E5 mini/ Wio-E5 Development Kit with TTN (The 
 
 Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** and **LoRawan Region**
 
-* **Step 7.** Please follow the [guide](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network) here to setup your TTN application, get your **Application EUI** and copy it to the macro definition `LORAWAN_JOIN_EUI` in `LoRaWAN/App/se-identity.h` , for example, the Application EUI here is `80 00 00 00 00 00 00 0x07` :
+- **Step 7.** Please follow the [guide](https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-the-things-network) here to setup your TTN application, get your **Application EUI** and copy it to the macro definition `LORAWAN_JOIN_EUI` in `LoRaWAN/App/se-identity.h` , for example, the Application EUI here is `80 00 00 00 00 00 00 0x07` :
 
 ```cpp
 // LoRaWAN/App/se-identity.h
@@ -576,7 +576,7 @@ Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** 
 #define LORAWAN_JOIN_EUI                                   { 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07 }
 ```
 
-* **Step 8.** Also, you can modify your **Device EUI** and **Application Key**, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` in `LoRaWAN/App/se-identity.h`. Make sure `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
+- **Step 8.** Also, you can modify your **Device EUI** and **Application Key**, by setting the macro definition `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` in `LoRaWAN/App/se-identity.h`. Make sure `LORAWAN_DEVICE_EUI` and `LORAWAN_NWK_KEY` are the same as the `Device EUI` and `App Key` in TTN console.
 
 ```cpp
 // LoRaWAN/App/se-identity.h
@@ -595,7 +595,7 @@ Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/se-identity.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/se-identity.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 9.** The default LoRaWAN® Region is `EU868`, you can modify it, by setting the macro definition `ACTIVE_REGION` in `LoRaWAN/App/lora_app.h`
+- **Step 9.** The default LoRaWAN® Region is `EU868`, you can modify it, by setting the macro definition `ACTIVE_REGION` in `LoRaWAN/App/lora_app.h`
 
 ```c
 // LoRaWAN/App/lora_app.h
@@ -608,30 +608,30 @@ Now we will modify our **Device EUI**, **Application EUI**, **Application KEY** 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/lora-app-h.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/lora-app-h.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 10.** After the above modifications, **rebuild** the example and program to your Wio-E5. Open `STM32CubeProgrammer`, connect ST-LINK to your PC, hold `RESET Button` of your Device, then click `Connect` and release `RESET Button`:
+- **Step 10.** After the above modifications, **rebuild** the example and program to your Wio-E5. Open `STM32CubeProgrammer`, connect ST-LINK to your PC, hold `RESET Button` of your Device, then click `Connect` and release `RESET Button`:
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 11.** Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
+- **Step 11.** Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 12.** Now, go to the `Erasing & Programming` page, select your hex file path(for example: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\Debug\LoRaWAN_End_Node.hex` ), select the programming options as the following picture, then click `Start Programming`!
+- **Step 12.** Now, go to the `Erasing & Programming` page, select your hex file path(for example: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\Debug\LoRaWAN_End_Node.hex` ), select the programming options as the following picture, then click `Start Programming`!
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width={600} height="auto" /></p>
 
 You will see the message **Download verified successfully**, once programming is finished.
 
-* **Step 13.** If your LoRaWAN® Gateway and TTN are setup, Wio-E5 will join successfully after reset! A confirm LoRaWAN® package will be sent to TTN every 30 seconds. The following log will be printed on the serial monitor (Arduino Serial Monitor is used here) if the join is successful:
+- **Step 13.** If your LoRaWAN® Gateway and TTN are setup, Wio-E5 will join successfully after reset! A confirm LoRaWAN® package will be sent to TTN every 30 seconds. The following log will be printed on the serial monitor (Arduino Serial Monitor is used here) if the join is successful:
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/TTN-joined.png" alt="pir" width="600" height="auto"></p> -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/TTN-joined.png" alt="pir" width={600} height="auto" /></p>
 
-* Cheers! Now you have connected Wio-E5 to LoRaWAN® Network! You can now proceed to develop more exciting LoRaWAN® End Node applications!
+- Cheers! Now you have connected Wio-E5 to LoRaWAN® Network! You can now proceed to develop more exciting LoRaWAN® End Node applications!
 
 **Note:** Wio-E5 only supports high power output mode, so you can't use these macro definitions in `radio_board_if.h` :
 
@@ -647,45 +647,45 @@ Eventhough **RBI_CONF_RFO** is defined as **RBI_CONF_RFO_LP_HP** in `radio_board
 
 This application will also connect Wio-E5 mini/ Wio-E5 Development Kit with TTN (The Things Network) and send data after connecting with a LoRaWAN® gateway. The difference between previous LoRaWAN End Node application and this FreeRTOS LoRaWAN® application is that, the previous one runs on bare metal whereas this runs under FreeRTOS.
 
-* **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
+- **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LoRaWAN`
+- **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LoRaWAN`
 
-* **Step 3.** Double click the **.project** file
+- **Step 3.** Double click the **.project** file
 
-* **Step 4.** Refer to **step 4 - step 13** from the previous **LoRaWAN® End Node** application to connect Wio-E5 mini/ Wio-E5 Development Kit with TTN!  
+- **Step 4.** Refer to **step 4 - step 13** from the previous **LoRaWAN® End Node** application to connect Wio-E5 mini/ Wio-E5 Development Kit with TTN!  
 
 #### FreeRTOS LoRaWAN® AT
 
 This application will also connect Wio-E5 mini/ Wio-E5 Development Kit with TTN (The Things Network) and send data after connecting with a LoRaWAN® gateway. The difference between previous FreeRTOS LoRaWAN® application and this application is that, you can use AT commands.
 
-* **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
+- **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LoRaWAN_AT`
+- **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LoRaWAN_AT`
 
-* **Step 3.** Double click the **.project** file
+- **Step 3.** Double click the **.project** file
 
-* **Step 4.** Refer to **step 4 - step 12** from the previous **LoRaWAN® End Node** application
+- **Step 4.** Refer to **step 4 - step 12** from the previous **LoRaWAN® End Node** application
 
-* **Step 5.** Open a serial monitor such as **Arduino Serial Monitor** and you will see the following output
+- **Step 5.** Open a serial monitor such as **Arduino Serial Monitor** and you will see the following output
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-at-serial-open-2.png" alt="pir" width="600" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-at-serial-open-2.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 6.** Type **AT?** and press **ENTER** to view all the available AT commands
+- **Step 6.** Type **AT?** and press **ENTER** to view all the available AT commands
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/at-commands.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/at-commands.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 7.** If you still want to change **Device EUI**, **Application EUI**, **Application KEY** and **LoRawan Region**, you can change using AT commands. However, these parameters are already set in **se-identity.h** and **lora_app.h** in this example
+- **Step 7.** If you still want to change **Device EUI**, **Application EUI**, **Application KEY** and **LoRawan Region**, you can change using AT commands. However, these parameters are already set in **se-identity.h** and **lora_app.h** in this example
 
-* **Step 8.** Type **AT+JOIN=1** and you will see the following output once the join is successful!
+- **Step 8.** Type **AT+JOIN=1** and you will see the following output once the join is successful!
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-at-join.png" alt="pir" width="400" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-at-join.png" alt="pir" width={600} height="auto" /></p>
@@ -696,49 +696,49 @@ This application will also connect Wio-E5 mini/ Wio-E5 Development Kit with TTN 
 
 This application will enable low-power mode on Wio-E5 mini/ Wio-E5 Development Kit. Once the application is flashed, the board will consume power as normal for 2 seconds and enter low-power mode for 2 seconds and so on.
 
-* **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
+- **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LowPower`
+- **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > FreeRTOS > FreeRTOS_LowPower`
 
-* **Step 3.** Double click the **.project** file
+- **Step 3.** Double click the **.project** file
 
-* **Step 4.** Right click on the project and click **Properties**
+- **Step 4.** Right click on the project and click **Properties**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-properties.jpg" alt="pir" width="280" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-properties.jpg" alt="pir" width={600} height="auto" /></p>
 
-* **Step 5.** Navigate to `C/C++ Build > Settings > MCU Post build outputs`, tick **Convert to Intel Hex file (-O ihex)** and click **Apply and Close**
+- **Step 5.** Navigate to `C/C++ Build > Settings > MCU Post build outputs`, tick **Convert to Intel Hex file (-O ihex)** and click **Apply and Close**
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-hex.jpg" alt="pir" width="500" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-hex.jpg" alt="pir" width={600} height="auto" /></p>
 
-* **Step 6.** Click **Build 'Debug'**, and it should compile without any errors
+- **Step 6.** Click **Build 'Debug'**, and it should compile without any errors
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-build.png" alt="pir" width="460" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-build.png" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/freertos-lpower-success.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 7.** Open `STM32CubeProgrammer`, connect ST-LINK to your PC, hold `RESET Button` of your Device, then click `Connect` and release `RESET Button`:
+- **Step 7.** Open `STM32CubeProgrammer`, connect ST-LINK to your PC, hold `RESET Button` of your Device, then click `Connect` and release `RESET Button`:
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 8.** Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
+- **Step 8.** Make sure the Read Out Protection is `AA`, if it is shown as `BB`, select `AA` and click `Apply`:
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 9.** Now, go to the `Erasing & Programming` page, select your hex file path(for example: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\FreeRTOS\FreeRTOS_LowPower\Debug\FreeRTOS_LowPower.hex` ), select the programming options as the following picture, then click `Start Programming`!
+- **Step 9.** Now, go to the `Erasing & Programming` page, select your hex file path(for example: `C:\Users\user\Downloads\LoRaWan-E5-Node\Projects\Applications\FreeRTOS\FreeRTOS_LowPower\Debug\FreeRTOS_LowPower.hex` ), select the programming options as the following picture, then click `Start Programming`!
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" alt="pir" width={600} height="auto" /></p>
 You will see the message **Download verified successfully**, once programming is finished.
 
-* **Step 10.** Connect the Wio-E5 mini/ Wio-E5 Development Kit to a PC by attaching a power meter. You will notice the red LED on the board blinks every second and the board switches between normal and low power states (The current on the power meter comes down for 1 second for lower power state and comes back up for 1 second for normal working state)
+- **Step 10.** Connect the Wio-E5 mini/ Wio-E5 Development Kit to a PC by attaching a power meter. You will notice the red LED on the board blinks every second and the board switches between normal and low power states (The current on the power meter comes down for 1 second for lower power state and comes back up for 1 second for normal working state)
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/low-power-demo-2.gif" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/low-power-demo-2.gif" alt="pir" width={600} height="auto" /></p>
@@ -747,16 +747,16 @@ You will see the message **Download verified successfully**, once programming is
 
 This application will also enable low-power mode on Wio-E5 mini/ Wio-E5 Development Kit. The difference between previous FreeRTOS LowPower application and this Low Power application is that, the previous one runs under FreeRTOS whereas this runs on bare metal.
 
-* **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
+- **Step 1.** Click [here](https://github.com/Seeed-Studio/LoRaWan-E5-Node/tree/qian) to visit **Seeed-Studio/LoRaWan-E5-Node** repository and download it as a ZIP file
 
 <!-- <p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width="1000" height="auto"></p> -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/LoRa-E5-mini/main-branch.png" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > LowPower`
+- **Step 2.** Extract the ZIP file and navigate to `LoRaWan-E5-Node > Projects > Applications > LowPower`
 
-* **Step 3.** Double click the **.project** file
+- **Step 3.** Double click the **.project** file
 
-* **Step 4.** Refer to **step 4 - step 10** from the previous **FreeRTOS LowPower** application and you will see the same output at the end on the power meter!
+- **Step 4.** Refer to **step 4 - step 10** from the previous **FreeRTOS LowPower** application and you will see the same output at the end on the power meter!
 
 ## Tech Support & Product Discussion
 

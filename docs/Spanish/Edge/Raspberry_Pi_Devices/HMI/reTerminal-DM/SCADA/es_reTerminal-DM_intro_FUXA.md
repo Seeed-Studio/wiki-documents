@@ -218,7 +218,7 @@ Extendemos nuestro sincero agradecimiento al **frangoteam** por su apoyo y guía
 
 - **[Página Web]** [Documentación Oficial de FUXA](https://github.com/frangoteam/FUXA/wiki)
 
-# Soporte Técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes canales de soporte y asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

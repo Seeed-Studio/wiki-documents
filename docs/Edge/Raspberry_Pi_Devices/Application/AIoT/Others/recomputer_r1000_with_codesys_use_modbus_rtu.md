@@ -13,32 +13,34 @@ last_update:
   date: 10/10/2024
   author: ShuishengPeng
 ---
-## Introduction 
+## Introduction
+
 This article mainly introduces how to use the modbus rtu function of reComputer R1000 based on CODESYS. We will use the two rs485 ports of reComputer R1000, one port is used for Modbus master and the other port is used for Modbus slave. This article will detail how to configure Modbus master and Modbus slave on CODESYS and show how to deploy them on reComputer R1000.
+
 ## Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ## Software Preparation
 
-* [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
-* [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
+- [CODESYS Development System V3](https://store.codesys.com/de/codesys.html)
+- [CODESYS Control for Raspberry Pi SL](https://store.codesys.com/de/codesys-control-for-raspberry-pi-sl.html)
 
 ## Getting Start
 
@@ -51,11 +53,15 @@ The two RS485 ports of R1000 are connected, one as Modbus master and the other a
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/deploy/hardware.png" /></center>
 
 ### Modify the configuration file of R1000
+
 Enter the command:
+
 ```shell
     sudo nano /etc/codesyscontrol/CODESYSControl.cfg
 ```
+
 Add the following content:
+
 ```shell
 # Add the following content to the end of the file, where ttyAMAx is the serial port number of reComputer R1000. Linux.Devicefile.1~3 represents the serial port number in CODESYS. Here, the serial port number of CODESYS is bound to the serial port number of reComputer R1000, otherwise CODESYS cannot identify the correct serial port
     [SysCom]
@@ -63,13 +69,16 @@ Add the following content:
     Linux.Devicefile.2=/dev/ttyAMAx
     Linux.Devicefile.3=/dev/ttyAMAx
 ```
+
 Then enter the following command to restart the CODESYS service:
+
 ```shell
     sudo systemctl restart codesyscontrol.service
     sudo systemctl restart codesysedge.service
 ```
 
 ### Modbus master configuration
+
 **Step 1**: Open CODESYS, click `File`--->`NEW Project` to create a new project
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/master/1.png" /></center>
@@ -124,8 +133,6 @@ Then enter the following command to restart the CODESYS service:
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/master/14.png" /></center>
 
-
-
 ### Modbus slave configuration
 
 **Step 1**: Right click on the project and select `Add Device` to add a device
@@ -176,17 +183,16 @@ Then enter the following command to restart the CODESYS service:
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/CODESYS/MODBUS_RTU/deploy/5.png" /></center>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

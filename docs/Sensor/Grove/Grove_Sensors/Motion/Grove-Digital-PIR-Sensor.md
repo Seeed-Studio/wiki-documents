@@ -14,10 +14,9 @@ last_update:
 ![](https://files.seeedstudio.com/products/101020793/img/101020793wiki.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/101020793/img/101020793wiki.png" alt="pir" width={600} height="auto" /></p>
 
+PIR sensor is an IR sensor to detect human motions. This Grove Digital PIR Sensor is the cheapest PIR sensor in the PIR families, however, it is able to give a quick response and generate a high signal from the "sig" Pin.
 
-PIR sensor is an IR sensor to detect human motions. This Grove Digital PIR Sensor is the cheapest PIR sensor in the PIR families, however, it is able to give a quick response and generate a high signal from the "sig" Pin. 
-
-With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and played. And it doesn't need any Arduino Library. 
+With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and played. And it doesn't need any Arduino Library.
 
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/get_one_now_small.png" width="200" height="38"  border=0 /></a></p>  -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Digital-PIR-Motion-Sensor-p-4524.html)
@@ -39,7 +38,7 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 |Response time|< 1s|
 |Working temp|-20-85 C|
 |Interface|Grove|
-|Dimensions|20mm * 20mm * 11.5mm|
+|Dimensions|20mm *20mm* 11.5mm|
 |Weight|3g|
 |Battery|Exclude|
 
@@ -51,6 +50,7 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 ## Getting Started
 
 ### Getting Started with Arduino
@@ -67,11 +67,12 @@ With the Grove interface, the Grove digital PIR Sensor is easy to be plugged and
 <!-- ![](https://files.seeedstudio.com/products/101020793/img/Hardware_Connection.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/101020793/img/Hardware_Connection.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The Grove interface on the breadboard and on the Grove digital PIR Sensor are connected by the Grove cable.
 
 #### Softwawre
+
 - **Step1** Copy the code below to the Arduino IDE and upload. If you do not know how to update the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+
 ```cpp
 #define digital_pir_sensor 5 // connect to Pin 5
 
@@ -90,9 +91,10 @@ void loop()
   Serial.println("Nothing Happened");  // Far from PIR sensor
 }
 ```
+
 - **Step2** Open the Serial port and you will see the value changing when you take a motion around the PIR sensor.
 
-### Getting Started with Raspberry Pi 
+### Getting Started with Raspberry Pi
 
 #### Materials Required
 
@@ -109,35 +111,43 @@ void loop()
 Connect the PIR sensor with "D5" on the Grove Base Hat.
 
 #### Code
+
 - **Step 1** Update the system verion of Raspberry Pi.
+
 ```
 sudo apt-get update
 ```
+
 - **Step 2** Install the wiringPi.
+
 ```
 sudo pip install wiringPi
 ```
+
 If you use Pi 4, please select the version of wiringPi
+
 ```
 sudo pip install wiringPi==2.52.0
 ```
+
 - **Step 3** Get the right Pin you are connecting with.
+
 ```
 gpio readall
 ```
+
 here comes a table, find the Pim definition of the Pin 5 in wiring definition, in this demo, the pin definition is 21.
+
 ```
 gpio read 21
 ```
+
 You can read the value from the PIR sensor, when there is a motion, the value is "1", otherwise. the value is "0".
 
- 
 ## Schematic Online Viewer
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/101020793/document/Grove_Digital_PIR_Motion_Sensor_eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
-
 
 ## Resource
 
@@ -145,15 +155,15 @@ You can read the value from the PIR sensor, when there is a motion, the value is
 - **[PDF]** [Hardware schematic](https://files.seeedstudio.com/products/101020793/document/Hardware_Schematic_SCH.pdf)
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

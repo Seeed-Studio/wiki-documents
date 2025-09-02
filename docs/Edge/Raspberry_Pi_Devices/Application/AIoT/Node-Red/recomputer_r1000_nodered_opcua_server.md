@@ -16,38 +16,40 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 The OPC Unified Architecture (UA), introduced in 2008, represents a significant evolution in industrial communication standards. Unlike its predecessors under the OPC Classic umbrella, OPC UA is a platform-independent, service-oriented architecture that unifies all the functionalities of previous OPC specifications into a single, extensible framework. This modern approach not only preserves the core capabilities of OPC Classic but also enhances them with a multi-layered design that meets the complex demands of today’s industrial environments.
 
 OPC UA’s architecture is designed with key principles in mind: it ensures **functional equivalence** by mapping all COM-based OPC Classic specifications to the UA framework, enabling seamless transitions for legacy systems. The **platform independence** of OPC UA allows it to operate across a wide range of devices, from embedded microcontrollers to cloud-based infrastructures, making it versatile and future-proof. **Security** is a cornerstone of OPC UA, with robust encryption, authentication, and auditing features to protect data integrity and confidentiality. Furthermore, its **extensible nature** allows for the continuous integration of new features without disrupting existing applications, ensuring that it can adapt to evolving industrial needs. The **comprehensive information modeling** capabilities of OPC UA also provide a powerful tool for defining complex information structures, making it an ideal choice for industries requiring detailed and scalable data management solutions.
 
-## Getting Start 
+## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
 
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
-### Software Preparation 
+### Software Preparation
+
 In this tutorial, we'll create a practical example of setting up our reComputer R1000 as an OPC UA server using Node-RED. We'll focus on collecting data from Modbus TCP and RTU devices, though it's worth noting that you can also gather data from MQTT, BACnet, and other devices. For demonstration purposes, we'll specifically use Modbus TCP and RTU. If you're unfamiliar with collecting data from these protocols, please refer to our previous tutorials:
+
 - [reComputer R1000 with Node-RED and BACnet IP](https://wiki.seeedstudio.com/reComputer_r1000_node_red_bacnet_ip/)
 - [reComputer R1000 with Node-RED and Modbus TCP](https://wiki.seeedstudio.com/recomputer_r1000_node_red_modbus_tcp/)
 - [reComputer R1000 with Node-RED and MQTT](https://wiki.seeedstudio.com/recomputer_r1000_nodered_mqtt/)
@@ -72,7 +74,7 @@ Click the Install button next to the node package to add it to your Node-RED env
 
 After installation, locate the OPC-UA nodes in the Node-RED palette.Drag and drop the compact server node into your workspace to start configuring your OPC-UA server.
 
-## Port Configuration:
+## Port Configuration
 
 After dragging the compact server node into your workspace, double-click on it to open the configuration settings.
 
@@ -98,7 +100,6 @@ For example, if your reComputer’s IP address is 192.168.0.157 and the assigned
 
 In Node-RED, the flow.set() function is used to store data in the flow context, enabling you to save information that can be accessed by any node within the same flow. This is particularly useful when you need to share data between different parts of your flow.
 
-
 **Add a Function Node**
 
 Drag and drop a Function node onto your Node-RED workspace.Double-click on the Function node to open its editor.
@@ -111,6 +112,7 @@ Suppose you want to store the temperature value from a Modbus RTU sensor as a fl
 flow.set("Temperature", msg.payload);
 
 ```
+
 This code saves the temperature data (contained in msg.payload) into a flow context variable called "Temperature".
 
 **Connecting the Function Node**
@@ -127,6 +129,7 @@ If you need to store a specific value from a PLC Digital Input/Output (DI/DO) ar
 flow.set("Coil3", msg.payload[2]);
 
 ```
+
 This code extracts the third value from the msg.payload array and stores it in a flow context variable named "Coil3".
 
 **Connecting the Function Node for DI/DO**
@@ -144,6 +147,7 @@ The **Address Space** tab is where the OPC UA server’s Information Model is co
 const opcua = coreServer.choreCompact.opcua;
 
 ```
+
 ### Namespace Creation
 
 The **namespace** is created within the server’s address space. This namespace will contain all the nodes and variables specific to your application.
@@ -167,6 +171,7 @@ const DataType = opcua.DataType;
 const StatusCodes = opcua.StatusCodes;
 
 ```
+
 ### Initializing Variables
 
 The variables that will be published by the server are initialized in the flow context. These variables represent the data that clients will read or write.
@@ -227,6 +232,7 @@ viewDO.addReference({
     "nodeId": gpioDI1.nodeId  // Reference to the Coil2 node
 });
 ```
+
 ## Connecting to the OPC UA Server with UaExpert
 
 To connect to our OPC UA server endpoint, you'll need an OPC UA client. Follow these steps to get started:
@@ -241,7 +247,7 @@ After downloading, install UaExpert on your computer following the on-screen ins
 
 **Set Up the Connection**
 
-Launch UaExpert and go to the Endpoints section.Create a new connection by entering your OPC UA server’s endpoint URL. 
+Launch UaExpert and go to the Endpoints section.Create a new connection by entering your OPC UA server’s endpoint URL.
 For example:`opc.tcp://<IP_reComputer>:<Port>`
 
 Example: `opc.tcp://192.168.0.157:54840`
@@ -265,11 +271,11 @@ Drag and drop the variables from the Analog and DIO folders into the UaExpert da
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

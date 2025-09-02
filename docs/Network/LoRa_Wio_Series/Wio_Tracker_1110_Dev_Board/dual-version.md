@@ -16,45 +16,35 @@ last_update:
 ---
 
 
-
-
 ## Introduction
 
 Experience seamless network integration with this dual-device demo. The setup features the versatile Seeed Studio Wio Tracker Dev Board and the robust Seeed Studio SenseCAP T1000-S Tracker device, both showcasing seamless transitions between LoRaWAN and Sidewalk networks for optimal coverage.
 
-
-
-* **Dual Network Support**: With a single button press, switch between LoRaWAN and Sidewalk to maintain persistent connectivity.
-* **Cloud-Connected**: Witness data transfer in real-time to AWS IoT Core, visualized through an AWS web app on a laptop display/monitor.
-* **Battery-Powered Efficiency**: The devices ensure consistent operation, untethered by wires for a truly mobile experience.
-
+- **Dual Network Support**: With a single button press, switch between LoRaWAN and Sidewalk to maintain persistent connectivity.
+- **Cloud-Connected**: Witness data transfer in real-time to AWS IoT Core, visualized through an AWS web app on a laptop display/monitor.
+- **Battery-Powered Efficiency**: The devices ensure consistent operation, untethered by wires for a truly mobile experience.
 
 The process is divided into these main steps:
 
-* [SDK Installation and Setup](https://wiki.seeedstudio.com/wio_tracker_dual_stack#setup-toolchain)
-* [Firmware Flashing](https://wiki.seeedstudio.com/wio_tracker_dual_stack#build-and-flash-the-demo)
-* AWS IoT Core Configuration
-* Amazon Location Configuration
-* [Web App Configuration](https://wiki.seeedstudio.com/wio_tracker_dual_stack#building-web-app)
-
-
+- [SDK Installation and Setup](https://wiki.seeedstudio.com/wio_tracker_dual_stack#setup-toolchain)
+- [Firmware Flashing](https://wiki.seeedstudio.com/wio_tracker_dual_stack#build-and-flash-the-demo)
+- AWS IoT Core Configuration
+- Amazon Location Configuration
+- [Web App Configuration](https://wiki.seeedstudio.com/wio_tracker_dual_stack#building-web-app)
 
 ## Prerequisites
-
 
 ### Installing the nRF Connect SDK
 
 There are different ways to install the nRF Connect SDK, depending on your preferred development environment and the [toolchain management tool](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#toolchain-management-tools):
 
-* Using Visual Studio Code and the nRF Connect for VS Code extension (recommended)
+- Using Visual Studio Code and the nRF Connect for VS Code extension (recommended)
 
-* Using command line and nRF Util
+- Using command line and nRF Util
 
 **Step 1: Update operating system**
 
-
 Before you start setting up the toolchain, install available updates for your operating system. See [Requirements](https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#requirements) for information on the supported operating systems.
-
 
 **Step 2: Install prerequisites**
 
@@ -66,20 +56,16 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="VSc" label="Visual Studio Code">
 
-  
-* The latest version of the <a href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#requirements-clt">nRF Command Line Tools</a> package. Download it from the <a href="https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools">nRF Command Line Tools</a> page.<br/>
+- The latest version of the <a href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#requirements-clt">nRF Command Line Tools</a> package. Download it from the <a href="https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools">nRF Command Line Tools</a> page.<br/>
 
-* The latest version of Visual Studio Code for your operating system from the <a href="https://code.visualstudio.com/download">Visual Studio Code download page</a>.<br/>
+- The latest version of Visual Studio Code for your operating system from the <a href="https://code.visualstudio.com/download">Visual Studio Code download page</a>.<br/>
 
-* In Visual Studio Code, the latest version of the <a href="https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect-extension-pack">nRF Connect for VS Code Extension Pack</a>. 
+- In Visual Studio Code, the latest version of the <a href="https://marketplace.visualstudio.com/items?itemName=nordic-semiconductor.nrf-connect-extension-pack">nRF Connect for VS Code Extension Pack</a>.
 
 </TabItem>
 <TabItem value="CLine" label="Command Line">
 
-  
-* The latest version of <a href="https://www.nordicsemi.com/Products/Development-tools/nrf-util">nRF Util development tool</a>,a unified command line utility for Nordic products.<br/>
-
-
+- The latest version of <a href="https://www.nordicsemi.com/Products/Development-tools/nrf-util">nRF Util development tool</a>,a unified command line utility for Nordic products.<br/>
 
 <div className="tip" style={{backgroundColor: 'lightblue', padding: '1em', borderRadius: '0.5em'}}>
   <p style={{marginBottom: '0.5em'}}>
@@ -90,9 +76,7 @@ import TabItem from '@theme/TabItem';
   </p>
 </div>
 
-* The latest version of <a href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#requirements-clt">nRF Command Line Tools</a> package,Download it from the <a href="https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools">nRF Command Line Tools</a> page.
-
-
+- The latest version of <a href="https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/nrf/installation/recommended_versions.html#requirements-clt">nRF Command Line Tools</a> package,Download it from the <a href="https://www.nordicsemi.com/Software-and-Tools/Development-Tools/nRF-Command-Line-Tools">nRF Command Line Tools</a> page.
 
 <div className="tip" style={{backgroundColor: 'lightblue', padding: '1em', borderRadius: '0.5em'}}>
     <p style={{marginBottom: '0.5em'}}>
@@ -106,18 +90,14 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-
-
-
 **Step 3: Install the nRF Connect SDK toolchain**
 
 <Tabs>
 <TabItem value="VScode" label="nRF Connect for Visual Studio Code">
   
-
-* Open the nRF Connect extension in Visual Studio Code by clicking its icon in the <code>Activity Bar</code>.<br/><br/>
-* In the extension’s <code>Welcome View</code>, click on <code>Install Toolchain</code>.<br/><br/>
-* Select the toolchain version to install. The toolchain version should match the nRF Connect SDK version you are going to work with. We use the <code>V2.5.0</code>(recommended).<br/><br/>
+- Open the nRF Connect extension in Visual Studio Code by clicking its icon in the <code>Activity Bar</code>.<br/><br/>
+- In the extension’s <code>Welcome View</code>, click on <code>Install Toolchain</code>.<br/><br/>
+- Select the toolchain version to install. The toolchain version should match the nRF Connect SDK version you are going to work with. We use the <code>V2.5.0</code>(recommended).<br/><br/>
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/bar2.png"/></div>
 After installing the toolchain, you can access the <code>Install Toolchain</code> option by clicking on <code>Manage toolchains</code>.
@@ -127,29 +107,34 @@ After installing the toolchain, you can access the <code>Install Toolchain</code
 </TabItem>
 <TabItem value="CL" label="Command Line">
 
-* Open a terminal window.
+- Open a terminal window.
 
-* Run the following command to install the nRF Util toolchain-manager command:
+- Run the following command to install the nRF Util toolchain-manager command:
+
  ```cpp
  nrfutil install toolchain-manager
  ```
 
-* Run the following command to list the available installations:
+- Run the following command to list the available installations:
+
  ```cpp
  nrfutil toolchain-manager search
  ```
 
 The versions from this list correspond to the nRF Connect SDK versions and will be version in the following step.
 
-* Run the following command to install the toolchain version for the SDK version of your choice:
+- Run the following command to install the toolchain version for the SDK version of your choice:
+
  ```cpp
  nrfutil toolchain-manager install --ncs-version version
  ```
 
  For example:
+
  ```cpp
  nrfutil toolchain-manager install --ncs-version v2.5.0
  ```
+
 This example command installs the toolchain required for the nRF Connect SDK v2.5.0(recommended).
 
 :::tip
@@ -160,31 +145,22 @@ To check the current configuration setting, use the <code>nrfutil toolchain-mana
   </TabItem>
 </Tabs>
 
-
-
 **Step 4: Get the nRF Connect SDK code**
-
-
 
   <Tabs>
   <TabItem value="VScode4" label="nRF Connect for Visual Studio Code">
 
 To clone the nRF Connect SDK code, complete the following steps:
 
-* Open the nRF Connect extension in Visual Studio Code by clicking its icon in the <code>Activity Bar</code>.
+- Open the nRF Connect extension in Visual Studio Code by clicking its icon in the <code>Activity Bar</code>.
 
-* In the extension’s <code>Welcome View</code>, click on <code>Manage SDKs</code>. The list of actions appears in the Visual Studio Code’s quick pick.
+- In the extension’s <code>Welcome View</code>, click on <code>Manage SDKs</code>. The list of actions appears in the Visual Studio Code’s quick pick.
 
+- Click <code>Install SDK</code>. The list of available SDK versions appears in the Visual Studio Code’s quick pick.
 
-* Click <code>Install SDK</code>. The list of available SDK versions appears in the Visual Studio Code’s quick pick.
-
-* Select the SDK version to install, we use `V2.5.0`.
-
+- Select the SDK version to install, we use `V2.5.0`.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/manage-sdk2.png"/></div>
-
-
-
 
 The SDK installation starts and it can take several minutes.
 
@@ -193,26 +169,30 @@ The SDK installation starts and it can take several minutes.
 
 To clone the repositories, complete the following steps:
 
-* On the command line, open the directory `ncs`. By default, this is one level up from the location where you installed the toolchain. This directory will hold all nRF Connect SDK repositories.
+- On the command line, open the directory `ncs`. By default, this is one level up from the location where you installed the toolchain. This directory will hold all nRF Connect SDK repositories.
 
-* Start the toolchain environment for your operating system using the following command:
+- Start the toolchain environment for your operating system using the following command:
 
   Windows
+
   ```cpp
   nrfutil toolchain-manager launch --terminal
   ```
+
   Linux/macOS
+
   ```cpp
   nrfutil toolchain-manager launch --shell
   ```
 
-* Determine the identifier of the revision of the nRF Connect SDK you want to work with. See the table above for more information. When you first install the nRF Connect SDK, it is recommended to install the latest released versions of the SDK and the toolchain.
+- Determine the identifier of the revision of the nRF Connect SDK you want to work with. See the table above for more information. When you first install the nRF Connect SDK, it is recommended to install the latest released versions of the SDK and the toolchain.
 
-* Initialize west with the revision of the nRF Connect SDK that you want to check out, replacing nRFConnectSDK_revision with the identifier:
+- Initialize west with the revision of the nRF Connect SDK that you want to check out, replacing nRFConnectSDK_revision with the identifier:
 
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr nRFConnectSDK_revision
   ```
+
 For example:
 
   **Specific release**: To check out the v2.5.0 release, enter the following command:
@@ -220,19 +200,22 @@ For example:
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v2.5.0
   ```
+
   **Development tag**: To check out the v1.9.2-dev1 tag, enter the following command:
+
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr v1.9.2-dev1
   ```
 
   **Branch**: To check out the main branch that includes the latest state of development, enter the following command:
+
   ```cpp
   west init -m https://github.com/nrfconnect/sdk-nrf --mr main
   ```
+
 This will clone the manifest repository sdk-nrf into nrf.
 
 Initializing west with a specific revision of the manifest file does not lock your repositories to this version. Checking out a different branch or tag in the sdk-nrf repository and running west update changes the version of the nRF Connect SDK that you work with.
-
 
 <div className="tip" style={{backgroundColor: 'lightblue', padding: '1em', borderRadius: '0.5em'}}>
     <p style={{marginBottom: '0.5em'}}>
@@ -243,16 +226,16 @@ Initializing west with a specific revision of the manifest file does not lock yo
     </p>
   </div>
   
-  
+- Enter the following command to clone the project repositories:
 
-* Enter the following command to clone the project repositories:
   ```cpp
   west update
   ```
 
 Depending on your connection, this might take some time.
 
-* Export a Zephyr CMake package. This allows CMake to automatically load the boilerplate code required for building nRF Connect SDK applications:
+- Export a Zephyr CMake package. This allows CMake to automatically load the boilerplate code required for building nRF Connect SDK applications:
+
   ```cpp
   west zephyr-export
   ```
@@ -262,12 +245,11 @@ Check [Installing the nRF Connect SDK](https://developer.nordicsemi.com/nRF_Conn
 </TabItem>
 </Tabs>
 
-
 ### Setting up the Sidewalk environment
 
 Follow these steps to download the Sidewalk application for the nRF Connect SDK:
 
-* Open a terminal window. Your directory structure should look as follows:
+- Open a terminal window. Your directory structure should look as follows:
 
 ```cpp
 .
@@ -280,17 +262,19 @@ Follow these steps to download the Sidewalk application for the nRF Connect SDK:
 |___ ...
 ```
 
-* Make sure the manifest path points to west.yml inside the nrf directory:
+- Make sure the manifest path points to west.yml inside the nrf directory:
 
 ```cpp
 west manifest --path
 /path-to-ncs-folder/nrf/west.yml
 ```
+
 In case your manifest path points to a different file, use the following command:
 
 ```cpp
 west config manifest.path nrf
 ```
+
 * Enable the Sidewalk group filter for west.
 
 ```cpp
@@ -304,14 +288,16 @@ west list sidewalk
 sidewalk     sidewalk                     <sidewalk_revision> https://github.com/nrfconnect/sdk-sidewalk
 ```
 
-* Update all repositories:
+- Update all repositories:
+
 ```cpp
 west update
 ```
 
 Depending on your connection, the update might take some time.
 
-* Install Python requirements for Sidewalk.
+- Install Python requirements for Sidewalk.
+
 ```cpp
 pip install -r sidewalk/requirements.txt
 ```
@@ -320,22 +306,20 @@ pip install -r sidewalk/requirements.txt
 
 This repository contains the software driver that enables the [LR11xx family](https://www.semtech.com/products/wireless-rf/lora-edge) of silicon to support the Sidewalk protocol when paired with the [Nordic nRF52840 MCU](https://www.nordicsemi.com/Products/Development-hardware/nrf52840-dk) and nRF Connect SDK. The driver is offered in binary form, as a static library which implements the "Platform Abstraction Layer" interfaces necessary to support LoRa or FSK connectivity. The static library contains within it a complete implementation of Semtech's SWDR001 (LR11xx Driver), which can be used to access other features of the LR11xx silicon, such as WIFI and GNSS scanning and ranging.
 
+- Download the [SWDM016](https://drive.google.com/drive/folders/1vHJVEFgyx4arHHPlSjdMkffVStnTpHqg?usp=sharing)
 
-* Download the [SWDM016](https://drive.google.com/drive/folders/1vHJVEFgyx4arHHPlSjdMkffVStnTpHqg?usp=sharing)
-
-* With your working directory in cloned nordic repo, at top level directory, i.e. ``~/ncs/<version>/sidewalk``:
+- With your working directory in cloned nordic repo, at top level directory, i.e. ``~/ncs/<version>/sidewalk``:
 
  ```cpp
  patch -p1 < ../nRF52840_LR11xx_driver_v010000.diff
  ```
+
 parent directory path `..` assumes you put the diff file there, otherwise you can specify the full path to its location.
 
-* Copy radio driver libraries ``lib*.a`` into sidewalk project to ``~/ncs/<version>/sidewalk/lib/lora_fsk/``  
+- Copy radio driver libraries ``lib*.a`` into sidewalk project to ``~/ncs/<version>/sidewalk/lib/lora_fsk/``  
 There are two libraries provided, one with ``LOG_RUNTIME_FILTERING`` enabled and other without.
 
-
-* Copy ``~/template_lbm_wio_tracker/boards/arm/wio_tracker_1110`` folder to ``~/ncs/v2.5.0/zephyr/boards/arm``.
-
+- Copy ``~/template_lbm_wio_tracker/boards/arm/wio_tracker_1110`` folder to ``~/ncs/v2.5.0/zephyr/boards/arm``.
 
 ```cpp
 ·
@@ -355,45 +339,48 @@ There are two libraries provided, one with ``LOG_RUNTIME_FILTERING`` enabled and
 
 In this section you will create all the resources that we need before getting started. As a first step you will create a Cloud9 Workspace that you'll use to build and deploy other resources. Then you will deploy a CDK Stack that contains all the backend resources for the Asset Tracker app. Finally, you will install all the frontend dependencies and configure the app.
 
-* Open the [AWS Cloud9 Console](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1), click `Create Environment`
+- Open the [AWS Cloud9 Console](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1), click `Create Environment`
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/cloud-9-environment.png"/></div>
 
-* Leave all other settings as default except the **Instance type**. Select `m5.large`.
+- Leave all other settings as default except the **Instance type**. Select `m5.large`.
 
 <div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/001/002/c9.3.png"/></div>
 
 **Step 2: Configure Prerequisites**
 
-* Open the Cloud9 IDE.
+- Open the Cloud9 IDE.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/open-cloud9.png"/></div>
 
-* Clone the github repo in your Cloud9 environment terminal by entering the following command:
+- Clone the github repo in your Cloud9 environment terminal by entering the following command:
 
  ```cpp
  git clone --recurse-submodules https://github.com/aws-samples/aws-iot-asset-tracker-demo.git /home/ec2-user/environment/asset-tracking-workshop
- ``` 
+ ```
+
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/open-could9.png"/></div>
 
-* Navigate to the sample app directory:
+- Navigate to the sample app directory:
 
  ```cpp
  cd ~/environment/asset-tracking-workshop
  ```
 
-* Resize the EBS Volume of the underlying EC2 instance.
+- Resize the EBS Volume of the underlying EC2 instance.
 
  ```cpp
  npm run utils:resizeC9EBS
  ```
 
-* Install the project's dependencies:
+- Install the project's dependencies:
+
  ```cpp
  npm ci
  ```
 
-* Deploy the backend infrastructure:
+- Deploy the backend infrastructure:
+
  ```cpp
  # Prepare the AWS account for CDK
  npm run infra:bootstrap
@@ -401,14 +388,11 @@ In this section you will create all the resources that we need before getting st
  npm run infra:deploy
  ```
 
-* Create a config file:
+- Create a config file:
 
  ```cpp
  npm run utils:createConfig
  ```
-
-
-
 
 ## LoRaWAN Configuration
 
@@ -417,7 +401,6 @@ In this section you will create all the resources that we need before getting st
 Check this [Get Started](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/Tutorial/Connect-M2-Multi-Platform-Gateway-to-AWS-IoT/#add-gateway) to add the [SenseCAP M2 Multi-Platform gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html) to AWS IoT Core.
 
 ### Add LoRaWAN Device on AWS
-
 
 **Step 1: Define the keys**
 
@@ -433,18 +416,15 @@ JoinEUI also known as AppEUI
 
 Login to [AWS IoT Console](https://console.aws.amazon.com/iot/home), navigate to `Devices`, click `Profiles`.
 
-* Device profile
+- Device profile
 
-Device profiles define the device capabilities and boot parameters that the network server uses to set the LoRaWAN radio access service. It includes selection of parameters such as LoRa frequency band, LoRa regional parameters version, and MAC version of the device. 
+Device profiles define the device capabilities and boot parameters that the network server uses to set the LoRaWAN radio access service. It includes selection of parameters such as LoRa frequency band, LoRa regional parameters version, and MAC version of the device.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/device-profiles.png"/></div>
 
-
 To learn about the different frequency bands, see [Consider selection of LoRa frequency bands for your gateways and device connection](https://docs.aws.amazon.com/iot-wireless/latest/developerguide/lorawan-rfregion-permissions.html#lorawan-frequency-bands).
 
-
-* Service profile
-
+- Service profile
 
 We recommend that you leave the setting `AddGWMetaData` enabled so that you'll receive additional gateway metadata for each payload, such as RSSI and SNR for the data transmission.
 
@@ -454,28 +434,23 @@ We recommend that you leave the setting `AddGWMetaData` enabled so that you'll r
 
 Navigate to `LPWAN devices` > `Devices`, click `Add wireless device`.
 
-
 `Wireless device specification`: OTAAv1.0x
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
-Select the device profile and destination you created in the previous step. 
+Select the device profile and destination you created in the previous step.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
 
-
 Navigate to the Devices page and choose the device you added before.
-
 
 ## Sidewalk Configuration
 
 ### Setting up a Sidewalk gateway (Optional)
 
-You can set up a Sidewalk gateway, configure it, and associate your gateway with your Amazon account. Your Sidewalk endpoint will connect to and communicate with the Sidewalk gateway after it’s registered with Amazon Sidewalk. 
-
+You can set up a Sidewalk gateway, configure it, and associate your gateway with your Amazon account. Your Sidewalk endpoint will connect to and communicate with the Sidewalk gateway after it’s registered with Amazon Sidewalk.
 
 Check [Setting up a Sidewalk gateway](https://docs.sidewalk.amazon/getting-started/sidewalk-onboard-prereq-gateway.html) for more details.
-
 
 ### Setting up your Sidewalk device
 
@@ -485,33 +460,27 @@ Check [Setting up a Sidewalk gateway](https://docs.sidewalk.amazon/getting-start
 
 Before creating a wireless device, first create a device profile.
 
-
 Navigat to the [Sidewalk tab of the Devices hub](https://console.aws.amazon.com/iot/home#/wireless/devices?tab=sidewalk), choose `Provision device`, and then perform the following steps.
-
 
 **Step 2: Obtain device JSON file**
 
 To obtain the JSON file for provisioning your Sidewalk device:
 
-* Go to the [Sidewalk devices hub](https://console.aws.amazon.com/iot/home#/wireless/devices?tab=sidewalk).
+- Go to the [Sidewalk devices hub](https://console.aws.amazon.com/iot/home#/wireless/devices?tab=sidewalk).
 
-* Choose the device that you added to AWS IoT Core for Amazon Sidewalk to view its details.
+- Choose the device that you added to AWS IoT Core for Amazon Sidewalk to view its details.
 
-* Obtain the JSON file by choosing `Download device JSON file` in the details page of the device that you added.
+- Obtain the JSON file by choosing `Download device JSON file` in the details page of the device that you added.
 
- A `certificate.json` file will be downloaded that contains the required information for provisioning your end device. 
+ A `certificate.json` file will be downloaded that contains the required information for provisioning your end device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/dual/download-json.png" alt="pir" width={800} height="auto" /></p>
- 
-
 
 **Step 3: Provision your Sidewalk endpoint**
 
-
 **Generate binary image**
 
-
-* Install the requirements file
+- Install the requirements file
 
  Go to the Sidewalk SDK folder `$[Amazon Sidewalk repository]/tools/scripts/public/provision/`, and then run the following command to install the `requirements` file.
 
@@ -519,18 +488,17 @@ To obtain the JSON file for provisioning your Sidewalk device:
  pip3 install -r requirements.txt
  ```
 
-
-* Generate the manufacturing binary image
+- Generate the manufacturing binary image
 
  Run the `provision.py` script to generate the manufacturing binary image file that will be used to provision the development board that you are using as a Sidewalk endpoint.
 
-
-* If you’re using the combined device JSON file that you obtained from the AWS IoT console, use the certificate_json parameter to specify this file as input when running the provisioning script.
+- If you’re using the combined device JSON file that you obtained from the AWS IoT console, use the certificate_json parameter to specify this file as input when running the provisioning script.
 
  ```cpp
  python3 provision.py aws --output_bin mfg.bin --certificate_json certificate.json \ 
     --config config/[device_vendor]/[device]_dk/config.yaml
  ```
+
  If you’re using the separate device JSON files that you obtained as responses from the GetDeviceProfile and GetWirelessDevice API operations, use the wireless_device_json and device_profile_json parameters to specify these files as input when running the provisioning script.
 
  ```cpp
@@ -544,43 +512,39 @@ You should see the following output:
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/gen-files.png"/></div>
 
-
-
-* Flash the mfg.hex file
+- Flash the mfg.hex file
 
  Your provisioning file will be typically located in the `EdgeDeviceProvisioning` directory.
 
-
  To flash the binary image, use the address `0xFD000` for loading the binary image on the Nordic Semiconductor HDK. For information about flashing the binary image, see the Nordic Semiconductor documentation.
-
 
 **Step 4: Build and flash the demo**
 
-* Open a terminal window.
+- Open a terminal window.
 
+- Go to the `template_lbm_wio_tracker` directory.
 
-* Go to the `template_lbm_wio_tracker` directory.
- 
  For example:
 
   ```cpp
   cd /opt/nordic/ncs/v2.5.0/sidewalk/samples/template_lbm_wio_tracker
   ```
 
-* Build the application by using the following west command:
+- Build the application by using the following west command:
 
  ```cpp
  west build --board wio_tracker_1110 -- -DRADIO=LR1110_SRC
  ```
+
 or with pre-compiled radio driver library:
+
  ```cpp
  west build --board wio_tracker_1110 -- -DRADIO=LR1110
  ```
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/comparing.png"/></div>
 
-
-* Flash the application by using the following west command:
+- Flash the application by using the following west command:
 
  ```cpp
  west flash
@@ -588,32 +552,23 @@ or with pre-compiled radio driver library:
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/flash-suc.png"/></div>
 
-
-
-
-
 ### Sidewalk Register
 
 After you’ve provisioned the Sidewalk endpoint, the endpoint must be registered so that it can communicate over the Sidewalk network.
 
+To register your Sidewalk endpoint, either use automatic touchless registration with Sidewalk Frustration Free Networking (FFN), or manually register your device using a Mac or native Ubuntu machine that runs the registration script.
 
-To register your Sidewalk endpoint, either use automatic touchless registration with Sidewalk Frustration Free Networking (FFN), or manually register your device using a Mac or native Ubuntu machine that runs the registration script. 
-
-
-
-|Criteria	Automatic| registration (using Sidewalk FFN)|Manual registration|
+|Criteria Automatic| registration (using Sidewalk FFN)|Manual registration|
  |--|--|--|
- |User and endpoint association|	This registration method doesn’t require any association between the Sidewalk endpoint and a user. The endpoint can join the Sidewalk network without being associated with any user.	|This registration method requires an association between the Sidewalk endpoint and a user’s Amazon account.|
- |LWA (Login with Amazon)|	LWA is not required.|	LWA is required to link the user’s Amazon account and the AWS account that’s used by the Sidewalk endpoint developer.|
+ |User and endpoint association| This registration method doesn’t require any association between the Sidewalk endpoint and a user. The endpoint can join the Sidewalk network without being associated with any user. |This registration method requires an association between the Sidewalk endpoint and a user’s Amazon account.|
+ |LWA (Login with Amazon)| LWA is not required.| LWA is required to link the user’s Amazon account and the AWS account that’s used by the Sidewalk endpoint developer.|
 
 **To perform registration using Sidewalk FFN:**
 
- * Your Sidewalk gateway and endpoint must be powered on.
- * Your gateway must be opted into Sidewalk, and in close range to your endpoint. We recommend that you keep the devices within 10 meters of each other.
-
+- Your Sidewalk gateway and endpoint must be powered on.
+- Your gateway must be opted into Sidewalk, and in close range to your endpoint. We recommend that you keep the devices within 10 meters of each other.
 
  For `Manual Sidewalk registration` and other details please check [here](https://docs.sidewalk.amazon/provisioning/iot-sidewalk-register-endpoint.html).
-
 
 ### Network Switch
 
@@ -621,40 +576,30 @@ To register your Sidewalk endpoint, either use automatic touchless registration 
 
  <div align="center"><img width="{400}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/click-button.png"/></div>
 
-
 ### View Message
 
 #### Add Destination
 
-
-In the [IoT Core console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home), select `LPWAN devices` from the left menu and then `Destinations`. 
+In the [IoT Core console](https://us-east-1.console.aws.amazon.com/iot/home?region=us-east-1#/home), select `LPWAN devices` from the left menu and then `Destinations`.
 
 Select `Edit` and select `Publish to AWS IoT Core message broker`. In the topic text box, enter assets as the MQTT Topic.
 
 Under `Permissions` select `Create a new service role` and leave the `Role name` blank.
 
-
 - **ExpressionType**: `MqttTopic`
 - **Expression**: `EmbeddedWorldTrackerDemo`
 
-
-
 #### Add Decoder Rule
 
-
 Navigate to `Message routing` tab → `Rules`, and click `Create Rule` button.
-
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules.png"/></div>
 
 Name your rule and submit it.
 
-
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/rules2.png"/></div>
 
-
 From the IoT Core Rule, select the `Lambda` Function.  then click `Create a Lambda function`.
-
 
 Author from scratch<br/>
 `Function name`: Name your function.<br/>
@@ -668,8 +613,6 @@ Click `Create function` button to create a new function
 On the following funcition config page, remove all the code and replace it with the following script, then click `Deploy` button.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decod.png"/></div>
-
-
 
 <details>
 <summary>Lambda Code</summary>
@@ -901,21 +844,14 @@ exports.handler = async (event) => {
     }
 };
 ```
+
 </details>
-
-
 
 <div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/004/001/lambda.1.png"/></div>
 
 Now go back to the `Device Destination`, select Enter a rule name and enter the name we just create.
 
-
-
 Navigate to the `AWS IoT Core Console` and select `MQTT Test Client` and subscribe to the topic.
-
-
-
-
 
 #### Add Tracker Rule
 
@@ -1040,9 +976,8 @@ async function updateDevicePosition(gps_data, device_id) {
     console.log(wireless_response)
 }
 ```
+
 </details>
-
-
 
 ## Building Web App
 
@@ -1052,91 +987,69 @@ We will deploy the necessary Amazon Location Service resources required to displ
 
 As a first step you will need to create a new Amazon Location Service Map resource. You will be doing so using the AWS Console.
 
-* Open the [Amazon Location Service Console](https://console.aws.amazon.com/location/home).
+- Open the [Amazon Location Service Console](https://console.aws.amazon.com/location/home).
 
-* Then expand the navigation bar on the left side of the screen, and select Maps.
+- Then expand the navigation bar on the left side of the screen, and select Maps.
 
-* In this screen, create a new map:
+- In this screen, create a new map:
 
-* Input the name of the map and select the `HERE Explore` map style, then click on `Create map`.
+- Input the name of the map and select the `HERE Explore` map style, then click on `Create map`.
 
 <div align="center"><img width="{600}" src="https://static.us-east-1.prod.workshops.aws/public/f3adb45a-50d1-499b-a20d-93bbbb82ee26/static/images/003/create-map.2.png"/></div>
 
 ### Creating Router Calculator
 
+- Open the [Amazon Location Service Console](https://console.aws.amazon.com/location/home).
 
-* Open the [Amazon Location Service Console](https://console.aws.amazon.com/location/home).
-
-* Then expand the navigation bar on the left side of the screen, and select `Route calculators`.
-
+- Then expand the navigation bar on the left side of the screen, and select `Route calculators`.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/router-cal.png"/></div>
 
-
-
-
 Continue by selecting `HERE` as Data Provider, click on the `Create route calculator` button.
-
-
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/create-router.png"/></div>
 
 ### Creating Tracker
 
-
-
 Navigate to `Trackers` -> `Create tracker`:
-
 
 Input the name of the tracker and select `Time-based filtering` under position filtering.
 
-
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/time-based.png"/></div>
-
 
 Then scroll down and mark the `Enable EventBridge events` setting under EventBridge configuration, then click `Create tracker`.
 
-
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/enable-bridge.png"/></div>
 
-
 ### Creating Geofence Collection
-
 
 Navigate to `Geofence collections`, and click `create geofence collection`.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/geolocate.png"/></div>
 
-
-
 ## Display Web App
 
 ### Deploy App to Cloudfront
 
-* In your Cloud9 Terminal, navigate to `/home/ec2-user/environment/asset-tracking-workshop`:
+- In your Cloud9 Terminal, navigate to `/home/ec2-user/environment/asset-tracking-workshop`:
 
  ```cpp
  cd /home/ec2-user/environment/asset-tracking-workshop
  ```
 
-* Run the following command:
+- Run the following command:
 
  ```cpp
  npm run frontend:publish
  ```
 
-* Once it's completed, you will receive the website URL.
- 
+- Once it's completed, you will receive the website URL.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/web-url.png"/></div>
 
-
-* Navigate to this URL in your browser to view your tracking application.
+- Navigate to this URL in your browser to view your tracking application.
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/dual/s3-map.png"/></div>
-
-
-
 
 ## Resource
 

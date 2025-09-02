@@ -16,7 +16,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 The 4G LTE HAT for Raspberry Pi provides reliable, high-speed cellular connectivity, making it essential for remote and industrial IoT (IIoT) applications. With MQTT, a lightweight messaging protocol, devices can communicate efficiently over cellular networks, even in isolated locations. Using AT commands for configuration, it simplifies the process of connecting IoT devices to the network. This combination of 4G LTE and MQTT enhances real-time data transmission, enabling scalable IIoT solutions with remote management capabilities.
 
@@ -31,7 +31,7 @@ The 4G LTE HAT for Raspberry Pi provides reliable, high-speed cellular connectiv
          <th>Raspberry Pi 4G LTE CAT4 HAT</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_23_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -49,9 +49,9 @@ The 4G LTE HAT for Raspberry Pi provides reliable, high-speed cellular connectiv
   </table>
 </div>
 
-### Software Requirements 
+### Software Requirements
 
-#### Communication drivers and tools 
+#### Communication drivers and tools
 
 If you have not installed relevant drivers and communication tools, please check the [guide](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#software-preparation) first
 
@@ -60,9 +60,9 @@ If you have not installed relevant drivers and communication tools, please check
 We will be using the Mosquitto broker, specifically the test broker available at **https://test.mosquitto.org** , which `does not require a username or password`. For convenience, it is recommended to [install Mosquitto](https://mqtt-explorer.com/) directly on your PC for testing purposes.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_ex.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_ex.PNG"
+    style={{ width: 500}}
   />
 </div>
 
@@ -73,12 +73,14 @@ We will be using the Mosquitto broker, specifically the test broker available at
 ```bash
 AT+QMTCFG="recv/mode",0,0,1
 ```
+
 **Step 2: Open a network for MQTT client**
 
 ```bash
 AT+QMTOPEN=0,"test.mosquitto.org",1883
 
 ```
+
 **Step 3: Check MQTT connection status (optional)**
 
 ```bash
@@ -101,6 +103,7 @@ Note that the client ID must be unique, so ensure you generate a highly unique o
 AT+QMTPUBEX=0,0,0,0,"test/topic",30 
 
 ```
+
 :::note
  when `>` appear type the massage and press ctrl+z
 :::
@@ -108,15 +111,15 @@ AT+QMTPUBEX=0,0,0,0,"test/topic",30
 ```bash
 > This is test data, hello MQTT.
 ```
+
 Open Mosquitto Explorer and enter the topic you published to. You will see the updates appear there.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_pub.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_pub.PNG"
+    style={{ width: 500}}
   />
 </div>
-
 
 **Step 6: Subscribe to a topic**
 
@@ -127,18 +130,18 @@ AT+QMTSUB=0,1,"test/topic",2
 Open Mosquitto Explorer and enter the topic  and massage you want to publish to from the 4G module.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_sub_2.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_sub_2.PNG"
+    style={{ width: 500}}
   />
 </div>
 
 You will then see the published message successfully subscribed to at the 4G module's end.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_sub_1.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_sub_1.PNG"
+    style={{ width: 500}}
   />
 </div>
 
@@ -149,22 +152,25 @@ AT+QMTUNS=0,2,"test/topic"
 ```
 
 **Step 8:  Disconnect the client from the MQTT server**
+
 ```bash
 AT+QMTDISC=0
 ```
 
-## Python Code Implementation 
+## Python Code Implementation
 
 ### Step 1. Prepare the Directory and Virtual Environment
 
-
 - Open a terminal on your Raspberry Pi.
 - Create a new project folder and navigate into it:
+
 ```bash
 mkdir mqtt_EX
 cd mqtt_EX
 ```
+
 - Set up a Python virtual environment:
+
 ```bash
 python3 -m venv --system-site-packages env
 ```
@@ -192,9 +198,10 @@ pip install pyserial
 ```bash
 usb_port = "/dev/ttyUSB2"
 ```
+
 - Save the file as test_mqtt.py in the **mqtt_EX** folder.
 
-```bash 
+```bash
 
 import serial
 import time
@@ -273,6 +280,7 @@ if __name__ == '__main__':
 ### Step 3. Run the Script
 
 - Open a terminal, ensure you're in the project directory:
+
 ```bash
 cd mqtt_EX
 ```
@@ -284,32 +292,29 @@ source env/bin/activate
 ```
 
 - Run the script using Python:
+
 ```bash
 python test_mqtt.py
 ```
-- The output 
+
+- The output
   
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/mqtt_python.PNG" style={{width:800}}/></div>
 
-
 ## Resources
-
 
 - **[PDF Book]** [MQTT Application Guide](https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/Quectel_LTE_Standard_MQTT_Application_Note_V1.2.pdf )
   
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

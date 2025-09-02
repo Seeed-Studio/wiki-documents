@@ -11,7 +11,7 @@ author: Guillermo
 
 Para más detalles, por favor haga clic [**aquí**](https://wiki.seeedstudio.com/Program_loss_by_repeated_power)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos **aquí** para brindarte diferentes tipos de soporte y asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a distintas preferencias y necesidades.
 

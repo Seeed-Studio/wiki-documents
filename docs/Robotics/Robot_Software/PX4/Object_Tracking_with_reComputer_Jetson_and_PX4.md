@@ -18,8 +18,9 @@ last_update:
 ---
 
 ## Introduction
+
 <div style={{ textAlign: "justify" }}>
-reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance. 
+reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance.
 Thanks to its compact design, it is highly suitable for being installed on drones to handle some AI tasks.This Wiki will show you how to use reComputer and px4 to achieve real-time target tracking on drone.
 </div>
 
@@ -32,7 +33,6 @@ Thanks to its compact design, it is highly suitable for being installed on drone
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Prerequisites
 
 - reComputer series of products
@@ -43,8 +43,6 @@ Thanks to its compact design, it is highly suitable for being installed on drone
 ## Configure the PX4 communication environment of ROS2
 
 To implement the state monitoring of the drone on Jetson, please first refer to [this wiki](https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/) to configure the ROS2 communication environment for PX4.
-
-
 
 ## Set up the Gemini 2 Python SDK
 
@@ -90,10 +88,9 @@ sudo udevadm control --reload-rules && sudo udevadm trigger
 
 Connect the PX4 controller to the UART1 serial port of Jetson
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_mini.jpg" />
 </div>
-
 
 Open one terminal and start the Agent on the jetson:
 
@@ -103,11 +100,13 @@ cd /path/to/Micro-XRCE-DDS-Agent/build
 ```
 
 By using the following command and opening another terminal, you can see the status topic published by px4:
+
 ```bash
 ros2 topic list | grep "/fmu/out/"
 ```
+
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Object_Tracking/px4_topic.png" />
 </div>
 
@@ -122,6 +121,7 @@ By reading the content of the following topics, you can obtain the basic status 
 - /fmu/out/vehicle_local_position -> Position and velocity in the local NED frame.
 - /fmu/out/vehicle_odometry -> Full 6-DoF pose and velocity data.
 - /fmu/out/vehicle_status -> Overall vehicle state, mode, and readiness.
+
 :::
 
 ## Quickly configure the object detection environment
@@ -143,6 +143,7 @@ pip install numpy==1.23.5
 ```bash
 wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt
 ```
+
 **Step 4.** Export engine model for using tensorrt inference:
 
 ```bash
@@ -160,18 +161,22 @@ cd ..
 # build the package
 colcon build
 ```
+
 :::note
 Before running the detection node, you need to move the previously generated engine model file to the `/ROS2-package-for-target-tracking/models` directory. Additionally, you must clone the `px4_msgs` and `px4_ros_com` packages(refer to [this wiki](https://wiki.seeedstudio.com/control_px4_with_recomputer_jetson/#step-2-build-the-px4_msgs-ros-2-package)) in the src directory of your workspace.
 Your src directory structure should be as follows:
+
 ```bash
 └── src
     ├── detect
     ├── px4_msgs
     └── px4_ros_com
 ```
+
 :::
 
 To run the ROS2 package for normal operation of target tracking, you need to open a terminal and start the MicroXRCEAgent:
+
 ```bash
 ./MicroXRCEAgent serial --dev /dev/ttyTHS1 -b 921600
 
@@ -189,19 +194,16 @@ ros2 run detect detect
 The above video presents an example of achieving target tracking on a drone. It locates the target through target detection and uses the ByteTrack target tracking algorithm to precisely track the specific target. At the same time, depth images are used to estimate the distance between the drone and the target.
 </div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

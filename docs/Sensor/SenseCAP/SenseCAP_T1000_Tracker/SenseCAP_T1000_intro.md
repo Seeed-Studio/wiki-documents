@@ -17,17 +17,13 @@ last_update:
 [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html), as compact as a credit card, effortlessly fits into your pocket or attaches to your assets.
 It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor positioning. Beyond just location tracking, it observes parameters like temperature, brightness, and movement. With an emergency button and buzzer, and a battery life that stretches for months on a single charge, it assures reliable tracking across various applications.
 
-
-
 <h1 style={{ textAlign: 'center', color: '#ffff' }}>Catalog for SenseCAP T1000 Tracker</h1>
-
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker/Introduction/" class="sensecap">Introduction</a>
           <a href= "https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/" class="sensecap2">Quick Start</a>
            <a href= "https://wiki.seeedstudio.com/T1000_payload/" class="sensecap3">Payload Format</a>
 </div>
-
 
 ### Location User Guide
 
@@ -40,8 +36,6 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
 
 ### Integrated with LoRaWAN® Network Server
 
-
-
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/" class="sensecap">The Things Network</a>
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Helium/" class="sensecap2">Helium</a>
@@ -52,9 +46,7 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_Tracker_Loriot/" class="sensecap2">Loriot</a>
 </div>
 
-
 ### Integrated with Popular Dashboard Platform
-
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Datacake_TTS/" class="sensecap">Datacake</a>
@@ -80,9 +72,7 @@ It's equipped with GPS, Bluetooth, and Wi-Fi for seamless indoor and outdoor pos
           <a href= "https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_Wialon/" class="sensecap">Wialon</a>
 </div>
 
-
 ### FAQ
-
 
 <div class="all_container">
           <a href= "https://wiki.seeedstudio.com/faq_for_SenseCAP_T1000/" class="sensecap">FAQ</a>

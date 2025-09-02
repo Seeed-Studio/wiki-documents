@@ -25,11 +25,9 @@ This tutorial demonstrate how to read sensor values connnected to the ODYSSEY - 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/receivingData.gif" /></div>
 
-
 ## Visulization of Data
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/visulizeData.jpg" /></div>
-
 
 ## Introduction
 
@@ -47,7 +45,6 @@ Once installed Azure CLI, open `cmd` or `Powershell` and run `az` command and yo
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/AzureCLI.png" /></div>
 
-
 ## Azure CLI Pre-configurations
 
 ### Log into Azure
@@ -55,7 +52,6 @@ Once installed Azure CLI, open `cmd` or `Powershell` and run `az` command and yo
 Open `cmd` or `Powershell` and run the `az login` command. A browser window will appear and log in your Microsoft Azure account.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/azAcc.png" /></div>
-
 
 ### Adding Microsoft IoT Azure Extensions for Azure CLI
 
@@ -89,7 +85,6 @@ This part describes how to create an IoT Hub using Azure portal:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/iotHub.jpg" /></div>
 
-
 1.Select **Next: Size and scale** to continue:
 
 - **Pricing and scale tier:** Select **F1: Free tier** for now. You can choose from several tiers, depending on how many features and how many messages you send through your solution per day.
@@ -97,7 +92,6 @@ This part describes how to create an IoT Hub using Azure portal:
 2.Select **Review + create** tab to review settings and click **Create** to create your new IoT Hub. Creating the IoT might take few minutes.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/iotHubProcess.jpg" /></div>
-
 
 ## Register a Device
 
@@ -109,11 +103,11 @@ A device must be registered with your IoT Hub before it can connect:
 az iot hub device-identity create --hub-name iot-test-1 --device-id MyPythonDevice
 ```
 
-### Note:
+### Note
 
 - `hub-name` -> Replace `iot-test-1` with your created IoT Hub name.
 
-- `device-id` -> `MyPythonDevice`. This is the name of the device that is registering. In my case, MyPythonDevice is the device id. 
+- `device-id` -> `MyPythonDevice`. This is the name of the device that is registering. In my case, MyPythonDevice is the device id.
 
 2.Run the following commands to get the *device connection string* for the device we registered.
 
@@ -123,12 +117,11 @@ az iot hub device-identity show-connection-string --hub-name iot-test-1 --device
 
 Make a note of the device connection string, which looks like: `HostName={YourIoTHubName}.azure-devices.net;DeviceId=MyPythonDevice;SharedAccessKey={YourSharedAccessKey}`. This will be used later.
 
-### Note:
+### Note
 
 - Replace your `hub-name` and `device-id`, the same as above.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/deviceID.png" /></div>
-
 
 ## Collecting Data using Arduino Core
 
@@ -138,7 +131,7 @@ This section simply use Arduino core to read sensor values and prints the readin
 
 2.Connect a Grove Light sensor signal wire to **A0** of ODYSSEY - X86J41x5, and also power and ground. Please refer to to Pinout diagram in Getting Started for more information.
 
-3.Upload the following Code to ODYSSEY - X86J41x5 using Arduino IDE. Remember to select the correct **Board** and **Port**. Make a note of the **Port** here, which will be used later. In my case, the port is `COM4`. 
+3.Upload the following Code to ODYSSEY - X86J41x5 using Arduino IDE. Remember to select the correct **Board** and **Port**. Make a note of the **Port** here, which will be used later. In my case, the port is `COM4`.
 
 ### Arduino Code
 
@@ -258,7 +251,6 @@ The following screenshot shows the output of sending sensor data to Azure IoT Hu
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/sendingData.png" /></div>
 
-
 ## Reading Data from Azure IoT Hub
 
 The IoT Hub CLI extension can connect to the service-side Events endpoint on IoT Hub. The extension receives the device-to-cloud messages sent from our device.
@@ -269,14 +261,13 @@ Run the following command in any terminal and you can start monitoring messages 
 az iot hub monitor-events --hub-name iot-test-1 --device-id MyPythonDevice
 ```
 
-### Note:
+### Note
 
 - Replace your `hub-name` and `device-id`, the same as above.
 
 The following screenshot shows the messages sent from ODYSSEY - X86J41x5 to the Iot Hub. This data can be processed or displayed.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/recevingData.jpg" /></div>
-
 
 ---
 
@@ -297,7 +288,6 @@ To add a consumer group:
 2.Open your IoT Hub, select **Built-in endpoints**, under **Consumer Groups** enter a name to create a new consumer group, and **Save**.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/endpoint.jpg" /></div>
-
 
 In my case, `lightsensor` is the new consumer group.
 
@@ -321,7 +311,6 @@ To create a Stream Analytic Job:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/analytic.jpg" /></div>
 
-
 ## Add an Input to the Stream Analytics job
 
 1.Open the Stream Analytics job
@@ -339,7 +328,6 @@ To create a Stream Analytic Job:
 - **Consumer group**: Choose the one we just created.
 
 <div align="center"><img width={350} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/settings.jpg" /></div>
-
 
 1.Select **Save**.
 
@@ -361,7 +349,6 @@ To create a Stream Analytic Job:
 
 <div align="center"><img width={350} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/powerBI.jpg" /></div>
 
-
 7.Select **Save**.
 
 ## Configure the query of the Stream Analytics job
@@ -374,13 +361,11 @@ To create a Stream Analytic Job:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBIsettings.jpg" /></div>
 
-
 ## Run the Stream Analytics job
 
 1.Under **Overview** click **Start** -> **Now** -> **Start**. The job status changes from **Stopped** to **Running**.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/run.jpg" /></div>
-
 
 **Note: To start getting sensor readings, remember to run the Python script in ODYSSEY - X86J41x5 to send data to cloud.**
 
@@ -394,7 +379,6 @@ To create a Stream Analytic Job:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI1.jpg" /></div>
 
-
 4.Create a line chart to show real-time light sensor value over time.
 
 - Under **Visualizations** select **Line chart**.
@@ -405,7 +389,6 @@ To create a Stream Analytic Job:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI2.jpg" /></div>
 
-
 5.Click **Save** to save Report.
 
 6.Click **File** -> **Publish to web** -> **Create embed code** -> **Publish**
@@ -413,7 +396,6 @@ To create a Stream Analytic Job:
 Now you can view the sensor reading on a dashboard via Power BI!
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/AzureIOT/PowerBI3.jpg" /></div>
-
 
 Microsoft also offers the [Power BI mobile apps](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) for viewing and interacting with your Power BI dashboards and reports on your mobile device.
 
@@ -424,15 +406,15 @@ You've successfully set up your ODYSSEY - X86J41x5 for one of the IoT scenario, 
 *For more technical support please visit [Azure IoT](https://azure.microsoft.com/en-us/overview/iot/).*
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -22,23 +22,23 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 
 ## Features
 
-* **Solid Performance:** high reliability, superior stability, and ultra-low power consumption
-* **Compact Size:** air temperature, humidity, barometric pressure, and light all in one
-* **Universal Protocols:** MODBUS RS-485 or SDI-12
-* **Wide Range Power Supply:** 3.6V ~ 16V
-* **Strong Robustness:** IP66 enclosure, suitable for outdoor applications and extremely complicated environment
-* **User-friendly:** with build-in data pre-processing, easy to use, integrate and install
+- **Solid Performance:** high reliability, superior stability, and ultra-low power consumption
+- **Compact Size:** air temperature, humidity, barometric pressure, and light all in one
+- **Universal Protocols:** MODBUS RS-485 or SDI-12
+- **Wide Range Power Supply:** 3.6V ~ 16V
+- **Strong Robustness:** IP66 enclosure, suitable for outdoor applications and extremely complicated environment
+- **User-friendly:** with build-in data pre-processing, easy to use, integrate and install
 
 ## Applications
 
 ![Applications](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/applications.png)
 
-* Smart Agriculture
-* Greenhouse
-* Smart Industry
-* Smart Cities
-* Environmental Monitoring
-* Other IoT Sensor Applications
+- Smart Agriculture
+- Greenhouse
+- Smart Industry
+- Smart Cities
+- Environmental Monitoring
+- Other IoT Sensor Applications
 
 ## Specifications
 
@@ -266,6 +266,6 @@ This weather instrument supports two universal standard protocols: MODBUS (MODBU
 
 ## Sources
 
-* [SenseCAP ORCH S4 User Guide](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-User_Guide.pdf)
+- [SenseCAP ORCH S4 User Guide](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-User_Guide.pdf)
 
-* [SenseCAP ORCH S4 Specifications & Datasheet](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-DataSheet.pdf)
+- [SenseCAP ORCH S4 Specifications & Datasheet](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-DataSheet.pdf)

@@ -348,7 +348,6 @@ reComputer R1000 エッジ IoT コントローラーは、高性能な Raspberry
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## ハードウェア概要
@@ -479,7 +478,6 @@ reComputer R1000 にはデフォルトで電源ボタンが付属しておらず
     </tr>
   </tbody>
 </table>
-
 </div>
 
 GPIOのマッピングとオフセットを照会するには、以下のコマンドを使用してください：
@@ -976,7 +974,6 @@ reComputer R1000 は豊富な拡張モジュールとアクセサリーをサポ
     </tr>
   </tbody>
 </table>
-
 </div>
 
 reComputer R1000 メインボードには 2 つの Mini-PCIe スロットが搭載されています。Mini-PCIe スロット 1 は USB プロトコルを使用する 4G モジュール、LoRa® モジュール、および USB プロトコルを使用する Zigbee モジュールをサポートします。一方、Mini-PCIe スロット 2 は USB および SPI プロトコルを使用する LoRa® モジュールと USB プロトコルを使用する Zigbee モジュールをサポートします。
@@ -1417,7 +1414,6 @@ reComputer R1000は、基板上の2つのMini-PCIeスロットの下にあるPCI
   </tr>
   </tbody>
 </table>
-
 </div>
 
 :::note

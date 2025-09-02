@@ -15,16 +15,13 @@ last_update:
 
 This tutorial will guide users to add the [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) to TTN Mapper.
 
-
 In order to explore the next steps, please refer to [Connect to The Things Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/) to register your device first.
 
 ### Configure the Payload formatters
 
 Create a `Custom JavaScript formatter` and copy the following code.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decoder.png" alt="pir" width={800} height="auto" /></p>
-
 
 <details>
 
@@ -884,6 +881,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 ### Add Webhook template
@@ -891,7 +889,6 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 Navigate to `Integrations` -> `Webhooks`, then select `TTN Mapper`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook-map.png" alt="pir" width={800} height="auto" /></p>
-
 
 Give a name to your integration by filling in the Webhook ID field.
 
@@ -901,23 +898,15 @@ To read more about experiments, read the Experiments section here.
 
 Finish by clicking the `Create TTN Mapper webhook` button.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook2.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Observe The Network Coverage
 
-
 Navigate to [TTN Mapper](https://ttnmapper.org/) and select `Advanced Maps` in the top menu.
-
-
-
 
 In the `Device data` section, fill in the `Device ID` field with the device ID from The Things Stack. <br/>
 Choose today as the `Start Date` and the `End Date`. <br/>
 Click the `View Map` button to see data points coming from your end device’s uplink data.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/view-map.png" alt="pir" width={800} height="auto" /></p>
 

@@ -109,21 +109,21 @@ Not all websites are designed for small displays or embedded devices. Here are t
 
 1. **Choose mobile-responsive websites**:
 
-  - Sites designed for mobile devices will typically display better on smaller screens
+- Sites designed for mobile devices will typically display better on smaller screens
 
-  - Look for sites with adaptive layouts that work well at your device's resolution
+- Look for sites with adaptive layouts that work well at your device's resolution
 
 2. **Consider simple, lightweight pages**:
 
-  - Complex websites with heavy JavaScript may load slowly or consume more resources
+- Complex websites with heavy JavaScript may load slowly or consume more resources
 
-  - Static pages typically perform better than dynamic web applications
+- Static pages typically perform better than dynamic web applications
 
 3. **Avoid sites requiring authentication**:
 
-  - Login sessions may expire, requiring manual intervention
+- Login sessions may expire, requiring manual intervention
 
-  - Some authentication methods may not work well on embedded devices
+- Some authentication methods may not work well on embedded devices
 
 ### Recommended Web Content Types
 
@@ -131,35 +131,35 @@ Here are some web content types that work particularly well with SenseCraft HMI'
 
 1. **Weather dashboards**:
 
-  - [Weather.gov](https://weather.gov)
+- [Weather.gov](https://weather.gov)
 
-  - [Windy.com](https://www.windy.com/)
+- [Windy.com](https://www.windy.com/)
 
-  - [AccuWeather](https://www.accuweather.com/)
+- [AccuWeather](https://www.accuweather.com/)
 
 2. **Monitoring dashboards**:
 
-  - Grafana dashboards
+- Grafana dashboards
 
-  - Home automation control panels
+- Home automation control panels
 
-  - System status pages
+- System status pages
 
 3. **Information displays**:
 
-  - Transit schedules
+- Transit schedules
 
-  - Flight information
+- Flight information
 
-  - Meeting room availability
+- Meeting room availability
 
 4. **Documentation or reference**:
 
-  - Local wikis
+- Local wikis
 
-  - Procedure guides
+- Procedure guides
 
-  - Quick reference information
+- Quick reference information
 
 ## Creating Custom Web Content
 
@@ -215,23 +215,23 @@ To display custom web content, you'll need to host it somewhere accessible to yo
 
 1. **Local network server**:
 
-  - Set up a simple web server on your local network
+- Set up a simple web server on your local network
 
-  - Use tools like XAMPP, NGINX, or a Raspberry Pi running a web server
+- Use tools like XAMPP, NGINX, or a Raspberry Pi running a web server
 
 2. **Free static hosting services**:
 
-  - [GitHub Pages](https://pages.github.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-  - [Netlify](https://www.netlify.com/)
+- [Netlify](https://www.netlify.com/)
 
-  - [Vercel](https://vercel.com/)
+- [Vercel](https://vercel.com/)
 
 3. **Cloud services with free tiers**:
 
-  - [Firebase Hosting](https://firebase.google.com/products/hosting)
-   
-  - [AWS S3 Static Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
+- [Firebase Hosting](https://firebase.google.com/products/hosting)
+
+- [AWS S3 Static Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 
 ## Special Use Cases
 
@@ -241,21 +241,21 @@ The Web function can be used to display resources on your local network:
 
 1. **Home automation dashboards**:
 
-  - Home Assistant: `http://homeassistant.local:8123`
+- Home Assistant: `http://homeassistant.local:8123`
 
-  - OpenHAB: `http://openhab.local:8080`
+- OpenHAB: `http://openhab.local:8080`
 
 2. **Network monitoring tools**:
 
-  - Router admin panels
+- Router admin panels
 
-  - Network monitoring dashboards
+- Network monitoring dashboards
 
 3. **Local media servers**:
 
-  - Plex status page
+- Plex status page
 
-  - NAS web interfaces
+- NAS web interfaces
 
 :::warning
 For security reasons, be cautious when displaying administrative interfaces on publicly visible devices.
@@ -317,45 +317,45 @@ If you want to display multiple web pages in rotation:
 
 1. **Web page doesn't load**:
 
-  - Verify the URL is correct and includes the http:// or https:// prefix. Sometimes obviously entered the correct URL, but still can not preview, you can try to add “/” at the end of the URL, there may be a miraculous effect.
+- Verify the URL is correct and includes the http:// or https:// prefix. Sometimes obviously entered the correct URL, but still can not preview, you can try to add “/” at the end of the URL, there may be a miraculous effect.
 
-  - Check if the page is accessible by testing in a regular browser
+- Check if the page is accessible by testing in a regular browser
 
-  - Ensure your device has internet connectivity
+- Ensure your device has internet connectivity
 
-  - Some websites may block embedding or have security restrictions
+- Some websites may block embedding or have security restrictions
 
 2. **Content displays incorrectly**:
 
-  - The website may not be optimized for your device's screen size
+- The website may not be optimized for your device's screen size
 
-  - Try a mobile-specific version of the site if available
+- Try a mobile-specific version of the site if available
 
-  - Consider creating a custom page specifically for your display dimensions
+- Consider creating a custom page specifically for your display dimensions
 
 3. **Performance issues**:
 
-  - Complex websites with animations or heavy JavaScript may run slowly
+- Complex websites with animations or heavy JavaScript may run slowly
 
-  - Try simpler pages or custom-built alternatives
+- Try simpler pages or custom-built alternatives
 
-  - Some websites may use more memory than your device can handle
+- Some websites may use more memory than your device can handle
 
 4. **Deployment fails**:
 
-  - Ensure your device is properly connected to SenseCraft HMI
-   
-  - Check your device's internet connection
+- Ensure your device is properly connected to SenseCraft HMI
+
+- Check your device's internet connection
   
-  - Restart your device and try deploying again
+- Restart your device and try deploying again
 
 5. **Content needs frequent refresh**:
 
-  - Some dynamic content may not auto-update
+- Some dynamic content may not auto-update
   
-  - Consider setting a refresh interval in a custom page, or
+- Consider setting a refresh interval in a custom page, or
   
-  - Periodically redeploy the configuration
+- Periodically redeploy the configuration
 
 ## Best Practices
 
@@ -365,21 +365,21 @@ When using the Web function, keep these security considerations in mind:
 
 1. **Avoid sensitive information**:
 
-  - Don't display pages containing personal or confidential information on publicly visible devices
+- Don't display pages containing personal or confidential information on publicly visible devices
   
-  - Be cautious with admin panels or control interfaces
+- Be cautious with admin panels or control interfaces
 
 2. **Use HTTPS when possible**:
 
-  - Prefer secure (https://) URLs over non-secure (http://) ones
+- Prefer secure (https://) URLs over non-secure (http://) ones
   
-  - This helps protect the data transmitted to your device
+- This helps protect the data transmitted to your device
 
 3. **Consider network isolation**:
 
-  - For displays showing internal resources, consider using a separate network
+- For displays showing internal resources, consider using a separate network
   
-  - Use firewall rules to limit what your device can access
+- Use firewall rules to limit what your device can access
 
 ### Maintenance Tips
 
@@ -387,21 +387,21 @@ To keep your web displays running smoothly:
 
 1. **Periodic checks**:
 
-  - Regularly verify that the displayed content is still working correctly
+- Regularly verify that the displayed content is still working correctly
 
-  - Websites can change their layouts or URLs without notice
+- Websites can change their layouts or URLs without notice
 
 2. **Update bookmarks**:
 
-  - Keep a list of useful URLs for your displays
+- Keep a list of useful URLs for your displays
 
-  - Test alternatives in case your preferred sites change
+- Test alternatives in case your preferred sites change
 
 3. **Create backups**:
 
-  - For critical displays, create and host backup pages that can be quickly deployed
+- For critical displays, create and host backup pages that can be quickly deployed
 
-  - This ensures continuity if a primary web resource becomes unavailable
+- This ensures continuity if a primary web resource becomes unavailable
 
 ## Conclusion
 
@@ -412,7 +412,7 @@ Remember that not all web content is suited for small displays or embedded devic
 ## Resources
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [Compatible Devices - reTerminal E10xx](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
 
@@ -420,12 +420,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

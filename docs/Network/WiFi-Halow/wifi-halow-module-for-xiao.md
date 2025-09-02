@@ -62,7 +62,6 @@ Wi-Fi HaLow is a wireless networking protocol based on the IEEE 802.11ah standar
 
 5. **Security**: Inherits the robust security features of the Wi-Fi family, including WPA3 encryption.
 
-
 ### Why Wi-Fi HaLow Matters
 
 Wi-Fi HaLow addresses the growing needs of IoT applications that require long-range connectivity, low power consumption, and the ability to handle numerous devices simultaneously. It bridges the gap between traditional Wi-Fi and LPWAN technologies, offering:
@@ -104,7 +103,6 @@ The MM-IoT-SDK architecture consists of several layers:
 3. **Application Layer**: Offers APIs for application development and device management
 
 This framework allows developers to quickly implement Wi-Fi HaLow functionality while maintaining flexibility for custom applications.
-
 
 ## Materials Required
 
@@ -233,6 +231,7 @@ Download the [ESP-IDF Tools Installer](https://dl.espressif.com/dl/esp-idf/?idf=
 **Step 3.** Verify the installation
 
 Open a new Command Prompt and run:
+
 ```bash
 esp-idf --version
 ```
@@ -246,11 +245,13 @@ If the installation was successful, you should see the version number 5.1.1.
 **Step 1.** Install prerequisites
 
 Open Terminal and install Homebrew if you haven't already:
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 Install the required packages:
+
 ```bash
 brew install cmake ninja dfu-util
 ```
@@ -280,6 +281,7 @@ Add this line to your `~/.profile` or `~/.zshrc` to automatically set up the env
 **Step 1.** Install prerequisites
 
 For Ubuntu and Debian:
+
 ```bash
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
@@ -313,7 +315,9 @@ After installation, you may need to restart your computer to ensure all environm
 
 :::note
 For more detailed instructions on installing ESP-IDF v5.1.1, you can refer to the official Espressif documentation:
+
 - [ESP-IDF Get Started Guide](https://docs.espressif.com/projects/esp-idf/en/v5.1.1/esp32s3/get-started/index.html)
+
 :::
 
 ## Clone and Configure mm-iot-esp32 Repository
@@ -324,12 +328,14 @@ Follow these steps to clone the mm-iot-esp32 repository and set up the environme
 <TabItem value="Windows" label="Windows">
 
 **Step 1.** Clone the repository
+
 ```bash
 cd %USERPROFILE%
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
 **Step 2.** Export IDF variables
+
 ```bash
 cd %USERPROFILE%\mm-iot-esp32
 export.bat
@@ -338,6 +344,7 @@ export.bat
 **Step 3.** Set MMIOT_ROOT environment variable
 
 You can set this permanently through Windows System Properties:
+
 1. Open System Properties (Win + R, type `sysdm.cpl`)
 2. Click "Environment Variables"
 3. Under "User variables", click "New"
@@ -346,6 +353,7 @@ You can set this permanently through Windows System Properties:
 6. Click "OK" to save
 
 Alternatively, you can set it temporarily in Command Prompt:
+
 ```bash
 set MMIOT_ROOT=C:\Users\YourUsername\mm-iot-esp32
 ```
@@ -355,12 +363,14 @@ set MMIOT_ROOT=C:\Users\YourUsername\mm-iot-esp32
 <TabItem value="MacOS" label="MacOS">
 
 **Step 1.** Clone the repository
+
 ```bash
 cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
 **Step 2.** Export IDF variables
+
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
@@ -369,11 +379,13 @@ source export.sh
 **Step 3.** Set MMIOT_ROOT environment variable
 
 For temporary use:
+
 ```bash
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
 For permanent use, add to your shell configuration file:
+
 ```bash
 # For bash users (add to ~/.bash_profile or ~/.bashrc)
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bash_profile
@@ -383,6 +395,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
 Then reload your shell configuration:
+
 ```bash
 # For bash
 source ~/.bash_profile
@@ -396,12 +409,14 @@ source ~/.zshrc
 <TabItem value="Linux" label="Linux">
 
 **Step 1.** Clone the repository
+
 ```bash
 cd ~
 git clone https://github.com/Seeed-Studio/mm-iot-esp32.git
 ```
 
 **Step 2.** Export IDF variables
+
 ```bash
 cd ~/mm-iot-esp32
 source export.sh
@@ -410,11 +425,13 @@ source export.sh
 **Step 3.** Set MMIOT_ROOT environment variable
 
 For temporary use:
+
 ```bash
 export MMIOT_ROOT=~/mm-iot-esp32
 ```
 
 For permanent use, add to your shell configuration file:
+
 ```bash
 # For bash users
 echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.bashrc
@@ -424,6 +441,7 @@ echo 'export MMIOT_ROOT=~/mm-iot-esp32' >> ~/.zshrc
 ```
 
 Then reload your shell configuration:
+
 ```bash
 # For bash
 source ~/.bashrc
@@ -483,9 +501,11 @@ nano src/mm_app_loadconfig.c
 
 :::caution
 Important Note About Country Code:
+
 - The country code must be set to "US" as this product is currently only available for the North American market
 - The product is not yet available for other regions due to regulatory requirements
 - Using the product in regions other than North America may violate local regulations
+
 :::
 
 ### Building Process
@@ -499,9 +519,11 @@ idf.py build
 ```
 
 :::note
+
 - The `idf.py set-target` command only needs to be run once for each example
 - `idf.py fullclean` ensures a clean build by removing all previous build artifacts
 - After successful build, the firmware binary will be located in the `build` directory
+
 :::
 
 ### Build Output
@@ -559,6 +581,7 @@ idf.py flash monitor
 ### Step 5: Monitor Results
 
 If everything is working correctly:
+
 - The serial monitor will start automatically after flashing
 - The program will begin scanning for Wi-Fi HaLow networks
 - If any Wi-Fi HaLow gateways are in range, their information will be displayed in the serial monitor
@@ -567,20 +590,22 @@ Example output in the serial monitor:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/9.png" style={{width:1000, height:'auto'}}/></div>
 
-
 :::tip
+
 - Make sure there are Wi-Fi HaLow gateways in your vicinity to detect networks
 - The scanning process runs continuously, so you'll see periodic updates of available networks
 - Press Ctrl+C to stop the monitor and exit the program
+
 :::
 
 :::note
 If you don't see any networks:
+
 - Verify that your Wi-Fi HaLow gateway is powered on and functioning
 - Check that you're within range of the gateway
 - Ensure the module is properly connected to your XIAO ESP32S3
-:::
 
+:::
 
 ## Example 2. iperf
 
@@ -654,18 +679,21 @@ The parameters explained:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/11.png" style={{width:1000, height:'auto'}}/></div>
 
-
 :::tip
+
 - Make sure your device has successfully connected to the Wi-Fi HaLow network before running the performance test
 - The device's IP address will be displayed in the serial monitor after connection
 - You can adjust the bandwidth (-b parameter) based on your testing needs
+
 :::
 
 :::note
 Common issues and solutions:
+
 - If connection fails, verify your network credentials
 - If iPerf service doesn't start, check your hardware connections
 - If performance is poor, ensure you're within good range of the gateway
+
 :::
 
 ## Example 3. web_camera_server
@@ -730,18 +758,21 @@ http://192.168.4.1
 
 :::tip
 For the best streaming experience:
+
 - Ensure good lighting conditions for better image quality
 - Keep the XIAO ESP32S3 Sense within good range of the Wi-Fi HaLow gateway
 - Use a modern web browser for optimal compatibility
+
 :::
 
 :::note
 Troubleshooting:
+
 - If you can't access the camera feed, verify that your device is on the same network as the Wi-Fi HaLow gateway
 - If the image is not showing, check that the camera module is properly connected
 - If the stream is laggy, try moving closer to the Wi-Fi HaLow gateway
-:::
 
+:::
 
 ## Resources
 

@@ -14,7 +14,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 The reComputer r1000, designed for Building Automation Systems, features multiple isolated RS485 channels that support both high and low-speed communication. It is compatible with BACnet, Modbus RTU, and Modbus TCP/IP protocols, making it versatile for various automation needs. This guide provides a concise introduction to installing Home Assistant on the reComputer r1000, enabling seamless integration and control of your smart home devices.
 
@@ -29,22 +29,22 @@ Before you start this project, you may need to prepare your hardware in advance 
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 :::note
 During the HA installation process, we tested using wireless connectivity.
@@ -57,7 +57,6 @@ The reComputer comes with a pre-installed Bookworm 64 bit version. This guide co
 ## Why Home Assistant Supervised?
 
 There are a few methods to install Home Assistant on your reComputer. You can opt for a full installation of Home Assistant, or if you plan to run Home Assistant alongside other applications on top of your operating system, the supervised method is ideal. Another option is to use Docker, but this requires setting up separate Docker containers as add-ons. This guide focuses on the more complex installation process of the **Supervised method**. Don't worry—we'll walk you through it step by step.
-
 
 ## Home Assistant Supervised Installation - Bookworm
 
@@ -86,6 +85,7 @@ sudo systemctl enable NetworkManager
 #### Step 3: Modify Boot Parameters
 
 Edit the `cmdline.txt` file:
+
 ```bash
 sudo nano /boot/firmware/cmdline.txt
 ```
@@ -97,6 +97,7 @@ systemd.unified_cgroup_hierarchy=false lsm=apparmor
 ```
 
 Reboot the system:
+
 ```bash
 sudo reboot
 ```
@@ -144,13 +145,11 @@ If there are warnings in notifications, please reboot the reComputer.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

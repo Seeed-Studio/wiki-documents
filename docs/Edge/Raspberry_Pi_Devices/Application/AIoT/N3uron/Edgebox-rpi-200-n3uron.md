@@ -32,7 +32,6 @@ With N3uron, you can easily create bidirectional data pipelines between OT and I
 
 - **Scalable and versatile architecture**: From its inception, N3uron was conceived to seamlessly deploy distributed architectures with several hundred or thousand nodes. Users can connect multiple nodes quickly using N3uron Links, effortlessly scaling their architecture to suit their needs.
 
-
 ## Edgebox-RPI-200
 
 <div align="center"><img width ={500} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg
@@ -49,9 +48,11 @@ EdgeBox-RPI-200 series are all-in-one Raspberry Pi-based industrial edge computi
 ## Prerequisites
 
 ### Hardware
-* [EdgeBox-RPI-200](https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html) 
+
+* [EdgeBox-RPI-200](https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html)
 
 ### Software
+
 * [N3uron Industrial IIoT & DataOps Platform](https://n3uron.com/)
 
 ## Installation
@@ -60,7 +61,8 @@ N3uron can be easily installed with our one-step automated installation script, 
 
 ```sh
 sudo curl -fsSL https://get.n3uron.com/install.sh | sudo bash
-``` 
+```
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif1.gif" alt="pir" width="600" height="auto" /></div>
 
 In a few seconds you’ll have N3uron installed, up and running.
@@ -90,7 +92,7 @@ Default N3uron WebUI users.
 
 </div>
 
-- **Step 2** : Open the N3uron WebUI and navigate to Config→Modules, click on the menu and then create a **New Module**, we’ll name it **OpcUaClient**. 
+- **Step 2** : Open the N3uron WebUI and navigate to Config→Modules, click on the menu and then create a **New Module**, we’ll name it **OpcUaClient**.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron4.png" alt="pir" width="600" height="auto" /></div>
 
@@ -110,11 +112,11 @@ Security Mode: None
 Security Policy: None
 
 Authentication:
-	Enabled: Yes
-	User: sunn3rgy
-	Password: n3uron
+ Enabled: Yes
+ User: sunn3rgy
+ Password: n3uron
 
-``` 
+```
 
 Click on **Save** to apply changes and reload the module.
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron7.png" alt="pir" width="600" height="auto" /></div>
@@ -128,6 +130,7 @@ Click on **Save** to apply changes and reload the module.
 ### Create a tag
 
 - **Step 1**: Drag and drop the desired object from the browser to the data model section.
+
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/gif2.gif" alt="pir" width="600" height="auto" /></div>
 
 - **Step 2**: Now you can find the newly created tag in Config→Tags and view its value in the [Real Time section](https://docs.n3uron.com/docs/platform-visualizing-real-time-values).
@@ -165,9 +168,9 @@ Just drag and drop the desired object into the templates section and start build
 ```sh
 Broker URL: broker.hivemq.com
 Port: 1883
-``` 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron15.png" alt="pir" width="600" height="auto" /></div>
+```
 
+<div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron15.png" alt="pir" width="600" height="auto" /></div>
 
 - **Step 5**: Create a New Publisher and set a destination topic, for example “/n3/edgebox”.
 
@@ -175,17 +178,15 @@ Port: 1883
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron17.png" alt="pir" width="600" height="auto" /></div>
 
-- **Step 6**: Create a **Tag Filter** to match all tags in this node, the Tag Filter is how we tell the module which tags should be published to the broker. Click on **Save** to apply all the changes and reload the module. 
+- **Step 6**: Create a **Tag Filter** to match all tags in this node, the Tag Filter is how we tell the module which tags should be published to the broker. Click on **Save** to apply all the changes and reload the module.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron18.png" alt="pir" width="600" height="auto" /></div>
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron19.png" alt="pir" width="600" height="auto" /></div>
 
-
 - **Step 7**: Head to Diagnostics and enable the Real-Time logs for the MqttClient module, wait to see the logs emitted by the module every time it publishes new data to the broker.
 
  <div align="center"><img src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/n3uron20.png" alt="pir" width="600" height="auto" /></div>
-
 
 ### Instantiate a WebVision module
 
@@ -197,31 +198,29 @@ Port: 1883
 
 **Step 3:** Navigate to the main configuration of WebVision and choose the appropriate server settings. The default settings should suffice for most use cases. For further details, please refer to the following link: [WebVision Initial Configuration](https://docs.n3uron.com/docs/web-vision-configuration).
 
-
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/Image_6.png" /></center>
 
-**Step 4:** Once the WebVision module has been instantiated, the first step is to assign permissions to the roles previously created in the Roles section of WebUI. By default, two roles exist: Administrator for administrative access and User for regular access. You can add users to these roles or create new ones as needed. Once roles are established, set permissions for Designer and Viewer roles accordingly. 
+**Step 4:** Once the WebVision module has been instantiated, the first step is to assign permissions to the roles previously created in the Roles section of WebUI. By default, two roles exist: Administrator for administrative access and User for regular access. You can add users to these roles or create new ones as needed. Once roles are established, set permissions for Designer and Viewer roles accordingly.
 Additionally, establish a Tag filter path for each role. Tag filter path access determines which tags from the tag model will be accessible for visualization by the corresponding role. In this case, we will assign the complete path of the tag model to both roles.
 
-
 - Administrator:
-    - Designer: Edit
-    - Viewer: View
-    - TagFilterPath:
-        - Mode: Include
-        - Path: /
-        - Regex pattern: .*
+  - Designer: Edit
+  - Viewer: View
+  - TagFilterPath:
+    - Mode: Include
+    - Path: /
+    - Regex pattern: .*
 - User:
-    - Designer: None
-    - Viewer: View
-    - TagFilterPath:
-        - Mode: Include
-        - Path: /
-        - Regex pattern: .*
+  - Designer: None
+  - Viewer: View
+  - TagFilterPath:
+    - Mode: Include
+    - Path: /
+    - Regex pattern: .*
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/Image_7.gif" /></center>
 
-- Useful Links 
+- Useful Links
 
   - [Users and Roles Configuration](https://docs.n3uron.com/docs/platform-security-users-and-roles)
 
@@ -240,10 +239,9 @@ Log in using your **Administrator credentials**.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/Image_10.gif" /></center>
 
-**Step 8:** Change the background color of the Main container. 
+**Step 8:** Change the background color of the Main container.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/Image_11.gif" /></center>
-
 
 **Step 9:** Inside the Main container, navigate to Components and add a new component. For this example, select the Gauge component.
 
@@ -262,8 +260,6 @@ Log in using your Administrator credentials.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/n3uron/Image_15.gif" /></center>
 
-
 There is much to explore about WebVision to enhance your Edge Box experience. For further details, please refer to our [Knowledge Base on WebVision](https://docs.n3uron.com/docs/web-vision-configuration).
-
 
 What you've seen is just the beginning. Embrace the limitless possibilities offered by its impressive array of nearly 50 modules. Dare to dream big, innovate, and take your projects to new heights with N3uron's cutting-edge features. For a deeper dive into this powerful platform, visit [https://n3uron.com/](https://n3uron.com/) and embark on an exciting journey of discovery!

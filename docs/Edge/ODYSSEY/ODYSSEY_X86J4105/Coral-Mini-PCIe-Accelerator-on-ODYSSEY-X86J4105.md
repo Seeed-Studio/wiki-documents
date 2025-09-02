@@ -33,10 +33,10 @@ The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any comp
 
 ## Features
 
-* Performs high-speed ML influencing
-* Works with debian linux
-* Supports tensorFlow lite
-* Supports [AutoML Vision Edge](https://cloud.google.com/vision/automl/docs/edge-quickstart)
+- Performs high-speed ML influencing
+- Works with debian linux
+- Supports tensorFlow lite
+- Supports [AutoML Vision Edge](https://cloud.google.com/vision/automl/docs/edge-quickstart)
 
 ## Specification
 
@@ -76,11 +76,11 @@ The M.2 Accelerator is a dual-key M.2 card ( B+M keys), designed to fit any comp
 
 The steps of hardware connection is very simple.
 
-* **Step 1.** Connecting Coral Mini PCIe Accelerator  to the ODYSSEY - X86J41x5.
-* **Step 2.** Connecting the power to the ODYSSEY - X86J41x5.
-* **Step 3.** Connecting the power and display to the ODYSSEY - X86J41x5.
-* **Step 4.**  Connecting the keyboard and mouse to the ODYSSEY - X86J41x5.
-* **Step 5.** If you have a network cable, please connect it to you ODYSSEY - X86J41x5.
+- **Step 1.** Connecting Coral Mini PCIe Accelerator  to the ODYSSEY - X86J41x5.
+- **Step 2.** Connecting the power to the ODYSSEY - X86J41x5.
+- **Step 3.** Connecting the power and display to the ODYSSEY - X86J41x5.
+- **Step 4.**  Connecting the keyboard and mouse to the ODYSSEY - X86J41x5.
+- **Step 5.** If you have a network cable, please connect it to you ODYSSEY - X86J41x5.
 
 ## Software
 
@@ -89,15 +89,15 @@ After we finished hardware connection,the next step is to solve software problem
 
 At first, what you need  is a linux computer, please follow the step.
 
-* You can choose  x86-64, ARMv7 (32-bit), or ARMv8 (64-bit) system .
+- You can choose  x86-64, ARMv7 (32-bit), or ARMv8 (64-bit) system .
 
    Please refer to how to [create a bootable USB drive and install Linux OS(Ubuntu Desktop 18.04)](https://wiki.seeedstudio.com/ODYSSEY-X86J4105-Installing-OS/) onto the ODYSSEY - X86J41x5.
 
-* An available Coral Mini PCIe Accelerator on ODYSSEY X86J41x5
+- An available Coral Mini PCIe Accelerator on ODYSSEY X86J41x5
 
-* Debian 6.0 Linux distribution or higher, or any derivative thereof (such as Ubuntu 10.0+)
+- Debian 6.0 Linux distribution or higher, or any derivative thereof (such as Ubuntu 10.0+)
 
-* Python 3.5 or higher
+- Python 3.5 or higher
 
 After you successfully make the U disk boot disk and install the Linux os file , you can go to the next step.
 
@@ -162,6 +162,7 @@ sudo apt-get install gasket-dkms
    ```
 
    You should see something like this:
+
     ```
       03:00.0 System peripheral: Device 1ac1:089a
     ```
@@ -257,19 +258,19 @@ You can also [run inference using C++ and TensorFlow Lite](https://coral.ai/docs
 Resources
 --------
 
-* [Datasheet](https://github.com/SeeedDocument/Bazaar_Document/raw/master/Coral-M2-datasheet.pdf)
-* [Coral Ai user manual](https://coral.ai/docs/mini-pcie/datasheet/#)
+- [Datasheet](https://github.com/SeeedDocument/Bazaar_Document/raw/master/Coral-M2-datasheet.pdf)
+- [Coral Ai user manual](https://coral.ai/docs/mini-pcie/datasheet/#)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

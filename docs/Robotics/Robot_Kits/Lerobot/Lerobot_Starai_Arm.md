@@ -1,6 +1,6 @@
 ---
-description: This wiki provides the debugging tutorial for the Starai robotic arm and realizes data collection and training within the Lerobot framework.
-title: How to use the LeRobot-starai robotic arm in Lerobot
+description: This wiki provides the debugging tutorial for the StarAI Robot Arm and realizes data collection and training within the Lerobot framework.
+title: Getting started with StarAI Robot Arm with LeRobot
 keywords:
 - Lerobot
 - Huggingface
@@ -9,11 +9,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/starai_robotic_arm.webp
 slug: /lerobot_starai_arm
 last_update:
-  date: 8/20/2025
+  date: 9/1/2025
   author: LiShanghang
 ---
 
-# How to use the LeRobot-starai robotic arm in Lerobot
+# Getting started with StarAI Robot Arm with LeRobot
 
 :::tip
  [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly. In the forthcoming weeks, the intention is to augment support for real-world robotics on the most cost-effective and competent robots presently accessible.
@@ -751,17 +751,25 @@ If you encounter software issues or environment dependency problems that cannot 
 
 ## Citation
 
-矽递科技英文Wiki文档：[How to use the SO10xArm robotic arm in the latest version of Lerobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
+Seeedstudio English Wiki document：[How to use the SO10xArm robotic arm in the latest version of Lerobot](https://wiki.seeedstudio.com/lerobot_so100m_new/)
 
-Huggingface Project:[Lerobot](https://github.com/huggingface/lerobot/tree/main)
+lerobot-starai github: [lerobot-starai](https://github.com/Welt-liu/lerobot-starai)
 
-ACT or ALOHA:[Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+STEP: [STEP](https://github.com/Welt-liu/star-arm-moveit2/tree/main/hardware)
 
-VQ-BeT:[VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+URDF: [URDF](https://github.com/Welt-liu/star-arm-moveit2/tree/main/src/cello_description)
 
-Diffusion Policy:[Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
+StarAI Robot Arm moveit2: [star-arm-moveit2](https://github.com/Welt-liu/star-arm-moveit2)
 
-TD-MPC:[TD-MPC](https://www.nicklashansen.com/td-mpc/)
+Huggingface Project: [Lerobot](https://github.com/huggingface/lerobot/tree/main)
+
+ACT or ALOHA: [Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware](https://tonyzhaozh.github.io/aloha/)
+
+VQ-BeT: [VQ-BeT: Behavior Generation with Latent Actions](https://sjlee.cc/vq-bet/)
+
+Diffusion Policy: [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/)
+
+TD-MPC: [TD-MPC](https://www.nicklashansen.com/td-mpc/)
 
 
 ## Tech Support & Product Discussion

@@ -56,7 +56,6 @@ Select the XIAO ESP32S3 Sense board from the available devices.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
 
-
 Using the USB-C cable, connect your XIAO ESP32S3 Sense board to your computer. Once connected, click the **Connect** button located in the top-left corner of the SenseCraft AI Vision Workspace page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
@@ -233,10 +232,12 @@ Use the code from the following example:
 
 :::note
 Use the following protocol for I2C communication:
+
 - READ: Send bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff
 - WRITE: Send bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff
 - AVAIL (to check data availability): Send bytes 0x10, 0x03
 - RESET (to clear buffer): Send bytes 0x10, 0x06
+
 :::
 
 ```cpp
@@ -361,10 +362,12 @@ If all goes well, you will see the output message of the model result as shown b
 
 :::note
 Use the following protocol for SPI communication:
+
 - READ: Send bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff
 - WRITE: Send bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff
 - AVAIL (to check data availability): Send bytes 0x10, 0x03
 - RESET (to clear buffer): Send bytes 0x10, 0x06
+
 :::
 
 ```cpp

@@ -21,7 +21,6 @@ This wiki covers two related products: the **Bus Servo Driver Board** and the **
 
 Please refer to the rest of this guide for details on setup and usage for both products.
 
-
 <div class="table-center">
   <table align="center">
     <tr>
@@ -47,7 +46,6 @@ Please refer to the rest of this guide for details on setup and usage for both p
   </table>
 </div>
 
-
 ## Introduction
 
 The Bus Servo Driver Board / XIAO Bus Servo Adapter is a compact and powerful hardware solution from Seeed Studio, designed to drive serial bus servos for robotics and automation projects. With support for UART communication, it enables precise control and feedback from multiple ST/SC series servos, including the Feetech SCS series (see [Feetech SCS/STS/TTL Series Official Website](https://www.feetechrc.com/en/scs_ttl_Servo.html)). This makes it ideal for applications such as robotic arms, hexapods, humanoid robots, and wheeled robots requiring servo angle and load feedback.
@@ -68,7 +66,6 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="Bus Servo Driver Board" label="Bus Servo Driver Board">
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/1.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/2.png" style={{width:800, height:'auto'}}/></div>
@@ -77,15 +74,15 @@ The Bus Servo Driver Board features several key connection points:
 
 **Input:**
 
-* **DC IN (5.5 * 2.1mm):** This is the power input for the board and the connected servos. Connect a 5~12V power supply here. *Crucially, the voltage of this power supply must match the voltage requirements of your servos.* For example, ST series servos typically operate at 9V, while SC series servos may require 12V.
+- **DC IN (5.5 * 2.1mm):** This is the power input for the board and the connected servos. Connect a 5~12V power supply here. *Crucially, the voltage of this power supply must match the voltage requirements of your servos.* For example, ST series servos typically operate at 9V, while SC series servos may require 12V.
 
 **Output:**
 
-* **Servo Interface:** This dedicated port is where you connect your ST/SC series bus servos. Ensure the connector is properly aligned.
+- **Servo Interface:** This dedicated port is where you connect your ST/SC series bus servos. Ensure the connector is properly aligned.
 
 **Control Interface:**
 
-* **UART (RX/TX):** These pins provide serial communication for controlling the servos. The connection method and jumper settings depend on your host device. See below for details.
+- **UART (RX/TX):** These pins provide serial communication for controlling the servos. The connection method and jumper settings depend on your host device. See below for details.
 
 </TabItem>
 
@@ -97,11 +94,11 @@ The Bus Servo Driver Board features several key connection points:
 
 **Input:**
 
-* **DC IN (5.5 * 2.1mm):** This is the power input for the board and the connected servos. Connect a 5~12V power supply here. *Crucially, the voltage of this power supply must match the voltage requirements of your servos.* For example, ST series servos typically operate at 9V, while SC series servos may require 12V.
+- **DC IN (5.5 * 2.1mm):** This is the power input for the board and the connected servos. Connect a 5~12V power supply here. *Crucially, the voltage of this power supply must match the voltage requirements of your servos.* For example, ST series servos typically operate at 9V, while SC series servos may require 12V.
 
 **Output:**
 
-* **Servo Interface:** This dedicated port is where you connect your ST/SC series bus servos. Ensure the connector is properly aligned.
+- **Servo Interface:** This dedicated port is where you connect your ST/SC series bus servos. Ensure the connector is properly aligned.
 
 </TabItem>
 
@@ -121,61 +118,60 @@ The Bus Servo Driver Board offers two primary connection methods: direct UART co
 
 This method is used when connecting directly to the UART pins of a microcontroller (MCU) like an ESP32, Arduino, Seeed Studio XIAO, or a single-board computer.
 
-* **Wiring:**
-    * Connect the `RX` pin on the Driver Board to the `TX` pin (D7) on your host device.
-    * Connect the `TX` pin on the Driver Board to the `RX` pin (D6) on your host device.
-    * For devices like the Seeed Studio XIAO, you can directly plug the XIAO into the provided headers, ensuring correct pin alignment. This eliminates the need for separate Dupont wires for the UART connection.
+- **Wiring:**
+  - Connect the `RX` pin on the Driver Board to the `TX` pin (D7) on your host device.
+  - Connect the `TX` pin on the Driver Board to the `RX` pin (D6) on your host device.
+  - For devices like the Seeed Studio XIAO, you can directly plug the XIAO into the provided headers, ensuring correct pin alignment. This eliminates the need for separate Dupont wires for the UART connection.
 
-* **Jumper Setting (Critical):** 
+- **Jumper Setting (Critical):**
 
-    * Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
+  - Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
-* **Powering the Host:** Your host device (e.g., Raspberry Pi Zero, ESP32, XIAO) will require its own separate power supply.
+- **Powering the Host:** Your host device (e.g., Raspberry Pi Zero, ESP32, XIAO) will require its own separate power supply.
 
 #### USB Connection
 
 This method is used when connecting to a computer or single-board computer with a USB port (e.g., a PC or Raspberry Pi 4B). You simply connect the control board to the computer using a USB cable.
 
-* **Wiring:**
-    * Simply connect the control board to your computer using a USB cable.
+- **Wiring:**
+  - Simply connect the control board to your computer using a USB cable.
 
-* **Jumper Setting (Critical):** 
+- **Jumper Setting (Critical):**
 
-    * **Step 1.** Locate the soldering jumper on the back of the board. **For USB communication, you must ensure that the two pads are connected (there is a solder bridge between them).**
+  - **Step 1.** Locate the soldering jumper on the back of the board. **For USB communication, you must ensure that the two pads are connected (there is a solder bridge between them).**
 
-    - Backside pads for version 1:
+  - Backside pads for version 1:
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/7.jpg" style={{width:400, height:'auto'}}/></div>
 
-    - Backside pads for version 2:
+  - Backside pads for version 2:
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-1.png" style={{width:400, height:'auto'}}/></div>
 
-    * **Step 2.** Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
+  - **Step 2.** Use a 2.54mm jumper cap to short-circuit the 2pin pin on the front of the board. (It's shorted by default)
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/change-2.png" style={{width:400, height:'auto'}}/></div>
 
 ### Required Components (Before You Start)
 
 Before connecting anything, ensure you have the following:
 
-* **Bus Servo Driver Board / XIAO Bus Servo Adapter**
-* **Compatible ST/SC series bus servos**: see [Feetech SCS/STS/TTL Series Official Website](https://www.feetechrc.com/en/scs_ttl_Servo.html).
-* **5~12V Power Supply:** A battery or power adapter. *The voltage must match your servo's specifications.*
-* **Host Device:**
-    * **For Direct UART:** A UART-capable device like a Raspberry Pi, Arduino, ESP32, or Seeed Studio XIAO.
-    * **For USB:** A computer (PC, Mac, Linux) or a single-board computer like a Raspberry Pi 4B, *plus* a USB-to-UART adapter.
+- **Bus Servo Driver Board / XIAO Bus Servo Adapter**
+- **Compatible ST/SC series bus servos**: see [Feetech SCS/STS/TTL Series Official Website](https://www.feetechrc.com/en/scs_ttl_Servo.html).
+- **5~12V Power Supply:** A battery or power adapter. *The voltage must match your servo's specifications.*
+- **Host Device:**
+  - **For Direct UART:** A UART-capable device like a Raspberry Pi, Arduino, ESP32, or Seeed Studio XIAO.
+  - **For USB:** A computer (PC, Mac, Linux) or a single-board computer like a Raspberry Pi 4B, *plus* a USB-to-UART adapter.
 
 :::note
 For XIAO Bus Servo Adapter, XIAO ESP32-C3 is built-in, so there is no need to prepare a host device.
 :::
 
-* **Connecting Wires/Adapters:** Jumper wires (Dupont wires) if using direct UART (except when using XIAO with direct header connection). A USB-to-UART adapter if using the USB connection method.
+- **Connecting Wires/Adapters:** Jumper wires (Dupont wires) if using direct UART (except when using XIAO with direct header connection). A USB-to-UART adapter if using the USB connection method.
 
 :::caution
 If using SC series servos, confirm the power supply matches their voltage requirements. The board’s DC input label is tailored for ST series servos but supports SC series voltages as well. **Incorrect jumper settings will prevent communication with the driver board.**
 :::
-
 
 ## Controlling Servos via USB
 
@@ -195,6 +191,7 @@ For a practical example of how to send commands to Feetech (ST/SC/STS/TTL series
 This example demonstrates how to construct and send serial packets to control Feetech servos. You can adapt the code to your own host platform and programming language as needed.
 
 > **Note:**  
+>
 > - The specific command format and protocol may vary depending on your servo model.  
 > - Please consult your servo's official documentation for the correct serial protocol and command structure.  
 > - You will need to write or adapt a driver program that matches your servo's requirements.
@@ -334,7 +331,6 @@ Now that we have our library installed and we understand the basic functions, le
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/bus_servo_driver_board/8.jpg" style={{width:600, height:'auto'}}/></div>
 
 #### Control multiple servos
-
 
 ```cpp
 #include <SCServo.h>
@@ -484,7 +480,6 @@ Servo IDs: Modify the ID array to match the IDs of your connected servos.
 
 - **Initial Position**: Set the initial values in the `Pos` array to define the starting positions of your servos.
 
-
 ## FAQs
 
 :::tip
@@ -531,6 +526,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 
 </div>
-
-
-

@@ -10,7 +10,7 @@ last_update:
   date: 04/23/2023
   author: Peter Pan
 ---
-#  reTerminal DM Getting Started
+# reTerminal DM Getting Started
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -20,7 +20,7 @@ Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one 
 
 It is equipped with rich scalability and hybrid connectivity, supporting CAN bus, RS485, RS232, Gigabit Ethernet port, and other interfaces, as well as powerful wireless communication capabilities such as 4G, LoRa®, WiFi, and BLE.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for 
+> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for
 > [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -31,15 +31,14 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 
 ## Feature
 
-* HMI, PLC, Panel PC and gateway in one: Perfect for the distributed hub devices
-* Low code programming for event-driven applications: Natively integrated Node-RED for flow-based editing and one-click deployment, compatible with all software runs on Raspberry Pi
-* Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
-* Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
-* Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
-* [Product warranty: Two-year warranty](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
+- HMI, PLC, Panel PC and gateway in one: Perfect for the distributed hub devices
+- Low code programming for event-driven applications: Natively integrated Node-RED for flow-based editing and one-click deployment, compatible with all software runs on Raspberry Pi
+- Rugged design for harsh working environment: IP65 front panel, -10~50°C operating temperature
+- Hybrid connectivity: Support 4G LTE, LoRaWAN®, WiFi, BLE, RS485/RS232, CAN bus, 1000M Ethernet, USB, HDMI
+- Open-source design in software and hardware: Powered by Raspberry Pi CM4, welcome customization or derivatives
+- [Product warranty: Two-year warranty](Edge/Raspberry_Pi_Devices/HMI/reTerminal-DM/reterminal-dm-warranty.md)
 
 > \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly.
-
 
 ## Specifications
 
@@ -275,7 +274,6 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## Hardware Overview
@@ -296,20 +294,18 @@ The reTerminal DM supports two power supply options: DC terminal and PoE port. B
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/powerplug.png" /></div>
 
-The reTerminal DM is supplied with a nominal voltage of 12~24 V. The power supply is connected via the 2-pin power terminal block
-connector.
+The reTerminal DM is supplied with a nominal voltage of 12~24 V. The power supply is connected via the 2-pin power terminal block connector.
 
 ### POE (optional)
 
 :::note
-The standard product does not include a PoE module by default, Seeed can provide PoE soldering and assembly services for batch customization orders on request, please contact odm@seeed.cc, 
+The standard product does not include a PoE module by default, Seeed can provide PoE soldering and assembly services for batch customization orders on request, please contact odm@seeed.cc,
 :::
 
-If the PoE module installed, the LAN1 port of reTerminal DM can support PoE power supply, providing a convenient and efficient
-way to power the device over Ethernet. This option simplifies the installation process and reduces the amount of cabling required,
-making it an ideal solution for applications with limited power sources or where power outlets are not readily available.
-* PoE input: Range 44~57V; Typical 48V
-* PoE output: 12V, 1.1A Max.
+If the PoE module installed, the LAN1 port of reTerminal DM can support PoE power supply, providing a convenient and efficient way to power the device over Ethernet. This option simplifies the installation process and reduces the amount of cabling required, making it an ideal solution for applications with limited power sources or where power outlets are not readily available.
+
+- PoE input: Range 44~57V; Typical 48V
+- PoE output: 12V, 1.1A Max.
 
 ### Power Consumption
 
@@ -337,7 +333,7 @@ Please note that after shutting down, please wait for at least 10 seconds before
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/i2c-block.png" /></div>
 
-## Interface 
+## Interface
 
 ### Microphone
 
@@ -357,7 +353,6 @@ To record the audio you can use the `audacity` app, please use the `sudo apt ins
 
 Please open the audacity to open the app and click record to records audo from the built-in microphones:
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/recording.png" /></div>
 
 ### LED Indicator
@@ -367,6 +362,7 @@ Please open the audacity to open the app and click record to records audo from t
 The reTerminal DM features three LED indicators that serve to signal the machine's operational status. Please refer to the table below for the speciﬁc functions and states of each LED:
 
 #### LED pin assignment
+
 | Label | Signal   | Signal Source | Color  | Description |
 |  ---  |  ---     |     ---       |  ---   |     ---     |
 | PWR   | LED_nPWR | CM4           | Yellow | Used to indicate the power supply of CM4. When the CM4 is powered on normally, the LED will light up|
@@ -413,6 +409,7 @@ sudo -i
 echo 0 > /sys/class/leds/usr-led/brightness
 echo 1 > /sys/class/leds/usr-led/brightness
 ```
+
 You should see the USER LED light up with red color.
 
 ### Light Sensor
@@ -439,7 +436,6 @@ cat in_illuminance_input
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/light-sensor-result.png" /></div>
 
-
 ### Buzzer
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/buzzer.png" /></div>
@@ -455,6 +451,7 @@ To test and control the buzzer you can simply set the `1` or `0` to the `/sys/cl
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/multi-functional-terminal.png" /></div>
 
 #### Terminal and signal comparison table
+
 <div class="table-center">
 
 |CANH | CANL | GND_ISO | RS485A | RS485B | GND_ISO | RS232_TX | RS232_RX| GND | GND |
@@ -531,6 +528,7 @@ The negative logic used for the digital inputs and outputs of reTerminal DM, the
 | ---                   | ---                    |
 | High                  | Low                    |
 | Low                   | High                   |
+
 :::
 
 In this setion we will use the `raspi-gpio` tool to test with GPIOs, you can use the `raspi-gpio help` to view the manual:
@@ -542,6 +540,7 @@ To get the current state of all the GPIOs, Please enter following command in the
 ```sh
 raspi-gpio get
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/raspi-gpio-get.png" /></div>
 
 ###### Digital Input
@@ -586,12 +585,12 @@ raspi-gpio set 24 op pd dh
 raspi-gpio get 24
 
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/gpio24-state-set.png" /></div>
 
-Which the `GPIO24` correspond to `DO1` is set to the `Output` and `pulling down` state, and the `GPIO24` level is set to `High` 
+Which the `GPIO24` correspond to `DO1` is set to the `Output` and `pulling down` state, and the `GPIO24` level is set to `High`
 
 Now lets set the `GPIO24` to `Low` which means `DO1` Output is driven as `High`.
-
 
 ```sh
 #set current pin state
@@ -738,7 +737,6 @@ except KeyboardInterrupt:
 
 Here is the test python script on receiving data on reTerminal DM send from host computer,
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/rs232-serial-receive-example.png" /></div>
 
 ```python
@@ -791,19 +789,20 @@ Please connect the USB to CAN adapter like shown in the image below:
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
 
 - STEP 1: Install the CAN-utils
- 
+
 ```sh
 sudo apt install can-utils
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image4.jpg" /></div>
 
 CAN-utils is a collection of extremely useful debugging tools using the CAN interface. It includes applications such as:
 
-* candump – Dump can packets – display, filter and log to disk.
-* canplayer – Replay CAN log files.
-* cansend – Send a single frame.
-* cangen – Generate random traffic.
-* canbusload – display the current CAN bus **utilisation**
+- candump – Dump can packets – display, filter and log to disk.
+- canplayer – Replay CAN log files.
+- cansend – Send a single frame.
+- cangen – Generate random traffic.
+- canbusload – display the current CAN bus **utilisation**
 
 CAN-utils source can be obtained from the [GitHub repository](https://github.com/linux-can/can-utils).
 
@@ -821,6 +820,7 @@ sudo ip link set can0 up
 git clone https://github.com/limengdu/Seeed_reTerminal_Bridge_CAN_exmaple
 
 ```
+
 - STEP 4: Compiles and runs the code that sends the data:
 
 ```sh
@@ -828,11 +828,13 @@ cd Seeed_reTerminal_Bridge_CAN_exmaple/
 gcc cantransmit.c -o cantransmit
 
 ```
+
 on you Linux host computer or another reTerminal DM, you can compiles and runs the code that receives the data.
 
 ```sh
 gcc canreceive.c -o canreceive
 ```
+
 you can see the results, the image below is done by using the two reTerminal DM:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image8.jpg" /></div>
@@ -872,14 +874,13 @@ There is a Mini Push Button Switch located in the reset hole of reTerminal DM. B
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-jack.png" /></div>
 
-reTerminal DM has a 3.5mm headphone jack, which supports sound output, and can be connected to external headphones, speakers, etc. 
+reTerminal DM has a 3.5mm headphone jack, which supports sound output, and can be connected to external headphones, speakers, etc.
 
 :::note
 The headphone jack only supports sound output and does not support the microphone recording function.
 :::
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/audio-power.png" /></div>
-
 
 ### HDMI
 
@@ -1097,6 +1098,7 @@ Use the following command to change the system clock with current hardware clock
 sudo hwclock --hctosys
 
 ```
+
 To veiw the current hardware clock
 
 ```sh
@@ -1104,7 +1106,6 @@ sudo hwclock -r
 ```
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/RTC.png" /></div>
-
 
 #### Watchdog
 
@@ -1117,6 +1118,7 @@ STEP 1: Open the watchdog.conf file for editing, usually located at /etc/watchdo
 ```sh
 sudo nano /etc/watchdog.conf
 ```
+
 STEP 2: Look for the "watchdog-device" and "watchdog-timeout" configuration options under the `/etc/watchdog.conf`, please set as following.
 
 :::note
@@ -1127,12 +1129,12 @@ you might experience instant restart when `watchdog-timeout` option is set under
 
 # Uncomment this to use the watchdog device driver access "file".
 
-watchdog-device		= /dev/watchdog1
+watchdog-device  = /dev/watchdog1
 
 # Uncomment and edit this line for hardware timeout values that differ
 # from the default of one minute.
 
-watchdog-timeout	= 60
+watchdog-timeout = 60
 
 
 ```
@@ -1141,11 +1143,13 @@ For example, if you want to set the watchdog timeout time to 60 seconds, you can
 
 :::warning
 you can test if the watchdog is active with following command, where these command will put system in halt please be carefull on proferm the follow commands:
+
 ```sh
 sudo su
 echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
+
 Now your reTerminal DM should have rebooted after the time you have set to the watchdog-timeout
 :::
 
@@ -1197,7 +1201,7 @@ Please note that the standard version of the reTerminal DM does not come with a 
 
 **Materials Required**
 
-- reTerminal DM x 1 
+- reTerminal DM x 1
 - EC25-EUX 4G Module x1
 - SIM Card x1
 
@@ -1254,13 +1258,11 @@ You can also use the command `ifconfig` to query the networking status of reTerm
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminal_Bridge/image33.png"/></div>
 
-
 ### LoraWAN®  Module
 
 :::note
 reTerminal DM support for both USB and SPI version of the WM1302 LoraWAN®  Module, however the USB verison will need to uiltising the Mini PCIe designed for 4G Moudle which means if you want to use the both 4G Module and LoraWAN®  Module Please choose SPI version of the WM1302 LoraWAN®  Module.
 :::
-
 
 <!-- Code -->
 
@@ -1278,9 +1280,9 @@ import TabItem from '@theme/TabItem';
     </a>
 </div>
 
-
-**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen. 
+**Step 1.** Please refer to the [LoraWAN®  Module Hardware assembly](/reterminal-dm-hardware-guide/#assembly-lora-module-and-antenna) guide to install `WM1302 SPI LoraWAN® Module` into the `LoraWAN® Mini PCIe slot` which you should see the *`Lora`* slikscreen.
 Install necessary packages build-essential(build essential package is a Debian package that contains the tools needed to create a DEB package from source code.) by installing module.
+
 ```sh
 sudo apt update
 sudo apt install git
@@ -1311,7 +1313,7 @@ sudo make
 cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 ```
 
-**Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file: 
+**Step 5.** replace the default `SPI` port of the LoraWAN®  Module in the `global_conf.json.sx1250.US915` config file:
 
 ```sh
 sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
@@ -1322,8 +1324,8 @@ sed -i 's/spidev0.0/spidev0.1/g'  global_conf.json.sx1250.US915
 Then run the following code to start LoraWAN® Module according to your WM1302 operation frequence version.
 
 ```sh
-$ cd ~/sx1302_hal/packet_forwarder
-$ ./lora_pkt_fwd -c global_conf.json.sx1250.US915
+cd ~/sx1302_hal/packet_forwarder
+./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-spi.png"/></div>
@@ -1376,6 +1378,7 @@ First to get the specific USB port please follow the steps below:
 ```sh
 lsusb
 ```
+
 In my case our WM1302 is using the `STMicroelectronics Virtual COM Port` so we can get the product id `5740`
 
 **Step 5-2.**
@@ -1416,6 +1419,7 @@ USB version
 $ cd ~/sx1302_hal/packet_forwarder
 $ ./lora_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
+
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/wm1302-usb.png"/></div>
 
 Plese choose your prefered Lora® Network server and use the `EUI ID` as shown in the picture above to setup the connections.
@@ -1451,21 +1455,21 @@ The standard version of the reTerminal DM does not support SSD and requires the 
 
 ## Additional Resources
 
-*  [reTerminal DM Datasheet](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
-*  [reTerminal DM User Manual](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-User-Manual.pdf)
-*  [reTerminal DM Schematic Design & PCB Design & Gerber Files](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal_DM_schematic_design_files.zip)
-*  [reTerminal DM Structural Design File.stp](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-Structural-Design-File.stp)
+- [reTerminal DM Datasheet](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminalDM_datasheet.pdf)
+- [reTerminal DM User Manual](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-User-Manual.pdf)
+- [reTerminal DM Schematic Design & PCB Design & Gerber Files](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal_DM_schematic_design_files.zip)
+- [reTerminal DM Structural Design File.stp](https://files.seeedstudio.com/wiki/reTerminalDM/reTerminal-DM-Structural-Design-File.stp)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

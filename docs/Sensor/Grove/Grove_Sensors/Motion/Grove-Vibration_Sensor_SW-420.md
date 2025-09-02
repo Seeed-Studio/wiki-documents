@@ -17,7 +17,6 @@ The Grove - Vibration Sensor (SW-420) is a high sensitivity non-directional vibr
 
 All in all, this is a perfect module for vibration or tilt sensor.
 
-
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Vibration-Sensor-%28SW-420%29-p-3158.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Vibration-Sensor-%28SW-420%29-p-3158.html)
 
@@ -32,9 +31,8 @@ All in all, this is a perfect module for vibration or tilt sensor.
 - Non-directional
 - High sensitivity
 - Respond to vibration, tilt
-- Waterproof 
+- Waterproof
 - Compression resistance
-
 
 ## Specification
 
@@ -42,11 +40,10 @@ All in all, this is a perfect module for vibration or tilt sensor.
 |---|---|
 |Operating voltage|3.3V / 5V|
 |Interface|Digital|
-|Size|L: 40mm W: 20mm H: 10mm| 
+|Size|L: 40mm W: 20mm H: 10mm|
 |Weight|4.3g|
 |Package size|L: 140mm W: 85mm H: 10mm|
 |Gross Weight|10g|
-
 
 ## Applications
 
@@ -61,12 +58,10 @@ All in all, this is a perfect module for vibration or tilt sensor.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/pin_map.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/pin_map.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 ### Schemaitc
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/Schematic.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/Schematic.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 First, let's begin with the **SW1** which at the lower left corner. Actually, the **SW1** is the vibration module **SW-420**. When the module is in a stable state, the module is turned on. **Pin2** of **U1A** is connected to the **GND** though **SW1**.
 
@@ -103,11 +98,7 @@ For the **V-**, it depends on the **SW1(SW-420)**:
 
 Now you can set the **V+** to adjust the sensitivity, just remember: the lower the voltage of **V+**, the higher the sensitivity😆
 
-
-
-
 ## Platforms Supported
-
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -115,16 +106,14 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
 ## Getting Started
 
-
 ### Play With Arduino
-
 
 #### Hardware
 
@@ -135,13 +124,11 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Buzzer/img/buzzer_s.jpg" alt="pir" width={600} height="auto" /></p>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Vibration-Sensor-%28SW-420%29-p-3158.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Buzzer-p-768.html" target="_blank">Get One Now</a>|
 
-
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
     
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
-
 
 - **Step 1.** Connect the Grove - Vibration Sensor (SW-420) to the **D2** port of the Base Shield.
 
@@ -158,7 +145,6 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
         If we don't have Grove Base Shield, We also can directly connect this module to Seeeduino as below.
 :::
 
-
 | Seeeduino     |  Grove - Vibration Sensor         |
 |---------------|-------------------------|
 | 5V            | Red                     |
@@ -166,15 +152,12 @@ Now you can set the **V+** to adjust the sensitivity, just remember: the lower t
 | NC           | White                    |
 | D2           | Yellow                   |
 
-
-
 | Seeeduino     |  Grove - Buzzer         |
 |---------------|-------------------------|
 | 5V            | Red                     |
 | GND           | Black                   |
 | NC           | White                    |
 | D3           | Yellow                   |
-
 
 #### Software
 
@@ -221,6 +204,7 @@ void loop() {
 :::success
     If every thing goes well, everytime you move, shake or tilt the Grove - Vibration Sensor the Grove - buzzer will ring.
 :::
+
 ### Play with Codecraft
 
 #### Hardware
@@ -251,12 +235,8 @@ Upload the program to your Arduino/Seeeduino.
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Vibration_Sensor-SW-420/res/Grove%20-%20Vibration%20Sensor%20(SW-420)%20v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
-
 
 ## Resources
 
@@ -269,18 +249,16 @@ This is the introduction Video of this product, simple demos, you can have a try
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oFmvKxoZIuw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

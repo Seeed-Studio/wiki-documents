@@ -12,7 +12,6 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Front.jpg)
 
-
 This wiki is for ReSpeaker Core v2.0, we recommend you to read the [Wiki of ReSpeaker Core v2.0](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) first.
 
 ## Before the start
@@ -25,7 +24,7 @@ You need to make the following preparations:
 - One Micro-USB cables
 - [PUTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-We assume that you have read the [Preparetion](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) and set up the WiFi and Serial already. 
+We assume that you have read the [Preparetion](https://wiki.seeedstudio.com/ReSpeaker_Core_v2.0/#preparation) and set up the WiFi and Serial already.
 
 Now let's play 😃
 
@@ -39,7 +38,7 @@ This part is simple and easy, just plug your ReSpeaker Core v2.0 into your compu
 
 #### Set Up Your Project
 
-- **Step 1.Add your Project** 
+- **Step 1.Add your Project**
 
 Open the [link](https://console.actions.google.com/?pli=1) to add your project.
 
@@ -51,68 +50,50 @@ Click `Add/Import project`
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_0.png)
 
-
 Then tap your `Project name` and pick the `Country/region`. Then click `CREATE PROJECT` to continue.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_1.png)
 
-
-- **Step 2.Register Model** 
-
+- **Step 2.Register Model**
 
 Click `Connected properties ->DEVICE MODELS ->REGISTER MODEL` as the picture below.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_2.png)
 
-
-
 Fill in your product info. then click `REGISTER MODEL` to continue.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_3.png)
-
-
 
 Just click `NEXT`
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_4.png)
 
-
-
 Please make sure you have selected this option `ALL 7 traits`, so that you can turn on all the permissiions. Then click `SAVE TRAITS`.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_5.png)
-
-
 
 Now please click the Project Name you have just created. For this demo, as you can see, we use `ReSpeaker Core v2.0`.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_6.png)
 
-
-
 You will see some info. as the following picture shown.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_7.png)
 
-
 Please mark down the `Model Id` which is `respeaker-xxxx-respeaker-core-v2.0-xxxxx` in this demo, it is important and you will use it later.
-
-
 
 Now let's download the json file. Click the button in the upper right corner, then click `Download credentials.json` to download the json file into your computer.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_8.png)
 
-Then use the [WinCP](https://winscp.net/eng/docs/lang:chs) or other transmission tools to copy the json file to your ReSpeaker Core v2.0. 
+Then use the [WinCP](https://winscp.net/eng/docs/lang:chs) or other transmission tools to copy the json file to your ReSpeaker Core v2.0.
 For example, we copy it to the path `/home/respeaker`.
-
 
 Next, please click the gear in the upper left conner, click `Project settings`, remember the `Project ID` which is `` in this demo.
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_9.png)
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/Google_10.png)
 
-
-Ok, let's check again, in this section you will get two IDs. 
+Ok, let's check again, in this section you will get two IDs.
 
 The  Model ID `respeaker-xxxx-respeaker-core-v2.0-xxxxx`
 
@@ -120,13 +101,11 @@ The Project ID `respeaker-440eb`
 
 They will be used later.
 
-
 #### Enable the Google Assistant API
 
 Enable the Google Assistant API on the project you selected (see the [Terms of Service](https://developers.google.com/assistant/sdk/terms-of-service)). You need to do this in the Cloud Platform Console.
 
 Just click [Here](https://console.developers.google.com/apis/api/embeddedassistant.googleapis.com/overview) to enable the Google Assistant API.
-
 
 Ensure the following toggle switches are enabled (blue):
 
@@ -134,8 +113,6 @@ Ensure the following toggle switches are enabled (blue):
 - In addition, be sure to select the `Include Chrome browsing history and activity from websites and apps that use Google services` checkbox.
 - `Device Information`
 - `Voice & Audio Activity`
-
-
 
 #### Install the SDK and Sample Code
 
@@ -148,6 +125,7 @@ You can do this part with python2.7 and python3, in this demo we use python2.7.
 **Step 1.**
 
 Tap the following command:
+
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -157,7 +135,6 @@ env/bin/python -m pip install --upgrade pip setuptools wheel
 source env/bin/activate
 
 ```
-
 
 **Step 2. Get the package**
 
@@ -171,8 +148,6 @@ Use pip to install the latest version of the Python package in the virtual envir
 sudo python -m pip install --upgrade google-assistant-sdk[samples]
 
 ```
-
-
 
 **Step 3. Generate credentials**
 
@@ -210,32 +185,23 @@ Then you will get the code, please copy the code after the note `Please visit th
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code0.png)
 
-
 Paste the code into your Internet browser, then tap the `Enter` key.
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code1.png)
-
 
 If everything goes well, the following window will pops up. Choose your Google account and select `ALLOW`
 
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code2.png)
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code3.png)
 
-
 Ok, then, you will get the authorize code as the following picture shown.
 
-
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code4.png)
-
 
 Cope this code into your console
 ![](https://files.seeedstudio.com/wiki/Google-Assitant/img/code5.png)
 
-
 Then you will see the notice `credentials saved: /path/to/.config/google-oauthlib-tool/credentials.json`. That means everything goes well so far.
-
-
-
 
 #### Install Respeakerd
 
@@ -253,13 +219,11 @@ sudo vim /etc/respeaker/respeakerd.conf
 sudo reboot
 ```
 
+#### Activate the Google Assistant
 
-#### Activate the Google Assistant.
-
-Remember the two IDs we marked before? Now it's time to use them. 
+Remember the two IDs we marked before? Now it's time to use them.
 
 Change the command `googlesamples-assistant-respeakerd --project-id my-dev-project --device-model-id my-model` with your own IDs.
-
 
 For the command above, change `my-dev-project` into your `project-id` and change `my-model` into your `Model ID`.
 
@@ -275,11 +239,11 @@ Now, cheers!!!
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

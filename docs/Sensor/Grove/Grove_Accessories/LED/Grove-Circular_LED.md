@@ -17,19 +17,23 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 <!-- [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html) -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)
-##   Features
----
-*   Circular shape
-*   24 LEDs, about 5.5 mA drive current for each channel.
-*   Controllable LEDs with florid effects
-*   Grove Interface.
 
-##   Schematic
+## Features
+
+---
+- Circular shape
+- 24 LEDs, about 5.5 mA drive current for each channel.
+- Controllable LEDs with florid effects
+- Grove Interface.
+
+## Schematic
+
 ---
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_schmatic.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_schmatic.jpg" alt="pir" width={600} height="auto" /></p>
 
-##   Specification
+## Specification
+
 ---
 <table  cellspacing="0" width="80%">
 <tr>
@@ -65,25 +69,22 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 </tr>
 </table>
 
-##   Interface
+## Interface
+
 ---
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_Interface.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_Interface.jpg" alt="pir" width={600} height="auto" /></p>
 
-##   Getting Started
+## Getting Started
 
 **Materials required**
-
 
 | Seeeduino V4.2 | Base Shield |Grove - Circular LED|
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-Circular_LED/img/Circular_LED_S.jpg" alt="pir" width={600} height="auto" /></p>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Circular-LED-p-1353.html)|
 
-
-
 >In addition, you can consider our new [Seeeduino Lotus M0+](https://www.seeedstudio.com/Seeeduino-Lotus-Cortex-M0-p-2896.html), which is equivalent to the combination of Seeeduino V4.2 and Baseshield.
-
 
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
@@ -93,19 +94,16 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 ### Hardware Connection
 
-
 - **Step 1.** Connect the Grove - Circular LED with the **D6** port of the Base Shield.
 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
-
-
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - Circular LED to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove - Circular LED to Seeeduino as below.
 :::
+
 | Seeeduino       | Grove - Circular LED |
 |---------------|-------------------------|
 | 5V            | Red                     |
@@ -113,16 +111,16 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 | D7           | White                   |
 | D6           | Yellow                  |
 
-
 ### Software
 
 :::note
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 - **Step 1.** Download the  [Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar) from Github.
 - **Step 2.** Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - **Step 3.** Open **Arduino IDE -> File -> Examples -> Grove_LED_Bar -> BasicControl**
-- **Step 4.** Uncomment the **define MY9221_LED_NUM 24** and comment **#define MY9221_LED_NUM 10** as below. 
+- **Step 4.** Uncomment the **define MY9221_LED_NUM 24** and comment **#define MY9221_LED_NUM 10** as below.
 
 ```
 //#define MY9221_LED_NUM 10
@@ -131,7 +129,6 @@ This is a unique ring– it has a florid body with 24 controllable LEDs. Maybe i
 
 - **Step 5.** Upload the example to Arduino. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 - **Step 6.** You can see the led is running from .C, 23 and AB repeatly.
-
 
 ### Play with Codecraft
 
@@ -166,10 +163,10 @@ Upload the program to your Arduino/Seeeduino.
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove-circular_LED_eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Source
 
-
-##   Source
 ---
+
 - [CircularLED Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
 
 - [Grove Circular LED schematics PDF File](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Circular_LED_v0.9b.pdf)
@@ -179,14 +176,15 @@ Upload the program to your Arduino/Seeeduino.
 - [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Circular_LED/res/Grove_Circular_LED_CDC_File.zip)
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

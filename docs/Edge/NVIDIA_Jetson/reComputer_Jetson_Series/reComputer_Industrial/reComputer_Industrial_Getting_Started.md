@@ -25,7 +25,7 @@ reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for p
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-## Features 
+## Features
 
 - **Fanless compact PC:** Thermal reference design, wider temperature support -20 ~ 60°C with 0.7m/s airflow
 - **Designed for industrial interfaces:** 2x RJ-45 GbE(1 for POE-PSE 802.3 af); 1x RS-232/RS-422/RS-485; 4x DI/DO; 1x CAN; 3x USB3.2; 1x TPM2.0 (Module optional)
@@ -229,7 +229,7 @@ reComputer industrial has 2 RJ45 GbE ports, one of which is a PoE PSE port for p
   </tbody>
 </table>
 
-## Hardware Overview 
+## Hardware Overview
 
 ### Full System
 
@@ -262,7 +262,7 @@ You need to prepare the following hardware before getting started with reCompute
 :::info
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -292,7 +292,8 @@ Please refer to the table below to prepare the host machine.
 
 ### Enter Force Recovery Mode
 
-Now you need to enter recovery mode on the reComputer Industrial board in order flash the device. 
+Now you need to enter recovery mode on the reComputer Industrial board in order flash the device.
+
 1. Connect a USB Type-C cable between **USB2.0 DEVICE** port and your PC.
 2. Use a pin and insert into the **RECOVERY** hole to press recovery button and while holding this.
 3. Connect the included **2-Pin Terminal block power connector** to the power connector on the board and connect the included power adapter with a power cord to turn on the board.
@@ -391,22 +392,20 @@ The first method download is around 14GB and the second method download is about
 </p>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
 
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra)
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-
-
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_xxxx
@@ -474,7 +473,6 @@ sudo ./tools/l4t_flash_prerequisites.sh
   </tbody>
 </table>
 
-
 - **Step 2:** Move the downloaded peripheral drivers into the same folder with **Linux_For_Tegra** directory
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/125.png"/></div>
@@ -490,7 +488,7 @@ Here it will ask whether to replace the files. Type A and press ENTER to replace
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/126.png"/></div>
 
-- **Step 4:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows 
+- **Step 4:** Navigate to the **Linux_for_Tegra** directory and execute the flash command as follows
 
 ```sh
 cd Linux_for_Tegra
@@ -530,6 +528,7 @@ Futhermore, if you want to install SDK components such as CUDA, cuDNN, TensorRT,
 sudo apt update
 sudo apt install nvidia-jetpack -y
 ```
+
   </TabItem>
   </Tabs>
 
@@ -540,6 +539,7 @@ sudo apt install nvidia-jetpack -y
 <TabItem value="Jetpack 5.1.3" label="Jetpack5.1.3">
 
 - **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
@@ -581,11 +581,11 @@ sudo apt install nvidia-jetpack -y
       <th>11BDB47D06CA8409CFCEA109B8BACD9BB79A54A275D2664D6CF492BFEAD31131</th>
     </tr>
   </tbody>
-  </table> 
+  </table>
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -594,13 +594,13 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra).
 :::
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_xxxx
@@ -611,7 +611,6 @@ Now it will start to flash the system image to the board. If the flashing is suc
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
 
-
 - **Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
@@ -620,12 +619,12 @@ Now it will start to flash the system image to the board. If the flashing is suc
 Please complete the **System Configuration** according to your needs.
 :::
 
-
 </TabItem>
 
 <TabItem value="Jetpack 6.0" label="Jetpack6.0">
 
 - **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
@@ -657,11 +656,11 @@ Please complete the **System Configuration** according to your needs.
       <th>30184A2A2800733118F4CC711010AE523C9A3F0E9565617B1C2E9CF64AE21CF0</th>
     </tr>
   </tbody>
-  </table> 
+  </table>
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -670,13 +669,13 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra).
 :::
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_xxxx
@@ -701,6 +700,7 @@ After that, the board will reboot and will be ready to use!
 <TabItem value="Jetpack 6.1" label="Jetpack6.1">
 
 - **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
@@ -732,11 +732,11 @@ After that, the board will reboot and will be ready to use!
       <th>B7F400C225423C8BC4C00A5915C3C634D2D7B15145FE0735479E6AD7613D07E5</th>
     </tr>
   </tbody>
-  </table> 
+  </table>
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -745,13 +745,13 @@ On an Ubuntu host machine, open the terminal and run the command `sha256sum <Fil
 The source code for the above images can be found [here](https://github.com/Seeed-Studio/Linux_for_Tegra).
 :::
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_xxxx
@@ -761,7 +761,6 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
-
 
 - **Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
 
@@ -776,6 +775,7 @@ Please complete the **System Configuration** according to your needs.
 <TabItem value="Jetpack 6.2" label="Jetpack6.2">
 
 - **Step 1:**Download the system image to your Ubuntu PC corresponding to the board you are using
+
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
@@ -797,11 +797,11 @@ Please complete the **System Configuration** according to your needs.
       <th>0C07EC7C852DD72A7E8034965A274193<br />9B2DDA9C88AB9C6E4CB41E6264B95BDC</th>
     </tr>
   </tbody>
-  </table> 
+  </table>
 </div>
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -815,13 +815,13 @@ Please note that due to the increased power consumption and heat generation afte
 We are currently designing a new version of reComputer. Stay tuned!
 :::
 
-- **Step 2:** Extract the generated file 
+- **Step 2:** Extract the generated file
 
 ```sh
 sudo tar -xvf <file_name>.tar.gz
 ```
 
-- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows 
+- **Step 3:** Navigate to the extracted file from before and execute the flash command as follows
 
 ```sh
 cd mfi_xxxx
@@ -831,7 +831,6 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 Now it will start to flash the system image to the board. If the flashing is successful, you will see the below output
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/99.png"/></div>
-
 
 - **Step 4:** Connect the J401 to a display using the HDMI connector on the board and finish the initial configuration setup:
 
@@ -845,9 +844,7 @@ Please complete the **System Configuration** according to your needs.
 
 </Tabs>
 
-
 <!-- Code END -->
-
 
 ## Hardware and Interfaces Usage
 
@@ -866,16 +863,17 @@ To learn more about how to use all the hardware and interfaces on the reComputer
 - [Seeed Studio Edge AI Success Stories](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
 - [Seeed Jetson Serials Comparision](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
 - [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

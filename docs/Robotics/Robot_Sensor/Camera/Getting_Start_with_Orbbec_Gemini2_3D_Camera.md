@@ -20,7 +20,7 @@ last_update:
 ---
 
 <div align="center">
-    <img width={400} 
+    <img width={400}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.png" />
 </div>
 
@@ -33,8 +33,8 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Feature
+
 - **Active Stereo IR** Employs active stereo IR technology for depth output, enabling accurate and reliable data output in various lighting conditions
 - **Wide Sensing Range** Provides quality depth data output from 0.15m to 10m
 - **Wide FOV** Provides wide field of view data at 91-degree horizontal and 66-degree vertical
@@ -42,6 +42,7 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
 - **USB Connection** Uses single USB 3.0 Type-C cable for power and connectivity
 
 ## Specifications
+
 <div className="table-center">
   <table style={{ height: "700px" }}>
     <tbody>
@@ -120,17 +121,17 @@ The compact Gemini 2 3D camera is based on Active Stereo IR technology and is eq
 ## Hardware Overview
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-1.png" />
 </div>
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-2.png" />
 </div>
 
 <div align="center">
-    <img width={700} 
+    <img width={700}
      src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-101090144-3.png" />
 </div>
 
@@ -147,6 +148,7 @@ unzip OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64.zip
 ```
 
 **Step 2.** Build examples and test:
+
 ```bash
 # Install udev rules
 cd OrbbecSDK_v2.4.11_202508040936_058db73_linux_aarch64/shared/
@@ -159,16 +161,15 @@ cd ..
 ./setup.sh
 ```
 
-
 <div align="center">
-    <img width={1000} 
+    <img width={1000}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/test_sdk.png" />
 </div>
 
 ## Applications example
 
 <div style={{ textAlign: "justify" }}>
-The Orbbec Gemini2 is a compact, high-performance depth camera ideal for robotics, 3D vision, object tracking, and industrial automation. 
+The Orbbec Gemini2 is a compact, high-performance depth camera ideal for robotics, 3D vision, object tracking, and industrial automation.
 it fits perfectly in embedded AI and edge computing applications like those on NVIDIA Jetson platforms.
 </div>
 
@@ -178,15 +179,14 @@ There are some case tutorials developed by us using Gemini2:
 [Distance Measurement](https://wiki.seeedstudio.com/yolov11_with_depth_camera/)
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/distance.png" />
 </div>
-
 
 [Object Tracking on drone](https://wiki.seeedstudio.com/object_tracking_with_reComputer_jetson_and_pX4/)
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
     src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/px4.png" />
 </div>
 
@@ -203,11 +203,11 @@ There are some case tutorials developed by us using Gemini2:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

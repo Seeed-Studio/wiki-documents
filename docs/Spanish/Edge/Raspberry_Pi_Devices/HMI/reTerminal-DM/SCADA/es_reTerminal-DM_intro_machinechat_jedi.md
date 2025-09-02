@@ -362,7 +362,7 @@ En conclusión, Machinechat JEDI junto con reTerminal DM se presenta como una so
 
 - **[Página Web]** [Documentación Oficial de Machinechat](https://docs.machinechat.io/)
 
-# Soporte Técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diversos canales de soporte y asegurarnos de que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

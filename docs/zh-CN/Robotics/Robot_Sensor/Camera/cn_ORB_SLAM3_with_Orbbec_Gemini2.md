@@ -9,7 +9,7 @@ keywords:
 - Orbbec Gemini2
 - RGB-D camera
 - Visual SLAM
-image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orbbec-gemini-2-3d-camera.webp 
+image: https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini2/orb_slam3.webp
 slug: /cn/orb_slam3_orbbec_gemini2
 last_update:
   date: 2025-08-21

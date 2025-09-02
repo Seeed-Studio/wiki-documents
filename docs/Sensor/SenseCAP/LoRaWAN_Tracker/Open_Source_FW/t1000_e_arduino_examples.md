@@ -67,15 +67,13 @@ The following Arduino examples are available:
   </table>
 </div>
 
-
 ## Preparation
 
 ### Hardware Preparation
 
-* SenseCAP T1000-E x 1
-* USB Cable x 1
-* Computer x 1
-
+- SenseCAP T1000-E x 1
+- USB Cable x 1
+- Computer x 1
 
 ### Software Preparation
 
@@ -87,30 +85,23 @@ Check here for to [Get Started with Arduino](https://wiki.seeedstudio.com/Gettin
 The version needs to be newer than v1.6.12.
 :::
 
-
 ## Get Started
 
 ### Prerequisites
 
 1. Add URL
- 
-Navigate to `File` -> `Preferences`, and add the following URL to `Additional Boards Manager URLs`: 
+
+Navigate to `File` -> `Preferences`, and add the following URL to `Additional Boards Manager URLs`:
 
 ```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/add-url.png" alt="pir" width={800} height="auto" /></p>
-
 
 2. Install Board
 
-Navigate to `Boards Manager`, search`seeed nrf52`, select the latest version and install it. 
-
-
-
-
+Navigate to `Boards Manager`, search`seeed nrf52`, select the latest version and install it.
 
 ### Building an Example
 
@@ -124,7 +115,6 @@ Navigate to `Boards Manager`, search`seeed nrf52`, select the latest version and
 2. build example
 
 Navigate to `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`, Then open an example of your choice (in this case the accelerator example):
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/example_select.png" alt="pir" width={800} height="auto" /></p>
 
@@ -221,9 +211,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-

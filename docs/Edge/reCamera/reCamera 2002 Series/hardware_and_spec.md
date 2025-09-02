@@ -15,17 +15,14 @@ last_update:
 
 # reCamera Overview
 
-reCamera is an open-source and tiny AI camera, programmable and customizable, powered by RISC-V SoC, delivering 
-on-device 1 TOPS AI performance with video encoding 5MP @30 FPS. The modular hardware design and expandable 
-interfaces offer the most verstile platform for developers building vision AI systems.
+reCamera is an open-source and tiny AI camera, programmable and customizable, powered by RISC-V SoC, delivering on-device 1 TOPS AI performance with video encoding 5MP @30 FPS. The modular hardware design and expandable interfaces offer the most verstile platform for developers building vision AI systems.
 
 ## Feature
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/reCamera_3x.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 ## Specifications
+
 <table style={{width: '72.2022%'}}>
             <tbody>
                 <tr></tr>
@@ -210,10 +207,9 @@ interfaces offer the most verstile platform for developers building vision AI sy
             </tbody>
         </table>
 
-
 ## Hardware Overview
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-12.png" /></div>
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-12.png" /></div>
 
 ### [Core Board-C101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#core-board)
 <!-- 搬运github说明和图 -->
@@ -224,6 +220,7 @@ interfaces offer the most verstile platform for developers building vision AI sy
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Up.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/C1_2002w_Bottom.png" /></div>
 
 ### [Sensor Board-S101](https://github.com/litxaohu/OSHW-reCamera-Series/tree/main?tab=readme-ov-file#sensor-board)
@@ -231,9 +228,10 @@ Top View             |  Bottom View
 
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_UP.png" /></div> | <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/S1_ov5647_Bottom.png" /></div>
 
-#### ⚙️ features:
+#### ⚙️ features
 
 <div>
 
@@ -282,9 +280,10 @@ Top View             |  Bottom View
 <!-- 搬运github说明和图 -->
 Top View             |  Bottom View
 :-------------------------:|:-------------------------:
+
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/B1_Default_Upper.png" /></div>  |  <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reCamera/B1_Default_Bottom.png" /></div>
 
-#### ⚙️ Features:
+#### ⚙️ Features
 
 - 1 x Type-C port for power input and communication.
 - 1 x Single Port Transformer Module for Ethernet communication support.
@@ -299,7 +298,6 @@ Top View             |  Bottom View
 - [Uart (Debug)](#jump6)
 - [User Button](#jump7)
 
-
 ### <span id="jump2">Light</span>
 
 There are 3 indicators on the recamera, **red and blue** light are programmable indicators, and the **green** indicator is the power indicator which is not programmable. **Red** is the status indicator of the CPU and **blue** is the reading status indicator of the system emmc.
@@ -313,11 +311,13 @@ There are 3 indicators on the recamera, **red and blue** light are programmable 
 | LED3 - Blue | Flashing | eMMC Reading/Writing |
 
 Example 1: Use linux command change the **red led** brightness to zero
+
 ``` bash
 echo 0 | sudo tee /sys/class/leds/red/brightness
 ```
 
 Example 2: completely turn **red light** off
+
 ``` bash
 echo none | sudo tee /sys/class/leds/red/trigger
 ```
@@ -393,6 +393,7 @@ sudo mkfs.ext4 /dev/mmcblk1p1 #Format the filesystem to ext4
 mkdir /userdata/mmcblk1 #Create a mount file
 sudo mount -t ext4 /dev/mmcblk1p1 /userdata/mmcblk1 #Mount the SD card to the /userdata/mmcblk1 path
 ```
+
 Check the mount result by `lsblk`
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-6.png" /></div>
@@ -420,8 +421,8 @@ echo "510" > /sys/class/gpio/export
 echo "in" > /sys/class/gpio/gpio510/direction #Enable the input mode
 cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 ```
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-11.png" /></div>
 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/image-11.png" /></div>
 
 ## Part list
 
@@ -433,19 +434,16 @@ cat /sys/class/gpio/gpio510/value #When the key is pressed, 0 is printed
 
 <!-- ## Accessories List -->
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

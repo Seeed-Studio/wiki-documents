@@ -11,18 +11,21 @@ last_update:
 ---
 
 # Connect to Helium Network
- 
+
 ## Helium Console
 
 The Helium Console is a web-based device management tool hosted by the Helium Foundation that allows developers to register, authenticate, and manage their devices on the Helium network. In addition to device management, Console provides prebuilt connections called Integrations to route device data via HTTPs or MQTT; or directly to cloud services like AWS IoT.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/003.png)
 
-
 ## Connect to Helium Network
+
 ### Create a New account
+
 Please go to &lt;https://console.helium.com/&gt;  , and register your account.
+
 ### Setup the Sensor
+
 (1) Open the SenseCAP Mate App
 
 (2) Press button and hold for 3 seconds, the LED will flash at 1s frequency.
@@ -36,7 +39,9 @@ Please go to &lt;https://console.helium.com/&gt;  , and register your account.
 (4) Select the Sensor by S/N (label). Then, the basic information of the sensor will be displayed after entering.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/006.png)       ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/007.png)
+
 ### Set Frequency of Sensor via SenseCAP Mate App
+
 Set the corresponding frequency band based on the frequency band of the gateway.
 
 (1) Click the “Setting” and select the platform is “**Helium**”.
@@ -45,7 +50,7 @@ Set the corresponding frequency band based on the frequency band of the gateway.
 
 (2) Select the Frequency Plan, if the gateway is US915, set the sensor to US915.
 
-(3) Click the “Send” button, send the setting to the sensor for it to take effect. 
+(3) Click the “Send” button, send the setting to the sensor for it to take effect.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0010.png)
 
@@ -58,7 +63,9 @@ Then, the sensor will reboot.
 (6) After joining the network successfully, LED **flashes fast for 2s**.
 
 # Helium Console Configuration
+
 ## Add New Device
+
 (1) Click “Devices” –> “Add New Device”
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0011.png)
@@ -71,7 +78,7 @@ Then, the sensor will reboot.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0013.png)
 
-(4）Add a new label, then add the label to a device. 
+(4）Add a new label, then add the label to a device.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0014.png)
 
@@ -81,10 +88,8 @@ Then, the sensor will reboot.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0017.png)
 
-
-
-
 ## Check the data on Helium
+
 (1) Enter device details page and find the REAL TIME PACKETS.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0018.png)
@@ -93,12 +98,11 @@ Then, the sensor will reboot.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0019.png)
 
-
-
-
 ## Upload Data from Helium to Datacake
+
 ### Create a Datacake Account
-(1) Create a new account, website: &lt;https://datacake.co/&gt; 
+
+(1) Create a new account, website: &lt;https://datacake.co/&gt;
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0020.png)
 
@@ -109,6 +113,7 @@ Then, the sensor will reboot.
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0022.png)
 
 ### Add New Integration on Helium Console
+
 (1) Click “Integrations” -> ”Add New Integration” -> ”Datacake”.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0023.png)
@@ -116,12 +121,14 @@ Then, the sensor will reboot.
 (2) Enter Datacake Token (Refer to [the section](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/#_Create_a_Datacake)) and name your integration.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0024.png)
+
 ### Configure the Flows on Helium
+
 (1) Click “Flows”.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0025.png)
 
-(2) Drag the Label into a blank place. 
+(2) Drag the Label into a blank place.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0026.png)
 
@@ -136,7 +143,9 @@ Then, the sensor will reboot.
 (5) Save Changes.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0029.png)
+
 ### Add the Sensor on Datacake
+
 (1) Return Datacake Dashboard, and click “Device” -> ”Add Device”
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0030.png)
@@ -161,8 +170,8 @@ Then, the sensor will reboot.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0035.png)
 
-
 ### Check Data from Datacake
+
 Click Debug button, it will display debug log.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0036.png)
@@ -170,5 +179,3 @@ Click Debug button, it will display debug log.
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0037.png)
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Helium_Network/0038.png)
-
-

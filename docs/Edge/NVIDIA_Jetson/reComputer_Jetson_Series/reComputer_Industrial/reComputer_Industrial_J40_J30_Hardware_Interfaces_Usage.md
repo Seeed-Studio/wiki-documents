@@ -14,7 +14,6 @@ This wiki introduces the various different hardware and interfaces on the reComp
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-
 ## CSI Cameras
 
 reComputer Industrial is equipped with **2x 2-lane 15pin MIPI CSI camera connectors** and the below cameras are supported
@@ -136,7 +135,6 @@ If you want to change further settings of the camera, you can update the argumen
 </TabItem>
 </Tabs>
 
-
 ## RTC
 
 reComputer Industrial is equipped with 2 different ways to connect to an RTC battery
@@ -173,7 +171,7 @@ Please note that if your reComputer device has already been updated to JetPack 6
 If you have not connected to internet via Ethernet, you can manually set the date/ time here
 :::
 
-**Step 4:** Open a terminal window, and execute the below command to check the hardware clock time 
+**Step 4:** Open a terminal window, and execute the below command to check the hardware clock time
 
 ```sh
 sudo hwclock
@@ -189,13 +187,13 @@ You will see the output something like below which is not the correct date/ time
 sudo hwclock --systohc
 ```
 
-**Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board 
+**Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board
 
 ```sh
 sudo reboot
 ```
 
-**Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
+**Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off
 
 Now we will create a script to always sync the system clock from the hardware clock in each boot.
 
@@ -225,7 +223,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-**Step 12:** Add the following inside the file 
+**Step 12:** Add the following inside the file
 
 ```sh
 [Unit]
@@ -257,13 +255,13 @@ sudo systemctl start hwtosys.service
 sudo systemctl status hwtosys.service
 ```
 
-**Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
+**Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock
 
 ## M.2 Key M
 
 Out of the box, reComputer Industrial includes a 128GB SSD connected to the M.2 Key M slot, which is pre-installed with JetPack system.
 
-### Connection Overview 
+### Connection Overview
 
 If you want to remove the included SSD and install a new one, you can follow the steps below. Here we only recommend to use Seeed SSDs with [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html) and [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) storage because we have only tested those SSDs. Further this interface supports PCIe Gen4.0 SSDs.
 
@@ -279,7 +277,7 @@ If you want to remove the included SSD and install a new one, you can follow the
 
 ### Usage
 
-We will explain how to do a simple benchmark on the connected SSD 
+We will explain how to do a simple benchmark on the connected SSD
 
 - **Step 1:** Check the write speed by executing the below command
 
@@ -296,7 +294,7 @@ sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
 
 ## mini PCIe
 
-reComputer Industrial comes with a mini PCIe connector that supports 4G and LoRa modules. However, you can only connect either a 4G module or a LoRa module at once. 
+reComputer Industrial comes with a mini PCIe connector that supports 4G and LoRa modules. However, you can only connect either a 4G module or a LoRa module at once.
 
 ### 4G Module Connection Overview
 
@@ -376,7 +374,7 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo 
+**Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo
 
 **Step 5:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 4G module is working properly
 
@@ -386,7 +384,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-**Step 7:** To test the module, enter the below command to call another phone number 
+**Step 7:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -402,7 +400,7 @@ If the entered phone number can receive the call, the module is working as expec
 
 #### EC25 module
 
-If you are using the EC25 module, follow the below steps 
+If you are using the EC25 module, follow the below steps
 
 - **Step 1:** After opening the serial console of the 4G module as explained above (4G Module Usage - Test Dialing section), execute the following command to connect to the internet. Here replace **YOUR_APN** with the APN of your network provider
 
@@ -528,6 +526,7 @@ To stop transmitting, you can press **CTRL + C** on the keyboard.
 Now we will connect to TTN (The Things Network) and use the reComputer Industrial as a TTN LoRaWAN gateway
 
 - **Step 1:** Enter the below to make the packet forwarder ready
+
 ```sh
 cd ..
 cd packet_forwarder
@@ -577,7 +576,6 @@ After running the above command, you will see the below output with last line sh
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-
 - **Step 8:** Enter the **Frequency plan** according to the LoRa module you are using. Here we are using US915 verison of the module and therefore have selected **United Stated 902-928 MHz, FSB 2 (used by TTN)**. After that click **Register gateway**
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
@@ -590,7 +588,7 @@ The **Gateway ID** has been filled automatically for you. However, you can chang
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows 
+- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows
 
   - gateway_ID: Concentrator EUI from device
   - server_address: Gateway Server Address from TTN
@@ -686,8 +684,7 @@ Please open multiple terminals to run these commands, and make sure each termina
 </TabItem>
 </Tabs>
 
-
-Once the above is executed, LED2 will light up in green as below 
+Once the above is executed, LED2 will light up in green as below
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/117.jpg"/></div>
 
@@ -712,8 +709,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-
-**Step 6:** To test the module, enter the below command to call another phone number 
+**Step 6:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -723,8 +719,7 @@ And you will see the below output
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
-
-## DI/ DO 
+## DI/ DO
 
 reComputer Industrial supports 4 digital input and 4 digital output channels, all of which are optically isolated to effectively protect the mainboard from voltage spikes or other electrical disturbances. There is also a CAN interface on this same connector which we will discuss later in this wiki
 
@@ -886,7 +881,6 @@ sudo gpioget gpiochip0 105
 </TabItem>
 </Tabs>
 
-
 If it outputs 0, that means there is 12V input. If it outputs 1, that means there is no input voltage.
 
 ### Connection Overview for DO
@@ -930,7 +924,6 @@ sudo gpioset --mode=wait gpiochip0 51=1
 
 </TabItem>
 </Tabs>
-
 
 If the load is turned on or the multimeter outputs the voltage that you have input, the test it is functioning properly.
 
@@ -1042,7 +1035,7 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled 
+- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
@@ -1076,7 +1069,7 @@ You can see the DIP switch panel as below:
 Make sure to remove the yellow plastic cover before using the DIP switch panel
 :::
 
-And the below table explains the different modes based on the DIP switch positions 
+And the below table explains the different modes based on the DIP switch positions
 
 <table>
   <thead>
@@ -1173,7 +1166,7 @@ And the below table explains the different modes based on the DIP switch positio
 Out of the box, the default mode of the switches will be set to RS485 with 010 from factory
 :::
 
-The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate 
+The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate
 
 <table>
   <thead>
@@ -1199,7 +1192,7 @@ The above table takes into account the first three switches of the DIP switch pa
 
 Here we will be using USB to RS232, RS485 and RS422 adapters in order to test the interfaces. So before moving on, you need to install a serial terminal application on your PC. Here we recommend you to install **Putty** which is easy to setup and use.
 
-- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture 
+- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
@@ -1286,7 +1279,7 @@ You can refer to the pin numbering of DB9 connector and the table to make the co
   </tbody>
 </table>
 
-### RS232 Connection Overview 
+### RS232 Connection Overview
 
 Here you can use a USB to RS232 adapter to test the interface. We have used [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) for our testing.
 
@@ -1296,7 +1289,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-**Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS232 adapter to the DB9 connector. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/68.jpg"/></div>
 
@@ -1310,12 +1303,12 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-**Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly 
+**Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly
 
 **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
@@ -1373,7 +1366,7 @@ On Putty, type anything, press **ENTER** and it will be displayed on the reCompu
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-### RS422 Connection Overview 
+### RS422 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1383,7 +1376,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
@@ -1401,8 +1394,8 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
@@ -1456,7 +1449,7 @@ sudo cat /dev/ttyTHS1
 
 On Putty, type anything, press **ENTER** and it will be displayed on the reComputer Industrial terminal window
 
-### RS485 Connection Overview 
+### RS485 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1466,7 +1459,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+**Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
@@ -1484,8 +1477,8 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
@@ -1558,7 +1551,7 @@ On Putty, type anything, press **ENTER** and it will be displayed on the reCompu
 There are two Gigabit Ethernet (10/100/1000M) Connectors on the reComputer Industrial and they function in different ways
 
 - The leftmost connector is directy connected to the Jetson module and is able to provide PoE functionality with **PSE 802.3 af, 15W** specification. This means you can connect a PoE IP camera or any other PoE device to this port to provide power to the connected device.
-- The other connector is connected via a PCIe to Ethernet (LAN7430-I/Y9X) module 
+- The other connector is connected via a PCIe to Ethernet (LAN7430-I/Y9X) module
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/36.png"/></div>
 
@@ -1570,15 +1563,15 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 ## USB
 
 reComputer Industrial comes with 3x USB3.2 connectors onboard and has the following features:
+
 - On the dual stacked USB connectors, the upper and lower USB ports share a current-limiting IC, with a total power supply capacity of 2.1A maximum output current (single can also be 2.1A). If over 2.1A, it will enter the over-current protection state.
 - On the single USB connector next to the dual stacked USB connectors, it has a total power supply capacity of 2.1A maximum output current. If over 2.1A, it will enter the over-current protection state.
-- Orin NX module comes with 3 USB3.2, only one of which is used in reComputer and converted to 3 ways. (USB3.1 TYPE-A x2 - J4 and USB3.1 TYPE-A
-x1 -J3).
+- Orin NX module comes with 3 USB3.2, only one of which is used in reComputer and converted to 3 ways. (USB3.1 TYPE-A x2 - J4 and USB3.1 TYPE-A x1 -J3).
 - Only supports USB Host, not Device mode
 - Provide 5V 2.1A
 - Hot-swappable
 
-### Usage 
+### Usage
 
 We will explain how to do a simple benchmark on a connected USB flash drive
 
@@ -1601,7 +1594,7 @@ There is a Green color LED located on the board as shown below. By default it is
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/21.png"/></div>
 
-### Usage 
+### Usage
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1656,14 +1649,14 @@ sudo gpioset gpiochip1 13=1
 
 ## Monitor System Performance
 
-We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
+We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as
 
 - View CPU, GPU, RAM utilizations
 - Change power modes
-- Set to max clocks 
+- Set to max clocks
 - Check JetPack information
 
-- **Step 1:** On the reComputer Industrial terminal windows, type the following 
+- **Step 1:** On the reComputer Industrial terminal windows, type the following
 
 ```sh
 sudo apt update
@@ -1691,9 +1684,9 @@ Now **jtop** application will open as follows
 
 ## WiFi and Bluetooth
 
-reComputer Industrial does not come with WiFi and Bluetooth out-of-the-box. But there is a reserved section on the PCB so that a WiFi/ Bluetooth module can be soldered to the board. Here we have reserved the space to support a **BL-M8723DU1** module. 
+reComputer Industrial does not come with WiFi and Bluetooth out-of-the-box. But there is a reserved section on the PCB so that a WiFi/ Bluetooth module can be soldered to the board. Here we have reserved the space to support a **BL-M8723DU1** module.
 
-### Connection Overview 
+### Connection Overview
 
 - **Step 1:** If you want to solder the **BL-M8723DU1** module by yourself, you can solder it. But we do not recommend this because if you damage the board in the process, the warranty will be void. What we recommend is to use our professional service to help you solder this module onto the board and you can send an email to order@seeed.cc with your request.
 
@@ -1719,9 +1712,9 @@ reComputer Industrial comes with a TPM interface to connect an external TPM modu
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/114.jpg"/></div>
 
-### Connection Overview 
+### Connection Overview
 
-Connect the TPM module to the TPM connector as shown below 
+Connect the TPM module to the TPM connector as shown below
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/115.jpg"/></div>
 
@@ -1740,9 +1733,9 @@ And you will see the output as follows
 
 ## Max Performance on reComputer Industrial
 
-If you want to enable maximum performance on the reComputer Industrial, please follow the below instructions 
+If you want to enable maximum performance on the reComputer Industrial, please follow the below instructions
 
-- **Step 1:** Enter the below command to enable the maximum power mode 
+- **Step 1:** Enter the below command to enable the maximum power mode
 
 ```sh
 sudo nvpmodel -m 0
@@ -1752,13 +1745,13 @@ sudo nvpmodel -m 0
 
 Here it will ask to type **YES** in order to reboot the board  
 
-- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency 
+- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency
 
 ```sh
 sudo jetson_clocks
 ```
 
-## GPIO Table 
+## GPIO Table
 
 You can access the GPIO table of the reComputer Industrial to get familiar with all the pin mappings.
 
@@ -2007,238 +2000,235 @@ And you will see the output as follows
 ```bash
 seeed@seeed-desktop:~$ gpioinfo 
 gpiochip0 - 164 lines:
-	line   0:      "PA.00" "regulator-vdd-3v3-sd" output active-high [used]
-	line   1:      "PA.01"       unused   input  active-high 
-	line   2:      "PA.02"       unused   input  active-high 
-	line   3:      "PA.03"       unused   input  active-high 
-	line   4:      "PA.04"       unused   input  active-high 
-	line   5:      "PA.05"       unused   input  active-high 
-	line   6:      "PA.06"       unused   input  active-high 
-	line   7:      "PA.07"       unused   input  active-high 
-	line   8:      "PB.00"       unused   input  active-high 
-	line   9:      "PC.00"       unused   input  active-high 
-	line  10:      "PC.01"       unused   input  active-high 
-	line  11:      "PC.02"       unused   input  active-high 
-	line  12:      "PC.03"       unused   input  active-high 
-	line  13:      "PC.04"       unused   input  active-high 
-	line  14:      "PC.05"       unused   input  active-high 
-	line  15:      "PC.06"       unused   input  active-high 
-	line  16:      "PC.07"       unused   input  active-high 
-	line  17:      "PD.00"       unused   input  active-high 
-	line  18:      "PD.01"       unused   input  active-high 
-	line  19:      "PD.02"       unused   input  active-high 
-	line  20:      "PD.03"       unused   input  active-high 
-	line  21:      "PE.00"       unused   input  active-high 
-	line  22:      "PE.01"       unused   input  active-high 
-	line  23:      "PE.02"       unused   input  active-high 
-	line  24:      "PE.03"       unused   input  active-high 
-	line  25:      "PE.04"       unused   input  active-high 
-	line  26:      "PE.05"       unused   input  active-high 
-	line  27:      "PE.06"       unused   input  active-high 
-	line  28:      "PE.07"       unused   input  active-high 
-	line  29:      "PF.00"       unused   input  active-high 
-	line  30:      "PF.01"       unused   input  active-high 
-	line  31:      "PF.02"       unused   input  active-high 
-	line  32:      "PF.03"       unused   input  active-high 
-	line  33:      "PF.04"       unused   input  active-high 
-	line  34:      "PF.05"       unused   input  active-high 
-	line  35:      "PG.00" "Force Recovery" input active-low [used]
-	line  36:      "PG.01"       unused   input  active-high 
-	line  37:      "PG.02"    "Suspend"   input   active-low [used]
-	line  38:      "PG.03"       unused   input  active-high 
-	line  39:      "PG.04"       unused   input  active-high 
-	line  40:      "PG.05"       unused   input  active-high 
-	line  41:      "PG.06"       unused   input  active-high 
-	line  42:      "PG.07"       unused   input  active-high 
-	line  43:      "PH.00"       unused   input  active-high 
-	line  44:      "PH.01"       unused   input  active-high 
-	line  45:      "PH.02"       unused   input  active-high 
-	line  46:      "PH.03" "camera-control-output-low" output active-high [used]
-	line  47:      "PH.04"       unused   input  active-high 
-	line  48:      "PH.05"       unused   input  active-high 
-	line  49:      "PH.06"       unused  output  active-high 
-	line  50:      "PH.07"       unused   input  active-high 
-	line  51:      "PI.00"       unused  output  active-high 
-	line  52:      "PI.01"       unused   input  active-high 
-	line  53:      "PI.02"       unused   input  active-high 
-	line  54:      "PI.03"       unused   input  active-high 
-	line  55:      "PI.04"       unused   input  active-high 
-	line  56:      "PI.05"       kernel   input  active-high [used]
-	line  57:      "PI.06"       unused   input  active-high 
-	line  58:      "PJ.00"       unused   input  active-high 
-	line  59:      "PJ.01"       unused   input  active-high 
-	line  60:      "PJ.02"       unused   input  active-high 
-	line  61:      "PJ.03"       unused   input  active-high 
-	line  62:      "PJ.04"       unused   input  active-high 
-	line  63:      "PJ.05"       unused   input  active-high 
-	line  64:      "PK.00"       unused   input  active-high 
-	line  65:      "PK.01"       unused   input  active-high 
-	line  66:      "PK.02"       unused   input  active-high 
-	line  67:      "PK.03"       unused   input  active-high 
-	line  68:      "PK.04"       unused  output  active-high 
-	line  69:      "PK.05"       unused  output  active-high 
-	line  70:      "PK.06"       unused   input  active-high 
-	line  71:      "PK.07"       unused   input  active-high 
-	line  72:      "PL.00"       unused   input  active-high 
-	line  73:      "PL.01"       unused   input  active-high 
-	line  74:      "PL.02"       unused   input  active-high 
-	line  75:      "PL.03"       unused   input  active-high 
-	line  76:      "PM.00"       kernel   input  active-high [used]
-	line  77:      "PM.01"       unused   input  active-high 
-	line  78:      "PM.02"       unused   input  active-high 
-	line  79:      "PM.03"       unused   input  active-high 
-	line  80:      "PM.04"       unused   input  active-high 
-	line  81:      "PM.05"       unused   input  active-high 
-	line  82:      "PM.06"       unused   input  active-high 
-	line  83:      "PM.07"       unused   input  active-high 
-	line  84:      "PN.00"       unused   input  active-high 
-	line  85:      "PN.01"  "interrupt"   input  active-high [used]
-	line  86:      "PN.02"       unused   input  active-high 
-	line  87:      "PN.03"       unused   input  active-high 
-	line  88:      "PN.04"       unused   input  active-high 
-	line  89:      "PN.05"       unused   input  active-high 
-	line  90:      "PN.06"       unused   input  active-high 
-	line  91:      "PN.07"       unused   input  active-high 
-	line  92:      "PP.00"       unused   input  active-high 
-	line  93:      "PP.01"       unused   input  active-high 
-	line  94:      "PP.02"       unused   input  active-high 
-	line  95:      "PP.03"       unused   input  active-high 
-	line  96:      "PP.04"       unused   input  active-high 
-	line  97:      "PP.05"       unused   input  active-high 
-	line  98:      "PP.06"       unused   input  active-high 
-	line  99:      "PP.07"       unused   input  active-high 
-	line 100:      "PQ.00"       unused   input  active-high 
-	line 101:      "PQ.01"       unused   input  active-high 
-	line 102:      "PQ.02"       unused   input  active-high 
-	line 103:      "PQ.03"       unused  output  active-high 
-	line 104:      "PQ.04"       unused   input  active-high 
-	line 105:      "PQ.05"       unused   input  active-high 
-	line 106:      "PQ.06"       unused   input  active-high 
-	line 107:      "PQ.07"       unused   input  active-high 
-	line 108:      "PR.00"       unused   input  active-high 
-	line 109:      "PR.01"       unused   input  active-high 
-	line 110:      "PR.02"       unused   input  active-high 
-	line 111:      "PR.03"       unused   input  active-high 
-	line 112:      "PR.04"       unused   input  active-high 
-	line 113:      "PR.05"       unused   input  active-high 
-	line 114:      "PX.00"       kernel   input  active-high [used]
-	line 115:      "PX.01"       kernel   input  active-high [used]
-	line 116:      "PX.02"       unused   input  active-high 
-	line 117:      "PX.03"       unused   input  active-high 
-	line 118:      "PX.04"       unused   input  active-high 
-	line 119:      "PX.05"       unused   input  active-high 
-	line 120:      "PX.06"       unused   input  active-high 
-	line 121:      "PX.07"       unused   input  active-high 
-	line 122:      "PY.00"       unused   input  active-high 
-	line 123:      "PY.01"       unused   input  active-high 
-	line 124:      "PY.02"       unused   input  active-high 
-	line 125:      "PY.03"       unused   input  active-high 
-	line 126:      "PY.04"       unused   input  active-high 
-	line 127:      "PY.05"       unused   input  active-high 
-	line 128:      "PY.06"       unused   input  active-high 
-	line 129:      "PY.07"       unused   input  active-high 
-	line 130:      "PZ.00"       unused   input  active-high 
-	line 131:      "PZ.01"       "vbus"   input   active-low [used]
-	line 132:      "PZ.02"       unused   input  active-high 
-	line 133:      "PZ.03"       unused   input  active-high 
-	line 134:      "PZ.04"       unused   input  active-high 
-	line 135:      "PZ.05"       unused   input  active-high 
-	line 136:      "PZ.06"   "spi0 CS0"  output   active-low [used]
-	line 137:      "PZ.07"       unused   input  active-high 
-	line 138:     "PAC.00"       unused  output  active-high 
-	line 139:     "PAC.01"       unused   input  active-high 
-	line 140:     "PAC.02"       unused   input  active-high 
-	line 141:     "PAC.03"       unused   input  active-high 
-	line 142:     "PAC.04"       unused   input  active-high 
-	line 143:     "PAC.05"       unused   input  active-high 
-	line 144:     "PAC.06"       unused   input  active-high 
-	line 145:     "PAC.07"       unused   input  active-high 
-	line 146:     "PAD.00"       unused   input  active-high 
-	line 147:     "PAD.01"       unused   input  active-high 
-	line 148:     "PAD.02"       unused   input  active-high 
-	line 149:     "PAD.03"       unused   input  active-high 
-	line 150:     "PAE.00"       unused   input  active-high 
-	line 151:     "PAE.01"       unused   input  active-high 
-	line 152:     "PAF.00"       unused   input  active-high 
-	line 153:     "PAF.01"       unused   input  active-high 
-	line 154:     "PAF.02"       unused   input  active-high 
-	line 155:     "PAF.03"       unused   input  active-high 
-	line 156:     "PAG.00"       unused   input  active-high 
-	line 157:     "PAG.01"       unused   input  active-high 
-	line 158:     "PAG.02"       unused   input  active-high 
-	line 159:     "PAG.03"       unused   input  active-high 
-	line 160:     "PAG.04"       unused   input  active-high 
-	line 161:     "PAG.05"       unused   input  active-high 
-	line 162:     "PAG.06"       unused   input  active-high 
-	line 163:     "PAG.07"       unused   input  active-high 
+ line   0:      "PA.00" "regulator-vdd-3v3-sd" output active-high [used]
+ line   1:      "PA.01"       unused   input  active-high 
+ line   2:      "PA.02"       unused   input  active-high 
+ line   3:      "PA.03"       unused   input  active-high 
+ line   4:      "PA.04"       unused   input  active-high 
+ line   5:      "PA.05"       unused   input  active-high 
+ line   6:      "PA.06"       unused   input  active-high 
+ line   7:      "PA.07"       unused   input  active-high 
+ line   8:      "PB.00"       unused   input  active-high 
+ line   9:      "PC.00"       unused   input  active-high 
+ line  10:      "PC.01"       unused   input  active-high 
+ line  11:      "PC.02"       unused   input  active-high 
+ line  12:      "PC.03"       unused   input  active-high 
+ line  13:      "PC.04"       unused   input  active-high 
+ line  14:      "PC.05"       unused   input  active-high 
+ line  15:      "PC.06"       unused   input  active-high 
+ line  16:      "PC.07"       unused   input  active-high 
+ line  17:      "PD.00"       unused   input  active-high 
+ line  18:      "PD.01"       unused   input  active-high 
+ line  19:      "PD.02"       unused   input  active-high 
+ line  20:      "PD.03"       unused   input  active-high 
+ line  21:      "PE.00"       unused   input  active-high 
+ line  22:      "PE.01"       unused   input  active-high 
+ line  23:      "PE.02"       unused   input  active-high 
+ line  24:      "PE.03"       unused   input  active-high 
+ line  25:      "PE.04"       unused   input  active-high 
+ line  26:      "PE.05"       unused   input  active-high 
+ line  27:      "PE.06"       unused   input  active-high 
+ line  28:      "PE.07"       unused   input  active-high 
+ line  29:      "PF.00"       unused   input  active-high 
+ line  30:      "PF.01"       unused   input  active-high 
+ line  31:      "PF.02"       unused   input  active-high 
+ line  32:      "PF.03"       unused   input  active-high 
+ line  33:      "PF.04"       unused   input  active-high 
+ line  34:      "PF.05"       unused   input  active-high 
+ line  35:      "PG.00" "Force Recovery" input active-low [used]
+ line  36:      "PG.01"       unused   input  active-high 
+ line  37:      "PG.02"    "Suspend"   input   active-low [used]
+ line  38:      "PG.03"       unused   input  active-high 
+ line  39:      "PG.04"       unused   input  active-high 
+ line  40:      "PG.05"       unused   input  active-high 
+ line  41:      "PG.06"       unused   input  active-high 
+ line  42:      "PG.07"       unused   input  active-high 
+ line  43:      "PH.00"       unused   input  active-high 
+ line  44:      "PH.01"       unused   input  active-high 
+ line  45:      "PH.02"       unused   input  active-high 
+ line  46:      "PH.03" "camera-control-output-low" output active-high [used]
+ line  47:      "PH.04"       unused   input  active-high 
+ line  48:      "PH.05"       unused   input  active-high 
+ line  49:      "PH.06"       unused  output  active-high 
+ line  50:      "PH.07"       unused   input  active-high 
+ line  51:      "PI.00"       unused  output  active-high 
+ line  52:      "PI.01"       unused   input  active-high 
+ line  53:      "PI.02"       unused   input  active-high 
+ line  54:      "PI.03"       unused   input  active-high 
+ line  55:      "PI.04"       unused   input  active-high 
+ line  56:      "PI.05"       kernel   input  active-high [used]
+ line  57:      "PI.06"       unused   input  active-high 
+ line  58:      "PJ.00"       unused   input  active-high 
+ line  59:      "PJ.01"       unused   input  active-high 
+ line  60:      "PJ.02"       unused   input  active-high 
+ line  61:      "PJ.03"       unused   input  active-high 
+ line  62:      "PJ.04"       unused   input  active-high 
+ line  63:      "PJ.05"       unused   input  active-high 
+ line  64:      "PK.00"       unused   input  active-high 
+ line  65:      "PK.01"       unused   input  active-high 
+ line  66:      "PK.02"       unused   input  active-high 
+ line  67:      "PK.03"       unused   input  active-high 
+ line  68:      "PK.04"       unused  output  active-high 
+ line  69:      "PK.05"       unused  output  active-high 
+ line  70:      "PK.06"       unused   input  active-high 
+ line  71:      "PK.07"       unused   input  active-high 
+ line  72:      "PL.00"       unused   input  active-high 
+ line  73:      "PL.01"       unused   input  active-high 
+ line  74:      "PL.02"       unused   input  active-high 
+ line  75:      "PL.03"       unused   input  active-high 
+ line  76:      "PM.00"       kernel   input  active-high [used]
+ line  77:      "PM.01"       unused   input  active-high 
+ line  78:      "PM.02"       unused   input  active-high 
+ line  79:      "PM.03"       unused   input  active-high 
+ line  80:      "PM.04"       unused   input  active-high 
+ line  81:      "PM.05"       unused   input  active-high 
+ line  82:      "PM.06"       unused   input  active-high 
+ line  83:      "PM.07"       unused   input  active-high 
+ line  84:      "PN.00"       unused   input  active-high 
+ line  85:      "PN.01"  "interrupt"   input  active-high [used]
+ line  86:      "PN.02"       unused   input  active-high 
+ line  87:      "PN.03"       unused   input  active-high 
+ line  88:      "PN.04"       unused   input  active-high 
+ line  89:      "PN.05"       unused   input  active-high 
+ line  90:      "PN.06"       unused   input  active-high 
+ line  91:      "PN.07"       unused   input  active-high 
+ line  92:      "PP.00"       unused   input  active-high 
+ line  93:      "PP.01"       unused   input  active-high 
+ line  94:      "PP.02"       unused   input  active-high 
+ line  95:      "PP.03"       unused   input  active-high 
+ line  96:      "PP.04"       unused   input  active-high 
+ line  97:      "PP.05"       unused   input  active-high 
+ line  98:      "PP.06"       unused   input  active-high 
+ line  99:      "PP.07"       unused   input  active-high 
+ line 100:      "PQ.00"       unused   input  active-high 
+ line 101:      "PQ.01"       unused   input  active-high 
+ line 102:      "PQ.02"       unused   input  active-high 
+ line 103:      "PQ.03"       unused  output  active-high 
+ line 104:      "PQ.04"       unused   input  active-high 
+ line 105:      "PQ.05"       unused   input  active-high 
+ line 106:      "PQ.06"       unused   input  active-high 
+ line 107:      "PQ.07"       unused   input  active-high 
+ line 108:      "PR.00"       unused   input  active-high 
+ line 109:      "PR.01"       unused   input  active-high 
+ line 110:      "PR.02"       unused   input  active-high 
+ line 111:      "PR.03"       unused   input  active-high 
+ line 112:      "PR.04"       unused   input  active-high 
+ line 113:      "PR.05"       unused   input  active-high 
+ line 114:      "PX.00"       kernel   input  active-high [used]
+ line 115:      "PX.01"       kernel   input  active-high [used]
+ line 116:      "PX.02"       unused   input  active-high 
+ line 117:      "PX.03"       unused   input  active-high 
+ line 118:      "PX.04"       unused   input  active-high 
+ line 119:      "PX.05"       unused   input  active-high 
+ line 120:      "PX.06"       unused   input  active-high 
+ line 121:      "PX.07"       unused   input  active-high 
+ line 122:      "PY.00"       unused   input  active-high 
+ line 123:      "PY.01"       unused   input  active-high 
+ line 124:      "PY.02"       unused   input  active-high 
+ line 125:      "PY.03"       unused   input  active-high 
+ line 126:      "PY.04"       unused   input  active-high 
+ line 127:      "PY.05"       unused   input  active-high 
+ line 128:      "PY.06"       unused   input  active-high 
+ line 129:      "PY.07"       unused   input  active-high 
+ line 130:      "PZ.00"       unused   input  active-high 
+ line 131:      "PZ.01"       "vbus"   input   active-low [used]
+ line 132:      "PZ.02"       unused   input  active-high 
+ line 133:      "PZ.03"       unused   input  active-high 
+ line 134:      "PZ.04"       unused   input  active-high 
+ line 135:      "PZ.05"       unused   input  active-high 
+ line 136:      "PZ.06"   "spi0 CS0"  output   active-low [used]
+ line 137:      "PZ.07"       unused   input  active-high 
+ line 138:     "PAC.00"       unused  output  active-high 
+ line 139:     "PAC.01"       unused   input  active-high 
+ line 140:     "PAC.02"       unused   input  active-high 
+ line 141:     "PAC.03"       unused   input  active-high 
+ line 142:     "PAC.04"       unused   input  active-high 
+ line 143:     "PAC.05"       unused   input  active-high 
+ line 144:     "PAC.06"       unused   input  active-high 
+ line 145:     "PAC.07"       unused   input  active-high 
+ line 146:     "PAD.00"       unused   input  active-high 
+ line 147:     "PAD.01"       unused   input  active-high 
+ line 148:     "PAD.02"       unused   input  active-high 
+ line 149:     "PAD.03"       unused   input  active-high 
+ line 150:     "PAE.00"       unused   input  active-high 
+ line 151:     "PAE.01"       unused   input  active-high 
+ line 152:     "PAF.00"       unused   input  active-high 
+ line 153:     "PAF.01"       unused   input  active-high 
+ line 154:     "PAF.02"       unused   input  active-high 
+ line 155:     "PAF.03"       unused   input  active-high 
+ line 156:     "PAG.00"       unused   input  active-high 
+ line 157:     "PAG.01"       unused   input  active-high 
+ line 158:     "PAG.02"       unused   input  active-high 
+ line 159:     "PAG.03"       unused   input  active-high 
+ line 160:     "PAG.04"       unused   input  active-high 
+ line 161:     "PAG.05"       unused   input  active-high 
+ line 162:     "PAG.06"       unused   input  active-high 
+ line 163:     "PAG.07"       unused   input  active-high 
 gpiochip1 - 32 lines:
-	line   0:     "PAA.00"       unused   input  active-high 
-	line   1:     "PAA.01"       unused   input  active-high 
-	line   2:     "PAA.02"       unused   input  active-high 
-	line   3:     "PAA.03"       unused   input  active-high 
-	line   4:     "PAA.04"       unused  output  active-high 
-	line   5:     "PAA.05" "regulator-vdd-3v3-pcie" output active-high [used]
-	line   6:     "PAA.06"       unused   input  active-high 
-	line   7:     "PAA.07"       unused   input  active-high 
-	line   8:     "PBB.00"       unused   input  active-high 
-	line   9:     "PBB.01"       unused   input  active-high 
-	line  10:     "PBB.02"       unused   input  active-high 
-	line  11:     "PBB.03"       unused  output  active-high 
-	line  12:     "PCC.00"       unused  output  active-high 
-	line  13:     "PCC.01"       unused  output  active-high 
-	line  14:     "PCC.02"       unused  output  active-high 
-	line  15:     "PCC.03"        "mux"  output  active-high [used]
-	line  16:     "PCC.04"       unused   input  active-high 
-	line  17:     "PCC.05"       unused   input  active-high 
-	line  18:     "PCC.06"       unused   input  active-high 
-	line  19:     "PCC.07"       unused   input  active-high 
-	line  20:     "PDD.00"       unused   input  active-high 
-	line  21:     "PDD.01"       unused   input  active-high 
-	line  22:     "PDD.02"       unused   input  active-high 
-	line  23:     "PEE.00"       unused   input  active-high 
-	line  24:     "PEE.01"       unused   input  active-high 
-	line  25:     "PEE.02"       unused   input  active-high 
-	line  26:     "PEE.03"       unused   input  active-high 
-	line  27:     "PEE.04"      "Power"   input   active-low [used]
-	line  28:     "PEE.05"       unused   input  active-high 
-	line  29:     "PEE.06"       unused   input  active-high 
-	line  30:     "PEE.07"       unused   input  active-high 
-	line  31:     "PGG.00"       unused   input  active-high 
+ line   0:     "PAA.00"       unused   input  active-high 
+ line   1:     "PAA.01"       unused   input  active-high 
+ line   2:     "PAA.02"       unused   input  active-high 
+ line   3:     "PAA.03"       unused   input  active-high 
+ line   4:     "PAA.04"       unused  output  active-high 
+ line   5:     "PAA.05" "regulator-vdd-3v3-pcie" output active-high [used]
+ line   6:     "PAA.06"       unused   input  active-high 
+ line   7:     "PAA.07"       unused   input  active-high 
+ line   8:     "PBB.00"       unused   input  active-high 
+ line   9:     "PBB.01"       unused   input  active-high 
+ line  10:     "PBB.02"       unused   input  active-high 
+ line  11:     "PBB.03"       unused  output  active-high 
+ line  12:     "PCC.00"       unused  output  active-high 
+ line  13:     "PCC.01"       unused  output  active-high 
+ line  14:     "PCC.02"       unused  output  active-high 
+ line  15:     "PCC.03"        "mux"  output  active-high [used]
+ line  16:     "PCC.04"       unused   input  active-high 
+ line  17:     "PCC.05"       unused   input  active-high 
+ line  18:     "PCC.06"       unused   input  active-high 
+ line  19:     "PCC.07"       unused   input  active-high 
+ line  20:     "PDD.00"       unused   input  active-high 
+ line  21:     "PDD.01"       unused   input  active-high 
+ line  22:     "PDD.02"       unused   input  active-high 
+ line  23:     "PEE.00"       unused   input  active-high 
+ line  24:     "PEE.01"       unused   input  active-high 
+ line  25:     "PEE.02"       unused   input  active-high 
+ line  26:     "PEE.03"       unused   input  active-high 
+ line  27:     "PEE.04"      "Power"   input   active-low [used]
+ line  28:     "PEE.05"       unused   input  active-high 
+ line  29:     "PEE.06"       unused   input  active-high 
+ line  30:     "PEE.07"       unused   input  active-high 
+ line  31:     "PGG.00"       unused   input  active-high 
 gpiochip2 - 16 lines:
-	line   0:     "wl_dis" "gpio_xten_pin@0" output active-high [used]
-	line   1: "hst_wake_wl" "gpio_xten_pin@1" output active-high [used]
-	line   2: "wl_wake_hst" "gpio_xten_pin@2" output active-low [used]
-	line   3:     "bt_dis" "gpio_xten_pin@3" output active-high [used]
-	line   4: "hst_wake_bt" unused input active-high 
-	line   5: "bt_wake_hst" unused input active-high 
-	line   6: "spi0_rst_3v3" "gpio_xten_pin@6" output active-low [used]
-	line   7:  "gpio_pin7" "gpio_xten_pin@7" output active-low [used]
-	line   8: "can_120R_en" unused input active-high 
-	line   9: "M2B_PCIe_rst" unused input active-high 
-	line  10: "USB_HUB_rst" "gpio_xten_pin@10" output active-high [used]
-	line  11: "PCIe_ETH_rst" unused input active-high 
-	line  12: "M2B_WOWWAN"       unused   input  active-high 
-	line  13: "M2B_DPR_3V3" unused input active-high 
-	line  14: "SIM_MUX_SEL" unused input active-high 
-	line  15: "gpio_pin15"       unused   input  active-high 
+ line   0:     "wl_dis" "gpio_xten_pin@0" output active-high [used]
+ line   1: "hst_wake_wl" "gpio_xten_pin@1" output active-high [used]
+ line   2: "wl_wake_hst" "gpio_xten_pin@2" output active-low [used]
+ line   3:     "bt_dis" "gpio_xten_pin@3" output active-high [used]
+ line   4: "hst_wake_bt" unused input active-high 
+ line   5: "bt_wake_hst" unused input active-high 
+ line   6: "spi0_rst_3v3" "gpio_xten_pin@6" output active-low [used]
+ line   7:  "gpio_pin7" "gpio_xten_pin@7" output active-low [used]
+ line   8: "can_120R_en" unused input active-high 
+ line   9: "M2B_PCIe_rst" unused input active-high 
+ line  10: "USB_HUB_rst" "gpio_xten_pin@10" output active-high [used]
+ line  11: "PCIe_ETH_rst" unused input active-high 
+ line  12: "M2B_WOWWAN"       unused   input  active-high 
+ line  13: "M2B_DPR_3V3" unused input active-high 
+ line  14: "SIM_MUX_SEL" unused input active-high 
+ line  15: "gpio_pin15"       unused   input  active-high 
 ```
 
 </TabItem>
 </Tabs>
-
-
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

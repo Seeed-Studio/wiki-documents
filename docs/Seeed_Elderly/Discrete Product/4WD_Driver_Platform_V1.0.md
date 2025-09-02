@@ -16,19 +16,20 @@ last_update:
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/4WD-Driver-Platform-V1.0-p-2536.html)
 
-##  Features
+## Features
+
 ---
-*   Support USB to device UART bridge
-*   Support OTG(On The Go)
-*   Support SPI program port
-*   Support Grove Interface: UART port* 1, I2C port *3
-*   Support 4 wheel encoder motor driving with bidirectional(Peak Current: 3A)
-*   Support overcurrent, over loading and short circuit protection function.
-*   Detailed and simple SDK
-*   Designed for Intel Edison platform.
+- Support USB to device UART bridge
+- Support OTG(On The Go)
+- Support SPI program port
+- Support Grove Interface: UART port*1, I2C port*3
+- Support 4 wheel encoder motor driving with bidirectional(Peak Current: 3A)
+- Support overcurrent, over loading and short circuit protection function.
+- Detailed and simple SDK
+- Designed for Intel Edison platform.
 
+## Specification
 
-##  Specification
 ---
 
 <table>
@@ -91,36 +92,39 @@ last_update:
   </tr>
 </table>
 
+## Application ideas
 
-##  Application ideas
 ---
 
-*   Various kinds of robots
+- Various kinds of robots
 
-*   Motor driver
+- Motor driver
 
-*   Toy car
+- Toy car
 
-*   Industrial Control
+- Industrial Control
 
-##  Hardware Overview
+## Hardware Overview
+
 ---
 
 ![](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/img/4WD_Driver_Platform_V1.0_3400_Modules.jpg)
 
 **Note that only 3.3 V voltage is valid to apply on ALL motor interfaces and grove modules.**
 
-##  Get started
----
+## Get started
 
+---
 
 :::note
     This section only shows you how to build basic development environment.
 You can build a development environment for your project with following guides:
 :::
-###  Assemble Edison on 4WD Driver board
+
+### Assemble Edison on 4WD Driver board
 
 **Material required**
+
 - 4WD Driver Platform V1.0 *1
 
 - Intel Edison *1
@@ -129,20 +133,18 @@ You can build a development environment for your project with following guides:
 
 **Software work ***
 
+- [Download Intel integrated tool pack(installed together with Driver)](http://downloadmirror.intel.com/25028/eng/iotdk_win_installer.exe)
 
-*   [Download Intel integrated tool pack(installed together with Driver)](http://downloadmirror.intel.com/25028/eng/iotdk_win_installer.exe)
-
-*   [Download Arduino IDE if you develop your projects on Arduino board](http://downloads.arduino.cc/arduino-1.6.5-r5-windows.exe)
+- [Download Arduino IDE if you develop your projects on Arduino board](http://downloads.arduino.cc/arduino-1.6.5-r5-windows.exe)
 
 Rule of thumb: We recommend you only select drivers and flash tool to be installed for the first if you connection speed to Intel server is not fast enough. Downloading other tools separately will be much quicker.
 
 :::note
     4WD Driver Platform V1.0 is not supported for Windows 10 at the moment.
 :::
-**Check your IDE **
+**Check your IDE**
 
 [Download a putty for serical communication](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
-
 
 1.Open device manager.
 
@@ -158,9 +160,7 @@ Rule of thumb: We recommend you only select drivers and flash tool to be install
 
 putty login
 
-
 5.Press Enter key to input user name and password to login to system in Edison.
-
 
 :::note
     - No password exist if it is the first time you use you Edison chip.
@@ -168,8 +168,8 @@ putty login
 :::
 6.Now your IDE is well installed.
 
+## Demo
 
-##  Demo
 ---
 :::note
     - This section will show you a demo which implemented some simple functions.
@@ -182,25 +182,23 @@ You can refer to [Edison 4WD Auto Robotic Platform 2.0](https://wiki.seeedstudio
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/res/4WD_Auto_Robotic_Platform_V1.0_SCHAndPCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##  Resources
 ---
-*   [Schematic files](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/res/4WD_Auto_Robotic_Platform_V1.0_SCHAndPCB.zip)
+- [Schematic files](https://files.seeedstudio.com/wiki/4WD_Driver_Platform_V1.0/res/4WD_Auto_Robotic_Platform_V1.0_SCHAndPCB.zip)
 
-*   [Git library(SDK) files](https://github.com/Pillar1989/webrobot/blob/master/motor.py)
+- [Git library(SDK) files](https://github.com/Pillar1989/webrobot/blob/master/motor.py)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

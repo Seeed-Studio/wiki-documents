@@ -13,7 +13,6 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/wio_lte_v1.3.jpg)
 
-
 Wio Tracker (Wireless Input Output) is an open source gateway which enable faster IoT GPS solutions. It is Arduino and Grove compatible development boards that helps you track nearly any moving thing on the planet and then upload that data wirelessly. The Wio LTE is the LTE version of Wio Tracker, so now we’ve got 2 versions of Wio Tracker and the LTE (4G) version will make some differences.
 
 There are three main updates comparing the Wio LTE to the 2G version. Firstly, from its name we know that the Wio LTE supports LTE (4G) communication which is much faster and popular than 2G. Secondly, the Wio LTE supports in total 4 different GNSS – GPS, Beidou, GLONSS and Galileo, the QZSS is also supported as bonus. With more GNSS support, positioning will be more accurate. Thirdly, the Wio LTE‘s MCU is upgraded to STM32, which is based on Cortex-M4, makes the Wio LTE 5 times faster than the 2G version. What’s more, the flash and RAM have also been raised to 1Mbytes and 192+4k bytes.
@@ -24,7 +23,7 @@ The Wio LTE is well suited for outdoor projects where the device can connect to 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/D6DX5P9ncrc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-:::caution 
+:::caution
     Please always plug 3.7V Lipo battery in case USB power supply is not sufficient.
 :::
 
@@ -36,6 +35,7 @@ The Wio LTE is well suited for outdoor projects where the device can connect to 
 |Wio LTE US Version|[![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now_small.png)](https://www.seeedstudio.com/Wio-LTE-US-Version-v1-3-4G-Cat-1-p-4523.html)|
 
 ## Version
+
 | Product Version | Changes                                  | Released Date |
 |-----------------|------------------------------------------|---------------|
 | Wio Lte v1.0    | Initial                                  | Jul 24, 2017  |
@@ -75,20 +75,16 @@ Operation | Rest Range
 Hold the reset button for a short time(within 2 seconds) | MCU reset/ Lte Module will not reset
 Hold the reset button for a short time(More than 10 seconds)| The hole board will reset
 
-
-
-
 ## Features
 
-* Low-cost, low-power LTE connectivity optimized for broad- band IoT applications
-* Worldwide LTE and UMTS/HSPA+
-* Embedded power management unit (PMU) featuring ultra-low deep-sleep current consumption
-* GPS/BeiDou/GLONASS/Galileo and QZSS
-* Transplantable and expansible AT Command Library for Wio Tracker
-* Arduino IDE compatible
-* 6 Grove Connectors
-* Nano SIM and TF card 2 in 1 socket
-
+- Low-cost, low-power LTE connectivity optimized for broad- band IoT applications
+- Worldwide LTE and UMTS/HSPA+
+- Embedded power management unit (PMU) featuring ultra-low deep-sleep current consumption
+- GPS/BeiDou/GLONASS/Galileo and QZSS
+- Transplantable and expansible AT Command Library for Wio Tracker
+- Arduino IDE compatible
+- 6 Grove Connectors
+- Nano SIM and TF card 2 in 1 socket
 
 ## Specification
 
@@ -122,11 +118,11 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 |                 | Width                  | 48.2mm                                                                          |
 | Weight                  |                 | 18g                                                                                |  |
 
-
 ## Power Consumption
+
 | Status                                                                                 | Current                          |Voltage                         |
 | -------------------------------------------------------------------------------------- | -------------------------------- |--------------------------------|
-| Normal boot(boot moment)                                                               | 700mA                            |5V                              |       
+| Normal boot(boot moment)                                                               | 700mA                            |5V                              |
 | After boot(IDLE mode)                                                                  | 300mA                            |5V                              |  
 | After the boot, the normal communication status (network transmission function)        | 600mA or so, the peak reaches 2A |5V                              |  
 | Call and SMS(signal better)                                                            | 100-300mA                        |5V                              |  
@@ -136,23 +132,24 @@ Hold the reset button for a short time(More than 10 seconds)| The hole board wil
 :::note
     There are two working conditions. One is power from 5V usb supply. The other is from 4.2v battery supply.   
 :::
+
 ## Application Ideas
 
-* Pedometer
-* Smart ski
-* Smart two-wheeler
-* Sharing bicycle
-* Pet tracking machine
-* Children location watch
-* Smart watch
-* Transportation location system
-* Vehicle location system
-* Property safety
-
+- Pedometer
+- Smart ski
+- Smart two-wheeler
+- Sharing bicycle
+- Pet tracking machine
+- Children location watch
+- Smart watch
+- Transportation location system
+- Vehicle location system
+- Property safety
 
 :::tip
     Use Grove modules to expand your application. There are 6 Grove connects on board. If this is your first time to hear about Grove, please put had on [Grove System](https://wiki.seeedstudio.com/Grove_System/) for more details. In brief, Groves is hundreds of sensor that in standard style, which is consist of sensors, actuators, displays as well as communication.
 :::
+
 ## Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Wio_Tracker_LTE/img/wio_tracker_lte_v1._top.png)
@@ -240,7 +237,6 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
   <br />
 </div>
 
-
 <div>
   <style type="text/css" dangerouslySetInnerHTML={{__html: "\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-yw4l{vertical-align:top}\n" }} />
   <table className="tg">
@@ -288,10 +284,10 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
       </tr>
       <tr>
         <td className="tg-031e" colSpan={2}>Embedded GNSS</td>
-        <td className="tg-yw4l">N<br></br>			</td>
-        <td className="tg-yw4l">Optional<br></br>			</td>
-        <td className="tg-yw4l">N<br></br>			</td>
-        <td className="tg-yw4l">N<br></br>			</td>
+        <td className="tg-yw4l">N<br></br>   </td>
+        <td className="tg-yw4l">Optional<br></br>   </td>
+        <td className="tg-yw4l">N<br></br>   </td>
+        <td className="tg-yw4l">N<br></br>   </td>
         <td className="tg-yw4l">N</td>
       </tr>
       <tr>
@@ -321,8 +317,6 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
     </tbody></table>
 </div>
 
-
-
 ## Getting Started
 
 ### Install USB driver
@@ -333,7 +327,7 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 
 ### Change DFU driver
 
-**For windows users**: 
+**For windows users**:
 
 - Step 1. Press and hold BOOT button and connect to computer you will see **STM32 Device in DFU Mode** at device manager as below.
 
@@ -346,7 +340,6 @@ And **EC21-A** is what we are using in WIO Tracker - LTE, which supports AT&T an
 - Step 3. You will see the "STMicroelectronics Virtual COM Port" on device manager as below.
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/after_driver_installation.png)
-
 
 ### Play with Arduino
 
@@ -410,6 +403,7 @@ void loop() {
   AT_bypass();
 }
 ```
+
 - Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 11. The phone number owner will receive the message.
 
@@ -418,7 +412,6 @@ Power On!
 
 
 Network ready!
-
 
 
 Send OK!
@@ -661,6 +654,7 @@ void loop() {
 }
 
 ```
+
 - Step 9.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 - Step 10. We will see below logs.
 
@@ -669,7 +663,6 @@ Waitting for module to alvie...
 Waitting for module to alvie...
 Waitting for module to alvie...
 Waitting for module to alvie...
-
 
 
 Power On!
@@ -840,6 +833,7 @@ void loop() {
   AT_bypass();
 }
 ```
+
 - Step 9. Press **RST** button to enable the COM port.
 - Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 
@@ -850,17 +844,10 @@ Waitting for module to alvie...
 Waitting for module to alvie...
 
 
-
-
 Initialize done...
 
 
-
-
-
 IP: 10.229.226.108
-
-
 
 
 +QIURC: "recv",0,389
@@ -888,6 +875,7 @@ Hello world!
 :::note
     Epruino firmware v1.94 is not support SD card drive, please use v1.96 or later, the latest version is v1.99.
 :::
+
 - Step 1. Plug micro SD card to the SD card slot.
 - Step 2. Select File--> Examples-->Wio_LTE_Arduino_Library-->SDCard->CardInfo.
 - Step 3. Change the phone number.
@@ -896,7 +884,6 @@ Hello world!
 - Step 6. Select Tools-->Boards-->Wio_Tracker_LTE.
 - Step 7. Keep COM Port blank.
 - Step 8. Select Sketch-->Upload to upload the code to Wio_LTE.
-
 
 ```cpp
  // include the SD library:
@@ -983,8 +970,6 @@ void loop(void) {
 - Step 9. Press **RST** button to enable the COM port.
 - Step 10.Use COM monitor tools to print the serial message. **Please do not use Arduino IDE COM monitor! That may cause the next time downloading fail, but reopen Arduino IDE can recover that issue**.
 
-
-
 ```cpp
 
 Initializing SD card...
@@ -1004,7 +989,7 @@ Files found on the card (name, date and size in bytes):
 
 **9.1 Play with Grove Digital Module**  
 
-We use [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE. 
+We use [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/) as digital input and connect to D20 of Wio LTE.
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
@@ -1013,7 +998,6 @@ We use [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/Grove-
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) and [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
-
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1072,16 +1056,16 @@ void loop()
 ### I/O Initialize.
 ### Power supply ON.
 ### Initial temperature and humidity sensor.
-Humidity: 40.00 %	Temperature: 27.00 *C
-Humidity: 40.00 %	Temperature: 27.00 *C
-Humidity: 40.00 %	Temperature: 27.00 *C
-Humidity: 40.00 %	Temperature: 27.00 *C
-Humidity: 39.00 %	Temperature: 27.00 *C
+Humidity: 40.00 % Temperature: 27.00 *C
+Humidity: 40.00 % Temperature: 27.00 *C
+Humidity: 40.00 % Temperature: 27.00 *C
+Humidity: 40.00 % Temperature: 27.00 *C
+Humidity: 39.00 % Temperature: 27.00 *C
 ```
 
 **9.2 Play with Grove Analog Module**  
 
-We use [Grove-Light Sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC). 
+We use [Grove-Light Sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor/) as analog input and connect to A4 of Wio LTE(12bit ADC).
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
@@ -1090,7 +1074,6 @@ We use [Grove-Light Sensor](https://wiki.seeedstudio.com/Grove-Light_Sensor/) as
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
-
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1135,7 +1118,7 @@ void loop() {
 
 **9.3 Play with Grove I2C Module**  
 
-We use [Grove - 3-Axis Digital Accelerometer(±16g)](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE. 
+We use [Grove - 3-Axis Digital Accelerometer(±16g)](https://wiki.seeedstudio.com/Grove-3-Axis_Digital_Accelerometer-16g/) as I2C device and connect to I2C port of Wio LTE.
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
@@ -1144,7 +1127,6 @@ We use [Grove - 3-Axis Digital Accelerometer(±16g)](https://wiki.seeedstudio.co
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip)  and [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
-
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1199,7 +1181,7 @@ void loop()
 
 **9.4 Play with Grove UART Module**  
 
-We use [Grove-CO2](https://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE. 
+We use [Grove-CO2](https://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART device and connect to UART port of Wio LTE.
 
 - Step 1. Press and hold BOOT button at back side of the Wio LTE and plug the USB to PC.
 - Step 2. We will see **STM BOOTLARDER** in device manager.
@@ -1208,7 +1190,6 @@ We use [Grove-CO2](https://wiki.seeedstudio.com/Grove-CO2_Sensor/) as UART devic
 - Step 5. Download [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) from Github. Refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 - Step 6. Copy below code to Sketch.
 - Step 7. Click Upload to upload the code to Wio_LTE.
-
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1312,7 +1293,7 @@ Temperature: 22  CO2: 2972
 
 **Q1: We fail to use Arduino IDE to download the program and see below error info at bottom of Arduino IDE.**
 
-A3: It is a bug. When using Arduino serial port to print info, the Arduino IDE remembers the serial port number. So there is no serial port available for downloading new program. We can reboot the Arduino IDE to solve the issue as temporary solution. For the preventive solution, please use other COM monitor software, such as SSCOM. Please make sure we see the processing bar during program downloading. Or else, we will see below info and the program is not downloaded. 
+A3: It is a bug. When using Arduino serial port to print info, the Arduino IDE remembers the serial port number. So there is no serial port available for downloading new program. We can reboot the Arduino IDE to solve the issue as temporary solution. For the preventive solution, please use other COM monitor software, such as SSCOM. Please make sure we see the processing bar during program downloading. Or else, we will see below info and the program is not downloaded.
 
 ```
 Sketch uses 23068 bytes (2%) of program storage space. Maximum is 1048576 bytes.
@@ -1339,31 +1320,25 @@ A5: Please press the RST button and we will see the COM port in device manager.
 
 A6: Please click Options--> List All Devices, then select STM32 Virtual COM Ports.
 
-
 ## Wio LTE AU Version v1.3b Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20AU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Wio LTE EU Version v1.3b Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Wio LTE JP Version v1.3b Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Wio LTE US Version v1.3b Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resource
 
@@ -1381,25 +1356,25 @@ A6: Please click Options--> List All Devices, then select STM32 Virtual COM Port
 
 ## Projects
 
-**Transportation data visualization with Google Map**：We use the Wio LTE cat.1 to monitor transportation GPS and other info. For cold chain, we can monitor the GPS location together with temperature and humidity. For the bicycling,  we can monitor the GPS location together with the hear rate. 
+**Transportation data visualization with Google Map**：We use the Wio LTE cat.1 to monitor transportation GPS and other info. For cold chain, we can monitor the GPS location together with temperature and humidity. For the bicycling,  we can monitor the GPS location together with the hear rate.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/transportation-data-visualization-with-google-map-517ce4/embed' width='350'></iframe>
-
 
 **Atmospheric Pollution Visualization**：The air pollution problem attracts more and more attention. This time we tried to monitoring PM2.5 with Wio LTE and new Laser PM2.5 Sensor.
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

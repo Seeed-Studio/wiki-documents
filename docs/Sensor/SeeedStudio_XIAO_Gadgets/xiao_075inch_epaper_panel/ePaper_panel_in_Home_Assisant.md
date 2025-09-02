@@ -24,7 +24,6 @@ import TabItem from '@theme/TabItem';
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-
 ## Introduction to Home Assistant
 
 Home Assistant is a powerful open-source home automation platform that allows you to control and monitor your smart home devices from a single, unified interface. It acts as the central hub for your smart home, enabling you to automate routines, monitor sensors, and create a more intelligent living space.
@@ -154,8 +153,6 @@ Give the device a name you like and click on **NEXT**.
 After you create a new device, click **EDIT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
-
-
 
 ### Step 3. Install firmware
 
@@ -292,7 +289,6 @@ Wait a moment and you will see the feedback like the following image. If it fail
 </TabItem>
 </Tabs>
 
-
 ## Basic usages
 
 ### 1. Display shape
@@ -339,7 +335,6 @@ When you see the feedback like the following image, it means the code is running
 You can also [click here](https://esphome.io/components/display/) to see more usages.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/37.png" style={{width:600, height:'auto'}}/></div>
-
 
 ### 2. Display information in HA
 
@@ -420,9 +415,7 @@ display:
       it.printf(100, 200, id(myFont), "%.1f", id(myPressure).state);
 ```
 
-
 </details>
-
 
 Install those codes to your device.
 
@@ -438,8 +431,6 @@ When you see the feedback like the following image, it means the code is running
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/34.png" style={{width:'80%', height:'auto'}}/></div>
 </div>
-
-
 
 ### 3. Display icon {#ttf}
 
@@ -500,7 +491,6 @@ display:
 ```
 
 </details>
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/21.png" style={{width:800, height:'auto'}}/></div>
 
@@ -747,6 +737,7 @@ display:
       ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
+
 </details>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/89.jpg" style={{width:800, height:'auto'}}/></div>
@@ -1216,17 +1207,13 @@ display:
       }
 
 
-
 ```
 
 </details>
 
-
 When you see the feedback like the following image, it means the code is running successfully.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/38.png" style={{width:600, height:'auto'}}/></div>
-
-
 
 ## FAQ
 
@@ -1246,7 +1233,6 @@ In this case, you should go to Settings -> Devices & Services -> Integrations to
 In this case, you should go to Settings -> Devices & Services -> Integrations to **ADD** your device to HA.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
-
 
 #### <span id="deepmode">Q3</span>: How can I upload a new program when device in deep sleep mode?
 
@@ -1289,7 +1275,6 @@ In this case, you epaper penal is offline or in deep sleep mode. Please get it o
 
 - **[STP]**: [3D Model enclosure](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
 - **[PDF]**: [ePaper Driver Board SCH PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
-
 
 ## Tech Support & Product Discussion
 

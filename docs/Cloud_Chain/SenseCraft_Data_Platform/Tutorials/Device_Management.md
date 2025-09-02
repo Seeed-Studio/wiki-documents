@@ -14,7 +14,6 @@ last_update:
 ---
 
 
-
 Here you are offered several methods to manage SenseCAP devices, including Gateway Management, Node Group Management, and Sensor Node Management.
 
 ## Gateway

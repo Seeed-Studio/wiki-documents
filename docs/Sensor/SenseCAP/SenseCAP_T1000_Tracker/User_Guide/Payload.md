@@ -51,9 +51,6 @@ The Device Status Packet is uploaded when join LoRaWAN network. The Device Statu
 | :- | :- | :- | :- |
 |Light sample interval|Light threshold max|Light threshold min|Light warning type|
 
-
-
-
 **The raw payload:**
 
 0153010501050207001e00050005010000001e000500016801012c000005001e025800000000000500010064000000
@@ -90,7 +87,9 @@ The Device Status Packet is uploaded when join LoRaWAN network. The Device Statu
 |43~44|Light threshold max|uint16|0064|<p>0064 is 0x0064 = 100(DEC) %</p><p>Maximum threshold =100%</p>|
 |45~46|Light threshold min|uint16|0000|<p>0000 is 0x0000 = 0(DEC) %</p><p>Minimum threshold=0%</p>|
 |47|Light warning type|uint8|00|<p>00 means when light ≤ min threshold, device will upload location and light event.</p><p>00: light ≤ min threshold</p><p>01: light ≥ max threshold</p><p>02: light ≤ min threshold and light ≥ max threshold</p><p>03: min threshold≤ light ≤max threshold</p>|
+
 1. ### <a name="_toc145487499"></a>**Device Status Packet -Periodic Mode 0x02**
+
 The Device Status package is uploaded when join LoRaWAN network. The Device Status packet has two packet formats in different working modes:
 
 1) Event Mode, ID=0x01
@@ -106,7 +105,6 @@ The Device Status package is uploaded when join LoRaWAN network. The Device Stat
 |Byte13~14|Byte15|Byte16|
 | :- | :- | :- |
 |event mode uplink interval|temp&light switch|SOS mode|
-
 
 **The raw payload:**
 
@@ -125,7 +123,6 @@ The Device Status package is uploaded when join LoRaWAN network. The Device Stat
 |13~14|Event mode uplink interval|uint16|003c|003c is 0x003C = 60(DEC), the event mode uplink interval is 60 minutes.|
 |15|Temp&light switch|uint8|00|<p>00 means open the temperature and light sensor.</p><p>00: Close the temperature and light sensor.</p><p>01: Open the temperature and light sensor.</p>|
 |16|SOS mode|uint8|00|<p>00 means use SOS single mode.</p><p>00: use SOS single mode.</p><p>01: use SOS continuous mode.</p>|
-
 
 ### Heartbeat Packet -0x05
 
@@ -155,7 +152,6 @@ ID 0x06 is used to upload GNSS location, sensor data and battery.
 | - | :- | :- | :- | :- | :- |
 |ID|event status|motion segment number |UTC time|longitude|latitude|
 
-
 |Byte18~19|Byte20~21|Byte22|
 | - | :- | :- |
 |Temperature|Light|battery level|
@@ -175,7 +171,9 @@ ID 0x06 is used to upload GNSS location, sensor data and battery.
 |18~19|Temperature|int16|00fe|00fe is 0x00FE = 254(DEC), temperature=254/10=25.4℃|
 |20~21|Light|uint16|0000|0000 is 0x0000 = 0(DEC) minutes, the light=0=0%|
 |22|Battery level|uint8|57|<p>57 is 0x57 = 87(DEC)</p><p>The battery level is 87%</p>|
+
 1. ### <a name="_toc145487502"></a>**Wi-Fi Location and Sensor Packet-0x07**
+
 ID 0x07 is used to upload Wi-Fi Mac addresses, sensor data and battery.
 
 |0x07|Byte2~4|Byte5|Byte6~9|Byte10~15|Byte16|
@@ -244,7 +242,6 @@ ID 0x08 is used to upload Bluetooth Beacon MAC addresses, sensor data and batter
 |33~34|Light|uint16|0000|0000 is 0x0000 = 0(DEC) minutes, the light=0=0%|
 |35|battery level|uint8|57|<p>57 is 0x57 = 87(DEC)</p><p>The battery level is 87%</p>|
 
-
 ### GNSS Location Only Packet-0x09
 
 When the sensor is turned off, the device does not upload the sensor measurement value. Only the location data is uploaded.
@@ -267,13 +264,11 @@ When the sensor is turned off, the device does not upload the sensor measurement
 |14~17|Latitude|int32|01587e4c|01587e4c is 0x01587E4C = 22576716 (DEC), the Latitude = 22576716/1000000=22.576716|
 |18|Battery level|uint8|56|<p>56 is 0x56 = 86(DEC)</p><p>The battery level is 86%</p>|
 
-
 ### Wi-Fi Location Only Packet-0x0A
 
 |0x0A|Byte2~4|Byte5|Byte6~9|Byte10~15|Byte16|
 | - | :- | :- | :- | :- | :- |
 |ID|event status|motion segment number |UTC time|MAC address 1|The RSSI of MAC address 1, int8|
-
 
 |Byte17~22|Byte23|Byte24~29|Byte30|Byte31~36|Byte37|Byte38|
 | :- | :- | :- | :- | :- | :- | :- |
@@ -282,7 +277,6 @@ When the sensor is turned off, the device does not upload the sensor measurement
 **The raw payload:**
 
 0A0000080064622472487397162234bb3ccd5798fd2ebc74cf002f3ad0a9ec26ca022958b957
-
 
 |**Byte**|**Value**|**Type**|**Raw Data**|**Description**|
 | - | - | - | - | - |
@@ -299,8 +293,6 @@ When the sensor is turned off, the device does not upload the sensor measurement
 |31~36|MAC address 4|-----|ec26ca022958|<p>ec26ca022958</p><p>the MAC address (HEX)= EC:26:CA:02:29:58</p>|
 |37|The RSSI of MAC address 4, int8|int8|b9|<p>b9 is 0xA9 = -71(DEC), the type is int8</p><p>the RSSI = -71</p>|
 |38|battery level|uint8|57|<p>57 is 0x57 = 87(DEC)</p><p>The battery level is 87%</p>|
-
-
 
 ### Bluetooth Location Only Packet-0x0B
 
@@ -330,7 +322,6 @@ When the sensor is turned off, the device does not upload the sensor measurement
 |30|The RSSI of MAC address 3, int8|int8|c9|<p>c9 is 0xC9 = -55(DEC), the type is int8</p><p>the RSSI = -55</p>|
 |31|battery level|uint8|57|<p>57 is 0x57 = 87(DEC)</p><p>The battery level is 87%</p>|
 
-
 ### Error Code Packet-0x0D
 
 ID 0x0D packet is used to upload the error code.
@@ -343,13 +334,6 @@ ID 0x0D packet is used to upload the error code.
 | - | - | - | - | - |
 |1|Frame ID|uint8|0D|0D is the packet ID.|
 |2~5|Error code|uint32|00000001|<p>0x00000001: UTC time acquisition failed</p><p>0x00000002: Almanac too old</p><p>0x00000003: Doppler error</p>|
-
-
-
-
-
-
-
 
 ### Positioning Status and Sensor Packet-0x11
 
@@ -368,7 +352,6 @@ ID 0x11 is used to upload the positioning status, sensor data and battery.
 |10～11|Temperature|int16|0141|0141 is 0x0141 = 321(DEC), temperature=321/10=32.1℃|
 |12～13|Light|uint16|0000|0000 is 0x0000 = 0(DEC) minutes, the light=0=0%|
 |14|Battery level|uint8|2F|<p>2F is 0x2F = 47(DEC)</p><p>The battery level is 47%</p>|
-
 
 ## Downlink Packet, FPort=5
 
@@ -462,7 +445,6 @@ After sending this command, a buzzer alarm tone will be turned on after the devi
 |30~31|Light threshold min|uint16|0000|<p>0000 is 0x0000 = 0(DEC) %</p><p>Minimum threshold=0%</p>|
 |32|Light warning type|uint8|00|<p>00 means when light ≤ min threshold, device will upload location and light event.</p><p>00: light ≤ min threshold</p><p>01: light ≥ max threshold</p><p>02: light ≤ min threshold and light ≥ max threshold</p><p>03: min threshold≤ light ≤max threshold</p>|
 
-
 ### Request Location -0x85
 
 The request tracker initiates location and uploads based on the current configuration. It is usually used in standby mode.
@@ -471,9 +453,9 @@ The request tracker initiates location and uploads based on the current configur
 | - |
 |ID|
 
-Example: 
+Example:
 
-85: request location. 
+85: request location.
 
 ### Setting Positioning strategy -0x86
 
@@ -481,7 +463,7 @@ Example:
 | - | :- |
 |ID|<p>Positioning strategy</p><p>00: Only GNSS</p><p>01: Only Wi-Fi</p><p>02: Wi-Fi+GNSS</p><p>03: GNSS + Wi-Fi</p><p>04: Only Bluetooth</p><p>05: Bluetooth + Wi-Fi</p><p>06: Bluetooth + GNSS</p><p>07: Bluetooth + Wi-Fi + GNSS</p>|
 
-Example: 
+Example:
 
 8600: Set the positioning strategy to “Only GNSS”.
 
@@ -491,9 +473,9 @@ Example:
 | - |
 |ID|
 
-Example: 
+Example:
 
-87: request event parameters. 
+87: request event parameters.
 
 ### Request Device Status Packet -0x88
 
@@ -501,7 +483,7 @@ Example:
 | - |
 |ID|
 
-Example: 
+Example:
 
 88: request Device Status packet(0x01 or 0x02).
 
@@ -511,7 +493,7 @@ Example:
 | - |
 |ID|
 
-Example: 
+Example:
 
 89: After the command is sent, the device reboots and join the network again. Please use this command with caution.
 
@@ -542,4 +524,3 @@ Example:
 
 8D00: Close the SOS alarm.<br/>
 8D01: Open the SOS alarm.
-

@@ -14,19 +14,17 @@ last_update:
 
 The Grove - Step Counter(BMA456) is based on BMA456, which is an exetremely small, triaxial, low-g high performance accelerations module. Thanks to the special algorithm of BOSCH, we made this module a portable pedometer.
 
-
-Relaiable, cost-effective, on top of that, it's very easy to use, you can easily add this plug and play module on your wearable devices. 
-
+Relaiable, cost-effective, on top of that, it's very easy to use, you can easily add this plug and play module on your wearable devices.
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html)
+
 ## Version
 
 | Product Version  | Changes                                                                                               | Released Date |
 |------------------|-------------------------------------------------------------------------------------------------------|---------------|
 | Grove - Step Counter(BMA456) | Initial                                                                                               | Oct 2018      |
-
 
 ## Features
 
@@ -34,8 +32,6 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 - Ultra-low power
 - On-chip interrupt
 - Programable functionality
-
-
 
 ## Specification
 
@@ -46,24 +42,21 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 |Sensitivity|16384 @±2g / 8192 @±4g / 4096 @±8g / 2048 @±16g|
 |Interface|I^2^C|
 |I^2^C Address|0x19(default) / 0x18(optional)|
-|Size|L: 40mm W: 20mm H: 10mm| 
+|Size|L: 40mm W: 20mm H: 10mm|
 |Weight|3.2g|
 |Package size|L: 140mm W: 90mm H: 10mm|
 |Gross Weight|9g|
-
 
 ## Typical applications
 
 - Applications with height constrains
 - Plug and Play Step-Counter solution with watermark functionality
 - Fitness applications / Activity Tracking
-- Power management for wearable applications 
+- Power management for wearable applications
 - Display on/off and profile switching
 - User interface without hardware buttons
 - E-compass tilt compensation and data synchronization
 - High performance angle measurements
-
-
 
 ## Hardware Overview
 
@@ -72,8 +65,6 @@ Relaiable, cost-effective, on top of that, it's very easy to use, you can easily
 ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/pin_out.jpg)
 
 ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/pin_out_back.jpg)
-
-
 
 ### Schemaitc
 
@@ -89,14 +80,11 @@ The typical voltage of BMA456 is 1.8V, so we use the [XC6206P182MR](https://file
 
 This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 3.3V, if the I<sup>2</sup>C bus of the Arduino use 5V, this circuit will be needed. In the schematic above, **Q6** and **Q5** are N-Channel MOSFET [2N7002A](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/2N7002A_datasheet.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
 
-
-
 ## Platforms Supported
 
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
-
 
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
@@ -104,9 +92,7 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 ## Getting Started
 
-
 ### Play With Arduino
-
 
 #### Hardware
 
@@ -116,7 +102,6 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/thumbnail.jpg)|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-Step-Counter-(BMA456)-p-3189.html" target="_blank">Get One Now</a>|
-
 
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
@@ -129,7 +114,6 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 2.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
-
 
 ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/connect.jpg)
 
@@ -144,8 +128,6 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 | SDA            | White              | SDA |
 | SCL            | Yellow             | SCL |
 
-
-
 #### Software
 
 :::note
@@ -157,14 +139,13 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove -Step Counter(BMA456) --> step_counter**. 
+    1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Grove -Step Counter(BMA456) --> step_counter**.
     ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/path_1.jpg)
-    
+
     2. Open it in your computer by click the **step_counter.ino** which you can find in the folder **XXXX\Arduino\libraries\Seeed_BMA456-master\examples\step_counter**, **XXXX** is the location you installed the Arduino IDE.
     ![](https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/img/path_2.jpg)
-    
-    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
+    3. Or, you can just click the icon ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
 
 ```cpp
 #include "arduino_bma456.h"
@@ -181,7 +162,7 @@ void setup(void)
 }
 
 void loop(void)
-{	
+{ 
     step = bma456.getStepCounterOutput();
 
     Serial.print("Step: ");
@@ -198,7 +179,6 @@ void loop(void)
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. Set the baud rate to **115200**.
-
 
 :::success
      If every thing goes well, when you open the Serial Monitor and walk with this sensor on or move it to simulated walking posture , it may show as below:
@@ -225,14 +205,10 @@ Step: 36
 Step: 38
 ```
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Step_Counter-BMA456/res/Grove%20-%20Step%20Counter(BMA456).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -244,25 +220,22 @@ Step: 38
 
 - **[PDF]** [XC6206 DATASHEET](https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor_Array-AMG8833/res/XC6206.pdf)
 
-
-
 ## Project
 
 This is the introduction Video of this product, simple demos, you can have a try.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gPi4EWuAGtg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

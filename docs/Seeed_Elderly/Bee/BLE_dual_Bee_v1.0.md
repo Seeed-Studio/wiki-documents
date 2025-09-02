@@ -63,14 +63,14 @@ The supply voltage of this module is 2.5V ~ 3.7V, higher than this may cause per
 
 ### Conventions
 
-* In EDR mode, only slave can be configured while either master or slave can be in BLE mode.
-* Factory default setting:
-  * EDR Name HMSoft, Slave role, PinCode 1234
-  * BLE Name HMSoft, Slave role, PinCode 000000
-  * Baud: 115200, N, 8, 1;
-* AT Command format:
-  * Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
-  * Any incorrect command would be no response.
+- In EDR mode, only slave can be configured while either master or slave can be in BLE mode.
+- Factory default setting:
+  - EDR Name HMSoft, Slave role, PinCode 1234
+  - BLE Name HMSoft, Slave role, PinCode 000000
+  - Baud: 115200, N, 8, 1;
+- AT Command format:
+  - Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
+  - Any incorrect command would be no response.
 
 ### AT Commands
 
@@ -801,34 +801,31 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 ![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-Debug_Output_Master.png)
 ![](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/img/HM-13-Debug_Output_Slave.png)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/BLE-dual-Bee_V1.0_sch_pcb.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
 
-*   [HM-13 Bluetooth Datasheet](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/Bluetooth_HM-13_en.pdf)
+- [HM-13 Bluetooth Datasheet](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/Bluetooth_HM-13_en.pdf)
 
-*   [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
+- [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
 
-*   [Eagle_BLE(dual)_Bee_V1.0_sch_pcb](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/BLE-dual-Bee_V1.0_sch_pcb.zip)
+- [Eagle_BLE(dual)_Bee_V1.0_sch_pcb](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/BLE-dual-Bee_V1.0_sch_pcb.zip)
 
-*   [PDF_BLE(dual)_bee_v1.0](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/BLE-dual-bee_v1.0.pdf)
+- [PDF_BLE(dual)_bee_v1.0](https://files.seeedstudio.com/wiki/BLE_dual_Bee_v1.0/res/BLE-dual-bee_v1.0.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

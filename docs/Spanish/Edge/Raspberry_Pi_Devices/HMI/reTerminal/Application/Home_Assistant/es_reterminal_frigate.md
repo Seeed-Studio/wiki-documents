@@ -353,7 +353,7 @@ Puedes detectar muchos objetos diferentes y también enviar notificaciones a tu 
 
 - **[Página Web]** [Foro de Home Assistant](https://community.home-assistant.io/)
 
-# Soporte técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para adaptarnos a diferentes preferencias y necesidades.
 

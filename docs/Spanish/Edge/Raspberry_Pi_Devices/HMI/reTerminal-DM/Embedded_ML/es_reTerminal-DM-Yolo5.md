@@ -150,7 +150,7 @@ python detect.py --weight best-int8_edgetpu.tflite --img 224 --source <your sour
 - **[Web Page]** [Documentación oficial de Yolov5](https://github.com/ultralytics/yolov5)
 - **[Web Page]** [Roboflow](https://universe.roboflow.com/)
 
-# Soporte Técnico
+## Soporte Técnico
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarte el soporte necesario y asegurar que tu experiencia sea fluida. Ofrecemos varios canales de comunicación para diferentes necesidades.
 

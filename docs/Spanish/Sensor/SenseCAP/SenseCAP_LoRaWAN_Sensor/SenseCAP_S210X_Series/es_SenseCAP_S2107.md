@@ -97,7 +97,7 @@ Consulta el repositorio de SenseCAP en GitHub: [S210X Decoder](https://github.co
 ### Información de la batería:
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/s2107/5.png" /></div>
 
-# Soporte Técnico SenseCAP
+## Soporte Técnico SenseCAP
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para ayudarte a tener la mejor experiencia posible. Ofrecemos varios canales de soporte según tus preferencias.
 

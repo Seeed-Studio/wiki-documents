@@ -11,7 +11,7 @@ last_update:
   date: 10/13/2023
   author: Corey Thompson
 ---
-#  Edgebox RPI 200 Getting Started with Ignition Edge
+# Edgebox RPI 200 Getting Started with Ignition Edge
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/EdgeBox-200-Ignition/EdgeBox-200_Ignition_Edge.png" />
@@ -22,6 +22,7 @@ last_update:
 > — [inductiveautomation.com](https://inductiveautomation.com/ignition/edge)
 
 Ignition Edge offers several products that can be mixed and matched on an edge device to create powerful solutions at the edge of the network:
+
 - **Ignition Edge IIoT**: Publish field-device data through MQTT.
 - **Ignition Edge Panel**: Create local HMIs for field devices.
 - **Ignition Edge Compute**: Add true edge computing to your network.
@@ -33,6 +34,7 @@ By embedding Ignition Edge into field and OEM devices at the edge of the network
 > \*4G and LoRa® modules are not included by default, please purchase the relevant modules accordingly.
 
 ## Hardware Prerequisite
+
 - PC / Mac with SSH terminal capability
 - PC / Mac with available hard drive capacity to install Ignition's Designer applciations.
 - 12-24V DC power supply
@@ -62,7 +64,7 @@ The default SenseCraft Edge OS is a 32-bit installation, ensure you download the
 :::
 
 1. Visit [Ignition's Download Page](https://inductiveautomation.com/downloads/)
-2. Download the version of the application you wish to use - you will be prompted to enter your information before you can download the package. 
+2. Download the version of the application you wish to use - you will be prompted to enter your information before you can download the package.
 3. Copy the compressed package to your edge device, where you wish it to be installed (I have chosen a location under /opt/)
 4. Extract the package at the current location
 5. Delete the leftover original package
@@ -96,7 +98,7 @@ When the installation is complete you will need to start the service. You can [s
 ```
 
 :::tip
-You can easily check if the service is running if you are able to load the Ignition Edge Gateway's home page. 
+You can easily check if the service is running if you are able to load the Ignition Edge Gateway's home page.
 :::
 
 To load the gateway's home page, launch a web browser either on the Edgebox itself at `localhost:8088` OR from another device on the network at `{edgeboxhostname}:8088` OR from anywhere on the network with the IP address of the Edgebox itself at `{edgeboxip}:8088`
@@ -106,15 +108,19 @@ To load the gateway's home page, launch a web browser either on the Edgebox itse
 </p>
 
 ### Launch Ignition Edge Gateway On Boot
+
 :::note
 It is recommended to launch the gateway's service automatically on boot of the device. There are multiple ways this can be accomplished and it is ultimately up to the user to decide how to do this.
 :::
 
 One way to launch the service on boot is to add the launch command to your `.bashrc`. To do this, simply open your `.bashrc` in a text editor of your choice.
+
 ```bash
 nano ~/.bashrc
 ```
+
 Append the launch command to the the file
+
 ```bash
 /opt/ignitionedge/ignition.sh start
 ```
@@ -123,7 +129,7 @@ Append the launch command to the the file
   <img alt="Launch On Boot Setup" src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Ignition/ignition-gateway-launch-setup.png" />
 </p>
 
-And don't forget to save the file! 
+And don't forget to save the file!
 (`ctrl + x` in the example above using nano)
 
 :::warning
@@ -159,11 +165,11 @@ You are now ready to initialize and launch the service! This takes a couple minu
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

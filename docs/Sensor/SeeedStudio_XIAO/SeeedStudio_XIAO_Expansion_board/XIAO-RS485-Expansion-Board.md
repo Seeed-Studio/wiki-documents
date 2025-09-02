@@ -15,36 +15,34 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/top.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 ## Hardware Overview
 
 ### prepared material
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO RS485-Expansion-Board</th>
-			<th>Seeed Studio XIAO ESP32-C3</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/hadware.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/esp32.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO RS485-Expansion-Board</th>
+   <th>Seeed Studio XIAO ESP32-C3</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/hadware.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/rs485_ExpansionBoard/esp32.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ### Pinout Diagram
 
@@ -70,6 +68,7 @@ When it is used as an input mode, you need to turn the switch to IN, and if it i
 :::
 
 ### Connection Schematic
+
 <div class="table-center">
   <table align="center">
     <tr>
@@ -121,8 +120,9 @@ if (Serial.available()) {
 }
 
 ```
+
 - **HardwareSerial Library:** Allows the creation of additional serial ports on ESP32, typically used for communication with devices (such as sensors or modules).
-- `HardwareSerial mySerial(1); `: Defines a HardwareSerial object named mySerial, using D5 and D4 as the receive and transmit pins.
+- `HardwareSerial mySerial(1);`: Defines a HardwareSerial object named mySerial, using D5 and D4 as the receive and transmit pins.
 - `#define enable_pin D2`: Defines an enable pin used to control the sending and receiving state of the RS485 module.
 
 - `setup()`:
@@ -135,11 +135,10 @@ if (Serial.available()) {
 
 - `loop():`
   - `if (receivedData.length() > 0)`: Checks if there is any data available to read from the hadware serial port.
-  -  `String receivedData = Serial.readStringUntil('\n');` : Read the data from the hardware serial until a newline character
+  - `String receivedData = Serial.readStringUntil('\n');` : Read the data from the hardware serial until a newline character
   - `Serial.println("Send successfully")`: Print a success message.
   - `mySerial.print("Master send information is: ")`: Send a prompt message to the hardware serial.
   - `mySerial.println(receivedData)` :Send the data you need to an RS485 expansion board.
-
 
 ### Receiver Code
 
@@ -191,12 +190,9 @@ void loop() {
   - `Serial.print("Received data: ");`: Prints a message to the hardware serial indicating that data has been received.
   - `Serial.println(receivedData);`: Print the data sent to the receiver RS485.
 
-
 ## RS485 Transmission Result
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/rs485_result.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Resources
 

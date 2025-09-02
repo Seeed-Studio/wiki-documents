@@ -20,7 +20,6 @@ last_update:
     </a>
 </div>
 
-
 ## Introduction
 
 Grove Smart IR Gesture Sensor is an intelligent gesture recognition module equipped with an infrared camera sensor and applied AI algorithm. It can detect over 15 gestures with wide detection while supporting both IIC and SPI communication. This module also allows Grove, Type-C, and Seeed Studio XIAO direct connecting.
@@ -54,7 +53,6 @@ As background noise may impact the accuracy of gesture recognition, it is recomm
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/2.png" style={{width:600, height:'auto'}}/></div>
 
-
 ### Gesture Types
 
 All supported gesture types are described in the following sections.
@@ -62,22 +60,22 @@ All supported gesture types are described in the following sections.
 #### Gesture Definition
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Gesture</th>
-			<th>Description</th>
+ <table align="center">
+  <tr>
+   <th>Gesture</th>
+   <th>Description</th>
             <th>Note</th>
-		</tr>
-		<tr>
-			<td>N Finger (N=0~5)</td>
-			<td>0 ~ 5 fingers at top of fist <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/3.png" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td>N Finger (N=0~5)</td>
+   <td>0 ~ 5 fingers at top of fist <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/3.png" style={{width:250, height:'auto'}}/></div></td>
             <td>Operation Distance 15 to 30 cm <br /> Static</td>
-		</tr>
-		<tr>
-			<td>N Finger Push (N=1~5)</td>
-			<td>N fingers move forward toward sensor <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/4.png" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td>N Finger Push (N=1~5)</td>
+   <td>N fingers move forward toward sensor <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/4.png" style={{width:250, height:'auto'}}/></div></td>
             <td>Operation Distance 15 to 30 cm <br /> Programmable threshold</td>
-		</tr>
+  </tr>
         <tr>
             <td>Pinch</td>
             <td>2-finger close to pinch, open to release <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/5.png" style={{width:100, height:'auto'}}/></div></td>
@@ -113,7 +111,7 @@ All supported gesture types are described in the following sections.
             <td>Thumb at bottom of fist <br /> <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/11.png" style={{width:180, height:'auto'}}/></div></td>
             <td>Operation Distance 15 to 25cm</td>
         </tr>
-	</table>
+ </table>
 </div>
 
 #### Gesture Operation Mode
@@ -121,28 +119,28 @@ All supported gesture types are described in the following sections.
 There are 3 gesture modes: thumb, cursor, and gesture modes. Each of them defines specific gesture types for certain user scenarios or applications. The default combined mode includes all gestures except thumbs.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Mode</th>
-			<th>Default Connection</th>
+ <table align="center">
+  <tr>
+   <th>Mode</th>
+   <th>Default Connection</th>
             <th>Gesture Types</th>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>Thumb Mode</td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td>Thumb Mode</td>
             <td>Thumb Up/Down</td>
-		</tr>
-		<tr>
-			<td>4</td>
-			<td>Cursor Mode</td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td>Cursor Mode</td>
             <td>Static Finger <br /> Push <br /> Rotate <br /> Tap <br /> Pinch <br /> Grab</td>
-		</tr>
+  </tr>
         <tr>
-			<td>5</td>
-			<td>Gesture Mode (Default)</td>
+   <td>5</td>
+   <td>Gesture Mode (Default)</td>
             <td>Static Finger <br /> Push <br /> Swipe <br /> Rotate <br /> Tap (IS_SELECT flag = 1)  <br /> Pinch (IS_SELECT flag = 1) <br /> Grab (IS_SELECT flag = 1)</td>
-		</tr>
-	</table>
+  </tr>
+ </table>
 </div>
 
 ### Hardware Types
@@ -158,42 +156,41 @@ The diagram and table below will show you how to select the mode you wish to use
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/12.png" style={{width:300, height:'auto'}}/></div>
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th> </th>
-			<th>1</th>
+ <table align="center">
+  <tr>
+   <th> </th>
+   <th>1</th>
             <th>2</th>
             <th>3</th>
             <th>4</th>
-		</tr>
-		<tr>
-			<th>I2C Mode</th>
-			<td>ON</td>
+  </tr>
+  <tr>
+   <th>I2C Mode</th>
+   <td>ON</td>
             <td>OFF</td>
             <td>ON</td>
             <td>ON</td>
-		</tr>
-		<tr>
-			<th>SPI Mode</th>
-			<td>ON</td>
+  </tr>
+  <tr>
+   <th>SPI Mode</th>
+   <td>ON</td>
             <td>ON</td>
             <td>ON</td>
             <td>ON</td>
-		</tr>
+  </tr>
         <tr>
-			<th>USB Mode</th>
-			<td>OFF</td>
+   <th>USB Mode</th>
+   <td>OFF</td>
             <td>OFF</td>
             <td>OFF</td>
             <td>OFF</td>
-		</tr>
-	</table>
+  </tr>
+ </table>
 </div>
 
 :::note
 The wiring and code may also be slightly different when using different patterns. We will tell you more about this in the following examples.
 :::
-
 
 ## Use of the upper computer software
 
@@ -231,7 +228,6 @@ The types of gestures and their introduction can be found in the **[previous sec
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 :::
 
-
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Grove_Gesture" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
@@ -256,13 +252,13 @@ Since you have downloaded the zip Library, open your Arduino IDE, click on **Ske
 
 ## Demo 1: Connect sensors to MCU by IIC
 
-### Step 1. Turn the 4-position DIP switch to the IIC position.
+### Step 1. Turn the 4-position DIP switch to the IIC position
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/IIC.png" style={{width:100, height:'auto'}}/></div>
 
 The second gear from left to right needs to be set to OFF, all others are ON.
 
-### Step 2. Connect the MCU to the Grove Gesture Sensor via the Grove cable.
+### Step 2. Connect the MCU to the Grove Gesture Sensor via the Grove cable
 
 The IIC interface is compatible with the XIAO series and the Arduino/Seeeduino series. If you are using an Arduino/Seeeduino then you may need to use a Grove cable to connect to their IIC interface.
 
@@ -413,13 +409,13 @@ There are three different modes of the Grove Gesture Sensor. We have completed t
 
 If you wish to use the SPI approach rather than the IIC, then you can refer to the steps here to complete your project.
 
-### Step 1. Turn the 4-position DIP switch to the SPI position.
+### Step 1. Turn the 4-position DIP switch to the SPI position
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-gesture-paj7620/SPI.png" style={{width:100, height:'auto'}}/></div>
 
 All switches need to be toggled to the ON position.
 
-### Step 2. Connect the XIAO to the Grove Gesture Sensor.
+### Step 2. Connect the XIAO to the Grove Gesture Sensor
 
 Plug XIAO straight in to the Grove Gesture Sensor's female connector and use it. Please note that the USB-C port is always facing outwards.
 
@@ -570,34 +566,16 @@ There are three different modes of the Grove Gesture Sensor. We have completed t
 - **[PDF]** [Grove Gesture Sensor SCH](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/Grove-Smart-IR-Gesture-Sensor_v1.0_SCH_PDF.pdf)
 - **[Datasheet]** [PAG7661QN_FW-DS_V0.8_05072022_Confidential.pdf](https://files.seeedstudio.com/wiki/grove-gesture-paj7620/res/PAG7661QN_FW-DS_V0.8_05072022_Confidential.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

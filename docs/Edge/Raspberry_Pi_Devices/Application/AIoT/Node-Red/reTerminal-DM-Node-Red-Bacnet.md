@@ -14,32 +14,33 @@ last_update:
   date: 06/26/2024
   author: Kasun Thushara
 ---
-## Introduction 
+## Introduction
+
 BACnet IP (Building Automation and Control Network over IP) is a communication protocol designed for managing and automating building systems. It enables devices from different manufacturers to interoperate seamlessly over standard IP networks, enhancing system integration and flexibility. The primary advantages of BACnet IP in Building Management Systems (BMS) include improved scalability, easier installation and maintenance, and the ability to leverage existing network infrastructure. BACnet IP also supports real-time data exchange, facilitating better monitoring and control of building systems. This results in increased energy efficiency, reduced operational costs, and enhanced occupant comfort and safety.
 
 ## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
@@ -50,6 +51,7 @@ We have prepared a [Getting started Guide on Node-RED](https://wiki.seeedstudio.
 Please go to this [link](https://sourceforge.net/projects/yetanotherbacnetexplorer/) and download YABE (Yet Another BACnet Explorer). YABE is a versatile tool that allows you to simulate and explore BACnet devices, making it ideal for testing and development purposes. Once downloaded and installed on your Host PC, YABE will be used to simulate room temperature data, which we will then read and process using Node-RED on the reTerminal DM.
 
 ### Configure Ethernet settings for BACnet IP
+
 Since your Device IP domain is different from your wireless settings, you may have to change the IP configuration manually. For that,
 
 - **Step 01**: Run the following command:
@@ -87,9 +89,9 @@ sudo nano /etc/dhcpcd.conf
 
 Now, you have successfully installed `node-red-contrib-bacnet-extended` and can start using it to integrate BACnet devices with your Node-RED flows.
 
-## Start Room Temperature Controller Simulator 
+## Start Room Temperature Controller Simulator
 
-Once you have installed YABE, navigate to the `add-on` folder and double-click `bacnet.Room.Simulator` to start it. 
+Once you have installed YABE, navigate to the `add-on` folder and double-click `bacnet.Room.Simulator` to start it.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/room-simulator.PNG" /></center>
 
@@ -104,8 +106,6 @@ Then, click on the `+` mark to add a device and enter the IP address of your PC'
 :::note
 You might need to configure the Ethernet port IP address to ensure it is in the same network domain as both the reTerminal DM and your PC.
 :::
-
-
 
 After that, you should be able to see the device with the same device ID as the room temperature simulator.
 
@@ -137,6 +137,7 @@ After that, you should be able to see the device with the same device ID as the 
    msg.transportClosedDuration = 8000;
    return msg;
    ```
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/discover-func.PNG" /></center>
 
 5. **Deploy the Flow:**
@@ -164,6 +165,7 @@ To read all parameters from BACnet devices using Node-RED, follow these steps:
 
 3. **Connect Nodes:**
    - Connect the nodes in the following order:
+
      ```
      Inject >>>> Function >>>> Read-All-Devices >>>> Debug
      ```
@@ -173,7 +175,8 @@ To read all parameters from BACnet devices using Node-RED, follow these steps:
 4. **Configure the Function Node:**
    - Double-click on the Function node to open its configuration window.
    - Enter the following code in the function block:
-   - 
+   -
+
      ```javascript
      msg.reuseAddr = true;
      msg.transportClosedDuration = 8000;
@@ -195,7 +198,6 @@ This setup will read all the parameters from BACnet devices on your network and 
 
 <center><img width="300" src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-read-all.PNG" /></center>
 
-
 <center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet2.gif" /></center>
 
 ## Read single device data
@@ -208,17 +210,18 @@ This setup will read all the parameters from BACnet devices on your network and 
 
 3. **Connect Nodes:**
    - Connect the nodes in the following order:
+
      ```
      Inject >>>> Function >>>> Read-Single-Device >>>> Debug
      ```
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/read-single-device.PNG" /></center>
 
-
 4. **Configure the Function Node:**
    - Double-click on the Function node to open its configuration window.
    - Enter the following code in the function block:
-   - 
+   -
+
      ```javascript
         msg.deviceId=DeviceID;
         msg.address="IP:PORT ADD";
@@ -236,7 +239,6 @@ This setup will read all the parameters from BACnet devices on your network and 
 7. **Check the Output:**
    - Wait for the output to appear in the Debug window. You will see the parameters of the Selected device in the BACnet network area.
 
-
 <center><img width={300} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/debug-single-device.PNG" /></center>
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/bacnet3.gif" /></center>
@@ -249,9 +251,9 @@ This setup will read all the parameters from BACnet devices on your network and 
 2. **Add Nodes to Workbench:**
    - Drag and drop the Inject, Two function node, Read-Single-Device, and Debug nodes onto your workbench.
 
-
 3. **Connect Nodes:**
    - Connect the nodes in the following order:
+
      ```
      Inject >>>> Function >>>> Read-Single-Devices >>>> Function >>>> Debug
      ```
@@ -261,15 +263,18 @@ This setup will read all the parameters from BACnet devices on your network and 
 4. **Configure the Function Node:**
    - Double-click on the Function node near to inject node to open its configuration window.
    - Enter the following code in the function block:
-   - 
+   -
+
      ```javascript
         msg.deviceId=DeviceID;
         msg.address="IP:PORT ADD";
         return msg;
      ```
+
    - Double-click on the Function node near to debug node to open its configuration window.
    - Enter the following code in the function block:
-   - 
+   -
+
      ```javascript
         const objects = msg.payload['OBJECT_LIST(76)'];
         let temperatureIndoor = null;
@@ -311,11 +316,11 @@ This setup will read all the parameters from BACnet devices on your network and 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

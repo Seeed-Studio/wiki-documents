@@ -11,7 +11,7 @@ last_update:
   date: 05/19/2023
   author: Peter Pan
 ---
-#  reTerminal DM Hardware Overview
+# reTerminal DM Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114070201-reterminal-dm-first_one_.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -21,7 +21,7 @@ Based on Raspberry Pi CM4, and as a Panel PC, HMI, PLC, IIoT Gateway all-in-one 
 
 It is equipped with rich scalability and hybrid connectivity, supporting CAN bus, RS485, RS232, Gigabit Ethernet port, and other interfaces, as well as powerful wireless communication capabilities such as 4G, LoRa®, WiFi, and BLE.
 
-> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for 
+> \*4G and LoRa® modules does not come with reTerminal DM by default, please purchase the relevant modules accordingly, for
 > [4G bundle](https://www.seeedstudio.com/reTerminal-DM-LTE-Cat-4-EC25-Bundle-p-5675.html)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -32,21 +32,21 @@ It is equipped with rich scalability and hybrid connectivity, supporting CAN bus
 
 This Wiki will show you how to Assemble and Disassemble the unit to install peripherals components, as well as the option for mounting
 
-## Hardware prerequisite 
+## Hardware prerequisite
+
 You need to prepare the following hardware
 
 - reTerminal DM x 1
 - Screw Driver set
-  * Phillips + 3.5 bit
-  * Phillips + 3.0 bit
-  * Slotted - 2.5 bit
+  - Phillips + 3.5 bit
+  - Phillips + 3.0 bit
+  - Slotted - 2.5 bit
 
 ### Assembly & Disassembly Back Cover Guide
 
 **STEP 1:** Please carefully place the reTerminal DM screen-down on a flat surface.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/facedown.png" alt="pir" width="800" height="auto"/></p>
-
 
 **STEP 2:** Loosen the screws and remove the back cover.
 
@@ -63,7 +63,6 @@ You need to prepare the following hardware
 **STEP 4:** Cover the back cover and lock the screws.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/wifi-antenna.png" alt="pir" width="800" height="auto"/></p>
-
 
 ### Assembly 4G Module and Antenna
 
@@ -112,7 +111,6 @@ PCIe Extension Module will be released soon, please stay tuned.
 **STEP 6:** Cover the rear case and lock the screws.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/PCIe.png" alt="pir" width="800" height="auto"/></p>
-
 
 ### Install SSD
 
@@ -202,10 +200,7 @@ The PiCamera V2 Module has been tested and working on reTerminal DM, You will ne
 
 ## Mounting Guide
 
-The reTerminal DM supports multiple installation methods, and users can choose flexibly according to their usage scenarios. It
-should be noted that the standard product does not come with the accessories required for Panel Mount and Din Rail Mount, and
-defined accessories need to be purchased for installation. For details on accessories, please refer to section 2.3 Optional Interfaces
-and Modules.
+The reTerminal DM supports multiple installation methods, and users can choose flexibly according to their usage scenarios. It should be noted that the standard product does not come with the accessories required for Panel Mount and Din Rail Mount, and defined accessories need to be purchased for installation. For details on accessories, please refer to section 2.3 Optional Interfaces and Modules.
 
 ### Panel Mount
 
@@ -229,7 +224,6 @@ Sliding Block for Linear Guideway Rail is required for DIN Rail mounting
     </a>
 </div>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/hardware/DIN.png" alt="pir" width="800" height="auto"/></p>
 
 ## Tech Support & Product Discussion
@@ -237,11 +231,11 @@ Sliding Block for Linear Guideway Rail is required for DIN Rail mounting
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -32,30 +32,30 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
 
     Versatile driver supporting both **5V/3A** and **12V/2A** LED strips with built-in power regulation. Compatible with single-color and addressable RGB LEDs including NeoPixel **WS2811, WS2812(B), WS2813, WS2815, SK6812, and other 1-wire protocol LEDs**, providing extensive lighting options.
 
-- **XIAO-Compatibility for Smart Control** 
- 
+- **XIAO-Compatibility for Smart Control**
+
     Designed for all [Seeed Studio XIAO boards](https://www.seeedstudio.com/xiao-series-page). When paired with XIAO ESP32 Series (ESP32-C3/S3/C6), unlock smart features through:
-    - **[WLED](https://kno.wled.ge/)**  app support - Control colors, effects, brightness, and create custom animations ([XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) is highly recommended)
-    - **[Home Assistant](https://www.home-assistant.io/)** integration via ESPHome - Enable remote control, automation, and smart home scenarios
+  - **[WLED](https://kno.wled.ge/)**  app support - Control colors, effects, brightness, and create custom animations ([XIAO ESP32C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) is highly recommended)
+  - **[Home Assistant](https://www.home-assistant.io/)** integration via ESPHome - Enable remote control, automation, and smart home scenarios
 
 - **Grove Ecosystem Compatibility**
 
     The onboard plug-and-play Grove interface is compatible with over 400 Seeed Studio modules, allowing you to easily enhance lighting interactivity with the environment and motion for smarter, personalized effects:
-    - `For AI Vision Detection` 
+  - `For AI Vision Detection`
 
         [Grove - Vision AI Module V2](https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html)
 
         [Grove Smart IR Gesture Sensor (PAJ7660)](https://www.seeedstudio.com/Grove-Smart-IR-Gesture-Sensor-p-5721.html)
 
-    - `For Temperature & Humidity Detection` 
+  - `For Temperature & Humidity Detection`
 
         [Grove - Temperature & Humidity Sensor (DHT11)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html)
 
         [Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor](https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html)
 
         [Grove - Temp and Humi Sensor(SHT31)](https://www.seeedstudio.com/Grove-I2C-High-Accuracy-Temp-Humi-Sensor-SHT35.html)
-    
-    - `For Motion Detection`
+
+  - `For Motion Detection`
 
         [Grove - PIR Motion Sensor](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)
 
@@ -63,16 +63,15 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
 
         [Grove - IMU 9DOF (ICM20600+AK09918)](https://www.seeedstudio.com/Grove-IMU-9DOF-ICM20600-AK09918.html)
 
-    - **[`And more 400+`](https://wiki.seeedstudio.com/Grove_System/)**
-
+  - **[`And more 400+`](https://wiki.seeedstudio.com/Grove_System/)**
 
 ### Specification
 
 <table style={{textAlign:'center'}}>
-	<tr>
+ <tr>
         <th>Item</th>
         <th>Detail</th>
-	</tr>
+ </tr>
     <tr>
         <td>Power Input</td>
         <td>DC 12V/2A</td>
@@ -103,8 +102,6 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
     </tr>
 </table>
 
-
-
 ### Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/hardware_overview.png" style={{width:1000, height:'auto'}}/></div>
@@ -115,16 +112,17 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
 - [PowerAdapter, 12V/2A/24W, American Standard Plug, DC Output](https://www.seeedstudio.com/Power-Adapter-12V-2A-US-p-5731.html)
 - Other DC 12V Power Adapter with **5.5mm x 2.1mm x 10±0.3mm** Plug
 - DC 12V Wire
+
 #### Supported LEDs Guide
 
 <div class="table-center">
-	<table style={{textAlign:'center'}}>
-		<tr>
+ <table style={{textAlign:'center'}}>
+  <tr>
             <th>Product</th>
             <th>Name</th>
             <th>Operating Voltage</th>
             <th>Connect via</th>
-		</tr>
+  </tr>
         <tr>
             <td><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-WS2813-Mini.png
             " style={{width:150, height:'auto'}}/></td>
@@ -209,9 +207,8 @@ LED Driver Board for XIAO is a compact yet powerful solution supporting both 5V 
             <td>5V</td>
             <td>Grove</td>
         </tr>  
-	</table>
+ </table>
 </div>
-
 
 ## Getting Started
 
@@ -257,7 +254,6 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
 
 - If you want to use **Seeed Studio XIAO MG24** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/xiao_mg24_getting_started/#software-preparation)** to finish adding.
 
-
 **Step 3.** Install libraries needed.
 
 - Open Arduino IDE, navigate to **Sketch > Include Library > Manage Libraries...** to search the library, type the keyword "**Adafruit_NeoPixel**" library in Ardunio library Manager and install the lastest version.
@@ -279,33 +275,33 @@ The MG24 is currently not supported by the standard NeoPixel library. However, S
 **Step 1.** Hardware preparation
 
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO RP2350</th>
+ <tr>
+  <th>Seeed Studio XIAO RP2350</th>
         <th>LED Driver Board for XIAO</th>
         <th>Grove - RGB LED Stick (15-WS2813 Mini)</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550%20XIAO%20RP2350-45font.jpg" style={{width:400, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/45-front.jpg" style={{width:400, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/Grove-RGB-LED-Stick-15-WS2813-Mini.png" style={{width:400, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-RP2350-p-5944.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-15-WS2813-Mini-p-4270.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-15-WS2813-Mini-p-4270.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 **Step 2.**  Connect Seeed Studio XIAO RP2350, LED Driver Board for XIAO and Grove - RGB LED Stick (15-WS2813 Mini) as show below:
@@ -358,42 +354,39 @@ Upload the program and power LED Driver Board, if all goes well, you can see lik
 
 **Step 1.** Hardware preparation
 
-
 <table align="center">
-	<tr>
-		<th>XIAO nRF52840</th>
+ <tr>
+  <th>XIAO nRF52840</th>
         <th>LED Driver Board for XIAO</th>
         <th>WS2812 LED</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102010469-seeed-studio-xiao-nrf52840-sense-45font-logo.jpg" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102010469-seeed-studio-xiao-nrf52840-sense-45font-logo.jpg" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/45-front.jpg" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ws2812_led.png" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
-		</div></td>
-	</tr>
+      <a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
+  </div></td>
+ </tr>
 </table>
 
 **Step 2.**  Connect Seeed Studio XIAO nRF52840, LED Driver Board for XIAO and WS2812 LED as show below:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/nRF52840_ledDriver_led_result.jpg" style={{width:700, height:'auto'}}/></div>
 
-
 **Step 3.** The following code works by reading the data from the XIAO nRF52840 onboard LSM6DS3 acceleration sensor and changing the color of LED strip in real time, with the color mapped from the current acceleration value.
-
 
 ```cpp
 #include <Arduino.h>
@@ -470,17 +463,18 @@ void loop() {
 }
 
 ```
+
 Upload the program and power LED Driver Board, if all goes well, you can see like this:
 
 <div style={{textAlign:'center'}}>
-<video width={225} height={400} controls preload> 
+<video width={225} height={400} controls preload>
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/nRF52840_ledDriver_led_result.mp4" />
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/nRF52840_ledDriver_led_result.webm" />
 </video>
 </div>
 
 When you shake the module, the color of the light strip changes. The more violent the shaking, the brighter the color.
- 
+
 ### Play with Home Assistant via ESPHome
 
 #### Hardware Preparation
@@ -495,10 +489,10 @@ When you shake the module, the color of the light strip changes. The more violen
     </tr>
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+      <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
     </tr>
 </table>
 </div>
@@ -519,7 +513,6 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 
 - **Step 1.** Click **INSTALL**
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
 - **Step 2.** Enable all the options and click **START**
@@ -528,46 +521,45 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 
 You will see the following window if ESPHome is successfully loaded
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
 
-
-#### Temp-Color Sync LEDs 
+#### Temp-Color Sync LEDs
 
 **Step 1.** Hardware preparation
 
 <table align="center" style={{textAlign:'center', overflowX: 'scroll', border: '1px solid #ccc', }}>
-	<tr>
-		<th>XIAO ESP32S3</th>
+ <tr>
+  <th>XIAO ESP32S3</th>
         <th>LED Driver Board for XIAO</th>
         <th>Grove - Temperature & Humidity Sensor (DHT11)</th>
         <th>WS2812 LED</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991114-xiao-esp32s3-font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991114-xiao-esp32s3-font_1.jpg" style={{width:400, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/45-front.jpg" style={{width:400, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/g/r/grove-temperature-humidity-sensor-dht11-preview.png" style={{width:400, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ws2812_led.png" style={{width:400, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
-		</div></td>
-	</tr>
+      <a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
+  </div></td>
+ </tr>
 </table>
 
 **Step 2.** Connect Seeed Studio XIAO ESP32S3, LED Driver Board for XIAO and WS2812 LED as show below:
@@ -582,23 +574,20 @@ You will see the following window if ESPHome is successfully loaded
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-
 **Step 5.** Enter a **Name** for the device and enter WiFi credentials such as **Network name** and **Password**. Then click **NEXT**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/1.png" style={{width:400, height:'auto'}}/></div>
 
-
 **Step 6.** Select **ESP32-S3** and click
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/2.png" style={{width:400, height:'auto'}}/></div>
-
 
 **Step 7.** Click **SKIP** because we will configure this board manually
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
 **Step 8.** Click **EDIT** under the newly created board
- 
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/3.png" style={{width:400, height:'auto'}}/></div>
 
 **Step 9.** Copy the follow codes to end of .yaml file, the XIAO ESP32S3 reads temperature from a DHT11 sensor and changes the color of an RGB LED based on how far the temperature is from a target value, using blue for cold, red for hot, and green for normal.
@@ -704,7 +693,7 @@ interval:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/31.png" style={{width:500, height:'auto'}}/></div>
 
-It will then take a long time to download and compile, so please be patient. Once everything is ready, the firmware will be automatically downloaded to your computer. 
+It will then take a long time to download and compile, so please be patient. Once everything is ready, the firmware will be automatically downloaded to your computer.
 
 **Step 11.** Using the [ESPhome Web tool](https://web.esphome.io/?dashboard_install) to upload the firmware to XIAO ESP32S3, click **CONNECT**
 
@@ -719,7 +708,7 @@ Select the XIAO ESP32 serial port in the popup window, click **INSTALL** and the
 **Step 11.** Once install successfully, you can see like this:
 
 <div style={{textAlign:'center'}}>
-<video width={600} height={338} controls preload> 
+<video width={600} height={338} controls preload>
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ha_led_result.mp4" />
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ha_led_result.webm" />
 </video>
@@ -739,37 +728,36 @@ Open **Setting** >> **Devices & Services**, you can find your ESPhome Device, cl
     <img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ha_led5.png"/>
   </div>
 
-
 ### Run WLED
 
 #### Hardware Perparation
 
 <table align="center">
-	<tr>
-		<th>XIAO ESP32C3</th>
+ <tr>
+  <th>XIAO ESP32C3</th>
         <th>LED Driver Board for XIAO</th>
         <th>WS2812 LED</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991054-seeed-studio-xiao-esp32c3-45font_1.jpg" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991054-seeed-studio-xiao-esp32c3-45font_1.jpg" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/45-front.jpg" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/ws2812_led.png" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/LED-Driver-Board-for-Seeed-Studio-XIAO-p-6451.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
-		</div></td>
-	</tr>
+      <a class="get_one_now_item" href="" target="_blank" rel="noopener noreferrer"></a>
+  </div></td>
+ </tr>
 </table>
 
 Connect Seeed Studio XIAO nRF52840, LED Driver Board for XIAO and WS2812 LED as show below:
@@ -792,15 +780,12 @@ Connect Seeed Studio XIAO nRF52840, LED Driver Board for XIAO and WS2812 LED as 
 
 If all work well, you can see like this:
 
-
 <div style={{textAlign:'center'}}>
-<video width={600} height={338} controls preload> 
+<video width={600} height={338} controls preload>
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/wled_result.webm" />
   <source src="https://files.seeedstudio.com/wiki/LED_Driver_Board_for_XIAO/wled_result.mp4" />
 </video>
 </div>
-
-
 
 ## Resources
 

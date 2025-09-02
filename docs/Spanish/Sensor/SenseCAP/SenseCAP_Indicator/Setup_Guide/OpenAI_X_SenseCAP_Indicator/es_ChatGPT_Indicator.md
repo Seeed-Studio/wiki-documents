@@ -62,7 +62,7 @@ Además de esta función demostrativa, el firmware del SenseCAP Indicator es **c
 
 - Verifica si la API Key ingresada es correcta.
 
-# Soporte Técnico
+## Soporte Técnico
 
 ¿Necesitas ayuda con tu **SenseCAP Indicator**? ¡Estamos para ayudarte!
 

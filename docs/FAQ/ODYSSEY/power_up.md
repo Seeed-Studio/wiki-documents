@@ -10,4 +10,3 @@ last_update:
   author: cheng.tang
 ---
 Maker sure you use the 12V/2A power adapter provided in the box and check connection.
-
