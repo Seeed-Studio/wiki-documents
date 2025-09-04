@@ -63,6 +63,34 @@ Your TRMNL credentials are sensitive information. Never share them publicly or c
 
 Once you have your materials and purchased TRMNL access, you can proceed with connecting your device to TRMNL's platform. If you encounter any issues or have questions, you can contact the TRMNL team directly at team@usetrmnl.com.
 
+### Materials Required
+
+Starting immediately. Please prepare any of the following reTerminal to complete the tutorial content afterwards.
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>reTerminal E1001</th>
+      <th>reTerminal E1002</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/145.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/146.jpg" style={{width:250, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
 
 ### Firmware Flashing
 

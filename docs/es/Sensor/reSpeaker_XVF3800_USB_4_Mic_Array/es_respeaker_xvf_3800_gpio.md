@@ -1,7 +1,7 @@
 ---
-description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, beamforming, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
+description: El ReSpeaker XVF3800 USB 4-Mic Array es un arreglo de micrófonos circular profesional con AEC, formación de haz, supresión de ruido y captura de voz de 360°. Emparejado con el XIAO ESP32S3, permite control de voz avanzado para dispositivos inteligentes, robótica y aplicaciones IoT. Descubre la integración perfecta y flexibilidad de modo dual.
 
-title: Controlando GPIO del reSpeaker XVF3800 mediante XIAO ESP32-S3
+title: Controlando GPIO del reSpeaker XVF3800 a través del XIAO ESP32-S3
 
 keywords:
 - reSpeaker
@@ -10,21 +10,21 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
 slug: /es/respeaker_xvf3800_xiao_gpio
 last_update:
-  date: 7/16/2025
+  date: 9/3/2025
   author: Kasun Thushara
 ---
 
-## Controlando GPIO del reSpeaker XVF3800 mediante XIAO ESP32-S3
+## Controlando GPIO del reSpeaker XVF3800 a través del XIAO ESP32-S3
 
 ## Objetivo
 
 Esta guía explica cómo **leer y controlar pines GPIO** en el procesador de voz XVF3800 usando la interfaz I2C. Aprenderás cómo:
+
 - **Leer estados de pines GPI y GPO**
 - **Controlar pines de salida (ej., silenciar micrófono, controlar LED, amplificador)**
 - **Entender mapeos GPIO y su propósito**
 
 ## Descripción General de GPIO
-
 
 El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) para control externo. Puedes usarlos para leer estados de botones o controlar hardware como el LED de silencio, amplificador o LEDs.
 
@@ -34,23 +34,23 @@ El reSpeaker XVF3800 expone 3 pines de entrada (GPI) y 5 pines de salida (GPO) p
 | X1D13             | Entrada (RO)  | Flotante                                            |
 | X1D34             | Entrada (RO)  | Flotante                                            |
 | X0D11             | Salida (RW)   | Flotante                                            |
-| X0D30             | Salida (RW)   | LED de silencio + control de silencio del micrófono (alto = silencio) |
-| X0D31             | Salida (RW)   | Habilitación del amplificador (bajo = habilitado)   |
-| X0D33             | Salida (RW)   | Control de alimentación del LED WS2812 (alto = encendido) |
+| X0D30             | Salida (RW)   | LED de silencio + control de silencio de micrófono (alto = silencio) |
+| X0D31             | Salida (RW)   | Habilitación de amplificador (bajo = habilitado)    |
+| X0D33             | Salida (RW)   | Control de alimentación LED WS2812 (alto = encendido) |
 | X0D39             | Salida (RW)   | Flotante                                            |
-
 
 ## Leer Estados de Pines GPO
 
 **Objetivo**: Verificar niveles lógicos de todos los **GPIOs capaces de salida (GPOs)**.
 **Aspectos Destacados del Código**:
+
 - Envía una solicitud de lectura usando:
-    - ID de Recurso: 20 (GPO)
-    - ID de Comando: 0 (GPO_READ_VALUES)
+  - ID de Recurso: 20 (GPO)
+  - ID de Comando: 0 (GPO_READ_VALUES)
 - Lee estados de 5 pines GPO en orden: X0D11 → X0D30 → X0D31 → X0D33 → X0D39
 - Incluye un byte de estado para validar la respuesta
 
-```bash
+```c
 #include <Wire.h>
 
 #define XMOS_ADDR 0x2C  // I2C 7-bit address
@@ -92,14 +92,14 @@ void loop() {
 
 bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
   const uint8_t resid = GPO_SERVICER_RESID;
-  const uint8_t cmd = GPO_SERVICER_RESID_GPO_READ_VALUES;
+  const uint8_t cmd = GPO_SERVICER_RESID_GPO_READ_VALUES | 0x80;
   const uint8_t read_len = GPO_GPO_READ_NUM_BYTES;
 
   // Step 1: Write command
   Wire.beginTransmission(XMOS_ADDR);
   Wire.write(resid);
   Wire.write(cmd);
-  Wire.write(read_len);
+  Wire.write(read_len + 1);
   uint8_t result = Wire.endTransmission();
 
   if (result != 0) {
@@ -123,19 +123,20 @@ bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
   return true;
 }
 
+
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPO.PNG" alt="pir" width={600} height="auto" /></p>
 
 ## Leer Estados de Pines GPI
 
-**Objetivo**: Verificar estados de **GPIOs capaces de entrada** (p. ej., estado del botón de silencio).
+**Objetivo**: Verificar estados de **GPIOs capaces de entrada** (ej., estado del botón de silencio).
 **Aspectos Destacados del Código**:
-- Envía comando a:
-    - ID de Recurso: 36 (IO_CONFIG)
-    - ID de Comando: 6 (GPI_VALUE_ALL)
-- Recibe 3 GPI que representan el estado de X1D09, X1D13, y X1D34
 
+- Envía comando a:
+  - ID de Recurso: 36 (IO_CONFIG)
+  - ID de Comando: 6 (GPI_VALUE_ALL)
+- Recibe 3 GPI representando el estado de X1D09, X1D13, y X1D34
 
 ```bash
 #include <Wire.h>
@@ -214,16 +215,18 @@ bool read_gpi_values(uint8_t *buffer, uint8_t *status) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPI.PNG" alt="pir" width={600} height="auto" /></p>
 
-## Escribir en Pin GPO – Ejemplo de Silenciar Micrófono
+## Escribir a Pin GPO – Ejemplo de Silenciar Micrófono
 
-**Objetivo**: Controlar una salida GPIO, por ejemplo, silenciar micrófono alternando GPIO 30 (X0D30).
+**Objetivo**: Controlar un GPIO de salida, ej., silenciar micrófono alternando GPIO 30 (X0D30).
 **Aspectos Destacados del Código**:
+
 - Envía un comando de escritura a:
-    - ID de Recurso: 20
-    - ID de Comando: 1 (GPO_WRITE_VALUE)
-    - Carga útil: número de pin, valor `ej., {30, 1} para silenciar`
-  
+  - ID de Recurso: 20
+  - ID de Comando: 1 (GPO_WRITE_VALUE)
+  - Carga útil: número de pin, valor `ej., {30, 1} para silenciar`
+
 **Funciones de Conveniencia:**
+
 - muteMic() → establece GPIO 30 en ALTO para **silenciar micrófono y encender LED rojo**
 - unmuteMic() → establece GPIO 30 en BAJO para **activar micrófono y apagar LED**
 
@@ -264,7 +267,7 @@ void loop() {
 void setGPIO30(uint8_t level) {
   uint8_t payload[2] = {30, level};  // Payload format: [GPIO index, value]
   xmos_write_bytes(GPO_SERVICER_RESID, GPO_SERVICER_RESID_GPO_WRITE_VALUE, payload, 2);
-  
+
   Serial.print("Command Sent: GPIO 30 = ");
   Serial.println(level);
 }
@@ -336,15 +339,14 @@ void readGPIOStatus() {
 
 ## Soporte Técnico y Discusión de Productos
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

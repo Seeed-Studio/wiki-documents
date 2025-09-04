@@ -8,16 +8,15 @@ last_update:
   date: 08/07/2025
   author: Robin(STMicroelectronics),Atom
 ---
+
 # Getting Started with AI Assistant
-
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/1-114993645-Al-Assistant-v1.1.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://www.seeedstudio.com/AI-Assistant-p-6510.html">
-			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-	</a>
+ <a class="get_one_now_item" href="https://www.seeedstudio.com/AI-Assistant-p-6510.html">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+ </a>
 </div>
 
 ## Introduction
@@ -27,7 +26,7 @@ The AI Assistant development kit, jointly created by Seeed Studio and STMicroele
 ### Features
 
 - **Feature 1:Flagship AI Microcontroller**
-	Powered by the ST STM32N657, featuring a high-performance Arm® Cortex®-M55 core and an integrated ST Neural-ART NPU that delivers up to 600 GOPS for efficient AI model acceleration.
+ Powered by the ST STM32N657, featuring a high-performance Arm® Cortex®-M55 core and an integrated ST Neural-ART NPU that delivers up to 600 GOPS for efficient AI model acceleration.
 - **Feature 2: Professional-grade Vision Sensor**
 Equipped with an ST VD55G1 global shutter camera, providing crisp, distortion-free images of fast-moving objects, which is critical for high-accuracy computer vision tasks.
 - **Feature 3: Intelligent Sensing with ISPU**
@@ -40,7 +39,6 @@ Includes an onboard Wi-Fi module for seamless IoT connectivity, alongside a USB-
 ## Hardware Overview
 
 Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of **AI Assistant**.
-
 
 | Category             | Feature               | Specification                                                                 |
 |----------------------|------------------------|-------------------------------------------------------------------------------|
@@ -58,10 +56,10 @@ Before everything starts, it is quite essential to have some basic parameters of
 | **Mechanical & Power**| Dimensions (Casing)    | 130mm x 90mm                                                                  |
 |                      | Power Supply           | 5V via USB-C or Lithium Battery Port                                          |
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Hardware_Overview.png" style={{width:800, height:'auto'}}/></div>
 
 ### Board Top Layer Overview
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/Top.png" style={{width:800, height:'auto'}}/></div>
 
 ### Board Bottom Layer Overview
@@ -72,12 +70,19 @@ Before everything starts, it is quite essential to have some basic parameters of
 
 ## Start with AI Assistant Reference Application
 
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/stm32-hotspot/STM32N6-AI-Assistant-People-Detection" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Libraries</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div>
+
+To get started, **clone the repository from the GitHub link**`git clone https://github.com/stm32-hotspot/STM32N6-AI-Assistant-People-Detection.git` into your preferred local folder.
+
 Computer Vision application to enable the deployment of object detection models on AI Assistant board. It's based on the official release of n6-ai-people-detection-v1.0.0 application package for STM32N6570-DK board.
 
 This application is prebuilt with a people detection model "TinyYOLOv2".
 
 This section provides an overview of the application. Additional documentation is available in the [Additional Documentation of The Application](#additional-documentation-of-the-application).
-
 
 ### Features Demonstrated in This Example
 
@@ -97,17 +102,17 @@ This section provides an overview of the application. Additional documentation i
 - 3 Cameras are supported:
   - MB1854B IMX335
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/3-114993645-Al-Assistant-v1.1.jpg" style={{width:800, height:'auto'}}/></div>
 AI Assistant kit with VD55G1 Camera.
 
 ### Tools Version
+
 - STM32CubeIDE (**STM32CubeIDE 1.18.0**)
 - STM32CubeProgrammer (**v2.18.0**)
 - [STEdgeAI](https://www.st.com/en/development-tools/stedgeai-core.html) (**v2.1.0**)
 
-
 ### ST-Link Connection
+
 **Right Hand Side Connectors**
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/STLC1.PNG" style={{width:1000, height:'auto'}}/></div>
 
@@ -125,7 +130,8 @@ AI Assistant kit with VD55G1 Camera.
 The STM32N6 does not have any internal flash. To retain your firmware after a reboot, you must program it in the external flash.
 Alternatively, you can load your firmware directly from SRAM (dev mode). However, in dev mode, if you turn off the board, your program will be lost.
 
-__Boot modes:__
+**Boot modes:**
+
 - Dev mode: load firmware from debug session in RAM (boot switch to the right)
 - Boot from flash: Program firmware in external flash (boot switch to the left)
 
@@ -174,12 +180,11 @@ More information about boot modes is available at [Boot Overview](#boot-overview
 
 #### Application Build and Run - Dev Mode
 
-__Make sure to have the switch to the right side.__
+**Make sure to have the switch to the right side.**
 
 ##### STM32CubeIDE
 
 Double click on `STM32CubeIDE/.project` to open the project in STM32CubeIDE. Build and run with the build and run buttons.
-
 
 ##### Makefile
 
@@ -209,7 +214,7 @@ $ arm-none-eabi-gdb build/Project.elf
 
 #### Application Build and Run - Boot from Flash
 
-__Make sure to have the switch on the right side.__
+**Make sure to have the switch on the right side.**
 
 ##### STM32CubeIDE
 
@@ -322,6 +327,7 @@ Cameras allow flipping the image along two axes.
 1. Open **app_config.h**.
 
 2. Change the `CAMERA_FLIP` define:
+
 ```c
 /* Defines: CMW_MIRRORFLIP_NONE; CMW_MIRRORFLIP_FLIP; CMW_MIRRORFLIP_MIRROR; CMW_MIRRORFLIP_FLIP_MIRROR; */
 
@@ -331,6 +337,7 @@ Cameras allow flipping the image along two axes.
 ### Deploy Your TFLite Model
 
 To run your own object detection model, follow these steps:
+
 - [1. Generate C-Model from TFLite Model](#1-generate-c-model-from-tflite-model)
 - [2. Program Your Network Data](#2-program-your-network-data)
 - [3. Provide NN Information in `app_config.h`](#3-provide-nn-information-in-app_configh)
@@ -393,9 +400,9 @@ This application supports four types of object detection post-processing. You ca
 
 Edit your `NN_WIDTH` and `NN_HEIGHT`.
 
-__WARNING:__ `NN_WIDTH * NN_BPP` must be a multiple of 16.
+**WARNING:** `NN_WIDTH * NN_BPP` must be a multiple of 16.
 
-__WARNING:__ Only RGB888 format has been tested.
+**WARNING:** Only RGB888 format has been tested.
 
 ##### Class Labels
 
@@ -453,10 +460,12 @@ See [Program app in external flash](#application-build-and-run---boot-from-flash
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/img/flashHex.JPG" style={{width:1000, height:'auto'}}/></div>
 
 ## Resources
- - **[PDF]** [AI Assistant Schematic](https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/res/SCH_AI%20ASSISTANT_V1-1%20RELEASE_20250314.pdf)
 
-## Tech Support 
-This product is supported by **STMicroelectronics**. 
+- **[PDF]** [AI Assistant Schematic](https://files.seeedstudio.com/wiki/AI_Assistant_V1.1/res/SCH_AI%20ASSISTANT_V1-1%20RELEASE_20250314.pdf)
+
+## Tech Support
+
+This product is supported by **STMicroelectronics**.
 For any technical issues or inquiries, please contact:
 **Technical Support Contact:
  [[Click here](https://ols.st.com/s/)]**

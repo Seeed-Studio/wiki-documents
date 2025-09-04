@@ -14,7 +14,7 @@ last_update:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/getting_started_with_reterminal_e1002" target="_blank">
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div><br />
@@ -45,20 +45,19 @@ reTerminal E1002 is a 7.3 inch open-source full color ePaper display with except
 
 ## Hardware Overview
 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/150.png" style={{width:1000, height:'auto'}}/></div><br />
+
 The reTerminal E1002 hardware includes:
 
 1. **7.3-inch full-Color ePaper Display**: Full-color display with 800×480 resolution
-2. **Refresh Button**: Located at the top of the device for manual screen refresh
-3. **Navigation Buttons**: Left and right buttons for page navigation
-4. **Power Switch**: Located on the back for powering the device on/off
-5. **USB-C Port**: For charging and firmware updates
-6. **Battery Connector**: JST 3-pin connector for optional lithium battery
-7. **Status LEDs**: 
-   - Charge indicator (red)
-   - User indicator (green)
-8. **MicroSD Card Slot**: For expandable storage
-9. **Temperature & Humidity Sensor**: Integrated SHT40 sensor located at the lower left corner on the back of the device for environmental monitoring
-10. **Expansion Pins**: 8-pin expansion header providing VDD, GND, I2C, and GPIO connections
+2. **Buttons**: Located at the top of the device for manual screen usage
+3. **Microphone**
+4. **MicroSD Card Slot**: For expandable storage
+5. **Power Switch**: Located on the back for powering the device on/off
+6. **Status LED**: User indicator (green)
+7. **Power LED**: Charge indicator (red)
+8. **USB-C Port**: For charging and firmware updates
+9. **Expansion Port**: 8-pin expansion header providing VDD, GND, I2C, and GPIO connections
 
 ## Getting Started
 
@@ -421,7 +420,7 @@ The stand allows the device to be placed on desks, countertops, or shelves, maki
 - [reTerminal E1002 Schematic (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004321_reTerminal_E1002_V1.0_SCH_250805.pdf)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [SenseCraft HMI Platform Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
-- [GitHub Repository](/getting_started_with_reterminal_e1002)
+<!-- - [GitHub Repository](/getting_started_with_reterminal_e1002) -->
 
 ## Tech Support & Product Discussion
 

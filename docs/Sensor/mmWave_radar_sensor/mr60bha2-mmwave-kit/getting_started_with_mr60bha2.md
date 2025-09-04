@@ -238,7 +238,7 @@ void loop() {
     }
 
     PeopleCounting target_info;
-    if (mmWave.getPeopleCountingTartgetInfo(target_info)) {
+    if (mmWave.getPeopleCountingTargetInfo(target_info)) {
         Serial.printf("-----Got Target Info-----\n");
         Serial.printf("Number of targets: %zu\n", target_info.targets.size());
 
@@ -631,6 +631,10 @@ If in the above steps you have operated incorrectly causing an anomaly to occur 
 Want to tailor-make the kit to fit your unique applications?
 
 For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at [iot@seeed.cc](mailto:iot@seeed.cc) to learn more.
+
+:::danger Customised Service Description
+The firmware and algorithms of the radar are not open source, and complex parameters of the radar such as 3D point cloud, detection distance, range, etc., require customised services, which may involve additional customisation fees and MOQs.
+:::
 
 ## Resources
 

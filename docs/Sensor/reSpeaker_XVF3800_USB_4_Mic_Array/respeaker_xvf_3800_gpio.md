@@ -10,7 +10,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
 slug: /respeaker_xvf3800_xiao_gpio
 last_update:
-  date: 7/16/2025
+  date: 9/3/2025
   author: Kasun Thushara
 ---
 
@@ -19,12 +19,12 @@ last_update:
 ## Objective
 
 This guide explains how to **read and control GPIO pins** on the XVF3800 voice processor using the I2C interface. You’ll learn how to:
+
 - **Read GPI and GPO pin statuses**
 - **Control output pins (e.g., mute microphone, control LED, amplifier)**
 - **Understand GPIO mappings and their purpose**
 
 ## GPIO Overview
-
 
 The reSpeaker XVF3800 exposes 3 input pins (GPI) and 5 output pins (GPO) for external control. You can use these to read button states or control hardware like the mute LED, amplifier, or LEDs.
 
@@ -43,13 +43,14 @@ The reSpeaker XVF3800 exposes 3 input pins (GPI) and 5 output pins (GPO) for ext
 
 **Goal**: Check logic levels of all **output-capable GPIOs (GPOs)**.
 **Code Highlights**:
+
 - Sends a read request using:
-    - Resource ID: 20 (GPO)
-    - Command ID: 0 (GPO_READ_VALUES)
+  - Resource ID: 20 (GPO)
+  - Command ID: 0 (GPO_READ_VALUES)
 - Reads 5 GPO pins statues in order: X0D11 → X0D30 → X0D31 → X0D33 → X0D39
 - Includes a status byte to validate the response
 
-```bash
+```c
 #include <Wire.h>
 
 #define XMOS_ADDR 0x2C  // I2C 7-bit address
@@ -91,14 +92,14 @@ void loop() {
 
 bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
   const uint8_t resid = GPO_SERVICER_RESID;
-  const uint8_t cmd = GPO_SERVICER_RESID_GPO_READ_VALUES;
+  const uint8_t cmd = GPO_SERVICER_RESID_GPO_READ_VALUES | 0x80;
   const uint8_t read_len = GPO_GPO_READ_NUM_BYTES;
 
   // Step 1: Write command
   Wire.beginTransmission(XMOS_ADDR);
   Wire.write(resid);
   Wire.write(cmd);
-  Wire.write(read_len);
+  Wire.write(read_len + 1);
   uint8_t result = Wire.endTransmission();
 
   if (result != 0) {
@@ -122,6 +123,7 @@ bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
   return true;
 }
 
+
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPO.PNG" alt="pir" width={600} height="auto" /></p>
@@ -130,11 +132,11 @@ bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
 
 **Goal**: Check states of **input-capable GPIOs** (e.g., mute button status).
 **Code Highlights**:
-- Sends command to:
-    - Resource ID: 36 (IO_CONFIG)
-    - Command ID: 6 (GPI_VALUE_ALL)
-- Receives 3 GPI representing the state of  X1D09, X1D13, and X1D34
 
+- Sends command to:
+  - Resource ID: 36 (IO_CONFIG)
+  - Command ID: 6 (GPI_VALUE_ALL)
+- Receives 3 GPI representing the state of  X1D09, X1D13, and X1D34
 
 ```bash
 #include <Wire.h>
@@ -210,18 +212,21 @@ bool read_gpi_values(uint8_t *buffer, uint8_t *status) {
 
 
 ```
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPI.PNG" alt="pir" width={600} height="auto" /></p>
 
 ## Write to GPO Pin – Mute Mic Example
 
 **Goal**: Control an output GPIO, e.g., mute microphone by toggling GPIO 30 (X0D30).
 **Code Highlights**:
+
 - Sends a write command to:
-    - Resource ID: 20
-    - Command ID: 1 (GPO_WRITE_VALUE)
-    - Payload:  pin number, value `e.g., {30, 1} to mute`
+  - Resource ID: 20
+  - Command ID: 1 (GPO_WRITE_VALUE)
+  - Payload:  pin number, value `e.g., {30, 1} to mute`
   
 **Convenience Functions:**
+
 - muteMic() → sets GPIO 30 HIGH to **mute mic and turn on red LED**
 - unmuteMic() → sets GPIO 30 LOW to **unmute mic and turn off LED**
 
@@ -331,17 +336,17 @@ void readGPIOStatus() {
 }
 
 ```
+
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

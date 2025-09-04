@@ -26,7 +26,7 @@ Unlike traditional displays that consume power continuously, the reTerminal E Se
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1001 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1001-p-6534.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
@@ -48,7 +48,7 @@ The reTerminal E1001 features a 7.5-inch monochrome ePaper display with 4-level 
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>reTerminal E1002 Wiki</font></span></strong>
   </a>
-  <a class="get_one_now_item" href="/reterminal_e10xx_main_page" target="_blank" rel="noopener noreferrer">
+  <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-E1002-p-6533.html" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
@@ -110,7 +110,7 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 - [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
 - [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [GitHub Repository](/reterminal_e10xx_main_page)
+<!-- - [GitHub Repository](/reterminal_e10xx_main_page) -->
 
 ## FCC Notice
 

@@ -1,5 +1,5 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-03 17:18:56 (北京时间)
+// 生成时间: 2025-09-04 10:04:43 (北京时间)
 // 多语言页面: 1995 个
 
 (function() {
@@ -5377,8 +5377,10 @@
     "ja"
   ],
   "/ai_assistant_getting_started": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Get_Started_with_EcoEye_Embedded_Vision_Camera": [
     "cn",
@@ -7739,7 +7741,8 @@
   "/respeaker_xvf3800_xiao_gpio": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_home_assistant": [
     "cn",

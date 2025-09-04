@@ -641,6 +641,10 @@ Want to tailor-make the kit to fit your unique applications?
 
 For more information about 3D point cloud data generation and interference zone configuration when customizing mmWave modules. Seeed provides one-stop R&D customization and manufacturing services for fast development from concept to production. Contact us at [iot@seeed.cc](mailto:iot@seeed.cc) to learn more.
 
+:::danger Customised Service Description
+The firmware and algorithms of the radar are not open source, and complex parameters of the radar such as fall height settings, mounting position settings, etc. require customised services, which may involve additional customisation fees and MOQs.
+:::
+
 ## Resources
 
 - **STL**: [mmWave 3D Case](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)

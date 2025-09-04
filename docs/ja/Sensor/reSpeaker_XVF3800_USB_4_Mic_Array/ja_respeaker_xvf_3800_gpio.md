@@ -1,54 +1,54 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对，可为智能设备、机器人和物联网应用提供先进的语音控制。探索无缝集成和双模式灵活性。
+description: ReSpeaker XVF3800 USB 4-Mic Arrayは、AEC、ビームフォーミング、ノイズ抑制、360°音声キャプチャを備えたプロフェッショナルな円形マイクロフォンアレイです。XIAO ESP32S3と組み合わせることで、スマートデバイス、ロボティクス、IoTアプリケーション向けの高度な音声制御を実現します。シームレスな統合とデュアルモードの柔軟性を発見してください。
 
-title: 通过 XIAO ESP32-S3 控制 reSpeaker XVF3800 GPIO
+title: XIAO ESP32-S3を使用したreSpeaker XVF3800 GPIOの制御
 
 keywords:
 - reSpeaker
 - XIAO
 - ESP32S3
 image: https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/6-ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3.jpg
-slug: /cn/respeaker_xvf3800_xiao_gpio
+slug: /ja/respeaker_xvf3800_xiao_gpio
 last_update:
   date: 9/3/2025
   author: Kasun Thushara
 ---
 
-## 通过 XIAO ESP32-S3 控制 reSpeaker XVF3800 GPIO
+## XIAO ESP32-S3を使用したreSpeaker XVF3800 GPIOの制御
 
-## 目标
+## 目的
 
-本指南解释如何使用 I2C 接口**读取和控制 XVF3800 语音处理器上的 GPIO 引脚**。您将学习如何：
+このガイドでは、I2Cインターフェースを使用してXVF3800音声プロセッサの**GPIOピンの読み取りと制御**方法について説明します。以下の内容を学習できます：
 
-- **读取 GPI 和 GPO 引脚状态**
-- **控制输出引脚（例如，静音麦克风、控制 LED、放大器）**
-- **了解 GPIO 映射及其用途**
+- **GPIおよびGPOピンの状態読み取り**
+- **出力ピンの制御（例：マイクミュート、LED制御、アンプ制御）**
+- **GPIOマッピングとその目的の理解**
 
-## GPIO 概述
+## GPIO概要
 
-reSpeaker XVF3800 提供 3 个输入引脚（GPI）和 5 个输出引脚（GPO）用于外部控制。您可以使用这些引脚读取按钮状态或控制硬件，如静音 LED、放大器或 LED。
+reSpeaker XVF3800は、外部制御用に3つの入力ピン（GPI）と5つの出力ピン（GPO）を公開しています。これらを使用してボタンの状態を読み取ったり、ミュートLED、アンプ、LEDなどのハードウェアを制御したりできます。
 
-| **引脚名称** | **方向** | **功能**                                         |
+| **ピン名** | **方向** | **機能**                                         |
 |--------------|---------------|------------------------------------------------------|
-| X1D09        | 输入 (RO)    | 静音按钮状态（释放时为高电平）              |
-| X1D13        | 输入 (RO)    | 浮空                                             |
-| X1D34        | 输入 (RO)    | 浮空                                             |
-| X0D11        | 输出 (RW)   | 浮空                                             |
-| X0D30        | 输出 (RW)   | 静音 LED + 麦克风静音控制（高电平 = 静音）            |
-| X0D31        | 输出 (RW)   | 放大器使能（低电平 = 使能）                     |
-| X0D33        | 输出 (RW)   | WS2812 LED 电源控制（高电平 = 开启）                 |
-| X0D39        | 输出 (RW)   | 浮空                                             |
+| X1D09        | 入力 (RO)    | ミュートボタンの状態（リリース時にHigh）              |
+| X1D13        | 入力 (RO)    | フローティング                                             |
+| X1D34        | 入力 (RO)    | フローティング                                             |
+| X0D11        | 出力 (RW)   | フローティング                                             |
+| X0D30        | 出力 (RW)   | ミュートLED + マイクミュート制御（High = ミュート）            |
+| X0D31        | 出力 (RW)   | アンプ有効化（Low = 有効）                     |
+| X0D33        | 出力 (RW)   | WS2812 LED電源制御（High = オン）                 |
+| X0D39        | 出力 (RW)   | フローティング                                             |
 
-## 读取 GPO 引脚状态
+## GPOピン状態の読み取り
 
-**目标**：检查所有**输出功能 GPIO（GPO）**的逻辑电平。
-**代码要点**：
+**目標**：すべての**出力対応GPIO（GPO）**の論理レベルを確認する。
+**コードのハイライト**：
 
-- 使用以下参数发送读取请求：
-  - 资源 ID：20（GPO）
-  - 命令 ID：0（GPO_READ_VALUES）
-- 按顺序读取 5 个 GPO 引脚状态：X0D11 → X0D30 → X0D31 → X0D33 → X0D39
-- 包含状态字节以验证响应
+- 以下を使用して読み取りリクエストを送信：
+  - リソースID：20（GPO）
+  - コマンドID：0（GPO_READ_VALUES）
+- 5つのGPOピンの状態を順番に読み取り：X0D11 → X0D30 → X0D31 → X0D33 → X0D39
+- レスポンスを検証するためのステータスバイトを含む
 
 ```c
 #include <Wire.h>
@@ -128,15 +128,15 @@ bool read_gpo_values(uint8_t *buffer, uint8_t *status) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPO.PNG" alt="pir" width={600} height="auto" /></p>
 
-## 读取 GPI 引脚状态
+## GPIピン状態の読み取り
 
-**目标**：检查**输入功能 GPIO**的状态（例如，静音按钮状态）。
-**代码要点**：
+**目標**：**入力対応GPIO**の状態を確認する（例：ミュートボタンの状態）。
+**コードのハイライト**：
 
-- 发送命令到：
-  - 资源 ID：36（IO_CONFIG）
-  - 命令 ID：6（GPI_VALUE_ALL）
-- 接收 3 个 GPI，表示 X1D09、X1D13 和 X1D34 的状态
+- 以下にコマンドを送信：
+  - リソースID：36（IO_CONFIG）
+  - コマンドID：6（GPI_VALUE_ALL）
+- X1D09、X1D13、X1D34の状態を表す3つのGPIを受信
 
 ```bash
 #include <Wire.h>
@@ -215,20 +215,20 @@ bool read_gpi_values(uint8_t *buffer, uint8_t *status) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/GPI.PNG" alt="pir" width={600} height="auto" /></p>
 
-## 写入 GPO 引脚 – 静音麦克风示例
+## GPOピンへの書き込み – マイクミュートの例
 
-**目标**：控制输出 GPIO，例如，通过切换 GPIO 30（X0D30）来静音麦克风。
-**代码要点**：
+**目標**：出力GPIOを制御する、例：GPIO 30（X0D30）を切り替えてマイクをミュートする。
+**コードのハイライト**：
 
-- 发送写入命令到：
-  - 资源 ID：20
-  - 命令 ID：1（GPO_WRITE_VALUE）
-  - 载荷：引脚号，值 `例如，{30, 1} 来静音`
+- 以下に書き込みコマンドを送信：
+  - リソースID：20
+  - コマンドID：1（GPO_WRITE_VALUE）
+  - ペイロード：ピン番号、値 `例：{30, 1}でミュート`
 
-**便利函数：**
+**便利な関数：**
 
-- muteMic() → 将 GPIO 30 设置为高电平以**静音麦克风并点亮红色 LED**
-- unmuteMic() → 将 GPIO 30 设置为低电平以**取消静音麦克风并关闭 LED**
+- muteMic() → GPIO 30をHIGHに設定して**マイクをミュートし、赤色LEDを点灯**
+- unmuteMic() → GPIO 30をLOWに設定して**マイクのミュートを解除し、LEDを消灯**
 
 ```bash
 #include <Wire.h>
@@ -337,9 +337,9 @@ void readGPIOStatus() {
 
 ```
 
-## 技术支持与产品讨论
+## 技術サポート & 製品ディスカッション
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
