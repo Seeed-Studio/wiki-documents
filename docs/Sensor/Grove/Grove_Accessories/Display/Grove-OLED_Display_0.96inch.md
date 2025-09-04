@@ -17,6 +17,7 @@ last_update:
 
 <!-- [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png)](https://www.seeedstudio.com/item_detail.html?p_id=781) -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/item_detail.html?p_id=781)
+
 ## Version
 
 | Product Version              | Changes                                                                                                                                                                                    | Released Date |
@@ -36,29 +37,30 @@ last_update:
     If you want to use multiplue I2C devices, please refer to [Software I2C](https://wiki.seeedstudio.com/Arduino_Software_I2C_user_guide/).
 :::
 :::warning
-	Please notice: heavy impact or stress on the OLED will cause the breakdown of screen.
+ Please notice: heavy impact or stress on the OLED will cause the breakdown of screen.
 :::
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Specifications
 
-
-|Items	                             |Min	 |Norm	   |Max	   |Unit          |
+|Items                              |Min  |Norm    |Max    |Unit          |
 |------------------------------------|-----------|---------|-------|--------------|
-|Power Voltage (VCC)                 |3.3	 |5.0	   |5.5	   |V             |
-|Driver IC	                     |-          |SSD1308Z |-      |-             |
-|Display Color	                     |-          |White	   |-      |-             |
-|Dot Matrix	                     |-          |128×64   |-      |-             |
-|Panel Size	                     |-          |26.7(W)×19.26(H)|-|mm            |
-|Active Area	                     |-|21.74(W)×11.175 (H)|-	   |mm            |
-|Dot Pitch	                     |-|0.17(W)×0.175 (H)|-	           |mm            |
-|Dot Size	                     |-|0.15(W)×0.15 (H)|-	           |mm            |
+|Power Voltage (VCC)                 |3.3  |5.0    |5.5    |V             |
+|Driver IC                      |-          |SSD1308Z |-      |-             |
+|Display Color                      |-          |White    |-      |-             |
+|Dot Matrix                      |-          |128×64   |-      |-             |
+|Panel Size                      |-          |26.7(W)×19.26(H)|-|mm            |
+|Active Area                      |-|21.74(W)×11.175 (H)|-    |mm            |
+|Dot Pitch                      |-|0.17(W)×0.175 (H)|-            |mm            |
+|Dot Size                      |-|0.15(W)×0.15 (H)|-            |mm            |
 |Wide range of operating temperature |-|-20~70 |-                      |℃            |
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -67,10 +69,10 @@ last_update:
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
-
 
 ## Getting Started
 
@@ -101,15 +103,15 @@ The OLED128*64 uses all the pins of SSD1308 chip, the default original point is 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_ardu.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove - OLED Display 0.96 inch to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove - OLED Display 0.96 inch to Seeeduino as below.
 :::
+
 | Seeeduino     | Grove - OLED Display 0.96 inch |
 |---------------|-------------------------|
 | 5V            | Red                     |
 | GND           | Black                   |
 | SDA           | White                   |
 | SCL           | Yellow                  |
-
 
 #### Software
 
@@ -162,17 +164,19 @@ void loop(void) {
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the OLED display to the **I^2^C** port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
-<!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
-  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg" alt="pir" width={600} height="auto" /></p>
 
+<!-- ![](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg) -->
+
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/connect4.jpg" alt="pir" width={600} height="auto" /></p>
 
 #### Software
 
-:::note 
+:::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
+
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -411,19 +415,16 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
 ```
-It seems nothing happened in terminal, however you can find the most famous sentence in the cyber world if you check your oled.😄
 
+It seems nothing happened in terminal, however you can find the most famous sentence in the cyber world if you check your oled.😄
 
 :::note
         If you use the I2C tool to scan the I2C address of the grove module, you may find two or more address. 0x04 is the adrress of the *Grove Base Hat for Raspberry Pi*.
 :::
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
+
 The python script for BeagleBone Green below also works for Raspberry Pi, But the I2C bus is different. On Raspberry Pi 2/3, the I2C bus is 1. The script with changing `bus=2` to `bus=1` will  work on Pi.
 
 #### Hardware
@@ -440,6 +441,7 @@ The python script for BeagleBone Green below also works for Raspberry Pi, But th
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_rpi.jpg) -->
+
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/with_rpi.jpg" alt="pir" width={600} height="auto" /></p>
 
 #### Software
@@ -701,6 +703,7 @@ Here are the steps how to display "Hello World" on OLED.
 - **Step 1:** Click the "+" in the top-right to create a new file.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9-create-tab.png) -->
+
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9-create-tab.png" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/images/C9_newfile.jpg" alt="pir" width={600} height="auto" /></p>
@@ -936,13 +939,10 @@ if __name__ == "__main__":
 sudo python3 Grove-OLED_Display_0.96inch.py
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/OLED%20128x64.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -960,17 +960,16 @@ sudo python3 Grove-OLED_Display_0.96inch.py
 
 - **[Datasheet]** [Resources of LY190-128064.pdf](https://files.seeedstudio.com/wiki/Grove_OLED_Display_0.96/resource/LY190-128064.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

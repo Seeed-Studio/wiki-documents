@@ -26,7 +26,6 @@ If you follow this Wiki to connect the IoT Button to ESPHome, please be aware of
 If you pick up the IoT Button V2, there will be an additional power detection feature in the ESPHome over the generation.
 :::
 
-
 ## Materials Required
 
 <div class="table-center">
@@ -112,9 +111,10 @@ The easiest way to get started with the IoT Button is to use the Web Flasher too
 **Step 7**: Once connected, your device should automatically open a configuration page. If not, open a browser and navigate to `http://192.168.4.1`.
 
 **Step 8**: On the configuration page:
-   - Enter your home WiFi network name (SSID) and password
-   - Make sure this is the same network that your Home Assistant is connected to
-   - Click "Save" to apply the settings
+
+- Enter your home WiFi network name (SSID) and password
+- Make sure this is the same network that your Home Assistant is connected to
+- Click "Save" to apply the settings
 
 **Step 9**: The IoT Button will restart and connect to your home WiFi network.
 
@@ -147,7 +147,6 @@ Due to frequent code updates, please click on the button posted below to access 
     </a>
 </div>
 
-
 :::note
 Make sure to replace "Your_WiFi_SSID" and "Your_WiFi_Password" with your actual WiFi credentials. The WiFi configuration should match the network where your Home Assistant server is running to ensure proper connectivity.
 :::
@@ -156,7 +155,7 @@ Make sure to replace "Your_WiFi_SSID" and "Your_WiFi_Password" with your actual 
 
 Let's break down the key parts of this configuration:
 
-1. **ESP32 Configuration**: 
+1. **ESP32 Configuration**:
    - Specifies the ESP32-C6 variant and board type for the IoT Button's built-in chip
    - Sets the flash size to 4MB
    - Uses the ESP-IDF framework which is required for ESP32-C6
@@ -283,7 +282,7 @@ If you encounter issues with your IoT Button, here are some common troubleshooti
 
 ## Troubleshooting
 
-### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged.
+### Q1: Why does my device keep dropping out and not being able to connect to the internet after replacing the battery? I can confirm that the battery is charged
 
 After the battery has been removed, due to the chip protection strategy of the 18650 battery, it needs to be activated a bit by a charged USB power cable to work properly.
 
@@ -292,7 +291,6 @@ After the battery has been removed, due to the chip protection strategy of the 1
 - **[GITHUB]** [Seeed IoT Button Github Repository](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/seeedstudio-iot-button)
 - **[PDF]** [Seeed IoT Button SCH PDF](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH.pdf)
 - **[SCH&PCB]** [Seeed IoT Button SCH & PCB](https://files.seeedstudio.com/wiki/IoT_Botton_ESPHOME/Seeed_IoT_Button_SCH&PCB.zip)
-
 
 ## Tech Support & Product Discussion
 

@@ -25,30 +25,28 @@ SenseCAP M4 Square runs at a Quad-core Intel® Celeron® J4125 and RP2040 co-pro
 **Features**
 ============
 
-*   **Plug and Play**：Provide a no-command experience that enables users to finish deployment CUMULUS FluxNode with 4 steps.
-    
-*   **Support Multiple Apps**: Deploy multiple web 3.0 applications provided by SenseCAP from the dApp center.Cloud Service：Provide a one-stop cloud service to help users purchase, deploy, manage, and monitor their devices.
-    
-*   **High Security**：Built-in TPM2.0 cryptographic processor and ECC608 crypto chip, high-security authentication, and reliable connectivity.
-    
-*   **Excellent Performance**：Powered by Intel® Celeron® J4125 (Frequency: 2.0 - 2.7GHz) with 4 cores and 4 threads.
-    
-*   **Low Power Consumption** : 10w low power consumption, 7.2 kWh per month, cost \$1.008 per month (global average kWh price of \$0.144/per kWh).
-    
+- **Plug and Play**：Provide a no-command experience that enables users to finish deployment CUMULUS FluxNode with 4 steps.
+
+- **Support Multiple Apps**: Deploy multiple web 3.0 applications provided by SenseCAP from the dApp center.Cloud Service：Provide a one-stop cloud service to help users purchase, deploy, manage, and monitor their devices.
+
+- **High Security**：Built-in TPM2.0 cryptographic processor and ECC608 crypto chip, high-security authentication, and reliable connectivity.
+
+- **Excellent Performance**：Powered by Intel® Celeron® J4125 (Frequency: 2.0 - 2.7GHz) with 4 cores and 4 threads.
+
+- **Low Power Consumption** : 10w low power consumption, 7.2 kWh per month, cost \$1.008 per month (global average kWh price of \$0.144/per kWh).
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-1.png)
 
 **Package Contents**
 ====================
 
-*   SenseCAP M4 Square x 1
-    
-*   International Power Adapter x 1
-    
-*   User Manual x1
-    
-*   SenseCAP Stickerx2
-    
+- SenseCAP M4 Square x 1
+
+- International Power Adapter x 1
+
+- User Manual x1
+
+- SenseCAP Stickerx2
 
 **General Overview**
 ====================
@@ -62,14 +60,13 @@ SenseCAP M4 Square runs at a Quad-core Intel® Celeron® J4125 and RP2040 co-pro
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Overview-6.png)
 
-*   Device Size(/pcs): 130×120×55 mm
-    
-*   Device Weight(/pcs): 500g
-    
-*   Package Size(/pcs): 165×150×115 mm
-    
-*   Package Weight(/pcs): 900g
-    
+- Device Size(/pcs): 130×120×55 mm
+
+- Device Weight(/pcs): 500g
+
+- Package Size(/pcs): 165×150×115 mm
+
+- Package Weight(/pcs): 900g
 
 **Indicator Introduction**
 ==========================

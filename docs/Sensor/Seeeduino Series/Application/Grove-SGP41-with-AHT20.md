@@ -31,57 +31,59 @@ Verify by using the defaults 25°C and 50% relative humidity:
 50 × 65535 / 100 = 32767.5 = 0x8000 (hexadecimal, rounded up)
 (25 + 45) × 65535 / 175 = 26214 = 0x6666 (hexadecimal) 
 ```
-The results match the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf). 
+
+The results match the constants used in the program used by [Grove - Smart Air Quality Sensor (SGP41)](https://wiki.seeedstudio.com/grove-smart-air-quality-sensor-sgp41) and defined in Table 11 of the [SGP41 Datasheet (PDF)](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Datasheet_EN.pdf).
 
 The same in c:
+
 ```cpp
         int h_ticks = humi * 0xFFFF;
         int t_ticks = (temp + 45) * 0xFFFF / 175;
 ```
+
 Note that 'humi' in the program is a value between 0 and 1, so the division by 100 and earlier multiplication were removed.
 
 ## Hardware Preparation
 
 I am using Seeeduino Nano as the control board and using Grove - Smart Air Quality Sensor (SGP41) and Grove - AHT20 I2C Industrial Grade Temperature&Humidity Sensor to make it happened.
 
-
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeeduino Nano</th>
-			<th>Grove - AHT20 Temperature&amp;Humidity Sensor</th>
+ <table align="center">
+  <tr>
+   <th>Seeeduino Nano</th>
+   <th>Grove - AHT20 Temperature&amp;Humidity Sensor</th>
             <th>Grove - Smart Air Quality Sensor (SGP41)</th>
-			<th>Grove - Branch Cable</th>
-		</tr>
+   <th>Grove - Branch Cable</th>
+  </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-Nano/img/seeeduino-Nano-wiki.jpg" style={{width:185, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-AHT20_I2C_Industrial_Grade_Temperature_and_Humidity_Sensor/101990644_4_.png" style={{width:185, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-SGP41/1.jpg" style={{width:185, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/How_To_Choose_The_Right_Cable/img/Grove-Branch_Cable-5PCs_pack-.jpg" style={{width:185, height:'auto'}}/></div></td>
         </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-Nano-p-4111.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-AHT20-I2C-Industrial-grade-temperature-and-humidity-sensor-p-4497.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Air-Quality-Sensor-SGP41-p-5687.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Branch-Cable-5PCs-pack.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"3"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Software Preparation
@@ -115,7 +117,6 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
 :::
 
-
 - **Step 1.** Connect Grove - Branch Cable to the **I2C** port of Seeeduino Nano.
 
 - **Step 2.** Plug Grove - Branch Cable into the I2C Grove AHT20 sensor module.
@@ -130,7 +131,7 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 
 - **Step 1.** Download the dependency libraries from Github.
 
-    - **arduino-core Library**:
+  - **arduino-core Library**:
 
     <div class="github_container" style={{textAlign: 'center'}}>
         <a class="github_item" href="https://github.com/Sensirion/arduino-core" target="_blank" rel="noopener noreferrer">
@@ -138,7 +139,7 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
         </a>
     </div>
 
-    - **arduino-i2c-sgp41 Library**:
+  - **arduino-i2c-sgp41 Library**:
 
     <div class="github_container" style={{textAlign: 'center'}}>
         <a class="github_item" href="https://github.com/Sensirion/arduino-i2c-sgp41" target="_blank" rel="noopener noreferrer">
@@ -146,7 +147,7 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
         </a>
     </div>
 
-   - **Seeed_Arduino_AHT20** Library: 
+  - **Seeed_Arduino_AHT20** Library:
 
     <div class="github_container" style={{textAlign: 'center'}}>
         <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_AHT20" target="_blank" rel="noopener noreferrer">
@@ -161,7 +162,6 @@ Please plug the USB cable gently, otherwise you may damage the port. Please use 
 ### 3. Upload the Code and check the result
 
 - **Step 1.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
 
 ```cpp
 // ARDUINO DEMO FOR GROVE-AHT20+SGP41
@@ -314,13 +314,11 @@ Note that the first ten SRAW_NOx values are zero due to conditioning.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

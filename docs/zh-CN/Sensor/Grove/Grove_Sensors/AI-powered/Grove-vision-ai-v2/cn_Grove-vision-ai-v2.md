@@ -148,7 +148,7 @@ sudo udevadm trigger
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>
+          <a href= "/cn/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>
           <br/>对象识别或串行通信
       </div>
   </div>
@@ -159,7 +159,7 @@ sudo udevadm trigger
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI 模型助手</a>
+          <a href= "/cn/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI 模型助手</a>
           <br/>无需编码体验，部署和观察 AI 模型
       </div>
   </div>
@@ -170,7 +170,7 @@ sudo udevadm trigger
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sensecraft-ai/application/application-for-homeassistant" class="getting_started_label2"> 连接到 Home Assistant</a>
+          <a href= "/cn/sensecraft-ai/application/application-for-homeassistant" class="getting_started_label2"> 连接到 Home Assistant</a>
           <br/>将 Grove Vision AI V2 集成到 Home Assistant
       </div>
   </div>

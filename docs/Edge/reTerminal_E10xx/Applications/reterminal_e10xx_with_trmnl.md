@@ -1,6 +1,6 @@
 ---
-description: This article describes how to use the reTerminal E10xx series with TRMNL.
-title: reTerminal E10xx Works with TRMNL
+description: This article describes how to use the reTerminal E Series ePaper Display with TRMNL.
+title: reTerminal E Series ePaper Display Works with TRMNL
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /reterminal_e10xx_trmnl
 sidebar_position: 1
@@ -13,7 +13,7 @@ last_update:
 The Wiki content is under development and is not available at this time.
 :::
 
-# reTerminal E10xx Works with TRMNL
+# reTerminal E Series ePaper Display Works with TRMNL
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/140.jpg" style={{width:700, height:'auto'}}/></div>
 
@@ -33,7 +33,7 @@ The integration of TRMNL will bring several compelling benefits:
 - **Regular Updates**: TRMNL's active development means new features and integrations are added weekly, continuously expanding the possibilities for your display
 - **Developer-Friendly**: With TRMNL's open API and developer tools, you can create custom plugins and integrations for your specific needs
 
-By combining TRMNL's powerful platform with our high-quality E Ink® reTerminal E10xx display, we're offering users an elegant solution for creating personalized, low-power information dashboards that respect both their attention and their time.
+By combining TRMNL's powerful platform with our high-quality E Ink® reTerminal E Series ePaper Display display, we're offering users an elegant solution for creating personalized, low-power information dashboards that respect both their attention and their time.
 
 ## Getting Started with TRMNL
 
@@ -66,7 +66,7 @@ Once you have your materials and purchased TRMNL access, you can proceed with co
 
 ### Firmware Flashing
 
-If you are still using the factory firmware for the reTerminal E10xx, then you will need to burn the TRMNL firmware using the following method before you can plug the device into the TRMNL.
+If you are still using the factory firmware for the reTerminal E Series, then you will need to burn the TRMNL firmware using the following method before you can plug the device into the TRMNL.
 
 #### Method 1: Flash via TRMNL Web Flasher (Easiest)
 
@@ -125,7 +125,7 @@ There are times when we update our code and need to submit PR to TRMNL and revie
 
 5. **Connect Your Device**
 
-   - Plug in your reTerminal E10xx device.
+   - Plug in your reTerminal E Series ePaper Display device.
 
 6. **Build and Upload**
 
@@ -142,7 +142,7 @@ There are times when we update our code and need to submit PR to TRMNL and revie
 
 ## Configure Wi-Fi and Send Playlists to TRMNL
 
-To use your reTerminal E10xx with TRMNL and send playlists, you first need to connect the device to your Wi-Fi network. This process is called "WiFi pairing mode" and is done through a simple captive portal. Please follow the steps below:
+To use your reTerminal E Series ePaper Display with TRMNL and send playlists, you first need to connect the device to your Wi-Fi network. This process is called "WiFi pairing mode" and is done through a simple captive portal. Please follow the steps below:
 
 > 💡 **Troubleshooting Wi-Fi?** If you encounter issues connecting your device to Wi-Fi, please refer to the [TRMNL Device Wi-Fi Troubleshooting Guide](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting) for solutions to common networking and router compatibility issues.
 
@@ -167,11 +167,11 @@ To use your reTerminal E10xx with TRMNL and send playlists, you first need to co
 ### Enter Your Wi-Fi Credentials
 
 - On the configuration page, you will see a list of available Wi-Fi networks.
-- **Select your 2.4GHz Wi-Fi network** (reTerminal E10xx does not support 5GHz networks).
+- **Select your 2.4GHz Wi-Fi network** (reTerminal E Series ePaper Display does not support 5GHz networks).
 - Enter your Wi-Fi password.
 - Click **Save** or **Connect**.
 
-> ⚠️ **Important:** Make sure to use a 2.4GHz Wi-Fi network. 5GHz networks are not supported by the reTerminal E10xx.
+> ⚠️ **Important:** Make sure to use a 2.4GHz Wi-Fi network. 5GHz networks are not supported by the reTerminal E Series.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/218.png" style={{width:800, height:'auto'}}/></div>
 
@@ -192,7 +192,7 @@ To use your reTerminal E10xx with TRMNL and send playlists, you first need to co
 
 ### Access the TRMNL Web Interface
 
-After your reTerminal E10xx is connected to your Wi-Fi and you have recorded its MAC address (Device ID), you can add it to your TRMNL account:
+After your reTerminal E Series ePaper Display is connected to your Wi-Fi and you have recorded its MAC address (Device ID), you can add it to your TRMNL account:
 
 1. **Open the TRMNL Web Interface**  
    - On your computer or mobile device, open a browser and go to the [TRMNL web interface](https://trmnl.app).
@@ -211,36 +211,36 @@ After your reTerminal E10xx is connected to your Wi-Fi and you have recorded its
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png" style={{width:700, height:'auto'}}/></div>
 
-5. **Register reTerminal E10xx MAC Address**
+5. **Register reTerminal E Series ePaper Display MAC Address**
 
-   In order to build a connection between the reTerminal E10xx and TRMNL, we need to bind the correct device MAC address inside the TRMNL settings page.
+   In order to build a connection between the reTerminal E Series ePaper Display and TRMNL, we need to bind the correct device MAC address inside the TRMNL settings page.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png" style={{width:900, height:'auto'}}/></div>
 
    - You can retrieve the MAC address during the PlatformIO upload process (check the upload logs), or from the provisioning portal (it will be displayed after Wi-Fi setup).
    - Adding your MAC address early helps ensure a smooth onboarding process and device management.
 
-   - Then you can set a custom name for your reTerminal E10xx and adjust other settings as needed.
+   - Then you can set a custom name for your reTerminal E Series ePaper Display and adjust other settings as needed.
 
-Your reTerminal E10xx is now linked to your TRMNL account! You can now send playlists, images, or other content to your display directly from the TRMNL interface.
+Your reTerminal E Series ePaper Display is now linked to your TRMNL account! You can now send playlists, images, or other content to your display directly from the TRMNL interface.
 
-> 💡 **Tip:** If you have multiple reTerminal E10xx, repeat the above steps for each device using their unique Device IDs.
+> 💡 **Tip:** If you have multiple reTerminal E Series, repeat the above steps for each device using their unique Device IDs.
 
 :::caution
 After adding your device in the TRMNL web interface, please go to the device's settings page and **turn off** both **Firmware Early Release** and **OTA Updates Enabled**.  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/213.png" style={{width:700, height:'auto'}}/></div>
 
-If these options are left enabled, your device may automatically download and install firmware updates from TRMNL when connected to the internet. These updates are intended for official TRMNL hardware and **are not compatible with the reTerminal E10xx**. Installing incompatible firmware may cause your device to malfunction or become unresponsive.
+If these options are left enabled, your device may automatically download and install firmware updates from TRMNL when connected to the internet. These updates are intended for official TRMNL hardware and **are not compatible with the reTerminal E Series**. Installing incompatible firmware may cause your device to malfunction or become unresponsive.
 
-Always keep both options disabled to ensure stable operation of your reTerminal E10xx.
+Always keep both options disabled to ensure stable operation of your reTerminal E Series.
 :::
 
 ## Understanding the TRMNL Playlist Feature
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/221.png" style={{width:1000, height:'auto'}}/></div>
 
-The TRMNL Playlist feature allows you to control exactly what is displayed on your reTerminal E10xx and when. Here's a breakdown of the main sections and controls, as shown in the screenshot above:
+The TRMNL Playlist feature allows you to control exactly what is displayed on your reTerminal E Series ePaper Display and when. Here's a breakdown of the main sections and controls, as shown in the screenshot above:
 
 ### Playlist Overview
 - **Playlist Title**: At the top, you see the name of your TRMNL device (e.g., "MengDu's TRMNL").
@@ -249,7 +249,7 @@ The TRMNL Playlist feature allows you to control exactly what is displayed on yo
 - **Add a Group / Add a Plugin**: Use these buttons to organize your playlist into groups or add new content plugins (such as weather, calendar, or custom text).
 
 ### Playlist Items
-Each row in the playlist represents a screen or widget that will be shown on your reTerminal E10xx (for reference only):
+Each row in the playlist represents a screen or widget that will be shown on your reTerminal E Series ePaper Display (for reference only):
 
 1. **Weather**
    - Shows current weather information for your selected location.
@@ -272,11 +272,11 @@ For each item, you have several controls:
 
 > 📖 Want to learn more? Read the [Smart Playlists blog post](https://usetrmnl.com/blog/smart-playlists) for advanced tips and details.
 
-This flexible playlist system lets you fully customize what your reTerminal E10xx, how often it updates, and in what order. You can mix and match different plugins to create a personalized dashboard that fits your needs.
+This flexible playlist system lets you fully customize what your reTerminal E Series, how often it updates, and in what order. You can mix and match different plugins to create a personalized dashboard that fits your needs.
 
 ## Exploring TRMNL Plugins
 
-TRMNL's plugin system is what makes your reTerminal E10xx truly powerful and customizable. Plugins are modular apps or widgets that you can add to your device to display a wide variety of information and content.
+TRMNL's plugin system is what makes your reTerminal E Series ePaper Display truly powerful and customizable. Plugins are modular apps or widgets that you can add to your device to display a wide variety of information and content.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/222.png" style={{width:900, height:'auto'}}/></div>
 
@@ -286,7 +286,7 @@ Plugins are individual content blocks that can show things like weather, calenda
 
 ### Connected Plugins
 
-At the top of the Plugins page, you'll see all the plugins you've already connected to your TRMNL account. These are ready to be added to your playlist and displayed on your reTerminal E10xx. Examples include:
+At the top of the Plugins page, you'll see all the plugins you've already connected to your TRMNL account. These are ready to be added to your playlist and displayed on your reTerminal E Series. Examples include:
 - **Weather**: Show current weather conditions.
 - **Days Left This Year**: Countdown to the end of the year.
 - **Stock Price**: Track your favorite stocks.
@@ -313,7 +313,7 @@ If you have any questions about using TRMNL or want to explore more advanced fea
 
 Special thanks to the entire **TRMNL team** for their strong support and invaluable help with this project. In particular, we would like to thank **Bogdan**, **Ryan Kulp**, **Fr3d** and all other team members for their dedication and assistance throughout the development and documentation process.
 
-Your expertise and commitment have made this integration possible and greatly improved the user experience for the reTerminal E10xx community.
+Your expertise and commitment have made this integration possible and greatly improved the user experience for the reTerminal E Series ePaper Display community.
 
 
 ## Tech Support & Product Discussion

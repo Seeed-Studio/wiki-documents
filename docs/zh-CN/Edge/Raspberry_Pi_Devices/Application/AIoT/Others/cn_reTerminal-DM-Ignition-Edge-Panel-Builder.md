@@ -15,7 +15,7 @@ last_update:
 
 :::note
 本文档假设您已经在网络上运行了一个 Ignition Edge 网关。  
-在尝试这些说明之前，如果需要帮助，请参阅 [Ignition Edge 入门指南](./cn_reTerminal-DM-Getting-Started-with-Ignition-Edge.md)。
+在尝试这些说明之前，如果需要帮助，请参阅 [Ignition Edge 入门指南](/cn/reTerminal-DM-Getting-Started-with-Ignition-Edge)。
 :::
 
 ## 硬件需求

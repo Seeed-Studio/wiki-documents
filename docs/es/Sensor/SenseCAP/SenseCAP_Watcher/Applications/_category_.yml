@@ -1,0 +1,10 @@
+position: 8 # float position is supported
+label: 'Aplicaciones'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: application_with_watcher
+link:
+  type: generated-index
+  slug: es/applications_with_watcher_main_page
+  title: Serie de Aplicaciones SenseCAP Watcher
+  description: La sección "Aplicación" de la wiki de SenseCAP Watcher es una extensa colección de recursos y guías que cubren una amplia gama de temas relacionados con el desarrollo, personalización e integración de Watcher con varias plataformas y servicios. Esta sección está dividida en varias partes, cada una enfocada en un aspecto específico de la aplicación de Watcher.

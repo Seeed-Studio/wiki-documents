@@ -31,22 +31,23 @@ Search for the specific **L4T (Linux for Tegra)** release you want to compile, e
 <!-- After clicking on the web, download and prepare the sample root file system, NVIDIA's official BSP and the toolchain used for cross-compilation, as shown below.
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/download-BSP-rootfs-toolchain.png"/></div> -->
 
-
 Extract the official BSP from NVIDIA, and you will get a directory named `Linux_for_Tegra`. Then, extract the root file system archive into the official `Linux_for_Tegra` directory:
+
 ```bash
 tar xf Jetson_Linux_r36.4.3_aarch64.tbz2
 sudo tar xpf Tegra_Linux_Sample-Root-Filesystem_r36.4.3_aarch64.tbz2 -C Linux_for_Tegra/rootfs/
 ```
 
-Sync the source code for compiling. Replace the argument after `-t` with **the L4T version you want**: 
+Sync the source code for compiling. Replace the argument after `-t` with **the L4T version you want**:
+
 ```bash
 cd Linux_for_Tegra/source/
 ./source_sync.sh -t jetson_36.4.3
 ```
 
-
-Exit to the root directory of your workspace. Git clone the source code of your desired branch to your local machine using the following command 
+Exit to the root directory of your workspace. Git clone the source code of your desired branch to your local machine using the following command
 (replace `-b <branch name>` with the target branch):
+
 ```bash
 sudo apt update
 sudo apt install git-lfs
@@ -59,18 +60,21 @@ The BSP source code for Seeed's Jetson is available in **this [GitHub repository
 You can check the different branches to find your desired L4T version, as each branch corresponds to a different L4T release.
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/FAQ/github_L4T.jpg"/></div>
 
-Then overwrite the original source code: 
+Then overwrite the original source code:
+
 ```bash
 cp -r github/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-Apply necessary changes to rootfs: 
+Apply necessary changes to rootfs:
+
 ```bash
 cd Linux_for_Tegra
 sudo ./apply_binaries.sh
 ```
 
 Install dependencies on your PC:
+
 ```bash
 sudo apt-get update
 sudo apt-get install build-essential flex bison libssl-dev
@@ -82,6 +86,7 @@ sudo apt-get install qemu-user-static
 ```
 
 prepare work for kernel build:
+
 ```bash
 mkdir -p l4t-gcc
 tar xf aarch64--glibc--stable-2022.08-1.tar.bz2 -C ./l4t-gcc
@@ -90,12 +95,14 @@ export CROSS_COMPILE=/your_path/l4t-gcc/aarch64--glibc--stable-2022.08-1/bin/aar
 ```
 
 Compile and build kernel:
+
 ```bash
 cd source
 ./nvbuild.sh
 ```
 
 Install new kernel dtbs and drivers:
+
 ```bash
 ./do_copy.sh
 export INSTALL_MOD_PATH=/your_path/Linux_for_Tegra/rootfs/
@@ -107,8 +114,8 @@ For JetPack 5, since the file paths are different, you need to modify the `-p` p
 `-p "-c bootloader/t186ref/cfg/flash_t234_qspi.xml"`
 :::
 
-
 For **Jetpack 6**, flashing the device(take **recomputer-orin-j401** for example):
+
 ```bash
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh \
 --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml \
@@ -121,6 +128,7 @@ Replace `recomputer-orin-j401` with the name of the device you are using. You ne
 "/></div>
 
 Therefore, the available device name parameters for **L4T 36.4.3** are as follows. The **j40** and **j30** series use the same configuration file:
+
 - recomputer-industrial-orin-j201 (recomputer-industrial-orin-j40/j30 also uses this `device name` as the parameter.)
 - recomputer-orin-j401
 - reserver-agx-orin-j501x
@@ -129,7 +137,6 @@ Therefore, the available device name parameters for **L4T 36.4.3** are as follow
 - recomputer-orin-j40mini
 - recomputer-orin-robotics-j401
 - recomputer-orin-super-j401
-
 
 ## Resources
 
@@ -140,12 +147,11 @@ Therefore, the available device name parameters for **L4T 36.4.3** are as follow
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

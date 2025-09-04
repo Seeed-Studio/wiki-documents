@@ -38,14 +38,14 @@ last_update:
 
 SenseCraft HMI 目前支持以下 Seeed Studio 设备：
 
-### [reTerminal E10xx 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
+### [reTerminal E Series ePaper Display 系列](https://wiki.seeedstudio.com/cn/reterminal_e10xx_main_page/)
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.png" style={{width:350, height:'auto'}}/></div>
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.png" style={{width:350, height:'auto'}}/></div>
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:500, height:'auto'}}/></div>
+    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:500, height:'auto'}}/></div>
 </div><br />
 
-reTerminal E10xx 系列将强大的计算能力与电子纸显示技术相结合，非常适合数字标牌、信息仪表板和交互式显示应用。该系列包括两个具有不同显示能力的型号：
+reTerminal E Series ePaper Display 系列将强大的计算能力与电子纸显示技术相结合，非常适合数字标牌、信息仪表板和交互式显示应用。该系列包括两个具有不同显示能力的型号：
 
 #### reTerminal E1001
 

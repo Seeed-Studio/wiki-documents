@@ -130,6 +130,7 @@ The XIAO MIDI Synthesizer comes pre-flashed with a versatile factory firmware, a
   - **🎵3**: Play Track 4
 
 **Long Press Functions (Any Mode):**
+
 - **🎵1** (hold 2s): Volume up
 - **🎵2** (hold 2s): Volume down
 - **🎵3** (hold 2s): Switch to the next mode (cycles through Sound Test → Beat Keeper → Multi-Track Play → ...)
@@ -137,8 +138,6 @@ The XIAO MIDI Synthesizer comes pre-flashed with a versatile factory firmware, a
 :::tip
 You can experiment with all features without any additional setup. For advanced customization or to re-flash the firmware, see the **[StateMachine example code](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster/blob/main/examples/StateMachine/StateMachine.ino)**.
 :::
-
-
 
 ### BootLoader Mode
 
@@ -172,7 +171,6 @@ After entering BOOT mode, the device will be ready for firmware upload via the A
 
 To reset the device, simply press the **RESET** button on the XIAO ESP32-C3 module. The device will reboot.
 
-
 ## Arduino Library Overview
 
 :::tip
@@ -187,116 +185,115 @@ The XIAO MIDI Synthesizer is supported by the [Seeed_Arduino_MIDIMaster](https:/
     </a>
 </div><br />
 
-
 ### Function
 
 Before we get started developing a sketch, let's look at the available functions of the library.
 
-
 `static SAM2695Synth& getInstance()` – Returns the singleton instance of the SAM2695Synth class.
--  **Input parameters**: None.
--  **Return value**: Reference to the singleton SAM2695Synth object.
 
+- **Input parameters**: None.
+- **Return value**: Reference to the singleton SAM2695Synth object.
 
 `void begin(T& serial, int baud)` – Initializes the synthesizer with the specified serial interface and baud rate.
--  **Input parameters**:
-    - `T& serial`: The serial port object (hardware or software serial) used for MIDI communication.
-    - `int baud`: The baud rate for MIDI communication (typically 31250 for standard MIDI).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `T& serial`: The serial port object (hardware or software serial) used for MIDI communication.
+  - `int baud`: The baud rate for MIDI communication (typically 31250 for standard MIDI).
+- **Return value**: None.
 
 `void setInstrument(uint8_t bank, uint8_t channel, uint8_t value)` – Sets the instrument (timbre) for a specific MIDI channel and bank.
--  **Input parameters**:
-    - `uint8_t bank`: The instrument bank number (0–127).
-    - `uint8_t channel`: The MIDI channel number (0–15).
-    - `uint8_t value`: The instrument (program) number (0–127).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t bank`: The instrument bank number (0–127).
+  - `uint8_t channel`: The MIDI channel number (0–15).
+  - `uint8_t value`: The instrument (program) number (0–127).
+- **Return value**: None.
 
 `void setNoteOn(uint8_t channel, uint8_t pitch, uint8_t velocity)` – Triggers a note-on event on the specified channel with given pitch and velocity.
--  **Input parameters**:
-    - `uint8_t channel`: The MIDI channel number (0–15).
-    - `uint8_t pitch`: The MIDI note number (0–127).
-    - `uint8_t velocity`: The velocity (loudness) of the note (0–127).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t channel`: The MIDI channel number (0–15).
+  - `uint8_t pitch`: The MIDI note number (0–127).
+  - `uint8_t velocity`: The velocity (loudness) of the note (0–127).
+- **Return value**: None.
 
 `void setNoteOff(uint8_t channel, uint8_t pitch)` – Triggers a note-off event on the specified channel for the given pitch.
--  **Input parameters**:
-    - `uint8_t channel`: The MIDI channel number (0–15).
-    - `uint8_t pitch`: The MIDI note number (0–127).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t channel`: The MIDI channel number (0–15).
+  - `uint8_t pitch`: The MIDI note number (0–127).
+- **Return value**: None.
 
 `void setAllNotesOff(uint8_t channel)` – Turns off all notes currently playing on the specified channel.
--  **Input parameters**:
-    - `uint8_t channel`: The MIDI channel number (0–15).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t channel`: The MIDI channel number (0–15).
+- **Return value**: None.
 
 `void playChord(const musicData& chord)` – Plays a chord by sending note-on events for all notes in the provided chord structure.
--  **Input parameters**:
-    - `const musicData& chord`: A structure containing channel, notes, velocity, and timing information for the chord.
--  **Return value**: None.
 
+- **Input parameters**:
+  - `const musicData& chord`: A structure containing channel, notes, velocity, and timing information for the chord.
+- **Return value**: None.
 
 `void setPitch(uint8_t pitch)` – Sets the default pitch value for subsequent note events.
--  **Input parameters**:
-    - `uint8_t pitch`: The MIDI note number (0–127) to set as the default pitch.
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t pitch`: The MIDI note number (0–127) to set as the default pitch.
+- **Return value**: None.
 
 `uint8_t getPitch() const` – Retrieves the current default pitch value.
--  **Input parameters**: None.
--  **Return value**: The current default MIDI note number (0–127).
 
+- **Input parameters**: None.
+- **Return value**: The current default MIDI note number (0–127).
 
 `void setVolume(uint8_t channel, uint8_t level)` – Sets the volume for a specific MIDI channel.
--  **Input parameters**:
-    - `uint8_t channel`: The MIDI channel number (0–15).
-    - `uint8_t level`: The volume level (0–127).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t channel`: The MIDI channel number (0–15).
+  - `uint8_t level`: The volume level (0–127).
+- **Return value**: None.
 
 `void increasePitch()` – Increases the default pitch value by one semitone.
--  **Input parameters**: None.
--  **Return value**: None.
 
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void decreasePitch()` – Decreases the default pitch value by one semitone.
--  **Input parameters**: None.
--  **Return value**: None.
 
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void increaseVelocity()` – Increases the default velocity (volume) for note events.
--  **Input parameters**: None.
--  **Return value**: None.
 
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void decreaseVelocity()` – Decreases the default velocity (volume) for note events.
--  **Input parameters**: None.
--  **Return value**: None.
+
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void increaseBpm()` – Increases the current tempo (beats per minute) by a predefined step.
--  **Input parameters**: None.
--  **Return value**: None.
 
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void decreaseBpm()` – Decreases the current tempo (beats per minute) by a predefined step.
--  **Input parameters**: None.
--  **Return value**: None.
 
+- **Input parameters**: None.
+- **Return value**: None.
 
 `void setBpm(uint8_t bpm)` – Sets the tempo (beats per minute) to the specified value.
--  **Input parameters**:
-    - `uint8_t bpm`: The desired tempo in beats per minute (typically 40–240).
--  **Return value**: None.
 
+- **Input parameters**:
+  - `uint8_t bpm`: The desired tempo in beats per minute (typically 40–240).
+- **Return value**: None.
 
 `uint8_t getBpm() const` – Retrieves the current tempo (beats per minute).
--  **Input parameters**: None.
--  **Return value**: The current BPM value.
 
+- **Input parameters**: None.
+- **Return value**: The current BPM value.
 
 ### Default Variables
 
@@ -305,7 +302,6 @@ The following code shows some of the values predefined in the library, such as i
 <details>
 
 <summary>Click here to preview the full code</summary>
-
 
 ```cpp
 #define MIDI_SERIAL_BAUD_RATE           31250   //MIDI serial baud rate
@@ -583,7 +579,6 @@ typedef enum {
 
 </details>
 
-
 ### Installation
 
 Step 1. Download the [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/Seeed_Arduino_MIDIMaster) library as a ZIP file.
@@ -593,7 +588,6 @@ Step 1. Download the [Seeed_Arduino_MIDIMaster](https://github.com/Seeed-Studio/
     <strong><span><font color={'FFFFFF'} size={"4"}>Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
 
 Step 2. In Arduino IDE, click **Sketch > Include Library > Add .ZIP Library** and select the downloaded ZIP file.
 
@@ -622,21 +616,21 @@ This demo shows how to play a single note using the XIAO MIDI Synthesizer.
 #### Materials Required
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI Synthesizer</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI Synthesizer</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### Reference Programme
@@ -771,21 +765,21 @@ This demo shows how to use the XIAO MIDI Synthesizer's physical buttons to contr
 #### Materials Required
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI Synthesizer</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI Synthesizer</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### Reference Programme
@@ -953,6 +947,7 @@ This program expands on the basic MIDI note demo by introducing real-time user i
 The `play()` function calculates the interval between beats based on the current BPM and note type, and triggers drum sounds (using MIDI notes D2 and C2 on Channel 9) in a repeating pattern. The beat count resets every measure, creating a simple metronome or drum machine effect.
 
 This example demonstrates how to:
+
 - Integrate button input for real-time control
 - Dynamically adjust tempo and playback state
 - Use the XIAO MIDI Synthesizer as a programmable rhythm generator
@@ -966,21 +961,21 @@ This demo shows how to use the XIAO MIDI Synthesizer to play multi-track chords,
 #### Materials Required
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI Synthesizer</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI Synthesizer</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### Reference Programme
@@ -1161,6 +1156,7 @@ This program demonstrates multi-track chord playback with real-time button contr
 The `play()` function checks the timing for each chord and triggers playback if the corresponding flag is enabled. This allows for independent, overlapping playback of different chord patterns, simulating a simple multi-track sequencer.
 
 This example demonstrates how to:
+
 - Define and play custom chord structures
 - Use multiple buttons for independent musical control
 - Build more complex, layered musical performances with the XIAO MIDI Synthesizer
@@ -1174,21 +1170,21 @@ This demo shows how to use the XIAO MIDI Synthesizer to play a full melody seque
 #### Materials Required
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO MIDI Synthesizer</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO MIDI Synthesizer</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_midi_synthesizer/6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-MIDI-Synthesizer-p-6462.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 #### Reference Programme
@@ -1746,12 +1742,14 @@ void loop() {
 #### Program annotation
 
 This program demonstrates how to:
+
 - Store a full melody as an array of note, duration, and delay values
 - Use a helper function (`playMidi`) to iterate through the melody and play each note in sequence
 - Select a specific instrument (Violin) for playback
 - Play a song automatically on startup
 
 You can expand this demo by:
+
 - Changing the instrument or note data to play different songs
 - Adding button controls to start/stop or repeat playback
 - Implementing multi-track or polyphonic playback for more advanced musical effects
@@ -1760,7 +1758,6 @@ You can expand this demo by:
 For those looking to convert MIDI files to Arduino code, you can try tools like [Midi2ArduinoTone](https://tawsiftorabi.github.io/Midi2ArduinoTone/). However, please note that the note values generated by such tools may need to be modified to work with the XIAO MIDI Synthesizer, as they use different note mappings. These tools can still be helpful as a starting point for converting MIDI files into a format you can adapt for this synthesizer.
 
 :::
-
 
 ## Resources
 
@@ -1799,9 +1796,11 @@ To convert a MIDI file into Arduino code that can be used with the XIAO MIDI Syn
 
     1. Place your MIDI text file (e.g., `1.txt`) in the same directory as the script.
     2. Run the script in your terminal:
+
     ```sh
     python change_fast.py
     ```
+
     This will generate a header file (e.g., `track_from_miditext.h`) containing the note array.
 
     3. Copy the generated array into your Arduino sketch, replacing the melody data.
@@ -1817,23 +1816,18 @@ To convert a MIDI file into Arduino code that can be used with the XIAO MIDI Syn
     - Paste it into your Arduino project, replacing the existing melody array.
     - Update your playback logic if needed to match the new array structure.
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
-

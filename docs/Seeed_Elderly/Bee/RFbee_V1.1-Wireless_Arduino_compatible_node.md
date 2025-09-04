@@ -14,7 +14,6 @@ last_update:
 
 The RFBee is a RF module providing easy and flexible wireless data transmission between devices. It is based on a AVR ATmega168 working as a fully functional **Arduino** connected via SPI to a TI CC1101 RF transceiver.
 
-
 [![](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/rfbee-v11-wireless-arduino-compatible-node-p-614.html)
 
 Version Tracker
@@ -29,15 +28,15 @@ Version Tracker
 Features
 --------
 
--   Range: Indoor/Urban: up to 50m; Outdoor line-of-sight: up to 120m;
--   Receiver Sensitivity: -95dBm
--   RF Data Transmission Rate: 4,800bps; 76,800bps
--   Working Frequency : 868MHz & 915MHz
--   Communication type: Point to Point, or Point to Multipoint.
--   Easy-to-Use Serial Interface and rich extendable ports
--   Easy-to-Use AT Command: Set working mode, Serial Baud Rate, etc.
--   Open source Hardware and Firmware
--   Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
+- Range: Indoor/Urban: up to 50m; Outdoor line-of-sight: up to 120m;
+- Receiver Sensitivity: -95dBm
+- RF Data Transmission Rate: 4,800bps; 76,800bps
+- Working Frequency : 868MHz & 915MHz
+- Communication type: Point to Point, or Point to Multipoint.
+- Easy-to-Use Serial Interface and rich extendable ports
+- Easy-to-Use AT Command: Set working mode, Serial Baud Rate, etc.
+- Open source Hardware and Firmware
+- Socket compatible with the Xbee, so you can plug it into any Xbee socket as a quick replacement.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -47,8 +46,8 @@ Only the Rx,Tx, VCC, GND pins are identical to the Xbee. RFbee's will not commun
 Application Ideas
 -----------------
 
--   Powerful RF control
--   Easy to implement of WSN (Wireless Sensor Network)
+- Powerful RF control
+- Easy to implement of WSN (Wireless Sensor Network)
 
 Specifications
 --------------
@@ -113,9 +112,9 @@ Usage
 
 The RFBee can be connected in various ways, e.g.:
 
--   to a PC via USB using a UartSB device.
--   to a Seeeduino (or Arduino) via an XbeeShield.
--   to any other device having a Uart port.
+- to a PC via USB using a UartSB device.
+- to a Seeeduino (or Arduino) via an XbeeShield.
+- to any other device having a Uart port.
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -175,30 +174,27 @@ Support
 
 You can update the RFbee firmware using the Arduino IDE using the procedure below. This procedure assumes the use of UartSB as this is the easiest way to connect a RFBee to a PC, see the section on Hardware installation for different ways to connect.
 
-1.  Connect your RFBee to UartSB, move switches to XBee and 3.3v, then connect it to your computer through a USB cable.
-2.  Download the source code of the RFBee firmware into your Arduino sketch folder
-3.  Open the Arduino IDE and open the RFBee_vx_x project. Then select Tools->Board->Arduino Pro or Pro Mini (3.3v, 8MHz) w/ATmega168 (ATmega328 when version >= V1.2). Choose the correct serial port from the Tools menu. You can now upload your RFBee firmware.
-4.  Reapply the configuration changes in the RFBee if they got lost during the update.
-5.  You could add or modify the firmware upon your demands, as the RFBee is able to work standalone as an Arduino.
+1. Connect your RFBee to UartSB, move switches to XBee and 3.3v, then connect it to your computer through a USB cable.
+2. Download the source code of the RFBee firmware into your Arduino sketch folder
+3. Open the Arduino IDE and open the RFBee_vx_x project. Then select Tools->Board->Arduino Pro or Pro Mini (3.3v, 8MHz) w/ATmega168 (ATmega328 when version >= V1.2). Choose the correct serial port from the Tools menu. You can now upload your RFBee firmware.
+4. Reapply the configuration changes in the RFBee if they got lost during the update.
+5. You could add or modify the firmware upon your demands, as the RFBee is able to work standalone as an Arduino.
 
 **RFBee firmware:** [Download from Google Code](http://code.google.com/p/rfbee/downloads/list)
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 Resources
 ---------
 
--   [RFBee User Manual](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/rfbee-manual.pdf)
--   [RFbee firmware for Arduino 1.0](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/RFbee_for_arduino1.0.zip)
--   [RFbee firmware 1.1 (latest)](https://github.com/Seeed-Studio/RFBee)
--   [Schematic and layout in EAGLE file](https://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
--   [Forum](https://forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
-
+- [RFBee User Manual](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/rfbee-manual.pdf)
+- [RFbee firmware for Arduino 1.0](https://files.seeedstudio.com/wiki/RFbee_V1.1-Wireless_Arduino_compatible_node/res/RFbee_for_arduino1.0.zip)
+- [RFbee firmware 1.1 (latest)](https://github.com/Seeed-Studio/RFBee)
+- [Schematic and layout in EAGLE file](https://www.seeedstudio.com/depot/datasheet/RFBee%20hardware%20v1.1.zip)
+- [Forum](https://forum.seeedstudio.com/viewtopic.php?f=10&t=682&sid=7a9b1bed4f9fd10a9b1003ca1e48e756)
 
 <!-- This Markdown file was created from https://wiki.seeedstudio.com/RFbee_V1.1-Wireless_Arduino_compatible_node/ -->
 
@@ -207,11 +203,11 @@ Resources
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

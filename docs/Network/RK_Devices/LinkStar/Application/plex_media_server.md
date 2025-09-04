@@ -27,12 +27,13 @@ Discover the groundbreaking idea of converting your router into a compact yet po
 
 [Plex Media Server](https://www.plex.tv) is a powerful media management and streaming platform that allows users to organize, access, and stream their personal media library across various devices. With Plex Media Server, users can effortlessly centralize their collection of movies, TV shows, music, photos, and more, creating a unified media hub within their home network. Plex automatically organizes and indexes media files, fetching metadata like descriptions, artwork, and subtitles, to create a visually appealing and user-friendly interface. The server can be accessed through dedicated Plex apps on smartphones, tablets, smart TVs, and streaming devices, enabling seamless streaming of media content both at home and remotely. Plex Media Server also offers robust features such as parental controls, multi-user support, and transcoding capabilities, ensuring compatibility and optimal streaming quality on different devices and network conditions. Overall, Plex Media Server empowers users to enjoy their personal media collection anytime, anywhere, providing a comprehensive and immersive entertainment experience.
 
-## Set up the Docker environment on the LinkStar OpenWRT router.
+## Set up the Docker environment on the LinkStar OpenWRT router
 
 - **Step 01**  Installing OpenWRT on LinkStar
 
 To begin the process of installing OpenWRT on your LinkStar device, refer to the comprehensive installation guide provided in the LinkStar Wiki. This tutorial focuses on utilizing the OpenWRT system and demonstrates how to install the Plex Container while ensuring that LinkStar functions as a soft router.
 Choose one of the following options based on your preference for installing OpenWRT on LinkStar:
+
 1. Flashing OpenWRT onto the TF card. [Here is the tutorial](https://wiki.seeedstudio.com/linkstar-install-system/#flash-openwrt-to-the-tf-card)
 2. Flashing OpenWRT onto the eMMC. [Here is the tutorial](https://wiki.seeedstudio.com/linkstar-install-system/#flash-openwrt-to-emmc)
 
@@ -44,8 +45,9 @@ To begin configuring the network settings on your LinkStar device, establish a c
 Account: root
 Password: password
 ```
+
 Once logged in, the next step is to establish an internet connection for your LinkStar device.
-You have the option to connect either via a network cable or through WiFi. Choose the connection method that suits your setup and preferences. Here I used wireless method. After selecting the wireless network you can simply enter the passphrase and save and apply it. 
+You have the option to connect either via a network cable or through WiFi. Choose the connection method that suits your setup and preferences. Here I used wireless method. After selecting the wireless network you can simply enter the passphrase and save and apply it.
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/img1.png"/></div>
 
@@ -54,9 +56,7 @@ You have the option to connect either via a network cable or through WiFi. Choos
 By default, the Docker installation on LinkStar has a storage capacity of around 250MB, which may not be sufficient for installing images. Therefore, we need to allocate more space to Docker to accommodate our requirements.
 To begin, navigate to the System section in the OpenWRT operating backend. Then, click on Disk Man and locate the **EDIT** option.
 
-
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/img2.png"/></div>
-
 
 In the **"END SECTOR"** column, specify the desired size of the additional storage space to be allocated for Docker. In this example, we will add 20GB of storage. After entering the value, click on the **"NEW"** button to create the new storage allocation.
 
@@ -81,7 +81,6 @@ Choose the Mount Point Use as **Docker data (/opt)**. Don't forget to check the 
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/img8.png"/></div>
 
-
 After completing the necessary settings for the storage expansion, the final step is to reboot the LinkStar device to apply the changes.
 
 To initiate the reboot process, go to the System section in the OpenWRT operating backend and select Reboot. Click on the **"PERFORM REBOOT"** button to begin the reboot process. Wait for OpenWRT to restart, and then proceed to log in again once the system is ready.
@@ -90,11 +89,11 @@ To initiate the reboot process, go to the System section in the OpenWRT operatin
 
 ## Create Plex Media Server Docker Container
 
-Next we need to get plex docker image. For that you have to visit this [link](https://hub.docker.com/r/linuxserver/plex) for more details . 
+Next we need to get plex docker image. For that you have to visit this [link](https://hub.docker.com/r/linuxserver/plex) for more details .
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/pull_img.PNG"/></div>
 
-Next go to Containers tab and click add button 
+Next go to Containers tab and click add button
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/LinkStar/plex/pull_img2.png"/></div>
 
@@ -111,12 +110,12 @@ After that you can see a form to fill down.
 
     Obtain the timezone by visiting the provided [link](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and copy the TZ database name.
     Set the timezone using the following format
-        
+
         TZ=[enter timezone]
 
     Obtain the claimToken by visiting the provided [link](https://www.plex.tv/claim/) and copy/paste the token.
     Set the claimToken using the following format
-    
+
          PLEX_CLAIM=[enter claimToken]
 
 - **Step 3** : Configure Bind Mounts
@@ -130,14 +129,14 @@ After that you can see a form to fill down.
 - **Step 4**: Submit Configuration
 
     After configuring the container name, network, environments, and bind mounts, click on the "Submit" button to save the changes.
-    
-    
+
     By following these steps, you will successfully configure the Plex container with the specified settings.
 
 ## Run and Set up Plex Media Server
+
 - **Step 1:**
 
-    Under the docker containers you can see the container information. Click on the check button and press start. 
+    Under the docker containers you can see the container information. Click on the check button and press start.
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/LinkStar/plex/docker 1.PNG"/></div>
 
@@ -167,7 +166,6 @@ After that you can see a form to fill down.
 
 Now you will be greeted with the Plex Media Server user interface, allowing you to access and manage your media collection seamlessly.
 
-
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/plex interface.PNG"/></div>
 
 ## Mount Plex Directory on the PC and Transfer the Media
@@ -176,7 +174,7 @@ Now you will be greeted with the Plex Media Server user interface, allowing you 
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS1.PNG"/></div>
 
-- **Step 2.** Fill the row according to the following 
+- **Step 2.** Fill the row according to the following
 
         - name: Plex 
         - Path: /plex
@@ -192,10 +190,9 @@ Now you will be greeted with the Plex Media Server user interface, allowing you 
 - **Step 5** Add your favourite movies, music to media folder.
 - **Step 6** Go to Plex media server again and click this on **More**
 
-
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS3.PNG"/></div>
 
-- **Step 7** Next click on these three dots and click on **Scan Library Files**. Then you can see the movies or songs you recently added to your library. 
+- **Step 7** Next click on these three dots and click on **Scan Library Files**. Then you can see the movies or songs you recently added to your library.
 
 <div align="center"><img width ={400} src="https://files.seeedstudio.com/wiki/LinkStar/plex/NAS4.PNG"/></div>
 
@@ -209,21 +206,16 @@ By implementing a media server, whether at home or in a small-scale hotel or caf
 
 - **[Web Page]** [Plex Media Server](https://www.plex.tv)
 
-## Tech Support & Product Discussion 
+## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-

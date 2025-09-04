@@ -21,12 +21,14 @@ sidebar_position: 3
 **6-Axis IMU (Inertial Measurement Unit)** Sensors like the **LSM6DS3TR-C** integrate accelerometers and gyroscopes to measure the motion and orientation of an object in three-dimensional space. Specifically, the LSM6DS3TR-C has the following features:
 
 **Accelerometer function:**
+
 - Measures the acceleration of an object along the X, Y, and Z axes. It is able to sense object motion (e.g., rest, acceleration, deceleration) and tilt changes (e.g., angle of the object).
 - It can be used to detect gait, position changes, vibrations, etc.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz1.5.jpg" style={{width:320, height:'auto'}}/></div>
 
 **Gyroscope function (Gyroscope):**
+
 - Measures the angular velocity of an object around the X, Y, and Z axes, i.e., the rotation of the object.
 - Can be used to detect rotation, rate of rotation, and change in direction.
 
@@ -46,8 +48,8 @@ sidebar_position: 3
 
 Click on the github download link to drive the six-axis sensor.
 
-
 ### Code Implementation
+
 ```cpp
 
 #include <LSM6DS3.h>
@@ -124,30 +126,36 @@ void loop() {
   }
 }
 ```
+
 :::tip
 
 Due to the update of the LSM6DS3 library, if you have previously added this library to the user, you will need to re-download version 2.0.4 or higher and add the ZIP file to the Arduino.
 
 :::
+
 ### Function Overview
+
 - **Include Libraries**
+
   ```cpp
     #include <LSM6DS3.h> 
     #include <Wire.h>
   ```
+
   - Includes the library for communicating with the LSM6DS3 sensor.
   - Includes the library for I2C communication.
-    
+
 - **Create Sensor Instance**
-    - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` Creates an instance of the LSM6DS3 class for the IMU sensor, specifying I2C communication mode and the device address 0x6A.
+  - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` Creates an instance of the LSM6DS3 class for the IMU sensor, specifying I2C communication mode and the device address 0x6A.
 
 - **Variables and Constants**
-    - `float aX, aY, aZ, gX, gY, gZ`: Variables to store accelerometer and gyroscope data.
-    - `const float accelerationThreshold = 2.5`: The threshold value in G's for detecting significant motion.
-    - `const int numSamples = 119`: The number of samples to collect after detecting significant motion.
-    - `int samplesRead = numSamples`: Initializes the sample counter to the total number of samples, indicating no data has been collected yet.
+  - `float aX, aY, aZ, gX, gY, gZ`: Variables to store accelerometer and gyroscope data.
+  - `const float accelerationThreshold = 2.5`: The threshold value in G's for detecting significant motion.
+  - `const int numSamples = 119`: The number of samples to collect after detecting significant motion.
+  - `int samplesRead = numSamples`: Initializes the sample counter to the total number of samples, indicating no data has been collected yet.
 
 - **Basic Settings**
+
   ```cpp
     pinMode(PD5,OUTPUT);
     digitalWrite(PD5,HIGH);
@@ -156,12 +164,13 @@ Due to the update of the LSM6DS3 library, if you have previously added this libr
   - Turn on the gyro enable pin.
 
 - **Data Processing**
+
     ```cpp
     aX = myIMU.readFloatAccelX();:
     aY = myIMU.readFloatAccelY();:
     aZ = myIMU.readFloatAccelZ();:
     float aSum = fabs(aX) + fabs(aY) + fabs(aZ);
-    ``` 
+    ```
 
   - Reads the acceleration along X.
   - Reads the acceleration along Y.
@@ -176,9 +185,11 @@ Due to the update of the LSM6DS3 library, if you have previously added this libr
       break;
     }
   ```
+
   - If the sum of the absolute acceleration values is greater than or equal to the set threshold, reset the sample count samplesRead to 0 and exit the loop.
 
 - **Check Data**
+
   ```cpp
   while (samplesRead < numSamples) {
     samplesRead++;
@@ -198,8 +209,6 @@ Due to the update of the LSM6DS3 library, if you have previously added this libr
   - Increase the count of samplesRead.
   - If all samples have been read, print a blank line to separate the data output.
 
-
-
 ### Results Chart
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/six_resutl.png" style={{width:700, height:'auto'}}/></div>
@@ -210,43 +219,38 @@ If you want more sample code , Please Click : **"File" -> Example -> Seeed Ardui
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/33.png" style={{width:500, height:'auto'}}/></div>
 
-
 ## IMU Advanced Demo
 
 ### Hadware Preparation
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeeduino-XIAO-Expansion-Board</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeeduino-XIAO-Expansion-Board</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
-
-
 
 ### Software Preparation
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/arduino_mouse.jpg" style={{width:500, height:'auto'}}/></div>
-
 
 :::tip
 We need to select the corresponding stack in the toolbar to burn the program.
@@ -984,18 +988,16 @@ static void ble_initialize_gatt_db()
   #error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
+
 </details>
 
 ### Results Chart
 
 When we press the button on the expansion board, we can observe that the mouse event is triggered!
 
-
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/hid_mouse.gif" style={{width:500, height:'auto'}}/></div>
 
 ## XIAO MG24 Sense Microphone(Seeed Studio Demo)
-
 
 ### Overview of Built-in Sensors
 
@@ -1013,9 +1015,7 @@ When we press the button on the expansion board, we can observe that the mouse e
 - Compact Size: MEMS technology allows for a small form factor, facilitating easy integration into portable devices like smartphones and wearables.
 - Digital Output: Offers digital signal output options (e.g., I2S), simplifying the interface with digital signal processors (DSPs) and microcontrollers.
 
-
 ### Software Preparation
-
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_Mic" target="_blank" rel="noopener noreferrer">
@@ -1032,10 +1032,10 @@ Currently we need to manually modify the replacement file, the subsequent direct
 - **[Replacement Files]** [gsdk.a](https://files.seeedstudio.com/wiki/mg24_mic/gsdk_v2.a)
 
 **Changing the file path**
-  - __/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/__
+
+- **/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/file.png" style={{width:350, height:'auto'}}/></div>
-
 
 ### Code Implementation
 
@@ -1168,7 +1168,6 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 
 ### Function Overview
 
-
 **Microphone Configuration**
 
   ```cpp
@@ -1186,11 +1185,11 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 };
   ```
 
-  - mic_config_t: Defines a microphone configuration structure.
-  - channel_cnt: set to 1 for mono.
-  - sampling_rate: Set to 16000 Hz for sampling frequency.
-  - buf_size: set to 1600 for buffer size.
-  - ebug_pin: set debug pin according to platform, used for signal indication during debugging.
+- mic_config_t: Defines a microphone configuration structure.
+- channel_cnt: set to 1 for mono.
+- sampling_rate: Set to 16000 Hz for sampling frequency.
+- buf_size: set to 1600 for buffer size.
+- ebug_pin: set debug pin according to platform, used for signal indication during debugging.
 
 **Microphone instantiation**
 
@@ -1203,7 +1202,8 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   MG24_ADC_Class Mic(&mic_config);
   #endif
   ```
-  - Conditional compilation: create the appropriate microphone class instances for different platforms, using the previously defined configuration.
+
+- Conditional compilation: create the appropriate microphone class instances for different platforms, using the previously defined configuration.
 
 **Recording buffers and flags**
 
@@ -1212,9 +1212,10 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   volatile uint8_t recording = 0;
   volatile static bool record_ready = false;
   ```
-  - recording_buf: Define an array of SAMPLES to store recording samples.
-  - recording: a volatile variable that marks whether recording is currently in progress to prevent compiler optimization.
-  - record_ready: a volatile static variable that indicates if the recording is complete and ready for further processing.
+
+- recording_buf: Define an array of SAMPLES to store recording samples.
+- recording: a volatile variable that marks whether recording is currently in progress to prevent compiler optimization.
+- record_ready: a volatile static variable that indicates if the recording is complete and ready for further processing.
 
 **Filter Example (for WIO Terminal)**
 
@@ -1223,9 +1224,11 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   FilterBuHp filter;
   #endif
   ```
-  - If on the WIO Terminal, create an instance of a high-pass filter for filter processing.
+
+- If on the WIO Terminal, create an instance of a high-pass filter for filter processing.
 
 **setup**
+
   ```cpp
   void setup() {
   Serial.begin(115200);
@@ -1247,9 +1250,10 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   ```
 
   -Initialize Serial Port: Start serial communication at 115200 baud rate and wait for the serial port to be ready.
-  - Set Pin Mode: On WIO Terminal, set the key pins to input pull-up mode.
-  - Set callback function: call Mic.set_callback(audio_rec_callback) to specify the callback function when recording audio.
-  - Initialize the microphone: call Mic.begin(), if the initialization fails, print an error message and enter a dead loop.
+
+- Set Pin Mode: On WIO Terminal, set the key pins to input pull-up mode.
+- Set callback function: call Mic.set_callback(audio_rec_callback) to specify the callback function when recording audio.
+- Initialize the microphone: call Mic.begin(), if the initialization fails, print an error message and enter a dead loop.
 
 **loop**
 
@@ -1281,9 +1285,9 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 }
   ```
 
-  - Detect Key: On the WIO Terminal, starts recording when it detects that a key has been pressed and is not recording.
-  - Finished sampling:Prints “Finished sampling” if not recording and record_ready is set to true.
-  - Iterates through the recording buffer and prints each sample value.
+- Detect Key: On the WIO Terminal, starts recording when it detects that a key has been pressed and is not recording.
+- Finished sampling:Prints “Finished sampling” if not recording and record_ready is set to true.
+- Iterates through the recording buffer and prints each sample value.
 
 **Audio recording callback function**
 
@@ -1312,15 +1316,13 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 }
   ```
 
-  - Callback function: called during audio recording, responsible for copying samples from the DMA buffer to the recording buffer.
-  - Conditional Compilation: Processes the input using filters if on the WIO Terminal.
-  - Converts 12-bit unsigned ADC values to 16-bit PCM (signed) audio values.
-  - Sample Fill: copies samples into recording_buf and updates index idx.
-  - Finish recording: if the number of filled samples reaches SAMPLES, resets the index, marks the end of recording and sets record_ready to true.
-
+- Callback function: called during audio recording, responsible for copying samples from the DMA buffer to the recording buffer.
+- Conditional Compilation: Processes the input using filters if on the WIO Terminal.
+- Converts 12-bit unsigned ADC values to 16-bit PCM (signed) audio values.
+- Sample Fill: copies samples into recording_buf and updates index idx.
+- Finish recording: if the number of filled samples reaches SAMPLES, resets the index, marks the end of recording and sets record_ready to true.
 
 ### Results Chart
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic_result1.png" style={{width:680, height:'auto'}}/></div>
 
@@ -1334,7 +1336,6 @@ If you want more sample code , Please Click : -> **"Example -> Seeed Arduino Mic
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/34.png" style={{width:500, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/35.png" style={{width:500, height:'auto'}}/></div>
-
 
 ## XIAO MG24 Sense Microphone(Silicon Labs Demo)
 
@@ -1439,7 +1440,6 @@ void calculate_and_display_voice_level() {
 
 ```
 
-
 ### Function Overview
 
 ***Header file introduction***
@@ -1450,8 +1450,8 @@ void calculate_and_display_voice_level() {
 
 - Includes the `SilabsMicrophoneAnalog.h` header file, which contains the necessary library functions and definitions for using the analog microphone.
 
-
 ***Hardware configuration***
+
 ```cpp
 #define MIC_DATA_PIN  PC9
 #define MIC_PWR_PIN   PC8
@@ -1459,7 +1459,6 @@ void calculate_and_display_voice_level() {
 #define MIC_VALUE_MIN 735
 #define MIC_VALUE_MAX 900
 ```
-
 
 - `MIC_DATA_PIN`: Defines the microphone data pin as `PC9`.
 
@@ -1469,31 +1468,30 @@ void calculate_and_display_voice_level() {
 
 - `MIC_VALUE_MIN` and `MIC_VALUE_MAX`: Define the minimum and maximum range of the microphone output.
 
-
 ***Buffer Definition***
+
 ```cpp
 uint32_t mic_buffer[NUM_SAMPLES];
 uint32_t mic_buffer_local[NUM_SAMPLES];
 ```
 
-
 - `mic_buffer`: Used to store raw sample data collected from the microphone.
 
 - `mic_buffer_local`: Used to temporarily store sample data to prevent overwriting.
 
-
 ***Flags and object definitions***
+
 ```cpp
 volatile bool data_ready_flag = false;
 MicrophoneAnalog micAnalog(MIC_DATA_PIN, MIC_PWR_PIN);
 ```
-
 
 - `data_ready_flag`: A flag to indicate whether new sample data is ready.
 
 - `micAnalog`: Creates a MicrophoneAnalog object to control the microphone.
 
 ***Callback Function Declaration***
+
 ```cpp
 void mic_samples_ready_cb();
 void calculate_and_display_voice_level();
@@ -1503,8 +1501,8 @@ void calculate_and_display_voice_level();
 
 - `calculate_and_display_voice_level()`: A function to calculate the volume and control the LED brightness.
 
-
 ***setup() function***
+
 ```cpp
 void setup()
 {
@@ -1528,6 +1526,7 @@ void setup()
 - Starts sampling and sets the callback function for when sampling is complete.
 
 ***loop()function***
+
 ```cpp
 void loop()
 {
@@ -1538,12 +1537,9 @@ void loop()
 }
 ```
 
-
 - Checks if `data_ready_flag` is `true`, indicating that new data is ready.
 
 - If new data is available, calls the `calculate_and_display_voice_level()` function to process the data.
-
-
 
 ```cpp
 
@@ -1554,11 +1550,9 @@ void mic_samples_ready_cb()
 }
 ```
 
-
 Copies sample data from `mic_buffer` to `mic_buffer_local` to prevent overwriting.
 
 Sets `data_ready_flag` to `true` to indicate that new data is ready.
-
 
 ```cpp
 
@@ -1595,13 +1589,11 @@ void calculate_and_display_voice_level() {
 
 - Restarts sampling to collect new audio data.
 
-
 ### Results Chart
 
 When we blow into the microphone, we can see that the led on top will lighten and darken with the sound.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic.gif" style={{width:500, height:'auto'}}/></div>
-
 
 ### Greater
 

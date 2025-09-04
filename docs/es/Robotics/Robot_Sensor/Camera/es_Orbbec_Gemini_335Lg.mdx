@@ -1,0 +1,272 @@
+---
+description: Mostrar a las personas cómo usar Orbbec Gemini 335Lg en la plataforma reComputer Jetson.
+title: Cámara Estéreo Orbbec Gemini 335Lg
+keywords:
+- Jetson Orin Series
+- reComputer Robotics
+- Computer Vision
+- Autonomous Driving
+- Industrial Robot
+- Orbbec
+- AI Camera
+- Stereo Camera
+- Depth Camera
+- GMSL2
+image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+slug: /es/orbbec_gemini_335lg
+last_update:
+  date: 2025-08-15
+  author: Kane
+---
+
+
+import { Image, Flex } from "antd";
+import Orbbec335LgTable from '@site/src/components/robotics/Orbbec335LgTable';
+import RoboticsFooter from '@site/src/components/robotics/RoboticsFooter'
+import ProductBanner from '@site/src/components/robotics/ProductBanner'
+import JetsonIOStepper from '@site/src/components/robotics/JetsonIOStepper'
+
+
+export const steps = [
+  {
+    title: 'Configurar Conector CSI de 24 pines de Jetson',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
+  },
+  {
+    title: 'Configurar para hardware compatible',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Select_Compatiable_Hardware.webp",
+  },
+  {
+    title: 'Seleccionar el Overlay',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Select_Orbbec_Overlay.webp",
+  },
+  {
+    title: 'Guardar cambios de pines',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_Pin_Changes.webp",
+  },
+  {
+    title: 'Guardar y reiniciar para reconfigurar pines',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_and_Reboot.webp",
+  },
+  {
+    title: 'Presionar cualquier tecla para reiniciar',
+    src: 'https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Reboot_Prompt.webp'
+  }
+];
+
+<!--Product Banner: TODO Add the linkUrl to the bazzar product-->
+
+<ProductBanner
+  imageUrl="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini-335Lg_Front.webp" 
+  linkUrl=""
+/>
+
+Gemini 335Lg es un modelo destacado en la serie Gemini 330, sirviendo como la versión GMSL2/FAKRA del Gemini 335L probado en la industria.
+
+El serializador GMSL2 combinado con el conector FAKRA asegura conectividad segura y confiable para robots móviles autónomos (AMRs) navegando entornos complejos y brazos robóticos que requieren cableado flexible.
+
+## Especificaciones
+
+<Orbbec335LgTable />
+
+<p>[1] Rango de profundidad máximo teórico hasta 65 metros;</p>
+<p>[2] Datos medidos durante la calibración de fábrica;</p>
+<p>[3] El nivel de energía láser predeterminado de Gemini 335Lg está configurado en Nivel 4 para reducir el consumo de energía pico y prevenir fallas operacionales. Cuando hay suficiente energía disponible, los usuarios pueden ajustar manualmente el láser al Nivel 6 máximo para lograr un rendimiento óptimo;</p>
+<p>[4] Tanto Gemini 335L como 335Lg requieren el uso de cables compatibles con IP65 durante las operaciones de encendido para lograr protección IP65;</p>
+<p>[5] No más de 16h de trabajo por día.</p>
+
+
+## Configurar el Dispositivo
+
+En este tutorial, demostramos tanto la conexión USB 3 como GMSL2. Especificación del dispositivo host:
+
++ reComputer Robotics J4012 con GMSL
++ JetPack 6.2 (Ubuntu 22.04)
+
+:::note
+Para el tutorial en x86_64 Windows/Linux, o MacOS (x86_64, potencialmente Apple Silicon), por favor consulte el README del [Repositorio SDK](https://github.com/orbbec/OrbbecSDK_v2)
+:::
+
+### Descargar e Instalar Orbbec Viewer
+
++ Abra una terminal en su dispositivo Jetson, descargue el paquete pre-construido desde el lanzamiento de GitHub.
+
+``` sh
+wget -L https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.8/OrbbecSDK_v2.4.8_arm64.deb
+```
+
++ Instalar SDK
+
+``` sh
+sudo dpkg -i OrbbecSDK_v2.4.8_arm64.deb
+```
+
+<Flex justify="center">
+  <Image width={600} src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Install_Orbbec_SDK.webp" />
+</Flex>
+
++ Visualización usando Orbbec Viewer, descargar
+
+``` sh
+wget -L https://github.com/orbbec/OrbbecSDK_v2/releases/download/v2.4.8/OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64.zip
+```
+
++ Extraer el contenido
+
+``` sh
+# En caso de que no haya instalado 'unzip'
+# sudo apt-get update && sudo apt-get install unzip
+
+unzip OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64.zip
+```
+
++ Ejecutar el Orbbec Viewer
+
+``` sh
+cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
+./OrbbecViewer
+```
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Launch_Orbbec_Viewer.webp" />
+</Flex>
+
+### Conexión USB3
+
+Configure el interruptor DIP en la parte superior de la cámara (retire primero la cubierta metálica) a la posición de la letra **'U'**.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/USB3_DIP_Switch.webp" />
+</Flex>
+
+Lo que podría necesitar:
+
++ Un cable USB Type-C a USB Type A que soporte protocolo USB 3.
++ Un dispositivo Jetson host que tenga puertos USB 3 Type A.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini_Camera_USB3_Connection.webp" />
+</Flex>
+
+Conecte la cámara y use OrbbecViewer para visualización.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600}
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/OrbbecViewer_Visualization.webp" />
+</Flex>
+
+### Conexión GMSL2
+
+Configure el interruptor DIP en la parte superior de la cámara (retire primero la cubierta metálica) a la posición de la letra **'M'**.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={400} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/GMSL2_DIP_Switch.webp" />
+</Flex>
+
+Lo que podría necesitar:
+
++ [Un cable Mini-Fakra](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
++ [Placa de extensión GMSL2 de reComputer Robotics](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
+
+Conecte la cámara y ejecute Jetson IO en su dispositivo con
+
+``` sh
+sudo /opt/nvidia/jetson-io/jetson-io.py
+```
+
+Y configure el overlay del árbol de dispositivos paso a paso:
+
+<JetsonIOStepper steps={steps} />
+
+
+Reinicie el dispositivo Jetson, en la página de Firmware de Jetson, podría necesitar seleccionar la entrada correcta según el prompt, en nuestro caso, presionamos **'1'** para usar `Custom Header Config`.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_UEFI_Select.jpg" />
+</Flex>
+
+Conecte la cámara con cable Mini FAKRA.
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini_Camera_GSML2_Connection.jpg" />
+</Flex>
+
+Visualice el resultado usando OrbbecViewer
+
+<Flex justify="center" style={{ 
+  margin: '24px 0',
+}}>
+  <Image width={600} style={{
+      borderRadius: 12,
+      boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+  }} 
+  src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png" />
+</Flex>
+
+
+:::note[Acerca de Mini FAKRA y GMSL2]
+
+[¿Qué son los Conectores Mini-FAKRA?](https://connectorsupplier.com/what-are-mini-fakra-connectors/)
+
+[GMSL - Wikipedia](https://en.wikipedia.org/wiki/Gigabit_Multimedia_Serial_Link)
+
+[GMSL - Guía General del Usuario](https://www.analog.com/media/en/technical-documentation/user-guides/gmsl2-general-user-guide.pdf)
+
+[Guía Pública de Diseño y Validación de Hardware GMSL2](https://www.analog.com/media/en/technical-documentation/user-guides/public-gmsl2-hardware-design-and-validation-guide.pdf)
+:::
+
+
+
+## Recursos Adicionales
+
+
++ [Hoja de Datos Orbbec Gemini 335Lg](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/datasheet/Gemini-335Lg-Datasheet-V1.0-241022.pdf)
++ [CAD 2D de Cámara (DWG)](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/CAD/Gemini_335Lg_V1.0_20240822.dwg)
++ [CAD 2D de Cámara (PDF)](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/CAD/Gemini_335Lg_V1.0_20240822.pdf)
++ [STP 3D de Cámara](https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/STP/Gemini_335Lg_Asm_with_FOV_20240826.stp)
+
+
+## Soporte Técnico y Discusión de Productos
+
+¡Gracias por elegir nuestros productos! Asegúrese de seguirnos en las plataformas a continuación para obtener las últimas noticias y soporte.
+
+<RoboticsFooter />
+

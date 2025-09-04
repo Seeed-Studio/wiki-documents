@@ -18,51 +18,48 @@ The Serial port Bluetooth module is fully qualified Bluetooth V2.0+EDR (Enhanced
 
 **Model: [WLS123A1M](https://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)**
 
+## Features  
 
+### Hardware features  
 
-##   Features  
+- Typical -80dBm sensitivity
+- Up to +4dBm RF transmit power
+- Low Power 1.8V Operation ,1.8 to 3.6V I/O
+- PIO control
+- UART interface with programmable baud rate
+- Integrated antenna
+- Edge connector
 
-###   Hardware features  
+### Software features  
 
-*   Typical -80dBm sensitivity
-*   Up to +4dBm RF transmit power
-*   Low Power 1.8V Operation ,1.8 to 3.6V I/O
-*   PIO control
-*   UART interface with programmable baud rate
-*   Integrated antenna
-*   Edge connector
-
-###   Software features  
-
-*   Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: yes. Supported baud rate:
+- Default Baud rate: 38400, Data bits:8, Stop bit:1,Parity:No parity, Data control: yes. Supported baud rate:
 
 9600,19200,38400,57600,115200,230400,460800.
 
-*   Use CTS and RTS to control data stream.
-*   Given a rising pulse in PIO0, device will be disconnected.
-*   Status instruction port PIO1: low-disconnected, high-connected;
-*   PIO10 and PIO11 can be connected to red and blue LED separately. When master and slave are paired, red
+- Use CTS and RTS to control data stream.
+- Given a rising pulse in PIO0, device will be disconnected.
+- Status instruction port PIO1: low-disconnected, high-connected;
+- PIO10 and PIO11 can be connected to red and blue LED separately. When master and slave are paired, red
 
 and blue led blinks 1time/2s in interval. While disconnected only blue led blinks 2times/s.
 
-*   Auto-connects to the last device on power as default.
-*   Permits pairing device to connect as default.
-*   Auto-pairing PINCODE:”0000” as default
-*   Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
+- Auto-connects to the last device on power as default.
+- Permits pairing device to connect as default.
+- Auto-pairing PINCODE:”0000” as default
+- Auto-reconnect in 30 min when disconnected as a result of beyond the range of connection.
 
-##   Application Ideas  
+## Application Ideas  
 
-*   Remote controller
-*   Wireless communication
+- Remote controller
+- Wireless communication
 
-##   Cautions  
+## Cautions  
 
+- While using with Seeeduino / Arduino, set the operation voltage to 5V. Else use a proper logic level converter.
+- While using with UartSBee, set the operation voltage to 5V
+- Command to change baud rate is persistent even after reset. Hence remember the baud rate for next use.
 
-*   While using with Seeeduino / Arduino, set the operation voltage to 5V. Else use a proper logic level converter.
-*   While using with UartSBee, set the operation voltage to 5V
-*   Command to change baud rate is persistent even after reset. Hence remember the baud rate for next use.
-
-##   Specification  
+## Specification  
 
 ![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-module-pin.JPG)
 
@@ -201,17 +198,17 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 </tr>
 </table>
 
-##   Software Instruction  
+## Software Instruction  
 
-####   Working Sketch Map  
+#### Working Sketch Map  
 
 ![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-1.jpg)
 
-####   Flowchat  
+#### Flowchat  
 
 ![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Bluetooth-2.jpg)
 
-####   Commands to change default configuration  
+#### Commands to change default configuration  
 
 **1. Set working MODE**
 
@@ -315,7 +312,7 @@ and blue led blinks 1time/2s in interval. While disconnected only blue led blink
 </tr>
 </table>
 
-####   Commands for Normal Operation:  
+#### Commands for Normal Operation  
 
 **1. Inquire**
 
@@ -385,57 +382,57 @@ When **+INQ=1** command is successful, the red and green LEDS blink alternativel
 **7. Return status** \r\n+BTSTA:**xx**\r\n
  **xx** status:
 
-*   0 - Initializing
-*   1 - Ready
-*   2 - Inquiring
-*   3 - Connecting
-*   4 - Connected
+- 0 - Initializing
+- 1 - Ready
+- 2 - Inquiring
+- 3 - Connecting
+- 4 - Connected
 
 (**Note:** This is not a command, but the information returned from the module after every command)  
 
-##   Additional Idea  
+## Additional Idea  
 
-*   [How to set PC connect with Serial Bluetooth Grove](https://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
+- [How to set PC connect with Serial Bluetooth Grove](https://forum.seeedstudio.com/viewtopic.php?f=18&amp;t=1436&amp;p=5637#p5637)
 
-*   [Set up connections between two Bluetooth modules step by step](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
+- [Set up connections between two Bluetooth modules step by step](https://forum.seeedstudio.com/viewtopic.php?f=4&amp;t=687)
 
-##   Resources  
+## Resources  
 
 - **[Software]**   [Software instruction](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/res/Bluetooth_Software_Instruction.pdf)
 
 - **[Datasheet]**  [Bluetooth module Datasheet](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/res/Bluetooth_module.pdf)
 
-##   Support  
+## Support  
 
 If you have questions or other better design ideas, you can go to our [forum](https://www.seeedstudio.com/forum) or **wish** to discuss.
 
-##   How to buy  
+## How to buy  
 
 Click here to buy: [Serial port bluetooth module (Master/Slave)](https://www.seeedstudio.com/depot/serial-port-bluetooth-module-masterslave-p-572.html?cPath=139_142)
 
-##   See Also  
+## See Also  
 
-*   [Grove - Serial Bluetooth](https://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html?cPath=139_142)
+- [Grove - Serial Bluetooth](https://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html?cPath=139_142)
 
-*   [Bluetooth Bee - Standalone](https://www.seeedstudio.com/depot/bluetooth-bee-standalone-p-1157.html?cPath=139_142)
+- [Bluetooth Bee - Standalone](https://www.seeedstudio.com/depot/bluetooth-bee-standalone-p-1157.html?cPath=139_142)
 
-*   [Bluetooth Shield](https://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=132_134)
+- [Bluetooth Shield](https://www.seeedstudio.com/depot/bluetooth-shield-p-866.html?cPath=132_134)
 
-*   [Bluetooth Bee](https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
+- [Bluetooth Bee](https://www.seeedstudio.com/depot/bluetooth-bee-p-598.html?cPath=139_142)
 
-##   Licensing  
+## Licensing  
 
 This documentation is licensed under the Creative Commons [Attribution-ShareAlike License 3.0](http://creativecommons.org/licenses/by-sa/3.0/) Source code and libraries are licensed under [GPL/LGPL](http://www.gnu.org/licenses/gpl.html), see source code files for details.
 
-##   External Links  
+## External Links  
 
 Links to external webpages which provide more application ideas, documents/datasheet or software libraries
 
-##  Related Projects
+## Related Projects
 
 If you want to make some awesome projects by Serial port bluetooth module, here's some projects for reference.
 
-###  Control Multiple servo Motor From android app
+### Control Multiple servo Motor From android app
 
 ![](https://files.seeedstudio.com/wiki/Serial_port_bluetooth_module_Master-Slave/img/Control_Multiple_servo_Motor_From_android_app.jpg)
 
@@ -444,7 +441,7 @@ This is a complete tutorial about how to control multiple servo motors from andr
 
 [**I want to make it.**](https://www.seeedstudio.com/recipe/255-control-multiple-servo-motor-from-android-app.html)
 
-###   Share Your Awesome Projects with Us
+### Share Your Awesome Projects with Us
 
 Born with the spirit of making and sharing, that is what we believe makes a maker.
 
@@ -458,8 +455,8 @@ you are being part of the open source community and you are making your contribu
 
 Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.com/recipe/), and win a chance to become the Core User of Seeed.
 
-*   Core Users, are those who showing high interests and significant contributions in Seeed products.
-*   We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
+- Core Users, are those who showing high interests and significant contributions in Seeed products.
+- We cooperate with our Core Users in the development of our new product, this, in another word, the Core Users will have the chance to experience any new products of Seeed before its official launch, and in return we expect valuable feedback from them to help us improving the product performance and user experience. And for most of cases if our Core Users have any good ideas for making things, we'll offer hardware pieces, PCBA services as well as technical support. Besides, further commercial cooperation with the Core Users is highly possible.
 
 <font color="#FF0000">Get more information about Core User please email to: recipe@seeed.cc</font>
 
@@ -468,11 +465,11 @@ Now share you awesome projects on with us on [Recipe](https://www.seeedstudio.co
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

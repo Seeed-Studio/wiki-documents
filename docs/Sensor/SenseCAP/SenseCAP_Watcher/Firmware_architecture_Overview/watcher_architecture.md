@@ -477,8 +477,8 @@ The timer block is an excitation source module, primarily functioning as a perio
 
 Configuration parameters are as follows:
 
-* **params**: An object containing device parameters.
-  * **period**: The period for starting the timer.
+- **params**: An object containing device parameters.
+  - **period**: The period for starting the timer.
 
 Terminal connection description:
 
@@ -561,41 +561,41 @@ The ai camera block is mainly responsible for communication with Himax, model OT
 
 The meanings of each field in the params parameter are as follows:
 
-* **model\_type**: Model type, 0 indicates cloud model (the model URL will be extracted from the model field for download and use), 1, 2, and 3 indicate Himax built-in models.
-* **model**: Specific information about the model.
-  * **model\_id**: Unique identifier of the model.
-  * **version**: Model version.
-  * **arguments**: Model parameter configuration.
-    * **size**: Size of the model.
-    * **url**: Download URL of the model.
-    * **icon**: Icon URL of the model.
-    * **task**: Task type of the model, "detect" indicates detection.
-    * **createdAt**: Timestamp of model creation.
-    * **updatedAt**: Timestamp of model update.
-    * **iou**: IOU (Intersection over Union) threshold.
-    * **conf**: Confidence threshold.
-  * **model\_name**: Name of the model, "General Object Detection".
-  * **model\_format**: Model format, "TensorRT".
-  * **ai\_framework**: AI framework used.
-  * **author**: Author of the model, "SenseCraft AI".
-  * **algorithm**: Algorithm description, "Object Detect(TensorRT, SMALL, COCO)".
-  * **classes**: Categories the model can detect, including "person".
-  * **checksum**: Checksum (MD5) of the model file, currently empty.
-* **modes**: Working modes, 0 indicates inference mode, 1 indicates sampling mode; when it is 1, the device does not parse the model field.
-* **conditions**: List of detection conditions.
-  * **class**: Category to detect, here "person".
-  * **mode**: Detection mode, 0 indicates existence detection, 1 indicates numerical comparison, 2 indicates quantity change.
-  * **type**: Comparison type, 0 indicates less than, 1 indicates equal to, 2 indicates greater than, 3 indicates not equal to (only valid when mode=1).
-  * **num**: Comparison value (only valid when mode=1).
-* **conditions\_combo**: Relationship for multi-condition detection, 0 indicates AND, 1 indicates OR.
-* **silent\_period**: Silent period settings.
-  * **time\_period**: Time period settings.
-    * **repeat**: Repeat time period from Sunday to Saturday, 1 indicates enabled.
-    * **time\_start**: Start time of the silent period.
-    * **time\_end**: End time of the silent period.
-  * **silence\_duration**: Duration of silence, in seconds.
-* **output\_type**: Output image type, 0 indicates only small images (412x412), 1 indicates both large and small images (640x480; 412x412).
-* **shutter**: Shutter mode, 0 indicates continuously open, 1 indicates triggered by UI, 2 indicates triggered by input event, 3 indicates shutter once.
+- **model\_type**: Model type, 0 indicates cloud model (the model URL will be extracted from the model field for download and use), 1, 2, and 3 indicate Himax built-in models.
+- **model**: Specific information about the model.
+  - **model\_id**: Unique identifier of the model.
+  - **version**: Model version.
+  - **arguments**: Model parameter configuration.
+    - **size**: Size of the model.
+    - **url**: Download URL of the model.
+    - **icon**: Icon URL of the model.
+    - **task**: Task type of the model, "detect" indicates detection.
+    - **createdAt**: Timestamp of model creation.
+    - **updatedAt**: Timestamp of model update.
+    - **iou**: IOU (Intersection over Union) threshold.
+    - **conf**: Confidence threshold.
+  - **model\_name**: Name of the model, "General Object Detection".
+  - **model\_format**: Model format, "TensorRT".
+  - **ai\_framework**: AI framework used.
+  - **author**: Author of the model, "SenseCraft AI".
+  - **algorithm**: Algorithm description, "Object Detect(TensorRT, SMALL, COCO)".
+  - **classes**: Categories the model can detect, including "person".
+  - **checksum**: Checksum (MD5) of the model file, currently empty.
+- **modes**: Working modes, 0 indicates inference mode, 1 indicates sampling mode; when it is 1, the device does not parse the model field.
+- **conditions**: List of detection conditions.
+  - **class**: Category to detect, here "person".
+  - **mode**: Detection mode, 0 indicates existence detection, 1 indicates numerical comparison, 2 indicates quantity change.
+  - **type**: Comparison type, 0 indicates less than, 1 indicates equal to, 2 indicates greater than, 3 indicates not equal to (only valid when mode=1).
+  - **num**: Comparison value (only valid when mode=1).
+- **conditions\_combo**: Relationship for multi-condition detection, 0 indicates AND, 1 indicates OR.
+- **silent\_period**: Silent period settings.
+  - **time\_period**: Time period settings.
+    - **repeat**: Repeat time period from Sunday to Saturday, 1 indicates enabled.
+    - **time\_start**: Start time of the silent period.
+    - **time\_end**: End time of the silent period.
+  - **silence\_duration**: Duration of silence, in seconds.
+- **output\_type**: Output image type, 0 indicates only small images (412x412), 1 indicates both large and small images (640x480; 412x412).
+- **shutter**: Shutter mode, 0 indicates continuously open, 1 indicates triggered by UI, 2 indicates triggered by input event, 3 indicates shutter once.
 
 Terminal connection description:
 
@@ -638,9 +638,9 @@ The alarm trigger block may be the next block of the ai camera, mainly adding so
 
 Configuration parameters are as follows:
 
-* **params**: Object containing device parameters.
-  * **text**: Audio text, information used to generate audio content.
-  * **audio**: Base64 encoded audio file representing the audio content in MP3 format.
+- **params**: Object containing device parameters.
+  - **text**: Audio text, information used to generate audio content.
+  - **audio**: Base64 encoded audio file representing the audio content in MP3 format.
 
 Terminal connection description:
 
@@ -688,13 +688,13 @@ The image analyzer block may be the next level block of the AI camera, mainly ca
 
 Configuration parameters are as follows:
 
-* **params**: Object containing device parameters.
-  * **url**: URL address for the request, reserved (usually use the URL configured on the device).
-  * **header**: Request headers, reserved.
-  * **body**: Object containing the request body content.
-    * **prompt**: Prompt to include with the request, providing additional information for image analysis.
-    * **type**: Type of request, 1 indicates monitoring.
-    * **audio\_txt**: Audio text information to include with the request. When the monitoring scene is triggered, the interface service will convert this field to TTS and return it in the interface.
+- **params**: Object containing device parameters.
+  - **url**: URL address for the request, reserved (usually use the URL configured on the device).
+  - **header**: Request headers, reserved.
+  - **body**: Object containing the request body content.
+    - **prompt**: Prompt to include with the request, providing additional information for image analysis.
+    - **type**: Type of request, 1 indicates monitoring.
+    - **audio\_txt**: Audio text information to include with the request. When the monitoring scene is triggered, the interface service will convert this field to TTS and return it in the interface.
 
 Terminal connection description:
 
@@ -740,12 +740,12 @@ The local alarm block is an alarm block, mainly implementing device alarms, such
 
 Configuration parameters are as follows:
 
-* **params**: Object containing device parameters.
-  * **sound**: Switch to play audio, 1 means on, 0 means off.
-  * **rgb**: Switch for RGB alarm lights, 1 means on, 0 means off.
-  * **img**: Switch to display alarm images, 1 means on, 0 means off.
-  * **text**: Switch to display alarm text, 1 means on, 0 means off.
-  * **duration**: Duration of the alarm in seconds, here it is 10 seconds.
+- **params**: Object containing device parameters.
+  - **sound**: Switch to play audio, 1 means on, 0 means off.
+  - **rgb**: Switch for RGB alarm lights, 1 means on, 0 means off.
+  - **img**: Switch to display alarm images, 1 means on, 0 means off.
+  - **text**: Switch to display alarm text, 1 means on, 0 means off.
+  - **duration**: Duration of the alarm in seconds, here it is 10 seconds.
 
 Terminal connection description:
 
@@ -788,9 +788,9 @@ The sensecraft alarm block is an alarm block, mainly notifying the SenseCraft pl
 
 Configuration parameters are as follows:
 
-* **params**: Object containing device parameters.
-  * **silence\_duration**: Silence duration in seconds, here it is 60 seconds, indicating that the minimum reporting interval is 60s.
-  * **text**: Text for platform alarm notification.
+- **params**: Object containing device parameters.
+  - **silence\_duration**: Silence duration in seconds, here it is 60 seconds, indicating that the minimum reporting interval is 60s.
+  - **text**: Text for platform alarm notification.
 
 Terminal connection description:
 
@@ -890,8 +890,8 @@ The binary data packet format is as follows:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/api.png" style={{width:800, height:'auto'}}/></div>
 
-
 Fields:
+
 - Packet Magic Header - Packet header, 5 bytes "SEEED"
 - Prompt Str Len - Prompt string length
 - Prompt Str - Prompt string or alarm text. When the `text` parameter is set, it is a copy of the `text` parameter. If the `text` parameter is not set, it will be automatically filled with a short text describing the task purpose (generated by the cloud service's task compilation interface).
@@ -959,13 +959,13 @@ The http alarm block is an alarm block, which mainly implements forwarding alarm
 
 Configuration parameters are as follows:
 
-* **params**: An object containing device parameters.
-  * **silence_duration**: Silence time, in seconds.
-  * **time_en**: Enable timestamp, 1 means on, 0 means off.
-  * **text_en**: Enable alarm text, 1 means on, 0 means off.
-  * **image_en**: Enable image, 1 means on, 0 means off.
-  * **sensor_en**: Enable sensor, 1 means on, 0 means off.
-  * **text**: Alarm text.
+- **params**: An object containing device parameters.
+  - **silence_duration**: Silence time, in seconds.
+  - **time_en**: Enable timestamp, 1 means on, 0 means off.
+  - **text_en**: Enable alarm text, 1 means on, 0 means off.
+  - **image_en**: Enable image, 1 means on, 0 means off.
+  - **sensor_en**: Enable sensor, 1 means on, 0 means off.
+  - **text**: Alarm text.
   
 Terminal connection description:
 
@@ -991,7 +991,6 @@ Terminal connection description:
   </tbody>
 </table>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -1005,5 +1004,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

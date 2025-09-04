@@ -12,8 +12,6 @@ last_update:
 ---
 
 
-
-
 <div className="table-center">
   <video width="730" height="500" controls autoPlay muted>
     <source
@@ -29,21 +27,17 @@ last_update:
     </a>
 </div>
 
-
-
 SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, powered by dual MCUs, the ESP32 and RP2040, and supports Wi-Fi, BLE, and LoRa®. It is an open-source, powerful IoT development platform.
-
 
 ## Introduction
 
 ### Feature
 
-
-* **Supports Meshtastic:** Pre-flashed with Meshtastic firmware, it is ready to work once powered on. You can also upgrade the firmware using Meshtastic Flasher.<br/>
-* **Dual MCUs and Rich GPIOs:** Equipped with powerful ESP32S3 and RP2040 dual MCUs and over 400 Grove-compatible GPIOs for flexible expansion options.<br/>
-* **Local LoRa® Hub for IoT Connectivity:** Integrated with the Semtech SX1262 LoRa® chip, the device can be converted to a LoRaWAN® Single-Channel Gatewa via tutorial. Alternatively, connect LoRa® devices to popular IoT platforms like Matter via Wi-Fi.<br/>
-* **Fully Open Source Platform:** Leverage the extensive ESP32 and Raspberry Pi open-source ecosystem for infinite application possibilities.<br/>
-* **Suitable for Multiple Application Scenarios:** Can be used as a Meshtastic desktop node or a car node, as well as a LoRaWAN® Single-Channel Gateway.
+- **Supports Meshtastic:** Pre-flashed with Meshtastic firmware, it is ready to work once powered on. You can also upgrade the firmware using Meshtastic Flasher.<br/>
+- **Dual MCUs and Rich GPIOs:** Equipped with powerful ESP32S3 and RP2040 dual MCUs and over 400 Grove-compatible GPIOs for flexible expansion options.<br/>
+- **Local LoRa® Hub for IoT Connectivity:** Integrated with the Semtech SX1262 LoRa® chip, the device can be converted to a LoRaWAN® Single-Channel Gatewa via tutorial. Alternatively, connect LoRa® devices to popular IoT platforms like Matter via Wi-Fi.<br/>
+- **Fully Open Source Platform:** Leverage the extensive ESP32 and Raspberry Pi open-source ecosystem for infinite application possibilities.<br/>
+- **Suitable for Multiple Application Scenarios:** Can be used as a Meshtastic desktop node or a car node, as well as a LoRaWAN® Single-Channel Gateway.
 
 ### Specification
 
@@ -63,13 +57,9 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 
 ### Hardware Overview
 
-
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/HO-114993532.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 ## Flash Firmware
-
 
 ### Flash Application Firmware
 
@@ -77,24 +67,17 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/55Sz8kHSyV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 Visit [Meshtastic Web Flasher](https://flasher.meshtastic.org/).
 
 Select the target device to `Seeed SenseCAP Indicator` and choose the latest firmware, then click `Flash`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/indicator-flash.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 Press and hold the button while plugging in the USB cable.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/press-button.png" alt="pir" width={400} height="auto" /></p>
 
-
-
 Enable the `Full Erase and Install`, and click `Erase Flash and Install`.
-
-
 
 There will show 2 ports, select the `USB serial port` and click `Connect`.
 
@@ -102,56 +85,37 @@ There will show 2 ports, select the `USB serial port` and click `Connect`.
 Please select the `USB Serial` one, not the INDICATOR RP2040.
 :::
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect11.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 ### Flash GPS Firmware(optional)
-
 
 The SenseCAP Indicator doesn't have a GPS built-in, to get the GPS location, a [Grove GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html) is required.<br/>
 Connect the GPS Module to the Grove port and then flash the GPS firmware.
 
-* **[GPS Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
+- **[GPS Firmware Download](https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/meshtastic_gps.ino.uf2)**
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-connect.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 Long press this internal button using a needle, then connect the device to your PC by the provided USB type-C cable, release the button once connected.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_56.png" alt="pir" width={600} height="auto" /></p>
 
-
 Download the `UF2` file and copy it to the `RPI-RP2` drive. Firmware should be flashed after the file is downloaded and the device reboots.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/disk.png" alt="pir" width={600} height="auto" /></p>
-
-
-
-
-
 
 ## Get Started
 
 Download `Meshtastic` App:
 
-* [IOS App](https://meshtastic.org/docs/category/apple-apps/)
-* [Android App](https://meshtastic.org/docs/category/android-app/)
-
-
+- [IOS App](https://meshtastic.org/docs/category/apple-apps/)
+- [Android App](https://meshtastic.org/docs/category/android-app/)
 
 ### Connect via App
 
-* Power on the device, the device page will display the mac address of the current device.
+- Power on the device, the device page will display the mac address of the current device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/device-name4.png" alt="pir" width={700} height="auto" /></p>
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -160,12 +124,11 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-* Select the target device on the Bluetooth panel.
+- Select the target device on the Bluetooth panel.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-
-* Enter the code and then click `Pair` to connect the device.
+- Enter the code and then click `Pair` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair111.png" alt="pir" width={800} height="auto" /></p>
 
@@ -173,55 +136,35 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android App">
 
-
-* Click `+` and choose the target device.
+- Click `+` and choose the target device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-
-* Enter the code(default code is `123456`) and then click `OK` to connect the device.
+- Enter the code(default code is `123456`) and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
-  
 </TabItem>
 </Tabs>
 
-
-
-
-
 ### Configure the Parameters
 
-
-
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
-
-
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 </TabItem>
 
 <TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
-
 </TabItem>
 </Tabs>
 
-
-
-
 **Region List**
-
-
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
@@ -229,14 +172,11 @@ In order to start communicating over the mesh, you must set your region. This se
 |US|United States|902\.0 - 928.0|100|30|
 |EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
 
-
 Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
-
 
 :::info
 **EU_868** has to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
-
 
 Now that you have set the LoRa region on your device, you can continue with configuring any [LoRa Configs](https://meshtastic.org/docs/configuration/radio/lora/) to suit your needs.
 
@@ -248,26 +188,17 @@ The keyboard usage of version 2.5.xx(The factory firmware is v2.5.11.) and versi
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-ve.png" alt="pir" width={400} height="auto" /></p>
 
-
 #### For version2.5.xx
-
-
 
 <div class="table-center">
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-
 #### For version2.6 +
-
-
 
 <div class="table-center">
 <iframe width="500" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/keyboard-usage2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
-
-
-
 
 ### FAQ
 
@@ -275,23 +206,14 @@ The keyboard usage of version 2.5.xx(The factory firmware is v2.5.11.) and versi
 
 RP2040 has not been developed yet, so the `buzzer`/`SD card`/`map` functions are not available yet. We are working with Meshtastic to optimize it.
 
-
-
 #### Role Selection
 
 :::caution
 DO NOT select the `Repeater` role, which will cause the device to repeatedly reboot.
 :::
 
-
-
-
 #### GPS Module
-
 
 If you didn't connect the GPS module, please disable the GPS function in the `Meshtastic` App, otherwise the device will keep trying to find the GPS module, which will cause the device to take a long time to boot up the screen.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/gps-module.png" alt="pir" width={600} height="auto" /></p>
-
-
-

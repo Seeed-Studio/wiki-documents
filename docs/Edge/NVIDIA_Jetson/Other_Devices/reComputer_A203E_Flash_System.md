@@ -48,13 +48,13 @@ we can easily do this by using the **Linux Terminal**. For people who have Linux
 - Ubuntu 18.04 OS on the Host Computer
 
 !!!note
-	In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
+ In this tutorial, we will use Ubuntu 18.04 LTS based system to complete the installation.
 
 ### Hardware Preparation (Force Recovery Mode)
 
-* Host computer with Ubuntu 18.04 OS
-* a Micro-USB data Cable
-* Power adptor for A203E
+- Host computer with Ubuntu 18.04 OS
+- a Micro-USB data Cable
+- Power adptor for A203E
 
 Before we can move on to the installation steps, we need to make sure that the board is in the force recovery mode
 
@@ -70,8 +70,6 @@ TO put the A203E in Force Recovery Mode, please make sure A203E is powered off.
 
 **Step 4.** **Press and Hold** the **Reset Key** first, and then **Press and Hold** the **Power Key**, wait for the LED to be light up, then **Release** the **Power Key**, now **Wait for 2 second** and **Release** the **Reset Key**.
 
-
-
 **Step 5.** On the Linux host PC screen, we can right click the mouse to open a Terminal and enter the command `lsusb`. When the returned content has the `NVidia Corp.` in it, it means that your A203 Carrier Board is in force recovery mode and you can proceed to the subsequent operations.
 
 The ID depends on the modules on the carrier board and the information show as below:
@@ -80,13 +78,11 @@ The ID depends on the modules on the carrier board and the information show as b
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/A203E/NX_lsusb.png" /></div>
 
-
 ## Flashing JetPack OS via Command Line
 
 Here is the workflow of using Command Line scrpit to flash Jetpack OS:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17_3.png" /></div>
-
 
 ### Step 1. Download the proper NVIDIA Linux Driver Package
 
@@ -94,11 +90,9 @@ On the **Linux host PC**, we need to open a browser and go the <a href="https://
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A203E/select_35_1.png" /></div>
 
-
 Once you find the proper version, click to go to the downloaded page. Find and click the "L4T Driver Package (BSP)" and "Sample Root Filesystem" to download the driver files. The names of the files are like `Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2` and `Jetson-210_Linux_Rxx.x.x_aarch64.tbz2`.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A203E/download_files.png" /></div>
-
 
 As the example, we choose the NVIDIA L4T 35.1.0 version, The names of the files should be:
 
@@ -110,17 +104,17 @@ As the example, we choose the NVIDIA L4T 35.1.0 version, The names of the files 
 On the Linux Host PC, Please open a ``Terminal`` and use the command line below to unzip the files and assemble the rootfs:
 
 ```sh
-$ tar xf ${L4T_RELEASE_PACKAGE}
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
-$ cd ..
-$ sudo ./apply_binaries.sh
+tar xf ${L4T_RELEASE_PACKAGE}
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
+cd ..
+sudo ./apply_binaries.sh
 ```
 
 !!!Note
     `${XXX_XX_XXX}` is where you put the names of the files.
 
-* For example, the downloaded files are stored in `~/Downloads/`, please open the ``Terminal`` on your Ubuntu Host Computer and enter following commands:
+- For example, the downloaded files are stored in `~/Downloads/`, please open the ``Terminal`` on your Ubuntu Host Computer and enter following commands:
 
 ```bash
 cd ~/Downlands/
@@ -158,17 +152,16 @@ sudo ./flash.sh -r jetson-xavier-nx-devkit-emmc mmcblk0p1
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/19.png" /></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

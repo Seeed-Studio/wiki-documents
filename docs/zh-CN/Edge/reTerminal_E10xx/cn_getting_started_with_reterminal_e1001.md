@@ -59,7 +59,7 @@ reTerminal E1001 硬件包括：
 **步骤 2.** （可选）如果您计划将设备用作数字相框或需要额外存储空间，请插入 microSD 卡。
 
 :::note
-reTerminal E10xx 仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
+reTerminal E Series ePaper Display 仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
 :::
 
 **步骤 3.** 更新固件以确保您的设备运行最新版本：
@@ -123,7 +123,7 @@ reTerminal E10xx 仅支持最大 64GB 的 Fat32 格式 MicroSD 卡。
 **步骤 3.** 选择您的本地 Wi-Fi 网络并输入密码，然后点击"连接"。
 
 :::note
-reTerminal E10xx 系列仅支持 2.4GHz WiFi 网络，不支持 5GHz 或其他频段。
+reTerminal E Series ePaper Display 系列仅支持 2.4GHz WiFi 网络，不支持 5GHz 或其他频段。
 :::
 
 **步骤 4.** 连接成功后，设备将发出确认提示音并显示配对码屏幕。

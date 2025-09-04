@@ -17,8 +17,6 @@ Arch V1.1 is an mbed enabled development board with Arduino form factor and Grov
 
 [![enter image description here](https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png)](https://www.seeedstudio.com/depot/seeeduino-arch-p-1561.html)
 
-
-
 Version Tracker
 -------
 
@@ -59,19 +57,19 @@ Version Tracker
 Features
 -------
 
--   mbed enabled
-    -   online development tools
-    -   easy to use C/C++ SDK
-    -   lots of published libraries, projects
+- mbed enabled
+  - online development tools
+  - easy to use C/C++ SDK
+  - lots of published libraries, projects
 
--   Arduino form factor, three Grove connectors
-    -   available with 3.3V compatible shields
-    -   a large number of grove modules
--   Drag-n-drop programming
--   NXP LPC11U24 MCU
-    -   Low power ARM Cortex-M0 Core
-    -   48MHz, 32KB Flash, 8KB RAM, 4KB EEPROM
-    -   USB Device, 2xSPI, UART, I2C
+- Arduino form factor, three Grove connectors
+  - available with 3.3V compatible shields
+  - a large number of grove modules
+- Drag-n-drop programming
+- NXP LPC11U24 MCU
+  - Low power ARM Cortex-M0 Core
+  - 48MHz, 32KB Flash, 8KB RAM, 4KB EEPROM
+  - USB Device, 2xSPI, UART, I2C
 
 Specifications
 -------------
@@ -89,7 +87,6 @@ Specifications
 | I/O pins                      | 40       |
 | Digital I/O Max input voltage | 5.0V     |
 
-
 Hardware Overview
 ------
 
@@ -97,17 +94,15 @@ Hardware Overview
 
 There is [a monochrome version](https://seeed-studio.github.io/Artwork/images/arch_v1.1_pinout_mono.png) for you to print.
 
-
-
 Get Started
 -----------
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Arch_V1.1/img/Get_started_with_arch.png)
 
-1.  Click [this link](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeeduino-Arch) to login or signup to mbed
-2.  Import the mbed\_blinky program
-3.  Coding! Then you can compile the code and download the output binary.
-4.  Now connect your Arch board to your pc and long press the reset button, it will automatically appear as a USB driver named CRP DISABLD. Go to the CRP DISABLD, delete the firmware file and copy the download binary file to CRP DISABLD. Quick press the reset button to run the new binary.
+1. Click [this link](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeeduino-Arch) to login or signup to mbed
+2. Import the mbed\_blinky program
+3. Coding! Then you can compile the code and download the output binary.
+4. Now connect your Arch board to your pc and long press the reset button, it will automatically appear as a USB driver named CRP DISABLD. Go to the CRP DISABLD, delete the firmware file and copy the download binary file to CRP DISABLD. Quick press the reset button to run the new binary.
 
 You can change the code as following and try again.
 
@@ -132,18 +127,17 @@ Arch does not have an mbed interface. It uses USB In-System-Programming(ISP) to 
 
 To enter the USB ISP mode, connect the Arch with your computer and long press its button, and then a disk named "CRP DISABLD" will appear.
 
--   On Windows
-    1.  delete firmware.bin in the "CRP DISABLD" disk.
-    2.  copy a new firmware into the disk.
+- On Windows
+    1. delete firmware.bin in the "CRP DISABLD" disk.
+    2. copy a new firmware into the disk.
 
--   On Linux
-    1.  if the disk is not mounted, mount the disk at /path/to/mount
-    2.  **dd if=new_firmware.bin of=/path/to/mount/firmware.bin conv=notrunc**
+- On Linux
+    1. if the disk is not mounted, mount the disk at /path/to/mount
+    2. **dd if=new_firmware.bin of=/path/to/mount/firmware.bin conv=notrunc**
 
--   On Mac you will need to use Terminal to run the following script to copy you're .bin file to your Arch
+- On Mac you will need to use Terminal to run the following script to copy you're .bin file to your Arch
 
-    1.  **dd if=new_firmware.bin of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
-
+    1. **dd if=new_firmware.bin of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
 
 If you are so inclined, you can also create an **Automator** application to support drag-and-drop of the file to your board. Just create a "*Run Shell Script*" with the following command:
 
@@ -162,15 +156,15 @@ Quick press the button to run the new firmware.
 Applications
 ------------
 
--   [Use Seeeduino Arch as a debug adapter to debug another Seeeduino Arch](https://mbed.org/users/yihui/notebook/debug-seeeduino-arch-using-cmsis-dap/)
--   [Sense environment](https://mbed.org/users/yihui/notebook/sense-environment/)
--   [Play with Grove RTC](https://mbed.org/cookbook/seeed-grove-RTC)
--   [Play with Grove - Ultrasonic ranger](https://mbed.org/cookbook/Seeed-grove-ultrasonic-ranger)
+- [Use Seeeduino Arch as a debug adapter to debug another Seeeduino Arch](https://mbed.org/users/yihui/notebook/debug-seeeduino-arch-using-cmsis-dap/)
+- [Sense environment](https://mbed.org/users/yihui/notebook/sense-environment/)
+- [Play with Grove RTC](https://mbed.org/cookbook/seeed-grove-RTC)
+- [Play with Grove - Ultrasonic ranger](https://mbed.org/cookbook/Seeed-grove-ultrasonic-ranger)
 
 Resources
 ---------
 
--   [Schematics of Arch V1.1](https://upverter.com/yihui/35f45e266de84e9c/Arch/)
+- [Schematics of Arch V1.1](https://upverter.com/yihui/35f45e266de84e9c/Arch/)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Arch_V1.1 -->
 
@@ -179,11 +173,11 @@ Resources
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

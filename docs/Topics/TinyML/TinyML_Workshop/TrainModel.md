@@ -14,7 +14,7 @@ last_update:
 
 ## SenseCraft AI Platform
 
-Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution. 
+Seeed Studio [SenseCraft AI Platform](https://sensecraft.seeed.cc/ai/#/model) is a browser-based AI Solution.
 
 It empowers users to effortlessly train and deploy their own models onto their edge devices, providing a seamless and user-friendly experience, allowing you to train and deploy your own models directly onto your edge devices with **just a few clicks**.
 
@@ -32,7 +32,6 @@ First, we need to properly connect the XIAO ESP32S3 Sense expansion board to the
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-
 #### Step 2. Connecting the XIAO to your PC
 
 Connect the XIAO to your PC using a data cable with data transfer function.
@@ -42,21 +41,18 @@ Connect the XIAO to your PC using a data cable with data transfer function.
 Click the button below to go to the SenseCraft AI Platform homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI Platform</font></span></strong></a>
+ <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/home" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI Platform</font></span></strong></a>
 </div><br />
-
 
 #### step 4. Start training the model
 
 After entering the SenseCraft AI platform homepage, we first click `Training`, then select `Classification Type`, name your classes, and finally choose `XIAO ESP32S3 Sense`.
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/trainingmodel/1.png" style={{width:800, height:'auto'}}/></div>
 
 Then, based on your requirements for classification, refer to your class, and click `Hold to Record`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/trainingmodel/2.png" style={{width:800, height:'auto'}}/></div>
-
 
 This time, I chose the requirement for gesture recognition to classify "12345."
 
@@ -67,7 +63,6 @@ This time, I chose the requirement for gesture recognition to classify "12345."
 Capture pictures: Each one over 10 images will be fine, more are better.
 
 :::
-
 
 After data collection is complete, we select `XIAO ESP32S3 Sense` in the Training section and click `Start Training`.
 
@@ -89,7 +84,6 @@ After successfully deploying to the device, you will see the results directly:
 
 You have successfully trained your first ML model!
 
-
 :::info
 
 If you have more time, you can try using [the `Output` operation you've learned before](https://wiki.seeedstudio.com/sscma/#2-sensecraft-triggers---do-a-simple-feedback-action).
@@ -98,9 +92,8 @@ If you have more time, you can try using [the `Output` operation you've learned 
 
 :::
 
-
-
 # ToDo
+
 - [ ] Train and deploy models using the SenseCraft AI platform.
 - [ ] Setup a Trigger and **Control LED** for your trained models with SenseCraft AI Platform.
 
@@ -143,7 +136,6 @@ to see whether it is been activited:
 
 ![image](https://fabacademy.org/2024/labs/chaihuo/students/matthew-yu/assets/images/mqtt_docusaurus_xiao_1-3919de85499db74b41cf3057bcdfe6bd.png)
 
-
 :::info
 Testing:
 
@@ -176,11 +168,12 @@ On the SenseCraft AI Platform, you can refer to the "Configuration" page:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/xiao_mqtt_1.png" style={{width:800, height:'auto'}}/></div>
 
 :::info
+
 - SSID: (Wi-Fi name same as your MQTT device)
 - Password: (Wi-Fi passowrd as your MQTT device)
 - Encryption: AUTO
 - MQTT: Yes
-- Host: (IP address from your MQTT device) 
+- Host: (IP address from your MQTT device)
 - Port: 1883
 
 In this exaple, the MQTT device is the reComputer like above.

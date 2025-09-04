@@ -21,26 +21,28 @@ With its modular design, we can divide it into two parts - CMSIS DAP interface p
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeed-Tiny-BLE-BLE-%2B-6DOF-Mbed-Platform-p-2268.html)
 
-##    Features
+## Features
+
 ---
-*   nRF51822: ARM Cortex-M0 + 2.4GHz radio (BLE or ANT+)
+- nRF51822: ARM Cortex-M0 + 2.4GHz radio (BLE or ANT+)
 
-*   MPU-6050:3d accelemeter + 3d gyroscope
+- MPU-6050:3d accelemeter + 3d gyroscope
 
-*   LPC11U35FHI33:CMSIS DAP
+- LPC11U35FHI33:CMSIS DAP
 
-*   Current measurement
+- Current measurement
 
-*   CN3065:battery charge port on USB part
+- CN3065:battery charge port on USB part
 
-*   Power supply:USB/battery(3.5-4.2V)
-*   Output voltage:3.3V
+- Power supply:USB/battery(3.5-4.2V)
+- Output voltage:3.3V
 
-*   4 I/Os, all can be used as analog input, digital input/output, I2C, SPI or UART
+- 4 I/Os, all can be used as analog input, digital input/output, I2C, SPI or UART
 
-*   VCC output control
+- VCC output control
 
-##   Specification
+## Specification
+
 ---
 <table>
 <tr>
@@ -61,19 +63,21 @@ With its modular design, we can divide it into two parts - CMSIS DAP interface p
 </tr>
 </table>
 
-##   Get Started
+## Get Started
+
 ---
 ![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Get_started_with_mbed.png)
 
-1.  Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Tiny-BLE) to **login or signup to mbed**
+1. Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Tiny-BLE) to **login or signup to mbed**
 
-2.  [Import the mbed_blinky program](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Tiny-BLE) and change the code of main.cpp as following.
+2. [Import the mbed_blinky program](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Tiny-BLE) and change the code of main.cpp as following.
 
-3.  Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
+3. Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
 
-4.  Drag-n-drop the downloaded hex file into the MBED disk
+4. Drag-n-drop the downloaded hex file into the MBED disk
 
-5.  A blue LED will be blinking.
+5. A blue LED will be blinking.
+
 ```
 #include "mbed.h"
 
@@ -92,66 +96,64 @@ int main()
 
 [Seeed_Tiny_BLE_Get_Started program](http://developer.mbed.org/teams/Seeed/code/Seeed_Tiny_BLE_Get_Started/) includes detecting motions, button and battery level. It's a good reference to get started.
 
-###   Debug
+### Debug
 
 To enable SWD debug and get debug message through USB Virtual serial, please install [the driver from mbed](https://developer.mbed.org/handbook/Windows-serial-configuration).
 
-###   Energy Monitoring
+### Energy Monitoring
 
 Changing the baud rate of the USB virtual serial port to 4000000+ will trigger current measurement. We designed a tool - Tiny BLE MONITOR for you to get the power consumption information easily.
 
-*   [Tiny BLE MONITOR for Windows](http://tangram.qiniudn.com/ble_smurfs_monitor_v0.1.exe)
+- [Tiny BLE MONITOR for Windows](http://tangram.qiniudn.com/ble_smurfs_monitor_v0.1.exe)
 
-*   [Tiny BLE MONITOR for Linux/Mac OS](https://github.com/Seeed-Studio/Tiny_BLE/tree/master/utils), additional requirement: pyqtgraph
+- [Tiny BLE MONITOR for Linux/Mac OS](https://github.com/Seeed-Studio/Tiny_BLE/tree/master/utils), additional requirement: pyqtgraph
 
 ![](https://files.seeedstudio.com/wiki/Tiny_BLE/img/Ble_smurfs_monitor_preview.png)
 
-###   Update or Restore Firmware
+### Update or Restore Firmware
 
 The latest firmware version for the Arch BLE is v0221 built at Feb 06 2015. To check your firmware version and built date, open the MBED.HTM or DETAILS.TXT of your MBED disk in a text editor.
 
 Changelog:
 
-*   2015-02-07 fix Mac OS X 10.10 issue
+- 2015-02-07 fix Mac OS X 10.10 issue
 
 Firmware:
 
-*   [lastest interface firmware v221 2015-02-06](https://github.com/Seeed-Studio/Tiny_BLE/raw/master/seeed_tiny_ble_interface_latest.bin)
+- [lastest interface firmware v221 2015-02-06](https://github.com/Seeed-Studio/Tiny_BLE/raw/master/seeed_tiny_ble_interface_latest.bin)
 
-###   Over-The-Air
+### Over-The-Air
 
 We customized a DFU bootloader for you to update your application through Over-The-Air (OTA). It is on [github.com/Seeed-Studio/nrf51_dfu_bootloader](https://github.com/Seeed-Studio/nrf51_dfu_bootloader). See also [mbed.org FOTA](https://developer.mbed.org/teams/Bluetooth-Low-Energy/wiki/Firmware-Over-the-Air-FOTA-Updates)
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resource
 
-
-##  Resource
 ---
-*   [Tiny BLE V1.0 eagle file](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0.zip)
+- [Tiny BLE V1.0 eagle file](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0.zip)
 
-*   [Tiny BLE V1.0.pdf](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0_PDF.pdf)
+- [Tiny BLE V1.0.pdf](https://files.seeedstudio.com/wiki/Tiny_BLE/res/BLE_Smurfs_v1.0_PDF.pdf)
 
-*   [Resources on github](https://github.com/Seeed-Studio/Tiny_BLE)
+- [Resources on github](https://github.com/Seeed-Studio/Tiny_BLE)
 
-*   [frizting part](https://github.com/Seeed-Studio/Tiny_BLE/blob/master/tiny_ble.fzpz)
+- [frizting part](https://github.com/Seeed-Studio/Tiny_BLE/blob/master/tiny_ble.fzpz)
 
-*   [MPU6050 library](http://developer.mbed.org/teams/Seeed/code/eMPL_MPU6050/)
+- [MPU6050 library](http://developer.mbed.org/teams/Seeed/code/eMPL_MPU6050/)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

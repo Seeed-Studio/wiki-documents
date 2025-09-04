@@ -16,10 +16,9 @@ last_update:
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/wPi-XjeJPNw?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen. 
+We are pleased to bring you today a brand new project using the XIAO ESP32S3 Sense and Round Display for XIAO! The project aims to first build a speech recognition system using the XIAO ESP32S3 Sense's microphone and Google Cloud's speech-to-text service. The recognized speech text is then used to call OpenAI's interface to ask questions to ChatGPT and return answers. Finally, we display the recognised speech and the content of the answers on screen.
 
 This is our intelligent "XIAO" assistant!
-
 
 Let's take a look at some of the general steps required to complete this project.
 
@@ -28,7 +27,6 @@ Let's take a look at some of the general steps required to complete this project
 - [Upload XIAO ESP32S3 Sense recorded sound files to Google Cloud for recognition](#upload-xiao-esp32s3-sense-recorded-sound-files-to-google-cloud-for-recognition)
 - [Deploy ChatGPT on XIAO ESP32S3 Sense](#deploy-chatgpt-on-xiao-esp32s3-sense)
 - [Design of screen display content & Integration of programs](#design-of-screen-display-content--integration-of-programs)
-
 
 The general framework structure can be seen in the diagram below.
 
@@ -197,13 +195,11 @@ In the meantime, you can copy the JSON file we prepared in **step 5** to the **N
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/19.png" style={{width:600, height:'auto'}}/></div>
 
-
 ### Step 7. Set your authentication environment variable
 
 In order to set your **GOOGLE_APPLICATION_CREDENTIALS**, you must have a service account associated with your project and have access to the service account's JSON key.
 
 Provide authentication credentials to your application code by setting the environment variable **GOOGLE_APPLICATION_CREDENTIALS**.
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -235,13 +231,11 @@ Replace **KEY_PATH** with the path of the JSON file that contains your service a
 
 </TabItem>
 
-
 <TabItem value="MacOS or Linux" label="MacOS or Linux">
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="KEY_PATH"
 ```
-
 
 Replace **KEY_PATH** with the path of the JSON file that contains your service account key.
 
@@ -310,8 +304,6 @@ Once the listening has started, just leave the window open and the service will 
 
 Because the recording files after XIAO need to be uploaded to Google Cloud Services via the host's port number, we need to know the IP address of your computer host.
 
-
-
 <Tabs>
 <TabItem value="Windows" label="Windows">
 
@@ -341,7 +333,6 @@ Please make a note of your IP address as we will need to use it later.
 In the project folder **[XIAOESP32S3-RECORD-UPLOAD](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-RECORD-UPLOAD/XIAOESP32S3-RECORD-UPLOAD.ino)** we have prepared the program for the examples in this section.
 
 <details>
-
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -564,7 +555,6 @@ void uploadFile(){
 </details>
 
 <details>
-
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -802,7 +792,6 @@ Once you have changed the program to suit your needs and uploaded it you can tur
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/15.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Deploy ChatGPT on XIAO ESP32S3 Sense
 
 Next we increase the difficulty. Continue adding ChatGPT calls to the code.
@@ -812,7 +801,6 @@ Next we increase the difficulty. Continue adding ChatGPT calls to the code.
 In the project folder **[XIAOESP32S3-SPEECH-TO-CHATGPT](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-TO-CHATGPT/XIAOESP32S3-SPEECH-TO-CHATGPT.ino)** we have prepared the program for the examples in this section.
 
 <details>
-
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1082,7 +1070,6 @@ bool uploadFile(){
 </details>
 
 <details>
-
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1366,7 +1353,6 @@ Once modified, upload the program and turn on the serial monitor. After recordin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/16.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Design of screen display content & Integration of programs
 
 Finally, we add a little more fancy. Instead of using a serial monitor, which is a less suitable interface for displaying effects, we have used a touch screen for the touch and click function.
@@ -1390,7 +1376,6 @@ We recommend you to use the **v1.2.3** version of SquareLine Studio. After testi
 The final complete project code is in the **[XIAOESP32S3-SPEECH-CHATGPT-COMPLETE](https://github.com/limengdu/XIAO-ESP32S3Sense-Speech2ChatGPT/blob/main/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE/XIAOESP32S3-SPEECH-CHATGPT-COMPLETE.ino)** folder.
 
 <details>
-
 <summary>If your ESP32 version is 2.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -1805,7 +1790,6 @@ void wifiConnect(void *pvParameters){
 </details>
 
 <details>
-
 <summary>If your ESP32 version is 3.0.x. Click here to preview the full program</summary>
 
 ```cpp
@@ -2233,22 +2217,16 @@ Once you have uploaded the program and clicked on the screen, the recording task
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3sense-speech2chatgpt/22.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-

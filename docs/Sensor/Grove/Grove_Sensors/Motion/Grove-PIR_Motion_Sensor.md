@@ -28,21 +28,21 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
+
 ## Specification
 
-|Parameter	|Value/Range
+|Parameter |Value/Range
 |---|---|
-|Operating Voltage|	3V–5V
-|Operating Current(VCC = 3V)|	100uA
-|Operating Current(VCC = 5V)|	150uA
-|Measuring Range	|0.1 - 6m
-|Default detecting distance|	3m
-|Holding Time	|1 - 25s
-|Working Wave Length	|7 - 14um
-|Detecting Angle|	120 degrees
+|Operating Voltage| 3V–5V
+|Operating Current(VCC = 3V)| 100uA
+|Operating Current(VCC = 5V)| 150uA
+|Measuring Range |0.1 - 6m
+|Default detecting distance| 3m
+|Holding Time |1 - 25s
+|Working Wave Length |7 - 14um
+|Detecting Angle| 120 degrees
 
 ## Platforms Supported
-
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -50,18 +50,20 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
+
 ## Getting Started
 
 :::note
     If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 ### Play With Arduino
 
 #### Hardware
-
 
 - **Step 1.** Prepare the below stuffs:
 
@@ -70,20 +72,19 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Grove%20-%20PIR%20Motion%20Sensor_s.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get One Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get One Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|[Get One Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|
 
-
 - **Step 2.** Connect Grove - PIR Motion Sensor to port **D2** of Grove-Base Shield.
 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/connect_arduino.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/connect_arduino.jpg" alt="pir" width={600} height="auto" /></p>
 
 :::note
-	If we don't have Grove Base Shield, We also can directly connect Grove-PIR Motion Sensor to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connect Grove-PIR Motion Sensor to Seeeduino as below.
 :::
+
 | Seeeduino       | Grove - PIR Motion Sensor |
 |---------------|-------------------------|
 | 5V           | Red                     |
@@ -91,12 +92,9 @@ This sensor allows you to sense motion, usually human movement in its range. Sim
 | Not Conencted | White                   |
 | D2            | Yellow                  |
 
-
-
 #### Software
 
 - Copy the code below into Arduino IDE and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Upload_Code/).
-
 
 ```c
 /*
@@ -126,7 +124,6 @@ void loop()
 }
 
 ```
-
 
 :::note
     The detecting distance and holding time can be adjusted by adding two extra potentiometers on board. For the details please refer to the V1.2 Eagle below. The module can also be set as re-triggerable or un-retriggerable by changing the jumper hat.
@@ -168,6 +165,7 @@ Upload the program to your Arduino/Seeeduino.
 :::success
     When the code finishes uploaded, the LED will goes on when people is coming.
 :::
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -179,15 +177,12 @@ Upload the program to your Arduino/Seeeduino.
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Grove%20-%20PIR%20Motion%20Sensor_s.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
-
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect the PIR motion sensor to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Motion_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Motion_Hat.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 :::note
     For step 3 you are able to connect the PIR motion sensor to **any GPIO Port** but make sure you change the command with the corresponding port number.
@@ -196,7 +191,7 @@ Upload the program to your Arduino/Seeeduino.
 #### Software
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -273,6 +268,7 @@ if __name__ == '__main__':
 :::success
     If everything goes well, you will be able to see the following result
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_mini_pir_motion_sensor.py 12
@@ -290,9 +286,6 @@ KeyboardInterrupt
 
 You can quit this program by simply press ++ctrl+c++.
 
-
-
-
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
 #### Hardware
@@ -304,19 +297,16 @@ You can quit this program by simply press ++ctrl+c++.
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Ultrasonic_Ranger/img/Grovepi%2B.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Grove%20-%20PIR%20Motion%20Sensor_s.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get One Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get One Now](https://www.seeedstudio.com/GrovePi%2B-p-2241.html)|[Get One Now](https://www.seeedstudio.com/Grove-PIR-Motion-Sensor-p-802.html)|
 
-
 - **Step 2.** Plug the GrovePi_Plus into Raspberry.
 
 - **Step 3.** Connect the sensor to **D8** port of GrovePi_Plus.
 
 - **Step 4.** Connect the Raspberry to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/connect_pi.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/connect_pi.jpg" alt="pir" width={600} height="auto" /></p>
 
 #### Software
-
 
 - **Step 1.** Follow [Setting Software](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/setting-software/) to configure the development environment.
 
@@ -331,6 +321,7 @@ You can quit this program by simply press ++ctrl+c++.
 :::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
+
 - **Step 3.** Git clone the Github repository.
 
 ```
@@ -339,7 +330,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 4.** Run below commands to use the PIR Motion Sensor to monitor the movement of people.
+- **Step 4.** Run below commands to use the PIR Motion Sensor to monitor the movement of people.
 
 ```
 cd ~/GrovePi/Software/Python
@@ -401,7 +392,7 @@ Motion Detected
 
 **Q1: How to make the distance adjustable?**
 
-A1: R2: used to adjust the detecting distance(the AMP coefficient, 2MΩ). R6: used to adjust the holding time(the trigger duty, 100KΩ). 
+A1: R2: used to adjust the detecting distance(the AMP coefficient, 2MΩ). R6: used to adjust the holding time(the trigger duty, 100KΩ).
 
 The detecting distance can be adjusted from 6 meters to only several centimeters. If the potentiometer is set to one end, the module will be too sensitive to be triggered by the atmosphere even there is no people moving before it. The holding time can also be adjusted by the Delay_time potentiometer, the value is about from  25s to 1s.
 
@@ -413,17 +404,12 @@ If R2 and R6 are soldered, please make sure R13 and R14 are empty.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Resistor.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/img/Resistor.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/res/Grove%20PIR%20Motion%20Sensor_v1_2.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 ## Resources
-
 
 - **[Eagle]** [Grove - PIR Motion Sensor Eagle File v1.2](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/res/Grove%20PIR%20Motion%20Sensor_v1_2.zip)
 - **[PDF]** [Grove - PIR Motion Sensor v1.2 Schematics](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/resources/Grove_PIR_Sensor_v1.2.pdf)
@@ -433,7 +419,6 @@ If R2 and R6 are soldered, please make sure R13 and R14 are empty.
 - **[Datasheet]** [Fresnel lens 8120 Datasheet](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/resources/Fresnel_lens_8120.pdf)
 - **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove_PIR_Motion_Sensor/res/Grove_PIR_Motion_Sensor_CDC_File.zip)
 
-
 ## Projects
 
 **Burglar Alarm with PIR Motion Sensor**: This article explains Burglar Alarms with a PIR Motion Sensor.
@@ -441,14 +426,15 @@ If R2 and R6 are soldered, please make sure R13 and R14 are empty.
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/pooja_baraskar/burglar-alarm-with-pir-motion-sensor-964c42/embed' width='350'></iframe>
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

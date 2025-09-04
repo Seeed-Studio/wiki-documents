@@ -17,13 +17,11 @@ no_comments: false # for Disqus
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/zoro_im_kitbox.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The BBC micro:bit is a pocket-sized computer that can easily realize your creativity without much electrical and coding knowledge. There are numerous possibility of creation you can dig out by micro:bit, from robots to musical instruments. However if you want to create more things, just 1 micro:bit is barely not enough, That’s why we introduce the Grove Inventor Kit for micro:bit to you.
 
 The Grove Inventor Kit for Micro:bit brings endless possibilities to your micro:bit. The core board in this kit is the Grove shield for micro:bit, with which you can use plenty of Grove modules including sensors, display, actuator to interact with micro:bit. If you never used and have no idea what grove is, here is the introduction of Grove. All you need to know is that with Grove, there is no need of soldering or jump wires any more. Your prototyping will be easier and much more convenient.
 
 We have already prepared 8 grove modules to let you get started with micro:bit. With these grove modules, you can measure distance and display it, use gesture to play different music, or make a smart guard for your desk or room. We have prepared all the necessary libraries(packages) for free download. If you are a beginner to micro:bit, don’t worry because we have also prepare 12 different project which can teach you step by step. If you are an advanced user, this kit will help you more creative project than others.
-
 
 :::note
 
@@ -38,17 +36,16 @@ The output voltage of micro:bit is around 3.0V, use microbit or AA battery to po
 
 ## Features
 
-  - Cool extension shield with rich and convenient peripherals;
-  - 10 well selected Grove modules for working with micro:bit;
-  - 12 awesome projects to let you get started quickly;
-  - Well documented instruction.
+- Cool extension shield with rich and convenient peripherals;
+- 10 well selected Grove modules for working with micro:bit;
+- 12 awesome projects to let you get started quickly;
+- Well documented instruction.
 
-
-##  Hardware Overview
+## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/first_im.jpg" alt="pir" width={600} height="auto" /></p>
 
-###  **Parts list**
+### **Parts list**
 
 <table align="center">
   <tbody>
@@ -110,31 +107,31 @@ The output voltage of micro:bit is around 3.0V, use microbit or AA battery to po
   </tr>
   </tbody></table>
 
-##  Getting Started
+## Getting Started
 
-###  Fundamentals with  Micro:bit
+### Fundamentals with  Micro:bit
 
-You need to know some essential knowledge if it is the first time that you get involved with Micro:bit. You can click [ **here** ](https://microbit.org/code/) to see more about Micro:bit.
+You need to know some essential knowledge if it is the first time that you get involved with Micro:bit. You can click [**here**](https://microbit.org/code/) to see more about Micro:bit.
 
 Micro:bit offers two type of editor - JavaScript Block Editor and Python Editor. JavaScript Block Editor support graphical programming, it's easy to learn. So this Tutorial is based on JavaScript Block Editor.
 
 Here are two simple steps before you enjoy our kit, after that we can start program.
 
-####  Step1.Open the Editor
+#### Step1.Open the Editor
 
 Please click to open the **[JavaScript Block Editor](https://makecode.microbit.org/)** , and you will see a graphical programming web.
 
+#### Step2.Add Grove Package
 
-####  Step2.Add Grove Package
-  - Click the gear in the top right corner > select **Add Package**
+- Click the gear in the top right corner > select **Add Package**
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-1.png" alt="pir" width={800} height="auto" /></p>
 
-  - Enter project URL: **github.com/seeed-studio/pxt-grove**
+- Enter project URL: **github.com/seeed-studio/pxt-grove**
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-2.png" alt="pir" width={800} height="auto" /></p>
 
-  - Now you can find **Grove**  in the toolbar.
+- Now you can find **Grove**  in the toolbar.
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/0-3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -143,10 +140,7 @@ Please click to open the **[JavaScript Block Editor](https://makecode.microbit.o
 The gesture sensor can recognize 9 different gestures, in this demo, you will learn how to display the recognized
 gesture name on micro:bit.
 
-
 #### Part list
-
-
 
 <table align="center">
   <tbody>
@@ -179,9 +173,9 @@ gesture name on micro:bit.
 
 #### Connection
 
-  - Plug the **micro:bit** into **Grove Shield for micro:bit**.
-  - Connect the Grove-Gesture to **I2C** Port of micro:bit via a Grove Universal 4 pin cable.
-  - Connect micro:bit to PC via a Micro-USB cable.
+- Plug the **micro:bit** into **Grove Shield for micro:bit**.
+- Connect the Grove-Gesture to **I2C** Port of micro:bit via a Grove Universal 4 pin cable.
+- Connect micro:bit to PC via a Micro-USB cable.
 
 :::warning
 
@@ -191,29 +185,29 @@ please make sure the LED Array is faced up when you plug the micro:bit, or you m
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/Gesture%20Recognition.png" alt="pir" width={600} height="auto" /></p>
 
-
 #### Software
-  - Step1:
+
+- Step1:
 
   Add On Gesture Block
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-1.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step2:
+- Step2:
 
   Select Right, so that the sensor can recognize when you move your hand from right to the left.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-2.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step3:
+- Step3:
 
   Add Basic block **show string** and embed it into the Gesture block.Then double click "Hello!", change it to "Right".
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-3.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step4:
+- Step4:
 
   Add "Left" and "Clockwise" the same way, and embed **show icon** into "Clockwise".
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/1-4.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step5:
+- Step5:
 
   When you finish all this above, rename the project "gesture". Then you can download the project to your board. Click **Download** in the Bottom left corner, download the file **microbit-gesture.hex** into the flash of MICROBIT.
 
@@ -266,46 +260,44 @@ display.
 
 #### Connection
 
-  - Plug the **micro:bit** into **Grove Shield for micro:bit**.
+- Plug the **micro:bit** into **Grove Shield for micro:bit**.
 
-:::warning 
+:::warning
 please make sure the LED Array is faced up when you plug the micro:bit, or you may damage the board.
 :::
 
-  - Connect the Grove-Ultrasonic Ranger to **P0/P14** Port of micro:bit via a Grove Universal 4 pin cable.
-  - Connect the Grove-4-Digit Display to **P1/P15** Port of micro:bit via a Grove Universal 4 pin cable.
-  - Connect micro:bit to PC via a Micro-USB cable.
+- Connect the Grove-Ultrasonic Ranger to **P0/P14** Port of micro:bit via a Grove Universal 4 pin cable.
+- Connect the Grove-4-Digit Display to **P1/P15** Port of micro:bit via a Grove Universal 4 pin cable.
+- Connect micro:bit to PC via a Micro-USB cable.
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/Ultrasonic_Meter.png" alt="pir" width={600} height="auto" /></p>
 
 #### software
 
-  - Step1:
+- Step1:
 
   Add basic block **on start**, then add variable blocks **set item to 0**, rename ‘items’ to ‘Display’. If you have successfully added the Grove package, replace “0”with Grove block 4-Digit Display at P1 and P15.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-1.png" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-2.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step2:
+- Step2:
 
   Add basic block forever, then add Grove block item show number 0, rename ‘item’ to ‘Display’, replace ‘0’ with Grove block Ultrasonic Sensor (in cm) at P0.
 
-  - Step3:
+- Step3:
 
   Add basic block pause (ms) (100).
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_kit_for_microbit/img/2-3.png" alt="pir" width={600} height="auto" /></p>
 
-  - Step4:
+- Step4:
 
   Rename the project "Ultrasonic Meter", download and enjoy.
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Bazzar_Attachment/103030195/202001587_Grove%20Shield%20for%20BBC%20microbit%20V1.2_eagle%20file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 ## Resources
 
@@ -326,11 +318,11 @@ please make sure the LED Array is faced up when you plug the micro:bit, or you m
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

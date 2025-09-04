@@ -2,40 +2,24 @@ import React, { useState, useEffect } from 'react';
 import { Button, message, Steps, theme, ConfigProvider, Image, Flex } from 'antd';
 import { useColorMode } from '@docusaurus/theme-common';
 import { useThemeStore } from '@site/src/stores/useJetsonStore';
-const steps = [
-  {
-    title: 'Configure Jetson 24pin CSI Connector',
-    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
-  },
-  {
-    title: 'Configure for compatible hardware',
-    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Select_Compatiable_Hardware.webp",
-  },
-  {
-    title: 'Select the Overlay',
-    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Select_Orbbec_Overlay.webp",
-  },
-  {
-    title: 'Save pin changes',
-    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_Pin_Changes.webp",
-  },
-  {
-    title: 'Save and reboot to reconfigure pins',
-    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_and_Reboot.webp",
-  },
-  {
-    title: 'Press any key to reboot',
-    src: 'https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Reboot_Prompt.webp'
-  }
-];
-const JetsonIOStepper = () => {
+
+const JetsonIOStepper = ({steps}) => {
 
   const { colorMode } = useColorMode();
   const setTheme = useThemeStore((state) => state.setTheme);
-      
+  
   useEffect(() => {
     setTheme(colorMode === 'dark' ? 'dark' : 'light');
   }, [colorMode]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    steps.forEach((s) => {
+      const img = new window.Image();
+      img.src = s.src;
+    });
+  }, [steps]);
+
         
   const currentTheme = useThemeStore((state) => state.theme);
 
@@ -53,7 +37,7 @@ const JetsonIOStepper = () => {
     >
       <Flex align='center'>
         <Steps 
-          style={{margin: '24px, 0'}} 
+          style={{margin: '24px 0'}} 
           current={current} 
           items={items} 
           size="small"

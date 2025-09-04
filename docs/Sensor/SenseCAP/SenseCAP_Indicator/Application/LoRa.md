@@ -40,6 +40,7 @@ From the page, [Dive_into_the_Hardware](/SenseCAP_Indicator_Dive_into_the_Hardwa
 "/></div>
 
 The key components are:
+
 - Semtech SX1262 radio front-end
 - ESP32-S3 MCU
 
@@ -113,6 +114,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
   uint16_t crc16_ccitt(const uint8_t *data, size_t length);
   #endif
   ```
+
   </TabItem>
 
   <TabItem value="XIAO/include/Frame.cpp">
@@ -172,12 +174,12 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
       return crc & 0xFFFF;
   }
   ```
+
   </TabItem>
 </Tabs>
 
-
-
 #### Step 2.2: Implement sensor data structrue and adapt to the Payload Encoder
+
 <Tabs>
   <TabItem value="XIAO/include/sensor_sen5x.h">
 
@@ -219,6 +221,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
   };
   #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="XIAO/src/sensor_sen5x.cpp">
 
@@ -313,6 +316,7 @@ Clone or download the demo code from [this link](https://github.com/Seeed-Soluti
       return packFrame(_frame);
   }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -471,6 +475,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
         return crc & 0xFFFF;
     }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -520,6 +525,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
     void prinSEN5xData( const SEN5xData_t *SEN5x );
     #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="Indicator/main/Sensors/sen5x.c">
 
@@ -549,6 +555,7 @@ Complete the Payload, now we will dive into SenseCAP Indicator to programme the 
     #endif
     }
   ```
+
   </TabItem>
 </Tabs>
 

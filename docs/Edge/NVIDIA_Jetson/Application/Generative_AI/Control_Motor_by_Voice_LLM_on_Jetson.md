@@ -8,7 +8,7 @@ keywords:
 - Motor
 - Qwen
 - Function Calling
-image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
+image: https://files.seeedstudio.com/wiki/reComputer-Jetson/voice_control/hardware_connect.webp
 slug: /control_motor_by_voice_llm_on_jetson
 last_update:
   date: 08/19/2025
@@ -27,55 +27,53 @@ This wiki builds an end-to-end voice-controlled motor system based on the Jetson
 - reSpeaker XVF3800
 - MyActuator X Series Motors
 
-<div class="table-center">
-	<table align="center">
-		<tr>
-			<th>reComputer Robotics J4012</th>
-            <th>reSpeaker XVF3800</th>
-            <th>MyActuator X Series Motors</th>
-		</tr>
-        <tr>
-            <td>
-                <div style={{textAlign:'center'}}>
-                    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" style={{width:250, height:'auto'}}/>
-                </div>
-            </td>
-            <td>
-                <div style={{textAlign:'center'}}>
-                    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.jpg" style={{width:250, height:'auto'}}/>
-                </div>
-            </td>
-            <td>
-                <div style={{textAlign:'center'}}>
-                    <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-motor.png" style={{width:250, height:'auto'}}/>
-                </div>
-            </td>
-        </tr>
-		<tr>
-			<td>
-                <div class="get_one_now_container" style={{textAlign: 'center'}}>
-                    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html">
-                        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-                    </a>
-	            </div>
-            </td>
-            <td>
-                <div class="get_one_now_container" style={{textAlign: 'center'}}>
-				    <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html">
-				        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				    </a>
-			    </div>
-            </td>
-            <td>
-                <div class="get_one_now_container" style={{textAlign: 'center'}}>
-				    <a class="get_one_now_item" href="https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html">
-				        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				    </a>
-			    </div>
-            </td>
-		</tr>
-	</table>
-</div>
+<table align="center">
+    <tr>
+        <th>reComputer Robotics J4012</th>
+        <th>reSpeaker XVF3800</th>
+        <th>MyActuator X Series Motors</th>
+    </tr>
+    <tr>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg" style={{width:250, height:'auto'}}/>
+            </div>
+        </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-respeaker-xvf3800-4-mic-array-with-xiao-esp32s3.jpg" style={{width:250, height:'auto'}}/>
+            </div>
+        </td>
+        <td>
+            <div style={{textAlign:'center'}}>
+                <img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/i/m/image-motor.png" style={{width:250, height:'auto'}}/>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/ReSpeaker-XVF3800-4-Mic-Array-With-XIAO-ESP32S3-p-6489.html">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+        <td>
+            <div class="get_one_now_container" style={{textAlign: 'center'}}>
+                <a class="get_one_now_item" href="https://www.seeedstudio.com/Myactuator-X4-P36-Planetary-Actuator-p-6469.html">
+                    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+                </a>
+            </div>
+        </td>
+    </tr>
+</table>
 
 ## Hardware Connection
 
@@ -158,7 +156,7 @@ python app.py
 ## Effect Demonstration
 
 
-<div align="center">
+<div class="video-container">
     <iframe width="800" height="450" src="https://www.youtube.com/embed/ORv8x0aSXfQ" title="🤖 Voice-Controlled Robot: Full Pipeline from Speech Recognition to Motor Control!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 

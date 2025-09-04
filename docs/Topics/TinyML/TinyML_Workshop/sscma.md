@@ -32,7 +32,6 @@ The core of it is an open source project and we have share it on the [GitHub](ht
 
 1. Enter your name and valid email,and then click "get capcha"<br />
 
-
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/1.png)
 
 2. Get the verification code from your email and enter it on sign up page
@@ -102,12 +101,11 @@ You can learn more through the [Nvidia Jeson Workspace documentation](https://wi
 
 #### SenseCraft AI-Jetson
 
-SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks! 
+SenseCraft AI-Jetson is a development toolkit and platform designed for NVIDIA Jetson Edge AI devices. Simply run the "Quickstart Script" and you will be presented with an interactive user interface to view an example application with a pre-loaded video and a pre-loaded AI model. If you want to add your own USB camera, IP camera you can simply do it in a few clicks!
 
 In addition to the various built-in AI models we offer out-of-the-box,  you can access to a large number of public models on SenseCraft AI platform and you will be able to download and deploy AI models for specific scenarios and create personalized AI solutions based on your needs. SenseCraft AI is your intelligent decision-making partner for vision ai, providing you with simple, flexible and efficient inferencing and solution building capabilities.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/video.gif)
-
 
 You can learn more through the [SenseCraft AI-Jetson documentation](https://wiki.seeedstudio.com/SenseCraft_AI_Jetson/).
 
@@ -123,7 +121,6 @@ First, we need to properly connect the XIAO ESP32S3 Sense expansion board to the
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-
 #### Step 2. Connecting the XIAO to your PC
 
 Connect the XIAO to your PC using a data cable with data transfer function.
@@ -133,7 +130,7 @@ Connect the XIAO to your PC using a data cable with data transfer function.
 Click the button below to go to the SenseCraft AI Platform homepage.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-	<a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI Platform</font></span></strong></a>
+ <a class="get_one_now_item" href="https://sensecraft.seeed.cc/ai/#/device/local?time=1724577953974" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"2"}>SenseCraft AI Platform</font></span></strong></a>
 </div><br />
 
 Once we are on the homepage of SenseCraft AI Platform, we need to first need to connect the XIAO ESPS3 for that, click **Connect** button.
@@ -156,7 +153,7 @@ You are getting it! You have successfully deployed your first ML model!
 
 ### 2. SenseCraft Triggers - Do a simple feedback action
 
-That is, when we recognize our face, we let XIAO's LED light up. For that, go to **Output** section and Select the "Trigger action" to setup a trigger. . 
+That is, when we recognize our face, we let XIAO's LED light up. For that, go to **Output** section and Select the "Trigger action" to setup a trigger. .
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/fab24/sensecraftai7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -164,7 +161,7 @@ Here, When the face detection have confidencet above 50% and enable a trigger.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/fab24/sensecraftai8.png" style={{width:800, height:'auto'}}/></div>
 
-And here the **Trigger Action** is "Light up the LED".  Ater that, click "Send" and you can see, whenver the face detected, you can see the onboard LED is turned on. 
+And here the **Trigger Action** is "Light up the LED".  Ater that, click "Send" and you can see, whenver the face detected, you can see the onboard LED is turned on.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/tinyml-topic/fab24/sensecraftai9.png" style={{width:800, height:'auto'}}/></div>
 
@@ -179,12 +176,9 @@ And here the **Trigger Action** is "Light up the LED".  Ater that, click "Send" 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
 ### How it's works!
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
-
-
 
 **Step 2.1. Download all necessary files**
 
@@ -229,7 +223,6 @@ Once you are on the web page, please click on the **Connect** button from **Depl
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/EdgeLab/src/img/edgeLab2.png?raw=true" style={{width:1000, height:'auto'}}/></div> 
 
 Once the connection is correct, we can select the file to upload. Then please follow the format below, filling in the flash address and selecting the correct file in turn.
-
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/EdgeLab/src/img/edgeLab3.png?raw=true" style={{width:1000, height:'auto'}}/></div> 
 
@@ -307,10 +300,10 @@ Finally, we come to the Preview section, click once on **Stop** in the upper rig
 <hr></hr> -->
 
 # ToDo
-- [ ] Load and Run **Face Recognition Model** with SenseCraft AI Platform. 
-- [ ] Setup a Trigger and **Control LED** with SenseCraft AI Platform. 
+
+- [ ] Load and Run **Face Recognition Model** with SenseCraft AI Platform.
+- [ ] Setup a Trigger and **Control LED** with SenseCraft AI Platform.
 
 <!-- :::tip
 If you also want to experience this water meter that generates readings automatically, you can download the zip package by clicking **[here](https://files.seeedstudio.com/wiki/tinyml-topic/clock-master.zip)**, unzip it and then double click to open the html file in the root directory.
 ::: -->
-

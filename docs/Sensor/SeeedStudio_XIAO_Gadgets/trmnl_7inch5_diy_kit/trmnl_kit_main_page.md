@@ -76,6 +76,10 @@ Connect the battery cable to the JST connector on the driver board, ensuring cor
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/3.jpg" style={{width:600, height:'auto'}}/></div>
 
 **Step 3. Enclosure Assembly (Optional)**  
+
+:::tip
+Please note that the screen's flexible cable is very fragile. Be careful when operating. If it gets damaged, the entire screen will stop working.
+:::
 Print open-source enclosure parts from [Resource part](#resources) and assemble the components inside.  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/4.jpeg" style={{width:600, height:'auto'}}/></div>
@@ -105,6 +109,13 @@ Connect FPC extension cable and assemble the whole case.
 
 <div class="table-center">
 <iframe width="600" height="340" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/assembly.mp4?
+autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+L-Shape enclosure is very similar.
+
+<div class="table-center">
+<iframe width="300" height="500" src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/Lshape.mp4?
 autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 

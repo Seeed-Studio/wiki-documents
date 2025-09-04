@@ -154,7 +154,7 @@ esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset 
 ## ✨ 贡献者项目
 
 - 此项目由Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Hendra 和 shariltumin 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117)，你们的工作将会被[展示](https://wiki.seeedstudio.com/cn/contributors/)。
+- 感谢 [Hendra 和 shariltumin 的努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=c6&pane=issue&itemId=59874459&issue=Seeed-Studio%7Cwiki-documents%7C1117)，你们的工作将会被[展示](https://wiki.seeedstudio.com/contributors/)。
 
 ## 技术支持与产品讨论
 

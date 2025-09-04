@@ -16,15 +16,13 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
-
+## Introduction
 
 This guide explains how to configure internet access on a Raspberry Pi using a 4G HAT equipped with a Quectel EG25-G module. The Quectel EG25-G is a widely-used LTE modem that supports multiple network protocols, including QMI (Qualcomm MSM Interface) mode, which enables efficient and high-speed mobile broadband connectivity. By following this guide, you will learn how to set up the module in QMI mode, compile and use the quectel-CM dial-up tool, and establish a stable 4G internet connection on your Raspberry Pi. This method is ideal for applications requiring mobile internet access, such as IoT deployments, remote monitoring, and edge computing.
 
-
 ## Prerequisites
 
-### Hardware Requirements 
+### Hardware Requirements
 
 <div class="table-center">
   <table align="center">
@@ -33,7 +31,7 @@ This guide explains how to configure internet access on a Raspberry Pi using a 4
          <th>Raspberry Pi 4G LTE CAT4 HAT</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_23_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -72,6 +70,7 @@ Inside the minicom terminal, input:
 ```bash
 AT+QCFG="usbnet"?
 ```
+
 - If the response is `usbnet,0`, no changes are needed.
 
 To explicitly set the mode to `0`:
@@ -81,16 +80,17 @@ AT+QCFG="usbnet",0
 ```
 
 3. **Restart the Module**
-   
+
 Reset the module using:
+
 ```bash
 AT+CFUN=1,1
 ```
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/usbnet_qmi.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/usbnet_qmi.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -105,14 +105,13 @@ lsmod
 - If you see output indicating `qmi_wwan` is loaded, the kernel driver is active.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/lsmod.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/lsmod.PNG"
+    style={{ width: 600}}
   />
 </div>
 
 ## Transplanting the Dial Tool
-
 
 1. **Download and Extract the Tool**
 
@@ -122,13 +121,13 @@ lsmod
 ```bash
 ls
 ```
+
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls1.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls1.PNG"
+    style={{ width: 600}}
   />
 </div>
-
 
 - You should see a folder named `eg25qmi`.
 
@@ -138,21 +137,24 @@ ls
 cd eg25qmi
 ls
 ```
+
 - You will see source files for the dial-up tool.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls2.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls2.PNG"
+    style={{ width: 600}}
   />
 </div>
 
 ## Compilation
 
 1. **Compile the Dialing Tool**
+
 ```bash
 sudo make
 ```
+
 - After compilation, newly generated files (highlighted in green) will be visible, including the `quectel-CM` dial-up tool.
 
 ### Verify the Compiled Files
@@ -160,12 +162,13 @@ sudo make
 ```bash
 ls
 ```
+
 - The `quectel-CM` executable should be present. This is the dial-up tool required for connecting to the internet.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls3.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ls3.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -176,41 +179,46 @@ ls
 ```bash
 sudo ./quectel-CM
 ```
+
 - If the dialing process is successful, you will see an assigned IP address and gateway information.
 - If the first attempt fails, wait and retry; the second attempt should succeed.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/connect.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/connect.PNG"
+    style={{ width: 600}}
   />
 </div>
 
 ## Post-Dialing Verification
 
 1. **Check Network Interface**
+
 ```bash
 ifconfig
 ```
+
 - Look for the `wwan0` interface with an IP address.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/wwan0.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/wwan0.PNG"
+    style={{ width: 600}}
   />
 </div>
 
 2. **Test Connectivity**
+
 ```bash
 ping -I wwan0 8.8.8.8
 ```
+
 - A successful ping confirms the connection is active.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ping.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ping.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -219,11 +227,11 @@ ping -I wwan0 8.8.8.8
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

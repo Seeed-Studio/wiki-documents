@@ -15,9 +15,7 @@ last_update:
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/cover.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-Grove - Oxygen Sensor(ME2-O2-Ф20) is a kind of sensor to test the oxygen concentration in air, which is based on the principle of the electrochemical cell to the original work. You can know clearly the current oxygen concentration when you output voltage values proportional to the concentration of oxygen and refer to the oxygen concentration linear characteristic graph. It's very suitable for detecting oxygen concentration in the environment protection. Grove - Gas Sensor(O2) is an organic reaction module, it can provide a little current while putting it in the air, we don't need to provide an external power to it, and output voltage will change as time current changes. 
-
+Grove - Oxygen Sensor(ME2-O2-Ф20) is a kind of sensor to test the oxygen concentration in air, which is based on the principle of the electrochemical cell to the original work. You can know clearly the current oxygen concentration when you output voltage values proportional to the concentration of oxygen and refer to the oxygen concentration linear characteristic graph. It's very suitable for detecting oxygen concentration in the environment protection. Grove - Gas Sensor(O2) is an organic reaction module, it can provide a little current while putting it in the air, we don't need to provide an external power to it, and output voltage will change as time current changes.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/4df5kaaKa6I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -26,28 +24,27 @@ Grove - Oxygen Sensor(ME2-O2-Ф20) is a kind of sensor to test the oxygen concen
 :::tip
     We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.com/Seeed_Gas_Sensor_Selection_Guide/), it will help you choose the gas sensor that best suits your needs.
 :::
-##Feature
+## Feature
 
-* High-precision
-* High sensitivity
-* Wide linearity range
-* Strong anti-interference ability
-* Extraordinary reliability
+- High-precision
+- High sensitivity
+- Wide linearity range
+- Strong anti-interference ability
+- Extraordinary reliability
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
 :::
-##Specification
+## Specification
 
-|Items	| Parameter |
+|Items | Parameter |
 |-------|---------------|
-|Measurement Range	| 0-25% |
-| Detect Life	| two years |
-|Sensitivity	| 0.05~0.15 mA(in air) |
-|Temperature Range |	-20 oC~50 oC |
-|Preheat Time	| 20 minutes|
+|Measurement Range | 0-25% |
+| Detect Life | two years |
+|Sensitivity | 0.05~0.15 mA(in air) |
+|Temperature Range | -20 oC~50 oC |
+|Preheat Time | 20 minutes|
 |Input voltage|3.3V / 5V|
-
 
 ## Hardware
 
@@ -67,25 +64,24 @@ The XC6206332MR converts 3.3v/5v input to 3.3v.
 
 The ME2-O2 is current source. The voltage of the label #3 point is R7 * Current(ME2-O2).
 
-
 **Amplifer**
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/Amplifer.png) -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/Amplifer.png" alt="pir" width={600} height="auto" /></p>
 
-The gain of the amplifer is 121, SIGA voltage is 121 times of label #3 point voltage. 
+The gain of the amplifer is 121, SIGA voltage is 121 times of label #3 point voltage.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/concentration_current.png) -->
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/concentration_current.png" alt="pir" width={600} height="auto" /></p>
 
-
-Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 * Current(ME2-O2) * 121 = 100 * 120uA * 121 = 1.452V. 
+Here is the correlation between ME2-O2 output current and concentration of O2. The current of 20% concentration O2 is around 120uA. So the Grove SIGA voltage @ 20% concentration = R7 *Current(ME2-O2)* 121 = 100 *120uA* 121 = 1.452V.
 
 :::warning
     The current ranage of ME2-O2 is 80uA~160uA due to individual difference. So the sensor ouput voltage also will different. Please explosure the sensor to fresh air and get reading of output voltage as reference at beginning. You can refer to [this example](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Read_O2_value.zip) to get the calibration at beginning and then read the sensor values.   
 :::
+
 ## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
@@ -100,13 +96,12 @@ Here is the correlation between ME2-O2 output current and concentration of O2. T
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
-##Getting Started
+## Getting Started
 
 :::note
     This chapter is based on Win10 and Arduino IDE 1.6.9
 :::
-This an easy-to-use module, what you need to do is connect the signal pin (the YELLOW pin of Grove cable) to the ADC input of your controller. If there's no internal ADC in your controller, [Grove - I2C ADC](https://www.seeedstudio.com/Grove-I2C-ADC-p-1580.html) is recommend. 
+This an easy-to-use module, what you need to do is connect the signal pin (the YELLOW pin of Grove cable) to the ADC input of your controller. If there's no internal ADC in your controller, [Grove - I2C ADC](https://www.seeedstudio.com/Grove-I2C-ADC-p-1580.html) is recommend.
 
 Here we will show you how this Grove - Gas Sensor(O2) works via a simple demo. First of all, you need to prepare the below stuffs:
 
@@ -115,23 +110,18 @@ Here we will show you how this Grove - Gas Sensor(O2) works via a simple demo. F
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/gas_sensor_210.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/grove-gas-sensoro2-p-1541.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Universal-4-Pin-20cm-Unbuckled-Cable-%285-PCs-Pack%29-p-749.html)|
 
+### Connection
 
+Thanks to the benefit of Grove series modules, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we have only one Grove module.
 
-###Connection 
-
-Thanks to the benefit of Grove series modules, you don't need to make soldering or bread board, what you need to do is connect the modules to the right port of Base Shield. For this demo, we have only one Grove module. 
-
-* Grove - Oxygen Sensor(ME2-O2-Ф20) is an analog input module, we connect it to **A0** at this demo
+- Grove - Oxygen Sensor(ME2-O2-Ф20) is an analog input module, we connect it to **A0** at this demo
 
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/connection.jpeg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/connection.jpeg" alt="pir" width={600} height="auto" /></p>
 
-
-
-###Upload the code to Arduino
+### Upload the code to Arduino
 
 Copy the below code to Arduino IDE.
-
 
 ```
 // Grove - Gas Sensor(O2) test code
@@ -191,35 +181,28 @@ float readConcentration()
 
 ```
 
-Then choose the right Board and COM port, and then click on the Upload button, this process take few seconds. 
+Then choose the right Board and COM port, and then click on the Upload button, this process take few seconds.
 
-###Get data
+### Get data
 
-Open serial monitor of your Arduino IDE, and you will get the data now. 
+Open serial monitor of your Arduino IDE, and you will get the data now.
 
 :::warning
     It need about 20~30 minutes to preheat the sensor, or you will get a larger value.
-:::   
+:::
 <!-- ![enter image description here](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/data.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/images/data.png" alt="pir" width={600} height="auto" /></p>
-
-
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Schematics_O2.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-
 ## Resources
 
-* [ME2-O2 Datasheet](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/ME2-O2-D20%200-25%25%20Manual%20%28ver1.2%29.pdf)
-* [Schematic in Eagle File](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Schematics_O2.zip)
-* [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
-
+- [ME2-O2 Datasheet](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/ME2-O2-D20%200-25%25%20Manual%20%28ver1.2%29.pdf)
+- [Schematic in Eagle File](https://files.seeedstudio.com/wiki/Grove_Gas_Sensor_O2/resources/Schematics_O2.zip)
+- [Github Repository of this Document](https://github.com/SeeedDocument/Grove_Gas_Sensor_O2)
 
 ## Projects
 
@@ -234,19 +217,19 @@ Open serial monitor of your Arduino IDE, and you will get the data now.
 ## Tech Support & Product Discussion
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-

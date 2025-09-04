@@ -1,6 +1,5 @@
 ---
 description: balena 是一个多功能的物联网平台，开发者可以轻松地在各种设备架构上构建、部署和管理物联网应用程序，利用容器化部署实现无缝更新和强大的设备管理。由 Raspberry Pi CM4 提供动力的 reComputer R1000 边缘物联网控制器，为高性能边缘计算任务提供了强大的能力。balena 和 reComputer R1000 的结合，为在多样化环境中高效、安全地部署和管理物联网应用程序提供了强大且可扩展的解决方案。
-
 title: 使用 balena 的 reComputer R1000
 keywords:
   - 边缘计算

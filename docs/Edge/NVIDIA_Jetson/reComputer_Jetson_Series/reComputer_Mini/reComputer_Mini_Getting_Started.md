@@ -17,7 +17,6 @@ last_update:
 
 <!-- change image -->
 
-
 reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX module,delivering up to 100 TOPS AI performance. It‘s equipped with PCIe port at the bottom to provide rich expansion capabilities, which also can be customized flexibly. The whole system is designed for embedding into autonomous machines such as drones, patrol robots, delivering robots, etc. It can directly occupy 54V DC input, able to be widely used in battery powered systems.
 
 <div align="center">
@@ -31,15 +30,14 @@ reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX
 
 <!-- Buy links -->
 
-## Features 
+## Features
 
 - **Brilliant AI Performance for Production:** Achieves up to **100 TOPS** AI performance with low power and latency, built by NVIDIA Orin SoC combining the NVIDIA Ampere™ GPU architecture with 64-bit operating capability, integrated advanced multi-function video and image processing, and NVIDIA Deep Learning Accelerators.
 - **Hand-Size Edge AI Device:** Compact size at **63mmx95mmx42mm**, featuring an NVIDIA Jetson Orin NX 16GB module, Mini J401 carrier board, fan and enclosure. Support desktop and wall mounting.
 - **Expandable with Rich I/Os:** Includes up to 7x USB, 1x DP 2.1, 1x RJ45 for GbE, M.2 Key E, M.2 Key M, dual channel CAN, and GPIO with extension board.
-- **Accelerate Solutions to Market:** Pre-installed **JetPack 6.0** on 128GB NVMe SSD, Linux OS BSP, supporting Jetson software and leading AI frameworks. 
-- **Scale to deploy:** support OTA, remote management services powered by Allxon and Balena. 
+- **Accelerate Solutions to Market:** Pre-installed **JetPack 6.0** on 128GB NVMe SSD, Linux OS BSP, supporting Jetson software and leading AI frameworks.
+- **Scale to deploy:** support OTA, remote management services powered by Allxon and Balena.
 - **Flexible Customization:** inlcudes changing accessories modules, logo, and hardware interfaces modification based on reComputer Mini J4012 original design.
-
 
 ## Specifications
 
@@ -215,7 +213,7 @@ reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX
 </table>
 </div>
 
-## Hardware Overview 
+## Hardware Overview
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/hardware_overview.png"/>  
@@ -237,17 +235,16 @@ reComputer Mini is a tiny AI computer powered by NVIDIA Jetson Orin Nano/Orin NX
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/B4.png"/>  
 </div>
 
-
 ## Flash JetPack OS
 
 Here, we will show you how to flash [Jetpack 6.0](https://developer.nvidia.com/embedded/jetson-linux-archive) to an NVMe SSD connected to the reComputer Mini.
 
 ### Supported Nvidia Jetson Module
 
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html) 
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5554.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5552.html)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5523.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5524.html)
 
 ### Prerequisites
 
@@ -259,7 +256,7 @@ Here, we will show you how to flash [Jetpack 6.0](https://developer.nvidia.com/e
 
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -349,12 +346,12 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={2}>6.2</td>
       <td>Orin Nano 8GB</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVjuq6G9y_5OjIxMIHFiBj0BVckYdcRQBunaXMHFBLZ3tw?e=tY89se" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td>23855098982DD1E05C025D3F078BCA0<br />2F396C1FB68DC58E539D83569A894571D</td>
+      <td>A1C5F44B19B6C06E11AC38ABDA79AD6<br />CBFF2AAFBEEA7BF3A14B2FE08EA37267F</td>
     </tr>
     <tr>
       <td>Orin Nano 4GB</td>
       <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EcdaeIBdGRpCp0Dev5R3o1sB2Tr4HIwjgtp3d_XX7lE9Gg?e=bxteCW" target="_blank" rel="noopener noreferrer">Download</a></td>
-      <td>A1C5F44B19B6C06E11AC38ABDA79AD6<br />CBFF2AAFBEEA7BF3A14B2FE08EA37267F</td>
+      <td>23855098982DD1E05C025D3F078BCA0<br />2F396C1FB68DC58E539D83569A894571D</td>
     </tr>
   </tbody>
 </table>
@@ -365,11 +362,10 @@ The Jetpack6 image file is approximately **16.7GB** in size and should take arou
 :::
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
-
 
 ### Enter Force Recovery Mode
 
@@ -397,6 +393,7 @@ Before we can move on to the installation steps, we need to make sure that the b
 </details>
 
 On the Linux host PC, open a Terminal window and enter the command `lsusb`. If the returned content has one of the following outputs according to the Jetson SoM you use, then the board is in force recovery mode.
+
 - For Orin NX 16GB: 0955:7323 NVidia Corp
 - For Orin NX 8GB: 0955:7423 NVidia Corp
 - For Orin Nano 8GB: 0955:7523 NVidia Corp
@@ -408,14 +405,13 @@ The below image is for Orin Nx 16GB:
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/>
 </div>
 
-
-### Flash to Jetson with Single Command.
+### Flash to Jetson with Single Command
 
 <details>
 
 <summary> Flash the device with a single command. </summary>
 
-The reComputer Jetson J30/40 Mini has launched a one-click flashing script, which supports flashing Jetpack 6.0. 
+The reComputer Jetson J30/40 Mini has launched a one-click flashing script, which supports flashing Jetpack 6.0.
 
 ```bash
 wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && sudo chmod 777 ./flashing.sh && ./flashing.sh
@@ -424,11 +420,10 @@ wget -O ./flashing.sh https://files.seeedstudio.com/OSHW_Jetson/flashing.sh  && 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZFBzTlyOjhE?si=uNN-l5VVGbAyGnot" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 :::caution
-Disclaimer: The one-click flashing script aims to make jetpack flashing quicker. The current version is a beta one and may have many problems. We hope for your understanding. If there are flashing issues, follow the `Flash The Device Step by Step` below and give feedback in our [Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152). We'll fix them promptly and improve this function in the near future. 
+Disclaimer: The one-click flashing script aims to make jetpack flashing quicker. The current version is a beta one and may have many problems. We hope for your understanding. If there are flashing issues, follow the `Flash The Device Step by Step` below and give feedback in our [Discord Jetson channel](https://discord.com/channels/862602258452578314/930732339624026152). We'll fix them promptly and improve this function in the near future.
 :::
 
 </details>
-
 
 ### Flash to Jetson Step by Step
 
@@ -440,7 +435,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -482,6 +477,7 @@ If you want to learn more about the detailed specifications and usage of the har
 :::
 
 ## Resources
+
 - [reComptuer Mini Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_mini_datasheet_V1.0.pdf)
 - [reComptuer Mini Schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_SCH.7z)
 - [reComputer Mini 3D file](https://files.seeedstudio.com/wiki/reComputer-Jetson/mini/reComputer_Mini_3D.7z)
@@ -495,11 +491,11 @@ If you want to learn more about the detailed specifications and usage of the har
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

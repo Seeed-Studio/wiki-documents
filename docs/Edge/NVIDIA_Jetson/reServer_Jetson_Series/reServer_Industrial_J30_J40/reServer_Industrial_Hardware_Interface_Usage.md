@@ -17,11 +17,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/2.jpg"/></div>
 
-
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/3.jpg"/></div>
-
-
-To learn more about how to use all the hardware and interfaces on the reServer Industrial board, we recommend you to follow the below section of the wiki.
 
 reServer Industrial features 2x 2.5" SATA HDD/ SSD drive bays to easily store hundreds of local video footages in a video analytics application. Also it enables multiple connectivity options including 5 RJ-45 Ethernet ports, 1 RS232/422/485, 4x Isolated DI/DO, 1x CAN, 4× USB3.1. Fanless design with versatile mounting options allows deployment from -20 to 60 ℃, which is ideal for more harsh environments and heavier loads.
 
@@ -37,15 +33,13 @@ reServer industrial has 5 RJ45 GbE ports, 4 of which are PoE PSE ports for provi
 - **Certifications:** FCC, CE, UKCA, ROHS, KC
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html" target="_blank">
+<a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-industrial-J4012-p-5747.html">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Disassemble reServer Industrial
 
-First of all, it is better to disassemble the outer enclosure to access all the interfaces. Follow [this document](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) to learn more. 
-
+First of all, it is better to disassemble the outer enclosure to access all the interfaces. Follow [this document](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Assembly-Guide.pdf) to learn more.
 
 ## Gigabit Ethernet Connectors
 
@@ -57,7 +51,7 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
 
 - Green LED: ON only when connected to 1000M network
 - Yellow LED: Shows the network activity status
- 
+
 ### Usage
 
 - Before connecting PoE cameras, you need to enable the PoE function for the 4 Ethernet ports. Enable it as follows:
@@ -82,11 +76,12 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
     sudo apt install gpiod
     gpioset gpiochip2 15=1
     ```
-    
+
   </TabItem>
   </Tabs>
 
 ### Binding Physical Network IP to eth Numbers
+
   **The interfaces eth0 to eth3 are designated for PoE, with eth3 specifically referred to as PoE4.**
 
   If you need to configure different IP addresses for each POE interface, follow these instructions:
@@ -98,6 +93,7 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   ```
 
   **Step 2**: Configure the IP address of POE3 to **192.168.6.6**. The IP address can be customized according to actual usage.
+
   ```bash
   sudo nmcli connection modify POE3 ipv4.addresses 192.168.6.6/24
   ```
@@ -109,9 +105,11 @@ There are 2 LEDs (green and yellow) on each Ethernet port which indicates the fo
   ```
 
   **Step4**: Start the connection
+
   ```bash
   sudo nmcli connection up POE3
   ```
+
 ## SATA Connectors
 
 reServer Industrial supports 2 SATA 2.5" HDD/SSD and comes with both SATA data and power connectors. You can connect to HDD/ SSD as follows
@@ -120,7 +118,7 @@ reServer Industrial supports 2 SATA 2.5" HDD/SSD and comes with both SATA data a
 
 ### Usage
 
-After the system boots up, you can verify the connected SATA drives by 
+After the system boots up, you can verify the connected SATA drives by
 
 ```sh
 lsblk
@@ -160,7 +158,7 @@ Connect a **3V CR2302 coin cell battery with JST connector** to the 2-pin 1.25mm
 If you have not connected to internet via Ethernet, you can manually set the date/ time here
 :::
 
-- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time 
+- **Step 4:** Open a terminal window, and execute the below command to check the hardware clock time
 
 ```sh
 sudo hwclock
@@ -176,13 +174,13 @@ You will see the output something like below which is not the correct date/ time
 sudo hwclock --systohc
 ```
 
-- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board 
+- **Step 6:** Remove any Ethernet cables connected to make sure it will not grab the time from the internet and reboot the board
 
 ```sh
 sudo reboot
 ```
 
-- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off 
+- **Step 7:** Check hardware clock time to verify that the date/ time stays the same eventhough the device was powered off
 
 Now we will create a script to always sync the system clock from the hardware clock in each boot.
 
@@ -212,7 +210,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **Step 12:** Add the following inside the file 
+- **Step 12:** Add the following inside the file
 
 ```sh
 [Unit]
@@ -244,13 +242,13 @@ sudo systemctl start hwtosys.service
 sudo systemctl status hwtosys.service
 ```
 
-- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock 
+- **Step 16:** Reboot the board and you will the system clock is now in sync with the hardware clock
 
 ## M.2 Key M
 
 Out of the box, reServer Industrial includes a 128GB SSD connected to the M.2 Key M slot, which is pre-installed with JetPack system.
 
-### Connection Overview 
+### Connection Overview
 
 If you want to remove the included SSD and install a new one, you can follow the steps below. Here we only recommend to use Seeed SSDs with [128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html), [256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html), [512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) and [1TB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html) storage because we have only tested those SSDs. Further this interface supports PCIe Gen4.0 SSDs.
 
@@ -266,7 +264,7 @@ If you want to remove the included SSD and install a new one, you can follow the
 
 ### Usage
 
-We will explain how to do a simple benchmark on the connected SSD 
+We will explain how to do a simple benchmark on the connected SSD
 
 - **Step 1:** Check the write speed by executing the below command
 
@@ -349,7 +347,7 @@ sudo apt install minicom -y
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-- **Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo 
+- **Step 4:** Press **Ctrl+A** and then press **E** to turn on local echo
 
 - **Step 5:** Enter the command **"AT"** and press enter. If you see the response as "OK", the 4G module is working properly
 
@@ -359,7 +357,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-- **Step 7:** To test the module, enter the below command to call another phone number 
+- **Step 7:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -375,7 +373,7 @@ If the entered phone number can receive the call, the module is working as expec
 
 ##### EC25 module
 
-If you are using the EC25 module, follow the below steps 
+If you are using the EC25 module, follow the below steps
 
 - **Step 1:** After opening the serial console of the 4G module as explained above (4G Module Usage - Test Dialing section), execute the following command to connect to the internet. Here replace **YOUR_APN** with the APN of your network provider
 
@@ -448,7 +446,7 @@ echo -e "AT+QGPS=1\r\n" > /dev/ttyUSB2
 echo -e "AT+QGPS=0\r\n" > /dev/ttyUSB2
 ```
 
-- **Step 2:** Obtain the GPS data by executing the below commands 
+- **Step 2:** Obtain the GPS data by executing the below commands
 
 ```sh
 sudo cat /dev/ttyUSB1
@@ -526,6 +524,7 @@ To stop transmitting, you can press **CTRL + C** on the keyboard.
 Now we will connect to TTN (The Things Network) and use the reServer Industrial as a TTN LoRaWAN gateway
 
 - **Step 1:** Enter the below to make the packet forwarder ready
+
 ```sh
 cd ..
 cd packet_forwarder
@@ -575,7 +574,6 @@ After running the above command, you will see the below output with last line sh
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-
 - **Step 8:** Enter the **Frequency plan** according to the LoRa module you are using. Here we are using US915 verison of the module and therefore have selected **United Stated 902-928 MHz, FSB 2 (used by TTN)**. After that click **Register gateway**
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
@@ -588,7 +586,7 @@ The **Gateway ID** has been filled automatically for you. However, you can chang
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows 
+- **Step 9:** On the reTerminal Industrial, edit the **global_conf_json** file that we used along with the **lora_pkt_fwd** command. Here you need to change the **gateway_ID**, **server_address**, **serv_port_up** and **serv_port_down** options as follows
 
   - gateway_ID: Concentrator EUI from device
   - server_address: Gateway Server Address from TTN
@@ -689,8 +687,7 @@ sudo minicom -D /dev/ttyUSB2 -b 115200
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-
-- **Step 7:** To test the module, enter the below command to call another phone number 
+- **Step 7:** To test the module, enter the below command to call another phone number
 
 ```sh
 ATD<phone_number>;
@@ -704,7 +701,7 @@ And you will see the below output
 
 Coming soon
 
-## DI/ DO 
+## DI/ DO
 
 reServer Industrial supports 4 digital input and 4 digital output channels, all of which are optically isolated to effectively protect the mainboard from voltage spikes or other electrical disturbances. There is also a CAN interface on this same connector which we will discuss later in this wiki
 
@@ -817,7 +814,6 @@ reServer Industrial supports 4 digital input and 4 digital output channels, all 
   </tbody>
 </table>
 
-
 ### Connection Overview for DI
 
 You can make the connection for DI by following the diagram below. It is better to add a resistor in series for the DI line. Here we have tested with a 4.7kΩ resistor connected to the DI1 pin.
@@ -826,7 +822,12 @@ You can make the connection for DI by following the diagram below. It is better 
 
 ### Usage for DI
 
-You need to input a voltage of 12V on the DI line in order to get detected as an input
+You need to input a voltage of 12V on the DI line in order to get detected as an input. The command to enable DI / DO is different between Jetpack 5 and Jetpack 6. 
+
+
+
+<Tabs>
+<TabItem value="Jetpack 5" label="Jetpack 5">
 
 - **Step 1:** Make the connetions as shown above to **DI1 pin** and input **12V**
 
@@ -851,6 +852,37 @@ cat value
 
 If it outputs 0, that means there is 12V input. If it outputs 1, that means there is no input voltage.
 
+</TabItem>
+<TabItem value="Jetpack 6" label="Jetpack 6">
+
+- **Step 1:** Make the connetions as shown above to **DI1 pin** and input **12V**
+
+- **Step 2:** Check the **line offset** of DI1 on chip0, :
+
+```sh
+gpioinfo gpiochip0
+```
+Find the corresponding **line offset** based on the BGA number. The **line offset** of DI1 is `105`.
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-di.jpg"/></div>
+
+
+:::note
+You can refer the **DI/ DO Pin Assignment Table** to find the GPIO number and BGA number. In the above example, for DI1 pin, GPIO number is 453 and BGA number is PQ.05	
+:::
+
+- **Step 3:**
+To read **line offset 105** in gpiochip0, corresponding to DI1:
+```sh
+sudo gpioget gpiochip0 105
+```
+An output of 0 indicates a low level. An output of 1 indicates a high level.  
+The command format is as follows `sudo gpioset <gpiochip> <line>`.
+
+</TabItem>
+</Tabs>
+
+
 ### Connection Overview for DO
 
 You can make the connection for DO by following the diagram below. It is better to add a resistor in series for the DO line. Here we have tested with a 4.7kΩ resistor
@@ -859,7 +891,11 @@ You can make the connection for DO by following the diagram below. It is better 
 
 ### Usage for DO
 
-Here you need to connect a load as mentioned in the above diagram. The easiest way to test this would be to connect a multimeter if you have access to one, or else connect a load that requires less than 40V maximum voltage
+Here you need to connect a load as mentioned in the above diagram. The easiest way to test this would be to connect a multimeter if you have access to one, or else connect a load that requires less than 40V maximum voltage. The command to enable DI / DO is different between Jetpack 5 and Jetpack 6. 
+
+
+<Tabs>
+<TabItem value="Jetpack 5" label="Jetpack 5">
 
 - **Step 1:** Make the connetions as shown above to **DO1 pin** and input **40V as max**
 
@@ -882,6 +918,40 @@ You can refer the **DI/ DO Pin Assignment Table** to find the GPIO number and BG
 ```sh
 echo 1 > value
 ```
+
+</TabItem>
+<TabItem value="Jetpack 6" label="Jetpack 6">
+
+- **Step 1:** Make the connetions as shown above to **DO1 pin** and input **40V as max**
+
+- **Step 2:** Check the **line offset** of DO1 on chip0, :
+
+```sh
+gpioinfo gpiochip0
+```
+Find the corresponding **line offset** based on the BGA number. The **line offset** of DO1 is `51`.
+
+<div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/reserver-do.jpg"/></div>
+
+
+
+:::note
+You can refer the **DI/ DO Pin Assignment Table** to find the GPIO number and BGA number. In the above example, for DO1 pin, GPIO number is 399 and BGA number is PI.00
+:::
+
+- **Step 3:**
+Use the following command to control the state of DO1:
+```sh
+# set to 12v
+sudo gpioset --mode=wait gpiochip0 51=0
+
+# set to 0v
+sudo gpioset --mode=wait gpiochip0 51=1
+```
+The command format is as follows `sudo gpioset <gpiochip> <line>=<value>`.
+
+</TabItem>
+</Tabs>
 
 If the load is turned on or the multimeter outputs the voltage that you have input, the test it is functioning properly.
 
@@ -993,7 +1063,7 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled 
+- **Step 5:** If you type **ifconfig** on both devices, you will see the CAN interfaces are enabled
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
@@ -1023,7 +1093,7 @@ You can see the DIP switch panel as below:
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/21.jpg"/></div>
 
-And the below table explains the different modes based on the DIP switch positions 
+And the below table explains the different modes based on the DIP switch positions
 
 <table>
   <thead>
@@ -1120,7 +1190,7 @@ And the below table explains the different modes based on the DIP switch positio
 Out of the box, the default mode of the switches will be set to RS485 with 010 from factory
 :::
 
-The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate 
+The above table takes into account the first three switches of the DIP switch panel. However, the fourth switch is responsible to toggle the slew rate which is directly related to the data rate
 
 <table>
   <thead>
@@ -1146,7 +1216,7 @@ The above table takes into account the first three switches of the DIP switch pa
 
 Here we will be using USB to RS232, RS485 and RS422 adapters in order to test the interfaces. So before moving on, you need to install a serial terminal application on your PC. Here we recommend you to install **Putty** which is easy to setup and use.
 
-- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture 
+- **Step 1:** Visit [this website](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and download Putty according to your PC architecture
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
@@ -1233,7 +1303,7 @@ You can refer to the pin numbering of DB9 connector and the table to make the co
   </tbody>
 </table>
 
-### RS232 Connection Overview 
+### RS232 Connection Overview
 
 Here you can use a USB to RS232 adapter to test the interface. We have used [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) for our testing.
 
@@ -1243,7 +1313,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-- **Step 3:** Connect the USB to RS232 adapter to the DB9 connector 
+- **Step 3:** Connect the USB to RS232 adapter to the DB9 connector
 
 - **Step 4:** Connect the other end to one of the USB ports on your PC
 
@@ -1255,7 +1325,7 @@ Here you can use a USB to RS232 adapter to test the interface. We have used [UGR
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly 
+- **Step 2:** If you cannot see the adapter, you need to install the driver according to the adapter that you are using. You can generally find these drivers on the manufacturer website. For the adapter that we are using, you can [this page](https://www.ugreen.com/pages/download), search for **20201** as the model number and download the driver accordingly
 
 - **Step 3:** Open Putty on the PC, select the **Terminal** section set the following
 
@@ -1289,7 +1359,7 @@ sudo cat /dev/ttyTHS0
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-### RS422 Connection Overview 
+### RS422 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1299,7 +1369,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
@@ -1343,7 +1413,7 @@ sudo cat /dev/ttyTHS0
 
 - **Step 6:** On Putty, type anything, press **ENTER** and it will be displayed on the reServer Industrial terminal window
 
-### RS485 Connection Overview 
+### RS485 Connection Overview
 
 Here you can use a USB to RS422 adapter to test the interface. We have used [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) for our testing.
 
@@ -1353,7 +1423,7 @@ Here you can use a USB to RS422 adapter to test the interface. We have used [DTe
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above 
+- **Step 3:** Connect the USB to RS422 adapter to the DB9 connector using Jumper wires as shown below. Here we have connected the adapter that we have mentioned above
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
@@ -1411,6 +1481,7 @@ cat /dev/ttyTHS0
 ## USB
 
 reServer Industrial comes with 3x USB3.2 connectors onboard and has the following features:
+
 - On the dual stacked USB connectors, the upper and lower USB ports share a current-limiting IC, with a total power supply capacity of 2.1A maximum output current (single can also be 2.1A). If over 2.1A, it will enter the over-current protection state.
 - On the single USB connector next to the dual stacked USB connectors, it has a total power supply capacity of 2.1A maximum output current. If over 2.1A, it will enter the over-current protection state.
 - Orin NX module comes with 3 USB3.2, only one of which is used in reServer Industrial and converted to 3 ways. (USB3.1 TYPE-A x2 - J4 and USB3.1 TYPE-A
@@ -1419,7 +1490,7 @@ x1 -J3).
 - Provide 5V 2.1A
 - Hot-swappable
 
-### Usage 
+### Usage
 
 We will explain how to do a simple benchmark on a connected USB flash drive
 
@@ -1442,7 +1513,7 @@ There is a Green color LED located on the board as shown below. By default it is
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reServer-Industrial/22.jpg"/></div>
 
-### Usage 
+### Usage
 
 - **Step 1:** Enter the following commands on a terminal window to access the Green color LED
 
@@ -1475,14 +1546,14 @@ echo 329 > unexport
 
 ## Monitor System Performance
 
-We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as 
+We can use **jetson stats** application to monitor the temperatures of the system components and check other system details such as
 
 - View CPU, GPU, RAM utilizations
 - Change power modes
-- Set to max clocks 
+- Set to max clocks
 - Check JetPack information
 
-- **Step 1:** On the reServer Industrial terminal windows, type the following 
+- **Step 1:** On the reServer Industrial terminal windows, type the following
 
 ```sh
 sudo apt update
@@ -1514,9 +1585,9 @@ reServer Industrial comes with a TPM interface to connect an external TPM module
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/24.jpg"/></div>
 
-### Connection Overview 
+### Connection Overview
 
-Connect the TPM module to the TPM connector as shown below 
+Connect the TPM module to the TPM connector as shown below
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reServer-Industrial/27.jpg"/></div>
 
@@ -1535,9 +1606,9 @@ And you will see the output as follows
 
 ## Max Performance on reServer Industrial
 
-If you want to enable maximum performance on the reServer Industrial, please follow the below instructions 
+If you want to enable maximum performance on the reServer Industrial, please follow the below instructions
 
-- **Step 1:** Enter the below command to enable the maximum power mode 
+- **Step 1:** Enter the below command to enable the maximum power mode
 
 ```sh
 sudo nvpmodel -m 0
@@ -1547,13 +1618,13 @@ sudo nvpmodel -m 0
 
 Here it will ask to type **YES** in order to reboot the board  
 
-- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency 
+- **Step 2:** Once the board is booted, enter the following command to set the CPU clocks to the maximum frequency
 
 ```sh
 sudo jetson_clocks
 ```
 
-## GPIO Table 
+## GPIO Table
 
 You can access the GPIO table of the reServer Industrial to get familiar with all the pin mappings.
 
@@ -1787,6 +1858,7 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 ## Resources
 
 (change the links)
+
 - [reServer Industrial Datasheet](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Datasheet.pdf)
 - [reServer Industrial Reference Guide](https://files.seeedstudio.com/wiki/reServer-Industrial/reServer-Industrial-Reference-Guide.pdf)
 - [NVIDIA Jetson Devices and Carrier Boards Comparison](https://files.seeedstudio.com/products/NVIDIA/NVIDIA-Jetson-Devices-and-carrier-boards-comparision.pdf)

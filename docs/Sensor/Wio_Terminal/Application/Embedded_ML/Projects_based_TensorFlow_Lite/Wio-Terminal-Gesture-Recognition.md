@@ -311,7 +311,6 @@ void loop() {
       z=lis.getAccelerationZ();
 
 
-
       // normalize the IMU data between 0 to 1 and store in the model's
       // input tensor
       tflInputTensor->data.f[samplesRead * 6 + 0] = (x + 4.0) / 8.0;

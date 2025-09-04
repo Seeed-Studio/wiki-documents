@@ -11,12 +11,15 @@ const excludedPaths = [
   path.join(docsDirectory, 'Seeed_Elderly', 'weekly_wiki'), // weekly wiki 的历史目录
   path.join(docsDirectory, 'zh-CN'), // 排除中文文档的目录
   path.join(docsDirectory, 'ja'), // 排除日文文档的目录
-  path.join(docsDirectory, 'Spanish'), // 排除西班牙语文档的目录
+  path.join(docsDirectory, 'es'), // 排除西班牙语文档的目录
   path.join(docsDirectory, 'weekly_wiki.md'), // 排除 weekly wiki 的文件
 
 
   // 排除指定文档
   path.join(docsDirectory, 'Robotics', 'Robot_Kits', 'Lerobot', 'Lerobot_Starai_Arm.md'), //8.15
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Web Control Panel.md'), //8.20
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Flash Watcher Agent Firmware.md'), //8.20
+  path.join(docsDirectory, 'Sensor', 'SenseCAP', 'SenseCAP_Watcher', 'Applications', 'Watcher-Agent', 'Device Network Setup Guide.md'), //8.20
 ];
 
 // 递归函数，用于遍历多层文件夹

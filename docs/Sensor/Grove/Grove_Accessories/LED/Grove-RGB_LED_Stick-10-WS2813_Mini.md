@@ -14,10 +14,9 @@ last_update:
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/main.jpg" alt="pir" width={600} height="auto" /></p>
 
 We integrated 10 full-color RGB LEDs on this stick, with only one signal pin you can control all 10 LEDs easily. All the LEDs are WS2813 Mini, which is an intelligent control and high cost-effective LED.
-What's more, the WS2813 support signal break-point continuous transmission, which means you can continue to use other leds with one led be broken. 
+What's more, the WS2813 support signal break-point continuous transmission, which means you can continue to use other leds with one led be broken.
 
 You can use this little stick create hundreds of thausands light effect, we hope it will bring you more fun.
-
 
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html)
@@ -37,15 +36,12 @@ You can use this little stick create hundreds of thausands light effect, we hope
 - Serial cascade interface, data receiving and decoding depend on just one signal line.
 - Dual-signal wires version, signal break-point continuous transmission.
 
-
 ### Signal break-point continuous transmission
 
 <!-- ![](https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg" alt="pir" width={600} height="auto" /></p>
 
 As long as not two or more adjacent LEDs are broken, the remaining LEDs will be able to work normally.
-
-
 
 ## Specification
 
@@ -56,11 +52,10 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 |Storage Temperature|-40℃ ~ +105℃|
 |RGB Channel Constant Current|16mA|
 |Interface|Digital|
-|Size|L: 80mm W: 10mm H: 10mm| 
+|Size|L: 80mm W: 10mm H: 10mm|
 |Weight|3.7g|
 |Package Size|L: 150mm W: 100mm H: 25mm|
 |Gross Weight|13g|
-
 
 ## Typical Applications
 
@@ -68,15 +63,12 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 - Illumination
 - Toys
 
-
 ## Hardware Overview
 
 ### Pin Out
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/pin_out.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/pin_out.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 ## Platforms Supported
 
@@ -93,9 +85,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 
 ## Getting Started
 
-
 ### Play With Arduino
-
 
 #### Hardware
 
@@ -105,7 +95,6 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Grove-RGB-LED-Stick-10-WS2813-Min-p-3226.html" target="_blank">Get One Now</a>|
-
 
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
@@ -125,7 +114,6 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/connect.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/connect.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -140,8 +128,6 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 | No connection            | White              | NC |
 | D6            | Yellow             | SIG |
 
-
-
 #### Software
 
 :::note
@@ -153,7 +139,7 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Adafruit_Neopixel --> simple**. 
+    1. Open it directly in the Arduino IDE via the path: **File --> Examples --> Adafruit_Neopixel --> simple**.
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path1.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -161,12 +147,11 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path2.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/path2.jpg" alt="pir" width={600} height="auto" /></p>
 
-    3. Or, you can just click the icon 
+    3. Or, you can just click the icon
     <!-- ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>
 
      in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
-
 
 ```cpp
 // NeoPixel Ring simple sketch (c) 2013 Shae Erisson
@@ -224,8 +209,6 @@ void loop() {
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
-
-
 :::success
         If every thing goes well, now you can see the LED strip shining:
 :::
@@ -233,14 +216,10 @@ void loop() {
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/test20181210_162208.gif) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/img/test20181210_162208.gif" alt="pir" width={600} height="auto" /></p>
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/res/Grove%20-%20RGB%20LED%20Stick%20(10-WS2813%20Mini).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -250,19 +229,16 @@ void loop() {
 
 - **[PDF]** [Datasheet WS2813-Mini](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Stick-10-WS2813_Mini/res/WS2813-Mini.pdf)
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

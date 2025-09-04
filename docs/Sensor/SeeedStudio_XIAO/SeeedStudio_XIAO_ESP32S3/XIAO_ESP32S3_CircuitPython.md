@@ -74,13 +74,11 @@ I am using Thonny IDE software(Windows) and some related libraries and files.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:500, height:'auto'}}/></div>
 
-
 ### Getting Started
 
 #### Download XIAO ESP32S3 Circuitpython Firmware
 
 [Circuitpython Firmwares 9.1.1 and 9.20 Alpha for XIAO ESP32S3 Sense](https://github.com/djairjr/Seeed_Xiao_ESPS3_Sense_Circuitpython/tree/main/seeed_xiao_esp32s3_sense/seeed_xiao_esp32s3_sense)
-
 
 #### Connect the XIAO ESP32S3 board to PC under the BootLoader Mode
 
@@ -137,7 +135,6 @@ Copy all the files from the [related files(library)](https://files.seeedstudio.c
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/12.png" /></div>
 
-
 :::note
 The "adafruit_ssd1306.mpy" file and "adafruit_framebuf.mpy" file are necessary while using "Seeed Studio Grove OLED Display 0.96"
 
@@ -176,7 +173,6 @@ display.show()
 3. The final result
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-CIRCUITPY/13.jpg" /></div>
-
 
 ## XIAO ESP32S3 Sense with  Using XIAO Round Display with Sense Camera
 
@@ -306,7 +302,6 @@ while True:
         t0 = t1
 ```
 
-
 ## What's more
 
 - The related files are all from the assembled [Adafruit CircuitPython library bundle](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/download/20230718/adafruit-circuitpython-bundle-8.x-mpy-20230718.zip) form https://circuitpython.org/libraries and you can find all the supported hardware files using CircuitPython.
@@ -324,11 +319,11 @@ while True:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

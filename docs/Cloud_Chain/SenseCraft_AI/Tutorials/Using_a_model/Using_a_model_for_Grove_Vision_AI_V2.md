@@ -28,28 +28,28 @@ Before getting started, ensure that you have the following:
 - **Access to the SenseCraft AI model repository webpage**: Ensure you have a stable internet connection and can access the SenseCraft AI website.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Vision AI V2</th>
+ <table align="center">
+  <tr>
+   <th>Grove Vision AI V2</th>
       <th>OV5647-62 FOV Camera Module<br />for Raspberry Pi 3B+4B</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/14.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/14.jpg" style={{width:250, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/11.png" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Step 1. Filtering models for Grove Vision AI V2
@@ -147,7 +147,6 @@ Remember to refer to the documentation and resources provided by SenseCraft AI a
 Feel free to explore other models, experiment with different settings, and adapt them to your specific projects or applications. The combination of SenseCraft AI and the Grove Vision AI V2 module opens up a world of possibilities for computer vision applications.
 
 Happy experimenting and creating with SenseCraft AI models on your Grove Vision AI V2!
-
 
 ## Tech Support & Product Discussion
 

@@ -16,7 +16,6 @@ author: JoJang
 In this wiki, we will teach you how to train your own meter model for your specific application and then deploy it easily to the SenseCAP A1101. Let's get started!
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/0.jpg"/></div>
 
-
 ## Hardware preparation
 
 - [SenseCAP A1101 - LoRaWAN Vision AI Sensor](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html)
@@ -32,7 +31,6 @@ We will be using the following software technologies in this wiki
 - [TensorFlow Lite](https://www.tensorflow.org/lite) - for inferencing
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/11.png"/></div>
-
 
 Now let's setup the software. The software setup for Windows, Linux and Intel Mac will be same whereas for M1/M2 Mac will be different.
 
@@ -80,8 +78,6 @@ conda install libusb-1.0.26-h1c322ee_100.tar.bz2
 You need to make sure your BootLoader version is greater than 2.0.0 before you can change the firmware to do the following. If you are not sure, please check the BootLoader version by following the steps mentioned in [this section](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#check-bootloader-version), and if the version is less than 2.0.0, please update the BootLoader by following the steps mentioned in [this section](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#update-bootloader)
 :::
 
-
-
 ## 1. Collect Image Data
 
 - **Step 1.** Connect SenseCAP A1101 to PC by using USB Type-C cable
@@ -93,7 +89,6 @@ You need to make sure your BootLoader version is greater than 2.0.0 before you c
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
 After this you will see a new storage drive shown on your file explorer as **SENSECAP**
-
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
@@ -147,14 +142,14 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 [Roboflow](https://roboflow.com) is an annotation tool based online. Here we can directly import the video footage that we have recorded into Roboflow and it will be exported into a series of images. This tool is very convenient because it will let us help distribute the dataset into "training, validation and testing". Also this tool will allow us to add further processing to these images after labelling them. Furthermore, it can easily export the labelled dataset into **COCO format** which is what we exactly need!
 
-
 - **Step 1.** Click [here](https://app.roboflow.com/login) to sign up for a Roboflow account
 
 - **Step 2.** Click **Create New Project** to start our project
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/YOLOV5/2.jpg"/></div>
 
-- **Step 3.** Fill in **Project Name**, keep the **License (CC BY 4.0)** and **Project type (Object Detection (Bounding Box))**  as default. Under **What will your model predict?** column, fill in an annotation group name. 
+- **Step 3.** Fill in **Project Name**, keep the **License (CC BY 4.0)** and **Project type (Object Detection (Bounding Box))**  as default. Under **What will your model predict?** column, fill in an annotation group name.
+
 <div align="center"><img width="{350}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/2.png"/></div>
 
 - **Step 4.** Drag and drop the images that you have captured using SenseCAP A1101
@@ -174,6 +169,7 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4.png"/></div>
 
 - **Step 8.** Repeat the same for the remaining images
+
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/5.png"/></div>
 
 - **Step 9.** Continue to annotate all the images in the dataset
@@ -210,7 +206,6 @@ This will generate a code snippet that we will use later inside Google Colab tra
 
 ### Train using SenseCraft Model Assistant on Google Colab
 
-
 After we have chosen a public dataset, we need to train the dataset. Here we use a Google Colaboratory environment to perform training on the cloud. Furthermore, we use Roboflow api within Colab to easily download our dataset.
 
 Click [here](https://colab.research.google.com/github/Seeed-Studio/EdgeLab/blob/main/notebooks/Google-Colab-YOLOv5-A1101-Example.ipynb) to open an already prepared Google Colab workspace, go through the steps mentioned in the workspace and run the code cells one by one.
@@ -225,8 +220,6 @@ It will walkthrough the following:
 - Download the trained model
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/9.png"/></div>
-
-
 
 ## 3. Deploy the trained model and perform inference
 
@@ -243,7 +236,6 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
 After this, you will see a new storage drive shown on your file explorer as **SENSECAP**  
- 
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
@@ -265,57 +257,41 @@ As soon as the uf2 finishes copying into the drive, the drive will disappear. Th
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/10.png"/></div>
 
-As you can see above, the numbers are being detected with bounding boxes around them. 
+As you can see above, the numbers are being detected with bounding boxes around them.
 
 ## 4. Perform inference with SenseCAP A1101 on SenseCAP Mate
+
 In addition to perform inference on the browser, we can also use the SenseCAP Mate to implement model inference, which we will implement it step by step.
+
 - **Step 1.**  First, we need to erase the firmware of A1101, which can be achieved by using erase_model.uf2. Then upgrade the A1101 firmware to the latest version and drop the water meter digits recognition model into A1101
-
-
 
   *Firmware*: [erase_model.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/erase_model.uf2)、[SenseCAP-A1101_v02-00.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/sensecap_ai_v02-00.uf2)
 
-
-
   *Model*: [water_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_water_pre_6.uf2)、[pfld_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/pfld_meter_pre_5.uf2)、[digital_meter.uf2](https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/releases/download/v2.0.0/meter_seg7_pre_6.uf2)
-
 
   ***Note:*** water_meter and digital_meter both identify the model name as user-define6 on the desktop and display digital_meter on the APP side. The model name identified by pfld_meter is user-define5, and Point_meter is displayed on the APP side. Users need to upload models according to their actual usage requirements during the deployment process
 
-
 - **Step 2.**  [Click here](https://seeed-studio.github.io/SenseCraft-Web-Toolkit/#/dashboard/workplace) to open a preview window of the camera stream
-
 
 - **Step 3.**  Click **Connect** button. Then you will see a pop up on the browser. Select **SenseCAP A1101** - Paired and click Connect
 
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step3.jpg"/></div>
-
 
 - **Step 4(Optional).** Select Digital Meter in Model and Digital Meter in Algorithm, click Save and then click Invoke. And now we can view real-time inference results using the preview window.
 
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step4.jpg"/></div>
-
 
 - **Step 5.** Open SenseCAP Mate and get paired with your own A1101, select the same Model and Algorithm as above. Then click General and click Detect on the bottom.
 
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step_all.jpg"/></div>
-
 
 - **Step 6.** As you can see below, the AI Preview shows the digital meter recognition results.
 
-
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4step5.jpg"/></div>
-
 
 After completing the above steps, we will try to add our own A1101 to the device. Through the following 4 steps, we can view the result data of device identification anytime and anywhere through the cloud platform like SenseCAP Mate.
 
-
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/Meter-model/4stepfinal.png"/></div>
-
-
 
 ## Resources
 
@@ -342,11 +318,11 @@ After completing the above steps, we will try to add our own A1101 to the device
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

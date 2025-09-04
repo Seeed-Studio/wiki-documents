@@ -22,28 +22,28 @@ This tutorial primarily introduces the hardware connection configuration of the 
 ### Hardware Preparation
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>Raspberry Pi5 8GB</th>
-		<th>M.2 Hat/dual Hat</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>Raspberry Pi5 8GB</th>
+  <th>M.2 Hat/dual Hat</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-103110064-pcie-to-m.2-dual-hat-for-raspberry-pi-5-fonmt.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-103110064-pcie-to-m.2-dual-hat-for-raspberry-pi-5-fonmt.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/PCIe-to-dual-M-2-hat-for-Raspberry-Pi-5-p-5973.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/PCIe-to-dual-M-2-hat-for-Raspberry-Pi-5-p-5973.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 For installation without a casing, you need to prepare the following materials:
@@ -52,7 +52,7 @@ For installation without a casing, you need to prepare the following materials:
 - ② M.2 Hat/dual Hat
 - ③ SSD/AI Kit PCIe devices
 - ④ PCIe devices fixing screw
-- ⑤ PCIe connection cable between M.2 Hat and Raspberry Pi 
+- ⑤ PCIe connection cable between M.2 Hat and Raspberry Pi
 - ⑥ Screw sleeve、long screws and nuts
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/1.jpg" alt="pir" width="700" height="auto" /></div>
@@ -64,7 +64,7 @@ For installation with a casing, you need to prepare the following materials:
 - ③ SSD/AI Kit PCIe devices
 - ④ PCIe devices fixing screw
 - ⑤ PCIe connection cable between M.2 Hat and Raspberry Pi
-- ⑥ Long screws and nuts 
+- ⑥ Long screws and nuts
 - ⑦ [outer casing](https://files.seeedstudio.com/wiki/M.2_Hat/Seeed%20M.2%20hat%20with%20Pi5%20case_sam-20240827.stp)
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/1_2.jpg" alt="pir" width="700" height="auto" /></div>
@@ -78,7 +78,6 @@ For installation with a casing, you need to prepare the following materials:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/pi5_GPIO_Pad.png" alt="pir" width="700" height="auto" /></div> -->
 
 ![](https://files.seeedstudio.com/wiki/M.2_Hat/new/hat_installation.gif)
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -165,18 +164,18 @@ Place the overlapping M.2 Hat and Raspberry Pi into the case, with the Raspberry
 </TabItem>
 </Tabs>
 
-
 ### Use SD Card Copier tool to flash OS onto the NVME SSD On Raspberry Pi OS
 
 *This method works if you have an SD card and have booted the device successfully. Please make sure your system is the latest Raspberry Pi system (Bookworm or later) and and your RPi 5 firmware is updated to 2023-12-06 (Dec 6th) or newer, otherwise it may not recognize the NVME-related configurations.*
 
-
 **Step 1**:Ensure that your Raspberry Pi system is up-to-date (Bookworm or later), enter the following command to update the RPi 5 firmware:
+
 ```shell
   sudo apt update && sudo apt upgrade -y
   sudo rpi-eeprom-update  # If it is not post-December 2023 type the following into a terminal to start the configuration tool
   sudo raspi-config
 ```
+
 Scroll down to `Advanced Options` and press Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/g_1.png" alt="pir" width="700" height="auto" /></div>
 
@@ -209,9 +208,11 @@ If asked to reboot, select `Yes`.
 If you have easy access to your SD card slot you could turn off your Pi, pop out the SD card and (if everything's working as expected) it should automagically boot from your NVMe drive the next time you start it up. If you want to leave the SD card where it is and still boot from NVMe though, you'll need to change the boot order.
 
 **Step 1**:Enter the following command:
+
 ```shell
   sudo raspi-config
 ```
+
 Scroll down to `Advanced Options` and press Enter:
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_1.png" alt="pir" width="700" height="auto" /></div>
 
@@ -235,7 +236,6 @@ You will be asked whether you want to reboot now. Click `Yes`:
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/M.2_Hat/new/s_6.png" alt="pir" width="700" height="auto" /></div>
 
-
 ### Modify PCIe
 
 <Tabs>
@@ -243,14 +243,17 @@ You will be asked whether you want to reboot now. Click `Yes`:
 M.2 Hat supports PCIe Gen 2 and PCIe Gen 3 modes
 
 **Step 1**: Enter the following command to open the `/boot/firmware/config.txt` file
+
 ```shell
 sudo nano /boot/firmware/config.txt
 ```
 
 **Step 2**:Add the following to the [all] section at the end of the `/boot/firmware/config.txt` file:
+
 ```shell
 dtparam=pciex1_gen=3
 ```
+
 Save the file and reboot again, you may see a speed increase!.
 </TabItem>
 
@@ -259,6 +262,7 @@ Save the file and reboot again, you may see a speed increase!.
 PCIe2.0 M.2 dual Hat supports PCIe Gen 2, and PCIe3.0 M.2 dual Hat supports PCIe Gen 2 and PCIe 3.
 
 **Step 1**: Enter the following command to open the `/boot/firmware/config.txt` file
+
 ```shell
 sudo nano /boot/firmware/config.txt
 ```
@@ -275,12 +279,13 @@ dtoverlay=pciex1-compat-pi5,no-mip,mmio-hi
 </TabItem>
 </Tabs>
 
-### Speed Benchmark 
+### Speed Benchmark
 
 <Tabs>
 <TabItem value="Method 1" label="M.2 hat">
 
 This test show that raspberrypi boot from the SD card and use the SSD as backup storage:
+
 ```
 # write speed command
 sudo dd if=/dev/zero of=/mnt/nvme/testfile bs=1M count=1024 oflag=direct
@@ -293,7 +298,6 @@ sudo dd if=/mnt/nvme/testfile of=/dev/null bs=1M iflag=direc
 |:-------------|:--------------:|--------------:|
 | PCIe 3.0       | 822MB/s       | 716MB/s         |
 | PCIe 2.0       | 431 MB/s      | 389MB/s         |
-
 
 </TabItem>
 
@@ -313,13 +317,11 @@ dd if=/dev/zero of=tempfile bs=1M count=1024
 | PCIe 3.0       | average 454MB/s      | average 407MB/s        |   697MB/s 663MB/s|
 | PCIe 2.0       | average 234MB/s      | average 214MB/s        |      414MB/s 324MB/s|
 
-
 </TabItem>
 
 <TabItem value="Method 3" label="M.2 dual Hat with hailo8">
 
 This test show that raspberrypi boot from the SSD and Hailo8 AI accelerator:
-
 
 ```
 # write speed command
@@ -335,22 +337,19 @@ dd if=/dev/zero of=tempfile bs=1M count=1024
 
 > **Note:** To test Hailo8 please check this [link](https://github.com/hailo-ai/hailo-rpi5-examples) and prepare a video with 240 FPS.
 
-
 </TabItem>
 </Tabs>
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
-
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

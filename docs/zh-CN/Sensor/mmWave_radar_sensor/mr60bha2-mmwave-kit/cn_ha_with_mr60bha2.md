@@ -50,7 +50,7 @@ MR60BHA2 是一款 60GHz 毫米波呼吸和心跳检测传感器模块，专为�
 要使用 XIAO ESP32C6 有效地将 MR60BHA2 毫米波传感器与 Home Assistant 集成，请遵循以下基本步骤：
 
 :::caution
-请确保您已将 MR60BHA2 模块的[固件升级](cn_getting_started_with_mr60bha2.md#module-firmware-upgrade)到最新版本。  
+请确保您已将 MR60BHA2 模块的[固件升级](/cn/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade)到最新版本。  
 最新固件添加了人体存在检测和人员检测功能。
 :::
 

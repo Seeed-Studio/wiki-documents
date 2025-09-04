@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Instrucciones de Firmware de Código Abierto'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: lorawan_tracker_open_source_fw
+link:
+  type: generated-index
+  slug: es/lorawan_tracker_open_source_fw
+  title: Instrucciones de Firmware de Código Abierto para Rastreador LoRaWAN
+  description: Rastreador LoRaWAN (Software de código abierto)

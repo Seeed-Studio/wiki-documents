@@ -17,7 +17,6 @@ wikiurl: https://wiki.seeedstudio.com/ODYSSEY-X86J4105/
 sku: 102110399
 --- -->
 
-
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ODYSSEY-X86J4105-side.png)
 
 ODYSSEY - X86J41x5 SBC series consists of ODYSSEY - X86J4105, ODYSSEY - X86J4125 and ODYSSEY - X86J4125 V2. They are based on Intel Celeron J4105/ J4125 and has all the great features that a standard computer needs, including an 8GB LPDDR4 RAM, 64GB eMMC Storage(eMMC version only), onboard Wi-Fi/BLE, Dual 1GbE/ 2.5GbE Ports, Audio Input and Output, USB Ports, HDMI, SATA connectors, PCIe and more.
@@ -57,7 +56,7 @@ ODYSSEY - X86J41x5 SBC series consists of ODYSSEY - X86J4105, ODYSSEY - X86J4125
   </tbody>
 </table>
 
-## Key Features:
+## Key Features
 
 - Intel® Celeron® J4105/ J4125
 - Dual-Band Frequency 2.5GHz/5GHz WiFi and Bluetooth 5.0
@@ -68,7 +67,6 @@ ODYSSEY - X86J41x5 SBC series consists of ODYSSEY - X86J4105, ODYSSEY - X86J4125
 - 2 x M.2 PCIe (B Key and M Key)
 - Pre-installed with Windows 10 Enterprise/ Windows 11 Pro
 - Compatible with Grove Ecosystem
-
 
 ## Hardware Specifications
 
@@ -163,7 +161,7 @@ ODYSSEY - X86J41x5 SBC series consists of ODYSSEY - X86J4105, ODYSSEY - X86J4125
 </table>
 
 :::note
-If you are using 3.5inch HDD drives with the ODYSSEY – X86J41x5, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A. 
+If you are using 3.5inch HDD drives with the ODYSSEY – X86J41x5, make sure to use a DC power supply of 12V@2A or Type-C power supply of 15V@2A.
 :::
 
 :::tip
@@ -340,7 +338,9 @@ You can also power the ODYSSEY - X86J41x5 through the USB-C port with 12V input.
  ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/T-Rex%20Run!%20-%20Chrome%20Dinosaur%20Game%20-%20Google%20Chrome%202019-12-04%2017-01-42.2019-12-05%2009_38_40.gif)
 
 ## Using the Arduino Core (ATSAMD21G18) on ODYSSEY - X86J4105/ X86J4125 in Windows
+
 ### Odyssey J4105/J4125 v1
+
 The ODYSSEY - X86J4105/ X86J4125  is built with Arduino Core(ATSAMD21G18) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
 
 1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
@@ -349,7 +349,7 @@ The ODYSSEY - X86J4105/ X86J4125  is built with Arduino Core(ATSAMD21G18) which 
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/ArduinoBoard.png)
 
-3. Select the right Port and Board before uploading. 
+3. Select the right Port and Board before uploading.
 
 - `Port` -> `COMxx(Seeeduno Zero)`
 
@@ -360,7 +360,9 @@ The ODYSSEY - X86J4105/ X86J4125  is built with Arduino Core(ATSAMD21G18) which 
 Feel free to explore your creativity with ODYSSEY - X86J4105/ X86J4125!
 
 ### Odyssey J4125 v2
+
 The ODYSSEY - X86J4125 v2 is built with Arduino Core(RP2040) which provides more functionality to the board, and to use it, simply download the [Arduino IDE](https://www.arduino.cc/en/main/software), and Install the Windows version.
+
 1. Install Arduino in the same way as described in the Wiki.
 `Getting Started with ODYSSEY - X86J41x5 | Seeed Studio Wiki`
 
@@ -372,7 +374,7 @@ The ODYSSEY - X86J4125 v2 is built with Arduino Core(RP2040) which provides more
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Boardsmanager.png)
 
-4. Select your `Raspberry Pi Pico` and the corresponding port. 
+4. Select your `Raspberry Pi Pico` and the corresponding port.
 
 5. You have now finished setting up the Odyssey J4125V2 RP2040 for Arduino IDE on Ubuntu 20.04.I wrote a simple program and the serial monitor shows as expected
 
@@ -391,6 +393,7 @@ If you have installed Linux OS, Download the Linux version of [Arduino IDE](http
 ```sh
 cd ~/Downloads
 ```
+
 2. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`.
 
 2. Use tar command to unzip the downloaded file
@@ -418,7 +421,9 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 ```
 
 ### Installing Board Libraries
+
 #### Odyssey J4105/J4125 v1
+
 1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`.
 
 2. Click `Tools`->`Board:`->`Boards Manager...`, and Boards Manager will appear. Search and install the **`Seeeduino Zero`** board library.
@@ -430,16 +435,18 @@ cd /opt/arduino-1.8.10 && ./arduino-linux-setup.sh
 - `Port` -> `ttyACM0(Seeeduno Zero)`
 
 - `Board` -> `Seeeduino Zero`
+
 #### Odyssey J4125 v2
+
 1. Click `File`->`Preferences`->`Additional Boards Manager URL:` and Copy the following link into it `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json`.
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Preferences.png)
 
-2.  Go to `Tools` > `Board` > `Boards Manager…`, and enter `RP2040` in the search box. Select the latest version of `Raspberry Pi Pico/RP2040` and install it.
+2. Go to `Tools` > `Board` > `Boards Manager…`, and enter `RP2040` in the search box. Select the latest version of `Raspberry Pi Pico/RP2040` and install it.
 
 ![](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Boardsmanager.png)
 
-3. Select your `Raspberry Pi Pico` and the corresponding port. 
+3. Select your `Raspberry Pi Pico` and the corresponding port.
 
 ## FAQs
 
@@ -483,7 +490,6 @@ This also need to be configured in the BIOS. Enter BIOS settings by pressing DEL
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/Auto-power.png" /></div>
 
-
 ### Fan is not turning on
 
 ODYSSEY - X86J41x5 fan is controlled by Embedded controller (EC) which role as initialize the device before system is up. The temperature in BIOS is detected by EC and the temperature sensor place close to the intel CPU which do not have the sensor pin. In another word, the temperature is not the CPU's direct value, maybe 5 degrees centigrade error. What you saw the temperature value in system is feedback by CPU internal, temperature in BIOS screen feedback by EC, fan run or stop according the EC value.
@@ -502,16 +508,15 @@ Some of you may need to know the 5V PWM fan pinout in order to DIY/replace to yo
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105864/img/x86-fan.png" /></div>
 
-
-### Re-Installing the Original Windows 
+### Re-Installing the Original Windows
 
 The eMMC versions of ODYSSEY - X86J41x5 will have Windows 10 pre-installed into the device. If you install another OS and wanting to go back to the original Windows 10 please check here:
 
 - [**Original Windows 10 Image**](https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Ant-image/SD-JX-CJ41G-M-101-H.zip)
 
-    - This image supports **Auto Flash**. Simply download the above image and unzip the files and place in the **root location of a USB drive**.
+  - This image supports **Auto Flash**. Simply download the above image and unzip the files and place in the **root location of a USB drive**.
 
-    - Plug in the USB drive to ODYSSEY-X86J41x5 and boot up from the USB Drive. This will auto flash the Original Windows 10 Image back in the eMMC.
+  - Plug in the USB drive to ODYSSEY-X86J41x5 and boot up from the USB Drive. This will auto flash the Original Windows 10 Image back in the eMMC.
 
 ### Does ODYSSEY-X86J41x5 have TPM?
 
@@ -550,11 +555,11 @@ To set this up, you need to [update to the latest BIOS](https://wiki.seeedstudio
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

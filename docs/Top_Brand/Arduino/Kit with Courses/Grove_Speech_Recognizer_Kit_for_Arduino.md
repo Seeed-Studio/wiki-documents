@@ -51,26 +51,26 @@ Sometimes, we want to control something by our voice, such as TV, air condition.
 
 Before create this demo you should prepare some necessary components:
 
-* Grove - Infrared Receiver
+- Grove - Infrared Receiver
 
-* Grove - Infrared Emitter
+- Grove - Infrared Emitter
 
-* Grove - Speech Recognizer
+- Grove - Speech Recognizer
 
-* Base Shield
+- Base Shield
 
-* Arduino UNO
+- Arduino UNO
 
-* Infrared Remote controller
+- Infrared Remote controller
 
 **Get code of a infrared remote controller via Grove - Infrared Receiver**
 
 Download necessary libraries from github : [IRSendRev](https://github.com/Seeed-Studio/IRSendRev) ,<font color="Red">pay attention to the path of your libraries: .../arduino/libraries </font>
 
-* Now open the example file of "recv" : File --&gt; Sketchbook --&gt; libraries --&gt; IRSendRev --&gt; recv.
-* Upload the program to your Arduino UNO.
+- Now open the example file of "recv" : File --&gt; Sketchbook --&gt; libraries --&gt; IRSendRev --&gt; recv.
+- Upload the program to your Arduino UNO.
 
-* Plug Base Shield onto the Arduino UNO,and plug the Grove - Receiver onto the D2 port of Base Shield.
+- Plug Base Shield onto the Arduino UNO,and plug the Grove - Receiver onto the D2 port of Base Shield.
 
 ```
 const int pinRecv = 2;
@@ -78,7 +78,7 @@ const int pinRecv = 2;
 
 Also you can change another port while modifying the definement of pin.
 
-* Open the monitor of Arduino UNO.
+- Open the monitor of Arduino UNO.
 
 Press a button of any Infrared Remote Controller, you'll get the detailed information code of the button, see following:
 
@@ -102,11 +102,11 @@ DATA: 128    126    16    239
 
 Now we can use the previous information code of a button.
 
-* Open the example file of "send" : File --&gt; Sketchbook --&gt; libraries --&gt; IRSendRev --&gt; send.
+- Open the example file of "send" : File --&gt; Sketchbook --&gt; libraries --&gt; IRSendRev --&gt; send.
 
-* Upload the program to your Arduino UNO.
+- Upload the program to your Arduino UNO.
 
-* Plug Base Shield onto the Arduino UNO,and plug the Grove - Receiver onto the D3 port of Base Shield.
+- Plug Base Shield onto the Arduino UNO,and plug the Grove - Receiver onto the D3 port of Base Shield.
 
 First we need modify the default information of the button:
 
@@ -228,7 +228,7 @@ void loop()
 
 **Add Speech Recognizer to your IRSend program**
 
-* It's very simple to use Speech Recognizer alone, please see the wiki of it first.
+- It's very simple to use Speech Recognizer alone, please see the wiki of it first.
 
 We can choose what buttons we need according to the table; Table of return value, [Grove - Speech Recognizer](https://wiki.seeedstudio.com/Seeed_BLE_Shield/); of return value of Speech Recognizer. Following is the table of return value:
 
@@ -333,7 +333,7 @@ We can choose what buttons we need according to the table; Table of return value
 
 The following example uses two commands: "Turn of the TV" and "Turn off the TV"
 
-* After reading, we can embed the program of Speech Recognizer in the IRSend program. See the following completed program:
+- After reading, we can embed the program of Speech Recognizer in the IRSend program. See the following completed program:
 
 ```
 #include <IRSendRev.h>
@@ -458,13 +458,13 @@ DecreaseVolume();  // decrease volume
 
 But there're some special functions you need to pay attention:
 
-* SelectPlayerDevice(uint8_t device). _The default device value is 0x02, Select SD card as the player device._
+- SelectPlayerDevice(uint8_t device). _The default device value is 0x02, Select SD card as the player device._
 
 ```
 SelectPlayerDevice(0x02);
 ```
 
-* SpecifyMusicPlay(uint16_t index). _play a song by name._
+- SpecifyMusicPlay(uint16_t index). _play a song by name._
 
 <dl>
   <dd>Pay attention to the name of songs, you can set a name like following type:</dd>
@@ -480,7 +480,7 @@ SelectPlayerDevice(0x02);
 SpecifyMusicPlay(5);
 ```
 
-* SpecifyfolderPlay(uint8_t folder, uint8_t index);   // play a song by name in a appointed folder
+- SpecifyfolderPlay(uint8_t folder, uint8_t index);   // play a song by name in a appointed folder
 
 <dl>
   <dd>Furthermore, sometimes we may play music in a new folder, the previous function comes in handy.</dd>
@@ -498,7 +498,7 @@ So if we want to play the "005" in the folder "01", we can do this:
 SpecifyfolderPlay(1,5);
 ```
 
-* Other attention:
+- Other attention:
 
 Each song has its length of time, so if you want to appoint songs one by one, there've two ways you can choose:
 
@@ -526,9 +526,9 @@ while(QueryPlayStatus() != 0);
 
 OK, let's embed Speech Recognizer and Grove - MP3 together. The following demo can control some MP3 functions: play music, pause music, continue music, next song, previous song.
 
-* Copy the program and upload it to your Arduino UNO.
+- Copy the program and upload it to your Arduino UNO.
 
-* Plug Base Shield onto the Arduino UNO,and plug the Grove - MP3 v2 onto the D2 port of Base Shield.
+- Plug Base Shield onto the Arduino UNO,and plug the Grove - MP3 v2 onto the D2 port of Base Shield.
 
 ```cpp
 # include <SoftwareSerial.h>
@@ -598,11 +598,11 @@ Did you use Grove - MP3 to broadcast real-time? Let's have a try via Speech Reco
 
 Download necessary libraries from github: <font color="Red">[RTC_DS1307](https://github.com/Seeed-Studio/RTC_DS1307);[library, Grove - RTC](/Grove-RTC);, pay attention to the path of your libraries: .../arduino/libraries</font> .
 
-* Open the example file of "SetTimeAndDisplay" : File --&gt; Sketchbook --&gt; libraries --&gt; RTC_DS1307 --&gt; SetTimeAndDisplay.
+- Open the example file of "SetTimeAndDisplay" : File --&gt; Sketchbook --&gt; libraries --&gt; RTC_DS1307 --&gt; SetTimeAndDisplay.
 
-* Plug Base Shield onto the Arduino UNO,and plug the Grove - RTC onto the  I2C of Base Shield.
+- Plug Base Shield onto the Arduino UNO,and plug the Grove - RTC onto the  I2C of Base Shield.
 
-* Set the right time of RTC.
+- Set the right time of RTC.
 
 ```txt
 clock.fillByYMD(2016,1,19);//May 23,2016
@@ -610,7 +610,7 @@ clock.fillByHMS(15,28,30);//15:28 30"
 clock.fillDayOfWeek(Mon);//Saturday
 ```
 
-* Upload the modified program to your Arduino UNO.
+- Upload the modified program to your Arduino UNO.
 
 **Text-to-speech**
 
@@ -618,11 +618,11 @@ As all we known, it has 60 numbers while broadcasting time (0 ~ 59), and we can 
 
 <font color="Red">But there're some tips about SD card you need to pay attention to:</font>
 
-* Form of SD Card: FAT32.
+- Form of SD Card: FAT32.
 
-* Format SD Card before deleting any songs; Nothing should to do while adding any songs.
+- Format SD Card before deleting any songs; Nothing should to do while adding any songs.
 
-* The sequence of playing is depended on the sequence of song addition in SD Card. _so if we want to play some songs in order, we need to add those songs in SD Card in order._
+- The sequence of playing is depended on the sequence of song addition in SD Card. _so if we want to play some songs in order, we need to add those songs in SD Card in order._
 
 By the way, we have ranked 61 sound files in a folder, you can [download it](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/res/Sound_file.zip) and copy it to your SD Card. Of course you may need to format SD Card first.
 
@@ -665,11 +665,11 @@ By the way, we have ranked 61 sound files in a folder, you can [download it](htt
 
 **Integrated Program and broadcast real-time**
 
-* Plug Base Shield onto the Arduino UNO; plug Grove - MP3 v2 onto the D2 port of Base shield; plug Grove - Speech Recognizer onto the D5 port of Base Shield; plug Grove - RTC onto the I2C port of Base Shield.
+- Plug Base Shield onto the Arduino UNO; plug Grove - MP3 v2 onto the D2 port of Base shield; plug Grove - Speech Recognizer onto the D5 port of Base Shield; plug Grove - RTC onto the I2C port of Base Shield.
 
-* Copy the following codes on a new sketch of Arduino IDE and upload the program to Arduino UNO.
+- Copy the following codes on a new sketch of Arduino IDE and upload the program to Arduino UNO.
 
-* Say "HiCell, What's the time" , the MP3 will broadcast the real-time.
+- Say "HiCell, What's the time" , the MP3 will broadcast the real-time.
 
 ```
 
@@ -738,24 +738,24 @@ void loop ()
 
 ---
 
-* [Github: IRSendRev](https://github.com/Seeed-Studio/IRSendRev)
+- [Github: IRSendRev](https://github.com/Seeed-Studio/IRSendRev)
 
-* [Github: MP3](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0)
+- [Github: MP3](https://github.com/Seeed-Studio/Grove_Serial_MP3_Player_V2.0)
 
-* [Github: RTC](https://github.com/Seeed-Studio/RTC_DS1307)
+- [Github: RTC](https://github.com/Seeed-Studio/RTC_DS1307)
 
-* [Sound files of broadcast](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/res/Sound_file.zip)
+- [Sound files of broadcast](https://files.seeedstudio.com/wiki/Grove_Speech_Recognizer_Kit_for_Arduino/res/Sound_file.zip)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -42,7 +42,7 @@ What makes Sidewalk different than other networks that are available today:
 - **Automatic device onboarding**
 
     Amazon Sidewalk touchless registration process starts automatically when the Sidewalk gateway and an unregistered endpoint are in close range of each other. Customers can connect their Sidewalk-enabled devices to the Amazon Sidewalk network without any complex configuration. This ease of setup enhances the overall user experience.
- 
+
 - **Cost**
 
     Amazon Sidewalk is a free-to-connect network that offers coverage to more than 90% of the U.S. population. You don’t need to build or manage a separate network infrastructure, which helps in lowering capital investment and operational costs."
@@ -82,14 +82,14 @@ The content of this tutorial will minimise the need for soldering or additional 
 To complete the content of this sample tutorial, the following may be necessary to be prepared.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO nRF52840 Sense</th>
-			<th>Amazon Sidewalk gateway (Echo Gen4)</th>
+ <table align="center">
+  <tr>
+   <th>XIAO nRF52840 Sense</th>
+   <th>Amazon Sidewalk gateway (Echo Gen4)</th>
             <th>Grove - Red LED Button</th>
             <th>J-Link</th>
             <th>USB to UART</th>
-		</tr>
+  </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/20.jpeg" style={{width:250, height:'auto'}}/></div></td>
@@ -97,56 +97,55 @@ To complete the content of this sample tutorial, the following may be necessary 
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/21.png" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/22.png" style={{width:250, height:'auto'}}/></div></td>
         </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Button.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Button.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td></td>
             <td></td>
-		</tr>
-	</table>
+  </tr>
+ </table>
 </div>
 
 :::tip
 To facilitate Amazon Sidewalk testing and endpoint development for non-US developers working outside the **US-East-1** (Northern Virginia) region, a VPN setup is necessary. This enables seamless access and ensures efficient participation in the development process.
 :::
 
-
 ### Optional
 
 For easy wiring and Grove expansion, or for easy connection to XIAO via JLink, you may need the following expansion boards.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio Expansion board for XIAO</th>
-			<th>Seeed Studio Grove Base for XIAO</th>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio Expansion board for XIAO</th>
+   <th>Seeed Studio Grove Base for XIAO</th>
+  </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
         </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Configure Amazon Sidewalk's development environment
@@ -272,7 +271,7 @@ west update
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/32.png" style={{width:800, height:'auto'}}/></div>
 
-Depending on your connection, the update might take some time. 
+Depending on your connection, the update might take some time.
 
 Verify the new manifest path:
 
@@ -354,7 +353,7 @@ If your user has Admin permissions, prerequisite is already satisfied, you can s
 :::note
 This tutorial uses an administrator rights account by default, if you are using an IAM account, please contact your administrator to enable specific permissions for your account.
 
-- Run `python aws-iot-core-for-amazon-sidewalk-sample-app/ApplicationServerDeployment/policies/generate_policy.py` script, which will generate personalized policy documents in *ApplicationServerDeployment/policies/* directory 
+- Run `python aws-iot-core-for-amazon-sidewalk-sample-app/ApplicationServerDeployment/policies/generate_policy.py` script, which will generate personalized policy documents in *ApplicationServerDeployment/policies/* directory
 - go to the IAM console, create the policy using *DeployStackPolicy.json* content
 - assign created policy to your user
 Refer to the [IAM tutorial: Create and attach your first customer managed policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_managed-policies.html) for further guidance.
@@ -372,7 +371,7 @@ The original tutorial for the Template Bluetooth LE can be read [here](https://n
 
 ### Provisioning generation
 
-**Step 1**. Go to AWS IoT Core for Amazon Sidewalk tools. 
+**Step 1**. Go to AWS IoT Core for Amazon Sidewalk tools.
 
 Open the folder **aws-iot-core-for-amazon-sidewalk-sample-app** that we cloned down earlier.
 
@@ -397,7 +396,6 @@ _Paths:
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/36.png" style={{width:1000, height:'auto'}}/></div>
-
 
 **Step 3**. Set up Python virtual environment for the provisioning tools:
 
@@ -590,28 +588,28 @@ You can start by putting this file together with the **Nordic_MFG.hex** file we 
 Please connect the XIAO nRF52840 to the JLink via the SWD interface.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO nRF52840</th>
-			<th>JLink (Non-educational version)</th>
-		</tr>
-		<tr>
-			<td align="center">3V3</td>
-			<td align="center">Vterf</td>
-		</tr>
-		<tr>
-			<td align="center">GND</td>
-			<td align="center">GND</td>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO nRF52840</th>
+   <th>JLink (Non-educational version)</th>
+  </tr>
+  <tr>
+   <td align="center">3V3</td>
+   <td align="center">Vterf</td>
+  </tr>
+  <tr>
+   <td align="center">GND</td>
+   <td align="center">GND</td>
+  </tr>
         <tr>
-			<td align="center">SWDIO</td>
-			<td align="center">SWIO</td>
-		</tr>
+   <td align="center">SWDIO</td>
+   <td align="center">SWIO</td>
+  </tr>
         <tr>
-			<td align="center">SWCLK</td>
-			<td align="center">SWCK</td>
-		</tr>
-	</table>
+   <td align="center">SWCLK</td>
+   <td align="center">SWCK</td>
+  </tr>
+ </table>
 </div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-sidewalk/24.jpg" style={{width:600, height:'auto'}}/></div><br />
@@ -647,37 +645,37 @@ When you have finished you can click on **Read** to see if the shape of the memo
 In the preview of the example we have marked the pin positions to which the LEDs and Button are connected. Next we will need to use the four Grove LED Buttons, which not only allow us to control the work of the XIAO, but also show the different working states by means of the LEDs on the buttons.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO nRF52840</th>
-			<th>LED</th>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO nRF52840</th>
+   <th>LED</th>
             <th>Button</th>
             <th>USB to UART</th>
-		</tr>
-		<tr>
-			<td align="center">D0</td>
-			<td align="center">LED1</td>
+  </tr>
+  <tr>
+   <td align="center">D0</td>
+   <td align="center">LED1</td>
             <td align="center"></td>
             <td align="center"></td>
-		</tr>
-		<tr>
-			<td align="center">D1</td>
-			<td align="center"></td>
+  </tr>
+  <tr>
+   <td align="center">D1</td>
+   <td align="center"></td>
             <td align="center">Button1</td>
             <td align="center"></td>
-		</tr>
+  </tr>
         <tr>
-			<td align="center">D2</td>
-			<td align="center">LED2</td>
+   <td align="center">D2</td>
+   <td align="center">LED2</td>
             <td align="center"></td>
             <td align="center"></td>
-		</tr>
+  </tr>
         <tr>
-			<td align="center">D3</td>
-			<td align="center"></td>
+   <td align="center">D3</td>
+   <td align="center"></td>
             <td align="center">Button2</td>
             <td align="center"></td>
-		</tr>
+  </tr>
         <tr>
             <td align="center">D4</td>
             <td align="center">LED3</td>
@@ -733,13 +731,11 @@ The XIAO is powered via USB and then the XIAO nRF52840 is controlled using pushb
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

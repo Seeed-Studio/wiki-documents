@@ -90,7 +90,6 @@ If you have the Home Assistant OS installed, it has an Add-on Store, which makes
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/79.png" /></div>
 
-
 In the Add-on Store, you can search for and install ESPHome.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/80.png" /></div>
@@ -107,8 +106,8 @@ esphome/esphome:latest
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/17.png" /></div>
 
-
 On the page where the container is created, we need to make some simple settings.
+
 - Container Name: your container name
 - Docker Image: choose just downloaded **esphome** image
 - Network: choose **host** mode
@@ -116,11 +115,9 @@ On the page where the container is created, we need to make some simple settings
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/18.png" /></div>
 
-
 Once you have filled in the above, save and apply. You will see that the Container has been created. You also need to start it.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/19.png" /></div>
-
 
 In order to achieve the same effect as downloading ESPHome in Home Assistant, we need to modify the configuration file under Home Assistant.
 
@@ -128,11 +125,9 @@ Go to the Home Assistant Container.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/55.png" /></div>
 
-
 We go to the terminal in Home Assistant.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/56.png" /></div>
-
 
 Enter the following command in the terminal.
 
@@ -209,26 +204,22 @@ In the **Network** tab in OpenWRT, select **Wireless** --> **ADD**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/58.png" /></div>
 
-
 For **Transmit Power** in **Device Configuration**, select **auto**.
 
 For the **Interface Configuration** settings, please fill in the following instructions.
 
 - General Setup
-    - Mode: Depends on how LinkStar accesses the internet. If you are using a cable connection then select **Client**, if you are connected to WiFi then select **Access Point**.
-    - ESSID: Enter the name of your WiFi, please try not to have spaces or special characters.
-    - Network: check **lan**.
+  - Mode: Depends on how LinkStar accesses the internet. If you are using a cable connection then select **Client**, if you are connected to WiFi then select **Access Point**.
+  - ESSID: Enter the name of your WiFi, please try not to have spaces or special characters.
+  - Network: check **lan**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/23.png" /></div>
 
-
 - Wireless Security
-    - Encryption: WPA2-PSK
-    - Key: Enter the WiFi password you wish to set.
+  - Encryption: WPA2-PSK
+  - Key: Enter the WiFi password you wish to set.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/24.png" /></div>
-
-
 
 Once you have filled in the above information, click **Save and Apply** in the bottom right hand corner and wait a few moments for LinkStar to open a hotspot.
 
@@ -236,18 +227,15 @@ When no device is connected to this hotspot, it will be displayed as no signal.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/60.png" /></div>
 
-
 All things considered, let's return to the Home Assistant page.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/61.png" /></div>
-
 
 Click on the **NEW DEVICE**. Then click on **Continue**.
 
 Under the new pop-up window, please enter the name of the application you wish to set up, as well as the name and password of the hotspot you have set up in LinkStar (Or your own WiFi). Make sure that the XIAO ESP32C3 and Home Assistant on the **same LAN**.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/25.png" /></div>
-
 
 Then click **Next**.
 
@@ -269,11 +257,9 @@ Then, we click on the device tab we just created, with the **EDIT** button in th
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/28.png" /></div>
 
-
 Please note that we need to make changes to this yaml file. We have divided the content to be modified into two main parts, corresponding to one and two in the diagram below.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.png" /></div>
-
 
 - In the **①** of the content, please do not change the device name except the one you have configured, please refer to the code below for the rest of the content.
 
@@ -421,7 +407,6 @@ number:
 
 </details>
 
-
 Then, please click on the **Save** button in the top right corner.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/63.png" /></div>
@@ -436,16 +421,13 @@ Connect XIAO to your device.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ESPHome/49.png" style={{width:700, height:'auto'}}/></div>
 
-
 Click on the three dots in the bottom right corner of the device bar and select **Install**.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/84.png" /></div>
 
-
 Click **Plug into the computer running ESPHome Dashboard**.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/85.png" /></div>
-
 
 Select the connected port.
 
@@ -464,7 +446,6 @@ Soft routes like LinkStar H68K do not support recognition of external MCU device
 Click on the **Install** button in the top right hand corner. Then select the last item **Manual download**.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/30.png" /></div>
-
 
 Select **Modern format**.
 
@@ -502,7 +483,6 @@ Click **INSTALL** and then select the `.bin` file downloaded from above steps.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" /></div>
 
-
 - Option 2: Using the [esphome-flasher tool](https://github.com/esphome/esphome-flasher).
 
 If you are still unable to upload firmware using method one after installing the driver and changing browsers, then you can try using method two. Please refer to the official tutorial for specific installation methods and instructions.
@@ -515,7 +495,7 @@ If you wish to observe the log messages of the XIAO ESP32C3, you can also view t
 
 Once the upload is complete, you can disconnect the XIAO ESP32C3 from the PC (unless you have a need to view the logs) and simply power the XIAO separately.
 
-If all goes well, the XIAO ESP32C3 will search for and connect to the WiFi you have set up for it. 
+If all goes well, the XIAO ESP32C3 will search for and connect to the WiFi you have set up for it.
 
 Just like me, I use LinkStar H68K's network. You can find it in the network options and see the IP address assigned to it by LinkStar H68K.
 
@@ -731,18 +711,14 @@ Due to the high risk of unprotecting reads and writes, we do not disclose the me
 
 ## Tech Support & Product Discussion
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

@@ -311,7 +311,6 @@ reComputer R1000 提供多种安装方式。包装中包含 DIN 导轨夹和安�
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## 技术支持与产品讨论

@@ -16,7 +16,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Basic-Fastener-Kit-p-1555.html)
 
-##  Part List
+## Part List
 
 <table cellspacing="0" width="80%">
 <tr>
@@ -158,7 +158,7 @@ Basic Fastener Kit contains many standard components, including Screws,nuts,rive
 </tr>
 </table>
 
-##  Usage
+## Usage
 
 Here is an example that used some parts of this Basic Fastener Kit. If you have similar projects, the Basic Fastener Kit is necessary.
 
@@ -169,11 +169,11 @@ Here is an example that used some parts of this Basic Fastener Kit. If you have 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

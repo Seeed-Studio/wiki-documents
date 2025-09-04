@@ -16,7 +16,7 @@ last_update:
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" /></center>
 
-## Introduction 
+## Introduction
 
 Face detection using the **Haar Cascade method** is a pivotal technique in computer vision, employing a machine learning model to recognize facial features. This method relies on a cascade of classifiers trained on Haar-like features, allowing for swift and accurate identification of faces in images and video streams. Its widespread application spans diverse fields, including **facial recognition technology for security and authentication purposes, video surveillance systems, and even in photography software for automatic tagging and sorting based on detected faces**. The Haar Cascade method is particularly valuable due to its computational efficiency, making it **well-suited for real-time face detection** in various contexts, contributing significantly to the advancement of facial analysis and identification technologies.
 
@@ -27,19 +27,19 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
@@ -49,7 +49,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-We recommend installing the **Bullesye** or **Bullseye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc). 
+We recommend installing the **Bullesye** or **Bullseye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc).
 
 :::note
 
@@ -63,14 +63,15 @@ In OpenCV, the Haar Cascade method is a face detection algorithm based on machin
 
 Please go though with this [**documentation**](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html) if you want to learn more.
 
-### Let's run the code.
+### Let's run the code
 
-Make sure that you are in correct folder. If not 
+Make sure that you are in correct folder. If not
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
 
  ```
+
 Then or Even you can use Thonny IDE to run the python script.
 
  ```sh
@@ -121,26 +122,25 @@ finally:
     picam2.stop()
     picam2.close()
 ```
-If you want to find more haas cascades xml files to play around, please go through with this [**link**](https://github.com/opencv/opencv/tree/master/data/haarcascades). 
 
-## Applications 
+If you want to find more haas cascades xml files to play around, please go through with this [**link**](https://github.com/opencv/opencv/tree/master/data/haarcascades).
 
+## Applications
 
 Haarcascade, originally designed for real-time face detection, has undergone advancements to address contemporary challenges. Innovators have extended its capabilities to include **face mask detection**, crucial for public health measures. Furthermore, the technology has been optimized for **license plate detection**, particularly valuable in low-resource environments where sophisticated hardware is scarce. These adaptations demonstrate Haarcascade's versatility and efficiency in catering to diverse needs within computer vision applications.
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/FACEMASK.gif" /></center>
-
 
 ## Tech support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

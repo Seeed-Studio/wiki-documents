@@ -472,7 +472,7 @@ void loop() {
 ## ✨ 贡献者项目
 
 - 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Bruno Santos](https://github.com/orgs/Seeed-Studio/projects/6/views/1?sliceBy%5Bvalue%5D=feiticeir0&pane=issue&itemId=90657934&issue=Seeed-Studio%7Cwiki-documents%7C1993)，您的作品将被[展示](https://wiki.seeedstudio.com/cn/contributors/)。
+- 感谢 [Bruno Santos](https://github.com/orgs/Seeed-Studio/projects/6/views/1?sliceBy%5Bvalue%5D=feiticeir0&pane=issue&itemId=90657934&issue=Seeed-Studio%7Cwiki-documents%7C1993)，您的作品将被[展示](https://wiki.seeedstudio.com/contributors/)。
 
 ## 技术支持与产品讨论
 

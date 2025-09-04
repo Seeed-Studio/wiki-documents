@@ -11,7 +11,7 @@ last_update:
   date: 11/22/2023
   author: Kasun Thushara
 ---
-## Introduction 
+## Introduction
 
 AWS IoT Core is a service that assists in securely connecting and managing Internet of Things (IoT) devices. It enables devices to communicate with each other and with the cloud, facilitating the development of smart and connected applications. AWS IoT Core streamlines the integration of IoT devices into the broader AWS ecosystem, offering a reliable and scalable platform for building IoT solutions. In this guide, we will discuss how to connect our reTerminal DM to the AWS IoT cloud.
 
@@ -22,28 +22,29 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
 We recommend installing the **Bullesye** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)
 
 #### Install Mqtt library
+
 In your terminal type :
 
 ```sh
@@ -56,13 +57,11 @@ If you are trying to use Bookworm OS, which is the latest OS as of the time of w
 
 :::
 
-## Create AWS Account 
+## Create AWS Account
 
 If you don't have an AWS account, you can easily create one. Please follow [**this link**](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html) for guidance on how to set up your account.
 
-## Register the device 
-
-
+## Register the device
 
 - **Step 1**: Search IoT core and navigate to it.
 
@@ -78,7 +77,7 @@ AWS IoT refers to Internet of Things (IoT) devices as "things" on the AWS platfo
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingsslidebar.PNG" style={{width:200, height:300}}/></div>
 
-- **Step 3**: Next press on Create things 
+- **Step 3**: Next press on Create things
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createthings.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -97,11 +96,12 @@ AWS IoT refers to Internet of Things (IoT) devices as "things" on the AWS platfo
 
 Thing types enable you to store descriptions and configuration information that are common to all things associated with the same thing type. This simplifies the management of things in the registry. For instance, you can define a 'Factory_HMI' thing type. For this demonstration we used pi as a thing type.
 :::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingtype.PNG" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createthingtype.PNG" style={{width:400, height:300}}/></div>
 
-- **Step 7** : Generate Certificates 
+- **Step 7** : Generate Certificates
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/configurecertificate.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -125,7 +125,6 @@ The policy includes:
 
 **Resource**: Specifies the resource or resources on which the action is allowed or denied.
 
-
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createapolicy.PNG" style={{width:800, height:'auto'}}/></div>
@@ -134,11 +133,11 @@ The policy includes:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/policycreatething.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **Step 11**:Next you can download certificates and keys. Make sure to download **Device certificate, Private and Public keys and Root CA certificate.** 
+- **Step 11**:Next you can download certificates and keys. Make sure to download **Device certificate, Private and Public keys and Root CA certificate.**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/certicates.PNG" style={{width:600, height:450}}/></div>
 
-- **Step 12** : Attach to the thing (reTerminal DM ) 
+- **Step 12** : Attach to the thing (reTerminal DM )
 For that go to **Security** >> **Certificates**
 
 :::info
@@ -153,7 +152,7 @@ After selecting the thing that you made from **Actions** drop down menu then pre
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachtothing.PNG" style={{width:600, height:'auto'}}/></div>
 
-**Step 13**: Attach the policy also. 
+**Step 13**: Attach the policy also.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachpolicy.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -164,17 +163,18 @@ To accomplish this, download our [test Python file](https://files.seeedstudio.co
 To do that :
 
 - **Step 01** :Go to Settings
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/settings.PNG" style={{width:200, height:300}}/></div>
 
-- **Step 02** : Then you will find the URL 
+- **Step 02** : Then you will find the URL
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/weburl.PNG" style={{width:800, height:'auto'}}/></div>
 
 - **Step 03** : Replace those file names with yours and run the file
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
 
-
-## Test the Connection 
+## Test the Connection
 
 Go to MQTT test Client under the **Test** tab and type the topic name to subscribe. In this case it is device/data.
 
@@ -189,21 +189,11 @@ The output is some thing like this. The massage from reterminal DM is pop up in 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-

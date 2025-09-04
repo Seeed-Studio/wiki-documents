@@ -24,25 +24,25 @@ last_update:
 
 ## Prerequisites
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 :::note
 Hardware requirements depend on the chosen database and the number of devices connected to the system. To run ThingsBoard with PostgreSQL, you will need **at least 4GB of RAM**.
@@ -53,30 +53,39 @@ Hardware requirements depend on the chosen database and the number of devices co
 ThingsBoard requires Java 17 to run.Open Terminal.
 
 1. Update your package index:
+
    ```bash
    sudo apt update
    ```
+
 2. Install OpenJDK 17:
+
    ```bash
    sudo apt install openjdk-17-jdk
    ```
+
 3. Configure your system to use OpenJDK 17 by default:
+
    ```bash
    sudo update-alternatives --config java
    ```
+
 4. Verify the installation:
+
    ```bash
    java -version
    ```
 
-
 ## Step 2: Install ThingsBoard Service
 
 1. Download the ThingsBoard `.deb` package:
+
    ```bash
    wget https://github.com/thingsboard/thingsboard/releases/download/v3.8/thingsboard-3.8.deb
    ```
+
 2. Install ThingsBoard as a service:
+
    ```bash
    sudo dpkg -i thingsboard-3.8.deb
    ```
@@ -84,10 +93,13 @@ ThingsBoard requires Java 17 to run.Open Terminal.
 ## Step 3: Install PostgreSQL Database
 
 1. Install **wget** if not already installed:
+
    ```bash
    sudo apt install -y wget
    ```
+
 2. Add the PostgreSQL repository and install the service:
+
    ```bash
    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
    echo "deb https://apt.postgresql.org/pub/repos/apt/ $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
@@ -97,12 +109,14 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    ```
 
 3. Set the password for the `postgres` user:
+
    ```bash
    sudo -u postgres psql
    \password
    ```
 
 4. Create the ThingsBoard database:
+
    ```bash
    psql -U postgres -d postgres -h 127.0.0.1 -W
    CREATE DATABASE thingsboard;
@@ -111,11 +125,13 @@ ThingsBoard requires Java 17 to run.Open Terminal.
 ## Step 4: Configure ThingsBoard
 
 1. Open the ThingsBoard configuration file:
+
    ```bash
    sudo nano /etc/thingsboard/conf/thingsboard.conf
    ```
 
 2. Add the following database configuration (replace `PUT_YOUR_POSTGRESQL_PASSWORD_HERE` with the password set for the `postgres` user):
+
    ```bash
    # DB Configuration 
    export DATABASE_TS_TYPE=sql
@@ -126,6 +142,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
    ```
 
 3. (Optional) Update memory settings for machines with 4GB of RAM:
+
    ```bash
    export JAVA_OPTS="$JAVA_OPTS -Xms2G -Xmx2G"
    ```
@@ -133,6 +150,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
 ## Step 5: Run Installation Script
 
 1. Execute the ThingsBoard installation script:
+
    ```bash
    sudo /usr/share/thingsboard/bin/install/install.sh --loadDemo
    ```
@@ -142,6 +160,7 @@ ThingsBoard requires Java 17 to run.Open Terminal.
 ## Step 6: Start ThingsBoard Service
 
 Start the ThingsBoard service:
+
 ```bash
 sudo service thingsboard start
 ```
@@ -150,7 +169,8 @@ Once started, you can access the ThingsBoard Web UI using the following link:
 
 - **URL:** [http://localhost:8080](http://localhost:8080)
 
-#### Default Credentials:
+#### Default Credentials
+
 - **System Administrator:** sysadmin@thingsboard.org / sysadmin
 - **Tenant Administrator:** tenant@thingsboard.org / tenant
 - **Customer User:** customer@thingsboard.org / customer
@@ -164,9 +184,11 @@ cat /var/log/thingsboard/thingsboard.log | grep ERROR
 ```
 
 For additional log files:
+
 ```bash
 /var/log/thingsboard
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/tb/openingwindow.PNG" style={{width:600}}/></div>
 
 ## Tech Support & Product Discussion
@@ -174,11 +196,11 @@ For additional log files:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

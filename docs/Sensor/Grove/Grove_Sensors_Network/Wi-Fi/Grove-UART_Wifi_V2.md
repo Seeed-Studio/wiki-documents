@@ -36,20 +36,20 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP828
 
 ## Features
 
-* Grove 4-pin connector (RX,TX,VCC,GND)
-* 802.11 b/g/n protocol (2.4GHz)
-* WiFi Direct (P2P), soft-AP
-* Supports three modes: AP, STA and AP+STA coexistence mode
-* Integrated TCP/IP protocol stack
-* LwIP (lightweight IP)
-* Integrated low power 32-bit CPU could be reprogrammed as an application processor
-* Integrated temperature sensor
-* Serial UART Interface
-* Multi-queue QoS management
-* Wake up and transmit packets in &lt; 2ms
-* Metal shielding
-* On-board ceramic antenna
-* Reset switch
+- Grove 4-pin connector (RX,TX,VCC,GND)
+- 802.11 b/g/n protocol (2.4GHz)
+- WiFi Direct (P2P), soft-AP
+- Supports three modes: AP, STA and AP+STA coexistence mode
+- Integrated TCP/IP protocol stack
+- LwIP (lightweight IP)
+- Integrated low power 32-bit CPU could be reprogrammed as an application processor
+- Integrated temperature sensor
+- Serial UART Interface
+- Multi-queue QoS management
+- Wake up and transmit packets in &lt; 2ms
+- Metal shielding
+- On-board ceramic antenna
+- Reset switch
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -57,33 +57,33 @@ Grove - UART WiFi is a serial transceiver module featuring the ubiquitous ESP828
 
 ## Specifications
 
-* Input voltage: 3V / 5V
-* Baud Rate: 115200
-* Based on ESP8285 ESP-06 SoC
-* AT Firmware: esp_iot_sdk_v1.1.0
-  * Register red WiFi LED to the ESP8285 wifi state LED.
-* AT command set
-* SDIO 1.1/2.0, SPI, UART
-* Five power states: OFF, DEEP_SLEEP, SLEEP, WAKEUP and ON.
-* Standby power consumption of &lt; 1.0mW (DTIM=3)
-* Integrated TR switch, balun, LNA, power amplifier and matching network
-* Integrated PLLs, regulators, DCXO and power management units
-* +19.5dBm output power in 802.11b mode
-* Power down leakage current of &lt;10uA
-* Hardware accelerators for CCMP (CBC-MAC, counter mode), TKIP (MIC, RC4), WAPI (SMS4), WEP (RC4), CRC
-* WPA/WPA2 PSK, and WPS driver
-* A-MPDU & A-MSDU aggregation & 0.4ms guard interval
-* Dimensions: 25.43mm x 20.35mm
+- Input voltage: 3V / 5V
+- Baud Rate: 115200
+- Based on ESP8285 ESP-06 SoC
+- AT Firmware: esp_iot_sdk_v1.1.0
+  - Register red WiFi LED to the ESP8285 wifi state LED.
+- AT command set
+- SDIO 1.1/2.0, SPI, UART
+- Five power states: OFF, DEEP_SLEEP, SLEEP, WAKEUP and ON.
+- Standby power consumption of &lt; 1.0mW (DTIM=3)
+- Integrated TR switch, balun, LNA, power amplifier and matching network
+- Integrated PLLs, regulators, DCXO and power management units
+- +19.5dBm output power in 802.11b mode
+- Power down leakage current of &lt;10uA
+- Hardware accelerators for CCMP (CBC-MAC, counter mode), TKIP (MIC, RC4), WAPI (SMS4), WEP (RC4), CRC
+- WPA/WPA2 PSK, and WPS driver
+- A-MPDU & A-MSDU aggregation & 0.4ms guard interval
+- Dimensions: 25.43mm x 20.35mm
 
 **Ultra-low power technology**
 
 The ESP8285 was designed to achieve very low energy consumption with patented power management technology that reduces non-essential functions and regulates sleep patterns. There are five power states:
 
-* OFF
-* DEEP_SLEEP - the real-time clock runs but all other parts of the chip are closed
-* SLEEP - consumes less than 12uA with only real-time clock and watchdog running. The chip will wake on MAC, host, RTC or external interrupt.
-* WAKEUP - the system is changing from a sleep to on state. Crystal oscillator and PLL are enabled.
-* ON - consumes less than 1.0mW (DTIM = 3) or 0.5mW (DTIM = 10).
+- OFF
+- DEEP_SLEEP - the real-time clock runs but all other parts of the chip are closed
+- SLEEP - consumes less than 12uA with only real-time clock and watchdog running. The chip will wake on MAC, host, RTC or external interrupt.
+- WAKEUP - the system is changing from a sleep to on state. Crystal oscillator and PLL are enabled.
+- ON - consumes less than 1.0mW (DTIM = 3) or 0.5mW (DTIM = 10).
 
 The Real-time clock can be programmed to wake the ESP8285 within a specified period of time.
 
@@ -93,16 +93,16 @@ To meet the power requirements of mobile applications and wearable electronics, 
 
 ## Application Ideas
 
-* Home automation
-* Sensor networks
-* Mesh networking
-* Wearable electronics
-* Baby monitor
-* Network camera
-* Industrial wireless control
-* WiFi beacons
-* Smart power plug
-* Location-aware applications
+- Home automation
+- Sensor networks
+- Mesh networking
+- Wearable electronics
+- Baby monitor
+- Network camera
+- Industrial wireless control
+- WiFi beacons
+- Smart power plug
+- Location-aware applications
 
 ## Getting Started
 
@@ -129,21 +129,21 @@ After this section, you can make Grove - UART WiFi run with only few steps.
 
 #### Hardware
 
-* **Step 1.** Connect Grove-UART Wifi to port **SERIAL** of Seeeduino Lite.
+- **Step 1.** Connect Grove-UART Wifi to port **SERIAL** of Seeeduino Lite.
 
-* **Step 2.** Connect Grove-OLED to port **I2C** of Seeeduino Lite.
+- **Step 2.** Connect Grove-OLED to port **I2C** of Seeeduino Lite.
 
-* **Step 3.** Connect Seeeduino Lite to PC via a Micro-USB cable.
+- **Step 3.** Connect Seeeduino Lite to PC via a Micro-USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/V2/Arduino_connect.jpg)
 
 #### Software
 
-* **Step 1.** Download the [128X64 OLED library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip) from Github.
+- **Step 1.** Download the [128X64 OLED library](https://github.com/Seeed-Studio/OLED_Display_128X64/archive/master.zip) from Github.
 
-* **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
-* **Step 3.** Open the Arduino IDE and copy the following code into a new sketch.
+- **Step 3.** Open the Arduino IDE and copy the following code into a new sketch.
 
 ```
 // test grove - uart wifi
@@ -282,7 +282,7 @@ void display_ap()
 }
 ```
 
-* **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
+- **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 Then you will see the OLED show the wifi AP around you.
 
@@ -294,9 +294,9 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 ### Materials required
 
-* A USB to serial converter is required for firmware updating, you can choose [UartSBee V5](https://www.seeedstudio.com/UartSBee-V5-p-1752.html) if you don't know where to get one.
-* A [Grove-Jump converting cable](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-PAck%29-p-1020.html) is required and we also offered for sale.
-* A micro USB cable(type A to type C) is required.
+- A USB to serial converter is required for firmware updating, you can choose [UartSBee V5](https://www.seeedstudio.com/UartSBee-V5-p-1752.html) if you don't know where to get one.
+- A [Grove-Jump converting cable](https://www.seeedstudio.com/Grove-4-pin-Female-Jumper-to-Grove-4-pin-Conversion-Cable-%285-PCs-per-PAck%29-p-1020.html) is required and we also offered for sale.
+- A micro USB cable(type A to type C) is required.
 
 ### Hardware
 
@@ -312,8 +312,8 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **Step 1.** Download burning tool and firmware
 
-* [FLASH DOWNLOAD TOOLS](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/FLASH_DOWNLOAD_TOOLS_v1.2_150512.zip)
-* [Bin files of firmware](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-uart-wifi-firmware-bin.zip)
+- [FLASH DOWNLOAD TOOLS](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/FLASH_DOWNLOAD_TOOLS_v1.2_150512.zip)
+- [Bin files of firmware](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove-uart-wifi-firmware-bin.zip)
 
 **Step 2.** Press and hold button until the red LED indicator turn on which means it is ready to burn firmware.
 
@@ -329,11 +329,11 @@ Our module board got a firmware burned into it for factory settings, you can bur
 
 **4.** Click **START** button
 
-* Progress bar will be displayed in firmware-burning process.
+- Progress bar will be displayed in firmware-burning process.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools2.1.jpg)
 
-* Finally, firmware-burning is done.
+- Finally, firmware-burning is done.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/img/Grove_uart_wifi_firmware_tools3.jpg)
 
@@ -446,26 +446,26 @@ You can use any serial Tools you like, we use Arduino here. And please make sure
 
 ## Resources
 
-* **[PDF]** [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove%20-%20Uart%20Wifi%20v2%20sch.pdf)
+- **[PDF]** [Schematic in PDF](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Grove%20-%20Uart%20Wifi%20v2%20sch.pdf)
 
-* **[Zip]** [Schematic in Eagle](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Uart_Wifi_V2_Eagle_file.zip)
-* **[Datasheet]** [Espressif Systems ESP8285](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/ESP8285_datasheet.pdf)
-* **[PDF]** [Espressif Systems ESP8266 AT Instruction Set - v0.24](http://bbs.espressif.com/download/file.php?id=450)
-* **[MoreReading]** [http://www.esp8266.com](http://www.esp8266.com)
-* **[MoreReading]** [ESP-06](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06)
-* **[MoreReading]** [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
-* **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
+- **[Zip]** [Schematic in Eagle](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/Uart_Wifi_V2_Eagle_file.zip)
+- **[Datasheet]** [Espressif Systems ESP8285](https://files.seeedstudio.com/wiki/Grove-Uart_Wifi/res/ESP8285_datasheet.pdf)
+- **[PDF]** [Espressif Systems ESP8266 AT Instruction Set - v0.24](http://bbs.espressif.com/download/file.php?id=450)
+- **[MoreReading]** [http://www.esp8266.com](http://www.esp8266.com)
+- **[MoreReading]** [ESP-06](http://www.esp8266.com/wiki/doku.php?id=esp8266-module-family#esp-06)
+- **[MoreReading]** [ESP8266 on Hackaday](http://hackaday.com/tag/esp8266/)
+- **[MoreReading]** [https://nurdspace.nl/ESP8266](https://nurdspace.nl/ESP8266)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

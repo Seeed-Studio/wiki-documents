@@ -19,7 +19,6 @@ SenseCAP Software Licence for SenseCAP M2 **down** **to** **\$0.05** **per** **d
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-sensecap-m2-light-hotspot-software-license--first_1_.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-M2-Light-Hotspot-and-Software-License.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
@@ -30,13 +29,9 @@ SenseCAP Software Licence for SenseCAP M2 **down** **to** **\$0.05** **per** **d
 
 SenseCAP M2 Light Hotspot requires a software license to be activated to provide LoRaWAN coverage for Helium. SenseCAP offers three license plans for you to purchase on your need.
 
-
-
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image2.png)
 
 **License** **Package:**
-
-
 
 |**License** **Valid** **Duration**|90 Days|365 Days|Unlimited|
 | :- | :- | :- | :- |
@@ -44,12 +39,7 @@ SenseCAP M2 Light Hotspot requires a software license to be activated to provide
 
 **NOTE:**  This License is only applied for **SenseCAP** **M2** **Light** **Hotspot**, and could not be used to activate other hotspots.
 
-
-
-
 SenseCAP Software License is different from the Helium Onboarding fee, which is required to activate the          SenseCAP software and cloud services. \$50 Helium onboarding fee which is imposed by Helium to onboard the hotspot onto the Helium server has been included in the SenseCAP Hotspot package.
-
-
 
 **Features**
 
@@ -70,8 +60,6 @@ For users who need to power the gateway on Ethernet instead of an extra power su
 **Wide-range** **Coverage** **and** **Strong** **Signal**
 
 To enhance the coverage and signal strength of SenseCAP M2, it is equipped with a high-performance 3dBi     antenna, which can provide wide-ranging coverage of miles on the LoRaWAN network. Additionally, the          antenna can be upgraded to a higher dBi [fiberglass antenna](https://www.seeedstudio.com/catalogsearch/result/?q=fiberglass%20antenna) to suit various usage scenarios and environments.
-
-
 
 **Professional** **Management** **Tools** **and** **Cloud** **Services**
 
@@ -95,13 +83,9 @@ Simple steps with all accessories needed to upgrade your indoor gateways to the 
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image5.png)
 
-
 **Interface**
 
-                                                                                                                                                       
-
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image7.png)
-
 
 **Note:**
 
@@ -109,15 +93,10 @@ The MicroSD card slot is spared for future use. No Micro SD card is needed for S
 
 Nano SIM card slot will only be available in 4G version hotspots. SIM card is not included in the device. The Type-C interface is spared for advanced developer management. Please do not use it to power the   device.
 
-
-
-
 **Indicator** **Mode**
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image9.png)
 
 **Button** **Mode**
-
-
 
 |**Mode**|**Description**|
 | :- | :- |
@@ -125,12 +104,7 @@ Nano SIM card slot will only be available in 4G version hotspots. SIM card is no
 |Press for 5s|<p>Press the button for 5s and release until the blue indicator flash slowly will enter the</p><p>configuration mode, and it will automatically exit in 5 mins if no activity.</p>|
 |<p></p><p></p><p>Press for 30s</p>|<p>Press the button for 30s until the blue indicator flashes fast will trigger a factory reset and a</p><p>software reboot.</p><p>**Attention:** **Please** **do** **NOT** **use** **this** **function** **unless** **suggested** **by** **official** **tech** **support**</p>|
 
-
-
-
-
 **Unit** **Information**
-
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image10.png)
 
@@ -148,22 +122,13 @@ These labels on the bottom indicate important information about the unit includi
 
 - Username and Password to login the local console
 
-
-
 **Note:** **Please** **DO** **NOT** **share** **the** **label** **with** **any** **third** **party.**
-
-
 
 **System** **Structure**
 
-
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image11.jpg)
 
-
-
 **Specification**
-
-
 
 |Processor|MT7628(MIPS24KEc@580MHz)|
 | --- | --- |
@@ -185,9 +150,6 @@ These labels on the bottom indicate important information about the unit includi
 |Operating Temperature|-20°C to 55°C|
 |Relative Humidity|0% - 85% (non-condensing)|
 |Certificates|<p>Australia (RCM)</p><p>Brazil (Anatel)</p><p>Canada (ICES/IC IC)</p><p>EU (CE/RoHS/REACH/WEEE/VerpackG)</p><p>India (WPC)</p><p>Japan (TELEC/PSE)</p><p>Korea (KC)</p><p>Philippines (NTC)</p><p>Taiwan (BSMI/NCC)</p><p>United States (FCC/Verizon OD)</p>|
-
-
-
 
 **For** **SenseCAP** **M2** **4G** **version**
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image12.png)

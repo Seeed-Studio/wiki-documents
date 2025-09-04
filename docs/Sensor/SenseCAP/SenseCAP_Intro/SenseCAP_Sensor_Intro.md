@@ -11,17 +11,13 @@ last_update:
 ---
 
 
-
-
 ## LoRaWAN Sensor
-
 
 ### SenseCAP S210x Series Sensors
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/introduction/lorawan-sensors.png" alt="pir" width={1000} height="auto" /></p>
 
 SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmission range of 2km in urban scenes and 10km in line-of-sight scenes while keeping lower power consumption during the transmission process. Together with a replaceable battery that supports up to 10 years of usage and an industrial IP66 enclosure. It supports -40 ~ 85℃ operating temperature and can be deployed in harsh environments. SenseCAP S210X is compatible with LoRaWAN® V1.0.3 protocol and can work with LoRaWAN® gateway.
-
 
 |Air Temp & Humidity|Light|Air TH & CO2|Soil Moisture & Temp|
 |------------------|--------------------------|-----------------------|-----------------------|
@@ -39,20 +35,15 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 
 [SenseCAP LoRaWAN S2120 Weather Station](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html) collects and uploads air temperature, humidity, wind speed/direction, Rainfall Intensity, light intensity, UV index, and barometric pressure data supported by worldwide LoRaWAN networks. The S2120 weather station is suitable for applications in gardens, agriculture, meteorology, urban environmental monitoring, and other scenarios. It also enables low maintenance cost for its ultra-low power consumption, reliable performance, built-in Bluetooth for OTA configuration and remote device management.
 
-
-
 ### SenseCAP A1101 Vision AI Sensor
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/0/101990962-a1101-first-new-10.17.jpg" alt="pir" width={600} height="auto" /></p>
 
 [The SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - LoRaWAN Vision AI Sensor combines TinyML AI technology and LoRaWAN long-range transmission to create a low-power, high-performance AI device solution for both indoor and outdoor use. This sensor features Himax's high-performance, low-power AI vision solution, which supports training with Google TensorFlow Lite, Edge Impulse, and multiple TinyML AI platforms.
 
-
 ## SenseCAP ONE Weather Sensor
 
 Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand. SenseCAP offers all-in-one weather sensors to help you collect and monitor environmental data for various scenarios.
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
@@ -96,12 +87,10 @@ To bring more convenience for your applications, we also provide RS485 sensor pr
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/SenseCAP_Sensor_Probes_Product_Catalogue/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
 ## ✨ Contributor Project
 
 - We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
 - [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33961692) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
-
 
 ## SenseCAP Tech Support
 

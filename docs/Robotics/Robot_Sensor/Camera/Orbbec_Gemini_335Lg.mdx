@@ -26,6 +26,34 @@ import RoboticsFooter from '@site/src/components/robotics/RoboticsFooter'
 import ProductBanner from '@site/src/components/robotics/ProductBanner'
 import JetsonIOStepper from '@site/src/components/robotics/JetsonIOStepper'
 
+
+export const steps = [
+  {
+    title: 'Configure Jetson 24pin CSI Connector',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Configure_24pin_CSI.webp",
+  },
+  {
+    title: 'Configure for compatible hardware',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Select_Compatiable_Hardware.webp",
+  },
+  {
+    title: 'Select the Overlay',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Select_Orbbec_Overlay.webp",
+  },
+  {
+    title: 'Save pin changes',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_Pin_Changes.webp",
+  },
+  {
+    title: 'Save and reboot to reconfigure pins',
+    src: "https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Save_and_Reboot.webp",
+  },
+  {
+    title: 'Press any key to reboot',
+    src: 'https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/JetsonIO_Reboot_Prompt.webp'
+  }
+];
+
 <!--Product Banner: TODO Add the linkUrl to the bazzar product-->
 
 <ProductBanner
@@ -164,7 +192,7 @@ Set the DIP switch on the top of camera (remove the metal cover first) to the le
 What you might need:
 
 + [A Mini-Fakra cable](https://www.seeedstudio.com/Mini-fakra-Coaxial-Cable-4-in-1-0-5m-Female-to-Female-p-6484.html)
-+ reComputer Robotics GMSL2 extension board
++ [reComputer Robotics GMSL2 extension board](https://www.seeedstudio.com/reComputer-Robotics-GMSL-board-p-6511.html)
 
 Connect the camera and launch Jetson IO on your device with
 
@@ -174,7 +202,7 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 And configure the device tree overlay step by step:
 
-<JetsonIOStepper />
+<JetsonIOStepper steps={steps} />
 
 
 Reboot the Jetson device, on Jetson Firmware page, you might need to select the correct entry according the prompt, in our case, we press **'1'** to use `Custom Header Config`.

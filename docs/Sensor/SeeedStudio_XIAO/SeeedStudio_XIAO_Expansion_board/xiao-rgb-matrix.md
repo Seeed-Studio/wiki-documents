@@ -55,7 +55,7 @@ Welcome to the quick start guide for the 6x10 RGB-MATRIX for XIAO. This guide ai
 
 ### Hardware Preparation
 
-Upon receiving your product, some soldering will be required. We've provided two pin headers with the package. You'll need to solder these headers onto the expansion board. 
+Upon receiving your product, some soldering will be required. We've provided two pin headers with the package. You'll need to solder these headers onto the expansion board.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-rgb-matrix/2.png" style={{width:700, height:'auto'}}/></div>
 
@@ -74,7 +74,6 @@ This tutorial will use XIAO RP2040 as the master, if you are using XIAO RP2040 f
 - [Seeed Studio XIAO RP2040 with Arduino](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/)
 
 Meanwhile, all the example programs provided in this tutorial will work on other XIAOs as well, and you can also configure the Arduino development environment in advance according to the XIAO you are using.
-
 
 ## Arduino Library Overview
 
@@ -273,11 +272,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-

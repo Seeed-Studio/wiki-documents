@@ -18,7 +18,7 @@ last_update:
 - **权限**：`sudo` 权限
 
 > 如果您的设备未安装合适的系统环境，请参考官方刷机指南进行系统安装和环境准备：  
-> [JetPack 刷机教程（Seeed Studio）](/flash/jetpack_to_selected_product/)
+> [JetPack 刷机教程（Seeed Studio）](/cn/flash/jetpack_to_selected_product/)
 
 ## ⚡ 一键部署
 
@@ -178,7 +178,7 @@ rm -rf ~/sensecraft-ai_server
 
 ## 📚 参考资料
 
-- [Jetson刷机指引文档](/flash/jetpack_to_selected_product/)
+- [Jetson刷机指引文档](/cn/flash/jetpack_to_selected_product/)
 - [SenseCraft-AI\_Server源代码仓库](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
 - [NVIDIA Jetson Docker 指南](https://www.jetson-ai-lab.com/tips_ssd-docker.html)
 - [Mosquitto 官方文档](https://mosquitto.org/man/mosquitto-conf-5.html)

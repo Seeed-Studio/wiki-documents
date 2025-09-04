@@ -13,15 +13,14 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/main2.jpg" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w-Driver.html" target="_blank"> 
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Red-LED-Matrix-w-Driver.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div>
+      </a>
+  </div>
 
-LED Matrix is low cost and usually used to display simple numbers and images. Grove - Red LED Matrix w/Driver is the combination of the 20mm  8*8 square LED Matrix - Red and the Grove - LED Matrix Driver. The HT16K33 is a memory mapping and multi-function LED controller driver which allows you to control the LED matrix with our prepared and easy-to-use libraries, or you can create your own library to control it to satisfy your need. 
+LED Matrix is low cost and usually used to display simple numbers and images. Grove - Red LED Matrix w/Driver is the combination of the 20mm  8*8 square LED Matrix - Red and the Grove - LED Matrix Driver. The HT16K33 is a memory mapping and multi-function LED controller driver which allows you to control the LED matrix with our prepared and easy-to-use libraries, or you can create your own library to control it to satisfy your need.
 
 <iframe width={800} height={450} src="https://www.youtube.com/embed/i9hnRPuCx-Q" frameBorder={0} allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-
 
 ## Version
 
@@ -29,15 +28,14 @@ LED Matrix is low cost and usually used to display simple numbers and images. Gr
 |------------------|-------------------------------------------------------------------------------------------------------|---------------|
 | Grove - Red LED Matrix w/Driver | Initial                                                                                               | Sep 2018      |
 
-## Feature 
+## Feature
 
 - Integrated RC oscillator
 - R/W address auto increment
 - Max. 8 x 8 patterns
 - I^2^C-bus interface
 
-
-##Specification
+## Specification
 
 |Item|Value|
 |---|---|
@@ -47,15 +45,15 @@ LED Matrix is low cost and usually used to display simple numbers and images. Gr
 |Storage temperature|-50～125℃|
 |Interface|I2C|
 |I2C address|0x70(defult) 0x71~0x77(configurable)|
-|Size|L: 40mm W: 40mm H: 21mm| 
+|Size|L: 40mm W: 40mm H: 21mm|
 |Weight|17.4g|
 |Package size|L: 140mm W: 90mm H: 20mm|
 |Gross Weight|24g|
 
-
 :::note
          There are 8 possible I2C address of this grove, from 0x70 to 0x77. The defult I^2^C address is 0x77. You can change the I2C address by do some soldering as instructed in the below table. 
 :::
+
 |I^2^C address|Connection|
 |---|---|
 |0x70|Disconnect: A0 A1 A2|
@@ -72,17 +70,15 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/0x73.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/0x73.png" alt="pir" width={600} height="auto" /></p>
 
-
 ## Typical applications
 
 - Industrial control indicators
-- Digital clocks, thermometers, counters, multimeters 
+- Digital clocks, thermometers, counters, multimeters
 - Combo sets
 - VCR sets
 - Instrumentation readouts
 - Other consumer applications
 - LED Displays
-
 
 ## Hardware Overview
 
@@ -100,20 +96,16 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
 
-
 ## Getting Started
-
 
 ### Play With Arduino
 
 **Materials required**
 
-
-| Seeeduino V4.2 | Base Shield|Grove - Red LED Matrix w/Driver| 
+| Seeeduino V4.2 | Base Shield|Grove - Red LED Matrix w/Driver|
 |--------------|-------------|-----------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/thumbnail2.jpg" alt="pir" width={600} height="auto" /></p>|
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Red-LED-Matrix-w/Driver.html)|
-
 
 :::note
     **1.** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
@@ -130,7 +122,6 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/with_ard.jpeg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/with_ard.jpeg" alt="pir" width={600} height="auto" /></p>
 
-
 #### Software
 
 :::note
@@ -142,7 +133,7 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Grove - LED Matrix Driver(HT16K33 with 8*8 LED Matrix) --> display_bars**. 
+    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Grove - LED Matrix Driver(HT16K33 with 8*8 LED Matrix) --> display_bars**.
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard1.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -150,13 +141,11 @@ For example, if I want to change the address to 0x73, I need to connect pad A1,A
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard2.png) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/ard2.png" alt="pir" width={600} height="auto" /></p>
 
-    3. Or, you can just click the icon 
+    3. Or, you can just click the icon
     <!-- ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>
 
      in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
-
-
 
 ```cpp
 
@@ -194,11 +183,9 @@ void loop()
 :::
 
 :::success
-		If everything goes well, you will be able to see various bars display on the LED matrix.
+  If everything goes well, you will be able to see various bars display on the LED matrix.
 :::
 If you would like to run other examples, you may do similar processes and be able to see different displays.
-
-
 
 **DIY**
 
@@ -211,15 +198,13 @@ Are you willing to let the LED matrix to display the emoji? Now, it is your turn
 - **Step 3.** Create your own design by simply click on the blank dot.
 
 - **Step 4.** Copy the hex file generated according to your design. There are two ways you can do this:
-    - copy the hex value in the hex box at the bottom left corner.
-    - copy the corresponding code in the Arduino/C code section.
+  - copy the hex value in the hex box at the bottom left corner.
+  - copy the corresponding code in the Arduino/C code section.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/emoji.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/emoji.png" alt="pir" width={600} height="auto" /></p>
 
-
 - **Step 5.** Create the new '.ino' file under the same folder with other LED Matrix examples and copy below code.
-
 
 ```cpp
 
@@ -282,9 +267,7 @@ void loop() {
 
 ```
 
-
 - **Step 6.** Upload your project to your seeeduino.
-
 
 :::success
 
@@ -293,14 +276,10 @@ void loop() {
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/display.gif) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/img/display.gif" alt="pir" width={600} height="auto" /></p>
 
-
 ## Schematic Online Viewer
-
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/res/202002241_PCBA%3BGrove%20-%20LED%20Matrix%20Driver%20(HT16K33)_原理图.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -310,19 +289,16 @@ void loop() {
 
 - **[PDF]** [Datasheet HT16K33](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver-HT16K33/res/310040349%2C%20SMD%20IC%20Driver%3BSOP-28-物料规格书-1.pdf)
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

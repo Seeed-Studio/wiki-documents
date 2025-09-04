@@ -1,5 +1,5 @@
 position: 2 # float position is supported
-label: 'Applpication'
+label: 'Application'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: wio_e5

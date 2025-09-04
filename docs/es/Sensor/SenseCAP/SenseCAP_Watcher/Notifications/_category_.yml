@@ -1,0 +1,10 @@
+position: 7 # float position is supported
+label: 'Notificaciones'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: notification_with_watcher
+link:
+  type: generated-index
+  slug: es/notifications_with_watcher_main_page
+  title: Serie de Notificaciones de SenseCAP Watcher
+  description: La sección "Notificación" del wiki de SenseCAP Watcher muestra diferentes formas de notificación del watcher. Puedes ver luz RGB y escuchar sonido y recibir notificaciones de la APP cuando se active una alarma. Además, puedes usar los protocolos UART y HTTP para enviar esos mensajes de alarma a diferentes dispositivos y plataformas.

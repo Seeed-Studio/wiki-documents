@@ -152,7 +152,7 @@ Grove Vision AI V2 をコンピュータに接続する前に、BOOT ボタン�
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>
+          <a href= "/ja/grove_vision_ai_v2_software_support/#-arduino-library-introduction-" class="getting_started_label2"> Arduino（Seeed Studio XIAO）</a>
           <br/>物体認識またはシリアル通信
       </div>
   </div>
@@ -163,7 +163,7 @@ Grove Vision AI V2 をコンピュータに接続する前に、BOOT ボタン�
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI モデルアシスタント</a>
+          <a href= "/ja/grove_vision_ai_v2_software_support/#-no-code-getting-started-with-sensecraft-ai-" class="getting_started_label2"> SenseCraft AI モデルアシスタント</a>
           <br/>コード不要で AI モデルをデプロイし観察
       </div>
   </div>

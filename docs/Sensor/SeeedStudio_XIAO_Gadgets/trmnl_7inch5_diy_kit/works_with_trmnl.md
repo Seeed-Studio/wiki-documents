@@ -310,7 +310,20 @@ Developers can even create and publish their own plugins for others to use, maki
 
 If you have any questions about using TRMNL or want to explore more advanced features, you are welcome to read the official TRMNL documentation for more information: [https://docs.usetrmnl.com/go](https://docs.usetrmnl.com/go)
 
+## Troubleshooting
 
+### Q1: When using the web or PlatformIO, I have encountered the problem of not being able to flash the firmware, what should I do?
+
+Sometimes, using the wrong program can cause the XIAO to lose its port or not function correctly. Common issues include:
+
+- The XIAO is connected to the computer, but *no port number* is found.
+- The XIAO is connected, and a port number appears, but the *program upload fails*.
+
+When you encounter the above two situations, you can try to put XIAO into BootLoader mode, which can solve most of the problems of unrecognized devices and failed uploads. The specific method is:
+
+- **Step 1**. Press and hold the `BOOT` button on the XIAO ESP32S3 without releasing it.
+- **Step 2**. Keep the `BOOT` button pressed and then connect to the computer via the data cable. Release the `BOOT` button after connecting to the computer.
+- **Step 3**. Upload the program or flash the firmware to check the operation of the XIAO ESP32S3.
 
 ## Special Thanks
 

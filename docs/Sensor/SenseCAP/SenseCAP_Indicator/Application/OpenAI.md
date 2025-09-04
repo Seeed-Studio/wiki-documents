@@ -35,6 +35,7 @@ If you haven't installed the IDF toolchain yet, you can follow the instructions 
 :::
 
 ## Get Started
+
 <div class="img-container">
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/>
 
@@ -112,14 +113,13 @@ data_len += sprintf(data_buf + data_len, "\"}]}");
 
 In this function, `mbedtls_send_then_recv` is called to do the request and get method.
 
-
 </TabItem>
 <TabItem value="DALL·E" label="DALL·E Code">
 
 ```c title="openai.c"
 /* HTTPS Request & get Response */
 static int image_request(struct view_data_openai_request *p_req,
-					 struct view_data_openai_response *p_resp);
+      struct view_data_openai_response *p_resp);
 
 /* Json Prase */
 static int __image_json_prase(const char *p_str, char *p_url, char *p_err);
@@ -130,9 +130,7 @@ static void url_prase(char *p_url, char *p_host, char *p_path);
 
 > Principle: When a request is successful, it returns a URL address. By downloading and decoding the image from this URL link, it can be displayed.
 
-
 Same as `ChatGPT Code`, in the initial request, we will utilize a prompt to obtain the image URL. After acquiring the URL, we will attempt to download the image to the local buffer using the obtained URL.
-
 
 </TabItem>
 </Tabs>
@@ -141,13 +139,11 @@ Same as `ChatGPT Code`, in the initial request, we will utilize a prompt to obta
 
 ---
 
-
 <details>
 
 <summary>ChatGPT & DALL·E Code</summary>
 
 For the detailed and latest code, please refer to [SenseCAP Indicator OpenAI](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_openai).
-
 
 ```c
 #include "indicator_openai.h"
@@ -881,8 +877,8 @@ int indicator_openai_init(void)
     xTaskCreate(&__indicator_openai_task, "__indicator_openai_task", 1024 * 10, NULL, 10, NULL);
 }
 ```
-</details>
 
+</details>
 
 ## Resources
 
@@ -893,7 +889,6 @@ int indicator_openai_init(void)
 5. **Chat completions OpenAI Guide**: If you're new to Chat API, this guide will help you get you on board. You can find it [here](https://platform.openai.com/docs/guides/chat/chat-completions-beta).
 6. **`indicator_openai.c` File**: This file contains the main functions for the `ChatGPT` and `DALL·E` integration. You can view it [here](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c).
 7. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
-
 
 ## Tech Support
 

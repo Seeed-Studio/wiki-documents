@@ -38,7 +38,6 @@ Designed for **24/7 reliability**, it features **wide voltage input (9-36V)**, *
 
 - **Flexible Storage Options**: The PCIe3.0 dual M.2 Slot supports both AI accelerator and SSD storage.
 
-
 ## Specifications
 
 | **Category**              | **Parameters**                                                                 |
@@ -88,7 +87,6 @@ Designed for **24/7 reliability**, it features **wide voltage input (9-36V)**, *
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_industrial_dimension.jpeg" style={{width:800, height:'auto'}}/></div>
 
-
 ## Hailo introduction
 
 ### Hardware introduction
@@ -105,6 +103,7 @@ The Hailo AI Software Suite provides powerful tools to run AI models efficiently
 > **If you want to learn more about examples of using Hailo NPU, please click this [link](https://github.com/Seeed-Projects/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero).**
 
 ## Hardware Overview
+
 ### Interface Overview
 
 ![image1](https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-recomputer.png)
@@ -240,16 +239,19 @@ gpiochip0: GPIOs 569-622, parent: platform/1f000d0000.gpio, pinctrl-rp1:
  gpio-621 (-                   )
  gpio-622 (-                   )
 ```
-</details> 
 
-### Mainboard Overview 
+</details>
+
+### Mainboard Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_Mainboard.jpeg" style={{width:800, height:'auto'}}/></div>
 
 ### Power Diagram
+
 ![image1](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_power_diagram.png)
 
 The reComputer AI Industrial R2135 supports a wide input voltage range of DC 9V–36V, and internally utilizes multi-stage DCDC converters to generate 5V, 3.3V, 1.2V, and 1.0V power rails. These voltages provide stable power to the core processor, USB ports, HDMI, M.2 expansions, audio, RTC, and other peripheral modules, ensuring reliable operation across various application scenarios.
+
 ##### 2-Pin Power Terminal
 
 <div style={{textAlign:'left'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_Two_Pin_Terminal.jpg" style={{width:150, height:'auto'}}/></div>
@@ -257,6 +259,7 @@ The reComputer AI Industrial R2135 supports a wide input voltage range of DC 9V�
 The reComputer AI Industrial R2135 is supplied with a terminal DC voltage of 9~36V. The power supply is connected via the 2-pin power terminal block connector. To ground the reComputer AI Industrial R2135, the ground wire can be secured to the screw located at the top left corner of the power terminal.
 
 #### Power Consumption
+
 Please refer to the table below for the tested power consumption of reComputer AI Industrial R2135 in Seeed Studio's laboratory. Please note that this value is for reference only, as the test methods and environment can result in variations in the results.
 
 | **Status**        | **Voltage** | **Current** | **Power Consumption** |**Description** |
@@ -270,6 +273,7 @@ Please refer to the table below for the tested power consumption of reComputer A
 The reComputer AI Industrial R2135 does not come with a power button by default, and the system will automatically start up once power is connected. When shutting down, please select the shutdown option in the operating system and wait for the system to fully shut down before cutting off power. To restart the system, simply reconnect to the power.
 
 ### Block Diagram
+
 ![image1](https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_block_diagram.png)
 
 ## Interface
@@ -289,7 +293,8 @@ The reComputer AI Industrial R2135 does not come with a power button by default,
 | **Reset Button** | 1x Reset Button                                |
 | **Boot Switch**  | 1x Boot Switch                                 |
 
-### LED Indicator Status 
+### LED Indicator Status
+
 The reComputer AI Industrial R2135 features 3 LED indicators that serve to signal the machine's operational status. Please refer to the table below for the specific functions and status of each LED:
 
 | Name  | Color            | Status | Description                                                                                                                                              |
@@ -406,12 +411,13 @@ The reComputer AI Industrial R2135 is equipped with two M.2 Key-M slots (NVMe1 a
 
 ● NVMe1 (bottom slot): Supports M.2 2280 size;
 
-● NVMe2 (top slot): Pre-installed with an Hailo-8 AI accelerator 
+● NVMe2 (top slot): Pre-installed with an Hailo-8 AI accelerator
 
 ● Only PCIe-based NVMe SSDs are supported. SATA SSDs are not supported.
 
 > **Note**  
 > SSD cards have two primary uses:  
+>
 > 1. **High-Capacity Storage** – Used purely for storing large amounts of data.  
 > 2. **Boot Drive with Image** – Used both for storage and to boot the system from an image stored on the SSD.  
 >  
@@ -448,7 +454,6 @@ The reComputer AI Industrial R2135 includes a Mini PCIe slot designed primarily 
 
 There is a Mini Push Button Switch located in the reset hole of the reComputer AI Industrial R2135. By pressing this button with a thin object, the CM4 can be reset. This pin when high signals that the CM4 has started. Driving this pin low resets the module.
 
-
 ### Ethernet RJ45
 
 <div align="left"><img width={100} src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_Industrial_ETH0.png" /></div>
@@ -476,7 +481,8 @@ reComputer AI Industrial R2135 comes with two standard HDMI Type-A ports, labele
 reComputer AI Industrial R2135 includes an onboard RTC (PCF8563T) to maintain time across power cycles, enabling it to maintain timekeeping functionality even in the event of power loss.
 
 You can test RTC part with command below:
-```bash 
+
+```bash
 # 1.Disable automatic time synchronization:
 sudo systemctl stop systemd-timesyncd
 sudo systemctl disable systemd-timesyncd
@@ -494,10 +500,10 @@ Then you can power off the R2000 for a few minutes, power it back on, and rechec
 # 4.Check the RTC time:
 sudo hwclock -r
 ```
+
 The result shows that the RTC module continues to function even when the system is powered off.
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/RTC2.png" /></div>
-
 
 ### Watchdog
 
@@ -511,6 +517,7 @@ sudo apt install watchdog
 # 2. Edit the watchdog configuration file:
 sudo nano /etc/watchdog.conf
 ```
+
 Then modify the configuration as follows:
 
 <details>
@@ -520,14 +527,14 @@ Then modify the configuration as follows:
 watchdog-device= /dev/watchdog
 # Uncomment and edit this line for hardware timeout values that differ
 # from the default of one minute.
-watchdog-timeout	= 120
+watchdog-timeout = 120
 # If your watchdog trips by itself when the first timeout interval
 # elapses then try uncommenting the line below and changing the
 # value to 'yes'.
-#watchdog-refresh-use-settimeout	= auto
+#watchdog-refresh-use-settimeout = auto
 # If you have a buggy watchdog device (e.g. some IPMI implementations)
 # try uncommenting this line and setting it to 'yes'.
-#watchdog-refresh-ignore-errors	= no
+#watchdog-refresh-ignore-errors = no
 # ====================== Other system settings ========================
 #
 # Interval between tests. Should be a couple of seconds shorter than
@@ -539,7 +546,8 @@ max-load-1= 24
 realtime= yes
 priority= 1
 ```
-</details> 
+
+</details>
 
 ```bash
 # 3.Ensure the watchdog service is running:
@@ -549,14 +557,14 @@ sudo su
 echo 1 > /proc/sys/kernel/sysrq
 echo "c" > /proc/sysrq-trigger
 ```
+
 As shown in the figure below, the SSH connection was lost after entering the command, indicating that the watchdog has taken effect and rebooted the reComputer AI Industrial R2135.
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/watchdog.png" /></div>
 
-### M.2 AI Acceleration 
+### M.2 AI Acceleration
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-AI-Industrial/reComputer_AI_industrial_accelerator.jpeg" style={{width:800, height:'auto'}}/></div>
-
 
 The reComputer AI Industrial R2135 includes a Hailo-8 AI accelerator module, pre-installed in the NVMe2 M.2 slot, delivering 26 TOPS of computing power for real-time multi-channel AI vision processing.
 
@@ -569,6 +577,7 @@ You can test watchdog part with command below:
 #Test whether the Hailo hardware and its accompanying software have been successfully installed
 hailortcli fw-control identify
 ```
+
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/hailo1.png" /></div>
 
 ```bash
@@ -581,10 +590,10 @@ source setup_env.sh
 # Run object detection
 python basic_pipelines/detection_simple.py
 ```
+
 The result is shown as below:
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/hailo2.png" /></div>
-
 
 ## Optional Interfaces and Module
 
@@ -721,12 +730,12 @@ Using command below to test BlueTooth model:
 sudo bluetoothctl
 scan on
 ```
+
 The result is shown in the figure below.
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/bluetooth.png" /></div>
 
-
-###  LoRa® USB Module
+### LoRa® USB Module
 
 The Mini-PCIe slots also supports LoRa® module using the USB protocol. The WM1302 module from Seeed Studio has been fully tested to be compatible with the reComputer AI Industrial R2135.
 
@@ -737,6 +746,7 @@ git clone https://github.com/Lora-net/sx1302_hal
 cd sx1302_hal
 sudo nano ./libloragw/inc/loragw_i2c.h
 ```
+
 Change #define I2C_DEVICE "/dev/i2c-1" to #define I2C_DEVICE "/dev/i2c-3".
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/lora1.png" /></div>
@@ -747,9 +757,11 @@ sudo make
 ```
 
 Then modify the configuration code:
+
 ```bash
 sudo nano ./tools/reset_lgw.sh
 ```
+
 Update the pin configurations:
 <details>
 <summary>reset_lgw.sh</summary>
@@ -759,6 +771,7 @@ SX1302_RESET_PIN=580   # SX1302 reset
 SX1302_POWER_EN_PIN=578 # SX1302 power enable
 SX1261_RESET_PIN=579   # SX1261 reset (LBT / Spectral Scan)
 ```
+
 </details>
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/lora2.png" /></div>
 
@@ -768,6 +781,7 @@ cp ~/sx1302_hal/tools/reset_lgw.sh ~/sx1302_hal/packet_forwarder/
 # Check the device name
 ls /dev/spidv10.0
 ```
+
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/lora3.png" /></div>
 
 ```bash
@@ -776,6 +790,7 @@ sed -i 's/spidev0.0/spidev10.0/g'  global_conf.json.sx1250.US915.USB
 echo 1 > /sys/class/gpio/gpio580/value
 ./LoRa_pkt_fwd -c global_conf.json.sx1250.US915.USB
 ```
+
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/lora4.png" /></div>
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/lora5.jpg" /></div>
@@ -789,20 +804,21 @@ The reComputer AI Industrial R2135 mainboard features one Mini-PCIe slots, with 
 
 Using command below to test 4G model:
 
-```bash 
+```bash
 # Check the information of the 4g module
 ifconfig
 ```
+
 The result is shown in the figure below.
 
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g1.png" /></div>
 
-```bash 
+```bash
 # Check the information of the usb0 ethernet port
 ip link show usb0
 ```
-<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g2.png" /></div>
 
+<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g2.png" /></div>
 
 ```bash
 # Start usb0 ethernet port
@@ -810,36 +826,40 @@ sudo ip link set dev usb0 up
 # Request an IP address from the DHCP server on the network and assign it to the usb0 interface
 sudo dhclient usb0
 ```
+
 Then test if it can ping default router
+
 ```bash
 ping 192.168.225.1
 ```
+
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g3.png" /></div>
 
 ```bash
 # ping baidu.com use usb0
 ping -4 -I usb0 www.baidu.com 
 ```
-<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g4.png" /></div>
 
+<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/4g4.png" /></div>
 
 ### TPM 2.0
 
-TPM (Trusted Platform Module) is a hardware chip specifically designed to enhance computer security by providing hardware-based cryptographic functions. It securely stores sensitive data such as encryption keys, certificates, and passwords, and is commonly used in scenarios like secure boot, disk encryption (e.g., BitLocker), and authentication. 
+TPM (Trusted Platform Module) is a hardware chip specifically designed to enhance computer security by providing hardware-based cryptographic functions. It securely stores sensitive data such as encryption keys, certificates, and passwords, and is commonly used in scenarios like secure boot, disk encryption (e.g., BitLocker), and authentication.
 
 Check TPM on reComputer AI Industrial R2135 with command as below:
 
 ```bash
 ls /dev | grep tpm
 ```
+
 <div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/tpm1.png" /></div>
 
 ```bash
 # Test tpm as following:
 sudo tpm2_createprimary -C o -c primary.ctx
 ```
-<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/tpm2.png" /></div>
 
+<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/tpm2.png" /></div>
 
 ### SSD
 
@@ -848,6 +868,7 @@ The reComputer AI Industrial R2135 supports 2280 NVMe SSD through the use of the
 > **Note**
 >
 > There are two main uses for SSD cards:
+>
 > 1. **High Capacity Storage:** SSD cards can be utilized for high-capacity storage needs.  
 > 2. **Boot Drive with Image:** SSD cards can serve both as high-capacity storage and as a boot drive by storing system images, allowing direct boot from the card.  
 >
@@ -858,8 +879,8 @@ You can check ssd use command below:
 ```bash
 sudo fdisk -l | grep sda
 ```
-<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/ssd1.png" /></div>
 
+<div align="left"><img width={500} src="https://files.seeedstudio.com/wiki/AI-box-cm5/ssd1.png" /></div>
 
 ## Application
 

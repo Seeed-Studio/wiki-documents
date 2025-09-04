@@ -43,12 +43,14 @@ git clone https://github.com/Seeed-Studio/seeed-linux-dtoverlays.git
 cd seeed-linux-dtoverlays
 sudo ./scripts/reTerminal.sh
 ```
+
 :::note
 For **32bit OS** you will need to add following step before execute `sudo ./scripts/reTerminal.sh`
 
 ```
 echo arm_64bit=0 | sudo tee -a /boot/config.txt
 ```
+
 :::
 
 After the installation is complete, please restart the machine. Then use the following command to check whether the `reTerminal-bridge.dtbo` file exists to ensure that the driver installation is complete.
@@ -1175,6 +1177,7 @@ arecord -Dhw:0,0 -d 10 -f cd -r 44100 -c 2 -t wav test.wav
 - **-r** specifies the sampling rate in Hz.
 - **-c** specifies the number of channels.
 - **-t** specifies the generated file format.
+
 :::
 
 **Step 4.** Check the playback device.
@@ -1236,20 +1239,20 @@ You can only use either RS232 or RS485 at one time.
 
 ## Resource
 
-* [DSN format schematic file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.DSN)
-* [PCB Board Design file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.brd)
-* [schematic PDF version](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge_SCH.pdf)
+- [DSN format schematic file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.DSN)
+- [PCB Board Design file](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge.brd)
+- [schematic PDF version](https://files.seeedstudio.com/wiki/reTerminal_Bridge/source/reTerminal_Bridge_SCH.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

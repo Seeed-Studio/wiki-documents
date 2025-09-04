@@ -15,8 +15,6 @@ last_update:
 
 # Feetech Servo Motors Documents Hub
 
-
-
 <div align="center">
 
 <img width={800} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-108090023-feetech-st-3215-c001-servo.jpg" className="nav-icon" alt="Slamtec LiDAR"/>
@@ -27,10 +25,6 @@ last_update:
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱</font></span></strong>
     </a>
 </div>
-
-
-
-
 
 <div class="category-group">
   <div class="category-card robot-kits">
@@ -49,7 +43,6 @@ last_update:
   <a href="https://files.seeedstudio.com/products/Feetech/108090023_STS3215-C001_Datasheet.pdf" className="nav-item">
     <span className="text">ST3215-C001 7.4v 1:345</span>
   </a>
-
 
 ## SDK
 
@@ -90,18 +83,17 @@ last_update:
 </div>
 </div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
@@ -177,10 +169,6 @@ html[data-theme='dark'] {
 }
 
 `}</style>
-
-
-
-
 
 <style>{`
 
@@ -298,8 +286,8 @@ html[data-theme='dark'] .category-card a::after {
   transition: all 0.3s;
 }
 
-.stable { 
-  background: #e6f4ea; 
+.stable {
+  background: #e6f4ea;
   color: #137333;
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
@@ -311,8 +299,8 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(0,100,0,0.3);
 }
 
-.recommended { 
-  background: #fce8e6; 
+.recommended {
+  background: #fce8e6;
   color: #a50e0e;
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }

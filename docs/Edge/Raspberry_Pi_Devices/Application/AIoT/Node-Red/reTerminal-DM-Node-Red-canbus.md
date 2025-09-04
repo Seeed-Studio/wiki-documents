@@ -48,11 +48,11 @@ If you are using Senscraft Edge OS you can skip the Socketcan node installation 
 
 #### Hardware
 
-* 1 x reTerminal DM
-* 1 x Host Computer
-* 1 x [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+- 1 x reTerminal DM
+- 1 x Host Computer
+- 1 x [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
 
-##### Hardware preparation 
+##### Hardware preparation
 
 Please connect the Hardware as shown below
 
@@ -114,11 +114,11 @@ $ ./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233
 
 :::note
 
-The following steps just for tutorial purpose, in this section we will show you how to quickly import flow by copy the JSON format flow and paste to the input box of the import nodes pop-up menu. 
+The following steps just for tutorial purpose, in this section we will show you how to quickly import flow by copy the JSON format flow and paste to the input box of the import nodes pop-up menu.
 
 :::
 
-STEP 1: Open the `Import nodes` window by click the `Setting Button` and then click the `Import` button 
+STEP 1: Open the `Import nodes` window by click the `Setting Button` and then click the `Import` button
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/import-flow.png" /></div>
 
@@ -348,38 +348,40 @@ Congratulations, you have successfully experienced and learned how to use CAN Bu
 
 For Host Computer Send CAN Bus data and reTerminal DM Receive:
 
-* So from the Host Computer terminal window you can execute `./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233` command to send `00112233` (in hex) to the reTerminal DM, and from the reTerminal DM debug window you can see the data is
+- So from the Host Computer terminal window you can execute `./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233` command to send `00112233` (in hex) to the reTerminal DM, and from the reTerminal DM debug window you can see the data is
+
 ```json  
 0: 0 
 1: 17 
 2: 34
 3: 51
 ```
+
 where its the binary represent of `x00 x11 x22 x33` HEX data set.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-send.png" /></div>
 
 For Host Computer Receive CAN Bus dta and reTerminal DM Send:
 
-* You will need to click the `inject` button in the reTerminal DM Node-Red as shown in the image below to send the data `01 02 03 04 05` to Host Computer, and as you can see in the host computer terminal window the command for receive is `./canusb -t -d /dev/ttyUSB0 -s 250000 -t`, the received data are `05 04 03 02 01` as its in the first in first out order:
+- You will need to click the `inject` button in the reTerminal DM Node-Red as shown in the image below to send the data `01 02 03 04 05` to Host Computer, and as you can see in the host computer terminal window the command for receive is `./canusb -t -d /dev/ttyUSB0 -s 250000 -t`, the received data are `05 04 03 02 01` as its in the first in first out order:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-receive.png" /></div>
 
 # Explore more nodes on reTerminal DM with node-RED
 
-* [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
+- [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

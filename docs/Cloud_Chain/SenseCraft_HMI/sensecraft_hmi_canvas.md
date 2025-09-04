@@ -88,27 +88,31 @@ Step 4. Use the properties panel to customize:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/92.png" style={{width:1000, height:'auto'}}/></div>
 
-#### Making Text Dynamic
 
-You can also configure text to display dynamic data:
+### Data
 
-Step 1. Select your text element
+The Data component is a powerful tool for displaying dynamic information fetched from external APIs directly on your canvas. This allows you to integrate real-time data such as weather, stock prices, or any other information available through a web API.
 
-Step 2. Click the dynamic data link icon in the toolbar
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/143.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/93.png" style={{width:1000, height:'auto'}}/></div>
+Step 1. Click on the "Data" component in the Basic section. A placeholder text box with the word "Data" will appear on the canvas.
 
-Step 3. In the Dynamic Data Settings panel:
+Step 2. Drag the "Data" component to your desired position.
 
-  - Switch from "Static" to "Dynamic"
+Step 3. With the component selected, click the **Data Settings** icon (it looks like a chain link) in the toolbar to open the configuration panel.
 
-  - Enter the data key path (e.g., "data.custom")
+Step 4. In the **Data Settings** panel, configure your external data source:
+   - **Remote Data URL**: Enter the full URL of the external API from which you want to fetch data.
+   - **Data Key**: Specify the exact path to the data you want to display from the API's JSON response. Use dot notation for nested objects (e.g., `current.temp_c`) and numeric indexes for arrays.
+   - **Precision**: For numerical data, set the number of decimal places you wish to display. The default is 2.
+   - **Test**: Click this button to verify that the URL and Data Key are correct and that data can be fetched successfully.
+   - **Request Headers (Optional)**: If your API requires specific headers for authentication or other purposes, you can expand this section and add them.
 
-  - Configure formatting options
-
-:::tip
-This feature is a Developer Premium feature and is not recommended if you don't know what it is.
-:::
+Step 5. You can also customize the appearance of the displayed data using the property panel to adjust:
+  - Font size and style
+  - Alignment
+  - Color
+  - Font family
 
 ### Image
 
@@ -121,6 +125,42 @@ Step 1. Click on the "Image" component
 Step 2. In the properties panel, click "Upload" to add your image or enter an image URL
 
 Step 3. Adjust the size and position as needed
+
+### Date
+
+The Date component displays a date, time, or timestamp that can be configured in various formats.
+
+Step 1. Click on the "Date" component in the Data section
+
+Step 2. The component will automatically be placed in the upper left corner of your canvas with a default date format (usually MM/DD/YYYY)
+
+Step 3. Click the calendar icon in the toolbar to open the Date Settings panel
+
+Step 4. In the Date Settings panel:
+
+   - Set a specific date using the date picker or input field
+
+   - Select a date format from the dropdown menu (e.g., MM/DD/YYYY, DD/MM/YYYY, YYYY-MM-DD)
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/105.png" style={{width:1000, height:'auto'}}/></div>
+
+Step 5. Use the property panel to further customize:
+
+   - Font size and style
+
+   - Text color
+
+   - Alignment
+
+   - Background (if desired)
+
+:::note
+The date shown in the Canvas is static and represents what you've configured in the Date Settings. When deployed to your device, the Date component can either:
+
+- Display the static date you configured (useful for deadlines, event dates, etc.)
+
+- If set to dynamic mode, display the current date/time which will update automatically on the device
+:::
 
 ### Shapes
 
@@ -160,45 +200,9 @@ Step 3. Use the properties panel to customize:
 
   - Other shape-specific properties
 
-### Date
-
-The Date component displays a date, time, or timestamp that can be configured in various formats.
-
-Step 1. Click on the "Date" component in the Data section
-
-Step 2. The component will automatically be placed in the upper left corner of your canvas with a default date format (usually MM/DD/YYYY)
-
-Step 3. Click the calendar icon in the toolbar to open the Date Settings panel
-
-Step 4. In the Date Settings panel:
-
-   - Set a specific date using the date picker or input field
-
-   - Select a date format from the dropdown menu (e.g., MM/DD/YYYY, DD/MM/YYYY, YYYY-MM-DD)
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/105.png" style={{width:1000, height:'auto'}}/></div>
-
-Step 5. Use the property panel to further customize:
-
-   - Font size and style
-
-   - Text color
-
-   - Alignment
-
-   - Background (if desired)
-
-:::note
-The date shown in the Canvas is static and represents what you've configured in the Date Settings. When deployed to your device, the Date component can either:
-
-- Display the static date you configured (useful for deadlines, event dates, etc.)
-
-- If set to dynamic mode, display the current date/time which will update automatically on the device
-:::
-
 ## Device Components
 
-The Device section contains components that automatically display data from your connected Seeed reTerminal E10xx series device sensors:
+The Device section contains components that automatically display data from your connected Seeed reTerminal E Series ePaper Display device sensors:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/95.png" style={{width:400, height:'auto'}}/></div>
 
@@ -935,7 +939,7 @@ For successful deployment to Seeed devices:
 
 3. **Data Components**: If using data components (Weather, Stock, etc.), ensure your device has internet connectivity
 
-4. **Device Sensors**: Components like Battery, Temperature, and Humidity will only work with compatible Seeed reTerminal E10xx series devices that have the appropriate sensors
+4. **Device Sensors**: Components like Battery, Temperature, and Humidity will only work with compatible Seeed reTerminal E Series ePaper Display devices that have the appropriate sensors
 
 5. **Refresh Rate**: Set an appropriate interval time based on how frequently your data needs updating and your device's capabilities
 
@@ -978,7 +982,7 @@ Whether you're building a weather station, device monitor, information display, 
 ## Resources
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [Compatible Devices - reTerminal E10xx](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
 

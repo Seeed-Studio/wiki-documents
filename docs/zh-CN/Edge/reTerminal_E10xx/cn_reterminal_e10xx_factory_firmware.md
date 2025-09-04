@@ -1,6 +1,6 @@
 ---
-description: 本文介绍如何使用 reTerminal E10xx 固件代码和 PlatformIO。
-title: 在 reTerminal E10xx 上使用 PlatformIO 修改固件
+description: 本文介绍如何使用 reTerminal E Series ePaper Display 固件代码和 PlatformIO。
+title: 在 reTerminal E Series ePaper Display 上使用 PlatformIO 修改固件
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/reterminal_e10xx_firmware
 sidebar_position: 4

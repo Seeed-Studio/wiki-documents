@@ -35,7 +35,7 @@ In this wiki, we will accomplish the following tasks using the [reComputer J4012
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/j4012.png" />
 </div>
 
@@ -48,6 +48,7 @@ In this wiki, we will accomplish the following tasks using the [reComputer J4012
 ## Getting Started
 
 ### Hardware Connection
+
 - Connect the Jetson device to the network, mouse, keyboard, and monitor.
 
 :::note
@@ -69,12 +70,14 @@ sudo apt install -y nvidia-container
 If you flash **Jetson Linux (L4T) R36.x (JetPack 6.x) on your Jetson using SDK Manager, and install nvidia-container using apt , on JetPack 6.x it no longer automatically installs Docker.
 
 Therefore, you need to run the following to manually install Docker and set it up.
+
 ```bash
 sudo apt update
 sudo apt install -y nvidia-container curl
 curl https://get.docker.com | sh && sudo systemctl --now enable docker
 sudo nvidia-ctk runtime configure --runtime=docker
 ```
+
 :::
 
 step2. Restart the Docker service and add your user to the docker group.
@@ -100,9 +103,6 @@ step4. Restart Docker.
 sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
 
-
-
-
 ### Load and Run DeepSeek
 
 We can refer to the Docker container provided by the `Jetson AI Lab` to quickly deploy the MLC-quantized DeepSeek model on Jetson.
@@ -115,7 +115,7 @@ Before we copy the installation commands, we can modify the relevant parameters 
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/deploy_deepseek.png" />
 </div>
 
@@ -123,7 +123,7 @@ Open the terminal window on the Jetson device, paste the installation command we
 When we see the following content in the terminal window, it means the deepseek model has been successfully loaded on the Jetson device.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/success_install_deepseek.png" />
 </div>
 
@@ -148,7 +148,7 @@ curl http://0.0.0.0:9000/v1/chat/completions \
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/get_response.png" />
 </div>
 
@@ -162,10 +162,11 @@ sudo docker run -d --network=host \
     --restart always \
     ghcr.io/open-webui/open-webui:main
 ```
+
 After the installer finishes running, you can enter `http://<ip_of_jetson>:8080` in the browser to launch the UI interface.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/install_webui.png" />
 </div>
 
@@ -178,22 +179,22 @@ Change the OpenAI URL to the local MLC inference server where DeepSeek is alread
 For example, if the IP address of my Jetson device is `192.168.49.241`, my URL should be `http://192.168.49.241:9000/v1`
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/cfg_model.png" />
 </div>
 
 After saving the configuration, we can create a new chat window to experience the extremely fast inference speed of the local DeepSeek model!
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/chat.png" />
 </div>
 
 ### Test Inference Speed
 
-Here, we can use this Python script to roughly test the model's inference speed. 
+Here, we can use this Python script to roughly test the model's inference speed.
 
-On the Jetson device, create a new Python file named `test_inference_speed.py` and fill it with the following code. 
+On the Jetson device, create a new Python file named `test_inference_speed.py` and fill it with the following code.
 
 Then, execute the script by running the command `python test_inference_speed.py` in the terminal.
 
@@ -241,14 +242,12 @@ print(f"Tokens per second: {tokens_per_second:.2f} tokens/second")
 
 </details>
 
-
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/deepseek/mlc/test_infer_speed.png" />
 </div>
 
 The calculation results show that the inference speed of the MLC-compiled deepseek1.5B model deployed on the Jetson Orin NX device is approximately **60 tokens/s**.
-
 
 ## Effect Demonstration
 
@@ -259,22 +258,22 @@ In the demonstration video, the Jetson device operates at just under 20W yet ach
 </div>
 
 ## References
+
 - https://www.jetson-ai-lab.com/models.html
 - https://www.deepseek.com/
 - https://wiki.seeedstudio.com/deploy_deepseek_on_jetson/
 - https://www.seeedstudio.com/tag/nvidia.html
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -282,7 +282,6 @@ Measurement7 (**Rain intensity**)
 |Y= Ax + B|**Factory A is 0.001 and Factory B is 0.**|
 |Write Strategy|We don’t need to write strategy so we select **None** here.|
 
-
 After configuring these measurements, click **"Back to Home"**. The node and the app Bluetooth will automatically disconnect. The Data Logger will attempt to connect to the network. The LED indicator will flash red slowly while trying to connect and will flash green quickly once the network connection is successful.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/30.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>

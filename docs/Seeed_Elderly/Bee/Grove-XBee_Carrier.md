@@ -33,29 +33,29 @@ The on-board FT232RL can be used like any other 3.3V USB to UART interface when 
 
 ---
 
-* Bees Compatible Receptacle
+- Bees Compatible Receptacle
 
-* Two Grove Connectors
+- Two Grove Connectors
 
-* Two Grove Place Holders
+- Two Grove Place Holders
 
-* LEDs for PWR, Charge Indication and UART transmission.
+- LEDs for PWR, Charge Indication and UART transmission.
 
-* Power Switch
+- Power Switch
 
-* Reset Button
+- Reset Button
 
 ## Application Ideas
 
 ---
 
-* Wireless Sensor Network with Standalone Bee Node like [Wifi Bee](/Wifi_Bee "Wifi Bee").
+- Wireless Sensor Network with Standalone Bee Node like [Wifi Bee](/Wifi_Bee "Wifi Bee").
 
-* As a configuration aid for Bees using FT232RL.
+- As a configuration aid for Bees using FT232RL.
 
-* Charger for Lithium Ion Cells using on-board charge controller.
+- Charger for Lithium Ion Cells using on-board charge controller.
 
-* As a FT232RL based 3.3v USB-UART.
+- As a FT232RL based 3.3v USB-UART.
 
 ## Cautions
 
@@ -63,9 +63,10 @@ The on-board FT232RL can be used like any other 3.3V USB to UART interface when 
 <font color="red">
 </font>
 
-* Insert the Bees in the proper direction. Use the Bee outline on the silk-screen.
+- Insert the Bees in the proper direction. Use the Bee outline on the silk-screen.
 
 ## Specification
+
 ---
 <table>
 <tr>
@@ -132,11 +133,11 @@ Pin 16 may need to be driven low to provide enough power to the I/O Grove [via m
 
 <!-- Now you can choose a suitable battery for your application from **SeeedStudio** [Batteries and Chargers](/Solar_Charger_Shield_V2.2 "Solar_Charger_Shield_V2.2") -->
 
-* Connect a 3.7v LiPo battery to **BAT** JST-socket.
+- Connect a 3.7v LiPo battery to **BAT** JST-socket.
 
-* Connect a power source like Solar Panel to **CHARGER** JST-Socket.
+- Connect a power source like Solar Panel to **CHARGER** JST-Socket.
 
-* The Battery will be continuous charged. The end of charging would be indicated by LED marked 'OK'.
+- The Battery will be continuous charged. The end of charging would be indicated by LED marked 'OK'.
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_with_LiPOBattery_Being_Charged_By_SolarCell.jpg)
 
@@ -144,17 +145,17 @@ Pin 16 may need to be driven low to provide enough power to the I/O Grove [via m
 
 Bee Nodes are standalone Arduino Compatible Wireless Nodes. **SeeedStudio** has two such Nodes - [Wifi Bee](/Wifi_Bee "Wifi Bee") and [RFBee](/RFbee_V1.1-Wireless_Arduino_compatible_node "RFbee V1.1 - Wireless Arduino compatible node").
 
-* The following image illustrated the connection of [WiFi Bee](/Wifi_Bee "Wifi Bee") to **Grove - XBee Carrier**.
+- The following image illustrated the connection of [WiFi Bee](/Wifi_Bee "Wifi Bee") to **Grove - XBee Carrier**.
 
-* Any Groves can be connected to the Grove sockets provided.
+- Any Groves can be connected to the Grove sockets provided.
 
-* The programming of WiFi Bee's onboard **AtMega328P** is carried by connecting to PC through USB port. (FT232RL is used)
+- The programming of WiFi Bee's onboard **AtMega328P** is carried by connecting to PC through USB port. (FT232RL is used)
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_Connected_to_Wifi_BEE_and_A_Grove.jpg)
 
 Bee Stem Connected to Wifi BEE and A Twig.jpg
 
-* Refer [Wifi Bee usage documentation for programming examples](http://garden.seeedstudio.com/index.php?title=Wifi_Bee#Usage "Wifi_Bee#Usage")
+- Refer [Wifi Bee usage documentation for programming examples](http://garden.seeedstudio.com/index.php?title=Wifi_Bee#Usage "Wifi_Bee#Usage")
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Bee_Stem_Connected_To_RFBee_And_TwoTwigs.jpg)
 
@@ -168,11 +169,11 @@ This section is about those Bee modules which do not have a MCU pre-programmed w
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Stem_XBee_Carrier_Connected_to_BluetoothBee.jpg)
 
-* The communication of Bluetooth Bee and PC is captured with a serial port terminal application.
+- The communication of Bluetooth Bee and PC is captured with a serial port terminal application.
 
-* You can see the commands and their reply in the screenshot below.
+- You can see the commands and their reply in the screenshot below.
 
-* The Bluetooth Bee was put into INQ mode and it even has detected a Bluetooth device in the vicinity.
+- The Bluetooth Bee was put into INQ mode and it even has detected a Bluetooth device in the vicinity.
 
 ![](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/img/Stem_XBee_Carrier_BluetoothBee_Commands.png)
 
@@ -230,24 +231,24 @@ void loop() {
 
 ---
 
-* [Grove - XBee Carrier  Eagle Files](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/PCBA-Grove%20XBee%20Carrier_Eagle.rar)
+- [Grove - XBee Carrier  Eagle Files](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/PCBA-Grove%20XBee%20Carrier_Eagle.rar)
 
-* [Grove - XBee Carrier PDF schematics file](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/Bee_Stem_v0.9b.pdf)
+- [Grove - XBee Carrier PDF schematics file](https://files.seeedstudio.com/wiki/Grove-XBee_Carrier/res/Bee_Stem_v0.9b.pdf)
 
-* [CN3063](http://www.consonance-elec.com/pdf/%E6%8A%80%E6%9C%AF%E8%AF%B4%E6%98%8E%E4%B9%A6/DSC-CN3063.pdf)
+- [CN3063](http://www.consonance-elec.com/pdf/%E6%8A%80%E6%9C%AF%E8%AF%B4%E6%98%8E%E4%B9%A6/DSC-CN3063.pdf)
 
-* [RT9167A_33PB](http://www.richtek.com/download_ds.jsp?s=238)
+- [RT9167A_33PB](http://www.richtek.com/download_ds.jsp?s=238)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -9,7 +9,7 @@ const config = {
     en: 'docs',           
     cn: 'docs/zh-CN',     
     ja: 'docs/ja',        
-    es: 'docs/Spanish'    
+    es: 'docs/es'    
   },
   
   languagePrefixes: {

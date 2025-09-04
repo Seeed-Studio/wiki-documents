@@ -24,7 +24,7 @@ Due to these characteristics, it is widely applied in smart agriculture,smart ci
 <div align="center"><img width ={500} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/1.png
 "/></div>
 
-To learn more about LoRaWAN, click here. 
+To learn more about LoRaWAN, click here.
 
 ## **SenseCAP LoRaWAN Starter Kit**
 
@@ -33,7 +33,6 @@ SenseCAP LoRaWAN Starter Kit is aim to facilitate users in rapidly acquiring and
 
 As a LoRaWAN Starter Kit,it includes all components of the LoRaWAN architecture, including nodes, gateways, and even SenseCAP cloud platform.The kit offers a comprehensive set of features that allow you to fully experience LoRaWAN technology. With this kit, you can engage in various practical activities such as distance testing, network testing, and project development. It provides a complete solution that enables you to delve into all aspects of LoRaWAN, validating its performance and functionality through real-world applications. Whether you are a beginner or an experienced developer, this kit caters to your learning and hands-on needs in the realm of LoRaWAN.
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/3.png" /></div>
-
 
 Relevant Products:
 
@@ -44,7 +43,6 @@ Relevant Products:
 |[M2 Multi-Platform LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)|A standard LoRaWAN® gateway that supports connecting to different network servers|
 |[Wio-E5 Dev Kit](https://www.seeedstudio.com/LoRa-E5-Dev-Kit-p-4868.html)|An easy-to-use compact development toolset for you to unlock the powerful performance of the Wio-E5 STM32WLE5JC LoRa module.|
 
-
 # **Get Started**
 
 ## **Preparation**
@@ -53,7 +51,7 @@ Relevant Products:
 
 **Electronic Components**
 
-The kit should include the following electronic components. Please check if they are complete.**    
+The kit should include the following electronic components. Please check if they are complete.**
 **
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/4.jpg" /></div>
 
@@ -76,6 +74,7 @@ Remove the antenna is also the case, do not use brute force to pull the antenna 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/6.png" /></div>
 
 ### **Software**
+
 You have the option to choose our built-in SenseCAP cloud platform or use a third-party LoRaWAN Network Server like The Things Network. We recommend using the SenseCAP cloud platform for the best user experience. Below are the relevant links.
 
 1. Click to open the [SenseCAP Portal](https://sensecap.seeed.cc/portal/#/login) Web page
@@ -83,11 +82,9 @@ You have the option to choose our built-in SenseCAP cloud platform or use a thir
 Scan to down load SenseCAP Mate APP
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/7.png" /></div>
 
-
 # **Quick & No-code Initiation with LoRaWAN Starter Kit**
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/8.png" /></div>
-
 
 ## **Step 1 Power on and Connect to Internect**
 
@@ -106,7 +103,6 @@ There are two ways for users to login Luci configuration page.:
 1. Connect your gateway to a Ethernet cable, and connect your PCtothe same router.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/9.png" /></div>
- 
 
 **Note**: Your PC and device should be connected to the same router/network.
 
@@ -118,7 +114,6 @@ There are two ways for users to login Luci configuration page.:
 4. Input the IP Address of your device in a browser to enter the Luci page. Then input your device username and password to login.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/11.png" /></div>
-
 
 **Access via device AP hotspot**
 
@@ -149,16 +144,15 @@ Submit the Wi-Fi password, and then click Submit and Save.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/16.png" /></div>
 
-
-Then click Save and Apply to apply your settings. 
+Then click Save and Apply to apply your settings.
 
 The indicator on the top will show solid green if the gateway is successfully connected to the WIFI.
 
 ## **Step2 Connect Nodes**
+
 Insert the Grove-Capacitive Soil Moisture Sensor, Temperature & Humidity Sensor & Grove-Wio-E5 Wireless module to XIAO Expansion Board.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/17.png" /></div>
-
 
 ## **Step 3 Scan QR Code of Grove-Wio-E5**
 
@@ -167,21 +161,19 @@ Open the SenseCAP Mate APP after downloading the corresponding version of the AP
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/18.png" /></div>
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/19.png" /></div>
 
-
 Click the + in the upper right corner and select Add device to bind the Grove - Wio-E5.
 
 <div align="center"><img width={100} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/20.png" /></div>
-
 
 Align the box in the center of the camera with the QR code on the back of the Grove - Wio-E5 to scan the code to bind your kit. Please note that the QR code on the front of the Wio E5 should not be scanned.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/21.png" /></div>
 
 ## **Step 4 View data**
+
 After successful binding using the SenseCAP Mate App, you will see the sensor data displayed on the app.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/22.jpg" /></div>
-
 
 :::tip
 
@@ -191,4 +183,3 @@ The SenseCAP Mate App will not automatically refresh the data information, you w
 ## Appendix
 
 - [Native Firmware Code](https://github.com/Seeed-Solution/lorawan-kit)
-

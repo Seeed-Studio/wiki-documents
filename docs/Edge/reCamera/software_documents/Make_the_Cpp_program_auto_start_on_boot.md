@@ -22,11 +22,14 @@ This document demonstrates how to set a program to launch automatically at start
 ## Method 1: Write a startup script
 
 ReCamera uses a lightweight **SysVinit system** and performs initialization via **/etc/inittab**. When recamera is powered on, it reads the contents of **inittab** which starts the **/etc/init.d/rcS** with the following code:
+
 ```
 # now run any rc scripts
 ::sysinit:/etc/init.d/rcS
 ```
+
 The **rcS** file defines that the program will sequentially start scripts beginning with "S??":
+
 ```
 for i in /etc/init.d/S??* ;do
 
@@ -34,24 +37,26 @@ for i in /etc/init.d/S??* ;do
      [ ! -f "$i" ] && continue
 
      case "$i" in
-	*.sh)
-	    # Source shell script for speed.
-	    (
-		trap - INT QUIT TSTP
-		set start
-		. $i
-	    )
-	    ;;
-	*)
-	    # No sh extension, so fork subprocess.
-	    $i start
-	    ;;
+ *.sh)
+     # Source shell script for speed.
+     (
+  trap - INT QUIT TSTP
+  set start
+  . $i
+     )
+     ;;
+ *)
+     # No sh extension, so fork subprocess.
+     $i start
+     ;;
     esac
 done
 ```
+
 In the **/etc/init.d** directory, you can add your program's auto-start script.(Scripts prefixed with "S" followed by a number, the number determine their boot execution order.)
 
 Name example:
+
 - **S10network**:  Starts early (lower number = earlier execution)
 - **S99myprogram**: Starts late (higher number = later execution)
 
@@ -73,6 +78,7 @@ The content of the auto-start script must include:
   - It calls the corresponding function based on input arguments.
 
 You can refer to existing scripts to write your own script. Here is an example of **sccma-node** for reference:
+
 ```
 #!/bin/sh
 
@@ -170,26 +176,33 @@ esac
 
 exit 0
 ```
+
 Then, grant executable permissions to your script:
+
 ```
 sudo chmod +x {your script}
 ls -l
 ```
+
 Place your program's executable file in the specified path, typically: **/usr/local/bin**:
+
 ```
 sudo scp {your program} /usr/local/bin
 sudo chmod +x {your program}
 ls -l
 ```
+
 Test whether the script and program can start normally:
+
 ```
 sudo /etc/init.d/{your script} start
 cd /usr/local/bin
 sudo {your program}
 ```
+
 If successed, restart your recamera.
 
-## Method 2: Install the C++ project using opkg.
+## Method 2: Install the C++ project using opkg
 
 You can also pre-configure the auto-start script within your C++ project ,then install it on the recamera.
 
@@ -209,6 +222,7 @@ In your project, you need to include the following **control** scripts:
     - Execution Timing: Runs during dpkg -i or apt install, before files are deployed.
 
 For example:
+
 ```
 #!/bin/sh
 set -e
@@ -231,6 +245,7 @@ exit 0
     - Execution Timing:Runs during dpkg -i or apt install, after all files are deployed.
 
 For example:
+
 ```
 #!/bin/sh
 set -e
@@ -242,6 +257,7 @@ fi
 
 exit 0
 ```
+
 - **prerm** (Pre-removal Script)
   - It executes before the package is uninstalled.The function of this script is:
     - Stop related services gracefully
@@ -251,6 +267,7 @@ exit 0
     - Execution Timing:Runs during dpkg -r or apt remove, before files are deleted.
 
 For example:
+
 ```
 #!/bin/sh
 set -e
@@ -261,6 +278,7 @@ fi
 
 exit 0
 ```
+
 **Add the rootfs directory**
 
 Then put the auto-start script into the corresponding path:
@@ -272,7 +290,9 @@ Put the entire project into a Linux cross-compilation environment for compilatio
 ```
 dos2unix {your files}
 ```
+
 Then,
+
 ```
 cd {your project}
 cmake -B build -DCMAKE_BUILD_TYPE=Release .
@@ -282,10 +302,13 @@ scp {your project.deb} recamera@192.168.42.1:/tmp/
 ```
 
 In the recamera terminal,use opkg to install:
+
 ```
 sudo opkg install /tmp/{your project.deb}
 ```
+
 If your project was previously installed, uninstall it first.
+
 ```
 sudo opkg remove {your program}
 
@@ -305,11 +328,11 @@ For more details, please refer to our [GitHub repository](https://github.com/See
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

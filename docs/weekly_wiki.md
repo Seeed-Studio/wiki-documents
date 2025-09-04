@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 08/18/2025
+  date: 09/01/2025
   author: Frank
 ---
 
@@ -17,55 +17,23 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is August 18th, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [ReSpeaker Mic Array v3.0](https://wiki.seeedstudio.com/respeaker_mic_array_v3.0/)
+### [Use uv on reComputer](https://wiki.seeedstudio.com/use_uv_to_build_package_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/107990053/01.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_result.png" alt="pir" width={800} height="auto" /></p>
 
-ReSpeaker Mic Array v3.0 is the next evolution of Seeed Studio’s USB microphone arrays, following the ReSpeaker Mic Array v2.0. While the v2.0 was built on XMOS’s XVF-3000 chipset and designed as a major upgrade from v1.0, the v3.0 focuses on refining audio quality and algorithm performance, even with a smaller physical microphone count.
+This wiki explains how to use the [uv](https://github.com/astral-sh/uv) on reComputer box. uv is a fast, modern, and lightweight package manager and resolver for Python. It is designed to be a drop-in replacement for traditional Python package management tools like ```pip``` and ```pip-tools```, offering significant improvements in speed, efficiency, and usability.
 
-### [Orbbec Gemini 335Lg Stereo Camera](https://wiki.seeedstudio.com/orbbec_gemini_335lg/)
+### [Use docker on reComputer](https://wiki.seeedstudio.com/use_docekr_on_recomputer/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/robotics/Sensor/Camera/Orbbec_Gemini_335lg/Orbbec_Gemini-335Lg_Front.webp" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_result.png" alt="pir" width={800} height="auto" /></p>
 
-Gemini 335Lg is a standout model in the Gemini 330 series, serving as the GMSL2/FAKRA version of the industry-proven Gemini 335L. The GMSL2 serializer combined with the FAKRA connector ensures secure and reliable connectivity for autonomous mobile robots (AMRs) navigating complex environments and robotic arms requiring flexible cabling.
+This wiki explains how to use the [docker](https://www.docker.com) on reComputer box. Docker is an open-source platform used to automate the deployment, scaling, and management of applications inside lightweight, portable containers. Containers allow developers to package applications and their dependencies together in a consistent environment, ensuring that they run smoothly across different computing environments.
 
-### [No-Code Vibration Anomaly Detection with SenseCraft AI](https://wiki.seeedstudio.com/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft/SenseCraft_AI/Intro_image.png" alt="pir" width={800} height="auto" /></p>
-
-This tutorial demonstrates how to use the SenseCraft AI platform with the XIAO ESP32-S3 and a 3-axis accelerometer to build a zero-code abnormal vibration detection solution. Through SenseCraft AI, users can handle firmware deployment, device setup, learning of normal vibration patterns, and real-time monitoring entirely via a web interface. The device runs the GEDAD algorithm at the edge to automatically detect abnormal vibrations and trigger alerts, making it suitable for predictive maintenance in motors, HVAC systems, robots, and other equipment.
-
-### [The Hazard Response Mission Pack](https://wiki.seeedstudio.com/mission_pack_intro_v3/)
-
-<p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2024/10/0-114993391-Mission-Pack-Early-Access1-768x576.jpg" alt="pir" width={800} height="auto" /></p>
-
-The Hazard Response Mission Pack is a comprehensive solution that leverages cutting-edge technologies to address various hazard scenarios. This portable pack comprises a network of sensors, edge computing devices, and communication tools that cover remote sensing, data transmission, data processing, inference, and analysis.
-
-### [GPT-OSS Running Live on reComputer Jetson](https://wiki.seeedstudio.com/deploy_gptoss_on_jetson/)
-
-<div class="video-container">
-    <iframe width="800" height="450" src="https://www.youtube.com/embed/kcN731Jyce4" title="GPT-OSS Running Live on NVIDIA Jetson Orin NX!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-This is far more than a simple technical porting exercise - it's an exploration of what's possible at the edge. In this article, We'll demonstrate how a 20B-parameter open-source large language model comes to life on edge devices like Nvidia Jetson Orin Nx.
-
-### [Firearm detection with Frigate NVR on R2000](https://wiki.seeedstudio.com/firearm_detection_with_frigate_nvr_on_r2000/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/Firearm_Detection_With_Frigate_NVR_on_R2130/gun_detection_gif.gif" alt="pir" width={800} height="auto" /></p>
-
-For this deployment, we expanded Frigate's existing model library and added a custom **yolov11s** model specifically fine-tuned for pistol and rifle recognition. When a firearm is detected, Frigate's rules engine immediately triggers an alert, giving security teams precious seconds to lock down the area and coordinate a response before the threat escalates.
-
-### [Edge AI Crowd Tracking & Counting with SenseCraft on NVIDIA Jetson”](https://wiki.seeedstudio.com/solutions/jetson-crowd-tracking/)
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Web%20Interface%20%28Example%29.png" alt="pir" width={800} height="auto" /></p>
-
-This tutorial shows how to deploy a real-time crowd tracking and counting system on NVIDIA Jetson devices using the SenseCraft AI platform. With a single installation script, users can automatically set up Docker, the NVIDIA container toolkit, an MQTT broker, and the SenseCraft AI server running a YOLOv11 model. The solution enables edge-side people detection and analytics for applications such as smart buildings, retail insights, public safety, and traffic management.
-
-## Existing Wiki Updated
+<!-- ## Existing Wiki Updated
 
 ### [XIAO ESP32S3-Sense Key Word Spotting](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/)
 
@@ -73,7 +41,7 @@ We have added example code for **[ESP32 Boards Manager version 3.x.x](https://wi
 
 ### [Grove - Barometer Sensor (SPA06-003)](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/)
 
-We have updated the [example code](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/#software) related to software usage.
+We have updated the [example code](https://wiki.seeedstudio.com/grove_barometer_sensor_spa06_003/#software) related to software usage. -->
 
 ## The Efforts of Contributor
 
@@ -151,7 +119,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2024.6.03rd](/Seeed_Elderly/weekly_wiki/wiki240603)
 - [weekly wiki on 2024.6.10th](/Seeed_Elderly/weekly_wiki/wiki240610)
 - [weekly wiki on 2024.6.17th](/Seeed_Elderly/weekly_wiki/wiki240617)
-- [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624) -->
+- [weekly wiki on 2024.6.24th](/Seeed_Elderly/weekly_wiki/wiki240624)
 - [weekly wiki on 2024.7.01st](/Seeed_Elderly/weekly_wiki/wiki240701)
 - [weekly wiki on 2024.7.08th](/Seeed_Elderly/weekly_wiki/wiki240708)
 - [weekly wiki on 2024.7.16th](/Seeed_Elderly/weekly_wiki/wiki240716)
@@ -160,7 +128,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2024.8.05th](/Seeed_Elderly/weekly_wiki/wiki240805)
 - [weekly wiki on 2024.8.12th](/Seeed_Elderly/weekly_wiki/wiki240812)
 - [weekly wiki on 2024.8.19th](/Seeed_Elderly/weekly_wiki/wiki240819)
-- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826)
+- [weekly wiki on 2024.8.26th](/Seeed_Elderly/weekly_wiki/wiki240826) -->
 - [weekly wiki on 2024.9.02nd](/Seeed_Elderly/weekly_wiki/wiki240902)
 - [weekly wiki on 2024.9.09th](/Seeed_Elderly/weekly_wiki/wiki240909)
 - [weekly wiki on 2024.9.16th](/Seeed_Elderly/weekly_wiki/wiki240918)
@@ -210,5 +178,7 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.7.28th](/Seeed_Elderly/weekly_wiki/wiki250728)
 - [weekly wiki on 2025.8.04th](/Seeed_Elderly/weekly_wiki/wiki250804)
 - [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/wiki250811)
+- [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/wiki250818)
+- [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
 
 </details>

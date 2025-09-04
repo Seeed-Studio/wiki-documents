@@ -62,7 +62,7 @@ This issue currently occurs when flashing JetPack 5, and NVIDIA has officially d
 #### Q14:How to Build the Source Code Project for Seeed's Jetson BSP?
 For details, please click [here](/how_to_build_the_source_code_project_for_seeed_jetson_bsp)
 
-# Tech support
+## Tech support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 

@@ -14,7 +14,7 @@ last_update:
 
 The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 module. The BLE Bee can be used in hardware setups, where normally an XBEE module is used. Using a BLE Bee an XBee socket enabled embedded system can communicate with desktop computers, smartphones, table computers and even other embedded systems providing Bluetooth Smart aka Bluetooth Low Energy (BLE).
 
-##     Features   ##
+## Features ##
 
 - Compatible XBee shape
 
@@ -32,15 +32,13 @@ The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 
 
 - Transmission power: - DBM, 23-6 DBM, 0 DBM, 6 DBM, can be modified by the AT command
 
-- use TI CC2540 chip, configuration space of 256 KB, support the AT command, the user can according to need to
- change the role (master, slave mode) and the serial port baud rate, name of equipment, matching parameters such as passwords, use agile.
+- use TI CC2540 chip, configuration space of 256 KB, support the AT command, the user can according to need to change the role (master, slave mode) and the serial port baud rate, name of equipment, matching parameters such as passwords, use agile.
 
 - power supply: + 3.3 VDC 50 mA
 
 - working temperature: - 5 ~ + 65 Centigrade
 
-
-##   Specification   ##
+## Specification ##
 
  |Specification|Value
  |--|--|
@@ -55,7 +53,7 @@ The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 
  |LED Indicators IO|1|
  |Connectivity|Socket compatible with XBee|
 
-##     Electrical Characteristics  ##
+## Electrical Characteristics ##
 
 | Specification|Min|Typ|Max|Unit
 |--|--|--|--|--|
@@ -66,31 +64,31 @@ The BLE Bee is a Bluetooth Smart enabled XBEE form factor module based on HM-11 
  |Deep Sleep Current||600||uA|
  |Operating Temperature|-40||125|°C|
 
-##     Pin definition  ##
+## Pin definition ##
 
 ![](https://files.seeedstudio.com/wiki/BLE_Bee/img/BLE_BEE11.jpg)
 
 Note: Only important alternate functions are listed, may have more, please refer to datasheet.
 
-##     Usage  ##
+## Usage ##
 
 ![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Ble_bee_user.jpg)
 
--   Plug Seeed BLE Shield onto the Arduino/Seeeduino directly. **Please pay attention to the position of jumpers on the XBee Shield.**
+- Plug Seeed BLE Shield onto the Arduino/Seeeduino directly. **Please pay attention to the position of jumpers on the XBee Shield.**
 
--   Hard or Softserial port: You can choose two of seven digital pins as the communication channel. Just plug the jumpers into the headers.
+- Hard or Softserial port: You can choose two of seven digital pins as the communication channel. Just plug the jumpers into the headers.
 
--   Signal lamp: Lamp will blink if no one connect BLE, but the lamp would keep lighting after BLE has been connected.
+- Signal lamp: Lamp will blink if no one connect BLE, but the lamp would keep lighting after BLE has been connected.
 
-##    AT commands & Configuration  ##
+## AT commands & Configuration ##
 
-**1）	Query the native MAC address**
+**1） Query the native MAC address**
 
 Send: AT + ADDR?
 
 Send after a successful return: OK + LADD: MAC address (address for 12 string)
 
-**2）	Query the baud rate**
+**2） Query the baud rate**
 
 Send: AT+BAUD?
 
@@ -98,7 +96,7 @@ Send after a successful return: OK + Get: [para1]
 
 Scope of para1:0 ~ 8. The parameters corresponding to: 0 represents 9600, 1, 2, 9600, 38400, on behalf of the representative representative of 57600, 115200, 5, 4800, 6, 7 represents 1200, 1200 2400. The default baud rate to 9600.
 
-**3）	Set the baud rate**
+**3） Set the baud rate**
 
 Send: AT+BAUD[para1]
 
@@ -108,7 +106,7 @@ Example: send: AT + BAUD1, return: OK + Set: 2.The baud rate is set to 19200.
 
 Note: after the switch to the 1200, module will no longer support the configurations of the AT command, and press the PIO0 under standby, module can restore the factory Settings.Do not recommend using the baud rate.After setting the baud rate, modules should be on electricity, anew set parameters can take effect.
 
-**4）	from the device connected to the bluetooth address specified**
+**4） from the device connected to the bluetooth address specified**
 
 Send: AT+CON[para1]
 
@@ -118,7 +116,7 @@ Para2 range is: A, E, F
 
 Example: from the bluetooth address is: 0017EA0943AE, sending the AT + CON0017EA0943AE, module returns: OK + CONNA or OK + + CONNF CONNE or OK.
 
-**5）	removal equipment matching information**
+**5） removal equipment matching information**
 
 Send: AT + CLEAR
 
@@ -126,7 +124,7 @@ Send after a successful return: OK + CLEAR
 
 Clear success had connected device address code information.
 
-**6）	query module working mode**
+**6） query module working mode**
 
 Send: AT + MODE?
 
@@ -134,19 +132,19 @@ Send after a successful return: OK + Get: [para]
 
 Para: the range of 0 ~ 2. 0 represents passthrough mode, on behalf of the PIO acquisition + remote control + 1 passthrough, 2 representative passthrough + remote control mode.The default is 0.
 
-**7）	set module working mode:**
+**7） set module working mode:**
 
 Send: AT + MODE []
 
 Send after a successful return: OK + Set: [para]
 
-**8）	query device name**
+**8） query device name**
 
 Send: AT + NAME?
 
 Send after a successful return: OK + NAME [para1]
 
-**9）	set the device name**
+**9） set the device name**
 
 Send: AT + NAME [para1]
 
@@ -155,7 +153,7 @@ Send after a successful return: OK + Set: [para1]
 Example: Set the device name to Seeed, sending the AT + NAMESeeed, return OK + Set: Seeed AT this time, the name of the bluetooth module has been changed to Seeed.
 Note: after the instruction execution, required to electricity, set the parameters of the approval.
 
-**10）	query matching password**
+**10） query matching password**
 
 Send: AT + PASS?
 
@@ -163,13 +161,13 @@ Send after a successful return: OK + PASS: [para1]
 
 Para1 range is 000000 ~ 999999, the default is 000000.
 
-**11）	pairing set password**
+**11） pairing set password**
 
 Send the AT + PASS [para1]
 
 Send after a successful return: OK + Set: [para1]
 
-**12）	restore factory Settings**
+**12） restore factory Settings**
 
 The AT + RENEW send
 
@@ -177,7 +175,7 @@ Send after a successful return: OK + RENEW
 
 Restore the default factory Settings module, the module Settings will be reset so, back to the factory with the status of the factory default, delay module 500 ms after the restart.If no need, please be careful.
 
-**13）	module reset**
+**13） module reset**
 
 Send: AT + RESET
 
@@ -185,7 +183,7 @@ Send after a successful return: OK + RESET
 
 After the instruction execution module will delay 500 ms after the restart.
 
-**14）	set the master-slave mode**
+**14） set the master-slave mode**
 
 Send: AT + ROLE [para1]
 
@@ -193,7 +191,7 @@ Send after a successful return: OK + Set: [para1]
 
 More information about the AT Commands please refer to the data sheet of BLE module. You can download it from the Resource space.
 
-##   SoftwareSerial Communication  ##
+## SoftwareSerial Communication ##
 
 BLE Bee can be acted as a master or slave, you can use the one via different demos.**If you are going to use the following SoftwareSerial program, please refer to the way of connection in the previous pic. BLE_TX-->D2, BLE_RX-->D3.**
 
@@ -291,7 +289,7 @@ void setupBleConnection()
 
 ```
 
-###   HardwareSerial Communication  ###
+### HardwareSerial Communication ###
 
 Besides, you can use BLE Shield via AT commands without any program, **but you need to change the positions of two jumpers. BLE_TX-->D1, BLE_RX-->D0.**
 
@@ -315,23 +313,20 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
 
 ![](https://files.seeedstudio.com/wiki/BLE_Bee/img/Seeed_BLE-3.png)
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE_Bee_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resource ##
 
+- **[Schematic]**[Schematic of BLE_Bee_v1.0](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE_Bee_v1.0.zip)
 
-##   Resource  ##
+- **[PDF]**[BLE Bee v1.0 PCB](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20PCB.pdf)
 
- - **[Schematic]**[Schematic of BLE_Bee_v1.0](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE_Bee_v1.0.zip)
+- **[PDF]**[BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20sch.pdf)
 
- - **[PDF]**[BLE Bee v1.0 PCB](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20PCB.pdf)
-
- - **[PDF]**[BLE Bee v1.0 sch](https://files.seeedstudio.com/wiki/BLE_Bee/res/BLE%20Bee%20v1.0%20sch.pdf)
-
- - **[APK]**[BLE_apk_for_Android](https://files.seeedstudio.com/wiki/BLE_Bee/res/HMBLEComAssistant.rar)
+- **[APK]**[BLE_apk_for_Android](https://files.seeedstudio.com/wiki/BLE_Bee/res/HMBLEComAssistant.rar)
 
 - **[DataSheet]**[DataSheet of BLE module](https://files.seeedstudio.com/wiki/BLE_Bee/res/Bluetooth40_en.pdf)
 
@@ -340,11 +335,11 @@ Then, send an "AT+ROLE0" command to BLE Shield; it will return an "OK+Set:0", wh
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

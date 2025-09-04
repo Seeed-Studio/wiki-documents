@@ -28,19 +28,19 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
@@ -52,12 +52,11 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 We recommend installing the **Bullesye** version or **Bookworm** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)
 
-
 ## Install OpenCV
 
  Feel free to skip the detailed installation process; we've got a shortcut for you. Follow these simplified steps if You are using **Bullseye OS**:
 
- - **Step 1** First, clone this Git repo onto your Raspberry Pi like this
+- **Step 1** First, clone this Git repo onto your Raspberry Pi like this
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
@@ -74,22 +73,25 @@ cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam/ObjectDetection
 ```sh
 sh setup.sh
 ```
+
 Follow these step if You are using **Bookworm OS**:
 
-- **Step 1** In your Terminal execute following command to install 
+- **Step 1** In your Terminal execute following command to install
 
 ```sh
 sudo apt-get install libopencv-dev python3-opencv
 ```
 
- - **Step 2** Next, clone this Git repo onto your Raspberry Pi like this
+- **Step 2** Next, clone this Git repo onto your Raspberry Pi like this
 
 ```sh
 git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
  ```
-## Take a video stream 
+
+## Take a video stream
 
 In new terminal window  navigate to  **Opencv_and_piCam**
+
  ```sh
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
  ```
@@ -99,10 +101,10 @@ In this tutorial, we'll kick off with a 'Hello World' program using the PiCam an
 ```sh
 python captureimages.py
 ```
+
 You will find a video stream like below.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/videostream.gif" /></center>
-
 
 Following your reference, we'll provide the entire code snippet for your convenience.
 
@@ -122,17 +124,18 @@ while True:
         break
 cv2.destroyAllWindows()
 ```
-## Capture a photo and Save it.
+
+## Capture a photo and Save it
 
 Here, we'll capture a still image using the PiCam and OpenCV on our ReTerminal. Find the **saveimage.py** file in our cloned repository. We'll be streaming live video, and if you press 's', a photo will be captured.Even you can use Thonny IDE to run the python script.
 
 ```sh
 python saveimage.py
 ```
+
 You will find a captured image in same directory.
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/capturedimage.PNG" /></center>
-
 
 Following your reference, we'll provide the entire code snippet for your convenience.
 
@@ -172,16 +175,14 @@ finally:
 
 ## Tech support
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

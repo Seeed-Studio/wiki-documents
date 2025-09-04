@@ -22,23 +22,23 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 
 ## Features
 
-* Industrial-grade: reliable, accurate, and rugged
-* Easy-installation: on weather station masts, buildings, and other infrastructures
-* Maintenance-free: no debris and no clogging
-* Wide application scenarios
+- Industrial-grade: reliable, accurate, and rugged
+- Easy-installation: on weather station masts, buildings, and other infrastructures
+- Maintenance-free: no debris and no clogging
+- Wide application scenarios
 
 ## Applications
 
 ![Applications](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/applications.png)
 
-* Smart Agriculture
-* Smart City
-* Climate Studies
-* Hydrological Network Monitoring
-* Condensation and Frost Sensing
-* Irrigation Control
-* Drop Detection
-* Wiper Control
+- Smart Agriculture
+- Smart City
+- Climate Studies
+- Hydrological Network Monitoring
+- Condensation and Frost Sensing
+- Irrigation Control
+- Drop Detection
+- Wiper Control
 
 ## Specifications
 <!-- <style type="text/css">
@@ -98,6 +98,6 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 
 ## Sources
 
-* [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/products/114992321/res/RG-15_instructions_sw_1.000.pdf)
+- [Optical Rain Gauge  Instructions](https://files.seeedstudio.com/products/114992321/res/RG-15_instructions_sw_1.000.pdf)
 
-* [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/products/114992321/res/RG-15%C2%A0specification.pdf)
+- [Optical Rain Gauge Datasheet](https://files.seeedstudio.com/products/114992321/res/RG-15%C2%A0specification.pdf)

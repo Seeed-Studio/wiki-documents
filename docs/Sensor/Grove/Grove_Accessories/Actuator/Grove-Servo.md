@@ -21,9 +21,9 @@ But if you feel more like a proto servo, check out EMAX 9g ES08A High Sensitive 
 Feature
 ---
 
-* Small module
-* Grove Compatible Interface
-* Easy to use
+- Small module
+- Grove Compatible Interface
+- Easy to use
 
 Specification
 ---
@@ -95,14 +95,14 @@ Here we will show you how this Grove - Servo works via a simple demo. First of a
 
 The Servo has three wires: power, ground, and signal. The power wire is typically red, and should be connected to the 5V pin on the Arduino/Seeeduino board. The ground wire is typically black or brown and should be connected to a ground pin on the Arduino board. The signal pin is typically yellow, orange or white and should be connected to  **D5** on the Arduino board. We can change to the digital port as we like. But don't forget to change the port number in the definition of the demo code at the same time.
 
-* Connect the module to **D5** port of Base Shield.
-* Plug Grove- Base Shield into Arduino.
-* Connect Arduino to PC via a USB cable.
+- Connect the module to **D5** port of Base Shield.
+- Plug Grove- Base Shield into Arduino.
+- Connect Arduino to PC via a USB cable.
 
 #### Software
 
-* Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](https://arduino.cc/en/Reference/Servo).
-* Open the code directly by the path: **File → Examples →Servo→Sweep**.
+- Let's sweep the shaft of a servo back and forth across 180 degrees by using [Adruino Servo Library](https://arduino.cc/en/Reference/Servo).
+- Open the code directly by the path: **File → Examples →Servo→Sweep**.
 
   ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/library%20example.jpg)
 
@@ -140,7 +140,7 @@ void loop() {
 }
 ```
 
-* Upload the sketch. We can see the servo sweep.
+- Upload the sketch. We can see the servo sweep.
 
 ### Play with Codecraft
 
@@ -175,19 +175,18 @@ When the code finishes uploaded, you will see the servo sweep.
 The method of connecting the servo described in this article is not the most proper or recommended approach. For servos—especially when using multiple servos simultaneously—a dedicated servo driver board should be used to provide additional power to the servos, with the development board controlling the servos via the driver board. Since Seeed Studio does not currently offer a suitable driver board, this article demonstrates connecting the servo directly to the main board as a usage example only. This approach is **not recommended** for actual projects.
 :::
 
-
 #### Hardware
 
-* **Step 1**. Things used in this project:
+- **Step 1**. Things used in this project:
 
 | Raspberry pi | Grove Base Hat for RasPi| Grove - Servo|
 |--------------|-------------|-----------------|
 |![enter image description here](https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg)|![enter image description here](https://files.seeedstudio.com/wiki/Grove-Servo/img/Grove%20Servo_s.jpg)|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Servo-p-1241.html)|
 
-* **Step 2**. Plug the Grove Base Hat into Raspberry.
-* **Step 3**. Connect the Grove - Servo to port 12 of the Base Hat.
-* **Step 4**. Connect the Raspberry Pi to PC through USB cable.
+- **Step 2**. Plug the Grove Base Hat into Raspberry.
+- **Step 3**. Connect the Grove - Servo to port 12 of the Base Hat.
+- **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
 ![](https://files.seeedstudio.com/wiki/Grove-Servo/img/Servo_Hat.jpg)
 
@@ -200,8 +199,8 @@ For step 3 you are able to connect the servo module to **any GPIO Port** but mak
 :::tip
 If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
-* **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-* **Step 2**. Download the source file by cloning the grove.py library.
+- **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -209,7 +208,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 
 ```
 
-* **Step 3**. Excute below commands to run the code.
+- **Step 3**. Excute below commands to run the code.
 
 ```
 cd grove.py/grove
@@ -317,11 +316,11 @@ You can quit this program by simply press ++ctrl+c++.
 
 ## Resources
 
-* **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
-* **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
-* **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Servo/res/Servo.zip)
-* **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](https://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
-* **[Demo]** [Low Cost Hobby Servo XY Table](https://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
+- **[Document]** [Understanding RC Servos](http://www.rchelicopterfun.com/rc-servos.html)
+- **[Library]**[Arduino Tutorial - Servo Library](https://www.arduino.cc/en/Reference/Servo)
+- **[Library]** [CodeCraft Code](https://files.seeedstudio.com/wiki/Grove-Servo/res/Servo.zip)
+- **[Demo]** [Digital/Analog Clock - Arduino + PaperCraft](https://www.instructables.com/id/DigitalAnalog-Clock-Arduino-PaperCraft/?ALLSTEPS)
+- **[Demo]** [Low Cost Hobby Servo XY Table](https://www.instructables.com/id/Low-Cost-Hobby-Servo-XY-Table/?ALLSTEPS)
 
 ## Projects
 
@@ -336,11 +335,11 @@ You can quit this program by simply press ++ctrl+c++.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

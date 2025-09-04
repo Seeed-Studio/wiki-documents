@@ -13,7 +13,6 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview.jpg" style={{width:1000, height:'auto'}}/></div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
@@ -31,7 +30,7 @@ In this section of the Wiki, we will focus on the hardware components of the Sen
 ## Specification
 
 <div class="table-center">
-	<table align="center">
+ <table align="center">
         <tr>
             <th>Hardware</th>
             <th>Description</th>
@@ -119,14 +118,12 @@ In this section of the Wiki, we will focus on the hardware components of the Sen
     </table>
 </div>
 
-
 ## Features
 
 - High efficiency architecture with on-device + server AI processing
-- Extensive with Infinite Modal 
-- Ensuring Privacy with Open Source and On-Premise Deployment 
+- Extensive with Infinite Modal
+- Ensuring Privacy with Open Source and On-Premise Deployment
 - Customizable Emotional Responses
-
 
 ## Front View
 
@@ -150,17 +147,17 @@ Please note that the Watcher body only comes with the 360° Rotate Bracket. if y
 
 ### 360° Rotate Bracket
 
-   - This bracket is designed for easy installation on walls or other vertical surfaces.
-   - It provides a full 360 degrees of rotation, allowing you to adjust the orientation of your Watcher device to achieve the desired viewing angle.
-   - The rotate bracket offers flexibility in positioning and ensures a secure attachment to the wall.
+- This bracket is designed for easy installation on walls or other vertical surfaces.
+- It provides a full 360 degrees of rotation, allowing you to adjust the orientation of your Watcher device to achieve the desired viewing angle.
+- The rotate bracket offers flexibility in positioning and ensures a secure attachment to the wall.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/omni_wheel_bracket.gif" style={{width:650, height:'auto'}}/></div><br />
 
 ### 1/4 Thread Tripod Bracket
 
-   - This bracket is ideal for placing your Watcher on flat surfaces such as desks, tables, or shelves.
-   - It features a standard 1/4-inch thread, making it compatible with most tripods and other mounting accessories.
-   - The tripod bracket provides stability and allows you to position your Watcher at various heights and angles, depending on your specific needs.
+- This bracket is ideal for placing your Watcher on flat surfaces such as desks, tables, or shelves.
+- It features a standard 1/4-inch thread, making it compatible with most tripods and other mounting accessories.
+- The tripod bracket provides stability and allows you to position your Watcher at various heights and angles, depending on your specific needs.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/threaded_bracket.gif" style={{width:650, height:'auto'}}/></div>
 
@@ -325,7 +322,7 @@ Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
 -m, --mode=<int> 1: breath, 2: blink, 3:solid, default 3
 -v, --step_value=<int> RGB step value, default 3
 -t, --step_time_ms=<int> RGB step time(ms), default 5
-``` 
+```
 
 ## Tech Support & Product Discussion
 
@@ -340,4 +337,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

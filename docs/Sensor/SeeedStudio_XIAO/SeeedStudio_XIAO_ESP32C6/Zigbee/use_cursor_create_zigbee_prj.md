@@ -17,7 +17,7 @@ This guide will walk you through using Cursor's AI-powered chat to develop Zigbe
 
 ## What is Cursor?
 
-Cursor is an AI-powered code editor built on top of Visual Studio Code. It integrates powerful AI capabilities that can help you write, understand, and debug code more efficiently. 
+Cursor is an AI-powered code editor built on top of Visual Studio Code. It integrates powerful AI capabilities that can help you write, understand, and debug code more efficiently.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/cursor.png" style={{width:600, height:'auto'}}/></div>
 
@@ -38,30 +38,29 @@ For embedded systems like the XIAO ESP32C6, Cursor can help you understand hardw
 For this tutorial, you'll need:
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C6</th>
-			<th>Grove DHT11 Temperature & Humidity Sensor</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C6</th>
+   <th>Grove DHT11 Temperature & Humidity Sensor</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-DHT11.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 - Grove cables
 - USB-C cable
@@ -102,7 +101,6 @@ Follow these steps to install Cursor on your operating system:
 </TabItem>
 </Tabs>
 
-
 ## Cursor Subscription
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/cursor_price.png" style={{width:1000, height:'auto'}}/></div>
@@ -112,6 +110,7 @@ Cursor offers different subscription tiers to accommodate various user needs:
 **Free Hobby Plan**
 
 Cursor can be downloaded and used for free with the Hobby plan, which includes:
+
 - 2000 completions
 - 50 slow premium requests
 - A two-week trial of Pro features
@@ -155,6 +154,7 @@ After installing Cursor, follow these steps to set it up:
 When using Cursor to generate code for your project, providing example code can significantly enhance the accuracy of the generated project. Examples serve as a reference point for Cursor, allowing it to understand the structure, syntax, and specific requirements of your project. By analyzing these examples, Cursor can generate more precise and relevant code, tailored to your needs.
 
 In the context of our Zigbee project, finding the right example helps Cursor to:
+
 - Understand the specific functionalities required
 - Identify the appropriate libraries and functions to use
 - Generate code that is compatible with the hardware and interfaces you are using
@@ -164,26 +164,28 @@ By providing a relevant example, you ensure that the generated code is more like
 Now, let's locate and open the Zigbee examples provided by the ESP32 Arduino package:
 
 1. First, make sure you have installed the **latest ESP32 board package** in Arduino IDE:
-  - Open Arduino IDE
-  - Go to **Tools > Board > Boards Manager**
-  - Search for **esp32**
-  - Find **esp32 by Espressif Systems**
-  - Click **Install** or **Update** to get the latest version
-  - Wait for the installation to complete
+
+- Open Arduino IDE
+- Go to **Tools > Board > Boards Manager**
+- Search for **esp32**
+- Find **esp32 by Espressif Systems**
+- Click **Install** or **Update** to get the latest version
+- Wait for the installation to complete
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/3.png" style={{width:1000, height:'auto'}}/></div>
 
 2. Navigate to the Zigbee examples directory:
 
 The following paths use ESP32 board package version 3.1.3 as an example. Replace `3.1.3` with your installed version number if different:
-   
-- On Windows: 
+
+- On Windows:
 
 ```
 C:\Users\[YourUsername]\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.1.3\libraries\Zigbee\
 ```
 
 - On macOS:
+
 ```
 /Users/[YourUsername]/Library/Arduino15/packages/esp32/hardware/esp32/3.1.3/libraries/Zigbee/
 ```
@@ -193,7 +195,6 @@ C:\Users\[YourUsername]\AppData\Local\Arduino15\packages\esp32\hardware\esp32\3.
 4. Navigate to the Zigbee directory path from step 2 and click **Open**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/4.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Selecting the Right Example
 
@@ -259,10 +260,10 @@ This header file contains all the device types currently supported by ESP's Zigb
 3. Understand what capabilities are available for your device type
 
 If your device type isn't listed, you may need to:
+
 - Choose a similar supported device type that matches your needs
 - Consider implementing a custom device type (advanced)
 - Contact ESP support for guidance
-
 
 ### Finding the Closest Example
 
@@ -286,7 +287,6 @@ This example will serve as an excellent starting point for our DHT11-based Zigbe
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/5.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ## Determining Pin Connections
 
 For the XIAO ESP32C6 and DHT11 sensor, we need to decide which pins to use:
@@ -299,16 +299,13 @@ For the XIAO ESP32C6 and DHT11 sensor, we need to decide which pins to use:
 For XIAO examples, only GPIO (Digital/Analog) and SPI protocol devices require manual pin configuration. For I2C and UART devices, the pin definitions are already pre-configured in XIAO's board package, so you can skip this step.
 :::
 
-
 ## Gathering Technical Documentation
-
 
 Having the technical documentation for your sensor is crucial. If you are using Seeed's products, you can find detailed documentation and resources for your sensor or actuator on **[Seeed Studio's official Wiki](https://wiki.seeedstudio.com/)**. The wiki's resource section also contains datasheets for Grove products that you can provide to Cursor. For example, for the DHT11 sensor used in this project:
 
 - [Grove DHT11 Wiki Page](https://wiki.seeedstudio.com/Grove-TemperatureAndHumidity_Sensor/)
 
 If you are using sensors from other manufacturers, please contact them directly to obtain the necessary technical documentation.
-
 
 ## Using Cursor's Chat to Generate Code
 
@@ -345,7 +342,7 @@ Let's break down how to fill out the prompt template and provide an example usin
 2. **Sensor details**:
    - Type: Specify the exact sensor model
    - Connections: List all pin connections between the sensor and XIAO ESP32C6
-3. **Sensing specifications**: 
+3. **Sensing specifications**:
    - Parameters: List what you want to measure (temperature, humidity, etc.)
    - Transmission frequency: How often you want to send data (e.g., every 5 seconds)
 4. **Reference materials**: Include links to datasheets or documentation
@@ -377,7 +374,6 @@ Generate a complete project in the Example directory. Name the main file [projec
 
 If you want to work with an actuator instead, you can use the following prompt template. Let's look at how to structure a prompt for an actuator project:
 
-
 ```
 Please refer to the code and then create an Arduino actuator project with ESP32-C6 using Zigbee protocol.
 
@@ -400,13 +396,11 @@ Generate a complete project in the Example directory. Name the main file [projec
 When building your first project with Cursor, it's recommended to start with simple, basic functionality rather than complex logic and requirements. This approach significantly reduces the likelihood of Cursor generating incorrect code. First, let Cursor create a working basic program that you can verify functions correctly. Once you have a solid foundation, you can gradually add more features and complexity to enhance your project. This iterative approach leads to more reliable and maintainable code.
 :::
 
-
 After preparing your prompt with all the specific details about your project, follow these steps:
 
 1. Open Cursor's Chat panel (usually by clicking the chat icon in the sidebar).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/6.png" style={{width:1000, height:'auto'}}/></div>
-
 
 2. Locate the example code that most closely matches your project requirements. For our DHT11 temperature and humidity sensor project, we'll use the "Zigbee_Temp_Hum_Sensor_Sleepy" example.
 
@@ -422,7 +416,6 @@ After preparing your prompt with all the specific details about your project, fo
 
 5. Click the **Accept** button to save the generated code. This will create the project files in your workspace.
 
-
 ## Review the Generated Code
 
 After Cursor generates the code, it's important to carefully review it before uploading to your device. Here are key aspects to check:
@@ -437,8 +430,8 @@ After Cursor generates the code, it's important to carefully review it before up
 2. Functionality Check
 
 Compare the generated code against your requirements:
-- Does it implement all the requested features?
 
+- Does it implement all the requested features?
 
 For example, inside the programme it provided me, the pins are defined in terms of GPIO numbering, which may require reading the wiki and then checking that the XIAO's A/D numbering matches the correct GPIO numbering, which is more cumbersome. For this, we can ask Cursor to use the pins in the same way as A/D.
 
@@ -630,7 +623,7 @@ If you encounter issues with the generated code, you can ask Cursor for help:
 
 Cursor's AI is particularly good at debugging and can often identify issues that might be difficult to spot manually.
 
-For example, if you're using Zigbee functionality for the first time or encounter a compilation error like 
+For example, if you're using Zigbee functionality for the first time or encounter a compilation error like
 
 ```
 #error Zigbee end device mode is not selected in Tools->Zigbee mode
@@ -638,7 +631,7 @@ For example, if you're using Zigbee functionality for the first time or encounte
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/cursor_zigbee_xiaoc6/15.png" style={{width:1000, height:'auto'}}/></div>
 
-due to oversight, you can always ask Cursor for guidance. Simply prompt: 
+due to oversight, you can always ask Cursor for guidance. Simply prompt:
 
 ***I got a compilation error in Arduino IDE saying 'Compilation error: #error Zigbee end device mode is not selected in Tools->Zigbee mode'. What should I do?***
 
@@ -655,8 +648,6 @@ You can ask Cursor about any errors you encounter, and it will help guide you th
 - Power management concerns
 
 Just describe the issue clearly in your prompt, and Cursor will provide relevant suggestions and solutions.
-
-
 
 ## Enhancing Your Program with Cursor
 
@@ -681,8 +672,6 @@ Here's how you could ask Cursor to add deep sleep functionality to your sensor p
 
 ***Modify the programme so that the temperature and humidity values are reported once every three hours. Deep sleep the rest of the time to save power.***
 
-
-
 2. Cursor will suggest code modifications that include:
 
 - Updated the sleep duration
@@ -695,7 +684,6 @@ Here's how you could ask Cursor to add deep sleep functionality to your sensor p
 This power optimization is particularly valuable for battery-powered sensor nodes, potentially extending battery life from days to months or even years, depending on the reporting frequency and sensor type.
 
 Cursor can help you implement all these features - just be specific in your requirements when asking for assistance.
-
 
 ## Conclusion
 
@@ -715,7 +703,6 @@ The integration of AI-assisted development tools with Zigbee technology opens up
 :::tip
 This article was written by Citric with assistance from Cursor.
 :::
-
 
 ## Tech Support & Product Discussion
 

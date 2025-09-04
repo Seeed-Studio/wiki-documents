@@ -16,37 +16,38 @@ This product provide clean and green energy, it produce electric without any fue
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/bicycle-dynamo-with-bracket-6v-3w-p-798.html?cPath=155)
 
-##   Features
----
-*   simple and beautiful outshape and heat dissipation design raining proof ,dustproof, anti-shake,
-*   constant current output
+## Features
 
-##   Cautions
 ---
-1.  Don’t touch the shell of the dynamo after long time riding ,it might scald your body . Keep waiting at least 10 minutes .
-2.  It can be use in raining day , but don’t put it into water ,keep it away from kids.
+- simple and beautiful outshape and heat dissipation design raining proof ,dustproof, anti-shake,
+- constant current output
 
+## Cautions
 
-##   Specification
 ---
-###   Synamo overal size and Structures
+
+1. Don’t touch the shell of the dynamo after long time riding ,it might scald your body . Keep waiting at least 10 minutes .
+2. It can be use in raining day , but don’t put it into water ,keep it away from kids.
+
+## Specification
+
+---
+
+### Synamo overal size and Structures
 
 1. The max dia of the dynamo body is:40.5mm, the longest length of the main body is:94.5mm。
 
 ![](https://files.seeedstudio.com/wiki/Bicycle_Dynamo_With_Bracket-6V_3W/img/Bicycle-spec.JPG)
 
-
-1.  friction roller
-2.  the dynamo body
-3.  Magnetic steel
-4.  Winding support
-5.  Spring housing
-6.  Coil
-7.  Wrench
-8.  Lug plate
-9.  Rear cover
-
-
+1. friction roller
+2. the dynamo body
+3. Magnetic steel
+4. Winding support
+5. Spring housing
+6. Coil
+7. Wrench
+8. Lug plate
+9. Rear cover
 
 2. OUTPUT: 6V,3W
 
@@ -54,7 +55,7 @@ This product provide clean and green energy, it produce electric without any fue
 
 4. WORKING LIFE:  2-3 years
 
-###   Technical  parameters
+### Technical  parameters
 
 **output power test under constant voltage**
 
@@ -87,7 +88,6 @@ This product provide clean and green energy, it produce electric without any fue
   </tbody>
 </table>
 
-
 **constant-resistance load testing （18 ohms）**
 
 <table>
@@ -119,7 +119,6 @@ This product provide clean and green energy, it produce electric without any fue
   </tbody>
 </table>
 
-
 **Tempreture test ：**
 
 <table>
@@ -139,23 +138,20 @@ This product provide clean and green energy, it produce electric without any fue
   </tbody>
 </table>
 
+## Usage
 
-
-
-##   Usage
-
-###   Hardware Installation
+### Hardware Installation
 
 Fix the dynamo on the front fork near to the wheel of the bicycle ,adjust the height to the suitable place .(pay attention to fixed side of the dynamo “left or right “, that must be matching.)
 
 1、Move the wrench , let the dynamo roller touch the wheel edge at proper position .
 
+## FAQ
 
-##   FAQ
 ---
 Please list your question here:
 
-*   Could it be used to power an Arduino directly?
+- Could it be used to power an Arduino directly?
 
 A:Not if by directly you mean running the wires from the dynamo directly to an arduino, of course it can't do that. Because, like all generators, a dynamo like this will put out AC, which is fine for tungsten lamps.. (i.e. light bulbs) but LEDs all need DC, and so do solid state devices like Arduino. So you are always going to need a bridge rectifier *first*. What you add after that depends on your budget and your needs. An arduino needs steady voltage so for an arduino, you are going to need to use the generator essentially as a battery charger.. and then you power all your stuff *off that battery that gets charged.*
 
@@ -163,7 +159,7 @@ What you will need to do that with the most efficiency is ideally a DC to DC con
 
 See the links down below.
 
-*   If I stop (i.e. on a red light) it will naturally stop outputting energy. What do I need to keep the energy flow going, a capacitor?
+- If I stop (i.e. on a red light) it will naturally stop outputting energy. What do I need to keep the energy flow going, a capacitor?
 
 A: Yes.. that would work for a few seconds to more than a minute.. depending on how bright an LED you use and the size of the capacitor you use.
 
@@ -178,20 +174,20 @@ A: That's *quite* doable but again, you'll need to change that (quite variable) 
 
 Cheers --Nighto 01:37, 10 June 2011 (CST)
 
-*   SUPPLIED DYNAMO IS MEANT TO BE MOUNTED ON FRONT FORK ONLY.  And any given dynamo will only work on one side. This dynamo is fairly inflexible in that respect. See [https://en.wikipedia.org/wiki/Bottle_dynamo](https://en.wikipedia.org/wiki/Bottle_dynamo) for a picture of a dynamo mounted on the front fork of a bike, facing forward.
+- SUPPLIED DYNAMO IS MEANT TO BE MOUNTED ON FRONT FORK ONLY.  And any given dynamo will only work on one side. This dynamo is fairly inflexible in that respect. See [https://en.wikipedia.org/wiki/Bottle_dynamo](https://en.wikipedia.org/wiki/Bottle_dynamo) for a picture of a dynamo mounted on the front fork of a bike, facing forward.
 
 Many people who buy it here are using it for other purposes than bicycle lighting, so for them this all doesn't matter anyway.
 
 Don't assume that people wont use it on bikes, given the fact its a bike dynamo, and its price, its a competitive option for bicyclists. And its a decent little dynamo, for the price, but it has to be mounted safely. They all do. That's just basic common sense.
 
-*   Ask your local bike mechanic for info on how if you are unsure.*
+- Ask your local bike mechanic for info on how if you are unsure.*
 
-##   Resources
+## Resources
+
 ---
-*   [File:Spec.doc](https://files.seeedstudio.com/wiki/Bicycle_Dynamo_With_Bracket-6V_3W/res/Spec.doc)
+- [File:Spec.doc](https://files.seeedstudio.com/wiki/Bicycle_Dynamo_With_Bracket-6V_3W/res/Spec.doc)
 
-
-##   External Links
+## External Links
 
 Links to external webpages which provide more application ideas, documents/datasheet or software libraries.
 
@@ -202,15 +198,16 @@ Links to external webpages which provide more application ideas, documents/datas
 [http://www.candlepowerforums.com/vb/forumdisplay.php?86-Bicycle](http://www.candlepowerforums.com/vb/forumdisplay.php?86-Bicycle)
 
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
+
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

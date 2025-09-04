@@ -50,7 +50,7 @@ This integration empowers users to enhance their smart home systems with advance
 To effectively integrate the MR60BHA2 mmWave Sensor with Home Assistant using the XIAO ESP32C6, follow these essential steps:
 
 :::caution
-Please make sure you have [upgrade the firmware](getting_started_with_mr60bha2.md#module-firmware-upgrade) of MR60BHA2 module to the latest version.  
+Please make sure you have [upgrade the firmware](/getting_started_with_mr60bha2_mmwave_kit#module-firmware-upgrade) of MR60BHA2 module to the latest version.  
 The latest firmware adds human presence detection and personnel detection feature.
 :::
 

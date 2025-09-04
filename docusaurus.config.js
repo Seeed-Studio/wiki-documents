@@ -425,10 +425,10 @@ module.exports = (async () => {
                   label: 'Wiki SeeedStudio (日本語)',
                   to: '/ja/Getting_Started',
                 },
-                {
-                  label: 'Wiki SeeedStudio (Español)',
-                  to: '/es/SeeedStudio_XIAO_Series_Introduction',
-                },
+                // {
+                //   label: 'Wiki SeeedStudio (Español)',
+                //   to: '/es/SeeedStudio_XIAO_Series_Introduction',
+                // },
               ],
             },
             {

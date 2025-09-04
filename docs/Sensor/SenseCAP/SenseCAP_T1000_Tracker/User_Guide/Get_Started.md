@@ -13,20 +13,13 @@ last_update:
 
 This chapter will guide you to setup the SenseCAP T1000 Tracker via SenseCAP Mate APP.
 
-
 <center><iframe width="666" height="360" src="https://www.youtube.com/embed/NBSr06NXC7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/products/SenseCAP/T1000_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide_v1.2.pdf" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> User Guide </font></span></strong>
     </a>
 </div>
-
-
-
-
 
 ## Device Functions
 
@@ -40,17 +33,14 @@ To apply to different scenarios, there are several different working modes on th
 |Periodic Mode|Set an interval at which the device periodically uploads location and sensor data.|This mode is recommended for most scenarios.|
 |Event Mode|Adjust the upload interval according to the temperature, light and acceleration sensor of the tracker, including temperature event, light event, motion event, motionless timeout, and shock event.|It can be used in complex scenarios, such as monitoring the transportation of important items. But the power consumption increases a lot.|
 
-
-
 ### Sensor Function
 
 The SenseCAP T1000 Tracker is equipped with 3 sensors: Temperature sensor, Light sensor and 3-Axis Accelerometer.
 You can choose enable or disable these sensors:
 
-* Turn off all sensors, but you can also choose a version without sensor to reduce costs.
-* Only the temperature and light sensors are enabled to monitor data periodically with low power consumption.
-* When temperature, illumination and accelerometer are used as trigger conditions, the sensor will always be powered, and the device consumes a lot of power.
-
+- Turn off all sensors, but you can also choose a version without sensor to reduce costs.
+- Only the temperature and light sensors are enabled to monitor data periodically with low power consumption.
+- When temperature, illumination and accelerometer are used as trigger conditions, the sensor will always be powered, and the device consumes a lot of power.
 
 |**Sensor**|**Description**|
 | - | - |
@@ -64,9 +54,7 @@ The device can cache data, which can be enabled through Bluetooth configuration 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Button Function
-
 
 <table>
 <tr><th colspan="1"><a name="_hlk134103971"></a><b>Actions</b></th><th colspan="1"><b>Description</b></th><th colspan="1"><b>LED Status</b></th><th colspan="1"><b>Buzzer</b></th></tr>
@@ -82,39 +70,38 @@ The device can cache data, which can be enabled through Bluetooth configuration 
 </table>
 
 :::info Note
-* It's recommended to power off the device if it's not in use.
-* When first turned on, it is recommended to test it outdoors, as the GPS needs to update the time via satellite.
-* Please make sure the frequency band matches your gateway frequency.
+
+- It's recommended to power off the device if it's not in use.
+- When first turned on, it is recommended to test it outdoors, as the GPS needs to update the time via satellite.
+- Please make sure the frequency band matches your gateway frequency.
 :::
 
 ## Get Started
 
 ### Connect to SenseCAP Mate App
 
-* **Step 1**: Download SenseCAP Mate App
+- **Step 1**: Download SenseCAP Mate App
 
-SenseCAP Mate App is used to config LoRa parameters, interval, bind devices to your account and check device basic information. 
+SenseCAP Mate App is used to config LoRa parameters, interval, bind devices to your account and check device basic information.
 
-* For iOS, please search for “SenseCAP Mate” in the App Store and download it.
-* For Android, please search for “SenseCAP Mate” in the Google Store and download it. 
+- For iOS, please search for “SenseCAP Mate” in the App Store and download it.
+- For Android, please search for “SenseCAP Mate” in the Google Store and download it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={600} height="auto" /></p>
 
-
-* **Step 2**: Add Device 
+- **Step 2**: Add Device
 
 Login to the SenseCAP Mate APP.
 Click 'Add Device' tab on the top right, then scan the QR code on the device label.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config.png" alt="pir" width={800} height="auto" /></p>
 
-Press the button for 3 seconds, and select device by SN. 
+Press the button for 3 seconds, and select device by SN.
 
 There are 2 configuration mode:
 
-* **Quick Configuration**:For quick start, you can select quick config the basic parameters
-* **Advanced Configuration**: To set more parameters please check the following steps.
-
+- **Quick Configuration**:For quick start, you can select quick config the basic parameters
+- **Advanced Configuration**: To set more parameters please check the following steps.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/setup.png" alt="pir" width={500} height="auto" /></p>
 
@@ -122,8 +109,8 @@ There are 2 configuration mode:
 
 For Quick Configuration, you only need to setup the following parameters:
 
-* **Frequency**:it should be same as your gateway. 
-* **Uplink interval**: The uplink interval of Periodic Mode (default mode), you can set other mode via “Device Bluetooth Configuration” on “User” page.
+- **Frequency**:it should be same as your gateway.
+- **Uplink interval**: The uplink interval of Periodic Mode (default mode), you can set other mode via “Device Bluetooth Configuration” on “User” page.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/advanced1.png" alt="pir" width={500} height="auto" /></p>
 
@@ -131,12 +118,11 @@ Tracker will try to join LoRaWAN network, the breathing light flashes when tryin
 
 ### Advanced Configuration
 
-* Press button and hold for 3 seconds to turn it on, then turn on the Bluetooth pairing automatically, user can use the app to scan and connect.
-* Open the App and click the “Tracker T1000”. Select the “Setup” to config the tracker.
-* Select the device by S/N (S/N is on the label of the device). Then, the basic information of the sensor will be displayed after entering.
+- Press button and hold for 3 seconds to turn it on, then turn on the Bluetooth pairing automatically, user can use the app to scan and connect.
+- Open the App and click the “Tracker T1000”. Select the “Setup” to config the tracker.
+- Select the device by S/N (S/N is on the label of the device). Then, the basic information of the sensor will be displayed after entering.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_3.png" alt="pir" width={800} height="auto" /></p>
-
 
 Click the “Measure”, then you will get the sensor values:
 
@@ -145,7 +131,6 @@ Click the “Measure”, then you will get the sensor values:
 |Light|0 to 100%, (0% is dark, 100% is brightest)|
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_4.png" alt="pir" width={500} height="auto" /></p>
-
 
 #### LoRa Parameters Setup
 
@@ -184,9 +169,6 @@ It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server 
   </tbody>
 </table>
 
-
-
-
 <table align="center">
   <caption> <h2></h2> </caption>
   <tbody>
@@ -218,11 +200,7 @@ It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server 
   </tbody>
 </table>
 
-
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_5.png" alt="pir" width={800} height="auto" /></p>
-
 
 The sensor supports two network access modes, OTAA by default.
 
@@ -260,14 +238,11 @@ To obtain EUI information in batches, please contact our sales team.
 <tr><td colspan="1">AS923-4</td></tr>
 </table>
 
-
 :::info Note
 Different countries and LoRaWAN network servers use different frequency plans.<br />
 For Helium network, please refer to: [Helium-frequency-plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)<br />
 For The Things Network, please refer to:[TTN-frequency-plans](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
 :::
-
-
 
 #### Work Mode Setup
 
@@ -285,7 +260,6 @@ Please setup the work mode according to your needs.
 <tr><td colspan="1">Uplink Interval (min) – Periodic Mode</td><td colspan="1">Periodically locate and upload data.</td><td colspan="1"><p>Default 60 minutes. </p><p>The higher the frequency, the higher the power consumption.</p></td></tr>
 <tr><td colspan="1">Restore All Settings</td><td colspan="1">Restore all configuration parameters to factory Settings, includes LoRa, Work Mode and Geolocation.</td><td colspan="1"></td></tr>
 </table>
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/work_mode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -317,7 +291,7 @@ For Event Mode, there are five events:
 The tracker supports positioning via GNSS, Wi-Fi, and Bluetooth.
 
 - **GNSS**: The longitude and latitude can be directly obtained through GPS and other satellite positioning, then upload data via LoRa.
-- **Wi-Fi**: Passive scanning, uploads the scanned 4 MAC addresses via LoRa. 
+- **Wi-Fi**: Passive scanning, uploads the scanned 4 MAC addresses via LoRa.
 - **BLE**: Uploads the scanned 3 best signal MAC addresses of Beacon via LoRa.
 
 <table>
@@ -336,11 +310,8 @@ The tracker supports positioning via GNSS, Wi-Fi, and Bluetooth.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/mode3.png" alt="pir" width={500} height="auto" /></p>
 
-
-
-After all parameters are configured, click “Send”. 
+After all parameters are configured, click “Send”.
 If no parameter needs to be modified, exit Bluetooth configuration, and return to the home page. At this point, the device initiates a LoRa network access request.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/send.png" alt="pir" width={400} height="auto" /></p>
 
@@ -351,7 +322,6 @@ If no parameter needs to be modified, exit Bluetooth configuration, and return t
 Check the Location on the APP.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_view.png" alt="pir" width={800} height="auto" /></p>
-
 
 #### SenseCAP Portal
 
@@ -371,12 +341,11 @@ Log in [SenseCAP Portal](http://sensecap.seeed.cc)
 
 If you have created an account through the APP, you can log in directly.
 
-1)  Select register account, enter email information, and click "register", the registered email will be sent to the user's mailbox
+1) Select register account, enter email information, and click "register", the registered email will be sent to the user's mailbox
 
-2)  Open the "SenseCAP…"Email, click the jump link, fill in the relevant information, and complete the registration
+2) Open the "SenseCAP…"Email, click the jump link, fill in the relevant information, and complete the registration
 
-3)  Return to the login interface and complete the login
-
+3) Return to the login interface and complete the login
 
 Check [SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.html) for more details.
 
@@ -384,14 +353,14 @@ Check [SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.htm
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map_view2.png" alt="pir" width={800} height="auto" /></p>
 
-## SenseCAP API 
+## SenseCAP API
 
 SenseCAP API is for users to manage IoT devices and data. It includes 3 types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
-* With HTTP API, users can manage LoRa devices, to get raw data or historical data.
-* With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
-* With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
+
+- With HTTP API, users can manage LoRa devices, to get raw data or historical data.
+- With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
+- With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
 
 Please check [API User Guide](https://sensecap-docs.seeed.cc/) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/api_page.png" alt="pir" width={800} height="auto" /></p>
-

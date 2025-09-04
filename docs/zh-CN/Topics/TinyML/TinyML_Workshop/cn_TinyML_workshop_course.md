@@ -77,13 +77,13 @@ last_update:
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft AI 平台介绍</a>
+          <a href= "/cn/sscma" class="getting_started_label2">1.1 SenseCraft AI 平台介绍</a>
           <br/>熟悉我们使用的工具。
       </div>
   </div>
     <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma/#the-ai-blink-quickly-using-ai" class="getting_started_label2">1.2 AI "闪烁" </a>
+          <a href= "/cn/sscma/#the-ai-blink-quickly-using-ai" class="getting_started_label2">1.2 AI "闪烁" </a>
           <br/>学习如何在边缘设备 XIAO ESP32S3 Sense 上轻松部署公共 AI 模型库。
       </div>
   </div>
@@ -94,7 +94,7 @@ last_update:
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/train_and_deploy_model" class="getting_started_label2">2. 构建您自己的项目 </a>
+          <a href= "/cn/train_and_deploy_model" class="getting_started_label2">2. 构建您自己的项目 </a>
           <br/>学习如何轻松训练和部署您自己的模型。  
       </div>
   </div>
@@ -105,7 +105,7 @@ last_update:
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/train_and_deploy_model/#optional-federate-transmit-data-wide-away" class="getting_started_label2">3. 远程传输数据 </a>
+          <a href= "/cn/train_and_deploy_model/#optional-federate-transmit-data-wide-away" class="getting_started_label2">3. 远程传输数据 </a>
           <br/>学习如何在 SenseCraft 中远程联邦您的模型。
       </div>
   </div>

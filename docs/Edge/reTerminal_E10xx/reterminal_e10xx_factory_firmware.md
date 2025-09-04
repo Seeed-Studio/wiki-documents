@@ -1,6 +1,6 @@
 ---
-description: This article describes how to use the reTerminal E10xx firmware code and PlatformIO.
-title: Modifying Firmware with PlatformIO on reTerminal E10xx
+description: This article describes how to use the reTerminal E Series ePaper Display firmware code and PlatformIO.
+title: Modifying Firmware with PlatformIO on reTerminal E Series
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /reterminal_e10xx_firmware
 sidebar_position: 4

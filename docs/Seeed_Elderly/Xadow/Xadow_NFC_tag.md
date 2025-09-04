@@ -16,25 +16,27 @@ Xadow - NFC Tag is a highly integrated Near Field Communication Tag module, this
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-Tag-p-1881.html)
 
-##  Specification
+## Specification
+
 ---
-*   Working Voltage:5V or 3V3
-*   Working Current&lt;1mA
-*   2CM max effective range
-*   Serve for contactless communication at 13.56MHz
-*   ISO 15693 and ISO 18000-3 mode 1 compatible
-*   64-bit unique identifier (UID)
-*   Read Block &amp; Write (32-bit blocks)
-*   I2C Interface
+- Working Voltage:5V or 3V3
+- Working Current &lt;1mA
+- 2CM max effective range
+- Serve for contactless communication at 13.56MHz
+- ISO 15693 and ISO 18000-3 mode 1 compatible
+- 64-bit unique identifier (UID)
+- Read Block &amp; Write (32-bit blocks)
+- I2C Interface
 
-##  Usage
+## Usage
+
 ---
 
-##  Read/Write by Mobile
+## Read/Write by Mobile
 
-1.  Download [NfcV-reader for Androud](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk) and install it
+1. Download [NfcV-reader for Androud](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk) and install it
 
-2.  We can Read/Write it by Mobile
+2. We can Read/Write it by Mobile
 
 ![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/Xadow-NFC_Tag_photo1.jpg)
 
@@ -45,17 +47,21 @@ Xadow - NFC Tag is a highly integrated Near Field Communication Tag module, this
 
 |![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_3.jpg)|![](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/img/NFC_Tag_4.png)
 |---|---|
-##  Control LED
+
+## Control LED
+
 ---
-1.  Download [NfcV-reader for Android](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk) and install it
 
-2.  Download [NFC Tag Lib](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E)rename it to NFC_Tag_M24LR6E and put it into Arduino's library .
+1. Download [NfcV-reader for Android](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk) and install it
 
-3.  Open Arduino IDE. If Arduino IDE is already opened, restart it.
+2. Download [NFC Tag Lib](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E)rename it to NFC_Tag_M24LR6E and put it into Arduino's library .
 
-4.  In Arduino IDE, click menus: File -&gt; Example -&gt; NFC_Tag_M24LR6E -&gt; ledControl
+3. Open Arduino IDE. If Arduino IDE is already opened, restart it.
 
-5.  Now,you can control LED by you phone.
+4. In Arduino IDE, click menus: File -&gt; Example -&gt; NFC_Tag_M24LR6E -&gt; ledControl
+
+5. Now,you can control LED by you phone.
+
 ```
 #include "NfcTag.h"
 #include <Wire.h>
@@ -87,36 +93,34 @@ void loop(){
 }
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##  Resources
 ---
-*   [Xadow - NFC Tag.PDF](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.pdf)
+- [Xadow - NFC Tag.PDF](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.pdf)
 
-*   [Xadow - NFC Tag Eagle](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.zip)
+- [Xadow - NFC Tag Eagle](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/Xadow-NFC_Tag_v1.0.zip)
 
-*   [M24LR64E-R datasheet.pdf](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/M24LR64E-R.pdf)
+- [M24LR64E-R datasheet.pdf](https://files.seeedstudio.com/wiki/Xadow_NFC_tag/res/M24LR64E-R.pdf)
 
-*   [NfcV-reader for Android](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk)
+- [NfcV-reader for Android](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E/blob/master/Resources/NfcVreader.apk)
 
-*   [NFC Tag M24LR6E  Lib](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E)
+- [NFC Tag M24LR6E  Lib](https://github.com/Seeed-Studio/NFC_Tag_M24LR6E)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

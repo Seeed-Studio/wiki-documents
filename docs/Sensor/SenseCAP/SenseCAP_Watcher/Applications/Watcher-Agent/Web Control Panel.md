@@ -85,15 +85,12 @@ To get the current time, you need to add: __DATE__
 
 The control panel displays essential device information including:
 
-- Device Model
-- Chip Model
-- Firmware Version
+- Board Name
 - MAC address
-- Binding time
-- Online status
-- Notes
-- OTA Upgrade switch
-- Unbind
+- APP Version
+- Last Connected Time
+- Auto Upgrade switch
+- Operation
 
 :::note
 This is a beta version of the Web Control Panel, and features may be updated or changed in future releases. Please check for updates regularly for the latest functionality.

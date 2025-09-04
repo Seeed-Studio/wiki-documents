@@ -22,32 +22,23 @@ The LPWAN Asset Tracker Dev kit is based on [Wio-WM1110 Wireless Module](https:/
     </a>
 </div>
 
-
-
-
 :::tip
 Amazon Sidewalk is currently only available in the US. Check [Sidewalk Network Coverage](https://coverage.sidewalk.amazon/).
 
 For other regions, you can also choose the [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html), which is compatible with the worldwide LoRaWAN® network.
 :::
 
-
-
-
-
-
 ## Feature
 
-* **Support Amazon Sidewalk Network**
+- **Support Amazon Sidewalk Network**
 
-* **Offers multiple connectivity options** including: LoRa®, GNSS(GPS/BeiDou), Bluetooth, Wi-Fi Sniffer
+- **Offers multiple connectivity options** including: LoRa®, GNSS(GPS/BeiDou), Bluetooth, Wi-Fi Sniffer
 
-* **Supports over 300+ Seeed Grove Sensors**: Making it highly adaptable for different tracking and sensing requirements.
+- **Supports over 300+ Seeed Grove Sensors**: Making it highly adaptable for different tracking and sensing requirements.
 
-* **Onboard temperature sensor, humidity sensor, and a 3-axis accelerometer**: Capturing a wide range of environmental and motion data
+- **Onboard temperature sensor, humidity sensor, and a 3-axis accelerometer**: Capturing a wide range of environmental and motion data
 
-* **Fully Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open-source ecosystem for infinite application possibilities
-
+- **Fully Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open-source ecosystem for infinite application possibilities
 
 ## Description
 
@@ -57,13 +48,11 @@ Amazon Sidewalk is an encrypted free-to-connect long-range network that provides
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Sidewalk_Kit/sidewalk-kit.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Multiple positioning technologies
 
 The LPWAN Asset Tracker Dev kit – WM1110 integrates Multi-Purpose Radio Front-End Targeting Geolocation Purposes. It's equipped with GNSS dedicated to outdoor positioning, as well as Wi-Fi Sniffer and Bluetooth scanning for indoor positioning. It's able to automatically transition between outdoor and indoor activities, replacing the need to build different trackers for indoor or outdoor use, this provides all-around location coverage while reducing complexity and cost.
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_234601_twY1xjCUq9Z8yoYu_1701143222?w=2032&h=1070&type=image/png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Rich peripherals
 
@@ -79,22 +68,15 @@ This Demo application is created specifically for IOT202 Building compliant, sec
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_817803_KG4rJQIohMMzPyR4_1701150525?w=1370&h=798&type=image/png" alt="pir" width={800} height="auto" /></p>
 
-
 ## Hardware Overview
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_19830_N9NXJqFu1LJ_Rku__1700122819?w=1608&h=1060&type=image/png" alt="pir" width={800} height="auto" /></p>
 
-
 ## Application
-
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTEwNA_419290_B_TS3XqgFv7LnMbQ_1700474791?w=1752&h=858&type=image/png" alt="pir" width={800} height="auto" /></p>
 
-
-
-
 ## Specifications
-
 
 **LoRa® and Positioning (Semtech LR1110)**
 
@@ -104,8 +86,6 @@ This Demo application is created specifically for IOT202 Building compliant, sec
 |Output Power|20dBm max @LoRa®|
 |Positioning Technology|GNSS(GPS,BeiDou),WiFi|
 |Range|2~10km (Depends on antenna and environment)|
-
-
 
 **Bluetooth(Nordic nRF52840)**
 
@@ -125,10 +105,8 @@ This Demo application is created specifically for IOT202 Building compliant, sec
 |Temperature  | -40~125°C |0.2°C|
 | Humidity | 0~100%RH |1.8%RH|
 
-
-
 **3-axis Accelerometer(LIS3DHTR)**
 
 | Range | Bandwidth | Sensitivity(LSB/g) |
-| -------- | -------- | -------- | 
+| -------- | -------- | -------- |
 | ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz |1000 (±2g) ~ 83 (±16g)

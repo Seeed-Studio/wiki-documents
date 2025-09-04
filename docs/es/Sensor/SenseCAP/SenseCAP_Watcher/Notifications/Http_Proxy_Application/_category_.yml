@@ -1,0 +1,10 @@
+position: 2 # float position is supported
+label: 'Notificación de Proxy HTTP'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: http_proxy_notification
+link:
+  type: generated-index
+  slug: es/http_proxy_notification
+  title: Notificación de Proxy HTTP
+  description: Esta parte se enfoca en cómo usar Node-RED para enviar mensajes a diferentes plataformas.

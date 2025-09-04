@@ -7,8 +7,6 @@ slug: /License
 
 ## **IMPORTANT NOTICE AND DISCLAIMER**
 
-
-
 1. Descriptions of circuits, software and other related information in this document are provided only to illustrate the operation of semiconductor products and application examples. You are fully responsible for the incorporation of these circuits, software, and information in the design of your equipment. Seeed Studio assumes no responsibility for any losses incurred by you or third parties arising from the use of these circuits, software, or information.
 
 2. Seeed Studio has used reasonable care in preparing the information in this document, but Seeed Studio does not warrant that such information is error free. Seeed Studio assumes no liability whatsoever for any damages incurred by you resulting from errors in or omissions from the information included herein.
@@ -25,7 +23,7 @@ slug: /License
 
     - Seeed Studio products are neither intended nor authorized for use in products or systems that may pose a direct threat to human life or bodily injury (artificial life support devices or systems, surgical implantations etc.), or may cause serious property damages (nuclear reactor control systems, military equipment etc.). You must check the quality grade of each Seeed Studio product before using it in a particular application. You may not use any Seeed Studio product for any application for which it is not intended. Seeed Studio shall not be in any way liable for any damages or losses incurred by you or third parties arising from the use of any Seeed Studio product for which the product is not intended by Seeed Studio.
 
-7.  You should use the Seeed Studio products described herein within the range specified by Seeed Studio, especially with respect to the maximum rating, operating supply voltage range, movement power voltage range, heat radiation characteristics, installation and other product characteristics. Seeed Studio shall have no liability for malfunctions or damages arising out of the use of Seeed Studio products beyond such specified ranges.
+7. You should use the Seeed Studio products described herein within the range specified by Seeed Studio, especially with respect to the maximum rating, operating supply voltage range, movement power voltage range, heat radiation characteristics, installation and other product characteristics. Seeed Studio shall have no liability for malfunctions or damages arising out of the use of Seeed Studio products beyond such specified ranges.
 
 8. Although Seeed Studio endeavors to improve the quality and reliability of its products, semiconductor products have specific characteristics such as the occurrence of failure at a certain rate and malfunctions under certain use conditions. Further, Seeed Studio products are not subject to radiation resistance design. Please be sure to implement safety measures to guard them against the possibility of physical injury, and injury or damage caused by fire in the event of the failure of a Seeed Studio product, such as safety design for hardware and software including but not limited to redundancy, fire control and malfunction prevention, appropriate treatment for aging degradation or any other appropriate measures. Because the evaluation of microcomputer software alone is very difficult, please evaluate the safety of the final products or systems manufactured by you.
 
@@ -43,24 +41,22 @@ This work (product documents, tutorials and associated images) are licensed unde
 
 ## Software Library
 
-
 All demo software, code examples embedded in the document and any software libraray provided with the product document are licensed under [MIT License](https://files.seeedstudio.com/wiki/common/MIT_LICENSE "MIT LICENSE") unless otherwise specified.
 
 ## Thirdparty content
 
-The resources provided with the product documents also contains datasheets, software examples, images and other content copyrighted by 3rd party authors and companies. All such items are copyright of respective owners. The use of such items are governed by their respective licenses. 
-
+The resources provided with the product documents also contains datasheets, software examples, images and other content copyrighted by 3rd party authors and companies. All such items are copyright of respective owners. The use of such items are governed by their respective licenses.
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

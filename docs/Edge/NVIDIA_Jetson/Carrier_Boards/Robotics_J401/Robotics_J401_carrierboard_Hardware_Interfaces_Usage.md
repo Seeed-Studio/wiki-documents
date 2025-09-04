@@ -17,11 +17,9 @@ last_update:
 
 # Robotics J401 carrier board Hardware and Getting Started
 
-
 The reComputer Robotics J401 is a compact, high-performance edge AI carrier board designed for advanced robotics. Compatible with NVIDIA Jetson Orin Nano/Orin NX modules in Super/MAXN mode, it delivers up to 157 TOPS of AI performance. Equipped with extensive connectivity options—including dual Gigabit Ethernet ports, M.2 slots for 5G and Wi-Fi/BT modules, 6 USB 3.2 ports, CAN, GMSL2 (via optional expansion), I2C, and UART—it serves as a powerful robotic brain capable of processing complex data from various sensors. Pre-installed with JetPack 6 and Linux BSP, it ensures seamless deployment.​
 
 Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1, the reComputer Robotics J401 bridges large language model-driven decision-making with physical robotics control, such as motion planning and sensor fusion. Ideal for the rapid development of autonomous robots, it accelerates time-to-market with ready-to-use interfaces and optimized AI frameworks.
-
 
 <div align="center">
   <img width="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/recomputer-robotics-carrier-board.png"/>
@@ -43,10 +41,8 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 | **Top View** |
 | ![fig3](https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/carrier_board/bottom.png) |
 
-
-
-
 ## Part List
+
 - reComputer Robotics J401 Carrier Board x 1
 - Power Supply and JST expansion board x 1
 - XT30 to DC cable x 1
@@ -65,18 +61,15 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 2.Please attach heat sink for module for better performance.
 3.During the operation with high voltage input and high load, please do not touch the heat sink to prevent scalding.
 4.Power Adapter Recommendation for Validation, please use the power adapter recommended on the Seeed official website.
-  - 19V/4.74A 5525 Barrel Jack Power Adapter
-  - Ensure maximum power consumption requirements are met.
+
+- 19V/4.74A 5525 Barrel Jack Power Adapter
+- Ensure maximum power consumption requirements are met.
 2.AC Power Cord Compatibility
-  - Purchase region-specific AC cloverleaf power cords according to your location.
+- Purchase region-specific AC cloverleaf power cords according to your location.
 3.Accessory Compatibility
-  - Use only officially recommended accessories (e.g., wireless modules, cameras, peripherals) for optimal performance and compatibility.
+- Use only officially recommended accessories (e.g., wireless modules, cameras, peripherals) for optimal performance and compatibility.
+
 :::
-
-
-
-
-
 
 ## Specification
 
@@ -198,16 +191,14 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
   </tbody>
 </table>
 
-
-
 ## Flash JetPack OS
 
 ### Supported Module
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
 
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerequisites
 
@@ -222,7 +213,7 @@ Supporting frameworks like NVIDIA Isaac ROS, Hugging Face, PyTorch, and ROS 2/1,
 
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -295,7 +286,7 @@ The Jetpack6 image file is approximately **14.2GB** in size and should take arou
 :::
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -345,7 +336,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-6.2-36.4.3-2025-05-23.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -371,7 +362,6 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
-
 ## Interfaces Usage
 
 The following will introduce the various interfaces of the Robotics J401 board and how to use them.
@@ -380,14 +370,13 @@ The following will introduce the various interfaces of the Robotics J401 board a
 
 M.2 Key M is designed for high-speed NVMe SSDs, providing ultra-fast data transfer for robotics applications.
 
-### Supported SSD are as follows:
+### Supported SSD are as follows
+
 - [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
 - [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
 - [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
 - [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
 - [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-
-
 
 ### Hardware Connection
 
@@ -426,9 +415,11 @@ M.2 Key B slot for 5G Module expansion, enabling high-speed cellular connectivit
 ### Usage Instruction
 
 **Step 1.** Check Hardware Recognition
+
 ```bash
 lsusb 
 ```
+
 This command displays a list of all USB devices connected to the system, along with their manufacturer (ID), type, and other information. For example, the output might show a device from Quectel Wireless Solutions Co., Ltd. EM12-G, indicating that the 5G module is present.
 
 <div align="center">
@@ -437,9 +428,11 @@ This command displays a list of all USB devices connected to the system, along w
 
 **Step 2.** Confirm Driver Loading
 It's essential to ensure that the option driver, which is required for the 5G module, is loaded. We can use the lsmod command to check.
+
 ```bash
 lsmod | grep option 
 ```
+
 If the option driver is loaded successfully, relevant information about the driver will be displayed in the output.
 
 <div align="center">
@@ -448,17 +441,21 @@ If the option driver is loaded successfully, relevant information about the driv
 
 **Step 3.** Configure ModemManager
 ModemManager is a tool for managing modem devices, and it needs to be installed and restarted.
+
 ```bash
 sudo apt install modemmanager 
 sudo systemctl restart ModemManager 
 ```
+
 The apt install command is used to install the ModemManager package, while systemctl restart restarts the ModemManager service to ensure that the new settings take effect.
 
 **Step 4.** Verify Module Identification
 We can use the mmcli -L command to check if the ModemManager can correctly identify the 5G module.
+
 ```bash
 mmcli -L 
 ```
+
 If the 5G module is recognized, an output similar to /org/freedesktop/ModemManager1/Modem/0 will be displayed, indicating the path to the detected modem device.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_l.jpg"/>
@@ -466,9 +463,11 @@ If the 5G module is recognized, an output similar to /org/freedesktop/ModemManag
 
 **Step 5.** Set the APN
 APN (Access Point Name) is crucial for connecting a mobile device to the network.We'll use the nmcli command to create a bearer profile. Taking China Mobile as an example, we can create a configuration file with the following commands:
+
 ```bash
 sudo nmcli con add type gsm ifname "*" apn "CMNET" ipv4.method  auto 
 ```
+
 This command adds a new GSM (Global System for Mobile Communications) type connection, specifying the APN as "CMNET" and using automatic IPv4 configuration.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_con.jpg"/>
@@ -476,27 +475,31 @@ This command adds a new GSM (Global System for Mobile Communications) type conne
 
 **Step 6.** Activate the Connection
 After creating the bearer profile, we need to activate the connection.
+
 ```bash
 sudo nmcli con up "gsm" 
 ```
+
 This command activates the GSM connection, and if successful, a confirmation message will be displayed.
 
 **Step 7.** Re-verify Module Identification
 Run the mmcli -L command again to ensure that the module remains recognized after configuring the APN.
+
 ```bash
 mmcli -L 
-``` 
+```
+
 **Step 8.** Check Module Status
 Finally, we can use the mmcli -m 0 command to view detailed information about the module, such as IP allocation, carrier, and network connection status.
 
 ```bash
 mmcli -m 0 
 ```
+
 This command provides comprehensive details about the 5G module, including its manufacturer, model, supported and current network technologies, device status, and connected network operators.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/nmcli_m.jpg"/>
 </div>
-
 
 ## M.2 Key E
 
@@ -515,6 +518,7 @@ To test Wi-Fi performance, use the following command (replace the IP address wit
 ```bash
 iperf3 -c 192.168.6.191
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/wifi_speed.png"/>
 </div>
@@ -547,7 +551,6 @@ iperf3 -c <server_ip> -B <bind_ip>
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/ethnet_speed.png"/>
 </div>
-
 
 ## LED
 
@@ -598,14 +601,11 @@ Run the script to test the RGB LED.
   <img width="400" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/rgb_led.gif"/>
 </div>
 
-
-
-
 ## USB
 
 The Robotics j401 carrier board is equipped with a variety of USB ports, including 6 USB 3.2 Type-A ports (5Gbps), one USB 3.0 Type-C port with DP 1.4 (Host mode), and one USB 2.0 Type-C port for device mode/debugging, offering versatile connectivity options.
 
-### USB Speed Test 
+### USB Speed Test
 
 Create a script to test USB device speed:
 
@@ -632,8 +632,8 @@ sudo chmod +x test_usb
 
 Run the script with your USB device name as the argument.
 
-
 ### USB 2.0 Type-C port
+
 Using this serial port, via the USB C data cable, you can monitor the debugging information of input and output on the PC side.
 
 **Step1.** Switch the switch to the debug mode.
@@ -680,11 +680,9 @@ Using this serial port, via the USB C data cable, you can monitor the debugging 
 
 **Step8.** Login your reComputer Super with the username and password.
 
-
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/debug2.png"/>
 </div>
-
 
 ### USB Camera
 
@@ -694,11 +692,10 @@ Using USB camera through a USB 3.2 Type-A ports, install and run `guvcview`:
 sudo apt-get install guvcview
 guvcview -d /dev/video0
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/usb_camera.png"/>
 </div>
-
-
 
 ## Fan
 
@@ -707,7 +704,6 @@ The reComputer Jetson Robotics J401 is equipped with two types of fan connectors
 - 1x 4-Pin Fan Connector (5V PWM): Designed for low-voltage, low-power silent fans, this connector supports PWM speed control, allowing intelligent fan speed adjustment based on system temperature to improve energy efficiency and reduce noise.
 
 - 1x 4-Pin Fan Connector (12V PWM): Compatible with standard 12V PWM fans, it also supports precise speed control, making it ideal for high-performance cooling requirements.
-
 
 ### Hardware Connection
 
@@ -737,19 +733,15 @@ echo $1 > /sys/devices/platform/pwm-fan/hwmon/hwmon1/pwm1
 
 > Note: For Jetson Nano 4G, the fan path is `/sys/devices/platform/pwm-fan/hwmon/hwmon0/pwm1`.
 
-
 Additionally, we can manually set the fan speed using the jtop tool.
 
 ## Pinhole Button
+
 The Robotics J401 carrier board features a Pinhole Button for user interaction, including a Power (PWR) button and a Reset (RESET) button. These buttons are essential for powering the device on/off and performing system reboots, respectively.
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pinhole_button.jpg"/>
 </div>
-
-
-
-
 
 ## CAN
 
@@ -788,6 +780,7 @@ sudo ip link set can1 type can bitrate 500000
 #Enable CAN1
 sudo ip link set can1 up
 ```
+
 **Step 2.** Configure the PC data receiving software.
 Please configure the communication settings as shown in the following picture.
 <div align="center">
@@ -795,18 +788,22 @@ Please configure the communication settings as shown in the following picture.
 </div>
 
 **Step 3.** Jetson sends data to the PC:
+
 ```bash
 cansend can1 123#abcdabcd
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/pc_rcan1.png"/>
 </div>
 
 **Step 3.** PC sends data to the Jetson:
+
 ```bash
 #CAN1 monitors PC data
 candump can1
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1.png"/>
 </div>
@@ -817,7 +814,7 @@ It can be seen that the Jetson terminal has received the data sent by the PC.
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can1_r.png"/>
 </div>
 
-### CAN FD Mode 
+### CAN FD Mode
 
 Here, I use CAN0 to connect to CAN1 to demonstrate how multiple Jetson devices can communicate via the CAN interface.
 
@@ -851,6 +848,7 @@ sudo ip link set can0 up
 sudo ip link set can1 up
 
 ```
+
 **Step 3.** Open a new terminal to listen to CAN1 and via CAN0 send data to CAN1:
 
 ```bash
@@ -860,22 +858,25 @@ candump can1
 #another terminal sends data
 cansend can0 123##011112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEFF112233445566778899AABBCCDDEEFF
 ```
+
 :::info
+
 - `123` is ID
 - `##` Indicates CAN FD frame
 - The following is 64 bytes of data (a total of 128 hexadecimal characters)
+
 :::
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/can_fd.png"/>
 </div>
 
-
 ## UART
 
 The Robotics J401 provides a standard 4-pin JST header for UART serial communication.
 
 ### Hardware Connection
+
 For UART communication, please follow the following wiring. Here, we use the USB to TTL tool as an example.
 
 <div align="center">
@@ -883,11 +884,13 @@ For UART communication, please follow the following wiring. Here, we use the USB
 </div>
 
 ### Usage Instruction
+
 **Step 1.** Open the terminal on the Jetson device and run the following command to enable the UART interface:
 
 ```bash
 gpioset --mode=time --sec=100 2 5=0
 ```
+
 **Step 2.** Connect the USB to TTL tool to the Robotics J401 UART port and the PC.
 
 **Step 3.** Open the serial port tool on the PC side (Here,we use the xcom tool as an example.) and set the baud rate to 115200.
@@ -910,6 +913,7 @@ while True:
 
 ser.close()
 ```
+
 **Step 5.** Run the Python script on the Jetson device:
 
 ```bash
@@ -926,25 +930,23 @@ python3 uart_test.py
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/uart_r.png"/>
 </div>
 
-
-
 ## I2C
 
 Robotics J401 provides two I2C interfaces (IIC0 and IIC1) through standard JST 4-pin headers.
 Enables easy connection of sensors and peripherals for system expansion.
 
 ### Hardware Connection
+
 The Robotics J401 features two 4-pin GH-1.25 IIC interfaces, IIC0 and IIC1.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic.jpg"/>
-</div> 
+</div>
 
 In the [datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf), you can find the wiring diagram for the IIC0/IIC1 4-pin GH-1.25 interface as shown below:
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/12c.png"/>
-</div> 
+</div>
 Select an IIC interface device for testing; the choice is up to you. Here, we use a [Arduino-Uno-Rev4-Minima](https://www.seeedstudio.com/Arduino-Uno-Rev4-Minima-p-5716.html)  to test I2C0/I2C1.
-
 
 The testing process here involves scanning for the addresses of externally connected devices on IIC0/IIC1.
 :::info
@@ -957,11 +959,12 @@ Please connect the devices(IIC0/IIC1 ↔ Device) according to the following conn
 - SCL → SCL
 
 - Ground → Ground
+
 :::
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_connect.jpg"/>
-</div> 
+</div>
 
 ### Usage Instruction
 
@@ -971,7 +974,7 @@ Please connect the devices(IIC0/IIC1 ↔ Device) according to the following conn
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/slect_board.png"/>
-</div> 
+</div>
 
 **Step 3.** Restart the IDE and upload you code.
 
@@ -1002,29 +1005,33 @@ void requestEvent() {
   Wire.write("A"); // Return a byte of data
 }
 ```
+
 **Step 4.** Jetson install the tools for IIC testing.
 
 ```bash
 sudo apt update
 sudo apt-get install i2c-tools
 ```
+
 **Step 5.** Run the following command in the terminal to view the mapped names on the IIC bus:
 
 ```bash
 i2cdetect -l
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_l.png"/>
-</div> 
+</div>
 
 **Step 6.** Run the following commands to scan on IIC0:
 
 ```bash
 sudo i2cdetect -y -r 1
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/iic_detect.png"/>
-</div> 
+</div>
 
 We can see that the device connected to IIC0 is set to address 0x08.
 
@@ -1059,6 +1066,7 @@ Before enabling the GMSL functionality, please ensure that you have installed a 
 ```bash
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
+
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/io_p1.png"/>
 </div>
@@ -1072,10 +1080,12 @@ There are three overlay files in total, namely Seeed GMSL 1X4 3G, Seeed GMSL 1X4
 :::
 
 **step 2.** Install the video interface configuration tools.
+
 ```bash
 sudo apt update
 sudo apt install v4l-utils
 ```
+
 ### Use the camera of Gemini 335Lg
 
 ```bash
@@ -1086,6 +1096,7 @@ unzip OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64.zip
 cd OrbbecViewer_v2.4.8_202507031357_a1355db_linux_aarch64
 ./OrbbecViewer
 ```
+
 The first time you turn it on, you might need to update the firmware.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/update.png"/>
@@ -1094,16 +1105,15 @@ The first time you turn it on, you might need to update the firmware.
 Opening the data stream, you can view the video from the camera.
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/g_camera.png"/>
-</div> 
+</div>
 
 ### Use the cameras of SGxxx Series
 
 **step 1.** Set the channel format for the serializer and deserializer.The interface number in the figure corresponds to the serializer/deserializer number.
 
-
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/interface.jpg"/>
-</div> 
+</div>
 
 ```bash
 media-ctl -d /dev/media0 --set-v4l2 '"ser_0_ch_0":1[fmt:YUYV8_1X16/1920x1080]'
@@ -1113,8 +1123,9 @@ media-ctl -d /dev/media0 --set-v4l2 '"des_ch_1":0[fmt:YUYV8_1X16/1920x1080]'
 media-ctl -d /dev/media0 --set-v4l2 '"ser_2_ch_0":1[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"des_ch_2":0[fmt:YUYV8_1X16/1920x1536]'
 media-ctl -d /dev/media0 --set-v4l2 '"ser_3_ch_0":1[fmt:YUYV8_1X16/3840x2160]'
-media-ctl -d /dev/media0 --set-v4l2 '"des_ch_3":0[fmt:YUYV8_1X16/3840x2160]'	
+media-ctl -d /dev/media0 --set-v4l2 '"des_ch_3":0[fmt:YUYV8_1X16/3840x2160]' 
 ```
+
 :::note
 `ser_0_ch_0` is the first channel of the decoder, `des_ch_0` is the serializer on the first camera, and the same applies to the others.If the connected camera has a different resolution, then the configuration here will be based on the actual format of the camera.
 We need to set the channel format for the serializer and deserializer every time the device restarts.
@@ -1130,16 +1141,20 @@ Here we demonstrate how to configure cameras of different models and resolutions
 v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video0
 v4l2-ctl -V --set-fmt-video=width=1920,height=1080 -c sensor_mode=1  -d /dev/video1
 v4l2-ctl -V --set-fmt-video=width=1920,height=1536 -c sensor_mode=0  -d /dev/video2
-v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/video3	
+v4l2-ctl -V --set-fmt-video=width=3840,height=2160 -c sensor_mode=2  -d /dev/video3 
 ```
+
 :::note
-`--set-fmt-video` follows the resolution which is selected based on the camera being connected. The sensor_mode is also chosen accordingly. Currently, there are three sensor_mode options, each corresponding to a different resolution. 
+`--set-fmt-video` follows the resolution which is selected based on the camera being connected. The sensor_mode is also chosen accordingly. Currently, there are three sensor_mode options, each corresponding to a different resolution.
+
 - sensor_mode=0 -------> YUYV8_1X16/1920x1536
 - sensor_mode=1 -------> YUYV8_1X16/1920x1080
 - sensor_mode=2 -------> YUYV8_1X16/3840x2160
+
 :::
 
 **step 3.** Start the camera.
+
 ```bash
 gst-launch-1.0 v4l2src device=/dev/video0 ! \
 'video/x-raw,width=1920,height=1080,framerate=30/1,format=UYVY' ! \
@@ -1160,15 +1175,14 @@ videoconvert ! xvimagesink -ev
 
 <div align="center">
   <img width="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/robotics_j401/camera1.png"/>
-</div> 
-
-
+</div>
 
 ## Display
 
 The reComputer Jetson Robotics J401  is equipped with an DP1.4 (included in Type-C Host) for high-resolution display output.
 
 ## Resources
+
 - [reComputer Robotics J401 Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [reComputer Robotics J401 Carrier Board Datasheet](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_datasheet.pdf)
 
@@ -1177,11 +1191,11 @@ The reComputer Jetson Robotics J401  is equipped with an DP1.4 (included in Type
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

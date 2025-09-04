@@ -17,36 +17,33 @@ last_update:
 
 **Modbus** is a widely used communication protocol in industrial environments, known for its simplicity and robustness. **Modbus RTU (Remote Terminal Unit)** is a serial communication protocol that operates over RS-232 or RS-485 physical layers. It uses a compact, binary representation of the data, making it efficient for transmission over long distances and in noisy environments. **Modbus TCP**, on the other hand, extends the protocol to Ethernet networks, encapsulating Modbus frames within TCP/IP packets. This allows for faster communication speeds and the integration of Modbus with modern IT infrastructure. Both versions are favored in industrial settings due to their reliability, ease of implementation, and ability to facilitate communication between a wide variety of devices and systems, such as PLCs, sensors, and SCADA systems.
 
-
-
 ## Getting Start
 
 Before you start this project, you may need to prepare your hardware and software in advance as described here.
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 #### Modbus Support Devices
 
 The reTerminal DM supports Modbus communication with various devices, including **PLCs, VFDs, HMIs, energy meters, and BMS** systems. For this case, the Siemens LOGO PLC will be utilized, which supports  **Modbus TCP/IP protocols**. Connect the reTerminal DM with an Ethernet port and a Modbus TCP-enabled device.
-
 
 ### Software Preparation
 
@@ -86,7 +83,7 @@ To install the Modbus node, follow these steps:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/nodered-edgebox1.gif" style={{width:800, height:'auto'}}/></div>
 
-##  Identifying Modbus Addresses
+## Identifying Modbus Addresses
 
 Identifying the correct Modbus addresses is a crucial step. It is recommended to **consult the PLC or device manufacturer's datasheet for detailed information on Modbus addresses, including input, output, and holding registers**.
 
@@ -97,14 +94,14 @@ Based on this information, you can adjust the Modbus address in the tag configur
 ## Configuring the Modbus-Write Node
 
 **Step 1**. **Drag and drop** the Modbus-Write node onto the workspace, then **double-click** on the node to open its settings.
-   
+
 **Step 2**. In the **Server** tab, edit it to add your device by entering the following details:
 
-   - **Name**: Server Name
-   - **Type**: TCP
-   - **Host**: IP Address of the Modbus server
-   - **Port**: Port address of the Modbus server (typically 502)
-   - **Unit-Id**: 255 (Unit-ID is used to identify individual devices within a Modbus network, especially when multiple devices share the same communication line)
+- **Name**: Server Name
+- **Type**: TCP
+- **Host**: IP Address of the Modbus server
+- **Port**: Port address of the Modbus server (typically 502)
+- **Unit-Id**: 255 (Unit-ID is used to identify individual devices within a Modbus network, especially when multiple devices share the same communication line)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/server.PNG" style={{width:600, height:'auto'}}/></div>
 
@@ -122,7 +119,6 @@ The overall steps can be demonstrated as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-write.gif" style={{width:800, height:'auto'}}/></div>
 
-
 ## Configuring the Modbus-Read Node
 
 **Step 1**. **Drag and drop** the Modbus-Read node onto the flow. You can find this node in the Modbus tab of your palette.
@@ -131,14 +127,14 @@ The overall steps can be demonstrated as follows
 
 **Step 3**. **Configure the following settings:**
 
-   - **Name**: Give it an appropriate name, such as "ReadOutputs".
-   - **FC value**: Change the FC value to FC 5: Read Coil Status.
-   - **Address**: Set the address to 8192 (according to the manufacturer's datasheet).
-   - **Quantity**: Set the quantity to 4, This case,there are 4 digital outputs.
-   - **Poll Rate**: Change the poll rate to something suitable for your application needs.
-   - **Server**: Set the server to "MyPLC" (configured in the previous example).
+- **Name**: Give it an appropriate name, such as "ReadOutputs".
+- **FC value**: Change the FC value to FC 5: Read Coil Status.
+- **Address**: Set the address to 8192 (according to the manufacturer's datasheet).
+- **Quantity**: Set the quantity to 4, This case,there are 4 digital outputs.
+- **Poll Rate**: Change the poll rate to something suitable for your application needs.
+- **Server**: Set the server to "MyPLC" (configured in the previous example).
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbusread.PNG" style={{width:600, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbusread.PNG" style={{width:600, height:'auto'}}/></div>
 
 ## Configuring the Modbus-Response Node
 
@@ -148,24 +144,24 @@ The **Modbus-Response node** is used to display the response of a Modbus Read/Wr
 
 **Step 2**. Connect with **Modbus Read** Node. The response will display an array of numbers under your Modbus-Response node. These numbers represent the count of each digital output.
 
-**Step 3**. **Drag and Drop Debug Node** for inspection purpose. Then connect with **Modbus Read Node**. 
+**Step 3**. **Drag and Drop Debug Node** for inspection purpose. Then connect with **Modbus Read Node**.
 
-By following these steps, you can read and display the values of registers/coils from your Modbus TCP device effectively 
+By following these steps, you can read and display the values of registers/coils from your Modbus TCP device effectively
 
 The overall steps can be demonstrated as follows.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-read.gif" style={{width:800, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/modbus-read.gif" style={{width:800, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -14,10 +14,11 @@ last_update:
 ---
 
 # MyActuator X Series Motors Getting Start
+
 This article will introduce how to get started with MyActuator series motors and how to use them with C++ and Python on the reComputer Mini Jetson Orin.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/all.png" />
 </div>
 
@@ -29,9 +30,7 @@ This article will introduce how to get started with MyActuator series motors and
 
 ## Specification
 
-
 Here's the completed table with all parameters filled in for all motor models:
-
 
 <table>
   <thead>
@@ -79,6 +78,7 @@ Here's the completed table with all parameters filled in for all motor models:
 </table>
 
 ## RMD-X V4 Series Naming Conventions
+
 - **RMD**: Brand Name R-Reducer M-Motor D-Drive
 - **X2**: X Stands For The Series Name: Integrated Planetary Actuator, 2 represent motor model number e.g:X2 X4 X6 X8 etc
 - **P28**: Planetary gear ratio e.g:P12 P28 P32 etc
@@ -86,7 +86,7 @@ Here's the completed table with all parameters filled in for all motor models:
 - **E**: Communication E: CAN BUS & EtherCAT
 
 ## Main Features
- 
+
 1. **CAN BUS & EtherCAT**
 2. **Crossed Roller Bearings**
 3. **Dual Encoder**
@@ -94,22 +94,25 @@ Here's the completed table with all parameters filled in for all motor models:
 5. **High Precision**
 6. **Hollow Design**
 
-
 ## Getting Start
+
 ### Environmental Preparation Before Use
+
 **Windows System in PC**
+
 - Download the [Download the corresponding product manual](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip).
 - Downlaod the [MYACTUATOR_Setup Software_V4.0.zip](https://www.myactuator.com/_files/archives/cab28a_b3f2a1c77d4645a08052a923690b40fc.zip?dn=MYACTUATOR_Setup%20Software_V4.0_20250206.zip)
 
 - Extract `MYACTUATOR_Setup Software_V4.0.zip` and install the following:
-    - `USBCAN_AllInOne_x86_x64_2.0.0.1.exe` located in the `Required Runtime Environment\ZLGUSBCAN_Driver` directory
-    - `MSVBCRT.AIO.2019.10.19.X86 X64.exe` located in the `Required Microsoft Runtime Libraries` directory
+  - `USBCAN_AllInOne_x86_x64_2.0.0.1.exe` located in the `Required Runtime Environment\ZLGUSBCAN_Driver` directory
+  - `MSVBCRT.AIO.2019.10.19.X86 X64.exe` located in the `Required Microsoft Runtime Libraries` directory
 
 ### Connect the Circuit
+
 Here we have selected the X4-36 motor, and its interface diagram is shown below.
 
 <div align="center">
-    <img width={500} 
+    <img width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/X4-36-circuit.png" />
 </div>
 
@@ -163,13 +166,13 @@ Here we have selected the X4-36 motor, and its interface diagram is shown below.
 Here, we use the CAN communication method, which requires an additional USB-CAN interface for debugging via an upper computer on Windows.
 
 <div align="center">
-    <img width={500} 
+    <img width={500}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/6.jpg" />
 </div>
 
 Here, you need to provide a separate 24V power supply for the motor and connect the USB to your computer.
 
-### Use the `MYACTUATOR Setup Software 250206.exe` to Test the Motor.
+### Use the `MYACTUATOR Setup Software 250206.exe` to Test the Motor
 
 | **Set ID and Connection** | **Read Motor Information** | **Calibrate the motor** | **Calibrate the motor** |**Run a motor rotation test.** |
 |:---------:|:---------:|:---------:|:---------:|:---------:|
@@ -192,8 +195,6 @@ Currently, the most common CAN communication interfaces for motors in the market
   <img width ="800" src="https://files.seeedstudio.com/wiki/robotics/Sensor/IMU/hexfellow/fig5.jpg"/>  
 </div>
 
-
-
 For more details on CAN usage, you can refer to this [wiki](https://wiki.seeedstudio.com/recomputer_jetson_mini_hardware_interfaces_usage/#can ).
 
 ### Enable CAN Interfaces
@@ -201,7 +202,7 @@ For more details on CAN usage, you can refer to this [wiki](https://wiki.seeedst
 **Step1:** Before using CAN0 and CAN1, please remove the bottom cover and set both 120Ω termination resistors to the ​ON position.
 
 <div align="center">
-    <img width={300} 
+    <img width={300}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/7.png" />
 </div>
 
@@ -213,9 +214,8 @@ This is CAN0 interfaces for reComputer Mini
   <img width ="800" src="https://files.seeedstudio.com/wiki/recomputer_mini/can0-datasheet.png"/>
 </div>
 
-
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/8.jpg" />
 </div>
 
@@ -223,28 +223,32 @@ This is CAN0 interfaces for reComputer Mini
 This power supply is only for single-motor learning and testing. For multiple motors, please design a separate power board and isolate the Jetson's power supply from the motor power supply to avoid high current passing directly through the Jetson.
 :::
 
-
 #### Enable Jetson CAN communication
+
 Open a terminal and enter the following command to pull the GPIO pin high and activate CAN0:
+
 ```bash
 gpioset --mode=wait 0 43=0
 ```
 
 If you are using the JST-interface CAN1, pull pin 106 high.
+
 ```bash
 gpioset --mode=wait 0 106=0
 ```
 
 Keep this terminal open, launch a new terminal, and configure CAN0.
+
 ```bash
 sudo modprobe mttcan
 sudo ip link set can0 type can bitrate 1000000
 sudo ip link set can0 up
 ```
 
-### Build Python and C++ Environment.
+### Build Python and C++ Environment
 
 **Step1:** Git clone the SDK.
+
 ```bash
 git clone https://github.com/ZhuYaoHui1998/myactuator_rmd.git
 ```
@@ -257,6 +261,7 @@ sudo apt install linux-modules-extra-5.15.0-1025-nvidia-tegra # For Jetson Jetpa
 ```
 
 In case you want to use the Python bindings you will have to additionally install Python 3, pip and pybind11:
+
 ```bash
 sudo apt-get install -y python3 python3-pip python3-pybind11 python3-setuptools
 ```
@@ -283,6 +288,7 @@ For uninstalling the package again you can use the following command  `xargs rm 
 #### Building the Python Library
 
 For building and installing the Python bindings for this SDK open a new terminal inside the main folder and execute the following command:
+
 ```bash
 cd ~/myactuator_rmd
 pip3 install .
@@ -291,8 +297,9 @@ pip3 install .
 This will use the setup.py to invoke CMake and install the bindings as a C++ library. If you want to remove them again simply invoke `pip3 uninstall myactuator-rmd-py`.
 
 ### Control Using C++
+
 1. Create project directory structure  
-Create your project directory under the code src directory, for example, name it `myactuator_example`, and create a src folder under the subdirectory. 
+Create your project directory under the code src directory, for example, name it `myactuator_example`, and create a src folder under the subdirectory.
 
 ```bash  
 cd ~/myactuator_rmd
@@ -302,6 +309,7 @@ cd ~/myactuator_rmd/src/myactuator_example
 
 2. Write CMakeLists.txt  
 In the `~/myactuator_rmd/src/myactuator_example/CMakeLists.txt` file, write the following content:
+
 ```bash
 touch CMakeLists.txt
 ```
@@ -353,6 +361,7 @@ return EXIT_SUCCESS;
 ```
 
 4. Build the project  
+
 ```bash
 cd ~/myactuator_rmd/src/myactuator_example
 mkdir build && cd build
@@ -360,18 +369,19 @@ cmake .. -DCMAKE_BUILD_TYPE=Release
 make
 ```
 
-
 5. Run the program  
+
 ```bash
 sudo ./myactuator_node
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/Cresult.png" />
 </div>
 
 **Prerequisites**  
+
 - CAN interface `can0` must be properly configured (ensure your motor and CAN bus are correctly connected).  
 - The `myactuator_rmd` library must be properly installed (if not, install it first).
 
@@ -380,6 +390,7 @@ For more C++ implementation details, please refer to all contents in `myactuator
 ### Control Using Python
 
 Create a folder named scripts under the directory `~/myactuator_rmd/src/myactuator_example` to store Python scripts.
+
 ```bash
 cd ~/myactuator_rmd/src/myactuator_example
 mkdir scripts
@@ -388,6 +399,7 @@ mkdir scripts
 #### **Get version number**
 
 Create a custom Python script named `test.py` under the scripts directory and fill it with the following code.
+
 ```python
 import myactuator_rmd_py as rmd
 import time
@@ -399,14 +411,16 @@ actuator = rmd.ActuatorInterface(driver, 1)  # CAN ID set to 1
 # Get version number
 print("Version number:", actuator.getVersionDate())
 ```
+
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/8.png" />
 </div>
 
 Load the library and continue to create a driver for a particular network interface (here can0) and drive (here 1 corresponding to the CAN-address 0x140 + 1 = 0x141).
 
 #### **Get Motor Status**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -474,12 +488,14 @@ except KeyboardInterrupt:
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/9.png" />
 </div>
 
 #### **Control Mode**
+
 - **Get Current Control Mode**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -489,12 +505,14 @@ actuator = rmd.ActuatorInterface(driver, 1)
 mode = actuator.getControlMode()
 print(f"Current Control Mode: {mode}")
 ```
+
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/10.png" />
 </div>
 
 - **Absolute Position Control**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -517,13 +535,14 @@ actuator.shutdownMotor()
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/11.png" />
 </div>
 
 You will see your motor rotate to the 180-degree position.
 
 - **Relative Position Control**
+
 ```python
 import myactuator_rmd_py as rmd
 import time
@@ -543,14 +562,14 @@ actuator.shutdownMotor()
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/12.png" />
 </div>
 
 You will observe the motor rotating 90 degrees counterclockwise.
 
-
 - **Velocity Control**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -574,12 +593,12 @@ print(f"Current control mode: {mode}")
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/13.png" />
 </div>
 
-
 - **Torque Control**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -603,12 +622,12 @@ print(f"Current control mode: {mode}")
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/14.png" />
 </div>
 
-
 - **Closed-loop Motion Control**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -639,11 +658,12 @@ actuator.stopMotor()
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/robotics/Actuator/myactuator/15.png" />
 </div>
 
 #### Motor Brake Control
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -661,6 +681,7 @@ print("Brake released")
 ```
 
 #### Motor Power Control
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -674,7 +695,9 @@ print("Motor powered off")
 ```
 
 #### Encoder Functions
+
 - **Get Multi-turn Encoder Position**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -686,6 +709,7 @@ print(f"Multi-turn encoder position: {encoder_pos}")
 ```
 
 - **Set Current Position as Zero Point (Requires Reboot)**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -697,6 +721,7 @@ print("Current position set as encoder zero point")
 ```
 
 - **Set Custom Zero Point (Requires Reboot)**
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -724,6 +749,7 @@ print(f"Post-reboot position (should be near 0): {new_pos}")
 ```
 
 #### Acceleration Settings
+
 ```python
 # -*- coding: gbk -*-
 import myactuator_rmd_py as rmd
@@ -749,20 +775,18 @@ actuator.setAcceleration(1200, AccelerationType.VELOCITY_PLANNING_ACCELERATION)
 actuator.setAcceleration(1000, AccelerationType.VELOCITY_PLANNING_DECELERATION)
 ```
 
-
 <iframe width="960" height="640" src="https://www.youtube.com/embed/0HLx3iQitXg?si=Z39mFeatUdp4j9dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

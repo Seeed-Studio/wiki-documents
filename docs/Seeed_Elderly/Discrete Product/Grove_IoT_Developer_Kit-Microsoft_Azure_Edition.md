@@ -13,49 +13,43 @@ last_update:
 
 Grove IoT Developer Kit – Microsoft Azure Edition contains an **Intel® Edison module**, an **Intel® Edison for Arduino board**, a **Grove Base Shield**, a set of **Grove sensors** and **actuators** with build-in Grove ports for rapid prototyping. Simply plug in the modules and you are ready to create.
 
-##  Intel® Edison For Arduino
+## Intel® Edison For Arduino
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino_Microsoft_Azure_Edition_1.jpg)
 
 The Intel® Edison compute module is designed for expert makers, entrepreneurs, and some industrial IoT applications, it provides ease-of-development for a range of prototyping projects or commercial ventures when performance matters. With an expansion board interfaces with a wide range of Arduino shields, Intel® Edison for Arduino allows quick and easy prototyping with open source hardware and a software development environment.
 
-##  Features
+## Features
 
-*   A combination of the power Intel® Edison and rich featured Grove System
+- A combination of the power Intel® Edison and rich featured Grove System
 
-*   Fast prototyping for IoT projects
+- Fast prototyping for IoT projects
 
-*   Support development with Arduino* and C/C++, followed by Node.JS, Python, RTOS, and Visual Programming support in the near future
+- Support development with Arduino* and C/C++, followed by Node.JS, Python, RTOS, and Visual Programming support in the near future
 
-*   It includes a device-to-device and device-to-cloud connectivity framework to enable cross-device communication and a cloud-based, multi-tenant, time-series analytics service.
+- It includes a device-to-device and device-to-cloud connectivity framework to enable cross-device communication and a cloud-based, multi-tenant, time-series analytics service.
 
-*   Has an SD card connector, micro USB or standard sized USB host Type-A connector(via mechanical switch), Micro USB device, 6 analog inputs, and 20 ditial input/output pins, 1x UART, 1x I2C, and 1x ICSP 6-pin header (SPI) Power jack with 7V-15V DC input.
+- Has an SD card connector, micro USB or standard sized USB host Type-A connector(via mechanical switch), Micro USB device, 6 analog inputs, and 20 ditial input/output pins, 1x UART, 1x I2C, and 1x ICSP 6-pin header (SPI) Power jack with 7V-15V DC input.
 
-##  What's included
+## What's included
 
-###   Inter Edison For Arduino
+### Inter Edison For Arduino
 
 [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_Compute_module.jpg)](https://www.seeedstudio.com/depot/Intel-Edison-p-2603.html)
 
 Intel Edison Compute module
 
-
 [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_Edison_for_Arduino.jpg)](https://www.seeedstudio.com/depot/Intel-Edison-for-Arduino-p-2149.html)
 
 Inter Edison For Arduino
 
-
-
-
-###   Base Shield V2
+### Base Shield V2
 
 [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Base_Shield_v2-1.png)](https://www.seeedstudio.com/depot/Base-Shield-V2-p-1378.html)
 
 <!-- Base Shield V2[(to Wiki)](/Base_Shield_V2) -->
 
-
-###   Sensors
-
+### Sensors
 
 <table class="tg">
   <tr>
@@ -96,57 +90,43 @@ Inter Edison For Arduino
   </tr>
 </table>
 
+### Actuators
 
-###   Actuators
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Serial_LEC_RGB_Backlight_Lcd.jpg)](https://www.seeedstudio.com/depot/Grove-LCD-RGB-Backlight-p-1643.html)
 
 <!-- Grove - LCD RGB Backlight[(to Wiki)](/Grove-LCD_RGB_Backlight) -->
 
-
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Buzzer1.jpg)](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Buzzer1.jpg)](https://www.seeedstudio.com/depot/Grove-Buzzer-p-768.html)
 
 <!-- Grove - Buzzer[(to Wiki)](/Grove-Buzzer) -->
 
-
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Red_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Red_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Red-LED-p-1142.html)
 
 <!-- Grove - Red LED[(to Wiki)](/Grove-Red_LED) -->
 
-
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Green_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Green_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Green LED
 
-
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Blue_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Blue_LED.jpg)](https://www.seeedstudio.com/depot/Grove-Green-LED-p-1144.html)
 
 Grove - Blue LED
 
-
-
-*   [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Stepper_Motor_with_Driver.jpg)](https://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
+- [![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Stepper_Motor_with_Driver.jpg)](https://www.seeedstudio.com/depot/Gear-Stepper-Motor-with-Driver-p-1685.html)
 
 Gear Stepper Motor with Driver [(to Arduino Tutorial)](https://arduino.cc/en/Tutorial/MotorKnob)
 
-
-
-
-##  Getting Started with the Intel® Edison Board
+## Getting Started with the Intel® Edison Board
 
 Before we work on any Grove modules, let's firstly get started with Intel® Edison Board, you can follow the detailed instructions on **[the official site of Intel® Edison](https://software.intel.com/en-us/iot/library/edison-getting-started)** to:
 
-###  Step 1: Assemble Your Board
+### Step 1: Assemble Your Board
 
 Install the compute module, attach the legs, and plug in your cables.
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Intel_edison_assemble.png)
 
-###  Step 2: Choose Your Operating System
+### Step 2: Choose Your Operating System
 
 <table>
 <tr>
@@ -182,21 +162,21 @@ If you are have a windows 32-bit system or having errors with the installer, Int
 <td>[Try Manual Process](https://software.intel.com/en-us/flashing-firmware-on-your-intel-edison-board-linux)</td>
 </tr></table>
 
-###  Step 3: Set Up a Serial Terminal
+### Step 3: Set Up a Serial Terminal
 
 You'll need a [**serial terminal connection**](https://software.intel.com/en-us/get-started-edison-windows-step3) to your board for flashing the firmware
 
-###   Step 4: Connect Your Board to the Internet
+### Step 4: Connect Your Board to the Internet
 
 How can you build an IoT device without the "I"? Let's [**connect your board to the WiFi network**](https://software.intel.com/en-us/get-started-edison-windows-step4).
 
-###   Step 5: Try It Out with Arduino IDE
+### Step 5: Try It Out with Arduino IDE
 
 As we've already installed the development environment including Arduino IDE in Step 2 (if not, you can download the latest Arduino IDE **[here](https://www.arduino.cc/en/Main/Software)**. ) now as your very first practice, let's try to [**blink an LED on Intel Edison Board with Ardunio IDE**](https://software.intel.com/en-us/get-started-arduino-blink).
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/BLINK.gif)
 
-##  Getting Started with the Grove System
+## Getting Started with the Grove System
 
 Connect the Grove - Base Shield to Intel Edison for Arduino via the pin connectors.
 
@@ -257,7 +237,7 @@ Using 26AWG Grove Cable making the following connections:
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Edison_Indoor_Wire_Figure.png)
 
-##   Running Example
+## Running Example
 
 1. Open the web site: [Grove_Indoor_Environment_Demo](https://github.com/Seeed-Studio/Grove_Indoor_Environment_Demo) to download the whole project.
 
@@ -324,9 +304,9 @@ Using 26AWG Grove Cable making the following connections:
 
 Note:
 
-*   The command should be ended with 'n', so **"NewLine"** (in the Serial Monitor) should be selected.
+- The command should be ended with 'n', so **"NewLine"** (in the Serial Monitor) should be selected.
 
-*   A actuator can only be controlled by a sensor. If A sensor wants to control a actuator(has be controlled by B sensor), B sensor should be set sleep.
+- A actuator can only be controlled by a sensor. If A sensor wants to control a actuator(has be controlled by B sensor), B sensor should be set sleep.
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_command.png)
 
@@ -340,22 +320,22 @@ _**Note: When visiting the web server, a port number(88)should be added,such as:
 
 ![](https://files.seeedstudio.com/wiki/Grove_IoT_Developer_Kit-Microsoft_Azure_Edition/img/Indoor_Kit_Web_Server.png)
 
-##   Resource
+## Resource
 
-*   [Edison Getting Started Guide](https://communities.intel.com/community/makers/edison/getting-started)
+- [Edison Getting Started Guide](https://communities.intel.com/community/makers/edison/getting-started)
 
-*   [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
+- [Intel Edison Software &amp; Documentation](https://communities.intel.com/community/makers/edison/documentation)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

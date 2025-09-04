@@ -19,7 +19,7 @@ Seeeduino Arch has standard Arduino appearance and Grove connectors. It’s conv
 
 ## Feature
 
-* mbed enabled
+- mbed enabled
 
        1.online development tools
 
@@ -27,15 +27,15 @@ Seeeduino Arch has standard Arduino appearance and Grove connectors. It’s conv
 
        3.lots of published libraries, projects
 
-* Standard Arduino Appearance, two Grove connectors
+- Standard Arduino Appearance, two Grove connectors
 
     1.available with 3.3V compatible shields
 
     2.a large number of grove modules
 
-* Drag-n-drop programming
+- Drag-n-drop programming
 
-* NXP LPC11U24 MCU
+- NXP LPC11U24 MCU
 
      1.Low power ARM Cortex-M0 Core
 
@@ -334,13 +334,13 @@ Here we show you an easy demo: **water lights** using Seeeduino Arch to get you 
 
 ### Demo: Water Lights
 
-* Click the "mbed Enabled" logo to register an account for Seeeduino Arch.
+- Click the "mbed Enabled" logo to register an account for Seeeduino Arch.
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Arch/img/Mbedenabled.jpg)](https://mbed.org/account/login/?next=/start?auth=104000000000000000000002F7F0F640e640d504b45e111da24094a9d300da46&amp;firmware=999999)
 
-* Open [https://mbed.org/compiler/](https://mbed.org/compiler/) and you will get mbed online IDE. Before programming, you'd better read mbed Complier Getting started.
+- Open [https://mbed.org/compiler/](https://mbed.org/compiler/) and you will get mbed online IDE. Before programming, you'd better read mbed Complier Getting started.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Arch/img/Open_Compiler.jpg)
 
-* Click "New" to create new program and select the device "mbed NXP LPC11U24". I believe that this picture explains better.
+- Click "New" to create new program and select the device "mbed NXP LPC11U24". I believe that this picture explains better.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Arch/img/Compiler.jpg)
 
 The below is my code to control the four leds of seeeduino arch.
@@ -367,16 +367,16 @@ wait(0.5);
 
 ```
 
-* Now you can compile the code. If the code has errors, it will prompt you and give you help. And you may find the helps are just what you need.
+- Now you can compile the code. If the code has errors, it will prompt you and give you help. And you may find the helps are just what you need.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Arch/img/Error_prompt.jpg)
 
-* After successfully compiling the code, save the bin file.
+- After successfully compiling the code, save the bin file.
 
-* Now you need long press the reset button, it will automatically appear as a USB driver named CRP DISABLD.
+- Now you need long press the reset button, it will automatically appear as a USB driver named CRP DISABLD.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Arch/img/A_usb_device.jpg)
 
-* Go to the CRP DISABLD. Now you need delete the firmware file and add the waterLights_LPC11U24 bin file to CRP DISABLD. Remember to reset the Microcontroller to start it running after you download a new program , now the seeeduino arch will run the waterLight program. You can have a try.
+- Go to the CRP DISABLD. Now you need delete the firmware file and add the waterLights_LPC11U24 bin file to CRP DISABLD. Remember to reset the Microcontroller to start it running after you download a new program , now the seeeduino arch will run the waterLight program. You can have a try.
 
 The mbed C/C++ SDK provides the software platform and [libraries](http://mbed.org/cookbook/Homepage) which also can apply to seeeduino Arch. So you can use this available resource to build your applications. And we are looking forward to sharing your more programs combining Seeeduino arch,Shiled and Grove modules.
 
@@ -390,19 +390,19 @@ Seeeduino Arch doesn't have an mbed interface. It uses USB In-System-Programming
 
 To enter the USB ISP mode, connect the Arch with your computer and long press its button, and then a disk named "CRP DISABLD" will appear.
 
-* on windows
+- on windows
 
 1. delete firmware.bin in the "CRP DISABLD" disk.
 
 2. copy a new firmware into the disk.
 
-* on linux
+- on linux
 
 1. if the disk is not mounted, mount the disk at **\{mnt_dir\}**
 
 2. **dd if=\{new_firmware.bin\} of=\{mnt_dir\}/firmware.bin conv=notrunc**
 
-* on mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
+- on mac you'll need to use Terminal to run the following script to copy you're .bin file to your Arch
 
 1. **dd if=\{new_firmare.bin\} of=/Volumes/CRP\ DISABLD/firmware.bin conv=notrunc**
 
@@ -436,13 +436,13 @@ For example, use [multifunction_for_reset_button](http://developer.mbed.org/user
 
 ## Applications
 
-* [Use Seeeduino Arch as a debug adapter to debug another Seeeduino Arch](https://mbed.org/users/yihui/notebook/debug-seeeduino-arch-using-cmsis-dap/)
+- [Use Seeeduino Arch as a debug adapter to debug another Seeeduino Arch](https://mbed.org/users/yihui/notebook/debug-seeeduino-arch-using-cmsis-dap/)
 
-* [Sense environment](https://mbed.org/users/yihui/notebook/sense-environment/)
+- [Sense environment](https://mbed.org/users/yihui/notebook/sense-environment/)
 
-* [Play with Grove RTC](https://mbed.org/cookbook/seeed-grove-RTC)
+- [Play with Grove RTC](https://mbed.org/cookbook/seeed-grove-RTC)
 
-* [Play with Grove - Ultrasonic ranger](https://mbed.org/cookbook/Seeed-grove-ultrasonic-ranger)
+- [Play with Grove - Ultrasonic ranger](https://mbed.org/cookbook/Seeed-grove-ultrasonic-ranger)
 
 ## Schematic Online Viewer
 
@@ -451,24 +451,24 @@ For example, use [multifunction_for_reset_button](http://developer.mbed.org/user
 
 ## Resource
 
-* **[Eagle]**   [Seeeduino Arch Eagle files](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/Seeeduino_Arch_Eagle_files.zip)
+- **[Eagle]**   [Seeeduino Arch Eagle files](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/Seeeduino_Arch_Eagle_files.zip)
 
-* **[PDF]**[Seeeduino_Arch_V1.0 pdf](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/Seeeduino_Arch_V1.0.pdf)
+- **[PDF]**[Seeeduino_Arch_V1.0 pdf](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/Seeeduino_Arch_V1.0.pdf)
 
-* **[Datasheet]**  [LPC11U2x datasheet](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/LPC11U2x_datasheet.pdf)
+- **[Datasheet]**  [LPC11U2x datasheet](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/LPC11U2x_datasheet.pdf)
 
-* **[PDF]**   [LPC11Uxx User Manaul](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/LPC11UxxUserManual.pdf)
+- **[PDF]**   [LPC11Uxx User Manaul](https://files.seeedstudio.com/wiki/Seeeduino_Arch/res/LPC11UxxUserManual.pdf)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

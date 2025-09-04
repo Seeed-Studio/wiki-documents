@@ -54,19 +54,19 @@ Moving all four wheels in the same direction causes forward or backward movement
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/4WD-Mecanum-Wheel-Robot-Kit-p-2276.html)
 
-##  Features
+## Features
 
-*   Mecanum Wheel Inside
+- Mecanum Wheel Inside
 
-*   Omni-directional Mobility
+- Omni-directional Mobility
 
-*   Hight Load Capacity
+- Hight Load Capacity
 
-*   Flexibility &amp; Extendibility
+- Flexibility &amp; Extendibility
 
-*   RF/BLE Control Choices
+- RF/BLE Control Choices
 
-##  Part List
+## Part List
 
 1. Left Mecanum Wheel Kit
 
@@ -789,11 +789,11 @@ Moving all four wheels in the same direction causes forward or backward movement
 </tr>
 </table>
 
-##  Assembly Instruction
+## Assembly Instruction
 
 ![](https://files.seeedstudio.com/wiki/4WD_Mecanum_Wheel_Robot_Kit_Series/img/Assembly_Instructions.PNG)
 
-##  Attachments
+## Attachments
 
 [Specs for Motor](https://files.seeedstudio.com/wiki/4WD_Mecanum_Wheel_Robot_Kit_Series/res/Motor_Specs_for_4WD_Mecanum_Wheel_Robot_Kit_Series_Products.pdf)
 
@@ -802,11 +802,11 @@ Moving all four wheels in the same direction causes forward or backward movement
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -19,7 +19,6 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image2.png" /></div>
 
-
 # Installation
 
 ### Device Interface Introduction
@@ -28,9 +27,9 @@ last_update:
 
 There are two connectors at the bottom of the device.
 
--   USB Type-C interface allows you to connect your computer with a normal USB Type-C cable to the device for configuration.
+- USB Type-C interface allows you to connect your computer with a normal USB Type-C cable to the device for configuration.
 
--   The main data interface can be connected to the M12 8-pin cable, supporting multiple bus protocols
+- The main data interface can be connected to the M12 8-pin cable, supporting multiple bus protocols
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
@@ -63,12 +62,11 @@ negative of the power supply, and pink wire 6 is connected to the positive pole 
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image10.png" /></div>
 
-### Install the device.
+### Install the device
 
 There are two major installation methods, either mounted on a pole with a sleeve or a platform with a flange plate.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
-
 
 The size of the sleeve is shown below.
 
@@ -100,17 +98,16 @@ is successfully installed, you can see a serial port in the device's manager.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png" /></div>
 
-If the driver is not installed automatically, click this link to [manually
-download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) and [install](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).（The
+If the driver is not installed automatically, click this link to [manually download](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) and [install](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers) the [driver](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers).（The
 version is CP210x Windows Drivers）
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image17.png" /></div>
 
 **There are two methods to configure the device:**
 
--   SenseCAP ONE Configuration Tool
+- SenseCAP ONE Configuration Tool
 
--   Serial debug tool
+- Serial debug tool
 
 ## SenseCAP ONE Configuration Tool
 
@@ -126,11 +123,11 @@ The next image shows the main interface of the SenseCAP ONE Configuration Tool.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image19.png" /></div>
 
-1.  Open the software, click on the pull-down box at the serial port, and select the corresponding serial port of the device.
+1. Open the software, click on the pull-down box at the serial port, and select the corresponding serial port of the device.
 
-2.  Set the Baud rate to 9600.
+2. Set the Baud rate to 9600.
 
-3.  Click connect, if the connection is successful, the sensor data area on the right will show the corresponding measurements.
+3. Click connect, if the connection is successful, the sensor data area on the right will show the corresponding measurements.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
@@ -138,12 +135,11 @@ Click Settings to enter the device settings, and click"Read From Device" to obta
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image21.png" /></div>
 
-1.  Select the communication protocol. In the example here we choose the RS-485 Modbus RTU.
+1. Select the communication protocol. In the example here we choose the RS-485 Modbus RTU.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
 
-
-2.  Modify the Modbus address: write the address in the Modbus address, and then click "Write to Device".
+2. Modify the Modbus address: write the address in the Modbus address, and then click "Write to Device".
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
@@ -169,15 +165,15 @@ The communication settings are as follows:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image28.png" /></div>
 
--   In the Serial Debug Assistant, select the corresponding COM port.
+- In the Serial Debug Assistant, select the corresponding COM port.
 
--   Check the "click Enter to start a new line" check box.
+- Check the "click Enter to start a new line" check box.
 
--   Set the baud rate to 9,600.
+- Set the baud rate to 9,600.
 
--   Send in the send area.
+- Send in the send area.
 
--   If you receive the corresponding 0XA message in the serial receive window, the configuration is successful. If not, please check the COM port and the baud rate.
+- If you receive the corresponding 0XA message in the serial receive window, the configuration is successful. If not, please check the COM port and the baud rate.
 
 Please check the detailed ASIIC command in the next chapter.
 
@@ -197,7 +193,6 @@ The device supports the following communication protocols:
 
 Sensor data is stored in the Input Register and is read-only.
 
-
 The device address and the communication baud rate of RS-485 are stored in the Holding Register and can be modified.
 
 Each register is 16 bits and takes up 2 bytes.
@@ -214,7 +209,7 @@ Each register is 16 bits and takes up 2 bytes.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image34.png" /></div>
 
-### Modbus-RTU Read 
+### Modbus-RTU Read
 
 Here is an example of the **Modbus Poll tool**
 
@@ -244,25 +239,25 @@ On the right, you can check the raw sent and received data packages.
 
 When the temperature is positive:
 
-1.  Host sends 01 04 00 00 00 02 71 CB
+1. Host sends 01 04 00 00 00 02 71 CB
 
-2.  Slave responses 01 04 04 00 00 6E 8C D6 41
+2. Slave responses 01 04 04 00 00 6E 8C D6 41
 
-3.  Return temperature data 0x00006E8C (Hex), converted to decimal = 28300, get the corresponding air temperature by dividing it through 1000, air temperature = 28300/1000 = 28.3 °C
+3. Return temperature data 0x00006E8C (Hex), converted to decimal = 28300, get the corresponding air temperature by dividing it through 1000, air temperature = 28300/1000 = 28.3 °C
 
 **When the temperature is negative:**
 
 The temperature needs to be obtained through a complement calculation.
 
-1.  Host sends 01 04 00 00 00 02 71 CB
+1. Host sends 01 04 00 00 00 02 71 CB
 
-2.  Slave responses 01 04 04 FF FF FC 18 D6 41
+2. Slave responses 01 04 04 FF FF FC 18 D6 41
 
-3.  Returned temperature data FFFFFC18H (Hex complement).
+3. Returned temperature data FFFFFC18H (Hex complement).
 
-4.  The original code is - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8(Hex) = -1000 (Decimal).
+4. The original code is - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8(Hex) = -1000 (Decimal).
 
-5.  Then the temperature measurement is -1000/1000 = -1°
+5. Then the temperature measurement is -1000/1000 = -1°
 
 **S500 decode:**
 
@@ -407,9 +402,7 @@ Please refer to:
 **Wiring the SDI-12**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image47.png" /></div>
 
-
 **Use USB to SDI-12 debugger to communicate with the device**
-
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image48.png" /></div>
 
@@ -424,16 +417,15 @@ And connect the red wire (Vin+ power positive) and brown wire (Vin-power ground)
 Download the serial port debugging assistant:
 &lt;https://github.com/Neutree/COMTool&gt;, and then open the serial port debugging tool.
 
--   Choose the correct port number
+- Choose the correct port number
 
--   Set the baud rate to the baud rate of the USB to SDI-12 debugger (note that it is not the baud rate of the SDI-12 protocol)
+- Set the baud rate to the baud rate of the USB to SDI-12 debugger (note that it is not the baud rate of the SDI-12 protocol)
 
--   Check the "CRLF"
+- Check the "CRLF"
 
--   Click to open the serial port.
+- Click to open the serial port.
 
--   Send the query device address command "?!", if you can see the response "0", it means the connection is OK.
-
+- Send the query device address command "?!", if you can see the response "0", it means the connection is OK.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png" /></div>
 
@@ -468,10 +460,10 @@ Then send "continuous measurement command 0R2! the device returns 4 measured val
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image56.png" /></div>
 
-## ASCII error code 
+## ASCII error code
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image57.png" /></div>
 
-## SDI-12 error code 
+## SDI-12 error code
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image58.png" /></div>
-

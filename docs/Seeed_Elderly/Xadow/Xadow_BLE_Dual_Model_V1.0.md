@@ -17,7 +17,9 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 <a href="https://www.seeedstudio.com/Xadow-BLE-(dual-model)-p-2405.html">![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)</a>
 
 ## Features
+
 ---
+
 - BT Version: Bluetooth Specification V4.0 & BLE
 - UART send and receive max bytes is 512
 - Other device to module in SPP mode: 90 Bytes per packet
@@ -36,9 +38,9 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 - Working temperature:–5 ~ +65 Centigrade
 
 ## Specification
+
 ---
 <img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/600px-Xadow_-_BLE_(dual_model)_v1.0.png" alt="some_text"/>
-
 
 - **K2**:During connected status,It would be disconnected by pressing K2 more than 100ms.During sleeping model,It could be restored through pressing K2 factory settings.
 - **D1**:The led display two work models: sleeping whit It slowly flashing;connected status whit It continuously lighting.
@@ -47,7 +49,9 @@ Xadow - BLE (dual model) v1.0 uses CSR dual mode Bluetooth chip,with the ARM arc
 :::caution
     The supply voltage of this module is 2.5V ~ 3.7V, higher than this may cause permanent damage to the device.BLE transmission speed is slower than SPP transmission, so we selected the lower one in the design, in accordance with the speed of a BLE dual-mode product planning.
 :::
+
 ## Hardware Installation
+
 ---
 **Connecting Bluetooth to PC through Uart Bee**
 
@@ -68,6 +72,7 @@ Note: when connect Xadow - BLE to Xadow Main Board, you should concern about the
 <img src="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/Xadow_-_BLE_(dual_model)_v1.0_ConnectToArduino.jpg" alt="some_text"/>
 
 ## Software Instruction
+
 ---
 **Conventions**
 
@@ -80,103 +85,100 @@ Note: when connect Xadow - BLE to Xadow Main Board, you should concern about the
   - Uppercase AT command format. string format, without any other symbol. (e.g. \r or \n).
   - Any incorrect command would be no response.
 
-
 **AT Commands**
 
 **1. Test Command**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT	|OK/ER/Disconnect link	|None|
+|AT |OK/ER/Disconnect link |None|
 
 - If module is not connected to remote device will receive: “OK”
 - If module has an error, will receive: “ER”
 - If Module has connected, module will disconnected from remote device, if “AT + NOTI” is setup to 1, will receive information string.
 
-
 **2. Query module EDR address**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+ADDE?	|OK+ Get: MAC|	None|
+|AT+ADDE? |OK+ Get: MAC| None|
 
 **3. Query module BLE address**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+ADDB?|	OK+ Get: MAC	|None|
+|AT+ADDB?| OK+ Get: MAC |None|
 
 **4. Query/Set Authentication mode**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|Q: AT+AUTH?	|OK+ Get:[P1]	|P1: 0, 1, (Default: 0) / 0 – Not authentication / 1 – Must authentication|
-|S: AT+AUTH[P1]	|OK+ Set:[P1]|P1: 0, 1, (Default: 0)/ 0 – Not authentication / 1 – Must authentication|
+|Q: AT+AUTH? |OK+ Get:[P1] |P1: 0, 1, (Default: 0) / 0 – Not authentication / 1 – Must authentication|
+|S: AT+AUTH[P1] |OK+ Set:[P1]|P1: 0, 1, (Default: 0)/ 0 – Not authentication / 1 – Must authentication|
 
 - AT+AUTH0: allow made an insecure connection.
 - AT+AUTH1: every connection must with authentication.
 
 **5. Query/Set A to B mode**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|Q: AT+ATOB?	|OK+ Get:[P1]	|P1: 0, 1, (Default: 0)/ 0 – Not Open ATOB/ 1 – Open ATOB mode|
-|S: AT+ATOB[P1]	|OK+ Set:[P1]|P1: 0, 1, (Default: 0)/ 0 – Not Open ATOB/ 1 – Open ATOB mode|
+|Q: AT+ATOB? |OK+ Get:[P1] |P1: 0, 1, (Default: 0)/ 0 – Not Open ATOB/ 1 – Open ATOB mode|
+|S: AT+ATOB[P1] |OK+ Set:[P1]|P1: 0, 1, (Default: 0)/ 0 – Not Open ATOB/ 1 – Open ATOB mode|
 
 This command must work with AT+MODE0 command. When A device (SPP mode) connect to the module and B device (BLE mode) is also connect to the module, The data string from A device send to the module will send to B device. The data string from B device send to the module is also send to the A device.
 
 **6. Query/Set baud rate**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|Q: AT+BAUD?|	OK+ Get:[P1]	|P1: 1~7, (Default: 6)./  1 - 4800  / 2 – 9600 / 3 – 19200 / 4 – 38400 / 5 – 57600 / 6 – 115200 / 7 - 230400 |
-|S: AT+BAUD[P1]|	OK+ Set:[P1]|P1: 1~7, (Default: 6). / 1 - 4800 / 2 – 9600 / 3 – 19200 / 4 – 38400 / 5 – 57600 / 6 – 115200 / 7 - 230400|
-
+|Q: AT+BAUD?| OK+ Get:[P1] |P1: 1~7, (Default: 6)./  1 - 4800  / 2 – 9600 / 3 – 19200 / 4 – 38400 / 5 – 57600 / 6 – 115200 / 7 - 230400 |
+|S: AT+BAUD[P1]| OK+ Set:[P1]|P1: 1~7, (Default: 6). / 1 - 4800 / 2 – 9600 / 3 – 19200 / 4 – 38400 / 5 – 57600 / 6 – 115200 / 7 - 230400|
 
 **7. Clear bond information**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+BONDE|	OK+BONDE	|Clear EDR bond info|
-|AT+BONDB|	OK+BONDB	|Clear BLE bond info|
+|AT+BONDE| OK+BONDE |Clear EDR bond info|
+|AT+BONDB| OK+BONDB |Clear BLE bond info|
 
 BLE mode not supports it yet.
 
 **8. Clear Last Connected EDR Device Address**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+CLEAE|	OK+CLEAE	|None|
+|AT+CLEAE| OK+CLEAE |None|
 
 **9. Clear Last Connected BLE Device Address**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+CLEAB|	OK+CLEAB|	None|
+|AT+CLEAB| OK+CLEAB| None|
 
 **10. Query/Set Module DUAL Work Mode**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|Q: AT+DUAL?	|OK+ Get:[P1]|	P1: 0, 1, (Default: 0) / 0 – Allow dual connect. / 1 – Allow one connect.|
-|S: AT+DUAL[P1]	|OK+ Set:[P1]|P1: 0, 1, (Default: 0) / 0 – Allow dual connect.  / 1 – Allow one connect.|
+|Q: AT+DUAL? |OK+ Get:[P1]| P1: 0, 1, (Default: 0) / 0 – Allow dual connect. / 1 – Allow one connect.|
+|S: AT+DUAL[P1] |OK+ Set:[P1]|P1: 0, 1, (Default: 0) / 0 – Allow dual connect.  / 1 – Allow one connect.|
 
 - AT+DUAL0: allow two connections at same time (SPP and BLE).
 - AT+DUAL1: Only allow one connection at same time (SPP or BLE)
 
 **11. Query/Set hardware flow control switch**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+FIOW?|	OK+ Get:[P1]	|P1: 0, 1,(Default: 0) / 0: Hardware flow control off / 1: Hardware flow control on|
-|AT+FIOW[P1]|	OK+ Set:[P1]|P1: 0, 1,(Default: 0) / 0: Hardware flow control off / 1: Hardware flow control on|
+|AT+FIOW?| OK+ Get:[P1] |P1: 0, 1,(Default: 0) / 0: Hardware flow control off / 1: Hardware flow control on|
+|AT+FIOW[P1]| OK+ Set:[P1]|P1: 0, 1,(Default: 0) / 0: Hardware flow control off / 1: Hardware flow control on|
 
 **12. Query/Set module data transmission speed mode**
 
-|Send|	Receive|	Parameter|
+|Send| Receive| Parameter|
 |---|---|---|
-|AT+HIGH?	|OK+ Get:[P1]|	P1: 0, 1,(Default: 0)/ 0: Balance mode / 1: High speed mode|
-|AT+HIGH[P1]|	OK+ Set:[P1]|P1: 0, 1,(Default: 0) / 0: Balance mode / 1: High speed mode|
+|AT+HIGH? |OK+ Get:[P1]| P1: 0, 1,(Default: 0)/ 0: Balance mode / 1: High speed mode|
+|AT+HIGH[P1]| OK+ Set:[P1]|P1: 0, 1,(Default: 0) / 0: Balance mode / 1: High speed mode|
 
 - In balance mode, we balanced SPP and BLE with a steady speed.
 - In high speed mode, we don’t control speed, so SPP mode will got high speed.
@@ -185,35 +187,35 @@ BLE mode not supports it yet.
 
 **13. System Help Information**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+HELP?	|Help Information|	None|
+|AT+HELP? |Help Information| None|
 
 **14. Query/Set module loaded notify**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+INIT?	|OK+ Get:[P1]	|P1: 0, 1,?, (Default: 0) / 0: Loaded notify 0ff / 1: Loaded notify on|
-|AT+INIT[P1]|	OK+ Set:[P1]|P1: 0, 1,?, (Default: 0) / 0: Loaded notify 0ff / 1: Loaded notify on|
+|AT+INIT? |OK+ Get:[P1] |P1: 0, 1,?, (Default: 0) / 0: Loaded notify 0ff / 1: Loaded notify on|
+|AT+INIT[P1]| OK+ Set:[P1]|P1: 0, 1,?, (Default: 0) / 0: Loaded notify 0ff / 1: Loaded notify on|
 
 When “AT+INIT1” is setup, after module loaded, module will output “OK+INIT” string through UART.
 
 **15. Query/Set Module Work Mode**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+MODE?	|OK+ Get:[P1]	|P1: 0, 1, (Default: 0) / 0 – Data transmission. / 1 – Remote control.|
-|S: AT+MODE[P1]|	OK+ Set:[ P1]|P1: 0, 1, (Default: 0) / 0 – Data transmission. / 1 – Remote control.|
+|Q: AT+MODE? |OK+ Get:[P1] |P1: 0, 1, (Default: 0) / 0 – Data transmission. / 1 – Remote control.|
+|S: AT+MODE[P1]| OK+ Set:[ P1]|P1: 0, 1, (Default: 0) / 0 – Data transmission. / 1 – Remote control.|
 
 - AT+MODE0: Only transfer data when connection establishment.
 - AT+MODE1: Transfer data and response AT commands.
 
 **16. Query/Set Notify information**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+NOTI?	|OK+ Get:[P1]|	P1: 0, 1, (Default: 0) / 0: Don’t Notify / 1: Notify|
-|S: AT+NOTI[P1]|	OK+ Set:[ P1]|P1: 0, 1, (Default: 0) / 0: Don’t Notify / 1: Notify|
+|Q: AT+NOTI? |OK+ Get:[P1]| P1: 0, 1, (Default: 0) / 0: Don’t Notify / 1: Notify|
+|S: AT+NOTI[P1]| OK+ Set:[ P1]|P1: 0, 1, (Default: 0) / 0: Don’t Notify / 1: Notify|
 
 - After AT+NOTI1, module will send connect or disconnect string through
 - UART when module state is change:
@@ -225,132 +227,132 @@ When “AT+INIT1” is setup, after module loaded, module will output “OK+INIT
 
 **17. Query/Set notify mode**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+NOTP?	|OK+ Get:[P1]	|P1: 0, 1; default: 0 / 0: without address / 1: with address|
-|Q: AT+NOTP[P1]	|OK+ Set:[ P1]|P1: 0, 1; default: 0 / 0: without address / 1: with address|
+|Q: AT+NOTP? |OK+ Get:[P1] |P1: 0, 1; default: 0 / 0: without address / 1: with address|
+|Q: AT+NOTP[P1] |OK+ Set:[ P1]|P1: 0, 1; default: 0 / 0: without address / 1: with address|
 
 This command must work with “AT+NOTI1”, if this switch is open, when the module connect to disconnect, the prompt string will include the remote address.
 
-
 **18. Query/Set Module EDR name**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+NAME?|	OK+ Get:[P1]	|P1: module EDR name, / Max length is 12. / Default: HMSoft|
-|Q: AT+NAME[P1]	|OK+ Set:[ P1]|P1: module EDR name, / Max length is 12. / Default: HMSoft|
+|Q: AT+NAME?| OK+ Get:[P1] |P1: module EDR name, / Max length is 12. / Default: HMSoft|
+|Q: AT+NAME[P1] |OK+ Set:[ P1]|P1: module EDR name, / Max length is 12. / Default: HMSoft|
 
 **19. Query/Set Module BLE name**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+NAMB?	|OK+ Get:[P1]|	P1: module BLE name,  / Max length is 12. / Default: HMSoft|
-|S: AT+NAMB[P1]	|OK+ Set:[ P1]|P1: module BLE name, / Max length is 12. / Default: HMSoft|
+|Q: AT+NAMB? |OK+ Get:[P1]| P1: module BLE name,  / Max length is 12. / Default: HMSoft|
+|S: AT+NAMB[P1] |OK+ Set:[ P1]|P1: module BLE name, / Max length is 12. / Default: HMSoft|
 
 **20. Query/Set PIO1 output status (System LED)e**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+PIO1?|	OK+ Get:[P1]|	P1: 0, 1 / 0: Unconnected Output 500ms High 500ms Low, Connected output High. / 1: Unconnected output Low, Connected output High. / Default: 0|
-|S: AT+ PIO1 [P1]|	OK+ Set:[ P1]|P1: 0, 1 / 0: Unconnected Output 500ms High 500ms Low, Connected output High. / 1: Unconnected output Low, Connected output High. / Default: 0|
+|Q: AT+PIO1?| OK+ Get:[P1]| P1: 0, 1 / 0: Unconnected Output 500ms High 500ms Low, Connected output High. / 1: Unconnected output Low, Connected output High. / Default: 0|
+|S: AT+ PIO1 [P1]| OK+ Set:[ P1]|P1: 0, 1 / 0: Unconnected Output 500ms High 500ms Low, Connected output High. / 1: Unconnected output Low, Connected output High. / Default: 0|
 
 **21. Query/Set PIO output status**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+PIO[P1]?	|OK+ Get:[P1][P2]|	P1: 2~B (HM-12) / P2: 2~3 (HM-13) / 0: Output Low / 1: Output High / ?: Query|
-|S: AT+ PIO[P1][P2]|	OK+ Set:[P1][P2]|P1: 2~B (HM-12) / P2: 2~3 (HM-13) / 0: Output Low / 1: Output High / ?: Query|
+|Q: AT+PIO[P1]? |OK+ Get:[P1][P2]| P1: 2~B (HM-12) / P2: 2~3 (HM-13) / 0: Output Low / 1: Output High / ?: Query|
+|S: AT+ PIO[P1][P2]| OK+ Set:[P1][P2]|P1: 2~B (HM-12) / P2: 2~3 (HM-13) / 0: Output Low / 1: Output High / ?: Query|
 
 **22. Query/Set EDR Pin Code**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+PINE?	|OK+ Get:[P1]|	P1: module EDR Code / Max length: 6 / Default: 1234|
-|S: AT+PINE[P1]	|OK+ Set:[P1]|P1: module EDR Code / Max length: 6 / Default: 1234|
+|Q: AT+PINE? |OK+ Get:[P1]| P1: module EDR Code / Max length: 6 / Default: 1234|
+|S: AT+PINE[P1] |OK+ Set:[P1]|P1: module EDR Code / Max length: 6 / Default: 1234|
 
 **23. Query/Set BLE Pin Code**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+PINB?	|OK+ Get:[P1]|	P1: module BLE Code / 000000~999999 / Default: 000000|
-|S: AT+PINB[P1]	|OK+ Set:[P1]|P1: module BLE Code / 000000~999999 / Default: 000000|
+|Q: AT+PINB? |OK+ Get:[P1]| P1: module BLE Code / 000000~999999 / Default: 000000|
+|S: AT+PINB[P1] |OK+ Set:[P1]|P1: module BLE Code / 000000~999999 / Default: 000000|
 
 **24. Query/Set UART parity bit**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+PARI?	|OK+ Get:[P1]|	P1: 0, 1, 2, (Default: 0) / 0: Parity None / 1: Parity even / 2: Parity odd|
-|S: AT+PARI[P1]	|OK+ Set:[P1]|P1: 0, 1, 2, (Default: 0) / 0: Parity None / 1: Parity even / 2: Parity odd|
+|Q: AT+PARI? |OK+ Get:[P1]| P1: 0, 1, 2, (Default: 0) / 0: Parity None / 1: Parity even / 2: Parity odd|
+|S: AT+PARI[P1] |OK+ Set:[P1]|P1: 0, 1, 2, (Default: 0) / 0: Parity None / 1: Parity even / 2: Parity odd|
 
 **25. Restore all setup value to factory setup**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RENEW	|OK+RENEW|	None|
+|AT+RENEW |OK+RENEW| None|
 
 **26. Restart module**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RESET|	OK+RESET|	None|
+|AT+RESET| OK+RESET| None|
 
 **27. Query BLE RSSI value**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RSSB?|	OK+RSSB: [P1]|	P1: RSSI value / 9999: No connection / 9998: Try later / 9997: Read error / Xxxx: RSSI value|
+|AT+RSSB?| OK+RSSB: [P1]| P1: RSSI value / 9999: No connection / 9998: Try later / 9997: Read error / Xxxx: RSSI value|
 
 This command must use after “AT+MODE1” is setup. This command is only used by remote Bluetooth device.
 
 **28. Query EDR RSSI value**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RSSE?	|OK+RSSE: |[P1]	P1: RSSI value / 9999: No connection / 9998: Try later / 9997: Read error / Xxxx: RSSI value|
+|AT+RSSE? |OK+RSSE: |[P1] P1: RSSI value / 9999: No connection / 9998: Try later / 9997: Read error / Xxxx: RSSI value|
 
 **29. Query Last Connected EDR Device Address**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RADE?	|OK+Get:MAC Address	|None|
+|AT+RADE? |OK+Get:MAC Address |None|
 
 **30. Query Last Connected BLE Device Address**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+RADB?	|OK+Get:MAC Address	|None|
+|AT+RADB? |OK+Get:MAC Address |None|
 
 **31. Query/Set Master and Slaver Role**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+ROLB?|	OK+ Get:[P1]	|P1: 0, 1 (default: 0) /0: Peripheral / 1: Central|
-|AT+ROLB[P1]	|OK+ Set:[P1]|P1: 0, 1 (default: 0) / 0: Peripheral /1: Central|
+|AT+ROLB?| OK+ Get:[P1] |P1: 0, 1 (default: 0) /0: Peripheral / 1: Central|
+|AT+ROLB[P1] |OK+ Set:[P1]|P1: 0, 1 (default: 0) / 0: Peripheral /1: Central|
 
 This command will take effect after module next power on or reset.
 
 **32. Query/Set EDR work mode**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+SCAN?	|OK+ Get:[P1]	|P1: 0, 1, (Default: 0) / 0: Discovery and connectable / 1: Only connectable|
-|S: AT+SCAN[P1]	|OK+ Set:[P1]|1: 0, 1, (Default: 0) / 0: Discovery and connectable / 1: Only connectable|
+|Q: AT+SCAN? |OK+ Get:[P1] |P1: 0, 1, (Default: 0) / 0: Discovery and connectable / 1: Only connectable|
+|S: AT+SCAN[P1] |OK+ Set:[P1]|1: 0, 1, (Default: 0) / 0: Discovery and connectable / 1: Only connectable|
 
 **33. Query/Set UART stop bit**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|Q: AT+STOP?	|OK+ Get:[P1]	|P1: 0, 1, (Default: 0) / 0: 1 stop bit / 1: 2 stop bits|
-|S: AT+STOP[P1]	|OK+ Set:[P1]|P1: 0, 1, (Default: 0) / 0: 1 stop bit / 1: 2 stop bits|
+|Q: AT+STOP? |OK+ Get:[P1] |P1: 0, 1, (Default: 0) / 0: 1 stop bit / 1: 2 stop bits|
+|S: AT+STOP[P1] |OK+ Set:[P1]|P1: 0, 1, (Default: 0) / 0: 1 stop bit / 1: 2 stop bits|
 
 **34. Query Software Version**
 
-|Send|	Receive	|Parameter|
+|Send| Receive |Parameter|
 |---|---|---|
-|AT+VERR? |Version Information	|None|
-|AT+VERS?|Version Information	|None|
+|AT+VERR? |Version Information |None|
+|AT+VERS?|Version Information |None|
 
 ## Programming
+
 ---
 Configure the Bluetooth module with Serial under Windows
 
@@ -362,23 +364,23 @@ Bluetooth only respond AT commands when no connection was set up, or all command
 
 Then some useful configurations could be sent. Here’s are some samples of commands and response.
 
-1.  Test serial connection, send “AT”, will return “OK”.
-2.  Restore factory settings, send “AT+RENEW”, return “OK+RENEW”.
-3.  Reset baud rate of serial port, send “AT+BAUD2”, return “OK+Set:2”.
-4.  Enable authentication, send “AT+AUTH1”, return “OK+Set:1”.
-5.  Reset the Bluetooth, send “AT+RESET”, return ”OK+RESET”.
-6.  Query firmware version, send “AT+VERS?”, return “OK+Get:HMSoftV217”.
-7.  Query MAC of EDR, send “AT+ADDE?”, return “OK+Get:000E0E002074”.
-8.  Query MAC of BLE, send “AT+ADDB?”, return “OK+Get:000E0B002074”.
-9.  Set the name of EDR, send “AT+NAMEHM-13-EDR”, return “OK+Set:HM-13-EDR”.
-10.  Set the name of BLE, send “AT+NAMEHM-13-BLE”, return “OK+Set:HM-13-BLE”.
-11.  Set the password of EDR, send “AT+PINE123451”, return “OK+Set:123451”.
-12.  Set the password of BLE, send “AT+PINB123451”, return “OK+Set:123451”.
-13.  Enable discovery and connectable, send “AT+SCAN0”, return “OK+Set:0”.
-14.  Enable notify information of connection, send “AT+NOTI1”, return “OK+Set:1”.
-15.  Notify information include address, send “AT+NOTP1”, return “OK+Set:1”.
-16.  Enable user key, send “AT+PIO01”, return “OK+Set:1”.
-17.  Set to Central mode, send “AT+ROLB1”, return “AT+ROLB1”.
+1. Test serial connection, send “AT”, will return “OK”.
+2. Restore factory settings, send “AT+RENEW”, return “OK+RENEW”.
+3. Reset baud rate of serial port, send “AT+BAUD2”, return “OK+Set:2”.
+4. Enable authentication, send “AT+AUTH1”, return “OK+Set:1”.
+5. Reset the Bluetooth, send “AT+RESET”, return ”OK+RESET”.
+6. Query firmware version, send “AT+VERS?”, return “OK+Get:HMSoftV217”.
+7. Query MAC of EDR, send “AT+ADDE?”, return “OK+Get:000E0E002074”.
+8. Query MAC of BLE, send “AT+ADDB?”, return “OK+Get:000E0B002074”.
+9. Set the name of EDR, send “AT+NAMEHM-13-EDR”, return “OK+Set:HM-13-EDR”.
+10. Set the name of BLE, send “AT+NAMEHM-13-BLE”, return “OK+Set:HM-13-BLE”.
+11. Set the password of EDR, send “AT+PINE123451”, return “OK+Set:123451”.
+12. Set the password of BLE, send “AT+PINB123451”, return “OK+Set:123451”.
+13. Enable discovery and connectable, send “AT+SCAN0”, return “OK+Set:0”.
+14. Enable notify information of connection, send “AT+NOTI1”, return “OK+Set:1”.
+15. Notify information include address, send “AT+NOTP1”, return “OK+Set:1”.
+16. Enable user key, send “AT+PIO01”, return “OK+Set:1”.
+17. Set to Central mode, send “AT+ROLB1”, return “AT+ROLB1”.
 Or Set to Peripheral mode, send “AT+ROLB0”, return “AT+ROLB0”.
 
 We use two Bluetooth connected with PC, one was set as Central while the other is Peripheral. Several seconds later they find each other and the LED stop flash, connected!
@@ -412,7 +414,9 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 ![](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/img/HM-13-Debug_Output_Slave.png)
 
 ## Resources
+
 ---
+
 - [HM-13 Bluetooth Datasheet](https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/res/Bluetooth_HM-13_en.pdf)
 - [Arduino code](https://github.com/Seeed-Studio/HM-13_SW)
 - <a href="https://files.seeedstudio.com/wiki/Xadow_BLE_Dual_Model_V1.0/res/Xadow-BLE_(dual_model)_v1.0_sch_pcb.zip">Eagle_Xadow-BLE_(dual_model)_v1.0_sch_pcb]</a>
@@ -423,11 +427,11 @@ After downloading program, open two serial terminal windows, the LEDs on Bluetoo
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

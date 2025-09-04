@@ -20,22 +20,22 @@ Deploying [InfluxDB](https://www.influxdata.com/) on an Edgebox RPi 200, a Raspb
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Edge Box RPi 200</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
@@ -58,7 +58,7 @@ sudo apt update
 Add the InfluxDB GPG key and repository to your system.
 
 Add the GPG key:
-   
+
 ```sh
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
  ```
@@ -112,7 +112,7 @@ sudo systemctl start influxdb
 Access the InfluxDB CLI tool to perform basic database operations.
 
 **Step 1**. Open terminal :
-   
+
 ```sh
 influx
 ```
@@ -150,7 +150,7 @@ influx
 ```
 
 **Step 2**. Create an admin user with all privileges (replace `<password>` with your secure password):
-   
+
 ```sh
 CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
  ```
@@ -203,6 +203,7 @@ Make sure to replace `<password>` with the password you set for the admin user.
 ```
 [Inject Node] -> [Function Node] -> [InfluxDB Out Node]
 ```
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/ifdb-flow.PNG" /></center>
 
 ### Function Node
@@ -224,17 +225,17 @@ msg.payload = [
 ];
 return msg;
 ```
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/js-influxdb.PNG" /></center>
 
 **Step 4**. Click "Done".
-
 
 ### InfluxDB Out Node
 
 This node sends the formatted data to InfluxDB.
 
 **Step 1**. Double-click the `influxdb out` node.
-   
+
 **Step 2**. Enter the following details:
 
 - **Name**: labdata
@@ -243,9 +244,8 @@ This node sends the formatted data to InfluxDB.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/influxin.PNG" /></center>
 
-  
 **Step 3**. Click the pencil icon to add a new InfluxDB server configuration.
-   
+
 **Step 4**. Enter the following details:
 
 - **Name**: InfluxDB
@@ -263,7 +263,7 @@ This node sends the formatted data to InfluxDB.
 ### Test the Flow
 
 1. Click the button on the `inject` node to trigger the flow manually.
-   
+
 2. Check your InfluxDB database to see if the data has been successfully written by running the following commands on terminal:
 
 ```sh
@@ -276,19 +276,16 @@ Make sure to replace `<password>` with the password you set for the admin user.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/Edge_Box/nodered/result-lab.PNG" /></center>
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

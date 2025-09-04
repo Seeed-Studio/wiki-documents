@@ -55,7 +55,6 @@ Select the XIAO ESP32S3 Sense board from the available devices.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/43.png" style={{width:1000, height:'auto'}}/></div>
 
-
 Using the USB-C cable, connect your XIAO ESP32S3 Sense board to your computer. Once connected, click the **Connect** button located in the top-left corner of the SenseCraft AI Vision Workspace page.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/44.png" style={{width:800, height:'auto'}}/></div>
@@ -81,19 +80,19 @@ In the left sidebar of the Vision Workspace page, click on the **Output** option
 
 Click on the **Configuration** button at the bottom of the MQTT output section. A configuration window will appear, prompting you to enter the following information:
 
-  - **SSID**: Enter the name of your Wi-Fi network.
-  - **Password**: Provide the password for your Wi-Fi network.
-  - **Encryption**: Choose the encryption type for your Wi-Fi network (e.g., AUTO).
-  - **MQTT**: Select "Yes" to enable MQTT communication.
+- **SSID**: Enter the name of your Wi-Fi network.
+- **Password**: Provide the password for your Wi-Fi network.
+- **Encryption**: Choose the encryption type for your Wi-Fi network (e.g., AUTO).
+- **MQTT**: Select "Yes" to enable MQTT communication.
 
 Fill in the MQTT configuration fields:
 
-  - **Host**: Enter the hostname or IP address of your MQTT broker (e.g., broker.emqx.io).
-  - **Port**: Specify the port number for MQTT communication (e.g., 1883).
-  - **Client ID**: Provide a unique client ID for your XIAO ESP32S3 Sense (e.g., xiao_esp32s3).
-  - **User Name**: Enter your MQTT username, if required by your MQTT broker.
-  - **Password**: Provide your MQTT password, if required by your MQTT broker.
-  - **SSL**: Choose whether to enable SSL encryption. If your MQTT broker supports SSL, you can select "Yes" to enhance communication security.
+- **Host**: Enter the hostname or IP address of your MQTT broker (e.g., broker.emqx.io).
+- **Port**: Specify the port number for MQTT communication (e.g., 1883).
+- **Client ID**: Provide a unique client ID for your XIAO ESP32S3 Sense (e.g., xiao_esp32s3).
+- **User Name**: Enter your MQTT username, if required by your MQTT broker.
+- **Password**: Provide your MQTT password, if required by your MQTT broker.
+- **SSL**: Choose whether to enable SSL encryption. If your MQTT broker supports SSL, you can select "Yes" to enhance communication security.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/57.png" style={{width:700, height:'auto'}}/></div>
 
@@ -113,9 +112,9 @@ Launch the [MQTTX application](https://mqttx.app/) on your computer.
 
 Create a new connection with the following settings:
 
-  - Host: Enter the same hostname or IP address used in the SenseCraft AI platform (e.g., broker.emqx.io).
-  - Port: Specify the port number for MQTT communication (e.g., 1883).
-  - Client ID: Provide a unique client ID for your MQTTX instance (e.g., seeed_computer).
+- Host: Enter the same hostname or IP address used in the SenseCraft AI platform (e.g., broker.emqx.io).
+- Port: Specify the port number for MQTT communication (e.g., 1883).
+- Client ID: Provide a unique client ID for your MQTTX instance (e.g., seeed_computer).
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/58.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -183,7 +182,6 @@ To decode the base64-encoded image:
 
 By following this step-by-step guide, you have learned how to configure model output using MQTT on the SenseCraft AI platform for the XIAO ESP32S3 Sense board. You can now retrieve model inference results via MQTT and integrate them into your applications or systems. Remember to ensure a stable Wi-Fi connection and correctly configure your MQTT broker and client settings for seamless communication.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -197,4 +195,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

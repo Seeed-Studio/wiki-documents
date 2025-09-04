@@ -18,29 +18,28 @@ no_comments: false # for Disqus
 
 ## Introduction
 
-[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html) is used to accelerate inference speed, featuring a 26 TOPS AI performance. 
+[YOLOv8](https://github.com/ultralytics/ultralytics) (You Only Look Once version 8) is the popular most YOLO series of real-time pose estimation and object detection models. It builds upon the strengths of its predecessors by introducing several advancements in speed, accuracy, and flexibility. The [Hailo8](https://www.seeedstudio.com/Raspberry-Pi-Al-HAT-26-TOPS-p-6243.html) is used to accelerate inference speed, featuring a 26 TOPS AI performance.
 
 This wiki showcases benchmarking of YOLOv8m for object detection on Raspberry Pi 5 with hailo8. All tests utilize the same model (YOLOv8m), quantized to int8, with an input size of 640x640 resolution, batch size set to 8.
-
 
 ## Prepare Hardware
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer AI R2130</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer AI R2130</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_24_1.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-AI-R2130-12-p-6368.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### Install AI kit on RPi5
@@ -49,19 +48,19 @@ Please refer to [this](https://www.raspberrypi.com/documentation/accessories/ai-
 
 ## Prepare software
 
-### update the system:
+### update the system
 
 ```
 sudo date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
 sudo apt update
 sudo apt full-upgrade
 ```
+
 ### Download hailo software on hailo office web
 
 > **Note:**
 you need an official Hailo account and ensure you are logged in.
 Click this [link](https://hailo.ai/developer-zone/software-downloads/) download the necessary libs as follows:
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/multistream_benchmark_hailo8/hailo_download.png" alt="pir" width={1000} height="auto"/></p>
 
@@ -80,8 +79,7 @@ sudo reboot
 sudo apt-get install dkms
 ```
 
-### Install hailort-pcie-driver_4.19.0_all.deb 
-
+### Install hailort-pcie-driver_4.19.0_all.deb
 
 ```
 sudo dpkg -i hailort-pcie-driver_4.19.0_all.deb 
@@ -96,17 +94,18 @@ python -m venv hailo_env
 source hailo_env/bin/activate
 ```
 
-### Install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
+### Install hailort-4.19.0-cp311-cp311-linux_aarch64.whl
 
 ```
 pip install hailort-4.19.0-cp311-cp311-linux_aarch64.whl 
 ```
 
-### Check if the software is installed.
+### Check if the software is installed
 
 ```
 hailortcli fw-control identify
 ```
+
 The result is show as bellow:
 
 ```
@@ -123,7 +122,7 @@ Part Number: HM218B1C2FAE
 Product Name: HAILO-8 AI ACC M.2 M KEY MODULE EXT TEMP
 ```
 
-### Set pcie to gen2/gen3(gen3 is faster than gen2):
+### Set pcie to gen2/gen3(gen3 is faster than gen2)
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -137,6 +136,7 @@ dtparam=pciex1
 dtparam=pciex1_gen=3
 
 ```
+
 :::note
 If you want to use gen2,please comment dtparam=pciex1_gen=3
 :::
@@ -154,11 +154,13 @@ sudo apt-get install -y libcairo2-dev libgirepository1.0-dev libgstreamer1.0-dev
 
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 ```
-#### Set hailo_pci force_desc_page_size 
+
+#### Set hailo_pci force_desc_page_size
 
 ```
 sudo nano /etc/modprobe.d/hailo_pci.conf
 ```
+
 And then input the following content.
 
 ```
@@ -168,11 +170,12 @@ options hailo_pci force_desc_page_size=4096
 Finally, press `Ctrl+X`, type `Y`, and press `Enter` to save the file
 
 And then reboot the raspberrypi5
+
 ```
 sudo reboot
 ```
 
-#### Download Tapps 
+#### Download Tapps
 
 ```
 git clone --depth 1 https://github.com/hailo-ai/tappas.git
@@ -191,6 +194,7 @@ git clone https://github.com/hailo-ai/hailort.git hailort/sources
 ```
 nano downloader/common.py
 ```
+
 And change the content like below, add `RaspberryPI5 = 'rpi5'`in common.py:
 
 ```
@@ -221,6 +225,7 @@ class Platform(Enum):
 cd ./apps/h8/gstreamer/general/multistream_detection/
 nano multi_stream_detection.sh
 ```
+
 Add `readonly DEFAULT_BATCH_SIZE=8` to the 14 line as follows:
 
 ```
@@ -228,6 +233,7 @@ readonly DEFAULT_NETWORK_NAME="yolov5"
 readonly DEFAULT_BATCH_SIZE=8
 readonly MAX_NUM_OF_DEVICES=4
 ```
+
 Add `batch_size=$DEFAULT_BATCH_SIZE` to the 19 line as follows:
 
 ```
@@ -252,6 +258,7 @@ Finally `Ctrl+X` and input `Y` to save the file.
 sudo chmod +x multi_stream_detection.sh
 ./multi_stream_detection.sh --network yolov8 --num-of-sources 8 --show-fps
 ```
+
 ## Result
 
 All the results are based on inference with a model input size of 640x640, batch size is 8, and a video resolution of 1280x760, which is 720p.
@@ -268,22 +275,20 @@ All the results are based on inference with a model input size of 640x640, batch
 
 </div>
 
-
 <div align="center">
 <iframe width="800" height="400" src="https://www.youtube.com/embed/CHxg7qWTMYw" title="Multistream Inference on Hailo8 with RPi5 AI Box" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

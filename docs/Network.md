@@ -15,13 +15,12 @@ Robust networking capabilities seamlessly integrate Seeed's diverse range of sen
 Seeed offers a large variety of networking products that integrates perfectly with our range of products, you can find them on Sensor as well:
 
 - ### Network Devices for industrial sensors
+
 - ### Network Modules for entry level sensors
 
 ## Network Devices for industrial sensors
 
-
-
-### Gateway for Multiple Platform 
+### Gateway for Multiple Platform
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -110,7 +109,6 @@ Seeed offers a large variety of networking products that integrates perfectly wi
     </div>
 </div>
 
-
 ## Network Modules for entry level sensors
 
 ### Grove Communication Modules
@@ -179,9 +177,7 @@ Seeed offers a large variety of networking products that integrates perfectly wi
     </div>
 </div>
 
-
 ## Seeed Studio legacy networking modules
-
 
 <div class="intro_container">
     <div class="intro_item" style={{textAlign: 'center'}}>

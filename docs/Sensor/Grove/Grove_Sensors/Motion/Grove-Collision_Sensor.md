@@ -22,14 +22,13 @@ Its working voltage is 5V which makes it compatible with standard Arduino/Seeedu
 
 ## Specifications
 
-
--   Voltage: 3.3/5V
+- Voltage: 3.3/5V
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::   
-## Platforms Supported
+:::
 
+## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -37,13 +36,14 @@ Its working voltage is 5V which makes it compatible with standard Arduino/Seeedu
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Getting Started
 
-###Play With Arduino
+### Play With Arduino
 
 Based on the output signal will change when a collision happens, we design this demo: each time the sensor detects collision, the LED will light up. Here the LED is as a managed device, and you can refer to the demo to control your device, such as bicycle light.
 
@@ -145,6 +145,7 @@ Upload the program to your Arduino/Seeeduino.
 :::success
     When the code finishes uploaded, the LED on the pin 13 of Arduino will goes on when Collision Sensor detects collision.
 :::
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -160,7 +161,6 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 3**. Connect the Grove - Collision Sensor to D5 port of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/img/with_hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/img/with_hat.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -171,7 +171,7 @@ Upload the program to your Arduino/Seeeduino.
 #### Software
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -276,6 +276,7 @@ if __name__ == '__main__':
 :::success
     If everything goes well, you will be able to see the following result
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python grove_collision_sensor.py 5
@@ -296,10 +297,7 @@ pi@raspberrypi:~/grove.py/grove $
 
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
-
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
@@ -309,17 +307,20 @@ You can quit this program by simply press ++ctrl+c++.
 
 3.Connection
 
--   Plug the sensor to grovepi socket D2 by using a grove cable.
+- Plug the sensor to grovepi socket D2 by using a grove cable.
 
 4.Navigate to the demos' directory:
+
 ```
 cd yourpath/GrovePi/Software/Python/
 ```
--   To see the code
+
+- To see the code
 
 ```
 nano grove_collision_sensor.py   # "Ctrl+x" to exit #
 ```
+
 ```
 import time
 import grovepi
@@ -345,21 +346,16 @@ while True:
 sudo python grove_collision_sensor.py
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove-Collision_Sensor_eagle_file.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-
 ## Resources
 
-
--  **[Zip]** [Grove - Collision Sensor Eagle File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove-Collision_Sensor_eagle_file.zip)
--  **[PDF]** [MVS0608.02 datasheet](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/DataSheet-MVS0608_02-v2_1.pdf)
--  **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove_Collision_Sensor_CDC_File.zip)
+- **[Zip]** [Grove - Collision Sensor Eagle File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove-Collision_Sensor_eagle_file.zip)
+- **[PDF]** [MVS0608.02 datasheet](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/DataSheet-MVS0608_02-v2_1.pdf)
+- **[Codecraft]** [CDC File](https://files.seeedstudio.com/wiki/Grove-Collision_Sensor/res/Grove_Collision_Sensor_CDC_File.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Collision_Sensor -->
 
@@ -368,11 +364,11 @@ sudo python grove_collision_sensor.py
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

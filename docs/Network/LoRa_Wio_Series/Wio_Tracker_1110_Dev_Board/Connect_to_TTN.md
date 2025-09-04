@@ -13,28 +13,17 @@ last_update:
 ---
 
 
-
 [The Things Stack(TTS)](https://www.thethingsnetwork.org/) is a LoRaWAN® Network Server stack which is the critical component for any LoRaWAN solution. In this chapter we will guide users to connect the Wio Tracker 1110 Dev Board to the Things Network.
-
 
 ## Configure the Dev Board
 
-
-
 Before connecting to the TTS, you need to configure the basic parameters of your board on SenseCAP Mate APP, check [Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway) for more details.
 
-* Set the platform to TTN, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
+- Set the platform to TTN, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
 
-
-
-
-
 ## Configure The Things Stack
-
-
-
 
 ### Step 1: Create an application
 
@@ -46,12 +35,9 @@ Enter an Application ID, click Create Application to save your changes.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application1.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Step 2: Register the Device
 
-
 Paste the `Device EUI`/`APP EUI`/`APP Key`, and select the `frequency plan` according to your device, and then click `Register end device`.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/register-wio.png" alt="pir" width={800} height="auto" /></p>
 
@@ -664,10 +650,10 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/c-decoder.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Step 4: Check the data
 
@@ -677,10 +663,6 @@ Then you can check the data on the TTS console.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_check.png" alt="pir" width={800} height="auto" /></p>
 
-
 ## Resource
 
 [TTN decoder for Wio Tracker 1110 Dev Board](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/WM1110/TTN/SenseCAP_WM1110_TTN_Decoder.js)
-
-
-

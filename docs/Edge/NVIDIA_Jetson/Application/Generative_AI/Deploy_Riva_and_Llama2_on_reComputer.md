@@ -20,7 +20,7 @@ last_update:
 As artificial intelligence technology rapidly evolves, voice interaction has become an increasingly important mode of human-computer interaction. Especially in fields like smart homes, personal assistants, and customer service support, the demand for voice chatbots is growing significantly. However, most existing voice chatbots rely on cloud computing services, which raises concerns about data privacy and network latency to some extent.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
 </div>
 
@@ -35,7 +35,7 @@ This project aims to address these issues by building a locally-operated voice c
 **Note:** I completed all experiments using [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products), but you can try loading smaller models with a device that has less memory.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/jetson_agx_orin.jpg" />
 </div>
 
@@ -48,17 +48,18 @@ This project aims to address these issues by building a locally-operated voice c
 ## Getting Started
 
 ### Hardware Connection
+
 - Connect the audio input/output device to the reComputer.
 - Power on the reComputer and ensure it has normal network access.
 
 ### Install Riva Server
-Please refer [here](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded) for more detailed information.
 
+Please refer [here](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded) for more detailed information.
 
 **Step1.**  Access and log into [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=).
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_1.png" />
 </div>
 
@@ -67,7 +68,7 @@ Please refer [here](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/qu
 `Account(top right corner)` --> `Setup` --> `Get API Key` --> `Generate API Key` --> `Confirm`
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_2.png" />
 </div>
 
@@ -90,7 +91,7 @@ ngc config set
 Enter the relevant information in the terminal interactive interface.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_3.png" />
 </div>
 
@@ -560,7 +561,7 @@ sudo bash riva_start.sh
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_4.png" />
 </div>
 
@@ -587,7 +588,7 @@ You can obtain the hugging face token [here](https://huggingface.co/docs/hub/sec
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/install_run_llm.png" />
 </div>
 
@@ -595,7 +596,7 @@ You can obtain the hugging face token [here](https://huggingface.co/docs/hub/sec
 Please note, you need to keep this terminal alive.
 :::
 
-### Clone local chatbot demo and try to run it.
+### Clone local chatbot demo and try to run it
 
 Now, you should have at least two terminals open, one running the Riva server and the other running the text generation inference server. Next, we need to open a new terminal to run our demo.
 
@@ -619,23 +620,23 @@ python3 local_chatbot.py --input-device <your device id> --output-device <your d
 </div>
 
 ## References
+
 - [build-an-ai-chatbot-using-riva-and-openai](https://www.hackster.io/wxxniubi8/build-an-ai-chatbot-using-riva-and-openai-13dc41)
 - [https://github.com/dusty-nv/jetson-containers](
 https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
 - https://github.com/huggingface/text-generation-inference
 - https://huggingface.co/meta-llama
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

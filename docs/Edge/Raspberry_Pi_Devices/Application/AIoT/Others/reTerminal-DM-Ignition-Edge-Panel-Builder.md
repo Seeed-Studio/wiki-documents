@@ -15,7 +15,7 @@ last_update:
 
 :::note
 This document assumes you have already have an Ignition Edge Gateway running and on your network. 
-Before attempting these instructions, follow [Getting Started with Ignition Edge](./reTerminal-DM-Getting-Started-with-Ignition-Edge.md) if you need assistance with this.
+Before attempting these instructions, follow [Getting Started with Ignition Edge](/reTerminal-DM-Getting-Started-with-Ignition-Edge) if you need assistance with this.
 :::
 
 ## Hardware Prerequisites

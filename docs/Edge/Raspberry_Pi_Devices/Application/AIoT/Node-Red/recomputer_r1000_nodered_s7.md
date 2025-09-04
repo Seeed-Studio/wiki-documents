@@ -17,7 +17,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 The **S7 Protocol** is a communication standard developed by Siemens for their family of programmable logic controllers (PLCs). It's crucial for enabling smooth and reliable data exchange between Siemens PLCs. This protocol operates over Ethernet using a method called ISO TCP, which is structured around blocks of data known as Protocol Data Units (PDUs). Each PDU is a segment of information whose size and structure are determined when the connection is first established.
 
@@ -41,10 +41,7 @@ After designing your Ladder or Function Block Diagram, the next step is to confi
 If you’re using a different Siemens PLC model, be sure to consult the relevant documentation for specific configuration steps.
 :::
 
-
-
 ## Configuring S7 Nodes in Node-RED
-
 
 To integrate Siemens PLCs with Node-RED, you'll need to use the `node-red-contrib-s7` node. Follow these steps to set it up:
 
@@ -88,8 +85,6 @@ To integrate Siemens PLCs with Node-RED, you'll need to use the `node-red-contri
 
 - Edit the inject node’s payload to set a boolean value. Use one inject node for `true` and another for `false`.
 
-
-
 <center><img width={500} height={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/true.PNG" /></center>
 <center><img width={500} height={300} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/false.PNG" /></center>
 
@@ -107,17 +102,16 @@ To integrate Siemens PLCs with Node-RED, you'll need to use the `node-red-contri
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/final.PNG" /></center>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

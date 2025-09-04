@@ -13,11 +13,7 @@ last_update:
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/01.png)
 
-
-
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
-
-
 
 How would you build a system that could calculate the distance towards an object or detect whether there is motion present? Normally you would use an Ultrasonic or LiDAR Sensor for distance measurement and PIR Motion Sensor for motion detection. What if we told you there is an all-in-one module that could do all these functions more precisely and also perform functions such as velocity detection of moving objects and angle detection of objects. Would you believe it? We were tired of using these traditional modules for motion-sensing applications and wanted to deliver you a better solution, integrating new technologies. Well…For the first time in the history of Grove, we are very excited to bring you a Grove Module based on Radar Technology!
 
@@ -38,22 +34,24 @@ The Grove – Doppler Radar is based on the BGT24LTR11 Silicon Germanium MMIC wh
 - Maintains operation through harsh weather conditions (temperature, light, dust, rain)
 
 ## Specification
+
 |Item|Value|
 |---|---|
-|MMIC	|BGT24LTR11|
-|MCU	|XMC1302 Arm® Cortex®-M0|
-|Transmission Frequency	|Min: 24GHz|
+|MMIC |BGT24LTR11|
+|MCU |XMC1302 Arm® Cortex®-M0|
+|Transmission Frequency |Min: 24GHz|
 |Typical|21.125GHz|
 |Max|24.25GHz|
-|Output Power (EIRP)	|7dBm @ 25°C|
-|Update Time|	300ms|
-|Communication Interface	|UART (115200)|
-|Detection Distance	|10m @ 0dBsm|
+|Output Power (EIRP) |7dBm @ 25°C|
+|Update Time| 300ms|
+|Communication Interface |UART (115200)|
+|Detection Distance |10m @ 0dBsm|
 |Standard Detection Field|65° / horizontal (-6dB); 22° / vertical (-6dB)|
-|Supply Voltage	|3.3-5V|
+|Supply Voltage |3.3-5V|
 |Weight|5g|
 
 ## Applications
+
 - Smart Home
 - Smart Building
 - Automatic Door
@@ -69,10 +67,10 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/DIAGRAM-1.png)
 
 ## Platform Supported
+
 | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/bbg_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/wio_logo_n.jpg) | ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/linkit_logo_n.jpg) |
-
 
 ## Getting Started
 
@@ -83,7 +81,6 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 |![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/seeeduino-XIAO-thumbnail.jpg)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/small.png)| ![enter image description here](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/06.png)
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Doppler-Radar-BGT24LTR11-p-4572.html)|[Coming SOON](https://www.seeedstudio.com/)|
 
-
 #### Hardware Overview
 
 ![](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/IMG/pin-1.png)
@@ -92,7 +89,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 
 |Pin number|Signal name|Pin description|
 |---|---|----|
-|1| DIV_OUT	|Frequency divider output from the BGT24LTR11 |
+|1| DIV_OUT |Frequency divider output from the BGT24LTR11 |
 |2|GND|Ground|
 |3|VCC_5V_EXT|External+5.0V input power supply pin(maximum=5.5V)|
 |4|VTUNE|VCO frequency tuning voltage|
@@ -116,6 +113,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 - **Step 3.** Download the code, please refer to the software part.
 
 - **Step 4.** Run the code and the outcome will display on the screen of **Serial Monitor** in your Arduino IDE .
+
 :::
 
 #### Software
@@ -123,9 +121,6 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 :::tip
         If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-
-
-
 
 - **Step 1.** Download the [Demo code](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Seeed_Arduino_DopplerRadar.zip).
 
@@ -136,6 +131,7 @@ Doppler radar works by sending a beam of electromagnetic radiation waves from th
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 #### Software Code
+
 ```cpp
 #include "GBT24LTR11.h"
 
@@ -197,10 +193,8 @@ void loop() {
 }
 ```
 
-
-
 :::success
-		If everything goes well, you can go to **Serial Monitor** to see an outcome as following:
+  If everything goes well, you can go to **Serial Monitor** to see an outcome as following:
 :::
 
 <div align="center">
@@ -211,7 +205,6 @@ void loop() {
 </div>
 
 And if there's an object approaching the radar or passing by, the outcome will alter as below:
-
 
 <div align="center">
 <figure>
@@ -230,17 +223,17 @@ And if there's an object approaching the radar or passing by, the outcome will a
 - **[PDF]** [Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf](https://files.seeedstudio.com/wiki/Grove-Doppler-Radar/Grove_DopplerRadar(BGT24LTR11)Radar_module_communication_protocol_v1.1.pdf)
 
 ## Tech Support & Product Discussion
- if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/). 
 
+ if you have any technical issue.  submit the issue into our [forum](http://forum.seeedstudio.com/).
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

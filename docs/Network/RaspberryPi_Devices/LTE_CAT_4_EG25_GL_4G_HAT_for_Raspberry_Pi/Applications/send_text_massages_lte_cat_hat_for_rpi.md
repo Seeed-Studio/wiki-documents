@@ -16,11 +16,12 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 In rural and remote areas, where 4G coverage is sparse or unavailable, SMS communication through 2G networks becomes a vital tool for ensuring uninterrupted connectivity in IoT systems. **For wildlife preservation, this technology enables automated alert systems to monitor environmental conditions, track animal movements, and report critical events in real-time**. By leveraging 4G modules with SMS capabilities, devices can send automated alerts and receive instructions, ensuring that even in isolated regions, conservation efforts are not hindered by lack of modern network infrastructure. This integration of automation and communication helps enhance the effectiveness of monitoring systems in remote wildlife areas, offering a reliable solution for protection and research.
 
 ## Hardware Preparation
+
 <div class="table-center">
   <table align="center">
     <tr>
@@ -28,7 +29,7 @@ In rural and remote areas, where 4G coverage is sparse or unavailable, SMS commu
          <th>Raspberry Pi 4G LTE CAT4 HAT</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_23_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -52,16 +53,14 @@ In rural and remote areas, where 4G coverage is sparse or unavailable, SMS commu
 
 ## Sending an SMS Using QCOM Tool on Windows
 
-
 ### Step 1: Setup the Module
 
 - **Plug in the Module**
-    - Connect the module to your Windows PC via USB. Make sure the DIP switches are positioned in the correct order. In this case, all switches are set to 0, which means they are disabled.
+  - Connect the module to your Windows PC via USB. Make sure the DIP switches are positioned in the correct order. In this case, all switches are set to 0, which means they are disabled.
 - **Turn on the Module**
-    - Press the power button on the module.
+  - Press the power button on the module.
 - **Verify Communication Ports**
-    - [Ensure that the drivers are installed correctly](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#for-windows). You should see the COM ports listed in the Windows Device Manager.
-
+  - [Ensure that the drivers are installed correctly](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#for-windows). You should see the COM ports listed in the Windows Device Manager.
 
 ### Step 2: Open the QCOM Interface
 
@@ -72,11 +71,10 @@ In rural and remote areas, where 4G coverage is sparse or unavailable, SMS commu
   - Select the COM port associated with the module (e.g., COM3) in the QCOM interface.
   - Set the baud rate to the recommended value (e.g., 9600).
 
-
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/USBcommunication-2.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/USBcommunication-2.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -84,74 +82,93 @@ In rural and remote areas, where 4G coverage is sparse or unavailable, SMS commu
 
 **Test the Module Communication**
 
-  - In the command input box, type the following command:
- 
+- In the command input box, type the following command:
+
 ```bash
 AT
 ```
-  - Click Send.
-  - The module should respond with:
+
+- Click Send.
+- The module should respond with:
 
 ```bash
 OK
 ```
-  - This confirms that the module is ready.
+
+- This confirms that the module is ready.
   
 **Set SMS Mode**
-  - Type the following command to set the SMS mode to text:
+
+- Type the following command to set the SMS mode to text:
+
 ```bash
 AT+CMGF=1
 ```
-  - Click Send.
-  - The module should respond with:
+
+- Click Send.
+- The module should respond with:
+
 ```bash
 OK
 ```
+
 **Check SMSC Number**
 
-  - Query the SMSC (Short Message Service Center) number from the SIM card by typing:
+- Query the SMSC (Short Message Service Center) number from the SIM card by typing:
+
 ```bash
 AT+CSCA?
 ```
-  - Click Send.The response should be something like:
+
+- Click Send.The response should be something like:
   
 ```bash
 +CSCA: "+1234567890",145
 OK
 ```
-  - If no SMSC is set, contact your service provider to obtain the correct number, and set it using:
+
+- If no SMSC is set, contact your service provider to obtain the correct number, and set it using:
+
 ```bash
 AT+CSCA="+1234567890"
 ```
+
 **Compose and Send SMS**
 
 - Type the command to initiate an SMS:
+
 ```bash
 AT+CMGS="+9876543210"
 ```
+
 - Replace +9876543210 with the recipient's phone number.
 
 - Click Send.
 
 - The QCOM interface will display:
+
 ```bash
 >
 ```
+
 - Now, type your message (e.g., Hello!) in the text box.
 
 **Submit the SMS**
+
 - Press Ctrl + Z or use the QCOM interface option to send the SMS.
 - The module will respond with:
+
 ```bash
 +CMGS: 25 
 OK
 ```
+
 - This indicates that the SMS was sent successfully.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/sms_send.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/sms_send.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -186,13 +203,13 @@ sudo minicom -D /dev/ttyUSB2
 | *(Press `Ctrl+Z`)*   | `+CMGS: 25` `OK`       | Sends the message. The module confirms with `+CMGS` and the message reference ID. |
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/rpi_send_msg_1.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/rpi_send_msg_1.PNG"
+    style={{ width: 600}}
   />
 </div>
 
-## Python Script for Send Massages 
+## Python Script for Send Massages
 
 ```bash
 
@@ -258,11 +275,12 @@ finally:
 
 ```
 
-## Receiving SMS Messages Using AT Commands on Windows Environment 
+## Receiving SMS Messages Using AT Commands on Windows Environment
 
 This explains how to receive and read SMS messages using AT commands step-by-step. Follow these commands in the order listed.
 
 Assuming you have installed the drivers and booted the module correctly. If not, [please follow this guide](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#for-windows).
+
 ### Step 1: Set SMS Mode to Text
 
 Use the AT+CMGF=1 command to set the GSM module to Text Mode for easier SMS handling.
@@ -276,9 +294,11 @@ OK
 ```
 
 ### Step 2: Check Current Message Storage
+
 Use the AT+CPMS? command to check the current message storage configuration.
 
 **Command:**
+
 ```bash
 AT+CPMS?
 ```
@@ -287,11 +307,13 @@ AT+CPMS?
 +CPMS: "SR",0,5,"MT",19,255,"MT",19,255 OK
 
 **Explanation:**
+
 - `SR`: Status Report storage (e.g., SMS delivery reports).
 - `MT`: Mobile Terminal memory (SIM and module storage).
 In this example,"MT" contains 19 stored messages out of a capacity of 255.
 
 ### Step 3: Switch Message Storage to "MT"
+
 To access the messages in the Mobile Terminal memory, switch the storage to "MT" using AT+CPMS="MT".
 
 **Command:**
@@ -299,16 +321,19 @@ To access the messages in the Mobile Terminal memory, switch the storage to "MT"
 ```bash
 AT+CPMS="MT"
 ```
+
 **Expected Response:**
 
 ```bash
 +CPMS: 19,255,19,255,19,255 OK
 ```
+
 **Explanation**
 
 - 19,255: 19 messages are currently stored, and the storage has a capacity for 255 messages.
 
 ### Step 4: List All Stored Messages
+
 Retrieve all messages stored in the selected memory using the AT+CMGL="ALL" command.
 
 **Command:**
@@ -316,11 +341,13 @@ Retrieve all messages stored in the selected memory using the AT+CMGL="ALL" comm
 ```bash
 AT+CMGL="ALL"
 ```
+
 **Expected Response:**
 
 ```bash
 +CMGL: 1,"REC UNREAD","+1234567890","","20/12/05,10:44:12+32" Hello, this is a test message! +CMGL: 2,"REC READ","+9876543210","","20/12/05,10:45:12+32" Another test message! OK
 ```
+
 **Explanation:**
 
 - +CMGL: 1: Index of the first message.
@@ -333,14 +360,17 @@ AT+CMGL="ALL"
 To read a specific message by its index (e.g., index 1), use the AT+CMGR=|index| command.
 
 **Command:**
+
 ```bash
 AT+CMGR=1
 ```
+
 **Expected Response:**
 
 ```bash
 +CMGR: "REC UNREAD","+1234567890","","20/12/05,10:44:12+32" Hello, this is a test message! OK
 ```
+
 **Explanation:**
 
 - `REC UNREAD`: The message is marked as unread.
@@ -348,9 +378,9 @@ AT+CMGR=1
 - Hello, this is a test message!: The message content.
 
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/rec_massages.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/rec_massages.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -375,7 +405,6 @@ sudo minicom -D /dev/ttyUSB2
 | **5**    | `AT+CMGL="ALL"`      | `+CMGL: 1,"REC UNREAD","+1234567890","","20/12/05,10:44:12+32" Hello, this is a test message! +CMGL: 2,"REC READ","+9876543210","","20/12/05,10:45:12+32" Another test message! OK` | Retrieves all messages stored in the selected memory. `"REC UNREAD"`: Unread message. `+1234567890`: Sender's phone number.                                       |
 | **6**    | `AT+CMGR=1`          | `+CMGR: "REC UNREAD","+1234567890","","20/12/05,10:44:12+32" Hello, this is a test message! OK`                                                                      | Reads a specific message by its index (e.g., `1`). `"REC UNREAD"`: Indicates the message is unread. `Hello, this is a test message!`: Message content.            |
 
-
 ## Resources
 
 - **[Web Page]** [LTE EG25-G](https://www.quectel.com/product/lte-eg25-g/)
@@ -387,11 +416,11 @@ sudo minicom -D /dev/ttyUSB2
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

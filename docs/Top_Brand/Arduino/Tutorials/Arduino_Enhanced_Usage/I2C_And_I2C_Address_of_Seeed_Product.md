@@ -9,9 +9,8 @@ last_update:
   date: 1/16/2023
   author: hushuxu
 ---
-##   What is I2C
+## What is I2C
 <!-- ![](https://files.seeedstudio.com/wiki/I2C_And_I2C_Address_of_Seeed_Product/img//I2c_time.jpg) -->
-
 
 **I²C** (Inter-Integrated Circuit, referred to as I-squared-C, I-two-C, or IIC) is a multimaster serial single-ended computer bus invented by Philips used for attaching low-speed peripherals to a motherboard, embedded system, cellphone, or other electronic device. Not to be confused with the term Two Wire Interface which only describes a compatible hardware interface.
 
@@ -19,7 +18,7 @@ Since the mid-1990s, several competitors (e.g., Siemens AG (later Infineon Techn
 
 SMBus, defined by Intel in 1995, is a subset of I²C that defines the protocols more strictly. One purpose of SMBus is to promote robustness and interoperability. Accordingly, modern I²C systems incorporate policies and rules from SMBus, sometimes supporting both I²C and SMBus with minimal reconfiguration required.
 
-##   I2C Address of Seeed Products
+## I2C Address of Seeed Products
 
 I2C is a very important bus, we have more than ten products using the I2C interface.
 
@@ -95,7 +94,7 @@ The following table will help you find I2C addresses of Seeed products.
 | 105020010 | Grove -I2C Mini Motor Driver                                      | Default: CH1 Write(0xC4), CH1 Read(0xC5);CH2 Write(0xC0), CH2 Read(0xC1); Optional:CH1 Write(0xD0), CH1 Read(0xD1);  CH2 Write(0xCC), CH2 Read(0xCD); | [Order](https://www.seeedstudio.com/Grove-I2C-Mini-Motor-Driver-p-2508.html)                                   |
 | 103020009 | Grove -Nunchuck                                                   | NA                                                                                                                                                    | [Order](https://www.seeedstudio.com/Grove-Nunchuck-p-1474.html)                                                |
 
-##   References
+## References
 
 [I2C Wikipedia](https://en.wikipedia.org/wiki/I%C2%B2C)
 
@@ -104,11 +103,11 @@ The following table will help you find I2C addresses of Seeed products.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

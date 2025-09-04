@@ -42,10 +42,10 @@ The power of Raspberry Pi 4 in a compact form factor for deeply embedded applica
 
 **Hardware Required:**
 
-* Linux Based Host Computer(could be one of following):
-  * Raspberry Pi 4B with Raspberry Pi OS installed
-  * PC with latest Ubuntu OS installed
-* USB Type-C cable
+- Linux Based Host Computer(could be one of following):
+  - Raspberry Pi 4B with Raspberry Pi OS installed
+  - PC with latest Ubuntu OS installed
+- USB Type-C cable
 
 **Applicable Seeed Studio Hardware:**
 
@@ -61,19 +61,19 @@ This process requires to put the CM4 eMMC stroage into 'USB mass storage' mode, 
 
 **For reTerminal**
 
-* **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/reTerminal) until you have flipped the boot mode switch.
+- **Step 1:** Open the case and remove the heatsink of reTerminal to get access the boot selection switch, Please follow the steps from the [reTerminal Getting Started Wiki Page](/reTerminal) until you have flipped the boot mode switch.
 
 **For reRouter**
 
-* **Step 1:** Open the case of reRouter by remove the bottom 4 screws and the bottom cover as shown below:
+- **Step 1:** Open the case of reRouter by remove the bottom 4 screws and the bottom cover as shown below:
   
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Mini_Router/bottom_screw.jpg" alt="pir" width={600} height="auto" /></p>
 
-* **Step 2:** Slide down the reRouter board from the case and take it out
+- **Step 2:** Slide down the reRouter board from the case and take it out
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Mini_Router/slide_pcb.jpg" alt="pir" width={600} height="auto" /></p>
 
-* **Step 3:** Locate the 3-pin interface and short the GND and BOOT pins.
+- **Step 3:** Locate the 3-pin interface and short the GND and BOOT pins.
 
 :::note
 **Dual Gigabit Ethernet NICs Carrier Board** is the same PCB as the reRouter which just need to do the **Step 3** to select the boot mode.
@@ -89,7 +89,7 @@ This process requires to put the CM4 eMMC stroage into 'USB mass storage' mode, 
 To update the EEPROM for raspberry pi only support with Linux based operating system, The following steps only tested on **PC with Ubuntu 22.04** and **Raspberry Pi 4B (Flash Tool) with Raspberry Pi OS (64-bit)**
 :::
 
-* **Step 1:** Install required system software package, please open **`Terminal`** app and type follow command:
+- **Step 1:** Install required system software package, please open **`Terminal`** app and type follow command:
 
 ```bash
 
@@ -98,7 +98,7 @@ sudo apt-get update
 sudo apt install git pkg-config make gcc libusb-1.0-0-dev
 ```
 
-* **Step 2:** Clone the **`usbboot`** tool repository
+- **Step 2:** Clone the **`usbboot`** tool repository
 
 ```bash
 cd ~/
@@ -108,14 +108,14 @@ git clone --depth=1 https://github.com/raspberrypi/usbboot
 cd usbboot
 ```
 
-* **Step 3:** Build the **`usbboot`** tool
+- **Step 3:** Build the **`usbboot`** tool
 
 ```bash
 
 make
 ```
 
-* **Step 4:** Update the EEPROM
+- **Step 4:** Update the EEPROM
 
 :::note
 The **`usbboot`** github repo should have the latest EEPROM bootloader firmware updated, so following step should get you updated to the latest EEPROM bootloader firmware
@@ -151,9 +151,9 @@ curl -L -o pieeprom.original.bin https://github.com/raspberrypi/rpi-eeprom/blob/
 You should see the similar message as shown below:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Mini_Router/eeprom_update_log.png" alt="pir" width={1000} height="auto" /></p>
 
-* **Step 5:** Connect the USB Type-C to the CM4 Device(**`reTerminal`** \ **`reRouter`** \ **`Dual Gigabit Ethernet NICs Carrier Board`**) and the **`Host PC/Rasbperry Pi 4B(Flash Tool)`** Device, which the **CM4 Device** should be put into the **USB massive storage mode**.
+- **Step 5:** Connect the USB Type-C to the CM4 Device(**`reTerminal`** \ **`reRouter`** \ **`Dual Gigabit Ethernet NICs Carrier Board`**) and the **`Host PC/Rasbperry Pi 4B(Flash Tool)`** Device, which the **CM4 Device** should be put into the **USB massive storage mode**.
 
-* **Step 6:** To apply and update the EEPROM firmware
+- **Step 6:** To apply and update the EEPROM firmware
 
 ```bash
 
@@ -174,7 +174,7 @@ At this point your **`CM4 Device`** should have the new boot order setup and upd
 You should have followed the above setup step until **`Step 3`**
 :::
 
-* **Step 1:** Edit the `boot.conf`
+- **Step 1:** Edit the `boot.conf`
 
 ```bash
 cd ~/usbboot/recovery
@@ -237,23 +237,23 @@ The following is the table that defines the property of different boot modes set
 
 > Reference: [BOOT_ORDER Property Table](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#BOOT_ORDER)
 
-* **Step 2:** Get the latest firmware
+- **Step 2:** Get the latest firmware
 
 ```bash
 
 wget -O pieeprom.original.bin https://github.com/raspberrypi/rpi-eeprom/blob/master/firmware/stable/pieeprom-2023-01-11.bin
 ```
 
-* **Step 3:** Update the EEPROM firmware with the new `boot.conf`
+- **Step 3:** Update the EEPROM firmware with the new `boot.conf`
 
 ```bash
 
 ./update-pieeprom.sh
 ```
 
-* **Step 4:** Connect the USB Type-C to the CM4 Device(**`reTerminal`** \ **`reRouter`** \ **`Dual Gigabit Ethernet NICs Carrier Board`**) and the **`Host PC/Rasbperry Pi 4B(Flash Tool)`** Device, which the **CM4 Device** should be put into the **USB massive storage mode**.
+- **Step 4:** Connect the USB Type-C to the CM4 Device(**`reTerminal`** \ **`reRouter`** \ **`Dual Gigabit Ethernet NICs Carrier Board`**) and the **`Host PC/Rasbperry Pi 4B(Flash Tool)`** Device, which the **CM4 Device** should be put into the **USB massive storage mode**.
 
-* **Step 5:** Apply the firmware to the device
+- **Step 5:** Apply the firmware to the device
 
 ```bash
 cd ~/usbboot
@@ -271,11 +271,11 @@ At this point your **`CM4 Device`** should have the new boot order setup and upd
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

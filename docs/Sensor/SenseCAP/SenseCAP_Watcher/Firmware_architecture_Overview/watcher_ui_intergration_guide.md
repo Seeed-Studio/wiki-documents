@@ -71,6 +71,7 @@ void lv_pm_open_page(lv_group_t *group,
 ```
 
 **Parameters:**
+
 - `group`: Pointer to the LVGL group.
 - `groupInfo`: Pointer to the `GroupInfo` structure containing page objects.
 - `operation`: The operation to be performed (add objects to group, no operation, or clear group).
@@ -170,7 +171,6 @@ lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_E
 
 By following these steps, you can ensure that the touchscreen and encoder input operate synchronously and correctly in your application.
 
-
 ## 3. Device Alarm
 
 ### 3.1 Overview
@@ -225,7 +225,6 @@ void view_alarm_off();
 view_alarm_off();
 ```
 
-
 ## 4. AI Inference Real-time Image Rendering
 
 ### 4.1 Overview
@@ -233,6 +232,7 @@ view_alarm_off();
 This section explains how to decode images on the device and display them in LVGL.
 
 This functionality is implemented in the following files:
+
 - **view_image_preview.c**: Contains function implementations.
 - **view_image_preview.h**: Contains function prototypes and type definitions.
 
@@ -290,6 +290,7 @@ esp_err_t esp_event_handler_instance_register_with( esp_event_loop_handle_t even
 ```
 
 **Parameters:**
+
 - `event_loop`: Event loop to which this handler function is registered; cannot be NULL.
 - `event_base`: Base ID of the event to register the handler for.
 - `event_id`: ID of the event to register the handler for.
@@ -354,7 +355,6 @@ Create buttons in Squareline, set their names and styles, and assign callback fu
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img1.png" style={{width:800, height:'auto'}}/></div>
 
-
 ### 6.2 Exporting the `ui` Project from Squareline
 
 In the application, choose `File` -> `Project Settings` in the navigation bar, and set the `UI Files Export Path` to `project_path/ui`, where `project_path` is the path to the Squareline project. This sets the export path for the UI design.
@@ -364,7 +364,6 @@ In the application, choose `File` -> `Project Settings` in the navigation bar, a
 Next, click `Export` -> `Export UI Files` in the navigation bar to export a directory folder containing all the UI designs.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img3.png" style={{width:500, height:'auto'}}/></div>
-
 
 ### 6.3 Implementing Callback Functions Declared in Header Files
 
@@ -447,9 +446,7 @@ Now we have simply implemented UI integration into the project. Next, we can com
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img4.png" style={{width:500, height:'auto'}}/></div>
 
-
 As shown above, by clicking the buttons on the page using the touchscreen or the wheel, you can see the corresponding objects triggering callback events in the serial debugging assistant, indicating that the callback functions are working successfully!
-
 
 ## 7. SquareLine Project
 
@@ -480,5 +477,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

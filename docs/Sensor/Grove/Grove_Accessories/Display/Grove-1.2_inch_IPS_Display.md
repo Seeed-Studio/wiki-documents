@@ -31,7 +31,6 @@ Simultaneously, the Grove-1.2 Inch IPS Display employs IPS full-view angle techn
 
 Moreover, we have chosen ST7789 as the driver IC for the display and have prepared an open-source driver library and example code for your convenience. This will enable you to get started quickly with your project development.
 
-
 ## Features
 
 - **Simplified Interface:** The display adopts a serial SPI interface and only requires the SCK and SDA connections to the main controller. This greatly simplifies user operation and saves time on wiring.
@@ -43,7 +42,6 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 - **Reliable Driver IC:** The display uses ST7789 as its driver IC. Its open-source driver library and example code make it easier for users to get started.
 - **Wide Operating Temperature:** The working temperature range of -20 to 70 degrees Celsius makes this display suitable for various environments.
 
-
 ## Application Ideas
 
 - **DIY Weather Station**: The Grove-1.2 Inch IPS Display can be used in a home-made weather station to provide real-time weather information. It can display rich and vibrant icons and data, providing an engaging user experience.
@@ -52,7 +50,6 @@ Moreover, we have chosen ST7789 as the driver IC for the display and have prepar
 - **Smart Home Systems**: The display can be integrated into smart home systems, providing clear and vibrant visual feedback of various home conditions or system status.
 - **Educational Projects**: In the educational sector, the display can be used in classroom projects to teach students about graphics, coding, and electronics. Its simple interface and easy setup make it ideal for learning environments.
 - **Industrial Control Panels**: In industrial applications, the display can be used in control panels to display important information or statuses, helping operators monitor and control industrial processes. Its wide viewing angle ensures clear visibility from various perspectives.
-
 
 ## Hardware Overview
 
@@ -79,7 +76,7 @@ If this is the first time you work with Arduino, we strongly recommend you to se
 
 :::note
 **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
-    
+
 **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
 
@@ -187,12 +184,12 @@ This statement sets the 5th bit of PORTB to 0 without changing other bits. This 
 
 The following shows all the ports on Arduino UNO and their corresponding registers:
 
-** Digital Ports **
+**Digital Ports**
 
 - Digital ports 0 - 7 correspond to register PORTD, bits PORTD0 to PORTD7
 - Digital ports 8 - 13 correspond to register PORTB, bits PORTB0 to PORTB5
 
-** Analog Input Ports * *
+** Analog Input Ports **
 
 - Analog input ports A0 - A5 correspond to register PORTC, bits PORTC0 to PORTC5
 
@@ -213,11 +210,9 @@ When manipulating registers, it is essential to exercise caution, as any erroneo
 
 Users who want to use the register operation mode of this product need to understand and implement the above knowledge and skills independently.
 
-
-
 ## FAQ
 
-### 1. The screen does not work when I reprogram it while the screen is connected.
+### 1. The screen does not work when I reprogram it while the screen is connected
 
 A: If your program is constantly communicating with the screen, reprogramming can interrupt this process, causing the screen to malfunction. You can try turning off the power to restore normal screen operation.
 
@@ -233,7 +228,6 @@ A: The display has a working temperature range of -20 to 70 degrees Celsius. How
 
 A: Please ensure the display is correctly initialized in your code and you're using the correct color values. If you're still facing issues, there may be a problem with the display or the connecting wires. Please check the connections or try with another display if available.
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/Grove-RGB-OLED-Display-1.22(ST7789).rar" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
@@ -244,25 +238,16 @@ A: Please ensure the display is correctly initialized in your code and you're us
 - **[ZIP]** [Eagle File for Grove-1.2 Inch IPS Display](https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/Grove-RGB-OLED-Display-1.22(ST7789).rar)
 - **[PDF]** [ST7789 Spec](https://files.seeedstudio.com/wiki/Grove-1.2inch-ips-display/ST7789V_SPEC_V1.2.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-

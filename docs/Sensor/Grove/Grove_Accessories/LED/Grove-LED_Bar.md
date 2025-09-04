@@ -28,12 +28,12 @@ Version
 Features
 --------
 
--   Input Voltage: 3.3V/5V
--   Each LED segment can be controlled individually via code
--   Intuitive display
--   Flexible power option, supports 3-5.5DC
--   Available demo code
--   Suli-compatible Library
+- Input Voltage: 3.3V/5V
+- Each LED segment can be controlled individually via code
+- Intuitive display
+- Flexible power option, supports 3-5.5DC
+- Available demo code
+- Suli-compatible Library
 
 :::tip
 More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
@@ -53,7 +53,6 @@ More details about Grove modules please refer to [Grove System](https://wiki.see
 | Luminous Intensity Per Segment-Yellow(Current  20mA )       | 45-60mcd     |
 | LED segment                                                 | 10           |
 | Size                                                        | 40mm * 20mm  |
-
 
 Platforms Supported
 -------------------
@@ -75,6 +74,7 @@ Getting Started
 :::note
 If this is the first time you work with Arduino, we firmly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 ### Play With Arduino
 
 **Hardware**
@@ -96,6 +96,7 @@ If this is the first time you work with Arduino, we firmly recommend you to see 
 :::note
 If we don't have Grove Base Shield, We also can directly connect Grove-LED Bar to Seeeduino as below.
 :::
+
 | Seeeduino       | Grove-LED Bar |
 |---------------|-------------------------|
 | 5V           | Red                     |
@@ -147,7 +148,6 @@ The result should be like:
 
 - **Step 2.** Follow [Updating the Firmware](https://www.dexterindustries.com/GrovePi/get-started-with-the-grovepi/updating-firmware/) to update the newest firmware of GrovePi.
 
-
 :::tip
 In this wiki we use the path **~/GrovePi/** instead of **/home/pi/Desktop/GrovePi**, you need to make sure Step 2 and Step 3 use the same path.
 :::
@@ -167,7 +167,7 @@ git clone https://github.com/DexterInd/GrovePi.git
 
 ```
 
--	**Step 4.** Navigate to the demos' directory:
+- **Step 4.** Navigate to the demos' directory:
 
 ```
 cd yourpath/GrovePi/Software/Python/
@@ -435,24 +435,19 @@ i = 0
 sudo python3 grove_ledbar.py
 ```
 
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-LED_Bar/res/Grove-LED_Bar_v1.0.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
 Resources
 ---------
 
--   [**Eagle&PDF**][Grove - LED Bar Eagle File](https://files.seeedstudio.com/wiki/Grove-LED_Bar/res/Grove-LED_Bar_v1.0.zip)
--   [**Library**][Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
--   [**Library**][Suli-compatible Library](https://github.com/Seeed-Studio/LED_Bar_Suli)
--   [**Datasheet**][MY9221 Datasheet](https://files.seeedstudio.com/wiki/Grove-LED_Bar/res/MY9221_DS_1.0.pdf)
--   [**More Reading**][Wooden Laser Gun](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
-
-
+- [**Eagle&PDF**][Grove - LED Bar Eagle File](https://files.seeedstudio.com/wiki/Grove-LED_Bar/res/Grove-LED_Bar_v1.0.zip)
+- [**Library**][Grove - LED Bar Library](https://github.com/Seeed-Studio/Grove_LED_Bar)
+- [**Library**][Suli-compatible Library](https://github.com/Seeed-Studio/LED_Bar_Suli)
+- [**Datasheet**][MY9221 Datasheet](https://files.seeedstudio.com/wiki/Grove-LED_Bar/res/MY9221_DS_1.0.pdf)
+- [**More Reading**][Wooden Laser Gun](https://www.instructables.com/id/DIY-a-Wooden-Laser-Gun-As-a-Xmas-Present-for-Your-/)
 
 ## Projects
 
@@ -464,16 +459,16 @@ Resources
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://www.hackster.io/karel/grove-led-bar-controller-with-the-bean-c3b81e/embed' width='350'></iframe>
 
-
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

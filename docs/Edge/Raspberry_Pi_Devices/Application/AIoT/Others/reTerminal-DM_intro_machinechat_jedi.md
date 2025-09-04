@@ -16,7 +16,7 @@ last_update:
 
 # reTerminal DM & Machinechat JEDI: Your Industrial IoT Powerhouse
 
-## Introduction 
+## Introduction
 
 [Machinechat JEDI](https://www.machinechat.io/jedi) is a powerful and versatile IoT (Internet of Things) data management software. It's designed to streamline the process of collecting, visualizing, monitoring, and responding to real-time data from a wide range of devices, sensors, and machines. Seeed's reTerminal DM and Machinechat JEDI software let you build custom dashboards in under 30 minutes. Track operations, analyze trends, improve efficiency, and receive timely alerts to prevent costly disruptions
 
@@ -29,19 +29,19 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
       <th class="table-trnobg">XIAO ESP32C3</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
             <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:100, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
           <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
@@ -49,7 +49,7 @@ Before you start this project, you may need to prepare your hardware and softwar
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preparation
 
@@ -81,11 +81,12 @@ Launch JEDI
 
 ### Accessing JEDI's Web Interface
 
-Open a web browser at reTerminal DM and type 
+Open a web browser at reTerminal DM and type
 
 ```sh
 http://localhost:9123
 ```
+
 ### Setup and Activation
 
 Read and Accept the EULA and Fill out the form, providing a username, password, and answers to challenge questions (used for password recovery).
@@ -94,10 +95,9 @@ Use your newly created credentials.
 
 Enter the license key provided in your download email. JEDI will briefly connect to the internet to validate and activate your license.
 
+## Quick Test
 
-## Quick Test 
-
-### Create A Data Pipeline 
+### Create A Data Pipeline
 
 Open your favorite Python IDE on your Laptop. (like pycharm/Vs code)
 copy and paste.
@@ -128,6 +128,7 @@ else:
     print('Error sending data:', response.text)
 
 ```
+
 ### Visualize & Explore
 
 Dashboard Time! On the Navigation Panel click on Data Dashboard. This dashboard was pre-created for you. We will now add a Gauge chart to this dashboard.
@@ -158,9 +159,9 @@ JEDI offers a robust array of pre-configured data collectors, readily available 
 
 So we are going to discuss on most popular MQTT protocol.
 
-### Prepare Your Xiao 
+### Prepare Your Xiao
 
-Before you upload the code please configure **SSID** **WiFi Password** **MQTT Sever IP(JEDI IP)** **MQTT User Name** **MQTT Password** . In this example we are going to send some dummy data to Machine Chat JEDI. 
+Before you upload the code please configure **SSID** **WiFi Password** **MQTT Sever IP(JEDI IP)** **MQTT User Name** **MQTT Password** . In this example we are going to send some dummy data to Machine Chat JEDI.
 
 ```sh
 #include <WiFi.h>
@@ -246,6 +247,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.println();
 }
 ```
+
 ### Enable the MQTT Broker
 
 - Navigate to **Settings** -> **Data Collectors**.
@@ -258,13 +260,13 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 - Advanced Configuration Options:
 
-- Listen IP: The IP address that the MQTT broker listens on. Jedi IP adress. 
+- Listen IP: The IP address that the MQTT broker listens on. Jedi IP adress.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/mqtt2.PNG" /></center>
 
 :::note
 
-**Username/Password**: Enable this option and configure username and password for client authentication. Clients will need to provide valid credentials to connect to the MQTT broker So you need to replace it with Arduino code. 
+**Username/Password**: Enable this option and configure username and password for client authentication. Clients will need to provide valid credentials to connect to the MQTT broker So you need to replace it with Arduino code.
 
 :::
 
@@ -274,11 +276,11 @@ In the device dashboard, you will see our MQTT device (ESP32Client) is added.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/devicedashboard.PNG" /></center>
 
-## Dashboard Preparation 
+## Dashboard Preparation
 
 ### Create Custom Data Dashboard
 
-Machinechat JEDI's dashboards offer a robust and adaptable method for converting raw IoT data into insightful visualizations. Through an intuitive drag-and-drop interface, users can effortlessly craft personalized dashboards to suit their unique requirements, effectively bringing their data narratives to fruition. 
+Machinechat JEDI's dashboards offer a robust and adaptable method for converting raw IoT data into insightful visualizations. Through an intuitive drag-and-drop interface, users can effortlessly craft personalized dashboards to suit their unique requirements, effectively bringing their data narratives to fruition.
 
 These dashboards come in various types, including **Data Dashboards** for customizable grid-based layouts, **Device Dashboards** for real-time device and sensor data display, and **System Dashboards** for overlaying data onto background images, ideal for creating process diagrams or HMI-style interfaces.
 
@@ -296,11 +298,11 @@ These dashboards come in various types, including **Data Dashboards** for custom
 
 Afterward, you'll notice the addition of the new dashboard to the sidebar. Lets add some widgets. First, we are going to add Line chart.
 
-### Add Line Chart 
+### Add Line Chart
 
-- Click **ADD CHART** 
+- Click **ADD CHART**
 
-- Give a Name as you wish and **Select Chart type** as **Line**.  And click on **plus mark** to add data sources. 
+- Give a Name as you wish and **Select Chart type** as **Line**.  And click on **plus mark** to add data sources.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/dashboard8.PNG" /></center>
 
@@ -314,9 +316,9 @@ Afterward, you'll notice the addition of the new dashboard to the sidebar. Lets 
 
 ### Add a Stacked Line Graph
 
-- Again click on **Add graph**. 
+- Again click on **Add graph**.
 
-- Give **Name** as you wish and Select **Chart type as Line**.Also enable **Multiple Y axis mode**. We'll use one for "Temperature" and another for "Humidity". And click on **plus mark** to add data sources. 
+- Give **Name** as you wish and Select **Chart type as Line**.Also enable **Multiple Y axis mode**. We'll use one for "Temperature" and another for "Humidity". And click on **plus mark** to add data sources.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline.PNG" /></center>
 
@@ -336,11 +338,9 @@ Afterward, you'll notice the addition of the new dashboard to the sidebar. Lets 
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline5.PNG" /></center>
 
-
-And that is it!! You will be able to get stacked line chart. 
+And that is it!! You will be able to get stacked line chart.
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline6.PNG" /></center>
-
 
 In conclusion, Machinechat JEDI with reTerminal DM stands as a transformative solution, revolutionizing the landscape of industrial operations and smart infrastructure management. By seamlessly integrating IIoT capabilities, this will empower users to leverage real-time data from connected devices, offering unparalleled insights into manufacturing processes, supply chain logistics, and operational efficiency.
 
@@ -350,19 +350,16 @@ In conclusion, Machinechat JEDI with reTerminal DM stands as a transformative so
 
 - **[Web Page]** [Machinechat Official Documentation](https://docs.machinechat.io/)
 
-
-# Tech support
-
-
+## Tech Support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

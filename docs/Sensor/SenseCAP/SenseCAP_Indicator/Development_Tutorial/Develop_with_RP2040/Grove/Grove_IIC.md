@@ -11,28 +11,22 @@ last_update:
 ---
 # **Overview**
 
-There are two Grove interfaces in the SenseCAP Indicator for connecting Grove modules, one is the default I2C Port and other one is configurable Digital/Analog Pin, it can also be used for PWM outputs. Both Grove ports can be used as Digital.Providing more possibilities for developers. 
+There are two Grove interfaces in the SenseCAP Indicator for connecting Grove modules, one is the default I2C Port and other one is configurable Digital/Analog Pin, it can also be used for PWM outputs. Both Grove ports can be used as Digital.Providing more possibilities for developers.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/grove.png"/></div>
 
-
 This repo will introduce how to use the Grove IOs on the SenseCAP Indicator. This allows you to enjoy the plug and play functionality of the [Grove Ecosystem](https://www.seeedstudio.com/category/Grove-c-1003.html) as well as using the RP2040 compatible GPIO!
-
 
 # **Grove(IIC)**
 
-
-
-To expand more applications, you can use the IIC interface to connect more sensors. 
+To expand more applications, you can use the IIC interface to connect more sensors.
 Different with the built-in sensors, you only need to define the SCL and SDA pin connections.
 
-## **Example Cod**e:
+## **Example Cod**e
 
 This example code introduces how to connect a [Grove TH sensor](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor):
 
 [AHT20 temperature and humidity sensor library](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
-
-
 
 ```cpp
 #include <Arduino.h>
@@ -75,9 +69,3 @@ void loop() {
   delay(5000);
 }
 ```
-
-
-
-
-
-

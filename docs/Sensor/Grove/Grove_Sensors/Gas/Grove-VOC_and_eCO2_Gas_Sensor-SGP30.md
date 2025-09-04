@@ -14,13 +14,9 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/IMG_0012a.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The Grove-VOC and eCO2 Gas Sensor(SGP30) is an air quality detection sensor. This grove module is based on SGP30, we provide TVOC(Total Volatile Organic Compounds) and CO2eq output for this module.
 
-
 The SGP30 is a digital multi-pixel gas sensor designed for easy integration into air purifier, demand-controlled ventilation, and IoT applications. Sensirion’s CMOSens®technology offers a complete sensor system on a single chip featuring a digital I2C interface, a temperature controlled micro hotplate, and two preprocessed indoor air quality signals. As the first metal-oxide gas sensor featuring multiple sensing elements on one chip, the SGP30 provides more detailed information about the air quality.
-
-
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p>
 
@@ -29,6 +25,7 @@ We've released the [Seeed Gas Sensor Selection Guide](https://wiki.seeedstudio.c
 :::
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 SenseCAP S210x series industrial sensors provide an out-of-box experience for environmental sensing. Please refer to the S2103 Wireless CO2, Temperature, and Humidity Sensor with higher performance and robustness for air quality monitoring. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP~LoRaWAN%20Device&product_module=Device) for your next successful industrial project.
@@ -61,9 +58,6 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
   </tbody>
 </table>
 
-
-
-
 ## Features
 
 - Multi-pixel gas sensor for indoor air quality applications
@@ -72,9 +66,7 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 - Low power consumption
 - Chip module tape and reel packaged, reflow solderable
 
-
 ## Specification
-
 
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;border-color:#999;}
@@ -214,7 +206,6 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
   </tr>
 </table>
 
-
 ## Applications
 
 - Air purifier
@@ -222,14 +213,12 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 - IoT applications
 - New house air condition monitor
 
-
 ## Hardware Overview
 
 ### Pin Map
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/pin.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/pin.jpg" alt="pir" width={600} height="auto" /></p>
-
 
 ### Schematic
 
@@ -240,16 +229,12 @@ SenseCAP S210x series industrial sensors provide an out-of-box experience for en
 
 The typical operating voltage SGP30 is 1.8v, we use a power conversion chip *XC6206P182MR* to provide a stable 3.3V for the MCP9600.
 
-
 **Bi-directional level shifter circuit**
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sc1.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sc1.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 This is a typical Bi-directional level shifter circuit to connect two different voltage section of an I^2^C bus. The I<sup>2</sup>C bus of this sensor use 1.8V, if the I<sup>2</sup>C bus of the Arduino use 5V or 3.3V, this circuit will be needed. In the schematic above, **Q7** and **Q8** are N-Channel MOSFET [BSS138LT3G](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/BSS138.pdf), which act as a bidirectional switch. In order to better understand this part, you can refer to the [AN10441](https://files.seeedstudio.com/wiki/Grove-I2C_High_Accuracy_Temperature_Sensor-MCP9808/res/AN10441.pdf)
-
-
 
 ## Platforms Supported
 <!-- 
@@ -266,16 +251,11 @@ This is a typical Bi-directional level shifter circuit to connect two different 
     The platforms mentioned above as supported is/are an indication of the module's hardware or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
-
-
-
-
 ## Getting Started
 
 :::note
     If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
-
 
 ### Play With Arduino
 
@@ -288,14 +268,11 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 |<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_1.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Light_Sensor/images/gs_4.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/thumbnail.jpg" alt="pir" width={500} height="auto" /></p>|
 |<a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html" target="_blank">Get One Now</a>|<a href="https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html" target="_blank">Get One Now</a>|
 
-
-
 :::note
     **1** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy
     
     **2** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
-
 
 - **Step 1.** Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to **I2C** port  of Grove-Base Shield.
 
@@ -303,14 +280,11 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Connect Seeeduino to PC via a USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/3.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/3.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
 :::note
-	If we don't have Grove Base Shield, We also can directly connectGrove-VOC and eCO2 Gas Sensor(SGP30) to Seeeduino as below.
+ If we don't have Grove Base Shield, We also can directly connectGrove-VOC and eCO2 Gas Sensor(SGP30) to Seeeduino as below.
 :::
 
 | Seeeduino     | Grove-VOC and eCO2 Gas Sensor(SGP30) |
@@ -320,9 +294,6 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 | SDA           | White                   |
 | SCL           | Yellow                  |
 
-
-
-
 #### Software
 
 - **Step 1.** Download the [Seeed SGP30 library](https://github.com/Seeed-Studio/SGP30_Gas_Sensor) from Github.
@@ -331,12 +302,9 @@ This is a typical Bi-directional level shifter circuit to connect two different 
 
 - **Step 3.** Extract the `SGP30_Gas_Sensor-master.zip` you've just downloaded, in the `examples` folder you will see 3 subfolders:
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/ex.png) -->
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/ex.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 The `absolute_humidity_example` requires external humidity sensor calibration
 
@@ -344,15 +312,11 @@ The `base_example` is simplely collecting date without any calibration
 
 The `baseline_operation_example` can save the data base value to flash. The software will automatically collects the base values and stores them.
 
-
 We recommand to use the `baseline_operation_example` , then click the `xxx.ino` file to open the example.
 
 - **Step 4.** Upload the demo. If you do not know how to upload the code, please check [How to upload code](https://wiki.seeedstudio.com/Upload_Code/).
 
 - **Step 5.** Open the **Serial Monitor** of Arduino IDE by click **Tool-> Serial Monitor**. Or tap the ++ctrl+shift+m++ key at the same time. if every thing goes well, you will get the result.
-
-
-
 
 The result should be like:
 
@@ -382,7 +346,6 @@ CO2eq Concentration:502ppm
 
 ```
 
-
 :::tip
         1- ppm: parts per million. 1 ppm = 1000 ppb (parts per billion)
         
@@ -390,7 +353,6 @@ CO2eq Concentration:502ppm
 
         3- We tested this demo in our office room, according to your test environment, the results may be different
 :::
-
 
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
@@ -403,16 +365,12 @@ CO2eq Concentration:502ppm
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/rasp.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Base_Hat_for_Raspberry_Pi/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/thumbnail.jpg" alt="pir" width={500} height="auto" /></p>|
 |[Get ONE Now](https://www.seeedstudio.com/Raspberry-Pi-3-Model-B-p-2625.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Base-Hat-for-Raspberry-Pi-p-3186.html)|[Get ONE Now](https://www.seeedstudio.com/-Grove-VOC-and-eCO2-Gas-Sensor-(SGP30)-p-3071.html)|
 
-
 - **Step 2**. Plug the Grove Base Hat into Raspberry.
 - **Step 3**. Connect Grove-VOC and eCO2 Gas Sensor(SGP30) to port I2C of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sgp30.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sgp30.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 #### Software
 
@@ -422,7 +380,7 @@ CO2eq Concentration:502ppm
 :::
 
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -447,7 +405,6 @@ We copy the path to the error file.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sgp30_2.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/sgp30_2.png" alt="pir" width={600} height="auto" /></p>
-
 
 Here is the path that is shown as the example :  “/usr/local/lib/python3.7/dist-packages/sgp30-0.1.6-py3.7.egg/sgp30"
 
@@ -480,7 +437,8 @@ while True:
 
 :::success
     If everything goes well, you will be able to see the following result.
-:::   
+:::
+
 ```python
 
 pi@raspberrypi:~/Seeed_Python_SGP30/examples $ python3 sgp30_simpleread.py
@@ -505,14 +463,7 @@ pi@raspberrypi:~/Seeed_Python_SGP30/examples $ python3 sgp30_simpleread.py
 
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
-
-
-
-
-
 
 ## Notice
 
@@ -521,8 +472,6 @@ You can quit this program by simply press ++ctrl+c++.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/Get%20baseline%20program%20flow%20chart%20.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/Get%20baseline%20program%20flow%20chart%20.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 - The H2_Signal and Ethanol_signal,Both signals can be used to calculate gas concentrations c relative to a reference concentration cref by ln(C/Cref)=(Sref-Sout)/a with a = 512, sref the H2_signal or Ethanol_signal output at the reference concentration, and sout = Sout_H2 or Sout = Sout_EthOH.
 
 - For more accurate measurement,You can set the abslute humidity compensation,Defalt value is 11.57g/m3,A little troublesome is that you should get relatively humidity value of environment from another way,Because there is no humidity measurement part integrated in SGP30..
@@ -530,16 +479,12 @@ You can quit this program by simply press ++ctrl+c++.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/absolute%20humidity%20with%20the%20formula.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/img/absolute%20humidity%20with%20the%20formula.png" alt="pir" width={600} height="auto" /></p>
 
-
 Luckly, It's not much neccessary in a normal situation
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Grove-VOC_and_eCO2_Gas_Sensor%20-SGP30.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -548,20 +493,16 @@ Luckly, It's not much neccessary in a normal situation
 - **[PDF]** [BSS138L Datasheet](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/BSS138.pdf)
 - **[PDF]** [SGP30 Driver Integration Guide HW I2C](https://files.seeedstudio.com/wiki/Grove-VOC_and_eCO2_Gas_Sensor-SGP30/res/Sensirion_Gas_Sensors_SGP30_Driver-Integration-Guide_HW_I2C.pdf)
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

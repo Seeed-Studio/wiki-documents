@@ -19,7 +19,7 @@ last_update:
 
 ## Introduction
 
-Welcome to reCamera Gimbal! The reCamera gimbal 2002 series is the first open-source camera control system, composed of one tiny AI camera - reCamera 2002w 8GB/64GB, and one compatible 2-Axis gimbal basement with 2 brushless motors. It is powered by an RISC-V SoC, providing 1 TOPS AI performance with video encoding at 5MP @ 30 FPS. It offers a Lego-like self-assembly package and integrates the Sensecraft AI platform and Node-RED platform for smooth graphical programming and pipeline construction, enabling rapid self-training, model conversion, and deployment of AI models such as Yolo v5/v8/11. 
+Welcome to reCamera Gimbal! The reCamera gimbal 2002 series is the first open-source camera control system, composed of one tiny AI camera - reCamera 2002w 8GB/64GB, and one compatible 2-Axis gimbal basement with 2 brushless motors. It is powered by an RISC-V SoC, providing 1 TOPS AI performance with video encoding at 5MP @ 30 FPS. It offers a Lego-like self-assembly package and integrates the Sensecraft AI platform and Node-RED platform for smooth graphical programming and pipeline construction, enabling rapid self-training, model conversion, and deployment of AI models such as Yolo v5/v8/11.
 
 This guide will help you quickly set up your device and start using it to unlock powerful AI-Vision features. Whether you're a beginner or an experienced user, this step-by-step walkthrough will guide you through the installation, configuration, and first use.
 
@@ -40,7 +40,6 @@ This guide will help you quickly set up your device and start using it to unlock
 - Wi-Fi Connection
 - Eletrical screw driver (Optional for better assembling experience)
 
-
 ## Unboxing
 
 Start by unpacking your reCamera Gimbal. Inside the box, you should find:
@@ -58,7 +57,6 @@ Assemble the reCamea Gimbal according to the assembly instructions on Box or [Us
 :::note
 Please make sure all screws are tightened, otherwise it will affect the operation of the motor.
 :::
-
 
 ### Setup device and login
 
@@ -86,7 +84,7 @@ The default username and password are both `recamera`.  If you perform a factory
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_5.png" /></div>
 
-**Step6:**  Connect the power to the base first, then remove the USB type C cable for best motor movements. 
+**Step6:**  Connect the power to the base first, then remove the USB type C cable for best motor movements.
 
 :::note
 
@@ -96,7 +94,7 @@ It should be connected the power adapter with voltage 12V.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/switch_power.png" /></div>
 
-**Step7:** Go back to your `ip address` browser to visit the dashboard, then hit `Calibrate button` on the right side to let your Gimbal calibrate itself. 
+**Step7:** Go back to your `ip address` browser to visit the dashboard, then hit `Calibrate button` on the right side to let your Gimbal calibrate itself.
 
 :::note
 
@@ -107,6 +105,7 @@ During calibration, avoid interfering with the device's operation as this could 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_calibrate.png" /></div>
 
 ### Calibration Behavior
+
 The yaw axis has a movement range of 0–360°, although the actual mechanical range is limited to approximately 345° due to structural constraints. However, the vision coverage remains 360°. The pitch axis supports a movement range of 0–180°.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/movement_range.png" /></div>
@@ -122,6 +121,7 @@ Upon powering on, the gimbal will begin its automatic calibration sequence:
 This sequence completes the gimbal's self-calibration process.
 
 You can also calibrate by enter this command in the terminal
+
 ```bash
 gimbal cali
 ```
@@ -149,14 +149,16 @@ Web urls:
 - **Power**: `ip_address/#/power`
 - **Original Node-RED**: `ip_address:1880`
 
-### Quick Start with Gimbal Dashboard:
+### Quick Start with Gimbal Dashboard
+
 #### Motors control
-After setup and calibration are complete, you can control the gimbal using the available options in the dashboard. Visit `ip_address/#/dashboard` or `ip_address` to access Gimbal's preview dashboard made with Node-RED nodes: 
+
+After setup and calibration are complete, you can control the gimbal using the available options in the dashboard. Visit `ip_address/#/dashboard` or `ip_address` to access Gimbal's preview dashboard made with Node-RED nodes:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_preview.png" /></div>
 
 - **Joystick**: Controls the direction of the camera's view. For example, dragging the joystick to the right causes the image to move right accordingly.
-- **Sliders**: 
+- **Sliders**:
   - Yaw and Pitch Sliders: Move the gimbal to a specified absolute angle.
 
     Yaw range: 0–360°
@@ -167,7 +169,7 @@ After setup and calibration are complete, you can control the gimbal using the a
 Due to structural constraints, the yaw range is limited to 0–345° and the pitch range is limited to 0–180°. Any values entered outside of these ranges will be adjusted to the closest boundary. For example, if you input 360° for yaw, the system will automatically execute the movement as 345°.
 :::
 
-  - Speed Slider: Adjusts the speed of both motors simultaneously.
+- Speed Slider: Adjusts the speed of both motors simultaneously.
 
     Speed range: 0–720°/s (degrees per second)
 - **Auto-Tracking**: Select a target object from the dropdown menu (e.g., person, car, cat, dog, bottle), then click `Start Tracking` to initiate automatic object tracking. Click `Stop Tracking` to end tracking.
@@ -189,17 +191,16 @@ The Sleep button does not activate a low-power sleep mode. It simply repositions
     ⚠️ Note: This will not interrupt the calibration process.
 
 #### AI Model Parameters
+
 **Confidence**: Confidence in the YOLO model represents the probability that a predicted bounding box contains an object and how accurate the prediction is. It is a value between 0 and 100.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_confidence.png" /></div>
-
 
 **Intersection over Union (IoU)**: IoU is a metric used to evaluate the overlap between the predicted bounding box and the ground truth bounding box. It is calculated as the ratio of the intersection area of the two boxes to the union area of the two boxes. The value of IoU is typically in the range from 0 to 1. We standardized it to a scale of 0 - 100, an IoU value of 0 represents no overlap between the predicted box and the ground - truth box. A value of 100 indicates a perfect match, meaning the two boxes completely overlap.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_iou.png" /></div>
 
-
-### Quick start with Gimbal Dashboard Flow:
+### Quick start with Gimbal Dashboard Flow
 
 If you would like to know how the dashboard is made with Node-RED nodes, click the bottom right corner or visit `ip_address/#/workspace` to access Gimbal's Node-RED workspace
 
@@ -209,36 +210,38 @@ Then you will see the default gimbal dashboard flow, you can double click in eac
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/workspace_flow.png" /></div>
 
-**Model Settings**: 
-  - Slider nodes allow you to adjust the IoU (Intersection over Union) and confidence threshold for the YOLO AI model.
+**Model Settings**:
+
+- Slider nodes allow you to adjust the IoU (Intersection over Union) and confidence threshold for the YOLO AI model.
 
 **Dashboard UI Display**:
-  - The UI template node displays text showing the current model settings.
-  - It also renders the base64 image from the camera, including detection boxes for objects identified by YOLO.
+
+- The UI template node displays text showing the current model settings.
+- It also renders the base64 image from the camera, including detection boxes for objects identified by YOLO.
 
 **Auto Tracking with Target**:
 
-  - Function nodes retrieve information about the target object (e.g., width, height, coordinates) and process this data using a tracking algorithm.
+- Function nodes retrieve information about the target object (e.g., width, height, coordinates) and process this data using a tracking algorithm.
 
-  - The algorithm function node calculates the offset of the target box center relative to the vision center and sends this offset to the set motor angle node to move the gimbal to the desired position.
+- The algorithm function node calculates the offset of the target box center relative to the vision center and sends this offset to the set motor angle node to move the gimbal to the desired position.
 
 **Manual Motor Control**:
 
-  - Use slider nodes to manually set motor angles, moving the gimbal by a specific degree.
+- Use slider nodes to manually set motor angles, moving the gimbal by a specific degree.
 
-  - Alternatively, the joystick UI node allows manual control by adjusting the gimbal's position in small increments (offset-by-offset).
+- Alternatively, the joystick UI node allows manual control by adjusting the gimbal's position in small increments (offset-by-offset).
 
 **Shortcut Buttons**:
 
-  - Button UI nodes send specific positions to the set motor angle node, triggering behaviors like Sleep or Standby.
+- Button UI nodes send specific positions to the set motor angle node, triggering behaviors like Sleep or Standby.
 
-  - These buttons can also trigger exec nodes running bash scripts such as `gimbal cali` for calibration or `gimbal stop 1; gimbal stop 2` for an emergency stop.
+- These buttons can also trigger exec nodes running bash scripts such as `gimbal cali` for calibration or `gimbal stop 1; gimbal stop 2` for an emergency stop.
 
 **Basic Web Iframe Subflow**:
 
-  - An iframe subflow displays basic web pages like network settings, system info, and device information.
+- An iframe subflow displays basic web pages like network settings, system info, and device information.
 
-  - Note that these may consume CPU resources as it renders the page with multiple nodes. It can be deleted if not needed.
+- Note that these may consume CPU resources as it renders the page with multiple nodes. It can be deleted if not needed.
 
 ## Apply cloud management and backup
 
@@ -254,8 +257,7 @@ You need to register an account before you can login through the platform to syn
 
 :::
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_14.png" /></div> 
-
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Gimbal_14.png" /></div>
 
 ## Port List
 
@@ -269,15 +271,14 @@ The following lists the ports used by reCamera Gimbal:
 - **Port 1880**: Dedicated to Node-RED operations.
 
 ## OTA OS upgrade
-Please refer to the [OTA Upgrade Instruction](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version).
 
+Please refer to the [OTA Upgrade Instruction](https://wiki.seeedstudio.com/recamera_getting_started/#ota-upgrade-from-013-to-latest-version).
 
 ## Factory Reset
 
-<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_usr_button.png" /></div> 
+<div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/gimbal_usr_button.png" /></div>
 
 If you would like to reset the device such as forgetting your device's passcode, you can long pressing the **User** button and then connecting the  device to power. When the `red light` of the device is **constantly on** instead of blinking, release the User button.
-
 
 ## Resources
 
@@ -290,11 +291,11 @@ If you would like to reset the device such as forgetting your device's passcode,
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

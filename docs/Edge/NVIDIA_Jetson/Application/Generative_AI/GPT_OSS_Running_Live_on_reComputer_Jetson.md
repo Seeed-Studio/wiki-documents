@@ -21,6 +21,11 @@ last_update:
 
 This is far more than a simple technical porting exercise - it's an exploration of what's possible at the edge. In this article, I'll demonstrate how a 20B-parameter open-source large language model comes to life on edge devices like Nvidia Jetson Orin Nx.
 
+<div align="center">
+    <img width={900} 
+     src="https://files.seeedstudio.com/wiki/reComputer-Jetson/gpt_oss/deploy_gptoss_super.png" />
+</div>
+
 The [NVIDIA Jetson](https://www.seeedstudio.com/tag/nvidia.html) series stands as a premier edge computing platform, renowned for its exceptional power efficiency and compact form factor. Meanwhile, [GPT-OSS-20B](https://github.com/openai/gpt-oss) represents the cutting edge of freely available open-source large language models. Their convergence not only showcases the untapped potential of edge devices, but also pioneers new possibilities for offline AI applications. 
 
 

@@ -20,7 +20,6 @@ last_update:
 
 - [Keypoint Detection PFLD](/ModelAssistant_Tutorials_Training_PFLD): Pointer meter reading
 
-
 :::tip
 
 Before start training, we recommend you to read [Config](/ModelAssistant_Tutorials_Config) and [Datasets](/ModelAssistant_Tutorials_Datasets) sections first.

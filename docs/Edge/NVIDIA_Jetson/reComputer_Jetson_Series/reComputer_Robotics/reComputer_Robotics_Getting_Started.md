@@ -22,7 +22,6 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
   <img width ="600" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-114110310-recomputer-robotics_2.jpg"/>  
 </div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
 <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-Robotics-J4012-p-6505.html" target="_blank">
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
@@ -30,7 +29,7 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
 
 <!-- Buy links -->
 
-## Features 
+## Features
 
 - **Robust Hardware Design**: A compact, high-performance edge AI computer with NVIDIA® Jetson™ Orin™ NX 16GB module in Super/MAXN mode, providing up to 157 TOPS of AI performance.
 - **Multiple Interfaces for robotics**: Including dual RJ45, M.2 slots for 5G/Wi-Fi/BT modules, 6x USB 3.2, 2x CAN, GMSL2(additional purchase), I2C, and UART, functioning as a powerful robotic brain.
@@ -168,20 +167,18 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
   <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-1.jpeg"/>  
 </div>
 
-
 <div align="center">
   <img width ="1000" src="https://media-cdn.seeedstudio.com/media/wysiwyg/upload/image-robotic-2.jpeg"/>  
 </div>
 
-
 ## Flash JetPack OS
 
 ### Supported Module
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
 
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerequisites
 
@@ -194,7 +191,7 @@ The reComputer Robotics J401 is a compact, high-performance edge AI carrier boar
 
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -237,26 +234,26 @@ Here, we need to download the system image to our Ubuntu PC corresponding to the
       <td rowSpan={4}>6.2</td>
       <td> Orin Nano 4GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EaSRAPdqWthNqVkn0U7ztycBN0SfRdKxmKvWxOHaZq-K9w?e=gbs2Hd">Download</a></td>
-      <td>260D30AF2DF259418A9A3BC47FCFDE9 <br />97428461B133B408FB4B8BAB72F994E82</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EWqAOoqYYxNAky0Dbo847q0BDWsiSBUmyrxAMzNV9SQyNw?e=ZuOFnx">Download</a></td>
+      <td>c63d1219531245abecc7bbdcafc73d3<br />4f75547454c7af85de40f08396a87e5ee</td>
     </tr>
     <tr>
       <td>Orin Nano 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EYGuJpmGQPBLprByA1CofVcBLzUO5dQ8nIEh1PsFQ0863w?e=Pf4GAv">Download</a></td>
-      <td>379F2AC4BD574A7E5C8F8834F57BDC5<br />9FFA7BCFE0FDCBBF530CB7B4ED95E690D</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ERy0O0zUQGlKh8cDHZIoSPEBcHFJOGY6rE0gVBGCE6tBvA?e=eDw71c">Download</a></td>
+      <td>5d1f3cd28eb44ca60132c87ccce5aca<br />f806ee945b486df9061a34de73fbb582b</td>
     </tr>
     <tr>
       <td>Orin NX 8GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/ETnTL4_b0WJNtTO3oHgh9LUBKeMIf542lud-b4OghQnRXg?e=ODUYI1">Download</a></td>
-      <td>8689D936F400B2AA8E603095E2E5EAA<br />5CF736DBD3EEB34E30DC98BD195B1235A</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EewEJTne6ltJlP0IDzahaCYB9rJWUIvKXe5b0p76rlYr_A?e=tsuNbP">Download</a></td>
+      <td>e7f0c8e6b578d411f81122879f92c76<br />66adfada5ed493a4cc458dc169ca8c1b7</td>
     </tr>
     <tr>
       <td>Orin NX 16GB</td>
       <td>✅</td>
-      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EVx9z8620hNAjKhj18D1bNkBslhkjvq8fh5CsDB62yBxig?e=76f4wH">Download</a></td>
-      <td> 9CD1EF04A34345B74B7179C1114080<br />5C8D073E8687FD103A385ED8B19E9162A5</td>
+      <td><a href="https://seeedstudio88-my.sharepoint.com/:u:/g/personal/youjiang_yu_seeedstudio88_onmicrosoft_com/EdXbblXVvqZDv3DqdJOR8u8BXV6rW6BVwoss0EMC-sLcfQ?e=WiW2F9">Download</a></td>
+      <td> b08cbdad8ab6e50222146d3175a9d2<br />627d499bf1d67cfaf69cc737b5bfa9e33a</td>
     </tr>
   </tbody>
 </table>
@@ -267,7 +264,7 @@ The Jetpack6 image file is approximately **14.2GB** in size and should take arou
 :::
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -317,7 +314,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-robo-orin-nano-8g-j401-6.2-36.4.3-2025-05-23.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -343,16 +340,14 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
-
 ## Hardware Interfaces Usage
 
 :::info
 If you want to learn more about the detailed specifications and usage of the hardware interface, please refer to [this wiki](https://wiki.seeedstudio.com/recomputer_jetson_robotics_j401_getting_started/#interfaces-usage).
 :::
 
-
-
 ## Resources
+
 - [reComputer Robotics User Manual](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer_robotics_J401_user_manual.pdf)
 - [Carrier Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/reComputer%20Robotics%20J401_V1.0_SCH_250421.pdf)
 - [Power Board Schematic](https://files.seeedstudio.com/products/NVIDIA-Jetson/Power%20board%20for%20reComputer%20Robotics_V1.0_SCH_250507.pdf)
@@ -366,13 +361,11 @@ If you want to learn more about the detailed specifications and usage of the har
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

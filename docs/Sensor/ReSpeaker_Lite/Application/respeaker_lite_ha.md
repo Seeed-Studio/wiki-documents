@@ -15,21 +15,17 @@ last_update:
 
 Say 'hello' to effortless control and 'goodbye' to tapping on screens with our voice assistant system.<br/>
 
-Picture this: you're cozied up on your couch, and with just a simple shout-out to the ReSpeaker Lite, you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier. 
+Picture this: you're cozied up on your couch, and with just a simple shout-out to the ReSpeaker Lite, you can switch up the lights, crank up the tunes, or even ask about the weather – all without lifting a finger. Thanks to a nifty little [Seeed XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) chip, you've got a mini-but-mighty brain that hooks up your voice to Home Assistant, making your smart home smarter and your life a whole lot easier.
 
 This chapter we will use the [ReSpeaker Lite Voice Assistant Kit](https://www.seeedstudio.com/ReSpeaker-Lite-Voice-Assistant-Kit-p-5929.html) to connect the Sonoff smart switch to realize voice control of the light switch.
 
-
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/I9KOY2ik5nw" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-
 
 ## Hardware Required
 
-
-* ReSpeaker Lite Voice Assistant Kit
-* [Home Assistant Device](https://wiki.seeedstudio.com/home_assistant_topic/)
-* [Sonoff BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/)
+- ReSpeaker Lite Voice Assistant Kit
+- [Home Assistant Device](https://wiki.seeedstudio.com/home_assistant_topic/)
+- [Sonoff BASICR2](https://sonoff.tech/product/diy-smart-switches/basicr2/)
 
 ## XMOS Firmware update
 
@@ -38,13 +34,13 @@ To get the best playback experience, we need to update XMOS firmware to `respeak
 Download the firmware from [here](https://github.com/respeaker/ReSpeaker_Lite/blob/master/xmos_firmwares/respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin). On your computer, plug in the ReSpeaker Lite and run the following command:
 
 ```bash
-$ sudo apt install dfu-util -y
-$ sudo dfu-util -R -e -a 1 -D respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin
+sudo apt install dfu-util -y
+sudo dfu-util -R -e -a 1 -D respeaker_lite_i2s_dfu_firmware_48k_v1.0.9.bin
 ```
 
 ## Getting Started
 
-Navigate to your [Home Assistant web interface](http://homeassistant.local:8123/). 
+Navigate to your [Home Assistant web interface](http://homeassistant.local:8123/).
 
 To unlock the full potential of Home Assistant and gain access to advanced features, it's recomended to enable the `Advanced mode` in the user interface.
 
@@ -52,27 +48,25 @@ Click on your profile, and enable the `Advanced mode`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/advanced-mode.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Install Add-ons
 
 Go to [Settings > Add-ons](https://my.home-assistant.io/redirect/supervisor).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-ons.png" alt="pir" width={800} height="auto" /></p>
 
-
 Under the Official `add-ons` section, search and install the following add-ons:
-* `ESPHome`
-* `Whisper`
-* `Piper`
-* `openWakeWord` 
+
+- `ESPHome`
+- `Whisper`
+- `Piper`
+- `openWakeWord`
 
 Enable `Start on boot` and `Watchdog`, and click `Start`.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/start-addons.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-After the installation script has finished, restart Home Assistant to apply the changes. 
+After the installation script has finished, restart Home Assistant to apply the changes.
 
 After this add-on is installed and running, it will be automatically discovered by the Wyoming integration.
 
@@ -85,8 +79,7 @@ Navigate to `Settings` -> `Devices & Services`, you will find these integrations
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/device-page.png" alt="pir" width={800} height="auto" /></p>
 
-Click `CONFIGURE` and `SUBMIT`. 
-
+Click `CONFIGURE` and `SUBMIT`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/config-success.png" alt="pir" width={800} height="auto" /></p>
 
@@ -115,11 +108,9 @@ When it connected, you will see an entity.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff-id.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Add Voice Asssitant
 
-Navigate to `Settings` -> `Voice Assistant`. 
-
+Navigate to `Settings` -> `Voice Assistant`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/voice-assistant.png" alt="pir" width={800} height="auto" /></p>
 
@@ -133,13 +124,9 @@ Enter a name and select:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/piper-config.png" alt="pir" width={800} height="auto" /></p>
 
-
 Choose a wakeword you preferred.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/choose-wakeword.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ### Add XIAO ESP32S3 to ESPHome
 
@@ -148,7 +135,6 @@ Choose a wakeword you preferred.
 Navigate to `ESPHome`, and click `+ NEW DEVICE`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/add-new-esphome.png" alt="pir" width={800} height="auto" /></p>
-
 
 Enter a Name for your device, then click `NEXT`.
 
@@ -303,7 +289,6 @@ api:
 # Uncomment this, if you have problems with text-to-speech because of Home Assistant HTTPS internal URL
 # http_request:
 #   verify_ssl: false
-
 
 
 i2c:
@@ -1523,8 +1508,8 @@ button:
 debug:
   update_interval: 5s
   ```
-</details>
 
+</details>
 
 Click `SAVE` and then `INSTALL`.
 
@@ -1534,13 +1519,11 @@ Choose `Manual Download` -> `Modern-format`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/manual-download.png" alt="pir" width={800} height="auto" /></p>
 
-
 Connect the XIAO ESP32S3 to your PC via a USB Type-C cable.
 
 Navigate to [Web-ESPHome](https://web.esphome.io/), click `CONNECT`, then choose the port and connect it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/connect-port.png" alt="pir" width={800} height="auto" /></p>
-
 
 Select the `.bin` file we just downloaded, and click `INSTALL`.
 
@@ -1550,11 +1533,9 @@ Wait for a few minutes for the installation. After the installation is successfu
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeakerv3/install-done.png" alt="pir" width={800} height="auto" /></p>
 
-
 Navigate to `Settings` and select `Devices & Services`, you will see `ESPHome` as a discovered integration. Click `CONFIGURE`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/configure.png" alt="pir" width={800} height="auto" /></p>
-
 
 Click `SUBMIT`, now you are all set, try waking it up with `hey jarvis` and talking to it!
 
@@ -1562,4 +1543,4 @@ Click `SUBMIT`, now you are all set, try waking it up with `hey jarvis` and talk
 
 ### Project Sharing
 
-* From **Smart Home Circle** - [Create LOCAL Voice Assistant w/ Home Assistant | NO Soldering | On Device Wake Word🔥| ReSpeaker Lite](https://www.youtube.com/watch?v=XjUeJh2Ok3o)
+- From **Smart Home Circle** - [Create LOCAL Voice Assistant w/ Home Assistant | NO Soldering | On Device Wake Word🔥| ReSpeaker Lite](https://www.youtube.com/watch?v=XjUeJh2Ok3o)

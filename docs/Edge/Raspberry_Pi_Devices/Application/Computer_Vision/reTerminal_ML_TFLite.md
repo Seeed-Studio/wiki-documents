@@ -28,8 +28,7 @@ The key features of TensorFlow Lite are optimized for on-device machine learning
 
 The tflite_runtime package is a smaller, simplified Python package that includes the bare minimum code required to run inference with TensorFlow Lite. This package is ideal when all you want to do is execute .tflite models and avoid wasting disk space with the large TensorFlow library.
 
-For best performance it is recommended to use 64bit OS and corresponding TFLite package, with optimized XNNPACK
-delegate enabled. These can be compiled from source by yourself or installed with pre-built binaries provided by Seeed studio. Alternatively, you can install latest stable version with pip
+For best performance it is recommended to use 64bit OS and corresponding TFLite package, with optimized XNNPACK delegate enabled. These can be compiled from source by yourself or installed with pre-built binaries provided by Seeed studio. Alternatively, you can install latest stable version with pip
 
 #### Latest stable version (official builds)
 
@@ -70,6 +69,7 @@ It is possible to use TFLite Converter to convert any Tensorflow model into .tfl
 Demo: Vehicle Detection
 [Jupyter Notebook](https://github.com/Seeed-Studio/Seeed_Python_MachineLearning/blob/main/jupyter_notebooks/aXeleRate_multi_stage.ipynb)
 [Example scripts](https://github.com/AIWintermuteAI/aXeleRate/tree/master/example_scripts/tensorflow_lite/detector)
+
 - alpha 0.25 224x224 66.7 FPS (15 ms.)
 - alpha 0.5 224x224 40 FPS (25 ms.)
 - alpha 0.75 320x320 14.9 FPS (67 ms.)

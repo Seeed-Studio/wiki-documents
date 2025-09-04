@@ -1,0 +1,10 @@
+position: 3
+label: 'Gestión de Energía'
+collapsible: true
+collapsed: true
+className: _energy-management
+link:
+  type: generated-index
+  slug: es/energy-management
+  title: Gestión de Energía
+  description: Soluciones de gestión de energía.

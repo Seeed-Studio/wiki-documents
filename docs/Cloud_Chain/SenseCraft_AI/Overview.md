@@ -15,7 +15,6 @@ last_update:
 
 # SenseCraft AI Overview
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/1.png" style={{width:1000, height:'auto'}}/></div>
 
 SenseCraft AI is an all-in-one platform designed to empower developers and creators in building and deploying AI projects with ease. The website offers a wide range of tools and features to streamline the AI development process, making it accessible to users with varying levels of expertise. In this wiki, we will explore the main sections of the SenseCraft AI website, providing an overview of their key features and functionalities.
@@ -25,7 +24,6 @@ SenseCraft AI is an all-in-one platform designed to empower developers and creat
             <strong><span><font color={'FFFFFF'} size={"4"}>One-Click Direct 🖱️</font></span></strong>
     </a>
 </div>
-
 
 ## Home
 
@@ -75,7 +73,6 @@ Sign in with your registered email account
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/4.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ### Forget password
 
 If you forget your account password, please enter your valid account and get verification code to set a new password.
@@ -84,7 +81,6 @@ The validity period of the verification code is 10min, please complete the reset
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/5.png" style={{width:1000, height:'auto'}}/></div>
 
-
 ### Change password
 
 1. Visist user account page and click "Change your password" button.
@@ -92,7 +88,6 @@ The validity period of the verification code is 10min, please complete the reset
 2. Enter the old password and new password to change password.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img/6.png" style={{width:1000, height:'auto'}}/></div>
-
 
 ## Pretrained Models
 
@@ -151,7 +146,6 @@ The YOLO (You Only Look Once) model family is known for its speed and accuracy i
 By building upon the YOLO-World model, the Quick Training option inherits its robust feature extraction and object localization capabilities. The pre-trained model serves as a strong foundation, allowing users to quickly generate a single-class recognition model without the need for extensive training data or computational resources.
 
 However, it is important to acknowledge that the Quick Training option may have limitations in terms of adaptability and precision. As the generated model relies on the pre-existing knowledge of the YOLO-World model, it may not always capture the unique characteristics or variations of the user-specified object. This can lead to reduced accuracy or false detections in certain scenarios.
-
 
 - **Image Collection Training**: This option requires users to input the object name and upload relevant images. The website describes this feature as follows: "Based on YOLO - World object detection model, you can customize the training for text and image, which can improve the detection accuracy of the generated model."
 
@@ -276,5 +270,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

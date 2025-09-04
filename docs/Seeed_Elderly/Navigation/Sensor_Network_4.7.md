@@ -82,7 +82,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Industrial AI-based Sensors 
+### Industrial AI-based Sensors
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -91,7 +91,6 @@ You can discover this page with two large portions.
             <a href="/Train-Deploy-AI-Model-A1101" target="_blank"><span><font color={'FFFFFF'} size={"3"}> Click here for more information</font></span></a>
     </a>
 </div>
-
 
 ### Data Logger with Configuration Guide
 
@@ -127,7 +126,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Gateway for Multiple Platform 
+### Gateway for Multiple Platform
 
 <div class="title_container">
     <a class="title_item" style={{textAlign: 'center'}}>
@@ -225,7 +224,7 @@ You can discover this page with two large portions.
 - Application for IoT or embedded ML methods acknowledge
 - Kit with free courses and more intriguing tutorials
 
-### Sensors and Sensors' Network 
+### Sensors and Sensors' Network
 
 <!-- Grove Sensor -->
 
@@ -770,9 +769,9 @@ You can discover this page with two large portions.
 
 <!-- Application -->
 
-### Application 
+### Application
 
-### Easy IoT Application 
+### Easy IoT Application
 
 <!-- Easy IoT Application -->
 
@@ -965,7 +964,7 @@ You can discover this page with two large portions.
     </a>
 </div>
 
-### Accessories 
+### Accessories
 
 <!-- Grove Accessories -->
 
@@ -1124,7 +1123,7 @@ You can discover this page with two large portions.
 
 <!-- Kit with Courses -->
 
-### Kit with Courses 
+### Kit with Courses
 
 <div class="intro_container">
     <a class="intro_item" style={{textAlign: 'center'}}>

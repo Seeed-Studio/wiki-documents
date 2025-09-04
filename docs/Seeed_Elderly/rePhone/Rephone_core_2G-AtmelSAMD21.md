@@ -28,68 +28,73 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
 
     This product **DOESN'T** include a Mic, Speaker and 3.5mm handset input, you need to buy a [Xadow Audio](https://www.seeedstudio.com/Xadow-Audio-p-2554.html) for those function.
 :::
+
 ## Features
+
 ---
+
 ### Arduino/Processor
 
-* ATSAMD21G18 @ 48MHz with 3.3V logic/power
-* Arduino compatible (based on Arduino Zero bootloader)
-* Embedded with lithium battery management chip
-* User button
+- ATSAMD21G18 @ 48MHz with 3.3V logic/power
+- Arduino compatible (based on Arduino Zero bootloader)
+- Embedded with lithium battery management chip
+- User button
 
 ### SIM800H
 
-* Quad band850/900/1800/1900MHz
-* GPRS multi-slot class 12/10
-* GPRS mobile station class B
-* Meet the GSM 2/2 + standard
-    * Class 4 (2 W @850/900MHz)
-    * Class 1 (1 W @1800/1900MHz)
-* bluetooth:compatible3.0+EDR
-* FM:band limits 76~109MHz,Tuning step by step 50KHz
-* Via ATcommand control 3GPP TS 27.007, 27.005 and SIMCOM enhance ATcommand set
-* SIM USAT
-* Low power
-* Operating temperature range : -40 ~+85 °C
-
+- Quad band850/900/1800/1900MHz
+- GPRS multi-slot class 12/10
+- GPRS mobile station class B
+- Meet the GSM 2/2 + standard
+  - Class 4 (2 W @850/900MHz)
+  - Class 1 (1 W @1800/1900MHz)
+- bluetooth:compatible3.0+EDR
+- FM:band limits 76~109MHz,Tuning step by step 50KHz
+- Via ATcommand control 3GPP TS 27.007, 27.005 and SIMCOM enhance ATcommand set
+- SIM USAT
+- Low power
+- Operating temperature range : -40 ~+85 °C
 
 ## Specification
+
 ---
+
 | Item|Value|
 |--------------|-------------------------------------|
 |Microcontroller |ATSAMD21G18, 32-Bit ARM Cortex M0+ |
-|Operating Voltage	|3.3V|
-|DC Current per I/O Pin	|7 mA|
-|Flash Memory	|256 KB|
-|SRAM	|32 KB|
-|EEPROM	|None|
-|Clock Speed	|48 MHz|
-|Lenght	|68 mm|
-|Width	|30 mm|
-|Weight	|12 gr.|
+|Operating Voltage |3.3V|
+|DC Current per I/O Pin |7 mA|
+|Flash Memory |256 KB|
+|SRAM |32 KB|
+|EEPROM |None|
+|Clock Speed |48 MHz|
+|Lenght |68 mm|
+|Width |30 mm|
+|Weight |12 gr.|
 
 ## Hardware Overview
+
 ---
 ![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/hw.png)
 
-* **1- **11pin Xadow Connector
-* **2- **User Button(D3)
-* **3- **Micro USB connector for programming and power
-* **4- **35pin Xadow Connector
-* **5- **Jst1.0 Battery Connector
-* **6- **Nano Sim Card (same to iPhone 5/6/7)
-* **7- **ATSAMD21G18 IC
-* **8- **Charge status monitor LED
-    * blink - no battery insert
-    * on - charging
-    * off - charge done
-* **9- **IC - ETA6003([datasheet](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/ETA6003.pdf))
-* **A- **SWD Debug port
-* **B- **Antenna Connector
-* **C- **I/O PIN pad
-* **D- **SIM800H
+- **1-**11pin Xadow Connector
+- **2-**User Button(D3)
+- **3-**Micro USB connector for programming and power
+- **4-**35pin Xadow Connector
+- **5-**Jst1.0 Battery Connector
+- **6-**Nano Sim Card (same to iPhone 5/6/7)
+- **7-**ATSAMD21G18 IC
+- **8-**Charge status monitor LED
+  - blink - no battery insert
+  - on - charging
+  - off - charge done
+- **9-**IC - ETA6003([datasheet](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/ETA6003.pdf))
+- **A-**SWD Debug port
+- **B-**Antenna Connector
+- **C-**I/O PIN pad
+- **D-**SIM800H
 
-##Pin map
+## Pin map
 
 [![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/pinmap.png)](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/pinmap.png)
 
@@ -100,7 +105,7 @@ The RePhone Core 2G-AtmelSAMD21 v1.0 is a new Arduino compatible RePhone core 2G
     * INT1 connect to D7
     * INT2 connect to D12
 :::
-##Arduino IDE
+## Arduino IDE
 
 After you download and install the [latest Arduino IDE](https://www.arduino.cc/en/Main/Software), there's something need to set up.
 Open your Arduino IDE, and click on **File > Preferences**
@@ -132,7 +137,7 @@ To make sure the driver was installed successful, open your Device Manager to se
 
 ![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/device_manager.png)
 
-###Hello World
+### Hello World
 Now we can upload our first demo - Hello World to the board.
 
 Open your Arduino IDE copy the blow code:
@@ -152,8 +157,8 @@ void loop()
 
 And Then,
 
-* Click on **Tools > Board > RePhone core 2G-AtmelSAMD21**
-* Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
+- Click on **Tools > Board > RePhone core 2G-AtmelSAMD21**
+- Click on **Tools > Port** to select a right port number. (*Don't choose COM1*)
 
 ![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/arduino_ide.png)
 
@@ -169,8 +174,8 @@ Open Serial Monitor of your Arduino IDE and you will get "Hello World" printed p
 
 ![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/hello_world.png)
 
-
 ## AT Command Mode
+
 ---
 RePhone core 2G board support AT command mode. TX/RX of SIM800H is connected to Serial1(D0/D1) of AtemlSAMD21.
 
@@ -216,8 +221,8 @@ Click on below button to get detailed AT command documentation.
 
 [![](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/img/at_cmd.png)](https://files.seeedstudio.com/wiki/Seeeduino_GPRS/res/SIM800_Series_AT_Command_Manual_V1.01%20(2).pdf)
 
-
 ## Examples
+
 ---
 We had made many examples to show you how this module work.
 At the every beginning, please
@@ -227,40 +232,40 @@ At the every beginning, please
 3. If you got a lipo-battery, insert it to the board as well
 
 Click on **File > Examples** then you can open those examples.
-###AtmelSAMD21_SIM800
+### AtmelSAMD21_SIM800
 
-* **Bluetooth_AT_Command_And_Music_Play**: Play music via bluetooth
-* **GSM_GPRS_HTTP_GET**: Http get hello.txt from [mbed.org](http://mbed.org)
-* **GSM_Receive_SMS**: Receive SMS
-* **GSM_Voice_Call**: Receive voice call
+- **Bluetooth_AT_Command_And_Music_Play**: Play music via bluetooth
+- **GSM_GPRS_HTTP_GET**: Http get hello.txt from [mbed.org](http://mbed.org)
+- **GSM_Receive_SMS**: Receive SMS
+- **GSM_Voice_Call**: Receive voice call
 
-###RePhone_API_for_Arduino
+### RePhone_API_for_Arduino
 
-* **gps_test**: [Xadow GPS v2](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html) example
-* **ledmatrix_test**: [Xadow LED 5x7](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html) example
-* **nfc_test**: [Xadow NFC v2](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html) example
-* **sensorhub_test**: [Xadow Basic Sensors](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html) example
-* **ws2812_test**: [Xadow Duino](https://www.seeedstudio.com/Xadow-Duino-p-2556.html) example
+- **gps_test**: [Xadow GPS v2](https://www.seeedstudio.com/Xadow-GPS-v2-p-2557.html) example
+- **ledmatrix_test**: [Xadow LED 5x7](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html) example
+- **nfc_test**: [Xadow NFC v2](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html) example
+- **sensorhub_test**: [Xadow Basic Sensors](https://www.seeedstudio.com/Xadow-Basic-Sensors-p-2555.html) example
+- **ws2812_test**: [Xadow Duino](https://www.seeedstudio.com/Xadow-Duino-p-2556.html) example
 
-###rephone_button
+### rephone_button
 
-* **button_test**: On-board button test
+- **button_test**: On-board button test
 
-###rephone_lcm
+### rephone_lcm
 
-* **lcm_display_test**: LCD display exampledkdsafdfds
+- **lcm_display_test**: LCD display exampledkdsafdfds
 
-###rephone_menu_all
+### rephone_menu_all
 
-* **rephone_menu_test**
+- **rephone_menu_test**
 
-###TwilioMessage
+### TwilioMessage
 
-* **message_test**: Twilio Message Send/Receive
+- **message_test**: Twilio Message Send/Receive
 
 ## RePhone Family
-There are several chainable add-on modules to extend the features and functionalities – Xadow Audio, Xadow LED 5x7, Xadow Basic Sensors, Xadow Duino, Xadow GPS v2 and Xadow NFC v2.
 
+There are several chainable add-on modules to extend the features and functionalities – Xadow Audio, Xadow LED 5x7, Xadow Basic Sensors, Xadow Duino, Xadow GPS v2 and Xadow NFC v2.
 
 |GPS v2|Basic Sensors|NFC v2|
 |----------------|--------------|-------------|
@@ -272,18 +277,15 @@ There are several chainable add-on modules to extend the features and functional
 |![](https://files.seeedstudio.com/wiki/Rephone/image/product4.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product7.jpg)|![](https://files.seeedstudio.com/wiki/Rephone/image/product8.jpg)|
 |[Get More Details](https://www.seeedstudio.com/Xadow-LED-5-x-7-p-2561.html)|[Get More Details](https://www.seeedstudio.com/Xadow-Audio-p-2554.html)|[Get More Details](https://www.seeedstudio.com/Xadow-GSM-Breakout-p-2559.html)|
 
-
-
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/eagle.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
-
-
 ## Resources
+
 ---
+
 - [Schematics in PDF](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/pdf_sch_rephone_2g.pdf)
 - [Schematics in EAGLE](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/eagle.zip)
 - [Driver](https://files.seeedstudio.com/wiki/RePhone-core-2G-AtmelSAMD21/res/driver.zip)
@@ -296,11 +298,11 @@ There are several chainable add-on modules to extend the features and functional
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

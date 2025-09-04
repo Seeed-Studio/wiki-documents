@@ -33,22 +33,22 @@ So, let's embark on this exciting journey of Zigbee development with the XIAO ES
 In this tutorial we will use **two** XIAO ESP32C6s as examples to explain Zigbee. you can jump and buy it through the link below. One as a Zigbee End Device and one as a Zigbee Coordinator.
 
 <div class="table-center">
-	<table>
-		<tr>
-			<th>Seeed Studio XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
+ <table>
+  <tr>
+   <th>Seeed Studio XIAO ESP32C6</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
         " target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Environment Preparation and Demonstration
@@ -101,7 +101,6 @@ cd HA_on_off_light/main
 Since the example program provided uses GPIO8 as the LED, but the LED on the XIAO is GPIO15, we need to make some simple revisions to the example program in order to show the effect.
 
 The program to be modified is in `esp_zb_light.c` in the main file. The complete code after modification is as follows.
-
 
 ```cpp
 #include "esp_zb_light.h"
@@ -314,9 +313,9 @@ If all goes well, then next you can use the **BOOT** button on the XIAO of the S
 
 The folder contains examples demonstrating Zigbee HA standard device
 
-* `HA_on_off_light` is a standard HA on-off light bulb example demonstrating Zigbee End-device.
+- `HA_on_off_light` is a standard HA on-off light bulb example demonstrating Zigbee End-device.
 
-* `HA_on_off_switch` is a standard HA on-off switch example demonstrating Zigbee Coordinator role. It provides an on/off toggle to control a Zigbee HA on off light.
+- `HA_on_off_switch` is a standard HA on-off switch example demonstrating Zigbee Coordinator role. It provides an on/off toggle to control a Zigbee HA on off light.
 
 In this tutorial, we will dive deep into two example programs provided by the ESP Zigbee SDK: `HA_on_off_light` and `HA_on_off_switch`. By analyzing the code structure and organization of these examples, we will gain a comprehensive understanding of how to develop Zigbee device applications.
 
@@ -427,7 +426,6 @@ In the `zb_action_handler` function, you can implement the desired behavior when
 4. Zigbee Stack Configuration and Starting
 
 The example code configures the Zigbee end-device using `ESP_ZB_ZED_CONFIG()` and initializes the Zigbee stack using `esp_zb_init()`. The stack is then started with `esp_zb_start()`, and the main loop is handled by `esp_zb_main_loop_iteration()`.
-
 
 ```cpp
 esp_zb_cfg_t zb_nwk_cfg = ESP_ZB_ZED_CONFIG();
@@ -621,7 +619,7 @@ The rest of the example is addressing the logic for keystroke stabilisation and 
 
 ## Troubleshooting
 
-### Q1: Continuing to have issues with ESP_ZB_ON_OFF_LIGHT: Network steering was not successful to match another XIAO.
+### Q1: Continuing to have issues with ESP_ZB_ON_OFF_LIGHT: Network steering was not successful to match another XIAO
 
 First of all, please troubleshoot the version of ESP-IDF you are using, make sure you are using **ESP-IDF v5.1.3** to compile the Zigbee sample application, if not, please change the IDF version.
 
@@ -634,7 +632,6 @@ idf.py erase_flash flash monitor
 ```
 
 If none of the above works, submit an issue to Espressif.
-
 
 ### Q2: What should I do if I want to match a new device after a successful match?
 
@@ -649,7 +646,6 @@ idf.py erase_flash flash monitor
 - **[Espressif Official Documents]** [Developing with ESP Zigbee SDK](https://docs.espressif.com/projects/esp-zigbee-sdk/en/latest/esp32/developing.html)
 - **[GITHUB]** [Zigbee SDK Repository](https://github.com/espressif/esp-zigbee-sdk)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -663,16 +659,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-

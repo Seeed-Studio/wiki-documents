@@ -1,6 +1,6 @@
 ---
-description: 本文介绍如何将 reTerminal E10xx 系列与 TRMNL 配合使用。
-title: reTerminal E10xx 与 TRMNL 配合使用
+description: 本文介绍如何将 reTerminal E Series ePaper Display 系列与 TRMNL 配合使用。
+title: reTerminal E Series ePaper Display 与 TRMNL 配合使用
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /cn/reterminal_e10xx_trmnl
 sidebar_position: 1
@@ -13,7 +13,7 @@ last_update:
 Wiki 内容正在开发中，目前暂不可用。
 :::
 
-# reTerminal E10xx 与 TRMNL 配合使用
+# reTerminal E Series ePaper Display 与 TRMNL 配合使用
 
 ## 什么是 [TRMNL](https://trmnl.app/)？
 
@@ -31,7 +31,7 @@ TRMNL 的集成将带来几个引人注目的好处：
 - **定期更新**：TRMNL 的积极开发意味着每周都会添加新功能和集成，不断扩展您显示屏的可能性
 - **开发者友好**：通过 TRMNL 的开放 API 和开发者工具，您可以为特定需求创建自定义插件和集成
 
-通过将 TRMNL 强大的平台与我们高质量的 E Ink® reTerminal E10xx 显示屏相结合，我们为用户提供了一个优雅的解决方案，用于创建个性化、低功耗的信息仪表板，既尊重他们的注意力，也尊重他们的时间。
+通过将 TRMNL 强大的平台与我们高质量的 E Ink® reTerminal E Series ePaper Display 显示屏相结合，我们为用户提供了一个优雅的解决方案，用于创建个性化、低功耗的信息仪表板，既尊重他们的注意力，也尊重他们的时间。
 
 ## TRMNL 入门
 
@@ -64,7 +64,7 @@ TRMNL 的集成将带来几个引人注目的好处：
 
 ### 固件烧录
 
-如果您仍在使用 reTerminal E10xx 的出厂固件，那么在将设备插入 TRMNL 之前，您需要使用以下方法烧录 TRMNL 固件。
+如果您仍在使用 reTerminal E Series ePaper Display 的出厂固件，那么在将设备插入 TRMNL 之前，您需要使用以下方法烧录 TRMNL 固件。
 
 #### 方法 1：通过 TRMNL 网络烧录器烧录（最简单）
 
@@ -123,7 +123,7 @@ TRMNL 的集成将带来几个引人注目的好处：
 
 5. **连接您的设备**
 
-   - 插入您的 reTerminal E10xx 设备。
+   - 插入您的 reTerminal E Series ePaper Display 设备。
 
 6. **构建和上传**
 
@@ -139,7 +139,7 @@ TRMNL 的集成将带来几个引人注目的好处：
 
 ## 配置 Wi-Fi 并向 TRMNL 发送播放列表
 
-要将您的 reTerminal E10xx 与 TRMNL 配合使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。这个过程称为"WiFi 配对模式"，通过一个简单的强制门户完成。请按照以下步骤操作：
+要将您的 reTerminal E Series ePaper Display 与 TRMNL 配合使用并发送播放列表，您首先需要将设备连接到您的 Wi-Fi 网络。这个过程称为"WiFi 配对模式"，通过一个简单的强制门户完成。请按照以下步骤操作：
 
 > 💡 **Wi-Fi 故障排除？** 如果您在将设备连接到 Wi-Fi 时遇到问题，请参考 [TRMNL 设备 Wi-Fi 故障排除指南](https://help.usetrmnl.com/en/articles/10193157-device-wifi-troubleshooting) 以获得常见网络和路由器兼容性问题的解决方案。
 
@@ -164,11 +164,11 @@ TRMNL 的集成将带来几个引人注目的好处：
 ### 输入您的 Wi-Fi 凭据
 
 - 在配置页面上，您将看到可用 Wi-Fi 网络的列表。
-- **选择您的 2.4GHz Wi-Fi 网络**（reTerminal E10xx 不支持 5GHz 网络）。
+- **选择您的 2.4GHz Wi-Fi 网络**（reTerminal E Series ePaper Display 不支持 5GHz 网络）。
 - 输入您的 Wi-Fi 密码。
 - 点击**保存**或**连接**。
 
-> ⚠️ **重要提示：** 确保使用 2.4GHz Wi-Fi 网络。reTerminal E10xx 不支持 5GHz 网络。
+> ⚠️ **重要提示：** 确保使用 2.4GHz Wi-Fi 网络。reTerminal E Series ePaper Display 不支持 5GHz 网络。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/218.png" style={{width:800, height:'auto'}}/></div>
 
@@ -189,7 +189,7 @@ TRMNL 的集成将带来几个引人注目的好处：
 
 ### 访问 TRMNL Web 界面
 
-在您的 reTerminal E10xx 连接到 Wi-Fi 并记录其 MAC 地址（设备 ID）后，您可以将其添加到您的 TRMNL 账户：
+在您的 reTerminal E Series ePaper Display 连接到 Wi-Fi 并记录其 MAC 地址（设备 ID）后，您可以将其添加到您的 TRMNL 账户：
 
 1. **打开 TRMNL Web 界面**  
    - 在您的电脑或移动设备上，打开浏览器并访问 [TRMNL web 界面](https://trmnl.app)。
@@ -208,36 +208,36 @@ TRMNL 的集成将带来几个引人注目的好处：
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/212.png" style={{width:700, height:'auto'}}/></div>
 
-5. **注册 reTerminal E10xx MAC 地址**
+5. **注册 reTerminal E Series ePaper Display MAC 地址**
 
-   为了在 reTerminal E10xx 和 TRMNL 之间建立连接，我们需要在 TRMNL 设置页面中绑定正确的设备 MAC 地址。
+   为了在 reTerminal E Series ePaper Display 和 TRMNL 之间建立连接，我们需要在 TRMNL 设置页面中绑定正确的设备 MAC 地址。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/223.png" style={{width:900, height:'auto'}}/></div>
 
    - 您可以在 PlatformIO 上传过程中检索 MAC 地址（检查上传日志），或从配置门户获取（它将在 Wi-Fi 设置后显示）。
    - 尽早添加您的 MAC 地址有助于确保顺畅的入门过程和设备管理。
 
-   - 然后您可以为您的 reTerminal E10xx 设置自定义名称，并根据需要调整其他设置。
+   - 然后您可以为您的 reTerminal E Series ePaper Display 设置自定义名称，并根据需要调整其他设置。
 
-您的 reTerminal E10xx 现在已链接到您的 TRMNL 账户！您现在可以直接从 TRMNL 界面向您的显示器发送播放列表、图像或其他内容。
+您的 reTerminal E Series ePaper Display 现在已链接到您的 TRMNL 账户！您现在可以直接从 TRMNL 界面向您的显示器发送播放列表、图像或其他内容。
 
-> 💡 **提示：** 如果您有多个 reTerminal E10xx，请使用它们各自的唯一设备 ID 为每个设备重复上述步骤。
+> 💡 **提示：** 如果您有多个 reTerminal E Series，请使用它们各自的唯一设备 ID 为每个设备重复上述步骤。
 
 :::caution
 在 TRMNL web 界面中添加您的设备后，请转到设备的设置页面并**关闭** **固件早期发布**和**启用 OTA 更新**。  
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/213.png" style={{width:700, height:'auto'}}/></div>
 
-如果这些选项保持启用状态，您的设备在连接到互联网时可能会自动从 TRMNL 下载并安装固件更新。这些更新是为官方 TRMNL 硬件设计的，**与 reTerminal E10xx 不兼容**。安装不兼容的固件可能会导致您的设备出现故障或无响应。
+如果这些选项保持启用状态，您的设备在连接到互联网时可能会自动从 TRMNL 下载并安装固件更新。这些更新是为官方 TRMNL 硬件设计的，**与 reTerminal E Series ePaper Display 不兼容**。安装不兼容的固件可能会导致您的设备出现故障或无响应。
 
-始终保持这两个选项禁用，以确保您的 reTerminal E10xx 稳定运行。
+始终保持这两个选项禁用，以确保您的 reTerminal E Series ePaper Display 稳定运行。
 :::
 
 ## 了解 TRMNL 播放列表功能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/221.png" style={{width:1000, height:'auto'}}/></div>
 
-TRMNL 播放列表功能允许您精确控制在 reTerminal E10xx 上显示什么内容以及何时显示。以下是主要部分和控件的详细说明，如上面的截图所示：
+TRMNL 播放列表功能允许您精确控制在 reTerminal E Series ePaper Display 上显示什么内容以及何时显示。以下是主要部分和控件的详细说明，如上面的截图所示：
 
 ### 播放列表概览
 - **播放列表标题**：在顶部，您可以看到您的 TRMNL 设备名称（例如，"MengDu's TRMNL"）。
@@ -246,7 +246,7 @@ TRMNL 播放列表功能允许您精确控制在 reTerminal E10xx 上显示什�
 - **添加组 / 添加插件**：使用这些按钮将您的播放列表组织成组或添加新的内容插件（如天气、日历或自定义文本）。
 
 ### 播放列表项目
-播放列表中的每一行代表将在您的 reTerminal E10xx 上显示的屏幕或小部件（仅供参考）：
+播放列表中的每一行代表将在您的 reTerminal E Series ePaper Display 上显示的屏幕或小部件（仅供参考）：
 
 1. **天气**
    - 显示您选择位置的当前天气信息。
@@ -269,11 +269,11 @@ TRMNL 播放列表功能允许您精确控制在 reTerminal E10xx 上显示什�
 
 > 📖 想了解更多？阅读[智能播放列表博客文章](https://usetrmnl.com/blog/smart-playlists)获取高级技巧和详细信息。
 
-这个灵活的播放列表系统让您完全自定义 reTerminal E10xx 显示的内容、更新频率和显示顺序。您可以混合搭配不同的插件来创建符合您需求的个性化仪表板。
+这个灵活的播放列表系统让您完全自定义 reTerminal E Series ePaper Display 显示的内容、更新频率和显示顺序。您可以混合搭配不同的插件来创建符合您需求的个性化仪表板。
 
 ## 探索 TRMNL 插件
 
-TRMNL 的插件系统是让您的 reTerminal E10xx 真正强大和可定制的关键。插件是模块化的应用程序或小部件，您可以将其添加到设备中以显示各种信息和内容。
+TRMNL 的插件系统是让您的 reTerminal E Series ePaper Display 真正强大和可定制的关键。插件是模块化的应用程序或小部件，您可以将其添加到设备中以显示各种信息和内容。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/222.png" style={{width:900, height:'auto'}}/></div>
 
@@ -283,7 +283,7 @@ TRMNL 的插件系统是让您的 reTerminal E10xx 真正强大和可定制的�
 
 ### 已连接的插件
 
-在插件页面的顶部，您将看到已连接到您的 TRMNL 账户的所有插件。这些插件已准备好添加到您的播放列表并在您的 reTerminal E10xx 上显示。示例包括：
+在插件页面的顶部，您将看到已连接到您的 TRMNL 账户的所有插件。这些插件已准备好添加到您的播放列表并在您的 reTerminal E Series ePaper Display 上显示。示例包括：
 - **天气**：显示当前天气状况。
 - **今年剩余天数**：年底倒计时。
 - **股票价格**：跟踪您喜爱的股票。
@@ -308,7 +308,7 @@ TRMNL 的插件系统是让您的 reTerminal E10xx 真正强大和可定制的�
 
 特别感谢整个 **TRMNL 团队** 对本项目的大力支持和宝贵帮助。特别地，我们要感谢 **Bogdan**、**Ryan Kulp**、**Fr3d** 以及所有其他团队成员在整个开发和文档编写过程中的奉献和协助。
 
-您的专业知识和承诺使这一集成成为可能，并极大地改善了 reTerminal E10xx 社区的用户体验。
+您的专业知识和承诺使这一集成成为可能，并极大地改善了 reTerminal E Series ePaper Display 社区的用户体验。
 
 
 ## 技术支持与产品讨论

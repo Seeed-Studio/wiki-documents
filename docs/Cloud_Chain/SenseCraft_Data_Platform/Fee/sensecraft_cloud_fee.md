@@ -14,11 +14,9 @@ last_update:
 ---
 
 
-
 SenseCaft cloud service is based on hardware devices using the LoRaWAN IoT low-power communication protocol. The LoRaWAN devices require metered prepayment to enable the data communication function. Users can prepay monthly or annually based on their product usage needs.
 
 ## Price Description
-
 
 |**Device Type**|**Free quota**|**30 days**|**90 days**|**365 days**|
 | :- | :- | :- | :- | :- |
@@ -40,31 +38,24 @@ Billing starts after the device is bound to the platform. If the device is unbou
 :::tip note
 Service purchases only support `Paypal`.
 :::
-## Subscription
 
+## Subscription
 
 ### SenseCraft App Subscription
 
-Go to the `Device` page and select the device for which you want to purchase the service. 
+Go to the `Device` page and select the device for which you want to purchase the service.
 Enter the device details and then the `Settings` interface. Select `Communication Service` to access the service purchase module.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/fee_1.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 :::tip
 The APP currently only supports single device purchases, for bulk service purchases, please see [SenseCAP Portal Subscription](https://wiki.seeedstudio.com/sensecraft_cloud_fee/#sensecap-portal-services-subscription).
 :::
 
-
-
 ### SenseCAP Portal Subscription
-
 
 Login [SenseCAP Portal](https://sensecap.seeed.cc).
 
 Go to `Devices` —> `Sensor Node` page, click the `Bulk Purchase services` button in the upper left corner of the list. Select the target device to purchase。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecap_mate_app/portal_fee_1.png" alt="pir" width={600} height="auto" /></p>
-
-

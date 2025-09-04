@@ -28,7 +28,7 @@ Throughout this course, we will delve into the usage of SenseCraft AI Platform a
 We will emphasize its graphical interface, which simplifies tasks such as data collection, preprocessing, and feature engineering, as well as selecting appropriate model architectures and training parameters.
 
 <div class="button_tech_support_container">
-<a href="https://wiki.seeedstudio.com/sensecraft_ai_main/" class="button_edgelab"></a> 
+<a href="https://wiki.seeedstudio.com/sensecraft_ai_main/" class="button_edgelab"></a>
 </div>
 
 By participating in this course, you will gain the following skills and knowledge:
@@ -43,29 +43,29 @@ Whether you are a beginner or an experienced developer with some machine learnin
 To complete the workshop, we need go through the instructions below, and each page you have a assignment to complete, make sure to done that before going next step.
 :::
 
-## Main Academic Reference from:
+## Main Academic Reference from
 
 <div class="button_tech_support_container">
-<a href="https://mlsysbook.ai/" class="button_ml_harvard_book"></a> 
+<a href="https://mlsysbook.ai/" class="button_ml_harvard_book"></a>
 </div>
 
 ## The Kit Used in Workshop
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">One Apply for XIAO ESP32S3 Sense</th>
       <th class="table-trnobg">Whole Workshop for ML Practical Class Kit</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110992064-machine-learning-practical-class-kit-all.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3-110992064-machine-learning-practical-class-kit-all.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Machine-Learning-Practical-Class-Kit-p-5951.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/Machine-Learning-Practical-Class-Kit-p-5951.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}>🖱️ Get One Now</font></span></strong></a></div></td>
         </tr>
     </table>
 </div>
@@ -124,24 +124,23 @@ These files are under the relative path of `docs/Topics/TinyML/TinyML_Workshop`.
 ## (Other Method)Edge Impulse
 
 <div class="button_tech_support_container">
-<a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a> 
+<a href="https://edgeimpulse.com/" class="button_edgeimpulse"></a>
 </div>
 
-Edge Impulse is a platform designed for developing and deploying TinyML models specifically for embedded devices. It provides tools for real-time data collection, model quantization, and optimization, enabling efficient deployment on devices like the XIAO ESP32S3. 
+Edge Impulse is a platform designed for developing and deploying TinyML models specifically for embedded devices. It provides tools for real-time data collection, model quantization, and optimization, enabling efficient deployment on devices like the XIAO ESP32S3.
 
 For more details, you can refer to our [documentation here](https://wiki.seeedstudio.com/edgeimpulse/). When performing [Key Word Spotting](https://wiki.seeedstudio.com/tinyml_course_Key_Word_Spotting/) and [Image Classification](https://wiki.seeedstudio.com/tinyml_course_Image_classification_project/).
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

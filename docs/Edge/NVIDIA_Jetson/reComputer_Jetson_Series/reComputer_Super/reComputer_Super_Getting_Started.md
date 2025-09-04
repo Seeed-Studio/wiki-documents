@@ -13,8 +13,9 @@ last_update:
 ---
 
 # Getting Started with reComputer Super
+
 The reComputer Super Series supercharges the reComputer Classic, delivering up to a 1.7x boost of 157 TOPS in AI performance. It features models with Jetson Orin Nano (11410311, 11410312) and Jetson Orin NX (11410313, 11410314).
-Designed for both development and production, it comes with a rich array of interfaces, including M.2 Key E/M, dual RJ45 Ethernet, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI, and CAN. With pre-installed Jetpack 6.2 and Linux OS BSP, it enables immediate market entry. 
+Designed for both development and production, it comes with a rich array of interfaces, including M.2 Key E/M, dual RJ45 Ethernet, Mini-PCIe, 4xUSB 3.2, HDMI 2.1, 4xCSI, and CAN. With pre-installed Jetpack 6.2 and Linux OS BSP, it enables immediate market entry.
 It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, Hugging Face, ONNX, PyTorch, and ROS2/1 at the edge seamlessly, even merging these multimodal capacity with robotics application to enrich Physical AI development.
 
 <div align="center">
@@ -26,20 +27,22 @@ It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, H
 <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 </a></div>
 
-
 ## Key Features  
 
 ### 🚀 ​**Performance Boost**  
+
 - ​**1.7x AI performance boost** over reComputer Classic, delivering ​**157 TOPS**  
 - Powered by ​**Jetson Orin Nano** (Models: 11410311, 11410312) and ​**Jetson Orin NX** (Models: 11410313, 11410314)  
 
 ### 🔌 ​**Rich Connectivity & Interfaces**  
+
 - ​**M.2 Key E/M** + ​**Mini-PCIe** for expandability  
 - ​**Dual RJ45 Ethernet** ports for high-speed networking  
 - ​**4x USB 3.2**, ​**HDMI 2.1**, ​**4x CSI** (Camera Serial Interface)  
 - ​**CAN bus** support for industrial/robotics applications  
 
 ### 🛠️ ​**Ready for Development & Production**  
+
 - Pre-installed ​**Jetpack 6.2** and ​**Linux OS BSP** for out-of-the-box deployment  
 - Seamless edge AI integration with frameworks:  
   - ​**NVIDIA**, ​**Hugging Face**, ​**ONNX**, ​**PyTorch**  
@@ -47,6 +50,7 @@ It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, H
 - Supports ​**multimodal AI** and ​**Physical AI** development  
 
 ### 🤖 ​**Edge AI & Robotics Optimized**  
+
 - Merges ​**LLM (Large Language Model)** capabilities with ​**Physical AI** at the edge  
 - Ideal for robotics, industrial automation, and real-time AI inference  
 - Accelerates ​**market entry** with pre-configured software stack  
@@ -56,14 +60,17 @@ It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, H
 ### ⚠️ Power & Accessory Guidelines  
 
 #### 1. ​**Power Adapter**  
+
 - ​**Jetson Orin Nano**: 12V 5A (5525 barrel jack)  
 - ​**Jetson Orin NX**: 19V 4.74A (5525 barrel jack)  
 - Always use ​**official adapters** and meet power requirements.  
 
 #### 2. ​**AC Power Cord**  
+
 - Use ​**region-specific** cloverleaf cords.  
 
 #### 3. ​**Accessories**  
+
 - Only ​**officially recommended** accessories (e.g., cameras, wireless modules) for optimal performance and compatibility.
 
 :::
@@ -241,16 +248,14 @@ It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, H
 </table>
 </div>
 
-
-
 ## Flash JetPack OS
 
 ### Supported Module
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
 
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
 
 ### Prerequisites
 
@@ -262,7 +267,7 @@ It also supports a wide range of LLM & Physical AI frameworks, such as NVIDIA, H
 
 We recommend that you use physical ubuntu host devices instead of virtual machines.
 Please refer to the table below to prepare the host machine.
-        
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
@@ -335,7 +340,7 @@ The Jetpack6 image file is approximately **14.1GB** in size and should take arou
 :::
 
 :::info
-To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value. 
+To verify the integrity of the downloaded firmware, you can compare the SHA256 hash value.
 
 On an Ubuntu host machine, open the terminal and run the command `sha256sum <File>` to obtain the SHA256 hash value of the downloaded file. If the resulting hash matches the SHA256 hash provided in the wiki, it confirms that the firmware you downloaded is complete and intact.
 :::
@@ -385,7 +390,7 @@ sudo tar xpf mfi_xxxx.tar.gz
 # For example: sudo tar xpf mfi_recomputer-super-orin-nx-16g-j401-6.2-36.4.3-2025-05-22.tar.gz
 ```
 
-**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD: 
+**Step 2:** Execute the following command to flash jetpack system to the NVMe SSD:
 
 ```bash
 cd mfi_xxxx
@@ -410,18 +415,16 @@ The flash command may run for 2-10 minutes.
 Please complete the **System Configuration** according to your needs.
 :::
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

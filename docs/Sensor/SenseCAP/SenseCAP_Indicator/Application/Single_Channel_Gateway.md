@@ -110,16 +110,19 @@ cd ~/this_project_directory/components/radio_drivers
 ```
 
 - SX126x driver(sx1261, sx1262, sx1268):
+
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
 - llcc68 driver:
+
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
 ```
 
 - lr11xx driver(lr1121):
+
 ```
 git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ```
@@ -127,6 +130,7 @@ git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ### Build Firmware
 
 **Step 1**: Enter the lorahub directory.
+
 ```
 cd ~/this_project_directory/lorahub
 ```
@@ -213,10 +217,9 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 Replace `port` and `COM` with the name of used serial port. If connection fails, see [Troubleshooting](https://docs.espressif.com/projects/esptool/en/latest/esp32/troubleshooting.html#troubleshooting).
 
-
 ### Flash with esptool-JS
 
-[Online esptool](https://espressif.github.io/esptool-js/) is recommended for flashing. 
+[Online esptool](https://espressif.github.io/esptool-js/) is recommended for flashing.
 
 **Step1**: Set Baud rate to 115200 and connect to correct port.
 
@@ -242,13 +245,11 @@ Replace `port` and `COM` with the name of used serial port. If connection fails,
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image.png" style={{width:480, height:'auto'}}/></div>
 
-
 **Step2**. Configure the parameters on the **LoRa Gateway** page, set LNS and port as "1700", click "configure", and then click "reboot".
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/62.png" style={{width:480, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image1.png" style={{width:480, height:'auto'}}/></div>
-
 
 ## Connect to The Things Network(TTN)
 
@@ -275,7 +276,6 @@ Replace `port` and `COM` with the name of used serial port. If connection fails,
 ## Connect to ChirpStack
 
 **Step 1:** Install ChirpStack refer to <a  href="https://www.chirpstack.io/docs/getting-started/debian-ubuntu.html" target="_blank"><span> Setup ChirpStack on Ubuntu/Debian</span></a>.
-
 
 **Step 2:** After installing ChirpStack, you need to add a single channel region definition to the `/etc/chirpstack` directory.
 
@@ -493,20 +493,20 @@ As you can see in the figure below, you can see that the T1000-A successfully up
 
 ## Resource
 
-* [One Channel Hub Firmware for SenseSAP Indicator](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
-* [Github Repository](https://github.com/Lora-net/one_channel_hub)
-* [Semtech Application Note](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
+- [One Channel Hub Firmware for SenseSAP Indicator](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
+- [Github Repository](https://github.com/Lora-net/one_channel_hub)
+- [Semtech Application Note](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

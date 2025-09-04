@@ -274,7 +274,6 @@ reTerminal DM 是一款 10.1 英寸开源工业 HMI——一个集成设备主�
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## 硬件概览

@@ -11,7 +11,6 @@ last_update:
 
 # FRIGATE NVR Project with Seeed Odyssey
 
-
 ## What is Frigate NVR?
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/ui.jpeg" /></div>
@@ -22,14 +21,14 @@ last_update:
 
 Frigate NVR is one of the most popular network video recorder project which adds local processed AI function to your security cameras, therefore not only you won't be charged with ridiculously amount of money for the cloud inference server, but also your valuable private camera stream date won't need to exposed to the wild internet. Frigate can process 100+ object detections per second with a single Google Coral TPU on board, you could customize the detect zones and masks to met your use case, it can also be integrated into Home Assistant and other automation platforms with minimum amount of setup effort to provide more security features and integrate Edge AI solutions to your valuable property.
 
-## Prerequisites 
+## Prerequisites
 
-* 1 x [Odyssey Blue: Quad Core Celeron J4125 Mini PC with 128GB external SSD](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products)
-* 1 x [Coral USB Accelerator](https://www.seeedstudio.com/coral-usb-accelerator-p-2899.html?queryID=8e8780bcccd9a9418d210fa8827db40f&objectID=2899&indexName=bazaar_retailer_products) (optional)
-* RTSP camera(s) stream
-* Keyboard and HDMI display
+- 1 x [Odyssey Blue: Quad Core Celeron J4125 Mini PC with 128GB external SSD](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products)
+- 1 x [Coral USB Accelerator](https://www.seeedstudio.com/coral-usb-accelerator-p-2899.html?queryID=8e8780bcccd9a9418d210fa8827db40f&objectID=2899&indexName=bazaar_retailer_products) (optional)
+- RTSP camera(s) stream
+- Keyboard and HDMI display
 
-Make sure [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) is connected to the same network or have access to your RTSP web camera. 
+Make sure [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) is connected to the same network or have access to your RTSP web camera.
 
 ## Getting started
 
@@ -50,10 +49,10 @@ Please open the terminal app and type in following command:
 ```bash
 docker -v
 ```
+
 you should see following output printed in the terminal:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/check_docker_version.png" /></div>
-
 
 **STEP 3:** Create frigate Docker file
 
@@ -64,9 +63,10 @@ Type in following command in terminal app to create frigate docker file with vi 
 2 cd ~/Documents/frigate
 3 vi frigate.yml
 ```
+
 Insert following lines in the frigate.yml file for frigate docker-compose setup, and replace the necessary part according to your enviroment setup.
 
-```bash 
+```bash
 version: "3.9"
 services:
   frigate:
@@ -159,15 +159,16 @@ cameras:
       width: 1280
       height: 720
 ```
+
 Please to go to the frigate documentation page [configuration](https://docs.frigate.video/configuration/index) section for all the configuration options
 
 In my case, beside the following list of configs that I have customized according to my setup, all the rest config settings are kept as default:
 
-*  MQTT: broker.hivemq.com
-*  Detector: [Coral USB Accelerator](https://www.seeedstudio.com/coral-usb-accelerator-p-2899.html?queryID=8e8780bcccd9a9418d210fa8827db40f&objectID=2899&indexName=bazaar_retailer_products)
-*  Cameras: rtsp://192.168.8.34:8080/unicast
-*  Tracking object: person, cup (Note: the list of object labels can be found at frigate documentation page [Objects](https://docs.frigate.video/configuration/objects) section)
-*  Record: when Person or Cup gets detected the during of the recording is 2s before detection and 2s after detection.
+- MQTT: broker.hivemq.com
+- Detector: [Coral USB Accelerator](https://www.seeedstudio.com/coral-usb-accelerator-p-2899.html?queryID=8e8780bcccd9a9418d210fa8827db40f&objectID=2899&indexName=bazaar_retailer_products)
+- Cameras: rtsp://192.168.8.34:8080/unicast
+- Tracking object: person, cup (Note: the list of object labels can be found at frigate documentation page [Objects](https://docs.frigate.video/configuration/objects) section)
+- Record: when Person or Cup gets detected the during of the recording is 2s before detection and 2s after detection.
 
 So my config.yml looks like this:
 
@@ -331,17 +332,13 @@ you should see similar output printed in the the terminal, you can find the vali
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/ip_address.png" /></div>
 
-
 once you have locate your [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products) ip address, please open your favorite web browser and type in the **ip-address:5000** in the address bar. In my case, the ip address is 192.168.8.57, therefore the url I put into the web browser address bar is 192.168.8.57:5000, you should land into the similar home page as the image below:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/home_page.png" /></div>
 
-
 To observe the live detection please click on the video feed and click Debug on the top right corner of the main view, then click SHOW OPTIONS button under the live feed, then check the Bonding Box or any other options you like to see on the live feed.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ODYSSEY-X86J4105-Projects/Frigate/live_detection.png" /></div>
-
-
 
 **Have fun to explore more options on Frigate with [Odyssey Blue](https://www.seeedstudio.com/odyssey-blue-j4125-128gb-p-4921.html?queryID=e375797339bbfbdd78f5c9f94af936ee&objectID=4921&indexName=bazaar_retailer_products), feel free the checkout other SBC option such as, the [reComputer](https://www.seeedstudio.com/catalogsearch/result/?q=recomputer) series to add Edge AI to your applications.**
 
@@ -350,12 +347,11 @@ To observe the live detection please click on the video feed and click Debug on 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

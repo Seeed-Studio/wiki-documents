@@ -22,63 +22,61 @@ no_comments: false # for Disqus
 
 This wiki showcases benchmarking of YOLOv8s for pose estimation and object detection on Raspberry Pi 5 and Raspberry Pi Compute Module 4. All tests utilize the same model (YOLOv8s), quantized to int8, with an input size of 640x640 resolution, batch size set to 1, and input from the same video at 240 FPS.
 
-
 ## Prepare Hardware
 
 ### For CM4
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer r1000</th>
-		<th>Raspberry Pi AI Kit</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer r1000</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### For Raspberry Pi 5
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>Raspberry Pi5 8GB</th>
-		<th>Raspberry Pi AI Kit</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>Raspberry Pi5 8GB</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ## Run this project
 
@@ -90,18 +88,19 @@ import TabItem from '@theme/TabItem';
 <TabItem value="Method 1" label="Pi5 Benchmark">
 
 ### Install AI kit on RPi5
+
 Please refer to [this](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)
 
 ### Install Hailo Software & Verify Installation
 
-#### update the system:
+#### update the system
 
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-#### Set pcie to gen2/gen3(gen3 is faster than gen2):
+#### Set pcie to gen2/gen3(gen3 is faster than gen2)
 
 Add following text to ```/boot/firmware/config.txt```
 
@@ -115,11 +114,12 @@ dtparam=pciex1
 dtparam=pciex1_gen=3
 
 ```
+
 :::note
 If you want to use gen2,please comment dtparam=pciex1_gen=3
 :::
 
-#### Install hailo-all and reboot:
+#### Install hailo-all and reboot
 
 Open terminal on the Raspberry Pi5, and input command as follows to install Hailo software.
 
@@ -127,7 +127,8 @@ Open terminal on the Raspberry Pi5, and input command as follows to install Hail
 sudo apt install hailo-all
 sudo reboot
 ```
-#### Check Software and Hardware:
+
+#### Check Software and Hardware
 
 Open terminal on the Raspberry Pi5, and input command as follows to check if hailo-all have been installed.
 
@@ -175,7 +176,6 @@ bash run.sh pose-estimation
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/Mo7AL7AjxwA" title="Raspberry Pi AI: YOLOv8 Pose Estimation - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
 </TabItem>
 
 <TabItem value="Method 2" label="Run object detection">
@@ -219,8 +219,7 @@ For pose estimation Please refer to the following wiki:
 
 </Tabs>
 
-
-## Result 
+## Result
 
 <Tabs>
 
@@ -240,17 +239,16 @@ For pose estimation Please refer to the following wiki:
 
 </Tabs>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

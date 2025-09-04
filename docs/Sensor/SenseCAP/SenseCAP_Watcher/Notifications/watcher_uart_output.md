@@ -45,7 +45,6 @@ If you are planning to use the Watcher to power the MCU, then you can use **3.3V
 If you are planning to use the MCU to power the Watcher, then you can need to use the **5V** input. (3.3V may not be enough for the Watcher to work properly)
 :::
 
-
 ## Enabling UART Functionality in Watcher
 
 To unlock the full potential of Watcher's UART capabilities, we first need to enable the UART functionality within the device. This is particularly useful in scenarios where Watcher is employed as an alarm system. When an alarm is triggered, Watcher can activate its UART communication, allowing it to transmit critical information such as captured images and recognition results to external devices for further processing and analysis.
@@ -69,8 +68,6 @@ Please choose whether you need to enable the output of images according to your 
 :::
 
 Once you have enabled the UART alarm function using either of the above methods, Watcher will output the necessary alarm information via UART whenever it detects the specified alarm content. Ensure that Watcher is connected to the appropriate receiving device, such as a microcontroller or a computer with a serial terminal, to capture and process the alarm information transmitted through UART.
-
-
 
 ## Reading UART Output from Watcher
 
@@ -135,6 +132,7 @@ When `output_format` is set to 1, the structure of the UART output packet is as 
 
 }
 ```
+
 Among them, **(x,y)** is the center point position of the recognized object, and **(w,h)** is the height and width of the recognition box, as shown in the figure below. **score** is confidence level, **target_cls_id** is recognized object id.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/xyhw.png" style={{width:400, height:'auto'}}/></div>
@@ -161,35 +159,35 @@ Learn how to connect Watcher to the XIAO ESP32 Series board and parse the UART d
 This tutorial supports the series XIAO:
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 :::tip
@@ -296,6 +294,7 @@ void loop() {
   }
 }
 ```
+
 The provided code demonstrates how to receive and parse JSON data from Watcher using the Arduino IDE and the ArduinoJson library. Here's a brief explanation of the code:
 
 1. The necessary library, **ArduinoJson**, is included to handle JSON parsing. You can search for and install it in Arduino's library manager.
@@ -418,11 +417,12 @@ if __name__ == "__main__":
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/68.png" style={{width:900, height:'auto'}}/></div><br />
 
 :::note
+
 1. My UART interface corresponds to `/dev/ttyAMA0`, if yours doesn't, please modify it yourself.
 
 2. This is a test script that you can use to check if the Raspberry Pi/Watcher's UART is working properly.
-:::
 
+:::
 
 The second Python script builds upon the first one and adds JSON parsing and saving of image data:
 
@@ -600,7 +600,6 @@ ls /dev/ttyTHS*
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/71.png" style={{width:700, height:'auto'}}/></div><br />
 
-
 The first Python script reads the JSON data from the Watcher over UART and prints it:
 
 ```python
@@ -623,9 +622,11 @@ if __name__ == "__main__":
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/70.png" style={{width:1000, height:'auto'}}/></div><br />
 
 :::note
+
 1. My UART interface corresponds to `/dev/ttyTHS0`, if yours doesn't, please modify it yourself.
 
 2. This is a test script that you can use to check if the reComputer/Watcher's UART is working properly.
+
 :::
 
 The second Python script builds upon the first one and adds JSON parsing and saving of image data:
@@ -748,7 +749,6 @@ After running the script:
 
 That's it! You have now learned how to connect the Watcher to a reComputer, read the UART data with Python, parse the JSON, and save the transmitted images. Feel free to experiment further and adapt the code to your specific use case on the reComputer platform.
 
-
 ## Resources
 
 - [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
@@ -764,7 +764,6 @@ That's it! You have now learned how to connect the Watcher to a reComputer, read
 - Watcher Quick Start Series 5# : Training a model for Watcher
 
 - [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
-
 
 ## Tech Support & Product Discussion
 

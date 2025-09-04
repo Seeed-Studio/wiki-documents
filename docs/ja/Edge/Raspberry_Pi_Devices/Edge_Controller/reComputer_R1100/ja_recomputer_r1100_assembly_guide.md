@@ -340,7 +340,6 @@ reComputer R1100は**垂直壁取り付け**をサポートしていますが、
     </tr>
   </tbody>
 </table>
-
 </div>
 
 

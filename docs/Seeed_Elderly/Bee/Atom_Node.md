@@ -21,17 +21,18 @@ Atom features wireless data transmission and mobile monitoring. Equipped with st
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Atom-Node-Black-Alloy-Limited-Edition-p-1494.html)
 
+## Feature
 
-##  Feature
 ---
-*   Mobile devices/Apps centered configure
-*   Open Source
-*   Flexible wireless networks topology from Ad-hoc to mesh
-*   Built-in battery
-*   A variety of Indicators, Easy to distinguish the work state
-*   Skin-Skeleton-Gut philosophy
+- Mobile devices/Apps centered configure
+- Open Source
+- Flexible wireless networks topology from Ad-hoc to mesh
+- Built-in battery
+- A variety of Indicators, Easy to distinguish the work state
+- Skin-Skeleton-Gut philosophy
 
-##  Specification
+## Specification
+
 ---
 <table cellspacing="0" width="80%">
 <tr>
@@ -146,7 +147,7 @@ Atom features wireless data transmission and mobile monitoring. Equipped with st
 </tr>
 </table>
 
-##  Topology
+## Topology
 
 Atom Node has sensor/actuator connectors for playing solo. With XBee or other open RF communication modules, It is also ready to talk in versatile networks topology when used in multiple. For example:
 
@@ -168,7 +169,7 @@ In this mode, The sensor and actuator are connected to two Atom Node. Atom Node 
 
 In this mode, The sensor is connected to one Atom Node(here we called it as AtomSensor). Other Atom Nodes receive the sensor data which is send by AtomSensor through RFBee and determine whether driver own actuator to execute related actions.
 
-##   The Structure
+## The Structure
 
 Node solutions are design align with SSG (skin skeleton gut) philosophy.
 Gut: electronics inside
@@ -191,7 +192,8 @@ Let's look forward to these prototype...
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Atom_Node_View1.jpg)![](https://files.seeedstudio.com/wiki/Atom_Node/img/Atom_Node_View2.jpg)
 
-##   The Hardware
+## The Hardware
+
 ---
 The system adopts Atmel 32U4 as the main chip. And equipped with standard Bee interface socket for wireless communication. It adopts 3.3V power supply, and the external power interface is Micro USB. When connected with external power source, it will convert to 3.3V through DC‐DC voltage‐adjustable‐circuit(based on chip TD6810),and supply power for the whole system. Meanwhile, 5V power source charge Lithium battery through CN3065 charge manager IC.
 
@@ -235,11 +237,11 @@ The system adopts Atmel 32U4 as the main chip. And equipped with standard Bee in
 
 - Low consumption design
 
-** Block Diagram**
+**Block Diagram**
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Beacon_ATOM_hardware.jpg)
 
-** Hardware design instruction**
+**Hardware design instruction**
 
 [https://www.seeedstudio.com/wiki/images/1/1b/Beacon_Atom_Hardware_Design_Analysis_.pdf](https://files.seeedstudio.com/wiki/Atom_Node/res/Beacon_Atom_Hardware_Design_Analysis_.pdf)
 
@@ -249,9 +251,11 @@ Now let's see what Atom Node looks like.
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Hardware_View.jpg)
 
-##   The firmware and software
+## The firmware and software
+
 ---
-###  The firmware
+
+### The firmware
 
 The firmware which have uploaded to Atom Node can driving  sensors and actuators.
 Sensors available for Atom Node:
@@ -463,13 +467,14 @@ Actuators available for Atom Node:
 </tr>
 </table>
 
-###   The software
+### The software
 
 There is an application program for configuring Atom Node modules. The program is running on Android devices. During the configuration process, the screen area of Android device will flash to transmit encoded parameters to the Atom Node via a light-sensitive transistor. The configuration interface is shown below:
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Configuration_Interface_.png)
 
-##  Usage
+## Usage
+
 ---
 Atom Node is an open-source hardware solution for the Internet of Things, which can support several Grove sensors and actuators to gather physical data and perform certain actions. The Atom Node needs to be configured before being put in use. After configuration, several modules can gather and transmit data wirelessly through RFBee.
 
@@ -480,20 +485,20 @@ We would like to take the temperature sensor as an example to illustrate the use
 **Preparatory work:**
 Using the device, you need at least an RFBee/Xbee (when using only one Atom Node, it is not necessary) and an Android device (the Atom Node does not include it). If you want the Atom Node to work, they are essential. And please make sure the baud rate of the RFBee/XBee is set at 57,600. If not, you need to modify the configuration, using your own method or upload the demo of [the Library file:RFBee](https://files.seeedstudio.com/wiki/Atom_Node/res/RFBee.zip) to RFBee. Then download [the application program package:BeaconUI](https://files.seeedstudio.com/wiki/Atom_Node/res/BeaconUI.zip) and install on an Android device.
 
-###   Demo 1: Use one Atom Node
+### Demo 1: Use one Atom Node
 
 Now using an Atom Node working in IFTTT mode, follow the steps below:
 
 <!-- *   Connect a Grove - Temperature to ADC port and Grove - Buzzer to PWM port using [Grove - Universal 4 Pin cables](/Grove_System/#grove-cables). -->
 
-*   Plug RFBee in the Bee Socket.
-*   Press the button on one side of the Atom Node to turn it on. The LED on the other side will light up. Then press the button again to make the Atom Node enter the configuration mode. Meanwhile, the user indicator is red.
+- Plug RFBee in the Bee Socket.
+- Press the button on one side of the Atom Node to turn it on. The LED on the other side will light up. Then press the button again to make the Atom Node enter the configuration mode. Meanwhile, the user indicator is red.
 
-*   Open the Atom Node app; you can see the following interface:
+- Open the Atom Node app; you can see the following interface:
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Interface1.jpg)
 
-*   Click the plus sign at the upper right corner to add a device, a selection panel will pop up.
+- Click the plus sign at the upper right corner to add a device, a selection panel will pop up.
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface2.jpg)
 
 Let's pause for a while to briefly introduce the interface.
@@ -504,55 +509,55 @@ Let's pause for a while to briefly introduce the interface.
 
 3) The rest of the configuration is for the Actuator. If you don't need one, choose NULL and the rest of the options are automatically ignored.
 
-
 Now let's configure it and set the device name as "temp".
 
-*   Refer to the picture below, Input "temp" as the device name. Choose "Grove - Temperature" in "Sensor" and choose "Grove - Buzzer" in Actuator. Choose any other options besides "Null" in "Sensor Radio Frequency", Input the "if" value and choose on in "then":
+- Refer to the picture below, Input "temp" as the device name. Choose "Grove - Temperature" in "Sensor" and choose "Grove - Buzzer" in Actuator. Choose any other options besides "Null" in "Sensor Radio Frequency", Input the "if" value and choose on in "then":
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface9.png)
 
 <font color="red">In indie mode, the trigger source should choose the device itself, therefore you should choose "temp" in the drop-down box of "Trigger from". But now there's only a "Null" option. Just ignore this problem. After you see the device name in the device list, you can reconfigure when the device name appears in  "Trigger from".</font>
 
-*   Place it on the Android device screen. Note that the light sensor is facing the screen. It is better that the brightness of the screen is set to about 35%.
+- Place it on the Android device screen. Note that the light sensor is facing the screen. It is better that the brightness of the screen is set to about 35%.
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface3.jpg)
 
 <!-- *   Click "Submit". It will start configuring. <font color="red">After successful configuration, the user indicator lights green and blinks.</font>If the configuration fails, click Again. If it keeps failing, you can refer to [FAQ](/Atom_Node). -->
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface4.jpg)
 
-*   We have completed the configuration, you can see it in the device list now.
+- We have completed the configuration, you can see it in the device list now.
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface5.jpg)
 
 <font color="red">Remember that you have just selected trigger source as Null. You need to reconfigure it.</font>
 
-*   Once the temperature sensor reads a value exceeding 28 ℃, the buzzer will sound.
+- Once the temperature sensor reads a value exceeding 28 ℃, the buzzer will sound.
 
-###   Demo 2: Use two Atom Node
+### Demo 2: Use two Atom Node
 
 Using two Atom Nodes working in IFTTT mode, you may follow the steps below:
 
-*   Connect a Grove - Temperature to the ADC port of Atom Node and plug an RFBee (Baud rate 57,600) to the Bee socket.
+- Connect a Grove - Temperature to the ADC port of Atom Node and plug an RFBee (Baud rate 57,600) to the Bee socket.
 
-*   Connect a Grove - Buzzer to the PWM port of another Atom Node and plug an RFBee to the bee Socket.
+- Connect a Grove - Buzzer to the PWM port of another Atom Node and plug an RFBee to the bee Socket.
 
-*   Open the Atom Node app. Click the plus sign on the upper right corner. We set the device name as "temp" and choose Grove - Temperature in "sensor" as follows:
+- Open the Atom Node app. Click the plus sign on the upper right corner. We set the device name as "temp" and choose Grove - Temperature in "sensor" as follows:
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface6.jpg)
 
-*   Turn on the Atom Node and enter configuration mode by pressing the button, then place it on the Android screen. Click Submit. It will start configuring.
+- Turn on the Atom Node and enter configuration mode by pressing the button, then place it on the Android screen. Click Submit. It will start configuring.
 
-*   After completing the configuration of one Atom Node, you can see it in the device list.
+- After completing the configuration of one Atom Node, you can see it in the device list.
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface5.jpg)
 
-*   Then configure the other Atom Node, connecting a Grove - Buzzer in a similar fashion.
+- Then configure the other Atom Node, connecting a Grove - Buzzer in a similar fashion.
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface7.jpg)
 
 When configuring the actuator, set the actuator's name. Then choose the trigger source of the actuator in "Trigger from". We would like to use the previously configured device "temp" to trigger the actuator: therefore we should choose "temp" in the drop-down box of "Trigger from". There are some other trigger conditions and actions, like "If" and "then" which help you to build a link between a certain condition and corresponding actions. By the way, the "If" values should always follow the data type of the Sensor you used.
 
-*   When the two Nodes have been configured, it will start working. Then you can see the user LED is green.
+- When the two Nodes have been configured, it will start working. Then you can see the user LED is green.
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Node_Interface8.jpg)
 
-##   Work Status Description
+## Work Status Description
+
 ---
 <table cellspacing="0">
 <tr>
@@ -589,57 +594,58 @@ When configuring the actuator, set the actuator's name. Then choose the trigger 
 </tr>
 </table>
 
-##  Upgrade the firmware
----
-###  Connect device and install the driver
+## Upgrade the firmware
 
-*   Download [the Atom Node Driver File](https://files.seeedstudio.com/wiki/Atom_Node/res/Atom_Node_Driver.zip) and save it.
-*   Connect the Micro-USB cable to the Atom Node and connect the other side of the Micro-USB connector to the computer's USB port.
-*   Wait for the new found hardware prompt.If the installer does not launch automatically, Navigate to the Windows Device Manager  and find the Seeeduino Lite listing.
+---
+
+### Connect device and install the driver
+
+- Download [the Atom Node Driver File](https://files.seeedstudio.com/wiki/Atom_Node/res/Atom_Node_Driver.zip) and save it.
+- Connect the Micro-USB cable to the Atom Node and connect the other side of the Micro-USB connector to the computer's USB port.
+- Wait for the new found hardware prompt.If the installer does not launch automatically, Navigate to the Windows Device Manager  and find the Seeeduino Lite listing.
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/A_Unknow_Device.jpg)
 
-*   Right click and choose Update driver. When asked to install automatically or from a specific location, select "Browse my computer for driver software".
+- Right click and choose Update driver. When asked to install automatically or from a specific location, select "Browse my computer for driver software".
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Update_Driver.jpg)
 
-*   Choose "Search for the best driver in these locations", and check the box "incude this location in the search". Click the Browse button and navigate to drive you have downloaded. Select the drivers folder an click **OK**.
+- Choose "Search for the best driver in these locations", and check the box "incude this location in the search". Click the Browse button and navigate to drive you have downloaded. Select the drivers folder an click **OK**.
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Browse_the_Driver.jpg)
 
 ![](https://files.seeedstudio.com/wiki/Atom_Node/img/Update_the_Driver.jpg)
 
-###  Modify File: boards.txt and  USBCore.cpp
+### Modify File: boards.txt and  USBCore.cpp
 
-*   Open up Arduino-1.0.1/hardware/arduino/cohttps://files.seeedstudio.com/wiki/Atom_Node/res/arduino directory, replace the file:USBCore.cpp with [the new USBCore.cpp](https://files.seeedstudio.com/wiki/Atom_Node/res/USBCore.zip).
+- Open up Arduino-1.0.1/hardware/arduino/cohttps://files.seeedstudio.com/wiki/Atom_Node/res/arduino directory, replace the file:USBCore.cpp with [the new USBCore.cpp](https://files.seeedstudio.com/wiki/Atom_Node/res/USBCore.zip).
 
-*   And replace file：boards.txt with [the new boards.txt](https://files.seeedstudio.com/wiki/Atom_Node/res/Boards-Atom_Node-.txt) in the path:Arduino-1.0.1/hardware/arduino.
+- And replace file：boards.txt with [the new boards.txt](https://files.seeedstudio.com/wiki/Atom_Node/res/Boards-Atom_Node-.txt) in the path:Arduino-1.0.1/hardware/arduino.
 
-###  Download the required library files and Atom.Node firmware
+### Download the required library files and Atom.Node firmware
 
-*   The latest Atom.Node firmware: [https://github.com/reeedstudio/Atom_Node](https://github.com/reeedstudio/Atom_Node)
+- The latest Atom.Node firmware: [https://github.com/reeedstudio/Atom_Node](https://github.com/reeedstudio/Atom_Node)
 
-*   The latest Atom.Node Library:  [https://github.com/reeedstudio/Atom_Node_Libraries](https://github.com/reeedstudio/Atom_Node_Libraries)
+- The latest Atom.Node Library:  [https://github.com/reeedstudio/Atom_Node_Libraries](https://github.com/reeedstudio/Atom_Node_Libraries)
 
-###  Upload program using Arduino IDE
+### Upload program using Arduino IDE
 
-*   Open the Atom_Node.ino of Atom.Node firmware file
+- Open the Atom_Node.ino of Atom.Node firmware file
 
-*   Select Seeeduino Node from the Tools | Board menu of the Arduino environment. And select the correct port.
-*   Compile and uplaod the code.
+- Select Seeeduino Node from the Tools | Board menu of the Arduino environment. And select the correct port.
+- Compile and uplaod the code.
 
 Now you have completed the firmware upgrade.
-
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Atom_Node/res/Atom_Node_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
+## Resources
 
-
-##  Resources
 ---
+
 - [Atom_Node_Eagle_File.zip](https://files.seeedstudio.com/wiki/Atom_Node/res/Atom_Node_Eagle_File.zip)
 
 - [Atom Node Library](https://github.com/reeedstudio/Atom_Node_Libraries)
@@ -655,11 +661,11 @@ Now you have completed the firmware upgrade.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

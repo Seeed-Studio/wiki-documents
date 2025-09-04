@@ -15,18 +15,18 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 The integration of GNSS into the 4G LTE module enhances its capabilities, enabling precise real-time positioning and reliable communication for IoT applications. With support for multi-constellation GNSS systems, the module delivers accurate and dependable location tracking, even in remote or underserved areas. These features make it ideal for scenarios like asset tracking, fleet management, and real-time remote monitoring.
+
 Paired with 4G LTE connectivity, this solution ensures seamless data transmission to cloud or control systems, enabling efficient management of critical use cases such as wildlife conservation, agriculture automation, and emergency response. This combination offers a scalable and cost-effective approach to location-based automation, suitable for industries requiring mobility and accessibility.
 
-
-## Hardaware Preperation 
+## Hardaware Preperation
 
 You need to connect your GNSS antenna. Furthermore, we will use a Python API to obtain the exact location in a human-readable and understandable format. Additionally, a 4G antenna should be installed.
 
-
 ## Hardware preparation
+
 <div class="table-center">
   <table align="center">
     <tr>
@@ -59,12 +59,12 @@ You need to connect your GNSS antenna. Furthermore, we will use a Python API to 
   </table>
 </div>
 
-
 :::note
 If the necessary drivers for communicating with AT commands are not installed, you will need to [install them](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#software-preparation)
 :::
 
 ## The Setup
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/gnss_setup.png" style={{width:800}}/></div>
 
 ## Using GNSS with Raspberry Pi 4G LTE Hat or Windows Qcom Tool
@@ -77,7 +77,6 @@ If the necessary drivers for communicating with AT commands are not installed, y
 sudo minicom -D /dev/ttyUSB2 #for minicom on raspberry
 ```
 
-
 - Enter the following command to activate GNSS:
 
 ```bash
@@ -89,6 +88,7 @@ AT+QGPS=1
 ```bash
 OK
 ```
+
 - This turns on the GNSS functionality.
 - After activation, NMEA sentences will be output from the "usbnmea" port by default.
 
@@ -99,45 +99,50 @@ OK
 ```bash
 AT+QGPSLOC=0
 ```
+
 **Example Response**:
 
 +QGPSLOC: 063416.400,3143.2951N,11713.0655E,0.6,224.9,2,162.57,17.6,9.5,110620,07 OK
 
 - **Explanation of the Response**:
-    - 063416.400: UTC Time (HHMMSS.SSS format)
-    - 3143.2951N: Latitude (31°43.2951'N)
-    - 11713.0655E: Longitude (117°13.0655'E)
-    - 0.6: Horizontal Dilution of Precision (HDOP)
-    - 224.9: Altitude in meters
-    - 2: Position fix type (2 = 2D fix, 3 = 3D fix)
-    - Other parameters provide detailed GNSS data.
+  - 063416.400: UTC Time (HHMMSS.SSS format)
+  - 3143.2951N: Latitude (31°43.2951'N)
+  - 11713.0655E: Longitude (117°13.0655'E)
+  - 0.6: Horizontal Dilution of Precision (HDOP)
+  - 224.9: Altitude in meters
+  - 2: Position fix type (2 = 2D fix, 3 = 3D fix)
+  - Other parameters provide detailed GNSS data.
 
 ### Step 3: Turn off GNSS
+
 - After retrieving the required data, deactivate GNSS to save power by entering:
 
 ```bash
 AT+QGPSEND
 ```
+
 **Expected Response**
 
-```bash 
+```bash
 OK
 ```
+
 - This command shuts down the GNSS module, conserving resources.
 
-
-## Python Code Implementation 
+## Python Code Implementation
 
 ### Step 1. Prepare the Directory and Virtual Environment
 
-
 - Open a terminal on your Raspberry Pi.
 - Create a new project folder and navigate into it:
+
 ```bash
 mkdir GNSS_EX
 cd GNSS_EX
 ```
+
 - Set up a Python virtual environment:
+
 ```bash
 python3 -m venv --system-site-packages env
 ```
@@ -165,9 +170,10 @@ pip install pyserial geopy
 ```bash
 usb_port = "/dev/ttyUSB2"
 ```
+
 - Save the file as test_gnss.py in the **GNSS_EX** folder.
 
-```bash 
+```bash
 
 import serial
 import time
@@ -263,6 +269,7 @@ automate_gnss(usb_port)
 ### Step 3. Run the Script
 
 - Open a terminal, ensure you're in the project directory:
+
 ```bash
 cd GNSS_EX
 ```
@@ -274,10 +281,12 @@ source env/bin/activate
 ```
 
 - Run the script using Python:
+
 ```bash
 python test_gnss.py
 ```
-- The output 
+
+- The output
   
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/gnss_output.PNG" style={{width:800}}/></div>
 
@@ -292,11 +301,11 @@ python test_gnss.py
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

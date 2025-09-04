@@ -13,7 +13,6 @@ last_update:
 
 ## Introduction
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-kit.gif" alt="pir" width={600} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -22,19 +21,15 @@ last_update:
     </a>
 </div>
 
-
 Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtech LR1110 for LoRa), [Grove Air530 GPS Module](https://www.seeedstudio.com/Grove-GPS-Air530-p-4584.html), [Grove0.96" OLED Display](https://www.seeedstudio.com/Grove-OLED-Display-0-96.html) and native compatibility with Meshtastic firmware, it's a plug and play dev kit for you to build your low-power Meshtatstic tracker device.
-
-
 
 ### Features
 
-* **Easy Setup**: Simply flash the firmware to experience the powerful features of the Meshtastic network.
-* **Real-time Positioning**: Equipped with a GPS (Air530) module, supporting high-precision GPS positioning.
-* **Information Display**: Features a Grove - OLED Display 0.96" screen for clear real-time data visualization.
-* **Extensive Expansion Interfaces**: Compatible with the Grove ecosystem, allowing easy expansion with more sensors and modules.
-* **Open-source Hardware and Software**: Supports secondary development and customization, providing rich development resources and Meshtastic community support.
-
+- **Easy Setup**: Simply flash the firmware to experience the powerful features of the Meshtastic network.
+- **Real-time Positioning**: Equipped with a GPS (Air530) module, supporting high-precision GPS positioning.
+- **Information Display**: Features a Grove - OLED Display 0.96" screen for clear real-time data visualization.
+- **Extensive Expansion Interfaces**: Compatible with the Grove ecosystem, allowing easy expansion with more sensors and modules.
+- **Open-source Hardware and Software**: Supports secondary development and customization, providing rich development resources and Meshtastic community support.
 
 ### Specification
 
@@ -71,8 +66,6 @@ Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtec
 <tr><td colspan="1"><b>Sensitivity (LSB/g)</b></td><td colspan="2">1000 (±2g) &#126; 83 (±16g)</td></tr>
 </table>
 
-
-
 **Grove - OLED Display 0.96 inch**
 
 |**Power Voltage (VCC)**|3\.3 / 5 V|
@@ -86,26 +79,21 @@ Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtec
 |**Dot Size**|0\.15(W)×0.15 (H) mm|
 |**Wide range of operating temperature**|-20&#126;70 ℃|
 
-
 ## Get Started
 
 ### Hardware Connection
-
 
 Connect the `Grove-GPS module` to the `UART` port, and the `Grove-OLED Display` to the `I2C` port.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/mesh-grove.png" alt="pir" width={800} height="auto" /></p>
 
-
-Power on the board. 
-
+Power on the board.
 
 ### Configuration
 
 #### Device Connection
 
 Different connection types, find out which client is best for your type of connection.
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -114,20 +102,17 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="ios" label="IOS App">
 
-* Download the `Meshtastic` App.<br/>
+- Download the `Meshtastic` App.<br/>
 
-* Select the target device on the Bluetooth panel.
+- Select the target device on the Bluetooth panel.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-radio.png" alt="pir" width={300} height="auto" /></p>
 
-
-* The display will show the name and PIN code
-
+- The display will show the name and PIN code
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-
-* Enter the code and then click `Pair` to connect the device.
+- Enter the code and then click `Pair` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pair1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -135,36 +120,29 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="android" label="Android App">
 
+- Download the `Meshtastic` App.<br/>
 
-* Download the `Meshtastic` App.<br/>
-
-* Click `+` and choose the target device.
+- Click `+` and choose the target device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-choose.png" alt="pir" width={600} height="auto" /></p>
 
-
-* The display will show the name and PIN code
-
+- The display will show the name and PIN code
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/pin-code.png" alt="pir" width={400} height="auto" /></p>
 
-
-* Enter the code and then click `OK` to connect the device.
+- Enter the code and then click `OK` to connect the device.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/click-ok.png" alt="pir" width={300} height="auto" /></p>
 
-  
 </TabItem>
 
 <TabItem value="web" label="Web Client">
-
 
 Open [Web Client](https://client.meshtastic.org/), click `New Connection`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-new.png" alt="pir" width={600} height="auto" /></p>
 
-
-* **Connect via Bluetooth**
+- **Connect via Bluetooth**
 
  Enable the Bluetooth of your PC, and select the `Bluetooth` tab to connect a new device.
 
@@ -174,63 +152,49 @@ Open [Web Client](https://client.meshtastic.org/), click `New Connection`.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-ble-pair.png" alt="pir" width={600} height="auto" /></p>
 
-* **Connect via Serial**
-
+- **Connect via Serial**
 
  Connect the board to your PC and select the `Serial` tab to connect a new device.
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-serial-new.png" alt="pir" width={600} height="auto" /></p>
 
  You can check the port via:
+
  ```
  ls /dev/cu.*
  ```
+
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/usb-port.png" alt="pir" width={600} height="auto" /></p>
 
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-serial-connect.png" alt="pir" width={600} height="auto" /></p>
-
 
 </TabItem>
 
 <TabItem value="cli" label="CLI">
 
-
-This library provides a command-line interface (CLI) for managing the user settings of Meshtastic nodes and provides an easy API for sending and receiving messages over mesh radios. 
-
-
+This library provides a command-line interface (CLI) for managing the user settings of Meshtastic nodes and provides an easy API for sending and receiving messages over mesh radios.
 
 </TabItem>
 </Tabs>
 
-
 #### Parameters Configuration
 
-
-
 In order to start communicating over the mesh, you must set your region. This setting controls which frequency range your device uses and should be set according to your regional location.
-
-
 
 <Tabs>
 <TabItem value="ios" label="IOS App">
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/set-region.png" alt="pir" width={600} height="auto" /></p>
-
-
 
 </TabItem>
 
 <TabItem value="android" label="Android App">
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/an-region.png" alt="pir" width={300} height="auto" /></p>
 
-
 </TabItem>
 <TabItem value="web" label="Web Client">
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/web-lora-config.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 </TabItem>
 
@@ -245,19 +209,12 @@ meshtastic --set lora.region <REGION-CODE>
 For example:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/cli-region.png" alt="pir" width={600} height="auto" /></p>
 
-
 </TabItem>
 </Tabs>
-
-
-
-
-
 
 **Region List**
 
 Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
-
 
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
@@ -285,13 +242,7 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 **EU_433** and **EU_868** have to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.
 :::
 
-
 Now that you have set the LoRa region on your device, you can continue with configuring any [additional configs](https://meshtastic.org/docs/configuration/) to suit your needs.
-
-
-
-
-
 
 ## Resource
 
@@ -310,11 +261,11 @@ Now that you have set the LoRa region on your device, you can continue with conf
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

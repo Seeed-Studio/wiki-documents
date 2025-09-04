@@ -104,7 +104,6 @@ Before we can move on to the installation steps, we need to make sure that our r
 The SPI interface on the Jetson-Nano is multiplexed with GPIO by default and is not enabled. Please refer to [**this guide**](/enable_spi_interface_on_jetsonnano) for instructions on how to enable it.
 :::
 
-
 ## Flashing JetPack OS via NVIDIA SDK Manager
 
 Next we will go through the tutorial about installing the system via NVIDIA SDK Manager. The an NVIDIA SDK Manager all-in-one tool that bundles developer software and provides an end-to-end development environment setup solution for NVIDIA SDKs. Thus, it is recommanded for the beginners.
@@ -275,8 +274,8 @@ Flashing L4T takes about 10 minutes, or more under a slow host computer.
 
 At this moment, we can unplug the jumper and then power up the reComputer again to use it.
 
-
 ## Flashing Jetpack OS with Seeed BSP
+
 :::info
 
 Recently, NVIDIA has updated the DRAM model, and Seeed has currently released a new firmware that is compatible with this module update.
@@ -284,6 +283,7 @@ Recently, NVIDIA has updated the DRAM model, and Seeed has currently released a 
 If, during the process of flashing the official NVIDIA image, the system freezes due to the DP signal (manifested as an inability to flash and getting stuck on the NVIDIA interface), it proves that you have purchased the updated module. In this case, you need to flash the factory image we currently provide.
 
 The current differences between this factory image and the original one are as follows:
+
 1. The DP configuration has been modified (to prevent the system from freezing due to the DP signal on some modules).
 2. The SD card slot is set to the available state by default, and there is no need to additionally modify the device tree to enable the SD card slot function.
 3. The image contains Jetpack4.6.6.
@@ -374,6 +374,7 @@ If more storage space is needed, we can use SD card to expand the capacity, or b
 :::
 
 ## Resources
+
 [reComputer J1010 datasheet](https://files.seeedstudio.com/wiki/reComputer/reComputer-J1010-datasheet.pdf)
 
 [reComptuer J101 Carrier Boards Schematic](https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer%20J101_V2.0_SCH_240822.pdf)
@@ -388,18 +389,16 @@ If more storage space is needed, we can use SD card to expand the capacity, or b
 
 [Seeed Jetson Devices One Page](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

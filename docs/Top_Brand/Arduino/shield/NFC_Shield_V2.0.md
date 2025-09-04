@@ -50,14 +50,14 @@ If you want to make some awesome projects by NFC Shield V2.0, here are some proj
 Features
 --------
 
--   Use of the ICSP header for SPI. This means that the shield works with the following Arduino development boards: Uno, Mega, Leonardo
--   Wireless NFC communication at 13.56MHz
--   SPI protocol - pin saving interface that requires only 4 pins
--   Input Voltage: 5V from the Arduino's 5V pin
--   Typical Current: 100mA
--   5cm max effective range
--   Supports P2P communication
--   Support ISO14443 Type A and Type B protocols
+- Use of the ICSP header for SPI. This means that the shield works with the following Arduino development boards: Uno, Mega, Leonardo
+- Wireless NFC communication at 13.56MHz
+- SPI protocol - pin saving interface that requires only 4 pins
+- Input Voltage: 5V from the Arduino's 5V pin
+- Typical Current: 100mA
+- 5cm max effective range
+- Supports P2P communication
+- Support ISO14443 Type A and Type B protocols
 
 Hardware Overview
 -----------------
@@ -68,11 +68,11 @@ The NFC shield's pins and other terminals are described below.
 
 **NFC shield interface**
 
--   D10 and D9 are used for SPI chip select (CS/SS). D10 is connected by default, to connect D9 soldering the SS pad to the D9 pad and scraping off the connection between SS and D10 is required.
--   D2 can be used to receive the shield's interrupt request (IRQ) pin signal. The interrupt is not connect by default, soldering of the "D2/INT0" and "IRQ" pads is required.
--   The shield gets its SPI interface (SPI MOSI, MISO, and SCK pins) from the Arduino's ICSP header directly, this means that the shield works the following Arduinos: Uno, Mega, and Leonardo.
--   The ANT1 terminal is where the NFC antenna (included with the shield) is connected to.
--   The shield is powered by 5V from the Arduino board.
+- D10 and D9 are used for SPI chip select (CS/SS). D10 is connected by default, to connect D9 soldering the SS pad to the D9 pad and scraping off the connection between SS and D10 is required.
+- D2 can be used to receive the shield's interrupt request (IRQ) pin signal. The interrupt is not connect by default, soldering of the "D2/INT0" and "IRQ" pads is required.
+- The shield gets its SPI interface (SPI MOSI, MISO, and SCK pins) from the Arduino's ICSP header directly, this means that the shield works the following Arduinos: Uno, Mega, and Leonardo.
+- The ANT1 terminal is where the NFC antenna (included with the shield) is connected to.
+- The shield is powered by 5V from the Arduino board.
 
 The NFC shield's antenna, included with the shield, is a separate PCB module that is attached to the shield via a cable. The antenna is the area used to receive and transmit information.
 
@@ -85,8 +85,8 @@ NFC Shield Setup
 
 ### Hardware Installation
 
-1.  Attach the NFC Antenna to the shield.
-2.  Stack the NFC Shield on your Arduino development board and connect the board to a PC using a USB cable.
+1. Attach the NFC Antenna to the shield.
+2. Stack the NFC Shield on your Arduino development board and connect the board to a PC using a USB cable.
 
 ### Software Libraries Installation
 
@@ -94,7 +94,7 @@ NFC Shield Setup
 
 - **Step 2.**  Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install **Seeed Arduino NFC** library for Arduino.
 
-- **Step 3.**  Open “WriteTag” code via the path: **File --> Examples --> WriteTag**. 
+- **Step 3.**  Open “WriteTag” code via the path: **File --> Examples --> WriteTag**.
 
 - **Step 4.**  Modify the code as below to enable SPI communication.
 
@@ -181,10 +181,10 @@ void loop() {
 
 To test the code:
 
-1.  Open the Arduino Serial monitor window
-2.  Set the baudrate to 115200
-3.  Hold an NFC tag over the NFC antenna area
-4.  The NFC shield will scan the tag and you should be able to see the NFC tag’s UID, tag type, and message (if available) in the serial monitor window. See the figure below.
+1. Open the Arduino Serial monitor window
+2. Set the baudrate to 115200
+3. Hold an NFC tag over the NFC antenna area
+4. The NFC shield will scan the tag and you should be able to see the NFC tag’s UID, tag type, and message (if available) in the serial monitor window. See the figure below.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/img/Nfc-pn532-output-example-1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -337,11 +337,9 @@ NFC tags are capable of storing data, the amount of data is dependent on each ta
 
 Upload the following code to your Arduino development board.
 
-
 :::note
 If your NFC tag is not properly formatted ("Message write failed" will be displayed in the serial comm window) you'll need to see if you tag can be formatted with the code in 
 :::
-
 
 #### Code
 ```cpp
@@ -623,21 +621,15 @@ A1: The cable we sold with NFC shield is 12cm. If you want a longer one yourself
 
 A2: NFC shield v2 is based on PN532 chip. Please note that the design only supports one antenna.
 
-
-
 ## NFC Shield v2.0 Eagle File Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_V2.0b_Eagle_files.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## NFC Shield v2.1 Eagle File Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/NFC_Shield_V2.0/res/NFC_Shield_v2.1_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
-
 
 Resources
 ---------
@@ -657,23 +649,22 @@ Resources
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://www.hackster.io/xiaobo__/paper-man-0a6833/embed" width={350} />
 
-
 **NFC Card Controlled Remote Car** Challenge your coordination: build your own NFC-controlled car
 
 <iframe frameBorder={0} height="327.5" scrolling="no" src="https://www.hackster.io/litliao/nfc-card-controlled-remote-car-af27c9/embed" width={350} />
 
-
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/NFC_Shield_V2.0 -->
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

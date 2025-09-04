@@ -20,28 +20,28 @@ Grove Vision AI V2 can be advanced surveillance devices that integrate artificia
 Before the tutorial content of this article begins, you may need to have the following hardware ready.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Vision AI V2 Kit</th>
-			<th>XIAO ESP32S3 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/00.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Vision AI V2 Kit</th>
+   <th>XIAO ESP32S3 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/00.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-V2-Kit-p-5852.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Upload AI Model to Grove Vision AI V2
@@ -110,7 +110,7 @@ Set your 2.4G wifi ssid and password.(Please pay attention to 2.4G wifi, not 5G)
 My esp32 borad package version is 2.0.14. If you found your program have some strange error, you can change your version to 2.0.14. It's because version compatibility issues.
 :::
 
-Open XIAO ESP32S3 sense PSRAM function and upload. When you use audio or video function of S3 you need to turn this on. Other types of XIAO don't need to do that. 
+Open XIAO ESP32S3 sense PSRAM function and upload. When you use audio or video function of S3 you need to turn this on. Other types of XIAO don't need to do that.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/webcamera/6.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -148,7 +148,7 @@ And then, you need to change the buffer size of uartBegin function from uint16_t
 
 Press and hold the Boot button and press the Reset Button, and then let go. That will reboot XIAO and will resolve this problem.
 
-### 3. Keeps coming up with dots.
+### 3. Keeps coming up with dots
 
 That's because network connection. Check your network if it's available? Is it 2.4G? Change another network or another antenna.
 

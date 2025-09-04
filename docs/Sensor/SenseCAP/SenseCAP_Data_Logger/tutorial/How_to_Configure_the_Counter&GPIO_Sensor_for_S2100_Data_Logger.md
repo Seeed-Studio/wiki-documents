@@ -11,6 +11,7 @@ last_update:
 ---
 
 # # Getting S2100 started with Counter&GPIO Sensor
+
 Let's get started on learning how to use the S2100 with Counter&GPIO sensor. Once we've got that down, we'll move on to the basics of S2100's application. This will give you a good idea of how to connect your own customized sensor in the future.
 
 ## Sensor Probe
@@ -22,6 +23,7 @@ Get these items ready:
 - 8 pin wire
 - Cross screwdriver(Cross recess No.2)
 - SenseCAP Mate APP
+
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/2.png"/></div>
 
 # Connect the Sensor Probe
@@ -119,6 +121,7 @@ Wire sequence of Rain Gauge sensor:
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/15.png"/></div>
 
 We've finished the wiring at this point. Now, let's set up the S2100 and configure it on our APP
+
 # Setup the S2100
 
 ## Connect to Sensor to App
@@ -155,7 +158,6 @@ Here we select the "SenseCAP for Helium" or "SenseCAP for TTN". The Frequency Pl
 SenseCAP for TTN platform needs to be used with SenseCAP LoRaWAN outdoor [gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Counter_GPIO_Sensor/21.png"/></div>
-
 
 ### Set the Interval
 

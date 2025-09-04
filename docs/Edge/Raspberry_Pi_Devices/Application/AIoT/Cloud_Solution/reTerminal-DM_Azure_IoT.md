@@ -12,7 +12,6 @@ last_update:
 
 <div style={{textAlign:'center'}}><iframe width={270} height={358} frameBorder={0} src="https://devicecatalog.azure.com/embed/c40637ad-a9bf-494e-8975-f4d37e43cf6f" title="reTerminal DM - Azure Certified Device" /></div>
 
-
 ## Introduction
 
 reTerminal DM is a Panel PC, HMI, PLC, IIoT Gateway all-in-one device powered by Raspberry Pi CM4, with
@@ -84,10 +83,10 @@ $ rm ./packages-microsoft-prod.deb
 4. [Install a container engine](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Cdebian#install-a-container-engine)
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install moby-engine
-$ sudo vi /etc/docker/daemon.json
-$ sudo systemctl restart docker
+sudo apt-get update
+sudo apt-get install moby-engine
+sudo vi /etc/docker/daemon.json
+sudo systemctl restart docker
 ```
 
 Set the default logging driver to the local logging driver as shown in the example below.
@@ -99,21 +98,20 @@ Set the default logging driver to the local logging driver as shown in the examp
 5. [Install the IoT Edge runtime](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Cdebian#install-the-iot-edge-runtime)
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install aziot-edge defender-iot-micro-agent-edge
+sudo apt-get update
+sudo apt-get install aziot-edge defender-iot-micro-agent-edge
 ```
 
 6. [Provision the device with its cloud identity](https://learn.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-symmetric?view=iotedge-1.4&tabs=azure-portal%2Cdebian#provision-the-device-with-its-cloud-identity)
 
 ```
-$ sudo iotedge config mp --connection-string 'PRIMARY_CONNECTION_STRING'
-$ sudo iotedge config apply
+sudo iotedge config mp --connection-string 'PRIMARY_CONNECTION_STRING'
+sudo iotedge config apply
 ```
 
 ### 3.2 Check the iotedge daemon
 
-Open the command prompt on your IoT Edge device , confirm that the Azure IoT edge Daemon is under
-running state
+Open the command prompt on your IoT Edge device , confirm that the Azure IoT edge Daemon is under running state
 
 ```
 sudo iotedge system status
@@ -125,7 +123,7 @@ Open the command prompt on your IoT Edge device, confirm that the module deploye
 running on your IoT Edge device
 
 ```
-$ sudo iotedge list
+sudo iotedge list
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Azure-IoT/reTerminal-DM-Azure-IoT-EDGE3.png" style={{width:900, height:'auto'}}/></div>
@@ -134,7 +132,6 @@ On the device details page of the Azure, you should see the runtime modules - ed
 SimulatedTemperatureSensor modules are under running status
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/reTerminal-DM-Azure-IoT/reTerminal-DM-Azure-IoT-EDGE4.png" style={{width:900, height:'auto'}}/></div>
-
 
 ## Additional Links
 
@@ -147,11 +144,11 @@ SimulatedTemperatureSensor modules are under running status
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

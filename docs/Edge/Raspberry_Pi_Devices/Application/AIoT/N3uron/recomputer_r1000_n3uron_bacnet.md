@@ -20,25 +20,25 @@ BACnet is a widely adopted protocol in Building Management Systems (BMS) due to 
 
 ## Prerequisites
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software
 
@@ -70,31 +70,32 @@ sudo nano /etc/dhcpcd.conf
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/nodered/network2.PNG" /></center>
 
-
 ## Connecting to a Room Control from N3uron using BACnet Client
 
 **Create the Module**
+
 - Navigate to `Config => Modules => Model => New Module`.
   
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_bacnet/Module.PNG" /></center>
 
 **Configure the Module**
+
 - Provide a name for the module (e.g., `BACnetClient`).
 - Assign the module type (`BacnetClient`).
 - Save the new configuration.
 
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_bacnet/bacnetmodule.PNG" /></center>
 
-
 **Create a New Channel**
+
 - Click the button on the left-hand side of the Model header.
 - Select `New Channel`.
 - Name the channel (e.g., `CH01`).
   
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_bacnet/channeladd.PNG" /></center>
 
-
 **Configure the BACnet Client**
+
 - Click the `Network interface discovery` button to the right of the Network interface field.
 - Select the corresponding interface of the network you want to connect to (e.g., use `0.0.0.0` for all interfaces).
 
@@ -109,6 +110,7 @@ sudo nano /etc/dhcpcd.conf
 - Restart the module.
 
 **Discover and Select the Device**
+
 - Click the `Browse Devices` button to the right of the Devices field.
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_bacnet/browsedevice.PNG" /></center>
@@ -124,7 +126,7 @@ sudo nano /etc/dhcpcd.conf
 - Once the module and the device are configured, click `Save`.
 - Restart the module.
 
-- The "BACnet Browser" in N3uron is opened, and after selecting the device, "Rebrowse" is clicked to view a list of objects. 
+- The "BACnet Browser" in N3uron is opened, and after selecting the device, "Rebrowse" is clicked to view a list of objects.
 
  <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_bacnet/browser.PNG" /></center>
 
@@ -134,8 +136,8 @@ sudo nano /etc/dhcpcd.conf
 
  At this point, the connection is ready and we can move on to creating new tags from scratch.
 
-
 ## Create a New Tag
+
 - In the Explorer panel, select `Tags`.
 - In the Model panel, create a new tag and name it `PRESENT_VALUE`.
 
@@ -170,11 +172,11 @@ Now, go to the Data/Real-Time section in the Navigation panel where you should b
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

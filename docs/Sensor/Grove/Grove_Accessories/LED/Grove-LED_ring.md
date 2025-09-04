@@ -13,8 +13,7 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-The Grove - RGB LED Ring (20 - WS2813 Mini) is a mini version of [WS2813 Digital RGB LED Ring](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html). The RGB LED Ring are 3535-sized LEDs with an embedded microcontroller inside the LED. The WS2813s are each addressable as the driver chip is located inside the LED. 
+The Grove - RGB LED Ring (20 - WS2813 Mini) is a mini version of [WS2813 Digital RGB LED Ring](https://www.seeedstudio.com/WS2813-Digital-RGB-LED-Ring-p-2871.html). The RGB LED Ring are 3535-sized LEDs with an embedded microcontroller inside the LED. The WS2813s are each addressable as the driver chip is located inside the LED.
 Each LED has a constrant current drive so the color will be very consistent even if the change of the voltage.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/zQj8RRJcZsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -22,7 +21,7 @@ Each LED has a constrant current drive so the color will be very consistent even
 <!-- <p style=":center"><a href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png" /></a></p> -->
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)
 
-## Feature 
+## Feature
 
 - The control circuit and RGB chip are integrated in a 3535 components, to form an external control pixel.
 - Intelligent Reverse-connection protection.
@@ -32,14 +31,12 @@ Each LED has a constrant current drive so the color will be very consistent even
 - Data transmitting at speeds of up to 800Kbps.
 - Dual-signal wires version, signal break-point continuous transmission.
 
-
 ### Signal break-point continuous transmission
 
 <!-- ![](https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Outsourcing/104020108/img/LED_RFBP.jpg" alt="pir" width={600} height="auto" /></p>
 
 As long as not two or more adjacent LEDs are broken, the remaining LEDs will be able to work normally.
-
 
 ## Specification
 
@@ -53,13 +50,10 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 |Operating Temperature|-25～85℃|
 |Storage Temperature|-40～105℃|
 
+## Typical applications
 
-
-## Typical applications 
-
-- Guardrail tube series, point light display series, flexible/rigid strips series, module series applications. 
+- Guardrail tube series, point light display series, flexible/rigid strips series, module series applications.
 - Lighting stage costumes, innovative gadgets or any other electronic products.
-
 
 ## Hardware Overview
 
@@ -68,7 +62,6 @@ As long as not two or more adjacent LEDs are broken, the remaining LEDs will be 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/pinout.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/pinout.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 ### Hardware Detail
 
 ___
@@ -76,8 +69,7 @@ ___
 
 WS2813-Mini is an intelligent control LED light source that the control circuit and RGB chip are integrated in a package of 3535 components. Its internal include intelligent digital port data latch and signal reshaping amplification drive circuit. Also include a precision internal oscillator and a 12V voltage programmable constant current control part, which achieves highly consistent color effect.
 
-
-## Platforms Supported 
+## Platforms Supported
 
 <!-- | Arduino                                                                                             | Raspberry Pi                                                                                             |                                                                                                 |                                                                                                          |                                                                                                    |
 |-----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -85,8 +77,9 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
-    	The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
+     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
 
 ## Getting Started
@@ -95,19 +88,16 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 
 #### Hardware
 
-
 | Seeeduino V4.2 | Base Shield| Grove - RGB LED Ring| Grove - Button|
 |--------------|-------------|-----------------|---------------|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/seeeduino_v4.2.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/base_shield.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/thumbnail.jpg" alt="pir" width={600} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/Grove_Button/img/button_s.jpg" alt="pir" width={600} height="auto" /></p>
 |[Get ONE Now](https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html)|[Get ONE Now](https://www.seeedstudio.com/Base-Shield-V2-p-1378.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Min-p-3227.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Button-p-766.html)
 
-
 :::note
-    	**1.** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
+     **1.** Please plug the USB cable gently, otherwise you may damage the port. Please use the USB cable with 4 wires inside, the 2 wires cable can't transfer data. If you are not sure about the wire you have, you can click [here](https://www.seeedstudio.com/Micro-USB-Cable-48cm-p-1475.html) to buy 
     
-    	**2.** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
+     **2.** Each Grove module comes with a Grove cable when you buy. In case you lose the Grove cable, you can click [here](https://www.seeedstudio.com/Grove-Universal-4-Pin-Buckled-20cm-Cable-%285-PCs-pack%29-p-936.html) to buy.
 :::
-
 
 - **Step 1.** Connect Grove - Button to port D2 of Grove - Base Shield.
 
@@ -116,37 +106,34 @@ WS2813-Mini is an intelligent control LED light source that the control circuit 
 - **Step 3.** Plug Grove - Base Shield into Seeeduino.
 
 :::caution
- 		**1.** If you are using Arduino UNO, connect to the DC power supply is recommended to avoid the maximum Vcc voltage ripple to exceed 100mV.
+   **1.** If you are using Arduino UNO, connect to the DC power supply is recommended to avoid the maximum Vcc voltage ripple to exceed 100mV.
 
- 		**2.** If you are using Seeeduino V4.2, you do not need to connect to DC power supply. However, if you change to supply Grove with 3V3 the motherboard will restart when power is on. Please note, this will not affect the usage.
+   **2.** If you are using Seeeduino V4.2, you do not need to connect to DC power supply. However, if you change to supply Grove with 3V3 the motherboard will restart when power is on. Please note, this will not affect the usage.
 :::
 
 - **Step 4.** Connect Seeeduino to PC via a USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/with_ard.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/with_ard.jpg" alt="pir" width={600} height="auto" /></p>
 
-
-
 :::warning
-    	Hot swap is not supported, you may want to disconnect arduino from the power source before any replacement or change.
+     Hot swap is not supported, you may want to disconnect arduino from the power source before any replacement or change.
 :::
 
 Now, we will demonstrate you how to run the code 'buttoncycler'. This is a demonstration on how to use an additional input device(button) to trigger changes on your LED ring. Similar procedure if you wish to run other programs, the only change is you need to disconnect button from port D2 of base shield as you are not using it.
 
-
 #### Software
 
 :::note
-		If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
+  If this is the first time you work with Arduino, we strongly recommend you to see [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) before the start.
 :::
+
 - **Step 1.** Download the [Grove-RGB_LED_Ring-20-WS2813Mini](https://github.com/Seeed-Studio/Seeed_LED_Ring.git) Library from Github.
 
 - **Step 2.** Refer to [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Restart the Arduino IDE. Open the example, you can open it in the following three ways：
-    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Adafruit NeoPixel-->buttoncycler**. 
+    1. Open it directly in the Arduino IDE via the path: **File --> Examples -->Adafruit NeoPixel-->buttoncycler**.
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard1.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -154,17 +141,17 @@ Now, we will demonstrate you how to run the code 'buttoncycler'. This is a demon
     <!-- ![](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard2.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/ard2.jpg" alt="pir" width={600} height="auto" /></p>
 
-    3. Or, you can just click the icon 
+    3. Or, you can just click the icon
     <!-- ![](https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg) -->
       <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/copy.jpg" alt="pir" width={50} height="auto" /></p>
      in upper right corner of the code block to copy the following code into a new sketch in the Arduino IDE.
-
 
 :::note
      Due to the current limitation, the brightness of the LED is limited in the program. If you insist on adjusting the brightness limit, you can modify the setBrightness() function. But this may cause the light to not work properly.
 :::
 
 #### ⁨buttoncycler⁩
+
 After run this code, when you press the button it will change to a new pixel animation.  Note that you need to press the button once to start the first animation!
 
 ```cpp
@@ -333,11 +320,11 @@ uint32_t Wheel(byte WheelPos) {
 
 ```
 
-!!! Attention 
-		The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.
+!!! Attention
+  The library file may be updated. This code may not be applicable to the updated library file, so we recommend that you use the first two methods.
 
 :::success
-		If everything goes well, you will be able to see the first animation of the LED ring, and you will be able to trigger the new animation once you press the button.
+  If everything goes well, you will be able to see the first animation of the LED ring, and you will be able to trigger the new animation once you press the button.
 :::
 
 **Other Examples:**
@@ -610,7 +597,6 @@ uint8_t blue(uint32_t c) {
 
 ```
 
-
 **Simple**
 
 ```cpp
@@ -661,7 +647,6 @@ void loop() {
 }
 
 ```
-
 
 **Simple New Operator**
 
@@ -719,7 +704,6 @@ void loop() {
 }
 
 ```
-
 
 **Strand test**
 
@@ -864,11 +848,8 @@ uint32_t Wheel(byte WheelPos) {
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/res/Grove%20-%20RGB%20LED%20Ring%20(20%20-%20WS2813%20Mini).zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -878,19 +859,16 @@ uint32_t Wheel(byte WheelPos) {
 
 - **[PDF]** [Datasheet WS2813- Mini](https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/res/WS2813-Mini.pdf)
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

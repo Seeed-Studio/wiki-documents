@@ -1,0 +1,10 @@
+position: 4 # float position is supported
+label: 'Descripción del Producto'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: 'product_overview_with_watcher'
+link:
+  type: generated-index
+  slug: es/product_overview_with_watcher
+  title: Descripción del Producto Watcher
+  description: La Descripción del Producto Watcher examina en detalle los componentes de hardware y software, funciones e interacciones del SenseCAP Watcher.

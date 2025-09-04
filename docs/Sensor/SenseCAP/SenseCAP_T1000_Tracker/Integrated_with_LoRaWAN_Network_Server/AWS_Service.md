@@ -21,7 +21,6 @@ Login to [AWS IoT console](https://console.aws.amazon.com/iot/home)
 If you do not have an AWS account, click [here](https://portal.aws.amazon.com/billing/signup) to create one.
 :::
 
-
 ## Add Gateway
 
 Navigate to `Internet of Things`, then click `IoT Core`.
@@ -32,13 +31,10 @@ On the left menu,select `LPWAN devices` → `Gateways`, click `Add gateway`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-gateway.png" alt="pir" width={800} height="auto" /></p>
 
-
 `Gateway's EUI`: The EUI of your gateway, you can find it on the device label.<br/>
 `Frequency`: The gateway's frequency band.<br/>
 `Name`: Name your gateway(optional)<br/>
 `SubBand`: Optionally, you can also specify LoRaWAN configuration data such as the subbands that you want to use and filters that can control the flow of traffic. For more information, see [Configure position of wireless resources with AWS IoT Core for LoRaWAN](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html).
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gateway-eui.png" alt="pir" width={800} height="auto" /></p>
 
@@ -60,16 +56,14 @@ There shoule be four files inside, you'll use them later to configure the gatewa
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/files.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### Gateway Permission
 
-If you haven't created the IoTWirelessGatewayCertManagerRole IAM role for your account, create the role before you continue adding the gateway. 
+If you haven't created the IoTWirelessGatewayCertManagerRole IAM role for your account, create the role before you continue adding the gateway.
 Your gateways won't be able to communicate with AWS IoT without this role.
 
 Choose the Role: `IoT Wireless Gateway Cert Manager Role`, then submit the configuration.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/permissions.png" alt="pir" width={800} height="auto" /></p>
-
 
 Copy the CUPS URL, we will use it in the next step.
 
@@ -87,21 +81,17 @@ Navigate to `LoRa` > `LoRa Network`.
 `URL`: The CUPS URL we copied before<br/>
 `Authentication Mode`: TLS Server and Client Authentication
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS21.PNG" alt="pir" width={800} height="auto" /></p>
 
 Copy the content of the certificate file we downloaded before(the certificate can be opened in text form).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
-
-
 Navigate to the Gateways page and choose the gateway you've added.
 
 In the LoRaWAN specific details section of the Gateway details page, you'll see the connection status and the date and time the last uplink was received.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gate-connected.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## Add Profiles
 
@@ -115,7 +105,6 @@ Navigate to `Devices` > `Profiles`, click `Add device profile`.
 
 Provide a Device profile name, select the Frequency band (RfRegion)that you're using for the device and gateway, and keep the other settings to the default values.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/proflie2.png" alt="pir" width={800} height="auto" /></p>
 
 ### Add service profiles
@@ -127,7 +116,6 @@ Navigate to `Devices` > `Profiles`, click `Add service profile`
 It's recommend that you leave the setting `AddGWMetaData` enabled so that you'll receive additional gateway metadata for each payload, such as RSSIand SNR for the data transmission.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Add Destination
 
@@ -157,10 +145,9 @@ Navigate to `LPWAN devices` > `Devices`, click `Add wireless device`.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
 
-Select the device profile and destination you created in the previous step. 
+Select the device profile and destination you created in the previous step.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
-
 
 Navigate to the Devices page and choose the device you added before.
 
@@ -168,9 +155,7 @@ In the Details section of the Wireless devices details page, you'll see the date
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
-
 ## Configure the decoder
-
 
 ### Create Message Rules
 
@@ -258,5 +243,3 @@ The raw payload of T1000 Tracker publish from `t1000-raw` and the decoded data p
 ## Resource
 
 [SenseCAP T1000 Tracker Decoder for AWS](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/AWS/SenseCAP_T1000_AWS_Decoder.js)
-
-

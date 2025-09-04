@@ -1,6 +1,6 @@
 ---
-description: This article describes how to get the reTerminal E10xx series to work with Home Assistant and ESPHome.
-title: reTerminal E10xx Work with ESPHome for Home Assistant
+description: This article describes how to get the reTerminal E Series ePaper Display to work with Home Assistant and ESPHome.
+title: reTerminal E Series ePaper Display Work with ESPHome for Home Assistant
 image: https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.webp
 slug: /reterminal_e10xx_with_esphome
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E10xx Work with ESPHome for Home Assistant
+# reTerminal E Series ePaper Display Work with ESPHome for Home Assistant
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/44.jpg" style={{width:700, height:'auto'}}/></div><br />
 
@@ -42,9 +42,9 @@ Home Assistant is a powerful open-source home automation platform that allows yo
     <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong></a>
 </div>
 
-### Why reTerminal E10xx with Home Assistant?
+### Why reTerminal E Series ePaper Display with Home Assistant?
 
-The reTerminal E10xx is an excellent companion for Home Assistant for several reasons:
+The reTerminal E Series ePaper Display is an excellent companion for Home Assistant for several reasons:
 
 1. **Energy Efficiency**: The e-paper display only consumes power when updating content, making it perfect for displaying persistent information like weather forecasts, calendar events, or system status.
 
@@ -54,11 +54,11 @@ The reTerminal E10xx is an excellent companion for Home Assistant for several re
 
 4. **Flexible Integration**: Through ESPHome, the display seamlessly integrates with Home Assistant, allowing you to show any data from your smart home system in an elegant, always-visible format.
 
-These advantages make the reTerminal E10xx an ideal choice for creating an energy-efficient, always-on information display for your Home Assistant setup.
+These advantages make the reTerminal E Series ePaper Display an ideal choice for creating an energy-efficient, always-on information display for your Home Assistant setup.
 
 ### ESPHome Integration
 
-ESPHome is an open-source firmware creation tool specifically designed for ESP8266/ESP32 devices. It allows you to create custom firmware using simple YAML configuration files, which can then be flashed to your device. For the reTerminal E10xx, ESPHome serves as the essential middleware that enables communication between the device and Home Assistant.
+ESPHome is an open-source firmware creation tool specifically designed for ESP8266/ESP32 devices. It allows you to create custom firmware using simple YAML configuration files, which can then be flashed to your device. For the reTerminal E Series, ESPHome serves as the essential middleware that enables communication between the device and Home Assistant.
 
 The system works by converting your YAML configuration into fully-featured firmware that runs on your ESP device. This firmware handles all the complex tasks of connecting to your network, communicating with Home Assistant, and controlling the ePaper display. When combined with Home Assistant, ESPHome provides a robust platform for creating sophisticated home automation displays and controls.
 
@@ -73,7 +73,7 @@ Before the tutorial content of this article begins, you may need to have the fol
 <div class="table-center">
   <table align="center">
     <tr>
-      <th>reTerminal E10xx</th>
+      <th>reTerminal E Series</th>
       <th>Home Assistant Green</th>
     </tr>
     <tr>
@@ -162,11 +162,14 @@ This is a very basic example and will show "Hello World!" on the display.
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
 ```yaml
 # define font to display words
 font:
   - file: "gfonts://Inter@700"
-    id: font1
+    id: myFont
     size: 24
 
 # define SPI interface
@@ -186,10 +189,57 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 30s
+    update_interval: 300s
     lambda: |-
-      it.print(0, 0, id(font1), "Hello World!");
+      it.print(0, 0, id(myFont), "Hello World!");
 ```
+
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/lublak/esphome
+      ref: dev
+    components: [ waveshare_epaper ]
+
+# define font to display words
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      # const auto RED     = Color(255, 0,   0,   0);
+      # const auto GREEN   = Color(0,   255, 0,   0);
+      # const auto BLUE    = Color(0,   0,   255, 0);
+      # const auto YELLOW  = Color(255, 255, 0,   0);
+      it.print(0, 0, id(myFont), BLACK, "Hello World!");
+```
+
+</TabItem>
+</Tabs>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/36.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -280,7 +330,7 @@ Wait a moment and you will see the feedback like the following image. If it fail
 
 ### Drawing Simple Graphics
 
-This example YAML code configures the SPI interface and the reTerminal E10xx for an ESPHome project. The `lambda` section contains drawing commands that render simple shapes on the screen:
+This example YAML code configures the SPI interface and the reTerminal E Series ePaper Display for an ESPHome project. The `lambda` section contains drawing commands that render simple shapes on the screen:
 
 - Two rectangles (one at position (10, 10) with size 100x50, and another at (150, 10) with size 50x50)
 - One circle at (250, 35) with a radius of 25
@@ -288,6 +338,9 @@ This example YAML code configures the SPI interface and the reTerminal E10xx for
 - One filled circle at (250, 105) with a radius of 25
 
 You can use this example by copying the code below and pasting it after the `captive_portal` code line in your Yaml file.
+
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 spi:
@@ -306,7 +359,7 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 30s
+    update_interval: 300s
     lambda: |-
       it.rectangle(10, 10, 100, 50);
       it.rectangle(150, 10, 50, 50);
@@ -320,12 +373,72 @@ When you see the feedback like the following image, it means the code is running
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/38.jpg" style={{width:600, height:'auto'}}/></div>
 
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/lublak/esphome
+      ref: dev
+    components: [ waveshare_epaper ]
+
+# define font to display words
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+      const auto WHITE   = Color(255, 255, 255, 0);
+
+      it.rectangle(10, 10, 100, 50, BLACK);
+      it.rectangle(150, 10, 50, 50, RED);
+      it.circle(250, 35, 25, GREEN);
+      it.filled_rectangle(10, 80, 100, 50, BLUE);
+      it.filled_rectangle(150, 80, 50, 50, YELLOW);
+      it.filled_circle(250, 105, 25, WHITE);
+```
+
+When you see the feedback like the following image, it means the code is running successfully.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/144.jpg" style={{width:600, height:'auto'}}/></div>
+
+</TabItem>
+</Tabs>
+
+
+
 Due to space constraints, we will not elaborate too much on the drawing methods and principles of other patterns, if necessary, the reader is recommended to read [ESPHome in this part of the detailed examples](https://esphome.io/components/display/).
 
 
 ### Getting values from Home Assistant for display
 
-To display weather data on your reTerminal E10xx device, you'll need to access temperature, weather conditions, and wind speed data from Home Assistant. The Open-Meteo integration provides reliable weather data that can be accessed through Developer Tools.
+To display weather data on your reTerminal E Series ePaper Display device, you'll need to access temperature, weather conditions, and wind speed data from Home Assistant. The Open-Meteo integration provides reliable weather data that can be accessed through Developer Tools.
 
 #### Installing Open-Meteo Integration
 
@@ -359,7 +472,7 @@ Step 3. Click on the entity to view all available attributes. The key weather at
 
 #### Using Weather Data in ESPHome
 
-To use this weather data in your ESPHome configuration for the reTerminal E10xx, you'll need to set up a Home Assistant API connection in your ESPHome YAML configuration:
+To use this weather data in your ESPHome configuration for the reTerminal E Series, you'll need to set up a Home Assistant API connection in your ESPHome YAML configuration:
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -384,7 +497,7 @@ sensor:
     internal: true
 ```
 
-This configuration creates sensor entities in your ESPHome device that pull data from the Home Assistant weather integration. You can then use these sensors to update your reTerminal E10xx display with the current weather information.
+This configuration creates sensor entities in your ESPHome device that pull data from the Home Assistant weather integration. You can then use these sensors to update your reTerminal E Series ePaper Display display with the current weather information.
 
 :::tip
 For forecast data, you'll need to use the `weather.open_meteo_forecast` entities which contain predicted values for future days.
@@ -392,6 +505,8 @@ For forecast data, you'll need to use the `weather.open_meteo_forecast` entities
 
 Finally, add the code for the display section to use these values above. The complete code is as follows:
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
 
 ```yaml
 # Example ESPHome configuration to retrieve weather data
@@ -437,7 +552,7 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 30s
+    update_interval: 300s
     lambda: |-
       //print info in log
       ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
@@ -449,29 +564,108 @@ display:
       it.printf(100, 200, id(myFont), "%.1f", id(myWindBearing).state);
 ```
 
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/lublak/esphome
+      ref: dev
+    components: [ waveshare_epaper ]  
+
+# Example ESPHome configuration to retrieve weather data
+# Get info from HA, as string format
+text_sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWeather
+    internal: true
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myTemperature
+    attribute: "temperature"
+    internal: true
+
+# Get info from HA, as float format
+sensor:
+  - platform: homeassistant
+    entity_id: weather.home
+    id: myWindBearing
+    attribute: "wind_bearing"
+    internal: true
+
+font:
+  - file: "gfonts://Inter@700"
+    id: myFont
+    size: 24
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      // const auto RED     = Color(255, 0,   0,   0);
+      // const auto GREEN   = Color(0,   255, 0,   0);
+      // const auto BLUE    = Color(0,   0,   255, 0);
+      // const auto YELLOW  = Color(255, 255, 0,   0);
+
+      //print info in log
+      ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
+      ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
+      ESP_LOGD("epaper", "pressure: %.1f", id(myWindBearing).state);
+      //display info in epaper screen
+      it.printf(100, 100, id(myFont), BLACK, "%s", id(myWeather).state.c_str());
+      it.printf(100, 150, id(myFont), BLACK, "%s", id(myTemperature).state.c_str());
+      it.printf(100, 200, id(myFont), BLACK, "%.1f", id(myWindBearing).state);
+```
+
+</TabItem>
+</Tabs>
+
 After compiling the above code and uploading it to your device, you may first see **NaN** displayed on the screen, please don't worry, this is normal. This is due to the fact that the device has not yet been added to the Home Assistant environment, so reTerminal has not yet been able to acquire Home Assistant data. We just need to follow the steps below to add the device.
 
-#### Adding reTerminal E10xx to Home Assistant
+#### Adding reTerminal E Series ePaper Display to Home Assistant
 
 Step 1. After flashing your device, return to Home Assistant and navigate to **Settings → Devices & Services**.
 
-Step 3. Home Assistant should automatically discover your reTerminal E10xx device via mDNS. If it appears in the discovered devices section, click Configure to add it.
+Step 3. Home Assistant should automatically discover your reTerminal E Series ePaper Display device via mDNS. If it appears in the discovered devices section, click Configure to add it.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 Step 4. If the device isn't automatically discovered, click Add Integration and search for "ESPHome".
 
-Step 5. Enter the IP address of your reTerminal E10xx device and the API encryption key if you set one.
+Step 5. Enter the IP address of your reTerminal E Series ePaper Display device and the API encryption key if you set one.
 
-Step 6. Once connected, your reTerminal E10xx will appear as a device in Home Assistant with all its sensors and components available.
+Step 6. Once connected, your reTerminal E Series ePaper Display will appear as a device in Home Assistant with all its sensors and components available.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/40.jpg" style={{width:600, height:'auto'}}/></div>
+
+:::note
+The program may take 2~3 minutes from the completion of burning to the final display.
+:::
 
 Here's the enhanced Demo 3 content with improved formatting, image placement, and additional descriptions:
 
 ### Drawing TrueType fonts
 
-This example demonstrates how to display custom icons on your reTerminal E10xx using TrueType fonts. Material Design Icons provide a wide range of scalable symbols perfect for e-paper displays.
+This example demonstrates how to display custom icons on your reTerminal E Series ePaper Display using TrueType fonts. Material Design Icons provide a wide range of scalable symbols perfect for e-paper displays.
 
 #### Installing Required Tools
 
@@ -503,7 +697,11 @@ Step 5. Upload the downloaded font file (`materialdesignicons-webfont.ttf`) to t
 
 Step 6. Add the following code to your ESPHome configuration file after the `captive_portal` section. This code defines two font sizes for icons and configures the display to show weather icons.
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
 ```yaml
+# define font to display words
 font:
   - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
     id: font_mdi_large
@@ -516,6 +714,7 @@ font:
     size: 40
     glyphs: *mdi-weather-glyphs
 
+# define SPI interface
 spi:
   clk_pin: GPIO7
   mosi_pin: GPIO9
@@ -532,17 +731,75 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 30s
+    update_interval: 300s
     lambda: |-
       it.printf(100, 200, id(font_mdi_medium), TextAlign::CENTER, "\U000F0595");
       it.printf(400, 200, id(font_mdi_large), TextAlign::CENTER, "\U000F0592");
 ```
 
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/lublak/esphome
+      ref: dev
+    components: [ waveshare_epaper ]
+
+# define font to display words
+font:
+  - file: 'fonts/materialdesignicons-webfont.ttf'  # Path to the font file
+    id: font_mdi_large
+    size: 200        # Large icon size
+    glyphs: &mdi-weather-glyphs
+      - "\U000F0595" # weather-cloudy icon
+      - "\U000F0592" # weather-hail icon
+  - file: 'fonts/materialdesignicons-webfont.ttf'
+    id: font_mdi_medium   # Medium icon size
+    size: 40
+    glyphs: *mdi-weather-glyphs
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      const auto BLACK   = Color(0,   0,   0,   0);
+      const auto RED     = Color(255, 0,   0,   0);
+      const auto GREEN   = Color(0,   255, 0,   0);
+      const auto BLUE    = Color(0,   0,   255, 0);
+      const auto YELLOW  = Color(255, 255, 0,   0);
+
+      it.printf(100, 200, id(font_mdi_medium), RED, TextAlign::CENTER, "\U000F0595");
+      it.printf(400, 200, id(font_mdi_large), GREEN, TextAlign::CENTER, "\U000F0592");
+```
+
+</TabItem>
+</Tabs>
+
 :::note
-The `glyphs` section defines which icons to load from the font file. Loading only the icons you need saves memory on your device.
+1. The `glyphs` section defines which icons to load from the font file. Loading only the icons you need saves memory on your device.
+
+2. The program may take 2~3 minutes from the completion of burning to the final display.
 :::
 
-Step 7. Save your configuration and upload it to your reTerminal E10xx. When you see feedback like the following image, it means the code is running successfully.
+Step 7. Save your configuration and upload it to your reTerminal E Series. When you see feedback like the following image, it means the code is running successfully.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/42.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -594,7 +851,7 @@ By combining these icons with the weather data from Home Assistant that we set u
 
 ### Displaying Custom Images
 
-This example demonstrates how to display custom images on your reTerminal E10xx e-paper display. You can use this feature to show logos, icons, or any graphics that enhance your dashboard experience.
+This example demonstrates how to display custom images on your reTerminal E Series ePaper Display e-paper display. You can use this feature to show logos, icons, or any graphics that enhance your dashboard experience.
 
 #### Preparation
 
@@ -631,6 +888,9 @@ For best results on e-paper displays, use high-contrast images with clear black 
 
 Step 5. Add the following code to your ESPHome configuration file after the `captive_portal` section. This code defines the image resource and configures the display to show it.
 
+<Tabs>
+<TabItem value="For E1001" label="For E1001" default>
+
 ```yaml
 image:
   - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
@@ -655,12 +915,55 @@ display:
     busy_pin:
       number: GPIO13
       inverted: true
-    update_interval: 30s
+    update_interval: 300s
     lambda: |-
       it.image(0, 0, id(myImage));          # Display image at position (0,0)
 ```
 
-Step 6. Save your configuration and upload it to your reTerminal E10xx. When the update completes, your e-paper display will show the image.
+</TabItem>
+<TabItem value="For E1002" label="For E1002">
+
+```yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/lublak/esphome
+      ref: dev
+    components: [ waveshare_epaper ]
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # Path to your image file (JPG or PNG)
+    id: myImage
+    type: BINARY                            # Binary mode works best for e-paper
+    resize: 800x480                         # Resize to match display resolution
+    invert_alpha: true                      # Invert colors if needed
+
+# define SPI interface
+spi:
+  clk_pin: GPIO7
+  mosi_pin: GPIO9
+
+display:
+  - platform: waveshare_epaper
+    id: epaper_display
+    model: 7.30in-e
+    cs_pin: GPIO10
+    dc_pin: GPIO11
+    reset_pin:
+      number: GPIO12
+      inverted: false
+    busy_pin:
+      number: GPIO13
+      inverted: true
+    update_interval: 300s
+    lambda: |-
+      it.image(0, 0, id(myImage));          # Display image at position (0,0)
+```
+
+</TabItem>
+</Tabs>
+
+Step 6. Save your configuration and upload it to your reTerminal E Series. When the update completes, your e-paper display will show the image.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/43.jpg" style={{width:600, height:'auto'}}/></div>
 
@@ -688,7 +991,7 @@ lambda: |-
   it.image(0, 0, id(myImage));
   
   // Add text below or beside the image
-  it.printf(400, 400, id(font1), TextAlign::CENTER, "WiFi Connected");
+  it.printf(400, 400, id(myFont), TextAlign::CENTER, "WiFi Connected");
 ```
 
 **Using Multiple Images**
@@ -714,14 +1017,14 @@ lambda: |-
 ```
 
 :::caution
-Remember that e-paper displays have limited refresh rates. The `update_interval: 30s` setting means your display will refresh only every 30 seconds. Adjust this value according to your needs, but be aware that frequent refreshes can reduce the lifespan of e-paper displays.
+Remember that e-paper displays have limited refresh rates. The `update_interval: 300s` setting means your display will refresh only every 5 minutes. Adjust this value according to your needs, but be aware that frequent refreshes can reduce the lifespan of e-paper displays.
 :::
 
-By combining images with text and other display elements covered in previous examples, you can create rich, informative dashboards on your reTerminal E10xx.
+By combining images with text and other display elements covered in previous examples, you can create rich, informative dashboards on your reTerminal E Series.
 
 ## Continue Reading
 
-Due to space constraints, this article only covers some basic use cases and drawing examples of the device. We will cover the use of reTerminal's hardware on ESPHome in more detail in the [Advanced ESPHome Usage of reTerminal E10xx in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)'s Wiki, which you can read on.
+Due to space constraints, this article only covers some basic use cases and drawing examples of the device. We will cover the use of reTerminal's hardware on ESPHome in more detail in the [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)'s Wiki, which you can read on.
 
 ## FAQ
 
@@ -738,7 +1041,7 @@ In this case, you should go to Settings -> Devices & Services -> Integrations to
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/41.png" style={{width:1000, height:'auto'}}/></div>
 
 
-### Q3: reTerminal E10xx can't connect to you computer?
+### Q3: reTerminal E Series ePaper Display can't connect to you computer?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 

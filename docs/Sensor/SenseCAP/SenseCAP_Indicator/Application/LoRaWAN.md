@@ -83,7 +83,7 @@ Let's take a closer look at the [SenseCAP Indicator](https://www.seeedstudio.com
 
 ## Step 1. Obtain Firmware {#flash_firmware}
 
-### 1.1 Download Firmware:
+### 1.1 Download Firmware
 
 To begin, download the LoRaWAN firmware, `indicator_lorawan.bin`,  for the SenseCAP Indicator from the GitHub Release page.
 
@@ -102,9 +102,7 @@ To begin, download the LoRaWAN firmware, `indicator_lorawan.bin`,  for the Sense
 The [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/index.html#ide)(v5.1) provides insights on building your own. You can access and modify the [source code](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) to suit your specific needs.
 :::
 
-
-
-### 1.2 Flash Firmware:
+### 1.2 Flash Firmware
 
 To flash the firmware onto the SenseCAP Indicator, download it first and then use esptool (or `esptool.py` if you have an ESP-IDF environment) to flash it(for comprehensive guidance, refer to the [instructions](/SenseCAP_Indicator_Application_LoRaWAN)).
 
@@ -162,7 +160,7 @@ This section will guide you through connecting to a local LoRaWAN network server
   - DevEUI
   - AppKey
   - JoinEUI/AppEUI (Mac Version 1.1.0 needed)
-- ABP (Activation By Personalization): 
+- ABP (Activation By Personalization):
   - DevEUI
   - DevAddr
   - AppSKey
@@ -187,8 +185,8 @@ Use the following default credentials to log in:
 
 For further details and advanced configuration options, visit the [SenseCAP M2 Gateway LNS Configuration Guide](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/).
 
-
 ### 2.2 Configure the Local Network Server (ChirpStack)
+
 Refer to the ChirpStack documentation for detailed features and LoRaWAN version support: [ChirpStack Network Server Documentation](https://www.chirpstack.io/network-server/features/lorawan-versions/).
 
 Here are the steps to configure your local network server using ChirpStack:
@@ -222,8 +220,8 @@ import TabItem from '@theme/TabItem';
 
   You'll need the following credentials:
 
-  - **DevEUI:** This is a unique identifier assigned to your device, ensuring global uniqueness.
-  - **AppKey:** A secret key used for encrypting and securing your device's communications.
+- **DevEUI:** This is a unique identifier assigned to your device, ensuring global uniqueness.
+- **AppKey:** A secret key used for encrypting and securing your device's communications.
 
 </TabItem>
 
@@ -231,19 +229,16 @@ import TabItem from '@theme/TabItem';
 
   Your device will require these credentials:
 
-  - **DevEUI:** A globally unique identifier for your device.
-  - **AppEUI/JoinEUI:** A unique identifier for the application your device connects to.
-  - **AppKey:** The cryptographic key used for securing communications.
+- **DevEUI:** A globally unique identifier for your device.
+- **AppEUI/JoinEUI:** A unique identifier for the application your device connects to.
+- **AppKey:** The cryptographic key used for securing communications.
 
 </TabItem>
 </Tabs>
 
-
 **Choosing Regional Parameters Revision**
 
 In the context of setting up a device profile for the LoRaWAN network, the Regional Parameters (RP) version you choose is crucial for ensuring your device operates in compliance with specific regional standards and specifications.
-
-
 
 **Current Setup**
 
@@ -257,14 +252,13 @@ For configuring a device profile on the LoRaWAN network, `RP002-1.0.2` is a suit
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_device_profile_check.png"/>
 </div>
 
-Correctly understanding and configuring the necessary elements is key to ensuring your device communicates effectively and securely over the LoRaWAN network. 
+Correctly understanding and configuring the necessary elements is key to ensuring your device communicates effectively and securely over the LoRaWAN network.
 
 To use **Class C** device type, it's important to specifically enable this functionality in your device profile.
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_104_classC_enable.png"/>
 </div>
-
 
 **Decoder Function**
 
@@ -354,7 +348,6 @@ Once device profile is created, the next step is to add an application.
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_104_profile.png"/>
 </div>
 
-
 #### 2.2.2 Add an Application {#add_appication}
 
 Create and configure an application within your LoRaWAN Network Server to manage your devices.
@@ -379,9 +372,9 @@ Press the `Add device` button in your application.
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_app_device_add.png"/>
 </div>
 
-To add a device, you need to specify a `Name` and provide a `Device EUI` along with the `Device Profile` you've previously created. 
+To add a device, you need to specify a `Name` and provide a `Device EUI` along with the `Device Profile` you've previously created.
 
-You can opt to auto-generate the Device EUI or use an existing one from your device. 
+You can opt to auto-generate the Device EUI or use an existing one from your device.
 
 For this process, we'll employ the auto-generated Device EUI. After submitting these details, the device will be added to the application, and you'll be automatically redirected to the OTAA Keys section.
 
@@ -421,7 +414,7 @@ Enter the commands including the credentials in the console.
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/indicator_otaa_config.png"/>
 </div>
 
-Now, you should be able to view the keys on your SenseCAP Indicator. If necessary, make any required updates to the configurations. 
+Now, you should be able to view the keys on your SenseCAP Indicator. If necessary, make any required updates to the configurations.
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/bin_press_join.png"/>
@@ -469,9 +462,9 @@ Once the uplink message is sent by the SenseCAP Indicator, it is received by the
 
 </details>
 
-#### Uplink Message: upload Sensor Data 
+#### Uplink Message: upload Sensor Data
 
-In the context of the LoRaWAN demo using the SenseCAP Indicator, the uplink message might consist of simple sensor data, like temperature or humidity readings. 
+In the context of the LoRaWAN demo using the SenseCAP Indicator, the uplink message might consist of simple sensor data, like temperature or humidity readings.
 
 Once the *join process* is successful, you can view the logs in the `LoRaWAN frames` section to monitor the data transmission and receive a detailed account of the device's communication with the network.
 
@@ -538,7 +531,7 @@ In this demonstration, we'll illustrate how downlink messages can be used to con
   - Sending the payload `0001` turns the bulb on.
   - Sending the payload `0000` turns the bulb off.
 
- - These payloads are encoded in a format that the SenseCAP Indicator is programmed to understand and act upon.[^6]
+- These payloads are encoded in a format that the SenseCAP Indicator is programmed to understand and act upon.[^6]
 
 [^6]: [lorawan_rx_data_handle function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
 
@@ -548,8 +541,8 @@ In this demonstration, we'll illustrate how downlink messages can be used to con
 
 **3. Sending the Downlink Message:**
 
- - Through the network server's interface, you can schedule the downlink message with the corresponding payload.
- - The message is then queued and sent to the SenseCAP Indicator during its next available receive window(so there is delay).
+- Through the network server's interface, you can schedule the downlink message with the corresponding payload.
+- The message is then queued and sent to the SenseCAP Indicator during its next available receive window(so there is delay).
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/queue_packet.png"/>
@@ -565,7 +558,6 @@ For turning the bulb on, you schedule a downlink with payload `0001`. To turn it
 
 And you can see that the bulb is **turned off**.
 
-
 ## Funtionalities wait to be explored {#function}
 
 There's a wide array of functionalities in the SenseCAP Indicator waiting to be explored. In this demo, we illustrate uploading sensor data and using downlink messages to control the SenseCAP Indicator's virtual bulb.
@@ -574,21 +566,21 @@ There's a wide array of functionalities in the SenseCAP Indicator waiting to be 
 
 **1. Command Reception and Execution:**
 
- - The SenseCAP Indicator efficiently receives downlink messages.
- - It processes these messages, interpreting commands like turning the virtual bulb on or off.
- - The bulb's state changes accordingly, offering a realistic simulation of device control.
+- The SenseCAP Indicator efficiently receives downlink messages.
+- It processes these messages, interpreting commands like turning the virtual bulb on or off.
+- The bulb's state changes accordingly, offering a realistic simulation of device control.
 
 **2. Confirmation and Verification:**
 
- - Following command execution, the SenseCAP Indicator sends back an uplink message as confirmation.
- - This acknowledgment can be tracked via the
+- Following command execution, the SenseCAP Indicator sends back an uplink message as confirmation.
+- This acknowledgment can be tracked via the
 
 network server's interface, ensuring the command was effectively received and acted upon.
 
 **3. Practical Applications:**
 
- - This simple demo underscores the utility of LoRaWAN downlink messages in manipulating IoT devices.
- - It showcases a key aspect of IoT ecosystems: the ability to remotely direct and manage devices, demonstrating its practical value.
+- This simple demo underscores the utility of LoRaWAN downlink messages in manipulating IoT devices.
+- It showcases a key aspect of IoT ecosystems: the ability to remotely direct and manage devices, demonstrating its practical value.
 
 This demonstration is just the beginning. The SenseCAP Indicator offers a versatile platform for various IoT applications, from environmental monitoring to smart automation. By delving deeper into its capabilities, you can unlock the full potential of this powerful tool, paving the way for innovative solutions and enhanced control in your IoT projects. We encourage you to experiment and discover the many ways the SenseCAP Indicator can enhance your IoT endeavors.
 
@@ -603,14 +595,17 @@ This demonstration is just the beginning. The SenseCAP Indicator offers a versat
 Here's an introduction to the terminal command for setting up LoRaWAN network information, styled like a manual entry:
 
 ### **lorawan**
+
 This command configures the LoRaWAN network information for a device. It allows you to set various parameters required for both OTAA (Over-the-Air Activation) and ABP (Activation By Personalization) methods.
 
-##### Usage:
+##### Usage
+
 ```sh
 lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_key=]
 ```
 
-##### Options:
+##### Options
+
 - `--eui=`: Sets the EUI (Extended Unique Identifier) for the device. It requires 8 hexadecimal digits, with MSB (Most Significant Bit) first.
   
 - `--join_eui=`: Sets the JOIN EUI (formerly known as APP EUI) which is an application identifier in OTAA. It requires 8 hexadecimal digits, with MSB first.
@@ -666,7 +661,6 @@ To utilize the features of LoRaWAN MAC version 1.1.0, it's necessary to configur
 
 The implementation of version `1.1.0` in LoRaWAN requires specific cryptographic algorithms for enhanced security. By setting this option, you ensure that your device is compatible with the enhanced security features and protocols introduced in this version.
 </details>
-
 
 ## ODM Service
 

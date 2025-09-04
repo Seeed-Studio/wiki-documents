@@ -27,19 +27,19 @@ Before you start this project, you may need to prepare your hardware and softwar
 ### Hardware preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
@@ -49,7 +49,7 @@ Before you start this project, you may need to prepare your hardware and softwar
 
 ### Software Preparation
 
-We recommend installing the **Bullesye**  or **Bookworm** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc). 
+We recommend installing the **Bullesye**  or **Bookworm** version of Raspberry Pi 64 bit OS from their official website. If you prefer to install a new Raspbian OS, please follow the steps outlined in this [**guide**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc).
 
 :::note
 
@@ -62,6 +62,7 @@ We highly recommend checking out our previous tutorial on [**Getting started wit
 Color spaces are fundamental in image processing, and OpenCV supports several, each serving unique purposes. Let's delve into three common color spaces in OpenCV: CMYK, BGR, and HSV.
 
 ### CMYK Color Space
+
 CMYK (Cyan, Magenta, Yellow, Key/Black) is a subtractive color space used in color printing.
 Colors are created by subtracting varying percentages of cyan, magenta, yellow, and black from white light.
 
@@ -77,6 +78,7 @@ BGR is an additive color model, where varying intensities of blue, green, and re
 - Red (0-255): Intensity of the red color.
 
 ### HSV Color Space
+
 HSV (Hue, Saturation, Value) represents colors in a cylindrical model derived from RGB color points.
 It mimics human perception of colors, with hue, saturation, and value components.
 
@@ -98,10 +100,13 @@ In the first code, you have the flexibility to interactively adjust trackbars, a
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
 
  ```
-Then 
+
+Then
+
  ```sh
 python hsvtest.py
  ```
+
 Even you can use Thonny IDE to run the python script.
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colortrack.PNG" /></center>
@@ -147,7 +152,6 @@ def stackImages(scale,imgArray):
     return ver
 
 
-
 path = 'captured_image.jpg'
 cv2.namedWindow("TrackBars")
 cv2.resizeWindow("TrackBars",640,240)
@@ -186,14 +190,13 @@ while True:
     cv2.waitKey(1)
  ```
 
- 
-
 Once you've determined the HSV minimum and maximum values using the trackbars in the first code snippet, you can seamlessly **replace these numeric values** with the corresponding **color name** and its identified range in the second snippet.
 
  ```sh
 python colordetector.py
  ```
-Here is the full code for Color Detection 
+
+Here is the full code for Color Detection
 
 ```sh
 import cv2
@@ -255,17 +258,16 @@ Color detection plays a pivotal role in diverse applications, from computer visi
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/carpark.gif" /></center>
 
-
 ## Tech support
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

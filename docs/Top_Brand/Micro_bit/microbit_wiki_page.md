@@ -346,7 +346,8 @@ Please download the ppt file
   <tr>
     <td><h4><a href="https://www.seeedstudio.com/Grove-2-Channel-Solid-State-Relay-p-3129.html" target="_blank"><span>Grove - 2-Channel Solid State Relay</span></a></h4></td>
     <td><h4>103020134</h4></td>
-  </tr>  <tr>
+  </tr>
+  <tr>
     <td><h4><a href="https://www.seeedstudio.com/Grove-2-Channel-SPDT-Relay-p-3118.html" target="_blank"><span>Grove - 2-Channel SPDT Relay</span></a></h4></td>
     <td><h4>103020132</h4></td>
   </tr>

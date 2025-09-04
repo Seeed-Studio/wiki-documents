@@ -15,7 +15,7 @@ last_update:
   author: Kasun Thushara
 ---
 
-## Introduction 
+## Introduction
 
 In modern building management systems (BMS), integrating various protocols and devices is crucial for efficient monitoring and control. This guide focuses on leveraging the capabilities of Modbus communication protocols (Modbus TCP and Modbus RTU) with Home Assistant OS, using the powerful reComputer R1000, a Raspberry Pi-powered solution. Whether you're setting up a new system or enhancing an existing one, this guide will walk you through the process of connecting your Modbus devices to Home Assistant, ensuring seamless integration and control.
 
@@ -26,22 +26,22 @@ Before you start this project, you may need to prepare your hardware in advance 
 ### Hardware Preparation
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### Software Preperation
 
@@ -71,7 +71,7 @@ To get started, you need to install the File Editor add-on in Home Assistant:
 - Click the Install button.
 - Once installed, click on Start to launch the File Editor.
 - Optionally, enable Show in Sidebar for quick access.
- 
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/HA/fileeditor-start.PNG" style={{width:600}}/></div>
 
 With the File Editor add-on, you can now edit the `configuration.yaml` file to add Modbus integration
@@ -117,10 +117,11 @@ modbus:
         input_type: coil
         scan_interval: 1
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/HA/modbus-settings.PNG" style={{width:600}}/></div>
 
 :::note
-It is neccesary save and restart HA after changing configuration.yml file 
+It is neccesary save and restart HA after changing configuration.yml file
 :::
 
 ## Enabling Modbus RTU Integration
@@ -147,8 +148,7 @@ To configure entities for your Modbus RTU integration, you need to define variou
 - **device_class**: The type/class of the sensor to set the icon in the frontend.
 - **unit_of_measurement**: The unit to attach to the value.
 
-
-Example: 
+Example:
 
 ```bash
 modbus:
@@ -176,27 +176,27 @@ modbus:
         unit_of_measurement: '%'
         device_class: humidity
 ```
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/HA/modbus-rtu-setting.PNG" style={{width:600}}/></div>
 
 :::note
-It is neccesary save and restart HA after changing configuration.yml file 
+It is neccesary save and restart HA after changing configuration.yml file
 :::
 
 Finally you will be able to see the working phenomina.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/HA/demo.gif" style={{width:600}}/></div>
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

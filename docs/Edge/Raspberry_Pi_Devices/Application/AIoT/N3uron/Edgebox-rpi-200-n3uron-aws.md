@@ -20,28 +20,26 @@ We have outlined the process of transmitting data from your [Edge Box RPi 200 de
 
 ## Prerequisites
 
-### Hardware 
+### Hardware
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Edge Box RPi 200</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102991599_edgebox-rpi-200-first.jpg
 " style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/EdgeBox-RPi-200-CM4104016-p-5486.html" target="_blank">
               <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
-
-
+</div>
 
 ### Software
 
@@ -62,7 +60,6 @@ If you haven't explored our guide on integrating [AWS IoT Core with Edge Box RPi
 - Step 04: The instance can be given any name but for the example we will use **MQTT**.
 - Step 05: Set the **Module Type** property to **MqttClient**. Leave the rest of the properties as their default values and click **Save**.
 
-
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/selectmodeltype.PNG" /></center>
 
 ## Configure N3uron’s MQTT Module within the WebUI’s Explorer Panel
@@ -75,10 +72,10 @@ If you haven't explored our guide on integrating [AWS IoT Core with Edge Box RPi
 
 - Step 04: Configure the connection properties:
 
-    - A: Select **Amazon Web Services** from the **Destination Broker** drop down menu. **Authentication mode** will be **Certificate**. Also **Client Id** is **N3uron** in this example.
-    - B: Load the **Certificate, Private key and CA certificate** you downloaded and saved when you created the Thing in the AWS IoT Console.
-    - C: In the AWS IoT console, in the left-hand menu, go to **Settings** and copy your **Device Data Endpoint**. Go back to N3uron and paste it in the **Broker URL** field.
-    - D: Leave the rest of the properties as their default values and click on **Save**.
+  - A: Select **Amazon Web Services** from the **Destination Broker** drop down menu. **Authentication mode** will be **Certificate**. Also **Client Id** is **N3uron** in this example.
+  - B: Load the **Certificate, Private key and CA certificate** you downloaded and saved when you created the Thing in the AWS IoT Console.
+  - C: In the AWS IoT console, in the left-hand menu, go to **Settings** and copy your **Device Data Endpoint**. Go back to N3uron and paste it in the **Broker URL** field.
+  - D: Leave the rest of the properties as their default values and click on **Save**.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/AWSconfig.PNG" /></center>
 
@@ -91,28 +88,28 @@ If you haven't explored our guide on integrating [AWS IoT Core with Edge Box RPi
 - Step 02: Click on it and add a name in the Topic field. In this example, we have used device/data.(In our AWS tutorial , we have published data under this topic.)
 
 - Step 03: Set the following properties using the values shown below, leaving the rest of them as their default values:
-    - **Qos**: Qos 0.
-    - **Encoding**: UTF8
-    - **Compression**: None
-    - **Serialization**: JSON
-    - **Data parser/Type**: MqttClient JSON
+  - **Qos**: Qos 0.
+  - **Encoding**: UTF8
+  - **Compression**: None
+  - **Serialization**: JSON
+  - **Data parser/Type**: MqttClient JSON
 
 And Save it.
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/Subscriberconfig.PNG" /></center>
 
 ## Create a Tag
+
 - Step 01: Within the **Explorer panel**, select **Tags**.
 - Step 02: In the Model menu, right-click on the folder icon, select **New Tag**, and give it a name. In this example, we will use **Subscribed_value**.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/newtag.PNG" /></center>
 
-
 - Step 03: In the Configuration panel, set the following properties using the values shown below, leaving the rest of them as their default values:
-    - **Type**: Number.
-    - **Source/Enabled**: Yes
-    - **Module Type**: MqttClient
-    - **Module name**: MQTT
-    - **Config/Subscriber**: AWS/Subscriber
+  - **Type**: Number.
+  - **Source/Enabled**: Yes
+  - **Module Type**: MqttClient
+  - **Module name**: MQTT
+  - **Config/Subscriber**: AWS/Subscriber
 
 - Step 04: Click on **Save**.
 
@@ -123,9 +120,9 @@ Go back to the N3uron WebUI interface and in the left-hand panel, select **Data/
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/realtimedata.PNG" /></center>
 
-## Visualization 
+## Visualization
 
-If you have create a webvision module you can start this steps. 
+If you have create a webvision module you can start this steps.
 
 - Step 01: Navigate to **WebVision** in the **Config** section and click on **Open Designer**. Log in using your Administrator credentials.
 
@@ -153,14 +150,14 @@ If you have create a webvision module you can start this steps.
 
 <center><img width={400} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/taglist.PNG" /></center>
 
-- Step 07: Select tag Property 
+- Step 07: Select tag Property
 
 <center><img width={400} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/tagproperty.PNG" /></center>
 
 - Step 08: Next, navigate to WebVision in the Config section and click on Open UI. Log in using your Administrator credentials.
 
  <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/N3uron/Image_14.png" /></center>
- 
+
  Subsequently, you will witness the ultimate result, which involves updating the label values in accordance with the data subscribed from the cloud.
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/Edge_Box/N3uron_AWS/output.PNG" /></center>
@@ -170,11 +167,11 @@ If you have create a webvision module you can start this steps.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -69,11 +69,11 @@ Step 1. In the AI Generator panel, you'll see a text input field with a prompt l
 
 Step 2. Enter a detailed description of the image you want to create. For example:
 
-  - "A beautiful mountain landscape with a sunrise and pine trees"
+- "A beautiful mountain landscape with a sunrise and pine trees"
 
-  - "A minimalist dashboard showing temperature and humidity icons"
+- "A minimalist dashboard showing temperature and humidity icons"
 
-  - "A circuit board pattern with Seeed Studio logo in the center"
+- "A circuit board pattern with Seeed Studio logo in the center"
 
 Step 3. Click the "Generate" button (magic wand icon) to start the image generation process
 
@@ -91,11 +91,11 @@ After generating an image, you can refine it through conversation with the AI:
 
 Step 1. If you're not satisfied with the result, you can provide feedback directly in the AI Generator panel. For example:
 
-   - "Make the colors more vibrant"
+- "Make the colors more vibrant"
 
-   - "Add more contrast to the image"
+- "Add more contrast to the image"
 
-   - "Change the background to blue"
+- "Change the background to blue"
 
 Step 2. Click "Generate" again to create a new version based on your feedback
 
@@ -119,11 +119,11 @@ Step 2. Notice the AI Generator panel on the right side of the screen, similar t
 
 Step 1. In the AI Generator panel, enter a description of the interface you want to create. Be specific about the components you need. For example:
 
-  - "Create a weather dashboard with temperature display, humidity gauge, and forecast icons"
+- "Create a weather dashboard with temperature display, humidity gauge, and forecast icons"
 
-  - "Design a smart home control panel with buttons for lights, thermostat, and security"
+- "Design a smart home control panel with buttons for lights, thermostat, and security"
 
-  - "Make a fitness tracker interface with step counter, heart rate display, and activity history"
+- "Make a fitness tracker interface with step counter, heart rate display, and activity history"
 
 Step 2. Click the "Generate" button to start the interface generation process
 
@@ -141,13 +141,13 @@ Step 1. Review the generated interface and identify any changes you'd like to ma
 
 Step 2. You can provide specific feedback in the AI Generator panel. For example:
 
-   - "Move the temperature display to the top right"
+- "Move the temperature display to the top right"
 
-   - "Make the buttons larger and add labels below them"
+- "Make the buttons larger and add labels below them"
 
-   - "Change the color scheme to dark mode"
+- "Change the color scheme to dark mode"
 
-   - "Add a clock at the top center"
+- "Add a clock at the top center"
 
 Step 3. Click "Generate" again to update the interface based on your feedback
 
@@ -242,7 +242,7 @@ Whether you're generating custom images in Gallery or complete interactive inter
 ## Resources
 
 - [SenseCraft HMI Platform](https://sensecraft.seeed.cc/hmi)
-- [Compatible Devices - reTerminal E10xx](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
+- [Compatible Devices - reTerminal E Series](https://wiki.seeedstudio.com/reterminal_e10xx_main_page/)
 
 ## Tech Support & Product Discussion
 
@@ -250,12 +250,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

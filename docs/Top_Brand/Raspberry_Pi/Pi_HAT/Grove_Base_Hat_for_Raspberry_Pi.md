@@ -154,8 +154,10 @@ We recommend that you power up the Raspberry Pis after all the hardware connecti
 Currently, this board is available in two versions on the market: the STM32 version (V1.1) and the MM32 version (V1.0). The current shipping version is the STM32 version.
 
 If you experience issues using the Grove Base Hat for Pi with the `grove.py` library, please check your board version:  
+
 1. **If it is the STM32 version**, the I2C address is `0x04`. You need to change the I2C address in `/home/username/.local/lib/python3.9/site-packages/adc.py` to `0x04`.  
 2. **If it is the MM32 version**, the I2C address is `0x08`. You need to change the I2C address in `/home/username/.local/lib/python3.9/site-packages/adc.py` to `0x08`.  
+
 :::
 
 In this section we will introduce how to install the **seeed grove.py** library and how to use I2C, PWM, Digital and analog port of the Grove Base Hat for Raspberry Pi.
@@ -177,11 +179,13 @@ If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to u
 :::
 
 ##### Install Dependencies
+
 **Add repository**
 
 ```linux
 echo "deb https://seeed-studio.github.io/pi_repo/ stretch main" | sudo tee /etc/apt/sources.list.d/seeed.list
 ```
+
 **Add public GPG key**
 
 ```linux
@@ -189,11 +193,13 @@ curl https://seeed-studio.github.io/pi_repo/public.key | sudo apt-key add -
 # or
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BB8F40F3
 ```
+
 **Enable I2C interface**
 
 ```linux
 sudo raspi-config
 ```
+
 - Select interfacingg Options>I2C>Yes>Ok>Finish
 - Enable I2C interface
 
@@ -208,6 +214,7 @@ In the lastest version of Python3, it is recommended to use *virtualenv* for iso
 sudo pip3 install rpi_ws281x
 pip3 install RPi.GPIO
 ```
+
 </TabItem>
 <TabItem value="env" label="vertual environment" default>
 
@@ -218,6 +225,7 @@ source env/bin/activate
 
 pip install rpi_ws281x RPi.GPIO
 ```
+
 </TabItem>
 </Tabs>
 
@@ -228,15 +236,18 @@ There might be issues using RPi.GPIO on the Pi 5, as discussed [here](https://fo
 pip uninstall RPi.GPIO
 pip install rpi-lgpio
 ```
+
 :::
 
 ##### Install grove.py
 
-For beginner or library user only, please install with online method. 
+For beginner or library user only, please install with online method.
+
 - Automatic dependency installation and library deployment.
 - Quick to get started, no manual operation required.
 
 For developer or advanced user, please install dependencies and then install grove.py with source code.
+
 - Includes the complete `grove.py` repository, source code, examples, and documentation
 - Suitable for viewing source code and examples, modifying library functions
 
@@ -244,11 +255,13 @@ For developer or advanced user, please install dependencies and then install gro
 <TabItem  value="Beginner" label="For beginner or library user" default>
 
 To install into the global environment, you can type the following command:
+
 ```linux
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | sudo bash -s -
 ```
 
 If you want to install into a virtual environment, first active your virtualenv and type the following command:
+
 ```linux
 curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -s -- --user-local --bypass-gui-installation
 ```
@@ -257,6 +270,7 @@ curl -sL https://github.com/Seeed-Studio/grove.py/raw/master/install.sh | bash -
 <TabItem  value="Developer" label="For developer or advanced user" default>
 
 To install into the global environment, you can type the following command:
+
 ```linux
 git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
@@ -270,6 +284,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
 pip3 install .
 ```
+
 </TabItem>
 </Tabs>
 
@@ -360,7 +375,6 @@ grove_ws2813_rgb_led_strip
 ```
 
 Then we will show you how to use them according to port type.
-
 
 **Digital Port**
 
@@ -512,11 +526,11 @@ This is the introduction Video of this product.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

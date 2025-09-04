@@ -33,7 +33,7 @@ last_update:
 
 ![](http://files.seeedstudio.com/wiki/wiki-platform/contributor/github_assignment_2.png)
 
-### [开放征集 - 每一小步都很重要！](https://wiki.seeedstudio.com/cn/contributors/)
+### [开放征集 - 每一小步都很重要！](https://wiki.seeedstudio.com/contributors/)
 
 我们还有一系列持续进行的任务，主题相关的任务。例如：
 
@@ -43,7 +43,7 @@ last_update:
 
 ![](http://files.seeedstudio.com/wiki/wiki-platform/contributor/open_call.png)
 
-### [分享您的想法 - 实现它 - 获得奖励](https://wiki.seeedstudio.com/cn/contributors/)
+### [分享您的想法 - 实现它 - 获得奖励](https://wiki.seeedstudio.com/contributors/)
 
 我们欢迎更多想法！主题相关的、场景相关的、您的愿望...
 

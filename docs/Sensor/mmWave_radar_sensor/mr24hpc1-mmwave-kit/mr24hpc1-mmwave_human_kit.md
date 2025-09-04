@@ -58,24 +58,25 @@ There are some things to keep in mind when using this kit.
 1. The network function of the XIAO ESP32C3 requires the use of an antenna. If you want to install a Grove module, try not to change the position of the antenna. The antenna is placed on the back of the baseboard by default, which ensures a good signal and does not interfere with the radar work.
 
 2. The holes reserved in the kit shell are ventilation holes, which are reserved in consideration of the fact that users may use the sensor module for some gases, they are not used as a criterion to judge whether there are people or not, so please don't worry about the privacy issue.
+
 :::
 
 The following table shows the hardware connection between the millimeter wave radar and the XIAO ESP32C3. If necessary, you can do your own subsequent development based on the connections in the table below.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>MR24HPC1</th>
-		</tr>
-		<tr>
-			<td>5V</td>
-			<td>VCC</td>
-		</tr>
-		<tr>
-			<td>GND</td>
-			<td>GND</td>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>MR24HPC1</th>
+  </tr>
+  <tr>
+   <td>5V</td>
+   <td>VCC</td>
+  </tr>
+  <tr>
+   <td>GND</td>
+   <td>GND</td>
+  </tr>
     <tr>
       <td>GPIO4 (D2)</td>
       <td>RX</td>
@@ -84,7 +85,7 @@ The following table shows the hardware connection between the millimeter wave ra
       <td>GPIO5 (D3)</td>
       <td>TX</td>
     </tr>
-	</table>
+ </table>
 </div>
 
 ## Getting Started
@@ -151,7 +152,7 @@ Enter the correct WiFi password and click Save. The device will automatically re
 
 ### Step 3. Adding your device to Home Assistant
 
-If the networking goes well, you'll be able to find your device on Home Assistant. Please follow the path below to add your device. 
+If the networking goes well, you'll be able to find your device on Home Assistant. Please follow the path below to add your device.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/41.png" style={{width:500, height:'auto'}}/></div>
 
@@ -307,7 +308,6 @@ views:
 
 </details>
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/14.png" style={{width:1000, height:'auto'}}/></div>
 
 Then click **DONE**.
@@ -366,9 +366,7 @@ All of the kit's code is currently open source. If you have a need to develop ES
 
 For the use of this code framework, you can refer to the [**mr24hpc1.yaml**](https://github.com/limengdu/mmwave-kit-external-components/blob/main/example/mr24hpc1.yaml) file under the examples folder in the project. This file is an example yaml file for ESPHome.
 
-
 If you don't have any experience with ESPHome before this, you can read [**this Wiki**](https://wiki.seeedstudio.com/xiao-esp32c3-esphome/) to learn to use it.
-
 
 ## Software Upgrades with ESPHome OTA
 
@@ -424,7 +422,7 @@ If you are using the kit and find inconsistencies with the steps and content abo
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/50.png" style={{width:1000, height:'auto'}}/></div>
 
-**Step 3.** Flash Firmware. 
+**Step 3.** Flash Firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit/32.png" style={{width:500, height:'auto'}}/></div>
 
@@ -464,7 +462,6 @@ Click **INSTALL** and then select the `.bin` file downloaded from above steps.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" /></div>
 
-
 - Option 2: Using the [esphome-flasher tool](https://github.com/esphome/esphome-flasher).
 
 If you are still unable to upload firmware using method one after installing the driver and changing browsers, then you can try using method two. Please refer to the official tutorial for specific installation methods and instructions.
@@ -477,7 +474,6 @@ If you wish to observe the log messages of the XIAO ESP32C3, you can also view t
 
 Once the firmware has been uploaded successfully, you will be able to see the network called **seeedstudio-mr24hpc1**. Please refer to the [Three minutes to get started ESPHome](#three-minutes-to-get-started-esphome) content to reconfigure the device.
 
-
 ## Resources
 
 - **[GITHUB]** [Project open source](https://github.com/limengdu/mmwave-kit-external-components)
@@ -486,10 +482,12 @@ Once the firmware has been uploaded successfully, you will be able to see the ne
 - **[PDF]** [User Manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)
 
 ### Version 1
+
 - **[ZIP]** [PCB&SCH EAGLE files](https://files.seeedstudio.com/wiki/mmwave_kit/mmWare-kit_sch&pcb.zip)
 - **[PDF]** [SCH](https://files.seeedstudio.com/wiki/mmwave_kit/sch_mmware_kit.pdf)
 
 ### Version 2
+
 - **[ZIP]** [PCB&SCH EAGLE files](https://files.seeedstudio.com/wiki/mmwave_kit/Human_Detection_Sensor_Board_V2.zip)
 - **[PDF]** [SCH](https://files.seeedstudio.com/wiki/mmwave_kit/mmwave_kit_sch_V2.pdf)
 
@@ -498,11 +496,11 @@ Once the firmware has been uploaded successfully, you will be able to see the ne
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

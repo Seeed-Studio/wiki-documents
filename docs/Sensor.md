@@ -14,10 +14,9 @@ Sensing is the initial and perhaps the most crucial step in obtaining digitized 
 
 On this page, there are two main categories of products
 
- - **Industrial Sensors and Networking Devices**
+- **Industrial Sensors and Networking Devices**
 
-
- - **Entry-level Sensors and Networking Modules**
+- **Entry-level Sensors and Networking Modules**
 
 ## Industrial Sensors and Network Devices
 
@@ -87,7 +86,7 @@ On this page, there are two main categories of products
     </div>
 </div>
 
-### Industrial AI-based Sensors 
+### Industrial AI-based Sensors
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -109,7 +108,6 @@ On this page, there are two main categories of products
             <div class="start_card_title" style={{textAlign: 'center'}}><font color={'8DC215'} size={"5"}>More Coming Soon</font></div>
     </div>
 </div>
-
 
 ### Data Logger with Configuration Guide
 
@@ -145,11 +143,9 @@ On this page, there are two main categories of products
     </div>
 </div>
 
-
-
 ## Network Devices for industrial sensors
 
-### Gateway for Multiple Platform 
+### Gateway for Multiple Platform
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -242,9 +238,7 @@ On this page, there are two main categories of products
 
 <strong><font color={'8DC215'} size={"4"}>Without the need for complex instruments, it is possible to sense and monitor the physical world by utilizing microcontrollers and simple functional electronics. Within this domain, you can discover the following:</font></strong>
 
-
-
-- Grove ecosystem sensors 
+- Grove ecosystem sensors
 - Grove communication modules
 - Other sensors and communcation modules
 
@@ -427,8 +421,7 @@ On this page, there are two main categories of products
     </div>
 </div>
 
-
-## Network Modules for entry-level sensors   
+## Network Modules for entry-level sensors
 
 ### Grove Communication Modules
 
@@ -496,9 +489,6 @@ On this page, there are two main categories of products
     </div>
 </div>
 
-
-
-
 ### Other Sensors and Communication Modules
 
 <!-- Sensing Nodes -->
@@ -530,7 +520,6 @@ On this page, there are two main categories of products
 </div>
 
 <!-- Beyond Grove / Retired Product -->
-
 
 <div class="title_container">
     <div class="title_item" style={{textAlign: 'center'}}>
@@ -577,12 +566,11 @@ Envision the rapid pace at which you can construct industrial-grade Internet of 
     </div>
 </div>
 
-## Transition from Simple to Sophisticated 
+## Transition from Simple to Sophisticated
 
 - Developing industrial solutions with entry-level sensor hardware.
 
 ### SenseCAP K1100
-
 
 <div class="independent_container">
     <div class="independent_item" style={{textAlign: 'left'}}>

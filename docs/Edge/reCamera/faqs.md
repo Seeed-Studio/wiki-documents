@@ -16,13 +16,14 @@ last_update:
 
 # Frequent Ask Questions
 
-If you encounter a situation where the usb-connected device fails to recognize reCamera during the network configuration for reCamera, as well as the problem of network connection failure after configuring the network, please refer to this article. 
+If you encounter a situation where the usb-connected device fails to recognize reCamera during the network configuration for reCamera, as well as the problem of network connection failure after configuring the network, please refer to this article.
 
 It is necessary to modify and configure the computer network environment, including installing drivers on the Windows system, querying network cards on the Linux system, and configuring network priorities on the Mac system.
 
 ## Set up the working environment
 
-### USB NET setup 
+### USB NET setup
+
 To use USB networking, we enabled UsbNcm and DHCP by default on the system.
 UsbNcm is driver-free on Linux, macOS, and the latest Windows systems. You can log in to recamera's terminal directly using `ssh recamera@192.168.42.1` ,`passwd = recamera` .
 
@@ -31,6 +32,7 @@ UsbNcm is driver-free on Linux, macOS, and the latest Windows systems. You can l
 - [MacOS](#jump3)
 
 ### <span id="jump1"> Windows </span>
+
 Make sure the Ncm driver is correctly installed on your computer, as shown in the image. You can check this by going to: Device Manager -> Network adapters.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/002.png" /></div>
@@ -39,8 +41,8 @@ If your machine does not have this driver, follow the steps below to install Ncm
 
 #### Install NCM for windows
 
-**step1**: 
-Press `win+x` and select `Device Manager`. 
+**step1**:
+Press `win+x` and select `Device Manager`.
 Find the unrecognized device in `other devices` and select `Update driver`.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/003.png" /></div>
 
@@ -79,8 +81,6 @@ The following output shows that you have successfully connected to the reCamera.
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/008.png" /></div>
 
-
-
 ### <span id="jump2"> Linux </span>
 
 No extra setup, just plug in a USB cable. Enter `ifconfig`, and you will see the usb1 network adapter. For example: 192.168.42.89. The ip of the device is 192.168.42.1
@@ -96,7 +96,7 @@ Check the usb network adapter in System Settings -> Network. The ip of the devic
 ### windows
 
 If your Windows 10 System computer has network access issues after using the USB network of reCamera.
-Press `win+x` click Control Panel. Select All Control Panel Items -> Network Connections. 
+Press `win+x` click Control Panel. Select All Control Panel Items -> Network Connections.
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/010.png" /></div>
 
 Right mouse click UsbNcm Host Device. Select `Properties` -> `TCP/IPv4` -> `Properties` -> `Advanced` -> Uncheck `Automatic metric` -> Enter `255` in the `Interface metric` field -> click `ok`
@@ -137,7 +137,6 @@ The specific Settings are as follows:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/020.png" /></div>
 
-
 ## Resources
 
 [reCamera OS](https://github.com/Seeed-Studio/reCamera-OS)
@@ -149,11 +148,11 @@ The specific Settings are as follows:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -26,30 +26,30 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 ----
 
-* **Processor: Octavo Systems OSD3358 1GHz ARM® Cortex-A8**
-  * 512MB DDR3 RAM
-  * Integrated power management
-  * 2×32-bit 200-MHz programmable real-time units (PRUs)
-  * ARM Cortex-M3
-  * On-board 4GB 8-bit eMMC flash storage programmed with Debian Linux
+- **Processor: Octavo Systems OSD3358 1GHz ARM® Cortex-A8**
+  - 512MB DDR3 RAM
+  - Integrated power management
+  - 2×32-bit 200-MHz programmable real-time units (PRUs)
+  - ARM Cortex-M3
+  - On-board 4GB 8-bit eMMC flash storage programmed with Debian Linux
 
-* **Connectivity and sensors**
-  * Battery: 2-cell LiPo support with balancing, 9-18V charger input
-  * Wireless: 802.11bgn, Bluetooth 4.1 and BLE
-  * Motor control: 8 6V servo out, 4 DC motor out, 4 quadrature encoder in
-  * Sensors: 9 axis IMU, barometer
-  * Connectivity: HighSpeed USB 2.0 client and host
-  * User interface: 11 user programmable LEDs, 2 user programmable buttons
-  * Easy connect interfaces for adding additional sensors such as:
-    * GPS, DSM2 radio, UARTs, SPI, I2C, 1.8V analog, 3.3V GPIOs
+- **Connectivity and sensors**
+  - Battery: 2-cell LiPo support with balancing, 9-18V charger input
+  - Wireless: 802.11bgn, Bluetooth 4.1 and BLE
+  - Motor control: 8 6V servo out, 4 DC motor out, 4 quadrature encoder in
+  - Sensors: 9 axis IMU, barometer
+  - Connectivity: HighSpeed USB 2.0 client and host
+  - User interface: 11 user programmable LEDs, 2 user programmable buttons
+  - Easy connect interfaces for adding additional sensors such as:
+    - GPS, DSM2 radio, UARTs, SPI, I2C, 1.8V analog, 3.3V GPIOs
 
-* **Software Compatibility**
-  * [Debian](http://elinux.org/Beagleboard:BeagleBoneBlack_Debian)
-  * [ROS](https://dscl.lcsr.jhu.edu/home/courses/me530707_2017_edumip_ros)
-  * [ArduPilot](https://github.com/mirkix/ardupilotblue)
-  * Graphical programming with [LabVIEW](https://github.com/ktalke12/Labview-MiP)
-  * Cloud9 IDE on Node.js w/ BoneScript library
-  * Plus much more
+- **Software Compatibility**
+  - [Debian](http://elinux.org/Beagleboard:BeagleBoneBlack_Debian)
+  - [ROS](https://dscl.lcsr.jhu.edu/home/courses/me530707_2017_edumip_ros)
+  - [ArduPilot](https://github.com/mirkix/ardupilotblue)
+  - Graphical programming with [LabVIEW](https://github.com/ktalke12/Labview-MiP)
+  - Cloud9 IDE on Node.js w/ BoneScript library
+  - Plus much more
 
 ## Specification
 
@@ -175,15 +175,15 @@ BeagleBone® Blue combines the high-performance flexible WiFi/Bluetooth WiLink�
 
 ## Application Ideas
 
-* Internet of Things
+- Internet of Things
 
-* Smart House
-* Industrial
-* Automation & Process Control
-* Human Machine Interface
-* motor control
-* UAV control
-* Robot
+- Smart House
+- Industrial
+- Automation & Process Control
+- Human Machine Interface
+- motor control
+- UAV control
+- Robot
 
 ## Hardware Overview
 
@@ -231,11 +231,11 @@ Please plug the USB cable gently, otherwise you may damage the interface.Please 
 
 You'll see the power (PWR or ON) LED lit steadily. Within a minute or so, you should see the other LEDs blinking in their default configurations.
 
-* USR0 is typically configured at boot to blink in a heartbeat pattern
-* USR1 is typically configured at boot to light during SD (microSD) card accesses
-* USR2 is typically configured at boot to light during CPU activity
-* USR3 is typically configured at boot to light during eMMC accesses
-* WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone® Blue only)
+- USR0 is typically configured at boot to blink in a heartbeat pattern
+- USR1 is typically configured at boot to light during SD (microSD) card accesses
+- USR2 is typically configured at boot to light during CPU activity
+- USR3 is typically configured at boot to light during eMMC accesses
+- WIFI LED is typically configured at boot to light with WiFi network association (BeagleBone® Blue only)
 
 With the latest images, it should no longer be necessary to install drivers for your operating system to give you network-over-USB access to your Beagle. In case you are running an older image, an older operating system or need additional drivers for serial access to older boards, links to the old drivers are below.
 
@@ -863,24 +863,24 @@ Please click here to see all BeagleBone® Blue FAQs.
 
 -----
 
-* **[Schematic]** [BeagleBone® Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip)
-* **[Grove]** [BeagleBone® Blue Grove Compatibility List.xlsx](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/Beaglebone%20Blue%20Grove%20Compatibility%20List.xlsx)
-* **[MoreReading]** [BeagleBoard Main Page](http://beagleboard.org/)
-* **[MoreReading]** [BeagleBoard Getting Started](http://beagleboard.org/getting-started)
-* **[MoreReading]** [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
-* **[MoreReading]** [Hardware documentation](http://beagleboard.org/getting-started#hardware)
-* **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
+- **[Schematic]** [BeagleBone® Blue Schematic](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/BeagleBone_Blue_eagle-file.zip)
+- **[Grove]** [BeagleBone® Blue Grove Compatibility List.xlsx](https://github.com/SeeedDocument/Beaglebone_Blue/raw/master/res/Beaglebone%20Blue%20Grove%20Compatibility%20List.xlsx)
+- **[MoreReading]** [BeagleBoard Main Page](http://beagleboard.org/)
+- **[MoreReading]** [BeagleBoard Getting Started](http://beagleboard.org/getting-started)
+- **[MoreReading]** [Troubleshooting](http://beagleboard.org/getting-started#troubleshooting)
+- **[MoreReading]** [Hardware documentation](http://beagleboard.org/getting-started#hardware)
+- **[MoreReading]** [Projects of BeagleBoard](http://beagleboard.org/project)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

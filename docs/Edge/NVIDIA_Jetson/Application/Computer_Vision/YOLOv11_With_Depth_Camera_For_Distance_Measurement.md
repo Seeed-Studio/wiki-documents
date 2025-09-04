@@ -23,6 +23,7 @@ This wiki demonstrates how to use the Orbbec Gemini 2 depth camera with the reCo
 </div>
 
 ## Prerequisites
+
 - [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) or Other products of the reCompuer series (pre-installed JetPack 5.1.3)
 - Orbbec Gemini 2 Depth Camera
 - USB Type-C data transmission cable(Connect the camera)
@@ -37,7 +38,6 @@ This wiki demonstrates how to use the Orbbec Gemini 2 depth camera with the reCo
 
 **Step 1.** Clone the SDK and install dependencies:
 
-
 ```bash
 git clone https://github.com/orbbec/pyorbbecsdk.git
 sudo apt-get install python3-dev python3-venv python3-pip python3-opencv camke g++ gcc
@@ -50,6 +50,7 @@ pip install pybind11
 cd pyorbbecsdk
 pip install -r requirements.txt
 ```
+
 **Step 3.** Build the project:
 
 ```bash
@@ -65,12 +66,13 @@ cmake \
 make -j4
 make install
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/make_install.png"/>
 </div>
 
-
 **Step 4.** Install the python wheel:
+
 ```bash
 cd /path/to/pyorbbecsdk
 pip install wheel
@@ -85,6 +87,7 @@ source env.sh
 pip install pybind11-stubgen
 pybind11-stubgen pyorbbecsdk
 ```
+
 :::info
 More details, please refer to [here](https://orbbec.github.io/pyorbbecsdk/source/2_installation/build_the_package.html#install-dependencies-ubuntu)
 :::
@@ -92,7 +95,6 @@ More details, please refer to [here](https://orbbec.github.io/pyorbbecsdk/source
 ## Test Depth Camera
 
 Through the following example, we will show you how to use the Python API of Orbbec Gemini 2 Depth Camera in combination with OpenCV for development. At the same time, it can also test whether your camera development environment is functioning properly.
-
 
 <details>
 <summary> test.py </summary>
@@ -167,6 +169,7 @@ finally:
     pipeline.stop()
     cv2.destroyAllWindows()
 ```
+
 </details>
 
 <div style={{ textAlign: "justify" }}>
@@ -176,8 +179,6 @@ If you see a window with the RGB image on the left and the depth image on the ri
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/depth_camera.gif"/>
 </div>
-
-
 
 ## Deploy YOLOv11 with TensorRT
 
@@ -203,10 +204,10 @@ wget -O yolo11n.pt https://github.com/ultralytics/assets/releases/download/v8.3.
 ```bash
 python gen_wts.py -w yolo11n.pt -o yolo11n.wts -t detect
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/wts.png"/>
 </div>
-
 
 **Step 4.** Build the project:
 
@@ -226,6 +227,7 @@ make -j4
 ```bash
 ./yolo11_det -s yolo11n.wts yolo11n.engine n
 ```
+
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/g_engine.png"/>
 </div>
@@ -247,7 +249,7 @@ The deployment of yolo11 in this repository only supports TensorRT-8.x (for Jets
 ### Prior knowledge
 
 <div style={{ textAlign: "justify" }}>
-The depth value from the camera represents the Z-axis distance (forward from the camera), not the actual geometric distance. 
+The depth value from the camera represents the Z-axis distance (forward from the camera), not the actual geometric distance.
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/z.jpg"/>
@@ -302,12 +304,12 @@ print("color_distortion  {}".format(color_distortion))
 
 </details>
 
-
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/Yolo11/in.png"/>
 </div>
 
 Get the depth camera's intrinsics:
+
 ```
 fx = 616.707275
 fy = 616.707275
@@ -825,7 +827,6 @@ def simple_frame_to_bgr(frame):
     return cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
 
-
 if __name__ == "__main__":
     # load custom plugin and engine
     PLUGIN_LIBRARY = "build/libmyplugins.so"
@@ -973,6 +974,7 @@ if __name__ == "__main__":
             print(f"Average FPS: {avg_fps:.2f}")
 
 ```
+
 </details>
 
 <div style={{ textAlign: "justify" }}>
@@ -983,19 +985,19 @@ The script will display the detection results and the measured distance between 
 
 :::note
 <div style={{ textAlign: "justify" }}>
-Since Orbbec Gemini 2 is based on the structured light/dual-view scheme, on edges, inclined surfaces, and reflective objects, the depth data is prone to fluctuate, often with errors of several centimeters. When you take pictures of the same object from different angles, the texture deformation of the infrared projection leads to matching failure and ultimately results in a larger depth deviation. At the same time, the intensity of ambient light also affects the quality of the depth map. According to your environment, we provide the following adjustment suggestions: 
+Since Orbbec Gemini 2 is based on the structured light/dual-view scheme, on edges, inclined surfaces, and reflective objects, the depth data is prone to fluctuate, often with errors of several centimeters. When you take pictures of the same object from different angles, the texture deformation of the infrared projection leads to matching failure and ultimately results in a larger depth deviation. At the same time, the intensity of ambient light also affects the quality of the depth map. According to your environment, we provide the following adjustment suggestions:
 </div>
 
 - Filtering out abnormal depth maps and performing noise reduction filtering on the depth maps.
   
-- Try to position the target in the center of the image to reduce the influence of image edge distortion. 
+- Try to position the target in the center of the image to reduce the influence of image edge distortion.
 
 - Perform the operation of taking the average of multiple depth images to reduce the influence of abnormal light (which will reduce real-time performance).
+
 :::
 
-
-
 ## Resources
+
 - [YOLOv11 TensorRT Implementation (tensorrtx)](https://github.com/wang-xinyu/tensorrtx/tree/master/yolo11)
 - [Orbbec pyorbbecsdk](https://github.com/orbbec/pyorbbecsdk)
 - [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
@@ -1005,11 +1007,11 @@ Since Orbbec Gemini 2 is based on the structured light/dual-view scheme, on edge
 Thank you for choosing Seeed Studio products! For technical support and product discussion, please use the following channels:
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
-</div> 
+</div>

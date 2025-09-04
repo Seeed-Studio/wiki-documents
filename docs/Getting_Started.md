@@ -10,11 +10,11 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/seeed_logo/Wiki_Platform_GT_Logo.jpg" alt="pir" width={1000} height="auto" /></p>
 
-## Seeed Studio 
+## Seeed Studio
 
 Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Studio is dedicated to realizing interactive digital replica of our physical world. This website is an open source platform with a collection of all wikis currently published by Seeed Studio and updated weekly to showcase our product range and research, which includes digitalisation of the natural environment.
 
-{/* We here also present you our current accomplishments and <strong><a href="/Solutions"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Solution </span></a></strong> and we are looking for your contributions. */}
+{/*We here also present you our current accomplishments and <strong><a href="/Solutions"><span style={{color: '8DC215', fontSize: '1.2em'}}>  Solution </span></a></strong> and we are looking for your contributions.*/}
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/New_Wiki_Platform/example/showcase2.png" alt="pir" width={1000} height="auto" /></p>
 
@@ -31,8 +31,6 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
   - <strong><a href="/weekly_wiki"><span style={{color: '8DC215', fontSize: '1.2em'}}> Weekly Wiki </span></a></strong>
 
 - You will be able to find detailed documentation of our products for **practical usage** and **troubleshooting**, industrial IoT scenarios, as well as guides on open development tools to help you get started on your own projects.
-
-
 
 ## Sensing and Data Communicating
 
@@ -98,7 +96,6 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
   </div>
 </div>
 
-
 ## Kit with Courses
 
 <div className="all_container">
@@ -143,7 +140,7 @@ Being a trusted Internet of Things (IOT) hardware partner since 2008, Seeed Stud
 
 ![](https://sensecraft.seeed.cc/wp-content/uploads/2023/11/%E5%88%87%E5%9B%BE-139@2x.png)
 
-## ✨ Contributor Program ✨ 
+## ✨ Contributor Program ✨
 
 In Seeed, we greatly value our community of Seeeders. The Seeed Studio Contributor Program is a collaborative program launched to unite our dear friends from all over the world and co-build innovative solutions together.
 
@@ -174,12 +171,12 @@ We will continue launch our projects wanted, or our contributors presented(sugge
 Thank you for choosing our products! We provide many forms of support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div className="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" className="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" className="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" className="button_email"></a>
 </div>
 
 <div className="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" className="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" className="button_discussion"></a>
 </div>
 

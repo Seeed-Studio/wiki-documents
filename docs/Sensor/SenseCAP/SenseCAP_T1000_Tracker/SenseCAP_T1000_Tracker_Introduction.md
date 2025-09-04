@@ -13,20 +13,13 @@ last_update:
 
 [**SenseCAP T1000**](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) is a compact LoRaWAN® tracker that utilizes GNSS/Wi-Fi/Bluetooth for precise indoor & outdoor location tracking. It boasts self-geo-adaptive capabilities, local data storage, and an impressive months of battery life. Additionally, it is equipped with temperature, light, and motion sensors, making it ideal for a variety of location-based applications.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_1.png" alt="pir" width={800} height="auto" /></p>
-
-
-
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now </font></span></strong>
     </a>
 </div>
-
-
 
 ---
 
@@ -37,6 +30,7 @@ last_update:
 |[SenseCAP T1000-A](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
 |[SenseCAP T1000-B](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-B-p-5698.html)|<ul><li>LoRaWAN</li><li>Helium</li></ul>|||
 |[SenseCAP T1000-E](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-E-for-Meshtastic-p-5913.html)|<ul><li>Meshtastic</li></ul>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|<p style={{textAlign: 'center'}}>✅</p>|
+
 :::
 
 ## Features
@@ -53,31 +47,23 @@ The tracker will get location outdoor via satellite system (GPS/BeiDou/more), th
 
 **Wi-Fi Positioning(Indoor)**
 
-
 Tracker scan the MAC address and RSSI of nearby Wi-Fi/Bluetooth and upload it through LoRaWAN. The application server needs to calculate the real geographical location based on the MAC address and signal strength (RSSI).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/by_wifi.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Offline Data Storage
 
 Capable of storing 1000+ records locally. The storage capacity of 1 hour upload interval exceeds 40 days.
 
-When the LoRaWAN signal coverage is weak or there is no network coverage, the data will be saved and entered in the next cycle. When the device returns to an area with the LoRaWAN network coverage, it will send the offline data automatically. 
-
-
+When the LoRaWAN signal coverage is weak or there is no network coverage, the data will be saved and entered in the next cycle. When the device returns to an area with the LoRaWAN network coverage, it will send the offline data automatically.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={800} height="auto" /></p>
-
-
-
 
 ### Cross-Regional Adaptability
 
 T1000 provides seamless global LoRaWAN® region switching, automatically adjusting to the appropriate LoRaWAN® frequency plan based on detected location coordinates, ensuring optimal performance across Europe, pan-America, and beyond.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/earth.gif" alt="pir" width={800} height="auto" /></p>
-
 
 ### Months of Battery Life
 
@@ -89,17 +75,13 @@ Powered by the LR1110 and featuring low power consumption, the battery lasts for
 
 Temperature & light sensors are included to keep track of the environmental data on the go. For example, temp data can be used to inference the possibility if the food / vaccine goes bad. Light data shows if it is seen by unwanted eyes.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/sensor.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ### Decentralized Gateway Network for location Provenance
 
 Helium’s decentralized network is built on a trust mechanism where every gateway shares its location, and Helium validates the authenticity of these locations. When using Helium with T1000, by cross-checking the gateway’s location, you can have a approximate location of T1000. This provides an additional layer of validation, increasing the data’s validity compared to other networks.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/helium_map.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### Emergency Report
 
@@ -113,30 +95,25 @@ Motion sensor to detect anomaly, SOS button for emergency reporting and automati
 
 ## Applications
 
-* International Asset Tracing
-* Search And Rescue
-* Equipment Monitoring
+- International Asset Tracing
+- Search And Rescue
+- Equipment Monitoring
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/applications.png" alt="pir" width={800} height="auto" /></p>
 
- 
 ## Specification
 
 ### Model Specification
 
 We provide two different solutions for users, and comes in four versions: A, B, C, and D. T1000 A/B support regular GNSS positioning, while T1000 C/D support LoRa Cloud Geolocation Service.
 
+- **T1000-A/T1000-B**: GNSS data without special encryption.
 
-* **T1000-A/T1000-B**: GNSS data without special encryption.
-
-* **T1000-C/T1000-D**: GNSS data encrypted via Semtech LoRa Edge, GNSS data needs to be decrypted through [LoRa Cloud](https://www.loracloud.com/).
+- **T1000-C/T1000-D**: GNSS data encrypted via Semtech LoRa Edge, GNSS data needs to be decrypted through [LoRa Cloud](https://www.loracloud.com/).
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/model_spec2.png" alt="pir" width={800} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://www.seeedstudio.com/blog/wp-content/uploads/2023/06/%E7%94%BB%E6%9D%BF-11@1.5x.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ### General Parameters
 
@@ -178,7 +155,3 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 |Charge Cable (Adapter not included)|USB magnetic charging cable, 1 meter|
 |<a name="ole_link9"></a>Power Input Voltage|4\.7 to 5.5V DC|
 |Charging Temperature Limit|0 to +45℃ (Beyond the temperature range, the charge will be limited, and the LED will blink quickly)|
-
-
-
-

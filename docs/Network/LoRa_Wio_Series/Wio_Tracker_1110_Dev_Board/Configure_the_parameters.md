@@ -14,14 +14,11 @@ last_update:
 ---
 
 
-
 Before starting, please check [Setup your toolchain](https://wiki.seeedstudio.com/setup_toolchain_for_wio_tracker) first.
 
 ### Region configuration
 
 The default region of the factory firmware is EU868, to configure the region, to meet the frequency requirements of different regions, you can follow the steps below to change the region.
-
-
 
 Replace the 'Region' part in the LoRaWAN example.
 
@@ -39,16 +36,11 @@ You can also use the `Serial Monitor` button in the upper right corner to check 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port-monitor.png" alt="pir" width={800} height="auto" /></p>
 
-
-
-
 ### Triad Info configuration
-
 
 Wio Tracker 1110 Dev board allows users to set the DevEUI, AppEUI, and AppKey, this is required when registering to other network servers.
 
 Open the `LoRaWAN/TTN Example`, define the triad info and click `Upload`.
-
 
 ```cpp
 static const uint8_t DEV_EUI[8]  = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -57,7 +49,6 @@ static const uint8_t APP_KEY[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/change-3-codes.png" alt="pir" width={800} height="auto" /></p>
-
 
 <details>
 <summary>Info</summary>

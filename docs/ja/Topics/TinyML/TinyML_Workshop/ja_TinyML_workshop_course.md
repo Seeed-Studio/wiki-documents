@@ -80,13 +80,13 @@ Seeed Studioが主催するこのハンズオンワークショップは、AI初
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma" class="getting_started_label2">1.1 SenseCraft AI プラットフォームの紹介</a>
+          <a href= "/ja/sscma" class="getting_started_label2">1.1 SenseCraft AI プラットフォームの紹介</a>
           <br/>使用するツールに慣れましょう。
       </div>
   </div>
     <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/sscma/#the-ai-blink-quickly-using-ai" class="getting_started_label2">1.2 AI「Blink」</a>
+          <a href= "/ja/sscma/#the-ai-blink-quickly-using-ai" class="getting_started_label2">1.2 AI「Blink」</a>
           <br/>パブリックAIモデルライブラリをエッジデバイス（XIAO ESP32S3 Sense）に簡単にデプロイする方法を学びます。
       </div>
   </div>
@@ -97,7 +97,7 @@ Seeed Studioが主催するこのハンズオンワークショップは、AI初
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/train_and_deploy_model" class="getting_started_label2">2. 独自のプロジェクトを構築する</a>
+          <a href= "/ja/train_and_deploy_model" class="getting_started_label2">2. 独自のプロジェクトを構築する</a>
           <br/>独自のモデルを簡単にトレーニングしてデプロイする方法を学びます。  
       </div>
   </div>
@@ -108,7 +108,7 @@ Seeed Studioが主催するこのハンズオンワークショップは、AI初
 <div class="all_container">
   <div class="getting_started">
       <div class="start_card_wrapper">
-          <a href= "/train_and_deploy_model/#optional-federate-transmit-data-wide-away" class="getting_started_label2">3. データを広範囲に送信する</a>
+          <a href= "/ja/train_and_deploy_model/#optional-federate-transmit-data-wide-away" class="getting_started_label2">3. データを広範囲に送信する</a>
           <br/>SenseCraftでモデルを広範囲にフェデレーションする方法を学びます。
       </div>
   </div>

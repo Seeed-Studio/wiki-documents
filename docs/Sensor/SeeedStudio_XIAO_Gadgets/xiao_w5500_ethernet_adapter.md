@@ -38,68 +38,68 @@ A compact PoE development board featuring the XIAO ESP32S3 Plus, with an integra
 ### Specification
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td>MCU</td>
-			<td>XIAO ESP32-S3 Plus</td>
-		</tr>
-		<tr>
-			<td>Antenna</td>
-			<td>2.4GHz Rod Antenna (2.81dBi)</td>
-		</tr>
-		<tr>
-			<td>USB Type-C</td>
-			<td>Input voltage (Type-C): 5V</td>
-		</tr>
-		<tr>
-			<td>PoE Chip</td>
-			<td>MQ7813T120</td>
-		</tr>
-		<tr>
-			<td>PoE Power Supply</td>
-			<td>PoE IEEE802.3af<br />Output Current: 12V/1.1A<br />High Efficiency 86% (Input 48V, Load 12V@1.1A)</td>
-		</tr>
-		<tr>
-			<td>Ethernet Chip</td>
-			<td>WIZnet W5500</td>
-		</tr>
-		<tr>
-			<td>Ethernet Interface</td>
-			<td>RJ45<br />10 or 100Mbps Ethernet</td>
-		</tr>
-		<tr>
-			<td>TCP/IP Protocols</td>
-			<td>TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE</td>
-		</tr>
-		<tr>
-			<td>LED Indicator</td>
-			<td>Power x 1<br />User x 1</td>
-		</tr>
-		<tr>
-			<td>Button</td>
-			<td>Reset</td>
-		</tr>
-		<tr>
-			<td>I/O Interface</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Product Size</td>
-			<td>83 x 118 x 26 mm</td>
-		</tr>
-		<tr>
-			<td>Product Weight</td>
-			<td>75g</td>
-		</tr>
-		<tr>
-			<td>Enclosure</td>
-			<td>3D-Printed in White</td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Parameter</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>MCU</td>
+   <td>XIAO ESP32-S3 Plus</td>
+  </tr>
+  <tr>
+   <td>Antenna</td>
+   <td>2.4GHz Rod Antenna (2.81dBi)</td>
+  </tr>
+  <tr>
+   <td>USB Type-C</td>
+   <td>Input voltage (Type-C): 5V</td>
+  </tr>
+  <tr>
+   <td>PoE Chip</td>
+   <td>MQ7813T120</td>
+  </tr>
+  <tr>
+   <td>PoE Power Supply</td>
+   <td>PoE IEEE802.3af<br />Output Current: 12V/1.1A<br />High Efficiency 86% (Input 48V, Load 12V@1.1A)</td>
+  </tr>
+  <tr>
+   <td>Ethernet Chip</td>
+   <td>WIZnet W5500</td>
+  </tr>
+  <tr>
+   <td>Ethernet Interface</td>
+   <td>RJ45<br />10 or 100Mbps Ethernet</td>
+  </tr>
+  <tr>
+   <td>TCP/IP Protocols</td>
+   <td>TCP, UDP, ICMP, IPv4, ARP, IGMP, PPPoE</td>
+  </tr>
+  <tr>
+   <td>LED Indicator</td>
+   <td>Power x 1<br />User x 1</td>
+  </tr>
+  <tr>
+   <td>Button</td>
+   <td>Reset</td>
+  </tr>
+  <tr>
+   <td>I/O Interface</td>
+   <td></td>
+  </tr>
+  <tr>
+   <td>Product Size</td>
+   <td>83 x 118 x 26 mm</td>
+  </tr>
+  <tr>
+   <td>Product Weight</td>
+   <td>75g</td>
+  </tr>
+  <tr>
+   <td>Enclosure</td>
+   <td>3D-Printed in White</td>
+  </tr>
+ </table>
 </div>
 
 ## Hardware Overview
@@ -127,9 +127,7 @@ The following image provides a look inside the XIAO W5500 Ethernet Adapter. Here
 </TabItem>
 </Tabs>
 
-
 ## Getting Started
-
 
 ### Wiring Instructions
 
@@ -140,19 +138,16 @@ There are two recommended ways to connect your XIAO W5500 Ethernet Adapter to yo
 
   <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/4.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 2. **Using a Standard Ethernet Cable:**
    - If you are using a regular Ethernet cable (without PoE), connect one end to your network and the other to the XIAO W5500 Ethernet Adapter. In this case, you must also power the XIAO board via its USB-C port with a stable 5V supply, as the Ethernet cable will only provide data connectivity.
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/6.jpg" style={{width:600, height:'auto'}}/></div>
-
 
 > **Tip:** Make sure your Ethernet cable is long enough for your setup and is in good condition to ensure reliable communication.
 
 ### Reset Button
 
 The XIAO W5500 Ethernet Adapter is equipped with a Reset button. If your device's program is not running as expected or you need to restart the system, simply press the Reset button once. This will reboot the device and reinitialize the program, helping to recover from unexpected states or errors.
-
 
 ## ESP32 Arduino Ethernet Library
 
@@ -163,7 +158,6 @@ For more details, advanced usage, and the latest updates, please refer to the of
 ## XIAO Example
 
 Now that you have installed the required libraries and understand the basic functions, let's explore some practical examples for the XIAO W5500 Ethernet Adapter. These demos will help you get started and show how to adapt the code for your own projects.
-
 
 **Step 1.** Launch the Arduino application.
 
@@ -181,23 +175,22 @@ Now that you have installed the required libraries and understand the basic func
 
 To complete the following examples, you will need the hardware listed below. In addition to the XIAO W5500 Ethernet Adapter, make sure you have an Ethernet cable of sufficient length for your setup. You can use a cable with Power over Ethernet (PoE) capability, or a standard Ethernet cable. If you use a standard Ethernet cable (without PoE), please ensure that your XIAO board is powered separately with a stable 5V supply.
 
-
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO W5500 Ethernet Adapter</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/5.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO W5500 Ethernet Adapter</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_w5500_poe/5.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="/xiao_w5500_ethernet_adapter" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### Demo 1: Ethernet Event Logger
@@ -342,6 +335,7 @@ void loop()
 Open the Serial Monitor at 115200 baud to view Ethernet events and IP information. The code will attempt to connect to "baidu.com" every 20 seconds as a connectivity test.
 
 **Customization:**
+
 - Change the test server in `testClient("baidu.com", 80);` to your own server or local network device.
 - Use the event handler to trigger custom actions on network events.
 
@@ -352,7 +346,6 @@ This demo sets up a basic HTTP web server on the XIAO ESP32-S3 using the W5500 E
 
 **Typical Use Case:**
 Ideal for IoT projects where you want to serve web pages or REST APIs directly from your device over a wired Ethernet connection.
-
 
 ```cpp
 #include <ETH.h>
@@ -535,9 +528,9 @@ void loop ()
 Once the device obtains an IP address (shown in the Serial Monitor), open a browser and navigate to `http://<your_device_ip>/`. The root endpoint will respond with "hello from esp32!" and blink an LED. Try accessing `/inline` or any other path to see different responses.
 
 **Customization:**
+
 - Add more endpoints using `server.on("/yourpath", handlerFunction);`.
 - Integrate sensor readings or device controls into your web server responses.
-
 
 ### Demo 3: Ethernet Camera Streaming Server
 
@@ -751,6 +744,7 @@ void onEvent(arduino_event_id_t event, arduino_event_info_t info) {
 Open the Serial Monitor to find the device's IP address after it connects to the network. Enter the IP address in your browser to access the camera stream.
 
 **Customization:**
+
 - Adjust camera settings (resolution, quality, frame size) in the `camera_config_t` structure.
 - Modify the web server code to add authentication or additional endpoints.
 - Adapt the Ethernet pin definitions to match your custom hardware.
@@ -799,19 +793,18 @@ It has been verified that setting the power to the above code gives the best res
 - **[KICAD]** [XIAO W5500 Ethernet Adapter PCB](https://files.seeedstudio.com/wiki/xiao_w5500_poe/res/XIAO_POE_RJ45_V20.kicad_pcb)
 - **[GITHUB]** [XIAO W5500 Ethernet Adapter Repository](https://github.com/Seeed-Projects/XIAO_W5500_Ehernet_Adapter_Example)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>

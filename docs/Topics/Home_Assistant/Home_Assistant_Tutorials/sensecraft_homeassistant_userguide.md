@@ -15,7 +15,6 @@ last_update:
 
 SenseCraft-HomeAssistant is a plugin for HomeAssistant. By using this plugin, users can log in with the SenseCraft Data Platform (originally SenseCAP Cloud Platform) account to access cloud devices and sensor data on the HomeAssistant platform, generating custom device reporting dashboards.
 
-
 :::note
 The SenseCraft-HomeAssistant plugin is currently only available for installation via HACS, which is a third-party app store on the HomeAssistant system. When the official integrations provided by HomeAssistant are not sufficient, HACS allows for the easy addition and management of third-party integrations.
 :::
@@ -37,7 +36,6 @@ Since downloading the HACS plugin requires terminal commands, you must first ins
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage3.png" alt="pir" width={800} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage4.png" alt="pir" width={800} height="auto" /></p>
-
 
 2. **Install, Launch, and Open the Terminal Interface**
 
@@ -96,8 +94,10 @@ wget -q -O - https://install.hacs.xyz | bash -
 2. Enter the SenseCraft repository URL and category, then click the "Add" button:
 
 :::note
-   - Repository: `https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git`
-   - Category: `Integration`
+
+- Repository: `https://github.com/Seeed-Solution/SenseCraft-HomeAssistant.git`
+- Category: `Integration`
+
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage16.png" alt="pir" width={800} height="auto" /></p>
@@ -169,8 +169,10 @@ Choose one of the pre-set models (e.g., Gender Detection) and click 'Send'. Wait
 4. Navigate to “Options > Logins” and replace the user or passwd with your desired username and password. Save the configuration.
 
 :::note
+
 - username: user
 - password: passwd
+
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage29.png" alt="pir" width={800} height="auto" /></p>
@@ -229,9 +231,9 @@ Enter the corresponding information and click save. However, saving here just sa
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/sensecraft/sensecraft_homeassistant/SenseCraft-HomeAssistantimage33.png" alt="pir" width={800} height="auto" /></p>
 
-When the IP Address shows an IP address, it means there are no problems with the WIFI. The Service status must be as shown in the picture to indicate normal operation. Note, if the WIFI is not normal, then MQTT will definitely not be normal. 
+When the IP Address shows an IP address, it means there are no problems with the WIFI. The Service status must be as shown in the picture to indicate normal operation. Note, if the WIFI is not normal, then MQTT will definitely not be normal.
 
-When switching over, it might initially show as disconnected and you may need to wait approximately 10s, but generally no more than 20s. 
+When switching over, it might initially show as disconnected and you may need to wait approximately 10s, but generally no more than 20s.
 
 **You do not need to refresh to see the status; the status will automatically update to show the latest.**
 
@@ -308,7 +310,7 @@ Choose the location based on actual circumstances, then click done. This way you
 
 ## Integrate Sensor Nodes into HA
 
-Our company has many sensors, such as light, carbon dioxide, etc., which can also be easily integrated into HA. To integrate sensor nodes, it is necessary to have an account on the [SENSECAP website](https://sensecap.seeed.cc/portal/), so you first need to register an account there, depending on whether you are registering on the international or domestic site, and add your sensor nodes to your account. 
+Our company has many sensors, such as light, carbon dioxide, etc., which can also be easily integrated into HA. To integrate sensor nodes, it is necessary to have an account on the [SENSECAP website](https://sensecap.seeed.cc/portal/), so you first need to register an account there, depending on whether you are registering on the international or domestic site, and add your sensor nodes to your account.
 
 Below we will first discuss how to add devices through the app:
 
@@ -361,11 +363,11 @@ Integrating Home Assistant to NVIDIA Jetson will be coming soon!
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

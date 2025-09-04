@@ -93,27 +93,27 @@ Rainbow Cube Kit illuminated with random colors
 
 ---
 
-* **8mm** **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** diffused LEDs.
+- **8mm** **<font color="red">R</font><font color="green">G</font><font color="blue">B</font>** diffused LEDs.
 
-* 4 x 4 x 4 arrangement
+- 4 x 4 x 4 arrangement
 
-* **XBee** compatible **socket**
+- **XBee** compatible **socket**
 
-* Provides a **3.3V/1 Ampere** LDO for power the Cube with unregulated DC 6-9V. Useful when not powered by USB.
+- Provides a **3.3V/1 Ampere** LDO for power the Cube with unregulated DC 6-9V. Useful when not powered by USB.
 
-* Provides 8 Red, 8 Green and 8 Blue common cathode pins along with 8 Vcc pins in a **2 x 16 header pin**.
+- Provides 8 Red, 8 Green and 8 Blue common cathode pins along with 8 Vcc pins in a **2 x 16 header pin**.
 
-  * Controllable with a 8 x 8R,8G,8B multiplexed PWM LED driver like **Rainbowduino**.
+  - Controllable with a 8 x 8R,8G,8B multiplexed PWM LED driver like **Rainbowduino**.
 
 ## Application Ideas
 
 ---
 
-* Colorful LED display : Mix various intensities of RED, GREEN and BLUE channels to produce different colors
+- Colorful LED display : Mix various intensities of RED, GREEN and BLUE channels to produce different colors
 
-* Bright mood Lamp / Night lamp
+- Bright mood Lamp / Night lamp
 
-* Useful for artistic application.
+- Useful for artistic application.
 
 ## Specification
 
@@ -121,15 +121,15 @@ Rainbow Cube Kit illuminated with random colors
 
 **Operating Voltage**
 
-* 3.3V
+- 3.3V
 
 **LEDs**
 
-* **8mm** common anode RGB LED.
+- **8mm** common anode RGB LED.
 
-* **4 Leads** (Blue-_shortest lead_,Green, Anode-_longest lead_, Red).
+- **4 Leads** (Blue-_shortest lead_,Green, Anode-_longest lead_, Red).
 
-* **Max forward current** IF = **20mA**.
+- **Max forward current** IF = **20mA**.
 
 ## Pin definition and Rating
 
@@ -141,37 +141,36 @@ All pins are accessible from the Panel board show below.
   <figcaption><b /><i>Panel board (bottom view)</i></figcaption>
 </div>
 
-* **Rainbow Cube** kit provides **2 x 16 pin header** for connecting to RGB LEDs driver board like **Rainbowduino**.
+- **Rainbow Cube** kit provides **2 x 16 pin header** for connecting to RGB LEDs driver board like **Rainbowduino**.
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_pin_diagram.png" />
   <figcaption><b /><i>**2 x 16** pin header connector</i></figcaption>
 </div>
 
-* **xBee Socket**
+- **xBee Socket**
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/XBee_PinOut.jpeg" />
   <figcaption><b /><i>**2 x 16** pin header connector</i></figcaption>
 </div>
 
-* **DC Jack Pin**
+- **DC Jack Pin**
 
-  * Middle Pin VIN (6-9DCV)
+  - Middle Pin VIN (6-9DCV)
 
-    * Side barrel: GND
+    - Side barrel: GND
 
-* 4 pin **Green terminal**.
+- 4 pin **Green terminal**.
 
-  * 2 GND pins, 2 VIN pins
+  - 2 GND pins, 2 VIN pins
 
 ## Construction
 
 ---
-Before starting to build your Cube, please read though all the instructions first. Building the Cube is not difficult, but it will take you about 90 minutes to finish
-it.
+Before starting to build your Cube, please read though all the instructions first. Building the Cube is not difficult, but it will take you about 90 minutes to finish it.
 
-* [Download and read assembly instructions](https://www.seeedstudio.com/depot/docu/CUBE.pdf)
+- [Download and read assembly instructions](https://www.seeedstudio.com/depot/docu/CUBE.pdf)
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow-1.jpg" />
@@ -188,30 +187,30 @@ Assembled cube is of approx. of 10cm (l) X 10cm (b) X 12cm (h) dimension.
 ---
 To easily understand the working of **Rainbow Cube kit**, a very simplified schematic is presented below. In essence, 64 RGB LEDs are arranged in a form consisting of 8 common anodes(positive pins) and 8 common cathodes(gtound pins) for each color Red, Green and Blue.
 
-* The complete schematic of **RGB Cube kit** is represented in a **2D RGB LED Matrix** form below.
+- The complete schematic of **RGB Cube kit** is represented in a **2D RGB LED Matrix** form below.
 
-  * Numbers **1 - 32** indicates the pin number of the **2x16** pin header shown above.
+  - Numbers **1 - 32** indicates the pin number of the **2x16** pin header shown above.
 
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/8x8_RGB_Matrix_Schematic.png)
 
-* The **RGB Cube kit** inter-connection are presented in a block diagram format. This block diagram clearly shows how the 64 LEDs in 2D form are mapped into a 3D Cube form.
+- The **RGB Cube kit** inter-connection are presented in a block diagram format. This block diagram clearly shows how the 64 LEDs in 2D form are mapped into a 3D Cube form.
 
 ![](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_kit_Block_Diagram.png)
 
-* The actual 3D positions of LEDs are marked in the below photograph.
+- The actual 3D positions of LEDs are marked in the below photograph.
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_LED_3D_Coordinates.png" />
   <figcaption><b /><i /></figcaption>
 </div>
 
-* The X,Y coordinates of **2D RGB LED Matrix** is mapped to the **RGB Cube kit** block diagram as follows:
+- The X,Y coordinates of **2D RGB LED Matrix** is mapped to the **RGB Cube kit** block diagram as follows:
 
-  * Locate the 2D-XY coordinate (X,Y) from RGB Cube kit block diagram
+  - Locate the 2D-XY coordinate (X,Y) from RGB Cube kit block diagram
 
-    * Use these (X,Y) co-ordinates with (X,Y) coordiantes of RGB Matrix to know how the LED is controlled (i.e locating VCC and Cathode pins)
+    - Use these (X,Y) co-ordinates with (X,Y) coordiantes of RGB Matrix to know how the LED is controlled (i.e locating VCC and Cathode pins)
 
-    * _For example_: LED **(Z,X,Y):(1,0,3)** 's 2D-XY is **(6,3)**. This LED's VCC is Pin 31. The R,G and B LED's cathode are connected to 12,25 and 4 pins respectively.
+    - _For example_: LED **(Z,X,Y):(1,0,3)** 's 2D-XY is **(6,3)**. This LED's VCC is Pin 31. The R,G and B LED's cathode are connected to 12,25 and 4 pins respectively.
 
 ## Usage
 
@@ -219,7 +218,7 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
 ### Hardware Installation
 
-* Connect **Rainbow Cube Kit** 2x16 male pin header to **Rainbowduino** as shown below
+- Connect **Rainbow Cube Kit** 2x16 male pin header to **Rainbowduino** as shown below
 
 <div align="center">
   <img src="https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/img/Rainbow_Cube_Installation_1.jpg" />
@@ -233,17 +232,17 @@ To easily understand the working of **Rainbow Cube kit**, a very simplified sche
 
 A **Rainbowduino** properly connected to **Rainbow Cube kit**
 
-* Attach an USB cable to **Rainbowduino** for programming
+- Attach an USB cable to **Rainbowduino** for programming
 
 ### Programming
 
 Let us get started with a simple example:
 
-* Download Rainbowduino v3.0 Library
+- Download Rainbowduino v3.0 Library
 
-* Open Cube1.pde sketch (a copy of it is reproduced below):
+- Open Cube1.pde sketch (a copy of it is reproduced below):
 
-* Compile and upload the sketch
+- Compile and upload the sketch
 
 ```cpp
 /*
@@ -335,7 +334,7 @@ Rb.blankDisplay();
 
 ### Demos
 
-* To understand the (Z,X,Y) pixel addressing let us see the another example. In this demo, the Layer 0 (i.e Z-0) is painted Green and Layer 3 is painted Blue.
+- To understand the (Z,X,Y) pixel addressing let us see the another example. In this demo, the Layer 0 (i.e Z-0) is painted Green and Layer 3 is painted Blue.
 
 ```cpp
 /*
@@ -382,7 +381,7 @@ Output
   <figcaption><b /><i>positioning</i></figcaption>
 </div>
 
-* In this demo, all LEDs are painted with some random color. After five seconds of delay, the whole cube is repainted with random colors.
+- In this demo, all LEDs are painted with some random color. After five seconds of delay, the whole cube is repainted with random colors.
 
 ```cpp
 /*
@@ -434,23 +433,23 @@ Output
 
 ---
 
-* RGB iPhone Software (by KonchaTech)
+- RGB iPhone Software (by KonchaTech)
 
-  * Send RGB values to your cube via an iPhone (requires connected computer and TouchOSC software)
+  - Send RGB values to your cube via an iPhone (requires connected computer and TouchOSC software)
 
-    * [Sourcecode](http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html)
+    - [Sourcecode](http://konchatech.blogspot.ca/2012/05/4x4x4-iphone-controlled-rgb-led-cube.html)
 
-    * [Video](https://www.youtube.com/watch?v=JXr-Jgzgigs)
+    - [Video](https://www.youtube.com/watch?v=JXr-Jgzgigs)
 
-* Ambient Visualizer Software (by KonchaTech)
+- Ambient Visualizer Software (by KonchaTech)
 
-  * Make your cube change colors in reaction to what is displayed on your computer screen (requires connected computer)
+  - Make your cube change colors in reaction to what is displayed on your computer screen (requires connected computer)
 
-    * [Sourcecode](http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html)
+    - [Sourcecode](http://konchatech.blogspot.ca/2012/05/ambient-led-cube.html)
 
-    * [Video 1](https://www.youtube.com/watch?v=cC_xqA5irLA)
+    - [Video 1](https://www.youtube.com/watch?v=cC_xqA5irLA)
 
-    * [Video 2](https://www.youtube.com/watch?v=ed9FURoNZ6M)
+    - [Video 2](https://www.youtube.com/watch?v=ed9FURoNZ6M)
 
 ## Schematic Online Viewer
 
@@ -461,29 +460,29 @@ Output
 
 ---
 
-* Click here to download Rainbow Cube Kit
-  * [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
+- Click here to download Rainbow Cube Kit
+  - [Complete schematic in PDF](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbow_Cube_Kit-RGB_4x4x4_LED_schematic_board.pdf)
 
-  * [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
+  - [Eagle CAD files](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/RainbowCube_v1.1_Panel_v1.2_Eaglefiles.zip)
 
-* Data-sheets
+- Data-sheets
 
-  * [8mm RGB LED](https://www.seeedstudio.com/depot/datasheet/8mmLED.pdf)
+  - [8mm RGB LED](https://www.seeedstudio.com/depot/datasheet/8mmLED.pdf)
 
-  * [Rainbowduino3.0 Library for Arduino 023](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino3.0_Library.zip)
+  - [Rainbowduino3.0 Library for Arduino 023](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino3.0_Library.zip)
 
-  * [Rainbowduino3.0 Library for Arduino 1.0](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino_for_Arduino1.0.zip)
+  - [Rainbowduino3.0 Library for Arduino 1.0](https://files.seeedstudio.com/wiki/Rainbow_Cube_kit_RGB_4_4_4_Rainbowduino_Compatible/res/Rainbowduino_for_Arduino1.0.zip)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

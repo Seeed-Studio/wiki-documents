@@ -17,14 +17,16 @@ Seeeduino Stalker V3 enclosure is used for Arch GPRS V3, It's waterproof and eno
 
 [![enter image description here](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Seeeduino-Stalker-v3-enclosure-p-2419.html)
 
-##  Feature
----
-*   High strength enclosure
-*   High transparency
-*   Waterproof
-*   Simple structure and easy to use
+## Feature
 
-##  How to use it
+---
+- High strength enclosure
+- High transparency
+- Waterproof
+- Simple structure and easy to use
+
+## How to use it
+
 ---
 It's very easy to use, You only use the PVC mounting plate can fixed it.
 
@@ -53,7 +55,7 @@ Bending the pvc plate and fix the PCBA with a snap.
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0752.JPG)
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0756.JPG)
 
-##  Application scenarios
+## Application scenarios
 
 As we mentioned before, The enclosure is used to carry Arch GPRS V3 environmental testing and data collection.
 
@@ -61,16 +63,16 @@ Grove series sensors can easily mounting to the PVC plate by rivet.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/IMG_0764.JPG)
 
-**The stalker enclosure carry the Arch GPRS in the wild **.
+**The stalker enclosure carry the Arch GPRS in the wild**.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-115633.jpg)
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-115712.jpg)
 
-**It's hanging on the tree **.
+**It's hanging on the tree**.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-120105.jpg)
 
-**If you mounting the iron block，You can throw it in the water，Solar battery always up **.
+**If you mounting the iron block，You can throw it in the water，Solar battery always up**.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/Seeeduino_Stalker_v3_enclosure/img/P50130-120542.jpg)
 
@@ -119,11 +121,11 @@ Grove series sensors can easily mounting to the PVC plate by rivet.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

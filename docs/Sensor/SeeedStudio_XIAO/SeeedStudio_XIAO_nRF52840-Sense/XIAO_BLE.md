@@ -28,7 +28,7 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td>
         <div style={{textAlign: 'center'}}>
-          <img 
+          <img
             src="https://files.seeedstudio.com/wiki/XIAO-BLE/nrf52840_front.jpg"
             style={{width: '100%', maxWidth: '250px', height: 'auto'}}
           />
@@ -36,7 +36,7 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div style={{textAlign: 'center'}}>
-          <img 
+          <img
             src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840sence.png"
             style={{width: '100%', maxWidth: '250px', height: 'auto'}}
           />
@@ -44,7 +44,7 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div style={{textAlign: 'center'}}>
-          <img 
+          <img
             src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840plus.png"
             style={{width: '100%', maxWidth: '250px', height: 'auto'}}
           />
@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div style={{textAlign: 'center'}}>
-          <img 
+          <img
             src="https://files.seeedstudio.com/wiki/XIAO-BLE/xiaonrf52840senceplus.png"
             style={{width: '100%', maxWidth: '250px', height: 'auto'}}
           />
@@ -62,8 +62,8 @@ import TabItem from '@theme/TabItem';
     <tr>
       <td>
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
-          <a 
-            className="get_one_now_item" 
+          <a
+            className="get_one_now_item"
             href="https://www.seeedstudio.com/Seeed-XIAO-BLE-nRF52840-p-5201.html"
           >
             <strong>
@@ -76,8 +76,8 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
-          <a 
-            className="get_one_now_item" 
+          <a
+            className="get_one_now_item"
             href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html"
           >
             <strong>
@@ -90,8 +90,8 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
-          <a 
-            className="get_one_now_item" 
+          <a
+            className="get_one_now_item"
             href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Plus-p-6359.html"
           >
             <strong>
@@ -104,8 +104,8 @@ import TabItem from '@theme/TabItem';
       </td>
       <td>
         <div className="get_one_now_container" style={{textAlign: 'center'}}>
-          <a 
-            className="get_one_now_item" 
+          <a
+            className="get_one_now_item"
             href="https://www.seeedstudio.com/Seeed-Studio-XIAO-nRF52840-Sense-Plus-p-6360.html"
           >
             <strong>
@@ -152,7 +152,7 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 ## Specifications comparison
 
 <div class="table-center">
-	<table align="center">
+ <table align="center">
   <tr>
       <th>Item</th>
       <th style={{width:220, height:'auto'}}>Seeed Studio XIAO nRF52840</th>
@@ -185,7 +185,7 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
       <td colspan="2" align="center">1xI2C, 2xUART, 2xSPI, 1xI2S</td>
   </tr>
   <tr>
-      <th>PWM/Analog Pins	</th>
+      <th>PWM/Analog Pins </th>
       <td colspan="2" align="center">11/6</td>
       <td colspan="2" align="center">20/6</td>
   </tr>
@@ -209,7 +209,6 @@ Seeed Studio XIAO nRF52840 Sense is compatible to the Seeed Studio XIAO expansio
 </div>
 
 ## Hardware overview
-
 
 <Tabs>
 <TabItem  value="52540(Sense)" label="XIAO nRF52840/XIAO nRF52840 Sense" default>
@@ -274,10 +273,13 @@ Seeed Studio XIAO nRF52840 assembles many functions in one tiny board and someti
 The Pin definition supported by these two libraries might be a little different and Seeed will keep update the wiki until it is clear.
 
 :::tip
+
 1. If you use the onboard package of Seeed nRF52 Boards, the Serial function may not compile. The solution is to add the line `#include <Adafruit_TinyUSB.h>` in your code. You can download this package from: https://github.com/adafruit/Adafruit_TinyUSB_Arduino
 
 2. If you prefer a simpler approach, you can choose Seeed nRF52 mbed-enabled Boards from the beginning. It supports the compilation of the Serial function without the need for additional modifications.
+
 :::
+
 ## Getting started
 
 First, we are going to connect the Seeed Studio XIAO nRF52840 (Sense) to the computer and upload a simple code from Arduino IDE to check whether the board is functioning well.
@@ -500,7 +502,6 @@ Here , We would like to express our special thanks to the author for providing t
 
 **If you want to know about this example more detail inforation , Click [Here](https://forum.seeedstudio.com/t/xiao-sense-accelerometer-examples-and-low-power/270801)**
 
-
 ## Battery Charging current
 
 The battery charging current is selectable as 50mA or 100mA, where you can set **Pin13** as high or low to change it to 50mA or 100mA. The low current charging current is at the input model set up as HIGH LEVEL and the high current charging current is at the output model set up as LOW LEVEL.
@@ -603,11 +604,7 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
 
 - **[XLSX]** [Seeed Studio XIAO nRF52840 pinout sheet](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-nRF52840-pinout_sheet.xlsx)
 
-
-
 - 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
-
 
 ### Seeed Studio XIAO nRF52840 Sense
 
@@ -627,15 +624,13 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
 
 - **[STEP]** [Seeed Studio XIAO nRF52840 Sense 3D Model](https://files.seeedstudio.com/wiki/XIAO-BLE/seeed-studio-xiao-nrf52840-3d-model.zip)
 
-
-
 - 🔗 **[Kicad]** [Seeed Studio XIAO nRF52840 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 ### Seeed Studio XIAO nRF52840 (Sense) Plus
 
 - **[PDF]** [nRF52840 datasheet](https://files.seeedstudio.com/wiki/XIAO-BLE/nrf52840_datasheet.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO nRF52840 (Sense) Plus Schematic ](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip)
+- **[ZIP]** [Seeed Studio XIAO nRF52840 (Sense) Plus Schematic](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XIAO_nRF52840_Plus_SCH_PCB_v1.1.zip)
 
 - **[ZIP]** [Seeed Studio XIAO nRF52840 (Sense) Plus KiCAD file](https://files.seeedstudio.com/wiki/XIAO-BLE/Seeed_Studio_XlAO_nRF52840_Plus_KiCAD_file.zip)
 
@@ -660,11 +655,11 @@ For more details, check the PMIC datasheet: [BQ25100](https://www.ti.com/lit/ds/
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

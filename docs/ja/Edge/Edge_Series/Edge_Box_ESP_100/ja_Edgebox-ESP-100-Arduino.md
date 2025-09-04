@@ -306,7 +306,6 @@ EdgeBox-ESP-100のほかにも、Raspberry Piを搭載したエッジファミ�
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## ハードウェア概要

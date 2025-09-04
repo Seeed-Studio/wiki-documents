@@ -1,6 +1,6 @@
 ---
-description: This article is a collection page for the reTerminal E10xx series.
-title: reTerminal E10xx Series
+description: This article is a collection page for the reTerminal E Series.
+title: reTerminal E Series
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /reterminal_e10xx_main_page
 sidebar_position: 1
@@ -9,18 +9,18 @@ last_update:
   author: Citric
 ---
 
-# reTerminal E10xx Series Overview
+# reTerminal E Series ePaper Display Overview
 
 ## Introduction
 
-The reTerminal E10xx series represents Seeed Studio's family of ePaper display terminals designed for low-power information display applications. These devices combine the power efficiency of ePaper technology with wireless connectivity to create versatile displays for smart homes, retail environments, office spaces, and more.
+The reTerminal E Series ePaper Display represents Seeed Studio's family of ePaper display terminals designed for low-power information display applications. These devices combine the power efficiency of ePaper technology with wireless connectivity to create versatile displays for smart homes, retail environments, office spaces, and more.
 
-Unlike traditional displays that consume power continuously, the reTerminal E10xx series only uses power when changing content, making them ideal for applications requiring extended battery life and always-on information display.
+Unlike traditional displays that consume power continuously, the reTerminal E Series ePaper Display only uses power when changing content, making them ideal for applications requiring extended battery life and always-on information display.
 
 
 ## reTerminal E1001
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.png" style={{width:500, height:'auto'}}/></div><br />
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/24.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1001" target="_blank" rel="noopener noreferrer">
@@ -42,9 +42,7 @@ The reTerminal E1001 features a 7.5-inch monochrome ePaper display with 4-level 
 
 ## reTerminal E1002
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.png" style={{width:500, height:'auto'}}/></div><br />
-
-The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/25.jpg" style={{width:700, height:'auto'}}/></div><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
   <a class="get_one_now_item" href="https://wiki.seeedstudio.com/getting_started_with_reterminal_e1002" target="_blank" rel="noopener noreferrer">
@@ -54,6 +52,9 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
     <strong><span><font color={'FFFFFF'} size={"4"}>Get One Now</font></span></strong>
   </a>
 </div><br />
+
+
+The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with ACeP (Advanced Color ePaper) technology. This color display offers the same power efficiency benefits of ePaper technology while allowing for more visually engaging content with multiple colors, making it ideal for applications where visual distinction and aesthetic appeal are important.
 
 ### Key Features
 
@@ -75,7 +76,7 @@ The reTerminal E1002 features a vibrant 7.3-inch full-color ePaper display with 
   </a>
 </div><br />
 
-All reTerminal E10xx devices are designed to work with the SenseCraft HMI platform, providing an intuitive web interface for creating and deploying content to your devices. Key features include:
+All reTerminal E Series ePaper Display devices are designed to work with the SenseCraft HMI platform, providing an intuitive web interface for creating and deploying content to your devices. Key features include:
 
 - **AI Generator**: Create dashboards using text prompts
 - **Gallery**: Display images and slideshows
@@ -85,17 +86,17 @@ All reTerminal E10xx devices are designed to work with the SenseCraft HMI platfo
 
 ## Applications
 
-The reTerminal E10xx series supports multiple development platforms and frameworks:
+The reTerminal E Series ePaper Display supports multiple development platforms and frameworks:
 
-- [reTerminal E10xx Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome)
+- [reTerminal E Series ePaper Display Work with ESPHome for Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome)
 
-  Explains how to plug the reTerminal E10xx into Home Assistant and write simple programs to draw simple graphs in ESPHome via YAML.
+  Explains how to plug the reTerminal E Series ePaper Display into Home Assistant and write simple programs to draw simple graphs in ESPHome via YAML.
 
-- [Advanced ESPHome Usage of reTerminal E10xx in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)
+- [Advanced ESPHome Usage of reTerminal E Series ePaper Display in Home Assistant](https://wiki.seeedstudio.com/reterminal_e10xx_with_esphome_advanced)
 
   Explains how to use reTerminal's hardware and advanced features such as deep sleep and comprehensive use cases in Home Assistant.
 
-- [reTerminal E10xx Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl)
+- [reTerminal E Series ePaper Display Works with TRMNL](https://wiki.seeedstudio.com/reterminal_e10xx_trmnl)
 
   Utilize the dedicated TRMNL framework for simplified development and rapid deployment.
 
@@ -107,8 +108,8 @@ Create rich graphical interfaces using LVGL and the visual SquareLine Studio des
 
 ## Resources
 
-- [SenseCraft HMI Documentation](/reterminal_e10xx_main_page)
-- [ESP32S3 Datasheet](/reterminal_e10xx_main_page)
+- [SenseCraft HMI Documentation](https://wiki.seeedstudio.com/sensecraft_hmi_overview/)
+- [ESP32-S3 Datasheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
 - [GitHub Repository](/reterminal_e10xx_main_page)
 
 ## FCC Notice

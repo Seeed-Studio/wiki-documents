@@ -205,7 +205,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ## ✨ 贡献者项目
 
 - 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 特别感谢 [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/cn/contributors/)。
+- 特别感谢 [Frederik](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=Support+Arduino+to+our+new+open-source+LoRaWAN+device%2C+the+new+T1000-E+for+LoRaWAN&pane=issue&itemId=94352679&issue=Seeed-Studio%7Cwiki-documents%7C2144) 的专注努力。您的工作将被[展示](https://wiki.seeedstudio.com/contributors/)。
 
 ## 技术支持与产品讨论
 

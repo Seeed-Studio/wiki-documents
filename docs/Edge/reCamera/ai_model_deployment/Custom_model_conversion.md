@@ -206,7 +206,7 @@ corresponding to **0.0, 0.0, 0.0** and **0.0039216, 0.0039216, 0.0039216** when 
 and `scale`. The parameters for `mean` and `scale` differ depending on the model, as they are determined by the normalization method used for each specific model.
 
 You can refer to the following model conversion command in terminal:
- 
+
 ```bash
 model_transform \
   --model_name yolo11n \
@@ -434,10 +434,7 @@ After compilation, a file named `yolo11n_1684x_f16.cvimodel` is generated. The q
 
 Before converting to the **INT8** model, **you need to run calibration to get the calibration table.**
 The number of input data is about 100 to 1000 according to the situation.
-Then use the calibration table to generate a symmetric or asymmetric `cvimodel`. It is gen-
-erally not recommended to use the asymmetric one if the symmetric one already meets the
-requirements, because the performance of the asymmetric model will be slightly worse than
-the symmetric model.
+Then use the calibration table to generate a symmetric or asymmetric `cvimodel`. It is gen-erally not recommended to use the asymmetric one if the symmetric one already meets the requirements, because the performance of the asymmetric model will be slightly worse than the symmetric model.
 Here is an example of the existing 100 images from `COCO2017` to perform calibration:
 
 ```bash
@@ -751,12 +748,11 @@ Preview `Out.jog`, the `mixed-precision` quantized yolov5 model inference result
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

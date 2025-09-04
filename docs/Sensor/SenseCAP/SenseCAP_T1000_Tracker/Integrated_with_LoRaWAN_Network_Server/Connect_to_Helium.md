@@ -17,7 +17,7 @@ last_update:
 
 Before connecting to Helium, you need to configure the basic parameters of your device on SenseCAP Mate APP, check [Get Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker) for more details.
 
-* Set the platform to `Helium`, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
+- Set the platform to `Helium`, and then copy the `Device EUI`/`APP EUI`/`APP Key`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/heliumdevice.png" alt="pir" width={300} height="auto" /></p>
 
@@ -932,8 +932,8 @@ For new users, to receive the data from a device on the Helium network it must b
 
 For those familiar with the general process the TL;DR; is:
 
-* create an device profile with the appropriate region and the codec (see source below)<br/>
-* create device with `devEUI`, `appKey`, and a `app_eui` variable with the AppEUI, all three values coming from the `SenseCraft` App
+- create an device profile with the appropriate region and the codec (see source below)<br/>
+- create device with `devEUI`, `appKey`, and a `app_eui` variable with the AppEUI, all three values coming from the `SenseCraft` App
 
 ### Add device profile
 

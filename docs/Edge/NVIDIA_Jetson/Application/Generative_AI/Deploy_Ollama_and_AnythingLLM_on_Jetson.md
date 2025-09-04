@@ -20,10 +20,10 @@ last_update:
 
 ## Introduction
 
-Local AI Assistant is an artificial intelligence application that runs on local hardware and software, offering intelligent interaction and data processing capabilities. It operates independently of cloud services, protecting user privacy while providing quick response times and high levels of customization. 
+Local AI Assistant is an artificial intelligence application that runs on local hardware and software, offering intelligent interaction and data processing capabilities. It operates independently of cloud services, protecting user privacy while providing quick response times and high levels of customization.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/ai-assistant.png" />
 </div>
 
@@ -39,7 +39,7 @@ In this wiki, we will accomplish the following tasks using the [NVIDIA® Jetson 
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/AGX-Orin.png" />
 </div>
 
@@ -52,6 +52,7 @@ In this wiki, we will accomplish the following tasks using the [NVIDIA® Jetson 
 ## Getting Started
 
 ### Hardware Connection
+
 - Connect the Jetson device to the network, mouse, keyboard, and monitor.
 
 :::note
@@ -115,7 +116,7 @@ You can enter the `ifconfig` command on the Jetson terminal to find its IP addre
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/anythingllm-init.png" />
 </div>
 
@@ -126,7 +127,7 @@ Please note that on the configuration page of `LLM Perference`, we should select
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/select-ollama.png" />
 </div>
 
@@ -135,7 +136,7 @@ Finally, import the necessary documents. The large language model will then answ
 `import` --> `click to upload or drag and drop` --> `select document` --> `move to Workspace` --> `save and embed`
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/inport-doc.png" />
 </div>
 
@@ -150,7 +151,7 @@ For more in-depth configuration tutorials, please refer to [this link](https://d
 Enter questions in the dialogue box, and the large language model will provide answers based on the knowledge base.
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/local-ai-assistant/test.png" />
 </div>
 
@@ -194,8 +195,6 @@ And so, the village thrived, and Eliza’s adventures became the stuff of legend
 
 </details>
 
-
-
 ## Effect Demonstration
 
 Here, we use the configured local personal assistant to query the information we need.
@@ -205,21 +204,21 @@ Here, we use the configured local personal assistant to query the information we
 </div>
 
 ## References
+
 - https://ollama.com/library/llama3.1
 - https://anythingllm.com/
 - https://www.youtube.com/watch?v=4UFrVvy7VlA&t=4s
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

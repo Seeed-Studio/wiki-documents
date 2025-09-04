@@ -14,7 +14,7 @@ This document contains all the frequently asked questions related to reComputer 
 
 For details, please click [**here**](/R1000_default_username_password). 
 
-# Tech support
+## Tech Support
 
 Thank you for choosing our products! We are **here** to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs. 
 

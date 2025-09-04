@@ -15,11 +15,11 @@ last_update:
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/1.png)
 
 ## Introduction
+
 BitWear is a low-cost compact accessory for micro:bit users to make fun wearable gadgets. The BitWear is simply attached to the micro:bit with 5 screws (M3x5mm), and powered with two CR2032 batteries, which are securely clipped in and unable to be taken out unless you unscrew the BitWear. There is a vibration motor, a buzzer and an addressable RGB LED on board, all designed for your fun wearable projects. Our goal design for the BitWear is to maximize micro:bit functions while minimizing the space footprint to provide new micro:bit users with enriched wearable experience.
 
 <!-- ![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607655991124-7551ded4-89b3-4524-8ea2-d43cf23c85dd.png#align=left&display=inline&height=547&originHeight=547&originWidth=1099&size=0&status=done&style=none&width=1099) -->
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/2.png)
-
 
 :::note
 Users should prepare two C2032 batteries and five M3*5 screws separately.
@@ -28,25 +28,25 @@ Users should prepare two C2032 batteries and five M3*5 screws separately.
 <!-- ![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607655991126-2181a46f-99d0-4ee3-b587-3c82a082af0b.png#align=left&display=inline&height=527&originHeight=527&originWidth=995&size=0&status=done&style=none&width=995) -->
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/3.png)
 
-
-
 :::tip
 When testing a program, do not install batteries on BitWear first. Use a USB cable instead to provide power and ensure program transmission. Only install batteries when a program completes and offline implementation is required.
 :::
 
 ## Tutorials
-Here are some related tutorials to help you get started with the BitWear.
 
+Here are some related tutorials to help you get started with the BitWear.
 
 ### 1. Wake-Up Alarm
 
 #### 1.1 Implementation
+
 This is a magical gadget that can wake you up! Once the project completes, use the double-sided tape to secure the gadget onto your back. Slowly bend down as if you are falling to sleep, and see if it can send out a remind.
 
 <!-- ![](https://cdn.nlark.com/yuque/0/2020/png/2701823/1607655991109-4bb68ed4-02eb-4499-b6df-bcebc2efe496.png#align=left&display=inline&height=522&originHeight=522&originWidth=928&size=0&status=done&style=none&width=928) -->
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/4.png)
 
 #### 1.2 Write a Program
+
 First, add a forever block. Connect the block show icon inside. Keep this heart icon on it.
 Next, add an IF-THEN statement. Connect a comparison block &lt; into it. Inside the block, add the block acceleration (mg) from the tab Input to the box on the left; and input 800 into the box on the right.
 Then, go to the tab Music and connect the block start melody (dadadum) repeating (once) underneath.
@@ -55,17 +55,19 @@ Then, go to the tab Music and connect the block start melody (dadadum) repeating
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/5.png)
 
 #### 1.3 Connect a Device
+
 Attach the BitWear onto the micro:bit. Use a USB cable to connect the micro:bit and your PC together. Ensure that the LED indicator on the micro:bit lights up.
 
 #### 1.4 Download a Program
+
 You have been introduced how to download a program in the [previous tutorials](https://docproxy.tinkergen.com/web/#/2?page_id=329), which can be simplified into steps as: rename a program, click the "Download" button and send it to the micro:bit.
 
 #### 1.5 Run a Program
+
 Turn on the power switch on the BitWear and see if the program can run normally.
 
-
-
 ### 2. Light Detector
+
 #### 2.1 Implementation
 
 With a BitWear attached, the micro:bit shows a smiley face if the light level is greater than 80; if not, the BitWear vibrates, and the micro:bit shows a sad face and plays the melody Baddy. (The specified light level may differ in a real scenario; you can adjust it as needed.)
@@ -73,6 +75,7 @@ With a BitWear attached, the micro:bit shows a smiley face if the light level is
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/6.png)
 
 #### 2.2 Write a Program
+
 Note that MakeCode does not provide blocks to control the BitWear. Therefore we need to manually add an extension in MakeCode to make sure everything goes well. Let's learn how to do it now!
 How to Add a BitWear Extension:
 Go to MakeCode:
@@ -98,8 +101,6 @@ Go to MakeCode:
 
 Let's move on to the task after we added the extension.
 
-
-
 First, add a forever block and connect an IF-THEN-ELSE statement inside.
 Follow this program logic and code: if the light level is greater than 80, then the micro:bit will show a smiley face; if not, the BitWear will vibrate, and the micro:bit will show a sad face and play the melody Baddy.
 
@@ -107,10 +108,15 @@ Follow this program logic and code: if the light level is greater than 80, then 
 ![](https://files.seeedstudio.com/wiki/microbit/bitwear/11.png)
 
 #### 2.3 Connect a Device
+
 Attach the BitWear onto the micro:bit. Use a USB cable to connect the micro:bit and your PC together. Ensure that the LED indicator on the micro:bit lights up.
+
 #### 2.4 Download a Program
+
 You have been introduced how to download a program in the previous tutorials, which can be simplified into steps as: rename a program, click the "Download" button and send it to the micro:bit.
+
 #### 2.5 Run a Program
+
 Turn on the power switch on the BitWear and see if the program can run normally.
 
 :::note
@@ -118,11 +124,11 @@ Due to no light sensor is built on a micro:bit, the micro:bit uses the LED matri
 :::
 
 ## Course Materials
+
 You can see related course materials about the micro:bit and BitWear on our online learning platform Make2Learn via this address: [https://make2learn.tinkergen.com/](https://make2learn.tinkergen.com/)
 
-
-
 ## Attachments
+
 #### [Attachment: BitWear Tutorial Source Code](https://tinkergen.com/filedownload/179236)
 
 ## Tech Support & Product Discussion
@@ -130,11 +136,11 @@ You can see related course materials about the micro:bit and BitWear on our onli
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

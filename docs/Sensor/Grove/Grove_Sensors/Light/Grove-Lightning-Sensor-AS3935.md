@@ -22,10 +22,9 @@ last_update:
 
 ## Introduction
 
-The Grove Lightning Sensor is a highly sensitive sensor that detects electric fields free in air and using an internal proprietary algorithm determines if it is caused by the front end of a storm with lightning events. It is very easy to be used as a plug and play device using the Grove standard cable can accept several adjustments to be optimized for the application environment, both indoor or outdoor. 
+The Grove Lightning Sensor is a highly sensitive sensor that detects electric fields free in air and using an internal proprietary algorithm determines if it is caused by the front end of a storm with lightning events. It is very easy to be used as a plug and play device using the Grove standard cable can accept several adjustments to be optimized for the application environment, both indoor or outdoor.
 
 The use is for preventive alert on incoming lightning front of a storm so to avoid injuries to electrical equipment or human and for weather research because can furnish several data on the strength and number of events. This sensor can be fully integrated with other sensors in a forecast weather station and be very useful in agriculture for crop protection in case of  incoming storms. Can detect the lightning front of a storm up to 30 – 40 km distance, when is still out of sight.
-
 
 ### Features
 
@@ -47,33 +46,31 @@ The use is for preventive alert on incoming lightning front of a storm so to avo
 
 Before everything starts, it is quite essential to have some basic parameters of the product. The following table provides information about the characteristics of Grove Lightning Sensor.
 
-
 ### Specifications
 
 <table align="center">
-	<tr>
-	    <th align="center">Parameter</th>
-	    <th align="center">Range/Value</th>
-	</tr>
-	<tr>
-	    <td align="center">Input Voltage</td>
-	    <td align="center">5 Volt or 3.3 Volt (select appropriate solder   
+ <tr>
+     <th align="center">Parameter</th>
+     <th align="center">Range/Value</th>
+ </tr>
+ <tr>
+     <td align="center">Input Voltage</td>
+     <td align="center">5 Volt or 3.3 Volt (select appropriate solder
  pads)</td>
-	</tr>
-	<tr>
-	    <td align="center">Communication</td>
-	    <td align="center">I2C standard, SPI using the provided output</td>
-	</tr>
-	<tr>
-	    <td align="center">Maximum detection range</td>
-	    <td align="center">40 km</td>
-	</tr>
-	<tr>
-	    <td align="center">Programmable</td>
-	    <td align="left">Yes, appropriate registers can be programmed to fit the application and environment where the sensor is mounted.</td>
-	</tr>
+ </tr>
+ <tr>
+     <td align="center">Communication</td>
+     <td align="center">I2C standard, SPI using the provided output</td>
+ </tr>
+ <tr>
+     <td align="center">Maximum detection range</td>
+     <td align="center">40 km</td>
+ </tr>
+ <tr>
+     <td align="center">Programmable</td>
+     <td align="left">Yes, appropriate registers can be programmed to fit the application and environment where the sensor is mounted.</td>
+ </tr>
 </table>
-
 
 ## Getting Started
 
@@ -85,7 +82,6 @@ If you choose for the **5 Volt** supply then solder pads (5V) and (0) on the Gro
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/1.png" style={{width:500, height:'auto'}}/></div>
 
-
 If you choose for the **3.3 Volt** supply then solder pads on the Grove Lightning Sensor together as picture below. This is the case if you are using the Seeed Arduino Breakout for Linkt Smart 7688 Duo board that works at 3.3 Volt.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/2.png" style={{width:500, height:'auto'}}/></div>
@@ -93,7 +89,6 @@ If you choose for the **3.3 Volt** supply then solder pads on the Grove Lightnin
 :::note
 The Grove Lightning Sensor can withstand a hot swap insertion with the boards supply **ON** but this is not recommended, always turn off supply before connecting the Grove Lightning Sensor to the board connector.
 :::
-
 
 ## Arduino Example
 
@@ -115,7 +110,6 @@ The Arduino code here furnished permits to dialog with the sensor and to modify 
 
 - If you want to use **Seeed Studio XIAO ESP32C3** for the later routines, please refer to [this tutorial](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#software-setup) to finish adding.
 
-
 ### Demo: Using Grove Lightning Sensor on the Seeeduino
 
 #### Materials Required
@@ -124,7 +118,6 @@ The Arduino code here furnished permits to dialog with the sensor and to modify 
 |:--------------:|:--------------:|
 | <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeeduinoV4/images/cover.JPG" style={{width:250, height:'auto'}}/></div> | <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/6.jpg" style={{width:250, height:'auto'}}/></div> |
 |[**Get ONE Now**](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)|[**Get ONE Now**](https://www.seeedstudio.com/Grove-Lightning-Sensor-AS3935-p-5603.html)|
-
 
 :::caution
 Please check that the front pads of the sensor have been soldered before use. If the position indicated in the picture is not soldered, you may experience problems with the IIC device not being detected when executing the programme later.
@@ -135,7 +128,6 @@ Please check that the front pads of the sensor have been soldered before use. If
 **Step 3**. Connect Grove Lightning Sensor to port I2C of Seeeduino V4.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-lightning-sensor/3.jpg" style={{width:700, height:'auto'}}/></div>
-
 
 **Step 4**. Connect Seeeduino to PC via a Micro-USB cable.
 
@@ -1061,32 +1053,16 @@ For testing purposes, you can use the lighter's igniter to simulate lightning to
 - **[PDF]**[Demo Tuning example](https://files.seeedstudio.com/wiki/Grove-lightning-sensor/Demo-Tuning_example.pdf)
 - **[PDF]**[SCHEMATIC GROVE AS3935 rev1](https://files.seeedstudio.com/wiki/Grove-lightning-sensor/SCHEMATIC-GROVE-AS3935-rev1.pdf)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
-
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -13,9 +13,6 @@ last_update:
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/04.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/04.png" alt="pir" width={600} height="auto" /></p>
 
-
-
-
 <!-- <p style="text-align:center"><a href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border=0 /></a></p>  -->
 
 [<p><img src="https://files.seeedstudio.com/wiki/common/Get_One_Now_Banner.png" alt="pir" width={600} height="auto" /></p>](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)
@@ -31,7 +28,7 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
 - Four fully independent sensor elements on one package.
 - The ability to detect a variety of gases, besides Carbon monoxide (CO), Nitrogen dioxide (NO2), Ethyl alcohol(C2H5CH), Volatile Organic Compounds (VOC) and etc.
 - Qualitative detecting, rather than quantitative.
-- Compact size for easy deployment.   
+- Compact size for easy deployment.
 
 ## Specification
 
@@ -85,13 +82,11 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
       </tr>
       <tr>
         <td className="tg-l5ls"><span style={{fontWeight: 'bold'}}>Operating Voltage</span>（V）</td>
-        <td className="tg-q7v3"><span style={{fontWeight: 'normal'}}>VH=2.0±0.1 AC or DC	VC=5.0±0.1DC</span></td>
+        <td className="tg-q7v3"><span style={{fontWeight: 'normal'}}>VH=2.0±0.1 AC or DC VC=5.0±0.1DC</span></td>
       </tr>
     </tbody>
   </table>
 </div>
-
-
 
 **GM-302B**
 
@@ -171,7 +166,6 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
     </tbody>
   </table>
 </div>
-
 
 **GM-502B**
 
@@ -254,8 +248,6 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
   </table>
 </div>
 
-
-
 **GM-702B**
 
 <div>
@@ -336,7 +328,6 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
     </tbody>
   </table>
 </div>
-
 
 ## Sample test outcomes
 
@@ -740,7 +731,6 @@ Grove - Multichannel Gas Sensor V2 has 4 measuring units, each of them is sensit
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-302B.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-302B.png" alt="pir" width={600} height="auto" /></p>
 
-
 Rs in the figure represents the resistance value of the sensorin different concentrations of gas; R0 represents the resistance value of the sensor in clean air. All tests in the picture are completed under standard test conditions. Yellow line is Toluene, blue line is Ethanol, red line is Acetone and purple line is Formaldehyde, which is the same as the ones in charts below.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-302B+2.png) -->
@@ -761,7 +751,7 @@ The output voltage in Chart 7 is the voltage across the load resistance (RL) of 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-702B.png) -->
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-702B.png" alt="pir" width={600} height="auto" /></p>
 
-In Chart 9, Rs represents the resistance of the sensor in different concentrations of gas Value; R0 represents the resistance value of the sensor in clean air. All tests in the picture are completed under standard test conditions. The black line is for CO, red one is CH4, Purple is for H2 and pink one is Air.In Chart 10 , Rs represents the temperature at 150ppmCO and various temperatures / humidities. Resistance value; Rs0 means resistance value under 150ppmCO, 20 ℃, 55% RH. 
+In Chart 9, Rs represents the resistance of the sensor in different concentrations of gas Value; R0 represents the resistance value of the sensor in clean air. All tests in the picture are completed under standard test conditions. The black line is for CO, red one is CH4, Purple is for H2 and pink one is Air.In Chart 10 , Rs represents the temperature at 150ppmCO and various temperatures / humidities. Resistance value; Rs0 means resistance value under 150ppmCO, 20 ℃, 55% RH.
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-702B+2.png) -->
  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/GM-702B+2.png" alt="pir" width={600} height="auto" /></p>
@@ -778,24 +768,20 @@ The output voltage in Chart 12 is the voltage across the load resistance (RL) of
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo_n.jpg" alt="pir" width={200} height="auto" /></p>|
 
-
 ## Getting Started
 
 #### Materials Requied
 
-| Wio Terminal | Grove-Multichannel Gas Sensor V2 | 
+| Wio Terminal | Grove-Multichannel Gas Sensor V2 |
 |--------------|-----------------|
 |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Wio-Terminal/img/Wio-Terminal-thumbnail.png" style={{width:250, height:'auto'}}/></div> |<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/V2.png" style={{width:250, height:'auto'}}/></div> |
 |[Get ONE Now](https://www.seeedstudio.com/Wio-Terminal-p-4509.html)|[Get ONE Now](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html)|
 
-
-
 #### Hardware Overview
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Connection+Image.jpg" alt="pir" width={500} height="auto" /></p>
- 
- <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Diagram.png" alt="pir" width={600} height="auto" /></p> 
+
+ <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/Hardware+Diagram.png" alt="pir" width={600} height="auto" /></p>
 
 :::note
 The module in the image of Hardware Connection has the same arrangement as the one in the image of Hardware Diagram above. As you can see in the Hardware Diagram, the outlined area in the left is the Grove Interface. And there are four squares with tiny holes refer to the gas sensors. When the board with sensors is connected with Wio Terminal, the information of the gases will display on the screen.
@@ -803,7 +789,7 @@ The module in the image of Hardware Connection has the same arrangeme
 
 - **Step 1.** Connect Grove - Multichannel Gas Sensor V2 to port I2C of Grove-Base Shield. Plug Grove - Base Shield into Wio Terminal. And connect Wio Terminal to PC via a USB cable.
 
-- **Step 2.** Download the  [ Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github. And refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
+- **Step 2.** Download the  [Grove_Multichannel_Gas_Sensor_v2 Library](https://github.com/Seeed-Studio/Seeed_Multichannel_Gas_Sensor/archive/master.zip) from Github. And refer [How to install library](https://wiki.seeedstudio.com/How_to_install_Arduino_Library) to install library for Arduino.
 
 - **Step 3.** Copy the code into Wio Terminal and upload. If you do not know how to upload the code, please check [how to upload code](https://wiki.seeedstudio.com/Wio-Terminal-Getting-Started/).
 
@@ -886,20 +872,20 @@ void loop() {
 ```
 
 :::caution
+
 - The module should avoid being placed in the volatile silicon compound steam, or it will cause the sensitivity to be reduced and irrecoverable.
 - The module should avoid being exposured to high concentrations of corrosive gases (such as H2S, SOX, Cl2, HCl, etc.), otherwise it will be irreversibly damaged.
 - The module should not be placed in water or ice.
 - After the module is powered on, the sensor will heat up to a certain degree during the process, which is a normal phenomena.
-- Users MUST preheat the module before starting measuring gases. 
+- Users MUST preheat the module before starting measuring gases.
 - The values obtained by this sensor are analog values and can only be used as a result of qualitative measurements and not for quantitative measurements.
+
 :::
 
 ## Schematic Online Viewer
 
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/products/101020820/Grove+-+Multichannel+Gas+Sensor+V2.0_SCH%26PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
-
 
 ## Resources
 
@@ -913,19 +899,19 @@ void loop() {
 ## Tech Support & Product Discussion
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
 
 ## Upgradable to Industrial Sensors
+
 With the SenseCAP [S2110 controller](https://www.seeedstudio.com/SenseCAP-XIAO-LoRaWAN-Controller-p-5474.html) and [S2100 data logger](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html), you can easily turn the Grove into a LoRaWAN® sensor. Seeed not only helps you with prototyping but also offers you the possibility to expand your project with the SenseCAP series of robust [industrial sensors](https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&categories=SenseCAP&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP).
 
 The IP66 housing, Bluetooth configuration, compatibility with the global LoRaWAN® network, built-in 19 Ah battery, and powerful support from APP make the [SenseCAP S210x](https://www.seeedstudio.com/catalogsearch/result/?q=S21&categories=SenseCAP&product_module=Device) the best choice for industrial applications. The series includes sensors for soil moisture, air temperature and humidity, light intensity, CO2, EC, and an 8-in-1 weather station. Try the latest SenseCAP S210x for your next successful industrial project.
 
 <div align="center"><a href="https://www.seeedstudio.com/catalogsearch/result/?q=sensecap&application=Temperature%2FHumidity~Soil~Gas~Light~Weather~Water~Automation~Positioning~Machine%20Learning~Voice%20Recognition&compatibility=SenseCAP" target="_blank"><img width={800} src="https://files.seeedstudio.com/wiki/K1100_overview/sensecap.png" /></a></div>
-

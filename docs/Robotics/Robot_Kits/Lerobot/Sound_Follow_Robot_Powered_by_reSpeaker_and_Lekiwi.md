@@ -17,6 +17,7 @@ last_update:
 ---
 
 ## Introduction
+
 The Lewiki Robot Kit, integrated with the ReSpeaker Mic Array v2.0, gains voice interaction and sound navigation capabilities. This guide details the step-by-step process for configuring both hardware and software environments to achieve sound-following functionality on the robot.
 
 <div class="table-center">
@@ -69,7 +70,6 @@ The Lewiki Robot Kit, integrated with the ReSpeaker Mic Array v2.0, gains voice 
   </table>
 </div>
 
-
 ## Prerequisites
 
 - Lewiki Robot Kit
@@ -93,10 +93,12 @@ Considering future functional expansions, this wiki uses the `reComputer Jetson 
 ## Prepare the Software Environment
 
 ### Lerobot Virtual Env
+
 If you have already set up the Lerobot virtual environment on your reComputer during the Lekiwi assembly process, you may skip to the next section.
 Otherwise, you can configure the Lerobot virtual environment using the following commands:
 
 **Step1.** Install Miniconda
+
 ```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda3/miniconda.sh
@@ -104,7 +106,9 @@ bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 source ~/.bashrc
 ```
+
 **Step2.** Create conda environment for lerobot
+
 ```bash
 conda create -y -n lerobot python=3.10
 conda activate lerobot
@@ -417,8 +421,8 @@ After launching the program, the robot will rotate toward sound sources, continu
 
 ## References
 
-- https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#version 
-- https://github.com/respeaker/usb_4_mic_array 
+- https://wiki.seeedstudio.com/ReSpeaker_Mic_Array_v2.0/#version
+- https://github.com/respeaker/usb_4_mic_array
 
 ## Tech Support & Product Discussion
 

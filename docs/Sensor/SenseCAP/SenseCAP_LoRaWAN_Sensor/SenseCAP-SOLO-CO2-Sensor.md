@@ -22,24 +22,24 @@ This digital NDIR CO2 concentration sensor supports MODBUS RS485 serial communic
 
 ## Features
 
-* High performance: high accuracy, fast  response, and superior stability
-* support MODBUS RS485 and SDI-12
-* Compact size, best performance-to-price ratio
-* User-friendly: fully-calibrated, easy to install and integrate
-* Wide-range Power Supply: 5V ~ 16V
-* Wide Range & High Accuracy: 400ppm ~ 5,000 ppm, ± (50ppm+5%*MV)
+- High performance: high accuracy, fast  response, and superior stability
+- support MODBUS RS485 and SDI-12
+- Compact size, best performance-to-price ratio
+- User-friendly: fully-calibrated, easy to install and integrate
+- Wide-range Power Supply: 5V ~ 16V
+- Wide Range & High Accuracy: 400ppm ~ 5,000 ppm, ± (50ppm+5%*MV)
 
 ## Applications
 
 ![Applications](https://files.seeedstudio.com/wiki/NDIR_CO2_Sensor/Applications.png)
 
-* Smart Agriculture
-* Smart Cities
-* Building ventilation systems
-* Industry ventilation systems
-* Airport, train station, shopping mall, home, office, classroom, and others
-* public places for air quality measurement and indication
-* Lab, warehouse, and other places to monitor CO2 level
+- Smart Agriculture
+- Smart Cities
+- Building ventilation systems
+- Industry ventilation systems
+- Airport, train station, shopping mall, home, office, classroom, and others
+- public places for air quality measurement and indication
+- Lab, warehouse, and other places to monitor CO2 level
 
 ## Specifications
 <!-- <style type="text/css">
@@ -182,6 +182,6 @@ This digital NDIR CO2 concentration sensor supports MODBUS RS485 serial communic
 
 ## Sources
 
-* [SenseCap Solo CO2 User Guide](https://files.seeedstudio.com/wiki/NDIR_CO2_Sensor/SenseCAP_SOLO_CO2_5000-UserGuide.pdf)
+- [SenseCap Solo CO2 User Guide](https://files.seeedstudio.com/wiki/NDIR_CO2_Sensor/SenseCAP_SOLO_CO2_5000-UserGuide.pdf)
 
-* [SenseCap Solo CO2 Datasheet](https://files.seeedstudio.com/wiki/NDIR_CO2_Sensor/SenseCAP_SOLO_CO2_5000-Datasheet.pdf)
+- [SenseCap Solo CO2 Datasheet](https://files.seeedstudio.com/wiki/NDIR_CO2_Sensor/SenseCAP_SOLO_CO2_5000-Datasheet.pdf)

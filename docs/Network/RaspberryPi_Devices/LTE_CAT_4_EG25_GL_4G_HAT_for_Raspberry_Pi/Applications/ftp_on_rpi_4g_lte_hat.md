@@ -22,7 +22,7 @@ FTP is useful for Raspberry Pi 4G LTE HAT applications, enabling reliable file t
 
 ## Prerequisites
 
-### Hardware Requirements 
+### Hardware Requirements
 
 <div class="table-center">
   <table align="center">
@@ -31,7 +31,7 @@ FTP is useful for Raspberry Pi 4G LTE HAT applications, enabling reliable file t
          <th>Raspberry Pi 4G LTE CAT4 HAT</th>
     </tr>
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>    
+        <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-102110919-raspberry-pi-5-8gb-45font.jpg" style={{width:250, height:'auto'}}/></div></td>
          <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/_/1_23_1.jpg" style={{width:250, height:'auto'}}/></div></td>
     </tr>
       <tr>
@@ -49,11 +49,11 @@ FTP is useful for Raspberry Pi 4G LTE HAT applications, enabling reliable file t
   </table>
 </div>
 
-### Software Requirements 
+### Software Requirements
 
 If you have not installed relevant drivers and communication tools, please check the [guide](https://wiki.seeedstudio.com/getting_started_raspberry_pi_4g_lte_hat/#software-preparation) first:
 
-### Additional Requirements 
+### Additional Requirements
 
 You will need a pre-configured FTP server with the following details:
 
@@ -76,6 +76,7 @@ Before starting FTP operations, configure the PDP context for network connectivi
 ---
 
 ### FTP Configuration
+
 Configure the FTP session with necessary parameters.
 
 | **Command**                                  | **Description**                                        |
@@ -86,8 +87,8 @@ Configure the FTP session with necessary parameters.
 | `AT+QFTPCFG="transmode",1`                   | Set transfer mode (1 for passive, 0 for active).      |
 | `AT+QFTPCFG="rsptimeout",90`                 | Set the FTP response timeout (90 seconds).            |
 
-
 ### Opening an FTP Session
+
 Connect to the FTP server and navigate directories.
 
 | **Command**                           | **Description**                                   |
@@ -99,8 +100,8 @@ Connect to the FTP server and navigate directories.
 ---
 
 ### File Operations
-There are a couple of ways to send and receive files: via USB COM port, RAM, or UFS.
 
+There are a couple of ways to send and receive files: via USB COM port, RAM, or UFS.
 
 | **Command**                          | **Description**                                      |
 |--------------------------------------|------------------------------------------------------|
@@ -109,8 +110,8 @@ There are a couple of ways to send and receive files: via USB COM port, RAM, or 
 | `AT+QFTPLEN`                         | Check the length of the last file uploaded.         |
 | `AT+QFTPSIZE="file_name"`            | Get the size of a specific file. Replace `file_name` with the target file's name. |
 
-
 ### Closing the FTP Session
+
 End the FTP session and deactivate the PDP context.
 
 | **Command**         | **Description**                               |
@@ -120,24 +121,26 @@ End the FTP session and deactivate the PDP context.
 
 ---
 
-##  Example Workflow
+## Example Workflow
 
 If you're using Windows, open the **WinCOM** tool. For Raspberry Pi, launch **Minicom** by running the following command:
 
 ```bash
 sudo minicom -D /dev/ttyUSB2
 ```
+
 ### Step-by-Step
 
 1. **Setup Network Context**:
-   
+
 ```bash
     AT+QICSGP=1,1,"dialogbb","","",1
     AT+QIACT=1
     AT+QIACT?
  ```
+
 2. **Configure FTP**:
-   
+
 ```bash
     AT+QFTPCFG="contextid",1
     AT+QFTPCFG="account","your_username","your_password"
@@ -145,15 +148,17 @@ sudo minicom -D /dev/ttyUSB2
     AT+QFTPCFG="transmode",1
     AT+QFTPCFG="rsptimeout",90
 ```
+
 3. **Connect to FTP Server**:
-   
+
 ```bash
     AT+QFTPOPEN="ftp.drivehq.com",21
 ```
+
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ftp1.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ftp1.PNG"
+    style={{ width: 500}}
   />
 </div>
 
@@ -163,22 +168,24 @@ sudo minicom -D /dev/ttyUSB2
     AT+QFTPCWD="/"
     AT+QFTPLIST="."
 ```
+
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ftp2.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/ftp2.PNG"
+    style={{ width: 500}}
   />
 </div>
 
 5. **Upload File**:
-   
+
 ```bash
     AT+QFTPPUT="test_my2.txt","COM:",0
 ```
+
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/upload_ftp.PNG" 
-    style={{ width: 600}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/upload_ftp.PNG"
+    style={{ width: 600}}
   />
 </div>
 
@@ -187,10 +194,11 @@ sudo minicom -D /dev/ttyUSB2
 ```bash
     AT+QFTPGET="test_my2.txt","COM:"
 ```
+
 <div style={{ textAlign: 'center' }}>
-  <img 
-    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/download_ftp.PNG" 
-    style={{ width: 500}} 
+  <img
+    src="https://files.seeedstudio.com/wiki/4g_hat_raspberry_pi_eg25_gl/download_ftp.PNG"
+    style={{ width: 500}}
   />
 </div>
 
@@ -209,19 +217,16 @@ We highly recommend reviewing the Quectel TCP guide for this module, as it cover
 
 - **[Web Page]** [FTP Application Guide](https://www.quectel.com/download/quectel_ec2xeg2xeg9xem05_series_ftps_application_note_v1-3/)
   
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

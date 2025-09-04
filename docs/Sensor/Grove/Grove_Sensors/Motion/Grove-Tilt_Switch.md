@@ -20,13 +20,14 @@ The Grove-Tilt Switch is the equivalent of a button, and is used as a digital in
 Features
 --------
 
--   Grove Interface
--   Easy to use
--   Simple Grove module
+- Grove Interface
+- Easy to use
+- Simple Grove module
 
 :::tip
     More details about Grove modules please refer to [Grove System](https://wiki.seeedstudio.com/Grove_System/)
-:::   
+:::
+
 Specifications
 --------------
 
@@ -109,6 +110,7 @@ Platforms Supported
 |Arduino|Raspberry Pi|
 |---|---|
 |<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/arduino_logo.jpg" alt="pir" width={200} height="auto" /></p>|<p><img src="https://files.seeedstudio.com/wiki/wiki_english/docs/images/raspberry_pi_logo.jpg" alt="pir" width={200} height="auto" /></p>|
+
 :::caution
     The platforms mentioned above as supported is/are an indication of the module's software or theoritical compatibility. We only provide software library or code examples for Arduino platform in most cases. It is not possible to provide software library / demo code for all possible MCU platforms. Hence, users have to write their own software library.
 :::
@@ -121,12 +123,12 @@ The SIG pin of the Grove - Tilt Switch output LOW normally. When the Tilt Switch
 
 The following sketch demonstrates a simple application of using the Tilt Switch and Grove - Button to control the led.
 
--   As the following picture indicates, the Tilt Switch is connected to digital port 5 of the Grove - Base Shield and the Grove-Button to digital port 7. The LED is connected to digital port 1. The hardware installation is as follows:
+- As the following picture indicates, the Tilt Switch is connected to digital port 5 of the Grove - Base Shield and the Grove-Button to digital port 7. The LED is connected to digital port 1. The hardware installation is as follows:
 
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Digitalv1.0b.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Digitalv1.0b.jpg" alt="pir" width={600} height="auto" /></p>
 
--   Copy and paste code below to a new Arduino sketch.
+- Copy and paste code below to a new Arduino sketch.
 
 ```
 void setup()
@@ -156,8 +158,8 @@ void loop()
 }
 ```
 
--   Upload the code.
--   Then the LED will light when you press the button or activate the tilt-switch. Have a try!
+- Upload the code.
+- Then the LED will light when you press the button or activate the tilt-switch. Have a try!
 
 ### Play with Codecraft
 
@@ -186,6 +188,7 @@ Upload the program to your Arduino/Seeeduino.
 :::success
     When the code finishes uploaded, tilt the tilt switch or press the button, the LED will goes on.
 :::
+
 ### Play With Raspberry Pi (With Grove Base Hat for Raspberry Pi)
 
 #### Hardware
@@ -201,7 +204,6 @@ Upload the program to your Arduino/Seeeduino.
 - **Step 3**. Connect the tilt switch to port 12 of the Base Hat.
 - **Step 4**. Connect the Raspberry Pi to PC through USB cable.
 
-
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Tilt_Hat.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Tilt_Hat.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -211,12 +213,12 @@ Upload the program to your Arduino/Seeeduino.
 
 #### Software
 
-
 :::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
+
 - **Step 1**. Follow [Setting Software](https://wiki.seeedstudio.com/Grove_Base_Hat_for_Raspberry_Pi/#installation) to configure the development environment.
-- **Step 2**. Download the source file by cloning the grove.py library. 
+- **Step 2**. Download the source file by cloning the grove.py library.
 
 ```
 cd ~
@@ -316,6 +318,7 @@ if __name__ == '__main__':
 :::success
     If everything goes well, you will be able to see the following result when you touch the tilt switch
 :::
+
 ```python
 
 pi@raspberrypi:~/grove.py/grove $ python3 grove_tilt_switch.py 12
@@ -331,37 +334,35 @@ KeyboardInterrupt
 
 ```
 
-
 You can quit this program by simply press ++ctrl+c++.
-
-
-
 
 ### Play With Raspberry Pi (with GrovePi_Plus)
 
-
 ### With Raspberry Pi
-
 
 :::note
      If you are using **Raspberry Pi with Raspberrypi OS >= Bullseye**, you have to use this command line **only with Python3**.
 :::
-1.You should have a Raspberry Pi and a Grovepi or Grovepi+. 
+1.You should have a Raspberry Pi and a Grovepi or Grovepi+.
 
 2.You should have completed configuring the development enviroment, otherwise follow [here](/GrovePi_Plus/).
 
 3.Connection
 
--   Plug Tilt_Switch into grovepi socket D3 by using a grove cable.
+- Plug Tilt_Switch into grovepi socket D3 by using a grove cable.
 
 4.Navigate to the demos' directory:
+
 ```
        cd yourpath/GrovePi/Software/Python/
 ```
--   To see the code
+
+- To see the code
+
 ```
     nano grovepi_tilt_switch.py   # "Ctrl+x" to exit #
 ```
+
 ```
     import time
     import grovepi
@@ -392,8 +393,6 @@ You can quit this program by simply press ++ctrl+c++.
 <!-- ![](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Grovepi_tilt_Switch_00.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/img/Grovepi_tilt_Switch_00.png" alt="pir" width={600} height="auto" /></p>
 
-
-
 Reference
 ---------
 
@@ -408,36 +407,36 @@ The mark J1 on the Grove is the reference terminal.
 </div>
 
 # Grove - Tilt Switch v1.0 Eagle File
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.0_Source_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 # Grove - Tilt Switch v1.1 Eagle File
+
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.1_Eagle_File.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
-
 
 Resources
 ---------
 
--   [Grove - Tilt Switch v1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.0_Source_File.zip)
--   [Grove - Tilt Switch v1.1 PDF File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.1_PDF_File.pdf)
--   [Grove - Tilt Switch v1.1 Eagle File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.1_Eagle_File.zip)
--   [SW200D Datasheet](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/SW200D_datasheet.pdf)
--   [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove_Tilt_Switch_CDC_File.zip)
-
+- [Grove - Tilt Switch v1.0 Eagle File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.0_Source_File.zip)
+- [Grove - Tilt Switch v1.1 PDF File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.1_PDF_File.pdf)
+- [Grove - Tilt Switch v1.1 Eagle File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove-Tilt_Switch_v1.1_Eagle_File.zip)
+- [SW200D Datasheet](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/SW200D_datasheet.pdf)
+- [Codecraft CDC File](https://files.seeedstudio.com/wiki/Grove-Tilt_Switch/res/Grove_Tilt_Switch_CDC_File.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_Tilt_Switch -->
 
 ## Tech Support & Product Discussion
+
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

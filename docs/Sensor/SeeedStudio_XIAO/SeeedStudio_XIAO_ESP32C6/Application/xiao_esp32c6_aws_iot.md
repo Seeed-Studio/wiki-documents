@@ -14,7 +14,7 @@ last_update:
 
 This Wiki serves as a comprehensive guide to deploying an advanced IoT system that harnesses the power of AWS services and the XIAO ESP32C6 microcontroller to monitor and analyze environmental data. Beginning with the seamless collection of sensor data, this documentation navigates through the intricacies of transmitting and storing this information on AWS IoT Core and AWS Analytics, respectively. It delves into the utilization of AWS Sagemaker to train machine learning models on normal environmental patterns, emphasizing the system's capability to learn and adapt to its operational context for enhanced efficiency.
 
-Furthermore, the Wiki outlines the implementation of real-time anomaly detection using the XIAO ESP32C6, a critical component that actively scans for deviations from the norm and swiftly triggers alerts. It encapsulates the end-to-end process of setting up an alerting mechanism that notifies stakeholders of abnormal conditions, ensuring prompt attention and action. 
+Furthermore, the Wiki outlines the implementation of real-time anomaly detection using the XIAO ESP32C6, a critical component that actively scans for deviations from the norm and swiftly triggers alerts. It encapsulates the end-to-end process of setting up an alerting mechanism that notifies stakeholders of abnormal conditions, ensuring prompt attention and action.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/0.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -31,34 +31,34 @@ By exploring this Wiki, users will gain a detailed understanding of each compone
 This example will introduce the use of XIAO ESP32C6 with Grove DHT20 temperature and humidity sensor to complete the SageMaker task of AWS IoT Core. Below are all the hardware devices needed to complete this routine.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C6</th>
-			<th>DHT20</th>
-			<th>Extension Board</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C6</th>
+   <th>DHT20</th>
+   <th>Extension Board</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Capture sensor data to AWS IoT Core
@@ -100,6 +100,7 @@ On the **Attach policies to certificate** page, if you do not have a policy, you
 Once you have created and named your policy, attach it to your newly created certificate by checking the box next to the policy name and clicking **Create**.
 
 We need the following permissions:
+
 - **iot:Publish**
 - **iot:Connect**
 - **iot:Receive**
@@ -107,11 +108,9 @@ We need the following permissions:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/9.png" style={{width:1000, height:'auto'}}/></div>
 
-
 After your Thing is registered, you will be redirected to the Thing detail page where you can view your Thing's information.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/10.png" style={{width:1000, height:'auto'}}/></div>
-
 
 Configure your device (in this case, XIAO_ESP32C6) to use the certificate and private key you downloaded when creating the Thing. You will need to follow the instructions for your specific device to set up the AWS IoT SDK and establish a secure connection to AWS IoT Core.
 
@@ -331,6 +330,7 @@ void loop() {
     delay(1000);
 }
 ```
+
 </details>
 
 ### Step 4. MQTT test client
@@ -483,6 +483,7 @@ There are some paths or names in Jupyter Notebook that need to be modified as fo
 1. The value of **ENDPOINT_NAME** in the **In[22]** code block is the result after running the **In[19]** code block.
 2. Please set the **bucket_name** of **In[3]** and **In[10]** code blocks to the same name.
 3. **API_ENDPOINT** for the last code block, use your own values.
+
 :::
 
 ### Step 10. Configure AWS Lambda
@@ -609,7 +610,6 @@ Click on the **Create subscription** button to create the subscription. Repeat s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/52.png" style={{width:1000, height:'auto'}}/></div>
 
-
 Then we go back to the Lambda's code and replace the **TopicArn** field in the code with the **ARN field in the SNS**.
 
 ### Step 12. Give SNS permissions to Lambda
@@ -648,7 +648,6 @@ Provide a name for your API, e.g., "XIAO_ESP32C6_API". Choose the **Regional** e
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/57.png" style={{width:1000, height:'auto'}}/></div>
 
-
 In the API Gateway dashboard, select your newly created API. Select **Create Resource**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/58.png" style={{width:1000, height:'auto'}}/></div>
@@ -669,7 +668,6 @@ Click on the **Create method** button to save the integration settings.
 Click on the **Deploy API**. Choose a deployment stage (e.g., "prod", "dev") or create a new one. Provide a description for the deployment if desired. Click on the "Deploy" button to deploy your API.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/63.png" style={{width:500, height:'auto'}}/></div>
-
 
 In the API Gateway dashboard, select your API and navigate to the "Stages" section. Expand the deployment stage and click on the POST method for your resource. In the **Invoke URL** section, copy the provided URL.
 
@@ -704,5 +702,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

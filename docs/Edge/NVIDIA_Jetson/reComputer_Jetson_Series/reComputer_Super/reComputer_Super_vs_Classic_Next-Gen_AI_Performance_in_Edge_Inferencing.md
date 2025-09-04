@@ -32,6 +32,7 @@ The reComputer Super Series supercharges the reComputer Classic, delivering up t
 </div>
 
 ## AI Text Generation
+
 <div style={{ textAlign: "justify" }}>
 In this section, we use Ollama to load the deepseek-r1:7b model and compare the inference speed of the model in different devices. It is evident that the reComputer Super has a improvement in inference speed and GPU frequency to the reComputer Classic.
 </div>
@@ -57,7 +58,6 @@ To facilitate the demonstration, we input "tell me a story." into the terminal a
 :::note
 If you also want to deploy Ollama onto your Jetson device, please refer to [this tutorial](https://www.jetson-ai-lab.com/tutorial_ollama.html) to learn how to quickly deploy it on Nvidia Jetson.
 :::
-
 
 ## AI Video Processing
 
@@ -87,6 +87,7 @@ The Average FPS shown in the terminal reflects the pure inference speed of the m
 :::
 
 ## References
+
 - https://www.jetson-ai-lab.com/tutorial_ollama.html
 - https://www.deepseek.com/
 - https://wiki.seeedstudio.com/deploy_deepseek_on_jetson/
@@ -94,19 +95,16 @@ The Average FPS shown in the terminal reflects the pure inference speed of the m
 - https://github.com/ultralytics/ultralytics
 - https://github.com/wang-xinyu/tensorrtx?tab=readme-ov-file
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -47,10 +47,10 @@ You could tell from the model name. M1-X, X refers to the RAM. e.g. M1-2915 refe
 
 Some possible reasons resulting in low RF signals and short distance of transmissions of Helium Hotspots include:
 
-*   Obstacles, including buildings, mountains, and forestry in a comparatively dense environment
-*   Possible Electromagnetic Interference, Line of Sight Interference, Fresnel Zone Interference, or RF Interference existing around cities
-*   Weather Conditions
-*   System Operating Margin, Shadowing, and or Link Badger.
+- Obstacles, including buildings, mountains, and forestry in a comparatively dense environment
+- Possible Electromagnetic Interference, Line of Sight Interference, Fresnel Zone Interference, or RF Interference existing around cities
+- Weather Conditions
+- System Operating Margin, Shadowing, and or Link Badger.
 
 * * *
 
@@ -232,8 +232,8 @@ When using an Ethernet cable, please firmly press the Ethernet cable into the po
 **Steps to check your Hotspot Firmware version:**
 -------------------------------------------------
 
-1.  Long press the Hotspot Bluetooth button for 6-10s, the blue LED will be flashing slowly, then pair your hotspot.
-2.  Run Diagnostics and find the Hotspot Firmware version. Alternatively you can use the SenseCAP Dashboard once registered to check your firmware.
+1. Long press the Hotspot Bluetooth button for 6-10s, the blue LED will be flashing slowly, then pair your hotspot.
+2. Run Diagnostics and find the Hotspot Firmware version. Alternatively you can use the SenseCAP Dashboard once registered to check your firmware.
 
 ![SenseCAP M1 Firmware Version](https://www.sensecapmx.com/wp-content/uploads/2022/06/image-1.png)
 

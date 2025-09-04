@@ -28,7 +28,6 @@ Not lone afte that, we released another BeagleBone® named BeagleBone® Green Wi
 
 BeagleBone® embraces the open-source philosophy, allowing users to access, modify, and share both hardware and software designs. This openness encourages innovation, collaboration, and transparency, fostering a community where knowledge and resources are freely exchanged. By utilizing open-source principles, BeagleBone® ensures that anyone can contribute to its development and improvement, creating a rich ecosystem of projects, tutorials, and applications.
 
-
 ## Spec Differences About the Series
 
 The BeagleBone® series includes several models, each with unique specifications to cater to different needs:
@@ -38,9 +37,6 @@ BeagleBone Black: The most popular model, featuring a 1GHz ARM Cortex-A8 process
 BeagleBone Blue: Designed specifically for robotics, it includes onboard IMU sensors, servo motor outputs, and battery management, making it ideal for autonomous vehicle projects.
 
 BeagleBone Green: A collaboration with Seeed Studio, this model is similar to the BeagleBone Black but replaces the HDMI port with two Grove connectors for easy sensor integration.
-
-
-
 
 ## Product
 
@@ -54,7 +50,6 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
         <font size={"2.1"}>BeagleBone® Blue is based on the extremely successful open-source hardware design of BeagleBone® Black, a high-expansion, maker-focused, community-supported open hardware computer, created by the BeagleBoard.Org Foundation. </font>
     </div>
 </div>
-
 
 <br /><br /><br /><br />
 
@@ -74,7 +69,6 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
     </div>
 </div>
 
-
 <br /><br /><br /><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -93,14 +87,12 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
     </div>
 </div>
 
-
 <br /><br /><br /><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-BeagleBone-Green-Wireless-Development-Board-TI-AM335x-WiFi-BT.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 🖱️ Buy Now</font></span></strong></a>
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/BeagleBone_Green_Wireless/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
-
 
 ### SeeedStudio BeagleBone® Green Gateway
 
@@ -112,7 +104,6 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
         <font size={"2.1"}>The Seeed Studio BeagleBone® Green Gateway includes two Grove connectors, making it easier to connect to the large family of Grove sensors. The on-board HDMI and Ethernet are removed to make room for these wireless features and Grove connectors. </font>
     </div>
 </div>
-
 
 <br /><br /><br /><br />
 
@@ -132,7 +123,6 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
     </div>
 </div>
 
-
 <br /><br /><br /><br />
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -140,24 +130,23 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
     <a class="get_one_now_item" href="https://wiki.seeedstudio.com/Beaglebone_Case/"  target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> 📚 Learn More</font></span></strong></a>
 </div>
 
-
 ## Extension Board
 
 <br />
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">Grove Base Cape for BeagleBone® v2</th>
       <th class="table-trnobg">Motor Bridge Cape v1.0</th>
       <th class="table-trnobg">Skeleton box for BeagleBone®</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Base_Cape_for_BeagleBone_v2/img/Grove_Base_Cape_for_BeagleBone_v2_product_view_1200.jpg" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Motor_Bridge_Cape_v1.0/img/Motor_bridge_driver.jpg" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div sawakentyle={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Skeleton_box_for_Beaglebone/img/Skeleton_box_for_Beaglebone_01.bmp" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>The cape provides 12 easy-to-use Grove connectors to do plug-and-play with the big family of Grove modules. The connectors include 2x UART, 2x ADC, 4x Digital I/O and 4x I2C that interface to the pins on your BeagleBone® board, offering almost everything you need. </font></td>
@@ -165,8 +154,8 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
       <td class="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>This enclosure is constructed from military grade aluminum and hardwearing acrylic, Providing the ultimate protection from physical and corrosion! The skeleton box allows clearance for any standard Arduino, and the enclosures are stackable in all three dimensions, allowing for limitless expansion possibilities. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove_Base_Cape_for_BeagleBone_v2/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove_Base_Cape_for_BeagleBone_v2/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Motor_Bridge_Cape_v1.0/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
       <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Skeleton_box_for_Beaglebone/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
@@ -176,27 +165,27 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
 <br />
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg"><font size={"4"}>BeagleBone® Green HDMI Cape</font></th>
       <th class="table-trnobg"><font size={"4"}>Seeed Studio BeagleBone® Green LCD Cape with Resistive Touch</font></th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-08ddkssqrw2lfthpq0phlecp1r.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/BeagleBone_Green_HDMI_Cape/img/BeagleBone_Green_HDMI_Cape.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/h/t/httpsstatics3.seeedstudio.comseeedimg2016-08ddkssqrw2lfthpq0phlecp1r.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> BeagleBone® Green HDMI Cape is a general integrated HDMI connector for expanding your BeagleBone® to a rich variety of peripherals such as computer monitor, video projector, digital television, or digital audio device.</font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Green LCD Cape with Resistive Touch is designed for SeeedStudio Beagle bone® Green or Beagle bone Black with a compact 5-inch LCD which is smaller than a 7-inch one but provides a resolution of 800x480 using a layer of 4-wired resistive touchscreen for user interactions.</font></td>
     </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/BeagleBone_Green_HDMI_Cape/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-	</table>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/BeagleBone_Green_HDMI_Cape/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Seeed-Studio-BeagleBone-Green-LCD-Cape-with-Resistive-Touch/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+  </tr>
+ </table>
 </div>
 
 ## Kit with Courses
@@ -204,29 +193,28 @@ BeagleBone Green: A collaboration with Seeed Studio, this model is similar to th
 <br />
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg"><font size={"4"}>Grove Starter Kit for BeagleBone® Green</font></th>
       <th class="table-trnobg"><font size={"4"}>BeagleBone Green and Grove IoT Starter Kit Powered by AWS</font></th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/Grove_bbg_start_kit.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_bbg_cover.JPG" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Starter_Kit_for_BeagleBone_Green/img/Grove_bbg_start_kit.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/Aws_kit_bbg_cover.JPG" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
     <tr class="table-trnobg">
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Grove Starter Kit for BeagleBone® Green is an entry-level kit for beginners, which can help you explore BBG and create innovative projects. It's a best choice for novice to develop some cool projects and build prototype built in BBG. </font></td>
       <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> BeagleBone Green (BBG) is a joint effort by BeagleBoard.org and Seeed Studio. It is based on the open-source hardware design of BeagleBone Black and has added two Grove connectors. The kit contains the new BBG, 10 Grove modules as well as step-by-step tutorials to hook them up quickly. </font></td>
     </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove_Starter_Kit_for_BeagleBone_Green/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-		</tr>
-	</table>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Grove_Starter_Kit_for_BeagleBone_Green/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+  </tr>
+ </table>
 </div>
-
 
 ## Application
 
@@ -252,12 +240,11 @@ Seeed's BeagleBone® Green and BeagleBone® Green Wireless are part of the Beagl
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
- 

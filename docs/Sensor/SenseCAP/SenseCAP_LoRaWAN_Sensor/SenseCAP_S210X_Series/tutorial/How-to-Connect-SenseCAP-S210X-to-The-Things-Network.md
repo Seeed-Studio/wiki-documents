@@ -11,20 +11,23 @@ last_update:
 ---
 
 # Connect to The Things Network
- 
-## The Things Network	
+
+## The Things Network
+
 The Things Stack is an enterprise grade LoRaWAN network server, built on an open-source core. The Things Stack allows you to build and manage LoRaWAN networks on your own hardware or in the cloud.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/003.png)
 
+## Connect to The Things Network
 
+### Create a New Account
 
-
-## Connect to The Things Network 
-   ### Create a New Account
 TTN Website: &lt;https://www.thethingsnetwork.org/&gt;
+
 ### Setup the Sensor
+
 (1) Open the SenseCAP Mate App
+
 (2) Press button and hold for 3 seconds, the LED will flash at 1s frequency.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/004.png)
@@ -35,14 +38,16 @@ TTN Website: &lt;https://www.thethingsnetwork.org/&gt;
 
 (4) Select the Sensor by S/N (label). Then, the basic information of the sensor will be displayed after entering.
 
-![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/006.png)       
+![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/006.png)
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/007.png)
+
 ### Set Frequency of Sensor via SenseCAP Mate App
+
 Set the corresponding frequency band based on the frequency band of the gateway.
 
 (1) Click the “Setting” and select the platform is “The Things Network”.
 
-![wecom-temp-81208-6d8da19d41a879a504ad54c71bf4961c](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/008.png) 
+![wecom-temp-81208-6d8da19d41a879a504ad54c71bf4961c](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/008.png)
 
 (2) Select the Frequency Plan, if your gateway is US915, set the sensor to US915.
 
@@ -57,6 +62,7 @@ Set the corresponding frequency band based on the frequency band of the gateway.
 |Device EUI|16, hexadecimal from 0 ~ F|
 |App EUI|16, hexadecimal from 0 ~ F|
 |App Key|32, hexadecimal from 0 ~ F|
+
 (4) Set the Packet Policy. The sensor uplink packet strategy has three modes.
 
 |**Parameter**|**Description**|
@@ -65,7 +71,7 @@ Set the corresponding frequency band based on the frequency band of the gateway.
 |1C|1C (1 confirm) the device will sleep after get 1 received confirm packet from server.|
 |1N|1N (1 none-confirm) the device only send packet and then start to sleep, no matter the server received the data or not.|
 
-(5) Click the “Send” button, send the setting to the sensor for it to take effect. 
+(5) Click the “Send” button, send the setting to the sensor for it to take effect.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0011.png)
 
@@ -75,27 +81,22 @@ Then, the sensor will reboot.
 
 (7) When the device is disconnected from Bluetooth, the LED lights up for **5 seconds** and then flashes as a **breathing light**.
 
-
-
-
-
-
-
-
-
 ## TTN configuration
+
 ### Gateway Registration on TTN
+
 Create a Gateway on the TTN console based on actual information.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0012.png)
+
 ### Create the Application
+
 Create an application on your TTN console. Within applications, you can register and manage end devices and their network data. After setting up your device fleet, use one of our many integration options to pass relevant data to your external services.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0013.png)
 
-
-
 ## Add Sensor to TTN Console
+
 (1) Select the Application you have created, and click the ‘Register end device’ to add end your device.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0014.png)
@@ -122,11 +123,12 @@ And then based on the brand, configure items like the ones below.
 |IN865-867|IN865|--------|
 |AS923|AS923-1|Asia 920-923 MHZ|
 ||AS923-2||
-Different countries and LoRaWAN network servers use different frequency plans. 
 
-For Helium network, please refer to: 
+Different countries and LoRaWAN network servers use different frequency plans.
 
-[Helium Frequency Plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)	
+For Helium network, please refer to:
+
+[Helium Frequency Plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0017.png)
 
@@ -144,8 +146,7 @@ For Helium network, please refer to:
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0021.png)
 
-
-(4) Register end device. 
+(4) Register end device.
 
 After you finish the above items, Click the “Register end device” to save your modification.
 
@@ -154,8 +155,7 @@ If joining the network successfully, LED will **flashes fast for 2s**.
 :::
 
 ## Check Data on TTN Console
+
 On the Data page, data package is uploading. For the format of the payload, refer to the section of Payload Decoding.
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/TTN_Network/0022.png)
-
-

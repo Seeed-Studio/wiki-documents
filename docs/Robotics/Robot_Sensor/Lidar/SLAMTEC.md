@@ -97,6 +97,7 @@ last_update:
 </div>
 
 ### SDK
+
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Developer Center</span>
@@ -119,6 +120,7 @@ last_update:
 </div>
 
 ### 3D Models
+
 <div className="card-container">
     <a href="https://download.slamtec.com/api/download/rplidar-a2m4-r1-model-3d-stl/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">A3M1.stl</span>
@@ -179,6 +181,7 @@ last_update:
 </div>
 
 ### SDK
+
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Developer Center</span>
@@ -207,6 +210,7 @@ last_update:
 </div>
 
 ### 3D Models
+
 <div className="card-container">
   <nav className="quick-nav">
     <a href="https://download.slamtec.com/api/download/rplidar-s2-model-3d-stl/1.0?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
@@ -245,6 +249,7 @@ last_update:
 </div>
 
 ### SDK
+
 <div className="card-container">
     <a href="https://wiki.slamtec.com/display/SD#Slamtec%E5%BC%80%E5%8F%91%E8%80%85%E4%B8%AD%E5%BF%83-rplidar" className="nav-item" target="_blank" rel="noopener noreferrer">
       <span className="text">Developer Center</span>
@@ -267,6 +272,7 @@ last_update:
 </div>
 
 ### 3D Models
+
 <div className="card-container">
   <nav className="quick-nav">
     <a href="https://download.slamtec.com/api/download/rplidar-c1-model-3d-stp/1?lang=netural" className="nav-item" target="_blank" rel="noopener noreferrer">
@@ -277,12 +283,7 @@ last_update:
 </div>
 </div>
 
-
-
 </div>
-
-
-
 
 <style>{`
 /* 导航容器 */
@@ -411,7 +412,6 @@ html[data-theme='dark'] .nav-item:hover {
 }
 `}</style>
 
-
 <style>{`
 /* 内容卡片增强版样式 */
 .nav-grid {
@@ -538,8 +538,8 @@ html[data-theme='dark'] .category-card a::after {
   transition: all 0.3s;
 }
 
-.stable { 
-  background: #e6f4ea; 
+.stable {
+  background: #e6f4ea;
   color: #137333;
   box-shadow: 0 2px 4px rgba(0,100,0,0.1);
 }
@@ -551,8 +551,8 @@ html[data-theme='dark'] .stable {
   box-shadow: 0 2px 4px rgba(0,100,0,0.3);
 }
 
-.recommended { 
-  background: #fce8e6; 
+.recommended {
+  background: #fce8e6;
   color: #a50e0e;
   box-shadow: 0 2px 4px rgba(200,0,0,0.1);
 }

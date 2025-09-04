@@ -45,6 +45,7 @@ If you need to replace the device's currently running model, the SenseCrfat AI p
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image6.png)
 
 2. Directly upload a model for replacement.
+
 - Model Name：input a name
 - Model File ：Upload a model in tflite format
 - ID Object: Class of model recognition
@@ -60,8 +61,6 @@ Set a condition so that when the detected target meets the criteria, the yellow 
 Example:If the device detects Face and the confidence is greater than 43, then light up the device's yellow led
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image9.png)
-
-
 
 ## **Tech Support**
 

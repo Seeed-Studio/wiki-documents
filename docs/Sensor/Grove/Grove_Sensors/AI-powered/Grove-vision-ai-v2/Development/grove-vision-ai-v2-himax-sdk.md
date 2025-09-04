@@ -29,21 +29,21 @@ Before the tutorial content of this article begins, you may need to have the fol
 ### Materials Required
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Vision AI V2</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Vision AI V2</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 If you want to use microSD card routines, then you may need to purchase your own microSD card (The largest capacity tested so far is 64GB), the format of the supported memory card is: **FAT12/FAT16/FAT32/exFAT**.
@@ -123,22 +123,26 @@ Visual Studio Code (VSCode) is a free, open-source code editor developed by Micr
 You can install VSCode on Linux using snap packages or through the package repository for your distribution. Here's how to do it through the command line for Ubuntu as an example:
 
 1. **Update Package Index (Ubuntu/Debian-based distributions):**
+
     ```sh
     sudo apt update
     ```
 
 2. **Install the Dependencies (if not already installed):**
+
     ```sh
     sudo apt install software-properties-common apt-transport-https wget
     ```
 
 3. **Add Microsoft's GPG Key and Repository:**
+
     ```sh
     wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
     sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
     ```
 
 4. **Install VSCode:**
+
     ```sh
     sudo apt update
     sudo apt install code
@@ -214,16 +218,19 @@ If Python 3 is not installed or you want to install a different version, you can
 For example, on Ubuntu or Debian-based systems, you can install Python 3 by following these steps:
 
 1. **Update Package Lists:**
+
    ```sh
    sudo apt update
    ```
 
 2. **Install Python 3:**
+
    ```sh
    sudo apt install python3
    ```
 
 3. **Verify Installation:**
+
    ```sh
    python3 --version
    ```
@@ -247,16 +254,19 @@ sudo pacman -S python
   `pip` is the package installer for Python. You can use it to install packages from the Python Package Index and other indexes. On Windows and macOS, `pip` is included with the Python installer. On Linux, you might need to install it separately:
 
   For Ubuntu or Debian-based systems:
+
   ```sh
   sudo apt install python3-pip
   ```
 
   For Fedora:
+
   ```sh
   sudo dnf install python3-pip
   ```
 
   For Arch Linux:
+
   ```sh
   sudo pacman -S python-pip
   ```
@@ -264,6 +274,7 @@ sudo pacman -S python
 - **Verify `pip` Installation:**
 
   Check the installation of pip by running:
+
   ```sh
   pip3 --version
   ```
@@ -408,8 +419,7 @@ We then need to convert the `.elf` file to an `.img` file for flashing to the Gr
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-himax/2.png" style={{width:1000, height:'auto'}}/></div>
 
-
-By executing the flasher.py script, we can flash the generated firmware to the device. 
+By executing the flasher.py script, we can flash the generated firmware to the device.
 
 :::note
 If you have a Windows computer, create a new terminal and make sure you execute the following commands in a git bash environment.
@@ -456,6 +466,7 @@ The provided code configures and uses a Pulse Density Modulation (PDM) interface
 #include <string.h>
 #include <stdlib.h>
 ```
+
 This section includes standard C library headers for input/output, assertions, boolean data types, integer types, string operations, and standard library functionalities.
 
 ```c
@@ -463,6 +474,7 @@ This section includes standard C library headers for input/output, assertions, b
 // ...
 #endif
 ```
+
 This conditional compilation block contains TrustZone security-related configuration code, which is compiled only if the `TRUSTZONE_SEC` macro is defined. This section typically includes security features, such as memory protection and secure calls.
 
 ### Device and Board Support Package Headers
@@ -480,6 +492,7 @@ This conditional compilation block contains TrustZone security-related configura
 #include "hx_drv_swreg_aon.h"
 #include "hx_drv_pdm_rx.h"
 ```
+
 These headers include hardware-specific and board-level definitions and interfaces, such as drivers and configurations for GPIO, SPI, and PDM.
 
 ### PDM Audio Buffer and Callback Flag Definition
@@ -490,6 +503,7 @@ These headers include hardware-specific and board-level definitions and interfac
 int16_t audio_buf[blk_num * quarter_second_mono_bytes / 2];
 volatile bool rx_cb_flag;
 ```
+
 Defines the size of the audio buffer and the number of blocks, declares an integer array as an audio buffer, and a flag variable `rx_cb_flag` to indicate if the DMA reception is complete.
 
 ### PDM DMA Receive Callback Function
@@ -500,6 +514,7 @@ void app_pdm_dma_rx_cb()
     // ...
 }
 ```
+
 Defines a callback function that will be called upon completion of PDM DMA reception. The function includes cache invalidation to ensure data is read from memory updated by DMA.
 
 ### PDM Configuration Function
@@ -510,6 +525,7 @@ int app_pdm_setting()
     // ...
 }
 ```
+
 Sets up the PDM device configuration parameters such as the sampling rate, DMA channel, clock source, etc., and associates the callback functions with the PDM device.
 
 ### Main Function
@@ -520,6 +536,7 @@ int app_main(void)
     // ...
 }
 ```
+
 The main function performs device initialization and configuration:
 
 - Sets GPIO pin multiplexing and initializes GPIO states.
@@ -528,7 +545,6 @@ The main function performs device initialization and configuration:
 - Reads input status through GPIO and controls output status.
 - Uses a loop to check for DMA reception flag and capture audio data.
 - Outputs data to the debug console and stops PDM after completion.
-
 
 ### PDM Microphone Part
 
@@ -543,6 +559,7 @@ int app_pdm_setting()
     // ...
 }
 ```
+
 This function, `app_pdm_setting`, sets up the PDM device configuration parameters. These parameters, such as the sampling rate, DMA (Direct Memory Access) channel, and clock source, are crucial for capturing data from the microphone.
 
 **PDM Initialization and DMA Transfer Setup**
@@ -553,6 +570,7 @@ if (hx_drv_pdm_init(&pdm_dev_info) != PDM_NO_ERROR)
 
 hx_drv_pdm_dma_lli_transfer((void *)audio_buf, blk_num, quarter_second_mono_bytes, 0);
 ```
+
 This section of the code initializes the PDM device and sets up DMA transfer. The `hx_drv_pdm_dma_lli_transfer` function call initiates the DMA transfer process, which will capture audio data from the connected microphone and store it in the predefined buffer `audio_buf`.
 
 **PDM DMA Receive Callback Function**
@@ -624,7 +642,6 @@ The code `grove_vision_ai.c` already has a more complete configuration for the u
 
 - **[GITHUB]** [Himax repository for Grove Vision AI V2](https://github.com/HimaxWiseEyePlus/Seeed_Grove_Vision_AI_Module_V2)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -638,8 +655,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-

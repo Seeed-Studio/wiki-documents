@@ -216,9 +216,7 @@ ExtraPuTTY according to below picture (Speed 115200, others use defaults), click
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/putty_lora.png)
 
-d) Power the gateway up. Booting log will be showed in the PuTTY terminal, in the end it will
-prompt you to input your log in name. Please note it takes 1 or 2 minutes to get the prompt
-information.
+d) Power the gateway up. Booting log will be showed in the PuTTY terminal, in the end it will prompt you to input your log in name. Please note it takes 1 or 2 minutes to get the prompt information.
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/login_putty.png)
 
@@ -243,8 +241,7 @@ To login through SSH, you need to fill in the Hostname with the IP address you'v
 
 #### Step 2. Expand SD Card File System
 
-By default, the image enables only 2GB for Raspbian System, it is recommended to expand to use the
-whole SD card (8GB or 16GB). Or the SD card will be full soon.
+By default, the image enables only 2GB for Raspbian System, it is recommended to expand to use the whole SD card (8GB or 16GB). Or the SD card will be full soon.
 Run below command in the PuTTY terminal to start raspi-config,  
 
 ```
@@ -501,8 +498,7 @@ It should like something below.
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/test_send.png)
 
-Then turn to the website, click **Application->Seeed(the name of the Application you just added)->View application data**, you will see the data you've
-just sent form the Seeeduino_LoRAWAN. congratulations! Job done!
+Then turn to the website, click **Application->Seeed(the name of the Application you just added)->View application data**, you will see the data you've just sent form the Seeeduino_LoRAWAN. congratulations! Job done!
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/test.png)
 
@@ -523,16 +519,13 @@ e)  Set as below:
 - Radio front-end  ->  RHF2S001 868/915 MHz(SX1257)
 - BUS  ->  SPI
 
-f)  Fill in the MAC address of your RHF2S001, should be in format of b8:27:eb:xx:xx:xx. And also input
-Gateway Location information.  
+f)  Fill in the MAC address of your RHF2S001, should be in format of b8:27:eb:xx:xx:xx. And also input Gateway Location information.  
 
 g)  Click “Register Raspberry Pi gateway” to finish the registration.
 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/add_gateway.png)
 
-h)  Click the registered gateway to enter configuration page, switch “Frquency Plan” manually, your
-plan here is decided by the type of your RHF2S001 type, available plan are CN470，CN473，
-CN434，CN780，EU868, after selected please refresh the page to get the exact channel.In this wiki we choose **EU868**.
+h)  Click the registered gateway to enter configuration page, switch “Frquency Plan” manually, your plan here is decided by the type of your RHF2S001 type, available plan are CN470，CN473，CN434，CN780，EU868, after selected please refresh the page to get the exact channel.In this wiki we choose **EU868**.
 
 i)  Run the command in the putty terminal：
 
@@ -607,6 +600,7 @@ Then go to **Dashboard -> Applications -> SampleApp ->Device** , click the Node 
 ![](https://files.seeedstudio.com/wiki/LoRaWAN_Gateway-868MHz_Kit_with_Raspberry_Pi_3/img/final.png).
 
 ## Summary
+
   This article has intruoduced LoRa/LoRaWAN Gateway Kit and the process of creating your own LoRaWAN gateway. We covered key steps in hardware connection and software tools configuration, including connecting necessary components and communicating with the LoRaWAN server. This DIY gateway method offers flexibility and customization, allowing users to build a robust LoRaWAN network according to their needs.
 
   However, for some users, creating their own LoRaWAN gateway can be challenging, and they prefer ready-to-use devices. We understand this demand and offer the option of the [SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html). For just $99, you can purchase this gateway to build your own LoRaWAN network effortlessly.Going a step further, we also provide [SenseCAP LoRaWAN Starter kit](https://www.seeedstudio.com/SenseCAP-LoRaWAN-Starter-Kit-EU868-p-5789.html) tailored for beginners who are exploring LoRaWAN. This kit includes a SenseCAP M2 Multi-Platform LoRaWAN Indoor Gateway, [XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html), [Grove-Wio-E5](https://www.seeedstudio.com/Grove-LoRa-E5-STM32WLE5JC-p-4867.html), and two Grove sensors. It is specifically designed to facilitate the learning process and experimentation with LoRaWAN.
@@ -663,11 +657,11 @@ chmod +x loriot-gw
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

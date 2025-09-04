@@ -344,7 +344,6 @@ reComputer R1000 边缘物联网控制器基于高性能的 Raspberry Pi CM4 平
     </tr>
   </tbody>
 </table>
-
 </div>
 
 ## 硬件概览
@@ -475,7 +474,6 @@ reComputer R1000 默认不配备电源按钮，系统在连接电源后会自动
     </tr>
   </tbody>
 </table>
-
 </div>
 
 要查询 GPIO 映射和偏移，请使用以下命令：
@@ -971,7 +969,6 @@ reComputer R1000 支持丰富的扩展模块和配件，适用于各种场景和
     </tr>
   </tbody>
 </table>
-
 </div>
 
 reComputer R1000 主板配备了两个 Mini-PCIe 插槽。Mini-PCIe 插槽 1 支持使用 USB 协议的 4G 模块、LoRa® 模块以及使用 USB 协议的 Zigbee 模块；而 Mini-PCIe 插槽 2 支持使用 USB 和 SPI 协议的 LoRa® 模块以及使用 USB 协议的 Zigbee 模块。
@@ -1440,7 +1437,6 @@ reComputer R1000 支持通过主板上两个 Mini-PCIe 插槽下方的 PCIe 插�
   </tr>
   </tbody>
 </table>
-
 </div>
 
 :::note

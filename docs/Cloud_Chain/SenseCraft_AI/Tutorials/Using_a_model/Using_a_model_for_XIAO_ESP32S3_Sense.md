@@ -125,7 +125,6 @@ After the model upload is successful, the preview feature will automatically sta
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/grove-vision-ai-v2/iou.gif" style={{width:600, height:'auto'}}/></div>
 
-
 3. Experiment with different values for the Confidence Threshold and IoU Threshold to find the optimal balance between detecting faces accurately and minimizing false positives. The best settings may vary depending on your specific application and the characteristics of the images or video feed.
 
 ## Conclusion
@@ -140,9 +139,6 @@ Feel free to explore other models, experiment with different settings, and adapt
 
 Happy experimenting and creating with SenseCraft AI models on your XIAO ESP32S3 Sense!
 
-
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -156,4 +152,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

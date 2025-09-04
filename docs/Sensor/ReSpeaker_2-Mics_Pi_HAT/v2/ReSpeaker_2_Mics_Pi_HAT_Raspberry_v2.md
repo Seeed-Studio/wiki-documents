@@ -84,8 +84,8 @@ lsmod | grep tlv320
 dmesg | grep tlv320
 
 ```
-</details>
 
+</details>
 
 - Step 1: Get Device Tree Source (DTS) for the ReSpeaker 2-Mics Pi HAT (V2.0), compile it and install the device tree overlay.
 
@@ -104,7 +104,6 @@ dtoverlay=i2s-mmap
 ```
 
 > **Note:** If your kernel version is greater than 4.0, you don't need to add `dtoverlay=i2s-mmap`.
-
 
 ![config example](https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/dtoverlays.png)
 
@@ -197,7 +196,7 @@ cd mic_hat
 python3 interfaces/pixels.py
 ```
 
-<video width={512} height={384} controls preload> 
+<video width={512} height={384} controls preload>
   <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.webmhd.webm" />
   <source src="https://files.seeedstudio.com/wiki/MIC_HATv1.0_for_raspberrypi/img/led.mp4" />
 </video>
@@ -258,10 +257,12 @@ off
 
 :::note
 It does not work in a virtual environment, you need to exit it first:
+
 ```bash
 deactivate
 python3 ~/button.py
 ```
+
 :::
 
 ### Record sound with Python
@@ -313,11 +314,11 @@ Make sure to specify the right output device index in play.py - otherwise PyAudi
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

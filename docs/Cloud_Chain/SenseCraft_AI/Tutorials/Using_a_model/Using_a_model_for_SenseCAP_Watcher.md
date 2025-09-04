@@ -35,7 +35,6 @@ Before you begin using custom models from the SenseCraft AI model repository, en
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcherKS.jpg" style={{width:1000, height:'auto'}}/></div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now</font></span></strong>
@@ -69,9 +68,11 @@ In the **Scenario** section at the top of the page, you'll find the **Use TinyML
 The SenseCraft AI model repository hosts a wide range of pre-trained models that can be used for various object recognition tasks. These models have been optimized for use with Watcher, ensuring high accuracy and performance.
 
 :::note
+
 1. After selecting a model, the Watcher's alarm words may be cleared and need to be re-entered before the Run Task button can be clicked.
 
 2. After selecting the model, please reasonably configure the Confidence Threshold below the model. the default value is 0. If you directly send it to the task with 0 as the threshold, it may lead to anything being recognized as a wrong object, please adjust this value according to the actual situation to achieve the best detection effect.
+
 :::
 
 In addition to the pre-trained models available in the SenseCraft AI model repository, you can also use your own custom-trained models. If you have a specific object or scenario that isn't covered by the existing models, you can train your own model and share it with the SenseCraft AI community.
@@ -96,7 +97,6 @@ The combination of custom models and user-defined tasks allows Watcher to adapt 
 
 Using custom models from the SenseCraft AI model repository empowers SenseCAP Watcher users to enhance the device's object recognition capabilities and expand its monitoring and alarm application scenarios. The SenseCraft APP provides an intuitive interface for searching, selecting, and applying these custom models to Watcher monitoring tasks. By following the steps outlined in this wiki article, users can easily configure Watcher to recognize specific objects and trigger alarms based on their unique requirements. Whether using pre-trained models or custom-trained models shared with the SenseCraft AI community, Watcher offers a powerful and adaptable solution for various monitoring needs.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -110,4 +110,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="mailto:support@sensecapmx.com" class="button_tech_support_sensecap2"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
