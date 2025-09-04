@@ -11,7 +11,7 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /flash_watcher_agent_firmware
 last_update:
-  date: 2025/08/20
+  date: 2025/09/04
   author: Twelve
 ---
 
@@ -37,6 +37,11 @@ The firmware provided in this guide may require authentication information. If n
 ### Required Software
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 - [Watcher Agent firmware binary file](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+:::note
+If you already own a Watcher device and its model is **not -EN**, you will need to manually flash the authentication information after flashing the firmware.  
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
+For details, please check [Flashing Authentication Info](#flashing-authentication-info).
+:::
 
 ## Flashing Process
 
@@ -133,6 +138,39 @@ The flashing process is complete when you see the success message in the log win
 3. **Device Not Responding**
    - Use a pin to gently press the reset button
    - Try erasing before flashing
+
+### Flashing Authentication Info
+If your Watcher model is **not -EN**, you must manually flash the authentication information after flashing the firmware.  
+
+**Steps:**
+1. Check your device **MAC address**.  
+   - You can find it on the product label or via the serial port.  
+   - If you're using the native firmware, you can also find it in the **Settings->About Device->WI-FI Mac** of the device.  
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
+2. Send an email to **sensecap@seeed.cc** with your STA MAC address and request the authentication file and flashing tool. This script will be provided in the package we send to you.
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
+3. Go to the esp-idf terminal and navigate to the folder we send to you, run the **Python flashing script**.
+:::note
+If you haven’t installed esp-idf yet, go to [ESP-IDF Website](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) and follow the official guide to download and install it. 
+:::
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash1.jpg" style={{width:500, height:'auto'}}/></div>
+4. Follow the program instructions and enter the corresponding serial port, serialB and enter ""BURN"" to flash.
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash5.jpg" style={{width:800, height:'auto'}}/></div>
+5. Once the process is complete, press the reset button on the device.  
+6. After the above steps, you'll be able to register on the [SenseCraft AI-Watcher Agent platform](https://sensecraft.seeed.cc/ai/watcher-agent)
+
+:::note
+If you encounter the following issue, then go to the esp-idf terminal and navigate to the folder and manually enter the following two commands:
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash4.jpg" style={{width:800, height:'auto'}}/></div>
+```bash
+espefuse.py -p <your_correct_serial_port> burn_block_data BLOCK_USR_DATA serial_number
+espefuse.py -p <your_correct_serial_port> burn_key BLOCK_KEY0 license_key HMAC_UP
+```
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash2.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash3.jpg" style={{width:800, height:'auto'}}/></div>
+:::
 
 ## Technical Support
 
