@@ -231,35 +231,29 @@ To get started with ESPHome, follow these steps:
   ```yaml showLineNumbers title=example/mr60bha2.yaml
   # template from https://github.com/limengdu/MR60BHA2_ESPHome_external_components
 
-  substitutions:
-    name: "seeedstudio-mr60bha2-kit"
-    friendly_name: "Seeed Studio MR60BHA2 Kit"
+  # substitutions:
+  #   name: "seeedstudio-mr60bha2-kit"
+  #   friendly_name: "Seeed Studio MR60BHA2 Kit"
 
   esphome:
-    name: "${name}"
-    friendly_name: "${friendly_name}"
-    name_add_mac_suffix: true
-    project:
-      name: "seeedstudio.mr60bha2_kit"
-      version: "2.0"
-    platformio_options:
-      board_upload.maximum_size: 4194304
-    min_version: "2024.3.2" # Fix logger compile error on ESP32-C6 esphome#6323
+    name: seeed-mr60bha2
+    friendly_name: seeed-mr60bha2
 
   esp32:
     board: esp32-c6-devkitc-1
-    variant: esp32c6
-    flash_size: 4MB # upload.flash_size
+    # variant: esp32c6
+    # flash_size: 4MB # upload.flash_size
     framework:
       type: esp-idf
 
-  external_components:
-    - source:
-        type: git
-        url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
-        ref: main
-      components: [ seeed_mr60bha2 ]
-      refresh: 0s
+  # If it is indicated that this library does not exist, you can choose to remove this comment.
+  # external_components:
+  #   - source:
+  #       type: git
+  #       url: https://github.com/limengdu/MR60BHA2_ESPHome_external_components
+  #       ref: main
+  #     components: [ seeed_mr60bha2 ]
+  #     refresh: 0s
 
   # Enable logging
   logger:
@@ -268,22 +262,22 @@ To get started with ESPHome, follow these steps:
 
   # Enable Home Assistant API
   api:
+    encryption:
+      key: "ThVm4U+W/dxSbk9yHbeWuDnkGZJ5R2Bsb62hSaNuc2w=" # The content in "Show API key"
 
   ota:
     - platform: esphome
+      password: "84fd31bc8c1ba852d687e90ef654c232"  # Your own password as specified by ESPhome
 
   wifi:
-    # Enable fallback hotspot (captive portal) in case wifi connection fails
+    ssid: "Maker_HA_2.4G"
+    password: "maker2025"
+
     ap:
-      ssid: "seeedstudio-mr60bha2"
+      ssid: "seeed-mr60bha2 Fallback Hotspot"
+      password: "rKa7nM3Pe4vX"
 
   captive_portal:
-
-  # For XIAO ESP32C6 Onboard LED
-  # light:
-  #   - platform: status_led
-  #     name: "Switch state"
-  #     pin: GPIO15
 
   light:
     - platform: esp32_rmt_led_strip
@@ -291,7 +285,6 @@ To get started with ESPHome, follow these steps:
       name: "Seeed MR60BHA2 RGB Light"
       pin: GPIO1
       num_leds: 1
-      rmt_channel: 0
       rgb_order: GRB
       chipset: ws2812
 
@@ -314,8 +307,9 @@ To get started with ESPHome, follow these steps:
 
   binary_sensor:
     - platform: seeed_mr60bha2
-      people_exist:
+      has_target:
         name: "Person Information"
+
 
   sensor:
     - platform: bh1750
@@ -329,8 +323,8 @@ To get started with ESPHome, follow these steps:
         name: "Real-time heart rate"
       distance:
         name: "Distance to detection object"
-      target_num:
-        name: "Target Number"
+      num_targets:
+        name: "Target number"
   ```
 
 3. **Customize Functionality**: You can enhance the sensor's capabilities by exploring various features available in ESPHome, allowing for flexible adjustments to suit your specific needs.
