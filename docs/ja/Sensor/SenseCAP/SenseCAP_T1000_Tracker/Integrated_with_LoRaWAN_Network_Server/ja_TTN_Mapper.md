@@ -1,31 +1,35 @@
 ---
 description: SenseCAP_Tracker_T1000-A/B_TTN_Mapper
-title: TTN Mapper設定
+title: TTN Mapper 設定
 keywords:
-- Tracker
+- トラッカー
 - TTN
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/ttn_mapper_for_SenseCAP_T1000
 last_update:
-  date: 10/13/2023
+  date: 05/15/2025
   author: Jessie
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
-[TTN Mapper](https://ttnmapper.org/)は、The Things Stackに接続されたゲートウェイのネットワークカバレッジをマッピングするために使用される便利なツールです。詳細については、公式の[TTN Mapperドキュメントサイト](https://docs.ttnmapper.org/)をご確認ください。
+[TTN Mapper](https://ttnmapper.org/) は、The Things Stack に接続されたゲートウェイのネットワークカバレッジをマッピングするための便利なツールです。詳細については公式の [TTN Mapper ドキュメントサイト](https://docs.ttnmapper.org/) をご覧ください。
 
-このチュートリアルでは、[SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)をTTN Mapperに追加する方法をユーザーに案内します。
+このチュートリアルでは、[SenseCAP T1000 トラッカー](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) を TTN Mapper に追加する方法を案内します。
 
-次のステップを進めるために、まず[The Things Networkへの接続](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/)を参照してデバイスを登録してください。
+次のステップを進めるには、まず [The Things Network に接続](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/) してデバイスを登録してください。
 
 ### ペイロードフォーマッターの設定
 
-`Custom JavaScript formatter`を作成し、以下のコードをコピーしてください。
+`カスタム JavaScript フォーマッター` を作成し、以下のコードをコピーしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decoder.png" alt="pir" width={800} height="auto" /></p>
 
 <details>
 
-<summary>TTN Mapper用デコーダー</summary>
+<summary>TTN Mapper 用デコーダー</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -425,13 +429,13 @@ function deserialize (dataId, dataValue) {
             let error = ''
             switch (errorCode) {
                 case 1:
-                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
+                    error = 'UTC タイムスタンプの取得に失敗しました'
                     break
                 case 2:
-                    error = 'ALMANAC TOO OLD'
+                    error = 'アルマナックが古すぎます'
                     break
                 case 3:
-                    error = 'DOPPLER ERROR'
+                    error = 'ドップラーエラー'
                     break
             }
             measurementArray.push({errorCode, error})
@@ -569,35 +573,35 @@ function getPositingStatus (str) {
     let status = getInt(str)
     switch (status) {
         case 0:
-            return {id:status, statusName:"Positioning successful."}
+            return {id:status, statusName:"位置取得成功"}
         case 1:
-            return {id:status, statusName:"The GNSS scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"GNSS スキャンがタイムアウトし、位置取得に失敗しました"}
         case 2:
-            return {id:status, statusName:"The Wi-Fi scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました"}
         case 3:
-            return {id:status, statusName:"The Wi-Fi + GNSS scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Wi-Fi + GNSS スキャンがタイムアウトし、位置取得に失敗しました"}
         case 4:
-            return {id:status, statusName:"The GNSS + Wi-Fi scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"GNSS + Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました"}
         case 5:
-            return {id:status, statusName:"The Bluetooth scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Bluetooth スキャンがタイムアウトし、位置取得に失敗しました"}
         case 6:
-            return {id:status, statusName:"The Bluetooth + Wi-Fi scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Bluetooth + Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました"}
         case 7:
-            return {id:status, statusName:"The Bluetooth + GNSS scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Bluetooth + GNSS スキャンがタイムアウトし、位置取得に失敗しました"}
         case 8:
-            return {id:status, statusName:"The Bluetooth + Wi-Fi + GNSS scan timed out and failed to obtain the location."}
+            return {id:status, statusName:"Bluetooth + Wi-Fi + GNSS スキャンがタイムアウトし、位置取得に失敗しました"}
         case 9:
-            return {id:status, statusName:"Location Server failed to parse the GNSS location."}
+            return {id:status, statusName:"位置サーバーが GNSS 位置を解析できませんでした"}
         case 10:
-            return {id:status, statusName:"Location Server failed to parse the Wi-Fi location."}
+            return {id:status, statusName:"位置サーバーが Wi-Fi 位置を解析できませんでした"}
         case 11:
-            return {id:status, statusName:"Location Server failed to parse the Bluetooth location."}
+            return {id:status, statusName:"位置サーバーが Bluetooth 位置を解析できませんでした"}
         case 12:
-            return {id:status, statusName:"Failed to parse the GNSS location due to the poor accuracy."}
+            return {id:status, statusName:"精度が悪いため GNSS 位置の解析に失敗しました"}
         case 13:
-            return {id:status, statusName:"Time synchronization failed."}
+            return {id:status, statusName:"時間同期に失敗しました"}
         case 14:
-            return {id:status, statusName:"Failed to obtain location due to the old Almanac."}
+            return {id:status, statusName:"古いアルマナックのため位置取得に失敗しました"}
     }
     return getInt(str)
 }
@@ -827,28 +831,28 @@ function getEventStatus (str) {
         }
         switch (i){
             case 0:
-                event.push({id:1, eventName:"Start moving event."})
+                event.push({id:1, eventName:"移動開始イベント"})
                 break
             case 1:
-                event.push({id:2, eventName:"End movement event."})
+                event.push({id:2, eventName:"移動終了イベント"})
                 break
             case 2:
-                event.push({id:3, eventName:"Motionless event."})
+                event.push({id:3, eventName:"静止イベント"})
                 break
             case 3:
-                event.push({id:4, eventName:"Shock event."})
+                event.push({id:4, eventName:"衝撃イベント"})
                 break
             case 4:
-                event.push({id:5, eventName:"Temperature event."})
+                event.push({id:5, eventName:"温度イベント"})
                 break
             case 5:
-                event.push({id:6, eventName:"Light event."})
+                event.push({id:6, eventName:"光イベント"})
                 break
             case 6:
-                event.push({id:7, eventName:"SOS event."})
+                event.push({id:7, eventName:"SOS イベント"})
                 break
             case 7:
-                event.push({id:8, eventName:"Press once event."})
+                event.push({id:8, eventName:"1回押下イベント"})
                 break
         }
     }
@@ -881,32 +885,31 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
-
 </details>
 
-### Webhookテンプレートの追加
+### Webhook テンプレートを追加する
 
-`Integrations` -> `Webhooks`に移動し、`TTN Mapper`を選択します。
+`Integrations` -> `Webhooks` に移動し、次に `TTN Mapper` を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook-map.png" alt="pir" width={800} height="auto" /></p>
 
-Webhook IDフィールドに入力して、統合に名前を付けます。
+Webhook ID フィールドに名前を入力して、統合に名前を付けます。
 
-Emailアドレスフィールドに有効なメールアドレスを入力します。これはTTN Mapperがあなたのデータを受け入れるために必要です。エンドデバイスから送信されるすべてのデータはこのメールアドレスに関連付けられ、データ品質の保証を提供します。
+Email address フィールドに有効なメールアドレスを入力します。このメールアドレスは、TTN Mapper にデータを受け入れてもらうために必要です。エンドデバイスから送信されるすべてのデータはこのメールアドレスに関連付けられ、データ品質の保証を提供します。
 
-実験について詳しく読むには、こちらのExperimentsセクションをお読みください。
+実験についてさらに詳しく知りたい場合は、こちらの実験セクションを参照してください。
 
-`Create TTN Mapper webhook`ボタンをクリックして完了します。
+最後に `Create TTN Mapper webhook` ボタンをクリックして完了します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook2.png" alt="pir" width={800} height="auto" /></p>
 
-### ネットワークカバレッジの観察
+### ネットワークカバレッジを観察する
 
-[TTN Mapper](https://ttnmapper.org/)に移動し、上部メニューで`Advanced Maps`を選択します。
+[TTN Mapper](https://ttnmapper.org/) に移動し、トップメニューで `Advanced Maps` を選択します。
 
-`Device data`セクションで、`Device ID`フィールドにThe Things StackのデバイスIDを入力します。<br/>
-`Start Date`と`End Date`に今日を選択します。<br/>
-`View Map`ボタンをクリックして、エンドデバイスのアップリンクデータから送信されるデータポイントを確認します。
+`Device data` セクションで、The Things Stack から取得したデバイス ID を `Device ID` フィールドに入力します。<br/>
+`Start Date` と `End Date` に今日の日付を選択します。<br/>
+`View Map` ボタンをクリックすると、エンドデバイスのアップリンクデータから送信されたデータポイントを確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/view-map.png" alt="pir" width={800} height="auto" /></p>
 

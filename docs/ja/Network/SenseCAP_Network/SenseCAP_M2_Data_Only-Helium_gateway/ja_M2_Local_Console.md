@@ -1,14 +1,18 @@
 ---
-description: SenseCAP M2 Data Only Local Console
-title: SenseCAP M2 Data Only Local Console
+description: SenseCAP M2 データ専用ローカルコンソール
+title: SenseCAP M2 データ専用ローカルコンソール
 keywords:
-- SenseCAP Network
+- SenseCAP ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/M2_Local_Console
 last_update:
-  date: 02/14/2023
+  date: 05/15/2025
   author: Matthew
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 **ローカルコンソールへのアクセス方法**
 ===================================
@@ -20,114 +24,114 @@ last_update:
 **ルーター経由でのアクセス**
 ---------------------
 
-*   **ステップ1**: コンピューターとHotspotを同じルーターに接続します。
+*   **ステップ 1**: コンピュータとホットスポットを同じルーターに接続します。
 
-デバイスをネットワークケーブルでルーターに接続するか、SenseCAP Hotspot APPを使用してWI-FI接続を設定できます。
+デバイスをネットワークケーブルでルーターに接続するか、SenseCAP Hotspot APPを使用してWi-Fi接続を設定することができます。
 
-**注意**: コンピューターとデバイスは同じルーター/ネットワークに接続されている必要があります。
+**注意**: コンピュータとデバイスは同じルーター/ネットワークに接続されている必要があります。
 
-![SenseCAP M2 Local Console Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png)
+![SenseCAP M2 ローカルコンソール ステップ 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3.png)
 
-*   **ステップ2**: デバイスのIPアドレスを取得します
+*   **ステップ 2**: デバイスのIPアドレスを取得します
 
-SenseCAP MX Dashboardのアカウントをお持ちでない場合、またはデバイスをDashboardに追加していない場合は、ルーターの管理ページでデバイスのIPアドレスを確認するか、Helium APPで診断を実行してIPアドレスを取得してください。
+SenseCAP MX Dashboardのアカウントを持っていない場合、またはデバイスをDashboardに追加していない場合は、ルーターの管理ページでデバイスのIPアドレスを確認するか、Helium APPで診断を実行してIPアドレスを取得してください。
 
 すでにSenseCAP MX Dashboardのアカウントを登録し、デバイスを追加している場合は、ダッシュボードからデバイスのIPアドレスを確認できます：
 
-*   *   Wi-Fi経由で接続している場合、クリック可能なデバイスのWi-Fi IPアドレスが表示されます。
-    *   イーサネットケーブルまたはローカルLAN経由で接続している場合、クリック可能なデバイスのLANアドレスが表示されます。
+*   *   Wi-Fi経由で接続している場合、デバイスのWi-Fi IPアドレスが表示され、それをクリックできます。
+    *   イーサネットケーブルまたはローカルLAN経由で接続している場合、デバイスのLANアドレスが表示され、それをクリックできます。
 
-*   **ステップ3**: デバイスのユーザー名とパスワードを取得します
+*   **ステップ 3**: デバイスのユーザー名とパスワードを取得します
 
-デバイス背面の情報からユーザー名とパスワードを取得します。
+デバイスの背面に記載されている情報からユーザー名とパスワードを取得してください。
 
-**セキュリティ上の理由により、各デバイスには固有のパスワードがあります。ログイン後、パスワードを変更できます。**
+**セキュリティ上の理由から、各デバイスには固有のパスワードがあります。ログイン後、パスワードを変更することができます。**
 
-![SenseCAP M2 Local Console Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png)
+![SenseCAP M2 ローカルコンソール ステップ 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4.png)
 
-*   **ステップ4**: PCでブラウザを開いてログインします
+*   **ステップ 4**: PCのブラウザを開いてログインします
 
-取得したIPアドレスをブラウザに入力してローカルコンソールに入ります。次に、デバイスのユーザー名とパスワードを入力し、ログインボタンをクリックします。
+ブラウザに取得したIPアドレスを入力してローカルコンソールにアクセスします。その後、デバイスのユーザー名とパスワードを入力し、ログインボタンをクリックします。
 
-![SenseCAP M2 Local Console Login](https://www.sensecapmx.com/wp-content/uploads/2022/07/login.png)
+![SenseCAP M2 ローカルコンソール ログイン](https://www.sensecapmx.com/wp-content/uploads/2022/07/login.png)
 
 * * *
 
 **デバイスAPホットスポット経由でのアクセス**
 --------------------------------
 
-*   **ステップ1**: デバイスAPホットスポットをオンにします
+*   **ステップ 1**: デバイスAPホットスポットをオンにします
 
-青色インジケーターがゆっくり点滅するまでボタンを5秒間押して、設定モードに入ります。
+ボタンを5秒間押し続け、青色のインジケーターがゆっくり点滅するまで待つと、設定モードに入ります。
 
-*   **ステップ2**: APホットスポットに接続します
+*   **ステップ 2**: APホットスポットに接続します
 
-APホットスポット名はSenseCAP_XXXXXX（6桁のMACアドレス）です。コンピューターをこのAPホットスポットに接続します。
+APホットスポット名はSenseCAP\_XXXXXX（6桁のMACアドレス）です。コンピュータをこのAPホットスポットに接続してください。
 
-*   **ステップ3**: デバイスのユーザー名とパスワードを取得します
-*   **ステップ4**: PCでブラウザを開いてログインします
+*   **ステップ 3**: デバイスのユーザー名とパスワードを取得します
+*   **ステップ 4**: PCのブラウザを開いてログインします
 
-IPアドレス（**192.168.168.1**）をブラウザに入力してローカルコンソールに入ります。次に、デバイスのユーザー名とパスワードを入力し、ログインボタンをクリックします。
+ブラウザにIPアドレス（**192.168.168.1**）を入力してローカルコンソールにアクセスします。その後、デバイスのユーザー名とパスワードを入力し、ログインボタンをクリックします。
 
 * * *
 
 **ステータス**
 ==========
 
-ホームページには、主にネットワーク接続、LoRaパケットの送受信、システム情報、メモリ使用量などのステータス表示があります。
+ホームページには、ネットワーク接続、LoRaパケットの送受信、システム情報、メモリ使用量などのステータス表示が主に含まれています。
 
 **注意:** 完全なメッセージが表示されるまで少し待つ必要があります。
 
-![SenseCAP M2 Local Console Guide](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5.png)
+![SenseCAP M2 ローカルコンソール ガイド](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5.png)
 
-**注意:** LoRa Packetsヒストグラムでは、必ずしも有効なHelium Packets Networkとは限りません。
+**注意:** LoRaパケットのヒストグラムには、必ずしも有効なHeliumパケットネットワークが含まれているわけではありません。
 
-システム情報では、heliumプログラムのバージョン、ホットスポットのアドレス、現在使用中のリージョンパラメーターを確認できます。
+システム情報では、Heliumプログラムのバージョン、ホットスポットのアドレス、現在使用されている地域パラメータを確認できます。
 
-![SenseCAP M2 Local Console Guide Region](https://www.sensecapmx.com/wp-content/uploads/2022/07/system.png)
+![SenseCAP M2 ローカルコンソール ガイド 地域](https://www.sensecapmx.com/wp-content/uploads/2022/07/system.png)
 
 * * *
 
 **システム**
 ==========
 
-**システムと時刻**
+**システムと時間**
 -------------------
 
 *   _ページパス_：System -> System
 
-ここでは、ホスト名やタイムゾーンなど、デバイスの基本的な側面を設定できます。また、時刻同期設定を変更することもできます。もちろん、一般的にはこのページで何も変更する必要はありません。
+ここでは、デバイスのホスト名やタイムゾーンなどの基本的な設定を構成できます。また、時間同期設定を変更することができます。ただし、通常はこのページで何も変更する必要はありません。
 
-![SenseCAP M2 Local Console Guide Time](https://www.sensecapmx.com/wp-content/uploads/2022/07/time.png)
+![SenseCAP M2 ローカルコンソール ガイド 時間](https://www.sensecapmx.com/wp-content/uploads/2022/07/time.png)
 
 * * *
 
-**ブリージングライト**
+**呼吸ライト**
 -------------------
 
 *   _ページパス_： System -> Breathing Light
 
-ブリージングライトはホットスポットデバイスのインジケーターで、ライトの動作を設定できます。
+呼吸ライトはホットスポットデバイスのインジケーターであり、ライトの動作を構成することができます。
 
-![SenseCAP M2 Local Console Guide Breathing Light](https://www.sensecapmx.com/wp-content/uploads/2022/07/breathing-light.png)
+![SenseCAP M2 ローカルコンソール ガイド 呼吸ライト](https://www.sensecapmx.com/wp-content/uploads/2022/07/breathing-light.png)
 
 * * *
 
-**リージョン**
+**地域**
 ----------
 
 *   _ページパス_：System -> Region
 
-ここでリージョンパラメーターを変更できます。工場出荷時のデフォルトは「AUTO」で、これは以下を意味します：
+ここでは地域パラメータを変更することができます。工場出荷時のデフォルトは「AUTO」で、これは以下を意味します：
 
-*   ホットスポットにアサートされた位置がない場合、使用されるリージョンはホットスポットタイプに基づきます。例えば、デバイスモデルM2-EU868はリージョンEU868を使用します。
-*   ホットスポットにアサートされた位置がある場合、位置に応じてリージョンが自動調整されます。
+*   ホットスポットの位置がアサートされていない場合、使用される地域はホットスポットのタイプに基づきます。例えば、デバイスモデルM2-EU868は地域EU868を使用します。
+*   ホットスポットの位置がアサートされている場合、位置に応じて地域が自動的に調整されます。
 
-一般的に、リージョンを設定する必要はありません。特別な場合：ホットスポット（Data-Only）にアサートされた位置がない場合、別のリージョンを選択できます。例えば、M2-US915のデバイスモデルは、オーストラリアでAU915に設定できます。
+通常、地域を設定する必要はありません。特別な場合：ホットスポット（データ専用）の位置がアサートされていない場合、別の地域を選択することができます。例えば、M2-US915デバイスモデルはオーストラリアでAU915に設定することができます。
 
-![SenseCAP M2 Local Console Guide Breathing Region Config](https://www.sensecapmx.com/wp-content/uploads/2022/07/region.png)
+![SenseCAP M2 ローカルコンソール ガイド 地域設定](https://www.sensecapmx.com/wp-content/uploads/2022/07/region.png)
 
-**注意:** ホットスポットにアサートされた位置がある場合、リージョン設定は**AUTO**である必要があります。
+**注意:** ホットスポットの位置がアサートされている場合、地域設定は必ず**AUTO**である必要があります。
 
 * * *
 
@@ -136,20 +140,20 @@ IPアドレス（**192.168.168.1**）をブラウザに入力してローカル�
 
 *   **ページパス**：System -> Administration
 
-ここでLuCiパスワードを変更できます。
+ここではLuCiパスワードを変更することができます。
 
-![SenseCAP M2 Local Console Guide Breathing LuCi Password](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password.png)
+![SenseCAP M2 ローカルコンソール ガイド LuCiパスワード変更](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password.png)
 
 * * *
 
-**工場出荷時設定の復元**
+**工場出荷時設定にリセット**
 ----------------------------
 
 *   _ページパス_：System -> Firmware
 
-LuCiパスワードを忘れた場合、工場出荷時設定を復元することでパスワードを回復できます。ただし、工場出荷時設定を復元した後、デバイスは再度更新されます。
+LuCiパスワードを忘れた場合、工場出荷時設定にリセットすることで回復することができます。ただし、工場出荷時設定にリセットした後、デバイスは再度更新されます。
 
-![SenseCAP M2 Local Console Guide Breathing LuCi Password](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password.png)
+![SenseCAP M2 ローカルコンソール ガイド LuCiパスワード変更](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password.png)
 
 * * *
 
@@ -158,9 +162,9 @@ LuCiパスワードを忘れた場合、工場出荷時設定を復元するこ�
 
 *   _ページパス_：System -> Reboot
 
-ここでデバイスをリセットしたり、デバイスの定時リセットを設定したりできます。
+ここでデバイスをリセットするか、デバイスのタイマーリセットを構成することができます。
 
-![SenseCAP M2 Local Console Reboot](https://www.sensecapmx.com/wp-content/uploads/2022/07/reboot.png)
+![SenseCAP M2 ローカルコンソール 再起動](https://www.sensecapmx.com/wp-content/uploads/2022/07/reboot.png)
 
 * * *
 
@@ -170,53 +174,53 @@ LuCiパスワードを忘れた場合、工場出荷時設定を復元するこ�
 **インターフェース**
 --------------
 
-*   _Page Path_： Network -> Interfaces
+*   _ページパス_： Network -> Interfaces
 
-ここでネットワークインターフェースの情報を取得できます。LAN IPのデフォルトは「192.168.168.1」です。ルーターのゲートウェイIPも同じ場合は、デバイスのLAN IPを変更する必要があります。
+ここではネットワークインターフェースに関する情報を取得できます。LAN IPのデフォルトは「192.168.168.1」です。ルーターのゲートウェイIPがこれと同じ場合、デバイスのLAN IPを変更する必要があります。
 
-![SenseCAP M2 Local Console Guide Network Interface](https://www.sensecapmx.com/wp-content/uploads/2022/07/network_interface.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース](https://www.sensecapmx.com/wp-content/uploads/2022/07/network_interface.png)
 
-**Wireless**
-------------
+**Wireless（無線）**
+--------------------
 
-*   _Page Path_： Network -> Wireless
+*   _ページパス_： Network -> Wireless
 
-ここでWi-Fiに接続できます。以下の手順に従ってください：
+ここでWi-Fiに接続できます。以下の手順を実行してください：
 
-*   **Step 1**: 「**scan**」ボタンをクリックして、お住まいの地域のWi-Fiをスキャンします。
+*   **ステップ 1**: '**scan**'ボタンをクリックして、周辺のWi-Fiをスキャンします。
 
-![SenseCAP M2 Local Console Guide Network Interface Wireless](https://www.sensecapmx.com/wp-content/uploads/2022/07/wireless_home.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース 無線](https://www.sensecapmx.com/wp-content/uploads/2022/07/wireless_home.png)
 
-*   **Step 2**: ネットワークに参加するWi-Fiを選択します。
+*   **ステップ 2**: 接続するWi-Fiを選択します。
 
-![SenseCAP M2 Local Console Guide Network Interface Wifi](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_join.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース Wi-Fi](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_join.png)
 
-*   **Step 3**: Wi-Fiパスワードを入力し、送信して保存します。
+*   **ステップ 3**: Wi-Fiのパスワードを入力し、送信して保存します。
 
-![SenseCAP M2 Local Console Guide Network Interface Wifi Guide](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_submit.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース Wi-Fi ガイド](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_submit.png)
 
-![SenseCAP M2 Local Console Guide Network Interface Wifi Save](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_save.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース Wi-Fi 保存](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi_save.png)
 
-しばらくすると、インターフェースページで確認できるように、WiFiに接続できるようになります。
-
-* * *
-
-**MultiWan**
-------------
-
-*   _Page Path_： Network -> MultiWan
-
-ここでネットワークインターフェースの優先度とステータスを確認できます。MultiWANの優先度は：wan(ETH) > wwan(Wi-Fi) > wwan0 (4G\*) です。
-
-![SenseCAP M2 Local Console Guide Network Interface MultiWan](https://www.sensecapmx.com/wp-content/uploads/2022/07/multiwan.png)
+数秒後、インターフェースページでWi-Fiに接続できることが確認できます。
 
 * * *
 
-**Diagnostics**
----------------
+**MultiWan（マルチWAN）**
+------------------------
 
-*   _Page Path_：Network -> Diagnostics
+*   _ページパス_： Network -> MultiWan
 
-ここでインターネット接続の速度を測定できます。
+ここではネットワークインターフェースの優先順位とステータスを確認できます。MultiWANの優先順位は以下の通りです： wan(ETH) > wwan(Wi-Fi) > wwan0 (4G\*)。
 
-![SenseCAP M2 Local Console Guide Network Interface Network Test](https://www.sensecapmx.com/wp-content/uploads/2022/07/network_test.png)
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース マルチWAN](https://www.sensecapmx.com/wp-content/uploads/2022/07/multiwan.png)
+
+* * *
+
+**Diagnostics（診断）**
+----------------------
+
+*   _ページパス_： Network -> Diagnostics
+
+ここではインターネット接続の速度を測定できます。
+
+![SenseCAP M2 ローカルコンソールガイド ネットワークインターフェース ネットワークテスト](https://www.sensecapmx.com/wp-content/uploads/2022/07/network_test.png)

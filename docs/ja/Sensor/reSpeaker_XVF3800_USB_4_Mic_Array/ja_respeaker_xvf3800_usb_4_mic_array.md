@@ -599,7 +599,7 @@ xvf_host.exe AEC_SPENERGY_VALUES
 出力例
 
 ```bash
-Device (USB)::device_init() -- Found device VID: 10374 PID: 26 interface: 3
+Device (USB)::device\_init() -- Found device VID: 10374 PID: 26 interface: 3
 AEC_SPENERGY_VALUES 2080656 0 2083455 2080656
 ```
 

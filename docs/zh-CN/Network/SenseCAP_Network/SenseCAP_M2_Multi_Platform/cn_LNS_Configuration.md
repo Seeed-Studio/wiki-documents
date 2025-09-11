@@ -144,7 +144,7 @@ MQTT 集成公开了事件类型文档中记录的所有事件。
 默认事件主题是：
 
 ```cpp
-application/APPLICATION_ID/device/DEV_EUI/event/EVENT
+application/APPLICATION\_ID/device/DEV\_EUI/event/EVENT
 ```
 
 查看 [事件类型](https://www.chirpstack.io/docs/chirpstack/integrations/events.html) 了解更多详情。
@@ -174,7 +174,7 @@ application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 - 接收特定网关下所有设备的上行链路消息：
 
 ```cpp
-gateway/<GATEWAY_EUI>/device/+/event/up
+gateway/<GATEWAY\_EUI>/device/+/event/up
 ```
 
 - To receive all messages from all devices under the application:
@@ -203,12 +203,12 @@ gateway/+/device/+/event/+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP21.png" alt="pir" width={800} height="auto" /></p>
 
-- `upload_battery`：电池
-- `upload_interval`：上传间隔，单位：秒
-- `upload_version`：硬件/固件版本
-- `report_telemetry`：测量值
+- `upload\_battery`：电池
+- `upload\_interval`：上传间隔，单位：秒
+- `upload\_version`：硬件/固件版本
+- `report\_telemetry`：测量值
 
-'report_telemetry' 消息中的 `measurementId` 请查看 [SenseCAP 测量 ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) 了解更多详情。
+'report\_telemetry' 消息中的 `measurementId` 请查看 [SenseCAP 测量 ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) 了解更多详情。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP22.png" alt="pir" width={800} height="auto" /></p>
 
@@ -216,7 +216,7 @@ gateway/+/device/+/event/+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP23.png" alt="pir" width={600} height="auto" /></p>
 
-'report_telemetry' 消息中的 `measurementId` 请查看 [SenseCAP 测量 ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) 了解更多详情。
+'report\_telemetry' 消息中的 `measurementId` 请查看 [SenseCAP 测量 ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) 了解更多详情。
 
 ### HTTP
 
@@ -245,11 +245,11 @@ HTTP 集成公开所有事件，如 [事件类型](https://www.chirpstack.io/doc
 ```cpp
 from http.server import HTTPServer, BaseHTTPRequestHandler 
 
-from urllib.parse import urlparse, parse_qs 
+from urllib.parse import urlparse, parse\_qs 
 
-from chirpstack_api import integration 
+from chirpstack\_api import integration 
 
-from google.protobuf.json_format import Parse 
+from google.protobuf.json\_format import Parse 
 
 class Handler(BaseHTTPRequestHandler): 
 
@@ -259,41 +259,41 @@ class Handler(BaseHTTPRequestHandler):
 
 json = False 
 
-def do_POST(self): 
+def do\_POST(self): 
 
-self.send_response(200) 
+self.send\_response(200) 
 
-self.end_headers() 
+self.end\_headers() 
 
-query_args = parse_qs(urlparse(self.path).query) 
+query\_args = parse\_qs(urlparse(self.path).query) 
 
-content_len = int(self.headers.get('Content-Length', 0)) 
+content\_len = int(self.headers.get('Content-Length', 0)) 
 
-body = self.rfile.read(content_len) 
+body = self.rfile.read(content\_len) 
 
-if query_args["event"][0] == "up": 
+if query\_args["event"][0] == "up": 
 
 self.up(body) 
 
-elif query_args["event"][0] == "join": 
+elif query\_args["event"][0] == "join": 
 
 self.join(body) 
 
 else:
 
-print("handler for event %s is not implemented" % query_args["event"][0]) 
+print("handler for event %s is not implemented" % query\_args["event"][0]) 
 
 def up(self, body): 
 
 up = self.unmarshal(body, integration.UplinkEvent()) 
 
-print("Uplink received from: %s with payload: %s" % (up.device_info.dev_eui, up.data.hex())) 
+print("Uplink received from: %s with payload: %s" % (up.device\_info.dev\_eui, up.data.hex())) 
 
 def join(self, body): 
 
 join = self.unmarshal(body, integration.JoinEvent()) 
 
-print("Device: %s joined with DevAddr: %s" % (join.device_info.dev_eui, join.dev_addr)) 
+print("Device: %s joined with DevAddr: %s" % (join.device\_info.dev\_eui, join.dev\_addr)) 
 
 def unmarshal(self, body, pl): 
 
@@ -307,7 +307,7 @@ return pl
 
 httpd = HTTPServer(('', 8090), Handler) 
 
-httpd.serve_forever() 
+httpd.serve\_forever() 
 ```
 
 ### 下行链路
@@ -318,11 +318,11 @@ httpd.serve_forever()
 建议将下行链路标记为保留，这样命令就不会重复执行。
 :::
 
-默认主题是：`application/APPLICATION_ID/device/DEV_EUI/command/down`
+默认主题是：`application/APPLICATION\_ID/device/DEV\_EUI/command/down`
 
 `command`：请查看**设备用户手册**中的下行链路命令以获取更多详细信息。
 
-|主题|application/APPLICATION_ID/device/DEV_EUI/command/down|
+|主题|application/APPLICATION\_ID/device/DEV\_EUI/command/down|
 | - | :- |
 |devEUI|设备 EUI|
 |confirmed|true/false（载荷是否必须作为确认数据下行发送）|

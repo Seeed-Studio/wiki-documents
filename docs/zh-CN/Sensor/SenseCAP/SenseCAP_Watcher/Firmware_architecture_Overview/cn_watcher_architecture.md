@@ -287,9 +287,9 @@ esp_err_t tf_event_handler_unregister(int32_t event_id,
 
 #### 1.4.1 事件管道中传输的消息类型
 
-两个模块可以连接在一起，表明它们的数据类型是一致的；我们在 [tf_module_data_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) 文件中定义数据类型和相应的数据结构。通常，数据类型以前缀 **TF_DATA_TYPE_** 定义；数据结构以前缀 **tf_data_** 定义。
+两个模块可以连接在一起，表明它们的数据类型是一致的；我们在 [tf\_module\_data\_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) 文件中定义数据类型和相应的数据结构。通常，数据类型以前缀 **TF\_DATA\_TYPE\_** 定义；数据结构以前缀 **tf\_data\_** 定义。
 
-例如，我们在类型枚举结构中定义了 **TF_DATA_TYPE_BUFFER** 类型，相应的结构如下。第一个字段 type 表示数据类型，其余字段表示要传输的数据。
+例如，我们在类型枚举结构中定义了 **TF\_DATA\_TYPE\_BUFFER** 类型，相应的结构如下。第一个字段 type 表示数据类型，其余字段表示要传输的数据。
 
 ```cpp
 typedef struct {
@@ -346,7 +346,7 @@ typedef struct {
 
 当使用 idf 的 `esp_event` 组件进行消息传输时，在入队过程中会发生内存拷贝（详情请阅读 `esp_event` 源代码）；这对于传输大数据（如图像和音频）来说非常不友好。
 
-因此，我们采用一种高效的传输方法，只传输指针。例如，在 **TF_DATA_TYPE_BUFFER** 类型中，要传输的数据定义如下。第一个字段 `p_buf` 是数据缓冲区的起始地址，第二个字段 len 是数据的长度。
+因此，我们采用一种高效的传输方法，只传输指针。例如，在 **TF\_DATA\_TYPE\_BUFFER** 类型中，要传输的数据定义如下。第一个字段 `p_buf` 是数据缓冲区的起始地址，第二个字段 len 是数据的长度。
 
 ```cpp
 struct tf_data_buf
@@ -357,7 +357,7 @@ struct tf_data_buf
 ```
 
 对于数据生产者模块，它们负责 `p_buf` 的内存分配；下一级数据消费者模块负责在使用后释放内存。
-一些常用的数据复制和释放函数定义在 [tf_module_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) 文件中。例如，如果接收到的事件数据类型不是您想要的，您可以直接调用 **tf_data_free()** 函数来释放内存（此函数实现了所有数据类型的释放），如下所示：
+一些常用的数据复制和释放函数定义在 [tf\_module\_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) 文件中。例如，如果接收到的事件数据类型不是您想要的，您可以直接调用 **tf\_data\_free()** 函数来释放内存（此函数实现了所有数据类型的释放），如下所示：
 
 ```cpp
 static void __event_handler(void *handler_args, esp_event_base_t base, int32_t id, void *p_event_data)
@@ -374,7 +374,7 @@ static void __event_handler(void *handler_args, esp_event_base_t base, int32_t i
 
 ### 1.5 模块基类
 
-我们在 [tf_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h) 中定义了模块的基类。任务流引擎不关心模型的具体实现，它只需要调用模块的相关接口来操作它们。每个具体的模块只需要实现操作函数和管理函数。
+我们在 [tf\_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h) 中定义了模块的基类。任务流引擎不关心模型的具体实现，它只需要调用模块的相关接口来操作它们。每个具体的模块只需要实现操作函数和管理函数。
 
 ```cpp
 struct tf_module_ops
@@ -561,9 +561,9 @@ ai camera 块主要负责与 Himax 的通信、模型 OTA、获取图像和推�
 
 params 参数中各字段的含义如下：
 
-- **model_type**: 模型类型，0 表示云端模型（将从 model 字段中提取模型 URL 进行下载使用），1、2、3 表示 Himax 内置模型。
+- **model\_type**: 模型类型，0 表示云端模型（将从 model 字段中提取模型 URL 进行下载使用），1、2、3 表示 Himax 内置模型。
 - **model**: 模型的具体信息。
-  - **model_id**: 模型的唯一标识符。
+  - **model\_id**: 模型的唯一标识符。
   - **version**: 模型版本。
   - **arguments**: 模型参数配置。
     - **size**: 模型大小。
@@ -574,9 +574,9 @@ params 参数中各字段的含义如下：
     - **updatedAt**: 模型更新时间戳。
     - **iou**: IOU（交并比）阈值。
     - **conf**: 置信度阈值。
-  - **model_name**: 模型名称，"General Object Detection"。
-  - **model_format**: 模型格式，"TensorRT"。
-  - **ai_framework**: 使用的 AI 框架。
+  - **model\_name**: 模型名称，"General Object Detection"。
+  - **model\_format**: 模型格式，"TensorRT"。
+  - **ai\_framework**: 使用的 AI 框架。
   - **author**: 模型作者，"SenseCraft AI"。
   - **algorithm**: 算法描述，"Object Detect(TensorRT, SMALL, COCO)"。
   - **classes**: 模型可检测的类别，包括 "person"。
@@ -587,14 +587,14 @@ params 参数中各字段的含义如下：
   - **mode**: 检测模式，0 表示存在性检测，1 表示数值比较，2 表示数量变化。
   - **type**: 比较类型，0 表示小于，1 表示等于，2 表示大于，3 表示不等于（仅在 mode=1 时有效）。
   - **num**: 比较值（仅在 mode=1 时有效）。
-- **conditions_combo**: 多条件检测的关系，0 表示 AND，1 表示 OR。
-- **silent_period**: 静默期设置。
-  - **time_period**: 时间段设置。
+- **conditions\_combo**: 多条件检测的关系，0 表示 AND，1 表示 OR。
+- **silent\_period**: 静默期设置。
+  - **time\_period**: 时间段设置。
     - **repeat**: 从周日到周六的重复时间段，1 表示启用。
-    - **time_start**: 静默期开始时间。
-    - **time_end**: 静默期结束时间。
-  - **silence_duration**: 静默持续时间，单位为秒。
-- **output_type**: 输出图像类型，0 表示仅小图（412x412），1 表示大图和小图都有（640x480; 412x412）。
+    - **time\_start**: 静默期开始时间。
+    - **time\_end**: 静默期结束时间。
+  - **silence\_duration**: 静默持续时间，单位为秒。
+- **output\_type**: 输出图像类型，0 表示仅小图（412x412），1 表示大图和小图都有（640x480; 412x412）。
 - **shutter**: 快门模式，0 表示持续开启，1 表示由 UI 触发，2 表示由输入事件触发，3 表示快门一次。
 
 终端连接说明：
@@ -694,7 +694,7 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
   - **body**: 包含请求体内容的对象。
     - **prompt**: 请求中包含的提示，为图像分析提供额外信息。
     - **type**: 请求类型，1表示监控。
-    - **audio_txt**: 请求中包含的音频文本信息。当监控场景被触发时，接口服务将把此字段转换为TTS并在接口中返回。
+    - **audio\_txt**: 请求中包含的音频文本信息。当监控场景被触发时，接口服务将把此字段转换为TTS并在接口中返回。
 
 终端连接说明：
 
@@ -789,7 +789,7 @@ sensecraft alarm 块是一个报警块，主要用于向 SenseCraft 平台通知
 配置参数如下：
 
 - **params**: 包含设备参数的对象。
-  - **silence_duration**: 静默持续时间（秒），这里是60秒，表示最小报告间隔为60秒。
+  - **silence\_duration**: 静默持续时间（秒），这里是60秒，表示最小报告间隔为60秒。
   - **text**: 平台报警通知的文本。
 
 终端连接说明：

@@ -86,8 +86,8 @@ ReSpeaker 是一个开放的模块化语音接口，用于控制您周围的设�
 - GPIO2/I2S_LRCLK：驱动外部编码器/解码器，左右声道采样时钟
 - GPIO3/I2S_BCLK：驱动外部编码器/解码器，比特时钟
 - MCLK_OUT：外部设备的主时钟
-- HP_SEL：耳机声道选择。如果使用 ReSpeaker 麦克风阵列输出音频，请将 HP_SEL 设置为高电平
-- HP_L：来自 ReSpeaker 麦克风阵列的模拟音频左声道
+- HP\_SEL：耳机声道选择。如果使用 ReSpeaker 麦克风阵列输出音频，请将 HP_SEL 设置为高电平
+- HP\_L：来自 ReSpeaker 麦克风阵列的模拟音频左声道
 - HP_R：来自 ReSpeaker 麦克风阵列的模拟音频右声道
 - AGND：音频的模拟地
 
@@ -374,7 +374,7 @@ if __name__ == '__main__':
     main()                  
 ```
 
-当出现 "INFO:mic:Start Detecting" 时，尝试说 "ReSpeaker" 唤醒程序，然后说 "play music" 让它播放音乐。随后，ReSpeaker 将使用 **madplay** 工具播放当前路径下的 "Tchaikovsky_Concerto_No.1p.mp3"。
+当出现 "INFO:mic:Start Detecting" 时，尝试说 "ReSpeaker" 唤醒程序，然后说 "play music" 让它播放音乐。随后，ReSpeaker 将使用 **madplay** 工具播放当前路径下的 "Tchaikovsky\_Concerto\_No.1p.mp3"。
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 
@@ -502,7 +502,7 @@ orangectl passwd root 12345678  //将 12345678 替换为您想设置的密码
 
 **Q9: 如何支持 Google Speech 或其他语音转文本 (STT) 引擎？**
 
-- 按照[指南](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)安装 speech_recognition 库。
+- 按照[指南](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)安装 speech\_recognition 库。
 
 **Q10: Alexa 运行失败，错误 "IOError: [Errno -9998] Invalid number of channels"**
 

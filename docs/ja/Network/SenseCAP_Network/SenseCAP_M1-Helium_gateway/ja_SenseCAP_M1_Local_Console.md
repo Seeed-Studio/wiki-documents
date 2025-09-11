@@ -2,82 +2,85 @@
 description: SenseCAP M1 ローカルコンソール
 title: SenseCAP M1 ローカルコンソール
 keywords:
-- SenseCAP Network
+- SenseCAP ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console
 last_update:
-  date: 02/14/2023
+  date: 05/15/2025
   author: Matthew
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 **概要**
 ============
 
-**2022年1月14日に更新された最新機能：** SenseCAP ローカルコンソールのセキュリティレベルを向上させるため、CPUIDに加えてローカルコンソールにログインするための追加パスワードが追加されました。デフォルトパスワードはホットスポットのシリアル番号です。初回ログイン後にパスワードを変更することを強く推奨します。
+**2022年1月14日に更新された最新機能:** SenseCAP ローカルコンソールのセキュリティレベルを向上させるために、CPUIDに加えてログイン時に追加のパスワードが必要になりました。デフォルトのパスワードはホットスポットのシリアル番号です。初回ログイン後にパスワードを変更することを強く推奨します。
 
-**注意**: ローカルコンソールを使用するには、お使いのコンピューターとホットスポットが同じルーター/ネットワークに接続されている必要があります。ホットスポットが遠隔地にある場合、現在ローカルコンソールの機能を実行することはできません。
+**注意**: ローカルコンソールを使用するには、コンピュータとホットスポットが同じルーター/ネットワークに接続されている必要があります。ホットスポットがリモートの場合、現在ローカルコンソールの機能を実行することはできません。
 
-![Local Console](https://www.sensecapmx.com/wp-content/uploads/2022/07/local-console.png)
+![ローカルコンソール](https://www.sensecapmx.com/wp-content/uploads/2022/07/local-console.png)
 
 **ログイン**
 =========
 
-**1. ホットスポットのCPU IDとS/Nを取得する**
+**1\. ホットスポットのCPU IDとS/Nを取得する**
 
-- SenseCAP M1 ダッシュボードのアカウントをお持ちでない場合、またはダッシュボードにホットスポットを追加していない場合は、SenseCAP M1のデバイスラベルを確認し、S/NとCPU IDを取得してください
+*   SenseCAP M1 Dashboardのアカウントを持っていない場合、またはホットスポットをDashboardに追加していない場合は、SenseCAP M1のデバイスラベルを確認し、S/NとCPU IDを取得してください。
 
-![Local Console Login Details](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-16.png)
+![ローカルコンソールログイン詳細](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-16.png)
 
-- すでにSenseCAP M1 ダッシュボードのアカウントを登録し、ホットスポットを追加している場合は、ダッシュボードからホットスポットのCPU IDとS/Nをコピーできます。
+*   すでにSenseCAP M1 Dashboardのアカウントを登録し、ホットスポットを追加している場合は、DashboardからホットスポットのCPU IDとS/Nをコピーできます。
 
-![Local Console Login Details 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
+![ローカルコンソールログイン詳細 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
 
-**2. ホットスポットのIPアドレスを取得する**
+**2\. ホットスポットのIPアドレスを取得する**
 
-- SenseCAP M1 ダッシュボードのアカウントをお持ちでない場合、またはダッシュボードにホットスポットを追加していない場合は、ルーター管理ページでホットスポットのIPアドレスを確認するか、Helium APPで診断を実行してIPアドレスを取得してください。その後、ブラウザでIPアドレスを入力してローカルコンソールページに入ります。
-- すでにSenseCAP M1 ダッシュボードのアカウントを登録し、ホットスポットを追加している場合は、ダッシュボードからホットスポットのIPアドレスを確認できます：
-  - Turbo Sync ローカルコンソールページに移動する「**Wi-Fi IPアドレス**」または「**LAN IPアドレス**」リンクをクリックします。
-  - Wi-Fi経由で接続している場合、クリック可能なホットスポットのWi-Fi IPアドレスが表示されます。
-  - イーサネットケーブルまたはローカルLAN経由で接続している場合、ホットスポットのLANアドレスが表示されます。
+*   SenseCAP M1 Dashboardのアカウントを持っていない場合、またはホットスポットをDashboardに追加していない場合は、ルーター管理ページでホットスポットのIPアドレスを確認するか、Heliumアプリで診断を実行してIPアドレスを取得してください。その後、ブラウザにIPアドレスを入力してローカルコンソールページにアクセスします。
+*   すでにSenseCAP M1 Dashboardのアカウントを登録し、ホットスポットを追加している場合は、DashboardからホットスポットのIPアドレスを確認できます:
+    *   "**Wi-Fi IP Address**"または"**LAN IP Address**"リンクをクリックすると、Turbo Syncローカルコンソールページに移動します。
+    *   Wi-Fi接続の場合、ホットスポットのWi-Fi IPアドレスが表示されます。
+    *   イーサネットケーブルまたはローカルLAN接続の場合、ホットスポットのLANアドレスが表示されます。
 
-![Local Console Login Details 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
+![ローカルコンソールログイン詳細 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
 
-**3. ホットスポットのCPU IDとデフォルトパスワード（シリアル番号、別名S/N）を使用してログインする**
+**3\. ホットスポットのCPU IDとデフォルトパスワード（シリアル番号、S/N）を使用してログインする**
 
-![Local Console Login Details 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/login-1.png)
+![ローカルコンソールログイン詳細 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/login-1.png)
 
-![Local Console Login Details 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-2-1.png)
+![ローカルコンソールログイン詳細 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-2-1.png)
 
-**4. デフォルトパスワードを変更する**
+**4\. デフォルトパスワードを変更する**
 
-![Local Console Change Password](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password-1.png)
+![ローカルコンソールパスワード変更](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password-1.png)
 
-初回ログイン後、「**パスワード変更**」ボタンをクリックしてデフォルトパスワードを変更してください。新しいパスワードは8～32桁で、数字、文字、記号のうち少なくとも2つの組み合わせを含む必要があります。パスワードは暗号化され、SenseCAP M1にローカルでのみ保存されます。
+初回ログイン後、必ず"**Change Password**"ボタンをクリックしてデフォルトパスワードを変更してください。新しいパスワードは8～32桁で、数字、文字、記号のうち少なくとも2種類の組み合わせを含む必要があります。パスワードは暗号化され、SenseCAP M1にのみローカルで保存されます。
 
-セキュリティ上の理由から、現在「**パスワードを忘れた場合**」機能は提供していませんので、パスワードをよく覚えておいてください。パスワードを紛失した場合は、MicroSDカードを再フラッシュしてデフォルトパスワードを復元する必要があります。
+セキュリティ上の理由から、現在「**Forget Password**」機能は提供していませんので、パスワードをしっかり覚えておいてください。パスワードを忘れた場合は、MicroSDカードを再フラッシュしてデフォルトパスワードに戻す必要があります。
 
-CLIユーザーの方は、パスワードが変更されるたびに、ローカルコンソールデバイストークンも自動的に更新されることにご注意ください。ローカルコンソールのWebページを更新すると、新しいデバイストークンが表示されます。デバイストークンは安全に保管し、いかなる状況でも第三者と共有しないでください。
+CLIユーザーの場合、パスワードが変更されるたびにローカルコンソールのデバイストークンが自動的に更新されます。ローカルコンソールのウェブページを更新すると新しいデバイストークンが表示されます。デバイストークンを安全に保管し、いかなる状況でも第三者に共有しないでください。
 
-**5. bind-keyを取得してSenseCAP ダッシュボードにホットスポットを追加する**
+**5\. バインドキーを取得し、ホットスポットをSenseCAP Dashboardに追加する**
 
-![Local Console Bind Key](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3-2.png)
+![ローカルコンソールバインドキー](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3-2.png)
 
-上記のローカルコンソールページでデバイスCPU ID、デバイスETH MAC、デバイスbind keyを取得します。
+上記のローカルコンソールページでデバイスCPU ID、デバイスETH MAC、およびデバイスバインドキーを取得してください。
 
 * * *
 
 **重要な情報**
 
-**注意**: Turbo Syncはmicro SDカードの頻繁な消去と書き込みを引き起こす可能性があり、必要な場合にのみ実行することをお勧めします。
+**注意**: Turbo SyncはMicroSDカードで頻繁な消去と書き込みを引き起こす可能性があるため、必要な場合のみ実行することを推奨します。
 
-デバイスの同期ブロック高がブロックチェーンに非常に近い場合（200ブロック未満）、Turbo Syncはデバイスに必要なく、実行することはできません。
+デバイスの同期済みブロック高がブロックチェーンに非常に近い場合（200ブロック未満）、Turbo Syncはデバイスに必要ありません。その場合、Turbo Syncを実行することはできません。
 
 ![Turbo Sync](https://www.sensecapmx.com/wp-content/uploads/2022/07/TS-console.png)
 
-Turbo Syncプロセスは完了まで時間がかかる場合があり、ネットワーク速度に依存します。安定したインターネット接続を維持し、同期プロセスを辛抱強くお待ちください。
+Turbo Syncプロセスの完了には時間がかかる場合があり、ネットワーク速度に依存します。安定したインターネット接続を維持し、同期プロセスに忍耐強く対応してください。
 
-**重要**: Turbo Syncプロセス中にデバイスの電源を切らないでください。そうしないと、次回起動時にデバイスの台帳が破損し、最後の祝福されたスナップショットから再び同期を開始することになります。その場合、Turbo Syncプロセスを繰り返す必要があります。
+**重要**: Turbo Syncプロセス中にデバイスの電源を切らないでください。そうしないと、次回の起動時に台帳が破損し、最後の祝福されたスナップショットから再同期を開始します。その場合、Turbo Syncプロセスを再度実行する必要があります。
 
 * * *
 
@@ -86,50 +89,51 @@ Turbo Syncプロセスは完了まで時間がかかる場合があり、ネッ�
 
 **注意**: ローカルコンソールにログインする必要があります。
 
-オレンジ色の「再起動」ボタンをクリックして再起動プロセスを開始します。
+オレンジ色の「Reboot」ボタンをクリックして再起動プロセスを開始します。
 
-- \[reboot\] request sent + \[reboot going\]が表示されたら、プロセスが開始されています。
-- "----log stream disconnected from the host----"と"----log stream connected to the host----"が表示されたら、再起動プロセスが完了しています。
+*   \[reboot\]リクエスト送信 + \[reboot going\]が表示されたら、プロセスが開始されます。
+*   "----log stream disconnected from the host----"および"----log stream connected to the host----"が表示されたら、再起動プロセスが完了します。
 
-![Reboot SenseCAP Hotspot](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4-2.png)
+![SenseCAP ホットスポット再起動](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4-2.png)
 
-**注意**: Helium Blockchain台帳は、micro SDカードの予期しないエラーによって損傷することがあり、ブロックチェーン同期プロセスがブロックで停止し、同期に失敗することがあります。
+**注意**: Helium ブロックチェーン台帳は、MicroSDカードの予期しないエラーによって損傷し、ブロックチェーン同期プロセスがブロックで停止し、同期に失敗することがあります。
 
-ローカルコンソールでホットスポットを再起動すると、micro SDカードの潜在的なエラーを解決するのに役立つ場合があります。
+ローカルコンソールでホットスポットを再起動することで、MicroSDカードの潜在的なエラーを解決するのに役立つ場合があります。
 
-**重要**: ホットスポットを頻繁に再起動しないでください。必要な場合にのみ再起動してください。
+**重要**: ホットスポットを頻繁に再起動しないでください。必要な場合のみ再起動してください。
 
-ブロック高が停止して増加しない場合、高さが-1または1のままの場合は、ブロックリセットを実行してください。これらの手順に従った後、ホットスポットは再び完全に同期されます。
+ブロック高が停止して増加しない場合、高さが-1または1のままの場合は、ブロックリセットを実行してください。この手順を実行した後、ホットスポットは完全に再同期されます。
 
 * * *
 
 **シャットダウン**
 =============
 
-シャットダウン機能は、突然の電源切断によるデバイスの損傷を防ぐため、デバイスのプラグを抜く前に使用することを推奨します。
+
+デバイスを突然電源オフすることによる損傷を防ぐために、デバイスを抜く前にシャットダウン機能を使用することをお勧めします。
 
 **シャットダウン機能の使用方法**
 
-「**Shutdown**」ボタンをクリックし、プロンプトを承認してください。
+「**シャットダウン**」ボタンをクリックし、プロンプトを承認してください。
 
-- シャットダウンには数分かかります。
-- シャットダウンが完了すると、青色LEDとEthernetポートのLEDが消灯します。
+*   シャットダウンには数分かかります。
+*   シャットダウンが完了すると、青色のLEDとイーサネットポートのLEDが消灯します。
 
-![SenseCAP Shutdown Feature](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5-2.png)
+![SenseCAP シャットダウン機能](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5-2.png)
 
-**注意**: シャットダウン時はSenseCAP M1の近くにいることを確認してください。デバイスを再度電源投入する場合は、アダプターを再接続する必要があります。
+**注意**: シャットダウンを行う際は、必ずSenseCAP M1の近くにいることを確認してください。デバイスを再び起動するには、アダプターを再接続する必要があります。
 
 * * *
 
-**Reset Block**
-===============
+**ブロックのリセット**
+====================
 
-**注意**: Local Consoleにログインする必要があります。
+**注意**: ローカルコンソールにログインする必要があります。
 
-赤色の「**Reset Blocks**」ボタンをクリックして、リセットブロックプロセスを開始してください。
+赤い「**ブロックのリセット**」ボタンをクリックして、ブロックリセットプロセスを開始してください。
 
-![Reset Blocks SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/reset-blocks.png)
+![ブロックのリセット SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/reset-blocks.png)
 
-**注意**: SenseCAP M1は最新のblessed snapshotの読み込みを開始します。ダッシュボードのステータスには遅延が生じる可能性があり、一時的に「**Unknown**」同期ステータスが表示されることは正常です。
+**注意**: SenseCAP M1は最新の承認済みスナップショットをロードし始めます。ダッシュボードのステータスに遅延が発生する場合があり、一時的に「**Unknown**」という同期ステータスが表示されるのは正常です。
 
-Turbo Syncを実行する必要がある場合は、最新のblessed snapshotが読み込まれるまで待ってください（約30分）。
+Turbo Syncを実行する必要がある場合は、最新の承認済みスナップショットがロードされるまで（約30分）お待ちください。

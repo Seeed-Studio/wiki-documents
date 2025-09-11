@@ -1,23 +1,26 @@
 ---
-description: SenseCAP M2 Multi-Platform Gateway LNS Configuration
-title: SenseCAP M2 Multi-Platform Gateway LNS 設定
+description: SenseCAP M2 マルチプラットフォームゲートウェイ LNS 設定
+title: SenseCAP M2 マルチプラットフォームゲートウェイ LNS 設定
 keywords:
-- SenseCAP Network
+- SenseCAP ネットワーク
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration
 last_update:
-  date: 08/29/2023
+  date: 05/15/2025
   author: Jessie
 ---
-
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 ## ゲートウェイ設定
 
-Web UIを介してゲートウェイを設定します。Luciにログインする方法については、[クイックスタート](https://files.seeedstudio.com/products/SenseCAP%20M2/Quick%20Start%20for%20SenseCAP%20M2%20Multi-Platfrom%20Gateway%20&%20Sensors.pdf)をご確認ください。
+Web UI を使用してゲートウェイを設定します。[クイックスタート](https://files.seeedstudio.com/products/SenseCAP%20M2/Quick%20Start%20for%20SenseCAP%20M2%20Multi-Platfrom%20Gateway%20&%20Sensors.pdf)を確認して Luci にログインしてください。
 
-### チャンネルプラン設定
+### チャネルプラン設定
 
-`LoRa` > `Channel Plan`に移動します
+`LoRa` > `Channel Plan` に移動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP3.png" alt="pir" width={800} height="auto" /></p>
 
@@ -25,99 +28,97 @@ Web UIを介してゲートウェイを設定します。Luciにログインす�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP4.png" alt="pir" width={800} height="auto" /></p>
 
-設定後、`Save&Apply`をクリックします
+設定後、`Save&Apply` をクリックします。
 
 ### ローカルネットワークサーバー設定
 
-`LoRa` > `LoRa Network`に移動します
+`LoRa` > `LoRa Network` に移動します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP1.png" alt="pir" width={800} height="auto" /></p>
 
-モードを`Local Network Server`に設定し、MQTTの情報（Broker Host/Port/User/Password）を追加します。その他のパラメータはデフォルト値のままで構いません。
+モードを `Local Network Server` に設定し、MQTT 情報（Broker Host/Port/User/Password）を追加します。他のパラメータはデフォルト値のままにしておくことができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP2.png" alt="pir" width={800} height="auto" /></p>
 
-`Save&Apply`をクリックして設定を適用します。
+設定を適用するには `Save&Apply` をクリックします。
 
 :::tip 注意
-プロセスの開始には約1分かかります。その後、GUI設定にアクセスできるようになります。
+プロセスの開始には約1分かかります。その後、GUI 設定にアクセスできます。
 :::
 
-## ChirpStack GUI設定
+## ChirpStack GUI 設定
 
-`http://localhost:8080`を介してChirpStack GUIにログインします。
+`http://localhost:8080` から ChirpStack GUI にログインします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP.png" alt="pir" width={800} height="auto" /></p>
 
-デフォルトのアカウントとパスワード：`admin`。
+デフォルトのアカウントとパスワード: `admin`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP5.png" alt="pir" width={800} height="auto" /></p>
 
-ダッシュボードページが表示されます。
+その後、ダッシュボードページが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP6.png" alt="pir" width={800} height="auto" /></p>
 
-### 地域の確認
+### 地域を確認する
 
-`Network Server` > `Regions`に移動します。
+`Network Server` > `Regions` に移動します。
 
-地域IDが表示されているはずです。それをクリックして情報を確認し、前のステップでの設定と同じであることを確認してください。
+Region ID が表示されるはずです。それをクリックして情報を確認します。前のステップで設定した内容と一致している必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP7.png" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP8.png" alt="pir" width={800} height="auto" /></p>
 
-### デバイスプロファイルの追加
+### デバイスプロファイルを追加する
 
-`Tenant` > `Device Profiles`に移動し、`Add Profile`をクリックします。
+`Tenant` > `Device Profiles` に移動し、`Add Profile` をクリックします。
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP9.png" alt="pir" width={800} height="auto" /></p>
 
-**MAC version**: LoRaWAN 1.0.3
-
-**Regional parameters reversion**: A
-
-**ADR algorithm**: Default ADR algorithm(LoRa only)
-
-**Expected uplink interval**: カスタマイズ、デフォルト3600秒
+**MAC バージョン**: LoRaWAN 1.0.3  
+**地域パラメータのリビジョン**: A  
+**ADR アルゴリズム**: デフォルトの ADR アルゴリズム (LoRa のみ)  
+**期待されるアップリンク間隔**: カスタマイズ可能、デフォルトは 3600 秒  
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP10.png" alt="pir" width={800} height="auto" /></p>
 
-`Codec`に移動し、`JavaScript functions`を選択して、[SenseCAP Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder)をコピーして送信します。
+`Codec` に移動し、`JavaScript functions` を選択します。[SenseCAP Decoder for TTN](https://github.com/Seeed-Solution/SenseCAP-Decoder) をコピーして提出します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/decode.png" alt="pir" width={800} height="auto" /></p>
 
-### ゲートウェイの追加
+### ゲートウェイを追加する
 
-`Gateway`に移動し、`Add Gateway`をクリックします。
+`Gateway` に移動し、`Add Gateway` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP11.png" alt="pir" width={800} height="auto" /></p>
 
-名前とゲートウェイIDを定義し（ をクリックしてIDをランダムに生成できます）、送信します。
+名前とゲートウェイ ID を定義します（ID をランダムに生成することもできます）。その後、提出します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP13.png" alt="pir" width={800} height="auto" /></p>
 
-### デバイスの追加
+### デバイスを追加する
 
-`Tenant` > `Application`に移動し、`Add Application`をクリックします。
+`Tenant` > `Application` に移動し、`Add Application` をクリックします。
 
-アプリケーションに名前を付けて送信します。
+アプリケーションに名前を付けて提出します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/add-applications.png" alt="pir" width={800} height="auto" /></p>
 
-アプリケーションに移動し、`Add device`をクリックします。
+アプリケーションに移動し、`Add device` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP14.png" alt="pir" width={800} height="auto" /></p>
 
-デバイスEUIを貼り付け、前に追加したデバイスプロファイルを選択して送信します。
+デバイス EUI を貼り付け、前に追加したデバイスプロファイルを選択して提出します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP15.png" alt="pir" width={800} height="auto" /></p>
 
-アプリケーションキーを貼り付けて送信をクリックします。
+アプリケーションキーを貼り付けて提出します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP16.png" alt="pir" width={800} height="auto" /></p>
 
-### デバイスステータスの確認
+### デバイスのステータスを確認する
 
-デバイスの`Events`を確認すると、デバイスがネットワークに参加したときのjoinパケットが取得できます。
+デバイスの `Events` を確認し、デバイスがネットワークに参加した際のジョインパケットを取得します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP17.png" alt="pir" width={800} height="auto" /></p>
 
@@ -125,72 +126,70 @@ Web UIを介してゲートウェイを設定します。Luciにログインす�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP18.png" alt="pir" width={800} height="auto" /></p>
 
-## インテグレーション
+## 統合
 
-この章はクラウドサービス開発のためのものです。以下のガイドラインは参考用です。
+この章はクラウドサービス開発のためのものであり、以下のガイドラインは参考用です。
 
-### MQTT
+### MQTT 
 
 #### トピック
 
-MQTTインテグレーションは、イベントタイプで文書化されているすべてのイベントを公開します。
+MQTT 統合は、イベントタイプで文書化されているすべてのイベントを公開します。
 
-デフォルトのイベントトピックは：
-
+デフォルトのイベントトピックは以下の通りです：
 ```cpp
 application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 ```
 
-[Event Types](https://www.chirpstack.io/docs/chirpstack/integrations/events.html) で詳細を確認してください。
+詳細については、[イベントタイプ](https://www.chirpstack.io/docs/chirpstack/integrations/events.html)を確認してください。
 
-アプリケーションIDはアプリケーションタブで確認できます：
+アプリケーション ID はアプリケーションタブで確認できます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP19.png" alt="pir" width={800} height="auto" /></p>
 
-- **Event types**
+- **イベントタイプ**
 
 |up|アップリンクイベント|
 | - | - |
 |status|マージンとバッテリーステータス|
 |join|デバイス参加イベント|
-|ack|確認済みダウンリンク(n)ack|
-|txack|ダウンリンク送信ack|
+|ack|確認済みダウンリンク (n)ack|
+|txack|ダウンリンク送信 ack|
 |log|ログ（またはエラー）イベント|
-|location|位置イベント|
+|location|位置情報イベント|
 |integration|統合イベント|
 
-
-:::info Note
-`+` はすべてのメッセージを受信することを意味します
+:::info 注意
+`+` はすべてのメッセージを受信することを意味します。
 :::
 
-**例**：
+**例**: 
 
-- 特定のゲートウェイ下のすべてのデバイスからアップリンクメッセージを受信するには：
+* 特定のゲートウェイ下のすべてのデバイスからアップリンクメッセージを受信するには：
 
 ```cpp
 gateway/<GATEWAY_EUI>/device/+/event/up
 ```
 
-- アプリケーション配下のすべてのデバイスからのすべてのメッセージを受信するには：
+* アプリケーション下のすべてのデバイスからすべてのメッセージを受信するには：
 
 ```cpp
 application/+/device/+/event/+
 ```
 
-- すべてのゲートウェイからすべてのデバイスメッセージを受信するには：
+* すべてのゲートウェイからすべてのデバイスメッセージを受信するには：
 
 ```cpp
 gateway/+/device/+/event/+
 ```
 
-`gatewayid` を確認してゲートウェイを区別することができます。
+`gatewayid` を確認してゲートウェイを区別できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/gateway-id.png" alt="pir" width={800} height="auto" /></p>
 
 #### ペイロード
 
-object.valid が true の場合、データ解析が成功したことを意味し、object.messages を走査して必要なデータタイプを抽出できます。
+`object.valid` が true の場合、データ解析が成功したことを意味します。その後、`object.messages` を走査して必要なデータタイプを抽出できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP20.png" alt="pir" width={800} height="auto" /></p>
 
@@ -198,12 +197,12 @@ object.valid が true の場合、データ解析が成功したことを意味�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP21.png" alt="pir" width={800} height="auto" /></p>
 
-- `upload_battery`: バッテリー
-- `upload_interval`: アップロード間隔、単位：秒
-- `upload_version`: ハードウェア/ファームウェアバージョン
-- `report_telemetry`: 測定値
+- `upload\_battery`: バッテリー
+- `upload\_interval`: アップロード間隔、単位：秒
+- `upload\_version`: ハードウェア/ファームウェアバージョン
+- `report\_telemetry`: 測定値
 
-'report_telemetry' メッセージ内の `measurementId` については、詳細は [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) を確認してください。
+‘report\_telemetry’ メッセージ内の `measurementId` については、[SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) を確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP22.png" alt="pir" width={800} height="auto" /></p>
 
@@ -211,29 +210,29 @@ object.valid が true の場合、データ解析が成功したことを意味�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP23.png" alt="pir" width={600} height="auto" /></p>
 
-'report_telemetry' メッセージ内の `measurementId` については、詳細は [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) を確認してください。
+‘report\_telemetry’ メッセージ内の `measurementId` については、[SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) を確認してください。
 
-### HTTP
+### HTTP 
 
 HTTP タブで `+` をクリックして新しい HTTP 統合を追加します。
 
-LNS は設定された URL に POST としてメッセージを送信します。
+LNS は設定された URL に POST メッセージを送信します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP24.png" alt="pir" width={800} height="auto" /></p>
 
 URL 情報を送信してください。
 
-:::info Note
-http のみサポート、https はサポートしていません。
+:::info 注意
+https ではなく http のみをサポートします。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP25.png" alt="pir" width={800} height="auto" /></p>
 
-HTTP 統合は設定されたイベントエンドポイントまたはエンドポイント（複数の URL を設定可能、カンマ区切り）に POST リクエストを行います。イベント URL クエリパラメータはイベントのタイプを示します。
+HTTP 統合は、設定されたイベントエンドポイントまたはエンドポイント（複数の URL をカンマ区切りで設定可能）に POST リクエストを送信します。`event` URL クエリパラメータはイベントの種類を示します。
 
-HTTP 統合は [Event Type](https://www.chirpstack.io/docs/chirpstack/integrations/events.html) で文書化されているすべてのイベントを公開します。
+HTTP 統合は、[イベントタイプ](https://www.chirpstack.io/docs/chirpstack/integrations/events.html)で文書化されているすべてのイベントを公開します。
 
-**例**：
+**例**:
 
 <details>
 <summary>main.py</summary>
@@ -241,55 +240,55 @@ HTTP 統合は [Event Type](https://www.chirpstack.io/docs/chirpstack/integratio
 ```cpp
 from http.server import HTTPServer, BaseHTTPRequestHandler 
 
-from urllib.parse import urlparse, parse_qs 
+from urllib.parse import urlparse, parse\_qs 
 
-from chirpstack_api import integration 
+from chirpstack\_api import integration 
 
-from google.protobuf.json_format import Parse 
+from google.protobuf.json\_format import Parse 
 
 class Handler(BaseHTTPRequestHandler): 
 
-\# True - JSON marshaler 
+\# True - JSON マーシャラー 
 
-\# False - Protobuf marshaler (binary) 
+\# False - Protobuf マーシャラー（バイナリ） 
 
 json = False 
 
-def do_POST(self): 
+def do\_POST(self): 
 
-self.send_response(200) 
+self.send\_response(200) 
 
-self.end_headers() 
+self.end\_headers() 
 
-query_args = parse_qs(urlparse(self.path).query) 
+query\_args = parse\_qs(urlparse(self.path).query) 
 
-content_len = int(self.headers.get('Content-Length', 0)) 
+content\_len = int(self.headers.get('Content-Length', 0)) 
 
-body = self.rfile.read(content_len) 
+body = self.rfile.read(content\_len) 
 
-if query_args["event"][0] == "up": 
+if query\_args["event"][0] == "up": 
 
 self.up(body) 
 
-elif query_args["event"][0] == "join": 
+elif query\_args["event"][0] == "join": 
 
 self.join(body) 
 
 else:
 
-print("handler for event %s is not implemented" % query_args["event"][0]) 
+print("handler for event %s is not implemented" % query\_args["event"][0]) 
 
 def up(self, body): 
 
 up = self.unmarshal(body, integration.UplinkEvent()) 
 
-print("Uplink received from: %s with payload: %s" % (up.device_info.dev_eui, up.data.hex())) 
+print("Uplink received from: %s with payload: %s" % (up.device\_info.dev\_eui, up.data.hex())) 
 
 def join(self, body): 
 
 join = self.unmarshal(body, integration.JoinEvent()) 
 
-print("Device: %s joined with DevAddr: %s" % (join.device_info.dev_eui, join.dev_addr)) 
+print("Device: %s joined with DevAddr: %s" % (join.device\_info.dev\_eui, join.dev\_addr)) 
 
 def unmarshal(self, body, pl): 
 
@@ -303,7 +302,7 @@ return pl
 
 httpd = HTTPServer(('', 8090), Handler) 
 
-httpd.serve_forever() 
+httpd.serve\_forever() 
 ```
 
 </details>
@@ -312,31 +311,30 @@ httpd.serve_forever()
 
 ダウンリンクメッセージ：
 
-:::info
-ダウンリンクを保持済みとしてマークすることを推奨します。これにより、コマンドが繰り返し実行されることがなくなります。
+:::info 
+ダウンリンクを保持としてマークすることをお勧めします。これにより、コマンドが繰り返し実行されることはありません。
 :::
 
-デフォルトのTopicは：`application/APPLICATION_ID/device/DEV_EUI/command/down`
+デフォルトのトピックは以下の通りです：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
-`command`：詳細については、**デバイスユーザーマニュアル**のダウンリンクコマンドを確認してください。
+`command`: 詳細については **デバイスユーザーマニュアル** のダウンリンクコマンドを確認してください。
 
-|Topic|application/APPLICATION_ID/device/DEV_EUI/command/down|
+|トピック|application/APPLICATION\_ID/device/DEV\_EUI/command/down|
 | - | :- |
-|devEUI|デバイスEUI|
+|devEUI|デバイス EUI|
 |confirmed|true/false（ペイロードを確認済みデータダウンとして送信する必要があるかどうか）|
-|fPort|使用するFPort（0より大きい値である必要があります）|
-|data|base64エンコードされたデータ（平文、ChirpStackによって暗号化されます）|
-
+|fPort|使用する FPort（0 より大きい必要があります）|
+|data|base64 エンコードされたデータ（プレーンテキスト、ChirpStack によって暗号化されます）|
 
 **例**:
 
-1) SenseCAP S210x LoRaWANセンサーの再起動：
+1) SenseCAP S210x LoRaWAN センサーを再起動する：
 
-**Topic**:
+**トピック**:
 
 `application/dbf6\*\*\*\*6c92/device/2CF7F1C2\*\*\*/command/down`
 
-**Json：**
+**Json：** 
 
 ```cpp
 {
@@ -352,14 +350,13 @@ httpd.serve_forever()
 } 
 ```
 
-2) SenseCAP S210x LoRaWANセンサーのアップロード間隔を1分に設定する：
+2) SenseCAP S210x LoRaWAN センサーのアップロード間隔を1分に設定する：
 
 **トピック**：
 
 `application/dbf6\*\*\*\*6c92/device/2CF7F1C2\*\*\*/command/down`
 
 **Json**：
-
 ```cpp
 {
 

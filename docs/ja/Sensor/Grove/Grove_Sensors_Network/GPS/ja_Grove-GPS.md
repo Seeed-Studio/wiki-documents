@@ -387,8 +387,8 @@ GPSは屋外で使用するのが望ましいです。ラズベリーパイを�
 - **[データシート]** [E-1612-UBデータシート](https://files.seeedstudio.com/wiki/Grove-GPS/res/E-1612-UB_Datasheets_Sheet.pdf)
 - **[データシート]** [U-Blox6受信機説明プロトコル仕様](https://files.seeedstudio.com/wiki/Grove-GPS/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
 - **[ソフトウェア]** [U-Blox u-center GPS評価ソフトウェア](https://www.u-blox.com/en/product/u-center-windows)
-- **[ドキュメント]** [SIM28_DATA_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
-- **[ドキュメント]** [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[ドキュメント]** [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
+- **[ドキュメント]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- このMarkdownファイルはhttps://www.seeedstudio.com/wiki/Grove_-_GPSから作成されました -->
 

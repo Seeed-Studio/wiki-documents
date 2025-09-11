@@ -56,7 +56,7 @@ sudo npm install -g --unsafe-perm node-red
 node-red
 ```
 
-![IMG_258](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/003.png)
+![IMG\_258](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/003.png)
 
 然后您可以通过在浏览器中访问 [http://localhost:1880](http://localhost:1880/) 来访问 Node-RED 编辑器。
 
@@ -66,25 +66,25 @@ node-red
 
 登录到 [**SenseCAP 控制台**](https://sensecap.seeed.cc/portal/#/dashboard)。在仪表板顶部用户名右侧的下拉栏中，我们可以找到**组织信息**，请选择它以获取**组织 ID**
 
-![IMG_259](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/004.png)
+![IMG\_259](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/004.png)
 
 然后，我们还需要获取 SenseCAP 的 API 密钥。请点击仪表板左侧的**安全 -> 访问 API 密钥**。然后创建一个访问密钥。
 
-![IMG_260](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/005.png)
+![IMG\_260](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/005.png)
 
 点击您创建的 **API ID**，您将获得其**访问 API 密钥**，请复制它和**组织 ID**，我们将在后续步骤中使用它们。
 
-![IMG_261](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/006.png)
+![IMG\_261](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/006.png)
 
 ### Node-RED 配置
 
-![IMG_262](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/007.png)
+![IMG\_262](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/007.png)
 
 - **步骤 1.** 添加一个新的 mqtt-broker 节点
 
 拖出一个 **mqtt in** 节点，双击它进入配置页面，然后点击**添加新的 mqtt-broker** 后面的编辑按钮。
 
-![IMG_263](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/008.png)
+![IMG\_263](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/008.png)
 
 mqtt-broker 的配置需要按如下方式填写：
 
@@ -102,7 +102,7 @@ mqtt-broker 的配置需要按如下方式填写：
 
 示例：org-43243\*\*\*23-test
 
-![IMG_264](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/009.png)
+![IMG\_264](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/009.png)
 
 然后我们在**安全**选项字段中填入用户名和密码：
 
@@ -111,7 +111,7 @@ mqtt-broker 的配置需要按如下方式填写：
 **组织 ID：** 您的组织 ID。我们之前已经获取了它
 
 密码：填入我们之前获取的**访问 API 密钥**。
-` `![IMG_265](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/010.png)
+` `![IMG\_265](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/010.png)
 
 添加**主题**
 
@@ -131,17 +131,17 @@ mqtt-broker 的配置需要按如下方式填写：
 "+" 表示该字段没有过滤条件，可以匹配所有内容。"/+/+/+/+" 表示监听所有的 "DeviceEUI"、"Channel"、"Reserved"、"MeasurementID"
 :::
 
-示例：/device_sensor_data/424988\*\*\*\*44/2CF7F\*\*\*0002/+/+/+
+示例：/device\_sensor\_data/424988\*\*\*\*44/2CF7F\*\*\*0002/+/+/+
 
 此主题表示接收当前设备的所有遥感数据。
 
-![IMG_266](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/011.png)
+![IMG\_266](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/011.png)
 
 - **步骤 2.** 添加调试节点
 
 拖出一个 **debug** 节点，连接到 **mqtt-in** 节点，然后点击 **Deploy**
 
-部署成功后，您将在 **mqtt in** 构建块下看到"**Connected**"，数据上报间隔由我们连接的传感器决定。接收到数据后，右侧的调试窗口将显示原始数据。![IMG_267](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/012.png)
+部署成功后，您将在 **mqtt in** 构建块下看到"**Connected**"，数据上报间隔由我们连接的传感器决定。接收到数据后，右侧的调试窗口将显示原始数据。![IMG\_267](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/012.png)
 
 ## **SenseCAP & Node-RED & Azure IoT Central**
 
@@ -153,57 +153,57 @@ mqtt-broker 的配置需要按如下方式填写：
 
 - **步骤 1.** 登录 Azure IoT Central。
 
-请访问 [**Azure IoT Central**](https://apps.azureiotcentral.com/home) 网站，从左侧导航菜单中点击 **Build**，然后点击 **Custom apps**。![IMG_268](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/013.png)
+请访问 [**Azure IoT Central**](https://apps.azureiotcentral.com/home) 网站，从左侧导航菜单中点击 **Build**，然后点击 **Custom apps**。![IMG\_268](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/013.png)
 
 - **步骤 2.** 填写 **Application name** 并选择 **Pricing plan**。当您填写应用程序名称时，Application URL 将自动创建。
 
-![IMG_269](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/014.png)
+![IMG\_269](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/014.png)
 
 注意：如果您是 Azure IoT Central 的新用户，我们建议您选择 Free，因为这不会消耗您的费用。
 
-![IMG_270](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/015.png)
+![IMG\_270](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/015.png)
 
 - **步骤 3.** 点击 **Create** 创建新应用程序。现在您已成功设置 Azure IoT Central！
 
-![IMG_271](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/016.png)
+![IMG\_271](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/016.png)
 
 - **步骤 4.** 创建设备模板
 
 请通过点击左侧菜单栏中的 **Device templates** 来创建新的设备模板。
 
-![IMG_272](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/017.png)
+![IMG\_272](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/017.png)
 
 为您的设备模板命名并点击 **create**
 
-![IMG_273](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/018.png)
+![IMG\_273](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/018.png)
 
-![IMG_274](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/019.png)
+![IMG\_274](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/019.png)
 
 - **步骤 5.** 创建设备
 
-点击左侧菜单栏下的 **Devices -> S2103**。![IMG_275](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/020.png)
+点击左侧菜单栏下的 **Devices -> S2103**。![IMG\_275](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/020.png)
 
-![IMG_276](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/021.png)
+![IMG\_276](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/021.png)
 
 创建设备后，您将在 **Device** 下看到我们刚刚创建的设备，请点击进入设备并点击左上角的 **Connect** 按钮。
 
 请记下这些信息，我们将在下一步中使用。
 
-![IMG_277](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/022.png)
+![IMG\_277](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/022.png)
 
 ### **Node-RED 配置**
 
 - **步骤 1.** 安装 Azure IoT Paletts
 
-点击右上角菜单栏并选择 Settings ![IMG_278](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/023.png)
+点击右上角菜单栏并选择 Settings ![IMG\_278](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/023.png)
 
-在 **Paletts - Install** 中搜索并安装 "node-red-contrib-azure-iot-central" ![IMG_279](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/024.png)
+在 **Paletts - Install** 中搜索并安装 "node-red-contrib-azure-iot-central" ![IMG\_279](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/024.png)
 
 - **步骤 2.** 配置 Azure IoT Central 节点
 
 从左侧 **function** 栏中拖出 **Azure IoT Central** 节点，双击它进入配置页面，然后点击编辑按钮来编辑 **Azure IoT Central** 节点
 
-![IMG_280](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/025.png)
+![IMG\_280](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/025.png)
 
 配置需要按如下填写：
 
@@ -213,7 +213,7 @@ Authentication: SAS
 
 Scope ID/Device ID/Primary Key: 我们之前已经获得了这些信息
 
-![IMG_281](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/026.png)
+![IMG\_281](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/026.png)
 
 - **步骤 3.** 配置功能节点
 
@@ -221,7 +221,7 @@ Scope ID/Device ID/Primary Key: 我们之前已经获得了这些信息
 
 从左侧功能栏中拖出 **function** 节点，双击它进入编辑页面，然后将代码复制到 **On Message** 中。
 
-![IMG_282](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/027.png)
+![IMG\_282](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/027.png)
 
 **代码**:
 
@@ -250,7 +250,7 @@ Scope ID/Device ID/Primary Key: 我们之前已经获得了这些信息
 
 如果您想查看数据的日志信息，可以在函数节点后添加一个调试节点。
 
-![IMG_283](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/028.png)
+![IMG\_283](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/028.png)
 
 一旦 S210X 传感器开始上电工作并开始向 SenseCAP PaaS 服务器发送数据，我们就可以在 Azure IoT Central 上查看数据。
 
@@ -260,32 +260,32 @@ Scope ID/Device ID/Primary Key: 我们之前已经获得了这些信息
 
 添加您需要的功能，然后点击 **save** 和 **publish**
 
-![IMG_284](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/029.png)
+![IMG\_284](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/029.png)
 
-![IMG_285](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/030.png)
+![IMG\_285](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/030.png)
 
-然后我们就可以清楚地查看传感器上传的原始数据。![IMG_286](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/031.png)
+然后我们就可以清楚地查看传感器上传的原始数据。![IMG\_286](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/031.png)
 
 如果您想丰富您的数据仪表板页面，您也可以将其配置为在概览中显示。
 
 点击左侧导航菜单中的 **Overview**。
 
-![IMG_287](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/032.png)
+![IMG\_287](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/032.png)
 
 展开 **starts with devices** 下拉菜单并选择您想要可视化的遥测数据。
 
-![IMG_288](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/033.png)
+![IMG\_288](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/033.png)
 
 点击 **Add tile**，您将看到磁贴已添加到 Azure IoT Central 仪表板。
 
-![IMG_289](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/034.png)
+![IMG\_289](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/034.png)
 
 接下来，根据您的喜好自定义您的传感器数据监控仪表板！
 
 完成更改后，只需点击 **save** 和 **publish**
 
-![IMG_290](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/035.png)
+![IMG\_290](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/035.png)
 
-![IMG_291](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/036.png)
+![IMG\_291](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/036.png)
 
-现在您可以通过自定义仪表板查看传感器数据了！![IMG_292](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/037.png)
+现在您可以通过自定义仪表板查看传感器数据了！![IMG\_292](https://files.seeedstudio.com/wiki/SenseCAPS210X/Azure_IoT_Central/037.png)

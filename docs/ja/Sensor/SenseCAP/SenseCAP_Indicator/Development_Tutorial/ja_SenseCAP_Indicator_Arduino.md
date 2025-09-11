@@ -1,29 +1,33 @@
 ---
-description: Arduino で SenseCAP Indicator の両チップを開発する
-title: Arduino で両チップを開発する
+description: Arduinoを使用してSenseCAP Indicatorの両チップを開発する
+title: Arduinoを使用して両チップを開発する
 keywords:
   - SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.webp
 slug: /ja/SenseCAP_Indicator_ESP32_Arduino
 last_update:
-  date: 2/28/2025
+  date: 05/15/2025
   author: Hendra, LongDirtyAnimAlf
 craft: true
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
 <!-- :::danger
-このwikiを実行する際にいくつかの問題があります。私たちは[コントリビュータープログラム](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=70900433)の下で、このファームウェアの改善を手伝ってくれる人を探しています。
+このWikiを実行する際にいくつかの問題があります。現在、[Contributor Program](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=70900433)の下で、このファームウェアを改善するために協力してくれる方を探しています。
 ::: -->
 
-# Arduino で SenseCAP Indicator の両チップを開発する
+# Arduinoを使用してSenseCAP Indicatorの両チップを開発する
 
-SenseCAP Indicator は、ESP32 と RP2040 デュアル MCU で駆動される 4 インチタッチスクリーンデバイスです。ESP32 と RP2040 は両方とも高性能なマイクロコントローラーで、幅広い機能を提供します。
+SenseCAP Indicatorは、ESP32とRP2040のデュアルMCUによって駆動される4インチのタッチスクリーンデバイスです。ESP32とRP2040はどちらも非常に高性能なマイクロコントローラーで、多くの機能を提供します。
 
-このチュートリアルでは、Arduino フレームワークのシンプルさと柔軟性を使用して、Sensecap Indicator 用の独自のカスタムプロジェクト/ファームウェアを開発する方法をガイドします。
+このチュートリアルでは、Arduinoフレームワークのシンプルさと柔軟性を活用して、SenseCAP Indicator用のカスタムプロジェクト/ファームウェアを開発する方法を案内します。
 
-## ハードウェアの準備
+## ハードウェア準備
 
-ここでは SenseCAP Indicator をハードウェアとして使用しており、その上に 4 種類のセンサー（CO2、温度、湿度、TVOC）があります。ここでの内容には以下が含まれます：
+ここではSenseCAP Indicatorをハードウェアとして使用し、4種類のセンサー（CO2、温度、湿度、TVOC）が搭載されています。以下の内容が含まれます：
 
 <div class="table-center">
   <table align="center">
@@ -36,7 +40,7 @@ SenseCAP Indicator は、ESP32 と RP2040 デュアル MCU で駆動される 4 
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1S-p-5645.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -45,35 +49,35 @@ SenseCAP Indicator は、ESP32 と RP2040 デュアル MCU で駆動される 4 
 
 ### ハードウェア概要と開発知識
 
-Indicatorは2つのMCUで設計されており、RP2040とESP32S3が同時に動作します。
+IndicatorはRP2040とESP32S3の2つのMCUで設計されており、同時に動作します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 
-上記の図から以下のことがわかります：
+上記の図に基づいて以下が分かります：
 
-1. すべてのセンサーはI2Cプロトコルを使用してRP2040マイクロコントローラーに接続されています
-2. PCA9535 ICを使用したI2C IOエクスパンダーモジュールが1つあります
-3. スクリーンはESP32S3マイクロコントローラーに接続され、2つのピン（CS、RESET）がPCA9535 I2Cエクスパンダーに接続されています
-4. RP2040はESP32S3のピン20とピン19を介してUARTインターフェースを使用してESP32S3に接続されています
+1. すべてのセンサーはI2Cプロトコルを使用してRP2040マイクロコントローラーに接続されています。
+2. PCA9535 ICを使用した1つのI2C IOエクスパンダーモジュールがあります。
+3. スクリーンはESP32S3マイクロコントローラーに接続されており、2つのピン（CS、RESET）がPCA9535 I2Cエクスパンダーに接続されています。
+4. RP2040はUARTインターフェースを使用してESP32S3のピン20とピン19に接続されています。
 
-したがって、Sensecap Indicatorをコンピューターにプラグインすると、RP2040用とESP32S3用の2つのシリアルポートが表示されます。**USB-SERIAL CH340**の情報があるものがESP32S3に接続されているもので、これがチュートリアルの残りの部分で使用されるものです。
+したがって、SenseCAP Indicatorをコンピューターに接続すると、RP2040用とESP32S3用の2つのシリアルポートが表示されます。「USB-SERIAL CH340」という情報が表示されるポートがESP32S3に接続されており、このチュートリアルではこのポートを使用します。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/1.jpg"/></div>
 
-## ソフトウェアの準備
+## ソフトウェア準備
 
 ここではArduinoを使用します。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-  <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
 </div>
 
 :::note
-チュートリアルを続行する前に、Arduino IDEで以下の手順が完了していることを確認してください：
+チュートリアルを進める前に、Arduino IDEで以下の手順を完了してください：
 
-1. **ESP32ボード定義**：ESP32ボード定義がインストールされ、最新バージョンに更新されていることを確認してください。ESP32ボードがまだArduino IDEにない場合は、[このガイド](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)に従ってください。
-2. **ボード選択**：ボード定義として**ESP32S3 Dev Module**を選択してください。
-3. **PSRAM**：スクリーンの適切な機能を確保するために、Arduino IDEでOPI PSRAM機能を有効にしてください。
+1. **ESP32ボード定義**: ESP32ボード定義がインストールされ、最新バージョンに更新されていることを確認してください。Arduino IDEにESP32ボードがまだない場合は、[このガイド](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)を参照してください。
+2. **ボード選択**: ボード定義として**ESP32S3 Dev Module**を選択してください。
+3. **PSRAM**: Arduino IDEでOPI PSRAM機能を有効にして、スクリーンが正しく動作するようにしてください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/2.jpg"/></div>
 
@@ -81,33 +85,33 @@ Indicatorは2つのMCUで設計されており、RP2040とESP32S3が同時に動
 
 ### 使用するボード
 
-プロジェクトとの互換性を確保するため、以下のバージョンのボードを使用してください：
+プロジェクトの互換性を確保するために、以下のバージョンのボードを使用してください：
 
-- **ESP32**：バージョン 3.1.2
-- **Raspberry Pi Pico Arduino**：バージョン 4.4.3
+- **ESP32**: バージョン 3.1.2
+- **Raspberry Pi Pico Arduino**: バージョン 4.4.3
 
 ### 使用するライブラリ
 
-TouchLib：バージョン 0.0.2
+TouchLib: バージョン 0.0.2
 
-タッチドライバーを統合し、タッチインターフェースを統一するために、TouchLibライブラリが必要です。これはArduino IDEライブラリマネージャーでは利用できません。[TouchLib GitHubリポジトリ](https://github.com/mmMicky/TouchLib)から手動でダウンロードし、Sketch > Include Library > Add .ZIP LibraryからArduino IDEに追加できます。
+タッチドライバーを統合し、タッチインターフェースを統一するために、TouchLibライブラリが必要です。このライブラリはArduino IDEのライブラリマネージャーにはありません。[TouchLib GitHubリポジトリ](https://github.com/mmMicky/TouchLib)から手動でダウンロードし、Arduino IDEに追加してください（スケッチ > ライブラリを含める > .ZIPライブラリを追加）。
 
-ライブラリがダウンロードされた後、Arduino IDEを開き、Sketchメニューに移動し、「Add .ZIP Library」を選択して、ダウンロードしたライブラリをIDEに追加します。
+ライブラリをダウンロードした後、Arduino IDEを開き、スケッチメニューに移動して「.ZIPライブラリを追加」を選択し、ダウンロードしたライブラリをIDEに追加します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/3.jpg"/></div>
 
-同様に、スムーズな統合のために、同じスケッチメニューを確認し、「Manage Libraries」を選択してから、必要なライブラリ（例：「PCA9535」、hidea kitaiが作成したものを選択）を検索してインストールし、他のすべての必要なライブラリについて以下のバージョンを確保してください：
+同様に、スムーズな統合のために、同じスケッチメニューで「ライブラリを管理」を選択し、必要なライブラリ（例：「PCA9535」、hidea kitaiによるものを選択）を検索してインストールし、以下のバージョンを確認してください：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/5.jpg"/></div>
 
-- **Adafruit TinyUSB**：バージョン 3.4.2
-- **Anitracks_PCA95x5**：バージョン 0.1.3
-- **GFX Library for Arduino**：バージョン 1.5.3
-- **PacketSerial**：バージョン 1.4.0
-- **lvgl**：バージョン 9.2.2
-- **PCA95x5**：バージョン 0.1.3
+- **Adafruit TinyUSB**: バージョン 3.4.2
+- **Anitracks_PCA95x5**: バージョン 0.1.3
+- **GFX Library for Arduino**: バージョン 1.5.3
+- **PacketSerial**: バージョン 1.4.0
+- **lvgl**: バージョン 9.2.2
+- **PCA95x5**: バージョン 0.1.3
 
-互換性の問題を避けるために、これらのライブラリとボードがArduino IDEにインストールされていることを確認してください。
+これらのライブラリとボードがArduino IDEにインストールされていることを確認し、互換性の問題を回避してください。
 
 ## はじめに
 
@@ -115,16 +119,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="LongDirtyAnimAlf" label="New Tutorial (by LongDirtyAnimAlf)" default>
+<TabItem value="LongDirtyAnimAlf" label="新しいチュートリアル (by LongDirtyAnimAlf)" default>
 
-必要なライブラリがすべてインストールされた後、以下のコードをアップロードして、スクリーンがArduino環境で動作するかテストしてください。以下のコードをアップロードできます：
+必要なライブラリをすべてインストールした後、以下のコードをアップロードして、画面が Arduino 環境で動作しているかをテストします。以下のコードをアップロードしてください：
 
 ```cpp
 #include <Arduino_GFX_Library.h>
 #include <PCA95x5.h>
-#define GFX_BL DF_GFX_BL // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
+#define GFX_BL DF_GFX_BL // デフォルトのバックライトピン。DF_GFX_BL を実際のバックライトピンに置き換えることができます。
 
-/* More dev device declaration: https://github.com/moononournation/Arduino_GFX/wiki/Dev-Device-Declaration */
+/* 他のデバイス宣言についてはこちらを参照してください: https://github.com/moononournation/Arduino_GFX/wiki/Dev-Device-Declaration */
 #if defined(DISPLAY_DEV_KIT)
 Arduino_GFX *gfx = create_default_Arduino_GFX();
 #else /* !defined(DISPLAY_DEV_KIT) */
@@ -135,8 +139,8 @@ Arduino_DataBus *bus = new Arduino_SWSPI(
     GFX_NOT_DEFINED /* DC */, PCA95x5::Port::P04 /* CS */,
     41 /* SCK */, 48 /* MOSI */, GFX_NOT_DEFINED /* MISO */);
 
-// option 1:
-// Uncomment for 4" rect display
+// オプション 1:
+// 4インチ長方形ディスプレイ用にコメントを解除
 Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
     18 /* DE */, 17 /* VSYNC */, 16 /* HSYNC */, 21 /* PCLK */,
     4 /* R0 */, 3 /* R1 */, 2 /* R2 */, 1 /* R3 */, 0 /* R4 */,
@@ -150,7 +154,7 @@ Arduino_RGB_Display *gfx = new Arduino_RGB_Display(
 
 #endif /* !defined(DISPLAY_DEV_KIT) */
 /*******************************************************************************
- * End of Arduino_GFX setting
+ * Arduino_GFX 設定の終了
  ******************************************************************************/
 
 void setup(void)
@@ -164,7 +168,7 @@ void setup(void)
   GFX_EXTRA_PRE_INIT();
 #endif
 
-  // Init Display
+  // ディスプレイの初期化
   if (!gfx->begin())
   {
     Serial.println("gfx->begin() failed!");
@@ -180,7 +184,7 @@ void setup(void)
   gfx->setTextColor(RED);
   gfx->println("Sensecap Indicator");
 
-  delay(5000); // 5 seconds
+  delay(5000); // 5秒
 }
 
 void loop()
@@ -190,27 +194,27 @@ void loop()
   gfx->setTextSize(random(6) /* x scale */, random(6) /* y scale */, random(2) /* pixel_margin */);
   gfx->println("Sensecap Indicator");
 
-  delay(1000); // 1 second
+  delay(1000); // 1秒
 }
 ```
 
-すべてが正常に動作すると、「Sensecap Indicator」のテキストが画面にランダムに表示されます。
+すべてが正常に動作すれば、「Sensecap Indicator」というテキストが画面上にランダムに表示されます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/6.jpg"/></div>
 
-### SenseCap IndicatorでシンプルなGUIアプリケーションを作成する
+### SenseCap Indicator を使用したシンプルな GUI アプリケーションの作成
 
-SenseCap Indicatorは強力なESP32-S3マイクロコントローラーと高解像度480x480ディスプレイを搭載しており、グラフィカルユーザーインターフェースの作成に最適です。今度は、LVGLを使用してインタラクティブなGUIアプリケーションを作成する方法を探求することで、SenseCap Indicatorでの開発を続けていきます。ソースコードとヘッダーファイルを含む完全なプロジェクトをリポジトリからダウンロードできます：
-[SenseCap Indicator LVGLプロジェクトをダウンロード](https://github.com/LongDirtyAnimAlf/SenseCap)
+SenseCap Indicator は強力な ESP32-S3 マイクロコントローラーと高解像度の 480x480 ディスプレイを備えており、グラフィカルユーザーインターフェースを作成するのに最適です。ここでは、LVGL を使用してインタラクティブな GUI アプリケーションを作成する方法を探ります。プロジェクト全体（ソースコードとヘッダーファイルを含む）をリポジトリからダウンロードできます：
+[SenseCap Indicator LVGL プロジェクトをダウンロード](https://github.com/LongDirtyAnimAlf/SenseCap)
 
-プロジェクトファイルをダウンロードして展開した後、以下のコードをアップロードして基本的なマルチスクリーンGUIアプリケーションを作成します：
+プロジェクトファイルをダウンロードして解凍した後、以下のコードをアップロードして基本的なマルチスクリーン GUI アプリケーションを作成します：
 
 ```cpp
-/*Using LVGL with Arduino requires some extra steps:
- *Be sure to read the docs here: https://docs.lvgl.io/master/get-started/platforms/arduino.html
- Install: lvgl*/
+/* Arduino で LVGL を使用するにはいくつかの追加手順が必要です:
+ * ドキュメントを必ず読んでください: https://docs.lvgl.io/master/get-started/platforms/arduino.html
+ インストール: lvgl*/
 
-// This define is sometimes missing when using old ESP32-IDF version
+// 古い ESP32-IDF バージョンを使用している場合、この定義が欠落していることがあります
 //#define ESP_INTR_CPU_AFFINITY_AUTO 0
 
 #include <Arduino.h>
@@ -258,7 +262,7 @@ uint32_t millis_cb(void)
   return millis();
 }
 
-/*Read the touchpad*/
+/* タッチパッドを読み取る */
 void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
 {
   if (touch_has_signal())
@@ -267,7 +271,7 @@ void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
     {
       data->state = LV_INDEV_STATE_PRESSED;
 
-      /*Set the coordinates*/
+      /* 座標を設定 */
       data->point.x = touch_last_x;
       data->point.y = touch_last_y;
     }
@@ -282,7 +286,7 @@ void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
   }
 }
 
-// Main buttons event handler
+// メインボタンのイベントハンドラー
 static void event_handler(lv_event_t * e)
 {
   lv_event_code_t code = lv_event_get_code(e);
@@ -330,7 +334,7 @@ void setup()
 
   pinMode(BUTTON_PIN, INPUT);
 
-  // Init Indicator hardware
+  // インジケータハードウェアの初期化
   extender_init();
 
   myPacketSerial.begin(115200);
@@ -338,11 +342,11 @@ void setup()
   myPacketSerial.setStream(&Serial1);
   myPacketSerial.setPacketHandler(&onPacketReceived);
 
-  // Init Display
+  // ディスプレイの初期化
   if (!gfx->begin(12000000L))
   {
     Serial.println("gfx->begin() failed!");
-    Serial.println("Expect sever errors !!!");    
+    Serial.println("重大なエラーが予想されます !!!");    
   }
   gfx->fillScreen(RGB565_BLACK);
 
@@ -352,10 +356,10 @@ void setup()
 #endif
   lv_init();
 
-  /*Set a tick source so that LVGL will know how much time elapsed. */
+  /* 時間経過を LVGL に知らせるためのタイマーソースを設定 */
   lv_tick_set_cb(millis_cb);
 
-  /* register print function for debugging */
+  /* デバッグ用にプリント関数を登録 */
 #if LV_USE_LOG != 0
   lv_log_register_print_cb(my_print);
 #endif
@@ -364,11 +368,11 @@ void setup()
   //lv_display_set_rotation(disp, LV_DISPLAY_ROTATION_0);
   //lv_display_set_antialiasing(disp,false);
 
-  // Init touch device
-  touch_init(HOR_RES, VER_RES, 0); // rotation will be handled by lvgl
-  /*Initialize the input device driver*/
+  // タッチデバイスの初期化
+  touch_init(HOR_RES, VER_RES, 0); // 回転は lvgl によって処理されます
+  /* 入力デバイスドライバを初期化 */
   lv_indev_t *indev = lv_indev_create();
-  lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /*Touchpad should have POINTER type*/
+  lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /* タッチパッドは POINTER タイプである必要があります */
   lv_indev_set_read_cb(indev, my_touchpad_read);
 
   Screen2Create(event_handler);
@@ -395,20 +399,20 @@ void loop()
   */
 
   myPacketSerial.update();
-  // Check for a receive buffer overflow (optional).
+  // 受信バッファオーバーフローをチェック (オプション)。
   if (myPacketSerial.overflow())
   {
-    // Send an alert via a pin (e.g. make an overflow LED) or return a
-    // user-defined packet to the sender.
+    // ピンを介してアラートを送信 (例: オーバーフロー LED を作成) または
+    // ユーザー定義のパケットを送信者に返します。
   }
 
-  lv_task_handler(); /* let the GUI do its work */
+  lv_task_handler(); /* GUI の作業を実行 */
 
-  // Simple delay always 5ms
+  // 常に 5ms の簡単な遅延
   //delay(5);
 
-  // This delay will adapt to the time consumed in the above tasks
-  // If these tasks consume time, it will delay shorter
+  // 上記のタスクで消費された時間に応じて遅延を調整
+  // タスクが時間を消費する場合、遅延は短くなります
   vTaskDelayUntil( &xLastWakeTime, ( 5 / portTICK_PERIOD_MS ) );
 }
 
@@ -435,23 +439,23 @@ void onPacketReceived(const uint8_t* buffer, size_t size)
 }
 ```
 
-コードをアップロードした後、シリアルモニターを開いてボーレートを115200に設定してください。初期化メッセージが表示され、ディスプレイにGUIが表示されます。UART接続を通じて受信した温度と湿度データと共にScreen2が表示されます。
+コードをアップロードした後、シリアルモニターを開き、ボーレートを115200に設定してください。初期化メッセージが表示され、GUIがディスプレイに表示されます。Screen2には、UART接続を通じて受信した温度と湿度のデータが表示されます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/12.gif"/></div>
 
 ### 複数画面とデータ可視化を備えた高度なGUIアプリケーション
 
-2番目の例は、基本的なアプリケーションをベースに、バッテリー監視、動的データ可視化、色分けされたステータスインジケーターなど、より洗練された機能を追加しています。ソースコードとヘッダーファイルを含む完全なプロジェクトをリポジトリからダウンロードできます：
-[SenseCap Indicator LVGL プロジェクトをダウンロード](https://github.com/LongDirtyAnimAlf/SenseCap)
+2つ目の例では、基本的なアプリケーションに加えて、バッテリー監視、動的データ可視化、色分けされたステータスインジケーターなどの高度な機能を追加しています。プロジェクト全体（ソースコードとヘッダーファイルを含む）は以下のリポジトリからダウンロードできます：
+[SenseCap Indicator LVGL Projectをダウンロード](https://github.com/LongDirtyAnimAlf/SenseCap)
 
 このバージョンを実装するには、以下のコードをアップロードしてください：
 
 ```cpp
-/*Using LVGL with Arduino requires some extra steps:
- *Be sure to read the docs here: https://docs.lvgl.io/master/get-started/platforms/arduino.html
- Install: lvgl*/
+/* ArduinoでLVGLを使用するにはいくつかの追加手順が必要です：
+ * ドキュメントを必ず読んでください：https://docs.lvgl.io/master/get-started/platforms/arduino.html
+ インストール: lvgl*/
 
-// This define is sometimes missing when using old ESP32-IDF version
+// 古いESP32-IDFバージョンを使用する場合、この定義が欠落していることがあります
 //#define ESP_INTR_CPU_AFFINITY_AUTO 0
 
 #include <Arduino.h>
@@ -511,7 +515,7 @@ uint32_t millis_cb(void)
   return millis();
 }
 
-/*Read the touchpad*/
+/* タッチパッドを読み取る */
 void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
 {
   if (touch_has_signal())
@@ -520,7 +524,7 @@ void my_touchpad_read(lv_indev_t *indev, lv_indev_data_t *data)
     {
       data->state = LV_INDEV_STATE_PRESSED;
 
-      /*Set the coordinates*/
+      /* 座標を設定 */
       data->point.x = touch_last_x;
       data->point.y = touch_last_y;
     }
@@ -549,18 +553,18 @@ static void event_handler(lv_event_t * e)
       lv_obj_t * screen = lv_obj_get_screen(btn);
       if (screen != NULL)
       {
-        Serial.println("Screen assigned");
+        Serial.println("画面が割り当てられました");
 
         if (screen == screen1)
         {
-          Serial.println("Screen 1");
+          Serial.println("画面1");
           Screen2SetActive(btn_no);
           lv_screen_load(screen2);
           //Screen2SetActive(5);
         }
         if (screen == screen2)
         {
-          Serial.println("Screen 2");
+          Serial.println("画面2");
           if (btn_no == 0)
           {
             lv_screen_load(screen1);
@@ -573,7 +577,7 @@ static void event_handler(lv_event_t * e)
         }
         if (screen == screen3)
         {
-          Serial.println("Screen 3");
+          Serial.println("画面3");
           if (btn_no == 0)
           {
             lv_screen_load(screen2);
@@ -590,13 +594,13 @@ void setup()
   Serial.begin(115200);
   // Serial.setDebugOutput(true);
   // while(!Serial);
-  Serial.println("SenseCap Indicator startup");
+  Serial.println("SenseCap Indicator 起動");
   String LVGL_Arduino = String('V') + lv_version_major() + "." + lv_version_minor() + "." + lv_version_patch();
   Serial.println(LVGL_Arduino);
 
   pinMode(BUTTON_PIN, INPUT);
 
-  // Init Indicator hardware
+  // Indicatorハードウェアを初期化
   extender_init();
 
   myPacketSerial.begin(115200);
@@ -604,11 +608,11 @@ void setup()
   myPacketSerial.setStream(&Serial1);
   myPacketSerial.setPacketHandler(&onPacketReceived);
 
-  // Init Display
+  // ディスプレイを初期化
   if (!gfx->begin(12000000L))
   {
-    Serial.println("gfx->begin() failed!");
-    Serial.println("Expect sever errors !!!");    
+    Serial.println("gfx->begin() に失敗しました！");
+    Serial.println("重大なエラーが予想されます !!!");    
   }
   gfx->fillScreen(RGB565_BLACK);
 
@@ -618,10 +622,10 @@ void setup()
 #endif
   lv_init();
 
-  /*Set a tick source so that LVGL will know how much time elapsed. */
+  /* LVGLに経過時間を知らせるためのタイマーソースを設定 */
   lv_tick_set_cb(millis_cb);
 
-  /* register print function for debugging */
+  /* デバッグ用にprint関数を登録 */
 #if LV_USE_LOG != 0
   lv_log_register_print_cb(my_print);
 #endif
@@ -630,11 +634,11 @@ void setup()
   //lv_display_set_rotation(disp, LV_DISPLAY_ROTATION_0);
   //lv_display_set_antialiasing(disp,false);
 
-  // Init touch device
-  touch_init(HOR_RES, VER_RES, 0); // rotation will be handled by lvgl
-  /*Initialize the input device driver*/
+  // タッチデバイスを初期化
+  touch_init(HOR_RES, VER_RES, 0); // 回転はlvglによって処理されます
+  /* 入力デバイスドライバを初期化 */
   lv_indev_t *indev = lv_indev_create();
-  lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /*Touchpad should have POINTER type*/
+  lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER); /* タッチパッドはPOINTERタイプである必要があります */
   lv_indev_set_read_cb(indev, my_touchpad_read);
 
   Create_Screen1(event_handler);
@@ -644,7 +648,7 @@ void setup()
 
   lv_screen_load(screen1);
 
-  Serial.println("Setup done");
+  Serial.println("セットアップ完了");
 }
 
 void loop()
@@ -664,27 +668,26 @@ void loop()
   */
 
   myPacketSerial.update();
-  // Check for a receive buffer overflow (optional).
+  // 受信バッファオーバーフローをチェック（オプション）
   if (myPacketSerial.overflow())
   {
-    // Send an alert via a pin (e.g. make an overflow LED) or return a
-    // user-defined packet to the sender.
+    // ピンを介してアラートを送信（例：オーバーフローLEDを作成）または送信者にユーザー定義のパケットを返します。
   }
 
-  lv_task_handler(); /* let the GUI do its work */
+  lv_task_handler(); /* GUIが作業を行う */
 
-  // Simple delay always 5ms
+  // 常に5msの簡単な遅延
   //delay(5);
 
-  // This delay will adapt to the time consumed in the above tasks
-  // If these tasks consume time, it will delay shorter
+  // 上記のタスクで消費された時間に応じて遅延を調整
+  // これらのタスクが時間を消費する場合、遅延は短くなります
   vTaskDelayUntil( &xLastWakeTime, ( 5 / portTICK_PERIOD_MS ) );
 }
 
 void onPacketReceived(const uint8_t* buffer, size_t size)
 {
 #ifndef YOLO
-  Serial.printf("<--- recv len:%d, data: ", size);
+  Serial.printf("<--- 受信 長さ:%d, データ: ", size);
   for (int i = 0; i < size; i++) {
     Serial.printf("0x%x ", buffer[i]);
   }
@@ -717,7 +720,7 @@ void onPacketReceived(const uint8_t* buffer, size_t size)
 
       Screen2AddData((BatteryNumber+1),Volt,Amps);
 
-      // Put data on screen 1
+      // 画面1にデータを表示
       tempcalc = Volt * 3300u;
       tempcalc /= (dword)((1u << BITS)-1u);
       SetVoltageScreen1mV(BatteryNumber,(word)tempcalc);
@@ -763,22 +766,22 @@ void onPacketReceived(const uint8_t* buffer, size_t size)
 }
 ```
 
-このコードにより、SenseCap Indicatorは3画面のアプリケーションを表示します。Screen1はバッテリーデータの概要を色分けされたステータスインジケーターで表示し、Screen2は個々のバッテリーの詳細情報を提供し、Screen3は追加のコントロールや情報を提供します。
+このコードを使用すると、SenseCap Indicator は3画面のアプリケーションを表示します。Screen1はバッテリーデータの概要を色分けされたステータスインジケーターとともに表示し、Screen2は個々のバッテリーの詳細情報を提供し、Screen3は追加のコントロールや情報を提供します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/11.png"/></div>
 
 </TabItem>
   
-<TabItem value="Hendra" label="Old Tutorial (by Hendra)">
+<TabItem value="Hendra" label="旧チュートリアル（Hendraによる）">
 
-ESP32S3チップに接続された画面で開発し、RP2040チップにリンクされたセンサーを読み取ることができるようになりました。最終的にそれらを組み合わせます。
+ESP32S3チップに接続された画面を開発し、RP2040チップにリンクされたセンサーを読み取ることができます。最終的に両方を組み合わせます。
 
-<h3>ESP32-S3チップに接続された画面での開発</h3>
+<h3>ESP32-S3チップに接続された画面を開発する</h3>
 
-Sensecap IndicatorはST7701モジュールを画面に使用しており、パラレルインターフェースを使用し、すでにESP32S3 MCUのピンに接続されています。
-画面を駆動できるようにするために、いくつかのarduinoライブラリが必要です。[こちら](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/Arduino_GFX-master.zip)からダウンロードできます。
+SenseCap Indicatorは画面にST7701モジュールを使用しており、並列インターフェースを使用してESP32S3 MCUのピンに接続されています。
+画面を駆動するためには、いくつかのArduinoライブラリが必要です。[こちら](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/Arduino_GFX-master.zip)からダウンロードできます。
 
-ライブラリがダウンロードされたら、Arduinoを開き、スケッチメニューでzipライブラリの追加を選択します。
+ライブラリをダウンロードした後、Arduinoを開き、スケッチメニューで「ZIPライブラリを追加」を選択します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/3.jpg"/></div>
 
@@ -786,22 +789,22 @@ Sensecap IndicatorはST7701モジュールを画面に使用しており、パ�
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/4.jpg"/></div>
 
-一方、同じスケッチメニューを確認し、「ライブラリを管理」を選択してから「PCA9535」を検索し、hidea kitaiが作成したものを選択してインストールする必要があります。
+同時に、同じスケッチメニューを確認し、「ライブラリを管理」を選択して「PCA9535」を検索し、hidea kitaiによって作成されたものを選択してインストールします。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/5.jpg"/></div>
 
 :::note
-PCA9535ライブラリが必要なのは、ST7701のCSピンがPCA9535 i2cエキスパンダーモジュールに接続されているためです。具体的には、i2cモジュールのPin 4です。
+PCA9535ライブラリは、ST7701のCSピンがPCA9535 i2cエクスパンダーモジュールに接続されているため必要です。具体的には、i2cモジュールのピン4です。
 :::
 
-必要なライブラリがすべてインストールされた後、画面がArduino環境で動作するかテストするために以下のコードをアップロードします。以下のコードをアップロードできます：
+必要なライブラリをすべてインストールした後、以下のコードをアップロードして、画面がArduino環境で動作するかどうかをテストします。以下のコードをアップロードしてください：
 
 ```cpp
 #include <Arduino_GFX_Library.h>
 #include <PCA95x5.h>
-#define GFX_BL DF_GFX_BL // default backlight pin, you may replace DF_GFX_BL to actual backlight pin
+#define GFX_BL DF_GFX_BL // デフォルトのバックライトピン、DF_GFX_BLを実際のバックライトピンに置き換えることができます
 
-/* More dev device declaration: https://github.com/moononournation/Arduino_GFX/wiki/Dev-Device-Declaration */
+/* 開発デバイス宣言の詳細: https://github.com/moononournation/Arduino_GFX/wiki/Dev-Device-Declaration */
 #if defined(DISPLAY_DEV_KIT)
 Arduino_GFX *gfx = create_default_Arduino_GFX();
 #else /* !defined(DISPLAY_DEV_KIT) */
@@ -812,8 +815,8 @@ Arduino_DataBus *bus = new Arduino_SWSPI(
     GFX_NOT_DEFINED /* DC */, PCA95x5::Port::P04 /* CS */,
     41 /* SCK */, 48 /* MOSI */, GFX_NOT_DEFINED /* MISO */);
 
-// option 1:
-// Uncomment for 4" rect display
+// オプション1:
+// 4インチ矩形ディスプレイ用にコメント解除
 Arduino_ESP32RGBPanel *rgbpanel = new Arduino_ESP32RGBPanel(
     18 /* DE */, 17 /* VSYNC */, 16 /* HSYNC */, 21 /* PCLK */,
     4 /* R0 */, 3 /* R1 */, 2 /* R2 */, 1 /* R3 */, 0 /* R4 */,
@@ -827,7 +830,7 @@ Arduino_RGB_Display *gfx = new Arduino_RGB_Display(
 
 #endif /* !defined(DISPLAY_DEV_KIT) */
 /*******************************************************************************
- * End of Arduino_GFX setting
+ * Arduino_GFX設定の終了
  ******************************************************************************/
 
 void setup(void)
@@ -841,7 +844,7 @@ void setup(void)
   GFX_EXTRA_PRE_INIT();
 #endif
 
-  // Init Display
+  // ディスプレイの初期化
   if (!gfx->begin())
   {
     Serial.println("gfx->begin() failed!");
@@ -857,33 +860,33 @@ void setup(void)
   gfx->setTextColor(RED);
   gfx->println("Sensecap Indicator");
 
-  delay(5000); // 5 seconds
+  delay(5000); // 5秒
 }
 
 void loop()
 {
   gfx->setCursor(random(gfx->width()), random(gfx->height()));
   gfx->setTextColor(random(0xffff), random(0xffff));
-  gfx->setTextSize(random(6) /* x scale */, random(6) /* y scale */, random(2) /* pixel_margin */);
+  gfx->setTextSize(random(6) /* xスケール */, random(6) /* yスケール */, random(2) /* ピクセルマージン */);
   gfx->println("Sensecap Indicator");
 
-  delay(1000); // 1 second
+  delay(1000); // 1秒
 }
 ```
 
-すべてがうまくいけば、「Sensecap Indicator」のテキストが画面にランダムに表示されます。
+すべてが正常に動作すれば、「Sensecap Indicator」というテキストが画面上にランダムに表示されます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/6.jpg"/></div>
 
-<h3>RP2040チップに接続されたセンサーを読み取る</h3>
+<h3>RP2040チップにリンクされたセンサーを読み取る</h3>
 
-上記の準備セクションで述べたように、すべてのセンサーはRP2040に接続されています。RP2040にまだデフォルトのファームウェアがインストールされていると仮定すると、センサーデータはUARTインターフェースを使用してESP32S3に送信されます。
+準備セクションで述べたように、すべてのセンサーはRP2040に接続されています。RP2040にデフォルトのファームウェアがまだあると仮定すると、センサーデータはUARTインターフェースを使用してESP32S3に送信されます。
 
-ESP32S3がデータを読み取れるようにするには、**PacketSerial**というライブラリをインストールする必要があります。
+ESP32S3がデータを読み取れるようにするためには、**PacketSerial**というライブラリをインストールする必要があります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/7.jpg"/></div>
 
-ライブラリがインストールされた後、以下のコードをアップロードしてESP32S3でセンサーデータを取得できます：
+ライブラリをインストールした後、以下のコードをアップロードしてESP32S3でセンサーデータを取得します：
 
 ```cpp
 //
@@ -908,13 +911,11 @@ PacketSerial myPacketSerial;
 
 void setup()
 {
-  // We begin communication with our PacketSerial object by setting the
-  // communication speed in bits / second (baud).
+  // PacketSerialオブジェクトとの通信を開始し、通信速度をビット/秒（ボー）で設定します。
   myPacketSerial.begin(115200);
 
-  // If we want to receive packets, we must specify a packet handler function.
-  // The packet handler is a custom function with a signature like the
-  // onPacketReceived function below.
+  // パケットを受信する場合、パケットハンドラ関数を指定する必要があります。
+  // パケットハンドラは、以下のonPacketReceived関数のようなカスタム関数です。
  
   Serial1.begin(115200, SERIAL_8N1, RXD2, TXD2);
   myPacketSerial.setStream(&Serial1);
@@ -924,27 +925,25 @@ void setup()
 
 void loop()
 {
-  // Do your program-specific loop() work here as usual.
+  // 通常通り、プログラム固有のloop()作業をここで行います。
 
-  // The PacketSerial::update() method attempts to read in any incoming serial
-  // data and emits received and decoded packets via the packet handler
-  // function specified by the user in the void setup() function.
+  // PacketSerial::update()メソッドは、受信したシリアルデータを読み取り、
+  // デコードされたパケットをユーザーが指定したパケットハンドラ関数を通じて送信します。
   //
-  // The PacketSerial::update() method should be called once per loop(). Failure
-  // to call the PacketSerial::update() frequently enough may result in buffer
-  // serial overflows.
+  // PacketSerial::update()メソッドは、ループごとに1回呼び出される必要があります。
+  // 頻繁に呼び出さないと、バッファシリアルオーバーフローが発生する可能性があります。
   myPacketSerial.update();
 
-  // Check for a receive buffer overflow (optional).
+  // 受信バッファオーバーフローをチェックします（オプション）。
   if (myPacketSerial.overflow())
   {
-    // Send an alert via a pin (e.g. make an overflow LED) or return a
-    // user-defined packet to the sender.
+    // ピンを介してアラートを送信する（例：オーバーフローLEDを作成する）か、
+    // 送信者にユーザー定義のパケットを返します。
     //
-    // Ultimately you may need to just increase your recieve buffer via the
-    // template parameters (see the README.md).
+    // 最終的には、README.mdを参照して受信バッファを増やす必要があるかもしれません。
   }
 }
+
 
 
 void onPacketReceived(const uint8_t *buffer, size_t size) {
@@ -1005,53 +1004,53 @@ void onPacketReceived(const uint8_t *buffer, size_t size) {
 }
 ```
 
-シリアルモニターをクリックして開き、ボーレートを115200に設定すると、RP2040からのセンサーデータが表示されます。
+シリアルモニターを開き、ボーレートを115200に設定すると、RP2040からセンサーのデータが表示されます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/8.jpg"/></div>
 
-<h3>2つの例を組み合わせて、センサーデータを画面に表示する</h3>
+<h3>2つの例を組み合わせてセンサーのデータを画面に表示する</h3>
 
-Arduino IDEのサンプルメニューを開き、**GFX library for Arduino**に移動して、**SI_displaysensordata**サンプルを選択してアップロードします。
+Arduino IDEの例メニューを開き、**GFX library for Arduino**に移動して、**SI_displaysensordata**の例を選択し、アップロードしてください。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/9.jpg"/></div>
 
-正常にアップロードされると、画面にセンサーデータが表示されます。
+アップロードが成功すると、センサーのデータが画面に表示されます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/Indicator-Arduino/10.jpg"/></div>
 
-おめでとうございます！これでArduino IDEを使用してSensecap Indicatorを開発できるようになりました！
+おめでとうございます！これでArduino IDEを使用してSensecap Indicatorを開発することができます。
 
-<h2>さらなる情報</h2>
+<h2>さらに進めるには</h2>
 
-1. これはまだ開発のフェーズONEであり、このチュートリアルで設定されていないのはタッチスクリーン部分です。FT6336モジュール用のいくつかのArduinoライブラリを試しましたが、成功した結果は得られませんでした。
-2. これは、FT6366モジュールのINTピンとRESETピンがPCA9535 I2Cエクスパンダーに接続されており、ライブラリで手動で設定する必要があるためです。将来的にこれを再試行するかもしれません。
+1. 開発にはまだフェーズ1があり、このチュートリアルではタッチスクリーン部分が設定されていません。FT6336モジュール用のいくつかのArduinoライブラリを試しましたが、成功した結果は得られませんでした。
+2. これは、FT6366モジュールのINTピンとRESETピンがPCA9535 I2Cエクスパンダーに接続されており、ライブラリで手動で設定する必要があるためです。将来的に再挑戦するかもしれません。
 
-- ちなみに、Arduino GFXライブラリの使用についてより理解を深めるには、[Arduino_GFX githubページ](https://github.com/moononournation/Arduino_GFX)をご覧ください。
+- ちなみに、Arduino GFXライブラリの使用についてさらに理解を深めたい場合は、[Arduino_GFX GitHubページ](https://github.com/moononournation/Arduino_GFX)を訪問してください。
 
 </TabItem>
 </Tabs>
 
-## 特別な謝辞
+## 特別な感謝
 
-Sensecap indicatorをサポートするSWSPI設定ファイルを提供してくれたgithubユーザー[u4mzu4](https://github.com/u4mzu4)に感謝します。
+GitHubユーザー[u4mzu4](https://github.com/u4mzu4)に、Sensecap IndicatorをサポートするSWSPI設定ファイルを提供していただき感謝します。
 
-タッチスクリーンサポートを含む、SenseCAP indicator用のArduinoライブラリの更新を支援してくれた[LongDirtyAnimAlf](https://github.com/LongDirtyAnimAlf)に感謝します。
+[LongDirtyAnimAlf](https://github.com/LongDirtyAnimAlf)に、SenseCAP IndicatorのArduinoライブラリを更新し、タッチスクリーンのサポートを含めていただき感謝します。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは、Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- [LongDirtyAnimAlf](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=indi&pane=issue&itemId=70900433)、[Hendra](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769)、u4mzu4の努力に感謝し、あなたの作品が展示されます。
+- このプロジェクトはSeeed Studioの[Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [LongDirtyAnimAlf](https://github.com/orgs/Seeed-Studio/projects/6/views/1?filterQuery=indi&pane=issue&itemId=70900433)、[Hendra](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35925769)、そしてu4mzu4の努力に感謝します。あなたの作業は展示される予定です。
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品に関する議論
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

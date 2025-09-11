@@ -117,8 +117,8 @@ import TabItem from '@theme/TabItem';
 |**区域代码**|**描述**|**频率范围 (MHz)**|**占空比 (%)**|**功率限制 (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|未设置|N/A|N/A|N/A|
-|US|美国|902.0 - 928.0|100|30|
-|EU_868|欧盟 868MHz|869.4 - 869.65|10|27|
+|US|美国|902\.0 - 928.0|100|30|
+|EU\_868|欧盟 868MHz|869\.4 - 869.65|10|27|
 
 参考 [按国家划分的 LoRa 区域](https://meshtastic.org/docs/configuration/region-by-country/) 获取更全面的列表。
 

@@ -59,7 +59,7 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 | :- | :- |
 |**Battery Life Monitoring**|Periodic uplink battery level|
 |<p>**Charge Cable**</p><p>**(Adapter not included)**</p>|USB magnetic charging cable, 1 meter|
-|**Power Input Voltage**|4.7 to 5.5V DC|
+|**Power Input Voltage**|4\.7 to 5.5V DC|
 |**Charging Temperature Limit**|0 to +45℃|
 
 ### Hardware overview
@@ -80,7 +80,7 @@ It is a high-performance tracker designed for Meshtastic, as small as a credit c
 |Enable Buzzer|P1.05|GPIO|
 |Button|P0.6|GPIO|
 |Power to sensor|P1.6|GPIO|
-|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
+|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0\_DIO3\_TCXO\_VOLT<br/>AGE 1.6V|SPI|
 |GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>BAUDRATE:115200|
 
 ### Button

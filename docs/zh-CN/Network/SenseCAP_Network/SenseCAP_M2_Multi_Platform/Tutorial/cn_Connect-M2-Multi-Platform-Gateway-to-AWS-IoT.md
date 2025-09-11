@@ -93,7 +93,7 @@ last_update:
 **Permissions**：选择现有服务角色 > IoT Wireless Gateway Cert Manager Role
 
 :::tip 注意
-目标名称只能包含字母数字、-（连字符）和 _（下划线）字符，不能包含任何空格。
+目标名称只能包含字母数字、-（连字符）和 \_（下划线）字符，不能包含任何空格。
 :::
 
 

@@ -59,7 +59,7 @@ last_update:
 | :- | :- |
 |**电池寿命监控**|定期上传电池电量|
 |<p>**充电线**</p><p>**（不含适配器）**</p>|USB 磁吸充电线，1 米|
-|**电源输入电压**|4.7 到 5.5V DC|
+|**电源输入电压**|4\.7 到 5.5V DC|
 |**充电温度限制**|0 到 +45℃|
 
 ### 硬件概览
@@ -80,7 +80,7 @@ last_update:
 |蜂鸣器使能|P1.05|GPIO|
 |按钮|P0.6|GPIO|
 |传感器电源|P1.6|GPIO|
-|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI 时钟<br/>P0.12: SPI NSS<br/>P1.10: LoRa 复位<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
+|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI 时钟<br/>P0.12: SPI NSS<br/>P1.10: LoRa 复位<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0\_DIO3\_TCXO\_VOLT<br/>AGE 1.6V|SPI|
 |GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>波特率：115200|
 
 ### 按钮

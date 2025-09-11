@@ -58,8 +58,8 @@ The Gateway can be set up easily out of the box. Users can bind and manage the d
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/_0129.jpg" alt="pir" width={800} height="auto" /></p>
 
 SenseCAP M2 Multi-Platform LoRaWAN® Gateway can be configured in 2 ways:  
-1. Wi-Fi/ Ethernet access to the SenseCAP Local Console  
-2. Access the SenseCAP Local Console via SenseCAP Portal remotely
+1\. Wi-Fi/ Ethernet access to the SenseCAP Local Console  
+2\. Access the SenseCAP Local Console via SenseCAP Portal remotely
 
 Additionally, If you want to deploy the SenseCAP M2 Multi-Platform LoRaWAN® Gateway outdoors, you might need to apply shell accessories to meet the requirements for outdoor deployments. Check the **[SenseCAP Outdoor Enclosure](https://www.seeedstudio.com/SenseCAP-Outdoor-Enclosure-p-5353.html)** with high robustness for quick deployment
 

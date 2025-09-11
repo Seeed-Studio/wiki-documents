@@ -6,27 +6,32 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Light/FAQ
 last_update:
-  date: 03/23/2023
+  date: 05/15/2025
   author: Yvonne
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
+
 ## FAQ
 
-### SenseCAP M2の正常な機能にはSenseCAP Licenseが必要ですか？
+### SenseCAP M2 の正常な動作には SenseCAP ライセンスが必要ですか？
 
-はい。SenseCAP M2ライセンスはライトホットスポットの機能に必要です。SenseCAP M2ライセンスが期限切れになった場合、ホットスポットはパッケージの転送や最新ファームウェアへの更新ができなくなります。ライセンス期間を定期的に確認するようにしてください。
+はい。SenseCAP M2 ライセンスはライトホットスポットの機能に必要です。SenseCAP M2 ライセンスが期限切れになると、ホットスポットはパッケージを転送したり最新のファームウェアに更新したりすることができなくなります。ライセンス期間を定期的に確認するようにしてください。
 
-### SenseCAP M2ライトホットスポットの期限が切れた場合、リデームカードの実体を再度購入する必要がありますか？
+### SenseCAP M2 ライトホットスポットが期限切れになった場合、再びリデームカードの実物を購入する必要がありますか？
 
-いいえ、SenseCAP DashboardでSenseCAP M2ソフトウェアライセンスを購入し、オンラインでデバイスにライセンスを適用できます。
+いいえ、SenseCAP Dashboard で SenseCAP M2 ソフトウェアライセンスを購入し、オンラインでデバイスにライセンスを適用することができます。
 
-### Helium Onboarding FeeとSenseCAP Licenseの違いは何ですか？
+### Helium オンボーディング料金と SenseCAP ライセンスの違いは何ですか？
 
-Helium Onboarding Feeは、ホットスポットをHeliumサーバーにオンボードするためにHeliumによって課される料金です。この料金はSenseCAP Hotspotパッケージに含まれています。さらに、SenseCAP ソフトウェアとクラウドサービスを有効化するためにSenseCAP Software Licenseが必要です。
+Helium オンボーディング料金は、ホットスポットを Helium サーバーにオンボードするために Helium によって課される料金です。この料金は SenseCAP ホットスポットパッケージに含まれています。さらに、SenseCAP ソフトウェアとクラウドサービスを有効化するためには SenseCAP ソフトウェアライセンスが必要です。
 
-### Heliumにオンボードした後、ホットスポットが白いライトを点滅させるのはなぜですか？
+### Helium にオンボーディングした後、ホットスポットが白色のライトを点滅させるのはなぜですか？
 
-ゆっくりとした白いライトは、SenseCAP M2に有効なライセンスがないことを意味します。ダッシュボードにアクセスして、SenseCAP M2と一緒に購入したライセンスをリデームしてください。今後のライセンス更新については、SenseCAP Dashboardから直接購入して適用できます。
+ゆっくりとした白色のライトは、SenseCAP M2 に有効なライセンスがないことを意味します。SenseCAP M2 と一緒に購入したライセンスをリデームするためにダッシュボードにアクセスしてください。将来のライセンス更新については、SenseCAP Dashboard を通じて直接購入し適用することができます。
 
-### リデームカード上のライセンスは複数のSenseCAP M2ライトホットスポットで再利用できますか？
+### リデームカードのライセンスは複数の SenseCAP M2 ライトホットスポットで再利用できますか？
 
-いいえ、1つのリデームカードは1つのSenseCAP M2ライトホットスポットライセンスのみをリデームして適用します
+いいえ、1枚のリデームカードは1つの SenseCAP M2 ライトホットスポットライセンスのリデームと適用にのみ使用できます。

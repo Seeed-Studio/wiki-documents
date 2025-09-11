@@ -356,7 +356,7 @@ rm -rf ~/sensecraft-ai_server
 ## 📚 参考資料
 
 - [Jetsonフラッシュガイド](/ja/flash/jetpack_to_selected_product/)
-- [SenseCraft-AI_Serverソースリポジトリ](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
+- [SenseCraft-AI\_Serverソースリポジトリ](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
 - [NVIDIA Jetson Dockerガイド](https://www.jetson-ai-lab.com/tips_ssd-docker.html)
 - [Mosquitto公式ドキュメント](https://mosquitto.org/man/mosquitto-conf-5.html)
 

@@ -54,7 +54,7 @@ ChirpStack 为 LoRaWAN 网络提供开源组件。它们共同构成了一个即
 **ADR 算法**：默认 ADR 算法（仅限 LoRa）
 
 :::note
-根据您的设备选择 MAC 版本/区域参数修订版/ADR 算法。详情请参考：https://lora-alliance.org/resource_hub/
+根据您的设备选择 MAC 版本/区域参数修订版/ADR 算法。详情请参考：https://lora-alliance.org/resource\_hub/
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_4.png" alt="pir" width={800} height="auto" /></p>

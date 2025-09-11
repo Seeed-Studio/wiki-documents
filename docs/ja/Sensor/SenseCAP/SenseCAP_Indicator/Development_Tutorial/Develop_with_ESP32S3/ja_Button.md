@@ -1,19 +1,23 @@
 ---
-description: Button
-title: Button
+description: ボタン
+title: ボタン
 keywords:
-- SenseCAP Indicator ESP32 Development Tutorial
+- SenseCAP Indicator ESP32 開発チュートリアル
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_ESP32_Button
 last_update:
-  date: 5/23/2023
+  date: 05/15/2025
   author: Thomas
 ---
-# **Button**
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
-このコードはボードを初期化し、2つのボタンイベントコールバックを登録し、処理するボタンイベントを指定します。ユーザーがボタンを押すと、対応するコールバック関数が呼び出されます。
-ESP_LOGI()関数は、どのボタンイベントが発生したかを示すメッセージをコンソールに出力するために使用されます。
+# **ボタン**
 
+このコードはボードを初期化し、2つのボタンイベントコールバックを登録し、処理するボタンイベントを指定します。ユーザーがボタンを押すと、対応するコールバック関数が呼び出されます。  
+`ESP_LOGI()` 関数は、どのボタンイベントが発生したかを示すメッセージをコンソールに出力するために使用されます。
 
 ```c
 #include <stdio.h>
@@ -26,13 +30,12 @@ ESP_LOGI()関数は、どのボタンイベントが発生したかを示すメ�
 
 static void __btn_click_callback(void* arg)
 {
-    ESP_LOGI("btn", "Click");
-
+    ESP_LOGI("btn", "クリック");
 }
 
 static void __btn_double_click_callback(void* arg)
 {
-    ESP_LOGI("btn", "Double Click");
+    ESP_LOGI("btn", "ダブルクリック");
 }
 
 void app_main(void)
@@ -40,7 +43,7 @@ void app_main(void)
     ESP_ERROR_CHECK(bsp_board_init());
 
     /*
-     * Button Event types you can use:
+     * 使用可能なボタンイベントタイプ:
      *     BUTTON_PRESS_DOWN
      *     BUTTON_PRESS_UP
      *     BUTTON_PRESS_REPEAT
@@ -55,9 +58,8 @@ void app_main(void)
 
 ```
 
-
 # **技術サポート**
 
-ご心配なく、私たちがサポートします！ご質問は[Seeed公式Discordチャンネル](https://discord.com/invite/QqMgVwHT3X)にお越しください！
+ご安心ください！私たちがサポートします！質問がある場合は、[Seeed公式Discordチャンネル](https://discord.com/invite/QqMgVwHT3X)をご利用ください。
 
-大量注文やカスタマイズ要件がある場合は、iot@seeed.ccまでお問い合わせください
+大量注文やカスタマイズのご要望がある場合は、iot@seeed.cc にお問い合わせください。

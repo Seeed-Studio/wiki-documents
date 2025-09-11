@@ -356,7 +356,7 @@ rm -rf ~/sensecraft-ai_server
 ## 📚 Referencias
 
 - [Guía de Flasheo de Jetson](/es/flash/jetpack_to_selected_product/)
-- [Repositorio Fuente de SenseCraft-AI_Server](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
+- [Repositorio Fuente de SenseCraft-AI\_Server](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
 - [Guía de Docker para NVIDIA Jetson](https://www.jetson-ai-lab.com/tips_ssd-docker.html)
 - [Documentación Oficial de Mosquitto](https://mosquitto.org/man/mosquitto-conf-5.html)
 

@@ -1,8 +1,8 @@
 ---
 description: Este proyecto proporciona capacidades de detección de armas en tiempo real a través de Frigate-on-Jetson
-title: Frigate en Jetson con Alertas de Armas Node-RED
+title: Frigate en Jetson con alertas de armas mediante Node-RED
 image: https://files.seeedstudio.com/wiki/solution/crowd_tracking/Node-RED%20Gun%20Alerts1.webp
-slug: /es/solutions/frigate-on-jetson-nodered-gun-alerts
+slug: /es/solutions/nodered-gun-alerts
 last_update:
   date: 09/05/2025
   author: lian
@@ -63,7 +63,7 @@ http://<JETSON_IP>:5000
 
 ## 🟢 3.2 Instalación de Node-RED
 
-### 3.2.1 Despliegue Docker
+### 3.2.1 Despliegue con Docker
 
 ```bash
 sudo docker run -d --restart=always -p 1880:1880 -v node_red_data:/data --name mynodered nodered/node-red
@@ -95,11 +95,11 @@ http://<JETSON_IP>:1880/
 
 ---
 
-### 3.3.2 Introducción al Flujo de Trabajo Node-RED
+### 3.3.2 Introducción al Flujo de Trabajo de Node-RED
 
 - Escucha MQTT (`frigate/reviews`) → Analizar eventos de detección de armas
 - Extracción de eventos (Extract Gun Event) → Determinar si contiene objetos de armas
-- Construcción de información de alerta → Concatenación de ruta de miniatura, formateo de tiempo, acumulación de contador
+- Construcción de información de alerta → Concatenación de ruta de miniatura, formato de tiempo, acumulación de contador
 - Actualización de Dashboard → Imagen más reciente, tabla de historial, contador
 - Envío Webhook → Bot de WeChat empresarial
 
@@ -107,7 +107,7 @@ http://<JETSON_IP>:1880/
 
 ---
 
-### 3.3.3 JSON del Flujo de Trabajo Node-RED (Parte 1/3)
+### 3.3.3 JSON del Flujo de Trabajo de Node-RED (Parte 1/3)
 
 > ⚠️ **Importante:** Después de importar, asegúrese de ajustar los parámetros correspondientes según la situación real.
 
@@ -604,16 +604,18 @@ http://<JETSON_IP>:1880/
   "modules": {
     "@flowfuse/node-red-dashboard": "1.26.0"
   }
-}]```
+}]
 
-- **Dirección del Broker MQTT** (por defecto: `172.17.0.1:1883`)  
-- **Dirección del Servicio Frigate** (por defecto: `http://192.168.118.111:5000`)  
+```
 
-> ⚠️ **Recordatorio:** Asegúrate de modificar para que coincida con la `JETSON_IP` de tu propia máquina.  
+- **MQTT Broker Address** (default: `172.17.0.1:1883`)  
+- **Frigate Service Address** (default: `http://192.168.118.111:5000`)  
 
-## 🔵 3.4 Efecto de Ejecución
+> ⚠️ **Reminder:** Be sure to modify to match your own machine’s `JETSON_IP`.  
 
-Accede a la siguiente URL en tu navegador:
+## 🔵 3.4 Running Effect
+
+Access the following URL in your browser:
 
 ```cpp
 http://JETSON_IP:1880/dashboard/frigate
@@ -621,42 +623,42 @@ http://JETSON_IP:1880/dashboard/frigate
 
 <div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/frigateevents.png"/></div>
 
-# 🟣 4. Descripción de Funciones
+# 🟣 4. Function Description
 
-## 4.1 Detección de Armas en Tiempo Real
+## 4.1 Real-time Gun Detection
 
-- Frigate detecta armas en las imágenes de la cámara basándose en el modelo YOLOv4-tiny-288  
-- Umbral de detección: `0.3`  
-- Categorías de detección: Persona (0), Arma (1)  
+- Frigate detects guns in camera footage based on the YOLOv4-tiny-288 model  
+- Detection threshold: `0.3`  
+- Detection categories: Person (0), Gun (1)  
 
-> 📖 **Referencia:** Para más detalles, consulta los archivos de configuración relacionados en GitHub:  
+> 📖 **Reference:** For more details, see related configuration files in GitHub:  
 > `frigate-on-jetson/config/config.yml at main · Seeed-Studio/frigate-on-jetson · GitHub`  
 
 ---
 
-## 4.2 Alertas y Notificaciones
+## 4.2 Alerts and Notifications
 
-- Mostrar el último fotograma capturado  
-- Registros históricos de alertas (incluyendo hora, cámara, captura de pantalla)  
-- Push de Webhook en tiempo real (este wiki usa Enterprise WeChat como ejemplo)  
-- Soporta integración con otros Webhooks  
-
----
-
-## 4.3 Registros Históricos y Conteo
-
-- Registrar los últimos 10 eventos de alerta  
-- Conteo acumulativo de alertas  
-- Limpieza de datos con un clic  
-
-# 🟤 5. Escenarios de Aplicación
-
-- Monitoreo de amenazas de armas en áreas de seguridad del campus  
-- Protección en centros comerciales / metros / centros de transporte  
-- Defensa perimetral y control de límites  
-- Seguridad para eventos temporales  
+- Display the latest captured frame  
+- Historical alert records (including time, camera, screenshot)  
+- Real-time Webhook push (this wiki uses Enterprise WeChat as an example)  
+- Supports integration with other Webhooks  
 
 ---
 
-📦 **Repositorio del Proyecto:**  
+## 4.3 History Records and Counting
+
+- Record the latest 10 alert events  
+- Accumulative counting of alerts  
+- One-click data clearing  
+
+# 🟤 5. Application Scenarios
+
+- Campus security area gun threat monitoring  
+- Protection in shopping malls / subways / transportation hubs  
+- Perimeter defense and boundary control  
+- Security for temporary events  
+
+---
+
+📦 **Project Repository:**  
 [GitHub - Seeed-Studio/frigate-on-jetson](https://github.com/Seeed-Studio/frigate-on-jetson)

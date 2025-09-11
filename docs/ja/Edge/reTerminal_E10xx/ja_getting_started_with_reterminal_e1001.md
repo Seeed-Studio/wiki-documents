@@ -1,6 +1,6 @@
 ---
-description: この記事では、reTerminal E1001を素早く使い始めるためのガイドを提供します。
-title: reTerminal E1001の使い方
+description: この記事では、reTerminal E1001を素早く開始する方法をガイドします。
+title: reTerminal E1001の開始方法
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/getting_started_with_reterminal_e1001
 sidebar_position: 2
@@ -12,7 +12,7 @@ last_update:
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# reTerminal E1001の使い方
+# reTerminal E1001の開始方法
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/132.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -28,11 +28,11 @@ import TabItem from '@theme/TabItem';
 
 ## 概要
 
-reTerminal E1001は、優れた3ヶ月のバッテリー寿命を持つ7.5インチオープンソースモノクロームePaperディスプレイです。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートしています。スマートホームダッシュボードの可視化、オフィスディスプレイ、教育プロジェクトなど、この使いやすいHMIデバイスは美しいビジュアルと柔軟なカスタマイゼーションを一つのエレガントなパッケージで提供します。
+reTerminal E1001は、優れた3ヶ月のバッテリー寿命を持つ7.5インチのオープンソースモノクロームePaperディスプレイです。ESP32-S3を搭載し、簡単なダッシュボード作成のためのSenseCraft HMIノーコードUIプラットフォームをネイティブサポートし、さらなる開発のためにHome Assistant、TRMNL E-inkダッシュボード、Arduino、ESP-IDFをサポートしています。スマートホームダッシュボードの可視化、オフィスディスプレイ、教育プロジェクトなど、この使いやすいHMIデバイスは美しいビジュアルと柔軟なカスタマイゼーションを一つのエレガントなパッケージで提供します。
 
 ### 特徴
 
-- **美しく、すぐに使えるePaperディスプレイ**
+- **美しい、すぐに使えるePaperディスプレイ**
 - **3ヶ月のバッテリー寿命を持つ超低消費電力**
 - **SenseCraft HMIによるノーコードUI設計・デプロイメント**
 - **人気のソフトウェアプラットフォームとの連携**
@@ -44,17 +44,18 @@ reTerminal E1001は、優れた3ヶ月のバッテリー寿命を持つ7.5イン
 
 reTerminal E1001のハードウェアには以下が含まれます：
 
-1. **7.5インチePaperディスプレイ**: 800×480解像度のモノクロームディスプレイ
-2. **ボタン**: 手動画面操作用にデバイス上部に配置
+1. **7.5インチePaperディスプレイ**：800×480解像度のモノクロームディスプレイ
+2. **ボタン**：手動画面操作用にデバイス上部に配置
 3. **マイクロフォン**
-4. **MicroSDカードスロット**: 拡張可能なストレージ用
-5. **電源スイッチ**: デバイスのオン/オフ用に背面に配置
-6. **ステータスLED**: ユーザーインジケーター（緑色）
-7. **電源LED**: 充電インジケーター（赤色）
-8. **USB-Cポート**: 充電とファームウェア更新用
-9. **拡張ポート**: VDD、GND、I2C、GPIO接続を提供する8ピン拡張ヘッダー
+4. **MicroSDカードスロット**：拡張可能なストレージ用
+5. **電源スイッチ**：デバイスのオン/オフ用に背面に配置
+6. **ステータスLED**：ユーザーインジケーター（緑色）
+7. **電源LED**：充電インジケーター（赤色）
+8. **USB-Cポート**：充電とファームウェア更新用
+9. **拡張ポート**：VDD、GND、I2C、GPIO接続を提供する8ピン拡張ヘッダー
 
-## 使い方
+
+## 開始方法
 
 ### 準備
 
@@ -64,35 +65,35 @@ reTerminal E1001のハードウェアには以下が含まれます：
 - USB-Cケーブル
 - クイックスタートガイド
 
-**ステップ2.** （オプション）デジタルフォトフレームとして使用する予定がある場合や追加のストレージが必要な場合は、microSDカードを挿入してください。
+**ステップ2.** （オプション）デバイスをデジタルフォトフレームとして使用する予定がある場合や追加のストレージが必要な場合は、microSDカードを挿入してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
 
 :::note
-reTerminal E SeriesのePaperディスプレイは、Fat32フォーマットの最大64GBまでのMicroSDカードのみをサポートしています。
+reTerminal E SeriesのePaperディスプレイは、Fat32形式の最大64GBまでのMicroSDカードのみをサポートします。
 :::
 
 **ステップ3.** （オプション）必要に応じてUSBドライバーをインストールしてください：
 
-オペレーティングシステムによっては、reTerminal E1001との適切な通信を確保するためにUSBドライバーをインストールする必要がある場合があります：
+お使いのオペレーティングシステムによっては、reTerminal E1001との適切な通信を確保するためにUSBドライバーをインストールする必要がある場合があります：
 
-- **Macコンピューターの場合**: [WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールしてください
+- **Macコンピューター用**：[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH34XSER_MAC_ZIP.html)からCH34Xドライバーをダウンロードしてインストールしてください
 
-- **Windowsコンピューターの場合**:
+- **Windowsコンピューター用**：
   - Windows 11システムは通常、デフォルトでドライバーが含まれています
   - Windows 10以前のバージョンでは、[WCH公式ウェブサイト](https://www.wch-ic.com/downloads/CH341SER_ZIP.html)からCH341ドライバーをダウンロードしてインストールする必要がある場合があります
 
-- **Linuxシステムの場合**: 最新のLinuxディストリビューションのほとんどは、デフォルトで必要なドライバーが含まれています
+- **Linuxシステム用**：最新のLinuxディストリビューションのほとんどは、デフォルトで必要なドライバーが含まれています
 
 **ステップ4.** デバイスが最新バージョンを実行していることを確認するためにファームウェアを更新してください：
 
-1. USB-Cケーブルを使用してreTerminal E1001をコンピューターに接続してください
+1. USB-Cケーブルを使用してreTerminal E1001をコンピューターに接続します
 
-2. 背面の電源スイッチを使用してデバイスの電源を入れてください
+2. 背面の電源スイッチを使用してデバイスの電源を入れます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/134.jpg" style={{width:700, height:'auto'}}/></div>
 
-3. **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**にアクセスし、アカウントにサインインしてください
+3. **[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)**にアクセスしてアカウントにサインインします
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
@@ -100,19 +101,19 @@ reTerminal E SeriesのePaperディスプレイは、Fat32フォーマットの�
     </a>
 </div><br />
 
-4. **Workspace**セクションに移動してください
+4. **Workspace**セクションに移動します
 
-5. 右上角の**Device Flasher**をクリックしてください
+5. 右上角の**Device Flasher**をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
-6. リストからreTerminal E1001デバイスを選択してください。このチュートリアルに従って、**reTerminal E1001 7.5" Monochrome Display**を選択してください。
+6. リストからreTerminal E1001デバイスを選択します。このチュートリアルに従って、**reTerminal E1001 7.5" Monochrome Display**を選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/11.png" style={{width:800, height:'auto'}}/></div>
 
-7. ドロップダウンメニューから最新のファームウェアバージョンを選択してください
+7. ドロップダウンメニューから最新のファームウェアバージョンを選択します
 
-8. **Flash**をクリックし、更新プロセスが完了するまで待ってください
+8. **Flash**をクリックして更新プロセスが完了するまで待ちます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/10.png" style={{width:800, height:'auto'}}/></div>
 
@@ -120,21 +121,21 @@ reTerminal E SeriesのePaperディスプレイは、Fat32フォーマットの�
 
 1. ファームウェアの更新により、最適なパフォーマンスと最新機能へのアクセスが確保されます。初回使用前にこの更新を実行することをお勧めします。
 
-2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもフラッシュファームウェアの進行状況が表示されない場合は、ユニット上部の緑色のボタンを押してデバイスを起動し、再試行する必要がある場合があります。
+2. デバイスがシャットダウンまたはスリープ状態の場合、ファームウェアを適切にフラッシュすることはできません。デバイスの正しいポートを選択してもファームウェアフラッシュの進行状況が表示されない場合は、ユニット上部の緑色のボタンを押してデバイスを起動し、再試行する必要があります。
 
 :::
 
 ### 電源オン
 
-**ステップ1.** 電源スイッチを**ON**位置にスライドしてデバイスの電源を入れてください。電源スイッチはユニットの背面にあります。
+**ステップ1.** 電源スイッチを**ON**位置にスライドしてデバイスの電源を入れます。電源スイッチはユニットの背面にあります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/135.gif" style={{width:700, height:'auto'}}/></div>
 
-**ステップ 2.** 初回起動時、デバイスは製品情報とネットワーク設定手順を表示します。
+**ステップ2.** 初回起動時、デバイスは製品情報とネットワーク設定手順を表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/1.png" style={{width:600, height:'auto'}}/></div><br />
 
-**ステップ 3.** 緑色のユーザーLEDが約30秒間点灯し、デバイスの電源が入り初期化中であることを示します。30秒間デバイスを操作しないと、電力を確保するためにデバイスは自動的にスリープモードに入り、LEDライトは自動的に消灯します。
+**ステップ3.** 緑色のユーザーLEDが約30秒間点灯し、デバイスが電源オンで初期化中であることを示します。デバイスを30秒間操作しないと、電力を確保するため、デバイスは自動的にスリープモードに入り、LEDライトは自動的に消灯します。
 
 :::tip
 そのため、この時間内にネットワーク設定の次のステップを完了する必要があります。デバイスがスリープ状態になると、デバイスのホットスポットを見つけることができなくなります。この場合、デバイスの緑色のWakeボタンを一度クリックしてデバイスを起動できます。
@@ -143,29 +144,29 @@ reTerminal E SeriesのePaperディスプレイは、Fat32フォーマットの�
 ### ネットワーク設定
 
 <Tabs>
-<TabItem value="Network Setup vis PC" label="Network Setup vis PC" default>
+<TabItem value="Network Setup vis PC" label="PC経由でのネットワーク設定" default>
 
-**ステップ 1.** スマートフォンまたはコンピューターからデバイスのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワードは不要）。ネットワーク認証情報は `reTerminal E1001-{MAC Adress}` です。
+**ステップ1.** スマートフォンまたはコンピューターからデバイスのWi-Fiアクセスポイントに接続します。AP名は画面に表示されます（パスワード不要）。ネットワーク認証情報は`reTerminal E1001-{MACアドレス}`です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/5.png" style={{width:400, height:'auto'}}/></div><br />
 
-**ステップ 2.** 接続すると、お使いの携帯電話は自動的にWi-Fi設定ページにリダイレクトされるはずです。そうでない場合は、ブラウザを開いて `192.168.4.1` にアクセスしてください。
+**ステップ2.** 接続すると、お使いの電話は自動的にWi-Fi設定ページにリダイレクトされるはずです。そうでない場合は、ブラウザを開いて`192.168.4.1`に移動してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/6.png" style={{width:700, height:'auto'}}/></div><br />
 
-**ステップ 3.** ローカルWi-Fiネットワークを選択してパスワードを入力し、「Connect」をクリックします。
+**ステップ3.** ローカルWi-Fiネットワークを選択してパスワードを入力し、「Connect」をクリックします。
 
 :::note
-reTerminal Eシリーズ ePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしていません。
+reTerminal E SeriesのePaperディスプレイは2.4GHz WiFiネットワークのみをサポートし、5GHzやその他の帯域はサポートしません。
 :::
 
-**ステップ 4.** 接続が成功すると、デバイスは確認音を発し、ペアリングコード画面を表示します。
+**ステップ4.** 接続が成功すると、デバイスは確認音を発し、ペアリングコード画面を表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/136.png" style={{width:600, height:'auto'}}/></div>
 
 ### SenseCraftプラットフォームへの接続
 
-**ステップ 1.** Webブラウザで [SenseCraft HMI](https://sensecraft.seeed.cc/hmi) にアクセスし、アカウントを作成するかサインインします。
+**ステップ1.** Webブラウザで[SenseCraft HMI](https://sensecraft.seeed.cc/hmi)にアクセスし、アカウントを作成するかサインインします。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft.seeed.cc/hmi" target="_blank" rel="noopener noreferrer">
@@ -173,44 +174,44 @@ reTerminal Eシリーズ ePaperディスプレイは2.4GHz WiFiネットワー�
     </a>
 </div><br />
 
-**ステップ 2.** **Workspace** セクションに移動し、**Add Device** をクリックします。
+**ステップ2.** **Workspace**セクションに移動し、**Add Device**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**ステップ 3.** デバイスに名前を付け、デバイスの画面に表示されているペアリングコードを入力して **Create** をクリックします。
+**ステップ3.** デバイスに名前を付け、デバイスの画面に表示されているペアリングコードを入力して**Create**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/8.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ 4.** ペアリングが完了すると、デバイスは最初のダッシュボードを作成するよう促すメッセージを表示します。
+**ステップ4.** ペアリングが完了すると、デバイスは最初のダッシュボードを作成するよう促すメッセージを表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/3.png" style={{width:600, height:'auto'}}/></div>
 
 </TabItem>
-<TabItem value="Network Setup vis SenseCraft APP" label="Network Setup vis SenseCraft APP">
+<TabItem value="Network Setup vis SenseCraft APP" label="SenseCraft APP経由でのネットワーク設定">
 
 この方法では、SenseCraftモバイルアプリを使用してデバイスのネットワークを設定し、Bluetooth経由でSenseCraftアカウントに追加します。
 
-まず、SenseCraftアプリをダウンロードします。Google Play StoreまたはApple App Storeで「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードできます。
+まず、SenseCraft Appをダウンロードしてください。Google Play StoreまたはApple App Storeで「SenseCraft」を検索して見つけることができます。または、このウェブサイトからダウンロードすることもできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://sensecraft-app-download.seeed.cc" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Download APP 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> アプリをダウンロード 🖱️</font></span></strong>
     </a>
 </div><br />
 
-**ステップ 1.** SenseCraftアプリを開き、アカウントにサインインして **User** タブに移動します。**Device Bluetooth Configuration** をタップしてプロセスを開始します。
+**ステップ1.** SenseCraft Appを開き、アカウントにサインインして、**User**タブに移動します。**Device Bluetooth Configuration**をタップしてプロセスを開始します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/151.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 2.** 「Please select the device type」画面で、お使いのreTerminalモデル（例：**reTerminal E1001** または **reTerminal E1002**）を選択します。
+**ステップ 2.** 「デバイスタイプを選択してください」画面で、お使いのreTerminalモデル（例：**reTerminal E1001**または**reTerminal E1002**）を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/152.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 3.** 画面の指示に従って、デバイスをBluetoothブロードキャストモードにします。これは通常、**Up** と **Down** ページボタンを同時に押すことで行われます。携帯電話のBluetoothが有効になっていることを確認してください。**Scan** をタップすると、アプリが近くのデバイスを発見します。リストからデバイスを選択して接続します。
+**ステップ 3.** 画面の指示に従って、デバイスをBluetoothブロードキャストモードにします。これは通常、**上**と**下**のページボタンを同時に押すことで行います。スマートフォンのBluetoothが有効になっていることを確認してください。**スキャン**をタップすると、アプリが近くのデバイスを検出します。リストからデバイスを選択して接続します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/153.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 4.** Bluetooth経由で接続されると、アプリはWi-Fi接続の設定を促します。ドロップダウンリストからローカルの2.4GHz Wi-Fiネットワークを選択し、パスワードを入力して **Next** をタップします。
+**ステップ 4.** Bluetooth経由で接続されると、アプリがWi-Fi接続の設定を促します。ドロップダウンリストからローカルの2.4GHz Wi-Fiネットワークを選択し、パスワードを入力して**次へ**をタップします。
 
 :::note
 デバイスは2.4G Wi-Fiネットワーク経由でのみ設定できます。
@@ -218,15 +219,15 @@ reTerminal Eシリーズ ePaperディスプレイは2.4GHz WiFiネットワー�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/154.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 5.** アプリはWi-Fi認証情報をデバイスに送信し、SenseCraftアカウントに追加します。完了すると「Device added successfully」メッセージが表示されます。**Start exploring!** をタップして続行できます。
+**ステップ 5.** アプリがWi-Fi認証情報をデバイスに送信し、SenseCraftアカウントに追加します。完了すると「デバイスが正常に追加されました」というメッセージが表示されます。**探索を開始！**をタップして続行できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/155.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 6.** あなたのreTerminalが、アプリのメイン**デバイス**タブのデバイスリストに表示され、SenseCraftアカウントに正常に接続されます。
+**ステップ 6.** reTerminalがアプリのメイン**デバイス**タブのデバイスリストに表示され、SenseCraftアカウントに正常に接続されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/156.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 7.** リスト内のデバイスをタップして、**デバイス詳細**ページを表示できます。ここから、デバイスを管理し、写真をアップロードできます。より複雑なダッシュボードとキャンバスデザインについては、SenseCraftのWebブラウザ版の使用を促されます。
+**ステップ 7.** リスト内のデバイスをタップして**デバイス詳細**ページを表示できます。ここからデバイスを管理し、写真をアップロードできます。より複雑なダッシュボードとキャンバスデザインについては、SenseCraftのWebブラウザ版の使用を促されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/157.png" style={{width:250, height:'auto'}}/></div><br />
 
@@ -236,25 +237,25 @@ reTerminal Eシリーズ ePaperディスプレイは2.4GHz WiFiネットワー�
 
 ## ダッシュボードの作成
 
-reTerminal E1001は、SenseCraft HMIプラットフォームとシームレスに統合され、デバイス用のコンテンツを作成およびカスタマイズするための強力なツールを提供します。ここでステップバイステップの操作を詳しく説明する代わりに、プラットフォームの主要機能を探索して、何が可能かを理解していただきましょう。
+reTerminal E1001はSenseCraft HMIプラットフォームとシームレスに統合され、デバイス用のコンテンツを作成・カスタマイズするための強力なツールを提供します。ここでは段階的な操作を詳しく説明する代わりに、プラットフォームの主要機能を探索して、何が可能かを理解していただきます。
 
 ### SenseCraft HMI機能
 
 **AIジェネレーター**
 
-人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を簡単に説明するだけで、AIジェネレーターが自動的に魅力的で機能的なレイアウトを作成します。これは、手動でのデザイン作業なしに、天気表示、カレンダー、ToDoリスト、または情報パネルを素早く生成するのに最適です。
+人工知能にダッシュボードをデザインしてもらいましょう！表示したい情報を説明するだけで、AIジェネレーターが自動的に魅力的で機能的なレイアウトを作成します。これは、手動でデザイン作業を行うことなく、天気表示、カレンダー、ToDoリスト、情報パネルを素早く生成するのに最適です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/12.png" style={{width:300, height:'auto'}}/></div>
 
 **ギャラリー**
 
-ギャラリー機能を使用して、reTerminal E1001をデジタルフォトフレームに変身させましょう。お気に入りの画像をアップロードすると、プラットフォームがePaperディスプレイ用に最適化します。カスタム遷移時間でスライドショーを作成できます。
+ギャラリー機能でreTerminal E1001をデジタルフォトフレームに変身させましょう。お気に入りの画像をアップロードすると、プラットフォームがePaperディスプレイ用に最適化します。カスタム遷移時間でスライドショーを作成できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/19.png" style={{width:1000, height:'auto'}}/></div>
 
 **キャンバス**
 
-キャンバスを使用してダッシュボードを一から設計しましょう。これは、さまざまな要素を提供するドラッグアンドドロップインターフェースです：
+キャンバスでダッシュボードを一から設計しましょう。ドラッグ&ドロップインターフェースで様々な要素を提供します：
 
 - カスタマイズ可能なフォントとサイズのテキストブロック
 - 画像プレースホルダー
@@ -266,28 +267,28 @@ reTerminal E1001は、SenseCraft HMIプラットフォームとシームレス�
 
 **RSSフィード統合**
 
-お気に入りのニュースソース、ブログ、またはWebサイトのRSSフィードをダッシュボードに追加して、最新情報を入手しましょう。RSS機能により、複数のソースからヘッドライン、要約、または完全な記事を表示できます。
+お気に入りのニュースソース、ブログ、ウェブサイトのRSSフィードをダッシュボードに追加して最新情報を入手しましょう。RSS機能により、複数のソースからヘッドライン、要約、または完全な記事を表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/21.png" style={{width:1000, height:'auto'}}/></div>
 
 **Webコンテンツ表示**
 
-デバイス上で特定のWebコンテンツをキャプチャして表示します。Web機能は、Webサイトの選択された部分をレンダリングでき、交通スケジュール、株価ティッカー、またはその他のオンラインデータソースなどの情報を表示できます。
+特定のWebコンテンツをキャプチャしてデバイスに表示します。Web機能はウェブサイトの選択された部分をレンダリングでき、交通スケジュール、株価ティッカー、その他のオンラインデータソースなどの情報を表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/16.png" style={{width:1000, height:'auto'}}/></div>
 
 ### SenseCraft HMIの開始
 
-前のセクションで説明したように、デバイスをSenseCraftプラットフォームとペアリングした後、最初のダッシュボードを作成する準備が整います。各機能の使用に関する詳細な手順については、対応するWikiページを参照してください：
+前のセクションで説明したようにデバイスをSenseCraftプラットフォームとペアリングした後、最初のダッシュボードを作成する準備が整います。各機能の使用に関する詳細な手順については、対応するWikiページを参照してください：
 
-- [SenseCraft HMI概要](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
-- [AIジェネレーターガイド](https://wiki.seeedstudio.com/sensecraft_hmi_ai_generation)
-- [ギャラリー使用ガイド](https://wiki.seeedstudio.com/sensecraft_hmi_gallery)
-- [キャンバスデザインツール](https://wiki.seeedstudio.com/sensecraft_hmi_canvas)
-- [RSSフィード設定](https://wiki.seeedstudio.com/sensecraft_hmi_rss)
-- [Webコンテンツ表示](https://wiki.seeedstudio.com/sensecraft_hmi_web)
+- [SenseCraft HMI概要](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview)
+- [AIジェネレーターガイド](https://wiki.seeedstudio.com/ja/sensecraft_hmi_ai_generation)
+- [ギャラリー使用ガイド](https://wiki.seeedstudio.com/ja/sensecraft_hmi_gallery)
+- [キャンバスデザインツール](https://wiki.seeedstudio.com/ja/sensecraft_hmi_canvas)
+- [RSSフィード設定](https://wiki.seeedstudio.com/ja/sensecraft_hmi_rss)
+- [Webコンテンツ表示](https://wiki.seeedstudio.com/ja/sensecraft_hmi_web)
 
-SenseCraftプラットフォームでダッシュボードを作成して保存したら、「デバイスにデプロイ」をクリックし、ペアリングしたreTerminal E1001を選択するだけで、カスタムコンテンツがデバイスにワイヤレスで送信されます。ePaperディスプレイがダッシュボードを表示するように更新され、複数のページを作成した場合は、ナビゲーションボタンを使用してページを切り替えることができます。
+SenseCraftプラットフォームでダッシュボードを作成・保存したら、「デバイスにデプロイ」をクリックし、ペアリングしたreTerminal E1001を選択すると、カスタムコンテンツがワイヤレスでデバイスに送信されます。ePaperディスプレイがダッシュボードを表示するように更新され、複数のページを作成した場合はナビゲーションボタンを使用してページを切り替えることができます。
 
 ## デバイスの操作
 
@@ -297,13 +298,13 @@ SenseCraftプラットフォームでダッシュボードを作成して保存�
 
 デバイス上部のリフレッシュボタンには複数の機能があります：
 
-- **シングルプレス**：ディスプレイを手動でリフレッシュし、SenseCraftプラットフォームから新しいコンテンツをチェックします。ブザーが一度鳴って動作を確認します。このボタンはデバイスのウェイクアップにも一般的に使用されます。デバイスがスリープ状態になり、ダッシュボードのリフレッシュコマンドがすぐに利用できない場合に、このボタンを使用してデバイスをウェイクアップできます。
+- **シングルプレス**：ディスプレイを手動でリフレッシュし、SenseCraftプラットフォームから新しいコンテンツをチェックします。ブザーが1回鳴ってアクションを確認します。このボタンはデバイスのウェイクアップにも一般的に使用されます。デバイスがスリープ状態になったときにウェイクアップするために使用でき、ダッシュボードリフレッシュコマンドが即座にデバイスで利用できない場合があります。
 
 - **長押し**（将来の機能）：音声入力モードを有効にします。
 
 ### ナビゲーションボタン
 
-左右のボタンを使用して、ダッシュボードに複数のページが含まれている場合にページ間を移動できます：
+左右のボタンで、ダッシュボードに複数のページが含まれている場合にページ間を移動できます：
 
 - **左ボタン**：前のページに移動
 
@@ -315,14 +316,14 @@ SenseCraftプラットフォームでダッシュボードを作成して保存�
 
 異なるWi-Fiネットワークに接続する必要がある場合：
 
-**ステップ1.** 両方のナビゲーションボタン（左と右）を同時に2秒間長押しします。
+**ステップ 1.** 両方のナビゲーションボタン（左と右）を2秒間同時に長押しします。
 
-**ステップ2.** デバイスがWi-Fi設定モードに入り、[ネットワークセットアップ](#network-setup)の手順に従って新しいネットワークに接続できます。
+**ステップ 2.** デバイスがWi-Fi設定モードに入り、[ネットワーク設定](#ネットワーク-設定)の手順を再度実行して新しいネットワークに接続できます。
 
 ### LEDインジケーター
 
 - **赤色LED**：
-  - 消灯：完全充電または充電していない
+  - オフ：フル充電または充電していない
   - 常時点灯：充電中
 
 - **緑色LED**：
@@ -332,7 +333,7 @@ SenseCraftプラットフォームでダッシュボードを作成して保存�
 
 バッテリー電源で動作する場合：
 
-- デバイスはリフレッシュ間隔の間に自動的に低電力モードに入ります
+- デバイスはリフレッシュ間に自動的に低電力モードに入ります
 
 - バッテリー寿命はリフレッシュ頻度に依存します（デフォルト設定でフル充電から通常3ヶ月）
 
@@ -344,7 +345,7 @@ SenseCraftプラットフォームでダッシュボードを作成して保存�
 
 ### 拡張ピン
 
-reTerminal E1001は8ピン拡張ヘッダー（J2）を備えており、外部センサー、モジュール、またはその他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダーは複数のESP32-S3 GPIOピンと通信インターフェースを公開し、DIYプロジェクトの多用途な接続ポイントとなります。
+reTerminal E1001は8ピン拡張ヘッダー（J2）を備えており、外部センサー、モジュール、その他のハードウェアを追加してデバイスの機能を拡張するための接続オプションを提供します。この拡張ヘッダーは複数のESP32-S3 GPIOピンと通信インターフェースを公開し、DIYプロジェクトの多用途な接続ポイントとなります。
 
 #### 拡張ヘッダーピン配置
 
@@ -416,27 +417,27 @@ reTerminal E1001は8ピン拡張ヘッダー（J2）を備えており、外部�
    <td>GPIOまたはI2Cデータ信号</td>
   </tr>
  </table>
-
 </div>
 
 ## デバイスの設置
 
-reTerminal E1001には、デバイスを最適な視野角で直立させることができる3Dプリント製サポートスタンドアクセサリが付属しています：
+reTerminal E1001には3Dプリント製サポートスタンドアクセサリが付属しており、最適な視認性のためにデバイスを直立させて配置できます：
 
-**ステップ1.** パッケージに含まれている3Dプリント製サポートスタンドを見つけます。
+**ステップ 1.** パッケージに含まれている3Dプリント製サポートスタンドを見つけます。
 
-**ステップ2.** reTerminal E1001の底面背面にある埋め込みナットが配置されている指定の取り付けエリアにサポートスタンドを位置合わせします。
+**ステップ 2.** 埋め込みナットが配置されているreTerminal E1001の底面背面の指定された取り付けエリアにサポートスタンドを配置します。
 
-**ステップ3.** 長いドライバーを使用して、reTerminal E1001の背面にある埋め込みナットにネジを締めることで、スタンドをデバイスに固定します。
 
-**ステップ4.** しっかりと取り付けられたら、スタンドが直立位置でサポートできる平らな面にreTerminal E1001を設置します。
+**ステップ 3.** 長いドライバーを使用して、reTerminal E1001の背面に埋め込まれたナットにネジを締めることで、スタンドをデバイスに固定します。
+
+**ステップ 4.** しっかりと取り付けられたら、スタンドが直立位置でサポートできる平らな面にreTerminal E1001を置きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/139.jpg" style={{width:600, height:'auto'}}/></div>
 
 :::note
 スタンドは固定された視野角を提供し、調整することはできません。この固定位置は、ほとんどの使用シナリオで最適な視認性を提供するように設計されています。
 
-スタンドにより、デバイスをデスク、カウンタートップ、または棚に設置することができ、様々な環境での情報ディスプレイ、コントロールパネル、またはデジタルフォトフレームとしての使用に最適です。
+スタンドにより、デバイスを机、カウンタートップ、または棚に置くことができ、さまざまな環境で情報ディスプレイ、コントロールパネル、またはデジタルフォトフレームとして使用するのに理想的です。
 :::
 
 ## トラブルシューティング
@@ -453,7 +454,7 @@ reTerminal E1001には、デバイスを最適な視野角で直立させるこ�
 - 正しいWi-Fiパスワードを入力していることを確認してください
 - Wi-Fiネットワークが動作していることを確認してください
 - Wi-Fiルーターが2.4GHzネットワークをサポートしているか確認してください（5GHzはサポートされていません）
-- デバイスをWi-Fiルーターの近くに移動してみてください
+- デバイスをWi-Fiルーターの近くに配置してみてください
 
 ### Q3: ディスプレイが更新されない
 
@@ -472,13 +473,13 @@ reTerminal E1001には、デバイスを最適な視野角で直立させるこ�
 
 - [reTerminal E1001 回路図 (PDF)](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/202004307_reTerminal_E1001_V1.0_SCH_250805.pdf)
 - [ESP32-S3 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/esp32-s3_datasheet.pdf)
-- [SenseCraft HMI プラットフォーム ドキュメント](https://wiki.seeedstudio.com/sensecraft_hmi_overview)
+- [SenseCraft HMI プラットフォーム ドキュメント](https://wiki.seeedstudio.com/ja/sensecraft_hmi_overview)
 - [外観全体 3D モデル STP ファイル](https://files.seeedstudio.com/wiki/reterminal_e10xx/res/reterminal_esp-250904.stp)
-<!-- - [GitHub Repository](/getting_started_with_reterminal_e1001) -->
+<!-- - [GitHub Repository](/ja/getting_started_with_reterminal_e1001) -->
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="table-center">
   <div class="button_tech_support_container">

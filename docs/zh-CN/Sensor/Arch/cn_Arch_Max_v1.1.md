@@ -73,7 +73,7 @@ Arch Max 是一个支持 mbed 的开发板，用于快速原型开发。它基�
 ![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Get_started_with_mbed.png)
 
 1.  点击 [这里](<https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX>) 登录或注册 mbed。
-2.  导入 mbed_blinky 程序。
+2.  导入 mbed\_blinky 程序。
 3.  点击顶部工具栏的 **Compile** 图标编译程序，然后下载编译后的 hex 文件。
 4.  将下载的 bin 文件拖放到 mbed 磁盘中。
 

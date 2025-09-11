@@ -26,18 +26,18 @@ last_update:
     <tr>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     		</a>
 		</div></td>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
     		</a>
 		</div></td>
 	</tr>
 </table>
 
-El Seeed Studio XIAO ESP32S3 es una placa de desarrollo embebida que cuenta con un rendimiento RF excepcional, gracias a su soporte para comunicación inalámbrica dual de WiFi 2.4GHz - 802.11b/g/n y Bluetooth Low Energy (BLE). Esta capacidad permite al XIAO ESP32S3 proporcionar conectividad inalámbrica confiable y de alta velocidad para una amplia gama de aplicaciones de Internet de las Cosas (IoT). Además, la placa soporta conexión de antena U.FL, que puede extender el rango de comunicación a más de 100 metros, convirtiéndola en una opción ideal para proyectos que requieren conectividad inalámbrica de largo alcance. En este tutorial, exploraremos cómo aprovechar las capacidades Wi-Fi del XIAO ESP32S3 para conectarse a una red Wi-Fi y realizar tareas básicas de red.
+El Seeed Studio XIAO ESP32S3 es una placa de desarrollo embebida que cuenta con un rendimiento RF excepcional, gracias a su soporte para comunicación inalámbrica dual de 2.4GHz Wifi - 802.11b/g/n y Bluetooth Low Energy (BLE). Esta capacidad permite al XIAO ESP32S3 proporcionar conectividad inalámbrica confiable y de alta velocidad para una amplia gama de aplicaciones de Internet de las Cosas (IoT). Además, la placa soporta conexión de antena U.FL, que puede extender el rango de comunicación a más de 100 metros, convirtiéndola en una opción ideal para proyectos que requieren conectividad inalámbrica de largo alcance. En este tutorial, exploraremos cómo aprovechar las capacidades Wi-Fi del XIAO ESP32S3 para conectarse a una red Wi-Fi y realizar tareas básicas de red.
 
 ## Primeros Pasos
 
@@ -45,9 +45,9 @@ El Seeed Studio XIAO ESP32S3 es una placa de desarrollo embebida que cuenta con 
 
 En la parte inferior izquierda del frente del XIAO ESP32S3, hay un "Conector de Antena WiFi/BT" separado. Para obtener una mejor señal WiFi/Bluetooth, necesitas sacar la antena del interior del paquete e instalarla en el conector.
 
-Hay un pequeño truco para la instalación de la antena, si presionas directamente con fuerza, encontrarás que es muy difícil de presionar y te dolerán los dedos. La forma correcta de instalar la antena es poner primero un lado del conector de la antena en el bloque del conector, luego presionar un poco hacia abajo en el otro lado, y la antena se instalará.
+Hay un pequeño truco para la instalación de la antena, si presionas directamente con fuerza, encontrarás que es muy difícil de presionar y te dolerán los dedos. La forma correcta de instalar la antena es poner primero un lado del conector de la antena en el bloque del conector, luego presionar un poco hacia abajo en el otro lado, y la antena quedará instalada.
 
-Remover la antena también es igual, no uses fuerza bruta para tirar directamente de la antena, levanta con fuerza de un lado, y la antena se quitará fácilmente.
+Remover la antena también es igual, no uses fuerza bruta para tirar directamente de la antena, aplica fuerza en un lado para levantar, y la antena se quitará fácilmente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
@@ -106,9 +106,9 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
     	- **WL_CONNECTION_LOST**: Este código de estado indica que la conexión a la red Wi-Fi se perdió.
     	- **WL_DISCONNECTED**: Este código de estado indica que el ESP32 estaba previamente conectado a una red Wi-Fi, pero actualmente no está conectado a ninguna red.
 
-- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Iniciar conexión Wifi con un AP WPA2 Enterprise.
+- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Iniciar conexión WiFi con un AP WPA2 Enterprise.
 
-	- **Parámetros de Entrada** (Opcional)
+	- **Parámetros de Entrada** (Opcionales)
 		- **ssid**: Puntero a la cadena SSID.
 		- **method**: El método de autenticación de WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
 		- **wpa2_identity**: Puntero a la entidad
@@ -119,7 +119,7 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 		- **client_key**: Puntero a una cadena con el contenido de un archivo .key con clave de cliente
 		- **channel**: Opcional. Canal del AP
 		- **bssid**: Opcional. BSSID / MAC del AP
-		- **connect**: Opcional. llamar connect
+		- **connect**: Opcional. llamar a connect
 
 - `WiFiSTAClass::reconnect()` -- Forzará una desconexión y luego comenzará a reconectarse al AP.
 
@@ -130,14 +130,14 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 	- **Parámetros de Entrada**
 		- **wifioff**: wifioff `true` para apagar la radio Wi-Fi.
 		- **eraseap**: eraseap `true` para borrar la configuración del AP de la memoria NVS.
-
+	
 	- **Salida**: True/False.
 
 - `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- Cambiar configuraciones de IP deshabilitando el cliente dhcp.
 
 	- **Parámetros de Entrada**
 		- **local_ip**: Configuración de IP estática.
-		- **gateway**: Configuración de gateway estático.
+		- **gateway**: Configuración de puerta de enlace estática.
 		- **subnet**: Máscara de subred estática.
 		- **dns1**: Servidor DNS estático 1.
 		- **dns2**: Servidor DNS estático 2.
@@ -166,11 +166,12 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 		- **mac** (Opcional): Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
 	- **Salida**: Puntero a uint8_t *.
-- `WiFiSTAClass::SSID()` -- Devuelve el SSID actual asociado con la red.
+
+- `WiFiSTAClass::SSID()` -- Devolver el SSID actual asociado con la red.
 
 	- **Salida**: SSID.
 
-- `WiFiSTAClass::RSSI(void)` -- Devuelve el RSSI actual de la red.
+- `WiFiSTAClass::RSSI(void)` -- Devolver el RSSI actual de la red.
 
 	- **Salida**: RSSI.
 
@@ -179,54 +180,54 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- Esta es una función en la biblioteca WiFi del ESP32-S3. Se utiliza para configurar un SoftAP (punto de acceso por software), que permite a otros dispositivos conectarse al ESP32-S3 y acceder a sus recursos.
 
 	- **Parámetros de Entrada**
-		-  **ssid**:              Puntero al SSID (máx. 63 caracteres).
- 		-  **passphrase**:        (Para WPA2 mín. 8 caracteres, para abierto usar NULL).
+		-  **ssid**:              Puntero al SSID (máx 63 caracteres).
+ 		-  **passphrase**:        (Para WPA2 mín 8 caracteres, para abierto usar NULL).
  		-  **channel**:           Número de canal WiFi, 1 - 13.
- 		-  **ssid_hidden**:       Ocultación de red (0 = transmitir SSID, 1 = ocultar SSID).
- 		-  **max_connection**:    Máximo de clientes conectados simultáneamente, 1 - 4.
+ 		-  **ssid_hidden**:       Ocultación de red (0 = difundir SSID, 1 = ocultar SSID).
+ 		-  **max_connection**:    Máx clientes conectados simultáneamente, 1 - 4.
 
 	- **Salida**: True/False.
 
-- `WiFiAPClass::softAPgetStationNum()` -- Obtiene el recuento de las estaciones/clientes que están conectados a la interfaz softAP.
+- `WiFiAPClass::softAPgetStationNum()` -- Obtener el conteo de las Estaciones / clientes que están conectados a la interfaz softAP.
 
-	- **Salida**: Recuento de estaciones.
+	- **Salida**: Conteo de estaciones.
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- Una función para configurar SoftAP.
 
 	- **Parámetros de Entrada**
 		- **local_ip**:      IP del punto de acceso.
-		- **gateway**:       IP de la puerta de enlace.
+		- **gateway**:       IP de puerta de enlace.
 		- **subnet**:        Máscara de subred.
 
 	- **Salida**: True/False.
 
-- `WiFiAPClass::softAPIP()` -- Obtiene la dirección IP de la interfaz softAP.
+- `WiFiAPClass::softAPIP()` -- Obtener la dirección IP de la interfaz softAP.
 
-	- **Salida**: IPAddress IP del softAP.
+	- **Salida**: IPAddress IP softAP.
 
-- `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- Obtiene la dirección MAC de la interfaz softAP.
+- `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- Obtener la dirección MAC de la interfaz softAP.
 
 	- **Parámetros de Entrada**
-		- **mac** (Opcional):   Puntero a un array uint8_t con longitud WL_MAC_ADDR_LENGTH.
+		- **mac** (Opcional):   Puntero a array uint8_t con longitud WL_MAC_ADDR_LENGTH.
 
 	- **Salida**: Puntero a uint8_t* o String mac.
 
 ### Función de Escaneo WiFi
 
-- `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Inicia el escaneo de redes WiFi disponibles.
+- `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Iniciar escaneo de redes WiFi disponibles.
 
 	- **Parámetros de Entrada**
-		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función regresa inmediatamente y los resultados del escaneo se pueden obtener más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo esté completo.
+		- **async**: El parámetro es un valor booleano que determina si el escaneo debe realizarse de forma asíncrona. Si se establece en true, la función regresa inmediatamente y los resultados del escaneo pueden obtenerse más tarde llamando a la función getScanResults(). Si se establece en false, la función se bloqueará hasta que el escaneo esté completo.
 		- **show_hidden**: El parámetro es un valor booleano que determina si la función debe incluir redes ocultas en los resultados del escaneo.
 		- **passive**: El parámetro es un valor booleano que determina si la función debe realizar un escaneo pasivo. Si se establece en true, la función no transmitirá ningún paquete durante el escaneo, lo que puede tomar más tiempo pero puede ser útil en ciertas situaciones.
-		- **max_ms_per_chan**: El parámetro es el tiempo máximo para gastar escaneando cada canal en milisegundos.
+		- **max_ms_per_chan**: El parámetro es el tiempo máximo a gastar escaneando cada canal en milisegundos.
 		- **channel**: El parámetro es el canal Wi-Fi a escanear. Si se establece en 0, la función escaneará todos los canales disponibles.
 		- **ssid**: El parámetro es un puntero a una cadena terminada en null que contiene el SSID de la red a buscar. Si se establece en nullptr, la función escaneará todas las redes disponibles.
 		- **bssid**: El parámetro es un puntero a un array de 6 bytes que contiene la dirección MAC del punto de acceso a buscar. Si se establece en nullptr, la función escaneará todos los puntos de acceso.
 
-	- **Salida**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
+- **Salida**: El valor de retorno de esta función es un entero que indica el número de redes escaneadas.
 
-- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Carga toda la información de un wifi escaneado en los parámetros ptr.
+- `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Carga toda la información de una red wifi escaneada en los parámetros de puntero.
 
 	- **Parámetros de Entrada**
 		- **i**: La función se utiliza para recuperar información sobre una red escaneada en un índice especificado i.
@@ -236,30 +237,30 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 		- **bssid**: El parámetro bssid es una referencia a un puntero uint8_t* donde la función almacena el BSSID (dirección MAC) de la red.
 		- **channel**: El parámetro channel es una referencia a una variable int32_t donde la función almacena el número de canal de la red.
 
-	- **Salida**: True/False.
+	- **Salida**: Verdadero/Falso.
 
 - `WiFiScanClass::SSID(uint8_t i)` -- Devuelve el SSID descubierto durante el escaneo de red.
 
 	- **Parámetros de Entrada**
-		- **i**: Especifica de qué elemento de red se quiere obtener la información.
+		- **i**: Especifica de qué elemento de red se desea obtener la información.
 
 	- **Salida**: Cadena SSID del elemento especificado en la lista de redes escaneadas.
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- Devuelve el RSSI de las redes descubiertas durante el scanNetworks.
 
 	- **Parámetros de Entrada**
-		- **i**: Especifica de qué elemento de red se quiere obtener la información.
+		- **i**: Especifica de qué elemento de red se desea obtener la información.
 
 	- **Salida**: Valor con signo del RSSI del elemento especificado en la lista de redes escaneadas.
 
-### Funciones de Cliente WiFi
+### Funciones WiFi Client
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- Esta función se utiliza en la biblioteca WiFiClient para conectarse a una dirección IP remota y puerto con un valor de tiempo de espera especificado.
 
 	- **Parámetros de Entrada**
 		- **ip**:   La dirección IP del servidor al que conectarse.
 		- **port**: El número de puerto del servidor al que conectarse.
-		- **timeout** (Opcional): El tiempo máximo para esperar a que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
+		- **timeout** (Opcional): El tiempo máximo a esperar para que se establezca la conexión, en milisegundos. Si la conexión no se establece dentro de este tiempo, la función devolverá un error. Si timeout se establece en 0, la función esperará indefinidamente a que se establezca la conexión.
 
 - `WiFiClient::stop()` -- La función se utiliza para desconectar el cliente del servidor y liberar el socket/puerto utilizado por el cliente. Una vez que se llama a la función, el cliente ya no puede enviar o recibir datos.
 
@@ -285,46 +286,46 @@ ESP32-S3 proporciona una amplia gama de funciones de red WiFi. Generalmente, pod
 
 	- **Salida**: Devuelve un valor entero que representa el número de bytes disponibles para ser leídos.
 
-### Función de Servidor WiFi
+### Función WiFi Server
 
-- `WiFiServer::stopAll()` -- Esta función es un método de la clase WiFiServer en la biblioteca WiFi de Arduino. Este método detiene todas las instancias de servidor que se crean usando la clase WiFiServer. Es útil cuando quieres detener todos los servidores a la vez en lugar de llamar al método `stop()` para cada instancia individualmente.
+- `WiFiServer::stopAll()` -- Esta función es un método de la clase WiFiServer en la biblioteca Arduino WiFi. Este método detiene todas las instancias de servidor que se crean usando la clase WiFiServer. Es útil cuando deseas detener todos los servidores a la vez en lugar de llamar al método `stop()` para cada instancia individualmente.
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- La función se utiliza para iniciar un servidor en el puerto especificado. El servidor escuchará las conexiones de clientes entrantes.
 
 	- **Parámetros de Entrada**
 		- **port**: El número de puerto en el que escuchar.
-		- **enable** (Opcional): Una bandera para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta bandera se establece en true por defecto.
+		- **enable** (Opcional): Una bandera para indicar si el servidor debe habilitarse inmediatamente después de iniciarse. Esta bandera se establece en verdadero por defecto.
 
-- `WiFiServer::hasClient()` -- La función se utiliza para verificar si hay conexiones de clientes entrantes disponibles en el servidor. Esta función se puede usar en un bucle para verificar continuamente nuevas conexiones.
+- `WiFiServer::hasClient()` -- La función se utiliza para verificar si hay conexiones de clientes entrantes disponibles en el servidor. Esta función puede usarse en un bucle para verificar continuamente nuevas conexiones.
 
 	- **Salida**: Devuelve un objeto WiFiClient si un cliente se ha conectado o un puntero NULL si no hay clientes esperando conectarse.
 
 - `WiFiServer::end()` -- La función se utiliza para detener el servidor y liberar los recursos asociados. Una vez llamada, el servidor ya no puede aceptar nuevas conexiones de clientes. Cualquier conexión de cliente existente permanecerá abierta hasta que sea cerrada por el cliente o el servidor. `WiFiServer::close()` y `WiFiServer::stop()` tienen la misma función.
 
-### Funciones WiFi Múltiples
+### Funciones WiFi Multiple
 
 - `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- Se utiliza para agregar un nuevo punto de acceso (AP) a la lista de APs disponibles a los que el objeto WiFiMulti intentará conectarse.
 
 	- **Parámetros de Entrada**
-		- **ssid**: Puntero al SSID (máx. 63 caracteres).
-		- **passphrase**: (para WPA2 mín. 8 caracteres, para abierto usar NULL).
+		- **ssid**: Puntero al SSID (máximo 63 caracteres).
+		- **passphrase**: (para WPA2 mínimo 8 caracteres, para abierto usar NULL).
 
-	- **Salida**: True/False
-
+	- **Salida**: Verdadero/Falso
 
 - `WiFiMulti::run(uint32_t connectTimeout)` -- La función intenta conectarse a uno de los puntos de acceso guardados en orden secuencial hasta que se conecta exitosamente a uno.
 
 	- **Parámetros de Entrada**
-		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo para esperar una conexión en milisegundos. Si connectTimeout se establece en 0, la función no tendrá tiempo de espera e intentará conectarse indefinidamente.
+		- **connectTimeout**: El parámetro especifica la cantidad máxima de tiempo a esperar por una conexión en milisegundos. Si connectTimeout se establece en 0, la función no expirará y intentará conectarse indefinidamente.
 
 	- **Salida**: estado
 
 ## Escanear redes WiFi cercanas
 
-El siguiente es un programa de muestra que utiliza el XIAO ESP32S3 para escanear redes WiFi cercanas.
+El siguiente es un programa de ejemplo que usa el XIAO ESP32S3 para escanear redes WiFi cercanas.
 
-En tu Arduino IDE, ve a **File > Examples > WiFi > WiFiScan**. Esto cargará un sketch que escanea redes WiFi dentro del rango de tu XIAO ESP32S3.
-Esto puede ser útil para verificar si la red WiFi a la que intentas conectarte está dentro del alcance de tu placa u otras aplicaciones. Tu proyecto WiFi puede no funcionar a menudo porque puede no ser capaz de conectarse a tu router debido a una señal WiFi insuficiente.
+En tu Arduino IDE, ve a **Archivo > Ejemplos > WiFi > WiFiScan**. Esto cargará un sketch que escanea redes WiFi dentro del rango de tu XIAO ESP32S3.
+
+Esto puede ser útil para verificar si la red WiFi a la que intentas conectarte está dentro del rango de tu placa u otras aplicaciones. Tu proyecto WiFi puede no funcionar a menudo porque puede no ser capaz de conectarse a tu router debido a una señal WiFi insuficiente.
 
 ```c
 #include "WiFi.h"
@@ -382,19 +383,19 @@ Lo primero que necesitas hacer para usar las funcionalidades WiFi del XIAO ESP32
 #include <WiFi.h>
 ```
 
-El XIAO ESP32S3 puede actuar como estación WiFi, punto de acceso o ambos. Para establecer el modo WiFi, usa `WiFi.mode()` y establece el modo deseado como argumento.
+El XIAO ESP32S3 puede actuar como Estación WiFi, Punto de Acceso o ambos. Para establecer el modo WiFi, usa `WiFi.mode()` y establece el modo deseado como argumento.
 
 ```c
 WiFi.mode(WIFI_STA);
 ```
 
-Cuando el ESP32 se establece como una estación Wi-Fi, puede conectarse a otras redes (como tu router).
+Cuando el ESP32 se configura como una estación Wi-Fi, puede conectarse a otras redes (como tu router).
 
-`WiFi.scanNetworks()` devuelve el número de redes encontradas. Después del escaneo, puedes acceder a los parámetros de cada red. `WiFi.SSID()` imprime el SSID para una red específica.
+`WiFi.scanNetworks()` devuelve el número de redes encontradas. Después del escaneo, puedes acceder a los parámetros de cada red. `WiFi.SSID()` imprime el SSID de una red específica.
 
 `WiFi.RSSI()` devuelve el RSSI de esa red. RSSI significa Indicador de Intensidad de Señal Recibida. Es una medida estimada del nivel de potencia que un dispositivo cliente RF está recibiendo de un punto de acceso o router.
 
-Finalmente, `WiFi.encryptionType()` devuelve el tipo de encriptación de la red. Ese ejemplo específico pone un * en el caso de redes abiertas. Sin embargo, esa función puede devolver una de las siguientes opciones (no solo redes abiertas):
+Finalmente, `WiFi.encryptionType()` devuelve el tipo de cifrado de la red. Ese ejemplo específico pone un * en el caso de redes abiertas. Sin embargo, esa función puede devolver una de las siguientes opciones (no solo redes abiertas):
 - WIFI_AUTH_OPEN
 - WIFI_AUTH_WEP
 - WIFI_AUTH_WPA_PSK
@@ -404,9 +405,9 @@ Finalmente, `WiFi.encryptionType()` devuelve el tipo de encriptación de la red.
 
 ## Conectar a una red WiFi
 
-Para conectar el ESP32 a una red Wi-Fi específica, debes conocer su SSID y contraseña. Además, esa red debe estar dentro del alcance WiFi del ESP32 (para verificar eso, puedes usar el ejemplo anterior para escanear redes WiFi).
+Para conectar el ESP32 a una red Wi-Fi específica, debes conocer su SSID y contraseña. Además, esa red debe estar dentro del rango WiFi del ESP32 (para verificar eso, puedes usar el ejemplo anterior para escanear redes WiFi).
 
-El siguiente es un ejemplo de usar el XIAO ESP32S3 para conectarse a una red especificada. Donde la función `initWiFi()` juega el papel de conectarse a la red en el programa.
+Lo siguiente es un ejemplo de usar el XIAO ESP32S3 para conectarse a una red especificada. Donde la función `initWiFi()` desempeña el papel de conectarse a la red en el programa.
 
 ```c
 #include "WiFi.h"
@@ -439,7 +440,7 @@ void setup() {
 }
 
 void loop() {
-
+  
 }
 ```
 
@@ -469,15 +470,15 @@ Si quieres obtener la intensidad de la conexión WiFi, simplemente puedes llamar
 
 ## Uso de softAP
 
-Si estableces el XIAO ESP32S3 como un punto de acceso (hotspot), puedes conectarte al ESP32 usando cualquier dispositivo con capacidades WiFi sin la necesidad de conectarte a tu router.
+Si configuras el XIAO ESP32S3 como un punto de acceso (hotspot), puedes conectarte al ESP32 usando cualquier dispositivo con capacidades WiFi sin la necesidad de conectarte a tu router.
 
-En palabras simples, cuando estableces el XIAO ESP32S3 como un punto de acceso creas su propia red WiFi y los dispositivos WiFi cercanos (estaciones) pueden conectarse a ella (como tu smartphone o tu computadora).
+En palabras simples, cuando configuras el XIAO ESP32S3 como un punto de acceso, creas su propia red WiFi y los dispositivos WiFi cercanos (estaciones) pueden conectarse a ella (como tu smartphone o tu computadora).
 
 En tu Arduino IDE, ve a **File > Examples > WiFi > WiFiAccessPoint**. Este ejemplo te mostrará cómo usar el XIAO ESP32S3 para crear un hotspot y controlar el interruptor de encendido/apagado de una luz a través de una página web simple conectada al hotspot.
 
 :::note
 1. Hicimos algunos cambios menores al programa de ejemplo comentando LED_BUILTIN, porque el XIAO ESP32S3 tiene su propio indicador de usuario y no necesitamos un LED externo.
-2. El LED solo se apagará cuando el pin del LED de usuario en el XIAO ESP32S3 se establezca a un nivel alto, y solo se encenderá cuando el pin se establezca a un nivel bajo.
+2. El LED solo se apagará cuando el pin del LED de usuario en el XIAO ESP32S3 se configure a un nivel alto, y solo se encenderá cuando el pin se configure a un nivel bajo.
 3. También necesitas modificar el nombre del hotspot y la contraseña en el programa a los que desees.
 :::
 
@@ -577,7 +578,8 @@ void loop() {
 }
 ```
 
-Después de subir y ejecutar el programa, el XIAO ESP32S3 creará un hotspot llamado "XIAO_ESP32S3". Puedes conectarte a esta red usando tu computadora o teléfono, con la contraseña "password". Luego, abre "192.168.4.1" en un navegador para acceder a la página web que controla el interruptor del LED.
+Después de cargar y ejecutar el programa, XIAO ESP32S3 creará un punto de acceso llamado "XIAO_ESP32S3". Puedes conectarte a esta red usando tu computadora o teléfono, con la contraseña "password". Luego, abre "192.168.4.1" en un navegador para acceder a la página web que controla el interruptor del LED.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/39.png" style={{width:800, height:'auto'}}/></div>
 
 ### Anotación del programa
@@ -597,11 +599,11 @@ Serial.println(myIP);
 server.begin();
 ```
 
-Estos son los fragmentos de código que necesitas incluir en tus sketches de servidor web para configurar el XIAO ESP32S3 como un punto de acceso.
+Estos son los fragmentos de código que necesitas incluir en tus sketches del servidor web para configurar el XIAO ESP32S3 como un punto de acceso.
 
 ## Uso de WiFi y MQTT
 
-El XIAO ESP32S3 es una placa madre potente que soporta el protocolo MQTT, lo que lo convierte en una excelente opción para proyectos IoT que requieren comunicación confiable y eficiente entre dispositivos.
+El XIAO ESP32S3 es una placa madre potente que soporta el protocolo MQTT, lo que lo convierte en una excelente opción para proyectos de IoT que requieren comunicación confiable y eficiente entre dispositivos.
 
 ```c
 #include <WiFi.h>
@@ -670,9 +672,9 @@ void loop() {
 }
 ```
 
-En este programa de ejemplo, XIAO ESP32S3 se conecta a la red vía WiFi y se conecta a un broker MQTT especificado, se suscribe al tema **test/topic**, y publica un mensaje al tema cada 5 segundos.
+En este programa de ejemplo, XIAO ESP32S3 se conecta a la red a través de WiFi y se conecta a un broker MQTT especificado, se suscribe al tema **test/topic**, y publica un mensaje al tema cada 5 segundos.
 
-Cuando XIAO ESP32S3 recibe un mensaje del broker MQTT, puede ser procesado en la función callback `client.onMessage`. Necesitas reemplazar las variables `ssid`, `password`, `mqtt_server`, etc. en el programa de ejemplo con tu propia información de red y servidor MQTT.
+Cuando XIAO ESP32S3 recibe un mensaje del broker MQTT, puede ser procesado en la función de callback `client.onMessage`. Necesitas reemplazar las variables `ssid`, `password`, `mqtt_server`, etc. en el programa de ejemplo con tu propia información de red y servidor MQTT.
 
 :::tip
 La dirección del servidor MQTT proporcionada en el programa de muestra es `test.mosquitto.org`, solo para propósitos de prueba. Por favor no envíes ninguna información personal a esta dirección, ya que cualquiera puede usar este enlace para obtener tu información.
@@ -681,11 +683,11 @@ La dirección del servidor MQTT proporcionada en el programa de muestra es `test
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/41.png" style={{width:800, height:'auto'}}/></div>
 
 
-## Uso de WiFi y HTTP/HTTPS
+## Uso de WiFi & HTTP/HTTPS
 
 Esta parte puede referirse al ejemplo que escribimos para XIAO ESP32C3 para acceder a ChatGPT, que proporciona una introducción detallada al uso de WiFiClient y HTTPClient.
 
-- [Aprende a usar WiFiClient y HTTPClient en XIAO ESP32C3 - XIAO ESP32C3 y ChatGPT en acción](https://wiki.seeedstudio.com/es/xiaoesp32c3-chatgpt)
+- [Aprende a usar WiFiClient y HTTPClient en XIAO ESP32C3 - XIAO ESP32C3 & ChatGPT en acción](https://wiki.seeedstudio.com/es/xiaoesp32c3-chatgpt)
 
 ## WiFi Mesh
 
@@ -697,29 +699,29 @@ En una arquitectura de red Wi-Fi tradicional, un solo nodo (punto de acceso – 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/42.png" style={{width:800, height:'auto'}}/></div>
 
-Con ESP-MESH, los nodos no necesitan conectarse a un nodo central. Los nodos son responsables de retransmitir las transmisiones de cada uno. Esto permite que múltiples dispositivos se distribuyan sobre un área física grande. Los nodos pueden auto-organizarse y hablar dinámicamente entre sí para asegurar que el paquete llegue a su destino final. Si cualquier nodo es removido de la red, es capaz de auto-organizarse para asegurar que los paquetes lleguen a su destino.
+Con ESP-MESH, los nodos no necesitan conectarse a un nodo central. Los nodos son responsables de retransmitir las transmisiones de cada uno. Esto permite que múltiples dispositivos se distribuyan sobre un área física grande. Los Nodos pueden auto-organizarse y hablar dinámicamente entre sí para asegurar que el paquete alcance su destino final. Si cualquier nodo es removido de la red, es capaz de auto-organizarse para asegurar que los paquetes alcancen su destino.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/43.png" style={{width:800, height:'auto'}}/></div>
 
-La [librería painlessMesh](https://gitlab.com/painlessMesh/painlessMesh) nos permite crear una red mesh con las placas ESP32 de manera fácil.
+La [biblioteca painlessMesh](https://gitlab.com/painlessMesh/painlessMesh) nos permite crear una red mesh con las placas ESP32 de manera fácil.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/44.png" style={{width:800, height:'auto'}}/></div>
 
-Si aparece una ventana pidiéndonos descargar algunos paquetes dependientes para usar esta librería, también necesitamos descargarlos juntos.
+Si aparece una ventana solicitándonos descargar algunos paquetes dependientes para usar esta biblioteca, también necesitamos descargarlos juntos.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/45.png" style={{width:500, height:'auto'}}/></div>
 
-Si esta ventana no aparece, necesitarás instalar las siguientes dependencias de librería:
+Si esta ventana no aparece, necesitarás instalar las siguientes dependencias de biblioteca:
 
 - [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (por bblanchon)
 - [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
 - [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) (ESP32)
 
-Para comenzar con ESP-MESH, primero experimentaremos con el ejemplo básico de la librería. Este ejemplo crea una red mesh en la cual todas las placas transmiten mensajes a todas las otras placas.
+Para comenzar con ESP-MESH, primero experimentaremos con el ejemplo básico de la biblioteca. Este ejemplo crea una red mesh en la cual todas las placas transmiten mensajes a todas las otras placas.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/46.png" style={{width:700, height:'auto'}}/></div>
 
-Antes de subir el código, puedes configurar el `MESH_PREFIX` (es como el nombre de la red MESH) y las variables `MESH_PASSWORD` (puedes configurarlo como quieras).
+Antes de subir el código, puedes configurar las variables `MESH_PREFIX` (es como el nombre de la red MESH) y `MESH_PASSWORD` (puedes configurarlo como quieras).
 
 Luego, recomendamos que cambies la siguiente línea para cada placa para identificar fácilmente el nodo que envió el mensaje. Por ejemplo, para el nodo 1, cambia el mensaje como sigue:
 
@@ -731,21 +733,21 @@ Bien, a continuación usaremos dos XIAO ESP32S3 como ejemplo. El diagrama concep
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/47.png" style={{width:700, height:'auto'}}/></div>
 
-Sube el programa por separado a los dos XIAO, abre el monitor del puerto serie y configura la velocidad de baudios a 115200. (Si hay dos XIAO, puedes necesitar software de puerto serie adicional), si el programa funciona sin problemas, verás los siguientes resultados:
+Sube el programa por separado a los dos XIAO, abre el monitor del puerto serie y establece la velocidad de baudios a 115200. (Si hay dos XIAO, es posible que necesites software de puerto serie adicional), si el programa se ejecuta sin problemas, verás los siguientes resultados:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/48.png" style={{width:800, height:'auto'}}/></div>
 
 ### Anotación del programa
 
-Comienza incluyendo la librería painlessMesh. Luego, agrega los detalles de la mesh. El `MESH_PREFIX` se refiere al nombre de la mesh. El `MESH_PASSWORD`, como su nombre sugiere, es la contraseña de la mesh. Todos los nodos en la mesh deben usar el mismo `MESH_PREFIX` y `MESH_PASSWORD`. El `MESH_PORT` se refiere al puerto TCP en el que quieres que el servidor mesh funcione. El predeterminado es **5555**.
+Comienza incluyendo la biblioteca painlessMesh. Luego, agrega los detalles de la malla. El `MESH_PREFIX` se refiere al nombre de la malla. El `MESH_PASSWORD`, como su nombre sugiere, es la contraseña de la malla. Todos los nodos en la malla deben usar el mismo `MESH_PREFIX` y `MESH_PASSWORD`. El `MESH_PORT` se refiere al puerto TCP en el que quieres que se ejecute el servidor de malla. El valor predeterminado es **5555**.
 
-Se recomienda evitar usar `delay()` en el código de red mesh. Para mantener la mesh, algunas tareas necesitan ser realizadas en segundo plano. Usar `delay()` detendrá estas tareas y puede causar que la mesh pierda estabilidad/se desintegre. En su lugar, se recomienda usar `TaskScheduler` para ejecutar tus tareas, que es usado en painlessMesh mismo. La siguiente línea crea un nuevo `Scheduler` llamado `userScheduler`.
+Se recomienda evitar usar `delay()` en el código de red de malla. Para mantener la malla, algunas tareas necesitan realizarse en segundo plano. Usar `delay()` detendrá estas tareas y puede causar que la malla pierda estabilidad/se desintegre. En su lugar, se recomienda usar `TaskScheduler` para ejecutar tus tareas, que es usado en painlessMesh mismo. La siguiente línea crea un nuevo `Scheduler` llamado `userScheduler`.
 
 ```c
 Scheduler userScheduler; // to control your personal task
 ```
 
-Crea un objeto `painlessMesh` llamado mesh para manejar la red mesh.
+Crea un objeto `painlessMesh` llamado mesh para manejar la red de malla.
 
 ```c
 painlessMesh  mesh;
@@ -757,7 +759,7 @@ Crea una tarea llamada `taskSendMessage` responsable de llamar a la función `se
 Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
 ```
 
-La función `sendMessage()` envía un mensaje a todos los nodos en la red de mensajes (broadcast).
+The `sendMessage()` function sends a message to all nodes in the message network (broadcast).
 
 ```c
 void sendMessage() {
@@ -770,7 +772,7 @@ void sendMessage() {
 
 El mensaje contiene el texto "Hello from node 1" seguido del ID del chip de la placa.
 
-Para transmitir un mensaje, simplemente usa el método `sendBroadcast()` en el objeto mesh y pasa como argumento el mensaje (msg) que quieres enviar.
+Para difundir un mensaje, simplemente usa el método `sendBroadcast()` en el objeto mesh y pasa como argumento el mensaje (msg) que quieres enviar.
 
 ```c
 mesh.sendBroadcast(msg);
@@ -782,13 +784,14 @@ Cada vez que se envía un nuevo mensaje, el código cambia el intervalo entre me
 taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
 ```
 
-A continuación, se crean varias funciones callback que serán llamadas cuando eventos específicos ocurran en la mesh. La función `receivedCallback()` imprime el remitente del mensaje (from) y el contenido del mensaje (`msg.c_str()`).
+A continuación, se crean varias funciones de callback que serán llamadas cuando ocurran eventos específicos en la malla. La función `receivedCallback()` imprime el remitente del mensaje (from) y el contenido del mensaje (`msg.c_str()`).
 
 ```c
 void receivedCallback( uint32_t from, String &msg ) {
   Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
 }
 ```
+
 La función `newConnectionCallback()` se ejecuta cada vez que un nuevo nodo se une a la red. Esta función simplemente imprime el ID del chip del nuevo nodo. Puedes modificar la función para realizar cualquier otra tarea.
 
 ```c
@@ -805,7 +808,7 @@ void changedConnectionCallback() {
 }
 ```
 
-La función `nodeTimeAdjustedCallback()` se ejecuta cuando la red ajusta el tiempo, para que todos los nodos estén sincronizados. Imprime el desplazamiento.
+La función `nodeTimeAdjustedCallback()` se ejecuta cuando la red ajusta la hora, para que todos los nodos estén sincronizados. Imprime el desplazamiento.
 
 ```c
 void nodeTimeAdjustedCallback(int32_t offset) {
@@ -836,7 +839,7 @@ mesh.onChangedConnections(&changedConnectionCallback);
 mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
 ```
 
-Finalmente, agrega la función taskSendMessage al userScheduler. El programador es responsable de manejar y ejecutar las tareas en el momento adecuado.
+Finalmente, añade la función taskSendMessage al userScheduler. El planificador es responsable de manejar y ejecutar las tareas en el momento adecuado.
 
 ```c
 userScheduler.addTask(taskSendMessage);
@@ -848,7 +851,7 @@ Finalmente, habilita el taskSendMessage, para que el programa comience a enviar 
 taskSendMessage.enable();
 ```
 
-Para mantener la malla funcionando, agrega `mesh.update()` al `loop()`.
+Para mantener la malla funcionando, añade `mesh.update()` al `loop()`.
 
 ```c
 void loop() {
@@ -857,9 +860,9 @@ void loop() {
 }
 ```
 
-## Solución de Problemas
+## Solución de problemas
 
-### P1: ¿Por qué no puedo conectarme al hotspot del XIAO ESP32S3 cuando uso el ejemplo softAP?
+### P1: ¿Por qué no puedo conectarme al hotspot del XIAO ESP32S3 cuando estoy usando el ejemplo softAP?
 
 Esto puede ser causado por una fuerza de antena insuficiente del XIAO ESP32S3 o por sobrecalentamiento del XIAO ESP32S3. Después de las pruebas, el chip del XIAO ESP32S3 puede alcanzar una temperatura máxima de 50 grados Celsius cuando usa este ejemplo. Esto puede llevar a anomalías de red si se ejecuta durante mucho tiempo. En este momento, puedes enfriar y volver a intentar.
 
@@ -867,15 +870,11 @@ Si se descarta la causa del sobrecalentamiento, entonces es posible que la seña
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
-### P2: ¿Por qué el XIAO ESP32-S3 Plus tiene una señal de red más débil que el XIAO ESP32-S3? ¿Hay alguna solución?
+### P2: ¿Por qué la señal de red del XIAO ESP32-S3 Plus es mucho peor que la del XIAO ESP32-S3, hay alguna solución?
 
-:::tip Lote del Producto
-Si compraste el producto antes de **agosto de 2025**, puedes experimentar problemas de señal de red débil. Los productos comprados después de esa fecha han resuelto este problema y no requieren una corrección de software.
-:::
+Es posible añadir un segmento de código para ajustar la potencia dentro de todos los códigos que usan WiFi, y ajustando la potencia de transmisión, la fuerza de la señal puede mejorarse significativamente.
 
-Es posible agregar un segmento de código para ajustar la potencia dentro de todos los códigos que usan WiFi, y al ajustar la potencia de transmisión, la fuerza de la señal puede mejorarse significativamente.
-
-Como el siguiente fragmento de código, se agrega para ajustar la potencia de la función dentro del `Setup()`.
+Como el siguiente fragmento de código, se añade para ajustar la potencia de la función dentro del `Setup()`.
 
 ```cpp
     // 1. Set WiFi to Station mode
@@ -885,7 +884,7 @@ Como el siguiente fragmento de código, se agrega para ajustar la potencia de la
     int8_t power_dbm = 15;
     int8_t power_param = (int8_t)(power_dbm / 0.25);
     esp_err_t err = esp_wifi_set_max_tx_power(power_param);
-
+    
     if (err == ESP_OK) {
         Serial.print("Successfully set WiFi TX Power to: ");
         Serial.print(power_dbm);
@@ -893,7 +892,7 @@ Como el siguiente fragmento de código, se agrega para ajustar la potencia de la
     } else {
         Serial.println("Failed to set WiFi TX Power.");
     }
-
+    
     // 3. Start connecting to WiFi
     WiFi.begin(ssid, password);
 
@@ -906,11 +905,11 @@ Se ha verificado que configurar la potencia con el código anterior da los mejor
 
 ## Citas y Referencias
 
-Este artículo se basa en el contenido web de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y lo utiliza verificado en el Seeed Studio XIAO ESP32S3.
+Este artículo se basa en el contenido web de **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** sobre ESP32 y lo utiliza verificado en el Seeed Studio XIAO ESP32S3. 
 
 ¡Agradecimientos especiales a los autores de **Random Nerd Tutorials** por su arduo trabajo!
 
-El siguiente es el enlace de referencia al artículo original, te invitamos a aprender más sobre la red ESP32 a través del siguiente enlace al artículo original.
+La siguiente es la referencia al enlace del artículo original, te invitamos a aprender más sobre la red ESP32 a través del siguiente enlace al artículo original.
 
 - [ESP32 Useful Wi-Fi Library Functions (Arduino IDE)](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
 - [ESP32 MQTT – Publish and Subscribe with Arduino IDE](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
@@ -920,7 +919,7 @@ Para más información sobre el uso de la placa de desarrollo ESP32, por favor l
 
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 
-## Soporte Técnico y Discusión del Producto
+## Soporte Técnico y Discusión de Productos
 
 .
 
@@ -935,9 +934,5 @@ Para más información sobre el uso de la placa de desarrollo ESP32, por favor l
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
 
 

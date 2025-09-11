@@ -43,7 +43,7 @@ T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user e
 |4|P0.03|<p>Digital I/O</p><p>Analog input</p>|Red LED IO|
 |5|P0.04|<p>Digital I/O</p><p>Analog input</p>|VCC voltage dectect|
 |6|P0.05|<p>Digital I/O</p><p>Analog input</p>|Charger insert dectect,must be configured as no pullup or pulldown|
-|7|P0.06|Digital I/O|Key IO, must be configured as input_pulldown|
+|7|P0.06|Digital I/O|Key IO, must be configured as input\_pulldown|
 |8|P0.07|Digital I/O|LR1110 BUSY|
 |9|P0.08|Digital I/O|AG3335 VRTC EN|
 |10|P0.09|NFC input|NC|

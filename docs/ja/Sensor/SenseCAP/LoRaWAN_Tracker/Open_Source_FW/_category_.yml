@@ -1,10 +1,10 @@
 position: 2 # float position is supported
-label: 'オープンソースファームウェア説明書'
-collapsible: true # make the category collapsible
-collapsed: true # keep the category open by default
+label: 'オープンソースファームウェアの説明書'
+collapsible: true # カテゴリを折りたたみ可能にする
+collapsed: true # デフォルトでカテゴリを開いた状態にする
 className: lorawan_tracker_open_source_fw
 link:
   type: generated-index
   slug: ja/lorawan_tracker_open_source_fw
-  title: LoRaWANトラッカー オープンソースファームウェア説明書
-  description: LoRaWANトラッカー（ソフトウェアオープンソース）
+  title: LoRaWAN トラッカーオープンソースファームウェアの説明書
+  description: LoRaWAN トラッカー（ソフトウェアオープンソース）

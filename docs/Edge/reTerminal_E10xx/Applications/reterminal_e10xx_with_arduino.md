@@ -1828,16 +1828,6 @@ To resolve this, you must ensure that the MicroSD card is properly enabled using
 
 If the MicroSD card is not used inside your project, we recommend powering down the device and removing the card before running the display program. If the card has been inserted into the reTerminal, you will need to add the above code to ensure that you can get the screen to display properly, regardless of whether you are using a MicroSD card or not.
 
-### Q2: Why can't I upload programs to reTerminal?
-
-If you encounter the following error when uploading a program to reTerminal.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
-
-Then, it's likely that your Arduino IDE is set to an excessively high upload speed. Please change it to 115200 baud to resolve this issue.
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/159.png" style={{width:400, height:'auto'}}/></div>
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.

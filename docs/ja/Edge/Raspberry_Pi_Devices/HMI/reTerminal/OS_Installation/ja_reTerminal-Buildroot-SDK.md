@@ -1,40 +1,43 @@
 ---
-description:  reTerminal用Buildroot
-title:  reTerminal用Buildroot
+description: reTerminal 用 Buildroot
+title: reTerminal 用 Buildroot
 keywords:
   - Edge
-  - reTerminal OS_Installation
+  - reTerminal OS_インストール
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-Buildroot-SDK
 last_update:
-  date: 2/1/2023
+  date: 05/15/2025
   author: jianjing Huang
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
-
-# reTerminal用Buildroot
+# reTerminal 用 Buildroot
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/thumb.jpg" alt="pir" width="500" height="auto"/></p>
 
 ## はじめに
 
-[Buildroot](https://buildroot.org)は、クロスコンパイルを使用して組み込みシステム用の完全なLinuxシステムを構築するプロセスを簡素化し、自動化する使いやすいツールです。
+[Buildroot](https://buildroot.org) は、クロスコンパイルを使用して、組み込みシステム用の完全な Linux システムを構築するプロセスを簡素化し、自動化する使いやすいツールです。
 
-これを実現するために、Buildrootはクロスコンパイルツールチェーン、ルートファイルシステム、Linuxカーネルイメージ、およびターゲット用のブートローダーを生成することができます。Buildrootは、これらのオプションの任意の組み合わせで独立して使用できます（例えば、既存のクロスコンパイルツールチェーンを使用し、Buildrootでルートファイルシステムのみを構築することができます）。
+Buildroot は、ターゲット用のクロスコンパイルツールチェーン、ルートファイルシステム、Linux カーネルイメージ、およびブートローダーを生成することができます。これらのオプションを任意の組み合わせで独立して使用することも可能です（例えば、既存のクロスコンパイルツールチェーンを使用し、Buildroot でルートファイルシステムのみを構築することができます）。
 
-理解と拡張が容易なシンプルな構造を持っています。よく知られたMakefile言語のみに依存しています。Buildrootはオープンソースプロジェクトであり、多くの開発者が日々貢献しています。
+Buildroot はシンプルな構造を持ち、理解しやすく拡張も容易です。また、よく知られた Makefile 言語にのみ依存しています。Buildroot はオープンソースプロジェクトであり、多くの開発者が日々貢献しています。
 
-以下のガイドに従うことで、Buildrootを使用して独自の[reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)システムイメージを構築することができます。それでは始めましょう！
+以下のガイドに従うことで、Buildroot を使用して独自の [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) システムイメージを構築することができます。それでは始めましょう！
 
-## Buildrootソースコードのコンパイル
+## Buildroot ソースコードのコンパイル
 
 ### ローカルマシンでの手動コンパイル
 
-次に、Buildrootを使用してreTerminal用のシステムイメージを手動でコンパイルする方法に進みます。
+ここでは、Buildroot を使用して reTerminal 用のシステムイメージを手動でコンパイルする方法を説明します。
 
-**注意:** このガイドは、Ubuntu 20.04がインストールされたホストPCでテストした後に作成されました。ただし、他のLinuxシステムでも動作します。
+**注意:** このガイドは、Ubuntu 20.04 をインストールしたホスト PC でテストした後に作成されました。ただし、他の Linux システムでも動作します。
 
-- **ステップ1.** 以下のパッケージ（git、gcc、make）をインストールして、ホストPCで開発環境を準備します
+- **ステップ 1.** ホスト PC に開発環境を準備し、以下のパッケージ（git、gcc、make）をインストールします。
 
 ```sh
 sudo apt update
@@ -42,38 +45,38 @@ sudo apt install git
 sudo apt install build-essential
 ```
 
-**注意:** 上記のパッケージが既にインストールされている場合は、この手順をスキップできます。
+**注意:** 上記のパッケージがすでにインストールされている場合は、このステップをスキップできます。
 
-- **ステップ 2.** 以下のGitHubリポジトリをクローンします
+- **ステップ 2.** 以下の GitHub リポジトリをクローンします。
 
 ```sh
 git clone --depth=1 https://github.com/Seeed-Studio/seeed-linux-buildroot.git -b master
 ```
 
-- **ステップ 3.** **seeed-linux-buildroot** ディレクトリに移動します
+- **ステップ 3.** **seeed-linux-buildroot** ディレクトリに移動します。
 
 ```sh
 cd seeed-linux-buildroot
 ```
 
-#### デフォルト設定でreTerminal用にコンパイルする
+#### デフォルト設定で reTerminal をコンパイル
 
-以下を入力してデフォルトのreTerminal設定でコンパイルを開始します
+以下のコマンドを入力して、デフォルトの reTerminal 設定でコンパイルを開始します。
 
 ```sh
 make reTerminal_64_defconfig
 make
 ```
 
-#### 独自の設定でreTerminalをコンパイルする
+#### 独自の設定で reTerminal をコンパイル
 
-独自の設定でコンパイルするために必要なパッケージをインストールするには、以下を入力してください
+独自の設定でコンパイルするために必要なパッケージをインストールするには、以下のコマンドを入力します。
 
 ```sh
 sudo apt install libncurses-dev
 ```
 
-- **ステップ 5.** 以下を入力してbuildrootの設定ウィンドウを開きます
+- **ステップ 5.** 以下のコマンドを入力して、Buildroot 設定ウィンドウを開きます。
 
 ```sh
 make menuconfig
@@ -81,53 +84,53 @@ make menuconfig
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/menuconfig.png" alt="pir" width="1000" height="auto"/></p>
 
-この設定ウィンドウを使用して、利用可能なオプションをナビゲートし、ニーズに応じて**イメージをカスタマイズ**できます。また、このウィンドウで変更を加えずに**保存**して**終了**をクリックすると、デフォルトのreTerminal設定が読み込まれます。
+この設定ウィンドウを使用して、利用可能なオプションをナビゲートし、**イメージをカスタマイズ**することができます。また、このウィンドウで変更を加えずに **保存** および **終了** をクリックすると、デフォルトの reTerminal 設定が読み込まれます。
 
-#### コンパイル済みイメージを見つける
+#### コンパイル済みイメージの確認
 
-コンパイルが成功したら、`seeed-linux-buildroot/output/images`に移動すると、コンパイル済みイメージが**sdcard.img**として見つかります。
+コンパイルが成功したら、`seeed-linux-buildroot/output/images` に移動し、**sdcard.img** という名前のコンパイル済みイメージを見つけることができます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/image-location-1.png" alt="pir" width="1000" height="auto"/></p>
 
 ### 既にコンパイル済みのイメージをダウンロード
 
-Buildrootを使用して既にコンパイル済みのreTerminalシステムイメージをダウンロードしたい場合は、以下の手順に進んでください。
+Buildroot を使用して既にコンパイルされた reTerminal システムイメージをダウンロードしたい場合は、以下の手順に進んでください。
 
-- **ステップ1.** [このリンク](https://github.com/Seeed-Studio/seeed-linux-buildroot/actions)を開いて、**seeed-linux-buildroot** GitHubリポジトリの**Actions**ページに入ります
+- **ステップ 1.** [このリンク](https://github.com/Seeed-Studio/seeed-linux-buildroot/actions) を開き、**seeed-linux-buildroot** GitHub リポジトリの **Actions** ページにアクセスします。
 
-- **ステップ2.** 最新の**Seeed reTerminal buildroot**ワークフローをクリックします
+- **ステップ 2.** 最新の **Seeed reTerminal buildroot** ワークフローをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/workflow.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ3.** **Artifacts**の下で、**buildroot deploy**をクリックしてイメージのダウンロードを開始します
+- **ステップ 3.** **Artifacts** の下にある **buildroot deploy** をクリックして、イメージのダウンロードを開始します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/download.jpg" alt="pir" width="1000" height="auto"/></p>
 
-**注意:** イメージをダウンロードした後、イメージを展開して**sdcard.img**ファイルを取得してください
+**注意:** イメージをダウンロードした後、イメージを解凍して **sdcard.img** ファイルを取得してください。
 
-## reTerminalにイメージをフラッシュ
+## reTerminal にイメージを書き込む
 
-次に、reTerminal上のCM4のeMMCにイメージをフラッシュする作業に移ります。
+次に、reTerminal の CM4 の eMMC にイメージを書き込む手順に進みます。
 
-[このwiki](https://wiki.seeedstudio.com/reTerminal/#getting-started-with-reterminal-extended)の手順に従い、以下のステップに注意してください：
+[この Wiki](https://wiki.seeedstudio.com/ja/reTerminal/#getting-started-with-reterminal-extended) の手順に従い、以下のステップに注意してください：
 
-**注意:** **Raspberry Pi Imager**を開いたら、**CHOOSE OS**をクリックし、**Use custom**を選択して、ダウンロードした**sdcard.img**ファイルを選択してください。
+**注意:** **Raspberry Pi Imager** を開いたら、**CHOOSE OS** をクリックし、**Use custom** を選択して、ダウンロードした **sdcard.img** ファイルを選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/RPi-imager-1.png" alt="pir" width="600" height="auto"/></p>
 
-## reTerminalでの初回起動
+## reTerminal の初回起動
 
-システムイメージをreTerminalにフラッシュした後、reTerminalの電源を入れます。ここで、reTerminal LCDにカーネルログがポップアップし、最後にQtを使用して作成されたデモアプリケーションが開きます。
+システムイメージを reTerminal に書き込んだ後、reTerminal の電源を入れます。ここで、reTerminal の LCD にカーネルログが表示され、最後に Qt を使用して作成されたデモアプリケーションが開きます。
 
-デフォルトシステムイメージの起動時間は約30秒です
+デフォルトのシステムイメージの起動時間は約 30 秒です。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/bootup.gif" alt="pir" width="1000" height="auto"/></p>
 
-## Buildrootイメージの分析
+## Buildroot イメージの分析
 
-前述のように、Buildrootは非常に強力なツールで、サードパーティのライブラリやツールに依存し、必要なものを迅速に構築できます。Buildrootのコンパイル時間、依存関係、コンパイルで消費されるリソースのサイズなどを理解したい場合、コードを通じて確認するのは非常に不便です。しかし、Buildrootは上記を分析するための視覚的分析ツールを提供しており、いくつかの簡単なコマンドでそれらを使用できます。
+前述のように、Buildroot は非常に強力なツールであり、サードパーティのライブラリやツールに依存して、必要なものを迅速に構築できます。Buildroot のコンパイル時間、依存関係、コンパイルによって消費されるリソースのサイズなどを理解したい場合、コードを通じて確認するのは非常に不便です。しかし、Buildroot はこれらを分析するための視覚的なツールを提供しており、いくつかの簡単なコマンドを使用するだけで利用できます。
 
-まず、以下のパッケージをインストールしてください
+以下のパッケージをインストールすることから始めます。
 
 ```sh
 sudo apt install python3-matplotlib python3-numpy
@@ -135,15 +138,15 @@ sudo apt install python3-matplotlib python3-numpy
 
 ### 依存関係図の生成
 
-Buildrootの役割の一つは、パッケージ間の依存関係を理解し、正しい順序でビルドされることを確認することです。これらの依存関係は時として複雑になることがあり、特定のシステムにおいて、なぜ特定のパッケージがBuildrootによって導入され、正常にビルドされたのかを理解するのは容易ではありません。依存関係を理解し、組み込みLinuxシステムにおける異なるコンポーネントの役割をより良く理解するために、Buildrootは依存関係図（PDF形式）を生成することができます。
+Buildroot の役割の 1 つは、パッケージ間の依存関係を理解し、それらが正しい順序でビルドされるようにすることです。これらの依存関係は時に複雑であり、特定のシステムにおいて、なぜあるパッケージが Buildroot によって導入され、正常にビルドされたのかを理解するのは容易ではありません。依存関係を理解し、組み込み Linux システムにおけるさまざまなコンポーネントの役割をよりよく理解するために、Buildroot は依存関係図（PDF 形式）を生成することができます。
 
-- **ステップ 1.** 以下のパッケージをインストールしてください
+- **ステップ 1.** 以下のパッケージをインストールします。
 
 ```sh
 sudo apt install graphviz
 ```
 
-- **Step 2.** Generate dependency diagrams
+- **ステップ 2.** 依存関係図を生成します。
 
 ```sh
 make graph-depends
@@ -151,26 +154,26 @@ make graph-depends
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/buildroot/depends-command.png" alt="pir" width="1000" height="auto"/></p>
 
-上記のコマンドの後、依存関係図が `seeed-linux-buildroot > output > graphs` に以下のように生成されます：
+上記のコマンドを実行すると、依存関係図が `seeed-linux-buildroot > output > graphs` に以下の形式で生成されます：
 
 - graph-depends.pdf
 - graph-depends.dot
 
 [![](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends-img.png)](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-depends-img.png)
 
-**注意：** 上記の画像をクリックすると拡大版を表示できます
+**注意:** 上記の画像をクリックすると拡大版を表示できます。
 
-### コンパイルで消費されるリソースのサイズ分析を生成する
+### コンパイルによって消費されるリソースのサイズ分析の生成
 
-Buildrootはコンパイルで消費されるリソースのサイズ分析を生成できます。
+Buildroot は、コンパイルによって消費されるリソースのサイズ分析を生成することができます。
 
-以下のコマンドを入力してください
+以下のコマンドを入力します。
 
 ```sh
 make graph-size
 ```
 
-上記のコマンドの後、視覚的解析ファイルが `seeed-linux-buildroot > output > graphs` に以下として生成されます：
+上記のコマンドを実行すると、視覚的な分析ファイルが `seeed-linux-buildroot > output > graphs` に以下の形式で生成されます：
 
 - graph-size.pdf
 - file-size-stats.csv
@@ -178,20 +181,20 @@ make graph-size
 
 [![](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size-img.png)](https://files.seeedstudio.com/wiki/ReTerminal/buildroot/graph-size-img.png)
 
-**注意：** 上記の画像をクリックすると拡大版を表示できます
+**注意:** 上記の画像をクリックすると拡大版を表示できます。
 
 ## Buildroot イメージのテスト
 
-上記の Buildroot イメージを reTerminal でテストするには、[reTerminal ハードウェアとインターフェース使用方法 wiki](https://wiki.seeedstudio.com/reTerminal-hardware-interfaces-usage) にアクセスして、記載されている手順を参照してください。
+上記の Buildroot イメージを reTerminal でテストするには、[reTerminal ハードウェアとインターフェース使用法 wiki](https://wiki.seeedstudio.com/ja/reTerminal-hardware-interfaces-usage) を訪問し、記載されている手順を参照してください。
 
 ## リソース
 
-- **[Webpage]** [Buildroot Documentation](https://buildroot.org/docs.html)
+- **[Webページ]** [Buildroot ドキュメント](https://buildroot.org/docs.html)
 - **[GitHub]** [seeed-linux-buildroot](https://github.com/Seeed-Studio/seeed-linux-buildroot)
 
 ## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

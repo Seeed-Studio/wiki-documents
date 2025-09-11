@@ -1,21 +1,25 @@
 ---
-description: このプロジェクトは、SenseCAP Indicatorを使用してシングルチャネルLoRaゲートウェイ（LoRaHub）を実装する方法を示しています。
+description: このプロジェクトでは、SenseCAP Indicator を使用してシングルチャネル LoRa ゲートウェイ (LoRaHub) を実装する方法を示します。
 title: シングルチャネルゲートウェイ - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
 - LoRaWAN
 - ESP32S3
-- Single Channel Gateway
+- シングルチャネルゲートウェイ
 image: https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/61.webp
 slug: /ja/SenseCAP_Indicator_Single_Channel_Gateway
 toc_max_heading_level: 4
 sidebar_position: 5
 last_update:
-  date: 02/11/2025
+  date: 05/15/2025
   author: Leo Liu
 ---
+:::note
+この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
+https://github.com/Seeed-Studio/wiki-documents/issues
+:::
 
-# シングルチャネルLoRaWANゲートウェイ - SenseCAP Indicator
+# シングルチャネル LoRaWAN ゲートウェイ - SenseCAP Indicator
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/61.png" style={{width:800, height:'auto'}}/></div>
 
@@ -32,49 +36,47 @@ last_update:
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1Pro-p-5644.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Indicator-D1L-p-5646.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-このプロジェクトは、SenseCAP Indicatorを使用してシングルチャネルLoRaWANゲートウェイ（LoRaHub）を実装する方法を実演します。SenseCAP IndicatorはESP32S3をホストMCUとして使用し、SX1262 LoRaラジオを搭載しており、The Things Network(TTN)上でLoRaWANアプリケーションを構築します。ファームウェアのアップグレードは、LoRa技術を深く探求し、LNS（LoRaネットワークサーバー）への接続を確立することに興味がある方にとって実用的なソリューションを提供します。
+このプロジェクトでは、ESP32S3 をホスト MCU として使用し、SX1262 LoRa ラジオを組み合わせた SenseCAP Indicator を使用してシングルチャネル LoRaWAN ゲートウェイ (LoRaHub) を実装する方法を示します。そして、The Things Network (TTN) 上で LoRaWAN アプリケーションを構築します。ファームウェアをアップグレードすることで、LoRa 技術を深く掘り下げ、LNS (LoRa ネットワークサーバー) への接続を確立したい方に実用的なソリューションを提供します。
 
-シングルチャネルゲートウェイ（One-Channel Hubと呼ばれる）は、ユーザーがLoRa領域の探索を始めることを可能にする低コストツールです。これらのゲートウェイは、特定の拡散係数とチャネルでLoRaパケットを受信し、これらのパケットとネットワーク間の交換を促進できます。手頃な価格のため、多くのユーザーがLoRaを実験するために独自のシングルチャネルゲートウェイの構築に着手しています。
+シングルチャネルゲートウェイ (One-Channel Hub) は、LoRa の世界を探索し始めるための低コストツールです。これらのゲートウェイは特定の拡散率とチャネルで LoRa パケットを受信し、これらのパケットをネットワークと交換することができます。その手頃な価格のため、多くのユーザーが独自のシングルチャネルゲートウェイを構築し、LoRa を試験することに取り組んでいます。
 
-これがGitHubプロジェクトです：[SenseCAP Indicator LoRaHub Demonstration](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_lorahub)。
+こちらが GitHub プロジェクトです: [SenseCAP Indicator LoRaHub Demonstration](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_lorahub).
 
-## ファームウェアのフラッシュ
+## ファームウェアの書き込み
 
-ファームウェアはインストール用に準備されています。[bin library](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3-beta-lorahub-demo)から最新バージョンをダウンロードするだけです。
+ファームウェアはインストールの準備が整っています。最新バージョンを [bin ライブラリ](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3-beta-lorahub-demo) からダウンロードしてください。
 
 :::tip
-GitHubでマージ版のファームウェアも提供しています。以下の手順は初心者にとって理解しやすいように分離版に基づいています。[マージ版](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3-beta-lorahub-demo)を直接書き込みたい場合は、フラッシュアドレスを0x0に設定してください。
+GitHub ではファームウェアの統合バージョンも提供しています。以下の説明は初心者がより理解しやすいように分割バージョンに基づいています。もし [統合バージョン](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/releases/tag/v1.0.3-beta-lorahub-demo) を直接書き込みたい場合は、フラッシュアドレスを 0x0 に設定してください。
 :::
 
-完全なESP-IDF環境を使用しない場合でも、**esptool**ユーティリティを使用して提供されたバイナリファイルをフラッシュすることが可能です。
+完全な ESP-IDF 環境を使用しない場合でも、提供されたバイナリファイルを **esptool** ユーティリティを使用して書き込むことが可能です。
 
-ファームウェアをダウンロードするにはクリックしてください：
+ファームウェアをダウンロードするには以下をクリックしてください:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241106.zip" target="_blank" rel="noopener noreferrer">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬ </font></span></strong>
-    </a>
+    <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241106.zip" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬ </font></span></strong></a>
 </div>
 
 ## ファームウェアのカスタマイズとビルド
 
-設定をリセットしたい場合、以下の手順がESP-IDF環境下で自分でファームウェアをビルドするのに役立ちます。
+設定をリセットしたい場合は、以下の手順に従ってESP-IDF環境で自分でファームウェアをビルドすることができます。
 
 ### 環境のセットアップ
 
-このプロジェクトはEspressif ESP-IDF開発に基づいています。環境をセットアップするには、この[ガイド](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation)を確認してください。
+このプロジェクトはEspressif ESP-IDF開発に基づいています。環境をセットアップするには、この[ガイド](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation)を参照してください。
 
 #### ESP-IDFの取得
 
@@ -91,9 +93,9 @@ cd esp-idf/
 ./install.sh
 ```
 
-### ワンチャンネルハブのインストール
+### One Channel Hubのインストール
 
-**ステップ1**: ハブをローカルリポジトリにクローンします。そしてプロジェクトパスに移動します。
+**ステップ1**: Hubをローカルリポジトリにクローンし、プロジェクトのパスに移動します。
 
 ```linux
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
@@ -101,92 +103,88 @@ git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
 cd ~/this_project_directory/
 ```
 
-**ステップ 2**: 必要なドライバーをインストールする
+**ステップ2**: 必要なドライバーをインストールします。
 
-- 無線ドライバーを取得する：
+- ラジオドライバーを取得します:
 
 ```
 cd ~/this_project_directory/components/radio_drivers
 ```
 
 - SX126xドライバー(sx1261, sx1262, sx1268):
-
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
-- llcc68 ドライバー:
-
+- llcc68ドライバー:
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
 ```
 
 - lr11xxドライバー(lr1121):
-
 ```
 git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ```
 
 ### ファームウェアのビルド
 
-**ステップ1**: lorahubディレクトリに入ります。
-
+**ステップ1**: lorahubディレクトリに移動します。
 ```
 cd ~/this_project_directory/lorahub
 ```
 
-Linux/MACターミナルをコマンドラインからESP-IDFでビルドするために準備してください。この手順は、インストールされた'ESP-IDF x.x CMD'ツールが自動的に環境を準備するため、Windowsではスキップできます。
+Linux/MAC端末でESP-IDFを使用してコマンドラインからビルドする準備をします。このステップはWindowsではスキップできます。Windowsではインストール済みの「ESP-IDF x.x CMD」ツールが環境を自動的に準備します。
 
 ```
 . ~/esp/esp-idf/export.sh
 ```
 
-ビルド対象のESP32ターゲットを設定します。
+ESP32ターゲットを設定してビルドします。
 
 ```
 idf.py set-target esp32s3
 ```
 
-必要に応じてビルドをカスタマイズします：
+必要に応じてビルドをカスタマイズします:
 
 ```
 idf.py menuconfig
 ```
 
-プロジェクトをビルドします：
+プロジェクトをビルドします:
 
 ```
 idf.py all
 ```
 
-### esp-idfでフラッシュ
+### esp-idfを使用したフラッシュ
 
-フラッシュするOne-Channel Hubに関連付けられたシリアルデバイスを特定します。
-LinuxとMacの場合、以下でシリアルポートを確認できます
+フラッシュするOne-Channel Hubに関連するシリアルデバイスを特定します。
+LinuxおよびMacでは、シリアルポートを以下のコマンドで確認できます。
 
 ```
 ls /dev/cu*
 ```
 
-その後、`idf.py`を使用してフラッシュします。**port**を置き換えてください
+その後、`idf.py`を使用してフラッシュします。**port**を置き換えてください。
 
 ```
 idf.py -p port flash
 ```
 
-**権限エラー**が返される場合は、現在のユーザーがdialoutグループに属しているかを確認してください。属していない場合は、以下を実行し、Linuxマシンを再起動してから再試行してください：
+**権限エラー**が返された場合は、現在のユーザーがdialoutグループのメンバーであることを確認してください。そうでない場合は以下を実行し、Linuxマシンを再起動して再試行してください。
 
 ```
 sudo usermod -a -G dialout $USERNAME
 ```
 
-**Windows** セットアップでは、デバイスが COM14 としてマウントされていると仮定すると、上記のコマンドは次のようになります：
+**Windows**環境では、デバイスがCOM14としてマウントされていると仮定すると、上記のコマンドは以下のようになります。
 
 ```
 idf.py -p COM14 flash
 ```
 
-モニターコンソールを起動してログを確認します（オプション）。
+ログを確認するためにモニターコンソールを起動します（オプション）。
 
 ```
 idf.py -p port monitor
@@ -194,43 +192,43 @@ idf.py -p port monitor
 
 ### esptoolを使用したフラッシュ
 
-完全なESP-IDF環境を使用しない場合、`esptool`ユーティリティを使用して提供されたバイナリファイルをフラッシュすることも可能です。
+完全なESP-IDF環境を使用しない場合は、`esptool`ユーティリティを使用して提供されたバイナリファイルをフラッシュすることも可能です。
 
 https://docs.espressif.com/projects/esptool/en/latest/esp32/
 
 ```cpp
-// Merged version
+// マージバージョン
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 Indicator_Lorahub_v1.0.0.bin
-// Seperated version
+// 分割バージョン
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader.bin 0x10000 indicator_lorahub.bin 0x8000 partition-table.bin
 ```
 
-Windows環境でのフラッシュ用esptoolコマンドは以下の通りです：
+Windows環境でのesptoolコマンドは以下のようになります。
 
 ```cpp
-// Merged version
+// マージバージョン
 py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 Indicator_Lorahub_v1.0.0.bin
-// Seperated version
+// 分割バージョン
 py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader.bin 0x10000 indicator_lorahub.bin 0x8000 partition-table.bin
 ```
 
-`port` と `COM` を使用するシリアルポートの名前に置き換えてください。接続に失敗した場合は、[トラブルシューティング](https://docs.espressif.com/projects/esptool/en/latest/esp32/troubleshooting.html#troubleshooting)を参照してください。
+使用するシリアルポートの名前を`port`および`COM`に置き換えてください。接続に失敗した場合は、[トラブルシューティング](https://docs.espressif.com/projects/esptool/en/latest/esp32/troubleshooting.html#troubleshooting)を参照してください。
 
-### esptool-JS でフラッシュする
+### esptool-JSを使用したフラッシュ
 
-フラッシュには [Online esptool](https://espressif.github.io/esptool-js/) を推奨します。
+[オンラインesptool](https://espressif.github.io/esptool-js/)が推奨されます。
 
-**Step1**: ボーレートを 115200 に設定し、正しいポートに接続します。
+**ステップ1**: ボーレートを115200に設定し、正しいポートに接続します。
 
-**Step2**: bin ファイルを選択し、対応するフラッシュアドレスを入力します。
+**ステップ2**: binファイルを選択し、対応するフラッシュアドレスを入力します。
 
-- マージ版:
+- マージバージョン:
 
-|**Flash Address**|**File**|
+|**フラッシュアドレス**|**ファイル**|
 |----|----|
 |0x0|Indicator_Lorahub_v1.0.0.bin|
 
-- 分離版：
+- 分割バージョン:
 
 |**フラッシュアドレス**|**ファイル**|
 |----|----|
@@ -238,13 +236,13 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 |0x10000|indicator_lorahub.bin|
 |0x8000|partition-table.bin|
 
-## Indicator設定
+## インジケーター設定
 
-**ステップ1**. **Wi-Fi**ページに入ってネットワークを設定し、適切なSSIDを選択してパスワードを入力します。
+**ステップ1**. ネットワークを設定するために **Wi-Fi** ページに入り、適切なSSIDを選択し、パスワードを入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image.png" style={{width:480, height:'auto'}}/></div>
 
-**ステップ2**. **LoRa Gateway**ページでパラメータを設定し、LNSとポートを「1700」に設定し、「configure」をクリックしてから「reboot」をクリックします。
+**ステップ2**. **LoRa Gateway** ページでパラメータを設定し、LNSとポートを「1700」に設定します。「configure」をクリックし、その後「reboot」をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/62.png" style={{width:480, height:'auto'}}/></div>
 
@@ -252,201 +250,191 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 ## The Things Network(TTN)への接続
 
-**ステップ1：** TTNプラットフォームにログインして`console`に移動し、`Gateways->Register gateway`をクリックします。
+**ステップ1:** TTNプラットフォームにログインし、`console`に移動して、`Gateways->Register gateway`をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image2.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ2：** IndicatorのGateway IDを`Gateway EUI`に入力します。
+**ステップ2:** インジケーターの`Gateway ID`を`Gateway EUI`に入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image3.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ3：** カスタムゲートウェイ名を入力した後、対応するFrequency plan（Indicatorの設定と一致する必要があります）を選択し、`Register gateway`をクリックします。この時点で、IndicatorのシングルチャネルゲートウェイがTTNに追加されました。
+**ステップ3:** カスタムゲートウェイ名を入力した後、対応する周波数プランを選択します（インジケーターの設定と一致する必要があります）。その後、`Register gateway`をクリックします。この時点で、インジケーターのシングルチャネルゲートウェイがTTNに追加されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image4.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ4：** Indicatorシングルチャネルゲートウェイを追加した後、`Applications`をクリックしてデバイスを追加します。この例では、`SenseCAP T1000 Tracker`をノードデバイスとして使用します。詳細な接続手順については、Wiki: https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/ を参照してください。`End devices`->`General settings`->`Network layer`->`Advanced MAC settings`で、`Adaptive data rate (ADR)`を**Static mode**に設定し、`ADR data rate index`はIndicatorで設定された`spreading factor`に応じて設定する必要があります。例えば、`spreading factor`が9に設定されている場合、`ADR data rate index`は3に設定する必要があり、他の値についても同様です。
+**ステップ4:** インジケーターのシングルチャネルゲートウェイを追加した後、`Applications`をクリックしてデバイスを追加します。この例では、`SenseCAP T1000 Tracker`をノードデバイスとして使用します。詳細な接続手順については、Wiki: https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN/ を参照してください。`End devices`->`General settings`->`Network layer`->`Advanced MAC settings`で、`Adaptive data rate (ADR)`を**Static mode**に設定し、`ADR data rate index`をインジケーターで設定された`spreading factor`に応じて構成する必要があります。例えば、`spreading factor`が9に設定されている場合、`ADR data rate index`は3に設定する必要があります。他の値についても同様です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image5.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ5：** 以下に示すように、追加されたノードデバイスのLive dataで`EVENT DETAILS`を確認して関連ログを表示できます。ノードデバイスが新しく追加されたIndicatorシングルチャネルゲートウェイを通じてデータを報告していることがわかります。
+**ステップ5:** 以下のように、追加されたノードデバイスのライブデータで`EVENT DETAILS`を確認して関連ログを表示できます。ノードデバイスが新しく追加されたインジケーターのシングルチャネルゲートウェイを通じてデータを報告していることが確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image6.png" style={{width:600, height:'auto'}}/></div>
 
 ## ChirpStackへの接続
 
-**ステップ1：** <a  href="https://www.chirpstack.io/docs/getting-started/debian-ubuntu.html" target="_blank"><span> Setup ChirpStack on Ubuntu/Debian</span></a>を参照してChirpStackをインストールします。
+**ステップ1:** ChirpStackをインストールします。詳細は<a href="https://www.chirpstack.io/docs/getting-started/debian-ubuntu.html" target="_blank"><span> Ubuntu/DebianでのChirpStackセットアップ</span></a>を参照してください。
 
-**ステップ2：** ChirpStackをインストールした後、`/etc/chirpstack`ディレクトリにシングルチャネル地域定義を追加する必要があります。
+**ステップ2:** ChirpStackをインストールした後、`/etc/chirpstack`ディレクトリにシングルチャネルの地域定義を追加する必要があります。
 
-このWikiでは、868.1Mhzチャネルを使用してEU868バンドの下にシングルチャネル定義を作成します。
+このWikiでは、EU868バンドの下にシングルチャネル定義を作成し、868.1Mhzチャネルを使用します。
 <details>
 <summary>region_eu868_1ch.toml</summary>
 
 ```toml
-# This file contains an example EU868 configuration.
+# このファイルはEU868設定の例を含みます。
 [[regions]]
 
-  # ID is an user-defined identifier for this region.
+  # IDはこの地域のユーザー定義識別子です。
   id="eu868_1ch"
 
-  # Description is a short description for this region.
+  # 説明はこの地域の簡単な説明です。
   description="EU868_1CH"
 
-  # Common-name refers to the common-name of this region as defined by
-  # the LoRa Alliance.
+  # Common-nameはLoRa Allianceによって定義されたこの地域の共通名を指します。
   common_name="EU868"
 
-
-  # Gateway configuration.
+  # ゲートウェイ設定。
   [regions.gateway]
 
-    # Force gateways as private.
+    # ゲートウェイをプライベートとして強制する。
     #
-    # If enabled, gateways can only be used by devices under the same tenant.
+    # 有効にすると、ゲートウェイは同じテナントのデバイスでのみ使用できます。
     force_gws_private=false
 
-
-    # Gateway backend configuration.
+    # ゲートウェイバックエンド設定。
     [regions.gateway.backend]
 
-      # The enabled backend type.
+      # 有効なバックエンドタイプ。
       enabled="mqtt"
 
-      # MQTT configuration.
+      # MQTT設定。
       [regions.gateway.backend.mqtt]
 
-        # Topic prefix.
+        # トピックプレフィックス。
         #
-        # The topic prefix can be used to define the region of the gateway.
-        # Note, there is no need to add a trailing '/' to the prefix. The trailing
-        # '/' is automatically added to the prefix if it is configured.
+        # トピックプレフィックスはゲートウェイの地域を定義するために使用できます。
+        # 注意: プレフィックスに末尾の'/'を追加する必要はありません。末尾の'/'は
+        # 設定されている場合、自動的にプレフィックスに追加されます。
         topic_prefix="eu868"
 
-        # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
+        # MQTTサーバー (例: scheme://host:port、schemeはtcp, sslまたはws)
         server="tcp://$MQTT_BROKER_HOST:1883"
 
-        # Connect with the given username (optional)
+        # 指定されたユーザー名で接続 (オプション)
         username=""
 
-        # Connect with the given password (optional)
+        # 指定されたパスワードで接続 (オプション)
         password=""
 
-        # Quality of service level
+        # サービス品質レベル
         #
-        # 0: at most once
-        # 1: at least once
-        # 2: exactly once
+        # 0: 少なくとも1回
+        # 1: 確実に1回
+        # 2: 正確に1回
         #
-        # Note: an increase of this value will decrease the performance.
-        # For more information: https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels
+        # 注意: この値を増やすとパフォーマンスが低下します。
+        # 詳細については: https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels
         qos=0
 
-        # Clean session
+        # クリーンセッション
         #
-        # Set the "clean session" flag in the connect message when this client
-        # connects to an MQTT broker. By setting this flag you are indicating
-        # that no messages saved by the broker for this client should be delivered.
+        # このクライアントがMQTTブローカーに接続する際に、接続メッセージで
+        # "クリーンセッション"フラグを設定します。このフラグを設定することで、
+        # このクライアントのためにブローカーに保存されたメッセージが配信されないことを示します。
         clean_session=false
 
-        # Client ID
+        # クライアントID
         #
-        # Set the client id to be used by this client when connecting to the MQTT
-        # broker. A client id must be no longer than 23 characters. If left blank,
-        # a random id will be generated by ChirpStack.
+        # MQTTブローカーに接続する際にこのクライアントが使用するクライアントIDを設定します。
+        # クライアントIDは23文字以内でなければなりません。空白の場合、ChirpStackによってランダムなIDが生成されます。
         client_id=""
 
-        # Keep alive interval.
+        # キープアライブ間隔。
         #
-        # This defines the maximum time that that should pass without communication
-        # between the client and server.
+        # クライアントとサーバー間で通信が行われない最大時間を定義します。
         keep_alive_interval="30s"
 
-        # CA certificate file (optional)
+        # CA証明書ファイル (オプション)
         #
-        # Use this when setting up a secure connection (when server uses ssl://...)
-        # but the certificate used by the server is not trusted by any CA certificate
-        # on the server (e.g. when self generated).
+        # セキュア接続を設定する際に使用します (サーバーがssl://...を使用している場合)。
+        # ただし、サーバーによって使用される証明書がサーバー上のCA証明書によって信頼されていない場合 (例: 自己生成の場合)。
         ca_cert=""
 
-        # TLS certificate file (optional)
+        # TLS証明書ファイル (オプション)
         tls_cert=""
 
-        # TLS key file (optional)
+        # TLSキー ファイル (オプション)
         tls_key=""
 
-  # Region specific network configuration.
+  # 地域固有のネットワーク設定。
   [regions.network]
     
-    # Installation margin (dB) used by the ADR engine.
+    # ADRエンジンによって使用されるインストールマージン (dB)。
     #
-    # A higher number means that the network-server will keep more margin,
-    # resulting in a lower data-rate but decreasing the chance that the
-    # device gets disconnected because it is unable to reach one of the
-    # surrounded gateways.
+    # 数値が高いほど、ネットワークサーバーはより多くのマージンを保持し、
+    # データレートが低下しますが、周囲のゲートウェイに到達できないために
+    # デバイスが切断される可能性が減少します。
     installation_margin=10
 
-    # RX window (Class-A).
+    # RXウィンドウ (Class-A)。
     #
-    # Set this to:
+    # 以下に設定:
     # 0: RX1 / RX2
-    # 1: RX1 only
-    # 2: RX2 only
+    # 1: RX1のみ
+    # 2: RX2のみ
     rx_window=0
 
-    # RX1 delay (1 - 15 seconds).
+    # RX1遅延 (1 - 15秒)。
     rx1_delay=1
 
-    # RX1 data-rate offset
+    # RX1データレートオフセット
     rx1_dr_offset=0
 
-    # RX2 data-rate
+    # RX2データレート
     rx2_dr=0
 
-    # RX2 frequency (Hz)
+    # RX2周波数 (Hz)
     rx2_frequency=869525000
 
-    # Prefer RX2 on RX1 data-rate less than.
+    # RX1データレートが以下の場合にRX2を優先。
     #
-    # Prefer RX2 over RX1 based on the RX1 data-rate. When the RX1 data-rate
-    # is smaller than the configured value, then the Network Server will
-    # first try to schedule the downlink for RX2, failing that (e.g. the gateway
-    # has already a payload scheduled at the RX2 timing) it will try RX1.
+    # RX1データレートが設定値より小さい場合、ネットワークサーバーは
+    # 最初にRX2でダウンリンクをスケジュールしようとします。
     rx2_prefer_on_rx1_dr_lt=0
 
-    # Prefer RX2 on link budget.
+    # リンクバジェットに基づいてRX2を優先。
     #
-    # When the link-budget is better for RX2 than for RX1, the Network Server will first
-    # try to schedule the downlink in RX2, failing that it will try RX1.
+    # リンクバジェットがRX1よりもRX2の方が良い場合、ネットワークサーバーは
+    # 最初にRX2でダウンリンクをスケジュールしようとします。
     rx2_prefer_on_link_budget=false
 
-    # Downlink TX Power (dBm)
+    # ダウンリンク送信電力 (dBm)
     #
-    # When set to -1, the downlink TX Power from the configured band will
-    # be used.
+    # -1に設定すると、設定されたバンドからダウンリンク送信電力が使用されます。
     #
-    # Please consult the LoRaWAN Regional Parameters and local regulations
-    # for valid and legal options. Note that the configured TX Power must be
-    # supported by your gateway(s).
+    # 有効で合法的なオプションについては、LoRaWAN地域パラメータおよび
+    # 地域規制を参照してください。設定された送信電力はゲートウェイによって
+    # サポートされている必要があります。
     downlink_tx_power=-1
 
-    # ADR is disabled.
+    # ADRが無効です。
     adr_disabled=true
 
-    # Minimum data-rate.
+    # 最小データレート。
     min_dr=5
 
-    # Maximum data-rate.
+    # 最大データレート。
     max_dr=5
 
-    # Add the following after min_dr/max_dr configuration 
+    # min_dr/max_dr設定の後に以下を追加
     enabled_uplink_channels=[0] 
 ```
 
 </details>
 
-単一チャネル地域をカスタマイズすることもできます。詳細は <a  href="https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8" target="_blank"><span> LoRaWAN theory for the One-Channle Hub</span></a> を参照してください。
+また、単一チャネルのリージョンをカスタマイズすることもできます。詳細は <a href="https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8" target="_blank"><span> LoRaWAN 単一チャネルハブの理論</span></a> を参照してください。
 
-**ステップ 3:** `/etc/chirpstack/chirpstack.toml` を修正して、新しく定義した地域を有効にします。
+**ステップ 3:** `/etc/chirpstack/chirpstack.toml` を修正して、新しく定義したリージョンを有効にします。
 
 ```toml
 enabled_regions={
@@ -456,56 +444,56 @@ enabled_regions={
 }
 ```
 
-**Step 4:** ChirpStackのコンソールにログインし、シングルチャンネルゲートウェイを追加します。
+**ステップ 4:** ChirpStackのコンソールにログインし、単一チャネルゲートウェイを追加します。
 
-ゲートウェイを追加する前に、シングルチャンネル地域が正常に有効化されていることを確認してください。
+ゲートウェイを追加する前に、単一チャネルリージョンが正常に有効化されていることを確認してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-1.png" alt="pir" width={600} height="auto" /></p>
 
-シングルチャンネル地域が正常に有効化されている場合、シングルチャンネルゲートウェイをChirpStackに追加します。
+単一チャネルリージョンが正常に有効化されている場合、ChirpStackに単一チャネルゲートウェイを追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-2.png" alt="pir" width={600} height="auto" /></p>
 
-**Step 5:** LoRa Gatewayページでパラメータを設定し、アドレスをChirpStackサーバーのアドレスに設定し、`configure`をクリックしてから`reboot`をクリックします。
+**ステップ 5:** LoRaゲートウェイページでパラメータを設定し、アドレスをChirpStackサーバーのアドレスに設定します。その後、`configure` をクリックし、次に `reboot` をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image1.png" alt="pir" width={600} height="auto" /></p>
 
-再起動後、ChirpStackのコンソールでステータスがオンラインに変わることが確認できます。
+再起動後、ChirpStackのコンソールでステータスがオンラインに変わったことを確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-3.png" alt="pir" width={600} height="auto" /></p>
 
-**Step 6:** シングルチャンネルゲートウェイと同じデータレートを使用することで、エンドデバイスの接続時間を最適化できます。
+**ステップ 6:** 単一チャネルゲートウェイと同じデータレートを使用することで、エンドデバイスの接続時間を最適化できます。
 
-シングルチャンネルゲートウェイの設定`SF7 BW125`を参考に、T1000-Aのデータレートを`DR5`に調整します。
+単一チャネルゲートウェイの設定 `SF7 BW125` を参照し、T1000-Aのデータレートを `DR5` に調整します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-4.png" alt="pir" width={600} height="auto" /></p>
 
-T1000-Aのデータレートを設定した後、そのためのデバイスプロファイルを作成する必要があります。
+T1000-Aのデータレートを設定した後、デバイスプロファイルを作成する必要があります。
 
-地域には`EU868`を選択し、地域設定には`EU868_1CH`を選択します。
+リージョンに `EU868` を選択し、リージョン設定に `EU868_1CH` を選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-5.png" alt="pir" width={600} height="auto" /></p>
 
-下図に示すように、T1000-Aがシングルチャンネルゲートウェイを通じてChirpStackにデータを正常にアップロードしていることが確認できます。
+以下の図のように、T1000-Aが単一チャネルゲートウェイを通じてChirpStackにデータを正常にアップロードしたことが確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-6.png" alt="pir" width={600} height="auto" /></p>
 
 ## リソース
 
-- [SenseSAP Indicator用ワンチャンネルハブファームウェア](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
-- [Githubリポジトリ](https://github.com/Lora-net/one_channel_hub)
-- [Semtechアプリケーションノート](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
+* [SenseCAP Indicator用単一チャネルハブファームウェア](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
+* [Githubリポジトリ](https://github.com/Lora-net/one_channel_hub)
+* [Semtechアプリケーションノート](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
+弊社の製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

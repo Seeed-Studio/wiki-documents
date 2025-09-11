@@ -58,8 +58,8 @@ SenseCAP M2 多平台 LoRaWAN® 网关支持多种应用，如智能农业、智
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/_0129.jpg" alt="pir" width={800} height="auto" /></p>
 
 SenseCAP M2 多平台 LoRaWAN® 网关可以通过 2 种方式配置：  
-1. Wi-Fi/ 以太网访问 SenseCAP Local Console  
-2. 通过 SenseCAP Portal 远程访问 SenseCAP Local Console
+1\. Wi-Fi/ 以太网访问 SenseCAP Local Console  
+2\. 通过 SenseCAP Portal 远程访问 SenseCAP Local Console
 
 此外，如果您想在户外部署 SenseCAP M2 多平台 LoRaWAN® 网关，您可能需要应用外壳配件来满足户外部署的要求。查看具有高坚固性的 **[SenseCAP 户外机箱](https://www.seeedstudio.com/SenseCAP-Outdoor-Enclosure-p-5353.html)** 以实现快速部署
 

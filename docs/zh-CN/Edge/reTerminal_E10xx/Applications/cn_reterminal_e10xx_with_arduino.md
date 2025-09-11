@@ -118,9 +118,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 让我们探索一个简单的示例，演示黑白 ePaper 显示屏上的基本绘图操作。
 
-**步骤 1.** 从 Seeed_GFX 库打开示例程序：**文件 > 示例 > Seeed_GFX > ePaper > Basic > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库打开示例代码：**文件 > 示例 > Seeed_GFX > ePaper > Basic > HelloWorld**
 
-**步骤 2.** 在与您的程序相同的文件夹中创建一个名为 `driver.h` 的新文件。您可以通过单击 Arduino IDE 中的箭头按钮并选择"新建标签页"，然后将其命名为 `driver.h` 来完成此操作。
+**步骤 2.** 在与您的代码相同的文件夹中创建一个名为 `driver.h` 的新文件。您可以通过单击 Arduino IDE 中的箭头按钮并选择"新建选项卡"，然后将其命名为 `driver.h` 来完成此操作。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -134,7 +134,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 #define BOARD_SCREEN_COMBO 520 // reTerminal E1001 (UC8179)
 ```
 
-**步骤 5.** 将程序上传到您的 reTerminal E1001。您应该看到显示屏显示各种图形，包括线条、文本和形状，演示基本绘图功能。
+**步骤 5.** 将代码上传到您的 reTerminal E1001。您应该看到显示屏显示各种图形，包括线条、文本和形状，演示基本绘图功能。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/148.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -145,9 +145,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 全彩 ePaper 显示屏支持红色、黑色和白色，允许创建更丰富的视觉界面。
 
-**步骤 1.** 从 Seeed_GFX 库打开彩色示例程序：**文件 > 示例 > Seeed_GFX > ePaper > Colorful > HelloWorld**
+**步骤 1.** 从 Seeed_GFX 库打开彩色示例代码：**文件 > 示例 > Seeed_GFX > ePaper > Colorful > HelloWorld**
 
-**步骤 2.** 在与您的程序相同的文件夹中创建一个名为 `driver.h` 的新文件，按照之前相同的过程。
+**步骤 2.** 在与您的代码相同的文件夹中创建一个名为 `driver.h` 的新文件，按照之前相同的过程。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/select2.jpg" style={{width:1000, height:'auto'}}/></div>
 
@@ -161,7 +161,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 #define BOARD_SCREEN_COMBO 521 // reTerminal E1002 (UC8179C)
 ```
 
-**步骤 5.** 将程序上传到您的 reTerminal E1002。显示屏将显示彩色图形，演示 ePaper 显示屏的全彩功能。
+**步骤 5.** 将代码上传到您的 reTerminal E1002。显示屏将显示彩色图形，演示 ePaper 显示屏的全彩功能。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/149.jpg" style={{width:500, height:'auto'}}/></div>
 
@@ -180,6 +180,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/ZinggJM/GxEPD2" target="_blank" rel="noopener noreferrer">
+
     <strong><span><font color={'FFFFFF'} size={"4"}>下载库文件</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
@@ -189,7 +190,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 **步骤 3.** `GxEPD2` 库需要 `Adafruit GFX Library` 才能正常工作，您也必须安装它。最简单的方法是通过库管理器：转到 **Tools > Manage Libraries...**，搜索 "Adafruit GFX Library"，然后点击 "Install"。
 
 :::note
-虽然 `GxEPD2` 在 Arduino 库管理器中可用以方便使用，但那里的版本通常可能过时。GitHub 仓库是最新版本的权威来源，包含最新功能、错误修复和对最新电子纸显示器的支持。因此，建议直接从 GitHub 下载库以确保您拥有最新的代码。
+虽然 `GxEPD2` 在 Arduino 库管理器中可用以方便使用，但那里的版本通常可能过时。GitHub 仓库是最新版本的权威来源，包含最新功能、错误修复和对最新电子纸显示屏的支持。因此，直接从 GitHub 下载库是确保您拥有最新代码的推荐方法。
 :::
 
 <Tabs>
@@ -197,7 +198,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 #### 编程 reTerminal E1001（黑白屏幕）
 
-这是使用 `GxEPD2` 库在 reTerminal E1001 的黑白电子纸显示器上显示 "Hello World!" 的示例代码。将 `EPD_SELECT` 设置为 `0` 以选择 E1001 的驱动程序。
+这是使用 `GxEPD2` 库在 reTerminal E1001 的黑白电子纸显示屏上显示 "Hello World!" 的示例代码。将 `EPD_SELECT` 设置为 `0` 以选择 E1001 的驱动程序。
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -287,7 +288,7 @@ void loop() {};
 
 #### 编程 reTerminal E1002（全彩屏幕）
 
-对于 reTerminal E1002，您只需将 `EPD_SELECT` 的值更改为 `1`。这将为 7.3 英寸全彩电子纸显示器选择适当的驱动程序。其余代码保持不变。
+对于 reTerminal E1002，您只需将 `EPD_SELECT` 的值更改为 `1`。这将为 7.3 英寸全彩电子纸显示屏选择适当的驱动程序。其余代码保持不变。
 
 ```cpp
 #include <GxEPD2_BW.h>
@@ -377,7 +378,7 @@ void loop() {};
 </Tabs>
 
 :::note
-电子纸显示器的刷新速度相对较慢（通常全刷新需要 1-3 秒）。这是正常行为，是超低功耗和无背光下优异可视性的权衡。
+电子纸显示屏的刷新速度相对较慢（通常全刷新需要 1-3 秒）。这是正常行为，是超低功耗和无背光下优异可视性的权衡。
 :::
 
 ## reTerminal 硬件使用例程
@@ -605,217 +606,219 @@ void loop() {
   buzzer_tone(NOTE_G5, 80, 20);
   buzzer_tone(NOTE_C6, 150, 0);
   delay(30000);
-}```
+}
 
-**蜂鸣器功能：**
+```
 
-- `digitalWrite()`：用于基本蜂鸣声的简单开/关控制
-- `tone(pin, frequency, duration)`：生成特定频率的旋律或警报
-- `noTone(pin)`：停止音调生成
+**Buzzer Functions:**
 
-**常见警报模式：**
+- `digitalWrite()`: Simple ON/OFF control for basic beeps
+- `tone(pin, frequency, duration)`: Generate specific frequencies for melodies or alerts
+- `noTone(pin)`: Stop tone generation
 
-- 单次蜂鸣：确认
-- 双次蜂鸣：警告
-- 三次蜂鸣：错误
-- 连续蜂鸣：严重警报
+**Common Alert Patterns:**
 
-### 用户按钮
+- Single beep: Confirmation
+- Double beep: Warning
+- Triple beep: Error
+- Continuous: Critical alert
 
-reTerminal E 系列具有三个用户可编程按钮，可用于各种控制目的。本节演示如何使用 Arduino 读取按钮状态并响应按钮按下。
+### User Buttons
 
-reTerminal E 系列有三个连接到 ESP32-S3 的按钮：
+The reTerminal E Series features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
 
-- **KEY0** (GPIO3)：右按钮（绿色按钮）
-- **KEY1** (GPIO4)：中间按钮
-- **KEY2** (GPIO5)：左按钮
+The reTerminal E Series has three buttons connected to the ESP32-S3:
 
-所有按钮都是低电平有效，这意味着按下时读取为 LOW，释放时读取为 HIGH。
+- **KEY0** (GPIO3): Right button (Green Button)
+- **KEY1** (GPIO4): Middle button
+- **KEY2** (GPIO5): Left button
 
-#### 基本按钮读取示例
+All buttons are active-low, meaning they read LOW when pressed and HIGH when released.
 
-此示例演示如何检测按钮按下并向串行监视器打印消息。
+#### Basic Button Reading Example
+
+This example demonstrates how to detect button presses and print messages to the serial monitor.
 
 ```cpp
-// reTerminal E Series - Button Test
-// Based on hardware schematic
+// reTerminal E Series - 按钮测试
+// 基于硬件原理图
 
-// Define button pins according to schematic
+// 根据原理图定义按钮引脚
 const int BUTTON_KEY0 = 3;   // KEY0 - GPIO3
 const int BUTTON_KEY1 = 4;   // KEY1 - GPIO4
 const int BUTTON_KEY2 = 5;   // KEY2 - GPIO5
 
-// Button state variables
+// 按钮状态变量
 bool lastKey0State = HIGH;
 bool lastKey1State = HIGH;
 bool lastKey2State = HIGH;
 
 void setup() {
-  // Initialize serial communication
+  // 初始化串口通信
   Serial1.begin(115200, SERIAL_8N1, 44, 43);
   while (!Serial1) {
-    delay(10); // Wait for serial port to connect
+    delay(10); // 等待串口连接
   }
 
   Serial1.println("=================================");
-  Serial1.println("reTerminal E Series - Button Test");
+  Serial1.println("reTerminal E Series - 按钮测试");
   Serial1.println("=================================");
-  Serial1.println("Press any button to see output");
+  Serial1.println("按任意按钮查看输出");
   Serial1.println();
 
-  // Configure button pins as inputs
-  // Hardware already has pull-up resistors, so use INPUT mode
+  // 配置按钮引脚为输入
+  // 硬件已有上拉电阻，所以使用 INPUT 模式
   pinMode(BUTTON_KEY0, INPUT);
   pinMode(BUTTON_KEY1, INPUT);
   pinMode(BUTTON_KEY2, INPUT);
 
-  // Read initial states
+  // 读取初始状态
   lastKey0State = digitalRead(BUTTON_KEY0);
   lastKey1State = digitalRead(BUTTON_KEY1);
   lastKey2State = digitalRead(BUTTON_KEY2);
 
-  Serial1.println("Setup complete. Ready to detect button presses...");
+  Serial1.println("设置完成。准备检测按钮按下...");
 }
 
 void loop() {
-  // Read current button states
+  // 读取当前按钮状态
   bool key0State = digitalRead(BUTTON_KEY0);
   bool key1State = digitalRead(BUTTON_KEY1);
   bool key2State = digitalRead(BUTTON_KEY2);
 
-  // Check KEY0
+  // 检查 KEY0
   if (key0State != lastKey0State) {
     if (key0State == LOW) {
-      Serial1.println("KEY0 (GPIO3) pressed!");
+      Serial1.println("KEY0 (GPIO3) 按下！");
     } else {
-      Serial1.println("KEY0 (GPIO3) released!");
+      Serial1.println("KEY0 (GPIO3) 释放！");
     }
     lastKey0State = key0State;
-    delay(50); // Debounce delay
+    delay(50); // 防抖延迟
   }
 
-  // Check KEY1
+  // 检查 KEY1
   if (key1State != lastKey1State) {
     if (key1State == LOW) {
-      Serial1.println("KEY1 (GPIO4) pressed!");
+      Serial1.println("KEY1 (GPIO4) 按下！");
     } else {
-      Serial1.println("KEY1 (GPIO4) released!");
+      Serial1.println("KEY1 (GPIO4) 释放！");
     }
     lastKey1State = key1State;
-    delay(50); // Debounce delay
+    delay(50); // 防抖延迟
   }
 
-  // Check KEY2
+  // 检查 KEY2
   if (key2State != lastKey2State) {
     if (key2State == LOW) {
-      Serial1.println("KEY2 (GPIO5) pressed!");
+      Serial1.println("KEY2 (GPIO5) 按下！");
     } else {
-      Serial1.println("KEY2 (GPIO5) released!");
+      Serial1.println("KEY2 (GPIO5) 释放！");
     }
     lastKey2State = key2State;
-    delay(50); // Debounce delay
+    delay(50); // 防抖延迟
   }
 
-  delay(10); // Small delay to prevent excessive CPU usage
+  delay(10); // 小延迟以防止过度占用 CPU
 }
 ```
 
-**代码工作原理：**
+**How the Code Works:**
 
-1. **引脚定义**：我们为每个按钮的 GPIO 引脚号定义常量。
+1. **Pin Definition**: We define constants for each button's GPIO pin number.
 
-2. **引脚配置**：在 `setup()` 中，我们将每个按钮引脚配置为 `INPUT`。
+2. **Pin Configuration**: In `setup()`, we configure each button pin as `INPUT`.
 
-3. **按钮检测**：在 `loop()` 中，我们使用 `digitalRead()` 持续检查每个按钮的状态。当按钮被按下时，引脚读取为 LOW。
+3. **Button Detection**: In `loop()`, we continuously check each button's state using `digitalRead()`. When a button is pressed, the pin reads LOW.
 
-4. **去抖动**：每次按钮按下后的简单 200ms 延迟可防止由于机械抖动导致的单次按下的多次检测。
+4. **Debouncing**: A simple 200ms delay after each button press prevents multiple detections from a single press due to mechanical bounce.
 
-5. **串行输出**：每次按钮按下都会向串行监视器发送消息，用于调试和验证。
+5. **Serial Output**: Each button press triggers a message to the serial monitor for debugging and verification.
 
 ---
 
-**步骤 1.** 将代码上传到您的 reTerminal E 系列设备。
+**Step 1.** Upload the code to your reTerminal E Series device.
 
-**步骤 2.** 在 Arduino IDE 中打开串行监视器（工具 > 串行监视器）。
+**Step 2.** Open the Serial Monitor in Arduino IDE (Tools > Serial Monitor).
 
-**步骤 3.** 将波特率设置为 115200。
+**Step 3.** Set the baud rate to 115200.
 
-**步骤 4.** 按下每个按钮并观察串行监视器中的输出。
+**Step 4.** Press each button and observe the output in the Serial Monitor.
 
-按下按钮时的预期输出：
+Expected output when pressing buttons:
 
 ```
 =================================
-reTerminal E Series - Button Test
+reTerminal E Series - 按钮测试
 =================================
-Press any button to see output
+按任意按钮查看输出
 
-KEY0 (GPIO3) pressed!
-KEY0 (GPIO3) released!
-KEY1 (GPIO4) pressed!
-KEY1 (GPIO4) released!
-KEY2 (GPIO5) pressed!
-KEY2 (GPIO5) released!
+KEY0 (GPIO3) 按下！
+KEY0 (GPIO3) 释放！
+KEY1 (GPIO4) 按下！
+KEY1 (GPIO4) 释放！
+KEY2 (GPIO5) 按下！
+KEY2 (GPIO5) 释放！
 ```
 
-### 环境传感器 (SHT4x)
+### Environmental Sensor (SHT4x)
 
-reTerminal E 系列包含一个通过 I2C 连接的集成 SHT4x 温湿度传感器。
+The reTerminal E Series includes an integrated SHT4x temperature and humidity sensor connected via I2C.
 
-#### 安装所需库
+#### Installing Required Libraries
 
-通过 Arduino 库管理器安装两个库（**工具 > 管理库...**）：
+Install two libraries via Arduino Library Manager (**Tools > Manage Libraries...**):
 
-1. 搜索并安装 "**Sensirion I2C SHT4x**"
-2. 搜索并安装 "**Sensirion Core**"（依赖项）
+1. Search and install "**Sensirion I2C SHT4x**"
+2. Search and install "**Sensirion Core**" (dependency)
 
-#### 基本温湿度示例
+#### Basic Temperature and Humidity Example
 
 ```cpp
-// reTerminal E Series - SHT40 Temperature & Humidity Sensor Example
+// reTerminal E Series - SHT40 温湿度传感器示例
 
 #include <Wire.h>
 #include <SensirionI2cSht4x.h>
 
-// Serial configuration for reTerminal E Series
+// reTerminal E Series 串口配置
 #define SERIAL_RX 44
 #define SERIAL_TX 43
 
-// I2C pins for reTerminal E Series
+// reTerminal E Series I2C 引脚
 #define I2C_SDA 19
 #define I2C_SCL 20
 
-// Create sensor object
+// 创建传感器对象
 SensirionI2cSht4x sht4x;
 
 void setup() {
-    // Initialize Serial1 for reTerminal E Series
+    // 为 reTerminal E Series 初始化 Serial1
     Serial1.begin(115200, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
     while (!Serial1) {
         delay(10);
     }
 
-    Serial1.println("SHT4x Basic Example");
+    Serial1.println("SHT4x 基础示例");
 
-    // Initialize I2C with custom pins
+    // 使用自定义引脚初始化 I2C
     Wire.begin(I2C_SDA, I2C_SCL);
 
     uint16_t error;
     char errorMessage[256];
 
-    // Initialize the sensor
+    // 初始化传感器
     sht4x.begin(Wire, 0x44);
 
-    // Read and print serial number
+    // 读取并打印序列号
     uint32_t serialNumber;
     error = sht4x.serialNumber(serialNumber);
 
     if (error) {
-        Serial1.print("Error trying to execute serialNumber(): ");
+        Serial1.print("执行 serialNumber()时出错：");
         errorToString(error, errorMessage, 256);
         Serial1.println(errorMessage);
     } else {
-        Serial1.print("Serial Number: ");
+        Serial1.print("序列号：");
         Serial1.println(serialNumber);
         Serial1.println();
     }
@@ -825,107 +828,107 @@ void loop() {
     uint16_t error;
     char errorMessage[256];
 
-    delay(5000);  // Wait 5 seconds between measurements
+    delay(5000);  // 测量间隔等待 5 秒
 
     float temperature;
     float humidity;
 
-    // Measure temperature and humidity with high precision
+    // 高精度测量温湿度
     error = sht4x.measureHighPrecision(temperature, humidity);
 
     if (error) {
-        Serial1.print("Error trying to execute measureHighPrecision(): ");
+        Serial1.print("执行 measureHighPrecision()时出错：");
         errorToString(error, errorMessage, 256);
         Serial1.println(errorMessage);
     } else {
-        Serial1.print("Temperature: ");
+        Serial1.print("温度：");
         Serial1.print(temperature);
         Serial1.print("°C\t");
-        Serial1.print("Humidity: ");
+        Serial1.print("湿度：");
         Serial1.print(humidity);
         Serial1.println("%");
     }
 }
 ```
 
-**设置函数：**
+**Setup Function:**
 
-1. **串行初始化**：使用 `Serial1` 与 reTerminal E 系列特定的引脚 44 (RX) 和 43 (TX)
-2. **I2C 初始化**：使用引脚 19 (SDA) 和 20 (SCL) 配置 I2C
-3. **传感器初始化**：调用 `sht4x.begin(Wire, 0x44)` 在地址 0x44 初始化 SHT4x 传感器
-4. **序列号读取**：读取并显示传感器的唯一序列号以进行验证
+1. **Serial Initialization**: Uses `Serial1` with pins 44 (RX) and 43 (TX) specific to reTerminal E Series
+2. **I2C Initialization**: Configures I2C with pins 19 (SDA) and 20 (SCL)
+3. **Sensor Initialization**: Calls `sht4x.begin(Wire, 0x44)` to initialize the SHT4x sensor at address 0x44
+4. **Serial Number Reading**: Reads and displays the sensor's unique serial number for verification
 
-**循环函数：**
+**Loop Function:**
 
-1. **延迟**：在测量之间等待 5 秒以避免过度采样
-2. **测量**：使用 `measureHighPrecision()` 进行精确读取（需要约 8.3ms）
-3. **错误处理**：检查错误并使用 `errorToString()` 将其转换为可读消息
-4. **显示结果**：打印摄氏度温度和相对湿度百分比
+1. **Delay**: Waits 5 seconds between measurements to avoid oversampling
+2. **Measurement**: Uses `measureHighPrecision()` for accurate readings (takes ~8.3ms)
+3. **Error Handling**: Checks for errors and converts them to readable messages using `errorToString()`
+4. **Display Results**: Prints temperature in Celsius and relative humidity percentage
 
-**预期输出**
+**Expected Output**
 
 ```
-SHT4x Basic Example
-Serial Number: 331937553
+SHT4x 基础示例
+序列号：331937553
 
-Temperature: 27.39°C Humidity: 53.68%
-Temperature: 27.40°C Humidity: 53.51%
-Temperature: 27.38°C Humidity: 53.37%
+温度：27.39°C 湿度：53.68%
+温度：27.40°C 湿度：53.51%
+温度：27.38°C 湿度：53.37%
 ```
 
-### 电池管理系统
+### Battery Management System
 
-reTerminal E 系列包含通过带有分压电路的 ADC 引脚进行电池电压监测的功能。
+The reTerminal E Series includes battery voltage monitoring capability through an ADC pin with voltage divider circuit.
 
-#### 简单电池电压监测
+#### Simple Battery Voltage Monitoring
 
 ```cpp
-// reTerminal E Series - Simple Battery Voltage Reading
+// reTerminal E Series - 简单电池电压读取
 
-// Serial configuration
+// 串口配置
 #define SERIAL_RX 44
 #define SERIAL_TX 43
 
-// Battery monitoring pins
-#define BATTERY_ADC_PIN 1      // GPIO1 - Battery voltage ADC
-#define BATTERY_ENABLE_PIN 21  // GPIO21 - Battery monitoring enable
+// 电池监控引脚
+#define BATTERY_ADC_PIN 1      // GPIO1 - 电池电压 ADC
+#define BATTERY_ENABLE_PIN 21  // GPIO21 - 电池监控使能
 
 void setup() {
-  // Initialize serial
+  // 初始化串口
   Serial1.begin(115200, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
   while (!Serial1) {
     delay(10);
   }
 
-  Serial1.println("Battery Voltage Monitor");
+  Serial1.println("电池电压监控");
 
-  // Configure battery monitoring enable pin
+  // 配置电池监控使能引脚
   pinMode(BATTERY_ENABLE_PIN, OUTPUT);
-  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // Enable battery monitoring
+  digitalWrite(BATTERY_ENABLE_PIN, HIGH);  // 启用电池监控
 
-  // Configure ADC
-  analogReadResolution(12);  // 12-bit resolution
+  // 配置 ADC
+  analogReadResolution(12);  // 12 位分辨率
   analogSetPinAttenuation(BATTERY_ADC_PIN, ADC_11db);
 
-  delay(100);  // Allow circuit to stabilize
+  delay(100);  // 让电路稳定
 }
 
 void loop() {
-  // Enable battery monitoring
+  // 启用电池监控
   digitalWrite(BATTERY_ENABLE_PIN, HIGH);
   delay(5);
 
-  // Read voltage in millivolts
+  // 读取毫伏电压
   int mv = analogReadMilliVolts(BATTERY_ADC_PIN);
 
-  // Disable battery monitoring
+  // 禁用电池监控
   digitalWrite(BATTERY_ENABLE_PIN, LOW);
 
-  // Calculate actual battery voltage (2x due to voltage divider)
+  // 计算实际电池电压（由于分压器为 2 倍）
   float batteryVoltage = (mv / 1000.0) * 2;
 
-  // Print voltage
-  Serial1.print("Battery: ");
+  // 打印电压
+  Serial1.print("电池：");
   Serial1.print(batteryVoltage, 2);
   Serial1.println(" V");
 
@@ -933,38 +936,40 @@ void loop() {
 }
 ```
 
-**代码说明：**
+**Code Explanation:**
 
-- GPIO1 通过 ADC 读取分压后的电池电压
-- GPIO21 启用电池监测电路
-- 由于分压器的存在，实际电池电压是测量电压的两倍
-- 对于充满电的锂聚合物电池，预期约为 4.2V
-- 当电池电量低时，电压降至约 3.3V
+- GPIO1 reads the divided battery voltage through ADC
+- GPIO21 enables the battery monitoring circuit
+- The actual battery voltage is twice the measured voltage due to the voltage divider
+- For a fully charged LiPo battery, expect around 4.2V
+- When battery is low, voltage drops to around 3.3V
 
-**预期输出**
+**Expected Output**
 
 ```
-Battery Voltage Monitor
+电池电压监控
 
-Battery: 4.18 V
-Battery: 4.19 V
-Battery: 4.18 V
+电池：4.18 V
+电池：4.19 V
+电池：4.18 V
 ```
 
-### 使用 MicroSD 卡
+### Using the MicroSD Card
 
-对于需要额外存储的应用，如数字相框或数据记录，reTerminal E 系列包含一个 MicroSD 卡插槽。
+For applications requiring additional storage, such as a digital photo frame or data logging, the reTerminal E Series includes a MicroSD card slot.
 
-如果您计划将设备用作数字相框或需要额外存储，请插入 microSD 卡。
+Insert a microSD card if you plan to use the device as a digital photo frame or need additional storage.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/133.jpg" style={{width:700, height:'auto'}}/></div>
+
 :::note
-reTerminal E 系列仅支持最大 64GB 且格式化为 **Fat32** 文件系统的 MicroSD 卡。
+The reTerminal E Series only supports MicroSD cards up to 64GB formatted with the **Fat32** file system.
 :::
 
-#### 基本 SD 卡操作：列出文件
+#### Basic SD Card Operations: Listing Files
 
-此示例演示如何初始化 SD 卡、检测卡的插入或移除，并列出其根目录中的所有文件和目录。该代码对于 **reTerminal E1001** 和 **reTerminal E1002** 都是相同的。
+This example demonstrates how to initialize the SD card, detect when it is inserted or removed, and list all the files and directories in its root. The code is identical for both the **reTerminal E1001** and **reTerminal E1002**.
+
 
 将以下代码复制到您的 Arduino IDE 草图中。
 
@@ -1135,13 +1140,13 @@ void loop() {
 
 ##### 代码说明
 
-- **引脚定义：** 代码首先定义用于 MicroSD 卡插槽的 GPIO 引脚。请注意，SPI 引脚（`MOSI`、`SCK`）与电子纸显示屏共享，但单独的片选（`SD_CS_PIN`）和专用的 SPI 实例（`spiSD`）确保它们可以独立使用。
+- **引脚定义：** 代码首先定义了用于 MicroSD 卡插槽的 GPIO 引脚。请注意，SPI 引脚（`MOSI`、`SCK`）与电子纸显示屏共享，但单独的片选（`SD_CS_PIN`）和专用的 SPI 实例（`spiSD`）确保它们可以独立使用。
 - **SPI 初始化：** 我们实例化一个新的 SPI 对象 `spiSD(HSPI)`，以使用 ESP32 的第二个硬件 SPI 控制器（HSPI）。这是避免与其他 SPI 设备冲突的最佳实践。
 - **卡检测：** `isCardInserted()` 函数读取 `SD_DET_PIN`。在 reTerminal 硬件上，当卡存在时，此引脚被拉低。
-- **挂载/卸载：** `mountSD()` 函数为卡启用电源，使用正确的引脚配置 HSPI 总线，并调用 `SD.begin()` 初始化文件系统。`unmountSD()` 释放资源。
+- **挂载/卸载：** `mountSD()` 函数启用卡的电源，使用正确的引脚配置 HSPI 总线，并调用 `SD.begin()` 初始化文件系统。`unmountSD()` 释放资源。
 - **文件列表：** `listRoot()` 打开根目录（`/`），`listDir()` 是一个递归函数，遍历文件系统，打印所有文件和目录的名称。
 - **`setup()`：** 初始化 `Serial1` 用于输出，配置卡检测引脚，并执行初始检查以查看设备启动时是否已插入卡。
-- **`loop()`：** 代码不是持续检查卡，而是使用非阻塞计时器（`millis()`）每秒检查一次卡状态的变化。如果检测到变化（卡插入或移除），它会挂载或卸载卡并将状态打印到串行监视器。
+- **`loop()`：** 代码不是持续检查卡，而是使用非阻塞计时器（`millis()`）每秒检查一次卡状态的变化。如果检测到变化（插入或移除卡），它会挂载或卸载卡并将状态打印到串行监视器。
 
 ##### 预期结果
 
@@ -1151,9 +1156,9 @@ void loop() {
 
 您将看到与以下操作对应的输出：
 
-- **启动时无卡：** 监视器将打印 `[SD] No card detected at startup...`
-- **插入卡时：** 监视器将打印 `[SD] Card inserted.`，然后是卡上所有文件和目录的完整列表。
-- **移除卡时：** 监视器将打印 `[SD] Card removed.`
+- **启动时没有卡：** 监视器将打印 `[SD] No card detected at startup...`
+- **当您插入卡时：** 监视器将打印 `[SD] Card inserted.`，然后是卡上所有文件和目录的完整列表。
+- **当您移除卡时：** 监视器将打印 `[SD] Card removed.`
 
 ```
 [FILE] live.0.shadowIndexGroups  6 bytes
@@ -1172,7 +1177,7 @@ void loop() {
 
 ### 高级示例：从 SD 卡显示 BMP 图像
 
-这个综合示例结合了前面章节的功能。我们将编写一个程序，从 MicroSD 卡读取位图（`.bmp`）图像文件并在 reTerminal 的电子纸屏幕上显示。这演示了设备的实际应用。
+这个综合示例结合了前面章节的功能。我们将编写一个程序，从 MicroSD 卡读取位图（`.bmp`）图像文件并在 reTerminal 的电子纸屏幕上显示。这展示了设备的实际应用。
 
 程序将在 SD 卡的根目录中查找名为 `test.bmp` 的文件。
 
@@ -1196,7 +1201,7 @@ void loop() {
 1. **调整图像大小：** 将您的图片调整为 **800x480 像素**。
 
 2. **转换为灰度（推荐）：** 在图像编辑器中，首先将图像转换为灰度。在 **GIMP** 中：
-    - 转到菜单 **颜色 > 去饱和 > 去饱和...**。选择"亮度"等模式以获得最佳效果。
+    - 转到菜单 **颜色 > 去色 > 去色...**。选择"亮度"等模式以获得最佳效果。
 
 3. **保存为标准 BMP：** 按照彩色屏幕指南的相同步骤保存文件。即使图像是灰度的，将其保存为 24 位 BMP 可确保与代码的最大兼容性。
     - 转到 **文件 > 导出为...**，命名为 `test.bmp`。
@@ -1208,16 +1213,18 @@ void loop() {
 </TabItem>
 <TabItem value="For reTerminal E1002 (Color Screen)" label="适用于 reTerminal E1002（彩色屏幕）">
 
-彩色屏幕可以显示 6 种颜色：黑色、白色、红色、黄色、蓝色和绿色。提供的代码包含一个"最近颜色"算法，可以智能地将源图像中的任何颜色映射到屏幕上最佳的可用颜色。为了获得最佳效果，请按照以下步骤操作：
+彩色屏幕可以显示 6 种颜色：黑色、白色、红色、黄色、蓝色和绿色。提供的代码包含一个"最近颜色"算法，智能地将源图像中的任何颜色映射到屏幕上最佳的可用颜色。为了获得最佳效果，请按照以下步骤操作：
 
 1. **调整图像大小：** 使用任何图像编辑器，将您的图片调整为 **800x480 像素**。
-2. **保存为标准 BMP：** 代码设计用于读取**未压缩**的 24 位或 32 位 BMP 文件。使用专业的图像编辑器是确保格式正确的最佳方式。我们推荐免费开源软件 **GIMP**：
+
+2. **保存为标准 BMP：** 代码设计用于读取 **未压缩** 的 24 位或 32 位 BMP 文件。使用专业图像编辑器是确保格式正确的最佳方法。我们推荐免费开源软件 **GIMP**：
     - 在 GIMP 中打开调整大小后的图像。
     - 转到菜单 **文件 > 导出为...**。
     - 将文件命名为 `test.bmp` 并点击 **导出**。
-    - 在出现的"导出图像为 BMP"对话框中，展开 **高级选项**。
-    - 选择 **"24 bits: R8 G8 B8"**。这是最兼容的未压缩格式。
+    - 在出现的"将图像导出为 BMP"对话框中，展开 **高级选项**。
+    - 选择 **"24 位：R8 G8 B8"**。这是最兼容的未压缩格式。
     - 点击 **导出**。
+
 
 3. **复制到 SD 卡：** 将最终的 `test.bmp` 文件复制到 MicroSD 卡的根目录。
 
@@ -1228,7 +1235,7 @@ void loop() {
 
 #### 代码
 
-这是最终验证的代码。它包含所有必要的检查和高级颜色匹配算法。只需将 `EPD_SELECT` 宏设置为 `0`（用于 E1001 黑白屏）或 `1`（用于 E1002 彩色屏）。
+这是最终验证过的代码。它包含所有必要的检查和高级颜色匹配算法。只需将 `EPD_SELECT` 宏设置为 `0`（用于 E1001 黑白屏）或 `1`（用于 E1002 彩色屏）。
 
 <Tabs>
 <TabItem value="For reTerminal E1001 (B&W Screen)" label="For reTerminal E1001 (B&W Screen)" default>
@@ -1782,62 +1789,53 @@ void setup() {
 void loop() {
   // Nothing to do here for this example
 }
+
 ```
 
 </TabItem>
 </Tabs>
 
-#### 工作原理
+#### How It Works
 
-- **`setup()`**：`setup` 函数按顺序初始化所有必要的硬件：用于调试的串口、共享 SPI 总线、电子纸显示屏，最后是 SD 卡。如果所有初始化都成功，它会调用一次 `drawBmp()` 来执行主要任务。
-- **`drawBmp()`**：这是核心函数。它打开 BMP 文件，解析头部以读取其尺寸和属性，并执行关键的验证检查。它专门检查不支持的压缩类型，如果发现会提供有用的错误消息。
-- **绘制循环**：函数从 SD 卡逐行读取图像。对于行中的每个像素，它提取红、绿、蓝颜色值。
-- **颜色处理**：这里的逻辑根据 `EPD_SELECT` 宏分为两种情况：
-  - **彩色屏（E1002）**：调用 `findNearestColor(r, g, b)`。此函数计算像素颜色与屏幕调色板中 6 种颜色之间的"距离"。它返回距离最小的调色板颜色，确保最准确的颜色表示。
-  - **黑白屏（E1001）**：使用标准亮度公式（`r * 0.299 + g * 0.587 + b * 0.114`）将 RGB 颜色转换为单一亮度值。如果此值低于阈值（128），像素绘制为黑色；否则绘制为白色。
+- **`setup()`**: The `setup` function initializes all necessary hardware in sequence: the Serial port for debugging, the shared SPI bus, the e-paper display, and finally the SD card. If all initializations are successful, it makes a single call to `drawBmp()` to perform the main task.
+- **`drawBmp()`**: This is the core function. It opens the BMP file, parses the header to read its dimensions and properties, and performs crucial validation checks. It specifically checks for unsupported compression types and provides a helpful error message if it finds one.
+- **Drawing Loop**: The function reads the image from the SD card one row at a time. For each pixel in the row, it extracts the Red, Green, and Blue color values.
+- **Color Handling**: This is where the logic splits based on the `EPD_SELECT` macro:
+  - **For Color (E1002)**: It calls `findNearestColor(r, g, b)`. This function calculates the "distance" between the pixel's color and each of the 6 colors in the screen's palette. It returns the palette color with the smallest distance, ensuring the most accurate possible color representation.
+  - **For B&W (E1001)**: It uses a standard luminance formula (`r * 0.299 + g * 0.587 + b * 0.114`) to convert the RGB color to a single brightness value. If this value is below a threshold (128), the pixel is drawn as black; otherwise, it's drawn as white.
 
-#### 上传和运行
+#### Upload and Run
 
-1. 在 Arduino IDE 中，确保选择了正确的开发板（`XIAO_ESP32S3`）。
-2. 将代码顶部的 `EPD_SELECT` 宏设置为 `1`（用于 reTerminal E1002）或 `0`（用于 E1001）。
-3. 将准备好的 MicroSD 卡插入 reTerminal。
-4. 上传代码。
-5. 以 `115200` 波特率打开串口监视器。您将看到进度日志，几分钟后图像将在电子纸显示屏上渲染。
+1. In the Arduino IDE, make sure you have the correct board selected (`XIAO_ESP32S3`).
+2. Set the `EPD_SELECT` macro at the top of the code to `1` for the reTerminal E1002 or `0` for the E1001.
+3. Insert your prepared MicroSD card into the reTerminal.
+4. Upload the code.
+5. Open the Serial Monitor at a baud rate of `115200`. You will see the progress logs, and after a few moments, the image will be rendered on the e-paper display.
 
-:::tip 关于刷新速度
-屏幕刷新速度可能较慢，有时屏幕在上传程序后 2~3 分钟才会响应。
+:::tip About Refresh Speed
+The screen refresh speed may be slow, sometimes the screen will not respond until 2~3 minutes after uploading the program.
 :::
 
-## 故障排除
+## Troubleshooting
 
-### Q1：为什么运行上述代码时 reTerminal 的电子纸显示屏不显示任何内容或不刷新？
+### Q1: Why does the reTerminal's ePaper display not show anything or refresh when running the code above?
 
-如果您在 reTerminal 中插入了 MicroSD 卡，可能会出现此问题。原因是 MicroSD 卡和电子纸显示屏在 reTerminal 上共享同一个 SPI 总线。如果插入了 MicroSD 卡但其使能（片选）引脚未正确管理，可能会在 SPI 总线上造成冲突。具体来说，MicroSD 卡可能会保持 BUSY 线为高电平，这会阻止电子纸显示屏正常工作——导致没有显示更新或刷新。
+This issue may occur if you have inserted a MicroSD card into the reTerminal. The reason is that the MicroSD card and the ePaper display share the same SPI bus on the reTerminal. If a MicroSD card is inserted but its enable (chip select) pin is not properly managed, it can cause a conflict on the SPI bus. Specifically, the MicroSD card may hold the BUSY line high, which prevents the ePaper display from functioning correctly—resulting in no display updates or refreshes.
 
 ```cpp
-// Initialize SD Card
+// 初始化 SD 卡
 pinMode(SD_EN_PIN, OUTPUT);
 digitalWrite(SD_EN_PIN, HIGH);
 pinMode(SD_DET_PIN, INPUT_PULLUP);
 ```
 
-要解决此问题，您必须确保使用上述提供的代码正确启用 MicroSD 卡。该代码通过设置正确的引脚状态来初始化和启用 MicroSD 卡，这可以防止 SPI 总线冲突，并允许 SD 卡和电子纸显示屏协同工作。在 reTerminal 上使用 MicroSD 卡时，请始终使用推荐的初始化代码以避免此类问题。
+To resolve this, you must ensure that the MicroSD card is properly enabled using the code provided above. The code initializes and enables the MicroSD card by setting the correct pin states, which prevents SPI bus conflicts and allows both the SD card and the ePaper display to work together. Always use the recommended initialization code when using a MicroSD card with the reTerminal to avoid such issues.
 
-如果您的项目中不使用 MicroSD 卡，我们建议在运行显示程序之前关闭设备并取出卡片。如果卡片已插入 reTerminal，您需要添加上述代码以确保屏幕能够正常显示，无论您是否使用 MicroSD 卡。
+If the MicroSD card is not used inside your project, we recommend powering down the device and removing the card before running the display program. If the card has been inserted into the reTerminal, you will need to add the above code to ensure that you can get the screen to display properly, regardless of whether you are using a MicroSD card or not.
 
-### Q2：为什么无法向 reTerminal 上传程序？
+## Tech Support & Product Discussion
 
-如果您在向 reTerminal 上传程序时遇到以下错误。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
-
-那么，很可能是您的 Arduino IDE 设置了过高的上传速度。请将其更改为 115200 波特率以解决此问题。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/159.png" style={{width:400, height:'auto'}}/></div>
-
-## 技术支持与产品讨论
-
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">

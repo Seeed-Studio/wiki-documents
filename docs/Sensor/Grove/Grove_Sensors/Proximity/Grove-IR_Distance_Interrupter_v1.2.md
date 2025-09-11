@@ -176,7 +176,7 @@ Plug Grove - IR Distance Interrupter into port D4 on GrovePi with [Grove cable](
 Run the command in a terminal:
 
 ```
-    nano grove_infrared_distance_interrupt.py
+    nano grove\_infrared\_distance\_interrupt.py
 ```
 
 Copy and save the following code into it.
@@ -209,7 +209,7 @@ while True:
 5.Run the demo, run following command in terminal.
 
 ```
-    sudo python grove_infrared_distance_interrupt.py
+    sudo python grove\_infrared\_distance\_interrupt.py
 ```
 
 ## Schematic Online Viewer

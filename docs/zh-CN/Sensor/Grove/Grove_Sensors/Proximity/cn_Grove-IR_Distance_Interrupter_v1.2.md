@@ -176,7 +176,7 @@ void loop()  {
 在终端中运行命令：
 
 ```
-    nano grove_infrared_distance_interrupt.py
+    nano grove\_infrared\_distance\_interrupt.py
 ```
 
 复制并保存以下代码到其中。
@@ -209,7 +209,7 @@ while True:
 5.运行演示，在终端中运行以下命令。
 
 ```
-    sudo python grove_infrared_distance_interrupt.py
+    sudo python grove\_infrared\_distance\_interrupt.py
 ```
 
 ## 原理图在线查看器
