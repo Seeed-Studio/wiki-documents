@@ -8,8 +8,8 @@ image: https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/solar-node.webp
 slug: /get_started_with_meshtastic_solar_node
 sidebar_position: 2
 last_update:
-  date: 4/27/2025
-  author: Jessie
+  date: 11/9/2025
+  author: Michelle
 ---
 
 
@@ -138,6 +138,7 @@ Since the device will be used outdoors for extended periods, please avoid instal
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/part-list.png" alt="pir" width={800} height="auto" /></p>
 
+### Step-by-step Installation Guidance
 - Step1: Connect part 1 to the bottom of the device using washers and screws.
 
 <div class="table-center">
@@ -156,28 +157,52 @@ Since the device will be used outdoors for extended periods, please avoid instal
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step3: Install the hoop ring in the appropriate position.
+- Step4: Install the hoop ring in the appropriate position.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/hoop-ring.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step4: Connect the universal joint bracket.
+- Step5: Connect the universal joint bracket.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connector.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step5: Loosen the screws, adjust the universal joint to the appropriate position, and then tighten the screws.
+- Step6: Loosen the screws, adjust the universal joint to the appropriate position, and then tighten the screws.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/screws.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-- Step6: Connect the antenna to the device.
+- Step7: Connect the antenna to the device.
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/connect-antenna2.mp4" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+
+### Complete installation guidance
+
+- You can complete the entire installation and initialization process through a video.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/smQe7G0Bbsk?si=kcB8BdoxiwpZqB4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Add sensors to solar node (Optional)
+
+- You can install your sensor through this video.
+
+<div class="table-center">
+<iframe width="730" height="500" src="https://www.youtube.com/embed/AUFAdRgOCK8?si=9P-X1B7g8unZvVqb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+### Upgrate atenna (Optional)
+
+- You can replace the antenna with a fiberglass one by watching this video.
+
+<div class="table-center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uCUq7VrNkzc?si=9uiAAZY45B-Sg-wD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## FAQ
