@@ -2907,7 +2907,11 @@
 "@emnapi/core@^1.4.5":
   version "1.5.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.5.0.tgz#85cd84537ec989cebb2343606a1ee663ce4edaf0"
+=======
+  resolved "https://registry.npmmirror.com/@emnapi/core/-/core-1.5.0.tgz#85cd84537ec989cebb2343606a1ee663ce4edaf0"
+>>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
 =======
   resolved "https://registry.npmmirror.com/@emnapi/core/-/core-1.5.0.tgz#85cd84537ec989cebb2343606a1ee663ce4edaf0"
 >>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
@@ -2919,7 +2923,11 @@
 "@emnapi/runtime@^1.4.5":
   version "1.5.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@emnapi/runtime/-/runtime-1.5.0.tgz#9aebfcb9b17195dce3ab53c86787a6b7d058db73"
+=======
+  resolved "https://registry.npmmirror.com/@emnapi/runtime/-/runtime-1.5.0.tgz#9aebfcb9b17195dce3ab53c86787a6b7d058db73"
+>>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
 =======
   resolved "https://registry.npmmirror.com/@emnapi/runtime/-/runtime-1.5.0.tgz#9aebfcb9b17195dce3ab53c86787a6b7d058db73"
 >>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
@@ -2930,7 +2938,11 @@
 "@emnapi/wasi-threads@1.1.0":
   version "1.1.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz#60b2102fddc9ccb78607e4a3cf8403ea69be41bf"
+=======
+  resolved "https://registry.npmmirror.com/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz#60b2102fddc9ccb78607e4a3cf8403ea69be41bf"
+>>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
 =======
   resolved "https://registry.npmmirror.com/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz#60b2102fddc9ccb78607e4a3cf8403ea69be41bf"
 >>>>>>> 64a58eba96bbc4423439097d0adc6486af991b54
