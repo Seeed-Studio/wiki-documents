@@ -1,5 +1,5 @@
 ---
-description: 光のコードを例として使用し、Matterの開発フレームワークを紹介します。
+description: Matterの開発フレームワークを紹介するために、ライトのコードを例として使用します。
 title: Matter開発フレームワーク概要
 keywords:
 - matter
@@ -8,41 +8,38 @@ keywords:
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/matter_development_framework
 last_update:
-  date: 05/15/2025
+  date: 05/15/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Matter開発フレームワーク概要
 
 :::tip
-この記事はSeeed Studio XIAO ESP32開発Matterシリーズの第4回チュートリアルです。以前のチュートリアルをまだ読んでいない場合は、まずそれらを読むことをお勧めします。これにより、デバイスが必要な設定を満たしているか確認できます。
+この記事は、Seeed Studio XIAO ESP32開発Matterシリーズの4番目のチュートリアルです。前のチュートリアルを読んでいない場合は、まず読んで、デバイスが要求通りに設定されていることを確認することをお勧めします。
 
-- **[Espressif ESP-IDFを使用したXIAOでの開発](https://wiki.seeedstudio.com/ja/xiao_idf)**
-- **[XIAO ESP32シリーズでMatterを迅速に始める](https://wiki.seeedstudio.com/ja/getting_started_with_matter)**
-- **[XIAO ESP32シリーズでのMatter開発](https://wiki.seeedstudio.com/ja/xiao_esp32_matter_env/)**
+- **[Espressif ESP-IDFを使用したXIAOでの開発](https://wiki.seeedstudio.com/xiao_idf)**
+- **[XIAO ESP32シリーズでMatterを素早く始める](https://wiki.seeedstudio.com/getting_started_with_matter)**
+- **[XIAO ESP32シリーズでのMatter開発](https://wiki.seeedstudio.com/xiao_esp32_matter_env/)**
+
 :::
 
-Matter開発の世界への明るい旅に出発しましょう。この包括的なチュートリアルでは、典型的な光の例を通じて、Matter開発の基盤を形成する基本的な概念と知識を紹介します。クラスタや属性、コマンドなどの基本から始め、このチュートリアルはMatterフレームワークを自信を持って操作するためのツールを提供します。Matter開発スキルのスイッチをオンにして、接続されたデバイスの輝かしい世界に飛び込みましょう！
+包括的なチュートリアルでMatter開発の世界への啓発的な旅に出発しましょう。典型的なライトの例を通して、Matter開発の基盤を形成する基本概念と知識に光を当てます。クラスターと属性からコマンドまで、このチュートリアルはMatterフレームワークを自信を持ってナビゲートするためのツールを提供します。Matter開発スキルのスイッチを入れる準備をして、接続されたデバイスの素晴らしい世界に飛び込みましょう！
 
 ## チュートリアル概要
 
-1. **[光の例を理解する](#understanding-the-light-example)**
+1. **[ライトの例を理解する](#understanding-the-light-example)**
 2. **[デバイスの初期化](#device-initialisation)**
 3. **[Matterノードの作成](#create-matter-node)**
 4. **[エンドポイントの属性を設定する](#sets-the-attribute-of-the-endpoint)**
-5. **[エンドポイントの作成とクラスタの自動マッチング](#create-endpoint--auto-match-cluster)**
-6. **[デフォルト値でMatterデバイスを初めて設定する](#setting-up-the-matter-device-for-the-first-time-with-default-values)**
+5. **[エンドポイントの作成と自動クラスターマッチング](#create-endpoint--auto-match-cluster)**
+6. **[デフォルト値でMatterデバイスを初回設定する](#setting-up-the-matter-device-for-the-first-time-with-default-values)**
 7. **[データ更新と遅延永続化](#data-updates-and-deferred-persistence)**
 
-このセクションでは、ESP-Matterで提供されている[光](https://github.com/espressif/esp-matter/tree/main/examples/light)の例に焦点を当てます。この例は、Matter開発フレームワークの基本概念であるクラスタ、属性、コマンドについて詳しく説明しています。この記事を読むことで、Matter開発フレームワークの構造と認識をより深く理解することができます。
+このセクションでは、ESP-Matterで提供される[light](https://github.com/espressif/esp-matter/tree/main/examples/light)の例に焦点を当て、Matter開発フレームワークにおけるクラスター、属性、コマンドの基本概念を詳しく説明します。この記事を読むことで、Matter開発フレームワークの構造と認識をより良く理解できるようになります。
 
-## 光の例を理解する
+## ライトの例を理解する
 
-まず、ESP-Matter環境内のファイルディレクトリとその役割を見てみましょう。
+まず、ESP-Matter環境のファイルディレクトリとその機能を見てみましょう。
 
 ```
 - esp-matter/
@@ -70,43 +67,46 @@ Matter開発の世界への明るい旅に出発しましょう。この包括�
    ...
 ```
 
-**esp-matter**: Matter開発フレームワーク全体のルートディレクトリです。
+**esp-matter**: これはMatter開発フレームワーク全体のルートディレクトリです。
 
-**components**: このディレクトリにはさまざまなコンポーネントが含まれており、Matterフレームワークの中核を成しています。
-   - esp_matter: ESP32上でのMatterプロトコルスタックの実装で、データモデルやアプリケーション層のロジックなどを含みます。
-   - esp_matter_bridge: ESPデバイスを他の非ESPデバイスに橋渡しし、相互運用性を実現するコンポーネントです。
-   - esp_matter_console: REPLに基づくインタラクティブコンソールで、Matterデバイスのデバッグや制御に使用されます。
-   - esp_matter_controller: Matterコントローラーの機能を実装し、他のMatterデバイスを制御できます。
-   - esp_matter_rainmaker: EspressifのRainMakerクラウドプラットフォームと統合し、クラウド制御を可能にします。
-   - esp_matter_thread_br: Thread Border Router機能を実装し、Threadネットワークを作成するために使用されます。
+**components**: このディレクトリには様々なコンポーネントが含まれており、Matterフレームワークの中核です。
 
-**connectedhomeip**: Matterプロトコルスタックの上流オープンソースプロジェクトであり、ESP Matterがコードを同期する元です。
+- esp_matter: これはESP32上でのMatterプロトコルスタックの実装で、データモデル、アプリケーション層ロジックなどが含まれています。
+- esp_matter_bridge: このコンポーネントはESPデバイスを他の非ESPデバイスにブリッジする役割を担い、相互運用性を実現します。
+- esp_matter_console: これはREPLベースのインタラクティブコンソールで、Matterデバイスのデバッグと制御に使用されます。
+- esp_matter_controller: このコンポーネントはMatterコントローラーの機能を実装し、他のMatterデバイスを制御することができます。
+- esp_matter_rainmaker: このコンポーネントはEspressifのRainMakerクラウドプラットフォームと統合し、クラウド制御を可能にします。
+- esp_matter_thread_br: このコンポーネントはThread Border Routerの機能を実装し、Threadネットワークの作成に使用されます。
 
-**device_hal**: このディレクトリにはハードウェア抽象化層のドライバが含まれています。
-   - button_driver: ボタンドライバ。
-   - device: デバイス抽象化で、汎用デバイスインターフェースを定義します。
-   - led_driver: LEDドライバ。
+**connectedhomeip**: これはMatterプロトコルスタックの上流オープンソースプロジェクトで、ESP Matterはここからコードを同期しています。
 
-**docs**: ESP-Matter開発文書やAPIリファレンスマニュアルが保存されています。
+**device_hal**: このディレクトリにはハードウェア抽象化層ドライバが含まれています。
 
-**examples**: Matterフレームワークを使用した開発方法を示すさまざまな例コード。
+- button_driver: ボタンドライバ。
+- device: デバイス抽象化、汎用デバイスインターフェースを定義。
+- led_driver: LEDドライバ。
 
-**tools**: さまざまな開発ツールスクリプトが含まれています。
-   - mfg_tool: メーカー証明書を生成するツール。
+**docs**: ここにはESP-Matter開発ドキュメントとAPIリファレンスマニュアルが保存されています。
 
-**CMakeLists.txt**: CMakeビルドスクリプトで、プロジェクトのコンパイルルールを定義します。
+**examples**: Matterフレームワークを使用した開発方法を示す様々なサンプルコード。
 
-**RELEASE_NOTES.md**: リリースノートで、各バージョンの変更点を記録しています。
+**tools**: 様々な開発ツールスクリプトが含まれています。
 
-**export.sh**: Matter関連の環境変数をエクスポートするスクリプト。
+- mfg_tool: メーカー証明書を生成するためのツール。
 
-**install.sh**: Matter開発に必要な依存関係やツールチェーンをインストールするスクリプト。
+**CMakeLists.txt**: CMakeビルドスクリプト、プロジェクトのコンパイル規則を定義。
 
-**requirements.txt**: Python依存関係リストで、Matter開発フレームワークを実行するために必要なPythonライブラリを指定します。
+**RELEASE_NOTES.md**: リリースノート、各バージョンの変更点を記録。
 
-このディレクトリ構造はMatter開発フレームワークのモジュール設計哲学を反映しています。コアプロトコルスタック、ハードウェア抽象化、アプリケーションコンポーネント、補助ツールなどの各部分がそれぞれの役割を果たしながら有機的に結合され、開発者に完全なMatter開発環境を提供します。
+**export.sh**: エクスポートスクリプト、Matter関連の環境変数をエクスポートするために使用。
 
-**examples/light**を例に取ると、ESP-Matterが提供する例の構造は以下の通りです。
+**install.sh**: インストールスクリプト、Matter開発に必要な依存関係とツールチェーンをインストールするために使用。
+
+**requirements.txt**: Python依存関係リスト、Matter開発フレームワークの実行に必要なPythonライブラリを指定。
+
+このディレクトリ構造はMatter開発フレームワークのモジュラー設計思想を反映しています。コアプロトコルスタック、ハードウェア抽象化、アプリケーションコンポーネント、補助ツールなどの各部分がそれぞれの責任を持ちながら有機的に結合され、開発者に完全なMatter開発環境を提供しています。
+
+**examples/light**を例に取ると、ESP-Matterが提供するサンプルの構造は以下のようになります：
 
 ```
 - light/
@@ -123,24 +123,24 @@ Matter開発の世界への明るい旅に出発しましょう。この包括�
    ...
 ```
 
-- **main**: このサブディレクトリには、メインアプリケーションコードと設定ファイルが含まれています。
-   - CMakeLists.txt: メインアプリケーションのCMakeビルドスクリプト。
-   - app_driver.cpp: 光アプリケーションのドライバコード。
-   - app_main.cpp: 光アプリケーションのメインエントリポイント。
-   - app_priv.h: 光アプリケーションのプライベート宣言を含むヘッダファイル。
-   - idf_components.yml: 光アプリケーションで使用されるESP-IDFコンポーネントの設定ファイル。
+- **main**: このサブディレクトリには、メインアプリケーションのコードと設定ファイルが含まれています。
+  - CMakeLists.txt: メインアプリケーション用のCMakeビルドスクリプト。
+  - app_driver.cpp: ライトアプリケーション用のドライバーコード。
+  - app_main.cpp: ライトアプリケーションのメインエントリーポイント。
+  - app_priv.h: ライトアプリケーション用のプライベート宣言を含むヘッダーファイル。
+  - idf_components.yml: ライトアプリケーションで使用されるESP-IDFコンポーネント用の設定ファイル。
 
-- **CMakeLists.txt**: ライト例のためのトップレベルの CMake ビルドスクリプト。
+- **CMakeLists.txt**: ライトサンプル用のトップレベルCMakeビルドスクリプト。
 
-- **README.md**: ライト例に関する情報と手順を提供するリードミーファイル。
+- **README.md**: ライトサンプルの情報と手順を提供するreadmeファイル。
 
-- **partitions.csv**: ライト例のパーティションテーブルを定義するファイル。
+- **partitions.csv**: ライトサンプル用のパーティションテーブルを定義するファイル。
 
-- **sdkconfig.defaults**: ライト例のデフォルト設定を定義するファイル。
+- **sdkconfig.defaults**: ライトサンプル用のデフォルト設定。
 
-## デバイスの初期化
+## デバイス初期化
 
-次に、Matter の開発プロセスをコード分析と理論の組み合わせを通じて深く理解するために、ライトのコードを見ていきます。以下のコードは [manin/app_main.cpp](https://github.com/espressif/esp-matter/blob/main/examples/light/main/app_main.cpp) にあります。
+次に、ライトのコードに入り、コード分析と理論の組み合わせを通じてMatterの開発プロセスの理解を深めます。以下のコードは[manin/app_main.cpp](https://github.com/espressif/esp-matter/blob/main/examples/light/main/app_main.cpp)にあります。
 
 ```cpp
 app_driver_handle_t light_handle = app_driver_light_init();
@@ -148,20 +148,20 @@ app_driver_handle_t button_handle = app_driver_button_init();
 app_reset_button_register(button_handle);
 ```
 
-`app_driver_handle_t light_handle = app_driver_light_init();`: この行はライトドライバを初期化し、ライトドライバインスタンスへのハンドルを返します。
+`app_driver_handle_t light_handle = app_driver_light_init();`: この行はライトドライバーを初期化し、ライトドライバーインスタンスへのハンドルを返します。
 
-`app_driver_handle_t button_handle = app_driver_button_init();`: ライトの初期化と同様に、この行はボタンドライバを初期化します。
+`app_driver_handle_t button_handle = app_driver_button_init();`: ライトの初期化と同様に、この行はボタンドライバーを初期化します。
 
-`app_reset_button_register(button_handle);`: この行はリセット操作を処理するための特定の機能にボタンを登録します。
+`app_reset_button_register(button_handle);`: この行は、リセット操作を処理するための特定の機能にボタンを登録します。
 
-`app_driver_light_init()` 関数を例に取ると、以下のプログラムはすべての電球を初期化しますが、最初の電球（デフォルトの色と明るさの値に設定）しか使用しません。このため、例のプログラムでは1つの電球しか使用できません。
+`app_driver_light_init()` 関数を例に取ると、以下のプログラムはすべての電球を初期化しますが、最初の電球のみを使用します（デフォルトの色と明度値に設定）。これが、サンプルプログラムで1つの電球しか使用できない理由でもあります。
 
 ```cpp
 // app_driver.cpp
 app_driver_handle_t app_driver_light_init()
 {
 #if CONFIG_BSP_LEDS_NUM > 0
-    /* LED を初期化 */
+    /* Initialize led */
     led_indicator_handle_t leds[CONFIG_BSP_LEDS_NUM];
     ESP_ERROR_CHECK(bsp_led_indicator_create(leds, NULL, CONFIG_BSP_LEDS_NUM));
     led_indicator_set_hsv(leds[0], SET_HSV(DEFAULT_HUE, DEFAULT_SATURATION, DEFAULT_BRIGHTNESS));
@@ -175,31 +175,32 @@ app_driver_handle_t app_driver_light_init()
 
 ## Matter ノードの作成
 
-Matter デバイス構成のメインコードの次のステップは、Matter ノードを作成することです。コードは以下の通りです：
+Matter デバイス設定のメインラインコードの次のステップは、Matter ノードを作成することです。コードは以下の通りです：
 
 ```cpp
 node::config_t node_config;
 
-// ノードハンドルは他のエンドポイントを追加/変更するために使用できます。
+// node handle can be used to add/modify other endpoints.
 node_t *node = node::create(&node_config, app_attribute_update_cb, app_identification_cb);
 ABORT_APP_ON_FAILURE(node != nullptr, ESP_LOGE(TAG, "Failed to create Matter node"));
 ```
 
-Matter データモデルは、Matter エコシステム内でデータを表現し整理するための標準化された方法です。これは、デバイス、属性、および相互作用のための共通の言語と構造を定義し、Matter 対応デバイス間の相互運用性とシームレスな通信を可能にします。
+**Matterデータモデル**は、**Matter**エコシステム内でデータを表現し整理するための標準化された方法です。これは、デバイス、属性、および相互作用のための共通言語と構造を定義し、**Matter**対応デバイス間での相互運用性とシームレスな通信を可能にします。
 
-以下の図は、Matter のデータモデルでこれがどのように表現されるかを簡略化して示しています。
+以下の図は、これが**Matter**のデータモデルでどのように表現できるかの簡略化されたビューを示しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/34.png" style={{width:600, height:'auto'}}/></div>
 
-**Matter ノード**:
-Matter ノードは、Matter エコシステム内の物理デバイスまたは論理エンティティを表します。これは Matter データモデルの最上位コンポーネントです。各 Matter ノードには一意の識別子があり、1つ以上のエンドポイントを含むことができます。
-   - Matter ノードは、Matter エコシステム内の**物理デバイス**を表します。
-   - これは、複数のエンドポイント（部屋）を含むことができる家のようなものです。
-   - 各 Matter ノードには、ネットワーク内での認識とアドレス指定のための一意の識別子があります。
+**Matterノード**：
+**Matter**ノードは、**Matter**エコシステム内の物理デバイスまたは論理エンティティを表します。これは**Matter**データモデルの最上位コンポーネントです。各**Matter**ノードは一意の識別子を持ち、1つ以上のエンドポイントを含むことができます。
+
+- **Matter**ノードは**Matter**エコシステム内の**物理デバイス**を表します。
+- これは複数のエンドポイント（部屋）を含むことができる家のようなものです。
+- 各**Matter**ノードは、ネットワーク内での認識とアドレス指定のための独自の一意識別子を持ちます。
 
 ## エンドポイントの属性を設定する
 
-Matter ノードが作成された後、エンドポイントのプロパティにデフォルト値を設定する必要があります。
+**Matter**ノードが作成されたら、エンドポイントのプロパティのデフォルト値を設定する必要があります。
 
 ```cpp
 extended_color_light::config_t light_config;
@@ -214,41 +215,41 @@ light_config.color_control.color_temperature.startup_color_temperature_mireds = 
 
 1. `light_config.on_off.on_off = DEFAULT_POWER;`
    - エンドポイントの初期オン/オフ状態を `DEFAULT_POWER` に設定します。
-   - `DEFAULT_POWER` は、デフォルトの電源状態を表す事前定義された定数です（例: `true` はオン、`false` はオフ）。
+   - `DEFAULT_POWER` は、デフォルトの電源状態を表す事前定義された定数です（例：オンの場合は `true`、オフの場合は `false`）。
 
 2. `light_config.on_off.lighting.start_up_on_off = nullptr;`
-   - エンドポイントの起動時のオン/オフ状態を `nullptr` に設定します。
-   - デバイスが再起動または電源サイクルを行った場合、この値が `nullptr` の場合、最後のオン/オフ状態を使用することを意味します。
-   - 非 `nullptr` の値に設定されている場合、指定されたオン/オフ状態を使用することを示します。
+   - エンドポイントの起動時オン/オフ状態を `nullptr` に設定します。
+   - デバイスが再起動または電源サイクルした際、この値が `nullptr` の場合、最後のオン/オフ状態を使用することを意味します。
+   - `nullptr` 以外の値に設定された場合、指定されたオン/オフ状態を使用することを示します。
 
 3. `light_config.level_control.current_level = DEFAULT_BRIGHTNESS;`
-   - エンドポイントの初期輝度レベルを `DEFAULT_BRIGHTNESS` (64) に設定します。
-   - `DEFAULT_BRIGHTNESS` は、デフォルトの輝度レベルを表す事前定義された定数です（例: 0 から 254 の間の値）。
+   - エンドポイントの初期明度レベルを `DEFAULT_BRIGHTNESS`（64）に設定します。
+   - `DEFAULT_BRIGHTNESS` は、デフォルトの明度レベルを表す事前定義された定数です（例：0から254の間の値）。
 
 4. `light_config.level_control.lighting.start_up_current_level = DEFAULT_BRIGHTNESS;`
-   - エンドポイントの起動時の輝度レベルを `DEFAULT_BRIGHTNESS` (64) に設定します。
-   - デバイスが再起動または電源サイクルを行った場合、この値が非 `nullptr` の場合、指定された輝度レベルを使用することを意味します。
-   - `nullptr` に設定されている場合、最後の輝度レベルを使用することを示します。
+   - エンドポイントの起動時明度レベルを `DEFAULT_BRIGHTNESS`（64）に設定します。
+   - デバイスが再起動または電源サイクルした際、この値が `nullptr` 以外の場合、指定された明度レベルを使用することを意味します。
+   - `nullptr` に設定された場合、最後の明度レベルを使用することを示します。
 
 5. `light_config.color_control.color_mode = (uint8_t)ColorControl::ColorMode::kColorTemperature;`
    - エンドポイントのカラーモードを `ColorControl::ColorMode::kColorTemperature` に設定します。
-   - これは、エンドポイントが色温度モードを使用することを意味し、光の色を色温度を調整することで制御します。
-   - `(uint8_t)` は、列挙値を符号なし 8 ビット整数に変換する型キャストです。
+   - これは、エンドポイントが色温度モードを使用することを意味し、ライトの色は色温度を調整することで制御されます。
+   - `(uint8_t)` は、enum値を符号なし8ビット整数に変換する型キャストです。
 
 6. `light_config.color_control.enhanced_color_mode = (uint8_t)ColorControl::ColorMode::kColorTemperature;`
    - エンドポイントの拡張カラーモードを `ColorControl::ColorMode::kColorTemperature` に設定します。
-   - 拡張カラーモードは、より多くの色制御オプションを提供しますが、ここでは色温度モードに設定されています。
+   - 拡張カラーモードはより多くの色制御オプションを提供しますが、ここでも色温度モードに設定されています。
 
 7. `light_config.color_control.color_temperature.startup_color_temperature_mireds = nullptr;`
-   - エンドポイントの起動時の色温度を `nullptr` に設定します。
-   - デバイスが再起動または電源サイクルを行った場合、この値が `nullptr` の場合、最後の色温度設定を使用することを意味します。
-   - 非 `nullptr` の値に設定されている場合、指定された色温度値を使用することを示します。
+   - エンドポイントの起動時色温度を `nullptr` に設定します。
+   - デバイスが再起動または電源サイクルした際、この値が `nullptr` の場合、最後の色温度設定を使用することを意味します。
+   - `nullptr` 以外の値に設定された場合、指定された色温度値を使用することを示します。
 
-Matter の属性は、デバイスの状態に関する情報を格納するプロパティや特性のようなものです。これには、オン/オフ状態、輝度レベル、色温度などが含まれます。これらの属性は、デバイスの特定の機能に関連するクラスターと呼ばれるグループに整理されています。
+Matter における属性は、デバイスのプロパティや特性のようなものです。これらは、オン/オフ状態、明度レベル、色温度など、デバイスの状態に関する情報を格納します。これらの属性は、デバイスの特定の機能に関連するクラスターと呼ばれるグループに整理されています。
 
-属性は、異なるデバイスやアプリがシームレスに通信し、連携するのを容易にします。デバイスプロパティを表現しアクセスする標準的な方法を提供することで、Matter はスマートホームシステムの開発を簡素化し、さまざまなブランドのデバイスが効率的に相互運用できるようにします。
+属性により、異なるデバイスやアプリが通信し、シームレスに連携することが容易になります。デバイスのプロパティを表現し、アクセスする標準的な方法を持つことで、Matter はスマートホームシステムの開発を簡素化し、さまざまなブランドのデバイスが効率的に相互作用できることを保証します。
 
-`esp_matter_endpoint.h` は、エンドポイントに関連する定数、データ型、および関数を定義する ESP Matter SDK の重要なヘッダーファイルです。Matter では、エンドポイントはデバイスの論理インターフェースを表し、各エンドポイントにはデバイスの特定の機能を記述および制御する属性とコマンドのセットが含まれています。
+`esp_matter_endpoint.h` は、ESP Matter SDK の重要なヘッダーファイルで、エンドポイントに関連する定数、データ型、関数を定義しています。Matter において、エンドポイントはデバイスの論理インターフェースを表し、各エンドポイントには、デバイスの特定の機能を記述し制御する属性とコマンドのセットが含まれています。
 
 ```cpp
 namespace extended_color_light {
@@ -269,65 +270,65 @@ esp_err_t add(endpoint_t *endpoint, config_t *config);
 } /* extended_color_light */
 ```
 
-## エンドポイントの作成とクラスタの自動マッチング
+## エンドポイントの作成と自動クラスターマッチング
 
-上記では、Matterにおいて重要な用語である「エンドポイント」と「クラスタ」について説明しました。
+上記で、Matterにおいて重要な2つの用語、エンドポイントとクラスターについて最初に言及しました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoc6-matter/35.png" style={{width:500, height:'auto'}}/></div>
 
-**エンドポイント（Endpoint(s)）[デバイスタイプ（Device-Type(s)）]**:
-エンドポイントは、Matterノード内の特定の機能やサービスを論理的に表現するものです。これは、特定のデバイスタイプに関連する一連の機能や動作をカプセル化します。Matterノードは複数のエンドポイントを持つことができ、それぞれが異なるデバイスタイプを表します。デバイスタイプは、エンドポイントの具体的な特性や機能を定義します。Matterでは、電球、サーモスタット、ドアロックなどの標準的なデバイスタイプが定義されています。各デバイスタイプには、固有の識別子と、それに関連するクラスタ、属性、コマンドの事前定義セットがあります。
+**エンドポイント [デバイスタイプ]**:
+エンドポイントは、Matterノード内の特定の機能やサービスの論理的な表現です。特定のデバイスタイプに関連する一連の機能と動作をカプセル化します。Matterノードは複数のエンドポイントを持つことができ、それぞれが異なるデバイスタイプを表します。デバイスタイプは、エンドポイントの特定の特性と機能を定義します。Matterは、電球、サーモスタット、ドアロックなどの標準デバイスタイプのセットを定義しています。各デバイスタイプには、固有の識別子と、それに関連付けられた事前定義されたクラスター、属性、コマンドのセットがあります。
 
-- エンドポイントはMatterノード内の論理的なコンポーネントであり、デバイスの特定の機能やサービスを表します。
-- 家の部屋のように、各エンドポイントには専用の目的があります（例：寝室、キッチン、リビングルーム）。
+- エンドポイントはMatterノード内の論理コンポーネントで、デバイスの特定の機能やサービスを表します。
+- 家の部屋のように、各エンドポイントには寝室、キッチン、リビングルームなど、それぞれ専用の目的があります。
 - 各エンドポイントは、電球、サーモスタット、ドアロックなどの特定のデバイスタイプに関連付けられています。
-- Matterノードは複数のエンドポイントを持つことができ、それぞれが異なるデバイスタイプや機能を表します。
+- Matterノードは複数のエンドポイントを持つことができ、それぞれが異なるデバイスタイプと機能を表します。
 
-**クラスタ（Cluster(s)）**:
-クラスタは、エンドポイント内で関連する属性やコマンドを論理的にグループ化したものです。クラスタはデバイスの特定の機能や特徴を表します。クラスタは、エンドポイントの機能を整理し分類する方法を提供します。例えば、「オン/オフクラスタ」はデバイスのオン/オフに関連する属性やコマンドを含み、「レベルコントロールクラスタ」はデバイスの明るさやレベルを制御するためのものです。
+**クラスター**:
+クラスターは、エンドポイント内の関連する属性とコマンドの論理的なグループ化です。デバイスの特定の機能や特徴を表します。クラスターは、エンドポイントの機能を整理し、分類する方法を提供します。例えば、「オン/オフクラスター」には、デバイスのオン/オフに関連する属性とコマンドが含まれ、「レベル制御クラスター」は、デバイスの明るさやレベルの制御を扱います。
 
-- クラスタはエンドポイント内の論理的なグループであり、関連する属性やコマンドを含みます。
-- 部屋の家具やデバイスのようなもので、ライト、テレビ、エアコンなど、それぞれに固有の属性や操作があります。
-- 各クラスタはデバイスの特定の機能や特徴を表します。
-- 例えば、「オン/オフクラスタ」はデバイスのオン/オフ状態に関連する属性やコマンドを含み、「レベルコントロールクラスタ」はデバイスの明るさやレベルを調整するための属性やコマンドを含みます。
-- エンドポイントは複数のクラスタを持つことができ、それぞれが異なる機能を担当します。
+- クラスターは、エンドポイント内の論理的なグループ化で、関連する属性とコマンドを含みます。
+- 部屋の中の家具やデバイス、例えば照明、テレビ、エアコンのようなもので、それぞれが独自の属性と操作を持ちます。
+- 各クラスターは、デバイスの特定の機能や特徴を表します。
+- 例えば、「オン/オフクラスター」には、デバイスのオン/オフ状態に関連する属性とコマンドが含まれ、「レベル制御クラスター」には、デバイスの明るさやレベルを調整するための属性とコマンドが含まれます。
+- エンドポイントは複数のクラスターを持つことができ、それぞれが異なる機能を担当します。
 
-まとめると、Matterノードは家のようなもので、複数のエンドポイント（部屋）を含んでいます。各エンドポイントは部屋のように、デバイスの特定の機能やサービスを表します。クラスタは各部屋の家具やデバイスのようなもので、制御や操作のための関連する属性やコマンドを含んでいます。
+要約すると、Matterノードは家のようなもので、複数のエンドポイント（部屋）を含みます。各エンドポイントは部屋のようなもので、デバイスの特定の機能やサービスを表します。クラスターは各部屋の家具やデバイスのようなもので、制御と相互作用のための関連する属性とコマンドを含みます。
 
-この階層的な構造により、デバイスはその機能や特性を明確に記述できるため、アプリケーションや他のデバイスがそれらを簡単に操作・制御できるようになります。デバイスタイプ、クラスタ、属性、コマンドを標準化することで、Matterは異なるメーカーのデバイス間の相互運用性と互換性を実現します。
+この階層的な組織化により、デバイスは自身の機能と特性を明確に記述でき、アプリケーションや他のデバイスがそれらと相互作用し、制御することが容易になります。デバイスタイプ、クラスター、属性、コマンドを標準化することで、Matterは異なるメーカーのデバイス間の相互運用性と互換性を可能にします。
 
-コードでは、属性を設定した後、以下のスニペットによって最終的にエンドポイントが作成されます。そして、設定された属性のクラスタが自動的にマッチングされます。
+コードでは、属性を設定した後、最終的に以下のスニペットによってエンドポイントが作成されます。そして、設定された属性のクラスターを自動的にマッチングします。
 
 ```cpp
 endpoint_t *endpoint = extended_color_light::create(node, &light_config, ENDPOINT_FLAG_NONE, light_handle);
 ABORT_APP_ON_FAILURE(endpoint != nullptr, ESP_LOGE(TAG, "Failed to create extended color light endpoint"));
 ```
 
-クラスタの自動マッチングはどのように実現されるのでしょうか？以下のような属性を設定するスニペットを例に説明します。
+自動マッチングクラスタリングはどのように実現されるのでしょうか？属性を設定するコードスニペットの例を見てみましょう。
 
 ```cpp
 light_config.level_control.lighting.start_up_current_level = DEFAULT_BRIGHTNESS;
 ```
 
-`light_config.level_control` はエンドポイント（esp_matter_endpoint.h）内で定義された属性です。そして、`light_config.level_control.lighting` はクラスタ（esp_matter_cluster）内で定義された属性です。この設定により、システムは対応するクラスタを自動的に属性にマッチングさせることができ、開発者が手動で設定する必要がありません。
+`light_config.level_control` は Endpoint (esp_matter_endpoint.h) で定義された Attribute です。そして `light_config.level_control.lighting` は Cluster (esp_matter_cluster) で定義された Attribute です。この設定により、システムは開発者が手動で設定する必要なく、Attribute に対応する Cluster を自動的にマッチングできます。
 
-## Matterデバイスを初期設定で初めてセットアップする
+## デフォルト値で Matter デバイスを初回設定する
 
-上記の属性、クラスター、エンドポイントが設定されたら、Matterアプライアンスの起動を開始できます。起動の手順と方法は以下の通りです。
+上記の Attributes、Clusters、Endpoints が設定されたら、Matter アプライアンスの起動を開始できます。起動の手順と方法は以下の通りです。
 
 ```cpp
 light_endpoint_id = endpoint::get_id(endpoint);
 ESP_LOGI(TAG, "Light created with endpoint_id %d", light_endpoint_id);
 
-/* Matter開始 */
+/* Matter start */
 err = esp_matter::start(app_event_cb);
 ABORT_APP_ON_FAILURE(err == ESP_OK, ESP_LOGE(TAG, "Failed to start Matter, err:%d", err));
 
-/* デフォルト値でドライバーを開始 */
+/* Starting driver with default values 使用默认值启动驱动程序 */
 app_driver_light_set_defaults(light_endpoint_id);
 ```
 
-ご覧の通り、デフォルト値を設定する関数は`app_driver_light_set_defaults()`であり、エンドポイントIDをパラメータとして渡す必要があります。また、特定のクラスターや属性の値を取得する方法、デフォルトのクラスターや属性値を設定する方法について注意が必要です。その秘密は`app_driver.cpp`に示されています。
+ご覧のとおり、デフォルトを設定する関数は `app_driver_light_set_defaults()` で、パラメータとしてエンドポイントIDを渡す必要があります。そして、特定のクラスター、特定の属性の値を取得する方法、およびデフォルトのクラスター、属性値を設定する方法について考慮する必要があります。その秘密は `app_driver.cpp` に示されています。
 
 ```cpp
 esp_err_t err = ESP_OK;
@@ -339,44 +340,45 @@ cluster_t *cluster = NULL;
 attribute_t *attribute = NULL;
 esp_matter_attr_val_t val = esp_matter_invalid(NULL);
 
-/* 明るさを設定 */
+/* Setting brightness */
 cluster = cluster::get(endpoint, LevelControl::Id);
 attribute = attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id);
 attribute::get_val(attribute, &val);
 err |= app_driver_light_set_brightness(handle, &val);
 ```
 
-1. クラスターの取得:
-   - クラスターを取得するには、まず`endpoint::get(node, endpoint_id)`関数を使用してエンドポイントへのポインタを取得する必要があります。ここで、`node`はノードへのポインタであり、`endpoint_id`はエンドポイントのIDです。
-   - エンドポイントポインタを取得したら、`cluster::get(endpoint, LevelControl::Id)`関数を使用して、指定したエンドポイントとクラスターID（この場合は`LevelControl::Id`）を指定して目的のクラスターへのポインタを取得できます。
+1. クラスターの取得：
+   - クラスターを取得するには、まず `endpoint::get(node, endpoint_id)` 関数を使用してエンドポイントへのポインターを取得する必要があります。ここで `node` はノードへのポインター、`endpoint_id` はエンドポイントのIDです。
+   - エンドポイントポインターを取得したら、`cluster::get(endpoint, LevelControl::Id)` 関数を使用して、エンドポイントとクラスターID（この場合は `LevelControl::Id`）を指定して、目的のクラスターへのポインターを取得できます。
 
-2. 特定の属性の取得:
-   - クラスターのポインタを取得した後、`attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id)`関数を使用して、そのクラスター内の特定の属性へのポインタを取得できます。
-   - この例では、`LevelControl`クラスターから`CurrentLevel`属性を取得しています。
+2. 特定の属性の取得：
+   - クラスターポインターを取得した後、`attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id)` 関数を使用して、そのクラスター内の特定の属性へのポインターを取得できます。
+   - この例では、`LevelControl` クラスターから `CurrentLevel` 属性を取得しています。
 
-3. 属性値の取得:
-   - 属性の現在の値を取得するには、属性値を格納するための型`esp_matter_attr_val_t`の変数を宣言する必要があります。
-   - コードスニペットでは、変数`val`が`esp_matter_invalid(NULL)`で初期化されています。
-   - 次に、`attribute::get_val(attribute, &val)`関数を使用して属性の現在の値を取得し、それを`val`変数に格納できます。
+3. 属性の値の取得：
+   - 属性の現在の値を取得するには、属性値を格納するための `esp_matter_attr_val_t` 型の変数を宣言する必要があります。
+   - コードスニペットでは、変数 `val` が `esp_matter_invalid(NULL)` で初期化されています。
+   - その後、`attribute::get_val(attribute, &val)` 関数を使用して属性の現在の値を取得し、`val` 変数に格納できます。
 
-4. ライトの明るさを設定:
-   - ライトの明るさを設定するには、エンドポイントに関連付けられたLEDインジケータのハンドルを取得する必要があります。
-   - コードスニペットでは、プライベートデータポインタ（`priv_data`）を適切な型（`led_indicator_handle_t`）にキャストすることでLEDインジケータハンドルを取得しています。
-   - 最後に、`app_driver_light_set_brightness(handle, &val)`関数を呼び出してLEDインジケータの明るさを設定できます。
-   - `handle`パラメータはLEDインジケータハンドルであり、`&val`は目的の明るさ値を含む`esp_matter_attr_val_t`変数へのポインタです。
+4. ライトの明度の設定：
+   - ライトの明度を設定するには、エンドポイントに関連付けられたLEDインジケーターへのハンドルが必要です。
+   - コードスニペットでは、プライベートデータポインター（`priv_data`）を適切な型（`led_indicator_handle_t`）にキャストすることで、LEDインジケーターハンドルを取得しています。
+   - 最後に、`app_driver_light_set_brightness(handle, &val)` 関数を呼び出してLEDインジケーターの明度を設定できます。
+   - `handle` パラメーターはLEDインジケーターハンドル、`&val` は目的の明度値を含む `esp_matter_attr_val_t` 変数へのポインターです。
 
-以下は手順の概要です:
-1. `endpoint::get(node, endpoint_id)`を使用してエンドポイントポインタを取得します。
-2. `cluster::get(endpoint, LevelControl::Id)`を使用してクラスターポインタを取得します。
-3. `attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id)`を使用して属性ポインタを取得します。
-4. `attribute::get_val(attribute, &val)`を使用して属性の現在の値を取得します。
-5. `app_driver_light_set_brightness(handle, &val)`を使用してライトの明るさを設定します。ここで`handle`はエンドポイントに関連付けられたLEDインジケータハンドルです。
+手順の要約：
 
-これらの手順を実行することで、クラスターと属性の必要なポインタを取得し、属性の現在の値を取得し、それに基づいてライトの明るさを設定できます。
+1. `endpoint::get(node, endpoint_id)` を使用してエンドポイントポインターを取得する。
+2. `cluster::get(endpoint, LevelControl::Id)` を使用してクラスターポインターを取得する。
+3. `attribute::get(cluster, LevelControl::Attributes::CurrentLevel::Id)` を使用して属性ポインターを取得する。
+4. `attribute::get_val(attribute, &val)` を使用して属性の現在の値を取得する。
+5. `app_driver_light_set_brightness(handle, &val)` を使用してライトの明度を設定する。ここで `handle` はエンドポイントに関連付けられたLEDインジケーターハンドルです。
+
+これらの手順に従うことで、クラスターと属性への必要なポインターを取得し、属性の現在の値を取得し、それに応じてライトの明度を設定できます。
 
 ## データ更新と遅延永続化
 
-`app_driver.cpp` のコードでは、`app_driver_attribute_update()` 関数を使用して属性の値を更新します。
+`app_driver.cpp` のコードでは、`app_driver_attribute_update()` 関数を使用して属性の値が更新されます。
 
 ```cpp
 if (endpoint_id == light_endpoint_id) {
@@ -401,36 +403,36 @@ if (endpoint_id == light_endpoint_id) {
 }
 ```
 
-このコードスニペットでは、`app_driver_attribute_update` という名前の関数が定義されており、ドライバハンドル (`driver_handle`)、エンドポイント ID (`endpoint_id`)、クラスター ID (`cluster_id`)、属性 ID (`attribute_id`)、および属性値へのポインタ (`val`) を含む複数のパラメータを受け取ります。
+このコードスニペットは、複数のパラメータを受け取る `app_driver_attribute_update` という名前の関数を定義しています。パラメータには、ドライバハンドル（`driver_handle`）、エンドポイントID（`endpoint_id`）、クラスタID（`cluster_id`）、属性ID（`attribute_id`）、および属性値へのポインタ（`val`）が含まれます。
 
-この関数の目的は、受信したデータに基づいてライトエンドポイントの属性値を更新することです。特定のロジックに従って、どのライトエンドポイントの属性を更新する必要があるかを判断します。
+この関数の目的は、受信したデータに基づいてライトエンドポイントの属性値を更新することです。ライトエンドポイントのどの属性を更新する必要があるかを決定するために、特定のロジックに従います。
 
-以下はデータ更新ロジックのステップごとの説明です：
+データ更新ロジックの段階的な詳細は以下の通りです：
 
-1. 関数はまず、`endpoint_id` が `light_endpoint_id` と一致するかどうかを確認します。これにより、更新がライトエンドポイントを対象としていることを確認します。
+1. 関数は最初に `endpoint_id` が `light_endpoint_id` と一致するかどうかをチェックします。これにより、更新がライトエンドポイント向けであることを確認します。
 
-2. `endpoint_id` が一致する場合、`driver_handle` を適切な型 (`led_indicator_handle_t`) にキャストして、ライトエンドポイントに関連付けられた LED インジケータのハンドルを取得します。
+2. `endpoint_id` が一致する場合、関数は `driver_handle` を適切な型（`led_indicator_handle_t`）にキャストして、ライトエンドポイントに関連付けられたLEDインジケータのハンドルを取得します。
 
-3. 次に、関数は `cluster_id` を確認して、属性がどのクラスターに属しているかを判断します。サポートされているクラスターは `OnOff`、`LevelControl`、および `ColorControl` の3つです。
+3. 次に、関数は `cluster_id` をチェックして、属性がどのクラスタに属するかを決定します。3つのクラスタをサポートしています：`OnOff`、`LevelControl`、および `ColorControl`。
 
-4. `cluster_id` に応じて、関数はさらに `attribute_id` を確認し、そのクラスター内の特定の属性を識別します。
+4. `cluster_id` に応じて、関数はさらに `attribute_id` をチェックして、そのクラスタ内の特定の属性を識別します。
 
-5. `cluster_id` と `attribute_id` に基づいて、対応するセッター関数を呼び出して属性値を更新します：
-   - `cluster_id` が `OnOff::Id` で、`attribute_id` が `OnOff::Attributes::OnOff::Id` の場合、`app_driver_light_set_power(handle, val)` を呼び出してライトの電源状態を設定します。
-   - `cluster_id` が `LevelControl::Id` で、`attribute_id` が `LevelControl::Attributes::CurrentLevel::Id` の場合、`app_driver_light_set_brightness(handle, val)` を呼び出してライトの明るさレベルを設定します。
-   - `cluster_id` が `ColorControl::Id` の場合、さらに `attribute_id` を確認します：
+5. `cluster_id` と `attribute_id` に基づいて、関数は対応するセッター関数を呼び出して属性値を更新します：
+   - `cluster_id` が `OnOff::Id` で `attribute_id` が `OnOff::Attributes::OnOff::Id` の場合、`app_driver_light_set_power(handle, val)` を呼び出してライトの電源状態を設定します。
+   - `cluster_id` が `LevelControl::Id` で `attribute_id` が `LevelControl::Attributes::CurrentLevel::Id` の場合、`app_driver_light_set_brightness(handle, val)` を呼び出してライトの明度レベルを設定します。
+   - `cluster_id` が `ColorControl::Id` の場合、`attribute_id` をさらにチェックします：
      - `attribute_id` が `ColorControl::Attributes::CurrentHue::Id` の場合、`app_driver_light_set_hue(handle, val)` を呼び出してライトの色相を設定します。
      - `attribute_id` が `ColorControl::Attributes::CurrentSaturation::Id` の場合、`app_driver_light_set_saturation(handle, val)` を呼び出してライトの彩度を設定します。
      - `attribute_id` が `ColorControl::Attributes::ColorTemperatureMireds::Id` の場合、`app_driver_light_set_temperature(handle, val)` を呼び出してライトの色温度を設定します。
 
-全体として、この関数はライトエンドポイントの属性値を更新するための中央ポイントとして機能します。必要な情報（エンドポイント ID、クラスター ID、属性 ID、属性値）を受け取り、クラスターと属性 ID に基づいて更新を適切なセッター関数にディスパッチします。
+全体的に、この関数はライトエンドポイントの属性値を更新するための中心的なポイントとして機能します。必要な情報（エンドポイントID、クラスタID、属性ID、および属性値）を受け取り、クラスタIDと属性IDに基づいて適切なセッター関数に更新を振り分けます。
 
-このようにロジックを整理することで、コードはよりモジュール化され、保守が容易になります。この関数を使用することで、受信データに基づいてライトの特性（電源状態、明るさ、色相、彩度、色温度）を簡単に更新できます。
+このようにロジックを整理することで、コードはよりモジュラーになり、保守しやすくなります。単一の関数を通じてライトエンドポイントの異なる属性（電源状態、明度、色相、彩度、色温度）を更新できるようになり、受信したデータに基づいてライトの特性を更新するプロセスが簡素化されます。
 
-しかし、すべての属性がリアルタイムで更新されるわけではありません。頻繁に変更される可能性のある属性を遅延永続化としてマークするコードを使用することで、パフォーマンスを向上させるとともに、不揮発性メモリへの書き込み回数を減らし、デバイスの寿命を延ばすことができます。
+ただし、すべての属性がリアルタイムで更新されるわけではありません。頻繁に変更される可能性のある属性を遅延永続化としてマークするコードは、パフォーマンスを向上させ、不揮発性メモリへの書き込み回数を減らし、デバイスの寿命を延ばすことができます。
 
 ```cpp
-/* 頻繁に変更される可能性のある属性を遅延永続化としてマーク */
+/* Mark deferred persistence for some attributes that might be changed rapidly */
 cluster_t *level_control_cluster = cluster::get(endpoint, LevelControl::Id);
 attribute_t *current_level_attribute = attribute::get(level_control_cluster, LevelControl::Attributes::CurrentLevel::Id);
 attribute::set_deferred_persistence(current_level_attribute);
@@ -442,72 +444,72 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 ## 独自のデータモデルの定義
 
-このセクションでは、Matter仕様で定義されている標準的なエンドポイント、クラスター、属性、およびコマンドを作成する方法を示します。
+このセクションでは、Matter仕様で定義されている標準的なエンドポイント、クラスター、属性、およびコマンドの作成方法を説明します。
 
 #### エンドポイント
 
-デバイスは、例の *app_main.cpp* 内で作成されたエンドポイント/デバイスタイプを編集することでカスタマイズできます。例:
+デバイスは、サンプルの*app_main.cpp*でエンドポイント/デバイスタイプの作成を編集することでカスタマイズできます。例：
 
--  on_off_light:
+- on_off_light:
 
 ```cpp
    on_off_light::config_t light_config;
    endpoint_t *endpoint = on_off_light::create(node, &light_config, ENDPOINT_FLAG_NONE);
 ```
 
--  temperature_sensor:
+- 温度センサー:
 
 ```cpp
     esp_matter::endpoint::temperature_sensor::config_t temperature_sensor_config;
     endpoint_t *endpoint = temperature_sensor::create(node, &temperature_sensor_config, ENDPOINT_FLAG_NONE, NULL);
 ```
 
--  fan:
+- ファン:
 
 ```cpp
    fan::config_t fan_config;
    endpoint_t *endpoint = fan::create(node, &fan_config, ENDPOINT_FLAG_NONE);
 ```
 
--  door_lock:
+- ドアロック:
 
 ```cpp
    door_lock::config_t door_lock_config;
    endpoint_t *endpoint = door_lock::create(node, &door_lock_config, ENDPOINT_FLAG_NONE);
 ```
 
--  window_covering_device:
+- window_covering_device:
 
 ```cpp
    window_covering_device::config_t window_covering_device_config(static_cast<uint8_t>(chip::app::Clusters::WindowCovering::EndProductType::kTiltOnlyInteriorBlind));
    endpoint_t *endpoint = window_covering_device::create(node, &window_covering_config, ENDPOINT_FLAG_NONE);
 ```
 
-   ``window_covering_device`` の ``config_t`` 構造体には、デフォルトの「ローラーシェード」と異なるエンドプロダクトタイプを指定できるコンストラクタが含まれています。
-   一度 ``config_t`` インスタンスが生成されると、そのエンドプロダクトタイプは変更できません。
+   ``window_covering_device`` ``config_t`` 構造体には、デフォルトの「ローラーシェード」とは異なるエンドプロダクトタイプを指定できるコンストラクタが含まれています。
+   ``config_t`` インスタンスがインスタンス化されると、そのエンドプロダクトタイプは変更できません。
 
-- pump:
+- pump
 
 ```cpp
    pump::config_t pump_config(1, 10, 20);
    endpoint_t *endpoint = pump::create(node, &pump_config, ENDPOINT_FLAG_NONE);
 ```
 
-   ``pump`` の ``config_t`` 構造体には、最大圧力、最大速度、および最大流量値を指定できるコンストラクタが含まれています。これらが設定されていない場合、デフォルトで null に設定されます。
-   一度 ``config_t`` インスタンスが生成されると、これら3つの値は変更できません。
+   ``pump`` ``config_t`` 構造体には、最大圧力、最大速度、最大流量の値を指定できるコンストラクタが含まれています。これらが設定されていない場合、デフォルトでnullに設定されます。
+   ``config_t`` インスタンスがインスタンス化されると、これら3つの値は変更できません。
 
 ### クラスター
 
-エンドポイントに追加のクラスターを追加することもできます。例:
+エンドポイントには追加のクラスターも追加できます。例：
 
--  on_off:
+- on_off:
 
 ```cpp
    on_off::config_t on_off_config;
    cluster_t *cluster = on_off::create(endpoint, &on_off_config, CLUSTER_FLAG_SERVER, on_off::feature::lighting::get_id());
 ```
 
--  temperature_measurement:
+- temperature_measurement:
 
 ```cpp
    temperature_measurement::config_t temperature_measurement_config;
@@ -521,8 +523,8 @@ attribute::set_deferred_persistence(current_x_attribute);
    cluster_t *cluster = window_covering::create(endpoint, &window_covering_config, CLUSTER_FLAG_SERVER);
 ```
 
-   ``window_covering`` の ``config_t`` 構造体には、デフォルトの「ローラーシェード」と異なるエンドプロダクトタイプを指定できるコンストラクタが含まれています。
-   一度 ``config_t`` インスタンスが生成されると、そのエンドプロダクトタイプは変更できません。
+   ``window_covering`` ``config_t`` 構造体には、デフォルトの「ローラーシェード」とは異なるエンドプロダクトタイプを指定できるコンストラクタが含まれています。
+   ``config_t`` インスタンスがインスタンス化されると、そのエンドプロダクトタイプは変更できません。
 
 - pump_configuration_and_control:
 
@@ -531,35 +533,35 @@ attribute::set_deferred_persistence(current_x_attribute);
    cluster_t *cluster = pump_configuration_and_control::create(endpoint, &pump_configuration_and_control_config, CLUSTER_FLAG_SERVER);
 ```
 
-   ``pump_configuration_and_control`` の ``config_t`` 構造体には、最大圧力、最大速度、および最大流量値を指定できるコンストラクタが含まれています。これらが設定されていない場合、デフォルトで null に設定されます。
-   一度 ``config_t`` インスタンスが生成されると、これら3つの値は変更できません。
+   ``pump_configuration_and_control`` ``config_t`` 構造体には、最大圧力、最大速度、最大流量の値を指定できるコンストラクタが含まれています。これらが設定されていない場合、デフォルトでnullに設定されます。
+   ``config_t`` インスタンスがインスタンス化されると、これら3つの値は変更できません。
 
 ### 属性とコマンド
 
-クラスターに追加の属性やコマンドを追加することもできます。
-例:
+追加の属性とコマンドもクラスターに追加できます。
+例：
 
--  属性: on_off:
+- attribute: on_off:
 
 ```cpp
    bool default_on_off = true;
    attribute_t *attribute = on_off::attribute::create_on_off(cluster, default_on_off);
 ```
 
--  属性: cluster_revision:
+- 属性: cluster_revision:
 
 ```cpp
    uint16_t default_cluster_revision = 1;
    attribute_t *attribute = global::attribute::create_cluster_revision(cluster, default_cluster_revision);
 ```
 
--  コマンド: toggle:
+- コマンド: toggle:
 
 ```cpp
    command_t *command = on_off::command::create_toggle(cluster);
 ```
 
--  コマンド: move_to_level:
+- command: move_to_level:
 
 ```cpp
    command_t *command = level_control::command::create_move_to_level(cluster);
@@ -567,9 +569,9 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 ### 機能
 
-クラスターに適用可能なオプション機能を追加することもできます。
+クラスターに適用可能なオプション機能も追加できます。
 
-- 機能: taglist: Descriptor クラスター:
+- feature: taglist: Descriptor cluster:
 
 ```cpp
    cluster_t* cluster = cluster::get(endpoint, Descriptor::Id);
@@ -578,13 +580,13 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 ### カスタムデータモデルフィールドの追加
 
-このセクションでは、Matter仕様で定義されていない、ベンダー固有のカスタムエンドポイント、クラスター、属性、およびコマンドを作成する方法を示します。
+このセクションでは、Matter仕様で定義されておらず、ベンダー固有のカスタムエンドポイント、クラスター、属性、およびコマンドの作成方法を説明します。
 
 #### エンドポイント
 
-クラスターなしで非標準エンドポイントを作成できます。
+非標準エンドポイントは、クラスターなしで作成できます。
 
--  エンドポイント作成:
+- エンドポイント作成：
 
 ```cpp
    endpoint_t *endpoint = endpoint::create(node, ENDPOINT_FLAG_NONE);
@@ -592,9 +594,9 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 #### クラスター
 
-非標準/カスタムクラスターも作成できます:
+非標準/カスタムクラスターも作成できます：
 
--  クラスター作成:
+- クラスター作成：
 
 ```cpp
    uint32_t custom_cluster_id = 0x131bfc00;
@@ -603,9 +605,9 @@ attribute::set_deferred_persistence(current_x_attribute);
 
 #### 属性とコマンド
 
-非標準/カスタム属性を任意のクラスターに作成できます:
+非標準/カスタム属性は任意のクラスターに作成することもできます：
 
--  属性作成:
+- 属性の作成：
 
 ```cpp
    uint32_t custom_attribute_id = 0x0;
@@ -613,7 +615,7 @@ attribute::set_deferred_persistence(current_x_attribute);
    attribute_t *attribute = attribute::create(cluster, custom_attribute_id, ATTRIBUTE_FLAG_NONE, esp_matter_uint16(default_value);
 ```
 
--  コマンド作成:
+- コマンド作成:
 
 ```cpp
    static esp_err_t command_callback(const ConcreteCommandPath &command_path, TLVReader &tlv_data, void
@@ -627,15 +629,15 @@ attribute::set_deferred_persistence(current_x_attribute);
    command_t *command = command::create(cluster, custom_command_id, COMMAND_FLAG_ACCEPTED, command_callback);
 ```
 
-Matterデータモデルは、これらのコンポーネントを階層的に整理しています。Matterノードは1つ以上のエンドポイントを含み、それぞれが特定のデバイスタイプを表します。各エンドポイントは複数のクラスターで構成されており、関連する属性とコマンドをグループ化しています。属性はクラスターの状態と設定を保存し、コマンドはデバイスとの相互作用や制御に使用されます。
+Matter データモデルは、これらのコンポーネントを階層的に整理します。Matter ノードには1つ以上のエンドポイントが含まれ、それぞれが特定のデバイスタイプを表します。各エンドポイントは複数のクラスターで構成され、関連する属性とコマンドをグループ化します。属性はクラスターの状態と設定を保存し、コマンドはデバイスとの相互作用と制御に使用されます。
 
-このようにデータモデルを構造化することで、Matterは異なるメーカーのデバイス間での相互運用性と標準化を可能にします。開発者は定義されたデバイスタイプ、クラスター、属性、コマンドを使用して、Matter対応デバイスをシームレスに制御および通信できるアプリケーションを作成できます。
+このようにデータモデルを構造化することで、Matter は異なるメーカーのデバイス間での相互運用性と標準化を可能にします。開発者は定義されたデバイスタイプ、クラスター、属性、コマンドを使用して、Matter 対応デバイスをシームレスに制御し、通信できるアプリケーションを作成できます。
 
-Matterデータモデルは、デバイスがその機能を記述し、相互にやり取りするための共通言語とフレームワークを提供し、より統一された一貫性のあるスマートホーム体験を実現します。
+Matter データモデルは、デバイスがその機能を記述し、相互に相互作用するための共通言語とフレームワークを提供し、より統一された一貫性のあるスマートホーム体験を可能にします。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

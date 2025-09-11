@@ -119,6 +119,7 @@ Then can start to compile script using your prefer tool to ESP32!
 ## Recommended Editors for MicroPython
 
 Some of popular tools are listed below.
+
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
 - [Arduino for micropython](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
@@ -178,8 +179,9 @@ while True:
 
 ### 3. Pymakr on Visual Studio Code
 
-* Install Pymakr
+- Install Pymakr
 Follow the [installation instructions](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/) to install Pymakr.
+
 - Connect Your XIAO ESP32C3 to your computer.
 - Create a New Project
 Open VS Code and create a new project for your microcontroller.
@@ -191,7 +193,8 @@ Create a new Python file within your project.
 
 ### 4. uPtCraft IDE
 
-* [macOS](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/)
+- [macOS](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/)
+
 - [Windows](PChttps://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
 - [Linux](https://randomnerdtutorials.com/install-upycraft-ide-linux-ubuntu-instructions/)
 
@@ -269,7 +272,7 @@ ap.active(True)         # activate the interface
 
 ```
 
-A useful function for connecting to your local WiFi network is: 
+A useful function for connecting to your local WiFi network is:
 
 ```python
 def do_connect():

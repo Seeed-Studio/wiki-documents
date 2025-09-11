@@ -84,7 +84,7 @@ The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows 
 XIAO SAMD21 currently only supports battery power supply and **cannot connect to Type-C while a battery is connected**, as it may pose a safety risk.
 
 Please pay attention to use, do not lift the shield cover.
-:::   
+:::
 
 ### **Enter Bootloader Mode**
 
@@ -287,7 +287,6 @@ You can, of course, open the serial monitor to view the voltage values stream by
 
 Thank you to [Aleksei Tertychnyi](https://github.com/WeSpeakEnglish) for submitting the code, all related functionalities were developed and contributed by him.
 
-
 ```cpp
 #define DAC_PIN A0 // Make code a bit more legible
 float x = 0; // Value to take the sin of
@@ -388,7 +387,7 @@ Click **Tools-> Board-> Boards Manager...**, print  keyword "**Seeed Studio XIAO
 
 - **Step 4. Select your board and port**
 
-After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO **" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
+After installing the board, click **Tools-> Board**, find "**Seeed Studio XIAO**" and select it. Now you have already set up the board of Seeed Studio XIAO SAMD21 for Arduino IDE.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino_GPRS/img/1.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -438,9 +437,7 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - **[STEP]** [Seeed Studio XIAO SAMD21 3D Model](https://files.seeedstudio.com/wiki/Seeeduino-XIAO/res/seeeduino-xiao-samd21-3d-model.zip)
 
-
 - 🔗 **[Kicad]** [Seeed Studio XIAO SAMD21 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-
 
 ## Course Resources
 
@@ -448,17 +445,16 @@ the max size of flash is 8KB the more information at the ATSAMD218A-MU datasheet
 
 - **[Ebook]** [XIAO: Big Power, Small Board Mastering Arduino and TinyML](https://mjrovai.github.io/XIAO_Big_Power_Small_Board-ebook/)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

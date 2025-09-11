@@ -519,8 +519,7 @@ This example uses the `SEEED_MR60FDA2` class to interface with the MR60FDA2 sens
   - Initializes the sensor for communication, setting up the serial connection between the XIAO board and the MR60FDA2 sensor.
 
 - **`mmWave.setInstallationHeight(float height)`**:
-  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization
-setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
+  - Sets the installation height of the radar, which is crucial for accurate fall detection. The `height` parameter specifies the height (in meters) at which the sensor is installed, initialization setting parameters is `2.2 m`, with a valid range typically between 1 and 5 meters.
 
 - **`mmWave.setThreshold(float threshold)`**:
   - Sets the fall detection threshold. The default fall threshold of the radar is `0.6 m`. This value determines the sensitivity of the radar in terms of detecting falls based on the height and distance from the sensor.
@@ -617,7 +616,7 @@ Then you need to download and unzip the OTA tool and the firmware here.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/firmware-update/5-module-enter-upgrade-mode.png" style={{width:700, height:'auto'}}/></div>
 
-4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state. 
+4. Select the firmware to be upgraded. After selection, it will automatically enter the upgrade state.
 
 After the upgrade is completed, it will automatically jump to normal mode. If it does not jump, power off and restart, and then use OTA tool to view the serial port data.
 

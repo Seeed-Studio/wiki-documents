@@ -480,21 +480,21 @@ When you shake the module, the color of the light strip changes. The more violen
 #### Hardware Preparation
 
 <div class="table-center">
-<table style={{textAlign:'center'}}>
+  <table style={{textAlign:'center'}}>
     <tr>
-        <th>Home Assistant Devices</th>
+      <th>Home Assistant Devices</th>
     </tr>
     <tr>
         <td><img src="https://files.seeedstudio.com/wiki/Home-Assistant/1.png" style={{width:300, height:'auto'}}/></td>
     </tr>
     <tr>
-        <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-      <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-      </a>
-  </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+          <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
     </tr>
-</table>
+  </table>
 </div>
 
 #### Software Preparation

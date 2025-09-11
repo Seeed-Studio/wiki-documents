@@ -15,7 +15,6 @@ last_update:
 
 # Bluetooth Usage with Seeed Studio XIAO ESP32S3 (Sense)
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/64.jpg" style={{width:700, height:'auto'}}/></div>
 
 The Seeed Studio XIAO ESP32S3 is a powerful development board that supports Bluetooth 5, BLE, and Mesh networking, making it an ideal choice for a wide range of IoT applications that require wireless connectivity. With its outstanding RF performance, the XIAO ESP32S3 can provide reliable and high-speed wireless communication over a variety of distances, making it a versatile solution for both short-range and long-range wireless applications. In this tutorial, we will focus on the basic features of the XIAO ESP32S3's Bluetooth capabilities, such as how to scan for nearby Bluetooth devices, how to establish a Bluetooth connection, and how to transmit and receive data over a Bluetooth connection.
@@ -63,7 +62,6 @@ If you do not have an antenna installed, you may not be able to use the Bluetoot
 If you have the conditions, I suggest you use the big stick antenna, which will get a better experience.
 :::
 
-
 ## Bluetooth Low Energy (BLE) Usage
 
 Bluetooth Low Energy, BLE for short, is a power-conserving variant of Bluetooth. BLE’s primary application is short distance transmission of small amounts of data (low bandwidth). Unlike Bluetooth that is always on, BLE remains in sleep mode constantly except for when a connection is initiated.
@@ -107,7 +105,7 @@ By using the GATT protocol, Bluetooth devices can communicate in different appli
 
 ATT, full name attribute protocol. In the end, ATT is composed of a group of ATT commands, that is, request and response commands, ATT is also the uppermost layer of the Bluetooth null packet, that is, ATT is where we analyze the Bluetooth packet the most.
 
-ATT command, formally known as ATT PDU (Protocol Data Unit). It includes 4 categories: read, write, notify and indicate. These commands can be divided into two types: if it requires a response, then it will be followed by a request; on the contrary, if it only requires an ACK but not a response, then it will not be followed by a request. 
+ATT command, formally known as ATT PDU (Protocol Data Unit). It includes 4 categories: read, write, notify and indicate. These commands can be divided into two types: if it requires a response, then it will be followed by a request; on the contrary, if it only requires an ACK but not a response, then it will not be followed by a request.
 
 Service and Characteristic are defined in the GATT layer. The Service side provides the Service, the Service is the data, and the data is the attribute, and the Service and Characteristic are the logical presentation of the data, or the data that the user can see are eventually transformed into the Service and Characteristic.
 
@@ -177,8 +175,10 @@ void loop() {
 
 :::tip
 If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+
 1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` change to ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
 2. ```Serial.println(foundDevices.getCount());``` change to ```Serial.println(foundDevices->getCount());```
+
 :::
 
 Now you can select XIAO ESP32S3 motherboard and upload the program. If the program runs smoothly, open the serial monitor and set the baud rate to 115200, you can see the following result.
@@ -274,12 +274,12 @@ Meanwhile, you can search and download the **nRF Connect** app in major mobile a
 After downloading the software, follow the steps shown below to search for and connect XIAO ESP32S3, and you will see the advertised "Hello World".
 
 <table align="center">
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/55.jpg" style={{width:200, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/56.jpg" style={{width:200, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/58.jpg" style={{width:200, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/59.jpg" style={{width:200, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/55.jpg" style={{width:200, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/56.jpg" style={{width:200, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/58.jpg" style={{width:200, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/59.jpg" style={{width:200, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 If you want to use another XIAO ESP32S3 as a client to receive messages from the server, then you can use the following procedure for the client XIAO.
@@ -442,14 +442,14 @@ void loop() {
 
 :::tip
 If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
-1.  ```std::string value = pRemoteCharacteristic->readValue();``` change to ```String value = pRemoteCharacteristic->readValue();```
+
+1. ```std::string value = pRemoteCharacteristic->readValue();``` change to ```String value = pRemoteCharacteristic->readValue();```
+
 :::
 
 The above program will turn XIAO into a client and search for nearby Bluetooth devices. When the UUID of the Bluetooth device matches the UUID you provided, it will connect to the device and obtain its characteristic value.
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/60.png" style={{width:800, height:'auto'}}/></div>
-
 
 #### Program annotation
 
@@ -497,40 +497,40 @@ Next, we'll come to the real world to complete a case. In this case, we will hav
 For the convenience of wiring, we will use two XIAO expansion boards, the sample program is for reference only, you can choose the product according to the actual project needs.
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Digital Light Sensor - TSL2561</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:200, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:200, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:200, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:200, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:200, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Digital_Light_Sensor/img/hardware%20overview.jpg" style={{width:180, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Digital-Light-Sensor-TSL2561.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 In addition to the above hardware preparation, you may need to prepare the following libraries, download and add them to the Arduino IDE environment.
@@ -555,10 +555,11 @@ In addition to the above hardware preparation, you may need to prepare the follo
 
 <br></br>
 
-We need to prepare two XIAO, one as server and one as client. Here is the sample program as a server. XIAO as a server has the following main tasks. 
-- First, get the real-time values from the light sensor; 
-- Second, create the Bluetooth server; 
-- Third, advertise the light intensity values through Bluetooth; 
+We need to prepare two XIAO, one as server and one as client. Here is the sample program as a server. XIAO as a server has the following main tasks.
+
+- First, get the real-time values from the light sensor;
+- Second, create the Bluetooth server;
+- Third, advertise the light intensity values through Bluetooth;
 - Fourth, show the real-time light intensity and sending on the display.
 
 ```c
@@ -872,8 +873,8 @@ Finally, the light value is placed in the pointer pData.
 The above example gives the simplest example of a single value for a single sensor. If you want to advertise multiple sensors or multiple sensor values via Bluetooth, we recommend you to read the tutorial examples here.
 
 - [ESP32 BLE Server and Client (Bluetooth Low Energy)](https://randomnerdtutorials.com/esp32-ble-server-client/)
-:::
 
+:::
 
 ## NimBLE-Arduino
 
@@ -985,6 +986,7 @@ void loop() {
     delay(2000);
 }
 ```
+
 **Result**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/NimBLE2.jpg" alt="pir" width={700} height="auto" /></div>
@@ -995,19 +997,16 @@ void loop() {
 
 [The ESP32-S3 has no Bluetooth Classic hardware in the chip](https://github.com/espressif/arduino-esp32/issues/8023). Only the "old" ESP32 can do it - no other Espressif SoC has BT Classic.
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

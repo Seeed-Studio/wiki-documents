@@ -18,7 +18,6 @@ last_update:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
-
 ## **Getting Started**
 
 First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and upload a simple code from MicroPython to check whether the board is functioning well.
@@ -35,25 +34,21 @@ First, we are going to connect the Seeed Studio XIAO SAMD21 to the computer and 
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_6.png" /></div>
 
-
 - **Step 2**. Launch the Thonny
 
 - **Step 3**. Click **"Tools-->Options"** to open the settings.
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-
 - **Step 4**. Chose the "Interpreter" interface and select the device as **"MicroPython(generic)"** and the port as **"Try to detect port automatically"**
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/1.jpg" /></div>
-
 
 ### **Connect Seeed Studio XIAO SAMD21 to the PC and Light it up**
 
 - **Step 1**. Press and hold the "BOOT" button and then connect the Seeed Studio XIAO SAMD21 to the PC through the Type-C cable. If it works well, there is an "Arduino" desk shown on the PC.
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
-
 
 - **Step 2**. Flash the firmware
 
@@ -69,7 +64,7 @@ It is also possible to [compile your own firmware](https://wiki.seeedstudio.com/
 |-|--|---|--|---|
 |2|PA02|0|2|0| * | * | * | * |
 |4|PA04|1|4|4| * | * | * | * |
-|10|PA10|2|10|18| * | * | * | * | 
+|10|PA10|2|10|18| * | * | * | * |
 |11|PA11|3|11|19| * | * | * | * |
 |8|PA08|4|*|16| * | * | * | * |
 |9|PA09|5|9|17| * | * | * | * |
@@ -89,14 +84,14 @@ Upload the codes by clicking the "Run current script" button. For the first time
 
 If you want to use the program offline, you should save the program to XIAO SAMD21
 
-Press and hold Ctrl + Shift + S at the same time , then select save to **MicroPython device** 
+Press and hold Ctrl + Shift + S at the same time , then select save to **MicroPython device**
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
-
 
 ### GPIO TEST (LED)
 
 We need to prepare:
+
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 Copy the following codes to Thonny.
@@ -125,6 +120,7 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 ### GPIO Control Relays
 
 We need to prepare:
+
 - [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
@@ -155,7 +151,6 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/4.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video></div>
-
 
 ### Human detection for automatic control
 
@@ -197,7 +192,6 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
     Your browser does not support the video tag.
   </video></div>
 
-
 ### I2C Support
 
 ```python
@@ -219,11 +213,12 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-
 Familiarity with micropython allows you to do more , we are looking forward to creating more value for you. Feel free to share your projects with us too!
 
 ### DAC Support
+
 Thank you to Aleksei Tertychnyi for submitting the code, all related functionalities were developed and contributed by him.
+
 ```python
 from machine import Pin, Timer, DAC
  
@@ -243,6 +238,7 @@ def loop(tim):
 tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=loop)
 ```
+
 Voltage on **pin A0** will start to gradually increase, after reaching maximum at appoximately *3.3V*, will drop to *0V* and cycle will repeat.
 
 ## MicroPython Device Console
@@ -256,11 +252,11 @@ Our partner **Neil** has written a command line console program for XIAO using M
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

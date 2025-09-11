@@ -549,8 +549,6 @@ Congrats to you 🙌 on completing the tinyML image classification project.
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model]() -->
 
-
-
 ### For Seeed Studio XIAO ESP32S3 Sense
 
 - **[PDF]** [Seeed Studio XIAO ESP32S3 Sense Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH.pdf)
@@ -569,15 +567,13 @@ Congrats to you 🙌 on completing the tinyML image classification project.
 
 <!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
 
-
-
 ### Other
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp>)
 
 - **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp>)
 
-_The remaining open source material is being compiled, so stay tuned!_
+*The remaining open source material is being compiled, so stay tuned!*
 
 ## Tech Support & Product Discussion
 

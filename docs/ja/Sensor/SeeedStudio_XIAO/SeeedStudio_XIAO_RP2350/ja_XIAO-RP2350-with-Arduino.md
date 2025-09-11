@@ -1,43 +1,39 @@
 ---
-description: XIAO RP2350 ボードで Arduino を使用する方法
-title: Seeed Studio XIAO RP2350(Arduino) の使い方
+description: XIAO RP2350 ボードでArduinoを使用する
+title: Seeed Studio XIAO RP2350(Arduino)を始める
 image: https://files.seeedstudio.com/wiki/XIAO-RP2350/img/2-102010550_XIAO_RP2350-45font_1.webp
 slug: /ja/xiao_rp2350_arduino
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 2024-10-30T01:39:16.136Z
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Seeed Studio XIAO RP2350 と Arduino
+# Seeed Studio XIAO RP2350 with Arduino
 
-Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/earlephilhower/arduino-pico) のおかげで、Arduino を使用したプログラミングをサポートするようになりました。このガイドでは、RP2350 ボードで Arduino を設定して使用する方法を説明します。
+Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/earlephilhower/arduino-pico)のおかげで、Arduinoによるプログラミングをサポートしています。このガイドでは、RP2350 ボードでArduinoをセットアップして使い始める方法を説明します。
 
-## 必要条件
+## 前提条件
 
-始める前に以下を準備してください：
+開始するには、以下が必要です：
 
 - RP2350 ボード
 - Arduino IDE
-- USB ケーブル
+- USBケーブル
 
 ## ソフトウェアのセットアップ
 
-### 1. Arduino IDE のインストール
+### 1. Arduino IDEのインストール
 
-公式サイトから最新の Arduino IDE をダウンロードしてインストールしてください：[Arduino Software](https://www.arduino.cc/en/software)。
+公式サイトから最新のArduino IDEをダウンロードしてインストールしてください：[Arduino Software](https://www.arduino.cc/en/software)。
 
 ### 2. RP2350 ボードサポートの追加
 
-1. Arduino IDE を開き、**ファイル** > **環境設定** に移動します。
-2. **追加のボードマネージャーの URL** フィールドに以下の URL を追加します：
+1. Arduino IDEを開き、**ファイル** > **環境設定**に移動します。
+2. **追加のボードマネージャのURL**フィールドに、このURLを追加します：
 
     ```shell
     https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
@@ -47,13 +43,13 @@ Seeed Studio XIAO RP2350 ボードは、[arduino-pico core](https://github.com/e
     <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-url.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
     </div>
 
-3. **OK** をクリックして設定を保存します。
-4. **ツール** > **ボード** > **ボードマネージャー** に移動します。
-5. ボードマネージャーで **pico** を検索し、**インストール** をクリックします。
-6. インストール後、**ツール** > **ボード** に移動し、以下のボードを選択してください。
+3. **OK**をクリックして設定を保存します。
+4. **ツール** > **ボード** > **ボードマネージャ**に移動します。
+5. ボードマネージャで**pico**を検索し、**インストール**をクリックします。
+6. インストール後、**ツール** > **ボード**に移動し、下図に示すボードをあなたのボードとして選択します。
 
 :::note
-XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.0 以降をインストールしてください。
+XIAO RP2350 ボードの完全サポートには、バージョン4.2.0以降をインストールしてください。
 :::
 
 <div style={{ textAlign: 'center' }}>
@@ -62,25 +58,25 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 
 ### 3. スケッチのアップロード
 
-スケッチをアップロードする前に、XIAO RP2350 を BOOT モードにする必要があります。以下の方法のいずれかを使用してください：
+スケッチをアップロードする前に、XIAO RP2350 をBOOTモードにしてください。以下のいずれかの方法を使用してください：
 
 <Tabs>
-<TabItem value="method1" label="方法 1: コンピュータに接続する前" default>
+<TabItem value="method1" label="方法1：コンピュータに接続する前" default>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>BOOT を押しながら -> ケーブルを接続 -> BOOT を離す</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-no-charge.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Bootを押し続ける→ケーブルを接続→Bootを離す</em></div></div>
 
 </TabItem>
 
-<TabItem value="method2" label="方法 2: コンピュータに接続中">
+<TabItem value="method2" label="方法2：コンピュータに接続中">
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>BOOT を押しながら -> リセットをクリック -> BOOT を離す</em></div></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/enter-boot-charged.gif" style={{width:500, height:'auto', "border-radius": '12.8px' }}/><div style={{ marginTop: '-8px' }}><em>Bootを押し続ける→Resetをクリック→Bootを離す</em></div></div>
 
 </TabItem>
 </Tabs>
 
-1. Arduino IDE を開き、新しいスケッチを作成します。
-2. コードを書きます。例えば、`Blink` の例を使用してください。
-3. **ツール** > **ポート** に移動し、RP2350 が接続されているポートを選択します。
+1. Arduino IDEを開き、新しいスケッチを作成します。
+2. コードを書きます。例えば、`Blink`サンプルコードを使用してください。
+3. **ツール** > **ポート**に移動し、RP2350 が接続されているポートを選択します。
 
 <div style={{ textAlign: 'center' }}>
 <img src="https://files.seeedstudio.com/wiki/XIAO-RP2350/img/arduino-firmware-upload.png" style={{ width: 680, height: 'auto', "border-radius": '12.8px' }} />
@@ -91,9 +87,9 @@ XIAO RP2350 ボードを完全にサポートするには、バージョン 4.2.
 - [arduino-pico GitHub](https://github.com/earlephilhower/arduino-pico)
 - [Arduino-Pico Core Documentation](https://arduino-pico.readthedocs.io/en/latest/install.html)
 
-## サポートとディスカッション
+## サポート & ディスカッション
 
-Seeed 製品をご利用いただきありがとうございます！サポートやコミュニティディスカッションのための複数のチャネルを提供しています：
+Seeed製品をご利用いただき、ありがとうございます！サポートとコミュニティディスカッションのための複数のチャンネルを提供しています：
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

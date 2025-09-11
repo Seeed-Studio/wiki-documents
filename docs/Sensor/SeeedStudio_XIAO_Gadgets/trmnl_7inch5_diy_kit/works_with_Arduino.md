@@ -223,48 +223,49 @@ float readBatteryVoltage() {
 
 1. We define two important pins:
 
-  - `BATTERY_PIN` (GPIO1/A0): Connected to the battery voltage divider
+- `BATTERY_PIN` (GPIO1/A0): Connected to the battery voltage divider
 
-  - `ADC_EN_PIN` (GPIO6/A5): Controls power to the ADC measurement circuit
+- `ADC_EN_PIN` (GPIO6/A5): Controls power to the ADC measurement circuit
 
 2. We define a `CALIBRATION_FACTOR` (0.968) to fine-tune the voltage reading accuracy.
 
 3. In the `setup()` function:
 
-  - We initialize serial communication
+- We initialize serial communication
 
-  - Configure the ADC_EN pin as an output and set it LOW (disabled) to save power
+- Configure the ADC_EN pin as an output and set it LOW (disabled) to save power
 
-  - Set the ADC resolution to 12 bits (0-4095)
+- Set the ADC resolution to 12 bits (0-4095)
 
-  - Configure the proper attenuation for the battery pin
+- Configure the proper attenuation for the battery pin
 
 4. In the `loop()` function:
 
-  - We call `readBatteryVoltage()` to get the current battery voltage
+- We call `readBatteryVoltage()` to get the current battery voltage
 
-  - We print the voltage to the Serial Monitor
+- We print the voltage to the Serial Monitor
 
-  - We determine and display the battery status based on voltage thresholds
+- We determine and display the battery status based on voltage thresholds
 
-  - We wait for 5 seconds before taking the next reading
+- We wait for 5 seconds before taking the next reading
 
 5. The `readBatteryVoltage()` function:
-  - Enables the ADC circuit by setting ADC_EN_PIN HIGH
 
-  - Waits briefly for the circuit to stabilize
+- Enables the ADC circuit by setting ADC_EN_PIN HIGH
 
-  - Takes 30 readings and averages them for more stable results
+- Waits briefly for the circuit to stabilize
 
-  - Disables the ADC circuit to save power
+- Takes 30 readings and averages them for more stable results
 
-  - Calculates the actual battery voltage using:
+- Disables the ADC circuit to save power
 
-    * The average ADC reading
-    * The ADC resolution (4095)
-    * Reference voltage (3.6V)
-    * Voltage divider factor (2.0)
-    * Calibration factor (0.968)
+- Calculates the actual battery voltage using:
+
+  - The average ADC reading
+  - The ADC resolution (4095)
+  - Reference voltage (3.6V)
+  - Voltage divider factor (2.0)
+  - Calibration factor (0.968)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/TRMNL_DIY_Kit/7_battery_monitor_serial.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -275,7 +276,6 @@ A key feature of this implementation is the ability to disable the battery measu
 The calibration factor (0.968) compensates for component tolerances in the voltage divider and helps ensure accurate readings. This value may need slight adjustment for your specific board if you find the readings are consistently off compared to a multimeter measurement.
 
 Taking multiple readings and averaging them helps reduce noise and provides more stable voltage measurements, which is especially important for battery monitoring where small voltage changes can be significant for determining the remaining capacity.
-
 
 ## ePaper Display
 
@@ -310,7 +310,6 @@ To control the ePaper display, we'll use the Seeed_GFX library, which provides c
     <strong><span><font color={'FFFFFF'} size={"4"}>Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
 
 **Step 2.** Install the library by adding the ZIP file in Arduino IDE. Go to **Sketch > Include Library > Add .ZIP Library** and select the downloaded ZIP file.
 
@@ -518,9 +517,9 @@ This elegant example creates a classic analog clock on the ePaper display. Let's
    - We increment the seconds, minutes, and hours as needed.
    - We calculate the angles for each hand based on the current time.
    - The positions of the hands are calculated using trigonometric functions:
-     * Hours hand: 30 degrees per hour (plus adjustment for minutes)
-     * Minutes hand: 6 degrees per minute (plus adjustment for seconds)
-     * Seconds hand: 6 degrees per second
+     - Hours hand: 30 degrees per hour (plus adjustment for minutes)
+     - Minutes hand: 6 degrees per minute (plus adjustment for seconds)
+     - Seconds hand: 6 degrees per second
    - To reduce unnecessary updates and extend the display's lifespan, we only erase and redraw the hour and minute hands once per minute (when seconds = 0).
    - The second hand is updated every second by erasing its previous position and drawing it in the new position.
    - After drawing all the hands, we refresh the center dot and call `epaper.update()` to update the physical display.
@@ -544,8 +543,6 @@ This elegant example creates a classic analog clock on the ePaper display. Let's
 
 This analog clock example provides a great starting point for creating your own graphical applications on the TRMNL 7.5" (OG) DIY Kit's ePaper display.
 
-
-
 ### Drawing and Text Functions
 
 The Seeed_GFX library provides many functions for drawing on the display:
@@ -565,6 +562,7 @@ The Seeed_GFX library provides many functions for drawing on the display:
 - `display.println("text")`: Prints text with a newline
 
 The available colors for this monochrome display are:
+
 - `GxEPD_BLACK`: Black pixels
 - `GxEPD_WHITE`: White pixels
 
@@ -576,14 +574,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-

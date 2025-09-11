@@ -1,43 +1,39 @@
 ---
-description: XIAO ESP32S3(Sense) と FreeRTOS
-title: XIAO ESP32S3(Sense) と FreeRTOS
+description: XIAO ESP32S3(Sense) With FreeRTOS
+title: XIAO ESP32S3(Sense) With FreeRTOS
 keywords:
-  - ソフトウェア
-  - FreeRTOS
-  - SD
-  - カメラ
+  - Software
+  - FreeRtos
+  - sd
+  - camera
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/xiao-esp32s3-freertos
 last_update:
-  date: 05/15/2025
+  date: 09/14/2024
   author: Priyanshu Roy
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# XIAO ESP32S3(Sense) と FreeRTOS
+# XIAO ESP32S3(Sense) With FreeRTOS
 
-このウィキでは、[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/) における [FreeRTOS](https://freertos.org/) のサポートについて説明します。このガイドを使用することで、ボードで利用可能な機能セットを活用できるようになります。
+このwikiは[Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)の[FreeRTOS](https://freertos.org/)サポートについて説明します。このガイドの支援により、ボードで利用可能な機能セットを活用できるようになります。
 
-## [FreeRTOS](https://www.freertos.org/index.html) とは
+## [FreeRTOS](https://www.freertos.org/index.html)とは
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/1.png" alt="pir" width={600} height="auto" /></p>
 
-FreeRTOS は、リアルタイムカーネルと補完的な機能を実装するモジュール式ライブラリ群で構成された C ライブラリのコレクションです。FreeRTOS カーネルはリアルタイムカーネル（またはリアルタイムスケジューラ）であり、FreeRTOS 上に構築されたアプリケーションが厳密なリアルタイム要件を満たすことを可能にします。これにより、アプリケーションを独立した実行スレッドのコレクションとして整理することができます。
+FreeRTOSは、リアルタイムカーネルと補完機能を実装するモジュラーライブラリのセットで構成されるCライブラリのコレクションです。FreeRTOSカーネルは、FreeRTOS上に構築されたアプリケーションがハードリアルタイム要件を満たすことを可能にするリアルタイムカーネル（またはリアルタイムスケジューラ）です。これにより、アプリケーションを独立した実行スレッドのコレクションとして整理することができます。
 
-_参考: [**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)_
+_参考：[**Mastering the FreeRTOS Real Time Kernel**](https://www.freertos.org/Documentation/02-Kernel/07-Books-and-manual/01-RTOS_book)_
 
-## FreeRTOS ポート
+## FreeRTOSポート
 
-FreeRTOS はオープンソースの RTOS（リアルタイムオペレーティングシステム）カーネルであり、ESP-IDF にコンポーネントとして統合されています。そのため、すべての ESP-IDF アプリケーションおよび多くの ESP-IDF コンポーネントは FreeRTOS に基づいて記述されています。FreeRTOS カーネルは、ESP チップで利用可能なすべてのアーキテクチャ（Xtensa および RISC-V）に移植されています。
+FreeRTOSは、ESP-IDFにコンポーネントとして統合されたオープンソースRTOS（リアルタイムオペレーティングシステム）カーネルです。したがって、すべてのESP-IDFアプリケーションと多くのESP-IDFコンポーネントはFreeRTOSベースで書かれています。FreeRTOSカーネルは、ESPチップで利用可能なすべてのアーキテクチャ（すなわち、XtensaとRISC-V）にポートされています。
 
-ここでは、FreeRTOS の ESP IDF ポートを使用します。
+私たちはFreeRTOSのESP IDFポートを使用します。
 
 ## ハードウェア準備
 
-私は [Seeed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/) と、オンボードのカメラ、マイク、SDカードリーダー、さらに ESP32S3 の Wi-Fi 機能を使用します。
+私は[Seed Studio XIAO ESP32S3 Sense](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)と、オンボードカメラ、マイクロフォン、SDカードリーダー、そしてESP32S3のWifi機能を使用しています。
 
 <div class="table-center">
   <table align="center">
@@ -50,7 +46,7 @@ FreeRTOS はオープンソースの RTOS（リアルタイムオペレーティ
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -59,34 +55,34 @@ FreeRTOS はオープンソースの RTOS（リアルタイムオペレーティ
 
 ### 追加コンポーネント
 
-- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2C ディスプレイ、RTC、ボタン
-- [空気質センサー v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
-- [Grove - 温度、湿度、圧力、ガスセンサー for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Seeed Studio XIAO 拡張ボード用アクリルケース](https://www.seeedstudio.com/XIAO-p-4812.html)
+- [Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) - I2Cディスプレイ RTC & ボタン
+- [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)
+- [Grove - Arduino用温度・湿度・気圧・ガスセンサー - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Seeed Studio XIAO拡張ボード用アクリルケース](https://www.seeedstudio.com/XIAO-p-4812.html)
 
-## ソフトウェア準備
+## ソフトウェアの準備
 
-私は Visual Studio Code（Windows）と ESP-IDF を使用しています。
+私はESP-IDFを使用したVisual Studio Code（Windows）を使用しています。
 
-1. VSCode のインストール
-2. ESP-IDF インストールガイド
-3. Git リポジトリ
+1. VSCodeインストール
+2. ESP-IDFインストールガイド
+3. Gitリポジトリ
 
 <div class="table-center">
   <table align="center">
     <tr>
         <th>VS Code</th>
-        <th>VSCode 用 ESP-IDF</th>
+        <th>ESP-IDF for VSCode</th>
     </tr>
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> VSCode をダウンロード⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> VSCodeダウンロード⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> ESP-IDF をインストール⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> ESP-IDFインストール ⏬</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -95,46 +91,46 @@ FreeRTOS はオープンソースの RTOS（リアルタイムオペレーティ
 
 ## はじめに
 
-### ESP-IDF のセットアップ
+### ESP-IDFのセットアップ
 
-[Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md) をセットアップした後、ターミナルを開き、以下のコマンドを貼り付けて、通常のターミナル環境（VSCode の外部）から ESP-IDF コマンドラインツールにアクセスします。
+[Visual Studio Extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md)をセットアップした後、ターミナルを開いて以下のコマンドを貼り付けて、通常のターミナル環境（VScode外）からESP-IDFコマンドラインツールにアクセスします。
 
 :::note
-通常の [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) 拡張機能のインストールは、90% のユースケースをカバーします。以下の手順は、環境外で ESP コマンドラインツールが必要な場合のみ実行してください。
+VS-CodeのESP-IDF拡張機能の通常のインストールは90%のユースケースに対応します。環境外でESPコマンドラインツールが必要な場合のみ、以下の手順を実行してください。
 :::
 
-PowerShell（Windows）
+PowerShell (Windows)
 
 ```shell
 .$HOME\esp\v5.3\esp-idf\export.ps1
 ```
 
 :::info
-".$HOME\esp\v5.3\esp-idf" はユーザーごとに異なる場合があります。これはデフォルトのインストールパスです。  
-デバイス上のインストールパスに置き換えてください。
+".$HOME\esp\v5.3\esp-idf" はユーザーによって異なる場合があります。これはデフォルトのインストールパスです。  
+お使いのデバイスのインストールパスに置き換えてください。
 :::
 :::tip
-繰り返しセットアップを避けるために、PowerShell を管理者モードで起動し、以下のコマンドを入力してください。
+セットアップの繰り返しを避けるため、管理者モードでPowerShellを起動し、以下のコマンドを入力してください
 
 ```shell
 notepad $PSHOME\Profile.ps1
 ```
 
-メモ帳が開きます。エクスポートシェルコマンドをメモ帳に貼り付けて保存してください。  
-PowerShell のインスタンスを開くと、以下のような出力が表示されるはずです。
+メモ帳のインスタンスが開きます。エクスポートシェルコマンドをメモ帳に貼り付けて保存してください。
+PowerShellのインスタンスを開くと、以下のような出力が表示されるはずです。
 
 ```shell
 Done! You can now compile ESP-IDF projects.
 ```
 
 :::  
-すべてが正しく行われている場合、以下のコマンド：
+すべてが適切に完了した場合、以下のコマンド：
 
 ```shell
 idf.py
 ```
 
-は以下の出力を表示するはずです：
+should show the following output :
 
 ```shell
 Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
@@ -143,51 +139,51 @@ Usage: idf.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
   system target will be made. Selected target: None
 ```
 
-## タスクとは？
+## Taskとは何か？
 
-タスクとは、プロセッサが特定の設定で実行するよう要求される小さな関数やジョブのことです。タスクは小さな関数から無限ループ関数まで幅広く存在します。  
-タスクは ESP-IDF アプリケーションにおける実行の基本単位です。これらは他のタスクと並行して実行される関数であり、効率的なマルチタスクと応答性を可能にします。
+Taskは、プロセッサが設定のセットで実行するよう要求される小さな関数/ジョブです。Taskは小さな関数から無限ループ関数まで様々です。  
+TaskはESP-IDFアプリケーションにおける実行の基本単位です。これらは本質的に他のタスクと同時に実行される関数です。これにより効率的なマルチタスクと応答性が可能になります。
 
-### タスクのプロパティとは？
+### タスクプロパティとは何か？
 
-このトピックは非常に広範囲にわたるため、このガイドで使用するいくつかのプロパティのみを取り上げます。
+このトピックの広大さのため、このガイドで使用するプロパティのいくつかのみをカバーします。
 
-- **TaskFunction**: タスクの実際のロジックを含む関数です。タスクの実行のエントリポイントとなります。
-- **StackSize**: タスクのスタックに割り当てられるメモリ量を指定します。スタックはローカル変数、関数の戻りアドレス、一時データを格納するために使用されます。
-- **TaskPriority**: 他のタスクと比較したタスクの相対的な重要性を決定します。優先度が高いタスクは、優先度が低いタスクよりも先に実行される可能性が高くなります。
-- **TaskParameters**: タスクが作成される際にタスク関数に渡すことができるオプションの引数です。これにより、タスクに追加のコンテキストや設定を提供できます。
-- **CoreAffinity**: タスクを割り当てる CPU コアを指定します。複数のコアを持つシステムでは、これを使用してパフォーマンスを最適化したり、負荷を分散したりできます。
+- **TaskFunction**: これはタスクの実際のロジックを含む関数です。タスクの実行のエントリーポイントです。
+- **StackSize**: これはタスクのスタックに割り当てられるメモリ量を指定します。スタックはローカル変数、関数の戻りアドレス、一時データを格納するために使用されます。
+- **TaskPriority**: これは他のタスクと比較したタスクの相対的な重要度を決定します。優先度の高いタスクは、優先度の低いタスクよりも先に実行される可能性が高くなります。
+- **TaskParameters**: これらはタスクが作成されるときにタスク関数に渡すことができるオプションの引数です。タスクに追加のコンテキストや設定を提供するために使用できます。
+- **CoreAffinity**: これはタスクが割り当てられるべきCPUコアを指定します。複数のコアを持つシステムでは、これはパフォーマンスを最適化したり、ワークロードのバランスを取るために使用できます。
 
 ### タスクの作成
 
-FreeRTOS でタスクを作成するには、xTaskCreate 関数を使用します。この関数は、タスク関数、タスク名、スタックサイズ、パラメータ、優先度、作成されたタスクのハンドルを含むいくつかのパラメータを取ります。
+FreeRTOSでタスクを作成するには、xTaskCreate関数を使用します。この関数は、タスク関数、タスク名、スタックサイズ、パラメータ、優先度、作成されたタスクへのハンドルを含むいくつかのパラメータを取ります。
 
 ```c
 TaskHandle_t task;
 xTaskCreate(
-        taskFunction,             /* タスクを実装する関数。 */
-        "taskName",               /* タスクのテキスト名。 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（ワードまたはバイト）。 */
-        NULL,                     /* タスクに渡されるパラメータ。 */
-        tskIDLE_PRIORITY,         /* タスクが作成される優先度。 */
-        &task                     /* 作成されたタスクのハンドルを渡すために使用。 */
+        taskFunction,             /* Function that implements the task. */
+        "taskName",               /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
+        NULL,                     /* Parameter passed into the task. */
+        tskIDLE_PRIORITY,         /* Priority at which the task is created. */
+        &task                     /* Used to pass out the created task's handle. */
         );
 ```
 
 ### コアに固定されたタスクの作成
 
-特定のコアにタスクを固定して作成するには（使用しているチップがデュアルコアの場合のみ）、xTaskCreatePinnedToCore 関数を使用します。この関数は xTaskCreate に似ていますが、コアを指定する追加のパラメータを含みます。
+タスクを作成して特定のコアに固定するには（使用中のチップがデュアルコアの場合のみ）、xTaskCreatePinnedToCore関数を使用します。この関数はxTaskCreateと似ていますが、コアを指定するための追加パラメータが含まれています。
 
 ```c
 TaskHandle_t task;
 xTaskCreatePinnedToCore(
-        taskFunction,             /* タスクを実装する関数。 */
-        "taskName",               /* タスクのテキスト名。 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（ワードまたはバイト）。 */
-        NULL,                     /* タスクに渡されるパラメータ。 */
-        tskIDLE_PRIORITY,         /* タスクが作成される優先度。 */
-        &task,                    /* 作成されたタスクのハンドルを渡すために使用。 */
-        0);                       /* コア ID */
+        taskFunction,             /* Function that implements the task. */
+        "taskName",               /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, or bytes. */
+        NULL,                     /* Parameter passed into the task. */
+        tskIDLE_PRIORITY,         /* Priority at which the task is created. */
+        &task,                    /* Used to pass out the created task's handle. */
+        0);                       /* Core ID */
 ```
 
 ### タスク関数の呼び出し
@@ -197,29 +193,29 @@ xTaskCreatePinnedToCore(
 ```c
 void taskFunction(void * pvParameters) {
   /*
-  関数の定義はここに記述します
+  Function definition goes here
   */
 }
 ```
 
 ## タスクの可視化
 
-私は FreeRTOS の動作を視覚化するために、4つのシンプルなタスクを作成しています。
+FreeRTOSの動作を可視化するために、4つのシンプルなタスクを作成しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/2.png" alt="pir" width={700} height="auto" /></p>
 
-### 視覚的な表現
+### 視覚的表現
 
 ```shell
 CPU0
 -----
-taskFunction1 (1000ms の遅延)
+taskFunction1 (1000ms delay)
 
 CPU1
 -----
-taskFunction2 (500ms の遅延)
-taskFunction3 (500ms の遅延)
-taskFunction4 (500ms の遅延)
+taskFunction2 (500ms delay)
+taskFunction3 (500ms delay)
+taskFunction4 (500ms delay)
 ```
 
 ### コード
@@ -235,139 +231,139 @@ TaskHandle_t task1,task2,task3,task4;
 
 void taskFunction1(void * pvParameters) {
     while (true) {
-        ESP_LOGI("Task1", "タスク1からこんにちは");
-        vTaskDelay(pdMS_TO_TICKS(1000)); // 出力を圧迫しないように遅延を追加
+        ESP_LOGI("Task1", "Hello from task 1");
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Add a delay to avoid overwhelming the output
     }
 }
 
 void taskFunction2(void * pvParameters) {
     while (true) {
-        ESP_LOGI("Task2", "タスク2からこんにちは");
-        vTaskDelay(pdMS_TO_TICKS(500)); // 出力を圧迫しないように遅延を追加
+        ESP_LOGI("Task2", "Hello from task 2");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
     }
 }
 
 void taskFunction3(void * pvParameters) {
     while (true) {
-        ESP_LOGI("Task3", "タスク3からこんにちは");
-        vTaskDelay(pdMS_TO_TICKS(500)); // 出力を圧迫しないように遅延を追加
+        ESP_LOGI("Task3", "Hello from task 3");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
     }
 }
 
 void taskFunction4(void * pvParameters) {
     while (true) {
-        ESP_LOGI("Task4", "タスク4からこんにちは");
-        vTaskDelay(pdMS_TO_TICKS(500)); // 出力を圧迫しないように遅延を追加
+        ESP_LOGI("Task4", "Hello from task 4");
+        vTaskDelay(pdMS_TO_TICKS(500)); // Add a delay to avoid overwhelming the output
     }
 }
 
 void app_main(void) {
     xTaskCreatePinnedToCore(
-        taskFunction1, /* タスクを実装する関数 */
-        "task_1",        /* タスクの名前 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（バイトではなくワード単位） */
-        NULL,            /* タスクに渡されるパラメータ */
-        tskIDLE_PRIORITY, /* タスク作成時の優先度 */
-        &task1,         /* 作成されたタスクのハンドルを渡すために使用 */
-        0);              /* コアID */
+        taskFunction1, /* Function that implements the task. */
+        "task_1",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task1,         /* Used to pass out the created task's handle. */
+        0);              /* Core ID */
 
     xTaskCreatePinnedToCore(
-        taskFunction2, /* タスクを実装する関数 */
-        "task_2",        /* タスクの名前 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（バイトではなくワード単位） */
-        NULL,            /* タスクに渡されるパラメータ */
-        tskIDLE_PRIORITY, /* タスク作成時の優先度 */
-        &task2,         /* 作成されたタスクのハンドルを渡すために使用 */
-        1);              /* コアID */
+        taskFunction2, /* Function that implements the task. */
+        "task_2",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task2,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
 
     xTaskCreatePinnedToCore(
-        taskFunction3, /* タスクを実装する関数 */
-        "task_3",        /* タスクの名前 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（バイトではなくワード単位） */
-        NULL,            /* タスクに渡されるパラメータ */
-        tskIDLE_PRIORITY, /* タスク作成時の優先度 */
-        &task3,         /* 作成されたタスクのハンドルを渡すために使用 */
-        1);              /* コアID */
+        taskFunction3, /* Function that implements the task. */
+        "task_3",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task3,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
 
     xTaskCreatePinnedToCore(
-        taskFunction4, /* タスクを実装する関数 */
-        "task_4",        /* タスクの名前 */
-        configMINIMAL_STACK_SIZE, /* スタックサイズ（バイトではなくワード単位） */
-        NULL,            /* タスクに渡されるパラメータ */
-        tskIDLE_PRIORITY, /* タスク作成時の優先度 */
-        &task4,         /* 作成されたタスクのハンドルを渡すために使用 */
-        1);              /* コアID */
+        taskFunction4, /* Function that implements the task. */
+        "task_4",        /* Text name for the task. */
+        configMINIMAL_STACK_SIZE, /* Stack size in words, not bytes. */
+        NULL,            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY, /* Priority at which the task is created. */
+        &task4,         /* Used to pass out the created task's handle. */
+        1);              /* Core ID */
 }
 ```
 
 :::tip
-`configMINIMAL_STACK_SIZE` は `sdkconfig` で変更可能です。
+configMINIMAL_STACK_SIZE は sdkconfig で変更できます。
 :::
 
-1. **4つのタスク**: このコードでは、`taskFunction1`、`taskFunction2`、`taskFunction3`、`taskFunction4` の4つのタスクを定義しています。
-2. **タスクの優先度**: すべてのタスクは `tskIDLE_PRIORITY` で作成されています。つまり、同じ優先度を持っています。
-3. **タスクのピン留め**: `taskFunction1` は CPU0 にピン留めされ、他の3つのタスクは CPU1 にピン留めされています。
-4. **タスクの遅延**: `taskFunction1` は 1000ms の遅延があり、他の3つは 500ms の遅延があります。
+1. 4つのタスク: コードは4つのタスクを定義しています：taskFunction1、taskFunction2、taskFunction3、taskFunction4。
+2. タスク優先度: すべてのタスクは tskIDLE_PRIORITY で作成されます。これは同じ優先度を持つことを意味します。
+3. タスクピニング: taskFunction1 は CPU0 にピニングされ、他の3つのタスクは CPU1 にピニングされます。
+4. タスク遅延: taskFunction1 は 1000ms の遅延を持ち、他の3つは 500ms の遅延を持ちます。
 
 ### CPU0 と CPU1 のタスクスケジュールの作成
 
 CPU0 と CPU1 の基本的なタスクスケジュールを作成しました。
 
-#### CPU0 のタスクスケジュール
+#### CPU0 タスクスケジュール
 
 ```shell
-タスク: taskFunction1
-優先度: Idle (最も低い)
-遅延: 1000ms
-コア: 0
+Task: taskFunction1
+Priority: Idle (lowest)
+Delay: 1000ms
+Core: 0
 ```
 
-#### CPU1 のタスクスケジュール
+#### CPU1 タスクスケジュール
 
 ```shell
-タスク: taskFunction2, taskFunction3, taskFunction4
-優先度: すべて Idle (同じ優先度)
-遅延: すべて 500ms
-コア: 1
+Tasks: taskFunction2, taskFunction3, taskFunction4
+Priorities: All Idle (same priority)
+Delays: 500ms for all tasks
+Core: 1
 ```
 
 :::info
-これは簡略化されたスケジュールです。リアルタイムシステムでの実際のタスクスケジューリングは、タスクの優先度、締め切り、リソース制約など、より複雑な要因を含みます。
+これは簡略化されたスケジュールです。リアルタイムシステムにおける実際のタスクスケジューリングでは、タスクの優先度、デッドライン、リソース制約などのより複雑な要因が関わります。
 :::
 
 <details>
 
-<summary>出力</summary>
+<summary> Output</summary>
 
 ```shell
-I (11412) Task1: タスク1からこんにちは
-I (11522) Task3: タスク3からこんにちは
-I (11522) Task2: タスク2からこんにちは
-I (11532) Task4: タスク4からこんにちは
-I (12032) Task3: タスク3からこんにちは
-I (12032) Task2: タスク2からこんにちは
-I (12042) Task4: タスク4からこんにちは
-I (12422) Task1: タスク1からこんにちは
-I (12542) Task3: タスク3からこんにちは
-I (12542) Task2: タスク2からこんにちは
-I (12552) Task4: タスク4からこんにちは
-I (13052) Task3: タスク3からこんにちは
-I (13052) Task2: タスク2からこんにちは
-I (13062) Task4: タスク4からこんにちは
-I (13432) Task1: タスク1からこんにちは
-I (13562) Task3: タスク3からこんにちは
-I (13562) Task2: タスク2からこんにちは
-I (13572) Task4: タスク4からこんにちは
-I (14072) Task3: タスク3からこんにちは
-I (14072) Task2: タスク2からこんにちは
-I (14082) Task4: タスク4からこんにちは
+I (11412) Task1: Hello from task 1
+I (11522) Task3: Hello from task 3
+I (11522) Task2: Hello from task 2
+I (11532) Task4: Hello from task 4
+I (12032) Task3: Hello from task 3
+I (12032) Task2: Hello from task 2
+I (12042) Task4: Hello from task 4
+I (12422) Task1: Hello from task 1
+I (12542) Task3: Hello from task 3
+I (12542) Task2: Hello from task 2
+I (12552) Task4: Hello from task 4
+I (13052) Task3: Hello from task 3
+I (13052) Task2: Hello from task 2
+I (13062) Task4: Hello from task 4
+I (13432) Task1: Hello from task 1
+I (13562) Task3: Hello from task 3
+I (13562) Task2: Hello from task 2
+I (13572) Task4: Hello from task 4
+I (14072) Task3: Hello from task 3
+I (14072) Task2: Hello from task 2
+I (14082) Task4: Hello from task 4
 ```
 
 </details>
 
-## FreeRTOS を使用したセンサーのポーリング
+## FreeRTOSを使用したセンサーポーリング
 
-ここでは、ESP_IDF_v5.3 とともにアナログセンサー [Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) を使用します。
+これには、ESP_IDF_v5.3と共にアナログセンサー[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)を使用しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Priyanshu0901/Air_quality_Sensor_ESP-IDF.git" target="_blank" rel="noopener noreferrer">
@@ -377,22 +373,22 @@ I (14082) Task4: タスク4からこんにちは
 
 ### ハードウェアセットアップ
 
-Xiao-S3 を [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html) に接続し、[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html) をアナログコネクタに接続します。
+Xiao-S3を[Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)に接続し、[Air Quality Sensor v1.3](https://www.seeedstudio.com/Grove-Air-Quality-Sensor-v1-3-Arduino-Compatible.html)をアナログコネクタに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/3.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### ソフトウェアセットアップ
 
-Git リポジトリを取得した後、フォルダを VSCode で開きます。View->Command Palette->ESP-IDF: Add vscode Configuration Folder を選択します。
-下部パネルから正しい COM ポート、チップ (ESP-S3) を選択し、ビルド、フラッシュ、モニタリングを行います。
+gitリポジトリをプルした後、VSCodeでフォルダを開きます。View->Command Palette->ESP-IDF: Add vscode Configuration Folderに移動します。
+下部パネルから正しいCOMポート、チップ（ESP-S3）を選択し、ビルド、フラッシュ、モニターを実行します。
 
 ### コード概要
 
-このコードは、センサーから空気品質データを収集し、生データを処理して空気品質レベルを判定し、結果を定期的にコンソールに出力するよう設計されています。
+このコードは、センサーから空気品質データを収集し、生データを処理して空気品質レベルを決定し、定期的に結果をコンソールに出力するように設計されています。
 
-#### 主なコンポーネント:
+#### 主要コンポーネント
 
-- センサーの初期化:
+- センサー初期化：
 
 ```c
 air_quality_sensor_t air_quality_sensor;
@@ -412,11 +408,11 @@ void sensor_setup()
 }
 ```
 
-- `sensor_setup()` 関数はセンサーの I/O ピンと ADC ユニットを設定します。
-- `initialize_air_quality_sensor()` を使用してセンサーの初期化を試みます。
-- 初期化が成功すると、センサーはデータ収集の準備が整います。
+- sensor_setup() 関数はセンサーのI/OピンとADCユニットを設定します。
+- initialize_air_quality_sensor()を使用してセンサーの初期化を試行します。
+- 初期化が成功した場合、センサーはデータ収集の準備が整います。
 
-- データ収集タスク:
+- データ収集タスク：
 
 ```c
 void poll_read_air_quality_sensor(void *pvParameters)
@@ -429,11 +425,11 @@ void poll_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- `poll_read_air_quality_sensor()` タスクは、センサーから生データを継続的に読み取るために作成されます。
-- `air_quality_sensor_slope()` を呼び出して生データを処理し、空気品質の指標となるスロープを計算します。
-- タスクは 500 ミリ秒遅延してから次のデータポイントを読み取ります。
+- poll_read_air_quality_sensor() タスクが作成され、センサーから生データを継続的に読み取ります。
+- air_quality_sensor_slope() を呼び出して生データを処理し、空気品質の指標である傾きを計算します。
+- タスクは次のデータポイントを読み取る前に500ミリ秒間遅延します。
 
-- データ出力タスク:
+- データ印刷タスク：
 
 ```c
 
@@ -449,10 +445,10 @@ void print_read_air_quality_sensor(void *pvParameters)
 }
 ```
 
-- `print_read_air_quality_sensor()` タスクは、収集したデータと計算された空気品質を定期的に出力するために作成されます。
-- 現在の時刻、スロープ、生データ値、および空気品質メッセージを `air_quality_error_to_message()` を使用して取得します。
-- タスクはデータをフォーマットしてコンソールに出力します。
-- タスクは 1000 ミリ秒遅延してから次のデータポイントを出力します。
+- print_read_air_quality_sensor() タスクは、収集されたデータと計算された空気品質を定期的に印刷するために作成されます。
+- 現在の時刻、傾き、生の値、および air_quality_error_to_message() を使用した空気品質メッセージを取得します。
+- タスクはフォーマットされた方法でデータをコンソールに印刷します。
+- タスクは次のデータポイントを印刷する前に1000ミリ秒間遅延します。
 
 ```c
 
@@ -460,22 +456,22 @@ void app_main(void)
 {
     sensor_setup();
     xTaskCreatePinnedToCore(
-        poll_read_air_quality_sensor,   /* タスクを実装する関数 */
-        "poll_read_air_quality_sensor", /* タスクの名前 */
-        configMINIMAL_STACK_SIZE * 2,   /* スタックサイズ（ワード単位） */
-        NULL,                           /* タスクに渡すパラメータ */
-        tskIDLE_PRIORITY,               /* タスクの優先度 */
-        NULL,                           /* 作成されたタスクのハンドルを渡すために使用 */
-        0);                             /* コア ID */
+        poll_read_air_quality_sensor,   /* Function that implements the task. */
+        "poll_read_air_quality_sensor", /* Text name for the task. */
+        configMINIMAL_STACK_SIZE * 2,   /* Stack size in words, not bytes. */
+        NULL,                           /* Parameter passed into the task. */
+        tskIDLE_PRIORITY,               /* Priority at which the task is created. */
+        NULL,                           /* Used to pass out the created task's handle. */
+        0);                             /* Core ID */
 
     xTaskCreatePinnedToCore(
-        print_read_air_quality_sensor,   /* タスクを実装する関数 */
-        "print_read_air_quality_sensor", /* タスクの名前 */
-        configMINIMAL_STACK_SIZE * 2,    /* スタックサイズ（ワード単位） */
-        NULL,                            /* タスクに渡すパラメータ */
-        tskIDLE_PRIORITY + 1,            /* タスクの優先度 */
-        NULL,                            /* 作成されたタスクのハンドルを渡すために使用 */
-        0);                              /* コア ID */
+        print_read_air_quality_sensor,   /* Function that implements the task. */
+        "print_read_air_quality_sensor", /* Text name for the task. */
+        configMINIMAL_STACK_SIZE * 2,    /* Stack size in words, not bytes. */
+        NULL,                            /* Parameter passed into the task. */
+        tskIDLE_PRIORITY + 1,            /* Priority at which the task is created. */
+        NULL,                            /* Used to pass out the created task's handle. */
+        0);                              /* Core ID */
 }
 ```
 
@@ -514,9 +510,9 @@ Time : 51347    Slope : 3       Raw Value : 235
 Fresh air.
 ```
 
-## FreeRTOSにおけるカメラとSDカードの使用
+## FreeRTOSでのカメラとSdCardの使用
 
-ここでは、ESP_IDF_v5.3を使用してオンボードのカメラとSDカードを利用します。
+これには、ESP_IDF_v5.3と共にオンボードカメラとSdCardを使用しています。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Priyanshu0901/Camera-and-SdCard-FreeRTOS.git" target="_blank" rel="noopener noreferrer">
@@ -526,12 +522,12 @@ Fresh air.
 
 ### ハードウェアセットアップ
 
-カメラとmicroSDカード拡張ボードを接続するには、[microSDカードガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_sense_filesystem/)および[カメラガイド](https://wiki.seeedstudio.com/ja/xiao_esp32s3_camera_usage/)を参照してください。
+[microSDカードガイド](https://wiki.seeedstudio.com/xiao_esp32s3_sense_filesystem/)と[カメラガイド](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/)に従って、カメラとmicroSDカード拡張ボードを取り付けてください。
 
-- microSDカードをフォーマット（最大32GBまで対応）
-- microSDカードを拡張ボードに接続
+- microSDカードをフォーマットする（最大32Gbまでサポート）
+- microSDカードを拡張ボードに取り付ける
 
-セットアップは以下のようになります：
+セットアップは次のようになります：
 
 <div class="table-center">
   <table align="center">
@@ -548,15 +544,33 @@ Fresh air.
 
 ### ソフトウェアセットアップ
 
-Gitリポジトリをクローンした後、フォルダをVSCodeで開きます。  
-View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択します。  
-下部パネルから正しいCOMポート、チップ（ESP-S3）を選択し、ビルド、フラッシュ、モニタリングを行います。
+gitリポジトリをプルした後、VSCodeでフォルダを開きます。View->Command Palette->ESP-IDF: Add vscode Configuration Folderに移動します。
+下部パネルから正しいCOMポート、チップ（ESP-S3）を選択し、ビルド、フラッシュ、モニターを実行します。
+
+:::tip
+OV3660モデルを使用している場合は、それを駆動できるようにIDFで設定する必要があります。ターミナルで **"idf.py menuconfig"** を入力してください
+:::
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+        <th>ステップ 1</th>
+        <th>ステップ 2</th>
+        <th>ステップ 3</th>
+    </tr>
+    <tr>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/36601.jpg" style={{width:300, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/36602.jpg" style={{width:300, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/36603.jpg" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+  </table>
+</div>
 
 ### カメラコンポーネント
 
-- カメラ設定:
-  - カメラの各機能に使用するGPIOピンを定義します（PWDN、RESET、XCLK、SIOD、SIOC、Y9-Y2、VSYNC、HREF、PCLK、LED）。
-  - カメラパラメータのデフォルト値を設定します（例：クロック周波数、フレームバッファの場所、ピクセルフォーマット、フレームサイズ、JPEG品質、フレームバッファ数、キャプチャモード）。
+- カメラ設定：
+  - 様々なカメラ機能に使用されるGPIOピンを定義します（PWDN、RESET、XCLK、SIOD、SIOC、Y9-Y2、VSYNC、HREF、PCLK、LED）。
+  - カメラパラメータのデフォルト値を設定します（例：クロック周波数、フレームバッファ位置、ピクセル形式、フレームサイズ、JPEG品質、フレームバッファ数、グラブモード）。
 
 ```c
 #ifndef CAMERA_CONFIG_H
@@ -585,10 +599,10 @@ View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択し
 #endif //CAMERA_CONFIG_H
 ```
 
-- カメラインターフェース:  
-  initialize_camera() および createCameraTask() 関数を宣言します。
+- カメラインターフェース：  
+  関数 initialize_camera() と createCameraTask() を宣言します。
 
-- カメラ実装:
+- カメラ実装：
 
   - 定義された設定を使用してカメラを初期化します。
 
@@ -613,63 +627,63 @@ View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択し
         .pin_href = HREF_GPIO_NUM,
         .pin_pclk = PCLK_GPIO_NUM,
 
-        .xclk_freq_hz = 20000000,          // イメージセンサーのクロック周波数
-        .fb_location = CAMERA_FB_IN_PSRAM, // フレームバッファの保存場所を設定
-        .pixel_format = PIXFORMAT_JPEG,    // イメージのピクセルフォーマット: PIXFORMAT_ + YUV422|GRAYSCALE|RGB565|JPEG
-        .frame_size = FRAMESIZE_UXGA,      // イメージの解像度サイズ: FRAMESIZE_ + QVGA|CIF|VGA|SVGA|XGA|SXGA|UXGA
-        .jpeg_quality = 15,                // JPEGイメージの品質（0～63）
-        .fb_count = 2,                     // 使用するフレームバッファの数
-        .grab_mode = CAMERA_GRAB_LATEST    // イメージキャプチャモード
+        .xclk_freq_hz = 20000000,          // The clock frequency of the image sensor
+        .fb_location = CAMERA_FB_IN_PSRAM, // Set the frame buffer storage location
+        .pixel_format = PIXFORMAT_JPEG,    // The pixel format of the image: PIXFORMAT_ + YUV422|GRAYSCALE|RGB565|JPEG
+        .frame_size = FRAMESIZE_UXGA,      // The resolution size of the image: FRAMESIZE_ + QVGA|CIF|VGA|SVGA|XGA|SXGA|UXGA
+        .jpeg_quality = 15,                // The quality of the JPEG image, ranging from 0 to 63.
+        .fb_count = 2,                     // The number of frame buffers to use.
+        .grab_mode = CAMERA_GRAB_LATEST    //  The image capture mode.
     };
 
     esp_err_t ret = esp_camera_init(&camera_config);
     if (ret == ESP_OK)
     {
-        ESP_LOGI(cameraTag, "カメラの設定に成功しました");
+        ESP_LOGI(cameraTag, "Camera configured successful");
     }
     else
     {
-        ESP_LOGI(cameraTag, "カメラの設定に失敗しました");
+        ESP_LOGI(cameraTag, "Camera configured unsuccessful");
         return;
     }
   }
   ```
 
-  - カメラパラメータを設定します（明るさ、コントラスト、彩度、特殊効果、ホワイトバランス、露出制御、AEC、AEレベル、AEC値、ゲイン制御、AGCゲイン、ゲイン上限、BPC、WPC、raw GMA、LENC、水平反転、垂直反転、DCW、カラーバー）。
+  - カメラパラメータを設定します（明度、コントラスト、彩度、特殊効果、ホワイトバランス、露出制御、AEC、AEレベル、AEC値、ゲイン制御、AGCゲイン、ゲイン上限、BPC、WPC、raw GMA、LENC、hmirror、vflip、DCW、colorbar）。
 
   ```c
   sensor_t *s = esp_camera_sensor_get();
 
-    s->set_brightness(s, 0);                 // -2 ～ 2
-    s->set_contrast(s, 0);                   // -2 ～ 2
-    s->set_saturation(s, 0);                 // -2 ～ 2
-    s->set_special_effect(s, 0);             // 0 ～ 6 (0 - 効果なし, 1 - ネガ, 2 - グレースケール, 3 - 赤色, 4 - 緑色, 5 - 青色, 6 - セピア)
-    s->set_whitebal(s, 1);                   // 0 = 無効, 1 = 有効
-    s->set_awb_gain(s, 1);                   // 0 = 無効, 1 = 有効
-    s->set_wb_mode(s, 0);                    // 0 ～ 4 - awb_gainが有効な場合 (0 - 自動, 1 - 晴天, 2 - 曇り, 3 - オフィス, 4 - 家庭)
-    s->set_exposure_ctrl(s, 1);              // 0 = 無効, 1 = 有効
-    s->set_aec2(s, 0);                       // 0 = 無効, 1 = 有効
-    s->set_ae_level(s, 0);                   // -2 ～ 2
-    s->set_aec_value(s, 300);                // 0 ～ 1200
-    s->set_gain_ctrl(s, 1);                  // 0 = 無効, 1 = 有効
-    s->set_agc_gain(s, 0);                   // 0 ～ 30
-    s->set_gainceiling(s, (gainceiling_t)0); // 0 ～ 6
-    s->set_bpc(s, 0);                        // 0 = 無効, 1 = 有効
-    s->set_wpc(s, 1);                        // 0 = 無効, 1 = 有効
-    s->set_raw_gma(s, 1);                    // 0 = 無効, 1 = 有効
-    s->set_lenc(s, 1);                       // 0 = 無効, 1 = 有効
-    s->set_hmirror(s, 0);                    // 0 = 無効, 1 = 有効
-    s->set_vflip(s, 0);                      // 0 = 無効, 1 = 有効
-    s->set_dcw(s, 1);                        // 0 = 無効, 1 = 有効
-    s->set_colorbar(s, 0);                   // 0 = 無効, 1 = 有効
+    s->set_brightness(s, 0);                 // -2 to 2
+    s->set_contrast(s, 0);                   // -2 to 2
+    s->set_saturation(s, 0);                 // -2 to 2
+    s->set_special_effect(s, 0);             // 0 to 6 (0 - No Effect, 1 - Negative, 2 - Grayscale, 3 - Red Tint, 4 - Green Tint, 5 - Blue Tint, 6 - Sepia)
+    s->set_whitebal(s, 1);                   // 0 = disable , 1 = enable
+    s->set_awb_gain(s, 1);                   // 0 = disable , 1 = enable
+    s->set_wb_mode(s, 0);                    // 0 to 4 - if awb_gain enabled (0 - Auto, 1 - Sunny, 2 - Cloudy, 3 - Office, 4 - Home)
+    s->set_exposure_ctrl(s, 1);              // 0 = disable , 1 = enable
+    s->set_aec2(s, 0);                       // 0 = disable , 1 = enable
+    s->set_ae_level(s, 0);                   // -2 to 2
+    s->set_aec_value(s, 300);                // 0 to 1200
+    s->set_gain_ctrl(s, 1);                  // 0 = disable , 1 = enable
+    s->set_agc_gain(s, 0);                   // 0 to 30
+    s->set_gainceiling(s, (gainceiling_t)0); // 0 to 6
+    s->set_bpc(s, 0);                        // 0 = disable , 1 = enable
+    s->set_wpc(s, 1);                        // 0 = disable , 1 = enable
+    s->set_raw_gma(s, 1);                    // 0 = disable , 1 = enable
+    s->set_lenc(s, 1);                       // 0 = disable , 1 = enable
+    s->set_hmirror(s, 0);                    // 0 = disable , 1 = enable
+    s->set_vflip(s, 0);                      // 0 = disable , 1 = enable
+    s->set_dcw(s, 1);                        // 0 = disable , 1 = enable
+    s->set_colorbar(s, 0);                   // 0 = disable , 1 = enable
   ```
 
-- `takePicture()` 関数を定義し、画像をキャプチャして SD カードに保存します。
+  - Defines a function takePicture() to capture an image and save it to SD card.
 
   ```c
   void takePicture()
   {
-    ESP_LOGI(cameraTag, "写真を撮影中...");
+    ESP_LOGI(cameraTag, "Taking picture...");
     camera_fb_t *pic = esp_camera_fb_get();
 
     if (pic)
@@ -677,13 +691,13 @@ View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択し
         saveJpegToSdcard(pic);
     }
 
-    ESP_LOGI(cameraTag, "写真を撮影しました！ サイズ: %zu バイト", pic->len);
+    ESP_LOGI(cameraTag, "Picture taken! Its size was: %zu bytes", pic->len);
 
     esp_camera_fb_return(pic);
   }
   ```
 
-- 5 秒ごとに写真を撮影するタスク `cameraTakePicture_5_sec()` を作成します。
+  - Creates a task cameraTakePicture_5_sec() to continuously take pictures every 5 seconds.
 
   ```c
   void cameraTakePicture_5_sec(void *pvParameters)
@@ -699,27 +713,27 @@ View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択し
   {
       TaskHandle_t task;
       xTaskCreate(
-          cameraTakePicture_5_sec,      /* タスクを実装する関数 */
-          "cameraTakePicture_5_sec",    /* タスクの名前 */
-          configMINIMAL_STACK_SIZE * 4, /* スタックサイズ（ワードまたはバイト単位） */
-          NULL,                         /* タスクに渡すパラメータ */
-          tskIDLE_PRIORITY,             /* タスクの優先度 */
-          &task                         /* 作成されたタスクのハンドルを渡すためのポインタ */
+          cameraTakePicture_5_sec,      /* Function that implements the task. */
+          "cameraTakePicture_5_sec",    /* Text name for the task. */
+          configMINIMAL_STACK_SIZE * 4, /* Stack size in words, or bytes. */
+          NULL,                         /* Parameter passed into the task. */
+          tskIDLE_PRIORITY,             /* Priority at which the task is created. */
+          &task                         /* Used to pass out the created task's handle. */
       );
   }
   ```
 
-コード構造:
+コード構造：
 
-- ヘッダーファイル (`camera_config.h`, `camera_interface.h`) と実装ファイル (`camera_interface.c`)。
-- `camera_config.h` ファイルはカメラの設定パラメータを定義します。
-- `camera_interface.h` ファイルはカメラの初期化とタスク作成の関数を宣言します。
-- `camera_interface.c` ファイルはカメラの初期化、写真撮影、およびタスク作成のロジックを実装します。
+- ヘッダーファイル（camera_config.h、camera_interface.h）と実装ファイル（camera_interface.c）。
+- camera_config.hファイルはカメラ設定パラメータを定義します。
+- camera_interface.hファイルはカメラ初期化とタスク作成の関数を宣言します。
+- camera_interface.cファイルはカメラ初期化、写真撮影、タスク作成ロジックを実装します。
 
-### SD カードコンポーネント
+### SdCardコンポーネント
 
-- SD カード設定:  
-  SD カードインターフェースに使用する GPIO ピン (MISO, MOSI, CLK, CS) を定義します。
+- SDカード設定：  
+  SDカードインターフェースに使用されるGPIOピン（MISO、MOSI、CLK、CS）を定義します。
 
 ```c
 #ifndef SDCARD_CONFIG_H
@@ -733,8 +747,8 @@ View -> Command Palette -> ESP-IDF: Add vscode Configuration Folder を選択し
 #endif //SDCARD_CONFIG_H
 ```
 
-- SD カードインターフェース:  
-  `initialize_sdcard()`、`deinitialize_sdcard()`、および `saveJpegToSdcard()` 関数を宣言します。
+- SD Card Interface:  
+  initialize_sdcard()、deinitialize_sdcard()、およびsaveJpegToSdcard()関数を宣言します。
 
 ```c
 #ifndef SDCARD_INTERFACE_H
@@ -749,9 +763,9 @@ void saveJpegToSdcard(camera_fb_t *);
 #endif //SDCARD_INTERFACE_H
 ```
 
-- SD カード実装:
+- SDカード実装:
 
-  - 定義された設定を使用して SD カードを初期化し、SD カードを FAT ファイルシステムとしてマウントします。
+  - 定義された設定を使用してSDカードを初期化し、SDカードをFATファイルシステムとしてマウントします。
 
   ```c
   sdmmc_card_t *card;
@@ -762,8 +776,8 @@ void saveJpegToSdcard(camera_fb_t *);
   {
       esp_err_t ret;
 
-      // format_if_mount_failed が true に設定されている場合、
-      // マウントに失敗した場合に SD カードがパーティション分割およびフォーマットされます。
+      // If format_if_mount_failed is set to true, SD card will be partitioned and
+      // formatted in case when mounting fails.
       esp_vfs_fat_sdmmc_mount_config_t mount_config = {
   #ifdef FORMAT_IF_MOUNT_FAILED
           .format_if_mount_failed = true,
@@ -773,16 +787,16 @@ void saveJpegToSdcard(camera_fb_t *);
           .max_files = 5,
           .allocation_unit_size = 32 * 1024};
 
-      ESP_LOGI(sdcardTag, "SD カードを初期化中");
+      ESP_LOGI(sdcardTag, "Initializing SD card");
 
-      // 上記の設定を使用して SD カードを初期化し、FAT ファイルシステムをマウントします。
-      // 注意: esp_vfs_fat_sdmmc/sdspi_mount は便利なオールインワン関数です。
-      // ソースコードを確認し、製品アプリケーションを開発する際にはエラー回復を実装してください。
-      ESP_LOGI(sdcardTag, "SPI ペリフェラルを使用中");
+      // Use settings defined above to initialize SD card and mount FAT filesystem.
+      // Note: esp_vfs_fat_sdmmc/sdspi_mount is all-in-one convenience functions.
+      // Please check its source code and implement error recovery when developing
+      // production applications.
+      ESP_LOGI(sdcardTag, "Using SPI peripheral");
 
-      // デフォルトでは、SD カードの周波数は SDMMC_FREQ_DEFAULT (20MHz) に初期化されます。
-      // 特定の周波数を設定するには、host.max_freq_khz を使用します
-      // (SDSPI の範囲は 400kHz - 20MHz)。
+      // By default, SD card frequency is initialized to SDMMC_FREQ_DEFAULT (20MHz)
+      // For setting a specific frequency, use host.max_freq_khz (range 400kHz - 20MHz for SDSPI)
       spi_bus_config_t bus_cfg = {
           .mosi_io_num = PIN_NUM_MOSI,
           .miso_io_num = PIN_NUM_MISO,
@@ -794,94 +808,94 @@ void saveJpegToSdcard(camera_fb_t *);
       ret = spi_bus_initialize(host.slot, &bus_cfg, SDSPI_DEFAULT_DMA);
       if (ret != ESP_OK)
       {
-          ESP_LOGE(sdcardTag, "バスの初期化に失敗しました。");
+          ESP_LOGE(sdcardTag, "Failed to initialize bus.");
           return;
       }
 
-      // カード検出 (CD) および書き込み保護 (WP) 信号なしでスロットを初期化します。
-      // ボードにこれらの信号がある場合は、slot_config.gpio_cd および slot_config.gpio_wp を変更してください。
+      // This initializes the slot without card detect (CD) and write protect (WP) signals.
+      // Modify slot_config.gpio_cd and slot_config.gpio_wp if your board has these signals.
       sdspi_device_config_t slot_config = SDSPI_DEVICE_CONFIG_DEFAULT();
       slot_config.gpio_cs = PIN_NUM_CS;
       slot_config.host_id = host.slot;
 
-      ESP_LOGI(sdcardTag, "ファイルシステムをマウント中");
+      ESP_LOGI(sdcardTag, "Mounting filesystem");
       ret = esp_vfs_fat_sdspi_mount(mount_point, &host, &slot_config, &mount_config, &card);
 
       if (ret != ESP_OK)
       {
           if (ret == ESP_FAIL)
           {
-              ESP_LOGE(sdcardTag, "ファイルシステムのマウントに失敗しました。"
-                                  "カードをフォーマットする場合は、sdcard_config.h で FORMAT_IF_MOUNT_FAILED を設定してください。");
+              ESP_LOGE(sdcardTag, "Failed to mount filesystem. "
+                                  "If you want the card to be formatted, set the FORMAT_IF_MOUNT_FAILED in sdcard_config.h");
           }
           else
           {
-              ESP_LOGE(sdcardTag, "カードの初期化に失敗しました (%s)。"
-                                  "SD カードラインにプルアップ抵抗があることを確認してください。",
+              ESP_LOGE(sdcardTag, "Failed to initialize the card (%s). "
+                                  "Make sure SD card lines have pull-up resistors in place.",
                       esp_err_to_name(ret));
           }
           return;
       }
-      ESP_LOGI(sdcardTag, "ファイルシステムがマウントされました");
+      ESP_LOGI(sdcardTag, "Filesystem mounted");
 
-      // カードが初期化されたので、そのプロパティを出力します。
+      // Card has been initialized, print its properties
       sdmmc_card_print_info(stdout, card);
 
-      // FATFS をフォーマット
+      // Format FATFS
   #ifdef FORMAT_SD_CARD
       ret = esp_vfs_fat_sdcard_format(mount_point, card);
       if (ret != ESP_OK)
       {
-          ESP_LOGE(sdcardTag, "FATFS のフォーマットに失敗しました (%s)", esp_err_to_name(ret));
+          ESP_LOGE(sdcardTag, "Failed to format FATFS (%s)", esp_err_to_name(ret));
           return;
       }
 
       if (stat(file_foo, &st) == 0)
       {
-          ESP_LOGI(sdcardTag, "ファイルはまだ存在します");
+          ESP_LOGI(sdcardTag, "file still exists");
           return;
       }
       else
       {
-          ESP_LOGI(sdcardTag, "ファイルは存在しません。フォーマットが完了しました");
+          ESP_LOGI(sdcardTag, "file doesnt exist, format done");
       }
   #endif // CONFIG_EXAMPLE_FORMAT_SD_CARD
   }
   ```
 
-  - JPEG 画像を SD カードに保存する関数を提供します。
+  - Provides functions to save JPEG images to the SD card.
 
   ```c
   uint16_t lastKnownFile = 0;
 
   void saveJpegToSdcard(camera_fb_t *captureImage)
   {
-    // 次に利用可能なファイル名を探します。
+    // Find the next available filename
     char filename[32];
 
     sprintf(filename, "%s/%u_img.jpg", mount_point, lastKnownFile++);
 
-    // ファイルを作成し、JPEG データを書き込みます。
+    // Create the file and write the JPEG data
     FILE *fp = fopen(filename, "wb");
     if (fp != NULL)
     {
         fwrite(captureImage->buf, 1, captureImage->len, fp);
         fclose(fp);
-        ESP_LOGI(sdcardTag, "JPEG を保存しました: %s", filename);
+        ESP_LOGI(sdcardTag, "JPEG saved as %s", filename);
     }
     else
     {
-        ESP_LOGE(sdcardTag, "ファイルの作成に失敗しました: %s", filename);
+        ESP_LOGE(sdcardTag, "Failed to create file: %s", filename);
     }
   }
   ```
 
 コンポーネント構造：
 
-- ヘッダーファイル（sdcard_config.h、sdcard_interface.h）および実装ファイル（sdcard_interface.c）。
-- sdcard_config.h ファイルは SD カードの設定パラメータを定義します。
-- sdcard_interface.h ファイルは SD カードの初期化、非初期化、および画像保存のための関数を宣言します。
-- sdcard_interface.c ファイルは SD カードの初期化、非初期化、および画像保存のロジックを実装します。
+- ヘッダーファイル（sdcard_config.h、sdcard_interface.h）と実装ファイル（sdcard_interface.c）。
+- sdcard_config.hファイルはSDカードの設定パラメータを定義します。
+- sdcard_interface.hファイルはSDカードの初期化、非初期化、画像保存の関数を宣言します。
+- sdcard_interface.cファイルはSDカードの初期化、非初期化、画像保存のロジックを実装します。
 
 ### メイン関数
 
@@ -909,15 +923,15 @@ void app_main(void)
 }
 ```
 
-- カメラと SD カードインターフェースに必要なヘッダーファイルをインクルードします。
-- 提供された関数を使用して、SD カードとカメラの両方を初期化します。
-- カメラタスクを開始し、連続して写真を撮影します。
+- カメラとSDカードインターフェース用の必要なヘッダーファイルをインクルードします。
+- 提供された関数を使用してSDカードとカメラの両方を初期化します。
+- 連続的に写真を撮影するためのカメラタスクを開始します
 
 ### 出力
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/8.gif" alt="pir" width={600} height="auto" /></p>
 
-#### UART 出力
+#### UART出力
 
 ```shell
 I (1119) main_task: Calling app_main()
@@ -975,19 +989,19 @@ I (34117) camera: Picture taken! Its size was: 51968 bytes
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/9.jpg" alt="pir" width={600} height="auto" /></p>
 
-## Arduino IDE 用 FreeRtos
+## Arduino IDE用FreeRtos
 
-FreeRtos は Arduino-IDE ベースの XIAO-S3 ビルドで使用できます。これは ESP-IDF に似ていますが、1つのコアでのみ動作し、ESP-IDF 用に最適化されていません。
+FreeRtosはArduino-IDEベースのXIAO-S3ビルドで使用できます。ESP-IDFと同様に使用可能ですが、単一コアでのみ動作し、ESP-IDF用に最適化されていません。
 
 ### ハードウェアセットアップ
 
-Xiao-S3 を [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLED ディスプレイと RTC）に接続し、[Grove - Temperature, Humidity, Pressure and Gas Sensor for Arduino - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html) を I2C バスに接続します。
+Xiao-S3を[Grove - 拡張ボード](https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html)（OLEDディスプレイとRTC）に接続し、[Grove - Arduino用温度・湿度・圧力・ガスセンサー - BME680](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)をI2cバスに接続します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp32s3_freertos/4.jpg" alt="pir" width={600} height="auto" /></p>
 
 ### ソフトウェアセットアップ
 
-[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、および [bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x) ライブラリを Arduino 用にインストールします。ライブラリのインストール方法については、[How to install library](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library/) を参照してください。
+[pcf8563](https://github.com/Bill2462/PCF8563-Arduino-Library)、[U8x8lib](https://github.com/olikraus/U8g2_Arduino)、[bme680](https://github.com/Seeed-Studio/Seeed_Arduino_BME68x)ライブラリのArduinoライブラリをインストールします。Arduinoライブラリのインストール方法については、[ライブラリのインストール方法](https://wiki.seeedstudio.com/How_to_install_Arduino_Library/)を参照してください。
 
 ```cpp
 #include "time.h"
@@ -998,69 +1012,69 @@ Xiao-S3 を [Grove - Expansion Board](https://www.seeedstudio.com/Seeeduino-XIAO
 #include "seeed_bme680.h"
 
 #define IIC_ADDR uint8_t(0x76)
-Seeed_BME680 bme680(IIC_ADDR); /* IIC プロトコル */
+Seeed_BME680 bme680(IIC_ADDR); /* IIC PROTOCOL */
 
-// PCF8563 リアルタイムクロック用 I2C 通信ライブラリ
+// I2C communication library for the PCF8563 real-time clock
 PCF8563 pcf;
 
-// OLED ディスプレイライブラリ
-U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/D4, /* data=*/D5, /* reset=*/U8X8_PIN_NONE);  // リセットなしの OLED
+// OLED display library
+U8X8_SSD1306_128X64_NONAME_HW_I2C u8x8(/* clock=*/D4, /* data=*/D5, /* reset=*/U8X8_PIN_NONE);  // OLEDs without Reset of the Display
 
-// WiFi ネットワークの認証情報
+// WiFi network credentials
 const char* ssid = "REPLACE_WITH_YOUR_SSID";
 const char* password = "REPLACE_WITH_YOUR_PASSWORD";
 
-// 時刻同期用 NTP サーバー
+// NTP server for time synchronization
 const char* ntpServer = "pool.ntp.org";
 
-// タイムゾーンオフセット（場所に応じて調整）
-const long gmtOffset_sec = 5.5 * 60 * 60;  // 時間 * 分 * 秒（ここでは GMT+5:30）
-const int daylightOffset_sec = 0;          // 夏時間は考慮しない
+// Timezone offset (adjust based on your location)
+const long gmtOffset_sec = 5.5 * 60 * 60;  // Hours * Minutes * Seconds (here, GMT+5:30)
+const int daylightOffset_sec = 0;          // No daylight saving time assumed
 
-// 現在の時刻情報を格納するグローバル変数
+// Global variable to store current time information
 static Time nowTime;
 
-// タスク用の関数プロトタイプ
+// Function prototypes for tasks
 void printDateAndTime(void* pvParameters);
 void updateTime(void* pvParameters);
 void ledBlink2Hz(void* pvParameters);
 void oledDisplayUpdate(void* pvParameters);
 void taskBME680(void* pvParameters);
 
-// セットアップ関数（起動時に一度だけ実行）
+// Setup function (runs once at startup)
 void setup() {
 
-  Serial.begin(115200);  // デバッグ用シリアル通信を初期化
+  Serial.begin(115200);  // Initialize serial communication for debugging
 
-  // 内蔵 LED ピンを出力モードに設定
+  // Set built-in LED pin as output for blinking
   pinMode(LED_BUILTIN, OUTPUT);
 
   Serial.print("Connecting to ");
   Serial.println(ssid);
-  WiFi.begin(ssid, password);  // WiFi ネットワークに接続
+  WiFi.begin(ssid, password);  // Connect to WiFi network
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
 
   while (!bme680.init()) {
-    Serial.println("bme680 の初期化に失敗しました！デバイスが見つかりません！");
+    Serial.println("bme680 init failed ! can't find device!");
     delay(10000);
   }
 
-  pcf.init();  // PCF8563 リアルタイムクロックを初期化
+  pcf.init();  // Initialize the PCF8563 real-time clock
 
-  // 時刻を設定する前にクロックを停止
+  // Stop the clock before setting the time
   pcf.stopClock();
 
-  // NTP サーバーを使用した時刻同期を設定
+  // Configure time synchronization using NTP server
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
   static struct tm timeinfo;
   while (!getLocalTime(&timeinfo)) {
-    Serial.println("時刻情報を受信できません... 待機中...");
+    Serial.println("no received time info ... Waiting ...");
   }
 
-  // 取得した時刻を基に PCF8563 クロックの時刻を設定
+  // Set the time on the PCF8563 clock based on retrieved time
   pcf.setYear(timeinfo.tm_year);
   pcf.setMonth(timeinfo.tm_mon);
   pcf.setDay(timeinfo.tm_mday);
@@ -1068,14 +1082,14 @@ void setup() {
   pcf.setMinut(timeinfo.tm_min);
   pcf.setSecond(timeinfo.tm_sec);
 
-  pcf.startClock();  // 時刻設定後にクロックを開始
+  pcf.startClock();  // Start the clock after setting the time
 
-  Serial.println("WiFi に接続しました: " + WiFi.localIP());
+  Serial.println("WiFi connected at " + WiFi.localIP());
 
-  u8x8.begin();         // OLED ディスプレイを初期化
-  u8x8.setFlipMode(1);  // 必要に応じて OLED ディスプレイの内容を回転
+  u8x8.begin();         // Initialize the OLED display
+  u8x8.setFlipMode(1);  // Optionally rotate OLED display content
 
-  // 各機能のタスクを作成
+  // Create tasks for different functionalities
   xTaskCreate(
     updateTime,
     "Get LocalTime",
@@ -1117,71 +1131,71 @@ void setup() {
     NULL);
 }
 
-// ループ関数（この場合は何もしない、すべての作業はタスクで処理）
+// Loop function (doesn't do anything in this case, tasks handle everything)
 void loop() {
-  // ここでは何もしません。すべての作業はタスクで処理されます。
+  // Nothing to do here, all work is done in the tasks
 }
 
-// タスクとして実行される関数: 現在の日付と時刻をシリアルポートに出力
+// Function that will run as a task: Prints current date and time to serial port
 void printDateAndTime(void* pvParameters) {
   for (;;) {
-    // 現在の時刻をフォーマットされた文字列 (DD/MM/YY\tHH:MM:SS) でシリアルポートに出力
+    // Print current time in formatted string (DD/MM/YY\tHH:MM:SS) to serial port
     Serial.printf("%02d/%02d/%02d\t%02d:%02d:%02d\n",
                   nowTime.day, nowTime.month + 1, nowTime.year % 100,
                   nowTime.hour, nowTime.minute, nowTime.second);
-    // 1秒待機してから再度時刻を読み取る
+    // Delay for 1 second before reading time again
     vTaskDelay(1000 / portTICK_PERIOD_MS);
   }
 }
 
-// タスクとして実行される関数: PCF8563 クロックから現在の時刻を読み取る
+// Function that will run as a task: Reads current time from PCF8563 clock
 void updateTime(void* pvParameters) {
   for (;;) {
-    // PCF8563 クロックから現在の時刻を取得し、グローバル変数 `nowTime` を更新
+    // Update the global `nowTime` variable with the current time from the PCF8563 clock
     nowTime = pcf.getTime();
-    // 0.5秒待機してから再度時刻を読み取る（更新頻度に応じて調整可能）
+    // Delay for 0.5 second before reading time again (can be adjusted for desired update frequency)
     vTaskDelay(500 / portTICK_PERIOD_MS);
   }
 }
 
-// タスクとして実行される関数: 内蔵 LED を 2Hz で点滅
+// Function that will run as a task: Blinks the built-in LED at 2Hz
 void ledBlink2Hz(void* pvParameters) {
-  bool state = true;  // LED の初期状態（オンまたはオフ）
+  bool state = true;  // Initial state for LED (on or off)
   for (;;) {
-    // LED の状態を設定（HIGH はオン、LOW はオフ）
+    // Set LED state (HIGH for on, LOW for off)
     digitalWrite(LED_BUILTIN, (state ? HIGH : LOW));
-    // 0.5秒待機して 2Hz の点滅周波数を作成（1サイクルオン/オフ）
+    // Delay for 0.5 second to create a 2Hz blinking frequency (one cycle on/off)
     vTaskDelay(500 / portTICK_PERIOD_MS);
-    // 次のサイクルのために LED の状態を切り替え
+    // Toggle LED state for the next cycle
     state = !state;
   }
 }
 
-// タスクとして実行される関数: OLED ディスプレイに日付と時刻を更新
+// Function that will run as a task: Updates OLED display with date and time
 void oledDisplayUpdate(void* pvParameters) {
   for (;;) {
 
-    // 最初の行（日時）のフォントを設定
+    // Set font for the first line (date)
     u8x8.setFont(u8x8_font_chroma48medium8_r);
 
-    // 最初の行のカーソル位置を設定（中央揃え）
+    // Set cursor position for the first line (centered)
     u8x8.setCursor(0, 0);
 
-    char buffer1[12];  // フォーマットされた日付文字列を保持するバッファ
+    char buffer1[12];  // Buffer to hold formatted date string
     std::snprintf(buffer1, sizeof(buffer1), "%02d/%02d/%02d",
                   nowTime.day, nowTime.month + 1, nowTime.year % 100);
     u8x8.print(buffer1);
 
-    // 時刻文字列 (HH:MM:SS) を buffer2 にフォーマット
+    // Format time string (HH:MM:SS) into buffer2 using std::snprintf
     std::snprintf(buffer1, sizeof(buffer1), "%02d:%02d:%02d",
                   nowTime.hour, nowTime.minute, nowTime.second);
-    // フォーマットされた時刻文字列を OLED ディスプレイに出力
+    // Print formatted time string to OLED display
     u8x8.print(buffer1);
 
-    // 2行目のカーソル位置を調整（1行目の下）
+    // Adjust cursor position for the second line (below the first line)
     u8x8.setCursor(0, 10);
 
-    char buffer2[20];  // フォーマットされたセンサーデータを保持するバッファ
+    char buffer2[20];  // Buffer to hold formatted sensor data
 
     std::snprintf(buffer2, sizeof(buffer2), "T: %.1f°C", bme680.sensor_result_value.temperature);
     u8x8.print(buffer2);
@@ -1198,14 +1212,14 @@ void oledDisplayUpdate(void* pvParameters) {
     // std::snprintf(buffer2, sizeof(buffer2), "G: %.1f Kohms", bme680.sensor_result_value.gas / 1000.0);
     // u8x8.print(buffer2);
 
-    vTaskDelay(100 / portTICK_PERIOD_MS);  // 0.1秒ごとに更新（必要に応じて調整）
+    vTaskDelay(100 / portTICK_PERIOD_MS);  // Update every 0.1 seconds (adjust as needed)
   }
 }
 
 void taskBME680(void* pvParameters) {
   for (;;) {
     if (bme680.read_sensor_data()) {
-      Serial.println("読み取りに失敗しました :(");
+      Serial.println("Failed to perform reading :(");
     } else {
       Serial.print("T: ");
       Serial.print(bme680.sensor_result_value.temperature, 2);
@@ -1230,39 +1244,39 @@ void taskBME680(void* pvParameters) {
 ### シリアルモニター出力
 
 ```shell
-09/09/24	03:17:20
+09/09/24 03:17:20
 T: 29.01 C  P: 90.86 KPa  H: 63.41 %  G: 47.41 Kohms
-09/09/24	03:17:21
+09/09/24 03:17:21
 T: 29.03 C  P: 90.86 KPa  H: 63.34 %  G: 47.85 Kohms
 ```
 
-## Arduino FreeRTOS vs ESP-IDF FreeRTOS
+## Arduino FreeRtos vs ESP-IDF FreeRtos
 
-| 特徴                     | Arduino FreeRTOS                                                | ESP-IDF FreeRTOS                                                                                                   |
+| Feature                 | Arduino FreeRTOS                                                | ESP-IDF FreeRTOS                                                                                                   |
 | ----------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| 抽象化レイヤー           | 高レベルの抽象化、初心者にとって簡単                           | 低レベルの抽象化、経験豊富なユーザー向けのより多くの制御                                                           |
-| 開発環境                 | Arduino IDE                                                     | ESP-IDF コマンドラインツール                                                                                       |
-| 互換性                   | 主にArduinoベースのボードと互換性あり                           | より広範なESP32およびESP32-S2ボードと互換性あり                                                                    |
-| 機能                     | 基本的なRTOS機能、タスク作成、スケジューリング、同期             | 包括的なRTOS機能、タスク作成、スケジューリング、同期、イベントグループ、キュー、ミューテックス、セマフォ            |
-| パフォーマンス           | 抽象化レイヤーのため一般的にパフォーマンスが低い               | ハードウェアとRTOS APIへの直接アクセスによりパフォーマンスが高い                                                   |
-| カスタマイズ性           | カスタマイズオプションが限定的                                  | 設定ファイルとAPIを通じた広範なカスタマイズオプション                                                              |
-| 学習曲線                 | 初心者にとって学びやすい                                       | コマンドラインツールやC/C++に不慣れな人にとって学習曲線が急                                                        |
-| 使用例                   | シンプルなIoTプロジェクト、プロトタイピング                     | 複雑なIoTアプリケーション、リアルタイムシステム、カスタムハードウェア                                               |
+| 抽象化レイヤー       | より高レベルな抽象化、初心者にとって簡単                  | より低レベルな抽象化、経験豊富なユーザーにより多くの制御を提供                                                        |
+| 開発環境 | Arduino IDE                                                     | ESP-IDF コマンドラインツール                                                                                         |
+| 互換性           | 主にArduinoベースのボードと互換性                  | より幅広いESP32およびESP32-S2ボードと互換性                                                         |
+| 機能                | 基本的なRTOS機能、タスク作成、スケジューリング、同期 | 包括的なRTOS機能、タスク作成、スケジューリング、同期、イベントグループ、キュー、ミューテックス、セマフォ |
+| パフォーマンス             | 抽象化レイヤーのため一般的にパフォーマンスが劣る          | ハードウェアとRTOS APIへの直接アクセスによりパフォーマンスが向上                                                     |
+| カスタマイゼーション           | 限定的なカスタマイゼーションオプション                                   | 設定ファイルとAPIを通じた広範囲なカスタマイゼーションオプション                                               |
+| 学習曲線          | 初心者にとって学習しやすい                                   | コマンドラインツールとC/C++に慣れていない人にとってより急な学習曲線                                      |
+| 使用例               | シンプルなIoTプロジェクト、プロトタイピング                                | 複雑なIoTアプリケーション、リアルタイムシステム、カスタムハードウェア                                                       |
 
 ## トラブルシューティング
 
-ハードウェア接続、ソフトウェアデバッグ、またはアップロードの過程でいくつかの問題が発生する可能性があります。
+ハードウェア接続、ソフトウェアデバッグ、またはアップロードの過程で発生する可能性のある問題について説明します。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

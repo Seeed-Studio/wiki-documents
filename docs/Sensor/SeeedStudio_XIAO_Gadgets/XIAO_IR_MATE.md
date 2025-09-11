@@ -31,7 +31,6 @@ Welcome to the **XIAO IR Mate Smart IR Remote**\! This device is specially desig
   />
 </div>
 
-
 ## Introduction
 
 The **XIAO IR Mate** is a compact smart infrared module based on the **Seeed Studio XIAO ESP32-C3**. It integrates infrared transmission and reception, touch sensing, vibration feedback, and status indication. Connected via Wi-Fi, it can be perfectly integrated into your Home Assistant smart home ecosystem. Its core mission is to make all your traditional appliances that use infrared remotes (like TVs, air conditioners, fans, etc.) "smart" and allow you to control them through HA for automation.
@@ -50,39 +49,36 @@ The **XIAO IR Mate** is a compact smart infrared module based on the **Seeed Stu
   <img src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/touch.jpg" alt="XIAO Smart IR Mate Product diagram 6" />
 </div>
 
-- **Seamless Integration with Home Assistant** 
+- **Seamless Integration with Home Assistant**
 
 Built on the ESPHome platform, IR Mate is automatically discovered by Home Assistant, offering simple entities for effortless automation and scripting.
 
-- **Powerful IR Learning and Transmitting** 
+- **Powerful IR Learning and Transmitting**
 
 Equipped with three high-power IR emitters for 360° coverage and a high-sensitivity receiver. Supports learning up to 10 IR commands from standard remotes (e.g., controlling projectors, air conditioners, timers) for one-tap playback in Home Assistant.
 
-- **Intuitive Physical Interaction Feedback** 
+- **Intuitive Physical Interaction Feedback**
 
 Features a vibration motor and LED indicator. Short vibrations confirm actions, long vibrations signal learning mode, and the LED displays network status, simplifying setup and troubleshooting.
 
-- **Upgradeable to a Fanatic Smart AC Controller** 
+- **Upgradeable to a Fanatic Smart AC Controller**
 
 Flash custom firmware to transform IR Mate into a smart AC remote. Set precise temperature, mode, and fan speed directly in Home Assistant, with automatic IR code generation, eliminating repetitive learning.
 
-- **Compact Design, USB-C Powered** 
-
-
+- **Compact Design, USB-C Powered**
 
 ## Hardware Overview
 
 Understanding the basic components of the device will help you use it better:
 
-  - **Main Controller**: Seeed Studio XIAO ESP32-C3, providing powerful performance and Wi-Fi connectivity.
-  - **Power Supply**: Powered via the onboard Type-C port (5V).
-  - **Infrared Emitter**: 3 high-power infrared LEDs (using pin D1), ensuring 360° signal transmission without blind spots.
-  - **Infrared Receiver**: 1 high-precision infrared receiver (using pin D2), for learning signals from other remotes.
-  - **Touch Sensor**: The device integrates a touch module (using pin D3). A single touch triggers a short vibration (0.5 seconds) as operational feedback.
-  - **Vibration Motor**: A built-in vibration motor (using pin D4) provides clear tactile feedback with varying vibration durations.
-  - **Status Indicator LED**: An LED light (using pin D5) to indicate the device's different working states.
-  - **Reset Button**: A physical button on the device (connected to pin D0), used for rebooting or factory resetting.
-
+- **Main Controller**: Seeed Studio XIAO ESP32-C3, providing powerful performance and Wi-Fi connectivity.
+- **Power Supply**: Powered via the onboard Type-C port (5V).
+- **Infrared Emitter**: 3 high-power infrared LEDs (using pin D1), ensuring 360° signal transmission without blind spots.
+- **Infrared Receiver**: 1 high-precision infrared receiver (using pin D2), for learning signals from other remotes.
+- **Touch Sensor**: The device integrates a touch module (using pin D3). A single touch triggers a short vibration (0.5 seconds) as operational feedback.
+- **Vibration Motor**: A built-in vibration motor (using pin D4) provides clear tactile feedback with varying vibration durations.
+- **Status Indicator LED**: An LED light (using pin D5) to indicate the device's different working states.
+- **Reset Button**: A physical button on the device (connected to pin D0), used for rebooting or factory resetting.
 
 ## First Use & Network Configuration (Factory Firmware)
 
@@ -104,15 +100,15 @@ When the network is not configured, the device will automatically create a Wi-Fi
 
 ### Step 3: Connect to the Hotspot and Configure Network
 
-1.  Open the Wi-Fi settings on your phone or computer, search for and connect to the network named **XIAO IR Mate**.
+1. Open the Wi-Fi settings on your phone or computer, search for and connect to the network named **XIAO IR Mate**.
 
 :::note
 The hotspot has a default network password of ‘12345678’.
 :::
 
-2.  After a successful connection, your device will usually automatically open a configuration page. If it doesn't, please manually open a browser and visit **[http://192.168.4.1](http://192.168.4.1)**.
-3.  On this page, you will see a list of Wi-Fi networks. Please select your home's **2.4GHz Wi-Fi network (SSID)** and enter the correct password.
-4.  Click "Connect" or "Save". The device will attempt to connect to the Wi-Fi network you provided.
+2. After a successful connection, your device will usually automatically open a configuration page. If it doesn't, please manually open a browser and visit **[http://192.168.4.1](http://192.168.4.1)**.
+3. On this page, you will see a list of Wi-Fi networks. Please select your home's **2.4GHz Wi-Fi network (SSID)** and enter the correct password.
+4. Click "Connect" or "Save". The device will attempt to connect to the Wi-Fi network you provided.
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_02.png"
@@ -120,11 +116,9 @@ The hotspot has a default network password of ‘12345678’.
   style={{ display: 'block', margin: 'auto' }}
 />
 
-
 ### Step 4: Connection Successful
 
 Once the device successfully connects to your home Wi-Fi, the AP hotspot will automatically turn off, and the **status indicator light will become solid on**. The network configuration is now complete.
-
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect_03.png"
@@ -132,14 +126,12 @@ Once the device successfully connects to your home Wi-Fi, the AP hotspot will au
   style={{ display: 'block', margin: 'auto' }}
 />
 
-
 ## Home Assistant Integration (Factory Firmware)
 
 The device firmware is based on **ESPHome**, making it very easy to integrate into Home Assistant.
 
-1.  **Automatic Discovery**: Ensure your Home Assistant host and the XIAO IR Mate are connected to the same local network. Typically, HA will automatically discover new ESPHome devices. You will see a notification in **Settings \> Devices & Services** saying "New device discovered".
-2.  **Manual Addition**: If not discovered automatically, you can click the **[Add Integration]** button in the bottom right corner, search for **"ESPHome"**, and then enter the device's hostname (e.g., **xiao-ir-mate**) or IP address to add it manually.
-
+1. **Automatic Discovery**: Ensure your Home Assistant host and the XIAO IR Mate are connected to the same local network. Typically, HA will automatically discover new ESPHome devices. You will see a notification in **Settings \> Devices & Services** saying "New device discovered".
+2. **Manual Addition**: If not discovered automatically, you can click the **[Add Integration]** button in the bottom right corner, search for **"ESPHome"**, and then enter the device's hostname (e.g., **xiao-ir-mate**) or IP address to add it manually.
 
 <div style={{textAlign:'center'}}>
   <img
@@ -167,14 +159,13 @@ The device firmware is based on **ESPHome**, making it very easy to integrate in
   />
 </div>
 
-3.  **Device Dashboard**: After successful addition, the XIAO IR Mate will appear as a device in HA. Its dashboard will contain the following entities for controlling 10 different infrared signals:
+3. **Device Dashboard**: After successful addition, the XIAO IR Mate will appear as a device in HA. Its dashboard will contain the following entities for controlling 10 different infrared signals:
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_07.png"
   alt=""
   style={{ display: 'block', margin: 'auto' }}
 />
-
 
 ## Core Function Details (Factory Firmware)
 
@@ -186,28 +177,26 @@ If you want to restore your device or update its firmware, you can jump through 
     </a>
 </div><br />
 
-
 ### IR Signal Learning
 
 When you need to teach the IR Mate a new remote command, follow these steps. The factory firmware's core interface includes a **signal slot selection list**, along with **Learn** and **Send** buttons.
 
-1.  In the Home Assistant device dashboard, first find the dropdown selection list named **"Signal"**.
-2.  Click the dropdown list and select the signal slot you want to use, for example, **"signal_1"**.
-3.  Once selected, find the **"Learn"** button and click **"PRESS"** next to it.
-4.  The XIAO IR Mate will now enter learning mode and begin to **vibrate continuously**, indicating that you can start pairing.
-5.  Point your original remote at the IR Mate's infrared receiver window and give a short press of the button you want to learn.
-6.  After the IR Mate successfully receives and records the signal, the **vibration will stop**, signifying that the learning was successful.
-7.  At this point, a status indicator named **"Is Learned Signal"** will automatically turn "ON", indicating that the currently selected signal slot in the dropdown list (i.e., "signal_1") now has a signal stored.
+1. In the Home Assistant device dashboard, first find the dropdown selection list named **"Signal"**.
+2. Click the dropdown list and select the signal slot you want to use, for example, **"signal_1"**.
+3. Once selected, find the **"Learn"** button and click **"PRESS"** next to it.
+4. The XIAO IR Mate will now enter learning mode and begin to **vibrate continuously**, indicating that you can start pairing.
+5. Point your original remote at the IR Mate's infrared receiver window and give a short press of the button you want to learn.
+6. After the IR Mate successfully receives and records the signal, the **vibration will stop**, signifying that the learning was successful.
+7. At this point, a status indicator named **"Is Learned Signal"** will automatically turn "ON", indicating that the currently selected signal slot in the dropdown list (i.e., "signal_1") now has a signal stored.
 
 ### IR Signal Sending
 
 Once a signal has been successfully learned, you can send it at any time.
 
-1.  In the **"Signal"** dropdown list, ensure you have selected the signal slot you wish to send, for example, **"signal_1"**.
-2.  Find the **"Send"** button and click **"PRESS"** next to it.
-3.  The XIAO IR Mate will immediately transmit the signal stored in the currently selected slot via its 3 infrared emitters.
-4.  **Note**: If you select a signal slot in the dropdown list that has never been taught a signal, clicking the send button will have no effect.
-
+1. In the **"Signal"** dropdown list, ensure you have selected the signal slot you wish to send, for example, **"signal_1"**.
+2. Find the **"Send"** button and click **"PRESS"** next to it.
+3. The XIAO IR Mate will immediately transmit the signal stored in the currently selected slot via its 3 infrared emitters.
+4. **Note**: If you select a signal slot in the dropdown list that has never been taught a signal, clicking the send button will have no effect.
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/homeassistant_08.png"
@@ -215,26 +204,24 @@ Once a signal has been successfully learned, you can send it at any time.
   style={{ display: 'block', margin: 'auto' }}
 />
 
-
 ## Physical Interaction & Status Indication
 
 In addition to HA control, you can also understand and control the device through physical interaction.
 
 ### Status Indicator Light (White LED)
 
-  - **Slow Blink (1Hz)**: The device is waiting to connect to a Wi-Fi network.
-  - **Solid On**: The device is successfully connected to the Wi-Fi network and operating normally.
+- **Slow Blink (1Hz)**: The device is waiting to connect to a Wi-Fi network.
+- **Solid On**: The device is successfully connected to the Wi-Fi network and operating normally.
 
 ### Vibration Feedback
 
-  - **Short Vibration (100ms)**: Used for general operation confirmation, such as when touching the device.
-  - **Long Vibration (500ms)**: Used for important status alerts, such as entering learning mode or performing a factory reset.
+- **Short Vibration (100ms)**: Used for general operation confirmation, such as when touching the device.
+- **Long Vibration (500ms)**: Used for important status alerts, such as entering learning mode or performing a factory reset.
 
 ### RESET Button
 
-  - **Short Press (within 1 second)**: The device will reboot, accompanied by a short vibration. This is very useful if the device becomes unresponsive.
-  - **Long Press (over 5 seconds)**: The device will **perform a factory reset**. This action will **erase all saved Wi-Fi credentials and all 10 learned infrared signals**. When this action is performed, the device will emit a long vibration as a prompt. After completion, the device will restart and return to the initial waiting-for-configuration state (LED blinking).
-
+- **Short Press (within 1 second)**: The device will reboot, accompanied by a short vibration. This is very useful if the device becomes unresponsive.
+- **Long Press (over 5 seconds)**: The device will **perform a factory reset**. This action will **erase all saved Wi-Fi credentials and all 10 learned infrared signals**. When this action is performed, the device will emit a long vibration as a prompt. After completion, the device will restart and return to the initial waiting-for-configuration state (LED blinking).
 
 ## Advanced Usage - Smart Air Conditioner Control
 
@@ -244,26 +231,25 @@ In this chapter, we will use a Gree air conditioner as a detailed example, but t
 
 ### Core Advantages
 
-  - **Stateful Control**: No more simple replays. You can directly set "24°C, Cool, Auto Fan" in HA, and the device will immediately generate and send the correct infrared command.
-  - **Friendlier UI**: It appears as a standard Climate card in HA, making operation intuitive.
-  - **Saves Space**: No need to learn a separate signal for each temperature or mode; one configuration can control all AC functions.
+- **Stateful Control**: No more simple replays. You can directly set "24°C, Cool, Auto Fan" in HA, and the device will immediately generate and send the correct infrared command.
+- **Friendlier UI**: It appears as a standard Climate card in HA, making operation intuitive.
+- **Saves Space**: No need to learn a separate signal for each temperature or mode; one configuration can control all AC functions.
 
 ### Prerequisites
 
-1.  **Install ESPHome**: If you haven't already, install and start the ESPHome add-on from the Home Assistant Add-on Store.
-2.  **Get Your AC Brand Protocol**: ESPHome supports many AC brand protocols (like Gree, Midea, Daikin, etc.). You need to know your air conditioner's brand to select the correct protocol.
+1. **Install ESPHome**: If you haven't already, install and start the ESPHome add-on from the Home Assistant Add-on Store.
+2. **Get Your AC Brand Protocol**: ESPHome supports many AC brand protocols (like Gree, Midea, Daikin, etc.). You need to know your air conditioner's brand to select the correct protocol.
 
 ### Flashing Custom Firmware
 
-1.  **Create a New Device Configuration**
+1. **Create a New Device Configuration**
       - Open the ESPHome interface in HA.
       - Click the **"+ NEW DEVICE"** button in the bottom right, and in the pop-up window, click **"Continue"**.
       - Name your device (e.g., **xiao-ir-ac-controller**), and then select the board type as **Seeed Studio XIAO ESP32C3**.
-2.  **Edit the Configuration File**
+2. **Edit the Configuration File**
       - Click the **EDIT** button on the newly created device card to enter the YAML configuration editor.
       - Delete all default content in the editor.
       - **Completely copy and paste** the code below into the editor:
-
 
 <Details>
 
@@ -540,13 +526,14 @@ interval:
                 }
                 call.perform();
 ```
+
 </Details>
 
-3.  **Customize Your Configuration**
+3. **Customize Your Configuration**
       - **Wi-Fi**: If you don't use `!secret` files, uncomment the `wifi:` section and replace `Your_WiFi_SSID` and `Your_WiFi_Password` with your own Wi-Fi information.
       - **Select the correct AC protocol**: This is the most critical step\! The example uses `platform: gree`. If your air conditioner is not a Gree, replace it with your brand's platform. How to find supported brands? Please visit the [ESPHome Climate Components](https://esphome.io/components/climate/index.html) page, which lists all supported brands and their platform names (e.g., `daikin`, `midea`, `panasonic_ac`, etc.).
           - After selecting the corresponding platform, you may also need to fine-tune parameters like `model` or supported modes according to the documentation for that platform.
-4.  **Compile and Flash**
+4. **Compile and Flash**
       - Save your YAML configuration.
       - Connect your XIAO IR Mate to the computer running HA via a USB cable.
       - Click the **INSTALL** button on the device card.
@@ -558,7 +545,7 @@ interval:
 
 After flashing and rebooting, your device will appear in Home Assistant as a new Climate entity (e.g., `climate.gree_air_conditioner`). You can add a "Thermostat Card" to your dashboard to get a fully functional AC control panel, allowing you to freely adjust the temperature, mode, fan speed, and swing, just like a native smart air conditioner\!
 
-### Further Outlooks: Open Your Mind!
+### Further Outlooks: Open Your Mind
 
 Congratulations! By now, you've mastered the two core uses for the XIAO IR Mate: one is the out-of-the-box "universal remote learning" function, and the other is the "professional climate controller" mode for precise air conditioner control.
 
@@ -574,7 +561,7 @@ Look around you. Do you have a lot of idle old remotes lying around? Remotes for
 
 The core of this idea is to transform the XIAO IR Mate from a "transmitter" into a "listener." It no longer actively controls other devices but quietly listens for signals from any old remote, then tells Home Assistant: "I heard a signal, you decide what to do!"
 
-* **Implementation Steps**
+- **Implementation Steps**
 
   1. **Configure a "Listener" Firmware:** In your ESPHome firmware, the core configuration is the `remote_receiver` component. The device's only job after powering on is to "listen up" for IR signals.
 
@@ -584,21 +571,21 @@ The core of this idea is to transform the XIAO IR Mate from a "transmitter" into
 
   4. **Define the Action:** The action for the rule can be anything! For example:
 
-     * When it detects the **"Volume +" button from the TV remote** -> **Start the robot vacuum** to begin cleaning.
+     - When it detects the **"Volume +" button from the TV remote** -> **Start the robot vacuum** to begin cleaning.
 
-     * When it detects the **"Play" button from an Apple Remote** -> **Turn on the bathroom light**.
+     - When it detects the **"Play" button from an Apple Remote** -> **Turn on the bathroom light**.
 
-     * When it detects the **"Red" button from the DVD remote** -> Execute the "Away Mode" scene.
+     - When it detects the **"Red" button from the DVD remote** -> Execute the "Away Mode" scene.
 
-* **Advantages of This Approach**
+- **Advantages of This Approach**
 
-  * **Upcycling and Eco-Friendly:** Gives new life to idle hardware, putting e-waste back to work, which saves money and is good for the environment.
+  - **Upcycling and Eco-Friendly:** Gives new life to idle hardware, putting e-waste back to work, which saves money and is good for the environment.
 
-  * **Real Tactile Button Experience:** Compared to a touchscreen, a physical remote with dozens of distinct, solid-feeling buttons is more direct and satisfying for many scenarios.
+  - **Real Tactile Button Experience:** Compared to a touchscreen, a physical remote with dozens of distinct, solid-feeling buttons is more direct and satisfying for many scenarios.
 
-  * **High Wife Acceptance Factor (WAF):** For family members not used to phone apps or smart speakers (like the elderly or children), telling them "press this button to turn on the light" is the most intuitive and easy-to-learn interaction.
+  - **High Wife Acceptance Factor (WAF):** For family members not used to phone apps or smart speakers (like the elderly or children), telling them "press this button to turn on the light" is the most intuitive and easy-to-learn interaction.
 
-  * **A "Smart Switch" That Doesn't Need Recharging:** A traditional remote's batteries can often last a year or two, which is far more convenient than many smart gadgets that need frequent charging.
+  - **A "Smart Switch" That Doesn't Need Recharging:** A traditional remote's batteries can often last a year or two, which is far more convenient than many smart gadgets that need frequent charging.
 
 #### **Idea 2: Create a Universal "IoT Magic Button"**
 
@@ -606,7 +593,7 @@ The core of this idea is to transform the XIAO IR Mate from a "transmitter" into
 
 Does the touch button on the device really have to be just for controlling IR? Of course not! We can turn it into a magic button that controls **anything** in your house. The key is to "decouple"—to completely separate the physical action of "pressing the button" from the smart action of "what actually happens."
 
-* **Implementation Steps**
+- **Implementation Steps**
 
   1. **Make the Button Just a "Reporter":** In the firmware, configure the touch button (for single-tap, double-tap, long-press) not to perform any specific task, but only to send an "event notification" to Home Assistant. For example, on a double-tap, it just reports to HA: "Hey! I was double-tapped!"
 
@@ -614,19 +601,19 @@ Does the touch button on the device really have to be just for controlling IR? O
 
   3. **Connect Everything, Do Anything:** Once HA receives a report, it can command any device in your home to act!
 
-     * Receives a **"single-tap"** report -> Toggles all the **Zigbee lights** in the house on/off.
+     - Receives a **"single-tap"** report -> Toggles all the **Zigbee lights** in the house on/off.
 
-     * Receives a **"double-tap"** report -> Commands the **robot vacuum** to start cleaning.
+     - Receives a **"double-tap"** report -> Commands the **robot vacuum** to start cleaning.
 
-     * Receives a **"long-press"** report -> Executes a "Movie Mode" scene, closing the curtains, dimming the lights, and turning on the projector and sound system.
+     - Receives a **"long-press"** report -> Executes a "Movie Mode" scene, closing the curtains, dimming the lights, and turning on the projector and sound system.
 
-* **Advantages of This Approach**
+- **Advantages of This Approach**
 
-  * **Break Boundaries, Endless Possibilities:** Your touch button is no longer just a part of an "IR remote," but a physical switch for your entire smart home, capable of controlling any device connected to HA.
+  - **Break Boundaries, Endless Possibilities:** Your touch button is no longer just a part of an "IR remote," but a physical switch for your entire smart home, capable of controlling any device connected to HA.
 
-  * **Define Flexibly, Change on a Whim:** Today a double-tap starts the vacuum, but tomorrow you want it to play music? Just edit the automation in the HA interface, no need to touch the firmware at all.
+  - **Define Flexibly, Change on a Whim:** Today a double-tap starts the vacuum, but tomorrow you want it to play music? Just edit the automation in the HA interface, no need to touch the firmware at all.
 
-  * **The Most Intuitive Interaction:** Give your family the simplest way to control things. A physical button with haptic feedback is often much more convenient and elegant than opening a phone app.
+  - **The Most Intuitive Interaction:** Give your family the simplest way to control things. A physical button with haptic feedback is often much more convenient and elegant than opening a phone app.
 
 In short, don't just see the XIAO IR Mate as an IR tool. Think of it as a mini-robot connected to Wi-Fi, with a sense of touch and a "voice" (the IR emitter). What it can do is limited only by your imagination!
 
@@ -647,23 +634,21 @@ In short, don't just see the XIAO IR Mate as an IR tool. Think of it as a mini-r
 > **Q: How do I use the learned signals (factory firmware) or the AC control (advanced firmware) in automations?**
 > **A:** In HA's automation or script editor, choose "Call service".
 
-
 ## Resources
 
 - **[ZIP]** [Hardware](https://files.seeedstudio.com/wiki/XIAO_IR_MATE/XIAO_IR_REMOTE_hardware.zip)
 - **[ZIP]** [Software](https://github.com/Seeed-Studio/xiao-esphome-projects/tree/main/projects/xiao_smart_ir_mate)
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,50 +1,46 @@
 ---
-description: XIAO nRF52840(sense) と NuttX(RTOS)
-title: XIAO nRF52840(sense) と NuttX(RTOS)
+description: XIAO nRF52840(sense) With NuttX(RTOS)
+title: XIAO nRF52840(sense) With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
 slug: /ja/xiao_nrf52840_nuttx
 last_update:
-    date: 2025/02/12
+    date: 02/12/2025
     author: rcsim
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO nRF52840 と NuttX(RTOS)
+# Seeed Studio XIAO nRF52840 with NuttX(RTOS)
 
 ## はじめに
 
-[NuttX](https://nuttx.apache.org/) は、標準準拠と小型フットプリントで広く認識されている成熟したリアルタイムオペレーティングシステム (RTOS) です。NuttX の主な特徴の一つはそのスケーラビリティであり、8ビットマイクロコントローラーから64ビットシステムまでの環境で使用することができます。この柔軟性は、POSIX および ANSI 標準に準拠することで実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで同様の NuttX 機能を試すことが可能です。
+[NuttX](https://nuttx.apache.org/) は、標準準拠と小さなフットプリントで広く認知されている成熟したリアルタイムオペレーティングシステム（RTOS）です。NuttXの主な特徴の一つはスケーラビリティであり、8ビットマイクロコントローラから64ビットシステムまでの環境で使用できます。この柔軟性は、POSIXおよびANSI標準への準拠により実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似のNuttX機能を実験することができます。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.svg"/></div>
 
-さらに、NuttX は USB、Ethernet、オーディオ、グラフィックスサブシステムなど、多くの高度で便利な機能を提供します。これらの特徴により、NuttX はさまざまな種類のハードウェアで動作可能な汎用性と堅牢性を備えた RTOS を求める開発者にとって魅力的な選択肢となっています。
+さらに、NuttXはUSB、Ethernet、Audio、Graphicsサブシステムなど、多くの高度で有用な機能を提供します。これらの特性により、NuttXは様々なタイプのハードウェア上で動作可能な汎用性があり堅牢なRTOSを求める開発者にとって魅力的な選択肢となっています。
 
-NuttX は、膨大で継続的に拡大する数のボードをサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/) には、アーキテクチャやシステムオンチップ (SoC) シリーズごとに整理されたサポートされているボードの包括的なリストが掲載されています。
+NuttXは膨大で継続的に拡張されているボード数をサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/)では、アーキテクチャとSystem-on-Chip（SoC）シリーズ別に整理されたサポートボードの包括的なリストを提供しています。
 
-例えば、NuttX ドキュメントの [Seeed Studio Xiao nRF52840](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/boards/xiao-nrf52840/index.html) ページには、サポートされている各機能の詳細な説明と、それらを利用する方法が記載されています。また、Nordic Semiconductor nRF52 シリーズチップに関する特定のページも [NuttX ドキュメント](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/index.html) に用意されています。
+例えば、NuttXドキュメントの[Seeed Studio Xiao nRF52840](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/boards/xiao-nrf52840/index.html)ページでは、サポートされている各機能の詳細な説明とそれらの使用方法に関する指示を提供しています。また、NuttXドキュメントには[Nordic Semiconductor nRF52](https://nuttx.apache.org/docs/latest/platforms/arm/nrf52/index.html)シリーズチップ専用のページもあります。
 
-## ツールのセットアップ
+## ツールセットアップ
 
-XIAO nRF52840 で NuttX を始める最初のステップは、hex ファイル形式を uf2 に変換するために必要な UF2 ツールをインストールし、その後 NuttX のソースコード自体をダウンロードすることです。NuttX は [ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html) を提供しており、異なるプラットフォームに対応しています。以下の手順に従ってください：
+XIAO nRF52840でNuttXを始めるための最初のステップは、hexファイル形式をuf2に変換するために必要なUF2 Toolsをインストールし、その後NuttXソースコード自体をダウンロードすることです。Nuttxは異なるプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。以下の手順に従ってください：
 
-1. UF2 ツールをダウンロードします：
+1. UF2 Toolsをダウンロード：
 
     ```bash
     git clone https://github.com/microsoft/uf2.git
     ```
 
-2. ワークスペースを作成します：
+2. ワークスペースを作成
 
     ```bash
     mkdir nuttxspace
     ```
 
-3. リポジトリをクローンします：
+3. リポジトリをクローン
 
     ```bash
     cd nuttxspace
@@ -52,26 +48,26 @@ XIAO nRF52840 で NuttX を始める最初のステップは、hex ファイル�
     git clone https://github.com/apache/nuttx-apps apps
     ```
 
-Apache Nuttx は 2 つのプロジェクトに分かれています：
+Apache Nuttxは2つのプロジェクトに分かれています：
 
-- Nuttx: カーネル、ドライバ、サブシステムが実装されています。
-- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリタのコレクションが含まれています。
+- Nuttx: カーネル、ドライバー、サブシステムの実装を含みます。
+- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリターのコレクションを含みます。
 
 ## アプリケーション
 
-アプリケーションを開始するには、NuttX に構成をロードする必要があります。以下のコマンドを実行してください：
+アプリケーションを開始するには、以下のコマンドを呼び出してNuttX上に設定をロードする必要があります：
 
 ```bash
 ./tools/configurate.sh board_name:your_application
 ```
 
-また、サポートされているボードのリストを確認するには、以下のコマンドを実行できます：
+また、以下のコマンドを実行してボード対応リストを確認することも可能です：
 
 ```bash
 ./tools/configurate.sh -L
 ```
 
-4. NuttX をビルドします：
+4. NuttXをビルド
 
     ```bash
     cd nuttx
@@ -80,30 +76,30 @@ Apache Nuttx は 2 つのプロジェクトに分かれています：
     make V=1
     ```
 
-5. UF2 ツールを使用して nuttx.hex を UF2 形式に変換します：
+5. U2Fツールを使用してnuttx.hexをUF2形式に変換：
 
     ```bash
     python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
     ```
 
-6. Seeed Studio XIAO nRF52840 を接続し、ボードをブートローダーモードにするために素早く 2 回クリックします。ボードは USB マスストレージデバイスとして認識されます。その後、「nuttx.uf2」をデバイスにコピーします。
+6. Seeed Studio XIAO nRF52840を接続し、2回素早くクリックしてブートローダーモードに入ります。ボードはUSBマスストレージデバイスとして検出されます。その後、「nuttx.uf2」をデバイスにコピーします。
 
 ## ハンズオン
 
-NuttXを実際に操作してみましょう。このセッションでは、NSH、USBNSH、JUMBOの3つのアプリケーションが利用可能です。
+実際にNuttXを探索する時間です。このセッションでは、NSH、USBNSH、JUMBOの3つのアプリケーションが利用可能です。
 
 ### NSH
 
-NuttShell（NSH）は、NuttXで使用されるシェルシステムで、bashやその他の類似オプションに似ています。豊富なコマンドセット、スクリプト機能、自作アプリケーションを「ビルトイン」（同じNuttXバイナリの一部）として実行する機能をサポートしています。NSHの設定では、UART0で115200 bpsのコンソールが有効になります。
+NuttShell（NSH）はNuttXで使用されるシェルシステムで、bashや他の類似オプションと似ています。豊富な内蔵コマンドセット、スクリプト機能、および独自のアプリケーションを「builtin」（同じNuttXバイナリの一部）として実行する機能をサポートしています。NSH設定では、115200 bpsを使用してUART0でコンソールを有効にします。
 
-まず、以前の設定をクリアしてビルドプロセスを開始します。
+前の設定をクリアしてビルドプロセスを開始できます
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-次に、xiao-nrf5200ボード用のNSH設定を選択します。
+次に、xiao-nrf5200ボードにNSH設定を選択します：
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:nsh
@@ -115,26 +111,26 @@ make distclean
 make -j
 ```
 
-U2Fツールを使用してnuttx.hexをUF2形式に変換します。
+U2F Toolsを使用してnuttx.hexをUF2形式に変換します：
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
 ```
 
-ファームウェアをボードにロードし、USB-to-SerialをTXおよびRXピンに接続してから、miniconやpicocomなどのシリアル通信プログラムを実行します。
+ファームウェアをボードにロードし、USB-to-SerialをTXとRXピンに接続してから、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
 ```
 
-NuttShellコンソールにアクセスします。
+NuttShellコンソールにアクセス：
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-`?`を入力すると、利用可能なコマンドやビルトインアプリケーションのオプションにアクセスできます。
+`?`を入力すると、コマンドと組み込みアプリケーションの利用可能なオプションにアクセスできます。
 
 ```bash
 nsh> ?
@@ -154,27 +150,27 @@ Builtin Apps:
     getprime    hello       nsh         ostest      sh 
 ```
 
-NuttXに挨拶してみましょう。`hello`と入力すると、以下のようにコマンドが実行されます。
+NuttXに挨拶してみましょう。`hello`と入力すると、コマンドが実行されます：
 
 ```bash
 nsh> hello
 Hello, World!!
 ```
 
-おめでとうございます！これでNuttXとの最初の対話が完了しました。
+おめでとうございます。NuttXとの最初のやり取りが完了しました。
 
 ### USBNSH
 
 NSH設定と似ていますが、CDC/ACMシリアル（USBポートでコンソールが有効、115200 bps）を使用します。
 
-まず、以前の設定をクリアしてビルドプロセスを開始します。
+以前の設定をクリアして、ビルドプロセスを開始できます
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-次に、xiao-nrf5200ボード用のUSBNSH設定を選択します。
+次に、xiao-nrf5200ボードにNSH設定を選択します：
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:usbnsh
@@ -186,19 +182,19 @@ make distclean
 make -j
 ```
 
-U2Fツールを使用してnuttx.hexをUF2形式に変換します。
+U2F Toolsを使用してnuttx.hexをUF2形式に変換します：
 
 ```bash
 python3 uf2/utils/uf2conv.py -c -f 0xADA52840 -i nuttx.hex -o nuttx.uf2
 ```
 
-ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行します。
+ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行します：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-Enterキーを3回押すと、以下のメッセージがターミナルに表示されます。
+Enterキーを3回押す必要があり、その後このメッセージがターミナルに表示されます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -207,14 +203,14 @@ nsh>
 
 ### JUMBO
 
-この設定では、gpioとledsという2つのサンプルアプリケーションが有効になります。汎用入出力（GPIO）はマイクロコントローラーの最も基本的な部分であり、外部世界と接続することを可能にします。このセクションでは、NSHを使用してこれらのピンにアクセスし、設定します。まず、以前の設定をクリアします。
+この設定では、gpioとledsという2つのサンプルアプリケーションが有効になります。汎用入出力（GPIO）はマイクロコントローラーの最も基本的な部分であり、外部世界との接続を可能にします。この方法でNSHを使用して、これらのピンを希望通りにアクセスし設定します。しかし、まず前の設定をクリアしましょう。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-xiao-nrf52840ボード用のjumbo設定を選択します。
+xiao-nrf52840ボードにjumbo設定を選択します。
 
 ```bash
 ./tools/configurate.sh xiao-nrf52840:jumbo
@@ -226,20 +222,20 @@ xiao-nrf52840ボード用のjumbo設定を選択します。
 make -j
 ```
 
-ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行します。
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-Enterキーを3回押すと、以下のメッセージがターミナルに表示されます。
+Enterキーを3回押す必要があり、その後このメッセージがターミナルに表示されます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-このアプリケーションと対話するために受け入れられるオプションを確認するには、`gpio -h`と入力します。すると、パラメータのリストが返されます。
+このアプリケーションとの対話で受け入れられるオプションを確認するには、`gpio -h` と入力してください。パラメータのリストが返されます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -266,18 +262,18 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-GPIOデバイスファイルが作成されたことを確認するには、`ls /dev`と入力します。入力後、いくつかのGPIOが[xiao-nrf52840.h](https://github.com/apache/nuttx/blob/5b9d535ce6d7089a55742a748d7111f31ec74204/boards/arm/nrf52/xiao-nrf52840/src/xiao-nrf52840.h#L61)で定義されていることがわかります。これらは以下を表します：
+GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`と入力してください。入力後、[xiao-nrf52840.h](https://github.com/apache/nuttx/blob/5b9d535ce6d7089a55742a748d7111f31ec74204/boards/arm/nrf52/xiao-nrf52840/src/xiao-nrf52840.h#L61)で定義されたいくつかのgpioが宣言されているのを確認できます。これらは以下を表しています：
 
-- オンボードRGB LED:
+- オンボードRGB LED：
 
   - RGB_RED   -> P0.26
   - RGB_GREEN -> P0.30
   - RGB_BLUE  -> P0.06
 
-- GPIOs:
-  - 1入力          - P0.02(/dev/gpio0)
-  - 1割り込み入力 - P0.03(/dev/gpio2)
-  - 1出力          - P0.28(/dev/gpio1)
+- GPIO
+  - 1 入力          - P0.02(/dev/gpio0)
+  - 1 割り込み入力 - P0.03(/dev/gpio2)
+  - 1 出力          - P0.28(/dev/gpio1)
 
 ```bash
 nsh> ls /dev
@@ -293,7 +289,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-以下のコマンドを使用してgpio0とgpio2（割り込み付き）を読み取り、gpio1に書き込みます。
+以下のコマンドに従って、gpio0とgpio2（割り込み付き）を読み取り、gpio1に書き込みます。
 
 ```bash
 nsh> gpio /dev/gpio0
@@ -315,9 +311,9 @@ Driver: /dev/gpio2
   Verify:        Value=1
 ```
 
-USERLEDSは、単一の操作でLEDを制御するサブシステムです。また、printfのようなコマンドラインを使用することもできます。このデモでは、オンボードのRGB LEDを1秒ごとに点灯および消灯します。
+USERLEDS は、単一の操作で LED を制御できるサブシステムです。また、printf のようなコマンドラインを使用することもできます。このデモでは、オンボードの RGB LED を 1 秒ごとにオンとオフを切り替えます。
 
-`leds`と入力すると、LEDが同時に点滅するのが観察できます。
+`leds` と入力すると、LED が同時に点滅するのを観察できます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -337,7 +333,7 @@ led_daemon: LED set 0x06
 led_daemon: LED set 0x07
 ```
 
-以下のビデオで、GPIOとLEDのデモ例をご覧ください：
+以下のgpioとledsの例のデモ動画をご確認ください：
 
 <div style={{ maxWidth: '100%', textAlign: 'center' }}>
   <video style={{ width: '100%', height: 'auto' }} controls>
@@ -345,16 +341,17 @@ led_daemon: LED set 0x07
   </video>
 </div>
 
-NuttX RTOSに関する詳細情報は、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)をご覧ください。
 
-## ✨ コントリビュータープロジェクト
+NuttX RTOSの詳細については、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)をご覧ください
 
-- このプロジェクトは、Seeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
-- 特に[Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609)さんの献身的な努力に感謝します。あなたの作業は[こちら](https://wiki.seeedstudio.com/contributors/)で展示されます。
+## ✨ Contributor Project
 
-## 技術サポートと製品ディスカッション
+- このプロジェクトはSeeed Studioの[Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609)の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-弊社の製品をお選びいただきありがとうございます！製品をご利用いただく際に、スムーズな体験を提供するため、さまざまなサポートを用意しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+## Tech Support & Product Discussion
+
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

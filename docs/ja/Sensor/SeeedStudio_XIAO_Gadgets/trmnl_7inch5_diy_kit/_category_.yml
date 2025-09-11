@@ -1,0 +1,8 @@
+position: 1 # float position is supported
+label: 'TRMNL 7.5インチ(OG) DIYキット'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: TRMNL_7inch5_diy_kit
+link:
+  type: "doc"
+  id: 'ja/Sensor/SeeedStudio_XIAO_Gadgets/trmnl_7inch5_diy_kit/ja_trmnl_kit_main_page'

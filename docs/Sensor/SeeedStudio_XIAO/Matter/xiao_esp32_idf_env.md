@@ -53,35 +53,35 @@ Below I will list the system version and ESP-IDF version used in this article fo
 In this section, we will detail how to configure the use of ESP-IDF in Ubuntu's environment and execute the lighting example provided by ESP-IDF. So for this article, you only need to prepare any of the following XIAO ESP32 series.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 :::caution
@@ -140,11 +140,13 @@ If the above command returns an error, it means Python 3 is not installed.
 Below is an overview of the steps to install Python 3.
 
 - Installing with HomeBrew can be done as follows:
+
     ```
     brew install python3
     ```
 
 - If you have MacPorts, you can run:
+
     ```
     sudo port install python38
     ```
@@ -254,8 +256,10 @@ idf.py set-target esp32c6
 ```
 
 :::tip
+
 - If you are using **XIAO ESP32C3**, then the command you need to use is `idf.py set-target esp32c3`.
 - If you are using **XIAO ESP32S3**, then the command you need to use is `idf.py set-target esp32s3`.
+
 :::
 
 Since the main effect of this sample project is to make the on-board LEDs blink, we need to configure the GPIO where the LEDs are located and the blinking time and other parameters. ESP-IDF provides the menuconfig command to set some adjustable parameters of the project.
@@ -300,7 +304,6 @@ Replace `PORT` with your XIAO ESP32 board's USB port name. If the **PORT** is no
 idf.py -p /dev/ttyACM0 flash
 ```
 
-
 If there are no issues by the end of the flash process, the XIAO will reboot and start up the "blink" application.
 
 To view the output of the LED example program, run the following command
@@ -328,8 +331,8 @@ Here are some commonly used commands in the ESP-IDF environment:
 - `idf.py size`: Displays the size information of the built firmware.
 - `idf.py app`: Manages applications in the project.
 - `idf.py component`: Manages components in the project.
-:::
 
+:::
 
 Congratulations! You have successfully installed ESP-IDF on your Ubuntu system, laying the foundation for your Matter development journey. Seeed Studio will continue to enhance and expand the development documentation for the XIAO ESP32 series in the context of Matter. With the completion of the ESP-IDF setup and configuration, you are now ready to proceed with the Matter development part of your journey.
 
@@ -349,7 +352,6 @@ ESP-IDF's environment is a bit more demanding, and if you are using an Ubuntu ho
 
 - **[ESPRESSIF IDF - Get Started](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html)**
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
@@ -363,5 +365,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

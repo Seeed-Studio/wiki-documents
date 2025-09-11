@@ -14,7 +14,6 @@ last_update:
 
 For ease of use, all of the following examples of pin multiplexing are on PlatformIO. Please click on this link for a configuration and usage guide for the [XIAO nRF54L5](https://wiki.seeedstudio.com/xiao_nrf54l15_with_platform_io/)
 
-
 ## Digital
 
 ### Hardware Preparation
@@ -48,8 +47,6 @@ For ease of use, all of the following examples of pin multiplexing are on Platfo
     </div></td>
   </tr>
 </table>
-
-
 
 ### Software Implementation
 
@@ -165,53 +162,50 @@ int main(void)
 
 `k_msleep(10);:` the code adds a short delay of 10 milliseconds at the end of each loop to avoid the CPU being busy, etc. This is a simple anti-jitter handling. This is a simple anti-jitter handling that prevents multiple triggers due to physical jitter of the buttons and also reduces power consumption.
 
-
 ### Result graph
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/light2.gif" style={{width:700, height:'auto'}}/></div>
-
 
 ## Analog
 
 ### Hadware Preparation
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO nRF54L15 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO nRF54L15 Sense</th>
          <th>Grove-Variable Color LED</th>
-	    <th>Grove-Rotary Angle Sensor </th>
-	    <th>Seeed Studio Grove Base for XIAO </th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <th>Grove-Rotary Angle Sensor </th>
+     <th>Seeed Studio Grove Base for XIAO </th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Pin/10.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove_Shield_for_Pi_Pico_V1.0/rotary.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Variable-Color-LED-V1-1.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Rotary-Angle-Sensor.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
-
 
 ### Software Implementation
 
@@ -336,106 +330,104 @@ int main(void)
 ```
 
 **ADC (Analog-to-Digital Converter) and PWM (Pulse-Width Modulation) Device Configuration**
+
 - pot_pwm_example Log Module:
 
-	- LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): This registers a log module named pot_pwm_example and sets its log level to the system's default configuration, which facilitates debugging.
+ 	- LOG_MODULE_REGISTER(pot_pwm_example, CONFIG_LOG_DEFAULT_LEVEL): This registers a log module named pot_pwm_example and sets its log level to the system's default configuration, which facilitates debugging.
 
 - ADC Configuration:
 
-	- #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: This preprocessor directive is a Device Tree check that ensures a valid overlay file containing ADC channel definitions exists. This mandates that the user must provide the correct configuration for the specific hardware.
+ 	- #if !DT_NODE_EXISTS(DT_PATH(zephyr_user)) ... #endif: This preprocessor directive is a Device Tree check that ensures a valid overlay file containing ADC channel definitions exists. This mandates that the user must provide the correct configuration for the specific hardware.
 
-	- static const struct adc_dt_spec adc_channels[];: This part of the code leverages Zephyr's Device Tree to automatically retrieve information for all configured ADC channels. This approach makes the code flexible and portable across different hardware without manual configuration changes.
+ 	- static const struct adc_dt_spec adc_channels[];: This part of the code leverages Zephyr's Device Tree to automatically retrieve information for all configured ADC channels. This approach makes the code flexible and portable across different hardware without manual configuration changes.
 
-	- #define POTENTIOMETER_ADC_CHANNEL_IDX 1: A macro is defined to specify which channel in the adc_channels array the potentiometer is connected to.
+ 	- #define POTENTIOMETER_ADC_CHANNEL_IDX 1: A macro is defined to specify which channel in the adc_channels array the potentiometer is connected to.
 
 - PWM Configuration:
 
-	- static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: This line retrieves the PWM device information for the alias pwm_led from the Device Tree. This is a standard Zephyr practice for looking up and referencing hardware devices.
+ 	- static const struct pwm_dt_spec led = PWM_DT_SPEC_GET(DT_ALIAS(pwm_led));: This line retrieves the PWM device information for the alias pwm_led from the Device Tree. This is a standard Zephyr practice for looking up and referencing hardware devices.
 
-	- #define PWM_PERIOD_NS 1000000UL: This defines the PWM signal period as 1 millisecond (1,000,000 nanoseconds), which corresponds to a frequency of 1 kHz. This frequency is well-suited for LED dimming as it's high enough to prevent visible flickering.
+ 	- #define PWM_PERIOD_NS 1000000UL: This defines the PWM signal period as 1 millisecond (1,000,000 nanoseconds), which corresponds to a frequency of 1 kHz. This frequency is well-suited for LED dimming as it's high enough to prevent visible flickering.
 
 **Initialization and Setup**
+
 - Logging Information:
 
-	- LOG_INF("Starting Zephyr Potentiometer to PWM example...");: An informational log message is printed at the start of the program to notify the user that the example has begun.
+ 	- LOG_INF("Starting Zephyr Potentiometer to PWM example...");: An informational log message is printed at the start of the program to notify the user that the example has begun.
 
 - ADC Initialization:
 
-	- !adc_is_ready_dt(): Before attempting to use the ADC device, a check is performed to confirm that it's ready. If the device is not ready, an error is logged and the program exits.
+ 	- !adc_is_ready_dt(): Before attempting to use the ADC device, a check is performed to confirm that it's ready. If the device is not ready, an error is logged and the program exits.
 
-	- adc_channel_setup_dt(): This function configures the specific ADC channel connected to the potentiometer, including its resolution and gain.
+ 	- adc_channel_setup_dt(): This function configures the specific ADC channel connected to the potentiometer, including its resolution and gain.
 
 - PWM Initialization:
 
-	- !device_is_ready(led.dev): Similar to the ADC, this line checks if the PWM device is ready. If not, an error is logged and the program exits.
+ 	- !device_is_ready(led.dev): Similar to the ADC, this line checks if the PWM device is ready. If not, an error is logged and the program exits.
 
-	- LOG_INF(...): The PWM period and frequency information are printed to help the user confirm the configuration.
+ 	- LOG_INF(...): The PWM period and frequency information are printed to help the user confirm the configuration.
 
 - ADC Sequence Configuration:
 
-	- struct adc_sequence sequence: An adc_sequence struct is defined to describe a single ADC conversion operation. It specifies the buffer (adc_raw_value) for storing the result, its size (sizeof(adc_raw_value)), and the ADC resolution to be used.
+ 	- struct adc_sequence sequence: An adc_sequence struct is defined to describe a single ADC conversion operation. It specifies the buffer (adc_raw_value) for storing the result, its size (sizeof(adc_raw_value)), and the ADC resolution to be used.
 
 **Main Loop**
 The core logic of the code runs within an infinite while (1) loop:
 
 - ADC Reading:
 
-	- adc_sequence_init_dt(): The ADC sequence is initialized to ensure the correct configuration is used for each read.
+ 	- adc_sequence_init_dt(): The ADC sequence is initialized to ensure the correct configuration is used for each read.
 
-	- adc_read(): This triggers an ADC conversion to read the analog value from the potentiometer. If the read fails, an error is logged, and the program pauses for 100 milliseconds before continuing.
+ 	- adc_read(): This triggers an ADC conversion to read the analog value from the potentiometer. If the read fails, an error is logged, and the program pauses for 100 milliseconds before continuing.
 
-	- int sensor_value = adc_raw_value;: The raw ADC value is assigned to the sensor_value variable.
+ 	- int sensor_value = adc_raw_value;: The raw ADC value is assigned to the sensor_value variable.
 
 - Mapping ADC Value to PWM Duty Cycle:
 
-	- uint32_t max_adc_raw: This calculates the maximum possible raw ADC value.
+ 	- uint32_t max_adc_raw: This calculates the maximum possible raw ADC value.
 
-	- uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: This is the core mapping logic. It scales the raw ADC value (sensor_value) proportionally to the range of the PWM period (PWM_PERIOD_NS) to get a duty cycle value that adjusts the LED's brightness.
+ 	- uint32_t output_duty_ns = (PWM_PERIOD_NS * sensor_value) / max_adc_raw;: This is the core mapping logic. It scales the raw ADC value (sensor_value) proportionally to the range of the PWM period (PWM_PERIOD_NS) to get a duty cycle value that adjusts the LED's brightness.
 
 - Setting the PWM Duty Cycle:
 
-	- pwm_set_dt(): This function applies the newly calculated duty cycle (output_duty_ns) to the PWM device, instantly changing the LED's brightness.
-
+ 	- pwm_set_dt(): This function applies the newly calculated duty cycle (output_duty_ns) to the PWM device, instantly changing the LED's brightness.
 
 - Delay:
 
-	- k_msleep(100): The program pauses for 100 milliseconds after each loop. This controls the frequency of ADC reads and PWM updates, preventing excessive CPU load and providing a stable user experience.
+ 	- k_msleep(100): The program pauses for 100 milliseconds after each loop. This controls the frequency of ADC reads and PWM updates, preventing excessive CPU load and providing a stable user experience.
 
 ### Result graph
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/adc.gif" style={{width:700, height:'auto'}}/></div>
-
-
 
 ## UART
 
 ### Harware Preparation
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO nRF54L15 Sense</th>
-			<th>L76K GNSS Module for Seeed Studio XIAO</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/GNSS.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO nRF54L15 Sense</th>
+   <th>L76K GNSS Module for Seeed Studio XIAO</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/GNSS.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/L76K-GNSS-Module-for-Seeed-Studio-XIAO-p-5864.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ### Software Implementation
 
@@ -507,20 +499,20 @@ LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF);
 // Struct definitions
 typedef struct
 {
-	double Lon;	   // GPS Longitude
-	double Lat;	   // GPS Latitude
-	char Lon_area; // E or W
-	char Lat_area; // N or S
-	UBYTE Time_H;  // Time Hour
-	UBYTE Time_M;  // Time Minute
-	UBYTE Time_S;  // Time Second
-	UBYTE Status;  // 1: Successful positioning, 0: Positioning failed
+ double Lon;    // GPS Longitude
+ double Lat;    // GPS Latitude
+ char Lon_area; // E or W
+ char Lat_area; // N or S
+ UBYTE Time_H;  // Time Hour
+ UBYTE Time_M;  // Time Minute
+ UBYTE Time_S;  // Time Second
+ UBYTE Status;  // 1: Successful positioning, 0: Positioning failed
 } GNRMC;
 
 typedef struct
 {
-	double Lon;
-	double Lat;
+ double Lon;
+ double Lat;
 } Coordinates;
 
 // Global variables and constants
@@ -553,487 +545,481 @@ static Coordinates transform(Coordinates gps);
 // UART interrupt callback
 static void uart_callback(const struct device *dev, void *user_data)
 {
-	ARG_UNUSED(user_data);
-	static char temp_buffer[SENTENCE_SIZE];
-	static int temp_index = 0;
+ ARG_UNUSED(user_data);
+ static char temp_buffer[SENTENCE_SIZE];
+ static int temp_index = 0;
 
-	while (uart_irq_update(dev) && uart_irq_is_pending(dev))
-	{
-		if (uart_irq_rx_ready(dev))
-		{
-			uint8_t byte;
-			if (uart_fifo_read(dev, &byte, 1) == 1)
-			{
-				if (byte == '\n')
-				{
-					temp_buffer[temp_index] = '\0';
-					if (strncmp(temp_buffer, "$GNRMC", 6) == 0 || strncmp(temp_buffer, "$PNRMC", 6) == 0)
-					{
-						strncpy(latest_gnrmc, temp_buffer, SENTENCE_SIZE);
-						new_gnrmc_available = true;
-					}
-					temp_index = 0;
-				}
-				else
-				{
-					if (temp_index < SENTENCE_SIZE - 1)
-					{
-						temp_buffer[temp_index++] = byte;
-					}
-					else
-					{
-						temp_index = 0; // Reset on overflow
-					}
-				}
-			}
-		}
-	}
+ while (uart_irq_update(dev) && uart_irq_is_pending(dev))
+ {
+  if (uart_irq_rx_ready(dev))
+  {
+   uint8_t byte;
+   if (uart_fifo_read(dev, &byte, 1) == 1)
+   {
+    if (byte == '\n')
+    {
+     temp_buffer[temp_index] = '\0';
+     if (strncmp(temp_buffer, "$GNRMC", 6) == 0 || strncmp(temp_buffer, "$PNRMC", 6) == 0)
+     {
+      strncpy(latest_gnrmc, temp_buffer, SENTENCE_SIZE);
+      new_gnrmc_available = true;
+     }
+     temp_index = 0;
+    }
+    else
+    {
+     if (temp_index < SENTENCE_SIZE - 1)
+     {
+      temp_buffer[temp_index++] = byte;
+     }
+     else
+     {
+      temp_index = 0; // Reset on overflow
+     }
+    }
+   }
+  }
+ }
 }
 
 // Main function
 int main(void)
 {
-	// Request constant latency mode for power management
-	nrfx_power_constlat_mode_request();
-	LOG_INF("Starting L76X GPS Module Example");
+ // Request constant latency mode for power management
+ nrfx_power_constlat_mode_request();
+ LOG_INF("Starting L76X GPS Module Example");
 
-	// Initialize UART device
-	uart_dev = DEVICE_DT_GET(DT_NODELABEL(xiao_serial));
-	if (!device_is_ready(uart_dev))
-	{
-		LOG_ERR("UART device not ready!");
-		return -1;
-	}
-	LOG_INF("UART device initialized.");
+ // Initialize UART device
+ uart_dev = DEVICE_DT_GET(DT_NODELABEL(xiao_serial));
+ if (!device_is_ready(uart_dev))
+ {
+  LOG_ERR("UART device not ready!");
+  return -1;
+ }
+ LOG_INF("UART device initialized.");
 
-	// Configure UART interrupt
-	if (uart_irq_callback_user_data_set(uart_dev, uart_callback, NULL) != 0)
-	{
-		LOG_ERR("Failed to set UART callback!");
-		return -1;
-	}
-	uart_irq_rx_enable(uart_dev);
-	LOG_INF("UART interrupt enabled.");
+ // Configure UART interrupt
+ if (uart_irq_callback_user_data_set(uart_dev, uart_callback, NULL) != 0)
+ {
+  LOG_ERR("Failed to set UART callback!");
+  return -1;
+ }
+ uart_irq_rx_enable(uart_dev);
+ LOG_INF("UART interrupt enabled.");
 
-	// Initialize GPS module
-	L76X_Send_Command(SET_NMEA_OUTPUT);
-	k_msleep(100);
-	L76X_Send_Command(SET_POS_FIX_1S);
-	k_msleep(100);
+ // Initialize GPS module
+ L76X_Send_Command(SET_NMEA_OUTPUT);
+ k_msleep(100);
+ L76X_Send_Command(SET_POS_FIX_1S);
+ k_msleep(100);
 
-	LOG_INF("GPS module initialized. Waiting for data...");
+ LOG_INF("GPS module initialized. Waiting for data...");
 
-	while (true)
-	{
-		// Check for new GNRMC sentence
-		if (new_gnrmc_available)
-		{
-			strncpy(buff_t, latest_gnrmc, BUFFSIZE);
-			new_gnrmc_available = false;
+ while (true)
+ {
+  // Check for new GNRMC sentence
+  if (new_gnrmc_available)
+  {
+   strncpy(buff_t, latest_gnrmc, BUFFSIZE);
+   new_gnrmc_available = false;
 
-			// Log raw GNRMC sentence for debugging
-			LOG_INF("Raw GNRMC: %s", buff_t);
+   // Log raw GNRMC sentence for debugging
+   LOG_INF("Raw GNRMC: %s", buff_t);
 
-			// Parse GNRMC data
-			GPS = L76X_Gat_GNRMC();
+   // Parse GNRMC data
+   GPS = L76X_Gat_GNRMC();
 
-			// Output GPS data
-			LOG_INF("\n--- GPS Data ---");
-			LOG_INF("Time (GMT+8): %02d:%02d:%02d", GPS.Time_H, GPS.Time_M, GPS.Time_S);
-			if (GPS.Status == 1)
-			{
-				LOG_INF("Latitude (WGS-84): %.6f %c", GPS.Lat, GPS.Lat_area);
-				LOG_INF("Longitude (WGS-84): %.6f %c", GPS.Lon, GPS.Lon_area);
+   // Output GPS data
+   LOG_INF("\n--- GPS Data ---");
+   LOG_INF("Time (GMT+8): %02d:%02d:%02d", GPS.Time_H, GPS.Time_M, GPS.Time_S);
+   if (GPS.Status == 1)
+   {
+    LOG_INF("Latitude (WGS-84): %.6f %c", GPS.Lat, GPS.Lat_area);
+    LOG_INF("Longitude (WGS-84): %.6f %c", GPS.Lon, GPS.Lon_area);
 
-				// Coordinate conversion
-				Coordinates baidu_coords = L76X_Baidu_Coordinates();
-				LOG_INF("Baidu Latitude: %.6f", baidu_coords.Lat);
-				LOG_INF("Baidu Longitude: %.6f", baidu_coords.Lon);
+    // Coordinate conversion
+    Coordinates baidu_coords = L76X_Baidu_Coordinates();
+    LOG_INF("Baidu Latitude: %.6f", baidu_coords.Lat);
+    LOG_INF("Baidu Longitude: %.6f", baidu_coords.Lon);
 
-				Coordinates google_coords = L76X_Google_Coordinates();
-				LOG_INF("Google Latitude: %.6f", google_coords.Lat);
-				LOG_INF("Google Longitude: %.6f", google_coords.Lon);
-				LOG_INF("GPS positioning successful.");
-			}
-			else
-			{
-				LOG_INF("GPS positioning failed or no valid data.");
-			}
-		}
-		else
-		{
-			LOG_INF("No new GNRMC data available.");
-		}
+    Coordinates google_coords = L76X_Google_Coordinates();
+    LOG_INF("Google Latitude: %.6f", google_coords.Lat);
+    LOG_INF("Google Longitude: %.6f", google_coords.Lon);
+    LOG_INF("GPS positioning successful.");
+   }
+   else
+   {
+    LOG_INF("GPS positioning failed or no valid data.");
+   }
+  }
+  else
+  {
+   LOG_INF("No new GNRMC data available.");
+  }
 
-		k_msleep(2000); // Wait 2 seconds before next reading
-	}
+  k_msleep(2000); // Wait 2 seconds before next reading
+ }
 
-	return 0;
+ return 0;
 }
 
 // Send a single byte
 void DEV_Uart_SendByte(char data)
 {
-	uart_poll_out(uart_dev, data);
+ uart_poll_out(uart_dev, data);
 }
 
 // Send a string
 void DEV_Uart_SendString(char *data)
 {
-	while (*data)
-	{
-		DEV_Uart_SendByte(*data++);
-	}
+ while (*data)
+ {
+  DEV_Uart_SendByte(*data++);
+ }
 }
 
 // Send L76X command with checksum
 void L76X_Send_Command(char *data)
 {
-	char Check = data[1], Check_char[3] = {0};
-	UBYTE i = 0;
-	DEV_Uart_SendByte('\r');
-	DEV_Uart_SendByte('\n');
+ char Check = data[1], Check_char[3] = {0};
+ UBYTE i = 0;
+ DEV_Uart_SendByte('\r');
+ DEV_Uart_SendByte('\n');
 
-	for (i = 2; data[i] != '\0'; i++)
-	{
-		Check ^= data[i]; // Calculate checksum
-	}
-	Check_char[0] = Temp[Check / 16 % 16];
-	Check_char[1] = Temp[Check % 16];
-	Check_char[2] = '\0';
+ for (i = 2; data[i] != '\0'; i++)
+ {
+  Check ^= data[i]; // Calculate checksum
+ }
+ Check_char[0] = Temp[Check / 16 % 16];
+ Check_char[1] = Temp[Check % 16];
+ Check_char[2] = '\0';
 
-	DEV_Uart_SendString(data);
-	DEV_Uart_SendByte('*');
-	DEV_Uart_SendString(Check_char);
-	DEV_Uart_SendByte('\r');
-	DEV_Uart_SendByte('\n');
+ DEV_Uart_SendString(data);
+ DEV_Uart_SendByte('*');
+ DEV_Uart_SendString(Check_char);
+ DEV_Uart_SendByte('\r');
+ DEV_Uart_SendByte('\n');
 }
 
 // Parse GNRMC data
 GNRMC L76X_Gat_GNRMC(void)
 {
-	GNRMC gps = {0}; // Initialize with zeros
-	UWORD add = 0, x = 0, z = 0, i = 0;
-	UDOUBLE Time = 0;
+ GNRMC gps = {0}; // Initialize with zeros
+ UWORD add = 0, x = 0, z = 0, i = 0;
+ UDOUBLE Time = 0;
 
-	add = 0;
-	while (add < BUFFSIZE)
-	{
-		// Look for GNRMC or PNRMC sentence
-		if (buff_t[add] == '$' && buff_t[add + 1] == 'G' && (buff_t[add + 2] == 'N' || buff_t[add + 2] == 'P') &&
-			buff_t[add + 3] == 'R' && buff_t[add + 4] == 'M' && buff_t[add + 5] == 'C')
-		{
-			x = 0;
-			for (z = 0; x < 12; z++)
-			{
-				if (buff_t[add + z] == '\0')
-				{
-					break;
-				}
-				if (buff_t[add + z] == ',')
-				{
-					x++;
-					if (x == 1)
-					{ // Time field
-						if (buff_t[add + z + 1] != ',')
-						{ // Check if time field is not empty
-							Time = 0;
-							for (i = 0; buff_t[add + z + i + 1] != '.'; i++)
-							{
-								if (buff_t[add + z + i + 1] == '\0' || buff_t[add + z + i + 1] == ',')
-								{
-									break;
-								}
-								Time = (buff_t[add + z + i + 1] - '0') + Time * 10;
-							}
-							gps.Time_H = Time / 10000 + 8; // Adjust for GMT+8
-							gps.Time_M = (Time / 100) % 100;
-							gps.Time_S = Time % 100;
-							if (gps.Time_H >= 24)
-							{
-								gps.Time_H = gps.Time_H - 24;
-							}
-						}
-					}
-					else if (x == 2)
-					{ // Status field
-						if (buff_t[add + z + 1] == 'A')
-						{
-							gps.Status = 1; // Position successful
-						}
-						else
-						{
-							gps.Status = 0; // Positioning failed
-							break;			// Exit early if invalid
-						}
-					}
-					else if (x == 3)
-					{ // Latitude field
-						if (buff_t[add + z + 1] != ',')
-						{ // Check if latitude field is not empty
-							double latitude_val = 0;
-							UBYTE decimal_found = 0;
-							double decimal_multiplier = 0.1;
+ add = 0;
+ while (add < BUFFSIZE)
+ {
+  // Look for GNRMC or PNRMC sentence
+  if (buff_t[add] == '$' && buff_t[add + 1] == 'G' && (buff_t[add + 2] == 'N' || buff_t[add + 2] == 'P') &&
+   buff_t[add + 3] == 'R' && buff_t[add + 4] == 'M' && buff_t[add + 5] == 'C')
+  {
+   x = 0;
+   for (z = 0; x < 12; z++)
+   {
+    if (buff_t[add + z] == '\0')
+    {
+     break;
+    }
+    if (buff_t[add + z] == ',')
+    {
+     x++;
+     if (x == 1)
+     { // Time field
+      if (buff_t[add + z + 1] != ',')
+      { // Check if time field is not empty
+       Time = 0;
+       for (i = 0; buff_t[add + z + i + 1] != '.'; i++)
+       {
+        if (buff_t[add + z + i + 1] == '\0' || buff_t[add + z + i + 1] == ',')
+        {
+         break;
+        }
+        Time = (buff_t[add + z + i + 1] - '0') + Time * 10;
+       }
+       gps.Time_H = Time / 10000 + 8; // Adjust for GMT+8
+       gps.Time_M = (Time / 100) % 100;
+       gps.Time_S = Time % 100;
+       if (gps.Time_H >= 24)
+       {
+        gps.Time_H = gps.Time_H - 24;
+       }
+      }
+     }
+     else if (x == 2)
+     { // Status field
+      if (buff_t[add + z + 1] == 'A')
+      {
+       gps.Status = 1; // Position successful
+      }
+      else
+      {
+       gps.Status = 0; // Positioning failed
+       break;   // Exit early if invalid
+      }
+     }
+     else if (x == 3)
+     { // Latitude field
+      if (buff_t[add + z + 1] != ',')
+      { // Check if latitude field is not empty
+       double latitude_val = 0;
+       UBYTE decimal_found = 0;
+       double decimal_multiplier = 0.1;
 
-							int k = 1;
-							while (buff_t[add + z + k] != ',' && buff_t[add + z + k] != '\0')
-							{
-								if (buff_t[add + z + k] == '.')
-								{
-									decimal_found = 1;
-									k++;
-									continue;
-								}
-								if (!decimal_found)
-								{
-									latitude_val = latitude_val * 10 + (buff_t[add + z + k] - '0');
-								}
-								else
-								{
-									latitude_val = latitude_val + (buff_t[add + z + k] - '0') * decimal_multiplier;
-									decimal_multiplier *= 0.1;
-								}
-								k++;
-							}
-							gps.Lat = latitude_val;
-							gps.Lat_area = buff_t[add + z + k + 1]; // N or S
-							z += k + 1;
-						}
-						else
-						{
-							gps.Status = 0; // Invalid data
-							break;
-						}
-					}
-					else if (x == 5)
-					{ // Longitude field
-						if (buff_t[add + z + 1] != ',')
-						{ // Check if longitude field is not empty
-							double longitude_val = 0;
-							UBYTE decimal_found = 0;
-							double decimal_multiplier = 0.1;
+       int k = 1;
+       while (buff_t[add + z + k] != ',' && buff_t[add + z + k] != '\0')
+       {
+        if (buff_t[add + z + k] == '.')
+        {
+         decimal_found = 1;
+         k++;
+         continue;
+        }
+        if (!decimal_found)
+        {
+         latitude_val = latitude_val * 10 + (buff_t[add + z + k] - '0');
+        }
+        else
+        {
+         latitude_val = latitude_val + (buff_t[add + z + k] - '0') * decimal_multiplier;
+         decimal_multiplier *= 0.1;
+        }
+        k++;
+       }
+       gps.Lat = latitude_val;
+       gps.Lat_area = buff_t[add + z + k + 1]; // N or S
+       z += k + 1;
+      }
+      else
+      {
+       gps.Status = 0; // Invalid data
+       break;
+      }
+     }
+     else if (x == 5)
+     { // Longitude field
+      if (buff_t[add + z + 1] != ',')
+      { // Check if longitude field is not empty
+       double longitude_val = 0;
+       UBYTE decimal_found = 0;
+       double decimal_multiplier = 0.1;
 
-							int k = 1;
-							while (buff_t[add + z + k] != ',' && buff_t[add + z + k] != '\0')
-							{
-								if (buff_t[add + z + k] == '.')
-								{
-									decimal_found = 1;
-									k++;
-									continue;
-								}
-								if (!decimal_found)
-								{
-									longitude_val = longitude_val * 10 + (buff_t[add + z + k] - '0');
-								}
-								else
-								{
-									longitude_val = longitude_val + (buff_t[add + z + k] - '0') * decimal_multiplier;
-									decimal_multiplier *= 0.1;
-								}
-								k++;
-							}
-							gps.Lon = longitude_val;
-							gps.Lon_area = buff_t[add + z + k + 1]; // E or W
-							z += k + 1;
-							break;
-						}
-						else
-						{
-							gps.Status = 0; // Invalid data
-							break;
-						}
-					}
-				}
-			}
-			break;
-		}
-		add++;
-	}
-	return gps;
+       int k = 1;
+       while (buff_t[add + z + k] != ',' && buff_t[add + z + k] != '\0')
+       {
+        if (buff_t[add + z + k] == '.')
+        {
+         decimal_found = 1;
+         k++;
+         continue;
+        }
+        if (!decimal_found)
+        {
+         longitude_val = longitude_val * 10 + (buff_t[add + z + k] - '0');
+        }
+        else
+        {
+         longitude_val = longitude_val + (buff_t[add + z + k] - '0') * decimal_multiplier;
+         decimal_multiplier *= 0.1;
+        }
+        k++;
+       }
+       gps.Lon = longitude_val;
+       gps.Lon_area = buff_t[add + z + k + 1]; // E or W
+       z += k + 1;
+       break;
+      }
+      else
+      {
+       gps.Status = 0; // Invalid data
+       break;
+      }
+     }
+    }
+   }
+   break;
+  }
+  add++;
+ }
+ return gps;
 }
 
 // Convert to Baidu coordinates (BD-09)
 Coordinates L76X_Baidu_Coordinates(void)
 {
-	Coordinates wgs84_coords;
-	wgs84_coords.Lat = GPS.Lat;
-	wgs84_coords.Lon = GPS.Lon;
+ Coordinates wgs84_coords;
+ wgs84_coords.Lat = GPS.Lat;
+ wgs84_coords.Lon = GPS.Lon;
 
-	Coordinates gcj02_coords = transform(wgs84_coords);
-	Coordinates bd09_coords = bd_encrypt(gcj02_coords);
-	return bd09_coords;
+ Coordinates gcj02_coords = transform(wgs84_coords);
+ Coordinates bd09_coords = bd_encrypt(gcj02_coords);
+ return bd09_coords;
 }
 
 // Convert to Google coordinates (GCJ-02)
 Coordinates L76X_Google_Coordinates(void)
 {
-	Coordinates wgs84_coords;
-	wgs84_coords.Lat = GPS.Lat;
-	wgs84_coords.Lon = GPS.Lon;
+ Coordinates wgs84_coords;
+ wgs84_coords.Lat = GPS.Lat;
+ wgs84_coords.Lon = GPS.Lon;
 
-	Coordinates gcj02_coords = transform(wgs84_coords);
-	return gcj02_coords;
+ Coordinates gcj02_coords = transform(wgs84_coords);
+ return gcj02_coords;
 }
 
 // Coordinate transformation helper functions
 static double transformLat(double x, double y)
 {
-	double ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * sqrt(fabs(x));
-	ret += (20.0 * sin(6.0 * x * pi) + 20.0 * sin(2.0 * x * pi)) * 2.0 / 3.0;
-	ret += (20.0 * sin(y * pi) + 40.0 * sin(y / 3.0 * pi)) * 2.0 / 3.0;
-	ret += (160.0 * sin(y / 12.0 * pi) + 320 * sin(y * pi / 30.0)) * 2.0 / 3.0;
-	return ret;
+ double ret = -100.0 + 2.0 * x + 3.0 * y + 0.2 * y * y + 0.1 * x * y + 0.2 * sqrt(fabs(x));
+ ret += (20.0 * sin(6.0 * x * pi) + 20.0 * sin(2.0 * x * pi)) * 2.0 / 3.0;
+ ret += (20.0 * sin(y * pi) + 40.0 * sin(y / 3.0 * pi)) * 2.0 / 3.0;
+ ret += (160.0 * sin(y / 12.0 * pi) + 320 * sin(y * pi / 30.0)) * 2.0 / 3.0;
+ return ret;
 }
 
 static double transformLon(double x, double y)
 {
-	double ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * sqrt(fabs(x));
-	ret += (20.0 * sin(6.0 * x * pi) + 20.0 * sin(2.0 * x * pi)) * 2.0 / 3.0;
-	ret += (20.0 * sin(x * pi) + 40.0 * sin(x / 3.0 * pi)) * 2.0 / 3.0;
-	ret += (150.0 * sin(x / 12.0 * pi) + 300.0 * sin(x / 30.0 * pi)) * 2.0 / 3.0;
-	return ret;
+ double ret = 300.0 + x + 2.0 * y + 0.1 * x * x + 0.1 * x * y + 0.1 * sqrt(fabs(x));
+ ret += (20.0 * sin(6.0 * x * pi) + 20.0 * sin(2.0 * x * pi)) * 2.0 / 3.0;
+ ret += (20.0 * sin(x * pi) + 40.0 * sin(x / 3.0 * pi)) * 2.0 / 3.0;
+ ret += (150.0 * sin(x / 12.0 * pi) + 300.0 * sin(x / 30.0 * pi)) * 2.0 / 3.0;
+ return ret;
 }
 
 static Coordinates bd_encrypt(Coordinates gg)
 {
-	Coordinates bd;
-	double x = gg.Lon, y = gg.Lat;
-	double z = sqrt(x * x + y * y) + 0.00002 * sin(y * x_pi);
-	double theta = atan2(y, x) + 0.000003 * cos(x * x_pi);
-	bd.Lon = z * cos(theta) + 0.0065;
-	bd.Lat = z * sin(theta) + 0.006;
-	return bd;
+ Coordinates bd;
+ double x = gg.Lon, y = gg.Lat;
+ double z = sqrt(x * x + y * y) + 0.00002 * sin(y * x_pi);
+ double theta = atan2(y, x) + 0.000003 * cos(x * x_pi);
+ bd.Lon = z * cos(theta) + 0.0065;
+ bd.Lat = z * sin(theta) + 0.006;
+ return bd;
 }
 
 static Coordinates transform(Coordinates gps)
 {
-	Coordinates gg;
-	double dLat = transformLat(gps.Lon - 105.0, gps.Lat - 35.0);
-	double dLon = transformLon(gps.Lon - 105.0, gps.Lat - 35.0);
-	double radLat = gps.Lat / 180.0 * pi;
-	double magic = sin(radLat);
-	magic = 1 - ee * magic * magic;
-	double sqrtMagic = sqrt(magic);
-	dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi);
-	dLon = (dLon * 180.0) / (a / sqrtMagic * cos(radLat) * pi);
-	gg.Lat = gps.Lat + dLat;
-	gg.Lon = gps.Lon + dLon;
-	return gg;
+ Coordinates gg;
+ double dLat = transformLat(gps.Lon - 105.0, gps.Lat - 35.0);
+ double dLon = transformLon(gps.Lon - 105.0, gps.Lat - 35.0);
+ double radLat = gps.Lat / 180.0 * pi;
+ double magic = sin(radLat);
+ magic = 1 - ee * magic * magic;
+ double sqrtMagic = sqrt(magic);
+ dLat = (dLat * 180.0) / ((a * (1 - ee)) / (magic * sqrtMagic) * pi);
+ dLon = (dLon * 180.0) / (a / sqrtMagic * cos(radLat) * pi);
+ gg.Lat = gps.Lat + dLat;
+ gg.Lon = gps.Lon + dLon;
+ return gg;
 }
 ```
 
 **GPS Module Configuration and Initialization**
+
 - `gps_app` Log Module:
 
-	-` LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` This registers a log module named gps_app and sets its log level to INFO. This allows the program to output information through Zephyr's logging system, which is useful for debugging and monitoring.
+ -`LOG_MODULE_REGISTER(gps_app, LOG_LEVEL_INF):` This registers a log module named gps_app and sets its log level to INFO. This allows the program to output information through Zephyr's logging system, which is useful for debugging and monitoring.
 
 - Type Definitions and Macros:
 
-	-` UBYTE`, `UWORD`, `UDOUBLE: `These are custom unsigned integer type aliases that improve code readability by clarifying the expected size of the variables.
+ -`UBYTE`, `UWORD`, `UDOUBLE:`These are custom unsigned integer type aliases that improve code readability by clarifying the expected size of the variables.
 
-	- `SENTENCE_SIZE, BUFFSIZE:` These define fixed sizes for buffers used to store NMEA sentences and larger data buffers.
+ 	- `SENTENCE_SIZE, BUFFSIZE:` These define fixed sizes for buffers used to store NMEA sentences and larger data buffers.
 
-	- Macros like `HOT_START, SET_NMEA_OUTPUT: `These macros define various NMEA protocol commands sent to the L76X GPS module to configure its operating mode, output frequency, baud rate, and so on.
+ 	- Macros like `HOT_START, SET_NMEA_OUTPUT:`These macros define various NMEA protocol commands sent to the L76X GPS module to configure its operating mode, output frequency, baud rate, and so on.
 
 - Struct Definitions:
 
-	- `GNRMC:` This struct is used to store key information parsed from a GNRMC (GPS Recommended Minimum Specific data) NMEA sentence, including longitude, latitude, time, status, and cardinal directions.
+ 	- `GNRMC:` This struct is used to store key information parsed from a GNRMC (GPS Recommended Minimum Specific data) NMEA sentence, including longitude, latitude, time, status, and cardinal directions.
 
-	- `Coordinates:` A simple struct to store the longitude and latitude of a geographic coordinate.
+ 	- `Coordinates:` A simple struct to store the longitude and latitude of a geographic coordinate.
 
 - Global Variables and Constants:
 
-	- `buff_t:` A global buffer of size BUFFSIZE used to store raw UART data.
+ 	- `buff_t:` A global buffer of size BUFFSIZE used to store raw UART data.
 
-	-` GPS: `A global GNRMC struct instance used to hold the parsed GPS data.
+ -` GPS: `A global GNRMC struct instance used to hold the parsed GPS data.
 
-	- `uart_dev:` A pointer to the UART device struct, used for UART communication.
+ 	- `uart_dev:` A pointer to the UART device struct, used for UART communication.
 
-	- `new_gnrmc_available:` A volatile boolean flag that is set to true when a new valid GNRMC sentence is received, notifying the main loop that new data is available for processing.
+ 	- `new_gnrmc_available:` A volatile boolean flag that is set to true when a new valid GNRMC sentence is received, notifying the main loop that new data is available for processing.
 
 - `uart_callback() Function:`
 
-	- This is a UART interrupt callback function that is triggered when the UART receives data.
+ 	- This is a UART interrupt callback function that is triggered when the UART receives data.
 
-	- The function reads the UART FIFO byte by byte and processes the data as a complete sentence when a newline character \n is encountered.
-
+ 	- The function reads the UART FIFO byte by byte and processes the data as a complete sentence when a newline character \n is encountered.
 
 **Main Function main()**
+
 - System Initialization:
 
-	- `nrfx_power_constlat_mode_request():` Requests a constant latency mode to ensure power management does not interfere with real-time operations.
+ 	- `nrfx_power_constlat_mode_request():` Requests a constant latency mode to ensure power management does not interfere with real-time operations.
 
-	- `uart_dev = DEVICE_DT_GET:` Retrieves the UART device handle and uses device_is_ready() to check if the device is ready.
+ 	- `uart_dev = DEVICE_DT_GET:` Retrieves the UART device handle and uses device_is_ready() to check if the device is ready.
 
-	- `uart_irq_callback_user_data_set() `and `uart_irq_rx_enable(): `These configure and enable the UART receive interrupt, registering the uart_callback function as the interrupt handler to ensure asynchronous reception of GPS data.
+ 	- `uart_irq_callback_user_data_set()`and `uart_irq_rx_enable():`These configure and enable the UART receive interrupt, registering the uart_callback function as the interrupt handler to ensure asynchronous reception of GPS data.
 
 - GPS Module Initialization:
 
-	- `L76X_Send_Command(SET_NMEA_OUTPUT): `A command is sent to configure the GPS module to output only specified NMEA sentences like GNRMC, reducing unnecessary data traffic.
+ 	- `L76X_Send_Command(SET_NMEA_OUTPUT):`A command is sent to configure the GPS module to output only specified NMEA sentences like GNRMC, reducing unnecessary data traffic.
 
-	-` L76X_Send_Command(SET_POS_FIX_1S): `Sets the GPS module's position update frequency to 1 second.
+ -` L76X_Send_Command(SET_POS_FIX_1S): `Sets the GPS module's position update frequency to 1 second.
 
 - Main Loop:
 
-	- The loop runs indefinitely, continuously checking the new_gnrmc_available flag.
+ 	- The loop runs indefinitely, continuously checking the new_gnrmc_available flag.
 
-	- If the flag is true, it copies the latest GPS sentence from latest_gnrmc to buff_t, and then calls L76X_Gat_GNRMC() to parse the data.
+ 	- If the flag is true, it copies the latest GPS sentence from latest_gnrmc to buff_t, and then calls L76X_Gat_GNRMC() to parse the data.
 
-	- Based on the parsing result, it prints the time, WGS-84 longitude and latitude, and the converted Baidu and Google coordinates.
+ 	- Based on the parsing result, it prints the time, WGS-84 longitude and latitude, and the converted Baidu and Google coordinates.
 
-	- If GPS.Status is 0, it prints a "positioning failed" message.
+ 	- If GPS.Status is 0, it prints a "positioning failed" message.
 
-	- If no new data is available, it prints "No new GNRMC data available."
+ 	- If no new data is available, it prints "No new GNRMC data available."
 
-	- k_msleep(2000): The program pauses for 2 seconds after each loop to control the output frequency.
-
- 
-
+ 	- k_msleep(2000): The program pauses for 2 seconds after each loop to control the output frequency.
 
 ### Result graph
 
-
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/gps_diplay.png" style={{width:500, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/gps_conect.jpg" style={{width:340, height:'auto'}}/></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/gps_diplay.png" style={{width:500, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/gps_conect.jpg" style={{width:340, height:'auto'}}/></div></td>
+  </tr>
+ </table>
 </div>
-
 
 ## I2C
 
 ### Harware Preparation
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO nRF54L15 Sense</th>
-			<th>Seeed Studio Expansion Board Base for XIAO</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO nRF54L15 Sense</th>
+   <th>Seeed Studio Expansion Board Base for XIAO</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-nRF54L15-Sense-p-6494.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
-
 
 ### Software Implementation
 
@@ -1193,40 +1179,42 @@ int main(void) {
 }
 
 ```
+
 **Display Device Configuration and Initialization**
+
 - `main_app` Log Module:
 
-	- #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL and LOG_MODULE_REGISTER(main_app, LOG_LEVEL) register a log module named main_app and set its log level to the system's default configuration. This allows developers to easily debug and output information through Zephyr's logging system.
+ 	- #define LOG_LEVEL CONFIG_LOG_DEFAULT_LEVEL and LOG_MODULE_REGISTER(main_app, LOG_LEVEL) register a log module named main_app and set its log level to the system's default configuration. This allows developers to easily debug and output information through Zephyr's logging system.
 
 - `display_init()` Function:
 
-	- `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` This line retrieves the chosen display device from the Zephyr Device Tree. This approach ensures the code is hardware-agnostic.
+ 	- `*dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));:` This line retrieves the chosen display device from the Zephyr Device Tree. This approach ensures the code is hardware-agnostic.
 
-	- `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10): `The code attempts to set the display's pixel format to PIXEL_FORMAT_MONO10. If this fails, it then tries PIXEL_FORMAT_MONO01. This ensures the display operates in a monochrome mode, which is necessary for some display technologies (e.g., OLED or e-Paper).
+ 	- `display_set_pixel_format(*dev, PIXEL_FORMAT_MONO10):`The code attempts to set the display's pixel format to PIXEL_FORMAT_MONO10. If this fails, it then tries PIXEL_FORMAT_MONO01. This ensures the display operates in a monochrome mode, which is necessary for some display technologies (e.g., OLED or e-Paper).
 
 - `framebuffer_setup()` Function:
 
-	- `cfb_framebuffer_init(dev): `This initializes the Compact Framebuffer (CFB). CFB is a lightweight graphics library in Zephyr used for drawing text and simple graphics on displays.
+ 	- `cfb_framebuffer_init(dev):`This initializes the Compact Framebuffer (CFB). CFB is a lightweight graphics library in Zephyr used for drawing text and simple graphics on displays.
 
-	- `cfb_framebuffer_clear(dev, true): `This clears the framebuffer and immediately writes its content to the display, ensuring a clean screen.
+ 	- `cfb_framebuffer_clear(dev, true):`This clears the framebuffer and immediately writes its content to the display, ensuring a clean screen.
 
-	- `display_blanking_off(dev): `This turns off the display's blanking feature, which is typically a signal that the display is ready to receive data and show an image.
+ 	- `display_blanking_off(dev):`This turns off the display's blanking feature, which is typically a signal that the display is ready to receive data and show an image.
 
 - `select_font()` Function:
 
-	- `cfb_get_font_size(): `This function loops through available fonts to find a suitable one.
+ 	- `cfb_get_font_size():`This function loops through available fonts to find a suitable one.
 
-	- The code prioritizes a` 8x8 `pixel font, as it is a common and easy-to-read small font.
+ 	- The code prioritizes a` 8x8 `pixel font, as it is a common and easy-to-read small font.
 
-	- If an `8x8` font is not found, it selects the first available non-zero-sized font as a fallback.
+ 	- If an `8x8` font is not found, it selects the first available non-zero-sized font as a fallback.
 
-	- `cfb_framebuffer_set_font(dev, chosen_font_idx):` Once a suitable font is found, it is set as the current font for the framebuffer.
+ 	- `cfb_framebuffer_set_font(dev, chosen_font_idx):` Once a suitable font is found, it is set as the current font for the framebuffer.
 
 - `print_text_by_row_col()` Function:
 
-	-` int pixel_x = col * font_width; `and `int pixel_y = row * font_height;:` This function converts the text's row and column coordinates (in character units) to pixel coordinates, making text positioning more intuitive.
+ -` int pixel_x = col * font_width; `and `int pixel_y = row * font_height;:` This function converts the text's row and column coordinates (in character units) to pixel coordinates, making text positioning more intuitive.
 
-	- `cfb_print():` This is the core function of the CFB library used to print text at the specified pixel location.
+ 	- `cfb_print():` This is the core function of the CFB library used to print text at the specified pixel location.
 
 **Main Loop**
 The core logic of the code runs within an infinite `while (1)`loop:
@@ -1234,49 +1222,47 @@ The core logic of the code runs within an infinite `while (1)`loop:
 - Clearing the Screen: `cfb_framebuffer_clear(dev, false):` At the beginning of each loop, this clears the framebuffer without immediately refreshing the display. This allows multiple elements to be drawn at once, preventing screen flickering.
 
 - Printing Text:
-	
-	- Two strings, `line1_text` and `line2_text`, are defined.
+ 
+ 	- Two strings, `line1_text` and `line2_text`, are defined.
 
-	- print_text_by_row_col(): The custom function is used to print these two lines of text at specified row and column positions on the screen. The first line is printed at `(1, 2)` and the second line at `(2, 1).`
+ 	- print_text_by_row_col(): The custom function is used to print these two lines of text at specified row and column positions on the screen. The first line is printed at `(1, 2)` and the second line at `(2, 1).`
 
-	- Refreshing the Display: `cfb_framebuffer_finalize(dev)`: This function sends all pending drawing commands from the framebuffer to the display at once, making all the content appear simultaneously.
+ 	- Refreshing the Display: `cfb_framebuffer_finalize(dev)`: This function sends all pending drawing commands from the framebuffer to the display at once, making all the content appear simultaneously.
 
-	- Delay: `k_sleep(K_MSEC(1000)):` After each loop, the program pauses for 1000 milliseconds (1 second). This controls the screen update frequency, which is suitable for applications that display static information, such as a clock or sensor data, in a stable manner.
+ 	- Delay: `k_sleep(K_MSEC(1000)):` After each loop, the program pauses for 1000 milliseconds (1 second). This controls the screen update frequency, which is suitable for applications that display static information, such as a clock or sensor data, in a stable manner.
 
 ### Result graph
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/nrf_oled.jpg" style={{width:700, height:'auto'}}/></div>
-
 
 ## SPI
 
 ### Hadware Preparation
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO nRF54L15 Sense</th>
-			<th>ePaper Driver Board for Seeed Studio XIAO</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper-driver-board-for-xiao.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO nRF54L15 Sense</th>
+   <th>ePaper Driver Board for Seeed Studio XIAO</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/2-101991422-XIAO-nRF54L15-Sense.jpg" style={{width:300, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper-driver-board-for-xiao.jpg" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/ePaper-breakout-Board-for-XIAO-V2-p-6374.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
-
 
 ### Software Implementation
 
@@ -1399,11 +1385,12 @@ int main(void)
     return 0;
 }
 ```
+
 **Device Initialization:**
 
 - The code first obtains the display device from the device tree using `DEVICE_DT_GET(DT_CHOSEN(zephyr_display)).`
 
-- It then calls `device_is_ready() `to check if the device is properly initialized and ready for operation. This is a crucial first step for any hardware interaction.
+- It then calls `device_is_ready()`to check if the device is properly initialized and ready for operation. This is a crucial first step for any hardware interaction.
 
 **LVGL Initialization:**
 
@@ -1413,13 +1400,13 @@ int main(void)
 
 - The `display_blanking_off()` function is called. For E-Paper displays, this typically triggers a full refresh to clear any old content on the screen.
 
-- To further ensure a clean canvas, the code uses `lv_scr_act()` to get the current active screen and sets its background color to white using` lv_obj_set_style_bg_color()`, covering the entire display area.
+- To further ensure a clean canvas, the code uses `lv_scr_act()` to get the current active screen and sets its background color to white using`lv_obj_set_style_bg_color()`, covering the entire display area.
 
 **Screen Layout Preparation:**
 
 - The functions `lv_disp_get_hor_res()` and `lv_disp_get_ver_res()` are used to get the actual width and height of the display, which is helpful for precise UI element placement later on.
 
-- The code also removes the screen's padding `(lv_obj_set_style_pad_all()) `and scrollbar` (lv_obj_set_scrollbar_mode()) `to maximize the usable drawing area.
+- The code also removes the screen's padding `(lv_obj_set_style_pad_all())`and scrollbar` (lv_obj_set_scrollbar_mode()) `to maximize the usable drawing area.
 
 **UI Element Creation and Configuration:**
 
@@ -1427,13 +1414,13 @@ int main(void)
 
 - Labels:
 
-	- `lv_label_create()` is used to create text labels.
+ 	- `lv_label_create()` is used to create text labels.
 
-	- `lv_label_set_text()` sets the text content of the labels.
+ 	- `lv_label_set_text()` sets the text content of the labels.
 
-	- `lv_obj_set_style_text_color() `and lv_obj_set_style_text_font() are used to set the text color and font size.
+ 	- `lv_obj_set_style_text_color()`and lv_obj_set_style_text_font() are used to set the text color and font size.
 
-- The `lv_obj_align() `function places each label in a specific location on the screen, such as center, top-right, bottom-left, and bottom-right.
+- The `lv_obj_align()`function places each label in a specific location on the screen, such as center, top-right, bottom-left, and bottom-right.
 
 Squares: A for loop is used to create four small square objects. Their size, style (white fill with a black border), and position are set sequentially, arranging them horizontally in the top-left corner of the screen.
 
@@ -1441,27 +1428,24 @@ Squares: A for loop is used to create four small square objects. Their size, sty
 
 - `The while(1)` loop is the continuous execution part of the program.
 
-- `lv_task_handler() `is called continuously within the loop to process all LVGL internal tasks, such as updating UI elements and handling events.
+- `lv_task_handler()`is called continuously within the loop to process all LVGL internal tasks, such as updating UI elements and handling events.
 
 - `k_sleep(K_MSEC(1000))` pauses the thread for 1000 milliseconds. For static d
-
 
 ### Result graph
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/epaper_nrf54.jpg" style={{width:600, height:'auto'}}/></div>
-
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

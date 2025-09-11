@@ -1,6 +1,6 @@
 ---
-description: Matterを使用してOpenThreadネットワークプロトコル上でHAに接続する
-title: Seeed Studio XIAO MG24でMatterを使用してHomeAssistantに接続
+description: OpenThreadネットワークプロトコル上でMatterを使用してHAに接続する
+title: Seeed Studio XIAO MG24でHomeAssistantをMatterで接続する
 keywords:
 - MG24
 - xiao
@@ -8,57 +8,59 @@ keywords:
 - Matter
 - OpenThread
 - Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E
-image: https://files.seeedstudio.com/wiki/HA_OpenThread/Wiki XIAO MG24-HA-Matter.webp
+image: https://files.seeedstudio.com/wiki/HA_OpenThread/Wiki-XIAO-MG24-HA-Matter.webp
 slug: /ja/xiao_mg24_ha_openthread
 sidebar_position: 8
 last_update:
-  date: 05/15/2025
+  date: 05/5/2025
   author: Jason
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/Wiki XIAO MG24-HA-Matter.png" style={{width:900, height:'auto'}}/></div>
 
 ## はじめに
 
-このWikiでは、Sonoff Zigbee 3.0 USB Dongleを使用してHomeAssistantにアクセスし、ボーダールーターとして機能させます。一方、Seeed Studio XIAO MG24はThreadネットワークを使用したMatterプロトコルデバイスとして機能します。プロセスをより理解しやすくするために、以下の3つの質問を通じて説明します。***著者[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/)によるWikiのアイデアに感謝します***
+このwikiでは、Sonoff Zigbee 3.0 USB DongleをHomeAssistantにアクセスしてボーダールーターとして機能させ、Seeed Studio XIAO MG24をThreadネットワークでMatterプロトコルデバイスとして動作させます。便宜上、プロセスをより良く理解するために以下の3つの質問を通してご案内します。***Wiki思想を提供してくれた著者[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/)に感謝します***
 
 ### Matterとは何ですか？
-Matter（以前はCHIP）は、Connectivity Standards Alliance（CSA）によって開発されたユニバーサルなアプリケーション層の標準です。
-- IPネットワーク（Wi-Fi/Ethernet/Thread）を介したクロスベンダーの相互運用性
-- 標準化されたデバイスタイプ（例：ライト、ドアロック、サーモスタット）
-- QRコード/NFCを使用した安全なコミッショニング
-- 分散コンプライアンス台帳（DCL）によるエンドツーエンドの暗号化
+
+Matter（旧CHIP）は、Connectivity Standards Alliance（CSA）によって開発された汎用アプリケーション層標準です。
+
+- IPネットワーク（Wi-Fi/Ethernet/Thread）上でのクロスベンダー相互運用性
+- 標準化されたデバイスタイプ（例：照明、ドアロック、サーモスタット）
+- QRコード/NFCを使用したセキュアなコミッショニング
+- Distributed Compliance Ledger（DCL）によるエンドツーエンド暗号化
 
 ### OpenThreadとは何ですか？
-OpenThreadは、Threadネットワークプロトコルのオープンソース実装です。IEEE 802.15.4無線技術を使用してIoTデバイス向けの低消費電力で安全なメッシュネットワークを作成します。主な特徴：
-- IPv6（6LoWPAN）サポートの組み込み
+
+OpenThreadは、Threadネットワーキングプロトコルのオープンソース実装です。IEEE 802.15.4無線技術を使用してIoTデバイス向けの低電力で安全なメッシュネットワークを作成します。主な機能：
+
+- 内蔵IPv6サポート（6LoWPAN）
 - 自己組織化ネットワークトポロジー
-- すべての通信にAES-128暗号化を使用
-- 電球やセンサーのような小型デバイスにも対応可能
+- すべての通信でのAES-128暗号化
+- 電球やセンサーなどの小型デバイスとの互換性
 
 ### MatterとThreadの関係は何ですか？
 
-***著者[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/)によるこの点の非常に詳細な説明に感謝し、引用します！***
+***この点について非常に詳細な説明をしてくれた著者[@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/)に感謝し、そこから引用します！***
 
-MatterとThreadの簡単な紹介の後、ThreadとMatterが異なる目的を持ち、技術スタックの異なる層で動作することが理解できました。要約すると：
+MatterとThreadのこの短い紹介の後、ThreadとMatterが異なる目的を果たし、技術スタックの異なる層で動作することを理解していただけたでしょう。要約すると：
 
-Thread:
-- Threadは、接続された家庭用デバイス向けに設計された低消費電力のワイヤレスメッシュネットワークプロトコルです。デバイスが互いに通信し、インターネットと接続するための信頼性が高く安全な方法を提供します。
-- Threadはローカルネットワークを作成し、インターネットがダウンしてもデバイス同士が通信できるようにします。
+Thread：
 
-Matter:
-- Matterは、Thread、Wi-Fi、Ethernetなどのネットワークプロトコルの上に位置するアプリケーション層プロトコルです。異なるメーカーのデバイスがシームレスに連携できるようにすることで、スマートホームエコシステムを簡素化し統一することを目指しています。
-- Matterは、デバイスがアプリケーションレベルでどのように通信し、相互作用するかを定義し、相互運用性、セキュリティ、使いやすさに重点を置いています。
+- Threadは、接続されたホームデバイス向けに設計された低電力ワイヤレスメッシュネットワーキングプロトコルです。デバイス同士およびインターネットとの通信に信頼性が高く安全な方法を提供します。
+- Threadは、インターネットが停止してもデバイス同士が通信できるローカルネットワークを作成します。
 
-ThreadとMatterの接続:
-- Matterは、Threadをその基盤となるネットワークプロトコルの1つとして使用できます。つまり、Matterプロトコルを使用するデバイスはThreadネットワーク上で通信できます。
-- MatterとThreadの組み合わせにより、デバイスがローカルかつ効率的に通信できる堅牢で安全で相互運用可能なスマートホームエコシステムが実現します。
+Matter：
 
+- MatterはThread、Wi-Fi、Ethernetなどのネットワーキングプロトコルの上に位置するアプリケーション層プロトコルです。異なるメーカーのデバイスがシームレスに連携できることを保証することで、スマートホームエコシステムを簡素化し統一することを目的としています。
+- Matterは、相互運用性、セキュリティ、使いやすさに焦点を当てて、アプリケーションレベルでデバイスがどのように通信し相互作用するかを定義します。
 
+ThreadとMatterの接続：
+
+- Matterは、その基盤となるネットワークプロトコルの1つとしてThreadを使用できます。これは、Matterプロトコルを使用するデバイスがThreadネットワーク上で通信できることを意味します。
+- MatterとThreadの組み合わせにより、デバイスがローカルで効率的に通信できる堅牢で安全かつ相互運用可能なスマートホームエコシステムが実現されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
@@ -69,7 +71,7 @@ ThreadとMatterの接続:
         <th>Home Assistant Green</th>
         <th>Sonoff Zigbee 3.0 USB Dongle Plus–ZBDongle-E</th>
         <th>XIAO MG24</th>
-        <th>Grove - 温度＆湿度センサー (SHT31)</th>
+        <th>Grove - 温湿度センサー (SHT31)</th>
         <th>Seeed Studio Grove Base for XIAO</th>
     </tr>
     <tr>
@@ -82,27 +84,27 @@ ThreadとMatterの接続:
     <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/sonoff-zigbee-usb-dongle-plus-p-5510.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-SHT31.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -110,32 +112,32 @@ ThreadとMatterの接続:
 
 ## ソフトウェア概要
 
-### Sonoff ZBDongle-E ドングルのファームウェア書き換え
+### Sonoff ZBDongle-E ドングルのフラッシュ
 
-Sonoff ZBDongle-E ドングルは、Zigbeeデバイスとの通信のみを許可するファームウェアがプリインストールされています。Thread無線プロトコルで動作させるには、新しいファームウェアを書き込む必要があります。Chromeブラウザを使用して、https://darkxst.github.io/silabs-firmware-builder からドングルのファームウェアを直接更新できます。ドングルをコンピュータに挿入した後、「Connect」をクリックし、「OpenThread」ファームウェアを選択してファームウェアを変更してください。
+Sonoff ZBDongle-E ドングルには、Zigbee デバイスとの通信のみを可能にするファームウェアが付属しています。Thread 無線プロトコルで動作させるには、新しいファームウェアをフラッシュする必要があります。Chrome ブラウザから https://darkxst.github.io/silabs-firmware-builder で直接ドングルのファームウェアを更新できます。ドングルをコンピュータに挿入した後、「Connect」をクリックし、「OpenThread」ファームウェアを選択してファームウェアを変更します。
 <div class="table-center">
     <table align="center">
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/1.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/2.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/3.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/3.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -144,15 +146,15 @@ Sonoff ZBDongle-E ドングルは、Zigbeeデバイスとの通信のみを許�
     </table>
 </div>
 
-### Matter 温度と湿度センサーのデバイス設定
+### Matter 温湿度センサーデバイス
 
-XIAO MG24 を初めて Matter デバイスとして使用する場合は、この [wiki](https://wiki.seeedstudio.com/ja/xiao_mg24_matter/) を参照して設定方法を確認してください。
+XIAO MG24 を Matter デバイスとして初めて使用する場合は、セットアップ方法について、この[wiki](https://wiki.seeedstudio.com/xiao_mg24_matter/)を参照してください。
 
-- **ステップ 1.** Github から [ライブラリ](https://github.com/Seeed-Studio/Grove_SHT31_Temp_Humi_Sensor) をダウンロードします。
+- **ステップ 1.** Github から[ライブラリ](https://github.com/Seeed-Studio/Grove_SHT31_Temp_Humi_Sensor)をダウンロードします。
 
-- **ステップ 2.** [Arduino ライブラリのインストール方法](https://wiki.seeedstudio.com/ja/How_to_install_Arduino_Library) を参照してライブラリをインストールします。
+- **ステップ 2.** [ライブラリのインストール方法](https://wiki.seeedstudio.com/How_to_install_Arduino_Library)を参照して、Arduino用のライブラリをインストールします。
 
-- **ステップ 3.** Arduino IDE を再起動します。新しいスケッチを開き、以下のコードを新しいスケッチにコピーしてください。
+- **ステップ 3.** Arduino IDEを再起動します。新しいスケッチを開き、以下のコードを新しいスケッチにコピーします。
 
 ```cpp
 #include <Matter.h>
@@ -175,14 +177,14 @@ MatterTemperature matter_temp_sensor;
 void setup() {
   Serial.begin(115200);
   while(!Serial);
-  Serial.println("開始...");  
+  Serial.println("begin...");  
   sht31.begin();  
   
   float temperature = sht31.getTemperature();
   float humidity = sht31.getHumidity();
 
-  Serial.printf("温度: %.02f\n", temperature);
-  Serial.printf("湿度: %.02f\n", humidity);
+  Serial.printf("Temperature: %.02f\n", temperature);
+  Serial.printf("Humidity: %.02f\n", humidity);
 
   Matter.begin();
   matter_temp_sensor.begin();
@@ -192,24 +194,24 @@ void setup() {
   matter_temp_sensor.set_product_name("Matter_SHT31");
 
   if (!Matter.isDeviceCommissioned()) {
-    Serial.println("Matter デバイスがコミッションされていません");
-    Serial.println("手動ペアリングコードまたはQRコードを使用してMatterハブにコミッションしてください");
-    Serial.printf("手動ペアリングコード: %s\n", Matter.getManualPairingCode().c_str());
-    Serial.printf("QRコードURL: %s\n", Matter.getOnboardingQRCodeUrl().c_str());
+    Serial.println("Matter device is not commissioned");
+    Serial.println("Commission it to your Matter hub with the manual pairing code or QR code");
+    Serial.printf("Manual pairing code: %s\n", Matter.getManualPairingCode().c_str());
+    Serial.printf("QR code URL: %s\n", Matter.getOnboardingQRCodeUrl().c_str());
   }
   while (!Matter.isDeviceCommissioned()) {
     delay(200);
   }
-  Serial.println("Matter デバイスがコミッションされました。Threadネットワークを待機中...");
+  Serial.println("Matter device is commissioned, waiting for Thread network...");
   while (!Matter.isDeviceThreadConnected()) {
     delay(200);
   }
-  Serial.println("デバイスがThreadネットワークに接続されました");
-  Serial.println("Matter デバイスの検出を待機中...");
+  Serial.println("Device is connected to Thread network");
+  Serial.println("Waiting for Matter device discovery...");
   while (!matter_temp_sensor.is_online() || !matter_humidity_sensor.is_online()) {
     delay(200);
   }
-  Serial.println("Matter デバイスがオンラインになりました");
+  Serial.println("Matter device is now online");
 }
 
 void loop() {
@@ -219,8 +221,8 @@ void loop() {
   float temperature = sht31.getTemperature();
   float humidity = sht31.getHumidity();
 
-  Serial.printf("温度: %.02f\n", temperature);
-  Serial.printf("湿度: %.02f\n", humidity);
+  Serial.printf("Temperature: %.02f\n", temperature);
+  Serial.printf("Humidity: %.02f\n", humidity);
 
   matter_temp_sensor.set_measured_value_celsius(temperature);
   matter_humidity_sensor.set_measured_value(humidity);
@@ -230,9 +232,9 @@ void loop() {
 }
 ```
 
-### HomeAssistantの設定
+### HomeAssistant設定
 
-**セット1. アドオンストア**
+**セット1 .アドオンストア**
 
 画像に基づいて2つのプラグインをダウンロードする必要があります。
 
@@ -241,16 +243,16 @@ void loop() {
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon1.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon2.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -259,24 +261,24 @@ void loop() {
     </table>
 </div>
 
-**セット2. Threadの設定**
+**セット 2 . Thread 設定**
 
-OpenThread Border Routerプラグインを追加します。このプラグインを使用すると、Threadネットワークを作成または参加し、Home AssistantをThread Border Routerに変換することができます！
+OpenThread Border Router プラグインを追加します。このプラグインにより、Thread ネットワークを作成または参加し、Home Assistant を Thread Border Router に変換することができます！
 <div class="table-center">
     <table align="center">
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread1.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread2.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -290,16 +292,16 @@ Threadサービスの設定で対応するネットワークを選択します�
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread3.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread3.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread4.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread4.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -308,9 +310,9 @@ Threadサービスの設定で対応するネットワークを選択します�
     </table>
 </div>
 
-### モバイルでのHome Assistant設定
+### Home Assistant モバイル設定
 
-MatterデバイスをHome Assistantに追加するには、スマートフォンにHome Assistantアプリをインストールする必要があります。スマートフォンはMatterの「コーディネーター」として機能し、新しいデバイスをMatterネットワークに追加し、セキュリティ設定を行います。一方、HomeAssistant GreenはMatterの「コントローラー」として機能し、Matterネットワークに接続されたすべてのデバイスを管理します。
+Matter デバイスを Home Assistant に追加するには、スマートフォンに Home Assistant アプリをインストールする必要があります。スマートフォンは Matter の「コーディネーター」として機能し、新しいデバイスを Matter ネットワークに追加してセキュリティ設定を行い、HomeAssistant Green は Matter のコントローラーとして機能し、Matter ネットワークに接続されたすべてのデバイスを管理します。
 
 <table align="center">
     <tr>
@@ -324,7 +326,7 @@ MatterデバイスをHome Assistantに追加するには、スマートフォン
 
 ### Matterデバイスの追加
 
-新しいMatterデバイスをホームオートメーションシステムに組み込むには、「Matterデバイスを追加」を選択し、デバイスに付属しているQRコードをスキャンします。このチュートリアルでは、CHIPウェブサイトを使用してQRコードを生成する方法を示します。これは、XIAO MG24のシリアルモニターで提供されるURLに基づいています。
+新しいMatterデバイスをホームオートメーションシステムに組み込むには、「Matterデバイスを追加」を選択し、デバイスに付属のQRコードをスキャンします。このチュートリアルでは、XIAO MG24がシリアルモニターで提供するURLに基づいて、CHIPウェブサイトを使用してQRコードを生成する方法を説明します。
 
 <table align="center">
     <tr>
@@ -335,9 +337,9 @@ MatterデバイスをHome Assistantに追加するには、スマートフォン
     </tr>
 </table>
 
-### HAパネルで温度と湿度を確認
+### 温度と湿度を表示するHAパネル
 
-QRコードが正常に追加されると、HAパネルで温度と湿度センサーを確認することができます！
+QRコードが正常に追加されると、HAパネルで温度と湿度センサーを確認できます！
 
 <table align="center">
     <tr>
@@ -347,16 +349,16 @@ QRコードが正常に追加されると、HAパネルで温度と湿度セン�
     </tr>
 </table>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！製品の使用体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

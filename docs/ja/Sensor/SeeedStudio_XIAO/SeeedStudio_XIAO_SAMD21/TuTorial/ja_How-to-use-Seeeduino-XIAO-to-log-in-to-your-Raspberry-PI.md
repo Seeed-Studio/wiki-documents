@@ -1,22 +1,18 @@
 ---
-description: Seeed Studio XIAO SAMD21 を使用して Raspberry Pi に接続する方法
-title: Seeed Studio XIAO SAMD21 を使用して Raspberry Pi に接続する方法
+description: Seeed Studio XIAO SAMD21 をRaspberry PIに接続する
+title: Seeed Studio XIAO SAMD21 をRaspberry PIに接続する
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/How-to-use-Seeeduino-XIAO-to-log-in-to-your-Raspberry-PI
 last_update:
-  date: 05/15/2025
+  date: 1/11/2023
   author: shuxu hu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO SAMD21 を使用して Raspberry Pi にログインする方法
+# Seeed Studio XIAO SAMD21 を使用してRaspberry PIにログインする方法
 
-Raspberry Pi を使用する際、以下のような状況が私たちを悩ませることがあります：余分な HDMI ディスプレイがない、マウスやキーボードの接続が難しい、USB からシリアルアダプタを使用して Raspberry Pi にログインすることを選んだが高価すぎる。しかし、Seeed Studio XIAO SAMD21 を使用すれば、これらの問題はすべて簡単に解決できます。
+Raspberry Piを使用する際に、以下のような状況は非常に困ることがあります：周りに余分なHDMIディスプレイがない、マウスとキーボードの接続が困難、USB to Serialアダプターでraspberry piにログインしようとするが高価すぎる。今、Seeed Studio XIAO SAMD21 があれば、すべての問題が簡単に解決されます。
 
 ## ハードウェア
 
@@ -28,26 +24,26 @@ Raspberry Pi を使用する際、以下のような状況が私たちを悩ま�
 
 - [ジャンパーケーブル x3](https://www.seeedstudio.com/Breadboard-Jumper-Wire-Pack-200mm-100m-p-1032.html)
 
-- [Type-C ケーブル x1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)
+- [Type-Cケーブル x1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)
 
 ### ハードウェア接続
 
-- **ステップ 1.** Raspberry PI の **TX** を Seeed Studio XIAO SAMD21 の **RX** に接続します。
+- **ステップ 1.** Raspberry PIの **TX** をSeeed Studio XIAO SAMD21の **RX** に接続
 
-- **ステップ 2.** Raspberry PI の **RX** を Seeed Studio XIAO SAMD21 の **TX** に接続します。
+- **ステップ 2.** Raspberry PIの **RX** をSeeed Studio XIAO SAMD21の **TX** に接続
 
-- **ステップ 3.** Raspberry PI の **GND** を Seeed Studio XIAO SAMD21 の **GND** に接続します。
+- **ステップ 3.** Raspberry PIの **GND** をSeeed Studio XIAO SAMD21の **GND** に接続
 
-- **ステップ 4.** Seeed Studio XIAO SAMD21 を Type-C ケーブルを使用して PC に接続します。
+- **ステップ 4.** Seeed Studio XIAO SAMD21 をType-CケーブルでPCに接続
 
-- **ステップ 5.** Raspberry Pi を電源に接続します。
+- **ステップ 5.** raspberry piを電源に接続
 
 <!-- ![](https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png) -->
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png" alt="pir" width={600} height="auto" /></p>
+  <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/102010328/img/pin-with-marks.png" alt="pir" width={600} height="auto" /></p>
 
 ## ソフトウェア
 
-Raspberry Pi 公式システムがインストールされている TF カード上の config.txt ファイルを見つけ、末尾に以下の一文を追加します：
+Raspberry Pi公式システムがインストールされているTFカード上のconfig.txtファイルを見つけて、最後に以下の一行を追加してください：
 
 ```c
 enable_uart=1
@@ -55,16 +51,16 @@ enable_uart=1
 
 ### Seeed Studio XIAO SAMD21 の設定
 
-- **ステップ 1.** [Arduino IDE](https://www.arduino.cc/en/Main/Software) を開き、[こちらのリンク](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)に従って Seeed Studio XIAO SAMD21 を追加します。
+- **ステップ 1.** [Arduino IDE](https://www.arduino.cc/en/Main/Software) を開き、[こちらのリンク](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software) に従ってSeeed Studio XIAO SAMD21 を追加します。
 
-- **ステップ 2.** 以下のコードを Arduino IDE にコピーし、Seeed Studio XIAO SAMD21 にアップロードします。
+- **ステップ 2.** 以下のコードをArduino IDEにコピーし、Seeed Studio XIAO SAMD21 にコードをアップロードします。
 
 ```cpp
 uint32_t baud;
 uint32_t old_baud;
 void setup() {
 
-  // 初期設定コード（1回だけ実行されます）
+  // put your setup code here, to run once:
   SerialUSB.begin(115200);
   baud = SerialUSB.baud();
   old_baud = baud;
@@ -74,7 +70,7 @@ void setup() {
 }
 
 void loop() {
-  // メインコード（繰り返し実行されます）
+  // put your main code here, to run repeatedly:
   baud = SerialUSB.baud();
   if (baud != old_baud) {
     Serial1.begin(baud);
@@ -94,23 +90,23 @@ void loop() {
 }
 ```
 
-### Putty の設定
+### Puttyの設定
 
-- **ステップ 1.** [こちらのリンク](https://www.putty.org/)に従って Putty をダウンロードしてインストールします。
+- **ステップ 1.** [こちらのリンク](https://www.putty.org/) に従ってPuttyをダウンロードしてインストールします
 
-- **ステップ 2.** シリアルポートのボーレートを 115200 に設定します（これはデフォルトのシリアルポートボーレートです。Raspberry Pi のシリアルポートボーレートと一致していれば正しく通信できます）。
+- **ステップ 2.** シリアルポートのボーレートを115200に設定します（これはデフォルトのシリアルポートボーレートです。Raspberry Piのシリアルポートボーレートと一致していれば正しく通信できます。）
 
 <p align="center">
   <img src="https://files.seeedstudio.com/products/102010328/img/Putty%20config.png" />
 </p>
 
-- **ステップ 3.** その後、ターミナルウィンドウに起動情報が表示されます。
+- **ステップ 3.** ターミナルウィンドウに起動情報が表示されます。
 
 <p align="center">
   <img src="https://files.seeedstudio.com/products/102010328/img/Terminal.png" />
 </p>
 
-これで、Seeed Studio XIAO SAMD21 を通じて Raspberry Pi にアクセスできるようになりました！
+これでSeeed Studio XIAO SAMD21 を通じてRaspberry Piにアクセスできるようになりました！
 
 <p align="center">
   <img src="https://files.seeedstudio.com/products/102010328/img/new%20pins.gif" />

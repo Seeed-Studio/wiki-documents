@@ -1,82 +1,78 @@
 ---
-description: Seeed Studio XIAO nRF52840 (Sense) のピンマルチプレクシング
-title: 両バージョンのピンマルチプレクシング
+description: Seeed Studio XIAO nRF52840 (Sense) のピン多重化
+title: 両バージョンのピン多重化
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO-BLE-Sense-Pin-Multiplexing
 last_update:
-  date: 05/15/2025
+  date: 1/11/2023
   author: shuxu hu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO nRF52840 (Sense) のピンマルチプレクシング
+# Seeed Studio XIAO nRF52840 (Sense) のピン多重化
 
-Seeed Studio XIAO nRF52840 (Sense) は豊富なインターフェースを備えています。**11個のデジタルI/O**は**PWMピン**として使用でき、**6個のアナログ入力**は**ADCピン**として使用できます。また、**UART、I2C、SPI**といった3つの一般的なシリアル通信インターフェースすべてをサポートしています。このWikiは、これらのインターフェースについて学び、次のプロジェクトでそれらを実装するのに役立ちます！
+Seeed Studio XIAO nRF52840 (Sense) は豊富なインターフェースを持っています。**PWMピン**として使用できる**11個のデジタルI/O**と、**ADCピン**として使用できる**6個のアナログ入力**があります。**UART、I2C、SPI**などの3つの一般的なシリアル通信インターフェースをすべてサポートしています。このwikiは、これらのインターフェースについて学び、次のプロジェクトで実装するのに役立ちます！
 
-> ここで紹介する基本機能は、どちらのSeeed Studio XIAO nRF52840 Arduinoライブラリでも問題なく動作します。
+> ここでの基本機能は、Seeed Studio XIAO nRF52840 Arduinoライブラリの両方で良好に動作します。
 
 ## デジタル
 
-プッシュボタンをピンD6に接続し、LEDをピンD10に接続します。その後、以下のコードをアップロードして、プッシュボタンを使用してLEDのON/OFFを制御します。
+プッシュボタンをピンD6に、LEDをピンD10に接続します。次に、以下のコードをアップロードして、プッシュボタンを使用してLEDのON/OFFを制御します。
 
 ```cpp
-const int buttonPin = 6;     // プッシュボタンをデジタルピン6に接続
-const int ledPin =  10;      // LEDをデジタルピン10に接続
+const int buttonPin = 6;     // pushbutton connected to digital pin 6
+const int ledPin =  10;      // LED connected to digital pin 10
  
-int buttonState = 0;         // プッシュボタンの状態を読み取るための変数
+int buttonState = 0;         // variable for reading the pushbutton status
  
 void setup() {
-  // LEDピンを出力として初期化
+  // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
-  // プッシュボタンピンを入力として初期化
+  // initialize the pushbutton pin as an input:
   pinMode(buttonPin, INPUT);
 }
  
 void loop() {
-  // プッシュボタンの状態を読み取る
+  // read the state of the pushbutton value:
   buttonState = digitalRead(buttonPin);
  
-  // プッシュボタンが押されているか確認。押されている場合、buttonStateはHIGH
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
-    // LEDをオフにする
+    // turn LED off:
     digitalWrite(ledPin, HIGH);
   } else {
-    // LEDをオンにする
+    // turn LED on:
     digitalWrite(ledPin, LOW);
   }
 }
 ```
 
-## デジタルをPWMとして使用
+## Digital as PWM
 
-LEDをピンD10に接続します。その後、以下のコードをアップロードして、LEDが徐々に明るくなったり暗くなったりする様子を確認します。
+Connect an LED to Pin D10. Then upload the following code to see the LED gradually fading.
 
 ```cpp
-int ledPin = 10;    // LEDをデジタルピン10に接続
+int ledPin = 10;    // LED connected to digital pin 10
 
 void setup() {
 
 }
 
 void loop() {
-  // 最小値から最大値まで5ポイントずつ増加してフェードイン
+  // fade in from min to max in increments of 5 points:
   for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
-    // 値を設定（範囲は0から255）
+    // sets the value (range from 0 to 255):
     analogWrite(ledPin, fadeValue);
-    // 30ミリ秒待機して減光効果を確認
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 
-  // 最大値から最小値まで5ポイントずつ減少してフェードアウト
+  // fade out from max to min in increments of 5 points:
   for (int fadeValue = 255 ; fadeValue >= 0; fadeValue -= 5) {
-    // 値を設定（範囲は0から255）
+    // sets the value (range from 0 to 255):
     analogWrite(ledPin, fadeValue);
-    // 30ミリ秒待機して減光効果を確認
+    // wait for 30 milliseconds to see the dimming effect
     delay(30);
   }
 }
@@ -84,34 +80,35 @@ void loop() {
 
 ## アナログ
 
-ポテンショメータをピンA5に接続し、LEDをピンD10に接続します。その後、以下のコードをアップロードして、ポテンショメータのノブを回すことでLEDの点滅間隔を制御します。
+ポテンショメータをピンA5に、LEDをピンD10に接続します。その後、以下のコードをアップロードして、ポテンショメータのノブを回すことでLEDの点滅間隔を制御します。
 
 ```cpp
 const int sensorPin = 5;
 const int ledPin =  10; 
 void setup() {
-  // ledPinをOUTPUTとして宣言
+  // declare the ledPin as an OUTPUT:
   pinMode(sensorPin, INPUT);
   pinMode(ledPin, OUTPUT);
 }
  
 void loop() {
-  // センサーから値を読み取る
+  // read the value from the sensor:
   int sensorValue = analogRead(sensorPin);
-  // ledPinをオンにする
+  // turn the ledPin on
   digitalWrite(ledPin, HIGH);
-  // プログラムを<sensorValue>ミリ秒間停止
+  // stop the program for <sensorValue> milliseconds:
   delay(sensorValue);
-  // ledPinをオフにする
+  // turn the ledPin off:
   digitalWrite(ledPin, LOW);
-  // プログラムを<sensorValue>ミリ秒間停止
+  // stop the program for for <sensorValue> milliseconds:
   delay(sensorValue);
 }
 ```
 
-## シリアル通信
-USBではなくGPIOを介してUARTを使用する場合はSerial1を使用します。USBとGPIOの両方を同時に使用することも可能です。  
-UARTのTXピンとしてD6、RXピンとしてD7を使用し、「Hello World!」メッセージを送信します。
+## シリアル
+
+USBの代わりにGPIO経由でUARTを使用するにはSerial1を使用してください。両方を同時に使用することも可能です。
+UARTのTXピンとしてピンD6を、UARTのRXピンとしてピンD7を使用して「Hello World!」メッセージを送信してください。
 
 ```cpp
 void setup() {
@@ -127,24 +124,24 @@ void loop() {
 
 ## I2C
 
-- **ステップ 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に接続します。以下のハードウェア接続を行ってください。
+- **ステップ 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に以下のハードウェア接続に従って接続します。
 
 |  Grove - OLED Display 1.12 (SH1107) |  Seeed Studio XIAO nRF52840 (Sense) |
 |-----------|-----------|
 | GND       | GND       |
 | VCC       | 5V        |
-| SDA       | SDA       | 
+| SDA       | SDA       |
 | SCL       | SCL       |
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-I2C-2.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 2.** Arduino IDEを開き、`スケッチ > ライブラリを含める > ライブラリを管理...` に移動します。
+- **ステップ 2.** Arduino IDE を開き、`Sketch > Include Library > Manage Libraries...` に移動します
 
-- **ステップ 3.** **u8g2** を検索してインストールします。
+- **ステップ 3.** **u8g2** を検索してインストールします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 4.** 以下のコードをアップロードして、OLEDディスプレイにテキスト文字列を表示します。
+- **ステップ 4.** OLED ディスプレイにテキスト文字列を表示するために、以下のコードをアップロードします
 
 ```cpp
 #include <Arduino.h>
@@ -170,13 +167,13 @@ void loop(void) {
 
 ## SPI
 
-- **ステップ 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に接続します。以下のハードウェア接続を行ってください。
+- **ステップ 1.** [Grove - OLED Display 1.12 (SH1107) V3.0](https://www.seeedstudio.com/Grove-OLED-Display-1-12-SH1107-V3-0-p-5011.html) を Seeed Studio XIAO nRF52840 (Sense) に以下のハードウェア接続に従って接続します。
 
 | Grove - OLED Display 1.12 (SH1107) | Seeed Studio XIAO nRF52840 (Sense) |
 |-----------|------------|
 | GND        | GND       |
 | 5V         | 5V        |
-| SCL        | SCK       | 
+| SCL        | SCK       |
 | SI         | MOSI      |
 | RES        | D3        |
 | D/C        | D4        |
@@ -184,11 +181,11 @@ void loop(void) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 2.** このOLEDディスプレイはI2CとSPI通信の両方をサポートしており、デフォルトの通信モードはI2Cです。SPIモードを使用するには、[Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/ja/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) を参照して、OLEDディスプレイの通信をSPIに変更してください。
+- **ステップ 2.** このOLEDディスプレイはI2CとSPI通信の両方をサポートしており、デフォルトモードはI2Cです。SPIモードを使用するには、[Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c)を参照して、OLEDディスプレイの通信をSPIに変更してから次に進む必要があります
 
 **注意:** 前のステップでU8g2ライブラリがインストールされていることを確認してください。
 
-- **ステップ 3.** 以下のコードをアップロードして、OLEDディスプレイにテキスト文字列を表示します。
+- **ステップ 3.** OLEDディスプレイにテキスト文字列を表示するために、以下のコードをアップロードしてください
 
 ```cpp
 #include <Arduino.h>

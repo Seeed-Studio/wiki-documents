@@ -94,7 +94,7 @@ The Seeed Studio RS485 Vision AI Camera is an intelligent device that combines a
     </tr>
     <tr>
      <th>Model Execution and Inference</th>
-        <th>480 * 480  >10 fps</th> 
+        <th>480 * 480  >10 fps</th>
     </tr>
     <tr>
         <th>Modbus RS485</th>

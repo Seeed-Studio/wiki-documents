@@ -38,7 +38,6 @@ I am using Seeed Studio XIAO ESP32C6 board here.
   </table>
 </div>
 
-
 ## Software Preparation
 
 In this guide I will be using **windows 10** alongside with Thonny IDE and esptool. In order to use esptool make sure to install Python 3 environment on your windows OS. Before getting started make sure to download the firmware and Install Thonny
@@ -64,11 +63,9 @@ In this guide I will be using **windows 10** alongside with Thonny IDE and espto
   </table>
 </div>
 
-
 ### 👍 Greatly Thanks
 
 <strong><font color={'8DC215'} size={"3"}>The firmware designed for XIAO ESP32C6 board, using in this wiki is made by our friend: Zhishuo Song, whom we are really greatful for.</font></strong>
-
 
 ## Getting Started
 
@@ -116,7 +113,6 @@ esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset 
 change the COMXX with port COM number on your PC
 :::
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022205457866.png" alt="pir" width={600} height="auto" /></p>
 
 ### Step 2. Upload the example code
@@ -131,7 +127,7 @@ run `blinker.py` example program
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_micropython/image-20241022220104960.png" alt="pir" width={600} height="auto" /></p>
 
-##  NTP get now time from wifi
+## NTP get now time from wifi
 
 ### step1: Open `wifi_Ntp.py` file on Thonny
 
@@ -161,11 +157,11 @@ If the program cannot be burned, please try using the BOOT button and RST button
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

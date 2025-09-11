@@ -1138,8 +1138,7 @@ When using the content of this tutorial, two different types of problems may occ
 
 2. Compilation error caused by choosing the wrong development board.
 
-If you are having problems with the compilation process. The error message is usually about an SPI error, for example `'SPI_X' was not declared in this scope`
-. Then it means that you are choosing the wrong type of development board. To use all of this tutorial, you need to use the **non-mbed** version of the XIAO nRF52840. -->
+If you are having problems with the compilation process. The error message is usually about an SPI error, for example `'SPI_X' was not declared in this scope`. Then it means that you are choosing the wrong type of development board. To use all of this tutorial, you need to use the **non-mbed** version of the XIAO nRF52840. -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/73.png" style={{width:700, height:'auto'}}/></div>
 

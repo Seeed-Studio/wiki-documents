@@ -24,6 +24,7 @@ CircuitPython is a programming language designed to simplify experimenting and l
 ### Method 1: Command line esptool
 
 #### Install Esptool
+
 If you haven't already installed esptool.py, you can do so using pip on your pc:
 
 ``` linux
@@ -31,6 +32,7 @@ pip install esptool
 ```
 
 #### Download the XIAO ESP32C3 CircuitPython firmware
+
 You need to download the firmware binary file from [circirtpython.org](https://circuitpython.org/board/seeed_xiao_esp32c3/)
 After downloading correct bin file, navigate to the folder, and open a cmd terminal there.
 As of the final draft, the latest version of bin file is:
@@ -47,8 +49,7 @@ You need to press and hold down BOOT button on your XIAO ESP32C3 board to enter 
 
 Find out all serial devices on your pc.
 
-
-* Linux 
+- Linux
 
 On Linux, you can use the *dmesg* command to view connected devices:
 
@@ -62,7 +63,7 @@ Alternatively, you can list serial devices using *ls*:
 ls /dev/ttyS* /dev/ttyUSB*
 ```
 
-* Window
+- Window
 
 On Windows, you can check serial ports through Device Manager. Look for the “Ports (COM & LPT)” section to see the available serial ports. You can also use the mode command in Command Prompt to list serial ports:
 
@@ -70,7 +71,7 @@ On Windows, you can check serial ports through Device Manager. Look for the “P
 mode
 ```
 
-* macOS
+- macOS
 
 On macOS, you can list available serial ports using the *ls* command:
 
@@ -100,7 +101,6 @@ kill -9 <PID>
 Replace *PID* with the actual process ID found.
 :::
 
-
 #### Erase flash
 
 ```linux
@@ -109,8 +109,8 @@ esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 erase_flash
 
 Replace '/dev/cu.usbmodem11301' with the correct port name from your system(e.g. `COM3` on Windows, `/dev/ttyUSB0` on linux).
 
-
 #### Write flash
+
 Flash the firmware onto XIAO ESP32C3:
 
 ```linux
@@ -120,8 +120,8 @@ esptool.py --chip esp32c3 --port /dev/cu.usbmodem11301 --baud 460800 write_flash
 Again, replace '/dev/cu.usbmodem11301' with the correct port name, and 'adafruit-circuitpython-seeed_xiao_esp32c3-en_GB-9.1.1.bin' with the path to your blank firmware file.
 Hard resetting via RTS pin...
 
-
 ### Method 2: Web Serial esptool
+
 The WebSerial ESPTool was designed to be a web-capable option for programming Espressif ESP family microcontroller boards that have a serial based ROM bootloader. It allows you to erase the contents of the microcontroller and program up to 4 files at different offsets. Please refer to [Web Serial ESPtool](https://learn.adafruit.com/circuitpython-with-esp32-quick-start/web-serial-esptool).
 
 Then can start to compile script using your prefer tool to XIAO ESP32C3!
@@ -129,10 +129,11 @@ Then can start to compile script using your prefer tool to XIAO ESP32C3!
 ## Recommended Editors for CircuitPython
 
 Generally, When CircuitPython finishes installing, or you plug a CircuitPython board into your computer with CircuitPython already installed, the board shows up on your computer as a USB drive called CIRCUITPY.
-However, ESP32 or ESP32-C3 microcontrollers that do not support native USB cannot present a CIRCUITPY drive. 
+However, ESP32 or ESP32-C3 microcontrollers that do not support native USB cannot present a CIRCUITPY drive.
 On these boards, there are alternative ways to transfer and edit files. You can use the [Thonny](https://thonny.org/), which uses hidden commands sent to the REPL to read and write files. Or you can use the [CircuitPython web workflow](https://code.circuitpython.org/), introduced in Circuitpython 8. The web workflow provides browser-based WiFi access to the CircuitPython filesystem, please refer to [getting started with web workflow using the code editor](https://learn.adafruit.com/getting-started-with-web-workflow-using-the-code-editor/overview.)
 
 ### 1. Thonny
+
 Install and open thonny, then configure Thonny following the instruction:
 
 ```
@@ -168,10 +169,8 @@ The editor allows you to edit files using web Bluetooth, USB, and Web Workflow o
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/6.png" /></div>
 
-* More information please refer to [hardware overview](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#hardware-overview)
-* [Seeed Studio XIAO ESP32C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
-
-
+- More information please refer to [hardware overview](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/#hardware-overview)
+- [Seeed Studio XIAO ESP32C3 Schematic](https://files.seeedstudio.com/wiki/XIAO_WiFi/Resources/Seeeduino-XIAO-ESP32C3-SCH.pdf)
 
 ## Getting Started with CircuitPython on the XIAO ESP32C3
 
@@ -188,9 +187,9 @@ f.write('CIRCUITPY_WEB_API_PASSWORD = "webpassword"\n')
 f.close()
 ```
 
-* Replace with the name of your local wifi network *wifissid*
-* Replace with your local wifi passwordwifi *password*
-* The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
+- Replace with the name of your local wifi network *wifissid*
+- Replace with your local wifi passwordwifi *password*
+- The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
 
 Once connected, you can press the **Reset** button to kick the firmware, then hit return a few times to get to the REPL prompt. Then reconnect device to Thonny, the IP address of your XIAO ESP32C3 shows up.
 
@@ -200,7 +199,7 @@ Don't forget, ESP32 does not support 5 GHz networks, so use your 2.4 GHz SSID if
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/7.png" /></div>
 
-### Delay and timing 
+### Delay and timing
 
 The *time* module:
 
@@ -212,7 +211,6 @@ time.sleep_us(10)       # sleep for 10 microseconds
 start = time.ticks_ms() # get millisecond counter
 delta = time.ticks_diff(time.ticks_ms(), start) # compute time difference
 ```
-
 
 ### Pins and GPIO
 
@@ -248,6 +246,7 @@ while True:
     led.value = False  # turn off LED
     time.sleep(1)
 ```
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/8.png" /></div>
 
 ### UART(serial bus)
@@ -424,17 +423,17 @@ while True:
 #### Light up OLED screen
 
 **Download and Extract the Library Bundle**:
-* Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
+- Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
 
 **Copy Libraries to CIRCUITPY**:
 
-* Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
-* Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
+- Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
+- Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
-  * adafruit_ssd1306
-  * adafruit_bus_device
-  * adafruit_register
-  * adafruit_framebuf.mpy
+  - adafruit_ssd1306
+  - adafruit_bus_device
+  - adafruit_register
+  - adafruit_framebuf.mpy
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/11.png" /></div>
 
@@ -442,7 +441,7 @@ You'll need to manually install the necessary libraries from the bundle:
 
 **Create Your CircuitPython Code**:
 
-* Create a code.py file (or main.py) . This file should contain your CircuitPython code.
+- Create a code.py file (or main.py) . This file should contain your CircuitPython code.
 
 ```python
 import board
@@ -467,8 +466,8 @@ oled.fill(0)
 oled.pixel(0, 0, 1)
 oled.show()
 ```
-<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/13.png" /></div>
 
+<div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/esp32c3_circuitpython/13.png" /></div>
 
 ## "Uninstalling" CircuitPython
 
@@ -487,19 +486,19 @@ Thank you for reading this article！ Feel free to share your thoughts in the co
 
 ## Resources
 
-* [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c3/) for XIAO ESP32C3 with CircuitPython
-* [The library bundle for CircuitPython](https://circuitpython.org/libraries)
+- [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c3/) for XIAO ESP32C3 with CircuitPython
+- [The library bundle for CircuitPython](https://circuitpython.org/libraries)
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

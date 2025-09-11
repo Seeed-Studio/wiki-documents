@@ -118,12 +118,13 @@ There are 2 serial interfaces on this board:
 - UART0 Serial
 
 :::note
-There is no `Serial2` for XIAO ESP32 C3. 
+There is no `Serial2` for XIAO ESP32 C3.
 Also If you need to use `Serial1`, you must define the pins; otherwise, it may not receive data. For XIAO ESP32 series, use `Serial1` as follows:
 
 ```cpp
 Serial1.begin(115200, SERIAL_8N1, D7, D6); // RX, TX
 ```
+
 :::
 
 By default, USB serial is enabled, which means you can connect the board to a PC via USB Type-C and open serial monitor on Arduino IDE to view data sent via serial.
@@ -316,8 +317,8 @@ If all goes well, you will see data messages on the serial monitor.
 
 ### Serial1 Usage
 
-According to the above XIAO ESP32C3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin. 
-This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added. 
+According to the above XIAO ESP32C3 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
+This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added.
 So next, we will use the pins led out by the chip for serial communication.
 
 Core Function that need to be include:
@@ -355,7 +356,6 @@ void loop() {
 After uploading the program, open the Serial Monitor in Arduino IDE and set the baud rate to 115200.then,you can send content you want in the XIAO ESP32C3 through the serial monitor Serial ,and XIAO will print out each byte of the content you send.,In here,the content i entered is "Hello Everyone",my result chart is as follows
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/114.png" style={{width:600, height:'auto'}}/></div>
-
 
 ### Software Serial
 
@@ -533,7 +533,6 @@ void setup() {
 }
 
 
-
 void loop() {
     uint8_t pressureCount = 20;
     float pressure[pressureCount];
@@ -583,7 +582,6 @@ void loop() {
 
 Now you will see the temperature and pressure data displayed one after the other on the serial monitor as above!
 
-
 ## Note on XIAO ESP32C3 IO allocation
 
 ### D9
@@ -608,7 +606,7 @@ So try not to use D6. (It's okay to use it after you understand it, of course.)
 
 ### D8
 
-D8 of the Seeed Studio XIAO ESP32C3 is connected to GPIO8 (14) of the ESP32-C3. 
+D8 of the Seeed Studio XIAO ESP32C3 is connected to GPIO8 (14) of the ESP32-C3.
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/12.png" alt="pir" width={300} height="auto" /></div>
 
@@ -621,4 +619,3 @@ If you use download boot, **add a pullup resistor to make GPIO8 HIGH at boot tim
 A special thanks to SeeedJP colleague **matsujirushi** for testing and contributing to this section. Here is the reference link to the original article.
 
 - [Seeed Studio XIAO ESP32C3のI/O割り付けに注意](https://lab.seeed.co.jp/entry/2023/04/03/120000)
-

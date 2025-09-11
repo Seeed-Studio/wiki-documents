@@ -1,31 +1,26 @@
 ---
-description: Seeed Studio XIAO SAMD21とMicroPython
+description: Seeed Studio XIAO SAMD21 with MicroPython
 title: MicroPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO-SAMD21-MicroPython
 last_update:
-  date: 05/15/2025
+  date: 1/11/2023
   author: shuxu hu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# **Seeed Studio XIAO SAMD21とMicroPython**
+# **Seeed Studio XIAO SAMD21 with MicroPython**
 
-## **MicroPythonの紹介**
+## **MicroPython の紹介**
 
-[MicroPython](https://github.com/micropython/micropython/wiki)は、部分的なネイティブコードコンパイル機能を備えたPythonインタプリタです。これは、組み込みプロセッサや制約のあるシステム向けに実装されたPython 3.5のサブセットを提供します。CPythonとは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
+[MicroPython](https://github.com/micropython/micropython/wiki) は、部分的なネイティブコードコンパイル機能を持つPythonインタープリターです。組み込みプロセッサーや制約のあるシステム向けに実装されたPython 3.5機能のサブセットを提供します。CPythonとは異なり、その違いについては[こちら](https://github.com/micropython/micropython/wiki/Differences)で詳しく読むことができます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/MicroPython-Logo.png" /></div>
 
+## **はじめに**
 
-## **始め方**
-
-まず、Seeed Studio XIAO SAMD21をコンピュータに接続し、MicroPythonから簡単なコードをアップロードしてボードが正常に動作しているか確認します。
+まず、Seeed Studio XIAO SAMD21をコンピューターに接続し、MicroPythonから簡単なコードをアップロードして、ボードが正常に動作しているかを確認します。
 
 ### **ハードウェアセットアップ**
 
@@ -35,45 +30,41 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### **ソフトウェアセットアップ**
 
-- **ステップ1**. お使いのオペレーティングシステムに応じて最新バージョンの[Thonnyエディタ](https://thonny.org/)をダウンロードしてインストールします。
+- **ステップ 1**. お使いのオペレーティングシステムに応じて、[Thonny editor](https://thonny.org/)の最新バージョンをダウンロードしてインストールします
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_6.png" /></div>
 
+- **ステップ 2**. Thonnyを起動します
 
-- **ステップ2**. Thonnyを起動します。
-
-- **ステップ3**. **"Tools-->Options"**をクリックして設定を開きます。
+- **ステップ 3**. **"Tools-->Options"** をクリックして設定を開きます。
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/micropython/board_8.png" /></div>
 
-
-- **ステップ4**. "Interpreter"インターフェースを選択し、デバイスを**"MicroPython(generic)"**、ポートを**"Try to detect port automatically"**に設定します。
+- **ステップ 4**. "Interpreter"インターフェースを選択し、デバイスを **"MicroPython(generic)"** として、ポートを **"Try to detect port automatically"** として選択します
 
 <div align="center"><img width={550} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/1.jpg" /></div>
 
-
 ### **Seeed Studio XIAO SAMD21をPCに接続して点灯させる**
 
-- **ステップ1**. "BOOT"ボタンを押し続けながら、Seeed Studio XIAO SAMD21をType-Cケーブルを介してPCに接続します。正常に動作している場合、PCに「Arduino」デスクが表示されます。
+- **ステップ 1**. "BOOT"ボタンを押し続けながら、Type-CケーブルでSeeed Studio XIAO SAMD21をPCに接続します。正常に動作すると、PC上に"Arduino"デスクが表示されます。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/2.jpg" /></div>
 
+- **ステップ 2**. ファームウェアをフラッシュします
 
-- **ステップ2**. ファームウェアをフラッシュします。
+公式[リンク](https://micropython.org/download/SEEED_XIAO_SAMD21/)にアクセスして、最新のファームウェアをダウンロードしてください
 
-公式[リンク](https://micropython.org/download/SEEED_XIAO_SAMD21/)にアクセスして最新のファームウェアをダウンロードしてください。
-
-セキュリティを確保し最新の機能をサポートするために[独自のファームウェアをコンパイル](https://wiki.seeedstudio.com/ja/Compiling_MicroPython_for_embedded_devices/)することも可能ですが、必須ではありません。
+セキュリティを確保し、最新機能をサポートするために[独自のファームウェアをコンパイル](https://wiki.seeedstudio.com/Compiling_MicroPython_for_embedded_devices/)することも可能ですが、これは必須ではありません。
 
 ## ソフトウェア開発
 
-### SEEED XIAO SAMD21ピン割り当て表
+### SEEED XIAO SAMD21 ピン配置表
 
-|ピン|GPIO|Xiaoピン名|IRQ|ADC|
+|Pin|GPIO|Xiao Pin name|IRQ|ADC|
 |-|--|---|--|---|
 |2|PA02|0|2|0| * | * | * | * |
 |4|PA04|1|4|4| * | * | * | * |
-|10|PA10|2|10|18| * | * | * | * | 
+|10|PA10|2|10|18| * | * | * | * |
 |11|PA11|3|11|19| * | * | * | * |
 |8|PA08|4|*|16| * | * | * | * |
 |9|PA09|5|9|17| * | * | * | * |
@@ -89,23 +80,23 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### コードをアップロードする
 
-コードをアップロードするには、「現在のスクリプトを実行」ボタンをクリックします。初回時には、コードファイルを保存する場所をThonnyが尋ねます。**このコンピュータ**または**MicroPythonデバイス**のどちらでも問題ありません。
+「Run current script」ボタンをクリックしてコードをアップロードします。初回時、Thonnyはコードファイルの保存場所を尋ねます。**This Computer**と**MicroPython device**のどちらでも構いません。
 
-オフラインでプログラムを使用したい場合は、プログラムをXIAO SAMD21に保存する必要があります。
+プログラムをオフラインで使用したい場合は、プログラムをXIAO SAMD21に保存する必要があります
 
-Ctrl + Shift + Sを同時に押し、**MicroPythonデバイス**に保存を選択します。
+Ctrl + Shift + Sを同時に長押しし、**MicroPython device**への保存を選択します
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/6.jpg" /></div>
 
-
-### GPIOテスト (LED)
+### GPIO テスト (LED)
 
 準備するもの:
+
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
 以下のコードをThonnyにコピーします。
 
-青いRX_LEDが点灯し、1秒ごとに点滅する様子が確認できます。
+青いRX_LEDが点灯し、1秒に1回点滅することが確認できます
 
 ```python
 from machine import Pin, Timer
@@ -126,10 +117,11 @@ tim.init(period=500, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/3.gif" /></div>
 
-### GPIOでリレーを制御する
+### GPIO リレー制御
 
-準備するもの:
-- [Seeeduino-XIAO-拡張ボード](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/)
+準備するもの：
+
+- [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
@@ -157,16 +149,15 @@ tim.init(period=200, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/4.mp4" type="video/mp4" />
-    お使いのブラウザは動画タグをサポートしていません。
+    Your browser does not support the video tag.
   </video></div>
 
+### 自動制御のための人体検出
 
-### 人検知による自動制御
+準備するもの：
 
-準備するもの:
-
-- [人検知用ドップラーセンサー](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html?queryID=32e8107bce436db9b886cf1b8c698667&objectID=5304&indexName=bazaar_retailer_products)
-- [Seeeduino-XIAO-拡張ボード](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO-Expansion-Board/)
+- [人体検出用ドップラーレーダー](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Sleep-Breathing-Monitoring-Module-p-5304.html?queryID=32e8107bce436db9b886cf1b8c698667&objectID=5304&indexName=bazaar_retailer_products)
+- [Seeeduino-XIAO-Expansion-Board](https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/)
 - [Grove-Relay](https://www.seeedstudio.com/Grove-Relay.html)
 - [Seeed Studio XIAO SAMD21](https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html)
 
@@ -198,11 +189,10 @@ tim.init(period=50, mode=Timer.PERIODIC, callback=fun)
 
 <div align="center"><video width={600} height={240} controls>
     <source src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/5.mp4" type="video/mp4" />
-    お使いのブラウザは video タグをサポートしていません。
+    Your browser does not support the video tag.
   </video></div>
 
-
-### I2C サポート
+### I2Cサポート
 
 ```python
 from machine import Pin, SoftI2C
@@ -210,12 +200,12 @@ from machine import Pin, SoftI2C
 i2c = SoftI2C(scl=Pin(9), sda=Pin(8), freq=100000)
 devices = i2c.scan()
 for device in devices:  
-    print("10進数アドレス: ", device, " | 16進数アドレス: ", hex(device))
+    print("Decimal address: ",device," | Hexa address: ",hex(device))
 
 i2c.writeto(0x51, 'b')
-print(i2c.readfrom(0x51, 4))   # アドレス 0x51 のデバイスから 4 バイト読み取る
-i2c.writeto(0x51, 'a') # アドレス 0x51 のデバイスに 'a' を書き込む
-print(i2c.readfrom(0x51, 4))   # アドレス 0x51 のデバイスから 4 バイト読み取る
+print(i2c.readfrom(0x51, 4))   # read 4 bytes from device with address 0x51
+i2c.writeto(0x51, 'a') # write 'a' to device with address 0x51
+print(i2c.readfrom(0x51, 4))   # read 4 bytes from device with address 0x51
 i2c.writeto(0x51, 'b')
 print(i2c.readfrom(0x51, 4)) 
 
@@ -223,48 +213,50 @@ print(i2c.readfrom(0x51, 4))
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/XIAO_SAMD/img/8.png" /></div>
 
-
-Micropython に精通していることで、さらに多くのことが可能になります。私たちはあなたがより多くの価値を創造することを楽しみにしています。ぜひあなたのプロジェクトを私たちと共有してください！
+MicroPythonに慣れることで、より多くのことができるようになります。私たちはあなたにより多くの価値を創造することを楽しみにしています。あなたのプロジェクトもぜひ私たちと共有してください！
 
 ### DAC サポート
-Aleksei Tertychnyi 氏にコードを提供していただきありがとうございます。関連するすべての機能は彼によって開発および貢献されました。
+
+コードを提出してくださったAleksei Tertychnyiに感謝します。関連するすべての機能は彼によって開発され、貢献されました。
+
 ```python
 from machine import Pin, Timer, DAC
  
 led = Pin(18, Pin.OUT)
 counter = 0
 
-dac = DAC(0) # A0 出力の DAC
+dac = DAC(0) #DAC on A0 output
  
 def loop(tim):
     global counter
-    led.value(counter % 2)
-    print('DAC 値: ', end =" ")
+    led.value(counter%2)
+    print('DAC value: ', end =" ")
     print(counter)
-    dac.write(counter % 1024)
+    dac.write(counter%1024)
     counter = counter + 1
  
 tim = Timer(-1)
 tim.init(period=1000, mode=Timer.PERIODIC, callback=loop)
 ```
-**ピン A0** の電圧は徐々に増加し始め、約 *3.3V* に達した後、*0V* に落ち、サイクルが繰り返されます。
+
+**ピンA0**の電圧は徐々に増加し始め、約*3.3V*で最大値に達した後、*0V*まで下がり、このサイクルが繰り返されます。
 
 ## MicroPython デバイスコンソール
 
-私たちのパートナー **Neil** が MicroPython を使用して XIAO 用のコマンドラインコンソールプログラムを書いてくれました。このプログラムを使用すると、ファイルのアップロード、ダウンロード、削除が簡単に行えます。彼の XIAO への貢献に感謝します！
+私たちのパートナーである**Neil**が、MicroPythonを使用してXIAO用のコマンドラインコンソールプログラムを作成しました。このプログラムを使用すると、ファイルのアップロード、ダウンロード、削除を簡単に行うことができます。XIAOへの貢献に感謝いたします！
 
-<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細はこちら</font></span></strong></a></div>
+<div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://gitlab.cba.mit.edu/pub/upy/-/blob/main/upy.py" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細を見る</font></span></strong></a></div>
 
 ## 技術サポート & 製品ディスカッション
 
-私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

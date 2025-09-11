@@ -70,8 +70,8 @@ Your TRMNL credentials are sensitive information. Never share them publicly or c
 
 Once you have your materials and purchased TRMNL access, you can proceed with connecting your device to TRMNL's platform. If you encounter any issues or have questions, you can contact the TRMNL team directly at team@usetrmnl.com.
 
-
 ### Firmware Flashing
+
 :::tip
 If you got a brand new kit, it will have firmware inside. So you can skip this step.
 :::
@@ -98,7 +98,7 @@ Please use **FW 1.5.12** or newer firmware for Seeed compatibility.
 
 1. **Clone the Firmware Repository**
 
-  - Visit the [official firmware repository](https://github.com/usetrmnl/trmnl-firmware) and clone it:
+- Visit the [official firmware repository](https://github.com/usetrmnl/trmnl-firmware) and clone it:
 
     ```
     git clone https://github.com/usetrmnl/trmnl-firmware.git
@@ -108,11 +108,12 @@ Please use **FW 1.5.12** or newer firmware for Seeed compatibility.
 
 There are times when we update our code and need to submit PR to TRMNL and review it before it is displayed, if you want to be the first to use the latest firmware version, you can also use the TRMNL repository under Seeed Project.
 
-  - Visit the [Seeed repository](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) and clone it:
+- Visit the [Seeed repository](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project) and clone it:
   
     ```
     git clone https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project.git
     ```
+
 :::
 
 2. **Install PlatformIO**
@@ -136,6 +137,7 @@ There are times when we update our code and need to submit PR to TRMNL and revie
 6. **Build and Upload**
 
    - In PlatformIO, click the "Upload" button, or run:
+
      ```
      pio run --target upload
      ```
@@ -143,7 +145,6 @@ There are times when we update our code and need to submit PR to TRMNL and revie
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/215.png" style={{width:1000, height:'auto'}}/></div>
 
    - The firmware will be compiled and uploaded to your device.
-
 
 ## Configure Wi-Fi and Send Playlists to TRMNL
 
@@ -189,6 +190,7 @@ To use your TRMNL 7.5inch(OG) DIY kit with TRMNL and send playlists, you first n
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
 > ⚠️ **Note:** The MAC address is only visible in the captive portal for 1-2 seconds. If you miss it, you can also:
+>
 > - Retrieve it from the VS Code > PlatformIO build/upload logs.
 > - Use the [usetrmnl.com/flash](https://usetrmnl.com/flash) method and check the Chrome/Edge/Firefox developer console for the MAC address during flashing.
 > - Find it in your router or Mesh network app's list of connected devices.
@@ -246,6 +248,7 @@ Always keep both options disabled to ensure stable operation of your XIAO ePaper
 We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY1 button in TRMNL firmware.**
 
 **KEY1 Usage:**
+
 1. **One Click:** to refresh pages immediately.
 2. **Double Click:** custom function, you can find it in setting page.
 3. **Long click:** about 5s, to reconfigure the network.
@@ -259,12 +262,14 @@ We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **
 The TRMNL Playlist feature allows you to control exactly what is displayed on your ePaper Panel and when. Here's a breakdown of the main sections and controls, as shown in the screenshot above:
 
 ### Playlist Overview
+
 - **Playlist Title**: At the top, you see the name of your TRMNL device (e.g., "MengDu's TRMNL").
 - **Display Time Range**: You can set the time range for when the playlist is active (e.g., from 00:00 to 23:45).
 - **Update Interval**: Choose how often the display updates (e.g., every 5 minutes).
 - **Add a Group / Add a Plugin**: Use these buttons to organize your playlist into groups or add new content plugins (such as weather, calendar, or custom text).
 
 ### Playlist Items
+
 Each row in the playlist represents a screen or widget that will be shown on your ePaper Panel (for reference only):
 
 1. **Weather**
@@ -278,18 +283,19 @@ Each row in the playlist represents a screen or widget that will be shown on you
    - Also shows when it was last updated.
 
 For each item, you have several controls:
+
 - **Settings (gear icon)**: Configure the plugin's options.
 - **Delete (X icon)**: Remove the item from your playlist.
 - **Preview (eye icon)**: Preview what the screen will look like.
 - **Reorder (bars icon)**: Drag to change the order in which screens are displayed.
 
 ### Smart Playlist
+
 - **Smart Playlist Option**: At the bottom, you can choose whether to automatically skip screens whose content hasn't changed (e.g., "Never skip screens").
 
 > 📖 Want to learn more? Read the [Smart Playlists blog post](https://usetrmnl.com/blog/smart-playlists) for advanced tips and details.
 
 This flexible playlist system lets you fully customize what your ePaper Panel displays, how often it updates, and in what order. You can mix and match different plugins to create a personalized dashboard that fits your needs.
-
 
 ## Exploring TRMNL Plugins
 
@@ -298,10 +304,13 @@ TRMNL's plugin system is what makes your ePaper Panel truly powerful and customi
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/222.png" style={{width:900, height:'auto'}}/></div>
 
 ### What are Plugins?
+
 Plugins are individual content blocks that can show things like weather, calendar events, stock prices, RSS feeds, motivational quotes, GitHub activity, and much more. You can mix and match plugins to create a dashboard that fits your needs.
 
 ### Connected Plugins
+
 At the top of the Plugins page, you'll see all the plugins you've already connected to your TRMNL account. These are ready to be added to your playlist and displayed on your ePaper Panel. Examples include:
+
 - **Weather**: Show current weather conditions.
 - **Days Left This Year**: Countdown to the end of the year.
 - **Stock Price**: Track your favorite stocks.
@@ -310,6 +319,7 @@ At the top of the Plugins page, you'll see all the plugins you've already connec
 - **Language Learning, Motivational Quote, Custom Text**: Personalize your display with learning tools or custom messages.
 
 ### Plugin Marketplace
+
 Below your connected plugins, you'll find the plugin marketplace. Here you can browse, search, and discover new plugins to add to your device. Plugins are organized by categories and tags (such as #productivity, #news, #ecommerce, etc.), making it easy to find what you need.
 
 - **Browse & Search**: Use the search bar or tags to quickly find plugins that interest you.
@@ -342,9 +352,9 @@ Special thanks to the entire **TRMNL team** for their strong support and invalua
 
 Your expertise and commitment have made this integration possible and greatly improved the user experience for the TRMNL 7.5inch(OG) DIY kit community.
 
-
 ## Resources
-- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)   
+
+- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
 - **[Hardware]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
 - **[Printable]** [triangular base](https://www.printables.com/model/1354873)  
 - **[Printable]** [protected triangular base](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
@@ -356,22 +366,18 @@ Your expertise and commitment have made this integration possible and greatly im
 - **[Makerworld]** [protected triangular base](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L-shaped base](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
-

@@ -106,8 +106,9 @@ void loop() {
 ```
 
 ## Serial
+
 Use Serial1 to use the UART via GPIO instead of USB. You can use both concurrently as well.
-Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message. 
+Use pin D6 as the TX pin of UART and pin D7 as RX pin of UART to send the "Hello World!" message.
 
 ```cpp
 void setup() {
@@ -129,18 +130,16 @@ void loop() {
 |-----------|-----------|
 | GND       | GND       |
 | VCC       | 5V        |
-| SDA       | SDA       | 
+| SDA       | SDA       |
 | SCL       | SCL       |
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-I2C-2.png" alt="pir" width={1000} height="auto" /></p>
-
 
 - **Step 2.** Open Arduino IDE, navigate to `Sketch > Include Library > Manage Libraries...`
 
 - **Step 3.** Search for **u8g2** and install it
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/u8g2-install.png" alt="pir" width={600} height="auto" /></p>
-
 
 - **Step 4.** Upload the following code to display text strings on the OLED Display
 
@@ -174,14 +173,13 @@ void loop(void) {
 |-----------|------------|
 | GND        | GND       |
 | 5V         | 5V        |
-| SCL        | SCK       | 
+| SCL        | SCK       |
 | SI         | MOSI      |
 | RES        | D3        |
 | D/C        | D4        |
 | CS         | D5        |
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/OLED-SPI.png" alt="pir" width={1000} height="auto" /></p>
-
 
 - **Step 2.** This OLED display supports both I2C and SPI communication, and the default model is I2C. To use SPI mode, you need to refer [Grove - OLED Display 1.12 (SH1107) V3.0 wiki](https://wiki.seeedstudio.com/Grove-OLED-Display-1.12-SH1107_V3.0/#software-i2c) to change the OLED display communication to SPI before proceeding further
 

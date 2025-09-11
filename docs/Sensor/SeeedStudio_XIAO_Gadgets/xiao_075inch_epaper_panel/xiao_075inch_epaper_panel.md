@@ -27,61 +27,58 @@ Powered by XIAO ESP32-C3, this 7.5 inch ePaper display is a versatile, energy-ef
 - Arduino Development Support
 - Elegant Form Factor
 
-
 ### Specifications
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Item</th>
-			<th>Description</th>
-		</tr>
-		<tr>
-			<td>MCU</td>
-			<td><a href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/">XIAO ESP32-C3</a></td>
-		</tr>
-		<tr>
-			<td>Display</td>
-			<td>7.5" Monochrome ePaper Display</td>
-		</tr>
-		<tr>
-			<td>Resolution</td>
-			<td>800 x 480</td>
-		</tr>
-		<tr>
-			<td>Battery</td>
-			<td>2000mAh</td>
-		</tr>
-		<tr>
-			<td>Dimension</td>
-			<td>178 x 131 x 19 mm</td>
-		</tr>
-		<tr>
-			<td>Weight</td>
-			<td>218g</td>
-		</tr>
-		<tr>
-			<td>Operating Temperature</td>
-			<td>-25°C to 50°C</td>
-		</tr>
-		<tr>
-			<td>Power Supply</td>
-			<td>USB Type-C 5V</td>
-		</tr>
+ <table align="center">
+  <tr>
+   <th>Item</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>MCU</td>
+   <td><a href="https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/">XIAO ESP32-C3</a></td>
+  </tr>
+  <tr>
+   <td>Display</td>
+   <td>7.5" Monochrome ePaper Display</td>
+  </tr>
+  <tr>
+   <td>Resolution</td>
+   <td>800 x 480</td>
+  </tr>
+  <tr>
+   <td>Battery</td>
+   <td>2000mAh</td>
+  </tr>
+  <tr>
+   <td>Dimension</td>
+   <td>178 x 131 x 19 mm</td>
+  </tr>
+  <tr>
+   <td>Weight</td>
+   <td>218g</td>
+  </tr>
+  <tr>
+   <td>Operating Temperature</td>
+   <td>-25°C to 50°C</td>
+  </tr>
+  <tr>
+   <td>Power Supply</td>
+   <td>USB Type-C 5V</td>
+  </tr>
         <tr>
             <td>Enclosure</td>
             <td>3D Printing (PLA)</td>
         </tr>
-	</table>
+ </table>
 </div>
 
 ## Hardware Overview
 
 The XIAO 7.5" ePaper Panel consists of several key components as shown in the exploded view diagram:
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/207.jpg" style={{width:800, height:'auto'}}/></div>
-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/208.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -120,7 +117,7 @@ The XIAO 7.5" ePaper Panel includes two essential buttons located behind the sta
   3. Press the Reset button once while holding Boot
   4. Release Reset, then release Boot
   5. Unplug and replug the power cable
-    
+
 - **Reset Button**: Used to restart the program. Simply press once to reset.
 
 These buttons are critical for device programming, firmware updates, and recovery when the device becomes unresponsive.
@@ -129,11 +126,11 @@ These buttons are critical for device programming, firmware updates, and recover
 
 The following Wiki pages provide detailed information about different ways to program and use your XIAO 7.5" ePaper Panel:
 
-* [**Works with ESPHome in Home Assistant**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome) - Configure and control your ePaper Panel through ESPHome integration, ideal for Home Assistant users to create custom dashboards.
+- [**Works with ESPHome in Home Assistant**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_esphome) - Configure and control your ePaper Panel through ESPHome integration, ideal for Home Assistant users to create custom dashboards.
 
-* [**Works with Arduino**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino/) - Program your device using Arduino IDE with our library and examples for custom applications.
+- [**Works with Arduino**](https://wiki.seeedstudio.com/xiao_075inch_epaper_panel_arduino/) - Program your device using Arduino IDE with our library and examples for custom applications.
 
-* [**Works with TRMNL**](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl) - Control your display with trmnl, an open-source platform for smart visual dashboard management.
+- [**Works with TRMNL**](https://wiki.seeedstudio.com/xiao_7_5_inch_epaper_panel_with_trmnl) - Control your display with trmnl, an open-source platform for smart visual dashboard management.
 
 ## Resources
 
@@ -141,22 +138,18 @@ The following Wiki pages provide detailed information about different ways to pr
 - **[PDF]**: [ePaper Driver Board SCH PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 - **[BAMBU]** [Jonathan Thomson - XIAO 7.5" ePaper Panel Wall Mount](https://makerworld.com/en/models/1487711-seeed-studio-xiao-7-5-epaper-panel-wall-mount#profileId-1554538)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-
-

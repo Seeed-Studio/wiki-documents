@@ -45,7 +45,6 @@ It is used where satellite navigation such as GPS is inadequate due to various c
 
 The most common and widespread localization technique used for positioning with wireless access points is based on measuring the intensity of the received signal (received signal strength indication or RSSI) and the method of "fingerprinting". Typical parameters useful to geolocate the wireless access point include its SSID and MAC address. The accuracy depends on the number of nearby access points whose positions have been entered into the database. The Wi-Fi hotspot database gets filled by correlating mobile device GPS location data with Wi-Fi hotspot MAC addresses. The possible signal fluctuations that may occur can increase errors and inaccuracies in the path of the user. To minimize fluctuations in the received signal, there are certain techniques that can be applied to filter the noise.
 
-
 This is the theoretical basis for XIAO's ability to obtain a position without the aid of a GPS module. We will also compare the best way to obtain positioning with the help of the two methods above, combined with the use of the Round Display, which displays the coordinates as a map on the screen. Below is the table of contents and a summary of the paper.
 
 - [Connect to the network and obtain public IP with the XIAO ESP32S3](#connect-to-the-network-and-obtain-public-ip-with-the-xiao-esp32s3)
@@ -261,7 +260,6 @@ Next, we can look at how accurate the location is by IP address. The [red marked
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/1.png" style={{width:1000, height:'auto'}}/></div>
 
 It can be seen that the error in this type of positioning is in the kilometre range, which is far from what we would expect from a tracker.
-
 
 ## Download static images from Google Maps via HTTPS service
 
@@ -585,11 +583,9 @@ void getLocation(){
 
 Let's see how the coordinates obtained by means of WFPS differ from the actual position.
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-ESP32S3-Geolocation/13.png" style={{width:1000, height:'auto'}}/></div>
 
 The deviation in position is already around 1 km! This performance is even better than some GPS modules.
-
 
 ## Live updates on the latest location
 
@@ -639,7 +635,6 @@ Finally, the full program code for obtaining positioning via the WFPS method is 
 - **[STP]** [XIAO ESP32S3 Sense housing design (top)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp)
 - **[STP]** [XIAO ESP32S3 Sense housing design (bottom)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp)
 
-
 ## Troubleshooting
 
 ### Q1: Why am I not getting the exact IP address using the `WiFi.hostByName()` function?
@@ -661,14 +656,11 @@ If this still does not solve the problem, we recommend using the second method o
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

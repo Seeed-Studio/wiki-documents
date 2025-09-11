@@ -17,8 +17,6 @@ last_update:
 ---
 
 
-
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/Wiki XIAO MG24-HA-Matter.png" style={{width:900, height:'auto'}}/></div>
 
 ## Introduction
@@ -26,14 +24,18 @@ last_update:
 In this wiki, we will utilize the Sonoff Zigbee 3.0 USB Dongle to access the HomeAssistant and thus act as a border router, while the Seeed Studio XIAO MG24 will act as a Matter protocol device with the Thread network.for your convenience, we will take you through the following three questions to better engage in the process.***Thanks to the author [@tutoduino](https://tutoduino.fr/en/tutorials/matter-xiao-mg24/) for the WiKi thoughts***
 
 ### What is Matter ?
+
 Matter (formerly CHIP) is a universal application-layer standard developed by the Connectivity Standards Alliance (CSA).
+
 - Cross-vendor interoperability over IP networks (Wi-Fi/Ethernet/Thread)
 - Standardized device types (e.g., lights, door locks, thermostats)
 - Secure commissioning using QR codes/NFC
 - End-to-end encryption with Distributed Compliance Ledger (DCL)
 
 ### What is OpenThread ?
+
 OpenThread is an open-source implementation of the Thread networking protocol. It creates low-power, secure mesh networks for IoT devices using IEEE 802.15.4 radio technology. Key features:
+
 - Built-in IPv6 support (6LoWPAN)
 - Self-organizing network topology
 - AES-128 encryption for all communications
@@ -46,23 +48,23 @@ OpenThread is an open-source implementation of the Thread networking protocol. I
 After this short introduction to Matter and Thread, you now understand that Thread and Matter serve different purposes and operate at different layers of the technology stack. To recap:
 
 Thread:
+
 - Thread is a low-power, wireless mesh networking protocol designed for connected home devices. It provides a reliable and secure way for devices to communicate with each other and the internet.
 - Thread creates a local network that allows devices to talk to each other even if the internet goes down.
 
 Matter:
+
 - Matter is an application-layer protocol that sits on top of networking protocols like Thread, Wi-Fi, and Ethernet. It aims to simplify and unify the smart home ecosystem by ensuring that devices from different manufacturers can work together seamlessly.
 - Matter defines how devices communicate and interact at the application level, focusing on interoperability, security, and ease of use.
+
 Connection between Thread and Matter:
 
 - Matter can use Thread as one of its underlying network protocols. This means that devices using the Matter protocol can communicate over a Thread network.
 - The combination of Matter and Thread allows for a robust, secure, and interoperable smart home ecosystem where devices can communicate locally and efficiently.
 
-
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/HA_OpenThread/TOPPLOGY.jpg" style={{width:900, height:'auto'}}/></div>
 
 ## Hadware Overview
-
 
 <table align="center">
     <tr>
@@ -108,8 +110,6 @@ Connection between Thread and Matter:
     </tr>
 </table>
 
-
-
 ## Software Overview
 
 ### Flashing Sonoff ZBDongle-E dongle
@@ -120,24 +120,24 @@ The Sonoff ZBDongle-E dongle comes with firmware that only allows communication 
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/1.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/2.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/3.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/3.jpg"
             style={{width: 300, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -145,7 +145,6 @@ The Sonoff ZBDongle-E dongle comes with firmware that only allows communication 
     </tr>
     </table>
 </div>
-
 
 ### Matter Temperature and Humidity Sensor Device
 
@@ -244,16 +243,16 @@ You need to download two plugins based on the images。
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon1.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/addon2.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -270,16 +269,16 @@ Add the OpenThread Border Router plugin. This plugin allows you to create or joi
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread1.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread1.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread2.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread2.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -293,16 +292,16 @@ Select the corresponding network in the configuration of the Thread service.
     <tr>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread3.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread3.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
         </td>
         <td style={{width: '33.33%'}}>
         <div style={{textAlign: 'center'}}>
-            <img 
-            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread4.jpg" 
+            <img
+            src="https://files.seeedstudio.com/wiki/HA_OpenThread/thread4.jpg"
             style={{width: 400, height: 'auto', maxWidth: '100%'}}
             />
         </div>
@@ -338,7 +337,6 @@ To incorporate a new Matter device into your home automation system, choose "Add
     </tr>
 </table>
 
-
 ### HA panel to view temperature and humidity
 
 Once the QR code is successfully added, we can see our temperature and humidity sensor on the HA panel!
@@ -356,11 +354,11 @@ Once the QR code is successfully added, we can see our temperature and humidity 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Seeed Studio XIAO MG24 の使い方
+title: Seeed Studio XIAO MG24を始める
 description: |
 image: https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg
 slug: /ja/xiao_mg24_getting_started
@@ -7,95 +7,92 @@ keywords:
   - XIAO
   - MG24
 last_update:
-  date: 05/15/2025
+  date: 10/17/2024
   author: Jason
 sidebar_position: 0
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/top.jpg" style={{width:600, height:'auto'}}/></div>
 <br />
 
-# Seeed Studio XIAO MG24(Sense) の使い方
+# Seeed Studio XIAO MG24(Sense)を始める
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeed Studio XIAO MG24</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeed Studio XIAO MG24</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop0.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
+
 </div>
 
-## 概要
+## はじめに
 
-**Seeed Studio XIAO MG24** は、Silicon Labs の MG24 をベースにした小型開発ボードです。XIAO MG24 は **ARM Cortex-M33 コア**、**32ビット RISC** アーキテクチャを採用し、最大クロック速度は 78MHz で、DSP 命令と FPU 浮動小数点演算をサポートし、強力な計算能力を備えています。また、**AI/ML ハードウェアアクセラレータ MVP** を内蔵しており、AI/機械学習アルゴリズムを効率的に処理できます。さらに、優れた RF 性能を持ち、送信 **出力は最大 +19.5 dBm**、受信感度は **最低 -105.4 dBm** です。**Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** などの複数の IoT およびワイヤレス通信プロトコルをサポートしています。
+**Seeed Studio XIAO MG24** は、Silicon Labs の MG24 をベースにしたミニ開発ボードです。XIAO MG24 は **ARM Cortex-M33 コア**、**32ビット RISC** アーキテクチャをベースとし、最大クロック速度 78MHz で、DSP 命令と FPU 浮動小数点演算をサポートし、強力な計算能力を持ち、内蔵の **AL/ML ハードウェアアクセラレータ MVP** により、AI/機械学習アルゴリズムを効率的に処理できます。次に、優れた RF 性能を持ち、送信**電力は最大+19.5 dBm**、受信感度は**最低-105.4 dBm**です。**Matter、Thread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh** などの複数の IoT および無線伝送プロトコルをサポートしています。
 
 ### 仕様
 
 <table align="center">
-	<tr>
-	    <th>項目</th>
-	    <th>Seeed Studio XIAO MG24</th>
+ <tr>
+     <th>項目</th>
+     <th>Seeed Studio XIAO MG24</th>
         <th>Seeed Studio XIAO MG24 Sense</th>
-	</tr>
-	<tr>
-	    <th>プロセッサ</th>
-	    <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
-	</tr>
-	<tr>
-	    <th>ワイヤレス</th>
-	    <td align="center" colspan="2">完全な 2.4GHz Wi-Fi サブシステム <br></br> BLE: Bluetooth 5.3, Bluetooth mesh</td>
-	</tr>
+ </tr>
+ <tr>
+     <th>プロセッサ</th>
+     <td align="center" colspan="2">Silicon Labs EFR32MG24 <br></br>ARM Cortex-M33 @ 78MHz </td>
+ </tr>
+ <tr>
+     <th>無線</th>
+     <td align="center" colspan="2">独自 2.4 GHz <br></br> Zigbee PRO/Green Power プロトコル <br></br> BLE: Bluetooth 5.3、Bluetooth mesh</td>
+ </tr>
     <tr>
-	    <th>内蔵センサー</th>
-	    <td align="center"> - </td>
-        <td align="center">6軸 IMU(LSM6DS3TR-C) <br></br>アナログマイク(MSM381ACT001)</td>
-	</tr>
+     <th>内蔵センサー</th>
+     <td align="center"> - </td>
+        <td align="center">6軸 IMU(LSM6DS3TR-C) <br></br>アナログマイクロフォン(MSM381ACT001)</td>
+ </tr>
     <tr>
-	    <th>メモリ</th>
-	    <td align="center">256kB RAM & 1538KB + 4MB フラッシュ</td>
-        <td align="center">256kB RAM & 1538KB + 4MB フラッシュ</td>
-	</tr>
+     <th>メモリ</th>
+     <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
+        <td align="center">256kB RAM & 1538KB + 4MB Flash</td>
+ </tr>
     <tr>
-	    <th>インターフェース</th>
-	    <td>2x UART, 1x IIC, 2x SPI, 18x アナログ, 18x デジタル, ALL PWM, 1x ユーザー LED, 1x 充電 LED <br></br> 1x リセットボタン</td>
-	    <td>2x UART, 1x IIC, 2x SPI, 18x アナログ, 18x デジタル, ALL PWM, 1x ユーザー LED, 1x 充電 LED <br></br> 1x リセットボタン</td>
-	</tr>
+     <th>インターフェース</th>
+     <td>2x UART、1x IIC、2x SPI、18x アナログ、18x デジタル、ALL PWM、1x ユーザー LED、1x 充電 LED <br></br> 1x リセットボタン、 </td>
+     <td>2x UART、1x IIC、2x SPI、18x アナログ、18x デジタル、ALL PWM、1x ユーザー LED、1x 充電 LED <br></br> 1x リセットボタン、 </td>
+ </tr>
     <tr>
-	    <th>寸法</th>
-	    <td align="center">21 x 17.8mm</td>
+     <th>寸法</th>
+     <td align="center">21 x 17.8mm</td>
         <td align="center">21 x 17.8mm</td>
-	</tr>
+ </tr>
     <tr>
-	    <th rowspan="2">電源</th>
-	    <td colspan="2" align="center">入力電圧 (Type-C): 5V@14mA <br></br> 入力電圧 (BAT): 3.7V@7mA</td>
-	</tr>
+     <th rowspan="2">電源</th>
+     <td colspan="2" align="center">入力電圧 (Type-C): 5V@14mA <br></br> 入力電圧 (BAT): 3.7V@7mA</td>
+ </tr>
     <tr>
-	    <td align="center">バッテリー充電電流: <strong>200mA</strong></td>
-		<td align="center">バッテリー充電電流: <strong>200mA</strong></td>
-	</tr>
+     <td align="center">バッテリー充電電流: <strong>200mA</strong></td>
+  <td align="center">バッテリー充電電流: <strong>200mA</strong></td>
+ </tr>
     <tr>
-        <th>低消費電力モード</th>
+        <th>低消費電力モデル</th>
         <td>通常: <strong>3.7V/6.71 mA</strong> <br></br> スリープモード: <strong>3.7V/1.91mA</strong> <br></br> ディープスリープモード: <strong>3.7V/1.95μA</strong></td>
         <td>通常: <strong>3.7V/6.71 mA</strong> <br></br> スリープモード: <strong>3.7V/1.91mA</strong> <br></br> ディープスリープモード: <strong>3.7V/1.95μA</strong></td>
     </tr>
@@ -105,201 +102,202 @@ https://github.com/Seeed-Studio/wiki-documents/issues
     </tr>
 </table>
 
-### 特徴
+### 機能
 
-- **強力な CPU**: ARM Cortex-M33 コア、最大クロック速度 78MHz、DSP 命令と FPU 浮動小数点演算をサポートする 32ビット RISC アーキテクチャ。
-- **超低消費電力**: RX 電流 4.6mA/TX 電流 5mA (0dBm)、複数の低消費電力スリープモード。
-- **強力な AI**: AI/ML ハードウェアアクセラレータ MVP を内蔵し、AI/機械学習アルゴリズムを効率的に処理可能。
-- **多様なワイヤレス通信**: 2.4GHz マルチプロトコルワイヤレストランシーバーを統合し、Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth mesh などの複数の IoT プロトコルをサポート。
-- **優れた RF 性能**: 送信出力最大 +19.5 dBm、受信感度最低 -105.4 dBm (250kbps DSSS)。
-- **強力なセキュリティ**: Secure Vault の強力なセキュリティ機能を備え、セキュアブート、暗号化、乱数生成、改ざん防止、セキュアデバッグなどを提供。
-- **超小型サイズ**: 21 x 17.8mm。
-- **豊富なオンチップリソース**: 最大 1536KB フラッシュと 256KB RAM を備え、十分なストレージスペースを提供。
-- **豊富なインターフェース**: 12ビット 1Msps ADC、温度センサー、アナログコンパレータ、DCDC などの豊富な周辺機器を統合し、最大 22 ピン、2 USART、2 低消費電力 UART、1 IIC などのインターフェースを提供。
+- **強力なCPU**：ARM Cortex-M33コア、最大クロック速度78MHz、DSP命令とFPU浮動小数点演算をサポート、32ビットRISCアーキテクチャ。
+- **超低消費電力**：RX電流4.6mA/TX電流5mA（0dBm）、複数の低消費電力スリープモード
+- **強力なAI**：AI/MLハードウェアアクセラレータMVPを内蔵、AI/機械学習アルゴリズムを効率的に処理可能。
+- **マルチスタイル無線伝送**：2.4GHzマルチプロトコル無線トランシーバーを統合、Matter、OpenThread、Zigbee、Bluetooth LE 5.3、Bluetooth meshなど複数のIoTプロトコルをサポート。
+- **優れたRF性能**：優秀なRF性能、送信電力最大+19.5dBm、受信感度最低-105.4dBm（250kbps DSSS）
+- **強力なセキュリティ**：Secure Vaultの強力なセキュリティ機能、セキュアブート、暗号化、乱数生成、改ざん防止、セキュアデバッグなどを含む。
+- **超小型サイズ**：21 x 17.8mm。
+- **豊富なオンチップリソース**：最大1536KB FlashおよびRAM 256KB、十分なストレージ容量。
+- **豊富なインターフェース**：12ビット1Msps ADC、温度センサー、アナログコンパレータ、DCDCなどの豊富な周辺機器を統合、最大22ピン、2 USART、2低消費電力UART、1 IICなどのインターフェースを搭載。
 
 ## ハードウェア概要
 
 <table align="center">
-	<tr>
-	    <th>XIAO MG24 センス表示図</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24sense_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
-  	<tr>
-	    <th>XIAO MG24 表示図</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>XIAO MG24 Sense 表示図</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24sense_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+   <tr>
+     <th>XIAO MG24 表示図</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24_pinlist.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO MG24 / XIAO MG24(Sense) ピンリスト</th>
-	</tr>
+     <th>XIAO MG24/ XIAO MG24(Sense) ピンリスト</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/modifyMG24.png" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/modifyMG24.png" style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 :::tip
-  2つの開発ボードの違いは、MG24 Senseにはマイクロフォンセンサーと6軸加速度センサーが搭載されている点で、MG24にはこれらがありません。
+  2つの開発ボードの違いは、MG24 Senseにはマイクロフォンセンサーと6軸加速度センサーが搭載されているのに対し、MG24には搭載されていないことです。
 :::
 
-- 5V - これはUSBポートからの5V出力です。また、電圧入力としても使用できますが、外部電源とこのピンの間にアノードをバッテリー側、カソードを5Vピン側に接続したダイオード（ショットキー、信号、電力）が必要です。
-- 3V3 - これはオンボードレギュレーターからの安定化出力です。
-- GND - 電源/データ/信号のグランドです。
-
-
+- 5V - これはUSBポートからの5V出力です。電圧入力としても使用できますが、外部電源とこのピンの間に何らかのダイオード（ショットキー、信号、電源）を配置し、アノードをバッテリー側、カソードを5Vピン側に接続する必要があります。
+- 3V3 - これはオンボードレギュレーターからの調整された出力です。
+- GND - 電源/データ/信号グランド
 
 ## はじめに
 
-XIAO MG24 を迅速に使い始めるために、以下のハードウェアおよびソフトウェアの準備をお読みください。
+XIAO MG24をより早く使い始められるように、以下のハードウェアとソフトウェアの準備をお読みになり、XIAOを準備してください。
 
 ### 工場出荷時の手順
 
-新しい XIAO MG24 および XIAO MG24 Sense には、簡単な工場出荷時プログラムが事前にインストールされています。
+新しいXIAO MG24とXIAO MG24 Senseには、それぞれ簡単な工場出荷プログラムが事前にプログラムされています。
 
 1. **XIAO MG24**
 
-通常版にプリセットされている工場出荷時プログラムは「点滅ライト」です。XIAO を電源に接続すると、オレンジ色のユーザーインジケーターが点灯します。
+通常版に事前設定されている工場出荷プログラムはBlink Lightです。XIAOに電源を投入すると、オレンジ色のユーザーインジケーターが点灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/00.gif" style={{width:500, height:'auto'}}/></div>
 
 2. **XIAO MG24 Sense**
 
-通常版にプリセットされている工場出荷時プログラムは「大声で叫ぶほどライトが明るくなる」です。
+通常版に事前設定されている工場出荷プログラムは、大きな声を出すほど明るく光るというものです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/99.gif" style={{width:500, height:'auto'}}/></div>
 
 ### ハードウェアの準備
 
-以下を準備してください：
+以下を準備する必要があります：
 
 - 1 x [Seeed Studio XIAO MG24](https://www.seeedstudio.com/Seeed-Studio-XIAO-MG24-p-6247.html)
-- 1 x コンピュータ
-- 1 x USB Type-C ケーブル
+- 1 x コンピューター
+- 1 x USB Type-Cケーブル
 
 :::tip
-一部のUSBケーブルは電力供給のみでデータ転送ができません。USBケーブルをお持ちでない場合や、USBケーブルがデータ転送可能かどうかわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) を確認してください。
+一部のUSBケーブルは電源供給のみでデータ転送ができません。USBケーブルをお持ちでない場合や、お使いのUSBケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)をご確認ください。
 :::
 
 ### ソフトウェアの準備
 
-XIAO MG24 の推奨プログラミングツールは Arduino IDE です。そのため、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
+XIAO MG24の推奨プログラミングツールはArduino IDEですので、ソフトウェア準備の一環としてArduinoのインストールを完了する必要があります。
 
 :::tip
-Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
+- **ステップ1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
+        <strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong>
+    </a>
 </div>
 
 <br></br>
 
-- **ステップ 2.** Arduino アプリケーションを起動します。
-- **[ステップ 3](#add-board).** Arduino IDE に XIAO MG24 オンボードパッケージを追加し、「OK」をクリックします。
-- **ステップ 4.** Arduino IDE を閉じて再度開きます。
+- **ステップ2.** Arduinoアプリケーションを起動します。
+- **[ステップ3](#add-board).** XIAO MG24オンボードパッケージをArduino IDEに追加し、`OK`をクリックします。
+- **ステップ4.** Arduino IDEを閉じて再度開きます。
 
-#### XIAO MG24 ボードを追加する {#add-board}
+#### XIAO MG24ボードの追加 {#add-board}
 
-XIAO MG24 ボードをインストールするには、以下の手順に従ってください：
+XIAO MG24ボードをインストールするには、以下の手順に従ってください：
 
 ```
 https://siliconlabs.github.io/arduino/package_arduinosilabs_index.json 
 ```
 
-1. 上記のボードマネージャーURLを Arduino IDE の設定に追加します。
+1. 上記のボードマネージャーURLをArduino IDEの設定に追加します。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/13(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
-2. XIAO MG24 ボードパッケージをダウンロードします。
+2. XIAO MG24ボードパッケージをダウンロードします。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/14(1).png" style={{width: 'auto', height: 'auto'}}/></div>
 
-:::tip 
-入力後に見つからない場合は、Arduino IDE を再起動してください。
+:::tip
+入力後に見つからない場合は、Arduino IDEを再起動してください。
 :::
-3. `XIAO_MG24` バリアントを選択します。
+
+3. `XIAO_MG24`バリアントを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/15.png" style={{width:1000, height:'auto'}}/></div>
 
 これでコーディングを楽しめます ✨。
 
-#### 最初の点滅プログラムを実行する
+#### 最初のBlinkプログラムを実行する
 
-- **ステップ 1.** Arduino アプリケーションを起動します。
+- **ステップ 1.** Arduinoアプリケーションを起動します。
 
-- **ステップ 2.** **File > Examples > 01.Basics > Blink** に移動し、プログラムを開きます。
+- **ステップ 2.** **File > Examples > 01.Basics > Blink**に移動し、プログラムを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/12(1).png" style={{width:1000, height:'auto'}}/></div>
 
-- **ステップ 3.** ボードモデルを **XIAO MG24** に選択し、正しいポート番号を選択してプログラムをアップロードします。
+- **ステップ 3.** ボードモデルを**XIAO MG24**に選択し、正しいポート番号を選択してプログラムをアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/16.png" style={{width:1000, height:'auto'}}/></div>
 
-プログラムが正常にアップロードされると、以下の出力メッセージが表示され、XIAO MG24 の右側にあるオレンジ色のLEDが点滅しているのを確認できます。
-
-
+プログラムが正常にアップロードされると、以下の出力メッセージが表示され、XIAO MG24の右側にあるオレンジ色のLEDが点滅していることが確認できます。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>MG24 点滅コード</th>
-			<th>LED 点滅表示</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/8.gif" style={{width:400, height:'auto'}}/></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>MG24 BLink Code</th>
+   <th>LED BLink DisPlay</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/7.png" style={{width:700, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/8.gif" style={{width:400, height:'auto'}}/></div></td>
+  </tr>
+ </table>
+
 </div>
 
-## バッテリー使用
+## バッテリー使用方法
 
-XIAO MG24 には内蔵の電源管理チップが搭載されており、バッテリーを使用して独立して電源を供給したり、XIAO MG24 の USB ポートを介してバッテリーを充電することができます。
+XIAO MG24 には内蔵電源管理チップが搭載されており、バッテリーを使用してXIAO MG24 を独立して電源供給したり、XIAO MG24 のUSBポートを通じてバッテリーを充電したりすることができます。
 
-XIAO にバッテリーを接続したい場合は、適格な充電式 3.7V リチウムバッテリーを購入することをお勧めします。バッテリーをはんだ付けする際は、正極と負極を区別するよう注意してください。電源の負極は USB ポートに最も近い側であり、電源の正極は USB ポートから離れた側です。
+XIAOにバッテリーを接続したい場合は、認定された充電式3.7Vリチウムバッテリーの購入をお勧めします。バッテリーをはんだ付けする際は、正極と負極の端子を区別するよう注意してください。電源の負極端子はUSBポートに最も近い側にあり、電源の正極端子はUSBポートから離れた側にあります。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/4444.png" alt="pir" width="800" height="auto"/></div>
 
 :::caution
-はんだ付けの際に正極と負極を短絡させてバッテリーや機器を損傷しないよう注意してください。
+はんだ付けの際は、正極と負極の端子をショートさせてバッテリーや機器を焼損させないよう注意してください。
 :::
 
-**バッテリー使用に関する注意事項:**
+**バッテリー使用に関する注意事項：**
 
-1. 規格に適合した適格なバッテリーを使用してください。
-2. バッテリーを使用中でも、データケーブルを介して XIAO をコンピュータデバイスに接続できます。XIAO には内蔵の回路保護チップが搭載されており、安全です。
-3. バッテリー駆動時、XIAO MG24 には LED が点灯しません（特定のプログラムを書き込んでいない限り）。LED の状態で XIAO MG24 が動作しているかどうかを判断しないでください。プログラムによって合理的に判断してください。
-4. 現時点では、ソフトウェアを通じてバッテリー残量を確認する方法は提供していません（利用可能なチップピンがないため）。定期的にバッテリーを充電するか、マルチメーターを使用してバッテリー残量を確認してください。
+1. 仕様に適合した認定バッテリーを使用してください。
+2. バッテリーを使用している間、XIAOをデータケーブルでコンピューターデバイスに接続することができます。XIAOには内蔵回路保護チップがあるため安全です。
+3. XIAO MG24 はバッテリー電源時にはLEDが点灯しません（特定のプログラムを書いていない限り）。LEDの状態でXIAO MG24 が動作しているかどうかを判断せず、プログラムによって合理的に判断してください。
+4. 申し訳ございませんが、現在ソフトウェアを通じてバッテリー残量を確認する方法はありません（利用可能なチップピンがないため）。定期的にバッテリーを充電するか、マルチメーターを使用してバッテリーレベルを確認する必要があります。
 
-また、バッテリー充電の状態をユーザーに通知するために、充電中のバッテリー状態を示す赤色のインジケーターライトを設計しました。
+同時に、バッテリー充電用の赤色インジケーターライトを設計し、インジケーターライトの表示を通じて充電中のバッテリーの現在の状態をユーザーに知らせます。
 
-1. XIAO MG24 にバッテリーが接続されていない場合、Type-C ケーブルを接続すると赤色のライトが点灯し、30 秒後に消灯します。
-2. バッテリーが接続され、Type-C ケーブルが充電のために接続されている場合、赤色のライトが点滅します。
-3. Type-C を接続してバッテリーが完全に充電されると、赤色のライトが消灯します。
+1. XIAO MG24 にバッテリーが接続されていない場合、Type-Cケーブルを接続すると赤色ライトが点灯し、30秒後に消灯します。
+2. バッテリーが接続され、Type-Cケーブルが接続されて充電中の場合、赤色ライトが点滅します。
+3. Type-Cを接続してバッテリーが完全に充電されると、赤色ライトが消灯します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/battery_mg24.jpg" style={{width:600, height:'auto'}}/></div>
 
 ## バッテリー電圧の読み取り
 
 **ソフトウェアコード**
+
 ```cpp
 /*
   AnalogReadSerial
 
-  ピン 0 のアナログ入力を読み取り、その結果をシリアルモニターに出力します。
-  シリアルプロッター（ツール > シリアルプロッターメニュー）を使用してグラフィカルに表示することもできます。
-  ポテンショメータの中央ピンをピン A0 に接続し、外側のピンを +5V とグラウンドに接続してください。
+  Reads an analog input on pin 0, prints the result to the Serial Monitor.
+  Graphical representation is available using Serial Plotter (Tools > Serial Plotter menu).
+  Attach the center pin of a potentiometer to pin A0, and the outside pins to +5V and ground.
 
-  このサンプルコードはパブリックドメインです。
+  This example code is in the public domain.
 
   https://www.arduino.cc/en/Tutorial/BuiltInExamples/AnalogReadSerial
 */
 
-// setup ルーチンはリセットボタンを押したときに 1 回実行されます:
+// the setup routine runs once when you press reset:
 void setup() {
   Serial.begin(115200);
   pinMode(PD3, OUTPUT);
@@ -310,30 +308,30 @@ void loop() {
   int voltageValue = analogRead(PD4);
   float voltage = voltageValue * (5.0 / 4095.0);
   
-  Serial.print("電圧: ");
+  Serial.print("Voltage: ");
   Serial.print(voltage, 2);
   Serial.println(" V");
-  delay(1000);  // 安定性のために読み取り間隔を遅延
+  delay(1000);  // delay in between reads for stability
 }
 ```
-**表示結果**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/55.png" alt="pir" width="800" height="auto"/></div>
 
 ## ディープスリープとスリープの例
 
-#### デモ1 : スリープモードとウェイクアップ
+#### デモ1：スリープモードとウェイクアップ
 
 ```cpp
+
 /*
-   ArduinoLowPower タイマー付きスリープの例
+   ArduinoLowPower timed sleep example
 
-   この例では、Arduino Low Powerライブラリを使用してデバイスを一定時間スリープさせる基本的な使い方を示します。
-   デバイスは2000msの間スリープモードに入ります。スリープ中、CPUは停止しますが、RAMの内容は保持されます。
+   The example shows the basic usage of the Arduino Low Power library by putting the device to sleep for a period of time.
+   The device will enter sleep mode for 2000ms. During sleep the CPU is stopped but the RAM retains its contents.
 
-   この例はすべてのSilicon Labs Arduinoボードと互換性があります。
+   This example is compatible with all Silicon Labs Arduino boards.
 
-   作成者: Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
 
 #include "ArduinoLowPower.h"
@@ -343,7 +341,7 @@ void setup()
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-  Serial.println("タイマー付きスリープ");
+  Serial.println("Sleep with timed wakeup");
 }
 
 void loop()
@@ -353,26 +351,26 @@ void loop()
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
   delay(500);
 
-  Serial.printf("スリープに入ります: %lu\n", millis());
+  Serial.printf("Going to sleep at %lu\n", millis());
   LowPower.sleep(2000);
-  Serial.printf("スリープから復帰しました: %lu\n", millis());
+  Serial.printf("Woke up at %lu\n", millis());
 }
 ```
 
-#### デモ2 : ディープスリープモードとウェイクアップ
+#### Demo2 : Deep Sleep Mode and wake-up
 
 ```cpp
 /*
-   ArduinoLowPower ディープスリープの例（外部またはタイマー付きウェイクアップ）
+   ArduinoLowPower deep sleep example with external or timed wakeup
 
-   この例では、Arduino Low Powerライブラリを使用してデバイスをディープスリープに入れる基本的な使い方を示します。
-   デバイスはスリープタイマーが切れるまでディープスリープ状態を維持します。
-   ディープスリープ中、デバイス全体が電源オフされますが、バックアップRAMやRTCなどの最小限の周辺機器は動作します。
-   これにより、CPUは停止し、RAMの内容は失われます。ウェイクアップ後、デバイスはスケッチの最初から再起動します。
+   The example shows the basic usage of the Arduino Low Power library by putting the device into deep sleep.
+   The device will remain in deep sleep until the sleep timer expires.
+   During deep sleep the whole device is powered down except for a minimal set of peripherals (like the Back-up RAM and RTC).
+   This means that the CPU is stopped and the RAM contents are lost - the device will start from the beginning of the sketch after waking up.
 
-   この例はすべてのSilicon Labs Arduinoボードと互換性があります。
+   This example is compatible with all Silicon Labs Arduino boards.
 
-   作成者: Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
 
 #include "ArduinoLowPower.h"
@@ -382,7 +380,7 @@ void setup()
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
-  Serial.println("ディープスリープタイマー付きウェイクアップ");
+  Serial.println("Deep sleep timed wakeup");
 }
 
 void loop()
@@ -392,29 +390,31 @@ void loop()
   digitalWrite(LED_BUILTIN, LED_BUILTIN_INACTIVE);
   delay(500);
 
-  Serial.printf("10秒間ディープスリープに入ります: %lu\n", millis());
+  Serial.printf("Going to deep sleep for 10s at %lu\n", millis());
   LowPower.deepSleep(10000);
 }
+
+
 ```
 
-#### デモ3 : フラッシュ付きディープスリープとウェイクアップ
+#### Demo3 : フラッシュとウェイクアップを使用したディープスリープモード
 
 :::tip
-フラッシュをディープスリープに設定する場合、0xb9レジスタを有効にする必要があります。
+フラッシュをディープスリープに設定したい場合は、0xb9レジスタを有効にする必要があります
 :::
 
 ```cpp
 /*
-   ArduinoLowPower ディープスリープの例（外部またはタイマー付きウェイクアップ）
+   ArduinoLowPower deep sleep example with external or timed wakeup
 
-   この例では、Arduino Low Powerライブラリを使用してデバイスをディープスリープに入れる基本的な使い方を示します。
-   デバイスはスリープタイマーが切れるまでディープスリープ状態を維持します。
-   ディープスリープ中、デバイス全体が電源オフされますが、バックアップRAMやRTCなどの最小限の周辺機器は動作します。
-   これにより、CPUは停止し、RAMの内容は失われます。ウェイクアップ後、デバイスはスケッチの最初から再起動します。
+   The example shows the basic usage of the Arduino Low Power library by putting the device into deep sleep.
+   The device will remain in deep sleep until the sleep timer expires.
+   During deep sleep the whole device is powered down except for a minimal set of peripherals (like the Back-up RAM and RTC).
+   This means that the CPU is stopped and the RAM contents are lost - the device will start from the beginning of the sketch after waking up.
 
-   この例はすべてのSilicon Labs Arduinoボードと互換性があります。
+   This example is compatible with all Silicon Labs Arduino boards.
 
-   作成者: Tamas Jozsi (Silicon Labs)
+   Author: Tamas Jozsi (Silicon Labs)
  */
 #include <Arduino.h>
 #include "ArduinoLowPower.h"
@@ -457,6 +457,7 @@ void setup()
   pinMode(MOSI_PIN, OUTPUT);
   pinMode(MISO_PIN, INPUT);
 
+
   //SW
   pinMode(PD3, OUTPUT);
   pinMode(PB5, OUTPUT);
@@ -469,7 +470,7 @@ void setup()
   digitalWrite(PB0, LOW); //MIC
   digitalWrite(PA6, HIGH);  //FLASH
 
-  //Serial.println("ディープスリープタイマー付きウェイクアップ");
+  //Serial.println("Deep sleep timed wakeup");
   writeEnable();
   digitalWrite(CS_PIN, LOW);
   sendSPI(0xB9);
@@ -482,41 +483,43 @@ void loop()
   digitalWrite(PA7, HIGH);
   delay(500);
 
-  //Serial.printf("10秒間ディープスリープに入ります: %lu\n", millis());
+  //Serial.printf("Going to deep sleep for 10s at %lu\n", millis());
   LowPower.deepSleep(600000);
 }
+
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/100.png" style={{width:1000, height:'auto'}}/></div>
 
-### ディープスリープ中にXIAO MG24がブリック化するのを防ぐ方法
+### ディープスリープ中のXIAO MG24のブリック化防止
 
-**XIAO MG24**はSeeed Studioから提供される強力なマイクロコントローラーボードですが、ディープスリープモードに入った後にデバイスが応答しなくなる（「ブリック化」する）問題が報告されています。このチュートリアルでは、問題の原因を説明し、詳細な復旧方法を提供し、XIAO MG24がブリック化しないようにする予防策を紹介します。
+**XIAO MG24**はSeeed Studioの強力なマイクロコントローラーボードですが、ディープスリープモードに入った後にデバイスが応答しなくなる（「ブリック化」）問題がユーザーから報告されています。このチュートリアルでは、問題の原因を説明し、詳細な復旧方法を提供し、XIAO MG24のブリック化を回避するための予防措置を提案します。
 
-XIAO MG24は省電力を目的として**ディープスリープモード**（EM4）に入りますが、場合によっては正常に復帰できず、新しいスケッチをアップロードできなくなることがあります。他のXIAOボードとは異なり、MG24には専用の**BOOTボタン**やブートモードに入るための公式な方法がないため、復旧が困難です。
+XIAO MG24は電力を節約するために**ディープスリープモード**（EM4）に入りますが、場合によっては正常にウェイクアップできず、新しいスケッチのアップロードができなくなります。他のXIAOボードとは異なり、MG24には専用の**BOOTボタン**やブートモードに入るための文書化された方法がないため、復旧が困難になります。
 
-#### 予防策
+#### 予防措置
 
-ディープスリープモードを使用する際にXIAO MG24がブリック化しないようにするには、以下の手順に従ってください：
+ディープスリープモードを使用する際にXIAO MG24のブリック化を回避するには、以下の手順に従ってください：
 
-1. エスケープピン（PC0）を使用する
+1. エスケープピン（PC0）の使用
 
-XIAO MG24には、ブリック化を防ぐための**エスケープメカニズム**が内蔵されています。リセット中に**PC0**を**LOW**にすると、デバイスは無限ループに入り、新しいスケッチをアップロードできるようになります。  
-- **PC0**を**GND**に接続してからデバイスをリセットします。  
-- リセット後、デバイスがループ中にスケッチをアップロードします。
+XIAO MG24にはブリック化を防ぐための内蔵**エスケープメカニズム**があります。リセット中に**PC0**が**LOW**にプルされると、デバイスは無限ループに入り、新しいスケッチをアップロードできるようになります。
 
-2. スケッチを修正する  
-以下のコードをスケッチに追加して、ユーザースイッチを検出し、押された場合に無限ループに入るようにします。これにより、デバイスがループ中に新しいスケッチをアップロードできます：
+- デバイスをリセットする前に**PC0**を**GND**に接続してください。
+- リセット後、デバイスがループ状態にある間にスケッチをアップロードしてください。
+
+2. スケッチの修正
+ユーザースイッチを検出し、押された場合に無限ループに入る以下のコードをスケッチに追加してください。これにより、デバイスがループしている間に新しいスケッチをアップロードできます：
 
 ```cpp
-#define USER_SW  PC3   // ユーザースイッチ用の例のピン
+#define USER_SW  PC3   // Example pin for user switch
 
 void setup() {
-  // 他のセットアップコード...
+  // Other setup code...
 
   pinMode(USER_SW, INPUT_PULLUP);
   if (digitalRead(USER_SW) == LOW) {
-    Serial.println("新しいスケッチをアップロード可能");
+    Serial.println("Enable to upload new sketch");
     while (true) {
       digitalWrite(LED_BUILTIN, LOW);
       delay(50);
@@ -527,111 +530,118 @@ void setup() {
 }
 ```
 
-3. 不要なフラッシュスリープを避ける  
+3. 不要な Flash スリープを避ける
 
-
-スケッチがフラッシュメモリをスリープモード（`Deep Power Down`）に入れないようにしてください。これは、新しいスケッチのアップロード時に問題を防ぐためです。
+スケッチが絶対に必要でない限り、フラッシュメモリをスリープモード（`Deep Power Down`）に入れないようにしてください。これにより、新しいスケッチのアップロード時の問題を防ぐことができます。
 
 #### 謝辞
-**Seeed Studio コミュニティ**の皆様に、この問題に対する貴重な貢献と解決策を提供していただき、心より感謝申し上げます。このチュートリアルで説明されている復旧方法と予防策は、**[msfujino](https://forum.seeedstudio.com/u/msfujino)** や **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)** などのコミュニティメンバーの洞察に基づいて開発されました。
 
-詳細や議論については、元のフォーラムスレッドをご覧ください：  
+この問題に対する貴重な貢献と解決策を提供してくれた **Seeed Studio コミュニティ** に特別な感謝を表します。このチュートリアルで説明した復旧方法と予防措置は、**[msfujino](https://forum.seeedstudio.com/u/msfujino)** や **[PJ_Glasso](https://forum.seeedstudio.com/u/PJ_Glasso)** などのコミュニティメンバーからの洞察に基づいて開発されました。
+
+詳細と議論については、元のフォーラムスレッドをご覧ください：  
 [DeepSleep bricks XIAO_MG24 - Seeed Studio Forum](https://forum.seeedstudio.com/t/deepsleep-bricks-xiao-mg24/284889)
 
-## 復旧方法
+## アンブリック
 
-XIAO MG24は現在、シリアルポートチップを搭載した唯一のXIAOモデルです。他のXIAOモデルとは異なり、BOOTボタンやBOOT復旧方法がありません。この設計上の欠陥により、デバイスがスリープモードに入ったり、ソフトウェア異常が発生した場合、シリアルポート経由でプログラムをアップロードできなくなる問題が発生します。この問題に対処するため、シリアルポートを復旧し、機能を回復する方法を提供します。
+XIAO MG24 は現在、シリアルポートチップを搭載した唯一の XIAO モデルです。他の XIAO モデルとは異なり、BOOT ボタンや BOOT 復旧方法がありません。この設計上の見落としにより、デバイスがスリープモードに入ったり、ソフトウェアの異常が発生したりすると、シリアルポート経由でプログラムをアップロードできなくなる問題が発生する可能性があります。これに対処するため、シリアルポートを起動して機能を復元する方法を提供しています。
 
-### Windows向けの解決策
+### Windows での解決策
 
-1. **パッケージのダウンロードと解凍**  
-   - 提供されたZIPファイルをダウンロードします。
+1. **パッケージのダウンロードと展開**  
+   - 提供された ZIP ファイルをダウンロードします。
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_MG24/xiao_mg24_flash_erase_windows.zip" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> ZIPをダウンロード 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> ZIP をダウンロード 🖱️</font></span></strong>
     </a>
 </div><br />
-   - コンピュータ上のフォルダに内容を解凍します。
+   - コンピュータ上のフォルダに内容を展開します。
 
-2. **XIAO MG24を接続**  
-   - USBケーブルを使用して、応答しないXIAO MG24をコンピュータに接続します。
+2. **XIAO MG24 の接続**  
+   - USB ケーブルを使用して、応答しない XIAO MG24 をコンピュータに接続します。
 
-3. **スクリプトを実行**  
-   - 解凍したフォルダを開き、スクリプト `flash_erase.bat` を探します。  
+3. **スクリプトの実行**  
+   - 展開したフォルダを開き、スクリプト `flash_erase.bat` を見つけます。  
    - スクリプトをダブルクリックして実行します。  
    - スクリプトはフラッシュメモリを消去し、デバイスをリセットします。
 
-4. **復旧を確認**  
-   - スクリプトが完了した後、XIAO MG24が復旧し、使用可能になるはずです。
+4. **復旧の確認**  
+   - スクリプトが完了した後、XIAO MG24 は復元され、使用準備が整います。
 
-### macOS向けの解決策
+### macOS での解決策
 
-1. **パッケージのダウンロードと解凍**  
-   - 提供されたZIPファイルをダウンロードします（リンクは後で追加されます）。
+1. **パッケージのダウンロードと展開**  
+   - 提供された ZIP ファイルをダウンロードします（リンクはここに追加されます）。
+
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/wiki/XIAO_MG24/xiao_mg24_flash_erase_macos.zip" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> ZIPをダウンロード 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> ZIP をダウンロード 🖱️</font></span></strong>
     </a>
 </div><br />
-   - コンピュータ上のフォルダに内容を解凍します。
+   - コンピュータ上のフォルダに内容を展開します。
 
-2. **XIAO MG24を接続**  
-   - USBケーブルを使用して、応答しないXIAO MG24をコンピュータに接続します。
+2. **XIAO MG24 の接続**  
+   - USB ケーブルを使用して、応答しない XIAO MG24 をコンピュータに接続します。
 
-3. **ターミナルアクセスを許可**  
-   - **システム環境設定** > **セキュリティとプライバシー** > **プライバシー**を開きます。  
-   - **アクセシビリティ**の下で、**ターミナル**がコンピュータを制御できるように許可します。  
-   - ターミナルがリストにない場合は、**+**ボタンをクリックして手動で追加します。
+3. **ターミナルアクセスの許可**  
+   - **システム環境設定** > **セキュリティとプライバシー** > **プライバシー** を開きます。  
+   - **アクセシビリティ** の下で、**ターミナル** がコンピュータを制御することを許可されていることを確認します。  
+   - ターミナルがリストにない場合は、**+** ボタンをクリックして手動で追加します。
 
-4. **スクリプトを実行**  
-   - **ターミナル**を開きます。  
-   - `cd`コマンドを使用して解凍したフォルダに移動します。例：  
+4. **スクリプトの実行**  
+   - **ターミナル** を開きます。  
+   - `cd` コマンドを使用して展開したフォルダに移動します。例：  
+
      ```bash
      cd /path/to/extracted/folder
      ```  
-   - 以下のコマンドを使用してスクリプト `xiao_mg24_erase.sh` を実行します：  
+
+   - 次のコマンドを使用してスクリプト `xiao_mg24_erase.sh` を実行します：  
+
      ```bash
      ./xiao_mg24_erase.sh
      ```  
-   - スクリプトはOpenOCDを使用してフラッシュメモリを消去し、デバイスをリセットします。
 
-5. **復旧を確認**  
-   - スクリプトが完了した後、XIAO MG24が復旧し、使用可能になるはずです。
+   - スクリプトは OpenOCD を使用してフラッシュメモリを消去し、デバイスをリセットします。  
+
+5. **復旧の確認**  
+   - スクリプトが完了した後、XIAO MG24 は復元され、使用準備が整います。
 
 :::note
-- macOSがOpenOCDを認識しない場合は、OpenOCDがインストールされていることを確認し、スクリプトで正しいパスが使用されていることを確認してください。  
-- 提供されたスクリプトはXIAO MG24専用に設計されており、他のXIAOモデルでは使用しないでください。  
+
+- macOS が OpenOCD を認識しない場合は、OpenOCD がインストールされており、スクリプトで正しいパスが使用されていることを確認してください。  
+- 提供されたスクリプトは XIAO MG24 専用に設計されており、他の XIAO モデルでは使用しないでください。  
+
 :::
 
-## リソース
+## Resources
 
-### Seeed Studio XIAO MG24 Sense 用
+### For Seeed Studio XIAO MG24 Sense
 
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 Sense ワイヤレス SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 Sense フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB & SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
+- 📄 **[ZIP]** [Seeed Studio XIAO MG24 Sense PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_Sense_v1.0_SCH&PCB.zip)
 
+### For Seeed Studio XIAO MG24
 
-### Seeed Studio XIAO MG24 用
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 データシート](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/mg24-group-datasheet.PDF)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 回路図](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/XIAO_MGM240S_KICAD_Prj.pdf)
 - 📄 **[PDF]** [Seeed Studio XIAO MG24 ワイヤレス SoC](https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/efr32xg24_rm.pdf)
 - 🔗 **[Kicad]** [Seeed Studio XIAO MG24 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
-- 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB & SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
+- 📄 **[ZIP]** [Seeed Studio XIAO MG24 PCB&SCH](https://files.seeedstudio.com/wiki/XIAO_MG24/XIAO_MG24_v1.0_SCH&PCB.zip)
 
+## Tech Support & Product Discussion
 
-## 技術サポート & 製品ディスカッション
-
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートをご用意しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご利用いただけます。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

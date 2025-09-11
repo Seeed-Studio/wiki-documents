@@ -230,8 +230,7 @@ If everything goes smoothly, after uploading the program, you should see the fol
 
 ## UART
 
-When working with Arduino IDE, Serial communication is an essential part of many projects. To
-use Serial in Arduino IDE, you need to start by opening the Serial Monitor window. This can be done by clicking on the **Serial Monitor** icon in the toolbar or by pressing the **Ctrl+Shift+M** shortcut key.
+When working with Arduino IDE, Serial communication is an essential part of many projects. To use Serial in Arduino IDE, you need to start by opening the Serial Monitor window. This can be done by clicking on the **Serial Monitor** icon in the toolbar or by pressing the **Ctrl+Shift+M** shortcut key.
 
 ### General Usage
 

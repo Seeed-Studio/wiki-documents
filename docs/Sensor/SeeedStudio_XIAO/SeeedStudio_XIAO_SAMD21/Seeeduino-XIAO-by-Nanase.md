@@ -28,12 +28,12 @@ There are two documentations on the usage of **Seeeduino XIAO** which focus on d
 
 ## Features
 
-* ARM Cortex M0 + CPU (SAMD21G18) 48MHz
-* 256 KB Flash, 32 KB SRAM
-* USB Type-C
-* SPI, I2C, UART, DMA available
-* coin size(21mm x 17.8mm)
-* Logic level:3.3V
+- ARM Cortex M0 + CPU (SAMD21G18) 48MHz
+- 256 KB Flash, 32 KB SRAM
+- USB Type-C
+- SPI, I2C, UART, DMA available
+- coin size(21mm x 17.8mm)
+- Logic level:3.3V
 
 There are no components on the backside of the board, and all pins have castellated holes, making it easy to solder onto another board.
 
@@ -63,7 +63,6 @@ Castellated holes:
 | LEDs: |1 user LED, 1 power LED, two LEDs for serial port downloading   |
 | Power | USB Type-C interface, power pads at the back|
 | Size | 21x17.8x3.5mm |
-
 
 As you can see, it is a SAMD type Arduino and is similar to the Arduino MKR series, so technically, any library written for them can be used on Seeed Studio XIAO SAMD21. On the other hand, since it is different from the ATmega type Arduino like Arduino Uno, the library which depends on some specific register of ATmega cannot be used.
 
@@ -418,11 +417,11 @@ The logic can be certainly reversed in one cycle (48MHz).
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

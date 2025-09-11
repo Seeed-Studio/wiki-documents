@@ -88,14 +88,13 @@ This is also an output pin that can be used for grounding other components.
 
 These are some additional output pads, including GND, INTB, INTA, RST. If you wish to solder these pins for use elsewhere, you can do so.
 
-
 ## Getting Started
 
 Welcome to the quick start guide for the IO Expander for XIAO. This guide aims to help you set up and get started with your new IO Expander board in conjunction with the XIAO RP2040 main controller.
 
 ### Hardware Preparation
 
-There are three main ways to use this expansion board, 
+There are three main ways to use this expansion board,
 
 **Mode 1: SMD**
 
@@ -113,16 +112,13 @@ In this approach, you have the option of soldering connecting wires directly to 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/5.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 **Mode 3: XIAO connects with the expansion board through the long row of pins, and the expansion board is expanded by soldering the row of pins**
 
 With this connection method, you are free to install DuPont cables to the GPIO expansion board. Convenient wiring for your application.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/gpio-expander-for-xiao/6.jpg" alt="pir" width={800} height="auto" /></p>
 
-
 Once the soldering is complete, you can proceed to connect the expansion board to the XIAO RP2040 main controller.
-
 
 For programming the XIAO RP2040, you'll need a TYPE-C USB data cable. Connect one end to the XIAO RP2040 and the other to your computer. For a detailed guide on programming the XIAO RP2040, please refer to this [Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/).
 
@@ -212,7 +208,6 @@ When using single pin operations such as _pinMode(pinId, dir)_ or _digitalRead(p
 |       7        |   GPB6   |   14   |
 |       8        |   GPB7   |   15   |
 
-
 ## FAQ
 
 ### 1. Why isn't my IO Expander for XIAO responding?
@@ -230,7 +225,6 @@ When using single pin operations such as _pinMode(pinId, dir)_ or _digitalRead(p
 ### 4. I'm getting noise or erratic behavior on my IO pins. What could be the cause?
 
 **Answer**: Ensure that the connections are secure and there's no interference. Using pull-up or pull-down resistors can help stabilize the input pins. Also, ensure that the power supply is stable and can provide the necessary current for all connected devices.
-
 
 ## Resources
 
@@ -250,5 +244,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

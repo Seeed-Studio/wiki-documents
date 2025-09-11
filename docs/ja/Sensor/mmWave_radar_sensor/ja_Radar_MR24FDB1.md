@@ -6,66 +6,63 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Radar_MR24FDB1
 last_update:
-  date: 05/15/2025
+  date: 1/12/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# 24GHz mmWave センサー - 人体転倒検知センサー (MR24FDB1)
+# 24GHz mmWave センサー - 人体転倒検知センサー(MR24FDB1)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg" style={{width:400, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Fall-Detection-Module-p-5268.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
-## はじめに
+## 概要
 
-mmWave レーダー転倒検知モジュールは、24GHzで動作する自己完結型でプライバシー保護、安全性の高い mmWave モジュールです。強化された Infineon ドップラーレーダーと標準アルゴリズムを備えたこのモジュールは、高齢者の健康管理、スマートホーム、危険警報などの個別アプリケーションに最適なソリューションです。
+mmWave レーダー転倒検知モジュールは、24GHzで動作する自己完結型、プライバシー保護、安全なmmWaveモジュールです。強化されたInfineon ドップラーレーダーと標準アルゴリズムにより、このモジュールは高齢者ヘルスケア、スマートホーム、危険警報などの個別アプリケーションに理想的なソリューションです。
 
 ### アプリケーション
 
 - 転倒検知
 - スマートホーム
-- 健康管理
+- ヘルスケア
 
 ### **特徴**
 
-- 信頼性の高い技術: Infineon mmWave FMCW 工業用レーダー
-- 有効な理論: 24GHzで動作する近距離センサー (NDS) を用いたドップラーレーダー技術を適用
-- 標準アルゴリズム: 占有/非占有状態を区別し、自己適応環境での人間の活動を識別
-- 特異な転倒検知: プライバシー保護、ワイヤレス、ウェアラブル不要で、疑わしい転倒/急速な転倒/異常な長時間滞在を最大20平方メートルのエリアで同時に検知
-- 完璧なプライバシー保護: 身元を特定せずに監視機能を提供
-- 柔軟な設置場所: 障害物があっても正常に動作
-- 無害な動作状態: 10 dBmの無害なエネルギー出力
-- 高精度: 非生物的な物体の干渉を減少させ、出力結果は95%以上の精度を達成
-- 高い堅牢性: 温度、湿度、ノイズ、気流、ほこり、光などの異なる条件を含む複雑な環境でも正常に機能
-- 高性能アンテナ: 水平方90°/垂直60°のファンビームパターンで微小な動きも感知
-- 測定距離:
-  - 動きの感知最大距離: 最大12メートル
-  - 微小動きの感知最大距離: 最大5メートル
-  - 人体感知最大距離: 最大3メートル
-- 検知時間:
-  - 非占有から占有状態への変化: 0.5秒以内
-  - 占有から非占有状態への変化: 1分以上
-- カスタマイズ可能なレーダー: レーダーのパラメータ、プロトコル、アンテナ、機能を含む二次開発をサポート
+- 信頼性の高い技術：Infineon mmWave FMCW産業用レーダー
+- 有効な理論：24GHzで動作する近距離センサー（NDS）を使用したドップラーレーダー技術を適用
+- 標準アルゴリズム：自己適応環境において占有/非占有状態を区別し、人間の活動を識別
+- 単一転倒検知：最大20平方メートルのエリアで疑わしい転倒/急速な転倒/異常な長時間滞在を同時に、プライバシー保護的に、ワイヤレスで、ウェアラブルフリーで検知
+- 完全なプライバシー保護：識別なしで監視機能を提供
+- 柔軟な設置場所：遮蔽物に関係なく適切に動作
+- 無害な動作状態：10 dBmの無害なエネルギー出力
+- 高精度：非生物オブジェクトの干渉を減少させ、出力結果は95%以上の精度を達成
+- 高い堅牢性：異なる温度、湿度、ノイズ、気流、ほこり、光などを含む複雑な環境で適切な機能を維持
+- 高性能アンテナ：水平90°/垂直60°のファンビームパターンで微細な動きも感知
+- 測定距離：
+  - 動作感知最大距離：最大12メートル
+  - 微細動作感知最大距離：最大5メートル
+  - 人体感知最大距離：最大3メートル
+- 検知時間：
+  - 非占有から占有状態：0.5秒以内
+  - 有人から無人状態：1分以上
+- カスタマイズ可能なレーダー：レーダーパラメータ、プロトコル、アンテナ、機能を含む二次開発をサポート
 
 ### **ハードウェア概要**
 
 ![](https://files.seeedstudio.com/wiki/mmWave-radar/yinjiaotu.png)
 
-1. S1 出力: 高レベル - 占有、低レベル - 非占有。
-2. S2 出力: 高レベル - 活動中、低レベル - 静止。
-3. GP1 から GP4 はパラメータ選択コントロールで、ユーザーの要件に応じて再定義可能。
-4. このインターフェースの出力信号はすべて 3.3V レベル。
+1. S1出力：高レベル - 占有、低レベル - 非占有。
+2. S2出力：高レベル - アクティブ、低レベル - 静止
+3. GP1からGP4はパラメータ選択制御で、ユーザー要件に応じて再定義可能
+です。
+4. このインターフェースの出力信号はすべて3.3Vレベルです。
 
 :::caution  
-製品の消費電力は 500mW であり、長期的な電源供給には適していません。
+製品の消費電力は500mWで、長期間の電源供給には適していません。
 :::
 
 ### **特性**
@@ -77,56 +74,56 @@ mmWave レーダー転倒検知モジュールは、24GHzで動作する自己�
 ### Arduino ライブラリ概要
 
 :::tip
-Arduino を初めて使用する場合は、[Arduino の使い方](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 :::
 
-この例で使用されるライブラリコードは、以下のアイコンをクリックしてダウンロードできます。
+この例で使用するライブラリコードは、下のアイコンをクリックしてダウンロードできます。
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor" target="_blank"><div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/seeed_logo/DOWNLOAD.png" /></div></a></p>
 
-スケッチの開発を始める前に、ライブラリの利用可能な関数を確認しましょう。
+スケッチの開発を始める前に、ライブラリで利用可能な関数を見てみましょう。
 
 - `void recvRadarBytes()` —— この関数は、レーダーから返される現在のフレームの長さを取得します。フレームはその長さに応じて配列に格納されます。
-**入力パラメータ:** なし  
-**戻り値:** なし  
+**入力パラメータ:** なし
+**戻り値:** なし
 
-- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— レーダーから返されるデータには大量の物理データが含まれています。ユーザーは、関数で提供されるサインデータとデコードアルゴリズムに基づいて検出された動き情報を柔軟に調整できます。判定内容はシリアルポートを通じて出力されます。
+- `void Bodysign_judgment(byte inf[], float Move_min, float Move_max)` —— レーダーから返されるデータには大量の物理データが含まれています。ユーザーは、サインデータとこの関数が提供するデコードアルゴリズムに基づいて、検出された動作情報を柔軟に調整できます。判定の内容はシリアルポート経由で出力されます。
 **入力パラメータ:**
-  - `byte inf[]` —— レーダーが送信するデータフレーム。
-  - `float Move_min` —— ユーザーが静止または無人状態にあるかを判断する閾値。
-  - `float Move_max` —— ユーザーが静止状態または動いている状態にあるかを判断する閾値。
+  - `byte inf[]` —— レーダーから送信されるデータフレーム。
+  - `float Move_min` —— ユーザーが静止状態または無人状態にあることを判定する閾値。
+  - `float Move_max` —— ユーザーが静止状態または誰かが動いている状態にあることを判定する閾値。
 
-    **戻り値:** なし  
-    サインパラメータの説明について: 理論的には、サインパラメータの計算値は **0 から 100** の範囲になります。計算値が **0** の場合、周囲環境に **誰もいない** ことを意味します。計算値が **1** の場合、環境が占有されており **静止状態** にあることを意味します。計算値が **2 から 100** の場合、周囲が占有されており **活動中** であることを示します。
+    **戻り値:** なし
+    サインパラメータの説明について: 理論的には、サインパラメータの計算値は **0 から 100** の範囲です。計算値が **0** の場合、周囲の環境で **誰も** 検出されていないことを意味します。計算値が **1** の場合、環境が占有されており **静止状態** にあることが検出されたことを意味します。計算値が **2 から 100** の場合、周囲が占有されており **活動中** であることが検出されたことを示します。
 
-- `void Situation_judgment(byte inf[])` —— この関数は、レーダーの位置に対して人体が近づいているか離れているかを検出し、レーダー内部のアルゴリズムに基づいて人体の動きを判断します。この情報はシリアルポートを通じて出力されます。
+- `void Situation_judgment(byte inf[])` —— この関数は、レーダー内部のアルゴリズムに従って、人体がレーダーの設置場所に近づいているか遠ざかっているかを検出し、人体の動きを判定します。この情報はシリアルポート経由で出力されます。
 **入力パラメータ:**
-  - `byte inf[]` —— レーダーが送信するデータフレーム。
+  - `byte inf[]` —— レーダーから送信されるデータフレーム。
 
-    **戻り値:** なし  
+    **戻り値:** なし
 
-- `void Fall_inf(byte inf[])` —— この関数は、レーダーから返される転倒検出情報のデコードを完了し、レーダー検出結果をシリアルポートを通じて出力します。
+- `void Fall_inf(byte inf[])` —— この関数は、レーダーから返される転倒検出情報のデコードを完了し、シリアルポート経由でレーダー検出の結果を出力します。
 **入力パラメータ:**
-  - `byte inf[]` —— レーダーが送信するデータフレーム。
+  - `byte inf[]` —— レーダーから送信されるデータフレーム。
 
-    **戻り値:** なし  
+    **戻り値:** なし
 
 - `unsigned short int us_CalculateCrc16(unsigned char *lpuc_Frame, unsigned short int lus_Len)` —— この関数は CRC16 チェックサムを生成するために使用されます。
 **入力パラメータ:**
-  - `unsigned char *lpuc_Frame` —— レーダーに送信したいデータフレーム（最終的な 2 バイトのチェックサムフレームを含まない）。
+  - `unsigned char *lpuc_Frame` —— レーダーに送信したいデータフレーム（最終的な 2 バイトのチェックサムフレームは含まない）。
   - `unsigned short int lus_Len` —— レーダーに送信したいデータフレームの長さ。
 
-    **戻り値:** 2 バイトの整数型チェックデジット。
+    **戻り値:** 2 バイト整数型チェック桁。
 
-    **戻り値:** なし  
+    **戻り値:** なし
 
-- `void SerialInit()` —— レーダーのシリアルポートのボーレートを 9600 に設定します。Seeeduino ボードの場合、ソフトシリアルポートを RX: 2, TX: 3 に設定します。
-**入力パラメータ:** なし  
-**戻り値:** なし  
+- `void SerialInit()` —— レーダーシリアルポートのボーレートを 9600 に設定します。Seeeduino ボードの場合、ソフトシリアルポートを RX: 2, TX: 3 に設定します。
+**入力パラメータ:** なし
+**戻り値:** なし
 
 ### インストール
 
-**ステップ 1.** Arduino ソフトウェアをインストールします。
+**ステップ 1.** Arduino ソフトウェアをインストールする必要があります。
 
 <p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/Main/Software" target="_blank"><div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" /></div></a></p>
 
@@ -136,19 +133,19 @@ Arduino を初めて使用する場合は、[Arduino の使い方](https://wiki.
 
 **ステップ 3.** 開発ボードモデルを選択し、Arduino IDE に追加します。
 
-- **Seeeduino V4.2** を後のルーチンで使用する場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeed_Arduino_Boards/)を参照して追加を完了してください。
+- 後のルーチンで **Seeeduino V4.2** を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/Seeed_Arduino_Boards/) を参照して追加を完了してください。
 
-- **Seeeduino XIAO** を後のルーチンで使用する場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/Seeeduino-XIAO/#software)を参照して追加を完了してください。
+- 後のルーチンで **Seeeduino XIAO** を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/Seeeduino-XIAO/#software) を参照して追加を完了してください。
 
-- **XIAO RP2040** を後のルーチンで使用する場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO-RP2040-with-Arduino/#software-setup)を参照して追加を完了してください。
+- 後のルーチンで **XIAO RP2040** を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/XIAO-RP2040-with-Arduino/#software-setup) を参照して追加を完了してください。
 
-- **XIAO BLE** を後のルーチンで使用する場合は、[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_BLE/#software-setup)を参照して追加を完了してください。
+- 後のルーチンで **XIAO BLE** を使用したい場合は、[このチュートリアル](https://wiki.seeedstudio.com/XIAO_BLE/#software-setup) を参照して追加を完了してください。
 
 **ステップ 4.** Arduino コードライブラリをインストールします。
 
-まず、[GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor) からコードベースを取得し、ローカルコンピュータにダウンロードします。
+まず [GitHub](https://github.com/limengdu/Seeed_24GHz_mmWave_Radar_Sensor) からコードベースを取得し、ローカルコンピュータにダウンロードします。
 
-ZIP ライブラリをダウンロードしたら、Arduino IDE を開き、**スケッチ > ライブラリを含める > .ZIP ライブラリを追加** をクリックします。ダウンロードした ZIP ファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに **ライブラリがライブラリに追加されました** と表示されます。これでライブラリが正常にインストールされたことを意味します。
+zip ライブラリをダウンロードしたので、Arduino IDE を開き、**Sketch > Include Library > Add .ZIP Library** をクリックします。ダウンロードした zip ファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに **Library added to your libraries** と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png"/></div>
 
@@ -159,9 +156,9 @@ ZIP ライブラリをダウンロードしたら、Arduino IDE を開き、**�
 |              |              |              |
 |:--------------:|:--------------:|:--------------:|
 |<div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/mmWave-radar/radar.jpg"/></div>| <div align="center"><img width ="{210}" src="https://files.seeedstudio.com/wiki/XIAO-BLE/102010469_Front-14.jpg"/></div>| <div align="center"><img width ="{150}" src="https://files.seeedstudio.com/wiki/60GHzradar/dupont.jpg"/></div>|
-|[**24GHz mmWave Radar Sensor**](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Fall-Detection-Module-p-5268.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)|**2mm to 2.54mm ピッチリボンケーブル**|
+|[**24GHz mmWave Radar Sensor**](https://www.seeedstudio.com/24GHz-mmWave-Radar-Sensor-Fall-Detection-Module-p-5268.html)|[**Seeed XIAO BLE nRF52840 Sense**](https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html)|**2mm to 2.54mm Pitch Ribbon Cable**|
 
-**ステップ 1.** デバイスをメインボードを介してコンピュータに接続します。配線図は以下の表に示されています。
+**Step 1.** メインボードを通してデバイスをコンピュータに接続します。配線図は以下の表に示されています。
 
 <table align="center">
   <tbody><tr>
@@ -194,19 +191,19 @@ ZIP ライブラリをダウンロードしたら、Arduino IDE を開き、**�
     </tr>
   </tbody></table>
 
-**ステップ 2.** Arduino IDEの左上のメニューバーで**ツール**を選択し、使用している開発ボードの種類を選択し、対応するシリアルポートを選択します。
+**ステップ 2.** Arduino IDE の左上のメニューバーで、**ツール**を選択し、使用している開発ボードの種類を選択し、対応するシリアルポートを選択します。
 
 :::tip
-**MacOS**を使用している場合、デバイスのシリアルポート名は通常**/dev/cu.usbmodem xxx**で始まり、デバイス名で終わります。**Windows**を使用している場合、デバイスのシリアルポート名は通常**COM**で始まり、デバイス名で終わります。
+**MacOS**を使用している場合、デバイスのシリアルポート名は多くの場合 **/dev/cu.usbmodem xxx** で始まり、デバイス名で終わります。**Windows**を使用している場合、デバイスのシリアルポート名は多くの場合 **COM** で始まり、同様にデバイス名で終わります。
 :::
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/3.png"/></div>
 
-この例では、人気製品XIAO BLEを使用してレーダーの動作をデモンストレーションします。
+この例では、レーダーが私たちの人気製品 XIAO BLE とどのように動作するかを実演します。
 
-### デモ1 内蔵レーダーアルゴリズムデータをデコードして環境状態を出力
+### デモ1 内蔵レーダーアルゴリズムデータ出力環境状態のデコード
 
-レーダーには完全な内蔵アルゴリズムがあり、レーダーが判断した環境条件を直接出力できます。このルーチンでは、コードを通じてレーダーが検出した環境条件をシリアルポートを介して直接印刷する方法を説明します。
+レーダーには完全な内蔵アルゴリズムセットがあり、レーダー判定によって得られた環境条件を直接出力できます。このルーチンでは、コードを通じてシリアルポート経由でレーダーが検出した環境条件を直接印刷する方法について説明します。
 
 この例のコードは以下の通りです。
 
@@ -225,41 +222,41 @@ void setup()
 
 void loop()
 {
- radar.recvRadarBytes();                       // レーダーデータを受信して処理を開始
- if (radar.newData == true) {                  // データが受信され、新しいリストdataMsg[]に転送される
+ radar.recvRadarBytes();                       //Receive radar data and start processing
+ if (radar.newData == true) {                  //The data is received and transferred to the new list dataMsg[]
     byte dataMsg[radar.dataLen+1] = {0x00};
-    dataMsg[0] = 0x55;                         // ヘッダーフレームを配列の最初の要素として追加
-    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  // フレームごとに転送
-    radar.newData = false;                     // 完全なデータフレームセットが保存される
+    dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
+    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
+    radar.newData = false;                     //A complete set of data frames is saved
     
-    //radar.ShowData(dataMsg);                 // 受信したデータフレームセットをシリアルポートで印刷
-    radar.Fall_inf(dataMsg);                  // 睡眠情報の出力
+    //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
+    radar.Fall_inf(dataMsg);                  //Sleep information output
   }
   
 }
 ```
 
-`setup()`コードでは、XIAO BLEの**シリアルポート**と**Serial1ポート**をオンにします。Serialはデータ印刷に使用され、Serial1はXIAO BLEとレーダー間の通信に使用されます。レーダーのボーレートに従って、両方のシリアルポートのボーレートを9600に設定します。準備が整うと、シリアルモニターに**Ready**が印刷されます。
+`setup()` コードでは、XIAO BLE の **Serial ポート** と **Serial1 ポート** をオンにします。Serial はデータ印刷に使用され、Serial1 は XIAO BLE とレーダー間の通信に使用されます。レーダーのボーレートに従って、両方のシリアルポートのボーレートを 9600 に設定します。準備が完了すると、シリアルモニターに **Ready** が印刷されます。
 
 ```c
 radar.Situation_judgment(dataMsg);
 ```
 
-dataMsgリストが完全に取得されると、`Situation_judgment()`関数のパラメータとして使用され、環境監視データの出力を完了します。出力結果はシリアルモニターに直接印刷されます。
+dataMsgリストが完全に取得されると、`Situation_judgment()`関数のパラメータとして使用され、環境監視データの出力が完了し、出力結果がシリアルモニターに直接印刷されます。
 
-プログラムをアップロードします。シリアルモニターを9600のボーレートで開くと、結果が表示されます。出力は以下の画像のようになります。
+プログラムをアップロードします。シリアルモニターをボーレート9600で開くと結果が表示されるはずです。出力は以下の画像のようになるはずです。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/5.png"/></div>
 
 :::tip
-シリアルモニターを開いた後にデータが表示されない場合、それは正常な場合があります。この部分のレーダーデータの取得は、レーダー監視範囲内での人間の動きの変化に依存します。範囲内の動きが変化した場合のみ、レーダーがデータを送信し、その時にデータが印刷されます。
+シリアルモニターを開いた後にデータが表示されない場合、それは正常である可能性があります。レーダーデータのこの部分の取得は、レーダー監視範囲内の人間の動きの変化に依存します。範囲内の人の動きが変化した時のみ、レーダーがデータを送信し、その時のみデータが印刷されます。
 
-レーダーが返すデータを確認したい場合は、`radar.ShowData(dataMsg);`をコメント解除してください。これにより、受信したデータフレームセット全体がシリアルモニターを通じて出力されます。
+レーダーが返すデータを確認したい場合は、`radar.ShowData(dataMsg);`のコメントアウトを解除できます。これにより、受信したデータフレームの完全なセットがシリアルモニターを通じて出力されます。
 :::
 
-### デモ2 特徴パラメータ解析を使用して人間の動きを取得
+### Demo2 特徴パラメータ解析を使用した人間の動作の取得
 
-レーダーが返す大量のデータの中で、物理データに関する情報が大部分を占めています。時には、レーダー自身のアルゴリズムに過度に依存すると、特定のシナリオで満足のいく結果が得られない場合があります。その場合、レーダーが返す情報を使用して、実際のアプリケーションシナリオに応じた適切な調整を行うことができます。
+レーダーが返す大量のデータの中で、物理データに関する情報が情報の大部分を占めています。時には、レーダー自体のアルゴリズムに過度に依存すると、一部のシナリオで満足のいく結果が得られない場合があります。その場合、レーダーが返す情報を使用して、実際のアプリケーションシナリオに応じて適切な調整を行うことを選択できます。
 
 この例のコードは以下の通りです。
 
@@ -282,15 +279,15 @@ void setup()
 
 void loop()
 {
- radar.recvRadarBytes();                       // レーダーデータを受信して処理を開始
- if (radar.newData == true) {                  // データが受信され、新しいリストdataMsg[]に転送される
+ radar.recvRadarBytes();                       //Receive radar data and start processing
+ if (radar.newData == true) {                  //The data is received and transferred to the new list dataMsg[]
     byte dataMsg[radar.dataLen+1] = {0x00};
-    dataMsg[0] = 0x55;                         // ヘッダーフレームを配列の最初の要素として追加
-    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  // フレームごとに転送
-    radar.newData = false;                     // 完全なデータフレームセットが保存される
+    dataMsg[0] = 0x55;                         //Add the header frame as the first element of the array
+    for (byte n = 0; n < radar.dataLen; n++)dataMsg[n+1] = radar.Msg[n];  //Frame-by-frame transfer
+    radar.newData = false;                     //A complete set of data frames is saved
     
-    //radar.ShowData(dataMsg);                 // 受信したデータフレームセットをシリアルポートで印刷
-    radar.Bodysign_judgment(dataMsg, 1, 15); // サインパラメータを使用した人間の動きの出力
+    //radar.ShowData(dataMsg);                 //Serial port prints a set of received data frames
+    radar.Bodysign_judgment(dataMsg, 1, 15); //Output of human movement using sign parameters
   }
 }
 ```
@@ -299,33 +296,33 @@ void loop()
 radar.Bodysign_judgment(dataMsg, 1, 15);
 ```
 
-dataMsg配列が取得されると、この配列のデータを`Bodysign_judgment()`関数の最初の引数として渡し、サインパラメータを解析します。
+dataMsg配列を取得したら、この配列のデータを`Bodysign_judgment()`関数の最初の引数として渡すことができます。この関数はサインパラメータを解析します。
 
-関数 `Bodysign_judgment()` の第2および第3パラメータは、それぞれ未占有状態と静止している人体を判定するための閾値、および静止している人体と動いている人体を判定するための閾値です。
+`Bodysign_judgment()`関数の2番目と3番目のパラメータは、それぞれ無人状態と静止状態の人体を判定するための閾値、静止状態と動作状態の人体を判定するための閾値です。
 
-(1, 15) は、体の兆候の計算値が1未満の場合、環境に誰もいないことを出力します。体の兆候値が1以上15未満の場合、現在の環境に静止状態の人がいることを出力します。体の兆候値が35以上の場合、環境内で誰かが動いていることを出力します。
+(1, 15)は、体徴の計算値が1未満の場合、環境に誰もいないことを出力することを意味します。体徴値が1以上15未満の場合、現在の環境に静止状態の人がいることを出力します。体徴値が35以上の場合、環境に動いている人がいることを出力します。
 
-プログラムをアップロードしてください。シリアルモニターを9600のボーレートで開くと結果が表示されるはずです。出力は以下の画像のようになります。
+プログラムをアップロードします。シリアルモニターを9600ボーレートで開くと、結果が表示されるはずです。出力は以下の画像のようになるはずです。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/2.png"/></div>
 
 :::tip
-出力データフレームに続く値は、計算された兆候値を表します。
+出力データフレームに続く値は、計算されたサイン値を表します。
 :::
 
-### デモ 3 レーダーへのデータ送信
+### デモ3 レーダーへのデータ送信
 
-レーダーは、情報を取得したり、レーダーの感度やシーンを設定するための非常に多くのインターフェースを提供します。このルーチンでは、ユーザーがユーザーマニュアルを使用してレーダーにデータメッセージを送信し、レーダーのパラメータを調整したり、必要なデータ情報を取得する方法を説明します。
+レーダーは、情報を取得したり、レーダーの感度やシーンを設定したりするための非常に多くのインターフェースを開放しています。このルーチンでは、ユーザーマニュアルを使用してレーダーにデータメッセージを送信し、レーダーのパラメータを調整したり、必要なデータ情報を取得したりする方法をユーザーに指示します。
 
-**ステップ 1.** 必要なクエリに基づいてデータフレームを取得します。
+**ステップ1.** 必要なクエリに基づいてデータフレームを取得します。
 
-リソースエリアから[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)をダウンロードし、**第8.2章**でクエリまたは設定する必要があるフレームの内容を見つけ、それを整理します。
+リソースエリアから[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)をダウンロードし、**第8.2章**で、クエリまたは設定する必要があるフレームの内容を見つけて整理します。
 
-この例では、レーダーデバイスのIDを調べたいと仮定します。必要な機能コード、アドレスコード1、およびアドレスコード2を取得することができます。
+この例では、レーダーデバイスのIDを調べたいと仮定すると、必要な機能コード、アドレスコード1、アドレスコード2を取得できるはずです。
 
 <div align="center"><img width ="{500}" src="https://files.seeedstudio.com/wiki/60GHzradar/11.png"/></div>
 
-**ステップ 2.** Arduino IDEでサンプルコードを開きます。
+**ステップ2.** Arduino IDEでサンプルコードを開きます。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/9.png"/></div>
 
@@ -349,7 +346,7 @@ void setup()
 
 void loop()
 {
-  //データシートに従って設定したいデータフレームを記入してください（2バイトのチェックサムフレームを除く）
+  //Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
   unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
   
   unsigned int length = sizeof(data)/sizeof(unsigned char);
@@ -371,25 +368,25 @@ void loop()
 }
 ```
 
-**ステップ 3.** データフレームの内容を変更して、レーダーに送信する完全なデータフレームを生成します。
+**ステップ3.** データフレームの内容を変更して、レーダーに送信する完全なデータフレームを生成します。
 
 変更する必要があるのは、ループ内の `data[]` 配列です。
 
 ```c
-//データシートに従って設定したいデータフレームを記入してください（2バイトのチェックサムフレームを除く）
+//Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
 unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 ```
 
-変更が必要な箇所は、2番目の要素、4番目から最後の要素です。ヘッダーフレーム 0x55 は固定されており、変更する必要はありません。2番目のフレームは長さフレームであり、送信するデータの長さに応じて変更してください。3番目のフレームは固定で 0x00 です。4番目のフレームは機能コード、5番目のフレームはアドレスコード1、以下同様です。
+修正が必要な箇所は、2番目の要素と最後から4番目の要素です。ヘッダーフレーム0x55は固定されており、修正する必要はありません。2番目のフレームは長さフレームで、送信するデータの長さに応じて修正してください。3番目のフレームは0x00に固定されています。4番目のフレームは機能コード、5番目のフレームはアドレスコード1、以下同様です。
 
 :::tip
-長さフレームの計算方法について:
-    長さ = データ長 + 機能コード + アドレスコード1 + アドレスコード2 + データ + チェックサム。（ヘッダーフレームはカウントされません）
+長さフレームの計算方法について：
+    長さ = データ長 + 機能コード + アドレスコード1 + アドレスコード2 + データ + チェックサム。（ヘッダーフレームは含まれません）
 
-フレーム形式とルールの詳細については、[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)の第8章を参照してください。
+フレーム形式と規則の詳細については、[ユーザーマニュアル](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-Sleep-monitorng-user-manual.pdf)の第8章を参照してください。
 :::
 
-プログラムをアップロードしてください。シリアルモニターを9600のボーレートで開くと結果が表示されるはずです。出力は以下の画像のようになります。
+プログラムをアップロードします。シリアルモニターをボーレート9600で開くと、結果が表示されるはずです。出力は以下の画像のようになるはずです。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/10.png"/></div>
 
@@ -397,7 +394,7 @@ unsigned char data[] = {0x55, 0x08, 0x00, 0x05, 0x01, 0x04, 0x03};
 
 **その他の方法**
 
-完全なデータフレームを生成するためにマスターを使用したくない場合は、以下のコードをCプログラムを実行できるエディタに貼り付けてください。上記の手順に従い、フレームの内容を配列データに記入してください。
+完全なデータフレームを生成するためにマスターを使用したくない場合は、以下のコードをCプログラムを実行できるエディターに貼り付けることもできます。上記の手順に従って、配列データにフレームの内容を入力してください。
 
 ```c
 #include <stdio.h>
@@ -465,7 +462,7 @@ static unsigned short int us_CalculateCrc16(unsigned char *lpuc_Frame, unsigned 
 }
 
 int main() {
-    //データシートに従って設定したいデータフレームを記入してください（2バイトのチェックサムフレームを除く）
+    //Please fill in the data frame you want to set according to the datasheet(Excluding 2 Byte checksum frames)
     unsigned char data[] = {0x55, 0x07, 0x00, 0x01, 0x01, 0x01};
 
     unsigned short int crc_data = 0x0000;
@@ -486,13 +483,13 @@ int main() {
 }
 ```
 
-エディタの実行後、レーダーに送信する必要がある完全なデータフレームを出力することも可能です。
+エディタ実行後、レーダーに送信する必要がある完全なデータフレームを出力することも可能です。
 
 <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/8.png"/></div>
 
-**ステップ 4.** データフレームをレーダーに送信する。
+**ステップ4.** データフレームをレーダーに送信します。
 
-レーダーを [**UART to USB** デバイス](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html?queryID=588a892811a774ad3005ea0d31427532&objectID=1111&indexName=bazaar_retailer_products) を介してコンピュータの USB ポートに直接接続します。配線は以下の表に示されています。
+[**UART to USB** デバイス](https://www.seeedstudio.com/USB-To-Uart-5V-p-1833.html?queryID=588a892811a774ad3005ea0d31427532&objectID=1111&indexName=bazaar_retailer_products)を介してレーダーを直接コンピューターのUSBポートに接続します。配線は以下の表に示されています。
 
 <table align="center">
   <tbody><tr>
@@ -525,56 +522,56 @@ int main() {
     </tr>
   </tbody></table>
 
-シリアルデバッグアシスタントのようなソフトウェアを使用して、レーダーが接続されているシリアルポートを選択します。
+シリアルデバッグアシスタントなどのソフトウェアを使用して、レーダーが接続されているシリアルポートを選択します。
 
 <div align="center"><img width ="{300}" src="https://files.seeedstudio.com/wiki/60GHzradar/17.png"/></div>
 
 :::caution
-24GHz レーダーは 5V の電源供給が必要です。そうでない場合、レーダーが正常に動作しない可能性があります。
+24GHzレーダーは5V電源が必要です。そうでなければレーダーが正常に動作しない可能性があります。
 :::
 
-接続が成功すると、レーダーが一定のメッセージを送信し続けるのが確認できます。
+接続が成功すると、レーダーが安定したメッセージストリームを送信しているのが確認できます。
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/16.png"/></div>
 
-**ステップ3** で取得した完全なデータフレームをソフトウェアの送信エリアに貼り付けます。その後、送信ボタンをクリックします。
+**ステップ3**で取得した完全なデータフレームをソフトウェアの送信エリアに貼り付けます。その後、送信をクリックします。
 
 <div align="center"><img width ="{800}" src="https://files.seeedstudio.com/wiki/60GHzradar/18.png"/></div>
 
-返されるデータセットのうち、3番目の要素が 0x03 であるものを探してください。このデータセットはクエリ後に取得された情報です。レーダーのパラメータを調整するデータを送信した場合も、このような情報が返されます。
+3番目の要素が0x03である一連のデータが返されることを確認できます。この一連のデータは、クエリ後に取得された情報です。レーダーのパラメータを調整するデータを送信した場合も、同様の情報が返されます。
 
 :::caution
-データ送信形式として **ASCII** を選択した場合、各データセットには **0x** を付ける必要があります。**HEX** を選択した場合は、各データセットに **0x** を付ける必要はありません。
+データ送信の形式として**ASCII**を選択した場合、各データセットには**0x**のプレフィックスが必要です。**HEX**を選択した場合、各データセットに**0x**のプレフィックスは不要です。
 :::
 
 ## トラブルシューティング
 
-**FAQ1: Seeeduino（または Arduino）にコードを適用するにはどうすればよいですか？**
+**FAQ1: コードをSeeeduino（またはArduino）に適用するにはどうすればよいですか？**
 
-> ハードウェア設計が異なるため、XIAO シリーズや Wio Terminal のシリアルポートは Serial1 と名付けられていますが、Seeeduino や Arduino ではソフトシリアルポートを使用する必要があります。Seeeduino でレーダーを使用したい場合は、ソフトシリアルポートを変更するか、ピン 2 (RX) と 3 (TX) を使用してください。
+> ハードウェア設計の違いにより、XIAOシリーズやWio Terminalのシリアルポートは Serial1 と名付けられていますが、Seeeduino や Arduino ではソフトシリアルポートを使用する必要があります。Seeeduino でレーダーを使用したい場合は、ソフトシリアルポートを変更するか、ピン2（RX）と3（TX）を使用できます。
 > <div align="center"><img width ="{600}" src="https://files.seeedstudio.com/wiki/60GHzradar/19.png"/></div>
 
-**FAQ2: XIAO BLE とレーダーが長時間データを収集し、コードをアップロードできない場合はどうすればよいですか？**
+**FAQ2: XIAO BLEとレーダーが長時間データを収集してコードをアップロードできない場合はどうすればよいですか？**
 
-> この場合、XIAO BLE の上部にあるリセットボタンを指で軽く押して、プログラムを再アップロードして実行してください。
+> この場合、指でXIAO BLE上部のリセットボタンを軽く押して、プログラムを再アップロードして実行できます。
 
 ## リソース
 
-- **[PDF]** [睡眠呼吸レーダーセンサー データシート](http://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_Datasheet.pdf)
-- **[ZIP]** [24GHz 呼吸回路図](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-respiratory-schematic.zip)
-- **[PDF]** [ユーザーマニュアル](https://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_User_manual.pdf)
-- **[PPTX]** [Seeed mmWave センサーシリーズ V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
+- **[PDF]** [Sleep Breathing Radar Sensor Datasheet](http://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_Datasheet.pdf)
+- **[ZIP]** [24GHz Respiratory schematic](https://files.seeedstudio.com/wiki/60GHzradar/24GHz-respiratory-schematic.zip)
+- **[PDF]** [User manual](https://files.seeedstudio.com/wiki/mmWave-radar/MR24FDB1_User_manual.pdf)
+- **[PPTX]** [Seeed mmWave sensor series V2.0](https://files.seeedstudio.com/wiki/mmWave-radar/Seeed-mmWave-sensor-series-V2.0.pptx)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

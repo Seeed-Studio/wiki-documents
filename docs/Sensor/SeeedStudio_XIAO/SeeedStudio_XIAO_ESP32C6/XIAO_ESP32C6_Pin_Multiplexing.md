@@ -16,25 +16,25 @@ last_update:
 # Arduino Programming with Seeed Studio XIAO ESP32C6
 
 <div class="table-center">
-	<table>
-		<tr>
-			<th>Seeed Studio XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
+ <table>
+  <tr>
+   <th>Seeed Studio XIAO ESP32C6</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html
         " target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-The Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), built on **two 32-bit RISC-V processors**, with a high-performance (HP) processor with **running up to 160 MHz**, and a low-power (LP) 32-bit RISC-V processor, which can be clocked up to 20 MHz. There are **512KB SRAM and 4 MB Flash on the chip**, allowing for more programming space, and binging more possibilities to the IoT control scenarios. 
+The Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6), built on **two 32-bit RISC-V processors**, with a high-performance (HP) processor with **running up to 160 MHz**, and a low-power (LP) 32-bit RISC-V processor, which can be clocked up to 20 MHz. There are **512KB SRAM and 4 MB Flash on the chip**, allowing for more programming space, and binging more possibilities to the IoT control scenarios.
 
 ## Getting Started
 
@@ -43,20 +43,19 @@ The Seeed Studio XIAO ESP32C6 is powered by the highly-integrated [ESP32-C6 SoC]
 Before we begin, let's review all the pins that the XIAO ESP32C6 has and its functions with the following schematic.
 
 <table align="center">
-	<tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>XIAO ESP32C6/XIAO ESP32C6 indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
-	</tr>
+     <th>XIAO ESP32C6/XIAO ESP32C6 Sense Pin List</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_318648_dMoXitoaQiq2N3-a_1711678067?w=1486&h=1228" style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
-
 
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
@@ -141,8 +140,8 @@ This example uses the hardware UART0 (Serial0) for communication. It initializes
 
 #### Serial1 Usage
 
-According to the above XIAO ESP32C6 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin. 
-This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added. 
+According to the above XIAO ESP32C6 Pin diagrams for specific parameters, we can observe that there are TX pin and RX pin.
+This is different from serial communication, but the usage is also very similar, except that a few parameters need to be added.
 So next, we will use the pins led out by the chip for serial communication.
 
 Core Function that need to be include:
@@ -266,6 +265,7 @@ The `isr` function is an Interrupt Service Routine (ISR) that handles button pre
 In the `setup` function, we initialize the serial communication, set the button pin as an input with an internal pull-up resistor, and attach the `isr` function to the button pin as an interrupt handler triggered on a falling edge (button press).
 
 In the `loop` function, we check if the button is pressed. If it is, we print the number of button presses to the serial monitor and reset the pressed flag. Additionally, we include a section that detaches the interrupt from the button pin every 10 seconds, presumably to allow for other operations or to prevent unintended interrupts.
+
 Okay, got it. Here is the rewritten and more comprehensible version:
 
 ## ADC - Analog to Digital Converter
@@ -544,6 +544,7 @@ void loop() {
   delay(100);  // Wait for a short period
 }
 ```
+
 :::note
 Ensure the pin assignments in your sketch match the physical connections in your hardware setup. The above example uses predefined pin numbers based on the `pin_arduino.h` file for the XIAO ESP32-C6, with an additional definition for the CS pin.
 :::

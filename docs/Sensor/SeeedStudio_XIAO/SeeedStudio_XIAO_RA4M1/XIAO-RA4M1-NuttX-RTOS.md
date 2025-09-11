@@ -29,7 +29,7 @@ For instance, the [Seeed Studio XIAO RA4M1](https://nuttx.apache.org/docs/latest
 
 The Nuttx documentation provides a [guide](https://nuttx.apache.org/docs/latest/quickstart/install.html) to different platforms.For Seeed Studio XIAO RA4M1 please follow these steps:
 
-1. Download Renesas rfp-cli(https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui): 
+1. Download Renesas rfp-cli(https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui):
 
     ```bash
     ~/nuttxspace/nuttx$ rfp-cli --help
@@ -79,6 +79,7 @@ Also it's possible to check the list of board-supported a running the command:
     ./tools/configure.sh xiao-ra4m1:nsh
     make V=1
     ```
+
 5. The RESET and BOOT buttons can be used to enter “Renesas RA USB Boot” mode by reboot the board with BOOT shorted to GND and press the reset button twice (double click). The board will enumerate as “Renesas RA USB Boot”.
 
 6. Load the firmware using rfp-cli:
@@ -219,7 +220,7 @@ To confirm the GPIO device files were created, type `ls/dev`. After typing, you 
 
 - On board LED:
   - Yellow            -> P011
- 
+
 - GPIOs
   - 1 Input           -> P014
   - 1 Output          -> P000
@@ -237,8 +238,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read gpio0 and write at gpio1. As of now, GPIO Input with interrupt 
-is not available for RA4M1 chipset.
+Following these commands to read gpio0 and write at gpio1. As of now, GPIO Input with interrupt is not available for RA4M1 chipset.
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0

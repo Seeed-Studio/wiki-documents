@@ -21,66 +21,63 @@ last_update:
     </a>
 </div>
 
-
 ## Introduction
 
 Seeed Studio Round Display for XIAO is an expansion board compatible with all XIAO development boards. It features a fully covered touch screen on one side, designed as a 39mm disc. It contains onboard RTC, charge chip, TF card slot within its compact size, perfect for interactive displays in smart home, wearables and more.
 
 <table align="center">
-	<tr>
-		<th>REV</th>
-		<th>Description</th>
-		<th>DATE</th>
-		<th>BY</th>
-	</tr>
-	<tr>
-		<td>v1.0</td>
-		<td>Initial Version</td>
-		<td>2023/1/29</td>
-		<td>Linus.Liao</td>
-	</tr>
-	<tr>
-		<td>v1.1</td>
-		<td>1.Change Li Battery Charge IC<br />2.Add a switch to A0 and D6</td>
-		<td>2023/4/7</td>
-		<td>Linus.Liao</td>
-	</tr>
+ <tr>
+  <th>REV</th>
+  <th>Description</th>
+  <th>DATE</th>
+  <th>BY</th>
+ </tr>
+ <tr>
+  <td>v1.0</td>
+  <td>Initial Version</td>
+  <td>2023/1/29</td>
+  <td>Linus.Liao</td>
+ </tr>
+ <tr>
+  <td>v1.1</td>
+  <td>1.Change Li Battery Charge IC<br />2.Add a switch to A0 and D6</td>
+  <td>2023/4/7</td>
+  <td>Linus.Liao</td>
+ </tr>
 </table>
-
 
 ### Specification
 
 <table align="center">
-	<tr>
-	    <th>Item</th>
-	    <th>Detail</th>
-	</tr>
-	<tr>
-	    <th>Power Supply</th>
-	    <td>USB Type-C: 5V @35 mA <br></br> Battery Charge: 3.7V @37mA</td>
-	</tr>
-	<tr>
-	    <th>Charge current</th>
-	    <td>~ 485 mA</td>
-	</tr>
+ <tr>
+     <th>Item</th>
+     <th>Detail</th>
+ </tr>
+ <tr>
+     <th>Power Supply</th>
+     <td>USB Type-C: 5V @35 mA <br></br> Battery Charge: 3.7V @37mA</td>
+ </tr>
+ <tr>
+     <th>Charge current</th>
+     <td>~ 485 mA</td>
+ </tr>
   <tr>
-	    <th>Expandable memory</th>
-	    <td>TF Card Slot for up to 32GB FAT</td>
-	</tr>
+     <th>Expandable memory</th>
+     <td>TF Card Slot for up to 32GB FAT</td>
+ </tr>
   <tr>
-	    <th>Screen</th>
-	    <td>1.28-inch touch screen <br></br> 240×240 resolution <br></br> 65K colors</td>
-	</tr>
+     <th>Screen</th>
+     <td>1.28-inch touch screen <br></br> 240×240 resolution <br></br> 65K colors</td>
+ </tr>
   <tr>
-	    <th>Other External Equipment</th>
-	    <td>JST 1.25 connector</td>
-	</tr>
+     <th>Other External Equipment</th>
+     <td>JST 1.25 connector</td>
+ </tr>
   <tr>
-	    <th>Dimension</th>
-	    <td>39mm x 39mm</td>
-	</tr>
+     <th>Dimension</th>
+     <td>39mm x 39mm</td>
+ </tr>
 </table>
-
 
 ### Features
 
@@ -89,7 +86,6 @@ Seeed Studio Round Display for XIAO is an expansion board compatible with all XI
 - **Rich Peripheral**: Feature onboard RTC, battery charge chip, TF card slot, JST 1.25 connector, all within its compact size
 - **Watch-sized Design**: Come with 39 mm circular design, suitable for wearable and space-limited projects
 - **Plug and Play**: All pins are led out, no soldering is needed
-
 
 ## Hardware Overview
 
@@ -112,40 +108,40 @@ XIAO SAMD21,RP2040 and RA4M1 may **not** be compatible with circular screens due
 :::
 
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO nRF52840 (Sense)</th>
-		<th>Seeed Studio XIAO ESP32C3</th>
-	    <th>Seeed Studio XIAO ESP32S3 (Sense)</th>
-		<th>Seeed Studio XIAO ESP32C6</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>Seeed Studio XIAO nRF52840 (Sense)</th>
+  <th>Seeed Studio XIAO ESP32C3</th>
+     <th>Seeed Studio XIAO ESP32S3 (Sense)</th>
+  <th>Seeed Studio XIAO ESP32C6</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 The row of pins on the back of Round Display is designed for XIAO series. If you have XIAO on hand, you don't need to prepare any additional cables, just align the pins of XIAO and plug them directly into Round Display.
@@ -168,7 +164,7 @@ To use the Round Display, we need to program the XIAO series. The recommended pr
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
 :::
 
-#### Step 1. Download and Install the stable version of Arduino IDE according to your operating system.
+#### Step 1. Download and Install the stable version of Arduino IDE according to your operating system
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
     <a class="download_arduino_item" href="https://www.arduino.cc/en/software">
@@ -176,9 +172,9 @@ If this is your first time using Arduino, we highly recommend you to refer to [G
     </a>
 </div>
 
-#### Step 2. Launch the Arduino application.
+#### Step 2. Launch the Arduino application
 
-#### Step 3. Configure the Arduino IDE for the XIAO you are using.
+#### Step 3. Configure the Arduino IDE for the XIAO you are using
 
 - If you want to use **Seeed Studio XIAO RP2350** for the later routines, please refer to **[this tutorial](https://wiki.seeedstudio.com/getting-started-xiao-rp2350/)** to finish adding.
 
@@ -268,7 +264,7 @@ We need to use the RTC function on the round display, so you also need to search
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/63.png" style={{width:800, height:'auto'}}/></div>
 :::
 
-Once the hardware and software are ready, we start uploading our first example program. This sample program can be used to check if the Round Display's RTC clock are working properly. Because this demo requires a small amount of memory, suitable for all XIAO models. 
+Once the hardware and software are ready, we start uploading our first example program. This sample program can be used to check if the Round Display's RTC clock are working properly. Because this demo requires a small amount of memory, suitable for all XIAO models.
 
 :::tip
 If you want to modify this demo to implement more complex displays, please be mindful of the memory size of the XIAO you are using. The specific size can be found on the introduction page of that XIAO.
@@ -334,6 +330,7 @@ This sample program will test all the functional items of the expansion board, i
 :::
 
 ## Calibration Firmware Update
+
 :::tip
 If you find that the touch is sometimes unresponsive, you can follow the steps below to update the calibration firmware for the screen.
 :::
@@ -388,12 +385,11 @@ A: This may be caused by you not selecting the appropriate compile option for th
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

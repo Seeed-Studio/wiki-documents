@@ -67,7 +67,6 @@ In this guide I will be using **windows 10** alongside with Thonny IDE and espto
 
 <strong><font color={'8DC215'} size={"3"}>The firmware designed for XIAO ESP32S3 Sense board, using in this wiki is made by our friend: shariltumin, whom we are really greatful for.</font></strong>
 
-
 ## Getting Started
 
 The firmware is designed only for XIAO ESP32S3 MicroPython programming. We will first flash the firmware and then use the example on it.
@@ -91,6 +90,7 @@ You will be directed to cmd terminal.
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/on_cmd.jpg" alt="pir" width={600} height="auto" /></p>
 
 Install esptool using pip command (make sure python 3 is already installed)
+
 ```cpp
 pip install esptool
 ```
@@ -104,6 +104,7 @@ esptool.py --port COMXX erase_flash
 ```
 
 Now proceed to install the micropython firmware using this command
+
 ```cpp
 esptool.py --port COMXX --baud 460800 --before default_reset --after hard_reset --chip esp32s3  write_flash --flash_mode dio --flash_size detect --flash_freq 80m 0x0 firmware.bin 
 ```
@@ -113,8 +114,6 @@ change the COMXX with port COM number on your PC
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/device_manager.jpg" alt="pir" width={600} height="auto" /></p>
-
-
 
 ### Step 2. Upload the example code
 
@@ -135,7 +134,6 @@ Navigate to the folder where the example code is extracted then upload the files
 after all the example code uploaded to xiao esp32s3 board, change the wifi credential on both the streamin_server.py file and the Wifi.py file based on your local wifi configuration
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-MicroPy/wifi_configuration.png" alt="pir" width={600} height="auto" /></p>
-
 
 ### Step 3. Testing the streaming example
 
@@ -181,11 +179,11 @@ If the camera is not initialized successfully(display a frame then freeze) or ca
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

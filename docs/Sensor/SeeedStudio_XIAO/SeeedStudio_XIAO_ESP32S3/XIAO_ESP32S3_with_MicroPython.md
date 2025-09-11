@@ -114,6 +114,7 @@ Then can start to compile script using your prefer tool to ESP32!
 ## Recommended Editors for MicroPython
 
 Some of popular tools are listed below.
+
 - [Thonny IDE](https://randomnerdtutorials.com/getting-started-thonny-micropython-python-ide-esp32-esp8266/)
 - [Arduino for micropython](https://docs.arduino.cc/micropython/)
 - [Visual Studio Code pymakr](https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/)
@@ -186,7 +187,8 @@ Create a new Python file within your project.
 
 ### 4. uPtCraft IDE
 
-* [macOS](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/)
+- [macOS](https://randomnerdtutorials.com/install-upycraft-ide-mac-os-x-instructions/)
+
 - [Windows](PChttps://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)
 - [Linux](https://randomnerdtutorials.com/install-upycraft-ide-linux-ubuntu-instructions/)
 
@@ -264,7 +266,7 @@ ap.config(max_clients=10) # set how many clients can connect to the network
 ap.active(True)         # activate the interface
 ```
 
-A useful function for connecting to your local WiFi network is: 
+A useful function for connecting to your local WiFi network is:
 
 ```python
 def do_connect():
@@ -577,7 +579,7 @@ Thank you for reading this article！ Feel free to share your thoughts in the co
 
 ## Resources
 
-* [The firmware binary file](https://micropython.org/download/ESP32_GENERIC_S3/) for XIAO ESP32S3 with MicroPython
+- [The firmware binary file](https://micropython.org/download/ESP32_GENERIC_S3/) for XIAO ESP32S3 with MicroPython
 
 ## Tech Support & Product Discussion
 

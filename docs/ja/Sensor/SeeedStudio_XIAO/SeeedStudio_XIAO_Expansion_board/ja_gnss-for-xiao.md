@@ -1,80 +1,74 @@
 ---
-description: L76-L GNSS を XIAO で始める
-title: L76-L GNSS for XIAO
+description: XIAO用L76-L GNSSの使用開始
+title: XIAO用L76-L GNSS
 keywords:
 - gps
 - gnss
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/gnss_for_xiao
 last_update:
-  date: 05/15/2025
+  date: 10/09/2023
   author: Stephen Lo
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# L76-L GNSS for XIAO
+# XIAO用L76-L GNSS
 
 :::danger
-この製品は現在保留中です。
+この製品は保留中です。
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://raw.githubusercontent.com/Longan-Labs/XIAO_GPS/main/IMG/back.png" alt="pir" width={250} height="auto" /></p>
 
-L76-L GNSS for XIAO へようこそ！これは Seeed Studio の XIAO 製品シリーズに新たに加わった最新のモジュールです。この GNSS モジュールは、プロジェクトに正確な位置情報を提供するだけでなく、XIAO メインコントローラーとのシームレスな統合により、強力なツールとなります。モバイルアプリケーションの設計、追跡デバイスの構築、またはプロジェクトに地理位置情報機能を追加したい場合、このモジュールが最適な選択肢です。
+XIAO用L76-L GNSSへようこそ - Seeed StudioのXIAO製品シリーズの最新追加製品です。このGNSSモジュールは、プロジェクトに精密な測位機能を提供するだけでなく、XIAOメインコントローラーとのシームレスな統合により強力なツールとなります。モバイルアプリケーションの設計、追跡デバイス、またはプロジェクトに位置情報機能を追加したい場合でも、このモジュールが最適な選択肢です。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="/ja/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <a class="get_one_now_item" href="/gnss_for_xiao" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-## はじめに
+## 概要
 
 ### 特徴
 
-- マルチコンステレーション対応: GPS、GLONASS、Galileo、QZSS をサポート。
-- 高性能: 33 の追跡チャネル、99 の取得チャネル、210 の PRN チャネルを搭載。
-- XIAO 互換性: XIAO メインコントローラーとのシームレスな統合を実現。
-- 柔軟な接続性: XIAO との接続に加え、VCC、GND などのパッドも提供。
+- マルチコンステレーション対応：GPS、GLONASS、Galileo、QZSSをサポート。
+- 高性能：33個の追跡チャンネル、99個の捕捉チャンネル、210個のPRNチャンネルを搭載。
+- XIAO互換性：XIAOメインコントローラーとのシームレスな統合を設計。
+- 柔軟な接続性：XIAOとの接続に加えて、より広範囲なアプリケーション用にVCC、GNDなどのパッドも提供。
 
 ### 仕様
 
-- GNSS タイプ: L76-L
-- 対応衛星システム: GPS、GLONASS、Galileo、QZSS
-- 接続ポート: XIAO 用に特化
-- XIAO 用接続ポート: D2/D3(TX/RX)
-- 追加パッド: VCC、GND、TX、RX
+- GNSSタイプ：L76-L
+- サポート衛星システム：GPS、GLONASS、Galileo、QZSS。
+- 接続ポート：XIAO専用設計。
+- XIAO用接続ポート：D2/D3(TX/RX)
+- 追加パッド：VCC、GND、TX、RX
 
-### 応用例
+### アプリケーション
 
-- モバイルアプリケーション: モバイルアプリに正確な地理位置情報機能を提供。
-- 追跡デバイス: 位置情報および追跡デバイスの設計と構築。
-- 地理位置情報機能: プロジェクトに地理位置情報機能を追加。
+- モバイルアプリケーション：モバイルアプリに精密な位置情報機能を提供。
+- 追跡デバイス：位置情報と追跡デバイスの設計・構築。
+- 位置情報機能：プロジェクトに位置情報機能を追加。
 
+## 使用開始
 
-## クイックスタートガイド
-
-L76-L GNSS for XIAO のクイックスタートガイドへようこそ。このガイドでは、新しい GPS 拡張ボードを XIAO nRF52840 メインコントローラーと組み合わせてセットアップし、使用を開始する方法を説明します。
-
+XIAO用L76-L GNSSのクイックスタートガイドへようこそ。このガイドは、XIAO nRF52840メインコントローラーと組み合わせて新しいGPS拡張ボードをセットアップし、使用開始するのに役立ちます。
 
 ### ハードウェア準備
 
 #### ヘッダーのはんだ付け
 
-製品を受け取ったら、いくつかのはんだ付け作業が必要です。パッケージには 2 つのピンヘッダーが付属しています。これらのヘッダーを拡張ボードに取り付ける必要があります。
+製品を受け取った際、いくつかのはんだ付けが必要です。パッケージには2つのピンヘッダーが付属しています。これらのヘッダーを拡張ボードにはんだ付けする必要があります。
 
-#### XIAO と拡張ボードの接続
+#### XIAOと拡張ボードの接続
 
-はんだ付けが完了したら、拡張ボードを XIAO メインコントローラーに接続します。
+はんだ付けが完了したら、拡張ボードをXIAOメインコントローラーに接続できます。
 
 ### ソフトウェア準備
 
-#### EspSoftwareSerial (XIAO ESP32 シリーズ専用)
+#### EspSoftwareSerial（XIAO ESP32シリーズのみ）
 
-XIAO ESP32 シリーズをマスターとして使用する場合、ソフトシリアルポート用のライブラリを別途ダウンロードする必要があります。
+XIAO ESP32シリーズをマスターとして使用している場合、ソフトシリアルポート用のライブラリを別途ダウンロードする必要があります。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://www.arduino.cc/reference/en/libraries/espsoftwareserial/" target="_blank" rel="noopener noreferrer">
@@ -82,17 +76,17 @@ XIAO ESP32 シリーズをマスターとして使用する場合、ソフトシ
     </a>
 </div><br />
 
-Arduino IDE のライブラリマネージャーから `EspSoftwareSerial` ライブラリを直接検索してインストールできます。
+Arduino IDEのライブラリマネージャーから直接`EspSoftwareSerial`ライブラリを検索してインストールできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/gnss-xiao/1.png" style={{width:400, height:'auto'}}/></div>
 
 :::note
-他の XIAO シリーズを使用している場合、ソフトシリアルポート用のライブラリを別途ダウンロードする必要はありません。
+他のXIAOシリーズを使用している場合は、ソフトシリアルポート用のライブラリを別途ダウンロードする必要はありません。
 :::
 
 #### TinyGPSPlus
 
-拡張ボードが報告する GPS データメッセージを解析するためのライブラリも必要です。この **TinyGPSPlus** ライブラリを以下のボタンをクリックしてダウンロードできます。
+拡張ボードから報告されるGPSデータメッセージを解析するためのライブラリも必要です。下のボタンをクリックして、この**TinyGPSPlus**ライブラリをダウンロードできます。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://www.arduino.cc/reference/en/libraries/tinygpsplus/" target="_blank" rel="noopener noreferrer">
@@ -100,13 +94,13 @@ Arduino IDE のライブラリマネージャーから `EspSoftwareSerial` ラ�
     </a>
 </div><br />
 
-Arduino IDE のライブラリマネージャーから `TinyGPSPlus` ライブラリを直接検索してインストールできます。
+Arduino IDEのライブラリマネージャーから直接`TinyGPSPlus`ライブラリを検索してインストールできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/gnss-xiao/2.png" style={{width:400, height:'auto'}}/></div>
 
-## XIAO nRF52840 の例
+## XIAO nRF52840の例
 
-L76-L モジュールは、1秒ごとにシリアルポートを介してGPS情報を出力します。この例では、シリアルポートから受信した内容を出力します。時間、衛星、緯度および経度を含む多くの情報を確認することができます。以下はコードです。
+L76-Lモジュールは1秒ごとにシリアルポート経由でGPS情報を出力します。この例では、シリアルポートから受信した内容を印刷します。時刻、衛星、緯度・経度を含む多くの情報を見ることができます。以下がコードです。
 
 ```cpp
 #include <TinyGPSPlus.h>
@@ -115,10 +109,10 @@ L76-L モジュールは、1秒ごとにシリアルポートを介してGPS情�
 static const int RXPin = D3, TXPin = D2;
 static const uint32_t GPSBaud = 9600;
 
-// TinyGPSPlus オブジェクト
+// The TinyGPSPlus object
 TinyGPSPlus gps;
 
-// GPSデバイスへのシリアル接続
+// The serial connection to the GPS device
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup()
@@ -127,29 +121,29 @@ void setup()
     ss.begin(GPSBaud);
 
     Serial.println(F("DeviceExample.ino"));
-    Serial.println(F("TinyGPSPlus を使用した GPS モジュールの簡単なデモ"));
-    Serial.print(F("TinyGPSPlus ライブラリのバージョン: ")); Serial.println(TinyGPSPlus::libraryVersion());
-    Serial.println(F("作成者: Mikal Hart"));
+    Serial.println(F("A simple demonstration of TinyGPSPlus with an attached GPS module"));
+    Serial.print(F("Testing TinyGPSPlus library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
+    Serial.println(F("by Mikal Hart"));
     Serial.println();
 }
 
 void loop()
 {
-    // 新しい文が正しくエンコードされるたびに情報を表示します。
+    // This sketch displays information every time a new sentence is correctly encoded.
     while (ss.available() > 0)
     if (gps.encode(ss.read()))
     displayInfo();
 
     if (millis() > 5000 && gps.charsProcessed() < 10)
     {
-        Serial.println(F("GPS が検出されません: 配線を確認してください。"));
+        Serial.println(F("No GPS detected: check wiring."));
         while(true);
     }
 }
 
 void displayInfo()
 {
-    Serial.print(F("位置: "));
+    Serial.print(F("Location: "));
     if (gps.location.isValid())
     {
         Serial.print(gps.location.lat(), 6);
@@ -158,10 +152,10 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("無効"));
+        Serial.print(F("INVALID"));
     }
 
-    Serial.print(F("  日付/時刻: "));
+    Serial.print(F("  Date/Time: "));
     if (gps.date.isValid())
     {
         Serial.print(gps.date.month());
@@ -172,7 +166,7 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("無効"));
+        Serial.print(F("INVALID"));
     }
 
     Serial.print(F(" "));
@@ -192,26 +186,25 @@ void displayInfo()
     }
     else
     {
-        Serial.print(F("無効"));
+        Serial.print(F("INVALID"));
     }
 
     Serial.println();
 }
 ```
 
-GPSモジュールが良好なGPS信号を受信できるよう、より開けた場所で使用することを確認してください。良好なGPS信号があれば、5分以内にシリアルポートでGPSモジュールから返される緯度、経度、および時刻情報を確認できます。
+GPSモジュールがより良いGPS信号を受信できるよう、より開けた場所で使用することを確認してください。良好なGPS信号があれば、5分以内にシリアルポートでGPSモジュールから返される緯度、経度、時刻情報を確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/gnss-xiao/3.png" style={{width:700, height:'auto'}}/></div>
 
+## XIAOなしでの動作
 
-## XIAO を使用しない場合
+他のマイクロコントローラーでGPSモジュールを使用したい場合は、回路基板上にある4つのはんだパッド（3V、GND、TX、RX）を利用できます。
 
-GPSモジュールを他のマイクロコントローラーで使用したい場合、基板上の4つのはんだパッド（3V、GND、TX、RX）を利用できます。
+これらのパッドを目的のマイクロコントローラーの対応するピンに接続することで、L76-LモジュールをXIAOなしで統合し、動作させることができます。適切なピン構成と接続については、特定のマイクロコントローラーのドキュメントを参照してください。
 
-これらのパッドを目的のマイクロコントローラーの対応するピンに接続することで、L76-L モジュールを統合して XIAO なしで動作させることができます。適切なピン配置と接続については、使用するマイクロコントローラーのドキュメントを参照してください。
-
-|L76-L モジュール|他の MCU|
-|----------------|---------|
+|L76-Lモジュール|その他のMCU|
+|------------|----------|
 |3V|3.3V|
 |GND|GND|
 |TX|RX|
@@ -224,7 +217,7 @@ GPSモジュールを他のマイクロコントローラーで使用したい�
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

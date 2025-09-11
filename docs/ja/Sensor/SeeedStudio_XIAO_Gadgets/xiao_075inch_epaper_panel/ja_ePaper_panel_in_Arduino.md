@@ -1,74 +1,72 @@
 ---
-description: XIAO ESP32C3 搭載の 7.5 インチ E-Ink ディスプレイは、Arduino を使用してデータを表示するためのコンパクトで省エネルギーなソリューションです。
-title: Arduino での ePaper パネル
+description: XIAO ESP32C3搭載の7.5インチE-Inkディスプレイは、Arduino経由でデータを表示するためのコンパクトで省エネルギーなソリューションです。
+title: Arduinoとの連携
 keywords:
-- ePaper ディスプレイ
+- ePaper display
+- arduino
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.webp
 slug: /ja/xiao_075inch_epaper_panel_arduino
-sidebar_position: 2
+sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 03/26/2025
   author: Allen
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover2.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/203.png" style={{width:900, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
 </div>
 
-## ハードウェア概要
+## 概要
 
-### はじめに
+XIAO 7.5" ePaper PanelはArduino IDEを使用してプログラミングできるため、Arduinoエコシステムに慣れ親しんだメーカーや開発者にとってアクセスしやすいものとなっています。このガイドでは、Arduino開発環境のセットアップと基本的な例を使った入門方法について説明します。
 
-7.5 インチ E-Ink ディスプレイは、Arduino ユーザーにとって画期的な製品です。Arduino とシームレスに統合され、さまざまなデータを簡単に表示できます。配線が簡単でコードもわかりやすいため、初心者でもすぐに始められます。低消費電力で、どんな光の下でも優れた視認性を提供します。この手軽で多用途なディスプレイを使って、無限のクリエイティブなプロジェクトを実現しましょう！
+ePaper Panelの特徴：
 
-### 特徴
+- 800x480解像度の7.5"モノクロームePaperディスプレイ
+- ワイヤレス接続用のXIAO ESP32-C3マイクロコントローラー
+- ポータブル使用のための内蔵2000mAhバッテリー
+- プログラミングと電源供給用のUSB Type-Cインターフェース
+- 統合スタンド付きのコンパクトデザイン
 
-1. **省エネルギー E-Ink スクリーン**: 低消費電力で、直射日光下でも優れた視認性を提供。
-2. **シームレスな統合**: Home Assistant や Arduino と簡単に統合可能で、カスタマイズが可能。
-3. **コンパクトなデザイン**: スマートホームアプリケーションに最適なコンパクトサイズ。
-4. **ユーザーフレンドリーなセットアップ**: 初心者から上級者まで、簡単に設定して使用可能。
-5. **耐久性と信頼性**: 高品質な部品で構成され、長期間の使用に対応。
+Arduinoプログラミングを通じて、以下のことができます：
 
-### 仕様
-| 項目 | 説明 |
-| --- | --- |
-| MCU | XIAO ESP32 C3 |
-| ディスプレイ | 7.5 インチ ePaper ディスプレイ |
-| 解像度 | 800x480 |
-| バッテリー | 3.7V 2000mAh |
-| 寸法 | 180x20x130mm |
-| 動作温度 | -40°C ～ 85°C |
-| 動作電圧 | 3.3V ～ 5V |
+- テキストとグラフィックの表示
+- カスタムユーザーインターフェースの作成
+- リアルタイムデータとセンサー読み取り値の表示
+- インタラクティブアプリケーションの構築
+- ePaperのゼロ電力保持を活用した低消費電力アプリケーションの実装
+
+このガイドでは、初期セットアッププロセスをカバーし、ePaper Panel用の独自のArduinoアプリケーション開発を始めるためのサンプルコードを提供します。
 
 ## はじめに
 
-### ステップ 1. Arduino IDE をダウンロード
+### ステップ1. Arduino IDEのダウンロード
 
-まず、Arduino IDE をまだお持ちでない場合は、[Arduino IDE](https://www.arduino.cc/en/software) にアクセスして最新バージョンをダウンロードしてください。
+まず、Arduino IDEをまだお持ちでない場合は、[Arduino IDE](https://www.arduino.cc/en/software)にアクセスして最新バージョンをダウンロードしてください。
 
-### ステップ 2. ESP32 ボードサポートをインストール
+:::tip
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+:::
 
-**ファイル** -> **環境設定** に移動し、**追加のボードマネージャ URL** に以下の URL を追加してください。[詳細手順はこちらをクリック](http://localhost:3000/XIAO_ESP32C3_Getting_Started/#software-setup)。
+### ステップ2. ESP32ボードサポートのインストール
+
+**File** -> **Preferences**に移動し、**Additional Boards Manager URLs**に以下のURLを追加してください。[詳細な手順はこちらをクリックしてください。](http://localhost:3000/XIAO_ESP32C3_Getting_Started/#software-setup)
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
-### ステップ 3. Seeed Arduino LCD ライブラリをインストール
+### Step 3. Seeed Arduino LCD ライブラリのインストール
 
 :::tip
-このライブラリは TFT ライブラリと同じ機能を持ちますが、互換性はありません。TFT ライブラリをインストールしている場合は、まずアンインストールしてください。
+このライブラリはTFTライブラリと同じ機能を持ちますが、互換性はありません。TFTライブラリや他の類似のディスプレイライブラリをインストールしている場合は、まずそれらをアンインストールしてください。
 :::
 
-GitHub から Seeed Arduino LCD ライブラリをダウンロードしてインストールします。
+GitHubからSeeed GFXライブラリをダウンロードしてインストールします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/50.png" style={{width:800, height:'auto'}}/></div>  
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
@@ -76,33 +74,47 @@ GitHub から Seeed Arduino LCD ライブラリをダウンロードしてイン
 </a>
 </div>
 
-ライブラリをダウンロードした後、**スケッチ** -> **ライブラリをインクルード** -> **.ZIP ライブラリを追加** に移動し、ダウンロードしたライブラリを選択してください。
+下にスクロールしてこのリンクを開きます。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
+
+デバイスタイプを選択すると、コードが生成されます。そのコードをコピーして、後で使用します。
+
+:::tip
+間違った選択をすると、画面に何も表示されません。
+
+そのため、デバイスやコンポーネントのタイプを確認してください。
+:::
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix6.jpg" style={{width:800, height:'auto'}}/></div>
+
+ライブラリをダウンロードした後、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動し、ダウンロードしたライブラリを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
-4 つの基本的な例が用意されています。お好みの基本例を開いてください：
-1. Bitmap: ビットマップ画像を表示。
-2. Clock: 時計を表示。
-3. Clock_digital: デジタル時計を表示。
-4. Shape: ランダムに異なるサイズの文字や形を表示。
+4つの基本的な例があります。お好みの基本例を開いてください：
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/52.png" style={{width:800, height:'auto'}}/></div>
+1. Bitmap: ビットマップ画像を表示します。
+2. Clock: 時計を表示します。
+3. Clock_digital: デジタル時計を表示します。
+4. Shape: 異なるサイズの文字と図形をランダムに表示します。
 
-### ステップ 4. コードをアップロード
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix5.jpg" style={{width:800, height:'auto'}}/></div>
 
-コードをアップロードする前に、Seeed_Arduino_LCD ライブラリ内の **User_Setup_Select.h** を開く必要があります。
+### Step 4. コードのアップロード
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/53.png" style={{width:800, height:'auto'}}/></div>
+**新しい「driver.h」ファイル**を作成し、そのコードを貼り付けます。コードは次のようになります：
 
-160 行目をコメントアウトし、163 行目のコメントを解除してから、**ファイルを保存** してください。
+```cpp
+#define BOARD_SCREEN_COMBO 502 // 7.5 inch monochrome ePaper Screen （UC8179）
+#define USE_XIAO_EPAPER_DRIVER_BOARD
+```
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/54.png" style={{width:800, height:'auto'}}/></div>
+その後、**Tools** -> **Board** -> **XIAO ESP32C3** と **Tools** -> **Port** -> **ボードが接続されているポートを選択** に移動します。次に **Upload** をクリックしてコードをアップロードします。
 
-その後、**ツール** -> **ボード** -> **Seeeduino XIAO ESP32C3** を選択し、**ツール** -> **ポート** -> **接続されているボードのポートを選択** します。その後、**アップロード** をクリックしてコードをアップロードしてください。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix7.jpg" style={{width:800, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/55.png" style={{width:800, height:'auto'}}/></div>
-
-これで ePaper スクリーンにフィードバックが表示されます！以下は Bitmap と Clock の例の結果です。
+これで電子ペーパー画面にフィードバックが表示されます！以下はBitmapとClockの例の結果です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/56.png" style={{width:800, height:'auto'}}/></div>
 
@@ -110,12 +122,12 @@ GitHub から Seeed Arduino LCD ライブラリをダウンロードしてイン
 
 ## リソース
 
-- **[STP]**: [3Dモデルエンクロージャー](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
-- **[PDF]**: [ePaper_Breakout_Board_for_XIAO_V2_PCBA.pdf](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Breakout_Board_for_XIAO_V2_PCBA.pdf)
+- **[STP]**: [3Dモデルエンクロージャ](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
+- **[PDF]**: [ePaperドライバーボード回路図PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

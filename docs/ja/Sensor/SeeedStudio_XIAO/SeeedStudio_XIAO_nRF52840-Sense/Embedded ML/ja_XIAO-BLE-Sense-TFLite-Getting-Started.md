@@ -1,30 +1,26 @@
 ---
 description: はじめに
-title: TensorFlow Lite を Seeed Studio XIAO nRF52840 Sense で始める
+title: Seeed Studio XIAO nRF52840 Sense での TensorFlow Lite 入門
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO-BLE-Sense-TFLite-Getting-Started
 last_update:
-  date: 05/15/2025
+  date: 1/11/2023
   author: shuxu hu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# TensorFlow Lite を Seeed Studio XIAO nRF52840 Sense で始める
+# Seeed Studio XIAO nRF52840 Sense での TensorFlow Lite 入門
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TFLite-thumb.jpg" alt="pir" width={1000} height="auto" /></p>
 
-このウィキでは、Seeed Studio XIAO nRF52840 Sense 上で TensorFlow Lite を使用し、内蔵加速度センサーを用いてパンチや屈曲といったジェスチャーを検出する方法を説明します。ここでは、データのトレーニングはデバイス上で行います。
+この Wiki では、Seeed Studio XIAO nRF52840 Sense で TensorFlow Lite を使用し、オンボード加速度計を使ってパンチやフレックスなどのジェスチャーを検出する方法を説明します。ここでは、データトレーニングはデバイス自体で行われます。
 
-> 組み込み AI アプリケーションには、「Seeed nrf52 mbed-enabled Boards Library」の使用を強くお勧めします。
+> 組み込み AI アプリケーションには、「Seeed nrf52 mbed-enabled Boards Library」の使用を強く推奨します。
 
-## ソフトウェアのセットアップ
+## ソフトウェアセットアップ
 
-まず、初期のハードウェアおよびソフトウェアのセットアップについては、["Getting Started with Seeed Studio XIAO nRF52840 (Sense)"](https://wiki.seeedstudio.com/ja/XIAO-BLE-Sense-Getting-Started) ウィキを参照してください。
+まず、初期のハードウェアとソフトウェアのセットアップについて、["Getting Started with Seeed Studio XIAO nRF52840 (Sense)"](https://wiki.seeedstudio.com/XIAO-BLE-Sense-Getting-Started) の Wiki に従ってください。
 
 それでは、残りのソフトウェアセットアップに進みましょう。
 
@@ -36,120 +32,120 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/tflite-micro-github.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 3**. Arduino IDE を開き、`スケッチ > ライブラリをインクルード > .ZIP ライブラリを追加...` を選択し、ダウンロードした zip ファイルを順番に開きます
+- **ステップ 3**. Arduino IDE を開き、`Sketch > Include Library > Add .ZIP Library...` に移動し、ダウンロードした両方の zip ファイルを順番に開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/add-zip.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 4.** `ファイル > スケッチ例 > Seeed Arduino LSM6DS3 > IMU_Capture` に移動して **IMU_Capture.ino** を開きます
+- **ステップ 4.** `File > Examples > Seeeed Arduino LSM6DS3 > IMU_Capture` に移動して **IMU_Capture.ino** を開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/select-IMUCapture-2.png" alt="pir" width={500} height="auto" /></p>
 
-- **ステップ 5.** コードをアップロードし、**シリアルモニタ**を開きます
+- **ステップ 5.** コードをアップロードし、**シリアルモニター** を開きます
 
-**注意:** コードをアップロードした後、自動的には実行されません。Arduino ウィンドウの右上にある **シリアルモニタ** をクリックする必要があります。
+**注意:** コードをアップロードした後、Arduino ウィンドウの右上角にある **シリアルモニター** をクリックするまで、自動的に実行されません。
 
-## データのトレーニング
+## データトレーニング
 
-### パンチ動作
+### パンチアクション
 
-シリアルモニタを開いた状態で、パンチ動作のデータトレーニングを開始します。
+シリアルモニターが開いている間に、パンチアクションのデータトレーニングを開始します。
 
-- **ステップ 1.** Seeed Studio XIAO nRF52840 Sense を手のひらに持ち、前方にパンチを始めると、シリアルモニタにデータが表示されます
+- **ステップ 1.** Seeed Studio XIAO nRF52840 Sense を手のひらに握り、前方にパンチを始めると、シリアルモニターにいくつかのデータが出力されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/train-punch.gif" alt="pir" width={1000} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/punch-serial.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 2.** パンチ動作を約 10 回繰り返すと、各パンチ後に新しいデータが生成されます
+- **ステップ 2.** パンチアクションを約 10 回繰り返すと、各パンチの後に新しいデータが生成されます
 
-- **ステップ 3.** シリアルモニタの出力全体をコピーしてテキストファイルに貼り付け、ファイルを **punch.csv** として保存します
+- **ステップ 3.** シリアルモニターの完全な出力をコピーしてテキストファイルに貼り付け、テキストファイルを **punch.csv** として保存します
 
-**注意:** **aX,aY,aZ,gX,gY,gZ** を含む最初の行も必ずコピーしてください。
+**注意:** **aX,aY,aZ,gX,gY,gZ** を含む最初の行もコピーしてください
 
-### 屈曲動作
+### フレックスアクション
 
-- **ステップ 1.** USB ケーブルを Seeed Studio XIAO nRF52840 Sense に再接続し、シリアルモニタを開き、Seeed Studio XIAO nRF52840 Sense を手のひらに持って内側に屈曲を始めると、シリアルモニタにデータが表示されます
+- **ステップ 1.** Seeed Studio XIAO nRF52840 Sense に USB ケーブルを再接続し、シリアルモニターを開き、Seeed Studio XIAO nRF52840 Sense を手のひらに握って内側にフレックスを始めると、シリアルモニターにいくつかのデータが出力されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/train-flex.gif" alt="pir" width={1000} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/flex-serial.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 2.** 屈曲動作を約 10 回繰り返すと、各屈曲後に新しいデータが生成されます
+- **ステップ 2.** フレックスアクションを約 10 回繰り返すと、各フレックスの後に新しいデータが生成されます
 
-- **ステップ 3.** シリアルモニタの出力全体をコピーしてテキストファイルに貼り付け、ファイルを **flex.csv** として保存します
+- **ステップ 3.** シリアルモニターの完全な出力をコピーしてテキストファイルに貼り付け、テキストファイルを **flex.csv** として保存します
 
-**注意:** **aX,aY,aZ,gX,gY,gZ** を含む最初の行も必ずコピーしてください。
+**注意:** **aX,aY,aZ,gX,gY,gZ** を含む最初の行もコピーしてください
 
-## TensorFlow Lite モデルファイルの生成
+## TensorFlow Liteモデルファイルの生成
 
-ここでは、以前作成した **punch.csv** と **flex.csv** ファイルを使用して、TensorFlow Lite モデルファイル **(model.h)** を生成します。
+これから、以前に作成した**punch.csv**と**flex.csv**ファイルを使用して、TensorFlow Liteモデルファイル**(model.h)**を生成します。
 
-- **ステップ 1.** [この Python ノートブック](https://colab.research.google.com/github/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb) を開きます。このノートブックは、必要な model.h ファイルを生成するのに役立ちます。
+- **ステップ1.** 必要なmodel.hファイルの生成に役立つ[このPythonノートブック](https://colab.research.google.com/github/arduino/ArduinoTensorFlowLiteTutorials/blob/master/GestureToEmoji/arduino_tinyml_workshop.ipynb)を開きます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/TF-notebook-1.png" alt="pir" width={7500} height="auto" /></p>
 
-- **ステップ 2.** 左側のナビゲーションパネルにあるファイルタブに移動し、**punch.csv** と **flex.csv** ファイルをドラッグ＆ドロップします。
+- **ステップ2.** 左側のナビゲーションパネルのファイルタブに移動し、**punch.csv**と**flex.csv**ファイルをドラッグアンドドロップします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/drop-punch-flex.png" alt="pir" width={350} height="auto" /></p>
 
-- **ステップ 3.** **Setup Python Environment** セクション内で、コードを **pip install tensorflow==2.0.0-rc1** から **pip install tensorflow** に変更します。
+- **ステップ3.** **Setup Python Environment**セクション内で、コードを**pip install tensorflow==2.0.0-rc1**から**pip install tensorflow**に変更します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/tensorflow-install.png" alt="pir" width={550} height="auto" /></p>
 
-- **ステップ 4.** `Runtime > Run all` に移動して、すべてのコードセルを実行します。
+- **ステップ4.** `Runtime > Run all`に移動して、すべてのコードセルを実行します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/run-all.png" alt="pir" width={450} height="auto" /></p>
 
-- **ステップ 5.** エラーメッセージが表示されたら、**Run anyway** をクリックします。
+- **ステップ5.** ポップアップするエラーメッセージに対して**Run anyway**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/run-anyway.png" alt="pir" width={600} height="auto" /></p>
 
-- **ステップ 6.** すべてのコードセルが実行されると、以前見た **files** タブの下に新しい **model.h** ファイルが生成されます。
+- **ステップ6.** すべてのコードセルが実行されると、以前に見た**files**タブの下に新しい**model.h**ファイルが生成されているのが確認できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/model.h.png" alt="pir" width={350} height="auto" /></p>
 
-**注意:** 上記の **model.h** ファイルが表示されない場合は、ページを更新してください。
+**注意:** 上記の**model.h**ファイルが表示されない場合は、ページを更新してください。
 
-- **ステップ 7.** ファイルを右クリックして **Download** を選択し、PCにファイルをダウンロードします。
+- **ステップ7.** ファイルを右クリックして**Download**をクリックし、ファイルをPCにダウンロードします
 
 ## 推論
 
-次に、ダウンロードした TensorFlow Lite モデルファイル **(model.h)** を使用して、Seeed Studio XIAO nRF52840 Sense でパンチとフレックスの動作を認識します。
+これから、ダウンロードしたTensorFlow Liteモデルファイル**(model.h)**を使用して、Seeed Studio XIAO nRF52840 Senseからパンチとフレックス動作を認識します。
 
-- **ステップ 1.** **Seeed_Arduino_LSM6DS3** ライブラリのライブラリパスに移動します（通常は **Documents > Arduino > libraries > Seeed_Arduino_LSM6DS3** の下にあります）。そして **examples > IMU_Classifier** を開きます。
+- **ステップ1.** **Seeed_Arduino_LSM6DS3**ライブラリのライブラリパス（通常は**Documents > Arduino > libraries > Seeed_Arduino_LSM6DS3**の下）に移動し、**examples > IMU_Classifier**にアクセスします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/file-explorer-imu.png" alt="pir" width={650} height="auto" /></p>
 
-- **ステップ 2.** **model.h** ファイルを、先ほどダウンロードしたものに置き換えます。
+- **ステップ2.** **model.h**ファイルを以前にダウンロードしたものと置き換えます
 
-- **ステップ 3.** **IMU_Classifier.ino** をダブルクリックしてコードを開き、Seeed Studio XIAO nRF52840 Sense にアップロードします。
+- **ステップ3.** **IMU_Classifier.ino**をダブルクリックして、コードをSeeed Studio XIAO nRF52840 Senseにアップロードします。
 
 ### パンチ動作
 
-**シリアルモニター** を開き、パンチ動作を行います。**punch** の横に **1** に近い結果が表示されるのが確認できます。
+**シリアルモニター**を開いてパンチ動作を実行します。**punch**の横に**1**に近い結果が表示されることが確認できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/punch-result.png" alt="pir" width={300} height="auto" /></p>
 
 ### フレックス動作
 
-フレックス動作を行います。**flex** の横に **1** に近い結果が表示されるのが確認できます。
+フレックス動作を実行します。**flex**の横に**1**に近い結果が表示されることが確認できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/flex-result.png" alt="pir" width={300} height="auto" /></p>
 
 ## リソース
 
-- **[ウェブページ]** [TensorFlow Lite ドキュメント](https://www.tensorflow.org/lite/guide)
+- **[Webページ]** [TensorFlow Lite ドキュメント](https://www.tensorflow.org/lite/guide)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

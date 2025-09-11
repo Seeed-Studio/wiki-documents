@@ -20,15 +20,13 @@ MicroBlocks is a blocks-language that makes it easy for beginners (9 years to ad
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-nrf52-sense-pinout.png" style={{width:650, height:'auto'}}/></div>
 
-A big advantage of this board is its low-power Nordic radio,
-which allows MicroBlocks to progran the board wirelessly via Bluetooth Low Energy (BLE).
+A big advantage of this board is its low-power Nordic radio, which allows MicroBlocks to progran the board wirelessly via Bluetooth Low Energy (BLE).
 
 Pins 0..10 are GPIO pins. Pins 0..5 can be analog inputs.
 This board also has three tiny LEDs: red (pin 11, the user LED), blue (pin 12), and green (pin 13).
 All LEDs are inverted: set the associated pin LOW to turn the LED on.
 
-The Sense version also includes an onboard PDM microphone, temperature sensor, and 6-axis LSM6DS3TR-C IMU,
-which are supported by the MicroBlocks "Microphone", "Basic Sensors", and "Motion" libraries.
+The Sense version also includes an onboard PDM microphone, temperature sensor, and 6-axis LSM6DS3TR-C IMU, which are supported by the MicroBlocks "Microphone", "Basic Sensors", and "Motion" libraries.
 
 ## Installing the MicroBlocks Firmware
 
@@ -37,9 +35,7 @@ To enter bootloader mode, rapidly click the reset button twice.
 
 A virtual USB drive named **XIAO-SENSE** will appear.
 
-Download the [firmware file](https://microblocks.fun/downloads/latest/vm/vm_xiao_nrf52840.uf2),
-from the MicroBlocks [firmware folder](https://microblocks.fun/downloads/latest/vm)
-then drag the file onto the virtual USB drive.
+Download the [firmware file](https://microblocks.fun/downloads/latest/vm/vm_xiao_nrf52840.uf2), from the MicroBlocks [firmware folder](https://microblocks.fun/downloads/latest/vm) then drag the file onto the virtual USB drive.
 
 The firmware will install and, after a few seconds, the virtual USB drive will disappear.
 You can ignore any warning that the disk was not ejected properly.
@@ -67,8 +63,7 @@ A green circle and the board name will appear when the board is connected:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connected-nrf.png" style={{width:200, height:'auto'}}/></div>
 
-If your Xiao nRF52840 has its own power source, you can also connect to it without a USB cable
-by selecting "connect (BLE)" in the connect menu.
+If your Xiao nRF52840 has its own power source, you can also connect to it without a USB cable by selecting "connect (BLE)" in the connect menu.
 
 ## Coding in MicroBlocks
 
@@ -76,14 +71,12 @@ MicroBlocks is a **live** coding environment so you can test as you code.
 Click on blocks and scripts to run them.
 Drag blocks into the scripting pane and assemble them to create scripts.
 
-Your code is stored in persistent flash memory and can run even when the board is
-not connected to the MicroBlocks editor.
+Your code is stored in persistent flash memory and can run even when the board is not connected to the MicroBlocks editor.
 Scripts under a **when started** block run when the board is powered.
 
 MicroBlocks supports concurrency. Up to ten scripts can run at the same time.
 
-In addition to its many built-in blocks, MicroBlocks has nearly 200 libraries
-that support additional features and peripherals.
+In addition to its many built-in blocks, MicroBlocks has nearly 200 libraries that support additional features and peripherals.
 Click the **Add Library** button to add libraries.
 
 ## Examples
@@ -96,8 +89,7 @@ This script will cycle through the red, blue, and green LEDs:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-three-led-blink.png" style={{width:300, height:'auto'}}/></div>
 
-The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
-includes many additional examples.
+The [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) includes many additional examples.
 
 ## Special Thanks
 

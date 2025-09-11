@@ -1,66 +1,61 @@
 ---
-description: Seeed Studio XIAO nRF52840 を PlatformIO で使用
-title: XIAO nRF52840-Sense を PlatformIO で使用
+description: Seeed Studio XIAO nRF52840 with PlatformIO
+title: XIAO nRF52840-Sense with PlatformIO
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/nRF52840_PlatformIO/1.png
 slug: /ja/xiao_nrf52840_with_platform_io
 last_update:
-  date: 05/15/2025
+  date: 08/14/2024
   author: Jason
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/nRF52840_PlatformIO/1.png" /></div>
 
-# **Seeed Studio XIAO nRF52840 を PlatformIO で使用**
+# **Seeed Studio XIAO nRF52840 with PlatformIO**
 
-PlatformIO は、多くの種類の開発ボードを統合し、優れた拡張性を持つ開発プラットフォームです。このプラットフォームに必要なボードタイプがない場合、自分で手動で追加することができます。Arduino で書いたコードも使用可能で、対応するライブラリを追加するだけです。
+PlatformIOは多くの種類の開発ボードを統合し、優れた拡張性を持つ開発プラットフォームです。プラットフォームに必要なタイプがない場合は、手動で開発ボードのタイプを追加することができます。Arduinoで書いたコードを使用でき、対応するライブラリを追加するだけです。
 
-この Wiki では、PlatformIO にサンプルコードをインストールして実行する方法を紹介します。
+このwikiでは、PlatformIOでサンプルコードをインストールして実行する方法を紹介します。
 
-## XIAO nRF52840 を PlatformIO で使用する
+## XIAO nRF52840でPlatformIOを使用する
 
-### 手順 1. 公式ウェブサイトで [PlatformIO](https://platformio.org/platformio-ide) をインストール
+### セットアップ1. 公式サイトで[PlatformIO](https://platformio.org/platformio-ide)をインストール
 
-PlatformIO ソフトウェアをまだインストールしていない場合は、上記のリンクをクリックしてください。
+PlatformIOソフトウェアをまだインストールしていない場合は、上記のリンクをクリックしてください。
 
-### 手順 2. PlatformIO で任意のプロジェクトを作成
+### セットアップ2. PlatformIOで任意のプロジェクトを作成
 
-PlatformIO にはすでに XIAO ESP32S3 と XIAO ESP32C3 の開発ボードオプションが用意されているため、それらのいずれかを選択してファイルを作成できます。もちろん、他のファイルでも問題ありません。プロジェクト名も自由に選べます。ここでは、例として XIAO ESP32 C3 を使用します。
+プラットフォームにはすでにXIAO ESP32S3とXIAO ESP32C3開発ボードのオプションがあるため、そのうちの1つを選択してファイルを作成できます。もちろん、他のファイルでも構いません。プロジェクト名も任意に選択できます。ここではXIAO ESP32 C3を例として使用します。
 
 <table align="center">
   <tr>
-      <th>操作 1</th>
-      <th>操作 2</th>
+      <th>操作1</th>
+        <th>操作2</th>
   </tr>
   <tr>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/4.png" style={{width:500, height:'auto'}}/></div></td>
-      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/3.png" style={{width:700, height:'auto'}}/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/esp32c6_platformio/3.png" style={{width:700, height:'auto'}}/></div></td>
   </tr>
 </table>
 
 :::tip
-この操作を行う前に、XIAO ESP32C6 と XIAO nRF52840 のインストールパッケージをすでにインストールしているため、操作 2 の画像には XIAO ESP32C6 と XIAO nRF52840 のオプションが表示されていますが、操作を行う際には表示されない場合があります。
+これより前に、すでにXIAO ESP32C6とXIAO nRF52840のインストールパッケージをインストールしていたため、操作2の画像にXIAO ESP32C6とXIAO nRF52840のオプションが表示されていますが、操作を実行する際にはそれらは表示されません。
 :::
 
-### 手順 3. platformio.ini ファイルを修正
+### セットアップ3. platformio.iniファイルを修正
 
-PlatformIO ファイルを正常に作成すると、左側の列に多くのファイルが表示されます。その中に platform.ini という名前のファイルがあるのが確認できます。次に、その中身を置き換える必要があります。
-
+PlatformIOファイルの作成に成功すると、左列に多くのファイルが表示されます。platform.iniという名前のファイルが見えます。次に、その中身を置き換える必要があります。
 <table align="center">
   <tr>
-      <th>操作 3</th>
+      <th>操作3</th>
   </tr>
   <tr>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/XIAO_PlatformIO/platformIO_file.jpg" /></div>
   </tr>
 </table>
 
-以下のコードをコピーして、platform.ini ファイルの内容を置き換えてください。
+以下のコードをコピーして、platform.iniファイルの内容を置き換える必要があります。
 
 ```
 [env:seeed_xiao_nrf52840_sense]
@@ -69,12 +64,12 @@ board = seeed-xiao-afruitnrf52-nrf52840
 framework = arduino
 ```
 :::tip
-ファイルを保存することを忘れないでください（Ctrl + S）。保存するとロードが始まります。
+ファイルを保存することを忘れないでください。Ctrl+Sで保存すると、読み込みが開始されます。
 :::
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

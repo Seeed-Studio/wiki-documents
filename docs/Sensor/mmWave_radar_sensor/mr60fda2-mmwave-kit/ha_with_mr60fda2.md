@@ -134,7 +134,7 @@ With the firmware, you could power on the sensor kit, and a Wi-Fi access point w
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/hotspot-name.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 
-Navigate to `192.168.4.1` to configure your Home Assistant server's local network settings. 
+Navigate to `192.168.4.1` to configure your Home Assistant server's local network settings.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave-for-xiao/mr60/mr60fda2/opt-for-wifi-ap.jpg" style={{width:360, height:'auto', "border-radius": '15px'}}/></div>
 

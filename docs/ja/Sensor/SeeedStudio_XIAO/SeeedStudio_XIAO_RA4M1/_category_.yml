@@ -1,10 +1,10 @@
 position: 1 # float position is supported
 label: 'XIAO RA4M1'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを閉じた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: xiao_ra4m1
 # link:
 #   type: generated-index
 #   slug: Develop_with_SenseCAP_Indicator
-#   title: SenseCAP インジケータでの開発
-#   description: このチュートリアルでは、SenseCAP インジケータを使用した開発プロセスを案内します。
+#   title: SenseCAP Indicatorで開発する
+#   description: このチュートリアルでは、SenseCAP Indicatorを使用した開発プロセスをガイドします。

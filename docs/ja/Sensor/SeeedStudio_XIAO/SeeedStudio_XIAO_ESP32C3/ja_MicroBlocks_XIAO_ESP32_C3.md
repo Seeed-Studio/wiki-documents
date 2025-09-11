@@ -1,6 +1,6 @@
 ---
-description: MicroBlocksでXIAO ESP32-C3を使用する。
-title: MicroBlocksでXIAO ESP32-C3を使用する
+description: MicroBlocks で XIAO ESP32-C3 を使用する。
+title: MicroBlocks で XIAO ESP32-C3 を使用する
 image: https://files.seeedstudio.com/wiki/microblocks/microblocks.png
 slug: /ja/xiao_esp32c3_microblocks
 last_update:
@@ -8,77 +8,76 @@ last_update:
   author: MicroBlocks
 ---
 
-# MicroBlocksでXIAO ESP32-C3を使用する
+# MicroBlocks で XIAO ESP32-C3 を使用する
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目の単純さにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンの制御、I2C、SPI、シリアル経由での周辺機器とのインターフェース、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
+MicroBlocks は、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocks は MicroPython よりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIO ピンの制御や、I2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストに MicroBlocks を好んで使用しています。
 
-### XIAO ESP32C3のピン配置とハードウェア機能
+### XIAO ESP32C3 のピン配置とハードウェア機能
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32c3-overview.png" style={{width:500, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32c3-pinout.png" style={{width:800, height:'auto'}}/></div>
 
-このボードは、外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
+このボードは、外部アンテナ（付属）を介して Wi-Fi と BLE 接続の両方を提供します。
 
-ボードには11個のGPIOピン（ピン0..10）があります。ピン0..3はアナログ入力として使用できます。
+ボードには11個の GPIO ピン（ピン0..10）があります。ピン0..3はアナログ入力として使用できます。
 
-このボードには内蔵ユーザーLEDが**ありません**。
-MicroBlocksの「ユーザーLEDを設定」ブロックを使用するには、ピン10とグラウンド間に外部LEDを接続してください。
+このボードには内蔵ユーザー LED が**ありません**。
+MicroBlocks の「set user LED」ブロックを使用するには、ピン10とグラウンド間に外部LEDを接続してください。
 
-### MicroBlocksファームウェアのインストール
+### MicroBlocks ファームウェアのインストール
 
-このボード用のMicroBlocksファームウェアは、MicroBlocksエディターから直接インストールできます。
+このボード用の MicroBlocks ファームウェアは、MicroBlocks エディターから直接インストールできます。
 
-データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
+データ用 USB ケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
 
-ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
+Chrome または Edge ブラウザで [MicroBlocks エディター](https://microblocks.fun/run/microblocks.html) を実行します。
 
-ギアメニューで「アドバンスモード」を有効にします：
+ギアメニューで「advanced mode」を有効にします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
-拡張されたギアメニューから**microblocks.funからESPファームウェアをインストール**を選択します：
+拡張されたギアメニューから **install ESP firmware from microblocks.fun** を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-esp-firmware.png" style={{width:400, height:'auto'}}/></div>
 
-**xiao_esp32_c3**を選択します：
+**xiao_esp32_c3** を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-c3.png" style={{width:200, height:'auto'}}/></div>
 
-プロンプトが表示されたら、「接続」ボタン（プラグアイコン）を使用してボードへのUSB接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
+プロンプトが表示されたら、「Connect」ボタン（プラグアイコン）を使用してボードへの USB 接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
-ファームウェアのインストールには30〜60秒かかります。完了するまでブラウザタブを切り替えないでください。
+ファームウェアのインストールには30〜60秒かかります。完了するまでブラウザのタブを切り替えないでください。
 
-ファームウェアがインストールされたら、ボードをMicroBlocksに接続してコーディングを開始できます！
+ファームウェアがインストールされたら、ボードを MicroBlocks に接続してコーディングを開始できます！
 
 ## ブートローダーモード
 
-ESP32ボードにMicroBlocksファームウェアをインストールする際、通常は手動でブートローダーモードに入る必要はありません。
+ESP32 ボードに MicroBlocks ファームウェアをインストールする際、通常は手動でブートローダーモードに入る必要はありません。
 
-必要に応じてブートローダーモードに入るには、B（ブート）ボタンを押し続けながら
-R（リセット）ボタンを押して離します。
-Bボタンを押し続けながらボードをコンピューターに接続することもできます。
+必要に応じてブートローダーモードに入るには、R（リセット）ボタンを押して離す間、B（ブート）ボタンを押し続けます。
+B ボタンを押し続けながらボードをコンピューターに接続することもできます。
 
-## ボードをMicroBlocksに接続する
+## ボードを MicroBlocks に接続する
 
-データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
+データ用 USB ケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
 
-ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
-**接続**（プラグアイコン）ボタンをクリックします：
+Chrome または Edge ブラウザで [MicroBlocks エディター](https://microblocks.fun/run/microblocks.html) を実行します。
+**connect**（プラグアイコン）ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:200, height:'auto'}}/></div>
 
-メニューから**接続（USB）**を選択します：
+メニューから **connect (USB)** を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-**注意：** 接続メニューで**接続（BLE）**を選択することで、ワイヤレスで接続することもできます。
+**注意：** 接続メニューで **connect (BLE)** を選択することで、ワイヤレスで接続することもできます。
 
-ダイアログからボードを選択し、**接続**ボタンをクリックします：
+ダイアログからボードを選択し、**connect** ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-esp.png" style={{width:400, height:'auto'}}/></div>
 
@@ -86,44 +85,41 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connected-esp32c3.png" style={{width:200, height:'auto'}}/></div>
 
-## MicroBlocksでのコーディング
+## MicroBlocks でのコーディング
 
-MicroBlocksは**ライブ**コーディング環境なので、コーディングしながらテストできます。
+MicroBlocks は**ライブ**コーディング環境なので、コーディングしながらテストできます。
 ブロックやスクリプトをクリックして実行します。
-ブロックをスクリプトペインにドラッグして組み立て、スクリプトを作成します。
+ブロックをスクリプトペインにドラッグし、組み立ててスクリプトを作成します。
 
-コードは永続的なフラッシュメモリに保存され、ボードが
-MicroBlocksエディターに接続されていなくても実行できます。
-**開始時**ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
+コードは永続的なフラッシュメモリに保存され、ボードが MicroBlocks エディターに接続されていなくても実行できます。
+**when started** ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
 
-MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
+MicroBlocks は並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
-追加機能と周辺機器をサポートします。
-**ライブラリを追加**ボタンをクリックしてライブラリを追加します。
+多くの内蔵ブロックに加えて、MicroBlocks には追加機能や周辺機器をサポートする約200のライブラリがあります。
+**Add Library** ボタンをクリックしてライブラリを追加します。
 
 ## 例
 
-このボードには内蔵ユーザーLEDがありませんが、
-ピン10とグラウンド間にLEDを接続すると、このスクリプトでそれを点滅させることができます：
+このボードには内蔵ユーザー LED がありませんが、
+ピン10とグラウンド間に LED を接続すると、このスクリプトで点滅させることができます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-blink.png" style={{width:200, height:'auto'}}/></div>
 
-[ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
-には多くの追加例が含まれています。
+[Blocks Reference](https://wiki.microblocks.fun/en/reference_manual) には、さらに多くの例が含まれています。
 
-## 特別な感謝
+## 特別な謝辞
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+記事を執筆してくださった MicroBlocks の John さんに特別な感謝を申し上げます。
 
-## MicroBlocksリソース
+## MicroBlocks リソース
 
-- [ウェブサイト](https://microblocks.fun)
+- [Website](https://microblocks.fun)
 
-- [ユーザーガイド](https://wiki.microblocks.fun/en/ide)
+- [User Guide](https://wiki.microblocks.fun/en/ide)
 
-- [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
+- [Blocks Reference](https://wiki.microblocks.fun/en/reference_manual)
 
-- [ライブラリリファレンス](https://wiki.microblocks.fun/en/libraries)
+- [Libraries Reference](https://wiki.microblocks.fun/en/libraries)
 
-- [学習ガイド](https://learn.microblocks.fun)
+- [Learning Guides](https://learn.microblocks.fun)

@@ -20,7 +20,6 @@ MicroBlocks is a blocks-language that makes it easy for beginners (9 years to ad
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32s3-sense-pinout.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 This board offers both Wi-Fi and BLE connectivity via an external antenna (provided).
 
 The board has 11 GPIO pins (pins 0..10).
@@ -29,9 +28,7 @@ Pins 0..5 and 8..10 can be analog inputs.
 
 Pin 13 is the yellow user LED (inverted).
 
-The Sense version includes an extension board with a camera
-(either an OV2640 camera with 1600x1200 resolution or an OV3660 with 2048x1536 resolution)
-and a digital microphone.
+The Sense version includes an extension board with a camera (either an OV2640 camera with 1600x1200 resolution or an OV3660 with 2048x1536 resolution) and a digital microphone.
 
 **Note: Camera support has not yet been implemented in MicroBlocks but may be added in the future.**
 

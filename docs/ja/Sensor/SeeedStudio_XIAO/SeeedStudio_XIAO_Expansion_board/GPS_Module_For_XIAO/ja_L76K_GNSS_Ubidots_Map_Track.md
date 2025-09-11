@@ -1,67 +1,64 @@
 ---
-title: L76Kを使用したUbidotsでの経路追跡
-description: L76K GNSSモジュールとSeeedStudio XIAOを接続し、地図上で位置経路を追跡する方法
+title: L76K Ubidots経路追跡
+description: L76K GNSSモジュールとSeeedStudio XIAOをUbidotsに接続してマップ上で位置経路追跡を行う
 keywords: 
   - XIAO
-  - XIAO用拡張ボード
-  - XIAO用GPSモジュール
-  - UbidotsでのL76K経路追跡
+  - Expansion Boards for XIAO
+  - GPS Module for XIAO
+  - L76K Path Tracking on Ubidots
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/L76K_Path_Tracking_on_Ubidots
 last_update: 
-  date: 05/15/2025
+  date: 03/07/2024
   author: Harrison Xu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# L76K GNSSモジュールとSeeedStudio XIAOを接続して地図上で位置経路を追跡する
+
+# L76K GNSSモジュールとSeeedStudio XIAOをUbidotsに接続してマップ上で位置経路追跡を行う
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic00_Track.png" alt="pir" width={600} height="auto"/>
 </p>
 
 ## はじめに
-[L76K GNSSモジュールを使用したSeeedStudio XIAOの使い方](https://wiki.seeedstudio.com/ja/get_start_l76k_gnss/)を学んだ後、L76K GNSSモジュールを使用してオブジェクトの位置を特定し、地図上で経路を表示したいと思うかもしれません。この目的のために、SeeedStudio XIAO開発ボードとUbidots IoTデータプラットフォームを組み合わせて実現できます。
+[SeeedStudio XIAO用L76K GNSSモジュールの使用開始](https://wiki.seeedstudio.com/get_start_l76k_gnss/)の後、L76K GNSSモジュールを使用してオブジェクトの位置を特定し、マップ上で軌跡を表示したいと思うかもしれません。この目的のために、SeeedStudio XIAO開発ボードとUbidots IoTデータプラットフォームを組み合わせることで実現できます。
 
-[Ubidots](https://ubidots.com/)は、エンジニアや開発者が完全なプロダクション対応のIoTアプリケーションを自分で構築する時間や労力を節約するためのローコードIoT開発プラットフォームです。デバイスに優しいAPIからエンドユーザー向けのクリーンなUIまで、Ubidotsは市場投入を迅速化するための基本的な構成要素を提供し、高価なエンジニアチームを雇ってカスタマイズソリューションを開発・維持する必要をなくします。
+[Ubidots](https://ubidots.com/)は、完全な本格的なIoTアプリケーションを自分で構築する時間やエネルギーがないエンジニアや開発者向けのローコードIoT開発プラットフォームです。デバイスフレンドリーなAPIからエンドユーザー向けのクリーンなUIまで、Ubidotsは、カスタマイズされたソリューションを開発・維持するための高価なエンジニアチームを雇うことなく、より早く市場に投入するための必須の構成要素を提供します。
 
-### 特徴
-- Wi-Fi接続時にリアルタイムの位置データ（緯度と経度）をアップロード
-- 地図上で位置ポイントを結んだ経路を表示
+### 機能
+- Wi-Fi接続時にリアルタイム位置データ（緯度と経度）をアップロード
+- マップ上で位置点によって接続された経路を表示
 
-## 始めるにあたって
-### ステップ1: Ubidotsトークンを取得
-まず、ブラウザでhttps://ubidots.comを開き、アカウントを登録します。メールを確認して、Ubidotsコンソールにログインします。
+## 使用開始
+### ステップ1：Ubidotsトークンの取得
+まず、ブラウザでhttps://ubidots.com を開き、アカウントにサインアップします。メールを確認し、Ubidotsコンソールにログインします。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic02_SignUp.png" alt="pir" width={600} height="auto"/>
 </p>
 
-右上のアバターをクリックして「My Profile」を選択し、スクロールして「Decimal places」を2から6に変更して、緯度と経度の精度を向上させます。
+角にあるアバターをクリック - "My Profile"、下にスクロールして緯度と経度の精度のために"Decimal places"を2から6に変更します。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic04_Setting.png" alt="pir" width={600} height="auto"/>
 </p>
 
-次に、左側の「API Credentials」に移動し、トークン（**APIキーではありません**）をコピーして後で使用します。
+次に左側の"API Credentials"に移動し、後で使用するためにトークン（**API Keyではありません**）をコピーします。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic05_Token.png" alt="pir" width={600} height="auto"/>
 </p>
 
-### ステップ2: XIAOにコードをアップロード
-SeeedStudio XIAO開発ボード（ここではSeeedStudio XIAO ESP32S3を例に使用）、L76K GNSSモジュール、GNSSアンテナ、Wi-Fiアンテナをすべて接続し、コンピュータにリンクします。
+### ステップ2：XIAOにコードをアップロード
+SeeedStudio XIAO開発ボード（ここでは例としてSeeedStudio XIAO ESP32S3を使用）、L76K GNSSモジュール、GNSSアンテナ、Wi-Fiアンテナをすべて接続し、コンピューターにリンクします。
 
 :::danger **警告**
-モジュールの取り付け方向に特に注意してください。逆に差し込むと、モジュールやXIAOが焼損する可能性があります。
+モジュールの取り付け方向に特に注意してください。逆に差し込まないでください。そうしないとモジュールやXIAOを焼損する可能性があります。
 :::
 
-次に、Arduino IDEを起動します。ライブラリマネージャで`EspSoftwareSerial`と`TinyGPSPlus`ライブラリを追加し、[Ubidots ESP32 Library](https://github.com/ubidots/ubidots-esp32)をダウンロードして追加します。
+次に、Arduino IDEを起動しましょう。ライブラリマネージャーで`EspSoftwareSerial`と`TinyGPSPlus`ライブラリを追加することを忘れずに、[Ubidots ESP32 Library](https://github.com/ubidots/ubidots-esp32)をダウンロードして追加してください。
 
-対応するボードとポートを選択し、以下のコードを貼り付けます：
+対応するボードとポートを選択し、以下のコードを貼り付けます： 
 
 ```cpp
 #include <SoftwareSerial.h>
@@ -71,9 +68,9 @@ SeeedStudio XIAO開発ボード（ここではSeeedStudio XIAO ESP32S3を例に�
 
 static const int RXPin = D7, TXPin = D6;
 static const uint32_t GPSBaud = 9600;
-const char WIFI_SSID[]     = "ここにWi-Fi名を入力してください";
-const char WIFI_PASS[]     = "ここにWi-Fiパスワードを入力してください";
-const char UBIDOTS_TOKEN[] = "ここにUbidotsトークンを入力してください";
+const char WIFI_SSID[]     = "INPUT YOUR WIFI NAME HERE";
+const char WIFI_PASS[]     = "INPUT YOUR WIFI PASSWORD HERE";
+const char UBIDOTS_TOKEN[] = "INPUT YOUR UBIDOTS TOKEN HERE";
 
 SoftwareSerial MySerial(RXPin, TXPin);
 TinyGPSPlus gps;
@@ -84,8 +81,8 @@ double lng;
 void setup() {
   Serial.begin(115200);
   MySerial.begin(GPSBaud);
-  ubidots.setDebug(true);    // Ubidotsアップロードログを観察するため。より簡略化されたシリアルモニタを希望する場合は"false"に変更できます。
-  Serial.println("\nTinyGPSPlusライブラリバージョン: " + String(TinyGPSPlus::libraryVersion()));
+  ubidots.setDebug(true);    // For observing Ubidots uploading log. You can also change it to "false" for a more simplified serial monitor.
+  Serial.println("\nTinyGPSPlus library version: " + String(TinyGPSPlus::libraryVersion()));
 
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
@@ -96,7 +93,7 @@ void setup() {
   }
 
   /*
-    WL_NO_SHIELD        = 255,    // WiFi Shieldライブラリとの互換性のため
+    WL_NO_SHIELD        = 255,    // For compatibility with WiFi Shield library
     WL_IDLE_STATUS      = 0,
     WL_NO_SSID_AVAIL    = 1,
     WL_SCAN_COMPLETED   = 2,
@@ -106,7 +103,7 @@ void setup() {
     WL_DISCONNECTED     = 6
   */
 
-  Serial.println("WiFiに接続されました！");
+  Serial.println("WiFi is connected!");
 }
 
 void loop() {
@@ -114,12 +111,12 @@ void loop() {
     if (gps.encode(MySerial.read())) {
       getLocation();
       sendToUbidots();
-      delay(10 * 1000);  // 位置取得とアップロードの間隔を変更するにはここを調整します。
+      delay(10 * 1000);  // Change the parameter here to modify the interval of getting and uploading location.
     }
   }
 
   if (millis() > 5000 && gps.charsProcessed() < 10) {
-    Serial.println("GPSが検出されません。配線を確認してください。");
+    Serial.println("No GPS detected, please check wiring.");
   }
 }
 
@@ -128,13 +125,13 @@ void getLocation() {
     lat = gps.location.lat();
     lng = gps.location.lng();
 
-    Serial.print("位置: ");
+    Serial.print("Location: ");
     Serial.print(gps.location.lat(), 6);
     Serial.print(", ");
     Serial.print(gps.location.lng(), 6);
     Serial.println();
   } else {
-    Serial.println("現在位置を取得できません");
+    Serial.println("Unable to get location currently");
   }
 }
 
@@ -152,43 +149,43 @@ void sendToUbidots() {
     ubidots.add("position", 1, context);
 
     if (ubidots.send()) {
-      Serial.println("値が送信されました");
+      Serial.println("Values sent");
     } else {
-      Serial.println("値が送信されませんでした");
+      Serial.println("Values not sent");
     }
     free(context);
   }
 }
 ```
 
-ボードにアップロードすると、シリアルモニタに以下のような出力が表示されます：
+ボードにアップロードすると、すぐにシリアルモニターで次のような出力が表示されます：
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic06_SerialMonitor.png" alt="pir" width={600} height="auto"/>
 </p>
 
-<!--ハードウェア接続が正常に動作していることとスクリーンショットを一緒に表示-->
+<!--硬件连接正常工作与屏幕截图放一起-->
 
-Wi-Fiネットワークへの接続や衛星からの位置情報の取得には、上記の画像のようにしばらく時間がかかるのが通常です。これらのエラー出力が数分間続く場合は、USB-Cポートの横にある小さな「R」ボタンを押してXIAOボードを再起動してみてください。
+上の画像に示すように、Wi-Fiネットワークに接続し、衛星から位置情報を取得するまでに時間がかかるのは正常です。これらのエラー出力が数分間続く場合は、USB-Cポートの横にある小さな「R」ボタンでXIAOボードを再起動してみてください。
 
 :::tip
-L76K GNSSモジュールは屋外で使用するため、障害物のない開けた場所に設置してください。そうしないと、位置情報を取得できない場合があります。
+L76K GNSSモジュールは屋外で使用するため、障害物のない開けた場所に設置してください。そうでないと位置情報が取得できない場合があります。
 :::
 
-### ステップ3: 地図上にデータを表示する
-現在、L76K GNSSモジュールとSeeedStudio XIAOはGNSSから位置情報を取得し、緯度と経度の情報をUbidotsに送信しています。それでは、Ubidotsに戻って確認してみましょう。https://industrial.ubidots.com/app/devices にアクセスすると、新しい「デバイス」がUbidotsによって自動的に作成されていることがわかります。これは、トークンを介して新しいデータを送信したためです。デバイス名をクリックすると、アップロードしたデータに基づいてこのデバイスの位置が自動的に設定されているのがわかります。
+### ステップ3：マップにデータを表示する
+これでL76K GNSSモジュールとSeeedStudio XIAOがGNSSから位置を取得し、緯度と経度の情報をUbidotsに送信しています。Ubidotsに戻って確認してみましょう。https://industrial.ubidots.com/app/devices にアクセスすると、トークンを通じて新しいデータを送信したため、Ubidotsによって自動的に作成された新しい「デバイス」があります。デバイス名をクリックすると、このデバイスの位置がアップロードしたデータとして自動的に設定されていることがわかります。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic08_DeviceInfo.png" alt="pir" width={600} height="auto"/>
 </p>
 
-次に、軌跡を表示する地図を作成しましょう。上部の「Data」-「Dashboards」に移動し、「Demo Dashboard」の横にあるハンバーガーメニューボタンをクリックして、新しいダッシュボードを「CREATE」します。このように設定を変更するか、自分のニーズに合わせてカスタマイズしてください。新しいダッシュボードを「SAVE」するのを忘れないでください。
+次に、トラックを表示するマップを作成しましょう。上部の「Data」-「Dashboards」に移動し、「Demo Dashboard」の横にあるハンバーガーメニューボタンを押して、新しいダッシュボードを「CREATE」します。このような設定に変更するか、独自のニーズに合わせてカスタマイズできます。新しいダッシュボードを「SAVE」することを忘れないでください。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic10_NewDashboard.png" alt="pir" width={600} height="auto"/>
 </p>
 
-新しいダッシュボードで「Add new widget」をクリックし、下にスクロールして「Map」を見つけます。「ADD MARKER GROUP」をクリックし、先ほど確認したデバイスを設定すると、地図が表示されます。地図の右下隅にカーソルを移動してサイズを大きく調整してください。
+新しいダッシュボードで「Add new widget」を押し、下にスクロールして「Map」を見つけます。「ADD MARKER GROUP」で、先ほど確認したデバイスを設定すると、マップが表示されます。カーソルをマップの右下角に移動して、より大きくリサイズします。
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic11_NewWidget.png" alt="pir" width={600} height="auto"/>
@@ -198,14 +195,14 @@ L76K GNSSモジュールは屋外で使用するため、障害物のない開�
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic12_MapSetting.png" alt="pir" width={600} height="auto"/>
 </p>
 
-やったー！位置ポイントでつながれた軌跡が目の前に表示されました！
+やりました！位置ポイントで結ばれたパスが目の前に表示されています！
 
 <p style={{textAlign: 'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/GPS_Module/Ubidots/Pic00_Track.png" alt="pir" width={600} height="auto"/>
 </p>
 
 :::tip
-L76K GNSSモジュールが固定された位置に留まって動かない場合、地図には軌跡ではなく点のみが表示されることになります。
+L76K GNSSモジュールが移動せずに固定位置にとどまっている場合、マップにはパスではなく点のみが表示されます。
 :::
 
 ## 参考リンク
@@ -217,9 +214,9 @@ L76K GNSSモジュールが固定された位置に留まって動かない場�
 
 - [Ubidots ESP32 Library on GitHub](https://github.com/ubidots/ubidots-esp32)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
   <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

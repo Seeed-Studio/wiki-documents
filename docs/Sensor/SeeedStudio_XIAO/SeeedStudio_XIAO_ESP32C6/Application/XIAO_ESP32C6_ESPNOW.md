@@ -18,6 +18,7 @@ last_update:
 This Wiki will tell you what the ESP-NOW protocol is,and tech you how to use XIAO ESP32 Series to communicate using this protocol,the process will be very simple,In order to enable everyone to utilize the ESP-NOW protocol in the XIAO ESP32 series,we prepare thress XIAO ESP32 types C6/C3/S3 to comuncate,so let's start this journey!
 
 By the way,if you just go this board,Please click on this link,it will tell you how to get started.
+
 - [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
 - [Seeed Studio XIAO ESP32C3](https://wiki.seeedstudio.com/xiao_esp32c3_getting_started/)
 - [Seeed Studio XIAO ESP32C6](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)
@@ -27,12 +28,14 @@ By the way,if you just go this board,Please click on this link,it will tell you 
 The official definiton provided : ESP-NOW is a wireless communication protocol defined by espressif that enables direct, fast, and low-power control of smart devices without the need for a router.It can coexist with Wi Fi and Bluetooth LE, supporting multiple series of SoCs such as Lexin ESP8266, ESP32, ESP32-S, and ESP32-C. ESP-NOW is widely used in fields such as smart home appliances, remote control, and sensors.
 
 Following characteristics
+
 - According to the MAC address connection method, pairing can be done quickly without network conditions, and devices can be connected in single to many, single to single, many to single, and many to many ways
 - ESP-NOW is a wireless communication protocol based on the data link layer, which simplifies the five layer OSI upper layer protocol into one layer without the need to add packet headers and unpacks layer by layer. It greatly alleviates the lag and delay caused by packet loss during network congestion and has a higher response speed
 
 Compared to Wi-Fi and Bluetooth
-- Wi-Fi : ESP-NOW supports point-to-point communication between devices,so it has lower power consumption and higher transmission speed, and also has a longer communication distance. 
-- Bluetooth : ESP-NOW does not require a pairing process, making it simpler and easier to useESP-NOW so it has lower power consumption and higher transmission speed. 
+
+- Wi-Fi : ESP-NOW supports point-to-point communication between devices,so it has lower power consumption and higher transmission speed, and also has a longer communication distance.
+- Bluetooth : ESP-NOW does not require a pairing process, making it simpler and easier to useESP-NOW so it has lower power consumption and higher transmission speed.
 
 But ESP-NOW is suitable for application scenarios that require fast, reliable, low-power, and point-to-point communication, while Bluetooth and Wi Fi are more suitable for complex network environments and scenarios with a large number of devices.
 
@@ -43,35 +46,35 @@ In this project, in order to consider that some people may only have XIAO ESP32S
 If you don't have any two XIAO ESP32 series pieces yet, here are the purchased links.
   
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Function Realization
@@ -273,41 +276,44 @@ void espnow_deinit(){
 #### Resolution Part1 Code
 
 The include librarise
- - `#include "WiFi.h"`
- - `#include "esp_now.h"`
+
+- `#include "WiFi.h"`
+- `#include "esp_now.h"`
 
 The Core Functions
+
 - `espnow_init()`  
-  - Role : Initialize ESPNOW function 
+  - Role : Initialize ESPNOW function
   - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
-  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
+  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted
   - Return value : initialize successful : [ESP_OK]
 - `SenderXIAOS3_MACAddress_Requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
-- `SenderXIAOS3_Send_Data()` 
+- `SenderXIAOS3_Send_Data()`
   - Role : Send specific message
-- `SenderXIAOS3_Send_Data_cb()` 
+- `SenderXIAOS3_Send_Data_cb()`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
-- `Association_ReceiverXIAOC3_peer() and Association_ReceiverXIAOC6_peer` 
+- `Association_ReceiverXIAOC3_peer() and Association_ReceiverXIAOC6_peer`
   - Role : Add peer nodes,if need more receiver,you can created nodes,and write a message that matches for sender and receiver
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Recive_Data_cb()`
- - Role : Accept callback functions from sending and sending data
+- Role : Accept callback functions from sending and sending data
 - `ReceiverXIAOC6_Recive_Data_cb()`
- - Role : Accept callback functions from sending and sending data
-- `esp_now_register_recv_cb()` 
+- Role : Accept callback functions from sending and sending data
+- `esp_now_register_recv_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 
 Default Variables
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - Role : sender and receiver the channel in which it is lcoated
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - Role : MAC address len
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - Role : accepted or send max characters numbers
 - `#define BAUD 115200`
   - Role : Setting the serial port baud rate
@@ -470,39 +476,42 @@ void Association_SenderXIAOS3_peer(){
 #### Resolution Part2 Code
 
 The include librarise
+
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
 The Core Functions
+
 - `espnow_init()`  
-  - Role : Initialize ESPNOW function 
+  - Role : Initialize ESPNOW function
   - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
-  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
+  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted
   - Return value : initialize successful : [ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
-- `ReceiverXIAOC3_Send_Data()` 
+- `ReceiverXIAOC3_Send_Data()`
   - Role : Send specific message
-- `ReceiverXIAOC3_Recive_Data_cb()` 
+- `ReceiverXIAOC3_Recive_Data_cb()`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
-- `Association_SenderXIAOS3_peer()` 
+- `Association_SenderXIAOS3_peer()`
   - Role : Add a channel node for XIAO ESP32S3 to send messages to it
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `ReceiverXIAOC3_Send_Data_cb`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
-- `esp_now_register_recv_cb()` 
+- `esp_now_register_recv_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 
 Default Variables
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - Role : sender and receiver the channel in which it is lcoated
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - Role : MAC address len
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - Role : accepted or send max characters numbers
 - `#define BAUD 115200`
   - Role : Setting the serial port baud rate
@@ -664,41 +673,44 @@ void Association_SenderXIAOS3_peer(){
 #### Resolution Part3 Code
 
 The include librarise
+
 - `#include "WiFi.h"`
 - `#include "esp_now.h"`
 
 The Core Functions
+
 - `espnow_init()`  
-  - Role : Initialize ESPNOW function 
+  - Role : Initialize ESPNOW function
   - Return value : initialize successful : [ESP_OK] Failed : [ESP_FAIL]
 - `espnow_deinit()`
-  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted 
+  - Role : De-initialize ESPNOW function,all information related to paired devices will be deleted
   - Return value : initialize successful : [ESP_OK]
 - `Receiver_MACAddress_requir()`  
   - Role : Set the WiFi mode to STA and obtain the MAC address to print on the serial port
-- `ReceiverXIAOC6_Send_Data()` 
+- `ReceiverXIAOC6_Send_Data()`
   - Role : Send specific message
-- `ReceiverXIAOC6_Recive_Data_cb()` 
+- `ReceiverXIAOC6_Recive_Data_cb()`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
-- `Association_SenderXIAOS3_peer()` 
+- `Association_SenderXIAOS3_peer()`
   - Role : Add a channel node for XIAO ESP32S3 to send messages to it
 - `ReceiverXIAOC6_Send_Data_cb()`
   - Role : This is a callback function,when it be executed whether the printed message was successfully delivered and for which MAC address
-- `esp_now_register_send_cb()` 
+- `esp_now_register_send_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
-- `esp_now_register_recv_cb()` 
+- `esp_now_register_recv_cb()`
   - Role : Register a callback function to verify whether it has been sent to the MAC layer
   - Return Value : MAC layer successfully received data:[ESP_NOW_SEND_SUCCESS] otherwise [ESP_NOW_SEND_FAIL]
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
 Default Variables
-- `#define ESPNOW_WIFI_CHANNE` 
+
+- `#define ESPNOW_WIFI_CHANNE`
   - Role : sender and receiver the channel in which it is lcoated
-- `#define MAX_ESP_NOW_MAC_LEN` 
+- `#define MAX_ESP_NOW_MAC_LEN`
   - Role : recipient mac address len
-- `#define MAX_CHARACTERS_NUMBER` 
+- `#define MAX_CHARACTERS_NUMBER`
   - Role : accepted or send max characters numbers
 - `#define BAUD 115200`
   - Role : Setting the serial port baud rate
@@ -708,12 +720,11 @@ Default Variables
 - `NO_PMK_KEY`
   - Role : Choose to pair devices without encryption
 
-
 ## Demo Rendering
 
 The following are the results of IXAO ESP32 communications using ESPNOW
 
-#### Sender XIAO ESP32S3 Result 
+#### Sender XIAO ESP32S3 Result
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/121.png" style={{width:600, height:'auto'}}/></div>
 
@@ -728,18 +739,23 @@ The following are the results of IXAO ESP32 communications using ESPNOW
 ## Summary of ESPNOW
 
 Low power consumption:
+
 - Suitable for battery powered devices that can communicate without connecting to Wi Fi.
 
 Quick connection:
+
 - Devices can quickly establish connections without the need for complex pairing processes.
 
 Many to many communication:
+
 - Support communication between multiple devices, allowing one device to send data to multiple devices.
 
 Security:
+
 - Support encryption function to ensure the security of data transmission.
 
 Short distance communication:
+
 - Usually used for short-range (tens of meters) wireless communication.
 
 ## Troubleshooting
@@ -756,7 +772,7 @@ Short distance communication:
 
 ## Resources
 
-- **[Espressif Official Documents]** [ESPRESSIF ESP-IDF ESP-NOW ](https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/api-reference/network/esp_now.html?highlight=espnow#esp-now)
+- **[Espressif Official Documents]** [ESPRESSIF ESP-IDF ESP-NOW](https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/api-reference/network/esp_now.html?highlight=espnow#esp-now)
 
 ## Tech Support & Product Discussion
 

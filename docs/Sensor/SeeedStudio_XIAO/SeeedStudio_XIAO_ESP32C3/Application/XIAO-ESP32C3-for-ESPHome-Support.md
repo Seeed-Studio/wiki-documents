@@ -90,7 +90,6 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 
 - **Step 1.** Click **INSTALL**
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
 - **Step 2.** Enable all the options and click **START**
@@ -137,8 +136,7 @@ Once all the software and the hardware are really, we can now get started.
 
 - **Step 7.** This will open a **YAML** file and this file will be used to set all the board configurations. Edit the content under **esp32** as follows
 
-
-``` 
+```
 esphome:
   name: xiao-esp32c3
   platformio_options:
@@ -183,12 +181,11 @@ wifi:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:900, height:'auto'}}/></div>
 
-
 - **Step 10.** Click **Plug into the computer running ESPHome Dashboard**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/12-1.png" style={{width:900, height:'auto'}}/></div>
 
-- **Step 11.** Select the connected port. It is likely to be ```/dev/ttyACM1 because /dev/ttyACM0``` is connected to the reRouter CM4 1432
+- **Step 11.** Select the connected port. It is likely to be ```/dev/ttyACM1``` because ```/dev/ttyACM0``` is connected to the reRouter CM4 1432
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/13-1.png" style={{width:900, height:'auto'}}/></div>
 
@@ -322,7 +319,6 @@ sensor:
 
 You can learn more about the [DHT20 component](https://esphome.io/components/sensor/aht10) here. Here we add the I²C Bus component because DHT20 communicates using I2C protocol.
 
-
 ##### Visualize on Dashboard
 
 - **Step 1.** On the Overview page of Home Assistant, click the 3 dots and click **Edit Dashboard**
@@ -338,6 +334,7 @@ You can learn more about the [DHT20 component](https://esphome.io/components/sen
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/37.png"style={{width:900, height:'auto'}}/></div>
 
 - **Step 4.** Click **ADD TO DASHBOARD**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/38.png"style={{width:900, height:'auto'}}/></div>
 
 - **Step 5.** You can also visualize sensor data as gauges. Click **Gauge** under **BY CARD**
@@ -347,8 +344,6 @@ You can learn more about the [DHT20 component](https://esphome.io/components/sen
 Now your Home Assistant dashboard will look like below
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/39.png"style={{width:900, height:'auto'}}/></div>
-
-
 
 #### Grove - Light Sensor(LS06-S)
 
@@ -399,7 +394,6 @@ You will see this result if going well.
 - **Step 7.** Then you will see the light sensor value on your dashboard.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/47.png"style={{width:900, height:'auto'}}/></div>
-
 
 <!-- #### Grove - Temperature and Humidity Sensor (BME680)
 
@@ -468,7 +462,6 @@ sensor:
 ```
 
 You can learn more about the [BME680 component](https://esphome.io/components/sensor/bme680) here. It allows you to use BME280, BME680, BMP085, BMP280, AHT10, AHT20 and AHT21 based sensors. Here we add the I²C Bus component because AHT20 communicates using I2C protocol.
-
 
 ##### Visualize on Dashboard
 
@@ -917,12 +910,11 @@ binary_sensor:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

@@ -50,17 +50,15 @@ Welcome to the L76-L GNSS for XIAO - the latest addition to the XIAO product ser
 - Tracking Devices: Design and build location and tracking devices.
 - Geolocation Features: Add geolocation capabilities to your projects.
 
-
 ## Getting Started
 
 Welcome to the quick start guide for the L76-L GNSS for XIAO. This guide aims to help you set up and get started with your new GPS expansion board in conjunction with the XIAO nRF52840 main controller.
-
 
 ### Hardware Preparation
 
 #### Soldering the Headers
 
-Upon receiving your product, some soldering will be required. We've provided two pin headers with the package. You'll need to solder these headers onto the expansion board. 
+Upon receiving your product, some soldering will be required. We've provided two pin headers with the package. You'll need to solder these headers onto the expansion board.
 
 #### Connecting XIAO to Expansion Board
 
@@ -199,7 +197,6 @@ Make sure that the GPS module is used in a more open location so that it can get
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/gnss-xiao/3.png" style={{width:700, height:'auto'}}/></div>
 
-
 ## Work without XIAO
 
 If you wish to utilize the GPS module with other microcontrollers, they can make use of the four solder pads available on the circuit board: 3V, GND, TX, and RX.
@@ -215,10 +212,8 @@ By connecting these pads to the respective pins on the desired microcontroller, 
 
 ## Resources
 
-
 - **[Zip]** [Eagle file](https://files.seeedstudio.com/wiki/gnss-xiao/XIAO_GPS_SCH&PCB.zip)
 - **[PDF]** [Datasheet - L76-L](https://files.seeedstudio.com/wiki/gnss-xiao/L76-L_doc.zip)
-
 
 ## Tech Support & Product Discussion
 
@@ -233,11 +228,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-

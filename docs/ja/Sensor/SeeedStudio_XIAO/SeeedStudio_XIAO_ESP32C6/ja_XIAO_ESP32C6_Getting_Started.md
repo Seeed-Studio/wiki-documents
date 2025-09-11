@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO ESP32C6 の使い方を始める。
-title: Seeed Studio XIAO ESP32C6 の使い方を始める
+description: Seeed Studio XIAO ESP32C6の使用開始ガイド。
+title: Seeed Studio XIAO ESP32C6の使用開始
 image: https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113991254-seeedxiao-esp32c6-font.jpg
 keywords:
 - XIAO
@@ -10,15 +10,11 @@ slug: /ja/xiao_esp32c6_getting_started
 toc_max_heading_level: 4
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 08/05/2024
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO ESP32C6 の使い方を始める
+# Seeed Studio XIAO ESP32C6の使用開始
 
 <div class="table-center">
  <table>
@@ -39,11 +35,11 @@ https://github.com/Seeed-Studio/wiki-documents/issues
  </table>
 </div>
 
-## 概要
+## はじめに
 
-Seeed Studio XIAO ESP32C6 は、高度に統合された [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) を搭載しており、**2つの32ビットRISC-Vプロセッサ**を備えています。高性能プロセッサは**最大160 MHz**で動作し、低消費電力プロセッサは最大20 MHzで動作します。チップには**512KB SRAM と 4 MB Flash**が搭載されており、プログラミングスペースが広がり、IoT制御シナリオにさらなる可能性をもたらします。
+Seeed Studio XIAO ESP32C6 は、高度に統合された [ESP32-C6 SoC](https://www.espressif.com/en/products/socs/esp32-c6) を搭載し、**2つの32ビットRISC-Vプロセッサ**上に構築されています。高性能（HP）プロセッサは**最大160MHzで動作**し、低消費電力（LP）32ビットRISC-Vプロセッサは最大20MHzでクロック動作可能です。チップには**512KBのSRAMと4MBのFlash**が搭載されており、より多くのプログラミング領域を提供し、IoT制御シナリオにより多くの可能性をもたらします。
 
-XIAO ESP32C6 は、**強化されたワイヤレス接続性により Matter ネイティブ**です。ワイヤレススタックは**2.4 GHz WiFi 6、Bluetooth® 5.3、Zigbee、および Thread (802.15.4)** をサポートしています。Thread に対応した初の XIAO メンバーとして、Matter準拠のプロジェクトを構築するのに最適であり、スマートホームにおける相互運用性を実現します。
+XIAO ESP32C6 は**強化されたワイヤレス接続により、Matterにネイティブ対応**しています。ワイヤレススタックは**2.4GHz WiFi 6、Bluetooth® 5.3、Zigbee、およびThread（802.15.4）**をサポートしています。Threadに対応した初のXIAOメンバーとして、Matter準拠プロジェクトの構築に最適であり、スマートホームでの相互運用性を実現します。
 
 export const Highlight = ({children, color}) => (
   <span
@@ -76,39 +72,39 @@ export const Highlight = ({children, color}) => (
             <td>Espressif ESP32-S3R8</td>
         </tr>
         <tr>
-            <td>2つの32ビットRISC-Vプロセッサを搭載。高性能プロセッサは最大160 MHzで動作し、低消費電力プロセッサは最大20 MHzで動作</td>
-            <td>RISC-Vシングルコア32ビットチッププロセッサ。4段階のパイプラインで最大160 MHzで動作</td>
-            <td>Xtensa LX7デュアルコア32ビットプロセッサ。最大240 MHzで動作</td>
+            <td>2つの32ビットRISC-Vプロセッサ、高性能プロセッサは最大160MHz、低消費電力プロセッサは最大20MHzで動作</td>
+            <td>最大160MHzで動作する4段パイプラインを持つRISC-Vシングルコア32ビットチッププロセッサ</td>
+            <td>最大240MHzで動作するXtensa LX7デュアルコア32ビットプロセッサ</td>
         </tr>
         <tr>
             <th colspan="2" rowspan="3">ワイヤレス</th>
             <td>完全な2.4GHz <strong>Wi-Fi 6</strong> サブシステム</td>
-            <td colspan="2">完全な2.4GHz Wi-Fi サブシステム</td>
+            <td colspan="2">完全な2.4GHz Wi-Fiサブシステム</td>
         </tr>
         <tr>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
-            <td>BLE: Bluetooth 5.0, Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0、Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0、Bluetooth Mesh</td>
+            <td>BLE: Bluetooth 5.0、Bluetooth Mesh</td>
         </tr>
         <tr>
-            <td><strong>Zigbee, Thread, IEEE 802.15.4</strong></td>
+            <td><strong>Zigbee、Thread、IEEE 802.15.4</strong></td>
             <td>/</td>
             <td>/</td>
         </tr>
         <tr>
-            <th colspan="2" rowspan="1">オンチップメモリ</th>
+            <th colspan="2" rowspan="1" >オンチップメモリ</th>
             <td>512KB SRAM &amp; 4MB Flash</td>
             <td>400KB SRAM &amp; 4MB Flash</td>
             <td>8M PSRAM &amp; 8MB Flash</td>
         </tr>
         <tr>
-            <th colspan="2" rowspan="2">インターフェース</th>
-            <td>1x UART, 1x LP_UART, 1x IIC, 1x LP_IIC, 1x SPI, 11x GPIO(PWM), 7x ADC, 1x SDIO 2.0 Slave</td>
-            <td>1x UART, 1x IIC, 1x SPI, 11x GPIO(PWM), 4x ADC</td>
-            <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIO(PWM), 9x ADC, 1x ユーザーLED, 1x 充電LED</td>
+            <th colspan="2" rowspan="2" >インターフェース</th>
+            <td>1x UART、1x LP_UART、1x IIC、1x LP_IIC、1x SPI、11x GPIO(PWM)、7x ADC、1xSDIO 2.0 Slave</td>
+            <td>1x UART、1x IIC、1x SPI、11x GPIO(PWM)、4x ADC</td>
+            <td>1x UART、1x IIC、1x IIS、1x SPI、11x GPIO(PWM)、9x ADC、1x User LED、1x Charge LED</td>
         </tr>
         <tr>
-            <td colspan="3">1x リセットボタン, 1x ブートボタン</td>
+            <td colspan="3">1x リセットボタン、1x ブートボタン</td>
         </tr>
         <tr>
             <th colspan="2" rowspan="1">寸法</th>
@@ -120,31 +116,31 @@ export const Highlight = ({children, color}) => (
             <td colspan="3">Type-C: 5V<br></br>BAT: 4.2V</td>
         </tr>
         <tr>
-            <th>回路動作電圧 (動作準備)</th>
-            <td colspan="2">USB: 5V@9mA<br></br>BAT: 3.8V@9mA</td>
+            <th>回路動作電圧（動作準備完了）</th>
+            <td colspan="2">USB:5V@9mA<br></br>BAT:3.8V@9mA</td>
             <td>Type-C: 5V@19mA<br></br>BAT: 3.8V@22mA</td>
         </tr>
         <tr>
-            <th>充電バッテリー電流</th>
+            <th>バッテリー充電電流</th>
             <td>100mA</td>
             <td>350mA</td>
             <td>100mA</td>
         </tr>
         <tr>
-            <th colspan="1" rowspan="3">消費電力モデル (供給電力: 3.8V)</th>
+            <th colspan="1" rowspan="3">消費電力モデル（供給電力: 3.8V）</th>
             <th>モデムスリープモデル</th>
             <td>~ 30 mA</td>
             <td>~ 24 mA</td>
             <td>~ 25 mA</td>
         </tr>
         <tr>
-            <th>ライトスリープモデル</th>
+            <th> ライトスリープモデル</th>
             <td>~ 2.5 mA</td>
             <td>~ 3 mA</td>
             <td>~ 2 mA</td>
         </tr>
         <tr>
-            <th>ディープスリープモデル</th>
+            <th> ディープスリープモデル</th>
             <td>~ 15 μA</td>
             <td>~ 44 μA</td>
             <td>~ 14 μA</td>
@@ -157,21 +153,21 @@ export const Highlight = ({children, color}) => (
     </tbody>
 </table>
 
-### 特徴
+### 機能
 
-- **強化された接続性**: ***2.4*** GHz Wi-Fi 6 (802.11ax)、Bluetooth 5(LE)、および IEEE 802.15.4 ラジオ接続を統合し、**Thread** および **Zigbee** プロトコルの適用を可能にします。
-- **Matter ネイティブ**: Matter準拠のスマートホームプロジェクトの構築をサポートし、異なるスマートデバイス間の相互運用性を保証します。
-- **チップ上でのセキュリティ暗号化**: ESP32-C6 を利用してセキュアブート、暗号化、および Trusted Execution Environment (TEE) 機能を提供し、スマートホームプロジェクトのセキュリティを強化します。
-- **優れたRF性能**: 最大 *80m* の BLE/Wi-Fi 範囲を持つオンボードアンテナを備え、外部 UFL アンテナを接続するインターフェースを提供し、信頼性の高い接続を保証します。
-- **消費電力の最適化**: 消費電力が *15* μA と低いディープスリープモードを含む4つの動作モードを提供し、リチウムバッテリー充電管理をサポートします。
-- **デュアルRISC-Vプロセッサ**: 2つの32ビットRISC-Vプロセッサを搭載し、高性能プロセッサは最大160 MHz、低消費電力プロセッサは最大 *20 MHz* で動作します。
-- **クラシックな XIAO デザイン**: 21 x 17.8mm の親指サイズのフォームファクターと片面マウントデザインを維持し、ウェアラブルデバイスのようなスペース制限のあるプロジェクトに最適です。
+- **強化された接続性**: ***2.4*** GHz Wi-Fi 6 (802.11ax)、Bluetooth 5(LE)、およびIEEE 802.15.4無線接続を統合し、**Thread**および**Zigbee**プロトコルの適用を可能にします。
+- **Matterネイティブ**: Matter準拠のスマートホームプロジェクトの構築をサポートし、異なるスマートデバイス間の相互運用性を確保します。
+- **チップ上でのセキュリティ暗号化**: ESP32-C6を利用してセキュアブート、暗号化、および信頼実行環境（TEE）機能を提供し、スマートホームプロジェクトのセキュリティを強化します。
+- **優れたRF性能**: 最大*80m*のBLE/Wi-Fi範囲を持つオンボードアンテナを搭載し、外部UFLアンテナを接続するためのインターフェースを提供し、信頼性の高い接続を確保します。
+- **電力消費の活用**: *15* μAという低消費電力のディープスリープモードを含む4つの動作モードを提供し、リチウムバッテリー充電管理をサポートします。
+- **デュアルRISC-Vプロセッサ**: 2つの32ビットRISC-Vプロセッサを搭載し、高性能プロセッサは最大160MHz、低電力プロセッサは最大*20 MHz*で動作可能です。
+- **クラシックなXIAOデザイン**: 21 x 17.8mmの親指サイズのフォームファクターと片面実装設計を維持し、ウェアラブルデバイスなどのスペースが限られたプロジェクトに最適です。
 
 ## ハードウェア概要
 
 <table align="center">
  <tr>
-     <th>XIAO ESP32C6 インディケーション図</th>
+     <th>XIAO ESP32C6 表示図</th>
  </tr>
  <tr>
      <td><div style={{textAlign:'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1Nzc0ODUwMjM3NA_556525_Slxs4ARdyuXRrJK-_1711096256?w=9854&h=3367&type=image/png" style={{width:700, height:'auto'}}/></div></td>
@@ -184,24 +180,24 @@ export const Highlight = ({children, color}) => (
  </tr>
 </table>
 
-:::tip RFスイッチ
+:::tip RF スイッチ
 
-**RFスイッチ**機能を使用すると、`GPIO14`を設定することで内蔵セラミックアンテナと外部アンテナを切り替えることができます。この機能を有効にするには、*まず`GPIO3`を低レベルに設定する必要があります*。これによりRFスイッチ制御がアクティブになります。
+**RF スイッチ**機能により、`GPIO14`を設定することで内蔵セラミックアンテナと外部アンテナを切り替えることができます。この機能を有効にするには、*まず`GPIO3`をローレベルに設定する必要があります*。これによりRFスイッチ制御が有効になります。
 
-- **GPIO14 低レベル（デフォルト設定）**: デバイスは内蔵セラミックアンテナを使用します。
-- **GPIO14 高レベル**: デバイスは外部アンテナに切り替わります。
+- **GPIO14 ローレベル（デフォルト設定）**: デバイスは内蔵セラミックアンテナを使用します。
+- **GPIO14 ハイレベル**: デバイスは外部アンテナに切り替わります。
 
-デフォルトでは、`GPIO14`は低レベルに設定されており、内蔵アンテナが有効です。外部アンテナを使用するには、`GPIO14`を高レベルに設定してください。以下の例コードを参考にして、外部アンテナを有効にするための`GPIO3`と`GPIO14`の設定方法を確認してください：
+デフォルトでは、`GPIO14`はローレベルに設定されており、内蔵アンテナが有効になっています。外部アンテナを使用するには、`GPIO14`をハイレベルに設定してください。外部アンテナを有効にするための`GPIO3`と`GPIO14`の設定に関するガイダンスについては、以下のサンプルコードを参照してください：
 
 ```cpp
 void setup() {
   pinMode(WIFI_ENABLE, OUTPUT); // pinMode(3, OUTPUT);
-  digitalWrite(WIFI_ENABLE, LOW); // digitalWrite(3, LOW); // RFスイッチ制御をアクティブ化
+  digitalWrite(WIFI_ENABLE, LOW); // digitalWrite(3, LOW); // Activate RF switch control
 
   delay(100);
 
   pinMode(WIFI_ANT_CONFIG, OUTPUT); // pinMode(14, OUTPUT);
-  digitalWrite(WIFI_ANT_CONFIG, HIGH); // digitalWrite(14, HIGH); // 外部アンテナを使用
+  digitalWrite(WIFI_ANT_CONFIG, HIGH); // digitalWrite(14, HIGH); // Use external antenna
 }
 ```
 
@@ -209,7 +205,7 @@ void setup() {
 
 ## はじめに
 
-XIAO ESP32C6を迅速に使用開始するために、以下のハードウェアおよびソフトウェアの準備を読んでXIAOを準備してください。
+XIAO ESP32C6 をより早く使い始められるように、以下のハードウェアとソフトウェアの準備をお読みになり、XIAO の準備を行ってください。
 
 ### ハードウェアの準備
 
@@ -217,98 +213,98 @@ XIAO ESP32C6を迅速に使用開始するために、以下のハードウェ�
 
 - 1 x [Seeed Studio XIAO ESP32C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html)
 - 1 x コンピュータ
-- 1 x USB Type-Cケーブル
+- 1 x USB Type-C ケーブル
 
 :::tip
-一部のUSBケーブルは電力供給のみ可能で、データ転送ができません。USBケーブルを持っていない場合や、USBケーブルがデータ転送可能かどうかわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html)を確認してください。
+一部の USB ケーブルは電源供給のみ可能で、データ転送ができません。USB ケーブルをお持ちでない場合や、お使いの USB ケーブルがデータ転送可能かわからない場合は、[Seeed USB Type-C support USB 3.1](https://www.seeedstudio.com/USB-3-1-Type-C-to-A-Cable-1-Meter-3-1A-p-4085.html) をご確認ください。
 :::
 
 #### ヘッダーのはんだ付け
 
-XIAO ESP32C6はデフォルトでピンヘッダーが付属していません。ピンヘッダーを準備し、対応するXIAOのピンに自分ではんだ付けする必要があります。これにより拡張ボードやセンサーに接続できます。
+XIAO ESP32C6 はデフォルトでピンヘッダーなしで出荷されるため、独自にピンヘッダーを準備し、XIAO の対応するピンにはんだ付けして、拡張ボードやセンサーに接続できるようにする必要があります。
 
-XIAO ESP32C6の小型サイズのため、ヘッダーのはんだ付け時には注意してください。異なるピンを一緒に接続したり、シールドや他のコンポーネントにハンダを付けないようにしてください。そうしないと、XIAOがショートしたり正常に動作しなくなる可能性があります。この結果による影響はユーザーが負担するものとします。
+XIAO ESP32C6 は小型サイズのため、ヘッダーをはんだ付けする際は注意深く行い、異なるピン同士をくっつけたり、シールドや他の部品にはんだを付着させたりしないでください。そうしないと、XIAO がショートしたり正常に動作しなくなる可能性があり、これによって生じる結果はユーザーの責任となります。
 
-#### BootLoaderモード
+#### BootLoader モード
 
-誤ったプログラムを使用すると、XIAOがポートを失ったり正常に動作しなくなることがあります。具体的な症状は以下の通りです：
+間違ったプログラムを使用して XIAO がポートを失ったり、正常に動作しなくなったりすることがあります。具体的な症状は以下の通りです：
 
-- コンピュータに接続してもXIAOのポート番号が見つからない。
-- コンピュータに接続してポート番号が表示されるが、プログラムのアップロードが失敗する。
+- コンピュータに接続されているが、XIAO のポート番号が見つからない。
+- コンピュータに接続されてポート番号は表示されるが、プログラムのアップロードに失敗する。
 
-上記の状況に遭遇した場合、XIAOをBootLoaderモードにすることで、認識されないデバイスやアップロード失敗の問題を解決できる場合があります。具体的な方法は以下の通りです：
+上記の2つの状況に遭遇した場合、XIAO を BootLoader モードにすることで、デバイスが認識されない問題やアップロード失敗の問題の大部分を解決できます。具体的な方法は以下の通りです：
 
-- **ステップ1**. XIAO ESP32C6のBOOTボタンを押し続けます。
-- **ステップ2**. BOOTボタンを押したまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、BOOTボタンを離します。
-- **ステップ3**. **Blink**プログラムをアップロードしてXIAO ESP32C6の動作を確認します。
+- **ステップ 1**. XIAO ESP32C6 の BOOT ボタンを離さずに押し続けます。
+- **ステップ 2**. BOOT ボタンを押し続けたまま、データケーブルでコンピュータに接続します。コンピュータに接続した後、BOOT ボタンを離します。
+- **ステップ 3**. **Blink** プログラムをアップロードして、XIAO ESP32C6 の動作を確認します。
 
 #### リセット
 
-プログラムが異常に動作する場合、電源投入時にリセットを1回押すことで、XIAOがアップロードされたプログラムを再実行します。
+プログラムが異常に動作している場合、電源投入時に一度 Reset を押すことで、XIAO にアップロードされたプログラムを再実行させることができます。
 
-BOOTキーを押しながら電源を投入し、その後リセットキーを1回押すことでBootLoaderモードに入ることもできます。
+電源投入時に BOOT キーを押し続けてから Reset キーを一度押すことでも、BootLoader モードに入ることができます。
 
 ### ソフトウェアの準備
 
-XIAO ESP32C6の推奨プログラミングツールはArduino IDEです。そのため、ソフトウェア準備の一環としてArduinoのインストールを完了する必要があります。
+XIAO ESP32C6 の推奨プログラミングツールは Arduino IDE のため、ソフトウェア準備の一環として Arduino のインストールを完了する必要があります。
 
 :::tip
-Arduinoを初めて使用する場合は、[Arduinoの使い方](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduino を初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/) を参照することを強くお勧めします。
 
-また、XIAO ESP32C6のオンボードパッケージはバージョン**2.0.8**以上が必要です。
+また、XIAO ESP32C6 のオンボードパッケージには少なくともバージョン **2.0.8** が必要です。
 
 :::
 
-- **ステップ1.** オペレーティングシステムに応じて安定版のArduino IDEをダウンロードしてインストールします。
+- **ステップ 1.** お使いのオペレーティングシステムに応じて、Arduino IDE の安定版をダウンロードしてインストールします。
 
   <div class="download_arduino_container" style={{textAlign: 'center'}}>
-      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
+      <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Download Arduino IDE</font></span></strong></a>
   </div>
 
   <br></br>
-- **ステップ2.** Arduinoアプリケーションを起動します。
-- **[ステップ3](#add-board).** Arduino IDEにXIAO ESP32C6のオンボードパッケージを追加し、`OK`をクリックします。
-- **ステップ4.** Arduino IDEを閉じて再度開きます。
+- **ステップ 2.** Arduino アプリケーションを起動します。
+- **[ステップ 3](#add-board).** XIAO ESP32C6 オンボードパッケージを Arduino IDE に追加し、`OK` をクリックします。
+- **ステップ 4.** Arduino IDE を閉じて再度開きます。
 
-#### XIAO-C6ボードを追加する {#add-board}
+#### XIAO-C6 ボードの追加 {#add-board}
 
-XIAO ESP32C6ボードをインストールするには、以下の手順に従ってください：
+XIAO ESP32C6 ボードをインストールするには、以下の手順に従ってください：
 
 ```
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
 ```
 
-1. 上記のボードマネージャURLをArduino IDEの設定に追加します。このURLは[Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide)から取得されています。
+1. 上記のボードマネージャーURLをArduino IDEの設定に追加してください。これは[Installing - Arduino ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide)から取得されています。
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/boards_url.png" style={{width: 'auto', height: 'auto'}}/></div>
 
-2. XIAO ESP32C6ボードパッケージをダウンロードします。
+2. XIAO ESP32C6ボードパッケージをダウンロードしてください。
 
 :::note
-esp32ボードのバージョンが`3.0.0`以上である場合のみ利用可能です。
+esp32ボードのバージョンが`3.0.0`より大きい場合のみ利用可能です。
 :::
 
 <div style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/install_board.png" style={{width: 'auto', height: 'auto'}}/></div>
 
-3. `XIAO_ESP32C6`バリアントを選択します。
+3. `XIAO_ESP32C6`バリアントを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/select_xiao_c6.png" style={{width:1000, height:'auto'}}/></div>
 
-これでコーディングを楽しめます✨。
+これでコーディングを楽しんでください ✨。
 
-#### 初めてのBlinkプログラムを実行する
+#### 最初のBlinkプログラムを実行する
 
-- **ステップ 1.** Arduino アプリケーションを起動します。
+- **ステップ1.** Arduinoアプリケーションを起動してください。
 
-- **ステップ 2.** **ファイル > スケッチ例 > 01.Basics > Blink** に移動し、プログラムを開きます。
+- **ステップ2.** **File > Examples > 01.Basics > Blink**に移動し、プログラムを開いてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/11.png" style={{width:700, height:'auto'}}/></div>
 
-- **ステップ 3.** ボードモデルを **XIAO ESP32C6** に設定し、正しいポート番号を選択してプログラムをアップロードします。
+- **ステップ3.** ボードモデルを**XIAO ESP32C6**に選択し、正しいポート番号を選択してプログラムをアップロードしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/upload_program.png" style={{width:1000, height:'auto'}}/></div>
 
-プログラムが正常にアップロードされると、以下の出力メッセージが表示され、XIAO ESP32C6 の右側にあるオレンジ色の LED が点滅しているのを確認できます。
+プログラムが正常にアップロードされると、以下の出力メッセージが表示され、XIAO ESP32C6の右側にあるオレンジ色のLEDが点滅していることを確認できます。
 
 <table>
  <tr>
@@ -319,76 +315,78 @@ esp32ボードのバージョンが`3.0.0`以上である場合のみ利用可�
 
 ## バッテリー使用
 
-XIAO ESP32C6 シリーズは内蔵の電源管理チップを備えており、バッテリーで独立して電源供給を行うことができ、また USB ポートを介してバッテリーを充電することも可能です。
+XIAO ESP32C6 シリーズには内蔵電源管理チップが搭載されており、バッテリーで独立して電源供給したり、USBポート経由でバッテリーを充電したりできます。
 
-XIAO にバッテリーを接続するには、認定された充電可能な 3.7V リチウムバッテリーを使用することをお勧めします。バッテリーをはんだ付けする際は、正極と負極を慎重に区別してください。負極パッドはシルクスクリーン「D8」の近くの左側に位置し、正極パッドはシルクスクリーン「D5」の近くの右側に位置します。
+XIAOにバッテリーを接続する場合は、認定された充電式3.7Vリチウムバッテリーの使用を推奨します。バッテリーをはんだ付けする際は、正極と負極の端子を慎重に区別してください。負極パッドは「D8」のシルクスクリーン印刷の近くの左側に、正極パッドは「D5」のシルクスクリーン印刷の近くの右側に配置する必要があります。
 
 :::caution
-バッテリー電源を使用する場合、5V ピンには電圧が供給されません。
+バッテリー電源を使用する場合、5Vピンには電圧が存在しません。
 :::
 
-:::tip 赤色インジケータライト
+:::tip 赤色インジケーターライト
 
-XIAO ESP32C6 にはバッテリー充電用の赤色インジケータライトがあり、[XIAO ESP32S3](/ja/xiao_esp32s3_getting_started/#battery-usage) と同様です。
+XIAO ESP32C6 には、[XIAO ESP32S3](/xiao_esp32s3_getting_started/#battery-usage)と同様に、バッテリー充電用の赤色インジケーターライトがあります：
 
 XIAO ESP32C6 の赤色ライトの動作は以下の通りです：
 
 - バッテリーが接続されていない場合：
-  - Type-C ケーブルが接続されると赤色ライトが点灯し、30 秒後に消灯します。
-- バッテリーが接続され、Type-C ケーブルが充電のために接続されている場合：
+  - Type-Cケーブルが接続されると赤色ライトが点灯し、30秒後に消灯します。
+- バッテリーが接続され、Type-Cケーブルが充電のために接続されている場合：
   - 赤色ライトが点滅します。
-- Type-C 接続を介してバッテリーが完全に充電された場合：
+- Type-C接続でバッテリーが完全に充電された場合：
   - 赤色ライトが消灯します。
 
 :::
 
 ## バッテリー電圧の読み取り
 
-XIAO ESP32C6 のバッテリー電圧を監視するには、[XIAO ESP32C3](/ja/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage) と同様に、200kΩ の抵抗を 1:2 の構成ではんだ付けする必要があります。この設定により電圧が半分に減少し、A0 アナログポートを介して安全に監視することができます。
+XIAO ESP32C6 でバッテリー電圧を監視するには、[XIAO ESP32C3](/XIAO_ESP32C3_Getting_Started/#check-the-battery-voltage)と同様に、200kΩ抵抗を1:2構成ではんだ付けする必要があります。この設定により電圧が半分に減少し、A0アナログポート経由で安全に監視できます。
 
 ### サンプルコード
 
-以下のコードは、A0 ポートの ADC を初期化し、16 回の読み取りを平均化して、電圧分圧器の 1:2 減衰比を考慮したバッテリー電圧を計算します。
+以下のコードは、A0ポートでADCを初期化し、16回の読み取りを平均してバッテリー電圧を計算し、分圧器の1:2減衰比を調整します。
 
 ```cpp
 #include <Arduino.h>
 
 void setup() {
   Serial.begin(115200);
-  pinMode(A0, INPUT);         // A0 を ADC 入力として設定
+  pinMode(A0, INPUT);         // Configure A0 as ADC input
 }
 
 void loop() {
   uint32_t Vbatt = 0;
   for(int i = 0; i < 16; i++) {
-    Vbatt += analogReadMilliVolts(A0); // ADC 電圧を読み取り、累積
+    Vbatt += analogReadMilliVolts(A0); // Read and accumulate ADC voltage
   }
-  float Vbattf = 2 * Vbatt / 16 / 1000.0;     // 1:2 分圧器を考慮して調整し、ボルトに変換
-  Serial.println(Vbattf, 3);                  // 小数点以下 3 桁で電圧を出力
-  delay(1000);                                // 1 秒待機
+  float Vbattf = 2 * Vbatt / 16 / 1000.0;     // Adjust for 1:2 divider and convert to volts
+  Serial.println(Vbattf, 3);                  // Output voltage to 3 decimal places
+  delay(1000);                                // Wait for 1 second
 }
 ```
 
-このコードは、ADC から 16 回の測定を行い、それを平均化した後、電圧分圧器の 1:2 比率を補正して、3 桁の小数点精度でバッテリー電圧をボルト単位で出力します。
+このコードは、ADCから16回の測定を行い、それらを平均化し、電圧分割器の1:2の比率を補正して、バッテリー電圧を3桁の精度でボルト単位で出力します。
 
 ## ディープスリープモードとウェイクアップ
 
-XIAO ESP32C6は完全なディープスリープモードとウェイクアップ機能を備えています。ここでは、ESPが提供する一般的な例を2つ紹介します。
+XIAO ESP32C6は完全なディープスリープモードとウェイクアップ機能を備えています。ここでは、ESPが提供するより一般的な2つの例を紹介します。
 
-### デモ1: 外部ウェイクアップによるディープスリープ
+### デモ1：外部ウェイクアップによるディープスリープ
 
-このコードは、外部トリガーをウェイクアップソースとして使用する方法と、RTCメモリにデータを保存して再起動時に使用する方法を示しています。
+このコードは、外部トリガーをウェイクアップソースとしてディープスリープを使用する方法と、再起動時にデータを使用するためにRTCメモリにデータを保存する方法を示しています。
 
 ```cpp
 /*
-ハードウェア接続
+Hardware Connections
 ======================
-GPIO 0に接続されたプッシュボタンを10Kオームの抵抗でプルダウン
+Push Button to GPIO 0 pulled down with a 10K Ohm
+resistor
 
-注意:
+NOTE:
 ======
-ウェイクアップを引き起こすGPIO番号のビットマスク。RTC機能を持つGPIOのみがこのビットマップで使用可能です。
-異なるSoCにおける関連するGPIOは以下の通りです:
+Bit mask of GPIO numbers which will cause wakeup. Only GPIOs
+which have RTC functionality can be used in this bit map.
+For different SoCs, the related GPIOs are:
 - ESP32: 0, 2, 4, 12-15, 25-27, 32-39
 - ESP32-S2: 0-21
 - ESP32-S3: 0-21
@@ -396,12 +394,13 @@ GPIO 0に接続されたプッシュボタンを10Kオームの抵抗でプル�
 - ESP32-H2: 7-14
 */
 
-#define BUTTON_PIN_BITMASK (1ULL << GPIO_NUM_0) // GPIO 0のビットマスク（ext1用）
+#define BUTTON_PIN_BITMASK (1ULL << GPIO_NUM_0) // GPIO 0 bitmask for ext1
 
 RTC_DATA_ATTR int bootCount = 0;
 
 /*
-ESP32がスリープから目覚めた理由を表示するメソッド
+Method to print the reason by which ESP32
+has been awaken from sleep
 */
 void print_wakeup_reason(){
   esp_sleep_wakeup_cause_t wakeup_reason;
@@ -410,69 +409,71 @@ void print_wakeup_reason(){
 
   switch(wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("RTC_IOを使用した外部信号によるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("RTC_CNTLを使用した外部信号によるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("タイマーによるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("タッチパッドによるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("ULPプログラムによるウェイクアップ"); break;
-    default : Serial.printf("ディープスリープによるウェイクアップではありません: %d\n",wakeup_reason); break;
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
   }
 }
 
 void setup(){
   Serial.begin(115200);
-  delay(1000); //シリアルモニターを開くための時間を確保
+  delay(1000); //Take some time to open up the Serial Monitor
 
-  //起動回数をインクリメントし、再起動ごとに表示
+  //Increment boot number and print it every reboot
   ++bootCount;
-  Serial.println("起動回数: " + String(bootCount));
+  Serial.println("Boot number: " + String(bootCount));
 
-  //ESP32のウェイクアップ理由を表示
+  //Print the wakeup reason for ESP32
   print_wakeup_reason();
 
   /*
-  まずウェイクアップソースを設定します。
-  ESP32を外部トリガーでウェイクアップするように設定します。
-  ESP32にはext0とext1の2種類がありますが、ESP32C6ではext0がサポートされていないため、ext1を使用します。
+  First we configure the wake up source
+  We set our ESP32 to wake up for an external trigger.
+  There are two types for ESP32, ext0 and ext1, ext0 
+  don't support ESP32C6 so we use ext1.
   */
 
-  //ext1を使用する場合は以下のように設定します
+  //If you were to use ext1, you would use it like
   esp_sleep_enable_ext1_wakeup(BUTTON_PIN_BITMASK,ESP_EXT1_WAKEUP_ANY_HIGH);
 
-  //スリープに入る
-  Serial.println("スリープに入ります");
+  //Go to sleep now
+  Serial.println("Going to sleep now");
   esp_deep_sleep_start();
-  Serial.println("このメッセージは表示されません");
+  Serial.println("This will never be printed");
 }
 
 void loop(){
-  //この関数は呼び出されません
+  //This is not going to be called
 }
 ```
 
-### デモ2: タイマーウェイクアップによるディープスリープ
+### Demo2: タイマーウェイクアップによるディープスリープ
 
-ESP32は、IoTアプリケーションにおいて重要な要素である電力効率を向上させるためにディープスリープモードを提供します。このモードでは、CPU、RAMの大部分、およびAPB_CLKからクロックされるすべてのデジタル周辺機器が電源オフになります。チップの中で電源がオンのままになる部分は、RTCコントローラー、RTC周辺機器、およびRTCメモリのみです。
+ESP32は効果的な省電力のためのディープスリープモードを提供しており、IoTアプリケーションにとって電力は重要な要素です。このモードでは、CPU、RAMの大部分、およびAPB_CLKからクロック供給されるすべてのデジタル周辺機器の電源が切断されます。チップの中で電源を供給し続けることができる部分は、RTCコントローラー、RTC周辺機器、およびRTCメモリのみです。
 
-このコードは、タイマーを使用してウェイクアップする最も基本的なディープスリープと、RTCメモリにデータを保存して再起動時に使用する方法を示しています。
+このコードは、タイマーでウェイクアップする最も基本的なディープスリープと、再起動時に使用するためにRTCメモリにデータを保存する方法を示しています。
 
 ```cpp
 /*
-タイマーウェイクアップによるシンプルなディープスリープ
+Simple Deep Sleep with Timer Wake Up
 =====================================
-このコードはパブリックドメインライセンスの下で提供されています。
+This code is under Public Domain License.
 
-著者:
+Author:
 Pranav Cherukupalli <cherukupallip@gmail.com>
 */
 
-#define uS_TO_S_FACTOR 1000000ULL  /* マイクロ秒から秒への変換係数 */
-#define TIME_TO_SLEEP  5        /* ESP32がスリープする時間（秒単位） */
+#define uS_TO_S_FACTOR 1000000ULL  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  5        /* Time ESP32 will go to sleep (in seconds) */
 
 RTC_DATA_ATTR int bootCount = 0;
 
 /*
-ESP32がスリープから目覚めた理由を表示するメソッド
+Method to print the reason by which ESP32
+has been awaken from sleep
 */
 void print_wakeup_reason(){
   esp_sleep_wakeup_cause_t wakeup_reason;
@@ -481,63 +482,67 @@ void print_wakeup_reason(){
 
   switch(wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("RTC_IOを使用した外部信号によるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("RTC_CNTLを使用した外部信号によるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("タイマーによるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("タッチパッドによるウェイクアップ"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("ULPプログラムによるウェイクアップ"); break;
-    default : Serial.printf("ディープスリープによるウェイクアップではありません: %d\n",wakeup_reason); break;
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
   }
 }
 
 void setup(){
   Serial.begin(115200);
-  delay(1000); //シリアルモニターを開くための時間を確保
+  delay(1000); //Take some time to open up the Serial Monitor
 
-  //起動回数をインクリメントし、再起動ごとに表示
+  //Increment boot number and print it every reboot
   ++bootCount;
-  Serial.println("起動回数: " + String(bootCount));
+  Serial.println("Boot number: " + String(bootCount));
 
-  //ESP32のウェイクアップ理由を表示
+  //Print the wakeup reason for ESP32
   print_wakeup_reason();
 
   /*
-  まずウェイクアップソースを設定します。
-  ESP32を5秒ごとにウェイクアップするように設定します。
+  First we configure the wake up source
+  We set our ESP32 to wake up every 5 seconds
   */
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  Serial.println("ESP32を" + String(TIME_TO_SLEEP) + "秒ごとにスリープするように設定しました");
+  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  " Seconds");
 
   /*
-  次に、シャットダウンする周辺機器/オンにしておく周辺機器を決定します。
-  デフォルトでは、ESP32はウェイクアップソースに必要のない周辺機器を自動的に電源オフしますが、
-  より詳細に設定したい場合は以下を参考にしてください。
-  詳細はAPIドキュメントを参照してください:
+  Next we decide what all peripherals to shut down/keep on
+  By default, ESP32 will automatically power down the peripherals
+  not needed by the wakeup source, but if you want to be a poweruser
+  this is for you. Read in detail at the API docs
   http://esp-idf.readthedocs.io/en/latest/api-reference/system/deep_sleep.html
-  以下の行は、すべてのRTC周辺機器をディープスリープ中に電源オフにする例としてコメントアウトされています。
+  Left the line commented as an example of how to configure peripherals.
+  The line below turns off all RTC peripherals in deep sleep.
   */
   //esp_deep_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_OFF);
-  //Serial.println("すべてのRTC周辺機器をスリープ中に電源オフに設定しました");
+  //Serial.println("Configured all RTC Peripherals to be powered down in sleep");
 
   /*
-  ウェイクアップ原因を設定し、必要に応じてディープスリープ中の周辺機器の状態を設定した後、
-  ディープスリープを開始します。
-  ウェイクアップソースが提供されずにディープスリープが開始された場合、
-  ハードウェアリセットが発生するまで永遠にスリープします。
+  Now that we have setup a wake cause and if needed setup the
+  peripherals state in deep sleep, we can now start going to
+  deep sleep.
+  In the case that no wake up sources were provided but deep
+  sleep was started, it will sleep forever unless hardware
+  reset occurs.
   */
-  Serial.println("スリープに入ります");
+  Serial.println("Going to sleep now");
   Serial.flush(); 
   esp_deep_sleep_start();
-  Serial.println("このメッセージは表示されません");
+  Serial.println("This will never be printed");
 }
 
 void loop(){
-  //この関数は呼び出されません
+  //This is not going to be called
 }
 ```
 
 :::tip
-ディープスリープモードとウェイクアップ機能をさらに活用する方法を学びたい場合は、Arduino IDEでESPが公式に作成したサンプルプログラムを参照してください。
+ディープスリープモードとウェイクアップ機能をより多く学んで使用したい場合は、Arduino IDEでESPがチップ用に公式に書いたより多くのサンプルプログラムを見つけることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/16.png" style={{width:600, height:'auto'}}/></div>
 :::
@@ -546,7 +551,7 @@ void loop(){
 
 - **[PDF]** [ESP32C6 データシート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/res/esp32-c6_datasheet_en.pdf)
 
-- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCAD ライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
+- **[ZIP]** [Seeed Studio XIAO ESP32C6 KiCADライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH&PCB_24028.zip)
 
 - **[PDF]** [Seeed Studio XIAO ESP32C6 回路図](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/XIAO-ESP32-C6_v1.0_SCH_PDF_24028.pdf)
 
@@ -554,7 +559,7 @@ void loop(){
 
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32C6 フットプリント](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-- **[STEP]** [Seeed Studio XIAO ESP32C6 ステップファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1)
+- **[STEP]** [Seeed Studio XIAO ESP32C6 Stepファイル](https://grabcad.com/library/seeed-studio-xiao-esp32-c6-1)
 
 ## コースリソース
 
@@ -564,7 +569,7 @@ void loop(){
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

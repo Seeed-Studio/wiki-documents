@@ -1,22 +1,17 @@
 ---
-description: Seeed Studio XIAO nRF52840 と CircuitPython
+description: Seeed Studio XIAO nRF52840 with CircuitPython
 title: CircuitPython
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO-BLE_CircutPython
 last_update:
-  date: 05/15/2025
+  date: 1/11/2023
   author: shuxu hu
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+# **Seeed Studio XIAO nRF52840 with CircuitPython**
 
-# **Seeed Studio XIAO nRF52840 と CircuitPython**
-
-CircuitPython は、低コストのマイクロコントローラーボード上での実験やプログラミング学習を簡素化するために設計されたプログラミング言語です。デスクトップへの事前ダウンロードが不要で、これまで以上に簡単に始められます。ボードをセットアップしたら、任意のテキストエディタを開いてコードの編集を開始するだけです。それほど簡単です。
+CircuitPython は、低コストのマイコンボードでのプログラミングの実験と学習を簡素化するために設計されたプログラミング言語です。事前のデスクトップダウンロードが不要で、これまで以上に簡単に始めることができます。ボードをセットアップしたら、任意のテキストエディタを開いて、コードの編集を開始するだけです。それほど簡単です。
 
 ## **はじめに**
 
@@ -24,7 +19,7 @@ CircuitPython は、低コストのマイクロコントローラーボード上
 
 **ステップ 1** ブートローダーモードに入る
 
-CircuitPython を Seeed Studio XIAO nRF52840 にインストールする前に、ブートローダーモードに入る必要があります。リセットボタンを2回クリックすることでブートローダーモードに入ることができます：
+Seeed Studio XIAO nRF52840 に CircuitPython をインストールする前に、ブートローダーモードが必要です。リセットボタンを2回クリックすることで、ブートローダーモードに入ることができます：
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/functional2b.jpg) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/functional2b.jpg" alt="pir" width={600} height="auto" /></p>
@@ -34,14 +29,14 @@ CircuitPython を Seeed Studio XIAO nRF52840 にインストールする前に�
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu1.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu1.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ 2** Seeed Studio XIAO nRF52840 用の [ファームウェア](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-Circuitpython.uf2) をダウンロードします。
+**ステップ 2** Seeed Studio XIAO nRF52840 用の[ファームウェア](https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO-Circuitpython.uf2)をダウンロードする
 
-**ステップ 3** .urf ファイルをディスクドライブ（"XIAO-SENSE"）にドラッグします。
+**ステップ 3** .uf2ファイルをディスクドライバー（"XIAO-SENSE"）にドラッグする
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu3.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu3.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ 4** ディスクドライブの名前が "CIRCUITPY" に変更されているか確認します。
+**ステップ 4** ディスクドライバーの名前が"CIRCUITPY"に変更されているかを確認する
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040tu2.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040tu2.png" alt="pir" width={600} height="auto" /></p>
@@ -50,17 +45,17 @@ CircuitPython を Seeed Studio XIAO nRF52840 にインストールする前に�
 
 ### アプリケーション
 
-**ステップ 1** CircuitPython エディタ - [Mu Editor](https://codewith.mu/en/download) をダウンロードして開きます。
+**ステップ 1** CircuitPython エディター - [Mu Editor](https://codewith.mu/en/download) をダウンロードして開く
 
-**ステップ 2** "Mode" をクリックし、モードを "CircuitPython" に設定します。
+**ステップ 2** "Mode"をクリックして、モードを"CircuitPython"として選択する
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu4.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu4.png" alt="pir" width={600} height="auto" /></p>
 
-**ステップ 3** 以下のコードをコピーしてアップロードします：
+**ステップ 3** 以下のコードをコピーしてアップロードする：
 
 ```cpp
-"""Seeed Studio XIAO nRF52840 の例。内蔵 LED を点滅させます。"""
+"""Example for Seeed Studio XIAO nRF52840. Blinks the built-in LED."""
 import time
 import board
 import digitalio
@@ -75,16 +70,16 @@ while True:
     time.sleep(0.5)
 ```
 
-"Serial" をクリックして REPL を開き、コードを 'code.py' または 'main.py' として REPL に保存します。
+"Serial"をクリックしてREPLを開き、コードを'code.py'または'main.py'としてREPLに保存する
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu5.png) -->
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/BLEtu5.png" alt="pir" width={600} height="auto" /></p>
 
-すると、Seeed Studio XIAO nRF52840 のユーザー LED が点滅します。
+Seeed Studio XIAO nRF52840 のユーザーLEDが点滅します。
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートをご用意しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

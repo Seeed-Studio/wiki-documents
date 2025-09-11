@@ -190,7 +190,8 @@ f.write('CIRCUITPY_WEB_API_PASSWORD = "webpassword"\n')
 f.close()
 ```
 
-* Replace with the name of your local wifi network *wifissid*
+- Replace with the name of your local wifi network *wifissid*
+
 - Replace with your local wifi passwordwifi *password*
 - The other password, , is used when you access the board via a web browser. Set this to whatever you want *webpassword*
 
@@ -441,9 +442,11 @@ while True:
 #### Light up OLED screen
 
 **Download and Extract the Library Bundle**:
+
 - Go to the [library](https://circuitpython.org/libraries) and download the library bundle for CircuitPython. To install, download the appropriate bundle for your version of CircuitPython.
 
 **Copy Libraries to CIRCUITPY**:
+
 - Extract the library bundle ZIP file. You will find a folder named lib with various *.mpy* files.
 - Open Thonny-->View-->Files, and then copy the necessary .mpy files and the lib folder to CircuitPython device/lib.
 You'll need to manually install the necessary libraries from the bundle:
@@ -453,6 +456,7 @@ You'll need to manually install the necessary libraries from the bundle:
   - adafruit_framebuf.mpy
   
 **Copy fond5x8.bin to CIRCUITPY**:
+
 - Download font5x8.bin file from [here](https://github.com/adafruit/Adafruit_CircuitPython_framebuf/blob/main/examples/font5x8.bin).
 - Open Thonny-->View-->Files, and then copy the font5x8.bin files to CircuitPython device.
 
@@ -461,6 +465,7 @@ You'll need to manually install the necessary libraries from the bundle:
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/esp32c6_circuitpython/14.png" /></div>
 
 **Create Your CircuitPython Code**:
+
 - Create a code.py file (or main.py) . This file should contain your CircuitPython code.
 
 ```python
@@ -506,7 +511,8 @@ Thank you for reading this article！ Feel free to share your thoughts in the co
 
 ## Resources
 
-* [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c6/) for XIAO ESP32C6 with CircuitPython
+- [The firmware binary file](https://circuitpython.org/board/seeed_xiao_esp32c6/) for XIAO ESP32C6 with CircuitPython
+
 - [The library bundle for CircuitPython](https://circuitpython.org/libraries)
 
 ## Tech Support & Product Discussion

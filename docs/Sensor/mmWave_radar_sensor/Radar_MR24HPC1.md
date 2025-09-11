@@ -21,7 +21,6 @@ last_update:
     </a>
 </div>
 
-
 ## Introduction
 
 24GHz mmWave Sensor - Human Static Presence Module Lite is an antenna-integrated, health-friendly mmwave radar sensor that applies FMCW ranging technology, with operation in 24GHz, for implementation of human static presence, independently of environmental influences. This is also a personalized radar that users can configure underlying parameters of it to determine detected functions.
@@ -75,9 +74,11 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 | Jlink_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR24HPC1-20230302.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
+
 :::
 
 **To update your radar to the latest version**
@@ -166,6 +167,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 | UART_MR24HPC1-20230302.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR24HPC1-20230302.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
@@ -1092,7 +1094,6 @@ void loop() {
 }
 ```
 
-
 ## Resources
 
 - **[PDF]** [Quick Setup Template](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_Quick_Setup_Template-V1.0.pdf)
@@ -1106,11 +1107,11 @@ void loop() {
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,35 +1,31 @@
 ---
-description: ESP32C3 用 MicroPython
-title: ESP32C3 用 MicroPython
+description: ESP32C3用MicroPython
+title: ESP32C3用MicroPython
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO_ESP32C3_MicroPython
 last_update:
-  date: 05/15/2025
+  date: 08/14/2023
   author: Matthew and Zachay
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# XIAO ESP32C3 Wi-Fi トラッカーを MicroPython で使用する
+# MicroPythonを使用したXIAO ESP32C3 Wi-Fiトラッカー
 
-この Wiki は更新されています: https://wiki.seeedstudio.com/ja/xiao_esp32c3_with_micropython/
+このwikiは更新されました: https://wiki.seeedstudio.com/xiao_esp32c3_with_micropython/
 
-このチュートリアルでは、XIAO ESP32C3 を MicroPython で利用する方法について簡潔に説明します。さらに、Wi-Fi 信号強度トラッカーの実用的な応用についても探ります。このトラッカーは、高速で高品質な家庭ネットワークを構築する際に非常に役立ちます。
-その結果、Wi-Fi トラッカーの指示に従うことで、Wi-Fi 信号増幅器の配置を効果的に最適化し、最適な信号範囲を確保することができます。
+このチュートリアルでは、XIAO ESP32C3をMicropythonで活用する方法について簡潔な概要を提供します。さらに、高速で高品質な家庭用ネットワークを構築する際に非常に有用なWi-Fi信号強度トラッカーの実用的な応用について探求します。
+その結果、Wi-Fiトラッカーのガイダンスに従うことで、Wi-Fi信号増強器の配置を効果的に最適化し、最適な信号カバレッジを確保できます。
 
 <div style={{textAlign:'center'}}><iframe width={560} height={315} src="https://www.youtube.com/embed/7n72Knh4IIM" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div>
 
-## ハードウェア準備
+## ハードウェアの準備
 
-ここでは、Seeed Studio XIAO ESP32C3 と XIAO 用拡張ボードベースをハードウェアとして使用します。
+ここではSeeed Studio XIAO ESP32C3とXIAO用拡張ボードベースをハードウェアとして使用しています。
 
 <div class="table-center">
   <table align="center">
     <tr>
         <th>Seeed Studio XIAO ESP32C3</th>
-        <th>XIAO 用拡張ボードベース</th>
+        <th>XIAO用拡張ボードベース</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:'auto', height:200}}/></div></td>
@@ -38,19 +34,19 @@ https://github.com/Seeed-Studio/wiki-documents/issues
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-## ソフトウェア準備
+## ソフトウェアの準備
 
 <div class="table-center">
   <table align="center">
@@ -61,12 +57,12 @@ https://github.com/Seeed-Studio/wiki-documents/issues
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://thonny.org/" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> ダウンロード ⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Download ⏬</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://github.com/espressif/esptool" target="_blank" rel="noopener noreferrer">
-              <strong><span><font color={'FFFFFF'} size={"4"}> Git clone はこちら ⏬</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Git clone Here ⏬</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -74,40 +70,40 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </div>
 
 :::info
-使用する前に、ここで使用しているソフトウェア/ファームウェアが ESP32C3 チップ用に設計されていることを明記する必要があります。そのため、ピンを使用する際には、ボード上のピンではなく、汎用入出力 (GPIO) を使用することを確認してください。<br/>
-例えば、左側の最初の列のピンを使用する場合、それが `GPIO2` であることを確認し、`A0` や `D0` ではないことを確認してください。
+使用前に、ここで使用しているソフトウェア/ファームウェアはESP32C3チップ用に設計されていることを明記する必要があります。そのため、ピンを使用する際は、ボード上のピンではなく汎用入出力（General Purpose Input/Output）を確認してください。<br/>
+例えば、左側の最初の行のピンを使用しようとする場合、`A0`や`D0`ではなく`GPIO2`であることを確認してください。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:500, height:'auto'}}/></div>
 :::
 
 ## はじめに
 
-XIAO ESP32C3 を MicroPython でプログラム可能にするには、「PC 上での MicroPython 設定」と「XIAO ESP32C3 上での MicroPython 設定」の2つのステップが必要です。
+XIAO ESP32C3をMicroPythonでプログラムできるようにするには、2つのステップ（「PC上でのMicropython設定」と「XIAO ESP32C3上でのMicropythonセットアップ」）が必要です。
 
-セットアップが完了したら、各デモのコードを順にコピーして実行することで、目的を達成できます。
+セットアップ後、各デモからコードを段階的にコピーして完成を達成できます。
 
-### PC 上での MicroPython 設定
+### PC上でのMicropython設定
 
-#### Thonny IDE のインストール (Windows)
+#### Thonny IDEのインストール（Windows）
 
-以下の手順に従ってください。
+画像の手順に従ってください
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython1.png" /></div>
 
-#### esptool を使用したファームウェアの更新
+#### esptoolを使用したファームウェアの更新
 
-1. ファイルの保存場所を開きます。
+1. 自分のファイルの場所を開く
 
 ``` git clone https://github.com/espressif/esptool.git ```
 
-2. 最新のファームウェアをダウンロードします（このチュートリアルでは v1.20.0 (2023-04-26) .bin を使用）。
+2. Download the latest firmware (This Tutorial is v1.20.0 (2023-04-26) .bin)
 
-``` https://micropython.org/download/esp32c3/```
+```https://micropython.org/download/esp32c3/```
 
-3. 最新のファームウェアを保存場所に配置し、CMD でそのファイルを開きます。
+3. Put the latest firm in this file location and open the file in CMD
 
 ```your own file location\esptool-master\esptool```
 
-4. 以下のコマンドを CMD に入力してファームウェアをフラッシュします（フラッシュする前にブートローダーモードに入ります）。
+4. Flash the firmware by entering this command in CMD （enter bootloader mode before flashing）
 
 ```cpp
 esptool.exe --chip esp32c3 --port COM10 --baud 921600 --before default_reset --after hard_reset --no-stub  write_flash --flash_mode dio --flash_freq 80m 0x0 esp32c3-usb-20230426-v1.20.0.bin
@@ -116,38 +112,38 @@ esptool.exe --chip esp32c3 --port COM10 --baud 921600 --before default_reset --a
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython2.png" /></div>
 
 :::note
-Linux を使用している場合は、"esptool.exe" を "esptool.py" に変更してください。また、"COM10" を自身のシリアルポートに変更し、"esp32c3-usb-20230426-v1.20.0.bin" をダウンロードした最新のファームウェア名に変更してください。
+Linuxを使用している場合は、"esptool.exe"を"esptool.py"に変更してください。"COM10"を自分のシリアルポートに変更してください。"esp32c3-usb-20230426-v1.20.0.bin"をダウンロードした最新のファームウェア名に変更してください。
 :::
 
-### XIAO ESP32C3 上での MicroPython 設定
+### XIAO ESP32C3でのMicropythonセットアップ
 
-1. XIAO ESP32C3 を接続し、Thonny を開いて右下をクリックしてインタープリタを設定します。
+1. XIAO ESP32C3を接続し、Thonnyを開いて右下をクリックしてインタープリターを設定します
 
-2. インタープリタを選択 - Micropython (ESP32) を選び、ポートを設定 >>> OK をクリックします。
+2. インタープリター- Micropython (ESP32)とポートを選択 >>> OKをクリック
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython3.png" /></div>
 
-注意: すべてが正常に動作していれば、シェルに出力が表示されます。
+注意：すべてがうまくいけば、シェルに出力が表示されます
 
 #### 必要なライブラリのインストール
 
-"Tools" をクリック >>> "Management Packages" をクリック >>> ライブラリ名を入力 >>> "Search micropython-lib and PyPl" をクリック
+「Tools」をクリック >>> 「Management Packages」をクリック >>> ライブラリ名を入力 >>> 「Search micropython-lib and PyPl」をクリック
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython4.png" /></div>
 
-#### スクリプトの実行とボードへのフラッシュ
+#### スクリプトの実行とボードへの書き込み
 
-1. コーディングが完了したら、緑色のボタンをクリックしてスクリプトを実行します。
+1. コーディングが完了したら、緑のボタンをクリックしてスクリプトを実行します
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython5.png" /></div>
 
-2. ファイルを "boot.py" としてボードに保存することで、コードをボードにフラッシュします。
+2. ファイルを「boot.py」としてボードに保存することで、コードをボードに書き込みます
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython6.png" /></div>
 
-### デモ 1: OLED スクリーンを点灯する
+### デモ1：OLEDスクリーンを点灯させる
 
-#### 1. Hello Seeder!
+#### 1. Hello Seeder
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython7.png" /></div>
 
@@ -157,20 +153,20 @@ from machine import Pin, SoftI2C
 import ssd1306
 import math
 
-# ESP8266 ピン割り当て
-i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # 接続に基づいてピン番号を調整してください
+# ESP8266 Pin assignment
+i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # Adjust the Pin numbers based on your connections
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 
-oled.fill(0)  # 画面をクリア
+oled.fill(0)  # Clear the screen
 oled.text("Hello, Seeder!", 10, 15)
 oled.text("/////", 30, 40)
 oled.text("(`3`)y", 30, 55)
-oled.show()  # テキストを表示
+oled.show()  # Show the text
 ```
 
-#### 2. 動的なローディング効果
+#### 2. 動的ローディング効果
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython8.png" /></div>
 
@@ -180,43 +176,43 @@ from machine import Pin, SoftI2C
 import ssd1306
 import math
 
-# ESP8266 ピン割り当て
-i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # 接続に基づいてピン番号を調整してください
+# ESP8266 Pin assignment
+i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # Adjust the Pin numbers based on your connections
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 
 center_x = oled_width // 2
 center_y = oled_height // 2
-square_size = 6  # 各四角形のサイズ
-num_squares = 12  # 四角形の数
+square_size = 6  # Size of each square
+num_squares = 12  # Number of squares
 angle_increment = 2 * math.pi / num_squares
 
 while True:
-    oled.fill(0)  # 画面をクリア
+    oled.fill(0)  # Clear the screen
     
     for i in range(num_squares):
         angle = i * angle_increment
         x = int(center_x + (center_x - square_size-30) * math.cos(angle))
         y = int(center_y + (center_x - square_size-30) * math.sin(angle))
         
-        # すべての四角形を描画
+        # Draw all squares
         for j in range(num_squares):
             angle_j = j * angle_increment
             x_j = int(center_x + (center_x - square_size-30) * math.cos(angle_j))
             y_j = int(center_y + (center_x - square_size-30) * math.sin(angle_j))
             
-            oled.fill_rect(x_j, y_j, square_size, square_size, 1)  # 四角形を描画
+            oled.fill_rect(x_j, y_j, square_size, square_size, 1)  # Draw the square
         
-        oled.fill_rect(x, y, square_size, square_size, 0)  # 現在の四角形を消去
+        oled.fill_rect(x, y, square_size, square_size, 0)  # Erase the current square
         oled.show()
-        time.sleep_ms(100)  # 次の反復まで一時停止
+        time.sleep_ms(100)  # Pause before next iteration
 
 ```
 
 ### デモ 2: ブザーを鳴らす
 
-#### 1. 音を鳴らす
+#### 1. 音
 
 ```cpp
 import time
@@ -225,13 +221,13 @@ import machine
 from machine import Pin, SoftI2C
 
 
-# ブザー設定
+# Buzzer settings
 
 buzzer_pin = machine.Pin(5, machine.Pin.OUT)
 buzzer = machine.PWM(buzzer_pin)
 buzzer.freq(1047)
 
-# ブザー動作
+# Buzzer working
 
 while True:
 
@@ -241,18 +237,18 @@ while True:
     time.sleep(1)
 ```
 
-#### 2. 曲  He's a pirate  を演奏する
+#### 2. Play the Song "He's a pirate"
 
-```cpp
+```python
 import machine
 import time
 
-# ブザー設定
+# Buzzer settings
 buzzer_pin = machine.Pin(5, machine.Pin.OUT)
 buzzer = machine.PWM(buzzer_pin)
 buzzer.freq(1047)
 
-# 各音符の周波数を定義
+# Defining frequency of each music note
 NOTE_C4 = 262
 NOTE_D4 = 294
 NOTE_E4 = 330
@@ -268,7 +264,7 @@ NOTE_G5 = 784
 NOTE_A5 = 880
 NOTE_B5 = 988
 
-# 曲の音符、0は休符/パルス
+# Music notes of the song, 0 is a rest/pulse
 notes = [
     NOTE_E4, NOTE_G4, NOTE_A4, NOTE_A4, 0,
     NOTE_A4, NOTE_B4, NOTE_C5, NOTE_C5, 0,
@@ -291,7 +287,7 @@ notes = [
     NOTE_C5, NOTE_A4, NOTE_B4, 0,
 
     NOTE_A4, NOTE_A4,
-    # 最初の部分の繰り返し
+    #Repeat of first part
     NOTE_A4, NOTE_B4, NOTE_C5, NOTE_C5, 0,
     NOTE_C5, NOTE_D5, NOTE_B4, NOTE_B4, 0,
     NOTE_A4, NOTE_G4, NOTE_A4, 0,
@@ -310,8 +306,7 @@ notes = [
     NOTE_D5, NOTE_E5, NOTE_A4, 0,
     NOTE_A4, NOTE_C5, NOTE_B4, NOTE_B4, 0,
     NOTE_C5, NOTE_A4, NOTE_B4, 0,
-
-    # 繰り返し終了
+    #End of Repeat
 
     NOTE_E5, 0, 0, NOTE_F5, 0, 0,
     NOTE_E5, NOTE_E5, 0, NOTE_G5, 0, NOTE_E5, NOTE_D5, 0, 0,
@@ -324,8 +319,8 @@ notes = [
     NOTE_B4, NOTE_C5, 0, NOTE_B4, 0, NOTE_A4
 ]
 
-# 曲の各音符の長さ（ミリ秒単位）
-# songSpeed = 1.0 の場合、4分音符は250ミリ秒
+# Durations (in ms) of each music note of the song
+# Quarter Note is 250 ms when songSpeed = 1.0
 durations = [
     125, 125, 250, 125, 125,
     125, 125, 250, 125, 125,
@@ -348,7 +343,7 @@ durations = [
     125, 125, 375, 375,
 
     250, 125,
-    # 最初の部分の繰り返し
+    #Rpeat of First Part
     125, 125, 250, 125, 125,
     125, 125, 250, 125, 125,
     125, 125, 375, 125,
@@ -367,7 +362,7 @@ durations = [
     250, 125, 250, 125,
     125, 125, 250, 125, 125,
     125, 125, 375, 375,
-    # 繰り返し終了
+    #End of Repeat
 
     250, 125, 375, 250, 125, 375,
     125, 125, 125, 125, 125, 125, 125, 125, 375,
@@ -386,61 +381,60 @@ def play_song():
         current_note = notes[i]
         wait = durations[i]
         if current_note != 0:
-            buzzer.duty(512)  # 音を出すためのデューティサイクルを設定
-            buzzer.freq(current_note)  # 音符の周波数を設定
+            buzzer.duty(512)  # Set duty cycle for sound
+            buzzer.freq(current_note)  # Set frequency of the note
         else:
-            buzzer.duty(0)  # 音を消す
+            buzzer.duty(0)  # Turn off the sound
         time.sleep_ms(wait)
-        buzzer.duty(0)  # 音を消す
+        buzzer.duty(0)  # Turn off the sound
 while True:
-    # 曲を再生
+    # Play the song
     play_song()
 ```
 
-### デモ 3: Wi-Fi に接続
+### デモ 3: Wi-fiに接続
 
-#### 1. Wi-Fi に接続
+#### 1. Wi-fiに接続
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython8a.png" /></div>
 
-
-```cpp
+```python
 import network
 import urequests
 import utime as time
 
-# ネットワーク設定
-wifi_ssid = "あなたのSSID"
-wifi_password = "あなたのパスワード"
+# Network settings
+wifi_ssid = "Your Own SSID"
+wifi_password = "Your Own Password"
 
 def scan_and_connect():
     station = network.WLAN(network.STA_IF)
     station.active(True)
 
-    print("Wi-Fi ネットワークをスキャン中です。お待ちください...")
+    print("Scanning for WiFi networks, please wait...")
     for ssid, bssid, channel, RSSI, authmode, hidden in station.scan():
         print("* {:s}".format(ssid))
-        print("   - チャンネル: {}".format(channel))
+        print("   - Channel: {}".format(channel))
         print("   - RSSI: {}".format(RSSI))
         print("   - BSSID: {:02x}:{:02x}:{:02x}:{:02x}:{:02x}:{:02x}".format(*bssid))
         print()
 
     while not station.isconnected():
-        print("接続中...")
+        print("Connecting...")
         station.connect(wifi_ssid, wifi_password)
         time.sleep(10)
 
-    print("接続完了!")
-    print("私のIPアドレス:", station.ifconfig()[0])
+    print("Connected!")
+    print("My IP Address:", station.ifconfig()[0])
+
+
+# Execute the functions
+scan_and_connect()
 ```
 
-# 関数を実行する
-scan_and_connect()
-
-#### 2. ニューヨーク時間をオンラインで取得
+#### 2. ニューヨーク時間をオンラインでリクエスト
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython9.png" /></div>
-
 
 ```cpp
 from machine import Pin, SoftI2C
@@ -451,11 +445,11 @@ import network
 import urequests
 import ujson
 
-# ESP32 ピン割り当て
+# ESP32 Pin assignment
 # i2c = SoftI2C(scl=Pin(22), sda=Pin(21))
 
-# ESP8266 ピン割り当て
-i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # 接続に基づいてピン番号を調整してください
+# ESP8266 Pin assignment
+i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # Adjust the Pin numbers based on your connections
 
 oled_width = 128
 oled_height = 64
@@ -464,69 +458,69 @@ oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 station = network.WLAN(network.STA_IF)
 station.active(True)
 
-# ネットワーク設定
-wifi_ssid = "あなたのWiFi SSID"
-wifi_password = "あなたのWiFiパスワード"
+# Network settings
+wifi_ssid = "Your wifi ssid"
+wifi_password = "Your wifi password"
 url = "http://worldtimeapi.org/api/timezone/America/New_York"
 
-print("WiFiネットワークをスキャン中です。しばらくお待ちください...")
+print("Scanning for WiFi networks, please wait...")
 authmodes = ['Open', 'WEP', 'WPA-PSK' 'WPA2-PSK4', 'WPA/WPA2-PSK']
 for (ssid, bssid, channel, RSSI, authmode, hidden) in station.scan():
     print("* {:s}".format(ssid))
-    print("   - チャンネル: {}".format(channel))
+    print("   - Channel: {}".format(channel))
     print("   - RSSI: {}".format(RSSI))
     print("   - BSSID: {:02x}:{:02x}:{:02x}:{:02x}:{:02x}:{:02x}".format(*bssid))
     print()
 
-# WiFiアクセスポイントへの接続を継続的に試みる
+# Continually try to connect to WiFi access point
 while not station.isconnected():
-    # WiFiアクセスポイントへの接続を試みる
-    print("接続中...")
+    # Try to connect to WiFi access point
+    print("Connecting...")
     station.connect(wifi_ssid, wifi_password)
     time.sleep(10)
 
-# 接続詳細を表示
-print("接続完了!")
-print("私のIPアドレス:", station.ifconfig()[0])
+# Display connection details
+print("Connected!")
+print("My IP Address:", station.ifconfig()[0])
 
 
 while True:
-    # SSLなしのウェブでHTTP GETリクエストを実行
+    # Perform HTTP GET request on a non-SSL web
     response = urequests.get(url)
-    # リクエストが成功したか確認
+    # Check if the request was successful
     if response.status_code == 200:
-        # JSONレスポンスを解析
+        # Parse the JSON response
         data = ujson.loads(response.text)
-        # ニューヨークの "datetime" フィールドを抽出
+        # Extract the "datetime" field for New York
         ny_datetime = data["datetime"]
-        # 日付と時間のコンポーネントを分割
+        # Split the date and time components
         date_part, time_part = ny_datetime.split("T")
-        # 時間の最初の2桁のみ取得
+        # Get only the first two decimal places of the time
         time_part = time_part[:8]
-        # タイムゾーンを取得
+        # Get the timezone
         timezone = data["timezone"]
         
-        # OLEDディスプレイをクリア
+        # Clear the OLED display
         oled.fill(0)
         
-        # ニューヨークの日付と時間を別々の行に表示
+        # Display the New York date and time on separate lines
         oled.text("New York Date:", 0, 0)
         oled.text(date_part, 0, 10)
         oled.text("New York Time:", 0, 20)
         oled.text(time_part, 0, 30)
         oled.text("Timezone:", 0, 40)
         oled.text(timezone, 0, 50)
-        # ディスプレイを更新
+        # Update the display
         oled.show()
     else:
-        oled.text("ニューヨークの時間取得に失敗しました!")
-        # ディスプレイを更新
+        oled.text("Failed to get the time for New York!")
+        # Update the display
         oled.show()
 ```
 
-### 最終: Wi-Fi信号強度トラッカー
+### Final: Wi-fi信号強度トラッカー
 
-このプロジェクトの主なタスクです。このコードを使用すると、簡単なデバイスで自宅のWi-Fi信号を追跡できます。
+これはこのプロジェクトのメインタスクです。このコードを通じて、このような簡単なデバイスで自宅のwifi信号を追跡することができます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython10.jpg" /></div>
 
@@ -539,17 +533,17 @@ from machine import Pin, SoftI2C
 import ssd1306
 import math
 
-# ESP32C3 ピン割り当て
-i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # 接続に基づいてピン番号を調整してください
+# ESP32C3 Pin assignment
+i2c = SoftI2C(scl=Pin(7), sda=Pin(6))  # Adjust the Pin numbers based on your connections
 oled_width = 128
 oled_height = 64
 oled = ssd1306.SSD1306_I2C(oled_width, oled_height, i2c)
 
-# ネットワーク設定
-wifi_ssid = "あなたのSSID"
-wifi_password = "あなたのパスワード"
-machine.freq(160000000)  # CPU周波数を160 MHzに設定（ESP8266特有）
-oled.text("起動中...", 0, 0)
+# Network settings
+wifi_ssid = "Your Own SSID"
+wifi_password = "Your Own Password"
+machine.freq(160000000)  # Set CPU frequency to 160 MHz (ESP8266 specific)
+oled.text("Starting up...", 0, 0)
 oled.show()
 
 station = network.WLAN(network.STA_IF)
@@ -561,20 +555,20 @@ while not station.isconnected():
     time.sleep(1)
 
 oled.fill(0)
-oled.text("接続中", 0, 0)
+oled.text("Connecting to", 0, 0)
 oled.text(wifi_ssid, 0, 20)
 oled.show()
 time.sleep(2)
 
 oled.fill(0)
-ip_address = station.ifconfig()[0]  # IPアドレスを取得
-oled.text("接続完了!", 0, 0)
-oled.text("IPアドレス:", 0, 20)
+ip_address = station.ifconfig()[0]  # Get the IP address
+oled.text("Connected! ", 0, 0)
+oled.text("IP Address:", 0, 20)
 oled.text(ip_address, 0, 40)
 oled.show()
 time.sleep(2)
 
-# ブザー設定
+# Buzzer settings
 buzzer_pin = machine.Pin(5, machine.Pin.OUT)
 buzzer = machine.PWM(buzzer_pin)
 buzzer.freq(1047)
@@ -582,15 +576,15 @@ buzzer.duty(0)
 
 center_x = oled_width // 2
 center_y = oled_height // 2
-square_size = 6  # 各四角形のサイズ
-num_squares = 12  # 四角形の数
+square_size = 6  # Size of each square
+num_squares = 12  # Number of squares
 angle_increment = 2 * math.pi / num_squares
 
 x_pos = [12, 38, 64, 90]
-statuses = ["弱い", "普通", "良好", "非常に良好"]
+statuses = ["poor", "normal", "good", "excellent"]
 
 def calculate_block_count(rssi):
-    # RSSI値に基づいてブロック数を決定
+    # Determine the number of blocks based on RSSI values
     if -80 <= rssi < -60:
         return 1
     elif -60 <= rssi < -40:
@@ -604,38 +598,38 @@ def draw_blocks(count):
     for i in range(count):
         y_pos = 50 - calculate_block_height(i)
         oled.fill_rect(x_pos[i], y_pos, 24, calculate_block_height(i), 1)
-    for i in range(count, 4):  # 未使用エリアをクリア
+    for i in range(count, 4):  # Clear unused area
         y_pos = 50 - calculate_block_height(i)
         oled.fill_rect(x_pos[i], y_pos, 24, calculate_block_height(i), 0)
 
 def calculate_block_height(index):
     return 10 * (index + 1)
 
-loop_count = 0  # ループカウントを初期化
+loop_count = 0  # Initialize loop count
 
-while loop_count < 2:  # ループを2回実行
-    oled.fill(0)  # 画面をクリア
+while loop_count < 2:  # Execute the loop 24 times
+    oled.fill(0)  # Clear the screen
     
     for i in range(num_squares):
         angle = i * angle_increment
         x = int(center_x + (center_x - square_size-30) * math.cos(angle))
         y = int(center_y + (center_x - square_size-30) * math.sin(angle))
         
-        # 全ての四角形を描画
+        # Draw all squares
         for j in range(num_squares):
             angle_j = j * angle_increment
             x_j = int(center_x + (center_x - square_size-30) * math.cos(angle_j))
             y_j = int(center_y + (center_x - square_size-30) * math.sin(angle_j))
             
-            oled.fill_rect(x_j, y_j, square_size, square_size, 1)  # 四角形を描画
+            oled.fill_rect(x_j, y_j, square_size, square_size, 1)  # Draw the square
         
-        oled.fill_rect(x, y, square_size, square_size, 0)  # 現在の四角形を消去
+        oled.fill_rect(x, y, square_size, square_size, 0)  # Erase the current square
         oled.show()
-        time.sleep_ms(100)  # 次の反復まで一時停止
+        time.sleep_ms(100)  # Pause before next iteration
         
-    loop_count += 1  # ループカウントを増加
+    loop_count += 1  # Increase loop count
 
-oled.fill(0)  # ループ終了後に画面をクリア
+oled.fill(0)  # Clear the screen after finishing the loops
 oled.show()
 
 while True:
@@ -648,7 +642,7 @@ while True:
     rssi_abs = abs(int(rssi)) / 100
  
     block_count = calculate_block_count(rssi)
-    status = statuses[block_count - 1]  # ブロック数に基づいてステータステキストを取得
+    status = statuses[block_count - 1]  # Get the status text based on block count
     
     draw_blocks(block_count)
     
@@ -656,8 +650,7 @@ while True:
     
     oled.text("RSSI:", 0, 0)
     oled.text(str(rssi), 40, 0)
-
-    # ディスプレイを更新
+    # Update the display
     oled.show()
 
     buzzer.duty(rssi_duty)
@@ -671,27 +664,27 @@ while True:
 
 ```
 
-## さらに
+## さらに詳しく
 
-- XIAO ESP32C3にファームウェアを書き込む際には、MAC OSに対応したThonnyに統合されたesptoolを使用することもできます。
+- Thonnyに統合されたesptoolを使用してXIAO ESP32C3にファームウェアをフラッシュすることもでき、これはMAC OSでサポートされています。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython11.png" /></div>
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトはSeeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35177053)によってサポートされています。
-- [Zacharyの努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35177053)に感謝します。あなたの作業は[展示されます](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)。
+- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35177053)によってサポートされています。
+- [Zacharyの努力](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=35177053)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品を選んでいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

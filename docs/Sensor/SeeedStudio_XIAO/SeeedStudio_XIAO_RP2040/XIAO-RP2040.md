@@ -14,13 +14,12 @@ last_update:
 
   <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" alt="pir" width={600} height="auto" /></p>
 
-
 The Seeed Studio XIAO RP2040 is as small as the Seeed Studio XIAO SAMD21 but it's more powerful. On one hand, it carries the powerful Dual-core RP2040 processor that can flexible clock running up to 133 MHz which is a low-power microcontrollers. On the Seeed Studio XIAO RP2040 there is also 264KB of SRAM, and 2MB of on-board Flash memory which can provide more program to save and run. On the other hand, this little board has good performance in processing but needs less power.  
 All in all, it is designed in a tiny size as small as a thumb(21x17.8mm) and can be used for wearable devices and small projects.
 
 There are 14 GPIO PINs on Seeed Studio XIAO RP2040, on which there are 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface.
 
-Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board. 
+Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
@@ -33,7 +32,7 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 - Powerful MCU: Dual-core ARM Cortex M0+ processor, flexible clock running up to 133 MHz
 - Rich on-chip resources: 264KB of SRAM, and 2MB of on-board Flash memory
 - Flexible compatibility: Support Micropython/Arduino/CircuitPython
--  Easy project operation: Breadboard-friendly & SMD design, no components on the back
+- Easy project operation: Breadboard-friendly & SMD design, no components on the back
 - Small size: As small as a thumb(21x17.8mm) for wearable devices and small projects.
 - Multiple interfaces: 11 digital pins, 4 analog pins, 11 PWM Pins,1 I2C interface, 1 UART interface, 1 SPI interface, 1 SWD Bonding pad interface.
 
@@ -54,7 +53,6 @@ Seeed Studio XIAO RP2040 is compatible to the Seeed Studio XIAO expansion board.
 |Power|3.3V/5V DC|
 |Dimensions|21×17.8×3.5mm|
 
-
 ## **Hardware Overview**
 
 <!-- ![](https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg) -->
@@ -70,12 +68,11 @@ The built-in DC-DC converter circuit able to change 5V voltage into 3.3V allows 
 XIAO RP2040 currently only supports battery power supply and cannot connect to Type-C while a battery is connected, as it may pose a safety risk.
 
 Please pay attention to use, do not lift the shield cover.
-:::    
-    
+:::
+
 ### **Enter Bootloader Mode**
 
-
-Sometimes the Seeed Studio XIAO RP2040 port may disappear when user programming process fails. We can solve this problem by the following operation: 
+Sometimes the Seeed Studio XIAO RP2040 port may disappear when user programming process fails. We can solve this problem by the following operation:
 
 - Long press the "B" button.
 - Connect the Seeed Studio XIAO PR2040 to your computer.
@@ -97,13 +94,10 @@ Please note: The behavior of the built-in programmable Single-colour LEDs (They 
 
 ## Schematic Online Viewer
 
-
 <div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/XIAO-RP2040/res/XIAO_RP2040_v1.22_SCH&PCB.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
-
 ## Resources
-
 
 - **[PDF]** [RP2040 datasheet](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/rp2040_datasheet.pdf)
 
@@ -124,8 +118,6 @@ Please note: The behavior of the built-in programmable Single-colour LEDs (They 
 
 - **[STEP]** [Seeed Studio XIAO RP2040 3D Model](https://files.seeedstudio.com/wiki/XIAO-RP2040/res/seeed-studio-xiao-rp2040-3d-model.zip)
 
-
-
 - 🔗 **[Kicad]** [Seeed Studio XIAO RP2040 FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
 ## Course Resources
@@ -139,11 +131,11 @@ Please note: The behavior of the built-in programmable Single-colour LEDs (They 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

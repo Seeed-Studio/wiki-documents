@@ -14,7 +14,6 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p>
 
-
 This wiki will walkthrough step-by-step on how to make a Xiao ESP32C3 ESPHome Smart ThermoStat. Now let's get started!
 
 ## Hardware Preparation
@@ -65,8 +64,8 @@ If you want to follow this tutorial through everything, you will need to prepare
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/2.jpg" alt="pir" width={210} height="auto" /></p></td>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/3.jpg" alt="pir" width={210} height="auto" /></p></td>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/4.jpg" alt="pir" width={210} height="auto" /></p></td>
-      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/5.jpg" alt="pir" width={210} height="auto" /></p></td> 
-      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/8.jpg" alt="pir" width={400} height="auto" /></p></td> 
+      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/5.jpg" alt="pir" width={210} height="auto" /></p></td>
+      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/8.jpg" alt="pir" width={400} height="auto" /></p></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -91,7 +90,6 @@ If you want to follow this tutorial through everything, you will need to prepare
         </div></td>
     </tr>
   </tbody></table>
-
 
 <!-- ### 1. Items Used
 
@@ -149,7 +147,6 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 
 - **Step 1.** Click **INSTALL**
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
 - **Step 2.** Enable all the options and click **START**
@@ -159,7 +156,6 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 You will see the following window if ESPHome is successfully loaded
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
-
 
 ## Getting Started
 
@@ -187,7 +183,6 @@ Once all the software and the hardware are really, we can now get started.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
-
 ### 2. Create and Upload YAML Config
 
 - **Step 1.** Click **EDIT** under the newly created board
@@ -196,9 +191,7 @@ Once all the software and the hardware are really, we can now get started.
 
 <!-- ### 2. Install Home Assistant and ESPHome
 
-- Install Home Assistant on your device of choice. There are a lot of informative guides
-based on whatever device you are trying to Install Home Assistant onto. The type of device will determine which
-style of Home Assistant will meet your needs the best.
+- Install Home Assistant on your device of choice. There are a lot of informative guides based on whatever device you are trying to Install Home Assistant onto. The type of device will determine which style of Home Assistant will meet your needs the best.
 
 - Installation of ESPHome is as easy as searching for "ESPHome" in the Supervisor/Add-Ons/Extensions tab and clicking it to install.
 
@@ -561,7 +554,7 @@ binary_sensor:
 
 ### 3. Assemble case of choice (Optional)
 
-There are the STL files for the case I used for this project. 
+There are the STL files for the case I used for this project.
 
 [EcoStatV2 ecostatcase](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/EcoStatV2-ecostatcase.stl)
 
@@ -572,7 +565,6 @@ there are lots of services online that will print these files in any material yo
 
 <!-- ![image10](./3dfile.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/3dfile.png" alt="pir" width={1000} height="auto" /></p>
-
 
 ### 4. Install Components
 
@@ -608,7 +600,7 @@ I accomplished this by attaching the buttons with a bit of heat glue. I then sol
 <!-- ![image13](./12.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/12.jpg" alt="pir" width={1000} height="auto" /></p>
 
-#### Step 4. Assemble screen into the rear of the front cover 
+#### Step 4. Assemble screen into the rear of the front cover
 
 Assemble screen into the rear of the front cover(Secure in place with a small amount of heat glue). Then secure the front cover to case with 3 M4x6 screws as shown below.
 
@@ -622,8 +614,6 @@ Smart Thermostat Complete! Simply remove your homes existing thermostat and use 
 <!-- ![image15](./13.jpg) -->
 <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/13.jpg" alt="pir" width={500} height="auto" />
 
-
-
 ## ✨ Contributor Project
 
 - This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479).
@@ -634,11 +624,11 @@ Smart Thermostat Complete! Simply remove your homes existing thermostat and use 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

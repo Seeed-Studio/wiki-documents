@@ -121,6 +121,7 @@ west espressif monitor
 ```
 
 You will see a console available for sending commands to the board:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 Starting Observer Demo
@@ -162,12 +163,14 @@ west espressif monitor
 ```
 
 You will see a console available for sending commands to the board:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 uart:~$
 ```
 
 Several commands exist allowing you to see and connect to local networks, see the [sample readme](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/net/wifi/README.rst) for more information.
+
 ```
 uart:~$ wifi scan
 Scan requested
@@ -179,9 +182,10 @@ Num  | SSID                             (len) | Chan (Band)   | RSSI | Security 
 ```
 
 Let's dive into this example a bit to see why it works:
+
 ```
 &wifi {
-	status = "okay";
+ status = "okay";
 };
 ```
 
@@ -206,12 +210,14 @@ The [conf file](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/n
 #### TFLite - Hello World
 
 Enable TFLite with Zephyr and update:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
 ```
 
 Build the sample and flash to your board:
+
 ```
 west build -p always -b xiao_esp32s3 samples/modules/tflite-micro/hello_world
 west flash
@@ -219,6 +225,7 @@ west espressif monitor
 ```
 
 You will see results returned from the console:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -254,12 +261,10 @@ Additional information about TFLite is outside of the scope of this guide but th
 - [1.69inch LCD Display Module, 240×280 Resolution, SPI Interface](https://www.seeedstudio.com/1-69inch-240-280-Resolution-IPS-LCD-Display-Module-p-5755.html)
 - [Round Display for Xiao](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 
-
 #### Grove - Expansion Board - I2C Display
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/xiao_expansion_oled.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/xiao_expansion_oled.jpg" style={{width:600, height:'auto'}}/></div>
-
 
 To test this setup we can use an existing sample with Zephyr:
 
@@ -271,6 +276,7 @@ west flash
 You'll see a display showing multiple black boxes and a blinking box in the corner given this display only supports two colors.
 
 Let's dive into this example a bit to see why it works:
+
 ```
 / {
     chosen {
@@ -299,7 +305,6 @@ Let's dive into this example a bit to see why it works:
 ```
 
 The shield sets up a SSD1306 OLED screen at the 0x3C register. It is selected as the zephyr display in the chosen section.
-
 
 #### Grove - Expansion Board - Button
 
@@ -330,6 +335,7 @@ Button pressed at 1822426500
 ```
 
 Let's dive into this example a bit to see why it works:
+
 ```
 / {
     aliases {
@@ -363,6 +369,7 @@ west build -p always -b xiao_esp32s3 samples/basic/blinky_pwm -- -DDTC_OVERLAY_F
 After flashing you should begin hearing a series of buzzes which change in sound as the sample runs its course.
 
 Let's look at why this works:
+
 ```
 #include <zephyr/dt-bindings/pwm/pwm.h>
 
@@ -415,12 +422,14 @@ west build -p always -b xiao_esp32s3 samples/subsys/fs/fs_sample -- -DEXTRA_CONF
 ```
 
 Now flash and monitor:
+
 ```
 west flash
 west espressif monitor
 ```
 
 You should see a response similar to this:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 [00:00:00.208,000] <inf> sd: Maximum SD clock is under 25MHz, using clock of 24000000Hz
@@ -436,6 +445,7 @@ Listing dir /SD: ...
 In this case my SD card had two files. Their names and their sizes were outputted to my console.
 
 Let's look over the relevant elements at play here:
+
 ```
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
@@ -448,19 +458,19 @@ The relevant part of the Xiao Expansion Board shield is shown below:
 
 ```
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	sdhc0: sdhc@0 {
-		compatible = "zephyr,sdhc-spi-slot";
-		reg = <0>;
-		status = "okay";
-		mmc {
-			compatible = "zephyr,sdmmc-disk";
-			status = "okay";
-		};
-		spi-max-frequency = <24000000>;
-	};
+ sdhc0: sdhc@0 {
+  compatible = "zephyr,sdhc-spi-slot";
+  reg = <0>;
+  status = "okay";
+  mmc {
+   compatible = "zephyr,sdmmc-disk";
+   status = "okay";
+  };
+  spi-max-frequency = <24000000>;
+ };
 };
 ```
 
@@ -482,6 +492,7 @@ west espressif monitor
 ```
 
 You will see results returned from the console:
+
 ```
 *** Booting Zephyr OS build v3.6.0-1155-g1a55caf8263e ***
 SHT3XD: 25.54 Cel ; 53.39 %RH
@@ -497,13 +508,14 @@ SHT3XD: 25.84 Cel ; 53.16 %RH
 ```
 
 Let's dive into this example a bit to see why it works:
+
 ```
  &xiao_i2c {
-	sht3xd@44 {
-			compatible = "sensirion,sht3xd";
-			reg = <0x44>;
-		};
-	};
+ sht3xd@44 {
+   compatible = "sensirion,sht3xd";
+   reg = <0x44>;
+  };
+ };
 ```
 
 The app overlay file is used to setup various board components. Using this file the SHT31 example can be utilized as the overlay informs the [sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/sensor/sht3xd/src/main.c) how to configure the sensor for our board.
@@ -528,6 +540,7 @@ First connect your board to the LCD screen using the following image as a guide 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
 We can now build and flash the firmware:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b xiao_esp32s3 samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
@@ -539,7 +552,6 @@ With the new firmware in place the device now shows the same demo screen we saw 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/esp32s3/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_esp23s3_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 #### Round Display for Xiao
 
 To test this setup we can use an existing sample with Zephyr:
@@ -549,6 +561,7 @@ west build -p always -b xiao_esp32s3 samples/drivers/display --  -DSHIELD=seeed_
 ```
 
 Enter bootloader mode and flash your device:
+
 ```
 west flash
 ```
@@ -566,16 +579,17 @@ The music demo shown here is only a portion of the actual screen but still demon
 You can see from the [shield file](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/shields/seeed_xiao_round_display/seeed_xiao_round_display.overlay) that this works by intefacing with the GC9A01 round display driver over SPI and the CHSC6X touch module over i2c.
 
 Let's dive into this example a bit to see how it works:
+
 ```
 / {
     chosen {
       zephyr,display = &gc9a01_xiao_round_display;
     };
 
-	lvgl_pointer {
-		compatible = "zephyr,lvgl-pointer-input";
-		input = <&chsc6x_xiao_round_display>;
-	};
+ lvgl_pointer {
+  compatible = "zephyr,lvgl-pointer-input";
+  input = <&chsc6x_xiao_round_display>;
+ };
 };
 
 /*
@@ -583,39 +597,40 @@ Let's dive into this example a bit to see how it works:
  * control the screen backlight and as touch controller interrupt.
  */
 &xiao_serial {
-	status = "disabled";
+ status = "disabled";
 };
 
 &xiao_i2c {
-	clock-frequency = < I2C_BITRATE_FAST >;
+ clock-frequency = < I2C_BITRATE_FAST >;
 
-	chsc6x_xiao_round_display: chsc6x@2e {
-		status = "okay";
-		compatible = "chipsemi,chsc6x";
-		reg = <0x2e>;
-		irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
-	};
+ chsc6x_xiao_round_display: chsc6x@2e {
+  status = "okay";
+  compatible = "chipsemi,chsc6x";
+  reg = <0x2e>;
+  irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+ };
 };
 
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>, <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	gc9a01_xiao_round_display: gc9a01@0 {
-		status = "okay";
-		compatible = "galaxycore,gc9x01x";
-		reg = <0>;
-		spi-max-frequency = <DT_FREQ_M(100)>;
-		cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
-		pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
-		width = <240>;
-		height = <240>;
-		display-inversion;
-	};
+ gc9a01_xiao_round_display: gc9a01@0 {
+  status = "okay";
+  compatible = "galaxycore,gc9x01x";
+  reg = <0>;
+  spi-max-frequency = <DT_FREQ_M(100)>;
+  cmd-data-gpios = <&xiao_d 3 GPIO_ACTIVE_HIGH>;
+  pixel-format = <PANEL_PIXEL_FORMAT_RGB_565>;
+  width = <240>;
+  height = <240>;
+  display-inversion;
+ };
 };
 ```
 
 This shield does the following:
+
 - Selects the GC9A01 display as the chosen Zephyr display
 - Sets the LVGL pointer logic to use the CHSC6X module
 - Disable serial as the pins are used for backlight and touch interrupt (as seen above via: `irq-gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;`)
@@ -623,12 +638,10 @@ This shield does the following:
 
 The [sample logic](https://github.com/zephyrproject-rtos/zephyr/blob/main/samples/modules/lvgl/demos/src/main.c) relies on the [LVGL demo example code](https://github.com/lvgl/lvgl/tree/master/demos/music) which can be further examined.
 
-
 ## ✨ Contributor Project
 
 - This project is supported by the Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=56649975).
 - Thanks **Tim's efforts** and your work will be [exhibited](https://wiki.seeedstudio.com/Honorary-Contributors/).
-
 
 ## Tech Support & Product Discussion
 

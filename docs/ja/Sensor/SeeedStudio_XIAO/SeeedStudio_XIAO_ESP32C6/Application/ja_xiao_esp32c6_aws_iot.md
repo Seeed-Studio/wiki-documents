@@ -1,109 +1,106 @@
 ---
-description: XIAO ESP32C6とセンサーを使用してAWS IoT Coreで異常検知が可能なAIデバイスを実現します。
-title: XIAO ESP32C6とAWS IoT CoreでAIを強化
+description: XIAO ESP32C6 とセンサーを AWS IoT Core と組み合わせて、異常検知が可能な AI デバイスを実装します。
+title: XIAO ESP32C6 のための AWS IoT Core による AI の活用
 keywords:
 - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/xiao_esp32c6_aws_iot
 last_update:
-  date: 05/15/2025
+  date: 03/29/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# XIAO ESP32C6とAWS IoT CoreでAIを強化
+# XIAO ESP32C6 のための AWS IoT Core による AI の活用
 
-このWikiは、AWSサービスとXIAO ESP32C6マイクロコントローラーの力を活用して環境データを監視・分析する高度なIoTシステムを展開するための包括的なガイドです。センサーからのデータ収集をスムーズに開始し、このドキュメントではAWS IoT CoreおよびAWS Analyticsに情報を送信・保存するプロセスの詳細を説明します。また、AWS Sagemakerを使用して通常の環境パターンに基づいた機械学習モデルをトレーニングする方法を掘り下げ、システムが運用環境に適応し効率を向上させる能力を強調します。
+この Wiki は、AWS サービスと XIAO ESP32C6 マイクロコントローラーの力を活用して環境データを監視・分析する高度な IoT システムの展開に関する包括的なガイドとして機能します。センサーデータのシームレスな収集から始まり、この文書では AWS IoT Core と AWS Analytics にそれぞれこの情報を送信・保存する複雑さを案内します。通常の環境パターンに対する機械学習モデルを訓練するための AWS Sagemaker の活用について詳しく説明し、効率向上のために運用コンテキストに学習・適応するシステムの能力を強調します。
 
-さらに、このWikiでは、XIAO ESP32C6を使用したリアルタイム異常検知の実装について説明します。この重要なコンポーネントは、通常の状態からの逸脱を積極的にスキャンし、迅速にアラートをトリガーします。異常な状態を通知するアラートメカニズムの設定プロセス全体を網羅し、関係者が迅速に対応できるようにします。
+さらに、この Wiki では XIAO ESP32C6 を使用したリアルタイム異常検知の実装について概説します。これは正常値からの逸脱を積極的にスキャンし、迅速にアラートをトリガーする重要なコンポーネントです。異常な状況について関係者に通知し、迅速な注意と行動を確保するアラート機構の設定のエンドツーエンドプロセスを包含しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/0.jpg" style={{width:1000, height:'auto'}}/></div>
 
-- [**センサーデータをAWS IoT Coreに送信**](#capture-sensor-data-to-aws-iot-core).
-- [**AWS Analyticsを使用してデータを保存**](#store-the-data-using-aws-analytics).
-- [**AWS Sagemakerを使用して通常環境でデータをトレーニング**](#use-aws-sagemaker-to-train-data-in-normal-environments).
-- [**異常環境検知のためのXIAO ESP32C6**](#xiao-esp32c6-for-abnormal-environment-detection).
-- [**異常状態メッセージ通知**](#abnormal-status-message-notification).
+- [**AWS IoT Core へのセンサーデータの取得**](#capture-sensor-data-to-aws-iot-core)
+- [**AWS Analytics を使用したデータの保存**](#store-the-data-using-aws-analytics)
+- [**AWS Sagemaker を使用した正常環境でのデータ訓練**](#use-aws-sagemaker-to-train-data-in-normal-environments)
+- [**異常環境検知のための XIAO ESP32C6**](#xiao-esp32c6-for-abnormal-environment-detection)
+- [**異常状態メッセージ通知**](#abnormal-status-message-notification)
 
-このWikiを通じて、ユーザーはスマートで応答性が高く堅牢な環境モニタリングシステムを構築するための各コンポーネントの役割を詳細に理解し、設定や保守に関する実践的な洞察を得ることができます。
+この Wiki を探索することで、ユーザーはスマートで応答性があり堅牢な環境監視システムの作成における各コンポーネントの役割について詳細な理解を得ることができ、設定とメンテナンスに関する実用的な洞察も含まれています。
 
 ## 必要な材料
 
-この例では、XIAO ESP32C6とGrove DHT20温湿度センサーを使用してAWS IoT CoreのSageMakerタスクを完了する方法を紹介します。以下は、このルーチンを完了するために必要なすべてのハードウェアデバイスです。
+この例では、XIAO ESP32C6 と Grove DHT20 温湿度センサーを使用して AWS IoT Core の SageMaker タスクを完了する方法を紹介します。以下は、このルーチンを完了するために必要なすべてのハードウェアデバイスです。
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C6</th>
-			<th>DHT20</th>
-			<th>拡張ボード</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C6</th>
+   <th>DHT20</th>
+   <th>拡張ボード</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Temperature-Humidity-Sensor/Tem-humidity-sensor1.jpg" style={{width:250, height:'auto'}}/></div></td><td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/extensionboard.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-## AWS IoT Coreにセンサーのデータを送信する
+## センサーデータをAWS IoT Coreに取得する
 
-XIAO ESP32C6ボードに接続された複数のセンサーを活用して、リアルタイムで環境データを収集し、それをAWS IoT Coreにアップロードします。これにより、さまざまなセンサーから発生する膨大なデータストリームを信頼性と安全性を持って処理する方法が提供されます。
+XIAO ESP32C6ボードに接続された多数のセンサーを活用して、環境データをリアルタイムで収集し、AWS IoT Coreにアップロードします。これにより、様々なセンサーから生成される大量のデータストリームを処理するための信頼性が高く安全な方法を提供します。
 
-AWS IoT Coreに登録し、「XIAO_ESP32C6」という名前のThingを作成するには、以下の手順に従ってください。このプロセスは、すでにAmazon Web Servicesアカウントを持っていることを前提としています。アカウントを持っていない場合は、[こちら](https://aws.amazon.com/)で作成してください。
+AWS IoT Coreに登録し、「XIAO_ESP32C6」という名前のThingを作成するには、以下の手順に従ってください。このプロセスは、すでにAmazon Web Servicesアカウントをお持ちであることを前提としています。お持ちでない場合は、続行する前に[アカウントを作成](https://aws.amazon.com/)する必要があります。
 
 ### ステップ1. Thingを作成する
 
-ウェブブラウザを開き、[AWS Management Console](https://aws.amazon.com/console/)にアクセスします。AWSアカウントの資格情報を使用してサインインしてください。
+Webブラウザを開き、[AWS管理コンソール](https://aws.amazon.com/console/)に移動します。AWSアカウントの認証情報を使用してサインインします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/1.png" style={{width:1000, height:'auto'}}/></div>
 
-AWS Management Consoleにログインしたら、ページ上部の**Services**ドロップダウンメニューを見つけます。**Services**メニューで**IoT Core**をクリックします。見つからない場合は、ページ上部の検索バーで**IoT Core**を検索してください。
+AWS管理コンソールに入ったら、ページ上部の**サービス**ドロップダウンメニューを見つけます。**サービス**メニューで、**IoT Core**をクリックします。見つからない場合は、上部の検索バーを使用して**IoT Core**を検索してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/2.png" style={{width:1000, height:'auto'}}/></div>
 
-AWS IoT Coreダッシュボードで、左側のナビゲーションペインにある**All devices**をクリックしてオプションを展開します。**Things**をクリックします。「Things」ページの隅にある**Create things**ボタンをクリックしてください。
+AWS IoT Coreダッシュボードで、左側のナビゲーションペインの**すべてのデバイス**をクリックしてオプションを展開します。**Things**をクリックします。「Things」ページの角にある**Create things**ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/3.png" style={{width:1000, height:'auto'}}/></div>
 
-**Create a single thing**を選択して、1つのThingを登録する手続きを進めます。
+**Create a single thing**を選択して、1つのThingの登録を続行します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/5.png" style={{width:800, height:'auto'}}/></div>
 
-**Create a thing**ページで、Thingの名前として**XIAO_ESP32C6**を入力します。（オプション）必要に応じて、Thingにタイプ、グループ、または属性を追加することもできます。簡単なセットアップの場合は、これらのオプションをスキップできます。「Next」をクリックしてください。
+**Create a thing**ページで、Thingの名前として**XIAO_ESP32C6**を入力します。（オプション）必要に応じて、Thingにタイプ、グループ、または属性を追加することもできます。シンプルなセットアップの場合、これらのオプションをスキップできます。「Next」をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/6.png" style={{width:900, height:'auto'}}/></div>
 
-次に**Configure device certificate**ページに移動します。AWS IoT Coreはデバイスが安全な通信を行うために証明書を使用する必要があります。**Auto-generate a new certificate (recommended)**を選択してください。
+**Configure device certificate**ページが表示されます。AWS IoT Coreでは、デバイスが安全な通信のために証明書を使用する必要があります。**Auto-generate a new certificate (recommended)**を選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/7.png" style={{width:1000, height:'auto'}}/></div>
 
-**Attach policies to certificate**ページでは、ポリシーがない場合は**Create policy**をクリックしてポリシーを作成する必要があります。新しいページに移動し、Thingの権限を定義するポリシーを作成できます。
+**Attach policies to certificate**ページで、ポリシーがない場合は、**Create policy**をクリックして作成する必要があります。新しいページに移動し、Thingの権限を定義するポリシーを作成できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/8.png" style={{width:1000, height:'auto'}}/></div>
 
-ポリシーを作成して名前を付けたら、ポリシー名の横にあるチェックボックスを選択し、**Create**をクリックして新しく作成した証明書にポリシーを添付します。
+ポリシーを作成して名前を付けたら、ポリシー名の横のボックスにチェックを入れて**Create**をクリックし、新しく作成した証明書にアタッチします。
 
 以下の権限が必要です：
+
 - **iot:Publish**
 - **iot:Connect**
 - **iot:Receive**
@@ -111,21 +108,21 @@ AWS IoT Coreダッシュボードで、左側のナビゲーションペイン�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/9.png" style={{width:1000, height:'auto'}}/></div>
 
-Thingが登録されると、Thingの詳細ページにリダイレクトされ、Thingの情報を確認できます。
+Thingが登録されると、Thing詳細ページにリダイレクトされ、Thingの情報を表示できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/10.png" style={{width:1000, height:'auto'}}/></div>
 
-デバイス（この場合はXIAO_ESP32C6）を設定して、Thingを作成した際にダウンロードした証明書と秘密鍵を使用します。AWS IoT SDKを設定し、AWS IoT Coreへの安全な接続を確立するための具体的なデバイスの指示に従う必要があります。
+デバイス（この場合はXIAO_ESP32C6）を設定して、Thingを作成する際にダウンロードした証明書と秘密鍵を使用します。特定のデバイスの指示に従ってAWS IoT SDKをセットアップし、AWS IoT Coreへの安全な接続を確立する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/11.png" style={{width:600, height:'auto'}}/></div>
 
-Thingが設定され、AWS IoT Coreに接続されたら、トピックの購読、メッセージの公開、AWS IoT Coreルールエンジンを使用したIoTデータの処理を行うことができます。
+ThingがセットアップされてAWS IoT Coreに接続されると、トピックの購読、メッセージの公開、AWS IoT Coreルールエンジンを使用したIoTデータの処理によってThingと対話できます。
 
-証明書と鍵を機密に保ち、セキュリティのベストプラクティスに従うことを忘れないでください。AWS IoT Coreのドキュメントには、IoTデバイスの設定と管理に関する詳細なガイドとチュートリアルが記載されています。
+証明書とキーを機密に保ち、セキュリティのベストプラクティスに従うことを忘れないでください。AWS IoT Coreドキュメントでは、IoTデバイスのセットアップと管理に関する詳細なガイドとチュートリアルを提供しています。
 
 ### ステップ2. 証明書に基づくヘッダーの準備
 
-**secrets.h**という新しいヘッダーファイルを作成し、以下のコードテンプレートをヘッダーファイルに貼り付けてください。
+**secrets.h**という新しいヘッダーファイルを作成し、以下のコードテンプレートをヘッダーファイルに貼り付けます。
 
 ```cpp
 #include <pgmspace.h>
@@ -133,9 +130,9 @@ Thingが設定され、AWS IoT Coreに接続されたら、トピックの購読
 #define SECRET
 #define THINGNAME "DHTsensor"
 
-const char WIFI_SSID[] = "YOUR_SSID";              //変更してください
-const char WIFI_PASSWORD[] = "YOUR_PASSWORD";           //変更してください
-const char AWS_IOT_ENDPOINT[] = "YOUR_AWS_IOT_ENDPOINT";       //変更してください
+const char WIFI_SSID[] = "YOUR_SSID";              //change this
+const char WIFI_PASSWORD[] = "YOUR_PASSWORD";           //change this
+const char AWS_IOT_ENDPOINT[] = "YOUR_AWS_IOT_ENDPOINT";       //change this
 
 // Amazon Root CA 1
 static const char AWS_CERT_CA[] PROGMEM = R"EOF(
@@ -144,7 +141,7 @@ static const char AWS_CERT_CA[] PROGMEM = R"EOF(
 -----END CERTIFICATE-----
 )EOF";
 
-// デバイス証明書                                               //変更してください
+// Device Certificate                                               //change this
 static const char AWS_CERT_CRT[] PROGMEM = R"KEY(
 -----BEGIN CERTIFICATE-----
 
@@ -153,7 +150,7 @@ static const char AWS_CERT_CRT[] PROGMEM = R"KEY(
 
 )KEY";
 
-// デバイス秘密鍵                                               //変更してください
+// Device Private Key                                               //change this
 static const char AWS_CERT_PRIVATE[] PROGMEM = R"KEY(
 -----BEGIN RSA PRIVATE KEY-----
 
@@ -163,39 +160,39 @@ static const char AWS_CERT_PRIVATE[] PROGMEM = R"KEY(
 )KEY";
 ```
 
-このC++コードテンプレートは、Wi-Fiネットワークに接続し、AWS IoTサービスと通信するIoTデバイス向けに設計されています。このテンプレートには、実際の資格情報と証明書で置き換える必要があるプレースホルダーが含まれています。以下の各部分を埋める方法を説明します：
+このC++コードテンプレートは、Wi-Fiネットワークに接続し、AWS IoTサービスと通信するIoTデバイス用に設計されています。このテンプレートには、実際の認証情報と証明書に置き換える必要がある様々な文字列のプレースホルダーが含まれています。各部分の記入方法は以下の通りです：
 
-1. **Wi-Fiの資格情報**:
-   - `WIFI_SSID`: `"YOUR_SSID"`をWi-FiネットワークのSSID（名前）に置き換えてください。
-   - `WIFI_PASSWORD`: `"YOUR_PASSWORD"`をWi-Fiネットワークのパスワードに置き換えてください。
+1. **Wi-Fi認証情報**：
+   - `WIFI_SSID`: `"YOUR_SSID"`をあなたのWi-FiネットワークのSSID（名前）に置き換えてください。
+   - `WIFI_PASSWORD`: `"YOUR_PASSWORD"`をあなたのWi-Fiネットワークのパスワードに置き換えてください。
 
-2. **AWS IoTエンドポイント**:
-   - `AWS_IOT_ENDPOINT`: `"YOUR_AWS_IOT_ENDPOINT"`をあなたのAWS IoTアカウントとリージョンに固有のAWS IoTエンドポイントに置き換えてください。このエンドポイントはAWS IoTコンソールの設定で確認できます。
+2. **AWS IoTエンドポイント**：
+   - `AWS_IOT_ENDPOINT`: `"YOUR_AWS_IOT_ENDPOINT"`をあなた固有のAWS IoTエンドポイントに置き換えてください。このエンドポイントは、あなたのAWS IoTアカウントとリージョンに固有のものです。AWS IoTコンソールの設定で確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/12.png" style={{width:1000, height:'auto'}}/></div>
 
-3. **Amazon Root CA 1 (認証局)**:
-   - `AWS_CERT_CA`: `-----BEGIN CERTIFICATE-----` と `-----END CERTIFICATE-----` の間に、AWS が提供する Amazon Root CA 1 証明書全体を貼り付けます。この証明書は、デバイスがサーバーのアイデンティティを信頼できるようにします。
+3. **Amazon Root CA 1（認証局）**：
+   - `AWS_CERT_CA`: `-----BEGIN CERTIFICATE-----`と`-----END CERTIFICATE-----`マーカーの間に、AWSが提供するAmazon Root CA 1証明書全体を貼り付けてください。この証明書により、あなたのデバイスがサーバーの身元を信頼できるようになります。
 
-4. **デバイス証明書**:
-   - `AWS_CERT_CRT`: `-----BEGIN CERTIFICATE-----` と `-----END CERTIFICATE-----` の間のプレースホルダーを、デバイス固有の PEM 形式の証明書に置き換えます。この証明書はデバイス固有であり、AWS IoT との認証に使用されます。
+4. **デバイス証明書**：
+   - `AWS_CERT_CRT`: `-----BEGIN CERTIFICATE-----`と`-----END CERTIFICATE-----`の間のプレースホルダーを、PEM形式のあなたのデバイスの証明書に置き換えてください。この証明書はあなたのデバイスに固有のもので、AWS IoTでデバイスを認証するために使用されます。
 
-5. **デバイス秘密鍵**:
-   - `AWS_CERT_PRIVATE`: `-----BEGIN RSA PRIVATE KEY-----` と `-----END RSA PRIVATE KEY-----` の間に、デバイスの秘密鍵を PEM 形式で貼り付けます。この鍵は秘密に保つ必要があり、AWS IoT と通信する際にデバイスのアイデンティティを証明するために使用されます。
+5. **デバイス秘密鍵**：
+   - `AWS_CERT_PRIVATE`: `-----BEGIN RSA PRIVATE KEY-----`と`-----END RSA PRIVATE KEY-----`マーカーの間に、PEM形式のあなたのデバイスの秘密鍵を貼り付けてください。この鍵は秘密に保つ必要があり、AWS IoTとの通信時にデバイスの身元を証明するために使用されるため、決して共有してはいけません。
 
 :::caution
-**Amazon Root CA 1** は、**RSA 2048 ビットキー: Amazon Root CA 1** のダウンロードファイル情報に対応します。  
-**デバイス証明書** は、**デバイス証明書** のダウンロードファイル情報に対応します。  
-**デバイス秘密鍵** は、**秘密鍵ファイル** のダウンロードファイル情報に対応します。
+**Amazon Root CA 1**は**RSA 2048 bit key:Amazon Root CA 1**ダウンロードファイル情報に対応します。
+**Device Certificate**は**Device certificate**ダウンロードファイル情報に対応します。
+**Device Private Key**は**Private key file**ダウンロードファイル情報に対応します。
 
-このコードには、Wi-Fi の認証情報や秘密鍵などの機密情報が含まれているため、セキュリティを確保することが重要です。修正したコードを公開したり、公開リポジトリにコミットしたりしないでください。
+このコードにはWi-Fi認証情報や秘密鍵などの機密情報が含まれているため、安全に保管することが重要です。変更されたコードを公開したり、パブリックリポジトリにコミットしたりしないでください。
 :::
 
-### ステップ 3. XIAO ESP32C6 用データ取得プログラムのアップロード
+### ステップ3. XIAO ESP32C6用データ取得プログラムのアップロード
 
-Grove DHT20 センサーを XIAO ESP32C6 の IIC インターフェースに接続してください。利便性を求める場合は、[Grove Base for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html) の購入をお勧めします。
+Grove DHT20センサーをXIAO ESP32C6のIICインターフェースに接続してください。便利さを求める場合は、[Grove Base for XIAO](https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html)の購入をお勧めします。
 
-次に、Arduino で新しいプロジェクトを作成し、ローカルに保存してください。**ステップ 2** で作成した **secrets.h** ファイルを .ino ファイルと同じディレクトリにコピーします。その後、以下のコードを XIAO ESP32C6 にアップロードしてください。このコードは、提供された AWS 認証情報に基づいて MQTT を介して指定されたトピックにデータを送信します。
+次に、Arduinoで新しいプロジェクトを作成し、ローカルに保存してください。**ステップ2**で作成した**secrets.h**ファイルを取り、.inoファイルと同じディレクトリにコピーしてください。その後、以下のコードをXIAO ESP32C6にアップロードしてください。データは、あなたが提供したAWS認証情報に基づいてMQTT経由で指定されたトピックに送信されます。
 
 <details>
 <summary>完全なコードをプレビューするにはここをクリック</summary>
@@ -208,22 +205,22 @@ Grove DHT20 センサーを XIAO ESP32C6 の IIC インターフェースに接�
 #include "WiFi.h"
 #include "Wire.h"
 
-// DHT センサーの設定
+//DHT setup
 #include "DHT.h"
 #define DHTTYPE DHT20   // DHT 20
-/*注意: DHT10 と DHT20 は他の DHT* センサーとは異なり、ワイヤー1本ではなく i2c インターフェースを使用します*/
-/*そのため、ピンを定義する必要はありません。*/
-DHT dht(DHTTYPE);         // DHT10 および DHT20 はピンを定義する必要がありません
+/*Notice: The DHT10 and DHT20 is different from other DHT* sensor ,it uses i2c interface rather than one wire*/
+/*So it doesn't require a pin.*/
+DHT dht(DHTTYPE);         //   DHT10 DHT20 don't need to define Pin
 
-// MQTT の設定
+//MQTT setup
 #define AWS_IOT_PUBLISH_TOPIC   "xiao_esp32c6/pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "xiao_esp32c6/sub"
 
-// 温度と湿度データの保存
+//store temp and humi data
 float h;
 float t;
 
-// ネットワーク設定
+//network setup
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
 
@@ -241,7 +238,7 @@ void connectAWS()
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
  
-  Serial.println("Wi-Fi に接続中");
+  Serial.println("Connecting to Wi-Fi");
  
   while (WiFi.status() != WL_CONNECTED)
   {
@@ -249,18 +246,18 @@ void connectAWS()
     Serial.print(".");
   }
  
-  // WiFiClientSecure を AWS IoT デバイス認証情報を使用するように設定
+  // Configure WiFiClientSecure to use the AWS IoT device credentials
   net.setCACert(AWS_CERT_CA);
   net.setCertificate(AWS_CERT_CRT);
   net.setPrivateKey(AWS_CERT_PRIVATE);
  
-  // 以前に定義した AWS エンドポイントで MQTT ブローカーに接続
+  // Connect to the MQTT broker on the AWS endpoint we defined earlier
   client.setServer(AWS_IOT_ENDPOINT, 8883);
  
-  // メッセージハンドラーを作成
+  // Create a message handler
   client.setCallback(messageHandler);
  
-  Serial.println("AWS IoT に接続中");
+  Serial.println("Connecting to AWS IOT");
  
   while (!client.connect(THINGNAME))
   {
@@ -270,14 +267,14 @@ void connectAWS()
  
   if (!client.connected())
   {
-    Serial.println("AWS IoT タイムアウト!");
+    Serial.println("AWS IoT Timeout!");
     return;
   }
  
-  // トピックを購読
+  // Subscribe to a topic
   client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
  
-  Serial.println("AWS IoT に接続しました!");
+  Serial.println("AWS IoT Connected!");
 }
 
 void publishMessage()
@@ -286,14 +283,14 @@ void publishMessage()
   doc["humidity"] = h;
   doc["temperature"] = t;
   char jsonBuffer[512];
-  serializeJson(doc, jsonBuffer); // クライアントに出力
+  serializeJson(doc, jsonBuffer); // print to client
  
   client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
 }
  
 void messageHandler(char* topic, byte* payload, unsigned int length)
 {
-  Serial.print("受信: ");
+  Serial.print("incoming: ");
   Serial.println(topic);
  
   StaticJsonDocument<200> doc;
@@ -305,7 +302,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length)
 void setup() {
 
     debug.begin(115200);
-    debug.println("DHTxx テスト!");
+    debug.println("DHTxx test!");
     Wire.begin();
 
     connectAWS();
@@ -316,15 +313,15 @@ void loop() {
     h = dht.readHumidity();
     t = dht.readTemperature();
 
-    if (isnan(h) || isnan(t))  // 読み取りに失敗した場合は早期終了（再試行のため）
+    if (isnan(h) || isnan(t) )  // Check if any reads failed and exit early (to try again).
     {
-      Serial.println(F("DHT センサーからの読み取りに失敗しました!"));
+      Serial.println(F("Failed to read from DHT sensor!"));
       return;
     }
   
-    Serial.print(F("湿度: "));
+    Serial.print(F("Humidity: "));
     Serial.print(h);
-    Serial.print(F("%  温度: "));
+    Serial.print(F("%  Temperature: "));
     Serial.print(t);
     Serial.println(F("°C "));
   
@@ -333,15 +330,16 @@ void loop() {
     delay(1000);
 }
 ```
+
 </details>
 
 ### ステップ 4. MQTT テストクライアント
 
-AWS IoT Core で、MQTT テストクライアントを使用して XIAO ESP32C6 が公開したトピックを購読し、センサーのデータがターゲット AWS アカウントに正常にアップロードされているか確認します。
+AWS IoT Core では、センサーのデータが対象の AWS アカウントに正常にアップロードされているかを確認するために、MQTT テストクライアントで XIAO ESP32C6 が公開するトピックを購読する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/13.png" style={{width:1000, height:'auto'}}/></div>
 
-プログラムが正常に動作している場合、1 秒ごとに温度と湿度のデータメッセージが表示されるはずです。
+プログラムが正常に動作している場合、1秒ごとに温度と湿度のデータメッセージのセットが表示されるはずです。
 
 ```json
 {
@@ -350,87 +348,87 @@ AWS IoT Core で、MQTT テストクライアントを使用して XIAO ESP32C6 
 }
 ```
 
-## AWS Analytics を使用したデータの保存
+## AWS Analyticsを使用してデータを保存する
 
-収集されたデータは AWS Analytics サービスに転送されます。このサービスは生データを保存するだけでなく、強力なデータ処理および分析ツールを提供します。これらのツールは、収集されたデータから価値ある洞察を抽出するのに役立ちます。
+収集されたデータはAWS Analyticsサービスに転送され、生データを保存するだけでなく、強力なデータ処理と分析ツールも提供されます。これらのツールは、収集されたデータから価値のある洞察を抽出するのに役立ちます。
 
-### ステップ 5. AWS IoT Analytics の設定
+### ステップ5. AWS IoT Analyticsを設定する
 
-AWS コンソールで AWS IoT Analytics に移動します。
+AWSコンソールでAWS IoT Analyticsに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/14.png" style={{width:1000, height:'auto'}}/></div>
 
-**AWS IoT Analytics の開始**で、新しく作成したリソースの名前を入力し、サブスクリプションのトピックを入力します。（例: `xiao_esp32c6/pub`）
+**AWS IoT Analyticsを開始する**で、新しく作成するリソースの名前を入力し、サブスクリプションサブジェクトを入力します（例：`xiao_esp32c6/pub`）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/15.png" style={{width:1000, height:'auto'}}/></div>
 
-すべてのリソースが作成されるまでしばらく待ちます（約10分程度）。
+すべてのリソースが作成されるまでしばらく（10分程度）お待ちください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/16.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ 6. ルールの作成
+### ステップ6. ルールを作成する
 
-AWS IoT Core に戻り、左側のメニューバーで **Message routing** の下にある **Rules** をクリックします。次に **Create rule** をクリックします。
+AWS IoT Coreに戻り、左側のメニューバーの**メッセージルーティング**の下にある**ルール**をクリックします。**ルールを作成**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/17.png" style={{width:1000, height:'auto'}}/></div>
 
-ルールの名前を指定し、その目的を識別するためのオプションの説明を入力します。
+ルールの名前と、その目的を識別するのに役立つオプションの説明を入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/18.png" style={{width:1000, height:'auto'}}/></div>
 
-AWS IoT SQL 構文を使用してルールクエリステートメントを定義します。このステートメントは、受信した MQTT メッセージをフィルタリングおよび処理するための条件を指定します。ワイルドカード、関数、演算子を使用して特定のトピックに一致させたり、メッセージペイロードからデータを抽出したり、変換を適用したりできます。
+AWS IoT SQL構文を使用してルールクエリステートメントを定義します。このステートメントは、受信するMQTTメッセージをフィルタリングおよび処理するための基準を指定します。ワイルドカード、関数、演算子を使用して特定のトピックにマッチし、メッセージペイロードからデータを抽出し、変換を適用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/19.png" style={{width:1000, height:'auto'}}/></div>
 
-ルールアクションのターゲットとして作成した IoT Analytics チャネルを選択します。**Create Role** ボタンをクリックします。コンソールでロールの名前を指定します（例: **XIAO_ESP32C6_Role**）。
+作成したIoT Analyticsチャネルをルールアクションのターゲットとして選択します。**ロールを作成**ボタンをクリックします。コンソールで、**XIAO_ESP32C6_Role**などのロール名を入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/20.png" style={{width:1000, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/21.png" style={{width:1000, height:'auto'}}/></div>
 
-ルールの設定を確認し、**Create Rule** ボタンをクリックしてルールを保存および有効化します。
+ルール設定を確認し、「ルールを作成」ボタンをクリックしてルールを保存し、アクティブ化します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/22.png" style={{width:1000, height:'auto'}}/></div>
 
-ルールが作成されると、定義されたルールクエリステートメントに一致する受信 MQTT メッセージの処理を開始します。ルールがトリガーされるたびにルールアクションが実行され、特定の要件に従ってデータをルーティングおよび処理できます。
+ルールが作成されると、定義されたルールクエリステートメントにマッチする受信MQTTメッセージの処理が開始されます。ルールがトリガーされるたびにルールアクションが実行され、特定の要件に応じてデータをルーティングおよび処理できます。
 
-AWS IoT では、さまざまなシナリオやデータ処理ニーズに対応するために複数のルールを作成できます。ルールは、IoT デバイスをさまざまな AWS サービスと統合し、強力な IoT アプリケーションを構築するための柔軟でスケーラブルな方法を提供します。
+AWS IoTで複数のルールを作成して、さまざまなシナリオとデータ処理のニーズに対応できます。ルールは、IoTデバイスをさまざまなAWSサービスと統合し、強力なIoTアプリケーションを構築するための柔軟でスケーラブルな方法を提供します。
 
-### ステップ 7. センサーデータストリームの保存
+### ステップ7. センサーデータストリームを保存する
 
-AWS IoT Analytics サービスに移動します。AWS IoT Analytics ダッシュボードで、左側のサイドバーにある **Datasets** オプションをクリックします。ダウンロードしたいデータを含むデータセットを見つけ、その名前をクリックしてデータセット詳細ページを開きます。
+AWS IoT Analyticsサービスに移動します。AWS IoT Analyticsダッシュボードで、左側のサイドバーの**データセット**オプションをクリックします。ダウンロードしたいデータを含むデータセットを見つけ、その名前をクリックしてデータセットの詳細ページを開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/25.png" style={{width:1000, height:'auto'}}/></div>
 
-データセットの内容をダウンロードする前に、データセット生成を手動でトリガーする必要があります。**Run now** を選択します。
+データセットコンテンツをダウンロードする前に、データセット生成を手動でトリガーする必要があります。**今すぐ実行**を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/26.png" style={{width:1000, height:'auto'}}/></div>
 
-AWS IoT Analytics はデータを処理し、指定された時間範囲に基づいてデータセットの内容を準備します。センサーが1秒ごとにデータを報告する場合、通常の環境ではデータ収集時間を少なくとも1時間以上に設定することをお勧めします。これによりデータの精度が確保されます。
+AWS IoT Analyticsがデータを処理し、指定された時間範囲に基づいてデータセットコンテンツを準備します。1秒に1回のセンサーデータレポートに基づいて、通常の環境では少なくとも1時間以上のデータ収集時間を推奨します。これによりデータの精度が確保されます。
 
-データセット生成が完了するまで待ちます。データセット詳細ページで進行状況を監視できます。ステータスが「SUCCEEDED」に変更されると、データセットの内容がダウンロード可能になります。
+データセット生成の完了を待ちます。データセットの詳細ページで進行状況を監視できます。ステータスが「SUCCEEDED」に変わると、データセットコンテンツのダウンロード準備が完了します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/28.png" style={{width:1000, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/23.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-XIAO のプログラムが正常に動作しているにもかかわらず、データセットにデータ情報が表示されない場合は、データセットのタブを右クリックして新しいブラウザページで開くことで問題が解決する可能性があります。
+XIAOのプログラムが正常に動作しているにもかかわらず、Datasetにデータ情報が表示されない場合は、Datasetのタブを右クリックして新しいブラウザページで開くことで、この問題が解決される可能性があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/27.png" style={{width:500, height:'auto'}}/></div>
 
-データセット詳細ページでは、データセットの名前、ステータス、最終更新時間などの情報が表示されます。
+データセットの詳細ページでは、名前、ステータス、最終更新時刻など、データセットに関する情報が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/24.png" style={{width:1000, height:'auto'}}/></div>
 :::
 
-## AWS Sagemakerを使用して通常環境でデータをトレーニングする
+## AWS Sagemakerを使用して通常環境でデータを訓練する
 
-AWS Sagemakerを使用して、通常環境を示すパターンを認識する機械学習モデルをトレーニングします。Sagemakerは、機械学習モデルの開発、トレーニング、デプロイを容易にする包括的なプラットフォームを提供し、環境データのインテリジェントな処理を可能にします。
+AWS Sagemakerを使用して、通常環境を示すパターンを認識する機械学習モデルを訓練します。Sagemakerは、機械学習モデルの開発、訓練、デプロイメントを促進する包括的なプラットフォームを提供し、環境データのインテリジェントな処理を可能にします。
 
-### ステップ 8. 新しいノートブックインスタンスを作成する
+### ステップ8. 新しいノートブックインスタンスを作成する
 
-AWS Management ConsoleでAmazon SageMakerサービスに移動します。
+AWS管理コンソールでAmazon SageMakerサービスに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/29.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -438,7 +436,7 @@ SageMakerダッシュボードで**Notebook instances**をクリックします�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/30.png" style={{width:1000, height:'auto'}}/></div>
 
-インスタンスタイプやIAMロールなどの必要な情報を入力します。IAMロールが**データが保存されているS3バケットにアクセスするための必要な権限**を持っていることを確認してください。
+インスタンスタイプやIAMロールなどの必要な情報を入力します。IAMロールがデータが保存されている**S3バケットにアクセスするための必要な権限**を持っていることを確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/34.png" style={{width:600, height:'auto'}}/></div>
 
@@ -452,11 +450,11 @@ SageMakerダッシュボードで**Notebook instances**をクリックします�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/45.png" style={{width:1000, height:'auto'}}/></div>
 
-次に、収集したデータセットをアップロードする必要があります。このデータセットは**ステップ7**でローカルコンピュータにダウンロードしたものです。
+次に、収集したデータセットをアップロードする必要があります。このデータセットは**ステップ7**でローカルコンピューターにダウンロードしたものです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/46.png" style={{width:1000, height:'auto'}}/></div>
 
-その後、Jupyter Notebook内に準備したプログラムを入力することができます。または、提供されたプログラムを直接アップロードすることもできます。
+その後、Jupyter Notebook内に準備したプログラムを入力できます。または、提供したプログラムを直接アップロードすることもできます。
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/TrainingModel/Jupyter_Notebook.ipynb" target="_blank" rel="noopener noreferrer">
@@ -464,34 +462,35 @@ SageMakerダッシュボードで**Notebook instances**をクリックします�
     </a>
 </div><br />
 
-プログラムの最初のセクションを実行して、インポートした収集データが正しいか確認します。コード内のファイル名を自分のファイル名に変更する必要がある場合があります。
+プログラムの最初のセクションを実行して、インポートした収集データが正常であることを確認します。コード内のファイル名をあなたのファイル名に変更する必要があるかもしれません。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/47.png" style={{width:600, height:'auto'}}/></div>
 
-### ステップ 9: Jupyter Notebookをすべて実行する
+### ステップ9: すべてのJupyter Notebookを実行する
 
-S3はトレーニングデータセット、テストデータセット、モデルアーティファクトなどを保存するために使用されます。SageMakerでは、データソースは通常S3バケットから提供されます。
-モデル保存: トレーニングされたモデルは、後続のデプロイと推論のためにS3に保存されます。
+S3は訓練データセット、テストデータセット、モデルアーティファクトなどを保存するために使用されます。SageMakerでは、データソースは通常S3バケットから取得されます。
+モデル保存：訓練されたモデルも後続のデプロイメントと推論のためにS3に保存されます。
 
-次に、2番目のコードブロックをコピーしてフィールド名を**bucket_name**に設定してください。
+次に、2番目のコードブロックをコピーして、**bucket_name**フィールドに名前を付けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/48.png" style={{width:600, height:'auto'}}/></div>
 
-その後、Jupyter Notebook内のブロックを1つずつ実行してください。
+その後、Jupyter Notebookのブロックを1つずつ実行してください。
 
 :::note
-Jupyter Notebook内のいくつかのパスや名前を以下のように変更する必要があります。
+Jupyter Notebookには実行前に以下のように修正が必要なパスや名前があります。
 
-1. **In[22]**コードブロック内の**ENDPOINT_NAME**の値は、**In[19]**コードブロックを実行した後の結果です。
-2. **In[3]**および**In[10]**コードブロックの**bucket_name**を同じ名前に設定してください。
-3. 最後のコードブロックの**API_ENDPOINT**には、自分の値を使用してください。
+1. **In[22]**コードブロックの**ENDPOINT_NAME**の値は、**In[19]**コードブロックを実行した後の結果です。
+2. **In[3]**と**In[10]**コードブロックの**bucket_name**を同じ名前に設定してください。
+3. 最後のコードブロックの**API_ENDPOINT**には、あなた自身の値を使用してください。
+
 :::
 
-### ステップ 10. AWS Lambdaを設定する
+### ステップ10. AWS Lambdaを設定する
 
-LambdaはSageMakerワークフローのトリガーとして使用できます。例えば、データがS3にアップロードされた際に、Lambda関数をトリガーしてSageMakerのトレーニングまたは処理ジョブを開始することができます。
+LambdaはSageMakerワークフローのトリガーとして使用できます。例えば、データがS3にアップロードされると、Lambda関数をトリガーしてSageMakerの訓練や処理ジョブを開始できます。
 
-AWS Management Consoleにサインインし、AWS Lambdaサービスに移動します。
+AWS管理コンソールにサインインし、AWS Lambdaサービスに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/37.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -499,8 +498,8 @@ AWS Management Consoleにサインインし、AWS Lambdaサービスに移動し
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/38.png" style={{width:1000, height:'auto'}}/></div>
 
-**Author from scratch**オプションを選択します。Lambda関数の名前を指定します（例: **XIAO-ESP32C6-FUNCTION**）。
-希望するランタイム**Python3.9**を選択します。Lambda関数の実行ロールを選択します。新しいロールを作成するか、既存のロールを使用することができます。新しいロールを作成する場合は、**Create a new role with basic Lambda permissions**を選択してください。**Create function**ボタンをクリックしてLambda関数を作成します。
+**Author from scratch**オプションを選択します。Lambda関数の名前を入力します（例：**XIAO-ESP32C6-FUNCTION**）。
+希望するランタイム**Python3.9**を選択します。Lambda関数の実行ロールを選択します。新しいロールを作成するか、既存のロールを使用できます。新しいロールを作成する場合は、**Create a new role with basic Lambda permissions**を選択します。**Create function**ボタンをクリックしてLambda関数を作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/39.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -508,19 +507,19 @@ IAM（Identity and Access Management）コンソールに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/40.png" style={{width:1000, height:'auto'}}/></div>
 
-次に、先ほど作成した Lambda 関数の名前を見つけてクリックします。
+次に、先ほど作成したLambda関数の名前を見つけて、それをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/41.png" style={{width:1000, height:'auto'}}/></div>
 
-IAM ロールのページで、**Attach policies** ボタンをクリックします。
+IAMロールページで、**Attach policies**ボタンをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/42.png" style={{width:1000, height:'auto'}}/></div>
 
-ポリシーに名前を付けます（例: **AmazonSageMakerFullAccess**）。**Add permissions** ボタンをクリックして権限を追加します。
+ポリシーに名前を付けます（例：**AmazonSageMakerFullAccess**）。**Add perminassions**ボタンをクリックして権限を追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/43.png" style={{width:1000, height:'auto'}}/></div>
 
-Lambda 関数の設定ページに戻ります。新しいテストイベントを作成するか、既存のものを使用します。テストイベントを使用して Lambda 関数を呼び出し、正常に実行されることを確認します。Lambda 関数の実行ログと出力を監視して、その動作を検証します。
+Lambda関数の設定ページに戻ります。新しいテストイベントを作成するか、既存のものを使用します。テストイベントでLambda関数を呼び出して、正常に実行されることを確認します。Lambda関数の実行ログと出力を監視して、その動作を検証します。
 
 ```
 {"data": [62.93016434, 24.31583405]}
@@ -528,14 +527,14 @@ Lambda 関数の設定ページに戻ります。新しいテストイベント�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/44.png" style={{width:1000, height:'auto'}}/></div>
 
-[以下のスニペット](https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/TrainingModel/Lambda.ipynb)を **Code** にコピーします。
+[以下のスニペット](https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/TrainingModel/Lambda.ipynb)を**Code**にコピーします。
 
 ```python
-# SNS を使用した Lambda 関数
+#lambda function with sns
 import boto3
 import json
 
-ENDPOINT_NAME = 'randomcutforest-2024-03-18-10-47-37-165'# ここにエンドポイントを入力
+ENDPOINT_NAME = 'randomcutforest-2024-03-18-10-47-37-165'# your endpoint past here
 runtime = boto3.client('runtime.sagemaker')
 email_client = boto3.client('sns')
 
@@ -555,33 +554,33 @@ def lambda_handler(event, context):
     try:
         if(inference>3):
             response_sns = email_client.publish(
-                TopicArn='arn:aws:sns:us-east-1:381491976713:dhco2Topic2',# ここに SNS トピックを入力
-                Message='環境データが異常です',
-                Subject='環境ステータス'
+                TopicArn='arn:aws:sns:us-east-1:381491976713:dhco2Topic2',# your sns topic past here
+                Message='Enviroment data is abnormal',
+                Subject='Enviroment Status'
             )
     except Exception as e:
-        print(f"エラー: {e}")
+        print(f"error: {e}")
 
     return inference
 ```
 
 :::caution
-コード内の内容を自分の環境に合わせて修正することを忘れないでください。
+コード内のコンテンツを自分のものに変更するよう注意してください。
 :::
 
-その後、**Deploy** ボタンをクリックします。
+次に**Deploy**ボタンをクリックします。
 
 ### 追加の考慮事項
 
-- SageMaker が S3 内のデータにアクセスできるように、正しい IAM ロールとポリシーが設定されていることを確認してください。
-- SageMaker の自動モデルチューニングを使用して、モデルの最適なバージョンを見つけることを検討してください。
-- モデルのトレーニングやエンドポイントのデプロイには、使用する計算リソースに応じて多額の費用が発生する可能性があるため、コストを追跡してください。
+- SageMakerがS3内のデータにアクセスするための正しいIAMロールとポリシーが設定されていることを確認してください。
+- SageMakerの自動モデル調整を使用して、モデルの最適なバージョンを見つけることを検討してください。
+- 使用するコンピューティングリソースによっては、SageMakerでのモデルトレーニングとエンドポイントのデプロイに大きな料金が発生する可能性があるため、コストを把握しておいてください。
 
-AWS サービスのインターフェースや機能は頻繁に更新されるため、最新の AWS ドキュメントを参照して詳細な手順やベストプラクティスを確認してください。
+AWSサービスのインターフェースと機能は頻繁に更新されるため、詳細な手順とベストプラクティスについては、常に最新のAWSドキュメントを参照してください。
 
 ## 異常状態メッセージ通知
 
-異常状態が検出されると、システムは即座にメッセージ通知メカニズムを通じてメンテナンス担当者にアラートを送信し、迅速な介入と必要な対応を確保します。
+異常状態を検出すると、システムは直ちにメッセージ通知メカニズムを通じて保守担当者にアラートを送信し、タイムリーな介入と必要な対応を確実にします。
 
 ### ステップ11. Amazon SNSの設定
 
@@ -589,7 +588,7 @@ Amazon SNSサービスに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/49.png" style={{width:1000, height:'auto'}}/></div>
 
-**Create topic**ボタンをクリックします。トピックに名前を付けます（例: "XIAO_ESP32C6_Topic"）。
+**Create topic**ボタンをクリックします。トピックの名前を入力します（例：「XIAO_ESP32C6_Topic」）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/50.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -597,29 +596,29 @@ SNSトピックダッシュボードで、新しく作成したトピックを�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/51.png" style={{width:1000, height:'auto'}}/></div>
 
-サブスクリプションのプロトコルを選択します（例: "Email", "SMS", "HTTP/HTTPS", "AWS Lambda", "Amazon SQS"）。
+サブスクリプションのプロトコルを選択します（「Email」、「SMS」、「HTTP/HTTPS」、「AWS Lambda」、「Amazon SQS」など）。
 
-選択したプロトコルに基づいてエンドポイントの詳細を入力します。例:
+選択したプロトコルに基づいてエンドポイントの詳細を入力します。例：
 
-- Emailサブスクリプションの場合、メールアドレスを入力します。
+- メールサブスクリプションの場合、メールアドレスを入力します。
 - SMSサブスクリプションの場合、電話番号を入力します。
 - HTTP/HTTPSサブスクリプションの場合、URLエンドポイントを入力します。
 - AWS Lambdaサブスクリプションの場合、Lambda関数を選択します。
 - Amazon SQSサブスクリプションの場合、SQSキューを選択します。
 
-**Create subscription**ボタンをクリックしてサブスクリプションを作成します。必要に応じて、ステップ2～5を繰り返してトピックにさらにサブスクリプションを追加します。
+**Create subscription**ボタンをクリックしてサブスクリプションを作成します。必要に応じて、ステップ2-5を繰り返してトピックにさらにサブスクリプションを追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/52.png" style={{width:1000, height:'auto'}}/></div>
 
-その後、Lambdaのコードに戻り、コード内の**TopicArn**フィールドをSNSの**ARNフィールド**に置き換えます。
+次に、Lambdaのコードに戻り、コード内の**TopicArn**フィールドを**SNSのARNフィールド**に置き換えます。
 
-### ステップ12. LambdaにSNSの権限を付与
+### ステップ12. LambdaにSNS権限を付与
 
 IAM（Identity and Access Management）コンソールに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/40.png" style={{width:1000, height:'auto'}}/></div>
 
-先ほど作成したLambda関数の名前を見つけてクリックします。
+次に、先ほど作成したLambda Functionの名前を見つけてクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/41.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -627,13 +626,13 @@ IAMロールページで、**Attach policies**ボタンをクリックします�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/42.png" style={{width:1000, height:'auto'}}/></div>
 
-ポリシーに名前を付けます（例: **AmazonSNSFullAccess**）。**Add permissions**ボタンをクリックして権限を追加します。
+ポリシーの名前を入力します（例：**AmazonSNSFullAccess**）。**Add permissions**ボタンをクリックして権限を追加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/53.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ13. API Gatewayの設定
 
-AWS Management ConsoleでAmazon API Gatewayサービスに移動します。
+AWS管理コンソールでAmazon API Gatewayサービスに移動します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/54.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -645,7 +644,7 @@ APIタイプとして**REST API**を選択し、**Build**をクリックしま�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/56.png" style={{width:1000, height:'auto'}}/></div>
 
-APIに名前を付けます（例: "XIAO_ESP32C6_API"）。APIのエンドポイントタイプとして**Regional**を選択します。**Create API**ボタンをクリックしてREST APIを作成します。
+APIの名前を入力します（例：「XIAO_ESP32C6_API」）。APIのエンドポイントタイプとして**Regional**を選択します。**Create API**ボタンをクリックしてREST APIを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/57.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -653,45 +652,46 @@ API Gatewayダッシュボードで、新しく作成したAPIを選択します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/58.png" style={{width:1000, height:'auto'}}/></div>
 
-リソースに名前を付けます（例: "XIAO_ESP32C6_Resource"）。**Create Resource**ボタンをクリックしてリソースを作成します。
+リソースの名前を入力します（例：「XIAO_ESP32C6_Resource」）。**Create Resource**ボタンをクリックしてリソースを作成します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/59.png" style={{width:1000, height:'auto'}}/></div>
 
-新しく作成したリソースを選択し、**Create Method**を選択します。
+新しく作成したリソースを選択した状態で、**Create Method**を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/60.png" style={{width:1000, height:'auto'}}/></div>
 
-ドロップダウンリストからHTTPメソッドとして**POST**を選択します。統合タイプとして**Lambda Function**を選択します。Lambda関数が存在するリージョンを選択します。Lambda関数の名前を入力します（例: "XIAO_ESP32C6_Function"）。**Create method**ボタンをクリックして統合設定を保存します。
+ドロップダウンリストからHTTPメソッドとして**POST**を選択します。統合タイプとして**Lambda Function**を選択します。Lambda関数が配置されているリージョンを選択します。Lambda関数の名前を入力します（例：「XIAO_ESP32C6_Function」）。
+**Create method**ボタンをクリックして統合設定を保存します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/61.png" style={{width:1000, height:'auto'}}/></div>
 
-**Deploy API**をクリックします。デプロイメントステージ（例: "prod", "dev"）を選択するか、新しいステージを作成します。必要に応じてデプロイメントの説明を入力します。**Deploy**ボタンをクリックしてAPIをデプロイします。
+**Deploy API**をクリックします。デプロイステージを選択するか（例：「prod」、「dev」）、新しいものを作成します。必要に応じてデプロイの説明を入力します。「Deploy」ボタンをクリックしてAPIをデプロイします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/63.png" style={{width:500, height:'auto'}}/></div>
 
-API GatewayダッシュボードでAPIを選択し、「Stages」セクションに移動します。デプロイメントステージを展開し、リソースのPOSTメソッドをクリックします。**Invoke URL**セクションで提供されたURLをコピーします。
+API Gateway ダッシュボードで、あなたの API を選択し、「Stages」セクションに移動します。デプロイメントステージを展開し、リソースの POST メソッドをクリックします。**Invoke URL** セクションで、提供された URL をコピーします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-esp32c6-aws/64.png" style={{width:1000, height:'auto'}}/></div>
 
-最後に、[api_gatewayコード](https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/TrainingModel/api_gateway.ipynb)をSageMaker Jupyter Notebookの最後にコピー＆ペーストします（新しいスニペットを作成）。コード内の**API_ENDPOINT**フィールドを**Invoke URL**に置き換えます。
+最後に、[api_gateway code](https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/TrainingModel/api_gateway.ipynb) をコピーして SageMaker Jupyter Notebook の最後に貼り付け（新しいスニペットを作成）、コード内の **API_ENDPOINT** フィールドを **Invoke URL** に置き換えます。
 
-## XIAO ESP32C6 による異常環境検出
+## 異常環境検出のための XIAO ESP32C6
 
-正常な環境のデータモデルが確立されると、XIAO ESP32C6 はセンサーデータを継続的に監視し、潜在的な異常を検出します。この強力なマイクロコントローラーは、データが異常な状況を示した場合に迅速に対応する能力を備えています。
+正常環境のデータモデルが確立されると、XIAO ESP32C6 はセンサーデータを継続的に監視して、潜在的な異常を検出します。強力なマイクロコントローラーとして、データが異常な状況を示すときに迅速に応答することができます。
 
-### ステップ 14. XIAO ESP32C6 用リアルタイムデータ報告プログラムのアップロード
+### ステップ 14. XIAO ESP32C6 のリアルタイムデータレポートプログラムをアップロード
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Projects/XIAO_ESP32C6_AWS_DHT20_Project/blob/main/GetResult/GetResult.ino" target="_blank" rel="noopener noreferrer">
-    <strong><span><font color={'FFFFFF'} size={"4"}>コードをダウンロード</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    <strong><span><font color={'FFFFFF'} size={"4"}>Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
 
-以下からプログラムを取得し、コード内の api フィールドをあなたのものに置き換えてください。その後、コンパイルして XIAO ESP32C6 にアップロードします。これでおめでとうございます！ここまでの手順を実行し、プロジェクトの全ステップを無事に完了しました。環境に異常が発生すると、AWS SNS サービスから警告メール通知が送信されます。
+以下からプログラムを取得し、コード内の api フィールドをあなたのものに置き換えます。その後、コンパイルして XIAO ESP32C6 にアップロードします。おめでとうございます、ここまでステップを実行すれば、プロジェクト全体のステップを正常に完了したことになります。環境に異常が発生するとすぐに、AWS SNS サービスから送信される警告メール通知を受け取ることができます。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

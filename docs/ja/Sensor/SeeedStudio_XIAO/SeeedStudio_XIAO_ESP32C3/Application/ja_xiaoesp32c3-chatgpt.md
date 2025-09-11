@@ -6,55 +6,50 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/xiaoesp32c3-chatgpt
 last_update:
-  date: 05/15/2025
+  date: 03/03/2023
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
-# WiFiClient と HTTPClient を使用して XIAO ESP32C3 を学ぶ - XIAO ESP32C3 と ChatGPT の実践
+# XIAO ESP32C3でWiFiClientとHTTPClientの使い方を学ぶ - XIAO ESP32C3 & ChatGPTの実践
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/18.png"/></div>
 
-ChatGPT は新しいチャットボットモデルであり、OpenAI（人工知能研究所）が 2022 年 11 月 30 日にリリースした人工知能技術を活用した自然言語処理ツールです。
+ChatGPTは新しいチャットボットモデルで、人工知能研究所OpenAIが2022年11月30日にリリースした、人工知能技術を活用した自然言語処理ツールです。
 
-このモデルは、人間の言語を学習し理解することで会話を行うことができ、チャットの文脈に基づいてインタラクションを行うことも可能です。本当に人間のように会話し、コミュニケーションを取るだけでなく、メールの作成、ビデオスクリプトの作成、コピーライティング、翻訳、コーディングなどのタスクも実行できます。
+人間の言語を学習・理解することで会話を行うことができ、チャットの文脈に基づいて対話することも可能で、まさに人間のようにチャットやコミュニケーションを行い、メール作成、動画スクリプト、コピーライティング、翻訳、コーディングなどのタスクも実行できます。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/2.png"/></div>
 
-組み込みシステムにおいて、ChatGPT は簡単なプログラムの作成を支援したり、プログラム内で発生するバグをチェックして修正したりする優れた助っ人となります。
+組み込みシステムにおいて、ChatGPTは簡単なプログラムの作成を支援したり、プログラムに現れるバグのチェックや修正を行う優れたヘルパーとなることができます。
 
-さらに興奮するのは、OpenAI が GPT-3 モデルを呼び出すためのインターフェースを公式に提供していることです。これにより、これらのインターフェースを呼び出し、さまざまな方法でこの優れたモデルを独自の組み込みシステムに展開することが可能になります。
+興味深いことに、OpenAIは公式にGPT-3モデルを呼び出すためのインターフェースを提供しており、これにより様々な方法でこれらのインターフェースを呼び出し、この素晴らしいモデルを私たち自身の組み込みシステムにデプロイすることができます。
 
-Seeed Studio XIAO ESP32C3 は、Espressif ESP32-C3 WiFi/Bluetooth デュアルモードチップに基づいた IoT ミニ開発ボードです。優れた無線周波数性能を持ち、IEEE 802.11 b/g/n WiFi と Bluetooth 5 (LE) プロトコルをサポートしています。ESP32 公式が提供する WiFi クライアントおよび WiFi サーバーのサービスを完全にサポートすることができ、もちろん Arduino も完全にサポートします。
+Seeed Studio XIAO ESP32C3は、Espressif ESP32-C3 WiFi/BluetoothデュアルモードチップをベースとしたIoTミニ開発ボードです。優れた無線周波数性能を持ち、IEEE 802.11 b/g/n WiFiとBluetooth 5（LE）プロトコルをサポートしています。ESP32公式が提供するWiFi ClientとWiFi Serverのサービスを完璧にサポートできます。もちろん、Arduinoも完璧にサポートできます。
 
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png"/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
-このチュートリアルでは、ユーザーが XIAO ESP32C3 の WiFiClient および HTTPClient ライブラリを学び、使用する方法、ネットワークへの接続方法、ウェブページの公開方法、HTTP GET および POST の基本を学ぶことを案内します。目標は OpenAI ChatGPT を呼び出し、独自の Q&A ウェブサイトを作成することです。
+そこで本チュートリアルでは、ユーザーがXIAO ESP32C3のWiFiClientとHTTPClientライブラリの学習と使用方法、ネットワークへの接続方法、Webページの公開方法、HTTP GETとPOSTの基礎について説明します。目標はOpenAI ChatGPTを呼び出し、独自のQ&AWebサイトを作成することです。
 
 ## はじめに
 
-このチュートリアルでは、XIAO ESP32C3 を使用して独自の ChatGPT Q&A ページを構成します。このページでは、質問を入力すると、XIAO ESP32C3 が質問を記録し、OpenAI が提供する API 呼び出し方法を使用して HTTP クライアントを介してリクエストコマンドを送信し、ChatGPT の回答を取得してシリアルポートに出力します。
+本チュートリアルでは、XIAO ESP32C3を使用して独自のChatGPT Q&Aページを構成します。このページでは質問を入力でき、XIAO ESP32C3が質問を記録し、OpenAIが提供するAPI呼び出し方法を使用してHTTP Clientでリクエストコマンドを送信し、ChatGPTの回答を取得してシリアルポートに出力します。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/19.png"/></div>
 
-このチュートリアルのタスクは、以下の 4 つの主要なステップに分けられます。
+本チュートリアルのタスクは、以下の4つの主要なステップに分けることができます。
 
-1. [XIAO ESP32C3 をネットワークに接続するよう構成する](#configure-the-xiao-esp32c3-to-connect-to-the-network) : このステップでは、XIAO ESP32C3 を使用した基本的な WiFi 構成プロセスを学び、ネットワーク構成、ネットワークサービスへの接続、IP アドレスの取得など、XIAO ESP32C3 の基本操作を学びます。
+1. [XIAO ESP32C3をネットワークに接続するよう設定](#configure-the-xiao-esp32c3-to-connect-to-the-network)：このステップでは、XIAO ESP32C3を使用した基本的なWiFi設定プロセスを学び、ネットワーク設定、ネットワークサービスへの接続、IPアドレスの取得などのXIAO ESP32C3の基本操作を学習します。
 
-2. [組み込みウェブページを構築する](#build-the-embedded-web-page) : このステップでは主に WiFi クライアントライブラリに触れます。このライブラリの GET および POST 機能を使用して、HTML を使用して独自の Q&A ウェブページを作成し、XIAO ESP32C3 上にデプロイします。
+2. [組み込みWebページの構築](#build-the-embedded-web-page)：このステップでは、主にWiFi Clientライブラリに触れます。このライブラリのGETとPOST機能を使用することで、HTMLを使用して独自のQ&AWebページを作成し、XIAO ESP32C3上にデプロイできます。
 
-3. [組み込みウェブページを介して質問を送信する](#submit-questions-via-the-built-in-web-page) : このステップでは主に HTTP クライアントの POST メソッドを使用して、OpenAI API 標準に従って質問を POST する方法を学びます。ウェブページから質問を収集して保存するプロセスに主に焦点を当てます。
+3. [内蔵Webページ経由での質問送信](#submit-questions-via-the-built-in-web-page)：このステップでは、主にHTTP ClientのPOSTメソッドを使用して、OpenAI API標準に従って質問をPOSTする方法を学習します。Webページから質問を収集・保存するプロセスに主な注意を向けます。
 
-4. [ChatGPT から回答を取得する](#get-answers-from-chatgpt) : このステップでは HTTP クライアントの POST メソッドを使用して、必要な質問の回答を返されたメッセージから抽出する方法を学びます。最後のステップではコードの構造を整理し、最終的な統合を行います。
+4. [ChatGPTから回答を取得](#get-answers-from-chatgpt)：このステップでは、HTTP ClientのPOSTメソッドを使用し、返されたメッセージから必要な質問の回答を抽出する方法を学習します。最後のステップは、コードの構造を整理し、最終的な統合を行うことです。
 
 ### 必要な材料
 
@@ -72,13 +67,13 @@ Seeed Studio XIAO ESP32C3 は、Espressif ESP32-C3 WiFi/Bluetooth デュアル�
 
 ### 事前準備
 
-このチュートリアルのすべての手順とステップは、XIAO ESP32C3 を基に完了しています。準備段階では、まず XIAO ESP32C3 を使用するための環境構成を完了する必要があります。
+このチュートリアルのすべての手順とステップは、XIAO ESP32C3 に基づいて完了しています。準備段階では、まず XIAO ESP32C3 を使用するための環境設定を完了する必要があります。
 
 **ステップ 1.** USB Type-C ケーブルを使用して XIAO ESP32C3 をコンピュータに接続します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width="120" height="auto"/></div>
 
-**ステップ 2.** オペレーティングシステムに応じて、最新バージョンの Arduino IDE をダウンロードしてインストールします。
+**ステップ 2.** お使いのオペレーティングシステムに応じて、最新バージョンの Arduino IDE をダウンロードしてインストールします
 
 <p style={{textAlign: 'center'}}><a href="https://www.arduino.cc/en/software"><img src="https://files.seeedstudio.com/wiki/Seeeduino_Stalker_V3_1/images/Download_IDE.png" alt="pir" width="600" height="auto"/></a></p>
 
@@ -86,50 +81,50 @@ Seeed Studio XIAO ESP32C3 は、Espressif ESP32-C3 WiFi/Bluetooth デュアル�
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/seeed_logo/arduino.jpg"/></div>
 
-- **ステップ 4.** Arduino IDE に ESP32 ボードパッケージを追加します。
+- **ステップ 4.** Arduino IDE に ESP32 ボードパッケージを追加します
 
-**ファイル > 設定** に移動し、**"追加のボードマネージャー URL"** に以下の URL を入力します：
-`https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json`
+**File > Preferences** に移動し、**"Additional Boards Manager URLs"** に以下の URL を入力します：
+*[https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json](https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json)*
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/4.png"/></div>
 
-**ツール > ボード > ボードマネージャー...** に移動し、検索ボックスにキーワード「**esp32**」を入力します。最新バージョンの ****esp32**** を選択してインストールしてください。
+**Tools > Board > Boards Manager...** に移動し、検索ボックスにキーワード "**esp32**" を入力し、****esp32**** の最新バージョンを選択してインストールします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_esp32c3.png" alt="pir" width="650" height="auto"/></div>
 
-- **ステップ 5.** ボードとポートを選択する
+- **ステップ 5.** ボードとポートを選択します
 
-**ツール > ボード > ESP32 Arduino** に移動し、「**XIAO_ESP32C3**」を選択します。ボードのリストは少し長いので、下までスクロールする必要があります。
+**Tools > Board > ESP32 Arduino** に移動し、"**XIAO_ESP32C3**" を選択します。ボードのリストは少し長いので、下までスクロールする必要があります。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Seeed-Studio-XIAO-ESP32/XIAO_ESP32_board.png" alt="pir" width="800" height="auto"/></div>
 
-**ツール > ポート** に移動し、接続されている XIAO ESP32C3 のシリアルポート名を選択します。通常、これは COM3 以上である可能性があります（**COM1** および **COM2** は通常ハードウェアシリアルポート用に予約されています）。
+**Tools > Port** に移動し、接続された XIAO ESP32C3 のシリアルポート名を選択します。これは COM3 以上である可能性が高いです（**COM1** と **COM2** は通常ハードウェアシリアルポート用に予約されています）。
 
-## XIAO ESP32C3 をネットワークに接続する設定
+## XIAO ESP32C3 をネットワークに接続するための設定
 
-Wi-Fi の使用方法については、[XIAO ESP32C3 Wi-Fi 使用チュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)で詳しく説明されています。
+WiFi の使用については、[XIAO ESP32C3 の WiFi 使用チュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/#connect-to-a-wifi-network)で詳しく説明されています。
 
-ESP32 を Wi-Fi ステーションとして設定すると、他のネットワーク（ルーターなど）に接続できます。この場合、ルーターは ESP ボードに一意の IP アドレスを割り当てます。
+ESP32 が Wi-Fi ステーションとして設定されている場合、他のネットワーク（ルーターなど）に接続できます。このシナリオでは、ルーターが ESP ボードに一意の IP アドレスを割り当てます。
 
-ESP32 の Wi-Fi 機能を使用するために最初に行う必要があるのは、以下のようにコードに WiFi.h ライブラリを含めることです。
+ESP32 Wi-Fi 機能を使用するために最初に行う必要があることは、以下のようにコードに WiFi.h ライブラリを含めることです：
 
 ```c
 #include <WiFi.h>
 ```
 
-ESP32 を特定の Wi-Fi ネットワークに接続するには、その SSID とパスワードを知っている必要があります。また、そのネットワークが ESP32 の Wi-Fi 範囲内にある必要があります。
+ESP32を特定のWi-Fiネットワークに接続するには、そのSSIDとパスワードを知っている必要があります。さらに、そのネットワークはESP32のWi-Fi範囲内にある必要があります。
 
-まず、Wi-Fi モードを設定します。ESP32 が他のネットワーク（アクセスポイント/ホットスポット）に接続する場合、ステーションモードに設定する必要があります。
+まず、Wi-Fiモードを設定します。ESP32が他のネットワーク（アクセスポイント/ホットスポット）に接続される場合、ステーションモードである必要があります。
 
 ```c
 WiFi.mode(WIFI_STA);
 ```
 
-次に、`WiFi.begin()` を使用してネットワークに接続します。ネットワークの SSID とパスワードを引数として渡す必要があります。
+次に、`WiFi.begin()`を使用してネットワークに接続します。引数としてネットワークのSSIDとそのパスワードを渡す必要があります。
 
-Wi-Fi ネットワークへの接続には時間がかかる場合があるため、通常は `WiFi.status()` を使用して接続が確立されたかどうかを確認する while ループを追加します。接続が正常に確立されると、`WL_CONNECTED` を返します。
+Wi-Fiネットワークへの接続には時間がかかる場合があるため、通常は`WiFi.status()`を使用して接続が既に確立されているかどうかを継続的にチェックするwhileループを追加します。接続が正常に確立されると、`WL_CONNECTED`が返されます。
 
-ESP32 を Wi-Fi ステーションとして設定すると、他のネットワーク（ルーターなど）に接続できます。この場合、ルーターは ESP32 ボードに一意の IP アドレスを割り当てます。ネットワークへの接続を確立した後、`WiFi.localIP()` を呼び出してボードの IP アドレスを取得する必要があります。
+ESP32がWi-Fiステーションとして設定されている場合、他のネットワーク（ルーターなど）に接続できます。このシナリオでは、ルーターがESP32ボードに一意のIPアドレスを割り当てます。ボードのIPアドレスを取得するには、ネットワークとの接続を確立した後に`WiFi.localIP()`を呼び出す必要があります。
 
 ```c
 void WiFiConnect(void){
@@ -149,47 +144,47 @@ void WiFiConnect(void){
 }
 ```
 
-`ssid` と `password` 変数には、接続したいネットワークの SSID とパスワードが格納されます。
+`ssid` と `password` 変数は、接続したいネットワークのSSIDとパスワードを保持します。
 
 ```c
-// ネットワークの認証情報を置き換えてください
+// Replace with your network credentials
 const char* ssid = "REPLACE_WITH_YOUR_SSID";
 const char* password = "REPLACE_WITH_YOUR_PASSWORD";
 ```
 
-これは非常にシンプルな Wi-Fi 接続プログラムです。このプログラムを XIAO ESP32C3 にアップロードし、シリアルアシスタントを開いてボーレートを 115200 に設定してください。接続が正常に行われた場合、XIAO の IP アドレスが出力されます。
+これは非常にシンプルなWiFi接続プログラムです。プログラムをXIAO ESP32C3にアップロードし、シリアルアシスタントを開いてボーレートを115200に設定してください。接続がうまくいけば、XIAOのIPアドレスが印刷されるのを確認できます。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/5.png"/></div>
 
-ESP32C3 の Wi-Fi におけるアプリケーションや機能についてさらに詳しく知りたい場合は、<a href="https://randomnerdtutorials.com/esp32-useful-wi- fi-functions-arduino/">ESP32 Useful Wi-Fi Library Functions</a> を読むことをお勧めします。
+WiFiにおけるESP32C3のアプリケーションと機能についてさらに詳しく読むことに興味がある場合は、[ESP32 Useful Wi-Fi Library Functions](https://randomnerdtutorials.com/esp32-useful-wifi-functions-arduino/)を読むことをお勧めします。
 
-## 組み込みウェブページの構築
+## 組み込みWebページの構築
 
-ESP32はWiFiライブラリに多くの非常に便利なWiFiClient関数を統合しており、追加のライブラリを導入することなく組み込みウェブページを設計・開発することが可能です。
+ESP32はWiFiライブラリに多くの非常に有用なWiFiClient機能を統合しており、これにより追加のライブラリを追加することなく組み込みWebページを設計・開発することができます。
 
-XIAO ESP32C3でIoTサーバーを構築するために、新しいWiFiServerオブジェクトを作成します。
+このオブジェクトを使用してXIAO ESP32C3が確立したIoTサーバーを制御するために、新しいWiFiServerオブジェクトを作成します。
 
 ```c
 WiFiServer server(80);
 WiFiClient client1;
 ```
 
-上記のステップでは、XIAO ESP32C3をWiFiに接続します。WiFi接続が成功すると、シリアルモニターからXIAOの現在のIPアドレスを取得できます。この時点で、XIAOはウェブサーバーを正常にセットアップしています。このウェブサーバーには、XIAOのIPアドレスを使用してアクセスできます。
+上記のステップで、XIAO ESP32C3 をWiFiに接続しました。WiFi接続が成功すると、シリアルモニターからXIAOの現在のIPアドレスを取得できるようになります。この時点で、XIAOはWebサーバーの設定に成功しています。XIAOのIPアドレスを通じてこのWebサーバーにアクセスできます。
 
-例えば、XIAO ESP32C3のIPアドレスが `192.168.7.152` であると仮定します。このIPアドレスをブラウザに入力してください。
+あなたのXIAO ESP32C3 のIPアドレスが `192.168.7.152` だとします。次に、ブラウザを通じてこのIPアドレスを入力できます。
 
-IPアドレスを入力すると、最初は空白のページしか表示されないかもしれません。これは、そのページに対するコンテンツをまだ公開していないためです。
+このIPアドレスを入力した後、空白のページしか表示されない場合があります。これは、そのページのページコンテンツをまだ公開していないためです。
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/6.png"/></div>
 
-次に、ページのレイアウトに必要なコンテンツ（HTMLコード）をC言語で格納する配列を作成します。
+それでは、レイアウトしたいページのコンテンツ、つまりHTMLコードをCで格納するための配列を作成しましょう。
 
 ```c
 const char html_page[] PROGMEM = {
     "HTTP/1.1 200 OK\r\n"
     "Content-Type: text/html\r\n"
-    "Connection: close\r\n"  // 応答が完了した後に接続を閉じる
-    //"Refresh: 1\r\n"         // ページをn秒ごとに自動更新
+    "Connection: close\r\n"  // the connection will be closed after completion of the response
+    //"Refresh: 1\r\n"         // refresh the page automatically every n sec
     "\r\n"
     "<!DOCTYPE HTML>\r\n"
     "<html>\r\n"
@@ -216,32 +211,32 @@ const char html_page[] PROGMEM = {
 };
 ```
 
-このコードを使用すると、以下の図のようなページが表示されます。
+このコードにより、以下の図に示すページ効果が得られます。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/7.png"/></div>
 
 :::tip
-ウェブページ用のHTML構文はこのチュートリアルの範囲外です。HTMLを独自に学習するか、既存の生成ツールを使用してコード生成を行うことをお勧めします。[HTML Generator](https://webcode.tools/generators/html)の使用を推奨します。
-なお、Cプログラムでは、`\"`や`"`は特殊文字であり、これらの特殊文字の機能をプログラム内で保持するには、前にバックスラッシュを追加する必要があります。
+ウェブページのHTML構文はこのチュートリアルの範囲を超えています。HTMLの使用方法を独自に学習するか、または既存の生成ツールを使用してコード生成作業を行うことができます。[HTML Generator](https://webcode.tools/generators/html)の使用をお勧めします。
+注目すべき点として、Cプログラムでは「\\」と「"」は特殊文字であり、プログラム内でこれらの特殊文字の機能を保持したい場合は、その前に右スラッシュを追加する必要があります。
 :::
 
-`client1`はウェブサーバーが確立された後のソケットクライアントを指します。以下のコードはウェブサーバー処理のフローを示しています。
+Client1はウェブサーバーが確立された後のSocketクライアントを指し、以下のコードはウェブサーバー処理のフローです。
 
 ```c
 client1 = server.available();
 if (client1){
-    Serial.println("New Client.");           // シリアルポートにメッセージを出力
-    // HTTPリクエストは空行で終了する
+    Serial.println("New Client.");           // print a message out the serial port
+    // an http request ends with a blank line
     boolean currentLineIsBlank = true;    
     while (client1.connected()){
-        if (client1.available()){  // クライアントが接続されているか確認
+        if (client1.available()){  // Check if the client is connected
             char c = client1.read();
             json_String += c;
             if (c == '\n' && currentLineIsBlank) {                                 
                 dataStr = json_String.substring(0, 4);
                 Serial.println(dataStr);
                 if(dataStr == "GET "){
-                    client1.print(html_page);  // クライアントにレスポンスボディを送信
+                    client1.print(html_page);  //Send the response body to the client
                 }         
                 else if(dataStr == "POST"){
                     json_String = "";
@@ -252,7 +247,7 @@ if (client1){
                     dataStart = json_String.indexOf("chatgpttext=") + strlen("chatgpttext=");
                     chatgpt_Q = json_String.substring(dataStart, json_String.length());                    
                     client1.print(html_page);        
-                    // 接続を閉じる
+                    // close the connection:
                     delay(10);
                     client1.stop();       
                 }
@@ -260,11 +255,11 @@ if (client1){
                 break;
             }
             if (c == '\n') {
-                // 新しい行を開始
+                // you're starting a new line
                 currentLineIsBlank = true;
             }
             else if (c != '\r') {
-                // 現在の行に文字を取得
+                // you've gotten a character on the current line
                 currentLineIsBlank = false;
             }
         }
@@ -272,14 +267,14 @@ if (client1){
 }
 ```
 
-上記の例では、`server.begin()`を使用してIoTサーバーを開始する必要があります。このステートメントは`setup`関数内に配置します。
+上記のサンプルプログラムでは、IoTサーバーを開始するために`server.begin()`を使用する必要があります。この文は`setup`関数内に配置する必要があります。
 
 ```c
 void setup()
 {
     Serial.begin(115200);
  
-    // WiFiをステーションモードに設定し、以前接続されていたAPから切断
+    // Set WiFi to station mode and disconnect from an AP if it was previously connected
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
     while(!Serial);
@@ -287,12 +282,12 @@ void setup()
     Serial.println("WiFi Setup done!");
     WiFiConnect();
 
-    // TCPサーバーを開始
+    // Start the TCP server server
     server.begin();
 }
 ```
 
-上記のプログラムを実行し、XIAO ESP32C3のIPアドレスをブラウザに入力すると（ホストもXIAO ESP32C3と同じLAN上にある必要があります）、WiFiClientのGETステップが実行されます。この時点で、クライアント側の`print`メソッドを使用してページのHTMLコードを送信します。
+上記のプログラムを実行し、XIAO ESP32C3 のIPアドレスをブラウザに入力すると（ホストもXIAO ESP32C3 と同じLAN上にある必要があります）、WiFiClientのGETステップが実行を開始します。この時点で、クライアント側のprintメソッドの助けを借りて、ページのHTMLコードを送信します。
 
 ```c
 if(dataStr == "GET "){
@@ -300,7 +295,7 @@ if(dataStr == "GET "){
 }
 ```
 
-そして、ページ内に質問入力用の入力ボックスを設計します。ユーザーが内容を入力して**Submit**ボタンをクリックすると、Webページはボタンの状態を取得し、入力された質問を文字列変数`chatgpt_Q`に保存します。
+そして、ページに質問入力用の入力ボックスを設計し、ユーザーがコンテンツを入力して**Submit**ボタンをクリックした後、Webページはボタンの状態を取得し、入力された質問を文字列変数`chatgpt_Q`に格納します。
 
 ```c
 json_String = "";
@@ -311,51 +306,51 @@ Serial.println(json_String);
 dataStart = json_String.indexOf("chatgpttext=") + strlen("chatgpttext=");
 chatgpt_Q = json_String.substring(dataStart, json_String.length());                    
 client1.print(html_page);        
-// 接続を閉じる:
+// close the connection:
 delay(10);
 client1.stop();      
 ```
 
-実行結果は以下の通りです。
+実行効果は以下の通りです。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/15.png"/></div>
 
-## 組み込みWebページを介して質問を送信する
+## 内蔵Webページ経由で質問を送信する
 
-前述のステップで作成したページには入力ボックスがあります。この入力ボックスは、ユーザーが質問を入力する場所です。必要なのは、この質問を取得して、OpenAIが提供するAPIリクエストを通じて送信することです。
+上記のステップのページには、入力ボックスがあります。この入力ボックスは、ユーザーが質問したい内容を入力する場所です。私たちがする必要があることは、この質問を取得し、OpenAIが提供するAPIリクエストを通じて送信することです。
 
-**ステップ 1**. OpenAIアカウントに登録する。
+**ステップ1**. OpenAIアカウントに登録する。
 
-[こちら](https://beta.openai.com/signup)をクリックしてOpenAIの登録ページにアクセスできます。すでにアカウントを登録済みの場合、このステップはスキップできます。
+[こちら](https://beta.openai.com/signup)をクリックしてOpenAIの登録アドレスにアクセスできます。以前にアカウントを登録したことがある場合は、このステップをスキップできます。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/8.png"/></div>
 
-**ステップ 2**. OpenAI APIを取得する。
+**ステップ2**. OpenAI APIを取得する。
 
-[OpenAIのウェブサイト](https://platform.openai.com/overview)にログインし、右上のアカウントアバターをクリックして**View API keys**を選択します。
+[OpenAIウェブサイト](https://platform.openai.com/overview)にログインし、右上角のアカウントアバターをクリックして、**View API keys**を選択します。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/9.png"/></div>
 
-新しいポップアップページで**+Create new secret key**を選択し、キーをコピーして保存します。
+新しくポップアップしたページで**+Create new secret key**を選択し、キーをコピーして保存します。
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/10.png"/></div>
 
-同時に、プログラム内で文字列変数を作成し、このキーをコピーして保存します。
+同時に、プログラム内で文字列変数を作成し、このキーをここにコピーできます。
 
 ```c
 char chatgpt_token[] = "sk**********Rj9DYiXLJJH";
 ```
 
 :::tip
-2023年2月15日現在、OpenAIは新規ユーザーに対して**18ドル**分のクレジットを無料で提供しています。詳細な料金はOpenAIの[ドキュメント](https://openai.com/api/pricing/)で確認できます。
+2023年2月15日現在、OpenAIは新規ユーザー全員に**$18**相当のクレジットを無料で提供しています。詳細な料金は、OpenAIの[ドキュメント](https://openai.com/api/pricing/)で確認できます。
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/11.png"/></div>
 :::
 
-**ステップ 3**. OpenAIのHTTPリクエストに基づいてプログラムを書く。
+**ステップ3**. OpenAIのHTTPリクエストに従ってプログラムを作成します。
 
-OpenAIは非常に詳細な[API使用説明](https://platform.openai.com/docs/api-reference/making-requests)を提供しており、ユーザーは自身のAPIキーを使用してChatGPTを呼び出すことができます。
+OpenAIは非常に詳細な[API使用説明書](https://platform.openai.com/docs/api-reference/making-requests)を提供しており、ユーザーが自分のAPIキーを使用してChatGPTを呼び出すことができます。
 
-ChatGPTのドキュメントによると、リクエストを送信するために必要な形式は以下の通りです：
+ChatGPTのドキュメントによると、リクエストを送信する必要がある形式は以下の通りです：
 
 ```shell
 curl https://api.openai.com/v1/completions \
@@ -364,18 +359,18 @@ curl https://api.openai.com/v1/completions \
 -d '{"model": "gpt3.5-turbo-instruct", "prompt": "Say this is a test", "temperature": 0, "max_tokens": 7}'
 ```
 
-Hypertext Transfer Protocol (HTTP)は、クライアントとサーバー間のリクエスト-レスポンスプロトコルとして機能します。
-**GET**は指定されたリソースからデータを要求するために使用されます。通常、APIから値を取得するために使用されます。
-**POST**はサーバーにデータを送信してリソースを作成/更新するために使用されます。
-ESP32は、URLエンコード、JSONオブジェクト、プレーンテキストの3種類のボディリクエストを使用してHTTP POSTリクエストを作成できます。これらは最も一般的な方法であり、ほとんどのAPIやWebサービスと統合できます。
+Hypertext Transfer Protocol（HTTP）は、クライアントとサーバー間のリクエスト-レスポンスプロトコルとして動作します。
+**GET**は指定されたリソースからデータを要求するために使用されます。APIから値を取得するためによく使用されます。
+**POST**はリソースを作成/更新するためにサーバーにデータを送信するために使用されます。
+ESP32は3つの異なるタイプのボディリクエストを使用してHTTP POSTリクエストを作成できます：URLエンコード、JSONオブジェクト、またはプレーンテキスト。これらは最も一般的な方法であり、ほとんどのAPIやWebサービスと統合できるはずです。
 
-上記の情報は非常に重要であり、HTTP POSTプログラムを書くための理論的基盤を提供します。まず、HTTPClientライブラリをインポートすることから始めます。
+上記の情報は非常に重要であり、HTTP POSTプログラムを書くための理論的基礎を提供します。最初に、HTTPClientライブラリをインポートすることから始めます。
 
 ```c
 #include <HTTPClient.h>
 ```
 
-また、OpenAIのドメイン名を入力する必要があります。これにより、ESPがChatGPTに質問を送信できます。そして、OpenAI APIキーを忘れずに入力してください。
+OpenAIのドメイン名も入力する必要があります。これによりESPがChatGPTに質問を送信します。そしてOpenAI APIキーも忘れずに入力してください。
 
 ```c
 HTTPClient https;
@@ -391,25 +386,25 @@ if (https.begin(chatgpt_server)) {  // HTTPS
     https.addHeader("Content-Type", "application/json"); 
     String token_key = String("Bearer ") + chatgpt_token;
     https.addHeader("Authorization", token_key);
-    String payload = String("{\"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"") + chatgpt_Q + String("\", \"temperature\": 0, \"max_tokens\": 100}"); // TEXTの代わりにJSONをペイロードとして使用可能
-    httpCode = https.POST(payload);   // 接続を開始し、HTTPヘッダーを送信
+    String payload = String("{\"model\": \"gpt-3.5-turbo-instruct\", \"prompt\": \"") + chatgpt_Q + String("\", \"temperature\": 0, \"max_tokens\": 100}"); //Instead of TEXT as Payload, can be JSON as Paylaod
+    httpCode = https.POST(payload);   // start connection and send HTTP header
     payload = "";
 }
 else {
-    Serial.println("[HTTPS] 接続できません");
+    Serial.println("[HTTPS] Unable to connect");
     delay(1000);
 }
 ```
 
-プログラム内では、`POST()`メソッドを使用して`payload`をサーバーに送信します。`chatgpt_Q`はChatGPTに送信したい質問の内容であり、Get Questionページで利用可能になります。
+プログラムでは、`POST()` メソッドを使用してサーバーに `payload` を送信します。`chatgpt_Q` は ChatGPT に送信したい質問の内容で、Get Question ページで利用できます。
 
-ESP32C3 HTTPClientの機能に興味がある場合は、[ESP32 HTTP GET and HTTP POST with Arduino IDE](https://randomnerdtutorials.com/esp32-http-get-post-arduino/)を読むことをお勧めします。
+ESP32C3 HTTPClient のより多くの機能に興味がある場合は、[ESP32 HTTP GET and HTTP POST with Arduino IDE](https://randomnerdtutorials.com/esp32-http-get-post-arduino/) を読むことをお勧めします。
 
-## ChatGPTから回答を取得する
+## ChatGPT から回答を取得する
 
-次のステップは、このチュートリアル全体の最後のステップです。ChatGPTから回答を取得し、それを記録する方法について説明します。
+次のステップは、このチュートリアル全体の最後のステップで、ChatGPT への回答を取得して記録する方法です。
 
-まず、OpenAIが提供する[APIドキュメント](https://platform.openai.com/docs/api-reference/making-requests)を読み、ChatGPTが返すメッセージ内容の構造を理解しましょう。これにより、必要な内容を解析するプログラムを記述できるようになります。
+OpenAI が提供する [API ドキュメント](https://platform.openai.com/docs/api-reference/making-requests) を読み続けて、ChatGPT が返すメッセージ内容の構造がどのように見えるかを理解しましょう。これにより、必要なコンテンツを解析するプログラムを書くことができます。
 
 ```shell
 {
@@ -434,9 +429,9 @@ ESP32C3 HTTPClientの機能に興味がある場合は、[ESP32 HTTP GET and HTT
 }
 ```
 
-OpenAIが提供するリファレンスドキュメントから、インターフェースが返すメッセージ内で質問に対する回答の位置が`{"choices": [{"text": "\n\nxxxxxxx",}]}`にあることがわかります。
+OpenAIが提供するリファレンスドキュメントから、インターフェースが返すメッセージ内の質問に対する回答の位置が `{"choices": [{"text": "\n\nxxxxxxx",}]}` にあることがわかります。
 
-したがって、必要な「回答」は**\n\n**で始まり、**,**で終わることが確認できます。プログラム内では、`indexOf()`メソッドを使用してテキストの開始位置と終了位置を取得し、返された回答の内容を保存できます。
+そこで、必要な「回答」は **\n\n** で始まり **,** で終わることが確実にわかります。そして、プログラムでは `indexOf()` メソッドを使用してテキストの開始位置と終了位置を取得し、返された回答の内容を保存することができます。
 
 ```c
 dataStart = payload.indexOf("\\n\\n") + strlen("\\n\\n");
@@ -444,7 +439,7 @@ dataEnd = payload.indexOf("\",", dataStart);
 chatgpt_A = payload.substring(dataStart, dataEnd);
 ```
 
-まとめると、プログラムの現在の状態に応じて、どのステップを実行するべきかを判断するためにスイッチメソッドを使用できます。
+要約すると、プログラムの現在の状態でswitch文を使用して、プログラムのどのステップを実行すべきかを決定することができます。
 
 ```c
 typedef enum 
@@ -466,46 +461,46 @@ switch(currentState){
 }
 ```
 
-これで、プログラム全体のロジックが構築されました。完全なプログラムコードは以下の画像をクリックして取得できます。ただし、プログラムをアップロードする前に、**ssid、password、chatgpt_token**を自分のものに変更する必要があります。
+この時点で、プログラム全体のロジックが構造化されました。完全なプログラムコードは、下の画像をクリックすることで取得できます。プログラムをアップロードする前に、プログラムの **ssid、password、chatgpt_token** を自分のものに変更する必要があります。
 
 <p style={{textAlign: 'center'}}><a href="https://github.com/limengdu/xiaoesp32c3-chatgpt" target="_blank"><div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/seeed_logo/github.png" /></div></a></p>
 
-それでは、自由に使ってみてください！
+それでは、自由にお使いください！
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/16.gif"/></div>
 
-## 次はどうする？
+## 次のステップ
 
-このチュートリアルでは、Arduinoのような組み込み開発ボード（XIAO ESP32C3）を使用してChatGPTのOpenAIインターフェースを呼び出す基本的な方法を提供しました。次は、あなたの創造力を存分に発揮してください！
+このチュートリアルでは、Arduino - XIAO ESP32C3 のような組み込み開発ボードでChatGPTを使用してOpenAI インターフェースを呼び出す基本的な方法を提供しました。次は、あなたの創造性を自由に発揮してください！
 
-例えば、画面やキーボードを追加して、あなただけのために動作するスタンドアロンの表示デバイスを作ることを考えてみてはいかがでしょうか？Gavinの創造力を見てみましょう。彼は特に面白い監視デバイスを作りました！また、このチュートリアルの必要な手順とアイデアを提供してくれた彼に特別な感謝を捧げます。
+例えば、スクリーンやキーボードを追加して、あなただけのために動作するスタンドアロンディスプレイデバイスにすることを考えてみませんか？Gavinの創造性をご覧ください。彼は特に興味深い監視デバイスを作りました！このチュートリアルに必要なステップとアイデアを提供してくれた彼に特別な感謝を表します。
 
 - [Gavin - ChatGPT Recorder & Monitor](https://www.hackster.io/gavinchiong/chatgpt-recorder-monitor-601ef6)
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-chatgpt/14.jpg"/></div>
 
-さらに一歩進んで、音声認識モジュールを追加し、キーボードやマウスを不要にして、自分だけの音声アシスタントを作ることもできます。いずれにせよ、XIAO ESP32C3のような素晴らしい製品を使って作った作品をぜひ共有してください！
+または、さらに一歩進んで音声認識モジュールを追加し、今後キーボードとマウスから解放されて独自の音声アシスタントを作るなど。いずれにしても、XIAO ESP32C3 のような素晴らしい製品であなたの作品を共有していただけることを楽しみにしています！
 
 ## トラブルシューティング
 
-### Q1: XIAO ESP32C3 を使用して OpenAI API を呼び出す際、地理的またはネットワーク上の制限はありますか？
+### Q1: XIAO ESP32C3 を使用してOpenAI APIを呼び出してChatGPTの回答を取得する際に、地理的制限やネットワーク制限はありますか？
 
-> A: 2023年2月17日時点のテストでは、中国本土の著者および中国のネットワークを使用している場合でも、ChatGPTの応答を非常にスムーズに取得でき、現在のところ制限はありません。OpenAI APIキーを取得できれば、呼び出しは問題なく完了します。
+> A: 2023年2月17日のテスト時点では、中国本土の著者が中国のネットワークを使用してもChatGPTの応答を非常にスムーズに取得でき、現在のところ制限はありません。OpenAI APIキーを取得できる限り、呼び出しはスムーズに完了します。
 
-### Q2: タイムアウトエラーが返されるのはなぜですか？
+### Q2: なぜTime Outエラーが返されるのですか？
 
-> A: これは、ChatGPTがメッセージに返信するのに時間がかかりすぎるため、プログラムが応答していないと誤って判断する可能性があるためです。
+>A: これは、ChatGPTがメッセージに返信するのに時間がかかりすぎるため、プログラムが応答していないと誤認してしまうことが原因である可能性があります。
 
-## 技術サポート & 製品ディスカッション
+## 技術サポートと製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！お客様が弊社の製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験を可能な限りスムーズにするため、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,37 +1,33 @@
 ---
-description: XIAO ESP32-C3 iBeaconとBME680センサーを使用したESP-IDFによる開発
-title: XIAO ESP32-C3 iBeaconとBME680センサーを使用したESP-IDFによる開発
+description: ESP-IDFを使用したBME680センサー付きXIAO ESP32-C3 iBeacon
+title: ESP-IDFを使用したBME680センサー付きXIAO ESP32-C3 iBeacon
 keywords:
   - ESP-IDF
   - XIAO
 image: https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/8.webp
 slug: /ja/xiao-c3-ibeacon
 last_update:
-  date: 05/15/2025
+  date: 04/14/2025
   author: Priyanshu Roy
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# XIAO ESP32-C3 iBeaconとBME680センサーを使用したESP-IDFによる開発
+# ESP-IDFを使用したBME680センサー付きXIAO ESP32-C3 iBeacon
 
-このチュートリアルでは、Bluetooth Low Energy (BLE) のiBeacon形式を使用して環境データを送信する低消費電力の温度監視システムを構築します。使用するのはSeeed Studio XIAO ESP32-C3、XIAO拡張ボード、およびGrove BME680環境センサーです。このプロジェクトでは、Espressifの公式開発フレームワークであるESP-IDFを使用して堅牢な組み込みアプリケーションを構築する方法を示します。
+このチュートリアルでは、Bluetooth Low Energy（BLE）をiBeacon形式で使用して環境データをブロードキャストする低消費電力温度監視システムを構築します。Seeed Studio XIAO ESP32-C3、XIAO拡張ボード、およびGrove BME680環境センサーを使用します。このプロジェクトでは、Espressifの公式開発フレームワークであるESP-IDFを使用して堅牢な組み込みアプリケーションを構築する方法を実演します。
 
 ## 概要
 
-本システムは以下を実現します：
+私たちのシステムは以下を行います：
 
 1. BME680センサーから温度、湿度、気圧を読み取る
-2. このデータをBLE広告パケットにパッケージ化する
-3. 定期的に起動し、測定を行い、データを送信し、バッテリー消費を抑えるためにスリープ状態に戻る
+2. このデータをBLEアドバタイズメントパケットにパッケージ化する
+3. 定期的に起動し、測定を行い、データをアドバタイズし、バッテリー電力を節約するためにスリープに戻る
 
 ### システムフローチャート
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/1.png" style={{width:300, height:800}}/></div>
 
-このフローチャートは、システムの主な動作サイクルを示しています。起動から深いスリープ状態に戻るまでの流れを表しています。
+このフローチャートは、起動からディープスリープに戻るまでのシステムの主要な動作サイクルを示しています。
 
 ## ハードウェア要件
 
@@ -49,28 +45,28 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 <tr>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
         </a>
     </div></td>
 </tr>
 </table>
 
-- USB Type-Cケーブル
-- ESP-IDFがインストールされたコンピュータ
+- USB Type-C ケーブル
+- ESP-IDF がインストールされたコンピュータ
 
 ## ソフトウェア要件
 
-- [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html) (v5.0以降)
+- [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html) (v5.0 以降)
 - Git
 - [プロジェクト GitHub リポジトリ](https://github.com/Priyanshu0901/xiao_ibeacon)
 
@@ -78,25 +74,25 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/2.webp" style={{width:800, height:'auto'}}/></div>
 
-1. **BME680センサーをXIAO拡張ボードに接続する**:
+1. **BME680 センサーを XIAO 拡張ボードに接続**:
 
-   - Grove BME680センサーをXIAO拡張ボードのI2Cポートの1つに接続します。
-   - センサーはI2Cを介して通信するため、I2C互換のGroveポートであればどれでも使用可能です。
+   - Grove BME680 センサーを XIAO 拡張ボードの I2C ポートの一つに接続します。
+   - センサーは I2C 経由で通信するため、I2C 対応の Grove ポートであればどれでも動作します。
 
-2. **XIAO ESP32-C3を拡張ボードに取り付ける**:
+2. **XIAO ESP32-C3 を拡張ボードに取り付け**:
 
-   - XIAO ESP32-C3モジュールを拡張ボードに慎重に配置し、挿入します。
-   - ピンが正しく揃っていることを確認し、モジュールがしっかりと固定されていることを確認してください。
+   - XIAO ESP32-C3 モジュールを拡張ボードに慎重に位置合わせして挿入します。
+   - ピンが適切に位置合わせされ、モジュールがしっかりと固定されていることを確認してください。
 
-3. **コンピュータに接続する**:
-   - USB Type-Cケーブルを使用して、XIAO拡張ボードをコンピュータに接続します。
+3. **コンピュータに接続**:
+   - USB Type-C ケーブルを使用して XIAO 拡張ボードをコンピュータに接続します。
 
 ## ステップ 2: 開発環境のセットアップ
 
-1. **ESP-IDFをインストールする**:
-   お使いのオペレーティングシステムに応じた[公式インストール手順](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html)に従ってください。
+1. **ESP-IDF のインストール**:
+   お使いのオペレーティングシステム向けの[公式インストール手順](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/get-started/index.html)に従ってください。
 
-   Linuxの場合、以下を使用できます:
+   Linux の場合、以下を使用できます:
 
    ```bash
    mkdir -p ~/esp
@@ -116,9 +112,9 @@ https://github.com/Seeed-Studio/wiki-documents/issues
    ```
 
    :::caution
-   `--recurse-submodules`フラグは重要です。このプロジェクトはGitサブモジュールとして含まれる外部ライブラリに依存しているため、これがないとコンパイルに失敗します。
+   `--recurse-submodules` フラグは、プロジェクトがGitサブモジュールとして含まれる外部ライブラリに依存しているため重要です。これがないと、コンパイルが失敗します。
 
-   すでにサブモジュールなしでクローンしてしまった場合は、以下を実行してください:
+   サブモジュールなしで既にクローンしている場合は、以下を実行してください：
 
    ```bash
    git submodule update --init --recursive
@@ -126,9 +122,9 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
    :::
 
-## ステップ 3: プロジェクト構造とコンポーネントの理解
+## ステップ3: プロジェクト構造とコンポーネントの理解
 
-このプロジェクトは、以下の3つの主要コンポーネントで構成されています:
+このプロジェクトは3つの主要なコンポーネントで構成されています：
 
 1. **BME680センサーコンポーネント (`sensor_t_a_h`)**:
 
@@ -139,29 +135,29 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 2. **BLEビーコンコンポーネント (`ble_beacon`)**:
 
    - BLEスタックを設定
-   - センサーデータを含むBLE広告を作成してブロードキャスト
+   - センサーデータを含むBLEアドバタイズメントを作成・送信
    - BLEの初期化とクリーンアップを管理
 
 3. **電源管理コンポーネント (`power_manager`)**:
    - ディープスリープ機能を処理
-   - 省電力動作を管理
+   - 電力効率的な動作を管理
    - ウェイクアップソースとスリープ時間を制御
 
 ### コンポーネントの相互作用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/3.png" style={{width:800, height:'auto'}}/></div>
 
-この図は、システムのハードウェア要素と異なるソフトウェアコンポーネントがどのように相互作用するかを示しています。
+この図は、異なるソフトウェアコンポーネントがシステムのハードウェア要素とどのように相互作用するかを示しています。
 
-## ステップ 4: 設定の理解
+## ステップ4: 設定の理解
 
-ビルドの前に、主要な設定を理解しましょう:
+ビルドする前に、主要な設定を理解しましょう：
 
 1. **メインアプリケーション設定** (`main.c`内):
 
-   - `ADV_TIME_MS`: BLE広告の継続時間 (500ms)
+   - `ADV_TIME_MS`: BLEアドバタイジングの持続時間 (500ms)
    - `POLL_INTERVAL_MS`: センサーをポーリングする頻度 (150ms)
-   - `TIMEOUT_MS`: センサー読み取りの最大待機時間 (2000ms)
+   - `TIMEOUT_MS`: センサー読み取りを待つ最大時間 (2000ms)
    - `SLEEP_TIME_MS`: 測定間のスリープ時間 (~29.3秒)
 
 2. **センサー設定** (`components/sensor_t_a_h/Kconfig`内):
@@ -172,14 +168,14 @@ https://github.com/Seeed-Studio/wiki-documents/issues
            hex "BME68X I2C Address"
            default 0x76
            help
-               BME68XセンサーのI2Cアドレス。デフォルトは0x76です。
-               SDOピンが高電位の場合は0x77を使用してください。
+               I2C address of the BME68X sensor. Default is 0x76.
+               Use 0x77 if SDO pin is pulled high.
 
        choice BME68X_INTERFACE
            prompt "BME68X Interface"
            default BME68X_USE_I2C
            help
-               BME68Xセンサーで使用するインターフェースを選択してください。
+               Select the interface to use with BME68X sensor.
 
            config BME68X_USE_I2C
                bool "I2C Interface"
@@ -194,34 +190,34 @@ https://github.com/Seeed-Studio/wiki-documents/issues
                range 0 1
                default 0
                help
-                   BME68X用のI2Cポート番号。
+                   I2C port number for BME68X.
 
            config BME68X_I2C_SDA_PIN
                int "I2C SDA GPIO"
                range 0 48
                default 12
                help
-                   I2C SDA用のGPIOピン。
+                   GPIO pin for I2C SDA.
 
            config BME68X_I2C_SCL_PIN
                int "I2C SCL GPIO"
                range 0 48
                default 13
                help
-                   I2C SCL用のGPIOピン。
+                   GPIO pin for I2C SCL.
 
            config BME68X_I2C_CLOCK_SPEED
                int "I2C Clock Frequency (Hz)"
                range 100000 400000
                default 100000
                help
-                   BME68X用のI2Cクロック周波数。標準モード (100 KHz) または高速モード (400 KHz)。
+                   I2C clock frequency for BME68X. Standard mode (100 KHz) or Fast mode (400 KHz).
        endif
    endmenu
    ```
 
-3. **BLE設定** (`components/ble_beacon/common.h`内):
-   BLEデバイス名は`common.h`ファイルで定義されています:
+3. **BLE設定**（`components/ble_beacon/common.h`内）：
+   BLEデバイス名は`common.h`ファイルで定義されています：
 
    ```c
    #define DEVICE_NAME "Xiao_TempSensor"
@@ -229,17 +225,17 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### 設定パラメータの変更
 
-#### ESP-IDFのmenuconfigツールを使用
+#### ESP-IDFのmenuconfigツールの使用
 
-ESP-IDFフレームワークは、プロジェクト設定を変更するための強力な構成ツールである**menuconfig**を提供します。このツールは、Linuxカーネルで使用されるKconfigと同じ構成システムに基づいています。
+ESP-IDFフレームワークは**menuconfig**と呼ばれる強力な設定ツールを提供しており、プロジェクト設定を変更するためのテキストベースのUIを提供します。このツールはLinuxカーネルで使用されているのと同じ設定システムであるKconfigに基づいています。
 
-構成インターフェースを起動するには:
+設定インターフェースを起動するには：
 
 ```bash
 idf.py menuconfig
 ```
 
-これにより、以下のような構成カテゴリを持つテキストベースのUIが表示されます:
+これにより、設定カテゴリを含むテキストベースのUIが表示されます：
 
 ```
     Application Configuration  --->
@@ -253,75 +249,75 @@ idf.py menuconfig
 
 **menuconfigでのナビゲーション:**
 
-- `↑`および`↓`矢印キーで移動
-- `Enter`キーでサブメニューに入る
-- `Esc`キーで戻る
-- `Space`キーでオプションを切り替える
-- ブールオプションでは`Y`で「はい」、`N`で「いいえ」
-- 現在選択されているオプションのヘルプを表示するには`?`キー
-- `Q`または`Esc`を複数回押して終了し、`Y`で変更を保存
+- `↑` と `↓` 矢印キーでナビゲート
+- `Enter` を押してサブメニューに入る
+- `Esc` を押して戻る
+- `Space` を押してオプションを切り替え
+- ブール値オプションで `Y` は「はい」、`N` は「いいえ」
+- `?` を押して現在選択されているオプションのヘルプを表示
+- `Q` または `Esc` を複数回押して終了し、`Y` で変更を保存
 
-**センサー設定の見つけ方:**
+**センサー設定の検索:**
 
-1. `Component config`に移動
-2. `BME68X Configuration`を見つけるまでスクロール
-3. `Enter`キーを押してセンサー設定を表示
+1. `Component config` にナビゲート
+2. 下にスクロールして `BME68X Configuration` を見つける
+3. `Enter` を押してセンサー設定を表示
 
-**BLE設定の確認:**
+**BLE設定の検索:**
 
-1. `Component config` に移動します
-2. `Bluetooth` を見つけて選択します
-3. `NimBLE Options` を選択します
-4. ここで、さまざまなBLEパラメータを設定できます
+1. `Component config` にナビゲート
+2. `Bluetooth` を見つけて入る
+3. `NimBLE Options` を選択
+4. ここで様々なBLEパラメータを設定できます
 
-##### BME680用I2Cピンの設定
+##### BME680のI2Cピン設定
 
-BME680センサーのI2Cピンを設定するには、以下の手順を実行します：
+BME680センサーのI2Cピンを設定するには:
 
-1. menuconfigで、`Component config` → `BME68X Configuration` に移動します
-2. `I2C SDA GPIO` を選択してSDAピンを変更します
-3. SDAのGPIO番号を入力します（デフォルトは12ですが、XIAO ESP32-C3と拡張ボードを使用する場合は6を使用します）
-4. `I2C SCL GPIO` を選択してSCLピンを変更します
-5. SCLのGPIO番号を入力します（デフォルトは13ですが、XIAO ESP32-C3と拡張ボードを使用する場合は7を使用します）
-6. センサーが異なるI2Cアドレスを持つ場合は、`BME68X I2C Address` を選択して変更します
+1. menuconfigで次の場所にナビゲート: `Component config` → `BME68X Configuration`
+2. `I2C SDA GPIO` を選択してSDAピンを変更
+3. SDA用のGPIO番号を入力（デフォルトは12ですが、拡張ボード付きのXIAO ESP32-C3では6を使用）
+4. `I2C SCL GPIO` を選択してSCLピンを変更
+5. SCL用のGPIO番号を入力（デフォルトは13ですが、拡張ボード付きのXIAO ESP32-C3では7を使用）
+6. センサーが異なるI2Cアドレスを持つ場合は、`BME68X I2C Address` を選択して変更
 
-##### menuconfigを使用したBLEパラメータの設定
+##### menuconfigによるBLEパラメータの設定
 
-デバイス名はコード内で定義されていますが、その他のBLEパラメータはmenuconfigを通じて設定できます：
+デバイス名はコードで定義されていますが、他のBLEパラメータはmenuconfigで設定できます:
 
-1. `Component config` → `Bluetooth` → `NimBLE Options` に移動します
-2. 以下を変更できます：
+1. 次の場所にナビゲート: `Component config` → `Bluetooth` → `NimBLE Options`
+2. ここで以下を変更できます:
    - 同時接続の最大数
-   - BLEの役割（Central/Peripheral/Observer/Broadcaster）
+   - BLEロール（Central/Peripheral/Observer/Broadcaster）
    - セキュリティ設定
-   - GAPおよびGATTパラメータ
-   - BLEスタックのメモリ割り当て
+   - GAPとGATTパラメータ
+   - BLEスタック用のメモリ割り当て
 
 ##### 高度な設定オプション
 
-上級ユーザー向けに、追加の設定オプションが利用可能です：
+上級ユーザー向けに、追加の設定オプションが利用可能です:
 
 1. **電源管理:**
 
-   - `Component config` → `Power Management` に移動します
-   - 自動ライトスリープの有効化/無効化
+   - 次の場所にナビゲート: `Component config` → `Power Management`
+   - 自動ライトスリープの有効/無効
    - DFS（動的周波数スケーリング）の設定
 
 2. **フラッシュ暗号化:**
 
-   - `Security features` に移動します
-   - セキュアなデプロイメントのためのフラッシュ暗号化オプションを設定
+   - `Security features` にナビゲート
+   - セキュアな展開のためのフラッシュ暗号化オプションを設定
 
 3. **パーティションテーブル:**
 
-   - `Partition Table` に移動します
-   - 異なるアプリケーションニーズに合わせてフラッシュパーティションを変更
+   - `Partition Table` にナビゲート
+   - 異なるアプリケーションニーズに応じてフラッシュパーティショニングを変更
 
 4. **ログ出力:**
-   - `Component config` → `Log output` に移動します
+   - 次の場所にナビゲート: `Component config` → `Log output`
    - デバッグログレベルと出力先を設定
 
-変更を加えた後、`Q` を押して終了し、`Y` を押して変更を保存します。その後、以下のコマンドでプロジェクトを再ビルドします：
+変更を行った後、`Q` を押して終了し、`Y` で変更を保存します。その後、以下のコマンドでプロジェクトを再ビルドします:
 
 ```bash
 idf.py build
@@ -329,9 +325,9 @@ idf.py build
 
 #### BLEデバイス名の変更
 
-BLEデバイス名を変更するには、`components/ble_beacon/common.h` 内の `DEVICE_NAME` マクロを変更する必要があります：
+BLEデバイス名を変更するには、`components/ble_beacon/common.h`の`DEVICE_NAME`マクロを変更する必要があります：
 
-1. ファイルを開きます：
+1. ファイルを開く：
 
    ```bash
    nano components/ble_beacon/common.h
@@ -343,132 +339,132 @@ BLEデバイス名を変更するには、`components/ble_beacon/common.h` 内�
    #define DEVICE_NAME "MyCustomSensor"
    ```
 
-3. ファイルを保存してプロジェクトを再ビルドします。
+3. ファイルを保存し、プロジェクトをリビルドします。
 
-## ステップ5: プロジェクトのビルドとフラッシュ
+## ステップ 5: プロジェクトのビルドとフラッシュ
 
-1. **プロジェクトディレクトリに移動**：
+1. **プロジェクトディレクトリに移動**:
 
    ```bash
    cd ~/Desktop/xiao_ibeacon
    ```
 
-2. **プロジェクトを設定**：
+2. **プロジェクトを設定する**：
 
    ```bash
    idf.py set-target esp32c3
    idf.py menuconfig
    ```
 
-   メニューをナビゲートして設定を確認または調整します：
+   メニューを移動して設定を確認または調整します：
 
    - Component Config → BME680 Sensor Settings
    - Component Config → BLE Beacon Settings
    - Component Config → Power Management
 
-3. **プロジェクトをビルド**：
+3. **プロジェクトをビルドします**：
 
    ```bash
    idf.py build
    ```
 
-4. **XIAO ESP32-C3にプロジェクトをフラッシュ**：
+4. **プロジェクトをXIAO ESP32-C3にフラッシュする**：
 
    ```bash
    idf.py -p /dev/ttyUSB0 flash
    ```
 
-   注意: ポートは異なる場合があります（Windowsの場合: COM3, COM4など）
+   注意：あなたのポートは異なる可能性があります（Windows: COM3、COM4など）
 
-5. **出力をモニタリング**（オプション）：
+5. **出力を監視する**（オプション）：
 
    ```bash
    idf.py -p /dev/ttyUSB0 monitor
    ```
 
-   モニタを終了するには、Ctrl+] を押します。
+   Ctrl+]を押してモニターを終了します。
 
-## ステップ 6: iBeacon のテスト
+## ステップ6: iBeaconのテスト
 
-1. **スマートフォンに BLE スキャナーアプリをダウンロード**:
+1. **スマートフォンにBLEスキャナーアプリをダウンロード**:
 
    - iOS: "LightBlue" または "nRF Connect"
    - Android: "nRF Connect" または "BLE Scanner"
 
-2. **アプリを開いて BLE デバイスをスキャン**:
+2. **アプリを開いてBLEデバイスをスキャン**:
 
-   - "Xiao_TempSensor" という名前のデバイスを探します
-   - デバイスを選択して、そのアドバタイズデータを確認します
+   - "Xiao_TempSensor"という名前のデバイスを探す
+   - デバイスを選択してアドバタイズメントデータを表示
 
-3. **アドバタイズデータを理解する**:
-   BLE アドバタイズには以下のデータが含まれます:
+3. **アドバタイズメントデータの理解**:
+   BLEアドバタイズメントには以下が含まれます:
 
-   - 温度（摂氏、100 倍スケール）
+   - 温度（摂氏、100倍スケール）
    - 湿度（パーセント）
-   - 気圧（hPa、10 倍スケール）
+   - 気圧（hPa、10倍スケール）
 
 4. **期待される動作**:
-   - デバイスは約 30 秒ごとに起動します
-   - BME680 センサーからデータを取得します
-   - このデータを 500ms 間ブロードキャストします
-   - その後、電力を節約するためにディープスリープに入ります
+   - デバイスは約30秒ごとに起動
+   - BME680センサーから読み取り値を取得
+   - このデータを500ms間ブロードキャスト
+   - その後、電力節約のためディープスリープに入る
 
-### Python テストスクリプト
+### Pythonテストスクリプト
 
-このプロジェクトには、BLE ビーコンの機能をテストおよび検証するための Python スクリプトが含まれています。以下に詳細を説明します。
+このプロジェクトには、BLEビーコン機能のテストと検証を支援するPythonスクリプトが含まれています。それらを見てみましょう:
 
-#### Python 環境のセットアップ
+#### Python環境のセットアップ
 
-1. テストスクリプトのディレクトリに移動します:
+1. テストスクリプトディレクトリに移動:
 
    ```bash
    cd ~/Desktop/xiao_ibeacon/test_scripts
    ```
 
-2. セットアップスクリプトを実行して仮想環境を作成および構成します:
+2. セットアップスクリプトを実行して仮想環境を作成・設定します：
 
    ```bash
-   # Linux/macOS の場合
+   # On Linux/macOS
    chmod +x setup_venv.sh
    ./setup_venv.sh
 
-   # Windows の場合
+   # On Windows
    setup_venv.bat
    ```
 
-3. 仮想環境を有効化します:
+3. 仮想環境をアクティベートします：
 
    ```bash
-   # Linux/macOS の場合
+   # On Linux/macOS
    source venv/bin/activate
 
-   # Windows の場合
+   # On Windows
    venv\Scripts\activate
    ```
 
-セットアップスクリプトは以下の必要なパッケージをインストールします:
+セットアップスクリプトは必要なパッケージをインストールします：
 
-- `bleak`: BLE 通信用
-- `colorama`: カラフルなターミナル出力用
+- `bleak`: BLE通信用
+- `colorama`: カラーターミナル出力用
 
-#### BLE スキャナースクリプトの使用
+#### BLEスキャナースクリプトの使用
 
-BLE スキャナースクリプト (`ble_beacon_scanner.py`) は、BLE アドバタイズをスキャンし、ビーコンからのセンサーデータを表示します。
+BLEスキャナースクリプト（`ble_beacon_scanner.py`）はBLEアドバタイズメントをスキャンし、ビーコンからのセンサーデータを表示します。
 
-スキャナーの主な機能:
+スキャナーの主な機能：
 
-- "Xiao_TempSensor" という名前のデバイスを探します
-- メーカー固有のデータをデコードして、温度、湿度、気圧を抽出します
-- フォーマットされたターミナル UI に値を表示します
-- 新しいアドバタイズを受信するたびに継続的に更新します
+- "Xiao_TempSensor"という名前のデバイスを検索
+- メーカー固有データをデコードして温度、湿度、気圧を抽出
+- フォーマットされたターミナルUIで値を表示
+- 新しいアドバタイズメントを受信すると継続的に更新
 
-スキャナーを実行するには:
+スキャナーを実行するには：
 
 ```bash
 python ble_beacon_scanner.py
 ```
 
-スクリプトは最新のセンサー読み取り値をフォーマットされた出力で表示します:
+スクリプトは最新のセンサー読み取り値を含む、きれいにフォーマットされた出力を表示します：
 
 ```
 ╔═══════════════════════════════════════════════╗
@@ -485,134 +481,134 @@ python ble_beacon_scanner.py
 ╚═══════════════════════════════════════════════╝
 ```
 
-スクリプト内で `DEBUG_MODE = True` に設定すると、BLE アドバタイズやデータ解析に関する追加情報が表示されます。
+スクリプトでデバッグモードを有効にするには、`DEBUG_MODE = True` を設定します。これにより、BLE アドバタイズメントとデータ解析に関する追加情報が表示されます。
 
 #### ビーコンデータフォーマット
 
-ビーコンは、BLE アドバタイズの制限内に収まるように圧縮フォーマットでデータを送信します:
+ビーコンは、BLE アドバタイズメントの制限内に収まるよう、圧縮されたフォーマットでデータを送信します：
 
-1. 会社 ID: 0x02E5 (Espressif Systems)
-2. 温度: 16 ビット符号付き整数、100 倍スケール（100 で割ると摂氏温度）
-3. 湿度: 8 ビット符号なし整数（直接パーセント値）
-4. 気圧: 16 ビット符号なし整数、10 倍スケール（10 で割ると hPa）
+1. Company ID: 0x02E5 (Espressif Systems)
+2. 温度: 16ビット符号付き整数、100倍スケール（100で割って°Cを取得）
+3. 湿度: 8ビット符号なし整数（直接のパーセンテージ値）
+4. 気圧: 16ビット符号なし整数、10倍スケール（10で割ってhPaを取得）
 
 Python スクリプトはこのフォーマットをデコードし、実際の値を表示します。
 
-#### テストプロセスの流れ
+#### テストプロセスのフロー
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/4.png" style={{width:600, height:'auto'}}/></div>
 
-## ステップ 7: 動作の仕組み - 詳細解説
+## ステップ 7: 動作原理 - 詳細解説
 
 ### センサーの初期化と読み取り
 
-BME680センサーは以下の手順で初期化されます：
+BME680 センサーは以下のステップで初期化されます：
 
-1. **I2C設定**: 適切なピンでI2C通信を設定します（XIAO ESP32-C3拡張ボードの場合、GPIO6/GPIO7がSDA/SCLに対応）
-2. **センサー初期化**: 温度、湿度、気圧、ガス測定の設定を使用してBME680センサーを構成
-3. **読み取りプロセス**: 測定を開始し、データが準備されるのを待機
-4. **データ処理**: 生のセンサー値を人間が読み取れる測定値に変換
+1. **I2C 設定**: 適切なピンで I2C 通信を設定（XIAO ESP32-C3 と拡張ボードの場合、SDA/SCL に GPIO6/GPIO7 を使用）
+2. **センサー初期化**: 温度、湿度、気圧、ガス測定の設定で BME680 センサーを構成
+3. **読み取りプロセス**: 測定を開始し、データの準備完了を待機
+4. **データ処理**: 生のセンサー値を人間が読める測定値に変換
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/5.png" style={{width:800, height:'auto'}}/></div>
 
-### BLEアドバタイズ
+### BLE アドバタイズメント
 
-BLE機能は以下のように動作します：
+BLE 機能は以下のように動作します：
 
-1. **BLEスタック初期化**: ESP32のBLEスタックを設定
-2. **アドバタイズ設定**: アドバタイズのパラメータ（間隔、データ形式）を構成
-3. **データパッケージ化**: センサーの読み取り値を取得し、メーカー固有のデータとしてパッケージ化
-4. **アドバタイズの開始/停止**: アドバタイズのタイミングを制御
+1. **BLE スタック初期化**: ESP32 の BLE スタックを設定
+2. **アドバタイズメント設定**: アドバタイズメントパラメータ（間隔、データフォーマット）を構成
+3. **データパッケージング**: センサー読み取り値を取得し、メーカー固有データにパッケージ化
+4. **アドバタイズメント開始/停止**: アドバタイズメントのタイミングを制御
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/6.png" style={{width:800, height:'auto'}}/></div>
 
 ### 電源管理
 
-電源管理システムはESP32-C3の内蔵スリープ機能を使用します：
+電源管理システムは ESP32-C3 の内蔵スリープ機能を使用します：
 
-1. **ディープスリープ設定**: ESP-IDFのスリープAPI（`esp_sleep_enable_timer_wakeup()`）を使用してウェイクアップタイマーを設定
-2. **ウェイクアップソース**: タイマーを唯一のウェイクアップソースとして設定（指定された期間後にシステムがウェイクアップ）
-3. **スリープエントリ**: アクティブな周辺機器を安全にシャットダウンし、`esp_deep_sleep_start()`でディープスリープに入る
-4. **ウェイクアッププロセス**: タイマーが期限切れになると、システムがリセットされ、アプリケーションが最初から再起動
+1. **ディープスリープ設定**: ESP-IDF のスリープ API（`esp_sleep_enable_timer_wakeup()`）を使用してウェイクアップタイマーを構成
+2. **ウェイクアップソース**: タイマーを唯一のウェイクアップソースとして設定（システムは指定された時間後にウェイクアップ）
+3. **スリープ開始**: `esp_deep_sleep_start()` でディープスリープに入る前に、アクティブな周辺機器を安全にシャットダウン
+4. **ウェイクアッププロセス**: タイマーが満了すると、システムはリセットを実行し、最初からアプリケーションを再開
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/7.png" style={{width:800, height:'auto'}}/></div>
 
 電源管理コンポーネント（`power_manager.c`）は、スリープモードを処理するためのシンプルなインターフェースを提供します：
 
 ```c
-// 電源管理を初期化
+// Initialize power manager
 power_manager_init();
 
-// 後でスリープするタイミングで：
-power_manager_enter_deep_sleep(30000); // 30秒間スリープ
+// Later, when it's time to sleep:
+power_manager_enter_deep_sleep(30000); // Sleep for 30 seconds
 ```
 
-デバイスがディープスリープに入ると、消費電力は劇的に低下し（約10-20μA）、長いバッテリー寿命を実現します。デバイスは完全にシャットダウンし、タイマーが期限切れになると再起動するため、保持する必要がある状態はRTCメモリまたは不揮発性ストレージに保存する必要があります。
+デバイスがディープスリープに入ると、消費電力は劇的に低下し（約10-20 μA）、長いバッテリー寿命を実現できます。デバイスは完全にシャットダウンし、タイマーが満了すると再起動するため、保持する必要がある状態はRTCメモリまたは不揮発性ストレージに保存する必要があります。
 
 ### 消費電力プロファイル
 
-#### 電力プロファイリングのセットアップ
+#### 電力プロファイリングセットアップ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/8.webp" style={{width:600, height:'auto'}}/></div>
 
 #### 電力プロファイル
 
-システムには以下のような消費電力フェーズがあります：
+システムには以下の電力プロファイルに示すように、明確な電力使用フェーズがあります：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/9.png" style={{width:800, height:'auto'}}/></div>
 
-**消費電力フェーズ:**
+**電力フェーズ：**
 
-1. **スリープフェーズ**: ディープスリープモードで約150μA（ESP32-C3 RTCコントローラーアクティブ + BME680スリープ）
-2. **ウェイクアップと初期化**: 起動およびセンサー初期化中に約40mA
-3. **アクティブBLEアドバタイズ**: BLE送信中にピークで約16mA
-4. **クリーンアップとスリープエントリ**: スリープエントリ前のリソースクリーンアップ中に約5mA
+1. **スリープフェーズ**: ディープスリープモードで約150μA（ESP32-C3 RTCコントローラーアクティブ + bme680スリープ）
+2. **ウェイクアップ & 初期化**: 起動とセンサー初期化中に約40mA
+3. **アクティブBLEアドバタイジング**: BLE送信中のピーク約16mA
+4. **クリーンアップ & スリープエントリー**: スリープエントリー前のリソースクリーンアップ中に約5mA
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/10.png" style={{width:800, height:'auto'}}/></div>
 
-**バッテリー寿命の計算:**
+**バッテリー寿命計算：**
 
-- ディープスリープ中の平均電流（28秒間）: 150μA
-- アクティブフェーズ中の平均電流（2秒間）: 約40mA
-- 実効平均電流: 3.92 mA（1分間で測定）
-- 一般的な1500 mAhのリチウムイオンバッテリーの場合：
-  - 1500 mAh ÷ 3.92 mA ≈ 382時間 ≈ 15.9日
+- ディープスリープ中の平均電流（28秒）: 150μA
+- アクティブフェーズ中の平均電流（2秒）: 約40mA
+- 実効平均電流: 3.92 mA（1分間で測定）
+- 一般的な1500 mAh Li-Ionバッテリーの場合：
+  - 1500 mAh ÷ 3.92 mA ≈ 382時間 ≈ 15.9日
 
-**電力最適化のヒント:**
+**電力最適化のヒント：**
 
-- 高電流期間を最小限に抑えるためにアドバタイズ時間を短縮
-- 使用可能な最低のアドバタイズ電力を使用
+- アドバタイジング時間を短縮して高電流期間を最小化
+- 実現可能な最低のアドバタイジング電力を使用
 - 未使用の周辺機器を無効化
 - センサー読み取りプロセスを最適化
-- スリープ期間を延長することを検討
+- スリープ時間の延長を検討
 
-## ステップ 8: プロジェクトのカスタマイズ
+## ステップ8: プロジェクトのカスタマイズ
 
-プロジェクトのさまざまな側面をカスタマイズできます：
+プロジェクトの様々な側面をカスタマイズできます：
 
 1. **スリープ時間の変更**:
 
-   - `main.c`内の`SLEEP_TIME_MS`を編集して、読み取り間隔を調整します
+   - `main.c`の`SLEEP_TIME_MS`を編集して、読み取り頻度を調整
 
 2. **センサー設定の変更**:
 
-   - `idf.py menuconfig`を使用して、センサーのサンプリングレートやフィルターなどを変更します
+   - `idf.py menuconfig`を使用してセンサーサンプリングレート、フィルターなどを変更
 
-3. **BLEパラメータの調整**:
+3. **BLEパラメーターの調整**:
 
-   - BLEビーコンコンポーネント内でデバイス名やアドバタイズ間隔を変更します
+   - BLEビーコンコンポーネントでデバイス名やアドバタイジング間隔を変更
 
 4. **追加センサーの追加**:
-   - センサーコンポーネントを拡張して、他のGroveセンサーを含めます
+   - センサーコンポーネントを拡張して他のGroveセンサーを含める
 
 ### 独自センサーの追加
 
-別のセンサーをこのプロジェクトに統合するには、以下の手順に従います：
+このプロジェクトに異なるセンサーを統合するには、以下の手順に従ってください：
 
-1. **新しいセンサーコンポーネントを作成**:
+1. **新しいセンサーコンポーネントの作成**:
 
    ```bash
-   # コンポーネントディレクトリ構造を作成
+   # Create component directory structure
    mkdir -p components/my_new_sensor/include
    touch components/my_new_sensor/CMakeLists.txt
    touch components/my_new_sensor/Kconfig
@@ -620,13 +616,13 @@ power_manager_enter_deep_sleep(30000); // 30秒間スリープ
    touch components/my_new_sensor/include/my_new_sensor.h
    ```
 
-2. **コンポーネントインターフェースを実装**:
+2. **コンポーネントインターフェースの実装**:
 
    - 初期化関数を定義
    - データ読み取り関数を作成
    - 必要な設定をセットアップ
 
-   ヘッダーファイルの例 (`my_new_sensor.h`):
+   ヘッダーファイルの例（`my_new_sensor.h`）:
 
    ```c
    #pragma once
@@ -636,24 +632,24 @@ power_manager_enter_deep_sleep(30000); // 30秒間スリープ
    typedef struct {
        float value1;
        float value2;
-       // 追加のセンサー値
+       // Additional sensor values
    } my_sensor_data_t;
 
    /**
-    * @brief センサーを初期化
-    * @return 成功時はESP_OK
+    * @brief Initialize the sensor
+    * @return ESP_OK on success
     */
    esp_err_t my_sensor_init(void);
 
    /**
-    * @brief センサーからデータを読み取る
-    * @param data 読み取り結果を格納する構造体へのポインタ
-    * @return 成功時はESP_OK
+    * @brief Read data from the sensor
+    * @param data Pointer to structure to store readings
+    * @return ESP_OK on success
     */
    esp_err_t my_sensor_read(my_sensor_data_t *data);
    ```
 
-3. **ビルドシステムを設定**:
+3. **ビルドシステムの設定**:
    `CMakeLists.txt`の例:
 
    ```cmake
@@ -664,11 +660,11 @@ power_manager_enter_deep_sleep(30000); // 30秒間スリープ
    )
    ```
 
-4. **メインアプリケーションを更新**:
+4. **メインアプリケーションの更新**:
 
-   - メインアプリケーションの依存関係にコンポーネントを追加
+   - メインアプリケーションの依存関係にあなたのコンポーネントを追加
    - メインアプリケーションフローでセンサーを初期化
-   - BLEアドバタイズデータにセンサーの読み取り値を含める
+   - BLEアドバタイズメントデータにセンサーの読み取り値を含める
 
    `main.c`での統合例:
 
@@ -676,100 +672,100 @@ power_manager_enter_deep_sleep(30000); // 30秒間スリープ
    #include "my_new_sensor.h"
 
    void app_main(void) {
-       // 他のコンポーネントを初期化
+       // Initialize other components
        // ...
 
-       // 新しいセンサーを初期化
+       // Initialize your new sensor
        ESP_ERROR_CHECK(my_new_sensor_init());
 
-       // センサーからデータを読み取る
+       // Read from your sensor
        my_sensor_data_t sensor_data;
        ESP_ERROR_CHECK(my_sensor_read(&sensor_data));
 
-       // BLEデータを修正してセンサーの読み取り値を含める
+       // Modify BLE data to include your sensor readings
        // ...
    }
    ```
 
-5. **BLEアドバタイズデータを拡張**:
+5. **BLE広告データの拡張**:
 
-   - BLEビーコンコンポーネントを更新して、センサーのデータをアドバタイズに含める
+   - BLEビーコンコンポーネントを更新して、センサーデータを広告に含める
    - 新しい測定値に適切なデータタイプIDを割り当てる
 
-6. **設定を更新**:
+6. **設定の更新**:
    - `components/my_new_sensor/Kconfig`にセンサー用のKconfigオプションを追加
-   - これにより、`menuconfig`を通じてセンサーを設定可能にする
+   - これにより、ユーザーはmenuconfigを通じてセンサーを設定できるようになります
 
-この構造化されたアプローチに従うことで、プロジェクトのモジュール構造を維持しながら、追加センサーをシームレスに統合できます。
+この構造化されたアプローチに従うことで、プロジェクトのモジュラーアーキテクチャを維持しながら、追加のセンサーをシームレスに統合できます。
 
 ## トラブルシューティング
 
 ### 重要なヒント
 
 :::tip
-**通常動作中にシリアル出力がない**  
-最適な電力効率を実現するため、通常動作中はシリアルポートを介したデバッグ情報は出力されません。デバイスがディープスリープモードにある場合、LEDも点滅しません。これは電力消費を最小限に抑えるための意図的な設計です。
+**通常動作中のシリアル出力なし**  
+最適な電力効率のため、デバイスは通常動作中にシリアルポートを通じてデバッグ情報を出力しません。デバイスがディープスリープモードの時、LEDも点滅しません。これは消費電力を最小限に抑えるための意図的な設計です。
 
 **デバイスの再フラッシュ**  
 デバイスを再フラッシュするには：
 
-1. フラッシュプロセスを開始するときにXIAOボードのリセットボタンを押します
-2. フラッシュコマンドを、デバイスがディープスリープ状態でない短いアクティブ期間に合わせて実行します
-3. または、リセットボタンを押し続け、フラッシュコマンドを開始し、フラッシュが始まったらリセットボタンを離します
+1. フラッシュプロセスを開始する際にXIAOボードのリセットボタンを押す
+2. フラッシュコマンドのタイミングを短いアクティブ期間（デバイスがディープスリープでない時）に合わせる
+3. または、リセットボタンを押し続け、フラッシュコマンドを開始し、フラッシュが始まったらリセットボタンを離す
 
-**開発用のデバッグ出力を再有効化**  
-独自モジュールの開発やデバッグ時には、シリアル出力を再有効化できます：
+**開発用のデバッグ出力の再有効化**  
+独自のモジュールを開発したりデバッグしたりする際は、シリアル出力を再有効化できます：
 
 1. `idf.py menuconfig`を実行
 2. `Component config` → `Log output`に移動
 3. デフォルトのログレベルを`INFO`または`DEBUG`に設定
-4. ログ出力先を`UART0`に設定
-5. バッテリー寿命を維持するため、本番環境にデプロイする前に詳細なログを再度無効化することを忘れないでください
+4. ログ出力先を`UART0`として設定
+5. バッテリー寿命を保持するため、デプロイ前に詳細ログを再度無効にすることを忘れずに
 
 :::
 
-### センサーが検出されない場合
+### センサーが検出されない
 
-センサー検出に問題がある場合：
+センサー検出に問題が発生した場合：
 
-1. **接続を確認**:
+1. **接続の確認**:
 
    - Groveケーブルがセンサーと拡張ボードの両方に正しく接続されていることを確認
    - I2C Groveポートを使用していることを確認
 
 2. **I2Cアドレスの問題**:
 
-   - BME680のデフォルトI2Cアドレスは0x76です。一部のモジュールでは0x77を使用する場合があります。
+   - BME680のデフォルトI2Cアドレスは0x76です。一部のモジュールでは0x77を使用する場合があります
    - 必要に応じて設定でI2Cアドレスを編集
 
 3. **電源の問題**:
    - XIAOが十分な電力を得ていることを確認
-   - 別のUSBケーブルやポートを試す
+   - 異なるUSBケーブルまたはポートを試す
 
-### BLEがアドバタイズされない場合
+### BLEが広告しない
 
-BLEアドバタイズが検出されない場合：
+BLE広告が検出されない場合：
 
-1. **BLEスキャナーアプリを確認**:
+1. **BLEスキャナーアプリの確認**:
 
-   - 別のBLEスキャナーアプリを試す
-   - スマートフォンでBluetoothが有効になっていることを確認
+   - 異なるBLEスキャナーアプリを試す
+   - 携帯電話でBluetoothが有効になっていることを確認
 
-2. **デバッグ出力を監視**:
+2. **デバッグ出力の監視**:
 
    - `idf.py monitor`を使用してエラーメッセージを確認
 
-3. **アドバタイズ時間**:
-   - デフォルト設定では500msのみアドバタイズします。見逃した場合は、`main.c`内の`ADV_TIME_MS`を増やします
+3. **広告時間**:
+   - デフォルト設定では500msしか広告しません。見逃した場合は、`main.c`の`ADV_TIME_MS`を増やす
 
 ### ビルドまたはフラッシュの失敗
 
 ビルドまたはフラッシュの問題が発生した場合：
 
-1. **ESP-IDFのバージョン**:
+1. **ESP-IDFバージョン**:
 
    - ESP-IDF v5.0以降を使用していることを確認
-   - コマンド実行前に`. $IDF_PATH/export.sh` (Linux/macOS)または`%IDF_PATH%\export.bat` (Windows)を実行
+   - コマンド前に`. $IDF_PATH/export.sh`（Linux/macOS）または`%IDF_PATH%\export.bat`（Windows）を実行
 
 2. **USB接続**:
 
@@ -777,39 +773,39 @@ BLEアドバタイズが検出されない場合：
    - フラッシュ前にXIAO拡張ボードのリセットボタンを押してみる
 
 3. **ポートの問題**:
-   - `ls /dev/tty*` (Linux/macOS)またはデバイスマネージャー (Windows)を使用して正しいポートを特定
-   - 正しいポートを指定して`-p`フラグを使用
+   - `ls /dev/tty*`（Linux/macOS）またはデバイスマネージャー（Windows）で正しいポートを特定
+   - 正しいポートで`-p`フラグを使用
 
-## 結論
+## まとめ
 
-これで、温度、湿度、気圧、空気品質データをBLEを使用してブロードキャストする、省電力の環境モニタリングシステムを構築しました。このプロジェクトでは、以下の重要な概念を実証しています：
+これで、BLEを使用して温度、湿度、気圧、空気質データを放送する電力効率の高い環境監視システムを構築しました。このプロジェクトは、いくつかの重要な概念を実証しています：
 
-1. **センサー統合**: ESP-IDFでのI2Cセンサーの操作  
-2. **BLE通信**: BLEアドバタイズメントの作成と管理  
-3. **電力管理**: バッテリー効率を高めるためのディープスリープの実装  
-4. **ESP-IDF開発**: ESP32開発のためのEspressif公式フレームワークの使用  
+1. **センサー統合**: ESP-IDFでのI2Cセンサーの操作
+2. **BLE通信**: BLE広告の作成と管理
+3. **電力管理**: バッテリー効率の良い動作のためのディープスリープの実装
+4. **ESP-IDF開発**: ESP32用のEspressif公式フレームワークの使用
 
 ### 全体的なシステムアーキテクチャ
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao-c3-ibeacon/11.png" style={{width:800, height:'auto'}}/></div>
 
-この基盤を拡張することで、より複雑なIoTセンサーノード、環境モニタリングシステム、または資産追跡ソリューションを作成することができます。
+この基盤は、より複雑なIoTセンサーノード、環境監視システム、または資産追跡ソリューションを作成するために拡張できます。
 
 ## リソース
 
-- [ESP-IDF プログラミングガイド](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/)  
-- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/)  
-- [BME680 データシート](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)  
-- [プロジェクト GitHub リポジトリ](https://github.com/Priyanshu0901/xiao_ibeacon)  
+- [ESP-IDF プログラミングガイド](https://docs.espressif.com/projects/esp-idf/en/latest/esp32c3/)
+- [XIAO ESP32-C3 Wiki](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/)
+- [BME680 データシート](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme680/)
+- [プロジェクト GitHub リポジトリ](https://github.com/Priyanshu0901/xiao_ibeacon)
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio の [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。  
-- 特に [Priyanshu Roy](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=106309063&issue=Seeed-Studio%7Cwiki-documents%7C2422) 氏の献身的な努力に感謝します。あなたの作業は [展示](https://wiki.seeedstudio.com/contributors/) されます。
+- このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
+- [Priyanshu Roy](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=106309063&issue=Seeed-Studio%7Cwiki-documents%7C2422) 氏の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品のご利用がスムーズに進むよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

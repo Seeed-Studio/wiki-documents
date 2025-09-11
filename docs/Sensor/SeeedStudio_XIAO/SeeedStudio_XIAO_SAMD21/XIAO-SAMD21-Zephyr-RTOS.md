@@ -27,6 +27,7 @@ One of the most important components of today's embedded systems is the **RTOS**
 The [**Zephyr**](https://www.zephyrproject.org/) OS is based on a small-footprint kernel designed for use on resource-constrained and embedded systems: from simple embedded environmental sensors and LED wearables to sophisticated embedded controllers, smart watches, and IoT wireless applications.
 
 ## Feature
+
 Zephyr offers a large and ever growing number of features including:
 
 ### Extensive suite of Kernel services
@@ -43,16 +44,18 @@ Zephyr offers a number of familiar services for development:
 ### Multiple Scheduling Algorithms
 
   Zephyr provides a comprehensive set of thread scheduling choices:
-  - Cooperative and Preemptive Scheduling
-  - Earliest Deadline First (EDF)
-  - Meta IRQ scheduling implementing “interrupt bottom half” or “tasklet” behavior
-  - Timeslicing: Enables time slicing between preemptible threads of equal priority
-  - Multiple queuing strategies:
-    - Simple linked-list ready queue
-    - Red/black tree ready queue
-    - Traditional multi-queue ready queue
+
+- Cooperative and Preemptive Scheduling
+- Earliest Deadline First (EDF)
+- Meta IRQ scheduling implementing “interrupt bottom half” or “tasklet” behavior
+- Timeslicing: Enables time slicing between preemptible threads of equal priority
+- Multiple queuing strategies:
+  - Simple linked-list ready queue
+  - Red/black tree ready queue
+  - Traditional multi-queue ready queue
 
 ### Bluetooth Low Energy 5.0 support
+
 Bluetooth 5.0 compliant (ESR10) and Bluetooth Low Energy Controller support (LE Link Layer). Includes Bluetooth mesh and a Bluetooth qualification-ready Bluetooth controller.
 
 - Generic Access Profile (GAP) with all possible LE roles
@@ -80,6 +83,7 @@ The first step to working with Zephyr is to get the SDK and toolchain setup for 
 Once the Zephyr toolchain has been setup and an associated SDK has been downloaded you can begin application development.
 
 To program the Xiao SAMD21 the following steps can be taken:
+
 1. Build an example or your application
 2. Plugin the Xiao SAMD21
 3. Short the RST pin to GND (using the visible test points) to boot the MCU into bootloader mode (or press the RESET button on an attached expansion board twice in a row quickly)
@@ -102,11 +106,13 @@ Find the port for your device by typing `ls /dev/tty*` and confirming which devi
 In my example I see `/dev/ttyACM0` as the newly added device.
 
 Using screen you can then connect and monitor the serial response:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 You should see a response similar to the following:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Hello World! arm
@@ -189,24 +195,26 @@ You will see the onboard yellow LED toggle on and off creating a blinking effect
 Let's dive into this example a bit to see why it works.
 
 The associated example code reference led0:
+
 ```
 #define LED0_NODE DT_ALIAS(led0)
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET(LED0_NODE, gpios);
 ```
 
 This is defined in the Xiao SAMD21 devicetree code via an alias:
-```
-	aliases {
-		led0 = &led;
-	};
 
-	leds {
-		compatible = "gpio-leds";
-		led: led_0 {
-			gpios = <&porta 17 GPIO_ACTIVE_LOW>;
-			label = "LED";
-		};
-	};
+```
+ aliases {
+  led0 = &led;
+ };
+
+ leds {
+  compatible = "gpio-leds";
+  led: led_0 {
+   gpios = <&porta 17 GPIO_ACTIVE_LOW>;
+   label = "LED";
+  };
+ };
 ```
 
 It corresponds with the PA17 pin on the board. This can be found via the Xiao SAMD21 schematic by looking over the MCU and seeing the labeling on the pins.
@@ -217,25 +225,25 @@ For example if I were to reference D0 I'd reference it either as `&porta 2` or `
 
 ```
 / {
-	xiao_d: connector {
-		compatible = "seeed,xiao-gpio";
-		#gpio-cells = <2>;
-		gpio-map-mask = <0xffffffff 0xffffffc0>;
-		gpio-map-pass-thru = <0 0x3f>;
-		gpio-map
-			= <0 0 &porta 2 0>		/* D0 */
-			, <1 0 &porta 4 0>		/* D1 */
-			, <2 0 &porta 10 0>		/* D2 */
-			, <3 0 &porta 11 0>		/* D3 */
-			, <4 0 &porta 8 0>		/* D4 */
-			, <5 0 &porta 9 0>		/* D5 */
-			, <6 0 &portb 8 0>		/* D6 */
-			, <7 0 &portb 9 0>		/* D7 */
-			, <8 0 &porta 7 0>		/* D8 */
-			, <9 0 &porta 5 0>		/* D9 */
-			, <10 0 &porta 6 0>		/* D10 */
-			;
-	};
+ xiao_d: connector {
+  compatible = "seeed,xiao-gpio";
+  #gpio-cells = <2>;
+  gpio-map-mask = <0xffffffff 0xffffffc0>;
+  gpio-map-pass-thru = <0 0x3f>;
+  gpio-map
+   = <0 0 &porta 2 0>  /* D0 */
+   , <1 0 &porta 4 0>  /* D1 */
+   , <2 0 &porta 10 0>  /* D2 */
+   , <3 0 &porta 11 0>  /* D3 */
+   , <4 0 &porta 8 0>  /* D4 */
+   , <5 0 &porta 9 0>  /* D5 */
+   , <6 0 &portb 8 0>  /* D6 */
+   , <7 0 &portb 9 0>  /* D7 */
+   , <8 0 &porta 7 0>  /* D8 */
+   , <9 0 &porta 5 0>  /* D9 */
+   , <10 0 &porta 6 0>  /* D10 */
+   ;
+ };
 };
 ```
 
@@ -259,18 +267,18 @@ After your Xiao resets you should now be able to control the left mouse button v
 Additional buttons can be configured for use with the sample as it allows for up to 4 buttons to be configured to trigger both buttons and direction for the mouse for sample purposes.
 
 ```
-	buttons {
-		compatible = "gpio-keys";
-		xiao_button0: button_0 {
-			gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			label = "SW0";
-			zephyr,code = <INPUT_KEY_0>;
-		};
-	};
+ buttons {
+  compatible = "gpio-keys";
+  xiao_button0: button_0 {
+   gpios = <&xiao_d 1 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+   label = "SW0";
+   zephyr,code = <INPUT_KEY_0>;
+  };
+ };
 
-	aliases {
-		sw0 = &xiao_button0;
-	};
+ aliases {
+  sw0 = &xiao_button0;
+ };
 ```
 
 You can see here from the example `&xiao_d` 1 is used here to indicate the D1 pin. This mapping is provided by the Xiao SAMD21 board files and makes it conveinent for connecting to a given pin as you do not need to know the underlying MCU mapping but can rely on the Xiao pinout.
@@ -295,11 +303,13 @@ west flash
 ```
 
 Wait a moment for the MCU to reset after flashing and connect to monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 With this loaded you should see something similar to:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Sample program to r/w files on littlefs
@@ -331,6 +341,7 @@ screen /dev/ttyACM0 115200
 ```
 
 Now connecting again to the serial monitor we do not see the formatting nor does it need to create a file:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 Sample program to r/w files on littlefs
@@ -361,6 +372,7 @@ Listing dir /lfs ...
 #### TFLite - Hello World
 
 Enable TFLite with Zephyr and update:
+
 ```
 west config manifest.project-filter -- +tflite-micro
 west update
@@ -380,11 +392,13 @@ west flash
 ```
 
 Wait a moment for the MCU to reset after flashing and connect to monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 You will see results returned from the console:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 x_value: 1.0*2^-127, y_value: 1.0*2^-127
@@ -438,6 +452,7 @@ west flash
 You'll see a display showing multiple black boxes and a blinking box in the corner given this display only supports two colors.
 
 Let's dive into this example a bit to see why it works:
+
 ```
 / {
     chosen {
@@ -481,6 +496,7 @@ west flash
 ```
 
 Wait a moment for the MCU to reset after flashing and connect to monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -503,6 +519,7 @@ Button pressed at 591496990
 ```
 
 Let's dive into this example a bit to see why it works:
+
 ```
 / {
     aliases {
@@ -536,13 +553,14 @@ west build -p always -b seeeduino_xiao samples/basic/blinky_pwm -- -DDTC_OVERLAY
 After uploading the uf2 file you should begin hearing a series of buzzes which change in sound as the sample runs its course.
 
 Let's look at why this works:
+
 ```
 /delete-node/ &pwm_led0;
 
 / {
-	aliases {
-		pwm-led = &pwm_led0;
-	};
+ aliases {
+  pwm-led = &pwm_led0;
+ };
 
     pwm_leds {
         status = "okay";
@@ -555,22 +573,22 @@ Let's look at why this works:
 };
 
 &pinctrl {
-	pwm_default: pwm_default {
-		group1 {
-			pinmux = <PA11E_TCC1_WO1>;
-		};
-	};
+ pwm_default: pwm_default {
+  group1 {
+   pinmux = <PA11E_TCC1_WO1>;
+  };
+ };
 };
 
 &tcc1 {
-	status = "okay";
-	compatible = "atmel,sam0-tcc-pwm";
-	/* Gives a maximum period of 1.4 s */
-	prescaler = <1024>;
-	#pwm-cells = <2>;
+ status = "okay";
+ compatible = "atmel,sam0-tcc-pwm";
+ /* Gives a maximum period of 1.4 s */
+ prescaler = <1024>;
+ #pwm-cells = <2>;
 
-	pinctrl-0 = <&pwm_default>;
-	pinctrl-names = "default";
+ pinctrl-0 = <&pwm_default>;
+ pinctrl-names = "default";
 };
 ```
 
@@ -588,6 +606,7 @@ west build -p always -b seeeduino_xiao samples/subsys/fs/fs_sample -- -DDTC_OVER
 ```
 
 After uploading the uf2 file connect to monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
@@ -608,6 +627,7 @@ Listing dir /SD: ...
 In this case my SD card had two files. Their names and their sizes were outputted to my console.
 
 Let's look over the relevant elements at play here:
+
 ```
 CONFIG_SPI=y
 CONFIG_DISK_DRIVER_SDMMC=y
@@ -620,19 +640,19 @@ The relevant part of the Xiao Expansion Board shield is actually overridden in t
 
 ```
 &xiao_spi {
-	status = "okay";
-	cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+ status = "okay";
+ cs-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
 
-	sdhc0: sdhc@0 {
-		compatible = "zephyr,sdhc-spi-slot";
-		reg = <0>;
-		status = "okay";
-		mmc {
-			compatible = "zephyr,sdmmc-disk";
-			status = "okay";
-		};
-		spi-max-frequency = <10000000>;
-	};
+ sdhc0: sdhc@0 {
+  compatible = "zephyr,sdhc-spi-slot";
+  reg = <0>;
+  status = "okay";
+  mmc {
+   compatible = "zephyr,sdmmc-disk";
+   status = "okay";
+  };
+  spi-max-frequency = <10000000>;
+ };
 };
 ```
 
@@ -661,11 +681,13 @@ west flash
 ```
 
 Wait a moment for the MCU to reset after flashing and connect to monitor:
+
 ```
 screen /dev/ttyACM0 115200
 ```
 
 You will see results returned from the console:
+
 ```
 *** Booting Zephyr OS build v3.6.0-2566-gc9b45bf4672a ***
 SHT3XD: 26.13 Cel ; 47.34 %RH
@@ -681,6 +703,7 @@ SHT3XD: 26.27 Cel ; 47.72 %RH
 ```
 
 Let's dive into this example a bit to see why it works:
+
 ```
 &xiao_i2c {
   status = "okay";
@@ -723,6 +746,7 @@ First connect your board to the LCD screen using the following image as a guide 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/lcd_spi_display/10.png" style={{width:700, height:'auto'}}/></div>
 
 Next with the hardware prepared we can build and flash:
+
 ```
 cd ~/zephyrproject/zephyr
 west build -p always -b seeeduino_xiao samples/drivers/display -- -DDTC_OVERLAY_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.overlay -DEXTRA_CONF_FILE=$(dirname $(pwd))/applications/xiao-zephyr-examples/240x280_st7789v2.conf
@@ -738,7 +762,6 @@ With the new firmware in place the device now shows the same demo screen we saw 
 
 <!-- <div style={{textAlign:'center'}}><img src="https://github.com/Cosmic-Bee/xiao-zephyr-examples/blob/main/images/samd21/spi_lcd.jpg?raw=true" style={{width:300, height:'auto'}}/></div> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/xiao_samd21_zephyr/spi_lcd.jpg" style={{width:600, height:'auto'}}/></div>
-
 
 ## ✨ Contributor Project
 

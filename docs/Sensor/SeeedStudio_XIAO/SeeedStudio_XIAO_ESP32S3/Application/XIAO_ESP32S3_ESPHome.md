@@ -14,7 +14,6 @@ last_update:
 
 This Wiki will walkthrough step-by-step on how to connect [Seeed Studio XIAO ESP32S3](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/) with ESPHome running on Home Assistant and send the sensor data/ control devices after connecting Grove modules to XIAO ESP32S3. So, let's get started!
 
-
 ## What are ESPHome and Home Assistant?
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/2.png" style={{width:600, height:'auto'}}/></div>
@@ -56,7 +55,6 @@ If you want to follow this tutorial through everything, you will need to prepare
     </tr>
   </tbody></table>
 
-
 #### Utilized Sensors
 
 - [Grove - Temperature and Humidity Sensor (BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)<br />
@@ -89,13 +87,11 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 
 - **Step 1.** Click **INSTALL**
 
-
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/2.png" style={{width:900, height:'auto'}}/></div>
 
 - **Step 2.** Enable all the options and click **START**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
-
 
 <!-- 
 - **Step 3.** Click **INSTALL**
@@ -115,13 +111,11 @@ ESPHome is available as a **Home Assistant Add-On** and can simply be installed 
 You will see the following window if ESPHome is successfully loaded
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/9.png" width="700"> -->
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div> 
-
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
 
 ## Getting Started
 
 Once all the software and the hardware are really, we can now get started.
-
 
 ### 1. Add Seeed Studio XIAO ESP32S3 (Sense) to ESPHome
 
@@ -135,18 +129,15 @@ Once all the software and the hardware are really, we can now get started.
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/11.png" width="300"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-
 - **Step 3.** Enter a **Name** for the device and enter WiFi credentials such as **Network name** and **Password**. Then click **NEXT**
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/12.png" width="300"> 1.png-->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/1.png" style={{width:400, height:'auto'}}/></div>
 
-
 - **Step 4.** Select **ESP32-S3** and click
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/13.png" width="300"> 2.png-->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/2.png" style={{width:400, height:'auto'}}/></div>
-
 
 - **Step 5.** Click **SKIP** because we will configure this board manually
 
@@ -154,10 +145,9 @@ Once all the software and the hardware are really, we can now get started.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
 - **Step 6.** Click **EDIT** under the newly created board
- 
+
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/15.png" width="300"> 3.png-->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/3.png" style={{width:400, height:'auto'}}/></div>
-
 
 - **Step 7.** This will open a **YAML** file and this file will be used to set all the board configurations. Edit the content under **esp32** as follows
 
@@ -207,19 +197,18 @@ wifi:
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/17.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/17.png" style={{width:900, height:'auto'}}/></div>
 
-
 - **Step 10.** Click **Plug into the computer running ESPHome Dashboard**
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/18.png" width="300"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/5.png" style={{width:900, height:'auto'}}/></div>
 
-- **Step 11.** Select the connected port. It is likely to be ```/dev/ttyACM1 because /dev/ttyACM0``` is connected to the reRouter CM4 1432
+- **Step 11.** Select the connected port. It is likely to be ```/dev/ttyACM1``` because ```/dev/ttyACM0``` is connected to the reRouter CM4 1432
 
  <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/19.png" width="700"> -->
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/6.png" style={{width:900, height:'auto'}}/></div>
 
-:::tip 
+:::tip
 Better to use 2.4GHz Wi-Fi
 :::
 
@@ -244,8 +233,6 @@ Now you can disconnect the XIAO ESP32S3 from the reRouter CM4 1432 and just powe
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/22.png" width="300"> -->
 
-
-
 - 1. Click the **three dots** and click **Install**
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/23.png" width="300"> -->
@@ -262,7 +249,6 @@ Now you can disconnect the XIAO ESP32S3 from the reRouter CM4 1432 and just powe
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/25.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/19.png" style={{width:900, height:'auto'}}/></div>
-
 
 - **Step 15.** You will see **ESPHome** as a discovered integration. Click **CONFIGURE**
 
@@ -387,7 +373,6 @@ sensor:
 
 You can learn more about the [BME680 component](https://esphome.io/components/sensor/bme680) here. It allows you to use BME280, BME680, BMP085, BMP280, AHT10, AHT20 and AHT21 based sensors. Here we add the I²C Bus component because AHT20 communicates using I2C protocol.
 
-
 ##### Visualize on Dashboard
 
 - **Step 1.** On the Overview page of Home Assistant, click the 3 dots and click **Edit Dashboard**
@@ -399,7 +384,6 @@ You can learn more about the [BME680 component](https://esphome.io/components/se
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/32.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/16.png" style={{width:900, height:'auto'}}/></div>
-
 
 - **Step 3.** Select **By ENTITY**, type **temperature** and select the **check box** next to **Temperature**
 
@@ -434,7 +418,7 @@ Now your Home Assistant dashboard will look like below
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/37.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/21.png" style={{width:900, height:'auto'}}/></div>
-   
+
 <br />
 
 #### Grove -Smart Air Quality Sensor (SGP41)
@@ -611,7 +595,6 @@ The Same as before.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/24.png" style={{width:900, height:'auto'}}/></div>
 <br />
 
-
 #### OV2640/OV3660 camera (XIAO ESP32S3 Sense)
 
 ##### Setup Configuration
@@ -712,7 +695,6 @@ esp32_camera_web_server:
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32S3/blob/main/Figures/camera.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/27.png" style={{width:400, height:'auto'}}/></div>
 
-
 #### PDM microphone for Voice Assistant
   
 ##### Setup Configuration
@@ -805,7 +787,6 @@ binary_sensor:
 
 ##### Visualize on Dashboard
 
-
 - **Step 1.** On the Overview page of Home Assistant, click the 3 dots and click **Edit Dashboard**
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/31.png" width="700"> -->
@@ -831,7 +812,6 @@ binary_sensor:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/31.png" style={{width:600, height:'auto'}}/></div>
 
 **Note:** For more information, please [read it.](https://esphome.io/components/voice_assistant.html)
-
 
 #### 6x10 RGB MATRIX for XIAO
 
@@ -895,19 +875,14 @@ light:
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/31.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/15.png" style={{width:900, height:'auto'}}/></div>
 
-
-
 - **Step 3.** Click **+ ADD CARD**
 
 <!-- <img src="https://github.com/Zachay-NAU/ESPHome-Support-on-Seeed-Studio-XIAO-ESP32C3/blob/main/pictures/32.png" width="700"> -->
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/16.png" style={{width:900, height:'auto'}}/></div>
 
-
-
 - **Step 4.** Select **By ENTITY**, type **xiao** and select the **check box** next to **sixtyled XIAO LEDS**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/add_card.png" style={{width:900, height:'auto'}}/></div>
-
 
 - **Step 5.** Click **CONTINUE** and **Add to Dashboard**
 
@@ -916,7 +891,6 @@ light:
 - **Step 6.** Subsequently, you can find a card in the "Overview" section where you can control the 6x10 RGB MATRIX for XIAO. Here, you can toggle its on/off state and customize its color and brightness.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/S3-ESPHome-full_function/LEDdemo.gif" style={{width:600, height:'auto'}}/></div>
-
 
 ## ✨ Contributor Project
 
@@ -929,12 +903,11 @@ light:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

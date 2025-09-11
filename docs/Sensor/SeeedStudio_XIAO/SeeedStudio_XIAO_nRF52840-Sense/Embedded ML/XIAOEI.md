@@ -105,19 +105,17 @@ With all the software in place it's time to connect the development board to Edg
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE-Motion-Recognition/Motion-Recognition10.png" alt="pir" width={1000} height="auto" /></p>
 
-
 ## Data Acquisition & Training
 
 :::note
-In this step we are trying collect the "Accelerometer data" from the Seeed Studio XIAO nRF52840 Sense onboard IMU to build a dataset and then later train the model with EdgeImpulse platform. 
+In this step we are trying collect the "Accelerometer data" from the Seeed Studio XIAO nRF52840 Sense onboard IMU to build a dataset and then later train the model with EdgeImpulse platform.
 :::
 
-- **Step 4.** Upload "Accelerometer Raw Data" sketch to Seeed Studio XIAO nRF52840 Sense. 
+- **Step 4.** Upload "Accelerometer Raw Data" sketch to Seeed Studio XIAO nRF52840 Sense.
 
 [Download Seeed_Arduino_LSM6DS3 Library](https://github.com/Seeed-Studio/Seeed_Arduino_LSM6DS3) as a zip file
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/LSM6DS3-github-zip.png" alt="pir" width={1000} height="auto" /></p>
-
 
 Open Arduino IDE, navigate to `Sketch > Include Library > Add .ZIP Library...` and open the downloaded zip file.
 
@@ -154,7 +152,6 @@ void setup() {
 }
 
 
-
 void loop() {
   if (millis() > last_interval_ms + INTERVAL_MS) {
     last_interval_ms = millis();
@@ -173,7 +170,6 @@ Now you will see the accelerometer and gyroscope  data displayed one after the o
 
 <p style={{textAlign: 'center'}}><img src="https://workshop.makergram.com/assets/images/raawIMUSerial-095365f65dd0cde808620906ab5a7ab8.png" alt="IMU Raw" width={800} height="auto" /></p>
 
-
 - **Step 5.** Run the command in your `terminal` or `cmd` or `powershell` to start it.
 
 ```
@@ -191,7 +187,6 @@ Name the accelerometer and the device.
 - **Step 7.** Connect the XIAO nRF52840 Sense to Edge Inpulse
 
 Move to Edge Impulse "Data acquisition" page, the outcome should be like this if the connection is successful. You can find the Device of "Seeed Studio XIAO nRF52840 Sense" is shown on the right of the page.
-
 
 - **Step 8.**  Select the sensor as "3 axes". Name your label as `up` and `down`, modify Sample length (ms.) to 20000 and click start sampling.
 
@@ -323,16 +318,14 @@ Congratulation! You acheve the end of the project. It is encouraged that you can
 
 ## Tech Support & Product Discussion
 
-.
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

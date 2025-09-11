@@ -1,5 +1,5 @@
-position: 2 # 浮動小数点の位置がサポートされています
+position: 2 # float position is supported
 label: 'XIAO MG24'
 collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsed: true # デフォルトでカテゴリを開いたままにする
 className: xiao_mg24

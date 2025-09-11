@@ -1,20 +1,16 @@
 ---
 title: Seeed Studio XIAO MG24 Sense 内蔵センサー
-description: 本記事では、XIAO MG24 Sense のマイクの使用方法について説明します。
+description: この記事では、XIAO MG24 Sense のマイクロフォンの使用方法について説明します。
 image: https://files.seeedstudio.com/wiki/mg24_mic/mg24.jpg
 slug: /ja/xiao_mg24_sense_built_in_sensor
 keywords:
   - XIAO
   - MG24
 last_update:
-  date: 05/15/2025
+  date: 11/20/2024 
   author: Jason
 sidebar_position: 3
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Seeed Studio XIAO MG24 Sense 内蔵センサーの使用方法
 
@@ -22,25 +18,27 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### 内蔵センサーの概要
 
-**6軸IMU（慣性計測ユニット）** センサーである **LSM6DS3TR-C** は、加速度計とジャイロスコープを統合しており、物体の三次元空間での動きや姿勢を測定します。特に、LSM6DS3TR-C には以下の機能があります：
+**6軸IMU（慣性測定ユニット）**センサーである**LSM6DS3TR-C**のようなセンサーは、加速度計とジャイロスコープを統合して、3次元空間における物体の動きと方向を測定します。具体的に、LSM6DS3TR-Cには以下の機能があります：
 
-**加速度計の機能:**
-- X、Y、Z軸に沿った物体の加速度を測定します。物体の動き（例：静止、加速、減速）や傾きの変化（例：物体の角度）を感知できます。
-- 歩行、位置変化、振動などを検出するために使用できます。
+**加速度計機能：**
+
+- X、Y、Z軸に沿った物体の加速度を測定します。物体の動き（例：静止、加速、減速）と傾きの変化（例：物体の角度）を感知することができます。
+- 歩行、位置変化、振動などの検出に使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz1.5.jpg" style={{width:320, height:'auto'}}/></div>
 
-**ジャイロスコープの機能（ジャイロスコープ）:**
+**ジャイロスコープ機能：**
+
 - X、Y、Z軸周りの物体の角速度、つまり物体の回転を測定します。
-- 回転、回転速度、方向の変化を検出するために使用できます。
+- 回転、回転速度、方向の変化の検出に使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz2.0.jpg" style={{width:320, height:'auto'}}/></div>
 
-- **X軸角度（ロール）** は、X軸周りの回転方向の角度です。
-- **Y軸角度（ピッチ）** は、Y軸周りの回転方向の角度です。
-- **Z軸角度（ヨー）** は、Z軸周りの回転方向の角度です。
+- **X軸角度（Roll）**は、X軸周りの回転方向の角度です。
+- **Y軸角度（Pitch）**は、Y軸周りの回転方向の角度です。
+- **Z軸角度（Yaw）**は、Z軸周りの回転方向の角度です。
 
-### ソフトウェア準備
+### ソフトウェアの準備
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/Seeed_Arduino_LSM6DS3" target="_blank" rel="noopener noreferrer">
@@ -48,63 +46,66 @@ https://github.com/Seeed-Studio/wiki-documents/issues
     </a>
 </div>
 
-GitHub のダウンロードリンクをクリックして、6軸センサー用のドライバを取得してください。
+GitHubダウンロードリンクをクリックして、6軸センサーのドライバーをダウンロードしてください。
 
 ### コード実装
+
 ```cpp
 
 #include <LSM6DS3.h>
 #include <Wire.h>
 
-// LSM6DS3クラスのインスタンスを作成
-LSM6DS3 myIMU(I2C_MODE, 0x6A);    // I2Cデバイスアドレス 0x6A
+//Create a instance of class LSM6DS3
+LSM6DS3 myIMU(I2C_MODE, 0x6A);    //I2C device address 0x6A
 float aX, aY, aZ, gX, gY, gZ;
-const float accelerationThreshold = 2.5; // 重要な加速度の閾値（単位：G）
+const float accelerationThreshold = 2.5; // threshold of significant in G's
 const int numSamples = 119;
 int samplesRead = numSamples;
 
 void setup() {
-  // 初期設定
+  // put your setup code here, to run once:
   Serial.begin(9600);
   while (!Serial);
 
   pinMode(PD5,OUTPUT);
   digitalWrite(PD5,HIGH);
-  // IMUを設定するために.begin()を呼び出す
+  //Call .begin() to configure the IMUs
   if (myIMU.begin() != 0) {
-    Serial.println("デバイスエラー");
+    Serial.println("Device error");
   } else {
     Serial.println("aX,aY,aZ,gX,gY,gZ");
   }
 }
 
 void loop() {
-  // 重要な動きを待機
+  // wait for significant motion
   while (samplesRead == numSamples) {
-    // 加速度データを読み取る
+    // read the acceleration data
     aX = myIMU.readFloatAccelX();
     aY = myIMU.readFloatAccelY();
     aZ = myIMU.readFloatAccelZ();
 
-    // 絶対値を合計
+    // sum up the absolutes
     float aSum = fabs(aX) + fabs(aY) + fabs(aZ);
 
-    // 閾値を超えているか確認
+    // check if it's above the threshold
     if (aSum >= accelerationThreshold) {
-      // サンプル読み取りカウントをリセット
+      // reset the sample read count
       samplesRead = 0;
       break;
     }
   }
 
-  // 前回の重要な動き検出以降、必要なサンプルがすべて読み取られたか確認
+  // check if the all the required samples have been read since
+  // the last time the significant motion was detected
   while (samplesRead < numSamples) {
-    // 新しい加速度とジャイロスコープデータが利用可能か確認
-    // 加速度とジャイロスコープデータを読み取る
+    // check if both new acceleration and gyroscope data is
+    // available
+    // read the acceleration and gyroscope data
 
     samplesRead++;
 
-    // データをCSV形式で出力
+    // print the data in CSV format
     Serial.print(myIMU.readFloatAccelX(), 3);
     Serial.print(',');
     Serial.print(myIMU.readFloatAccelY(), 3);
@@ -119,50 +120,57 @@ void loop() {
     Serial.println();
 
     if (samplesRead == numSamples) {
-      // 最後のサンプルの場合、空行を追加
+      // add an empty line if it's the last sample
       Serial.println();
     }
   }
 }
 ```
+
 :::tip
 
-LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追加している場合は、バージョン2.0.4以上を再ダウンロードし、ZIPファイルをArduinoに追加する必要があります。
+LSM6DS3ライブラリのアップデートにより、以前にこのライブラリをユーザーに追加したことがある場合は、バージョン2.0.4以上を再ダウンロードし、ZIPファイルをArduinoに追加する必要があります。
 
 :::
+
 ### 機能概要
+
 - **ライブラリのインクルード**
+
   ```cpp
     #include <LSM6DS3.h> 
     #include <Wire.h>
   ```
+
   - LSM6DS3センサーとの通信用ライブラリを含みます。
   - I2C通信用ライブラリを含みます。
-    
+
 - **センサーインスタンスの作成**
-    - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` は、IMUセンサー用のLSM6DS3クラスのインスタンスを作成し、I2C通信モードとデバイスアドレス0x6Aを指定します。
+  - `LSM6DS3 myIMU(I2C_MODE, 0x6A)` IMUセンサー用のLSM6DS3クラスのインスタンスを作成し、I2C通信モードとデバイスアドレス0x6Aを指定します。
 
 - **変数と定数**
-    - `float aX, aY, aZ, gX, gY, gZ`: 加速度計とジャイロスコープデータを格納する変数。
-    - `const float accelerationThreshold = 2.5`: 重要な動きを検出するための閾値（単位：G）。
-    - `const int numSamples = 119`: 重要な動きを検出した後に収集するサンプル数。
-    - `int samplesRead = numSamples`: サンプルカウンタを初期化し、データがまだ収集されていないことを示します。
+  - `float aX, aY, aZ, gX, gY, gZ`: 加速度計とジャイロスコープのデータを格納する変数。
+  - `const float accelerationThreshold = 2.5`: 重要な動きを検出するためのG単位での閾値。
+  - `const int numSamples = 119`: 重要な動きを検出した後に収集するサンプル数。
+  - `int samplesRead = numSamples`: サンプルカウンターを総サンプル数で初期化し、まだデータが収集されていないことを示します。
 
 - **基本設定**
+
   ```cpp
     pinMode(PD5,OUTPUT);
     digitalWrite(PD5,HIGH);
   ```
 
-- ジャイロ有効ピンをオンにします。
+  - ジャイロ有効ピンをオンにします。
 
 - **データ処理**
+
     ```cpp
-    aX = myIMU.readFloatAccelX();
-    aY = myIMU.readFloatAccelY();
-    aZ = myIMU.readFloatAccelZ();
+    aX = myIMU.readFloatAccelX();:
+    aY = myIMU.readFloatAccelY();:
+    aZ = myIMU.readFloatAccelZ();:
     float aSum = fabs(aX) + fabs(aY) + fabs(aZ);
-    ``` 
+    ```
 
   - X軸方向の加速度を読み取ります。
   - Y軸方向の加速度を読み取ります。
@@ -170,16 +178,18 @@ LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追�
   - 加速度データの絶対値の合計を計算します。`fabs()`は絶対値を返します。
 
   ```cpp
-    // 閾値を超えているか確認
+    // check if it's above the threshold
     if (aSum >= accelerationThreshold) {
-      // サンプル読み取り回数をリセット
+      // reset the sample read count
       samplesRead = 0;
       break;
     }
   ```
-  - 絶対加速度値の合計が設定された閾値以上の場合、サンプルカウント`samplesRead`を0にリセットし、ループを終了します。
 
-- **データ確認**
+  - 絶対加速度値の合計が設定された閾値以上の場合、サンプル数samplesReadを0にリセットしてループを終了します。
+
+- **データの確認**
+
   ```cpp
   while (samplesRead < numSamples) {
     samplesRead++;
@@ -189,23 +199,23 @@ LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追�
     .
     .
     if (samplesRead == numSamples) {
-      // 最後のサンプルの場合は空行を追加
+      // add an empty line if it's the last sample
       Serial.println();
     }
   }
   ```
 
-  - 別のループに移動し、必要なサンプル数が読み取られたか確認します。
-  - `samplesRead`のカウントを増加させます。
-  - すべてのサンプルが読み取られた場合、データ出力を区切るために空行を出力します。
+  - 別のループに移動し、必要なサンプル数が読み取られたかどうかを確認します。
+  - samplesReadのカウントを増加させます。
+  - すべてのサンプルが読み取られた場合、データ出力を区切るために空行を印刷します。
 
 ### 結果チャート
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/six_resutl.png" style={{width:700, height:'auto'}}/></div>
 
-### さらに詳しく
+### より詳しく
 
-より多くのサンプルコードが必要な場合は、次をクリックしてください：**"File" -> Example -> Seeed Arduino LSM6DS3"**
+より多くのサンプルコードが必要な場合は、**「File」-> Example -> Seeed Arduino LSM6DS3」**をクリックしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/33.png" style={{width:500, height:'auto'}}/></div>
 
@@ -214,28 +224,28 @@ LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追�
 ### ハードウェア準備
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Seeeduino-XIAO-拡張ボード</th>
-			<th>Seeed Studio XIAO MG24 Sense</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Seeeduino-XIAO-Expansion-Board</th>
+   <th>Seeed Studio XIAO MG24 Sense</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_MG24/Getting_Start/shop.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-MG24-Sense-p-6248.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ### ソフトウェア準備
@@ -243,7 +253,7 @@ LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追�
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/arduino_mouse.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
-ツールバーで対応するスタックを選択してプログラムを焼き込む必要があります。
+プログラムを書き込むために、ツールバーで対応するスタックを選択する必要があります。
 :::
 
 <details>
@@ -259,10 +269,10 @@ LSM6DS3ライブラリの更新に伴い、以前にこのライブラリを追�
 #define IMU_ACC_X_THRESHOLD 10
 #define IMU_ACC_Y_THRESHOLD 10
 
-// マウスボタンイベント
+// Mouse button events
 #define LMB_PRESSED 1
 
-// HIDレポートデータ
+// HID report data
 struct mouse_data {
   int8_t delta_x;
   int8_t delta_y;
@@ -270,14 +280,14 @@ struct mouse_data {
 };
 static mouse_data report;
 
-// HIDレポートデータバッファ
+// HID report data buffer
 static uint8_t report_array[] = { 0x00, 0x00, 0x00 };
 
 static uint8_t connection_handle = SL_BT_INVALID_CONNECTION_HANDLE;
 static uint32_t bonding_handle = SL_BT_INVALID_BONDING_HANDLE;
 static uint16_t hid_report;
 
-// デバイス情報サービス
+// Device information service
 const uint8_t manufacturer[] = "Silicon Labs";
 const uint8_t model_no[] = "1";
 const uint8_t serial_no[] = "1";
@@ -295,17 +305,17 @@ static void ble_initialize_gatt_db();
 static void ble_start_advertising();
 static void mouse_button_callback();
 
-// 左クリック用にボタンをオプションで接続
+// Optionally connect a button for left click
 #define MOUSE_BUTTON D1
 
 LSM6DS3 myIMU(I2C_MODE, 0x6A);
 
 void setup()
 {
-  // レポートデータを初期化
+  // Initialize report data
   memset(&report, 0, sizeof(report));
 
-  // IMU電源を有効化
+  // Enable the IMU power
   pinMode(PD5, OUTPUT);
   digitalWrite(PD5, HIGH);
   delay(300);
@@ -324,7 +334,7 @@ void setup()
 
 void loop()
 {
-  // '左マウスボタン'ビットを更新
+  // Update 'left mouse button' bit
   if (button_press) {
     report.buttons |= LMB_PRESSED;
     if (!button_press_prev) {
@@ -336,11 +346,12 @@ void loop()
     report.buttons &= ~LMB_PRESSED;
   }
 
-  // ボードの正しい向きに合わせてxとyを変更
+  // Change x and y for correct orientation of the boards
   acc_y = (int32_t)(myIMU.readFloatAccelX() * 10.0f);
   acc_x = (int32_t)(myIMU.readFloatAccelY() * 10.0f * -1.0f);
 
-  // 加速度値が閾値を超えた場合、閾値を割り当てる
+  // In case the acceleration value would surpass the threshold value
+  // in positive or negative direction assign the threshold value
   if (acc_x > IMU_ACC_X_THRESHOLD) {
     report.delta_x = IMU_ACC_X_THRESHOLD;
   } else if (acc_x < (-1 * IMU_ACC_X_THRESHOLD)) {
@@ -359,7 +370,7 @@ void loop()
 
   memcpy(report_array, &report, sizeof(report));
   if (connection_handle != SL_BT_INVALID_CONNECTION_HANDLE && bonding_handle != SL_BT_INVALID_BONDING_HANDLE) {
-    // GATT通知でレポートデータの変更を示す
+    // Indicate report data change with GATT notification
     sc = sl_bt_gatt_server_notify_all(hid_report, sizeof(report_array), report_array);
     if (sc != SL_STATUS_OK) {
       Serial.print("sl_bt_gatt_server_notify_all() returned with error code 0x");
@@ -376,7 +387,7 @@ void loop()
 }
 
 /******************************************************************************
- * マウスボタンコールバック
+ * Mouse button callback
  *****************************************************************************/
 void mouse_button_callback()
 {
@@ -388,10 +399,10 @@ void mouse_button_callback()
 }
 
 /******************************************************************************
- * Bluetoothスタックイベントハンドラ
- * BLEスタックでイベントが発生したときに呼び出される
+ * Bluetooth stack event handler
+ * Called when an event happens on BLE the stack
  *
- * @param[in] evt Bluetoothスタックからのイベント
+ * @param[in] evt Event coming from the Bluetooth stack
  *****************************************************************************/
 void sl_bt_on_event(sl_bt_msg_t* evt)
 {
@@ -400,26 +411,26 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
 
   switch (SL_BT_MSG_ID(evt->header)) {
     // -------------------------------
-    // デバイスが起動し、ラジオが準備完了したことを示すイベント
+    // This event indicates the device has started and the radio is ready
     case sl_bt_evt_system_boot_id:
     {
-      // BLEアドレスとアドレスタイプを取得
+      // Get BLE address and address type
       sc = sl_bt_system_get_identity_address(&ble_address, &ble_address_type);
       app_assert_status(sc);
 
-      // ウェルカムメッセージを出力
+      // Print welcome message
       Serial.begin(115200);
       Serial.println();
       Serial.println("BLE stack booted");
 
-      // アプリケーション固有のGATT DBを初期化
+      // Initialize the application specific GATT DB
       ble_initialize_gatt_db();
 
-      // HID入力デバイスには必須のセキュリティレベルとボンディングが必要
+      // HID input devices requires mandatory secure level and bonding
       sc = sl_bt_sm_configure(0, sl_bt_sm_io_capability_noinputnooutput);
       app_assert_status(sc);
 
-      // ボンディングを許可
+      // Allow bonding
       sc = sl_bt_sm_set_bondable_mode(1);
       app_assert_status(sc);
 
@@ -428,10 +439,10 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // BLE接続が開かれたことを示すイベント
+    // This event indicates that a BLE connection has been opened
     case sl_bt_evt_connection_opened_id:
     {
-      // インディケーション送信に必要な接続ハンドルを保存
+      // Store the connection handle which will be needed for sending indications
       connection_handle = evt->data.evt_connection_opened.connection;
       bonding_handle = evt->data.evt_connection_opened.bonding;
       Serial.print("Connection opened - handle 0x");
@@ -450,7 +461,7 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // ボンディングが成功したことを示すイベント
+    // This event indicates that bonding was successful
     case sl_bt_evt_sm_bonded_id:
     {
       Serial.print("Bonded - handle: 0x");
@@ -464,7 +475,7 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // BLE接続が閉じられたことを示すイベント
+    // This event indicates that a BLE connection has closed
     case sl_bt_evt_connection_closed_id:
     {
       Serial.print("Connection closed - handle: 0x");
@@ -484,7 +495,7 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // 接続パラメータが変更されたことを示すイベント
+    // This event indicates that the connection parameters have changed
     case sl_bt_evt_connection_parameters_id:
     {
       Serial.print("Set connection parameters, security_mode: ");
@@ -493,7 +504,7 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // ボンディングが失敗したことを示すイベント
+    // This event indicates that bonding has failed
     case sl_bt_evt_sm_bonding_failed_id:
     {
       Serial.print("Bonding failed, reason: 0x");
@@ -510,15 +521,15 @@ void sl_bt_on_event(sl_bt_msg_t* evt)
     break;
 
     // -------------------------------
-    // デフォルトイベントハンドラ
+    // Default event handler
     default:
       break;
   }
 }
 
 /******************************************************************************
- * BLE広告を開始
- * 初回呼び出し時に広告を初期化
+ * Starts BLE advertisement
+ * Initializes advertising if it's called for the first time
  *****************************************************************************/
 static void ble_start_advertising()
 {
@@ -527,34 +538,34 @@ static void ble_start_advertising()
   sl_status_t sc;
 
   if (init) {
-    // 広告セットを作成
+    // Create an advertising set
     sc = sl_bt_advertiser_create_set(&advertising_set_handle);
     app_assert_status(sc);
 
-    // 広告間隔を100msに設定
+    // Set advertising interval to 100ms
     sc = sl_bt_advertiser_set_timing(
       advertising_set_handle,
-      160,  // 最小広告間隔（ミリ秒 * 1.6）
-      160,  // 最大広告間隔（ミリ秒 * 1.6）
-      0,    // 広告期間
-      0);   // 最大広告イベント数
+      160,  // Minimum advertisement interval (milliseconds * 1.6)
+      160,  // Maximum advertisement interval (milliseconds * 1.6)
+      0,    // Advertisement duration
+      0);   // Maximum number of advertisement events
     app_assert_status(sc);
 
     init = false;
   }
 
-  // 広告データを生成
+  // Generate data for advertising
   sc = sl_bt_legacy_advertiser_generate_data(advertising_set_handle, sl_bt_advertiser_general_discoverable);
   app_assert_status(sc);
 
-  // 広告を開始し、接続を有効化
+  // Start advertising and enable connections
   sc = sl_bt_legacy_advertiser_start(advertising_set_handle, sl_bt_advertiser_connectable_scannable);
   app_assert_status(sc);
 
   Serial.print("Started advertising as '");
   Serial.print(DEVICE_NAME);
   Serial.print("' address: ");
-  // アドレスを'FF:FF:FF:FF:FF:FF'形式で出力
+  // Print address in format 'FF:FF:FF:FF:FF:FF'
   for (uint8_t i = (sizeof(bd_addr) - 1); i > 0; i--) {
     Serial.print(ble_address.addr[i], HEX);
     Serial.print(":");
@@ -563,8 +574,8 @@ static void ble_start_advertising()
 }
 
 /******************************************************************************
- * GATTデータベースを初期化
- * 新しいGATTセッションを作成し、特定のサービスと特性を追加
+ * Initializes the GATT database
+ * Creates a new GATT session and adds certain services and characteristics
  *****************************************************************************/
 static void ble_initialize_gatt_db()
 {
@@ -574,11 +585,11 @@ static void ble_initialize_gatt_db()
   uint16_t characteristic;
   uint16_t descriptor;
 
-  // 新しいGATTデータベースを作成
+  // Create a new GATT database
   sc = sl_bt_gattdb_new_session(&gattdb_session_id);
   app_assert_status(sc);
 
-  // Generic Accessサービス
+  // Generic access service
   uint8_t generic_access_service_uuid[] = { 0x00, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -588,7 +599,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // デバイス名特性
+  // Device name characteristic
   sl_bt_uuid_16_t device_name_uuid = { .data = { 0x00, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -603,7 +614,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 外観特性
+  // Appearance characteristic
   sl_bt_uuid_16_t appearence_uuid = { .data = { 0x01, 0x2A } };
   const uint8_t appearance_value[] = { 0xC2, 0x03 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -619,11 +630,11 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // Generic Accessサービス開始
+  // Generic access service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // バッテリーサービス
+  // Battery service
   const uint8_t battery_service_uuid[] = { 0x0F, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -633,7 +644,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // バッテリーレベル特性
+  // Battery level characteristic
   const sl_bt_uuid_16_t battery_level_uuid = { .data = { 0x19, 0x2A } };
   const uint8_t battery_level_init_value = 100;
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -649,7 +660,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // 特性プレゼンテーションフォーマット記述子
+  // Characteristic presentation format descriptor
   const sl_bt_uuid_16_t chara_presentation_format_descriptor_uuid = { .data = { 0x04, 0x29 } };
   const uint8_t chara_presentation_format_value[] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -664,7 +675,7 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // クライアント特性構成記述子
+  // Client characteristic configuration descriptor
   const sl_bt_uuid_16_t client_configuration_descriptor_uuid = { .data = { 0x02, 0x29 } };
   const uint8_t client_configuration_value[] = { 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -679,11 +690,11 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // バッテリーサービス開始
+  // Battery service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // デバイス情報サービス
+  // Device information service
   const uint8_t device_info_service_uuid[] = { 0x0A, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -693,7 +704,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // メーカー名文字列特性
+  // Manufacturer name string characteristic
   const sl_bt_uuid_16_t manufacturer_uuid = { .data = { 0x29, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -708,7 +719,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // モデル番号文字列特性
+  // Model number string characteristic
   const sl_bt_uuid_16_t model_no_uuid = { .data = { 0x24, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -723,7 +734,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // シリアル番号文字列特性
+  // Serial number string characteristic
   const sl_bt_uuid_16_t serial_no_uuid = { .data = { 0x25, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -738,7 +749,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // ハードウェアリビジョン文字列特性
+  // Hardware revision string characteristic
   const sl_bt_uuid_16_t hw_rev_uuid = { .data = { 0x27, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -753,7 +764,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // ファームウェアリビジョン文字列特性
+  // Firmware revision string characteristic
   const sl_bt_uuid_16_t fw_rev_uuid = { .data = { 0x26, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -768,7 +779,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // ソフトウェアリビジョン文字列特性
+  // Software revision string characteristic
   const sl_bt_uuid_16_t sw_rev_uuid = { .data = { 0x28, 0x2A } };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
                                               service,
@@ -783,7 +794,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // システムID特性
+  // System ID characteristic
   const sl_bt_uuid_16_t sys_id_uuid = { .data = { 0x23, 0x2A } };
   const uint8_t sys_id_initial_value[] = { 0x12, 0x34, 0x56, 0xFF, 0xFE, 0x9A, 0xBC, 0xDE };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -799,7 +810,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // PnP ID特性
+  // PnP ID characteristic
   const sl_bt_uuid_16_t pnp_id_uuid = { .data = { 0x50, 0x2A } };
   const uint8_t pnp_id_initial_value[] = { 0x02, 0x10, 0xC4, 0x00, 0x01, 0x00, 0x01 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -815,11 +826,11 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // デバイス情報サービス開始
+  // Device information service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // HIDサービス
+  // HID service
   uint8_t hid_service_uuid[] = { 0x12, 0x18 };
   sc = sl_bt_gattdb_add_service(gattdb_session_id,
                                 sl_bt_gattdb_primary_service,
@@ -829,7 +840,7 @@ static void ble_initialize_gatt_db()
                                 &service);
   app_assert_status(sc);
 
-  // プロトコルモード特性
+  // Protocol mode characteristic
   sl_bt_uuid_16_t hid_protocol_mode_uuid = { .data = { 0x4E, 0x2A } };
   const uint8_t hid_protocol_mode_init_value[] = { 1 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -845,7 +856,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HIDレポート特性
+  // HID report characteristic
   const sl_bt_uuid_16_t hid_report_uuid = { .data = { 0x4D, 0x2A } };
   const uint8_t hid_report_init_value[] = { 0x00, 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -862,7 +873,7 @@ static void ble_initialize_gatt_db()
   app_assert_status(sc);
   hid_report = characteristic;
 
-  // HIDレポート参照記述子
+  // HID report reference descriptor
   const sl_bt_uuid_16_t hid_report_reference_desc_uuid = { .data = { 0x08, 0x29 } };
   const uint8_t hid_report_reference_desc_init_val[] = { 0x00, 0x01 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -877,7 +888,7 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // HIDレポートマップ特性
+  // HID report map characteristic
   const sl_bt_uuid_16_t hid_report_map_uuid = { .data = { 0x4B, 0x2A } };
   const uint8_t hid_report_map_init_value[] = { 0x05, 0x01, // Usage page (Generic Desktop)
                                                 0x09, 0x02, // Usage (Mouse)
@@ -917,7 +928,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HID外部レポート参照記述子
+  // HID external report reference descriptor
   const sl_bt_uuid_16_t hid_external_report_reference_descriptor_uuid = { .data = { 0x07, 0x29 } };
   const uint8_t hid_external_report_reference_value[] = { 0x00, 0x00 };
   sc = sl_bt_gattdb_add_uuid16_descriptor(gattdb_session_id,
@@ -932,7 +943,7 @@ static void ble_initialize_gatt_db()
                                           &descriptor);
   app_assert_status(sc);
 
-  // HID情報特性
+  // HID information characteristic
   const sl_bt_uuid_16_t hid_info_uuid = { .data = { 0x4A, 0x2A } };
   const uint8_t hid_info_init_value[] = { 0x01, 0x11, 0x00, 0x02 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -948,7 +959,7 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HIDコントロールポイント特性
+  // HID control point characteristic
   const sl_bt_uuid_16_t hid_control_point_uuid = { .data = { 0x4C, 0x2A } };
   const uint8_t hid_control_point_init_value[] = { 0x00 };
   sc = sl_bt_gattdb_add_uuid16_characteristic(gattdb_session_id,
@@ -964,44 +975,45 @@ static void ble_initialize_gatt_db()
                                               &characteristic);
   app_assert_status(sc);
 
-  // HIDサービス開始
+  // HID service start
   sc = sl_bt_gattdb_start_service(gattdb_session_id, service);
   app_assert_status(sc);
 
-  // GATT DBの変更をコミット
+  // Commit the GATT DB changes
   sc = sl_bt_gattdb_commit(gattdb_session_id);
   app_assert_status(sc);
 }
 
 #ifndef BLE_STACK_SILABS
-  #error "この例はSilicon Labs BLEスタックと互換性があります。'Tools > Protocol stack'で'BLE (Silabs)'を選択してください。"
+  #error "This example is only compatible with the Silicon Labs BLE stack. Please select 'BLE (Silabs)' in 'Tools > Protocol stack'."
 #endif
 ```
+
 </details>
 
 ### 結果チャート
 
-拡張ボードのボタンを押すと、マウスイベントがトリガーされることを確認できます！
+拡張ボードのボタンを押すと、マウスイベントがトリガーされることが確認できます！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/hid_mouse.gif" style={{width:500, height:'auto'}}/></div>
 
-## XIAO MG24 センスマイクロフォン(Seeed Studio デモ)
+## XIAO MG24 Sense マイクロフォン（Seeed Studio デモ）
 
 ### 内蔵センサーの概要
 
-**マイクロフォンセンサー**である **MSM381ACT001** は、**高感度かつ低ノイズ**で音声信号をキャプチャするために設計された MEMS (Micro-Electro-Mechanical Systems) マイクロフォンです。特に、MSM381ACT001 には以下の特徴があります：
+**マイクロフォンセンサー**である**MSM381ACT001**のようなセンサーは、**高感度・低ノイズ**でオーディオ信号をキャプチャするように設計されたMEMS（Micro-Electro-Mechanical Systems）マイクロフォンです。具体的に、MSM381ACT001は以下の特徴を持っています：
 
-**マイクロフォン機能:**
+**マイクロフォン機能：**
 
-- 音波をキャプチャして電気信号に変換し、さまざまな環境での音声入力を検出可能。
-- 通常 20 Hz から 20 kHz の広い周波数応答範囲を持ち、音声認識や音楽再生などのさまざまなオーディオアプリケーションに適しています。
+- 音波をキャプチャして電気信号に変換し、様々な環境でのオーディオ入力の検出を可能にします。
+- 通常20 Hzから20 kHzまでの広い周波数応答範囲を特徴とし、音声認識や音楽再生を含む様々なオーディオアプリケーションに適しています。
 
-**主な特徴**
+**主要な特徴**
 
-- 高感度: 微弱な音を検出可能で、正確な音声キャプチャが必要なアプリケーションに最適。
-- 低ノイズ: 高い信号対雑音比 (SNR) を提供するよう設計されており、騒がしい環境でもクリアな音声出力を実現。
-- コンパクトサイズ: MEMS 技術により小型化されており、スマートフォンやウェアラブルデバイスなどの携帯機器への統合が容易。
-- デジタル出力: デジタル信号出力オプション (例: I2S) を提供し、デジタル信号プロセッサ (DSP) やマイクロコントローラーとのインターフェースを簡素化。
+- 高感度：微細な音を検出する能力があり、精密なオーディオキャプチャが必要なアプリケーションに最適です。
+- 低ノイズ：高い信号対雑音比（SNR）を提供するように設計されており、騒音の多い環境でも明瞭なオーディオ出力を保証します。
+- コンパクトサイズ：MEMS技術により小型フォームファクターを実現し、スマートフォンやウェアラブルデバイスなどのポータブルデバイスへの統合を容易にします。
+- デジタル出力：デジタル信号出力オプション（例：I2S）を提供し、デジタル信号プロセッサ（DSP）やマイクロコントローラとのインターフェースを簡素化します。
 
 ### ソフトウェア準備
 
@@ -1011,16 +1023,17 @@ static void ble_initialize_gatt_db()
     </a>
 </div>
 
-GitHub のダウンロードリンクをクリックして、マイクロフォンセンサーを駆動します。
+GitHubダウンロードリンクをクリックして、マイクロフォンセンサーを駆動します。
 
 :::tip
-現在、手動で置換ファイルを変更する必要があります。後続では直接ダウンロード可能なライブラリが使用できるようになりますので、Wiki の更新をお待ちください。
+現在、手動でファイルの置き換え修正を行う必要があります。後続の直接ダウンロードライブラリが使用可能になりましたら、Wikiの更新をお待ちください。
 :::
 
-- **[置換ファイル]** [gsdk.a](https://files.seeedstudio.com/wiki/mg24_mic/gsdk_v2.a)
+- **[置き換えファイル]** [gsdk.a](https://files.seeedstudio.com/wiki/mg24_mic/gsdk_v2.a)
 
 **ファイルパスの変更**
-  - __/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/__
+
+- **/Users/yourname/Library/Arduino15/packages/SiliconLabs/hardware/silabs/2.2.0/variants/xiao_mg24/ble_silabs/**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/file.png" style={{width:350, height:'auto'}}/></div>
 
@@ -1032,15 +1045,15 @@ GitHub のダウンロードリンクをクリックして、マイクロフォ�
 #include "processing/filters.h"
 #endif
 
-// 設定
+// Settings
 #if defined(WIO_TERMINAL)
-#define DEBUG 1                 // ISR 中のピンパルスを有効化  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 16000*3
 #elif defined(ARDUINO_ARCH_NRF52840)
-#define DEBUG 1                 // ISR 中のピンパルスを有効化  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 800
 #elif defined(ARDUINO_SILABS)
-#define DEBUG 1                 // ISR 中のピンパルスを有効化  
+#define DEBUG 1                 // Enable pin pulse during ISR  
 #define SAMPLES 800
 #endif
 
@@ -1049,11 +1062,11 @@ mic_config_t mic_config{
   .sampling_rate = 16000,
   .buf_size = 1600,
 #if defined(WIO_TERMINAL)
-  .debug_pin = 1                // 各 DAC ISR をトグル (DEBUG が 1 に設定されている場合)
+  .debug_pin = 1                // Toggles each DAC ISR (if DEBUG is set to 1)
 #elif defined(ARDUINO_ARCH_NRF52840)
-  .debug_pin = LED_BUILTIN                // 各 DAC ISR をトグル (DEBUG が 1 に設定されている場合)
+  .debug_pin = LED_BUILTIN                // Toggles each DAC ISR (if DEBUG is set to 1)
 #elif defined(ARDUINO_SILABS)
-  .debug_pin = LED_BUILTIN                // 各 DAC ISR をトグル (DEBUG が 1 に設定されている場合)  
+  .debug_pin = LED_BUILTIN                // Toggles each DAC ISR (if DEBUG is set to 1)  
 #endif
 };
 
@@ -1085,11 +1098,11 @@ void setup() {
   Mic.set_callback(audio_rec_callback);
 
   if (!Mic.begin()) {
-    Serial.println("マイクの初期化に失敗しました");
+    Serial.println("Mic initialization failed");
     while (1);
   }
 
-  Serial.println("マイクの初期化が完了しました。");
+  Serial.println("Mic initialization done.");
 
 }
 
@@ -1098,7 +1111,7 @@ void loop() {
 #if defined(WIO_TERMINAL)  
 if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 
-    Serial.println("サンプリングを開始します");
+    Serial.println("Starting sampling");
     recording = 1;
     record_ready = false;  
 }
@@ -1110,7 +1123,7 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
   if (record_ready)
 #endif  
   {
-  Serial.println("サンプリングが完了しました");
+  Serial.println("Finished sampling");
   
   for (int i = 0; i < SAMPLES; i++) {
     
@@ -1126,14 +1139,14 @@ if (digitalRead(WIO_KEY_A) == LOW && !recording) {
 static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
   
   static uint32_t idx = 0;
-  // DMA バッファから推論バッファへのサンプルコピー
+  // Copy samples from DMA buffer to inference buffer
 #if defined(WIO_TERMINAL)
   if (recording) 
 #endif
   {
     for (uint32_t i = 0; i < buf_len; i++) {
   
-      // 12 ビットの符号なし ADC 値を 16 ビット PCM (符号付き) オーディオ値に変換
+      // Convert 12-bit unsigned ADC value to 16-bit PCM (signed) audio value
 #if defined(WIO_TERMINAL)
       recording_buf[idx++] = filter.step((int16_t)(buf[i] - 1024) * 16);
       //recording_buf[idx++] = (int16_t)(buf[i] - 1024) * 16;  
@@ -1155,158 +1168,159 @@ static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
 
 ### 機能概要
 
-**マイク設定**
+**マイクロフォン設定**
 
-```cpp
-mic_config_t mic_config{
-.channel_cnt = 1,
-.sampling_rate = 16000,
-.buf_size = 1600,
-#if defined(WIO_TERMINAL)
-.debug_pin = 1
-#elif defined(ARDUINO_ARCH_NRF52840)
-.debug_pin = LED_BUILTIN
-#elif defined(ARDUINO_SILABS)
-.debug_pin = LED_BUILTIN
-#endif
+  ```cpp
+  mic_config_t mic_config{
+  .channel_cnt = 1,
+  .sampling_rate = 16000,
+  .buf_size = 1600,
+  #if defined(WIO_TERMINAL)
+  .debug_pin = 1
+  #elif defined(ARDUINO_ARCH_NRF52840)
+  .debug_pin = LED_BUILTIN
+  #elif defined(ARDUINO_SILABS)
+  .debug_pin = LED_BUILTIN
+  #endif
 };
-```
+  ```
 
-- mic_config_t: マイク設定構造体を定義します。
-- channel_cnt: モノラル用に1に設定します。
+- mic_config_t: マイクロフォン設定構造体を定義します。
+- channel_cnt: モノラルの場合は1に設定します。
 - sampling_rate: サンプリング周波数を16000 Hzに設定します。
 - buf_size: バッファサイズを1600に設定します。
 - debug_pin: プラットフォームに応じてデバッグピンを設定し、デバッグ中の信号表示に使用します。
 
-**マイクのインスタンス化**
+**マイクロフォンのインスタンス化**
 
-```cpp
-#if defined(WIO_TERMINAL)
-DMA_ADC_Class Mic(&mic_config);
-#elif defined(ARDUINO_ARCH_NRF52840)
-NRF52840_ADC_Class Mic(&mic_config);
-#elif defined(ARDUINO_SILABS)
-MG24_ADC_Class Mic(&mic_config);
-#endif
-```
+  ```cpp
+  #if defined(WIO_TERMINAL)
+  DMA_ADC_Class Mic(&mic_config);
+  #elif defined(ARDUINO_ARCH_NRF52840)
+  NRF52840_ADC_Class Mic(&mic_config);
+  #elif defined(ARDUINO_SILABS)
+  MG24_ADC_Class Mic(&mic_config);
+  #endif
+  ```
 
-- 条件付きコンパイル: 事前に定義された設定を使用して、異なるプラットフォームに適したマイククラスのインスタンスを作成します。
+- 条件付きコンパイル：事前に定義された設定を使用して、異なるプラットフォーム用の適切なマイクロフォンクラスインスタンスを作成します。
 
 **録音バッファとフラグ**
 
-```cpp
-int16_t recording_buf[SAMPLES];
-volatile uint8_t recording = 0;
-volatile static bool record_ready = false;
-```
+  ```cpp
+  int16_t recording_buf[SAMPLES];
+  volatile uint8_t recording = 0;
+  volatile static bool record_ready = false;
+  ```
 
-- recording_buf: 録音サンプルを保存するためのSAMPLESサイズの配列を定義します。
-- recording: 録音中であることを示すvolatile変数で、コンパイラの最適化を防ぎます。
-- record_ready: 録音が完了し、次の処理が可能であることを示すvolatile静的変数です。
+- recording_buf: 録音サンプルを格納するSAMPLESの配列を定義します。
+- recording: 現在録音が進行中かどうかを示すvolatile変数で、コンパイラの最適化を防ぎます。
+- record_ready: 録音が完了し、さらなる処理の準備ができているかどうかを示すvolatile static変数です。
 
-**フィルタの例（WIO Terminal用）**
+**フィルター例（WIO Terminal用）**
 
-```cpp
-#if defined(WIO_TERMINAL)
-FilterBuHp filter;
-#endif
-```
+  ```cpp
+  #if defined(WIO_TERMINAL)
+  FilterBuHp filter;
+  #endif
+  ```
 
-- WIO Terminalの場合、高域通過フィルタのインスタンスを作成してフィルタ処理を行います。
+- WIO Terminalの場合、フィルタ処理用のハイパスフィルタのインスタンスを作成します。
 
 **setup**
 
-```cpp
-void setup() {
-Serial.begin(115200);
-while (!Serial) {delay(10);}
-
+  ```cpp
+  void setup() {
+  Serial.begin(115200);
+  while (!Serial) {delay(10);}
+  
 #if defined(WIO_TERMINAL)  
-pinMode(WIO_KEY_A, INPUT_PULLUP);
+  pinMode(WIO_KEY_A, INPUT_PULLUP);
 #endif
 
-Mic.set_callback(audio_rec_callback);
+  Mic.set_callback(audio_rec_callback);
 
-if (!Mic.begin()) {
-  Serial.println("Mic initialization failed");
-  while (1);
+  if (!Mic.begin()) {
+    Serial.println("Mic initialization failed");
+    while (1);
+  }
+
+  Serial.println("Mic initialization done.");
 }
+  ```
 
-Serial.println("Mic initialization done.");
-}
-```
+- シリアルポートの初期化：115200ボーレートでシリアル通信を開始し、シリアルポートの準備完了を待機します。
 
-- シリアルポートの初期化: シリアル通信を115200ボーレートで開始し、シリアルポートが準備完了するまで待機します。
-- ピンモードの設定: WIO Terminalでは、キーのピンを入力プルアップモードに設定します。
-- コールバック関数の設定: `Mic.set_callback(audio_rec_callback)`を呼び出して、録音時に呼び出されるコールバック関数を指定します。
-- マイクの初期化: `Mic.begin()`を呼び出し、初期化に失敗した場合はエラーメッセージを出力して無限ループに入ります。
+- ピンモードの設定：WIO Terminalで、キーピンを入力プルアップモードに設定します。
+- コールバック関数の設定：Mic.set_callback(audio_rec_callback)を呼び出して、音声録音時のコールバック関数を指定します。
+- マイクの初期化：Mic.begin()を呼び出し、初期化に失敗した場合はエラーメッセージを出力して無限ループに入ります。
 
 **loop**
 
-```cpp
-void loop() { 
+  ```cpp
+  void loop() { 
 #if defined(WIO_TERMINAL)  
 if (digitalRead(WIO_KEY_A) == LOW && !recording) {
-  Serial.println("Starting sampling");
-  recording = 1;
-  record_ready = false;  
+    Serial.println("Starting sampling");
+    recording = 1;
+    record_ready = false;  
 }
 #endif
 
 #if defined(WIO_TERMINAL)  
-if (!recording && record_ready)
+  if (!recording && record_ready)
 #elif defined(ARDUINO_ARCH_NRF52840) || defined(ARDUINO_SILABS)
-if (record_ready)
+  if (record_ready)
 #endif  
-{
-  Serial.println("Finished sampling");
-  
-  for (int i = 0; i < SAMPLES; i++) {
-    int16_t sample = recording_buf[i];
-    Serial.println(sample);
+  {
+    Serial.println("Finished sampling");
+    
+    for (int i = 0; i < SAMPLES; i++) {
+      int16_t sample = recording_buf[i];
+      Serial.println(sample);
+    }
+    
+    record_ready = false; 
   }
-  
-  record_ready = false; 
 }
-}
-```
+  ```
 
-- キーの検出: WIO Terminalでは、キーが押されており録音中でない場合に録音を開始します。
-- 録音終了: 録音中でなく、`record_ready`がtrueに設定されている場合に「Finished sampling」と出力します。
+- キー検出：WIO Terminalで、キーが押されたことを検出し、録音中でない場合に録音を開始します。
+- サンプリング完了：録音中でなく、record_readyがtrueに設定されている場合、「Finished sampling」を出力します。
 - 録音バッファを反復処理し、各サンプル値を出力します。
 
-**オーディオ録音コールバック関数**
+**音声録音コールバック関数**
 
-```cpp
-static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
-static uint32_t idx = 0;
-#if defined(WIO_TERMINAL)
-if (recording) 
-#endif
-{
-  for (uint32_t i = 0; i < buf_len; i++) {
-    #if defined(WIO_TERMINAL)
-    recording_buf[idx++] = filter.step((int16_t)(buf[i] - 1024) * 16);
-    #elif defined(ARDUINO_ARCH_NRF52840) || defined(ARDUINO_SILABS)
-    recording_buf[idx++] = buf[i];
-    #endif
+  ```cpp
+  static void audio_rec_callback(uint16_t *buf, uint32_t buf_len) {
+  static uint32_t idx = 0;
+  #if defined(WIO_TERMINAL)
+  if (recording) 
+  #endif
+  {
+    for (uint32_t i = 0; i < buf_len; i++) {
+      #if defined(WIO_TERMINAL)
+      recording_buf[idx++] = filter.step((int16_t)(buf[i] - 1024) * 16);
+      #elif defined(ARDUINO_ARCH_NRF52840) || defined(ARDUINO_SILABS)
+      recording_buf[idx++] = buf[i];
+      #endif
 
-    if (idx >= SAMPLES){ 
-      idx = 0;
-      recording = 0;
-      record_ready = true;
-      break;
-    } 
+      if (idx >= SAMPLES){ 
+        idx = 0;
+        recording = 0;
+        record_ready = true;
+        break;
+      } 
+    }
   }
 }
-}
-```
+  ```
 
-- コールバック関数: オーディオ録音中に呼び出され、DMAバッファから録音バッファにサンプルをコピーします。
-- 条件付きコンパイル: WIO Terminalの場合、フィルタを使用して入力を処理します。
-- 12ビットの符号なしADC値を16ビットPCM（符号付き）オーディオ値に変換します。
-- サンプルのコピー: サンプルを`recording_buf`にコピーし、インデックス`idx`を更新します。
-- 録音終了: サンプル数がSAMPLESに達した場合、インデックスをリセットし、録音終了をマークして`record_ready`をtrueに設定します。
+- コールバック関数：音声録音中に呼び出され、DMAバッファから録音バッファへのサンプルのコピーを担当します。
+- 条件付きコンパイル：WIO Terminal上の場合、フィルターを使用して入力を処理します。
+- 12ビット符号なしADC値を16ビットPCM（符号付き）音声値に変換します。
+- サンプル充填：サンプルをrecording_bufにコピーし、インデックスidxを更新します。
+- 録音終了：充填されたサンプル数がSAMPLESに達すると、インデックスをリセットし、録音の終了をマークしてrecord_readyをtrueに設定します。
 
 ### 結果チャート
 
@@ -1314,19 +1328,19 @@ if (recording)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic_result.png" style={{width:680, height:'auto'}}/></div>
 
-これは認識された音の波形です。息を吹きかけると、波形の振幅が明らかに大きくなるのがわかります。
+これは認識された音の波形です。息を吹きかけると、波形の振動振幅が大きくなることがはっきりと確認できます。
 
-### さらなる情報
+### より多くの例
 
-より多くのサンプルコードが必要な場合は、以下をクリックしてください: -> **"Example -> Seeed Arduino Mic"**
+より多くのサンプルコードが必要な場合は、こちらをクリックしてください：-> **"Example -> Seeed Arduino Mic"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/34.png" style={{width:500, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/35.png" style={{width:500, height:'auto'}}/></div>
 
-## XIAO MG24 Sense Microphone(Silicon Labs Demo)
+## XIAO MG24 Sense マイクロフォン（Silicon Labs デモ）
 
 :::tip
-最新のオンボードパッケージ（2.3.0）をダウンロードする必要があります。これにより、例の中で最新の公式コードを見つけることができます。
+例の中で最新の公式コードを見つけるために、最新のオンボードパッケージ（2.3.0）をダウンロードする必要があります
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mg24download.jpg" style={{width:400, height:'auto'}}/></div>
@@ -1339,27 +1353,27 @@ if (recording)
 
 ```cpp
 /*
-   アナログマイク音量の例
+   Analog microphone volume example
 
-   この例はアナログMEMSマイクの使用方法を示し、マイクの入力音量に基づいて
-   オンボードLEDの明るさを調整します。
-   この例はすべてのSilicon Labs Arduinoボードと互換性がありますが、
-   指定されたピンに接続されたアナログマイクが必要です。
+   The example showcases the usage of analog MEMS microphones and dims the
+   on-board LED based on the microphone's input volume.
+   This example is compatible with all Silicon Labs Arduino boards, however
+   it requires an analog microphone on-board or connected to the specified pin.
 
-   作成者: Áron Gyapjas (Silicon Labs)
+   Author: Áron Gyapjas (Silicon Labs)
  */
 
 #include <SilabsMicrophoneAnalog.h>
 
-// この設定はSeeed Studio XIAO MG24のMSM381ACT001マイク用です。
-// ハードウェアに応じて変更してください。
+// This configuration is for the MSM381ACT001 microphone on the Seeed Studio XIAO MG24
+// Change it according to your hardware
 #define MIC_DATA_PIN  PC9
 #define MIC_PWR_PIN   PC8
 #define NUM_SAMPLES   128
 #define MIC_VALUE_MIN 735
 #define MIC_VALUE_MAX 900
 
-// サンプルを保存するためのバッファ
+// Buffers for storing samples
 uint32_t mic_buffer[NUM_SAMPLES];
 uint32_t mic_buffer_local[NUM_SAMPLES];
 
@@ -1374,10 +1388,10 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 
   micAnalog.begin(mic_buffer, NUM_SAMPLES);
-  Serial.println("マイクが初期化されました...");
+  Serial.println("Microphone initialized...");
 
   micAnalog.startSampling(mic_samples_ready_cb);
-  Serial.println("サンプリングが開始されました...");
+  Serial.println("Sampling started...");
 }
 
 void loop()
@@ -1388,45 +1402,45 @@ void loop()
   }
 }
 
-// マイクから要求された量のサンプルが利用可能になったときに呼び出される
+// Called when the requested amount of samples are available from the microphone
 void mic_samples_ready_cb()
 {
-  // データが上書きされないようにローカルバッファにコピー
+  // Copy data to the local buffer in order to prevent it from overwriting
   memcpy(mic_buffer_local, mic_buffer, NUM_SAMPLES * sizeof(uint32_t));
   data_ready_flag = true;
 }
 
 void calculate_and_display_voice_level() {
-  // 音量をスムーズにするためのローリング平均
+  // Rolling average for smoothing the voice level
   static uint32_t rolling_average = 0u;
 
-  // 現在のデータが上書きされないようにサンプリングを停止
+  // Stop sampling in order to prevent overwriting the current data
   micAnalog.stopSampling();
 
-  // サンプル値の平均を取得
+  // Get the average of the sampled values
   uint32_t voice_level = (uint32_t)micAnalog.getAverage(mic_buffer_local, NUM_SAMPLES);
-  // マイクの出力の最小値/最大値に基づいて音量を調整
+  // Adjust the voice level relative to minimum/maximum of the microphone's output
   voice_level = constrain(voice_level, MIC_VALUE_MIN, MIC_VALUE_MAX);
-  // ローリング平均を計算
+  // Calculate the rolling average
   rolling_average = (voice_level + rolling_average) / 2;
 
-  // 現在の平均レベルを明るさにマッピング
+  // Map the current average level to brightness
   int brightness = map(rolling_average, MIC_VALUE_MIN, MIC_VALUE_MAX, 0, 255);
   if (LED_BUILTIN_ACTIVE == LOW) {
     analogWrite(LED_BUILTIN, 255 - brightness);
   } else {
     analogWrite(LED_BUILTIN, brightness);
   }
-  // 平均音量を出力（シリアルプロッタを使用してグラフでこの値を表示可能）
+  // Print the average voice level (you can use the Serial Plotter to view this value on a graph)
   Serial.println(rolling_average);
 
-  // サンプリングを再開
+  // Restart sampling
   micAnalog.startSampling(mic_samples_ready_cb);
 }
 
 ```
 
-### 関数概要
+### 機能概要
 
 ***ヘッダーファイルの紹介***
 
@@ -1434,9 +1448,9 @@ void calculate_and_display_voice_level() {
 #include <SilabsMicrophoneAnalog.h>
 ```
 
-- `SilabsMicrophoneAnalog.h`ヘッダーファイルをインクルードし、アナログマイクを使用するための必要なライブラリ関数と定義を含みます。
+- アナログマイクロフォンを使用するために必要なライブラリ関数と定義を含む `SilabsMicrophoneAnalog.h` ヘッダーファイルをインクルードします。
 
-***ハードウェア設定***
+***ハードウェア構成***
 
 ```cpp
 #define MIC_DATA_PIN  PC9
@@ -1446,13 +1460,13 @@ void calculate_and_display_voice_level() {
 #define MIC_VALUE_MAX 900
 ```
 
-- `MIC_DATA_PIN`: マイクデータピンを`PC9`として定義します。
+- `MIC_DATA_PIN`: マイクロフォンのデータピンを `PC9` として定義します。
 
-- `MIC_PWR_PIN`: マイク電源ピンを`PC8`として定義します。
+- `MIC_PWR_PIN`: マイクロフォンの電源ピンを `PC8` として定義します。
 
-- `NUM_SAMPLES`: サンプリングごとのサンプル数を128として定義します。
+- `NUM_SAMPLES`: サンプリングあたりのサンプル数を128として定義します。
 
-- `MIC_VALUE_MIN`と`MIC_VALUE_MAX`: マイク出力の最小値と最大値の範囲を定義します。
+- `MIC_VALUE_MIN` と `MIC_VALUE_MAX`: マイクロフォン出力の最小値と最大値の範囲を定義します。
 
 ***バッファ定義***
 
@@ -1461,11 +1475,11 @@ uint32_t mic_buffer[NUM_SAMPLES];
 uint32_t mic_buffer_local[NUM_SAMPLES];
 ```
 
-- `mic_buffer`: マイクから収集された生のサンプルデータを保存するために使用されます。
+- `mic_buffer`: マイクから収集された生のサンプルデータを格納するために使用されます。
 
-- `mic_buffer_local`: サンプルデータを一時的に保存し、上書きを防ぐために使用されます。
+- `mic_buffer_local`: サンプルデータを一時的に格納して上書きを防ぐために使用されます。
 
-***フラグとオブジェクト定義***
+***フラグとオブジェクトの定義***
 
 ```cpp
 volatile bool data_ready_flag = false;
@@ -1474,7 +1488,7 @@ MicrophoneAnalog micAnalog(MIC_DATA_PIN, MIC_PWR_PIN);
 
 - `data_ready_flag`: 新しいサンプルデータが準備完了かどうかを示すフラグ。
 
-- `micAnalog`: マイクを制御するためのMicrophoneAnalogオブジェクトを作成します。
+- `micAnalog`: マイクロフォンを制御するためのMicrophoneAnalogオブジェクトを作成します。
 
 ***コールバック関数の宣言***
 
@@ -1485,9 +1499,9 @@ void calculate_and_display_voice_level();
 
 - `mic_samples_ready_cb()`: サンプリングが完了したときに呼び出されるコールバック関数。
 
-- `calculate_and_display_voice_level()`: 音量を計算し、LEDの明るさを制御する関数。
+- `calculate_and_display_voice_level()`: 音量を計算してLEDの明るさを制御する関数。
 
-***setup()関数***
+***setup() 関数***
 
 ```cpp
 void setup()
@@ -1496,10 +1510,10 @@ void setup()
   pinMode(LED_BUILTIN, OUTPUT);
 
   micAnalog.begin(mic_buffer, NUM_SAMPLES);
-  Serial.println("マイクが初期化されました...");
+  Serial.println("Microphone initialized...");
 
   micAnalog.startSampling(mic_samples_ready_cb);
-  Serial.println("サンプリングが開始されました...");
+  Serial.println("Sampling started...");
 }
 ```
 
@@ -1507,7 +1521,7 @@ void setup()
 
 - オンボードLEDピンを出力モードに設定します。
 
-- マイクを初期化し、サンプルバッファを指定します。
+- マイクロフォンを初期化し、サンプルバッファを指定します。
 
 - サンプリングを開始し、サンプリング完了時のコールバック関数を設定します。
 
@@ -1523,9 +1537,9 @@ void loop()
 }
 ```
 
-- `data_ready_flag`が`true`の場合、新しいデータが準備完了であることを示します。
+- `data_ready_flag` が `true` かどうかをチェックし、新しいデータが準備できていることを示します。
 
-- 新しいデータが利用可能な場合、`calculate_and_display_voice_level()`関数を呼び出してデータを処理します。
+- 新しいデータが利用可能な場合、`calculate_and_display_voice_level()` 関数を呼び出してデータを処理します。
 
 ```cpp
 
@@ -1536,9 +1550,9 @@ void mic_samples_ready_cb()
 }
 ```
 
-- サンプルデータを`mic_buffer`から`mic_buffer_local`にコピーして上書きを防ぎます。
+`mic_buffer`からサンプルデータを`mic_buffer_local`にコピーして、上書きを防ぎます。
 
-- `data_ready_flag`を`true`に設定して新しいデータが準備完了であることを示します。
+新しいデータが準備完了したことを示すために`data_ready_flag`を`true`に設定します。
 
 ```cpp
 
@@ -1563,42 +1577,40 @@ void calculate_and_display_voice_level() {
 }
 ```
 
-- サンプリングを停止してデータの上書きを防ぎます。
+- データの上書きを防ぐためにサンプリングを停止します。
 
-- サンプルデータの平均値を計算し、それを `MIC_VALUE_MIN` と `MIC_VALUE_MAX` の範囲内に制約します。
+- サンプルデータの平均を計算し、`MIC_VALUE_MIN`と`MIC_VALUE_MAX`の間に制約します。
 
-- 音量変化を平滑化するためにローリング平均を計算します。
+- 音量変化を滑らかにするために移動平均を計算します。
 
-- ローリング平均を LED の明るさ範囲（0 から 255）にマッピングし、LED の明るさを調整します。
+- 移動平均をLEDの明度範囲（0から255）にマッピングし、LEDの明度を調整します。
 
-- 音量変化を観察するためにローリング平均をシリアル出力します。
+- 音量変化を観察するために移動平均をシリアル経由で出力します。
 
-- 新しい音声データを収集するためにサンプリングを再開します。
-
+- 新しいオーディオデータを収集するためにサンプリングを再開します。
 
 ### 結果チャート
 
-マイクに息を吹きかけると、上部の LED が音に応じて明るくなったり暗くなったりするのがわかります。
+マイクに息を吹きかけると、上部のLEDが音に合わせて明るくなったり暗くなったりするのが確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic.gif" style={{width:500, height:'auto'}}/></div>
 
+### より詳しく
 
-### さらに詳しく
-
-より多くのサンプルコードが必要な場合は、こちらをクリックしてください： -> **"Example -> SilabsMicrophoneAnalog -> MicrophoneVolume"**
+より多くのサンプルコードが必要な場合は、こちらをクリックしてください：-> **"Example -> SilabsMicrophoneAnalog -> MicrophoneVolume"**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/mic_arduino.jpg" style={{width:500, height:'auto'}}/></div>
 
 ## リソース
 
-### Seeed Studio XIAO MG24 Sense 用
+### Seeed Studio XIAO MG24 Sense用
 
 - 📄 **[PDF]** [Seeed Studio 6軸IMU(LSM6DS3TR-C) データシート](https://statics3.seeedstudio.com/fusion/opl/sheets/314040211.pdf)
-- 📄 **[PDF]** [Seeed Studio アナログマイク(MSM381ACT001) データシート](https://files.seeedstudio.com/wiki/mg24_mic/312030602_MEMSensing_MSM381ACT001_Datasheet.pdf)
+- 📄 **[PDF]** [Seeed Studio アナログマイクロフォン(MSM381ACT001) データシート](https://files.seeedstudio.com/wiki/mg24_mic/312030602_MEMSensing_MSM381ACT001_Datasheet.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

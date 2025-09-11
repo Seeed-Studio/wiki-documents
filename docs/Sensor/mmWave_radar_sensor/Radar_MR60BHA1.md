@@ -20,7 +20,6 @@ last_update:
     </a>
 </div>
 
-
 ## Introduction
 
 The MR60BHA1 60GHz radar module applies FMCW detected theory to implement simultaneous personal breathing rate and heart rate detention in high accuracy, providing a fully total private and secure environment, independently from other noisy influences. It is a standard biotic radar system in consumer electronics, healthcare as well as industrial applications. In this wiki, we will introduce you how to utilize it.
@@ -103,11 +102,12 @@ If you encounter the wrong firmware or radar anomaly, firmware malfunction, etc.
 | Jlink_MR60BHA1-V230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/Jlink_MR60BHA1-V230904.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **J-link**.
-:::
 
+:::
 
 **To update your radar to the latest version**
 
@@ -180,6 +180,7 @@ Considering that J-link is expensive, it is too extravagant to buy a J-link for 
 | UART_MR60BHA1-230904.bin | [Download](https://files.seeedstudio.com/wiki/60GHzradar/new_res/UART_MR60BHA1-230904.bin) |
 
 :::caution
+
 1. Please check the function of your product carefully, please do not mix with other mmwave sensors to brush this firmware, otherwise it may cause abnormal product function, the consequences need to be your own responsibility!
 
 2. Please also note that different ways of updating the firmware use different firmware content, what you are downloading is the firmware burned via **UART**.
@@ -1436,11 +1437,11 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

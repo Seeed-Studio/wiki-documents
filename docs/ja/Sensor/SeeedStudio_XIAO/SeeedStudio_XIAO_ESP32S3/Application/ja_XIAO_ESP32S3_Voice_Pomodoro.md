@@ -1,42 +1,38 @@
 ---
-description: 音声コマンドを使用して、Seeed Studio XIAO ESP32S3 Sense と丸型 LCD ディスプレイを活用したコンパクトな CircuitPython ベースのポモドーロタイマーを構築します。
-title: XIAO ESP32S3 と CircuitPython を使用した音声操作ポモドーロタイマーの構築
+description: 音声コマンドとSeeed Studio XIAO ESP32S3 Senseおよび円形LCDディスプレイを使用して、コンパクトなCircuitPython駆動のポモドーロタイマーを構築します。
+title: XIAO ESP32S3とCircuitPythonで音声起動ポモドーロタイマーを構築する
 keywords:
   - XIAO
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/xiao_esp32s3_voice_pomodoro
 last_update:
-  date: 05/15/2025
+  date: 04/17/2025
   author: Peter Machona
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # AskLou.io ポモドーロタイマー
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32s3_sense_pomodoro_timer/AskLou_01.png" style={{width:800, height:'auto'}}/></div>
 
-> Seeed Studio XIAO ESP32S3 Sense と Round Display for XIAO を使用して構築された音声制御ポモドーロタイマー。ハンズフリーで時間管理を行い、生産性を向上させましょう！
+> Seeed Studio XIAO ESP32S3 SenseとRound Display for XIAOで構築された音声制御ポモドーロタイマー。ハンズフリーの時間管理で生産性を維持しましょう！
 
 ## プロジェクト概要
 
-AskLou.io ポモドーロタイマーは、人気のある時間管理手法「ポモドーロ・テクニック」を実践するためのコンパクトで音声操作可能な生産性ツールです。簡単な音声コマンドを使用して、作業セッションを開始したり、休憩を取ったり、コンピュータやスマートフォンに触れることなく生産性を管理できます。
+AskLou.io ポモドーロタイマーは、時間管理のための人気のポモドーロテクニックを実装するのに役立つ、コンパクトな音声起動生産性ツールです。シンプルな音声コマンドを使用して、コンピューターや電話に触れることなく、作業セッションを開始し、休憩を取り、生産性を管理できます。
 
-## なぜ AskLou.io ポモドーロタイマーなのか？
+## なぜAskLou.io ポモドーロタイマーなのか？
 
-従来のポモドーロタイマーは手動操作が必要で、集中力や作業の流れを中断してしまいます。AskLou.io は音声コマンドを使用することでこの問題を解決し、指一本動かさずに時間を管理できます。エレガントな円形ディスプレイは、現在のセッションの状態を一目で確認できるため、集中力を維持しやすくなります。
+従来のポモドーロタイマーは手動操作が必要で、フローと集中力を妨げます。AskLou.ioは音声コマンドでこの問題を解決し、指一本動かすことなく時間を管理できます。エレガントな円形ディスプレイは現在のセッションの状況を一目で確認でき、集中力と生産性を維持するのに役立ちます。
 
-## 特徴
+## 機能
 
-- **音声制御**: 簡単な音声コマンドでタイマーを開始・一時停止
+- **音声制御**: シンプルな音声コマンドでタイマーを開始・一時停止
 - **複数のセッションタイプ**: 標準作業セッション（25分）、短い休憩（5分）、長い休憩（15分）
-- **視覚的な進捗追跡**: 残り時間を示す直感的な円形進捗インジケーター
-- **集中力を妨げない**: アプリや通知なしで、集中した生産性を実現
-- **カスタマイズ可能**: セッションの時間を簡単に変更して、個人のワークフローに合わせられる
-- **低消費電力**: デスクでの終日使用に最適
-- **スタンドアロン動作**: 設定後はスマートフォンやコンピュータ不要
+- **視覚的進捗追跡**: 直感的な円形進捗インジケーターで残り時間を表示
+- **集中を妨げない**: アプリなし、通知なし、ただ集中した生産性
+- **カスタマイズ可能**: 個人のワークフローに合わせてセッション時間を簡単に変更
+- **低消費電力**: デスクでの終日使用を想定した設計
+- **スタンドアロン動作**: セットアップ後はスマートフォンやコンピューターは不要
 
 ## ハードウェア
 
@@ -44,114 +40,113 @@ AskLou.io ポモドーロタイマーは、人気のある時間管理手法「�
 
 - [Seeed Studio XIAO ESP32S3 Sense](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Sense-Pre-Soldered-p-6335.html)
 - [Seeed Studio Round Display for XIAO (1.28" 240x240 GC9A01 LCD)](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
-- 電源用 USB-C ケーブル
-- オプション: 3D プリントケース（プロジェクトにファイルが含まれています）
+- 電源用USB-Cケーブル
+- オプション: 3Dプリントケース（プロジェクトにファイル含む）
 
 ### このハードウェアを選んだ理由
 
-XIAO ESP32S3 Sense にはオンボードマイクが搭載されており、音声制御アプリケーションに最適です。そのコンパクトなフォームファクターと美しい丸型ディスプレイの組み合わせにより、作業スペースの美観を損なわないエレガントなデスクトップアクセサリを実現します。
+XIAO ESP32S3 Senseには内蔵マイクが含まれており、音声制御アプリケーションに最適です。そのコンパクトなフォームファクターと美しい円形ディスプレイの組み合わせにより、ワークスペースの美観を損なわないエレガントなデスクトップコンパニオンを作成できます。
 
-## 作成プロセス
+## 構築プロセス
 
-### 1. ハードウェアの組み立て
+### 1. ハードウェア組み立て
 
-- 丸型ディスプレイを XIAO ESP32S3 Sense ボードに接続します
-- ディスプレイは XIAO のピンに直接接続され、はんだ付けは不要です！
-- オプション: 3D プリントケースに取り付けて仕上げを行います
+- Round DisplayをXIAO ESP32S3 Senseボードに接続
+- ディスプレイはXIAOのピンに直接接続 - はんだ付け不要！
+- オプション: 完成した外観のために3Dプリントケースに取り付け
 
-### 2. ソフトウェアのセットアップ
+### 2. ソフトウェアセットアップ
 
-**CircuitPython のセットアップ**
+**CircuitPythonのセットアップ**
 
-- [CircuitPython.org](https://circuitpython.org/) から CircuitPython 8.x 以降をダウンロードします
+- [CircuitPython.org](https://circuitpython.org/)からCircuitPython 8.x以降をダウンロード
 - ボードをブートローダーモードにする（リセットボタンをダブルクリック）
-- CircuitPython UF2 ファイルをボードのドライブにドラッグ＆ドロップします
+- CircuitPython UF2ファイルをボードのドライブにドラッグアンドドロップ
 
 **必要なライブラリのインストール**
 
-- [CircuitPython バンドル](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases) から以下のライブラリをダウンロードします：
+- [CircuitPythonバンドル](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases)から以下のライブラリをダウンロード:
   - adafruit_display_text
   - adafruit_display_shapes
   - gc9a01.mpy
   - analogio（マイク機能用）
-- これらを CircuitPython デバイスの lib フォルダにコピーします。
+- CircuitPythonデバイスのlibフォルダにコピーします。
 
-### 3. コードのデプロイ
+### 3. コードデプロイ
 
-この [リポジトリ](https://github.com/AskLou-io/Pomodoro_Circuit_Python) から code.py ファイルを CircuitPython デバイスにコピーするだけで、タイマーが自動的に動作を開始します！
+この[リポジトリ](https://github.com/AskLou-io/Pomodoro_Circuit_Python)からcode.pyファイルをCircuitPythonデバイスにコピーするだけで、タイマーが自動的に動作を開始します！
 
-## 仕組み
+## 動作原理
 
-- **音声検出**: 搭載されたマイクが閾値を超える音を検知します  
-- **コマンドシミュレーション**: デモ版では、コマンドがプリセットリストを循環します  
-- **タイマーロジック**: 作業セッション、短い休憩、長い休憩を追跡します  
-- **視覚的フィードバック**: 円形ディスプレイがセッションの種類と残り時間を表示します  
-- **進捗インジケーター**: 点灯するアークが現在のセッションの進捗を示します  
+- **音声検出**: オンボードマイクロフォンが閾値を超える音を検出します
+- **コマンドシミュレーション**: デモ版では、コマンドがプリセットリストを循環します
+- **タイマーロジック**: 作業セッション、短い休憩、長い休憩を追跡します
+- **視覚的フィードバック**: 円形ディスプレイがセッションタイプと残り時間を表示します
+- **進捗インジケーター**: 照明付きアークが現在のセッションの進捗を表示します
 
-AskLou.io ポモドーロタイマーは以下の音声コマンドに応答します:
+AskLou.io ポモドーロタイマーは以下の音声コマンドに応答します：
 
-- 「タイマー開始」 - 25分間の作業セッションを開始します  
-- 「タイマー一時停止」 - 現在のセッションを一時停止します  
-- 「短い休憩開始」 - 5分間の休憩を開始します  
-- 「長い休憩開始」 - 15分間の休憩を開始します  
+- "Start timer" - 25分間の作業セッションを開始
+- "Pause timer" - 現在のセッションを一時停止
+- "Start short break" - 5分間の休憩を開始
+- "Start long break" - 15分間の休憩を開始
 
 ## カスタマイズオプション
 
-AskLou.io ポモドーロタイマーは以下の方法でカスタマイズできます:
+AskLou.io ポモドーロタイマーは以下の方法でカスタマイズできます：
 
-- **セッションの長さ**: `session_durations` 辞書を変更して作業や休憩の長さを調整します  
-- **音声感度**: 環境に応じて `LOUD_THRESHOLD` 値を調整します  
-- **ビジュアルテーマ**: セッションの種類ごとにアークの色を変更します  
-- **コマンドワード**: `voice_commands` リストを更新して異なるフレーズを使用します  
+- **セッション時間**: session_durations辞書を変更して作業や休憩の長さを変更
+- **音声感度**: 環境に応じてLOUD_THRESHOLD値を調整
+- **視覚テーマ**: 異なるセッションタイプのアーク色を変更
+- **コマンドワード**: voice_commandsリストを更新して異なるフレーズを使用
 
-## 将来の拡張
+## 将来の機能強化
 
-将来のバージョンでの潜在的な改善点:
+将来のバージョンで考えられる改善点：
 
-- より信頼性の高いコマンド検出のための音声認識の向上  
-- セッション終了時の触覚または音声フィードバック  
-- 生産性アプリとの接続によるセッションログの記録  
-- オーディオ通知用の小型スピーカー  
-- 携帯性を高めるためのバッテリー駆動  
+- より信頼性の高いコマンド検出のための音声認識の改善
+- セッション終了時の触覚または音声フィードバック
+- セッションログ記録のための生産性アプリとの連携
+- 音声通知用の小型スピーカー
+- 持ち運び可能なバッテリー電源
 
 ## リソース
 
-- [GitHub リポジトリ](https://github.com/AskLou-io/Pomodoro_Circuit_Python/blob/main/README.md)  
-- [Hackster.io プロジェクト](https://www.hackster.io/peter-machona/asklou-io-pomodoro-timer-a7a1f2)  
-- [XIAO ESP32S3 ドキュメント](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)  
-- [ラウンドディスプレイドキュメント](https://wiki.seeedstudio.com/ja/get_start_round_display/)  
+- [GitHubリポジトリ](https://github.com/AskLou-io/Pomodoro_Circuit_Python/blob/main/README.md)
+- [Hackster.ioプロジェクト](https://www.hackster.io/peter-machona/asklou-io-pomodoro-timer-a7a1f2)
+- [XIAO ESP32S3 ドキュメント](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
+- [Round Display ドキュメント](https://wiki.seeedstudio.com/get_start_round_display/)
 
 ## クレジット
 
-- ハードウェアプラットフォーム: Seeed Studio  
-- ポモドーロテクニック: Francesco Cirillo  
-- [プロジェクト作成者: Peter Machona](https://github.com/AskLou-io/Pomodoro_Circuit_Python)  
+- Seeed Studioによるハードウェアプラットフォーム
+- Francesco Cirilloによるポモドーロテクニック
+- [Peter Machonaによるプロジェクト](https://github.com/AskLou-io/Pomodoro_Circuit_Python)
 
 ## ライセンス
 
-このプロジェクトは Creative Commons Attribution-NonCommercial (CC BY-NC) ライセンスの下で公開されています。このライセンスにより、以下が可能です:
+このプロジェクトはクリエイティブ・コモンズ 表示-非営利（CC BY-NC）ライセンスの下でリリースされています。これは以下を自由に行えることを意味します：
 
-- **共有** — 素材をあらゆる媒体や形式でコピーおよび再配布する  
-- **改変** — 素材をリミックス、変形、または構築する  
+- **共有** — あらゆる媒体や形式で資料をコピー・再配布
+- **翻案** — 資料をリミックス、変形、構築
 
-以下の条件に従う必要があります:
+以下の条件の下で：
 
-- **帰属** — 適切なクレジットを表示し、ライセンスへのリンクを提供し、変更があった場合はその旨を示す必要があります。ただし、ライセンサーがあなたやあなたの使用を推奨しているような方法では行わないでください。  
-- **非営利** — 素材を商業目的で使用することはできません。  
+- **表示** — 適切なクレジットを表示し、ライセンスへのリンクを提供し、変更が加えられた場合はその旨を示す必要があります。合理的な方法で行うことができますが、ライセンサーがあなたやあなたの使用を推奨していることを示唆する方法は除きます。
+- **非営利** — 商業目的でこの資料を使用することはできません。
 
 ---
 
-AskLou.io ポモドーロタイマー - 集中した生産性を、ただ頼むだけで。
+AskLou.io ポモドーロタイマー - 集中した生産性を、ただ求めるだけで。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio の [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。  
-- 特に [Peter Machona](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92639112&issue=Seeed-Studio%7Cwiki-documents%7C2074) 氏の献身的な努力に感謝します。あなたの作品は [展示されます](https://wiki.seeedstudio.com/contributors/)。  
+- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Peter Machona](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92639112&issue=Seeed-Studio%7Cwiki-documents%7C2074)の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
-
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>

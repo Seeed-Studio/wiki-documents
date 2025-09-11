@@ -18,7 +18,6 @@ last_update:
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-
 ## Overview
 
 The XIAO 7.5" ePaper Panel can be programmed using the Arduino IDE, making it accessible for makers and developers familiar with the Arduino ecosystem. This guide will walk you through setting up the Arduino development environment and getting started with basic examples.
@@ -41,13 +40,11 @@ Through Arduino programming, you can:
 
 This guide covers the initial setup process and provides example code to help you start developing your own Arduino applications for the ePaper Panel.
 
-
-
 ## Getting Started
 
 ### Step 1. Download Arduino IDE
 
-First, if you don't have Arduino IDE yet, please go to [Arduino IDE](https://www.arduino.cc/en/software) and download the latest version. 
+First, if you don't have Arduino IDE yet, please go to [Arduino IDE](https://www.arduino.cc/en/software) and download the latest version.
 
 :::tip
 If this is your first time using Arduino, we highly recommend you to refer to [Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/).
@@ -69,7 +66,7 @@ This library has same function as TFT library and no compatible with it. If you 
 
 Download and install the Seeed GFX library from GitHub.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix1.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div align="center">
 <a href="https://github.com/Seeed-Studio/Seeed_Arduino_LCD" target="_blank">
@@ -77,25 +74,26 @@ Download and install the Seeed GFX library from GitHub.
 </a>
 </div>
 
-Scroll down and open this link. 
+Scroll down and open this link.
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix2.jpg" style={{width:800, height:'auto'}}/></div>
 
 Select your device type and it will generate some code. Copy those code and we will use them later.
 
 :::tip
-If you make the wrong choice, the screen will display nothing. 
+If you make the wrong choice, the screen will display nothing.
 
 So please make sure your devices or components type.
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix6.jpg" style={{width:800, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/fix6.jpg" style={{width:800, height:'auto'}}/></div>
 
 After downloading the library, go to **Sketch** -> **Include Library** -> **Add .ZIP Library** and select the downloaded library.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/51.png" style={{width:800, height:'auto'}}/></div>
 
 There are 4 basic examples, open a basic example you like:
+
 1. Bitmap: Display a bitmap image.
 2. Clock: Display a clock.
 3. Clock_digital: Display a digital clock.
@@ -126,7 +124,6 @@ Now you will see the feedback in your epaper screen! Following are the results o
 
 - **[STP]**: [3D Model enclosure](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
 - **[PDF]**: [ePaper Driver Board SCH PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
-
 
 ## Tech Support & Product Discussion
 

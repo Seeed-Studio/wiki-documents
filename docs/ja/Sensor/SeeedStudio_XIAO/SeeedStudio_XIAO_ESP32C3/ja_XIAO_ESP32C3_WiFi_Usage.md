@@ -1,50 +1,46 @@
 ---
-description: Seeed Studio XIAO ESP32C3 の WiFi 使用方法
-title: WiFi 使用方法
+description: Seeed Studio XIAO ESP32C3でのWiFi使用方法
+title: WiFi使用方法
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO_ESP32C3_WiFi_Usage
 last_update:
-  date: 05/15/2025
+  date: 07/26/2024
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 開始
+## はじめに
 
-Seeed Studio XIAO ESP32C3 は IEEE 802.11b/g/n に対応した WiFi 接続をサポートしています。この Wiki では、このボードでの WiFi 使用の基本を紹介します。
+Seeed Studio XIAO ESP32C3は、IEEE 802.11b/g/nのWiFi接続をサポートしています。このwikiでは、このボードでのWiFi使用の基本について紹介します。
 
-:::caution 注意
-⚠️ ボードをホットスポット（アクセスポイント）として使用する際は注意してください。過熱して火傷の原因となる可能性があります。
+:::caution attention
+⚠️ ボードをホットスポット（アクセスポイント）として使用する際は注意してください。過熱してやけどを引き起こす可能性があります。
 :::
 
 ## ハードウェアのセットアップ
 
-- **ステップ 1.** 同梱されている **WiFi/Bluetooth アンテナ** をボードの **IPEX コネクタ** に接続します。
+- **ステップ1.** 付属の**WiFi/Bluetoothアンテナ**をボード上の**IPEXコネクタ**に接続します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-6.png" alt="pir" width={130} height="auto" /></div>
 
-- **ステップ 2.** USB Type-C ケーブルを使用して XIAO ESP32C3 をコンピュータに接続します。
+- **ステップ2.** USB Type-CケーブルでXIAO ESP32C3をコンピュータに接続します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width={120} height="auto" /></div>
 
-## モード 1: STA モード（ステーションモード） - WiFi ネットワークのスキャン
+## モード1：STAモード（ステーションモード） - WiFiネットワークのスキャン
 
-### Wi-Fi アクセスポイントのスキャン
+### Wi-Fiアクセスポイントのスキャン
 
-この例では、XIAO ESP32C3 を使用して周囲の利用可能な WiFi ネットワークをスキャンします。この場合、ボードはステーション（STA）モードに設定されます。
+この例では、XIAO ESP32C3を使用して周囲の利用可能なWiFiネットワークをスキャンします。ここでボードはステーション（STA）モードで設定されます。
 
-- **ステップ 1.** 以下のコードを Arduino IDE にコピー＆ペーストします。
+- **ステップ1.** 以下のコードをArduino IDEにコピー＆ペーストします
 
 <Tabs>
-  <TabItem value="basic wifi scan" label="基本 Wi-Fi スキャン" default>
+  <TabItem value="basic wifi scan" label="基本Wi-Fiスキャン" default>
 
 ```cpp
 #include "WiFi.h"
@@ -52,27 +48,27 @@ Seeed Studio XIAO ESP32C3 は IEEE 802.11b/g/n に対応した WiFi 接続をサ
 void setup() {
   Serial.begin(115200);
 
-  // WiFi をステーションモードに設定し、以前接続されていた AP から切断
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
 
-  Serial.println("セットアップ完了");
+  Serial.println("Setup done");
 }
 
 void loop() {
-  Serial.println("スキャン開始");
+  Serial.println("scan start");
 
-  // WiFi.scanNetworks は見つかったネットワークの数を返します
+  // WiFi.scanNetworks will return the number of networks found
   int n = WiFi.scanNetworks();
-  Serial.println("スキャン完了");
+  Serial.println("scan done");
   if (n == 0) {
-    Serial.println("ネットワークが見つかりません");
+    Serial.println("no networks found");
   } else {
     Serial.print(n);
-    Serial.println(" 個のネットワークが見つかりました");
+    Serial.println(" networks found");
     for (int i = 0; i < n; ++i) {
-      // 見つかった各ネットワークの SSID と RSSI を出力
+      // Print SSID and RSSI for each network found
       Serial.print(i + 1);
       Serial.print(": ");
       Serial.print(WiFi.SSID(i));
@@ -85,47 +81,47 @@ void loop() {
   }
   Serial.println("");
 
-  // 再スキャンする前に少し待機
+  // Wait a bit before scanning again
   delay(5000);
 }
 ```
 
   </TabItem>
-  <TabItem value="advan-wifi-scan" label="高度な Wi-Fi スキャン">
+  <TabItem value="advan-wifi-scan" label="高度なWi-Fiスキャン">
 
 ```cpp title="https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiScan/WiFiScan.ino"
 /*
- *  このスケッチは WiFi ネットワークのスキャン方法を示します。
- *  API は Arduino WiFi Shield ライブラリに基づいていますが、新しい WiFi 機能がサポートされているため大幅に変更されています。
- *  例: `encryptionType()` の戻り値は、よりモダンな暗号化がサポートされているため異なります。
+ *  This sketch demonstrates how to scan WiFi networks.
+ *  The API is based on the Arduino WiFi Shield library, but has significant changes as newer WiFi functions are supported.
+ *  E.g. the return value of `encryptionType()` different because more modern encryption is supported.
  */
 #include "WiFi.h"
 
 void setup() {
   Serial.begin(115200);
 
-  // WiFi をステーションモードに設定し、以前接続されていた AP から切断
+  // Set WiFi to station mode and disconnect from an AP if it was previously connected.
   WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(100);
 
-  Serial.println("セットアップ完了");
+  Serial.println("Setup done");
 }
 
 void loop() {
-  Serial.println("スキャン開始");
+  Serial.println("Scan start");
 
-  // WiFi.scanNetworks は見つかったネットワークの数を返します
+  // WiFi.scanNetworks will return the number of networks found.
   int n = WiFi.scanNetworks();
-  Serial.println("スキャン完了");
+  Serial.println("Scan done");
   if (n == 0) {
-    Serial.println("ネットワークが見つかりません");
+    Serial.println("no networks found");
   } else {
     Serial.print(n);
-    Serial.println(" 個のネットワークが見つかりました");
-    Serial.println("番号 | SSID                             | RSSI | CH | 暗号化");
+    Serial.println(" networks found");
+    Serial.println("Nr | SSID                             | RSSI | CH | Encryption");
     for (int i = 0; i < n; ++i) {
-      // 見つかった各ネットワークの SSID と RSSI を出力
+      // Print SSID and RSSI for each network found
       Serial.printf("%2d", i + 1);
       Serial.print(" | ");
       Serial.printf("%-32.32s", WiFi.SSID(i).c_str());
@@ -135,7 +131,7 @@ void loop() {
       Serial.printf("%2ld", WiFi.channel(i));
       Serial.print(" | ");
       switch (WiFi.encryptionType(i)) {
-        case WIFI_AUTH_OPEN:            Serial.print("オープン"); break;
+        case WIFI_AUTH_OPEN:            Serial.print("open"); break;
         case WIFI_AUTH_WEP:             Serial.print("WEP"); break;
         case WIFI_AUTH_WPA_PSK:         Serial.print("WPA"); break;
         case WIFI_AUTH_WPA2_PSK:        Serial.print("WPA2"); break;
@@ -144,7 +140,7 @@ void loop() {
         case WIFI_AUTH_WPA3_PSK:        Serial.print("WPA3"); break;
         case WIFI_AUTH_WPA2_WPA3_PSK:   Serial.print("WPA2+WPA3"); break;
         case WIFI_AUTH_WAPI_PSK:        Serial.print("WAPI"); break;
-        default:                        Serial.print("不明");
+        default:                        Serial.print("unknown");
       }
       Serial.println();
       delay(10);
@@ -152,28 +148,29 @@ void loop() {
   }
   Serial.println("");
 
-  // スキャン結果を削除してメモリを解放
+  // Delete the scan result to free memory for code below.
   WiFi.scanDelete();
 
-  // 再スキャンする前に少し待機
+  // Wait a bit before scanning again.
   delay(5000);
 }
 ```
+
   </TabItem>
 </Tabs>
 
-**ステップ 2.** コードをアップロードし、シリアルモニタを開いて WiFi ネットワークのスキャンを開始します。
+**ステップ2.** コードをアップロードし、シリアルモニターを開いてWiFiネットワークのスキャンを開始します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-1.jpg" alt="pir" width={500} height="auto" /></div>
 
-### WiFi ネットワークへの接続
+### WiFiネットワークに接続する
 
-この例では、XIAO ESP32C3 を使用して WiFi ネットワークに接続します。
+この例では、XIAO ESP32C3 を使用してWiFiネットワークに接続します。
 
-- **ステップ 1.** 以下のコードを Arduino IDE にコピー＆ペーストします。
+- **ステップ1.** 以下のコードをコピーしてArduino IDEに貼り付けます
 
 <Tabs>
-  <TabItem value="basic wifi connect" label="基本 Wi-Fi 接続" default>
+  <TabItem value="basic wifi connect" label="基本的なWi-Fi接続" default>
 
 ```cpp
 #include <WiFi.h>
@@ -185,10 +182,10 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // WiFi ネットワークへの接続を開始
+  // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
-  Serial.print("接続中: ");
+  Serial.print("Connecting to ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
@@ -199,15 +196,15 @@ void setup() {
   }
 
   Serial.println("");
-  Serial.println("WiFi に接続しました");
-  Serial.println("IP アドレス: ");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
 void loop() {}
 ```
 
   </TabItem>
-  <TabItem value="advan-wifi-connect" label="高度な Wi-Fi 接続">
+  <TabItem value="advan-wifi-connect" label="高度なWi-Fi接続">
 
 ```cpp title="https://github.com/espressif/arduino-esp32/blob/master/libraries/WiFi/examples/WiFiClientConnect/WiFiClientConnect.ino"
 #include <WiFi.h>
@@ -219,15 +216,15 @@ void setup() {
   Serial.begin(115200);
   delay(10);
 
-  // WiFi ネットワークへの接続を開始
+  // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
-  Serial.print("接続中: ");
+  Serial.print("Connecting to ");
   Serial.println(ssid);
 
   WiFi.begin(ssid, password);
 
-  // 約 10 秒間試行（500ms x 20 回）
+  // Will try for about 10 seconds (20x 500ms)
   int tryDelay = 500;
 
   while (WiFi.status() != WL_CONNECTED) {
@@ -237,30 +234,30 @@ void setup() {
 
   while (true) {
       switch (WiFi.status()) {
-        case WL_NO_SSID_AVAIL: Serial.println("[WiFi] SSID が見つかりません"); break;
+        case WL_NO_SSID_AVAIL: Serial.println("[WiFi] SSID not found"); break;
         case WL_CONNECT_FAILED:
-          Serial.print("[WiFi] 接続失敗 - WiFi に接続できません！理由: ");
+          Serial.print("[WiFi] Failed - WiFi not connected! Reason: ");
           return;
           break;
-        case WL_CONNECTION_LOST: Serial.println("[WiFi] 接続が失われました"); break;
-        case WL_SCAN_COMPLETED:  Serial.println("[WiFi] スキャンが完了しました"); break;
-        case WL_DISCONNECTED:    Serial.println("[WiFi] WiFi が切断されました"); break;
+        case WL_CONNECTION_LOST: Serial.println("[WiFi] Connection was lost"); break;
+        case WL_SCAN_COMPLETED:  Serial.println("[WiFi] Scan is completed"); break;
+        case WL_DISCONNECTED:    Serial.println("[WiFi] WiFi is disconnected"); break;
         case WL_CONNECTED:
-          Serial.println("[WiFi] WiFi に接続されました！");
-          Serial.print("[WiFi] IP アドレス: ");
+          Serial.println("[WiFi] WiFi is connected!");
+          Serial.print("[WiFi] IP address: ");
           Serial.println(WiFi.localIP());
           return;
           break;
         default:
-          Serial.print("[WiFi] WiFi ステータス: ");
+          Serial.print("[WiFi] WiFi Status: ");
           Serial.println(WiFi.status());
           break;
       }
           delay(tryDelay);
 
     if (numberOfTries <= 0) {
-      Serial.print("[WiFi] WiFi への接続に失敗しました！");
-      // 接続を強制停止するために disconnect 関数を使用
+      Serial.print("[WiFi] Failed to connect to WiFi!");
+      // Use disconnect function to force stop trying to connect
       WiFi.disconnect();
       return;
     } else {
@@ -269,25 +266,25 @@ void setup() {
   }
 
   Serial.println("");
-  Serial.println("WiFi に接続しました");
-  Serial.println("IP アドレス: ");
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 }
 void loop() {}
 ```
 
-</TabItem>
+  </TabItem>
 </Tabs>
 
-**ステップ 2.** コードをアップロードし、シリアルモニターを開いてボードがWiFiネットワークに接続されていることを確認します。
+**ステップ 2.** コードをアップロードし、シリアルモニターを開いて、ボードがWiFiネットワークに接続されていることを確認します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-2.jpg" alt="pir" width={500} height="auto" /></div>
 
-## モード 2: Soft-AP モード (STAとして動作) - アクセスポイントとして使用
+## モード 2: Soft-APモード（STAとして動作） - アクセスポイントとして使用
 
-この例では、XIAO ESP32C3をWiFiアクセスポイントとして使用し、他のデバイスがそれに接続できるようにします。これは、携帯電話のWiFiホットスポット機能に似ています。
+この例では、XIAO ESP32C3をWiFiアクセスポイントとして使用し、他のデバイスがそれに接続できるようにします。これは携帯電話のWiFiホットスポット機能に似ています。
 
-- **ステップ 1.** 以下のコードをArduino IDEにコピー＆ペーストします。
+- **ステップ 1.** 以下のコードをコピーしてArduino IDEに貼り付けます
 
 ```cpp
 #include "WiFi.h"
@@ -297,71 +294,71 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("ホスト名:");
+  Serial.print("Host Name:");
   Serial.println(WiFi.softAPgetHostname());
-  Serial.print("ホストIP:");
+  Serial.print("Host IP:");
   Serial.println(WiFi.softAPIP());
-  Serial.print("ホストIPV6:");
+  Serial.print("Host IPV6:");
 #if ESP_ARDUINO_VERSION_MAJOR < 3
   Serial.println(WiFi.softAPIPv6());
 #else
   Serial.println(WiFi.softAPlinkLocalIPv6());
 #endif
-  Serial.print("ホストSSID:");
+  Serial.print("Host SSID:");
   Serial.println(WiFi.SSID());
-  Serial.print("ホストブロードキャストIP:");
+  Serial.print("Host Broadcast IP:");
   Serial.println(WiFi.softAPBroadcastIP());
-  Serial.print("ホストMACアドレス:");
+  Serial.print("Host mac Address:");
   Serial.println(WiFi.softAPmacAddress());
-  Serial.print("ホスト接続数:");
+  Serial.print("Number of Host Connections:");
   Serial.println(WiFi.softAPgetStationNum());
-  Serial.print("ホストネットワークID:");
+  Serial.print("Host Network ID:");
   Serial.println(WiFi.softAPNetworkID());
-  Serial.print("ホストステータス:");
+  Serial.print("Host Status:");
   Serial.println(WiFi.status());
   delay(1000);
 }
 ```
 
-:::caution 注意
-ESP32開発ボードのバージョンがすでに3.0.0に更新されている場合、コード内の```softAPIPv6()```を```softAPlinkLocalIPv6()```に変更する必要があります。
+:::caution note
+ESP32開発ボードのバージョンが既に3.0.0にアップデートされている場合、コードを```softAPIPv6()```から```softAPlinkLocalIPv6()```に変更する必要があります。
 :::
 
-**ステップ 2.** コードをアップロードし、シリアルモニターを開いてWiFiアクセスポイントに関する詳細を確認します。
+**ステップ2.** コードをアップロードし、シリアルモニターを開いてWiFiアクセスポイントの詳細を確認します
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-3.png" alt="pir" width={700} height="auto" /></div>
 
-**ステップ 3.** PCまたは携帯電話でWiFiネットワークをスキャンすると、コードで指定したパスワードを使用してこの新しいネットワークに接続できるようになります。
+**ステップ3.** PCまたは携帯電話でWiFiネットワークをスキャンすると、コードで指定したパスワードを使用してこの新しく作成されたネットワークに接続できます
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-4.png" alt="pir" width="{300}" height="auto" /></div>
 
-これで、シリアルモニター上の**ホスト接続数**が**1**に更新されていることが確認できます。
+これで、シリアルモニターの**Number of Host Connections**が**1**に更新されたことがわかります
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-5.png" alt="pir" width={700} height="auto" /></div>
 
 ## XIAO ESP32C3 & Home Assistant
 
-XIAO ESP32C3がESPHomeおよびHome Assistantに対応したことをお知らせします！
+XIAO ESP32C3のESPHomeおよびHome Assistantへのアクセスサポートを実現したことをお知らせいたします！
 
-このセクションの詳細については、関連するチュートリアルをご参照ください。
+このセクションの詳細については、関連するチュートリアルを参照してください。
 
-- [GroveモジュールをESPHomeを使用してHome Assistantに接続する](https://wiki.seeedstudio.com/ja/Connect-Grove-to-Home-Assistant-ESPHome/)
-- [LinkStar Home Assistant](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)
+- [ESPHomeを使用してGroveモジュールをHome Assistantに接続する](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
+- [LinkStar Home Assistant](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
-## 参考資料
+## リファレンス
 
 - [Wi-Fi API - esp-arduino](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/wifi.html)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

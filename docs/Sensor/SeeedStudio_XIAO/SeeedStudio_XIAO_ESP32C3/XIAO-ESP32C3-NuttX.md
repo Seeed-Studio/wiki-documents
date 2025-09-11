@@ -77,6 +77,7 @@ Also it's possible to check the list of board-supported a running the command:
     ./tools/configure.sh xiao-esp32c3:usbnsh
     make V=1
     ```
+
 5. The RESET and BOOT buttons can be used to enter “Bootloader” mode by press and hold the BOOT key while powering up and then press the RESET key once.
 
 6. Load the firmware using esptool.py:
@@ -87,8 +88,7 @@ Also it's possible to check the list of board-supported a running the command:
 
 ## Hands-on
 
-It's time to explore NuttX practically. In this session, four applications are available: USBNSH, COMBO,
-WIFI and BLE.
+It's time to explore NuttX practically. In this session, four applications are available: USBNSH, COMBO, WIFI and BLE.
 
 ### USBNSH
 
@@ -113,8 +113,7 @@ Compile the source code.
 make -j
 ```
 
-Load the firmware into you board, reboot the board and connect NuttShell (NSH) console over USB using
-the CDC/ACM serial interface:
+Load the firmware into you board, reboot the board and connect NuttShell (NSH) console over USB using the CDC/ACM serial interface:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -218,7 +217,7 @@ IO_INPUT_PIN_PULLDOWN
 ```
 
 To confirm the GPIO device files were created, type `ls/dev`. After typing, you can see some gpios were declared define on boards/risc-v/esp32c3/esp32c3-xiao/src/esp32c3_gpio.c, which represent :
- 
+
 - GPIOs
   - 1 Input w/ IRQ    -> GPIO3
   - 1 Output          -> GPIO2
@@ -354,7 +353,6 @@ This configuration is used to enable the Bluetooth Low Energy (BLE) of ESP32-C3 
 
 Let's start by cleaning previous configuration:
 
-
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
@@ -384,7 +382,6 @@ nsh>
 ```
 
 We can now use BT commands as documented at [btsak NuttX documentation](https://nuttx.apache.org/docs/latest/applications/wireless/btsak/index.html) ,
-
 
 ```bash
 NuttShell (NSH) NuttX-12.9.0
@@ -421,7 +418,6 @@ Check the video below with the demo for ble:
     <source src="https://files.seeedstudio.com/wiki/XIAO-ESP32C3-NuttX/xiao-esp32c3-nuttx-ble.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 For more information about NuttX RTOS, please visit [NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)
 

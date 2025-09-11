@@ -44,7 +44,7 @@ To follow this tutorial , you need the following hardware
 
 ### Hardware Preparation
 
-We don't need any hardware preparation. The XIAO nRF52840 already has everything we need to this project. We just need the PDM microphone. 
+We don't need any hardware preparation. The XIAO nRF52840 already has everything we need to this project. We just need the PDM microphone.
 
 #### Here's the hardware pinout for XIAO nRF52840 Sense
 
@@ -70,20 +70,18 @@ We can download the dataset from the first link above and it will be extracted a
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/dataset_extracted.png" alt="Dataset extracted" alt="Speech commands dataset" width={600} height="auto" /></p>
 
-
 ## Getting Started
 
 Now Let us get started using Edge Impulse to create an ML model based on the dataset.
 
 ### Step 1 - Open the Edge Impulse
 
-- Edge Impulse is a machine learning (ML) development platform that enables developers to create and deploy custom ML models to edge devices, such as microcontrollers and smartphones. 
+- Edge Impulse is a machine learning (ML) development platform that enables developers to create and deploy custom ML models to edge devices, such as microcontrollers and smartphones.
 - It provides a variety of tools and resources to help build and optimize ML models for specific tasks, such as keyword spotting, anomaly detection, and classification.
 
 Let's create a new project. Give it a name.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge1.png" alt="Edge Impulse New project" width={600} height="auto" /></p>
-
 
 After creating a new project, go to the data acquisition page.
 
@@ -91,7 +89,7 @@ After creating a new project, go to the data acquisition page.
 
 ### Step 2 - Add data
 
-Because we're going to use the Google speech commands dataset, choose "Add existing data". 
+Because we're going to use the Google speech commands dataset, choose "Add existing data".
 Next, choose "Upload data"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge3.png" alt="Edge Impulse upload data" width={600} height="auto" /></p>
@@ -100,13 +98,13 @@ Next, we get to select the data - Let's choose one of the folders from the s
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge4.png" alt="Edge Impulse upload data screen" width={600} height="auto" /></p>
 
-The dataset has a lot of words to train with. Let's choose 3 folders (our labels) to train and the background noise. We're getting 4 labels. 
+The dataset has a lot of words to train with. Let's choose 3 folders (our labels) to train and the background noise. We're getting 4 labels.
 Press the button "Browse".
 The first one is "go". Choose the folder - you can see all the .wav files - and press "Upload".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge5.png" alt="Files to upload" width={600} height="auto" /></p>
 
-Next, let's keep the default options for the category. Let Edge Impulse split the data. 
+Next, let's keep the default options for the category. Let Edge Impulse split the data.
 For the label, write the label yourself. After all this, press "Upload data".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge6.png" alt="Edge Impulse upload data screen" width={600} height="auto" /></p>
@@ -123,8 +121,8 @@ After this, this is the screen
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge9.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-To upload more data, press the small upload button on the right side, above the files list. 
-Repeat this 3 more times - 2 more labels and the background noise. 
+To upload more data, press the small upload button on the right side, above the files list.
+Repeat this 3 more times - 2 more labels and the background noise.
 I'm going to choose happy, bird and the "background noise" folder with the label "noise".
 In the end, this are all the labels we have
 
@@ -138,7 +136,6 @@ Next, let's create the network to learn our words. Click on Impulse design to cr
 
 Because the clips are 1 second each and 16Khz, let's keep the window size the same and the frequency. Now, let's add a processing block.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge12.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
 Edge Impulse helps us a lot here too. Click on "Add a processing block" and choose Audio (MFCC).
@@ -149,15 +146,15 @@ Next, click on the "Add learning block" and choose Classification.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge14.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-By now, our last column - Output features - has our 4 labels (bird, go, happy, noise). 
+By now, our last column - Output features - has our 4 labels (bird, go, happy, noise).
 Press "Save Impulse" to save our work so far.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge15.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
 ### Step 4 - Generate the features
 
-Now, let's a take a look at the MFCC parameters. If you want, you can change the values. 
-For now, let's keep the default values. Click "Save Parameters". 
+Now, let's a take a look at the MFCC parameters. If you want, you can change the values.
+For now, let's keep the default values. Click "Save Parameters".
 After you save the parameters, we get a new window to "Generate features".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge16.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
@@ -176,11 +173,12 @@ Now we get to train our network with the chosen parameters. Click on "Classifier
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge19.png" alt="Classifier" width={600} height="auto" /></p>
 
-Here we can tweak our network settings, like training cycles, if we want data augmentation and so on. 
+Here we can tweak our network settings, like training cycles, if we want data augmentation and so on.
 Edge Impulse provides a simple but effective neural network architecture for keyword spotting. The architecture consists of the following layers:
-  - <b>Input layer:</b> The input layer takes the MFCC features as input.
-  - <b>Hidden layers:</b> The hidden layers learn to extract higher-level features from the MFCC features. Edge Impulse supports a variety of hidden layer types, such as convolutional layers and recurrent layers.
-  - <b>Output layer:</b> The output layer predicts the probability that the audio input contains a keyword.
+
+- <b>Input layer:</b> The input layer takes the MFCC features as input.
+- <b>Hidden layers:</b> The hidden layers learn to extract higher-level features from the MFCC features. Edge Impulse supports a variety of hidden layer types, such as convolutional layers and recurrent layers.
+- <b>Output layer:</b> The output layer predicts the probability that the audio input contains a keyword.
 
 We can change the default parameters, but the defaults are enough. Click on "Start Training".
 
@@ -198,12 +196,12 @@ After the training is complete, we get the Confusion matrix and data explorer
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge23.png" alt="Confusion Matrix" width={600} height="auto" /></p>
 
-Now with the network ready, let's try some samples and do some live classification. 
+Now with the network ready, let's try some samples and do some live classification.
 If you go to live classification, we can choose a sample and the the classification result. Here, for a bird example, we get bird in the result. That's great. The model is working.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge24.png" alt="Live classification" width={600} height="auto" /></p>
 
-Now, let's go to model testing. 
+Now, let's go to model testing.
 Let's test the model by using the split samples for testing. Click "Classify all".
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge25.png" alt="Test data" width={600} height="auto" /></p>
@@ -211,7 +209,6 @@ Let's test the model by using the split samples for testing. Click "Classify all
 We get almost 90% accuracy.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge26.png" alt="Accuracy" width={600} height="auto" /></p>
-
 
 ### Step 6 - Deployment and get the Arduino library
 
@@ -232,7 +229,7 @@ After a while, the files will be downloaded automatically.
 
 ### Step 7 - Add the library to the Arduino IDE
 
-In Arduino IDE, let's add the newly downloaded files. 
+In Arduino IDE, let's add the newly downloaded files.
 Go to Sketch > Include Library > Add .ZIP Library
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge30.png" alt="Arduino IDE Add library" width={600} height="auto" /></p>
@@ -241,14 +238,14 @@ Choose the downloaded file. After a while, a message will appear on the output w
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge31.png" alt="Library installed" width={600} height="auto" /></p>
 
-### Step 8 - Voice control the RGB lights on the XIAO nRF52840 Sense 
+### Step 8 - Voice control the RGB lights on the XIAO nRF52840 Sense
 
 Let's open an examples
 Go to Examples > &lt;your_files_names&gt; > nano_ble33_sense > nano_ble33_sense_microphone
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge32.png" alt="Library installed" width={600} height="auto" /></p>
 
-Why the Arduino BLE 33 Sense ? They use the same library - PDM (pulse-density modulation)  - to control the microphone. Arduino Nano BLE 33 Sense has a MP34DT05 and the XIAO nRF52840 Sense has the MSM261D3526H1CPM. 
+Why the Arduino BLE 33 Sense ? They use the same library - PDM (pulse-density modulation)  - to control the microphone. Arduino Nano BLE 33 Sense has a MP34DT05 and the XIAO nRF52840 Sense has the MSM261D3526H1CPM.
 With the sketch opened, let's compile it and see if we don't have any errors.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge33.png" alt="Sketch open" width={600} height="auto" /></p>
@@ -272,26 +269,28 @@ Try to say one of the words chosen. I've said go
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge39.png" alt="Serial Monitor" width={600} height="auto" /></p>
 
 If it detects the word correctly, the more probable world will have a result closest to 1.0 and the others a closer value to 0.0
-Now, let's have a bit of fun and change the code a bit. 
+Now, let's have a bit of fun and change the code a bit.
 The XIAO nRF52840 Sense has a built-in LED that has 3 colors:
 
 - Red - LED_BUILTIN or LED_RED
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge40.gif" alt="Red LED" width={600} height="auto" /></p>
 - Green - LED_GREEN
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge41.gif" alt="Green LED" width={600} height="auto" /></p>
 - Blue - LED_BLUE
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" alt="Blue LED" width={600} height="auto" /></p>
 
-Since we have 3 words, let's assign a color to each one and light the respective color for the word. 
+Since we have 3 words, let's assign a color to each one and light the respective color for the word.
+
 - Red will be for bird
 - Green for Go
 - Blue for happy
 
 Because it will be easier, I've check the board PIN definitions and the following PINs are signed to the LED color:
+
 - RED - Pin 11
 - GREEN - Pin 13
 - BLUE - Pin 12
-
 
 First, we need to define a threshold. We know that the predictions go from 0.0 to 1.0 . The closer to 1.0, the certain we are of the classification of the word. This value can be tweaked later on. I'm going to set it at 0.7.
 
@@ -318,7 +317,7 @@ int LED = 0;
 int oldLED;
 ```
 
-<i>int oldLED</i> will define the previous LED light up so we can turn it off when there's no prediction or the prediction changes. 
+<i>int oldLED</i> will define the previous LED light up so we can turn it off when there's no prediction or the prediction changes.
 
 <i>int LED</i> is the current LED that we will turn on.
 
@@ -356,10 +355,10 @@ for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         }
     }
 ```
+
 After the changes, just upload the code to your microcontroller and try to say the words trained and see the LED turning on according to the word.
 
 And this is it. Although not directly supported, we can now use the XIAO nRF52840 Sense to run some ML models using Edge Impulse
-
 
 ## ✨ Contributor Project
 
@@ -371,11 +370,11 @@ And this is it. Although not directly supported, we can now use the XIAO nRF5284
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -87,7 +87,7 @@ Do the following steps :
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/sdcard2.png" style={{width:500, height:'auto'}}/></div>
 
-**Note : **
+**Note :**
 
 - This process will take significantly longer time than Quick Format.
 
@@ -127,14 +127,14 @@ The XIAO ESP32S3 Sense card slot occupies 4 GPIOs of the ESP32-S3, and the pin d
 This also means that if you choose to use the microSD card function of the expansion board, you cannot also use the SPI function of the XIAO ESP32S3. You can turn on/off the microSD card function by connecting/cutting the pads of J3.
 
 <table align="center">
-	<tr>
-	    <th>If you want to use the SPI Pins / Disable the SD card of the expansion board</th>
-	    <th>If you want to enable the SD card on the expansion board / Disable the SPI Pins</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>If you want to use the SPI Pins / Disable the SD card of the expansion board</th>
+     <th>If you want to enable the SD card on the expansion board / Disable the SPI Pins</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/33.png" style={{width:300, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/36.JPG" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
   <tr>
     <td>Cut along the white thin line to disconnect the solder pad connection.</td>
     <td>Solder the two solder pads together.</td>
@@ -487,33 +487,33 @@ This project shows how to log data with timestamps to a TF card using the XIAO E
 To complete this project, you will need to prepare the following hardware in advance.
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
         <th>Seeed Studio Expansion Base for XIAO with Grove OLED</th>
         <th>Grove - Multichannel Gas Sensor v2</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO-Expansion-Board/Update_pic/zheng1.jpg" style={{width:250, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Multichannel_Gas_Sensor/img/Grove-Multichannel_Gas_Sensor_V2_101020820/IMG/04.png" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
+      </a>
+  </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank">
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 For the software, you need to install the following libraries for the Arduino IDE in advance.
@@ -768,6 +768,7 @@ There are the following things to note about this project:
 
 1. The Multichannel Gas Sensor needs a period of warm-up before the values obtained are accurate. So the first few sets of data recorded can be considered to be discarded if the error is large.
 2. The serial monitor will only output the saved information once, because this example uses the deep sleep function, it is equivalent to reset after waking up, that is, you need to reopen the serial port of Arduino to see the next debug information. But rest assured, if there is no problem with the card, the sensor data will be collected on time at the time you set.
+
    :::
 
 ### Program annotation
@@ -996,16 +997,14 @@ For more information about using the ESP32 development board, please read the of
 
 ## Tech Support & Product Discussion
 
-.
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,28 +1,25 @@
 ---
-description: この記事では、XIAO nRF52840 SenseでQSPI Flashを使用する方法について説明します。
-title: XIAO nRF52840 SenseのQSPI Flash
+description: この記事では、XIAO nRF52840 Sense の QSPI Flash の使用方法について説明します。
+title: XIAO nRF52840 Sense の QSPI Flash
 keywords:
 - QSPI Flash
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/xiao-ble-qspi-flash-usage
 last_update:
-  date: 05/15/2025
+  date: 05/12/2023
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO nRF52840 SenseでのQSPI Flashの使用方法
+# Seeed Studio XIAO nRF52840 Sense での QSPI Flash の使用方法
 
 :::tip
-このチュートリアルのサポートと協力をしてくださったコミュニティユーザーの**JM_Laird**さんと**Haakonish**さんに特別な感謝を申し上げます！この記事で使用されているプログラムはGithubユーザーの**PMCheetham**さんから提供されたもので、ソースは**[こちら](https://github.com/PMCheetham/SEEED_nRF52840_QSPI/tree/main)**で確認できます。
+このチュートリアルのサポートとヘルプを提供してくれたコミュニティユーザーの **JM_Laird** と **Haakonish** に特別な感謝を！この記事で使用されているプログラムは Github ユーザー **PMCheetham** から提供されたもので、ソースは **[こちら](https://github.com/PMCheetham/SEEED_nRF52840_QSPI/tree/main)** で確認できます。
 :::
 
-XIAO nRF52840およびXIAO nRF52840 SenseでQSPI Flashを使用するためのチュートリアルへようこそ！XIAOは、256 KB RAM、1 MB Flash、2 MBのオンボードFlashを備えた強力でコンパクトなボードです。このチュートリアルでは、XIAOボードでQSPI Flashを活用する方法を学び、ストレージ容量を大幅に拡張し、プロジェクトを高速化することができます。それでは始めましょう！
 
-以下は、PMCheethamによって提供されたサンプルプログラムで、XIAO nRF52840 Senseで正常に動作します。このプログラムを使用することで、XIAOのQSPI Flashを自由に使用できます。
+XIAO nRF52840 と XIAO nRF52840 Sense での QSPI Flash の使用に関するこのチュートリアルへようこそ！XIAO は 256 KB RAM、1 MB Flash、および 2 MB オンボード Flash を搭載した強力でコンパクトなボードです。このチュートリアルでは、XIAO ボードの QSPI Flash を活用する方法を学びます。これにより、ストレージ容量を大幅に拡張し、プロジェクトを高速化できます。始めましょう！
+
+以下は PMCheetham が提供したサンプルプログラムで、XIAO nRF52840 Sense で良好に動作します。以下のプログラムを使用することで、XIAO の QSPI Flash を自由に使用できます。
 
 ```cpp
 #include <stdio.h>
@@ -38,71 +35,70 @@ XIAO nRF52840およびXIAO nRF52840 SenseでQSPI Flashを使用するための�
 #include "avr/interrupt.h"
 
 /* 
- * このコードの奇妙な部分...または理解できない部分
+ * Strange parts of this code ... Or things I don't understand
  * 
- * Setup()内の最初のREADの後、データの読み取りに成功します（0 = NRFX_SUCCESSを返します）が、
- * ステータスフラグの上位8ビットが0xFFに設定されており、これによりnrfx_qspi_mem_busy_check()が
- * 17（17 = NRFX_ERROR_BUSY）を返します。
- * しかし、STATUSレジスタを8でマスクすると、Ready Status = 1が明らかになり、QSPIが準備完了であることがわかります！
- * これがQSPI_IsReady()を書いた理由です。
+ * After the first READ in Setup() it successfully reads the data (Returns 0 = NRFX_SUCCESS), but the status flag
+ * has the top 8 bits set to 0xFF which causes nrfx_qspi_mem_busy_check() to show 17 (Returns 17 = NRFX_ERROR_BUSY). 
+ * However masking the STATUS register with 8 reveals the Ready Status = 1, QSPI is ready!
+ * This was why I wrote the QSPI_IsReady().
  * 
- * nrf_qspi_phy_conf_tは、以下のように設定しようとすると構造体として認識されません：
+ * nrf_qspi_phy_conf_t not visible as a structure if you try and set it like this :
  *   QSPIConfig.phy_if {
  *     .xxx = yyy,
  *     .aaa = bbb
  *   };
  *   
- * 48msのDeep Power-down Mode（DPM）の重要性がわかりません。
- * 使用されない場合、48msでDPMに入るのでしょうか？そして、指示された場合、48msで起動するのでしょうか？
+ * I don't know what the significance of the 48ms Deep Power-down Mode (DPM) is. 
+ * Will it go into DPM if not used for 48ms and then take 48ms to wake up if instructed?
  * 
- * このコードのスニペットを楽しんでください！自由に改変して使用してください。
- * Case ID: 224515でJM_LairdさんとHaakonishさんに感謝します。
- * そして、はい、もっときれいにすることもできましたが、プロジェクトにいくつかの部分を追加してそこで整理する必要があります！
+ * Hope you enjoy this little snippet of code!  Feel free to butcher and use it.
+ * Thanks to JM_Laird and Haakonish in Case ID: 224515.
+ * And, yes, I could have made it neater, but really need to add some of the bits into a project and tidy them up there!
  */
 
-// QSPI設定
+// QSPI Settings
 #define QSPI_STD_CMD_WRSR   0x01
 #define QSPI_STD_CMD_RSTEN  0x66
 #define QSPI_STD_CMD_RST    0x99
 #define QSPI_DPM_ENTER      0x0003 // 3 x 256 x 62.5ns = 48ms
 #define QSPI_DPM_EXIT       0x0003
 
-static uint32_t               *QSPI_Status_Ptr = (uint32_t*) 0x40029604;  // SEEED XIAO BLE - nRF52840用の設定
+static uint32_t               *QSPI_Status_Ptr = (uint32_t*) 0x40029604;  // Setup for the SEEED XIAO BLE - nRF52840
 static nrfx_qspi_config_t     QSPIConfig;
 static nrf_qspi_cinstr_conf_t QSPICinstr_cfg;
-static const uint32_t         MemToUse = 64 * 1024;  // 読み書きサイズを大きくするにはこれを変更、64Kbは消去サイズ
+static const uint32_t         MemToUse = 64 * 1024;  // Alter this to create larger read writes, 64Kb is the size of the Erase
 static bool                   Debug_On = true;
-static uint16_t               pBuf[MemToUse / 2] = {0};  // 16ビットはこのメモリが使用される形式
+static uint16_t               pBuf[MemToUse / 2] = {0};  // 16bit used as that is what this memory is going to be used for
 static uint32_t               *BufMem = (uint32_t*) &pBuf;
 static bool                   QSPIWait = false;
-// QSPI設定完了
+// QSPI Settings Complete
 
 static void qspi_handler(nrfx_qspi_evt_t event, void *p_context) {
   // UNUSED_PARAMETER(p_context);
-  // Serial.println("QSPI割り込み");
+  // Serial.println("QSPI Interrupt");
   // if (event == NRFX_QSPI_EVENT_DONE) {
   //   QSPI_HasFinished = true;
   // }
 }
 
-static void QSPI_Status(char ASender[]) { // QSPIステータスを出力
+static void QSPI_Status(char ASender[]) { // Prints the QSPI Status
   Serial.print("(");
   Serial.print(ASender);
-  Serial.print(") QSPIはビジー/アイドル状態... 結果 = ");
+  Serial.print(") QSPI is busy/idle ... Result = ");
   Serial.println(nrfx_qspi_mem_busy_check() & 8);
   Serial.print("(");
   Serial.print(ASender);
-  Serial.print(") QSPIステータスフラグ = 0x");
+  Serial.print(") QSPI Status flag = 0x");
   Serial.print(NRF_QSPI->STATUS, HEX);
-  Serial.print(" (NRF_QSPIから) または 0x");
+  Serial.print(" (from NRF_QSPI) or 0x");
   Serial.print(*QSPI_Status_Ptr, HEX);
-  Serial.println(" (*QSPI_Status_Ptrから)");
+  Serial.println(" (from *QSPI_Status_Ptr)");
 }
 
 static void QSPI_PrintData(uint16_t *AnAddress, uint32_t AnAmount) {
   uint32_t i;
 
-  Serial.print("データ :"); 
+  Serial.print("Data :"); 
   for (i = 0; i < AnAmount; i++) {
     Serial.print(" 0x");
     Serial.print(*(AnAddress + i), HEX);
@@ -131,14 +127,14 @@ static nrfx_err_t QSPI_WaitForReady() {
   return NRFX_SUCCESS;
 }
 
-static nrfx_err_t QSPI_Initialise() { // QSPIとNRF LOGを初期化
+static nrfx_err_t QSPI_Initialise() { // Initialises the QSPI and NRF LOG
   uint32_t Error_Code;
 
-  NRF_LOG_INIT(NULL); // NRF Logを初期化
+  NRF_LOG_INIT(NULL); // Initialise the NRF Log
   NRF_LOG_DEFAULT_BACKENDS_INIT();
-  // QSPI設定
+  // QSPI Config
   QSPIConfig.xip_offset = NRFX_QSPI_CONFIG_XIP_OFFSET;                       
-  QSPIConfig.pins = { // SEEED XIAO BLE - nRF52840用の設定                                                     
+  QSPIConfig.pins = { // Setup for the SEEED XIAO BLE - nRF52840                                                     
    .sck_pin     = 21,                                
    .csn_pin     = 25,                                
    .io0_pin     = 20,                                
@@ -155,37 +151,37 @@ static nrfx_err_t QSPI_Initialise() { // QSPIとNRF LOGを初期化
     .addrmode   = (nrf_qspi_addrmode_t)NRFX_QSPI_CONFIG_ADDRMODE,   
     .dpmconfig  = false,                                            
   };                   
-  QSPIConfig.phy_if.sck_freq   = (nrf_qspi_frequency_t)NRF_QSPI_FREQ_32MDIV1;  // この方法で設定しないとnrf_qspi_phy_conf_tが見えないとエラーが出る                                        
+  QSPIConfig.phy_if.sck_freq   = (nrf_qspi_frequency_t)NRF_QSPI_FREQ_32MDIV1;  // I had to do it this way as it complained about nrf_qspi_phy_conf_t not being visible                                        
   // QSPIConfig.phy_if.sck_freq   = (nrf_qspi_frequency_t)NRFX_QSPI_CONFIG_FREQUENCY; 
   QSPIConfig.phy_if.spi_mode   = (nrf_qspi_spi_mode_t)NRFX_QSPI_CONFIG_MODE;
   QSPIConfig.phy_if.dpmen      = false;
-  // QSPI設定完了
-  // DPMを許可するようにQSPIを設定（ただしオフに設定）
+  // QSPI Config Complete
+  // Setup QSPI to allow for DPM but with it turned off
   QSPIConfig.prot_if.dpmconfig = true;
-  NRF_QSPI->DPMDUR = (QSPI_DPM_ENTER << 16) | QSPI_DPM_EXIT; // Nordic Q&Aページで見つけた設定、Deep power-down modeタイマーを設定
+  NRF_QSPI->DPMDUR = (QSPI_DPM_ENTER << 16) | QSPI_DPM_EXIT; // Found this on the Nordic Q&A pages, Sets the Deep power-down mode timer
   Error_Code = 1;
   while (Error_Code != 0) {
     Error_Code = nrfx_qspi_init(&QSPIConfig, NULL, NULL);
     if (Error_Code != NRFX_SUCCESS) {
       if (Debug_On) {
-        Serial.print("(QSPI_Initialise) nrfx_qspi_initが返した値: ");
+        Serial.print("(QSPI_Initialise) nrfx_qspi_init returned : ");
         Serial.println(Error_Code);
       }
     } else {
       if (Debug_On) {
-        Serial.println("(QSPI_Initialise) nrfx_qspi_initが成功しました");
+        Serial.println("(QSPI_Initialise) nrfx_qspi_init successful");
       }
     }
   }
-  QSPI_Status("QSPI_Initialise (QSIP_Configure_Memoryの前)");
+  QSPI_Status("QSPI_Initialise (Before QSIP_Configure_Memory)");
   QSIP_Configure_Memory();
   if (Debug_On) {
-    Serial.println("(QSPI_Initialise) QSPIが準備完了するのを待っています...");
+    Serial.println("(QSPI_Initialise) Wait for QSPI to be ready ...");
   }
   NRF_QSPI->TASKS_ACTIVATE = 1;
   QSPI_WaitForReady();
   if (Debug_On) {
-    Serial.println("(QSPI_Initialise) QSPIが準備完了しました");
+    Serial.println("(QSPI_Initialise) QSPI is ready");
   }
   return QSPI_IsReady(); 
 }
@@ -196,35 +192,35 @@ static void QSPI_Erase(uint32_t AStartAddress) {
   bool       AlreadyPrinted = false;
 
   if (Debug_On) {
-    Serial.println("(QSPI_Erase) メモリを消去中");
+    Serial.println("(QSPI_Erase) Erasing memory");
   }
   while (!QSPIReady) {
     if (QSPI_IsReady() != NRFX_SUCCESS) {
       if (!AlreadyPrinted) {
-        QSPI_Status("QSPI_Erase (待機中)");
+        QSPI_Status("QSPI_Erase (Waiting)");
         AlreadyPrinted = true;
       }
     } else {
       QSPIReady = true;
-      QSPI_Status("QSPI_Erase (待機ループ終了)");
+      QSPI_Status("QSPI_Erase (Waiting Loop Breakout)");
     }
   }
   if (Debug_On) {
-    QSPI_Status("QSPI_Erase (待機終了)");
+    QSPI_Status("QSPI_Erase (Finished Waiting)");
     TimeTaken = millis();
   }
   if (nrfx_qspi_erase(NRF_QSPI_ERASE_LEN_64KB, AStartAddress) != NRFX_SUCCESS) {
     if (Debug_On) {
-      Serial.print("(QSPI_Initialise_Page) QSPIアドレス0x");
+      Serial.print("(QSPI_Initialise_Page) QSPI Address 0x");
       Serial.print(AStartAddress, HEX);
-      Serial.println("の消去に失敗しました！");
+      Serial.println(" failed to erase!");
     }
   } else {     
     if (Debug_On) {
       TimeTaken = millis() - TimeTaken;
-      Serial.print("(QSPI_Initialise_Page) QSPIは64Kbページの消去に");
+      Serial.print("(QSPI_Initialise_Page) QSPI took ");
       Serial.print(TimeTaken);
-      Serial.println("msかかりました");
+      Serial.println("ms to erase a 64Kb page");
     }
   }
 }
@@ -243,24 +239,24 @@ static void QSIP_Configure_Memory() {
     .wren      = true
   };
   QSPI_WaitForReady();
-  if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, NULL, NULL) != NRFX_SUCCESS) { // リセット有効化を送信
+  if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, NULL, NULL) != NRFX_SUCCESS) { // Send reset enable
     if (Debug_On) {
-      Serial.println("(QSIP_Configure_Memory) QSPI 'リセット有効化送信'に失敗しました！");
+      Serial.println("(QSIP_Configure_Memory) QSPI 'Send reset enable' failed!");
     }
   } else {
     QSPICinstr_cfg.opcode = QSPI_STD_CMD_RST;
     QSPI_WaitForReady();
-    if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, NULL, NULL) != NRFX_SUCCESS) { // リセットコマンドを送信
+    if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, NULL, NULL) != NRFX_SUCCESS) { // Send reset command
       if (Debug_On) {
-        Serial.println("(QSIP_Configure_Memory) QSPIリセットに失敗しました！");
+        Serial.println("(QSIP_Configure_Memory) QSPI Reset failed!");
       }
     } else {
       QSPICinstr_cfg.opcode = QSPI_STD_CMD_WRSR;
       QSPICinstr_cfg.length = NRF_QSPI_CINSTR_LEN_3B;
       QSPI_WaitForReady();
-      if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, &temporary, NULL) != NRFX_SUCCESS) { // QSPIモードに切り替え
+      if (nrfx_qspi_cinstr_xfer(&QSPICinstr_cfg, &temporary, NULL) != NRFX_SUCCESS) { // Switch to qspi mode
         if (Debug_On) {
-          Serial.println("(QSIP_Configure_Memory) QSPIモードへの切り替えに失敗しました！");
+          Serial.println("(QSIP_Configure_Memory) QSPI failed to switch to QSPI mode!");
         }
       } else {
           QSPI_Status("QSIP_Configure_Memory");
@@ -279,59 +275,59 @@ void setup() {
   while (!Serial) {}
 
   if (Debug_On) {
-    Serial.println("(Setup) QSPI初期化中...");
+    Serial.println("(Setup) QSPI Initialising ...");
   }
   if (QSPI_Initialise() != NRFX_SUCCESS) {
     if (Debug_On) {
-      Serial.println("(Setup) QSPIメモリの起動に失敗しました！");
+      Serial.println("(Setup) QSPI Memory failed to start!");
     }
   } else {
     if (Debug_On) {
-      Serial.println("(Setup) QSPIが初期化され、準備完了です");
-      QSPI_Status("Setup (初期化後)");
+      Serial.println("(Setup) QSPI initialised and ready");
+      QSPI_Status("Setup (After initialise)");
     }
   }
 
   if (Debug_On) {
-    Serial.print("(Setup) QSPIが読み取りおよび消去される直前です。現在のビジー状態 = ");
+    Serial.print("(Setup) QSPI is about to be read and then erased. Current busy state is = ");
     Serial.println(QSPI_IsReady());
   }
 
-  // QSPI速度テスト
+  // QSPI Speed Test
   if (Debug_On) {
-    QSPI_Status("Setup (読み取り前)");
+    QSPI_Status("Setup (Before read)");
     TimeTaken = millis();
   }
   Error_Code = nrfx_qspi_read(pBuf, MemToUse, 0x0);
   if (Debug_On) {
     TimeTaken = millis() - TimeTaken;
-    Serial.print("(Setup) QSPIは");
+    Serial.print("(Setup) QSPI took ");
     Serial.print(TimeTaken);
-    Serial.print("msで");
+    Serial.print("ms to read ");
     Serial.print(MemToUse / 1024);
-    Serial.print("Kbを読み取りました... 読み取り結果 = ");
+    Serial.print("Kb ... Read result = ");
     Serial.println(Error_Code);
-    QSPI_Status("Setup (読み取り後)");
+    QSPI_Status("Setup (After read)");
     QSPI_WaitForReady();
     QSPI_PrintData(&pBuf[0], 10);
   }
   if (Debug_On) {
-    Serial.println("QSPIが64Kbのメモリを消去中");
+    Serial.println("QSPI Erasing 64Kb of memory");
   }
   QSPI_Erase(0); 
   if (Debug_On) {
-    Serial.println("(Setup) 消去後のQSPI読み取り");
+    Serial.println("(Setup) QSPI read after erase");
     TimeTaken = millis();
   }
   QSPI_WaitForReady();
   Error_Code = nrfx_qspi_read(pBuf, MemToUse, 0x0);
   if (Debug_On) {
     TimeTaken = millis() - TimeTaken;
-    Serial.print("(Setup) QSPIは");
+    Serial.print("(Setup) QSPI took ");
     Serial.print(TimeTaken);
-    Serial.print("msで");
+    Serial.print("ms to read ");
     Serial.print(MemToUse / 1024);
-    Serial.print("Kbを読み取りました... 読み取り結果 = ");
+    Serial.print("Kb ... Read result = ");
     Serial.println(Error_Code);
     QSPI_WaitForReady();
     QSPI_PrintData(&pBuf[0], 10);
@@ -341,39 +337,39 @@ void setup() {
   }
   QSPI_WaitForReady();
   if (Debug_On) {
-    Serial.println("(Setup) QSPI書き込み直前");
+    Serial.println("(Setup) Just before QSPI write");
     TimeTaken = millis();
   }
   Error_Code = nrfx_qspi_write(pBuf, MemToUse, 0x0);
   if (Debug_On) {
     TimeTaken = millis() - TimeTaken;
-    Serial.print("(Setup) QSPIは");
+    Serial.print("(Setup) QSPI took ");
     Serial.print(TimeTaken);
-    Serial.print("msで");
+    Serial.print("ms to write ");
     Serial.print(MemToUse / 1024);
-    Serial.print("Kbを書き込みました... 書き込み結果 = ");
+    Serial.print("Kb ... Write result = ");
     Serial.println(Error_Code);
   }
   QSPI_WaitForReady();
   if (Debug_On) {
-    Serial.println("(Setup) QSPI読み取り直前");
+    Serial.println("(Setup) Just before QSPI read");
     TimeTaken = millis();
   }
   Error_Code = nrfx_qspi_read(pBuf, MemToUse, 0x0);
   if (Debug_On) {
     TimeTaken = millis() - TimeTaken;
-    Serial.print("(Setup) QSPIは");
+    Serial.print("(Setup) QSPI took ");
     Serial.print(TimeTaken);
-    Serial.print("msで");
+    Serial.print("ms to read ");
     Serial.print(MemToUse / 1024);
-    Serial.print("Kbを読み取りました... 読み取り結果 = ");
+    Serial.print("Kb ... Read result = ");
     Serial.println(Error_Code);
     QSPI_WaitForReady();
     QSPI_PrintData(&pBuf[0], 10);
   }
   QSPI_WaitForReady();
   QSPI_Status("Setup");
-  // QSPI速度テスト完了
+  // QSPI Speed Test Complete
 }
 
 void loop() {
@@ -381,7 +377,7 @@ void loop() {
 }
 ```
 
-このプログラムは **mbed** ボード専用です。そのため、コンパイルおよびアップロード時には mbed タブの下で XIAO nRF52840 を選択してください。
+このプログラムは **mbed** ボード専用です。コンパイルとアップロード時は、mbedタブの下にあるXIAO nRF52840 を選択してください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-BLE/XIAO_nRF52840_new7.png" alt="pir" width={800} height="auto" /></p>
 
@@ -390,7 +386,7 @@ void loop() {
 
 .
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
@@ -401,3 +397,4 @@ void loop() {
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

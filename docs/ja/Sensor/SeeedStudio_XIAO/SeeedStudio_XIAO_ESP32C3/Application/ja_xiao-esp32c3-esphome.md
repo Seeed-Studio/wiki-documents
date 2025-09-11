@@ -1,34 +1,30 @@
 ---
-description: XIAO ESP32C3 を使用した ESPHome へのアクセス
-title: XIAO ESP32C3 が ESPHome サービスを介して Home Assistant にアクセス
+description: XIAO ESP32C3 で ESPHome にアクセスする
+title: XIAO ESP32C3 が ESPHome サービス経由で Home Assistant にアクセスする
 keywords:
 - ESPHome
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/xiao-esp32c3-esphome
 last_update:
-  date: 05/15/2025
+  date: 03/03/2023
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# XIAO ESP32C3 が ESPHome サービスを介して Home Assistant にアクセス
+# XIAO ESP32C3 が ESPHome サービス経由で Home Assistant にアクセスする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/78.jpg" style={{width:700, height:'auto'}}/></div>
 
-この記事では、ESPHome サービスを独自の Home Assistant 環境にインストールする手順を説明します。XIAO ESP32C3 の WiFi 機能を使用することで、XIAO をスムーズに Home Assistant に接続し、ホーム端末の一部として利用できるようになります。
+この記事では、独自の Home Assistant 環境に ESPHome サービスをインストールする方法をガイドします。XIAO ESP32C3 の WiFi 機能を使用することで、XIAO を非常にスムーズに Home Assistant にホーム端末の一部として接続できるようになります。
 
-さらに、最も人気のある 24GHz mmWave Human Static Presence Module Lite を組み合わせて、人の存在検知機能を備えた Home Assistant を構築します。
+さらに、最も人気のある 24GHz mmWave Human Static Presence Module Lite と組み合わせて、人感検知機能を持つ Home Assistant を構築します。
 
 ## はじめに
 
 :::tip
-2023年7月31日現在、レーダーが完全に動作しなくなる問題が修正されました。このチュートリアルを正しく動作させるには、ライブラリファイルとコンフィギュレーターを更新してください。
+2023年7月31日現在、レーダーが完全に動作しなくなる以前の問題は修正されましたので、このチュートリアルが正常に動作するように、ライブラリファイルとコンフィギュレーターを更新してください。
 :::
 
-このチュートリアルをすべて実行するには、以下のものを準備する必要があります。
+このチュートリアルをすべて実行したい場合は、以下を準備する必要があります。
 
 <table align="center">
   <tbody><tr>
@@ -42,55 +38,55 @@ https://github.com/Seeed-Studio/wiki-documents/issues
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/24GHz-mmWave-Sensor-Human-Static-Presence-Module-Lite-p-5524.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-このプロジェクトの最終目標は、24GHz mmWave Human Static Presence Module Lite を Home Assistant に展開することです。
+このプロジェクトの最終目標は、24GHz mmWave Human Static Presence Module Lite を Home Assistant にデプロイすることです。
 
-このプロジェクトでは、センサーを Home Assistant に迅速に展開できるように、24GHz mmWave Human Static Presence Module Lite 用の完全な設定ファイルとライブラリを用意しています。
+このプロジェクトでは、24GHz mmWave Human Static Presence Module Lite の完全な設定ファイルとライブラリを作成し、センサーを Home Assistant に迅速にデプロイできるようにしました。
 
-このチュートリアルの内容は、以下の手順を大まかに説明します。
+このチュートリアルの内容は、大まかに以下の手順で進めます。
 
-1. [Home Assistant 環境を選択する](#select-your-home-assistant-environment)
-2. [Home Assistant に ESPHome をインストールして設定する](#install-and-configure-esphome-in-home-assistant)
-3. [XIAO ESP32C3 と ESPHome の接続を設定する](#configure-the-xiao-esp32c3-and-esphome-connection)
-4. [Home Assistant パネルを設定する](#configure-home-assistant-panel)
+1. [Home Assistant 環境の選択](#select-your-home-assistant-environment)
+2. Home Assistant での ESPHome のインストールと設定
+3. [XIAO ESP32C3 と ESPHome 接続の設定](#configure-the-xiao-esp32c3-and-esphome-connection)
+4. [Home Assistant パネルの設定](#configure-home-assistant-panel)
 
 もちろん、XIAO ESP32C3 が Home Assistant で Grove をどのように使用するかに興味がある場合は、この章を直接読むことができます。
 
-- [XIAO ESP32C3 を使用して Grove を Home Assistant に接続する](#connect-grove-to-home-assistant-using-xiao-esp32c3)
+- [XIAO ESP32C3 を使用して Grove を Home Assistant に接続](#connect-grove-to-home-assistant-using-xiao-esp32c3)
 
-## Home Assistant 環境を選択する
+## Home Assistant 環境の選択
 
-この手順では、Home Assistant 環境のインストール方法について詳しく説明しません。すでに動作する Home Assistant デバイスをお持ちであることを前提とします。
+このルーチンでは、Home Assistant 環境のインストール方法については詳しく説明しません。すでに動作する Home Assistant デバイスをお持ちであることを前提とします。
 
-もし Home Assistant のインストール方法を学びたい場合は、[公式チュートリアル](https://www.home-assistant.io/installation/)を参照してください。Home Assistant をインストールする際には、x86 デバイスを使用することを強くお勧めします。これが最もユーザーフレンドリーな方法であり、Supervised を使用した Home Assistant のインストールが可能です。
+Home Assistant のインストール方法を学びたい場合は、[公式チュートリアル](https://www.home-assistant.io/installation/)を参照してください。x86 デバイスを使用して Home Assistant をインストールすることを強く推奨します。これは、Supervised で Home Assistant をインストールする最もユーザーフレンドリーな方法だからです。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/77.png" /></div>
 
-上記の表に基づくと、**Home Assistant OS** と **Home Assistant Supervised** をインストールするのが最適です。これにより、多くの手間を省くことができます。もし OpenWRT 上の Docker で Home Assistant を実行している場合（例：LinkStar H68K を使用）、心配しないでください。この方法についても詳細な参考資料を提供します。
+上記の表によると、**Home Assistant OS** と **Home Assistant Supervised** をインストールするのが最も適切で、多くの手間を省くことができます。OpenWRT（例：LinkStar H68K を使用）で Docker 上で Home Assistant を実行している場合でも、ご心配なく、これを行う方法についても詳細な参考資料を提供します。
 
-また、Seeed Studio 製品のいくつかに対して Home Assistant のインストール方法を記載していますので、以下を参照してください。
+Seeed Studio の一部の製品について Home Assistant のインストール方法も書いていますので、参照してください。
 
-- [ODYSSEY-X86 での Home Assistant の始め方](https://wiki.seeedstudio.com/ja/ODYSSEY-X86-Home-Assistant/)
-- [reTerminal での Home Assistant の始め方](https://wiki.seeedstudio.com/ja/reTerminal_Home_Assistant/)
-- [LinkStar H68K/reRouter CM4 での Home Assistant の始め方](https://wiki.seeedstudio.com/ja/h68k-ha-esphome/)
+- [ODYSSEY-X86 での Home Assistant 入門](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)
+- [reTerminal での Home Assistant 入門](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)
+- [LinkStar H68K/reRouter CM4 での Home Assistant 入門](https://wiki.seeedstudio.com/h68k-ha-esphome/)
 
-## Home Assistant に ESPHome をインストールする
+## Home Assistant での ESPHome のインストール
 
-### ステップ 1. ESPHome をインストールする
+### ステップ 1. ESPHome のインストール
 
-- **シナリオ 1: Home Assistant OS (Add-on Store を使用) での ESPHome インストール**
+- **シナリオ 1：Home Assistant OS での ESPHome インストール（Add-on Store あり）**
 
-Home Assistant OS をインストールしている場合、Add-on Store が利用可能で、これにより ESPHome のインストールが非常に簡単になります。
+Home Assistant OS がインストールされている場合、Add-on Store があるため、ESPHome のインストールがはるかに簡単になります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/79.png" /></div>
 
@@ -98,9 +94,9 @@ Add-on Store で ESPHome を検索してインストールできます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/80.png" /></div>
 
-- **シナリオ 2: OpenWRT Docker/Docker 上の Home Assistant での ESPHome インストール (Add-on Store を使用しない)**
+- **シナリオ 2：OpenWRT Docker/Docker での Home Assistant での ESPHome インストール（Add-on Store なし）**
 
-Home Assistant Container をインストールしている場合、Add-on Store を通じて ESPHome サービスを簡単にダウンロードすることはできません。そのため、代替手段が必要です。
+Home Assistant Container をインストールしているため、Add-on Store 経由で ESPHome サービスを簡単にダウンロードできないので、妥協案が必要です。
 
 ESPHome イメージをダウンロードする必要があります。
 
@@ -110,21 +106,22 @@ esphome/esphome:latest
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/17.png" /></div>
 
-コンテナを作成するページで、いくつかの簡単な設定を行う必要があります。
-- コンテナ名: 任意のコンテナ名
-- Docker イメージ: ダウンロードした **esphome** イメージを選択
-- ネットワーク: **host** モードを選択
-- 環境変数 (-e): 必要な環境変数
+コンテナが作成されるページで、いくつかの簡単な設定を行う必要があります。
+
+- Container Name: あなたのコンテナ名
+- Docker Image: ダウンロードしたばかりの **esphome** イメージを選択
+- Network: **host** モードを選択
+- Environment Variables(-e): あなたの環境変数
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/18.png" /></div>
 
-上記を入力したら保存して適用します。コンテナが作成されたことが確認できます。また、コンテナを起動する必要があります。
+上記を入力したら、保存して適用します。コンテナが作成されたことが確認できます。また、それを開始する必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/19.png" /></div>
 
-Home Assistant で ESPHome をダウンロードした場合と同じ効果を得るために、Home Assistant の設定ファイルを変更する必要があります。
+Home Assistant で ESPHome をダウンロードするのと同じ効果を実現するために、Home Assistant の設定ファイルを変更する必要があります。
 
-Home Assistant Container に移動します。
+Home Assistant コンテナに移動します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/55.png" /></div>
 
@@ -138,7 +135,7 @@ Home Assistant のターミナルに移動します。
 vi configuration.yaml
 ```
 
-`configuration.yaml` の末尾に以下の内容を追加します。
+`configuration.yaml` の末尾に以下の内容を追加してください。
 
 ```
 # Example configuration.yaml entry
@@ -149,19 +146,19 @@ panel_iframe:
     icon: mdi:chip
 ```
 
-Home Assistant Container シェルで `exit` と入力して Docker コンテナを終了します。これが完了したら、Home Assistant コンテナを再起動します。
+dockerコンテナから出るには、Home Assistantコンテナシェルで```exit```と入力します。これが完了したら、Home Assistantコンテナを再起動します。
 
-新しいブラウザページを開き、アドレス `http://homeassistant:8123/` を入力して Home Assistant アカウントにログインすると、左側のツールバーに ESPHome が表示されます。
+新しいブラウザページを作成し、アドレス`http://homeassistant:8123/`を入力してHome Assistantアカウントにログインすると、左側のツールバーにESPHomeが表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/57.png" /></div>
 
-## XIAO ESP32C3 と ESPHome 接続の設定
+## XIAO ESP32C3とESPHomeの接続を設定する
 
-### ステップ 2. ハードウェア準備
+### ステップ2. ハードウェアの準備
 
-このチュートリアルの目的は、Home Assistant ダッシュボードで 24GHz mmWave Human Static Presence Module Lite のデータ情報を確認できるようにすることです。
+このチュートリアルの目標は、Home Assistantダッシュボードで24GHz mmWave人体静的存在モジュールLiteのデータ情報を確認できるようにすることです。
 
-デバイスをメインボードを介してコンピュータに接続します。配線図は以下の表に示されています。
+メインボードを通してデバイスをコンピュータに接続します。配線図は以下の表に示されています。
 
 <div class="table-center">
 <table align="center">
@@ -172,99 +169,99 @@ Home Assistant Container シェルで `exit` と入力して Docker コンテナ
     <tr>
       <td align="center">XIAO ESP32C3</td>
       <td align="center" />
-      <td align="center">24GHz mmWave Human Static<br />Presence Module Lite</td>
+      <td align="center">24GHz mmWave人体静的<br />存在モジュールLite</td>
     </tr>
     <tr>
       <td align="center">5V</td>
-      <td align="center">--&gt;</td>
+      <td align="center">--></td>
       <td align="center">5V</td>
     </tr>
     <tr>
       <td align="center">GND</td>
-      <td align="center">--&gt;</td>
+      <td align="center">--></td>
       <td align="center">GND</td>
     </tr>
     <tr>
       <td align="center">D2</td>
-      <td align="center">--&gt;</td>
+      <td align="center">--></td>
       <td align="center">RX</td>
     </tr>
     <tr>
       <td align="center">D3</td>
-      <td align="center">--&gt;</td>
+      <td align="center">--></td>
       <td align="center">TX</td>
     </tr>
   </tbody></table>
 </div>
 
-### ステップ 3. XIAO ESP32C3 と Home Assistant を同じ LAN に接続する
+### ステップ3. XIAO ESP32C3とHome Assistantを同じLANに接続する
 
-Home Assistant がすでにネットワークに接続されていることを確認してください。例えば、ネットワークケーブルを使用してデバイスに接続するなどです。その後、ローカルネットワーク（例：WiFi）をオンにして、XIAO ESP32C3 がこのネットワークに接続できるようにします。
+Home Assistantがすでにネットワークに接続されていることを確認してください。例えば、ネットワークケーブルを介してデバイスに接続している場合です。その後、XIAO ESP32C3もこのネットワークに接続できるように、ローカルネットワーク（例：WiFi）をオンにするだけです。
 
-以下では、LinkStar H68K を例として使用します。目的は、XIAO を LinkStar H68K のホットスポットに接続することです。
+以下では、LinkStar H68Kを例として使用します。私の目標は、XIAOをLinkStar H68Kのホットスポットに接続することです。
 
-OpenWRT の **Network** タブで、**Wireless** --> **ADD** を選択します。
+OpenWRTの**Network**タブで、**Wireless** --> **ADD**を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/58.png" /></div>
 
-**Device Configuration** の **Transmit Power** では、**auto** を選択します。
+**Device Configuration**の**Transmit Power**では、**auto**を選択します。
 
-**Interface Configuration** の設定では、以下の指示に従ってください。
+**Interface Configuration**設定については、以下の指示に従って入力してください。
 
 - General Setup
-    - Mode: LinkStar がインターネットにアクセスする方法に依存します。ケーブル接続を使用している場合は **Client** を選択し、WiFi に接続している場合は **Access Point** を選択します。
-    - ESSID: WiFi の名前を入力します。スペースや特殊文字を使用しないようにしてください。
-    - Network: **lan** をチェックします。
+  - Mode: LinkStarがインターネットにアクセスする方法によって異なります。ケーブル接続を使用している場合は**Client**を選択し、WiFiに接続している場合は**Access Point**を選択します。
+  - ESSID: WiFiの名前を入力してください。スペースや特殊文字は避けるようにしてください。
+  - Network: **lan**にチェックを入れます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/23.png" /></div>
 
 - Wireless Security
-    - Encryption: WPA2-PSK
-    - Key: 設定したい WiFi パスワードを入力します。
+  - Encryption: WPA2-PSK
+  - Key: 設定したいWiFiパスワードを入力します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/24.png" /></div>
 
-上記の情報を入力したら、右下の **Save and Apply** をクリックし、LinkStar がホットスポットを開くのを数分待ちます。
+上記の情報を入力したら、右下の**Save and Apply**をクリックし、LinkStarがホットスポットを開くまで少し待ちます。
 
-このホットスポットにデバイスが接続されていない場合、信号がないと表示されます。
+このホットスポットにデバイスが接続されていない場合、信号なしと表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/60.png" /></div>
 
-すべてを考慮して、Home Assistant のページに戻りましょう。
+すべてを考慮して、Home Assistantページに戻りましょう。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/61.png" /></div>
 
-**NEW DEVICE** をクリックします。その後、**Continue** をクリックします。
+**NEW DEVICE**をクリックします。次に**Continue**をクリックします。
 
-新しいポップアップウィンドウで、設定したいアプリケーションの名前と、LinkStar で設定したホットスポット（または自身の WiFi）の名前とパスワードを入力してください。XIAO ESP32C3 と Home Assistant が **同じ LAN** にあることを確認してください。
+新しいポップアップウィンドウで、設定したいアプリケーションの名前と、LinkStarで設定したホットスポットの名前とパスワード（または独自のWiFi）を入力してください。XIAO ESP32C3とHome Assistantが**同じLAN**上にあることを確認してください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/25.png" /></div>
 
-その後、**Next** をクリックします。
+次に**Next**をクリックします。
 
-デバイスタイプでは、**ESP32-C3** を選択してください。
+デバイスタイプでは、**ESP32-C3**を選択してください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/26.png" /></div>
 
-その後、**Next** をクリックします。
+次に**Next**をクリックします。
 
-<span id="jump1">**Encryption key** をクリックして安全な場所に保存してください。このキーは後のステップで使用します。</span>
+<span id="jump1"><strong>Encryption key</strong>をクリックして、安全な場所に保存してください。このキーは後のステップで使用します。</span>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/27.png" /></div>
 
-その後、**SKIP** をクリックします。
+次に**SKIP**をクリックします。
 
-### ステップ 4. XIAO ESP32C3 の設定 yaml ファイルを変更する
+### ステップ4. XIAO ESP32C3の設定yamlファイルを変更する
 
-次に、先ほど作成したデバイスタブをクリックし、左下の **EDIT** ボタンをクリックします。
+次に、作成したデバイスタブをクリックし、左下の**EDIT**ボタンを押します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/28.png" /></div>
 
-この yaml ファイルに変更を加える必要があります。この内容は、以下の図の 1 と 2 に対応する2つの主要部分に分けられています。
+このyamlファイルに変更を加える必要があることに注意してください。変更する内容を2つの主要部分に分けており、下図の①と②に対応しています。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/62.png" /></div>
 
-- **①** の内容では、設定したデバイス名以外は変更しないでください。残りの内容については以下のコードを参照してください。
+- **①**の内容では、設定したデバイス名以外は変更しないでください。残りの内容については、以下のコードを参照してください。
 
 ```css
 # part 1:
@@ -299,11 +296,11 @@ logger:
   level: DEBUG
 ```
 
-- **②** の内容では、`captive_portal:` の後に以下のコードをコピーしてください。
+- コンテンツの **②** で、`captive_portal:` の後に以下のコードをコピーしてください。
 
 <details>
 
-<summary>クリックして完全なコードをプレビュー</summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yml
 # Sets up Bluetooth LE (Only on ESP32) to allow the user
@@ -414,61 +411,61 @@ number:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/63.png" /></div>
 
-### ステップ 5. XIAO ESP32C3 にファームウェアをアップロードする
+### ステップ5. XIAO ESP32C3にファームウェアをアップロード
 
-- **方法 1: コンパイルして直接アップロード**
+- **方法1: 直接コンパイルしてアップロード**
 
-x86デバイスを使用しており、デバイスポートにXIAOが表示される場合は、プログラムをコンパイルしてXIAOにアップロードできます。
+x86デバイスを使用していて、デバイスポートでXIAOが確認できる場合は、プログラムをコンパイルしてXIAOにアップロードできます。
 
-XIAOをデバイスに接続してください。
+XIAOをデバイスに接続します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/ESPHome/49.png" style={{width:700, height:'auto'}}/></div>
 
-デバイスバーの右下にある三つの点をクリックし、**インストール**を選択します。
+デバイスバーの右下にある3つの点をクリックし、**Install**を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/84.png" /></div>
 
-**ESPHome Dashboard を実行しているコンピュータに接続**をクリックします。
+**Plug into the computer running ESPHome Dashboard**をクリックします。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/85.png" /></div>
 
-接続されているポートを選択します。
+接続されたポートを選択します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/ESPHome/18.png" /></div>
 
-これで必要なボードパッケージがすべてダウンロードされ、ESPHomeファームウェアがXIAO ESP32C3にフラッシュされます。フラッシュが成功すると、以下の出力が表示されます。
+これで、必要なボードパッケージがすべてダウンロードされ、ESPHomeファームウェアがXIAO ESP32C3に書き込まれます。書き込みが成功すると、以下の出力が表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/ESPHome/19.png" /></div>
 
-XIAOをデバイスに接続した後にポートが見つからない場合は、2番目の方法を試してください。
+XIAOをデバイスに接続してもポートが見つからない場合は、2番目の方法を試してください。
 
-- **方法 2: ホストを使用してコンパイル済みファームウェアをアップロード**
+- **方法2: ホストを使用してコンパイル済みファームウェアをアップロード**
 
-LinkStar H68Kのようなソフトルートは外部MCUデバイスの認識をサポートしていないため、まずコンパイル済みファームウェアをダウンロードし、別のPCを介してファームウェアをアップロードする必要があります。
+LinkStar H68Kのようなソフトルーターは外部MCUデバイスの認識をサポートしていないため、まずコンパイル済みファームウェアをダウンロードし、その後別のPCを介してファームウェアをアップロードする必要があります。
 
-右上の**インストール**ボタンをクリックします。その後、最後の項目**手動ダウンロード**を選択します。
+右上の**Install**ボタンをクリックします。次に最後の項目**Manual download**を選択します。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/30.png" /></div>
 
-**モダン形式**を選択します。
+**Modern format**を選択します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/31.png" /></div>
 
-これにより、ダウンロードとコンパイルに時間がかかるため、しばらくお待ちください。すべてが準備完了すると、ファームウェアが自動的にコンピュータにダウンロードされます。
+その後、ダウンロードとコンパイルに長時間かかりますので、しばらくお待ちください。すべての準備が整うと、ファームウェアが自動的にコンピューターにダウンロードされます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/33.png" /></div>
 
-XIAO ESP32C3にファームウェアをアップロードするには、いくつかのオプションがあります。ここでは2つの方法を紹介します。
+XIAO ESP32C3にファームウェアをアップロードするには、いくつかのオプションがあります。ここでは2つの方法を紹介します：
 
-- オプション 1: [ESPhome Webツール](https://web.esphome.io/?dashboard_install)を使用してアップロード。
+- オプション1: [ESPhome Webツール](https://web.esphome.io/?dashboard_install)を使用してアップロード。
 
-適切なドライバがインストールされていることを確認してください。以下はESPデバイスで使用される一般的なチップのドライバです。
+適切なドライバーがインストールされていることを確認してください。以下は、ESPデバイスで使用される一般的なチップのドライバーです。
 
-1. CP2102ドライバ: [Windows & Mac](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+1. CP2102ドライバー: [Windows & Mac](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
 
-2. CH342, CH343, CH9102ドライバ: [Windows](https://www.wch.cn/downloads/CH343SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
+2. CH342、CH343、CH9102ドライバー: [Windows](https://www.wch.cn/downloads/CH343SER_ZIP.html)、[Mac](https://www.wch.cn/downloads/CH34XSER_MAC_ZIP.html)
 
-3. CH340, CH341ドライバ: [Windows](https://www.wch.cn/downloads/CH341SER_ZIP.html), [Mac](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)
+3. CH340、CH341ドライバー: [Windows](https://www.wch.cn/downloads/CH341SER_ZIP.html)、[Mac](https://www.wch.cn/downloads/CH341SER_MAC_ZIP.html)
 
 ChromeまたはEdgeウェブブラウザで[ESPhome Webツール](https://web.esphome.io/?dashboard_install)を開きます。
 
@@ -476,7 +473,7 @@ ChromeまたはEdgeウェブブラウザで[ESPhome Webツール](https://web.es
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/34.png" /></div>
 
-ポップアップウィンドウでXIAO ESP32のシリアルポートを選択します。
+ポップアップウィンドウでXIAO ESP32シリアルポートを選択します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/64.png" /></div>
 
@@ -486,63 +483,63 @@ ChromeまたはEdgeウェブブラウザで[ESPhome Webツール](https://web.es
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/38.png" /></div>
 
-- オプション 2: [esphome-flasherツール](https://github.com/esphome/esphome-flasher)を使用。
+- オプション2: [esphome-flasherツール](https://github.com/esphome/esphome-flasher)を使用。
 
-ドライバをインストールし、ブラウザを変更した後でも方法1でファームウェアをアップロードできない場合は、方法2を試してください。具体的なインストール方法と手順については公式チュートリアルを参照してください。
+ドライバーをインストールしてブラウザを変更しても方法1でファームウェアをアップロードできない場合は、方法2を試してください。具体的なインストール方法と手順については、公式チュートリアルを参照してください。
 
 :::tip
-XIAO ESP32C3のログメッセージを確認したい場合、このソフトウェアのログ表示ボタンを使用してログを確認することもできます。
+XIAO ESP32C3のログメッセージを観察したい場合は、このソフトウェアのView Logsボタンからも確認できます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/41.png" /></div>
 :::
 
-アップロードが完了したら、PCからXIAO ESP32C3を切断できます（ログを確認する必要がない場合）。その後、XIAOを個別に電源供給するだけです。
+アップロードが完了したら、XIAO ESP32C3をPCから切断し（ログを確認する必要がない限り）、XIAOに単独で電源を供給するだけです。
 
-すべてが正常に進めば、XIAO ESP32C3は設定したWiFiを検索して接続します。
+すべてがうまくいけば、XIAO ESP32C3は設定したWiFiを検索して接続します。
 
-私の場合、LinkStar H68Kのネットワークを使用しています。ネットワークオプションで確認し、LinkStar H68Kによって割り当てられたIPアドレスを確認できます。
+私の場合と同様に、LinkStar H68Kのネットワークを使用します。ネットワークオプションでそれを見つけることができ、LinkStar H68Kによって割り当てられたIPアドレスを確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/42.png" /></div>
 
-通常、この時点でHome Assistantではデバイスのステータスがオフラインからオンラインに変わります。
+通常、この時点でHome Assistantでは、デバイスのステータスもオフラインからオンラインに変わります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/65.png" /></div>
 
 ## Home Assistant パネルの設定
 
-### ステップ 6. XIAO ESP32C3 に接続する
+### ステップ 6. XIAO ESP32C3 への接続
 
-LAN 上に多くの Home Assistant デバイスがない場合、Home Assistant は自動的に ESP デバイスを検索して **Devices** タブに追加することができます。このデバイスは **Settings** の **Devices & Services** タブ内で確認できます。
+LAN 上に多くの Home Assistant デバイスがない場合、Home Assistant は自動的に ESP デバイスを検索し、デバイスタブに追加することができます。このデバイスは **設定** の **デバイスとサービス** タブ内で確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/66.png" /></div>
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/67.png" /></div>
 
-自動検索されない場合は、XIAO ESP32C3 の IP アドレスを使用して接続することもできます。
+自動検索されない場合は、XIAO ESP32C3 の IP アドレスに基づいて接続することもできます。
 
-**ADD INTEGRATION** をクリックし、**esphome** を検索します。
+**統合を追加** をクリックし、**esphome** を検索します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/43.png" /></div>
 
-次に、XIAO ESP32C3 の IP アドレスとポート番号 **6053** を入力します。その後、**SUBMIT** をクリックします。
+次に、ポート番号 **6053** を含む XIAO ESP32C3 の IP アドレスを入力します。その後、**送信** をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/44.png" /></div>
 
-入力した IP アドレスとポート番号が正しい場合、[ステップ 4](#jump1) で保存した暗号化キーの入力を求められます。
+入力した IP アドレスとポート番号が正しい場合、暗号化キーの入力を求められます。これはステップ 4 で保存するよう指示したものです。
 
-その後、**SUBMIT** をクリックします。
+その後、**送信** をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/68.png" /></div>
 
-これで、デバイスの追加手順が正常に完了しました。
+この時点で、デバイス追加の手順が正常に完了しました。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/51.png" /></div>
 
-### ステップ 7. 24GHz mmWave Module Lite の機能概要
+### ステップ 7. 24GHz mmWave Module Lite 機能概要
 
-このスイートの全機能とこれらの機能の使用方法を迅速に理解するために、このセクションを注意深く読む必要があります。より詳細な情報が必要な場合は、[製品のユーザーマニュアル](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf) を読むことをお勧めします。
+スイートの全機能とこれらの機能の使用方法を素早く理解するために、このセクションを注意深く読む必要があります。より詳細な情報が必要な場合は、[製品のユーザーマニュアル](https://files.seeedstudio.com/wiki/mmWave-radar/MR24HPC1_User_Manual-V1.5.pdf)を読むことをお勧めします。
 
-ダッシュボードの設定とパラメータの詳細については、ESPHome Docs に詳細な記述をまとめていますので、完全な記述と詳細を読むためにそちらをご覧ください。
+ダッシュボードの設定とパラメータの詳細については、ESPHome Docs で詳細な記事をまとめましたので、完全な記事と詳細を読むためにそちらに移動してください。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://deploy-preview-3383--esphome.netlify.app/components/sensor/seeed_mr24hpc1" target="_blank" rel="noopener noreferrer">
@@ -554,45 +551,45 @@ LAN 上に多くの Home Assistant デバイスがない場合、Home Assistant 
 
 ### ステップ 8. Home Assistant パネルの設定
 
-デフォルトのカードが非常に退屈でデータの表示に不向きだと感じる場合、Home Assistant は選択可能な多くの既製ダッシュボードを提供しています。
+デフォルトのカードがデータ表示において非常に退屈で使いにくいと感じる場合、Home Assistant は選択できる幅広い既製のダッシュボードを提供しています。
 
-自分の好みに合わせて独自のダッシュボードを作成することができます。
+お好みに合わせて独自のダッシュボードを作成できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/73.png" /></div>
 
-例えば、情報の出力を制御するオプションをスイッチ形式に変更することができます。
+例えば、情報出力を制御するオプションを素敵なスイッチに変更できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/74.png" /></div>
 
-人の動きの速度を視覚的なダッシュボード表示に変換することも可能です。
+人の動きの速度を視覚的なダッシュボード表示に変更できます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/75.png" /></div>
 
-これが私が作成したものです。スマートホームコントロールセンターの素質があるように見えます。
+これが私が作成したものです。スマートホーム制御センターの素質があるように見えます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/76.png" /></div>
 
-これで、チュートリアルの内容を無事に終了しました。
+これまでで、チュートリアルの内容を正常に完了しました。
 
-## XIAO ESP32C3 を使用して Grove を Home Assistant に接続する
+## XIAO ESP32C3を使用してGroveをHome Assistantに接続する
 
-もちろん、XIAO ESP32C3 は Home Assistant で 24GHz mmWave Human Static Presence Module Lite をサポートするだけではありません。このドキュメントでは、他にもさまざまなチュートリアルを見つけることができます。
+もちろん、XIAO ESP32C3にはHome Assistantでの24GHz mmWave人体静的存在検知モジュールLiteのサポート以上の機能があり、このドキュメントでより多くのチュートリアルを見つけて独自の用途に活用できます。
 
-- [XIAO ESP32C3 を使用して Grove を Home Assistant に接続する](https://wiki.seeedstudio.com/ja/Connect-Grove-to-Home-Assistant-ESPHome/)
+- [XIAO ESP32C3を使用してGroveをHome Assistantに接続する](https://wiki.seeedstudio.com/Connect-Grove-to-Home-Assistant-ESPHome/)
 
-創造力を発揮しましょう！
+創造力を発揮してください！
 
 ## トラブルシューティング
 
-### FAQ1: ESPhome Web ツールを使用してファームウェアをアップロード中に次のエラーが発生しました。どうすれば修正できますか？
+### FAQ1: ESPhome Webツールを使用してファームウェアをアップロードする際に以下のエラーが発生しました。どのように修正できますか？
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/37.png" /></div>
 
-> A: このプロンプトがアップロード中に表示された場合、XIAO ESP32C3 を PC から切断してください。その後、BOOT ボタンを押しながらボードを PC に接続し、BOOT ボタンを離してブートローダーモードに入ります。この状態で再接続し、再度ファームウェアをアップロードすれば十分です。
+> A: アップロード中にこのプロンプトが表示された場合は、XIAO ESP32C3をPCから切断してください。その後、BOOTボタンを押したまま、BOOTボタンを押し続けながらボードをPCに接続し、ボタンを離してブートローダーモードに入ります。この時点で再接続してファームウェアを再度アップロードすれば十分です。
 
-### FAQ2: esphome flasher を Linux にインストールしようとしましたが、チュートリアルに従ってもインストールできませんでした。どうすればよいですか？
+### FAQ2: esphome flasherのチュートリアルに従ってLinux環境でesphome flasherをインストールできません？
 
-> A: 以下のコマンドを実行する際に、システムバージョンを選択する必要があります。そうしないとエラーが発生します。たとえば、私のコンピュータが Ubuntu 22.04 の場合、実行すべきコマンドは以下の通りです。
+> A: 以下のコマンドを実行する際は、システムバージョンを選択する必要があります。そうしないとエラーが発生します。例えば、私のコンピューターがUbuntu 22.04の場合、実行すべきコマンドは以下の通りです。
 
 ```
 sudo apt install python3
@@ -604,124 +601,124 @@ pip3 install -U \
 pip3 install esphomeflasher
 ```
 
-### FAQ3: 正しい WiFi とパスワードを入力しましたが、XIAO ESP32C3 の IP アドレスが表示されません。なぜですか？
+### FAQ3: 正しいWiFiとパスワードを入力したのに、XIAO ESP32C3のIPアドレスが表示されないのはなぜですか？
 
-> A: この問題が発生した場合、XIAO ESP32C3 のアンテナが正しく接続されているか確認してください。アンテナがすでに接続されている場合は、可能であれば XIAO が LinkStar から 3m 以上離れていないことを確認してください（より強力なアンテナに交換していない限り）。  
-それでも XIAO が表示されない場合は、[esphome flasher](https://github.com/esphome/esphome-flasher) ソフトウェアを使用して XIAO のログ情報を確認し、ログを通じて XIAO の接続をチェックしてください。  
-また、XIAO を再接続して WiFi を再検索し、再接続を試みることもできます。
+> A: この問題が発生した場合は、XIAO ESP32C3のアンテナが正しく接続されているかを確認してください。アンテナが既に接続されている場合は、可能であればXIAOがLinkStarから3m以内にあることを確認してください（より強力なアンテナに交換していない限り）。
+それでもXIAOが表示されない場合は、[esphome flasher](https://github.com/esphome/esphome-flasher)ソフトウェアを使用してXIAOのログ情報を確認し、ログを通じてXIAOの接続を確認できます。
+xiaoを再接続して、WiFiの検索と再接続を試行させることができます。
 
-<!-- ### FAQ4: XIAO ESP32C3 がネットワークに接続されていますが、センサーデータが更新されないのはなぜですか？
+<!-- ### FAQ4: My XIAO ESP32C3 is connected to network, but why don't I see the sensor data refreshed?
 
 :::caution
-2023年6月1日時点のトラブルシューティングでは、ESPHome のダッシュボードで値を設定したりシーンを変更したりすると、レーダーが停止する可能性があることが判明しています。
+As of June 1, 2023 troubleshooting has revealed that if you set any value or change any scene in the dashboard of ESPHome, there is a possibility that the radar will go down.
 
-2023年7月31日時点で、レーダーが完全に動作しなくなる問題は修正されているため、このチュートリアルのライブラリファイルとコンフィギュレーターを更新してください。
+As of 31 July 2023, the previous issue that would cause the radar to completely die has now been fixed, so please update the library files and configurator for this tutorial species to work properly.
 :::
 
-> A: 以前の Wiki コンテンツでは、デフォルトの UART ピン（D6, D7）を使用してレーダーからデータを受信・送信していましたが、多くのユーザーからレーダーを再起動しないと動作しないというフィードバックがありました。これに対応して、Wiki コンテンツと手順を更新し、レーダーのシリアルポートを **D2 と D3** に置き換えました。テストの結果、この方法で問題が非常にうまく解決されることが確認されています。
+> A: In the previous Wiki content, we used the default UART pins (D6, D7) to receive and send data from the radar, but many users feedback there is a need to re-power the radar before it can work. In response, we **updated the Wiki** content and procedures to replace the serial ports of the radar with **D2 and D3**, and after testing, this fixes the problem very well.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/esphome-pinconnect.png" style={{width:600, height:'auto'}}/></div>
 
-> **Wiki の更新に気づいていない場合は、レーダーを再配線し、このチュートリアルの記事の [ステップ2と5](#configure-the-xiao-esp32c3-and-esphome-connection) に従ってコンパイルとアップロードプロセスを再実行することをお勧めします。**
+> **If you haven't noticed the Wiki update, I suggest you re-wire the radar and re-write the compile and upload process following [steps 2 and 5](#configure-the-xiao-esp32c3-and-esphome-connection) of this article's tutorial.**
 
-> ただし、シリアルピンを置き換えた後でもレーダーが正常に動作しないというユーザーもいます。そのため、問題が発生している箇所を確認するために、以下の方法と手順を提案します。それでもレーダーが動作しない場合は、**操作手順を技術サポートのメールアドレスに提供してください**。これにより、アフターサポートの問題処理が迅速化されます。
+> However, some users have responded that they still can't get the radar to work properly even after replacing the serial pins. So here, we propose the following methods and steps to check where the problem occurs, if you still can't solve the problem of radar working, **please provide your operation steps to the technical support email**, which can speed up the processing of after-sales problems.
 
-**以下の排除手順を順に確認してください。**
+**Please check the following Exclusion in order.**
 
-> **排除1: XIAO ESP32C3 が ESPHome が展開されているデバイスと同じ LAN にあることを確認してください。**
+> **Exclusion 1: Make sure the XIAO ESP32C3 is under the same LAN as the ESPHome deployed device.**
 
-> XIAO ESP32C3 が ESPHome のデバイスと同じ LAN にない場合、Home Assistant で表示されるログは不完全であり、データ収集の基準として使用できません。そのため、ルーターを再確認し、XIAO の IP アドレスが表示されるか確認してください。
+> If the XIAO ESP32C3 is not under the same LAN as the device of ESPHome, the log you see in Home Assistant is incomplete and cannot be used as the basis of data collection. So please double check your router to see if the IP address of XIAO appears.
 
-> **排除2: データライブ転送ボタンがオンになっているか確認してください。**
+> **Exclusion 2: Check that the Data Live Transfer button is on.**
 
-> XIAO がネットワークに接続され、デバイスが正常に追加されると、ダッシュボードにレーダーコンポーネントが表示されます。デフォルトではライブデータ転送ボタンがオフになっているため、これをオンにすることでレーダーデータが継続的に報告されるようになります。
+> After XIAO is on the network and the device is successfully added, you will be able to see the radar components in the dashboard. Please note that by default the live data transfer button is off, you need to turn it on to be able to see the radar data being reported continuously.
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/69.png" /></div>
 
-> **排除3: レーダーが正常に動作するか確認してください。**
+> **Exclusion 3: Check whether the radar can work properly.**
 
-> まず、レーダーが XIAO ESP32C3 と正常に動作することを確認する必要があります。これにより、ESPHome または製品のどちらに問題があるかを迅速に特定できます。以下のコードを Arduino IDE にアップロードしてください。この際、**レーダーの RX/TX ピンが XIAO の D2/D3 に接続されていること**に注意してください。
+> We need to make sure that the radar works well with the XIAO ESP32C3 first, which will allow us to quickly identify whether it is a problem with ESPHome or the product. Please upload the following code to XIAO ESP32C3 in Arduino IDE, please note that the **RX/TX pins of radar should be connected to D2/D3 of XIAO**.
 
 ```cpp
 #include "Arduino.h"
 #include <humanstaticLite.h>
 #include <HardwareSerial.h>
 
-// ハードウェアシリアルを使用する場合
+// can also try hardware serial with
 HumanStaticLite radar = HumanStaticLite(&Serial1);
 
 void setup() {
-  // 初回実行時のセットアップコード
+  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial1.begin(115200, SERIAL_8N1, 4, 5);
-  while(!Serial);   // シリアルポートが開かれるとプログラムが実行開始
+  while(!Serial);   //When the serial port is opened, the program starts to execute.
   Serial.println("Ready");
 }
 
 void loop() {
-  // 繰り返し実行されるメインコード
-  radar.recvRadarBytes();           // レーダーデータを受信して処理を開始
-  radar.showData();                 // シリアルポートに受信データフレームを表示
-  delay(200);                       // プログラムの詰まりを防ぐための遅延
+  // put your main code here, to run repeatedly:
+  radar.recvRadarBytes();           //Receive radar data and start processing
+  radar.showData();                 //Serial port prints a set of received data frames
+  delay(200);                       //Add time delay to avoid program jam
 }
 ```
 
-> シリアルモニターを開き、ボーレートを 115200 に設定してください。レーダーが正常に動作している場合、多くの数値が表示されるはずです。
+> シリアルモニターを開き、ボーレートを115200に設定してください。レーダーが正常に動作している場合、多くの数値が出力されるのが確認できるはずです。
 
-> このステップを実行してもデータ出力が表示されない場合は、Wiki に従ってレーダーのファームウェアを再フラッシュしてください。ファームウェアを更新する方法は2つあります：[Firmware Version Updates](https://wiki.seeedstudio.com/ja/Radar_MR24HPC1/#firmware-version-updates)。
+> この手順を実行してもデータ出力が見られない場合は、Wikiに従ってレーダーのファームウェアを再フラッシュしてください。ファームウェアを更新する方法を2つ提供しています：[ファームウェアバージョンの更新](https://wiki.seeedstudio.com/Radar_MR24HPC1/#firmware-version-updates)。
 
-> ファームウェアを更新してもまだ何も反応がない場合は、遠慮せずに直接技術サポートチームに連絡してください。そして、これまでに行ったすべての手順をお知らせください。
+> ファームウェアを更新した後もまだ何も聞こえない場合は、遠慮なく技術サポートチームに直接お問い合わせください。そして、すでに実行したすべての内容をお知らせください。
 
-> **除外条件 4: XIAO とレーダーが上記のチェックポイントでは正常に動作しているが、シリアルポートピンを交換してもレーダーのリアルタイムデータを取得できない場合**
+> **除外4：XIAOとレーダーが上記のチェックポイントで正常に動作するが、シリアルポートピンを交換した後も、レーダーのリアルタイムデータを取得できない。**
 
-> レーダーの RX および TX ピンを D2/D3 に交換し、上記の手順に従って慎重にトラブルシューティングを行ったにもかかわらず、リアルタイムデータメッセージを取得できない場合は、技術サポートチームに連絡してください。その前に、**Arduino 環境でレーダーが正常に動作するかどうかをお知らせください**。これにより、問題を分析して対処することができます。
+> レーダーのRXとTXピンをD2/D3に交換し、上記に従って慎重にトラブルシューティングを行ったにもかかわらず、リアルタイムデータメッセージを取得できない場合は、技術サポートチームにお問い合わせください。その前に、**レーダーがArduino環境で正常に動作するかどうかをお知らせください**。これにより、問題を分析して対処することができます。-->
 
-<!-- > A: この問題に直面した場合、センサーがデータを返さない正確な理由を理解するためにログを使用する必要があります。これまでに確認された可能性のある状況は、センサーが応答しない状況です。この場合、ログは次のように表示されます。
+<!-- > A：この問題に遭遇した場合、ログを使用してセンサーがデータを返さない正確な理由を理解する必要があります。これまでに遭遇する可能性があることが判明している状況は、センサーが応答しない状況で、そのログは次のようになります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/71.png" /></div>
 
-> このようなログが表示された場合は、以下の3点を再確認してください。
+> 類似のログが表示される場合は、以下の3つの場所を再度確認してください。
 > 1. センサーに5Vが供給されているかどうか。
-> 2. センサーの RX および TX ピンが正しく接続されているかどうか。
-> 3. センサーから XIAO への5V線のみを切断し、再接続してセンサーに再度電源を供給する。
+> 2. センサーのRXとTXピンが正しく接続されているか。
+> 3. センサーからXIAOへの5V線のみを切断し、再接続してセンサーを再度電源投入できるようにする。
 
-> 一般的に言えば、3番目のポイントでこの問題は解決します。データ転送の正常なログフローは次のようになります。
+> 一般的に、3番目のポイントでこの問題が解決されます。データ転送の正常なログフローは次のようになるはずです。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/homs-xiaoc3-linkstar/72.png" /></div> -->
 
-### FAQ4: Jlink を使用してファームウェアを書き込もうとした際に、「Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target」というエラーが発生しました。どうすればよいですか？
+### FAQ4: Jlinkフラッシュファームウェアを使用したが、「Programming of range @address 0x08000000 failed (block verification error) Program failed Failed to program and verify target」エラーが発生した？
 
-Jlink を使用してファームウェアを書き込む際にこのエラーが発生した場合、以下のいずれかの状況に該当する可能性があります。
+Jlinkフラッシュファームウェアを使用してこのエラーが発生した場合、以下のいずれかの状況にある可能性があります。
 
-1. センサーが完全に正常に動作しなくなり、メッセージを一切受信できなくなっている。
+1. センサーがまったく正常に動作しなくなり、センサーからメッセージを受信できない。
 2. 無効または不正なファームウェアを使用しようとしている。
 
 :::caution
-レーダーが元々正常に動作していた場合は、正しいファームウェアを使用しているかどうかを再確認してください！使用するファームウェアはレーダーやセンサーモデルごとに異なります！また、UART を介したファームウェアアップグレードと Jlink を介したファームウェアアップグレードは異なります！以下の手順を進めるのを中止してください。
+レーダーが元々正常に動作していた場合は、正しいファームウェアを使用していることを再度確認してください！使用するファームウェアはレーダーごと、センサーモデルごとに異なります！また、UART経由のファームウェアアップグレードとJlink経由のファームウェアアップグレードは同じではありません！以下の手順を続行するのを停止してください。
 :::
 
 <details>
 
-<summary><strong>例外時にこのエラーメッセージが表示されることを確認しました</strong></summary>
+<summary><strong>製品が例外の場合にこのエラーメッセージが表示されることを確認しました</strong></summary>
 
-レーダーが全く動作しない場合、このエラーメッセージが表示されるのは正常かもしれません。
+レーダーがまったく動作していない場合、このエラーメッセージが表示されるのは正常である可能性があります。
 
-レーダーの異常動作により、レーダーが読み取り/書き込み保護メカニズムをトリガーしている可能性があります。この場合、一般的にユーザーは製品に対してフラッシュプログラムを実行できなくなります。そのため、レーダーの読み取り/書き込み保護メカニズムを解除する必要があります。
+レーダーの異常動作により、レーダーが読み取り/書き込み保護メカニズムをトリガーし、一般的にユーザーが製品にプログラムをフラッシュすることが許可されなくなったため、レーダーの読み取り/書き込み保護メカニズムのロックを解除する必要があります。
 
-読み取り/書き込み保護を解除することには高いリスクが伴うため、ここでは解除方法を一般公開していません。必要な方のために、方法を[こちらの zip ファイル](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/ArteryICPProgrammer_V2.4.23.zip)に配置しています。異常なレーダーの保護を解除した後、再度ファームウェアを更新して正常な動作を回復することができます。
+読み取りと書き込みの保護解除は高リスクであるため、読み取りと書き込みの保護解除方法をここで一般に公開することはありません。必要な方のために[こちらのzipファイル](https://files.seeedstudio.com/wiki/Radar_MR24HPCB1/ArteryICPProgrammer_V2.4.23.zip)に方法を配置します。異常なレーダーの保護が解除されると、ファームウェアを再度更新して正常動作を復元できます。
 
 </details>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

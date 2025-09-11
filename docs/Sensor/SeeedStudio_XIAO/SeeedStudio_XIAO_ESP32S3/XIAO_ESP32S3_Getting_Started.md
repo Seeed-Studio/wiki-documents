@@ -18,37 +18,35 @@ import TabItem from '@theme/TabItem';
 
 # Getting Started with Seeed Studio XIAO ESP32S3 Series
 
-
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO ESP32S3</th>
-		<th>Seeed Studio XIAO ESP32S3 Sense</th>
-		<th>Seeed Studio XIAO ESP32S3 Plus</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3plus.png" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-			</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-			</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-			<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html" target="_blank">
-			<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-			</a>
-		</div></td>
-	</tr>
+ <tr>
+  <th>Seeed Studio XIAO ESP32S3</th>
+  <th>Seeed Studio XIAO ESP32S3 Sense</th>
+  <th>Seeed Studio XIAO ESP32S3 Plus</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3plus.png" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+   <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32S3-Plus-p-6361.html" target="_blank">
+   <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+   </a>
+  </div></td>
+ </tr>
 </table>
-
 
 ## Introduction
 
@@ -58,87 +56,88 @@ Seeed Studio XIAO ESP32S3 Sense integrates camera sensor, digital microphone and
 :::tip
 The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sense uses the **OV3660 camera** model.However, the Wiki example code for the camera still applies.
 :::
+
 ### Specification
 
 <table align="center">
-	<tr>
-	    <th>Item</th>
-	    <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3</th>
+ <tr>
+     <th>Item</th>
+     <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3</th>
         <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3 Sense</th>
-		<th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3 Plus</th>
-	</tr>
-	<tr>
-	    <th>Processor</th>
-	    <td align="center" colspan="3">ESP32-S3R8 <br></br> Xtensa LX7 dual-core, 32-bit processor that operates at up to 240 MHz </td>
-	</tr>
-	<tr>
-	    <th>Wireless</th>
-	    <td align="center" colspan="3">Complete 2.4GHz Wi-Fi subsystem <br></br> BLE: Bluetooth 5.0, Bluetooth mesh</td>
-	</tr>
+  <th style={{width:300, height:'auto'}}>Seeed Studio XIAO ESP32S3 Plus</th>
+ </tr>
+ <tr>
+     <th>Processor</th>
+     <td align="center" colspan="3">ESP32-S3R8 <br></br> Xtensa LX7 dual-core, 32-bit processor that operates at up to 240 MHz </td>
+ </tr>
+ <tr>
+     <th>Wireless</th>
+     <td align="center" colspan="3">Complete 2.4GHz Wi-Fi subsystem <br></br> BLE: Bluetooth 5.0, Bluetooth mesh</td>
+ </tr>
     <tr>
-	    <th>Built-in Sensors</th>
-	    <td align="center"> - </td>
+     <th>Built-in Sensors</th>
+     <td align="center"> - </td>
         <td align="center">OV2640 camera sensor for 1600*1200<br></br> OV3660 camera sensor for 2048*1536<br></br>Digital microphone</td>
-		<td align="center"> - </td>
-	</tr>
+  <td align="center"> - </td>
+ </tr>
     <tr>
-	    <th>Memory</th>
-	    <td align="center">On-chip 8M PSRAM & 8MB Flash</td>
+     <th>Memory</th>
+     <td align="center">On-chip 8M PSRAM & 8MB Flash</td>
         <td align="center">On-chip 8M PSRAM & 8MB Flash <br></br> Onboard SD Card Slot, supporting 32GB FAT</td>
-		<td align="center">On-chip 8M PSRAM & <strong>16MB</strong> Flash</td>
-	</tr>
+  <td align="center">On-chip 8M PSRAM & <strong>16MB</strong> Flash</td>
+ </tr>
     <tr>
-	    <th>Interface</th>
-	    <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED  <br></br> 1x Reset button, 1x Boot button</td>
+     <th>Interface</th>
+     <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED  <br></br> 1x Reset button, 1x Boot button</td>
         <td>1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED, 1x B2B Connector (with 2 additional GPIOs), 1x Reset button, 1x Boot button</td>
-		<td><strong>2</strong>x UART, 1x IIC, 1x IIS, <strong>2</strong>x SPI, <strong>18</strong>x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED, 1x B2B Connector, 1x Reset button, 1x Boot button</td>
-	</tr>
+  <td><strong>2</strong>x UART, 1x IIC, 1x IIS, <strong>2</strong>x SPI, <strong>18</strong>x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED, 1x B2B Connector, 1x Reset button, 1x Boot button</td>
+ </tr>
     <tr>
-	    <th>Dimensions</th>
-	    <td align="center">21 x 17.8mm</td>
+     <th>Dimensions</th>
+     <td align="center">21 x 17.8mm</td>
         <td align="center">21 x 17.8 x 15mm (with expansion board)</td>
-		<td align="center">21 x 17.8mm</td>
-	</tr>
+  <td align="center">21 x 17.8mm</td>
+ </tr>
     <tr>
-	    <th rowspan="5">Power</th>
-	    <td colspan="3" align="center">Input voltage (Type-C): 5V <br></br> Input voltage (BAT): 4.2V</td>
-	</tr>
+     <th rowspan="5">Power</th>
+     <td colspan="3" align="center">Input voltage (Type-C): 5V <br></br> Input voltage (BAT): 4.2V</td>
+ </tr>
     <tr>
-	    <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>19mA</strong> <br></br> - BAT: 3.8V@<strong>22mA</strong></td>
+     <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>19mA</strong> <br></br> - BAT: 3.8V@<strong>22mA</strong></td>
         <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>38.3mA</strong> <br></br> - BAT: 3.8V@<strong>43.2mA</strong> (with expansion board)</td>
-		<td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>28mA</strong> <br></br> - BAT: 3.8V@<strong>35mA</strong></td>
-	</tr>
-	<tr>
-	    <td align="center"> - </td>
+  <td>Circuit operating Voltage  (ready to operate): <br></br> - Type-C: 5V@<strong>28mA</strong> <br></br> - BAT: 3.8V@<strong>35mA</strong></td>
+ </tr>
+ <tr>
+     <td align="center"> - </td>
         <td align="center">Webcam Web application: <br></br> - Type-C: <br></br> - - Average power consumption: 5V/<strong>220mA</strong> <br></br> - Battery: <br></br> - - Average power consumption: 4.2V/<strong>212mA</strong></td>
-		<td align="center"> - </td>
-	</tr>
-	<tr>
-	    <td align="center"> - </td>
+  <td align="center"> - </td>
+ </tr>
+ <tr>
+     <td align="center"> - </td>
         <td align="center">Microphone recording & SD card writing:  <br></br> - Type-C: <br></br> - - Average power consumption: 5V/<strong>46.5mA</strong> <br></br> - - Peak power consumption: 5V/<strong>89.6mA</strong> <br></br> - Battery: <br></br> - - Average power consumption: 3.8V/<strong>54.4mA</strong> <br></br> - - Peak power consumption: 3.8V/<strong>108mA</strong></td>
-		<td align="center"> - </td>
-	</tr>
+  <td align="center"> - </td>
+ </tr>
     <tr>
-		<td align="center" colspan="3">Charging battery current: <strong>100mA</strong></td>
-	</tr>
+  <td align="center" colspan="3">Charging battery current: <strong>100mA</strong></td>
+ </tr>
     <tr>
         <th>Low Power Consumption Model</th>
         <td>Modem-sleep Model: <strong>3.8V/25 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/14 μA</strong></td>
         <td>Without any peripherals: <br></br> - Modem-sleep Model: <strong>3.8V/25.5 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/2.4 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/63.768 μA</strong> <br></br> Connect the camera: <br></br> - Modem-sleep Model: <strong>3.8V/44.57 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/5.47 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.00 mA</strong> <br></br> Connecting an SD Card: <br></br> - Modem-sleep Model: <strong>3.8V/32.8 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/3.48 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/1.08 mA</strong><br></br> Simultaneously connect the camera and the SD card: <br></br> - Modem-sleep Model: <strong>3.8V/55.72 mA</strong> <br></br> - Light-sleep Model: <strong>3.8V/6.56 mA</strong> <br></br> - Deep Sleep Model: <strong>3.8V/3.98 mA</strong></td>
-		<td>Modem-sleep Model: <strong>3.8V/26.5 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2.2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/69 μA</strong></td>
+  <td>Modem-sleep Model: <strong>3.8V/26.5 mA</strong> <br></br> Light-sleep Model: <strong>3.8V/2.2 mA</strong> <br></br> Deep Sleep Model: <strong>3.8V/69 μA</strong></td>
     </tr>
     <tr>
         <th>Wi-Fi Enabled Power Consumption</th>
         <td align="center">Active Model: <strong>~ 100 mA</strong></td>
         <td align="center">Active Model: <strong>~ 110 mA</strong> (with expansion board)</td>
-		<td align="center">Active Model: <strong>~ 85 mA</strong></td>
+  <td align="center">Active Model: <strong>~ 85 mA</strong></td>
     </tr>
     <tr>
         <th>BLE Enabled Power Consumption</th>
         <td align="center">Active Model: <strong>~ 85 mA</strong></td>
         <td align="center">Active Model: <strong>~ 102 mA</strong> (with expansion board)</td>
-		<td align="center">Active Model: <strong>~ 77 mA</strong></td>
-    </tr> 
+  <td align="center">Active Model: <strong>~ 77 mA</strong></td>
+    </tr>
     <tr>
         <th>Working Temperature</th>
         <td colspan="3" align="center">-40°C ~ 65°C</td>
@@ -155,11 +154,11 @@ The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sen
 - **Thumb-sized Compact Design**: 21 x 17.8mm, adopting the classic form factor of XIAO, suitable for space limited projects like wearable devices
 
 <table align="center">
-	<tr>
-	    <th>Item</th>
-	    <th style={{width:300, height:'auto'}}>OV3660 Camera</th>
+ <tr>
+     <th>Item</th>
+     <th style={{width:300, height:'auto'}}>OV3660 Camera</th>
         <th style={{width:300, height:'auto'}}>OV2640 Camera</th>
-	</tr>
+ </tr>
     <tr>
         <th>MAX Power Consumption on (640*480)</th>
         <td align="center">Active Model: <strong>~ 0.6A</strong></td>
@@ -169,14 +168,13 @@ The **OV2640 camera** has been discontinued, and the subsequent XIAO ESP32S3 Sen
         <th>AVG Power Consumption on (640*480)</th>
         <td align="center">Active Model: <strong>~ 0.12A</strong></td>
         <td align="center">Active Model: <strong>~ 0.24A</strong></td>
-    </tr> 
+    </tr>
     <tr>
         <th>MIN Power Consumption on (640*480)</th>
         <td align="center">Active Model: <strong>~ 0.12A</strong></td>
         <td align="center">Active Model: <strong>~ 0.15A</strong></td>
-    </tr> 
+    </tr>
 </table>
-
 
 ## Hardware Overview
 
@@ -186,51 +184,51 @@ Before everything starts, it is quite essential to have some basic parameters of
 <TabItem  value="(Sense)" label="XIAO ESP32S3/XIAO ESP32S3 Sense" default>
 
 <table align="center">
-	<tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense front indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
-	</tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense back indication diagram</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
-	</tr>
+     <th>XIAO ESP32S3/XIAO ESP32S3 Sense Pin List</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/2.jpg" style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 </TabItem>
 <TabItem value="Plus" label="XIAO ESP32S3 Plus" default>
 
 <table align="center">
-	<tr>
-		<th>XIAO ESP32S3 Plus front indication diagram</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_front.png
-		" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
-		<th>XIAO ESP32S3 Plus back indication diagram</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_back.png
-		" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
-	<th>XIAO ESP32S3 Plus Pin List</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_pinout.png
-		" style={{width:1000, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>XIAO ESP32S3 Plus front indication diagram</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_front.png
+  " style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+  <th>XIAO ESP32S3 Plus back indication diagram</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_back.png
+  " style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+ <th>XIAO ESP32S3 Plus Pin List</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/plus_pinout.png
+  " style={{width:1000, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 :::tip
@@ -242,6 +240,7 @@ The B2B connector of XIAO ESP32S3 Plus is compatible with [Wio-SX1262 extension 
 </Tabs>
 
 ### Power Pins
+
 - 5V - This is 5v out from the USB port. You can also use this as a voltage input but you must have some sort of diode (schottky, signal, power) between your external power source and this pin with anode to battery, cathode to 5V pin.
 - 3V3 - This is the regulated output from the onboard regulator. You can draw 700mA
 - GND - Power/data/signal ground
@@ -258,13 +257,11 @@ The parameters controlled by the given strapping pins at chip reset are as follo
 - **JTAG signal source** – GPIO3
 
 GPIO0, GPIO45, and GPIO46 are connected to the chip’s internal weak pull-up/pull-down resistors at chip reset.
-These resistors determine the default bit values of the strapping pins. Also, these resistors determine the bit
-values if the strapping pins are connected to an external high-impedance circuit.
+These resistors determine the default bit values of the strapping pins. Also, these resistors determine the bit values if the strapping pins are connected to an external high-impedance circuit.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/110.png" style={{width:400, height:'auto'}}/></div>
 
-To change the bit values, the strapping pins should be connected to external pull-down/pull-up resistances. If the ESP32-S3 is used as a device by a host MCU, the strapping pin voltage levels can also be controlled by the host
-MCU.
+To change the bit values, the strapping pins should be connected to external pull-down/pull-up resistances. If the ESP32-S3 is used as a device by a host MCU, the strapping pin voltage levels can also be controlled by the host MCU.
 
 All strapping pins have latches. At system reset, the latches sample the bit values of their respective strapping pins and store them until the chip is powered down or shut down. The states of latches cannot be changed in any other way. It makes the strapping pin values available during the entire chip operation, and the pins are freed up to be used as regular IO pins after reset.
 
@@ -273,7 +270,6 @@ Regarding the timing requirements for the strapping pins, there are such paramet
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/111.png" style={{width:600, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/112.png" style={{width:600, height:'auto'}}/></div>
-
 
 ## Getting Started
 
@@ -328,9 +324,9 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
 </div>
 
 If you need to know the detailed parameter information of ov5640, you can refer to the following chart.
@@ -356,6 +352,7 @@ Our testing has demonstrated the benefits of the upgraded heat sink over the ori
 | **With dual Heat Sinks** | 53.5°C (🔻10°C)           |
 
 ***Test Details:***
+
 - **Environment**: Air-conditioned room (approximately 27°C)
 - **Temperature Measuring Tool**: OMEGA CL3515R thermocouple
 - **Measurement Location**: Backside thermal pad of the XIAO ESP32S3
@@ -364,6 +361,7 @@ Our testing has demonstrated the benefits of the upgraded heat sink over the ori
 - **Operating Duration**: 1 hour
 
 ***Key result:***
+
 - The device equipped with the heat sink maintained stable operation for over an hour, reaching its peak temperature without performance degradation.
 - During testing with the WebCamera in SVGA (800x600) mode:
   - The XIAO ESP32S3 operated smoothly.
@@ -381,7 +379,7 @@ Ensure your device is powered off and unplugged from any power source before you
 
 :::tip notice
 
-***Purchasing Note:*** When purchasing your XIAO ESP32S3 Sense, it's important to note that only **models equipped with a camera** come with a heat sink included. If you have a version of the ESP32S3 that does not include a camera, you will need to purchase a heat sink separately. 
+***Purchasing Note:*** When purchasing your XIAO ESP32S3 Sense, it's important to note that only **models equipped with a camera** come with a heat sink included. If you have a version of the ESP32S3 that does not include a camera, you will need to purchase a heat sink separately.
 
 ***Installation Tip:*** Prioritize covering the Thermal PAD with the heat sink, as it is directly above the ESP32S3 chip, the primary source of heat. Proper alignment ensures optimal heat dissipation, and note keep the BAT pins as unobstructed as possible.
 :::
@@ -409,7 +407,6 @@ This smaller, compact option is sufficient for regular use and allows full acces
 The larger option provides superior cooling, which is ideal for high-performance tasks but may limit access to some GPIO pins.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/pin-dual-heat-sink-install.png" style={{width:400, height:'auto'}}/></div>
-
 
 :::note
 If you want to use the BAT pin of the XIAO ESP32S3 Plus, this case dual heat sink is not suitable for it.
@@ -532,7 +529,6 @@ After you have downloaded the above zip, please unzip it and you will see two fi
 
     Then go to the **variants folder** and copy the **XIAO_ESP32S3 folder** to it.
 
-
 - **Step 4.** Close the Arduino IDE and reopen it.-->
 
 <Tabs>
@@ -589,10 +585,10 @@ By now, I believe you have a good understanding of the features and hardware of 
 Once the program is successfully uploaded, you will see the following output message and you can observe that the orange LED on the right side of the XIAO ESP32S3 is blinking.
 
 <table align="center">
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/13.png" style={{width:800, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/14.gif" style={{width:400, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/13.png" style={{width:800, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/14.gif" style={{width:400, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 Congratulations, you've learned how to write and upload programs for the XIAO ESP32S3!
@@ -663,8 +659,10 @@ Connect the XIAO to your computer and run the **boot_uf2.bat** script. The XIAO 
 Access the XIAO ESP32S3's USB drive and copy the converted UF2 file to it. Once the copying is complete, the XIAO USB drive will automatically disappear, and the program will start running.
 
 :::tip
+
 1. Ensure your program is compiled and running correctly; otherwise, the UF2 file may not execute as expected.
 2. A sample UF2 file for Blink is provided in the **xiaos3-bin2uf2** folder. When uploaded, the orange LED on the XIAO ESP32S3 will blink. You can use this UF2 file as a test.
+
 :::
 
 **Step 5**: Re-enter UF2 BootLoader Mode
@@ -679,7 +677,7 @@ Press Reset, then Boot, quickly!
 
 <TabItem value="method2" label="Method II" >
 
-The project is composed of customizing the 2nd stage bootloader from IDF and UF2 factory application as 3rd stage bootloader. 
+The project is composed of customizing the 2nd stage bootloader from IDF and UF2 factory application as 3rd stage bootloader.
 
 **Note:** since IDF is actively developed and change very often, it is included as submodule at lib/esp-idf, please run export script there to have your environment setup correctly.
 
@@ -720,6 +718,7 @@ The script provided in the resource section supports Windows. After downloading 
 ├── xiao_esp32s3_firmware.partitions.bin
 └── xiao_esp32s3_firmware_win.bat
 ```
+
 </TabItem>
 <TabItem value="sense" label="XIAO ESP32S3 Sense Factory firmware" >
 
@@ -770,9 +769,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/seeed-studio-xiao-esp32s3-sense-3d_model.zip)
 - 🔗 **[Kicad]** [Seeed Studio XIAO ESP32S3 Sense FootPrint](https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed%20Studio%20XIAO%20Series%20Library)
 
-
 ### For Seeed Studio XIAO ESP32S3 Plus
-
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus Schematic](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Plus_V1.0_SCH_PCB.zip)
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Plus KiCAD Libraries](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/Seeed_Studio_XIAO_ESP32S3_Plus_KiCAD_Library2.zip)
@@ -784,6 +781,7 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 - **[ZIP]** [Seeed Studio XIAO Plus Base without botton pad lead out](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_Plus_Base_without_botton_pad_lead_out_V1.0.zip)
 
 ### For Seeed Studio XIAO ESP32S3 Sense Camera
+
 - **[PDF]** [OV3660 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV3660_datasheet.pdf)
 - **[PDF]** [OV5640 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV5640_datasheet.pdf)
 - **[PDF]** [OV2640 DataSheet](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/OV2640_datasheet.pdf)
@@ -803,16 +801,14 @@ To flash the firmware, simply run the appropriate `.bat` file. If the flashing p
 
 ## Tech Support & Product Discussion
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

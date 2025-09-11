@@ -20,12 +20,9 @@ Seeed Studio XIAO ESP32C3 supports Bluetooth 5 (LE) connectivity. This wiki will
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/wifi-6.png" alt="pir" width={130} height="auto" /></div>
 
-
 - **Step 2.** Connect XIAO ESP32C3 to your computer via a USB Type-C cable
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/cable-connect.png" alt="pir" width={120} height="auto" /></div>
-
-
 
 ## Scan Bluetooth devices
 
@@ -73,14 +70,15 @@ void loop() {
 
 :::tip
 If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
+
 1. ```BLEScanResults foundDevices = pBLEScan->start(scanTime, false);``` change to ```BLEScanResults* foundDevices = pBLEScan->start(scanTime, false);```
 2. ```Serial.println(foundDevices.getCount());``` change to ```Serial.println(foundDevices->getCount());```
+
 :::
 
 **Step 2.** Upload the codes and open the Serial Monitor to start scanning for Bluetooth devices
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-1.jpg" alt="pir" width={1000} height="auto" /></div>
-
 
 ## XIAO ESP32C3 as Bluetooth server
 
@@ -147,51 +145,45 @@ void loop() {
 
 :::tip
 If you have already upgrade your ESP32 development board to version 3.0.0 above, you need to change some code to compatible with it.
-1.  ```std::string value = pCharacteristic->getValue();``` change to ```String value = pCharacteristic->getValue();```
+
+1. ```std::string value = pCharacteristic->getValue();``` change to ```String value = pCharacteristic->getValue();```
+
 :::
 
 - **Step 2.** Upload the codes and open the Serial Monitor
 
 - **Step 3.** Download and install LightBlue App on your smartphone
 
-
   - [LightBlue App (Android)](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer&hl=en_US&gl=US)
   - [LightBlue App (Apple)](https://apps.apple.com/us/app/lightblue/id557428110)
-
 
 - **Step 4.** Open Bluetooth on your phone, bring the phone close to XIAO ESP32C3, scan for devices and connect with **MyESP32** device
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-2.jpg" alt="pir" width={300} height="auto" /></div>
 
-
 - **Step 5.** Open the LightBlue app and click **Bonded** tab
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-3.jpg" alt="pir" width={350} height="auto" /></div>
-
 
 - **Step 6.** Click **CONNECT** next to **MyESP32**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-4.jpg" alt="pir" width={350} height="auto" /></div>
 
-
 - **Step 7.** Click the section at the very bottom which says **Readable, Writable**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-5.jpg" alt="pir" width={300} height="auto" /></div>
-
 
 - **Step 8.** Under **Data format** drop-down menu, select **UTF-8 String**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-6.jpg" alt="pir" width={300} height="auto" /></div>
 
-
 - **Step 9.** Type "Hello" under **WRITTEN VALUES** and click **WRITE**
-<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-7.jpg" alt="pir" width={300} height="auto" /></div>
 
+<div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-7.jpg" alt="pir" width={300} height="auto" /></div>
 
 You will see the text string "Hello" output on the serial monitor of Arduino IDE
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/ble-9.jpg" alt="pir" width={500} height="auto" /></div>
-
 
 ## NimBLE-Arduino
 
@@ -303,6 +295,7 @@ void loop() {
     delay(2000);
 }
 ```
+
 **Result**
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/NimBLE2.jpg" alt="pir" width={700} height="auto" /></div>
@@ -312,11 +305,11 @@ void loop() {
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

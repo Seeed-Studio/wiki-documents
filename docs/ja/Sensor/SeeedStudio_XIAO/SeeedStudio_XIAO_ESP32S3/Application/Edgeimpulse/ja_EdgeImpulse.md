@@ -2,80 +2,77 @@
 description: EdgeImpulseの紹介。
 title: Edgeimpulse
 keywords:
-- tinyml コース
+- tinyml course
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/edgeimpulse
 last_update:
-  date: 05/15/2025
+  date: 08/09/2023
   author: Salman
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 ## Edge Impulse
 
-Edge Impulseは、エッジデバイス上での機械学習のための主要な開発プラットフォームであり、開発者に無料で提供され、世界中の企業に信頼されています。
+Edge Impulseは、エッジデバイス上での機械学習における主要な開発プラットフォームであり、開発者には無料で提供され、世界中の企業から信頼されています。
 
-* Edge Impulseを使用することで、ソフトウェア開発者、エンジニア、専門家は、博士号や高度な組み込み技術のスキルがなくても、エッジデバイス上で機械学習を活用して実際の問題を解決できます。初めての利用から生産環境でのMLOpsまで、Edge ImpulseはMCUからCPUまで幅広いハードウェアで最大の効率と速度を提供します。
+- Edge Impulseを使用することで、ソフトウェア開発者、エンジニア、ドメインエキスパートは、博士号や高度な組み込みエンジニアリングスキルを必要とせずに、エッジデバイス上で機械学習を使用して実際の問題を解決できます。開始から本番環境でのMLOpsまで、Edge ImpulseはMCUからCPUまでの幅広いハードウェアで最大の効率性と速度を提供します。
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/MakerGram/workshops/main/docs/tiny-ml-workshop/img/edgeimpulse/EI_homepage.png" style={{width:1000, height:'auto'}}/></div>
 
-Edge Impulseを使用すると以下が可能です：
-* デバイスから直接データセットを収集
-* .zipファイル、API、または他のサードパーティクラウドからデータセットを収集
-* テストデータとトレーニングデータを作成し、異なるラベルに分類
-* モデルをトレーニング
-* 適切な機械学習アルゴリズムを選択可能 - Edge Impulseはデータセットに基づいて推奨アルゴリズムを提供
-* ハードウェア上にデプロイ
-* TinyMLプロジェクトのバージョン管理によるコラボレーション
-* その他、TinyMLアプリケーションの構築を支援する多くの機能
+EdgeImpulseを使用することで以下のことが可能です：
+- デバイスから直接データセットを収集
+- .zipファイル、API、その他のサードパーティクラウド取り込みなど、他のソースからデータセットを収集
+- テストデータとトレーニングデータを作成し、異なるラベルに分類
+- モデルのトレーニング
+- 適切なMLアルゴリズムの選択 - EIはデータセットに基づいて推奨MLアルゴリズムを提供
+- ハードウェアへのデプロイ
+- バージョン管理によるTinyMLプロジェクトのコラボレーション
+- その他、tinyMLアプリケーションの構築を支援する多くの機能
 
-### 簡単なハンズオン体験
+### クイックハンズオン体験
 
-Edge Impulseの学習プロセス全体を進める前に、事前に生成されたArduinoライブラリを提供し、スケッチから直接XIAO ESP32S3 SenseにこのArduinoプログラムをフラッシュすることで結果を確認できます。
+Edge Impulseの完全な学習プロセスを進める前に、事前に生成された完全なarduinoライブラリを提供し、このarduinoプログラムをスケッチから直接XIAO ESP32S3 Senseにフラッシュすることで結果を確認できます。
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeImpulse/src/img/EdegeImpulse-lib.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/EdgeImpulse/src/img/EdegeImpulse-lib.png" style={{width:1000, height:'auto'}}/></div>
 
-### ArduinoでXIAO ESP32S3 Senseをセットアップ
+### Arduino上でのXIAO ESPS3 Senseのセットアップ
 
-Edge Impulseライブラリを使用する前に、Arduino IDEでXIAO ESP32S3をセットアップする必要があります。ガイドは[こちら](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started/)をご覧ください。
+Edge impulseライブラリの使用を開始する前に、Arduino IDEでXIAO ESPS3をセットアップする必要があります。[こちら](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)のガイドをご覧ください。
 
-#### Blink例をコンパイルしてアップロード
+#### Blinkサンプルのコンパイルとアップロード
 
 ```cpp
-// setup関数はリセットボタンを押すかボードに電源を入れたときに一度だけ実行されます
+// the setup function runs once when you press reset or power the board
 void setup() {
-  // LED_BUILTINピンを出力として初期化
+  // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// loop関数は永遠に繰り返し実行されます
+// the loop function runs over and over again forever
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);  // LEDをオンにする（HIGHは電圧レベル）
-  delay(1000);                      // 1秒待機
-  digitalWrite(LED_BUILTIN, LOW);   // LEDをオフにする（LOWは電圧レベル）
-  delay(1000);                      // 1秒待機
+  digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
+  delay(1000);                      // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                      // wait for a second
 }
 ```
 
-アップロードする前に正しいボードとポートを選択してください。
+正しいボードと正しいポートを選択してからアップロードしてください。
 
-#### ToDo
-- [ ] Arduino IDEにXIAO ESP32S3ボードをインストール
-- [ ] XIAO ESP32S3にBlink例をコンパイルしてアップロード
+#### ToDO
+
+- [ ] Arduino IDEにXIAO ESPS3ボードをインストール
+- [ ] XIAO ESPS3でBlinkサンプルをコンパイルしてアップロード
 
 ### 利用可能なEdge Impulseライブラリ
 
-XIAO ESP32S3 Senseで直接動作するように検証および編集されたEdge ImpulseエクスポートArduinoライブラリを並行して進めています。ライブラリを使用することで、プログラム内でより多くの制御が可能となり、意思決定を行うことができます。
+また、XIAO ESP32S3 Senseで直接動作するように検証・編集されたEdge ImpulseエクスポートArduinoライブラリの作成も並行して進めています。ライブラリを使用する際は、プログラムをより制御でき、決定を下すことができます。
 
 - [音声キーワード認識（Yes & No）Arduinoライブラリ](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_Esp32_KWS_inferencing.zip)
-- [果物識別（リンゴ、バナナ、ブドウ）Arduinoライブラリ](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
+- [果物識別（りんご、バナナ、ぶどう）Arduinoライブラリ](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)
 
 ### Edge Impulse Arduinoライブラリの使用方法
 
-一般的なArduinoライブラリと同様に、まずArduino IDEにインストールし、デモを実行するためのサンプルコードを使用します。
+一般的なarduinoライブラリと同様に、まずArduino IDEにインストールし、サンプルコードを使用してデモを実行する必要があります。
 
 ### 音声キーワード認識（Yes & No）Arduinoライブラリ
 
@@ -83,22 +80,23 @@ XIAO ESP32S3 Senseで直接動作するように検証および編集されたEd
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oa0BGRXnb8w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### 仕組み
+### 動作原理！
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/img/KWS_Diagram.png" style={{width:1000, height:'auto'}}/></div>
 
 #### ステップ1. KWSデモライブラリをダウンロード
-[音声キーワード認識（Yes & No）Arduinoライブラリ](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)を.zip形式でダウンロードします。
+
+[音声キーワード認識（Yes & No）Arduinoライブラリ](https://github.com/salmanfarisvp/TinyML/raw/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/lib/XIAO_esp32S3_YesNo_inferencing.zip)ライブラリを.Zipとしてダウンロードします。
 
 #### ステップ2. ZIPライブラリをArduino IDEに追加
 
-ZIPライブラリをダウンロードしたら、Arduino IDEを開き、Sketch > Include Library > Add .ZIP Libraryをクリックします。
+zipライブラリをダウンロードしたら、Arduino IDEを開き、Sketch > Include Library > Add .ZIP Libraryをクリックします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div>
 
-ダウンロードしたZIPファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウにライブラリが追加されたことが表示されます。これでライブラリが正常にインストールされたことを意味します。
+ダウンロードしたzipファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに「Library added to your libraries」と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div>
 
 #### ステップ3. 推論スケッチを実行
 
@@ -124,37 +122,39 @@ ZIPライブラリをダウンロードしたら、Arduino IDEを開き、Sketch
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  * 
- * このコードはMarcelo RovaiによってXIAO ESP32S3で動作するように適応されました。
- * 2023年5月29日
- * Salman Farisによって修正されました。
- * 2023年8月14日
+ * This code was adapted by Marcelo Rovai to run on a XIAO ESP32S3
+ * 29May23
+ * Modified by Salman Faris
+ * 14Aug23
  * 
  */
 
-// メモリが制限されているターゲットの場合、このマクロを削除して10K RAMを節約
+// If your target is limited in memory remove this macro to save 10K RAM
 #define EIDSP_QUANTIZE_FILTERBANK 0
 
 /*
- ** 注意: TFLiteアリーナ割り当て問題が発生した場合。
+ ** NOTE: If you run into TFLite arena allocation issue.
  **
- ** これは動的メモリの断片化による可能性があります。
- ** boards.local.txtに"-DEI_CLASSIFIER_ALLOCATION_STATIC"を定義してみてください（存在しない場合は作成）。
- ** このファイルを`<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`にコピーしてください。
+ ** This may be due to may dynamic memory fragmentation.
+ ** Try defining "-DEI_CLASSIFIER_ALLOCATION_STATIC" in boards.local.txt (create
+ ** if it doesn't exist) and copy this file to
+ ** `<ARDUINO_CORE_INSTALL_PATH>/arduino/hardware/<mbed_core>/<core_version>/`.
  **
- ** Arduinoがコアをインストールする場所については、以下を参照してください：
+ ** See
  ** (https://support.arduino.cc/hc/en-us/articles/360012076960-Where-are-the-installed-cores-located-)
+ ** to find where Arduino installs cores on your machine.
  **
- ** 問題が解決しない場合、このモデルとアプリケーションには十分なメモリがありません。
+ ** If the problem persists then there's not enough memory for this model and application.
  */
 
-/* インクルード ---------------------------------------------------------------- */
+/* Includes ---------------------------------------------------------------- */
 #include <XIAO_esp32S3_YesNo_inferencing.h>
 
 #include <I2S.h>
 #define SAMPLE_RATE 16000U
 #define SAMPLE_BITS 16
 
-/** オーディオバッファ、ポインタ、セレクタ */
+/** Audio buffers, pointers and selectors */
 typedef struct {
   int16_t *buffer;
   uint8_t buf_ready;
@@ -165,18 +165,18 @@ typedef struct {
 static inference_t inference;
 static const uint32_t sample_buffer_size = 2048;
 static signed short sampleBuffer[sample_buffer_size];
-static bool debug_nn = false;  // 生の信号から生成された特徴などを表示する場合はtrueに設定
+static bool debug_nn = false;  // Set this to true to see e.g. features generated from the raw signal
 static bool record_status = true;
 
 /**
- * @brief      Arduino setup関数
+ * @brief      Arduino setup function
  */
 void setup() {
-  // 初回実行時のセットアップコード
+  // put your setup code here, to run once:
   Serial.begin(115200);
 
   pinMode(LED_BUILTIN, OUTPUT);
-  // USB接続を待機する場合は以下の行をコメントアウト
+  // comment out the below line to cancel the wait for USB connection (needed for native USB)
   while (!Serial)
     ;
   Serial.println("Edge Impulse Inferencing Demo");
@@ -188,7 +188,7 @@ void setup() {
       ;
   }
 
-  // 推論設定の概要（model_metadata.hから）
+  // summary of inferencing settings (from model_metadata.h)
   ei_printf("Inferencing settings:\n");
   ei_printf("\tInterval: ");
   ei_printf_float((float)EI_CLASSIFIER_INTERVAL_MS);
@@ -209,7 +209,7 @@ void setup() {
 }
 
 /**
- * @brief      Arduino main関数。推論ループを実行。
+ * @brief      Arduino main function. Runs the inferencing loop.
  */
 void loop() {
   bool m = microphone_inference_record();
@@ -229,10 +229,10 @@ void loop() {
     return;
   }
 
-  int pred_index = 0;    // pred_indexを初期化
-  float pred_value = 0;  // pred_valueを初期化
+  int pred_index = 0;    // Initialize pred_index
+  float pred_value = 0;  // Initialize pred_value
 
-  // 予測結果を表示
+  // print the predictions
   ei_printf("Predictions ");
   ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
             result.timing.dsp, result.timing.classification, result.timing.anomaly);
@@ -248,13 +248,13 @@ void loop() {
     }
   }
 
-    // 推論結果を表示
+    // Display inference result
     if ((pred_index == 0 && (pred_value > 0.8))) {
-      digitalWrite(LED_BUILTIN, HIGH);  //オンにする
+      digitalWrite(LED_BUILTIN, HIGH);  //Turn on
     } else if ((pred_index == 2) && (pred_value > 0.8)) {
-      digitalWrite(LED_BUILTIN, LOW);  //オフにする
+      digitalWrite(LED_BUILTIN, LOW);  //Turn off
     } else {
-      //何もしない
+      //nothing to do. 
     }
 
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
@@ -282,7 +282,7 @@ void loop() {
 
     while (record_status) {
 
-      /* i2sから一度にデータを読み取る */
+      /* read data at once from i2s */
       esp_i2s::i2s_read(esp_i2s::I2S_NUM_0, (void *)sampleBuffer, i2s_bytes_to_read, &bytes_read, 100);
 
       if (bytes_read <= 0) {
@@ -292,7 +292,7 @@ void loop() {
           ei_printf("Partial I2S read");
         }
 
-        // データをスケール（そうしないと音が静かすぎる）
+        // scale the data (otherwise the sound is too quiet)
         for (int x = 0; x < i2s_bytes_to_read / 2; x++) {
           sampleBuffer[x] = (int16_t)(sampleBuffer[x]) * 8;
         }
@@ -308,11 +308,11 @@ void loop() {
   }
 
   /**
- * @brief      推論構造体を初期化し、PDMをセットアップ/開始
+ * @brief      Init inferencing struct and setup/start PDM
  *
- * @param[in]  n_samples  サンプル数
+ * @param[in]  n_samples  The n samples
  *
- * @return     { return_valueの説明 }
+ * @return     { description_of_the_return_value }
  */
   static bool microphone_inference_start(uint32_t n_samples) {
     inference.buffer = (int16_t *)malloc(n_samples * sizeof(int16_t));
@@ -339,9 +339,9 @@ void loop() {
   }
 
   /**
- * @brief      新しいデータを待機
+ * @brief      Wait on new data
  *
- * @return     完了時にtrue
+ * @return     True when finished
  */
   static bool microphone_inference_record(void) {
     bool ret = true;
@@ -355,7 +355,7 @@ void loop() {
   }
 
   /**
- * 生のオーディオ信号データを取得
+ * Get raw audio signal data
  */
   static int microphone_audio_signal_get_data(size_t offset, size_t length, float *out_ptr) {
     numpy::int16_to_float(&inference.buffer[offset], out_ptr, length);
@@ -364,7 +364,7 @@ void loop() {
   }
 
   /**
- * @brief      PDMを停止し、バッファを解放
+ * @brief      Stop PDM and release buffers
  */
   static void microphone_inference_end(void) {
     free(sampleBuffer);
@@ -375,14 +375,15 @@ void loop() {
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_MICROPHONE
 #error "Invalid model for current sensor."
 #endif
+
 ```
 
-上記のコードをコピーするか、[こちら](https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/XIAO_esp32_s3_sense_kWS_Yes_No.ino)からダウンロードして、コードをXIAOにアップロードしてください。
+上記のコードをコピーするか、[こちら](https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/KeyWordSpotting(KWS)/src/XIAO_esp32_s3_sense_kWS_Yes_No.ino)からダウンロードして、XIAOにコードをアップロードしてください。
 
 ```cpp
- // 推論結果を出力
-  ei_printf("予測結果 ");
-  ei_printf("(DSP: %d ms., 分類: %d ms., 異常検知: %d ms.)",
+ // print the predictions
+  ei_printf("Predictions ");
+  ei_printf("(DSP: %d ms., Classification: %d ms., Anomaly: %d ms.)",
             result.timing.dsp, result.timing.classification, result.timing.anomaly);
   ei_printf(": \n");
   for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
@@ -396,52 +397,55 @@ void loop() {
     }
   }
 
-    // 推論結果を表示
+    // Display inference result
     if ((pred_index == 0 && (pred_value > 0.8))) {
-      digitalWrite(LED_BUILTIN, HIGH);  //LEDを点灯
+      digitalWrite(LED_BUILTIN, HIGH);  //Turn on
     } else if ((pred_index == 2) && (pred_value > 0.8)) {
-      digitalWrite(LED_BUILTIN, LOW);  //LEDを消灯
+      digitalWrite(LED_BUILTIN, LOW);  //Turn off
     } else {
-      // 何もしない
+      //nothing to do. 
     }
 ```
 
-上記のコードでは、**LEDを点灯**または**消灯**するための判断がどこで行われているかがわかります。また、ここに他のロジックを追加して、KWSを使用してプロジェクトを制御することもできます。
+上記のコードでは、**LED**を**点灯**させ、**消灯**させる決定を行う場所を確認できます。ここに他のロジックを配置し、KWSでプロジェクトを制御することも可能です。
 <hr></hr>
 
-### 果物識別（リンゴ、バナナ、ブドウ）Arduinoライブラリ
-#### ステップ 1. 果物識別ライブラリをダウンロード
-[果物識別（リンゴ、バナナ、ブドウ）Arduinoライブラリ](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip) を.Zip形式でダウンロードしてください。
+### 果物識別（りんご、バナナ、ぶどう）Arduino ライブラリ
 
-#### ステップ 2. ZIPライブラリをArduino IDEに追加
+#### ステップ 1. 果物識別ライブラリのダウンロード
 
-ZIPライブラリをダウンロードしたら、Arduino IDEを開き、[スケッチ] > [ライブラリをインクルード] > [.ZIPライブラリを追加]をクリックします。
+[果物識別（りんご、バナナ、ぶどう）Arduino ライブラリ](https://files.seeedstudio.com/wiki/tinyml-topic/res/xiao-esp32s3-fruits-classify_inferencing.zip)を.Zipファイルとしてダウンロードします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div> 
+#### ステップ 2. Arduino IDEにZIPライブラリを追加
 
-ダウンロードしたZIPファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに「ライブラリがライブラリに追加されました」と表示されます。これでライブラリが正常にインストールされたことを意味します。
+zipライブラリをダウンロードしたら、Arduino IDEを開き、Sketch > Include Library > Add .ZIP Libraryをクリックします。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div> 
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div>
 
-#### ステップ 3. サンプルスケッチを実行
+ダウンロードしたzipファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに「Library added to your libraries」と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
-サンプルスケッチは、**ファイル -> スケッチ例 -> xiao-esp323-fruits-classify_inferencing -> XIAO-ESP32S3-Sense**の下にあります。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div>
 
-<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/fruitClassifications_Lib_path.png" style={{width:1000, height:'auto'}}/></div> 
+#### ステップ 3. サンプルスケッチの実行
 
-#### デモを試してみましょう
+サンプルスケッチは**Files -> Examples -> xiao-esp323-fruits-classify_inferencing -> XIAO-ESP32S3-Sense**で見つけることができます。
 
-[こちら](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition)からデータセットサンプルページを開き、果物の画像を開きます。その後、XIAO ESP32S3カメラを果物の画像に向け、画面に表示される結果を確認してください。
+<div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/fruitClassifications_Lib_path.png" style={{width:1000, height:'auto'}}/></div>
+
+#### デモを試してみる
+
+[こちら](https://www.kaggle.com/kritikseth/fruit-and-vegetable-image-recognition)からデータセットサンプルページを開き、果物の画像を開いて、XIAO ESP32S3のカメラを果物の画像に向け、画面で結果を確認してください。
 
 # ToDo
-- [ ] XIAO ESP32S3をArduinoにインストール
+
+- [ ] Arduino にXIAO ESPS3をインストール
 - [ ] コンパイルとアップロード
-- [ ] KWS Arduinoライブラリをインストールしてサンプルを実行
+- [ ] KWS Arduino ライブラリをインストールしてサンプルを実行
 - [ ] 画像認識ライブラリをインストールしてサンプルを実行
 
 ## リソース
 
-- **[GITHUB]** [SenseCraft モデルアシスタントモデル](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
-- **[GITHUB]** [プロジェクトのGithub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
-- **[EDGE-IMPULSE]** [Edge Impulse KWS デモ](https://studio.edgeimpulse.com/public/270277/latest)
-- **[EDGE-IMPULSE]** [Edge Impulse フルーツ分類デモ](https://studio.edgeimpulse.com/public/269519/latest)
+- **[GITHUB]** [SenseCraft Model Assistant Models](https://github.com/Seeed-Studio/edgelab-model-zoo/tree/main/detection)
+- **[GITHUB]** [Project Github](https://github.com/Mjrovai/XIAO-ESP32S3-Sense)
+- **[EDGE-IMPULSE]** [edge impulse KWS demo](https://studio.edgeimpulse.com/public/270277/latest)
+- **[EDGE-IMPULSE]** [edge impulse Fruits classify demo](https://studio.edgeimpulse.com/public/269519/latest)

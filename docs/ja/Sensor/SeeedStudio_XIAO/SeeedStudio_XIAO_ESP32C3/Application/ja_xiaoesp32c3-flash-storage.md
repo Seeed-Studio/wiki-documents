@@ -1,30 +1,26 @@
 ---
-description: XIAO ESP32C3 フラッシュストレージ
-title: XIAO ESP32C3 フラッシュストレージ
+description: XIAO ESP32C3 Flash-storage
+title: XIAO ESP32C3 Flash-storage
 keywords:
 - XIAO ESP32C3
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/xiaoesp32c3-flash-storage
 last_update:
-  date: 05/15/2025
+  date: 03/03/2023
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # XIAO ESP32C3 データを異なる方法で永続的に保存する
 
-開発ボードを使用する際、多くの人がチップ上のフラッシュメモリを使用して重要なデータを保存したいと考えるでしょう。これには、異常な開発ボードの状況でもデータが失われないようにする保存方法が必要です。
+開発ボードを使用する際、多くの人がチップ上のフラッシュメモリを使用して重要なデータを保存したいと考えるでしょう。これには、開発ボードに異常が発生してもデータが失われないことを保証する保存方法が必要です。
 
-このチュートリアルでは、以下の2つの異なる保存方法を使用して、XIAO ESP32C3のフラッシュメモリに重要なデータを保存する方法を紹介します。
+このチュートリアルでは、以下の2つの異なる保存方法でXIAO ESP32C3のフラッシュメモリに重要なデータを保存する方法を紹介します。
 
-1. 最初のガイドでは、`Preferences.h`ライブラリを使用してESP32のフラッシュメモリに**データを永続的に保存する**方法を説明します。フラッシュメモリに保存されたデータは、リセットや電源障害が発生しても保持されます。`Preferences.h`ライブラリを使用すると、ネットワーク認証情報、APIキー、しきい値、またはGPIOの最後の状態などのデータを保存するのに便利です。フラッシュメモリからデータを保存および読み取る方法を学びます。
+1. 最初のガイドでは、`Preferences.h`ライブラリを使用してESP32フラッシュメモリに**データを永続的に保存**する方法を示します。フラッシュメモリに保持されたデータは、リセットや電源障害が発生しても持続します。`Preferences.h`ライブラリの使用は、ネットワーク認証情報、APIキー、しきい値、またはGPIOの最後の状態などのデータを保存するのに便利です。フラッシュメモリからデータを保存および読み取りする方法を学習します。
 
-2. 次のガイドでは、XIAO ESP32C3の**EEPROM**とは何か、それが何に役立つのかを説明します。また、EEPROMへの書き込みと読み取り方法を示し、学んだ概念を実践するためのプロジェクト例を構築します。
+2. 2番目のガイドでは、XIAO ESP32C3の**EEPROM**とは何か、そして何に役立つかを説明します。また、EEPROMへの書き込みと読み取りの方法を示し、学習した概念を実践するプロジェクト例を構築します。
 
-この記事の大部分は[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)からのものであり、一部のプログラムや説明はXIAO ESP32C3に適合するように若干修正されています。[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)に感謝し、チュートリアルと方法を提供していただきました。以下は元のソースへの直接リンクです。
+この記事の大部分は[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)から来ており、一部のプログラムと説明はXIAO ESP32C3に適合するように若干修正されています。チュートリアルと方法を提供してくれた[**RandomNerdTutorials.com**](https://randomnerdtutorials.com/)に特別な感謝を表します。以下は元のソースへの直接リンクです。
 
 - [ESP32 Flash Memory – Store Permanent Data (Write and Read)](https://randomnerdtutorials.com/esp32-flash-memory/)
 
@@ -34,55 +30,55 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ## Preferencesライブラリを使用してデータを永続的に保存する
 
-### Preferences.h ライブラリ
+### Preferences.hライブラリ
 
 このライブラリは、Arduino IDEにXIAO ESP32C3ボードをインストールすると自動的に「インストール」されます。
 
-`Preferences.h`ライブラリは、キーと値のペアを通じて変数の値を保存するために使用されます。データを永続的に保存することは以下のような場合に重要です：
+`Preferences.h`ライブラリは、key:valueペアを通じて変数値を保存するために優先的に使用されます。データを永続的に保存することは以下の場合に重要です：
 
-- 変数の最後の状態を記憶する;
+- 変数の最後の状態を記憶する；
 
-- 設定を保存する;
+- 設定を保存する；
 
-- 家電が何回作動したかを保存する;
+- 機器が何回起動されたかを保存する；
 
-- または、永続的に保存する必要があるその他のデータ型。
+- または永続的に保存する必要がある他のデータタイプ。
 
-XIAO ESP32C3を使用してファイルや非常に長い文字列やデータを保存したい場合は、拡張ボードとSDカードを使用することをお勧めします。このチュートリアルで紹介する2つの方法は推奨しません。
+XIAO ESP32C3を使用してファイルや非常に長い文字列やデータを保存したい場合は、拡張ボードとSDカードの使用をお勧めします。このチュートリアルの2つの方法の使用はお勧めしません。
 
-以下は**Preferences.hライブラリの便利な関数**です。
+以下は**Preferences.hライブラリの便利な関数**です
 
-**Func 1**. `begin()`メソッドは、定義された名前空間で「ストレージスペース」を開きます。`false`引数は、読み書きモードで使用することを意味します。読み取り専用モードで名前空間を開くまたは作成するには、`true`を使用します。
+**関数1**. `begin()`メソッドは、定義された名前空間で「ストレージスペース」を開きます。falseの引数は、読み書きモードで使用することを意味します。読み取り専用モードで名前空間を開くまたは作成するにはtrueを使用します。
 
 ```c
 preferences.begin("my-app", false);
 ```
 
-この場合、名前空間の名前は`my-app`です。名前空間の名前は15文字に制限されています。
+この場合、名前空間名は my-app です。名前空間名は15文字に制限されています。
 
-**Func 2**. 開かれた名前空間のすべての設定をクリアするには、`clear()`を使用します（名前空間自体は削除されません）：
+**Func 2**. `clear()` を使用して、開いた名前空間下のすべての設定をクリアします（名前空間自体は削除されません）：
 
 ```c
 preferences.clear();
 ```
 
-**Func 3**. 開かれた名前空間からキーを削除します：
+**機能 3**. 開いた名前空間からキーを削除する：
 
 ```c
 preferences.remove(key);
 ```
 
-**Func 4**. 開かれた名前空間の設定を閉じるには、`end()`メソッドを使用します：
+**Func 4**. 開いた名前空間の下でプリファレンスを閉じるために `end()` メソッドを使用します：
 
 ```c
 preferences.end();
 ```
 
-**Func 5**. 保存したい変数の型に応じて異なるメソッドを使用する必要があります。
+**Func 5**. 保存したい変数の型に応じて、異なるメソッドを使用する必要があります。
 
-`Preferences.h`ライブラリを使用する場合、保存したいデータ型を定義する必要があります。その後、そのデータを読み取る場合、保存されたデータ型を知っている必要があります。言い換えれば、書き込みと読み取りのデータ型は同じである必要があります。
+`Preferences.h` ライブラリを使用する際は、保存したいデータ型を定義する必要があります。後でそのデータを読み取りたい場合は、保存されたデータ型を知っている必要があります。つまり、書き込みと読み取りのデータ型は同じである必要があります。
 
-`Preferences.h`を使用して以下のデータ型を保存できます：char、Uchar、short、Ushort、int、Uint、long、Ulong、long64、Ulong64、float、double、bool、string、およびbytes。
+`Preferences.h` を使用して以下のデータ型を保存できます：char、Uchar、short、Ushort、int、Uint、long、Ulong、long64、Ulong64、float、double、bool、string、bytes。
 
 <table align="center">
   <tbody><tr>
@@ -216,16 +212,16 @@ preferences.end();
  </tr>
 </table>
 
-**Func 7**. 名前空間を削除する
+**Func 7**. 名前空間の削除
 
-Arduino の Preferences 実装では、名前空間を完全に削除する方法がありません。その結果、複数のプロジェクトを経ると、ESP32 の不揮発性ストレージ (NVS) の Preferences パーティションがいっぱいになる可能性があります。Preferences に使用される NVS メモリを完全に消去して再フォーマットするには、以下のコードを含むスケッチを作成してください。
+Arduino の Preferences 実装では、名前空間を完全に削除するメソッドがありません。その結果、複数のプロジェクトを経て、ESP32 の不揮発性ストレージ（nvs）Preferences パーティションが満杯になる可能性があります。Preferences で使用される NVS メモリを完全に消去して再フォーマットするには、以下を含むスケッチを作成します：
 
 ```c
 #include <nvs_flash.h>
 
 void setup() {
-  nvs_flash_erase(); // NVS パーティションを消去し...
-  nvs_flash_init(); // NVS パーティションを初期化します。
+  nvs_flash_erase(); // erase the NVS partition and...
+  nvs_flash_init(); // initialize the NVS partition.
   while(true);
 }
 
@@ -234,41 +230,41 @@ void loop() {
 }
 ```
 
-上記のコードを実行した後は、すぐに新しいスケッチをボードにダウンロードしてください。そうしないと、電源が入るたびに NVS パーティションが再フォーマットされます。
+上記を実行した直後に、新しいスケッチをボードにダウンロードする必要があります。そうしないと、電源が入るたびにNVSパーティションが再フォーマットされてしまいます。
 
-詳細については、Preferences.cpp ファイルを [こちら](https://github.com/espressif/arduino-esp32/blob/master/libraries/Preferences/src/Preferences.cpp) で確認できます。
+詳細については、Preferences.cppファイルを[こちら](https://github.com/espressif/arduino-esp32/blob/master/libraries/Preferences/src/Preferences.cpp)でアクセスできます。
 
-### Preferences.h ライブラリの一般的な使用方法
+### Preferences.hライブラリを使用する一般的な方法
 
-**ステップ 1.** Preferences.h ライブラリを使用してデータを保存するには、まずスケッチにインクルードする必要があります。
+**ステップ1.** Preferences.hライブラリを使用してデータを保存するには、まずスケッチにそれを含める必要があります：
 
 ```c
 #include <Preferences.h>
 ```
 
-**ステップ 2.** 次に、Preferences ライブラリのインスタンスを初期化します。例えば、`preferences` と呼ぶことができます。
+**ステップ2.** 次に、Preferencesライブラリのインスタンスを初期化する必要があります。例えば、preferencesと呼ぶことができます：
 
 ```c
 Preferences preferences;
 ```
 
-**ステップ 3.** `setup()` 内で、シリアルモニターを 115200 のボーレートで初期化します。
+**ステップ3.** `setup()`で、ボーレート115200でシリアルモニターを初期化します。
 
 ```c
 Serial.begin(115200);
 ```
 
-**ステップ 4.** フラッシュメモリ内に `my-app` という名前の「ストレージスペース」を作成します（読み書きモード）。他の名前を付けることもできます。
+**ステップ4.** フラッシュメモリに`my-app`という「ストレージスペース」を読み書きモードで作成します。他の任意の名前を付けることもできます。
 
 ```c
 preferences.begin("my-app", false);
 ```
 
-**ステップ 5.** get および put メソッドを使用してデータを取得/保存します。
+**ステップ5.** getとputメソッドを使用してデータコンテンツを取得/保存します。
 
-#### Key:value ペアデータの保存/取得
+#### キー:値ペアデータの保存/取得
 
-Preferences を使用して保存されたデータは以下のように構造化されています：
+preferencesを使用して保存されるデータは次のような構造になっています：
 
 ```c
 namespace {
@@ -285,7 +281,7 @@ namespace {
 }
 ```
 
-また、同じキーを持つ複数の名前空間を持つこともできます（ただし、各キーにはそれぞれの値があります）。
+同じキーを持つ複数の名前空間を持つこともできます（ただし、各キーはその値と組み合わせて）：
 
 ```c
 namespace1{
@@ -296,19 +292,19 @@ namespace2{
 }
 ```
 
-例えば、「counter」キーに新しい値を保存します：
+例えば、"counter"キーに新しい値を保存します：
 
 ```c
 preferences.putUInt("counter", counter);
 ```
 
-次に、Preferences に保存された `counter` キーの値を取得します。値が見つからない場合、デフォルトで 0 を返します（このコードが初めて実行された場合に発生します）。
+次に、設定に保存されている `counter` キーの値を取得します。値が見つからない場合は、デフォルトで 0 を返します（このコードが初回実行時に発生します）。
 
 ```c
 unsigned int counter = preferences.getUInt("counter", 0);
 ```
 
-したがって、データは以下のように構造化されます：
+つまり、あなたのデータは次のような構造になっています：
 
 ```c
 my-app{
@@ -316,23 +312,23 @@ my-app{
 }
 ```
 
-#### String データの保存/取得
+#### 文字列データの保存/取得
 
-以下のコードは、`Preferences.h` を使用してネットワーク認証情報を ESP32 のフラッシュメモリに永続的に保存します。
+以下のコードは、`Preferences.h`を使用してネットワーク認証情報をESP32のフラッシュメモリに永続的に保存します。
 
-SSID 値（`ssid` 変数）を保存するキー `ssid` を作成します – `putString()` メソッドを使用します。
+SSIDの値（ssid変数）を保存するssidというキーを作成します – `putString()`メソッドを使用します。
 
 ```c
 preferences.putString("ssid", ssid);
 ```
 
-パスワード値（`password` 変数）を保存するキー `password` を追加します：
+パスワード値（password変数）を保存するために、passwordという別のキーを追加します：
 
 ```c
 preferences.putString("password", password);
 ```
 
-したがって、データは以下のように構造化されます：
+つまり、あなたのデータは次のような構造になっています：
 
 ```c
 my-app{
@@ -341,14 +337,14 @@ my-app{
 }
 ```
 
-`getString()` メソッドを使用して SSID とパスワードの値を取得します。変数を保存するために使用したキー名（この場合は `ssid` と `password` キー）を使用する必要があります：
+`getString()`メソッドを使用してSSIDとパスワードの値を取得します。変数を保存する際に使用したキー名、この場合はssidとpasswordキーを使用する必要があります：
 
 ```c
 String ssid = preferences.getString("ssid", ""); 
 String password = preferences.getString("password", "");
 ```
 
-`getString()` 関数の第 2 引数として空の String を渡しました。これは、Preferences に `ssid` または `password` キーが保存されていない場合に返される値です。
+`getString()` 関数の第二引数として、空の文字列を渡しました。これは、preferences に `ssid` や `password` キーが保存されていない場合に返される値です。
 
 **ステップ 6.** Preferences を閉じます。
 
@@ -356,7 +352,7 @@ String password = preferences.getString("password", "");
 preferences.end();
 ```
 
-- Key:value ペアデータの保存/取得の完全な手順は以下の通りです。
+- Store/get Key:value Pair データの完全な手順を以下に示します。
 
 ```c
 #include <Preferences.h>
@@ -368,39 +364,39 @@ void setup() {
   delay(3000);
   Serial.println();
 
-  // my-app 名前空間で Preferences を開きます。各アプリケーションモジュール、ライブラリなどは
-  // キー名の衝突を防ぐために名前空間名を使用する必要があります。ストレージを RW モードで開きます
-  // （第 2 パラメータは false にする必要があります）。
-  // 注意: 名前空間名は 15 文字に制限されています。
+  // Open Preferences with my-app namespace. Each application module, library, etc
+  // has to use a namespace name to prevent key name collisions. We will open storage in
+  // RW-mode (second parameter has to be false).
+  // Note: Namespace name is limited to 15 chars.
   preferences.begin("my-app", false);
 
-  // 開いている名前空間のすべての Preferences を削除します
+  // Remove all preferences under the opened namespace
   //preferences.clear();
 
-  // または、counter キーのみを削除します
+  // Or remove the counter key only
   //preferences.remove("counter");
 
-  // counter 値を取得します。キーが存在しない場合、デフォルト値 0 を返します。
-  // 注意: キー名は 15 文字に制限されています。
+  // Get the counter value, if the key does not exist, return a default value of 0
+  // Note: Key name is limited to 15 chars.
   unsigned int counter = preferences.getUInt("counter", 0);
 
-  // counter を 1 増加させます
+  // Increase counter by 1
   counter++;
 
-  // シリアルモニターに counter を表示します
+  // Print the counter to Serial Monitor
   Serial.printf("Current counter value: %u\n", counter);
 
-  // Preferences に counter を保存します
+  // Store the counter to the Preferences
   preferences.putUInt("counter", counter);
 
-  // Preferences を閉じます
+  // Close the Preferences
   preferences.end();
 
-  // 10 秒待機します
+  // Wait 10 seconds
   Serial.println("Restarting in 10 seconds...");
   delay(10000);
 
-  // ESP を再起動します
+  // Restart ESP
   ESP.restart();
 }
 
@@ -409,11 +405,11 @@ void loop() {
 }
 ```
 
-ボードにコードをアップロードすると、シリアルモニターに以下のような出力が表示されるはずです：
+コードをボードにアップロードすると、シリアルモニターで以下のような結果が得られるはずです：
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/1.png"/></div>
 
-- 文字列データの保存/取得の完全な手順は以下の通りです。
+- 文字列データの保存/取得の完全な手順を以下に示します。
 
 `Preferences.h`を使用してネットワーク認証情報を保存します。
 
@@ -434,7 +430,7 @@ void setup() {
   preferences.putString("ssid", ssid); 
   preferences.putString("password", password);
 
-  Serial.println("ネットワーク認証情報がPreferencesを使用して保存されました");
+  Serial.println("Network Credentials Saved using Preferences");
 
   preferences.end();
 }
@@ -444,11 +440,11 @@ void loop() {
 }
 ```
 
-コードをボードにアップロードすると、シリアルモニターに以下のような出力が表示されるはずです：
+コードをボードにアップロードすると、シリアルモニターで以下のような結果が得られるはずです：
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/2.png"/></div>
 
-Preferencesに保存されたネットワーク認証情報を使用してWi-Fiに接続します。
+Preferencesに保存されたネットワーク認証情報でWi-Fiに接続します。
 
 ```c
 #include <Preferences.h>
@@ -470,15 +466,15 @@ void setup() {
   password = preferences.getString("password", "");
 
   if (ssid == "" || password == ""){
-    Serial.println("ssidまたはpasswordに保存された値がありません");
+    Serial.println("No values saved for ssid or password");
   }
   else {
-    // Wi-Fiに接続
+    // Connect to Wi-Fi
     WiFi.mode(WIFI_STA);
     WiFi.disconnect();
     delay(100);
     WiFi.begin(ssid.c_str(), password.c_str());
-    Serial.print("WiFiに接続中: ");
+    Serial.print("Connecting to WiFi ");
     Serial.println(ssid);
     Serial.println(password);
     while (WiFi.status() != WL_CONNECTED) {
@@ -490,290 +486,290 @@ void setup() {
 }
 
 void loop() {
-  // 繰り返し実行するメインコードをここに記述
+  // put your main code here, to run repeatedly:
 }
 ```
 
-前述のコードをアップロードした後にこのコードをボードにアップロードしてください（認証情報が保存されていることを確認するため）。すべてが期待通りに動作すれば、シリアルモニターに以下のような出力が表示されるはずです。
+前のコードの後にこのコードをボードにアップロードしてください（認証情報が保存されていることを確認するため）。すべてが期待通りに動作すれば、シリアルモニターで以下のような結果が得られるはずです。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/3.png"/></div>
 
-## EEPROMを使用して永続的なデータを保存する
+## EEPROMを使用した永続データの保存
 
 ### EEPROMとは？
 
-EEPROMはESP32マイクロコントローラーの内部メモリであり、ボードを再起動した後もデータを保持することができます。マイクロコントローラーを使用する際、特にカードが意図的または意図せずに電源が切れる場合（例えば電力喪失の場合）にデータをメモリに保持することは重要です。
+EEPROMは、ESP32マイクロコントローラーの内部メモリで、ボードを再起動した後もデータをメモリに保持することができます。マイクロコントローラーを使用する際、特に電力損失の場合のように、意図的であろうとなかろうと、カードがオフになったときにデータをメモリに保持することは興味深いことです。
 
-ESP32マイクロコントローラーにはフラッシュメモリ領域があり、ArduinoのEEPROMのようにインターフェースを介してボードがオフになった後でもデータを保持することができます。
+ESP32マイクロコントローラーには、Arduinoの EEPROMのようにインターフェースできるFlashメモリ領域があり、ボードがオフになった後でもデータをメモリに保持できます。
 
 :::caution
-重要な点として、EEPROMにはサイズと寿命の制限があります。メモリセルは必要なだけ読み取ることができますが、書き込みサイクルの数は**100,000**回に制限されています。保存するデータのサイズと更新頻度に注意を払うことをお勧めします。EEPROMメモリは0から255までの512値、または128個のIPアドレスやRFIDタグを保存できます。
+重要な点として、EEPROMはサイズと寿命が限られていることです。メモリセルは必要な回数だけ読み取ることができますが、書き込みサイクル数は**100,000回**に制限されています。保存するデータのサイズと更新頻度に細心の注意を払うことをお勧めします。EEPROMメモリは、0から255までの512個の値、または128個のIPアドレスやRFIDタグを保存できます。
 :::
 
-ESP32のマイクロコントローラーにはEEPROM（電気的に消去可能なプログラム可能な読み取り専用メモリ）が搭載されています。この小さなスペースはバイト変数を保存することができます。EEPROMに保存された変数は、ESP32をリセットしたり電源を切ったりしても保持されます。簡単に言えば、EEPROMはコンピューターのハードドライブに似た永続的なストレージです。
+ESP32のマイクロコントローラーにはEEPROM（電気的消去可能プログラマブル読み取り専用メモリ）があります。これは、バイト変数を保存できる小さなスペースです。EEPROMに保存された変数は、ESP32をリセットまたは電源オフしても、そこに保持されます。簡単に言えば、EEPROMはコンピューターのハードドライブに似た永続ストレージです。
 
-EEPROMは電子的に読み取り、消去、再書き込みが可能です。Arduinoでは、EEPROMライブラリを使用して簡単にEEPROMから読み書きできます。
+EEPROMは電子的に読み取り、消去、再書き込みが可能です。Arduinoでは、EEPROMライブラリを使用してEEPROMから簡単に読み書きできます。
 
-EEPROMの各位置は1バイトを保存できるため、8ビットの数値（0から255までの整数値）のみを保存できます。
+各EEPROM位置は1バイトを保存でき、これは8ビット数値のみを保存できることを意味し、0から255までの整数値が含まれます。
 
-### 使用可能なEEPROM関数
+### 利用可能なEEPROM関数
 
-Arduino IDEを使用してESP32のフラッシュメモリから読み書きするには、EEPROMライブラリを使用します。このライブラリをESP32で使用する方法は、Arduinoで使用する方法と非常に似ています。そのため、Arduino EEPROMを以前に使用したことがある場合、大きな違いはありません。
+Arduino IDEを使用してESP32フラッシュメモリから読み書きするために、EEPROMライブラリを使用します。ESP32でこのライブラリを使用することは、Arduinoで使用することと非常に似ています。そのため、Arduino EEPROMを以前に使用したことがある場合、これはそれほど違いはありません。
 
-また、[Arduino EEPROM](https://randomnerdtutorials.com/arduino-eeprom-explained-remember-last-led-state/)に関する記事を参照することをお勧めします。
+そこで、[Arduino EEPROM](https://randomnerdtutorials.com/arduino-eeprom-explained-remember-last-led-state/)に関する記事もご覧になることをお勧めします。
 
 **関数1**. メモリサイズの初期化
 
-関数を使用する前に、`EEPROM.begin()`を使用してメモリサイズを初期化する必要があります。
+関数を使用する前に、`EEPROM.begin()`でメモリのサイズを初期化する必要があります。
 
 ```c
 EEPROM.begin(EEPROM_SIZE);
 ```
 
-**関数2**. 書き込み & 保存
+**Func 2**. 書き込み & 配置
 
-EEPROMにデータを書き込むには、2つの引数を取る`EEPROM.write()`関数を使用します。1つ目はデータを保存するEEPROMの位置またはアドレス、2つ目は保存したい値です。
+EEPROMにデータを書き込むには、2つの引数を取る`EEPROM.write()`関数を使用します。最初の引数はデータを保存したいEEPROMの場所またはアドレスで、2番目は保存したい値です：
 
 ```c
 EEPROM.write(address, value);
 ```
 
-`EEPROM.write()`は`EEPROM.put()`を使用するのと同等です。
+`EEPROM.write()` は `EEPROM.put()` を使用することと同等です。
 
 ```c
 EEPROM.put(address, value);
 ```
 
-例えば、アドレス0に9を書き込む場合は以下のようになります：
+例えば、アドレス0に9を書き込む場合は、次のようになります：
 
 ```c
 EEPROM.write(0, 9);
 ```
 
 :::tip
-浮動小数点データを保存したい場合は、通常`EEPROM.put()`メソッドを使用します。`write()`メソッドを使用して保存したい場合は、`EEPROM.writeFloat()`を使用する必要があります。
+float データを保存したい場合、通常は `EEPROM.write()` メソッドの代わりに `EEPROM.put()` メソッドを使用します。write() メソッドを使用して保存したい場合は、`EEPROM.writeFloat()` を使用する必要があります。
 :::
 
-**関数3**. 読み取り & 取得
+**Func 3**. Read & Get
 
-EEPROMからバイトを読み取るには、`EEPROM.read()`関数を使用します。この関数はバイトのアドレスを引数として取ります。
+EEPROM からバイトを読み取るには、`EEPROM.read()` 関数を使用します。この関数は、バイトのアドレスを引数として受け取ります。
 
 ```c
 EEPROM.read(address);
 ```
 
-`EEPROM.read()`は`EEPROM.get()`を使用するのと同等です。
+`EEPROM.read()` は `EEPROM.get()` を使用することと同等です。
 
 ```c
 EEPROM.get(address);
 ```
 
-例えば、以前にアドレス0に保存されたバイトを読み取る場合：
+例えば、アドレス0に以前に保存されたバイトを読み取るには：
 
 ```c
 EEPROM.read(0);
 ```
 
-これにより、その場所に保存された値**9**が返されます。
+これは **9** を返します。これはその場所に格納されている値です。
 
 :::tip
-浮動小数点データを取得したい場合は、通常`EEPROM.get()`メソッドを使用します。`read()`メソッドを使用して取得したい場合は、`EEPROM.readFloat()`を使用する必要があります。
+float データを取得したい場合は、通常 `EEPROM.read()` メソッドの代わりに `EEPROM.get()` メソッドを使用します。read() メソッドを使用して取得したい場合は、`EEPROM.readFloat()` を使用する必要があります。
 :::
 
-**関数4**. 値の更新
+**Func 4**. 値の更新
 
-`EEPROM.update()`関数は特に便利です。この関数は、保存されている値と異なる場合にのみEEPROMに書き込みを行います。
+`EEPROM.update()` 関数は特に便利です。この関数は、書き込まれる値が既に保存されている値と異なる場合にのみ EEPROM に書き込みを行います。
 
-EEPROMは書き込み/消去サイクルが制限されているため、`EEPROM.write()`の代わりに`EEPROM.update()`を使用することでサイクルを節約できます。
+EEPROM は書き込み/消去サイクルが限られているため寿命に制限があるので、`EEPROM.write()` の代わりに `EEPROM.update()` 関数を使用することでサイクルを節約できます。
 
-`EEPROM.update()`関数は以下のように使用します：
+`EEPROM.update()` 関数は以下のように使用します：
 
 ```c
 EEPROM.update(address, value);
 ```
 
-現在、アドレス 0 に 9 が保存されています。そのため、以下のコードを呼び出した場合：
+現在、アドレス0に9が格納されています。そのため、以下を呼び出すと：
 
 ```c
 EEPROM.update(0, 9);
 ```
 
-現在保存されている値が書き込みたい値と同じであるため、EEPROM に再度書き込むことはありません。
+現在保存されている値と書き込みたい値が同じであるため、EEPROMに再度書き込みは行われません。
 
 :::note
-EEPROM の操作について詳しく知りたい場合は、[公式 Arduino ドキュメント](https://docs.arduino.cc/learn/programming/eeprom-guide#eeprom-clear)を参照してください。
+EEPROM操作について詳しく学ぶには、[公式Arduinoドキュメント](https://docs.arduino.cc/learn/programming/eeprom-guide#eeprom-clear)を読むことができます。
 :::
 
-### EEPROM の一般的な使用方法
+### EEPROMを使用する一般的な方法
 
-XIAO ESP32C3 のフラッシュメモリにデータを保存する方法を示すために、今回は出力の最後の状態、具体的には LED の状態を保存します。
+XIAO ESP32C3のフラッシュメモリにデータを保存する方法を示すために、出力の最後の状態（この場合はLED）を保存します。
 
-以下の回路図に示すように、LED を XIAO ESP32C3 に接続してください。
+以下の回路図に示すように、XIAO ESP32C3にLEDを配線してください。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/connect-led-2.png"/></div>
 
-まず、EEPROM ライブラリをインクルードする必要があります。
+まず、EEPROMライブラリをインクルードする必要があります。
 
 ```c
 #include <EEPROM.h>
 ```
 
-次に、EEPROM のサイズを定義します。これはフラッシュメモリ内でアクセスしたいバイト数を指定します。この場合、LED の状態だけを保存するため、EEPROM サイズは 1 に設定します。
+次に、EEPROMサイズを定義します。これは、フラッシュメモリでアクセスしたいバイト数です。この場合、LEDの状態を保存するだけなので、EEPROMサイズは1に設定されます。
 
 ```c
 #define EEPROM_SIZE 1
 ```
 
-さらに、このスケッチを動作させるために必要な他の変数を定義します。
+このスケッチを動作させるために必要な他の変数も定義します。
 
 ```c
-// 定数は変更されません。ここではピン番号を設定するために使用されます:
-const int ledPin = D10;      // LED ピンの番号
+// constants won't change. They're used here to set pin numbers:
+const int ledPin = D10;      // the number of the LED pin
 
-// 変数は変更されます:
-int ledState = LOW;  // LED の状態を設定するために使用される ledState
+// Variables will change:
+int ledState = LOW;  // ledState used to set the LED
 
-// 一般的に、時間を保持する変数には "unsigned long" を使用するべきです
-// 値が大きくなりすぎて int では保持できなくなるため
-unsigned long previousMillis = 0;  // LED が最後に更新された時間を保持
+// Generally, you should use "unsigned long" for variables that hold time
+// The value will quickly become too large for an int to store
+unsigned long previousMillis = 0;  // will store last time LED was updated
 
-// 定数は変更されません:
-const long interval = 10000;  // 点滅間隔 (ミリ秒単位)
+// constants won't change:
+const long interval = 10000;  // interval at which to blink (milliseconds)
 ```
 
-`setup()` では、事前に定義したサイズで EEPROM を初期化します。
+`setup()`では、事前定義されたサイズでEEPROMを初期化します。
 
 ```c
 EEPROM.begin(EEPROM_SIZE);
 ```
 
-コードが最新の LED 状態で初期化されるようにするために、`setup()` 内でフラッシュメモリから最後の LED 状態を読み取る必要があります。この状態はアドレス 0 に保存されています。
+最新のLED状態でコードが初期化されることを確実にするため、`setup()`内で、フラッシュメモリから最後のLED状態を読み取る必要があります。これはアドレス0に保存されています。
 
-その後、フラッシュメモリから読み取った値に応じて LED を ON または OFF にするだけです。
+その後、フラッシュメモリから読み取った値に応じて、LEDをONまたはOFFにするだけです。
 
 ```c
 digitalWrite (ledPin, ledState);
 ```
 
-`loop()` 関数セクションでは、一定の時間間隔で LED の状態を反転させるだけです。
+In the `loop()` function section, all we need to do is flip the state of the LED over a period of time.
 
 ```c
-// LED を点滅させる時間かどうかを確認します。つまり、現在の時間と
-// LED を最後に点滅させた時間の差が、LED を点滅させたい間隔よりも
-// 大きいかどうかを確認します。
+// check to see if it's time to blink the LED; that is, if the difference
+// between the current time and last time you blinked the LED is bigger than
+// the interval at which you want to blink the LED.
 unsigned long currentMillis = millis();
 
 if (currentMillis - previousMillis >= interval) {
-    // LED を最後に点滅させた時間を保存します
+    // save the last time you blinked the LED
     previousMillis = currentMillis;
-    Serial.println("状態が変更されました");
-    // LED が OFF の場合は ON にし、逆の場合は OFF にします:
+    Serial.println("State changed");
+    // if the LED is off turn it on and vice-versa:
     if (ledState == LOW) {
       ledState = HIGH;
     } else {
       ledState = LOW;
     }
 
-    // 変数の ledState に基づいて LED を設定します:
+    // set the LED with the ledState of the variable:
     digitalWrite(ledPin, ledState);
 }
 ```
 
-次に、カウントダウンが終了したかどうかを判断し、終了後に LED の状態を反転させ、フラッシュメモリに保存します。
+次に、カウントダウンが終了したかどうかを判定し、終了後にLEDの状態を反転させ、フラッシュメモリに保存する必要があります。
 
 ```c
 EEPROM.write(0, ledState);
 ```
 
-最後に、変更を有効にするために EEPROM.commit() を使用します。
+最後に、EEPROM.commit()を使用して変更を有効にします。
 
 ```c
 EEPROM.commit();
 ```
 
-以下は完成した手順です。
+以下が完了した手順です。
 
 :::caution
-この例を長時間実行しないでください。この例では 10 秒ごとに EEPROM に書き込みを行いますが、長時間実行すると EEPROM の寿命が**大幅に短くなります**。
+この例を長時間実行**しないで**ください。この例では、10秒ごとにEEPROMに書き込みを行うため、長時間実行するとEEPROMの寿命が**大幅に短縮**されます。
 :::
 
 ```c
-// フラッシュメモリから読み書きするためのライブラリをインクルード
+// include library to read and write from flash memory
 #include <EEPROM.h>
 
-// アクセスしたいバイト数を定義
+// define the number of bytes you want to access
 #define EEPROM_SIZE 1
 
-// 定数は変更されません。ここではピン番号を設定するために使用されます:
-const int ledPin = D10;      // LED ピンの番号
+// constants won't change. They're used here to set pin numbers:
+const int ledPin = D10;      // the number of the LED pin
 
-// 変数は変更されます:
-int ledState = LOW;  // LED の状態を設定するために使用される ledState
+// Variables will change:
+int ledState = LOW;  // ledState used to set the LED
 
-// 一般的に、時間を保持する変数には "unsigned long" を使用するべきです
-// 値が大きくなりすぎて int では保持できなくなるため
-unsigned long previousMillis = 0;  // LED が最後に更新された時間を保持
+// Generally, you should use "unsigned long" for variables that hold time
+// The value will quickly become too large for an int to store
+unsigned long previousMillis = 0;  // will store last time LED was updated
 
-// 定数は変更されません:
-const long interval = 10000;  // 点滅間隔 (ミリ秒単位)
+// constants won't change:
+const long interval = 10000;  // interval at which to blink (milliseconds)
 
 void setup() { 
   Serial.begin(115200);
   
-  // 事前に定義したサイズで EEPROM を初期化
+  // initialize EEPROM with predefined size
   EEPROM.begin(EEPROM_SIZE);
 
   pinMode(ledPin, OUTPUT);
 
-  // フラッシュメモリから最後の LED 状態を読み取る
+  // read the last LED state from flash memory
   ledState = EEPROM.read(0);
-  // 保存された最後の状態に基づいて LED を設定
+  // set the LED to the last stored state
   digitalWrite(ledPin, ledState);
 }
 
 void loop() {
-  // 常に実行する必要があるコードをここに記述します。
+  // here is where you'd put code that needs to be running all the time.
 
-  // LED を点滅させる時間かどうかを確認します。つまり、現在の時間と
-  // LED を最後に点滅させた時間の差が、LED を点滅させたい間隔よりも
-  // 大きいかどうかを確認します。
+  // check to see if it's time to blink the LED; that is, if the difference
+  // between the current time and last time you blinked the LED is bigger than
+  // the interval at which you want to blink the LED.
   unsigned long currentMillis = millis();
 
   if (currentMillis - previousMillis >= interval) {
-    // LED を最後に点滅させた時間を保存します
+    // save the last time you blinked the LED
     previousMillis = currentMillis;
-    Serial.println("状態が変更されました");
-    // LED が OFF の場合は ON にし、逆の場合は OFF にします:
+    Serial.println("State changed");
+    // if the LED is off turn it on and vice-versa:
     if (ledState == LOW) {
       ledState = HIGH;
     } else {
       ledState = LOW;
     }
-    // LED の状態をフラッシュメモリに保存
+    // save the LED state in flash memory
     EEPROM.write(0, ledState);
     EEPROM.commit();
-    Serial.println("フラッシュメモリに状態が保存されました");
+    Serial.println("State saved in flash memory");
 
-    // 変数の ledState に基づいて LED を設定します:
+    // set the LED with the ledState of the variable:
     digitalWrite(ledPin, ledState);
   }
 }
 ```
 
-コードをボードにアップロードすると、シリアルモニタで以下のような出力が得られます。
+コードをボードにアップロードすると、シリアルモニターで以下のような結果が得られるはずです：
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/xiaoesp32c3-permanently-data/4.png"/></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

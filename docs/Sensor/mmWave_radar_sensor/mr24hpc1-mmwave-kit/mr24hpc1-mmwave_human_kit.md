@@ -64,28 +64,28 @@ There are some things to keep in mind when using this kit.
 The following table shows the hardware connection between the millimeter wave radar and the XIAO ESP32C3. If necessary, you can do your own subsequent development based on the connections in the table below.
 
 <div class="table-center">
- <table align="center">
-  <tr>
-   <th>XIAO ESP32C3</th>
-   <th>MR24HPC1</th>
-  </tr>
-  <tr>
-   <td>5V</td>
-   <td>VCC</td>
-  </tr>
-  <tr>
-   <td>GND</td>
-   <td>GND</td>
-  </tr>
+  <table align="center">
     <tr>
-      <td>GPIO4 (D2)</td>
-      <td>RX</td>
+    <th>XIAO ESP32C3</th>
+    <th>MR24HPC1</th>
     </tr>
     <tr>
-      <td>GPIO5 (D3)</td>
-      <td>TX</td>
+    <td>5V</td>
+    <td>VCC</td>
     </tr>
- </table>
+    <tr>
+    <td>GND</td>
+    <td>GND</td>
+    </tr>
+      <tr>
+        <td>GPIO4 (D2)</td>
+        <td>RX</td>
+      </tr>
+      <tr>
+        <td>GPIO5 (D3)</td>
+        <td>TX</td>
+      </tr>
+  </table>
 </div>
 
 ## Getting Started

@@ -1,28 +1,24 @@
 ---
 description: XIAO ESP32C6とセンサーを使用してデータを収集し、Apache Kafkaに送信する
-title: Apache KafkaによるリアルタイムIoTデータ処理ノード
+title: Apache Kafkaを活用したリアルタイムIoTデータ処理ノード
 keywords:
 - xiao esp32c6
 image: https://files.seeedstudio.com/wiki/seeed_logo/logo_2023.png
 slug: /ja/xiao_esp32c6_kafka
 last_update:
-  date: 05/15/2025
+  date: 05/21/2024
   author: Allen
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <div class="table-center">
 <iframe width="730" height="500" src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/kafka_xiao.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-最先端の処理ノードであるKafka-ESP32は、Apache KafkaとESP32C6マイクロコントローラーのパワーを組み合わせ、IoTデータストリームを効率的に処理するソリューションを提供します。XIAO ESP32C6とDHT20環境センサーを使用することで、データを収集し、ESP32C6を介してシームレスにApache Kafkaに送信します。Kafkaの高スループット、低レイテンシのメッセージング機能により、リアルタイムのデータ処理と分析が可能になり、その分散アーキテクチャによりスケーラビリティも容易です。Kafka-ESP32は、カスタムアプリケーションや統合の開発を可能にし、データ駆動型の現代におけるIoT資産の管理と活用方法を革新します。
+私たちの最先端処理ノードKafka-ESP32は、Apache KafkaとESP32C6マイクロコントローラーの力を組み合わせて、IoTデータストリームを処理するための効率的なソリューションを提供します。XIAO ESP32C6とDHT20環境センサーを使用することで、データが収集され、ESP32C6を介してApache Kafkaにシームレスに送信されます。Kafkaの高スループット、低レイテンシメッセージング機能により、リアルタイムデータ処理と分析が可能になり、その分散アーキテクチャにより簡単にスケーラビリティを実現できます。Kafka-ESP32は、カスタムアプリケーションと統合の開発を可能にし、今日のデータ駆動型環境でIoTアセットを管理・活用する方法を革新します。
 
 ## 必要な材料
 
-この例では、XIAO ESP32C6とGrove DHT20温湿度センサーを使用して、AWS IoT CoreのSageMakerタスクを完了する方法を紹介します。このルーチンを完了するために必要なすべてのハードウェアデバイスは以下の通りです。
+この例では、XIAO ESP32C6とGrove DHT20温湿度センサーを使用して、AWS IoT CoreのSageMakerタスクを完了する方法を紹介します。以下は、このルーチンを完了するために必要なすべてのハードウェアデバイスです。
 
 <div class="table-center">
 	<table align="center">
@@ -38,44 +34,45 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 		<tr>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>
 			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-V2-0-DHT20-p-4967.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
 				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
 				</a>
 			</div></td>
 		</tr>
 	</table>
+
 </div>
 
 ## Docker インストール
 
-なぜ Docker を使用するのか？Docker を使用すると、1台のマシン上で複数のコンピュータ環境をシミュレートし、アプリケーションを非常に簡単にデプロイできます。そのため、このプロジェクトでは Docker を使用して環境をセットアップし、効率を向上させます。
+なぜ Docker を使用するのでしょうか？Docker は単一のマシン上で複数のコンピューターの環境をシミュレートし、アプリケーションを非常に簡単にデプロイできるからです。そのため、このプロジェクトでは Docker を使用して環境をセットアップし、効率を向上させます。
 
 ### ステップ 1. Docker をダウンロード
 
-お使いのコンピュータに応じて異なる種類のインストーラーをダウンロードしてください。[こちら](https://www.docker.com/products/docker-desktop/)をクリックして移動します。
+お使いのコンピューターに応じて、異なるタイプのインストーラーをダウンロードしてください。[こちら](https://www.docker.com/products/docker-desktop/)をクリックしてジャンプしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/1.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-お使いのコンピュータが **Windows** の場合、**ステップ 2** を完了するまで Docker をインストールしないでください。
+お使いのコンピューターが **Windows** の場合、**ステップ 2** を完了するまで docker をインストールしないでください。
 :::
 
-### ステップ 2. WSL（Windows Subsystem for Linux）のインストール
+### ステップ 2. WSL(Windows Subsystem for Linux) をインストール
 
 :::tip
-このステップは **Windows** 用です。お使いのコンピュータが Mac または Linux の場合、このステップをスキップできます。
+このステップは **Windows** 用です。お使いのコンピューターが Mac または Linux の場合、このステップをスキップできます。
 :::
 
-1. 管理者として以下のコードを実行します。
+1. 管理者として以下のコードを実行してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/3.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -84,39 +81,40 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-2. [こちら](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)からツールをダウンロードし、ダブルクリックしてインストールします。
+2. [こちら](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)からこのツールをダウンロードし、ダブルクリックしてインストールします。
 
-3. **Microsoft Store** に移動して、好きな Linux バージョンを検索してダウンロードします。ここでは Ubuntu をインストールしました。
+3. **Microsoft Store**に移動して、お好みのLinuxバージョンを検索してダウンロードします。ここではUbuntuをインストールしました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/4.png" style={{width:1000, height:'auto'}}/></div>
 
-4. Linux をインストールした後、開いてユーザー名とパスワードを設定し、初期化が完了するまで数分待つ必要があります。
+4. Linuxをインストールした後、それを開いてユーザー名とパスワードを設定し、初期化のために1分ほど待つ必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/5.png" style={{width:1000, height:'auto'}}/></div>
 
-5. 以下の指示を実行して **WSL** を使用します。
+5. 以下の指示に従って**WSL**を使用します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/6.png" style={{width:1000, height:'auto'}}/></div>
 
-6. WSL をインストールした後、Docker インストーラーをダブルクリックしてインストールできます。以下の画像が表示されたら、正常に動作しています。
+6. WSLをインストールした後、dockerインストーラーをダブルクリックしてインストールできます。以下の画像が表示されれば動作しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/2.png" style={{width:1000, height:'auto'}}/></div>
 
+
 ## サービスのデプロイ
 
-開始する前に、このプロジェクトで使用する各サービスの機能を紹介します。
+開始する前に、このプロジェクトの各サービスの機能を紹介したいと思います。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/structure.png" style={{width:700, height:'auto'}}/></div>
 
-以下は、このプロジェクトのディレクトリ構造の参考例です。次のステップでこれらのファイルを1つずつ作成します。各ファイルの位置は非常に重要です。このディレクトリ構造を参考にすることを強くお勧めします。**kafka_xiao_project** ディレクトリを作成し、これらのファイルを含めます。
+こちらは参考用のプロジェクトディレクトリ構造です。以下の手順でこれらのファイルを一つずつ作成します。各ファイルの位置は非常に重要です。このディレクトリ構造を参照することを強くお勧めします。**kafka_xiao_project**ディレクトリを作成し、これらのファイルを含めてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/30.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ 3. Python サーバーのデプロイ
+### ステップ3. Pythonサーバーのデプロイ
 
-MCU デバイスの性能不足により、Kafka のクライアントとして直接使用することはできません。そのため、データ転送を行うサーバーを構築する必要があります。このステップでは、Python を使用して簡単なサーバーを構築します。XIAO ESP32C6 は主に DHT20 から環境データを収集し、それをサーバーに送信します。
+MCUデバイスの性能不足により、kafkaのクライアントとして直接使用することはできません。そのため、データ転送を行うサーバーを構築する必要があります。このステップでは、Pythonでシンプルなサーバーを構築します。XIAO ESP32C6は主にDHT20から環境データを収集し、サーバーに送信します。
 
-1. まず **app.py** ファイルを作成します。これはサーバーの動作を定義します。
+1. まず、サーバーが行う処理である**app.py**ファイルを作成する必要があります。
 
 ```python
 from flask import Flask
@@ -139,14 +137,14 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)
 ```
 
-2. **requirements.txt** を作成します。これは依存ライブラリを定義します。
+2. **requirements.txt** を作成します。これは依存関係ライブラリです。
 
 ```
 flask
 kafka-python
 ```
 
-3. **Dockerfile** を作成します。
+3. **Dockerfile**を作成する
 
 ```
 FROM python:3.9-slim
@@ -161,7 +159,7 @@ COPY . .
 CMD ["python", "app.py"]
 ```
 
-4. 上記の3つのファイルを作成した後、以下のコードを実行して Docker イメージをビルドします。
+4. これら3つのファイルを作成した後、以下のコードを実行してDockerイメージをビルドできます。
 
 ```
 docker build -t pyserver .
@@ -169,11 +167,11 @@ docker build -t pyserver .
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/9.png" style={{width:1000, height:'auto'}}/></div>
 
-### ステップ 4. Jupyter Notebook のデプロイ
+### ステップ4. Jupyter Notebookのデプロイ
 
-Jupyter Notebook は主にデバッグに使用される非常に便利なツールです。また、Python を使用して Kafka を操作することもできます。
+Jupyter Notebookは主にデバッグに使用され、非常に優れたツールです。また、PythonでKafkaを操作することもできます。
 
-1. まず **Dockerfile** を作成します。
+1. まず**Dockerfile**を作成します。
 
 ```
 FROM python:3.9
@@ -187,8 +185,7 @@ EXPOSE 8888
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
 ```
 
-2. Jupyter の Docker イメージをビルドします。
-
+2. jupyter dockerイメージをビルドします。
 ```
 docker build -t jupyter .
 ```
@@ -197,9 +194,9 @@ docker build -t jupyter .
 
 ### ステップ 5. Docker クラスターの起動
 
-**docker-compose.yml** を使用して Docker クラスターを構築できます。docker-compose 内の各サービスは独立したコンピュータを表し、*kafka-net* を使用してそれらを相互接続します。
+**docker-compose.yml** を使用して docker クラスターを構築できます。docker-compose の各サービスは独立したコンピューターを表し、*kafka-net* を使用してそれらを相互に接続します。
 
-1. まず **docker-compose.yml** を作成します。
+1. まず **docker-compose.yml** を作成する必要があります。
 
 ```
 services:
@@ -263,31 +260,31 @@ networks:
     driver: bridge
 ```
 
-2. 次に、以下のコマンドを実行してこの Docker クラスターを起動します。
+2. 次に、以下のコマンドを実行してこのdockerクラスターを起動します。 
 
 ```
 docker-compose up -d
 ```
 
 :::tip
-ポートが使用中の場合があります。その場合はポートを5001から5002などに変更するか、ポートを占有しているアプリケーションを終了してください。
+ポートが占有されている可能性があります。ポートを5001から5002などに変更するか、ポートを占有しているアプリケーションを閉じることができます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/10.png" style={{width:1000, height:'auto'}}/></div>
 
-3. 次のいくつかの操作では、正常に動作しているかどうかをテストします。まず、**Docker Desktop**ソフトウェアを開き、**pyserver**をクリックします。
+3. 次のいくつかの操作で、正常に動作するかどうかをテストします。まず、ソフトウェア **docker desktop** を開き、**pyserver** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/11.png" style={{width:1000, height:'auto'}}/></div>
 
-4. 現在、サーバーは http://127.0.0.1:5001 で動作しています。このリンクをクリックして開きます。
+4. これで、サーバーが `http://127.0.0.1:5001` で実行されています。このリンクをクリックして開きます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/12.png" style={{width:800, height:'auto'}}/></div>
 
-5. 次に、以下の形式で2つのパラメータを入力して、Dockerクラスターが正常に動作しているかどうかをテストします。
+5. そして、dockerクラスターが正常に動作しているかをテストするために、このような形式で2つのパラメータを入力します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/13.png" style={{width:700, height:'auto'}}/></div>
 
-6. Kafka内に入り、データがKafkaに送信されたかどうかを確認します。
+6. データがKafkaに送信されたかどうかを確認するために、Kafkaの内部を見てみます。
 ```
 docker exec -it kafka bash
 
@@ -298,17 +295,17 @@ kafka-console-consumer.sh --bootstrap-server localhost:9093 --topic my_topic --f
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/14.png" style={{width:1000, height:'auto'}}/></div>
 
-7. 別のパラメータで再度試してみると、データが即座にKafkaに送信されたことが確認できます。おめでとうございます！Dockerクラスターが完璧に動作しています。
+7. 異なるパラメータで再度試すことができ、データが即座にKafkaに送信されることが確認できます。これで、おめでとうございます！Dockerクラスターが完璧に動作しています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/15.png" style={{width:1000, height:'auto'}}/></div>
 
 ### ステップ7. PythonでKafkaをテストする
 
 :::tip
-このステップは主にPythonを使用してKafkaを操作する方法についてです。このステップをスキップしても、プロジェクト全体の操作には影響しません。
+このステップは主にPythonを使用してKafkaを操作する方法についてです。このステップをスキップすることもできます。プロジェクト全体の動作には影響ありません。
 :::
 
-1. Docker Desktopを開き、**jupyter**をクリックします。
+1. Docker Desktopを開き、jupyterをクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/16.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -316,7 +313,7 @@ kafka-console-consumer.sh --bootstrap-server localhost:9093 --topic my_topic --f
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/17.png" style={{width:1000, height:'auto'}}/></div>
 
-3. jupyterに正常にアクセスすると、以下のページが表示されます。
+3. jupyterに正常にアクセスすると、このページが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/18.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -328,29 +325,29 @@ kafka-console-consumer.sh --bootstrap-server localhost:9093 --topic my_topic --f
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/21.png" style={{width:1000, height:'auto'}}/></div>
 
-6. ライブラリをインストールした後、jupyterを再起動する必要があります。
+6. そのライブラリをインストールした後、jupyterを再起動する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/22.png" style={{width:1000, height:'auto'}}/></div>
 
-7. 次に、以下のコードを実行してPythonを使用してKafkaにデータを送信します。
+7. 次に、以下のコードを実行してPythonでKafkaにデータを送信します。
 
 ```python
 from kafka import KafkaProducer, KafkaConsumer
 
-# プロデューサーを初期化
+#initialize producer
 producer = KafkaProducer(bootstrap_servers='localhost:9093')
-# メッセージを送信
+#send message
 producer.send('my_topic', b'Hello, Kafka2')
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/23.png" style={{width:1000, height:'auto'}}/></div>
 
-8. また、Kafka内でこれらのデータを確認することもできます。
+8. また、これらのデータをkafkaで確認することもできます。
 
 ```python
 from kafka import KafkaConsumer
 
-# コンシューマーを初期化
+# initialize consumer
 consumer = KafkaConsumer(
     'my_topic',
     bootstrap_servers='localhost:9093',
@@ -359,7 +356,7 @@ consumer = KafkaConsumer(
     group_id='group1'
 )
 
-# データを受信して表示
+# receive data and print
 for message in consumer:
     print(f"Received message: {message.value.decode('utf-8')}")
 ```
@@ -368,9 +365,9 @@ for message in consumer:
 
 ## XIAO ESP32C6 と Apache Kafka
 
-[Kafka](https://kafka.apache.org/) は、スケールに応じたデータストリームのリアルタイム処理を可能にする分散型ストリーミングプラットフォームです。システム間でのデータのパブリッシュ-サブスクライブ型メッセージングを可能にし、フォールトトレランス、永続性、高スループットを提供します。Kafka は、さまざまな分野でリアルタイムデータパイプラインやストリーミングアプリケーションを構築するために広く使用されています。
+[Kafka](https://kafka.apache.org/) は、大規模なデータストリームのリアルタイム処理を可能にする分散ストリーミングプラットフォームです。システム間でのデータのパブリッシュ・サブスクライブメッセージングを可能にし、フォルトトレラント性、永続性、高スループットを提供します。Kafka は、様々な分野でリアルタイムデータパイプラインとストリーミングアプリケーションの構築に広く使用されています。
 
-ここでは、XIAO ESP32C6 と DHT20 温湿度センサーを使用してデータを収集し、リアルタイムで Kafka に送信します。
+今回は、XIAO ESP32C6 と DHT20 温湿度センサーを使用してデータを収集し、リアルタイムで Kafka に送信します。
 
 ### ステップ 8. データを収集して Apache Kafka に送信する
 
@@ -379,11 +376,11 @@ for message in consumer:
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-// WiFi の名前とパスワードをここに変更してください。
+//Change to your wifi name and password here.
 const char* ssid = "Maker_2.4G";
 const char* password = "15935700";
 
-// コンピュータの IP アドレスとサーバーポートをここに変更してください。
+//Change to your computer IP address and server port here.
 const char* serverUrl = "http://192.168.1.175:5001";
 
 void setup() {
@@ -393,51 +390,51 @@ void setup() {
   
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("WiFi に接続中...");
+    Serial.println("Connecting to WiFi...");
   }
   
-  Serial.println("WiFi に接続しました");
+  Serial.println("Connected to WiFi");
 }
 
 void loop() {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
     
-    // アクセスリンクを作成
+    //Create access link
     String url = serverUrl;
     url += "/";
-    url += "30.532";  // 温度
+    url += "30.532";  // tempertature
     url += "/";
-    url += "60.342";  // 湿度
+    url += "60.342";  // humidity
     
     http.begin(url);
     
     int httpResponseCode = http.GET();
     
-    // HTTP レスポンスを取得して出力
+    //Get http response and print
     if (httpResponseCode == 200) {
       String response = http.getString();
-      Serial.println("サーバーの応答:");
+      Serial.println("Server response:");
       Serial.println(response);
     } else {
-      Serial.print("HTTP エラーコード: ");
+      Serial.print("HTTP error code: ");
       Serial.println(httpResponseCode);
     }
     
     http.end();
   } else {
-    Serial.println("WiFi が切断されました");
+    Serial.println("WiFi disconnected");
   }
   
-  delay(5000);  // 5 秒ごとにサーバーにアクセス
+  delay(5000);  // access server in every 5s.
 }
 ```
 
-コンピュータの IP アドレスがわからない場合は、```ipconfig```（Windows）または ```ifconfig | grep net```（Mac または Linux）を実行して確認できます。
+コンピュータのIPアドレスがわからない場合は、```ipconfig```（Windows）または```ifconfig | grep net```（MacまたはLinux）を実行して確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/26.png" style={{width:600, height:'auto'}}/></div>
 
-2. Type-C ケーブルを使用してコンピュータと C6 を接続し、Grove ケーブルを使用して XIAO 拡張ボードの **I2C ポート** と DHT20 センサーを接続します。
+2. Type-Cケーブルを使用してコンピュータをC6に接続し、Groveケーブルを使用してXIAO拡張ボードの**I2Cポート**をDHT20センサーに接続します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/hardware.jpeg" style={{width:600, height:'auto'}}/></div>
 
@@ -449,17 +446,17 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/28.png" style={{width:1000, height:'auto'}}/></div>
 
-5. Kafka を実行している Windows PowerShell を開きます。これで環境データが Kafka に送信されているのが確認できます。おめでとうございます！このプロジェクトを正常に実行できました！
+5. kafkaが実行されているWindows PowerShellを開きます。環境データがKafkaに送信されているのが確認できます。おめでとうございます！このプロジェクトを正常に実行できました！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_esp32c6_kafka/29.png" style={{width:1000, height:'auto'}}/></div>
 
 ## リソース
 
-- **[リンク]** [Apache Kafka 入門](https://kafka.apache.org/)
+- **[Link]** [Apache Kafka Introduction](https://kafka.apache.org/)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

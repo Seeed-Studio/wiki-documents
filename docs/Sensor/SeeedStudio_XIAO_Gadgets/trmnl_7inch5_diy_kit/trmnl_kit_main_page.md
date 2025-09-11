@@ -20,10 +20,13 @@ last_update:
 </div>
 
 ## Introduction
+
 ### Product Overview
+
 The TRMNL 7.5" (OG) DIY Kit, co-developed by Seeed Studio and TRMNL, is a versatile e-ink development solution. It combines a 7.5-inch 800×480 monochrome e-ink display, XIAO ESP32-S3 PLUS driver board, 2000 mAh rechargeable battery, and 10cm FPC extension cable. Fully compatible with the TRMNL BYOD ecosystem, this kit enables no-code dashboard building with over 375 plugins and 8 layouts, ideal for DIY enthusiasts, smart home interfaces, and creative digital signage.
 
 ### Features
+
 :::tip
 To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware access (35 dollar, usually for 50 dollar). Use code **trmnl-seeed-diy** at checkout (first 200 customers, 1 per customer). First come, first serve!
 :::
@@ -35,6 +38,7 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 - **Open Source Enclosures**: Available on Printables and Thingiverse for easy customization
 
 ### Specification
+
 | Parameter | Description |
 | --- | --- |
 | MCU | XIAO ePaper Display Dev Board with XIAO ESP32-S3 Plus onboard |
@@ -46,11 +50,13 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 | Enclosure | Not included (open-source designs on Printables and Thingiverse) |
 
 ## Hardware Overview
+
 ### Component Diagram
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/overview.png" style={{width:600, height:'auto'}}/></div>
 
 ### Part List
+
 | Product | Quantity |
 | --- | --- |
 | XIAO ePaper Display Dev Board (XIAO ESP32-S3 Plus) | 1 |
@@ -60,7 +66,9 @@ To celebrate the collaboration, Team TRMNL offers 30% off on TRMNL BYOD firmware
 | 2000mAh Rechargeable Li-ion Battery | 1 |
 
 ## Getting Started
+
 ### Equipment Installation
+
 **Step 1. Connect Display to Driver Board**  
 Align the FPC cable with the connector on the XIAO ePaper Display Board, then secure the latch to ensure a firm connection.  
 
@@ -124,6 +132,7 @@ If your TRMNL kit far away from your router, you can move the antenna outside th
 :::
 
 ## Wiki Center
+
 ### Explore Detailed Guides
 
 #### 1. [TRMNL BYOD Ecosystem Tutorial](https://wiki.seeedstudio.com/ogdiy_kit_works_with_trmnl/)
@@ -139,7 +148,8 @@ Learn how to set up your TRMNL kit with Home Assistant via ESPHome, including fi
 Master TRMNL kit control with Arduino, including refresh mechanisms, graphics rendering, and power management.
 
 ## <span id="resource">Resources</span>
-- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)   
+
+- **[Firmware]** [TRMNL ePaper Library (GitHub)](https://github.com/Seeed-Projects/Seeed_TRMNL_Eink_Project)
 - **[Hardware]** [Driver Board SCH](https://files.seeedstudio.com/wiki/XIAO_Gadget/TRMNL_Kit_Pic/XIAO_ePaper_driver_board_sch.pdf)
 - **[Printable]** [triangular base](https://www.printables.com/model/1354873)  
 - **[Printable]** [protected triangular base](https://www.printables.com/model/1361112-upgrated-triangular-prism-3d-enclosure-for-trmnl-7)  
@@ -151,17 +161,16 @@ Master TRMNL kit control with Arduino, including refresh mechanisms, graphics re
 - **[Makerworld]** [protected triangular base](https://makerworld.com/en/models/1625119-trmnl-7-5-og-diy-triangular-prism-shell-kit)
 - **[Makerworld]** [L-shaped base](https://makerworld.com/en/models/1625065-trmnl-7-5-og-diy-l-shaped-case-kit)
 
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We offer multiple support channels:
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

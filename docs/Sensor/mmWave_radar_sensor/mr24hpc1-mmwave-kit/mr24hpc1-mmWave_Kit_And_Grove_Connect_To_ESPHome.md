@@ -83,7 +83,7 @@ Connect the mmwave kit to the HomeAssistant via Type-C cable, you can refer the 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/kit.png" style={{width:800, height:'auto'}}/></div>
 
-#### Step 2: Software setup 
+#### Step 2: Software setup
 
 ##### a. Setup mmwave kit
 
@@ -116,9 +116,11 @@ Connect the mmwave kit to the HomeAssistant via Type-C cable, you can refer the 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/7.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
+
 1. api and ota part have default key or password you needn't to change it.
 2. wifi part you need to change your own ssid and password.
 3. [click here to see code](https://github.com/limengdu/mmwave-kit-external-components/blob/mmwave-kit-factory-bin/example/mr24hpc1.yaml)
+
 :::
 
 8. And then will be a pop-up window, click on the third entry.
@@ -167,7 +169,7 @@ If you found ESPHome not in the Configured zone, but in Discovered zone upper. Y
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/17.png" style={{width:1000, height:'auto'}}/></div>
 
-### Grove connect to ESPHome 
+### Grove connect to ESPHome
 
 #### Light sensor(LS06-S)
 
@@ -177,7 +179,7 @@ Connect [light sensor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/light.png" style={{width:800, height:'auto'}}/></div>
 
-##### Step 2: Software setup 
+##### Step 2: Software setup
 
 ###### a. Setup light sensor
 
@@ -250,7 +252,7 @@ Connect [temperature and humidity sensor](https://www.seeedstudio.com/Grove-Temp
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mmwave_kit_plus_grove/DHT20.png" style={{width:800, height:'auto'}}/></div>
 
-##### Step 2: Software setup 
+##### Step 2: Software setup
 
 ###### a. Setup Temperature and humidity sensor
 
@@ -330,7 +332,7 @@ binary_sensor:
     device_class: smoke
 ```
 
-###### b. Add flame sensor to dashboard.
+###### b. Add flame sensor to dashboard
 
 You can refer light sensor or temperature and humidity sensor above.
 
@@ -348,11 +350,11 @@ Supported by [Seeed Studio Contributor Program](https://github.com/orgs/Seeed-St
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

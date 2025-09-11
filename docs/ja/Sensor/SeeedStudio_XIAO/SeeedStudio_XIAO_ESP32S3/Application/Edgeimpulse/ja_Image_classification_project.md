@@ -1,130 +1,126 @@
 ---
-description: 画像から犬と猫を分類します。
+description: 画像から犬と猫を分類する。
 title: 画像分類
 keywords:
-  - tinyml コース
+  - tinyml course
 image: https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/image_classification.webp
 slug: /ja/tinyml_course_Image_classification_project
 last_update:
-  date: 05/15/2025
+  date: 11/29/2024
   author: Salman
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # XIAO ESP32S3-Sense 画像分類
 
-ここでは、XIAO ESP32S3-Sense を使用して、写真内の犬と猫を分類する tinyML プロジェクトを構築します。それでは始めましょう。
+ここでは、XIAO ESP32S3-Senseを使用して写真の中の犬と猫を分類するtinyMLプロジェクトを構築します。始めましょう。
 
-## 動作の仕組み
+## 動作原理
 
-私たちは XIAO 上で機械学習モデルを実行し、カメラストリームをそれに供給します。その後、XIAO は推論を行い、実装されたオンボードニューラルネットワークの助けを借りて予測を行います。それでは構築してみましょう。
+XIAOで機械学習モデルを実行し、カメラストリームをそれに供給します。そして、XIAOが結果を推論し、実装したオンボードニューラルネットワークの助けを借りて予測を行います。一つ構築してみましょう。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/digram.png?raw=true" style={{width:1000, height:'auto'}}/></div>
 
 ### 必要なもの
 
 - XIAO ESP32-Sense
-- 32GB MicroSDカード
-- Type-C ケーブル
+- 32GB未満のMicroSDカード
+- Type-Cケーブル
 - Arduino IDE
-- Edge Impulse アカウント
+- Edge Impulseアカウント
 
 :::info
 
-1. Arduino-esp32 バージョン 2.x を使用してください。3.x とは互換性がありません。
-2. カメラモジュール/機能を有効にするために PSRAM を有効にしてください。
+1. arduino-esp32バージョン2.xを使用してください。3.xとは互換性がありません。
+2. カメラモジュール/機能を有効にするためにPSRAMを有効にしてください。
 
 :::
 
-## ステップ 1. 犬と猫の画像を収集する
+## ステップ1. 猫と犬の画像を収集する
 
-機械学習プロジェクトの最初のステップはデータセットを収集することです。ここでは、犬と猫の画像を収集する必要があります。画像を収集する方法は2つあります。
+機械学習プロジェクトの最初のステップは、データセットを収集することです。ここでは犬と猫の画像を収集する必要があります。ここでは、2つの方法で画像を収集できます。
 
-1. XIAO-ESP32S3 Sense から直接画像を収集し、SDカードに保存してから Edge Impulse にアップロードする
-2. 携帯電話、インターネット、またはオープンデータセットを使用して直接画像を収集し、それを Edge Impulse にアップロードする
+1. XIAO-ESP32S3 Senseから直接画像を収集し、SDカードに保存してからEdge Impulseにアップロードする
+2. 携帯電話、インターネット、またはオープンデータセットから直接画像を収集し、Edge Impulseにアップロードする
 
-### 1.1 方法 1: XIAO-ESP32S3 Sense を使用して画像を収集する
+### 1.1 方法1: XIAO-ESP32S3 Senseを使用して画像を収集する
 
-ここでは、Sense カメラモジュールを使用して画像を収集し、SDカードに保存します。その後、Edge Impulse にアップロードします。
+ここでは、senseカメラモジュールを使用して画像を収集し、SDカードに保存し、後でEdgeImpulseにアップロードします。
 
 #### 1.1.1 カメラを接続する
 
-XIAO ESP32S3 Sense を購入する場合、拡張ボードも含める必要があります。この拡張ボードには、1600\*1200 OV2640 カメラセンサー、オンボード SDカードスロット、デジタルマイクが搭載されています。
+XIAO ESP32S3 Senseを購入する場合は、拡張ボードも含める必要があります。この拡張ボードには、1600\*1200 OV2640カメラセンサー、オンボードSDカードスロット、デジタルマイクが搭載されています。
 
-拡張ボードを XIAO ESP32S3 Sense に取り付けることで、拡張ボードの機能を使用できます。
+拡張ボードをXIAO ESP32S3 Senseに取り付けることで、拡張ボード上の機能を使用できます。
 
-拡張ボードの取り付けは非常に簡単です。拡張ボードのコネクタを XIAO ESP32S3 の B2B コネクタに合わせて押し込み、「カチッ」という音が聞こえたら取り付け完了です。
+拡張ボードの取り付けは非常に簡単です。拡張ボード上のコネクタをXIAO ESP32S3のB2Bコネクタに合わせ、強く押して「カチッ」という音が聞こえれば、取り付け完了です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/61.gif" style={{width:500, height:'auto'}}/></div>
 
-現在、当社の棚には新しい完全互換の強力なカメラ OV5640 があり、購入すればカメラを交換して使用できます。
+現在、XIAO ESP32S3 Sense互換の強力な新しいカメラ、OV5640を在庫しており、購入すればカメラを交換して使用できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+    <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-- **ステップ 1.** お使いのオペレーティングシステムに応じて、安定版の Arduino IDE をダウンロードしてインストールします。
+- **ステップ1.** お使いのオペレーティングシステムに応じて、Arduino IDEの安定版をダウンロードしてインストールします。
 
 <div class="download_arduino_container" style={{textAlign: 'center'}}>
-    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDE をダウンロード</font></span></strong></a>
+    <a class="download_arduino_item" href="https://www.arduino.cc/en/software"><strong><span><font color={'FFFFFF'} size={"4"}>Arduino IDEをダウンロード</font></span></strong></a>
 </div>
 
-#### 1.1.2 Arduino に XIAO-ESP32S3 Sense をインストールする
+#### 1.1.2 Arduino IDEにXIAO-ESP32S3 Senseをインストールする
 
-- **ステップ 1.** Arduino IDE に ESP32 ボードパッケージを追加します。
+- **ステップ1.** Arduino IDEにESP32ボードパッケージを追加します。
 
-  **ファイル > 環境設定** に移動し、**"追加のボードマネージャーの URL"** に以下の URL を入力します：
-  `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
+  **ファイル > 環境設定**に移動し、**「追加のボードマネージャのURL」**に以下のURLを入力します：
+  *https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json*
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/6.png" style={{width:800, height:'auto'}}/></div>
 
-  **ツール > ボード > ボードマネージャー...** に移動し、検索ボックスに **esp32** と入力して、最新バージョンの **esp32** を選択してインストールします。
+  **ツール > ボード > ボードマネージャ...**に移動し、検索ボックスにキーワード**esp32**を入力し、**esp32**の最新バージョンを選択してインストールします。
 
     <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/9.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-XIAO ESP32S3 用のオンボードパッケージは、少なくともバージョン **2.0.8** が必要です。
+XIAO ESP32S3のオンボードパッケージには、少なくともバージョン**2.0.8**が必要です。
 :::
 
-- **ステップ 2.** ボードとポートを選択します。
+- **ステップ2.** ボードとポートを選択します。
 
-Arduino IDE の上部でポートを直接選択できます。通常、これは COM3 以上になります（**COM1** と **COM2** は通常ハードウェアシリアルポートに予約されています）。
+Arduino IDEの上部で、ポートを直接選択できます。これは通常COM3以上になります（**COM1**と**COM2**は通常ハードウェアシリアルポート用に予約されています）。
 
-また、左側の開発ボードで **xiao** を検索し、**XIAO_ESP32S3** を選択します。
+また、左側の開発ボードで**xiao**を検索し、**XIAO_ESP32S3**を選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/10.png" style={{width:600, height:'auto'}}/></div>
 
-これで、XIAO ESP32S3 用のプログラムを作成し、コンパイルしてアップロードする準備が整いました。
+この準備により、XIAO ESP32S3用のプログラムの作成、コンパイル、アップロードを開始できます。
 
-#### 1.1.3 画像を撮影して SDカードに保存するスケッチをアップロードする
+#### 1.1.3 画像を撮影してSDカードに保存できるスケッチをアップロードする
 
-[こちら](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/take_photos_command.ino.zip) からスケッチファイルをダウンロードし、コンピュータで解凍して「take_photos_command.ino」をクリックしてスケッチを開きます。その後、XIAO 用の正しいポートとボードを選択してアップロードします。
+[こちら](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/take_photos_command.ino.zip)からスケッチファイルをダウンロードし、コンピュータで解凍して「take_photos_command.ino」をクリックしてスケッチを開きます。次に、XIAOの正しいポートとボードを選択してアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/img_CaptureSketch01.png?raw=true
 " style={{width:600, height:'auto'}}/></div>
 
-写真を撮る際には、データセットとして収集する必要がある画像やオブジェクトを指すようにしてください。
+写真を撮影する際は、データセットとして収集する必要がある画像やオブジェクトに向けるようにしてください。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/cat_image_snap.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
-画像分類のため、システムをより安定させるためにできるだけ多くの画像を収集する必要があります。かわいい犬や猫の画像をたくさん集めましょう。
+画像分類なので、システムをより安定させるために多くの画像を収集する必要があります。そのため、より多くの可愛い犬と猫の画像を収集してください。
 
-### 1.2 方法 2: 画像を直接 Edge Impulse にアップロードする
+### 1.2 方法2: EdgeImpulseに直接画像をアップロードする
 
-この方法では、インターネットやスマートフォンを使用して画像を収集する必要があります。幸いなことに、[Kaggle](https://www.kaggle.com/)のようなサービスを利用して、犬と猫の画像データセットを入手できます。[こちらをご覧ください](https://www.kaggle.com/datasets/tongpython/cat-and-dog)。
+この方法では、インターネットや電話から画像を収集する必要があります。幸い、[Kaggle](https://www.kaggle.com/)のようなサービスが犬と猫の画像データセットを提供してくれています。[こちらをご覧ください](https://www.kaggle.com/datasets/tongpython/cat-and-dog)。
 
 データセットを収集したら、EdgeImpulseプロジェクトを開き、**Data acquisition**に移動して**+ Add data**を選択し、**Upload data**オプションを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://raw.githubusercontent.com/salmanfarisvp/TinyML/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/collectData1.png" style={{width:600, height:'auto'}}/></div>
 
-ページから、アップロードモードを**"Select a folder"**に設定し、以下のオプションからファイルを選択します。**"Automaticlly split between training and testing"**を選択し、ラベルを**"Infer from file name"**に設定することを忘れないでください。
+ページから、アップロードモードを**"Select a folder"**として選択し、下記のオプションからファイルを選択します。**"Automaticlly split between training and testing"**と**"Infer from file name"**をラベルとして選択することを確認してください。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/DataCollection01.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
@@ -132,33 +128,34 @@ Arduino IDE の上部でポートを直接選択できます。通常、これ�
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/DataCollection02.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
-## ステップ2. インパルスの設計とニューラルネットワークのトレーニング
+## ステップ2. インパルスの設計とニューラルネットワークの訓練
 
-プロジェクト用のデータを収集した後、インパルスを作成できます。完全なインパルスは、入力ブロック、処理ブロック、学習ブロックの3つの主要な構成要素で構成されます。
+プロジェクトのデータを収集した後、インパルスを作成できます。完全なインパルスは3つの主要な構成要素で構成されます：入力ブロック、処理ブロック、学習ブロックです。
 
 1. インパルスを設計するには、**Impulse design**の下にある**Create an impulse**を選択します。
-2. **入力ブロック**: 入力ブロックは、モデルをトレーニングする際に使用する入力データの種類を示します。これは、時系列データ（音声、振動、動き）や画像などが含まれます。ここでは、画像データを入力ブロックとして選択します。
-3. **処理ブロック**: 処理ブロックは基本的に特徴抽出器です。これは、モデルが学習する特徴を抽出するために使用されるDSP（デジタル信号処理）操作で構成されています。これらの操作は、プロジェクトで使用するデータの種類によって異なります。ここでは、EdgeImpulseの事前構築された画像処理ブロックを使用します。
-4. **学習ブロック**: 処理ブロックを追加した後、学習ブロックを追加してインパルスを完成させます。学習ブロックは、データを学習するためにトレーニングされたニューラルネットワークです。ここでは、転移学習（画像）を使用します。これは、事前トレーニングされた画像分類モデルをデータに微調整します。比較的小さな画像データセットでも良好なパフォーマンスを発揮します。
-5. インパルスを設計した後、**save impulse**をクリックして続行します。
+2. **入力ブロック**：入力ブロックは、モデルを訓練する入力データのタイプを示します。これは時系列（音声、振動、動き）または画像である可能性があります。ここでは入力ブロックとして画像データを選択します。
+3. **処理ブロック**：処理ブロックは基本的に特徴抽出器です。これは、モデルが学習する特徴を抽出するために使用されるDSP（デジタル信号処理）操作で構成されています。これらの操作は、プロジェクトで使用されるデータのタイプによって異なります。ここでは処理ブロックとしてEdgeImpulseの事前構築画像を使用しています。
+4. **学習ブロック**：処理ブロックを追加した後、インパルスを完成させるために学習ブロックを追加します。学習ブロックは、データを学習するように訓練されたニューラルネットワークです。ここでは転移学習（画像）を使用しており、データに対して事前訓練された画像分類モデルを微調整します。比較的小さな画像データセットでも良好な性能を発揮します。
+5. インパルスの設計後、**save impulse**をクリックして続行します。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/Impulse01.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
-### ステップ2.1: 処理ブロックを使用した特徴抽出
+### ステップ2.1：処理ブロックを使用した特徴抽出
 
-ここでは、モデルが学習する特徴を抽出するために使用されるDSP（デジタル信号処理）操作を使用します。これらの操作は、プロジェクトで使用するデータの種類によって異なります。まず、以下に示すようにパラメータを設定する必要があります。
+ここでは、モデルが学習する特徴を抽出するために使用されるDSP（デジタル信号処理）操作を使用します。これらの操作は、プロジェクトで使用されるデータのタイプによって異なります。まず、以下に記載されているようにパラメータを設定する必要があります。
 
-<div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/Impulse02.png?raw=true" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/Impulse02.png?raw=true
+" style={{width:600, height:'auto'}}/></div>
 
 パラメータを設定したら、特徴を生成する必要があります。**generate features**をクリックして操作を開始します。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/feature03.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
-特徴を生成した後、データを学習するためにトレーニングされたニューラルネットワークを構成する必要があります。ここでは、転移学習（画像）を使用します。これは、事前トレーニングされた画像分類モデルをデータに微調整します。比較的小さな画像データセットでも良好なパフォーマンスを発揮します。以下に示すようにニューラルネットワークを選択し、**Start Training**をクリックします。これには時間がかかるため、待つ必要があります。
+特徴を生成したら、データを学習するように訓練されたニューラルネットワークを設定する必要があります。ここでは転移学習（画像）を使用しており、データに対して事前訓練された画像分類モデルを微調整します。比較的小さな画像データセットでも良好な性能を発揮します。以下に記載されているようにニューラルネットワークを選択し、**Start Training**をクリックします。時間がかかるので待つ必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/train2.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
-トレーニングが完了すると、作成したtinyMLライブラリをダウンロードする準備が整います。**Deployment option**に移動し、**Arduino library**を選択してデプロイメントを行い、**Build**をクリックしてライブラリを生成します。
+訓練が完了したら、作成されたtinyMLライブラリをダウンロードする準備が整いました。**Deployment option**に移動し、デプロイメントとして**Arduino library**を選択し、**Build**をクリックしてライブラリを生成します。
 
 <div style={{textAlign:'center'}}><img src="https://github.com/salmanfarisvp/TinyML/blob/main/XIAO-esp32-S3-Sense/Image%20Recognition/src/img/deployment1.png?raw=true" style={{width:600, height:'auto'}}/></div>
 
@@ -166,30 +163,30 @@ Arduino IDE の上部でポートを直接選択できます。通常、これ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/Add_Zip.png" style={{width:1000, height:'auto'}}/></div>
 
-ダウンロードしたZIPファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウにライブラリが追加されたことが表示されます。これでライブラリが正常にインストールされたことを意味します。
+ダウンロードしたzipファイルを選択し、ライブラリが正しくインストールされると、通知ウィンドウに「Library added to your libraries」と表示されます。これはライブラリが正常にインストールされたことを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Get_Started_With_Arduino/img/upload_complete.png" style={{width:1000, height:'auto'}}/></div>
 
 ## ステップ 3. サンプルスケッチを実行する
 
-Edge ImpulseはESP NNアクセラレーターを使用したESP32S3向けのSDKをまだリリースしていませんが、Dmitry Maslovのおかげで、ESP32-S3向けにアセンブリ最適化を復元し修正することが可能です。このソリューションはまだ公式ではありませんが、EIが他のボードとの競合を修正した後、EI SDKに含まれる予定です。
+<!-- Even though Edge Impulse has not released its SDK for ESP32S3 using the ESP NN accelerator, thanks to Dmitry Maslov, we can have its assembly optimizations restored and fixed for ESP32-S3. This solution is not official yet, and EI will include it in EI SDK once they fix conflicts with other boards.
 
 :::caution
-現在のところ、この方法は非EONバージョンでのみ動作します。そのため、**Enable EON Compiler**オプションを選択しないようにしてください。
+For now, this only works with the non-EON version. So, you should also keep the the option **Enable EON Compiler** not selected.
 :::
 
-ビルドボタンを選択すると、Zipファイルが作成され、コンピュータにダウンロードされます。
+When the Build button is selected, a Zip file will be created and downloaded to your computer.
 
-ダウンロードしたライブラリを使用する前に、**ESP NN**アクセラレーターを有効にする必要があります。そのために、[プロジェクトのGitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip)から暫定版をダウンロードし、解凍して、Arduinoライブラリフォルダ内の`src/edge-impulse-sdk/porting/espressif/ESP-NN`にあるESP NNフォルダを置き換えてください。
+Before we use the downloaded library, we need to enable the **ESP NN** Accelerator. For that, you can download a preliminary version from the [project GitHub](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/blob/main/ESP-NN.zip), unzip it, and replace the ESP NN folder with it under:`src/edge-impulse-sdk/porting/espressif/ESP-NN`, in your Arduino library folder.
 
-:::warning 注意
+:::warning Attention
 
-- ESP-NNフォルダを置き換える際、既存のフォルダを残したり名前を変更したりせず、単純に削除して置き換えてください。
-- ヘッダーファイルの順序がコンパイルに影響を与える可能性があるため、正しい順序を維持してください。
+- Remember to replace the ESP-NN folder, do not have an existing folder or change its name to restore it. simply remove it.
+- The order of the header file could affect the compilation, so make sure to keep the correct order of the header files.
 
 :::
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiaoesp32s3_kws/10.png" style={{width:800, height:'auto'}}/></div> -->
 
 以下の推論コードをコピーして、Arduino IDEに貼り付けてください。
 
@@ -222,10 +219,10 @@ Edge ImpulseはESP NNアクセラレーターを使用したESP32S3向けのSDK�
 
 #include "esp_camera.h"
 
-// カメラモデルを選択 - camera_pins.hファイルで他のカメラモデルを確認できます
+// Select camera model - find more camera models in camera_pins.h file here
 // https://github.com/espressif/arduino-esp32/blob/master/libraries/ESP32/examples/Camera/CameraWebServer/camera_pins.h
 
-#define CAMERA_MODEL_XIAO_ESP32S3 // PSRAMを搭載
+#define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
 
 #define PWDN_GPIO_NUM     -1
 #define RESET_GPIO_NUM    -1
@@ -248,15 +245,15 @@ Edge ImpulseはESP NNアクセラレーターを使用したESP32S3向けのSDK�
 #define LED_GPIO_NUM      21
 
 
-/* 定数定義 -------------------------------------------------------- */
+/* Constant defines -------------------------------------------------------- */
 #define EI_CAMERA_RAW_FRAME_BUFFER_COLS           320
 #define EI_CAMERA_RAW_FRAME_BUFFER_ROWS           240
 #define EI_CAMERA_FRAME_BYTE_SIZE                 3
 
-/* プライベート変数 ------------------------------------------------------- */
-static bool debug_nn = false; // 生信号から生成された特徴などを確認する場合はtrueに設定
+/* Private variables ------------------------------------------------------- */
+static bool debug_nn = false; // Set this to true to see e.g. features generated from the raw signal
 static bool is_initialised = false;
-uint8_t *snapshot_buf; // キャプチャの出力を指す
+uint8_t *snapshot_buf; //points to the output of the capture
 
 static camera_config_t camera_config = {
     .pin_pwdn = PWDN_GPIO_NUM,
@@ -277,64 +274,64 @@ static camera_config_t camera_config = {
     .pin_href = HREF_GPIO_NUM,
     .pin_pclk = PCLK_GPIO_NUM,
 
-    // XCLK 20MHzまたはOV2640のダブルFPS用10MHz（実験的）
+    //XCLK 20MHz or 10MHz for OV2640 double FPS (Experimental)
     .xclk_freq_hz = 20000000,
     .ledc_timer = LEDC_TIMER_0,
     .ledc_channel = LEDC_CHANNEL_0,
 
-    .pixel_format = PIXFORMAT_JPEG, // YUV422, GRAYSCALE, RGB565, JPEG
-    .frame_size = FRAMESIZE_QVGA,    // QQVGA-UXGA JPEG以外ではQVG以上のサイズを使用しない
+    .pixel_format = PIXFORMAT_JPEG, //YUV422,GRAYSCALE,RGB565,JPEG
+    .frame_size = FRAMESIZE_QVGA,    //QQVGA-UXGA Do not use sizes above QVGA when not JPEG
 
-    .jpeg_quality = 12, // 0-63 低い数値ほど高品質
-    .fb_count = 1,       // 1以上の場合、i2sは連続モードで動作。JPEGでのみ使用
+    .jpeg_quality = 12, //0-63 lower number means higher quality
+    .fb_count = 1,       //if more than one, i2s runs in continuous mode. Use only with JPEG
     .fb_location = CAMERA_FB_IN_PSRAM,
     .grab_mode = CAMERA_GRAB_WHEN_EMPTY,
 };
 
-/* 関数定義 ------------------------------------------------------- */
+/* Function definitions ------------------------------------------------------- */
 bool ei_camera_init(void);
 void ei_camera_deinit(void);
 bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf) ;
 
 /**
-* @brief      Arduinoのセットアップ関数
+* @brief      Arduino setup function
 */
 void setup()
 {
-    // 初回実行時にセットアップコードを記述
+    // put your setup code here, to run once:
     Serial.begin(115200);
-    // 以下の行をコメントアウトすると、アップロード後すぐに推論が開始されます
+    //comment out the below line to start inference immediately after upload
     while (!Serial);
     Serial.println("Edge Impulse Inferencing Demo");
     if (ei_camera_init() == false) {
-        ei_printf("カメラの初期化に失敗しました！\r\n");
+        ei_printf("Failed to initialize Camera!\r\n");
     }
     else {
-        ei_printf("カメラが初期化されました\r\n");
+        ei_printf("Camera initialized\r\n");
     }
 
-    ei_printf("\n2秒後に連続推論を開始します...\n");
+    ei_printf("\nStarting continious inference in 2 seconds...\n");
     ei_sleep(2000);
 }
 
 /**
-* @brief      データを取得して推論を実行
+* @brief      Get data and run inferencing
 *
-* @param[in]  debug  trueの場合デバッグ情報を取得
+* @param[in]  debug  Get debug info if true
 */
 void loop()
 {
 
-    // wait_msの代わりに信号を待機します。これによりスレッドがキャンセル可能になります...
+    // instead of wait_ms, we'll wait on the signal, this allows threads to cancel us...
     if (ei_sleep(5) != EI_IMPULSE_OK) {
         return;
     }
 
     snapshot_buf = (uint8_t*)malloc(EI_CAMERA_RAW_FRAME_BUFFER_COLS * EI_CAMERA_RAW_FRAME_BUFFER_ROWS * EI_CAMERA_FRAME_BYTE_SIZE);
 
-    // メモリ割り当てが成功したか確認
+    // check if allocation was successful
     if(snapshot_buf == nullptr) {
-        ei_printf("ERR: スナップショットバッファの割り当てに失敗しました！\n");
+        ei_printf("ERR: Failed to allocate snapshot buffer!\n");
         return;
     }
 
@@ -343,22 +340,22 @@ void loop()
     signal.get_data = &ei_camera_get_data;
 
     if (ei_camera_capture((size_t)EI_CLASSIFIER_INPUT_WIDTH, (size_t)EI_CLASSIFIER_INPUT_HEIGHT, snapshot_buf) == false) {
-        ei_printf("画像のキャプチャに失敗しました\r\n");
+        ei_printf("Failed to capture image\r\n");
         free(snapshot_buf);
         return;
     }
 
-    // 分類器を実行
+    // Run the classifier
     ei_impulse_result_t result = { 0 };
 
     EI_IMPULSE_ERROR err = run_classifier(&signal, &result, debug_nn);
     if (err != EI_IMPULSE_OK) {
-        ei_printf("ERR: 分類器の実行に失敗しました (%d)\n", err);
+        ei_printf("ERR: Failed to run classifier (%d)\n", err);
         return;
     }
 
-    // 予測結果を出力
-    ei_printf("予測結果 (DSP: %d ms., 分類: %d ms., 異常検知: %d ms.): \n",
+    // print the predictions
+    ei_printf("Predictions (DSP: %d ms., Classification: %d ms., Anomaly: %d ms.): \n",
                 result.timing.dsp, result.timing.classification, result.timing.anomaly);
 
 #if EI_CLASSIFIER_OBJECT_DETECTION == 1
@@ -368,10 +365,10 @@ void loop()
         if (bb.value == 0) {
             continue;
         }
-        ei_printf("    %s (%f) [ x: %u, y: %u, 幅: %u, 高さ: %u ]\n", bb.label, bb.value, bb.x, bb.y, bb.width, bb.height);
+        ei_printf("    %s (%f) [ x: %u, y: %u, width: %u, height: %u ]\n", bb.label, bb.value, bb.x, bb.y, bb.width, bb.height);
     }
     if (!bb_found) {
-        ei_printf("    オブジェクトが見つかりませんでした\n");
+        ei_printf("    No objects found\n");
     }
 #else
     for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
@@ -381,7 +378,7 @@ void loop()
 #endif
 
 #if EI_CLASSIFIER_HAS_ANOMALY == 1
-        ei_printf("    異常スコア: %.3f\n", result.anomaly);
+        ei_printf("    anomaly score: %.3f\n", result.anomaly);
 #endif
 
 
@@ -390,9 +387,9 @@ void loop()
 }
 
 /**
- * @brief   イメージセンサーをセットアップしてストリーミングを開始
+ * @brief   Setup image sensor & start streaming
  *
- * @retval  初期化に失敗した場合はfalse
+ * @retval  false if initialisation failed
  */
 bool ei_camera_init(void) {
 
@@ -403,19 +400,19 @@ bool ei_camera_init(void) {
   pinMode(14, INPUT_PULLUP);
 #endif
 
-    // カメラを初期化
+    //initialize the camera
     esp_err_t err = esp_camera_init(&camera_config);
     if (err != ESP_OK) {
-      Serial.printf("カメラの初期化に失敗しました。エラーコード: 0x%x\n", err);
+      Serial.printf("Camera init failed with error 0x%x\n", err);
       return false;
     }
 
     sensor_t * s = esp_camera_sensor_get();
-    // 初期センサーは垂直方向に反転しており、色がやや飽和しています
+    // initial sensors are flipped vertically and colors are a bit saturated
     if (s->id.PID == OV3660_PID) {
-      s->set_vflip(s, 1); // 元に戻す
-      s->set_brightness(s, 1); // 明るさを少し上げる
-      s->set_saturation(s, 0); // 彩度を下げる
+      s->set_vflip(s, 1); // flip it back
+      s->set_brightness(s, 1); // up the brightness just a bit
+      s->set_saturation(s, 0); // lower the saturation
     }
 
 #if defined(CAMERA_MODEL_M5STACK_WIDE)
@@ -432,16 +429,16 @@ bool ei_camera_init(void) {
 }
 
 /**
- * @brief      センサーデータのストリーミングを停止
+ * @brief      Stop streaming of sensor data
  */
 void ei_camera_deinit(void) {
 
-    // カメラを非初期化
+    //deinitialize the camera
     esp_err_t err = esp_camera_deinit();
 
     if (err != ESP_OK)
     {
-        ei_printf("カメラの非初期化に失敗しました\n");
+        ei_printf("Camera deinit failed\n");
         return;
     }
 
@@ -451,27 +448,28 @@ void ei_camera_deinit(void) {
 
 
 /**
- * @brief      画像をキャプチャ、リスケール、クロップ
+ * @brief      Capture, rescale and crop image
  *
- * @param[in]  img_width     出力画像の幅
- * @param[in]  img_height    出力画像の高さ
- * @param[in]  out_buf       出力画像を格納するポインタ。NULLを使用してei_camera_frame_bufferをキャプチャとリサイズ/クロップに使用可能。
+ * @param[in]  img_width     width of output image
+ * @param[in]  img_height    height of output image
+ * @param[in]  out_buf       pointer to store output image, NULL may be used
+ *                           if ei_camera_frame_buffer is to be used for capture and resize/cropping.
  *
- * @retval     初期化されていない場合、画像のキャプチャ、リスケールまたはクロップに失敗した場合はfalse
+ * @retval     false if not initialised, image captured, rescaled or cropped failed
  *
  */
 bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf) {
     bool do_resize = false;
 
     if (!is_initialised) {
-        ei_printf("ERR: カメラが初期化されていません\r\n");
+        ei_printf("ERR: Camera is not initialized\r\n");
         return false;
     }
 
     camera_fb_t *fb = esp_camera_fb_get();
 
     if (!fb) {
-        ei_printf("カメラのキャプチャに失敗しました\n");
+        ei_printf("Camera capture failed\n");
         return false;
     }
 
@@ -480,7 +478,7 @@ bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf
    esp_camera_fb_return(fb);
 
    if(!converted){
-       ei_printf("変換に失敗しました\n");
+       ei_printf("Conversion failed\n");
        return false;
    }
 
@@ -505,7 +503,7 @@ bool ei_camera_capture(uint32_t img_width, uint32_t img_height, uint8_t *out_buf
 
 static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 {
-    // すでにRGB888バッファがあるため、オフセットをピクセルインデックスに再計算
+    // we already have a RGB888 buffer, so recalculate offset into pixel index
     size_t pixel_ix = offset * 3;
     size_t pixels_left = length;
     size_t out_ptr_ix = 0;
@@ -513,23 +511,23 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
     while (pixels_left != 0) {
         out_ptr[out_ptr_ix] = (snapshot_buf[pixel_ix] << 16) + (snapshot_buf[pixel_ix + 1] << 8) + snapshot_buf[pixel_ix + 2];
 
-        // 次のピクセルへ移動
+        // go to the next pixel
         out_ptr_ix++;
         pixel_ix+=3;
         pixels_left--;
     }
-    // 完了！
+    // and done!
     return 0;
 }
 
 #if !defined(EI_CLASSIFIER_SENSOR) || EI_CLASSIFIER_SENSOR != EI_CLASSIFIER_SENSOR_CAMERA
-#error "現在のセンサーに対して無効なモデルです"
+#error "Invalid model for current sensor"
 #endif
 ```
 
-`#include <XIAO_esp32S3_CatDog2_inferencing.h>` を生成したライブラリに置き換えてください。その後、コードをアップロードし、猫や犬の画像、または実際のものを指してみてください。シリアルモニターで結果を確認できます。
+**`#include <XIAO_esp32S3_CatDog2_inferencing.h>`** を生成したライブラリに置き換えることを確認してください。コードをアップロードして猫や犬の画像または実際の画像を指すと、シリアルモニターで結果を確認できます。
 
-この tinyML 画像分類プロジェクトを完了したことをおめでとうございます 🙌。
+tinyML画像分類プロジェクトの完了おめでとうございます 🙌
 
 ## リソース
 
@@ -549,9 +547,7 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D モデル]() -->
-
-
+<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 3D Model]() -->
 
 ### Seeed Studio XIAO ESP32S3 Sense 用
 
@@ -561,29 +557,27 @@ static int ei_camera_get_data(size_t offset, size_t length, float *out_ptr)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense Eagle ライブラリ](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_SCH&PCB_230324.zip)
 
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense DXF 寸法図 (上面)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
+- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense DXF 寸法図（上面）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_top.dxf)
 
-- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense DXF 寸法図 (底面)](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
+- **[DXF]** [Seeed Studio XIAO ESP32S3 Sense DXF 寸法図（下面）](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_ExpBoard_v1.0_bot.dxf)
 
 - **[ZIP]** [Seeed Studio XIAO ESP32S3 Sense 工場出荷時ファームウェア](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAOESP32S3-Sense-firmware.zip)
 
 - **[XLSX]** [Seeed Studio XIAO ESP32S3 Sense ピン配置シート](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO_ESP32S3_Sense_Pinout.xlsx)
 
-<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D モデル]() -->
-
-
+<!-- - **[STEP]** [Seeed Studio XIAO ESP32S3 Sense 3D Model]() -->
 
 ### その他
 
-- **[STP]** [XIAO ESP32S3 Sense ハウジングデザイン (上面)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp>)
+- **[STP]** [XIAO ESP32S3 Sense ハウジング設計（上面）](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(top).stp>)
 
-- **[STP]** [XIAO ESP32S3 Sense ハウジングデザイン (底面)](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp>)
+- **[STP]** [XIAO ESP32S3 Sense ハウジング設計（下面）](<https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/res/XIAO-ESP32S3-Sense-housing-design(bottom).stp>)
 
-_残りのオープンソース資料は現在編集中ですので、続報をお待ちください！_
+*残りのオープンソース資料は現在編集中ですので、お楽しみに！*
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！製品の使用体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

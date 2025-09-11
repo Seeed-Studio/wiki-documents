@@ -75,7 +75,6 @@ For example, when you are trying to use the pin in the first row on the left. Ma
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/pin_map-2.png" style={{width:500, height:'auto'}}/></div>
 :::
 
-
 ## Getting Started
 
 It requires two steps("Micropython Configuration on PC" and "Micropython Setup on XIAO ESP32C3") to get the XIAO ESP32C3 really to be programmed by MicroPython.
@@ -98,7 +97,7 @@ Please follow the steps in the picture
 
 2. Download the latest firmware (This Tutorial is v1.20.0 (2023-04-26) .bin)
 
-``` https://micropython.org/download/esp32c3/```
+```https://micropython.org/download/esp32c3/```
 
 3. Put the latest firm in this file location and open the file in CMD
 
@@ -116,7 +115,6 @@ esptool.exe --chip esp32c3 --port COM10 --baud 921600 --before default_reset --a
 If you use linux, change "esptool.exe" to "esptool.py". Change  "COM10" to your own serial port. Change "esp32c3-usb-20230426-v1.20.0.bin" to the latest firmware name you downloaded.
 :::
 
-
 ### Micropython Setup on XIAO ESP32C3
 
 1. Plug in your XIAO ESP32C3, open Thonny and click right bottom to configure interpreter
@@ -124,7 +122,6 @@ If you use linux, change "esptool.exe" to "esptool.py". Change  "COM10" to your 
 2. Select interpreter- Micropython (ESP32) and Port >>> Click OK
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython3.png" /></div>
-
 
 Note: If everything goes well, you will see the output in the shell
 
@@ -134,13 +131,11 @@ Click "Tools" >>> Click "Management Packages" >>> Enter Library's name >>> Click
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython4.png" /></div>
 
-
 #### Run the scrip and Flash it to the board
 
 1. After you finish coding, click the green button to run the scrip
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython5.png" /></div>
-
 
 2. Flash the code to the board by save the file to the board as "boot.py"
 
@@ -148,7 +143,7 @@ Click "Tools" >>> Click "Management Packages" >>> Enter Library's name >>> Click
 
 ### Demo 1: Light an OLED Screen
 
-#### 1. Hello Seeder!
+#### 1. Hello Seeder
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython7.png" /></div>
 
@@ -403,7 +398,6 @@ while True:
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython8a.png" /></div>
 
-
 ```python
 import network
 import urequests
@@ -441,7 +435,6 @@ scan_and_connect()
 #### 2. Request New York Time online
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-MicroPy/C3-MicroPython9.png" /></div>
-
 
 ```cpp
 from machine import Pin, SoftI2C
@@ -687,11 +680,11 @@ while True:
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

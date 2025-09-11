@@ -32,6 +32,7 @@ To streamline the development process and make it more accessible, Espressif Sys
 In this tutorial, we will guide you through the process of using ESPLaunchPad to swiftly flash firmware onto your XIAO ESP32 board and pair it with your iPhone using a QR code. By following these steps, you'll be able to establish a connection between your phone and the XIAO ESP32 device, enabling you to control and interact with it seamlessly. This hands-on experience will provide you with a foundational understanding of Matter and its potential in the smart home ecosystem.
 
 Throughout this tutorial, you'll learn how to:
+
 1. Set up your XIAO ESP32 board and prepare it for firmware flashing.
 2. Use ESPLaunchPad to effortlessly flash the Matter firmware onto your XIAO ESP32 device.
 3. Pair your XIAO ESP32 board with your iPhone using a QR code.
@@ -55,53 +56,53 @@ The following lists the systems and versions supported for use in this tutorial.
 At the end of this tutorial, we will show you how to add the XIAO ESP32 series as a Matter Endpoint to Apple Home to control the LED strips through Apple's ecosystem. So far, this tutorial supports the following XIAOs, and you can choose them directly for the content of this course.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a></div></td>
+  </tr>
+ </table>
 </div>
 
 In addition to the XIAO, we also need the WS281x model light bar or light bead. Currently the light example provided by Espressif only supports a single bead, so whether you use a strip or a bead, it will only light up one light. We would also recommend that you pick up Grove Base for XIAO for ease of wiring.
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Base for XIAO</th>
-			<th>Grove - RGB LED Ring (20 - WS2813 Mini)</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a></div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Base for XIAO</th>
+   <th>Grove - RGB LED Ring (20 - WS2813 Mini)</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-Shield-for-Seeeduino-XIAO/img/xiao_-Preview-25.png" style={{width:250, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Grove-RGB_LED_Ring-20-WS2813Mini/img/main.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Shield-for-Seeeduino-XIAO-p-4621.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-RGB-LED-Ring-20-WS2813-Mini.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a></div></td>
+  </tr>
+ </table>
 </div>
 
 If you are using the XIAO ESP32C3, connect the LED strip to pin **D8**.
@@ -218,7 +219,7 @@ Feel free to explore more advanced features and customization options available 
 
 ## Troubleshooting
 
-### Q1: Failed to connect to the device for a long time in Home APP.
+### Q1: Failed to connect to the device for a long time in Home APP
 
 If you fail to connect to the device for an extended period of time, make sure you see the log message after uploading the firmware. If you have not paired the device for a long time at this point, the XIAO may go into standby mode, at which point you will need to press the Reset button on the XIAO or use Reset Device on the ESPLaunchPad to reboot the device. After that try adding it again.
 
@@ -237,6 +238,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-

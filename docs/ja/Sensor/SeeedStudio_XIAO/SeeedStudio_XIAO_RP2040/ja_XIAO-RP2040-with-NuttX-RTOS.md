@@ -1,6 +1,6 @@
 ---
-description: Seeed Studio XIAO RP2040とNuttX
-title: XIAO RP2040とNuttX(RTOS)
+description: Seeed Studio XIAO RP2040 with NuttX
+title: XIAO RP2040 With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,50 +9,47 @@ last_update:
     date: 8/18/2024
     author: halyssonJr
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO RP2040とNuttX(RTOS)
+# Seeed Studio XIAO RP2040 with NuttX(RTOS)
 
 ## はじめに
 
-[NuttX](https://nuttx.apache.org/)は、標準準拠と小型フットプリントで広く認識されている成熟したリアルタイムオペレーティングシステム（RTOS）です。NuttXの主な特徴の1つはそのスケーラビリティであり、8ビットマイクロコントローラーから64ビットシステムまでの環境で使用することができます。この柔軟性はPOSIXおよびANSI標準への準拠によって実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似したNuttX機能を試すことが可能です。
+[NuttX](https://nuttx.apache.org/)は、標準準拠と小さなフットプリントで広く認知されている成熟したリアルタイムオペレーティングシステム（RTOS）です。NuttXの主な特徴の一つはスケーラビリティであり、8ビットマイクロコントローラから64ビットシステムまでの環境で使用できます。この柔軟性は、POSIXおよびANSI標準への準拠によって実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似のNuttX機能を実験することができます。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
-さらに、NuttXはUSB、Ethernet、Audio、Graphicsサブシステムなど、多くの高度で便利な機能を提供します。これらの特徴により、NuttXはさまざまな種類のハードウェアで動作可能な汎用性と堅牢性を備えたRTOSを求める開発者にとって魅力的な選択肢となります。
+さらに、NuttXはUSB、Ethernet、Audio、Graphicsサブシステムなど、多くの高度で有用な機能を提供しています。これらの特性により、NuttXは様々なタイプのハードウェアで動作可能な汎用性があり、堅牢なRTOSを求める開発者にとって魅力的な選択肢となっています。
 
-NuttXは、広範囲にわたる、そして継続的に拡大している数多くのボードをサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/)には、アーキテクチャやSystem-on-Chip (SoC)シリーズごとに整理されたサポートボードの包括的なリストが掲載されています。
+NuttXは膨大で継続的に拡張されているボードの数をサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/)では、アーキテクチャとSystem-on-Chip（SoC）シリーズ別に整理されたサポートボードの包括的なリストを提供しています。
 
-例えば、NuttXドキュメントの[Seeed Studio Xiao RP2040](https://nuttx.apache.org/docs/latest/platforms/arm/rp2040/boards/seeed-xiao-rp2040/index.html)ページでは、各サポート機能の詳細な説明とその利用方法についての指示が提供されています。
+例えば、NuttXドキュメントの[Seeed Studio Xiao RP2040](https://nuttx.apache.org/docs/latest/platforms/arm/rp2040/boards/seeed-xiao-rp2040/index.html)ページでは、サポートされている各機能の詳細な説明とそれらの使用方法に関する指示が提供されています。
 
-## ツールセットアップ
+## ツールのセットアップ
 
-NuttXを始める最初のステップは、必要なツール一式、作業するアーキテクチャ用のツールチェーン、そしてNuttXのソースコード自体をダウンロードすることです。Nuttxは異なるプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。
+NuttXを始めるための最初のステップは、一連の必要なツール、作業するアーキテクチャ用のツールチェーン、そして最後にNuttXソースコード自体をダウンロードすることです。Nuttxは異なるプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。
 
 環境をインストールしてセットアップした後、以下の手順に従ってください：
 
-1. Raspberry Pi Pico SDKをダウンロードします：
+1. Raspberry Pi Pico SDKをダウンロード：
 
 ```
 git clone -b 1.1.2 https://github.com/raspberrypi/pico-sdk.git
-```
-
-2. PICO_SDK_PATH環境変数を設定します：
 
 ```
-export PICO_SDK_PATH=<pico-sdkディレクトリへの絶対パス>
+
+3. PICO_SDK_PATH環境変数を設定します：
+
+```
+export PICO_SDK_PATH=<absolute_path_to_pico-sdk_directory>
 ```
 
-3. ワークスペースを作成します：
+2. ワークスペースを作成する
 
 ```
 mkdir nuttxspace
 ```
 
-4. リポジトリをクローンします：
+3. リポジトリをクローンする
 
 ```
 cd nuttxspace
@@ -62,78 +59,78 @@ git clone https://github.com/apache/nuttx-apps apps
 
 Apache Nuttxは2つのプロジェクトに分かれています：
 
-- Nuttx: カーネル、ドライバー、サブシステムが実装されています。
+- Nuttx: カーネル、ドライバー、サブシステムの実装が含まれています。
 - Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリターのコレクションが含まれています。
 
 ## アプリケーション
 
-アプリケーションを開始するには、NuttXで構成をロードする必要があります。以下のコマンドを実行してください：
+アプリケーションを開始するには、NuttXに設定をロードする必要があり、以下のコマンドを呼び出します：
 
 ```
 ./tools/configurate.sh board_name:your_application
 ```
 
-また、サポートされているボードのリストを確認するには、以下のコマンドを実行することも可能です：
+また、以下のコマンドを実行してボード対応リストを確認することも可能です：
 
 ```
 ./tools/configurate.sh -L
 ```
 
-スクリプトを実行した後、NuttXをコンパイルする必要があります。これには、[Make](https://nuttx.apache.org/docs/latest/quickstart/compiling_make.html)または[CMake](https://nuttx.apache.org/docs/latest/quickstart/compiling_cmake.html)を使用する2つの方法があります。
+スクリプトが実行されると、NuttXをコンパイルする必要があります。これを行うには2つの方法があります：[Make](https://nuttx.apache.org/docs/latest/quickstart/compiling_make.html)または[CMake](https://nuttx.apache.org/docs/latest/quickstart/compiling_cmake.html)を使用します。
 
 ## プログラミング
 
-コンパイルが成功した後、次の目標はBOOTSELを使用してプログラミングを行うことです。そのためには、以下の手順に従ってください。
+コンパイルが正常に完了したら、次の目標はBOOTSELを使用してプログラミングすることです。そのためには、以下の手順に従う必要があります：
 
-**ステップ 1**: ボタン `B`（ブート）を押しながら、Seed Studio XIAO RP2040 をUSBポートに接続します。ボードはUSBマスストレージデバイス `RPI-RP2` として認識されます。
+**ステップ1**：ボタン`B`（ブート）を押しながらSeed Stduio XIAO RP2040をUSBポートに接続します。ボードはUSBマスストレージデバイス`RPI-RP2`として検出されます。
 
-**ステップ 2**: ワークスペースで `nuttx` ディレクトリに移動し、`nuttx.uf2` を Seed Studio XIAO RP2040 にコピーします。
+**ステップ2**：ワークスペースで`nuttx`に移動し、`nuttx.uf2`をSeed Stduio XIAO RP2040にコピーします。
 
-**ステップ 3**: コンピュータ上で新しいUSBデバイスを検索します。
+**ステップ3**：コンピューター上で新しいUSBデバイスを検索します。
 
-**ステップ 4**: Seed Studio XIAO RP2040 とシリアル通信を開きます。
+**ステップ4**：Seed Stduio XIAO RP2040とのシリアル通信を開きます。
 
 ## ハンズオン
 
-NuttX を実際に操作してみましょう。このセッションでは、USB NSH、GPIO、USERLEDS、WS2812 ドライバの4つのアプリケーションが利用可能です。
+NuttXを実践的に探索する時間です。このセッションでは、4つのアプリケーションが利用可能です：USB NSH、GPIO、USERLEDS、およびWS2812ドライバーです。
 
 ### USBNSH
 
-NuttXShell(NSH) は、NuttXで使用されるシェルシステムで、bashやその他の類似オプションに似ています。豊富なコマンドセット、スクリプト作成、および独自のアプリケーションを「組み込み」として実行する機能をサポートしています（NuttXバイナリの一部として）。
+NuttXShell(NSH)はNuttXで使用されるシェルシステムで、bashや他の類似オプションと似ています。豊富な組み込みコマンドセット、スクリプト機能、および独自のアプリケーションを「builtin」（同じNuttXバイナリの一部）として実行する機能をサポートしています。
 
-ビルドプロセスを開始するには、以前の設定をクリアします。
-
-```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
-```
-
-次に、seeed-xiao-rp2040 ボード用の USBNSH 設定を選択します。
+前の設定をクリアしてビルドプロセスを開始できます
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:usbnsh
+cd ~/nuttxspace/nuttx
+make distclean
+```
+
+次に、seeed-xiao-rp2040ボードにUSBNSH設定を選択します：
+
+```
+./tools/configurate.sh seeed-xiao-rp2040:usbnsh
 ```
 
 ソースコードをコンパイルします。
 
 ```
-$ make -j
+make -j
 ```
 
-プログラミング後、シリアル通信を開きます。
+After programming and open serial communication
 
 ```
 picocom -b 115200 /dev/ttyACM0
 ```
 
-Enterキーを3回押すと、次のメッセージがターミナルに表示されます。
+Enterキーを3回押す必要があり、その後このメッセージがターミナルに表示されます。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
 nsh> 
 ```
 
-`?` を入力すると、コマンドと組み込みアプリケーションの利用可能なオプションにアクセスできます。
+`?`を入力すると、コマンドと組み込みアプリケーションの利用可能なオプションにアクセスできます。
 
 ```
 nsh> ?
@@ -151,52 +148,52 @@ help usage: [-v] [<cmd>]
 
 Builtin Apps:
     getprime    hello       nsh         ostest      sh 
-``` 
+```
 
-NuttX に挨拶してみましょう。`hello` と入力すると、次のようにコマンドが実行されます。
+NuttXに挨拶してみましょう。`hello`と入力すると、コマンドが実行されます：
 
-```      
+```
 nsh> hello
 Hello, World!!
 ```
 
-おめでとうございます！NuttX との最初のインタラクションが完了しました。
+おめでとうございます。NuttXとの最初のやり取りが完了しました。
 
-### GPIO ドライバ
+### GPIOドライバー
 
-汎用入出力（GPIO）は、マイクロコントローラの最も基本的な部分であり、外部世界と接続することを可能にします。このセクションでは、NSH を使用してこれらのピンにアクセスし、設定します。まず、以前の設定をクリアします。
-
-```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
-```
-
-seeed-xiao-rp2040 ボード用の GPIO 設定を選択します。
+汎用入出力（GPIO）は、マイクロコントローラーが外部世界と接続することを可能にする最も基本的な部分です。このようにして、NSHを使用してこれらのピンにアクセスし、必要に応じて設定します。しかし、まず前の設定をクリアしましょう。
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:gpio
+cd ~/nuttxspace/nuttx
+make distclean
+```
+
+seeed-xiao-rp2040ボードにgpio設定を選択します。
+
+```
+./tools/configurate.sh seeed-xiao-rp2040:gpio
 ```
 
 ソースコードをコンパイルします。
 
 ```
-$ make -j
+make -j
 ```
 
-プログラミング後、シリアル通信を開きます。
+After programming and open serial communication
 
 ```
 picocom -b 115200 /dev/ttyACM0
 ```
 
-Enterキーを3回押すと、次のメッセージがターミナルに表示されます。
+Enterキーを3回押す必要があり、その後このメッセージがターミナルに表示されます。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
 nsh>
 ```
 
-このアプリケーションと対話するために受け入れられるオプションを確認するには、`gpio -h` を入力します。すると、パラメータのリストが返されます。
+このアプリケーションとの対話で受け入れられるオプションを確認するには、`gpio -h` と入力してください。パラメータのリストが返されます。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -223,11 +220,11 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-GPIO デバイスファイルが作成されたことを確認するには、`ls /dev` を入力します。入力後、いくつかの GPIO が [seed-studio-gpio.c](https://github.com/apache/nuttx/blob/9d5b9b7c056e59c2fcc81e7029c95a995140063c/boards/arm/rp2040/seeed-xiao-rp2040/src/rp2040_gpio.c#L49-L61) に定義されていることがわかります。これらは以下を表します：
+GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`と入力してください。入力後、[seed-studio-gpio.c](https://github.com/apache/nuttx/blob/9d5b9b7c056e59c2fcc81e7029c95a995140063c/boards/arm/rp2040/seeed-xiao-rp2040/src/rp2040_gpio.c#L49-L61)で定義されたいくつかのgpioが宣言されているのを確認できます。これらは以下を表しています：
 
-- オンボードの3つのLED（gpio 18、gpio 17、gpio 16）
-- 1つの入力（gpio 6）
-- 1つの割り込み入力（gpio 7）
+- オンボード3個のLED（gpio 18、gpio 17、gpio 16）
+- 1個の入力（gpio 6）
+- 1個の割り込み入力（gpio 7）
 
 ```
 nsh> ls /dev
@@ -242,11 +239,12 @@ nsh> ls /dev
  ttyACM0
 ```
 
-Seeed Studio RP2040 の回路図によると、GPIO レベルがゼロに設定されるとボードのLEDが点灯します。
+Seeed Studio RP2040 回路図によると、ボードのLEDはGPIOレベルがゼロに設定されたときに点灯します。
 
-GPIO 出力を制御するには、パラメータ `-o`、値（ゼロまたは1）、およびパス（/dev/gpio）を渡す必要があります。
+GPIO出力を制御するには、パラメータ —o、値（ゼロまたは1）、およびパス（/dev/gpio）を渡す必要があります。
 
-以下の2つのコマンドを実行すると、黄色のLEDが点滅します。
+これら2つのコマンドに従うと、黄色のLEDが点滅するのが確認できます。
+
 ```
 nsh> gpio -o 0 /dev/gpio17
 Driver: /dev/gpio17
@@ -260,9 +258,11 @@ Driver: /dev/gpio17
   Writing:       Value=1
   Verify:        Value=1
 ```
+
 <div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-green.jpg"/></div>
 
-同様に、赤色のLEDでも同じ結果が得られます。
+同様に、赤色LEDでも同じ結果が得られます。
+
 ```
 nsh> gpio -o 0 /dev/gpio16
 Driver: /dev/gpio16
@@ -276,34 +276,35 @@ Driver: /dev/gpio16
   Writing:       Value=1
   Verify:        Value=1
 ```
+
 <div align="center"><img width ="{50}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-gpio-turn-on-led-red.jpg"/></div>
 
 ### USERLED
 
-USERLEDS は、単一の操作でLEDを制御できるサブシステムです。また、printfのようなコマンドラインを使用することもできます。このデモでは、オンボードのLEDを1秒ごとに点灯および消灯させます。
+USERLEDSは、単一の操作でLEDを制御できるサブシステムです。また、printfのようなコマンドラインを使用することもできます。このデモでは、オンボードのLEDを1秒間隔でオン・オフします。
 
 まず、以前の設定をクリアします。
 
 ```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
+cd ~/nuttxspace/nuttx
+make distclean
 ```
 
-次のコマンドを使用して、userled アプリケーション用にボードを設定します。
+次のコマンドを使用してuserledアプリケーション用にボードを設定します：
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:userleds
+./tools/configurate.sh seeed-xiao-rp2040:userleds
 ```
 
 ソースコードをコンパイルします。
 
 ```
-$ make -j
+make -j
 ```
 
-プログラミング後、シリアル通信を開き、Enterキーを3回押します。これまでのアプリケーションで示した手順に従ってください。
+プログラミング後、シリアル通信を開き、Enterキーを3回押して、前のアプリケーションで示したのと同じ手順に従います。
 
-`ls /dev/` を入力すると、デバイスのリストが表示され、`userleds` ファイルが作成されたことが確認できます。
+`ls /dev/`と入力すると、デバイスのリストが表示され、`userleds`ファイルが作成されたことが確認できます。
 
 ```
 nsh> ls /dev/
@@ -315,7 +316,7 @@ nsh> ls /dev/
  ttyS0
 ```
 
-`leds` を入力すると、LED が同時に点滅するのが観察できます。
+Typing `leds`, you observe the LEDs blinky same time.
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -336,28 +337,28 @@ led_daemon: LED set 0x00
 
 ## WS2812 LED
 
-WS2812 ドライバを使用すると、ws2812 プロトコルを使用するスマートピクセルを制御できます。このアプリケーションは NSH 上でコマンドを呼び出してサンプルを実行できます。
+WS2812ドライバーは、ws2812プロトコルを使用する任意のスマートピクセルの制御を可能にします。NSH上のこのアプリケーションにより、コマンドを呼び出してサンプルを実行することができます。
 
-前の設定をクリアする
-
-```
-$ cd ~/nuttxspace/nuttx
-$ make distclean
-```
-
-seeed-xiao-rp2040 ボード用に ws2812 設定を選択します。
+以前の設定をクリアする
 
 ```
-$ ./tools/configurate.sh seeed-xiao-rp2040:ws2812
+cd ~/nuttxspace/nuttx
+make distclean
+```
+
+seeed-xiao-rp2040ボードにws2812設定を選択します。
+
+```
+./tools/configurate.sh seeed-xiao-rp2040:ws2812
 ```
 
 ソースコードをコンパイルします。
 
 ```
-$ make -j
+make -j
 ```
 
-コンパイルが完了したら、ボードをプログラミングし、シリアル通信を開いて Enter を 3 回押します。前のアプリケーションで示した手順に従います。`?` を入力すると、ws2812 アプリケーションが利用可能であることが確認できます。
+コンパイルが完了したら、ボードのプログラミングに進み、シリアル通信を開いてEnterキーを3回押し、前のアプリケーションで示したのと同じ手順に従います。`?`と入力すると、ws2812アプリケーションが利用可能であることが確認できます。
 
 ```
 NuttShell (NSH) NuttX-12.5.1
@@ -377,9 +378,10 @@ help usage:  help [-v] [<cmd>]
 Builtin Apps:
     getprime    hello       nsh         ostest      sh          ws2812      
 nsh> 
+
 ```
 
-アプリケーションを実行する前に、`ls /dev/` フォルダが作成され、`leds0` ファイルが存在することを確認する必要があります。このファイルは ws2812 ドライブに使用されます。
+アプリケーションを実行する前に、フォルダ `ls /dev/` に `leds0` ファイルが作成されていることを確認することが重要です。このファイルはws2812ドライブに使用されます。
 
 ```
 nsh> ls /dev/
@@ -389,9 +391,10 @@ nsh> ls /dev/
  null
  ttyACM0
  ttyS0
+
 ```
 
-`ws2812 -h` を入力すると、このアプリケーションと対話するために受け入れられるパラメータのリストが表示されます。
+Typing `ws2812 -h` will return a list of parameters that are accepted to interact with this application.
 
 ```
 nsh> ws2812 -h
@@ -403,9 +406,10 @@ specified, that path will be re-used until it is changed.
   [-l leds] selects number of ws2812s in the chain.  Default: 1 Current: 1
   [-r repeat] selects the number change cycles.  Default: 4 Current: 4
   [-d delay] selects delay between updates.  Default: 20000 us Current: 20000 us
+
 ```
 
-アプリケーションを開始するには、`ws2812` と入力します。すると、LED の色が変化するのが確認できます。
+アプリケーションを開始しましょう。`ws2812` と入力すると、LEDが色を変えるのが見えます。
 
 ```
 nsh> ws2812
@@ -413,16 +417,16 @@ nsh> ws2812
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/seeed-studio-rp2040-rgb.gif" style={{width:400, height:'auto'}}/></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験を提供するために、さまざまなサポートを提供しております。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

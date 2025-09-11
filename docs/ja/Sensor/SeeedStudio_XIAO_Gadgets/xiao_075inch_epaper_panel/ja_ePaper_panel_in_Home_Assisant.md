@@ -1,72 +1,133 @@
 ---
-description: XIAO ESP32C3 搭載の 7.5 インチ E-Ink ディスプレイは、Home Assistant データを表示するためのコンパクトで省エネルギーなソリューションです。
-title: Home Assistant における ePaper パネル
+description: XIAO ESP32C3搭載の7.5インチE Ink®ディスプレイは、Home Assistantデータを表示するためのコンパクトで省エネルギーなソリューションです。
+title: Home AssistantでESPHomeと連携
 keywords:
-- ePaper ディスプレイ
+- ePaper display
+- ESPHome
+- Home Assistant
 image: https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover.webp
-slug: /ja/xiao_075inch_epaper_panel
-sidebar_position: 1
+slug: /ja/xiao_075inch_epaper_panel_esphome
+sidebar_position: 2
 last_update:
-  date: 05/15/2025
+  date: 03/12/2025
   author: Allen
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/cover.JPG" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/201.png" style={{width:900, height:'auto'}}/></div>
 
 <br></br>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-## ハードウェア概要
+## Home Assistantの紹介
 
-### 概要
+Home Assistantは、スマートホームデバイスを単一の統合インターフェースから制御・監視できる強力なオープンソースホームオートメーションプラットフォームです。スマートホームの中央ハブとして機能し、ルーチンの自動化、センサーの監視、より知的な生活空間の構築を可能にします。
 
-XIAO ESP32C3 搭載の 7.5 インチ E-Ink ディスプレイは、Home Assistant データを表示するためのコンパクトで省エネルギーなソリューションです。シームレスな統合と鮮明なビジュアルを備え、スマートホームに最適です。また、Arduino にも対応しており、簡単にカスタマイズ可能です。低消費電力で、どのような光環境でも優れた視認性を提供します。この多用途なディスプレイでスマートホームのセットアップを簡素化しましょう。
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/204.png" style={{width:900, height:'auto'}}/></div>
 
-### 特徴
+### なぜHome Assistantなのか？
 
-1. **省エネルギー型 E-Ink スクリーン**: 低消費電力で、直射日光下でも優れた視認性を提供します。
-2. **シームレスな統合**: Home Assistant や Arduino と簡単に統合でき、カスタマイズが可能です。
-3. **コンパクトなデザイン**: スマートホームアプリケーションに最適なコンパクトサイズ。
-4. **ユーザーフレンドリーなセットアップ**: 初心者から上級者まで簡単に設定して使用できます。
-5. **耐久性と信頼性**: 高品質なコンポーネントで構築され、長期間の使用に耐えます。
+- **ローカル制御**: 多くのクラウドベースソリューションとは異なり、Home Assistantはネットワーク上でローカルに動作するため、データのプライバシーが保護され、インターネット接続がなくても自動化が機能します。
 
-### 仕様
-| 項目 | 説明 |
-| --- | --- |
-| MCU | [XIAO ESP32 C3](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started/) |
-| ディスプレイ | 7.5 インチ ePaper ディスプレイ |
-| 解像度 | 800x480 |
-| バッテリー | 2000mAh |
-| 寸法 | 178x131x19mm |
-| 重量 | 218g |
-| 動作温度 | -40°C ～ 85°C |
-| 動作電圧 | 3.3V ～ 5V |
+- **豊富なデバイスサポート**: Home Assistantは数千種類の異なるスマートホームデバイスやサービスと統合でき、高い汎用性と将来性を提供します。
 
-## ソフトウェア概要
+- **強力な自動化**: 時間、デバイス状態、センサー読み取り値など、さまざまなトリガーに応答する高度な自動化ルールを作成できます。
 
-### Home Assistant での使用方法
+- **カスタマイズ可能なダッシュボード**: 最も重要な情報を表示する独自のユーザーインターフェースを設計できます。
 
-#### ステップ 1. ESPHome のインストール
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.home-assistant.io/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}> Learn More 🖱️</font></span></strong></a>
+</div>
 
-すでに ESPHome をインストールしている場合、このステップをスキップできます。
+### Home AssistantでE-Paperディスプレイを使う理由
 
-**設定** -> **アドオン** -> **ADD-ON STORE** に移動します。
+XIAO 7.5" ePaper PanelがHome Assistantの優れたコンパニオンである理由はいくつかあります：
+
+1. **省エネルギー**: e-paperディスプレイはコンテンツを更新する時のみ電力を消費するため、天気予報、カレンダーイベント、システムステータスなどの持続的な情報表示に最適です。
+
+2. **優れた視認性**: LCDスクリーンとは異なり、e-paperディスプレイは直射日光を含むあらゆる照明条件下で読みやすく、壁掛けホームコントロールパネルに理想的です。
+
+3. **長いバッテリー寿命**: ディープスリープモードと組み合わせることで、一目で価値ある情報を提供しながら、単一のバッテリー充電で数ヶ月間動作できます。
+
+4. **柔軟な統合**: ESPHomeを通じて、ディスプレイはHome Assistantとシームレスに統合され、スマートホームシステムからのあらゆるデータをエレガントで常時表示可能な形式で表示できます。
+
+これらの利点により、XIAO 7.5" ePaper PanelはHome Assistantセットアップ用の省エネルギーで常時オンの情報ディスプレイを作成するのに理想的な選択肢となります。
+
+### ESPHome統合
+
+ESPHomeは、ESP8266/ESP32デバイス専用に設計されたオープンソースファームウェア作成ツールです。シンプルなYAML設定ファイルを使用してカスタムファームウェアを作成し、デバイスにフラッシュできます。XIAO 7.5" ePaper Panelにとって、ESPHomeはデバイスとHome Assistant間の通信を可能にする重要なミドルウェアとして機能します。
+
+このシステムは、YAML設定をESPデバイス上で動作する完全機能のファームウェアに変換することで動作します。このファームウェアは、ネットワークへの接続、Home Assistantとの通信、ePaperディスプレイの制御といった複雑なタスクをすべて処理します。Home Assistantと組み合わせることで、ESPHomeは高度なホームオートメーションディスプレイとコントロールを作成するための堅牢なプラットフォームを提供します。
+
+セットアップ方法とこの多機能ディスプレイを最大限に活用する方法を探ってみましょう。
+
+## はじめに
+
+この記事のチュートリアル内容を始める前に、以下のハードウェアを準備していただく必要があります。
+
+### 必要な材料
+
+<div class="table-center">
+  <table align="center">
+    <tr>
+      <th>XIAO 7.5" ePaper Panel</th>
+      <th>Home Assistant Green</th>
+    </tr>
+    <tr>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/209.jpg" style={{width:250, height:'auto'}}/></div></td>
+      <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/ha.png" style={{width:210, height:'auto'}}/></div></td>
+    </tr>
+    <tr>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+      <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+        <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        </a>
+      </div></td>
+    </tr>
+  </table>
+</div>
+
+Home Assistant Green は、あなたの家を自動化する最も簡単でプライバシーに重点を置いた方法です。簡単なセットアップを提供し、すべてのスマートデバイスを1つのシステムで制御でき、すべてのデータはデフォルトでローカルに保存されます。このボードは繁栄している Home Assistant エコシステムの恩恵を受け、オープンソースによって毎月改善されます。
+
+このチュートリアルでは Home Assistant Green を Home Assistant ホストとして使用することをお勧めしますが、Supervisor を搭載した任意の Home Assistant ホストを使用することもできます。
+
+:::tip Home Assistant をインストール
+Seeed Studio 製品の一部に Home Assistant をインストールする方法も書いていますので、参考にしてください。
+
+- **[ODYSSEY-X86 で Home Assistant を始める](https://wiki.seeedstudio.com/ODYSSEY-X86-Home-Assistant/)**
+- **[reTerminal で Home Assistant を始める](https://wiki.seeedstudio.com/reTerminal_Home_Assistant/)**
+- **[LinkStar H68K/reRouter CM4 で Home Assistant を始める](https://wiki.seeedstudio.com/h68k-ha-esphome/)**
+
+Seeed Studio 製品を使用していない場合は、公式 Home Assistant ウェブサイトで他の製品に Home Assistant をインストールする方法を確認して学習することもできます。
+
+- **[Home Assistant インストール](https://www.home-assistant.io/installation/)**
+:::
+
+### ステップ 1. ESPHome をインストール
+
+すでに ESPHome をインストールしている場合は、このステップをスキップできます。
+
+**設定** -> **アドオン** -> **アドオンストア** に移動します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/01.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/02.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHome を検索してクリックします。**INSTALL** と **START** をクリックします。
+ESPHome を検索してクリックします。**インストール** と **開始** をクリックします。
+
+:::tip
+アドオンストアで ESPHome が見つからない場合は、アドオンをサポートする Home Assistant インストール（Home Assistant OS や監視付きインストールなど）を使用していることを確認してください。他のインストールタイプ（Home Assistant Container など）の場合は、Docker を使用して ESPHome Device Builder を独立して実行する必要がある場合があります。詳細については、[公式 ESPHome ドキュメント](https://esphome.io/guides/getting_started_hassio)を参照してください。
+:::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
 
@@ -74,13 +135,13 @@ ESPHome を検索してクリックします。**INSTALL** と **START** をク�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/04.png" style={{width:800, height:'auto'}}/></div>
 
-#### ステップ 2. 新しいデバイスを追加
+### ステップ 2. 新しいデバイスを追加
 
-ESPHome に移動し、**NEW DEVICE** をクリックします。
+ESPHome に移動し、**新しいデバイス** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-好きな名前をデバイスに付けて、**NEXT** をクリックします。
+お好みのデバイス名を付けて、**次へ** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -89,31 +150,31 @@ ESPHome に移動し、**NEW DEVICE** をクリックします。
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-新しいデバイスを作成した後、**EDIT** をクリックします。
+新しいデバイスを作成した後、**編集** をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
-#### ステップ 3. ファームウェアのインストール
+### ステップ 3. ファームウェアをインストール
 
 これは非常に基本的な例で、ディスプレイに「Hello World!」を表示します。
 
 **主な目的は、デバイスにファームウェアをインストールするさまざまな方法を示すことです。**
 
-ESPHome をインストールし、新しいデバイスを追加した後、以下のコードをコピーして **captive_portal** 部分に貼り付けます。
+ESPHome をインストールして新しいデバイスを追加した後、以下のコードをコピーして、下図のように `captive_portal` の後に貼り付けることができます。
 
 <details>
 
-<summary> コードをコピーするにはここをクリックしてください。 </summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
 
-# 表示する文字のフォントを定義
+# define font to display words
 font:
   - file: "gfonts://Inter@700"
     id: font1
     size: 24
 
-# SPI インターフェースを定義
+# define SPI interface
 spi:
   clk_pin: GPIO8
   mosi_pin: GPIO10
@@ -122,7 +183,9 @@ display:
   - platform: waveshare_epaper
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: 30s
@@ -134,44 +197,44 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/5.png" style={{width:1000, height:'auto'}}/></div>
 
-**INSTALL** をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
+**INSTALL**をクリックしてコードをデバイスにインストールすると、以下の画像が表示されます。
 
 <Tabs>
 <TabItem value='ブラウザ経由でインストール'>
 
 :::tip
-Home Assistant ホスト (Raspberry PI/Green/Yellow など) が遠くにある場合、この方法をお勧めします。手元のコンピュータでインストールできます。
+Home Assistantホスト（Raspberry PI/Green/Yellow等）が遠くにある場合は、この方法をお勧めします。手元にあるコンピューターでインストールできます。
 :::
 
-まず、**Manual download** をクリックしてコンパイル済みファームウェアをダウンロードします。
+まず、**Manual download**をクリックしてコンパイル済みファームウェアをダウンロードする必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/62.png" style={{width:500, height:'auto'}}/></div>
 
-ファームウェアを ePaper パネルにアップロードするためのウェブサイトを開きます。
+このウェブサイトを開いて、ファームウェアをePaperパネルにアップロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/63.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHome に戻り、ファームウェアをダウンロードします。
+ESPHomeに戻ってファームウェアをダウンロードします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-工場出荷時のフォーマットを選択します。
+Factory formatを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-USBケーブルを使用して**ePaperパネルをコンピュータに接続**し、**CONNECT**をクリックします。
+USBケーブルを使用して**ePaperパネルをコンピューターに接続**し、**CONNECT**をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
-usbmodemxxx（Windowsの場合はCOMxxx）を選択し、接続をクリックします。[問題が発生しましたか？こちらをクリックしてください。](#Q5)
+usbmodemxxx（WindowsではCOMxxx）を選択してconnectをクリックします。[問題が発生しましたか？こちらをクリック。](#Q5)
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/67.png" style={{width:800, height:'auto'}}/></div>
 
-**INSTALL**をクリックし、先ほどダウンロードしたファームウェアを選択します。
+**INSTALL**をクリックして、先ほどダウンロードしたファームウェアを選択します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/69.png" style={{width:500, height:'auto'}}/></div>
 
-少し待つと、ディスプレイに「Hello world!」が表示されます～
+しばらく待つと、ディスプレイに「Hello world!」が表示されます～
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/71.png" style={{width:'100%', height:'auto'}}/></div>
@@ -183,19 +246,19 @@ usbmodemxxx（Windowsの場合はCOMxxx）を選択し、接続をクリック�
 <TabItem value='ホスト経由でインストール'>
 
 :::tip
-Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある場合、この方法を使用することをお勧めします。より簡単です。
+Home Assistantホスト（Raspberry PI/Green/Yellow等）が近くにある場合は、より簡単なこの方法をお勧めします。
 :::
 
-デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green(Yellow)などに接続**する必要があります。
+デバイスにコードをインストールする前に、USBケーブルを使用して**このデバイスをHome Assistantを実行しているRaspberry PiまたはHA Green（Yellow）等に接続**する必要があります。
 
-画像に従ってオプションをクリックし、デバイスにコードをインストールします。[デバイスが深いスリープモードの場合にポートが見つからない？](#port)
+画像に従ってオプションをクリックし、デバイスにコードをインストールします。[デバイスがディープスリープモードの時にポートが見つからない？](#port)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/6.png" style={{width:'70%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/7.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-少し待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に動作していることを意味します。
+しばらく待つと、以下の画像のようなフィードバックが表示されます。これはコードが正常に実行されていることを意味します。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/9.png" style={{width:'100%', height:'auto'}}/></div>
@@ -207,16 +270,16 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 <TabItem value='Wi-Fi経由でインストール'>
 
 :::tip
-これは最も簡単な方法ですが、初めてプログラムをインストールする際には、左側の方法を使用してプログラムをePaperパネルにアップロードする必要があります。その後、Wi-Fi経由でアップロードできます。
+これは最も簡単な方法ですが、初回プログラムインストール時は左側の方法を使用してePaper Panelにプログラムをアップロードする必要があります。その後はwifi経由でアップロードできます。また、この方法が機能するためには、YAMLの設定に適切に設定された`ota`と`api`セクションが有効な暗号化キーと共に含まれていることを確認してください。
 :::
 
-この方法では、ePaperパネルを何にも接続する必要はありません。ただし、オンラインであることを確認してください。
+この方法では、ePaperパネルを何にも接続する必要がなく、オンラインであることを確認するだけです。
 
-オプションをクリックすると、ファームウェアが自動的にePaperパネルにインストールされます。
+オプションをクリックすると、ファームウェアが自動的にePaper panelにインストールされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-少し待つと、以下の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱い可能性があります。デバイスをルーターに近づけてください。[問題が発生しましたか？こちらをクリックしてください。](#Q5)
+しばらく待つと、以下の画像のようなフィードバックが表示されます。失敗した場合は、信号が弱いことが原因の可能性があります。デバイスをルーターに近づけてください。[問題が発生しましたか？こちらをクリック。](#Q5)
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/73.png" style={{width:'100%', height:'auto'}}/></div>
@@ -226,17 +289,17 @@ Home Assistantホスト（Raspberry PI/Green/Yellowなど）が近くにある�
 </TabItem>
 </Tabs>
 
-#### ステップ4. 基本的な使用法
+## 基本的な使用方法
 
-##### 1. 形状を表示する
+### 1. 図形の表示
 
-この例では、ディスプレイに形状を表示します。
+この例では、ディスプレイに図形を表示します。
 
-ESPHomeをインストールし、新しいデバイスを追加した後、以下のコードをコピーして**captive_portal**部分に貼り付けます。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、以下の画像のように**captive_portal**部分に貼り付けることができます。
 
 <details>
 
-<summary> ここをクリックしてコードをコピーしてください。 </summary>
+<summary> コードをコピーするにはここをクリック。 </summary>
 
 ```yaml
 spi:
@@ -249,7 +312,9 @@ display:
     cs_pin: GPIO3
     dc_pin: GPIO5
     reset_pin: GPIO2
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     update_interval: 5min
     lambda: |-
       it.rectangle(10, 10, 100, 50);
@@ -265,45 +330,46 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/40.png" style={{width:800, height:'auto'}}/></div>
 
-以下の画像のようなフィードバックが表示された場合、コードが正常に動作していることを意味します。
+以下のような画像のフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
-また、[こちらをクリック](https://esphome.io/components/display/)してさらに多くの使用例を見ることができます。
+[こちらをクリック](https://esphome.io/components/display/)して、より多くの使用方法を確認することもできます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/37.png" style={{width:600, height:'auto'}}/></div>
 
-##### 2. HAで情報を表示する
+### 2. HAの情報をディスプレイに表示する
 
 この例では、HAの情報をディスプレイに表示します。
 
-まず、このデバイスをHAに追加する必要があります。そうしないと、HAから情報を取得できません。
+まず最初に、このデバイスをHAに追加する必要があります。そうしないと、HAから情報を取得できません。
 
-HAにデバイスが表示されない場合は、上記のデモを最初に実行する必要があります。上記のデモを実行した後、HAにデバイスが表示されます。
+HAにデバイスが表示されない場合は、上記のデモを最初に実行する必要があります。上記のデモを実行した後、HAでデバイスを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/10.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-そして、**SUBMIT** と **FINISH** をクリックします。
+そして、**SUBMIT**と**FINISH**をクリックします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%', marginLeft:'8%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/12.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/13.png" style={{width:'68%', height:'auto'}}/></div>
 </div>
 
-ESPHome をインストールし、新しいデバイスを追加した後、以下のコードをコピーして **captive_portal** 部分に貼り付けます。以下の画像を参考にしてください。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、以下に示すように`captive_portal`の後に貼り付けることができます。
 
 <details>
 
-<summary> コードをコピーするにはここをクリック </summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
-# 情報を表示するためのフォントを定義
+
+# Define font to show info
 font:
   - file: "gfonts://Inter@700"
     id: myFont
     size: 24
 
-# HA から情報を取得（文字列形式）
+# Get info from HA, as string format
 text_sensor:
   - platform: homeassistant
     entity_id: weather.forecast_home
@@ -315,7 +381,7 @@ text_sensor:
     attribute: "temperature"
     internal: true
 
-# HA から情報を取得（浮動小数点形式）
+# Get info from HA, as float format
 sensor:
   - platform: homeassistant
     entity_id: weather.forecast_home
@@ -323,7 +389,7 @@ sensor:
     attribute: "pressure"
     internal: true
 
-# SPI を介して情報を表示
+# Display info via SPI
 spi:
   clk_pin: GPIO8
   mosi_pin: GPIO10
@@ -332,16 +398,18 @@ display:
   - platform: waveshare_epaper
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: 30s
     lambda: |-
-      // ログに情報を出力
+      //print info in log
       ESP_LOGD("epaper", "weather: %s", id(myWeather).state.c_str());
       ESP_LOGD("epaper", "temperature: %s", id(myTemperature).state.c_str());
       ESP_LOGD("epaper", "pressure: %.1f", id(myPressure).state);
-      // eペーパー画面に情報を表示
+      //display info in epaper screen
       it.printf(100, 100, id(myFont), "%s", id(myWeather).state.c_str());
       it.printf(100, 150, id(myFont), "%s", id(myTemperature).state.c_str());
       it.printf(100, 200, id(myFont), "%.1f", id(myPressure).state);
@@ -349,32 +417,32 @@ display:
 
 </details>
 
-これらのコードをデバイスにインストールします。
+これらのコードをあなたのデバイスにインストールしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/15.png" style={{width:1000, height:'auto'}}/></div>
 
-このコードの機能は、HA から **天気**、**気温**、**気圧** を取得し、それらをディスプレイに表示することです。
+このコードの機能は、HAから**天気**、**温度**、**気圧**を取得してディスプレイに表示することです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/39.png" style={{width:1000, height:'auto'}}/></div>
 
-以下の画像のようなフィードバックが表示された場合、コードが正常に動作していることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に動作していることを意味します。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/14.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/34.png" style={{width:'80%', height:'auto'}}/></div>
 </div>
 
-##### 3. <span id="ttf">アイコンを表示する</span>
+### 3. アイコンを表示する {#ttf}
 
 この例では、ディスプレイにアイコンを表示します。
 
-まず、File Editor アドオンをインストールする必要があります。**Studio Code Server** を検索してクリックします。**INSTALL** と **START** をクリックします。
+まず、File Editorアドオンをインストールする必要があります。**Studio Code Server**を検索してクリックしてください。**INSTALL**をクリックして**START**してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/17.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/18.png" style={{width:800, height:'auto'}}/></div>
 
-次に、新しいフォルダを作成し、**fonts** と名付けます。このファイルをダウンロードして **fonts フォルダに配置**します。
+そして<span id="ttf">次に</span>、**fonts**という新しいフォルダを作成し、このファイルをダウンロードして**fontsフォルダに入れてください**。
 
 <div align="center">
 <a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/font_ttf.zip" target="_blank">
@@ -384,22 +452,22 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/19.png" style={{width:800, height:'auto'}}/></div>
 
-ESPHome ファイルに戻り、以下のコードをコピーして **captive_portal** 部分に貼り付けます。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、以下に示すように`captive_portal`の後に貼り付けることができます。
 
 <details>
 
-<summary> コードをコピーするにはここをクリック </summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
 font:
-  - file: 'fonts/materialdesignicons-webfont.ttf'  # ttf ファイルを保存するディレクトリ
+  - file: 'fonts/materialdesignicons-webfont.ttf'  #here is the directory to save ttf file
     id: font_mdi_large
-    size: 200        # 大きなサイズのアイコン
+    size: 200        # big size icon
     glyphs: &mdi-weather-glyphs
-      - "\U000F0595" # 曇りの天気
-      - "\U000F0592" # 雹の天気
+      - "\U000F0595" # weather cloudy
+      - "\U000F0592" # weather hail
   - file: 'fonts/materialdesignicons-webfont.ttf'
-    id: font_mdi_medium   # 小さなサイズのアイコン
+    id: font_mdi_medium   # small size icon
     size: 40
     glyphs: *mdi-weather-glyphs
 
@@ -411,7 +479,9 @@ display:
   - platform: waveshare_epaper
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: 30s
@@ -424,7 +494,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/21.png" style={{width:800, height:'auto'}}/></div>
 
-以下の画像のようなフィードバックが表示された場合、コードが正常に動作していることを意味します。
+以下のような画像のフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/35.png" style={{width:600, height:'auto'}}/></div>
 
@@ -432,24 +502,78 @@ display:
 
 <div align="center">
 <a href="https://pictogrammers.com/library/mdi/" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>アイコンのウェブサイトはこちら</button></p>
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>アイコンウェブサイトはこちらをクリック</button></p>
 </a>
 </div>
 
-アイコンを選択してください。
+使用したいアイコンを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/41.png" style={{width:800, height:'auto'}}/></div>
 
-以下の画像のように、コードをコピーして **captive_portal** 部分に貼り付けてください。
+コードをコピーして、以下の画像のように **captive_portal** 部分に貼り付けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/42.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/43.png" style={{width:800, height:'auto'}}/></div>
 
-##### 4. <span id="image">画像を表示する</span>
+### 4. 画像を表示する {#image}
 
-<Tabs>
-<TabItem value='HAのスクリーンショットを表示'>
+この例では、お好みの画像をディスプレイに表示する方法を示します。
+
+前の例と同様に、**Studio Code Server** をインストールし、画像を保存するために **image** という新しいフォルダを作成する必要があります。
+
+そして、**image** フォルダに画像を入れてください。以下のボタンをクリックして画像をダウンロードして試すことができます。
+
+<div align="center">
+<a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
+<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>ダウンロードはこちらをクリック</button></p>
+</a>
+</div>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
+
+ESPHome をインストールして新しいデバイスを追加した後、以下のコードをコピーして、以下に示すように `captive_portal` の後に貼り付けることができます。
+
+<details>
+
+<summary>完全なコードをプレビューするにはここをクリック</summary>
+
+```yaml
+
+image:
+  - file: /config/esphome/image/wifi.jpg    # the path where you save the image, png or jpg format
+    id: myImage
+    type: BINARY
+    resize: 800x480    # how big you want to show, the biggest size should be as same as ePaper Penal pixel(800x480)
+    invert_alpha: true   # invert color
+
+spi:
+  clk_pin: GPIO8
+  mosi_pin: GPIO10
+
+display:
+  - platform: waveshare_epaper
+    cs_pin: GPIO3
+    dc_pin: GPIO5
+    busy_pin: 
+      number: GPIO4
+      inverted: true
+    reset_pin: GPIO2
+    model: 7.50inv2
+    update_interval: 30s
+    lambda: |-
+      it.image(0, 0, id(myImage));
+```
+
+</details>
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/22.png" style={{width:800, height:'auto'}}/></div>
+
+以下のような画像のフィードバックが表示されたら、コードが正常に実行されていることを意味します。
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
+
+## デモ 1. Home Assistant ダッシュボードのスクリーンショットを撮る
 
 この例では、ディスプレイにHAのスクリーンショットを表示します。
 
@@ -457,58 +581,59 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/83.jpg" style={{width:800, height:'auto'}}/></div>
 
-バージョンは **1.11.4以上** である必要があります。インストール後、**Configurationページ**に移動します。このアドオン用にaccess_tokenを作成する必要があります。
+バージョンは **1.11.4以上** である必要があることにご注意ください。インストール後、**Configuration ページ** に移動します。このアドオン用のaccess_tokenを作成する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/96.jpg" style={{width:800, height:'auto'}}/></div>
 
-次のステップでトークンを作成し、ここに貼り付けます。
+次のステップでトークンを作成し、ここに貼り付けてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/88.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Securityページ**の下部に移動してトークンを作成し、それをコピーして **Puppet** アドオンに貼り付けます。
+**Security ページ** の下部に移動してトークンを作成し、それをコピーして **Puppet** アドオンに貼り付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/85.jpg" style={{width:800, height:'auto'}}/></div>
 
-**Puppetアドオンを再起動**することを忘れないでください。
+Puppet アドオンを **再起動** することを忘れないでください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/95.jpg" style={{width:800, height:'auto'}}/></div>
 
-アドオンを開始すると、ポート10000で新しいサーバーが起動します。リクエストする任意のパスがそのページのスクリーンショットを返します。必要なビューポートサイズを指定する必要があります。
+アドオンを開始すると、ポート10000で新しいサーバーが起動します。リクエストしたパスのスクリーンショットが返されます。必要なビューポートサイズを指定する必要があります。
 
-例えば、デフォルトのダッシュボードの1000px x 1000pxのスクリーンショットを取得するには、以下を取得します：
+例えば、デフォルトダッシュボードの1000px x 1000pxのスクリーンショットを取得するには、以下を取得します：
 
 ```python
-# http://192.168.1.191:10000/lovelace/0?viewport=1000x1000(私のアドレス)
+# http://192.168.1.191:10000/lovelace/0?viewport=1000x1000(My address)
 
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000
 ```
 
-e-inkディスプレイ用にカラーパレットを減らすには、einkパラメータを追加できます。この値は使用する色の数（黒を含む）を表します。例えば、2色のe-inkディスプレイの場合：
+E Ink®ディスプレイのカラーパレットを削減するには、einkパラメータを追加できます。この値は使用する色数（黒を含む）を表します。例えば、2色のE Ink®ディスプレイの場合：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2
 ```
 
-eink=2を使用している場合、invertパラメータを追加して色を反転させることもできます：
+eink=2を使用している場合、invertパラメータを追加することで色を反転させることもできます：
 
 ```python
 http://homeassistant.local:10000/lovelace/0?viewport=1000x1000&eink=2&invert
 ```
 
-さらに、HAの他のページ、例えば **To-doリスト** ページのスクリーンショットも取得できます：
+Besides, you can also screenshot other page, for example **To-do lists** page in HA:
 
 ```python
 http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert
 ```
 
-このリンクをブラウザに入力してスクリーンショットの効果を確認できます。
+ブラウザでこのリンクを入力することで、スクリーンショットの効果を確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/92.jpg" style={{width:800, height:'auto'}}/></div>
 
-その後、以下のコードをコピーして **captive_portal** 部分に貼り付けてください。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
+
 <details>
 
-<summary> クリックしてコードをコピーしてください。 </summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
 
@@ -522,7 +647,7 @@ online_image:
     format: PNG
     type: BINARY
     buffer_size: 30000
-    url: http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert #このリンクをスクリーンショットリンクに変更してください
+    url: http://192.168.1.191:10000/todo?viewport=800x480&eink=2&invert #change this link to your screenshot link
     update_interval: 30s
     on_download_finished:
       - delay: 0ms
@@ -537,7 +662,9 @@ display:
     id: main_display
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: never
@@ -550,82 +677,23 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/93.jpg" style={{width:800, height:'auto'}}/></div>
 
-以下の画像のようなフィードバックが表示された場合、コードが正常に動作していることを意味します。
+以下の画像のようなフィードバックが表示されたら、コードが正常に実行されていることを意味します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/94.jpg" style={{width:600, height:'auto'}}/></div>
 
+## Demo2. ディープスリープモード
 
-</TabItem>
+:::tip
+ディープスリープモード中は、デバイスに直接コードをアップロードできません。ダウンロードモードに入る必要があります。[こちらをクリックしてQ3に移動してください。](#port)
+:::
 
-<TabItem value='他の画像を表示'>
+この例では、ディープスリープモードを使用して電力を節約する方法を示します。6時間ごとに情報を更新します。2000mAhのバッテリーで約3ヶ月持続できます。
 
-
-この例では、任意の画像をディスプレイに表示します。
-
-前の例と同様に、**Studio Code Server** をインストールし、画像を保存するための新しいフォルダ **image** を作成する必要があります。
-
-その後、**image** フォルダに画像を配置します。以下のボタンをクリックして画像をダウンロードして試してみてください。
-
-<div align="center">
-<a href="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.jpg" target="_blank">
-<p style={{textAlign: 'center'}}><button type="button" className="download" style={{backgroundColor: '#00A418', borderRadius: '8px', border: 'none', color: '#fff', padding: '12px 24px', textAlign: 'center', textDecoration: 'none', display: 'inline-block', fontSize: '16px', margin: '4px 2px', cursor: 'pointer'}}>クリックしてダウンロード</button></p>
-</a>
-</div>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/20.png" style={{width:800, height:'auto'}}/></div>
-
-その後、以下のコードをコピーして **captive_portal** 部分に貼り付けてください。
+ESPHomeをインストールして新しいデバイスを追加した後、以下のコードをコピーして、下図のように`captive_portal`の後に貼り付けることができます。
 
 <details>
 
-<summary> クリックしてコードをコピーしてください。 </summary>
-
-```yaml
-
-image:
-  - file: /config/esphome/image/wifi.jpg    # 保存した画像のパス、pngまたはjpg形式
-    id: myImage
-    type: BINARY
-    resize: 800x480    # 表示したいサイズ、最大サイズはePaperパネルのピクセル(800x480)と同じである必要があります
-    invert_alpha: true   # 色を反転
-
-spi:
-  clk_pin: GPIO8
-  mosi_pin: GPIO10
-
-display:
-  - platform: waveshare_epaper
-    cs_pin: GPIO3
-    dc_pin: GPIO5
-    busy_pin: GPIO4
-    reset_pin: GPIO2
-    model: 7.50inv2
-    update_interval: 30s
-    lambda: |-
-      it.image(0, 0, id(myImage));
-
-```
-
-</details>
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/22.png" style={{width:800, height:'auto'}}/></div>
-
-以下の画像のようなフィードバックが表示された場合、それはコードが正常に実行されていることを意味します。
-
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/wifi.png" style={{width:600, height:'auto'}}/></div>
-
-</TabItem>
-</Tabs>
-
-##### 5. ディープスリープモード
-
-この例では、ディープスリープモードを使用して電力を節約する方法を示します。情報は6時間ごとに更新されます。2000mAhのバッテリーで約3か月間動作可能です。
-
-以下のコードをコピーして、**captive_portal** 部分に貼り付けてください（以下の画像を参照）。
-
-<details>
-
-<summary> コードをコピーするにはこちらをクリックしてください。 </summary>
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
 globals:
@@ -658,7 +726,9 @@ display:
   - platform: waveshare_epaper
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: 3min
@@ -667,53 +737,63 @@ display:
       ESP_LOGD("main", "Wakeup count: %d", id(sleep_counter));
       it.printf(100, 100, id(font1), "Wakeup count: %d", id(sleep_counter));
 ```
+
 </details>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/89.jpg" style={{width:800, height:'auto'}}/></div>
 
-カウンターが表示されます。デバイスがスリープから復帰するたびに、カウンターは1ずつ増加します。
+カウンターが表示されます。起動するたびに1つずつ増加します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/90.jpg" style={{width:600, height:'auto'}}/></div>
 
-#### ステップ5：総合的な例
+## デモ 3. 総合的な例
 
-この例では、HA（Home Assistant）から天気情報とカレンダー情報を取得し、それらをディスプレイに表示する方法を紹介します。さらに、**ディープスリープモード**を使用して電力を節約します。情報は6時間ごとに更新され、2000mAhのバッテリーで約3か月間動作可能です。
+:::tip
+より良く理解するために、まず上記の基本的な使用方法を実行することを強く推奨します。
+:::
 
-まず、HAに天気コンポーネントがあるかどうかを確認する必要があります。通常、HAをインストールすると自動的に1つ追加されます。
+この例では、HAから天気情報とカレンダー情報を取得し、ディスプレイに表示する方法を示します。さらに、電力を節約するために**ディープスリープモード**を使用します。6時間ごとに情報を更新します。2000mAhのバッテリーで約3ヶ月持続できます。
+
+まず、HAに天気コンポーネントがあるかどうかを確認する必要があります。通常、HAをインストールすると天気コンポーネントも含まれています。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/24.png" style={{width:800, height:'auto'}}/></div>
 
-また、開発者ツール → ステータス（STATES） に移動して、HAに天気情報があるかどうかを確認することもできます。以下は、後で取得する情報の一例です。
+また、**Developer Tools -> STATES**に移動して、HAに天気情報があるかどうかを確認することもできます。これが後で取得する情報です。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/25.png" style={{width:800, height:'auto'}}/></div>
 
 次に、HAにカレンダーコンポーネントをインストールする必要があります。
 
-設定 → デバイスとサービス → 統合 → 統合を追加 に進んでください。
+**Settings** -> **Devices & Services** -> **Integrations** -> **Add Integration**に移動します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/28.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/29.png" style={{width:800, height:'auto'}}/></div>
 
-**ローカルカレンダー（Local Calendar）** を選択し、**送信（SUBMIT）** ボタンをクリックしてください。
+**Local Calendar**を選択し、**SUBMIT**ボタンをクリックします。
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/30.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/31.png" style={{width:'95%', height:'auto'}}/></div>
 </div>
 
-その後、「構成済み（Configured）」の部分とサイドバーにローカルカレンダーが表示されるようになります。
+その後、ConfiguredセクションとサイドバーにLocal Calendarが表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/32.png" style={{width:800, height:'auto'}}/></div>
 
-サイドバーの「カレンダー（Calendar）」をクリックし、新しく3つのカレンダーを作成してください。名前は **calender**、**epaper_event**、**new_calendar** にします。別の名前を使用しても構いませんが、後でコード内で同じ名前を使用するようにしてください。
+サイドバーのCalendarをクリックし、**calendar**、**epaper_event**、**new_calendar**という名前の3つの新しいカレンダーを作成します。他の名前を使用することもできますが、後でコード内で同じ名前を使用してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/27.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/26.png" style={{width:800, height:'auto'}}/></div>
 
-<details>  
-<summary> コードをコピーするにはこちらをクリックしてください。 </summary>
+:::tip
+コードをコピーする前に、[wifi.jpg](#image)、[アイコンttfファイルとフォントttfファイル](#ttf)を**image**フォルダと**fonts**フォルダに配置してください。
+:::
+
+<details>
+
+<summary>完全なコードをプレビューするにはここをクリック</summary>
 
 ```yaml
 
@@ -811,15 +891,15 @@ time:
 text_sensor:
   - platform: homeassistant
     id: ha_calendar_event_1
-    entity_id: calendar.calender
+    entity_id: calendar.calendar
     attribute: "message"
   - platform: homeassistant
     id: ha_calendar_start_time_1
-    entity_id: calendar.calender
+    entity_id: calendar.calendar
     attribute: "start_time"
   - platform: homeassistant
     id: ha_calendar_end_time_1
-    entity_id: calendar.calender
+    entity_id: calendar.calendar
     attribute: "end_time"
 
   - platform: homeassistant
@@ -837,15 +917,15 @@ text_sensor:
 
   - platform: homeassistant
     id: ha_calendar_event_3
-    entity_id: calendar.new_calender
+    entity_id: calendar.new_calendar
     attribute: "message"
   - platform: homeassistant
     id: ha_calendar_start_time_3
-    entity_id: calendar.new_calender
+    entity_id: calendar.new_calendar
     attribute: "start_time"
   - platform: homeassistant
     id: ha_calendar_end_time_3
-    entity_id: calendar.new_calender
+    entity_id: calendar.new_calendar
     attribute: "end_time"
 
   - platform: homeassistant
@@ -913,7 +993,9 @@ display:
     id: my_display
     cs_pin: GPIO3
     dc_pin: GPIO5
-    busy_pin: GPIO4
+    busy_pin: 
+      number: GPIO4
+      inverted: true
     reset_pin: GPIO2
     model: 7.50inv2
     update_interval: 50s
@@ -1125,7 +1207,6 @@ display:
       }
 
 
-
 ```
 
 </details>
@@ -1134,7 +1215,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/38.png" style={{width:600, height:'auto'}}/></div>
 
-### FAQ
+## FAQ
 
 #### Q1: なぜデータが表示されないのですか？
 
@@ -1143,62 +1224,61 @@ display:
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/100.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-この場合、**設定 -> デバイスとサービス -> 統合**に移動してデバイスを**再構成（RECONFIGURE）**する必要があります。ePaperパネルが見つかりませんか？HAを再起動してみてください。
+この場合、設定 -> デバイスとサービス -> 統合に移動してデバイスを**再設定**する必要があります。ePaper パネルが見つからない場合は、HAを再起動してみてください。
 
 <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/101.png" style={{width:'100%', height:'auto'}}/></div>
 
-#### Q2: なぜHome Assistantでこれらのデータを取得できないのですか？
+#### Q2: なぜHome Assistantでこれらのデータを取得できないのですか？ {#port}
 
-この場合、**設定 -> デバイスとサービス -> 統合**に移動して、デバイスを**追加（ADD）**する必要があります。
+この場合、設定 -> デバイスとサービス -> 統合に移動してデバイスをHAに**追加**する必要があります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/11.png" style={{width:800, height:'auto'}}/></div>
 
-
-#### <span id="deepmode">Q3</span>: デバイスがディープスリープモードのときに新しいプログラムをアップロードするにはどうすればよいですか？
+#### <span id="deepmode">Q3</span>: デバイスがディープスリープモードの時に新しいプログラムをアップロードするにはどうすればよいですか？
 
 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/103.png" style={{width:'100%', height:'auto'}}/></div>
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/102.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-デバイスがディープスリープモードの場合、新しいプログラムを直接アップロードすることはできません。
+デバイスがディープスリープモードの時は、直接新しいプログラムをアップロードすることはできません。
 
-1. まず、デバイスがオンになっていることを確認し、基板の背面にある**Boot**ボタンを押します。
+1. まず、デバイスの電源が入っていることを確認し、ボードの裏面にある**Boot**ボタンを押します。
 
-2. **Reset**ボタンを1回クリックしてから**Boot**ボタンを離します。
+2. **Reset**ボタンを1回クリックし、**Boot**ボタンを離します。
 
 3. その後、バッテリースイッチをオフにし、電源ケーブルを抜きます。
 
 4. 最後に、ケーブルを再接続して新しいプログラムをアップロードします。
 
-#### Q4: バッテリーはどのくらい持ちますか？
+#### Q4: バッテリーはどのくらい持続しますか？
 
 :::tip
-充電時にはバッテリーボタンをオンにすることを忘れないでください。そうしないと、バッテリーは充電されません。
+充電時はバッテリーボタンをオンにすることを忘れないでください。そうしないと、バッテリーが充電されません。
 :::
 
-テストの結果、6時間ごとに画面をリフレッシュすると、ディープスリープモードでバッテリーは約3か月持続します。
+テストの結果、6時間ごとに画面を更新し、ディープスリープモードでバッテリーは約3ヶ月持続します。
 
-#### <span id="Q5">Q5</span>: ePaperパネルがコンピュータに接続できませんか？
+#### <span id="Q5">Q5</span>: ePaper パネルがコンピューターに接続できませんか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/68.png" style={{width:600, height:'auto'}}/></div>
 
-数回抜き差ししてみるか、プロンプトに従ってドライバーをインストールしてください。
+何度か抜き差しを試すか、プロンプトに従ってドライバーをインストールしてください。
 
-#### <span id="Q6">Q6</span>: Wi-Fi経由でのプログラムアップロードが失敗しましたか？
+#### <span id="Q6">Q6</span>: Wi-Fiプログラムのアップロードが失敗しましたか？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/74.png" style={{width:800, height:'auto'}}/></div>
 
-この場合、ePaperパネルがオフラインまたはディープスリープモードになっています。オンラインにするか、スリープを解除してください。
+この場合、epaperパネルがオフラインまたはディープスリープモードになっています。オンラインにするか、起動してください。
 
 ## リソース
 
-- **[STP]**: [3Dモデルエンクロージャー](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
-- **[PDF]**: [ePaper_Breakout_Board_for_XIAO_V2_PCBA.pdf](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Breakout_Board_for_XIAO_V2_PCBA.pdf)
+- **[STP]**: [3Dモデル筐体](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3D_model.zip)
+- **[PDF]**: [ePaperドライバーボード回路図PDF](https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/ePaper_Driver_Board.pdf)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

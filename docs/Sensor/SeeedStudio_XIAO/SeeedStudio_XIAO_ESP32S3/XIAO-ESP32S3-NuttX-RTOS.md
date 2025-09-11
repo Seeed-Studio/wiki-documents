@@ -29,7 +29,7 @@ For instance, the [Seeed Studio XIAO ESP32S3](https://nuttx.apache.org/docs/late
 
 The Nuttx documentation provides a [guide](https://nuttx.apache.org/docs/latest/quickstart/install.html) to different platforms.For Seeed Studio XIAO ESP32S3 please follow these steps:
 
-1. Download Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/): 
+1. Download Espressif esptool(https://docs.espressif.com/projects/esptool/en/latest/esp32/):
 
     ```bash
     ~/nuttxspace/nuttx$ esptool.py version
@@ -78,6 +78,7 @@ Also it's possible to check the list of board-supported a running the command:
     ./tools/configure.sh xiao-esp32s3:nsh
     make V=1
     ```
+
 5. The RESET and BOOT buttons can be used to enter “Bootloader” mode by press and hold the BOOT key while powering up and then press the RESET key once.
 
 6. Load the firmware using esptool.py:
@@ -113,8 +114,7 @@ Compile the source code.
 make -j
 ```
 
-Load the firmware into you board, reboot the board and connect NuttShell (NSH) console over USB using
-the CDC/ACM serial interface:
+Load the firmware into you board, reboot the board and connect NuttShell (NSH) console over USB using the CDC/ACM serial interface:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -221,7 +221,7 @@ To confirm the GPIO device files were created, type `ls/dev`. After typing, you 
 
 - On board LED:
   - Yellow            -> GPIO21
- 
+
 - GPIOs
   - 1 Input           -> GPIO1
   - 1 Input w/ IRQ    -> GPIO3
@@ -242,8 +242,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-Following these commands to read GPIO1(/dev/gpio1) and GPIO3(/dev/gpio2) (with interruption)
-and write at GPIO2(/dev/gpio0).
+Following these commands to read GPIO1(/dev/gpio1) and GPIO3(/dev/gpio2) (with interruption) and write at GPIO2(/dev/gpio0).
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -307,7 +306,6 @@ Check the video below with the demo for gpio and leds:
     <source src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiao-esp32s3-nuttx-demo.mp4" type="video/mp4" />
   </video>
 </div>
-
 
 For more information about NuttX RTOS, please visit [NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)
 

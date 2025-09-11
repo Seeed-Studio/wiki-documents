@@ -12,10 +12,6 @@ last_update:
   date: 05/15/2025
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # 全ての XIAO シリーズ向け Seeed Studio ラウンドディスプレイでの LVGL と TFT の使用
 
@@ -40,65 +36,65 @@ Seeed Studio ラウンドディスプレイ製品をご購入いただきあり�
 このチュートリアルでは、デモンストレーションのために **XIAO ESP32S3** をマスターコントロールとして使用します。
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO 用ラウンドディスプレイ</th>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	</tr>
+ <tr>
+     <th>Seeed Studio XIAO 用ラウンドディスプレイ</th>
+     <th>Seeed Studio XIAO ESP32S3</th>
+ </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/rounddisplay.jpg" style={{width:210, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:210, height:'auto'}}/></div></td>
     </tr>
-	<tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank"> 
+ <tr>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 他の XIAO 製品を使用したい場合、このチュートリアルの記事や方法も適用可能です。
 
 <table align="center">
-	<tr>
-		<th>Seeed Studio XIAO SAMD21</th>
-		<th>Seeed Studio XIAO RP2040</th>
-		<th>Seeed Studio XIAO nRF52840 (Sense)</th>
-		<th>Seeed Studio XIAO ESP32C3</th>
-	</tr>
-	<tr>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+  <th>Seeed Studio XIAO SAMD21</th>
+  <th>Seeed Studio XIAO RP2040</th>
+  <th>Seeed Studio XIAO nRF52840 (Sense)</th>
+  <th>Seeed Studio XIAO ESP32C3</th>
+ </tr>
+ <tr>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Seeeduino-XIAO/img/Seeeduino-XIAO-preview-1.jpg" style={{width:400, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/102010428_Preview-07.jpg" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoblesense.jpg" style={{width:500, height:'auto'}}/></div></td>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/xiaoesp32c3.jpg" style={{width:450, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Arduino-Microcontroller-SAMD21-Cortex-M0+-p-4426.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-		<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
+      </a>
+  </div></td>
+  <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 ラウンドディスプレイに XIAO を取り付ける際は、XIAO の Type-C コネクタがラウンドディスプレイの外側を向くようにし、各ピンをデュアル 7 ピンヘッダに合わせて接続してください。
@@ -505,36 +501,40 @@ Arduinoプログラミングを使用しているため、作成するものもA
 
 > **レイアウト**: レイアウトを使用してウィジェットの子要素を自動的に配置できます。レイアウトが有効になっている場合、子要素のXおよびY値は手動で調整できません。ただし、子要素に`IGNORE_LAYOUT`または`FLOATING`フラグが有効になっている場合は例外です。
 
->    **主なフラグ**
->    - **Hidden** - オブジェクトを非表示にします。（まるで存在しないかのように）
->    - **Clickable** - 入力デバイスでオブジェクトをクリック可能にします。
->    - **Click focusable** - クリック時にオブジェクトにフォーカス状態を追加します。
->    - **Checkable** - オブジェクトがクリックされるとチェック状態を切り替えます。
->    - **Snappable** - 親でスクロールスナップが有効な場合、このオブジェクトにスナップできます。
->    - **Press lock** - オブジェクトが押されたままになるようにします。
->    - **Event bubble** - イベントを親にも伝播します。
->    - **Gesture bubble** - ジェスチャーイベントを親にも伝播します。
->    - **Adv hittest** - より正確なヒット（クリック）テストを実行できるようにします。例：丸みを帯びた角を考慮する。
->    - **Ignore layout** - レイアウトによってオブジェクトを位置付け可能にします。
->    - **Floating** - 親がスクロールしてもオブジェクトをスクロールせず、レイアウトを無視します。
+> **主なフラグ**
+>
+> - **Hidden** - オブジェクトを非表示にします。（まるで存在しないかのように）
+> - **Clickable** - 入力デバイスでオブジェクトをクリック可能にします。
+> - **Click focusable** - クリック時にオブジェクトにフォーカス状態を追加します。
+> - **Checkable** - オブジェクトがクリックされるとチェック状態を切り替えます。
+> - **Snappable** - 親でスクロールスナップが有効な場合、このオブジェクトにスナップできます。
+> - **Press lock** - オブジェクトが押されたままになるようにします。
+> - **Event bubble** - イベントを親にも伝播します。
+> - **Gesture bubble** - ジェスチャーイベントを親にも伝播します。
+> - **Adv hittest** - より正確なヒット（クリック）テストを実行できるようにします。例：丸みを帯びた角を考慮する。
+> - **Ignore layout** - レイアウトによってオブジェクトを位置付け可能にします。
+> - **Floating** - 親がスクロールしてもオブジェクトをスクロールせず、レイアウトを無視します。
 
->   **スクロールフラグ**
->   - **Scrollable** - オブジェクトをスクロール可能にします。
->   - **Scroll elastic** - 内部でスクロールを許可しますが、速度を遅くします。
->   - **Scroll momentum** - 「投げられた」場合にオブジェクトをさらにスクロールします。
->   - **Scroll one** - スナップ可能な子要素を1つだけスクロール可能にします。
->   - **Scroll chain** - スクロールを親に伝播可能にします。
->   - **Scroll on focus** - フォーカス時にオブジェクトを自動的にスクロールして表示可能にします。
+> **スクロールフラグ**
+>
+> - **Scrollable** - オブジェクトをスクロール可能にします。
+> - **Scroll elastic** - 内部でスクロールを許可しますが、速度を遅くします。
+> - **Scroll momentum** - 「投げられた」場合にオブジェクトをさらにスクロールします。
+> - **Scroll one** - スナップ可能な子要素を1つだけスクロール可能にします。
+> - **Scroll chain** - スクロールを親に伝播可能にします。
+> - **Scroll on focus** - フォーカス時にオブジェクトを自動的にスクロールして表示可能にします。
 
 >**スクロール設定**
->   - **Scroll direction** - スクロールバーは設定された方向に表示されます。
->   - **Scrollbar mode** - スクロールバーは設定されたモードに従って表示されます。以下のモードがあります：
->       - **Off** - スクロールバーを表示しない。
->       - **On** - 常にスクロールバーを表示する。
->       - **Active** - オブジェクトがスクロールされている間にスクロールバーを表示する。
->       - **Auto** - コンテンツがスクロール可能なほど大きい場合にスクロールバーを表示する。
+>
+> - **Scroll direction** - スクロールバーは設定された方向に表示されます。
+> - **Scrollbar mode** - スクロールバーは設定されたモードに従って表示されます。以下のモードがあります：
+>   - **Off** - スクロールバーを表示しない。
+>   - **On** - 常にスクロールバーを表示する。
+>   - **Active** - オブジェクトがスクロールされている間にスクロールバーを表示する。
+>   - **Auto** - コンテンツがスクロール可能なほど大きい場合にスクロールバーを表示する。
 
 > **状態**: オブジェクトは以下の状態の組み合わせになることができます：
+>
 > - **Clickable** - トグルまたはチェック状態。
 > - **Disable** - 無効状態。
 > - **Focusable** - キーパッドやエンコーダーでフォーカスされたり、タッチパッド/マウスでクリックされたりする。
@@ -545,11 +545,12 @@ Arduinoプログラミングを使用しているため、作成するものもA
 > **状態**: 各状態にカスタムスタイルを作成できます。
 >
 > **スタイルプロパティ**: スタイルプロパティはスタイルのために設定するパラメータです。
+>
 > - **Arc**: Arcコンポーネントを持つウィジェットでArcスタイルを使用できます。
->    - **Line color** - 線の色。
->    - **Arc width** - Arcの幅。
->    - **Arc rounded** - Arc線の端を丸くする。
->    - **Arc image** - Arc線の背景画像。
+>   - **Line color** - 線の色。
+>   - **Arc width** - Arcの幅。
+>   - **Arc rounded** - Arc線の端を丸くする。
+>   - **Arc image** - Arc線の背景画像。
 > - **Background**: Backgroundスタイルはウィジェットの背景です。グラデーションを作成したり、背景の角を丸くすることができます。
 >   - **Color and alpha** - オブジェクトの背景色とアルファを設定します。
 >   - **Gradient color** - 背景のグラデーション色を設定します。
@@ -565,10 +566,10 @@ Arduinoプログラミングを使用しているため、作成するものもA
 >   - **Bg image tiled** - 有効にすると背景画像がタイル状になります。
 > - **Blend**: Blendスタイルを使用して、現在のウィジェット部分のピクセル色を次に続くオブジェクトの色と混合できます。
 >   - **Blend mode** - 4つのオプションから選択します。
->       - **Normal** - デフォルト状態。
->       - **Additive** - ピクセルを加算。
->       - **Subtractive** - ピクセルを減算。
->       - **Multiply** - ピクセルを乗算。
+>     - **Normal** - デフォルト状態。
+>     - **Additive** - ピクセルを加算。
+>     - **Subtractive** - ピクセルを減算。
+>     - **Multiply** - ピクセルを乗算。
 >   - **Blend opacity** - ウィジェット部分の不透明度を設定します。
 > - **Border**: Borderを使用して、選択したオブジェクトの内側の線に境界線を描画します。
 >   - **Border color** - 境界線の色。
@@ -596,53 +597,54 @@ Arduinoプログラミングを使用しているため、作成するものもA
 >   - **Line spacing** - 行間のスペース。
 >   - **Text align** - テキストの配置方向。
 >   - **Text decor** - テキストをオーバーラインまたはアンダーラインにする。
->       - **None** - 通常のテキスト。
->       - **Underline** - アンダーライン付きテキスト。
->       - **Strikethrough** - オーバーライン付きテキスト。
->       - **Text font** - テキストのフォント。
+>     - **None** - 通常のテキスト。
+>     - **Underline** - アンダーライン付きテキスト。
+>     - **Strikethrough** - オーバーライン付きテキスト。
+>     - **Text font** - テキストのフォント。
 
 > **イベントプロパティ**: イベントを追加することで、ウィジェットに異なるインタラクションを作成できます。例えば、ボタンを押すことで画面を変更したり、アニメーションを再生したりできます。
+>
 > - **イベントを追加**: Inspector Panelの下部にあるADD EVENTボタンを見つけます。まずイベントに名前を付け、次に開始するトリガーを選択します。
 >   - **イベント名** - イベントの名前。
 >   - **イベントトリガー** - イベント開始のインタラクション。
->       - **Pressed** - オブジェクトが押された。
->       - **Clicked** - オブジェクトが短時間押され、その後リリースされた。スクロールされた場合は呼び出されない。
->       - **Long pressed** - オブジェクトが長時間押された。
->       - **Long pressed repeat** - `long_press_time`後に、`long_press_repeat_time`ミリ秒ごとに呼び出される。スクロールされた場合は呼び出されない。
->       - **Focused** - オブジェクトがフォーカスされた。
->       - **Defocused** - オブジェクトがフォーカスを失った。
->       - **Value changed** - オブジェクトの値が変更された。
->       - **Ready** - プロセスが完了した。
->       - **Cancel** - プロセスがキャンセルされた。
->       - **Screen loaded** - 画面がロードされた。すべてのアニメーションが終了したときに呼び出される。
->       - **Screen unloaded** - 画面がアンロードされた。すべてのアニメーションが終了したときに呼び出される。
->       - **Screen load start** - 画面ロードが開始された。画面変更の遅延が終了したときに発生。
->       - **Screen unload start** - 画面アンロードが開始された。lv_scr_load/lv_scr_load_animが呼び出されたときに即座に発生。
->           - **Checked** - ウィジェットがチェックされた。
->           - **Unchecked** - ウィジェットがチェック解除された。
->           - **Gesture** - 指タッチのスライド方向。
+>     - **Pressed** - オブジェクトが押された。
+>     - **Clicked** - オブジェクトが短時間押され、その後リリースされた。スクロールされた場合は呼び出されない。
+>     - **Long pressed** - オブジェクトが長時間押された。
+>     - **Long pressed repeat** - `long_press_time`後に、`long_press_repeat_time`ミリ秒ごとに呼び出される。スクロールされた場合は呼び出されない。
+>     - **Focused** - オブジェクトがフォーカスされた。
+>     - **Defocused** - オブジェクトがフォーカスを失った。
+>     - **Value changed** - オブジェクトの値が変更された。
+>     - **Ready** - プロセスが完了した。
+>     - **Cancel** - プロセスがキャンセルされた。
+>     - **Screen loaded** - 画面がロードされた。すべてのアニメーションが終了したときに呼び出される。
+>     - **Screen unloaded** - 画面がアンロードされた。すべてのアニメーションが終了したときに呼び出される。
+>     - **Screen load start** - 画面ロードが開始された。画面変更の遅延が終了したときに発生。
+>     - **Screen unload start** - 画面アンロードが開始された。lv_scr_load/lv_scr_load_animが呼び出されたときに即座に発生。
+>       - **Checked** - ウィジェットがチェックされた。
+>       - **Unchecked** - ウィジェットがチェック解除された。
+>       - **Gesture** - 指タッチのスライド方向。
 > - **イベントを追加**
 >   - **アクション**: アクションは、トリガーが発生したときに開始するイベントの要素です。
->       - **Call function**: Call functionアクションを使用して、イベントが参照できる関数名を追加できます。この関数はコードエクスポート時にui__events.cまたはui_events.pyファイルに作成されます。
->       - **Change Screen**: このアクションを使用して画面間を切り替えることができます。
->           - **Screen to** - 切り替えたい画面。
->           - **Fade mode** - 画面切り替え時のアニメーション。
->           - **Speed** - 画面切り替えの速度。
->           - **Delay** - 画面切り替えの遅延。
->       - **Increment Arc**: Arc Widgetの値を変更できます。
->       - **Increment Bar**: Bar Widgetの値を変更できます。
->       - **Increment Slider**: Slider Widgetの値を変更できます。
->       - **Modify Flag**: ウィジェットのフラグ状態を変更できます。
->       - **Play Animation**: Animation Panelで作成されたアニメーションを再生できます。
->           - **Animation** - 選択されたアニメーション。
->           - **Target** - アニメーションを使用したいターゲットウィジェット。
->           - **Delay** - アニメーションの遅延時間。
->       - **Set Opacity**: 選択されたウィジェットの不透明度。
->       - **Set Flag**: ウィジェットのフラグ状態の値を設定します。
->       - **Set Property**: ウィジェットのプロパティ値を変更します。
->       - **Set text value from arc**: Arc Widgetの値をLabel Widgetに表示するためにこのアクションを使用します。
->       - **Set text value from slider**: Slider Widgetの値をLabel Widgetに表示するためにこのアクションを使用します。
->       - **Set text value when checked**: ターゲットオブジェクトのチェック状態または未チェック状態に応じてLabel Widgetのテキストを変更します。
+>     - **Call function**: Call functionアクションを使用して、イベントが参照できる関数名を追加できます。この関数はコードエクスポート時にui__events.cまたはui_events.pyファイルに作成されます。
+>     - **Change Screen**: このアクションを使用して画面間を切り替えることができます。
+>       - **Screen to** - 切り替えたい画面。
+>       - **Fade mode** - 画面切り替え時のアニメーション。
+>       - **Speed** - 画面切り替えの速度。
+>       - **Delay** - 画面切り替えの遅延。
+>     - **Increment Arc**: Arc Widgetの値を変更できます。
+>     - **Increment Bar**: Bar Widgetの値を変更できます。
+>     - **Increment Slider**: Slider Widgetの値を変更できます。
+>     - **Modify Flag**: ウィジェットのフラグ状態を変更できます。
+>     - **Play Animation**: Animation Panelで作成されたアニメーションを再生できます。
+>       - **Animation** - 選択されたアニメーション。
+>       - **Target** - アニメーションを使用したいターゲットウィジェット。
+>       - **Delay** - アニメーションの遅延時間。
+>     - **Set Opacity**: 選択されたウィジェットの不透明度。
+>     - **Set Flag**: ウィジェットのフラグ状態の値を設定します。
+>     - **Set Property**: ウィジェットのプロパティ値を変更します。
+>     - **Set text value from arc**: Arc Widgetの値をLabel Widgetに表示するためにこのアクションを使用します。
+>     - **Set text value from slider**: Slider Widgetの値をLabel Widgetに表示するためにこのアクションを使用します。
+>     - **Set text value when checked**: ターゲットオブジェクトのチェック状態または未チェック状態に応じてLabel Widgetのテキストを変更します。
 
 ##### パネルの使用方法
 
@@ -747,16 +749,16 @@ Arc では、主にリングの色とサイズを調整する必要がありま�
 すべてのポインター位置が決定したら、新しいアニメーション効果を追加することができます。異なるポインターのアニメーション効果設定は以下の図に示されています。
 
 <table align="center">
-	<tr>
-	    <th>秒針</th>
-	    <th>分針</th>
+ <tr>
+     <th>秒針</th>
+     <th>分針</th>
         <th>時針</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/25.png" style={{width:300, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/26.png" style={{width:300, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/25.png" style={{width:300, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/26.png" style={{width:300, height:'auto'}}/></div></td>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/27.png" style={{width:300, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
 </table>
 
 最後に、メイン画面がロードされる際にポインターの動きのアニメーションを再生するように設定します。
@@ -783,6 +785,7 @@ Arc では、主にリングの色とサイズを調整する必要がありま�
 3. すべてのコンポーネント、アニメーション、イベントなどにユニークな名前を付けることを忘れないでください。
 
     ソフトウェアは一部のパターンやアニメーションを描画する時間を節約できますが、より複雑な効果を実現するには後でプログラムを作成する必要がある場合があります。その際、コード内でコンポーネントの場所を迅速に見つけることが重要です。コンポーネント、イベント、アニメーションに名前を付けることが鍵です！
+
 :::
 
 #### Step5. プログラムのエクスポートと適用
@@ -808,36 +811,36 @@ SquareLine Studioによってエクスポートされたlibrariesフォルダデ
 - **ui.ino**:
 
 <table align="center">
-	<tr>
-		<th>説明</th>
-	    <th>スクリーンショット</th>
-	    <th>コードセグメント</th>
-	</tr>
-	<tr>
-		<th>TFTライブラリの定義とラウンドスクリーンライブラリのインポート</th>
-		<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/102.png" style={{width:600, height:'auto'}}/></div></td>
-		<td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L1" target="_blank"><b>コード例を見る</b></a></td>
-	</tr>
+ <tr>
+  <th>説明</th>
+     <th>スクリーンショット</th>
+     <th>コードセグメント</th>
+ </tr>
+ <tr>
+  <th>TFTライブラリの定義とラウンドスクリーンライブラリのインポート</th>
+  <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/102.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L1" target="_blank"><b>コード例を見る</b></a></td>
+ </tr>
     <tr>
-		<th>tftクラスの重複定義をコメントアウト</th>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/103.png" style={{width:600, height:'auto'}}/></div></td>
-		<td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L20" target="_blank"><b>コード例を見る</b></a></td>
-	</tr>
-	<tr>
-		<th>タッチ機能の書き換え</th>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/104.png" style={{width:600, height:'auto'}}/></div></td>
-		<td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L46" target="_blank"><b>コード例を見る</b></a></td>
-	</tr>
-	<tr>
-		<th>画面初期化関数とタッチ初期化関数の追加</th>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/105.png" style={{width:600, height:'auto'}}/></div></td>
-		<td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L86" target="_blank"><b>コード例を見る</b></a></td>
-	</tr>
-	<tr>
-		<th>画面の回転</th>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/106.png" style={{width:600, height:'auto'}}/></div></td>
-		<td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L94" target="_blank"><b>コード例を見る</b></a></td>
-	</tr>
+  <th>tftクラスの重複定義をコメントアウト</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/103.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L20" target="_blank"><b>コード例を見る</b></a></td>
+ </tr>
+ <tr>
+  <th>タッチ機能の書き換え</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/104.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L46" target="_blank"><b>コード例を見る</b></a></td>
+ </tr>
+ <tr>
+  <th>画面初期化関数とタッチ初期化関数の追加</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/105.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L86" target="_blank"><b>コード例を見る</b></a></td>
+ </tr>
+ <tr>
+  <th>画面の回転</th>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/round_display_for_xiao/106.png" style={{width:600, height:'auto'}}/></div></td>
+  <td><a href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/blob/f286996e967549de94891a63b58327e488bd46a3/ui/ui.ino#L94" target="_blank"><b>コード例を見る</b></a></td>
+ </tr>
 </table>
 
 次に、使用するXIAOを選択してコンパイルおよびアップロードを行います。
@@ -876,16 +879,24 @@ SquareLine Studioによってエクスポートされたlibrariesフォルダデ
     </a>
 </div>
 
+<!-- - Dial Style II:
+
+<div class="github_container" style={{textAlign: 'center'}}>
+    <a class="github_item" href="https://github.com/limengdu/Seeed-Studio-XIAO-Round-Display-lvgl8.3.5/tree/main/tft_espi-base-dial" target="_blank" rel="noopener noreferrer">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Download the Code</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
+    </a>
+</div> -->
+
 ## 技術サポート & 製品ディスカッション
 
 弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

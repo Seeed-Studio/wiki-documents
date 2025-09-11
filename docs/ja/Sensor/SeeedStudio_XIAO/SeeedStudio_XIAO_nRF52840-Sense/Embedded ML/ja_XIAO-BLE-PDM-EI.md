@@ -1,32 +1,28 @@
 ---
-description: Edge Impulse を使用した音声認識
-title: Edge Impulse を使用した音声認識
+description: Edge Impulseに基づく音声認識
+title: Edge Impulseに基づく音声認識
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/XIAO-BLE-PDM-EI
 last_update:
-  date: 05/15/2025
+  date: 10/12/2023
   author: Bruno Santos (Feiticeir0)
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 :::caution
-このチュートリアルの内容は有効でない可能性があり、新しいソフトウェアのメンテナンスおよび技術サポートは提供されていません。
+このチュートリアルの内容は既に有効でない可能性があり、新しいソフトウェアメンテナンスと技術サポートは提供されなくなりました。
 :::
 
-# Edge Impulse を使用した XIAO nRF52840 による音声認識
+# XIAO nRF52840を使用したEdge Impulseベースの音声認識
 
-この Wiki では、Seeed Studio XIAO nRF52840 の ML 機能を使用して、Edge Impulse を活用した音声認識の方法を紹介します。XIAO nRF52840 Sense に内蔵されているマイクを使用します。
+このwikiでは、音声認識のためにSeeed Studio XIAO nRF52840のML機能とEdge Impulseを使用する方法を紹介します。XIAO nRF52840 Senseに既に搭載されているマイクロフォンを使用します。
 
 ## プロジェクト前の知識
 
-XIAO nRF52840 は Edge Impulse に公式対応しておらず、データ収集用デバイスとしては登録されていませんが、デバイスのマイクを使用して推論を実行する方法を示します。
+XIAO nRF52840はEdge Impulseによって公式にサポートされておらず、データを収集するデバイスとして存在しませんが、デバイスのマイクロフォンを使用して推論を実行する方法を実演します。
 
 ## はじめに
 
-このチュートリアルを進めるには、以下のハードウェアが必要です。
+このチュートリアルに従うには、以下のハードウェアが必要です
 
 <div class="table-center">
   <table align="center">
@@ -39,345 +35,346 @@ XIAO nRF52840 は Edge Impulse に公式対応しておらず、データ収集�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-BLE-Sense-nRF52840-p-5253.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
   </table>
 </div>
 
-### ハードウェアの準備
+### ハードウェア準備
 
-特別なハードウェア準備は必要ありません。XIAO nRF52840 には、このプロジェクトに必要なものがすべて揃っています。必要なのは PDM マイクだけです。
+ハードウェアの準備は必要ありません。XIAO nRF52840には、このプロジェクトに必要なものがすべて既に搭載されています。PDMマイクロフォンだけが必要です。
 
-#### XIAO nRF52840 Sense のハードウェアピン配置
+#### XIAO nRF52840 Senseのハードウェアピン配置
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/XIAO_nrf82840_hardware.png" alt="XIAO nrf82840 hardware" width={600} height="auto" /></p>
 <p style={{textAlign: 'center'}}></p>
 
-## ソフトウェアの準備
+## ソフトウェア準備
 
-このプロジェクトを試すには、以下の 3 つが必要です：
+これを試すには、3つのものが必要です：
 
-1. Google Speech commands データセット（以下を参照）
-2. [Edge Impulse アカウント](https://edgeimpulse.com/)
+1. Google音声コマンドデータセット（以下を確認）
+2. [Edge Impulseアカウント](https://edgeimpulse.com/)
 3. [Arduino IDE](https://www.arduino.cc/)
 
 ### データセット
 
-- Google Speech commands データセットを使用します。ただし、すべてのデータセットではなく、一部の単語のみを使用します。
-- まず、データセットをダウンロードして解凍してください。完全なデータセットのサイズは 2.3GB です。
-- この <a href="https://www.tensorflow.org/lite/microcontrollers" target="_blank">Google Speech commands データセット</a> は、Google が TensorFlow Lite for MicroControllers のマイクロスピーチ例で使用しているものです。
-- <a href="https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb" target="_blank"> コードはこちらで確認できます。</a>
+- Google音声コマンドデータセットを使用します。全データセットではなく、その中のいくつかの単語だけです。
+- まず、データセットをダウンロードして解凍してください。完全なデータセットは2.3GBです。
+- この<a href="https://www.tensorflow.org/lite/microcontrollers" target="_blank">Google音声コマンドデータセット</a>は、GoogleがTensorFlow Lite for MicroControllersのマイクロ音声例で使用しているものです。
+- <a href="https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/examples/micro_speech/train/train_micro_speech_model.ipynb" target="_blank">コードはこちらで確認できます。</a>
 
-上記の最初のリンクからデータセットをダウンロードし、以下のように展開されます：
+上記の最初のリンクからデータセットをダウンロードでき、以下のように展開されます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/dataset_extracted.png" alt="Dataset extracted" alt="Speech commands dataset" width={600} height="auto" /></p>
 
 ## はじめに
 
-それでは、Edge Impulse を使用してデータセットに基づいた機械学習 (ML) モデルを作成する方法を始めましょう。
+それでは、Edge Impulseを使用してデータセットに基づくMLモデルを作成しましょう。
 
-### ステップ 1 - Edge Impulse を開く
+### ステップ1 - Edge Impulseを開く
 
-- Edge Impulse は、開発者がマイクロコントローラーやスマートフォンなどのエッジデバイス向けにカスタム ML モデルを作成およびデプロイできる機械学習 (ML) 開発プラットフォームです。
-- キーワード検出、異常検出、分類など、特定のタスク向けに ML モデルを構築および最適化するためのさまざまなツールとリソースを提供します。
+- Edge Impulseは、開発者がマイクロコントローラーやスマートフォンなどのエッジデバイスにカスタムMLモデルを作成・デプロイできる機械学習（ML）開発プラットフォームです。
+- キーワードスポッティング、異常検知、分類などの特定のタスクに対してMLモデルを構築・最適化するための様々なツールとリソースを提供します。
 
 新しいプロジェクトを作成しましょう。名前を付けてください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge1.png" alt="Edge Impulse 新規プロジェクト" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge1.png" alt="Edge Impulse New project" width={600} height="auto" /></p>
 
-新しいプロジェクトを作成したら、データ取得ページに移動します。
+新しいプロジェクトを作成した後、データ取得ページに移動します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge2.png" alt="Edge Impulse データ取得" width="{600}" height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge2.png" alt="Edge Impulse Data Aquisition" width="{600}" height="auto" /></p>
 
-### ステップ 2 - データを追加
+### ステップ2 - データを追加
 
-Google の音声コマンドデータセットを使用するため、「既存のデータを追加」を選択します。  
-次に、「データをアップロード」を選択します。
+Google音声コマンドデータセットを使用するため、「Add existing data」を選択します。
+次に、「Upload data」を選択します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge3.png" alt="Edge Impulse データアップロード" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge3.png" alt="Edge Impulse upload data" width={600} height="auto" /></p>
 
-次に、データを選択します。音声データセットのフォルダの 1 つを選択しましょう。
+次に、データを選択します - 音声データセットのフォルダの1つを選択しましょう。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge4.png" alt="Edge Impulse データアップロード画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge4.png" alt="Edge Impulse upload data screen" width={600} height="auto" /></p>
 
-このデータセットには、トレーニング用の多くの単語が含まれています。トレーニング用に 3 つのフォルダ (ラベル) とバックグラウンドノイズを選択します。これで 4 つのラベルが得られます。  
-「参照」ボタンを押します。  
-最初は「go」です。フォルダを選択し、すべての .wav ファイルが表示されたら、「アップロード」を押します。
+データセットには訓練用の多くの単語があります。3つのフォルダ（ラベル）と背景ノイズを選択して訓練しましょう。4つのラベルを取得します。
+「Browse」ボタンを押します。
+最初は「go」です。フォルダを選択すると、すべての.wavファイルが表示されます - 「Upload」を押します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge5.png" alt="アップロードするファイル" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge5.png" alt="Files to upload" width={600} height="auto" /></p>
 
-次に、カテゴリのデフォルトオプションをそのままにします。Edge Impulse にデータを分割させます。  
-ラベルについては、自分でラベルを記入してください。すべて完了したら、「データをアップロード」を押します。
+次に、カテゴリのデフォルトオプションを保持します。Edge Impulseにデータを分割させます。
+ラベルについては、自分でラベルを書きます。これらすべての後、「Upload data」を押します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge6.png" alt="Edge Impulse データアップロード画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge6.png" alt="Edge Impulse upload data screen" width={600} height="auto" /></p>
 
-右側にアップロード中のファイルが表示されます。ファイルが多いため、少し時間がかかる場合があります。
+右側で、ファイルがアップロードされているのが確認できます。ファイル数が多いため、時間がかかる場合があります。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge7.png" alt="ファイルアップロード進行状況" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge7.png" alt="Files upload progress" width={600} height="auto" /></p>
 
-しばらくすると、アップロードされたファイルの簡単な概要が表示されます。
+しばらくすると完了し、アップロードされたファイルの簡単な要約が表示されます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge8.png" alt="ファイルアップロード概要" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge8.png" alt="Files upload resume" width={600} height="auto" /></p>
 
-その後、この画面が表示されます。
+この後、画面は以下のようになります。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge9.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge9.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-さらにデータをアップロードするには、右側のファイルリスト上部にある小さなアップロードボタンを押します。  
-これをあと 3 回繰り返します。2 つのラベルとバックグラウンドノイズです。  
-私は「happy」、「bird」、および「バックグラウンドノイズ」フォルダを「noise」というラベルで選択します。  
-最終的に、以下がすべてのラベルです。
+さらにデータをアップロードするには、ファイルリストの上にある右側の小さなアップロードボタンを押します。
+これをさらに3回繰り返します - さらに2つのラベルと背景ノイズです。
+happy、bird、そして「noise」ラベルの「background noise」フォルダを選択します。
+最終的に、これらがすべてのラベルです。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge10.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge10.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-次に、単語を学習するためのネットワークを作成します。「Impulse デザイン」をクリックしてインパルスを作成します。
+次に、単語を学習するネットワークを作成しましょう。Impulse designをクリックしてインパルスを作成します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge11.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge11.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-### ステップ 3 - トレーニング方法を選択
+### ステップ3 - 訓練方法を選択
 
-クリップはそれぞれ 1 秒で 16kHz なので、ウィンドウサイズと周波数をそのままにします。次に、処理ブロックを追加します。
+クリップはそれぞれ1秒で16Khzなので、ウィンドウサイズと周波数を同じに保ちましょう。次に、処理ブロックを追加しましょう。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge12.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge12.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-Edge Impulse はここでも大いに役立ちます。「処理ブロックを追加」をクリックし、「Audio (MFCC)」を選択します。
+Edge Impulse はここでも大いに役立ちます。「Add a processing block」をクリックして、Audio (MFCC) を選択してください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge13.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge13.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-次に、「学習ブロックを追加」をクリックし、「分類」を選択します。
+次に、「Add learning block」をクリックして Classification を選択してください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge14.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge14.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-これで、最後の列「出力特徴量」に 4 つのラベル (bird、go、happy、noise) が表示されます。  
-「インパルスを保存」を押して、ここまでの作業を保存します。
+これで、最後の列 - Output features - に4つのラベル（bird、go、happy、noise）が表示されます。
+「Save Impulse」を押して、これまでの作業を保存してください。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge15.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge15.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-### ステップ 4 - 特徴量を生成
+### ステップ 4 - 特徴量の生成
 
-次に、MFCC パラメータを確認します。必要に応じて値を変更できます。  
-今回はデフォルト値をそのまま使用します。「パラメータを保存」をクリックします。  
-パラメータを保存すると、「特徴量を生成」するための新しいウィンドウが表示されます。
+それでは、MFCC パラメータを見てみましょう。必要に応じて値を変更できます。
+今回は、デフォルト値を保持しましょう。「Save Parameters」をクリックしてください。
+パラメータを保存すると、「Generate features」の新しいウィンドウが表示されます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge16.png" alt="Edge Impulse データセット画面" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge16.png" alt="Edge Impulse dataset screen" width={600} height="auto" /></p>
 
-クリックすると、Edge Impulse が特徴量の生成を開始します。
+クリック後、Edge Impulse が特徴量の生成を開始します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge17.png" alt="特徴量生成" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge17.png" alt="Generate features" width={600} height="auto" /></p>
 
-しばらくすると、特徴量が生成され、それらを視覚化することができます。
+しばらくすると、特徴量が生成され、それらを視覚化できます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge18.png" alt="特徴量エクスプローラー" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge18.png" alt="Feature explorer" width={600} height="auto" /></p>
 
-次に、選択したパラメータを使用してネットワークをトレーニングします。「Classifier」をクリックしてください。
+これで、選択したパラメータでネットワークを訓練できます。「Classifier」をクリックしてください。
 
 ### ステップ 5 - 分類器
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge19.png" alt="分類器" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge19.png" alt="Classifier" width={600} height="auto" /></p>
 
-ここでは、トレーニングサイクルやデータ拡張の有無など、ネットワーク設定を調整できます。  
-Edge Impulse は、キーワード検出のためのシンプルで効果的なニューラルネットワークアーキテクチャを提供します。このアーキテクチャは以下の層で構成されています：
-  - <b>入力層:</b> 入力層は MFCC 特徴量を入力として受け取ります。
-  - <b>隠れ層:</b> 隠れ層は、MFCC 特徴量から高次の特徴を抽出することを学習します。Edge Impulse は、畳み込み層やリカレント層など、さまざまな隠れ層タイプをサポートしています。
-  - <b>出力層:</b> 出力層は、音声入力にキーワードが含まれている確率を予測します。
+ここでは、訓練サイクル、データ拡張の有無など、ネットワーク設定を調整できます。
+Edge Impulse は、キーワードスポッティング用のシンプルで効果的なニューラルネットワークアーキテクチャを提供します。このアーキテクチャは以下の層で構成されています：
 
-デフォルトのパラメータを変更することもできますが、デフォルト設定で十分です。「Start Training」をクリックしてください。
+- <b>入力層：</b> 入力層は MFCC 特徴量を入力として受け取ります。
+- <b>隠れ層：</b> 隠れ層は MFCC 特徴量からより高次の特徴を抽出することを学習します。Edge Impulse は、畳み込み層やリカレント層など、さまざまな隠れ層タイプをサポートしています。
+- <b>出力層：</b> 出力層は、音声入力にキーワードが含まれている確率を予測します。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge20.png" alt="ネットワークアーキテクチャ" width={600} height="auto" /></p>
+デフォルトパラメータを変更できますが、デフォルトで十分です。「Start Training」をクリックしてください。
 
-トレーニングを開始すると、画面の右側でトレーニングの進行状況を確認できます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge20.png" alt="Network architecture" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge21.png" alt="トレーニング進行状況" width={600} height="auto" /></p>
+訓練開始後、画面の右側で訓練の進行状況を確認できます。
 
-ターゲットデバイスを nRF52840（例：XIAO nRF52840 Sense）に変更することで、パフォーマンス計算や最適化を確認できます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge21.png" alt="Training progress" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge22.png" alt="ターゲットデバイス" width={600} height="auto" /></p>
+Target device を nRF52840 - 私たちの XIAO nRF52840 Sense のような - に変更して、パフォーマンス計算と最適化を確認できます。
 
-トレーニングが完了すると、混同行列とデータエクスプローラーが表示されます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge22.png" alt="Target device" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge23.png" alt="混同行列" width={600} height="auto" /></p>
+訓練が完了すると、混同行列とデータエクスプローラが表示されます。
 
-ネットワークが準備できたので、いくつかのサンプルを試し、ライブ分類を行ってみましょう。  
-ライブ分類に移動すると、サンプルを選択して分類結果を確認できます。例えば、鳥のサンプルでは、結果に「bird」と表示されます。素晴らしいですね。モデルが機能しています。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge23.png" alt="Confusion Matrix" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge24.png" alt="ライブ分類" width={600} height="auto" /></p>
+ネットワークの準備ができたので、いくつかのサンプルを試してライブ分類を行ってみましょう。
+ライブ分類に移動すると、サンプルを選択して分類結果を確認できます。ここでは、鳥の例について、結果で bird が得られます。素晴らしいです。モデルが動作しています。
 
-次に、モデルテストに進みましょう。  
-テスト用に分割されたサンプルを使用してモデルをテストします。「Classify all」をクリックしてください。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge24.png" alt="Live classification" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge25.png" alt="テストデータ" width={600} height="auto" /></p>
+それでは、モデルテストに移動しましょう。
+テスト用に分割されたサンプルを使用してモデルをテストしてみましょう。「Classify all」をクリックしてください。
 
-約 90% の精度が得られます。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge25.png" alt="Test data" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge26.png" alt="精度" width={600} height="auto" /></p>
+約90%の精度が得られます。
 
-### ステップ 6 - デプロイと Arduino ライブラリの取得
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge26.png" alt="Accuracy" width={600} height="auto" /></p>
 
-次に、マイクロコントローラー用のファイルを取得するためにデプロイに進みます。
+### ステップ 6 - デプロイメントと Arduino ライブラリの取得
 
-#### デプロイオプション
+それでは、デプロイメントに移動して、マイクロコントローラ用のファイルを取得しましょう。
 
-Arduino を選択します。
+#### デプロイメントオプション
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge27.png" alt="精度" width={600} height="auto" /></p>
+Arduino を選択しましょう。
 
-次に、「Quantized(int8)」を選択したままにして、「Build」をクリックして Arduino IDE で使用するファイルをダウンロードします。  
-最適化を少し調整することもできます。精度が低いと感じた場合は、EON コンパイラをオフにして再試行してください。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge27.png" alt="Accuracy" width={600} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge28.png" alt="精度" width={600} height="auto" /></p>
+次に、Quantized(int8) を選択したまま、「Build」をクリックして Arduino IDE で使用するファイルをダウンロードしてください。
+最適化を少し試すことができます。精度が低いことに気づいた場合は、EON コンパイラをオフにして再試行してください。
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge28.png" alt="Accuracy" width={600} height="auto" /></p>
 
 しばらくすると、ファイルが自動的にダウンロードされます。
-
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge29.png" alt="Arduino ファイルダウンロード" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge29.png" alt="Arduino Files download" width={600} height="auto" /></p>
 
 ### ステップ 7 - Arduino IDE にライブラリを追加
 
-Arduino IDE で、新しくダウンロードしたファイルを追加します。  
-「Sketch > Include Library > Add .ZIP Library」に移動します。
+Arduino IDEで、新しくダウンロードしたファイルを追加しましょう。
+Sketch > Include Library > Add .ZIP Libraryに移動します
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge30.png" alt="Arduino IDE ライブラリ追加" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge30.png" alt="Arduino IDE Add library" width={600} height="auto" /></p>
 
-ダウンロードしたファイルを選択します。しばらくすると、出力ウィンドウに「ライブラリがインストールされました」というメッセージが表示されます。
+ダウンロードしたファイルを選択します。しばらくすると、出力ウィンドウにライブラリがインストールされたというメッセージが表示されます。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge31.png" alt="ライブラリインストール済み" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge31.png" alt="Library installed" width={600} height="auto" /></p>
 
-### ステップ 8 - XIAO nRF52840 Sense で RGB ライトを音声制御
+### ステップ8 - XIAO nRF52840 SenseのRGBライトを音声制御する
 
-例を開きます。  
-「Examples > &lt;your_files_names&gt; > nano_ble33_sense > nano_ble33_sense_microphone」に移動します。
+サンプルを開きましょう
+Examples > &lt;your_files_names&gt; > nano_ble33_sense > nano_ble33_sense_microphoneに移動します
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge32.png" alt="ライブラリインストール済み" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge32.png" alt="Library installed" width={600} height="auto" /></p>
 
-なぜ Arduino BLE 33 Sense を使用するのか？  
-それは、マイクを制御するために同じライブラリ（PDM：パルス密度変調）を使用しているからです。Arduino Nano BLE 33 Sense には MP34DT05 が搭載されており、XIAO nRF52840 Sense には MSM261D3526H1CPM が搭載されています。  
-スケッチを開いたら、コンパイルしてエラーがないか確認します。
+なぜArduino BLE 33 Senseなのでしょうか？これらは同じライブラリ - PDM（パルス密度変調）- を使用してマイクを制御します。Arduino Nano BLE 33 SenseはMP34DT05を搭載し、XIAO nRF52840 SenseはMSM261D3526H1CPMを搭載しています。
+スケッチが開いたら、コンパイルしてエラーがないか確認しましょう。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge33.png" alt="スケッチオープン" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge33.png" alt="Sketch open" width={600} height="auto" /></p>
 
-しばらくすると、スケッチがコンパイルされ、エラーが報告されませんでした。
+しばらくすると、スケッチがコンパイルされ、エラーは報告されません。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge34.png" alt="スケッチを開く" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge34.png" alt="Sketch open" width={600} height="auto" /></p>
 
-次に、XIAO nRF52840 Sense を接続し（まだ接続していない場合）、コードをボードにアップロードします。
+次に、XIAO nRF52840 Senseを接続し（まだ接続していない場合）、コードをボードにアップロードします。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge35.png" alt="スケッチを開く" width={600} height="auto" /></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge36.png" alt="コンパイル結果" width={600} height="auto" /></p>
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge37.png" alt="アップロード" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge35.png" alt="Sketch open" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge36.png" alt="Compile result" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge37.png" alt="Upload" width={600} height="auto" /></p>
 
-次に、シリアルポートを開き（Ctrl+Shift+M）、推論結果を確認します（ボードはすでに録音、推論、予測を開始しています）。
+次に、シリアルポートを開き（Ctrl+Shift+M）、推論結果を確認します（ボードはすでに録音、推論、予測を開始しています）
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge38.png" alt="シリアルモニタ" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge38.png" alt="Serial Monitor" width={600} height="auto" /></p>
 
-選択した単語の1つを言ってみてください。ここでは「go」と言いました。
+選択した単語の一つを言ってみてください。私は「go」と言いました
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge39.png" alt="シリアルモニタ" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge39.png" alt="Serial Monitor" width={600} height="auto" /></p>
 
-単語が正しく検出されると、最も確率の高い単語の結果が1.0に近くなり、他の単語は0.0に近い値になります。
+単語が正しく検出されると、最も可能性の高い単語は1.0に近い結果を持ち、他の単語は0.0に近い値を持ちます。
+では、少し楽しんでコードを少し変更してみましょう。
+XIAO nRF52840 Senseには3色の内蔵LEDがあります：
 
-次に、少し楽しむためにコードを少し変更してみましょう。  
-XIAO nRF52840 Senseには、3色の内蔵LEDがあります：
+- 赤 - LED_BUILTINまたはLED_RED
 
-- 赤 - LED_BUILTIN または LED_RED
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge40.gif" alt="赤色LED" width={600} height="auto" /></p>
-- 緑 - LED_GREEN
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge41.gif" alt="緑色LED" width={600} height="auto" /></p>
-- 青 - LED_BLUE
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" alt="青色LED" width={600} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge40.gif" alt="Red LED" width={600} height="auto" /></p>
+- 緑 - LED_GREEN
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge41.gif" alt="Green LED" width={600} height="auto" /></p>
+- 青 - LED_BLUE
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/BLE-PDM-TinyML/edge42.gif" alt="Blue LED" width={600} height="auto" /></p>
 
-3つの単語があるので、それぞれの単語に色を割り当て、単語に応じて対応する色を点灯させます。  
-- 赤は「bird」用  
-- 緑は「Go」用  
-- 青は「happy」用  
+3つの単語があるので、それぞれに色を割り当てて、その単語に対応する色を点灯させましょう。
 
-簡単にするために、ボードのPIN定義を確認したところ、以下のPINがLEDの色に割り当てられていました：
-- 赤 - Pin 11  
-- 緑 - Pin 13  
-- 青 - Pin 12  
+- 赤はbirdに
+- 緑はGoに
+- 青はhappyに
 
-まず、しきい値を定義する必要があります。予測値は0.0から1.0の範囲であることがわかっています。1.0に近いほど、単語の分類に確信が持てます。この値は後で調整可能です。ここでは0.7に設定します。
+より簡単にするため、ボードのPIN定義を確認し、以下のPINがLEDの色に割り当てられています：
 
-まず、いくつかの変数を定義します。これらはインクルードされたライブラリの直後に定義しました：
+- RED - Pin 11
+- GREEN - Pin 13
+- BLUE - Pin 12
+
+まず、閾値を定義する必要があります。予測は0.0から1.0の範囲であることがわかっています。1.0に近いほど、単語の分類に確信があります。この値は後で調整できます。0.7に設定します。
+
+まず、いくつかの変数を定義します。これらをインクルードライブラリの直後に定義しました：
 
 ```cpp
-/* 予測のしきい値 */
+/* threshold for predictions */
 float threshold = 0.7;
 
 /** 
-  ラベルインデックス:
+  LABELS INDEX:
   0 - bird
   1 - go
   2 - happy
   3 - noise
 */
-// 点灯するLEDピン（色を定義）
+// LED pin (defines color) to light up
 /**
- PIN 11 - 赤
- PIN 12 - 青
- PIN 13 - 緑
+ PIN 11 - RED
+ PIN 12 - BLUE
+ PIN 13 - GREEN
 */
 int LED = 0;
 int oldLED;
 ```
 
-<i>int oldLED</i> は、予測がない場合や予測が変わった場合に前回点灯していたLEDを消灯するために使用します。  
-<i>int LED</i> は、現在点灯するLEDを定義します。
+<i>int oldLED</i> は、予測がない場合や予測が変わった場合にオフにできるよう、前回点灯したLEDを定義します。
 
-次に、loop()関数内で、forループ命令の中（CLASSIFIER_LABEL_COUNTをループする箇所、約129行目 - 上記のコードを含む）に以下を追加します：
+<i>int LED</i> は、現在点灯させるLEDです。
+
+次に、loop()関数内のforループ命令の中で、CLASSIFIER_LABEL_COUNTをループする箇所（129行目付近 - 上記の行を含む）：
 
 ```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
 ```
 
-if命令を使用して分類値を確認します。定義したしきい値を超えた場合、switch命令を使用して記録された単語を確認します。
+if命令を使用して分類値をチェックします。定義された閾値を上回っている場合、switch命令を使用してどの単語が記録されているかを確認します。
 
-以下は、追加した内容を含む完全なforループです：
+私たちの追加を含む完全なforループは以下の通りです：
 
 ```cpp
 for (size_t ix = 0; ix < EI_CLASSIFIER_LABEL_COUNT; ix++) {
         ei_printf("    %s: %.5f\n", result.classification[ix].label, result.classification[ix].value);
-        // LEDを点灯させる
+        //lets light up some LEDS
 
         if (result.classification[ix].value > threshold) {
-          // どのラベルか確認
+          //now let's see what label were in
           switch (ix) {
             case 0: LED = 11; break;
             case 1: LED = 13; break;
             case 2: LED = 12; break;
             default: LED = 0;
           }
-          // Senseでは、LOWでLEDが点灯
+          //in Sense, LOW will light up the LED
           if (LED != 0) {
-            digitalWrite (oldLED, HIGH); // 直前の単語と異なる場合、前回のLEDを消灯
+            digitalWrite (oldLED, HIGH); //if we enter a word right next to previous - we turn off the previous LED
             digitalWrite (LED, LOW);            
             oldLED = LED;
           }
-          else // LEDを消灯
+          else //turn off LED
             digitalWrite (oldLED, HIGH);
         }
     }
 ```
 
-変更後、コードをマイクロコントローラにアップロードし、トレーニングした単語を言ってみて、単語に応じてLEDが点灯する様子を確認してください。
+変更後、コードをマイコンにアップロードして、訓練した単語を言ってみて、その単語に応じてLEDが点灯するかを確認してください。
 
-以上です。直接サポートされているわけではありませんが、XIAO nRF52840 Senseを使用してEdge ImpulseでいくつかのMLモデルを実行できるようになりました。
+これで完了です。直接サポートされていませんが、Edge Impulseを使用してXIAO nRF52840 SenseでMLモデルを実行できるようになりました。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- [Brunoの努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237) に感謝します。あなたの作業は[展示されます](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)。
+- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Brunoの努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=35979237)に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

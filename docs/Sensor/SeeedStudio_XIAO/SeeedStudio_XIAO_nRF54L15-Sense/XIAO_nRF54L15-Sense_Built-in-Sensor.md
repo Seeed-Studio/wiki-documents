@@ -19,12 +19,14 @@ sidebar_position: 1
 **6-Axis IMU (Inertial Measurement Unit)** Sensors like the **LSM6DS3TR-C** integrate accelerometers and gyroscopes to measure the motion and orientation of an object in three-dimensional space. Specifically, the LSM6DS3TR-C has the following features:
 
 **Accelerometer function:**
+
 - Measures the acceleration of an object along the X, Y, and Z axes. It is able to sense object motion (e.g., rest, acceleration, deceleration) and tilt changes (e.g., angle of the object).
 - It can be used to detect gait, position changes, vibrations, etc.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/mg24_mic/xyz1.5.jpg" style={{width:320, height:'auto'}}/></div>
 
 **Gyroscope function (Gyroscope):**
+
 - Measures the angular velocity of an object around the X, Y, and Z axes, i.e., the rotation of the object.
 - Can be used to detect rotation, rate of rotation, and change in direction.
 
@@ -48,27 +50,22 @@ Before proceeding, please ensure that your development environment is correctly 
 
 Trigger count (trig_cnt): A counter that increments with each new data sample.
 
-
 Below is an example of the serial output you can expect to see from the IMU, as displayed in the PlatformIO Device Monitor. This output provides real-time readings of the accelerometer and gyroscope data, which are fundamental for understanding the motion and orientation of your device.
-
 
 <div style={{textAlign:'center'}}>
     <img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/imu_display.png" alt="XIAO nRF54L15 BLE Advertising Power Consumption" style={{width:1000, height:'auto', border:'1px solid #ccc', borderRadius:5, boxShadow:'2px 2px 8px rgba(0,0,0,0.2)'}}/>
     <p style={{fontSize:'0.9em', color:'#555', marginTop:10}}><em> Real-time IMU Data Output from PlatformIO Device Monitor, displaying raw accelerometer and gyroscope readings.</em></p>
 </div>
 
-
 This raw data forms the basis for various applications, from simple motion detection to complex orientation tracking, by applying appropriate algorithms (e.g., filtering, sensor fusion).
 
 ---
- 
+
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Seeed-Studio/platform-seeedboards/tree/main/examples/zephyr-imu" target="_blank" rel="noopener noreferrer">
     <strong><span><font color={'FFFFFF'} size={"4"}> Download the Library</font></span></strong> <svg aria-hidden="true" focusable="false" role="img" className="mr-2" viewBox="-3 10 9 1" width={16} height={16} fill="currentColor" style={{textAlign: 'center', display: 'inline-block', userSelect: 'none', verticalAlign: 'text-bottom', overflow: 'visible'}}><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z" /></svg>
     </a>
 </div><br />
-
-
 
 ```cpp
 #include <stdio.h>
@@ -260,9 +257,6 @@ int main(void)
     return 0;
 }
 ```
-
-
-
 
 ## XIAO nRF54L15 Sense MIC
 
@@ -491,14 +485,14 @@ int main(void)
 {
     int ret;
 
-	// Check if all required devices are ready
+ // Check if all required devices are ready
     if (!device_is_ready(dmic_dev) || !device_is_ready(led.port) || 
         !device_is_ready(button.port) || !device_is_ready(console_dev)) {
         LOG_ERR("A required device is not ready.");
         return -ENODEV;
     }
 
-	// Configure DMIC channel mapping
+ // Configure DMIC channel mapping
     dmic_config.channel.req_chan_map_lo = dmic_build_channel_map(0, 0, PDM_CHAN_LEFT);
 
     // Configure LED as output
@@ -535,16 +529,20 @@ int main(void)
 Next, open the terminal in the scripts folder directory and perform the following operations, provided that the program has already been burned.
 
 **Setp 1:**
+
 - `python3 -m pip install pyserial`
 
 **Setp 2:**
+
 - `python record.py -p /dev/cu.usbmodemA0CBDDC33 -o output.wav -b 921600`
 
 :::tip
 In this command`python record.py -p **/dev/cu.usbmodemA0CBDDC33** -o output.wav -b 921600`, you need to replace it with your serial port for use.
 :::
 **Setp 3:**
+
 - After executing the command, you will be prompted to press the button to record sound.
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/dmic_record1.jpg" style={{width:900, height:'auto'}}/></div>
 
 After recording the audio, the file will be saved in scripts
@@ -555,11 +553,11 @@ After recording the audio, the file will be saved in scripts
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

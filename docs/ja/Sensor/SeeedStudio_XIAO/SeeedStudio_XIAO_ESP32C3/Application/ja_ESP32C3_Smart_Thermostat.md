@@ -2,33 +2,29 @@
 description: XIAO ESP32C3 ESPHome スマートサーモスタット
 title: Xiao ESP32C3 ESPHome スマートサーモスタット
 keywords:
-- 貢献
+- Contribution
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/esp32c3_smart_thermostat
 last_update:
-  date: 05/15/2025
+  date: 12/1/2023
   author: Chris (Echo7394)
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Xiao ESP32C3 ESPHome スマートサーモスタット
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p>
 
-このWikiでは、Xiao ESP32C3 ESPHome スマートサーモスタットを作成する手順をステップバイステップで説明します。それでは始めましょう！
+このwikiでは、Xiao ESP32C3 ESPHome スマートサーモスタットの作り方を段階的に説明します。それでは始めましょう！
 
 ## ハードウェアの準備
 
-このチュートリアルをすべて通して実行する場合、以下のものを準備する必要があります。
+このチュートリアルをすべて実行したい場合は、以下を準備する必要があります。
 
 <table align="center">
   <tbody><tr>
       <th>Seeed Studio XIAO ESP32C3</th>
       <th>Seeed Studio 拡張ボード</th>
-      <th>Home Assistant デバイス <br /> 例: Seeed Studio Home Assistant Yellow</th>
+      <th>Home Assistant デバイス <br /> 例：Seeed Studio Home assistant Yellow</th>
     </tr>
     <tr>
       <td><div align="center"><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:100, height:'auto'}}/></div></td>
@@ -43,11 +39,11 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeeduino-XIAO-Expansion-board-p-4746.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
-            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
+            <a class="get_one_now_item" href="https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> 詳細を確認 🖱️</font></span></strong>
             </a>
         </div></td>
@@ -58,52 +54,94 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <table align="center">
   <tbody><tr>
-      <th>Grove - 温湿度センサー Pro (DHT22/AM2302)</th>
-      <th>Grove - 2チャンネルSPDTリレー</th>
-      <th>Grove - 高電流リレー 5V/10A</th>
-      <th>Grove - OLEDディスプレイ 0.96" (SSD1315)</th>
-      <th>モーメンタリーボタン (任意の種類で可)</th>
+      <th>Grove - Temperature & Humidity Sensor Pro (DHT22/AM2302)</th>
+      <th>Grove - 2-Channel SPDT Relay</th>
+      <th>Grove - Relay High current 5V/10A</th>
+      <th>Grove - OLED Display 0.96" (SSD1315)</th>
+      <th>モーメンタリーボタン（どのような種類でも可）</th>
     </tr>
     <tr>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/2.jpg" alt="pir" width={210} height="auto" /></p></td>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/3.jpg" alt="pir" width={210} height="auto" /></p></td>
       <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/4.jpg" alt="pir" width={210} height="auto" /></p></td>
-      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/5.jpg" alt="pir" width={210} height="auto" /></p></td> 
-      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/8.jpg" alt="pir" width={400} height="auto" /></p></td> 
+      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/5.jpg" alt="pir" width={210} height="auto" /></p></td>
+      <td><p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/8.jpg" alt="pir" width={400} height="auto" /></p></td>
     </tr>
     <tr>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Temperature-Humidity-Sensor-Pro-AM2302-DHT22.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-2-Channel-SPDT-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Relay.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td align="center"><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-OLED-Display-0-96-SSD1315-p-4294.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
   </tbody></table>
 
-## ソフトウェア準備
+<!-- ### 1. 使用したアイテム
+
+a. Seed Studio Xiao ESP32C3
+
+<!-- ![image1](./1.jpg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/1.jpg" alt="pir" width={1000} height="auto" /></p>
+
+b. Grove DHT22 センサー
+
+<!-- ![image2](./2.jpg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/2.jpg" alt="pir" width={1000} height="auto" /></p>
+
+c. Grove 2チャンネルリレー
+
+<!-- ![image3](./3.jpg) 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/3.jpg" alt="pir" width={1000} height="auto" /></p>
+
+d. Grove シングルチャンネルリレー
+
+<!-- ![image4](./4.jpg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/4.jpg" alt="pir" width={1000} height="auto" /></p>
+
+e. Grove SSD1315 モジュール
+
+<!-- ![image5](./5.jpg) 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/5.jpg" alt="pir" width={1000} height="auto" /></p>
+
+f. （オプション）Seeed Studio 拡張ボード
+
+<!-- ![image6](./6.jpg) 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/6.jpg" alt="pir" width={1000} height="auto" /></p>
+
+d. （オプション）[Seeed Studio Home Assistant Yellow](https://www.seeedstudio.com/Home-Assistant-Yellow-Kit-with-selectable-CM4-p-5680.html)、または任意のデバイス
+
+<!-- ![image7](./7.jpg) 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/7.jpg" alt="pir" width={1000} height="auto" /></p>
+
+e. モーメンタリーボタン（どのような種類でも可）
+
+<!-- ![image8](./8.jpg)
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/8.jpg" alt="pir" width={1000} height="auto" /></p> -->
+
+## ソフトウェアの準備
 
 ### Home Assistant のインストール
 
-Home Assistant がすでに動作していることを確認してください。ここでは、[製品](https://wiki.seeedstudio.com/ja/home_assistant_topic/#-devices-for-home-assistant-)に Home Assistant をフラッシュする方法を紹介する複数の Wiki があります。私は Raspberry Pi CM4 を搭載した Home Assistant Yellow を使用しているため、[公式の方法を使用して OS を Home Assistant Yellow にフラッシュすることができます](https://yellow.home-assistant.io/power-supply/)。
+Home Assistant が既に稼働していることを確認してください。[製品](https://wiki.seeedstudio.com/home_assistant_topic/#-devices-for-home-assistant-)にHome Assistantをフラッシュする方法を紹介する複数のwikiがあります。私はRaspberry Pi CM4で動作するHome assistant Yellowを使用しているため、[公式のものを直接使用してHome assistant YellowにOSをフラッシュできます](https://yellow.home-assistant.io/power-supply/)。
 
 ### Home Assistant に ESPHome をインストール
 
-ESPHome は **Home Assistant Add-On** として利用可能で、アドオンストアから簡単にインストールできます。
+ESPHome は **Home Assistant アドオン**として利用でき、アドオンストアから簡単にインストールできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/esphome.jpg" alt="pir" width={1000} height="auto" /></p>
 
@@ -115,115 +153,114 @@ ESPHome は **Home Assistant Add-On** として利用可能で、アドオンス
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/3.png" style={{width:900, height:'auto'}}/></div>
 
-ESPHome が正常にロードされると、以下のウィンドウが表示されます。
+ESPHome が正常に読み込まれると、以下のウィンドウが表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/4.png" style={{width:900, height:'auto'}}/></div>
 
-## 始めるにあたって
+## はじめに
 
-すべてのソフトウェアとハードウェアが準備できたら、作業を開始できます。
+すべてのソフトウェアとハードウェアが準備できたら、開始できます。
 
-### 1. Seeed Studio XIAO ESP32C3 を ESPHome に追加
+### 1. Seeed Studio XIAO ESP32C3 を ESPHome に追加する
 
-- **ステップ 1.** **+ NEW DEVICE** をクリック
+- **ステップ 1.** **+ NEW DEVICE** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/5.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 2.** **CONTINUE** をクリック
+- **ステップ 2.** CONTINUE をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/6.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 3.** デバイスの **名前** を入力し、**ネットワーク名** や **パスワード** などの WiFi 認証情報を入力します。その後、**NEXT** をクリック
+- **ステップ 3.** デバイスの **名前** を入力し、**ネットワーク名** と **パスワード** などのWiFi認証情報を入力します。次に **NEXT** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/7.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 4.** **ESP32-C3** を選択してクリック
+- **ステップ 4.** **ESP32-C3** を選択してクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/8.png" style={{width:900, height:'auto'}}/></div>
 
-- **ステップ 5.** このボードを手動で設定するため、**SKIP** をクリック
+- **ステップ 5.** このボードを手動で設定するため、**SKIP** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-full_function/14.png" style={{width:400, height:'auto'}}/></div>
 
-### 2. YAML 設定を作成してアップロード
+### 2. YAML設定の作成とアップロード
 
-- **ステップ 1.** 新しく作成したボードの下にある **EDIT** をクリック
+- **ステップ 1.** 新しく作成されたボードの下にある **EDIT** をクリックします
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/C3-ESPHome-img/9.png" style={{width:900, height:'auto'}}/></div>
 
-<!-- ### 2. Home Assistant と ESPHome のインストール
+<!-- ### 2. Home Assistant と ESPHome をインストールする
 
-- 選択したデバイスに Home Assistant をインストールします。デバイスに応じた多くの情報ガイドがあります。
-Home Assistant をインストールするデバイスの種類によって、最適な Home Assistant のスタイルが決まります。
+- 選択したデバイスに Home Assistant をインストールします。Home Assistant をインストールしようとしているデバイスに基づいて、多くの情報豊富なガイドがあります。デバイスの種類によって、どのスタイルの Home Assistant が最もニーズに適しているかが決まります。
 
-- ESPHome のインストールは、Supervisor/Add-Ons/Extensions タブで「ESPHome」を検索してクリックするだけで簡単に行えます。
+- ESPHome のインストールは、Supervisor/Add-Ons/Extensions タブで「ESPHome」を検索し、それをクリックしてインストールするだけで簡単です。
 
 <!-- ![image9](./esphome.jpg)
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/esphome.jpg" alt="pir" width={1000} height="auto" /></p> -->
 
-- **ステップ 7.** YAML 設定を作成してアップロード
+- **ステップ 7.** YAML設定の作成とアップロード
 
-  以下のコードの説明:
+  以下のコードの説明：
 
-  - **名前:** "thermostat"
+  - **名前：** "thermostat"
 
-  - **ボード設定:** <br />
-  フラッシュモードを DIO に設定。<br />
-  ボードを "seeed_xiao_esp32c3" として指定し、Arduino フレームワークを使用。
+  - **ボード設定：** <br />
+  フラッシュモードはDIOに設定。<br />
+  ボードはArduinoフレームワークで「seeed_xiao_esp32c3」として指定。
 
-  - **起動時のアクション:**<br />
-  ログメッセージを表示: "Booting thermostat."<br />
-  3 つのリレー (暖房、冷却、ファン) をオフにする。<br />
-  500 ミリ秒の遅延。<br />
-  "boot_beep" という名前のスクリプトを実行。
+  - **起動時のアクション：**<br />
+  ログメッセージを表示：「Booting thermostat.」<br />
+  3つのリレーをオフにする：heat、cooling、fan。<br />
+  500ミリ秒遅延。<br />
+  「boot_beep」という名前のスクリプトを実行。
 
-  - **スクリプト設定:**<br />
-  起動ビープスクリプト:<br />
-  ブザーをオンにし、ビープ音を生成する周波数を設定し、300 ミリ秒後にオフにする。
+  - **スクリプト設定：**<br />
+  起動ビープスクリプト：<br />
+  ブザーをオンにし、ビープ音を出すために周波数を設定し、300ミリ秒後にオフにする。
 
-  - **API と OTA 設定:**<br />
-  API:<br />
-  暗号化キーを指定。<br />
-  OTA:<br />
-  OTA 更新用のパスワードを "13371337" に設定。
+  - **APIとOTA設定：**<br />
+  API：<br />
+  暗号化キーが指定されている。<br />
+  OTA：<br />
+  無線アップデート用にパスワードが「13371337」に設定されている。
 
-  - **ブザー出力:**<br />
-  LEDC プラットフォームを使用してピン 5 を設定。
+  - **ブザー出力：**<br />
+  ピン5でLEDCプラットフォームを使用して設定。
 
-  - **WiFi 設定:**<br />
-  Wi-Fi に接続するための SSID とパスワードを指定。<br />
-  フォールバックホットスポット (キャプティブポータル) を "Xiao-Esp32C3" という SSID と "13371337" というパスワードで設定。
+  - **WiFi設定：**<br />
+  Wi-Fi接続用のSSIDとパスワードを指定。<br />
+  フォールバックホットスポット（キャプティブポータル）がSSID「Xiao-Esp32C3」とパスワード「13371337」で設定されている。
 
-- **I2C設定:**<br />
-  SDAピン6とSCLピン7を使用してI2C通信を設定します。
+  - **I2C設定：**<br />
+  SDAピン6とSCLピン7でI2C通信を設定。
 
-- **フォント設定:**<br />
-  異なるサイズの2つのフォントをディスプレイ用に定義します。
+  - **フォント設定：**<br />
+  異なるサイズのディスプレイ用に2つのフォントを定義。
 
-- **ディスプレイ設定:**<br />
-  SSD1315 I2Cディスプレイを使用し、情報をフォーマットして表示するためのラムダ関数を利用します。<br />
-  華氏温度、湿度、Wi-Fi信号強度、およびIPアドレスを表示します。
+  - **ディスプレイ設定：**<br />
+  ラムダ関数を使用してSSD1315 I2Cディスプレイを利用し、情報をフォーマットして表示。<br />
+  華氏温度、湿度、Wi-Fi信号強度、IPアドレスを表示。
 
-- **センサー設定:**<br />
-  DHT22センサーを使用して温度と湿度を測定し、10秒ごとに更新します。<br />
-  また、Wi-Fi信号センサーを20秒ごとに更新します。
+  - **センサー設定：**<br />
+  10秒の更新間隔でDHT22センサーを使用して温度と湿度の読み取りを行う。<br />
+  20秒の更新間隔でWi-Fi信号センサーを含む。
 
-- **テキストセンサー設定:**<br />
-  サーモスタットのIPアドレスとESPHomeバージョンを表示します。
+  - **テキストセンサー設定：**<br />
+  サーモスタットのIPアドレスと ESPHome バージョンを表示。
 
-- **スイッチ設定:**<br />
-  relay_heat、relay_cooling、relay_fan用の3つのGPIOスイッチを設定します。
+  - **スイッチ設定：**<br />
+  relay_heat、relay_cooling、relay_fan用に3つの GPIO スイッチを設定。
 
-- **バイナリセンサー設定:**<br />
-  循環ファンボタンの押下を検出するバイナリセンサーを設定します。<br />
-  押下時に気候システムのファンモードを制御します。
+  - **バイナリセンサー設定：**<br />
+  循環ファンボタン押下用のバイナリセンサーを設定。<br />
+  押されると、気候システムのファンモードを制御。
 
-- **気候設定:**<br />
-  指定された温度センサーを使用してサーモスタット制御を実装します。<br />
-  加熱、冷却、ファンモード、アイドルのアクションを定義します。<br />
-  温度制限、ステップサイズ、デフォルトプリセットを設定します。
+  - **気候設定：**<br />
+  指定された温度センサーを使用してサーモスタット制御を実装。<br />
+  暖房、冷房、ファンモード、アイドル用のアクションを定義。<br />
+  温度制限、ステップサイズ、デフォルトプリセットを設定。
 
-  この設定をESPHomeデバイス構成のyamlファイルに貼り付けてください。完全な.yamlファイルは[こちら](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/esp32c3config.yaml)からダウンロードできます。
+  これを ESPHome デバイス設定yamlファイルに貼り付けてください。完全な.yamlファイルは[こちら](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/esp32c3config.yaml)からダウンロードできます
 
 ```yaml
 esphome:
@@ -233,7 +270,7 @@ esphome:
   on_boot:
     priority: 750
     then:
-      - logger.log: "EcoStatを起動中"
+      - logger.log: "Booting EcoStat"
       - delay: 500ms
       - lambda: |-
           id(relay_heat).turn_off();
@@ -263,7 +300,7 @@ ota:
 script:
 - id: boot_beep
   then:
-    # 最初の ^E
+    # First ^E
     - output.turn_on: buzzer
     - output.ledc.set_frequency:
         id: buzzer
@@ -291,7 +328,7 @@ wifi:
   ssid: YOURWIFINAME
   password: YOURWIFIPASS
 
-  # Wi-Fi接続が失敗した場合のフォールバックホットスポット（キャプティブポータル）を有効化
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Xiao-Esp32C3 Fallback Hotspot"
     password: "13371337"
@@ -319,8 +356,8 @@ display:
     lambda: |-
       float temp_celsius = id(temp).state;
       float temp_fahrenheit = (temp_celsius * 9.0 / 5.0) + 32.0;
-      char temp_str[6]; // 温度文字列用バッファ
-      dtostrf(temp_celsius, 4, 1, temp_str); // 摂氏を文字列に変換（小数点以下1桁）
+      char temp_str[6]; // Buffer for temperature string
+      dtostrf(temp_celsius, 4, 1, temp_str); // Convert Celsius to string with 1 decimal place
 
       it.print(28, 0, id(inter), id(ip_address).state.c_str());
       it.printf(0, 18, id(roboto), "T: %.1f  ", temp_fahrenheit);
@@ -517,76 +554,81 @@ binary_sensor:
 
 ### 3. 選択したケースの組み立て（オプション）
 
-このプロジェクトで使用したケースの STL ファイルを以下に示します。
+このプロジェクトで使用したケース用のSTLファイルがあります。
 
 [EcoStatV2 ecostatcase](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/EcoStatV2-ecostatcase.stl)
 
 [EcoStatV2 ecostatlid](https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/EcoStatV2-ecostatlid.stl)
 
-これらのファイルは自由に使用または変更できます。もし個人的に 3D プリンターをお持ちでない場合でも、これらのファイルを任意の素材で印刷してくれるオンラインサービスが多数存在します。
+お好みに応じて自由に使用または変更してください。個人的に3Dプリンターをお持ちでない場合は、
+お好みの材料でこれらのファイルを印刷してくれるオンラインサービスがたくさんあります。
 
 <!-- ![image10](./3dfile.png) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/3dfile.png" alt="pir" width={1000} height="auto" /></p>
 
 ### 4. コンポーネントの取り付け
 
-#### ステップ 1 ケース内にすべてのリストされたコンポーネントを取り付ける
+#### ステップ1 リストされたすべてのコンポーネントをケースに取り付ける
 
-M2x4 および M2x6 のネジを使用して、リストされたすべてのコンポーネントをケース内の対応する場所に取り付けます。<br />
-（DHT22 センサーは単に押し込むだけで固定されます）。
+M2x4およびM2x6ネジを使用して、前述のすべてのコンポーネントをケース内の対応する場所に取り付けます。<br />
+（DHT22センサーは単純に圧入で所定の位置に収まります）。
 
 <!-- ![image11](./11.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/11.jpg" alt="pir" width={500} height="auto" /></p>
 
-#### ステップ 2 すべてのセンサーと周辺機器を前述の YAML 内の対応するピンに接続する
+#### ステップ2. すべてのセンサーと周辺機器を前述のYAML内の対応するピンに接続する
 
-以下は接続プロセスで使用した方法です：
+接続プロセス中に使用した方法は次のとおりです：
 
-- **DHT22/SSD1315 - JST コネクタを使用:** DHT22 と SSD1315 のコネクタを PCB の反対側にデソルダリングして反転させ、適切にフィットさせます。
+- **DHT22/SSD1315 - JSTコネクタを使用：** 適切な取り付けのために、DHT22とSSD1315のコネクタをはんだ除去し、PCBの反対側に反転させます。
 
-- **2 種類のリレー - JST/DuPont コネクタを使用:** リレーについては、一方の側に JST を使用し、もう一方の側には拡張ボードの GPIO ブレークアウトヘッダー用に DuPont コネクタを使用しました。
+<!-- I used a combination of the included JST -->
+<!-- connectors and DuPont style connections as well. for the DHT22 and SSD1315 I used JST.  -->
+<!-- For the relays I used JST on one side and for the other side I used DuPont connectors for GPIO breakout headers on the expansion board. As you can see in the photo below. I also have a 3.7V Lithium cell plugged into the expansion boards battery connection for use as a backup battery in case of main supply power loss. -->
 
-- **バッテリー接続:** また、3.7V リチウムセルを拡張ボードのバッテリー接続部に接続し、主電源が失われた場合のバックアップバッテリーとして使用しています。
+- **2種類のリレー - JST/DuPontコネクタを使用：** リレーについては、片側にJSTを使用し、もう片側には拡張ボードのGPIOブレークアウトヘッダー用にDuPontコネクタを使用しました。
+
+- **バッテリー接続：** また、メイン電源の停電時のバックアップバッテリーとして使用するため、拡張ボードのバッテリー接続に3.7Vリチウムセルを接続しています。
 
 <!-- ![image12](./10.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/10.jpg" alt="pir" width={500} height="auto" /></p>
 
-#### ステップ 3 ケース前面内側に希望するタイプのモーメンタリボタンを接続する
+#### ステップ3. お好みのスタイルのモーメンタリーボタンをケースの内側前面に接続する
 
-私はボタンを少量のホットグルーで取り付けました。その後、モーメンタリボタンの対角に位置するピンにワイヤーをはんだ付けし、ワイヤーのもう一方の端に DuPont コネクタを取り付けて、拡張ボードの正しい GPIO ブレークアウトヘッダーに接続しました。
+これは、ボタンを少量のホットグルーで取り付けることで実現しました。次に、モーメンタリーボタンの対角線上の対向するピンにワイヤーをはんだ付けし、ワイヤーの反対側にDuPontコネクタを配置して、拡張ボードの正しいブレークアウトGPIOヘッダーに接続しました。
 
 <!-- ![image13](./12.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/12.jpg" alt="pir" width={1000} height="auto" /></p>
 
-#### ステップ 4 フロントカバーの背面にスクリーンを組み込む
+#### ステップ4. スクリーンをフロントカバーの背面に組み立てる
 
-フロントカバーの背面にスクリーンを組み込みます（少量のホットグルーで固定します）。その後、フロントカバーをケースに取り付け、以下のように M4x6 のネジ 3 本で固定します。
+スクリーンをフロントカバーの背面に組み立てます（少量のホットグルーで所定の位置に固定します）。次に、下図のように3本のM4x6ネジでフロントカバーをケースに固定します。
 
 <!-- ![image14](./9.jpg) -->
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/9.jpg" alt="pir" width={500} height="auto" /></p>
 
-### 5. EcoStat の対応するリレーにワイヤーを接続する
+### 5. EcoStatの対応するリレーにワイヤーを接続する
 
-スマートサーモスタットの完成です！ ご自宅の既存のサーモスタットを取り外し、以下の写真を参考にして、対応するリレーに正しいワイヤーを接続してください。
+スマートサーモスタットの完成です！既存の家庭用サーモスタットを取り外し、下の写真を使用して正しいワイヤーをEcoStatの対応するリレーに接続するだけです！
 
 <!-- ![image15](./13.jpg) -->
 <img src="https://files.seeedstudio.com/wiki/wiki-ranger/Contributions/XIAO_ESP32C3_ESPHome_Smart_ThermoStat/13.jpg" alt="pir" width={500} height="auto" />
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- Chris の尽力に感謝します。あなたの作業は [こちら](https://wiki.seeedstudio.com/ja/Honorary-Contributors/) に展示されます。
+- このプロジェクトは、Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- Chrisの努力に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験を提供するため、さまざまなサポートをご用意しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

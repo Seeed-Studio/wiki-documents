@@ -52,8 +52,7 @@ The Human Static Presence Radar Sensor is a self-contained, privacy-protectively
 
 1. S1 output: high level - occupied, low level - unoccupied.
 2. S2 output: high level - active, low level - stationary
-3. GP1 to GP4 are parameter selection controls, which can be redefined
-according to user requirements.
+3. GP1 to GP4 are parameter selection controls, which can be redefined according to user requirements.
 4. The output signals of this interface are all at 3.3V level.
 
 :::caution  
@@ -505,16 +504,14 @@ If you choose **ASCII** as the format for sending data, each data set needs to b
 
 ## Tech Support & Product Discussion
 
-
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

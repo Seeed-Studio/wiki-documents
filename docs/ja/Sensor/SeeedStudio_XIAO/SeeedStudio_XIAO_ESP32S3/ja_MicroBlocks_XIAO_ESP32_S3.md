@@ -12,7 +12,7 @@ last_update:
 
 ## MicroBlocks
 
-MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラミングできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語で、GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを提供します。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、迅速なプロトタイピングとテストにMicroBlocksを好んで使用しています。
+MicroBlocksは、初心者（9歳から大人まで）がマイクロコントローラーを簡単にプログラムできるブロック言語です。見た目のシンプルさにもかかわらず、MicroBlocksはMicroPythonよりも優れたパフォーマンスを持つ強力なプログラミング言語です。GPIOピンの制御やI2C、SPI、シリアル経由での周辺機器とのインターフェース機能、そして約200の拡張ライブラリを備えています。実際、一部のハードウェア設計者は、高速でインタラクティブな開発サイクルのため、ラピッドプロトタイピングやテストにMicroBlocksを好んで使用しています。
 
 ## XIAO ESP32S3のピン配置とハードウェア機能
 
@@ -20,20 +20,17 @@ MicroBlocksは、初心者（9歳から大人まで）がマイクロコント�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/xiao-esp32s3-sense-pinout.jpg" style={{width:600, height:'auto'}}/></div>
 
-
 このボードは、外部アンテナ（付属）を介してWi-FiとBLE接続の両方を提供します。
 
 ボードには11個のGPIOピン（ピン0..10）があります。
-Senseバージョンには、カメラボード上に2つの追加GPIOピン（ピン11..12）があります。
+Senseバージョンには、カメラボードに2つの追加GPIOピン（ピン11..12）があります。
 ピン0..5と8..10はアナログ入力として使用できます。
 
 ピン13は黄色のユーザーLED（反転）です。
 
-Senseバージョンには、カメラ
-（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660）
-とデジタルマイクロフォンを搭載した拡張ボードが含まれています。
+Senseバージョンには、カメラ（1600x1200解像度のOV2640カメラまたは2048x1536解像度のOV3660カメラ）とデジタルマイクロフォンを備えた拡張ボードが含まれています。
 
-**注意：カメラサポートはまだMicroBlocksに実装されていませんが、将来追加される可能性があります。**
+**注意：カメラサポートはMicroBlocksではまだ実装されていませんが、将来追加される可能性があります。**
 
 ## MicroBlocksファームウェアのインストール
 
@@ -43,11 +40,11 @@ Senseバージョンには、カメラ
 
 ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
 
-ギアメニューで「アドバンスモード」を有効にします：
+ギアメニューで「advanced mode」を有効にします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/set-advanced-mode.png" style={{width:400, height:'auto'}}/></div>
 
-拡張されたギアメニューから**microblocks.funからESPファームウェアをインストール**を選択します：
+拡張されたギアメニューから**install ESP firmware from microblocks.fun**を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-esp-firmware.png" style={{width:400, height:'auto'}}/></div>
 
@@ -55,7 +52,7 @@ ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microbloc
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/install-s3.png" style={{width:200, height:'auto'}}/></div>
 
-プロンプトが表示されたら、「接続」ボタン（プラグアイコン）を使用してボードへのUSB接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
+プロンプトが表示されたら、「Connect」ボタン（プラグアイコン）を使用してボードへのUSB接続を開きます。ファームウェアインストールプロセスが開始されると、進行状況インジケーターが表示されます：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/download-progress.png" style={{width:200, height:'auto'}}/></div>
 
@@ -71,7 +68,7 @@ ESP32ボードにMicroBlocksファームウェアをインストールする際�
 R（リセット）ボタンを押して離します。
 Bボタンを押し続けながらボードをコンピューターに接続することもできます。
 
-**USBコネクターの両側にある小さなBとRボタンは扱いにくいため、
+**USBコネクタの両側にある小さなBとRボタンは扱いにくいため、
 爪や小さな工具を使って押す必要があるかもしれません。**
 
 ## ボードをMicroBlocksに接続する
@@ -79,17 +76,17 @@ Bボタンを押し続けながらボードをコンピューターに接続す�
 データUSBケーブル（電源専用ケーブルでは**ない**）でボードをコンピューターに接続します。
 
 ChromeまたはEdgeブラウザで[MicroBlocksエディター](https://microblocks.fun/run/microblocks.html)を実行します。
-**接続**（プラグアイコン）ボタンをクリックします：
+**connect**（プラグアイコン）ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-button.png" style={{width:200, height:'auto'}}/></div>
 
-メニューから**接続（USB）**を選択します：
+メニューから**connect (USB)**を選択します：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-menu.png" style={{width:200, height:'auto'}}/></div>
 
-**注意：**接続メニューで**接続（BLE）**を選択することで、ワイヤレスで接続することもできます。
+**注意：** 接続メニューで**connect (BLE)**を選択することで、ワイヤレスで接続することもできます。
 
-ダイアログからボードを選択し、**接続**ボタンをクリックします：
+ダイアログからボードを選択し、**connect**ボタンをクリックします：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/microblocks/connect-dialog-esp.png" style={{width:400, height:'auto'}}/></div>
 
@@ -105,13 +102,13 @@ MicroBlocksは**ライブ**コーディング環境なので、コーディン�
 
 コードは永続的なフラッシュメモリに保存され、ボードが
 MicroBlocksエディターに接続されていなくても実行できます。
-**開始時**ブロックの下にあるスクリプトは、ボードの電源が入ったときに実行されます。
+**when started**ブロックの下にあるスクリプトは、ボードに電源が供給されたときに実行されます。
 
 MicroBlocksは並行処理をサポートしています。最大10個のスクリプトを同時に実行できます。
 
-多くの組み込みブロックに加えて、MicroBlocksには約200のライブラリがあり、
-追加機能と周辺機器をサポートします。
-**ライブラリを追加**ボタンをクリックしてライブラリを追加します。
+多くの組み込みブロックに加えて、MicroBlocksには追加機能と周辺機器を
+サポートする約200のライブラリがあります。
+**Add Library**ボタンをクリックしてライブラリを追加します。
 
 ## 例
 
@@ -122,9 +119,9 @@ MicroBlocksは並行処理をサポートしています。最大10個のスク�
 [ブロックリファレンス](https://wiki.microblocks.fun/en/reference_manual)
 には多くの追加例が含まれています。
 
-## 特別な感謝
+## 特別な謝辞
 
-この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を。
+この記事を執筆してくれたMicroBlocksのJohnに特別な感謝を捧げます。
 
 ## MicroBlocksリソース
 

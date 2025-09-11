@@ -1,6 +1,6 @@
 ---
-description: XIAO ESP32S3 と NuttX(RTOS)
-title: XIAO ESP32S3 と NuttX(RTOS)
+description: XIAO ESP32S3 With NuttX(RTOS)
+title: XIAO ESP32S3 With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
@@ -10,30 +10,26 @@ last_update:
     date: 04/08/2025
     author: rcsim
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO ESP32S3 と NuttX(RTOS)
+# Seeed Studio XIAO ESP32S3 with NuttX(RTOS)
 
 ## はじめに
 
-[NuttX](https://nuttx.apache.org/) は、標準準拠と小型フットプリントで広く認識されている成熟したリアルタイムオペレーティングシステム (RTOS) です。NuttX の主な特徴の一つはそのスケーラビリティであり、8ビットマイクロコントローラーから64ビットシステムまでの環境で使用することができます。この柔軟性は、POSIX および ANSI 標準への準拠によって実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで同様の NuttX 機能を試すことが可能です。
+[NuttX](https://nuttx.apache.org/)は、標準準拠と小さなフットプリントで広く認知されている成熟したリアルタイムオペレーティングシステム（RTOS）です。NuttXの主な特徴の一つはスケーラビリティであり、8ビットマイクロコントローラから64ビットシステムまでの環境で使用できます。この柔軟性は、POSIXおよびANSI標準への準拠によって実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似のNuttX機能を実験することができます。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
-さらに、NuttX は USB、Ethernet、オーディオ、グラフィックスサブシステムなど、多くの高度で便利な機能を提供します。これらの特徴により、NuttX はさまざまな種類のハードウェアで動作可能な汎用性が高く堅牢な RTOS を求める開発者にとって魅力的な選択肢となっています。
+さらに、NuttXはUSB、Ethernet、Audio、Graphicsサブシステムなど、多くの高度で有用な機能を提供しています。これらの特性により、NuttXは様々なタイプのハードウェア上で動作可能な汎用性があり、堅牢なRTOSを求める開発者にとって魅力的な選択肢となっています。
 
-NuttX は膨大で継続的に拡大する数のボードをサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/) では、アーキテクチャやシステムオンチップ (SoC) シリーズごとに整理されたサポートされているボードの包括的なリストを提供しています。
+NuttXは膨大で継続的に拡張されているボード数をサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/)では、アーキテクチャとSystem-on-Chip（SoC）シリーズ別に整理されたサポートボードの包括的なリストを提供しています。
 
-例えば、NuttX ドキュメント内の [Seeed Studio XIAO ESP32S3](https://nuttx.apache.org/docs/latest/platforms/arm/esp32s3/boards/xiao-esp32s3/index.html) ページでは、サポートされている各機能の詳細な説明と、それらを利用する方法についての指示が記載されています。また、[Espressif ESP32S3](https://nuttx.apache.org/docs/latest/platforms/xtensa/esp32s3/index.html) シリーズチップに関する特定のページもあり、サポートされている MCU と周辺機器のリストを確認できます。
+例えば、NuttXドキュメントの[Seeed Studio XIAO ESP32S3](https://nuttx.apache.org/docs/latest/platforms/arm/esp32s3/boards/xiao-esp32s3/index.html)ページでは、サポートされている各機能の詳細な説明とその利用方法の手順を提供しています。また、NuttXドキュメントには[Espressif ESP32S3](https://nuttx.apache.org/docs/latest/platforms/xtensa/esp32s3/index.html)シリーズチップ専用のページもあり、サポートされているMCUとペリフェラルのリストを見つけることができます。
 
 ## インストール
 
-NuttX ドキュメントでは、さまざまなプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。Seeed Studio XIAO ESP32S3 の場合、以下の手順に従ってください：
+Nuttxドキュメントでは、異なるプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。Seeed Studio XIAO ESP32S3については、以下の手順に従ってください：
 
-1. Espressif esptool をダウンロードします (https://docs.espressif.com/projects/esptool/en/latest/esp32/)：
+1. Espressif esptoolをダウンロード(https://docs.espressif.com/projects/esptool/en/latest/esp32/):
 
     ```bash
     ~/nuttxspace/nuttx$ esptool.py version
@@ -41,13 +37,13 @@ NuttX ドキュメントでは、さまざまなプラットフォーム向け�
     4.8.1
     ```
 
-2. ワークスペースを作成します：
+2. ワークスペースを作成
 
     ```bash
     mkdir nuttxspace
     ```
 
-3. リポジトリをクローンします：
+3. リポジトリをクローン
 
     ```bash
     cd nuttxspace
@@ -55,26 +51,26 @@ NuttX ドキュメントでは、さまざまなプラットフォーム向け�
     git clone https://github.com/apache/nuttx-apps apps
     ```
 
-Apache Nuttx は2つのプロジェクトに分かれています：
+Apache Nuttxは2つのプロジェクトに分かれています：
 
-- Nuttx: カーネル、ドライバ、サブシステムが実装されています。
-- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタプリタのコレクションが含まれています。
+- Nuttx: カーネル、ドライバー、サブシステムの実装を含みます。
+- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリターのコレクションを含みます。
 
 ## アプリケーション
 
-アプリケーションを開始するには、NuttX 上で設定をロードする必要があります。以下のコマンドを実行してください：
+アプリケーションを開始するには、以下のコマンドを呼び出してNuttXに設定をロードする必要があります：
 
 ```bash
 ./tools/configurate.sh board_name:your_application
 ```
 
-また、サポートされているボードのリストを確認するには、以下のコマンドを実行できます：
+また、以下のコマンドを実行してボード対応リストを確認することも可能です：
 
 ```bash
 ./tools/configurate.sh -L
 ```
 
-4. NuttX をビルドします（ビルドプロセスにより、nuttx.uf2 を含むファームウェアバイナリが生成されます）：
+4. NuttXをビルドします（ビルドプロセスでnuttx.uf2を含むファームウェアバイナリが生成されます）：
 
     ```bash
     cd nuttx
@@ -83,48 +79,48 @@ Apache Nuttx は2つのプロジェクトに分かれています：
     make V=1
     ```
 
-5. RESET ボタンと BOOT ボタンを使用して「ブートローダーモード」に入ります。BOOT キーを押しながら電源を入れ、その後 RESET キーを一度押します。
+5. RESETボタンとBOOTボタンを使用して「Bootloader」モードに入ることができます。電源投入時にBOOTキーを押し続けてから、RESETキーを一度押します。
 
-6. esptool.py を使用してファームウェアをロードします：
+6. esptool.pyを使用してファームウェアをロードします：
 
     ```bash
     make flash ESPTOOL_PORT=/dev/ttyACM0 ESPTOOL_BINDIR=./
     ```
 
-## 実践
+## ハンズオン
 
-NuttX を実際に触ってみましょう。このセッションでは、USBNSH と COMBO の2つのアプリケーションが利用可能です。
+実際にNuttXを探索する時間です。このセッションでは、USBNSHとCOMBOの2つのアプリケーションが利用可能です。
 
 ### NSH
 
-NuttShell (NSH) は、NuttX で使用されるシェルシステムで、bash やその他の類似オプションに似ています。豊富なコマンドセット、スクリプト機能、自分のアプリケーションを「ビルトイン」として実行する機能（NuttX バイナリの一部として）をサポートしています。NSH の設定では、115200 bps の USB コンソールが有効になります。
+NuttShell（NSH）はNuttXで使用されるシェルシステムで、bashや他の類似オプションと似ています。豊富な内蔵コマンドセット、スクリプト機能、および独自のアプリケーションを「builtin」（同じNuttXバイナリの一部）として実行する機能をサポートしています。NSH設定では115200 bpsを使用してUSBでコンソールを有効にします。
 
-まず、以前の設定をクリアしてビルドプロセスを開始します。
+前の設定をクリアしてビルドプロセスを開始できます
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-次に、xiao-esp32s3 ボード用の NSH 設定を選択します。
+次に、xiao-esp32s3ボードにNSH設定を選択します：
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:usbnsh
 ```
 
-ソースコードをコンパイルします。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-ファームウェアをボードにロードし、ボードを再起動して、CDC/ACM シリアルインターフェースを使用して USB 経由で NuttShell (NSH) コンソールに接続します。
+ファームウェアをボードにロードし、ボードを再起動して、CDC/ACMシリアルインターフェースを使用してUSB経由でNuttShell（NSH）コンソールに接続します：
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
 ```
 
-NuttShell コンソールにアクセスします。
+NuttShellコンソールにアクセス：
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -133,7 +129,7 @@ NuttX 12.8.0 2c845426da-dirty Apr  6 2025 22:53:57 xtensa esp32s3-xiao
 nsh> 
 ```
 
-`?` を入力すると、利用可能なコマンドやビルトインアプリケーションのオプションを確認できます。
+`?` を入力すると、コマンドと組み込みアプリケーションの利用可能なオプションにアクセスできます。
 
 ```bash
 nsh> ?
@@ -153,25 +149,25 @@ Builtin Apps:
     getprime    hello       nsh         ostest      sh 
 ```
 
-NuttX に挨拶してみましょう。`hello` と入力すると、以下のようにコマンドが実行されます。
+NuttXに挨拶してみましょう。`hello`と入力すると、コマンドが実行されます：
 
 ```bash
 nsh> hello
 Hello, World!!
 ```
 
-おめでとうございます！これで NuttX との最初のやり取りが完了しました。
+おめでとうございます。NuttXとの最初のやり取りが完了しました。
 
 ### COMBO
 
-この設定では、gpio と leds の3つの例示アプリケーションが有効になります。汎用入出力 (GPIO) はマイクロコントローラの最も基本的な部分であり、外部世界と接続することを可能にします。このセクションでは、NSH を使用してこれらのピンを自由にアクセスおよび設定します。ただし、まず以前の設定をクリアします。
+この設定では、gpio と leds の3つのサンプルアプリケーションが有効になります。汎用入出力（GPIO）はマイクロコントローラーの最も基本的な部分であり、外部世界との接続を可能にします。このようにして、NSHを使用してこれらのピンにアクセスし、必要に応じて設定します。しかし、まず前の設定をクリアしましょう。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-xiao-esp32s3 ボード用の combo 設定を選択します。
+Select the combo configuration to the xiao-esp32s3 board.
 
 ```bash
 ./tools/configurate.sh xiao-esp32s3:combo
@@ -183,7 +179,7 @@ xiao-esp32s3 ボード用の combo 設定を選択します。
 make -j
 ```
 
-ファームウェアをボードにロードし、minicon や picocom などのシリアル通信プログラムを実行します。
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyACM0
@@ -194,7 +190,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-このアプリケーションと対話するために受け入れられるオプションを確認するには、`gpio -h` を入力します。すると、パラメータのリストが表示されます。
+このアプリケーションとの対話で受け入れられるオプションを確認するには、`gpio -h` と入力してください。パラメータのリストが返されます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -221,15 +217,15 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-GPIO デバイスファイルが作成されたことを確認するには、`ls /dev` を入力します。入力後、いくつかの GPIO が宣言されているのが確認できます。これらは `boards/arm/ra/xiao-esp32s3/include/board.h` に定義されています。
+GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`と入力してください。入力後、boards/arm/ra/xiao-esp32s3/include/board.hで定義されたいくつかのgpioが宣言されているのを確認できます。これらは以下を表しています：
 
-- オンボード LED:
-  - 黄色 -> GPIO21
+- オンボードLED：
+  - 黄色            -> GPIO21
 
-- GPIOs:
-  - 1 入力 -> GPIO1
-  - 1 入力（IRQ付き） -> GPIO3
-  - 1 出力 -> GPIO2
+- GPIO
+  - 1 Input           -> GPIO1
+  - 1 Input w/ IRQ    -> GPIO3
+  - 1 Output          -> GPIO2
 
 ```bash
 nsh> ls /dev
@@ -246,7 +242,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-以下のコマンドを使用して、GPIO1 (/dev/gpio1) と GPIO3 (/dev/gpio2) を読み取り（割り込み付き）、GPIO2 (/dev/gpio0) に書き込みを行います。
+以下のコマンドに従って、GPIO1（/dev/gpio1）とGPIO3（/dev/gpio2）を読み取り（割り込み付き）、GPIO2（/dev/gpio0）に書き込みを行います。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -279,9 +275,9 @@ Driver: /dev/gpio2
   Verify:        Value=1
 ```
 
-USERLEDS は、単一操作で LED を制御できるサブシステムです。また、`printf` のようなコマンドラインを使用することもできます。このデモでは、オンボードの黄色い LED を1秒ごとに点灯・消灯させます。
+USERLEDS は、単一の操作で LED を制御できるサブシステムです。また、printf のようなコマンドラインを使用することもできます。このデモでは、オンボードの黄色 LED を 1 秒ごとにオン・オフします。
 
-`leds` と入力すると、LED が点滅する様子が観察できます。
+`leds` と入力すると、LED が同時に点滅するのを観察できます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -300,9 +296,10 @@ led_daemon: LED set 0x01
 led_daemon: LED set 0x00
 led_daemon: LED set 0x01
 led_daemon: LED set 0x00
+
 ```
 
-以下のデモビデオで、gpio と leds の動作を確認してください。
+以下のgpioとledのデモ動画をご確認ください：
 
 <div style={{ maxWidth: '100%', textAlign: 'center' }}>
   <video style={{ width: '100%', height: 'auto' }} controls>
@@ -310,16 +307,16 @@ led_daemon: LED set 0x00
   </video>
 </div>
 
-NuttX RTOS に関する詳細情報は、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html) をご覧ください。
+NuttX RTOSの詳細については、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)をご覧ください。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio の [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- 特に [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609) さんの献身的な努力に感謝します。あなたの作業は [展示](https://wiki.seeedstudio.com/contributors/) されます。
+- このプロジェクトはSeeed Studioの[Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609)の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
 ## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！お客様が弊社の製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

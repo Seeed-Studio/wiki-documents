@@ -1,127 +1,146 @@
 ---
-description: XIAO ラウンドディスプレイ クリスマスボール
-title: クリスマスツリー用の小さなクリスマスボールを作成する
+description: XIAO Round Dislay Christmas Ball
+title: クリスマスツリー用の小さなクリスマスボールを作る
 keywords:
 - XIAO
-- ラウンドディスプレイ
-- クリスマス
+- Round Dislay
+- Christmas
 image: https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball_1.gif
 slug: /ja/round_display_christmas_ball
 last_update:
-  date: 05/15/2025
+  date: 12/08/2024
   author: Bruno Santos
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio ラウンドディスプレイを使用した XIAO クリスマスボール
+# Seeed Studio Round Display for XIAO クリスマスボール
 
 <div style={{textAlign:'center'}}>
   <img src="https://files.seeedstudio.com/wiki/Christmas_round_display/Christmas_ball.gif" style={{width:400, height:'auto'}}/>
 </div>
 
-このチュートリアルでは、雪が降り背景画像が変化するクリスマスボールを作成する方法を紹介します。
+このチュートリアルでは、雪が降り、背景画像が変化するクリスマスボールの作り方を紹介します。
 
-プログラムは以下を実行します：
-- C 配列として保存された背景画像を表示します。
-- 画像上に雪の粒子が風の効果とともに降る様子をシミュレートします。
-- タッチ入力を検出し、背景画像のセットを循環します。
+プログラムは以下の機能を実行します：
+
+- C配列として保存された背景画像を表示します。
+- 風の効果を伴って画像上に雪の粒子が降るシミュレーションを行います。
+- タッチ入力を検出し、背景画像のセットを循環表示します。
 - スムーズなアニメーションのためにダブルバッファリングを使用します。
 
 ## 環境準備
+
 ### ハードウェア
-このプロジェクトでは以下が必要です：
-- [Seeed Studio ラウンドディスプレイ For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
+
+このプロジェクトには以下が必要です：
+
+- [Seeed Studio Round Display For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)
 - [XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html)
 
-XIAO ESP32S3 を使用する理由はメモリです。PNGDEC は動作するために約 40kbytes のメモリを必要とします。
+メモリの関係でXIAO ESP32S3を使用しています。PNGDECの実行には約40kバイトのメモリが必要です。
 
 ### ソフトウェア準備
 
-ラウンドディスプレイを使用するには、[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/ja/get_start_round_display/#getting-started) にアクセスして必要なライブラリをインストールしてください。
+Round Displayを使用するには、[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)にアクセスして必要なライブラリをインストールしてください。
 
-いくつかの例を試して、すべてが正常に動作しているか確認してください。
+すべてが正常に動作するかいくつかの例を試してみてください。
 
 ### ライブラリ
-このプロジェクトでは、[Seeed Studio ラウンドディスプレイ For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html) に付属しているライブラリを使用します。
 
-[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/ja/get_start_round_display/#getting-started) のチュートリアルに記載されているように、すべてのライブラリをインストールしてください。
+このプロジェクトでは、[Seeed Studio Round Display For XIAO](https://www.seeedstudio.com/Seeed-Studio-Round-Display-for-XIAO-p-5638.html)にバンドルされているライブラリを使用します。
+
+チュートリアル[Getting Started with Round Display for XIAO](https://wiki.seeedstudio.com/get_start_round_display/#getting-started)で指定されているように、すべてのライブラリをインストールしてください。
 その後、以下が必要です：
-- PNGdec ライブラリ
-- **LVGL ライブラリの更新**（または Seeed Studio GitHub からインストールしない）
+
+- PNGdecライブラリ
+- **LVGLライブラリの更新**（またはSeeed Studio githubのものをインストールしない）
 
 ## 画像
-画像は PNG 形式でフラッシュ配列に保存されています。これらは PNGdec ライブラリを使用して表示されます。
 
-**すべての画像は PNG 形式である必要があります**
+画像はFlash配列に保存されたPNG画像です。PNGdecライブラリを使用して表示されます。
 
-以下は使用した画像です - すべて AI によって生成されています。
+**すべての画像はPNGである必要があります**
+
+以下は私が使用した画像です - すべてAI生成です
 <div style={{textAlign:'center'}}>
 <img src="https://files.seeedstudio.com/wiki/Christmas_round_display/background1.png" style={{width:200, height:'auto'}}/>
 <img src="https://files.seeedstudio.com/wiki/Christmas_round_display/background2.png" style={{width:200, height:'auto'}}/>
 <img src="https://files.seeedstudio.com/wiki/Christmas_round_display/background3.png" style={{width:200, height:'auto'}}/>
 </div>
 
-背景画像は TFT_eSPI が表示できるように準備し、XIAO 用ラウンドディスプレイに適合させる必要があります。
+背景画像は、TFT_eSPIが表示でき、Round Display for XIAOによく適合するように準備する必要があります。
 
 ### 画像の準備
+
 #### 画像のリサイズ
-XIAO 用ラウンドディスプレイの解像度は 240x240 です。画像をリサイズする必要があります。[GIMP](https://www.gimp.org/) を使用してその方法を説明します。
+
+Round Display for XIAOの解像度は240x240です。画像をリサイズする必要があります。[GIMP](https://www.gimp.org/)を使用した方法を紹介します。
 
 1. 画像を開く
-2. **画像 > 画像のスケール** に移動
+2. **Image > Scale Image**に移動
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot1.jpg" style={{width:600, height:'auto'}}/></div>
 
-3. 幅と高さを 240 に設定します。**比率を保持**（チェーン）が選択されているため、**幅**を変更すると**高さ**も変更されます。
+3. 幅と高さを240に設定します。**Keep Ratio**が選択されている（チェーン）ため、**width**を変更すると**height**も変更されるはずです。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot2.jpg" style={{width:400, height:'auto'}}/></div>
 
-4. **スケール**ボタンを押します。
+4. **Scale**ボタンを押します。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot3.jpg" style={{width:400, height:'auto'}}/></div>
 
-5. 画像を保存します（古いものを上書きします）。
+5. 画像を保存します（古いものを上書きします）
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot4.jpg" style={{width:400, height:'auto'}}/></div>
 
-#### フラッシュ配列の作成
+#### Flash配列の作成
 
-**注意:** この手順は TFT_eSPI Flash_PNG の例に記載されています。
+**注意：** この手順はTFT_eSPI Flash_PNGの例に含まれています。
 
-フラッシュ配列を作成するには、[File to C style array converter](https://notisrac.github.io/FileToCArray/) にアクセスしてください。
+Flash配列を作成するには、[File to C style array converter](https://notisrac.github.io/FileToCArray/)にアクセスしてください。
 
 手順は以下の通りです：
-1. **Browse** を使用して画像をアップロードします。画像をアップロードした後
+
+1. **Browse**を使用して画像をアップロードします。画像をアップロードした後
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot5.jpg" style={{width:800, height:'auto'}}/></div>
 
 2. いくつかのオプションを設定する必要があります
-- **バイナリとして扱う**
+
+- **Treat as binary**
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot6.jpg" style={{width:800, height:'auto'}}/></div>
 
-他のオプションはすべてグレーアウトされます。
+他のすべてのオプションがグレーアウトします。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot7.jpg" style={{width:600, height:'auto'}}/></div>
 
-3. **データ型**を**char**に変更します。
+3. **Data type**を**char**に変更しましょう
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot8.jpg" style={{width:800, height:'auto'}}/></div>
 
-4. **変換**を押します。これにより画像が配列に変換されます。
+4. convertを押します。これで画像が配列に変換されます。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot9.jpg" style={{width:800, height:'auto'}}/></div>
 
-5. **Save as file** ボタンを押して画像を保存し、Arduino スケッチに追加するか、**Copy to clipboard** ボタンを押します。
-**Copy to clipboard** を選択した場合、Arduino エディタの右側にある 3 つのドットを押して**新しいタブ**を選択する必要があります。
+5. **Save as file**ボタンを押して画像を保存し、Arduinoスケッチに追加するか、**Copy to clipboard**ボタンを押すことができます。
+**Copy to clipboard**を選択した場合、Arduinoエディタの右側にある3つの点を押して**New Tab**を選択する必要があります。
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot10.jpg" style={{width:400, height:'auto'}}/></div>
 
-名前を付けます（通常は画像名に .h 拡張子を付けます）。
+名前を付けます（通常は画像名に.h拡張子を付けたもの）
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot11.jpg" style={{width:600, height:'auto'}}/></div>
 
-最終的にすべての画像が *.h* ファイルとして保存されます。
+すべての画像が*.h*ファイルとして表示されます。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Christmas_round_display/screenshot12.jpg" style={{width:800, height:'auto'}}/></div>
 
 ## コード
+
 以下はクリスマスボールのコードです。
-コードの主要な機能について簡単に説明します。コードにはいくつかのコメントも含まれています。
+コードの主要な機能について少し説明します。コードにはいくつかのコメントも含まれています。
 
 ### ヘッダーとライブラリ
+
 まず、いくつかのライブラリをインクルードします。
+
 ```cpp
 #include <PNGdec.h>
 #include <TFT_eSPI.h>
@@ -134,10 +153,13 @@ XIAO 用ラウンドディスプレイの解像度は 240x240 です。画像を
 #define USE_TFT_ESPI_LIBRARY
 #include "lv_xiao_round_screen.h"
 ```
-Seeed Studioライブラリがインストールされている必要があることを忘れないでください。
+
+Seeed Studioライブラリがインストールされている必要があることを覚えておいてください。
 
 ### 背景画像
-背景画像を管理するための関数を以下に示します。
+
+背景画像を管理するための関数は以下の通りです
+
 ```cpp
 struct Background {
   const uint8_t *data;
@@ -151,14 +173,17 @@ const Background backgrounds[] = {
 };
 
 ```
-- **構造体**: 各背景画像は以下を含むBackground構造体として保存されます。
-  - data: PNGデータへのポインタ。
-  - size: PNGファイルのサイズ。
 
-- **配列**: `backgrounds`配列はすべての背景画像を格納します。`currentBackground`変数は現在表示されている背景を追跡します。
+- 構造体: 各背景画像は Background 構造体として保存され、以下を含みます：
+  - data: PNG データへのポインタ。
+  - size: PNG ファイルのサイズ。
+
+- 配列: backgrounds 配列はすべての背景画像を保存します。currentBackground 変数は現在表示されている背景を追跡します。
 
 ### 雪の粒子シミュレーション
+
 1. 粒子の初期化
+
 ```cpp
 void initParticles() {
   for (int i = 0; i < numParticles; i++) {
@@ -168,17 +193,19 @@ void initParticles() {
   }
 }
 ```
-- *numParticles*をランダムな位置と速度で初期化します。
 
-2. 粒子の更新
+- ランダムな位置と速度で *numParticles* を初期化します。
+
+2. パーティクルの更新
+
 ```cpp
 void updateParticles() {
   for (int i = 0; i < numParticles; i++) {
-    particles[i].speed += random(-1, 2); // 速度の変化
+    particles[i].speed += random(-1, 2); // Speed variation
     particles[i].speed = constrain(particles[i].speed, 3, 8);
-    particles[i].y += particles[i].speed; // 下方向に移動
-    particles[i].x += random(-1, 2);      // 風の影響
-    // ラップアラウンドロジック
+    particles[i].y += particles[i].speed; // Move down
+    particles[i].x += random(-1, 2);      // Wind effect
+    // Wrap-around logic
     if (particles[i].y > sprite.height()) {
       particles[i].y = 0;
       particles[i].x = random(0, sprite.width());
@@ -189,12 +216,14 @@ void updateParticles() {
   }
 }
 ```
-- 粒子の位置を以下の方法で更新します：
-  - **落下効果**: 各粒子が下方向に移動します。
-  - **風の影響**: わずかな水平ドリフトを追加します。
-  - **ラップアラウンド**: 粒子が画面の下端を超えると、上端にリセットされます。
 
-3. 粒子の描画
+- パーティクルの位置を以下で更新：
+  - 落下効果：各パーティクルが下に移動。
+  - 風効果：わずかな水平方向のドリフトを追加。
+  - ラップアラウンド：パーティクルが底部を出ると上部にリセット。
+
+3. パーティクルのレンダリング：
+
 ```cpp
 void renderParticlesToSprite() {
   for (int i = 0; i < numParticles; i++) {
@@ -202,9 +231,11 @@ void renderParticlesToSprite() {
   }
 }
 ```
-- 各粒子を小さな白い円として描画します。
 
-### PNGデコード
+- 各パーティクルを小さな白い円として描画します
+
+### PNG デコード
+
 ```cpp
 int16_t rc = png.openFLASH((uint8_t *)backgrounds[currentBackground].data,
                            backgrounds[currentBackground].size,
@@ -215,37 +246,44 @@ if (rc != PNG_SUCCESS) {
 }
 png.decode(NULL, 0);
 ```
-- 現在の背景PNGを*png.openFLASH()*関数を使用して読み込み、デコードします。
 
-### タッチ操作
+- Loads and decodes the current background PNG using the *png.openFLASH()* function
+
+### Touch interaction
+
 ```cpp
 if (chsc6x_is_pressed()) {
-  currentBackground = (currentBackground + 1) % numBackgrounds; // 背景を循環
-  delay(300); // デバウンス
+  currentBackground = (currentBackground + 1) % numBackgrounds; // Cycle backgrounds
+  delay(300); // Debounce
 }
 ```
-- *chsc6x_is_pressed()*を使用してタッチイベントを検出し、*currentBackground*をインクリメントして背景画像を変更します。
+
+- *chsc6x_is_pressed()* を使用してタッチイベントを検出し、*currentBackground* をインクリメントして背景画像を変更します
 
 ### セットアップとループ
+
 - **セットアップ:**
+
 ```cpp
 void setup() {
   Serial.begin(115200);
   tft.begin();
   tft.fillScreen(TFT_BLACK);
-  sprite.createSprite(240, 240); // ディスプレイサイズに合わせる
+  sprite.createSprite(240, 240); // Match display size
   pinMode(TOUCH_INT, INPUT_PULLUP);
   Wire.begin();
   initParticles();
 }
 ```
-- ディスプレイ、タッチ入力、雪の粒子を初期化します。
 
-- **メインループ:**
+- Initializes the display, touch input and snow particles
+
+- **Main loop:**
+
 ```cpp
 void loop() {
   sprite.fillScreen(TFT_BLACK);
-  // 背景と雪を描画
+  // Render background and snow
   int16_t rc = png.openFLASH((uint8_t *)backgrounds[currentBackground].data,
                              backgrounds[currentBackground].size,
                              pngDrawToSprite);
@@ -255,56 +293,74 @@ void loop() {
     renderParticlesToSprite();
     sprite.pushSprite(0, 0);
   }
-  // タッチ入力を処理
+  // Handle touch input
   if (chsc6x_is_pressed()) {
     currentBackground = (currentBackground + 1) % numBackgrounds;
     delay(300);
   }
-  delay(10); // 約100FPS
+  delay(10); // ~100 FPS
 }
 ```
-- スプライトをクリアし、現在のフレーム（背景＋粒子）を描画し、ユーザー入力を確認します。
+
+- スプライトをクリアし、現在のフレーム（背景 + パーティクル）をレンダリングし、ユーザー入力をチェックします。
 
 ### ダブルバッファリング
-雪の粒子のアニメーションのちらつきを減らし、滑らかさを向上させるために**ダブルバッファリング**を使用します。
 
-これにより、画面に表示する前にオフスクリーンバッファで描画できます。
-#### ダブルバッファリングの実装
-このプロジェクトでは、TFT_eSPIライブラリのTFT_eSpriteクラスがダブルバッファリングを実装しています。
-1. **スプライトの作成**
-- スプライト（オフスクリーンバッファ）はsetup()関数で作成されます：
+雪片のちらつきを減らし、アニメーションの滑らかさを向上させるために、**ダブルバッファリング**を使用します。
+
+これにより、画面に表示する前にオフスクリーンバッファに描画することができます。
+
+#### ここでのダブルバッファリング
+
+このプロジェクトでは、TFT_eSPI ライブラリの TFT_eSprite クラスがダブルバッファリングを実装しています。
+
+1. **スプライト作成**
+
+- スプライト（オフスクリーンバッファ）は setup() 関数で作成されます：
+
 ```cpp
-sprite.createSprite(240, 240); // ディスプレイサイズに合わせる
+sprite.createSprite(240, 240); // Match display size
 ```
-2. **バッファへの描画**
-- 背景描画や雪粒子アニメーションなどのすべての描画操作はスプライト上で行われます：
+
+2. **バッファの描画**
+
+- すべての描画操作（背景レンダリングと雪の粒子アニメーション）はスプライト上で実行されます：
+
 ```cpp
-sprite.fillScreen(TFT_BLACK); // スプライトをクリア
-renderParticlesToSprite();   // 雪粒子を描画
+sprite.fillScreen(TFT_BLACK); // Clear the sprite
+renderParticlesToSprite();   // Draw snow particles
 ```
 
 3. **ディスプレイの更新**
-- スプライト内でフレームが完全に描画された後、1回の操作でディスプレイにプッシュされます：
+
+- フレームがスプライト内で完全に描画された後、一度の操作でディスプレイにプッシュされます：
+
 ```cpp
 sprite.pushSprite(0, 0);
 ```
+
 - これにより、バッファの内容が瞬時に画面に転送されます。
 
 4. **再利用**
-- スプライトは*loop()*の開始時にクリアされ、各フレームで再利用されます：
+
+- スプライトは *loop()* の開始時にクリアすることで、すべてのフレームで再利用されます：
+
 ```cpp
 sprite.fillScreen(TFT_BLACK);
 ```
-### ダブルバッファリングの利点
-- **滑らかな雪のアニメーション**: 雪粒子がちらつきなくシームレスに更新されます。
-- **動的な背景切り替え**: タッチによる背景変更が遅延やアーティファクトなしで行われます。
-- **効率的な描画**: メモリ（RAM）内での描画は、ディスプレイをラインごとに直接更新するよりも高速です。
 
-**プロジェクトの完全なコードはこちらです**：
+### ダブルバッファリング使用の利点
+
+- スムーズな雪のアニメーション：落下する雪の粒子がちらつきなしにシームレスに更新されます。
+- 動的な背景切り替え：タッチによってトリガーされる背景変更が、目に見える遅延やアーティファクトなしに発生します。
+- 効率的なレンダリング：メモリ（RAM）での描画は、ディスプレイを直接行ごとに更新するよりも高速です。
+
+**プロジェクトの完全なコードは以下の通りです**：
+
 ```cpp
 /**
 *
-* 画像をC配列として作成するには、以下を訪問してください：
+* To create the images as C arrays, visit:
 * https://notisrac.github.io/FileToCArray/
 *
 */
@@ -318,20 +374,20 @@ sprite.fillScreen(TFT_BLACK);
 #define USE_TFT_ESPI_LIBRARY
 #include "lv_xiao_round_screen.h"
 
-// PNGデコーダーとTFTディスプレイインスタンス
+// PNG decoder and TFT display instances
 PNG png;
 //TFT_eSPI tft = TFT_eSPI();
-TFT_eSprite sprite = TFT_eSprite(&tft); // オフスクリーンバッファ
+TFT_eSprite sprite = TFT_eSprite(&tft); // Off-screen buffer
 
 #define MAX_IMAGE_WIDTH 240 
 
-// スノーグローブの背景
+// Backgrounds for the snow globe
 struct Background {
   const uint8_t *data;
   size_t size;
 };
 
-// 明示的キャストを使用して背景を定義
+// Define the backgrounds with explicit casting
 const Background backgrounds[] = {
     {(const uint8_t *)background1, sizeof(background1)},
     {(const uint8_t *)background2, sizeof(background2)},
@@ -339,41 +395,41 @@ const Background backgrounds[] = {
 };
 const size_t numBackgrounds = sizeof(backgrounds) / sizeof(backgrounds[0]);
 
-int currentBackground = 0; // 現在の背景のインデックス
+int currentBackground = 0; // Index of the current background
 
-// 雪粒子のプロパティ
-const int numParticles = 100; // 雪粒子の数
+// Snow particle properties
+const int numParticles = 100; // Number of snow particles
 struct Particle {
-  int16_t x, y;   // 位置
-  int16_t speed;  // 垂直速度
+  int16_t x, y;   // Position
+  int16_t speed;  // Vertical speed
 };
 Particle particles[numParticles];
 
-// PNGデコーダーのコールバック関数としてスプライトに描画
+// Function to draw PNG to the sprite (callback for PNG decoder)
 void pngDrawToSprite(PNGDRAW *pDraw) {
   uint16_t lineBuffer[MAX_IMAGE_WIDTH];
   png.getLineAsRGB565(pDraw, lineBuffer, PNG_RGB565_BIG_ENDIAN, 0xffffffff);
   sprite.pushImage(0, pDraw->y, pDraw->iWidth, 1, lineBuffer);
 }
 
-// 雪粒子を初期化
+// Initialize snow particles
 void initParticles() {
   for (int i = 0; i < numParticles; i++) {
     particles[i].x = random(0, sprite.width());
     particles[i].y = random(0, sprite.height());
-    particles[i].speed = random(3, 8); // 各雪粒子のランダムな速度
+    particles[i].speed = random(3, 8); // Random speed for each snowflake
   }
 }
 
-// 雪粒子の位置を更新
+// Update snow particle positions
 void updateParticles() {
   for (int i = 0; i < numParticles; i++) {
-    particles[i].speed += random(-1, 2); // 速度のランダムな変化
+    particles[i].speed += random(-1, 2); // Random variation in speed
     particles[i].speed = constrain(particles[i].speed, 3, 8);
     particles[i].y += particles[i].speed;
-    particles[i].x += random(-1, 2); // 風の影響
+    particles[i].x += random(-1, 2); // Wind effect
 
-    // 画面のラップアラウンド
+    // Wrap around screen
     if (particles[i].y > sprite.height()) {
       particles[i].y = 0;
       particles[i].x = random(0, sprite.width());
@@ -384,7 +440,7 @@ void updateParticles() {
   }
 }
 
-// 雪粒子をスプライトに描画
+// Render snow particles to the sprite
 void renderParticlesToSprite() {
   for (int i = 0; i < numParticles; i++) {
     sprite.fillCircle(particles[i].x, particles[i].y, 2, TFT_WHITE);
@@ -393,73 +449,73 @@ void renderParticlesToSprite() {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("\n\nPNGdecライブラリを使用したタッチ操作");
+  Serial.println("\n\nUsing the PNGdec library with touch interaction");
 
-  // TFTを初期化
+  // Initialize TFT
   tft.begin();
   tft.fillScreen(TFT_BLACK);
-  sprite.createSprite(240, 240); // ディスプレイサイズに合わせる
+  sprite.createSprite(240, 240); // Match display size
 
-  // タッチ割り込みピンを初期化
+  // Initialize touch interrupt pin
   pinMode(TOUCH_INT, INPUT_PULLUP);
   Wire.begin();
 
-  // 粒子を初期化
+  // Initialize particles
   initParticles();
 
-  Serial.println("セットアップ完了。");
+  Serial.println("Setup complete.");
 }
 
 void loop() {
-  // 新しいフレームのためにスプライトをクリア
+  // Clear the sprite for the new frame
   sprite.fillScreen(TFT_BLACK);
 
-  // 現在の背景をスプライトに描画  
+  // Render the current background to the sprite  
   int16_t rc = png.openFLASH((uint8_t *)backgrounds[currentBackground].data,
                            backgrounds[currentBackground].size,
                            pngDrawToSprite);
 
 
   if (rc != PNG_SUCCESS) {
-    Serial.println("PNGファイルを開くのに失敗しました！");
+    Serial.println("Failed to open PNG file!");
     return;
   }
-  png.decode(NULL, 0); // 背景をデコードして描画
+  png.decode(NULL, 0); // Decode and render background
 
-  // 雪粒子を更新して描画
+  // Update and render snow particles
   updateParticles();
   renderParticlesToSprite();
 
-  // スプライトをディスプレイにプッシュ
+  // Push the sprite to the display
   sprite.pushSprite(0, 0);
 
-  // chsc6x_is_pressedを使用してタッチ入力を確認
+  // Check for touch input using chsc6x_is_pressed
   if (chsc6x_is_pressed()) {
-    currentBackground = (currentBackground + 1) % numBackgrounds; // 背景を循環
-    delay(300); // デバウンス遅延
+    currentBackground = (currentBackground + 1) % numBackgrounds; // Cycle through backgrounds
+    delay(300); // Debounce delay
   }
 
-  delay(10); // 約100FPS
+  delay(10); // ~100 FPS
 }
 ```
 
-今や、自分の写真を使って魔法のようなクリスマスボールを作成することができます。
+今、あなた自身の写真を使って魔法のクリスマスボールを作ることができます。
 
-## ✨ コントリビュータープロジェクト
+## ✨ Contributor Project
 
-- このプロジェクトは Seeed Studio の [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- [Bruno Santos](https://github.com/orgs/Seeed-Studio/projects/6/views/1?sliceBy%5Bvalue%5D=feiticeir0&pane=issue&itemId=90657934&issue=Seeed-Studio%7Cwiki-documents%7C1993) さんに感謝します。あなたの作品は [展示](https://wiki.seeedstudio.com/contributors/) されます。
+- このプロジェクトは、Seeed Studio [Contributor Project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
+- [Bruno Santos](https://github.com/orgs/Seeed-Studio/projects/6/views/1?sliceBy%5Bvalue%5D=feiticeir0&pane=issue&itemId=90657934&issue=Seeed-Studio%7Cwiki-documents%7C1993) に感謝し、あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-## 技術サポート & 製品ディスカッション
+## Tech Support & Product Discussion
 
-弊社の製品をお選びいただきありがとうございます！お客様の製品体験がスムーズに進むよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

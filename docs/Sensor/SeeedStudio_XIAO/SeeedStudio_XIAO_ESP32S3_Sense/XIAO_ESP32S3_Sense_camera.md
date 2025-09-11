@@ -61,9 +61,9 @@ We now have a new fully XIAO ESP32S3 Sense-compatible powerful camera, the OV564
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/ov5640.gif" style={{width:500, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5640-Camera-for-XIAO-ESP32S3-Sense-With-Heat-Sink-p-5739.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
 </div>
 
 If you need to know the detailed parameter information of ov5640, you can refer to the following chart.
@@ -154,7 +154,6 @@ The PSRAM of ESP32 refers to the external PSRAM (Pseudo Static Random Access Mem
 For the content of this tutorial, you **need to turn on the PSRAM function** of the Arduino IDE to ensure that the camera works properly.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/94.png" style={{width:700, height:'auto'}}/></div>
-
 
 ## Camera Library Overview
 
@@ -252,7 +251,7 @@ sensor_t * esp_camera_sensor_get();
 esp_err_t esp_camera_save_to_nvs(const char *key);
 ```
 
-- **Input Parameters**: A unique nvs key name for the camera settings 
+- **Input Parameters**: A unique nvs key name for the camera settings
 
 7. Load camera settings from non-volatile-storage (NVS).
 
@@ -260,8 +259,7 @@ esp_err_t esp_camera_save_to_nvs(const char *key);
 esp_err_t esp_camera_load_from_nvs(const char *key);
 ```
 
-- **Input Parameters**: A unique nvs key name for the camera settings 
-
+- **Input Parameters**: A unique nvs key name for the camera settings
 
 ### Part II: img_converters.h
 
@@ -272,14 +270,14 @@ bool fmt2jpg_cb(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, p
 ```
 
 - **Input Parameters**:
-    - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
-    - **src_len**:   Length in bytes of the source buffer
-    - **width**:     Width in pixels of the source image
-    - **height**:    Height in pixels of the source image
-    - **format**:    Format of the source image
-    - **quality**:   JPEG quality of the resulting image
-    - **cp**:        Callback to be called to write the bytes of the output JPEG
-    - **arg**:       Pointer to be passed to the callback
+  - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
+  - **src_len**:   Length in bytes of the source buffer
+  - **width**:     Width in pixels of the source image
+  - **height**:    Height in pixels of the source image
+  - **format**:    Format of the source image
+  - **quality**:   JPEG quality of the resulting image
+  - **cp**:        Callback to be called to write the bytes of the output JPEG
+  - **arg**:       Pointer to be passed to the callback
 
 - **Output**: true on success
 
@@ -290,10 +288,10 @@ bool frame2jpg_cb(camera_fb_t * fb, uint8_t quality, jpg_out_cb cb, void * arg);
 ```
 
 - **Input Parameters**:
-    - **fb**:       Source camera frame buffer
-    - **quality**:  JPEG quality of the resulting image
-    - **cp**:       Callback to be called to write the bytes of the output JPEG
-    - **arg**:      Pointer to be passed to the callback
+  - **fb**:       Source camera frame buffer
+  - **quality**:  JPEG quality of the resulting image
+  - **cp**:       Callback to be called to write the bytes of the output JPEG
+  - **arg**:      Pointer to be passed to the callback
 
 - **Output**: true on success
 
@@ -304,14 +302,14 @@ bool fmt2jpg(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
 ```
 
 - **Input Parameters**:
-    - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
-    - **src_len**:   Length in bytes of the source buffer
-    - **width**:     Width in pixels of the source image
-    - **height**:    Height in pixels of the source image
-    - **format**:    Format of the source image
-    - **quality**:   JPEG quality of the resulting image
-    - **out**:       Pointer to be populated with the address of the resulting buffer. You MUST free the pointer once you are done with it.
-    - **out_len**:   Pointer to be populated with the length of the output buffer
+  - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
+  - **src_len**:   Length in bytes of the source buffer
+  - **width**:     Width in pixels of the source image
+  - **height**:    Height in pixels of the source image
+  - **format**:    Format of the source image
+  - **quality**:   JPEG quality of the resulting image
+  - **out**:       Pointer to be populated with the address of the resulting buffer. You MUST free the pointer once you are done with it.
+  - **out_len**:   Pointer to be populated with the length of the output buffer
 
 - **Output**: true on success
 
@@ -322,10 +320,10 @@ bool frame2jpg(camera_fb_t * fb, uint8_t quality, uint8_t ** out, size_t * out_l
 ```
 
 - **Input Parameters**:
-    - **fb**:       Source camera frame buffer
-    - **quality**:  JPEG quality of the resulting image
-    - **out**:      Pointer to be populated with the address of the resulting buffer
-    - **out_len**:  Pointer to be populated with the length of the output buffer
+  - **fb**:       Source camera frame buffer
+  - **quality**:  JPEG quality of the resulting image
+  - **out**:      Pointer to be populated with the address of the resulting buffer
+  - **out_len**:  Pointer to be populated with the length of the output buffer
 
 - **Output**: true on success
 
@@ -336,14 +334,14 @@ bool fmt2bmp(uint8_t *src, size_t src_len, uint16_t width, uint16_t height, pixf
 ```
 
 - **Input Parameters**:
-    - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
-    - **src_len**:   Length in bytes of the source buffer
-    - **width**:     Width in pixels of the source image
-    - **height**:    Height in pixels of the source image
-    - **format**:    Format of the source image
-    - **quality**:   JPEG quality of the resulting image
-    - **out**:       Pointer to be populated with the address of the resulting buffer.
-    - **out_len**:   Pointer to be populated with the length of the output buffer
+  - **src**:       Source buffer in RGB565, RGB888, YUYV or GRAYSCALE format
+  - **src_len**:   Length in bytes of the source buffer
+  - **width**:     Width in pixels of the source image
+  - **height**:    Height in pixels of the source image
+  - **format**:    Format of the source image
+  - **quality**:   JPEG quality of the resulting image
+  - **out**:       Pointer to be populated with the address of the resulting buffer.
+  - **out_len**:   Pointer to be populated with the length of the output buffer
 
 - **Output**: true on success
 
@@ -354,10 +352,10 @@ bool frame2bmp(camera_fb_t * fb, uint8_t ** out, size_t * out_len);
 ```
 
 - **Input Parameters**:
-    - **fb**:       Source camera frame buffer
-    - **quality**:  JPEG quality of the resulting image
-    - **cp**:       Callback to be called to write the bytes of the output JPEG
-    - **arg**:      Pointer to be passed to the callback
+  - **fb**:       Source camera frame buffer
+  - **quality**:  JPEG quality of the resulting image
+  - **cp**:       Callback to be called to write the bytes of the output JPEG
+  - **arg**:      Pointer to be passed to the callback
 
 - **Output**: true on success
 
@@ -374,8 +372,8 @@ static int run_face_recognition(fb_data_t *fb, std::list<dl::detect::result_t> *
 ```
 
 - **Input Parameters**:
-    - **fb**: a pointer to a struct representing a frame buffer containing image data.
-    - **results**: a pointer to a list of detected face results.
+  - **fb**: a pointer to a struct representing a frame buffer containing image data.
+  - **results**: a pointer to a list of detected face results.
 
 2. Handles HTTP requests for BMP image files.
 
@@ -392,11 +390,10 @@ static size_t jpg_encode_stream(void *arg, size_t index, const void *data, size_
 ```
 
 - **Input Parameters**:
-    - **arg**: a pointer to a user-defined argument that is passed to the function.
-    - **index**: an index value indicating the current position within the image data.
-    - **data**: a pointer to a buffer containing the image data to be encoded.
-    - **len**: the length of the data buffer.
-
+  - **arg**: a pointer to a user-defined argument that is passed to the function.
+  - **index**: an index value indicating the current position within the image data.
+  - **data**: a pointer to a buffer containing the image data to be encoded.
+  - **len**: the length of the data buffer.
 
 4. Handles HTTP requests for capturing and streaming images from camera.
 
@@ -658,7 +655,6 @@ if(camera_sign && sd_sign){
 ```
 
 Before executing the `loop()`, we configure two flag checks `camera_sign` and `sd_sign`. This ensures that the task of taking and saving pictures must be run after the camera and SD card checks have been successfully executed in `Setup()`.
-
 
 ## Project I: Making a handheld camera
 
@@ -1124,7 +1120,6 @@ Upload the code to XIAO ESP32S3 Sense, turn on the serial monitor, at this time 
 Since the program does not involve settings such as encoding and frame rate, the video may open for only one second if there is no change in each frame of the recorded footage.
 :::
 
-
 ### Program annotation
 
 The core and key in the procedure of recording video is to keep acquiring the photo stream for a continuous period of 10 seconds and write it to the microSD card continuously.
@@ -1330,8 +1325,6 @@ Oh, my big face is circled.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/100.png" style={{width:600, height:'auto'}}/></div>
 
-
-
 ## OV5640 AutoFocus
 
 ### Hadware Preparation
@@ -1357,6 +1350,7 @@ Oh, my big face is circled.
 ### Software Preparation
 
 #### Method 1
+
 Special thanks to **@Eric** for providing the open source code
 
 <div class="github_container" style={{textAlign: 'center'}}>
@@ -1366,6 +1360,7 @@ Special thanks to **@Eric** for providing the open source code
 </div>
 
 **Code Example**
+
 ``` cpp
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -1506,6 +1501,7 @@ The resolution needs to be above 1600*1200 to see the focusing effect, the scree
 :::
 
 Download the following zip file and add it to Arudino
+
 - **[ZIP]** [OV5640 Auto](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/OV5640_AF.zip)
 
 :::tip
@@ -1653,26 +1649,16 @@ A: In principle, you need to cut the J3 pin when XIAO ESP32S3 Sense is used toge
 
 However, **we need to thank engineer Mjrovai for the new method of using the microSD card slot on the XIAO ESP32S3 Sense at the same time**, which is also possible at software level. We can refer to **[his methods and procedures](https://github.com/Mjrovai/XIAO-ESP32S3-Sense/tree/main/camera_round_display_save_jpeg)**.
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-
-
-

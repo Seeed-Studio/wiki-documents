@@ -15,26 +15,26 @@ last_update:
 # WiFi Usage with Seeed Studio XIAO ESP32S3 (Sense)
 
 <table align="center">
-	<tr>
-	    <th>Seeed Studio XIAO ESP32S3</th>
-	    <th>Seeed Studio XIAO ESP32S3 Sense</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
-	</tr>
+ <tr>
+     <th>Seeed Studio XIAO ESP32S3</th>
+     <th>Seeed Studio XIAO ESP32S3 Sense</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3sense.jpg" style={{width:250, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 The Seeed Studio XIAO ESP32S3 is an embedded development board that boasts outstanding RF performance, thanks to its support for both 2.4GHz Wifi - 802.11b/g/n and Bluetooth Low Energy (BLE) dual wireless communication. This capability enables the XIAO ESP32S3 to provide reliable and high-speed wireless connectivity for a wide range of Internet of Things (IoT) applications. In addition, the board supports U.FL antenna connection, which can extend the communication range to over 100 meters, making it an ideal choice for projects that require long-range wireless connectivity. In this tutorial, we will explore how to leverage the XIAO ESP32S3's Wi-Fi capabilities to connect to a Wi-Fi network and perform basic networking tasks.
@@ -67,224 +67,224 @@ ESP32-S3 provides a wide range of WiFi network functions. Generally, we can see 
 
 - `WiFiGenericClass::persistent(bool persistent)` -- Is a method that is used to enable or disable the persistent mode of the ESP32 WiFi library. When persistent mode is enabled, the Wi-Fi configuration is stored in non-volatile memory (NVM) and is retained even after a power cycle or reset. When persistent mode is disabled, the configuration is stored in RAM and is lost after a power cycle or reset.
 
-	- **Input Parameters**
-		- **persistent**: If the argument is true, persistent mode is enabled. If the argument is false, persistent mode is disabled.
+ 	- **Input Parameters**
+  		- **persistent**: If the argument is true, persistent mode is enabled. If the argument is false, persistent mode is disabled.
 
 - `WiFiGenericClass::enableLongRange(bool enable)` -- The function is used to enable or disable the Long Range (LR) feature of the WiFi module. When enabled, the LR feature allows the module to connect to WiFi networks that are further away than usual, but with lower data rates.
 
-	- **Input Parameters**
-		- **enable**: The parameter should be set to true to enable the feature and false to disable it.
+ 	- **Input Parameters**
+  		- **enable**: The parameter should be set to true to enable the feature and false to disable it.
 
 - `WiFiGenericClass::mode(wifi_mode_t m)` -- The function is used to set the WiFi mode of the device.
 
-	- **Input Parameters**
-		- **m**: The m parameter specifies the mode to set, which can be one of the following constants defined in the wifi_mode_t enum:
-			- **WIFI_MODE_NULL**: Disables both WiFi station and access point modes.
-			- **WIFI_MODE_STA**: Enables WiFi station mode to connect to an existing WiFi network.
-			- **WIFI_MODE_AP**: Enables access point mode to create a new WiFi network.
-			- **WIFI_MODE_APSTA**: Enables both WiFi station and access point modes.
+ 	- **Input Parameters**
+  		- **m**: The m parameter specifies the mode to set, which can be one of the following constants defined in the wifi_mode_t enum:
+   			- **WIFI_MODE_NULL**: Disables both WiFi station and access point modes.
+   			- **WIFI_MODE_STA**: Enables WiFi station mode to connect to an existing WiFi network.
+   			- **WIFI_MODE_AP**: Enables access point mode to create a new WiFi network.
+   			- **WIFI_MODE_APSTA**: Enables both WiFi station and access point modes.
 
 - `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- The function sets the power-saving mode for the WiFi module.
 
-	- **Input Parameters**
-		- **sleepType**: The sleepType parameter is an enumerated type that specifies the type of power-saving mode to use. There are three possible sleep types:
-			- **WIFI_PS_NONE**: This is the default sleep mode, in which the WiFi module does not go into power-saving mode.
-			- **WIFI_PS_MIN_MODEM**: In this mode, the WiFi module shuts down its modem while maintaining the connection to the access point (AP).
-			- **WIFI_PS_MAX_MODEM**: In this mode, the WiFi module shuts down both the modem and the station, which results in a disconnection from the AP.
+ 	- **Input Parameters**
+  		- **sleepType**: The sleepType parameter is an enumerated type that specifies the type of power-saving mode to use. There are three possible sleep types:
+   			- **WIFI_PS_NONE**: This is the default sleep mode, in which the WiFi module does not go into power-saving mode.
+   			- **WIFI_PS_MIN_MODEM**: In this mode, the WiFi module shuts down its modem while maintaining the connection to the access point (AP).
+   			- **WIFI_PS_MAX_MODEM**: In this mode, the WiFi module shuts down both the modem and the station, which results in a disconnection from the AP.
 
 ### STA functions
 
 - `WiFiSTAClass::status()` -- Return Connection status.
 
-	- **Output**: one of the value defined in wl_status_t.
-		- **WL_NO_SHIELD**: This status code indicates that the Wi-Fi module is not present.
-    	- **WL_IDLE_STATUS**: This status code indicates that the Wi-Fi module is not performing any operation.
-    	- **WL_NO_SSID_AVAIL**: This status code indicates that no Wi-Fi networks were found during the scan.
-    	- **WL_SCAN_COMPLETED**: This status code indicates that the Wi-Fi scan has completed successfully.
-    	- **WL_CONNECTED**: This status code indicates that the ESP32 is successfully connected to a Wi-Fi network.
-    	- **WL_CONNECT_FAILED**: This status code indicates that the connection to the Wi-Fi network failed.
-    	- **WL_CONNECTION_LOST**: This status code indicates that the connection to the Wi-Fi network was lost.
-    	- **WL_DISCONNECTED**: This status code indicates that the ESP32 was previously connected to a Wi-Fi network, but is not currently connected to any network.
+ 	- **Output**: one of the value defined in wl_status_t.
+  		- **WL_NO_SHIELD**: This status code indicates that the Wi-Fi module is not present.
+    - **WL_IDLE_STATUS**: This status code indicates that the Wi-Fi module is not performing any operation.
+    - **WL_NO_SSID_AVAIL**: This status code indicates that no Wi-Fi networks were found during the scan.
+    - **WL_SCAN_COMPLETED**: This status code indicates that the Wi-Fi scan has completed successfully.
+    - **WL_CONNECTED**: This status code indicates that the ESP32 is successfully connected to a Wi-Fi network.
+    - **WL_CONNECT_FAILED**: This status code indicates that the connection to the Wi-Fi network failed.
+    - **WL_CONNECTION_LOST**: This status code indicates that the connection to the Wi-Fi network was lost.
+    - **WL_DISCONNECTED**: This status code indicates that the ESP32 was previously connected to a Wi-Fi network, but is not currently connected to any network.
 
 - `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- Start Wifi connection with a WPA2 Enterprise AP.
 
-	- **Input Parameters** (Optional)
-		- **ssid**: Pointer to the SSID string.
-		- **method**: The authentication method of WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
-		- **wpa2_identity**: Pointer to the entity
-		- **wpa2_username**: Pointer to the username
-		- **wpa2_password**: Pointer to the password.
-		- **ca_pem**: Pointer to a string with the contents of a  .pem  file with CA cert
-		- **client_crt**: Pointer to a string with the contents of a .crt file with client cert
-		- **client_key**: Pointer to a string with the contants of a .key file with client key
-		- **channel**: Optional. Channel of AP
-		- **bssid**: Optional. BSSID / MAC of AP
-		- **connect**: Optional. call connect
+ 	- **Input Parameters** (Optional)
+  		- **ssid**: Pointer to the SSID string.
+  		- **method**: The authentication method of WPA2 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
+  		- **wpa2_identity**: Pointer to the entity
+  		- **wpa2_username**: Pointer to the username
+  		- **wpa2_password**: Pointer to the password.
+  		- **ca_pem**: Pointer to a string with the contents of a  .pem  file with CA cert
+  		- **client_crt**: Pointer to a string with the contents of a .crt file with client cert
+  		- **client_key**: Pointer to a string with the contants of a .key file with client key
+  		- **channel**: Optional. Channel of AP
+  		- **bssid**: Optional. BSSID / MAC of AP
+  		- **connect**: Optional. call connect
 
 - `WiFiSTAClass::reconnect()` -- Will force a disconnect and then start reconnecting to AP.
 
-	- **Output**: True/False.
+ 	- **Output**: True/False.
 
 - `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- Disconnect from the network.
 
-	- **Input Parameters**
-		- **wifioff**: wifioff `true` to turn the Wi-Fi radio off.
-		- **eraseap**: eraseap `true` to erase the AP configuration from the NVS memory.
-	
-	- **Output**: True/False.
+ 	- **Input Parameters**
+  		- **wifioff**: wifioff `true` to turn the Wi-Fi radio off.
+  		- **eraseap**: eraseap `true` to erase the AP configuration from the NVS memory.
+ 
+ 	- **Output**: True/False.
 
 - `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- Change IP configuration settings disabling the dhcp client.
 
-	- **Input Parameters**
-		- **local_ip**: Static ip configuration.
-		- **gateway**: Static gateway configuration.
-		- **subnet**: Static Subnet mask.
-		- **dns1**: Static DNS server 1.
-		- **dns2**: Static DNS server 2.
+ 	- **Input Parameters**
+  		- **local_ip**: Static ip configuration.
+  		- **gateway**: Static gateway configuration.
+  		- **subnet**: Static Subnet mask.
+  		- **dns1**: Static DNS server 1.
+  		- **dns2**: Static DNS server 2.
 
 - `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- Deprecated. Setting the ESP32 station to connect to the AP (which is recorded) automatically or not when powered on. Enable auto-connect by default.
 
-	- **Input Parameters**
-		- **autoConnect**: autoConnect bool.
+ 	- **Input Parameters**
+  		- **autoConnect**: autoConnect bool.
 
-	- **Output**: False.
+ 	- **Output**: False.
 
 - `WiFiSTAClass::waitForConnectResult(unsigned long timeoutLength)` -- Wait for WiFi connection to reach a result.
 
-	- **Input Parameters**
-		- **timeoutLength**: The parameter specifies the maximum amount of time to wait for a connection to be established, in milliseconds.
+ 	- **Input Parameters**
+  		- **timeoutLength**: The parameter specifies the maximum amount of time to wait for a connection to be established, in milliseconds.
 
-	- **Output**: one of the value defined in wl_status_t.
+ 	- **Output**: one of the value defined in wl_status_t.
 
 - `WiFiSTAClass::localIP()` -- Get the station interface IP address.
 
-	- **Output**: IPAddress station IP.
+ 	- **Output**: IPAddress station IP.
 
 - `WiFiSTAClass::macAddress(uint8_t* mac)` -- Get the station interface MAC address.
 
-	- **Input Parameters**
-		- **mac** (Optional): Pointer to uint8_t array with length WL_MAC_ADDR_LENGTH.
+ 	- **Input Parameters**
+  		- **mac** (Optional): Pointer to uint8_t array with length WL_MAC_ADDR_LENGTH.
 
-	- **Output**: Pointer to uint8_t *.
+ 	- **Output**: Pointer to uint8_t *.
 
 - `WiFiSTAClass::SSID()` -- Return the current SSID associated with the network.
 
-	- **Output**: SSID.
+ 	- **Output**: SSID.
 
 - `WiFiSTAClass::RSSI(void)` -- Return the current network RSSI.
 
-	- **Output**: RSSI.
+ 	- **Output**: RSSI.
 
 ### AP functions
 
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- This is a function in the WiFi library of ESP32-S3. It is used to set up a SoftAP (software access point), which allows other devices to connect to the ESP32-S3 and access its resources.
 
-	- **Input Parameters**
-		-  **ssid**:              Pointer to the SSID (max 63 char).
- 		-  **passphrase**:        (For WPA2 min 8 char, for open use NULL).
- 		-  **channel**:           WiFi channel number, 1 - 13.
- 		-  **ssid_hidden**:       Network cloaking (0 = broadcast SSID, 1 = hide SSID).
- 		-  **max_connection**:    Max simultaneous connected clients, 1 - 4.
+ 	- **Input Parameters**
+  		- **ssid**:              Pointer to the SSID (max 63 char).
+    - **passphrase**:        (For WPA2 min 8 char, for open use NULL).
+    - **channel**:           WiFi channel number, 1 - 13.
+    - **ssid_hidden**:       Network cloaking (0 = broadcast SSID, 1 = hide SSID).
+    - **max_connection**:    Max simultaneous connected clients, 1 - 4.
 
-	- **Output**: True/False.
+ 	- **Output**: True/False.
 
 - `WiFiAPClass::softAPgetStationNum()` -- Get the count of the Station / client that are connected to the softAP interface.
 
-	- **Output**: Stations count.
+ 	- **Output**: Stations count.
 
 - `WiFiAPClass::softAPConfig(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dhcp_lease_start)` -- A function for configuring SoftAP.
 
-	- **Input Parameters**
-		- **local_ip**:      Access point IP.
-		- **gateway**:       Gateway IP.
-		- **subnet**:        Subnet mask.
+ 	- **Input Parameters**
+  		- **local_ip**:      Access point IP.
+  		- **gateway**:       Gateway IP.
+  		- **subnet**:        Subnet mask.
 
-	- **Output**: True/False.
+ 	- **Output**: True/False.
 
 - `WiFiAPClass::softAPIP()` -- Get the softAP interface IP address.
 
-	- **Output**: IPAddress softAP IP.
+ 	- **Output**: IPAddress softAP IP.
 
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- Get the softAP interface MAC address.
 
-	- **Input Parameters**
-		- **mac** (Optional):   Pointer to uint8_t array with length WL_MAC_ADDR_LENGTH.
+ 	- **Input Parameters**
+  		- **mac** (Optional):   Pointer to uint8_t array with length WL_MAC_ADDR_LENGTH.
 
-	- **Output**: Pointer to uint8_t* or String mac.
+ 	- **Output**: Pointer to uint8_t* or String mac.
 
 ### WiFi Scan Function
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- Start scan WiFi networks available.
 
-	- **Input Parameters**
-		- **async**: The parameter is a boolean value that determines if the scan should be performed asynchronously. If set to true, the function returns immediately and the scan results can be obtained later by calling the getScanResults() function. If set to false, the function will block until the scan is complete.
-		- **show_hidden**: The parameter is a boolean value that determines if the function should include hidden networks in the scan results.
-		- **passive**: The parameter is a boolean value that determines if the function should perform a passive scan. If set to true, the function will not transmit any packets during the scan, which may take longer but can be useful in certain situations.
-		- **max_ms_per_chan**: The parameter is the maximum time to spend scanning each channel in milliseconds.
-		- **channel**: The parameter is the Wi-Fi channel to scan. If set to 0, the function will scan all available channels.
-		- **ssid**: The parameter is a pointer to a null-terminated string containing the SSID of the network to scan for. If set to nullptr, the function will scan for all available networks.
-		- **bssid**: The parameter is a pointer to a 6-byte array containing the MAC address of the access point to scan for. If set to nullptr, the function will scan for all access points.
+ 	- **Input Parameters**
+  		- **async**: The parameter is a boolean value that determines if the scan should be performed asynchronously. If set to true, the function returns immediately and the scan results can be obtained later by calling the getScanResults() function. If set to false, the function will block until the scan is complete.
+  		- **show_hidden**: The parameter is a boolean value that determines if the function should include hidden networks in the scan results.
+  		- **passive**: The parameter is a boolean value that determines if the function should perform a passive scan. If set to true, the function will not transmit any packets during the scan, which may take longer but can be useful in certain situations.
+  		- **max_ms_per_chan**: The parameter is the maximum time to spend scanning each channel in milliseconds.
+  		- **channel**: The parameter is the Wi-Fi channel to scan. If set to 0, the function will scan all available channels.
+  		- **ssid**: The parameter is a pointer to a null-terminated string containing the SSID of the network to scan for. If set to nullptr, the function will scan for all available networks.
+  		- **bssid**: The parameter is a pointer to a 6-byte array containing the MAC address of the access point to scan for. If set to nullptr, the function will scan for all access points.
 
-	- **Output**: The return value of this function is an integer indicating the number of networks scanned.
+ 	- **Output**: The return value of this function is an integer indicating the number of networks scanned.
 
 - `WiFiScanClass::getNetworkInfo(uint8_t i, String &ssid, uint8_t &encType, int32_t &rssi, uint8_t* &bssid, int32_t &channel)` -- Loads all infos from a scanned wifi in to the ptr parameters.
 
-	- **Input Parameters**
-		- **i**: The function is used to retrieve information about a scanned network at a specified index i.
-		- **ssid**: The ssid parameter is a reference to a String variable where the function stores the SSID of the network.
-		- **encType**: The encType parameter is a reference to a uint8_t variable where the function stores the encryption type of the network (0 = open, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
-		- **rssi**: The rssi parameter is a reference to an int32_t variable where the function stores the received signal strength indication (RSSI) of the network.
-		- **bssid**: The bssid parameter is a reference to a uint8_t* pointer where the function stores the BSSID (MAC address) of the network.
-		- **channel**: The channel parameter is a reference to an int32_t variable where the function stores the channel number of the network.
+ 	- **Input Parameters**
+  		- **i**: The function is used to retrieve information about a scanned network at a specified index i.
+  		- **ssid**: The ssid parameter is a reference to a String variable where the function stores the SSID of the network.
+  		- **encType**: The encType parameter is a reference to a uint8_t variable where the function stores the encryption type of the network (0 = open, 1 = WEP, 2 = WPA_PSK, 3 = WPA2_PSK, 4 = WPA_WPA2_PSK).
+  		- **rssi**: The rssi parameter is a reference to an int32_t variable where the function stores the received signal strength indication (RSSI) of the network.
+  		- **bssid**: The bssid parameter is a reference to a uint8_t* pointer where the function stores the BSSID (MAC address) of the network.
+  		- **channel**: The channel parameter is a reference to an int32_t variable where the function stores the channel number of the network.
 
-	- **Output**: True/False.
+ 	- **Output**: True/False.
 
 - `WiFiScanClass::SSID(uint8_t i)` -- Return the SSID discovered during the network scan.
 
-	- **Input Parameters**
-		- **i**: Specify from which network item want to get the information.
+ 	- **Input Parameters**
+  		- **i**: Specify from which network item want to get the information.
 
-	- **Output**: SSID string of the specified item on the networks scanned list.
+ 	- **Output**: SSID string of the specified item on the networks scanned list.
 
 - `WiFiScanClass::RSSI(uint8_t i)` -- Return the RSSI of the networks discovered during the scanNetworks.
 
-	- **Input Parameters**
-		- **i**: Specify from which network item want to get the information.
+ 	- **Input Parameters**
+  		- **i**: Specify from which network item want to get the information.
 
-	- **Output**: Signed value of RSSI of the specified item on the networks scanned list.
+ 	- **Output**: Signed value of RSSI of the specified item on the networks scanned list.
 
 ### WiFi Client functions
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- This function is used in the WiFiClient library to connect to a remote IP address and port with a specified timeout value.
 
-	- **Input Parameters**
-		- **ip**:   The IP address of the server to connect to.
-		- **port**: The port number of the server to connect to.
-		- **timeout** (Optional): The maximum time to wait for the connection to be established, in milliseconds. If the connection is not established within this time, the function will return an error. If timeout is set to 0, the function will wait indefinitely for the connection to be established.
+ 	- **Input Parameters**
+  		- **ip**:   The IP address of the server to connect to.
+  		- **port**: The port number of the server to connect to.
+  		- **timeout** (Optional): The maximum time to wait for the connection to be established, in milliseconds. If the connection is not established within this time, the function will return an error. If timeout is set to 0, the function will wait indefinitely for the connection to be established.
 
 - `WiFiClient::stop()` -- The function is used to disconnect the client from the server and release the socket/port used by the client. Once the function is called, the client can no longer send or receive data.
 
 - `WiFiClient::setTimeout(uint32_t seconds)` -- The function sets the maximum number of seconds the client will wait for a connection to be established or data to be received. If the connection or data transfer takes longer than the specified timeout, the connection will be closed.
 
-	- **Input Parameters**
-		- **seconds**:   The number of seconds for the timeout.
+ 	- **Input Parameters**
+  		- **seconds**:   The number of seconds for the timeout.
 
 - `WiFiClient::write(uint8_t data)` -- Write a single byte of data to the connected server through the WiFiClient instance. Or `WiFiClient::write(const uint8_t *buf, size_t size)`.
 
-	- **Input Parameters**
-		- **data**:   Is a single byte of data that needs to be sent over the established network connection.
+ 	- **Input Parameters**
+  		- **data**:   Is a single byte of data that needs to be sent over the established network connection.
 
 - `WiFiClient::read()` -- The function reads a single byte of incoming data from the connected server. It returns the byte read as an integer value. If no data is available, it returns -1. Or `read(uint8_t *buf, size_t size)`.
 
-	- **Output**: An integer value indicating the number of bytes received. If the return value is 0, it means that the server has closed the connection.
+ 	- **Output**: An integer value indicating the number of bytes received. If the return value is 0, it means that the server has closed the connection.
 
 - `WiFiClient::peek()` -- The function is used to check if there is any data available to be read from the server without actually reading it.
 
-	- **Output**: It returns the next byte of incoming data without removing it from the receive buffer. If no data is available, it returns -1.
+ 	- **Output**: It returns the next byte of incoming data without removing it from the receive buffer. If no data is available, it returns -1.
 
 - `WiFiClient::available()` -- The function is used to check how many bytes of data are available to be read from the server.
 
-	- **Output**: It returns an integer value representing the number of bytes available to be read.
+ 	- **Output**: It returns an integer value representing the number of bytes available to be read.
 
 ### WiFi Server function
 
@@ -292,13 +292,13 @@ ESP32-S3 provides a wide range of WiFi network functions. Generally, we can see 
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- The function is used to start a server on the specified port. The server will listen for incoming client connections.
 
-	- **Input Parameters**
-		- **port**: The port number to listen on.
-		- **enable** (Optional): A flag to indicate if the server should be enabled immediately after it is started. This flag is set to true by default.
+ 	- **Input Parameters**
+  		- **port**: The port number to listen on.
+  		- **enable** (Optional): A flag to indicate if the server should be enabled immediately after it is started. This flag is set to true by default.
 
 - `WiFiServer::hasClient()` -- The function is used to check if there are any incoming client connections available on the server. This function can be used in a loop to continuously check for new connections.
 
-	- **Output**: It returns a WiFiClient object if a client has connected or a NULL pointer if there are no clients waiting to connect.
+ 	- **Output**: It returns a WiFiClient object if a client has connected or a NULL pointer if there are no clients waiting to connect.
 
 - `WiFiServer::end()` -- The function is used to stop the server and release the associated resources. Once called, the server can no longer accept new client connections. Any existing client connections will remain open until they are closed by either the client or the server. `WiFiServer::close()` and `WiFiServer::stop()` have the same function.
 
@@ -306,19 +306,18 @@ ESP32-S3 provides a wide range of WiFi network functions. Generally, we can see 
 
 - `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- The is used to add a new access point (AP) to the list of available APs that the WiFiMulti object will attempt to connect to.
 
-	- **Input Parameters**
-		- **ssid**: Pointer to the SSID (max 63 char).
-		- **passphrase**: (for WPA2 min 8 char, for open use NULL).
+ 	- **Input Parameters**
+  		- **ssid**: Pointer to the SSID (max 63 char).
+  		- **passphrase**: (for WPA2 min 8 char, for open use NULL).
 
-	- **Output**: True/False
-
+ 	- **Output**: True/False
 
 - `WiFiMulti::run(uint32_t connectTimeout)` -- The function attempts to connect to one of the saved access points in a sequential order until it successfully connects to one.
 
-	- **Input Parameters**
-		- **connectTimeout**: The parameter specifies the maximum amount of time to wait for a connection in milliseconds. If connectTimeout is set to 0, the function will not time out and will attempt to connect indefinitely.
+ 	- **Input Parameters**
+  		- **connectTimeout**: The parameter specifies the maximum amount of time to wait for a connection in milliseconds. If connectTimeout is set to 0, the function will not time out and will attempt to connect indefinitely.
 
-	- **Output**: status
+ 	- **Output**: status
 
 ## Scan nearby WiFi networks
 
@@ -397,6 +396,7 @@ When the ESP32 is set as a Wi-Fi station, it can connect to other networks (like
 `WiFi.RSSI()` returns the RSSI of that network. RSSI stands for Received Signal Strength Indicator. It is an estimated measure of power level that an RF client device is receiving from an access point or router.
 
 Finally, `WiFi.encryptionType()` returns the network encryption type. That specific example puts a * in the case of open networks. However, that function can return one of the following options (not just open networks):
+
 - WIFI_AUTH_OPEN
 - WIFI_AUTH_WEP
 - WIFI_AUTH_WPA_PSK
@@ -478,9 +478,11 @@ In simple words, when you set the XIAO ESP32S3 as an access point you create its
 In your Arduino IDE, go to **File > Examples > WiFi > WiFiAccessPoint**. This example will show you how to use XIAO ESP32S3 to create a hotspot and control the on/off switch of a light through a simple web page connected to the hotspot.
 
 :::note
+
 1. We made some minor changes to the sample program by commenting out LED_BUILTIN, because the XIAO ESP32S3 has its own user indicator and we don't need an external LED.
 2. The LED will only turn off when the user LED pin on the XIAO ESP32S3 is set to a high level, and it will only turn on when the pin is set to a low level.
 3. You also need to modify the hotspot name and password in the program to your desired ones.
+
 :::
 
 ```c
@@ -673,7 +675,7 @@ void loop() {
 }
 ```
 
-In this example program, XIAO ESP32S3 connects to the network via WiFi and connects to a specified MQTT broker, subscribes to the topic **test/topic**, and publishes a message to the topic every 5 seconds. 
+In this example program, XIAO ESP32S3 connects to the network via WiFi and connects to a specified MQTT broker, subscribes to the topic **test/topic**, and publishes a message to the topic every 5 seconds.
 
 When XIAO ESP32S3 receives a message from the MQTT broker, it can be processed in the `client.onMessage` callback function. You need to replace the variables `ssid`, `password`, `mqtt_server`, etc. in the example program with your own network and MQTT server information.
 
@@ -682,7 +684,6 @@ The MQTT server address provided in the sample program is `test.mosquitto.org`, 
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/41.png" style={{width:800, height:'auto'}}/></div>
-
 
 ## WiFi & HTTP/HTTPS Usage
 
@@ -907,10 +908,9 @@ Such as the following code snippet, is added to adjust the power of the function
 
 It has been verified that setting the power to the above code gives the best results.
 
-
 ## Citations & References
 
-This article draws on the web content **[Random Nerd Tutorials](https://randomnerdtutorials.com/)**' on ESP32 and uses it verified on the Seeed Studio XIAO ESP32S3. 
+This article draws on the web content **[Random Nerd Tutorials](https://randomnerdtutorials.com/)**' on ESP32 and uses it verified on the Seeed Studio XIAO ESP32S3.
 
 Special thanks to the authors of **Random Nerd Tutorials** for their hard work!
 
@@ -926,22 +926,14 @@ For more information about using the ESP32 development board, please read the of
 
 ## Tech Support & Product Discussion
 
-.
-
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-
-
-
-
-

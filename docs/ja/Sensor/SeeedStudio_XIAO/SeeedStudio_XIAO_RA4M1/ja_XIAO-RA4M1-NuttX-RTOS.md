@@ -1,6 +1,6 @@
 ---
-description: XIAO RA4M1 と NuttX(RTOS)
-title: XIAO RA4M1 と NuttX(RTOS)
+description: XIAO RA4M1 With NuttX(RTOS)
+title: XIAO RA4M1 With NuttX(RTOS)
 keywords:
 - xiao
 image: https://files.seeedstudio.com/wiki/XIAO-nRF52840-NuttX/nuttx.webp
@@ -10,30 +10,26 @@ last_update:
     date: 03/11/2025
     author: rcsim
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed Studio XIAO RA4M1 と NuttX(RTOS)
+# Seeed Studio XIAO RA4M1 with NuttX(RTOS)
 
 ## はじめに
 
-[NuttX](https://nuttx.apache.org/) は、標準準拠と小型フットプリントで広く認識されている成熟したリアルタイムオペレーティングシステム (RTOS) です。NuttX の主な特徴の一つはそのスケーラビリティであり、8ビットマイクロコントローラーから64ビットシステムまでの環境で使用することができます。この柔軟性は POSIX および ANSI 標準への準拠によって実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似の NuttX 機能を試すことが可能です。
+[NuttX](https://nuttx.apache.org/) は、標準準拠と小さなフットプリントで広く認知されている成熟したリアルタイムオペレーティングシステム（RTOS）です。NuttXの主な特徴の一つはスケーラビリティであり、8ビットマイクロコントローラから64ビットシステムまでの環境で使用できます。この柔軟性は、POSIXおよびANSI標準への準拠により実現されており、異なるアーキテクチャ、ファミリー、半導体ベンダーの幅広いチップで類似のNuttX機能を実験することができます。
 
 <div align="center"><img width ="{200}" src="https://files.seeedstudio.com/wiki/XIAO-RP2040/img/NuttX/nuttx.svg"/></div>
 
-さらに、NuttX は USB、Ethernet、Audio、Graphics サブシステムなど、多くの高度で便利な機能を提供します。これらの特徴により、NuttX は多様なハードウェアで動作可能な汎用性と堅牢性を備えた RTOS を求める開発者にとって魅力的な選択肢となります。
+さらに、NuttXはUSB、Ethernet、Audio、Graphicsサブシステムなど、多くの高度で有用な機能を提供します。これらの特性により、NuttXは様々なタイプのハードウェア上で動作可能な汎用性があり、堅牢なRTOSを求める開発者にとって魅力的な選択肢となっています。
 
-NuttX は膨大で継続的に拡大する数のボードをサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/) では、アーキテクチャや System-on-Chip (SoC) シリーズごとに整理されたサポートされているボードの包括的なリストを提供しています。
+NuttXは膨大で継続的に拡張されているボードをサポートしています。[公式ドキュメント](https://nuttx.apache.org/docs/latest/platforms/)では、アーキテクチャとSystem-on-Chip（SoC）シリーズ別に整理されたサポートボードの包括的なリストを提供しています。
 
-例えば、NuttX ドキュメントの [Seeed Studio XIAO RA4M1](https://nuttx.apache.org/docs/latest/platforms/arm/ra4m1/boards/xiao-ra4m1/index.html) ページでは、サポートされている各機能の詳細な説明とその利用方法に関する指示が記載されています。また、Renesas RA4M1 シリーズチップに関する特定のページもあり、サポートされている MCU と周辺機器のリストを確認できます。
+例えば、NuttXドキュメントの[Seeed Studio XIAO RA4M1](https://nuttx.apache.org/docs/latest/platforms/arm/ra4m1/boards/xiao-ra4m1/index.html)ページでは、サポートされている各機能の詳細な説明とそれらの使用方法に関する指示を提供しています。また、NuttXドキュメントには[Renesas RA4M1](https://nuttx.apache.org/docs/latest/platforms/arm/ra4m1/index.html)シリーズチップ専用のページもあり、サポートされているMCUとペリフェラルのリストを見つけることができます。
 
 ## インストール
 
-NuttX ドキュメントでは、[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html) を提供しています。Seeed Studio XIAO RA4M1 の場合、以下の手順に従ってください：
+Nuttxドキュメントでは、異なるプラットフォーム向けの[ガイド](https://nuttx.apache.org/docs/latest/quickstart/install.html)を提供しています。Seeed Studio XIAO RA4M1については、以下の手順に従ってください：
 
-1. Renesas rfp-cli をダウンロードします (https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui):
+1. Renesas rfp-cli(https://www.renesas.com/en/software-tool/renesas-flash-programmer-programming-gui)をダウンロード：
 
     ```bash
     ~/nuttxspace/nuttx$ rfp-cli --help
@@ -42,13 +38,13 @@ NuttX ドキュメントでは、[ガイド](https://nuttx.apache.org/docs/lates
     Usage: rfp-cli [options...] [<hex file>...]
     ```
 
-2. ワークスペースを作成します
+2. ワークスペースを作成
 
     ```bash
     mkdir nuttxspace
     ```
 
-3. リポジトリをクローンします
+3. リポジトリをクローン
 
     ```bash
     cd nuttxspace
@@ -56,26 +52,26 @@ NuttX ドキュメントでは、[ガイド](https://nuttx.apache.org/docs/lates
     git clone https://github.com/apache/nuttx-apps apps
     ```
 
-Apache Nuttx は2つのプロジェクトに分かれています：
+Apache Nuttxは2つのプロジェクトに分かれています：
 
-- Nuttx: カーネル、ドライバー、サブシステムが実装されています。
-- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリターのコレクションが含まれています。
+- Nuttx: カーネル、ドライバー、サブシステムの実装を含みます。
+- Apps: ツール、シェル、ネットワークユーティリティ、ライブラリ、インタープリターのコレクションを含みます。
 
 ## アプリケーション
 
-アプリケーションを開始するには、NuttX に設定をロードする必要があります。以下のコマンドを実行してください：
+アプリケーションを開始するには、以下のコマンドを呼び出してNuttXに設定をロードする必要があります：
 
 ```bash
 ./tools/configurate.sh board_name:your_application
 ```
 
-また、サポートされているボードのリストを確認するには、以下のコマンドを実行できます：
+また、以下のコマンドを実行してボード対応リストを確認することも可能です：
 
 ```bash
 ./tools/configurate.sh -L
 ```
 
-4. NuttX をビルドします (ビルドプロセスにより、nuttx.uf2 を含むファームウェアバイナリが生成されます):
+4. NuttXをビルドします（ビルドプロセスでnuttx.uf2を含むファームウェアバイナリが生成されます）：
 
     ```bash
     cd nuttx
@@ -83,55 +79,56 @@ Apache Nuttx は2つのプロジェクトに分かれています：
     ./tools/configure.sh xiao-ra4m1:nsh
     make V=1
     ```
-5. RESET ボタンと BOOT ボタンを使用して「Renesas RA USB Boot」モードに入ることができます。BOOT を GND にショートした状態でボードを再起動し、リセットボタンを2回押します (ダブルクリック)。ボードは「Renesas RA USB Boot」として認識されます。
 
-6. rfp-cli を使用してファームウェアをロードします：
+5. RESETボタンとBOOTボタンを使用して、BOOTをGNDにショートした状態でボードを再起動し、リセットボタンを2回押す（ダブルクリック）ことで「Renesas RA USB Boot」モードに入ることができます。ボードは「Renesas RA USB Boot」として認識されます。
+
+6. rfp-cliを使用してファームウェアをロードします：
 
     ```bash
     rfp-cli -device ra -port /dev/ttyACM0 -p ./build/nuttx.hex
     ```
 
-## 実践
+## ハンズオン
 
-NuttXを実際に触ってみましょう。このセッションでは、NSHとCOMBOの3つのアプリケーションが利用可能です。
+実際にNuttXを探索する時間です。このセッションでは、NSHとCOMBOの3つのアプリケーションが利用可能です。
 
 ### NSH
 
-NuttShell(NSH)は、NuttXで使用されるシェルシステムで、bashやその他の類似オプションに似ています。豊富なコマンドセット、スクリプト機能、そして独自のアプリケーションを「builtin」（同じNuttXバイナリの一部）として実行する機能をサポートしています。NSHの設定では、115200 bpsでSCI2コンソールを有効にします。
+NuttShell（NSH）はNuttXで使用されるシェルシステムで、bashや他の類似オプションと似ています。豊富な内蔵コマンドセット、スクリプト機能、および独自のアプリケーションを「builtin」（同じNuttXバイナリの一部）として実行する機能をサポートしています。NSH設定では、115200 bpsを使用してSCI2でコンソールを有効にします。
 
-まず、以前の設定をクリアしてビルドプロセスを開始します。
+前の設定をクリアしてビルドプロセスを開始できます
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-次に、xiao-ra4m1ボード用のNSH設定を選択します。
+次に、xiao-ra4m1ボードにNSH設定を選択します：
 
 ```bash
 ./tools/configurate.sh xiao-ra4m1:nsh
 ```
 
-ソースコードをコンパイルします。
+Compile the source code.
 
 ```bash
 make -j
 ```
 
-ファームウェアをボードにロードし、USB-to-SerialをTXおよびRXピンに接続した後、miniconやpicocomなどのシリアル通信プログラムを実行します。
+ファームウェアをボードにロードし、USB-to-SerialをTXとRXピンに接続してから、miniconやpicocomなどのシリアル通信プログラムを実行してください：
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
 ```
 
-NuttShellコンソールにアクセスします。
+NuttShellコンソールにアクセス：
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
 nsh> 
 ```
 
-`?`を入力すると、コマンドや組み込みアプリケーションの利用可能なオプションにアクセスできます。
+`?`を入力すると、コマンドと組み込みアプリケーションの利用可能なオプションにアクセスできます。
 
 ```bash
 nsh> ?
@@ -151,37 +148,37 @@ Builtin Apps:
     getprime    hello       nsh         ostest      sh 
 ```
 
-NuttXに挨拶してみましょう。`hello`と入力すると、コマンドが実行されます。
+NuttXに挨拶してみましょう。`hello`と入力すると、コマンドが実行されます：
 
 ```bash
 nsh> hello
 Hello, World!!
 ```
 
-おめでとうございます！これでNuttXとの最初のインタラクションが完了しました。
+おめでとうございます。NuttXとの最初のやり取りが完了しました。
 
 ### COMBO
 
-この設定では、gpioとledsの3つの例示アプリケーションが有効になります。汎用入出力(GPIO)はマイクロコントローラーの最も基本的な部分であり、外部世界と接続することを可能にします。このセクションでは、NSHを使用してこれらのピンにアクセスし、設定を行います。まず、以前の設定をクリアします。
+この設定では、gpio と leds の3つのサンプルアプリケーションが有効になります。汎用入出力（GPIO）はマイクロコントローラーの最も基本的な部分であり、外部世界との接続を可能にします。このようにして、NSHを使用してこれらのピンにアクセスし、必要に応じて設定します。しかし、まず前の設定をクリアしましょう。
 
 ```bash
 cd ~/nuttxspace/nuttx
 make distclean
 ```
 
-xiao-ra4m1ボード用のcombo設定を選択します。
+Select the combo configuration to the xiao-ra4m1 board.
 
 ```bash
 ./tools/configurate.sh xiao-ra4m1:combo
 ```
 
-ソースコードをコンパイルします。
+Compile de the source code.
 
 ```bash
 make -j
 ```
 
-ファームウェアをボードにロードし、miniconやpicocomなどのシリアル通信プログラムを実行します。
+Load the firmware into you board, run a serial communication program such as minicon or picocom:
 
 ```bash
 picocom -b 115200 /dev/ttyUSB0
@@ -192,7 +189,7 @@ NuttShell (NSH) NuttX-12.8.0
 nsh>
 ```
 
-このアプリケーションと対話するために受け入れられるオプションを確認するには、`gpio -h`を入力します。すると、パラメータのリストが返されます。
+このアプリケーションとの対話で受け入れられるオプションを確認するには、`gpio -h` と入力してください。パラメータのリストが返されます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -219,14 +216,14 @@ IO_INPUT_PIN_PULLDOWN
  10: GPIO_INTERRUPT_BOTH_PIN
 ```
 
-GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`を入力します。入力後、いくつかのGPIOが宣言されていることが確認できます。これらはboards/arm/ra/xiao-ra4m1/include/board.hで定義されています。
+GPIOデバイスファイルが作成されたことを確認するには、`ls/dev`と入力してください。入力後、boards/arm/ra/xiao-ra4m1/include/board.hで定義されたいくつかのgpioが宣言されているのを確認できます。これらは以下を表しています：
 
-- オンボードLED:
-  - 黄色            -> P011
- 
-- GPIOs
-  - 1入力           -> P014
-  - 1出力           -> P000
+- オンボードLED：
+  - Yellow            -> P011
+
+- GPIO
+  - 1 Input           -> P014
+  - 1 Output          -> P000
 
 ```bash
 nsh> ls /dev
@@ -241,7 +238,7 @@ nsh> ls /dev
 nsh> 
 ```
 
-以下のコマンドを使用してgpio0を読み取り、gpio1に書き込みます。現時点では、RA4M1チップセットではGPIO入力の割り込みは利用できません。
+以下のコマンドに従ってgpio0を読み取り、gpio1に書き込みます。現在のところ、割り込み付きのGPIO入力はRA4M1チップセットでは利用できません。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -263,9 +260,9 @@ Driver: /dev/gpio1
   Verify:        Value=0
 ```
 
-USERLEDSは、単一操作でLEDを制御するサブシステムです。また、printfのようなコマンドラインを使用することもできます。このデモでは、オンボードの黄色LEDを1秒ごとにオンとオフにします。
+USERLEDS は、単一の操作で LED を制御できるサブシステムです。また、printf のようなコマンドラインを使用することもできます。このデモでは、オンボードの黄色 LED を 1 秒ごとにオン・オフします。
 
-`leds`と入力すると、LEDが同時に点滅する様子が観察できます。
+`leds` と入力すると、LED が同時に点滅するのを観察できます。
 
 ```bash
 NuttShell (NSH) NuttX-12.8.0
@@ -287,7 +284,7 @@ led_daemon: LED set 0x00
 
 ```
 
-以下のデモ動画でgpioとledsの動作を確認してください。
+以下のgpioとledのデモ動画をご確認ください：
 
 <div style={{ maxWidth: '100%', textAlign: 'center' }}>
   <video style={{ width: '100%', height: 'auto' }} controls>
@@ -295,16 +292,16 @@ led_daemon: LED set 0x00
   </video>
 </div>
 
-NuttX RTOSに関する詳細情報は、[NuttX Documentation](https://nuttx.apache.org/docs/latest/index.html)をご覧ください。
+NuttX RTOSの詳細については、[NuttX ドキュメント](https://nuttx.apache.org/docs/latest/index.html)をご覧ください。
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトは Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479) によってサポートされています。
-- 特に [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609) さんの献身的な努力に感謝します。あなたの成果は[展示](https://wiki.seeedstudio.com/contributors/)される予定です。
+- このプロジェクトは、Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Rodrigo](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=92947609)の献身的な努力に特別な感謝を捧げます。あなたの作品は[展示](https://wiki.seeedstudio.com/contributors/)されます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを用意しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
