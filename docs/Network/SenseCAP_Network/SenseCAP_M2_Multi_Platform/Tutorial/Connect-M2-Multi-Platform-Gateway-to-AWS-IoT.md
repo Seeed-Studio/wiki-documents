@@ -93,7 +93,7 @@ Publish to AWS IoT Core message broker
 **Permissions**: Select an existing service role > IoT Wireless Gateway Cert Manager Role
 
 :::tip Note
-Adestination name can only have alphanumeric, - (hyphen)and \_ (underscore) characters and it can't have any spaces.
+Adestination name can only have alphanumeric, - (hyphen)and _ (underscore) characters and it can't have any spaces.
 :::
 
 

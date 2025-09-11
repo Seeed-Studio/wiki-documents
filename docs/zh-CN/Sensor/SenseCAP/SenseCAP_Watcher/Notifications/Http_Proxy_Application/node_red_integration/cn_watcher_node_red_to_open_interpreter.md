@@ -17,7 +17,7 @@ last_update:
 
 ## 第一部分：什么是 [Open Interpreter](https://docs.openinterpreter.com/getting-started/introduction)
 
-Open Interpreter 是一个开源工具，通过启用自然语言命令来执行各种编程语言的代码，促进用户与计算机之间的交互。它充当桥梁，允许用户用简单的语言编写指令，然后解释器将其转换为可执行代码。这提高了生产力，使编程更加易于访问，特别是对于那些可能不熟悉编码语法的人。
+Open Interpreter 是一个开源工具，通过启用自然语言命令来执行各种编程语言的代码，从而促进用户与计算机之间的交互。它充当桥梁，允许用户用简单的语言编写指令，然后解释器将其转换为可执行代码。这提高了生产力，使编程更加易于访问，特别是对于那些可能不熟悉编码语法的人。
 
 ## 第二部分：Node-RED 中的操作
 
@@ -34,13 +34,13 @@ Open Interpreter 是一个开源工具，通过启用自然语言命令来执行
 
 ### 步骤 1：配置 SenseCap Watcher OpenSteam 模块
 
-首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-如果您还不知道如何从 Watcher 向 Node_RED 发送消息，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+如果您还不知道如何从 Watcher 向 Node_RED 发送消息，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 ### 步骤 2：配置 function 模块
 
@@ -56,7 +56,7 @@ return msg;
 
 ### 步骤 3. 配置 http 请求模块
 
-为了安全起见，我们使用 POST 请求并发送到端口 3000，稍后我们将使用 Open Interpreter 来持续监听端口 3000。
+我们使用 POST 请求来确保安全性，并发送到端口 3000，稍后我们将使用 Open Interpreter 来持续监听端口 3000。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/8.png" style={{width:800, height:'auto'}}/></div>
 
@@ -66,7 +66,7 @@ return msg;
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/9.png" style={{width:800, height:'auto'}}/></div>
 
-配置完成后，不要忘记**部署**它们。
+完成配置后，不要忘记**部署**它们。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/10.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -91,7 +91,7 @@ pip install open-interpreter
 Interpreter 有两种模式，在线模式和本地模式。默认情况下，Interpreter 选择在线模式，使用 OpenAI ChatGPT gpt-4-turbo API Key。您也可以将其设置为本地模式，这意味着您需要下载模型在本地运行。
 
 :::tip
-我建议使用在线模式，因为在线模式比本地模式更快更智能，而且本地模式经常会卡住。
+我推荐使用在线模式，因为在线模式比本地模式更快更智能，而且本地模式经常会卡住。
 :::
 
 #### 在线模式
@@ -100,15 +100,13 @@ Interpreter 有两种模式，在线模式和本地模式。默认情况下，In
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/16.png" style={{width:1000, height:'auto'}}/></div>
 
-2. 然后，我们输入
-
-```interpreter``` 这个命令来启动它，它需要我们输入 API 密钥。之后，我们成功将模型设置为 gpt-4-turbo。
+2. 然后，我们输入 ```interpreter``` 这个命令来启动它，它会要求我们输入 API Key。之后，我们成功将模型设置为 gpt-4-turbo。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/2_1.png" style={{width:1000, height:'auto'}}/></div>
 
 #### 本地模式
 
-1. 在开始之前，我们需要下载一个模型来在本地运行它。我在这里推荐 **Ollama**。[点击这里跳转。](https://ollama.com/) 您应该下载这个应用程序并安装它。
+1. 在开始之前，我们需要下载一个模型在本地运行。我推荐使用 **Ollama**。[点击这里跳转。](https://ollama.com/) 您应该下载这个应用程序并安装它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/12.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -120,39 +118,39 @@ Interpreter 有两种模式，在线模式和本地模式。默认情况下，In
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/13.png" style={{width:1000, height:'auto'}}/></div>
 
-4. 安装模型并成功运行后，我们可以继续。我们需要输入 ```interpreter -l``` 这个命令来进入它，然后选择 **ollama** 和 **llama3.1**（您刚刚下载的模型）。
+4. 安装模型并成功运行后，我们可以继续。我们需要输入 ```interpreter -l``` 这个命令进入它，然后选择 **ollama** 和 **llama3.1**（您刚刚下载的模型）。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/11.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 步骤 7. 运行命令
 
 :::tip
-我多次尝试在 Interpreter 中运行以下命令，但不是每次 Interpreter 的反应都相同。
+我多次尝试在 Interpreter 中运行以下命令，但 Interpreter 的反应并不是每次都相同。
 
-所以您需要根据 Interpreter 的反应与其交互。有时您需要重新启动它并再次尝试。
+所以您需要根据 Interpreter 的反应与其交互。有时您需要重启它并重新尝试。
 :::
 
 这是我发送给 Open Interpreter 的自然语言命令。
 
 ```
-我希望你持续监听计算机端口 3000 并提取 image_url 并在浏览器中打开它。
+i want you to keep listening computer port 3000 and extract the image_url and open it in browser.
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/2.png" style={{width:1000, height:'auto'}}/></div>
 
-第一次，Interpreter 说她的初始设置为了简单起见只支持 GET 请求，但我的请求是 POST 出于安全考虑，所以她无法支持并建议我修改服务器来处理 POST 请求。我说是的，她会自动运行。
+第一次运行时，Interpreter 说她的初始设置为了简单起见只支持 GET 请求，但我的请求是 POST（出于安全考虑），所以她无法支持，并建议我修改服务器来处理 POST 请求。我同意了，她会自动运行。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/3.png" style={{width:1000, height:'auto'}}/></div>
 
-如您所见，代码运行成功，监听端口 3000。
+如你所见，代码运行成功，监听端口 3000。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/4.png" style={{width:1000, height:'auto'}}/></div>
 
-现在，使用 Watcher 检测您自己。图像将被捕获并自动在浏览器中打开。
+现在，使用 Watcher 来检测你自己。图像将被捕获并自动在浏览器中打开。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/5.png" style={{width:1000, height:'auto'}}/></div>
 
-恭喜您成功集成了 Watcher 和 Open Interpreter 应用程序！这一成就标志着您旅程中的重要一步，展示了您的奉献精神和技能。随着您的前进，您将发现更多迷人的概念和工具可供探索。拥抱前方的挑战和发现，享受这个激动人心的冒险的每一刻！
+恭喜你成功集成了 Watcher 和 Open Interpreter 应用程序！这一成就标志着你旅程中的重要一步，展现了你的奉献精神和技能。随着你的前进，你会发现更多令人着迷的概念和工具等待探索。拥抱前方的挑战和发现，享受这激动人心的冒险的每一刻！
 
 ## 技术支持与产品讨论
 

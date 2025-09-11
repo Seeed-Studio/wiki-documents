@@ -30,11 +30,11 @@ last_update:
 
 Watcher 是一个强大的工具，依靠用户发出的命令来执行各种监控和分析任务。通过向 Watcher 发送精确的指令，您可以指导它专注于特定目标、收集数据并提供有价值的见解。
 
-在接下来的章节中，我们将深入了解任务分类、模型选择和定价信息的详细内容。我们的目标是为您提供必要的知识和技能，以便高效地为 Watcher 分配任务并充分利用其功能。我们将探索可用的不同类型任务，指导您为您的需求选择合适的模型，并提供相关成本的清晰说明。
+在接下来的章节中，我们将深入了解任务分类、模型选择和定价信息的详细内容。我们的目标是为您提供必要的知识和技能，以便高效地为 Watcher 分配任务并充分利用其功能。我们将探索可用的不同类型任务，指导您为需求选择合适的模型，并明确相关成本。
 
 在本教程结束时，您将对如何有效地向 Watcher 传达您的监控需求有扎实的理解。您将能够自信地分配任务、自定义设置并获得所需的结果。
 
-准备好掌控 Watcher 并释放其全部潜力。让我们踏上这段任务分配之旅，发现 Watcher 如何帮助您实现监控目标！
+准备好掌控 Watcher 并释放其全部潜力。让我们踏上这个任务分配之旅，发现 Watcher 如何帮助您实现监控目标！
 
 ## SenseCAP Watcher 高级配置
 
@@ -93,7 +93,7 @@ Watcher 任务由三个主要组成部分构成：
 :::danger
 使用 SenseCraft AI 的某些服务可能需要付费，详情请参阅以下文档：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_3.png" style={{width:1000, height:'auto'}}/></div>
@@ -118,23 +118,23 @@ Watcher 任务由三个主要组成部分构成：
 
 #### 本地AI + 云端LLM服务
 
-Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的结合。**当Watcher的本地AI服务识别到指定对象，但需要LLM云服务进一步分析以确定对象的行为或状态时，就会使用这种模式**。
+Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的组合。**当Watcher的本地AI服务识别到指定对象，但需要LLM云服务进一步分析以确定对象的行为或状态时，就会使用这种模式**。
 
 :::danger
 使用SenseCraft AI的某些服务可能需要付费，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和优势](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/task_4.png" style={{width:1000, height:'auto'}}/></div>
 
 在图像显示的示例中，对象设置为"cat"，动作设置为"flashing light"。当Watcher使用其本地AI宠物检测模型检测到猫时，它会调用LLM云服务来分析猫的行为并确定它是否在"eating"。
 
-如果LLM云服务确认猫确实在吃东西，Watcher就会执行指定的动作，在这种情况下是闪烁设备上的RGB灯。这种本地和云端服务的结合允许进行更复杂的检测和分析，使Watcher不仅能够识别对象，还能理解它们的动作或状态。
+如果LLM云服务确认猫确实在进食，Watcher就会执行指定的动作，在这种情况下是闪烁设备上的RGB灯。这种本地和云端服务的结合允许进行更复杂的检测和分析，使Watcher不仅能够识别对象，还能理解它们的动作或状态。
 
-通过同时利用本地AI服务和LLM云服务，Watcher可以处理需要多层分析的复杂场景。本地AI模型首先检测指定对象的存在，而LLM云服务提供对象行为的额外上下文和理解。
+通过同时利用本地AI服务和LLM云服务，Watcher可以处理需要多层分析的复杂场景。本地AI模型首先检测指定对象的存在，而LLM云服务则提供对象行为的额外上下文和理解。
 
-如果您放置一个被判断为使用本地+LLM的任务，那么在SenseCraft APP上，任务配置页面将大致显示如下所示。
+如果您放置了一个被判断为使用本地+LLM的任务，那么在SenseCraft APP上，任务配置页面将大致显示如下所示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -170,245 +170,246 @@ Watcher设备的第三种操作模式是本地AI服务和云端LLM服务的结�
             <th>如何选择</th>
             <td><strong>优势</strong>：完全依赖Watcher的本地AI服务，无额外费用，识别和响应时间更快。如果有针对性的模型，理论上也会有更高的识别准确率。<br /><strong>缺点</strong>：如果没有模型，就无法使用该服务。如果需要对对象进行行为分析，也无法仅使用本地服务。</td>
             <td><strong>优势</strong>：可以识别广泛的对象，即使SenseCraft AI库中没有预训练模型。适用于需要对对象进行行为分析的任务。<br /><strong>缺点</strong>：需要活跃的互联网连接。使用云端服务可能产生额外费用，特别是在免费公测阶段结束后。与本地AI服务模式相比，响应时间稍慢。</td>
-            <td><strong>优势</strong>：与云端LLM服务模式相比，此模式在调用云端LLM服务之前使用本地AI服务过滤掉非特定对象。对于不总是存在但有可用模型的对象，此模式可以通过仅对包含已识别对象的图像进行行为分析来大大降低调用云端LLM服务的成本。<br /><strong>缺点</strong>：结合使用云端LLM服务和本地AI服务仍可能产生额外费用，尽管成本会低于专门使用云端LLM服务模式。需要活跃的互联网连接进行云端行为分析。与本地AI服务模式相比，整体响应时间稍慢。</td>
+            <td><strong>优势</strong>：与云端LLM服务模式相比，此模式使用本地AI服务在调用云端LLM服务之前过滤掉非特定对象。对于不总是存在但有可用模型的对象，此模式可以通过仅对包含已识别对象的图像进行行为分析来大大降低调用云端LLM服务的成本。<br /><strong>缺点</strong>：结合使用云端LLM服务和本地AI服务可能仍会产生额外费用，尽管成本会低于专门使用云端LLM服务模式。需要活跃的互联网连接进行云端行为分析。与本地AI服务模式相比，整体响应时间稍慢。</td>
 		</tr>
 	</table>
+
 </div>
 
 1. "报警时间"的含义因模式而异：
 
     - **本地AI服务模式**：
-        "报警时间"指的是触发报警后Watcher的RGB灯或扬声器保持活跃的持续时间。
+        "报警时间"指的是触发报警后，Watcher的RGB灯或扬声器保持激活状态的持续时间。
 
-    - **云端LLM服务模式**：
-        "报警时间"不仅表示RGB灯和扬声器激活的持续时间，还表示显示的摄像头屏幕暂停的时间长度。这种暂停考虑了将图像传输到云服务器进行分析所需的时间。
+    - **基于云端的LLM服务模式**：
+        "报警时间"不仅表示RGB灯和扬声器激活的持续时间，还表示显示的摄像头画面暂停的时长。这种暂停是为了考虑将图像传输到云服务器进行分析所需的时间。
 
 2. "触发报警的最小时间间隔"设置独立于"报警时间"，不代表顺序关系。此设置指定两次连续报警触发之间必须经过的最小时间。在配置任务时，用户**不允许**设置短于此最小间隔的报警时间。此限制确保系统有足够的时间处理和响应每个报警事件，然后才能触发另一个报警。此限制确保系统有足够的处理时间，防止过度或连续的报警触发，促进稳定可靠的运行。
 
 :::danger
-使用 SenseCraft AI 的某些服务可能需要付费，详情请参考以下文档：
+使用SenseCraft AI的某些服务可能会产生费用，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 
-## 通过 SenseCraft APP 下发任务
+## 通过SenseCraft APP下发任务
 
-在了解了任务的分类和基本概念后，让我们详细了解如何在 SenseCraft APP 中向 Watcher 发出命令。假设您已经完成了 Watcher 配对过程并进入了 Watcher 聊天页面。如果您还不知道如何绑定设备，请参考[设备绑定和 OTA 升级](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)。
+在了解了任务的分类和基本概念后，让我们更详细地了解如何在SenseCraft APP中向Watcher发出命令。假设您已经完成了Watcher配对过程并进入了Watcher聊天页面。如果您还不知道如何绑定设备，请参考[设备绑定和OTA升级](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/workflow.png" style={{width:1000, height:'auto'}}/></div>
 
 ### 输入任务
 
-每个 Watcher 设备在 SenseCraft APP 中都有自己专用的聊天窗口。要向特定的 Watcher 发出命令，请导航到其聊天窗口并使用输入字段输入您想要的命令。您可以手动输入命令或使用键盘的语音输入功能以增加便利性。
+每个Watcher设备在SenseCraft APP中都有自己专用的聊天窗口。要向特定的Watcher发出命令，请导航到其聊天窗口并使用输入字段输入您想要的命令。您可以手动输入命令或使用键盘的语音输入功能以增加便利性。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/21.png" style={{width:250, height:'auto'}}/></div>
 
-在编写命令时，提供清晰详细的指令至关重要，以确保 Watcher 准确理解和执行任务。您的命令应包含以下信息：
+在编写命令时，提供清晰详细的指令至关重要，以确保Watcher理解并准确执行任务。您的命令应包含以下信息：
 
-- 您希望 Watcher 识别的特定对象或物体。
+- 您希望Watcher识别的特定对象或物体。
 
 - 与对象相关的任何附加动作或行为（如适用）。
 
-- 您期望 Watcher 在成功识别后执行的所需动作或响应。
+- 您期望Watcher在成功识别后执行的所需动作或响应。
 
-通过提供全面的指令，您可以使 Watcher 有效地理解和执行分配的任务。记住要尽可能具体和描述性，以获得最佳结果。
+通过提供全面的指令，您可以使Watcher有效地理解并执行分配的任务。记住要尽可能具体和描述性，以获得最佳结果。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/22.png" style={{width:250, height:'auto'}}/></div>
 
-除了任务配置和执行功能外，纯云端 LLM 服务还使用户能够与语言学习模型（LLM）进行纯文本对话。
+除了任务配置和执行功能外，纯云端LLM服务还使用户能够与语言学习模型(LLM)进行纯文本对话。
 
-纯云端 LLM 服务的基于文本的聊天功能为用户直接与 LLM 交互开辟了新的可能性。它提供了一种便捷的方式来访问 LLM 的知识和能力，而无需物理 Watcher 设备。
+纯云端LLM服务的基于文本的聊天功能为用户直接与LLM交互开辟了新的可能性。它提供了一种便捷的方式来访问LLM的知识和能力，而无需物理Watcher设备。
 
-无论您有问题、需要特定主题的帮助，还是只想探索 LLM 的能力，基于文本的聊天功能都提供了与 AI 模型通信的无缝直观方式。
+无论您有问题、需要特定主题的帮助，还是只想探索LLM的能力，基于文本的聊天功能都提供了与AI模型通信的无缝直观方式。
 
-每当您需要信息、指导或只想与 LLM 进行信息性对话时，请随时利用此功能。
+每当您需要信息、指导或只是想与LLM进行信息性对话时，请随时利用此功能。
 
 :::danger
-使用 SenseCraft AI 的某些服务可能需要付费，详情请参考以下文档：
+使用SenseCraft AI的某些服务可能会产生费用，详情请参考以下文档：
 
-**[SenseCraft AI for Watcher 计划和权益](https://wiki.seeedstudio.com/cn/watcher_price/)**
+**[SenseCraft AI for Watcher计划和权益](https://wiki.seeedstudio.com/watcher_price/)**
 :::
 
 ### 识别或配置任务分解
 
-完成任务命令输入后，按照以下步骤确认和执行命令：
+完成任务命令输入后，按照以下步骤确认并执行命令：
 
 1. 点击聊天窗口右下角的**发送**按钮提交您的命令。
 
 2. 后端系统将处理并将您的任务命令分解为其组成部分。
 
-3. 将返回一个小卡片，显示 Watcher 对您任务的解释。该卡片主要展示以下信息：
+3. 系统将返回一个小卡片，显示Watcher对您任务的理解。该卡片主要展示以下信息：
 
    - **When**：将启动任务执行的条件或触发器。
-   - **Do**：Watcher 在成功识别对象后将执行的动作或响应。
+   - **Do**：Watcher在成功识别对象后将执行的动作或响应。
    - **Capture Frequency**：任务将被触发和执行的时间间隔。
 
-4. 查看卡片上的信息，确保 Watcher 正确理解了您的任务指令。
+4. 查看卡片上的信息，确保Watcher正确理解了您的任务指令。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/23.png" style={{width:250, height:'auto'}}/></div>
 
-5. 如果您对 Watcher 的解释满意，点击卡片上的**Run**按钮将任务部署到 Watcher 并开始执行。
+5. 如果您对Watcher的理解满意，请点击卡片上的**Run**按钮将任务部署到Watcher并开始执行。
 
-6. （可选）要更详细地查看任务分解，点击卡片上的**Detail Config**按钮。这将为您提供有关任务配置的附加信息。
+6. （可选）要更详细地查看任务分解，请点击卡片上的**Detail Config**按钮。这将为您提供有关任务配置的其他信息。
 
-    如果您发现任何误解或希望对任务配置进行更改，请使用"Detail Config"选项根据您的要求手动修改设置。如[任务概念章节](#concept-of-the-task)中所述，Detail Config 页面因模式而异。您只需根据实际情况选择或修改配置项。
+如果您发现任何误解或希望对任务配置进行更改，请使用"详细配置"选项根据您的要求手动修改设置。如[任务概念章节](#concept-of-the-task)中所述，详细配置页面因模式而异。您只需根据实际情况选择或修改配置项。
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/24.png" style={{width:800, height:'auto'}}/></div>
 
-    在"Detail Config"部分，您可以找到各种设置，允许您微调任务配置。以下是可用设置的概述：
+在"详细配置"部分，您可以找到各种设置，允许您微调任务配置。以下是可用设置的概述：
 
-    1. **Use Local Model**：
-    - 当任务需要使用本地 AI 服务时会出现此设置。
-    - 系统根据您提供的任务自动从 SenseCraft AI 库中选择适当的模型。
-    - 您可以选择禁用本地 AI 服务的使用，这将导致直接利用基于云的服务进行图像分析。
-    - 您还可以手动修改模型选择，并从 SenseCraft AI 库中的公开可用模型中选择。
-    - 请注意，如果任务完全是本地的，您不允许禁用"Use Local Model"选项。<br /><br />
+1. **使用本地模型**：
+- 当任务需要使用本地AI服务时，会出现此设置。
+- 系统会根据您提供的任务自动从SenseCraft AI库中选择合适的模型。
+- 您可以选择禁用本地AI服务的使用，这将导致直接利用基于云的服务进行图像分析。
+- 您也可以手动修改模型选择，并从SenseCraft AI库中的公开可用模型中进行选择。
+- 请注意，如果任务完全是本地的，您不能禁用"使用本地模型"选项。<br /><br />
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/25.png" style={{width:250, height:'auto'}}/></div>
 
-    2. **场景**：
-    - 此部分显示动作的触发条件。
-    - 您可以根据需要调整类别数量并修改触发语句。
-    - 如果涉及更复杂的场景，可以通过添加条件来灵活调整。<br /><br />
+2. **场景**：
+- 此部分显示动作的触发条件。
+- 您可以根据需要调整类别数量并修改触发语句。
+- 如果涉及更复杂的场景，可以通过添加条件来灵活调整。<br /><br />
 
-    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/26.png" style={{width:600, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/26.png" style={{width:600, height:'auto'}}/></div>
 
-    3. **动作**：
-    - 在这里，您可以配置 Watcher 在触发警报后的行为。
-    - 指定您希望 Watcher 执行的动作，例如打开 RGB 灯、通过扬声器播放声音或发送通知。<br /><br />
+3. **动作**：
+- 在这里，您可以配置Watcher在触发警报后的行为。
+- 指定您希望Watcher执行的动作，例如打开RGB灯、通过扬声器播放声音或发送通知。<br /><br />
 
-    4. **捕获频率**：
+4. **捕获频率**：
    - 此设置确定任务执行的时间间隔。
    - 根据您所需的监控间隔和任务的具体要求调整频率。<br /><br />
 
-    :::caution
-    在"详细配置"部分，将自动设置**捕获频率**的默认值。对于 Watcher 云端 LLM 服务，"捕获频率"**不能设置为低于 60 秒**。如果您使用的是 Watcher 本地 AI 服务，则不会提供"捕获频率"设置，因为设备将提供实时警报。
-    :::
+:::caution
+在"详细配置"部分，将自动设置**捕获频率**的默认值。对于Watcher基于云的LLM服务，**捕获频率不能设置为低于60秒**。如果您使用Watcher本地AI服务，捕获频率设置将不可用，因为设备将提供实时警报。
+:::
 
-    5. **工作时间范围**：
-    - 此设置允许您定义任务处于活动状态的时间范围。
-    - 指定任务操作的开始和结束时间，确保监控仅在指定的时间范围内进行。
-    - 请注意，为了使此设置正常工作，Watcher 的内部时钟必须与您移动设备的系统时间同步。两者之间的不一致可能导致任务流程出现问题。<br />
+5. **工作时间范围**：
+- 此设置允许您定义任务处于活动状态的时间范围。
+- 指定任务操作的开始和结束时间，确保监控仅在指定的时间范围内进行。
+- 请注意，为了使此设置正常工作，Watcher的内部时钟必须与您移动设备的系统时间同步。两者之间的不一致可能导致任务流程出现问题。<br />
 
-    通过探索和配置"详细配置"部分中的这些设置，您可以自定义任务以满足您的特定需求。请花时间仔细审查和调整每个设置，以确保最佳性能并与您的监控目标保持一致。
+通过探索和配置"详细配置"部分中的这些设置，您可以自定义任务以满足您的特定需求。花时间仔细审查和调整每个设置，以确保最佳性能并与您的监控目标保持一致。
 
-7. 一旦您确认一切设置正确并符合您的期望，请点击**运行**按钮以启动任务执行。
+7. 一旦您确认一切设置正确并符合您的期望，点击**运行**按钮启动任务执行。
 
-通过遵循这些步骤，您可以确保 Watcher 准确理解您的任务命令，并且执行与您的预期目标保持一致。确认过程允许进行最终审查，并在将任务部署到 Watcher 之前进行任何必要的调整。
+通过遵循这些步骤，您可以确保Watcher准确理解您的任务命令，并且执行与您的预期目标保持一致。确认过程允许进行最终审查，并在将任务部署到Watcher之前进行任何必要的调整。
 
 ### 运行任务
 
-在您仔细审查和配置"详细配置"部分中的任务设置后，您就可以将任务部署到您的 Watcher 设备了。要启动任务执行，请按照以下步骤操作：
+在您仔细审查和配置"详细配置"部分中的任务设置后，您就可以将任务部署到您的Watcher设备了。要启动任务执行，请按照以下步骤操作：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/27.png" style={{width:800, height:'auto'}}/></div>
 
 1. 点击任务配置卡片上的"运行"按钮。
 
-2. 点击"运行"后，配置的任务将通过网络传输到 Watcher。
+2. 点击"运行"后，配置的任务将通过网络传输到Watcher。
 
 3. 任务部署过程可能需要一些时间，因为它涉及两个主要阶段：
 
-   - 任务接收：Watcher 需要接收和处理从 SenseCraft APP 发送的任务配置数据。
+   - 任务接收：Watcher需要接收和处理从SenseCraft APP发送的任务配置数据。
 
-   - 模型下载（如果适用）：如果任务需要使用本地 AI 服务，Watcher 可能需要下载必要的 AI 模型以在本地执行任务。
+   - 模型下载（如果适用）：如果任务需要使用本地AI服务，Watcher可能需要下载必要的AI模型来本地执行任务。
 
-4. 在任务部署过程中，您可以通过 SenseCraft APP 监控进度：
+4. 在任务部署过程中，您可以通过SenseCraft APP监控进度：
 
    - 任务卡片的状态将发生变化，以指示当前的部署阶段。
 
    - 密切关注状态更新，以跟踪任务接收和模型下载（如果适用）的进度。
 
-5. 任务部署完成后，您将观察到 Watcher 行为的变化：
+5. 任务部署完成后，您将观察到Watcher行为的变化：
 
-   - Watcher 将自动显示监控表情或指示它已准备好开始任务。
+   - Watcher将自动显示监控表情或指示它已准备好开始任务。
 
-   - Watcher 行为的这种变化表明任务执行已经开始。
+   - Watcher表现的这种变化表明任务执行已经开始。
 
 ### 查看当前任务和检查警报
 
-SenseCraft APP 提供了一种便捷的方式来监控正在运行的任务的进度和状态，以及查看任何触发的警报和相关的关键帧。
+SenseCraft APP提供了一种便捷的方式来监控正在运行的任务的进度和状态，以及查看任何触发的警报和相关的关键帧。
 
-- 在此部分，您将找到有关 Watcher 设备上当前运行任务的信息。
+- 在此部分，您将找到有关Watcher设备上当前运行任务的信息。
 
-- 当前任务将由一个小卡片表示，显示任务名称和相关的 Watcher 设备。
+- 当前任务将由一个小卡片表示，显示任务名称和相关的Watcher设备。
 
-- 卡片将指示任务当前是否正在进行，提供任务状态的快速概览。
+- 卡片将显示任务当前是否正在进行中，提供任务状态的快速概览。
 
-当任务根据配置的条件触发警报时，SenseCraft APP 将通过推送通知或应用内警报通知您。
+当任务基于配置的条件触发警报时，SenseCraft APP 将通过推送通知或应用内警报通知您。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/28.png" style={{width:250, height:'auto'}}/></div>
 
-在"检测历史"部分，您将找到由正在运行的任务触发的所有警报列表。每个警报将由卡片或列表项表示，显示任务名称、Watcher 设备、时间戳和触发条件的简要描述等信息。点击警报卡片可查看有关警报的更详细信息，包括相关的关键帧图像。
+在"检测历史"部分，您将找到运行任务触发的所有警报列表。每个警报将以卡片或列表项的形式显示，展示任务名称、Watcher 设备、时间戳和触发条件的简要描述等信息。点击警报卡片可查看有关警报的更详细信息，包括相关的关键帧图像。
 
-关键帧图像是由 Watcher 设备在触发警报时捕获的，提供检测到的场景的视觉证据。您可以查看关键帧图像来分析情况，并在必要时采取适当的行动。应用程序还可能提供确认或忽略警报的选项，具体取决于您的偏好和情况的严重性。
+关键帧图像是 Watcher 设备在触发警报时刻捕获的，提供检测到场景的视觉证据。您可以查看关键帧图像来分析情况并在必要时采取适当的行动。应用程序还可能提供确认或忽略警报的选项，具体取决于您的偏好和情况的严重程度。
 
 ### 结束任务
 
-当您需要停止 Watcher 设备上当前运行的任务时，您有两个便捷的选项可用：
+当您需要停止 Watcher 设备上当前运行的任务时，有两个便捷的选项可用：
 
-选项1：通过SenseCraft APP结束任务
-1. 在您的移动设备上打开SenseCraft APP，导航到"当前任务"部分。
-2. 找到代表您Watcher设备上当前运行任务的任务卡片，点击"结束"按钮。
-3. 应用程序将向Watcher设备发送停止任务的请求，任务卡片将更新以反映任务的终止状态。
+选项 1：通过 SenseCraft APP 结束任务
+1. 在您的移动设备上打开 SenseCraft APP 并导航到"当前任务"部分。
+2. 找到代表 Watcher 设备上当前运行任务的任务卡片，然后点击"END"按钮。
+3. 应用程序将向 Watcher 设备发送停止任务的请求，任务卡片将更新以反映任务的终止状态。
 
-选项2：直接在Watcher设备上结束任务
-1. 轻触Watcher设备的屏幕或按下滚轮按钮以显示菜单或选项。
-2. 选择"结束任务"选项，Watcher设备将立即终止任务并返回到空闲状态。
-3. SenseCraft APP中的任务卡片将自动更新以反映任务的终止状态。
+选项 2：直接在 Watcher 设备上结束任务
+1. 轻触 Watcher 设备的屏幕或按下滚轮按钮以显示菜单或选项。
+2. 选择"结束任务"选项，Watcher 设备将立即终止任务并返回到空闲状态。
+3. SenseCraft APP 中的任务卡片将自动更新以反映任务的终止状态。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/29.png" style={{width:250, height:'auto'}}/></div><br />
 
-两种方法都提供了一种简单直观的方式来在需要时停止任务执行。根据您当前的情况和与Watcher设备的距离，选择最方便的方法。
+两种方法都提供了在需要时停止任务执行的简单直观的方式。根据您当前的情况和与 Watcher 设备的距离选择最方便的方法。
 
 ## 通过语音发送任务
 
-Watcher提供了一种便捷直观的方式，通过语音命令发送任务，这要归功于其"一键通话"功能。此功能可从设备上的任何屏幕或界面访问，使您能够轻松与Watcher交互，无需浏览菜单。以下是如何使用此功能的分步指南：
+Watcher 提供了一种便捷直观的方式，通过语音命令发送任务，这要归功于其"按住说话"功能。此功能可从设备上的任何屏幕或界面访问，使您无需浏览菜单即可轻松与 Watcher 交互。以下是如何使用此功能的分步指南：
 
-1. 激活一键通话：
+1. 激活按住说话：
 
-   - 找到Watcher右上角的滚轮按钮。
+   - 找到 Watcher 右上角的滚轮按钮。
    - 按住滚轮按钮进入语音输入界面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
 
 2. 说出您的命令或消息：
 
-   - 按住滚轮按钮时，清楚地向Watcher说出您的任务或消息。
-   - 您可以分配任务，例如"如果婴儿哭泣请告诉我"或"如果狗偷食物，说停下铜子"。
-   - 或者，您可以通过提问或陈述来进行对话，比如"给我讲个笑话"。
+   - 按住滚轮按钮时，清楚地向 Watcher 说出您的任务或消息。
+   - 您可以分配任务，例如"如果婴儿哭了告诉我"或"如果狗偷食物，说停下铜子"。
+   - 或者，您可以通过提问或陈述来进行对话，例如"给我讲个笑话"。
 
 3. 释放滚轮按钮：
 
    - 说完后，释放滚轮按钮。
-   - Watcher将处理您的语音输入并确定这是任务分配还是对话。
+   - Watcher 将处理您的语音输入并确定它是任务分配还是对话。
 
 4. 任务分配：
 
-   - 如果Watcher识别您的语音输入为任务分配，它将自动将您的任务分解为相关组件。
-   - Watcher将在其屏幕上显示卡片，显示**对象**（要监控什么）、**行为**（要寻找什么动作）、**通知**（如何提醒您）、**时间范围**（何时监控）和**频率**（多久监控一次）。
+   - 如果 Watcher 识别您的语音输入为任务分配，它将自动将您的任务分解为相关组件。
+   - Watcher 将在其屏幕上显示卡片，显示**对象**（要监控什么）、**行为**（要寻找什么动作）、**通知**（如何提醒您）、**时间范围**（何时监控）和**频率**（多久监控一次）。
    - 查看显示的信息以确保它准确代表您预期的任务。
-   - 如果详细信息正确，确认任务，Watcher将根据指定参数开始执行。
+   - 如果详细信息正确，确认任务，Watcher 将开始根据指定参数执行它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/80.jpg" style={{width:650, height:'auto'}}/></div>
 
 最佳使用技巧：
 
-- 清楚地说话并保持适中的语速，以确保准确的语音识别。
-- 说话时，请尽可能靠近Watcher，大约**3 ~ 10厘米**的距离说话识别准确度最佳。
-- 最小化背景噪音以提高Watcher理解您语音命令的能力。
-- 分配任务时要具体简洁，以帮助Watcher准确解释您的意图。
-- 如果Watcher误解了您的任务或对话，只需再次按住滚轮按钮提供澄清或更正。
+- 清楚地以适中的速度说话，以确保准确的语音识别。
+- 说话时，请尽可能靠近 Watcher，大约 **3 ~ 10cm** 距离说话识别准确度最佳。
+- 最小化背景噪音以提高 Watcher 理解您语音命令的能力。
+- 分配任务时要具体简洁，以帮助 Watcher 准确解释您的意图。
+- 如果 Watcher 误解了您的任务或对话，只需再次按住滚轮按钮提供澄清或更正。
 
-通过利用一键通话功能，您可以轻松地发送任务并与Watcher进行对话，使您与设备的交互更加自然高效。
+通过利用按住说话功能，您可以轻松地发送任务并与 Watcher 进行对话，使您与设备的交互更加自然高效。
 
 :::note
-如果您遇到**0x7002**错误，这意味着当前Watcher的网络状态不佳，音频服务调用失败，请更换网络或位置后重试。
+如果您遇到 **0x7002** 错误，这意味着当前 Watcher 的网络状态不佳，音频服务调用失败，请更换网络或位置后重试。
 :::
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
@@ -419,3 +420,5 @@ Watcher提供了一种便捷直观的方式，通过语音命令发送任务，�
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+

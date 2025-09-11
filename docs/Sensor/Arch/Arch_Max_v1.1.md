@@ -77,7 +77,7 @@ Usage
 ![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Get_started_with_mbed.png)
 
 1.  Click [here](<https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX>) to login or signup to mbed
-2.  Import the mbed\_blinky program
+2.  Import the mbed_blinky program
 3.  Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
 4.  Drag-n-drop the downloaded bin file into the mbed disk
 

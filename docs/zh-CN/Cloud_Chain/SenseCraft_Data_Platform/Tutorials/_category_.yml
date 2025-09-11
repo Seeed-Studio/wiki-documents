@@ -1,5 +1,5 @@
-position: 2 # 支持浮动位置
+position: 2 # float position is supported
 label: '教程'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别打开
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: sensecraft_data_tutorials

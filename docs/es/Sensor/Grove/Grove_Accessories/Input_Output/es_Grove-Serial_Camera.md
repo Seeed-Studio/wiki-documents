@@ -118,14 +118,14 @@ Uso
 
 **Paso 2**: Conecta la cámara serie a la PC con USB para usar la herramienta convertidora serie UartSBee
 
-| Cámara serie  | Uart\_SB v3.1 |
+| Cámara serie  | Uart_SB v3.1 |
 |---------------|---------------|
 | GND (negro)   | GND           |
 | VCC (rojo)    | VCC           |
 | RX (blanco)   | TX            |
 | TX (Amarillo) | RX            |
 
-**Paso 3:** Conecta el Uart\_SB v3.1 con la computadora y abre el software vc0703CommTool. Elige el número COM correcto del puerto que conectaste a la cámara, velocidad de baudios predeterminada 115200, y luego abre el puerto.
+**Paso 3:** Conecta el Uart_SB v3.1 con la computadora y abre el software vc0703CommTool. Elige el número COM correcto del puerto que conectaste a la cámara, velocidad de baudios predeterminada 115200, y luego abre el puerto.
 
 **Paso 4:** Haz clic en el botón "Get Version" y reiniciará la cámara.
 

@@ -1,6 +1,6 @@
 ---
-description: reTerminal と Pi カメラを使用した OpenCV による顔検出
-title: reTerminal と Pi カメラを使用した OpenCV による顔検出
+description: reTerminalとPiカメラを使用したOpenCVによる顔検出
+title: reTerminalとPiカメラを使用したOpenCVによる顔検出
 keywords:
   - Edge
   - reTerminal 
@@ -10,84 +10,81 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal_DM_Face_detection
 last_update:
-  date: 05/15/2025
+  date: 11/7/2023
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/facedetection.gif" /></center>
 
 ## はじめに
 
-**Haar Cascade メソッド**を使用した顔検出は、機械学習モデルを活用して顔の特徴を認識するコンピュータビジョンの重要な技術です。この方法は、Haar様特徴に基づいて訓練された分類器のカスケードを利用し、画像やビデオストリーム内の顔を迅速かつ正確に識別します。この技術は、**セキュリティや認証目的の顔認識技術、ビデオ監視システム、さらには写真ソフトウェアでの顔検出に基づく自動タグ付けやソート**など、さまざまな分野で広く応用されています。Haar Cascade メソッドは計算効率が高いため、**リアルタイムの顔検出**に適しており、顔分析および識別技術の進歩に大きく貢献しています。
+**Haar Cascade法**を使用した顔検出は、コンピュータビジョンにおける重要な技術であり、機械学習モデルを使用して顔の特徴を認識します。この手法は、Haar様特徴で訓練されたカスケード分類器に依存し、画像やビデオストリーム内の顔を迅速かつ正確に識別することを可能にします。その幅広い応用は、**セキュリティと認証目的の顔認識技術、ビデオ監視システム、さらには検出された顔に基づく自動タグ付けと分類のための写真ソフトウェア**など、多様な分野にわたります。Haar Cascade法は、その計算効率性により特に価値があり、**様々な文脈でのリアルタイム顔検出に適している**ため、顔分析と識別技術の進歩に大きく貢献しています。
 
-## 始める前に
+## はじめに
 
-このプロジェクトを開始する前に、以下に記載されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
+このプロジェクトを開始する前に、ここで説明されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細を見る</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
 
-公式ウェブサイトから Raspberry Pi 64 ビット OS の **Bullesye** または **Bullseye** バージョンをインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この [**ガイド**](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に記載されている手順に従ってください。
+公式ウェブサイトから **Bullesye** または **Bullseye** バージョンの Raspberry Pi 64 bit OS をインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
 
 :::note
 
-OpenCV の [**入門チュートリアル**](https://wiki.seeedstudio.com/ja/reTerminal_DM_opencv/) を事前に確認することを強くお勧めします。このチュートリアルはシリーズの続編として位置付けられています。
+このチュートリアルは私たちのシリーズの続編として機能するため、[**OpenCV を始める**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/)に関する以前のチュートリアルをぜひご確認いただくことを強くお勧めします。
 
 :::
 
-## Haar Cascade メソッドとは？
+## Haar Cascade 手法とは？
 
-OpenCVにおけるHaar Cascadeメソッドは、機械学習に基づいた顔検出アルゴリズムです。このメソッドは、ポジティブ画像とネガティブ画像を使用してカスケード分類器を訓練することで、顔を示すパターンや特徴を認識できるようになります。カスケードは複数のステージで構成されており、それぞれのステージには弱い分類器が含まれています。これらの分類器は段階的に顔以外の領域を排除し、効率的な検出プロセスを実現します。Haar-like特徴は、暗い領域と明るい領域の矩形パターンに似ており、顔などのオブジェクトを認識する基盤となります。訓練が完了したカスケードは、画像やビデオフレームに適用して迅速に顔を検出することができます。このメソッドはその精度と速度の高さから広く利用されており、リアルタイムの顔検出や認識を含むさまざまな用途で人気があります。
+OpenCV において、Haar Cascade 手法は機械学習に基づく顔検出アルゴリズムです。この手法は、正の画像と負の画像でカスケード分類器を訓練することで動作し、顔を示すパターンや特徴を認識できるようになります。カスケードは複数の段階で構成され、各段階には弱分類器のセットがあり、顔以外の領域を段階的に除去することで、検出プロセスを効率的にします。明暗領域の矩形パターンに似た Haar 様特徴が、顔などのオブジェクトを認識するための基盤として機能します。一度訓練されると、カスケードを画像やビデオフレームに適用して顔を迅速に検出できます。この手法は精度と速度で広く使用されており、リアルタイム顔検出や認識を含む様々なアプリケーションで人気の選択肢となっています。
 
-さらに詳しく知りたい場合は、こちらの[**ドキュメント**](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html)をご覧ください。
+詳しく学びたい場合は、この[**ドキュメント**](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html)をご覧ください。
 
-### コードを実行してみましょう。
+### コードを実行してみましょう
 
-正しいフォルダにいることを確認してください。もしそうでない場合は以下を実行してください。
+正しいフォルダにいることを確認してください。そうでない場合は
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
+
  ```
 
-または、Thonny IDEを使用してPythonスクリプトを実行することもできます。
+その後、またはThonny IDEを使用してPythonスクリプトを実行することもできます。
 
  ```sh
 python facedetection_pi.py
  ```
 
-以下に、参考のためにコードスニペット全体を提供します。
+参考として、便宜上完全なコードスニペットを提供します。
 
-```python
+```sh
 import cv2
 from picamera2 import Picamera2
 
-# 顔検出用の事前学習済みHaar Cascade分類器をロード
+# Load the pre-trained Haar Cascade classifier for face detection
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 picam2 = Picamera2()
@@ -102,48 +99,48 @@ try:
         im = picam2.capture_array()
         cv2.imshow("Camera", im)
 
-        # 顔検出のために画像をグレースケールに変換
+        # Convert the image to grayscale for face detection
         gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
 
-        # 顔検出を実行
+        # Perform face detection
         faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5, minSize=(30, 30))
 
-        # 検出された顔の周りに矩形を描画
+        # Draw rectangles around the detected faces
         for (x, y, w, h) in faces:
             cv2.rectangle(im, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
-        # 顔検出結果を表示
+        # Display the image with face detection
         cv2.imshow("Face Detection", im)
 
-        # 'q'キーが押されたらループを終了
+        # Break the loop when 'q' is pressed
         if cv2.waitKey(1) == ord('q'):
             break
 
 finally:
-    # リソースを解放
+    # Release resources
     cv2.destroyAllWindows()
     picam2.stop()
     picam2.close()
 ```
 
-さらに多くのHaar Cascade XMLファイルを試したい場合は、こちらの[**リンク**](https://github.com/opencv/opencv/tree/master/data/haarcascades)をご覧ください。
+より多くのhaas cascades xmlファイルを見つけて試してみたい場合は、この[**リンク**](https://github.com/opencv/opencv/tree/master/data/haarcascades)をご覧ください。
 
-## 応用例
+## アプリケーション
 
-Haarcascadeは元々リアルタイムの顔検出のために設計されましたが、現代の課題に対応するために進化を遂げています。革新者たちはその機能を拡張し、**顔マスク検出**を可能にしました。これは公衆衛生対策において重要です。さらに、この技術は**ナンバープレート検出**にも最適化されており、特に高度なハードウェアが不足している環境で有用です。これらの適応は、Haarcascadeがコンピュータビジョンのさまざまなニーズに対応する上での汎用性と効率性を示しています。
+元々リアルタイム顔検出用に設計されたHaarcascadeは、現代の課題に対応するために進歩を遂げています。革新者たちはその機能を拡張し、公衆衛生対策に重要な**フェイスマスク検出**を含めるようになりました。さらに、この技術は**ナンバープレート検出**に最適化されており、高度なハードウェアが不足している低リソース環境で特に価値があります。これらの適応は、コンピュータビジョンアプリケーション内の多様なニーズに対応するHaarcascadeの汎用性と効率性を実証しています。
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/FACEMASK.gif" /></center>
 
 ## 技術サポート
 
-私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するため、さまざまなサポートをご用意しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品でのご体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

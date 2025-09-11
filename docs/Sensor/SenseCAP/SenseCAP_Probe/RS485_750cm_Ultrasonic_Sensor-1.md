@@ -25,48 +25,50 @@ With the SenseCAP S2100 [data logger](https://www.seeedstudio.com/SenseCAP-S210
 # Play with S2100 LoRaWAN Data Logger
 
 On this page, we'll guide you through the process of connecting the S2100 LoRaWAN Data Logger with a 750cm Ultrasonic Level Sensor, enabling you to create a robust, industrial-grade LoRaWAN wireless sensor that can be used commercially in just five minutes.
+
 ## Get Started
 
 ### Preparation
+
 #### Hardware
+
 ##### Materials required
 
 <table align="center">
-	<tr>
-	    <th>SenseCAP S2100 Data Logger</th>
+ <tr>
+     <th>SenseCAP S2100 Data Logger</th>
       <th>750cm Ultrasonic Level Sensor</th>
     <th>Cross screwdriver</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%206.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html?queryID=2bee749eb1a41d36e0d4d5fbdcbfb36f&objectID=5587&indexName=bazaar_retailer_products" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html?queryID=2bee749eb1a41d36e0d4d5fbdcbfb36f&objectID=5587&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
-
-
-## 1. Prepare data logger, RS485 750cm Ultrasonic Level Sensor, gateway, and tools.
+## 1. Prepare data logger, RS485 750cm Ultrasonic Level Sensor, gateway, and tools
 
 1. **Data logger**: It is a LoRaWAN converter that converts MODBUS RS485/Analog/GPIO sensors into LoRa-enabled sensors and therefore transfers data through the LoRaWAN protocol.
 
-2. **RS485 750cm Ultrasonic Level Sensor**: It is uses ultrasonic sensing technology for distance measurement.Measuring range from 28cm to 750cm, and the resolution can reach 1mm. With an IP67 waterproof ultrasonic transducer, it has strong adaptability to the working environment. 
+2. **RS485 750cm Ultrasonic Level Sensor**: It is uses ultrasonic sensing technology for distance measurement.Measuring range from 28cm to 750cm, and the resolution can reach 1mm. With an IP67 waterproof ultrasonic transducer, it has strong adaptability to the working environment.
 
 3. **Cross screwdriver**: Used to assemble the sensor probe.
 
 4. **Gateway**: The LoRaWAN sensor transmits data to a LoRaWAN gateway, which then transmits it to the cloud server. If you don't have a gateway, there are two options:
+
 - Option 1: Sensors work in areas covered by Helium Network(Check on [Helium Explorer](https://explorer.helium.com/)). Wherever the helium network is available, you can use sensors to transfer data without purchasing a gateway.
 - Option 2: Buy a [gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html).
 
@@ -87,8 +89,6 @@ The data logger converts sensor data into LoRa data and uploads the data to the 
 
 ### 3. Connect RS485 750cm Ultrasonic Level Sensor to SenseCAP Data Logger
 
-
-
 - **Step 1:** Uncrew the three screws on the data logger
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/70.jpg"/></div>
@@ -106,7 +106,6 @@ The data logger converts sensor data into LoRa data and uploads the data to the 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/73.jpg"/></div>
 
 - **Step 5:** Connect the wires of the cable into the screw terminal as follows
-
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/71.jpg"/></div>
 
@@ -132,7 +131,6 @@ Once all the connections are done for the Ultrasonic Level Sensor and the Data L
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/Picture4.png"/></div>
 
-
 ### 4. Configure Settings for Data Logger and RS485 750cm Ultrasonic Level Sensor Communication
 
 - **Step 1:** Select **S2100 Data Logger** and Click **Setup** on the config page.
@@ -153,6 +151,7 @@ Once all the connections are done for the Ultrasonic Level Sensor and the Data L
 (http://sensecap.seeed.cc/portalapi/template/23ad5050-c24b-11ed-af3d-4b3b31721270)
 
 - **Step 2:** Tap "➕" in the upper right corner, select "import Template", then select the downloaded file, and the template will be imported.
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2016.png"/></div>
 
 - **Step 3:** Click Send and Test the sensor by clicking **Measure**
@@ -166,7 +165,6 @@ The distance and temperature of the sensor are obtained successfully!
 - **Step 1:** Go back to the app home page and Data Logger Red LEDs will start blinking for a couple of seconds followed by Green LEDs blinking for a brief amount of time to indicate that the LoRaWAN connection is successful and the data is sent. Alternatively you can click the button on the data logger once, to force this data sending.
 Before uploading data, make sure the gateway is working properly or has helium network coverage.
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/100.gif"/></div>
 
 Now we need to add this sensor to SenseCAP platform in order to view the data on the cloud
@@ -179,8 +177,7 @@ Now we need to add this sensor to SenseCAP platform in order to view the data on
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2019.png"/></div>
 
-
-### 6. Test the sensor in a real environment.
+### 6. Test the sensor in a real environment
 
 Fast application to the outdoor real scene for long-term monitoring.
 
@@ -198,11 +195,11 @@ At present, a LoRaWAN sensor has been developed.
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -871,7 +871,11 @@ If the cause of overheating is ruled out, then it is possible that the antenna s
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
-### Q2: Why the network signal of XIAO ESP32-S3 Plus is much worse than XIAO ESP32-S3, is there any solution?
+### Q2: Why does the XIAO ESP32-S3 Plus have weaker network signal than the XIAO ESP32-S3? Are there any solutions?
+
+:::tip Product Batch
+If you purchased the product before **August 2025**, you may experience poor network signal issues. Products purchased after that date have had this issue resolved and do not require a software fix.
+:::
 
 It is possible to add a code segment for adjusting power inside all codes that use WiFi, and by adjusting the transmit power, the signal strength can be significantly improved.
 

@@ -1,5 +1,5 @@
-position: 1 # 支持浮动位置
+position: 1 # float position is supported
 label: '区块链仪表板'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别展开
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: blockchain_dashboard

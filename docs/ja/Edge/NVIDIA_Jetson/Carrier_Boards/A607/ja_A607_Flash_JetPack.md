@@ -1,64 +1,60 @@
 ---
-description: A607 キャリアボード
-title: A607 キャリアボード
+description: A607 Carrier Board
+title: A607 Carrier Board
 keywords:
   - Edge
   - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_A607_Flash_System
 last_update:
-  date: 05/15/2025
+  date: 04/17/2023
   author: Lakshantha
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# A607 キャリアボードに JetPack OS をフラッシュする (NVIDIA Jetson Orin NX/Nano 対応)
+# A607 Carrier Board に JetPack OS をフラッシュする（NVIDIA Jetson Orin NX/Nano 対応）
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/1.png" /></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/A607-Carrier-Board-for-Jetson-Orin-NX-Nano-p-5634.html" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong></a>
 </div>
 
-この Wiki では、NVIDIA Jetson Orin NX モジュールおよび NVIDIA Jetson Orin Nano モジュールの両方をサポートする A607 キャリアボードに接続された NVMe SSD に [Jetpack](https://developer.nvidia.com/embedded/jetpack) をフラッシュする方法を説明します。
+このwikiでは、NVIDIA Jetson Orin NXモジュールとNVIDIA Jetson Orin Nanoモジュールの両方をサポートするA607 Carrier Boardに接続されたNVMe SSDに[Jetpack](https://developer.nvidia.com/embedded/jetpack)をフラッシュする方法を説明します。
 
-## 必要条件
+## 前提条件
 
-- Ubuntu ホスト PC (ネイティブまたは VMware Workstation Player を使用した VM)
-- Jetson Orin NX または Jetson Orin Nano モジュールを搭載した A607 キャリアボード
-- USB Type-C データ転送ケーブル
+- Ubuntu ホストPC（ネイティブまたはVMware Workstation Playerを使用したVM）
+- Jetson Orin NXまたはJetson Orin Nanoモジュールを搭載したA607 Carrier Board
+- USB Type-Cデータ転送ケーブル
 
-## 強制リカバリモードに入る
+## Force Recovery モードに入る
 
-インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードがforce recoveryモードになっていることを確認する必要があります。
 
-**ステップ 1.** ボードの Type-C コネクタと Linux ホスト PC の間に USB ケーブルを接続します。
+**ステップ 1.** ボード上のType-Cコネクタとホスト Linux PC の間にUSBケーブルを接続します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/3.png" /></div>
 
-**ステップ 2.** RECOVERY ボタンを押しながら、そのボタンを押したまま、DC JACK に電源アダプタを接続してボードに電源を入れます。
+**ステップ 2.** RECOVERYボタンを押し、そのボタンを押し続けながら、ボードの電源を入れるためにDC JACKに電源アダプタを接続します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/A607/2.png" /></div>
 
-**ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用している Jetson SoM に応じて、以下のいずれかの出力が返される場合、ボードは強制リカバリモードになっています。
+**ステップ 3.** Linux ホストPCでターミナルウィンドウを開き、`lsusb`コマンドを入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかがある場合、ボードはforce recoveryモードになっています。
 
 - Orin NX 16GB の場合: **0955:7323 NVidia Corp**
 - Orin NX 8GB の場合: **0955:7423 NVidia Corp**
 - Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
 - Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
 
-以下の画像は Orin NX 16GB の例です。
+以下の画像はOrin NX 16GBの場合です
 
 <div align="center"><img width="{700}" src="https://files.seeedstudio.com/wiki/A607/4.png" /></div>
 
-**ステップ 4.** ジャンパーワイヤーを取り外します。
+**ステップ 4.** ジャンパーワイヤを取り外します
 
-## 周辺機器ドライバをダウンロードする
+## 周辺機器ドライバのダウンロード
 
-まず、このボード用の周辺機器ドライバをインストールする必要があります。これらのドライバは、ボード上の一部のハードウェア周辺機器を動作させるために必要です。以下のリンクをクリックして、Jetson モジュールに応じたドライバをダウンロードしてください。
+まず最初に、このボード用の周辺機器ドライバをインストールする必要があります。これらはボード上の一部のハードウェア周辺機器が機能するために必要です。Jetsonモジュールに応じて、以下のリンクをクリックしてドライバをダウンロードしてください。
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -128,13 +124,13 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </table>
 </div>
 
-**注意:** 現在、上記のドライバを提供しています。新しい JetPack バージョンがリリースされるたびに、ドライバを更新していく予定です。
+**注意:** 現在、上記のドライバーを提供しています。新しいJetPackバージョンのリリースに伴い、今後もドライバーを継続的に更新していきます。
 
-## Jetson へのフラッシュ
+## Jetsonへのフラッシュ
 
 :::note
-フラッシュを行う前に、Jetson Orin NX モジュールは JetPack 5.1 以上のみをサポートし、Jetson Orin Nano モジュールは JetPack 5.1.1 以上のみをサポートすることに注意してください。
-:::
+ フラッシュに進む前に、Jetson Orin NXモジュールはJetPack 5.1以上のみをサポートし、Jetson Orin NanoモジュールはJetPack 5.1.1以上のみをサポートすることに注意してください。
+:::  
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -144,17 +140,17 @@ import TabItem from '@theme/TabItem';
 
 ### Jetson Orin NX
 
-ここでは、NVIDIA L4T **35.3.1** を使用して、Jetson Orin NX モジュールを搭載した A607 キャリアボードに **Jetpack 5.1.1** をインストールします。
+ここでは、NVIDIA L4T **35.3.1**を使用して、Jetson Orin NXモジュール搭載のA607キャリアボードに**Jetpack 5.1.1**をインストールします
 
-**ステップ 1:** ホスト PC に NVIDIA ドライバーを [ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531) します。必要なドライバーは以下の通りです：
+**ステップ1:** ホストPCにNVIDIAドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバーは以下の通りです：
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg" /></div>
 
-**ステップ 2:** ダウンロードした周辺機器ドライバーを NVIDIA ドライバーと同じフォルダーに移動します。これで、同じフォルダーに 3 つの圧縮ファイルが表示されます。
+**ステップ2:** 前にダウンロードした周辺機器ドライバーを、NVIDIAドライバーと同じフォルダに移動します。これで、同じフォルダに3つの圧縮ファイルが表示されます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/A607/5.png" /></div>
 
-**ステップ 3:** **Jetson_Linux_R35.3.1_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64.tbz2** を解凍し、これらのファイルが含まれるフォルダーに移動して変更を適用し、必要な前提条件をインストールします。
+**ステップ3:** これらのファイルが含まれているフォルダに移動して、**Jetson_Linux_R35.3.1_aarch64.tbz2**と**Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64.tbz2**を展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64.tbz2
@@ -164,7 +160,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 4:** **A607-Orin-NX-JP5.1.1.zip** を解凍します。ここでは、.zip ファイルを解凍するために必要な **unzip** パッケージを追加でインストールします。
+**ステップ4:** **A607-Orin-NX-JP5.1.1.zip**を展開します。ここでは、.zipファイルを解凍するために必要な**unzip**パッケージを追加でインストールします
 
 ```sh
 cd ..
@@ -172,23 +168,23 @@ sudo apt install unzip
 unzip A607-Orin-NX-JP5.1.1.zip
 ```
 
-ここでファイルを置き換えるかどうかを尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えます。
+ここで、ファイルを置き換えるかどうかを尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えてください
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/A607/7.jpg" /></div>
 
-**ステップ 5:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動後に Ubuntu インストールウィザードを入力する必要がないようにします。
+**ステップ 5:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後にUbuntuインストールウィザードを入力する必要がないようにします
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例 (ユーザー名:"nvidia", パスワード:"nvidia", デバイス名:"nvidia-desktop"):
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 6:** システムを NVMe SSD または USB フラッシュドライブにフラッシュします。
+**ステップ 6:** システムをNVMe SSDまたはUSBフラッシュドライブにフラッシュする
 
 #### NVMe SSD
 
@@ -199,7 +195,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
-#### USB フラッシュドライブ
+#### USBフラッシュドライブ
 
 ```sh
 cd Linux_for_Tegra
@@ -208,23 +204,23 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
-フラッシュプロセスが成功すると、以下の出力が表示されます。
+フラッシュプロセスが成功すると、以下の出力が表示されます
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
 
 ### Jetson Orin Nano
 
-ここでは、NVIDIA L4T **35.3.1** を使用して、Jetson Orin Nano モジュールを搭載した A607 キャリアボードに **Jetpack 5.1.1** をインストールします。なお、4GB と 8GB の Orin Nano モジュールでは異なるドライバーファイルを使用し、手順が少し異なります。
+ここでは、NVIDIA L4T **35.3.1** を使用して、Jetson Orin Nano モジュールを搭載した A607 キャリアボードに **Jetpack 5.1.1** をインストールします。4GB と 8GB の Orin Nano モジュールは異なるドライバファイルを使用し、手順も少し異なることに注意してください。
 
-**ステップ 1:** ホスト PC に NVIDIA ドライバーを [ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531) します。必要なドライバーは以下の通りです：
+**ステップ 1:** ホスト PC に NVIDIA ドライバを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバは以下の通りです：
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg" /></div>
 
-**ステップ 2:** ダウンロードした周辺機器ドライバーを NVIDIA ドライバーと同じフォルダーに移動します。これで、同じフォルダーに 3 つの圧縮ファイルが表示されます。
+**ステップ 2:** 以前にダウンロードした周辺機器ドライバを、NVIDIA ドライバと同じフォルダに移動します。これで、同じフォルダに 3 つの圧縮ファイルが表示されます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/A607/8.png" /></div>
 
-**ステップ 3:** **Jetson_Linux_R35.3.1_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64.tbz2** を解凍し、これらのファイルが含まれるフォルダーに移動して変更を適用し、必要な前提条件をインストールします。
+**ステップ 3:** これらのファイルが含まれているフォルダに移動して、**Jetson_Linux_R35.3.1_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64.tbz2** を展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64.tbz2
@@ -234,34 +230,34 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 4:** 8GB バージョンの場合は **A607-Orin-Nano-8GB-JP5.1.1.zip** を、4GB バージョンの場合は **A607-Orin-Nano-4GB-JP5.1.1.zip** を解凍します。ここでは、.zip ファイルを解凍するために必要な **unzip** パッケージを追加でインストールします。
+**ステップ4:** 8GBバージョンの場合は**A607-Orin-Nano-8GB-JP5.1.1.zip**を、4GBバージョンの場合は**A607-Orin-Nano-4GB-JP5.1.1.zip**を展開します。ここでは、.zipファイルの解凍に必要な**unzip**パッケージを追加でインストールします。
 
 ```sh
 cd ..
 sudo apt install unzip 
-# 8GB バージョンの場合
+# for 8GB version
 unzip A607-Orin-Nano-8GB-JP5.1.1.zip
-# 4GB バージョンの場合
+# for 4GB version
 unzip A607-Orin-Nano-4GB-JP5.1.1.zip
 ```
 
-ここでファイルを置き換えるかどうかを尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えます。
+ここで、ファイルを置き換えるかどうかを尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えてください
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/A607/10.jpg" /></div>
 
-**ステップ 5:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動後に Ubuntu インストールウィザードを入力する必要がないようにします。
+**ステップ 5:** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動完了後にUbuntuインストールウィザードを入力する必要がないようにします
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例 (ユーザー名:"nvidia", パスワード:"nvidia", デバイス名:"nvidia-desktop"):
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 6:** システムを NVMe SSD または USB フラッシュドライブにフラッシュします。
+**ステップ 6:** システムをNVMe SSDまたはUSBフラッシュドライブにフラッシュする
 
 #### NVMe SSD
 
@@ -272,7 +268,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
-#### USB フラッシュドライブ
+#### USBフラッシュドライブ
 
 ```sh
 cd Linux_for_Tegra
@@ -281,24 +277,24 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device sda1 \
   --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
-フラッシュプロセスが成功した場合、以下の出力が表示されます。
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
 </TabItem>
 
 <TabItem value="JP6.0" label="JP6.0">
 
-ここでは、NVIDIA L4T **36.3** を使用して、Jetson Orin NX モジュールを搭載した A607 キャリアボードに **Jetpack 6.0** をインストールします。
+ここでは、NVIDIA L4T **36.3** を使用して、Jetson Orin NX モジュール搭載の A607 キャリアボードに **Jetpack 6.0** をインストールします。
 
-**ステップ 1:** [こちら](https://developer.nvidia.com/embedded/jetson-linux-r363)からホストPCにNVIDIAドライバをダウンロードしてください。必要なドライバは以下の通りです：
+**ステップ 1:** ホスト PC に NVIDIA ドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r363)します。必要なドライバーは以下の通りです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg" /></div>
 
-**ステップ 2:** ダウンロードした周辺機器ドライバを、NVIDIAドライバと同じフォルダに移動します。これで、同じフォルダ内に3つの圧縮ファイルが表示されます。
+**ステップ 2:** 以前にダウンロードした周辺機器ドライバーを NVIDIA ドライバーと同じフォルダに移動します。これで同じフォルダに 3 つの圧縮ファイルが表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A607/compressed_files.png" /></div>
 
-**ステップ 3:** **Jetson_Linux_R36.3.0_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** を解凍し、これらのファイルが含まれるフォルダに移動して変更を適用し、必要な前提条件をインストールします。
+**ステップ 3:** これらのファイルが含まれているフォルダに移動して **Jetson_Linux_R36.3.0_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R36.3.0_aarch64.tbz2** を展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R36.3.0_aarch64.tbz2
@@ -308,7 +304,7 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 4:** **A607-JP6.0.zip** を解凍します。ここでは、.zipファイルを解凍するために必要な **unzip** パッケージを追加でインストールします。
+**ステップ4:** **A607-JP6.0.zip**を展開します。ここでは、.zipファイルを解凍するために必要な**unzip**パッケージを追加でインストールします
 
 ```sh
 cd ..
@@ -316,18 +312,18 @@ sudo apt install unzip
 sudo unzip A607-JP6.0.zip
 ```
 
-ここで、ファイルを置き換えるかどうか尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えてください。
+ここで、ファイルを置き換えるかどうかを尋ねられます。**A** を入力して **ENTER** を押し、必要なファイルを置き換えます：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A607/replace_files.png" /></div>
 
-**ステップ 5:** NVMe SSD にシステムをフラッシュします。
+**ステップ 5:** システムをNVMe SSDにフラッシュします：
 
 ```sh
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
-フラッシュプロセスが成功した場合、以下の出力が表示されます：
+フラッシュプロセスが成功すると、以下の出力が表示されます：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
 
@@ -335,13 +331,13 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 <TabItem value="JP6.1" label="JP6.1">
 
-ここでは、NVIDIA L4T **36.4** を使用して、Jetson Orin NX モジュールを搭載した A607 キャリアボードに **Jetpack 6.1** をインストールします。
+ここでは、NVIDIA L4T **36.4** を使用して、Jetson Orin NX モジュール搭載の A607 キャリアボードに **Jetpack 6.1** をインストールします。
 
-**ステップ 1:** [こちら](https://developer.nvidia.com/embedded/jetson-linux-r3640)からホストPCにNVIDIAドライバをダウンロードしてください。必要なドライバは以下の通りです：
+**ステップ 1:** ホスト PC に NVIDIA ドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3640)します。必要なドライバーは以下の通りです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg" /></div>
 
-**ステップ 2:** ダウンロードした周辺機器ドライバを、NVIDIAドライバと同じフォルダに移動します。これで、同じフォルダ内に3つの圧縮ファイルが表示されます。
+**ステップ 2:** 以前にダウンロードした周辺機器ドライバーを、NVIDIA ドライバーと同じフォルダに移動します。これで、同じフォルダに 3 つの圧縮ファイルが表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A607/a607_jp6.1.png" /></div>
 
@@ -353,7 +349,7 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 </div>
 :::
 
-**ステップ 3:** **Jetson_Linux_R36.4.0_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R36.4.0_aarch64.tbz2** を解凍し、これらのファイルが含まれるフォルダに移動して変更を適用します。
+**ステップ 3:** これらのファイルが含まれているフォルダに移動して、**Jetson_Linux_R36.4.0_aarch64.tbz2** と **Tegra_Linux_Sample-Root-Filesystem_R36.4.0_aarch64.tbz2** を展開し、変更を適用します：
 
 ```bash
 cd <path_to_files>
@@ -364,7 +360,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
 sudo ./apply_binaries.sh
 ```
 
-**ステップ 4:** **A607_Jetpack_6.1.tar.gz** を解凍します。
+**Step 4:** Extract **A607_Jetpack_6.1.tar.gz**:
 
 ```sh
 cd ..
@@ -372,14 +368,14 @@ tar xf A607_Jetpack_6.1.tar.gz
 sudo cp -r 607_jetpack6.1/Linux_for_Tegra/* Linux_for_Tegra/
 ```
 
-**ステップ 5:** NVMe SSD にシステムをフラッシュします。
+**ステップ 5:** システムをNVMe SSDにフラッシュします：
 
 ```sh
 cd Linux_for_Tegra
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c tools/kernel_flash/flash_l4t_t234_nvme.xml -p "-c bootloader/generic/cfg/flash_t234_qspi.xml" --showlogs --network usb0 jetson-orin-nano-devkit internal
 ```
 
-フラッシュプロセスが成功した場合、以下の出力が表示されます：
+フラッシュプロセスが成功すると、以下の出力が表示されます：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A603/10.jpg" /></div>
 
@@ -389,25 +385,25 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 -c too
 
 ## WiFiとBluetoothの設定
 
-フラッシュが成功した後、JetsonはOSに起動します。次に、WiFiとBluetoothを追加で設定する必要があります。
+フラッシュが成功すると、JetsonはOSで起動します。次に、WiFiとBluetoothを追加で設定する必要があります。
 
-**ステップ1:** [このページ](https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/WiFi-BT-Driver)にアクセスし、**8723du.ko**をクリックして必要なWiFi/Bluetoothドライバファイルをダウンロードし、デバイスにコピーします。
+**ステップ1：** [このページ](https://sourceforge.net/projects/nvidia-jetson/files/A607-Carrier-Board/WiFi-BT-Driver)にアクセスし、**8723du.ko**をクリックして必要なWiFi/Bluetoothドライバーファイルをダウンロードし、デバイスにコピーします
 
-**ステップ2:** ドライバ用の新しいディレクトリを作成します。
+**ステップ2：** ドライバー用の新しいディレクトリを作成します
 
 ```sh
 cd /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/
 sudo mkdir rtl8723du
 ```
 
-**ステップ3:** 先ほどダウンロードした**8723du.ko**ファイルを新しく作成したディレクトリにコピーします。
+**ステップ 3:** 先ほどダウンロードした **8723du.ko** ファイルを新しく作成したディレクトリにコピーします
 
 ```sh
 cd ~
 sudo cp 8723du.ko /lib/modules/5.10.104-tegra/kernel/drivers/net/wireless/realtek/rtl8723du
 ```
 
-**ステップ4:** ドライバを有効化します。
+**ステップ 4:** ドライバーを有効にする
 
 ```sh
 sudo modprobe cfg80211
@@ -417,22 +413,22 @@ sudo modprobe 8723du
 sudo echo 8723du >> /etc/modules
 ```
 
-**ステップ5:** デバイスを再起動します。
+**ステップ 5:** デバイスを再起動する
 
 ```sh
 sudo reboot
 ```
 
-## 技術サポートと製品に関するディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

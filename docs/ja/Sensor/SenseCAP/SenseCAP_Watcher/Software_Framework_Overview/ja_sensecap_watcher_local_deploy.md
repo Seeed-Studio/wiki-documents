@@ -1,19 +1,15 @@
 ---
-description: このチュートリアルでは、SenseCraftサービスを利用せずにWatcherのAIサービスをローカルでデプロイし、Watcherを使用する方法を案内します。
-title: WatcherのAI機能をローカルでデプロイする
+description: このチュートリアルでは、SenseCraftサービスからWatcherのAIサービスをローカルにデプロイしてWatcherを使用する方法について説明します。
+title: WatcherのAI機能をローカルにデプロイする
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/watcherAI.png
 slug: /ja/watcher_local_deploy
 sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 10/18/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# WatcherのAI機能をローカルでデプロイする
+# WatcherのAI機能をローカルにデプロイする
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/87.png" style={{width:800, height:'auto'}}/></div>
 
@@ -22,26 +18,26 @@ https://github.com/Seeed-Studio/wiki-documents/issues
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Watcherの動画を見る</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcherの動画</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Githubリポジトリ</font></span></strong>
     </a>
 </div><br />
 
-SenseCAP Watcherは、空間内の異常を監視し、アクションを実行するためのAIウォッチャーです。WatcherはSenseCraft AIサービスを利用することができますが、ローカルデバイス上でAI機能をデプロイするオプションも提供しており、より高い制御、プライバシー、柔軟性を実現します。
+SenseCAP Watcherは、空間内の異常を監視し、その後アクションを実行するのに役立つAIウォッチャーです。WatcherはSenseCraft AIサービスを利用できますが、独自のデバイスでAI機能をローカルにデプロイするオプションも提供しており、より大きな制御、プライバシー、柔軟性を提供します。
 
-この包括的なガイドでは、WatcherのAIサービスをローカルデバイス上で設定およびデプロイするプロセスを説明します。Windows PC、MacOSマシン、またはNVIDIA® Jetson AGX Orinを使用している場合でも、ステップバイステップの手順を提供し、独自の環境でWatcherのAI機能を活用できるようにします。
+この包括的なガイドでは、ローカルデバイスでWatcherのAIサービスを設定およびデプロイするプロセスを順を追って説明します。Windows PC、macOSマシン、またはNVIDIA® Jetson AGX Orinを使用している場合でも、独自の環境でWatcherのAI機能の力を活用するのに役立つステップバイステップの手順を提供します。
 
-このガイドでは、必要なソフトウェアとハードウェアの準備、各対応プラットフォームでのデプロイプロセス、そしてWatcherのローカルAIサービスを効果的に利用する方法について説明します。ガイドの最後には、独自のデバイスでWatcherのAI機能を活用する方法をしっかりと理解し、ニーズに合わせたインテリジェントでパーソナライズされたソリューションを作成する力を得ることができます。
+このガイド全体を通して、必要なソフトウェアとハードウェアの準備、サポートされている各プラットフォームのデプロイメントプロセス、およびWatcherのローカルAIサービスを効果的に活用して新しい可能性を解き放ち、生産性を向上させる方法について説明します。このガイドの最後までに、独自のデバイスでWatcherのAI機能を活用する方法をしっかりと理解し、ニーズに合わせてカスタマイズされたインテリジェントでパーソナライズされたソリューションを作成できるようになります。
 
 ## ソフトウェアの準備
 
-Watcherのローカルデプロイ機能を利用するには、まず必要なソフトウェアをダウンロードする必要があります。このソフトウェアパッケージには、WatcherアプリケーションとデバイスAIサービスコンポーネントが含まれており、ローカルAIサービスの設定と構成を可能にします。
+Watcherのローカルデプロイメント機能を利用するには、ユーザーはまず必要なソフトウェアをダウンロードする必要があります。ソフトウェアパッケージには、Watcherアプリケーションとデバイス AIサービスコンポーネントが含まれており、ユーザーがローカルAIサービスを設定および構成できるようになります。
 
-Watcher APPは以下のダウンロードリンクからダウンロードできます：
+ユーザーは以下のダウンロードリンクからWatcher APPをダウンロードできます：
 
-- **Windows**の場合：
+- **Windows**用：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.exe" target="_blank" rel="noopener noreferrer">
@@ -49,7 +45,7 @@ Watcher APPは以下のダウンロードリンクからダウンロードでき
     </a>
 </div>
 
-- **macOS**の場合：
+- **macOS**用：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_latest.dmg" target="_blank" rel="noopener noreferrer">
@@ -57,7 +53,7 @@ Watcher APPは以下のダウンロードリンクからダウンロードでき
     </a>
 </div>
 
-- **Linux**の場合：
+- **Linux**用：
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://staticfiles.sensecraft.ai/watcher_service_arm64_latest.deb" target="_blank" rel="noopener noreferrer">
@@ -65,11 +61,11 @@ Watcher APPは以下のダウンロードリンクからダウンロードでき
     </a>
 </div><br />
 
-お使いのオペレーティングシステムに応じて適切なダウンロードリンクを選択してください。Watcher APPはWindows、macOS、および主要なLinuxディストリビューションと互換性があり、異なるプラットフォーム間でシームレスな体験を提供します。
+お使いのオペレーティングシステムに基づいて適切なダウンロードリンクを選択してください。Watcher APPはWindows、macOS、および主要なLinuxディストリビューションと互換性があり、異なるプラットフォーム間でシームレスなエクスペリエンスを保証します。
 
-## ハードウェア準備 {#hardware-preparation}
+## ハードウェア準備
 
-WatcherのAI機能をローカルで展開する際にスムーズで最適な体験を確保するためには、デバイスが最低限のハードウェア要件を満たしている必要があります。この要件はオペレーティングシステムによって異なります。以下に、各対応プラットフォームのハードウェア要件を示します。
+WatcherのAI機能をローカルに展開する際にスムーズで最適な体験を確保するために、お使いのデバイスは最小ハードウェア要件を満たす必要があります。これらの要件はオペレーティングシステムによって異なります。以下は、サポートされている各プラットフォームのハードウェア要件です：
 
 <div class="table-center">
   <table align="center">
@@ -81,18 +77,18 @@ WatcherのAI機能をローカルで展開する際にスムーズで最適な�
     </tr>
     <tr>
       <th>グラフィックスカード（推奨構成）</th>
-      <td align="center">GeForce RTX2070</td>
+      <td align="center">GeForece RTX2070</td>
       <td align="center">Apple M1 16 GB</td>
-      <td align="center">GeForce RTX2070</td>
+      <td align="center">GeForece RTX2070</td>
     </tr>
     <tr>
-      <th>RAM（最低構成）</th>
+      <th>RAM（最小構成）</th>
       <td align="center">8 GB</td>
       <td align="center">16 GB</td>
       <td align="center">8 GB</td>
     </tr>
     <tr>
-      <th>ストレージ（最低構成）</th>
+      <th>ストレージ（最小構成）</th>
       <td align="center">20 GB</td>
       <td align="center">20 GB</td>
       <td align="center">20 GB</td>
@@ -100,23 +96,23 @@ WatcherのAI機能をローカルで展開する際にスムーズで最適な�
   </table>
 </div>
 
-これらは最低要件であることに注意してください。より高いスペックを持つデバイスを使用することで、WatcherのAIサービスのパフォーマンスと応答性が大幅に向上します。複数のAIサービスを同時に展開したり、大量のデータを処理する予定がある場合は、より高度なハードウェア構成を使用することをお勧めします。
+これらは最小要件であり、より高い仕様を持つことでWatcherのAIサービスのパフォーマンスと応答性を大幅に向上させることができることに注意することが重要です。複数のAIサービスを同時にデプロイしたり、大量のデータを処理したりする予定がある場合は、より高度なハードウェア構成を持つデバイスの使用をお勧めします。
 
 ### パフォーマンスに関する考慮事項
 
-WatcherのAIサービスをローカルで展開する際のパフォーマンスは、デバイスのハードウェア仕様によって異なります。以下は一般的なパフォーマンスガイドラインです：
+WatcherのローカルデプロイされたAIサービスのパフォーマンスは、デバイスのハードウェア仕様によって異なる場合があります。以下は一般的なパフォーマンスガイドラインです：
 
-- **RAM**: RAM容量が多いほど、スムーズなマルチタスクが可能になり、より複雑なAIモデルや大規模なデータセットを処理できます。
-- **グラフィックスカード**: RTX2070のような専用グラフィックスカードは、特にコンピュータビジョンやディープラーニングを含むタスクにおいて、AI計算を大幅に高速化します。
-- **ストレージ**: AIモデル、データセット、生成された出力を保存するために十分なストレージスペースが必要です。推奨される20 GBのストレージは、WatcherのAIサービスに十分なスペースを提供します。
+- **RAM**: より多くのRAMにより、スムーズなマルチタスクが可能になり、より複雑なAIモデルと大きなデータセットを処理できます。
+- **グラフィックスカード**: RTX2070のような専用グラフィックスカードは、特にコンピュータビジョンと深層学習を含むタスクにおいて、AI計算を大幅に加速できます。
+- **ストレージ**: AIモデル、データセット、生成された出力を保存するために十分なストレージ容量が不可欠です。推奨される20GBのストレージは、WatcherのAIサービスに十分なスペースを確保します。
 
-WatcherのAIサービスをローカルで展開する際には、特定の使用ケースや使用するAIモデルの複雑さを考慮することが重要です。リアルタイム処理が必要な場合やリソース集約型のタスクを処理する予定がある場合は、より高性能なハードウェア構成を選択することをお勧めします。
+WatcherのAIサービスをローカルにデプロイする際は、特定の使用ケースと使用予定のAIモデルの複雑さを考慮することが重要です。リアルタイム処理が必要な場合や、リソース集約的なタスクを処理する予定がある場合は、最適なパフォーマンスを確保するために、より高性能なハードウェア構成を選択することをお勧めします。
 
-上記のハードウェア要件を満たし、パフォーマンス要因を考慮することで、WatcherのAI機能をローカルデバイスでスムーズかつ効率的に展開することができます。
+上記のハードウェア要件を満たし、パフォーマンス要因を考慮することで、ローカルデバイスでWatcherのAI機能のスムーズで効率的なデプロイを確保できます。
 
 ### デバイスベンチマーク
 
-以下は、いくつかのデバイスでAIサービスを展開した後の応答時間です。
+以下は、一部のデバイスでAIサービスをデプロイした後の応答時間です。
 
 <div class="table-center">
   <table align="center">
@@ -129,152 +125,153 @@ WatcherのAIサービスをローカルで展開する際には、特定の使�
     </tr>
     <tr>
       <th>タスク分析時間</th>
-      <td align="center">5秒</td>
-      <td align="center">17分14秒</td>
-      <td align="center">36秒</td>
-      <td align="center">18秒</td>
+      <td align="center">5s</td>
+      <td align="center">17m14s</td>
+      <td align="center">36s</td>
+      <td align="center">18s</td>
     </tr>
     <tr>
       <th>画像分析時間</th>
-      <td align="center">4秒</td>
-      <td align="center">4分10秒</td>
-      <td align="center">8秒</td>
-      <td align="center">7秒</td>
+      <td align="center">4s</td>
+      <td align="center">4m10s</td>
+      <td align="center">8s</td>
+      <td align="center">7s</td>
     </tr>
   </table>
 </div>
 
-NVIDIA Jetson AGXシリーズ製品をRTX 4090のような消費者向けグラフィックスカードと比較した場合、AI関連タスクにおいて以下の重要な利点があります：
+NVIDIA Jetson AGXシリーズ製品をRTX 4090などのコンシューマーグレードグラフィックスカードとAI関連タスクで比較する場合、Jetson AGXシリーズは以下のような主要な利点を提供します：
 
-1. **産業グレードの信頼性**: Jetson AGXシリーズ製品は産業および商業用途向けに設計されており、平均故障間隔（MTBF）が長いです。これらは24時間365日連続稼働するように設計されており、問題が発生しにくいです。一方、RTX 4090のような消費者向けグラフィックスカードは、このような厳しい連続運転には対応しておらず、同じレベルの信頼性を提供することはできません。
+1. 産業グレードの信頼性：Jetson AGXシリーズ製品は産業および商業アプリケーション向けに設計されており、これは平均故障間隔（MTBF）がより長いことを意味します。これらは問題を発生させることなく、24時間365日連続動作するように構築されています。対照的に、RTX 4090などのコンシューマーグレードグラフィックスカードは、このような要求の厳しい24時間体制の動作向けに設計されておらず、同レベルの信頼性を提供しない可能性があります。
 
-2. **コンパクトなサイズと低消費電力**: Jetson AGXシリーズ製品は組み込みおよびエッジコンピューティング用途を念頭に設計されており、消費者向けの高性能グラフィックスカードと比較して小型で消費電力が少ないです。これにより、スペースが限られた環境での展開に適しており、運用コストを削減できます。低消費電力は熱生成を抑えるため、組み込みシステムにおいて冷却要件を最小限に抑えることができます。
+2. コンパクトサイズと低消費電力：Jetson AGXシリーズ製品は、組み込みおよびエッジコンピューティングアプリケーションを念頭に置いて設計されています。ハイエンドコンシューマーグラフィックスカードと比較して、より小さなフォームファクターを持ち、消費電力も少なくなっています。これにより、スペースに制約のある環境での展開により適しており、全体的な運用コストを削減します。低消費電力はまた、発熱量の減少を意味し、これは組み込みシステムにとって重要であり、冷却要件を最小限に抑えるのに役立ちます。
 
-これらの利点に加えて、Jetson AGXシリーズはAIワークロードに最適化された包括的なソフトウェアスタックを提供しており、開発者がAIアプリケーションを効率的に作成および展開するのを容易にします。産業グレードの信頼性、コンパクトなサイズ、低消費電力、最適化されたソフトウェアスタックの組み合わせにより、Jetson AGXシリーズはAI関連プロジェクトやアプリケーションにおいて、RTX 4090のような消費者向けグラフィックスカードと比較して魅力的な選択肢となります。
+これらの利点に加えて、Jetson AGXシリーズはAIワークロード向けに最適化された包括的なソフトウェアスタックを提供し、開発者がAIアプリケーションを効率的に作成・展開することを容易にします。産業グレードの信頼性、コンパクトサイズ、低消費電力、最適化されたソフトウェアスタックの組み合わせにより、Jetson AGXシリーズは、特にRTX 4090などのコンシューマーグレードグラフィックスカードと比較した場合、AI関連プロジェクトおよびアプリケーションにとって魅力的な選択肢となります。
 
-## Windowsでのデプロイ
+## Windowsでの展開
 
-WindowsデバイスにWatcherのAI機能をデプロイするには、以下の簡単な手順に従ってください。
+WindowsデバイスでWatcherのAI機能を展開するには、以下の簡単な手順に従ってください。
 
-**ステップ 1**. ダウンロードした`.exe`ファイルをコンピュータのダウンロードフォルダまたは指定された場所で見つけます。`.exe`ファイルをダブルクリックしてインストールプロセスを開始します。インストールウィザードがセットアッププロセスを案内します。インストール中に追加の選択や設定を行う必要はありません。
+**ステップ1**. コンピューターのダウンロードフォルダーまたは指定された場所でダウンロードした`.exe`ファイルを見つけます。`.exe`ファイルをダブルクリックしてインストールプロセスを開始します。インストールウィザードがセットアッププロセスをガイドします。インストール中に追加の選択や設定を行う必要はありません。
 
-**ステップ 2**. インストールが完了したら、Watcherアプリケーションを起動します。初めてアプリケーションを起動すると、使用するAIモデルを選択するよう求められます。Watcherは以下の2つのオプションを提供します。
+**ステップ2**. インストールが完了したら、Watcherアプリケーションを起動します。アプリケーションを初回起動すると、使用したいAIモデルを選択するよう求められます。Watcherは2つのオプションを提供します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/88.png" style={{width:800, height:'auto'}}/></div>
 
-1. Llama 3.1 + LLaVA: このオプションを選択すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは約**10 GB**のサイズになる可能性があるため、モデルのダウンロードプロセス中に安定した高速インターネット接続を確保してください。これにより、ダウンロードの中断や不完全なダウンロードを防ぐことができます。
+1. Llama 3.1 + LLaVA：このオプションを選択すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは**約10GB**のサイズになる可能性があるため、時間がかかる場合があります。中断や不完全なダウンロードを避けるため、モデルダウンロードプロセス中は安定した高速インターネット接続を確保してください。
 
-2. OpenAI: OpenAIのモデルを使用する場合は、事前にOpenAI APIキーを準備する必要があります。有効なAPIキーとOpenAIモデルを使用するための十分なクレジットを確保してください。プロンプトが表示されたら、APIキーを入力してWatcherをOpenAIのサービスに設定します。
+2. OpenAI：OpenAIのモデルを使用したい場合は、事前にOpenAI APIキーを準備する必要があります。有効なAPIキーとOpenAIモデルを使用するのに十分なクレジットがあることを確認してください。プロンプトが表示されたら、APIキーを入力してWatcherがOpenAIのサービスを使用するよう設定します。
 
-ニーズとリソースに最適なオプションを選択してください。十分なストレージ容量と信頼性の高いインターネット接続がある場合は、Llama 3.1 + LLaVAオプションが自己完結型のソリューションを提供します。OpenAIのモデルの柔軟性とパワーを好み、APIキーを準備している場合は、OpenAIオプションを選択してください。
+ニーズとリソースに最適なオプションを選択してください。十分なストレージスペースと信頼できるインターネット接続がある場合、Llama 3.1 + LLaVAオプションは自己完結型のソリューションを提供します。OpenAIモデルの柔軟性とパワーを好み、APIキーの準備ができている場合は、OpenAIオプションを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
 
-モデルファイルがダウンロードおよびインストールされると、WatcherはWindowsデバイスで使用可能になります。
+モデルファイルがダウンロードされインストールされると、WatcherはWindowsデバイスで使用する準備が整います。
 
-## MacOSでのデプロイ
+## macOSでのデプロイメント
 
-macOSデバイスにWatcherのAI機能をデプロイするには、以下の手順に従ってください。
+macOSデバイスでWatcherのAI機能をデプロイするには、以下の手順に従ってください。
 
-**ステップ 1**. ダウンロードした`.dmg`ファイルをコンピュータのダウンロードフォルダまたは指定された場所で見つけます。`.dmg`ファイルをダブルクリックして開きます。インストールパッケージの内容を表示する新しいウィンドウが表示されます。
+**ステップ1**. コンピュータのダウンロードフォルダまたは指定された場所でダウンロードした`.dmg`ファイルを見つけます。`.dmg`ファイルをダブルクリックして開きます。新しいウィンドウが表示され、インストールパッケージの内容が表示されます。
 
-**ステップ 2**. 新しいウィンドウにはWatcherアプリケーションアイコンとアプリケーションフォルダのエイリアスが表示されます。このウィンドウ内でWatcherアプリケーションアイコンをアプリケーションフォルダのエイリアスにドラッグします。この操作により、Watcherアプリケーションがコンピュータのアプリケーションフォルダにコピーされます。コピー処理が完了したら、`.dmg`ウィンドウを閉じることができます。
+**ステップ2**. 新しいウィンドウで、WatcherアプリケーションアイコンとApplicationsフォルダのエイリアスが表示されます。Watcherアプリケーションアイコンをクリックしてドラッグし、ウィンドウ内のApplicationsフォルダエイリアスにドロップします。この操作により、WatcherアプリケーションがコンピュータのApplicationsフォルダにコピーされます。
+コピープロセスが完了したら、`.dmg`ウィンドウを閉じることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/89.png" style={{width:600, height:'auto'}}/></div>
 
-**ステップ 3**. 初めてアプリケーションを起動すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは約10 GBのサイズになる可能性があるため、モデルのダウンロードプロセス中に安定した高速インターネット接続を確保してください。これにより、ダウンロードの中断や不完全なダウンロードを防ぐことができます。
+**ステップ3**. アプリケーションを初回起動すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは約10GBのサイズになる可能性があるため、時間がかかる場合があります。モデルダウンロードプロセス中は、中断や不完全なダウンロードを避けるため、安定した高速インターネット接続を確保してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/90.png" style={{width:800, height:'auto'}}/></div>
 
-1. Llama 3.1 + LLaVA: このオプションを選択すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは約**10 GB**のサイズになる可能性があるため、モデルのダウンロードプロセス中に安定した高速インターネット接続を確保してください。これにより、ダウンロードの中断や不完全なダウンロードを防ぐことができます。
+1. Llama 3.1 + LLaVA: このオプションを選択すると、Watcherは必要なAIモデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードは約**10GB**のサイズになる可能性があるため、時間がかかる場合があります。モデルダウンロードプロセス中は、中断や不完全なダウンロードを避けるため、安定した高速インターネット接続を確保してください。
 
-2. OpenAI: OpenAIのモデルを使用する場合は、事前にOpenAI APIキーを準備する必要があります。有効なAPIキーとOpenAIモデルを使用するための十分なクレジットを確保してください。プロンプトが表示されたら、APIキーを入力してWatcherをOpenAIのサービスに設定します。
+2. OpenAI: OpenAIのモデルを使用したい場合は、事前にOpenAI APIキーを準備する必要があります。有効なAPIキーとOpenAIモデルを使用するのに十分なクレジットがあることを確認してください。プロンプトが表示されたら、APIキーを入力してWatcherがOpenAIのサービスを使用するように設定します。
 
-ニーズとリソースに最適なオプションを選択してください。十分なストレージ容量と信頼性の高いインターネット接続がある場合は、Llama 3.1 + LLaVAオプションが自己完結型のソリューションを提供します。OpenAIのモデルの柔軟性とパワーを好み、APIキーを準備している場合は、OpenAIオプションを選択してください。
+ニーズとリソースに最適なオプションを選択してください。十分なストレージ容量と信頼できるインターネット接続がある場合、Llama 3.1 + LLaVAオプションは自己完結型のソリューションを提供します。OpenAIモデルの柔軟性とパワーを好み、APIキーが準備できている場合は、OpenAIオプションを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
 
-モデルファイルがダウンロードおよびインストールされると、WatcherはmacOSデバイスで使用可能になります。
+モデルファイルがダウンロードされインストールされると、WatcherはmacOSデバイスで使用する準備が整います。
 
-## NVIDIA® Jetson AGX Orin / Linux へのデプロイ
+## NVIDIA® Jetson AGX Orin / Linuxでのデプロイメント
 
-NVIDIA® Jetson AGX Orin または Linux デバイスに Watcher の AI 機能をデプロイするには、以下の手順に従ってください。
+NVIDIA® Jetson AGX OrinまたはLinuxデバイスでWatcherのAI機能をデプロイするには、以下の手順に従ってください。
 
-**ステップ 1**. Jetson AGX Orin または Linux デバイスでターミナルウィンドウを開きます。
+**ステップ1**. Jetson AGX OrinまたはLinuxデバイスでターミナルウィンドウを開きます。
 
-**ステップ 2**. `cd` コマンドを使用して、ダウンロードした `.deb` ファイルが保存されているディレクトリに移動します。以下のコマンドを実行して Watcher をインストールします。
+**ステップ2**. `cd`コマンドを使用して、ダウンロードした`.deb`ファイルが配置されているディレクトリに移動します。以下のコマンドを実行してWatcherをインストールします。
 
 ```
 sudo dpkg -i watcher_service_x.x.x_arm64.deb
 ```
 
-`watcher_service_x.x.x_arm64.deb` を実際にダウンロードした `.deb` ファイルの名前に置き換えてください。インストールプロセスが開始されます。インストールを承認するためにシステムパスワードの入力を求められる場合があります。インストールが完了するまで待ちます。ターミナルには進行状況や追加情報が表示されます。
+`watcher_service_x.x.x_arm64.deb` を実際にダウンロードした `.deb` ファイルの名前に置き換えてください。インストールプロセスが開始されます。インストールを承認するためにシステムパスワードの入力を求められる場合があります。インストールが完了するまで待ちます。ターミナルには進行状況と追加情報が表示されます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/91.png" style={{width:800, height:'auto'}}/></div>
 
-**ステップ 3**. インストールが完了したら、ターミナルで `watcher` と入力するか、アプリケーションランチャーで Watcher を見つけて起動できます。
+**ステップ 3**. インストールが完了したら、ターミナルで watcher と入力するか、アプリケーションランチャーで見つけることで Watcher を起動できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/92.png" style={{width:800, height:'auto'}}/></div>
 
-1. **Llama 3.1 + LLaVA**: このオプションを選択すると、Watcher は必要な AI モデルと関連ファイルのダウンロードを自動的に開始します。これらの追加ダウンロードには時間がかかる場合があり、サイズは約 **10 GB** です。モデルのダウンロード中に中断や不完全なダウンロードを避けるため、安定した高速インターネット接続を確保してください。
+1. Llama 3.1 + LLaVA: このオプションを選択すると、Watcher は必要な AI モデルと関連ファイルの自動ダウンロードを開始します。これらの追加ダウンロードは約 **10 GB** のサイズになる可能性があるため、時間がかかる場合があります。モデルのダウンロードプロセス中は、中断や不完全なダウンロードを避けるために、安定した高速インターネット接続があることを確認してください。
 
-2. **OpenAI**: OpenAI のモデルを使用する場合は、事前に OpenAI API キーを準備する必要があります。有効な API キーと十分なクレジットを持っていることを確認してください。プロンプトが表示されたら、API キーを入力して Watcher を OpenAI のサービスを使用するように設定します。
+2. OpenAI: OpenAI のモデルを使用したい場合は、事前に OpenAI API キーを準備する必要があります。有効な API キーと OpenAI モデルを使用するのに十分なクレジットがあることを確認してください。プロンプトが表示されたら、API キーを入力して Watcher が OpenAI のサービスを使用するように設定してください。
 
-ニーズとリソースに最適なオプションを選択してください。十分なストレージスペースと信頼性の高いインターネット接続がある場合は、Llama 3.1 + LLaVA オプションが自己完結型のソリューションを提供します。一方、OpenAI のモデルの柔軟性とパワーを好み、API キーを準備している場合は、OpenAI オプションを選択してください。
+ニーズとリソースに最適なオプションを選択してください。十分なストレージ容量と信頼できるインターネット接続がある場合、Llama 3.1 + LLaVA オプションは自己完結型のソリューションを提供します。OpenAI モデルの柔軟性とパワーを好み、API キーが準備できている場合は、OpenAI オプションを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/96.png" style={{width:800, height:'auto'}}/></div>
 
-Windows および macOS のインストールと同様に、Watcher は必要な AI モデルと関連ファイルのダウンロードを自動的に開始します。
+Windows と macOS のインストールと同様に、Watcher は必要な AI モデルと関連ファイルの自動ダウンロードを開始します。
 
-## SenseCraft APP でローカル AI サービスを設定する
+## SenseCraft APP でローカル AI サービスの使用を設定する
 
-SenseCraft APP で Watcher が提供するローカル AI サービスを使用するには、以下の簡潔な手順に従ってください。
+SenseCraft APP で Watcher が提供するローカル AI サービスを使用するには、以下の簡潔な手順に従ってください：
 
-**ステップ 1**. デバイスで Watcher APP を開き、左中央セクションにある **CLICK TO START SERVICE** ボタンをクリックします。ボタンが **SERVICE IS STARTED** に変わるのを待ちます。
+**ステップ 1**. デバイスで Watcher APP を開き、中央左部分の **CLICK TO START SERVICE** ボタンをクリックします。ボタンが **SERVICE IS STARTED** に変わるまで待ちます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/94.png" style={{width:800, height:'auto'}}/></div>
 
-**ステップ 2**. SenseCraft APP で Watcher インターフェースに移動し、右上隅の設定ボタンをタップします。設定メニューから **Device AI Service** を選択します。
+**ステップ 2**. SenseCraft APP で、Watcher インターフェースに移動し、右上角の設定ボタンをタップします。設定メニューから **Device AI Service** を選択します。
 
-**ステップ 3**. Watcher APP のホーム画面から URL とトークンをコピーします。
+**ステップ 3**. Watcher APP のホーム画面から URL と Token をコピーします。
 
-**ステップ 4**. SenseCraft APP の **Device AI Service** 設定内のそれぞれのフィールドに URL とトークンを貼り付けます。
+**ステップ 4**. SenseCraft APP の **Device AI Service** 設定内で、URL と Token をそれぞれのフィールドに貼り付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/93.png" style={{width:250, height:'auto'}}/></div><br />
 
-**ステップ 5**. SenseCraft APP を通じて Watcher にタスクを割り当てることができ、Watcher はローカルにデプロイされた AI 機能を使用してそれらを処理します。
+**ステップ 5**. これで SenseCraft APP を通じて Watcher にタスクを割り当てることができ、Watcher はローカルにデプロイされた AI 機能を使用してそれらを処理します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/95.png" style={{width:800, height:'auto'}}/></div>
 
 :::caution
-お使いのコンピュータが **[ハードウェア準備](#hardware-preparation)** に記載された推奨構成を満たしていることを確認することが重要です。推奨構成を下回る場合、コンピュータが画像の解析に全力を注いでいる間に Watcher が常に観察状態にあるように見えるため、認識結果やアラームメッセージをタイムリーに受け取れない可能性があります。
+**[ハードウェア準備](#hardware-preparation)** で推奨されているコンピュータ構成をお使いのコンピュータが満たしていることを確認することが重要です。推奨構成を下回る場合、コンピュータが画像の1つを全力で分析している可能性があるため、認識結果とアラームメッセージを時間通りに受信できない場合があります。この時点で Watcher は常に観察状態にあるように見えます。
 :::
 
-これらの手順を完了することで、デバイス上で Watcher の AI サービスの力を活用できるようになります。これにより、プライバシーが強化され、独自の統合システムを便利にカスタマイズすることが可能になります。Watcher の AI 機能をローカルで実行することで、データを自分で管理しながら、高度なタスク、分析、オートメーションを安全かつ効率的に実行できます。
+これらの手順を完了することで、デバイス上で直接 Watcher の AI サービスの力を活用でき、プライバシーの強化と独自の統合システムを便利にカスタマイズする能力を確保できます。Watcher の AI 機能がローカルで実行されることで、データを自分の管理下に置きながら、高度なタスク、分析、自動化を安全かつ効率的に実行できます。
 
-**[HTTP メッセージブロック](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_look_tool/#http-message-block)** を使用したローカルデプロイ後のメッセージプッシュに関するチュートリアルをアプリケーションディレクトリに追加し続けますので、ぜひご期待ください！
+アプリケーションディレクトリでローカライズされたデプロイメント後のメッセージプッシュに **[HTTP Message Block](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)** を使用するチュートリアルを引き続き追加していきますので、ご期待ください！
 
 ## FAQ
 
-### SenseCap Watcher Serviceが動作しない
+### SenseCap Watcher Service が動作しない
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/faq1.png" style={{width:800, height:'auto'}}/></div>
 
-Service HostのIPアドレスは、あなたのコンピュータのIPアドレスである必要があります。そうでない場合、SenseCAP Watcher Serviceは動作しません。以下の手順に従って修正してください。
+Service Host の IP はあなたのコンピューターの IP アドレスである必要があります。そうでない場合、SenseCAP Watcher Service は動作しません。以下の手順に従って修正する必要があります。
 
-1. Win + Rを押す > "ncpa.cpl"と入力 > Enterを押す。
+1. Win + R を押す > "ncpa.cpl" と入力 > Enter。
 
-2. "Wi-Fi"またはEthernetを右クリック > "プロパティ"を選択。
+2. "Wi-Fi" または Ethernet を右クリック > "プロパティ" を選択。
 
-3. IPv4またはIPv6をダブルクリック > "詳細設定"をクリック。
+3. IPv4 または IPv6 をダブルクリック > "詳細設定" をクリック。
 
-4. "自動メトリック"のチェックを外す > 1（または希望する番号）を入力 > OKをクリック。
+4. 自動メトリックのチェックを外す > 1（または希望する数値）を入力 > OK をクリック。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/faq2.png" style={{width:800, height:'auto'}}/></div>
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、スムーズな体験を提供するため、さまざまなサポートをご用意しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

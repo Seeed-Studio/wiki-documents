@@ -1,5 +1,5 @@
 ---
-description: ReSpeaker XVF3800 USB 4-Mic Array 是一个专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
+description: ReSpeaker XVF3800 USB 4-Mic Array 是一款专业的圆形麦克风阵列，具有 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与 XIAO ESP32S3 配对使用，可为智能设备、机器人和物联网应用提供先进的语音控制功能。探索无缝集成和双模式灵活性。
 
 title: reSpeaker XVF3800 使用 I2S 录制和播放音频
 
@@ -17,6 +17,7 @@ last_update:
 # reSpeaker XVF3800 使用 I2S 录制和播放音频
 
 ## 目标
+
 本示例的目标是**使用 ESP32-S3 上的 I2S 接口从 XVF3800 语音处理器录制音频数据**，**将其临时存储在内存中**，然后**通过相同的音频路径播放**。这种环回测试有助于验证 XVF3800 的输入和输出通道是否都正确初始化并正常工作，特别是在通过 I2C 控制时。
 
 ## 代码概述
@@ -74,17 +75,16 @@ void loop() {
 
 ```
 
-
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -90,7 +90,7 @@ LAudio.playFile(StorageEnum drv, wchar_t* songName)
 
 -   ***パラメータ***
     -   *drv* - ストレージ、storageSD（SDカード）またはstorageFlash（フラッシュストレージ）
-    -   *songName* - オーディオファイルのパス（ascii（char\*）またはunicode（wchar\_t\*）エンコーディング）
+    -   *songName* - オーディオファイルのパス（ascii（char\*）またはunicode（wchar_t\*）エンコーディング）
 
 
 -   ***戻り値***

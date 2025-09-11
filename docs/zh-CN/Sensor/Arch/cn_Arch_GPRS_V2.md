@@ -63,8 +63,8 @@ Arch GPRS V2 与 Arch GPRS 对比
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS_V2/img/Get_started_with_arch.png)
 
 1. 从 [这里](http://www.mbed.org) 登录到 mbed 环境。
-2. 导入 [mbed\_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS) 程序。
-3. 在 mbed 在线编译器环境中验证 mbed\_blinky 文件夹中的 main.cpp 文件是否与上图步骤 3 中所示一致。确保选择的编译平台是 Seeeduino-Arch。然后继续编译代码。当要求保存生成的二进制文件 (.bin) 时，将其保存到 PC 上指定的文件夹中。
+2. 导入 [mbed_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS) 程序。
+3. 在 mbed 在线编译器环境中验证 mbed_blinky 文件夹中的 main.cpp 文件是否与上图步骤 3 中所示一致。确保选择的编译平台是 Seeeduino-Arch。然后继续编译代码。当要求保存生成的二进制文件 (.bin) 时，将其保存到 PC 上指定的文件夹中。
 4. 现在将 Arch 开发板连接到您的 PC，并长按复位按钮。一个名为 CRP DISABLD 的可移动 USB 驱动器应会自动出现在您的 PC 上。进入 CRP DISABLD 驱动器，删除文件夹中现有的固件文件，并将下载的二进制文件复制到 CRP DISABLD。快速按下复位按钮以运行新的二进制文件。
 5. 通过查看 Arch GPRS V2 开发板验证您的代码是否成功运行。如果从上图引脚图中最右侧的 LED 闪烁，而旁边的其他 3 个 LED 都亮着，这表明您的代码正在工作。
 

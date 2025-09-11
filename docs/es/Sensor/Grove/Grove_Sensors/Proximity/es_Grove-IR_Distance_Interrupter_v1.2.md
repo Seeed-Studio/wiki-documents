@@ -176,7 +176,7 @@ Conecta Grove - IR Distance Interrupter en el puerto D4 del GrovePi con [cable G
 Ejecuta el comando en una terminal:
 
 ```
-    nano grove\_infrared\_distance\_interrupt.py
+    nano grove_infrared_distance_interrupt.py
 ```
 
 Copia y guarda el siguiente código en él.
@@ -209,7 +209,7 @@ while True:
 5.Run the demo, run following command in terminal.
 
 ```
-    sudo python grove\_infrared\_distance\_interrupt.py
+    sudo python grove_infrared_distance_interrupt.py
 ```
 
 ## Visor Esquemático en Línea

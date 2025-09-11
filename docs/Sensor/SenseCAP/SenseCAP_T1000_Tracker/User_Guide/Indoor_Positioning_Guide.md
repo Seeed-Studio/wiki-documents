@@ -13,7 +13,6 @@ last_update:
 ---
 
 
-
 The chapter will provide overall guidance on how to integrate [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) into an indoor positioning solution using Traxmate.
 
 [Traxmate](https://traxmate.io/) is an loT platform that enables you or your customers to easily and efficiently deploy a comprehensive loT tracking solution, complete with seamless indoor and outdoor positioning, tracking, and routing capabilities.
@@ -166,8 +165,8 @@ Navigate to `Settings` -> `Account`, and copy the Service Token.
 
 Enable the following recommended event type, then click `Add webhook`.
 
-* Uplink message
-* Normalized uplink
+- Uplink message
+- Normalized uplink
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/websettings.png" alt="pir" width={800} height="auto" /></p>
 

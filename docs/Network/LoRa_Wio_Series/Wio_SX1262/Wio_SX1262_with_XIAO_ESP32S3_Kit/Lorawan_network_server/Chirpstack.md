@@ -13,10 +13,9 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/51.png" alt="pir" width={900} height="auto" /></p>
 
-
 ## Overview
 
-LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. 
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways.
 
 Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
@@ -24,15 +23,13 @@ This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3
 
 ## Install Chirpstack locally
 
-Please refer to [instruction](https://learn.semtech.com/mod/book/view.php?id=223&chapterid=266#:~:text=Enter%20the%20following%20to%20clone%20the%20ChirpStack%20Docker,Share%20it%20on%20any%20security%20popups%20you%20see.) for installing Chirpstack locally. 
+Please refer to [instruction](https://learn.semtech.com/mod/book/view.php?id=223&chapterid=266#:~:text=Enter%20the%20following%20to%20clone%20the%20ChirpStack%20Docker,Share%20it%20on%20any%20security%20popups%20you%20see.) for installing Chirpstack locally.
 
-1. open a browser and visit http://localhost:8080 . 
+1. open a browser and visit http://localhost:8080 .
 
 You should see the ChirpStack login page.
 
 2. Sign in with the default username `admin` and password `admin`.
-
-
 
 ## Add Device Profile
 
@@ -49,11 +46,11 @@ Added successfully!
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/47.png" alt="pir" width={600} height="auto" /></p>
 
-
 ## Add SenseCAP LoRa Sensor
 
 ### Configure LoRa Sensor via Sensecraft APP
-We are going to add a sensecap sensor node to TTN. 
+
+We are going to add a sensecap sensor node to TTN.
 
 **Step 1**. Download and Open the Sensecraft App.
 
@@ -96,5 +93,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

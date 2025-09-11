@@ -211,7 +211,7 @@ examples フォルダに入ります。
 
 ![](https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/BbgAWSexamples.png)
 
-新しいファイル grove\_temperature\_sensor.py を作成します。
+新しいファイル grove_temperature_sensor.py を作成します。
 
     # vim grove_temperature_sensor.py
 
@@ -313,7 +313,7 @@ if __name__ == '__main__':
             print "Error"
 ```
 
-新しいファイル python\_sensor.py を作成します。
+新しいファイル python_sensor.py を作成します。
 
 新しいファイル `python_sensor.py` を作成します。
 

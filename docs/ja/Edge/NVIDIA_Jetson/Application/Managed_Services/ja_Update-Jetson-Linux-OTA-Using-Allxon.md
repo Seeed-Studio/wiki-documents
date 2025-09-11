@@ -1,28 +1,24 @@
 ---
-description: Allxon を使用して Jetson Linux を OTA で更新する
-title: Allxon を使用して NVIDIA Jetson を OTA 更新
+description: Allxonを使用してJetson LinuxをOver-the-Air更新する
+title: AllxonでNVIDIA JetsonをOTA更新する
 keywords:
 - Sorftware Allxon
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Update-Jetson-Linux-OTA-Using-Allxon
 last_update:
-  date: 05/15/2025
+  date: 1/13/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Allxon を使用して Jetson Linux を OTA で更新する
+# Allxonを使用してJetson LinuxをOver-the-Air更新する
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/thumb.png" alt="pir" width="1000" height="auto"/></p>
 
 ## はじめに
 
-一般的に、NVIDIA は「OTA ペイロードパッケージ更新」メカニズムを提供しており、これによりユーザーは Jetson デバイスを新しいバージョンの JetPack に更新することができます。一見すると、Jetson デバイスの OS を更新するのは便利に思えますが、ユーザーが追加で行う必要がある作業があります。それは、OTA ペイロードパッケージを Jetson デバイスに配信するための OTA サーバーをホストすることです。OTA ペイロードパッケージの生成に加えて、この作業を処理するのはユーザーにとって大きな負担となります。
+一般的に、NVIDIAは「OTAペイロードパッケージ更新」メカニズムを提供しており、ユーザーがJetsonデバイスを新しいバージョンのJetPackに更新できるようにしています。JetsonデバイスのOSを更新するのは便利に見えますが、ユーザーが行う必要がある追加の作業があります。それは、OTAペイロードパッケージをJetsonデバイスに配信するためのOTAサーバーをホストする必要があることです。これは、OTAペイロードパッケージの生成に加えて、ユーザーが処理するには大きな負担となります。
 
-しかし、もうその心配は必要ありません。[Allxon](https://www.allxon.com) を使用すれば、Allxon DMS ポータルを介して OTA ペイロードパッケージを Jetson デバイスに配信することができます。OTA ペイロードパッケージを生成する責任を持つユーザーやメーカーにとっては、OTA ペイロードパッケージをアップロードするのは非常に簡単です。また、Jetson デバイスの OTA ペイロードパッケージ更新を実行したいユーザーにとっても、デバイス群に新しいバージョンの OTA ペイロードパッケージを配布するのは簡単です。これらすべての手順は、この Wiki でステップバイステップで詳しく説明されています。それでは、Allxon を使用して Jetson デバイスを OTA で更新する方法を学びましょう！
+今では、その心配は不要です。[Allxon](https://www.allxon.com)が、Allxon DMSポータル経由でOTAペイロードパッケージをJetsonデバイスに配信するお手伝いをします。OTAペイロードパッケージの生成を担当するユーザーや製造業者にとって、OTAペイロードパッケージのアップロードは非常に簡単です。Jetsonデバイス用のOTAペイロードパッケージ更新を実行したいユーザーにとっても、デバイス群に新しいバージョンのOTAペイロードパッケージを配布することが簡単です。上記のすべてについて、このwikiでステップバイステップで詳しく説明されています。それでは、一緒に進めて、Allxonを使用してJetsonデバイスをover-the-airで更新を始めましょう！
 
 ## ワークフロー
 
@@ -30,42 +26,42 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/20.jpg" alt="pir" width="1000" height="auto"/></p>
 
-メーカーや開発者の皆様には、Allxon に OTA ペイロードパッケージを提供して検証を行うようお願いしています。なぜ Allxon がこれを行うのかというと、それは対応する Jetson デバイスで OTA ペイロードパッケージが正常に動作することを確認したいからです。Allxon による検証の利点は、Allxon が OTA ペイロードパッケージをアップロードし、それが確実に動作することを保証できる点です。この手順については、このガイドの後半で説明します。
+製造業者や開発者にOTAペイロードパッケージをAllxonに提供して検証を行っていただきたいと考えています。なぜAllxonがそれを行いたいのでしょうか？それは、AllxonがOTAペイロードパッケージが対応するJetsonデバイスで動作することを確認したいからです。Allxonによる検証の利点は、AllxonがOTAペイロードパッケージのアップロードをお手伝いし、それが動作することを確認できることです。このステップについては、このガイドの後半で説明します。
 
-## 対応ハードウェア
+## サポートされているハードウェア
 
-Allxon を使用した OTA ペイロードパッケージ更新は、以下のハードウェアでサポートされています：
+Allxonを使用したOTAペイロードパッケージ更新は、以下のハードウェアでサポートされています：
 
-- NVIDIA の公式開発キット：
+- NVIDIAの公式開発キット：
 
   - NVIDIA® Jetson Xavier™ NX Developer Kit
   - NVIDIA Jetson AGX Xavier Developer Kit
   - NVIDIA Jetson TX2 Developer Kit
 
-- Seeed のキャリアボード：
+- Seedのキャリアボード：
 
   - Jetson SUB Mini PC
-  - A203 キャリアボード
-  - A203 (バージョン 2) キャリアボード
-  - A205 キャリアボード
-  - A206 キャリアボード
+  - A203 Carrier Board
+  - A203 (Version 2) Carrier Board
+  - A205 Carrier Board
+  - A206 Carrier Board
 
-**注意:** 上記のキャリアボードに SoM を選択する際は、Jetson Xavier NX または Jetson TX2 NX モジュールを使用してください。Jetson Nano モジュールはこのメカニズムではサポートされていません。
+**注意：** 上記のキャリアボード用のSoMを選択する際は、Jetson Xavier NXまたはJetson TX2 NXモジュールのいずれかを使用してください。Jetson Nanoモジュールはこのメカニズムではサポートされていません。
 
-## 必要条件
+## 前提条件
 
-- JetPack (Base BSP) を実行している上記のいずれかの Jetson デバイス
-- Jetson デバイスにインストールされ、Allxon DMS ポータルとペアリングされた [Allxon DMS エージェント](https://wiki.seeedstudio.com/ja/Allxon-Jetson-Getting-Started)
-- Ubuntu がインストールされたホスト PC（ネイティブシステム推奨）
-- HDMI ディスプレイとキーボード（オプション）
+- JetPack（Base BSP）を実行している上記のJetsonデバイスのいずれか
+- Jetsonデバイスに[Allxon DMSエージェントがインストール](https://wiki.seeedstudio.com/Allxon-Jetson-Getting-Started)され、Allxon DMSポータルとペアリングされていること
+- UbuntuがインストールされたホストPC（ネイティブシステムを推奨）
+- HDMIディスプレイとキーボード（オプション）
 
-**注意:** このガイドで使用されたホスト PC は、Ubuntu 20.04 を実行しているマシンでした。
+**注意：** このガイドで使用されたホストPCは、Ubuntu 20.04を実行するマシンでした。
 
 ## はじめに
 
-このガイドは2つの主要なセクションに分かれています。最初のセクションでは、OTAペイロードパッケージを生成してAllxon DMSポータルにアップロードする方法について説明します。次のセクションでは、Allxon DMSポータルを使用してJetsonデバイスにOTAペイロードパッケージの更新を実行する方法について説明します。
+このガイドは2つの主要なセクションに分かれています。最初のセクションでは、OTAペイロードパッケージを生成してAllxon DMSポータルにアップロードする方法について説明します。2番目のセクションでは、Allxon DMSポータルを使用してJetsonデバイスに実際にOTAペイロードパッケージ更新を実行する方法について説明します。
 
-まず、以下のコマンドを実行してJetsonデバイスにインストールされている現在のL4Tバージョンを確認します。
+まず最初に、以下を実行してJetsonデバイスにインストールされている現在のL4Tバージョンを確認しましょう
 
 ```sh
 cat /etc/nv_tegra_release
@@ -73,90 +69,90 @@ cat /etc/nv_tegra_release
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/21.png" alt="pir" width="1000" height="auto"/></p>
 
-次に、これをL4T 32.6.1に更新します。
+これからL4T 32.6.1にアップデートを進めます
 
-### OTAペイロードパッケージを生成してAllxon DMSポータルにアップロードする
+### OTAペイロードパッケージの生成とAllxon DMSポータルへのアップロード
 
-OTAペイロードパッケージを生成する前に、以下の背景知識を確認してください：
+OTAペイロードパッケージの生成を開始する前に、いくつかの背景知識をご紹介します：
 
-1. OTAペイロードパッケージとは？
+1. OTAペイロードパッケージとは何ですか？
 
-    - OTAペイロードパッケージは、Jetsonデバイスを古いバージョンのBSPから新しいバージョンに更新するために使用されます。
-    - **BASE BSP**と**Target BSP**に基づいて生成する必要があります。
-    - つまり、Target BSPが同じでもBASE BSPが異なる場合、OTAペイロードパッケージは異なります。
-    - さらに、OTAペイロードパッケージには、ファイル全体ではなく**差分**のみが含まれます。
+    - OTAペイロードパッケージは、Jetsonデバイスを低いバージョンのBSPから新しいバージョンにアップデートするために使用されます。
+    - **ベースBSP**と**ターゲットBSP**に基づいて生成する必要があります。
+    - つまり、ターゲットBSPが同じでもベースBSPが異なる場合、OTAペイロードパッケージは異なります。
+    - さらに、OTAペイロードパッケージには、完全なターゲットBSPイメージではなく、ファイルの**差分**のみが含まれます。
 
-2. このメカニズムとフローにおけるAllxonの役割
+2. このメカニズムとフローにおけるAllxonの役割は何ですか
 
-    - Allxon DMSは、DMSポータルを介してOTAペイロードパッケージをJetsonデバイスに配信するのを支援します。
-    - 製造業者や開発者は、OTAペイロードパッケージをAllxon DMSポータルにアップロードするだけで済みます。
+    - Allxon DMSは、DMSポータル経由でOTAペイロードパッケージをJetsonデバイスに配信することをサポートできます。
+    - メーカーと開発者は、OTAペイロードパッケージをAllxon DMSポータルにアップロードするだけです。
     - エンドユーザーは、Allxon DMSポータル上で対応するOTAペイロードパッケージをグループに割り当てるだけです。
 
-3. OTAペイロードパッケージ更新後にデバイス上で消去されない場所はありますか？
+3. OTAペイロードパッケージアップデートの実行後、デバイス上で消去されない場所はありますか？
 
-    - OTAペイロードパッケージ更新後、**"/ota"**パスの下にあるファイルは消去されないことがわかっています。
-    - これは、ユーザーが重要なデータをバックアップし、OTAペイロードパッケージプロセス中に復元できる場所となります。
+    - パス**"/ota**"の下にあるファイルは、OTAペイロードパッケージアップデート後に消去されないことがわかりました。
+    - これは、ユーザーが重要なデータをバックアップし、OTAペイロードパッケージプロセス中にそれらを復元できる場所になります。
 
-#### 初期準備 - Base BSP
+#### 初期準備 - ベースBSP
 
-前述のように、OTAペイロードパッケージはBase BSPとTarget BSPに基づいて生成されます。そのため、OTAペイロードパッケージを生成する前にBase BSPとTarget BSPを準備する必要があります。どのBase BSPを準備するかは、更新したいデバイスに基づいて決定されます。例えば、JetPackバージョン4.4.4を実行しているXavier NXデバイスを更新したい場合、Base BSPとしてJetPackバージョン4.4.4をXavier NX用に準備する必要があります。
+前述のように、OTAペイロードパッケージはベースBSPとターゲットBSPに基づいて生成されます。そのため、OTAペイロードパッケージを生成する前に、ベースBSPとターゲットBSPを準備する必要があります。どのベースBSPを準備する必要があるかをどのように選択しますか？それは、どのデバイスをアップデートしたいかに基づいています。例えば、JetPackバージョン4.4.4を実行しているXavier NXデバイスをアップデートしたい場合、Xavier NX用のJetPackバージョン4.4.4をベースBSPとして準備する必要があります。
 
-- **ステップ1.** Jetsonデバイスに現在インストールされているバージョンに応じて、[こちら](https://developer.nvidia.com/embedded/linux-tegra-archive)からL4Tリリースを選択します。
+- **ステップ1.** 現在Jetsonデバイスにインストールされているバージョンに応じて、[こちらから](https://developer.nvidia.com/embedded/linux-tegra-archive)L4Tリリースを選択します
 
-- **ステップ2.** ボードに応じてL4Tドライバーパッケージ（BSP）とサンプルルートファイルシステムをダウンロードします。
+- **ステップ2.** お使いのボードに応じてL4Tドライバーパッケージ（BSP）とサンプルルートファイルシステムをダウンロードします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/1.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ3.** 両方のファイルを同じディレクトリに配置します。
+- **ステップ3.** 両方のファイルを同じディレクトリに配置します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/2.png" alt="pir" width="500" height="auto"/></p>
 
-- **ステップ4.** ターミナルウィンドウを開き、上記のディレクトリに移動してL4Tドライバーパッケージ（BSP）を抽出します。
+- **ステップ4.** ターミナルウィンドウを開き、上記のディレクトリに移動してL4Tドライバーパッケージ（BSP）を展開します
 
 ```sh
 sudo tar -vxjf <Base_BSP_file_name>.tbz2
 ```
 
-- **ステップ5.** 抽出されたNVIDIAドライバーパッケージの**rootfsディレクトリ**に移動します。
+- **ステップ 5.** 展開されたNVIDIAドライバーパッケージの**rootfsディレクトリ**に移動します
 
 ```sh
 cd <Base_BSP_L4T_root>/Linux_for_Tegra/rootfs
 ```
 
-- **ステップ6.** サンプルファイルシステムをrootfsディレクトリに抽出します。
+- **ステップ 6.** サンプルファイルシステムをrootfsディレクトリに展開する
 
 ```sh
 sudo tar -jxpf ../../<rootfs_file_name>.tbz2
 ```
 
-- **ステップ7.** apply_binaries.shスクリプトを実行して、NVIDIAユーザースペースライブラリをターゲットファイルシステムにコピーします。
+- **ステップ 7.** apply_binaries.sh スクリプトを実行して、NVIDIA ユーザー空間ライブラリをターゲットファイルシステムにコピーします
 
 ```sh
 cd ..
 sudo ./apply_binaries.sh
 ```
 
-#### 初期準備 - Target BSP
+#### 初期準備 - ターゲットBSP
 
-次にTarget BSPを準備します。これはデバイスに更新されるBSPです。
+次に、ターゲットBSPを準備します。これは、デバイス上で更新されるBSPになります。
 
-- **ステップ1.** 上記の**初期準備 - Base BSP**セクションの**ステップ1 - ステップ7**を実行しますが、今回はデバイスに更新されるBSPに応じて必要なファイルをダウンロードします。
+- **ステップ 1.** 上記の**初期準備 - ベースBSP**セクションの**ステップ1 - ステップ7**に従いますが、今回はデバイス上で更新されるBSPに応じて必要なファイルをダウンロードします
 
-- **ステップ2.** Target BSPの**rootfs/etc/init.dディレクトリ**に移動します。
+- **ステップ 2.** ターゲットBSPの**rootfs/etc/init.dディレクトリ**に移動します
 
 ```sh
 cd <Target_BSP_L4T_root>/Linux_for_Tegra/rootfs/etc/init.d
 ```
 
-- **ステップ3.** **install_allxon_dms.sh**という名前の新しいファイルを作成します。
+- **ステップ 3.** **install_allxon_dms.sh** という名前の新しいファイルを作成します
 
 ```sh
 sudo nano install_allxon_dms.sh
 ```
 
-**注意:** 上記では任意のテキストエディタを使用できます。ここでは**nanoテキストエディタ**を使用しています。
+**注意:** 上記の任意のテキストエディタを使用できます。ここでは**nanoテキストエディタ**を使用しています
 
-- **ステップ4.** 以下のコードを上記で作成したファイルにコピーします。
+- **ステップ4.** 上記で作成したファイルに以下のコードをコピーしてください
 
 ```sh
 #!/bin/bash
@@ -250,7 +246,7 @@ do_install() {
 do_install
 ```
 
-- **ステップ 5.** Target BSP の **rootfs/etc/systemd/system** ディレクトリに移動します
+- **Step 5.** Navigate to the **rootfs/etc/systemd/system** directory of Target BSP
 
 ```sh
 cd <Target_BSP_L4T_root>/Linux_for_Tegra/rootfs/etc/systemd/system
@@ -278,7 +274,7 @@ DefaultStartLimitBurst=10
 WantedBy=multi-user.target
 ```
 
-- **ステップ 7.** 以下のコマンドを実行して、ファイルの権限を変更し、Target BSP の **dms-install.service** のシンボリックリンクを作成します
+- **ステップ 7.** 以下のコマンドを実行して、Target BSP の **dms-install.service** のファイル権限を変更し、シンボリックリンクを作成します
 
 ```sh
 sudo chmod 644 ./etc/systemd/system/dms-install.service
@@ -286,40 +282,40 @@ sudo chmod 777 ./etc/init.d/install_allxon_dms.sh
 sudo ln -s /etc/systemd/system/dms-install.service ./etc/systemd/system/multi-user.target.wants/dms-install.service
 ```
 
-#### Target BSP におけるエージェント自動インストールメカニズム
+#### ターゲットBSPでの自動インストールエージェント機能
 
 ##### ストーリー
 
-- 多くの場合、OTAペイロードパッケージ更新を実行すると、ファイルシステムは完全に新しい状態に消去されます。ただし、消去されない唯一の場所は **"/ota"** フォルダです。
-- ここで深刻な問題が発生します。ファイルシステムが消去されるため、システムに Allxon DMS Agent が存在しません。OTAペイロードパッケージ更新後にデバイスが Allxon DMS Portal に接続し、ユーザーがリモート管理を行えるようにするにはどうすればよいでしょうか？
-- さらに、ユーザーがOTAペイロードパッケージ更新後にデバイスデータを復元したい場合、どのように支援すればよいでしょうか？
+- ほとんどの場合、OTAペイロードパッケージの更新を実行した後、ファイルシステムは真新しい状態に消去され、消去されない場所は **"/ota"** フォルダのみです。
+- ここで深刻な問題があります。ファイルシステムが消去されるため、システムにAllxon DMSエージェントが存在しません。OTAペイロードパッケージ更新後、デバイスはどのようにしてAllxon DMSポータルに接続し続け、ユーザーのリモート管理を支援できるでしょうか？
+- さらに、ユーザーがOTAペイロードパッケージ更新後にデバイスデータを復元したい場合、どのように支援できるでしょうか？
 
-##### 解決策 1 - エンタープライズエージェントの自動インストール
+##### 解決策1 - エンタープライズエージェントの自動インストール
 
-- Jetson デバイスが Jetpack 更新後に自動的にエンタープライズ版の Allxon DMS Agent をインストールできるようにするためには、OTAペイロードパッケージ内のシステムディレクトリ **"/etc/init.d/"** にスクリプト **"install_allxon_dms.sh"** を配置し、サービス **"dms-install.service"** も配置する必要があります。
-- デバイスがOTAペイロードパッケージ更新後に起動すると、スクリプトがシステムによって実行され、エンタープライズ版の Allxon DMS Agent がインストールされます。
+- JetsonデバイスがJetpackの更新完了後に自動的にAllxon DMSエージェントをエンタープライズエディションでインストールできるようにするため、OTAペイロードパッケージ内のシステムディレクトリ **"/etc/init.d/"** にスクリプト **"install_allxon_dms.sh"** を配置し、同時にサービス **"dms-install.service"** もOTAペイロードパッケージに配置する必要があります。
+- OTAペイロードパッケージ更新後にデバイスが起動する際、スクリプトがシステムによって実行され、Allxon DMSエージェントがエンタープライズエディションでインストールされます。
 
-##### 解決策 2 - デバイスデータの復元
+##### 解決策2 - デバイスデータの復元
 
-- デバイスデータを復元するためには、ユーザーはOTAペイロードパッケージ更新を実行する前に、復元が必要なデータを Jetson デバイスの **"/ota"** ディレクトリに配置する必要があります。
-- さらに、ユーザーは **"/ota"** フォルダからデータを復元するスクリプトを実装する必要があり、そのスクリプトファイル名は **"resume_data.sh"** である必要があります。
-- **"/ota"** に **"resume_data.sh"** スクリプトが存在する場合、スクリプト **"install_allxon_dms.sh"** が **"resume_data.sh"** を実行して **"/ota"** フォルダからデータを復元するのを支援します。このスクリプトは無限ループを防ぐために実行後に削除されます。
+- デバイスデータを復元するため、ユーザーはOTAペイロードパッケージ更新を実行する前に、復元が必要なデータをJetsonデバイスの **"/ota"** ディレクトリ下に配置する必要があります。
+- さらに、ユーザーは **"/ota"** フォルダからデータ復元を行うスクリプトを実装する必要があり、スクリプトファイル名は **"resume_data.sh"** である必要があります。
+- **"/ota"** 下に **"resume_data.sh"** スクリプトが存在する場合、スクリプト **"install_allxon_dms.sh"** は **"resume_data.sh"** を実行してユーザーが **"/ota"** フォルダからデータを復元することを支援し、このスクリプトは実行後に削除されて無限ループを防ぎます。
 
 #### OTAペイロードパッケージの生成
 
-Base BSP と Target BSP の準備が整ったら、提供されたスクリプトを使用して OTAペイロードパッケージを生成するだけです。それでは始めましょう！
+ベースBSPとターゲットBSPの両方が準備できたら、私たちが提供するスクリプトを使用してOTAペイロードパッケージの生成を支援するだけです。それでは始めましょう！
 
-- **ステップ 1.** Target BSP の L4Tリリースに移動し、[こちら](https://developer.nvidia.com/embedded/linux-tegra-archive)から **Jetson Platform Over-The-Air Update Tools** をクリックしてダウンロードします
+- **ステップ1.** ターゲットBSPのL4Tリリースに[こちらから](https://developer.nvidia.com/embedded/linux-tegra-archive)移動し、**Jetson Platform Over-The-Air Update Tools** をクリックしてダウンロードします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/3.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 2.** ダウンロードした **Jetson Platform Over-The-Air Update Tools"(例: ota_tools_R32.6.1_aarch64.tbz2)** ファイルを Target BSP の **Linux_for_Tegra** と同じフォルダに配置します
+- **ステップ2.** ダウンロードした **Jetson Platform Over-The-Air Update Tools**（例：ota_tools_R32.6.1_aarch64.tbz2）ファイルを、ターゲットBSPの **Linux_for_Tegra** と同じフォルダ内に配置します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/4.png" alt="pir" width="500" height="auto"/></p>
 
-- **ステップ 3.** **generate_ota_payload.sh** という名前の新しいファイルを作成し、任意の場所に配置します（上記と同じフォルダに配置すると簡単です）
+- **ステップ3.** **generate_ota_payload.sh** という名前の新しいファイルを作成し、任意の場所に配置します（上記と同じフォルダに配置するのが簡単です）
 
-- **ステップ 4.** 以下のコードをファイル内にコピーします
+- **ステップ4.** ファイル内に以下のコードをコピーします
 
 ```sh
 #!/bin/bash
@@ -367,34 +363,34 @@ echo "8. Copy ota_payload_package.tar.gz to ${TARGET_FOLDER}"
 cp bootloader/${JETSON_MODEL}/ota_payload_package.tar.gz ${TARGET_FOLDER}
 ```
 
-- **ステップ 5.** 上記コード内の以下の変数を修正します
+- **Step 5.** 上記のコード内の以下の変数を修正してください
 
-  - BASE_BSP_PATH: Base BSP のディレクトリパス
-  - TOT_BSP_PATH: Target BSP のディレクトリパス
-  - OTA_TOOL: OTA Tool のファイル名
-  - JETSON_MODEL: モデル情報（対応するモデルを調べるには[このページ](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/quick_start.html#wwpID0EAAPNHA)を使用してください）
-  - BSP_VERSION: Base BSP のバージョン
-  - TARGET_FOLDER: 生成された OTAペイロードパッケージを配置するディレクトリパス
+  - BASE_BSP_PATH: Base BSPのディレクトリパス
+  - TOT_BSP_PATH: Target BSPのディレクトリパス
+  - OTA_TOOL: OTAツールのファイル名
+  - JETSON_MODEL: モデル情報（対応するモデルを調べるには[このページ](https://docs.nvidia.com/jetson/l4t/index.html#page/Tegra%20Linux%20Driver%20Package%20Development%20Guide/quick_start.html#wwpID0EAAPNHA)をご利用ください）
+  - BSP_VERSION: Base BSPのバージョン
+  - TARGET_FOLDER: 生成されたOTA Payload Packageを配置するディレクトリパス
 
-- **ステップ 6.** **generate_ota_payload.sh** に実行権限を付与します
+- **Step 6.** **generate_ota_payload.sh**に実行権限を付与してください
 
 ```sh
 chmod 777 generate_ota_payload.sh
 ```
 
-- **ステップ 7.** スクリプトを実行します
+- **ステップ 7.** スクリプトを実行する
 
 ```sh
 sudo ./generate_ota_payload.sh
 ```
 
-これでOTAペイロードパッケージが**ota_payload_package.tar.gz**として、以前に定義した**TARGET_FOLDER**内に生成されます。
+これで、OTA ペイロードパッケージが、以前に定義した **TARGET_FOLDER** 内に **ota_payload_package.tar.gz** として生成されます
 
-#### OTAペイロードパッケージのzipファイルをアップロード用に準備する
+#### アップロード用の OTA ペイロードパッケージ zip ファイルを準備する
 
-- **ステップ1.** 以前にダウンロードした**Jetson Platform Over-The-Air Update Tools"(例: ota_tools_R32.6.1_aarch64.tbz2)**をコピーし、以前に作成した**TARGET_FOLDER**内に配置します。
+- **ステップ 1.** 以前にダウンロードした **Jetson Platform Over-The-Air Update Tools**（例：ota_tools_R32.6.1_aarch64.tbz2）をコピーし、以前に作成した **TARGET_FOLDER** 内に配置します
 
-- **ステップ2.** **run_ota_payload.sh**という名前のファイルを**TARGET_FOLDER**内に作成し、以下のコードをコピーします。
+- **ステップ 2.** **TARGET_FOLDER** 内に **run_ota_payload.sh** という名前のファイルを作成し、以下のコードをその中にコピーします
 
 ```sh
 #!/bin/bash
@@ -402,29 +398,29 @@ sudo ./generate_ota_payload.sh
 OTA_TOOL="<ota_tools_file_name>.tbz2"
 OTA_PAYLOAD="ota_payload_package.tar.gz"
     
-WORK_DIR="/allxon_ota" # OTAペイロード、ツール、スクリプトは更新前にこのフォルダに配置する必要があります
-OTA_SRC_DIR="/ota" # emmcストレージに余裕がある場合、このパスを変更する必要はありません
+WORK_DIR="/allxon_ota" # OTA payload, tool and script should be put in this folder before updating
+OTA_SRC_DIR="/ota" # Unless the emmc storage is struggle, DO NOT need to modify this path
 TARGET_VERSION="<Target_BSP_version--ex:R32.6.1>"
   
 DMS_BACKUP_SERVICE="dms-backup.service"
 BACKUP_AGENT_CACHE="backup_agent_cache.sh"
    
 release_space_rm_ota_files() {
-    echo "未使用のファイルとスペースを解放します..."
+    echo "Release unused files and space..."
    
     if [ -f "${OTA_PAYLOAD}" ]; then
-        echo " - ${OTA_PAYLOAD}を削除します"
+        echo " - Remove ${OTA_PAYLOAD}"
         sudo rm ${OTA_PAYLOAD}
     fi
    
     if [ -f "${OTA_TOOL}" ]; then
-        echo " - ${OTA_TOOL}を削除します"
+        echo " - Remove ${OTA_TOOL}"
         sudo rm ${OTA_TOOL}
     fi     
 }
   
 enable_backup_agent_cache() {
-    echo "バックアップエージェントのキャッシュサービスを有効にします"
+    echo "Enable backup Agent's cache service"
     chmod 777 ${BACKUP_AGENT_CACHE}
     chmod 644 ${DMS_BACKUP_SERVICE}
  
@@ -437,65 +433,65 @@ enable_backup_agent_cache() {
    
    
 if [ ! -f "/etc/nv_tegra_release" ]; then
-    sudo echo "サポートされていません"
+    sudo echo "Not Supported"
     exit 1
 fi
     
 REVISION=$(cat /etc/nv_tegra_release | cut -d "," -f 2 | cut -d " " -f 3 | sed 1q) > /dev/null
     
 if [ "$REVISION" == "" ]; then
-    echo "エラー!"
+    echo "Error!"
     exit 1
 else
     if [ "$REVISION" == "$TARGET_VERSION" ]; then
-        echo "JetPack $REVISIONへの更新が成功しました!"
+        echo "Update to JetPack $REVISION success!"
         release_space_rm_ota_files
         exit 0
     else
-        echo "現在のJetPackは$REVISIONです。更新が必要です!"
+        echo "It's JetPack $REVISION, need to do update!"
         enable_backup_agent_cache
     fi
 fi
     
-echo "1. ${OTA_SRC_DIR}ディレクトリを作成します"
+echo "1. Create ${OTA_SRC_DIR} directory"
     
 sudo mkdir -p ${OTA_SRC_DIR}
     
-echo "2. ${OTA_PAYLOAD}を${OTA_SRC_DIR}に移動します"
+echo "2. Move ${OTA_PAYLOAD} to ${OTA_SRC_DIR}"
     
 sudo mv ${OTA_PAYLOAD} ${OTA_SRC_DIR}
     
-echo "3. ${OTA_TOOL}を展開します"
+echo "3. Extract ${OTA_TOOL}"
     
 tar -jxvf ${OTA_TOOL}
     
-echo "4. WORKDIR変数を設定します"
+echo "4. Set variable WORKDIR"
     
 export WORKDIR=${WORK_DIR}
     
 echo "WORKDIR=${WORKDIR}"
     
-echo "5. ${WORKDIR}/Linux_for_Tegra/tools/ota_tools/version_upgradeにディレクトリを変更します"
+echo "5. Change directory to ${WORKDIR}/Linux_for_Tegra/tools/ota_tools/version_upgrade"
     
 cd ${WORKDIR}/Linux_for_Tegra/tools/ota_tools/version_upgrade
     
-echo "6. nv_ota_start.shを実行します"
+echo "6. Execute nv_ota_start.sh"
     
 sudo ./nv_ota_start.sh /dev/mmcblk0 ${OTA_SRC_DIR}/ota_payload_package.tar.gz
 
 ```
 
-- **ステップ3.** 必要に応じて、上記の"run_ota_payload.sh"スクリプトの変数を要件と条件に基づいて変更します。
+- **ステップ 3.** 必要に応じて、上記の「run_ota_payload.sh」スクリプトの変数を要件と条件に基づいて変更する
 
-  - OTA_TOOL (ファイル名が正しいか確認してください)
-  - OTA_PAYLOAD (ファイル名が正しいか確認してください)
-  - TARGET_VERSION (ターゲットBSPバージョンに応じて、形式は"Rxx.x.x")
+  - OTA_TOOL（ファイル名が正しいかどうかを確認するだけ）
+  - OTA_PAYLOAD（ファイル名が正しいかどうかを確認するだけ）
+  - TARGET_VERSION（ターゲット BSP バージョンに応じて、形式は「Rxx.x.x」）
 
-- **ステップ4.** **dms-backup.service**という名前のファイルを**TARGET_FOLDER**内に作成し、以下のコードをコピーします。
+- **ステップ 4.** **TARGET_FOLDER** 内に **dms-backup.service** という名前のファイルを作成し、以下のコードをその中にコピーする
 
 ```sh
 [Unit]
-Description=シャットダウン前のプロセス中にAllxon DMSエージェントキャッシュをバックアップ
+Description=Back up Allxon DMS Agent cache during Pre-Shutdown Processes
 DefaultDependencies=no
 Before=shutdown.target reboot.target halt.target
  
@@ -509,7 +505,7 @@ ExecStart=/etc/init.d/backup_agent_cache.sh
 WantedBy=halt.target reboot.target shutdown.target
 ```
 
-- **ステップ5.** **backup_agent_cache.sh**という名前のファイルを**TARGET_FOLDER**内に作成し、以下のコードをコピーします。
+- **ステップ 5.** **TARGET_FOLDER** 内に **backup_agent_cache.sh** という名前のファイルを作成し、以下のコードをコピーしてください
 
 ```sh
 #!/bin/bash
@@ -520,20 +516,20 @@ TRIAL_AGENT_SN="/var/agentsn"
 AGENT_IN_OTA_SRC_DIR="/ota/agent"
  
 backup_agent_cache() {
-    echo "エージェントのキャッシュをバックアップします"
+    echo "Backup Agent's cache"
     sudo mkdir -p "${AGENT_IN_OTA_SRC_DIR}"
  
     if [ -d "${SYNCAGENT_FOLDER}" ]; then
-        echo " - ${SYNCAGENT_FOLDER}をコピーします"
+        echo " - Copy ${SYNCAGENT_FOLDER}"
         sudo cp -r ${SYNCAGENT_FOLDER} ${AGENT_IN_OTA_SRC_DIR}
     fi
  
     if [ -f "${TRIAL_TAG}" ]; then
-        echo " - ${TRIAL_TAG}をコピーします"
+        echo " - Copy ${TRIAL_TAG}"
         sudo cp ${TRIAL_TAG} ${AGENT_IN_OTA_SRC_DIR}
  
         if [ -f "${TRIAL_AGENT_SN}" ]; then
-            echo " - ${TRIAL_AGENT_SN}をコピーします"
+            echo " - Copy ${TRIAL_AGENT_SN}"
             sudo cp ${TRIAL_AGENT_SN} ${AGENT_IN_OTA_SRC_DIR}
         fi
     fi
@@ -542,33 +538,33 @@ backup_agent_cache() {
 backup_agent_cache
 ```
 
-- **ステップ6.** ターミナルウィンドウから**TARGET_FOLDER**に移動し、以下のコマンドを実行して上記のファイルを含むzipファイルを作成します。
+- **ステップ 6.** ターミナルウィンドウから **TARGET_FOLDER** に移動し、以下のコマンドを実行して上記のファイルを含むzipファイルを作成します
 
 ```sh
 zip ota_payload.zip *
 ```
 
-これで**TARGET_FOLDER**は以下のようになり、生成された**ota_payload.zip**ファイルが含まれます。
+**TARGET_FOLDER** は、生成された **ota_payload.zip** ファイルと共に以下のようになります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/5.png" alt="pir" width="400" height="auto"/></p>
 
-#### OTAペイロードパッケージのzipファイルをアップロードする
+#### OTA ペイロードパッケージ zip ファイルのアップロード
 
-OTAペイロードパッケージに使用されるzipファイルを生成した後、このzipファイルをAllxon DMSポータルまたは独自のストレージにアップロードすることができます。
+OTA ペイロードパッケージに使用される zip ファイルを生成した後、この zip ファイルを Allxon DMS ポータルまたは独自のストレージにアップロードを開始できます。
 
-Allxonに検証とzipファイルのアップロードを依頼したい場合は、このパッケージを[こちらから連絡](https://www.allxon.com/contact)してAllxonに送信するだけです。このセクションをスキップできます。
+Allxon に検証とzip ファイルのアップロードを依頼したい場合は、[こちらから連絡](https://www.allxon.com/contact)してこのパッケージを Allxon に配信するだけです。その後、このセクションをスキップできます。
 
-自分でzipファイルをアップロードしたい場合は、以下の手順に従ってください。
+zip ファイルを自分でアップロードしたい場合は、以下の手順に従ってください
 
-- **ステップ1.** [Allxon DMSポータル](https://dms.allxon.com/)にアクセスしてサインインします。
+- **ステップ 1.** [Allxon DMS ポータル](https://dms.allxon.com/)にアクセスしてサインインします
 
-**注意:** [このWiki](https://wiki.seeedstudio.com/ja/Allxon-Jetson-Getting-Started)に従って、JetsonデバイスにAllxon DMSエージェントをインストールし、Allxon DMSポータルとペアリングしてください。
+**注意:** Jetson デバイスに Allxon DMS エージェントをインストールし、Allxon DMS ポータルとペアリングするために、[この wiki](https://wiki.seeedstudio.com/Allxon-Jetson-Getting-Started) に従うことを確認してください
 
-- **ステップ2.** **Applications**ページに移動し、**Register**をクリックして新しいアプリケーションを登録します。
+- **ステップ 2.** **Applications** ページに移動し、**Register** をクリックして新しいアプリケーションを登録します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/6.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ3.** 以下の情報を入力し、**Next**をクリックします。
+- **ステップ 3.** 以下のように情報を入力し、**Next** をクリックします
 
   - Application Name: brand_model_BaseBSP_to_TargetBSP
   - App GUID: brand_model_BaseBSP_to_TargetBSP
@@ -576,21 +572,21 @@ Allxonに検証とzipファイルのアップロードを依頼したい場合�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/8.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 4.** 説明を追加し、**Register** をクリックします。
+- **ステップ 4.** 説明を追加し、**Register** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/9.png" alt="pir" width="400" height="auto"/></p>
 
-これで作成したアプリケーションが表示されます。
+作成されたアプリケーションが表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/10.1.png" alt="pir" width="650" height="auto"/></p>
 
-- **ステップ 5.** アプリケーションをクリックし、**Versions** セクションの **+** 記号をクリックします。
+- **ステップ 5.** それをクリックし、**Versions** セクションの下にある **+** サインをクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/11.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 6.** バージョン番号を追加し、以下の2つのシナリオに基づいてインストールコマンドを記入してニーズに合わせます。
+- **ステップ 6.** バージョン番号を追加し、ニーズに合わせて以下の 2 つのシナリオに基づいてインストールコマンドを入力します
 
-1. ZIPファイルをAllxon DMSポータルにアップロードする場合、以下のインストールコマンドを使用してください。
+1. zip ファイルを Allxon DMS ポータルにアップロードしたい場合は、以下のインストールコマンドを使用してください。
 
 ```sh
 mkdir -p /allxon_ota
@@ -598,14 +594,14 @@ unzip -o /var/lib/SyncAgent/download/"Application registered name" -d /allxon_ot
 chmod 777 /allxon_ota/run_ota_payload.sh
 rm -rf /var/lib/SyncAgent/download/*
 cd /allxon_ota/ && /allxon_ota/run_ota_payload.sh
-shutdown -r +5 "JetPackのアップグレードのためにシステムが5分後に再起動します。"
+shutdown -r +5 "Restart the system to upgrade the JetPack will be started in 5 mins."
 ```
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/12.png" alt="pir" width="400" height="auto"/></p>
 
-**注意:** "Application registered name" は、以前作成したアプリケーション名に置き換えてください。例: **"jetson-xavier-nx-devkit-emmc_4.4_to_4.6"**
+**注意**：「Application registered name」は、以前に作成したアプリケーション名に変更する必要があります。例：**「jetson-xavier-nx-devkit-emmc_4.4_to_4.6」**
 
-2. ZIPファイルを独自のストレージまたはサイトにアップロードする場合、以下のインストールコマンドを使用してください。
+2. zipファイルを独自のストレージまたはサイトにアップロードしたい場合は、以下のインストールコマンドを使用してください。
 
 ```sh
 mkdir -p /allxon_ota
@@ -614,77 +610,77 @@ unzip -o /allxon_ota/ota_payload.zip -d /allxon_ota/
 chmod 777 /allxon_ota/run_ota_payload.sh
 rm /allxon_ota/ota_payload.zip
 cd /allxon_ota/ && /allxon_ota/run_ota_payload.sh
-shutdown -r +5 "JetPackのアップグレードのためにシステムが5分後に再起動します。"
+shutdown -r +5 "Restart the system to upgrade the JetPack will be started in 5 mins."
 ```
 
-- **ステップ 7.** 以前生成した **ota_payload.zip** ファイルを選択してアップロードし、アップロードが完了したら **Create** をクリックします。
+- **ステップ 7.** 先ほど生成した **ota_payload.zip** ファイルを選択してアップロードし、アップロードが完了したら **Create** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/13.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 8.** **Version Description** を入力し、**Save** をクリックしてアプリケーションを保存します。
+- **ステップ 8.** **Version Description** を入力し、**Save** をクリックしてアプリケーションを保存します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/14.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 9.** **Versions** セクションの **+** 記号をクリックし、**Release** をクリックします。
+- **ステップ 9.** **Versions** セクションの下にある **+** サインをクリックし、**Release** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/15.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 10.** 最後に **Release** をクリックします。
+- **ステップ 10.** 最後に **Release** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/16.png" alt="pir" width="400" height="auto"/></p>
 
-これで、OTAペイロードパッケージをAllxon DMSポータルに正常にアップロードしてリリースしました。次のステップでは、このアップデートを Jetson デバイスに配布します。
+これで、OTA ペイロードパッケージを Allxon DMS ポータルに正常にアップロードし、リリースしました。次のステップでは、この更新を Jetson デバイスに配布します。
 
-### Allxon DMSポータルを使用したOTAペイロードパッケージの更新実行
+### Allxon DMS ポータル経由での OTA ペイロードパッケージ更新の実行
 
-以下の点に注意してください：
+続行する前に、以下の点にご注意ください：
 
-- OTAペイロードパッケージの更新を実行する前に、Jetson デバイスがプロセス全体を通じてイーサネットケーブルで接続されていることを確認してください。そうでない場合、更新は失敗します。
+- OTA ペイロードパッケージ更新を実行する前に、Jetson デバイスが全プロセス中にイーサネットケーブルで接続されていることを確認してください。そうでなければ、更新は失敗します。
 - アップグレードプロセスが失敗した場合、**/ota_log** に移動してアップグレードプロセスのログを確認できます。
-- アップグレードプロセスが成功した場合、フォルダ **/ota** 内のファイルは保持されます。
-- eMMCまたは内部ストレージに、少なくとも **"OTAペイロードパッケージ * 2.5"** の空き容量があることを確認してください。
+- アップグレードプロセスが成功した場合、フォルダ **/ota** 下のファイルは保持されます。
+- eMMC または内部ストレージに少なくとも **「OTA ペイロードパッケージ * 2.5」** の利用可能な容量があることを確認してください。
 
-それでは、Allxon DMSポータルを使用してOTAペイロードパッケージの更新を実行しましょう。
+それでは、Allxon DMS ポータル経由で OTA ペイロードパッケージ更新を実行しましょう
 
-- **ステップ 1.** **Allxon DMSポータル** の **Applications** ページに移動し、**Register** をクリックします。
+- **ステップ 1.** **Allxon DMS ポータル** の **Applications** ページに移動し、**Register** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/6.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 2.** **Existing** をクリックし、OTAペイロードパッケージを選択して **Register** をクリックします。
+- **ステップ 2.** **Existing** をクリックし、OTA ペイロードパッケージを選択して **Register** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/25.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 3.** 新しく追加されたアプリケーションをクリックします。
+- **ステップ 3.** 新しく追加されたアプリケーションをクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/26.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ 4.** **Versions** セクションの **+** 記号をクリックし、**Distribute** をクリックします。
+- **ステップ 4.** **Versions** セクションの下にある **+** サインをクリックし、**Distribute** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/27.png" alt="pir" width="1000" height="auto"/></p>
 
-- **ステップ 5.** 配布したいグループを選択し、**Distribute** をクリックします。
+- **ステップ 2.** 配布したいグループを選択し、**Distribute** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/18.png" alt="pir" width="400" height="auto"/></p>
 
-- **ステップ 6.** **Distribution Time** を設定し、**Schedule** をクリックします。
+- **ステップ 3.** **Distribution Time** を設定し、**Schedule** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/19.png" alt="pir" width="400" height="auto"/></p>
 
-これで、選択したグループ内の Jetson デバイスがこのOTAペイロードパッケージを受信し、アップグレードプロセスを開始します。
+これで、選択されたグループ内の Jetson デバイスがこの OTA ペイロードパッケージを受信し、アップグレードプロセスを開始します。
 
-Jetson デバイスがHDMIディスプレイに接続されている場合、インストールが完了すると以下の画面が表示されます。
+Jetson デバイスが HDMI ディスプレイに接続されている場合、インストールが完了すると以下のような画面が表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/23.jpg" alt="pir" width="1000" height="auto"/></p>
 
-また、SSH経由で Jetson デバイスに接続している場合、インストールが完了すると **"JetPackのアップグレードのためにシステムが5分後に再起動します。"** というメッセージが表示されます。
+SSH 経由で Jetson デバイスに接続している場合、インストールが完了すると **「Restart the system to upgrade the JetPack will be started in 5 mins.」** というメッセージも表示されます。
 
-これで、アップグレードプロセスを開始するために5分後に再起動します。この時間は、ユーザーが保存されていない作業を保存するための余裕を与えるためのものです。ただし、上記のメッセージが表示された後、すぐに Jetson デバイスを再起動することもできます。
+アップグレードプロセスを開始するために、5分後に再起動されます。これは、ユーザーが未保存の作業を保存するための追加時間を提供するためです。ただし、上記のメッセージが表示された直後に Jetson デバイスを再起動することもできます。
 
-- **ステップ 4.** Jetson デバイスが再起動すると、黒い画面が表示されます。数分待つと、デバイスが再び自動的に再起動します。その後、新しいOSの初期設定画面が表示されます。このセットアップを完了してデバイスに再度アクセスしてください。
+- **ステップ 4.** Jetson デバイスが再び起動すると、黒い画面が表示されます。数分待つと、デバイスが自動的に再起動します。次に、新しい OS の初期設定画面が表示されるので、この設定を完了してデバイスに再度入る必要があります。
 
-**注意:** 上記の設定を完了するために、Jetson デバイスをHDMIディスプレイとキーボードに接続することを推奨します。
+**注意：** 上記の設定セットアップを完了するために、Jetson デバイスを HDMI ディスプレイとキーボードに接続することをお勧めします
 
-- **ステップ 5.** セットアップが完了し、デバイスがデスクトップに起動した後、以下のコマンドを実行してJetPackバージョンが更新されているか確認してください。
+- **ステップ 5.** セットアップが完了し、デバイスがデスクトップに起動した後、以下のコマンドを実行して JetPack バージョンが更新されているかどうかを確認します
 
 ```sh
 cat /etc/nv_tegra_release
@@ -692,17 +688,17 @@ cat /etc/nv_tegra_release
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Allxon/JetPack-OTA/24.png" alt="pir" width="1000" height="auto"/></p>
 
-この例では、L4Tが32.6.1に更新されていることが確認できます。
+ご覧のとおり、この場合、L4T は 32.6.1 に更新されました
 
-## Jetson デバイスからAllxon DMSをアンインストールする
+## Jetson デバイスから Allxon DMS をアンインストールする
 
-デバイスからAllxon DMS Agentをアンインストールしたい場合は、まず以下のコマンドを使用して自動インストールのAllxon DMS Agentメカニズム（サービス）を無効化してください。
+デバイスから Allxon DMS Agent をアンインストールしたい場合は、まず以下のコマンドを使用して自動インストール Allxon DMS Agent メカニズム（サービス）を無効にしてください
 
 ```sh
 sudo systemctl disable dms-install.service
 ```
 
-その後、以下のコマンドを使用してAllxon DMS Agentをアンインストールできます。
+その後、以下のコマンドを使用してAllxon DMS Agentをアンインストールできます
 
 ```sh
 sudo wget -qO - "https://get.allxon.net/linux/uninstall" | sudo bash -s

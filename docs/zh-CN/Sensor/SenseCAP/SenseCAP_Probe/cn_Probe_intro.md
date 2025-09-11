@@ -10,7 +10,7 @@ last_update:
   author: Jessie
 ---
 
-为了给您的应用带来更多便利，我们还提供了检测土壤湿度、温度、土壤电导率和pH值的RS485传感器探头。还将有更多RS485传感器即将推出。
+为了给您的应用带来更多便利，我们还提供了 RS485 传感器探头，用于检测土壤湿度、温度、土壤电导率和 pH 值。还将有更多 RS485 传感器即将推出。
 
 <p style={{textAlign: 'center'}}><img src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2022/09/751082a4ebef3470bf20ee2e9523bbd4.png?x-oss-process=image%2Fformat,webp" alt="pir" width={1000} height="auto" /></p>
 
@@ -19,7 +19,7 @@ last_update:
 |<img src="https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/01_14_4.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_Sensor/101990668_2.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Soil_Moisture_Temperature_EC_Sensor/101990667_2.png" alt="pir" width={300} height="auto" />|
 |<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/Liquid-Level-Sensor-p-4619.html)</p>|<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html)</p>|<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html)</p>|
 
-|RS485 500cm 超声波液位传感器|RS485 700cm 超声波液位传感器|PH传感器|
+|RS485 500cm 超声波液位传感器|RS485 700cm 超声波液位传感器|PH 传感器|
 |------------------|--------------------------|-----------------------|
 |<img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%201.png" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" alt="pir" width={300} height="auto" />|<img src="https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png" alt="pir" width={300} height="auto" />|
 |<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/RS485-500cm-Ultrasonic-Level-Sensor-p-5588.html)</p>|<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html)</p>|<p style={{textAlign: 'center'}}>[立即购买！](https://www.seeedstudio.com/RS485-pH-Sensor-S-pH-01A-p-4632.html)</p>|
@@ -32,7 +32,7 @@ last_update:
 
 ## ✨ 贡献者项目
 
-- 我们有一个更新此页面的任务列表，该列表归类在我们的[贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)下，因为我们致力于通过开发我们的wiki平台来增强用户体验并提供更好的支持。
+- 我们有一个更新此页面的任务列表，该列表归类在我们的[贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)下，因为我们致力于通过开发我们的 wiki 平台来增强用户体验并提供更好的支持。
 - [您对此页面的贡献](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33961929)对我们来说至关重要！我们非常重视您的意见，并将非常感谢您在产生想法方面的帮助。
 
 ## SenseCAP 技术支持

@@ -68,7 +68,7 @@ idf.py build
 
 ### 烧录
 
-使用**USB 数据线**将 SenseCAP Watcher 连接到您的 PC 或笔记本电脑。
+使用 **USB 数据线** 将 SenseCAP Watcher 连接到您的 PC 或笔记本电脑。
 
 **请注意！！！**
 
@@ -76,7 +76,7 @@ idf.py build
 
 **背面的 USB 端口仅为设备提供电源。**
 
-当您使用合适的数据线从正确的 USB C 端口连接 Watcher 时，您的 PC 上将出现 1 个 USB 设备条目，以及 2 个 UART 设备。它们分别连接到 ESP32S3 和 Himax SoC 的 UART。没有观察到的模式表明哪个 SoC 将使用哪个 UART。因此，请尝试对每个 UART 设备执行以下命令，直到您看到日志输出。
+当您使用合适的数据线从正确的 USB C 端口连接 Watcher 时，您的 PC 上将出现 1 个 USB 设备条目，以及 2 个 UART 设备。它们分别连接到 ESP32S3 和 Himax SoC 的 UART。没有固定的模式来确定哪个 SoC 使用哪个 UART。因此，请尝试使用每个 UART 设备执行以下命令，直到您看到日志输出。
 
 ```
 idf.py --port /dev/ttyACM0 monitor
@@ -86,9 +86,9 @@ idf.py --port /dev/ttyACM0 monitor
 
 **请注意！！！**
 
-名为 `nvsfactory` 的分区包含设备工作所需的关键出厂数据，请小心不要擦除该分区。因此，强烈建议您在执行任何烧录操作之前备份此分区。
+名为 `nvsfactory` 的分区包含设备正常工作所需的关键出厂数据，请小心不要擦除该分区。因此，强烈建议您在执行任何烧录操作之前备份此分区。
 
-我们将使用 esptool.py 进行备份。此工具是 IDF 安装的一部分，因此如果您通过了 IDF 安装，它应该已经存在。
+我们将使用 esptool.py 进行备份。此工具是 IDF 安装的一部分，因此如果您已通过 IDF 安装，它应该已经存在。
 
 ```
 # Linux / MacOS
@@ -110,7 +110,7 @@ esptool.py --port /dev/tty.wchusbserial56F3067xxxx --baud 2000000 --chip esp32s3
 idf.py --port /dev/ttyACM0 -b 2000000 app-flash
 ```
 
-使用子命令 `app-flash` 仅烧录应用程序分区，这将保护您的 `nvsfactory` 分区，最重要的是它将节省您的时间。
+使用子命令 `app-flash` 仅烧录应用程序分区，这将保护您的 `nvsfactory` 分区，最重要的是可以节省您的时间。
 
 ### 监控日志输出
 

@@ -16,9 +16,9 @@ last_update:
 
 这是 Watcher 的软件服务框架，展示了用户、SenseCraft Mate 应用程序和 Watcher 设备之间的交互和任务流程。我们提供多种配置选项，允许用户根据其数据安全和服务质量要求自定义服务部署。
 
-该框架集成了云端 AI 服务和本地 AI 部署，结合了数据服务、设备通信服务、任务编排、图像分析服务、警报通道代理和模型训练服务。
+该框架集成了云端 AI 服务和本地 AI 部署，结合数据服务、设备通信服务、任务编排、图像分析服务、警报通道代理和模型训练服务。
 您可以选择在云端或本地基础设施中部署您的 LLM。原始数据和结果也可以选择在云端或本地设备中存储或传输。
-云端相比本地存储解决方案，以及在支持 GPU 的虚拟机中对更高性能存储的需求。
+云端与本地存储解决方案的比较，以及在支持 GPU 的虚拟机中对更高性能存储的需求。
 
 这些组件形成了三种部署选项供用户选择：
 
@@ -34,7 +34,7 @@ Watcher 提供灵活的数据服务，允许您连接到 SenseCraft 数据平台
 
 **设备通信服务**
 
-对于设备通信，Watcher 通过 MQTT 支持远程任务流程和固件 OTA 更新。您可以使用 SenseCraft Mate 应用程序创建任务并通过 SenseCraft 平台将其发送到设备。该应用程序还会检查最新的固件版本，当有可用更新时，它会通知您。确认后，平台将向设备发送更新。
+对于设备通信，Watcher 通过 MQTT 支持远程任务流程和固件 OTA 更新。您可以使用 SenseCraft Mate 应用程序创建任务并通过 SenseCraft 平台将其发送到设备。应用程序还会检查最新固件版本，当有可用更新时，它会通知您。确认后，平台将向设备发送更新。
 
 **任务编排服务**
 
@@ -42,11 +42,11 @@ Watcher 的任务编排服务允许直接语音交互，您的对话通过 HTTP 
 
 **视觉分析服务**
 
-在视觉分析方面，Watcher 提供统一的图像分析服务。您可以通过蓝牙配置在 SenseCraft、OpenAI 或第三方 AI 代理之间进行选择，并输入相关的 API 密钥。当设备发送图像时，它将利用所选服务，无论是本地 llava 还是像 OpenAI 这样的第三方服务。
+在视觉分析方面，Watcher 提供统一的图像分析服务。您可以通过蓝牙配置在 SenseCraft、OpenAI 或第三方 AI 代理之间进行选择，并输入相关的 API 密钥。当设备发送图像时，它将利用所选服务，无论是本地 llava 还是 OpenAI 等第三方服务。
 
 **警报通知服务**
 
-对于警报通知，Watcher 允许多种选项，包括来自 SenseCraft 云端的应用推送通知、与其他硬件的 UART 连接，以及与本地服务器或第三方平台的 HTTP 连接。警报也可以使用标准数据格式发送到像 Discord 这样的平台。此外，Watcher 可以使用兼容格式将这些通知转发到其他平台，如 Home Assistant、IFTTT 或 Webhooks。有关更多详细信息，请参阅 HTTP 代理应用程序。
+对于警报通知，Watcher 允许多种选项，包括来自 SenseCraft 云端的应用推送通知、与其他硬件的 UART 连接，以及与本地服务器或第三方平台的 HTTP 连接。警报也可以使用标准数据格式发送到 Discord 等平台。此外，Watcher 可以使用兼容格式将这些通知转发到其他平台，如 Home Assistant、IFTTT 或 Webhooks。有关更多详细信息，请参阅 HTTP 代理应用程序。
 
 您可以灵活地从多种部署选项中进行选择，并轻松配置您的个性化 Watcher 助手。无论您的优先考虑是数据安全还是处理效率，我们都提供三种适应性解决方案：云端高效处理流程、混合智能处理流程和本地安全处理流程。定制您的 Watcher 助手，为您提供最佳的智能服务体验！
 
@@ -62,7 +62,7 @@ Watcher 的任务编排服务允许直接语音交互，您的对话通过 HTTP 
 完成[设置](https://www.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)并选择 SenseCraft AI 服务后，您可以开始使用 Watcher 的云服务。
 
 **步骤 2**. 用户交互：
-有两种方式可以激活 SenseCraft 服务并为 Watcher 分配任务，详细如下（参考章节 XXX）：
+有两种方式可以激活 SenseCraft 服务并为 Watcher 分配任务，详细说明如下（参考章节 XXX）：
 
 * 选项 1：通过应用程序：用户可以通过移动应用程序启用 SenseCraft AI 服务。然后在聊天中发送任务消息。
 * 选项 2：通过语音命令：用户可以直接与 Watcher 进行语音聊天来分配任务。
@@ -74,7 +74,7 @@ Watcher 的任务编排服务允许直接语音交互，您的对话通过 HTTP 
 * TTS（文本转语音）：将基于文本的响应转换为语音输出。
 * AI 服务：负责理解、处理和编排任务。基于任务内容，该服务从 SenseCraft 模型库中选择最合适的模型，包括大语言模型（LLM）和TinyML模型。
 
-除了在手动配置中手动选择本地TinyML模型外，任务也可以根据您的输入提示自动处理。任务编排模型解释您的提示后，它可以从 SenseCraft 库中调用适当的TinyML模型。例如，如果用户请求"看到鸟时通知我"，任务编排服务将从TinyML库中选择鸟类识别模型以优化响应速度。
+除了在手动配置中手动选择本地TinyML模型外，任务也可以根据您的输入提示自动处理。任务编排模型解释您的提示后，它可以从 SenseCraft 库中调用适当的TinyML模型。例如，如果用户请求"当您看到鸟时通知我"，任务编排服务将从TinyML库中选择鸟类识别模型以优化响应速度。
 
 在*手动配置*中，您可以在**Vision LLM**（更高准确性）或**TinyML模型**（更快处理）之间选择。
 
@@ -105,7 +105,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 此图展示了混合智能处理流程，涉及用户交互、一些云服务和本地应用程序。混合方法通过结合基于云的任务编排和本地视觉模型，在数据安全、用户体验和效率之间取得平衡。
 
 **步骤 1**. 初始设置
-在[入门和设备绑定](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择合适的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
+在[入门和设备绑定](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择合适的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.gif" style={{width:400, height:'auto'}}/></div>
 
@@ -123,7 +123,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 
 除了在手动配置中手动选择本地 TinyML 模型外，任务也可以根据您的输入提示自动处理。任务编排模型解释您的提示后，可以从 SenseCraft 库中调用合适的 TinyML 模型。例如，如果用户请求"看到鸟时通知我"，任务编排服务将从 TinyML 库中选择鸟类识别模型以优化响应速度。
 
-在*手动配置*中，您可以在 **Vision LLM**（更高准确性）或 **TinyML 模型**（更快处理）之间选择。
+在*手动配置*中，您可以在**视觉 LLM**（更高准确性）或**TinyML 模型**（更快处理）之间选择。
 
 **步骤 4**. 编排后的任务分发
 任务编排后，系统将根据 SenseCraft 远程控制的状态选择分发方法：
@@ -132,7 +132,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 * 如果禁用远程控制：任务将通过蓝牙分发到 Watcher。如果设备超出蓝牙范围，必须启用远程控制才能继续操作。
 
 **步骤 5**. 视觉分析任务处理
-一旦 Watcher 收到任务，它将调用部署在本地服务器上的本地视觉分析服务。任务将使用用户选择或 SenseCraft 任务服务编排的 AI 模型进行分析。
+一旦 Watcher 收到任务，它将调用部署在本地服务器上的本地视觉分析服务。任务将使用用户选择的或由 SenseCraft 任务服务编排的 AI 模型进行分析。
 
 **步骤 6**. 系统通知
 Watcher 可以使用各种方法通知用户或本地系统：
@@ -151,7 +151,7 @@ Watcher 还可以将数据发送到本地服务器、第三方应用程序或警
 此图概述了"本地安全处理流程"，重点关注用户与本地部署应用程序的完整交互。为确保数据隐私，任务编排和图像分析服务完全部署在本地服务器上，提供全面的隐私保护。但是，这种方法限制了功能，因为 SenseCraft 云服务不可用。任务只能通过现场语音命令启动，用户必须配置通知服务来查看历史数据。
 
 **步骤 1**. 初始设置
-在[入门和设备绑定](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择适当的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
+在[入门和设备绑定](https://wiki.seeedstudio.com/getting_started_with_watcher/#device-binding-and-ota-upgrade)之后，用户可以根据需要选择适当的本地服务，启用私有 Watcher 服务，并输入 Watcher 服务器 URL。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/watcher_software_service_framework/1.gif" style={{width:400, height:'auto'}}/></div>
 

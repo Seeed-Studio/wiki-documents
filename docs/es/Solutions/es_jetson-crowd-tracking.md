@@ -18,7 +18,7 @@ Esta guía es para entornos **NVIDIA Jetson Ubuntu 22 + JetPack 6.x**, ayudándo
 - **Permisos**: Privilegios `sudo`
 
 > Si tu dispositivo aún no tiene instalado el entorno del sistema adecuado, consulta la guía oficial de flasheo para la instalación del sistema y preparación del entorno:  
-> [Tutorial de Flasheo de JetPack (Seeed Studio)](/es/flash/jetpack_to_selected_product/)
+> [Tutorial de Flasheo JetPack (Seeed Studio)](/es/flash/jetpack_to_selected_product/)
 
 ## ⚡ Despliegue con Un Solo Clic
 
@@ -40,7 +40,7 @@ El script realiza automáticamente los siguientes pasos:
    - Configurar NVIDIA Container Toolkit  
    - Establecer el runtime predeterminado de Docker como `nvidia`
 
-2. **Instalar Broker MQTT**  
+2. **Instalar MQTT Broker**  
    - Instalar `mosquitto` y `mosquitto-clients`  
    - Configurar para permitir acceso externo:  
 
@@ -59,9 +59,9 @@ El script realiza automáticamente los siguientes pasos:
 ## 🛡 Manejo de Excepciones
 
 - **Ejecución idempotente**:  
-  - **La mayoría de problemas** (ej., interrupciones de red, fallos de instalación parcial) pueden solucionarse **simplemente re-ejecutando el script**  
+  - **La mayoría de problemas** (ej., interrupciones de red, fallos de instalación parcial) pueden solucionarse **simplemente volviendo a ejecutar el script**  
   - El script verifica las versiones de software y configuraciones, instalando solo las partes faltantes o incorrectas  
-- **Problemas raros** (ej., fallo permanente de fuentes apt, repositorio externo inalcanzable) requieren intervención manual
+- **Problemas raros** (ej., fallo permanente de fuente apt, repositorio externo inaccesible) requieren intervención manual
 
 ---
 
@@ -85,7 +85,7 @@ El script realiza automáticamente los siguientes pasos:
      http://<JETSON_IP>:46654
      ```
 
-   - Los parámetros predeterminados están preconfigurados; inicia para ver los resultados
+   - Los parámetros predeterminados están preconfigurados; inicia para ver resultados
 
 ### 📷 Interfaz Web (Ejemplo)
 
@@ -106,9 +106,186 @@ El script realiza automáticamente los siguientes pasos:
 
 <div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/Configuration%20Page%20%28Example%29.png"/></div>
 
+## ✨ Recuperación de Resultados de Detección
+Al desplegar el servicio, se instala un broker MQTT local. Por lo tanto, los resultados de reconocimiento se pueden obtener a través del MQTT local.
+
+### 📡 Tema de Envío de Mensajes MQTT
+
+```bash
+edgeai/result
+```
+### 🧩 Estructura de Datos de Mensajes MQTT
+```json
+{
+  "uuid": "0c7ef3d9-617d-4e6b-83f6-467f89b28d78", // result's uuid
+  "info": {
+    "person": 6 // object count
+  },
+  "line_crossing": {
+    "enter": 1, // enter count
+    "exit": 0   // exit count
+  }
+}
+```
+### 🔧 Configuración de Node-RED
+Puede ser necesario calibrar la IP del broker MQTT.
+En este caso, Node-RED se despliega en un contenedor, por lo que se usa la dirección docker0.
+<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/nodered.png"/></div>
+## 🔧 Configuración de Node-RED (Flujo Completo)
+
+Puede ser necesario calibrar la IP del broker MQTT.  
+En este caso, Node-RED se despliega en un contenedor, por lo que se usa la dirección `docker0`.
+
+```json
+[{
+  "id": "f7641cb7c6a84d23",
+  "type": "mqtt in",
+  "z": "827a3420678b76d2",
+  "name": "",
+  "topic": "edgeai/result",
+  "qos": "2",
+  "datatype": "auto-detect",
+  "broker": "0f948328c1975515",
+  "nl": false,
+  "rap": true,
+  "rh": 0,
+  "inputs": 0,
+  "x": 530,
+  "y": 620,
+  "wires": [
+    ["c086c2dfcc39b708"]
+  ]
+},
+{
+  "id": "c086c2dfcc39b708",
+  "type": "ui-template",
+  "z": "827a3420678b76d2",
+  "group": "e33e8e2eb3424d08",
+  "page": "",
+  "ui": "",
+  "name": "human tracking",
+  "order": 0,
+  "width": 0,
+  "height": 0,
+  "head": "",
+  "format": "<template>\n    <div>\n        <!-- Conditional Styling using Attribute Binding (\":\") -->\n        <!-- and rendering content inside <tags></tags> with {{ }} -->\n        <p> <span :style=\"{'color' : (count > 5 ? 'red' : 'green' )}\">Current Count: {{ msg.payload.info.person }}</span>\n            <span style=\"margin-left:20px\"><b v-if=\"msg.payload.info.person > 5\">Too many!</b> </span>\n        </p>\n        <!-- Computed Rendering using Vue Computed Variables -->\n        <p class=\"my-class\">enter: {{ msg.payload.line_crossing.enter }}</p>\n        <p class=\"my-class\">exit: {{ msg.payload.line_crossing.exit }}</p>\n        <!-- Conditional Rendering with \"v-if\" -->\n    </div>\n</template>\n\n<script>\n    export default {\n        data() {\n            // define variables available component-wide\n            // (in <template> and component functions)\n            return {\n                count: 0\n            }\n        },\n        watch: {\n            // watch for any changes of \"count\"\n            count: function () {\n                if (this.count % 5 === 0) {\n                    this.send({payload: 'Multiple of 5'})\n                }\n            }\n        },\n        computed: {\n            // automatically compute this variable\n            // whenever VueJS deems appropriate\n            formattedCount: function () {\n                return this.count + ' Apples'\n            }\n        },\n        methods: {\n            // expose a method to our <template> and Vue Application\n            increase: function () {\n                this.count++\n            }\n        },\n        mounted() {\n            // code here when the component is first loaded\n        },\n        unmounted() {\n            // code here when the component is removed from the Dashboard\n            // i.e. when the user navigates away from the page\n        }\n    }\n</script>\n<style>\n    /* define any styles here - supports raw CSS */\n    .my-class {\n        color: red;\n    }\n</style>",
+  "storeOutMessages": true,
+  "passthru": true,
+  "resendOnRefresh": true,
+  "templateScope": "local",
+  "className": "",
+  "x": 740,
+  "y": 620,
+  "wires": [[]]
+},
+{
+  "id": "0f948328c1975515",
+  "type": "mqtt-broker",
+  "name": "",
+  "broker": "172.17.0.1",
+  "port": 1883,
+  "clientid": "",
+  "autoConnect": true,
+  "usetls": false,
+  "protocolVersion": 4,
+  "keepalive": 15,
+  "cleansession": true,
+  "autoUnsubscribe": true,
+  "birthTopic": "",
+  "birthQos": "0",
+  "birthPayload": "",
+  "birthMsg": {},
+  "closeTopic": "",
+  "closePayload": "",
+  "closeMsg": {},
+  "willTopic": "",
+  "willQos": "0",
+  "willPayload": "",
+  "willMsg": {},
+  "userProps": "",
+  "sessionExpiry": ""
+},
+{
+  "id": "e33e8e2eb3424d08",
+  "type": "ui-group",
+  "name": "人流追踪",
+  "page": "h1i2j3k4l5m6n7o8",
+  "width": "8",
+  "height": "8",
+  "order": -1,
+  "showTitle": true,
+  "className": "",
+  "visible": "true",
+  "disabled": "false",
+  "groupType": "default"
+},
+{
+  "id": "h1i2j3k4l5m6n7o8",
+  "type": "ui-page",
+  "name": "Frigate Page",
+  "ui": "f121584d21d465f1",
+  "path": "/frigate",
+  "icon": "",
+  "layout": "grid",
+  "theme": "6666b6af5668e7b2",
+  "breakpoints": [
+    {"name": "Default","px": "0","cols": "3"},
+    {"name": "Tablet","px": "576","cols": "6"},
+    {"name": "Small Desktop","px": "768","cols": "9"},
+    {"name": "Desktop","px": "1024","cols": "12"}
+  ],
+  "order": 1,
+  "className": "",
+  "visible": "true",
+  "disabled": "false"
+},
+{
+  "id": "f121584d21d465f1",
+  "type": "ui-base",
+  "name": "My Dashboard",
+  "path": "/dashboard",
+  "headerContent": "page",
+  "titleBarStyle": "default",
+  "showReconnectNotification": true,
+  "notificationDisplayTime": 5,
+  "showDisconnectNotification": true,
+  "allowInstall": true
+},
+{
+  "id": "6666b6af5668e7b2",
+  "type": "ui-theme",
+  "name": "Default Theme",
+  "colors": {
+    "surface": "#ffffff",
+    "primary": "#0094CE",
+    "bgPage": "#eeeeee",
+    "groupBg": "#ffffff",
+    "groupOutline": "#cccccc"
+  },
+  "sizes": {
+    "density": "default",
+    "pagePadding": "12px",
+    "groupGap": "12px",
+    "groupBorderRadius": "4px",
+    "widgetGap": "12px"
+  }
+},
+{
+  "id": "e9696690fa075863",
+  "type": "global-config",
+  "env": [],
+  "modules": {
+    "@flowfuse/node-red-dashboard": "1.26.0"
+  }
+}]
+```
+### 📊 Vista Previa del Dashboard de Node-RED
+<div style={{textAlign:'center'}}><img  alt="Configuration" src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/nodered%20preview.png"/></div>
+
+
 ### Fuente de Video
 
-- Soporta **archivos de video locales**, **cámaras USB** (primer dispositivo por defecto), **transmisiones RTSP**
+- Soporta **archivos de video locales**, **cámaras USB** (primer dispositivo por defecto), **streams RTSP**
 - Soporta cargas de MP4, AVI, MOV, MKV
 - Ver y eliminar fuentes de video cargadas
 
@@ -134,10 +311,11 @@ El script realiza automáticamente los siguientes pasos:
 - Habilitar seguimiento de múltiples objetos
 - Mostrar líneas de trayectoria con longitud, grosor y color personalizables
 
-### Detección de Línea de Cruce
 
-- Soporta línea de cruce horizontal o vertical (vertical recomendado)
-- Dibujar puntos de inicio/fin; habilitar visualización para depuración en tiempo real
+### Detección de Línea de Activación
+
+- Soporta línea de activación horizontal o vertical (se recomienda vertical)
+- Dibuja puntos de inicio/fin; habilita la visualización para depuración en tiempo real
 - Tolerancia: 1–20 píxeles
 - Color y grosor personalizables
 - Mostrar/ocultar y reiniciar contador (se reinicia cuando el servicio se reinicia)
@@ -153,8 +331,8 @@ El script realiza automáticamente los siguientes pasos:
 ## 🛠 Problemas Comunes
 
 | Problema                        | Causa                      | Solución                                                              |
-| ---------------------------- | -------------------------- | --------------------------------------------------------------------- |
-| `Docker installation failed` | Red inestable o fuente | Verificar red y volver a ejecutar el script                                   |
+| ------------------------------- | -------------------------- | --------------------------------------------------------------------- |
+| `Falló la instalación de Docker` | Red inestable o fuente | Verificar la red y volver a ejecutar el script                                   |
 | Mosquitto no puede conectar     | Problema de firewall/configuración      | Asegurar que `/etc/mosquitto/mosquitto.conf` contenga `listener 1883 0.0.0.0` |
 | Modelo YOLO no descargado    | Interrupción de red       | Eliminar `~/sensecraft-ai_server/models/yolo11n.pt` y volver a ejecutar el script |
 
@@ -173,11 +351,13 @@ sudo apt-get purge -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 rm -rf ~/sensecraft-ai_server
 ```
 
+---
+
 ## 📚 Referencias
 
 - [Guía de Flasheo de Jetson](/es/flash/jetpack_to_selected_product/)
-- [Repositorio Fuente de SenseCraft-AI\_Server](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
-- [Guía de NVIDIA Jetson Docker](https://www.jetson-ai-lab.com/tips_ssd-docker.html)
+- [Repositorio Fuente de SenseCraft-AI_Server](https://github.com/Seeed-Studio/SenseCraft-AI_Server/tree/jetson)
+- [Guía de Docker para NVIDIA Jetson](https://www.jetson-ai-lab.com/tips_ssd-docker.html)
 - [Documentación Oficial de Mosquitto](https://mosquitto.org/man/mosquitto-conf-5.html)
 
 ## Soporte Técnico y Discusión de Productos

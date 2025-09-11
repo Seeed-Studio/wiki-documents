@@ -67,9 +67,6 @@ Note: During calibration, initial readings may be unstable if the sensor is not 
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
 
-**5.Long Battery Life**  
-Powered by a single AA battery, designed to last up to three months thanks to optimized power management.
-
 ## Hardware Overview
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/hardware.jpg" style={{width:800, height:'auto'}}/></div>

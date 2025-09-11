@@ -1,5 +1,5 @@
-position: 5 # 支持浮动位置
+position: 5 # float position is supported
 label: '附录'
-collapsible: true # 使该类别可折叠
-collapsed: true # 默认保持该类别展开
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: appendix

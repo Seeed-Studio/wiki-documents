@@ -184,7 +184,7 @@ To use your TRMNL 7.5inch(OG) DIY kit with TRMNL and send playlists, you first n
 
 - The device will attempt to connect to your Wi-Fi.
 - Once successful, it will disconnect from the TRMNL Wi-Fi and join your home network.
-- The window will show the device's MAC address. **Please record the MAC address**, as you will need it in a later step.
+- The window and the e-ink screen will show the device's MAC address. **Please record the MAC address**, as you will need it in a later step.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/219.png" style={{width:800, height:'auto'}}/></div>
 
@@ -240,6 +240,17 @@ If these options are left enabled, your device may automatically download and in
 
 Always keep both options disabled to ensure stable operation of your XIAO ePaper Panel.
 :::
+
+### Buttons Usage
+
+We have 4 button on this development board. They are RESET,KEY1,KEY2,KEY3 and **we only use RESET and KEY1 button in TRMNL firmware.**
+
+**KEY1 Usage:**
+1. **One Click:** to refresh pages immediately.
+2. **Double Click:** custom function, you can find it in setting page.
+3. **Long click:** about 5s, to reconfigure the network.
+
+**RESET Usage:** only one click to reset the device.
 
 ## Understanding the TRMNL Playlist Feature
 

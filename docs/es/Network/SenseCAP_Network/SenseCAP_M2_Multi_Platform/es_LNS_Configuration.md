@@ -144,7 +144,7 @@ La integración MQTT expone todos los eventos como se documenta en los tipos de 
 El tema de evento predeterminado es:
 
 ```cpp
-application/APPLICATION\_ID/device/DEV\_EUI/event/EVENT
+application/APPLICATION_ID/device/DEV_EUI/event/EVENT
 ```
 
 Consulta [Tipos de Eventos](https://www.chirpstack.io/docs/chirpstack/integrations/events.html) para más detalles.
@@ -174,7 +174,7 @@ Puedes encontrar el ID de la aplicación en la pestaña de tu aplicación:
 - Para recibir mensajes de enlace ascendente de todos los dispositivos bajo una puerta de enlace determinada:
 
 ```cpp
-gateway/<GATEWAY\_EUI>/device/+/event/up
+gateway/<GATEWAY_EUI>/device/+/event/up
 ```
 
 - Para recibir todos los mensajes de todos los dispositivos bajo la aplicación:
@@ -203,12 +203,12 @@ Cuando object.valid es verdadero, significa que el análisis de datos es exitoso
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP21.png" alt="pir" width={800} height="auto" /></p>
 
-- `upload\_battery`: Batería
-- `upload\_interval`: intervalo de carga, unidad: Segundo
-- `upload\_version`: Versión de Hardware/Firmware
-- `report\_telemetry`: Valor de medición
+- `upload_battery`: Batería
+- `upload_interval`: intervalo de carga, unidad: Segundo
+- `upload_version`: Versión de Hardware/Firmware
+- `report_telemetry`: Valor de medición
 
-El `measurementId` en el mensaje 'report\_telemetry' por favor consulta [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) para más detalles.
+El `measurementId` en el mensaje 'report_telemetry' por favor consulta [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) para más detalles.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP22.png" alt="pir" width={800} height="auto" /></p>
 
@@ -216,7 +216,7 @@ El `measurementId` en el mensaje 'report\_telemetry' por favor consulta [SenseCA
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP23.png" alt="pir" width={600} height="auto" /></p>
 
-El `measurementId` en el mensaje 'report\_telemetry' por favor consulta [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) para más detalles.
+El `measurementId` en el mensaje 'report_telemetry' por favor consulta [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) para más detalles.
 
 ### HTTP
 
@@ -245,11 +245,11 @@ La integración HTTP expone todos los eventos como se documenta en [Event Type](
 ```cpp
 from http.server import HTTPServer, BaseHTTPRequestHandler 
 
-from urllib.parse import urlparse, parse\_qs 
+from urllib.parse import urlparse, parse_qs 
 
-from chirpstack\_api import integration 
+from chirpstack_api import integration 
 
-from google.protobuf.json\_format import Parse 
+from google.protobuf.json_format import Parse 
 
 class Handler(BaseHTTPRequestHandler): 
 
@@ -259,41 +259,41 @@ class Handler(BaseHTTPRequestHandler):
 
 json = False 
 
-def do\_POST(self): 
+def do_POST(self): 
 
-self.send\_response(200) 
+self.send_response(200) 
 
-self.end\_headers() 
+self.end_headers() 
 
-query\_args = parse\_qs(urlparse(self.path).query) 
+query_args = parse_qs(urlparse(self.path).query) 
 
-content\_len = int(self.headers.get('Content-Length', 0)) 
+content_len = int(self.headers.get('Content-Length', 0)) 
 
-body = self.rfile.read(content\_len) 
+body = self.rfile.read(content_len) 
 
-if query\_args["event"][0] == "up": 
+if query_args["event"][0] == "up": 
 
 self.up(body) 
 
-elif query\_args["event"][0] == "join": 
+elif query_args["event"][0] == "join": 
 
 self.join(body) 
 
 else:
 
-print("handler for event %s is not implemented" % query\_args["event"][0]) 
+print("handler for event %s is not implemented" % query_args["event"][0]) 
 
 def up(self, body): 
 
 up = self.unmarshal(body, integration.UplinkEvent()) 
 
-print("Uplink received from: %s with payload: %s" % (up.device\_info.dev\_eui, up.data.hex())) 
+print("Uplink received from: %s with payload: %s" % (up.device_info.dev_eui, up.data.hex())) 
 
 def join(self, body): 
 
 join = self.unmarshal(body, integration.JoinEvent()) 
 
-print("Device: %s joined with DevAddr: %s" % (join.device\_info.dev\_eui, join.dev\_addr)) 
+print("Device: %s joined with DevAddr: %s" % (join.device_info.dev_eui, join.dev_addr)) 
 
 def unmarshal(self, body, pl): 
 
@@ -307,7 +307,7 @@ return pl
 
 httpd = HTTPServer(('', 8090), Handler) 
 
-httpd.serve\_forever() 
+httpd.serve_forever() 
 ```
 
 ### Downlink
@@ -318,11 +318,11 @@ Mensaje de downlink:
 Se recomienda marcar el downlink como retenido, entonces el comando no se ejecutará repetidamente.
 :::
 
-El Topic por defecto es：`application/APPLICATION\_ID/device/DEV\_EUI/command/down`
+El Topic por defecto es：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
 `command`: Por favor consulta el comando de downlink en el **Manual de Usuario del Dispositivo** para más detalles.
 
-|Topic|application/APPLICATION\_ID/device/DEV\_EUI/command/down|
+|Topic|application/APPLICATION_ID/device/DEV_EUI/command/down|
 | - | :- |
 |devEUI|EUI del Dispositivo|
 |confirmed|true/false(si la carga útil debe ser enviada como datos confirmados hacia abajo o no)|

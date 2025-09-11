@@ -20,17 +20,15 @@ last_update:
 
 ## 硬件准备
 
-[Seeed SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - **LoRaWAN 视觉 AI 传感器**是专为开发者设计的图像识别 AI 传感器。SenseCAP A1101 - LoRaWAN 视觉 AI 传感器结合了TinyML AI 技术和 LoRaWAN 长距离传输，为室内外使用提供了低功耗、高性能的 AI 设备解决方案。<br />该传感器采用海思的高性能、低功耗 AI 视觉解决方案，支持 Google TensorFlow Lite 框架和多个TinyML AI 平台。<br />
+[Seeed SenseCAP A1101](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) - **LoRaWAN 视觉 AI 传感器**是专为开发者设计的图像识别 AI 传感器。SenseCAP A1101 - LoRaWAN 视觉 AI 传感器结合了 TinyML AI 技术和 LoRaWAN 长距离传输，为室内外使用提供了低功耗、高性能的 AI 设备解决方案。<br />该传感器采用海思的高性能、低功耗 AI 视觉解决方案，支持 Google TensorFlow Lite 框架和多个 TinyML AI 平台。<br />
 
-
-它完全支持 Edge Impulse，这意味着您将能够从摄像头采样原始数据、构建模型，并直接从工作室将训练好的机器学习模型部署到模块上，无需任何编程。SenseCAP - 视觉 AI 模块可直接从 [Seeed Studio Bazaar](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) 购买。
+它完全支持 Edge Impulse，这意味着您可以从摄像头采样原始数据、构建模型，并直接从工作室将训练好的机器学习模型部署到模块上，无需任何编程。SenseCAP - 视觉 AI 模块可直接从 [Seeed Studio Bazaar](https://www.seeedstudio.com/SenseCAP-A1101-LoRaWAN-Vision-AI-Sensor-p-5367.html) 购买。
 
 - SenseCAP A1101 - LoRaWAN 视觉 AI 传感器
 - USB Type-C 数据线
 - 具有互联网连接的 Windows/ Linux/ Mac
 
 <div align="center"><img width ={800} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p1.jpg"/></div>
-
 
 ## 软件准备
 
@@ -51,9 +49,8 @@ last_update:
 安装好所有软件后，现在是时候将 A1101 连接到 Edge Impulse 了。
 
 :::caution **注意：**
-如果您在 **2023年3月30日**之后购买了设备，则无需更新 EI 固件，请直接跳转到 [步骤3](https://wiki.seeedstudio.com/cn/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) 设置密钥。请注意，更新 EI 固件将覆盖默认模型。
+如果您在 **2023年3月30日** 之后购买了设备，则无需更新 EI 固件，请直接跳转到 [步骤3](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse/#step-3-setting-keys) 设置密钥。请注意，更新 EI 固件将覆盖默认模型。
 :::
-
 
 ### 步骤 1. 更新 BL702 芯片固件
 
@@ -78,7 +75,7 @@ BL702 是 USB-UART 芯片，它实现了 PC 和海思芯片之间的通信。您
 
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p6.png"/></div>
 
-如果一切顺利，您将看到输出显示 **All Success**。
+如果一切顺利，您将看到输出显示为 **All Success**。
 
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p7.png"/></div>
 
@@ -110,7 +107,7 @@ edge-impulse-daemon
 
 这将启动一个向导，要求您登录并选择一个 Edge Impulse 项目。如果您想切换项目，请使用 `--clean` 参数运行该命令。
 
-或者，最新版本的 Google Chrome 和 Microsoft Edge 可以直接从您的 A1101 收集数据，无需使用 Edge Impulse CLI。更多信息请参阅[这篇博客文章](https://www.edgeimpulse.com/blog/collect-sensor-data-straight-from-your-web-browser)。
+或者，最新版本的 Google Chrome 和 Microsoft Edge 可以直接从您的 A1101 收集数据，无需 Edge Impulse CLI。更多信息请参见[这篇博客文章](https://www.edgeimpulse.com/blog/collect-sensor-data-straight-from-your-web-browser)。
 
 ### 步骤 4. 验证设备已连接
 
@@ -120,7 +117,7 @@ edge-impulse-daemon
 
 ## 从 A1101 - Vision AI 收集数据
 
-设置完成后，您现在可以通过以下教程构建并运行您的第一个机器学习模型：
+完成所有设置后，您现在可以通过以下教程构建并运行您的第一个机器学习模型：
 
 - [目标检测](https://docs.edgeimpulse.com/docs/tutorials/object-detection)。
 - [使用 FOMO 计数对象](https://docs.edgeimpulse.com/docs/tutorials/detect-objects-using-fomo)。
@@ -134,48 +131,51 @@ edge-impulse-daemon
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p17.png"/></div>
 
 ## 将模型部署到 A1101 - Vision AI
+
 构建机器学习模型并从 Edge Impulse Studio 下载 Edge Impulse 固件后，按照[更新 Edge Impulse 固件部分](https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/seeed-sensecap-a1101#2.-update-edge-impulse-firmware)下的**步骤 1 和 2**，将模型 uf2 部署到 SenseCAP - Vision AI。
 将 **firmware.uf2** 文件从 EDGE IMPULSE 拖放到 **SENSECAP** 驱动器。
 
-当您在本地界面运行以下命令时：
+当您在本地界面上运行时：
+
 ```
 edge-impulse-daemon --debug
 ```
-它会要求您点击一个 URL，然后您将看到设备上摄像头的实时预览。
+
+它会要求您点击一个URL，然后您将在设备上看到摄像头的实时预览。
 
 <div align="center"><img width ={700} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/p33.png"/></div>
 
-##  在 SenseCap Mate 上配置您的模型
+## 在SenseCap Mate上配置您的模型
 
-- 下载 [SenseCAP Mate](https://wiki.seeedstudio.com/cn/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback) 
-   - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
-   - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
-- 打开 SenseCAP Mate 并登录
+- 下载[SenseCAP Mate](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP/#docusaurus_skipToContent_fallback)
+  - [Android](https://play.google.com/store/apps/details?id=cc.seeed.sensecapmate&hl=en&gl=US)
+  - [iOS](https://apps.apple.com/gb/app/sensecap-mate/id1619944834)
+- 打开SenseCAP Mate并登录
 
 <div align="center"><img width ={600} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p10.png"/></div>
 
-- 在**配置**屏幕下，选择 **Vision AI Sensor**
-
+- 在**配置**界面下，选择**Vision AI Sensor**
 
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p11.jpg"/></div>
 
-- 按住 SenseCap A1101 上的配置按钮 3 秒钟以进入蓝牙配对模式
+- 按住SenseCap A1101上的配置按钮3秒钟以进入蓝牙配对模式
+
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p12.jpg"/></div>
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p13.jpg"/></div>
 
+- 点击**设置**，它将开始扫描附近的SenseCAP A1101设备- 转到**设置**并确保选择了**Object Detection**和**User Defined 1**。如果没有，请选择它并点击**发送**
 
-- 点击**设置**，它将开始扫描附近的 SenseCAP A1101 设备- 转到**设置**并确保选择了**目标检测**和**用户定义 1**。如果没有，请选择它并点击**发送**
 <div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p14.jpg"/></div>
 
-- 转到**常规**并点击**检测**
-<div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p15.jpg"/></div>
+- 转到**通用**并点击**检测**
 
+<div align="center"><img width ={300} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p15.jpg"/></div>
 
 - [点击这里](https://files.seeedstudio.com/grove_ai_vision/index.html)打开摄像头流的预览窗口
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/p31.png"/></div>
 
-- 点击**连接**按钮。然后您将在浏览器上看到一个弹出窗口。选择 **SenseCAP Vision AI - Paired** 并点击**连接**
+- 点击**连接**按钮。然后您将在浏览器上看到一个弹出窗口。选择**SenseCAP Vision AI - Paired**并点击**连接**
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/p32.png"/></div>
 
@@ -183,19 +183,18 @@ edge-impulse-daemon --debug
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/33.png"/></div>
 
-例如，如上所示，猫正在被检测到，周围有边界框。这里"0"对应于同一类别的每次检测。如果您有多个类别，它们将被命名为 0、1、2、3、4 等等。此外，每个检测到的苹果的置信度分数（上述演示中为 0.72）也在显示！
+例如，如上所示，猫被检测到并在它们周围有边界框。这里"0"对应于同一类别的每次检测。如果您有多个类别，它们将被命名为0,1,2,3,4等等。此外，每个检测到的苹果的置信度分数（上述演示中为0.72）也会显示！
 
 ## 技术支持与产品讨论
-
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

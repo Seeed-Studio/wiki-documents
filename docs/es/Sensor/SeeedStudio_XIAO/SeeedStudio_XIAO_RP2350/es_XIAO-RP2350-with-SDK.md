@@ -80,7 +80,7 @@ En este ejemplo, usaré las versiones del sistema ya instaladas en mi máquina W
 </TabItem>
 </Tabs>
 
-Si esta es tu primera vez ejecutando la configuración, cuando hagas clic en `Create`, la extensión descargará y gestionará el SDK por ti. En Windows, el SDK típicamente se colocará en `%userprofile%\.pico-sdk`. El tiempo que toma configurar depende de tu velocidad de internet. Una vez completado, se abrirá una nueva ventana con tu proyecto.
+Si esta es tu primera vez ejecutando la configuración, cuando hagas clic en `Create`, la extensión descargará y gestionará el SDK por ti. En Windows, el SDK típicamente se colocará en `%userprofile%.pico-sdk`. El tiempo que toma configurar depende de tu velocidad de internet. Una vez completado, se abrirá una nueva ventana con tu proyecto.
 
 #### Paso 4: Construir el Proyecto
 

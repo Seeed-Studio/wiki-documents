@@ -47,7 +47,7 @@ Especificaciones
 | Funciones de símbolos/gráficos soportadas      | Punto, línea recta, círculo, carácter, cadena, número, emoji, imagen (puedes mostrar estos símbolos llamando la API directamente en el código)        |
 | Tamaño de matriz LED soportado                 | 32(fila)×64(columna)                                                                                                                                    |
 | Color soportado en cada punto de matriz LED    | LEDs duales (verde y rojo) y un color mezclado (amarillo), y puedes usar solo un LED en cada punto de matriz LED                                       |
-| Conector para matriz LED                       | DBSTAR\_HUB 08A                                                                                                                                         |
+| Conector para matriz LED                       | DBSTAR_HUB 08A                                                                                                                                         |
 | Protocolo para puerto Grove                    | UART                                                                                                                                                     |
 | Temperatura de trabajo                         | -40–80 ℃                                                                                                                                                |
 | Dimensiones                                    | 46.5×44 mm                                                                                                                                              |
@@ -70,7 +70,7 @@ Descripción del Hardware
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
 - **Conector Grove**, para conectar este producto a la placa de control principal.
-- **Puerto de matriz LED (DBSTAR\_HUB 08A)**, para conectar la matriz LED. Si no puedes encontrar un conector como este, puedes usar cables jumper como alternativa.
+- **Puerto de matriz LED (DBSTAR_HUB 08A)**, para conectar la matriz LED. Si no puedes encontrar un conector como este, puedes usar cables jumper como alternativa.
 
 ### **El paquete incluye** (partes principales)
 

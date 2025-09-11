@@ -30,7 +30,7 @@ In this section of the Wiki, we will focus on the hardware components of the Sen
 ## Specification
 
 <div class="table-center">
- <table align="center">
+    <table align="center">
         <tr>
             <th>Hardware</th>
             <th>Description</th>

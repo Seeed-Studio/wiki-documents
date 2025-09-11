@@ -287,9 +287,9 @@ esp_err_t tf_event_handler_unregister(int32_t event_id,
 
 #### 1.4.1 Message Types Transmitted in Event Pipelines
 
-Two modules can be connected together, indicating that their data types are consistent; we define data types and corresponding data structures in the [tf\_module\_data\_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) file. Generally, data types are defined with the prefix **TF\_DATA\_TYPE\_**; data structures are defined with the prefix **tf\_data\_**.
+Two modules can be connected together, indicating that their data types are consistent; we define data types and corresponding data structures in the [tf_module_data_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) file. Generally, data types are defined with the prefix **TF_DATA_TYPE_**; data structures are defined with the prefix **tf_data_**.
 
-For example, we define the **TF\_DATA\_TYPE\_BUFFER** type in the type enumeration structure, and the corresponding structure is as follows. The first field type indicates the data type, and the remaining fields indicate the data to be transmitted.
+For example, we define the **TF_DATA_TYPE_BUFFER** type in the type enumeration structure, and the corresponding structure is as follows. The first field type indicates the data type, and the remaining fields indicate the data to be transmitted.
 
 ```cpp
 typedef struct {
@@ -346,7 +346,7 @@ The currently available data types are described as follows:
 
 When using the idf's `esp_event` component for message transmission, memory copying occurs during enqueueing (please read the `esp_event` source code for details); this is very unfriendly when transmitting large data, such as images and audio.
 
-Therefore, we adopt an efficient transmission method by transmitting only pointers. For example, in the **TF\_DATA\_TYPE\_BUFFER** type, the data to be transmitted is defined as follows. The first field `p_buf` is the start address of the data buffer, and the second field len is the length of the data.
+Therefore, we adopt an efficient transmission method by transmitting only pointers. For example, in the **TF_DATA_TYPE_BUFFER** type, the data to be transmitted is defined as follows. The first field `p_buf` is the start address of the data buffer, and the second field len is the length of the data.
 
 ```cpp
 struct tf_data_buf
@@ -357,7 +357,7 @@ struct tf_data_buf
 ```
 
 For data producer modules, they are responsible for memory allocation of `p_buf`; the next-level data consumer module is responsible for freeing the memory after use.
-Some common data copying and freeing functions are defined in the [tf\_module\_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) file. For example, if the received event data type is not what you want, you can directly call the **tf\_data\_free()** function to free the memory (this function implements the release of all data types), as shown below:
+Some common data copying and freeing functions are defined in the [tf_module_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) file. For example, if the received event data type is not what you want, you can directly call the **tf_data_free()** function to free the memory (this function implements the release of all data types), as shown below:
 
 ```cpp
 static void __event_handler(void *handler_args, esp_event_base_t base, int32_t id, void *p_event_data)
@@ -374,7 +374,7 @@ static void __event_handler(void *handler_args, esp_event_base_t base, int32_t i
 
 ### 1.5 Base Class of Modules
 
-We define the base class of modules in [tf\_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h). The task flow engine does not concern itself with the specific implementation of the models, it only needs to call the relevant interfaces of the modules to operate them. Each specific module only needs to implement the operation functions and management functions.
+We define the base class of modules in [tf_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h). The task flow engine does not concern itself with the specific implementation of the models, it only needs to call the relevant interfaces of the modules to operate them. Each specific module only needs to implement the operation functions and management functions.
 
 ```cpp
 struct tf_module_ops
@@ -561,9 +561,9 @@ The ai camera block is mainly responsible for communication with Himax, model OT
 
 The meanings of each field in the params parameter are as follows:
 
-- **model\_type**: Model type, 0 indicates cloud model (the model URL will be extracted from the model field for download and use), 1, 2, and 3 indicate Himax built-in models.
+- **model_type**: Model type, 0 indicates cloud model (the model URL will be extracted from the model field for download and use), 1, 2, and 3 indicate Himax built-in models.
 - **model**: Specific information about the model.
-  - **model\_id**: Unique identifier of the model.
+  - **model_id**: Unique identifier of the model.
   - **version**: Model version.
   - **arguments**: Model parameter configuration.
     - **size**: Size of the model.
@@ -574,9 +574,9 @@ The meanings of each field in the params parameter are as follows:
     - **updatedAt**: Timestamp of model update.
     - **iou**: IOU (Intersection over Union) threshold.
     - **conf**: Confidence threshold.
-  - **model\_name**: Name of the model, "General Object Detection".
-  - **model\_format**: Model format, "TensorRT".
-  - **ai\_framework**: AI framework used.
+  - **model_name**: Name of the model, "General Object Detection".
+  - **model_format**: Model format, "TensorRT".
+  - **ai_framework**: AI framework used.
   - **author**: Author of the model, "SenseCraft AI".
   - **algorithm**: Algorithm description, "Object Detect(TensorRT, SMALL, COCO)".
   - **classes**: Categories the model can detect, including "person".
@@ -587,14 +587,14 @@ The meanings of each field in the params parameter are as follows:
   - **mode**: Detection mode, 0 indicates existence detection, 1 indicates numerical comparison, 2 indicates quantity change.
   - **type**: Comparison type, 0 indicates less than, 1 indicates equal to, 2 indicates greater than, 3 indicates not equal to (only valid when mode=1).
   - **num**: Comparison value (only valid when mode=1).
-- **conditions\_combo**: Relationship for multi-condition detection, 0 indicates AND, 1 indicates OR.
-- **silent\_period**: Silent period settings.
-  - **time\_period**: Time period settings.
+- **conditions_combo**: Relationship for multi-condition detection, 0 indicates AND, 1 indicates OR.
+- **silent_period**: Silent period settings.
+  - **time_period**: Time period settings.
     - **repeat**: Repeat time period from Sunday to Saturday, 1 indicates enabled.
-    - **time\_start**: Start time of the silent period.
-    - **time\_end**: End time of the silent period.
-  - **silence\_duration**: Duration of silence, in seconds.
-- **output\_type**: Output image type, 0 indicates only small images (412x412), 1 indicates both large and small images (640x480; 412x412).
+    - **time_start**: Start time of the silent period.
+    - **time_end**: End time of the silent period.
+  - **silence_duration**: Duration of silence, in seconds.
+- **output_type**: Output image type, 0 indicates only small images (412x412), 1 indicates both large and small images (640x480; 412x412).
 - **shutter**: Shutter mode, 0 indicates continuously open, 1 indicates triggered by UI, 2 indicates triggered by input event, 3 indicates shutter once.
 
 Terminal connection description:
@@ -694,7 +694,7 @@ Configuration parameters are as follows:
   - **body**: Object containing the request body content.
     - **prompt**: Prompt to include with the request, providing additional information for image analysis.
     - **type**: Type of request, 1 indicates monitoring.
-    - **audio\_txt**: Audio text information to include with the request. When the monitoring scene is triggered, the interface service will convert this field to TTS and return it in the interface.
+    - **audio_txt**: Audio text information to include with the request. When the monitoring scene is triggered, the interface service will convert this field to TTS and return it in the interface.
 
 Terminal connection description:
 
@@ -789,7 +789,7 @@ The sensecraft alarm block is an alarm block, mainly notifying the SenseCraft pl
 Configuration parameters are as follows:
 
 - **params**: Object containing device parameters.
-  - **silence\_duration**: Silence duration in seconds, here it is 60 seconds, indicating that the minimum reporting interval is 60s.
+  - **silence_duration**: Silence duration in seconds, here it is 60 seconds, indicating that the minimum reporting interval is 60s.
   - **text**: Text for platform alarm notification.
 
 Terminal connection description:

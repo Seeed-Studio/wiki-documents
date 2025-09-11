@@ -129,7 +129,6 @@ If you followed the above Colab project, you know that you can load 4 models to 
 
 If you directly want to jump to **section 3** which explains how to deploy the trained AI model into SenseCAP A1101 and perform inference, [click here](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101/#3-deploy-the-trained-model-and-perform-inference).
 
-
 ## 2. Train your own AI model with your own dataset
 
 If you want to build specific object detection projects where the public datasets do not have the objects that you want to detect, you might want to build your own dataset.  When you record data for your own dataset, you have to make sure that you cover all angles (360 degrees) of the object, place the object in different environments, different lighting and different weather conditions. After recording your own dataset, you also have to annotate the images in the datset. All these steps will be convered in this section.
@@ -197,7 +196,6 @@ You need to make sure your BootLoader version is greater than 2.0.0 before you c
 <div align="center"><img width="{500}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/39.png"/></div>
 
 After this you will see a new storage drive shown on your file explorer as **SENSECAP**
-
 
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
@@ -353,7 +351,6 @@ Now we will move the **model-1.uf2** that we obtained at the end of the training
 
 After this, you will see a new storage drive shown on your file explorer as **SENSECAP**
 
-
 <div align="center"><img width="{280}" src="https://files.seeedstudio.com/wiki/SenseCAP-A1101/edge-impulse-A1101/p8.png"/></div>
 
 - **Step 4.** Drag and drop the **model-1.uf2** file to **SENSECAP** drive
@@ -506,8 +503,10 @@ Eventhough you can load 4 models to the device all at once, please not that only
 - **Step 10.** Now a file named **model-1.uf2** will be generated. This is the file that we will load into the SenseCAP A1101 Module to perform the inference!
 
 ## Check BootLoader Version
+
 - Double click the BOOT button and wait for the removable drive to mount
 - Open INFO_UF2.TXT in the removable drive
+
 <div align="center"><img width="{600}" src="https://github.com/Seeed-Studio/Seeed_Arduino_GroveAI/raw/master/assert/q2.png"/></div>
 
 ## Update BootLoader

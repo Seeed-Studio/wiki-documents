@@ -1,56 +1,53 @@
 ---
-description: reTerminal 用の Electron
-title: reTerminal 用の Electron
+description: reTerminal用Electron
+title: reTerminal用Electron
 keywords:
   - Edge
-  - reTerminal アプリケーション
+  - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-build-UI-using-Electron
 last_update:
-  date: 05/15/2025
+  date: 1/31/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-17.png" alt="pir" width="1000" height="auto"/></p>
 
 ## はじめに
 
-このウィキでは、Electron を使用して独自のユーザーインターフェースを構築する方法を説明します。Electron は、HTML、CSS、JavaScript などの Web 技術を使用して、ネイティブデスクトップアプリケーション（Windows、Mac、Linux）を作成するためのオープンソースフレームワークです。つまり、ウェブサイトを構築できるなら、デスクトップアプリも構築できるということです！
+このwikiでは、Electronを使用して独自のユーザーインターフェースを構築する方法について説明します。Electronは、HTML、CSS、JavaScriptなどのWeb技術を使用してネイティブデスクトップアプリケーション（Windows、Mac、Linux）を作成するためのオープンソースフレームワークです。つまり、Webサイトを構築できれば、デスクトップアプリも構築できるということです！
 
-以下のガイドに従うことで、LCD 上のボタンをクリックするだけで reTerminal の GPIO ピンを制御するアプリケーションを作成できるようになります。それでは始めましょう！
+以下のガイドに従うことで、LCDのボタンをクリックするだけでreTerminalのGPIOピンを制御するアプリケーションを作成できるようになります。それでは始めましょう！
 
 ## 開発環境の準備
 
-### reTerminal 上での作業
+### reTerminal上で
 
-まず、reTerminal に **Node.js** と **npm** をインストールします。npm は Node.js パッケージのパッケージマネージャです。
+まず、reTerminal上に**Node.js**と**npm**をインストールします。npmはNode.jsパッケージのパッケージマネージャーです。
 
-- **ステップ 1.** [こちら](https://wiki.seeedstudio.com/ja/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)で説明されているように、**オンボード LCD、外部ディスプレイ、または SSH** を使用して reTerminal にアクセスします。
+- **ステップ1.** [こちら](https://wiki.seeedstudio.com/reTerminal/#log-in-to-raspberry-pi-os-ubuntu-os-or-other-os-using-ssh-over-wi-fi-ethernet)で説明されているように、**オンボードLCD、外部ディスプレイ、またはSSH**を使用してreTerminalにアクセスします
 
-- **ステップ 2.** パッケージをアップグレードします。
+- **ステップ2.** パッケージをアップグレードします
 
 ```sh
 sudo apt update
 sudo apt full-upgrade 
 ```
 
-- **ステップ 3.** Node.js をインストールするためのスクリプトをダウンロードします。
+- **ステップ 3.** Node.jsをインストールするスクリプトをダウンロードする
 
 ```sh
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
 
-- **ステップ 4.** Node.js をインストールします。
+- **ステップ 4.** Node.js をインストールする
 
 ```sh
 sudo apt install -y nodejs
 ```
 
-これで reTerminal に Node.js がインストールされました。インストールが成功したかどうかを確認するには、以下のコマンドを実行して **Node.js** と **npm** のバージョンを確認してください。
+Node.jsがreTerminalにインストールされました。インストールが成功したかどうかを確認するには、以下のコマンドを実行して**Node.js**と**npm**のバージョンを確認してください
 
 ```sh
 node -v
@@ -59,103 +56,103 @@ npm -v
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/node-2.png" alt="pir" width="300" height="auto"/></p>
 
-### ホスト PC 上での作業
+### ホストPC上で
 
-次に、開発のために Microsoft Visual Studio Code をセットアップします。
+次に、開発用にMicrosoft Visual Studio Codeをセットアップします。
 
-- **ステップ 1.** [Microsoft Visual Studio Code](https://code.visualstudio.com/) をダウンロードしてインストールします。
+- **ステップ1.** [Microsoft Visual Studio Code](https://code.visualstudio.com/)をダウンロードしてインストールします
 
-**注意:** お使いのオペレーティングシステムに適したインストーラーをダウンロードしてください。
+**注意:** お使いのオペレーティングシステムに適したインストーラーをダウンロードしてください
 
-- **ステップ 2.** 左側のナビゲーションメニューの **拡張機能** タブをクリックし、検索ボックスに **remote development** と入力します。
+- **ステップ2.** 左側のナビゲーションメニューの**Extensions**タブをクリックし、検索ボックスに**remote development**と入力します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remote-dev-extension.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ 3.** **Remote Development** を選択し、**インストール** をクリックします。
+- **ステップ3.** **Remote Development**を選択し、**Install**をクリックします
 
-- **ステップ 4.** キーボードで **F1** を押し、**ssh** と入力して **Remote-SSH:Connect to Host...** を選択します。
+- **ステップ4.** キーボードで**F1**を押し、**ssh**と入力して**Remote-SSH:Connect to Host...**を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/remote-ssh.png" alt="pir" width="800" height="auto"/></p>
 
-- **ステップ 5.** 以下を入力します。
+- **ステップ5.** 以下を入力します
 
 ```sh
 pi@192.xxx.xx.xx
 ```
 
-**注意:** **pi** はユーザー名で、**192.xxx.xx.xx** は reTerminal の IP アドレスです。
+**注意:** **pi** はユーザー名で、**192.xxx.xx.xx** は reTerminal の IP アドレスです
 
-- **ステップ 6.** ユーザーのパスワードを入力します。
+- **ステップ 6.** ユーザーのパスワードを入力します
 
-これで、SSH を使用して reTerminal にログインし、開発環境の準備が完了しました。
+これで SSH を使用して reTerminal に正常にログインし、開発環境の準備が正常に完了しました
 
-## スマートライト Electron アプリケーション
+## Smart Light Electron アプリケーション
 
-ここでは、reTerminal の LCD 上のボタンを押すことで GPIO を制御できる **スマートライト Electron アプリケーション** を構築します。その後、GPIO にリレーを接続して家電製品を制御することも可能です！
+次に、LCD 上のボタンを押すことで reTerminal の GPIO を制御できる **Smart Light Electron アプリケーション** を構築します。その後、リレーを GPIO に接続して家電製品も制御できます！
 
 ### ハードウェア接続
 
-テスト目的で、reTerminal の **GPIO 24** に **LED** を接続します。後でリレーを追加し、GPIO を使用して家電製品を制御することができます！
+テスト目的で reTerminal の **GPIO 24** に **LED** を接続します。後でリレーを追加して GPIO を使用して家電製品を制御できます！
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/flutter/LED-connection-1.png" alt="pir" width="1000" height="auto"/></p>
 
-**注意:** GPIO ピンと LED の間に抵抗を挟む必要があります。そうしないと LED が焼損する可能性があります。
+**注意:** GPIO ピンと LED の間には抵抗が必要です。そうしないと LED が焼損します。
 
 ### アプリケーションの作成と初期化
 
-- **ステップ 1.** ホスト PC 上で VSCode を開き、以前説明した方法で SSH を使用して reTerminal にログインします。
+- **ステップ 1.** ホスト PC で VSCode を開き、前述の通り SSH 経由で reTerminal にログインします
 
-- **ステップ 2.** `File > Open Folder...` に移動し、reTerminal 上の任意のフォルダを選択します。
+- **ステップ 2.** `File > Open Folder...` に移動し、reTerminal 上の任意のフォルダを選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-1.png" alt="pir" width="600" height="auto"/></p>
 
-- **ステップ 3.** 新しいフォルダを作成し、名前を付けます。
+- **ステップ 3.** 新しいフォルダを作成して名前を付けます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-2.png" alt="pir" width="550" height="auto"/></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-3.png" alt="pir" width="550" height="auto"/></p>
 
-- **ステップ 4.** `Terminal > New Terminal` に移動し、新しく作成したフォルダに移動します。
+- **ステップ 4.** `Terminal > New Terminal` に移動し、新しく作成したフォルダに移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-4.png" alt="pir" width="550" height="auto"/></p>
 
-**注意:** ここでは **cd** を使用してディレクトリを変更します。
+**注意:** ここでは **cd** を使用してディレクトリを変更します
 
-- **ステップ 5.** このターミナルウィンドウ内で以下を入力し、Node.js アプリ用の必要な設定を含む **package.json** ファイルを作成します。
+- **ステップ 5.** このターミナルウィンドウ内で以下を入力して、Node.js アプリに必要な設定を含む **package.json** ファイルを作成します
 
 ```sh
 npm init
 ```
 
-**注意:** デフォルトの回答を使用するには **ENTER** を押し続けます。ただし、**entry point: (index.js)** を **main.js** に設定し、**test command:** を **electron .**（**electron** の後にスペースとドットを使用）に設定します。
+**注意:** デフォルトの回答を使用するために **ENTER** を押し続けますが、**entry point: (index.js)** を **main.js** に設定し、**test command:** を **electron .** に設定してください（**electron** の後にスペースとドットを使用）
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-5.png" alt="pir" width="550" height="auto"/></p>
 
-後で設定を変更したい場合は、メインアプリフォルダ内の **package.json** ファイルを確認できます。
+後で設定を変更したい場合は、メインアプリフォルダ内の **package.json** ファイルにアクセスできます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-6.png" alt="pir" width="650" height="auto"/></p>
 
-- **ステップ 6.** VSCode 内のターミナルで以下を入力して **Electron** をインストールします。
+- **ステップ 6.** VSCode内のターミナルで、以下を入力して **Electron** をインストールします
 
 ```sh
 npm install --save-dev electron
 ```
 
-Electron が正常にインストールされると、以下の出力が表示されます。
+Electronが正常にインストールされた場合、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-7.png" alt="pir" width="700" height="auto"/></p>
 
-また、Electron を実行するために必要なパッケージを含む **node_modules** フォルダが生成されます。
+また、Electronを実行するために必要なパッケージが含まれた**node_modules**フォルダが生成されることも確認できます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-8.png" alt="pir" width="500" height="auto"/></p>
 
 #### onoff npm モジュールのインストール
 
-onoff npm モジュールを使用すると、Electron アプリを使用して reTerminal の GPIO にアクセスして制御できます。
+onoff npm モジュールを使用すると、Electronアプリを使用してreTerminal上のGPIOにアクセスし、制御することができます
 
-- **ステップ 1.** 前述の方法で VSCode 内にターミナルウィンドウを開き、メインアプリディレクトリに移動します。
+- **ステップ 1.** 前述の説明に従ってVSCode内でターミナルウィンドウを開き、メインアプリディレクトリに移動します
 
-- **ステップ 2.** 以下を入力して **onoff** npm モジュールをインストールします。
+- **ステップ 2.** 以下を入力して**onoff** npm モジュールをインストールします
 
 ```sh
 npm install onoff
@@ -163,60 +160,60 @@ npm install onoff
 
 #### electron-rebuild npm モジュールのインストールと実行
 
-electron-rebuild npm モジュールは、Electron プロジェクトが使用している Node.js のバージョンに対してネイティブ Node.js モジュールを再構築します。これにより、システムの Node.js バージョンが正確に一致しなくても（しばしば一致しない、または不可能な場合があります）、Electron アプリでネイティブ Node.js モジュールを使用できます。
+electron-rebuild npm モジュールは、Electron プロジェクトが使用している Node.js のバージョンに対してネイティブ Node.js モジュールを再ビルドします。これにより、システムの Node.js バージョンが正確に一致しなくても（多くの場合一致せず、時には不可能な場合もあります）、Electron アプリでネイティブ Node.js モジュールを使用できるようになります。
 
-- **ステップ 1.** **electron-rebuild** npm モジュールをインストールします。
+- **ステップ 1.** **electron-rebuild** npm モジュールをインストール
 
 ```sh
 npm install --save-dev electron-rebuild
 ```
 
-- **ステップ 2.** electron-rebuild を実行します。
+- **ステップ 2.** electron-rebuildを実行する
 
 ```sh
 ./node_modules/.bin/electron-rebuild
 ```
 
-**注意:** 新しい npm パッケージをインストールするたびに、electron-rebuild を再実行してください。
+**注意:** 新しいnpmパッケージをインストールするたびに、electron-rebuildを再実行してください
 
-### HTML の作成（基本的な UI）
+### HTML（基本UI）の作成
 
-HTML ファイルを使用して、スタイリングなしの基本的なユーザーインターフェースを作成します。この HTML ファイルは、画面上に UI 要素を表示する役割を果たします。
+HTMLファイルを使用して、スタイリングなしの基本的なユーザーインターフェースを作成します。このHTMLファイルは、画面上にUI要素を表示する役割を担います。
 
-メインアプリディレクトリ内に **index.html** という新しいファイルを作成し、以下のコードをコピーします。
+メインアプリディレクトリ内に、**index.html**という新しいファイルを作成し、以下のコードをコピーしてください
 
 ```html
 <!doctype html>
 <html>
     <head>
-        <!-- HTML ドキュメントの文字エンコーディングを指定 -->
+        <!-- Specify the character encoding for the HTML document -->
         <meta charset="UTF-8">
-        <!-- アプリのタイトルバー -->
+        <!-- App title bar -->
         <title>Test Application</title>
-        <!-- material icons API を読み込む -->
+        <!-- Load the material icons api -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <!-- Google Fonts API を読み込む -->
+        <!-- Load the google fonts api -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <!-- UI スタイリング用の style.css を読み込む -->
+        <!-- Load style.css with UI styling -->
         <link rel="stylesheet" href="style.css">
-        <!-- JavaScript コードを埋め込む -->
+        <!-- Embed  JavaScript code -->
         <script>
-            // ipcRenderer モジュールを読み込む
+            // Load ipcRenderer module
             const { ipcRenderer } = require('electron');
-            // ボタンを押したときに GPIO を ON にする関数
+            // Function to turn ON the GPIO on button press
             function buttonclick1()
             {
-                // "msg" というチャンネル名でメインプロセスに 1 をメッセージとして送信
+                // This will send 1 as a message to the main process with "msg" as the channel name
                 ipcRenderer.send("msg1",1)
             }
             
-            // ボタンを押したときに GPIO を OFF にする関数
+            // Function to turn OFF the GPIO on button press
             function buttonclick2()
             {
                 ipcRenderer.send("msg2",0)
             }
 
-            // ボタンを押したときにアプリを閉じる関数
+            // Function to close the app on button press
             function buttonclick3()
             {
                 ipcRenderer.send("close-me")
@@ -224,17 +221,18 @@ HTML ファイルを使用して、スタイリングなしの基本的なユー
         </script>
     </head>
     <body>
-        <!-- アプリケーションの閉じるボタン -->
+        <!-- Application close button -->
         <button class="button3" onclick="buttonclick3()">X</button>
         <br>
-        <!-- アプリケーションの見出し -->
+        <!-- Application heading -->
         <h1>SMART LAMP</h1>
-        <!-- material icons API からの電球アイコン -->
+        <!-- Lightbulb icon from the material icons api -->
         <i class="material-icons">lightbulb</i>
         <br>
-        <!-- 空行 -->
+        <!-- Empty lines -->
         <br>
-        <!-- ON ボタン（スタイリング用の class 属性とボタンクリックイベント用の onclick 属性を含む） -->
+        <!-- ON button with class attribute for styling 
+        and onclick attribute for button click event -->
         <button class="button1" onclick="buttonclick1()">ON</button>
         <br>
         <button class="button2" onclick="buttonclick2()">OFF</button>
@@ -242,27 +240,27 @@ HTML ファイルを使用して、スタイリングなしの基本的なユー
 </html>
 ```
 
-**注意:** **ipcRenderer モジュール**は EventEmitter です。このモジュールは、レンダープロセス（ウェブページ - HTML/CSS）からメインプロセス（main.js）にメッセージを送信するためのいくつかのメソッドを提供します。また、メインプロセスからの返信を受け取ることもできます。
+**注意:** **ipcRenderer モジュール**は EventEmitter です。レンダープロセス（ウェブページ - html/css）からメインプロセス（main.js）にメッセージを送信するためのいくつかのメソッドを提供します。メインプロセスからの返信を受信することもできます。
 
 これで HTML ファイルの作成が完了しました。
 
-**npm test** を実行すると、以下の出力が表示されます。
+**npm test** を実行すると、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-15.png" alt="pir" width="1000" height="auto"/></p>
 
 ### CSS（スタイリング）の作成
 
-CSS ファイルを使用して、HTML ファイルで作成したユーザーインターフェースにさまざまなスタイリングを追加します。
+CSS ファイルを使用して、HTML ファイルで作成したユーザーインターフェースに異なるスタイリングを追加します
 
-メインアプリディレクトリ内に **style.css** という新しいファイルを作成し、以下のコードをコピーしてください。
+メインアプリディレクトリ内で、**style.css** という新しいファイルを作成し、以下のコードをコピーしてください
 
 ```css
-/* アプリのボディのスタイリング */
+/* Styling for the body of the app */
 body {
     background-color: rgb(141, 141, 141);
 }
 
-/* アプリのヘッディングのスタイリング */
+/* Styling for heading of the app */
 h1 {
     font-size: 60px;
     text-align: center;
@@ -270,7 +268,7 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
-/* 電球のスタイリング */
+/* Styling for the light bulb */
 .material-icons{
     font-size: 250px;
     color: rgb(204, 202, 71);
@@ -278,7 +276,7 @@ h1 {
     justify-content: center;
 }
 
-/* ON ボタンのスタイリング */
+/* Styling for the ON button */
 .button1 {
     display: inline-block;
     padding: 15px 25px;
@@ -294,16 +292,16 @@ h1 {
     display:grid;
   }
 
-/* ON ボタンの押下時のエフェクト */
+/* Button press effect for ON button */
 .button1:active {
   box-shadow: 0 5px rgb(104, 99, 99);
   transform: translateY(4px);
 }
 
-/* ON ボタンのホバーエフェクト */
+/* Hover effect for ON button */
 .button1:hover {background-color: rgb(62, 142, 65)}
 
-/* OFF ボタンのスタイリング */
+/* Styling for OFF button */
 .button2 {
     display: inline-block;
     padding: 15px 25px;
@@ -319,16 +317,16 @@ h1 {
     display:grid;
 }
 
-/* OFF ボタンの押下時のエフェクト */
+/* Button press effect for OFF button */
 .button2:active {
   box-shadow: 0 5px rgb(104, 99, 99);
   transform: translateY(4px);
 }
   
-/* OFF ボタンのホバーエフェクト */  
+/* Hover effect for OFF button */  
 .button2:hover {background-color: rgb(179, 44, 44)}
 
-/* Close ボタンのスタイリング */
+/* Styling for Close button */
 .button3 {
   padding: 8px 25px;
   font-size: 20px;
@@ -344,71 +342,71 @@ h1 {
 }
 ```
 
-アプリの最終的な出力は以下のようになります。
+アプリの最終出力は以下のようになります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-16.png" alt="pir" width="1000" height="auto"/></p>
 
-### Javascript の作成（アプリのロードと実行）
+### Javascript の作成（アプリの読み込みと実行）
 
-Javascript ファイルを使用して、アプリケーションウィンドウを作成し、HTML ファイルをロードして表示し、GPIO 機能を追加します。
+Javascript ファイルを使用してアプリケーションウィンドウを作成し、HTML ファイルの読み込みを表示し、GPIO 機能を追加します。
 
-メインアプリディレクトリ内に **main.js** という新しいファイルを作成し、以下のコードをコピーしてください。
+メインアプリディレクトリ内で、**main.js** という新しいファイルを作成し、以下のコードをコピーしてください
 
 ```javascript
-var Gpio = require('onoff').Gpio; // onoff モジュールをインクルードして GPIO を操作
-var LED = new Gpio(24, 'out'); // GPIO 24 を出力として初期化
+var Gpio = require('onoff').Gpio; //include onoff module to interact with the GPIO
+var LED = new Gpio(24, 'out'); //initialize GPIO 24 as an output
 
-// app, BrowserWindow, ipcMain モジュールをインクルード
+// Include app, BrowserWindow and ipcMain module
 const { app, BrowserWindow, ipcMain } = require('electron')
-/* ipcMain モジュールを使用して ipcRenderer モジュールからのメッセージを受信し、
-GPIO を ON にする */
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+turn ON the GPIO*/
 ipcMain.on("msg1",(event,data)=>{
   LED.writeSync(data);
 })
 
-/* ipcMain モジュールを使用して ipcRenderer モジュールからのメッセージを受信し、
-GPIO を OFF にする */
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+turn OFF the GPIO */
 ipcMain.on("msg2",(event,data)=>{
   LED.writeSync(data);
 })
 
-/* ipcMain モジュールを使用して ipcRenderer モジュールからのメッセージを受信し、
-アプリを閉じる */
+/* Use ipcMain module to receive the messages from the ipcRenderer module and 
+close the app */
 ipcMain.on("close-me", (event, arg) => {
     app.quit()
 })
 
-// アプリケーションウィンドウを作成
+// Create application window
 app.on('ready', function() {
     var mainWindow = new BrowserWindow({
-        // アプリをフルスクリーンにする
+        // Make the app fullscreen
         "fullscreen": true,
         webPreferences: {
-            // メインプロセスとレンダープロセス間の通信を有効化
+            // enable the communication between the main and rendered process
             nodeIntegration: true,
             contextIsolation: false
           }
     });
-    // CSS スタイリング付きの HTML ページをロード
+    // Load the HTML page with CSS styling
     mainWindow.loadFile('index.html');
 });
 ```
 
-**注意:** **ipcMain** は、レンダープロセス（ウェブページ）から送信されたメッセージを受信するためのいくつかのメソッドを提供します。
+**注意:** **ipcMain** はレンダラープロセス（ウェブページ）から送信されたメッセージを受信するためのいくつかのメソッドを提供します。
 
 ### アプリのテスト
 
-前のファイルを保存すると、**electron-rebuild** をオンにしているため、すぐに出力が表示されます。ただし、アプリを閉じた場合は、再度 **npm test** を使用してアプリを開き、以下の出力を確認してください。
+**electron-rebuild** を有効にしているため、前のファイルを保存するとすぐに出力が表示されます。ただし、アプリを閉じた場合は、**npm test** を使用して再度開くことができ、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-17.png" alt="pir" width="1000" height="auto"/></p>
 
-## アプリを実行するスクリプトを準備する
+## アプリを実行するスクリプトの準備
 
-- **ステップ 1.** 以前作成したルートフォルダを開き、そのフォルダ内に新しい **.sh ファイル** を作成します。
+- **ステップ 1.** 以前に作成したルートフォルダを開き、そのフォルダの下に新しい **.sh ファイル** を作成します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-18.png" alt="pir" width="350" height="auto"/></p>
 
-- **ステップ 2.** 作成したファイルを開き、以下を入力します。
+- **ステップ 2.** 作成したファイルを開き、以下を入力します
 
 ```sh
 #!/bin/bash
@@ -416,28 +414,28 @@ cd $HOME/Desktop/testapp
 DISPLAY=:0 npm test
 ```
 
-**注意:** ここで **$HOME/Desktop/testapp** は Electron プロジェクトの場所を指します。
+**注意:** ここで **$HOME/Desktop/testapp** は electron プロジェクトの場所です
 
-- **ステップ 3.** VSCode 内でターミナルウィンドウを開き、アプリのルートディレクトリに移動します。
+- **ステップ 3.** VSCode 内でターミナルウィンドウを開き、アプリのルートディレクトリに移動します
 
 ```sh
-例:
+example:
 cd ~/Desktop/testapp
 ```
 
-- **ステップ 4.** ledstart.sh を実行可能ファイルにします。
+- **ステップ4.** ledstart.shを実行可能ファイルにする
 
 ```sh
 sudo chmod +x ledstart.sh
 ```
 
-## アプリを起動するデスクトップファイルを準備する
+## アプリを起動するためのデスクトップファイルを準備する
 
-- **ステップ 1.** **Desktop フォルダ**を開き、そのフォルダ内に新しい **.desktop ファイル** を作成します。
+- **ステップ 1.** **Desktop フォルダ**を開き、そのフォルダの下に新しい **.desktop ファイル**を作成します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-20.png" alt="pir" width="340" height="auto"/></p>
 
-- **ステップ 2.** 作成したファイルを開き、以下を入力します。
+- **ステップ 2.** 作成したファイルを開き、以下を入力します
 
 ```sh
 [Desktop Entry]
@@ -449,62 +447,62 @@ Type=Application
 Categories=Application;Development;
 ```
 
-**注意:** **Exec** は先ほど作成したスクリプトの場所を指します。
+**注意：** **Exec** は、以前に作成したスクリプトの場所です
 
-- **ステップ 3.** VSCode 内でターミナルウィンドウを開き、Desktop に移動します。
+- **ステップ 3.** VSCode 内でターミナルウィンドウを開き、デスクトップに移動します
 
 ```sh
-例:
+example:
 cd ~/Desktop
 ```
 
-- **ステップ 4.** **ledStart.desktop** を実行可能ファイルにします。
+- **ステップ 4.** **ledStart.desktop** を実行可能ファイルにする
 
 ```sh
 sudo chmod +x ledStart.desktop
 ```
 
-### アプリを起動する
+### アプリの起動
 
-reTerminal LCD のデスクトップ上にある **LED Test** ファイルをダブルクリックします。
+reTerminal LCDのデスクトップにある**LED Test**ファイルをダブルクリックします
 
-以下のような出力が表示されます。
+以下のような出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/vs-17.png" alt="pir" width="1000" height="auto"/></p>
 
-これでボタンをクリックすると、LED が点灯するのが確認できます！
+これでボタンをクリックするとLEDが点灯するのを確認できます！
 
-## アプリをデバッグする
+## アプリのデバッグ
 
-開発中にアプリをデバッグする手順を説明します。
+開発中にアプリをデバッグするプロセスを見ていきましょう
 
-- **ステップ 1.** 以前説明したように、**Microsoft Visual Studio Code** を使用して **SSH** 経由で reTerminal にログインします。
+- **ステップ 1.** 前述のように**Microsoft Visual Studio Code**を使用して**SSH**経由でreTerminalにログインします
 
-- **ステップ 2.** **MobaXterm** のような SSH アプリケーションを使用して reTerminal に SSH 経由でログインします。この際、**X11 サーバー機能**を有効にします。
+- **ステップ 2.** **X11サーバー機能**を持つ[MobaXterm](https://mobaxterm.mobatek.net/)などのSSHアプリケーションを使用してSSH経由でreTerminalにログインします
 
-**注意:** X11 は reTerminal のディスプレイを PC 上に転送して表示するために必要です。
+**注意:** X11はreTerminalのディスプレイを転送してPC上にポップアップ表示するために必要です
 
-- **ステップ 3.** Microsoft Visual Studio Code 上で reTerminal にコードを書き込んだ後、メインアプリディレクトリに移動し、以下を実行します。
+- **ステップ 3.** Microsoft Visual Studio CodeですべてのコードをreTerminalに書き込んだ後、メインアプリディレクトリに移動して以下を実行します
 
 ```sh
 npm test
 ```
 
-最終的に、新しいウィンドウに出力が表示されます。コードにエラーがある場合は、MobaXterm のターミナルウィンドウに表示されます。
+最終的に、新しいウィンドウに出力が表示されます。コードにエラーがある場合は、MobaXtermターミナルウィンドウに表示されます。
 
 ## FAQ
 
-### Q: アプリを保存するたびに自動更新するにはどうすればよいですか？
+### Q: アプリを保存する際に自動更新を設定するにはどうすればよいですか？
 
-これには、electron-reloader npm モジュールを使用してホットリロード機能を設定できます。
+これには、electron-reloader npmモジュールを使用してHot Reload機能を設定できます
 
-- **ステップ 1.** **electron-reloader** をインストールします。
+- **ステップ 1.** **electron-reloader**をインストール
 
 ```sh
 npm install --save-dev electron-reloader
 ```
 
-- **ステップ 2.** **main.js** ファイルの末尾に以下の行を追加します。
+- **ステップ 2.** **main.js** ファイルの末尾に以下の行を追加します
 
 ```javascript
 try {
@@ -512,29 +510,29 @@ try {
 } catch (_) {}
 ```
 
-これで **npm test** を一度実行すると、ファイルを保存するたびにアプリケーションが更新されます。プロジェクト内の内容を変更するたびに **npm test** を実行する必要はありません。
+**npm test** を一度実行すると、ファイルを保存するたびにアプリケーションが更新されます。プロジェクト内のコンテンツを変更するたびに **npm test** を実行する必要はありません。
 
 ## ボーナスデモ
 
-Electron を使用したより興味深いデモを体験したい場合は、[この GitHub リポジトリ](https://github.com/lakshanthad/Electron_reterminal_hardware)をチェックしてください。
+Electron を使ったより興味深いデモを体験したい場合は、[この GitHub リポジトリ](https://github.com/lakshanthad/Electron_reterminal_hardware)をチェックしてください。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/electron/electron-reterminal-hw-demo.jpg" alt="pir" width="1000" height="auto"/></p>
 
 ## リソース
 
 - **[GitHub]** [Electron_reTerminal_Smart_Lamp_UI](https://github.com/lakshanthad/Electron_reTerminal_Smart_Lamp_UI)
-- **[Webページ]** [Electron ドキュメント](https://www.electronjs.org/docs/api)
+- **[Webpage]** [Electron Documentation](https://www.electronjs.org/docs/api)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

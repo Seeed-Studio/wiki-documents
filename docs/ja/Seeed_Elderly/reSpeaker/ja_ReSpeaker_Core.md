@@ -90,8 +90,8 @@ ReSpeakerは、周囲のものを操作するためのオープンモジュラ�
 - GPIO2/I2S_LRCLK: 外部エンコーダ/デコーダ、左右チャンネルサンプルクロック
 - GPIO3/I2S_BCLK: 外部エンコーダ/デコーダ、ビットクロック
 - MCLK_OUT: 外部デバイス用のマスタークロック
-- HP\_SEL: ヘッドフォンチャンネル選択。ReSpeaker Mic Arrayを使用してオーディオを出力する場合、HP_SELを高に設定
-- HP\_L: ReSpeaker Mic Arrayからのアナログオーディオ左チャンネル
+- HP_SEL: ヘッドフォンチャンネル選択。ReSpeaker Mic Arrayを使用してオーディオを出力する場合、HP_SELを高に設定
+- HP_L: ReSpeaker Mic Arrayからのアナログオーディオ左チャンネル
 - HP_R: ReSpeaker Mic Arrayからのアナログオーディオ右チャンネル
 - AGND: オーディオ用アナロググラウンド
 
@@ -377,7 +377,7 @@ if __name__ == '__main__':
     main()                  
 ```
 
-"INFO:mic:Start Detecting" が表示されたら、「ReSpeaker」と言ってプログラムを起動し、「play music」と言って音楽を再生させてみてください。その後、ReSpeaker は現在のパスにある "Tchaikovsky\_Concerto\_No.1p.mp3" を **madplay** ツールで再生します。
+"INFO:mic:Start Detecting" が表示されたら、「ReSpeaker」と言ってプログラムを起動し、「play music」と言って音楽を再生させてみてください。その後、ReSpeaker は現在のパスにある "Tchaikovsky_Concerto_No.1p.mp3" を **madplay** ツールで再生します。
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 

@@ -1,6 +1,6 @@
 ---
-description: reTerminal DM CANBUSをNode-REDで使用する
-title: reTerminal DM CANBUSをNode-REDで使用する
+description: reTerminal DM CANBUS with Node-RED
+title: reTerminal DM CANBUS with Node-RED
 keywords:
   - Edge
   - reTerminal-DM
@@ -8,15 +8,11 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-DM-Node-Red-canbus
 last_update:
-  date: 05/15/2025
+  date: 04/28/2023
   author: Peter Pan
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reTerminal DM CAN BUSをNode-REDで使用する
+# reTerminal DM CAN BUS with Node-RED
 
 ## CAN BUSについての簡単な情報
 
@@ -24,7 +20,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -32,19 +28,19 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### CAN BUS & Node-RED
 
-CANバス（Controller Area Networkバス）は、車両や産業システム内の複数の電子制御ユニット（ECU）を接続するために使用されるネットワークの一種です。1980年代にBoschによって開発され、車両やその他のアプリケーションにおけるシリアル通信の国際標準（ISO 11898）となりました。
+CAN bus（Controller Area Network bus）は、車両や産業システム内で複数の電子制御ユニット（ECU）を接続するために使用されるネットワークの一種です。1980年代にBoschによって開発され、車両やその他のアプリケーションにおけるシリアル通信の国際標準（ISO 11898）となっています。
 
-CANバスはECU間での高速データ交換を可能にし、情報を共有し、活動を調整することができます。2本のワイヤーシステムを使用し、1本はデータ送信用、もう1本はデータ受信用です。また、複数のノードをサポートしており、多くのデバイスが相互に通信する必要がある複雑なシステムに最適です。
+CAN busはECU間での高速データ交換を可能にし、情報を共有して活動を調整することができます。データ送信用とデータ受信用の2線式システムを使用し、複数のノードをサポートするため、多くのデバイスが相互に通信する必要がある複雑なシステムでの使用に理想的です。
 
-CANバス技術は、自動車産業でエンジン制御、トランスミッション制御、ABS（アンチロックブレーキシステム）、エアバッグ制御など、さまざまな用途で広く使用されています。また、産業オートメーション、医療機器、航空宇宙など、デバイス間の信頼性が高く効率的な通信が必要な他の産業でも使用されています。
+CAN bus技術は、エンジン制御、トランスミッション制御、ABS（アンチロックブレーキシステム）、エアバッグ制御など、さまざまなアプリケーションで自動車業界で広く使用されています。また、産業オートメーション、医療機器、航空宇宙など、デバイス間の信頼性が高く効率的な通信が不可欠な他の業界でも使用されています。
 
-CANバスには、高い信頼性、低コスト、過酷な環境での動作能力など、多くの利点があります。設置と保守が容易で、電磁干渉に対して非常に強い耐性を持っています。これらの特徴により、信頼性が高く効率的な通信が必要なさまざまなアプリケーションに最適な選択肢となっています。
+CAN busには、高い信頼性、低コスト、過酷な環境での動作能力など、多くの利点があります。設置と保守が簡単で、電磁干渉に対する耐性が非常に高いです。これらの特徴により、信頼性が高く効率的な通信が必要な多くの異なるアプリケーションにとって理想的な選択肢となっています。
 
-## reTerminal DMでのCAN BUSノードの使用開始
+## reTerminal DMでCAN BUS Nodeを使い始める
 
-Node-REDでCANバスを使用するには、reTerminal DMのCAN BUSポートに接続するCANバスインターフェースデバイスと、ネットワーク上でメッセージを送受信できるNode-RED CANバスノードが必要です。このチュートリアルでは、`node-red-contrib-socketcan`ノードを一緒に探求します。Node-REDにCANバスノードをインストールしたら、CANバスネットワークからデータを読み取り、それを処理し、他のシステムやデバイスに送信するフローを構築できます。例えば、車両のCANバスからエンジンのRPMを読み取り、データを処理して燃料消費量を計算し、その結果をダッシュボードに表示することができます。
+Node-REDをCAN busで使用するには、reTerminal DM CAN BUSポートに接続するCAN busインターフェースデバイスと、ネットワーク上でメッセージを送受信できるNode-RED CAN busノードが必要です。この場合、`node-red-contrib-socketcan`ノードを一緒に探索します。Node-REDにCAN busノードをインストールしたら、CAN busネットワークからデータを読み取り、処理し、他のシステムやデバイスに送信するフローの構築を開始できます。例えば、車両のCAN busからエンジンRPMを読み取り、データを処理して燃料消費量を計算し、結果をダッシュボードに送信して表示することができます。
 
-詳細は[node-red-contrib-socketcan](https://flows.nodered.org/node/node-red-contrib-socketcan)ページをご覧ください。
+詳細については、[node-red-contrib-socketcan](https://flows.nodered.org/node/node-red-contrib-socketcan)ページで確認できます。
 
 Senscraft Edge OSを使用している場合は、Socketcanノードのインストール手順をスキップできます。
 
@@ -52,33 +48,33 @@ Senscraft Edge OSを使用している場合は、Socketcanノードのインス
 
 #### ハードウェア
 
-* 1 x reTerminal DM
-* 1 x ホストコンピュータ
-* 1 x [USB-CANアナライザー](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
+- 1 x reTerminal DM
+- 1 x ホストコンピュータ
+- 1 x [USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)
 
 ##### ハードウェアの準備
 
-以下のようにハードウェアを接続してください。
+以下に示すようにハードウェアを接続してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus-connection.png" /></div>
 
 #### ソフトウェア
 
 :::note
-ホストコンピュータは、以下のセットアップ手順を実行するためにreTerminal DMとインターネット接続が可能である必要があります。
+ホストコンピュータは、以下のセットアップ手順を実行するために、reTerminal DMへのインターネット接続が可能である必要があります。
 :::
 
 ##### Socketcanノードのインストール
 
-このWikiチュートリアルでは、`node-red-contrib-socketcan`ノードを使用します。そのため、[ノードのインストール](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)ガイドに従って`node-red-contrib-socketcan`をインストールしてください。
+このWikiチュートリアルでは`node-red-contrib-socketcan`ノードを使用するため、[ノードのインストール](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)ガイドに従って`node-red-contrib-socketcan`をインストールしてください。
 
 ##### reTerminal DMでのCAN BUSの設定
 
 :::note
-reTerminal DMの`Terminal`アプリに直接アクセスするか、SSH経由でreTerminal DMにアクセスできると仮定します。そうでない場合は、[こちら](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-node-red)の最初のステップに従って、操作方法を確認してください。
+reTerminal DMの`Terminal`アプリに直接アクセスするか、SSH経由でreTerminal DMにアクセスできることを前提としています。そうでない場合は、[こちら](/reTerminal-DM-Getting-Started-with-Node-Red#install-node-red)の最初のステップに従って、その方法に慣れてください。
 :::
 
-以下のコマンドを1つずつ入力して、reTerminal DMのCAN BUSポートで仮想CANデバイス`can0`を有効にしてください。
+reTerminal DMのCAN BUSポートでcan0という仮想canデバイスを有効にするために、以下のコマンドを一つずつ入力してください。
 
 ```sh
 sudo apt install can-utils
@@ -87,29 +83,30 @@ sudo ifconfig can0 txqueuelen 1000
 sudo ip link set can0 up
 ```
 
-上記のコマンドを入力した後、以下のように`ifconfig`コマンドで`can0`デバイスが表示されるはずです。
+上記のコマンドを入力した後、以下に示すように `ifconfig` コマンドで `can0` デバイスが表示されるはずです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/interface/canbus.png" /></div>
 
-##### ホストコンピュータのUSB-CANソフトウェアとドライバの設定
+##### ホストコンピュータのusb-canソフトウェアとドライバーの設定
 
 :::note
-同じ[USB-CANアナライザー](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)を使用している場合は、以下の手順に従ってアナライザー用のソフトウェアドライバを設定してください。
+同じ[USB-CAN Analyzer](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)を使用している場合は、以下の手順に従ってアナライザーを使用するためのソフトウェアドライバーをセットアップできます。
 :::
 
-`USB-CANアナライザー`ドライバのGitHubリポジトリ[USB-CAN Analyzer system driver](https://github.com/kobolt/usb-can)を訪問し、Readmeセクションに従ってオペレーティングシステムに応じたドライバをインストールしてください。
+`USB-CAN Analyzer`ドライバーのgithubリポジトリ[USB-CAN Analyzer system driver](https://github.com/kobolt/usb-can)にアクセスし、Readmeセクションに従ってお使いのオペレーティングシステムに応じてドライバーをインストールしてください。
 
-CANバストラフィックを送受信するための例コマンド：
+CANバストラフィックを送受信するためのサンプルコマンド
 
 ```
-# CANバスからトラフィックをダンプ
+# dump CAN bus traffic from CAN bus
 $ ./canusb -t -d /dev/ttyUSB0 -s 250000 -t
 
-# CANバスでID 005からバイト0x00112233を送信
+# send the bytes 0x00112233 from ID 005 on at CAN bus
 $ ./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233
+
 ```
 
-### reTerminal DMでのSocketcanノード
+### reTerminal DM での Socketcan ノード
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/socketcan-nodes.png" /></div>
 
@@ -117,15 +114,15 @@ $ ./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233
 
 :::note
 
-以下の手順はチュートリアル目的のみです。このセクションでは、JSON形式のフローをコピーしてインポートノードのポップアップメニューの入力ボックスに貼り付けることで、フローを迅速にインポートする方法を示します。
+以下の手順はチュートリアル目的のためのものです。このセクションでは、JSON形式のフローをコピーして、インポートノードのポップアップメニューの入力ボックスに貼り付けることで、フローを素早くインポートする方法を説明します。
 
 :::
 
-STEP 1: `設定ボタン`をクリックし、次に`インポート`ボタンをクリックして`インポートノード`ウィンドウを開きます。
+ステップ 1: `設定ボタン`をクリックし、次に`インポート`ボタンをクリックして`ノードのインポート`ウィンドウを開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/import-flow.png" /></div>
 
-STEP 2: 以下のフローJSONをコピーしてください
+ステップ 2: 以下のフロー JSON をコピーします
 
 ```json
 
@@ -311,78 +308,80 @@ STEP 2: 以下のフローJSONをコピーしてください
 
 ```
 
-STEP 3: `Import nodes`ウィンドウで、`Clipboard`タブを選択し、上記のJSONフローコードを`赤いダイアログボックス`に貼り付けてから、`import`ボタンをクリックしてください。
+ステップ3：`Import nodes`ウィンドウで、`Clipboard`タブを選択し、上記のjsonフローコードを`赤いダイアログボックス`に貼り付けて、`import`ボタンをクリックしてください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/paste-json-import.png" /></div>
 
-STEP 4: 上記の手順を完了すると、新しいフロータブ`CAN BUS`が作成されているはずです。以下の図と同じフローであることを確認してください。
+ステップ4：上記の手順の後、`CAN BUS`という新しいフロータブが作成されているはずです。フローが以下に示すものと同じかどうか確認してください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/check-deply.png" /></div>
 
-STEP 5: CANインターフェースを設定するには、`socketcan-inノード`をダブルクリックして`edit node`ウィンドウを開いてください。
+ステップ5：canインターフェースを設定するには、`socketcan-in node`をダブルクリックして`edit node`ウィンドウを開く必要があります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/open-edit-node.png" /></div>
 
 :::note
-[Configure CAN BUS on reTerminal DM セクション](#configure-can-bus-on-reterminal-dm)の手順を完了し、reTerminal DM上でcan0インターフェースデバイスを作成していることを確認してください。
+reTerminal DM上でcan0インターフェースデバイスを作成するために、[Configure CAN BUS on reTerminal DM セクション](#configure-can-bus-on-reterminal-dm)の手順を完了していることを確認してください。
 :::
 
-STEP 6: `Edit socketcan-in node`ウィンドウで、`interface`オプションの`鉛筆`アイコンをクリックして、`Add new socketcan-config config node`ウィンドウを開いてください。
+ステップ6：`Edit socketcan-in node`ウィンドウで、`interface`オプションの`鉛筆`アイコンをクリックして`Add new socketcan-config config node`ウィンドウを開きます。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/edit-can-interface.png" /></div>
 
-STEP 7: `Add new socketcan-config config node`ウィンドウで、インターフェースダイアログボックスに`can0`を入力してください。
+ステップ7：`Add new socketcan-config config node`ウィンドウで、interfaceダイアログボックスに`can0`と入力してください。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/enter-can-interface.png" /></div>
 
-STEP 8: 上記の手順で`Add`ボタンをクリックすると、`interface`が`can0`に設定されていることを確認し、`Done`をクリックして適用してください。
+ステップ8：上記の手順で`Add`ボタンをクリックすると、`interface`が`can0`に設定されているのが確認できるはずです。その後、`Done`をクリックして適用します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/confirm-can-interface.png" /></div>
 
-STEP 9: `socketcan-out`のCANバスインターフェースを設定するには、`socketcan-out`ノードをダブルクリックし、Configで`can0`を選択してから`Done`をクリックするだけです。
+ステップ9：`socketcan-out`のCAN Busインターフェースを設定します。`scoketcan-out`ノードをダブルクリックし、Configとして`can0`を選択して、`Done`をクリックするだけです。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/open-edit-node-1.png" /></div>
 
-STEP 10: 今すぐ `Deploy` をクリックしてください
+ステップ10：`Deploy`をクリックしてください。
 
 #### 最終テストと結果
 
-おめでとうございます！これで、reTerminal DM と Node-RED を使用して CAN Bus プロトコルを体験し、学ぶことができました。最終結果は以下の画像のようになるはずです。
+おめでとうございます。reTerminal DMとnode-REDでCAN Busプロトコルを使用する方法を正常に体験し、学習できました。最終結果は以下に示す画像と同様になるはずです。
 
-ホストコンピュータが CAN Bus データを送信し、reTerminal DM が受信する場合:
+ホストコンピューターがCAN Busデータを送信し、reTerminal DMが受信する場合：
 
-* ホストコンピュータのターミナルウィンドウで `./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233` コマンドを実行して、reTerminal DM に `00112233`（16進数）を送信します。そして、reTerminal DM のデバッグウィンドウで以下のデータが表示されます。
+- ホストコンピューターのターミナルウィンドウから`./canusb -d /dev/ttyUSB0 -s 250000 -t -i 5 -j 00112233`コマンドを実行して`00112233`（16進数）をreTerminal DMに送信できます。reTerminal DMのデバッグウィンドウでデータが確認できます。
+
 ```json  
 0: 0 
 1: 17 
 2: 34
 3: 51
 ```
-これは `x00 x11 x22 x33` の HEX データセットをバイナリで表現したものです。
+
+`x00 x11 x22 x33` HEXデータセットのバイナリ表現です。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-send.png" /></div>
 
-ホストコンピュータが CAN Bus データを受信し、reTerminal DM が送信する場合:
+ホストコンピュータがCANバスデータを受信し、reTerminal DMが送信する場合：
 
-* reTerminal DM の Node-RED で以下の画像に示されている `inject` ボタンをクリックして、ホストコンピュータに `01 02 03 04 05` のデータを送信します。そして、ホストコンピュータのターミナルウィンドウで受信コマンド `./canusb -t -d /dev/ttyUSB0 -s 250000 -t` を実行すると、受信データは `05 04 03 02 01` となります。これは FIFO（先入れ先出し）順序で表示されます。
+- 下の画像に示すように、reTerminal DM Node-Redの`inject`ボタンをクリックして、データ`01 02 03 04 05`をホストコンピュータに送信する必要があります。ホストコンピュータのターミナルウィンドウで受信コマンドは`./canusb -t -d /dev/ttyUSB0 -s 250000 -t`であり、受信データは先入れ先出し順序のため`05 04 03 02 01`となります：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/Host-receive.png" /></div>
 
-# reTerminal DM と Node-RED でさらに多くのノードを探索する
+# Node-REDでreTerminal DMのより多くのノードを探索
 
-* [reTerminal DM RS485 ポートと Node-RED](/ja/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM MQTT と Node-RED](/ja/reTerminal-DM-Node-Red-mqtt)
+- [reTerminal DM RS485ポートとNode-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM MQTTとNode-RED](/reTerminal-DM-Node-Red-mqtt)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

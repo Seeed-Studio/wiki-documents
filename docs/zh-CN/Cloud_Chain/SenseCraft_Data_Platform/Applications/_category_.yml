@@ -1,5 +1,5 @@
-position: 3 # 支持浮动位置
+position: 3 # float position is supported
 label: '应用程序'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别展开
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: sensecraft_data-platform_applications

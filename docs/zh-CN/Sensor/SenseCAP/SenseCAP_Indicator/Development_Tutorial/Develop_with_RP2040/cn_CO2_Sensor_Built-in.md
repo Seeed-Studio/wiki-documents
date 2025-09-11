@@ -20,7 +20,7 @@ CO2含量是评估空气质量的重要标准，确保空气对所有呼吸者�
 * 可接受水平：< 600 ppm
 * 闷热和异味投诉：600 - 1000 ppm
 * ASHRAE和OSHA标准：1000 ppm
-* 一般嗜睡：1000 - 2500 ppm
+* 一般困倦：1000 - 2500 ppm
 * 可能出现不良健康影响：2500 - 5000 ppm
 
 
@@ -59,7 +59,7 @@ void sensor_scd4x_init(void) {
 
   scd4x.begin(Wire);
 
-  // 停止可能之前启动的测量
+  // stop potentially previously started measurement
   error = scd4x.stopPeriodicMeasurement();
   if (error) {
     Serial.print("Error trying to execute stopPeriodicMeasurement(): ");
@@ -67,7 +67,7 @@ void sensor_scd4x_init(void) {
     Serial.println(errorMessage);
   }
 
-  // 开始测量
+  // Start Measurement
   error = scd4x.startPeriodicMeasurement();
   if (error) {
     Serial.print("Error trying to execute startPeriodicMeasurement(): ");
@@ -81,7 +81,7 @@ void sensor_scd4x_get(void) {
   char errorMessage[256];
 
   Serial.print("sensor scd4x: ");
-  // 读取测量值
+  // Read Measurement
   uint16_t co2;
   float temperature;
   float humidity;

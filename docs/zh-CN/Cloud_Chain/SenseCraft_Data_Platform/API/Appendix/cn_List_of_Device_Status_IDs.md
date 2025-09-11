@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: 设备状态 ID 列表
+description: List_of_Device_Status_IDs
 title: 设备状态 ID 列表
 keywords:
 - Cloud and Chain
@@ -12,6 +12,7 @@ last_update:
   date: 02/14/2023
   author: Matthew
 ---
+
 
 <div class="post-header">
 <h1>设备状态 ID 列表</h1>
@@ -41,7 +42,7 @@ last_update:
 </tr>
 <tr>
 <td>3017</td>
-<td>电池充电状态（1: 充电中，2: 已充满，3: 未充满）</td>
+<td>电池充电状态（1：充电中，2：已充满，3：未充满）</td>
 </tr>
 <tr>
 <td>3900</td>
@@ -49,7 +50,7 @@ last_update:
 </tr>
 </tbody>
 </table>
-<h2 id="lorapp-node" class="clickable-header top-level-header">LoraPP 节点</h2>
+<h2 id="lorapp-node" class="clickable-header top-level-header">LoraPP Node</h2>
 <i class="icon-arrow-up back-to-top"></i>
 <table>
 <thead>
@@ -65,7 +66,7 @@ last_update:
 </tr>
 </tbody>
 </table>
-<h2 id="lorawan-node" class="clickable-header top-level-header">LoraWan 节点</h2>
+<h2 id="lorawan-node" class="clickable-header top-level-header">LoraWan Node</h2>
 <i class="icon-arrow-up back-to-top"></i>
 <table>
 <thead>

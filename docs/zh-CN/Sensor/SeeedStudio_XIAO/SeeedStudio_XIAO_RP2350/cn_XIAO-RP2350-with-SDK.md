@@ -80,7 +80,7 @@ Seeed Studio XIAO RP2350 由 RP2350 微控制器驱动，在小巧的外形尺�
 </TabItem>
 </Tabs>
 
-如果这是您第一次运行设置，当您点击 `Create` 时，扩展将为您下载和管理 SDK。在 Windows 上，SDK 通常会放置在 `%userprofile%\.pico-sdk` 中。设置所需的时间取决于您的网络速度。完成后，将打开一个包含您项目的新窗口。
+如果这是您第一次运行设置，当您点击 `Create` 时，扩展将为您下载和管理 SDK。在 Windows 上，SDK 通常会放置在 `%userprofile%.pico-sdk` 中。设置所需的时间取决于您的网络速度。完成后，将打开一个包含您项目的新窗口。
 
 #### 步骤 4：构建项目
 

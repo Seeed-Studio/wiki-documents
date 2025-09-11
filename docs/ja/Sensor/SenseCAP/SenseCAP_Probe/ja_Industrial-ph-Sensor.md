@@ -6,52 +6,57 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sensor/SenseCAP/SenseCAP_Probe/Industrial-ph-Sensor
 last_update:
-  date: 05/15/2025
+  date: 1/16/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-![液体レベルセンサー](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png)
+![Liquid Level Sensor](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/101990666_2.png)
 
 ## 製品説明
 
-pHメーターは、水溶液中の水素イオン活性を測定し、その酸性または塩基性をpHとして示します。（Wikipedia: pHメーター）。pHレベルは多くの場面で重要な指標であり、特に土壌条件や水質の監視において重要です。pHセンサーは、農業、園芸、水耕栽培、アクアポニックス、プールやスパ、下水処理、教育、環境モニタリングなど、さまざまな用途で広く使用されています。
+pHメーターは水溶液中の水素イオン活性を測定し、pHとして表される酸性度または塩基性度を示します（Wikipedia: pHメーター）。pHレベルは多くのシナリオで重要な指標であり、特に土壌条件や水質の監視において重要です。pHセンサーは農業、園芸、水耕栽培、アクアポニックス、プール・スパ、下水処理、教育、環境監視、その他多くの用途で広く使用されています。
 
-このpHセンサー（S-pH-01A）は、業界標準に基づいて設計されています。国際的に進んだ固体電解質と広い面積のポリテトラフルオロエチレン液体接合部を採用しており、詰まりにくく、メンテナンスが容易です。また、ATC（自動温度補償）機能を備えており、温度変化に関係なく正確なデータを保証します。このpHセンサーはIP65規格に準拠しており、防水性が高く、プロフェッショナルな用途での長期的な使用に耐えることができます。
+このpHセンサー（S-pH-01A）は業界標準で設計されています。国際的に先進的な固体誘電体と大面積ポリテトラフルオロエチレン液絡部を採用し、詰まりにくく保守が便利です。ATC（自動温度補償）機能を搭載し、温度変化に関係なくデータの精度を確保します。このpHセンサーはIP65等級で、密閉防水仕様であり、専門的な用途での長期間の連続使用に耐えることができます。
 
-このpHセンサーは、MODBUS-RTU RS485シリアル通信プロトコルまたは4~20mAの電流出力を備えています。他のデバイス（データロガー、コントローラー、ディスプレイなど）と簡単に接続および統合できます。このコストパフォーマンスの高いpHセンサーは、低消費電力、コンパクトなサイズ、携帯性、高い統合性を特徴としており、屋内外の環境で広く適用可能です。
+このpHセンサーはMODBUS-RTU RS485シリアル通信プロトコルまたは4~20mA電流出力を備えています。データロガー、コントローラー、ディスプレイなどの他のデバイスと簡単に接続・統合できます。このコストパフォーマンスに優れたpHセンサーは低消費電力、コンパクトサイズ、携帯性、高統合性を特徴とし、屋内外の環境で広く適用できます。
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/RS485-pH-Sensor-S-pH-01A-p-4632.html)
 
 ## 特徴
 
-* **高性能:** 高精度、応答速度が速い、再現性が良い
-* **汎用プロトコル:** MODBUS RS-485または4~20mA電流
-* **広範囲の電源供給:** 3.6V ~ 30V
-* **耐久性:** 土壌や水中に長期間浸漬可能
-* **メンテナンス不要:** 先進的な接合設計、詰まりなし
-* **耐久性:** 耐腐食性、自動温度補償
-* **ユーザーフレンドリー:** 設置と統合が簡単
+- **高性能：** 高精度、高速応答、優れた再現性
+- **汎用プロトコル：** MODBUS RS-485または4~20mA電流
+- **広範囲電源：** 3.6V ~ 30V
+- **堅牢性：** 土壌や水中への長期浸漬に適している
+- **メンテナンスフリー：** 先進的な接合部設計、詰まりなし
+- **耐久性：** 耐腐食性、自動温度補償
+- **使いやすさ：** 設置・統合が簡単
 
-## 応用分野
+## 用途
 
-* 農業: 温室、アクアポニックス、水耕栽培、作物栽培など
-* 畜産業: 牧草地、草原、牧場
-* 林業および園芸
-* 下水処理
-* プールおよびスパ
-* 科学実験
-* 教育プロジェクト
-* その他の環境モニタリングシナリオ
+- 農業：温室、アクアポニックス、水耕栽培、作物栽培など
+- 畜産業：牧草地、草原、牧場
+- 林業・園芸
+- 下水処理
+- プール・スパ
+- 科学実験
+- 教育プロジェクト
+- その他の環境監視シナリオ
 
 ## 仕様
 
 <div className="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph">
 </div>
 
+<!-- <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0; margin:10px}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
+.tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
+</style> -->
 <div>
   <table className="tg" data-data-style="undefined;table-layout: fixed; width: 677px;"><colgroup><col data-data-style="width: 223px;" /><col data-data-style="width: 454px;" /></colgroup>
     <tbody>
@@ -70,7 +75,8 @@ pHメーターは、水溶液中の水素イオン活性を測定し、その酸
       </tr>
     </tbody>
   </table>
-  <div>
+
+<div>
     <table className="tg" data-data-style="undefined;table-layout: fixed; width: 677px;"><colgroup><col data-data-style="width: 223px;" /><col data-data-style="width: 454px;" /></colgroup>
       <tbody>
         <tr><th className="tg-luhj" colSpan={2}>一般パラメータ</th></tr>
@@ -96,7 +102,7 @@ pHメーターは、水溶液中の水素イオン活性を測定し、その酸
         </tr>
         <tr>
           <td className="tg-vkfu">消費電流</td>
-          <td className="tg-vkfu">最大6mA @24V DC</td>
+          <td className="tg-vkfu">最大 6mA @24V DC</td>
         </tr>
         <tr>
           <td className="tg-vkfu">動作温度</td>
@@ -112,7 +118,7 @@ pHメーターは、水溶液中の水素イオン活性を測定し、その酸
         </tr>
         <tr>
           <td className="tg-vkfu">設置方法</td>
-          <td className="tg-vkfu">全埋設または測定対象媒体へのプローブ挿入</td>
+          <td className="tg-vkfu">完全埋設または測定対象媒体にプローブを挿入</td>
         </tr>
         <tr>
           <td className="tg-vkfu">デバイス重量</td>
@@ -120,7 +126,8 @@ pHメーターは、水溶液中の水素イオン活性を測定し、その酸
         </tr>
       </tbody>
     </table>
-  </div>
+
+</div>
   <div className="wide-screen-container__39MF" data-is-widescreen="false" data-type="paragraph" />
 </div>
 
@@ -132,7 +139,7 @@ pHメーターは、水溶液中の水素イオン活性を測定し、その酸
 
 ![ew](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/Image/Wiring_Diagram.jpg)
 
-## ソース
+## 資料
 
-* [pHセンサー データシート](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
-* [pHセンサー ユーザーマニュアル](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)
+- [pHセンサーデータシート](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
+- [pHセンサーユーザーマニュアル](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)

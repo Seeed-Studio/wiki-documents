@@ -1,83 +1,83 @@
 ---
-description: reComputerでRivaとLlama2をデプロイする
+description: reComputer 上で Riva と Llama2 をデプロイ
 title: ローカル音声チャットボット
 keywords:
 - reComputer
 - LLM
-- チャットボット
+- Chatbot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Local_Voice_Chatbot
 last_update:
-  date: 05/15/2025
+  date: 01/14/2024
   author: Youjiang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# ローカル音声チャットボット : reComputerでRivaとLlama2をデプロイする
+# Local Voice Chatbot : reComputer に Riva と Llama2 をデプロイ
 
 ## はじめに
 
-人工知能技術が急速に進化する中で、音声インタラクションは人間とコンピュータの重要なインタラクションモードとなっています。特にスマートホーム、パーソナルアシスタント、カスタマーサービスサポートなどの分野では、音声チャットボットの需要が大幅に増加しています。しかし、既存の音声チャットボットの多くはクラウドコンピューティングサービスに依存しており、データプライバシーやネットワーク遅延に関する懸念が生じることがあります。
+AI 技術の急速な進化にともない、音声インタラクションはヒューマン・コンピュータ・インタラクションにおいてますます重要な手段となっています。特にスマートホーム、パーソナルアシスタント、カスタマーサポートといった分野では、音声チャットボットの需要が大きく伸びています。しかし、既存の音声チャットボットの多くはクラウドコンピューティングサービスに依存しており、データのプライバシーやネットワーク遅延に対する懸念が生じます。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/workflow.png" />
 </div>
 
-このプロジェクトでは、これらの問題に対処するために、ローカルで動作する音声チャットボットを構築することを目指しています。[Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html)と[Meta Llama2](https://huggingface.co/meta-llama)を活用し、安全でプライバシーを保護し、迅速に応答する音声インタラクションシステムを開発しました。
+本プロジェクトは、ローカルで動作する音声チャットボットを構築することで、こうした課題に対処することを目的としています。[Nvidia Riva](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html) と [Meta Llama2](https://huggingface.co/meta-llama) を活用し、安全・プライベートかつ高速応答の音声対話システムを実現します。
 
 ## 前提条件
 
-- 16GB以上のメモリを搭載したJetsonデバイス。
-- ハードウェアデバイスは、jetpack [5.1.1](https://wiki.seeedstudio.com/ja/reComputer_Intro/)オペレーティングシステムが事前にフラッシュされている必要があります。
-- [スピーカーとマイク](https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html?queryID=dd9c8d91c63781d66776771a7ee5ec01&objectID=4247&indexName=bazaar_retailer_products)。
+- メモリ 16GB 以上の Jetson デバイス
+- ハードウェアは事前に JetPack [5.1.1](https://wiki.seeedstudio.com/reComputer_Intro/) をフラッシュしておくこと
+- [スピーカーとマイク](https://www.seeedstudio.com/ReSpeaker-USB-Mic-Array-p-4247.html?queryID=dd9c8d91c63781d66776771a7ee5ec01&objectID=4247&indexName=bazaar_retailer_products)
 
-**注意:** 私はすべての実験を[Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products)を使用して完了しましたが、メモリが少ないデバイスで小型モデルをロードすることも試すことができます。
+**注意:** すべての検証は [Jetson AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=012e528073e90bf80afd3880f3fc2b13&objectID=5569&indexName=bazaar_retailer_products) を使用して行いましたが、メモリ容量が少ないデバイスでも小さなモデルを読み込むことで試すことができます。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/jetson_agx_orin.jpg" />
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products" target="_blank"><strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong></a>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products" target="_blank">
+        <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
+    </a>
 </div>
 
-## 始めるにあたって
+## はじめ方
 
 ### ハードウェア接続
-- 音声入力/出力デバイスをreComputerに接続します。
-- reComputerの電源を入れ、正常なネットワークアクセスがあることを確認します。
 
-### Rivaサーバーのインストール
-詳細については[こちら](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded)を参照してください。
+- 音声入出力デバイスを reComputer に接続します。
+- reComputer の電源を入れ、ネットワークへ正常に接続できることを確認します。
 
-**ステップ1.** [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=)にアクセスしてログインします。
+### Riva Server のインストール
+
+より詳細な情報は[こちら](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/quick-start-guide.html#embedded)を参照してください。
+
+**Step1.**  [NVIDIA NGC](https://catalog.ngc.nvidia.com/?filters=&orderBy=weightPopularDESC&query=) にアクセスしてログインします。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_1.png" />
 </div>
 
-**ステップ2.** NGC APIキーを取得します。
+**Step2.** NGC の API キーを取得します。
 
-`アカウント(右上隅)` --> `設定` --> `APIキーを取得` --> `APIキーを生成` --> `確認`
+`Account（右上）` --> `Setup` --> `Get API Key` --> `Generate API Key` --> `Confirm`
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_2.png" />
 </div>
 
 :::info
-生成されたAPIキーを記録してください。
+生成された API キーを記録してください。
 :::
 
-**ステップ3.** reComputerでNGCを設定します。
+**Step3.** reComputer 上で NGC を設定します
 
-reComputerのターミナルを開きます（reComputerのデスクトップでショートカットキー`Ctrl+Alt+T`を使用してターミナルをすばやく開くか、別のコンピュータを使用してreComputerのターミナルにリモートアクセスできます）。以下のコマンドを順に入力します。
+reComputer のターミナルを開きます（reComputer のデスクトップでは `Ctrl+Alt+T` で素早く開けます。別の PC からリモートで reComputer のターミナルにアクセスしても構いません）。以下のコマンドを順に入力します。
 
 ```sh
 cd ~ && mkdir ngc_setup && cd ngc_setup
@@ -87,16 +87,16 @@ echo "export PATH=\"\$PATH:$(pwd)/ngc-cli\"" >> ~/.bash_profile && source ~/.bas
 ngc config set
 ```
 
-ターミナルのインタラクティブインターフェースで関連情報を入力します。
+ターミナルの対話式インターフェースで、指示に従って情報を入力します。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_3.png" />
 </div>
 
-**ステップ4.** reComputerでRivaサーバーをインストールして実行します。
+**Step4.** reComputer に Riva サーバーをインストールして起動します。
 
-reComputerのターミナルで以下のコマンドを入力します。
+reComputer のターミナルで以下を実行します。
 
 ```sh
 cd ~ && mkdir riva_setup && cd riva_setup
@@ -104,18 +104,18 @@ ngc registry resource download-version nvidia/riva/riva_quickstart_arm64:2.13.1
 cd riva_quickstart_v2.13.1
 ```
 
-`Vim`を使用して設定ファイルを編集します。
+`Vim` を使って設定ファイルを編集します。
 
 ```sh
 vim config.sh
 
-# キーボードの`A`キーを押して編集モードに入ります。
-# 以下の指示に従って18行目と20行目を編集します。
+# キーボードの `A` を押して編集モードに入ります。
+# 18 行目と 20 行目を以下のとおり編集します。
 
 # service_enabled_nlp=true --> service_enabled_nlp=false
 # service_enabled_nmt=true --> service_enabled_nmt=false
 
-# キーボードの`ESC`キーを押して編集モードを終了し、ショートカット`Shift+Z Z`を使用して編集内容を保存してエディタを閉じます。
+# 編集を終えたら `ESC` を押し、`Shift+Z Z` のショートカットで保存して終了します。
 ```
 
 編集後の設定ファイル：
@@ -521,18 +521,18 @@ fi
 
 </details>
 
-同様の方法で `/etc/docker/daemon.json` を修正します。
+同様の手順で `/etc/docker/daemon.json` を編集します。
 
 ```sh
 sudo vim /etc/docker/daemon.json
-# この行を追加 >> "default-runtime": "nvidia"
+# 次の行を追加します >> "default-runtime": "nvidia"
 
-# キーボードで `ESC` を押して編集モードを終了し、ショートカット `Shift+Z Z` を使用して編集内容を保存し、エディタを閉じます。
+# 編集を終えたら `ESC` を押し、`Shift+Z Z` のショートカットで保存して終了します。
 
 sudo systemctl restart docker
 ```
 
-編集後の設定ファイルは以下のようになります：
+編集後の設定ファイルは次のようになります。
 
 <details>
 
@@ -552,7 +552,7 @@ sudo systemctl restart docker
 
 </details>
 
-以下のコマンドを使用して Riva を初期化し、起動します：
+以下のコマンドで Riva を初期化し、起動します。
 
 ```sh
 sudo bash riva_init.sh
@@ -560,17 +560,17 @@ sudo bash riva_start.sh
 ```
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/setup_riva_4.png" />
 </div>
 
 :::info
-注意：このターミナルを閉じずに維持してください。
+このターミナルを開いたままにしておく必要があることに注意してください。
 :::
 
-### LLM のインストールと実行
+### LLM のインストールと起動
 
-インストールプロセスを簡略化するために、Dusty の [jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/text-generation-inference) プロジェクトを参照して [text generation inference](https://github.com/huggingface/text-generation-inference) をインストールし、text generation inference を使用して [Llama2 7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) 大規模言語モデルをロードします。新しいターミナルを開き、以下のコマンドを実行してください。
+インストールを簡素化するため、Dusty の [jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/master/packages/llm/text-generation-inference) プロジェクトを参照して [text generation inference](https://github.com/huggingface/text-generation-inference) を導入し、[Llama2 7B](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) 大規模言語モデルを読み込みます。新しいターミナルを開き、次を実行します。
 
 ```sh
 cd ~
@@ -583,28 +583,28 @@ text-generation-launcher --model-id meta-llama/Llama-2-7b-chat-hf --port 8899
 ```
 
 :::info
-Hugging Face トークンは [こちら](https://huggingface.co/docs/hub/security-tokens) から取得できます。
+hugging face トークンは[こちら](https://huggingface.co/docs/hub/security-tokens)から取得できます。
 :::
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Local_Voice_Chatbot/install_run_llm.png" />
 </div>
 
 :::info
-注意：このターミナルを閉じずに維持してください。
+このターミナルを開いたままにしておく必要があることに注意してください。
 :::
 
-### ローカルチャットボットデモをクローンして実行してみる
+### ローカルのチャットボット・デモをクローンして実行してみる
 
-現在、少なくとも2つのターミナルが開いているはずです。一つは Riva サーバーを実行しており、もう一つは text generation inference サーバーを実行しています。次に、新しいターミナルを開いてデモを実行します。
+今、少なくとも 2 つのターミナルが開いているはずです。1 つは Riva サーバー、もう 1 つは text generation inference サーバーが動作中です。続いて、新しいターミナルを開いてデモを実行します。
 
 ```sh
 cd ~
 git clone https://github.com/yuyoujiang/Deploy-Riva-LLama-on-Jetson.git
 cd Deploy-Riva-LLama-on-Jetson
 
-# オーディオ入力/出力デバイスを確認します。
+# 音声入出力デバイスを確認
 python3 local_chatbot.py --list-input-devices
 python3 local_chatbot.py --list-output-devices
 
@@ -612,28 +612,29 @@ python3 local_chatbot.py --input-device <your device id> --output-device <your d
 # 例: python3 local_chatbot.py --input-device 25 --output-device 30
 ```
 
-## 効果のデモンストレーション
+## 動作デモ
 
 <div align="center">
 <iframe  width={560} height={315} src="https://www.youtube.com/embed/Nc3D-qITDoU?si=aWI7Z5IEprRKfuKE" title="YouTube video player" frameBorder={0} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
 </div>
 
-## 参考文献
+## 参考資料
+
 - [build-an-ai-chatbot-using-riva-and-openai](https://www.hackster.io/wxxniubi8/build-an-ai-chatbot-using-riva-and-openai-13dc41)
 - [https://github.com/dusty-nv/jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
 - https://github.com/huggingface/text-generation-inference
 - https://huggingface.co/meta-llama
 
-## 技術サポート & 製品に関する議論
+## テクニカルサポート & 製品ディスカッション
 
-弊社製品をご利用いただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しております。お客様の好みやニーズに合わせた複数のコミュニケーションチャネルをご用意しています。
+当社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。ご希望や用途に合わせて、以下の窓口をご利用ください。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

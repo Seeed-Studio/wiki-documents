@@ -121,7 +121,7 @@ XIAO ESP32S3 默认情况下不附带针脚，您需要准备自己的针脚并�
 **通过设备 AP 热点访问**
 
 1. 按住按钮 5 秒，直到蓝色指示灯慢闪，进入配置模式。
-2. AP 热点名称为 SenseCAP\_XXXXXX（6 位 MAC 地址），默认密码为 12345678；将您的电脑连接到此 AP 热点。
+2. AP 热点名称为 SenseCAP_XXXXXX（6 位 MAC 地址），默认密码为 12345678；将您的电脑连接到此 AP 热点。
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/12.png" /></div>
 

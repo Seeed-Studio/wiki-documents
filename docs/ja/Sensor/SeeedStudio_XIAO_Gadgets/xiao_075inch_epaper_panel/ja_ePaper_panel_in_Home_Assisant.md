@@ -621,7 +621,7 @@ display:
 
 この例では、ディープスリープモードを使用して電力を節約する方法を示します。情報は6時間ごとに更新されます。2000mAhのバッテリーで約3か月間動作可能です。
 
-以下のコードをコピーして、**captive\_portal** 部分に貼り付けてください（以下の画像を参照）。
+以下のコードをコピーして、**captive_portal** 部分に貼り付けてください（以下の画像を参照）。
 
 <details>
 
@@ -706,7 +706,7 @@ display:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/32.png" style={{width:800, height:'auto'}}/></div>
 
-サイドバーの「カレンダー（Calendar）」をクリックし、新しく3つのカレンダーを作成してください。名前は **calender**、**epaper\_event**、**new\_calendar** にします。別の名前を使用しても構いませんが、後でコード内で同じ名前を使用するようにしてください。
+サイドバーの「カレンダー（Calendar）」をクリックし、新しく3つのカレンダーを作成してください。名前は **calender**、**epaper_event**、**new_calendar** にします。別の名前を使用しても構いませんが、後でコード内で同じ名前を使用するようにしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/27.png" style={{width:800, height:'auto'}}/></div>
 

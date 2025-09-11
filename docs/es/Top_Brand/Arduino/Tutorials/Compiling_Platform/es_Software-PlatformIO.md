@@ -70,7 +70,7 @@ Haz clic en el botón "PlatformIO Home" en la barra de herramientas inferior de 
 
       - Para **Unix**: `~/.platformio`
 
-      - Para **Windows**: `C:\Users\{username}\.platformio` donde `{username}` es tu nombre de usuario.
+      - Para **Windows**: `C:\Users\{username}.platformio` donde `{username}` es tu nombre de usuario.
 
 2. Navega a la carpeta `platforms`.
 

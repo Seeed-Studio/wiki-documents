@@ -55,7 +55,7 @@ Primeros Pasos
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1. Haz clic en [este enlace](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) para **iniciar sesión o registrarte en mbed**
-2. Importa el programa mbed\_blinky
+2. Importa el programa mbed_blinky
 3. Haz clic en el icono **Compile** de la barra de herramientas superior para compilar el programa, luego descarga un archivo hex compilado.
 4. Arrastra y suelta el archivo hex descargado en el disco MBED
 
@@ -96,7 +96,7 @@ Aplicaciones
 
     - Hazlo funcionar
 
-        1. Descarga [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1. Descarga [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2. Copia el archivo hex al disco MBED de tu Arch BLE
         3. Descarga [la aplicación Android Color Pixels](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
@@ -119,11 +119,11 @@ Si el dispositivo BLE se desconecta frecuentemente, podemos mejorar la estabilid
 
     - Hazlo funcionar
 
-        1. Descarga [Web\_Dashboard\_Arch\_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
+        1. Descarga [Web_Dashboard_Arch_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
         2. Copia el archivo hex al disco MBED de tu Arch Link
         3. Conecta el Grove - Sensor de Temperatura y Humedad Pro al conector Grove I2C
         4. Conecta el Arch Link a tu PC a través del cable USB
-        5. Abre un navegador web y visita [http://mbed.org/media/uploads/yihui/web\_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
+        5. Abre un navegador web y visita [http://mbed.org/media/uploads/yihui/web_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
 
 Si quieres cambiar el programa, haz clic en [este enlace](https://mbed.org/compiler/#import:/teams/Seeed/code/Web_Dashboard/;platform:Seeed-Arch-Link) para importar el programa Web Dashboard al IDE en línea de mbed.
 

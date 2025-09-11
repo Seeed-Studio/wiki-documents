@@ -18,7 +18,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tagoio.png" alt="pir" width={800} height="auto" /></p>
 
-在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN)，首先将您的 SenseCAP T1000 Tracker 连接到 TTS。
+在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN) 以首先将您的 SenseCAP T1000 Tracker 连接到 TTS。
 
 
 ## 配置 TagoIO
@@ -67,7 +67,7 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook_TTS.png" alt="pir" width={800} height="auto" /></p>
 
 
-设备连接后，您可以在 TagoIO 的 **Live Inspector** 选项卡中查看所有连接。
+设备连接后，您可以在 TagoIO 的 **Live Inspector** 选项卡中检查所有连接。
 
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/live_inspec.png" alt="pir" width={800} height="auto" /></p>

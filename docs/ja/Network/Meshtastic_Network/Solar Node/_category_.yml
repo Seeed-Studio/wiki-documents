@@ -1,4 +1,4 @@
-position: 2 # float position is supported
+position: 3 # float position is supported
 label: 'ソーラーノード'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: ja/solar_node
   title: ソーラーノード
-  description: SenseCAP Meshtastic 用ソーラーノード
+  description: Meshtastic用SenseCAPソーラーノード

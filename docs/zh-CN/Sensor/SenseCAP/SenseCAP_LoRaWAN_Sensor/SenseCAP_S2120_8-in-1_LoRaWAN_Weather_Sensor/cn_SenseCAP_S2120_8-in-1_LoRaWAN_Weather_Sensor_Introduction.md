@@ -14,12 +14,12 @@ last_update:
 
 [![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction146.png)](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)
 
-SenseCAP S2120 电池供电的8合1 LoRaWAN 气象传感器可测量空气温度、湿度、风速、风向、降雨量、光照强度、紫外线指数和大气压力。它具有超低功耗、可靠性能、内置蓝牙和应用服务，支持OTA配置和远程设备管理，从而实现低维护成本。它支持多种应用场景，如后院、花园、智慧农业、气象学、智慧城市等。
+SenseCAP S2120 电池供电的8合1 LoRaWAN 气象传感器可测量空气温度、湿度、风速、风向、降雨量、光照强度、紫外线指数和大气压力。它具有超低功耗、可靠性能、内置蓝牙和应用程序服务，支持OTA配置和远程设备管理，从而实现低维护成本。它支持多种应用场景，如后院、花园、智慧农业、气象学、智慧城市等。
 SenseCAP S21XX 兼容 LoRaWAN® V1.0.3 协议，可与 [LoRaWAN® 网关](https://www.seeedstudio.com/LoRaWAN-Gateway-c-1936.html)配合使用。
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction914.png)
 
-LoRaWAN® 网关可以提供使用此类传感器时所需的 LoRaWAN® 网络覆盖。S210X 可以连接到不同的 LoRaWAN® 网关，而 Seeed 提供的产品为您提供无缝的用户体验。
+LoRaWAN® 网关可以提供使用此类传感器所需的 LoRaWAN® 网络覆盖。S210X 可以连接到不同的 LoRaWAN® 网关，而 Seeed 提供的产品为您提供无缝的用户体验。
 
 Helium 网络：传感器在 Helium 网络覆盖的区域内工作（在 [Helium Explorer](https://explorer.helium.com/) 上查看）。您可以查看 [SenseCAP M1](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html) 和 [SenseCAP M2](https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5342.html)。
 
@@ -54,17 +54,17 @@ LoRaWAN 网络：传感器在 LoRaWAN® 网络中工作，如 The Things Network
 
 *注意：无频率限制。气象站可以随时切换到其他频率计划。*
 
-*S2120 制造时支持从 863MHz 到 928MHz 的通用频率计划，采用单一 SKU。也就是说，它可以支持以下频率计划：*
+*S2120 制造时支持从 863MHz 到 928MHz 的通用频率计划，在一个 SKU 中实现。也就是说，它可以支持以下频率计划：*
 
 |频率计划|通用名称|子频段|
 | :- | :- | :- |
-|EU863-870|EU868|\_\_\_|
-|US902-928|US915|子频段 1 到 8|
-|AU915-928|AU915|子频段 1 到 8|
-|AS923|AS923|AS923\_1, AS923\_2, AS923\_3, AS923\_4|
-|IN865-867|IN865|\_\_\_|
-|KR920-923|KR920|\_\_\_|
-|RU864-867|RU864|\_\_\_|
+|EU863-870|EU868|___|
+|US902-928|US915|子频段从 1 到 8|
+|AU915-928|AU915|子频段从 1 到 8|
+|AS923|AS923|AS923_1, AS923_2, AS923_3, AS923_4|
+|IN865-867|IN865|___|
+|KR920-923|KR920|___|
+|RU864-867|RU864|___|
 
 频率计划设置默认为无，在首次上电时通过应用程序通过蓝牙设置之前，它不会传输射频信号。并且可以随时更改为其他频率计划。
 

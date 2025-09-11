@@ -27,7 +27,6 @@ last_update:
 
 欢迎来到 Watcher 自定义和 SenseCraft 工具的世界！在本文中，我们将深入探讨个性化 Watcher 设备的激动人心的可能性，并探索 SenseCraft APP 提供的强大功能。无论您是希望为 Watcher 打造独特外观的新用户，还是寻求释放设备全部潜力的经验丰富的爱好者，本指南都将为您提供知识和灵感，让您的 Watcher 真正属于您自己。准备好踏上创意之旅，让我们一起揭开 Watcher 表达设计和 SenseCraft APP 设置的秘密。
 
-
 ## 基于蓝牙的 Watcher 设置
 
 这部分设置必须在设备和手机都启用蓝牙的情况下才能使用。
@@ -48,13 +47,13 @@ Watcher 设备上的 Wi-Fi 设置允许您连接到可用的无线网络，从�
 
 ### 基本设置
 
-Watcher 设备上的基本设置菜单提供了一系列选项来自定义您的用户体验。其中一个关键功能是控制 Watcher 上的 RGB LED 的能力。您可以根据自己的偏好或所处的环境轻松打开或关闭 RGB LED。当您想要节省电池寿命或减少视觉干扰时，这会很有用。
+Watcher 设备上的基本设置菜单提供了一系列选项来自定义您的用户体验。其中一个关键功能是控制 Watcher 上的 RGB LED 的能力。您可以根据您的偏好或所处的环境轻松打开或关闭 RGB LED。当您想要节省电池寿命或减少视觉干扰时，这会很有用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/33.png" style={{width:250, height:'auto'}}/></div>
 
 声音设置也可以在基本设置菜单中访问。在这里，您可以调整 Watcher 音频输出的音量以满足您的需求。无论您喜欢响亮清晰的通知还是更微妙的音频体验，您都可以根据自己的喜好微调声音设置。
 
-显示亮度是 Watcher 用户体验的另一个关键方面。基本设置菜单允许您调整 Watcher 显示屏的亮度，确保在各种照明条件下的最佳可见性。通过自定义显示亮度，您可以让 Watcher 在明亮的阳光下更容易阅读，或在低光环境中更暗，同时在需要时节省电池寿命。
+显示亮度是 Watcher 用户体验的另一个关键方面。基本设置菜单允许您调整 Watcher 显示屏的亮度，确保在各种照明条件下的最佳可见性。通过自定义显示亮度，您可以让 Watcher 在明亮的阳光下更容易阅读，或在低光照情况下更暗，同时在需要时节省电池寿命。
 
 最后，基本设置菜单使您能够设置和管理 Watcher 的日期、时间和时区。准确的计时对于正确的数据记录和与其他设备和服务的同步至关重要。通过设置正确的日期、时间和时区，您可以确保 Watcher 的监控数据准确地加上时间戳并与您的本地时间对齐。
 
@@ -62,21 +61,21 @@ Watcher 设备上的基本设置菜单提供了一系列选项来自定义您的
 
 ### SenseCraft 远程控制
 
-SenseCraft 远程控制功能是一个关键设置，它决定了 Watcher 设备如何与 SenseCraft 云服务通信。启用后，此功能在您的 Watcher 和 SenseCraft 云之间建立连接通道，允许您访问广泛的高级功能和服务，例如基于云的大型语言模型（LLM）和远程通知功能。
+SenseCraft 远程控制功能是一个关键设置，它决定了您的 Watcher 设备如何与 SenseCraft 云服务通信。启用后，此功能在您的 Watcher 和 SenseCraft 云之间建立连接通道，允许您访问广泛的高级功能和服务，例如基于云的大型语言模型（LLM）和远程通知功能。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/34.png" style={{width:250, height:'auto'}}/></div>
 
-但是，如果您选择禁用 SenseCraft 远程控制功能，您的 Watcher 将仅通过蓝牙与您的移动设备通信。虽然这对于本地控制和配置很有用，但这也意味着您将失去对强大的基于云的服务和远程通知功能的访问。此外，如果您的 Watcher 移出与移动设备的蓝牙范围，您就有完全失去对 Watcher 控制的风险。
+但是，如果您选择禁用 SenseCraft 远程控制功能，您的 Watcher 将仅通过蓝牙与您的移动设备通信。虽然这对于本地控制和配置很有用，但这也意味着您将失去对强大的基于云的服务和远程通知功能的访问。此外，如果您的 Watcher 移出您移动设备的蓝牙范围，您就有完全失去对 Watcher 控制的风险。
 
-要管理 SenseCraft 远程控制设置，只需导航到 Watcher 设备上的相应菜单，并根据需要打开或关闭该功能。通过仔细考虑您的需求并权衡云连接的好处，您可以就如何配置 Watcher 的这一重要设置做出明智的决定。
+要管理 SenseCraft 远程控制设置，只需导航到您的 Watcher 设备上的相应菜单，并根据需要打开或关闭该功能。通过仔细考虑您的需求并权衡云连接的好处，您可以就如何配置 Watcher 的这一重要设置做出明智的决定。
 
 ### HTTP 消息块
 
-Watcher 中的 HTTP 消息块功能是一个本地化的报警服务，与其他报警方法（如 RGB 报警、APP 报警和 UART 报警）一起运行。其主要目的是为用户提供完全本地化的消息推送服务，旨在保护用户隐私。与可能依赖外部平台或服务器的其他报警服务不同，HTTP 消息块被设计为专门与用户自己的 HTTP 端点配合工作，确保所有数据和通知都保留在用户的本地环境中。
+Watcher 中的 HTTP 消息块功能是一个本地化的报警服务，与其他报警方法（如 RGB 报警、APP 报警和 UART 报警）一起运行。其主要目的是为用户提供完全本地化的消息推送服务，旨在保护用户隐私。与可能依赖外部平台或服务器的其他报警服务不同，HTTP 消息块专门设计为仅与用户自己的 HTTP 端点配合使用，确保所有数据和通知都保留在用户的本地环境中。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/83.png" style={{width:250, height:'auto'}}/></div><br />
 
-要设置 HTTP 消息块，用户需要配置两个重要信息：**HTTP URL** 和 **HTTP Token**。这些详细信息由您自己的 HTTP 服务器或本地部署的软件（如 [Watcher APP](https://wiki.seeedstudio.com/cn/watcher_local_deploy/#software-preparation)）提供。如果您选择使用自己的 HTTP 服务器，请确保它设置正确并提供必要的 URL 和令牌。或者，如果您选择 Watcher APP，该软件将为您生成和管理这些配置详细信息。通过将配置数据保留在您自己的服务器上或 Watcher APP 本地，Watcher 为其用户维护了高水平的隐私和安全性，确保敏感信息保持在您的控制之下。
+要设置 HTTP 消息块，用户需要配置两个重要信息：**HTTP URL** 和 **HTTP Token**。这些详细信息由您自己的 HTTP 服务器或本地部署的软件（如 [Watcher APP](https://wiki.seeedstudio.com/watcher_local_deploy/#software-preparation)）提供。如果您选择使用自己的 HTTP 服务器，请确保正确设置并提供必要的 URL 和令牌。或者，如果您选择 Watcher APP，该软件将为您生成和管理这些配置详细信息。通过将配置数据保留在您自己的服务器上或 Watcher APP 本地，Watcher 为其用户维护了高水平的隐私和安全性，确保敏感信息保持在您的控制之下。
 
 :::caution
 如果您想使用完全本地的通知服务而不通过 SenseCraft，那么在配置消息通知时，请**不要**勾选 **APP 推送通知**，否则您的通知仍将通过 SenseCraft 然后推送到您的应用程序。并记住**勾选 HTTP 推送通知选项**。
@@ -92,7 +91,7 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 配置完成后，设备 AI 服务使 Watcher 能够利用用户的本地计算资源进行各种 AI 驱动的功能，包括语音交互、任务分解、图像分析和聊天机器人服务。
 
-对于重视在本地运行 AI 服务的灵活性和控制权的用户，Watcher 中的设备 AI 服务提供了一个全面且可定制的解决方案。有关设置和配置设备 AI 服务的详细信息，以及每个 AI 功能的深入说明，可以在 **[在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/cn/watcher_local_deploy/)** 中找到。
+对于重视在本地运行 AI 服务的灵活性和控制权的用户，Watcher 中的设备 AI 服务提供了一个全面且可定制的解决方案。有关设置和配置设备 AI 服务的详细信息，以及每个 AI 功能的深入说明，可以在**[在本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/watcher_local_deploy/)**中找到。
 
 :::caution
 如果您之前点击了私有 Watcher 服务，那么您将无法使用 SenseCraft 的云服务。当您突然发现无法从云服务获取消息时，请检查是否未选择 **SenseCraft**。
@@ -120,11 +119,11 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 ### 设备名称和设备组
 
-设备名称和设备组设置允许您个性化您的 Watcher 并组织多个设备以便于管理。通过为您的 Watcher 分配唯一名称，您可以在通过蓝牙连接或通过 SenseCraft APP 管理时快速识别它。如果您拥有多个 Watcher 设备，这将特别有用。
+设备名称和设备组设置允许您个性化您的 Watcher 并组织多个设备以便于管理。通过为您的 Watcher 分配唯一名称，您可以在通过蓝牙连接或通过 SenseCraft APP 管理时快速识别它。如果您拥有多个 Watcher 设备，这特别有用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/37.png" style={{width:250, height:'auto'}}/></div>
 
-此外，您可以将 Watcher 分配到特定的设备组，这在管理大量用于不同目的或位置的设备时非常有用。例如，您可能为家庭、办公室或户外监控创建单独的设备组。通过逻辑分组您的 Watcher 设备，您可以根据其指定用途或位置轻松定位、配置和控制它们。
+此外，您可以将您的 Watcher 分配到特定的设备组，这在管理大量用于不同目的或位置的设备时很有用。例如，您可能为家庭、办公室或户外监控创建单独的设备组。通过逻辑分组您的 Watcher 设备，您可以根据其指定的目的或位置轻松定位、配置和控制它们。
 
 ### 订阅
 
@@ -132,12 +131,11 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price.png" style={{width:250, height:'auto'}}/></div>
 
-
 ### 检查更新
 
 检查更新功能确保您的 Watcher 始终运行最新的固件和软件版本。通过定期检查更新，您可以在新功能、性能改进、错误修复和安全增强可用时立即访问它们。
 
-要检查更新，只需导航到 Watcher 设备上的检查更新菜单或 SenseCraft APP 内的相应选项。如果有可用更新，系统将提示您下载并安装。建议保持 Watcher 更新以确保最佳性能、稳定性和安全性。
+要检查更新，只需导航到您的 Watcher 设备上的检查更新菜单或 SenseCraft APP 内。如果有可用更新，系统将提示您下载并安装它。建议保持您的 Watcher 更新以确保最佳性能、稳定性和安全性。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/57.png" style={{width:250, height:'auto'}}/></div>
 
@@ -147,7 +145,7 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 ### 删除检测历史
 
-删除检测历史功能允许您清除存储在 SenseCraft APP 内的历史警报数据。当您想要整理警报历史或保持对最近事件的更集中视图时，这会很有用。
+删除检测历史功能允许您清除存储在 SenseCraft APP 内的历史警报数据。当您想要整理警报历史或保持对最近事件的更集中视图时，这可能很有用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/38.png" style={{width:250, height:'auto'}}/></div>
 
@@ -159,10 +157,10 @@ Watcher 中的设备 AI 服务是一个强大的功能，允许用户直接在�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/39.png" style={{width:250, height:'auto'}}/></div>
 
-要删除设备，请在 Watcher 设置或 SenseCraft APP 中找到删除设备选项。在确认删除之前，请确保您已知此过程是不可逆的。一旦删除设备，它将不再与您的账户关联，如果您希望将来再次使用它，则需要重新添加。
+要删除设备，请在 Watcher 的设置或 SenseCraft APP 内找到删除设备选项。在确认删除之前，请确保您已知道此过程是不可逆的。一旦您删除设备，它将不再与您的账户关联，如果您希望将来再次使用它，您需要重新添加它。
 
 :::note
-在应用删除设备后，如果您想要重新绑定设备，还需要在设备设置中执行恢复出厂设置。
+在应用删除设备后，如果您想要重新绑定设备，您还需要在设备设置中执行恢复出厂设置。
 :::
 
 ## Watcher 动画
@@ -183,7 +181,6 @@ Watcher 设备提供了一种独特且引人入胜的方式，通过自定义动
 
 无论您选择哪种方法，每个图像都应该是 **PNG** 格式，分辨率为 **412x412** 像素，以确保在 Watcher 屏幕上的最佳显示质量。上传后，这些图像将被组合形成无缝动画，用您的个性化表情让您的 Watcher 栩栩如生。
 
-
 ### 转换和调整图像大小
 
 如果您想要的图像还不是 PNG 格式或不符合所需的 412x412 分辨率，您可以使用各种工具轻松转换和调整它们的大小：
@@ -196,7 +193,7 @@ Watcher 设备提供了一种独特且引人入胜的方式，通过自定义动
 
 ### 上传您的自定义动画
 
-一旦您准备好了一系列 PNG 图像，就是时候在您的 Watcher 上让您的自定义动画栩栩如生了。将您的 Watcher 连接到 SenseCraft APP 并导航到"动画"页面。在这里，您会找到几个允许动画自定义的 Watcher 状态，包括**待机**、**聆听**、**说话**、**观察空间**和**问候**。
+一旦您准备好了一系列 PNG 图像，就是时候在您的 Watcher 上让您的自定义动画栩栩如生了。将您的 Watcher 连接到 SenseCraft APP 并导航到"动画"页面。在这里，您会发现几个允许动画自定义的 Watcher 状态，包括**待机**、**聆听**、**说话**、**观察空间**和**问候**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/43.png" style={{width:250, height:'auto'}}/></div>
 
@@ -206,7 +203,7 @@ Watcher 设备提供了一种独特且引人入胜的方式，通过自定义动
 上传自定义动画时，请记住每个图像都应该是 **PNG** 格式，分辨率为 **412x412** 像素，以在 Watcher 屏幕上获得最佳显示质量。您上传的图像将替换所选 Watcher 状态的默认动画，让您可以个性化设备的表情，为您的监控体验增添独特的触感。
 :::
 
-## 致设计师的呼吁：让您的创意闪耀！
+## 致设计师的呼吁：让您的创意闪耀
 
 在 SenseCraft，我们相信创意和协作的力量能够带来令人难以置信的创新。这就是为什么我们邀请来自各个背景的设计师贡献他们独特的视角和技能，帮助扩展 Watcher 的动画可能性。
 

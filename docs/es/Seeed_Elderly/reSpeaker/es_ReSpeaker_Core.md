@@ -86,8 +86,8 @@ ReSpeaker es una interfaz de voz modular y abierta para hackear las cosas que te
 - GPIO2/I2S_LRCLK: Controla codificador/decodificador externo, Reloj de muestra de canal izquierdo/derecho
 - GPIO3/I2S_BCLK: Controla codificador/decodificador externo, Reloj de bit
 - MCLK_OUT: Reloj maestro para dispositivo externo
-- HP\_SEL: Selección de canal de auriculares. Si usas ReSpeaker Mic Array para salida de audio, configura HP_SEL en alto
-- HP\_L: Canal izquierdo de audio analógico desde ReSpeaker Mic Array
+- HP_SEL: Selección de canal de auriculares. Si usas ReSpeaker Mic Array para salida de audio, configura HP_SEL en alto
+- HP_L: Canal izquierdo de audio analógico desde ReSpeaker Mic Array
 - HP_R: Canal derecho de audio analógico desde ReSpeaker Mic Array
 - AGND: Tierra analógica para audio
 
@@ -376,7 +376,7 @@ if __name__ == '__main__':
     main()                  
 ```
 
-Después de que aparezca "INFO:mic:Start Detecting", intenta decir "ReSpeaker" para activar el programa, y di "play music" para que reproduzca música. Entonces ReSpeaker reproducirá "Tchaikovsky\_Concerto\_No.1p.mp3" en la ruta actual con la herramienta **madplay**.
+Después de que aparezca "INFO:mic:Start Detecting", intenta decir "ReSpeaker" para activar el programa, y di "play music" para que reproduzca música. Entonces ReSpeaker reproducirá "Tchaikovsky_Concerto_No.1p.mp3" en la ruta actual con la herramienta **madplay**.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 
@@ -504,7 +504,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 
 **P9: ¿Cómo soportar google speech u otro motor de Voz a Texto (STT)?**
 
-- Instala la biblioteca speech\_recognition siguiendo la [guía](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
+- Instala la biblioteca speech_recognition siguiendo la [guía](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
 
 **P10: Error al ejecutar Alexa con el error "IOError: [Errno -9998] Invalid number of channels"**
 

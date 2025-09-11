@@ -118,14 +118,14 @@ Usage
 
 **Step 2**: Connect Serial camera to PC with USB to use serial converter tool UartSBee
 
-| Serial camera | Uart\_SB v3.1 |
+| Serial camera | Uart_SB v3.1 |
 |---------------|---------------|
 | GND (black)   | GND           |
 | VCC (red)     | VCC           |
 | RX (white)    | TX            |
 | TX (Yellow)   | RX            |
 
-**Step 3:** Connect the Uart\_SB v3.1 with Computer and Open the vc0703CommTool software. Choose the correct COM number of the port you link to the camera, default baudrate 115200 ,and then open the port.
+**Step 3:** Connect the Uart_SB v3.1 with Computer and Open the vc0703CommTool software. Choose the correct COM number of the port you link to the camera, default baudrate 115200 ,and then open the port.
 
 **Step 4:** Click the button "Get Version" and it will reset the camera.
 

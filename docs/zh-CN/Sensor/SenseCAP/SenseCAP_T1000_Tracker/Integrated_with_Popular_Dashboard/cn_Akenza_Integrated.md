@@ -26,14 +26,14 @@ last_update:
 
 :::info
 **应用场景**：
-适用于各种用例的室内/室外资产追踪：<br/>
+各种用例的室内/室外资产追踪：<br/>
 国际资产追踪<br/>
 设备监控<br/>
 共享设备追踪等。<br/>
 个人安全场景（养老院、搜救）得益于 SOS 按钮和内置蜂鸣器。<br/>
 
 **产品特性**：<br/>
-3 种定位技术适用于室内和室外：GNSS、蓝牙和 Wi-Fi<br/>
+3 种室内外定位技术：GNSS、蓝牙和 Wi-Fi<br/>
 温度、光线和运动传感器<br/>
 SOS 按钮和蜂鸣器<br/>
 卡片尺寸设备，厚度仅 6.5mm
@@ -58,7 +58,7 @@ SOS 按钮和蜂鸣器<br/>
 
 要创建**数据流**，请转到 `数据流` 并选择 `创建数据流`。
 
-选择 `LoRa` 作为您的设备连接器。如果您已经集成了 TTN 账户，您将在此处看到它列出。如果您没有自己的账户，可以使用 akenza 的[连接即服务](https://docs.akenza.io/akenza.io/get-started/your-integration)。
+选择 `LoRa` 作为您的设备连接器。如果您已经集成了 TTN 账户，您将在此处看到它。如果您没有自己的账户，可以使用 akenza 的[连接即服务](https://docs.akenza.io/akenza.io/get-started/your-integration)。
 
 选择 The Things Network。
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FBNwN5xlVesDpVxHQ3H4d%2FT1000-DF.png?alt=media&token=540e39fd-bea3-46dd-84a7-6af601e772f7" alt="pir" width={800} height="auto" /></p>
@@ -67,7 +67,7 @@ SOS 按钮和蜂鸣器<br/>
 
 **设备类型**指定用于解码来自设备数据的有效载荷解码器。
 
-使用搜索字段查找 **T1000** 设备并相应地选择设备类型。继续进行到输出连接器。
+使用搜索字段查找 **T1000** 设备并相应地选择设备类型。继续进行输出连接器。
 
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FUuglz0pXA3SEsX59cdxJ%2FT1000-DF-2.png?alt=media&token=16c0dd80-f402-4477-857b-b0de9601b27b" alt="pir" width={800} height="auto" /></p>
 
@@ -119,7 +119,7 @@ Seeed 的 SenseCAP Mate 应用程序允许您配置追踪器的不同工作模�
 ​
 ​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2F5KtoZmSstaZQ7vMLevdo%2FT1000-downlink.png?alt=media&token=e8d29de7-9b7a-4c57-8376-443ceb8c9ee1" alt="pir" width={800} height="auto" /></p>
 
-### 🚀通过地理围栏和地图视图进一步探索
+### 🚀使用地理围栏和地图视图进一步探索
 
 现在您已经从设备接收到位置数据，您可以利用 akenza 的其他资产追踪功能，即地理围栏逻辑块和仪表板构建器。
 
@@ -137,6 +137,6 @@ Seeed 的 SenseCAP Mate 应用程序允许您配置追踪器的不同工作模�
 
 只需前往仪表板构建器并创建一个新的仪表板。或者，您可以使用资产追踪模板作为起点。添加地图组件并选择 T1000 追踪器作为数据源。选择传感器的纬度和经度读数，如果需要，添加额外的标记数据点（例如电池电量）。
 
-现在您可以在地图上实时跟踪您的资产，甚至可以通过点击设备图标旁边的追踪来显示它们的路径。
+您现在可以在地图上实时跟踪您的资产，甚至可以通过点击设备图标旁边的追踪来显示它们的路径。
 
 ​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FaCi1AyERgs0q0L1Gidjq%2FT1000-map.png?alt=media&token=5d461816-1e73-48ab-bbd8-3edb8bc139f8" alt="pir" width={800} height="auto" /></p>

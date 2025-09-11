@@ -16,7 +16,7 @@ SenseCAP Indicator 中有两个 Grove 接口用于连接 Grove 模块，一个�
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/new-grove.png"/></div>
 
 
-本仓库将介绍如何在 SenseCAP Indicator 上使用 Grove IO。这让您可以享受 [Grove 生态系统](https://www.seeedstudio.com/category/Grove-c-1003.html) 的即插即用功能，以及使用 RP2040 兼容的 GPIO！
+本仓库将介绍如何在 SenseCAP Indicator 上使用 Grove IO。这使您能够享受 [Grove 生态系统](https://www.seeedstudio.com/category/Grove-c-1003.html) 的即插即用功能，以及使用 RP2040 兼容的 GPIO！
 
 # **Grove(ADC)**
 
@@ -28,7 +28,7 @@ SenseCAP Indicator 中有两个 Grove 接口用于连接 Grove 模块，一个�
 
 ## **示例代码**：
 
-此示例代码介绍如何在 grove ADC 接口中连接[光传感器](/cn/Grove-Light_Sensor)。
+此示例代码介绍如何在 grove ADC 接口中连接[光传感器](/Grove-Light_Sensor)。
 输出信号是模拟值，光线越亮，值越大。
 
 ```cpp

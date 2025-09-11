@@ -1,6 +1,6 @@
 ---
-description: reTerminal DM Node-Red の使い方ガイド
-title: reTerminal DM Node-Red の使い方ガイド
+description: reTerminal DM Getting Started with Node-Red
+title: reTerminal DM Getting Started with Node-Red
 keywords:
   - Edge
   - reTerminal-DM
@@ -8,95 +8,91 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-DM-Getting-Started-with-Node-Red
 last_update:
-  date: 05/15/2025
+  date: 04/04/2023
   author: Peter Pan
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
-# reTerminal DM Node-Red の使い方ガイド
+# reTerminal DM Getting Started with Node Red
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 <br />
 
-> Node-RED は、ハードウェアデバイス、API、オンラインサービスを新しく興味深い方法で接続するためのプログラミングツールです。
-> ブラウザベースのエディタを提供しており、パレット内の幅広いノードを使用してフローを簡単に接続し、ワンクリックでランタイムにデプロイできます。
+> Node-REDは、ハードウェアデバイス、API、オンラインサービスを新しく興味深い方法で接続するためのプログラミングツールです。
+> パレット内の幅広いノードを使用してフローを簡単に接続できるブラウザベースのエディタを提供し、ワンクリックでランタイムにデプロイできます。
 >
 > — nodered.org
 
-reTerminal DM は、デジタル I/O、CAN バス、RS485、RS232 などの豊富な拡張性とハイブリッド接続性、WiFi、BLE、\*4G、\*LoRa® などの強力な無線通信機能を備えています。Node-RED は、それらすべてを統合できる最高のローコードプログラミングツールの 1 つです。また、Node-RED の Dashboard ノードを使用することで、10.1 インチの 10 点マルチタッチ高感度静電容量パネルを現場のヒューマンマシンインターフェースとして構成および利用することができます。
+reTerminal DMは、デジタルI/O、CANバス、RS485、RS232などの豊富な拡張性とハイブリッド接続性、およびWiFi、BLE、\*4G、\*LoRa®などの強力なワイヤレス通信機能を備えているため、Node-REDはこれらすべてを統括できる最高のローコードプログラミングツールの1つです。Node-RED Dashboardノードのおかげで、10.1インチ10点マルチタッチ高感度静電容量パネルと組み合わせて設定・活用し、現場でのヒューマンマシンインターフェース目的に使用できます。
 
-> \*4G および LoRa® モジュールは、reTerminal DM にデフォルトでは付属していません。関連するモジュールを別途購入してください。
+> \*4Gおよび LoRa® モジュールは、reTerminal DMにデフォルトでは付属していません。関連するモジュールを適宜購入してください。
 
-以下は、Node-RED をセットアップし、reTerminal DM 上で Node-RED インターフェースに慣れるためのガイドです。
+以下は、reTerminal DM上でNode-REDのセットアップ方法とNode-REDインターフェースに慣れるための入門ガイドです。
 
 :::tip
-* **Raspbian OS** ユーザーは次のセクションに進んでください: [Node-RED のインストール](#install-and-setting-up-node-red)
-* **Sensecraft Edge OS** ユーザーは次のセクションに進んでください: [Node-RED に慣れる](#getting-familiar-with-node-red)。Sensecraft Edge OS には Node-RED がプリインストールされています。
+- **Raspbian OS** ユーザーは: [Node-REDのインストール](#install-and-setting-up-node-red) へお進みください
+- **Sensecraft Edge OS** ユーザーは: [Node-REDに慣れる](#getting-familiar-with-node-red) へお進みください。Sensecraft Edge OSにはNode-REDがプリインストールされています
+
 :::
 
-## Raspbian OS に Node-RED をインストールして設定する
+## Raspbian OS上でのNode-REDのインストールとセットアップ
 
-reTerminal DM に新しいオペレーティングシステムをセットアップした後（[reTerminal DM に OS をインストールする](/ja/reterminal-dm-flash-OS/) を参照）、以下の手順に従って Node-RED をセットアップしてください。
+[reTerminal DMにOSをインストール](/reterminal-dm-flash-OS/)に従ってreTerminal DMに新しいオペレーティングシステムのセットアップが完了したら、以下の手順に従ってNode-REDをセットアップしてください。
 
-### Node-RED のインストール
+### Node-REDのインストール
 
-* **STEP 1:** reTerminal DM にアクセスする
+- **ステップ 1:** reTerminal DMへのアクセス
 
-  * オプション 1: マウスとキーボードを直接接続する
+  - オプション 1: マウスとキーボードを直接接続
 
-    reTerminal DM 上で `Terminal` アプリを開いてください。
+    reTerminal DM上で`Terminal`アプリを開いてください。
 
-    reTerminal DM がインターネットに接続されていることを確認してください。
+    reTerminal DMがインターネットに接続されていることを確認してください。
 
-  * オプション 2: SSH を使用する
+  - オプション 2: SSHを使用
 
-    ホストコンピュータがネットワーク経由で reTerminal DM にアクセスでき、reTerminal DM がインターネットに接続されていることを確認してください。
+    ホストコンピュータがネットワーク経由でreTerminal DMにアクセスでき、reTerminal DMがインターネットに接続されていることを確認してください
 
-    **Windows の場合:**
+    **Windows上で:**
 
-      **PowerShell** プログラムを開き、次のコマンドを入力してください: `ssh {USERNAME}@{RETERMINALDM_IP_ADDRESS}`。`{USERNAME}` と `{RETERMINALDM_IP_ADDRESS}` は設定に応じて置き換えてください。
-            
-      例: 私の場合、`{USERNAME}` は `pi`、`{RETERMINALDM_IP_ADDRESS}` は `192.168.43.100` です。
+      **PowerShell**プログラムを開き、`ssh {USERNAME}@{RETERMINALDM_IP_ADDRESS}`と入力してください。`{USERNAME}`と`{RETERMINALDM_IP_ADDRESS}`をあなたのセットアップに応じて置き換えてください：
 
-      ```sh
-      ssh pi@192.168.43.100
-      ```
-      
-      次に、reTerminal DM にセットアップしたオペレーティングシステムの `{USER}` のパスワードを入力してください。
-      
-      例: Raspbian OS のデフォルトのログイン資格情報は以下の通りです。
-       * ユーザー名: `pi`
-       * パスワード: `raspberry`
-
-    **Mac/Linux の場合:**
-
-      **Terminal** アプリを開き、次のコマンドを入力してください: `ssh {USERNAME}@{RETERMINALDM_IP_ADDRESS}`。`{USERNAME}` と `{RETERMINALDM_IP_ADDRESS}` は設定に応じて置き換えてください。
-      
-      例: 私の場合、`{USERNAME}` は `pi`、`{RETERMINALDM_IP_ADDRESS}` は `192.168.43.100` です。
+      例えば、私の場合`{USERNAME}`は`pi`で`{RETERMINALDM_IP_ADDRESS}`は`192.168.43.100`です：
 
       ```sh
       ssh pi@192.168.43.100
       ```
 
-      次に、reTerminal DM にセットアップしたオペレーティングシステムの `{USER}` のパスワードを入力してください。
-      
-      例: Raspbian OS のデフォルトのログイン資格情報は以下の通りです。
-       * ユーザー名: `pi`
-       * パスワード: `raspberry`
+      次に、reTerminal DMにセットアップしたオペレーティングシステムの`{USER}`のパスワードを入力してください
 
-* **STEP 2:** Node-RED をインストールする
+      例：Raspbian OSのデフォルトログイン認証情報は
+    - ユーザー名: `pi`
+    - パスワード: `raspberry`
 
-Node-RED チームは [All-IN-ONE](https://nodered.org/docs/getting-started/raspberrypi) スクリプトを用意しており、以下のコマンドを reTerminal DM のネイティブ `Terminal` アプリまたは上記の手順で開いた `SSH Shell` に入力するだけでインストールできます。
+    **Mac/Linux上で:**
+
+      **Terminal**アプリを開き、`ssh {USERNAME}@{RETERMINALDM_IP_ADDRESS}`と入力してください。`{USERNAME}`と`{RETERMINALDM_IP_ADDRESS}`をあなたのセットアップに応じて置き換えてください：
+
+      例えば、私の場合`{USERNAME}`は`pi`で`{RETERMINALDM_IP_ADDRESS}`は`192.168.43.100`です：
+
+      ```sh
+      ssh pi@192.168.43.100
+      ```
+
+      次に、reTerminal DMにセットアップしたオペレーティングシステムの`{USER}`のパスワードを入力してください
+
+      例：Raspbian OSのデフォルトログイン認証情報は
+    - ユーザー名: `pi`
+    - パスワード: `raspberry`
+
+- **ステップ 2:** Node-REDのインストール:
+
+Node-REDチームは[オールインワン](https://nodered.org/docs/getting-started/raspberrypi)スクリプトを用意してくれており、reTerminal DMのネイティブ`Terminal`アプリまたは上記のステップの`SSHシェル`で以下のコマンドを入力するだけです。
 
 ```sh
   bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
@@ -104,45 +100,46 @@ Node-RED チームは [All-IN-ONE](https://nodered.org/docs/getting-started/rasp
 
 :::note
 
-Raspberry Pi に Node-RED をインストールする方法は多数あります。詳細は [公式ガイド](https://nodered.org/docs/getting-started/) を参照してください。ここでは、reTerminal DM に Node-RED をインストールするための [All-IN-ONE](https://nodered.org/docs/getting-started/raspberrypi) ガイドを紹介します。
+Raspberry PiにNode-REDをインストールする方法は多数あります。[公式ガイド](https://nodered.org/docs/getting-started/)を参照することもできますが、ここではreTerminal DMにNode-REDをインストールする[オールインワン](https://nodered.org/docs/getting-started/raspberrypi)ガイドを紹介します。
 :::
 
-インストールプロセスが完了すると、以下の画像のように `ls -all` コマンドで `.node-red` フォルダが表示されるはずです。
+インストールプロセスが完了すると、以下の画像に示すように`ls -all`コマンドで`.node-red`フォルダが表示されるはずです：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-installed.png" /></div><br />
 
-### Node-RED の設定
+### Node-REDのセットアップ
 
-Node-RED をインストールしたら、以下の手順に従って Node-RED 環境を設定し準備してください。
+Node-REDをインストールしたら、以下の手順に従ってセットアップし、Node-RED環境を準備してください。
 
-* **STEP 1:** Node-RED を起動する
+- **ステップ1:** Node-REDを開始：
   
-    [All-IN-ONE](https://nodered.org/docs/getting-started/raspberrypi) スクリプトを使用してインストールが完了した後、以下のコマンドを使用できます。
+    [オールインワン](https://nodered.org/docs/getting-started/raspberrypi)スクリプトでのインストールが完了したら、以下のコマンドを適宜使用できます：
   
-    `node-red-stop` を使用して Node-RED を停止<br />
-    `node-red-start` を使用して Node-RED を再起動<br />
-    `node-red-log` を使用して最近のログ出力を表示<br />
-    `sudo systemctl enable nodered.service` を使用して起動時に Node-RED を自動起動<br />
-    `sudo systemctl disable nodered.service` を使用して起動時の自動起動を無効化<br />
+    `node-red-stop`を使用してNode-REDを停止<br />
+    `node-red-start`を使用してNode-REDを再開始<br />
+    `node-red-log`を使用して最近のログ出力を表示<br />
+    `sudo systemctl enable nodered.service`を使用して起動時にNode-REDを自動開始<br />
+    `sudo systemctl disable nodered.service`を使用して起動時の自動開始を無効化<br />
 
-    Node-RED エディタを起動するには、reTerminal DM の `Terminal` アプリで以下のコマンドを実行してください。
-    
+    Node-REDエディタを開始するには、reTerminal DMの`Terminal`アプリで以下のコマンドを実行します：
+
     ```sh
     node-red-start
     ```
-    Node-RED を自動起動サービスとして有効にしたい場合は、`sudo systemctl enable nodered.service` コマンドを使用してください。以下のような出力が表示されるはずです。
 
-<div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-autostart.png" /></div>
+    node-REDを自動開始サービスとして有効にしたい場合は、`sudo systemctl enable nodered.service`コマンドを使用でき、以下に示すような出力が表示されるはずです。
 
-* **STEP 2:** Node-REDエディタにアクセスする:
+    <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-autostart.png" /></div>
 
-    お気に入りのWebブラウザを開き、以下のURLを入力してください:
-    * オプション1: WebブラウザがreTerminal DM上でローカルに実行されている場合は、`http://127.0.0.1:1880`を使用してください。
-    * オプション2: Webブラウザがホストコンピュータ上でリモートに実行されている場合は、`http://{RETERMINALDM_IP_ADDRESS}:1880`を使用してください。`{RETERMINALDM_IP_ADDRESS}`をreTerminal DMのIPアドレスに置き換えてください。
+- **ステップ2:** Node-REDエディタにアクセス：
 
-## Node-REDの基本操作
+    お気に入りのWebブラウザを開き、以下に説明するURLを入力してください：
+  - オプション1：WebブラウザがreTerminal DM上でローカルに実行されている場合は、`http://127.0.0.1:1880`を使用。
+  - オプション2：Webブラウザがホストコンピュータ上でリモートに実行されている場合は、`http://{RETERMINALDM_IP_ADDRESS}:1880`を使用。`{RETERMINALDM_IP_ADDRESS}`をreTerminal DMのIPアドレスに置き換えてください。
 
-以下の画像のような画面が表示されるはずです:
+## Node-REDに慣れる
+
+以下の画像のような結果が表示されるはずです：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/inital-node-editor.png" /></div><br />
 
@@ -150,23 +147,23 @@ Node-RED をインストールしたら、以下の手順に従って Node-RED �
 
 Node-REDエディタに慣れてください。
 
-Node-REDエディタの主要な要素は以下の通りです:
+Node-REDエディタの中核要素は以下の通りです：
 
-* ノードパネル
-* フローエディタ
-* 設定パネル
-* 設定ボタン
-* デプロイボタン
+- ノードパネル
+- フローエディタ
+- 設定パネル
+- 設定ボタン
+- デプロイボタン
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-editor.png" /></div><br />
 
 ### ノードのインストール
 
-Node-REDノードモジュールをインストールする方法は2つあります。SenseCraft EDGE OSを使用している場合は、[Node-REDエディタの方法](#option-2-node-red-editor)を使用してください:
+Node-REDノードモジュールをインストールする方法は2つあります。SenseCraft EDGE OSを使用している場合は、[Node-REDエディタ方式](#option-2-node-red-editor)を使用してください：
 
-#### オプション1: コマンドライン
+#### オプション1：コマンドライン
 
-STEP 1: Node-REDフォルダに移動してください
+ステップ1：Node-REDフォルダに移動してください
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-folder.png" /></div><br />
 
@@ -174,7 +171,7 @@ STEP 1: Node-REDフォルダに移動してください
 cd .node-red/
 ```
 
-STEP 2: Modbusノードをインストールする
+ステップ2：Modbusノードをインストール
 
 ```
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />
@@ -183,7 +180,7 @@ STEP 2: Modbusノードをインストールする
 npm install node-red-contrib-modbus
 ```
 
-STEP 3: ノードがインストールされたら、Node-REDサービスを再起動してください:
+STEP 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-restart.png" /></div><br />
 
@@ -191,50 +188,50 @@ STEP 3: ノードがインストールされたら、Node-REDサービスを再�
 node-red-restart
 ```
 
-#### オプション2: Node-REDエディタ
+#### オプション 2: Node-RED エディター
 
-STEP 1: 右上隅にある「三本線」アイコンの`設定`ボタンをクリックし、`パレットの管理`を選択してください
+ステップ 1: 右上角にある「三本線」アイコンの `Settings` ボタンをクリックし、`Manage palette` を選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/manage_palette.png" /></div>
 
-STEP 2: パレットタブで`インストール`タブをクリックしてください
+ステップ 2: パレットタブで `Install` タブをクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/install-tab.png" /></div>
 
-STEP 3: ノード検索バーでノードを検索し、`インストール`ボタンをクリックしてインストールしてください
+ステップ 3: ノード検索バーでノードを検索し、`install` ボタンをクリックしてインストールします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/search-install.png" /></div>
 
-STEP 4: ドロップダウン警告ウィンドウから`インストール`ボタンをクリックしてインストールを確認してください
+ステップ 4: ドロップダウン警告ウィンドウから `Install` ボタンをクリックしてインストールを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/confirm-click.png" /></div>
 
-STEP 5: インストールが完了するまで待機し、`インストール`ボタンが`インストール済み`に変わるのを確認してください
+ステップ 5: インストールが完了するまで待ち、`install` ボタンが `installed` に変わることを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-installing.png" /></div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-installed.png" /></div>
 
-STEP 6: サイドバーにModbusノードが表示されるはずです
+ステップ 6: サイドバーに Modbus ノードが表示されることを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-nodes.png" /></div>
 
-# reTerminal DM対応ノード
+# reTerminal DM サポート対象ノード
 
-* [reTerminal DM RS485ポートとNode-RED](/ja/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM MQTTとNode-RED](/ja/reTerminal-DM-Node-Red-mqtt)
-* [reTerminal DM CAN BUSとNode-RED](/ja/reTerminal-DM-Node-Red-canbus)
+- [reTerminal DM RS485 ポートと Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM MQTT と Node-RED](/reTerminal-DM-Node-Red-mqtt)
+- [reTerminal DM CAN BUS と Node-RED](/reTerminal-DM-Node-Red-canbus)
   
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

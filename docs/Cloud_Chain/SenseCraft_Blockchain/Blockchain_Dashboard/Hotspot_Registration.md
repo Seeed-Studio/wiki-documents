@@ -18,12 +18,12 @@ last_update:
 **How To Register Hotspots With Helium Wallet**
 ===============================================
 
-*    Please login to the SenseCAP Dashboard by visiting [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-*    Ensure your "Helium APP" is the latest version and login to your Helium wallet.
+-  Please login to the SenseCAP Dashboard by visiting [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+-  Ensure your "Helium APP" is the latest version and login to your Helium wallet.
 
 You can download the latest version by visiting the [**Android Store**](https://play.google.com/store/apps/details?id=com.helium.wallet&hl=en_US) or the [**iOS Store**](https://apps.apple.com/app/id1450463605).
 
-*   On the SenseCAP Dashboard, click "Hotspot" on the left menu, then click the blue button that reads "+ Add New Hotspot".
+- On the SenseCAP Dashboard, click "Hotspot" on the left menu, then click the blue button that reads "+ Add New Hotspot".
 
 You will then be prompted with a QR code to import your Hotspot from the Helium Wallet as below:
 
@@ -54,15 +54,15 @@ If your wallet was successfully linked, you will see the message below. **You ar
 
 ![SenseCAP Hotspot Registration 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-6-1.png)
 
-*   Log-in to the dashboard ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
-*   Enter the credentials you created during registration and log in
-*   Navigate to “Hotspot” on the left menu column
-*   Click "Add new Hotspot"
+- Log-in to the dashboard ⇒ [**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)
+- Enter the credentials you created during registration and log in
+- Navigate to “Hotspot” on the left menu column
+- Click "Add new Hotspot"
 
 ![SenseCAP Hotspot Registration 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-7-1.png)
 
-*   You will be prompted to enter the "**SN", "ETH MAC**" address, "**CPU ID**" and "**bind key**", which "**SN**" is located on the bottom label of your SenseCAP M1, and others are in the Local Console Page.
-*   Click “**Confirm**” and the Hotspot will now be added to your dashboard.
+- You will be prompted to enter the "**SN", "ETH MAC**" address, "**CPU ID**" and "**bind key**", which "**SN**" is located on the bottom label of your SenseCAP M1, and others are in the Local Console Page.
+- Click “**Confirm**” and the Hotspot will now be added to your dashboard.
 
 **Note**: The CPU ID usually begins with 1 followd by 7 zero’s. ie., _**10000000**_
 

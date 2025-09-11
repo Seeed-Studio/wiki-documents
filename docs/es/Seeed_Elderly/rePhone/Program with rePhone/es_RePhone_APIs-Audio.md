@@ -86,7 +86,7 @@ LAudio.playFile(StorageEnum drv, wchar_t* songName)
 
 -   ***Parámetros***
     -   *drv* - Almacenamiento, puede ser storageSD (tarjeta SD) o storageFlash (almacenamiento flash)
-    -   *songName* - Ruta del archivo de audio en codificación ascii (char\*) o unicode (wchar\_t\*)
+    -   *songName* - Ruta del archivo de audio en codificación ascii (char\*) o unicode (wchar_t\*)
 
 
 -   ***Devuelve***

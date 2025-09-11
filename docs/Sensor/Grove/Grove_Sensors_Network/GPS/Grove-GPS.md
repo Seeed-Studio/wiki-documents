@@ -383,8 +383,8 @@ GPS is better used outdoors. It is recommended to put your raspberry pi outside 
 - **[Datasheet]** [E-1612-UB Datasheet](https://files.seeedstudio.com/wiki/Grove-GPS/res/E-1612-UB_Datasheets_Sheet.pdf)
 - **[Datasheet]** [U-Blox6 Receiver Description Protocol Spec](https://files.seeedstudio.com/wiki/Grove-GPS/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
 - **[Software]** [U-Blox u-center GPS evaluation software](https://www.u-blox.com/en/product/u-center-windows)
-- **[Document]**  [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
-- **[Document]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[Document]**  [SIM28_DATA_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
+- **[Document]** [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_GPS -->
 

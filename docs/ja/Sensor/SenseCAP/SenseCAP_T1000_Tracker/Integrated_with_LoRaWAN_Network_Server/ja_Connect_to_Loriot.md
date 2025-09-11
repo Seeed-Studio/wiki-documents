@@ -1,88 +1,88 @@
 ---
-description: SenseCAP T1000 トラッカーを Loriot に接続する方法
-title: Loriot に接続する
+description: SenseCAP T1000 TrackerをLoriotに接続する
+title: Loriotに接続する
 keywords:
-- トラッカー
+- Tracker
 - Loriot
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_T1000_Tracker_Loriot
 last_update:
-  date: 05/15/2025
+  date: 12/12/2023
   author: KeweiLee
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-[LORIOT](https://docs.loriot.io/display/NMS/Getting+Started) LoRAWAN ネットワークサーバー (LNS) はハードウェアに依存せず、市場にあるすべての LoRaWAN® ゲートウェイとセンサーをサポートします。
+
+[LORIOT](https://docs.loriot.io/display/NMS/Getting+Started) LoRAWAN Network Server (LNS) はハードウェアに依存せず、市場のすべてのLoRaWAN®ゲートウェイとセンサーをサポートします。
 
 :::info
-Loriot アカウントをお持ちでない場合は、[こちら](https://loriot.io/register.html)にアクセスし、お住まいの地域の LORIOT Community Public Servers のいずれかを選択して新しいアカウントを登録してください。
+Loriotアカウントをお持ちでない場合は、[こちら](https://loriot.io/register.html)にアクセスして、お住まいの地域のLORIOT Community Public Serverの1つを選択し、新しいアカウントを登録してください。
 :::
 
-## ネットワークを追加する
+## ネットワークの追加
 
-ネットワークは単に LoRaWAN ゲートウェイのコレクションであり、ゲートウェイを効率的に監視および管理する環境を提供します。
+ネットワークは単純にLoRaWANゲートウェイのコレクションであり、ゲートウェイを監視・管理するための効率的な環境を提供します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/AddNetwork.png" alt="pir" width={800} height="auto" /></p>
 
-新しいゲートウェイを追加する際には、それをネットワークに割り当てる必要があります。それは単独でも、他のゲートウェイのコレクションと一緒でも構いません。
+新しいゲートウェイを追加する際は、ネットワークに割り当てる必要があります。単独でも、他のゲートウェイのコレクションと一緒でも構いません。
 
-ゲートウェイをネットワークにグループ化する一般的な方法は、地理的な場所、モデル、クライアント、または最適な構造に基づいて行います。
+ゲートウェイをネットワークにグループ化する典型的な方法は、地理的位置、モデル、クライアント、またはあなたにとって最適な構造によるものです。
 
-アカウントのゲートウェイ制限内であれば、ネットワークに含めるゲートウェイの数に制限はありませんが、各ゲートウェイは単一のネットワークにのみ属することができます。
+ネットワークに含めることができるゲートウェイの数に制限はありません（アカウントのゲートウェイ制限内である限り）が、各ゲートウェイは単一のネットワークにのみ属することができます。
 
-### 最初のゲートウェイを追加する
+### 最初のゲートウェイの追加
 
-最初のゲートウェイを追加して、LoRaWAN ネットワークを開始しましょう！ Loriot の [ステップバイステップガイド](https://docs.loriot.io/display/NMS/Register+a+Gateway+or+Base+Station) に従って、ゲートウェイまたはベースステーションを登録する方法を確認することもできます。
+最初のゲートウェイを追加してLoRaWANネットワークを開始しましょう！Loriotの[ステップバイステップ](https://docs.loriot.io/display/NMS/Register+a+Gateway+or+Base+Station)ガイドに従ってゲートウェイまたはベースステーションを登録することもできます。
 
-ここでは例として、ゲートウェイ（Basics Station Semtech）を作成します。`Network` に移動し、先ほど追加したネットワークをクリックします。その後、`Add Gateway` をクリックします。
+ここでは例としてゲートウェイ（Basics Station Semtech）を作成します。`Network`に移動し、先ほど追加したネットワークをクリックします。`Add Gateway`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/AddGateway.png" alt="pir" width={800} height="auto" /></p>
 
-ページの下半分にゲートウェイのリストが表示されます。該当するゲートウェイモデルをクリックして選択します。
-ゲートウェイを登録するには、ゲートウェイの eth0 MAC アドレス（コロンで区切られた 6 オクテット）を入力する必要があります。
+ページの下半分にゲートウェイのリストが表示されます。画像をクリックして関連するゲートウェイモデルを選択します。
+ゲートウェイを登録するには、ゲートウェイのeth0 MACアドレス（コロンで区切られた6つのオクテット）を入力する必要があります。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/NInfo.png" alt="pir" width={800} height="auto" /></p>
 
-最後に、ゲートウェイの位置を設定します。これは、地図上で位置を選択するか、住所を手動で登録するために必要な情報を入力することで定義できます。
+最後に、その位置を設定できます。これは2つの異なる方法で定義できます。マップ上で位置を選択するか、必要な情報を入力してアドレスを手動で登録するかです。
 
-### ゲートウェイ証明書を設定する
+### ゲートウェイ証明書の設定
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/ConfigureGateway.png" alt="pir" width={800} height="auto" /></p>
 
-`Certificate` ページでは、ネットワークサーバーアドレス、ネットワークサーバーポートを確認し、ゲートウェイモデルを設定するために必要な TLS CA 証明書をダウンロードまたはコピーすることができます。
+`Certificate`ページでは、Network Server Address、Network Server Port、およびゲートウェイモデルを設定するためのTLS CA Certificateをダウンロードまたはコピーできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/Certificate.png" alt="pir" width={800} height="auto" /></p>
 
-ゲートウェイのユーザーインターフェースで、動作モードとして「LoRa Basics Station」を選択します。前のステップで取得した情報を使用して、アドレス、ポート、サーバー証明書を確実に設定してください。これにより、ゲートウェイと LORIOT ネットワーク管理システム間の接続が確立されます。
+ゲートウェイのユーザーインターフェースで、動作モードとして「LoRa Basics Station」を選択します。前のステップで取得した情報を使用して、アドレス、ポート、およびサーバー証明書を必ず設定してください。これは、ゲートウェイとLORIOT Network Management System間の接続を確立するためです。
 
-LORIOT の UI に戻り、LoRa Basics™ Station がオンラインであり、LORIOT ネットワーク管理システムと正常に機能していることを確認してください。
+LORIOTのUIに戻り、LoRa Basics™ Stationがオンラインになり、LORIOT Network Management Systemで正常に機能していることを確認します。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/GatewayOnline.png" alt="pir" width={800} height="auto" /></p>
 
-## アプリケーションを追加する
 
-[アプリケーション](https://docs.loriot.io/display/NMS/Create+a+New+Application) は、デバイスを登録、管理、整理し、デバイスデータの出力先を選択する場所です。
-新しいデバイスを追加する際には、それをアプリケーションに割り当てます。これにより、サーバーはデバイスが登録されているアプリケーションと、選択したデータ出力の詳細を認識します。
+## アプリケーションの追加
 
-ユーザーアカウントのデバイス制限を超えない限り、センサーの種類やメーカーに関係なく、任意の数のデバイスをアプリケーションに追加できます。
+[アプリケーション](https://docs.loriot.io/display/NMS/Create+a+New+Application)は、デバイスを登録、管理、整理し、デバイスデータの出力先を選択する場所です。
+新しいデバイスを追加する際は、アプリケーションに割り当てられます。これにより、デバイスが登録されているアプリケーションと選択したデータ出力の詳細がサーバーに通知されます。
 
-通常、アプリケーションには特定のユースケース（例：スマートビルディング内のすべてのセンサー）や同じ種類のデバイス（例：温度センサー）のすべてのデバイスが含まれます。
+デバイスの総数がユーザーのアカウント制限を超えない限り、センサーの種類やメーカーに関係なく、任意の数のデバイスをアプリケーションに追加できます。
+
+通常、アプリケーションには特定のユースケースのすべてのデバイス（例：スマートビルディング内のすべてのセンサー）または同じタイプのデバイス（例：温度センサー）が含まれます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/AddApplicaiton.png" alt="pir" width={800} height="auto" /></p>
 
-### 最初のデバイスを追加する（SenseCAP T1000 トラッカー）
 
-`Enroll Device` をクリックします。
+### 最初のデバイス（SenseCAP T1000 Tracker）の追加
+
+
+`Enroll Device`をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/AddDevice.png" alt="pir" width={800} height="auto" /></p>
 
-LORIOT ネットワークサーバーは、LoRaWAN 1.0.x および 1.1 デバイスの両方をサポートしています。デバイスは 2 つの異なる登録プロセスを通じて追加できます。ほとんどのデバイスには OTAA（Over-The-Air-Activation）が推奨されますが、ABP（Activation by Personalization）も利用可能です。SenseCAP Mate アプリの Bluetooth を使用してトラッカーに正常に接続した後、このタブで OTAA 情報を取得できます。
+LORIOT Network ServerはLoRaWAN 1.0.xと1.1の両方のデバイスをサポートします。デバイスは2つの異なる登録プロセスで追加できます。OTAA（Over-The-Air-Activation）はほとんどのデバイスで推奨されるオプションですが、ABP（activation by personalization）も利用可能です。SenseCAP Mate AppのBluetoothを使用してTrackerに正常に接続した後、このタブでOTAA情報を取得できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_3.png" alt="pir" width={600} height="auto" /></p>
 
-プラットフォームを他のプラットフォームに設定し、Device EUI/APP EUI/APP Key をコピーします。
+プラットフォームをother platformに設定し、Device EUI/APP EUI/APP Keyをコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/OTAAInfo.png" alt="pir" width={400} height="auto" /></p>
 
-最後に、`Enroll` を選択します。デバイスを追加すると、Loriot 上でデータストリームを確認できるようになります。
+最後に、Enrollを選択します。デバイスを追加すると、Loriot上でデータストリームを確認できるようになります。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/DeviceDetails.png" alt="pir" width={800} height="auto" /></p>

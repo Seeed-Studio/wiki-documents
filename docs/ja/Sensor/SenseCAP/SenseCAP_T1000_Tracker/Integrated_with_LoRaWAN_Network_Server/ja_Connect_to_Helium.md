@@ -1,49 +1,45 @@
 ---
-description: The_Things_Networkに接続する
-title: Heliumに接続する
+description: Connect_to_The_Things_Network
+title: Heliumに接続
 keywords:
 - SenseCAP_T1000_tracker
 - Helium
 image: https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker.webp
 slug: /ja/SenseCAP_T1000_tracker_Helium
 last_update:
-  date: 05/15/2025
+  date: 11/22/2024
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# SenseCAP T1000をHeliumに接続する
+# SenseCAP T1000をHeliumに接続
 
 ## デバイス設定
 
-Heliumに接続する前に、SenseCAP Mateアプリでデバイスの基本パラメータを設定する必要があります。詳細については、[Get Started](https://wiki.seeedstudio.com/ja/Get_Started_with_SenseCAP_T1000_tracker)を参照してください。
+Heliumに接続する前に、SenseCAP Mate APPでデバイスの基本パラメータを設定する必要があります。詳細については[Get Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker)を確認してください。
 
-* プラットフォームを`Helium`に設定し、`Device EUI`、`APP EUI`、`APP Key`をコピーします。
+- プラットフォームを`Helium`に設定し、`Device EUI`/`APP EUI`/`APP Key`をコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/heliumdevice.png" alt="pir" width={300} height="auto" /></p>
 
 ## Heliumコンソール設定
 
-Heliumコンソールは新規アカウントの登録を受け付けていません。T1000をHeliumコンソールに接続する方法の説明は、既存のアカウントを持つユーザー向けに残されています。新規ユーザーは、上記のChirpStack LNA手順を参照するか、ここにある2つの例を基にして特定のLNAに必要な手順を確認してください。
+Heliumコンソールは新規アカウントの受付を終了しています。T1000をHeliumコンソールに接続する方法の説明は、既にアカウントを持つユーザー向けにここに残されています。新規ユーザーは、上記のChirpStack LNAの手順を参照するか、ここにある2つの既存の例に基づいて、特定のLNAに必要な手順を決定してください。
 
-### 新しいデバイスを追加する
+### 新しいデバイスの追加
 
 [Heliumコンソール](https://console.helium.com)にログインし、`Devices`セクションに移動して`Add device`ボタンをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-new-helium.png" alt="pir" width={800} height="auto" /></p>
 
-デバイス名、LoRaWAN認証情報など、必要なフィールドを入力します。<br/>
-その後、**Save Device**ボタンをクリックします。
+デバイス名**、**LoRaWAN認証情報などの必要なフィールドを入力します。<br/>
+次に**Save Device**ボタンをクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-new-helium2.png" alt="pir" width={800} height="auto" /></p>
 
-### デコーダー関数を作成する
+### デコーダー関数の作成
 
-次のステップは、生のバイトデータを人間が読める形式にデコードする関数を設定することです。<br/>
-左側のパネルで`Function`タブに移動します。その後、`Add New Function`ボタンをクリックして名前を付けます。
+次のステップは、生のバイトを人間が読める形式にデコードする関数を設定することです。<br/>
+左側のパネルの`Function`タブに移動します。次に`Add New Function`ボタンをクリックして名前を付けます：
 
 <p style={{textAlign: 'center'}}><img src="https://downloads.intercomcdn.com/i/o/788631256/c066827c0eaebdc9dbf629d3/Group+3%282%29.png" alt="pir" width={800} height="auto" /></p>
 
@@ -902,56 +898,58 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 ### データの確認
 
-デバイスがネットワークに接続しようとすると、ブリージングライトが点滅します。デバイスがネットワークに正常に参加すると、ブリージングライトが速く点滅し、軽快で明るいメロディーが流れます。
+デバイスがネットワークに接続しようとすると、呼吸ライトが点滅します。デバイスがネットワークに正常に参加すると、呼吸ライトが素早く点滅し、軽やかで陽気なメロディーが鳴ります。
 
-その後、Helium コンソールでデータを確認することができます。
+その後、Heliumコンソールでデータを確認できます。
 
 ## 注意事項
 
-:::caution 注意
-**EU868**/**RU864** 地域で操作するユーザー向け：
+:::caution note
+**EU868**/**RU864**地域で動作するユーザーの場合：
 
 アップロード間隔を4分未満に設定することは**推奨されません**。
 
-アップロード間隔を4分未満に設定すると、デバイスのアップリンクのタイムスタンプと現在時刻の間にずれが生じる可能性があります。
+アップロード間隔を4分未満に設定すると、デバイスのアップリンクと現在時刻の間でタイムスタンプの不整合が発生する可能性があります。
 :::
 
-**その理由は以下の通りです**：
+**理由は以下の通りです**：
 
-EU868の[1%デューティサイクル](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle)制約により、デバイスは各アップリンク送信のために約4分間待機する必要があります。さらに、Helium ネットワークは、[ADR](https://docs.helium.com/console/profiles/#adr-algorithm)ビットが1に設定された20個の連続したアップリンクパケットを蓄積した後にのみ、データレートと電力の補正を開始します。
+EU868における[1%デューティサイクル](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle)制約により、デバイスは各アップリンク送信に対して約4分間辛抱強く待機する必要があります。さらに、Heliumネットワークは[ADR](https://docs.helium.com/console/profiles/#adr-algorithm)ビットが1に設定された20個の連続したアップリンクパケットを蓄積した後にのみ、データレートと電力補正を開始します。
 
-そのため、アップロード間隔を4分未満に設定すると、リアルタイムデータは一時的にRAMに保存され、Helium ネットワークがデータレートと電力の補正をトリガーするまで保持されます。
+そのため、設定したアップロード間隔が4分未満の場合、リアルタイムデータは一時的にRAMに保存され、Heliumネットワークがデータレートと電力補正をトリガーするまで保持されてからアップロードされます。
 
 ## ChirpStack LNS
 
-新しいユーザー向けに、Helium ネットワーク上のデバイスからデータを受信するには、デバイスをLNS（LoRaWANネットワークサーバー）に関連付ける必要があります。通常は[公開LNS](https://docs.helium.com/iot/find-a-lns-provider/)の1つを使用しますが、多くの場合、**ChirpStack**を使用します。また、自分自身のLNSをHeliumに接続することも可能です。
+新規ユーザーの場合、Heliumネットワーク上のデバイスからデータを受信するには、LNS（LoraWANネットワークサーバー）に関連付ける必要があります。通常は[パブリックLNS](https://docs.helium.com/iot/find-a-lns-provider/)の1つを使用し、その多くは**ChirpStack**を使用していますが、独自のLNSをHeliumに接続することも可能です。
 
-一般的なプロセスに慣れている方のために、要点を以下に示します：
+一般的なプロセスに精通している方向けのTL;DR;は以下の通りです：
 
-- 適切な地域とコーデックを使用してデバイスプロファイルを作成する（以下のソースを参照）<br/>
-- `devEUI`、`appKey`、およびSenseCraftアプリから取得した`AppEUI`変数を使用してデバイスを作成する
+- 適切な地域とコーデック（以下のソースを参照）でデバイスプロファイルを作成<br/>
+- `devEUI`、`appKey`、およびAppEUIを含む`app_eui`変数でデバイスを作成。これら3つの値はすべて`SenseCraft`アプリから取得
 
 ### デバイスプロファイルの追加
 
-最初のステップは、T1000トラッカー用のデバイスプロファイルをChirpStack LNSに追加することです。これにより、LNSはT1000から受信したパケットをデコードする方法やその他の設定を認識します。
+最初のステップは、T1000 TrackerのデバイスプロファイルをChirpStack LNSに追加することです。
+これにより、LNSはT1000から受信したパケットをデコードする方法と、その他の多くの設定を認識します。
 
 ChirpStackダッシュボードで`Device Profiles`を選択し、`Add device profile`をクリックします。
 
 ![image](https://github.com/user-attachments/assets/7e6984e2-178b-446e-afda-29dd033c662f)
 
-一般タブで、認識しやすいデバイスプロファイル名を入力し、適切な地域パラメータを選択します。
+一般タブで、認識できるデバイスプロファイル名を入力し、適切な地域パラメータを選択します。
 
 LoRaWAN MACバージョン：`1.0.4`<br/>
 
-期待されるアップリンク間隔も設定できますが、これは主にLNSユーザーインターフェースがデバイスをアクティブまたは非アクティブとして表示するタイミングを制御します。パケットのLNS経由での配信には影響しません。
+予想されるアップリンク間隔も設定できます。これが主に制御するのは、LNSユーザーインターフェースでデバイスがアクティブ対非アクティブとして表示されるタイミングです。LNSを通じたパケット配信には影響しません。
 
 ![image](https://github.com/user-attachments/assets/bb83141f-a447-437b-a29d-27e16a20ce7a)
 
-Codecタブで`JavaScript functions`を選択し、以下のコーデックを入力します：
+コーデックタブで`JavaScript functions`を選択し、コーデックを入力します：
 
 :::tip
 ChirpStackには2つのバージョンがあります。適切なものを選択してください：
@@ -971,28 +969,29 @@ ChirpStackには2つのバージョンがあります。適切なものを選択
 
 ![image](https://github.com/user-attachments/assets/5dc700c6-7faa-4d65-9d94-aa2543f06254)
 
-その後、アプリケーションにデバイスを追加し、SenseCraftアプリで以前に取得した`devEUI`を入力します。
+次に、アプリケーションにデバイスを追加し、先ほどSenseCraftアプリで取得した`devEUI`を入力します。
 
 ![image](https://github.com/user-attachments/assets/93febc5b-bc8f-430b-83e0-55d89690355c)
 
-変数タブで、SenseCraftアプリから取得した`AppEUI`を値として持つ`app_eui`という変数を追加します：
+変数タブで、SenseCraftアプリの`AppEUI`を値として持つ`app_eui`という変数を追加します：
 
 ![image](https://github.com/user-attachments/assets/90e529d7-811b-49cd-902d-85e36b2f6313)
 
-送信を押すと、SenseCraftアプリを使用して以前に取得した`AppKey`を要求するページが表示されます：
+送信をクリックすると、`AppKey`を求めるページが表示されます。これも先ほどSenseCraftアプリを使用して取得したものです：
 
 ![image](https://github.com/user-attachments/assets/db33a84c-c31f-402f-b9b1-53fa47fc497d)
 
 ### デバイス接続の確認
 
-`LoRaWAN frames`タブでスピナーが表示され、その後、受信/送信されたパケットが表示されます。
+`LoRaWAN frames`タブでスピナーが表示され、パケットが受信/送信されると表示されます。
 
-T1000トラッカーのボタンを押して測定を行い、LNSに接続するための`join request`を送信します。この操作が成功すると、以下のような画面が表示されます：
+T1000 Trackerのボタンを押して測定を実行し、LNSに接続するための`join request`を送信します。
+これが発生すると、次のような画面が表示されるはずです：
 
 ![image](https://github.com/user-attachments/assets/060873cb-c1d8-40bd-9ad3-7333966d3558)
 
-参加プロセスが完了すると、T1000はデータを送信します。LNSはネットワーク周波数などに関する情報を返しますが、その後はデータを含むアップリンクのみが表示されるはずです。
+参加プロセスが実行されると、T1000はデータを送信します。LNSはネットワーク周波数などに関する情報を返しますが、その後はデータを含むアップリンクのみが存在するはずです。
 
 ## リソース
 
-[SenseCAP T1000 トラッカー デコーダー for Helium](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000_Helium_Decoder.js)
+[Helium用SenseCAP T1000 Trackerデコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000_Helium_Decoder.js)

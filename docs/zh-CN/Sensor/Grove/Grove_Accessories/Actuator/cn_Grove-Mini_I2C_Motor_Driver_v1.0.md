@@ -419,7 +419,7 @@ void delayUntil(unsigned long elapsedTime)
 ---------
 
 - [DRV8830 数据手册](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/DRV8830.pdf)
-- [Grove - Mini I2C Motor Driver\_Eagle\_文件](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH_PCB.zip)
+- [Grove - Mini I2C Motor Driver_Eagle_文件](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH_PCB.zip)
 - [Grove - Mini I2C Motor Driver 原理图文档](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH.pdf)
 - [Grove - Mini I2C Motor Driver 源代码库](https://github.com/Seeed-Studio/Drv8830_Motor_Driver)
 

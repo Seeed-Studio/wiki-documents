@@ -47,7 +47,7 @@ Primeros Pasos
 ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Get_started_with_mbed.png)
 
 1.  Haz clic en [este enlace](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) para **iniciar sesión o registrarte en mbed**
-2.  Importa el programa mbed\_blinky
+2.  Importa el programa mbed_blinky
 3.  Haz clic en el icono **Compile** de la barra de herramientas superior para compilar el programa, luego descarga el archivo hex compilado.
 4.  Arrastra y suelta el archivo hex descargado en el disco MBED
 
@@ -88,7 +88,7 @@ Aplicaciones
 
     *  Hazlo funcionar
 
-        1.  Descarga [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1.  Descarga [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2.  Copia el archivo hex al disco MBED de tu Arch BLE
         3.  Descarga [la aplicación Android Color Pixels](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 

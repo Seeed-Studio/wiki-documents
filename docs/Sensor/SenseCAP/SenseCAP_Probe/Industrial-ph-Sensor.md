@@ -75,6 +75,7 @@ This pH Sensor comes with a MODBUS-RTU RS485 serial communications protocol or 4
       </tr>
     </tbody>
   </table>
+  
   <div>
     <table className="tg" data-data-style="undefined;table-layout: fixed; width: 677px;"><colgroup><col data-data-style="width: 223px;" /><col data-data-style="width: 454px;" /></colgroup>
       <tbody>

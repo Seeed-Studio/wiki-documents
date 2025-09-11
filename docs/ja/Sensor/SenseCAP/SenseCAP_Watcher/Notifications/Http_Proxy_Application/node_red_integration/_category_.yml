@@ -1,10 +1,10 @@
 position: 2 # float position is supported
 label: 'Node-RED統合'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: node_red_integration_with_watcher
 link:
   type: generated-index
   slug: ja/node_red_integration_main_page
   title: WatcherからNode-REDへの統合
-  description: SenseCAP Watcher wikiの「Node-RED統合」セクションは、Watcherをさまざまなメッセージングプラットフォームやサービスと統合し、アラートや通知を可能にすることに焦点を当てています。この部分は、Watcherデバイスの状態について情報を得たり、監視タスクから重要な更新を受け取ったりしたいユーザーにとって特に役立ちます。
+  description: SenseCAP Watcherウィキの「Node-RED統合」は、Watcherを様々なメッセージングプラットフォームやサービスと統合してアラートや通知を有効にすることに焦点を当てています。この部分は、Watcherデバイスのステータスについて情報を得たり、監視タスクからの重要な更新を受信したいユーザーにとって特に有用です。

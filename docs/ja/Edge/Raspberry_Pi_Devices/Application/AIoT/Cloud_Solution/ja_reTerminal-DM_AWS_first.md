@@ -1,55 +1,51 @@
 ---
-description: AWS IoT CoreとreTerminal DMの統合
-title: AWS IoT CoreとreTerminal DMの統合
+description: AWS IoT Core Intergate With reTerminal DM
+title: AWS IoT Core Intergate With reTerminal DM
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 keywords:
 - AWS
-- はじめに
-- クラウド
+- Getting Start
+- Cloud
 slug: /ja/reTerminal-DM_AWS_first
 last_update:
-  date: 05/15/2025
+  date: 11/22/2023
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+## はじめに
+
+AWS IoT Core は、Internet of Things (IoT) デバイスの安全な接続と管理を支援するサービスです。デバイス同士やクラウドとの通信を可能にし、スマートで接続されたアプリケーションの開発を促進します。AWS IoT Core は、IoT デバイスをより広範な AWS エコシステムに統合することを簡素化し、IoT ソリューション構築のための信頼性があり拡張可能なプラットフォームを提供します。このガイドでは、reTerminal DM を AWS IoT クラウドに接続する方法について説明します。
 
 ## はじめに
 
-AWS IoT Coreは、IoT（モノのインターネット）デバイスを安全に接続し管理するためのサービスです。このサービスを利用することで、デバイス同士やクラウドとの通信が可能になり、スマートで接続されたアプリケーションの開発が容易になります。AWS IoT Coreは、IoTデバイスをAWSエコシステム全体に統合するプロセスを簡素化し、信頼性が高くスケーラブルなプラットフォームを提供します。このガイドでは、reTerminal DMをAWS IoTクラウドに接続する方法について説明します。
-
-## はじめに
-
-このプロジェクトを開始する前に、以下に記載されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
+このプロジェクトを開始する前に、ここで説明されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
 
-Raspberry Pi 64ビットOSの**Bullseye**バージョンを公式ウェブサイトからインストールすることをお勧めします。新しいRaspbian OSをインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/ja/reterminal-dm-flash-OS/)に従ってください。
+公式ウェブサイトから Raspberry Pi 64 bit OS の **Bullesye** バージョンをインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/reterminal-dm-flash-OS/)で説明されている手順に従ってください。
 
-#### Mqttライブラリのインストール
-ターミナルで以下を入力してください：
+#### Mqtt ライブラリのインストール
+
+ターミナルで次のように入力してください：
 
 ```sh
 sudo pip3 install "paho-mqtt<2.0.0"
@@ -57,100 +53,100 @@ sudo pip3 install "paho-mqtt<2.0.0"
 
 :::note
 
-このWiki執筆時点で最新のOSであるBookworm OSを使用する場合、Pythonライブラリをインストールするために仮想環境を使用する必要があるかもしれません。詳細については、この[**リンク**](https://www.raspberrypi.com/documentation/computers/os.html#python-on-raspberry-pi)を参照してください。
+この wiki を書いている時点で最新の OS である Bookworm OS を使用しようとしている場合、Python ライブラリのインストールには仮想環境を使用する必要があるかもしれません。詳細については、この[**リンク**](https://www.raspberrypi.com/documentation/computers/os.html#python-on-raspberry-pi)をご確認ください。
 
 :::
 
-## AWSアカウントの作成
+## AWS アカウントの作成
 
-AWSアカウントをお持ちでない場合は、簡単に作成できます。アカウントの設定方法については、[**こちらのリンク**](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)をご覧ください。
+AWS アカウントをお持ちでない場合は、簡単に作成できます。アカウントの設定方法については、[**このリンク**](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html)のガイダンスに従ってください。
 
 ## デバイスの登録
 
-- **ステップ1**: IoT Coreを検索し、そこに移動します。
+- **ステップ 1**: IoT core を検索してナビゲートします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/searchbar.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ2**: 次に、サイドバーで**Manage**トピックに移動し、**All Devices**の下にある**Things**に進みます。
+- **ステップ 2**: 次に、サイドバーで **Manage** トピックにナビゲートし、**All Devices** の下の **Things** に移動します。
 
 :::info
-**Thingとは何ですか？**
+**Thing とは何ですか？**
 
-AWS IoTでは、IoTデバイスをAWSプラットフォーム上で「Thing」と呼びます。この文脈では、reTerminalデバイスが「Thing」として表されます。重要な点として、一度作成された「Thing」の名前は変更できません。
+AWS IoT では、AWS プラットフォーム上でモノのインターネット（IoT）デバイスを「things」と呼びます。この文脈での reTerminal Device などの各 IoT デバイスは、AWS で「thing」として表現されます。重要なことは、一度作成された「thing」の名前は変更できないということです。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingsslidebar.PNG" style={{width:200, height:300}}/></div>
 
-- **ステップ3**: 次に、Create thingsをクリックします。
+- **ステップ 3**: 次に Create things を押します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createthings.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ4**: 単一のreTerminalデバイスを作成するので、Create Single Thingをクリックします。
+- **ステップ 4**: 単一の reTerminal Device を作成します。そのため Create Single Thing をクリックします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createsinglething.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ5**: Thingの名前を入力します。
+- **ステップ 5**: thing 名を付けます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingname.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ6**: 将来の参照用にThingタイプも設定します。
+- **ステップ 6**: また、将来の参照のために thing type も設定します
 
 :::info
-**Thingタイプとは何ですか？**
+**Thing Type とは何ですか？**
 
-Thingタイプを使用すると、同じThingタイプに関連付けられたすべてのThingに共通する説明や構成情報を保存できます。これにより、レジストリ内のThingの管理が簡素化されます。例えば、「Factory_HMI」というThingタイプを定義できます。このデモでは、Thingタイプとして「pi」を使用しました。
+Thing type を使用すると、同じ thing type に関連付けられたすべての thing に共通する説明と設定情報を保存できます。これにより、レジストリ内の thing の管理が簡素化されます。たとえば、'Factory_HMI' thing type を定義できます。このデモンストレーションでは、thing type として pi を使用しました。
 :::
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/thingtype.PNG" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createthingtype.PNG" style={{width:400, height:300}}/></div>
 
-- **ステップ7**: 証明書を生成します。
+- **ステップ 7** : 証明書を生成します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/configurecertificate.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ8**: ポリシーをアタッチするには、ポリシーを作成する必要があります。**Create policy**をクリックします。
+- **ステップ 8**: ポリシーをアタッチするには作成する必要があります。**Create policy** をクリックします
 
 :::info
-AWS IoT Coreポリシーは、IAMポリシーの規約に従ったJSONドキュメントです。これらは名前付きポリシーをサポートしており、複数のアイデンティティが同じポリシードキュメントを参照できます。名前付きポリシーはバージョン管理されており、簡単にロールバックできます。
-これらのポリシーは、AWS IoT Coreデータプレーンへのアクセスを制御します。これには、AWS IoT Coreメッセージブローカーへの接続、MQTTメッセージの送受信、Thingのデバイスシャドウへのアクセスや更新などの操作が含まれます。
+AWS IoT Core ポリシーは、IAM ポリシー規約に従った JSON ドキュメントです。名前付きポリシーをサポートしており、複数のアイデンティティが同じポリシードキュメントを参照できます。名前付きポリシーは、簡単なロールバックのためにバージョン管理されています。
+これらのポリシーは、AWS IoT Core データプレーンへのアクセス制御を提供し、AWS IoT Core メッセージブローカーへの接続、MQTT メッセージの送受信、thing の Device Shadow へのアクセスや更新などの操作を含みます。
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createpolicy.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ9**: ポリシーに適切な名前を付け、以下のようにポリシー効果、ポリシーアクション、およびポリシーリソースを設定します。
+- **ステップ 9**: ポリシーに適切な名前を付け、以下のようにポリシー効果、ポリシーアクション、ポリシーリソースを設定します。
 
 :::info
-このポリシーには以下が含まれます：
+ポリシーには以下が含まれます：
 
+**Effect**: アクションが許可されるか拒否されるかを指定します。
 
-**効果**: アクションが許可されるか拒否されるかを指定します。
+**Action**: ポリシーが許可または拒否する特定のアクションを指定します。
 
-**アクション**: ポリシーが許可または拒否する特定のアクションを指定します。
-
-**リソース**: アクションが許可または拒否されるリソースを指定します。
+**Resource**: アクションが許可または拒否されるリソースを指定します。
 
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/createapolicy.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ 10**: 作成したポリシーをアタッチし、**Create thing** を押します。
+- **ステップ 10**: 作成したポリシーでポリシーをアタッチし、**Create thing** を押します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/policycreatething.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ 11**: 次に、証明書とキーをダウンロードします。**デバイス証明書、秘密鍵と公開鍵、ルート CA 証明書**を必ずダウンロードしてください。
+- **ステップ 11**: 次に証明書とキーをダウンロードできます。**デバイス証明書、プライベートキーとパブリックキー、ルート CA 証明書**を必ずダウンロードしてください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/certicates.PNG" style={{width:600, height:450}}/></div>
 
-- **ステップ 12**: 作成したもの（reTerminal DM）にアタッチします。
-そのためには、**Security** >> **Certificates** に移動します。
+- **ステップ 12** : thing（reTerminal DM）にアタッチします
+そのために **Security** >> **Certificates** に移動します
 
 :::info
 
-証明書を AWS IoT のものとは独立して作成および登録した場合、その証明書には AWS IoT 操作用のポリシーがなく、どの「thing」オブジェクトにも関連付けられていません。ここでは、登録済み証明書にこれらの接続を確立する方法を説明します。証明書は、AWS IoT との接続においてデバイスを認証します。証明書を「thing」リソースにリンクすることで、デバイス（証明書を介して）と「thing」リソースの関係が作成されます。デバイスに AWS IoT アクション（接続やメッセージの公開など）の権限を付与するには、適切なポリシーをデバイスの証明書にアタッチすることが重要です。
+AWS IoT thing とは独立して証明書を作成および登録する場合、AWS IoT 操作のポリシーが不足し、thing オブジェクトに関連付けられていません。これは、登録された証明書に対してこれらの接続を確立する方法を説明します。証明書は、接続のために AWS IoT でデバイスを認証します。証明書を thing リソースにリンクすることで、デバイス（証明書経由）と thing リソース間の関係が作成されます。接続やメッセージの公開などの AWS IoT アクションに対してデバイスに許可を与えるには、デバイスの証明書に適切なポリシーをアタッチすることが重要です。
 
 :::
 
-作成した「thing」を **Actions** ドロップダウンメニューから選択し、**Attach to thing** を押します。
+作成した thing を選択した後、**Actions** ドロップダウンメニューから **Attach to thing** を押します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attach_policy.PNG" style={{width:800, height:'auto'}}/></div>
 
@@ -160,42 +156,44 @@ AWS IoT Coreポリシーは、IAMポリシーの規約に従ったJSONドキュ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/attachpolicy.PNG" style={{width:600, height:'auto'}}/></div>
 
-## MQTT のテスト
+## MQTTのテスト
 
-これを実行するには、[テスト用 Python ファイル](https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/AWStest.py) をダウンロードしてください。デバイス証明書、キー ファイル（公開鍵と秘密鍵）、ルート アクセス ファイル、およびこの Python ファイルを reTerminal デバイス上の同じフォルダーに配置してください。また、接続 URL を変更する必要があります。
+これを実現するために、私たちの[テスト用Pythonファイル](https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/AWStest.py)をダウンロードしてください。デバイス証明書、キーファイル（公開鍵と秘密鍵）、ルートアクセスファイル、およびこのPythonファイルが、reTerminal Device上の同じフォルダにあることを確認してください。さらに、接続URLを変更する必要があります。
 
-以下の手順で行います：
+そのためには：
 
-- **ステップ 01**: 設定に移動します。
+- **ステップ01**：設定に移動します
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/settings.PNG" style={{width:200, height:300}}/></div>
 
-- **ステップ 02**: URL を確認します。
+- **ステップ02**：そこでURLを見つけることができます
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/weburl.PNG" style={{width:800, height:'auto'}}/></div>
 
-- **ステップ 03**: ファイル名を自分のものに置き換え、ファイルを実行します。
+- **ステップ03**：これらのファイル名をあなたのものに置き換えて、ファイルを実行します
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/cosw1.PNG" style={{width:800, height:'auto'}}/></div>
 
 ## 接続のテスト
 
-**Test** タブの下にある MQTT テストクライアントに移動し、購読するトピック名を入力します。この場合、トピック名は `device/data` です。
+**Test**タブの下にあるMQTTテストクライアントに移動し、購読するトピック名を入力します。この場合はdevice/dataです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/mqtttest.PNG" style={{width:800, height:'auto'}}/></div>
 
-出力は以下のようになります。reTerminal DM からのメッセージがコンソールに表示されます。
+出力はこのようなものです。reTerminal DMからのメッセージがコンソールにポップアップします。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/aws/tutorial1/seeedop.PNG" style={{width:800, height:'auto'}}/></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

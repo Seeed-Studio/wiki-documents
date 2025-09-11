@@ -83,7 +83,7 @@ RePhone 可以作为一个学习工具，帮助您开始有趣的项目。目前
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Browse_my_computer_for_driver_software.png)
 
-5. 点击 **浏览**，定位到您解压的 Arduino IDE for RePhone 文件夹 .. \\Arduino\_IDE\_for\_RePhone\\drivers\\mtk 。点击 **下一步** 开始安装驱动程序。
+5. 点击 **浏览**，定位到您解压的 Arduino IDE for RePhone 文件夹 .. \\Arduino_IDE_for_RePhone\\drivers\\mtk 。点击 **下一步** 开始安装驱动程序。
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Locate_Driver.png)
 
@@ -103,9 +103,9 @@ RePhone 可以作为一个学习工具，帮助您开始有趣的项目。目前
 
 4. 接下来，
 
--- 如果您使用的是 **<big>Windows Vista 64位</big>**，定位到 "**Arduino\_IDE\_for\_RePhone-master\\drivers\\mtk\\Vista\\usb2ser\_Vista64.inf\\**"
+-- 如果您使用的是 **<big>Windows Vista 64位</big>**，定位到 "**Arduino_IDE_for_RePhone-master\\drivers\\mtk\\Vista\\usb2ser_Vista64.inf\\**"
 
--- 如果您使用的是 **<big>Windows 7 或更高版本的 64位</big>**，定位到 "**Arduino\_IDE\_for\_RePhone-master\\drivers\\mtk\\Win7\\usb2ser\_Win764.inf**"
+-- 如果您使用的是 **<big>Windows 7 或更高版本的 64位</big>**，定位到 "**Arduino_IDE_for_RePhone-master\\drivers\\mtk\\Win7\\usb2ser_Win764.inf**"
 
 ### 使用 LinkIt Assist 2502 SDK 2.0.46 安装驱动程序
 
@@ -113,7 +113,7 @@ LinkIt Assist 2502 SDK 2.0.46 还提供了驱动安装程序。
 
 [![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Linkit_assist_sdk_2.0.46-04.png)](http://download.labs.mediatek.com/MediaTek_LinkIt_Assist_2502_SDK_2_0_46.zip)
 
-然后在路径 **"MediaTek\_LinkIt\_Assist\_2502\_SDK\_2\_0\_46\\LINKIT\_ASSIST\_SDK\\Driver\\InstallMTKUSBCOMPortDriver.exe"** 中找到驱动安装程序。
+然后在路径 **"MediaTek_LinkIt_Assist_2502_SDK_2_0_46\\LINKIT_ASSIST_SDK\\Driver\\InstallMTKUSBCOMPortDriver.exe"** 中找到驱动安装程序。
 
 更新/刷写固件
 -----------------
@@ -127,7 +127,7 @@ LinkIt Assist 2502 SDK 2.0.46 还提供了驱动安装程序。
 
 1. **断开 RePhone 与电脑的连接**，**按住电源键（PWR）2 秒以关闭设备**（LED 指示灯变为 **红色** 然后熄灭）。
 
-2. 打开路径 ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\FirmwareUpdater.exe*** 下的 **FirmwareUpdater.exe**，确保固件更新器中的平台为 "**RePhone**"，如图所示。如果不是，请点击 "**Others**"，并定位到 ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\firmware\\LinkIt\_Device\\RePhone\\W15.19.p2-uart\\SEEED02A\_DEMO\_BB.cfg***，然后点击 **Download（绿色按钮）**。
+2. 打开路径 ***...Arduino_IDE_for_RePhone\\hardware\\tools\\mtk\\FirmwareUpdater.exe*** 下的 **FirmwareUpdater.exe**，确保固件更新器中的平台为 "**RePhone**"，如图所示。如果不是，请点击 "**Others**"，并定位到 ***...Arduino_IDE_for_RePhone\\hardware\\tools\\mtk\\firmware\\LinkIt_Device\\RePhone\\W15.19.p2-uart\\SEEED02A_DEMO_BB.cfg***，然后点击 **Download（绿色按钮）**。
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware.png)
 
@@ -155,7 +155,7 @@ LinkIt Assist 2502 SDK 2.0.46 还提供了驱动安装程序。
 
 1. 按照“更新/刷写固件”部分中的说明刷写固件。
 
-2. 下载 RePhone\_Create\_Kit\_VXP 文件。
+2. 下载 RePhone_Create_Kit_VXP 文件。
 
     [![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/RePhone_Kit_Create_VXP.png)](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/)
 
@@ -174,7 +174,7 @@ LinkIt Assist 2502 SDK 2.0.46 还提供了驱动安装程序。
 
 1. 按住电源键（PWR）2 秒以打开设备（LED 指示灯显示绿色）。
 
-2. 打开解压后的 Arduino IDE for RePhone 文件夹中的 **Arduino\_IDE\_for\_RePhone.exe**，软件界面如下：
+2. 打开解压后的 Arduino IDE for RePhone 文件夹中的 **Arduino_IDE_for_RePhone.exe**，软件界面如下：
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_interface.png)
 
@@ -229,15 +229,15 @@ void loop() {
 
 如果你想进行更有趣的项目，尝试一些示例代码会是一个不错的开始。
 
-1. 在 **偏好设置** 中将您的 **sketchbook 位置** 设置为 ***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk***（即您安装 Arduino IDE for RePhone 的位置）
+1. 在 **偏好设置** 中将您的 **sketchbook 位置** 设置为 ***Arduino_IDE_for_RePhone-master\\hardware\\arduino\\mtk***（即您安装 Arduino IDE for RePhone 的位置）
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_1.png)
 
-    然后重新启动 ***Arduino\_IDE\_for\_RePhone.exe***，您就可以看到示例代码。
+    然后重新启动 ***Arduino_IDE_for_RePhone.exe***，您就可以看到示例代码。
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_2.png)
 
 2. 您也可以在以下路径手动找到所有 RePhone 模块的 Arduino 示例代码：
-***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk\\libraries***
+***Arduino_IDE_for_RePhone-master\\hardware\\arduino\\mtk\\libraries***
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Example_code_Arduino_IDE.png)
 

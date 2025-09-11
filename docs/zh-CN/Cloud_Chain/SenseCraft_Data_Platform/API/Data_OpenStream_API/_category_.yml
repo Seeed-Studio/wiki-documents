@@ -1,5 +1,5 @@
-position: 4 # 支持浮动位置
+position: 4 # float position is supported
 label: '数据开放流 API'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别折叠
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: data_openstream_api

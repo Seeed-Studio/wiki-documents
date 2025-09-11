@@ -17,6 +17,7 @@ last_update:
 # reSpeaker XVF3800 Record and Playback Audio Using I2S
 
 ## Objective
+
 The goal of this sketch is to **record audio data from the XVF3800 voice processor** using the I2S interface on an ESP32-S3, **store it temporarily in memory**, and then **play it back** through the same audio path. This kind of loopback test helps verify whether both input and output channels of the XVF3800 are correctly initialized and working, especially when controlled via I2C.
 
 ## Code Overview
@@ -74,18 +75,16 @@ void loop() {
 
 ```
 
-
-
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

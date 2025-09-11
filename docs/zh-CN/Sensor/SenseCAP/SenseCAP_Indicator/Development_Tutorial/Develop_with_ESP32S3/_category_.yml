@@ -1,5 +1,5 @@
 position: 2 # float position is supported
-label: '使用 ESP32S3 进行开发'
+label: '使用 ESP32S3 开发'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: indicator_dev

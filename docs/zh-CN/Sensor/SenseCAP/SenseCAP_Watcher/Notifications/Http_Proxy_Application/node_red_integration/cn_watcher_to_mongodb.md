@@ -26,13 +26,13 @@ last_update:
 
 ### 步骤 1：安装 Node-RED
 
-首先，您需要按照下面的视频在 Watcher 中运行一个任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行一个任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-此设置需要 Node-RED 以及 Watcher API。如果您尚未安装 Node-RED 或将其与 Watcher API 连接，请从这里开始：[**Watcher 到 Node-RED 快速入门**](https://wiki.seeedstudio.com/cn/watcher_to_node_red)。
+此设置需要 Node-RED 以及 Watcher API。如果您尚未安装 Node-RED 或将其与 Watcher API 连接，请从这里开始：[**Watcher 到 Node-RED 快速入门**](https://wiki.seeedstudio.com/watcher_to_node_red)。
 
 ### 步骤 2：为 MongoDB 准备数据
 
@@ -64,6 +64,7 @@ return msg;
 ## 第二部分. 设置 MongoDB
 
 ### 步骤 3. 创建账户
+
 接下来，创建一个 MongoDB 账户，如果您已经有账户则直接登录。如果您是 MongoDB 新用户，请先访问 [**mongodb.com**](https://www.mongodb.com) 并注册一个免费账户。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/MongoDB_1.png" style={{width:1000, height:'auto'}}/></div>
@@ -96,7 +97,7 @@ return msg;
 
 ### 步骤 6. 创建数据库和集合
 
-在左侧边栏中，点击 **Deployment** 类别下的 **Databases** 菜单。然后，点击 **Browse Collections** 打开数据库管理页面。这是管理所有数据库和集合的地方。
+在左侧边栏中，点击 **Deployment** 类别下的 **Databases** 菜单。然后，点击 **Browse Collections** 打开数据库管理页面。这里是管理所有数据库和集合的地方。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/MongoDB_8.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -120,22 +121,25 @@ return msg;
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/MongoDB_12.png" style={{width:1000, height:'auto'}}/></div>
 
-选择 MongoDB Shell 选项后，您将被引导到标题为 **Run your connection string in your command line.** 的部分。在这里，您将找到显示的完整连接字符串。
+选择 MongoDB Shell 选项后，您将被引导到标题为 **Run your connection string in your command line.** 的部分。在这里，您将找到完整的连接字符串。
 
 在连接字符串中，查找从 `mongodb+srv://` 开始并持续到遇到 `/` 字符的部分。这部分就是您的主机名。它通常包含您的集群名称，后跟 `.mongodb.net`。
 
 例如，如果您的连接字符串是：
+
 ```sh
 mongosh "mongodb+srv://my-cluster123.mongodb.net" --apiVersion 1 --username my-username
 ```
-主机名将是：
+
+The hostname would be:
+
 ```sh
 my-cluster123.mongodb.net
 ```
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_mongo_db_image/MongoDB_13.png" style={{width:1000, height:'auto'}}/></div>
 
-## 第三部分. 将 MongoDB 数据库连接到 Node-RED
+## 第三部分：将 MongoDB 数据库连接到 Node-RED
 
 ### 步骤 8. 安装 MongoDB 模块
 
@@ -195,14 +199,14 @@ my-cluster123.mongodb.net
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

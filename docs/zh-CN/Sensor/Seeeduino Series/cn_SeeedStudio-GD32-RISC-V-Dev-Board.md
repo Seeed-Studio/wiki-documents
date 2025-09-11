@@ -107,7 +107,7 @@ SeeedStudio GD32 RISC-V 开发板、2.8 英寸 240x320 像素电阻式 LCD 屏�
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
-然后您应该将二进制文件添加到 APP 程序文件列中。二进制文件位于路径 \TFT_GD32\.pio\build\gd32vf103v-eval。
+然后您应该将二进制文件添加到 APP 程序文件列中。二进制文件位于路径 \TFT_GD32.pio\build\gd32vf103v-eval。
 选择 Index 4 并点击"ok"将代码下载到开发板，下载后，点击"Leave DFU"让开发板断开与 DFU 工具的连接。然后您将在 LCD 上看到一个计算图形处理时间的演示。它几乎包含了"TFT_eSPI"库中的所有 API。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/gd32.gif)

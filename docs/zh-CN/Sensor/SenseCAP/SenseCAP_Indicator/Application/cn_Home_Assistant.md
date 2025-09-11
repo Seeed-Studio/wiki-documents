@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA/HA_Green.png" style={{ width: 680, height: 'auto', "border-radius": '6.66px' }}/></div>
 
-> 经济实惠的 **[Home Assistant Green](https://www.home-assistant.io/green)** 是您开始使用 Home Assistant 的最简单方式。它即插即用，并且已预装 Home Assistant。
+> 经济实惠的 **[Home Assistant Green](https://www.home-assistant.io/green)** 是您开始使用 Home Assistant 的最简单方式。它即插即用，并且已预装了 Home Assistant。
 
 </TabItem>
 
@@ -61,7 +61,7 @@ import TabItem from '@theme/TabItem';
 现在，让我们开始集成过程。按照以下三个主要步骤让您的 SenseCAP Indicator 与 Home Assistant 协同工作：
 
 1. [安装 Home Assistant OS](#install_HA)
-   1. [安装附加组件](#mqtt-addons)
+   1. [安装插件](#mqtt-addons)
    2. [设置 MQTT 集成](#mqtt-integration)
 2. [构建和刷写固件](#build-flash-firmware)
 3. [添加 MQTT 设备](#add-mqtt-devices)
@@ -69,11 +69,11 @@ import TabItem from '@theme/TabItem';
 
 ## 前提条件
 
-在开始之前，请确保您已经阅读了 SenseCAP Indicator 板的[用户指南](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
+在开始之前，请确保您已经阅读了 SenseCAP Indicator 板的[用户指南](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
 
 ## 安装 Home Assistant OS {#install_HA}
 
-> Home Assistant 是一个强大的开源家庭自动化平台，专注于隐私和本地控制。它提供了一个可定制和灵活的框架，可以从一个统一的平台管理和自动化您的所有家庭设备。
+> Home Assistant 是一个功能强大的开源家庭自动化平台，专注于隐私和本地控制。它提供了一个可定制和灵活的框架，可以从单一的统一平台管理和自动化您的所有家庭设备。
 
 使用 **Home Assistant Yellow**，您可以按照[这里](https://www.home-assistant.io/installation/yellow)提供的说明进行操作。此外，要在任何类型的 Raspberry Pi 或本地服务器上运行，您可以按照这个[说明](https://www.home-assistant.io/installation/)逐步进行。
 
@@ -84,13 +84,13 @@ import TabItem from '@theme/TabItem';
 <br />
 
 :::tip 不知道如何入门 Home Assistant？
-安装 Home Assistant 后，请查看[入门 Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/)了解详情。
+安装 Home Assistant 后，请查看 [Onboarding Home Assistant - Home Assistant](https://www.home-assistant.io/getting-started/onboarding/) 了解详情。
 :::
 
 ### 步骤 1：安装附加组件 {#mqtt-addons}
 
 :::caution 需要附加组件功能
-Home Assistant Yellow 配备 **Home Assistant 操作系统**，可以轻松安装附加组件。但是，**Home Assistant 容器**不支持附加组件，这意味着您需要在 Home Assistant 之外安装 MQTT 代理应用程序。有关详细信息，请查看[安装方法](https://www.home-assistant.io/installation/#compare-installation-methods)。
+Home Assistant Yellow 配备 **Home Assistant Operating System**，可以轻松安装附加组件。但是，**Home Assistant Container** 不支持附加组件，这意味着您需要在 Home Assistant 之外安装 MQTT 代理应用程序。详情请查看[安装方法](https://www.home-assistant.io/installation/#compare-installation-methods)。
 :::
 
 下一步是安装 **Mosquitto Broker** 和 **File Editor**。**Mosquitto** 是一个实现 MQTT 协议的开源消息代理，而 **File Editor** 允许您在不访问终端的情况下修改 `configuration.yaml` 文件。
@@ -111,21 +111,21 @@ Home Assistant Yellow 配备 **Home Assistant 操作系统**，可以轻松安�
 </div>
 
 :::tip
-为了方便起见，在侧边栏中显示"File editor"：
+为了方便起见，在侧边栏中显示"文件编辑器"：
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_File_editor_show.png"/></div>
 
 :::
 
-现在我们有了两个附加组件。
+现在我们有了两个插件。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Two_Adds.png"/></div>
 
 ### 步骤 2：设置 MQTT 集成 {#mqtt-integration}
 
-MQTT（消息队列遥测传输）是一个轻量级消息协议，对于将您的 SenseCAP Indicator 板连接到 Home Assistant 至关重要。要启用此功能，您需要将 [MQTT 集成](https://www.home-assistant.io/integrations/mqtt)添加到您的 Home Assistant 设置中。
+MQTT（消息队列遥测传输）是一种轻量级消息传递协议，对于将您的 SenseCAP Indicator 开发板连接到 Home Assistant 至关重要。要启用此功能，您需要将 [MQTT 集成](https://www.home-assistant.io/integrations/mqtt) 添加到您的 Home Assistant 设置中。
 
-> 添加 MQTT 集成允许 Home Assistant 与您的 SenseCAP Indicator 板无缝通信，实现实时数据交换和控制。这种双向通信对于监控传感器数据和向您的设备发送命令至关重要。
+> 添加 MQTT 集成允许 Home Assistant 与您的 SenseCAP Indicator 开发板无缝通信，实现实时数据交换和控制。这种双向通信对于监控传感器数据和向您的设备发送命令至关重要。
 
 要设置 MQTT 集成：
 
@@ -143,16 +143,16 @@ MQTT（消息队列遥测传输）是一个轻量级消息协议，对于将您�
 </div>
 
 :::tip
-如果您使用的是非官方 MQTT 代理（如 EMQX Broker）而不是标准的 Mosquitto 代理，自动发现可能无法工作。在这种情况下，您需要手动输入代理的 IP 地址来建立连接。这确保 Home Assistant 可以与您的自定义 MQTT 设置通信。
+如果您使用的是非官方的 MQTT 代理（如 EMQX Broker）而不是标准的 Mosquitto 代理，自动发现可能无法工作。在这种情况下，您需要手动输入代理的 IP 地址来建立连接。这确保了 Home Assistant 可以与您的自定义 MQTT 设置进行通信。
 :::
 
-### 为 MQTT 附加组件添加用户
+### 为 MQTT 插件添加用户
 
-在 Home Assistant 中使用官方 Mosquitto Broker 附加组件时，您可能需要为 MQTT 连接设置凭据。此步骤确保您的设备和 Home Assistant 之间的安全通信。以下是添加用户的方法：
+在 Home Assistant 中使用官方 Mosquitto Broker 插件时，您可能需要为 MQTT 连接设置凭据。此步骤确保您的设备与 Home Assistant 之间的安全通信。以下是添加用户的方法：
 
-1. 在您的 Home Assistant 界面中导航到 Mosquitto broker 附加组件。
-2. 在附加组件配置中查找"用户"部分或选项卡。
-3. 点击"添加用户"或"+"按钮创建新用户。
+1. 在您的 Home Assistant 界面中导航到 Mosquitto broker 插件。
+2. 在插件配置中查找"Users"部分或选项卡。
+3. 点击"Add User"或"+"按钮创建新用户。
 
 <div class="table-center">
   <table align="center">
@@ -164,7 +164,6 @@ MQTT（消息队列遥测传输）是一个轻量级消息协议，对于将您�
 </div>
 
 [^ref]: [MQTT 默认凭据 - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/ba2fe1c04d486f802e12b763ffb6efbc71bb5d80/examples/indicator_ha/main/ha_config.h#L10C1-L14C70)
-
 
 4. 在用户创建表单中：
    - 输入您选择的用户名。默认为 `indicator-usr`[^ref]。
@@ -178,7 +177,7 @@ MQTT（消息队列遥测传输）是一个轻量级消息协议，对于将您�
 
 添加用户后，您可能需要重启 Mosquitto broker 插件以使更改生效。现在您应该能够使用这些凭据建立安全的 MQTT 连接。
 
-记住使用新的用户名和密码更新您的 SenseCAP Indicator 的 MQTT 设置，以确保它能够与 Home Assistant 通信。
+记住更新您的 SenseCAP Indicator 的 MQTT 设置，使用新的用户名和密码，以确保它能与 Home Assistant 通信。
 
 ## 设置 SenseCAP Indicator ESP32 项目 {#build-flash-firmware}
 
@@ -201,14 +200,13 @@ MQTT（消息队列遥测传输）是一个轻量级消息协议，对于将您�
 </a>
 </div>
 
-
 或使用 Git 克隆仓库：
 
 ```bash
 git clone https://github.com/Love4yzp/sensecap-indicator-ha
 ```
 
-</TabItem> 
+</TabItem>
 <TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
 
 这个项目包含了更多 SenseCAP Indicator 的示例和功能。
@@ -227,28 +225,28 @@ git clone https://github.com/Love4yzp/sensecap-indicator-ha
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32
 ```
 
-</TabItem> 
+</TabItem>
 </Tabs>
 
 ### 步骤 2：导航到项目目录
 
 下载或克隆项目后，导航到相应的目录：
 
-<Tabs groupId="project-ha"> 
+<Tabs groupId="project-ha">
 <TabItem value="sensecap-indicator-ha" label="sensecap-indicator-ha">
 
 ```bash
 cd sensecap-indicator-ha
 ```
 
-</TabItem> 
+</TabItem>
 <TabItem value="SenseCAP_Indicator_ESP32" label="SenseCAP_Indicator_ESP32">
 
 ```bash
 cd SenseCAP_Indicator_ESP32/examples/indicator_ha
 ```
 
-</TabItem> 
+</TabItem>
 </Tabs>
 
 ### 步骤 3：构建、烧录和监控项目
@@ -261,11 +259,12 @@ idf.py -p PORT build flash monitor
 
 将 `PORT` 替换为您设备的相应端口（例如，Windows 上的 `COM3` 或 Linux 上的 `/dev/ttyUSB0`）。
 
-:::tip 
+:::tip
 如果您不确定设备的端口：
 
-- 在 Windows 上：在"端口 (COM & LPT)"下检查设备管理器
+- 在 Windows 上：在设备管理器的"端口 (COM & LPT)"下查看
 - 在 Linux/macOS 上：在终端中运行 `ls /dev/tty*`
+
 :::
 
 此命令将：
@@ -280,7 +279,7 @@ idf.py -p PORT build flash monitor
 
 刷写固件后，串行监视器将显示来自您的 SenseCAP Indicator 的输出。查找指示成功连接到您的 Wi-Fi 网络和 MQTT 代理的消息。
 
-:::caution 
+:::caution
 确保您的 SenseCAP Indicator 连接到与您的 Home Assistant 实例相同的网络，并且您的 MQTT 代理已正确配置且可访问。
 :::
 
@@ -320,33 +319,33 @@ idf.py -p PORT build flash monitor
 <summary>点击展开并复制 SenseCAP Indicator 的 MQTT 配置</summary>
 
 ```yaml
-# 示例 configuration.yaml 条目 | SenseCAP Indicator MQTT 配置
+# Example configuration.yaml entry | SenseCAP Indicator MQTT Configuration
 mqtt:
   sensor:
     - unique_id: indicator_temperature
-      name: "指示器温度"
+      name: "Indicator Temperature"
       state_topic: "indicator/sensor"
       suggested_display_precision: 1
       unit_of_measurement: "°C"
       value_template: "{{ value_json.temp }}"
     - unique_id: indicator_humidity
-      name: "指示器湿度"
+      name: "Indicator Humidity"
       state_topic: "indicator/sensor"
       unit_of_measurement: "%"
       value_template: "{{ value_json.humidity }}"
     - unique_id: indicator_co2
-      name: "指示器 CO2"
+      name: "Indicator CO2"
       state_topic: "indicator/sensor"
       unit_of_measurement: "ppm"
       value_template: "{{ value_json.co2 }}"
     - unique_id: indicator_tvoc
-      name: "指示器 tVOC"
+      name: "Indicator tVOC"
       state_topic: "indicator/sensor"
       unit_of_measurement: ""
       value_template: "{{ value_json.tvoc }}"
   switch:
     - unique_id: indicator_switch1
-      name: "指示器开关1"
+      name: "Indicator Switch1"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch1 }}"
@@ -355,7 +354,7 @@ mqtt:
       state_on: 1
       state_off: 0
     - unique_id: indicator_switch2
-      name: "指示器开关2"
+      name: "Indicator Switch2"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch2 }}"
@@ -364,7 +363,7 @@ mqtt:
       state_on: 1
       state_off: 0
     - unique_id: indicator_switch3
-      name: "指示器开关3"
+      name: "Indicator Switch3"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch3 }}"
@@ -373,7 +372,7 @@ mqtt:
       state_on: 1
       state_off: 0
     - unique_id: indicator_switch4
-      name: "指示器开关4"
+      name: "Indicator Switch4"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch4 }}"
@@ -382,7 +381,7 @@ mqtt:
       state_on: 1
       state_off: 0
     - unique_id: indicator_switch6
-      name: "指示器开关6"
+      name: "Indicator Switch6"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch6 }}"
@@ -391,7 +390,7 @@ mqtt:
       state_on: 1
       state_off: 0
     - unique_id: indicator_switch7
-      name: "指示器开关7"
+      name: "Indicator Switch7"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       value_template: "{{ value_json.switch7 }}"
@@ -401,13 +400,13 @@ mqtt:
       state_off: 0
   number:
     - unique_id: indicator_switch5
-      name: "指示器开关5"
+      name: "Indicator Switch5"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       command_template: '{"switch5": {{ value }} }'
       value_template: "{{ value_json.switch5 }}"
     - unique_id: indicator_switch8
-      name: "指示器开关8"
+      name: "Indicator Switch8"
       state_topic: "indicator/switch/state"
       command_topic: "indicator/switch/set"
       command_template: '{"switch8": {{ value }} }'
@@ -416,25 +415,25 @@ mqtt:
 
 </details>
 
-1. 将更改保存到 `configuration.yaml` 文件。
+1. 保存对 `configuration.yaml` 文件的更改。
 
 :::caution
-如果您的 Home Assistant 设置不支持插件（例如 Home Assistant Container），您需要通过终端或 SSH 连接修改 `configuration.yaml` 文件。
+如果您的 Home Assistant 设置不支持插件（例如 Home Assistant Container），您需要通过终端或 SSH 连接来修改 `configuration.yaml` 文件。
 :::
 
 ### 步骤 2：应用配置更改
 
-修改 `configuration.yaml` 文件后，您需要应用更改：
+修改 `configuration.yaml` 文件后，您需要应用这些更改：
 
 1. 在您的 Home Assistant 仪表板中导航到 `开发者工具`。
 2. 找到并点击"YAML"选项卡。
-3. 通过 `所有 YAML 配置` 重新加载配置。
+3. 通过 `ALL YAML CONFIGURATION` 重新加载配置。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_ALL_YAML.png" alt="开发者工具中的 YAML 配置"/></div>
 
-
 :::note
 如果出现问题，您可以
+
 - 点击"检查配置"按钮来验证您的更改。
 - 如果配置检查通过，点击"重启"按钮来应用新配置。
 
@@ -443,7 +442,7 @@ mqtt:
 请记住确保您的 SenseCAP Indicator 已正确配置，能够将其数据发布到配置中定义的正确 MQTT 主题。
 :::
 
-通过遵循这些步骤，您已成功通过 MQTT 将您的 SenseCAP Indicator 设备添加到 Home Assistant。现在您可以在自动化、脚本和仪表板中使用这些实体，获得更集成的智能家居体验。
+通过遵循这些步骤，您已成功通过 MQTT 将您的 SenseCAP Indicator 设备添加到 Home Assistant。现在您可以在自动化、脚本和仪表板中使用这些实体，获得更加集成的智能家居体验。
 
 ## 设置仪表板 {#set-up-dashboard}
 
@@ -478,8 +477,8 @@ mqtt:
 <div class="table-center">
   <table align="center">
     <tr>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png" style={{width:480, height:'auto'}} alt="编辑仪表板"/></div></td>
-        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png" style={{width:480, height:'auto'}} alt="接管控制"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_To_SenseCAP.png" style={{width:480, height:'auto'}} alt="Edit Dashboard"/></div></td>
+        <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_Edit_Dashboard.png" style={{width:480, height:'auto'}} alt="Take Control"/></div></td>
     </tr>
   </table>
 </div>
@@ -489,7 +488,7 @@ mqtt:
 
 <details>
 
-<summary>点击复制仪表板 YAML 来更改 UI</summary>
+<summary>点击复制仪表板 YAML 以更改 UI</summary>
 
 > 注意：这不是用于 `Configuration.YAML` 的。
 
@@ -555,7 +554,7 @@ views:
    </table>
 </div>
 
-恭喜！您已成功配置了 Home Assistant 仪表板来显示和控制您的 SenseCAP Indicator。现在您可以监控 CO2 水平、温度、湿度和 TVOC，以及直接从 Home Assistant 界面控制各种开关。
+恭喜！您已成功配置您的 Home Assistant 仪表板来显示和控制您的 SenseCAP Indicator。现在您可以监控 CO2 水平、温度、湿度和 TVOC，以及直接从您的 Home Assistant 界面控制各种开关。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/HA_data_show.gif"/></div>
 
@@ -563,11 +562,10 @@ views:
 
 1. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
 2. **`indicator_ha.c` 文件**：此文件包含 Home Assistant 集成的主要功能。您可以在[这里](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_ha/main/model/indicator_ha.c)查看。
-3. **用户指南**：用户指南提供了有关 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
+3. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 4. **Home Assistant 安装指南**：如果您是 Home Assistant 的新用户，本指南将帮助您安装和设置。您可以在[这里](https://www.home-assistant.io/installation/)找到。
 5. **ESP-IDF 入门指南**：本指南提供了配置和使用 ESP-IDF 构建项目的完整步骤。您可以在[这里](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)访问。
 6. [Home Assistant 概念和术语](https://www.home-assistant.io/getting-started/concepts-terminology/)
-
 
 ## 参考
 

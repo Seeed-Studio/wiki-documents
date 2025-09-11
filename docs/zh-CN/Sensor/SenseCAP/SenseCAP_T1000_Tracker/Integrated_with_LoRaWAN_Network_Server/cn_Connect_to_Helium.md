@@ -1,6 +1,6 @@
 ---
-description: 连接到 The Things Network
-title: 连接到 Helium
+description: 连接到The Things Network
+title: 连接到Helium
 keywords:
 - SenseCAP_T1000_tracker
 - Helium
@@ -11,45 +11,43 @@ last_update:
   author: Jessie
 ---
 
-# 将 SenseCAP T1000 连接到 Helium
+# 将SenseCAP T1000连接到Helium
 
 ## 设备配置
 
-在连接到 Helium 之前，您需要在 SenseCAP Mate APP 上配置设备的基本参数，详情请查看[开始使用](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker)。
+在连接到Helium之前，您需要在SenseCAP Mate APP上配置设备的基本参数，详情请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker)。
 
-* 将平台设置为 `Helium`，然后复制 `Device EUI`/`APP EUI`/`APP Key`。
+- 将平台设置为`Helium`，然后复制`Device EUI`/`APP EUI`/`APP Key`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/heliumdevice.png" alt="pir" width={300} height="auto" /></p>
 
-## Helium 控制台配置
+## Helium控制台配置
 
-Helium 控制台不再对新账户开放。这里保留了如何将 T1000 连接到 Helium 控制台的说明，
-供已有账户的用户使用。对于新用户，请参考上面的 ChirpStack LNA 步骤，或根据这里的两个现有示例
-确定您特定 LNA 的必要步骤。
+Helium控制台不再对新账户开放。如何将T1000连接到Helium控制台的说明仍保留在此处，供已有账户的用户使用。对于新用户，请参考上述ChirpStack LNA步骤，或根据此处的两个现有示例确定您特定LNA的必要步骤。
 
 ### 添加新设备
 
-登录您的 [Helium 控制台](https://console.helium.com)，然后转到 `Devices` 部分并点击 `Add device` 按钮。
+登录您的[Helium控制台](https://console.helium.com)，然后转到`Devices`部分并点击`Add device`按钮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-new-helium.png" alt="pir" width={800} height="auto" /></p>
 
-填写必填字段，如设备名称、LoRaWAN 凭证等。<br/>
-然后点击 **Save Device** 按钮。
+填写必需的字段，如设备名称**、** LoRaWAN凭据等。<br/>
+然后点击**Save Device**按钮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-new-helium2.png" alt="pir" width={800} height="auto" /></p>
 
 ### 创建解码器函数
 
 下一步是设置将原始字节解码为人类可读形式的函数。<br/>
-转到左侧面板的 `Function` 选项卡。然后点击 `Add New Function` 按钮并为其命名：
+转到左侧面板的`Function`选项卡。然后点击`Add New Function`按钮并为其命名：
 
 <p style={{textAlign: 'center'}}><img src="https://downloads.intercomcdn.com/i/o/788631256/c066827c0eaebdc9dbf629d3/Group+3%282%29.png" alt="pir" width={800} height="auto" /></p>
 
-复制以下代码然后保存更改。
+复制以下代码，然后保存更改。
 
 <details>
 
-<summary>Helium 解码器</summary>
+<summary>Helium解码器</summary>
 
 ```cpp
 function Decoder (bytes, port) {
@@ -905,45 +903,45 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 ### 检查数据
 
-当设备尝试连接到网络时，呼吸灯会闪烁。如果设备成功加入网络，呼吸灯会快速闪烁，并发出轻快的旋律。
+当设备尝试连接网络时，呼吸灯会闪烁。如果设备成功加入网络，呼吸灯会快速闪烁，并会发出轻快愉悦的旋律。
 
 然后您可以在 Helium 控制台上查看数据。
 
 ## 注意事项
 
 :::caution note
-对于在 **EU868**/**RU864** 区域运行的用户：
+对于在 **EU868**/**RU864** 区域操作的用户：
 
 **不建议**将上传间隔设置为少于 4 分钟。
 
-如果您设置的上传间隔少于 4 分钟，您可能会注意到设备上行链路与当前时间之间的时间戳不对齐。
+如果您设置的上传间隔少于 4 分钟，您可能会注意到设备上行链路与当前时间之间存在时间戳不对齐的情况。
 :::
 
 **原理如下**：
 
-鉴于 EU868 中 [1% 占空比](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle) 的限制，设备必须耐心等待大约 4 分钟才能进行每次上行链路传输。此外，Helium 网络仅在累积了 20 个连续的上行链路数据包（[ADR](https://docs.helium.com/console/profiles/#adr-algorithm) 位设置为 1）后才启动数据速率和功率校正。
+考虑到 EU868 中的 [1% 占空比](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle/#maximum-duty-cycle) 限制，设备必须耐心等待大约 4 分钟才能进行每次上行链路传输。此外，Helium 网络仅在累积 20 个连续的上行链路数据包（[ADR](https://docs.helium.com/console/profiles/#adr-algorithm) 位设置为 1）后才启动数据速率和功率校正。
 
-因此，如果您设置的上传间隔少于 4 分钟，实时数据将暂时存储在 RAM 中，并保持到 Helium 网络触发数据速率和功率校正后再上传。
+因此，如果您设置的上传间隔少于 4 分钟，实时数据将临时存储在 RAM 中并保持等待，直到 Helium 网络触发数据速率和功率校正后才上传。
 
 ## ChirpStack LNS
 
-对于新用户，要从 Helium 网络上的设备接收数据，必须将其与 LNS（LoraWAN 网络服务器）关联，通常使用[公共 LNS](https://docs.helium.com/iot/find-a-lns-provider/) 之一，其中许多使用 **ChirpStack**，但也可以将自己的 LNS 连接到 Helium。
+对于新用户，要从 Helium 网络上的设备接收数据，必须将其与 LNS（LoraWAN 网络服务器）关联，通常使用其中一个[公共 LNS](https://docs.helium.com/iot/find-a-lns-provider/)，其中许多使用 **ChirpStack**，但也可以将自己的 LNS 连接到 Helium。
 
-对于熟悉一般流程的用户，简化步骤如下：
+对于熟悉一般流程的用户，简要说明如下：
 
-* 使用适当的区域和编解码器创建设备配置文件（见下面的源码）<br/>
-* 使用 `devEUI`、`appKey` 和包含 AppEUI 的 `app_eui` 变量创建设备，这三个值都来自 `SenseCraft` 应用
+- 使用适当的区域和编解码器创建设备配置文件（见下面的源码）<br/>
+- 使用 `devEUI`、`appKey` 和包含 AppEUI 的 `app_eui` 变量创建设备，这三个值都来自 `SenseCraft` 应用程序
 
 ### 添加设备配置文件
 
-第一步是将 T1000 跟踪器的设备配置文件添加到您的 ChirpStack LNS。
+第一步是将 T1000 Tracker 的设备配置文件添加到您的 ChirpStack LNS。
 这告诉 LNS 如何解码从 T1000 接收的数据包以及许多其他设置。
 
 在 ChirpStack 仪表板中选择 `Device Profiles` 并点击 `Add device profile`。
 
 ![image](https://github.com/user-attachments/assets/7e6984e2-178b-446e-afda-29dd033c662f)
 
-在常规选项卡中，输入您可以识别的设备配置文件名称并选择适当的区域参数。
+在常规选项卡上，输入您能识别的设备配置文件名称并选择适当的区域参数。
 
 LoRaWAN MAC 版本：`1.0.4`<br/>
 
@@ -951,7 +949,7 @@ LoRaWAN MAC 版本：`1.0.4`<br/>
 
 ![image](https://github.com/user-attachments/assets/bb83141f-a447-437b-a29d-27e16a20ce7a)
 
-在编解码器选项卡中选择 `JavaScript functions` 并输入编解码器：
+在编解码器选项卡上选择 `JavaScript functions` 并输入编解码器：
 
 :::tip
 ChirpStack 有 2 个版本，请选择适当的版本：
@@ -967,33 +965,33 @@ ChirpStack 有 2 个版本，请选择适当的版本：
 
 下一步是创建应用程序并向其添加实际设备。
 
-转到 `Applications` 部分并添加新的应用程序。
+转到 `Applications` 部分并添加新应用程序。
 
 ![image](https://github.com/user-attachments/assets/5dc700c6-7faa-4d65-9d94-aa2543f06254)
 
-然后将设备添加到应用程序并输入之前在 SenseCraft 应用中捕获的 `devEUI`。
+然后向应用程序添加设备并输入之前在 SenseCraft 应用程序中捕获的 `devEUI`。
 
 ![image](https://github.com/user-attachments/assets/93febc5b-bc8f-430b-83e0-55d89690355c)
 
-在变量选项卡中添加名为 `app_eui` 的变量，其值为 SenseCraft 应用中的 `AppEUI`：
+在变量选项卡上添加一个名为 `app_eui` 的变量，其值为来自 SenseCraft 应用程序的 `AppEUI`：
 
 ![image](https://github.com/user-attachments/assets/90e529d7-811b-49cd-902d-85e36b2f6313)
 
-点击提交将显示一个页面，要求输入 `AppKey`，同样是之前使用 SenseCraft 应用捕获的：
+点击提交将弹出一个页面，要求输入 `AppKey`，同样是之前使用 SenseCraft 应用程序捕获的：
 
 ![image](https://github.com/user-attachments/assets/db33a84c-c31f-402f-b9b1-53fa47fc497d)
 
 ### 查看设备连接
 
-在 `LoRaWAN frames` 选项卡中，您将看到一个加载器，然后数据包会在接收/发送时显示出来。
+在 `LoRaWAN frames` 选项卡上，您将看到一个加载指示器，然后在接收/发送数据包时显示数据包。
 
-按下 T1000 跟踪器的按钮使其进行测量并发送 `join request` 连接到 LNS。
-发生这种情况后，您应该看到类似这样的内容：
+按下您的 T1000 Tracker 按钮使其进行测量并发送 `join request` 以连接到 LNS。
+一旦发生这种情况，您应该看到类似这样的内容：
 
 ![image](https://github.com/user-attachments/assets/060873cb-c1d8-40bd-9ad3-7333966d3558)
 
-一旦执行了加入过程，T1000 就会发送数据。LNS 会回传一些关于网络频率等的信息，但随后应该只有包含数据的上行链路。
+一旦执行了加入过程，T1000 就会发送数据。LNS 会回复一些关于网络频率等的信息，但在此之后应该只有带有数据的上行链路。
 
 ## 资源
 
-[适用于 Helium 的 SenseCAP T1000 跟踪器解码器](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000_Helium_Decoder.js)
+[SenseCAP T1000 Tracker Helium 解码器](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/Helium/SenseCAP_T1000_Helium_Decoder.js)

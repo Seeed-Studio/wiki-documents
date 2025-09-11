@@ -17,22 +17,22 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_sense.png" alt="pir" width={800} height="auto" /></p>
 
-在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN) 以首先将您的 SenseCAP T1000 Tracker 连接到 TTS。
+在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN) 以首先将您的 SenseCAP T1000 Tracker 连接到 TTS。
 
 ## 配置 Datacake
 
 首先，在 [Datacake](https://app.datacake.de/signup) 上注册一个账户。
 
-### 创建工作空间
+### 创建工作区
 
-首先，通过导航到左上角的 **Create Workspace** 按钮在 Datacake 上创建一个工作空间。
+首先，通过导航到左上角的**创建工作区**按钮在 Datacake 上创建一个工作区。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake-workspace.png" alt="pir" width={800} height="auto" /></p>
 
 ### 添加设备
 
-点击左侧菜单中的 **Devices**。
-要添加新设备，请点击右侧的 **Add Device** 按钮。
+点击左侧菜单中的**设备**。
+要添加新设备，请点击右侧的**添加设备**按钮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_add.png" alt="pir" width={800} height="auto" /></p>
 
@@ -48,15 +48,15 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_tem.png" alt="pir" width={800} height="auto" /></p>
 
-### 获取 API Token
+### 获取 API 令牌
 
-导航到您的 Datacake 工作空间中的 **Account Settings**，并复制您的 API Token。
+导航到您的 Datacake 工作区中的**账户设置**，并复制您的 API 令牌。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_api.png" alt="pir" width={800} height="auto" /></p>
 
 ## 配置 The Things Stack
 
-在 The Things Stack 上，导航到 **Integrations** → **Webhooks**，然后点击 **Add Webhook**。
+在 The Things Stack 上，导航到**集成** → **Webhooks**，然后点击**添加 Webhook**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add_webhook1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -64,7 +64,7 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_ts.png" alt="pir" width={800} height="auto" /></p>
 
-通过填写 Webhook ID 来命名您的集成，并粘贴来自 Datacake 的 API token 进行授权。
+通过填写 Webhook ID 来命名您的集成，并粘贴来自 Datacake 的 API 令牌进行授权。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/datacake_webhook2.png" alt="pir" width={800} height="auto" /></p>
 

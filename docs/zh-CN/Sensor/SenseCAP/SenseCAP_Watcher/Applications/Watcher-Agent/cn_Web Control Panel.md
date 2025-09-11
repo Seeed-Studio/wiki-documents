@@ -11,8 +11,8 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/watcher_web_control_panel
 last_update:
-  date: 2024/04/24
-  author: Tony
+  date: 2025/08/20
+  author: Twelve
 ---
 
 # Web 控制面板 Beta 指南
@@ -73,9 +73,9 @@ Agent 唤醒词只能在编译固件时修改。
 :::
 
 
-### 查看和管理历史记录
+### 查看历史记录
 - 访问聊天日志
-- 删除单个消息
+- 查看单个消息
   <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Panel/history%20del.jpg" style={{width:600, height:'auto'}}/></div> 
 
 ## 设备信息
@@ -84,15 +84,12 @@ Agent 唤醒词只能在编译固件时修改。
 
 控制面板显示基本设备信息，包括：
 
-- 设备型号
-- 芯片型号
-- 固件版本
+- 板卡名称
 - MAC 地址
-- 绑定时间
-- 在线状态
-- 备注
-- OTA 升级开关
-- 解绑
+- APP 版本
+- 最后连接时间
+- 自动升级开关
+- 操作
 
 :::note
 这是 Web 控制面板的 Beta 版本，功能可能会在未来版本中更新或更改。请定期检查更新以获取最新功能。

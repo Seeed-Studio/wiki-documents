@@ -4,45 +4,41 @@ title: メモリ拡張
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_Jetson_Memory_Expansion
 last_update:
-  date: 05/15/2025
+  date: 01/05/2023
   author: w0x7ce
 
-no_comments: false # Disqus用
+no_comments: false # for Disqus
 
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # reComputer for Jetson メモリ拡張
 
-reComputer for Jetson は16GBのeMMCを搭載しており、**Ubuntu 18.04 LTS** と **NVIDIA JetPack 4.6** がインストールされています。そのため、利用可能なユーザースペースは約2GBとなり、一部のプロジェクトでreComputerをトレーニングやデプロイに使用する際に大きな障害となります。このチュートリアルでは、この状況に基づいて異なるモデルのreComputerの拡張プロセスを紹介し、外部ストレージデバイスにシステムを移行することで開発者がシステムを拡張できるようにします。
+reComputer for Jetsonは16GBのeMMCを搭載して販売されており、**ubuntu 18.04 LTS**と**NVIDIA JetPack 4.6**がインストールされているため、残りの利用可能なユーザー領域は約2GBとなっており、これは一部のプロジェクトでreComputerを訓練や展開に使用する際の大きな障害となっています。このチュートリアルでは、この状況に基づいてreComputerの異なるモデルに対する拡張プロセスを紹介し、開発者が外部ストレージデバイスにシステムを転送することでシステムを拡張できるよう支援します。
 
-## 容量拡張の基本
+## 容量拡張の基本原理
 
-システムがインストールされているディスクの最初のセクターは**マスターブートレコード (MBR)**と呼ばれ、**BootLoader**、パーティションテーブル、および固定識別子**55AA**に関する情報が含まれています。Linuxの起動プロセスでは、**BootLoader**と**カーネル**が2つの重要なフェーズを経ます。
+システムがインストールされているディスクの最初のセクターは**マスターブートレコード（MBR）**と呼ばれ、**BootLoader**、パーティションテーブル、および固定識別子**55AA**に関する情報が含まれています。Linuxの起動プロセス中、**BootLoader**と**kernel**は2つの重要な段階を経ます。
 
-**フェーズ1:** BootLoaderは一時的なルートファイルシステム**(ramfs)**を初期化します**(initrd)**。ramfsには、起動時に必要なドライバ、ファイルシステム(fs)、ネットワーク(net)などの構成プログラムが含まれています。その後、BootLoaderの制御がカーネルに移され、カーネルがこれらのプログラムを取り出してメモリ**(RAM)**に移動し、実行してさまざまな機能モジュールをロードします。
+**段階1：** BootLoaderは一時的なルートファイルシステム**（ramfs）**を**（initrd）**初期化します。ramfsには、起動時に必要なドライバー、ファイルシステム（fs）、ネットワーク（net）などの設定プログラムが含まれています。その後、BootLoaderの制御がカーネルに移され、カーネルがこれらのプログラムを取り出し、メモリ**（RAM）**に移動して実行し、様々な機能モジュールをロードできるようになります。
 
-**フェーズ2:** カーネルがramfsを使用して必要なモジュールをロードした後、システムを解放し、実際のルートファイルシステム**(rootfs)**を構成して実際のルートディレクトリにマウントします。
+**段階2：** カーネルがramfsで必要なモジュールをロードした後、システムを解放し、実際のルートファイルシステム**（rootfs）**を設定して実際のルートディレクトリにマウントします。
 
-1. 上記の2つのフェーズでは、ramfsを使用して機能モジュールをロードするカーネル部分(フェーズ1)を変更する必要はありません。そのため、reComputerが拡張されても、引き続きeMMCを使用する必要があります。
-2. 私たちが変更する必要があるのは第2フェーズであり、ルートファイルシステムを外部メモリにマウントすることで拡張を可能にします。
+1. 上記の2つの段階において、カーネルがramfsで機能モジュールをロードする部分（段階1）を変更する必要はないため、reComputerが拡張されても、依然としてeMMCを使用する必要があります。
+2. 変更が必要なのは第2段階で、ルートファイルシステムを外部メモリにマウントすることで、拡張を実現します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/2.png" /></div>
 
 ## 容量拡張に関する注意事項
 
-1. 外部ストレージによる拡張の主な原則は、rootfsを外部ストレージデバイスに設定することです。
+1. 外部ストレージによる拡張の主な原理は、rootfsを外部ストレージデバイス上に設定することです。
 
-2. この拡張方法ではLinuxカーネルレベルのシステムファイルを変更するため、解決が難しい問題に直面する可能性があります。このチュートリアルを実行する際は、新しいreComputerと新しいストレージデバイスを使用し、**デバイスに貴重なファイルを保存しないでください**。すべてが期待通りに動作しない場合、ストレージデバイスやreComputerを再フォーマットする必要があるかもしれません。最終的な保持オプションとして、可能であればシリアルポートを介してバックアップを復元するお手伝いをしますが、データ損失については自己責任となります。
+2. この拡張方法はLinuxカーネルレベルのシステムファイルを変更するため、解決が困難な問題に遭遇する可能性があります。このチュートリアルに従って拡張を完了する際は、新しいreComputerと新しいストレージデバイスを使用し、**デバイスに貴重なファイルを保存しようとしないでください**。すべてが期待通りに動作しない場合、ストレージデバイスやreComputerの再フォーマットが必要になる可能性があり、最終的な保持オプションとして、可能であればシリアルポート経由でバックアップの復元をお手伝いしますが、データ損失については自己責任となります。
 
-3. この拡張プロセスではカーネルの再コンパイルを必要とせず、オンラインで利用可能な従来の拡張方法と比較して約40分のインストール時間を節約できます。
+3. この拡張プロセスはカーネルの再コンパイルを必要とせず、オンラインで利用可能な他の従来の拡張方法と比較して約40分のインストール時間を節約できます。
 
-## キャリアボードおよびSSDによるM.2スロットを使用した拡張
+## キャリアボード上のM.2スロットとSSDによる拡張
 
-SSD（Solid State Drive、ソリッドステートドライブ）は、ノートパソコンやデスクトップなどの主要なストレージデバイスとしてよく使用されます。その高い信頼性と高速なデータ読み書き速度により、reComputerの拡張に最適な選択肢です。以下の表は、現在SSD拡張ソリューションに対応しているreComputerシリーズ製品を示しています。reComputer J1010がSSD拡張をサポートしていない主な理由は、キャリアボードに適切なM.2スロットが装備されていないためです。
+SSD（Solid State Drive）は、ラップトップやデスクトップなどの主要ストレージデバイスとしてよく使用されます。高い信頼性と高速なデータ読み書き速度により、reComputerの拡張に最適な選択肢です。以下の表は、現在SSD拡張ソリューションが利用可能なreComputerシリーズ製品を示しています。reComputer J1010がSSD拡張をサポートしない主な理由は、キャリアボードに適切なM.2スロットが搭載されていないためです。
 
 <table align="center">
   <tbody><tr>
@@ -83,118 +79,107 @@ SSD（Solid State Drive、ソリッドステートドライブ）は、ノート
   </tbody>
 </table>
 
+### ソフトウェアとハードウェア要件
 
-### ソフトウェアおよびハードウェア要件
-
-SSDを使用した拡張ソリューションを実現するためには、以下の条件を満たす必要があります。これらは拡張が成功するための基本要件です。
+SSDを使用した拡張ソリューションでは、以下の条件を満たす必要があります。これらは拡張が成功することを証明するための基本要件です。
 
 <table align="center">
   <tbody><tr>
       <th align="center"> </th>
-      <th align="center">ソフトウェアおよびハードウェア要件</th>  
+      <th align="center">ソフトウェアとハードウェア要件</th>  
     </tr>
     <tr>
-      <th align="center">Jetson用reComputer</th>
-      <td align="left">JetPackバージョン 4.4 ~ 4.6 <br />
-        キャリアボードにM.2 M-Keyスロットが必要</td>
+      <th align="center">reComputer for Jetson</th>
+      <td align="left">JetPack バージョン 4.4 ~ 4.6 <br />
+        キャリアボードにはM.2 M-Keyスロットが必要</td>
     </tr>
     <tr>
       <th align="center">SSD</th>
       <td align="left">SSDは第4世代拡張ファイルシステム（Ext4）である必要があります <br />
-        M.2 M-KeyインターフェースとNVMeプロトコルを使用 <br />
+        NVMeプロトコル対応のM.2 M-Keyインターフェース <br />
         推奨容量 ≤ 512 GB</td>
     </tr>
   </tbody>
 </table>
 
+!!!Attention
+    更新されたJetPackバージョンは拡張についてテストされていないため、拡張の安定性や成功は保証できません。このチュートリアルに慎重に従ってください。
 
-:::caution 注意
-更新されたJetPackバージョンは拡張のテストが行われていないため、拡張の安定性や成功を保証することはできません。このチュートリアルを慎重に従ってください。
+    SSDはM.2 M-Keyである必要があります。そうでなければキャリアボード上のインターフェースと一致しません。
+    <div align="center"><img width="300" src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/3.jpeg"/></div>
 
-SSDはM.2 M-Keyである必要があります。それ以外の場合、キャリアボードのインターフェースと一致しません。
-
-<div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/3.jpeg"/></div>
-
-第4世代拡張ファイルシステム（Ext4）以外のストレージデバイスでは拡張操作を完了できません。
-:::
+    拡張第4世代ファイルシステム（Ext4）以外のストレージデバイスでは拡張操作を完了できません。
 
 ### 拡張手順
 
 **ステップ1.** SSDを取り付ける
 
-[ハードウェア説明書](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputerにSSDを取り付けてください。
+[ハードウェア説明書](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputer用のSSDを取り付けます。
 
 **ステップ2.** SSDを準備する
 
-ショートカットキー`Ctrl+F`を使用するか、左上のUbuntuアイコンをクリックして**Disks**を検索し、Ubuntu 18.04に付属のDisksツールを開きます。
+ショートカット`Ctrl+F`を使用するか、左上のUbuntuアイコンをクリックして**Disks**を検索し、Ubuntu 18.04に付属のDisksツールを開きます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/1.png" /></div>
 
-左側でSSDを選択し、右上のメニューバーの下にある**Format Disk**を選択します。
+左側でSSDを選択し、メニューバーの右上にある**Format Disk**を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd1.jpg" /></div>
 
-
-SSDをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードを入力します。
+SSDをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードの入力が求められます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd3.png" /></div>
-
 
 次に、中央の**+**をクリックしてディスク文字を追加します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd6.png" /></div>
 
-
-「次へ」をクリックします。
+「Next」をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd7.png" /></div>
 
-
-SSDに名前を付け、タイプで**Ext4**を選択して「作成」をクリックします。この時点で、拡張要件に従ってSSDの準備が完了しました。
+SSDに名前を付け、タイプで**Ext4**を選択して「Create」をクリックしてください。この時点で拡張要件に従ってSSDの準備が完了しました。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd8.png" /></div>
 
+**ステップ3.** ルートディレクトリをSSDに構築する
 
-**ステップ3.** SSDにルートディレクトリを構築する
-
-gitコマンドを使用して、reComputerで使用するスクリプトファイルをダウンロードします。
+gitコマンドを使用して、reComputerで使用する必要があるスクリプトファイルをダウンロードします。
 
 ```sh
-$ git clone https://github.com/limengdu/rootOnNVMe.git
-$ cd rootOnNVMe/
+git clone https://github.com/limengdu/rootOnNVMe.git
+cd rootOnNVMe/
 ```
 
-次に、以下のコマンドを実行して、eMMCのルートディレクトリからSSDにファイルを構築します。このステップの待ち時間は、使用しているルートディレクトリのサイズによって異なります。
+次に、以下のコマンドを実行してeMMCのルートディレクトリからSSDにファイルをビルドします。この手順の待機時間は、使用しているルートディレクトリのサイズによって異なります。
 
 ```sh
-$ ./copy-rootfs-ssd.sh
+./copy-rootfs-ssd.sh
 ```
 
-**ステップ4.** 環境を構成し、拡張を完了する
+**ステップ4.** 環境を設定し、展開を完了する
 
-以下のコマンドを実行して、rootfsの構成を完了します。
+以下のコマンドを実行してrootfsの設定を完了します。
 
 ```sh
-$ ./setup-service.sh
+./setup-service.sh
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/9.png" /></div>
 
-reComputerを再起動すると、eMMCがメインインターフェース上で外部ストレージデバイスとして表示され、システムのフットプリントが減少していることが確認できます。これにより、拡張が成功したことがわかります。
+reComputerを再起動すると、メインインターフェースでeMMCが外部ストレージデバイスになっていることがわかり、システムのフットプリントが削減されていることが確認できるため、拡張が成功したことがわかります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/11.png" /></div>
 
-:::caution 注意
-スクリプトファイル内のデフォルトのSSDパスは`/dev/nvme0n1p1`です。これはreComputerによってデフォルトで割り当てられるパスでもあります。`sudo fdisk -l`コマンドで確認した際に、SSDパスがこれと一致しない場合は、rootOnNVMe内の**copy-rootfs-ssd.sh**、**data/setssdroot.service**、および**data/setssdroot.sh**ファイル内のすべての`/dev/nvme0n1p1`を、SSDが存在するパスに変更してください。
+!!!Attention
+    スクリプトファイル内のデフォルトのSSDパスは `/dev/nvme0n1p1` で、これはreComputerによってデフォルトで割り当てられるパスでもあります。`sudo fdisk -l` コマンドでSSDパスがこれと一致しないことがわかった場合は、rootOnNVMe内のファイル **copy-rootfs-ssd.sh**、**data/setssdroot.service**、および **data/setssdroot.sh** 内のすべての `/dev/nvme0n1p1` のパスを、SSDが配置されているパスに変更してください。
+   <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/21.png" /></div>
 
-<div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/21.png" /></div>
-
-上記の拡張では、eMMCから元のルートディレクトリの内容が削除されることはありません。SSDから起動したくない場合は、SSDを取り外すことでシステムはeMMCから起動します。
-:::
+    上記の拡張では、eMMCから元のルートディレクトリの内容は削除されません。SSDからブートしたくない場合は、SSDを取り外すことができ、システムは依然としてeMMCからブートします。
 
 ## USBストレージデバイスによる容量拡張
 
-USBフラッシュドライブやモバイルハードドライブなどのUSBストレージデバイスは、さまざまな場面で外部ストレージとして広く使用されています。USB拡張はreComputerにも適用可能です。以下の表は、現在USB拡張ソリューションが利用可能なreComputer製品を示しています。
+USBフラッシュドライブやモバイルハードドライブなどのUSBストレージデバイスは、生活の様々な分野で外部ストレージとして広く使用されており、USB拡張もreComputerに適用できます。以下の表は、現在USB拡張ソリューションが利用可能なreComputer製品を一覧表示しています。
 
 <table align="center">
   <tbody><tr>
@@ -220,20 +205,21 @@ USBフラッシュドライブやモバイルハードドライブなどのUSB�
   </tbody>
 </table>
 
-USBストレージデバイスによる拡張の最大の利点は、USBデバイスの高い利便性と取り外しの簡単さです。しかし、高速USB 3.2インターフェースを使用しても、データ転送速度は標準PCIeバスよりもはるかに遅いため、安定性、信頼性、データ転送速度の観点ではSSD拡張方法の方が優れています。
+USBストレージデバイス経由でのスケーリングがSSD経由でのスケーリングに対する最大の利点は、USBデバイスの高い利便性と取り外しの簡単さです。
+しかし、高速なUSB 3.2インターフェースを使用しても、データ転送速度は標準的なPCIeバスよりもはるかに劣るため、安定性、信頼性、データ転送速度の観点では、SSD拡張方式の方が優れています。
 
-### ソフトウェアおよびハードウェア要件
+### ソフトウェアとハードウェア要件
 
-USBを使用した拡張ソリューションでは、以下の条件を満たす必要があります。これは、拡張が正常に行えることを確認するための基本要件です。
+USBを使用した拡張ソリューションでは、以下の条件を満たす必要があります。これは拡張が正常に実行できることを検証するための基本要件です。
 
 <table align="center">
   <tbody><tr>
       <th align="center"> </th>
-      <th align="center">ソフトウェアおよびハードウェア要件</th>  
+      <th align="center">ソフトウェアとハードウェア要件</th>  
     </tr>
     <tr>
-      <th align="center">Jetson用reComputer</th>
-      <td align="left">JetPackバージョン4.4〜4.6 <br />
+      <th align="center">reComputer for Jetson</th>
+      <td align="left">JetPack バージョン 4.4 ~ 4.6 <br />
         搭載モジュールはJetson Nanoである必要があります</td>
     </tr>
     <tr>
@@ -244,38 +230,37 @@ USBを使用した拡張ソリューションでは、以下の条件を満た�
   </tbody>
 </table>
 
-:::caution 注意
-更新されたJetPackバージョンでは拡張のテストが行われていないため、拡張の安定性や成功を保証することはできません。このチュートリアルを慎重に従ってください。
+!!!注意
+    更新されたJetPackバージョンは拡張についてテストされていないため、拡張の安定性や成功は保証できません。このチュートリアルに慎重に従ってください。
 
-大容量USBストレージデバイスでは、reComputerが適切に電源供給される必要があります。512 GBを超える容量のUSBストレージデバイスは推奨されません。不十分な電源供給は、reComputerの電源ダウンを引き起こす可能性があります。
+    大容量USBストレージデバイスは、適切な動作を維持するためにreComputerが適切に電源供給される必要があり、512GB以上の容量のUSBストレージデバイスは推奨されません。電源供給不足によりreComputerの電源が落ちる可能性があります。
 
-Jetson Nano以外の搭載モジュールでは、この方法を使用した拡張は現在サポートされていません。
+    Jetson Nano以外の搭載モジュールは、現時点でこの方法による拡張をサポートしていません。
 
-第4世代拡張ファイルシステム（Ext4）以外のストレージデバイスでは、拡張操作を完了することができません。
-:::
+    非拡張第4世代ファイルシステム（Ext4）のストレージデバイスは拡張操作を完了できません。
 
 ### 拡張手順
 
 **ステップ1.** 必要なドキュメントを準備する
 
-gitコマンドを使用して、reComputerで使用するスクリプトファイルをダウンロードします。
+gitコマンドを使用して、reComputerで使用する必要があるスクリプトファイルをダウンロードします。
 
 ```sh
-$ git clone https://github.com/limengdu/bootFromUSB.git
-$ cd bootFromUSB
+git clone https://github.com/limengdu/bootFromUSB.git
+cd bootFromUSB
 ```
 
-**ステップ2.** USBストレージデバイスの準備
+**Step 2.** USBストレージデバイスの準備
 
-USBストレージデバイスをreComputerに接続し、Ubuntu 18.04に付属のDisksツールをショートカット`Ctrl+F`を使用するか、左上のUbuntuアイコンをクリックして**Disks**を検索して開きます。
+USBストレージデバイスをreComputerに接続し、ショートカット`Ctrl+F`を使用するか、左上角のUbuntuアイコンをクリックして**Disks**を検索することで、Ubuntu 18.04に付属のDisksツールを開きます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/1.png" /></div>
 
-左側でUSBストレージデバイスを選択し、メニューバーの右上にある**Format Disk**を選択します。
+左側でUSBストレージデバイスを選択し、メニューバーの右上角にある**Format Disk**を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd1.jpg" /></div>
 
-USBストレージデバイスをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードを入力します。
+USBストレージデバイスをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードの入力が必要になります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd2.png" /></div>
 
@@ -283,87 +268,82 @@ USBストレージデバイスをGPT形式にフォーマットします。確�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd4.png" /></div>
 
-「次へ」をクリックします。
+「Next」をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd5.png" /></div>
 
-USBストレージデバイスに名前を付け、タイプで**Ext4**を選択し、「作成」をクリックします。この時点で、拡張要件に従ってUSBストレージデバイスの準備が完了しました。
+USBストレージデバイスに名前を付け、タイプで**Ext4**を選択して「Create」をクリックしてください。この時点で、拡張要件に従ったUSBストレージデバイスの準備が完了しました。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/sd6.png" /></div>
 
-**ステップ3.** USBストレージデバイスのマウント
+**Step 3.** USBストレージデバイスのマウント
 
-**ステップ2**に従って準備したUSBストレージデバイスは、Disksソフトウェアで未マウントとして表示されます。
+**step 2**に従って準備されたUSBストレージデバイスは、Disksソフトウェアでアンマウント状態として表示されます。
 
-:::caution 注意
-フォーマット後にUSBデバイスが自動的にマウントされている場合、このステップをスキップしてください。
-:::
+!!!Note
+ フォーマット後にUSBデバイスが自動的にマウントされていることがわかった場合は、このステップをスキップしてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/60.png" /></div>
 
-USBデバイスをマウントするには、以下のコマンドを使用します。
+以下のコマンドを使用してUSBデバイスをマウントします。
 
 ```sh
-$ mkdir /media/USB/
-$ sudo mount <USB Device Path> /media/USB/
+mkdir /media/USB/
+sudo mount <USB Device Path> /media/USB/
 ```
 
-ここで、`<USB Device Path>`はUSBストレージデバイスのパスを指します。このパラメータは、Disksソフトウェアの「デバイス」セクションで確認するか、`sudo fdisk -l`コマンドで照会できます。例えば、私のUSBデバイスの場合、以下のコマンドを使用して`/dev/sda1`を`/media/USB/`にマウントできます。
+`<USB Device Path>` は USB ストレージデバイスのパスを指します。このパラメータは Disks ソフトウェアの Device で確認するか、`sudo fdisk -l` コマンドで照会できます。例えば、私の USB デバイスの場合、以下のコマンドで `/dev/sda1` を `/media/USB/` にマウントできます。
 
 ```sh
-$ sudo mount /dev/sda1 /media/USB/
+sudo mount /dev/sda1 /media/USB/
 ```
 
-デバイスのマウント場所を確認するには、以下のコマンドを使用します。
+Use the following command to check the mount location of the device.
 
 ```sh
-$ sudo findmnt -rno TARGET <USB Device Path>
+sudo findmnt -rno TARGET <USB Device Path>
 ```
 
-私のUSBデバイスの場合、使用するコマンドは以下の通りです。
+私のUSBデバイスの場合、使用する必要があるコマンドは以下の通りです：
 
 ```sh
-$ sudo findmnt -rno TARGET /dev/sda1
+sudo findmnt -rno TARGET /dev/sda1
 ```
 
----
+**ステップ 4.** システムをUSBストレージデバイスにコピーする
 
-**ステップ4.** システムをUSBストレージデバイスにコピーする
-
-**copyRootToUSB.sh**スクリプトは、eMMCシステム全体の内容をUSBストレージデバイスにコピーします。もちろん、USBストレージデバイスはeMMCよりも多くのストレージ容量を持っている必要があります。
+**copyRootToUSB.sh** スクリプトは、eMMCシステム全体の内容をUSBストレージデバイスにコピーします。もちろん、USBストレージデバイスはeMMCよりも多くのストレージ容量を持っている必要があります。
 
 使用するコマンドは以下の通りです。
 
 ```sh
 usage: ./copyRootToUSB.sh [OPTIONS]
--d | --directory     カーネルの親ディレクトリパス
+-d | --directory     Directory path to parent of kernel
 
--v | --volume_label  検索するボリュームのラベル
+-v | --volume_label  Label of Volume to lookup
 
--p | --path          USBドライブのデバイスパス (例: /dev/sda1)
+-p | --path          Device Path to USB drive (e.g. /dev/sda1)
 
--h | --help          このメッセージ
+-h | --help  This message
 ```
 
-一般的な拡張のニーズに対しては、パラメータ`[OPTIONS]`で`-p`を選択し、その後に**ステップ3**で取得したUSBデバイスのパス（例: `/dev/sda1`）を追加します。例えば、私のUSBデバイスの場合、使用する完全なコマンドは以下の通りです。
+一般的に、通常の拡張ニーズに対しては、パラメータ `[OPTIONS]` で `-p` を選択するだけで、後で **ステップ3** で取得したUSBデバイスのパス（例：`/dev/sda1`）を追加する必要があります。例えば、私のUSBデバイスの場合、使用する必要がある完全なコマンドは次のとおりです：
 
 ```sh
-$ ./copyRootToUSB.sh -p /dev/sda1
+./copyRootToUSB.sh -p /dev/sda1
 ```
 
-このコマンドの実行にかかる時間は、eMMCに保存されているファイルのサイズによって異なります。
+このコマンドの実行時間は、eMMCに保存されているファイルのサイズによって異なります。
 
----
+**ステップ5.** USBデバイスのUUIDの照会
 
-**ステップ5.** USBデバイスのUUIDを照会する
-
-念のため、USBデバイスのUUIDを確認する必要があります。
+念のため、USBデバイスのUUIDを調べる必要があります。
 
 ```sh
-$ ./partUUID.sh 
+./partUUID.sh 
 ```
 
-このコマンドのデフォルトパスは**sda1 (/dev/sda1)**ですが、他のUSBデバイスのUUIDを確認することもできます。`-d`フラグを使用して`/dev/`を指定します。例えば、私のUSBデバイスの場合は以下の通りです。
+このコマンドのデフォルトパスは **sda1 (/dev/sda1)** ですが、他のUSBデバイスのUUIDも確認できます。`-d`フラグを使用して`/dev/`を指定します。例えば、私のUSBデバイスの場合は次のようになります：
 
 ```sh
 $ ./partUUID.sh -d sdb1
@@ -374,21 +354,18 @@ Sample for /boot/extlinux/extlinux.conf entry:
 APPEND ${cbootargs} root=UUID=e34d67bb-83bb-4fc5-b9a4-a1388d2b2be5 rootwait rootfstype=ext4
 ```
 
-:::caution 注意
-返されるUUIDが上記の例と形式や長さが異なる場合、そのデバイスはおそらくExt4としてフォーマットされていません。**ステップ2**からやり直してください！
-:::
+!!!注意
+    返されたUUIDが上記の例と形式や長さが異なる場合、デバイスはおそらくExt4としてフォーマットされていません。**ステップ2**からやり直してください！
 
----
+**ステップ6.** ブート設定を変更して拡張を完了する
 
-**ステップ6.** ブート構成を変更して拡張を完了する
-
-まず、ブート構成ファイルのバックアップを作成する必要があります。
+まず、ブート設定ファイルのバックアップを作成する必要があります。
 
 ```sh
-$ sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
+sudo cp /boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf.bak
 ```
 
-このステップは、USBデバイス拡張操作において最も重要かつ危険なステップです。`/boot/extlinux/extlinux.conf`ファイルと`/media/nvidia/boot/extlinux/extlinux.conf`を編集し、新しいrootfsを指すエントリを追加します。場所はUSBデバイスのパスであり、以下のパラメータ`<path>`に記入します。このパス情報は**ステップ3**で取得します。
+この手順は、USBデバイス拡張操作において最も重要で危険な手順です。`/boot/extlinux/extlinux.conf`ファイルと`/media/nvidia/boot/extlinux/extlinux.conf`を編集し、新しいrootfsを指すエントリを追加します。場所はUSBデバイスのパスで、以下のパラメータ`<path>`に記入します。パス情報は**手順3**で取得されます。
 
 ```sh
 $ sudo vi /boot/extlinux/extlinux.conf
@@ -401,7 +378,7 @@ LABEL primary
       APPEND ${cbootargs} quiet root=<path> rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 sdhci_tegra.en_boot_part_access=1
 ```
 
-私が使用しているUSBストレージデバイスの場合、修正後の`/boot/extlinux/extlinux.conf`ファイルと`/media/nvidia/boot/extlinux/extlinux.conf`は以下のようになります。
+私が使用しているUSBストレージデバイスでは、変更された `/boot/extlinux/extlinux.conf` ファイルと `/media/nvidia/boot/extlinux/extlinux.conf` の内容は以下の通りです：
 
 ```sh
 TIMEOUT 30
@@ -416,18 +393,18 @@ LABEL primary
       APPEND ${cbootargs} quiet root=/dev/sda1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 sdhci_tegra.en_boot_part_access=1
 #      APPEND ${cbootargs} quiet root=/dev/mmcblk0p1 rw rootwait rootfstype=ext4 console=ttyS0,115200n8 console=tty0 fbcon=map:0 net.ifnames=0 sdhci_tegra.en_boot_part_access=1 
 
-# カスタムカーネルをテストする場合、元のカーネルのバックアップを作成し、
-# このファイルに新しいエントリを追加することをお勧めします。これにより、
-# デバイスが元のカーネルにフォールバックできるようになります。以下の手順を実行してください：
+# When testing a custom kernel, it is recommended that you create a backup of
+# the original kernel and add a new entry to this file so that the device can
+# fallback to the original kernel. To do this:
 #
-# 1. 元のカーネルのバックアップを作成
+# 1, Make a backup of the original kernel
 #      sudo cp /boot/Image /boot/Image.backup
 #
-# 2. カスタムカーネルを/boot/Imageにコピー
+# 2, Copy your custom kernel into /boot/Image
 #
-# 3. 以下のメニュー設定行をアンコメント
+# 3, Uncomment below menu setting lines for the original kernel
 #
-# 4. 再起動
+# 4, Reboot
 
 # LABEL backup
 #    MENU LABEL backup kernel
@@ -440,15 +417,15 @@ LABEL primary
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/62.png" /></div>
 
-## シリアルコンソールを使用したシステムバックアップの復元
+## シリアルコンソール経由でのシステムバックアップの復元
 
-システムがエラーやその他の理由（一般的なシナリオとして、起動時にNvidiaアイコンが繰り返し表示されるなど）で正常に起動しない場合、拡張時に作成したバックアップが重要な役割を果たします。このような状況で不安を感じるかもしれませんが、落ち着いて以下の手順に従い、reComputerをシリアルコンソールに接続してU-bootを操作し、バックアップを復元してください。
+エラーによりシステムが正常に起動しない場合、またはその他の理由（一般的なシナリオは起動時にNvidiaアイコンが繰り返し表示される）の場合、拡張時に作成したバックアップが重要な役割を果たします。この瞬間のあなたの不安を理解していますが、辛抱強く以下の手順に従ってreComputerをシリアルコンソールに入れ、U-bootを操作してバックアップを復元します。
 
-### 準備するもの
+### 材料準備
 
 <table align="center">
   <tbody><tr>
-      <th align="center">準備するもの</th>
+      <th align="center">材料準備</th>
       <th align="center">説明</th>  
     </tr>
     <tr>
@@ -470,11 +447,11 @@ LABEL primary
   </tbody>
 </table>
 
-### シリアルコンソールへのアクセス手順
+### シリアルコンソールにアクセスする手順
 
-**ステップ1.** UART to USBモジュールをreComputerに接続する
+**ステップ 1.** UART to USB モジュールを reComputer に接続する
 
-以下の表に従って、reComputerをUART to USBモジュールに接続してください。
+以下の表の配線指示に従って、reComputer を UART to USB モジュールに接続します。
 
 <table align="center">
   <tbody><tr>
@@ -483,7 +460,7 @@ LABEL primary
     <tr>
       <td align="center">reComputer</td>
       <td align="center"> </td>
-      <td align="center">UART to USBモジュール</td>
+      <td align="center">UART to USB module</td>
     </tr>
     <tr>
       <td align="center">GND</td>
@@ -503,168 +480,168 @@ LABEL primary
   </tbody>
 </table>
 
-:::tip
-reComputerとUART to USBモジュール間のVCCインターフェースは接続する必要はありません。
+!!!Tip
+    reComputer と UART to USB モジュール間の VCC インターフェースは接続する必要がありません。
 
-ケーブルを接続した後、reComputerの電源をまだ入れないでください。そのまま置いておいてください。
+    ケーブル接続後、reComputer は当面電源を入れる必要がないので、今のところ脇に置いておいてください。
 
-拡張された外部メモリを切断してください。
-:::
+    拡張された外部メモリを取り外してください。
 
-**ステップ2.** Ubuntuホストにminicomをインストールして起動する
+**ステップ 2.** Ubuntu ホストに minicom をインストールして開始する
 
-Ubuntuホストにminicomがインストールされていない場合、以下のコマンドでインストールできます。
+Ubuntu ホストに minicom がインストールされていない場合は、以下のコマンドでコンピュータに minicom をインストールできます。
 
 ```sh
-$ sudo apt-get install minicom
+sudo apt-get install minicom
 ```
 
-インストールが完了したら、以下のコマンドを入力してminicomを起動します。
+インストールが完了するまで待った後、minicomを起動するコマンドを入力します。
 
 ```sh
-$ sudo minicom
+sudo minicom
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/40.png" /></div>
 
-**ステップ3.** minicomの設定準備
+**ステップ 3.** minicomの設定準備
 
-minicomのメニューバーでシリアルポートを開き、設定を行います。これにより、minicomを通じてreComputerの起動情報を取得できます。メニューバーでキーボードの**o**キーを押して設定画面にアクセスします。キーボードの上下矢印キーを使用してカーソルを**Serial port setup**に移動します。
+minicomのメニューバーで、シリアルポートを開いて設定し、minicomを通じてreComputerの起動情報を取得できるようにします。メニューバーで、キーボードの**o**キーを押して設定画面にアクセスします。キーボードの上下矢印キーを使用してカーソルを**Serial port setup**に移動させます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/41.png" /></div>
 
-**ステップ4.** reComputerをUbuntuホストに接続する
+**ステップ 4.** reComputerをUbuntuホストに接続
 
-この時点で、新しいコマンドラインウィンドウを作成し、以下のコマンドを入力して新しいデバイスのアクセスを監視します。
+この時点で、新しいコマンドラインウィンドウを作成し、そのウィンドウでコマンドを入力して新しいデバイスのアクセスを監視します。
 
 ```sh
-$ dmesg --follow
+dmesg --follow
 ```
 
-この時点でreComputerの電源を入れ、UART to USBモジュールを通じてreComputerをUSBポート経由でUbuntuホストに接続します。コマンドラインウィンドウには新しく接続されたデバイスの名前が表示されます。**tty**で始まるフラグメントを見つけて記録してください。
+この時点で、reComputerの電源を入れ、UART to USBモジュールをUSBポート経由でUbuntuホストに接続されたreComputerと接続します。コマンドラインウィンドウには新しく接続されたデバイスの名前が表示されるので、**tty**で始まる部分を見つけて書き留める必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/44.png" /></div>
 
-**ステップ5.** U-boot操作
+**ステップ 5.** U-boot操作
 
-minicomに戻り、**ステップ4**で取得したデバイス名を**Serial Device**に入力します。また、ボーレートが**115200**に設定されているか確認してください。
+minicomに戻り、**ステップ4**で取得したデバイス名を**Serial Device**に入力します。また、ボーレートが**115200**に設定されているかどうかも確認してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/42.png" /></div>
 
-修正後、Enterキーを押して保存します。**Save setup as dfl**を選択してminicomインターフェースを終了します。
+変更後、Enterキーを押して保存します。**Save setup as dfl**を選択し、minicomインターフェースを終了します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/43.png" /></div>
 
-再度`sudo minicom`コマンドを入力してminicomに入り、ウィンドウ内でreComputerの起動情報が表示されるのを確認します。
+再度`sudo minicom`コマンドを入力し、minicomに入ると、ウィンドウにreComputerの起動情報が表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/45.png" /></div>
 
-返された情報を使用してreComputerが起動に失敗する理由をトラブルシューティングできます。また、コマンド`help`を使用してU-bootシステムで利用可能なすべてのコマンドを確認できます。これらのコマンドの使用方法を理解することは問題解決に必要ですが、もちろん難しい場合もあります。
+返された情報を使用してreComputerが起動に失敗する理由をトラブルシューティングでき、helpコマンドを使用してU-bootシステムで利用可能なすべてのコマンドを確認できます。これらのコマンドの使用方法を知ることは問題を解決するために必要ですが、もちろん難しい場合もあります。
 
 ```sh
 Tegra210 (P3450-0000) # help
-?         - 'help'のエイリアス
-base      - アドレスオフセットを表示または設定
-bdinfo    - ボード情報構造を表示
-blkcache  - ブロックキャッシュの診断と制御
-boot      - デフォルトで起動、つまり'bootcmd'を実行
-bootd     - デフォルトで起動、つまり'bootcmd'を実行
-bootefi   - メモリからEFIペイロードを起動
-bootelf   - メモリからELFイメージを起動
-booti     - メモリからLinuxカーネル'Image'形式を起動
-bootm     - メモリからアプリケーションイメージを起動
-bootp     - BOOTP/TFTPプロトコルを使用してネットワーク経由でイメージを起動
-bootvx    - ELFイメージからvxWorksを起動
-cmp       - メモリ比較
-coninfo   - コンソールデバイスと情報を表示
-cp        - メモリコピー
-crc32     - チェックサム計算
-dcache    - データキャッシュを有効または無効にする
-dfu       - デバイスファームウェアアップグレード
-dhcp      - DHCP/TFTPプロトコルを使用してネットワーク経由でイメージを起動
-dm        - ドライバーモデルの低レベルアクセス
-echo      - 引数をコンソールに出力
-editenv   - 環境変数を編集
-enterrcm  - TegraをリセットしてUSBリカバリモードに入る
-env       - 環境変数操作コマンド
-exit      - スクリプトを終了
-ext2load  - Ext2ファイルシステムからバイナリファイルをロード
-ext2ls    - ディレクトリ内のファイルをリスト（デフォルトは/）
-ext4load  - Ext4ファイルシステムからバイナリファイルをロード
-ext4ls    - ディレクトリ内のファイルをリスト（デフォルトは/）
-ext4size  - ファイルのサイズを判定
-ext4write - ルートディレクトリにファイルを作成
-false     - 何もしない（失敗）
-fatinfo   - ファイルシステム情報を表示
-fatload   - DOSファイルシステムからバイナリファイルをロード
-fatls     - ディレクトリ内のファイルをリスト（デフォルトは/）
-fatmkdir  - ディレクトリを作成
-fatrm     - ファイルを削除
-fatsize   - ファイルのサイズを判定
-fatwrite  - DOSファイルシステムにファイルを書き込む
-fdt       - フラットデバイスツリーのユーティリティコマンド
-fstype    - ファイルシステムタイプを調べる
-go        - アドレス'addr'でアプリケーションを開始
-gpio      - GPIOピンのクエリと制御
-gzwrite   - メモリを解凍してブロックデバイスに書き込む
-help      - コマンドの説明/使用法を表示
-i2c       - I2Cサブシステム
-icache    - 命令キャッシュを有効または無効にする
-imxtract  - マルチイメージの一部を抽出
-itest     - 整数比較で真/偽を返す
-ln        - シンボリックリンクを作成
-load      - ファイルシステムからバイナリファイルをロード
-loadb     - シリアルライン経由でバイナリファイルをロード（kermitモード）
-loads     - シリアルライン経由でS-Recordファイルをロード
-loadx     - シリアルライン経由でバイナリファイルをロード（xmodemモード）
-loady     - シリアルライン経由でバイナリファイルをロード（ymodemモード）
-loop      - アドレス範囲で無限ループ
-ls        - ディレクトリ内のファイルをリスト（デフォルトは/）
-lzmadec   - メモリ領域をlzma解凍
-md        - メモリ表示
-mii       - MIIユーティリティコマンド
-mm        - メモリ修正（アドレス自動インクリメント）
-mmc       - MMCサブシステム
-mmcinfo   - MMC情報を表示
-mw        - メモリ書き込み（埋め込み）
-nm        - メモリ修正（アドレス固定）
-nvme      - NVM Expressサブシステム
-part      - ディスクパーティション関連コマンド
-pci       - PCI構成スペースのリストとアクセス
-ping      - ネットワークホストにICMP ECHO_REQUESTを送信
-printenv  - 環境変数を表示
-pxe       - PXEファイルを取得して起動するコマンド
-reset     - CPUをリセット
-run       - 環境変数内のコマンドを実行
-save      - ファイルシステムにファイルを保存
-saveenv   - 環境変数を永続ストレージに保存
-setenv    - 環境変数を設定
-sf        - SPIフラッシュサブシステム
-showvar   - ローカルhushshell変数を表示
-size      - ファイルのサイズを判定
-sleep     - 一定時間実行を遅延
-source    - メモリからスクリプトを実行
-sspi      - SPIユーティリティコマンド
-sysboot   - syslinuxファイルを取得して起動するコマンド
-test      - /bin/shのような最小限のテスト
-tftpboot  - TFTPプロトコルを使用してネットワーク経由でイメージを起動
-true      - 何もしない（成功）
-ums       - UMS [USB Mass Storage]を使用
-unzip     - メモリ領域を解凍
-usb       - USBサブシステム
-usbboot   - USBデバイスから起動
-version   - モニター、コンパイラー、リンカーのバージョンを表示
+?         - alias for 'help'
+base      - print or set address offset
+bdinfo    - print Board Info structure
+blkcache  - block cache diagnostics and control
+boot      - boot default, i.e., run 'bootcmd'
+bootd     - boot default, i.e., run 'bootcmd'
+bootefi   - Boots an EFI payload from memory
+bootelf   - Boot from an ELF image in memory
+booti     - boot Linux kernel 'Image' format from memory
+bootm     - boot application image from memory
+bootp     - boot image via network using BOOTP/TFTP protocol
+bootvx    - Boot vxWorks from an ELF image
+cmp       - memory compare
+coninfo   - print console devices and information
+cp        - memory copy
+crc32     - checksum calculation
+dcache    - enable or disable data cache
+dfu       - Device Firmware Upgrade
+dhcp      - boot image via network using DHCP/TFTP protocol
+dm        - Driver model low level access
+echo      - echo args to console
+editenv   - edit environment variable
+enterrcm  - reset Tegra and enter USB Recovery Mode
+env       - environment handling commands
+exit      - exit script
+ext2load  - load binary file from a Ext2 filesystem
+ext2ls    - list files in a directory (default /)
+ext4load  - load binary file from a Ext4 filesystem
+ext4ls    - list files in a directory (default /)
+ext4size  - determine a file's size
+ext4write - create a file in the root directory
+false     - do nothing, unsuccessfully
+fatinfo   - print information about filesystem
+fatload   - load binary file from a dos filesystem
+fatls     - list files in a directory (default /)
+fatmkdir  - create a directory
+fatrm     - delete a file
+fatsize   - determine a file's size
+fatwrite  - write file into a dos filesystem
+fdt       - flattened device tree utility commands
+fstype    - Look up a filesystem type
+go        - start application at address 'addr'
+gpio      - query and control gpio pins
+gzwrite   - unzip and write memory to block device
+help      - print command description/usage
+i2c       - I2C sub-system
+icache    - enable or disable instruction cache
+imxtract  - extract a part of a multi-image
+itest     - return true/false on integer compare
+ln        - Create a symbolic link
+load      - load binary file from a filesystem
+loadb     - load binary file over serial line (kermit mode)
+loads     - load S-Record file over serial line
+loadx     - load binary file over serial line (xmodem mode)
+loady     - load binary file over serial line (ymodem mode)
+loop      - infinite loop on address range
+ls        - list files in a directory (default /)
+lzmadec   - lzma uncompress a memory region
+md        - memory display
+mii       - MII utility commands
+mm        - memory modify (auto-incrementing address)
+mmc       - MMC sub system
+mmcinfo   - display MMC info
+mw        - memory write (fill)
+nm        - memory modify (constant address)
+nvme      - NVM Express sub-system
+part      - disk partition related commands
+pci       - list and access PCI Configuration Space
+ping      - send ICMP ECHO_REQUEST to network host
+printenv  - print environment variables
+pxe       - commands to get and boot from pxe files
+reset     - Perform RESET of the CPU
+run       - run commands in an environment variable
+save      - save file to a filesystem
+saveenv   - save environment variables to persistent storage
+setenv    - set environment variables
+sf        - SPI flash sub-system
+showvar   - print local hushshell variables
+size      - determine a file's size
+sleep     - delay execution for some time
+source    - run script from memory
+sspi      - SPI utility command
+sysboot   - command to get and boot from syslinux files
+test      - minimal test like /bin/sh
+tftpboot  - boot image via network using TFTP protocol
+true      - do nothing, successfully
+ums       - Use the UMS [USB Mass Storage]
+unzip     - unzip a memory region
+usb       - USB sub-system
+usbboot   - boot from USB device
+version   - print monitor, compiler and linker version
 ```
 
-## 技術サポートと製品ディスカッション
-私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際に、できるだけスムーズな体験を提供するために、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+## 技術サポート & 製品ディスカッション
+
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

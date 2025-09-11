@@ -107,7 +107,7 @@ Open the DFU tool, after you set up the board by the steps above, the DFU tool w
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
-Then you should add your binary file to the colum of APP program file. The binary  file is at the path \TFT_GD32\.pio\build\gd32vf103v-eval.
+Then you should add your binary file to the colum of APP program file. The binary  file is at the path \TFT_GD32.pio\build\gd32vf103v-eval.
 Choose the Index 4 and click "ok" to download the code to the board, after downloading, click "Leave DFU" to let the board disconnect the DFU tool. Then you will see a demo of counting the time of graphic processing on your LCD. It almost contain all the API in the "TFT_eSPI" library.
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/gd32.gif)

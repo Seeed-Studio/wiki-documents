@@ -135,8 +135,8 @@ void sound(uint8_t note_index)
 
 - [Grove - Speaker Eagle 文件](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_Eagle_File.zip)
 - [如何使用 MCU 生成不同音调](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Tone.pdf)
-- [Grove\_-\_Speaker\_v1.0\_brd.pdf](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_v1.0_brd.pdf)
-- [Grove\_-\_Speaker\_v1.0\_sch.pdf](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_v1.0_sch.pdf)
+- [Grove_-_Speaker_v1.0_brd.pdf](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_v1.0_brd.pdf)
+- [Grove_-_Speaker_v1.0_sch.pdf](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Grove-Speaker_v1.0_sch.pdf)
 - [LM386 低电压音频功率放大器数据手册](https://files.seeedstudio.com/wiki/Grove-Speaker/res/LM386_Low_Voltage_Audio_Power_Amplifier_Datasheet.pdf)
 - [CodeCraft 代码](https://files.seeedstudio.com/wiki/Grove-Speaker/res/Speaker.zip)
 

@@ -146,7 +146,7 @@ Estas etiquetas en la parte inferior indican información importante sobre la un
 |LoRaWAN|Soporta Clase A, C|
 |Voltaje de Entrada|<p></p><p>DC 12V - 2A</p><p>PoE (IEEE 802.3 af), 40V-57V DC</p>|
 |Interfaces|<p>Ethernet RJ45 \* 1</p><p>Conector de Antena RP-SMA Hembra \* 1</p><p>Ranura para Tarjeta Micro SD (Uso futuro) \* 1</p><p>USB Tipo-C (Consola) \* 1</p>|
-|Dimensiones|<p>143\.6x135x34mm (conector no incluido)</p><p>150\.6x135x34mm (conector incluido)</p><p>Paquete: 340\*230\*65mm Aprox. 950g</p>|
+|Dimensiones|<p>143.6x135x34mm (conector no incluido)</p><p>150.6x135x34mm (conector incluido)</p><p>Paquete: 340\*230\*65mm Aprox. 950g</p>|
 |Temperatura de Operación|-20°C a 55°C|
 |Humedad Relativa|0% - 85% (sin condensación)|
 |Certificaciones|<p>Australia (RCM)</p><p>Brasil (Anatel)</p><p>Canadá (ICES/IC IC)</p><p>UE (CE/RoHS/REACH/WEEE/VerpackG)</p><p>India (WPC)</p><p>Japón (TELEC/PSE)</p><p>Corea (KC)</p><p>Filipinas (NTC)</p><p>Taiwán (BSMI/NCC)</p><p>Estados Unidos (FCC/Verizon OD)</p>|

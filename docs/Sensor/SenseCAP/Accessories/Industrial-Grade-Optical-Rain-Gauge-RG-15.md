@@ -50,6 +50,7 @@ The RG-15 Optical Rain Gauge features an open-collector output that emulates a c
 .tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
 .tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
 </style> -->
+
 <table class="tg" data-style="undefined;table-layout: fixed; width: 743px;"><colgroup> <col data-style="width: 171px;" /> <col data-style="width: 361px;" /> <col data-style="width: 211px;" /> </colgroup>
 <thead>
 <tr><th class="tg-pnhl">Parameter</th><th class="tg-pnhl"><span data-style="font-weight: 400; font-style: normal; text-decoration: none;">Value</span></th><th class="tg-wcsp"><span data-style="font-weight: 400; font-style: normal; text-decoration: none; color: #2f2f2f;">Connection Pins </span></th></tr>

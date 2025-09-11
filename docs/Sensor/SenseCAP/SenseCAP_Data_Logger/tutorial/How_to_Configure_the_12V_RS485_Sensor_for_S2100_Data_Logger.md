@@ -222,6 +222,7 @@ Set each measurement in turn. Measurement1 (**Air temperature**)
 |Precision|<p>Precision of the value. You can choose the decimal place of the measurement value. If 1 is selected, one decimal place is reserved.</p><p>Select **2, #.##** here.</p>|
 |Y= Ax + B|<p>“Y”: It is the value of Data Logger will upload. </p><p>“x”: It is the original current value. </p><p>Factory A: Custom values that can be scaled up or down by multiples of the “x”. </p><p>Factory B: A custom value that increments or diminishes the value of the “x”.</p><p>By setting the values of A and B, you can calculate the desired value. If only raw values are uploaded, set A=1 and B=0.</p><p>**Factory A is 0.001 and Factory B is 0.**</p>|
 |Write Strategy|<p>This function is enabled only for some special sensors and is generally disabled by default</p><p>After reading the value of the register, special instructions can be issued to the sensor, such as the instruction to empty the register after reading register 0.</p><p>None: Off by default.</p><p>After Read: Send the RS485 command to sensor after reading the register.</p><p>On New Data: Send the RS485 command to sensor every 24 hours.</p><p>We don’t need to write strategy so we select **None** here.</p>|
+
 Measurement2 (**Air humidity**)
 
 |Register Address|Enter **2** here.|

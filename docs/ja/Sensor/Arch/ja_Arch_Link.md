@@ -59,7 +59,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1. [このリンク](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE)をクリックして**mbedにログインまたはサインアップ**します。
-2. mbed\_blinkyプログラムをインポートします。
+2. mbed_blinkyプログラムをインポートします。
 3. 上部ツールバーの**Compile**アイコンをクリックしてプログラムをコンパイルし、コンパイルされたhexファイルをダウンロードします。
 4. ダウンロードしたhexファイルをMBEDディスクにドラッグ＆ドロップします。
 
@@ -100,7 +100,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
     - 実行方法
 
-        1. [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)をダウンロードします。
+        1. [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)をダウンロードします。
         2. hexファイルをArch BLEのMBEDディスクにコピーします。
         3. [Color Pixels Androidアプリ](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)をダウンロードします。
 

@@ -47,6 +47,7 @@ If you need to replace the device's currently running model, the SenseCrfat AI p
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image12.png)
 
 2. Directly upload a model for replacement.
+
 - Model Name：input a name
 - Model File ：Upload a model in tflite format
 - ID Object: Class of model recognition
@@ -95,7 +96,7 @@ Example:If the device detects Face and the confidence is greater than 43, then l
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image20.png)
 
-### Train 
+### Train
 
 SenseCraft AI integrates YoLo-World to quickly generate single-class AI models based on user input class, which can be directly deployed to Grove-Vision AI v2 devices.
 
@@ -113,7 +114,7 @@ SenseCraft AI integrates YoLo-World to quickly generate single-class AI models b
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image23.png)
 
-### Capture to Train 
+### Capture to Train
 
 The quickly generated model may not have high accuracy. You can click Capture to Train to take and collect target images. Submit the collected images to Yolo-World for optimized training. The optimized model will have better accuracy.
 
@@ -132,7 +133,6 @@ The quickly generated model may not have high accuracy. You can click Capture to
 4. Once the model is generated, select the newly generated model, deploy it to the device, and check the inference results.
 
 ![](https://files.seeedstudio.com/wiki/SenseCraft_AI/img/image27.png)
-
 
 ## **Tech Support**
 

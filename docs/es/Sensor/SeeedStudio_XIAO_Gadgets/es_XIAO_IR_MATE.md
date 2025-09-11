@@ -92,7 +92,7 @@ Usa un cable USB Type-C estándar para alimentar el dispositivo. Después del ar
 
 ### Paso 2: Entrar al Modo de Aprovisionamiento AP
 
-Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi-Fi (AP) llamado **XIAO IR Mate** (o **Seeed\_ir**, dependiendo de lo que encuentres).
+Cuando la red no está configurada, el dispositivo creará automáticamente un punto de acceso Wi-Fi (AP) llamado **XIAO IR Mate** (o **Seeed_ir**, dependiendo de lo que encuentres).
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect.png"

@@ -78,7 +78,7 @@ El módulo LoRa® Semtech SX1262 integrado te permite construir la aplicación L
 
 ## Especificación
 
-|Pantalla|Pantalla Táctil RGB Capacitiva de 3\.95 Pulgadas|
+|Pantalla|Pantalla Táctil RGB Capacitiva de 3.95 Pulgadas|
 | :- | :- |
 |**Resolución de Pantalla**|480 x 480 píxeles|
 |**Fuente de Alimentación**|5V-DC, 1A|
@@ -86,7 +86,7 @@ El módulo LoRa® Semtech SX1262 integrado te permite construir la aplicación L
 |**Procesador**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit hasta 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ hasta 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
 |**Almacenamiento Externo**|Soporta hasta tarjeta Micro SD de 32GB (no incluida)|
-|**Wi-Fi**|802\.11b/g/n, 2.4GHz|
+|**Wi-Fi**|802.11b/g/n, 2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|<p>Módem LoRa y FSK</p><p>+21dBm Potencia Máxima Transmitida</p> <p>-136dBm@SF12 BW=125KHz Sensibilidad RX</p><p>Hasta 5km de distancia de comunicación</p>|
 |**Sensores**(Opcional)|<p>**CO2(Sensirion SCD41)**</p><p>Rango: 0-40000ppm</p><p>Precisión: 400ppm-5000ppm ±(50ppm+5% de la lectura)</p><p>**TVOC (SGP40)**</p><p>Rango: 1-500 Puntos de Índice VOC</p>**Grove Sensor de Temperatura y Humedad(AHT20)**<p>Rango de Temperatura: -40 ~ + 85 ℃/± 0.3 ℃; 0 ~ 100% RH/± 2% RH (25 ℃)</p>|

@@ -1,8 +1,8 @@
-position: 2 # 浮動小数点の位置がサポートされています
+position: 2 # float position is supported
 label: 'ESP32S3で開発する'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: indicator_dev
 # link:
 #   type: generated-index
-#   title: チュートリアル概要
+#   title: Tutorial overview

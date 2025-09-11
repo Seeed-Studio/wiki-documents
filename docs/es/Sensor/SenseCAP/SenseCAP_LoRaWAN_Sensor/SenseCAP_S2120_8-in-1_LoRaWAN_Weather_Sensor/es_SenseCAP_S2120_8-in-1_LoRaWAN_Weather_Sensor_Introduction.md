@@ -61,13 +61,13 @@ frecuencia a continuación:*
 
 |Plan de Frecuencia|Nombre Común|Sub-banda|
 | :- | :- | :- |
-|EU863-870|EU868|\_\_\_|
+|EU863-870|EU868|___|
 |US902-928|US915|Sub-banda de 1 a 8|
 |AU915-928|AU915|Sub-banda de 1 a 8|
-|AS923|AS923|AS923\_1, AS923\_2, AS923\_3, AS923\_4|
-|IN865-867|IN865|\_\_\_|
-|KR920-923|KR920|\_\_\_|
-|RU864-867|RU864|\_\_\_|
+|AS923|AS923|AS923_1, AS923_2, AS923_3, AS923_4|
+|IN865-867|IN865|___|
+|KR920-923|KR920|___|
+|RU864-867|RU864|___|
 
 La configuración del plan de frecuencia es ninguna por defecto y no transmitirá señal RF hasta que haya sido configurada por la App vía Bluetooth en el primer encendido. Y puede cambiarse a otros planes de frecuencia en cualquier momento.
 

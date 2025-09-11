@@ -2,7 +2,7 @@
 description: SenseCAP M1 本地控制台
 title: SenseCAP M1 本地控制台
 keywords:
-- SenseCAP 网络
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Network/SenseCAP_Network/SenseCAP_M1-Helium_gateway/SenseCAP_M1_Local_Console
 last_update:
@@ -14,70 +14,70 @@ last_update:
 **概述**
 ============
 
-**2022年1月14日最新功能更新**：为了提高 SenseCAP 本地控制台的安全级别，除了 CPUID 外，登录本地控制台时还需额外输入密码，默认密码为热点的序列号（Serial Number）。强烈建议首次登录后更改密码。
+**2022年1月14日更新的最新功能：** 为了提高SenseCAP本地控制台的安全级别，除了CPUID之外，还增加了一个额外的密码来登录本地控制台，默认密码是热点的序列号。强烈建议在首次登录后更改密码。
 
-**注意**：您的计算机和热点必须连接到同一个路由器/网络才能使用本地控制台。如果您的热点是远程的，目前将无法运行本地控制台中的任何功能。
+**注意**：您的计算机和热点应连接到同一个路由器/网络，以便使用本地控制台。如果您的热点在远程位置，您目前将无法运行本地控制台中的任何功能。
 
-![本地控制台](https://www.sensecapmx.com/wp-content/uploads/2022/07/local-console.png)
+![Local Console](https://www.sensecapmx.com/wp-content/uploads/2022/07/local-console.png)
 
 **登录**
 =========
 
-**1\. 获取热点的 CPU ID 和 S/N**
+**1. 获取您热点的CPU ID和S/N**
 
-*   如果您没有 SenseCAP M1 仪表板的账户，或者尚未将热点添加到仪表板，请找到 SenseCAP M1 的设备标签，并获取 S/N 和 CPU ID。
+- 如果您没有SenseCAP M1仪表板账户，或者尚未将您的热点添加到仪表板，请找到您的SenseCAP M1的设备标签，并获取S/N和CPU ID
 
-![本地控制台登录详情](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-16.png)
+![Local Console Login Details](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-16.png)
 
-*   如果您已经注册了 SenseCAP M1 仪表板账户并添加了热点，可以从仪表板中复制热点的 CPU ID 和 S/N。
+- 如果您已经注册了SenseCAP M1仪表板账户并添加了您的热点，您可以从仪表板复制您热点的CPU ID和S/N。
 
-![本地控制台登录详情 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
+![Local Console Login Details 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
 
-**2\. 获取热点的 IP 地址**
+**2. 获取您热点的IP地址**
 
-*   如果您没有 SenseCAP M1 仪表板的账户，或者尚未将热点添加到仪表板，请在路由器管理页面中找到热点的 IP 地址，或者在 Helium APP 上运行诊断以获取 IP 地址。然后在浏览器中输入 IP 地址以进入本地控制台页面。
-*   如果您已经注册了 SenseCAP M1 仪表板账户并添加了热点，可以从仪表板中找到热点的 IP 地址：
-    *   点击 "**Wi-Fi IP Address**" 或 "**LAN IP Address**" 链接，这将跳转到 Turbo Sync 本地控制台页面。
-    *   如果通过 Wi-Fi 连接，您将看到热点的 Wi-Fi IP 地址可供点击。
-    *   如果通过以太网线或本地 LAN 连接，您将看到热点的 LAN 地址可供点击。
+- 如果您没有SenseCAP M1仪表板账户，或者尚未将您的热点添加到仪表板，请在您的路由器管理页面中找到您热点的IP地址，或在您的Helium APP上运行诊断以获取IP地址。然后在浏览器中输入IP地址进入本地控制台页面。
+- 如果您已经注册了SenseCAP M1仪表板账户并添加了您的热点，您可以从仪表板找到您热点的IP地址：
+  - 点击"**Wi-Fi IP地址**"或"**LAN IP地址**"链接，该链接会跳转到Turbo Sync本地控制台页面。
+  - 如果您通过Wi-Fi连接，您将看到热点的Wi-Fi IP地址可供点击。
+  - 如果您通过以太网电缆或本地LAN连接，您将看到热点的LAN地址可供点击。
 
-![本地控制台登录详情 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
+![Local Console Login Details 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
 
-**3\. 使用热点的 CPU ID 和默认密码（序列号，即 S/N）登录**
+**3. 使用热点CPU ID和默认密码（序列号，即S/N）登录**
 
-![本地控制台登录详情 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/login-1.png)
+![Local Console Login Details 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/login-1.png)
 
-![本地控制台登录详情 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-2-1.png)
+![Local Console Login Details 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-2-1.png)
 
-**4\. 更改默认密码**
+**4. 更改默认密码**
 
-![本地控制台更改密码](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password-1.png)
+![Local Console Change Password](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password-1.png)
 
-首次登录后，请点击 "**Change Password**" 按钮修改默认密码。新密码应包含 8~32 位字符，至少包括数字、字母和符号的两种组合。密码将被加密并仅存储在您的 SenseCAP M1 本地设备中。
+首次登录后，请点击"**更改密码**"按钮来修改您的默认密码。新密码应包含8~32位数字，至少包含数字、字母和符号中的两种组合。密码将被加密并仅存储在您的SenseCAP M1本地。
 
-出于安全考虑，我们尚未提供“**忘记密码**”功能，因此请务必妥善保管您的密码。如果丢失密码，您需要重新刷新 MicroSD 卡以恢复默认密码。
+出于安全考虑，我们暂时不提供"**忘记密码**"功能，所以请牢记您的密码，如果您忘记了密码，您需要重新刷写MicroSD卡来恢复默认密码。
 
-对于 CLI 用户，请注意每次更改密码时，本地控制台设备令牌也会自动更新。刷新本地控制台网页后，您将看到新的设备令牌。请妥善保管您的设备令牌，切勿在任何情况下将其分享给第三方。
+对于CLI用户，请注意每次更改密码时，本地控制台设备令牌也会自动更新。刷新本地控制台网页，您将看到新的设备令牌。请保管好您的设备令牌，在任何情况下都不要与任何第三方分享。
 
-**5\. 获取绑定密钥并将热点添加到 SenseCAP 仪表板**
+**5. 获取绑定密钥并将您的热点添加到SenseCAP仪表板**
 
-![本地控制台绑定密钥](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3-2.png)
+![Local Console Bind Key](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3-2.png)
 
-在本地控制台页面上获取设备的 CPU ID、设备 ETH MAC 和设备绑定密钥。
+在上面的本地控制台页面获取设备CPU ID、设备ETH MAC和设备绑定密钥。
 
 * * *
 
 **重要信息**
 
-**注意**：Turbo Sync 可能会导致 MicroSD 卡频繁擦写，仅在必要时建议使用。
+**注意**：Turbo Sync可能导致micro SD卡频繁擦除和写入，仅建议在必要时使用。
 
-如果设备的同步区块高度非常接近区块链（少于 200 个区块），则设备无需进行 Turbo Sync，您将无法运行此功能。
+如果您设备的同步区块高度非常接近区块链（少于200个区块），您的设备不需要Turbo Sync，您将无法运行它。
 
 ![Turbo Sync](https://www.sensecapmx.com/wp-content/uploads/2022/07/TS-console.png)
 
-Turbo Sync 过程可能需要一段时间完成，具体取决于网络速度。请保持稳定的互联网连接，并耐心等待同步过程完成。
+Turbo Sync过程可能需要一段时间才能完成，这取决于网络速度。请保持稳定的互联网连接，并耐心等待同步过程。
 
-**重要**：请勿在 Turbo Sync 过程中关闭设备电源，否则设备在下次启动时将出现损坏的账本，并从最后的快照重新开始同步。在这种情况下，您需要重复 Turbo Sync 过程。
+**重要**：请不要在Turbo Sync过程中关闭设备电源，否则您的设备在下次启动时将有损坏的账本，并将从上次祝福的快照重新开始同步。在这种情况下，您将不得不重复Turbo Sync过程。
 
 * * *
 
@@ -86,50 +86,50 @@ Turbo Sync 过程可能需要一段时间完成，具体取决于网络速度。
 
 **注意**：您需要登录到本地控制台。
 
-点击橙色的“Reboot”按钮以开始重启过程。
+点击橙色的"重启"按钮开始重启过程。
 
-*   当您看到 \[reboot\] request sent + \[reboot going\] 时，表示过程已开始。
-*   当您看到 "----log stream disconnected from the host----" 和 "----log stream connected to the host----" 时，表示重启过程已完成。
+- 当您看到[reboot] request sent + [reboot going]时，过程已开始。
+- 当您看到"----log stream disconnected from the host----"和"----log stream connected to the host----"时，您已完成重启过程。
 
-![重启 SenseCAP 热点](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4-2.png)
+![Reboot SenseCAP Hotspot](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-4-2.png)
 
-**注意**：Helium 区块链账本有时会因 MicroSD 卡中的意外错误而损坏，导致区块链同步过程停滞在某个区块并无法继续。
+**注意**：Helium区块链账本有时会因micro SD卡中的意外错误而损坏，导致区块链同步过程在某个区块上停止并同步失败。
 
-在本地控制台中重启热点可能有助于解决 MicroSD 卡中的潜在错误。
+在本地控制台中重启热点可能有助于解决micro SD卡中的潜在错误。
 
-**重要**：请勿频繁重启热点，仅在必要时重启。
+**重要**：请不要频繁重启热点，仅在必要时重启。
 
-当区块高度卡住且不增加，高度显示为 -1 或 1 时，请执行区块重置。完成这些步骤后，热点将再次完全同步。
+当区块高度卡住且不增加，高度停留在-1或1时，请执行区块重置。按照这些步骤后，热点将再次完全同步。
 
 * * *
 
 **关机**
 =============
 
-在拔掉设备电源之前，建议使用关机功能，以防止设备因突然断电而受到损坏。
+建议在拔掉设备之前使用关机功能，以防止突然断电对设备造成损坏。
 
 **如何使用关机功能**
 
-点击 "**关机**" 按钮并接受提示。
+点击"**关机**"按钮并接受提示。
 
-*   关机过程需要几分钟时间。
-*   当关机完成时，您会看到蓝色指示灯和以太网端口指示灯熄灭。
+- 关机过程需要几分钟时间。
+- 当关机完成时，您会看到蓝色LED灯和以太网端口LED灯熄灭。
 
 ![SenseCAP 关机功能](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-5-2.png)
 
-**注意**: 请确认在关机时您在 SenseCAP M1 设备旁边，因为如果您想重新启动设备，需要重新插入适配器。
+**注意**：请确保您在关机时就在SenseCAP M1旁边，因为如果您想重新启动设备，需要重新插拔适配器。
 
 * * *
 
 **重置区块**
 ===============
 
-**注意**: 您需要登录到本地控制台。
+**注意**：您需要登录到本地控制台。
 
-点击红色的 "**重置区块**" 按钮以开始重置区块的过程。
+点击红色的"**重置区块**"按钮开始重置区块过程。
 
 ![重置区块 SenseCAP](https://www.sensecapmx.com/wp-content/uploads/2022/07/reset-blocks.png)
 
-**注意**: SenseCAP M1 将开始加载最新的已认证快照。仪表板中的状态可能会有延迟，暂时看到 "**未知**" 同步状态是正常的。
+**注意**：SenseCAP M1将开始加载最新的blessed快照。仪表板中的状态可能会有延迟，临时看到"**未知**"同步状态是正常的。
 
-如果您需要运行 Turbo Sync，请等待最新的已认证快照加载完成（大约 30 分钟）。
+如果您需要运行Turbo Sync，请等待最新的blessed快照加载完成（大约30分钟）。

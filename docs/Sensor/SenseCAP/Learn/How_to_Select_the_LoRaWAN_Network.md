@@ -11,8 +11,6 @@ last_update:
 ---
 
 
-
-
 In the rapidly expanding realm of IoT (Internet of Things), LoRaWAN networks have surged in popularity, offering extended range and low-power communication capabilities for diverse IoT applications. Lately, we've been inundated with inquiries: "**Which LoRaWAN network should I choose for my specific project?**"
 
 In this article, we’ll take you through the components of a LoRaWAN network, explore the differences between public and private LoRaWAN networks, and offer references to help you make an informed decision.
@@ -47,11 +45,13 @@ LoRaWAN networks can be broadly categorized as public or private. Public LoRaWAN
 The choice between public and private LoRaWAN networks largely depends on your project's nature and requirements. Here's a brief overview:
 
 **Private LoRaWAN Networks are suited for:**
+
 - Industrial automation networks requiring secure end-to-end data integrity.
 - Medical applications requiring ultra-secure communication between devices.
 - Smart building security systems with sensitive information.
 
 **Public LoRaWAN Networks are suited for:**
+
 - Agricultural scenarios like crop monitoring.
 - Smart cities with applications such as traffic monitoring, smart lighting, and smart parking systems.
 

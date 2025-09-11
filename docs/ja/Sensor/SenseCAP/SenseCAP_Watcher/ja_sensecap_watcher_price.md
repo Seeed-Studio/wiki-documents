@@ -1,134 +1,132 @@
 ---
-description: この記事では、SenseCraft AI を利用する際の Watcher の料金プランについて説明します。
-title: 価格とメリット
+description: この記事では、SenseCraft AIを使用するWatcherの料金プランについて説明します。
+title: 価格と特典
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler_1.webp
 slug: /ja/watcher_price
 sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 10/18/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Watcher 向け SenseCraft AI のプランとメリット
+# SenseCraft AI for Watcher プランと特典
 
-Watcher では、開発者がプロジェクトに人工知能を統合する際に、明確で透明性のある料金体系を提供することを信条としています。開発者ごとに異なるニーズがあることを理解しているため、さまざまなニーズや予算に対応する料金プランを用意しています。ここでは、料金モデルの主要なポイントと各プランに含まれる具体的な機能について説明します。
+Watcherでは、開発者がプロジェクトに人工知能を統合するための明確で透明性のある価格体系を提供することを信念としています。すべての開発者には独自の要件があることを理解しているため、さまざまなニーズと予算に対応するよう設計された幅広い料金プランを提供しています。情報に基づいた決定を下せるよう、価格モデルの主要な側面と各プランに含まれる具体的な機能について概説しました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/price_month_simpler.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 料金プラン
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th> </th>
+ <table align="center">
+  <tr>
+   <th> </th>
       <th>オンプレミス</th>
-			<th>SenseCraft Standard</th>
+   <th>SenseCraft Standard</th>
       <th>SenseCraft Pro</th>
-		</tr>
-		<tr>
-			<th>データ保持期間</th>
-			<td align="center">ユーザーごとに保存</td>
-			<td align="center">3ヶ月</td>
-			<td align="center">3ヶ月</td>
-		</tr>
-		<tr>
-			<th>データ API</th>
-			<td align="center">ローカル HTTP API</td>
-			<td align="center">MQTT/HTTP API</td>
-			<td align="center">MQTT/HTTP API</td>
-		</tr>
-		<tr>
-			<th>タスク分析</th>
-			<td align="center">無制限</td>
-			<td align="center">無制限</td>
-			<td align="center">無制限</td>
-		</tr>
-		<tr>
-			<th>画像分析</th>
-			<td align="center">無制限</td>
-			<td align="center">15分/リクエスト</td>
-			<td align="center">20,000リクエスト</td>
-		</tr>
-		<tr>
-			<th>LLMとのチャット</th>
-			<td align="center">無制限</td>
-			<td align="center">200リクエスト/月</td>
-			<td align="center">1,000リクエスト</td>
-		</tr>
-		<tr>
-			<th>TinyML モデルとモデルトレーニング</th>
-			<td align="center">無制限</td>
-			<td align="center">無制限</td>
-			<td align="center">無制限</td>
-		</tr>
+  </tr>
+  <tr>
+   <th>データ保持</th>
+   <td align="center">ユーザーによる保存</td>
+   <td align="center">3ヶ月</td>
+   <td align="center">3ヶ月</td>
+  </tr>
+  <tr>
+   <th>データAPI</th>
+   <td align="center">ローカルHTTP API</td>
+   <td align="center">MQTT/HTTP API</td>
+   <td align="center">MQTT/HTTP API</td>
+  </tr>
+  <tr>
+   <th>タスク分析</th>
+   <td align="center">無制限</td>
+   <td align="center">無制限</td>
+   <td align="center">無制限</td>
+  </tr>
+  <tr>
+   <th>画像分析</th>
+   <td align="center">無制限</td>
+   <td align="center">15分/リクエスト</td>
+   <td align="center">20000リクエスト</td>
+  </tr>
+  <tr>
+   <th>LLMとのチャット</th>
+   <td align="center">無制限</td>
+   <td align="center">200リクエスト/月</td>
+   <td align="center">1000リクエスト</td>
+  </tr>
+  <tr>
+   <th>TinyMLモデルとモデルトレーニング</th>
+   <td align="center">無制限</td>
+   <td align="center">無制限</td>
+   <td align="center">無制限</td>
+  </tr>
     <tr>
-			<th>価格</th>
-			<td align="center">無料</td>
-			<td align="center">無料</td>
-			<td align="center">1回の無料トライアル & 6.9 USD プラン</td>
-		</tr>
-	</table>
+   <th>価格</th>
+   <td align="center">無料</td>
+   <td align="center">無料</td>
+   <td align="center">1回無料トライアル & 6.9 USDプラン</td>
+  </tr>
+ </table>
 </div>
 
 :::caution
-1. SenseCraft Pro の有料プランは各デバイスの EUI に紐づけられています。つまり、SenseCraft Pro を利用したいデバイスが5台ある場合、それぞれ個別に料金を支払う必要があります。
 
-2. SenseCraft Pro の課金サービスはリクエスト数に基づいています。このサービスを購入すると、提供されるリクエスト数を取得できますが、有効期限はありません。
+1. SenseCraft Proの有料プランは、各デバイスのEUIに紐づけられています。つまり、SenseCraft Proを使用したい5台のデバイスがある場合、それぞれに対して個別に料金を支払う必要があります。
 
-3. SenseCraft Pro は、デバイスが SenseCraft アプリに接続されると自動的にトライアルサービスを有効化します。
+2. SenseCraft Proの課金サービスは、リクエスト数に基づいています。サービスを購入すると、サービスが提供するリクエスト数を取得でき、有効期限はありません。
 
-4. SenseCraft Pro はトライアルを有効化すると同時に、フォームに記載されたすべてのリクエストを一括でカウントし、使用が終了すると自動的に SenseCraft Standard に切り替わります。
+3. SenseCraft Proは、デバイスがSenseCraft APPに接続されると、自動的にトライアルサービスを有効化します。
+
+4. SenseCraft Proは、トライアルを有効化し、フォーム内のすべてのリクエストを一度に計上し、使用完了後に自動的にSenseCraft Standardに切り替わります。
+
 :::
 
-Watcher では、開発者が AI 統合で成功するために必要な柔軟性とスケーラビリティを提供することを目指しています。料金プランは、カジュアルな実験から大規模な展開まで、幅広いニーズに対応するよう設計されています。AI の使用頻度やプロジェクト要件に最適なプランを選択し、SenseCraft AI の可能性を最大限に引き出しましょう。今すぐ始めて、自分のペースで AI の力を体験してください！
+Watcherでは、開発者がAI統合で成功するために必要な柔軟性とスケーラビリティを提供することを信念としています。私たちの料金プランは、カジュアルな実験から大規模な展開まで、幅広いニーズに対応するよう設計されています。あなたのAI使用強度とプロジェクト要件に最も適したプランを選択し、WatcherがSenseCraft AIの潜在能力を最大限に引き出すお手伝いをさせてください。今すぐ始めて、あなた自身の条件でAIの力を体験してください！
 
 ## 料金モデルの理解
 
 ### データストレージ
 
-すべてのプランには、アラーム画像、タイムスタンプ、アラーム数の保存を含む、**3か月間**のデータストレージが付属しています。
+すべてのプランには、アラーム画像、タイムスタンプ、アラーム回数のストレージを含む、寛大な**3ヶ月間**のデータストレージが付属しています。
 
 ### タスク分析
 
-タスク分析とは、Watcherがユーザーが割り当てたタスクを理解し解釈し、それを小さな実行可能なコンポーネントに分解する能力を指します。これには、タスクが小型モデルを使用して実行可能かどうかの判断、使用する特定のモデルの識別、検出すべき行動の認識、実行すべきアクションの定義が含まれます。Watcherの機能の基盤として、タスク分析はすべてのプランで無料で提供することを目指しています。
+タスク分析とは、ユーザーが割り当てたタスクを理解し解釈し、それらをより小さな実行可能なコンポーネントに分解するWatcherの能力を指します。これには、タスクが小さなモデルを使用して実行できるかどうかの判断、使用する特定のモデルの識別、検出すべき行動の認識、実行すべきアクションの定義が含まれます。Watcherの機能の基盤として、すべてのプランでタスク分析を無料で提供するよう努めています。
 
 ### 画像分析
 
-画像分析は、Watcherがキャプチャした画像を高度に解析し、画像内のオブジェクト、活動、コンテキストを識別する機能を指します。この機能は大型モデルの使用を必要とし、使用料が発生します。大型モデルを使用して画像分析を行うタスクが要求されると、リクエストとしてカウントされます。
+画像分析は、Watcherが撮影した画像の高度な検査を含み、画像内のオブジェクト、活動、コンテキストの識別を可能にします。この機能は大きなモデルの使用を必要とし、使用料金が発生します。タスクが画像分析のために大きなモデルの使用を必要とする場合、リクエストとしてカウントされます。
 
-- **[純粋なクラウドベースのLLMサービス](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/#pure-cloud-based-llm-service)**を使用している場合、リクエストは設定された**キャプチャ頻度**に基づいてカウントされます。
+- **[純粋なクラウドベースLLMサービス](https://wiki.seeedstudio.com/getting_started_with_watcher_task/#pure-cloud-based-llm-service)**を使用している場合、リクエストは設定した**キャプチャ頻度**に基づいてカウントされます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
-- **[ローカルAI + クラウドベースのLLMサービス](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/#local-ai--cloud-based-llm-service)**を使用している場合、小型モデルが検出をトリガーした後に大型モデルが画像認識のために呼び出されるとリクエストがカウントされます。リクエスト間の最小間隔は設定された**キャプチャ頻度**より短くなることはありません。
+- **[ローカルAI + クラウドベースLLMサービス](https://wiki.seeedstudio.com/getting_started_with_watcher_task/#local-ai--cloud-based-llm-service)**の場合、小さなモデルが検出をトリガーした後に大きなモデルが画像認識のために呼び出されるとリクエストとしてカウントされます。リクエスト間の最小間隔は、設定した**キャプチャ頻度**より短くならないことにご注意ください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/local_llm-app.png" style={{width:1000, height:'auto'}}/></div>
 
-画像分析はWatcherの非常に重要な機能の1つでもあります。そのため、SenseCraft Proのサブスクリプションがない場合でも、最低15分間の画像分析サービスを保証しています。
+画像分析もWatcherの非常に重要な機能の一つです。そのため、SenseCraft Proにサブスクリプションしていない場合でも、最低15分間の画像分析サービスを使用できることを保証しています。
 
-### 大型言語モデルとのチャット
+### 大規模言語モデルとのチャット
 
-強力な大型言語モデルとの会話型インタラクションは、プレミアム機能であり使用料が発生します。SenseCraftがWatcherとの会話を双方向のやり取りと判断し、Watcherが応答を生成すると、それが1回のリクエストとしてカウントされます。
+私たちの強力な大規模言語モデルとの会話的なやり取りは、使用料金が発生するプレミアム機能です。SenseCraftがWatcherとの会話が双方向のやり取りであると判断し、Watcherが応答を生成した場合、単一のリクエストとしてカウントされます。
 
-このカウントが尽きると、Watcherとのチャットはできなくなります。
+このカウントが尽きると、Watcherとチャットすることはできません。
 
-### モデルリポジトリ、トレーニング、およびアップロード
+### モデルリポジトリ、トレーニング、アップロード
 
-広範な[モデルリポジトリ](https://sensecraft.seeed.cc/ai/#/model?redirect=%2Fdevice)へのアクセス、ならびに独自のモデルをトレーニングおよびアップロードする機能は、すべてのプランで無料で提供されます。
+私たちの広範な[モデルリポジトリ](https://sensecraft.seeed.cc/ai/#/model?redirect=%2Fdevice)へのアクセス、および独自のモデルをトレーニングしアップロードする機能は、すべてのプランで無料で提供されています。
 
-## サブスクリプション方法
+## 購読方法は？
 
-SenseCraft Proをサブスクライブする必要がある場合は、SenseCraft APP内で行う必要があります。最初のステップとして、APPで[SenseCAP Watcherをバインド](https://wiki.seeedstudio.com/ja/getting_started_with_watcher/#step-3-device-binding)する必要があります。現在、SenseCraft ProのサブスクリプションはSenseCAP Watcherユーザーのみ利用可能です。
+SenseCraft Proを購読する必要がある場合は、SenseCraft APP内で行う必要があります。最初のステップは、APP上で[SenseCAP Watcherをバインド](https://wiki.seeedstudio.com/getting_started_with_watcher/#step-3-device-binding)することです。現在、SenseCraft Proの購読はSenseCAP Watcherユーザーのみが利用できます。
 
-SenseCAP Watcherのチャット画面に移動し、右上の設定ギアボタンをクリックします。その後、画面下部付近に**サブスクリプション**のオプションが表示されます。
+SenseCAP Watcherのチャット画面に移動し、右上角の設定歯車ボタンをクリックし、下部近くに**Subscription**のオプションがあります。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/subscription.png" style={{width:250, height:'auto'}}/></div>
 
-ここで現在のサブスクリプションサービスの残りリクエスト数を確認できます。また、ここでサブスクリプションを完了することができます。現在、サブスクリプションサービスには3つの異なる価格プランを提供しており、実際の使用状況に応じて異なるプランを選択してください。
+ここで現在の購読サービスで残っているリクエスト数を確認できます。そして、ここで購読を完了できます。現在、購読サービスには3つの異なる価格を提供しており、実際の使用状況に応じて異なるプランを選択してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page1.png" style={{width:250, height:'auto'}}/></div>
 
@@ -136,13 +134,13 @@ SenseCAP Watcherのチャット画面に移動し、右上の設定ギアボタ�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page2.png" style={{width:250, height:'auto'}}/></div>
 
-現在、SenseCraft APPはPaypalを使用した支払いをサポートしています。支払いが成功すると、購入したリクエストがサブスクリプションページに更新されて表示されます。
+現在、SenseCraft APPはPaypalを使用した支払いをサポートしています。支払いが成功すると、Subscriptionページで購入したリクエストが更新されたことを確認できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/pay_page3.png" style={{width:250, height:'auto'}}/></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

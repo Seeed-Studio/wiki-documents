@@ -1,64 +1,60 @@
 ---
-description: APIキーの設定方法
-title: APIキーの設定方法
+description: API キーの設定方法
+title: API キーの設定方法
 keywords:
-- SenseCAP Indicator の使い方
+- Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key
 sidebar_position: 4
 last_update:
-  date: 05/15/2025
+  date: 5/31/2023
   author: Thomas
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
+
+# **API キーの設定方法**
+
+:::caution 地域制限
+**注意**: OpenAI API サービスは、中国、イラン、ロシアなどの特定の国では利用できない場合があります。詳細については、[サポートされている国と地域のリスト](https://platform.openai.com/docs/supported-countries)を参照してください。
+
+お使いのネットワーク環境で OpenAI API への接続が可能であることを確認してください。
 :::
 
-# **APIキーの設定方法**
+### API キーの取得
 
-:::caution ジオブロッキング
-**注意**: OpenAI APIサービスは、中国、イラン、ロシアなど一部の国では利用できない場合があります。詳細については、[サポートされている国と地域のリスト](https://platform.openai.com/docs/supported-countries)をご参照ください。
-
-ネットワーク環境がOpenAI APIへの接続を許可していることを確認してください。
-:::
-
-### APIキーを取得する
-
-- **ステップ1:** https://platform.openai.com/signup にログインします。
-  まだアカウントをお持ちでない場合は、新規登録が必要です。
+- **ステップ 1:** https://platform.openai.com/signup にログインします
+  アカウントをお持ちでない場合は、新規登録が必要です。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/login.png"/></div>
 
-- **ステップ2:** [OpenAIキーのページ](https://platform.openai.com/account/api-keys)にアクセスするか、メニュー項目「View API keys」をクリックします。
+- **ステップ 2:** [OpenAI キーページ](https://platform.openai.com/account/api-keys)にアクセスするか、メニュー項目「View API keys」をクリックします
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/key1.png"/></div>
 
-- **ステップ3:** 「Create new secret key」ボタンをクリックして新しいキーを作成します。以下の画像を参考にしてください。
+- **ステップ 3:** 「Create new secret key」ボタンをクリックして新しいキーを作成します。参考画像をご覧ください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/newkey.png"/></div>
 
 > **レート制限:**
-> OpenAIは、APIへのリクエストに対してレート制限を設けています。これらは、リクエスト数/分、トークン数/分、または画像モデルの場合は画像数/分で適用されます。
+> OpenAI は API に対して行うリクエストにレート制限を適用しています。これらは分あたりのリクエスト数、分あたりのトークン数、または画像モデルの場合は分あたりの画像数に適用されます。
 >
-> 詳細は[レート制限](https://platform.openai.com/docs/guides/rate-limits/overview)のドキュメントをご覧ください。また、モデルごとの[デフォルトのレート制限](https://platform.openai.com/docs/guides/rate-limits/what-are-the-rate-limits-for-our-api)も参照してください。
+> 詳細については[レート制限](https://platform.openai.com/docs/guides/rate-limits/overview)のドキュメントを参照するか、お使いのモデルの[デフォルトレート制限](https://platform.openai.com/docs/guides/rate-limits/what-are-the-rate-limits-for-our-api)を参照してください。
 
-### キーを設定する
+### キーの設定
 
-- **ステップ4:** **シリアルポート**を介してIndicatorに接続します（ここでは、Arduino IDEが提供するシリアルモニターツールを使用します）。
+- **ステップ 4:** **シリアルポート**経由で Indicator に接続します（ここでは、Arduino IDE が提供するシリアルモニターツールを使用します）。
 
 ボードとポートを選択します。
 
 - **ボード**: Seeed INDICATOR RP2040
-- **ポート**: usbserialポート
+- **ポート**: usbserial ポート
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/chooseboard.png"/></div>
 
-- **ステップ5:** ポートモニターを開きます。
+- **ステップ 5:** ポートモニターを開きます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/monitor.png"/></div>
 
-- **ステップ6:** 次のコマンドをデバイスに送信してAPIキーを設定します:
+- **ステップ 6:** デバイスに以下のコマンドを送信して API キーを設定します：
 
 ```sh
 openai_api -k {sk-your apikey}
@@ -66,10 +62,10 @@ openai_api -k {sk-your apikey}
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setkey.png"/></div>
 
-ログに「`openai_api_key read successful`」と表示されれば、設定完了です。これでAIの旅をお楽しみいただけます！
+ログに「`openai_api_key read successful`」と表示されれば、設定完了です。AI の旅をお楽しみください！
 
 # **技術サポート**
-**SenseCAP Indicatorに関するサポートが必要ですか？私たちがサポートします！**
+**SenseCAP Indicator でお困りですか？サポートいたします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

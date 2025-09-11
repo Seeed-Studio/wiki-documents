@@ -356,7 +356,7 @@ except IOError:
 -  **[ライブラリ]** [6-Axis Accelerometer&Compass v2.0 Library for Arduino](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
 
 - **[ライブラリ]** [6-Axis Accelerometer&Compass v2.0 Library for Raspberry Pi](https://github.com/DexterInd/GrovePi/blob/master/Software/Python/grove_6axis_acc_compass)
--  **[データシート]** [LSM303D\_データシート](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
+-  **[データシート]** [LSM303D_データシート](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
 -  **[Eagleファイル]** [6-Axis Accelerometer&Compass v2.0 Eagleファイル](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- このMarkdownファイルは https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 から作成されました -->

@@ -1,6 +1,6 @@
 ---
-description: 将更多 Grove 模块添加到构建器中
-title: 将更多 Grove 模块添加到构建器中
+description: 向构建器中添加更多 Grove 模块
+title: 向构建器中添加更多 Grove 模块
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -12,7 +12,7 @@ last_update:
 
 # 概述
 
-在本 wiki 中，我们将介绍如何将更多 Grove 模块添加到 SenseCAP S2110 传感器构建器中，并列出所有支持的模块。
+在本 wiki 中，我们将介绍如何向 SenseCAP S2110 传感器构建器中添加更多 Grove 模块，并列出所有支持的模块。
 
 ## 将 Grove - ±5A DC/AC 电流传感器 (ACS70331) 添加到构建器并应用
 
@@ -31,7 +31,7 @@ last_update:
 - **步骤 3：** 包含 `sensorNEW.hpp` 文件并调用它。
 
  在 `src\sensor\sensorBuilder.hpp` 文件中添加 `#include "sensorNew.hpp"` 行。
- 在 `sensorBuilder.ino` 文件的 `setup()` 函数中，创建新的传感器类对象并调用 `SensorBuilder.addSensor()` 函数，将其作为参数传入。
+ 在 `sensorBuilder.ino` 文件的 `setup()` 函数中，创建新的传感器类对象，并以它作为参数调用 `SensorBuilder.addSensor()` 函数。
 
 参考以下代码：
 
@@ -66,13 +66,13 @@ Modbus 寄存器地址 0x0000 到 0x0003 保留用于存储模块系统信息，
     <tr>
       <th>Grove 传感器名称</th>
       <th>寄存器名称</th>
-      <th>寄存器地址<br />(十六进制)</th>
-      <th>寄存器地址<br />(十进制)</th>
+      <th>寄存器地址<br />（十六进制）</th>
+      <th>寄存器地址<br />（十进制）</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowSpan={3}>Grove - CO2 & Temperature & Humidity Sensor (SCD41)</td>
+      <td rowSpan={3}>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
       <td>温度</td>
       <td>0x0004</td>
       <td>04</td>
@@ -206,16 +206,16 @@ Modbus 寄存器地址 0x0000 到 0x0003 保留用于存储模块系统信息，
 
 ### 3. 硬件连接知识
 
-将传感器的 SIG（信号）引脚连接到任何微控制器的模拟引脚之一，为 VCC 提供 5V-3.3V 电源，将 GND 连接到微控制器的地线。
+将传感器的 SIG（信号）引脚连接到任何微控制器的模拟引脚之一，为 VCC 提供 5V-3.3V 电源，并将 GND 连接到微控制器的地线。
 
 Grove 传感器配有一个安装在其上的电位器，允许用户微调增益，使其可调节以适应不同的输入电压。它有助于改变传感器的灵敏度。
 
 <div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/wysiwyg/__16696942484712.png"/></div>
 
 
-### 4. 从上述步骤中，我们可以获得 Grove AC 传感器的库：
+### 4. 从上述步骤中，我们可以获得 Grove 交流传感器的库：
 
-按照上述步骤，我们有了应用 Grove AC 传感器的库。
+按照上述步骤，我们有了应用 Grove 交流传感器的库。
 
 ```cpp
 #ifndef _SENSOR_AC_H
@@ -338,17 +338,17 @@ bool sensorAC::connected()
 #endif
 ```
 
-### 5. 使用 Arduino 编程进行首次测试
+### 5. 首先使用 Arduino 编程进行测试
 
 该程序需要一些参数，这些参数需要在运行程序之前进行初始化。这确保程序与传感器正确运行并获得准确的数值。
 
 首先将程序烧录到微控制器中，然后校准参数以适配读数。
 
 ```cpp
-#define AC_ADC_PIN A2				//这里使用引脚 A2
-#define ADC_BITS 12					//取决于微控制器
-#define Calibration_Value 523.56	//取决于校准结果
-#define Phase_Shift 1.7 			//取决于校准结果
+#define AC_ADC_PIN A2				//here pin A2 is used
+#define ADC_BITS 12					//depends on microcontroller to microcontroller
+#define Calibration_Value 523.56	//depends on the calibration result
+#define Phase_Shift 1.7 			//depends on the calibration result
 
 void setup() {
   Serial.begin(115200);
@@ -358,8 +358,8 @@ void setup() {
 int ADC_COUNTS = (1<<ADC_BITS);
 double voltCal = Calibration_Value;
 double phaseCal = Phase_Shift;
-unsigned int cycles = 10;			//要测量的交流周期数
-unsigned int timeout = 500;			//超时时间
+unsigned int cycles = 10;			//Number of AC Cycles you want to measure
+unsigned int timeout = 500;			//Timeout 
 int SupplyVoltage = 3300;
 int sampleV;
 double lastFilteredV,filteredV;
@@ -421,9 +421,9 @@ void loop() {
 ### 6. 获取校准值
 
 最初模拟引脚设置为 A2 引脚，可以根据您的需求使用 AC_ADC_PIN 参数进行更改。
-每次更改电压源时都需要更改 Calibration_Value 和 Phase_Shift 值，因为交流电压因国家而异，有时甚至因插座而异。
+每次更换电压源时都需要更改 Calibration_Value 和 Phase_Shift 值，因为交流电压在不同国家之间会有所不同，有时甚至在不同插座之间也会有所不同。
 
-程序将传感器值输出到串行监视器。您也可以打开串行绘图仪查看电压与时间的图表。
+程序将传感器值输出到串行监视器。您也可以打开串行绘图仪来查看电压与时间的图表。
 
 - 步骤 1：使用万用表测量交流电压并记录下来。
 - 步骤 2：同样记录串行监视器中显示的电压。
@@ -435,7 +435,7 @@ void loop() {
 - 步骤 3：找到 x 的值，并在程序中用它替换 Calibration_Value，然后将程序刷写到微控制器。
 
 ![x = (mains voltage × initial calibration) / Sensor voltage](https://s0.wp.com/latex.php?latex=+x+%3D+%5Cdfrac%7Bmains+voltage+%5Ctimes+initial+calibration%7D%7BSensor+voltage%7D&bg=ffffff&fg=000&s=0&c=20201002)
-您可以根据您的配置更改其他参数，如 Phase_Shift、交流周期数和超时，或保持默认值。
+您可以根据您的配置更改其他参数，如 Phase_Shift、交流周期数和超时，或保持默认设置。
 
 ### 参考
 
@@ -463,8 +463,8 @@ void loop() {
 
 ## ✨ 贡献者项目
 
-- 此项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
-- 感谢 [Mohammed Adnan Khan 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)，您的工作将被[展示](https://wiki.seeedstudio.com/cn/Honorary-Contributors/)。
+- 本项目由 Seeed Studio [贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)支持。
+- 感谢 [Mohammed Adnan Khan 的努力](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)，您的工作将会被[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)。
 
 
 ## 技术支持与产品讨论

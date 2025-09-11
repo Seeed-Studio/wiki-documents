@@ -17,7 +17,7 @@ last_update:
 
 ## 产品介绍
 
-如今，被称为微气候的本地化天气数据是更精确和准确天气预报的新前沿。因此，天气数据的收集正变得越来越小型化和网格化。鉴于此，作为收集天气数据最便捷手段的气象站，需求量正在上升。
+如今，局部天气数据（称为微气候）是更精确和准确天气预报的新前沿。因此，天气数据的收集正变得越来越小型化和网格化。鉴于此，作为收集天气数据最便捷手段的气象站，需求量正在上升。
 
 SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下参数：空气温度、相对湿度、大气压力、光照强度、降雨量、PM2.5、PM10、风速、风向和CO2。通过采用模块化设计，SenseCAP ONE 使您能够根据实际应用需求，方便地将不同传感器组合集成到一个紧凑型气象站中。
 
@@ -35,17 +35,17 @@ SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下�
 - **支持接口**：RS485 (MODBUS-RTU) / SDI-12
 符合国际标准：CE和FCC认证。
 =
-这里有一个图表，清楚地展示了SenseCAP ONE的外观以及每个产品可以测量的参数。
+以下图表清楚地展示了SenseCAP ONE的外观以及每个产品可以测量的参数。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/2.png"/></div>
 
-## 描述
+## 说明
 
 我们提供适用于SenseCAP ONE系列天气传感器的[SenseCAP S2100 LoRaWAN® 数据记录器](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)。数据可以传输到数据记录器，然后传输到公共LoRaWAN®网络服务器，如Helium、TTN等。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/3.png"/></div>
 
-我们还提供可与SenseCAP ONE系列天气传感器配合使用的SenseCAP [传感器集线器4G数据记录器](https://solution.seeedstudio.com/product/sensor-hub-4g-data-logger/)（支持太阳能供电和直流墙式供电）。数据可以传输到传感器集线器，然后传输到SenseCAP服务器或私有服务器。如果您选择使用SenseCAP服务器，我们还提供[API](https://sensecap-docs.seeed.cc/introduction.html)，让您轻松制作自己的应用程序。
+我们还提供可与SenseCAP ONE系列天气传感器配合使用的SenseCAP [传感器集线器4G数据记录器](https://solution.seeedstudio.com/product/sensor-hub-4g-data-logger/)（支持太阳能供电和直流壁式供电）。数据可以传输到传感器集线器，然后传输到SenseCAP服务器或私有服务器。如果您选择使用SenseCAP服务器，我们还提供[API](https://sensecap-docs.seeed.cc/introduction.html)，让您轻松制作自己的应用程序。
 
 <div align="center"><img width={800} src="https://sensecap-solution-upload.cdn.seeed.cn/cc/2020/05/Picture16.png?x-oss-process=image%2Fformat,webp"/></div>
 

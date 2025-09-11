@@ -13,33 +13,26 @@ last_update:
 
 This tutorial will guide users to flash the [Wio Tracker 1110 Dev Board](https://www.seeedstudio.com/Wio-Tracker-1110-Dev-Board-p-5799.html) to the Meshtastic version, for those who want to use the Meshtastic network.
 
-
 :::tip
 If you want to flash the board back to the LoRaWAN version, please check this [tutorial](https://wiki.seeedstudio.com/flash_to_wio_tracker/).
 :::
 
 ### Preparation
 
-* Wio Tracker 1110 Board x 1
-* Computer x 1
-* USB Type-C Cable x 1
-
- 
-
+- Wio Tracker 1110 Board x 1
+- Computer x 1
+- USB Type-C Cable x 1
 
 ### Wiring
 
-
 Connect the Dev Board to your PC via the USB cable.
 
-
 ### Flash the bootloader
-
 
 <Tabs>
 <TabItem value="uf2" label="UF2">
 
-* [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2)
 
 Double click the `Reset` button, there should be a `WM1110_BOOT` drive on your PC.
 
@@ -50,7 +43,7 @@ Drag the `update-wio_tracker_1110_bootloader-0.9.1_nosd.uf2` file to the driver.
 </TabItem>
 <TabItem value="serial" label="Serial">
 
-* [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip)
+- [Bootloader download](https://files.seeedstudio.com/wiki/SenseCAP/respeaker/wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip)
 
 **Step1: Adafruit-nrfutil Installation**
 
@@ -71,8 +64,6 @@ This is recommended method, to install latest version:
 pip3 install --user adafruit-nrfutil
 ```
 
-
-  
 </TabItem>
 
 <TabItem value="sou" label="Installing from Source">
@@ -93,9 +84,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-If you get permission errors when running `pip3 install`, your `pip3` is older
-or is set to try to install in the system directories. In that case use the
-`--user` flag:
+If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case use the `--user` flag:
 
 ```
 pip3 install -r --user requirements.txt
@@ -103,11 +92,11 @@ python3 setup.py install
 ```
 
 If you want to install in system directories (generally not recommended):
+
 ```
 sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
-
 
 To generate a self-contained executable binary of the utility (Windows and MacOS), run these commands:
 
@@ -118,9 +107,9 @@ pip3 install -r requirements.txt
 cd Adafruit_nRF52_nrfutil\nordicsemi
 pyinstaller __main__.py --onefile --clean --name adafruit-nrfutil
 ```
+
 You will find the .exe in `Adafruit_nRF52_nrfutil\nordicsemi\dist\adafruit-nrfutil` ( with `.exe` if you are on windows).
 Copy or move it elsewhere for your convenience, such as directory in your %PATH%.
-
 
 </TabItem>
 </Tabs>
@@ -129,12 +118,14 @@ Copy or move it elsewhere for your convenience, such as directory in your %PATH%
 
 Double click the `Reset` button on the board and run the following command:
 
-* **For Windows**: 
+- **For Windows**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
 ```
 
-* **For others**: 
+- **For others**:
+
 ```
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p /dev/tty.SLAB_USBtoUART -b 115200
 ```
@@ -174,13 +165,13 @@ Just ignore this error prompt, the device has actually been upgraded successfull
 
 Double click the `Reset` button on the board and run the following command:
 
-* **For Windows**: 
+- **For Windows**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package wio_tracker_1110_bootloader-0.9.1_s140_7.3.0.zip -p COMxx -b 115200
 ```
 
-* **For others**:
+- **For others**:
 
 ```
 adafruit-nrfutil --verbose dfu serial --package firmware-wio-tracker-wm1110-2.3.14.681ae9d8.zip --port /dev/tty.SLAB_USBtoUART -b 115200

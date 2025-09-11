@@ -44,15 +44,15 @@ Además, puedes fijar la placa Arduino y la protoboard como el corazón del robo
 |Placa Superior (3er piso)|160\*158\*3.8mm|1|
 |Soporte Frontal|62\*56\*3.8mm|1      |
 |Soporte Lateral|62\*31\*3.8mm|4       |
-|Remache\_1  |R3090        |4       |
-|Separadores\_2|M3\*22     |6       |
-|Separadores\_3|M3\*55+6   |4       |
-|Tornillo\_4  |PM3\*8       |14      |
-|Tornillo\_5  |PM3\*25      |4       |
-|Tuerca\_6    |M3\*2.3      |6       |
-|Remache\_7  |R2064        |15      |
-|Tornillo\_8  |KM2\*10      |15      |
-|Tuerca\_9    |M2\*1.5      |15      |
+|Remache_1  |R3090        |4       |
+|Separadores_2|M3\*22     |6       |
+|Separadores_3|M3\*55+6   |4       |
+|Tornillo_4  |PM3\*8       |14      |
+|Tornillo_5  |PM3\*25      |4       |
+|Tuerca_6    |M3\*2.3      |6       |
+|Remache_7  |R2064        |15      |
+|Tornillo_8  |KM2\*10      |15      |
+|Tuerca_9    |M2\*1.5      |15      |
 |Llave    |/            |2       |
 |Destornillador|/           |1       |
 

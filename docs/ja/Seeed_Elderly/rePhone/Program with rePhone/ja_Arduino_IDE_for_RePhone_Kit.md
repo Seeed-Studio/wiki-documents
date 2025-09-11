@@ -88,7 +88,7 @@ Windows 8/8.1 を使用している場合、ドライバをインストールす
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Browse_my_computer_for_driver_software.png)
 
-5. **参照**をクリックし、解凍した Arduino IDE for RePhone のフォルダ .. \\Arduino\_IDE\_for\_RePhone\\drivers\\mtk を指定します。「次へ」をクリックしてドライバのインストールを開始します。
+5. **参照**をクリックし、解凍した Arduino IDE for RePhone のフォルダ .. \\Arduino_IDE_for_RePhone\\drivers\\mtk を指定します。「次へ」をクリックしてドライバのインストールを開始します。
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Driver_Installation_Locate_Driver.png)
 
@@ -108,9 +108,9 @@ Windows 8/8.1 を使用している場合、ドライバをインストールす
 
 4. その後、
 
--- **<big>Windows Vista 64bit</big>** を使用している場合、"**Arduino\_IDE\_for\_RePhone-master\\drivers\\mtk\\Vista\\usb2ser\_Vista64.inf\\**" を指定します。
+-- **<big>Windows Vista 64bit</big>** を使用している場合、"**Arduino_IDE_for_RePhone-master\\drivers\\mtk\\Vista\\usb2ser_Vista64.inf\\**" を指定します。
 
--- **<big>Windows 7 以降の 64bit</big>** を使用している場合、"**Arduino\_IDE\_for\_RePhone-master\\drivers\\mtk\\Win7\\usb2ser\_Win764.inf**" を指定します。
+-- **<big>Windows 7 以降の 64bit</big>** を使用している場合、"**Arduino_IDE_for_RePhone-master\\drivers\\mtk\\Win7\\usb2ser_Win764.inf**" を指定します。
 
 ### LinkIt Assist 2502 SDK 2.0.46 を使用したドライバのインストール
 
@@ -119,7 +119,7 @@ LinkIt Assist 2502 SDK 2.0.46 には、ドライバーインストールプロ�
 [![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Linkit_assist_sdk_2.0.46-04.png)](http://download.labs.mediatek.com/MediaTek_LinkIt_Assist_2502_SDK_2_0_46.zip)
 
 次に、ドライバーインストーラーを以下のパスで見つけてください：  
-**"MediaTek\_LinkIt\_Assist\_2502\_SDK\_2\_0\_46\\LINKIT\_ASSIST\_SDK\\Driver\\InstallMTKUSBCOMPortDriver.exe"**
+**"MediaTek_LinkIt_Assist_2502_SDK_2_0_46\\LINKIT_ASSIST_SDK\\Driver\\InstallMTKUSBCOMPortDriver.exe"**
 
 ファームウェアの更新/フラッシュ
 -------------------------
@@ -133,7 +133,7 @@ RePhone 用の Arduino IDE を使用するには、ファームウェアを更�
 
 1. **RePhone を PC から切断**し、**電源キー（PWR）を 2 秒間押し続けて電源をオフにします**（LED インジケーターが**赤**になり、その後消灯します）。
 
-2. パス ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\FirmwareUpdater.exe*** にある **FirmwareUpdater.exe** を開きます。Firmware Updater のプラットフォームが "**RePhone**" であることを確認してください。以下のように表示されていない場合は、"**Others**" をクリックし、パス ***...Arduino\_IDE\_for\_RePhone\\hardware\\tools\\mtk\\firmware\\LinkIt\_Device\\RePhone\\W15.19.p2-uart\\SEEED02A\_DEMO\_BB.cfg*** を指定して、**Download（緑のボタン）** をクリックします。
+2. パス ***...Arduino_IDE_for_RePhone\\hardware\\tools\\mtk\\FirmwareUpdater.exe*** にある **FirmwareUpdater.exe** を開きます。Firmware Updater のプラットフォームが "**RePhone**" であることを確認してください。以下のように表示されていない場合は、"**Others**" をクリックし、パス ***...Arduino_IDE_for_RePhone\\hardware\\tools\\mtk\\firmware\\LinkIt_Device\\RePhone\\W15.19.p2-uart\\SEEED02A_DEMO_BB.cfg*** を指定して、**Download（緑のボタン）** をクリックします。
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Updatefirmware.png)
 
@@ -161,7 +161,7 @@ RePhone を**デフォルト**にリセットするには：
 
 1. 「ファームウェアの更新/フラッシュ」セクションの手順に従ってファームウェアをフラッシュします。
 
-2. RePhone\_Create\_Kit\_VXP ファイルをダウンロードします。
+2. RePhone_Create_Kit_VXP ファイルをダウンロードします。
 
     [![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/RePhone_Kit_Create_VXP.png)](https://github.com/WayenWeng/RePhone_Create_Kit_VXP/)
 
@@ -180,7 +180,7 @@ RePhone を**デフォルト**にリセットするには：
 
 1. 電源キー（PWR）を 2 秒間押し続けて電源をオンにします（LED インジケーターが緑色に点灯します）。
 
-2. Arduino IDE for RePhone を解凍したフォルダ内の **Arduino\_IDE\_for\_RePhone.exe** を開きます。ソフトウェアのインターフェースは以下のようになります：
+2. Arduino IDE for RePhone を解凍したフォルダ内の **Arduino_IDE_for_RePhone.exe** を開きます。ソフトウェアのインターフェースは以下のようになります：
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_IDE_for_RePhone_interface.png)
 
@@ -236,16 +236,16 @@ RePhone を**デフォルト**にリセットするには：
 さらに興味深いプロジェクトに進む場合は、いくつかのサンプルコードを試してみるのが良いスタートです。
 
 1. **スケッチブックの場所**を**設定**で次のように設定してください：  
-   ***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk***  
+   ***Arduino_IDE_for_RePhone-master\\hardware\\arduino\\mtk***  
    （Arduino IDE for RePhone をインストールした場所）
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_1.png)
 
-    その後、***Arduino\_IDE\_for\_RePhone.exe*** を再起動すると、サンプルコードが表示されるようになります。  
+    その後、***Arduino_IDE_for_RePhone.exe*** を再起動すると、サンプルコードが表示されるようになります。  
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Arduino_Sketchlocation_2.png)
 
 2. また、すべての RePhone モジュール用の Arduino サンプルコードを以下のパスで手動で見つけることもできます：  
-   ***Arduino\_IDE\_for\_RePhone-master\\hardware\\arduino\\mtk\\libraries***
+   ***Arduino_IDE_for_RePhone-master\\hardware\\arduino\\mtk\\libraries***
 
     ![](https://files.seeedstudio.com/wiki/Arduino_IDE_for_RePhone_Kit/img/Example_code_Arduino_IDE.png)
 

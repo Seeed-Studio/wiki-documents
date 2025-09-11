@@ -1,22 +1,17 @@
 ---
-description: A205E Mini PCにJetpackをフラッシュする
+description: A205E Mini PC に Jetpack をフラッシュする
 title: A205E Mini PC
 tags:
-  - Mini PC Jetpack フラッシュ
+  - Mini PC Jetpack Flash
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_A205E_Flash_System
 last_update:
-  date: 05/15/2025
+  date: 01/05/2023
   author: w0x7ce
 
-no_comments: false # Disqus用
+no_comments: false # for Disqus
 
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 <!-- ---
 name: 
 category: 
@@ -27,16 +22,16 @@ sku:
 tags:
 --- -->
 
-# A205EキャリアボードまたはA205E Mini PCにJetPack OSをフラッシュする (NVIDIA Jetson Xavier NX対応)
+# A205E キャリアボードまたは A205E Mini PC に JetPack OS をフラッシュする（NVIDIA Jetson Xavier NX 対応）
 
-このWikiでは、NVIDIA Jetson XavierモジュールをサポートするA205EキャリアボードまたはA205E Mini PCにJetpack OSをフラッシュする方法を紹介します。システムをフラッシュする方法を2つ紹介します。また、A205Eキャリアボードは公式のNVIDIA Jetsonキャリアボードとは異なるため、対応するドライバーもインストールする必要があります。
+この wiki では、NVIDIA Jetson Xavier モジュールをサポートする A205E キャリアボードまたは A205E Mini PC に Jetpack OS をフラッシュする方法を説明します。ここでは、システムをフラッシュする 2 つの方法を紹介します。A205 キャリアボードは公式の NVIDIA Jetson キャリアボードとは異なるため、対応するドライバーもインストールする必要があります。
 
 <div align="center">
   <table>
     <tbody><tr>
-        <td align="center"><a href="https://www.seeedstudio.com/A205E-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5496.html" target="_blank"><span>A205Eキャリアボード</span></a></td>
+        <td align="center"><a href="https://www.seeedstudio.com/A205E-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5496.html" target="_blank"><span>A205E キャリアボード</span></a></td>
         <td align="center"><a href="https://www.seeedstudio.com/A205E-Mini-PC-with-128GB-SSD-p-5495.html" target="_blank"><span>A205E Mini PC</span></a></td>
-        </tr>
+      </tr>
       <tr>
         <td align="center">
           <a href="https://www.seeedstudio.com/A205E-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5496.html" target="_blank" rel="noopener"><img width={350} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/5/_/5_7_1.png" alt /></a>
@@ -50,34 +45,34 @@ tags:
 
 ## はじめに
 
-**Linuxターミナル**を使用することで簡単に操作できます。Linuxの知識がある方には、Linuxターミナルのみを使用することを強くお勧めします。
+**Linux ターミナル**を使用することで簡単に実行できます。Linux の知識ベースをお持ちの方には、Linux ターミナルのみの使用を強く推奨します。
 
-- [Linuxターミナルを使用してJetPack OSをフラッシュする](#flashing-jetpack-os-via-command-line)
+- [Linux ターミナル経由での JetPack OS のフラッシュ](#flashing-jetpack-os-via-command-line)
 
-### ソフトウェア準備
+### ソフトウェアの準備
 
-- <a href="https://developer.nvidia.com/login" target="_blank"><span>NVIDIAアカウント</span></a>
-- ホストコンピュータ上のUbuntu 18.04 OS
+- <a href="https://developer.nvidia.com/login" target="_blank"><span>NVIDIA アカウント</span></a>
+- ホストコンピュータ上の Ubuntu 18.04 OS
 
 !!!note
-	このチュートリアルでは、Ubuntu 18.04 LTSベースのシステムを使用してインストールを完了します。
+ このチュートリアルでは、Ubuntu 18.04 LTS ベースのシステムを使用してインストールを完了します。
 
-### ハードウェア準備 (強制リカバリモード)
+### ハードウェアの準備（強制リカバリモード）
 
-* Ubuntu 18.04 OSを搭載したホストコンピュータ
-* USB Type-Cデータケーブル
-* A205EキャリアボードまたはA205E Mini PC用の電源アダプター
+- Ubuntu 18.04 OS を搭載したホストコンピュータ
+- USB Type-C データケーブル
+- A205E キャリアボードまたは A205E Mini PC 用電源アダプタ
 
-インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります。
+インストール手順に進む前に、ボードが強制リカバリモードになっていることを確認する必要があります
 
-**ステップ1.** A205EキャリアボードまたはA205E Mini PCの側面にあるUSB Type-Cポート、電源ボタン、リセットボタン、リカバリボタンを確認してください。
+**ステップ 1.** A205E キャリアボードまたは A205E Mini PC の側面にある USB Type-C ポート、電源ボタン、リセットボタン、リカバリボタンを確認してください。
 
 <div align="center">
   <table>
     <tbody><tr>
-        <td align="center">A205Eキャリアボード</td>
+        <td align="center">A205E キャリアボード</td>
         <td align="center">A205E Mini PC</td>
-        </tr>
+      </tr>
       <tr>
         <td align="center">
           <a href="https://www.seeedstudio.com/A205E-Carrier-Board-for-Jetson-Nano-Xavier-NX-p-5496.html" target="_blank" rel="noopener"><img width={350} src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/a/n/antenna_dc_jack_io_controller_20_pin_1_.png" alt /></a>
@@ -91,68 +86,68 @@ tags:
 
 A205Eを強制リカバリモードにするには、A205Eの電源がオフになっていることを確認してください。
 
-**ステップ2.** USB Type-Cケーブルを**A205EキャリアボードまたはA205E Mini PC**のType-Cプログラミングポートとホストコンピュータに接続します。
+**ステップ 2.** USB Type-Cケーブルを**A205E Carrier BoardまたはA205E Mini PC**のType-Cプログラミングポートとホストコンピュータに接続します。
 
-**ステップ3.** **A205EキャリアボードまたはA205E Mini PC**用の電源アダプターを接続します。
+**ステップ 3.** **A205E Carrier BoardまたはA205E Mini PC**に電源アダプタを接続します。
 
-**ステップ4.** **リカバリキーを押し続けたまま**、次に**電源キーを押し続け**、LEDが点灯するまで待ちます。その後、**電源キーを離し**、**2秒待って**から**リカバリキーを離します**。
+**ステップ 4.** まず**Recovery Key**を**押し続け**、次に**Power Key**を**押し続け**、LEDが点灯するまで待ち、その後**Power Key**を**離し**、**2秒間待って****Recovery Key**を**離します**。
 
 **または**
 
-**A205EキャリアボードまたはA205E Mini PC**が**電源オン**状態の場合、**リセットキー**と**リカバリキー**を押し続け、**リセットキーを2秒間離して**から**リカバリキーを離します**。
+**A205E Carrier BoardまたはA205E Mini PC**が**電源オン**状態の場合、**Reset Key**と**Recovery Key**を**押し続け**、**Reset Key**を**2秒間****離し**、その後**Recovery Key**を**離します**。
 
-**ステップ5.** LinuxホストPC画面で、マウスを右クリックしてターミナルを開き、コマンド`lsusb`を入力します。返された内容に`NVidia Corp.`が含まれている場合、A205Eキャリアボードが強制リカバリモードになっていることを意味し、次の操作に進むことができます。
+**ステップ 5.** Linux ホストPCの画面で、マウスを右クリックしてターミナルを開き、コマンド`lsusb`を入力します。返される内容に`NVidia Corp.`が含まれている場合、A205 Carrier Boardが強制リカバリモードになっており、後続の操作を続行できることを意味します。
 
-IDはキャリアボード上のモジュールによって異なり、以下の情報が表示されます：
+IDはキャリアボード上のモジュールによって異なり、以下のように表示されます：
 
-- Jetson Xavier NXの場合: **0955:7e19 NVidia Corp**
+- Jetson Xavier NXの場合：**0955:7e19 NVidia Corp**
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/A203E/NX_lsusb.png" /></div>
 
-## コマンドラインを使用した JetPack OS のフラッシュ
+## コマンドライン経由でのJetPack OSのフラッシュ
 
-以下は、コマンドラインスクリプトを使用して JetPack OS をフラッシュする手順です：
+コマンドラインスクリプトを使用してJetpack OSをフラッシュするワークフローは以下の通りです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17_3.png" /></div>
 
-### ステップ 1. 適切な NVIDIA Linux ドライバーパッケージをダウンロード
+### ステップ 1. 適切なNVIDIA Linux Driver Packageをダウンロード
 
-**Linux ホスト PC**で、ブラウザを開き、<a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a> にアクセスします。まず、Jetson Linux のバージョンがサポートされているか確認します。この例では、NVIDIA L4T 35.1.0（Jetpack 5.0.2 に相当）を使用します。
+**Linux ホストPC**で、ブラウザを開いて<a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a>にアクセスする必要があります。まず、Jetson Linuxのバージョンがサポートされているかを確認する必要があります。この場合、NVIDIA L4T 35.1.0（Jetpack 5.0.2相当）を使用しています。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A203E/select_35_1.png" /></div>
 
-適切なバージョンを見つけたら、ダウンロードページに移動します。「L4T Driver Package (BSP)」および「Sample Root Filesystem」を見つけてクリックし、ドライバーファイルをダウンロードします。ファイル名は `Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2` および `Jetson-210_Linux_Rxx.x.x_aarch64.tbz2` のようになります。
+適切なバージョンを見つけたら、クリックしてダウンロードページに移動します。「L4T Driver Package (BSP)」と「Sample Root Filesystem」を見つけてクリックし、ドライバファイルをダウンロードします。ファイル名は`Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2`と`Jetson-210_Linux_Rxx.x.x_aarch64.tbz2`のようになります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/A203E/download_files.png" /></div>
 
-例として、NVIDIA L4T 35.1.0 バージョンを選択します。ファイル名は以下のようになります：
+例として、NVIDIA L4T 35.1.0バージョンを選択した場合、ファイル名は以下のようになります：
 
 - Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2
 - Jetson_Linux_R35.1.0_aarch64.tbz2
 
-### ステップ 2. パッケージファイルを解凍し、コマンドラインで Rootfs を組み立てる
+### ステップ 2. パッケージファイルの解凍とコマンドライン経由でのRootfsの組み立て
 
-Linux ホスト PC で ``Terminal`` を開き、以下のコマンドラインを使用してファイルを解凍し、Rootfs を組み立てます：
+Linux ホストPCで、``Terminal``を開き、以下のコマンドラインを使用してファイルを解凍し、rootfsを組み立てます：
 
 ```sh
-$ tar xf ${L4T_RELEASE_PACKAGE}
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
-$ cd ..
-$ sudo ./apply_binaries.sh
+tar xf ${L4T_RELEASE_PACKAGE}
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
+cd ..
+sudo ./apply_binaries.sh
 ```
 
-!!!注意
-    `${XXX_XX_XXX}` はファイル名を指定する場所です。
+!!!Note
+    `${XXX_XX_XXX}` はファイル名を入力する場所です。
 
-* 例えば、ダウンロードしたファイルが `~/Downloads/` に保存されている場合、Ubuntu ホストコンピュータで ``Terminal`` を開き、以下のコマンドを入力してください：
+- 例えば、ダウンロードしたファイルが `~/Downloads/` に保存されている場合、Ubuntu ホストコンピュータで ``Terminal`` を開き、以下のコマンドを入力してください：
 
 ```bash
-cd ~/Downloads/
+cd ~/Downlands/
 mkdir Jetpack_502
 mv Jetson_Linux_R35.1.0_aarch64.tbz2 Jetpack_502/
 mv Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2 Jetpack_502/
-cd Jetpack_502/
+cd Jetpack_501/
 tar xf Jetson_Linux_R35.1.0_aarch64.tbz2
 cd Linux_for_Tegra/rootfs/
 sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R35.1.0_aarch64.tbz2
@@ -160,27 +155,27 @@ cd ..
 sudo ./apply_binaries.sh
 ```
 
-### ステップ 3. システムをボードにフラッシュ
+### ステップ 3. システムをボードにフラッシュする
 
-この例では、NVIDIA Jetson Xavier NX モジュールを使用し、以下のコマンドを実行してシステムを直接ボードにフラッシュします：
+この例では NVIDIA Jetson Xavier NX モジュールを使用し、以下のコマンドを実行してシステムを直接ボードにフラッシュできます：
 
 ```sh
-cd ~/Downloads/Jetpack_502/Linux_for_Tegra
+cd ~/Downlands/Jetpack_502/Linux_for_Tegra
 sudo ./flash.sh -r jetson-xavier-nx-devkit-emmc mmcblk0p1
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/19.png" /></div>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様のニーズや好みに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

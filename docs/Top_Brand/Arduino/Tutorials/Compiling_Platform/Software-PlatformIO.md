@@ -70,7 +70,7 @@ Now, PlatformIO is installed on to your PC!
 
       - For **Unix**: `~/.platformio`
 
-      - For **Windows**: `C:\Users\{username}\.platformio` where `{username}` is your user name.
+      - For **Windows**: `C:\Users\{username}.platformio` where `{username}` is your user name.
 
 2. Navigate to `platforms` folder.
 

@@ -45,9 +45,7 @@ last_update:
 
 - **Equal or better audio quality** :compared to previous model
 
-
 ## Hardware Overview
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xiao-xvf.jpg" alt="pir" width={900} height="auto" /></p>
 
@@ -76,8 +74,7 @@ last_update:
 | **Visual Feedback**           | Device state and audio activity shown via **RGB LED patterns** and **status indicators**.            |
 | **Audio Quality**             | Equal or better than the **previous XVF3000-based designs**.                                         |
 
-
-### XIAO ESP32S3 support 
+### XIAO ESP32S3 support
 
 - Stereo I2S input/output with multiple output options; I2C interface for configuring and managing XVF3800 parameters.
 - XIAO reset via IO pin
@@ -87,13 +84,13 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/pinout.jpg" alt="pir" width={900} height="auto" /></p>
 
-### On-Board WIFI Antenna 
+### On-Board WIFI Antenna
 
 When using the XIAO ESP32S3, no external antenna is needed—simply connect the antenna slots to use the built-in PCB antenna.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/antenna.PNG" alt="pir" width={600} height="auto" /></p>
 
-### GPIO Overview 
+### GPIO Overview
 
 The reSpeaker XVF3800 exposes 3 input pins (GPI) and 5 output pins (GPO) for external control. You can use these to read button states or control hardware like the mute LED, amplifier, or LEDs.
 
@@ -112,7 +109,6 @@ The reSpeaker XVF3800 exposes 3 input pins (GPI) and 5 output pins (GPO) for ext
 
 To use the reSpeaker XVF3800  with XIAO ESP32S3, please make sure the reSpeaker XVF3800  firmware is the I2S version.
 Check Firmware Flash to flash the latest I2S firmware. Please vist for [this section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware).
-
 
 :::note
 To work with the XIAO ESP32S3, you need to flash the I2S firmware. However, it does not support USB DFU. If you are already using USB firmware, you can enter safe mode to flash the firmware. This method is more flexible because it supports both USB DFU and I2C DFU. To learn more, please visit this [section](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#safe-mode).
@@ -138,17 +134,15 @@ Download and Install the stable version of Arduino IDE according to your operati
 
 <br />
 
-
- #### Install Arduino-ESP32
+#### Install Arduino-ESP32
 
 To start the installation process using the Boards Manager, follow these steps:
 
-* Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [arduino.cc](https://www.arduino.cc/en/Main/Software) website.
+- Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the [arduino.cc](https://www.arduino.cc/en/Main/Software) website.
 
-* Start Arduino and open the `Settings` window.
+- Start Arduino and open the `Settings` window.
 
-
-* Enter one of the release links above into Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
+- Enter one of the release links above into Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
 
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
@@ -156,26 +150,22 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/preference.png" alt="pir" width={800} height="auto" /></p>
 
-
-* Open `Boards Manager` from the sidebar, search `ESP32` and click `INSTALL`.
-
+- Open `Boards Manager` from the sidebar, search `ESP32` and click `INSTALL`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/install-board.png" alt="pir" width={800} height="auto" /></p>
 
-
-* Restart Arduino IDE.
-
+- Restart Arduino IDE.
 
 ## Tech Support & Product Discussion
 
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

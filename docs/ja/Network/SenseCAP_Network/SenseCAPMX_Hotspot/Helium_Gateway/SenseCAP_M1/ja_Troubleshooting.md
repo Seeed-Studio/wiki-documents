@@ -2,17 +2,14 @@
 description: SenseCAP M1 トラブルシューティング
 title: トラブルシューティング
 keywords:
-- SenseCAP ネットワーク
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M1/Troubleshooting
 last_update:
-  date: 05/15/2025
+  date: 02/14/2023
   author: Matthew
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 SenseCAP M1 トラブルシューティング
 ===========================
@@ -25,15 +22,15 @@ SenseCAP M1 トラブルシューティング
 **青色LEDが点滅しない**
 ------------------------
 
-![SenseCAP M1 青色LED](https://www.sensecapmx.com/wp-content/uploads/2022/07/blue-led-1.webp)
+![SenseCAP M1 Blue LED](https://www.sensecapmx.com/wp-content/uploads/2022/07/blue-led-1.webp)
 
-![SenseCAP M1 青色LEDが点灯しない](https://www.sensecapmx.com/wp-content/uploads/2022/08/back-front-led-m1.png)
+![SenseCAP M1 Blue LED Not Good](https://www.sensecapmx.com/wp-content/uploads/2022/08/back-front-led-m1.png)
 
 **トラブルシューティング手順**
 
-1. ETH LEDが点滅しているか確認してください。ETHの緑色と黄色のライトが点灯していて青色LEDが消灯している場合、**[まず新しいSDカードをフラッシュしてください](https://www.sensecapmx.com/docs/sensecap-m1/m1-troubleshooting/#how-to-flash-a-new-image-to-a-new-micro-sd-card)**。青色ライトが依然として消灯している場合は、ハードウェアの欠陥が原因です。
-2. 緑色と黄色のLEDが消灯している場合、電源アダプターが正常か確認してください。5V-3Aの電話充電器とタイプCケーブル、新しいネットワークケーブルを使用して問題が解決するか確認してください。
-3. ホットスポットがWi-Fi経由でインターネットに接続している場合、前面パネルの赤色ライトが点灯しているか確認してください。点灯していない場合は、ハードウェアの欠陥が原因です。
+1.  ETH LEDが点滅しているかを確認してください。ETHの緑色と黄色のライトが点灯し、青色LEDが消灯している場合は、**[まず新しいSDカードをフラッシュしてください](https://www.sensecapmx.com/docs/sensecap-m1/m1-troubleshooting/#how-to-flash-a-new-image-to-a-new-micro-sd-card)**。青色ライトがまだ消灯している場合は、ハードウェア不良の問題です。
+2.  緑色と黄色のLEDが消灯している場合は、電源アダプターが正常であることを確認してください。5V-3Aの携帯電話充電器とType-Cケーブル、新しいネットワークケーブルに交換して問題が解決するかを確認してください。
+3.  ホットスポットがWi-Fi経由でインターネットに接続している場合は、フロントパネルから赤色ライトが点灯しているかを確認してください。点灯していない場合は、ハードウェア不良の問題です。
 
 * * *
 
@@ -42,48 +39,48 @@ SenseCAP M1 トラブルシューティング
 
 * * *
 
-**インターネットに接続できない？**
+**インターネットに接続できない場合**
 --------------------------------------
 
-ネットワーク構成を正しく設定することが重要です。以下の詳細をすべて確認し、適切な構成を確保してください。
+ネットワーク設定を正しく設定することは重要な役割を果たします。適切な設定を確実にするために、以下のすべての詳細を読んでください。
 
-Helium ホットスポットは、ファイアウォールの背後にある場合や、以下に記載されているような非互換のNATタイプを使用している場合、正常に動作しない可能性があります。他の場合では、ルーター構成/ネットワーク構成の問題や、単にインターネット接続がオフラインであることが原因かもしれません。
+Heliumホットスポットは、ホットスポットがファイアウォールの背後にある場合や、以下に説明する互換性のないNATタイプを使用している場合に動作しない可能性があります。その他の場合では、ルーター設定/ネットワーク設定の問題、または単純に接続がオフライン（インターネットなし）である可能性があります。
 
-**注意**: ネットワーク構成を正しく設定できない場合や、以下の手順がうまくいかない場合は、>>公式Discordチャンネルを訪問してさらにガイダンスを受けてください。
+**注意**: ネットワーク設定を適切に設定できない場合、または以下の手順が機能しない場合は、さらなるガイダンスについて >> 公式Discordチャンネルをご訪問ください。
 
 **トラブルシューティング手順 - イーサネット接続**
 
-**Wi-Fiを使用していない場合はイーサネットケーブルを確認してください**: イーサネットケーブルがルーター/モデムからホットスポットにしっかりと接続されていることを確認してください。
+**Wi-Fiを使用していない場合は、イーサネットケーブルを確認してください**: イーサネットケーブルがルーター/モデムからホットスポットにしっかりと接続されていることを確認してください。
 
-*   **ホットスポットのイーサネットポート横のアンバーライトが点滅している場合**: 接続が確立されています。
-*   イーサネットポートにアンバーライトの点滅が見られない場合は、別のケーブルを試してください。ケーブルは時間が経つと故障することがあります。
+*   **ホットスポットのイーサネットポート横の琥珀色ライトの点滅**: 安定した接続が確立されています。
+*   イーサネットポートで琥珀色ライトの点滅が見られない場合は、ケーブルは時間の経過とともに故障する傾向があるため、別のケーブルを試してください。
 
-**インターネット接続を確認してください**: 自宅のコンピューター/ラップトップ/電話を使用して、同じネットワークでインターネットに接続できることを確認してください。インターネットに接続できない場合は、インターネットサービスプロバイダー（ISP）に連絡して接続に関する追加の支援を受けてください。
+**インターネット接続を確認してください**: 同じネットワーク上で、お使いの家庭用コンピューター/ラップトップ/電話からその場所でインターネットに接続できることを確認してください。インターネットに接続できない場合は、接続に関する追加サポートについて、インターネットサービスプロバイダー（ISP）に連絡する必要があります。
 
 **トラブルシューティング手順 - Wi-Fi接続**
 
-*   **Wi-Fiを使用している場合**: WEPまたはWPAセキュリティパスワード（Wi-Fiパスワード）を使用してワイヤレスネットワークに接続できることを確認してください。ワイヤレスモデムへの接続方法がわからない場合は、機器の製造元に直接連絡する必要があります。
-*   インターネットに接続できない場合は、ルーターの電源を再起動してください。ホットスポットとルーターを壁または電源タップから2分間抜いてください。その後、再度接続してインターネットに接続できるか確認してください。
+*   **Wi-Fiを使用している場合**: WEPまたはWPAセキュリティパスワード（Wi-Fiパスワード）を使用してワイヤレスネットワークに接続できることを確認してください。ワイヤレスモデムへの接続方法やアクセス方法がわからない場合は、機器の製造元に直接連絡する必要があります。
+*   インターネットに接続できない場合は、ルーターの電源を再投入してください。ホットスポットとルーターを壁またはパワーストリップから2分間抜いてください。その後、再び接続してインターネットに接続できるかを確認してください。
 
 * * *
 
-**ホットスポットを電話のWi-Fiに接続する方法**
+**ホットスポットを携帯電話のWiFiに接続する方法**
 --------------------------------------------------
 
-**以下はApple iOSデバイスでの例です。**
+**以下の例はApple iOSデバイス用に示されています。**
 
-*   携帯電話で「**設定**」を見つけます。
-*   「**パーソナルホットスポット**」をクリックします。
+*   携帯電話で「**設定**」を見つけてください。
+*   「**インターネット共有**」をクリックしてください。
 
-![iOS パーソナルホットスポット](https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot.png)
+![iOS Personal Hotspot](https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot.png)
 
-*   他のデバイスが参加できるように有効にします。
-*   ホットスポットをペアリングします。
-*   ホットスポットをApple iOS電話のパーソナルホットスポット名に接続します。
+*   他の人の参加を許可するために有効にしてください。
+*   ホットスポットをペアリングしてください。
+*   ホットスポットをApple iOSフォンのインターネット共有名に接続してください。
 
-![iOS ホットスポット設定](https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot-setup.png)
+![iOS Hotspot Setup](https://www.sensecapmx.com/wp-content/uploads/2022/07/hotspot-setup.png)
 
-これで、SenseCAPゲートウェイをWi-Fi経由で電話のパーソナルホットスポットにペアリングし、ファームウェアの更新やネットワーク接続のトラブルシューティングを行うことができます。
+これで、ファームウェアアップデートとネットワーク接続のトラブルシューティングのために、SenseCAP GatewayをWi-Fi経由で携帯電話のインターネット共有にペアリングできます。
 
 * * *
 
@@ -92,20 +89,20 @@ SDカード関連
 
 * * *
 
-**'config.json'ファイルを交換する方法**
+**'config.json'ファイルの交換方法**
 -----------------------------------------
 
-**注意して進めてください**: 以下の手順は、技術サポートチームから指示を受けた場合のみ使用してください。指示を受けていない場合は、これらの手順を実行する必要はありません。
+**注意して進めてください**: 以下の手順は、技術サポートチームからアドバイスを受けた場合にのみ使用してください。アドバイスを受けて**いない**場合は、これらの手順を複製する必要はありません。
 
-**注意**: 他のホットスポットに同じ「**config.json**」ファイルを使用しないでください。各ホットスポットには、シリアル番号に関連付けられた固有の「**config.json**」ファイルがあります。
+**注意:** 他のホットスポットに同じ'**config.json**'ファイルを使用しないでください。各ホットスポットには、そのシリアル番号に固有の'**config.json**'ファイルが添付されています。
 
 * * *
 
 **手順**
 
-以下の手順は、Micro SDカード内の「config.json」ファイルを交換する方法を説明します。デバイスがファームウェア/古いバージョンで停止している場合や、エラーが原因で失敗している可能性がある場合は、以下の手順に従って問題を解決してください。
+以下の手順は、Micro SDカード内の'config.json'ファイルを交換するのに役立ちます。デバイスがファームウェア/古いバージョンで停止しており、障害を引き起こす潜在的なエラーである可能性があると判断した場合は、以下の手順に従って問題を解決してください。
 
-**注意**: 以下の手順を実行する前に、インターネット接続を確認して問題がインターネットに関連していないことを確認してください。
+**注意**: 以下の手順に従ってmicro SDカードを交換する前に、まずインターネット接続を確認して、問題がインターネットに関連していないことを確認してください。
 
 * * *
 
@@ -114,11 +111,11 @@ SDカード関連
 1.  SenseCAP M1ホットスポット内のMicro SDカード
 2.  Micro SDカードリーダー
 3.  ドライバー
-4.  元のカードからコピーした「**config.json**」ファイル
+4.  元のカードからコピーした'**config.json**'ファイル
 
 **注意**: 元のファイルを取得できない場合は、技術サポートエージェントに提供を依頼してください。
 
-![Config.jsonファイル交換に必要なもの](https://www.sensecapmx.com/wp-content/uploads/2022/07/requirements-sd-flash.png)
+![Swap Config.json File Requirements](https://www.sensecapmx.com/wp-content/uploads/2022/07/requirements-sd-flash.png)
 
 _必要なアイテム_
 
@@ -126,21 +123,21 @@ _必要なアイテム_
 
 **手順**
 
-*   **ステップ1**: ホットスポットの電源をオフにします。
-*   **ステップ2**: アンテナを取り外します。
-*   **ステップ3**: パネルの前面側に向けます。
+*   **手順1**: ホットスポットの電源を切ってください
+*   **手順2**: アンテナを取り外してください
+*   **手順3**: パネルの前面側に向けてください
 
-![Config.jsonファイル交換1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step1-1.png)
+![Config.json File Swap 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step1-1.png)
 
-*   **ステップ4**: ドライバーを使用してパネル前面の2つのネジを緩めます。
+*   **手順4**: ドライバーを使用してパネル前面の2つのネジを緩めてください
 
-![Config.jsonファイル交換2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step2-1.png)
+![Config.json File Swap 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step2-1.png)
 
-*   **ステップ5**: 前面パネルを取り外し、横に置きます。
+*   **手順5**: フロントパネルを移動して脇に置いてください
 
-![Config.jsonファイル交換3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step3-1.png)
+![Config.json File Swap 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step3-1.png)
 
-*   **ステップ 6**: ピンセットを使用してMicro SDカードの上にある黄色いシールを取り外し、Micro SDカードを引き抜きます。
+*   **ステップ 6**: ピンセットを使用してMicro SDカードの上にある黄色いストックを取り除き、Micro SDカードを引き抜きます
 
 ![Config.json File Swap 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step4-1.png)
 
@@ -148,53 +145,53 @@ _必要なアイテム_
 
 ![Config.json File Swap 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/step6-1.png)
 
-*   **ステップ 7**: Micro SDカードをカードリーダーに挿入し、コンピュータに接続します。
+*   **ステップ 7**: Micro SDカードをカードリーダーに挿入し、コンピューターに接続します
 
 ![Config.json File Swap 7](https://www.sensecapmx.com/wp-content/uploads/2022/07/step7-1.png)
 
 ![Config.json File Swap 7B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step8-1.png)
 
-**注意**: Windows OSを使用している場合、「**ドライブ** "**X**" を使用する前にディスクをフォーマットする必要があります」というメッセージが表示されたら、「**キャンセル**」をクリックしてください。そうしないとMicro SDカードのデータが消去されます。
+**注意**: Windows OSを使用していて「**ドライブ** "**X**" **のディスクをフォーマットする必要があります**」と表示された場合は、「**キャンセル**」をクリックしてください。そうしないとMicro SDカードのデータが消去されます。
 
 ![Format SD Card](https://www.sensecapmx.com/wp-content/uploads/2022/07/format-1.png)
 
-_WindowsでMicro SDカードを挿入した際のプロンプト_
+_Micro SDカード挿入時のWindowsプロンプト_
 
-*   **ステップ 8**: '**resin-boot**' フォルダ内に '**config.json**' ファイルがあることを確認してください。メモ帳で開いて空であることを確認します。
+*   **ステップ 8**: '**resin-boot**'フォルダ内に'**config.json**'ファイルがあることを確認できます。メモ帳で開いて空であることを確認してください。
 
-もし空でない場合、OTA（Over The Air）アップデートの問題がconfigファイルによって引き起こされている可能性があります。これはネットワーク接続の問題です。ネットワークおよびセキュリティ/ファイアウォール設定を確認してください。
+空で**ない**場合、configファイルによるOTA（無線アップデート）の問題があり、これはネットワーク接続の問題です。ネットワークとセキュリティ/ファイアウォール設定を確認してください。
 
-もし空である場合、新しい '**config.json**' ファイルを使用して置き換えてください。
+空**である**場合は、私たちが提供する新しい'config.json'ファイルを使用して置き換えてください。
 
 ![Empty config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/config-1.png)
 
-*   **ステップ 9**: '**config.json**' ファイルが空の場合、提供された新しいファイルで置き換える必要があります。新しいファイルをディスクにドラッグして「置き換え」をクリックしてください。
+*   **ステップ 9**: '**config.json**'ファイルが空の場合、私たちが提供するファイルで置き換える必要があります。新しいファイルをディスクにドラッグし、「置換」をクリックします。
 
-**注意**: 他のファイルを削除しないでください。そうしないとSenseCAP M1に予期しない問題が発生する可能性があります。
+**注意**: 他のファイルは削除しないでください。そうしないとSenseCAP M1に予期しない問題が発生します。
 
-**注意**: 各デバイスには登録された異なる '**config.json**' ファイルがあります。他人とファイルを共有したり、他人のファイルを使用しないでください。
+**注意**: 各デバイスには異なる'config.json'ファイルが登録されています。'config.json'ファイルを他の人と共有したり、他の人のファイルを使用したりしないでください。
 
-**MacOSの場合**
+**MacOS用**
 
 ![MacOS Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png)
 
-_MacOS - 'config.json' ファイルのコピー_
+_MacOS - 'config.json'ファイルのコピー_
 
 ![MacOS Swap Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-2.png)
 
-**Windowsの場合**
+**Windows用**
 
 ![Windows Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png)
 
-_Windows - "config.json" ファイルのコピー_
+_Windows - "config.json"ファイルのコピー_
 
 ![Windows Swap Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-2.png)
 
-**注意**: コピー後、メモ帳で開いて '**config.json**' ファイル内に内容があることを再確認することをお勧めします。
+**注意**: コピー後、メモ帳で開いて'**config.json**'ファイル内に内容があることを再確認することをお勧めします。
 
-*   **ステップ 10**: Micro SDカードをHotspotに戻します。
+*   **ステップ 10**: Micro SDカードをホットスポット内に戻します
 
-**ヒント**: Hotspotが正常に動作していることを確認した後、前面パネルを組み立ててください。
+**ヒント**: ホットスポットが起動して動作していることを確認してから、フロントパネルを組み立ててください。
 
 ![Put Together SenseCAP M1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step10-1.png)
 
@@ -204,411 +201,414 @@ _Windows - "config.json" ファイルのコピー_
 
 ![Put Together SenseCAP M1 - 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step13-1.png)
 
-*   **ステップ 11**: アンテナを組み立て、Hotspotの電源を入れます。
+*   **ステップ 11**: アンテナを組み立て、ホットスポットの電源を入れます
 
-SenseCAP M1の電源を入れ、インターネットに接続します（イーサネットケーブルを使用することを推奨）。OTAアップデートのために約20分待機し、Dashboard ([**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/))でステータスを確認するか、Helium APP内で診断を実行してください。
+SenseCAP M1の電源を入れ、インターネットに接続し（イーサネットケーブルが推奨）、OTAアップデートのため約20分待機し、ダッシュボード（[**https://status.sensecapmx.cloud/**](https://status.sensecapmx.cloud/)）でステータスを確認するか、Helium APPで診断を実行してください。
 
-さらに問題や質問がある場合は、こちらでチケットを開いてください: [**https://support.sensecapmx.com**](https://support.sensecapmx.com)
+さらなる問題や質問がある場合は、こちらでチケットを開いてください：[**https://support.sensecapmx.com**](https://support.sensecapmx.com)
 
 * * *
 
 **新しいMicro SDカードに新しいイメージをフラッシュする方法**
 ---------------------------------------------------
 
-**注意して進めてください**: 以下の手順は、技術サポートチームから指示を受けた場合のみ使用してください。指示を受けていない場合は、これらの手順を実行する必要はありません。
+**注意して進めてください**: 以下の手順は、技術サポートチームから指示された場合**のみ**使用してください。指示されて**いない**場合は、これらの手順を実行する必要はありません。
 
-ユーザーによるHotspotの誤使用により、頻繁な電源のオンオフやMicro SDカードの抜き差しが原因で、ファイルシステムの整合性などの未知のMicro SDカードエラーが発生する可能性があります。
+ユーザーによるホットスポットの誤用により、頻繁な電源の入り切り、micro SDカードの抜き差しが、ファイルシステムの整列などの未知のmicro SDカードエラーを引き起こす可能性があることがわかりました。
 
-**Micro SDカードを交換して問題をデバッグするよう指示された場合は、以下の手順に従ってください。**
+**問題をデバッグするためにmicro SDカードの交換を指示された場合は、以下の手順を注意深く従ってください。**
 
 * * *
 
 **手順**
 
-以下の手順は、新しいMicro SDカードにイメージをフラッシュし、SenseCAP M1の元のカードを交換して、Micro SDカードエラーによる問題を修正する方法を説明します。
+以下に提供される手順は、新しいmicro SDカードにイメージをフラッシュし、SenseCAP M1の元のカードと交換して、潜在的なmicro SDカードエラーによって引き起こされる問題を修正するのに役立ちます。
 
-**注意**: 以下の手順を実行する前に、インターネット接続を確認し、問題がインターネットに関連していないことを確認してください。
+**注意**: 以下の手順に従ってmicro SDカードを交換する前に、まずインターネット接続を確認して、問題がインターネットに関連していないことを確認してください。
 
 * * *
 
 **必要なもの**
 
-**注意**: SDカード交換キットが利用可能です。購入はこちらから: [**こちら**](https://www.seeedstudio.com/SenseCAP-M1-SD-Card-Replacement-Kit-p-5279.html)
+**注意**: SDカード交換キットが利用可能になりました。[**こちら**](https://www.seeedstudio.com/SenseCAP-M1-SD-Card-Replacement-Kit-p-5279.html)をクリックして購入できます。
 
 ![SenseCAP M1 Replacement SD Card Kit](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card.png)
 
-_このキットには、ドライバー、MicroSDカードリーダー、64GB MicroSDカード、およびMicroSDカードの交換方法に関する説明が含まれています。_
+_キットには、ドライバー、MicroSDカードリーダー、64GB MicroSDカード、MicroSDの交換方法に関する説明書が含まれています。_
 
 1.  新しいMicro SDカード（SanDisk High Endurance 64GB）
 2.  Micro SDカードリーダー
 3.  ドライバー
-4.  元のカードからコピーした '**config.json**' ファイル  
+4.  元のカードからコピーした'**config.json**'ファイル  
     1.  **注意**: 元のファイルを取得できない場合は、技術サポート担当者に提供を依頼してください。
 
 * * *
 
 **手順**
 
-1.  デバイスの電源を切り、前面パネルを開き、Micro SDカードの上部にある黄色いシールを取り外します（ピンセットを使用することを推奨）。元のMicro SDカードを抜き取ります。
-2.  元のMicro SDカードをMicro SDカードリーダーでコンピュータに接続し、元のSDカードの「resin-boot」パーティションから '**config.json**' ファイルをコピーしてコンピュータに保存します。  
+1.  デバイスの電源を切り、フロントパネルを開け、micro SDカードの上の黄色いステッカーを取り除き（ピンセットを使用可能）、元のmicro SDカードを抜いて取り出します。
+2.  元のmicro SDカードをmicro SDカードリーダーでコンピューターに接続し、元のSDカードの「resin-boot」パーティションから'config.json'ファイルをコピーして、コンピューターに保存します  
     1.  **注意**: 元のファイルを取得できない場合は、技術サポート担当者に提供を依頼してください。
-3.  **SenseCap M1 Image** をこちらからダウンロードしてください: [**sensecap-m1-sd-version-20220213.img.zip**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)
-4.  **Balena Etcherツール** をこちらからダウンロードしてください: [**balenaEtcher - Flash OS images to SD cards & USB drives**](https://www.balena.io/etcher/)
-5.  Balena Etcherを使用して、新しいMicro SDカードに**SenseCap M1 Image**をフラッシュします。
-6.  フラッシュ後、提供された "**config.json**" ファイルをコンピュータから新しいMicro SDカードの "**resin-boot**" パーティションにコピーします。
-7.  新しいMicro SDカードをコンピュータから取り外し、SenseCap M1に挿入します。
-8.  SenseCap M1の電源を入れ、インターネットに接続します（イーサネットケーブルを使用することを推奨）。20分間のアップデートを待機し、Dashboard ([**https://status.sensecapmx.cloud**](https://status.sensecapmx.cloud/))でステータスを確認するか、Helium App内で診断を実行してください。
+3.  **SenseCap M1イメージ**をこちらからダウンロードします：[**sensecap-m1-sd-version-20220213.img.zip**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)
+4.  **Balena Etcher ツール**をこちらからダウンロードします：[**balenaEtcher - Flash OS images to SD cards & USB drives**](https://www.balena.io/etcher/)
+5.  Balena Etcherを使用して**SenseCap M1イメージ**を新しいmicro SDカードにフラッシュします。
+6.  フラッシュ後、私たちが提供した「**config.json**」ファイルをコンピューターから新しいmicro SDカードの「**resin-boot**」パーティションにコピーします。
+7.  新しいmicro SDカードをコンピューターから取り外し、SenseCap M1に挿入します。
+8.  SenseCap M1の電源を入れ、インターネットに接続し（イーサネットケーブルが推奨）、20分間のアップデートを待機し、ダッシュボード（[**https://status.sensecapmx.cloud**](https://status.sensecapmx.cloud/)）でステータスを確認するか、Helium Appで診断を実行します。
 
-**注意**: ホットスポットが正常であることを確認した後にのみ、ホットスポットの前面パネルを組み立ててください。
-
-* * *
-
-**SenseCAP M1 を開いて Micro SD カードを交換する方法**
-
-*   **ステップ 1:** ホットスポットの電源を切り、アンテナを取り外します。
-
-![SenseCAP M1 SD カード ステップ 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
-
-*   **ステップ 2**: ドライバーを使用して前面パネルの2つのネジを緩めます。
-
-![SenseCAP M1 SD カード ステップ 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
-
-*   **ステップ 3**: 前面パネルを取り外して横に置きます。
-
-![SenseCAP M1 SD カード ステップ 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
-
-*   **ステップ 4**: Micro SD カードの上部にある黄色いステッカーを取り外します（ピンセットを使用することをお勧めします）。
-
-![SenseCAP M1 SD カード ステップ 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
-
-![SenseCAP M1 SD カード ステップ 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+**注意**：Hotspotが正常に動作することを確認してから、Hotspotのフロントパネルを組み立ててください。
 
 * * *
 
-**Micro SD カードを読み取り、イメージをフラッシュする方法**
+**SenseCAP M1を開いてMicro SDカードを交換する方法**
 
-*   **ステップ 1**: 新しい Micro SD カードを Micro SD カードリーダーに差し込みます。
+*   **ステップ1:** Hotspotの電源を切り、アンテナを取り外します。
 
-![SenseCAP M1 SD カード イメージ ステップ 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+![SenseCAP M1 SD Card Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
 
-_新しい Micro SD カードを Micro SD カードリーダーに挿入_
+*   **ステップ2**:  ドライバーを使用してフロントパネルの2本のネジを緩めます。
 
-![SenseCAP M1 SD カード イメージ ステップ 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
+![SenseCAP M1 SD Card Step 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
 
-_完全に差し込まれていることを確認_
+*   **ステップ3**:  フロントパネルを移動して脇に置きます。
 
-*   **ステップ 2**: Balena Etcher を使用して新しい Micro SD カードに SenseCAP M1 イメージをフラッシュします。
-    *   **SenseCap M1 イメージ**をここからダウンロードしてください: [**sensecap-m1.img.zip**](https://drive.google.com/file/d/1fZf09U2_jQOpsSKPWc8TAZ_Jl82X9tzx/view?usp=sharing)
-    *   **Balena Etcher ツール**をここからダウンロードしてください: [**balenaEtcher - SDカードやUSBドライブにOSイメージをフラッシュ**](https://www.balena.io/etcher/)
+![SenseCAP M1 SD Card Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
+
+*   **ステップ4**:  Micro SDカードの上にある黄色いステッカーを取り除きます（ピンセットを使用してもよい）。
+
+![SenseCAP M1 SD Card Step 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
+
+![SenseCAP M1 SD Card Step 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+
+* * *
+
+**Micro SDを読み取りイメージを書き込む方法**
+
+*   **ステップ1**: 新しいMicro SDカードをMicro SDカードリーダーに挿入します。
+
+![SenseCAP M1 SD Card Image Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+
+_新しいMicro SDカードをMicro SDカードリーダーに挿入_
+
+![SenseCAP M1 SD Card Image Step 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
+
+_完全に挿入されていることを確認_
+
+*   **ステップ2**: Balena EtcherでSenseCAP M1イメージを新しいMicro SDカードに書き込みます。
+    *   **SenseCap M1イメージ**をここからダウンロード: [**sensecap-m1.img.zip**](https://drive.google.com/file/d/1fZf09U2_jQOpsSKPWc8TAZ_Jl82X9tzx/view?usp=sharing)
+    *   **Balena Etcherツール**をここからダウンロード: [**balenaEtcher - Flash OS images to SD cards & USB drives ​**](https://www.balena.io/etcher/)
 
 ![Balena Etcher](https://www.sensecapmx.com/wp-content/uploads/2022/07/balena.png)
 
-_オペレーティングシステムに基づいて選択_
+_お使いのオペレーティングシステムに基づいて選択_
 
 ![Balena Etcher 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/balena-2.png)
 
-_Image.ZIP ファイルを Balena Etcher にドラッグ_
+_Image.ZIPファイルをBalena Etcherにドラッグ_
 
-*   **ステップ 3**: MicroSD カードにイメージを正常にフラッシュした後、提供された "config.json" ファイルまたは元々コピーしたファイルをコンピュータから "resin-boot" というパーティションにコピーします。
+*   **ステップ3**:  MicroSDカードにイメージの書き込みが正常に完了したら、提供された「config.json」ファイルまたは元々コピーしたファイルを、コンピューターから「resin-boot」というパーティションにコピーします。
 
 **MacOSの場合**
 
-![MacOS Config.json ファイルをコピー](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png)
+![MacOS Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png)
 
-_MacOS - '_config.json' ファイルをコピー_
+_MacOS - 'config.json'ファイルをコピー_
 
 **Windowsの場合**
 
-![Windows Config.json ファイルをコピー](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png)
+![Windows Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png)
 
-*   **ステップ 4**: 新しい Micro SD カードをコンピュータから取り外します。
-*   **ステップ 5**: 新しい Micro SD カードを SenseCAP M1 に差し込みます。
+*   **ステップ4**: 新しいMicro SDカードをコンピューターから取り外します。
+*   **ステップ5**: 新しいMicro SDカードをSenseCAP M1に挿入します。
 
-![SenseCAP M1 SD カード ステップ 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
+![SenseCAP M1 SD Card Step 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
 
-*   **ステップ 6**: SenseCAP M1 の電源を入れ、インターネットに再接続します（イーサネットケーブルを使用するのが最適です）。
-*   **ステップ 7**: 約20分間待機して更新を適用し、Dashboard (**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/))** を確認するか、完了後に Helium アプリで診断を実行します。
+*   **ステップ6**: SenseCAP M1の電源を入れ、インターネットに再接続します（イーサネットケーブルが最適）。
+*   **ステップ7**: 約20分待ってアップデートを適用し、ダッシュボード（**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/)**）を確認するか、完了後にHeliumアプリで診断を実行します。
 
-![SenseCAP M1 SD カード ステップ 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
+![SenseCAP M1 SD Card Step 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
 
-**注意**: ホットスポットが正常であることを確認した後にのみ、ホットスポットの前面パネルを組み立ててください。
+**注意**：Hotspotが正常に動作することを確認してから、Hotspotのフロントパネルを組み立ててください。
 
-さらに問題や質問がある場合は、こちらでチケットを開いてください: [**https://support.sensecapmx.com/**](https://support.sensecapmx.com/)
+さらなる問題や質問がある場合は、こちらでチケットを開いてください：[**https://support.sensecapmx.com/**](https://support.sensecapmx.com/)
 
 * * *
 
-**Micro SD カードをフォーマットしてイメージをフラッシュする方法**
+**Micro SDカードをフォーマットしてイメージを書き込む方法**
 -------------------------------------------------------
 
-**注意**: 以下の手順は、技術サポートチームから指示された場合にのみ使用してください。指示されていない場合は、これらの手順を実行する必要はありません。
+**注意して進めてください**：以下の手順は、技術サポートチームからアドバイスを受けた場合のみ使用してください。アドバイスを受けて**いない**場合は、これらの手順を実行する必要はありません。
 
-ユーザーによるホットスポットの誤使用により、頻繁な電源のオンオフや Micro SD カードの抜き差しが原因で、ファイルシステムの整列などの未知の Micro SD カードエラーが発生する可能性があります。
+ユーザーによるHotspotの誤用により、頻繁な電源の入り切り、micro SDカードの抜き差しが、ファイルシステムの整列などの未知のmicro SDカードエラーを引き起こす可能性があることがわかりました。
 
-**問題をデバッグするために Micro SD カードを交換するよう指示された場合は、以下の手順に従ってください。**
+**問題をデバッグするためにmicro SDカードの交換をアドバイスされた場合は、以下の指示に注意深く従ってください。**
 
 * * *
 
 **手順**
 
-以下の手順は、新しい Micro SD カードにイメージをフラッシュし、SenseCAP M1 の元のカードを交換して、Micro SD カードエラーによる問題を修正する方法を説明します。
+以下に提供される手順は、新しいmicro SDカードにイメージを書き込み、SenseCAP M1の元のカードと交換して、潜在的なmicro SDカードエラーによって引き起こされる問題を修正するのに役立ちます。
 
-**注意**: 以下の手順に従って Micro SD カードを交換する前に、インターネット接続を確認して問題がインターネットに関連していないことを確認してください。
+**注意**：以下の手順に従ってmicro SDカードを交換する前に、まずインターネット接続を確認して、問題がインターネットに関連していないことを確認してください。
 
 * * *
 
 **必要なもの**
 
-1.  SenseCAP M1 ホットスポット内の Micro SD カード
-2.  Micro SD カードリーダー
+1.  SenseCAP M1 HotspotのMicro SDカード
+2.  Micro SDカードリーダー
 3.  ドライバー
-4.  元のカードからコピーした '**config.json**' ファイル  
-    1.  **注意**: 元のファイルを取得できない場合は、技術サポートエージェントに提供を依頼してください。
+4.  元のカードからコピーした「**config.json**」ファイル  
+    1.  **注意**：元のファイルを取得できない場合は、技術サポート担当者に提供を依頼してください。
 5.  SD Card Formatter 5.0.1
-6.  **Windows**の場合 => [**こちらをクリック**](https://drive.google.com/file/d/15KMqnVpeOMRcFOYIRLbwA4CJooNsdkLM/view?usp=sharing)してダウンロードおよびインストール
-7.  **Mac OS**の場合 => [**こちらをクリック**](https://drive.google.com/file/d/1FjxMOdGDjW3iKx3COeexY7E2bpF2cqDy/view?usp=sharing)してダウンロードおよびインストール
-8.  SenseCAP M1 イメージ => [**こちらをクリック**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)してダウンロード
+6.  **Windows**用 => [**こちらをクリック**](https://drive.google.com/file/d/15KMqnVpeOMRcFOYIRLbwA4CJooNsdkLM/view?usp=sharing)してダウンロードとインストール
+7.  **Mac OS**用 => [**こちらをクリック**](https://drive.google.com/file/d/1FjxMOdGDjW3iKx3COeexY7E2bpF2cqDy/view?usp=sharing)してダウンロードとインストール
+8.  SenseCAP M1イメージ => [**こちらをクリック**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)してダウンロード
 9.  Balena Etcher => [**こちらをクリック**](https://www.balena.io/etcher/)してダウンロード
 
-![SenseCAP M1 交換用 SD カードキット](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card.png)
+![SenseCAP M1 Replacement SD Card Kit](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card.png)
 
-_このキットにはドライバー、MicroSD カードリーダー、64GB MicroSD カード、および MicroSD カードの交換方法に関する説明書が含まれています。_
+_キットには、ドライバー、MicroSDカードリーダー、64GB MicroSDカード、MicroSDの交換方法に関する説明書が含まれています。_
 
 * * *
 
 **手順**
 
-1.  デバイスの電源を切り、前面パネルを開き、Micro SD カードの上部にある黄色いステッカーを取り外し、Micro SD カードを取り外します。
-2.  Micro SD カードを Micro SD カードリーダーを使用してコンピュータに接続し、パーティション "resin-boot" から '**config.json'** ファイルをコピーしてコンピュータに保存します。  
-    1.  **注意**: 元のファイルを取得できない場合は、技術サポートエージェントに提供を依頼してください。
-3.  “**SD Card Formatter 5.0.1**” を使用して MicroSD カードをフォーマットします。
-4.  **SenseCap M1 イメージ**を **Balena Etcher** を使用して MicroSD カードにフラッシュします。
-5.  コンピュータから '**config.json**' ファイルを Micro SD カードの "**resin-boot**" パーティションにコピーします。
-6.  Micro SD カードをコンピュータから取り外し、SenseCap M1 ホットスポットに差し込みます。
-7.  SenseCap M1 の電源を入れ、インターネットに接続します（イーサネットケーブルを使用するのが最適です）。OTA 更新を約20分間待機し、[**Dashboard**](https://docs.sensecapmx.com/home/sensecap-dashboard)でステータスを確認するか、Helium アプリ内で診断を実行します。
+1.  デバイスの電源を切り、フロントパネルを開け、Micro SDカードの上の黄色いステッカーを取り除き、Micro SDカードを取り外します。
+2.  Micro SDカードリーダーでMicro SDカードをコンピューターに接続し、パーティション「resin-boot」から「**config.json**」ファイルをコピーして、コンピューターに保存します。  
+    1.  **注意**：元のファイルを取得できない場合は、技術サポート担当者に提供を依頼してください。
+3.  「**SD Card Formatter 5.0.1**」を使用してMicroSDカードをフォーマットします
+4.  **Balena Etcher**で**SenseCap M1イメージ**をMicroSDカードに書き込みます。
+5.  「**config.json**」ファイルをコンピューターからMicro SDカードの「**resin-boot**」パーティションにコピーします。
+6.  Micro SDカードをコンピューターからSenseCap M1 Hotspotに戻します。
+7.  SenseCap M1の電源を入れ、インターネットに接続し（イーサネットケーブルが推奨）、OTAアップデートのために約20分待ち、[**ダッシュボード**](https://docs.sensecapmx.com/home/sensecap-dashboard)でステータスを確認するか、Heliumアプリ内で診断を実行します。
 
-**注意**: ホットスポットが正常であることを確認した後にのみ、フロントパネルを組み立ててください。
-
-* * *
-
-**SenseCAP M1 を開けて Micro SD カードを交換する方法**
-
-*   **ステップ 1:** ホットスポットの電源を切り、アンテナを取り外します。
-
-![SenseCAP M1 SD カード ステップ 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
-
-*   **ステップ 2**: ドライバーを使用してフロントパネルのネジを2本緩めます。
-
-![SenseCAP M1 SD カード ステップ 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
-
-*   **ステップ 3**: フロントパネルを取り外し、横に置きます。
-
-![SenseCAP M1 SD カード ステップ 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
-
-*   **ステップ 4**: Micro SD カードの上にある黄色いステッカーを取り外します（ピンセットを使用することもできます）。
-
-![SenseCAP M1 SD カード ステップ 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
-
-![SenseCAP M1 SD カード ステップ 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+**注意**：Hotspotが正常に動作することを確認してから、Hotspotのフロントパネルを組み立ててください。
 
 * * *
 
-**Micro SD カードをフォーマットする方法 (Windows)**
+**SenseCAP M1を開いてMicro SDカードを交換する方法**
 
-*   **ステップ 1**: 新しい Micro SD カードを Micro SD カードリーダーに挿入します。
+*   **ステップ1:** Hotspotの電源を切り、アンテナを取り外します。
 
-![SenseCAP M1 SD カード イメージ ステップ 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+![SenseCAP M1 SD Card Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-1-1.png)
 
-_新しい Micro SD カードを Micro SD カードリーダーに挿入_
+*   **ステップ2**:  ドライバーを使用してフロントパネルの2本のネジを緩めます。
 
-![SenseCAP M1 SD カード イメージ ステップ 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
+![SenseCAP M1 SD Card Step 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-2.png)
+
+*   **ステップ3**:  フロントパネルを移動して脇に置きます。
+
+![SenseCAP M1 SD Card Step 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-3.png)
+
+*   **ステップ4**:  Micro SDカードの上にある黄色いステッカーを取り除きます（ピンセットを使用してもよい）。
+
+![SenseCAP M1 SD Card Step 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4.png)
+
+![SenseCAP M1 SD Card Step 4B](https://www.sensecapmx.com/wp-content/uploads/2022/07/step-4a.png)
+
+* * *
+
+**Micro SDカードをフォーマットする方法（Windows）**
+
+*   **ステップ1****:** 新しいMicro SDカードをMicro SDカードリーダーに挿入します。  
+    
+
+![SenseCAP M1 SD Card Image Step 1](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-1.png)
+
+_新しいMicro SDカードをMicro SDカードリーダーに挿入_
+
+![SenseCAP M1 SD Card Image Step 1B](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-2.png)
 
 _完全に挿入されていることを確認_
 
-*   **ステップ 2**: SD Card Formatter をインストールして実行します。
+*   **ステップ2****:** SD Card Formatterをインストールして実行します
 
 ![SD Card Formatter](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-formatter-1.png)
 
-*   **ステップ 3**: コンピュータに接続した Micro SD カードを選択し、「Overwrite format」を選択、ボリュームラベルに「resin-boot」と入力し、「Format」ボタンをクリックします。
+*   **ステップ3****:**  コンピューターに接続したMicro SDカードを選択し、「Overwrite format」を選択し、Volume labelに「resin-boot」と入力して、「Format」ボタンをクリックします  
+    
 
-![SD Card Formatter Resin-Boot フォルダ](https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-resin-1.png)
+![SD Card Formatter Resin-Boot Folder](https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-resin-1.png)
 
-*   **ステップ 4**: ダイアログウィンドウで「Yes」を選択します。
+*   **ステップ4****:**  ダイアログウィンドウで「Yes」を選択します  
+    
 
-![SD カードをフォーマット](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-2.png)
+![Format SD Card](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-1-2.png)
 
-*   **ステップ 5**: 約30～45分待つとフォーマットプロセスが完了します。
+*   **ステップ5**: 約30〜45分待つとフォーマット処理が完了します
 
-![SD Card Formatter スクリーン](https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-3-1.png)
+![SD Card Formatter Screen](https://www.sensecapmx.com/wp-content/uploads/2022/07/formatter-3-1.png)
 
 * * *
 
-**Micro SD カードをフォーマットする方法 (MacOS)**
+**Micro SDカードをフォーマットする方法（MacOS）**
 
 手順は似ています。以下の画像をご覧ください：
 
 ![SD Card Formatter MacOS](https://www.sensecapmx.com/wp-content/uploads/2022/07/mac-formatter-1-1.png)
 
-![SD Card Formatter MacOS 完了](https://www.sensecapmx.com/wp-content/uploads/2022/07/mac-formatter-2-1.png)
+![SD Card Formatter MacOS Complete](https://www.sensecapmx.com/wp-content/uploads/2022/07/mac-formatter-2-1.png)
 
 * * *
 
-**Micro SD カードにイメージをフラッシュする方法**
+**Micro SDカードにイメージを書き込む方法**
 
-*   **SenseCap M1 イメージ**をこちらからダウンロードしてください：[**sensecap-m1-sd-version-20220213.img.zip**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)
-*   **Balena Etcher ツール**をこちらからダウンロードしてください：[**balenaEtcher - Flash OS images to SD cards & USB drives**](https://www.balena.io/etcher/)
+*   **SenseCap M1 Image**をここからダウンロードします：[**sensecap-m1-sd-version-20220213.img.zip**](https://drive.google.com/open?id=17nbsZ6wnQVxOh4KVfImaNwHNbdWz6LBh&authuser=0)
+*   **Balena Etcher tool**をここからダウンロードします：[**balenaEtcher - Flash OS images to SD cards & USB drives**](https://www.balena.io/etcher/)
 
 ![Balena Etcher](https://www.sensecapmx.com/wp-content/uploads/2022/07/balena.png)
 
-_オペレーティングシステムに基づいて選択_
+_お使いのオペレーティングシステムに基づいて選択_
 
 ![Balena Etcher 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/balena-2.png)
 
-_Image.ZIP ファイルを Balena Etcher にドラッグ_
+_Image.ZIPファイルをBalena Etcherにドラッグ_
 
 * * *
 
-**'config.json' ファイルを Micro SD カードに追加する方法**
+**Micro SDカードに'config.json'ファイルを追加する方法**
 ------------------------------------------------------
 
-MicroSD カードにイメージを正常にフラッシュした後、提供されたまたは元々コピーした "**config.json**" ファイルをコンピュータから "resin-boot" というパーティションにコピーします。
+MicroSDカードにイメージを正常に書き込んだ後、提供された「**config.json**」ファイル、または元々コピーしたファイルを、コンピューターから「resin-boot」というパーティションにコピーします。
 
-**注意**: 他のファイルを削除しないでください。そうしないと、SenseCAP M1 に予期しない問題が発生する可能性があります。
+**注意**：他のファイルは削除しないでください。削除するとSenseCAP M1で予期しない問題が発生します。
 
-**注意**: 各デバイスには異なる '**config.json**' ファイルが登録されています。他人と '**config.json**' ファイルを共有したり、他人のファイルを使用しないでください。
+**注意**：各デバイスには異なる「**config.json**」ファイルが登録されています。「**config.json**」ファイルを他の人と共有したり、他の人のファイルを使用したりしないでください。
 
-**MacOS の場合**
+**macOSの場合**
 
-![MacOS Config.json ファイルをコピー](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png)
+![MacOS Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-1.png)
 
-_MacOS - 'config.json' ファイルをコピー_
+_MacOS - 'config.json'ファイルをコピー_
 
-![MacOS Config.json ファイルを置き換え](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-2.png)
+![MacOS Swap Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/macos-2.png)
 
-**Windows の場合**
+**Windowsの場合**
 
-![Windows Config.json ファイルをコピー](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png)
+![Windows Copy Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-1.png)
 
-_Windows - 'config.json' ファイルをコピー_
+_Windows - 'config.json'ファイルをコピー_
 
-![Windows Config.json ファイルを置き換え](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-2.png)
+![Windows Swap Config.json File](https://www.sensecapmx.com/wp-content/uploads/2022/07/windows-2.png)
 
 * * *
 
-**Micro SD カードのフォーマットとイメージのフラッシュ後**
+**Micro SDカードのフォーマットとイメージの書き込み後**
 -------------------------------------------------------------
 
-*   **ステップ 1**: 新しい Micro SD カードをコンピュータから取り外します。
-*   **ステップ 2**: 新しい Micro SD カードを SenseCAP M1 に挿入します。
+*   **ステップ1**: 新しいMicro SDカードをコンピューターから取り外します。
+*   **ステップ2**: 新しいMicro SDカードをSenseCAP M1に挿入します。
 
-![SenseCAP M1 SD カード ステップ 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
+![SenseCAP M1 SD Card Step 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/sd-card-5.png)
 
-*   **ステップ 6**: SenseCAP M1 の電源を入れ、インターネットに再接続します（イーサネットケーブルが最適です）。
-*   **ステップ 7**: 約20分待ってアップデートを適用し、Dashboard (**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/))** を確認するか、Helium アプリで診断を実行します。
+*   **ステップ6**: SenseCAP M1の電源を入れ、インターネットに再接続します（Ethernetケーブルが最適）。
+*   **ステップ7**: 約20分待ってアップデートを適用し、完了後にダッシュボード（**[https://status.sensecapmx.cloud/)](https://status.sensecapmx.cloud/)**）を確認するか、Helium Appで診断を実行します。
 
-![SenseCAP M1 SD カード ステップ 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
+![SenseCAP M1 SD Card Step 6](https://www.sensecapmx.com/wp-content/uploads/2022/07/diagnostics-1.png)
 
-**注意**: ホットスポットが正常であることを確認した後にのみ、フロントパネルを組み立ててください。
+**注意**：Hotspotが正常に動作することを確認してから、Hotspotのフロントパネルを組み立ててください。
 
-追加の問題や質問がある場合は、こちらでチケットを開いてください：[**https://support.sensecapmx.com/**](https://support.sensecapmx.com/)
+さらなる問題や質問がある場合は、こちらでチケットを開いてください：[**https://support.sensecapmx.com/**](https://support.sensecapmx.com/)
 
 * * *
 
-Helium アプリのエラー
+Helium Appエラー
 ================
 
-**オンボーディングキーが見つかりません**
+**No Onboarding Key Found**
 ---------------------------
 
-こちらでサポートチケットを開いてください：[**https://support.sensecapmx.com**](https://support.sensecapmx.com) そしてホットスポットの SN（シリアル番号）を送信してください。問題を解決いたします。
+こちらでサポートチケットを開いてください：[**https://support.sensecapmx.com**](https://support.sensecapmx.com) そして、問題を解決するためにhotspotのSN（シリアル番号）を送信してください。
 
-![Helium アプリ - オンボーディングキーが見つかりません](https://www.sensecapmx.com/wp-content/uploads/2022/07/onboarding.png)
+![Helium App - No Onboarding Key Found](https://www.sensecapmx.com/wp-content/uploads/2022/07/onboarding.png)
 
 * * *
 
-**ホットスポットが見つかりません**
+**No Hotspot Found**
 --------------------
 
-Helium アプリに「ホットスポットが見つかりません」と表示される場合
+Helium Appで「No Hotspots Found」が表示される
 
 **トラブルシューティング手順**
 
-1.  まず青色の LED を確認してください。ゆっくり点滅しているはずです。
-2.  点滅していない場合、SenseCAP M1 が Bluetooth 設定モードを有効にしていないことを示しています。ホットスポットと携帯電話を確認し、Bluetooth がオンになっていることを確認してください。
-3.  SenseCAP M1 の背面のボタンを6～10秒間押して、SenseCAP M1 の設定モードを有効にします。青色の LED がゆっくり点滅モード（2秒ごとに1回点滅）に変わるのを確認し、その後ホットスポットを再スキャンしてください。
+1.  まず青色LEDを確認してください。ゆっくりと点滅モードになっているはずです。
+2.  そうでない場合は、SenseCAP M1がBluetooth設定モードを有効にしていないことを示しています。hotspotと携帯電話でBluetoothがオンになっていることを確認してください。
+3.  SenseCAP M1の背面にあるボタンを6〜10秒間押してSenseCAP M1の設定モードを有効にすると、青色LEDがゆっくりと点滅モード（2秒ごとに1回点滅）に変わります。その後、再度hotspotをスキャンしてください。
 
-![Helium アプリエラー - ホットスポットが見つかりません](https://www.sensecapmx.com/wp-content/uploads/2022/07/no-hotspots-found.png)
+![Helium App Errors - Not Hotspots Found](https://www.sensecapmx.com/wp-content/uploads/2022/07/no-hotspots-found.png)
 
 * * *
 
-**デバイスが切断されました**
+**デバイス切断**
 -----------------------
 
 Bluetooth経由でペアリング中にデバイスが切断されました
 
 **トラブルシューティング手順**
 
-SamsungのS9以降の新しいスマートフォンを使用している場合、互換性の問題が発生することがあります。
+S9より新しいSamsungスマートフォンを使用している場合に互換性の問題が発生します。
 
 [**新しいイメージでSDカードをフラッシュしてください**](https://www.sensecapmx.com/docs/sensecap-m1/m1-troubleshooting/#how-to-flash-a-new-image-to-a-new-micro-sd-card)。
 
-![Helium アプリエラー - デバイスが切断されました](https://www.sensecapmx.com/wp-content/uploads/2022/07/error-device-disconnected.png)
+![Helium App Errors - Device Disconnected](https://www.sensecapmx.com/wp-content/uploads/2022/07/error-device-disconnected.png)
 
 * * *
 
-**Characteristic Write Failed**
+**特性書き込み失敗**
 -------------------------------
 
-Helium アプリ内でホットスポットを登録できません
+Helium App内でHotspotを登録できません
 
 **トラブルシューティング手順**
 
-1. EthernetまたはWi-Fiに接続した直後にホットスポットを登録しようとすると、OTA（無線アップデート）が実行中のため、このエラーが表示されます。
-2. EthernetまたはWi-Fi経由でホットスポットをさらに10分以上接続したままにしてください。これにより、OTAアップデートが完了します。
-3. ボタンを6～10秒間長押しして設定モードに入り、再度登録を試みてください。
+1.  EthernetまたはWi-Fi接続直後にホットスポットを登録しようとすると、OTA（無線アップデート）が実行中のためこのエラーが表示されます。
+2.  ホットスポットをEthernetまたはWi-Fi経由で10分以上接続したままにしてください。これによりOTAアップデートが完了します。
+3.  ボタンを6-10秒間長押しして設定モードに入り、再度登録を試してください。
 
-![Helium アプリエラー - Characteristic Write Failed](https://www.sensecapmx.com/wp-content/uploads/2022/07/unable-to-register.webp)
+![Helium App Errors - Characteristic Write Failed](https://www.sensecapmx.com/wp-content/uploads/2022/07/unable-to-register.webp)
 
 * * *
 
-**Characteristic Read Failed**
+**特性読み取り失敗**
 ------------------------------
 
-Bluetoothでペアリングする際やWi-Fiに接続する際のエラー
+BluetoothでのペアリングまたはWi-Fi接続時のエラー
 
-Bluetooth経由でホットスポットをペアリングしようとしたり、Wi-Fiに接続しようとした際に以下のエラーメッセージが表示される場合、Wi-FiネットワークのSSIDに認識されない無効な文字が含まれていることを意味します。
+Bluetooth経由でHotspotをペアリングしようとしたり、Wi-Fiに接続しようとしたりする際に以下のエラーメッセージが表示される場合、これはWi-FiネットワークのSSIDに認識されない無効な文字が含まれていることを意味します。
 
-英数字以外の文字（例：a - z、0 - 9以外の文字）や記号の使用を避けてください。
+英数字以外の文字（a - z、0 - 9以外の文字）や記号の使用は避けてください。
 
-**解決策**: 記号や英数字以外の文字を含まないようにWi-Fiネットワークの名前を変更してください。
+**解決策**: 記号や英数字以外の文字を使わずにWi-Fiネットワーク名を変更してください。
 
-![Helium アプリエラー - Characteristic Read Failed](https://www.sensecapmx.com/wp-content/uploads/2022/07/read-error.png)
+![Helium App Errors - Characteristic Read Failed](https://www.sensecapmx.com/wp-content/uploads/2022/07/read-error.png)
 
 * * *
 
-**Constructing Add Hotspot Transaction**
+**Hotspot追加トランザクションの構築**
 ----------------------------------------
 
-ホットスポットを登録する際に、Helium アプリが「Add Hotspot Transaction」の構築エラーを表示します
+Hotspot登録時にHelium Appでhotspot追加トランザクションの構築エラーが表示される
 
 **トラブルシューティング手順**
 
-1. EthernetまたはWi-Fiに接続した直後にホットスポットを登録しようとすると、OTA（無線アップデート）が実行中、またはブロックが完全に同期されていないため、このエラーが表示されます。
-2. ホットスポットをEthernetまたはWi-Fiに少なくとも30分間接続したままにして、ファームウェアOTAとブロックの同期プロセスが完了するのを待ってください。その後、ボタンを6～10秒間長押しして設定モードに入り、再度登録を試みてください。
-3. 診断ツールまたはSenseCAP Dashboardを使用して、ファームウェアバージョンが最新であることを確認してください。  
-    1. **注意**: ホットスポットのファームウェアが最新バージョンに更新できない場合は、デバイスが使用しているネットワークを別のネットワーク（例：スマートフォンのホットスポット）に変更し、上記の2番目の手順を再度実行してください。
-    2. **注意**: ファームウェアOTAが完了した後もデバイス自体でブロックが完全に同期されない場合は、ローカルコンソールでブロックをリセットすることをお勧めします。
+1.  EthernetまたはWi-Fi接続直後にホットスポットを登録しようとすると、OTA（無線アップデート）が実行中であるか、ブロックが完全に同期されていないため、このエラーが表示されます。
+2.  ファームウェアOTAとブロックの同期プロセスが完了するまで、ホットスポットをEthernetまたはWifiに少なくとも30分間接続したままにしてください。その後、ボタンを6-10秒間長押しして設定モードに入り、再度登録を試してください。
+3.  完了後、診断またはSenseCAP Dashboardを使用してファームウェアバージョンを確認し、最新であることを確認してください。  
+    1.  **注意**: ホットスポットのファームウェアが最新バージョンにアップデートできない場合は、デバイスが使用しているネットワークを携帯電話のホットスポットなど別のネットワークに変更し、上記の2番目の手順に従うことをお勧めします。
+    2.  **注意**: ファームウェアOTAが完了した後もデバイス自体でブロックが完全に同期できない場合は、ローカルコンソールでブロックをリセットすることをお勧めします。
 
-![Helium アプリエラー - Constructing Add Hotspot Transaction](https://www.sensecapmx.com/wp-content/uploads/2022/07/transaction-failed-add-hotspot.png)
+![Helium App Errors - Constructing Add Hotspot Transaction](https://www.sensecapmx.com/wp-content/uploads/2022/07/transaction-failed-add-hotspot.png)
 
 * * *
 
 **位置/アンテナのアサート**
 ------------------------------
 
-アンテナの詳細を更新したり、位置をアサートしようとすると、以下のエラーが表示されます
+アンテナ詳細の更新または位置のアサート時に以下のエラーが表示される場合
 
 **トラブルシューティング手順**
 
-この問題はネットワーク接続またはアプリに関連しています。アプリを再起動するか、後でもう一度試してください。
+この問題はネットワーク接続またはAppに関連しています。アプリを再起動するか、後でもう一度試してください。
 
-![Helium アプリエラー - 位置/アンテナのアサート](https://www.sensecapmx.com/wp-content/uploads/2022/07/assert-location-error.png)
+![Helium App Errors - Asserting Location/Antenna](https://www.sensecapmx.com/wp-content/uploads/2022/07/assert-location-error.png)

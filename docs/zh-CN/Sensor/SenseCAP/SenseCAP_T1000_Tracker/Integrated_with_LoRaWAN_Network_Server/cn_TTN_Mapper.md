@@ -15,16 +15,13 @@ last_update:
 
 本教程将指导用户将 [SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) 添加到 TTN Mapper。
 
-
-为了探索后续步骤，请参考 [连接到 The Things Network](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN/) 首先注册您的设备。
+为了进行下一步操作，请参考 [连接到 The Things Network](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/) 首先注册您的设备。
 
 ### 配置载荷格式化器
 
 创建一个 `自定义 JavaScript 格式化器` 并复制以下代码。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/decoder.png" alt="pir" width={800} height="auto" /></p>
-
 
 <details>
 
@@ -350,77 +347,77 @@ function deserialize (dataId, dataValue) {
                     break
             }
             measurementArray = [
-                {measurementId: '3940', type: '工作模式', measurementValue: workMode},
-                {measurementId: '3942', type: '心跳间隔', measurementValue: heartbeatInterval},
-                {measurementId: '3943', type: '周期间隔', measurementValue: periodicInterval},
-                {measurementId: '3944', type: '事件间隔', measurementValue: eventInterval},
-                {measurementId: '3941', type: 'SOS模式', measurementValue: getSOSMode(dataValue.substring(16, 18))},
-                {measurementId: '3900', type: '上行间隔', measurementValue: interval}
+                {measurementId: '3940', type: 'Work Mode', measurementValue: workMode},
+                {measurementId: '3942', type: 'Heartbeat Interval', measurementValue: heartbeatInterval},
+                {measurementId: '3943', type: 'Periodic Interval', measurementValue: periodicInterval},
+                {measurementId: '3944', type: 'Event Interval', measurementValue: eventInterval},
+                {measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(dataValue.substring(16, 18))},
+                {measurementId: '3900', type: 'Uplink Interval', measurementValue: interval}
             ]
             break;
         case '05':
             measurementArray = [
-                {measurementId: '3000', type: '电池', measurementValue: getBattery(dataValue.substring(0, 2))},
-                {measurementId: '3940', type: '工作模式', measurementValue: getWorkingMode(dataValue.substring(2, 4))},
-                {measurementId: '3965', type: '定位策略', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))},
-                {measurementId: '3941', type: 'SOS模式', measurementValue: getSOSMode(dataValue.substring(6, 8))}
+                {measurementId: '3000', type: 'Battery', measurementValue: getBattery(dataValue.substring(0, 2))},
+                {measurementId: '3940', type: 'Work Mode', measurementValue: getWorkingMode(dataValue.substring(2, 4))},
+                {measurementId: '3965', type: 'Positioning Strategy', measurementValue: getPositioningStrategy(dataValue.substring(4, 6))},
+                {measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(dataValue.substring(6, 8))}
             ]
             break
         case '06':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '经度', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '纬度', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '空气温度', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '光照', measurementValue: getSensorValue(dataValue.substring(36, 40))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(40, 42))}
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
+                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
+                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(32, 36), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(36, 40))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(40, 42))}
             ]
             break
         case '07':
             eventList = getEventStatus(dataValue.substring(0, 6))
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi扫描', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '空气温度', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '光照', measurementValue: getSensorValue(dataValue.substring(76, 80))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(80, 82))}
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
+                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(72, 76), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(76, 80))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(80, 82))}
             ]
             break
         case '08':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE扫描', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '空气温度', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
-                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '光照', measurementValue: getSensorValue(dataValue.substring(62, 66))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(66, 68))}
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
+                {measurementId: '4097', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Air Temperature', measurementValue: getSensorValue(dataValue.substring(58, 62), 10)},
+                {measurementId: '4199', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Light', measurementValue: getSensorValue(dataValue.substring(62, 66))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(66, 68))}
             ]
             break
         case '09':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '经度', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
-                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '纬度', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(32, 34))}
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '4197', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Longitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(16, 24), 1000000))},
+                {measurementId: '4198', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Latitude', measurementValue: parseFloat(getSensorValue(dataValue.substring(24, 32), 1000000))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(32, 34))}
             ]
             break
         case '0A':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi扫描', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(72, 74))}
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5001', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Wi-Fi Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 72))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(72, 74))}
             ]
             break
         case '0B':
             collectTime = getUTCTimestamp(dataValue.substring(8, 16))
             measurementArray = [
-                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '事件状态', measurementValue: getEventStatus(dataValue.substring(0, 6))},
-                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE扫描', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
-                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: '电池', measurementValue: getBattery(dataValue.substring(58, 60))},
+                {measurementId: '4200', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Event Status', measurementValue: getEventStatus(dataValue.substring(0, 6))},
+                {measurementId: '5002', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'BLE Scan', measurementValue: getMacAndRssiObj(dataValue.substring(16, 58))},
+                {measurementId: '3000', timestamp: collectTime, motionId: getMotionId(dataValue.substring(6, 8)), type: 'Battery', measurementValue: getBattery(dataValue.substring(58, 60))},
             ]
             break
         case '0D':
@@ -428,13 +425,13 @@ function deserialize (dataId, dataValue) {
             let error = ''
             switch (errorCode) {
                 case 1:
-                    error = '获取UTC时间戳失败'
+                    error = 'FAILED TO OBTAIN THE UTC TIMESTAMP'
                     break
                 case 2:
-                    error = '历书过旧'
+                    error = 'ALMANAC TOO OLD'
                     break
                 case 3:
-                    error = '多普勒误差'
+                    error = 'DOPPLER ERROR'
                     break
             }
             measurementArray.push({errorCode, error})
@@ -448,7 +445,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: 'gnss-ng载荷',
+                type: 'gnss-ng payload',
                 measurementValue: payload
             }
             measurementArray.push(measurement)
@@ -464,7 +461,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '事件状态',
+                type: 'Event Status',
                 measurementValue: getEventStatus(dataValue.substring(0, 6))
             })
             measurementArray.push({
@@ -474,7 +471,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '空气温度',
+                type: 'Air Temperature',
                 measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
             })
             measurementArray.push({
@@ -484,7 +481,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '光照',
+                type: 'Light',
                 measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
             })
             measurementArray.push({
@@ -494,7 +491,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '电池',
+                type: 'Battery',
                 measurementValue: '' + getBattery(dataValue.substring(24, 26))
             })
             break
@@ -509,7 +506,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '事件状态',
+                type: 'Event Status',
                 measurementValue: getEventStatus(dataValue.substring(0, 6))
             })
             measurementArray.push({
@@ -519,7 +516,7 @@ function deserialize (dataId, dataValue) {
                 groupId: groupId,
                 index: shardFlag.index,
                 count: shardFlag.count,
-                type: '电池',
+                type: 'Battery',
                 measurementValue: '' + getBattery(dataValue.substring(16, 18))
             })
             break
@@ -528,20 +525,20 @@ function deserialize (dataId, dataValue) {
             measurementArray.push({
                 measurementId: '3576',
                 timestamp: collectTime,
-                type: '定位状态',
+                type: 'Positioning Status',
                 measurementValue: getPositingStatus(dataValue.substring(0, 2))
             })
             measurementArray.push({
                 timestamp: collectTime,
                 measurementId: '4200',
-                type: '事件状态',
+                type: 'Event Status',
                 measurementValue: getEventStatus(dataValue.substring(2, 8))
             })
             if (!isNaN(parseFloat(getSensorValue(dataValue.substring(16, 20), 10)))) {
                 measurementArray.push({
                     timestamp: collectTime,
                     measurementId: '4097',
-                    type: '空气温度',
+                    type: 'Air Temperature',
                     measurementValue: '' + getSensorValue(dataValue.substring(16, 20), 10)
                 })
             }
@@ -549,14 +546,14 @@ function deserialize (dataId, dataValue) {
                 measurementArray.push({
                     timestamp: collectTime,
                     measurementId: '4199',
-                    type: '光照',
+                    type: 'Light',
                     measurementValue: '' + getSensorValue(dataValue.substring(20, 24))
                 })
             }
             measurementArray.push({
                 timestamp: collectTime,
                 measurementId: '3000',
-                type: '电池',
+                type: 'Battery',
                 measurementValue: '' + getBattery(dataValue.substring(24, 26))
             })
             break
@@ -572,35 +569,35 @@ function getPositingStatus (str) {
     let status = getInt(str)
     switch (status) {
         case 0:
-            return {id:status, statusName:"定位成功。"}
+            return {id:status, statusName:"Positioning successful."}
         case 1:
-            return {id:status, statusName:"GNSS扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The GNSS scan timed out and failed to obtain the location."}
         case 2:
-            return {id:status, statusName:"Wi-Fi扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Wi-Fi scan timed out and failed to obtain the location."}
         case 3:
-            return {id:status, statusName:"Wi-Fi + GNSS扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 4:
-            return {id:status, statusName:"GNSS + Wi-Fi扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The GNSS + Wi-Fi scan timed out and failed to obtain the location."}
         case 5:
-            return {id:status, statusName:"蓝牙扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Bluetooth scan timed out and failed to obtain the location."}
         case 6:
-            return {id:status, statusName:"蓝牙 + Wi-Fi扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi scan timed out and failed to obtain the location."}
         case 7:
-            return {id:status, statusName:"蓝牙 + GNSS扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Bluetooth + GNSS scan timed out and failed to obtain the location."}
         case 8:
-            return {id:status, statusName:"蓝牙 + Wi-Fi + GNSS扫描超时，无法获取位置。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 9:
-            return {id:status, statusName:"位置服务器解析GNSS位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the GNSS location."}
         case 10:
-            return {id:status, statusName:"位置服务器解析Wi-Fi位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the Wi-Fi location."}
         case 11:
-            return {id:status, statusName:"位置服务器解析蓝牙位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the Bluetooth location."}
         case 12:
-            return {id:status, statusName:"由于精度较差，解析GNSS位置失败。"}
+            return {id:status, statusName:"Failed to parse the GNSS location due to the poor accuracy."}
         case 13:
-            return {id:status, statusName:"时间同步失败。"}
+            return {id:status, statusName:"Time synchronization failed."}
         case 14:
-            return {id:status, statusName:"由于历书过旧，无法获取位置。"}
+            return {id:status, statusName:"Failed to obtain location due to the old Almanac."}
     }
     return getInt(str)
 }
@@ -608,70 +605,70 @@ function getPositingStatus (str) {
 function getUpShortInfo (messageValue) {
     return [
         {
-            measurementId: '3000', type: '电池', measurementValue: getBattery(messageValue.substring(0, 2))
+            measurementId: '3000', type: 'Battery', measurementValue: getBattery(messageValue.substring(0, 2))
         }, {
-            measurementId: '3502', type: '固件版本', measurementValue: getSoftVersion(messageValue.substring(2, 6))
+            measurementId: '3502', type: 'Firmware Version', measurementValue: getSoftVersion(messageValue.substring(2, 6))
         }, {
-            measurementId: '3001', type: '硬件版本', measurementValue: getHardVersion(messageValue.substring(6, 10))
+            measurementId: '3001', type: 'Hardware Version', measurementValue: getHardVersion(messageValue.substring(6, 10))
         }, {
-            measurementId: '3940', type: '工作模式', measurementValue: getWorkingMode(messageValue.substring(10, 12))
+            measurementId: '3940', type: 'Work Mode', measurementValue: getWorkingMode(messageValue.substring(10, 12))
         }, {
-            measurementId: '3965', type: '定位策略', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
+            measurementId: '3965', type: 'Positioning Strategy', measurementValue: getPositioningStrategy(messageValue.substring(12, 14))
         }, {
-            measurementId: '3942', type: '心跳间隔', measurementValue: getMinsByMin(messageValue.substring(14, 18))
+            measurementId: '3942', type: 'Heartbeat Interval', measurementValue: getMinsByMin(messageValue.substring(14, 18))
         }, {
-            measurementId: '3943', type: '周期间隔', measurementValue: getMinsByMin(messageValue.substring(18, 22))
+            measurementId: '3943', type: 'Periodic Interval', measurementValue: getMinsByMin(messageValue.substring(18, 22))
         }, {
-            measurementId: '3944', type: '事件间隔', measurementValue: getMinsByMin(messageValue.substring(22, 26))
+            measurementId: '3944', type: 'Event Interval', measurementValue: getMinsByMin(messageValue.substring(22, 26))
         }, {
-            measurementId: '3945', type: '传感器启用', measurementValue: getInt(messageValue.substring(26, 28))
+            measurementId: '3945', type: 'Sensor Enable', measurementValue: getInt(messageValue.substring(26, 28))
         }, {
-            measurementId: '3941', type: 'SOS模式', measurementValue: getSOSMode(messageValue.substring(28, 30))
+            measurementId: '3941', type: 'SOS Mode', measurementValue: getSOSMode(messageValue.substring(28, 30))
         }
     ]
 }
 
 function getMotionSetting (str) {
     return [
-        {measurementId: '3946', type: '运动启用', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3947', type: '任意运动阈值', measurementValue: getSensorValue(str.substring(2, 6), 1)},
-        {measurementId: '3948', type: '运动开始间隔', measurementValue: getMinsByMin(str.substring(6, 10))},
+        {measurementId: '3946', type: 'Motion Enable', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3947', type: 'Any Motion Threshold', measurementValue: getSensorValue(str.substring(2, 6), 1)},
+        {measurementId: '3948', type: 'Motion Start Interval', measurementValue: getMinsByMin(str.substring(6, 10))},
     ]
 }
 
 function getStaticSetting (str) {
     return [
-        {measurementId: '3949', type: '静止启用', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3950', type: '设备静止超时', measurementValue: getMinsByMin(str.substring(2, 6))}
+        {measurementId: '3949', type: 'Static Enable', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3950', type: 'Device Static Timeout', measurementValue: getMinsByMin(str.substring(2, 6))}
     ]
 }
 
 function getShockSetting (str) {
     return [
-        {measurementId: '3951', type: '冲击启用', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3952', type: '冲击阈值', measurementValue: getInt(str.substring(2, 6))}
+        {measurementId: '3951', type: 'Shock Enable', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3952', type: 'Shock Threshold', measurementValue: getInt(str.substring(2, 6))}
     ]
 }
 
 function getTempSetting (str) {
     return [
-        {measurementId: '3953', type: '温度启用', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3954', type: '事件温度间隔', measurementValue: getMinsByMin(str.substring(2, 6))},
-        {measurementId: '3955', type: '事件温度采样间隔', measurementValue: getSecondsByInt(str.substring(6, 10))},
-        {measurementId: '3956', type: '温度最大阈值', measurementValue: getSensorValue(str.substring(10, 14), 10)},
-        {measurementId: '3957', type: '温度最小阈值', measurementValue: getSensorValue(str.substring(14, 18), 10)},
-        {measurementId: '3958', type: '温度警告类型', measurementValue: getInt(str.substring(18, 20))}
+        {measurementId: '3953', type: 'Temp Enable', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3954', type: 'Event Temp Interval', measurementValue: getMinsByMin(str.substring(2, 6))},
+        {measurementId: '3955', type: 'Event Temp Sample Interval', measurementValue: getSecondsByInt(str.substring(6, 10))},
+        {measurementId: '3956', type: 'Temp ThMax', measurementValue: getSensorValue(str.substring(10, 14), 10)},
+        {measurementId: '3957', type: 'Temp ThMin', measurementValue: getSensorValue(str.substring(14, 18), 10)},
+        {measurementId: '3958', type: 'Temp Warning Type', measurementValue: getInt(str.substring(18, 20))}
     ]
 }
 
 function getLightSetting (str) {
     return [
-        {measurementId: '3959', type: '光照启用', measurementValue: getInt(str.substring(0, 2))},
-        {measurementId: '3960', type: '事件光照间隔', measurementValue: getMinsByMin(str.substring(2, 6))},
-        {measurementId: '3961', type: '事件光照采样间隔', measurementValue: getSecondsByInt(str.substring(6, 10))},
-        {measurementId: '3962', type: '光照最大阈值', measurementValue: getSensorValue(str.substring(10, 14), 10)},
-        {measurementId: '3963', type: '光照最小阈值', measurementValue: getSensorValue(str.substring(14, 18), 10)},
-        {measurementId: '3964', type: '光照警告类型', measurementValue: getInt(str.substring(18, 20))}
+        {measurementId: '3959', type: 'Light Enable', measurementValue: getInt(str.substring(0, 2))},
+        {measurementId: '3960', type: 'Event Light Interval', measurementValue: getMinsByMin(str.substring(2, 6))},
+        {measurementId: '3961', type: 'Event Light Sample Interval', measurementValue: getSecondsByInt(str.substring(6, 10))},
+        {measurementId: '3962', type: 'Light ThMax', measurementValue: getSensorValue(str.substring(10, 14), 10)},
+        {measurementId: '3963', type: 'Light ThMin', measurementValue: getSensorValue(str.substring(14, 18), 10)},
+        {measurementId: '3964', type: 'Light Warning Type', measurementValue: getInt(str.substring(18, 20))}
     ]
 }
 
@@ -830,28 +827,28 @@ function getEventStatus (str) {
         }
         switch (i){
             case 0:
-                event.push({id:1, eventName:"开始移动事件。"})
+                event.push({id:1, eventName:"Start moving event."})
                 break
             case 1:
-                event.push({id:2, eventName:"结束移动事件。"})
+                event.push({id:2, eventName:"End movement event."})
                 break
             case 2:
-                event.push({id:3, eventName:"静止事件。"})
+                event.push({id:3, eventName:"Motionless event."})
                 break
             case 3:
-                event.push({id:4, eventName:"冲击事件。"})
+                event.push({id:4, eventName:"Shock event."})
                 break
             case 4:
-                event.push({id:5, eventName:"温度事件。"})
+                event.push({id:5, eventName:"Temperature event."})
                 break
             case 5:
-                event.push({id:6, eventName:"光照事件。"})
+                event.push({id:6, eventName:"Light event."})
                 break
             case 6:
-                event.push({id:7, eventName:"SOS事件。"})
+                event.push({id:7, eventName:"SOS event."})
                 break
             case 7:
-                event.push({id:8, eventName:"按一次事件。"})
+                event.push({id:8, eventName:"Press once event."})
                 break
         }
     }
@@ -884,6 +881,7 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 ### 添加 Webhook 模板
@@ -892,29 +890,23 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook-map.png" alt="pir" width={800} height="auto" /></p>
 
-
 通过填写 Webhook ID 字段为您的集成命名。
 
-在 Email address 字段中填写有效的电子邮件地址，这是 TTN Mapper 接受您数据所必需的。您的终端设备发送的所有数据都将与此电子邮件地址关联，这将为数据质量提供一些保证。
+在 Email address 字段中填写有效的电子邮件地址，这是 TTN Mapper 接受您的数据所必需的。您的终端设备发送的所有数据都将与此电子邮件地址关联，这将为数据质量提供一定的保证。
 
-要了解更多关于实验的信息，请阅读此处的实验部分。
+要了解更多关于实验的信息，请阅读[这里](https://ttnmapper.org/)的实验部分。
 
-最后点击 `Create TTN Mapper webhook` 按钮完成。
-
+最后点击 `Create TTN Mapper webhook` 按钮完成创建。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/webhook2.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 观察网络覆盖
-
 
 导航到 [TTN Mapper](https://ttnmapper.org/) 并在顶部菜单中选择 `Advanced Maps`。
 
-
-在 `Device data` 部分，使用 The Things Stack 中的设备 ID 填写 `Device ID` 字段。<br/>
+在 `Device data` 部分，使用来自 The Things Stack 的设备 ID 填写 `Device ID` 字段。<br/>
 选择今天作为 `Start Date` 和 `End Date`。<br/>
 点击 `View Map` 按钮查看来自您终端设备上行数据的数据点。
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/view-map.png" alt="pir" width={800} height="auto" /></p>
 

@@ -105,13 +105,9 @@ light:
 This configuration:
 
 - Sets up all three buttons as inputs with pull-up resistors
-
 - Configures Button 1 to briefly flash the LED
-
 - Configures Button 2 to flash the LED in a double-blink pattern
-
 - Configures Button 3 to toggle the LED on/off
-
 - Makes the LED available in Home Assistant as a controllable light entity
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/45.gif" style={{width:250, height:'auto'}}/></div>
@@ -172,9 +168,7 @@ binary_sensor:
 This configuration:
 
 - Sets up the buzzer as a PWM output
-
 - Creates a light entity to control the buzzer
-
 - Configures Button 1 to play a short beep pattern when pressed
 
 :::tip
@@ -268,9 +262,7 @@ sensor:
 This configuration:
 
 - Reads the battery voltage through the ADC
-
 - Converts the voltage to a battery percentage using a calibration curve
-
 - Makes both the raw voltage and the percentage available in Home Assistant
 
 :::caution
@@ -579,11 +571,8 @@ display:
 This configuration:
 
 - Creates a counter that persists across sleep cycles
-
 - Configures the device to wake for 30 seconds, then sleep for 3 minutes
-
 - Updates the display with the current wake-up count
-
 - Optionally configures a button to wake the device
 
 When running, you'll see a counter increment each time the device wakes from sleep:
@@ -1271,15 +1260,10 @@ When your configuration is successfully uploaded and running, your reTerminal E 
 This example implements:
 
 1. **Multiple Pages**: The display toggles between two pages - a climate dashboard and a time/date display
-
 2. **Button Navigation**: Buttons on GPIO3 and GPIO5 are used to navigate between pages
-
 3. **Battery Monitoring**: Battery level is shown with appropriate icons that change based on the charge level
-
 4. **Hardware Initialization**: SD card and battery monitoring circuits are enabled on boot
-
 5. **Temperature and Humidity Display**: Using the onboard SHT4x sensor via I²C
-
 6. **Dynamic Icons**: Material Design Icons change based on sensor values
 
 ## FAQ

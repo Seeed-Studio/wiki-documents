@@ -11,26 +11,22 @@ last_update:
 ---
 # **概述**
 
-SenseCAP Indicator 中有两个 Grove 接口用于连接 Grove 模块，一个是默认的 I2C 端口，另一个是可配置的数字/模拟引脚，它也可以用于 PWM 输出。两个 Grove 端口都可以用作数字端口。为开发者提供了更多可能性。
+SenseCAP Indicator 中有两个 Grove 接口用于连接 Grove 模块，一个是默认的 I2C 端口，另一个是可配置的数字/模拟引脚，也可用于 PWM 输出。两个 Grove 端口都可以用作数字端口。为开发者提供了更多可能性。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/grove.png"/></div>
 
-
 本仓库将介绍如何在 SenseCAP Indicator 上使用 Grove IO。这让您可以享受 [Grove 生态系统](https://www.seeedstudio.com/category/Grove-c-1003.html) 的即插即用功能，以及使用 RP2040 兼容的 GPIO！
 
-
 # **Grove(IIC)**
-
 
 为了扩展更多应用，您可以使用 IIC 接口连接更多传感器。
 与内置传感器不同，您只需要定义 SCL 和 SDA 引脚连接。
 
-## **示例代码**：
+## **示例代码**
 
-此示例代码介绍如何连接 [Grove TH 传感器](/cn/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor)：
+此示例代码介绍如何连接 [Grove TH 传感器](/Grove-AHT20-I2C-Industrial-Grade-Temperature&Humidity-Sensor)：
 
 [AHT20 温湿度传感器库](https://github.com/Seeed-Studio/Seeed_Arduino_AHT20/)
-
 
 ```cpp
 #include <Arduino.h>

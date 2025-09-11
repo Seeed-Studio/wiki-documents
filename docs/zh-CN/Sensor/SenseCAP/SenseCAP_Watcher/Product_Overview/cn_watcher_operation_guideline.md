@@ -15,7 +15,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
             <strong><span><font color={'FFFFFF'} size={"4"}> Watcher 视频</font></span></strong>
@@ -25,7 +25,7 @@ last_update:
     </a>
 </div>
 
-在本 Wiki 章节中，我们将为您提供有关 SenseCAP Watcher 操作逻辑、任务设置和设备功能使用的信息。
+在 Wiki 的这一部分中，我们将为您提供有关 SenseCAP Watcher 操作逻辑、任务设置和设备功能使用的信息。
 
 ## 基本操作
 
@@ -42,7 +42,7 @@ last_update:
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
     </a>
 </div>
 :::
@@ -56,7 +56,7 @@ last_update:
 一旦显示标志，松开按钮并让设备完成其初始化过程。几分钟后，Watcher 将显示其主菜单，表明它已准备好使用。
 
 :::tip
-如果设备长按无法开机，设备可能电量不足，您可能需要连接电缆为其供电，然后才能唤醒 Watcher。
+如果设备长按后无法开机，设备可能电量不足，您可能需要连接电缆为其供电，然后才能唤醒 Watcher。
 :::
 
 ### 关机
@@ -113,7 +113,7 @@ Watcher 的操作逻辑围绕滚轮按钮展开，它是导航和选择的主要
 
 ### 按键通话
 
-Watcher的按键通话功能允许您在任何屏幕或界面上使用语音命令与设备交互。只需按住位于设备右上角的滚轮按钮即可激活语音输入界面。按住按钮时，说出您的命令或消息，例如分配任务或发起对话。松开按钮后，Watcher将处理您的语音输入并做出相应响应。如果需要进一步澄清，请再次按住按钮提供额外的语音输入。
+Watcher的按键通话功能允许您在任何屏幕或界面上使用语音命令与设备交互。只需按住位于设备右上角的滚轮按钮即可激活语音输入界面。按住按钮时，说出您的命令或消息，例如分配任务或发起对话。松开按钮后，Watcher将处理您的语音输入并做出相应响应。如果需要进一步澄清，请再次按住按钮以提供额外的语音输入。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/push_to_talk.gif" style={{width:650, height:'auto'}}/></div><br />
 
@@ -122,7 +122,7 @@ Watcher的按键通话功能允许您在任何屏幕或界面上使用语音命�
 
 2. 如果您在Watcher运行任务时开始对话，那么Watcher将首先暂停当前任务，然后在对话结束后重新进入您的原始任务。
 
-3. 要了解如何分配任务，请先阅读**[如何为Watcher分配任务](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)**教程。
+3. 要了解如何分配任务，请先阅读**[如何为Watcher分配任务](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)**教程。
 :::
 
 ## 功能概述
@@ -137,7 +137,7 @@ Watcher提供四个主要菜单选项：**任务模板**、**当前任务**、**
 
 ### 当前任务
 
-当前任务菜单选项提供了一种便捷的方式来访问和管理Watcher上正在运行的活动任务。如果您需要离开当前任务去调整设备设置（如音量、亮度或LED灯开关），您可以通过从主菜单中选择当前任务选项轻松返回到您的任务，确保无缝高效的用户体验。
+当前任务菜单选项提供了一种便捷的方式来访问和管理Watcher上正在运行的任务。如果您需要离开当前任务来调整设备设置（如音量、亮度或LED灯开关），您可以通过从主菜单中选择当前任务选项轻松返回到您的任务，确保无缝高效的用户体验。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/current_task.gif" style={{width:700, height:'auto'}}/></div>
 
@@ -145,7 +145,7 @@ Watcher提供四个主要菜单选项：**任务模板**、**当前任务**、**
 
 扩展菜单目前在Watcher上可访问，作为显示来自特定范围连接的Grove传感器数据的中心，具体包括**[Grove SHT41](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT41-p-5383.html)**、**[Grove SHT40](https://www.seeedstudio.com/Grove-Temp-Humi-Sensor-SHT40-p-5384.html)**和**[Grove SCD41](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html)**。
 
-此功能允许用户一次将这些支持的Grove传感器中的一个与他们的Watcher设备无缝集成，实现传感器数据的实时监控和可视化。通过导航到扩展菜单，用户可以查看来自其连接传感器的数值和读数，使他们能够收集洞察并基于收集的数据做出明智的决策。
+此功能允许用户一次将这些支持的Grove传感器之一与他们的Watcher设备无缝集成，实现传感器数据的实时监控和可视化。通过导航到扩展菜单，用户可以查看来自其连接传感器的数值和读数，使他们能够收集洞察并基于收集的数据做出明智的决策。
 
 随着Watcher平台的持续发展，扩展菜单可能会扩展以包括对更广泛的Grove传感器阵列的支持以及额外的特性和功能，进一步增强设备的能力和用户体验。请关注有关扩展菜单未来增强功能的更新和公告。
 
@@ -174,7 +174,7 @@ Watcher提供四个主要菜单选项：**任务模板**、**当前任务**、**
    - 蓝牙设置允许您打开或关闭蓝牙功能。
 
 - **声音**：
-   - 声音设置让您调整 Watcher 音频输出的音量。
+   - 声音设置让您调整 Watcher 的音频输出音量。
    - 您可以增加或减少音量以适应您的偏好或环境。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/sound_setting.gif" style={{width:650, height:'auto'}}/></div>
@@ -217,3 +217,4 @@ Watcher提供四个主要菜单选项：**任务模板**、**当前任务**、**
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+

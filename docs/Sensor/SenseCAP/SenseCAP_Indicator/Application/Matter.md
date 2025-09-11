@@ -76,7 +76,7 @@ idf.py build flash monitor
 
 Once the firmware has been flashed the screen starts with just the QR code. Open your home automation's phone application and enter into the device provisioning flow (varies depending upon manufacturer).
 
-In the following example you can see my use of the Home Assistant mobile application to connect to my Home Assistant Yellow running the Matter Beta service. 
+In the following example you can see my use of the Home Assistant mobile application to connect to my Home Assistant Yellow running the Matter Beta service.
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-1.jpg"/></div>
 
@@ -89,7 +89,6 @@ After provisioning the device will begin reporting its temperature and humidity 
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 The Indicator Matter application allows for browsing sensor data in a similar way to the standard firmware. Upon loading the device shows the clock screen which is configured based upon your location to give you an accurate time. The screen has events to detect being slid to the right and left to cycle through the time, sensor display, and settings screen.
-
 
 <div class="table-center">
   <table align="center">
@@ -104,7 +103,7 @@ The Indicator Matter application allows for browsing sensor data in a similar wa
   </table>
 </div>
 
-Clicking a sensor further shows additional information about the state of that sensor and the history can be viewed in this way. 
+Clicking a sensor further shows additional information about the state of that sensor and the history can be viewed in this way.
 
 The settings screen allows configuration of several elements of the device's function. A 12 or 24 hour clock can be configured, the timezone is overridable, and the display brightness is adjustable.
 
@@ -131,6 +130,7 @@ The UI for the dashboard is composed of LGVL components with events setup for ca
 For the initial example three devices have been setup and the underlying logic in the matter model handles responding to events from the view and persisting the data on to the matter endpoints or updating the state of the UI.
 
 In general the following considerations must be made when updating the UI and persisting to Matter:
+
 - During the initialization process the method `indicator_matter_setup()` of the `indicator_matter.cpp` model sets up any associated devices for use with Matter. In addition a callback is setup for view events such that the matter endpoints are updated on change.
 - The `indicator_virtual_dashboard.c` model listens to view events associated with the virtual dashboard and persists the data to storage for retreival on initialization.
 - The matter logic subscribes to the events around modified matter data (whether remotely or locally)
@@ -142,7 +142,6 @@ In general the following considerations must be made when updating the UI and pe
 2. **User Guide**: The User Guide provides detailed information about the software and hardware of the SenseCAP Indicator Board. You can read it [here](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator).
 3. **Getting Started Guide for ESP-IDF**: This guide provides full steps to configure and use ESP-IDF to build projects. You can access it [here](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html).
 4. **Matter Installation Guide**: If you're new to ESP-Matter, this guide will help you get it installed and set up. You can find it [here](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html).
-
 
 ## Tech Support
 

@@ -1,11 +1,11 @@
 ---
-description: Primeros pasos con el Sensor de Humedad del Suelo XIAO
-title: Primeros pasos con el Sensor de Humedad del Suelo XIAO
+description: Primeros Pasos con el Sensor de Humedad del Suelo XIAO
+title: Primeros Pasos con el Sensor de Humedad del Suelo XIAO
 keywords:
   - XIAO
-  - Soil Moisture Sensor
+  - Sensor de Humedad del Suelo
   - ESP32-C6
-  - Moisture
+  - Humedad
 image: https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/1.webp
 slug: /es/xiao_soil_moisture_sensor
 last_update:
@@ -20,13 +20,13 @@ import TabItem from '@theme/TabItem';
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-Soil-Sensor-p-6452.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Consigue uno ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
     </a>
 </div>
 
 ## Introducción
 
-El Sensor de Humedad del Suelo XIAO es un monitor ambiental compacto y de bajo consumo alimentado por el [XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html). Funcionando con una sola batería AA, ofrece operación de larga duración y actualizaciones en tiempo real de las condiciones del suelo. Cuenta con Detección Adaptativa de Humedad del Suelo Pre-Calibrada para un monitoreo preciso del suelo. Además, permite intervalos de monitoreo dinámicos y lecturas instantáneas para datos precisos y responsivos. Completamente compatible con Home Assistant, es ideal para jardinería inteligente y agricultura de precisión: eficiente, confiable y diseñado para el cuidado sostenible de las plantas.
+El Sensor de Humedad del Suelo XIAO es un monitor ambiental compacto y de bajo consumo alimentado por el [XIAO ESP32-C6](https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Pre-Soldered-p-6328.html). Funcionando con una sola batería AA, ofrece operación de larga duración y actualizaciones en tiempo real de las condiciones del suelo. Cuenta con Detección Adaptativa de Humedad del Suelo Pre-Calibrada para un monitoreo preciso del suelo. Además, permite intervalos de monitoreo dinámicos y lecturas instantáneas para datos precisos y responsivos. Totalmente compatible con Home Assistant, es ideal para jardinería inteligente y agricultura de precisión: eficiente, confiable y diseñado para el cuidado sostenible de plantas.
 
 ## Características
 
@@ -44,15 +44,15 @@ Umbrales predeterminados:
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_1.jpg" style={{width:800, height:'auto'}}/></div>
 
 **2.Plug-and-Play con Home Assistant**  
-Precargado con ESPHome — funciona inmediatamente con Home Assistant, permitiéndote monitorear y automatizar directamente desde tu panel de control de hogar inteligente.
+Precargado con ESPHome: funciona inmediatamente con Home Assistant, permitiéndote monitorear y automatizar directamente desde tu panel de control de hogar inteligente.
 
 **3.Monitoreo Adaptativo y Lectura Instantánea**  
 
 - Ajusta automáticamente los intervalos de verificación (8h → 1h → 15min) dependiendo del nivel de humedad.  
-- Presiona el botón una vez para una lectura instantánea de humedad en cualquier momento.
+- Presiona el botón una vez para obtener una lectura instantánea de humedad en cualquier momento.
 
 **4.Calibración Simple (Opcional)**  
-Presiona rápidamente tres veces el botón para recalibrar para tu suelo específico: lectura seca + lectura húmeda → el sistema se ajusta automáticamente.
+Presiona rápidamente el botón tres veces para recalibrar para tu suelo específico: lectura seca + lectura húmeda → el sistema se ajusta automáticamente.
 
 - Triple presión corta → Entrar al modo de calibración:
   - LED rojo parpadea → Dentro de 10 segundos, inserta el sensor en suelo completamente seco.
@@ -61,16 +61,13 @@ Presiona rápidamente tres veces el botón para recalibrar para tu suelo especí
   - Espera hasta que el LED verde deje de parpadear, luego espera 3 segundos.
   - Resultado de calibración:
     - Dos parpadeos verdes rápidos → Éxito.
-    - Dos parpadeos rojos rápidos → Falla (probablemente debido a lecturas seca/húmeda intercambiadas).
+    - Dos parpadeos rojos rápidos → Fallo (probablemente debido a lecturas seca/húmeda intercambiadas).
 
 Nota: Durante la calibración, las lecturas iniciales pueden ser inestables si el sensor no se inserta rápidamente. El sistema tomará múltiples muestras, aplicará filtrado y promediará las lecturas para una calibración confiable.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/feature_4.jpg" style={{width:800, height:'auto'}}/></div>
 
-**5.Larga Duración de Batería**  
-Alimentado por una sola batería AA, diseñado para durar hasta tres meses gracias a la gestión optimizada de energía.
-
-## Descripción General del Hardware
+## Descripción del Hardware
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_Soil_Moisture_Sensor/img/hardware.jpg" style={{width:800, height:'auto'}}/></div>
 
@@ -95,12 +92,12 @@ Antes de que comience el contenido del tutorial de este artículo, es posible qu
     <tr>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-7-5-ePaper-Panel-p-6416.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
       <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
         <a class="get_one_now_item" href="https://www.seeedstudio.com/Home-Assistant-Green-p-5792.html" target="_blank">
-        <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+        <strong><span><font color={'FFFFFF'} size={"4"}> Consíguelo Ahora 🖱️</font></span></strong>
         </a>
       </div></td>
     </tr>
@@ -114,11 +111,11 @@ Recomendamos usar Home Assistant Green como el host de Home Assistant para este 
 :::tip instalar Home Assistant
 También hemos escrito cómo instalar Home Assistant para algunos productos de Seeed Studio, por favor consúltalos.
 
-- **[Comenzando con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
-- **[Comenzando con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
-- **[Comenzando con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
+- **[Primeros Pasos con Home Assistant en ODYSSEY-X86](https://wiki.seeedstudio.com/es/ODYSSEY-X86-Home-Assistant/)**
+- **[Primeros Pasos con Home Assistant en reTerminal](https://wiki.seeedstudio.com/es/reTerminal_Home_Assistant/)**
+- **[Primeros Pasos con Home Assistant en LinkStar H68K/reRouter CM4](https://wiki.seeedstudio.com/es/h68k-ha-esphome/)**
 
-Si no estás usando un producto de Seeed Studio, también puedes consultar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
+Si no estás usando un producto de Seeed Studio, también puedes verificar y aprender cómo instalar Home Assistant para otros productos en el sitio web oficial de Home Assistant.
 
 - **[Instalación de Home Assistant](https://www.home-assistant.io/installation/)**
 :::
@@ -127,13 +124,13 @@ Si no estás usando un producto de Seeed Studio, también puedes consultar y apr
 
 Si ya has instalado ESPHome, puedes omitir este paso.
 
-Ve a **Settings** -> **Add-ons** -> **ADD-ON STORE**
+Ve a **Configuración** -> **Complementos** -> **TIENDA DE COMPLEMENTOS**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/01.png" style={{width:800, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/02.png" style={{width:800, height:'auto'}}/></div>
 
-Busca ESPHome y haz clic en él. Haz clic en **INSTALL** y **START**.
+Busca ESPHome y haz clic en él. Haz clic en **INSTALAR** e **INICIAR**.
 
 :::tip
 Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar usando una instalación de Home Assistant que soporte complementos (como Home Assistant OS o instalaciones supervisadas). Para otros tipos de instalación (como Home Assistant Container), es posible que necesites ejecutar el Constructor de Dispositivos ESPHome independientemente usando Docker. Consulta la [documentación oficial de ESPHome](https://esphome.io/guides/getting_started_hassio) para más detalles.
@@ -141,13 +138,13 @@ Si no puedes encontrar ESPHome en la tienda de complementos, asegúrate de estar
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/03.png" style={{width:800, height:'auto'}}/></div>
 
-Y luego, el Constructor ESPHome aparecerá en la barra lateral.
+Y luego, ESPHome Builder aparecerá en la barra lateral.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/04.png" style={{width:800, height:'auto'}}/></div>
 
 ### Paso 2: Preparando el Sensor de Humedad del Suelo
 
-Por defecto, tu dispositivo (XIAO ESP32C6) viene pre-programado con firmware para el Sensor de Humedad del Suelo XIAO. Sin embargo, si necesitas modificar o actualizar el firmware por defecto, un archivo de configuración YAML de fábrica está disponible en la sección de Recursos a continuación. Puedes personalizar la lógica según sea necesario y programarlo a través de Home Assistant.
+Por defecto, tu dispositivo (XIAO ESP32C6) viene pre-flasheado con firmware para el Sensor de Humedad del Suelo XIAO. Sin embargo, si necesitas modificar o actualizar el firmware predeterminado, un archivo de configuración YAML de fábrica está disponible en la sección de Recursos a continuación. Puedes personalizar la lógica según sea necesario y flashearlo a través de Home Assistant.
 
 :::tip
 Para asegurar lecturas precisas, simplemente realiza una calibración rápida del sensor antes del uso.
@@ -166,7 +163,7 @@ Para asegurar lecturas precisas, simplemente realiza una calibración rápida de
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ap_wireless_setting_page.png" style={{width:'auto', height:650, "border-radius": '15px'}}/></div>
 
 3. **Integración con Home Assistant**:
-   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Settings -> Devices & Services`.
+   - Una vez conectado a la red doméstica, el módulo será descubrible en Home Assistant bajo `Configuración -> Dispositivos y Servicios`.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO/Gadgets/6_channel_wifi_relay/ha_new_device_discovered.png" style={{width:400, height:'auto', "border-radius": '15px'}}/></div>
 
@@ -176,7 +173,7 @@ De esta manera, puedes conectar el módulo a tu red de Home Assistant y permitir
 
 1. **Descubrimiento Automático**:
    - Asegúrate de que **ESPHome** esté instalado en Home Assistant.
-   - Navega a `Settings -> Devices & Services -> Integrations` y busca el dispositivo.
+   - Navega a `Configuración -> Dispositivos y Servicios -> Integraciones` y busca el dispositivo.
 
 2. **Configuración Manual**:
    - Si no se descubre automáticamente, agrega manualmente el dispositivo especificando su dirección IP.
@@ -192,18 +189,17 @@ Ahora que tu sensor de suelo está funcionando, ¡adelante y diviértete monitor
 ## Uso Avanzado
 
 Puedes modificar la lógica del firmware original y flashear tu versión personalizada del sensor de suelo directamente a través de Home Assistant.
-
 ### Paso 1. Instalar ESPHome
 
 Consulta la guía de instalación en el Paso 1 anterior.
 
-### Paso 2. Añadir un nuevo dispositivo
+### Paso 2. Agregar un nuevo dispositivo
 
-Ve a ESPHome y haz clic en **NEW DEVICE**.
+Ve a ESPHome y haz clic en **NUEVO DISPOSITIVO**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/06.png" style={{width:800, height:'auto'}}/></div>
 
-Dale al dispositivo un nombre que te guste y haz clic en **NEXT**.
+Dale al dispositivo un nombre que te guste y haz clic en **SIGUIENTE**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/1.png" style={{width:800, height:'auto'}}/></div>
 
@@ -212,7 +208,7 @@ Dale al dispositivo un nombre que te guste y haz clic en **NEXT**.
   <div style={{flex:1}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/3.png" style={{width:'100%', height:'auto'}}/></div>
 </div>
 
-Después de crear un nuevo dispositivo, haz clic en **EDIT**.
+Después de crear un nuevo dispositivo, haz clic en **EDITAR**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/4.png" style={{width:800, height:'auto'}}/></div>
 
@@ -225,7 +221,7 @@ Aquí está el firmware de fábrica：
     </a>
 </div><br />
 
-Aquí tienes una configuración YAML de `ESPHome` lista para usar para Home Assistant:
+Aquí tienes una configuración YAML de `ESPHome` lista para usar con Home Assistant:
 <details>
 
 <summary>Haz clic aquí para previsualizar el código completo</summary>
@@ -559,7 +555,7 @@ sensor:
   - platform: wifi_signal
     name: "wifi singnal strength"
     update_interval: 10s
-    
+
 text_sensor:
   - platform: template
     name: "Soil Moisture Status"
@@ -653,7 +649,7 @@ captive_portal:
 `on_boot` – Define lo que sucede cuando el dispositivo se inicia.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Enciende el GPIO 14, establece el brillo del LED PWM, verifica el estado del Wi-Fi y activa la primera verificación de humedad.
+- **Acción**: Enciende GPIO 14, establece el brillo del LED PWM, verifica el estado del Wi-Fi y activa la primera verificación de humedad.
 
 `scripts (red_led_blink, green_led_blink, fast_blink_green, fast_blink_red, etc.)` – Patrones de parpadeo de LED predefinidos.
 
@@ -663,12 +659,12 @@ captive_portal:
 `do_calibration` – Ejecuta el proceso de calibración para suelo seco y húmedo.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Hace parpadear el LED rojo, espera la lectura en seco; luego hace parpadear el LED verde, espera la lectura húmeda; almacena valores promedio y confirma éxito o falla.
+- **Acción**: Hace parpadear el LED rojo, espera la lectura en seco; luego hace parpadear el LED verde, espera la lectura húmeda; almacena valores promedio y confirma éxito o fallo.
 
 `check_moisture_once` – Lee y evalúa los niveles de humedad del suelo.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Toma múltiples lecturas ADC, las promedia, las compara contra umbrales calibrados, decide el estado de humedad, activa LED y configuraciones de sueño profundo en consecuencia.
+- **Acción**: Toma múltiples lecturas ADC, las promedia, las compara con umbrales calibrados, decide el estado de humedad, activa LED y configuraciones de sueño profundo en consecuencia.
 
 `binary_sensor (GPIO2)` – Maneja la lógica de presión del botón físico.
 
@@ -686,19 +682,19 @@ captive_portal:
 `deep_sleep` – Gestiona los ciclos de sueño para ahorro de energía.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Se ejecuta durante 120 segundos, luego duerme hasta 180 minutos; se despierta con presión del botón o intervalo.
+- **Acción**: Funciona durante 120 segundos, luego duerme hasta 180 minutos; se despierta con presión del botón o intervalo.
 
 `sensor (ADC)` – Lee valores analógicos del sensor de suelo y batería.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Mide la humedad del suelo y voltaje de batería; la batería se escala para mostrar porcentaje.
+- **Acción**: Mide la humedad del suelo y voltaje de la batería; la batería se escala para mostrar porcentaje.
 
 `text_sensor` – Publica el estado de humedad del suelo legible para humanos.
 
 - **Parámetros de entrada**: Ninguno.
-- **Acción**: Muestra "Dry", "Almost Dry", o "Normal Moisture" en Home Assistant.
+- **Acción**: Muestra "Seco", "Casi Seco", o "Humedad Normal" en Home Assistant.
 
-`wifi` + `api` + `ota` – Gestiona la conexión de red, integración con Home Assistant, y actualizaciones de firmware por aire.
+`wifi` + `api` + `ota` – Gestiona la conexión de red, integración con Home Assistant y actualizaciones de firmware por aire.
 
 - **Parámetros de entrada**: SSID y contraseña de Wi-Fi.
 - **Acción**: Conecta el dispositivo a la red, expone su API y habilita actualizaciones remotas.
@@ -726,11 +722,11 @@ Regresa a ESPHome para descargar el firmware.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/64.png" style={{width:800, height:'auto'}}/></div>
 
-Selecciona formato Factory.
+Selecciona Factory format.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/65.png" style={{width:500, height:'auto'}}/></div>
 
-Usa el cable USB para **conectar el panel ePaper a tu computadora** y haz clic en **CONNECT**.
+Usa un cable USB para **conectar el panel ePaper a tu computadora** y haz clic en **CONNECT**.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/66.png" style={{width:800, height:'auto'}}/></div>
 
@@ -754,7 +750,7 @@ Tu firmware se flasheará en breve ～
 Si tu Host de Home Assistant (Raspberry PI/Green/Yellow etc.) está cerca, recomendamos usar este método ya que es más simple.
 :::
 
-Antes de instalar el código en el dispositivo, necesitas usar el cable USB para **conectar este dispositivo a tu Raspberry Pi o HA Green(Yellow) etc** que esté ejecutando Home Assistant.
+Antes de instalar el código en el dispositivo, necesitas usar un cable USB para **conectar este dispositivo a tu Raspberry Pi o HA Green(Yellow) etc** que esté ejecutando Home Assistant.
 
 Haz clic en las opciones siguiendo la imagen para instalar el código en el dispositivo.
 
@@ -772,23 +768,23 @@ Espera un momento y verás la retroalimentación como la siguiente imagen. Signi
 <TabItem value='Install through Wi-Fi'>
 
 :::tip
-Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas apropiadamente con claves de encriptación válidas para que este método funcione.
+Esta es la forma más simple, pero con la premisa de que al instalar el programa por primera vez, primero debes subir el programa al Panel ePaper usando el método de la izquierda. Después de eso, puedes subirlo vía wifi. También, asegúrate de que tu configuración YAML incluya secciones `ota` y `api` configuradas correctamente con claves de encriptación válidas para que este método funcione.
 :::
 
 De esta manera, no necesitas conectar el panel ePaper a nada, solo asegúrate de que esté en línea.
 
-Haz clic en la opción y luego el firmware se instalará automáticamente en el panel ePaper.
+Haz clic en la opción y luego el firmware se instalará en el panel ePaper automáticamente.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/72.png" style={{width:500, height:'auto'}}/></div>
 
-Espera un momento y verás la retroalimentación como en la siguiente imagen. Si falla, puede deberse a una señal débil. Por favor, acerca el dispositivo más a tu router.
+Espera un momento y verás la retroalimentación como la siguiente imagen. Si falla, puede ser debido a una señal débil. Por favor mueve el dispositivo más cerca de tu router.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/xiao_075inch_epaper_panel/73.png" style={{width:650, height:'auto'}}/></div>
 
 </TabItem>
 </Tabs>
 
-## Reiniciar
+## Restablecer
 
 Si el firmware necesita ser reflasheado, puedes usar el siguiente enlace para restaurar el firmware predeterminado:  
 [https://gadgets.seeed.cc/](https://gadgets.seeed.cc/)
@@ -807,7 +803,7 @@ Luego, encuentra **XIAO Soil Moisture Monitor** en la página y haz clic en **Co
 
 ## Soporte Técnico y Discusión del Producto
 
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="table-center">
   <div class="button_tech_support_container">

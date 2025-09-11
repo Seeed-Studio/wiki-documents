@@ -9,7 +9,7 @@ keywords:
 image: https://files.seeedstudio.com/wiki/robotics/projects/lerobot/Arm_kit.webp
 slug: /cn/lerobot_so100m_new
 last_update:
-  date: 8/20/2025
+  date: 7/29/2025
   author: LiShanghang
 ---
 
@@ -37,7 +37,7 @@ SO-ARM10x 和 reComputer Jetson AI 智能机器人套件无缝结合了高精度
 </div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
-<a class="get_one_now_item" href="https://s.click.taobao.com/j6b5cCs" target="_blank" rel="noopener noreferrer">
+<a class="get_one_now_item" href="https://s.click.taobao.com/j6b5cCs" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 淘宝来一单 🖱️</font></span></strong>
 </a></div>
 
@@ -670,25 +670,10 @@ python -m lerobot.teleoperate \
     --display_data=true
 ```
 
-:::tip
-
-如果遇到此错误 `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`。
-
-<div align="center">
-    <img width={800}
-    src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/rerun-version.png" />
-</div>
-
-你可以降低rerun版本来解决。
-
-```bash
-pip3 install rerun-sdk==0.23
-```
-
-:::
-
 
 ## 数据集制作采集
+
+
 
 <div class="video-container">
 <iframe width="900" height="600" src="//player.bilibili.com/player.html?isOutside=true&aid=115024676786120&bvid=BV1iobBzfExN&cid=31680169516&p=1" title="bilibili video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -998,11 +983,6 @@ python -m lerobot.record  \
 
 - 如果程序提示无法读取USB摄像头图像数据，请确保USB摄像头不是接在Hub上的，USB摄像头必须直接接入设备，确保图像传输速率快。
 
-- 如果遇到此错误 `AttributeError: module 'rerun' has no attribute 'scalar'. Did you mean: 'scalars'?`, 你可以降低rerun版本来解决.
-
-```bash
-pip3 install rerun-sdk==0.23
-```
 
 :::tip
 如果你遇到无法解决的软件问题或环境依赖问题，除了查看本教程末尾的常见问题（FAQ）部分外，请及时在 [LeRobot 平台](https://github.com/huggingface/lerobot) 或 [LeRobot Discord 频道](https://discord.gg/8TnwDdjFGU) 反馈问题。

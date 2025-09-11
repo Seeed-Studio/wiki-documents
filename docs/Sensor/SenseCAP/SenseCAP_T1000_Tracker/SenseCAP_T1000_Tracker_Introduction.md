@@ -141,7 +141,7 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 |GNSS Constellation|<p>T1000-A/B: GPS/GLONASS/Galileo/BeiDou/QZSS</p><p>T1000-C/D: GPS/ BeiDou</p>|
 | :- | :- |
 |GNSS Sensitivity|-145dBm cold start / -160 dBm Tracking|
-|GNSS Location Accuracy|2\.5m CEP 50%|
+|GNSS Location Accuracy|2.5m CEP 50%|
 |Wi-Fi Positioning|Passive scanning, uploads the scanned 4 MAC addresses|
 |Bluetooth Positioning|uploads the scanned 3 best signal MAC addresses of Beacon|
 |Data Cache|Cache 1000 data when there is no LoRaWAN network|
@@ -153,5 +153,5 @@ We provide two different solutions for users, and comes in four versions: A, B, 
 |\*Battery Life Estimates|4 months on a single charge (uplink every 1 hour, only GNSS data)|
 |Battery Life Monitoring|Periodic uplink battery level|
 |Charge Cable (Adapter not included)|USB magnetic charging cable, 1 meter|
-|<a name="ole_link9"></a>Power Input Voltage|4\.7 to 5.5V DC|
+|<a name="ole_link9"></a>Power Input Voltage|4.7 to 5.5V DC|
 |Charging Temperature Limit|0 to +45℃ (Beyond the temperature range, the charge will be limited, and the LED will blink quickly)|

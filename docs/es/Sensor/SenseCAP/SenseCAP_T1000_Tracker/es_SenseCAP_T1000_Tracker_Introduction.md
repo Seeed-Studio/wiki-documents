@@ -141,7 +141,7 @@ Proporcionamos dos soluciones diferentes para los usuarios, y viene en cuatro ve
 |Constelación GNSS|<p>T1000-A/B: GPS/GLONASS/Galileo/BeiDou/QZSS</p><p>T1000-C/D: GPS/ BeiDou</p>|
 | :- | :- |
 |Sensibilidad GNSS|-145dBm arranque en frío / -160 dBm Seguimiento|
-|Precisión de Ubicación GNSS|2\.5m CEP 50%|
+|Precisión de Ubicación GNSS|2.5m CEP 50%|
 |Posicionamiento Wi-Fi|Escaneo pasivo, carga las 4 direcciones MAC escaneadas|
 |Posicionamiento Bluetooth|carga las 3 mejores direcciones MAC de señal de Beacon escaneadas|
 |Caché de Datos|Almacena 1000 datos cuando no hay red LoRaWAN|
@@ -153,5 +153,5 @@ Proporcionamos dos soluciones diferentes para los usuarios, y viene en cuatro ve
 |\*Estimaciones de Vida de Batería|4 meses con una sola carga (enlace ascendente cada 1 hora, solo datos GNSS)|
 |Monitoreo de Vida de Batería|Nivel de batería de enlace ascendente periódico|
 |Cable de Carga (Adaptador no incluido)|Cable de carga magnético USB, 1 metro|
-|<a name="ole_link9"></a>Voltaje de Entrada de Alimentación|4\.7 a 5.5V DC|
+|<a name="ole_link9"></a>Voltaje de Entrada de Alimentación|4.7 a 5.5V DC|
 |Límite de Temperatura de Carga|0 a +45℃ (Más allá del rango de temperatura, la carga será limitada, y el LED parpadeará rápidamente)|

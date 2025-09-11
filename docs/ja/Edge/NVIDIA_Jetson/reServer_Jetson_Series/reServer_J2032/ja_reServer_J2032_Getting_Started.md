@@ -4,25 +4,21 @@ title: reServer Jetson
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reServer_J2032_Getting_Started
 last_update:
-  date: 05/15/2025
+  date: 01/03/2023
   author: w0x7ce
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reServer J2032 の使い方
+# reServer J2032 の使用開始
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/J2032_product_image.png" alt="pir" width={800} height="auto" /></p>
 
-reServer J2032 は、私たちの reThings ファミリーに新たに加わった強力なエッジ AI コンピュートデバイスです。洗練された reServer フォームファクターケースデザインを採用し、非常にコンパクトな形状に強力なユニットを詰め込んでいます。このスマートな小型サーバーは、エッジからクラウドまで簡単かつ効率的に動作するだけでなく、AI 処理能力を加えることも可能です。
+reServer J2032 は、reThings ファミリーに誇りを持って導入した新しい強力なエッジ AI コンピューティングデバイスです。洗練された reServer フォームファクターケースデザインを採用し、強力なユニットを極めてコンパクトな形状にパッケージしています。このスマートな小型サーバーは、エッジからクラウドまで簡単かつ効率的に動作するだけでなく、AI 処理能力も追加しています。
 
-reServer J2032 は、最先端の Nvidia Jetson™ Xavier NX 16GB モジュール（オプションで Jetson™ Xavier NX 8GB モジュール）を搭載しており、一般的な AI タスクを処理するために最大 21 TOPS を提供できます。大量の GPU RAM により、複数のニューラルネットワークを並列処理することが可能です。デュアルイーサネットポートを備え、1つは高速な 2.5 ギガビットイーサネットポート、もう1つは 1 ギガビットポートで構成されており、5G、LoRa®、BLE を含むハイブリッド接続もサポートしています。さらに、デュアル SATA III 6.0Gbps データコネクタを備えており、最大 2 台の 3.5"/2.5" SATA 内蔵ハードディスクドライブを装備して、より多くのストレージを確保できます。
+reServer J2032 は、最先端の Nvidia Jetson™ Xavier NX 16GB モジュール（オプションで Jetson™ Xavier NX 8GB モジュール）を搭載しており、一般的な AI タスクの処理において最大 21 TOPS を提供できます。豊富な GPU RAM により並列マルチニューラルネットワーク処理が可能で、1つの高速 2.5 ギガビットイーサネットポートと 1 ギガビットで構成されるデュアルイーサネットポートを備え、5G、LoRa®、BLE を含むハイブリッド接続もサポートしています。reServer 2032 はまた、デュアル SATA III 6.0Gbps データコネクタを備えており、最大 2 台の 3.5"/2.5" SATA 内蔵ハードディスクドライブを装備してより多くのストレージを取得できます。
 
-同時に、reServer はコンパクトなデザインで、ほぼすべてのサーバーシナリオで効率的に動作します。reServer の整然とした構造により、ハードドライブや拡張通信モジュールスロットへのアクセスが簡単で、インストール、アップグレード、メンテナンスが容易です。
+一方、reServer はほぼあらゆるサーバーシナリオで効率的に動作するコンパクトな設計です。reServer の整然とした構造により、ハードドライブへのアクセスも簡単で、豊富な通信モジュール拡張スロットにより簡単なインストール、アップグレード、メンテナンスが可能です。
 
-デュアル SATA III 6.0Gbps データコネクタを備えた reServer は、最大 2 台の 3.5"/2.5" SATA 内蔵ハードディスクドライブを装備して、より多くのストレージを確保できます。
+デュアル SATA III 6.0Gbps データコネクタを備えた reServer は、最大 2 台の 3.5"/2.5" SATA 内蔵ハードディスクドライブを装備してより多くのストレージを取得できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reServer-Jetson-20-1-H2-p-5337.html" target="_blank">
@@ -32,27 +28,25 @@ reServer J2032 は、最先端の Nvidia Jetson™ Xavier NX 16GB モジュー�
 
 ## 特徴
 
-- 全体寸法 132mm x 124mm x 233mm のコンパクトなデスクトップサーバーデザイン
+- 全体寸法 132mm x124mm x233mm のデスクトップサーバー向けコンパクト設計
 - Nvidia Jetson™ Xavier NX 16Gb モジュールを搭載
-- 豊富な周辺機器：デュアル LAN ポート（1 x 2.5 ギガビットポート、1 x 1 ギガビットポート）、2 x USB 3.2 gen 2 Type-A、HDMI ポート、DP ポート、1 x M.2 Key B、1 x Mini-PCIe ポート
-- 5G、LoRa®、BLE を含むハイブリッド接続をサポート（5G と LoRa® は追加モジュールが必要）
-- デュアル SATA III 6.0 Gbps データコネクタで 3.5"/2.5" SATA ハードディスクドライブをサポートし、筐体内に両方を収納可能な十分なスペースを確保
-- M.2 B-Key による拡張性（例：4G/5G モジュール）
-- Mini-PCIe ポートによる拡張性（例：4G/5G モジュールおよび LoRaWAN® モジュール（**WM1302-USB-XXXX**））
-- 大型 VC ヒートシンクを備えた静音冷却ファンで優れた放熱性能
-- 筐体を開けた後、内部コンポーネントへのアクセスが容易で、インストール、アップグレード、メンテナンスが簡単
-- NVIDIA Jetpack 4.6.1（Jetson™ Linux R32.7.1）をプリインストール
+- デュアル LAN ポート（1 x 2.5 ギガビットポートと 1 x 1 ギガビットポート）、2 x USB 3.2 gen 2 Type-A、HDMI ポートと DP ポート、1 x M.2 Key B、1 x Mini-PCIe ポートを含む豊富な周辺機器
+- 5G、LoRa®、BLE を含むハイブリッド接続をサポート（5G と LoRa® には追加モジュールが必要）
+- 3.5"/2.5" SATA ハードディスクドライブ用のデュアル SATA III 6.0 Gbps データコネクタと、両方を格納するのに十分なエンクロージャ内スペース
+- 4G/5G モジュールなどの拡張性のための M.2 B-Key
+- 4G/5G モジュールや LoRaWAN® モジュール（**WM1302-USB-XXXX**）などの拡張性のための Mini-PCIe ポート
+- 優れた放熱のための大型 VC ヒートシンク付き静音冷却ファン
+- エンクロージャを開けた後の内部コンポーネントへの簡単なアクセスにより、インストール、アップグレード、メンテナンスが容易
+- NVIDIA Jetpack 4.6.1（Jetson™ Linux R32.7.1）がプリインストール済み
 
-> LoRaWAN® は LoRa Alliance® のライセンスの下で使用されるマークです。
+> LoRaWAN® は LoRa Alliance® からライセンスを受けて使用されるマークです。
 LoRa® マークは Semtech Corporation またはその子会社の商標です。
 
 ## 仕様
 
 <div>
   <div className="document">
-    
-
-<table><colgroup><col width="115px" /><col width="188px" /><col width="392px" /></colgroup>
+    <table><colgroup><col width="115px" /><col width="188px" /><col width="392px" /></colgroup>
       <tbody>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={12} align valign="middle" style={{width: 119}}>
@@ -85,7 +79,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NVIDIA Voltaアーキテクチャ、384 NVIDIA CUDA®コアおよび48 Tensorコア</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NVIDIA Voltaアーキテクチャ、384個のNVIDIA CUDA®コアと48個のTensorコアを搭載</p>
           </td>
         </tr>
         <tr>
@@ -95,7 +89,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">6コア NVIDIA Carmel ARM®v8.2 64ビット CPU 6 MB L2 + 4 MB L3</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">6コアNVIDIA Carmel ARM®v8.2 64ビットCPU 6MB L2 + 4MB L3</p>
           </td>
         </tr>
         <tr>
@@ -105,7 +99,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2x NVDLAエンジン</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2x NVDLA Engines</p>
           </td>
         </tr>
         <tr>
@@ -115,7 +109,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">7-Way VLIWビジョンプロセッサ</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">7-Way VLIW Vision Processor</p>
           </td>
         </tr>
         <tr>
@@ -125,7 +119,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">8 GB 128ビット LPDDR4x @ 51.2GB/s</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">8 GB 128-bit LPDDR4x @ 51.2GB/s</p>
           </td>
         </tr>
         <tr>
@@ -141,7 +135,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオエンコーダ</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオエンコーダー</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
@@ -152,7 +146,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオデコーダ</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオデコーダー</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
@@ -167,7 +161,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2 x 2.5''/3.5" SATA (HDD/SSD)をサポート、最大SATA3 (2.5インチ256GB SSD x1、最大SATA3すでにインストール済み)</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2 x 2.5''/3.5" SATA (HDD/SSD)をサポート、SATA3まで対応（2.5インチ 256GB SSD x1、SATA3まで対応、既にインストール済み）</p>
           </td>
         </tr>
         <tr>
@@ -177,7 +171,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Raspberry Pi® RP2040 32ビットデュアルARM Cortex-M0+ @ 133MHz</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Raspberry Pi® RP2040 32ビット デュアル ARM Cortex-M0+ @ 133MHz</p>
           </td>
         </tr>
         <tr>
@@ -187,7 +181,7 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
           </td>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5Gイーサネットポート</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5G Ethernetポート</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
@@ -199,11 +193,11 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1000Mイーサネットポート</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1000M Ethernetポート</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NXのネイティブイーサネットインターフェース</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NXのネイティブEthernetインターフェース</p>
           </td>
         </tr>
         <tr>
@@ -219,327 +213,327 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
             <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DisplayPortインターフェース</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DisplayPortインターフェース</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DP1.4まで対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DP1.4まで対応</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">USB3.1 GNE2インターフェース x2</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">USB3.1 GNE2インターフェース x2</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">最大10Gbitまで対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">10Gbitまで対応</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DCジャック電源インターフェース</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DCジャック電源インターフェース</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DC 12V @5A, 2.5mmセンターピン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DC 12V @5A、2.5mmセンターピン</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={16} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">内部I/O</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">内部I/O</p>
           </td>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2 KEY Bコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2 KEY B コネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">USB3.2 GEN2付き、5G/4Gワイヤレスモジュール対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">USB3.2 GEN2対応、5G/4Gワイヤレスモジュールをサポート</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIeコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIe コネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LoRa®/シリーズワイヤレスモジュール対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LoRa®/Seriesワイヤレスモジュールをサポート</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={2} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SIMカードスロット</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SIMカードスロット</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIe用トップレイヤー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIe用上層</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2用ボトムレイヤー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2用下層</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SATA電源コネクタ x2</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SATA電源コネクタ x2</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={2} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5インチまたは3.5インチHDD/SSD対応、最大SATA3</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5インチまたは3.5インチHDD/SSDをサポート、SATA3まで対応</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SATAデータコネクタ x2</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SATAデータコネクタ x2</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">メインファンコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">メインファンコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">エンクロージャーファン用、12Vファンのみ対応、ボトムファンはすでにインストール済み</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">エンクロージャファン用、12Vファンのみサポート、底面ファンは既に取り付け済み</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NXファンコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NXファンコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">5Vファンのみ対応、アルミヒートシンク冷却ファンはすでにインストール済み</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">5Vファンのみサポート、アルミニウムヒートシンク冷却ファンは既に取り付け済み</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリーコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリーコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリーはすでにインストール済み</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリーは既に取り付け済み</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">260Pin SODIMMコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">260ピンSODIMMコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NX用</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Jetson Xavier NX用</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NX用USB TYPE-Cコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NX用USB TYPE-Cコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NXプログラミング用</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">NXプログラミング用</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">コプロセッサ用USB TYPE-Cコネクタ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">コプロセッサ用USB TYPE-Cコネクタ</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">コプロセッサファームウェアアップグレード用</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">コプロセッサファームウェアアップグレード用</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">オートパワーオンヘッダー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">AutoPower on Header</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ショートサーキットでキーオンモードに入り、浮動状態でオートパワーオンモードに入る</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ショートサーキットでキーオンモードに入り、フロートで自動電源オンモードに入る</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2x5Pinデバッグヘッダー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2x5Pin Debug Header</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">デバッグ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">デバッグ</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源ボタン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Power Button</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">緑色LED付き</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">緑色LED付き</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">アクティブブザー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">アクティブブザー</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={4} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ネットワーク</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ネットワーク</p>
           </td>
           <td data-style="width: 193px;" colSpan={1} rowSpan={2} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ギガイーサネット</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ギガイーサネット</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5Gイーサネットポート</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5Gイーサネットポート</p>
             <ul>
               <li>rx:&nbsp;2.35&nbsp;Gbits/sec</li>
-              <li class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">tx:&nbsp;1.4&nbsp;~&nbsp;1.6&nbsp;Gbits/sec</li>
+              <li className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">tx:&nbsp;1.4&nbsp;~&nbsp;1.6&nbsp;Gbits/sec</li>
             </ul>
           </td>
         </tr>
         <tr>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1000Mイーサネットポート</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1000Mイーサネットポート</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={2} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ワイヤレス接続</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ワイヤレス接続</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2 KEY Bコネクタ、5G/4Gワイヤレスモジュール対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2 KEY Bコネクタ、5G/4Gワイヤレスモジュールをサポート</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIeコネクタ、LoRa®/シリーズワイヤレスモジュール対応</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">MiNi-PCIeコネクタ、LoRa®/Seriesワイヤレスモジュールをサポート</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={3} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ディスプレイ</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ディスプレイ</p>
           </td>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED1: SATA0ステータスLED</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED1: SATA0 ステータスLED</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={2} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">スリープモードまたはSSD/HDD未挿入-----LED OFF</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SSD/HDD挿入済みでPHY準備完了-----LED ON</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">データ転送ステータス-----LED点滅</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">スリープモードまたはSSD/HDD未挿入-----LED消灯</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">SSD/HDD挿入済みでPHY準備完了 ----- LED点灯</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">データ転送状態 ----- LED点滅</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED2: SATA1ステータスLED</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED2: SATA1 ステータスLED</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED3</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">LED3</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2ワイヤレスモジュールステータスLED</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">M.2 ワイヤレスモジュール ステータスLED</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={3} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源</p>
           </td>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DCジャック電源インターフェース</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DCジャック電源インターフェース</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DC 12V @5A, 2.5mmセンターピン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">DC 12V @5A、2.5mmセンターピン</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源ボタン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源ボタン</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源オン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">電源オン</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 193px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 193}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">再起動ボタン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">再起動ボタン</p>
           </td>
           <td data-style="width: 395px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 395}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">再起動</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">再起動</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={4} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">プリインストール済み</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">プリインストール</p>
           </td>
           <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5インチ256GB SSD x1、最大SATA3</p>
-          </td>
-        </tr>
-        <tr>
-          <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">アルミヒートシンク冷却ファン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">2.5インチ 256GB SSD x1、最大SATA3対応</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリー</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">アルミニウムヒートシンク冷却ファン</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ボトムファン</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">RTCバッテリー</p>
+          </td>
+        </tr>
+        <tr>
+          <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ボトムファン</p>
           </td>
         </tr>
         <tr>
           <td data-style="width: 119px;" colSpan={1} rowSpan={1} align valign="middle" style={{width: 119}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">寸法</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">寸法</p>
           </td>
           <td data-style="width: 594px;" colSpan={2} rowSpan={1} align valign="middle" style={{width: 594}}>
-            <p class="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
-            <p class="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">132mm*124mm*233mm</p>
+            <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">&nbsp;</p>
+            <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">132mm*124mm*233mm</p>
           </td>
         </tr>
       </tbody>
@@ -559,47 +553,47 @@ LoRa® マークは Semtech Corporation またはその子会社の商標です�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/reserverpm2.jpg" alt="pir" width={1000} height="auto" /></p>
 
-## JetPack のフラッシュ
+## JetPackのフラッシュ
 
-reServer J2032 は、出荷時に JetPack がプリフラッシュされています。ただし、デバイスを再フラッシュしたい場合は、[このウィキ](https://wiki.seeedstudio.com/ja/reServer_J2032_Flash_Jetpack)を参照してください。
+reServer J2032は、JetPackがプリインストールされた状態で出荷されます。ただし、デバイスを再フラッシュしたい場合は、[このwiki](https://wiki.seeedstudio.com/reServer_J2032_Flash_Jetpack)に従ってください。
 
-## reServer 周辺機器およびモジュールの組み立てによるクイックスタート
+## reServerの周辺機器とモジュール組み立てのクイックスタート
 
-!!! 注意:
-    reServer J2032 には、Jetson Xavier NX モジュールの EMMC に **Jetpack 4.6.1 がプリインストール**されており、これを使用してすぐに独自のアプリケーション開発を開始できます。
+!!! Note:
+    reServer J2032は、Jetson Xavier NXモジュールのEMMCに**Jetpack 4.6.1がプリインストール**された状態で出荷されるため、すぐに独自のアプリケーション開発を開始できます。
 
 ### 必要なハードウェア
 
-reServer を始める前に、以下のハードウェアを準備してください。
+reServerを使い始める前に、以下のハードウェアを準備する必要があります。
 
 - reServer
-- 電源アダプタ（付属）
+- 電源アダプター（付属）
 - 外部モニター
-- HDMI/DP ケーブル
+- HDMI/DPケーブル
 - キーボードとマウス
 
-### 周辺機器およびモジュールの組み立て
+### 周辺機器とモジュールの組み立て
 
-このセクションでは、reServer 内部にサポートされているハードウェア/モジュールをインストールまたは交換する方法を紹介します。以下の手順が使用ケースに該当しない場合はスキップしてください。
-このセクションを読む前に、reServer のメインボードにアクセスするための **組み立てガイドマニュアル** をページの最後に添付していますので、それを参照してください。
+この部分では、reServer内でサポートされているハードウェア/モジュールのインストールまたは交換方法を紹介します。以下の手順がお客様の使用ケースに該当しない場合は、この部分をスキップしてください。
+この部分を読む前に、このページの最後に添付されている**組み立てガイドマニュアル**に従って、reServerのメインボードにアクセスしてください。
 
-#### LoRaWAN® モジュール Mini-PCIe ポートのインストール
+#### LoRaWAN®モジュール Mini-PCIeポートのインストール
 
-!!! 注意:
-    Mini-PCIe ポートに LoRaWAN® モジュールをインストールする以下のセットアップガイドは、[WM1302-USB-US915](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-US915-p-4891.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4891&indexName=bazaar_retailer_products) または [WM1302-USB-868](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4892&indexName=bazaar_retailer_products) モジュールでのみテストされています。LoRaWAN® モジュールは含まれていません。
+!!! Note:
+    以下のMini-PCIeポートへのLoRaWAN®モジュールのインストールセットアップガイドは、以下のモジュールでのみテストされています：[WM1302-USB-US915](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-US915-p-4891.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4891&indexName=bazaar_retailer_products)または[WM1302-USB-868](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4892&indexName=bazaar_retailer_products)。LoRaWAN®モジュールは含まれていません。
 
-- **ステップ 1.** キャリアボードの背面にある Mini-PCIe スロットを見つけ、LoRaWAN® モジュールをインストールします。
+- **ステップ1.** キャリアボードの背面にあるMini-PCIeスロットを見つけて、LoRaWAN®モジュールをインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_wm1302_minipcie.png" alt="pir" width={500} height="auto" /></p>
 
-- **ステップ 2.** アンテナケーブルを接続し、reServer J2032 ケースの背面にあるアンテナ取り付けスロットを見つけます。このスロットにはゴム製のインサートが穴を塞いでいるはずです。
+- **ステップ2.** アンテナケーブルを接続し、reServer J2032ケースの背面にあるアンテナ取り付けスロットを見つけます。このスロットには穴を塞ぐゴム製のインサートがあるはずです。
 
-!!! 注意:
-     reServer J2032 にはアンテナアダプタおよびアンテナは付属していません。
+!!! Note:
+     reServer J2032にはアンテナアダプターとアンテナは付属していません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
 
-- **ステップ 3.** LoRaWAN® モジュールを使用するために reServer J2032 を設定します。`Terminal` に以下のコマンドを入力してください：
+- **ステップ3.** `ターミナル`に以下のコマンドを入力して、reServer J2032をLoRaWAN®モジュールで使用できるように変更します：
 
 ```
 sudo -i
@@ -610,16 +604,16 @@ echo 495 > export; echo out > gpio495/direction; echo 0 > gpio495/value
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/enable_lorawan.png" alt="pir" width={700} height="auto" /></p>
 
-- **ステップ 4.** LoRaWAN® モジュールが正しく接続されているか確認します。`Terminal` を開き、以下のコマンドを入力してください：
-
-!!! 注意:
-    LoRaWAN® モジュールを有効にする以下の手順は、工場出荷時の Jetpack 4.6.1 でのみテストおよび適用されています。
+- **ステップ 4.** LoRaWAN® モジュールが正しく接続されているかを確認します。`Terminal` を開いて以下のコマンドを入力してください：
+  
+!!! Note:
+    LoRaWAN® モジュールを有効にする以下の手順は、工場出荷時デフォルトの Jetpack 4.6.1 でのみテストされ、適用されています
 
 ```
 ls /dev/ttyACM*
 ```
 
-以下のような出力が表示されるはずです：
+以下の出力が表示されるはずです：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lsusb_lorawan.png" alt="pir" width={500} height="auto" /></p>
 
@@ -629,13 +623,13 @@ ls /dev/ttyACM*
 lsusb -t
 ```
 
-以下のような出力が表示されるはずです：
+以下の出力が表示されるはずです：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lsusb_t_lorawan.png" alt="pir" width={700} height="auto" /></p>
 
 - **ステップ 5.** LoRaWAN® モジュールを使用するには、ソースコードをダウンロードしてください：
 
-まず、git をインストールし、GitHub から sx1302_hal（SX1302 LoRa® ゲートウェイ用のライブラリとプログラム）をダウンロードします：
+それでは、gitをインストールし、githubからsx1302_hal（SX1302 LoRa® ゲートウェイ用のライブラリとプログラム）をダウンロードしましょう：
 
 ```
 sudo apt update
@@ -643,45 +637,45 @@ sudo apt install -y git
 git clone https://github.com/Lora-net/sx1302_hal
 ```
 
-sx1302_hal フォルダに移動し、プログラムをビルドします：
+Move to sx1302_hal folder and build the program:
 
 ```
 cd ~/sx1302_hal
 make
 ```
 
-LoRaWAN® ゲートウェイアプリケーションを実行します。以下は [WM1302-USB-868](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4892&indexName=bazaar_retailer_products) モジュールを使用する例で、`global_conf.json.sx1250.EU868.USB` 設定ファイルを選択しています：
+LoRaWAN® ゲートウェイアプリケーションの実行を開始します。ここでは [WM1302-USB-868](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-USB-EU868-p-4892.html?queryID=6e7ba3140d26416085ce7ea85c0be886&objectID=4892&indexName=bazaar_retailer_products) モジュールを使用する例を示します。ここでは設定ファイル `global_conf.json.sx1250.EU868.USB` が選択されています：
 
 ```
 cd packet_forwarder/
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
-以下のような出力が表示されるはずです：
+次のような出力が表示されるはずです：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/lorawan_start.png" alt="pir" width={800} height="auto" /></p>
 
-#### 4G/5G モジュール Mini-PCIe のインストール
+#### 4G/5G モジュール Mini-PCIe インストール
 
-!!! 注意:
-     **QC25-EUX 4G モジュール**を以下のセットアップガイドで使用していますが、モジュールは付属していません。
+!!! Note:
+     **QC25-EUX 4G モジュール**は以下のセットアップガイドで使用されており、モジュールは含まれていません。
 
-- **ステップ 1.** キャリアボードの背面にある Mini-PCIe スロットを見つけ、LoRaWAN® モジュールをインストールします。
+- **ステップ 1.** キャリアボードの背面にある Mini-PCIe スロットを見つけて、LoRaWAN® モジュールをインストールします。
 
-!!! 注意:
-     4G/5G ネットワークを有効にするには、標準 SIM カードを reServer J2032 の SIM カードスロットに挿入する必要があります。
-     **SIM カードトレイ**には 2 層があり、**Mini-PCIe** ポートは以下の画像で示されているように **SIM スロット 2** を使用しています。
+!!! Note:
+     4G/5G ネットワークを有効にするには、標準 SIM カードを reServer J2032 SIM カードスロットに挿入する必要があります。
+     よく見ると、**SIM カードトレイ**には 2 つの層があり、**Mini-PCIe** ポートは下の画像に示されているように **SIM スロット 2** を利用しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_sim2_minipcie.png" alt="pir" width={550} height="auto" /></p>
 
-- **ステップ 2.** アンテナケーブルを接続し、reServer J2032 ケースの背面にあるアンテナ取り付けスロットを見つけます。このスロットにはゴム製のインサートが穴を塞いでいるはずです。
+- **ステップ 2.** アンテナケーブルを接続し、reServer J2032 ケースの背面にあるアンテナ取り付けスロットを見つけます。このスロットには穴を塞ぐゴム製のインサートがあるはずです。
 
-!!! 注意:
-     reServer J2032 にはアンテナアダプタおよびアンテナは付属していません。
+!!! Note:
+     reServer J2032 にはアンテナアダプターとアンテナは付属していません。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
 
-- **ステップ 3.** **QC25-EUX 4G モジュール**を使用するために reServer J2032 を設定します。以下のコマンドを `Terminal` に入力してください：
+- **ステップ 3.** **QC25-EUX 4G モジュール**で使用するために reServer J2032 を変更します。`ターミナル`に以下のコマンドを入力してください：
 
 ```
 sudo -i
@@ -694,63 +688,71 @@ echo 1 > gpio495/value
 echo 0 > gpio495/value
 ```
 
-- **ステップ 4.** **QC25-EUX 4G モジュール**が正しく接続されているか確認するために、電源を入れてシステムを起動し、`Terminal` を開いて以下のコマンドを入力してください：
-
-!!! 注意:
-    **QC25-EUX 4G モジュール**を有効にする以下の手順は、**Factory Default Jetpack OS Version 4.6.1** のみでテストおよび適用されています。
+- **ステップ 4.** **QC25-EUX 4Gモジュール**が正しく接続されているかを確認するため、電源を入れてシステムを起動し、`Terminal`を開いて以下のコマンドを入力してください：
+  
+!!! Note:
+    **QC25-EUX 4Gモジュール**を有効にする以下の手順は、**工場出荷時デフォルトのJetpack OSバージョン4.6.1**でのみテストされ、適用されています
 
 ```
 lsusb -t
 ```
 
-以下のような出力が表示されるはずです：
+以下の出力が表示されるはずです：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/4G_lsusb_t.png" alt="pir" width={650} height="auto" /></p>
 
-- **ステップ 5.** **QC25-EUX 4G モジュール**を有効にして 4G ネットワークに接続するには、```Terminal``` を開いて以下を入力してください：
+- **ステップ 5.** **QC25-EUX 4Gモジュール**を有効にして4Gネットワークに接続するには、```Terminal```を開いて以下を入力してください：
 
-4G モジュールを接続した状態で minicom シリアルモニターを開きます：
+4Gモジュールを接続した状態でminicomシリアルモニターを開く
+
 ```
 sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB2 -b 115200m1
 ```
-シリアル接続が開いたら、`AT` と入力して 'Enter' を押します。`OK` が表示されるはずです。
 
-同じ minicom シリアルウィンドウで以下を入力してください：
+シリアル接続が開いたら、ATと入力して'Enter'を押すと、OKが表示されるはずです。
+
+同じminicomシリアルウィンドウで以下を入力してください：
+
 ```
 AT+QCFG="usbnet"
 ```
-`+QCFG: "usbnet",0` のような出力が返されますが、これを 1 (ECM モード) に設定する必要があります。以下のコマンドを入力してください：
+
+次のような結果が返されます：+QCFG: "usbnet",0 ですが、これを1（ECMモード）に設定する必要があるため、以下のコマンドを入力してください：
+
 ```
 AT+QCFG="usbnet",1
 ```
-次に、モデムを再起動するために以下のコマンドを入力してください：
+
+次に、以下のコマンドを入力してモデムを強制的に再起動します：
+
 ```
 AT+CFUN=1,1
 ```
-その後、再起動するか、SIM カードキャリアからインターネットを取得するまでしばらく待ちます。
 
-`Terminal` で `ifconfig` を入力すると、以下の画像のように SIM カードのモバイルキャリアから IP アドレスが割り当てられていることが確認できます：
+その後、再起動するか、しばらく待ってモジュールがSIMカードキャリアからインターネット接続を取得するのを待ちます。
+
+`Terminal`で`ifconfig`と入力すると、以下の画像のような出力が表示され、SIMカードモバイルキャリアからIPアドレスが割り当てられていることが確認できます：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/4Gnetwork.png" alt="pir" width={700} height="auto" /></p>
 
-#### 4G/5G モジュール M.2 B-key ポートのインストール
+#### 4G/5G モジュール M.2 B-key ポート インストール
 
-!!! 注意:
-    reServer J2032 の M.2 B-Key は 3042/3052 (USB3.2 GEN2) フォーマットをサポートし、4G/5G ワイヤレスモジュールをサポートします (**4G/5G モジュールは reServer に含まれていません**)。以下の手順では SIM8202G-M2 5G モジュールを使用します。
+!!! Note:
+    reServer J2032のM.2 B-Keyは3042/3052(USB3.2 GEN2)フォーマットをサポートし、4G/5G無線モジュールに対応しています **（4G/5Gモジュールは reServer に含まれていません）**。以下の手順では SIM8202G-M2 5G モジュールを使用します。
 
-- **ステップ 1.** SIM8202G-M2 モジュールを M.2 B-Key に取り付けます。
+- **ステップ 1.** SIM8202G-M2 モジュールを M.2 B-Key にインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_installM2.png" alt="pir" width={500} height="auto" /></p>
 
 - **ステップ 2.** アンテナケーブルをモジュールに接続します。
 
-!!! 注意:
-     reServer J2032 にはアンテナアダプターやアンテナが付属していません。**SIM8202G-M2** 5G モジュールをネットワークに接続するには、モジュールにアンテナを取り付ける必要があります。
+!!! Note:
+     reServer J2032 にはアンテナアダプターとアンテナは付属していません。**SIM8202G-M2** 5G モジュールを使用してネットワークに接続するには、モジュールにアンテナを取り付ける必要があります。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/antenna.jpg" alt="pir" width={650} height="auto" /></p>
 
-- **ステップ 3.** M.2 B-Key ポートで **SIM8202G-M2 5G モジュール**を使用するために reServer J2032 を設定します。以下のコマンドを `Terminal` に入力してください：
+- **ステップ 3.** M.2 B-Key ポートで **SIM8202G-M2 5G モジュール** を使用するために reServer J2032 を改造します。`Terminal` に以下のコマンドを入力してください：
 
 ```
 sudo -i
@@ -760,10 +762,10 @@ echo 417 > export; echo out > gpio417/direction; echo 1 > gpio417/value
 echo 266 > export; echo out > gpio266/direction; echo 1 > gpio266/value
 ```
 
-- **ステップ 4.** **SIM8202G-M2 5G モジュール**が正しく接続されているか確認するために、電源を入れてシステムを起動し、`Terminal` を開いて以下のコマンドを入力してください：
-
-!!! 注意:
-    **SIM8202G-M2 5G モジュール**を有効にする以下の手順は、**Factory Default Jetpack OS Version 4.6.1** のみでテストおよび適用されています。
+- **ステップ 4.** システムを起動して電源を入れ、`Terminal`を開いて以下のコマンドを入力することで、**SIM8202G-M2 5Gモジュール**が正しく接続されているかを確認します：
+  
+!!! Note:
+    **SIM8202G-M2 5Gモジュール**を有効にする以下の手順は、**工場出荷時デフォルトのJetpack OSバージョン4.6.1**でのみテストされ、適用されています
 
 ```
 lsusb -t
@@ -773,22 +775,24 @@ lsusb -t
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/enable5G.png" alt="pir" width={700} height="auto" /></p>
 
-**ステップ 5.** **SIM8202G-M2** 5G モジュールを有効にして 5G ネットワークに接続します。
+**ステップ 5.** **SIM8202G-M2** 5Gモジュールを有効にして5Gネットワークに接続する
 
-!!! 注意:
-     4G/5G ネットワークを有効にするには、reServer J2032 の SIM カードスロットに標準 SIM カードを挿入する必要があります。
-     **SIM カードトレイ**には上下 2 つのスロットがありますが、**M.2 B-key** ポートは**下部スロット**を使用します。
+!!! Note:
+     4G/5Gネットワークを有効にするには、標準のSIMカードをreServer J2032のSIMカードスロットに挿入する必要があります。
+     よく見ると、**SIMカードトレイ**には上下2つのスロットがあり、**M.2 B-key**ポートは**下部スロット**を使用しています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/j2032_sim1.png" alt="pir" width={500} height="auto" /></p>
 
-SIM8202G-M2 5G モジュールを接続した状態で minicom シリアルモニターを開きます：
+SIM8202G-M2 5Gモジュールを接続した状態でminicomシリアルモニターを開く
+
 ```
 sudo apt install -y minicom
 sudo minicom -D /dev/ttyUSB2 -b 115200m1
 ```
-シリアル接続が開いたら、`AT` と入力して 'Enter' を押します。次の行に `OK` が表示されるはずです。
 
-次に、4G/5G ネットワークに接続するために、SIM8202G-M2 5G モジュール用の必要なドライバーをインストールする以下のコマンドを実行してください：
+シリアル接続が開いたら、`AT` と入力して 'Enter' を押すと、次の行に `OK` が表示されるはずです。
+
+4G/5G ネットワークに接続できるようにするには、以下のコマンドに従って SIM8202G-M2 5G モジュールに必要なドライバーをインストールし、ネットワーク接続を有効にしてください：
 
 ```
 cd ~
@@ -802,38 +806,38 @@ make
 sudo ./simcom-cm -i wwan0
 ```
 
-`Terminal` で `ifconfig` を入力すると、以下の画像のように SIM カードのモバイルキャリアから IP アドレスが割り当てられていることが確認できます：
+今、`Terminal`で`ifconfig`と入力すると、SIMカードのモバイルキャリアからIPアドレスが割り当てられた以下の画像のような出力が表示されるはずです：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/5Gnetwork.png" alt="pir" width={700} height="auto" /></p>
 
-#### HDD のインストール
+#### HDD インストール
 
-reServer は、より多くのストレージを確保するために 2 台の 3.5"/2.5" 内蔵ハードディスクドライブをインストールすることをサポートしています。
-以下の手順に従って HDD をインストールしてください。
+reServerは2台の3.5"/2.5"内蔵ハードディスクドライブの取り付けをサポートし、より多くのストレージを取得できます。
+HDDを取り付けるには、以下の手順に従ってください。
 
-- **ステップ 1.** ネジを外してブラケットを引き出します。
+- **ステップ 1.** ネジを外してブラケットを引き出します
 
-- **ステップ 2.** HDD をブラケットにネジで固定します。
+- **ステップ 2.** ネジでHHDをブラケットに取り付けます
 
-- **ステップ 3.** HDD ブラケットを押し下げて、HDD を SATA ポートに接続します。
+- **ステップ 3.** HDDブラケットを押し下げて、HHDをSATAポートに接続します。
 
-- **ステップ 4.** HDD ブラケットをネジで固定します。
+- **ステップ 4.** HDDブラケットをネジで固定します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServer/wiki/07.png" alt="pir" width height="auto" /></p>
 
 ### ハードウェアインターフェース
 
-このセクションでは、reServer のインターフェース接続について説明します。
+この部分では、reServerのインターフェース接続について紹介します。
 
 #### 電源接続
 
-AC-DC電源アダプター（製品ボックスに同梱）をAC電源コード（製品ボックス外だがパッケージ内）に接続し、それをreServerの12V DCジャックに接続してください。
+AC-DC電源アダプター（製品ボックスに含まれています）をAC電源コード（製品ボックスの外にありますが、パッケージ内にあります）と接続し、reServerの12V DCジャックに接続するだけです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/reserver_power.png" alt="pir" width={300} height="auto" /></p>
 
 #### デュアルUSB 3.1ポート
 
-デュアルUSB 3.1ポートを使用して、キーボードやマウスなどのUSBデバイスを接続できます。
+デュアルUSB 3.1ポートを通じて、キーボードやマウスなどのUSBデバイスを接続できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/reserver_usb.png" alt="pir" width={300} height="auto" /></p>
 
@@ -841,35 +845,35 @@ AC-DC電源アダプター（製品ボックスに同梱）をAC電源コード�
 
 reServerをディスプレイに接続する方法は2つあります。
 
-**方法1.** HDMIポート  
-**方法2.** DPポート
+**方法 1.** HDMIポート
+**方法 2.** DPポート
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/reserver_display.png" alt="pir" width={300} height="auto" /></p>
 
 #### イーサネット接続
 
-reServer J2032には2つのイーサネットポートが搭載されており、それぞれの接続速度は1000BASE-Tおよび2.5GBASE-Tです。
+reServer J2032には2つのイーサネットポートが搭載されており、接続速度はそれぞれ1000BASE-Tと2.5GBASE-Tです。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reServerJ2032/ethernetport.png" alt="pir" width={300} height="auto" /></p>
 
 ## リソース
 
-- **[PDF]** [reServer 組み立てガイド](https://files.seeedstudio.com/wiki/reComputer/reServer_Jetson_Assembly_Guide.pdf)
-- [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio Edge AI 成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス ワンページ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- **[PDF]** [reServer組み立てガイド](https://files.seeedstudio.com/wiki/reComputer/reServer_Jetson_Assembly_Guide.pdf)
+- [Seeed Jetsonシリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetsonシリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

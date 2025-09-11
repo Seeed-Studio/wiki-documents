@@ -700,7 +700,7 @@ It is required to download the [Segger](https://www.segger.com/downloads/jlink/)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link.png" alt="pir" width={250} height="auto" /></p>
 
-- **Step 2.** Start the J-Flash and search nRF54L15, creating a new project:
+- **Step 2.** Start the J-Flash and search nRF54L15_M33, creating a new project:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/j_link4.jpg" alt="pir" width={700} height="auto" /></p>
 

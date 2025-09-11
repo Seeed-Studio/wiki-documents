@@ -30,7 +30,8 @@ while also providing connectivity options for a variety of peripherals.
 
 ## Features
 
-* **Low-Power High-Sensitivity LoRa/(G)FSK Half-Duplex RF Transceiver**: Frequency bands support in the range 863- 928MHz
+- **Low-Power High-Sensitivity LoRa/(G)FSK Half-Duplex RF Transceiver**: Frequency bands support in the range 863- 928MHz
+
 - **Multi-Purpose Radio Front-End for Geolocation**: GNSS (GPS/ BeiDou),Wi-Fi,Bluetooth
 - **Rich GPIOs**: Over 400 Grove-compatible GPIOs for flexible expansion options.
 - **Open Source Platform**: Leverage the extensive LR1110 and nRF52840 open source ecosystem for infinite application possibilities.

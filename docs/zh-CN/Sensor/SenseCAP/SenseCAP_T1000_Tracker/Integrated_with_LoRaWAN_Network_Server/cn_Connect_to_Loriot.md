@@ -12,7 +12,7 @@ last_update:
 ---
 
 
-[LORIOT](https://docs.loriot.io/display/NMS/Getting+Started) LoRAWAN 网络服务器 (LNS) 是硬件无关的，支持市场上的每一个 LoRaWAN® 网关和传感器。
+[LORIOT](https://docs.loriot.io/display/NMS/Getting+Started) LoRAWAN 网络服务器 (LNS) 是硬件无关的，支持市场上的每一种 LoRaWAN® 网关和传感器。
 
 :::info
 如果您没有 Loriot 账户，请前往[这里](https://loriot.io/register.html)，在您所在地区选择一个 LORIOT 社区公共服务器并注册一个新账户。
@@ -32,13 +32,13 @@ last_update:
 
 ### 添加您的第一个网关
 
-通过添加您的第一个网关来启动您的 LoRaWAN 网络！您也可以按照 Loriot [逐步指南](https://docs.loriot.io/display/NMS/Register+a+Gateway+or+Base+Station)来注册网关或基站。
+通过添加您的第一个网关来启动您的 LoRaWAN 网络！您也可以按照 Loriot 的[逐步指南](https://docs.loriot.io/display/NMS/Register+a+Gateway+or+Base+Station)来注册网关或基站。
 
 我们在这里创建一个网关（Basics Station Semtech）作为示例。导航到 `Network`，然后点击您刚刚添加的网络。点击 `Add Gateway`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/AddGateway.png" alt="pir" width={800} height="auto" /></p>
 
-在页面下半部分将出现网关列表，通过点击相关网关型号的图片来选择它。
+在页面下半部分会出现网关列表，通过点击相关网关型号的图片来选择它。
 要注册网关，需要输入网关的 eth0 MAC 地址（六个用冒号分隔的八位字节）。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/Loriot/NInfo.png" alt="pir" width={800} height="auto" /></p>
 
@@ -60,7 +60,7 @@ last_update:
 
 ## 添加应用程序
 
-[应用程序](https://docs.loriot.io/display/NMS/Create+a+New+Application)简单来说就是我们注册、管理和组织设备的地方，并为设备数据选择输出目的地。
+[应用程序](https://docs.loriot.io/display/NMS/Create+a+New+Application)简单来说就是我们注册、管理和组织设备的地方，并为设备数据选择输出目标。
 当添加新设备时，它被分配到一个应用程序，这告知服务器您的设备注册在哪个应用程序中以及您选择的数据输出的详细信息。
 
 只要设备总数不超过用户的账户限制，任何数量的设备都可以添加到应用程序中，无论传感器类型或制造商如何。

@@ -1,5 +1,8 @@
-position: 1 # 浮動小数点の位置がサポートされています
-label: 'XIAO 75インチ E-Paper パネル'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
-className: xiao_075inch_epaper_panel
+position: 1 # float position is supported
+label: 'XIAO 7.5" ePaper パネル'
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
+className: xiao_7_5inch_epaper_panel
+link:
+  type: "doc"
+  id: 'ja/Sensor/SeeedStudio_XIAO_Gadgets/xiao_075inch_epaper_panel/ja_xiao_075inch_epaper_panel'

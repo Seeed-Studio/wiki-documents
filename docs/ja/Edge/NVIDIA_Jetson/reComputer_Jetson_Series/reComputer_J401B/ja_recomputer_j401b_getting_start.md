@@ -1,20 +1,16 @@
 ---
-description: reComputer J401B は、NVIDIA Jetson Orin モジュールを搭載したコンパクトで高性能なエッジ AI デバイスであり、豊富な I/O インターフェースを備え、JetPack 5.1.3 から 6.2 をサポートして多用途な AI アプリケーションに対応します。本ガイドでは、その仕様、フラッシュ手順、および開発と展開のためのインターフェース使用法について説明します。
-title: reComputer J401B の使い方
+description: reComputer J401Bは、NVIDIA Jetsonモジュールを搭載したコンパクトで高性能なエッジAIデバイスで、豊富なI/Oインターフェースを提供し、JetPack 5.1.3から6.2をサポートして多様なAIアプリケーションに対応します。このガイドでは、仕様、フラッシュ手順、開発・デプロイメント用のインターフェース使用方法について説明します。
+title: reComputer J401Bを始める
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.webp
 slug: /ja/recomputer_j401b_getting_start
 last_update:
-  date: 05/15/2025
+  date: 4/27/2025
   author: Youjiang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reComputer J401B の使い方
+# reComputer J401Bを始める
 
 <div align="center">
   <img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401B/recomputer-j401b_1.jpg"/>
@@ -25,19 +21,20 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </div>
 
 ## はじめに
-reComputer J401B シリーズは、reComputer Classic シリーズの進化版です。NVIDIA Jetson Orin NX 8GB モジュールを搭載した reComputer J4011B は、2x USB 3.2、HDMI、Ethernet、Wi-Fi モジュール用 M.2 Key E、SSD 用 M.2 Key M、LTE モジュール用 mini-PCIe、CAN、40 ピンなどの豊富なインターフェースを備えた強力でコンパクトなエッジ AI デバイスです。
+
+reComputer J401Bシリーズは、reComputer Classicシリーズの改良版です。NVIDIA Jetson Orin NX 8GBモジュールを搭載したreComputer J4011Bは、豊富なインターフェースを備えた強力でコンパクトなエッジAIデバイスです：2x USB 3.2、HDMI、Ethernet、Wi-FiモジュールのためのM.2 Key E、SSDのためのM.2 Key M、LTEモジュールのためのmini-PCIe、CAN、40ピンなど。
 
 ## 特徴
 
-- **最も強力な組み込み AI プラットフォームを構築:** Jetson Orin NX モジュールに対応し、最大 100 TOPS を提供。
+- **最も強力な組み込みAIプラットフォームを構築：** Jetson Orin NXモジュールと互換性があり、最大100 TOPSを提供します。
 
-- **開発と生産の両方に対応した設計:** 豊富な I/O を装備: 2x USB3.2、HDMI、Ethernet、M.2 Key M、M.2 Key E、mini-PCIe、40 ピン GPIO など。Wi-Fi や LTE を含む複数の有線および無線通信をサポート。
+- **開発と製品化の両方に対応した設計：** 豊富なI/Oセットを装備：2x USB3.2、HDMI、Ethernet、M.2 Key M、M.2 Key E、mini-PCIe、40ピンGPIOなど。Wi-FiやLTEを含む複数の有線・無線通信をサポート
 
-- **即時市場投入可能:** JetPack 5.1.3 プリインストール済み、Linux OS BSP 対応。
+- **即座に市場投入可能：** JetPack5.1.3がプリインストール済み、Linux OS BSP対応
 
-- **認証:** ROHS、CE、FCC、KC、UKCA、REACH。
+- **認証取得済み** ROHS、CE、FCC、KC、UKCA、REACH
 
-- **長期供給:** 生産寿命は少なくとも 2032 年まで。
+- **長期供給保証：** 製品寿命：少なくとも2032年まで
 
 ## 仕様
 
@@ -60,7 +57,7 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
       <td>Jetson Orin NX 16GB</td>
     </tr>
     <tr>
-      <td>AI パフォーマンス</td>
+      <td>AI性能</td>
       <td>20 TOPS</td>
       <td>40 TOPS</td>
       <td>70 TOPS</td>
@@ -68,12 +65,12 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
     </tr>
     <tr>
       <td>GPU</td>
-      <td>512コア NVIDIA Ampere アーキテクチャ GPU（16 Tensor コア付き）</td>
-      <td>1024コア NVIDIA Ampere アーキテクチャ GPU（32 Tensor コア付き）</td>
-      <td colspan='2' align='center'>1024コア NVIDIA Ampere アーキテクチャ GPU（32 Tensor コア付き）</td>
+      <td>512コア NVIDIA Ampereアーキテクチャ GPU、16 Tensorコア搭載</td>
+      <td>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensorコア搭載</td>
+      <td colspan='2' align='center'>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensorコア搭載</td>
     </tr>
     <tr>
-      <td>GPU 最大周波数</td>
+      <td>GPU最大周波数</td>
       <td colSpan='2' align='center'>625 MHz</td>
       <td>765 MHz</td>
       <td>918 MHz</td>
@@ -85,7 +82,7 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
       <td>8コア Arm® Cortex®-A78AE v8.2 64ビット CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>CPU 最大周波数</td>
+      <td>CPU最大周波数</td>
       <td colSpan='2' align='center'>1.5 GHz</td>
       <td colSpan='2' align='center'>2 GHz</td>
     </tr>
@@ -97,13 +94,13 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
       <td>16GB 128ビット LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
-      <td>DL アクセラレータ</td>
+      <td>DLアクセラレータ</td>
       <td colSpan='2' align='center'>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>DLA 最大周波数</td>
+      <td>DLA最大周波数</td>
       <td colSpan='2' align='center'>/</td>
       <td colSpan='2' align='center'>614 MHz</td>
     </tr>
@@ -118,7 +115,7 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
     </tr>
     <tr>
       <td>ビデオエンコーダ</td>
-      <td colSpan='2' align='center'>1080p30（1-2 CPU コアでサポート）</td>
+      <td colSpan='2' align='center'>1080p30 1-2 CPUコアでサポート</td>
       <td colSpan='2' align='center'>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
@@ -131,11 +128,11 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
       <td colSpan='4' align='center'>1* HDMI 2.1</td>
     </tr>
     <tr>
-      <td>CSI カメラ</td>
+      <td>CSIカメラ</td>
       <td colSpan='4' align='center'>2* CSI （2レーン 15ピン）</td>
     </tr>
     <tr>
-      <td>ネットワーキング</td>
+      <td>ネットワーク</td>
       <td colSpan='4' align='center'>1* ギガビットイーサネット (10/100/1000M)</td>
     </tr>
     <tr>
@@ -152,11 +149,11 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
     </tr>
     <tr>
       <td>Mini PCIe</td>
-      <td colSpan='4' align='center'>1* mini-PCIe（LTE モジュール用）</td>
+      <td colSpan='4' align='center'>1* mini-PCIe LTEモジュール用</td>
     </tr>
     <tr>
       <td>ファン</td>
-      <td colSpan='4' align='center'>1* 4ピンファンコネクタ（5V PWM）</td>
+      <td colSpan='4' align='center'>1* 4ピン ファンコネクタ(5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -164,22 +161,22 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
     </tr>
     <tr>
       <td>多機能ポート</td>
-      <td colSpan='4' align='center'>1* 40ピン拡張ヘッダー、1* 12ピン制御および UART ヘッダー</td>
+      <td colSpan='4' align='center'>1* 40ピン拡張ヘッダー、1* 12ピン制御・UARTヘッダー</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan='4' align='center'>RTC 2ピン、RTC ソケット（CR1220 対応、付属しません）</td>
+      <td colSpan='4' align='center'>RTC 2ピン、RTCソケット (CR1220対応、ただし付属せず)</td>
     </tr>
     <tr>
       <td>電源</td>
-      <td colSpan='4' align='center'>DC 9-19V（5525 DC ジャック経由）</td>
+      <td colSpan='4' align='center'> DC 9-19V 5525 DCジャック経由 </td>
     </tr>
     <tr>
-      <td>電源アダプタ</td>
+      <td>電源供給</td>
       <td colSpan='4' align='center'>電源アダプタは付属しません</td>
     </tr>
     <tr>
-      <td>温度</td>
+      <td>動作温度</td>
       <td colSpan='4' align='center'>-10℃~60℃</td>
     </tr>
     <tr>
@@ -189,51 +186,53 @@ reComputer J401B シリーズは、reComputer Classic シリーズの進化版�
   </tbody>
 </table>
 
-## JetPack をフラッシュする
+## Flash JetPack
 
-ここでは、reComputer J4012B/ J4011B/ J3010B および J3011B に接続された NVMe SSD に [JetPack](https://developer.nvidia.com/embedded/jetpack) をフラッシュする方法を説明します。これらのデバイスにはすべて J401B キャリアボードが内蔵されており、フラッシュ手順はすべて同じです。
+ここでは、reComputer J4012B/ J4011B/ J3010B および J3011B に接続された NVMe SSD に [Jetpack](https://developer.nvidia.com/embedded/jetpack) をフラッシュする方法を説明します。これらのデバイスはすべて内部に J401B キャリアボードを搭載しており、フラッシュ手順はすべて同じです。
 
 :::danger
-reComputer J401B シリーズには、付属の NVMe SSD に JetPack 5.1.3 がプリインストールされています。そのため、フラッシュする必要はありません。ただし、JetPack を再度フラッシュしたい場合は、このガイドに従ってください。
+reComputer J401B シリーズには、付属の NVMe SSD に JetPack 5.1.3 がプリインストールされているため、フラッシュする必要はありません。ただし、JetPack で再度フラッシュしたい場合は、このガイドに従ってください。
 :::
 
-### 対応モジュール
-- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html) 
-- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer) 
-- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html) 
-- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html) 
+### サポートされているモジュール
 
-### 必要条件
+- [NVIDIA® Jetson Orin™ Nano Module 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html)
+- [NVIDIA® Jetson Orin™ Nano Module 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html?___store=retailer)
+- [NVIDIA® Jetson Orin™ NX Module 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)
+- [NVIDIA® Jetson Orin™ NX Module 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)
+
+### 前提条件
 
 - Ubuntu ホストコンピュータ
 - reComputer J4012B/ J4011B/ J3010B または J3011B
 - USB Type-C データ転送ケーブル
 
 :::info
-物理的な Ubuntu ホストデバイスを使用することを推奨します。以下の表を参照してホストマシンを準備してください。
-        
+仮想マシンではなく、物理的な ubuntu ホストデバイスを使用することをお勧めします。
+ホストマシンを準備するには、以下の表を参照してください。
+
 <table style={{textAlign: 'center'}}>
   <tbody>
     <tr>
-        <td rowspan="2"> JetPack バージョン </td>
-        <td class="dbon" colspan="3"> Ubuntu バージョン (ホストコンピュータ) </td>
+        <td  rowspan="2"> JetPack バージョン </td>
+        <td class="dbon" colspan="3"> Ubuntu バージョン（ホストコンピュータ） </td>
     </tr>
     <tr>
-        <td> 18.04 </td>
-        <td> 20.04 </td>
-        <td> 22.04 </td>
+        <td > 18.04 </td>
+        <td > 20.04 </td>
+        <td > 22.04 </td>
     </tr>
     <tr>
-        <td>JetPack 5.x</td>
-        <td> ✅ </td>
-        <td> ✅ </td>
-        <td> </td>
+        <td >JetPack 5.x</td>
+        <td > ✅ </td>
+        <td > ✅ </td>
+        <td > </td>
     </tr>
     <tr>
-        <td>JetPack 6.x</td>
-        <td> </td>
-        <td> ✅ </td>
-        <td> ✅ </td>
+        <td >JetPack 6.x</td>
+        <td > </td>
+        <td > ✅ </td>
+        <td > ✅ </td>
     </tr>
   </tbody>
 </table>
@@ -241,24 +240,26 @@ reComputer J401B シリーズには、付属の NVMe SSD に JetPack 5.1.3 が�
 :::
 
 :::note
-- フラッシュには仮想マシンや ARM アーキテクチャの Ubuntu を使用することを推奨しません。
+
+- 仮想マシンとARM アーキテクチャのUbuntuをフラッシュに使用することは推奨しません。
+
 :::
 
 ### 強制リカバリモードに入る
 
-インストール手順に進む前に、Jetson デバイスが強制リカバリモードにあることを確認する必要があります。
+インストール手順に進む前に、jetsonデバイスが強制リカバリモードになっていることを確認する必要があります。
 
-以下の手順に従って、Jetson デバイスを強制リカバリモードに設定してください。
+以下の手順を参照して、jetsonデバイスを強制リカバリモードに設定してください。
 
 <div align="center"><img width="{800}" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/j401_set_recovery.gif" /></div>
 
 :::note
-アニメーション GIF に表示されているキャリアボードは J401 ですが、J401 と J401B キャリアボードの強制リカバリモードへの手順は同じです。
+アニメーションGIFのキャリアボードはJ401ですが、心配ありません — 強制リカバリモードに入る手順は、J401とJ401Bキャリアボードの両方で同じです。
 :::
 
 <details>
 
-<summary> 手順 </summary>
+<summary> ステップバイステップ </summary>
 
 **ステップ 1.** ジャンパーワイヤーを使用して **FC REC** ピンと **GND** ピンを接続します。
 
@@ -313,32 +314,32 @@ reComputer J401B シリーズには、付属の NVMe SSD に JetPack 5.1.3 が�
 </tbody>
 </table>
 
-**ステップ 2.** 電源アダプター付属のケーブルを使用して reComputer に電源を供給し、USB Type-C データ転送ケーブルでボードを Ubuntu ホスト PC に接続します。
+**ステップ 2.** 付属の電源アダプターケーブルを接続してreComputerに電源を供給し、USB Type-Cデータ転送ケーブルでボードをUbuntuホストPCに接続します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/2.png"/></div>
 
-**ステップ 3.** Linux ホスト PC でターミナルウィンドウを開き、`lsusb` コマンドを入力します。使用している Jetson SoM に応じて、以下のいずれかの出力が表示されれば、ボードは強制リカバリモードにあります。
+**ステップ 3.** LinuxホストPCでターミナルウィンドウを開き、コマンド `lsusb` を入力します。使用するJetson SoMに応じて、返される内容に以下の出力のいずれかが含まれている場合、ボードは強制リカバリモードになっています。
 
-- Orin NX 16GB の場合: **0955:7323 NVidia Corp**
-- Orin NX 8GB の場合: **0955:7423 NVidia Corp**
-- Orin Nano 8GB の場合: **0955:7523 NVidia Corp**
-- Orin Nano 4GB の場合: **0955:7623 NVidia Corp**
+- Orin NX 16GBの場合: **0955:7323 NVidia Corp**
+- Orin NX 8GBの場合: **0955:7423 NVidia Corp**
+- Orin Nano 8GBの場合: **0955:7523 NVidia Corp**
+- Orin Nano 4GBの場合: **0955:7623 NVidia Corp**
 
-以下の画像は Orin NX 16GB の例です。
+以下の画像はOrin NX 16GBの場合です
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/3.png"/></div>
 
-**ステップ 4.** ジャンパーワイヤーを取り外します。
+**ステップ 4.** ジャンパーワイヤーを取り外します
 
 </details>
 
-### JetPack OS をフラッシュする
+### JetpackOSのフラッシュ
 
 :::note
-フラッシュを進める前に、Jetson Orin NX モジュールは JetPack 5.1 以上のみをサポートし、Jetson Orin Nano モジュールは JetPack 5.1.1 以上のみをサポートしていることに注意してください。
+フラッシュに進む前に、Jetson Orin NXモジュールはJetPack 5.1以上のみをサポートし、Jetson Orin NanoモジュールはJetPack 5.1.1以上のみをサポートすることに注意してください。
 :::
 
-まず、JetPack をフラッシュする前に、以下の必要な依存関係を Ubuntu ホスト PC にインストールします。
+まず最初に、JetPackのフラッシュに進む前に、UbuntuホストPCに以下の必要な依存関係をインストールします。
 
 ```sh
 sudo apt install qemu-user-static sshpass abootimg nfs-kernel-server libxml2-utils binutils -y
@@ -352,13 +353,13 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="JP5.1.1" label="JP5.1.1">
 
-ここでは、NVIDIA L4T 35.3.1 を使用して reComputer に JetPack 5.1.1 をインストールします。
+ここでは、NVIDIA L4T 35.3.1を使用してreComputerにJetpack 5.1.1をインストールします
 
-**ステップ 1:** NVIDIA ドライバーをホスト PC に[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバーは以下の通りです。
+**ステップ1:** ホストPCに[NVIDIA ドライバーをダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3531)します。必要なドライバーは以下の通りです：
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2:** **Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を解凍し、これらのファイルが含まれるフォルダに移動して変更を適用し、必要な前提条件をインストールします。
+**ステップ2:** **Jetson_Linux_R35.3.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.3.1_aarch64** を、これらのファイルが含まれているフォルダに移動して展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.3.1_aarch64
@@ -368,19 +369,19 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-**ステップ 3 (オプション):** ユーザー名、パスワード、ホスト名を設定して、デバイスの起動後に Ubuntu インストールウィザードをスキップできるようにします。
+**ステップ3（オプション）:** デバイスの起動完了後にUbuntuインストールウィザードを入力する必要がないよう、ユーザー名、パスワード、ホスト名を設定します
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例 (ユーザー名: "nvidia", パスワード: "nvidia", デバイス名: "nvidia-desktop"):
+For example (username:"nvidia", password:"nvidia", device-name:"nvidia-desktop"):
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 4:** システムを NVMe SSD にフラッシュする
+**ステップ 4:** システムをNVMe SSDにフラッシュする
 
 ```sh
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
@@ -388,19 +389,19 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1 \
   --showlogs --network usb0 p3509-a02+p3767-0000 internal
 ```
 
-フラッシュプロセスが成功すると、以下の出力が表示されます。
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
-これで、マウス、キーボード、モニターを Jetson デバイスに接続できます。デバイスは使用可能になります！
+これで、マウス、キーボード、モニターをJetsonデバイスに接続できます。使用準備が完了しました！
 
 :::tip
-Jetson デバイスがデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
+Jetsonデバイスのデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
 :::
 
-**ステップ 5 (オプション):** Nvidia Jetpack SDK をインストールする
+**ステップ 5（オプション）：** Nvidia Jetpack SDKのインストール
 
-**Jetson デバイス**でターミナルを開き、以下のコマンドを実行してください:
+**Jetsonデバイス**でターミナルを開き、以下のコマンドを実行してください：
 
 ```bash
 sudo apt update
@@ -410,13 +411,13 @@ sudo apt install nvidia-jetpack
 </TabItem>
 <TabItem value="JP5.1.2" label="JP5.1.2">
 
-ここでは NVIDIA L4T 35.4.1 を使用して Jetpack 5.1.2 を reComputer にインストールします。
+ここでは、NVIDIA L4T 35.4.1を使用してreComputerにJetpack 5.1.2をインストールします
 
-**ステップ 1:** ホスト PC に NVIDIA ドライバーを[ダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3541)します。必要なドライバーは以下の通りです:
+**ステップ1:** ホストPCに[NVIDIA ドライバーをダウンロード](https://developer.nvidia.com/embedded/jetson-linux-r3541)します。必要なドライバーは以下の通りです：
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/Jetson-AGX-Orin-32GB-H01-Kit/2.jpg"/></div>
 
-**ステップ 2:** **Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を解凍し、これらのファイルが含まれるフォルダに移動して変更を適用し、必要な前提条件をインストールします。
+**ステップ2:** **Jetson_Linux_R35.4.1_aarch64** と **Tegra_Linux_Sample-Root-Filesystem_R35.4.1_aarch64** を、これらのファイルが含まれているフォルダに移動して展開し、変更を適用して必要な前提条件をインストールします
 
 ```sh
 tar xf Jetson_Linux_R35.4.1_aarch64.tbz2
@@ -426,15 +427,15 @@ sudo ./apply_binaries.sh
 sudo ./tools/l4t_flash_prerequisites.sh
 ```
 
-次に、JP5.1.2 に必要な NVIDIA のパッチを適用します。このパッチについては、公式の NVIDIA JetPack リリースノートのセクション 4.2.3 に[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)で説明されています。
+現在、JP5.1.2に必要なNVIDIAのパッチを適用する必要があります。これは公式のNVIDIA JetPack リリースノートのセクション4.2.3で[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/ReleaseNotes/Jetson_Linux_Release_Notes_r35.4.1.pdf)に説明されています。
 
-**ステップ 3:** 以下のディレクトリに移動します。
+**ステップ 3:** 以下のディレクトリに移動します
 
 ```sh
 cd Linux_for_Tegra/bootloader/t186ref/BCT
 ```
 
-**ステップ 4:** ファイル **"tegra234-mb2-bct-scr-p3767-0000.dts"** を開き、**tfc** セクションの下に以下の行を追加します。
+**ステップ 4:** ファイル **"tegra234-mb2-bct-scr-p3767-0000.dts"** を開き、**tfc** セクションの下に以下の行を追加します
 
 ```sh
 tfc {
@@ -444,20 +445,20 @@ tfc {
     };
 ```
 
-**ステップ 5 (オプション):** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、ホスト名を設定します。これにより、デバイスの起動後に Ubuntu インストールウィザードを入力する必要がなくなります。
+**ステップ5（オプション）：** **"Linux_for_Tegra"** ディレクトリに移動し、以下のコマンドを入力してユーザー名、パスワード、ホスト名を設定します。これにより、デバイスの起動完了後にUbuntuインストールウィザードを実行する必要がなくなります
 
 ```sh
 cd Linux_for_Tegra
 sudo tools/l4t_create_default_user.sh -u {USERNAME} -p {PASSWORD} -a -n {HOSTNAME} --accept-license
 ```
 
-例 (ユーザー名:"nvidia", パスワード:"nvidia", デバイス名:"nvidia-desktop"):
+例（ユーザー名："nvidia"、パスワード："nvidia"、デバイス名："nvidia-desktop"）：
 
 ```sh
 sudo tools/l4t_create_default_user.sh -u nvidia -p nvidia -a -n nvidia-desktop --accept-license
 ```
 
-**ステップ 6:** システムを NVMe SSD にフラッシュします。
+**ステップ 6:** システムをNVMe SSDにフラッシュする
 
 ```bash
 
@@ -466,19 +467,19 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --external-device nvme0n1p1   -c t
 
 ```
 
-フラッシュプロセスが成功すると、以下の出力が表示されます。
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
-これで、マウス、キーボード、モニターを Jetson デバイスに接続できます。デバイスは使用可能になります！
+これで、マウス、キーボード、モニターをJetsonデバイスに接続できます。使用準備が完了しました！
 
 :::tip
-Jetson デバイスがデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
+Jetsonデバイスのデスクトップを開くのに時間がかかる場合は、電源を再接続してください。
 :::
 
-**ステップ 7 (オプション):** Nvidia Jetpack SDK をインストールする
+**ステップ 7（オプション）:** Nvidia Jetpack SDKをインストール
 
-**Jetson デバイス**でターミナルを開き、以下のコマンドを実行してください:
+**Jetsonデバイス**でターミナルを開き、以下のコマンドを実行してください：
 
 ```bash
 sudo apt update
@@ -489,15 +490,15 @@ sudo apt install nvidia-jetpack
 
 <TabItem value="JP5.1.3" label="JP5.1.3">
 
-ここでは Jetpack 5.1.3 を reComputer にインストールします。
+ここでは、reComputerにJetpack 5.1.3をインストールします。
 
-**ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします。
+**ステップ1:** 使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetson モジュール</th>
+      <th>Jetsonモジュール</th>
       <th>ダウンロードリンク</th>
       <th>SHA256</th>
     </tr>
@@ -536,47 +537,47 @@ sudo apt install nvidia-jetpack
 </div>
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256 ハッシュ値を比較してください。
+ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較することができます。
 
-
-Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマンドを実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがWikiに記載されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全であることが確認されます。
+Ubuntホストマシンで、ターミナルを開き、コマンド `sha256sum <File>` を実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
 
-**ステップ2:** ダウンロードしたイメージファイルを解凍します:
+**ステップ2:** ダウンロードしたイメージファイルを展開します：
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
-# 例: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**ステップ3:** 解凍したディレクトリに移動し、以下のコマンドを実行してJetpackシステムをNVMe SSDにフラッシュします:
+**ステップ3:** 解凍されたディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
-# 例: cd mfi_recomputer-orin-j401
+# For example: cd mfi_recomputer-orin-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュプロセスが成功すると、以下の出力が表示されます。
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドの実行には2〜10分かかる場合があります。
+フラッシュコマンドは2-10分間実行される場合があります。
 :::
 
-**ステップ4:** J401をHDMIコネクタを使用してディスプレイに接続し、初期設定を完了します。
+**ステップ 4:** J401をボード上のHDMIコネクタを使用してディスプレイに接続し、初期設定セットアップを完了します。
 
 :::info
-**システム設定**を必要に応じて完了してください。
+必要に応じて**システム設定**を完了してください。
 :::
 
 </TabItem>
 
 <TabItem value="JP6.0" label="JP6.0">
 
-ここでは、NVIDIA L4T 36.3を使用してJetpack 6.0をreComputerにインストールします。
+ここではNVIDIA L4T 36.3を使用してreComputerにJetpack 6.0をインストールします
 
-**ステップ1:** 使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードします:
+**ステップ 1:** 使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -634,42 +635,44 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256ハッシュ値を比較してください。
+ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較できます。
 
-Ubuntuホストマシンでターミナルを開き、`sha256sum <File>`コマンドを実行して、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがWikiに記載されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全であることが確認されます。
+Ubuntホストマシンで、ターミナルを開き、コマンド `sha256sum <File>` を実行してダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
 
-**ステップ2:** ダウンロードしたイメージファイルを解凍します:
+**ステップ 2:** ダウンロードしたイメージファイルを展開します：
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
-# 例: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.0-36.3.0-2024-06-07.tar.gz
 ```
 
-**ステップ3:** 解凍したディレクトリに移動し、以下のコマンドを実行してJetpackシステムをNVMe SSDにフラッシュします:
+**ステップ3:** 解凍されたディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
-# 例: cd mfi_recomputer-orin-j401
+# For example: cd mfi_recomputer-orin-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュプロセスが成功すると、以下の出力が表示されます。
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドの実行には2〜10分かかる場合があります。
+フラッシュコマンドは2-10分間実行される場合があります。
 :::
 
-**ステップ4:** J401をHDMIコネクタを使用してディスプレイに接続し、初期設定を完了します:
+**ステップ 4:** ボード上のHDMIコネクタを使用してJ401をディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-**システム設定**を必要に応じて完了してください。
+必要に応じて**システム設定**を完了してください。
 :::
 
-**ステップ5:** システム起動後、以下のコマンドを実行して無線ネットワークカードドライバを再有効化する必要があります:
+**ステップ 5:** システム起動後、ワイヤレスネットワークカードドライバーを再アクティベートするために、以下のコマンドを実行する必要があります：
+
 ```bash
 sudo rm /lib/modules/5.15.136-tegra/build
 sudo ln -s /usr/src/linux-headers-5.15.136-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.136-tegra/build
@@ -680,7 +683,7 @@ sudo apt install -y iwlwifi-modules
 
 <TabItem value="JP6.1" label="JP6.1">
 
-ここでは、NVIDIA L4T 36.4 を使用して reComputer に Jetpack 6.1 をインストールします。
+ここでは、NVIDIA L4T 36.4 を使用して reComputer に Jetpack 6.1 をインストールします
 
 **ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
 
@@ -727,54 +730,55 @@ sudo apt install -y iwlwifi-modules
 </div>
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256 ハッシュ値を比較してください。
+ダウンロードしたファームウェアの整合性を確認するために、SHA256 ハッシュ値を比較することができます。
 
-Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行してダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュ値が wiki に記載されている SHA256 ハッシュ値と一致すれば、ダウンロードしたファームウェアが完全であることが確認できます。
+Ubuntu ホストマシンでターミナルを開き、コマンド `sha256sum <File>` を実行してダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュが wiki で提供されている SHA256 ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
 
-**ステップ 2:** ダウンロードしたイメージファイルを解凍します：
+**ステップ 2:** ダウンロードしたイメージファイルを展開します：
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
-# 例: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-6.1-36.4.0-2024-12-04.tar
+# For example: sudo tar xpf mfi_recomputer-orin-nx-16g-j401-6.1-36.4.0-2024-12-04.tar
 ```
 
-**ステップ 3:** 解凍したディレクトリに移動し、以下のコマンドを実行して Jetpack システムを NVMe SSD にフラッシュします：
+**ステップ3:** 解凍されたディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
-# 例: cd mfi_recomputer-orin-j401
+# For example: cd mfi_recomputer-orin-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュプロセスが成功すると、以下のような出力が表示されます：
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドの実行には 2～10 分かかる場合があります。
+フラッシュコマンドは2-10分間実行される場合があります。
 :::
 
-**ステップ 4:** J401 を HDMI コネクタを使用してディスプレイに接続し、初期設定を完了します：
+**ステップ 4:** J401をボード上のHDMIコネクタを使用してディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-必要に応じて **システム設定** を完了してください。
+必要に応じて**システム設定**を完了してください。
 :::
 
 </TabItem>
 
 <TabItem value="JP6.2" label="JP6.2">
 
-ここでは、NVIDIA L4T 36.4.3 を使用して reComputer に Jetpack 6.2 をインストールします。
+ここではNVIDIA L4T 36.4.3を使用してreComputerにJetpack 6.2をインストールします
 
-**ステップ 1:** 使用している Jetson モジュールに対応するシステムイメージを Ubuntu PC にダウンロードします：
+**ステップ 1:** 使用しているJetsonモジュールに対応するシステムイメージをUbuntu PCにダウンロードします：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>Jetson モジュール</th>
+      <th>Jetsonモジュール</th>
       <th>ダウンロードリンク</th>
       <th>SHA256</th>
     </tr>
@@ -799,77 +803,79 @@ sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --netwo
 </div>
 
 :::info
-ダウンロードしたファームウェアの整合性を確認するには、SHA256 ハッシュ値を比較してください。
+ダウンロードしたファームウェアの整合性を確認するために、SHA256ハッシュ値を比較することができます。
 
-Ubuntu ホストマシンでターミナルを開き、`sha256sum <File>` コマンドを実行してダウンロードしたファイルの SHA256 ハッシュ値を取得します。結果のハッシュ値が wiki に記載されている SHA256 ハッシュ値と一致すれば、ダウンロードしたファームウェアが完全であることが確認できます。
+Ubuntuホストマシンで、ターミナルを開いて`sha256sum <File>`コマンドを実行し、ダウンロードしたファイルのSHA256ハッシュ値を取得します。結果のハッシュがwikiで提供されているSHA256ハッシュと一致する場合、ダウンロードしたファームウェアが完全で破損していないことが確認されます。
 :::
 
 :::note
-`super mode` を有効にした後の消費電力と発熱の増加により、[reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html) および [reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html) は最高モードで安定して動作することができません。そのため、このアップデートにはこれら 2 つの製品は含まれていません。
-現在、新しいバージョンの reComputer を設計中です。続報をお待ちください！
+`super mode`を有効にした後の消費電力の増加と発熱により、[reComputer J4011B](https://www.seeedstudio.com/reComputer-J4011B-p-6407.html)と[reComputer J4012B](https://www.seeedstudio.com/reComputer-J4012B-p-6406.html)は最高モードで安定して動作できないことにご注意ください。そのため、この更新にはこれら2つの製品は含まれていません。
+現在、新しいバージョンのreComputerを設計中です。ご期待ください！
 :::
 
-**ステップ 2:** ダウンロードしたイメージファイルを解凍します：
+**ステップ2:** ダウンロードしたイメージファイルを展開します：
+
 ```bash
 sudo tar xpf mfi_xxxx.tar.gz
-# 例: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2025-02-08.tar.gz
+# For example: sudo tar xpf mfi_recomputer-orin-nano-8g-j401-6.2-36.4.3-2025-02-08.tar.gz
 ```
 
-**ステップ 3:** 解凍したディレクトリに移動し、以下のコマンドを実行して Jetpack システムを NVMe SSD にフラッシュします：
+**ステップ3:** 解凍されたディレクトリに移動し、以下のコマンドを実行してjetpackシステムをNVMe SSDにフラッシュします：
 
 ```bash
 cd mfi_xxxx
-# 例: cd mfi_recomputer-orin-j401
+# For example: cd mfi_recomputer-orin-j401
 sudo ./tools/kernel_flash/l4t_initrd_flash.sh --flash-only --massflash 1 --network usb0  --showlogs
 ```
 
-フラッシュプロセスが成功すると、以下のような出力が表示されます：
+フラッシュプロセスが成功した場合、以下の出力が表示されます
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-J4012/4.png"/></div>
 
 :::note
-フラッシュコマンドの実行には 2～10 分かかる場合があります。
+フラッシュコマンドの実行には2〜10分かかる場合があります。
 :::
 
-**ステップ 4:** J401 をボード上の HDMI コネクタを使用してディスプレイに接続し、初期設定を完了してください：
+**ステップ4:** J401をボード上のHDMIコネクタを使用してディスプレイに接続し、初期設定セットアップを完了します：
 
 <div align="center"><img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/J401/jetpack6_configuration.png"/></div>
 
 :::info
-必要に応じて **システム設定** を完了してください。
+必要に応じて**システム設定**を完了してください。
 :::
 
 </TabItem>
 
 </Tabs>
 
-## インターフェースの使用方法
+## インターフェース使用方法
 
 :::info
-インターフェースの使用方法については、この [Wiki ページ](/ja/recomputer_j401b_interfaces_usage) を参照してください。
+インターフェース使用方法の詳細については、この[wikiページ](/recomputer_j401b_interfaces_usage)を参照してください。
 :::
 
 ## リソース
+
 - [reComputer J401B データシート](https://files.seeedstudio.com/wiki/reComputer/reComputer_J401B_datasheet_v1.pdf)
 - [reComputer J401B 回路図](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_CarrierBoard_SCH_V1.0.pdf)
-- [LTE ボード回路図](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_LTE_SCH_V1.0.pdf)
-- [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio Edge AI 成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス ワンページ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
-- [Jetson サンプル](https://github.com/Seeed-Projects/jetson-examples)
-- [reComputer-Jetson-初心者向け](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+- [LTEボード回路図](https://files.seeedstudio.com/products/NVIDIA/reComputer_J401B_LTE_SCH_V1.0.pdf)
+- [Seeed Jetsonシリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetsonシリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Jetsonサンプル](https://github.com/Seeed-Projects/jetson-examples)
+- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

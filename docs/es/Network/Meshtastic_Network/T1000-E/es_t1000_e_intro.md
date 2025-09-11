@@ -63,7 +63,7 @@ Es un tracker de alto rendimiento diseñado para Meshtastic, tan pequeño como u
 | :- | :- |
 |**Monitoreo de Vida de Batería**|Nivel de batería de enlace ascendente periódico|
 |<p>**Cable de Carga**</p><p>**(Adaptador no incluido)**</p>|Cable de carga magnético USB, 1 metro|
-|**Voltaje de Entrada de Alimentación**|4\.7 a 5.5V DC|
+|**Voltaje de Entrada de Alimentación**|4.7 a 5.5V DC|
 |**Límite de Temperatura de Carga**|0 a +45℃|
 
 ### Descripción general del hardware
@@ -87,7 +87,7 @@ Es un tracker de alto rendimiento diseñado para Meshtastic, tan pequeño como u
 |Habilitar Zumbador|P1.05|GPIO|
 |Botón|P0.6|GPIO|
 |Alimentación al sensor|P1.6|GPIO|
-|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0\_DIO3\_TCXO\_VOLT<br/>AGE 1.6V|SPI|
+|LR1110|P1.08: SPI MISO<br/>P1.09: SPI MOSI<br/>P0.11: SPI Clock<br/>P0.12: SPI NSS<br/>P1.10: LoRa Reset<br/>P1.01: LoRa DIO1<br/>P0.07: LoRa DIO2<br/>LR11X0_DIO3_TCXO_VOLT<br/>AGE 1.6V|SPI|
 |GPS|RX: P0.14<br/>TX: P0.13|Serial1 <br/>BAUDRATE:115200|
 
 

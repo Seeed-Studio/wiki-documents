@@ -104,7 +104,7 @@ Mac Path：
 `/Users/YourName/.platformio/platforms`
 
 Window Path：
-`C:\Users\000\.platformio\platforms\Seeed Studio`
+`C:\Users\000.platformio\platforms\Seeed Studio`
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_nRF54L15/Getting_Start/
 platformmodify.jpg" style={{width:600, height:'auto'}}/></div>

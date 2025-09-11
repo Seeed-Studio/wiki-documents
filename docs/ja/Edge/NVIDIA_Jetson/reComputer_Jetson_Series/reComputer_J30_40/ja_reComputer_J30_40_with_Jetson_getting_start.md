@@ -1,20 +1,16 @@
 ---
-description: JetPack を reComputer J4012 (J401 キャリアボード) にフラッシュする
-title: reComputer J30/40 の始め方
+description: reComputer J4012（J401キャリアボード）にJetPackをフラッシュする
+title: reComputer J30/40の使用開始
 keywords:
 - reComputer
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_J30_40_with_Jetson_getting_start
 last_update:
-  date: 05/15/2025
+  date: 6/29/2023
   author: Lakshantha
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reComputer J30/40 の始め方
+# reComputer J30/40の使用開始
 
 <div align="center">
   <iframe width="800" height="480" src="https://www.youtube.com/embed/-KAyUHzRxHc" title="Unboxing &amp; Plug in reComputer J4012 - Powered by NVIDIA Jetson Orin NX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -26,19 +22,19 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 </a></div>
 
 ## はじめに
-reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトなインテリジェントエッジボックスで、最大 100TOPS の最新 AI パフォーマンスをエッジに提供します。NVIDIA Ampere™ GPU アーキテクチャと 64 ビットの動作能力を組み合わせています。
+Jetson Orinを搭載したreComputer J30/40は、最大100TOPSの最新AI性能をエッジに提供する強力でコンパクトなインテリジェントエッジボックスです。NVIDIA Ampere™ GPUアーキテクチャと64ビット動作機能を組み合わせています。
 
-このフルシステムには、NVIDIA Jetson Orin プロダクションモジュール、ヒートシンク、電源アダプタが含まれています。reComputer J30/40 は Jetpack 5.1.1 がプリインストールされており、開発を簡素化し、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの業界で、ビデオ分析、物体検出、自然言語処理、医療画像処理、ロボティクスに取り組むエッジ AI ソリューションプロバイダーに適しています。
+完全なシステムには、1つのNVIDIA Jetson Orin製品モジュール、ヒートシンク、および電源アダプターが含まれています。reComputer J30/40にはJetpack 5.1.1がプリインストールされており、開発を簡素化し、スマートシティ、セキュリティ、産業オートメーション、スマートファクトリーなどの業界で動画解析、物体検出、自然言語処理、医療画像、ロボティクスに取り組むエッジAIソリューションプロバイダーの展開に適しています。
 
-電源アダプタなしのバージョンをお探しの場合は、[reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html) をご確認ください。
+電源アダプターなしのバージョンをお探しの場合は、[reComputer-Jetson](https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html)をご確認ください。
 
 ## 特徴
 
-- **生産向けの優れた AI パフォーマンス:** 低消費電力と低遅延で最大 100 TOPS の AI パフォーマンスを実現するオンデバイス処理
-- **手のひらサイズのエッジ AI デバイス:** コンパクトなサイズ（130mm x 120mm x 58.5mm）、NVIDIA Jetson Orin プロダクションモジュール、ヒートシンク、エンクロージャ、電源アダプタを含む。デスクトップ、壁掛け、どこにでもフィット
-- **豊富な I/O による拡張性:** 4x USB3.2、HDMI 2.1、2xCSI、1xRJ45 for GbE、M.2 Key E、M.2 Key M、CAN、GPIO
-- **市場投入までの時間を短縮:** NVIDIA JetPack™ 5.1 がプリインストールされた 128GB NVMe SSD、Linux OS BSP、128GB SSD、WiFi BT コンボモジュール、アンテナ x2 をサポート。Jetson ソフトウェアおよび主要な AI フレームワークとソフトウェアプラットフォームをサポート
-- **包括的な認証:** FCC、CE、RoHS、UKCA
+- **製品向けの優れたAI性能：** 低消費電力・低遅延で最大100TOPS AI性能によるオンデバイス処理
+- **手のひらサイズのエッジAIデバイス：** 130mm x120mm x 58.5mmのコンパクトサイズ、NVIDIA Jetson Orin製品モジュール、ヒートシンク、筐体、電源アダプターを含む。デスクトップ、壁掛け対応、どこにでも設置可能
+- **豊富なI/Oによる拡張性：** 4x USB3.2、HDMI 2.1、2xCSI、GbE用1xRJ45、M.2 Key E、M.2 Key M、CANおよびGPIO
+- **市場投入の加速：** 付属の128GB NVMe SSDにNVIDIA JetPack™ 5.1を含むJetpackがプリインストール、Linux OS BSP、128GB SSD、WiFi BTコンボモジュール、アンテナx2、Jetsonソフトウェアおよび主要なAIフレームワークとソフトウェアプラットフォームをサポート
+- **包括的な認証：** FCC、CE、RoHS、UKCA
 
 ## 仕様
 
@@ -61,7 +57,7 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
       <td>Jetson Orin NX 16GB</td>
     </tr>
     <tr>
-      <td>AI パフォーマンス</td>
+      <td>AI性能</td>
       <td>20 TOPS</td>
       <td>40 TOPS</td>
       <td>70 TOPS</td>
@@ -69,12 +65,12 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
     </tr>
     <tr>
       <td>GPU</td>
-      <td>512コア NVIDIA Ampere アーキテクチャ GPU（16 Tensor コア）</td>
-      <td>1024コア NVIDIA Ampere アーキテクチャ GPU（32 Tensor コア）</td>
-      <td colspan='2' align='center'>1024コア NVIDIA Ampere アーキテクチャ GPU（32 Tensor コア）</td>
+      <td>512コア NVIDIA Ampereアーキテクチャ GPU、16 Tensorコア搭載</td>
+      <td>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensorコア搭載</td>
+      <td colspan='2' align='center'>1024コア NVIDIA Ampereアーキテクチャ GPU、32 Tensorコア搭載</td>
     </tr>
     <tr>
-      <td>GPU 最大周波数</td>
+      <td>GPU最大周波数</td>
       <td colSpan='2' align='center'>625 MHz</td>
       <td>765 MHz</td>
       <td>918 MHz</td>
@@ -86,7 +82,7 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
       <td>8コア Arm® Cortex®-A78AE v8.2 64ビット CPU 2MB L2 + 4MB L3</td>
     </tr>
     <tr>
-      <td>CPU 最大周波数</td>
+      <td>CPU最大周波数</td>
       <td colSpan='2' align='center'>1.5 GHz</td>
       <td colSpan='2' align='center'>2 GHz</td>
     </tr>
@@ -98,13 +94,13 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
       <td>16GB 128ビット LPDDR5 102.4GB/s</td>
     </tr>
     <tr>
-      <td>DL アクセラレータ</td>
+      <td>DLアクセラレータ</td>
       <td colSpan='2' align='center'>/</td>
       <td>1x NVDLA v2</td>
       <td>2x NVDLA v2</td>
     </tr>
     <tr>
-      <td>DLA 最大周波数</td>
+      <td>DLA最大周波数</td>
       <td colSpan='2' align='center'>/</td>
       <td colSpan='2' align='center'>614 MHz</td>
     </tr>
@@ -119,7 +115,7 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
     </tr>
     <tr>
       <td>ビデオエンコーダ</td>
-      <td colSpan='2' align='center'>1080p30（1-2 CPU コアでサポート）</td>
+      <td colSpan='2' align='center'>1080p30 1-2 CPUコアでサポート</td>
       <td colSpan='2' align='center'>1x 4K60 (H.265) | 3x 4K30 (H.265)<br />6x 1080p60 (H.265) | 12x 1080p30 (H.265)</td>
     </tr>
     <tr>
@@ -132,11 +128,11 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
       <td colSpan='4' align='center'>1* HDMI 2.1</td>
     </tr>
     <tr>
-      <td>CSI カメラ</td>
+      <td>CSIカメラ</td>
       <td colSpan='4' align='center'>2* CSI （2レーン 15ピン）</td>
     </tr>
     <tr>
-      <td>ネットワーキング</td>
+      <td>ネットワーク</td>
       <td colSpan='4' align='center'>1* ギガビットイーサネット (10/100/1000M)</td>
     </tr>
     <tr>
@@ -153,7 +149,7 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
     </tr>
     <tr>
       <td>ファン</td>
-      <td colSpan='4' align='center'>1* 4ピンファンコネクタ (5V PWM)</td>
+      <td colSpan='4' align='center'>1* 4ピン ファンコネクタ(5V PWM)</td>
     </tr>
     <tr>
       <td>CAN</td>
@@ -161,11 +157,11 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
     </tr>
     <tr>
       <td>多機能ポート</td>
-      <td colSpan='4' align='center'>1* 40ピン拡張ヘッダー、1* 12ピン制御および UART ヘッダー</td>
+      <td colSpan='4' align='center'>1* 40ピン拡張ヘッダー、1* 12ピン制御・UARTヘッダー</td>
     </tr>
     <tr>
       <td>RTC</td>
-      <td colSpan='4' align='center'>RTC 2ピン、RTC ソケット（CR1220 対応、ただし含まれません）</td>
+      <td colSpan='4' align='center'>RTC 2ピン、RTCソケット (CR1220対応、ただし付属せず)</td>
     </tr>
     <tr>
       <td>電源</td>
@@ -173,49 +169,50 @@ reComputer J30/40 は、Jetson Orin を搭載した強力でコンパクトな�
     </tr>
     <tr>
       <td>電源供給</td>
-      <td colSpan='4' align='center'>電源アダプタは含まれません</td>
+      <td colSpan='4' align='center'>電源アダプタは付属しません</td>
     </tr>
     <tr>
-      <td>温度</td>
+      <td>動作温度</td>
       <td colSpan='4' align='center'>-10℃~60℃</td>
     </tr>
     <tr>
-      <td>機械的仕様</td>
-      <td colSpan='4' align='center'>130mm x 120mm x 58.5mm</td>
+      <td>機械的寸法</td>
+      <td colSpan='4' align='center'>130mm x120mm x 58.5mm</td>
     </tr>
   </tbody>
 </table>
 
-## JetPack のフラッシュ
+## Flash JetPack
 
 :::info
-reComputer J30/40 は J401 キャリアボードによって駆動されています。  
-JetPack のフラッシュに関する詳細は、この [Wiki ページ](/ja/reComputer_J4012_Flash_Jetpack) を参照してください。
+reComputer J30/40はJ401キャリアボードを搭載しています。
+JetPackのフラッシュに関する詳細情報については、この[wikiページ](/reComputer_J4012_Flash_Jetpack)を参照してください。
 :::
 
-## インターフェースの使用方法
+## インターフェース使用方法
 
 :::info
-reComputer J30/40 は J401 キャリアボードによって駆動されています。  
-インターフェースの使用方法に関する詳細は、この [Wiki ページ](/ja/J401_carrierboard_Hardware_Interfaces_Usage) を参照してください。
+reComputer J30/40はJ401キャリアボードを搭載しています。
+インターフェース使用方法に関する詳細情報については、この[wikiページ](/J401_carrierboard_Hardware_Interfaces_Usage)を参照してください。
 :::
+
 
 ## リソース
 - [reComputer J30x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J301x-datasheet.pdf)
 - [reComputer J40x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [reComputer J30/J40 回路図](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)
-- [reComputer J30/J40 3D ファイル](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
-- [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio Edge AI 成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス ワンページ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
-- [Jetson サンプル](https://github.com/Seeed-Projects/jetson-examples)
-- [reComputer-Jetson-初心者向けガイド](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+- [reComputer J30/J40 3Dファイル](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
+- [Seeed Jetsonシリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetsonシリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Jetsonサンプル](https://github.com/Seeed-Projects/jetson-examples)
+- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！  
-お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

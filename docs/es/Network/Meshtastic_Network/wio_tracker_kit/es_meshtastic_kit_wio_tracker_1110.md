@@ -62,21 +62,21 @@ Con una Placa de Desarrollo Wio Tracker 1110 (basada en Nordic nRF52840 para BLE
 <tr><td colspan="1"><b>Humedad</b></td><td colspan="1">0&#126;100%RH</td><td colspan="1">±1.8%RH</td></tr>
 <tr><td colspan="3"><b>Sensores Integrados -- Acelerómetro de 3 Ejes( No utilizado )</b></td></tr>
 <tr><td colspan="1"><b>Rango</b></td><td colspan="2">±2g, 4g, 8g, 16g</td></tr>
-<tr><td colspan="1"><b>Ancho de Banda</b></td><td colspan="2">0\.5Hz &#126; 625Hz</td></tr>
+<tr><td colspan="1"><b>Ancho de Banda</b></td><td colspan="2">0.5Hz &#126; 625Hz</td></tr>
 <tr><td colspan="1"><b>Sensibilidad (LSB/g)</b></td><td colspan="2">1000 (±2g) &#126; 83 (±16g)</td></tr>
 </table>
 
 **Grove - Pantalla OLED de 0.96 pulgadas**
 
-|**Voltaje de Alimentación (VCC)**|3\.3 / 5 V|
+|**Voltaje de Alimentación (VCC)**|3.3 / 5 V|
 | :- | :- |
 |**IC Controlador**|SSD1308Z|
 |**Color de Pantalla**|Blanco|
 |**Matriz de Puntos**|128×64|
-|**Tamaño del Panel**|26\.7(W)×19.26(H) mm|
-|**Área Activa**|21\.74(W)×11.175 (H) mm|
-|**Separación de Puntos**|0\.17(W)×0.175 (H) mm|
-|**Tamaño de Punto**|0\.15(W)×0.15 (H) mm|
+|**Tamaño del Panel**|26.7(W)×19.26(H) mm|
+|**Área Activa**|21.74(W)×11.175 (H) mm|
+|**Separación de Puntos**|0.17(W)×0.175 (H) mm|
+|**Tamaño de Punto**|0.15(W)×0.15 (H) mm|
 |**Amplio rango de temperatura de operación**|-20&#126;70 ℃|
 
 ## Comenzar
@@ -219,24 +219,24 @@ Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/regi
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Sin configurar|N/A|N/A|N/A|
-|US|Estados Unidos|902\.0 - 928.0|100|30|
-|EU\_433|Unión Europea 433MHz|433\.0 - 434.0|10|12|
-|EU\_868|Unión Europea 868MHz|869\.4 - 869.65|10|27|
-|CN|China|470\.0 - 510.0|100|19|
-|JP|Japón|920\.8 - 927.8|100|16|
-|ANZ|Australia y Nueva Zelanda|915\.0 - 928.0|100|30|
-|KR|Corea|920\.0 - 923.0|100||
-|TW|Taiwán|920\.0 - 925.0|100|27|
-|RU|Rusia|868\.7 - 869.2|100|20|
-|IN|India|865\.0 - 867.0|100|30|
-|NZ\_865|Nueva Zelanda 865MHz|864\.0 - 868.0|100|36|
-|TH|Tailandia|920\.0 - 925.0|100|16|
-|UA\_433|Ucrania 433MHz|433\.0 - 434.7|10|10|
-|UA\_868|Ucrania 868MHz|868\.0 - 868.6|1|14|
-|MY\_433|Malasia 433MHz|433\.0 - 435.0|100|20|
-|MY\_919|Malasia 919MHz|919\.0 - 924.0|100|27|
-|SG\_923|Singapur 923MHz|917\.0 - 925.0|100|20|
-|LORA\_24|Banda de 2\.4 GHz mundial|2400\.0 - 2483.5|100|10|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_433|Unión Europea 433MHz|433.0 - 434.0|10|12|
+|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
+|CN|China|470.0 - 510.0|100|19|
+|JP|Japón|920.8 - 927.8|100|16|
+|ANZ|Australia y Nueva Zelanda|915.0 - 928.0|100|30|
+|KR|Corea|920.0 - 923.0|100||
+|TW|Taiwán|920.0 - 925.0|100|27|
+|RU|Rusia|868.7 - 869.2|100|20|
+|IN|India|865.0 - 867.0|100|30|
+|NZ_865|Nueva Zelanda 865MHz|864.0 - 868.0|100|36|
+|TH|Tailandia|920.0 - 925.0|100|16|
+|UA_433|Ucrania 433MHz|433.0 - 434.7|10|10|
+|UA_868|Ucrania 868MHz|868.0 - 868.6|1|14|
+|MY_433|Malasia 433MHz|433.0 - 435.0|100|20|
+|MY_919|Malasia 919MHz|919.0 - 924.0|100|27|
+|SG_923|Singapur 923MHz|917.0 - 925.0|100|20|
+|LORA_24|Banda de 2.4 GHz mundial|2400.0 - 2483.5|100|10|
 
 :::info
 **EU_433** y **EU_868** deben cumplir con una limitación de ciclo de trabajo por hora del 10%, calculada cada minuto en una base móvil de 1 hora. Tu dispositivo dejará de transmitir si lo alcanzas, hasta que se permita nuevamente.

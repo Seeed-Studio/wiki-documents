@@ -1,122 +1,118 @@
 ---
-description: SenseCAP M2 データ専用クイックスタート
-title: SenseCAP M2 データ専用クイックスタート
+description: SenseCAP M2 Data Only クイックスタート
+title: SenseCAP M2 Data Only クイックスタート
 keywords:
-- SenseCAP ネットワーク
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAPMX_Hotspot/Helium_Gateway/SenseCAP_M2_Data_Only/Quick_Start
 last_update:
-  date: 05/15/2025
+  date: 02/14/2023
   author: Matthew
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-SenseCAP M2 データ専用クイックスタート
+SenseCAP M2 Data Only クイックスタート
 =================================
 
-以下に、ホットスポットを数分で簡単にセットアップするための必要な手順を示します！
+以下では、数分でホットスポットを簡単にセットアップするために必要な手順をご紹介します！
 
 **ビデオ説明**
 =====================
 
 * * *
 
-**ステップ 1: Helium および SenseCAP アプリをインストールし、アカウントを作成する**
+**ステップ1: HeliumとSenseCAP Appをインストールしてアカウントを作成**
 ===============================================================
 
-*   Helium ホットスポットおよび SenseCAP MX ホットスポットアプリをインストールする
-*   Apple Store または Google Play で「Helium Hotspot」と「SenseCAP MX Hotspot」を検索してダウンロードし、これら2つのアプリをスマートフォンにインストールしてください。
+- Helium HotspotとSenseCAP MX Hotspot Appをインストール
+- Apple StoreまたはGoogle Playから「Helium Hotspot」と「SenseCAP MX Hotspot」を検索してダウンロードし、これら2つのアプリをお使いの携帯電話にインストールしてください。
 
-「**Helium Hotspot**」アプリは公式のHeliumアプリであり、Heliumウォレット認証に必要です。このアプリを使用してHeliumウォレットを登録および管理し、ホットスポットやHNTトランザクションを行うことができます。
+「**Helium Hotspot**」アプリは公式のHeliumアプリで、Heliumウォレット認証に必要です。これを使用してHeliumウォレットの登録と管理、ホットスポットとHNTトランザクションを行うことができます。
 
-![Helium ホットスポットアプリ](https://www.sensecapmx.com/wp-content/uploads/2022/07/helium-app-logos-1.webp)
+![Helium Hotspot App](https://www.sensecapmx.com/wp-content/uploads/2022/07/helium-app-logos-1.webp)
 
-「**SenseCAP MX Hotspot**」アプリはSenseCAP MXチームによって開発された公式のSenseCAPホットスポットアプリです。このアプリを使用してSenseCAPホットスポットを登録および管理することができます。
+「**SenseCAP MX Hotspot**」アプリは、SenseCAP MXチームが開発した公式のSenseCAPホットスポットアプリです。これを使用してSenseCAPホットスポットの登録と管理を行うことができます。
 
-![SenseCAP ホットスポットアプリ](https://www.sensecapmx.com/wp-content/uploads/2022/07/SenseCAP-Hotspot-App.png)
+![SenseCAP Hotspot App](https://www.sensecapmx.com/wp-content/uploads/2022/07/SenseCAP-Hotspot-App.png)
 
-*   Helium アプリでHeliumウォレットを作成する
+- HeliumアプリでHeliumウォレットを作成
 
-新しいHeliumウォレットを生成する際、12語のパスワードが表示されます。この12語のパスワードを順番通りに記録またはバックアップし、安全な場所に保管してください。このパスワードは紛失した場合、絶対に回復できません。
+新しいHeliumウォレットを生成する際、12語のパスワードが表示されます。12語のパスワードは紛失した場合に復元することができないため、順番通りにメモを取るかバックアップを取り、安全な場所に保管してください。
 
-*   SenseCAP MX ホットスポットアプリでアカウントを作成する
+- SenseCAP MX Hotspotアプリでアカウントを作成
 
-HeliumウォレットをSenseCAPアカウントにリンクし、新しいホットスポットを追加する準備が整います。
+HeliumウォレットをSenseCAPアカウントにリンクすると、新しいホットスポットを追加する準備が整います。
 
-![Helium ウォレットアプリのディープリンク](https://www.sensecapmx.com/wp-content/uploads/2022/07/deeplink-1.png)
+![Deeplink Helium Wallet App](https://www.sensecapmx.com/wp-content/uploads/2022/07/deeplink-1.png)
 
-**Helium アプリをダウンロードしてウォレットを作成する方法**
+**Heliumアプリのダウンロードとウォレット作成方法**
 ==================================================
 
-**SenseCAP をダウンロードしてアカウントを作成する方法**
+**SenseCAPのダウンロードとアカウント作成方法**
 ===============================================
 
 * * *
 
-**ステップ 2: SenseCAP M2 をセットアップしてインターネットに接続する**
+**ステップ2: SenseCAP M2をセットアップしてインターネットに接続**
 ==========================================================
 
-*   SenseCAP M2 をセットアップする
+- SenseCAP M2をセットアップ
 
 アンテナ、電源アダプター、イーサネットケーブル（必須ではありません）をホットスポットに接続し、電源を入れます。
 
-**電源LED**が**赤色**で点灯し、約15秒後（PoEで電源を供給する場合、この待機時間は少し長くなります）、上部のインジケーターが**緑色**に点滅し、ホットスポットが起動中であることを示します。
+**電源LED**は**赤色**で表示され、約15秒後（PoEで電源を供給する場合、この待機時間は少し長くなります）、上部のインジケーターが**緑色**で点滅し、ホットスポットが起動中であることを示します。
 
-約1分後に起動が完了すると、ホットスポットがイーサネットケーブルを介してインターネットに接続されている場合はインジケーターが**緑色**で点灯し、Wi-Fi構成を待機している場合は**青色**で点灯します。
+約1分間の起動後、ホットスポットがイーサネットケーブル経由でインターネットに接続されている場合はインジケーターが**緑色**の点灯を示し、Wi-Fi設定を待機している場合は**青色**の点灯を示します。
 
-![SenseCAP M2 クイックスタート](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png)
+![SenseCAP M2 Quick Start](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png)
 
-**ファームウェア更新**
+**ファームウェアアップデート**
 ===================
 
-初回起動時には、イーサネットケーブルを介してホットスポットをインターネットに接続し、約30分間待機してファームウェア更新を完了することをお勧めします。（この手順はホットスポットがWi-Fiネットワークに接続された後でも実行できます）。
+初回起動時には、ホットスポットをイーサネットケーブル経由でインターネットに接続し、次のステップに進む前にファームウェアアップデートを完了するために約30分待つことをお勧めします（このステップは、ホットスポットがWi-Fiネットワークに接続された後でも実行できます）。
 
-ファームウェア更新は自動で行われ、10〜30分かかります。更新プロセス中にインジケーターは**オレンジ色**の点滅から**緑色**の点灯に1〜2回変化します。ファームウェア更新が完了するとホットスポットは再起動し、インジケーターは**緑色**で点灯し続けます。
+ファームウェアアップデートは自動で行われ、10〜30分かかります。アップデートプロセス中、インジケーターは**オレンジ色**の点滅から**緑色**の点灯に1〜2回変化します。ファームウェアアップデートが完了するとホットスポットが再起動し、インジケーターは**緑色**の点灯を維持します。
 
-**注意**: ホットスポットが最新のファームウェアに更新される前に次の手順を進めると予期しないエラーが発生し、処理を進めることができなくなります。更新プロセスには忍耐強く対応し、電源を切ったりインターネット接続を切断しないでください。
+**注意**: ホットスポットが最新のファームウェアにアップデートされる前に次のステップを進めると、予期しないエラーが発生し、続行できなくなります。アップデートプロセスをお待ちいただき、電源を切ったりインターネットを切断したりしないでください。
 
 **PoE接続**
 ==================
 
-SenseCAP M2はPoE（Power on Ethernet）をサポートしており、IEEE 802.3 af標準に対応しています。モデム/ルーターがPoEをサポートしていない場合は、PSE（電源供給装置）として40V〜57V DC電力を提供する追加のPoEスイッチが必要です。
+SenseCAP M2はPoE（Power on Ethernet）をサポートし、IEEE 802.3 af標準に対応しています。モデム/ルーターがPoEをサポートしていない場合、PSE（Power Sourcing Equipment）として40V-57V DC電源を提供する追加のPoEスイッチが必要になります。
 
-![SenseCAP M2 POE接続設定](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png)
+![SenseCAP M2 POE Connection Setup](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png)
 
-*   SenseCAP ホットスポットアプリでBluetoothを介してホットスポットを接続する
+- SenseCAP HotspotアプリでBluetooth経由でホットスポットに接続
 
-ボタンを5秒間押し続けると青色のインジケーターがゆっくり点滅し、構成モードに入ります。アプリの指示に従ってホットスポットを接続してください。
+青色のインジケーターがゆっくり点滅するまでボタンを5秒間押して設定モードに入り、アプリの指示に従ってホットスポットに接続します。
 
-![SenseCAP M2 設定 - アプリ](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-setup-app-scaled.jpg)
+![SenseCAP M2 Setup - App](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-setup-app-scaled.jpg)
 
-**注意**: SenseCAP M2 データ専用ホットスポットの場合は「**SenseCAP M2 (Data-Only)**」を選択してください。複数のホットスポットが周囲にある場合は、ホットスポット名の下にある6桁のMACアドレスでホットスポットを識別できます。
+**注意**: SenseCAP M2 Data Onlyホットスポットには「**SenseCAP M2 (Data-Only)**」を選択してください。周囲に複数のホットスポットがある場合、ホットスポット名の下にある6桁のMACアドレスでホットスポットを識別できます。
 
-*   Wi-Fi接続を設定する
+- Wi-Fi接続をセットアップ
 
-「ネットワークをスキャン」をクリックし、Wi-Fiを選択してパスワードを入力します。または、すでにイーサネットケーブルを使用している場合は「代わりにイーサネットを使用」をクリックしてください。
+「Scan Networks」をクリックし、Wi-Fiを選択してパスワードを入力するか、すでにイーサネットケーブルを使用している場合は「Use Ethernet Instead」をクリックします。
 
-![SenseCAP M2 Wi-Fi設定](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi.png)
+![SenseCAP M2 Wifi Setup](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi.png)
 
 * * *
 
-**ステップ 3: Helium ホットスポットのオンボーディングと位置のアサート**
+**ステップ3: Heliumホットスポットオンボーディングと位置情報の設定**
 =========================================================
 
-*   ホットスポットをHeliumネットワークに追加する
+- ホットスポットをHeliumネットワークに追加
 
-アプリの指示に従ってホットスポットをHeliumネットワークに追加してください。
+アプリの指示に従って、ホットスポットをHeliumネットワークに追加してください。
 
-**注意**: オンボーディング料金は製品に含まれていません。オンボーディングには\$10の料金と位置アサートには\$5の料金がユーザーのウォレットから差し引かれます。オンボーディングプロセスを進める際にはウォレットに十分なHeliumデータクレジットがあることを確認してください。
+**注意**: オンボーディング料金は製品に含まれていません。オンボードするために、ユーザーのウォレットから\$10のオンボーディング料金と\$5の位置情報設定料金が差し引かれます。オンボーディングプロセスを進める際は、ウォレットに十分なHelium Data Creditがあることを確認してください。
 
-*   ホットスポットの位置をアサートする
+- ホットスポットの位置情報を設定
 
-アプリの指示に従い、地図上で実際の設置場所を選択し、位置をアサートしてください。
+アプリの指示に従い、マップ上で実際の設置場所を選択し、位置情報を設定してください。
 
 * * *
 
-**SenseCAP M2 の準備が整いました！ようこそ、ピープルズネットワークへ！**
+**SenseCAP M2の準備が完了しました！The People's Networkへようこそ！**
 =====================================================================
 
 ![Longfi](https://www.sensecapmx.com/wp-content/uploads/2022/06/longfi.webp)

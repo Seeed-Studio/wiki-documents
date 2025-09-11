@@ -19,7 +19,7 @@ last_update:
 
 ## 第一部分. 什么是 [IFTTT (If This Then That)](https://ifttt.com/)
 
-IFTTT 是一个基于网络的服务，允许开发者在各种应用程序、设备和服务之间创建自动化和集成，无需复杂的编程。它使用户能够定义简单的条件语句，称为"小程序"，根据特定事件触发操作。它提供了用户友好的界面和庞大的预构建小程序库，使开发者能够高效地创建强大的自动化和集成。
+IFTTT 是一个基于网络的服务，允许开发者在各种应用程序、设备和服务之间创建自动化和集成，而无需复杂的编程。它使用户能够定义简单的条件语句，称为"小程序"，根据特定事件触发操作。它提供了用户友好的界面和庞大的预构建小程序库，使开发者能够高效地创建强大的自动化和集成。
 
 ## 第二部分. 如何配置 IFTTT
 
@@ -81,7 +81,7 @@ IFTTT 是一个基于网络的服务，允许开发者在各种应用程序、�
 
 ### 步骤 4. Watcher 消息发送到 Node-RED
 
-将这些模块拖拽到工作区并连接它们。如果您还不知道如何从 watcher 发送消息到 Node-RED，[请点击这里](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)。
+将这些模块拖拽到工作区并将它们连接在一起。如果您还不知道如何从 watcher 发送消息到 Node-RED，[请点击这里](https://wiki.seeedstudio.com/watcher_to_node_red/)。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_to_ifttt_image/20.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -114,7 +114,7 @@ return msg;
 
 ### 步骤 6. 向 Watcher 发送任务
 
-首先，您需要按照下面的视频在 Watcher 中运行一个任务。如果您想了解更多，[请点击这里](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+首先，您需要按照下面的视频在 Watcher 中运行任务。如果您想了解更多信息，[请点击这里](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 <div class="table-center">
 <iframe width="600" height="338" src="https://files.seeedstudio.com/wiki/watcher_to_open_interpreter_image/run_task.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -136,7 +136,6 @@ return msg;
 
 然后您将看到 Watcher 发送的这些消息以及您的电子邮件。
 
-
 <div class="table-center">
   <table align="center">
     <tr>
@@ -150,18 +149,18 @@ return msg;
   </table>
 </div>
 
-恭喜您完成了 Watcher 到 IFTTT 电子邮件演示！这只是您使用 IFTTT 之旅的开始。还有无数更多的应用程序和集成等待您去发现。继续探索、学习和自动化，让您的生活更加高效和富有成效。IFTTT 的可能性是无穷的，所以尽情享受并愉快地实验吧！
+恭喜您完成了 Watcher 到 IFTTT 邮件演示！这只是您使用 IFTTT 旅程的开始。还有无数的应用程序和集成等待您去发现。继续探索、学习和自动化，让您的生活更加高效和富有成效。IFTTT 的可能性是无限的，所以尽情享受和愉快地实验吧！
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

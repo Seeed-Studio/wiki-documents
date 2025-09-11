@@ -15,6 +15,13 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.jpg" style={{width:500, height:'auto'}}/></div>
 
+:::tip
+
+If you need to use the RS485 expansion board in conjunction with Vision AI V2, you will need to re-solder new header pins to the back of the RS485 expansion board.
+
+:::
+
+
 ### Hadware Preparation
 
 <table align="center">

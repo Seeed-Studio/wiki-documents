@@ -11,9 +11,9 @@ last_update:
 ---
 # **tVOC 传感器（内置）**
 
-SenseCAP Indicator 中内置的 SGP40 传感器是一款高质量、可靠的 TVOC 传感器，可用于广泛的应用场景来监测室内和室外空气质量。它的测量范围为 1-500 VOC 指数点。
+SenseCAP Indicator 中内置的 SGP40 传感器是一款高质量、可靠的 TVOC 传感器，可用于各种应用中监测室内和室外空气质量。它的测量范围为 1-500 VOC 指数点。
 
-TVOC 是一组有机化学物质，它们以气体形式从各种来源释放，包括建筑材料、清洁产品和个人护理产品。
+TVOC 是一组有机化学物质，它们以气体形式从各种来源排放，包括建筑材料、清洁产品和个人护理产品。
 
 
 **示例代码：**
@@ -40,7 +40,7 @@ SensirionI2CSgp40 sgp40;
 VOCGasIndexAlgorithm voc_algorithm;
 
 
-//内置传感器需要上电
+//The built-in sensor needs to be powered on
 void sensor_power_on(void) {
   pinMode(18, OUTPUT);
   digitalWrite(18, HIGH);

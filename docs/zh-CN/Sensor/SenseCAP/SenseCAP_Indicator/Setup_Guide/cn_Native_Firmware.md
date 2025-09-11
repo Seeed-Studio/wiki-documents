@@ -50,7 +50,7 @@ SenseCAP Indicator D1S 和 D1Pro 版本内置了 tVOC 和 CO2 传感器，以及
 
 ## **传感器数据**
 
-我们提供四个不同版本：D1、D1S、D1L 和 D1Pro。每个版本都旨在满足不同的应用需求，无需为不必要的硬件支付额外费用。以下是各版本之间的差异：
+我们提供四个不同版本：D1、D1S、D1L 和 D1Pro。每个版本都旨在满足不同的应用需求，而不会因不必要的硬件产生额外成本。以下是各版本之间的差异：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/version.png"/></div>
 
@@ -67,5 +67,5 @@ SenseCAP Indicator 所有版本的原生固件 UI 保持相同。对于没有内
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
 :::tip 寻找 ChatGPT x DALL·E？
-前往 [SenseCAP Indicator X OpenAI](/cn/SenseCAP_Indicator_OpenAI_X_Overview)
+前往 [SenseCAP Indicator X OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)
 :::

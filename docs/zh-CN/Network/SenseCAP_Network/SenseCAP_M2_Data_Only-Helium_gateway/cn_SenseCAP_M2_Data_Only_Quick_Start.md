@@ -1,8 +1,8 @@
 ---
-description: SenseCAP M2 数据专用快速入门
-title: SenseCAP M2 数据专用快速入门
+description: SenseCAP M2 Data Only 快速入门
+title: SenseCAP M2 Data Only 快速入门
 keywords:
-- SenseCAP 网络
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Network/SenseCAP_Network/SenseCAP_M2_Data_Only-Helium_gateway/SenseCAP_M2_Data_Only_Quick_Start
 last_update:
@@ -10,110 +10,110 @@ last_update:
   author: Matthew
 ---
 
-SenseCAP M2 数据专用快速入门
-==========================
+SenseCAP M2 Data Only 快速入门
+=================================
 
-以下是几分钟内轻松设置您的热点所需的步骤！
+以下是在几分钟内轻松设置您的热点所需的步骤！
 
-**视频教程**
-=============
+**视频说明**
+=====================
 
 * * *
 
-**步骤 1：安装 Helium 和 SenseCAP 应用并创建账户**
-===================================================
+**步骤 1：安装 Helium 和 SenseCAP 应用程序并创建账户**
+===============================================================
 
-*   安装 Helium Hotspot 和 SenseCAP MX Hotspot 应用  
-*   在 Apple Store 或 Google Play 中搜索并下载 "Helium Hotspot" 和 "SenseCAP MX Hotspot"，并在您的手机上安装这两个应用。
+- 安装 Helium Hotspot 和 SenseCAP MX Hotspot 应用程序
+- 从 Apple Store 或 Google Play 搜索并下载"Helium Hotspot"和"SenseCAP MX Hotspot"，并在您的手机上安装这两个应用程序。
 
-"**Helium Hotspot**" 应用是官方的 Helium 应用，必需用于 Helium 钱包认证。您可以使用它注册和管理 Helium 钱包，以及进行热点和 HNT 交易。
+"**Helium Hotspot**"应用程序是官方 Helium 应用程序，是 Helium 钱包认证所必需的。您可以使用它注册和管理 Helium 钱包，并进行热点和 HNT 交易。
 
-![Helium Hotspot 应用](https://www.sensecapmx.com/wp-content/uploads/2022/07/helium-app-logos-1.webp)
+![Helium Hotspot App](https://www.sensecapmx.com/wp-content/uploads/2022/07/helium-app-logos-1.webp)
 
-"**SenseCAP MX Hotspot**" 应用是由 SenseCAP MX 团队开发的官方 SenseCAP 热点应用。您可以使用它注册和管理您的 SenseCAP 热点。
+"**SenseCAP MX Hotspot**"应用程序是由 SenseCAP MX 团队开发的官方 SenseCAP 热点应用程序。您可以使用它注册和管理您的 SenseCAP 热点。
 
-![SenseCAP Hotspot 应用](https://www.sensecapmx.com/wp-content/uploads/2022/07/SenseCAP-Hotspot-App.png)
+![SenseCAP Hotspot App](https://www.sensecapmx.com/wp-content/uploads/2022/07/SenseCAP-Hotspot-App.png)
 
-*   在 Helium 应用中创建 Helium 钱包  
+- 在 Helium 应用程序中创建 Helium 钱包
 
-在生成新的 Helium 钱包时，您将看到一个包含 12 个单词的密码。请按顺序记录或备份这 12 个单词的密码，并将其保存在安全的地方，因为如果丢失，这 12 个单词的密码将无法恢复。
+生成新的 Helium 钱包时，您将看到一个 12 个单词的密码。请按顺序记录或备份这 12 个单词的密码，并将其保存在安全的地方，因为如果丢失，这 12 个单词的密码永远无法恢复。
 
-*   在 SenseCAP MX Hotspot 应用中创建账户  
+- 在 SenseCAP MX Hotspot 应用程序中创建账户
 
-将 Helium 钱包链接到您的 SenseCAP 账户，您就可以添加新的热点了。
+将 Helium 钱包链接到您的 SenseCAP 账户，您就可以准备添加新的热点了。
 
-![Deeplink Helium Wallet 应用](https://www.sensecapmx.com/wp-content/uploads/2022/07/deeplink-1.png)
+![Deeplink Helium Wallet App](https://www.sensecapmx.com/wp-content/uploads/2022/07/deeplink-1.png)
 
-**如何下载 Helium 应用并创建钱包**
-===================================
+**如何下载 Helium 应用程序并创建钱包**
+==================================================
 
-**如何下载 SenseCAP 应用并创建账户**
-====================================
+**如何下载 SenseCAP 并创建账户**
+===============================================
 
 * * *
 
 **步骤 2：设置 SenseCAP M2 并连接到互联网**
-==========================================
+==========================================================
 
-*   设置 SenseCAP M2  
+- 设置 SenseCAP M2
 
-将天线、电源适配器和以太网线（非必要）连接到热点并启动电源。
+将天线、电源适配器和以太网电缆（非必需）连接到热点并通电。
 
-**电源指示灯**将显示为**红色**，大约 15 秒后（如果使用 PoE 供电，等待时间会稍长），顶部指示灯将闪烁**绿色**，表示热点正在启动。
+**电源 LED** 将显示为**红色**，大约 15 秒后（如果您使用 PoE 供电，等待时间会稍长一些），顶部的指示灯将闪烁**绿色**，表示热点正在启动。
 
-启动后大约 1 分钟，如果热点通过以太网线连接到互联网，指示灯将显示为**绿色常亮**；如果等待进一步的 Wi-Fi 配置，则显示为**蓝色常亮**。
+启动约 1 分钟后，如果热点已通过以太网电缆连接到互联网，指示灯将显示为稳定的**绿色**；或者在等待进一步的 Wi-Fi 配置时显示为稳定的**蓝色**。
 
-![SenseCAP M2 快速入门](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png)
+![SenseCAP M2 Quick Start](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-1.png)
 
 **固件更新**
-=============
+===================
 
-首次启动时，建议通过以太网线将热点连接到互联网，并等待大约 30 分钟完成固件更新，然后再进行下一步操作。（您也可以在热点连接到 Wi-Fi 网络后执行此步骤）。
+在首次启动期间，建议通过以太网电缆将热点连接到互联网，并等待约 30 分钟完成固件更新，然后再进行下一步操作。（您也可以在热点连接到 Wi-Fi 网络后执行此步骤）。
 
-固件更新是自动的，通常需要 10-30 分钟。在更新过程中，指示灯会从闪烁的**橙色**变为**绿色常亮**一到两次。固件更新完成后，热点将重新启动，指示灯将保持**绿色常亮**。
+固件更新是自动的，需要 10-30 分钟。在更新过程中，指示灯将从闪烁的**橙色**变为稳定的**绿色**一到两次。固件更新完成后热点将重启，指示灯将保持稳定的**绿色**。
 
-**注意**：在热点更新到最新固件之前进行下一步操作可能会导致意外错误，无法继续操作。请耐心等待更新过程，不要断电或断开互联网连接。
+**注意**：在热点尚未更新到最新固件之前进行进一步步骤将导致意外错误且无法继续，请耐心等待更新过程，不要断电或断开互联网连接。
 
 **PoE 连接**
-============
+==================
 
-SenseCAP M2 支持 PoE（以太网供电），兼容 IEEE 802.3 af 标准。如果您的调制解调器/路由器不支持 PoE，您需要额外的 PoE 交换机作为 PSE（供电设备），提供 40V-57V DC 电源。
+SenseCAP M2 支持 PoE（以太网供电）并兼容 IEEE 802.3 af 标准。如果您的调制解调器/路由器不支持 PoE，您需要一个额外的 PoE 交换机作为 PSE（供电设备）提供 40V-57V 直流电源。
 
-![SenseCAP M2 PoE 连接设置](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png)
+![SenseCAP M2 POE Connection Setup](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-poe.png)
 
-*   通过 SenseCAP Hotspot 应用使用蓝牙连接热点  
+- 在 SenseCAP Hotspot 应用程序中通过蓝牙连接热点
 
-按住按钮 5 秒，直到蓝色指示灯缓慢闪烁以进入配置模式，然后按照应用中的说明连接热点。
+按住按钮 5 秒直到蓝色指示灯缓慢闪烁进入配置模式，然后按照应用程序中的说明连接热点。
 
-![SenseCAP M2 设置 - 应用](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-setup-app-scaled.jpg)
+![SenseCAP M2 Setup - App](https://www.sensecapmx.com/wp-content/uploads/2022/07/m2-setup-app-scaled.jpg)
 
-**注意**：请为 SenseCAP M2 数据专用热点选择 "**SenseCAP M2 (Data-Only)**"。如果周围有多个热点，您可以通过热点名称下的 6 位 MAC 地址来识别热点。
+**注意**：请为 SenseCAP M2 Data Only 热点选择"**SenseCAP M2 (Data-Only)**"。如果您周围有多个热点，您可以通过热点名称下的 6 位 MAC 地址来识别热点。
 
-*   设置 Wi-Fi 连接  
+- 设置 Wi-Fi 连接
 
-点击“扫描网络”，选择 Wi-Fi 并输入密码；或者如果您已经使用以太网线，则点击“改用以太网”。
+点击"扫描网络"，选择 Wi-Fi 并输入密码；或者如果您已经使用以太网电缆，请点击"使用以太网"。
 
-![SenseCAP M2 Wi-Fi 设置](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi.png)
-
-* * *
-
-**步骤 3：Helium 热点注册和位置声明**
-======================================
-
-*   将热点添加到 Helium 网络  
-
-请按照应用说明将热点添加到 Helium 网络。
-
-**注意**：请注意，注册和位置声明费用不包含在产品中。您需要在钱包中准备 1,000,000 Helium 数据积分（\$10）用于注册费用，以及 500,000 Helium 数据积分（\$5）用于位置声明费用。  
-您需要在 Helium 钱包中将 Helium HNT 兑换为数据积分，这些费用将在注册过程中自动扣除。请确保在进行注册之前，钱包中有足够的 Helium 数据积分。
-
-*   声明热点位置  
-
-请按照应用说明，在地图上选择实际放置位置并声明位置。
+![SenseCAP M2 Wifi Setup](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi.png)
 
 * * *
 
-**您的 SenseCAP M2 已准备就绪！欢迎加入人民网络！**
-=======================================================
+**步骤 3：Helium 热点入网和断言位置**
+=========================================================
+
+- 将热点添加到 Helium 网络
+
+请按照应用程序说明将热点添加到 Helium 网络。
+
+**注意**：请注意，入网和位置断言费用不包含在产品中。您的钱包中需要 1,000,000 Helium 数据积分（\$10）用于入网费用，500,000 Helium 数据积分（\$5）用于位置断言费用。
+您需要在 Helium 钱包内将 Helium HNT 兑换为积分以获得数据积分，这些积分将在入网时自动扣除。请确保在进行入网过程之前钱包中有足够的 Helium 数据积分。
+
+- 断言热点位置
+
+请按照应用程序说明，在地图上选择实际放置位置，并断言位置。
+
+* * *
+
+**您的 SenseCAP M2 已准备就绪！欢迎来到人民网络！**
+=====================================================================
 
 ![Longfi](https://www.sensecapmx.com/wp-content/uploads/2022/06/longfi.webp)

@@ -309,7 +309,7 @@ A2：Seeeduino v4.2与Arduino UNO完全兼容。主要区别如下：
 A3：请按照以下步骤解决问题。
 
 - 点击文件 -> 首选项
-- 在首选项窗口底部点击URL C:\Users\...\AppData\Local\Arduino15\preferences.txt
+- 在首选项窗口底部点击URL C:\Users...\AppData\Local\Arduino15\preferences.txt
 - 删除除preferences.txt、staging和packages之外的所有文件
 - 关闭并重新打开IDE窗口，应该就能正常工作了
 

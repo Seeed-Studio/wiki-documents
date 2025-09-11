@@ -39,7 +39,7 @@ RS232 Shield 是工业设备的标准通信端口。该模块基于 MAX232，这
 ### 硬件安装
 
 1. Seeeduino v3.0、Mini USB 线缆、RS232 Shield、RS232 转 USB 线缆。
-2. 按如下方式进行连接。跳线帽可用于从数字引脚中选择软件串口。您可以将它们设置为 D7(232\_TX) 和 D6(232\_RX)，并修改代码为 "*SoftwareSerial mySerial(7, 6); // 232\_TX, 232\_RX*"
+2. 按如下方式进行连接。跳线帽可用于从数字引脚中选择软件串口。您可以将它们设置为 D7(232_TX) 和 D6(232_RX)，并修改代码为 "*SoftwareSerial mySerial(7, 6); // 232_TX, 232_RX*"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_usage.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -96,7 +96,7 @@ void loop() // run over and over
 --------
 
 -   [RS232 Shield eagle 文件](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.0_Eagle.zip)
--   [RS232\_Shield\_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
+-   [RS232_Shield_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
 -   [数据手册 MAX232D.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/MAX232D.pdf)
 
 

@@ -1,7 +1,7 @@
 ---
-description: この記事では、fuxaを使用してSCADAを実現する方法を主に紹介します。
+description: この記事では主にfuxaを使用してSCADAを実現する方法を紹介します。
 
-title: reComputer R1000とfuxaを使用してSCADAを実現
+title: reComputer R1000でfuxaを使用してSCADAを実現
 keywords:
   - Edge Controller
   - reComputer R1000
@@ -10,68 +10,72 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /ja/reComputer_r1000_fuxa_achieve_scada
 last_update:
-  date: 05/15/2025
+  date: 10/8/2024
   author: ShuishengPeng
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 ## はじめに
-FUXAは、ウェブベースのプロセス可視化（SCADA/HMI/Dashboard）ソフトウェアです。FUXAを使用すると、機械の個別デザインとリアルタイムデータ表示を備えた最新のプロセス可視化を作成できます。Modbus RTU/TCP、Siemens S7 Protocol、OPC-UA、BACnet IP、MQTTなどのプロトコルをサポートしています。
 
-この記事では、fuxaを使用してSCADAを実現する方法を主に紹介します。記事内では、fuxaが`node-red`と`OPC UA Simulator`からデータを受信し、`chart`や`Circular Gauge`を使用して表示します。同時に、産業プロセスをシミュレートする一連のパターンを描画します。
+FUXAはWebベースのプロセス可視化（SCADA/HMI/ダッシュボード）ソフトウェアです。FUXAを使用すると、機械用の個別設計による現代的なプロセス可視化とリアルタイムデータ表示を作成できます。Modbus RTU/TCP、Siemens S7プロトコル、OPC-UA、BACnet IP、MQTT、その他のプロトコルをサポートしています。
 
-## 始める前に
+この記事では主にfuxaを使用してSCADAを実現する方法を紹介します。記事では、fuxaが`node-red`と`OPC UA Simulator`からデータを受信し、`chart`と`Circular Gauge`を使用して表示します。同時に、工業プロセスをシミュレートするための一連のパターンを描画します。
 
-このプロジェクトを開始する前に、以下に記載されているようにハードウェアとソフトウェアを事前に準備する必要があります。
+## はじめに
+
+このプロジェクトを開始する前に、ここで説明されているようにハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
-* Python 3.11はfuxaと互換性がない可能性があります。Pythonのバージョンが3.11の場合は、別のバージョンに変更することを検討してください。
-* reComputer R1000で[fuxa](https://github.com/frangoteam/FUXA)を使用します。以下の手順に従ってreComputer R1000にfuxaをインストールする方法を参照してください。
+
+- Python 3.11はfuxaと互換性がない可能性があります。Pythonバージョンが3.11の場合は、別のPythonバージョンへの変更を検討してください。
+
+- reComputer R1000で[fuxa](https://github.com/frangoteam/FUXA)を使用します。reComputer R1000にfuxaをインストールするには、以下の手順を参照してください。
+
   ```shell
-    ## Node Version 14 || 16 || 18をインストール済みである必要があります。
+    ## You need to have installed Node Version 14 || 16 || 18.
     wget https://nodejs.org/dist/v18.20.3/node-v18.20.3-linux-arm64.tar.xz
     tar -xf node-v18.20.3-linux-arm64.tar.xz
     cd node-v18.20.3-linux-arm64
     sudo cp -R * /usr/local/
     node -v
     npm -v
-    ## 次にnpmからFUXAをインストールします
+    ## Next install FUXA from npm
     sudo npm install -g --unsafe-perm @frangoteam/fuxa
     sudo fuxa
   ```
-* fuxaを使用してOPC-UAデータのやり取りを実現する方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_opc_ua/)を参照してください。
-* fuxaを使用してmqttクライアントとのデータやり取りを実現する方法については、この[wiki](https://wiki.seeedstudio.com/ja/reComputer_r1000_fuxa_mqtt_client/)を参照してください。このwikiとは異なり、`node-red`で公開するデータは`function`モジュールで処理され、`loop`モジュールを使用して継続的に公開されます。`function`モジュールのコードは以下の通りです：
+
+- fuxa を使用して OPC-UA データ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_opc_ua/) を参照してください。
+
+- fuxa を使用して mqtt クライアントとのデータ相互作用を実装する方法については、この [wiki](https://wiki.seeedstudio.com/reComputer_r1000_fuxa_mqtt_client/) を参照してください。この wiki とは異なり、`node-red` で公開するデータは `function` モジュールで処理され、`loop` モジュールが継続的な公開に使用されます。`function` モジュールのコードは以下の通りです：
+
   ```java
-  ## 起動時
+  ## On Start
     global.set('firstTank', '10000');
     global.set('secondTank', '0');
     global.set('thirdTank', '0');
   ```
+
   ```java
-  ## メッセージ受信時
+  ## On Message
     var firstTank = global.get('firstTank');
     var secondTank = global.get('secondTank');
     var thirdTank = global.get('thirdTank');
@@ -99,122 +103,129 @@ FUXAは、ウェブベースのプロセス可視化（SCADA/HMI/Dashboard）ソ
     msg.payload = data;
     return msg;
   ```
-  主に、firstTank、secondTank、thirdTankをjson形式にカプセル化し、mqtt-outモジュールに公開させます。
+
+  主な作業は、firstTank、secondTank、thirdTankをjson形式にカプセル化し、mqtt-outモジュールに公開させることです。
 
   <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/node-red-mqtt.png" /></center>
 
-- fuxaの右下にある`+`ボタンをクリックし、`Name`、`Type`を入力し、`Internal`を選択して最後に`OK`をクリックすると新しいモジュールが作成されます。このモジュールは外部デバイスとの通信機能を持ちませんが、カスタムタグを追加することができます。これらのタグは`boolean`、`number`、`string`の3つのデータ型をサポートしており、後続の作業を容易にします。
+- fuxaの右下角の`+`ボタンをクリックし、`Name`、`Type`を入力し、`Internal`を選択し、最後に`OK`をクリックして新しいモジュールを取得します。このモジュールは外部デバイスとの通信機能はありませんが、カスタムタグを追加することができます。これらのタグは`boolean`、`number`、`string`などの3つのデータタイプをサポートし、後続の作業を便利にします。
 
     <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_internal.gif" /></center>
 
 ### ハードウェア構成
 
-W10 PCとreComputer R1000をスイッチに接続するためにイーサネットケーブルを使用し、同じネットワークセグメントにあることを確認します。
+イーサネットケーブルを使用してW10 PCとreComputer R1000をスイッチに接続し、同じネットワークセグメント上にあることを確認します。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/r1000_connection.png" alt="pir" width="500" height="auto" /></div>
 
-## 視覚表示と主要コントロールの紹介
+## ビジュアル表示とメインコントロールの紹介
+
 ### チャート
-Fuxa では、曲線チャートとヒストグラムが利用可能です。ここでは曲線チャートを例に説明します。`Chart` のプロパティは以下の図のようになっています。`Chart` の `Name`、`フォントサイズ`、`データ形式`、`時間形式`、`X軸およびY軸のスタイル` などのプロパティを設定できます。最も重要なのは `Chart to show` で、これにより表示したいデータソースと線の形式が決まります。
+
+fuxaには曲線チャートとヒストグラムが利用できます。曲線チャートを例に取ると、`Chart`のプロパティは図に示すとおりです。`Chart`の`Name`、`フォントサイズ`、`データ形式`、`時間形式`、`X軸とY軸のスタイル`などのプロパティを設定できます。最も重要なのは`Chart to show`で、これは表示したいデータソースと線の形式を決定します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/chart_property.png" /></center>
 
-`Chart to show` をクリックし、`New Chart` を選択すると、新しいポップアップウィンドウが表示されます。この新しいウィンドウの右上にある `+` ボタンをクリックし、`Name` を入力して `OK` をクリックすると、新しい線の設定を作成できます。その後、新しく作成した線の設定をクリックし、`Add Line` をクリックして表示したいデータを選択し、最後に `OK` をクリックすると、新しい曲線が表示されます。このプロセスを繰り返すことで、複数の曲線を追加できます。最後に `OK` をクリックして設定を完了します。
+`Chart to show`をクリックし、`New Chart`を選択すると、新しいポップアップウィンドウが表示されます。新しいポップアップウィンドウの右上角の`+`ボタンをクリックし、`Name`を入力し、`OK`をクリックすると、新しい線の設定を正常に作成できます。次に、新しく作成した線の設定をクリックし、`Add Line`をクリックし、表示したいデータを選択し、最後に`OK`をクリックすると、新しい曲線が表示されます。このプロセスを通じて複数の曲線を追加できます。最後に`OK`をクリックして設定を完了します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/new_chart_line_confiigure.png" /></center>
 
-ここでは `Chart` を使用して `Prosys OPC UA Simulation Server` のデータを表示します。データがグラフ形式で正常に表示されていることが確認できます。
+ここでは`Chart`を使用して`Prosys OPC UA Simulation Server`からのデータを表示します。データがグラフの形式で正常に表示されていることがわかります。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_chart.gif" /></center>
 
 ### スイッチ
-スイッチの属性は以下の図のようになっています。`swich_1` という名前のブールデータをスイッチ状態として選択します。スイッチがオンまたはオフのときの表示状態（色の設定、テキスト表示など）を構成できます。
+
+スイッチの属性は図に示すとおりです。`swich_1`という名前のbooleanデータをスイッチ状態として選択します。オンまたはオフ時の`swich`の表示状態を設定でき、色の設定、テキスト表示などが含まれます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/swich_property.png" /></center>
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_swich.gif" /></center>
 
 ### シェイプ
-Fuxa は、ユーザーが産業用ビジュアライゼーションインターフェースを描画するためのさまざまな `shape` を提供します。各 `shape` には、`Property`、`Events`、`Actions` の3つの属性があります。
-その中で、`Property` は主に `shape` の色を設定するために使用されます。`Tag` をバインドすることで、`Tag` の値の変化に応じて `shape` が異なる色を表示します。右上の `+` をクリックして、異なる色を設定できます。
+
+Fuxaは、ユーザーが産業用可視化インターフェースを描画するための様々な`shape`を提供します。各`shape`には`Property`、`Events`、`Actions`の3つの属性があります。
+その中で、`Property`は主に`shape`の色を設定するために使用されます。`Tag`をバインドすることで、`shape`は`Tag`値の変化に応じて異なる色を表示します。右上角の`+`をクリックして異なる色を設定できます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/shap_setting_property.png" /></center>
 
-ここでは倉庫のパターンを例に取り、`Property` を使用してその色を塗りつぶします。
+ここでは倉庫パターンを例に取り、`Property`でその色を塗りつぶします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/fill_color.gif" /></center>
 
-`Events` には主に2つの内容があります。`Type` はイベントの種類を表し、`Action` はイベントがトリガーされた後のアクションを表します。
+`Events`には主に2つの内容があり、`Type`はイベントタイプを表し、`Action`はイベントがトリガーされた後のアクションを表します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/shap_setting_Events.gif" /></center>
 
-`Actions` は `Tag` にバインドする必要があり、異なる `Tag` の値によって異なるアクションをトリガーできます。`Min` と `Max` の値を設定し、`Type` オプションで希望するアクションを選択します。`Tag` のデータが Min と Max の間の範囲に達すると、対応するアクションがトリガーされます。
+`Actions`は`Tag`にバインドする必要があり、異なる`Tag`値は異なるアクションをトリガーできます。`Min`と`Max`の値を設定し、`Type`オプションで希望するアクションを選択します。`Tag`データがMinとMaxの間の区間に達すると、対応するアクションがトリガーされます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/shape_setting_actions.png" /></center>
 
-ここでは倉庫のパターンを例に取り、`Actions` を使用してその回転と停止を制御します。
+ここでは倉庫パターンを例に取り、`Actions`を通じてその回転と停止を制御します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/turn_use_action.gif" /></center>
 
 ### パイプ
-産業プロセスを表示する際、`pipe` を使用して産業材料の流れの方向を表すことができます。パイプのプロパティは以下の図のようになっています。
+
+産業プロセスを表示する際、`pipe`を使用して産業材料の流れ方向を表すことができます。パイプのプロパティは図に示すとおりです。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/pipe_prorety.png" /></center>
 
-`Property` 部分では、パイプの幅、色などのプロパティを設定できます。`Actions` も `Tag` にバインドする必要があります。異なる `Tag` の値により、パイプラインに異なるアクションを設定できます。主なアクションは4つあります：`Stop`、`Turn clockwise`、`Turn anticlockwise`、および `Hide content`。この記事では、`Stop` と `Turn clockwise` の2つのアクションを示します。
+`Property`部分では、パイプの幅、色などのプロパティを設定できます。`Actions`も`Tag`にバインドする必要があります。異なるタグ値により、パイプラインは異なるアクションを持つことができます。主に4つのアクションがあります：`Stop`、`Turn clockwise`、`Turn anticlockwise`、`Hide conten`。この記事では`Stop`と`Turn clockwise`の2つのアクションを示します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/creat_pipe.gif" /></center>
 
-産業プロセスをシミュレートするために、2つのタンクやいくつかのパイプなどのパターンを追加しました。
+産業プロセスをシミュレートするために、2つのタンクといくつかのパイプなどのパターンを追加しました。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/after_add.gif" /></center>
 
 ### 円形ゲージ
-`チャート` に加えて、`Circular Gauge` もリアルタイムでデータを表示できます。3種類の `Circular Gauge` が利用可能です。
+
+`charts`に加えて、`Circular Gauge`もリアルタイムでデータを表示できます。3つの`Circular Gauge`が利用できます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/three_gauge.png" /></center>
 
-使用する際には、`Tag` をバインドして表示するデータを指定する必要があります。同時に、計器が表示できるデータの最大範囲を指定する必要があります。また、計器パネル上の線などの属性を設定することもできます。ここでは、`/dev/fromfuxa` トピックの `Tank1` のデータを選択して表示します。
+使用時には、`Tag`をバインドして表示するデータを指定する必要があります。同時に、計器が表示できるデータの最大範囲を指定する必要があります。また、計器パネル上の線などの属性も設定できます。ここでは、表示用に`/dev/fromfuxa`トピック内の`Tank1`のデータを選択します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/gauge_show_data.gif" /></center>
 
-その後、`Tank2` と `Tank3` のデータも `Circular Gauge` を通じて表示し、それぞれのタンクの現在の容量を示します。
+その後、`Tank2`と`Tank3`のデータも`Circular Gauge`を通じて表示し、各タンクの現在の容量を示します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/add_gauge.gif" /></center>
 
-### スライダー
-スライダーを使用して、流量や圧力などの変数を調整します。そのプロパティは以下の図のようになっています。色や形式を設定できます。使用する際には、`Tag` をバインドする必要があります。その後、スライダーは `Tag` の値をリアルタイムで調整できます。ここではカスタム `Flow control 1` タグをバインドします。
+### Slider
+
+スライダーを使用して、流量、圧力などの変数を調整します。その属性は図に示すとおりです。色と形式を設定できます。使用時には`Tag`をバインドする必要があります。そうすると、スライダーは`Tag`の値をリアルタイムで調整できます。ここでは、カスタムの`Flow control 1`タグをバインドします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/slider_property.png" /></center>
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/slider.gif" /></center>
 
-### アラーム
-工業プロセスにおいて、特定のパラメータ（例えば圧力）が過剰になると、危険を引き起こす可能性があります。このような場合、スタッフに問題が発生している可能性を知らせるためにアラームが必要です。Fuxaは、特定の値をリアルタイムで監視し、その値が危険な範囲に達したときにアラームをトリガーする機能をサポートしています。  
-デフォルトでは、Fuxaのインターフェースにはアラームバーが表示されていません。アラームバーを表示するには設定が必要です。
+### Alarm
+
+産業プロセスでは、特定のパラメータ（圧力など）が過度になると危険を引き起こす可能性があります。この時、スタッフにここで何らかの問題が発生している可能性があることを知らせるアラームが必要です。Fuxaは特定の値のリアルタイム監視をサポートし、値が特定の危険範囲に達したときにアラームをトリガーします。
+デフォルトでは、fuxaのインターフェースはアラームバーを開いていません。アラームバーを開くには設定が必要です。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/start_alarm.gif" /></center>
 
-アラームバーを開いた後、アラームを設定することができます。左上の設定ボタンをクリックし、次に`Alarms`をクリックします。その後、新しいウィンドウで`+`をクリックするとアラーム設定ウィンドウが表示されます。この時点で、`Tag`をバインドする必要があります。システムはこの`Tag`の値を監視します。  
-`Alarms`には4つのレベルがあり、それぞれ`High High`、`High`、`Low`、`Message`です。各レベルに対して`Tag`の値の範囲を設定することができ、`Tag`の値がその範囲に達したときに、対応するレベルのアラートがトリガーされます。
+アラームバーが開かれた後、アラームを設定できます。左上の設定ボタンをクリックし、次に`Alarms`をクリックし、新しいウィンドウで`+`をクリックするとアラーム設定ウィンドウが表示されます。この時、`Tag`をバインドする必要があり、システムは`Tag`の値を監視します。`Alarms`には4つのレベルがあります：`High High`、`High`、`Low`、`Message`。各レベルに対して`Tag`値の範囲を設定でき、`Tag`値がこの範囲に達すると、対応するレベルのアラートがトリガーされます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/alarm_show.gif" /></center>
 
-### SCADA デモ
+### SCADA demo
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/fuxa/final_demo.gif" /></center>
 
+## Tech Support & Product Discussion
 
-## 技術サポートと製品ディスカッション
-
-弊社の製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

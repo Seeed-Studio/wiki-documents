@@ -1,27 +1,22 @@
 ---
-description: reComputer Industrial J30シリーズおよびJ40シリーズのハードウェアとインターフェースの使用方法
-title: reComputer Industrial J40, J30 ハードウェアとインターフェースの使用方法
+description: reComputer Industrial J30シリーズおよびJ40シリーズのハードウェアとインターフェース使用方法
+title: reComputer Industrial J40、J30 ハードウェアとインターフェース使用方法
 tags:
   - reComputer Industrial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reComputer_Industrial_J40_J30_Hardware_Interfaces_Usage
 last_update:
-  date: 05/15/2025
+  date: 05/16/2023
   author: Lakshantha
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-このWikiでは、reComputer Industrial J4012、J4011、J3011、J3010のさまざまなハードウェアとインターフェースを紹介し、それらを使用してプロジェクトアイデアを拡張する方法を説明します。
+このwikiでは、reComputer Industrial J4012、J4011、J3011、J3010の様々なハードウェアとインターフェースについて紹介し、プロジェクトアイデアを拡張するための使用方法を説明します。
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/2.png"/></div>
 
-
 ## CSIカメラ
 
-reComputer Industrialは、**2x 2レーン 15ピン MIPI CSIカメラコネクタ**を備えており、以下のカメラがサポートされています。
+reComputer Industrialには**2x 2レーン 15ピン MIPI CSIカメラコネクタ**が搭載されており、以下のカメラがサポートされています
 
 - IMX219カメラ
 
@@ -45,96 +40,96 @@ reComputer Industrialは、**2x 2レーン 15ピン MIPI CSIカメラコネク�
 
 ### 接続概要
 
-ここでは、2つのCSIカメラコネクタが**CAM0とCAM1**としてマークされています。1つのカメラを2つのコネクタのいずれかに接続するか、2つのカメラを両方のコネクタに同時に接続することができます。
+ここで2つのCSIカメラコネクタは**CAM0とCAM1**としてマークされています。2つのコネクタのうちどちらか一方にカメラを1台接続するか、両方のコネクタに同時に2台のカメラを接続することができます。
 
-**ステップ1:** CSIコネクタの黒いロックを優しく引き出します。
+**ステップ1:** CSIコネクタの黒いロックを優しく引き出します
 
 <div align="center"><img width ="200" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/5.png"/></div>
 
-**ステップ2:** 金色の端子が下向きになるようにして、15ピンリボンケーブルをコネクタに挿入します。
+**ステップ2:** 金色の端子が下向きになるように15ピンリボンケーブルをコネクタに挿入します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/6.png"/></div>
 
-**ステップ3:** 黒いロックを押し込んでリボンケーブルを固定します。
+**ステップ3:** 黒いロックを押し込んでリボンケーブルを固定します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/10.png"/></div>
 
 ### 使用方法
 
-まず、使用する特定のカメラに適したドライバをロードするようにボードを設定する必要があります。JetPackシステムには、IMX219およびIMX477カメラをサポートする組み込みツールがあります。
+まず、使用する特定のカメラに適したドライバーをロードするようにボードを設定する必要があります。このためJetPackシステムには、IMX219およびIMX477カメラをサポートする内蔵ツールがあります。
 
-**ステップ1:** ターミナルを開き、以下を実行します。
+**ステップ1:** ターミナルを開いて以下を実行します
 
 ```sh
 sudo /opt/nvidia/jetson-io/jetson-io.py
 ```
 
-**ステップ2:** **Configure Jetson Nano CSI Connector**を選択します。
+**Step 2:** **Configure Jetson Nano CSI Connector** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/119.jpg"/></div>
 
-**ステップ3:** **Configure for compatible hardware**を選択します。
+**Step 3:** **Configure for compatible hardware** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/120.jpg"/></div>
 
-**ステップ4:** 使用するカメラを選択します。
+**Step 4:** 使用したいカメラを選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/121.jpg"/></div>
 
-**ステップ5:** **Save pin changes**を選択します。
+**Step 5:** **Save pin changes** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/122.jpg"/></div>
 
-**ステップ6:** **Save and reboot to reconfigure pins**を選択します。
+**Step 6:** **Save and reboot to reconfigure pins** を選択します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/123.jpg"/></div>
 
-**ステップ7:** キーボードの任意のキーを押すと、デバイスが再起動し、カメラ設定が適用されます。
+**Step 7:** キーボードの任意のキーを押すと、適用されたカメラ設定でデバイスが再起動します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/124.jpg"/></div>
 
-CSIカメラは2つの異なる方法で使用できます。以下のコマンドをカメラコネクタに応じて実行してください。
+CSI カメラは2つの異なる方法で使用できます。カメラコネクタに応じて以下のコマンドに従ってください。
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Method 1" label="方法1">
+<TabItem value="Method 1" label="Method 1">
 
-CAM0ポートの場合
+CAM0ポート用
 
 ```sh
 nvgstcapture-1.0 sensor-id=0 
 ```
 
-CAM1ポートの場合
+CAM1ポート用
 
 ```sh
 nvgstcapture-1.0 sensor-id=1  
 ```
 
 :::note
-カメラの設定をさらに変更したい場合は、**"nvgstcapture-1.0 --help"**を入力して利用可能なすべての設定オプションにアクセスできます。
+カメラのさらなる設定を変更したい場合は、**"nvgstcapture-1.0 --help"** と入力することで、利用可能なすべての設定可能オプションにアクセスできます
 :::
 
 </TabItem>
 
-<TabItem value="Method 2" label="方法2">
+<TabItem value="Method 2" label="Method 2">
 
-CAM0ポートの場合
+CAM0ポート用
 
 ```bash
 gst-launch-1.0 nvarguscamerasrc sensor-id=0 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
-CAM1ポートの場合
+CAM1ポート用
 
 ```bash
 gst-launch-1.0 nvarguscamerasrc sensor-id=1 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
 :::note
-カメラの設定をさらに変更したい場合は、**width, height, framerate, format**などの引数を更新できます。
+カメラのさらなる設定を変更したい場合は、**width、height、framerate、format**などの引数を更新できます。
 :::
 
 </TabItem>
@@ -142,73 +137,73 @@ gst-launch-1.0 nvarguscamerasrc sensor-id=1 sensor-mode=0 ! 'video/x-raw(memory:
 
 ## RTC
 
-reComputer Industrial には、RTC バッテリーを接続するための2つの異なる方法が用意されています。
+reComputer Industrialには、RTCバッテリーに接続する2つの異なる方法が搭載されています
 
 ### 接続概要
 
-- 方法 1:
+- 方法1:
 
-**3V CR1220 コイン型電池**を、以下の図のようにボード上の RTC ソケットに接続します。バッテリーの**正極（+）**が上向きになるようにしてください。
+以下に示すように、**3V CR1220コイン電池**をボード上のRTCソケットに接続します。電池の**プラス（+）**端が上向きになっていることを確認してください
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/11.jpg"/></div>
 
-- 方法 2:
+- 方法2:
 
-**JST コネクタ付き 3V CR2302 コイン型電池**を、以下の図のようにボード上の 2 ピン 1.25mm JST ソケットに接続します。
+以下に示すように、**JSTコネクタ付き3V CR2302コイン電池**をボード上の2ピン1.25mm JSTソケットに接続します
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/12.jpg"/></div>
 
 ### 使用方法
 
 :::danger
-reComputer デバイスがすでに JetPack 6 以降に更新されている場合、RTC は追加の設定なしで正常に動作します。JetPack 5 を使用している場合は、以下の内容を参照してクロック同期サービスを設定する必要があります。
+reComputerデバイスが既にJetPack 6以降にアップデートされている場合、RTCは追加設定なしで正常に機能することにご注意ください。JetPack 5を使用している場合は、以下の内容を参照してクロック同期サービスを設定する必要があります。
 :::
 
-**ステップ 1:** 上記のいずれかの方法で RTC バッテリーを接続します。
+**ステップ1:** 上記のようにRTCバッテリーを接続します
 
-**ステップ 2:** reComputer Industrial を起動します。
+**ステップ2:** reComputer Industrialの電源を入れます
 
-**ステップ 3:** Ubuntu デスクトップで、右上のドロップダウンメニューをクリックし、`設定 > 日付と時刻` に移動します。Ethernet ケーブルを使用してネットワークに接続し、**自動日付と時刻**を選択して日付/時刻を自動的に取得します。
+**ステップ3:** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブル経由でネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
 :::note
-Ethernet 経由でインターネットに接続していない場合は、ここで手動で日付/時刻を設定できます。
+イーサネット経由でインターネットに接続していない場合は、ここで日付/時刻を手動で設定できます
 :::
 
-**ステップ 4:** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロックの時刻を確認します。
+**ステップ4:** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します
 
 ```sh
 sudo hwclock
 ```
 
-以下のような出力が表示されますが、これは正しい日付/時刻ではありません。
+以下のような出力が表示されますが、これは正しい日付/時刻ではありません
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/14.png"/></div>
 
-**ステップ 5:** 以下のコマンドを入力して、ハードウェアクロックの時刻を現在のシステムクロックの時刻に変更します。
+**ステップ 5:** 以下のコマンドを入力して、ハードウェアクロック時刻を現在のシステムクロック時刻に変更します
 
 ```sh
 sudo hwclock --systohc
 ```
 
-**ステップ 6:** Ethernet ケーブルを取り外し、インターネットから時刻を取得しないようにしてからボードを再起動します。
+**ステップ 6:** インターネットから時刻を取得しないようにするため、接続されているイーサネットケーブルをすべて取り外し、ボードを再起動してください
 
 ```sh
 sudo reboot
 ```
 
-**ステップ 7:** デバイスの電源を切った後でも日付/時刻が保持されていることを確認するために、ハードウェアクロックの時刻を再確認します。
+**ステップ7:** ハードウェアクロック時刻を確認して、デバイスの電源がオフになっても日付/時刻が同じままであることを確認します
 
-次に、システムクロックを毎回起動時にハードウェアクロックから同期するスクリプトを作成します。
+次に、各起動時にハードウェアクロックからシステムクロックを常に同期するスクリプトを作成します。
 
-**ステップ 8:** 任意のテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは **vi** テキストエディタを使用します。
+**ステップ8:** お好みのテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは**vi**テキストエディタを使用します
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-**ステップ 9:** **i** キーを押して**挿入モード**に入り、以下の内容をファイル内にコピーして貼り付けます。
+**ステップ 9:** **i** を押して**挿入モード**に入り、ファイル内に以下の内容をコピー＆ペーストします
 
 ```sh
 #!/bin/bash
@@ -216,19 +211,19 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-**ステップ 10:** スクリプトを実行可能にします。
+**Step 10:** Make the script executable
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
 ```
 
-**ステップ 11:** systemd ファイルを作成します。
+**Step 11:** Create a systemd file
 
 ```sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-**ステップ 12:** 以下の内容をファイル内に追加します。
+**Step 12:** Add the following inside the file
 
 ```sh
 [Unit]
@@ -241,56 +236,56 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-**ステップ 13:** systemctl デーモンをリロードします。
+**ステップ 13:** systemctl デーモンをリロードする
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-**ステップ 14:** 作成したサービスを起動時に有効化し、サービスを開始します。
+**ステップ 14:** 新しく作成したサービスを起動時に開始するように有効化し、サービスを開始する
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-**ステップ 15:** スクリプトが systemd サービスとして正常に動作していることを確認します。
+**Step 15:** Verify the script is up and running as a systemd service
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-**ステップ 16:** ボードを再起動し、システムクロックがハードウェアクロックと同期していることを確認します。
+**Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます
 
 ## M.2 Key M
 
-出荷時、reComputer Industrial には 128GB SSD が M.2 Key M スロットに接続されており、JetPack システムがプリインストールされています。
+reComputer Industrialには、M.2 Key Mスロットに接続された128GB SSDが標準で含まれており、JetPackシステムがプリインストールされています。
 
 ### 接続概要
 
-付属の SSD を取り外して新しい SSD を取り付けたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html) の Seeed SSD のみを使用することを推奨します。これらの SSD のみがテスト済みです。また、このインターフェースは PCIe Gen4.0 SSD をサポートしています。
+付属のSSDを取り外して新しいものを取り付けたい場合は、以下の手順に従ってください。ここでは、[128GB](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)、[256GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)、[512GB](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)ストレージのSeeed SSDのみを推奨します。これらのSSDのみをテストしているためです。さらに、このインターフェースはPCIe Gen4.0 SSDをサポートしています。
 
-- **ステップ 1:** プリインストールされた SSD のネジを取り外します
+- **Step 1:** プリインストールされたSSDのネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/15.png"/></div>
 
-- **ステップ 2:** SSD コネクタからスライドさせて SSD を取り外します
+- **Step 2:** SSDコネクタから離すようにスライドしてSSDを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/16.png"/></div>
 
-- **ステップ 3:** 新しい SSD を挿入し、ネジを締め直します
+- **Step 3:** 新しいSSDを挿入し、ネジを締め直します
 
 ### 使用方法
 
-接続された SSD の簡単なベンチマークを行う方法を説明します。
+接続されたSSDで簡単なベンチマークを実行する方法を説明します
 
-- **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します
+- **Step 1:** 以下のコマンドを実行して書き込み速度を確認します
 
 ```sh
 sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
 ```
 
-- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。このコマンドは、上記の書き込み速度確認コマンドを実行した後に実行してください。
+- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。上記の書き込み速度のコマンドを実行した後に、必ずこれを実行してください。
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -299,45 +294,45 @@ sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
 
 ## mini PCIe
 
-reComputer Industrial には mini PCIe コネクタが搭載されており、4G および LoRa モジュールをサポートしています。ただし、4G モジュールまたは LoRa モジュールのいずれか一方のみを接続できます。
+reComputer Industrial には、4G および LoRa モジュールをサポートする mini PCIe コネクタが付属しています。ただし、4G モジュールまたは LoRa モジュールのいずれか一方のみを同時に接続できます。
 
 ### 4G モジュール接続概要
 
 現在、このボードは EC25EUXGA および EC20CEHCLG モジュールをサポートしています。
 
-- **ステップ 1:** ボードがすでに電源オンの場合は電源をオフにします
+- **ステップ 1:** ボードが既に電源オンの場合は、電源をオフにします
 
 - **ステップ 2:** 付属のスタンドオフを取り外します。このスタンドオフは M.2 Key B インターフェースを使用する場合にのみ必要です
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/110.jpg"/></div>
 
-- **ステップ 3:** 4G モジュールを mini PCIe スロットにスライドさせ、付属のネジを使用して 2 つの穴に固定します
+- **ステップ 3:** 4G モジュールを mini PCIe スロットにスライドして挿入し、事前に取り付けられているネジを使用して 2 つの穴にネジ止めし、4G モジュールを固定します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/17.png"/></div>
 
-- **ステップ 4:** **MAIN** とラベル付けされたアンテナコネクタにアンテナを接続します。この際、IPEX コネクタを使用する必要があります
+- **ステップ 4:** **MAIN** とラベル付けされたアンテナコネクタにアンテナを接続します。ここでは IPEX コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/18.png"/></div>
 
-- **ステップ 5:** 4G 対応の nano SIM カードをボードの SIM カードスロットに挿入します。SIM カードの金属面が下向きになるようにし、内部のスプリングに当たるまで完全に挿入してロックします。
+- **ステップ 5:** 4G 対応の nano SIM カードをボード上の SIM カードスロットに挿入します。SIM カードの金色の面が下向きになるようにしてください。カードを奥まで挿入し、内部のスプリングに当たって跳ね返り、所定の位置にロックされるようにします。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/19.png"/></div>
 
 :::note
-SIM カードを取り外す場合は、カードを押し込んで内部のスプリングに当てると、スロットから出てきます。
+SIM カードを取り外したい場合は、カードを押し込んで内部のスプリングに当て、SIM がスロットから出てくるようにします
 :::
 
-- **ステップ 6:** **J8 (Control and UART) ヘッダー** の **SIM_MUX_SEL** ピンと **GND** ピンの間にジャンパーを追加します
+- **ステップ 6:** **J8 (Control and UART) Header** の **SIM_MUX_SEL** と **GND** ピンの間にジャンパーを追加します
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/20.png"/></div>
 
-- **ステップ 7:** ボードの電源をオンにします
+- **ステップ 6:** ボードの電源をオンにします
 
 ### 4G モジュール使用方法 - テストダイヤル
 
-EC25 モジュールを使用する場合、モジュールは自動的に起動し、使用可能になります。ただし、EC20 モジュールを使用する場合は、モジュールをリセットする必要があります。
+EC25 モジュールを使用する場合、モジュールは自動的に起動し、使用準備が整います。ただし、EC20 モジュールを使用する場合は、動作させるためにモジュールをリセットする必要があります
 
-**ステップ 1:** EC25 モジュールを使用している場合、このステップをスキップできます。ただし、EC20 モジュールを使用している場合は、以下のコマンドを入力して 4G モジュールをリセットする GPIO309 ピンにアクセスします。
+**ステップ 1:** EC25 モジュールを使用している場合は、このステップをスキップできます。ただし、EC20 モジュールを使用している場合は、以下のコマンドを入力して、4G モジュールのリセットを担当する GPIO309 ピンにアクセスします。
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -362,52 +357,52 @@ sudo gpioset --mode=wait gpiochip2 9=1
 </TabItem>
 </Tabs>
 
-EC25 モジュールの場合、ボードが起動するとすぐに LED2 が緑色に点灯します。EC20 モジュールの場合は、上記の手順でモジュールをリセットした後に LED2 が緑色に点灯します。
+EC25モジュールの場合、ボードが起動するとすぐにLED2が緑色に点灯します。EC20モジュールの場合、上記で説明したようにモジュールをリセットした後にLED2が緑色に点灯します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/118.jpg"/></div>
 
-**ステップ 2:** minicom をインストールします
+**ステップ 2:** minicomをインストールする
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-**ステップ 3:** 接続された 4G モジュールのシリアルコンソールに入り、AT コマンドを入力して 4G モジュールと対話します
+**ステップ3:** 接続された4Gモジュールのシリアルコンソールに入り、ATコマンドを入力して4Gモジュールと対話できるようにします
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**ステップ 4:** **Ctrl+A** を押してから **E** を押してローカルエコーをオンにします
+**ステップ4:** **Ctrl+A**を押してから**E**を押してローカルエコーをオンにします
 
-**ステップ 5:** コマンド **"AT"** を入力して Enter を押します。応答が "OK" と表示されれば、4G モジュールは正常に動作しています。
+**ステップ5:** コマンド**"AT"**を入力してEnterを押します。レスポンスが"OK"と表示されれば、4Gモジュールが正常に動作しています
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/22.jpg"/></div>
 
-**ステップ 6:** コマンド **"ATI"** を入力してモジュール情報を確認します
+**ステップ6:** コマンド**"ATI"**を入力してモジュール情報を確認します
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/23.png"/></div>
 
-**ステップ 7:** モジュールをテストするために、以下のコマンドを入力して別の電話番号に発信します
+**ステップ7:** モジュールをテストするには、以下のコマンドを入力して別の電話番号に発信します
 
 ```sh
 ATD<phone_number>;
 ```
 
-以下の出力が表示されます
+そして、以下の出力が表示されます
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/24.jpg"/></div>
 
-入力した電話番号が通話を受信できる場合、モジュールは期待通りに動作しています。
+入力した電話番号に電話がかかる場合、モジュールは期待通りに動作しています
 
-### 4G モジュール使用方法 - インターネット接続
+### 4Gモジュールの使用方法 - インターネットへの接続
 
-#### EC25 モジュール
+#### EC25モジュール
 
-EC25 モジュールを使用している場合、以下の手順に従ってください。
+EC25モジュールを使用している場合は、以下の手順に従ってください
 
-- **ステップ 1:** 上記の「4G モジュール使用方法 - テストダイヤル」セクションで説明したように 4G モジュールのシリアルコンソールを開いた後、以下のコマンドを実行してインターネットに接続します。ここで **YOUR_APN** をネットワークプロバイダーの APN に置き換えてください。
+- **ステップ1:** 上記で説明した4Gモジュールのシリアルコンソールを開いた後（4Gモジュールの使用方法 - テストダイヤル セクション）、以下のコマンドを実行してインターネットに接続します。ここで**YOUR_APN**をネットワークプロバイダーのAPNに置き換えてください
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
@@ -415,23 +410,23 @@ AT+CGDCONT=1,"IP","YOUR_APN"
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/89.jpg"/></div>
 
-接続が成功すると、上記の画像のように **OK** と出力されます。
+接続が成功すると、上の画像で確認できるように **OK** が出力されるはずです
 
-- **ステップ 2:** 以下のコマンドを実行して4Gモジュールを再起動します
+- **ステップ 2:** 以下を実行して4Gモジュールを再起動します
 
 ```sh
 AT+CFUN=1,1
 ```
 
-これにより、シリアル端末で4Gモジュールへの接続が失われます。
+これで、シリアルターミナル上で4Gモジュールとの接続が失われます
 
-- **ステップ 3:** **CTRL + A**を押してから**Q**を押して**minicom**を閉じます。
+- **ステップ 3:** **CTRL + A** を押してから **Q** を押して **minicom** を閉じます
 
-- **ステップ 4:** **ifconfig**を入力すると、**usb0**インターフェースにIPアドレスが表示されます。
+- **ステップ 4:** **ifconfig** と入力すると、**usb0** インターフェースにIPアドレスが表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/93.png"/></div>
 
-- **ステップ 5:** 以下のようにウェブサイトにpingを送信して、インターネット接続があるか確認できます。
+- **ステップ 5:** インターネット接続があるかどうかを確認するために、以下のようにWebサイトにpingを試すことができます
 
 ```sh
 ping -I usb0 www.bing.com -c 5
@@ -441,72 +436,72 @@ ping -I usb0 www.bing.com -c 5
 
 #### EC20モジュール
 
-EC20モジュールを使用している場合は、以下の手順に従ってください。
+EC20モジュールを使用している場合は、以下の手順に従ってください
 
-- **ステップ 1:** すでに前のセクション（4Gモジュール使用 - テストダイヤルセクション）で説明したように4Gモジュールをリセットしている場合、このステップをスキップできます。ただし、まだリセットしていない場合は、今すぐ行ってください。
+- **ステップ1:** 前のセクション（4Gモジュール使用方法 - テストダイヤリングセクション）でEC20モジュール用に説明されているように4Gモジュールをすでにリセットしている場合は、このステップをスキップできます。ただし、まだ実行していない場合は、今すぐ実行してください
 
-- **ステップ 2:** 4Gモジュールのシリアルコンソールに入り、以下のコマンドを入力してECMモードに設定します。
+- **ステップ2:** 4Gモジュールのシリアルコンソールにアクセスし、以下のコマンドを入力してECMモードに設定します
 
 ```sh
 AT+QCFG="usbnet",1
 ```
 
-- **ステップ 3:** 4Gモジュールをリセットします。
+- **ステップ 3:** 4Gモジュールをリセットする
 
-- **ステップ 4:** 4Gモジュールコンソール内で以下のコマンドを実行してインターネットに接続します。ここで**YOUR_APN**をネットワークプロバイダーのAPNに置き換えてください。
+- **ステップ 4:** 4Gモジュールコンソール内で、以下のコマンドを実行してインターネットに接続します。ここで **YOUR_APN** をあなたのネットワークプロバイダーのAPNに置き換えてください
 
 ```sh
 AT+CGDCONT=1,"IP","YOUR_APN"
 ```
 
-- **ステップ 6:** **ifconfig**を入力すると、**usb1**インターフェースにIPアドレスが表示されます。
+- **ステップ 6:** **ifconfig** と入力すると、**usb1** インターフェースに IP アドレスが表示されます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/90.jpg"/></div>
 
-- **ステップ 7:** 以下のようにURLにpingを送信して、インターネット接続があるか確認できます。
+- **ステップ 7:** 以下のように URL に ping を試して、インターネット接続があるかどうかを確認できます
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/92.png"/></div>
 
-### LoRaモジュール接続概要
+### LoRa モジュール接続概要
 
-現在、このボードはWM1302 SPIモジュールをサポートしています。[USバージョン](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html)または[EUバージョン](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html)を選択できます。これらはBazaarで入手可能です。
+現在このボードは WM1302 SPI モジュールをサポートしています。当社の Bazaar で入手可能な [US版](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-US915-SKY66420-p-5455.html) または [EU版](https://www.seeedstudio.com/WM1302-LoRaWAN-Gateway-Module-SPI-EU868-p-4889.html) のいずれかを使用できます。
 
-- **ステップ 1:** ボードがすでにオンの場合は電源をオフにします。
+- **ステップ 1:** ボードがすでに電源オンの場合は電源を切ります
 
-- **ステップ 2:** LoRaモジュールをmini PCIeスロットに挿入し、事前に取り付けられているネジを使用して、2つの穴にネジを締めて4Gモジュールを固定します。
+- **ステップ 2:** LoRa モジュールを mini PCIe スロットにスライドして挿入し、事前に取り付けられたネジを使用して 2 つの穴にネジ止めし、4G モジュールを所定の位置に固定します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/25.png"/></div>
 
-- **ステップ 3:** アンテナコネクタにアンテナを接続します。ここではIPEXコネクタを使用する必要があります。
+- **ステップ 3:** アンテナをアンテナコネクタに接続します。ここでは IPEX コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/26.png"/></div>
 
 :::note
-**SIM_MUX_SEL**と**GND**ピンの間にジャンパーがないことを確認してください（**J8（制御およびUART）ヘッダー**）。このジャンパーは4Gモジュールを使用する場合のみ必要です。
+**J8 (Control and UART) ヘッダー** の **SIM_MUX_SEL** と **GND** ピン間にジャンパーがないことを確認してください。このジャンパーは 4G モジュールを使用する場合にのみ必要です
 :::
 
-- **ステップ 4:** ボードの電源をオンにします。
+- **ステップ 4:** ボードの電源を入れます
 
-### LoRaモジュール使用 - LoRa RFのテスト
+### LoRa モジュール使用方法 - LoRa RF のテスト
 
-LoRaモジュールが接続されると、モジュール上の緑色と青色のLEDが点灯します。
+LoRa モジュールが接続されると、モジュール上の緑と青の LED が点灯します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/27.png"/></div>
 
-- **ステップ 1:** 以下のコマンドを入力して、LoRaモジュールがシステムによって検出されているか確認します。
+- **ステップ 1:** 以下のコマンドを入力して、LoRa モジュールがシステムによって検出されているかどうかを確認します
 
 ```sh
 i2cdetect -r -y 7
 ```
 
-以下の出力が表示された場合、モジュールはシステムによって検出されています。
+以下の出力が表示された場合、モジュールがシステムによって検出されています
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/29.png"/></div>
 
-- **ステップ 2:** 以下のコマンドを入力して、LoRa信号送信ツールをコンパイルしてビルドします。
+- **ステップ 2:** 以下のコマンドを入力してLoRa信号送信ツールをコンパイルおよびビルドします
 
 :::danger
-この**LoRa信号送信ツール**はJetpack5でのみ適用可能です。Jetpack6でLoRaモジュールの機能をテストする場合は、[回路図](https://github.com/Seeed-Studio/OSHW-Jetson-Series/blob/main/reComputer%20Jetson%20carrier%20board/reComputer%20Industrial%20J201/Schematic/reComputer%20Industrial%20J201_V1.2.pdf)と[ピンマップ](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)を参照してピン名を特定し、`gpioset`コマンドを使用してピン状態を設定してください。
+この**LoRa信号送信ツール**はJetpack5にのみ適用可能であることにご注意ください。Jetpack6でLoRaモジュール機能をテストしたい場合は、[回路図](https://github.com/Seeed-Studio/OSHW-Jetson-Series/blob/main/reComputer%20Jetson%20carrier%20board/reComputer%20Industrial%20J201/Schematic/reComputer%20Industrial%20J201_V1.2.pdf)と[pinmux](https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template)を参照してピン名を確認し、`gpioset`コマンドを使用してピンの状態を設定してください。
 :::
 
 ```bash
@@ -518,32 +513,33 @@ cp ../tools/reset_lgw.sh .
 sudo ./test_loragw_hal_tx -r 1250 -m LORA -f 867.1 -s 12 -b 125 -n 1000 -z 100 --dig 3 --pa 0 --pwid 13 -d /dev/spidev2.0
 ```
 
-以下の結果が表示され、LoRaモジュールのLEDが赤色に変わった場合、モジュールがRF信号を正常に送信していることを意味します。
+以下の結果が表示され、LoRaモジュールのLEDが赤色に点灯した場合、モジュールがRF信号を正常に送信していることを意味します
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/78.jpg"/></div>
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/28.png"/></div>
 
-送信を停止するには、キーボードで**CTRL + C**を押します。
+送信を停止するには、キーボードで**CTRL + C**を押してください。
 
-### LoRaモジュール使用 - TTNへの接続
+### LoRaモジュールの使用方法 - TTNへの接続
 
-次に、TTN（The Things Network）に接続し、reComputer IndustrialをTTN LoRaWANゲートウェイとして使用します。
+次に、TTN（The Things Network）に接続し、reComputer IndustrialをTTN LoRaWANゲートウェイとして使用します
 
-- **ステップ 1:** 以下を入力してパケットフォワーダーを準備します。
+- **ステップ1:** パケットフォワーダーを準備するために、以下を入力してください
+
 ```sh
 cd ..
 cd packet_forwarder
 cp ../tools/reset_lgw.sh .
 ```
 
-- **ステップ 2:** 使用しているLoRaモジュールに応じて以下を実行します。ここではSPI US915バージョンをテストしました。
+- **ステップ 2:** 使用している LoRa モジュールに応じて以下を実行します。ここでは SPI US915 バージョンをテストしました
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-ただし、他のモジュールに対するコマンドは以下の通りです。
+ただし、他の異なるモジュールのコマンドは以下の通りです
 
 ```sh
 # USB 915
@@ -556,96 +552,96 @@ sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.EU868.USB
 ```
 
-上記のコマンドを実行すると、以下の出力が表示され、最後の行に**コンセントレーターEUI**情報が表示されます。この情報は後でTTNゲートウェイを設定する際に使用するため、保存してください。
+上記のコマンドを実行すると、最後の行に**concentrator EUI**情報が表示された以下の出力が表示されます。この情報は後でTTNでゲートウェイを設定する際に使用するため、保存しておいてください。
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/79.jpg"/></div>
 
-- **ステップ 3:** [このURL](https://console.cloud.thethings.network)にアクセスしてTTNコンソールに入り、希望する地域を選択します。
+- **ステップ 3:** [このURL](https://console.cloud.thethings.network)にアクセスしてTTNコンソールに入り、お好みの地域を選択してください
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/80.png"/></div>
 
-- **ステップ 4:** すでにアカウントをお持ちの場合はログインしてください。アカウントをお持ちでない場合は新規登録を行ってください。
+- **ステップ 4:** すでにアカウントをお持ちの場合はログインし、アカウントをお持ちでない場合は新しいアカウントにサインアップしてください
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/81.png"/></div>
 
-- **ステップ 5:** **Go to gateways** をクリックします。
+- **ステップ 5:** **Go to gateways**をクリックしてください
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/82.png"/></div>
 
-- **ステップ 6:** **+ Register gateway** をクリックします。
+- **ステップ 6:** **+ Register gateway**をクリックしてください
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/83.png"/></div>
 
-- **ステップ 7:** 以前取得した **Concentrator EUI** を **Gateway EUI** セクションに入力し、**Confirm** をクリックします。
+- **ステップ 7:** 先ほど取得した**Concentrator EUI**を**Gateway EUI**セクションに入力し、**Confirm**をクリックしてください
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/84.jpg"/></div>
 
-- **ステップ 8:** 使用している LoRa モジュールに応じて **Frequency plan** を入力します。ここでは US915 バージョンのモジュールを使用しているため、**United States 902-928 MHz, FSB 2 (used by TTN)** を選択しました。その後、**Register gateway** をクリックします。
+- **ステップ 8:** 使用しているLoRaモジュールに応じて**Frequency plan**を入力してください。ここではモジュールのUS915バージョンを使用しているため、**United Stated 902-928 MHz, FSB 2 (used by TTN)**を選択しています。その後、**Register gateway**をクリックしてください
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/85.jpg"/></div>
 
 :::note
-**Gateway ID** は自動的に入力されています。ただし、任意の値に変更することも可能です。**Gateway name** は必須ではありませんが、必要に応じて入力することもできます。
+**Gateway ID**は自動的に入力されています。ただし、お好みに応じて変更することができます。**Gateway name**は必須ではありませんが、お好みに応じて入力することもできます
 :::
 
-- **ステップ 9:** ゲートウェイのメインホームページで **Gateway Server Address** をメモしてください。
+- **ステップ 9:** ゲートウェイのメインホームページで**Gateway Server Address**をメモしてください
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/86.jpg"/></div>
 
-- **ステップ 9:** reTerminal Industrial 上で、**lora_pkt_fwd** コマンドとともに使用した **global_conf_json** ファイルを編集します。以下のオプションを変更する必要があります：
+- **ステップ 9:** reTerminal Industrialで、**lora_pkt_fwd**コマンドと一緒に使用した**global_conf_json**ファイルを編集してください。ここで、以下のように**gateway_ID**、**server_address**、**serv_port_up**、**serv_port_down**オプションを変更する必要があります
 
-  - gateway_ID: デバイスから取得した Concentrator EUI
-  - server_address: TTN から取得した Gateway Server Address
+  - gateway_ID: デバイスからのConcentrator EUI
+  - server_address: TTNからのGateway Server Address
   - serv_port_up: 1700
   - serv_port_down: 1700
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/87.png"/></div>
 
-- **ステップ 10:** パケットフォワーダーを再実行します。
+- **ステップ 10:** パケットフォワーダーを再実行してください
 
 ```sh
 sudo ./lora_pkt_fwd -c global_conf.json.sx1250.US915
 ```
 
-以下の出力が表示された場合、デバイスが TTN に正常に接続されたことを意味します。
+以下の出力が表示された場合、デバイスがTTNに正常に接続されたことを意味します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/88.jpg"/></div>
 
 ## M.2 Key B
 
-reComputer Industrial には、4G および 5G モジュールをサポートする M.2 Key B コネクタが搭載されています。現在、**SIM8202G-M2 5G モジュール**でテストされています。
+reComputer Industrialには、4Gおよび5GモジュールをサポートするM.2 Key Bコネクタが搭載されています。現在、**SIM8202G-M2 5Gモジュール**をテストしています
 
-### 5G モジュール接続概要
+### 5Gモジュール接続概要
 
-- **ステップ 1:** ボードがすでに電源オンの場合は電源をオフにします。
+- **ステップ1:** ボードが既に電源オンの場合は、電源をオフにします
 
-- **ステップ 2:** スタンドオフが正しい位置にあることを確認し、スタンドオフの上部ネジを取り外します。
+- **ステップ2:** スタンドオフが所定の位置にあることを確認し、スタンドオフの上部ネジを取り外します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/111.jpg"/></div>
 
-- **ステップ 2:** 5G モジュールを M.2 Key B スロットに差し込み、スタンドオフネジを締めて 5G モジュールを固定します。
+- **ステップ2:** 5GモジュールをM.2 Key Bスロットにスライドして挿入し、スタンドオフネジを締めて5Gモジュールを固定します（スタンドオフについて説明）
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/112.jpg"/></div>
 
-- **ステップ 3:** モジュールのアンテナコネクタに 4 本のアンテナを接続します。この際、IPEX 4 コネクタを使用する必要があります。
+- **ステップ3:** モジュールのアンテナコネクタに4本のアンテナを接続します。ここではIPEX 4コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/113.jpg"/></div>
 
-- **ステップ 4:** 5G 対応の nano SIM カードをボードの SIM カードスロットに挿入します。SIM カードの金属面が下向きになるように挿入してください。カードを完全に挿入すると、内部のスプリングに当たってロックされます。
+- **ステップ4:** 5G対応のnano SIMカードをボード上のSIMカードスロットに挿入します。SIMカードの金色の面が下向きになるようにしてください。ここでは、カードを奥まで挿入し、内部スプリングに当たって跳ね返り、所定の位置にロックされるようにします。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/19.png"/></div>
 
 :::note
-SIM カードを取り外す場合は、カードを押し込んで内部スプリングを作動させ、スロットからカードを取り出してください。
+SIMカードを取り外したい場合は、カードを押し込んで内部スプリングに当て、SIMがスロットから出てくるようにします
 :::
 
-- **ステップ 5:** ボードの電源をオンにします。
+- **ステップ5:** ボードの電源をオンにします
 
-### 5G モジュール使用 - ダイヤルテスト
+### 5Gモジュール使用方法 - テストダイヤル
 
-SIM8202G-M2 5G モジュールを使用する場合、モジュールは自動的に起動しません。最初にいくつかの GPIO をトグルして起動する必要があります。
+SIM8202G-M2 5Gモジュールを使用する場合、モジュールは自動的に起動しません。そのため、まずいくつかのGPIOを切り替えて起動させる必要があります
 
-**ステップ 1:** 以下のコマンドを入力して 5G モジュールを起動します。
+**ステップ1:** 以下を入力して5Gモジュールを起動します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -682,54 +678,54 @@ sudo gpioset --mode=wait gpiochip1 14=0
 ```
 
 :::note
-これらのコマンドを実行するには複数のターミナルを開き、それぞれのターミナルウィンドウがアクティブな状態を維持してください。
+これらのコマンドを実行するために複数のターミナルを開き、各ターミナルウィンドウがアクティブな状態を保つようにしてください。
 :::
 
 </TabItem>
 </Tabs>
 
-上記を実行すると、以下のように LED2 が緑色に点灯します。
+上記を実行すると、LED2が以下のように緑色に点灯します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/117.jpg"/></div>
 
-**ステップ 2:** minicom をインストールします。
+**ステップ 2:** minicomをインストール
 
 ```sh
 sudo apt update
 sudo apt install minicom -y
 ```
 
-**ステップ 3:** 接続された 5G モジュールのシリアルコンソールに入り、AT コマンドを入力して 5G モジュールと対話します。
+**ステップ3:** 接続された5Gモジュールのシリアルコンソールに入り、ATコマンドを入力して5Gモジュールと対話できるようにします
 
 ```sh
 sudo minicom -D /dev/ttyUSB2 -b 115200
 ```
 
-**ステップ 4:** **"AT"** コマンドを入力して Enter を押します。「OK」と表示された場合、5G モジュールは正常に動作しています。
+**ステップ4:** コマンド **"AT"** を入力してEnterキーを押します。レスポンスが"OK"と表示されれば、5Gモジュールが正常に動作しています
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/107.png"/></div>
 
-**ステップ 5:** **"ATI"** コマンドを入力してモジュール情報を確認します。
+**ステップ5:** コマンド **"ATI"** を入力してモジュール情報を確認します
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/108.png"/></div>
 
-**ステップ 6:** モジュールをテストするには、以下のコマンドを入力して別の電話番号に発信します。
+**ステップ6:** モジュールをテストするために、以下のコマンドを入力して他の電話番号に発信します
 
 ```sh
 ATD<phone_number>;
 ```
 
-以下のような出力が表示されます。
+そして、以下の出力が表示されます
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/109.png"/></div>
 
 ## DI/ DO
 
-reComputer Industrialは、4つのデジタル入力チャンネルと4つのデジタル出力チャンネルをサポートしており、すべて光学的に絶縁されています。これにより、電圧スパイクやその他の電気的な障害からメインボードを効果的に保護します。同じコネクタにはCANインターフェースもあり、これについては後ほどこのWikiで説明します。
+reComputer Industrialは4つのデジタル入力と4つのデジタル出力チャンネルをサポートしており、すべて光学的に絶縁されているため、電圧スパイクやその他の電気的外乱からメインボードを効果的に保護します。この同じコネクタにはCANインターフェースもあり、これについてはこのwikiで後ほど説明します。
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/37.png"/></div>
 
-### DI/ DO ピン割り当て表
+### DI/ DO ピン配置表
 
 <table>
   <thead>
@@ -739,8 +735,8 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
       <th>回路図信号</th>
       <th>モジュールピン番号</th>
       <th>BGA番号</th>
-      <th>GPIO番号</th>
-      <th>電圧/電流制限</th>
+      <th>GPIO 番号</th>
+      <th>V/A制限</th>
       <th>備考</th>
     </tr>
   </thead>
@@ -752,8 +748,8 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
       <td>118</td>
       <td>PQ.05</td>
       <td>453</td>
-      <td rowSpan={4}>合計12V/20mA</td>
-      <td rowSpan={4}>12Vデジタル入力、グランド信号は<br />GND_DI (Pin2/4/6) に接続する必要があります</td>
+      <td rowSpan={4}>12V/ 合計20mA電流</td>
+      <td rowSpan={4}>12Vデジタル入力、グランド信号は<br />GND_DI (Pin2/4/6)に接続する必要があります</td>
     </tr>
     <tr>
       <td>DI2</td>
@@ -783,8 +779,8 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
       <td>193</td>
       <td>PI.00</td>
       <td>399</td>
-      <td rowSpan={4}>ピンごとに40V/40mA負荷</td>
-      <td rowSpan={4}>デジタル出力、最大耐圧40V、グランド信号は<br />GND_DO (Pin8/10) に接続する必要があります</td>
+      <td rowSpan={4}>ピンあたり40V/40mA負荷</td>
+      <td rowSpan={4}>デジタル出力、最大耐電圧<br />40V、グランド信号は<br />GND_DO(Pin8/10)に接続する必要があります</td>
     </tr>
     <tr>
       <td>DO2</td>
@@ -811,7 +807,7 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
       <td>CAN</td>
       <td>CH</td>
       <td colSpan={5} rowSpan={2}>/</td>
-      <td rowSpan={2}>標準的な差動信号を持つCANバス、<br />グランド信号はGND_ISO (Pin12) に接続する必要があります</td>
+      <td rowSpan={2}>標準差動信号を持つCANバス、<br />グランド信号はGND_ISO (Pin 12)に接続する必要があります</td>
     </tr>
     <tr>
       <td />
@@ -821,12 +817,12 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
       <td>グランド</td>
       <td>GND_DI</td>
       <td colSpan={5} rowSpan={3}>/</td>
-      <td>12Vデジタル入力の基準グランド信号であり、<br />DIの戻り経路でもあります</td>
+      <td>12Vデジタル入力の基準グランド信号で、<br />DIのリターンパスでもあります</td>
     </tr>
     <tr>
       <td />
       <td>GND_DO</td>
-      <td>デジタル出力の基準グランド信号であり、DOの戻り経路でもあります</td>
+      <td>デジタル出力の基準グランド信号で、DOのリターンパスでもあります</td>
     </tr>
     <tr>
       <td />
@@ -837,26 +833,26 @@ reComputer Industrialは、4つのデジタル入力チャンネルと4つのデ
 </table>
 
 :::danger
-上記の表に記載されているピン番号はJetpack5にのみ有効です。Jetpack6のピン番号を取得するには、以下の方法を使用できます：
+上記の表のピン番号はJetpack5でのみ有効であることにご注意ください。Jetpack6のピン番号は以下の方法で取得できます：
 
-1. `gpioinfo`コマンドを使用してGPIOテーブルを取得します。
-2. **BGA番号**を確認して、Jetpack6上の対応するピン番号を見つけます。
+1. `gpioinfo`コマンドを使用してGPIO表を取得する。
+2. **BGA番号**を確認してJetpack6での対応するピン番号を見つける。
 
 :::
 
 ### DIの接続概要
 
-以下の図に従ってDIの接続を行うことができます。DIラインには直列に抵抗を追加することをお勧めします。ここでは、4.7kΩの抵抗をDI1ピンに接続してテストしました。
+以下の図に従ってDIの接続を行うことができます。DI線には直列に抵抗を追加することをお勧めします。ここではDI1ピンに接続された4.7kΩ抵抗でテストしています。
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/38.png"/></div>
 
 ### DIの使用方法
 
-DIラインに12Vの電圧を入力することで、入力として検出されます。
+入力として検出されるためには、DI線に12Vの電圧を入力する必要があります
 
-**ステップ1:** 上記の図に従って**DI1ピン**に接続し、**12V**を入力します。
+**ステップ1：** 上記のように**DI1ピン**に接続を行い、**12V**を入力します
 
-**ステップ2:** 以下の手順でDI1の状態を確認します：
+**ステップ2：** 以下のようにDI1のステータスを開いて確認します：
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -871,7 +867,7 @@ cat value
 ```
 
 :::note
-**DI/ DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DI1ピンのGPIO番号は453、BGA番号はPQ.05です。
+**DI/ DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DI1ピンの場合、GPIO番号は453、BGA番号はPQ.05です
 :::
 
 </TabItem>
@@ -885,21 +881,21 @@ sudo gpioget gpiochip0 105
 </TabItem>
 </Tabs>
 
-出力が0の場合、12Vの入力があります。出力が1の場合、入力電圧がありません。
+出力が0の場合、12V入力があることを意味します。出力が1の場合、入力電圧がないことを意味します。
 
 ### DOの接続概要
 
-以下の図に従ってDOの接続を行うことができます。DOラインには直列に抵抗を追加することをお勧めします。ここでは、4.7kΩの抵抗を使用してテストしました。
+以下の図に従ってDOの接続を行うことができます。DO線には直列に抵抗を追加することをお勧めします。ここでは4.7kΩ抵抗でテストしました。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/39.png"/></div>
 
 ### DOの使用方法
 
-上記の図に示されているように負荷を接続する必要があります。最も簡単なテスト方法は、マルチメーターを接続することです。または、最大40V以下の電圧を必要とする負荷を接続します。
+上記の図で示したように負荷を接続する必要があります。これをテストする最も簡単な方法は、マルチメーターがあればそれを接続するか、または最大40V未満の電圧を必要とする負荷を接続することです。
 
-**ステップ1:** 上記の図に従って**DO1ピン**に接続し、**最大40V**を入力します。
+**ステップ1:** 上記のように**DO1ピン**に接続を行い、**最大40V**を入力します
 
-**ステップ2:** 以下の手順でDO1のGPIOをオンにします：
+**ステップ2:** 以下のようにD01のGPIOを開いてオンにします：
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -915,7 +911,7 @@ echo 1 > value
 ```
 
 :::note
-**DI/ DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DO1ピンのGPIO番号は399、BGA番号はPI.00です。
+**DI/DO ピン割り当て表**を参照して、GPIO番号とBGA番号を確認できます。上記の例では、DO1ピンの場合、GPIO番号は399、BGA番号はPI.00です
 :::
 
 </TabItem>
@@ -933,25 +929,25 @@ sudo gpioset --mode=wait gpiochip0 51=1
 
 ## CAN
 
-reComputer Industrial は、5MbpsのCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを備えています。このCANインターフェースは容量性絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業および自動化アプリケーションでの信頼性の高い通信を保証します。120Ωの終端抵抗がデフォルトで取り付けられており、この抵抗はGPIOを使用してON/OFFを切り替えることができます。
+reComputer Industrialは、5MbpsでCAN FD（Controller Area Network Flexible Data-Rate）プロトコルをサポートするCANインターフェースを搭載しています。CANインターフェースは容量性絶縁を使用して絶縁されており、優れたEMI保護を提供し、産業用および自動化アプリケーションにおいて信頼性の高い通信を確保します。120Ωの終端抵抗がデフォルトでインストールされており、GPIOを使用してこの抵抗をON/OFFに切り替えることができます。
 
-注意: CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はCGピンに接続する必要があります。
+注意：CANインターフェースは絶縁電源を使用しているため、CANインターフェースに接続される外部デバイスのグランド信号はCGピンに接続する必要があります。
 
-### USB to CANアダプターを使用した接続概要
+### USB to CANアダプターとの接続概要
 
-CANバスをテストおよびインターフェースするには、以下の図のようにUSB to CANアダプターをボードのCANコネクタに接続します。
+CANバスをテストし、インターフェースするには、以下に示すようにUSB to CANアダプターをボード上のCANコネクターに接続します。
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/40.png"/></div>
 
-ここでは、[USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)を使用しています。この製品はSeeedのBazaarで入手可能です。
+ここでは、当社のBazaarで入手可能な[USB to CAN Analyzer Adapter with USB Cable](https://www.seeedstudio.com/USB-CAN-Analyzer-p-2888.html)を使用しています。
 
-### USB to CANアダプターの使用方法
+### USB to CANアダプターでの使用方法
 
-- **ステップ 1:** 使用しているUSB to CANアダプターのドライバーをメーカーのウェブサイトからダウンロードしてインストールします。今回使用したアダプターの場合、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)から入手できます。
+- **ステップ1：** 使用しているUSB to CANアダプターのドライバーをメーカーのWebサイトからダウンロードしてインストールします。今回使用したアダプターの場合、ドライバーは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Driver/driver%20for%20USBCAN(CHS40)/windows-driver)で見つけることができます。
 
-- **ステップ 2:** 一部のアダプターには、CANデバイスと通信するためのPC用ソフトウェアが付属しています。今回使用したアダプターの場合、ソフトウェアは[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)からダウンロードしてインストールしました。
+- **ステップ2：** 一部のアダプターには、CANデバイスと通信するためのPC用の必要なソフトウェアも付属しています。今回使用したアダプターの場合、[こちら](https://github.com/SeeedDocument/USB-CAN-Analyzer/tree/master/res/Program)で見つけることができるソフトウェアをダウンロードしてインストールしました。
 
-- **ステップ 3:** reComputer Industrial上でターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定および有効化します。
+- **ステップ3：** reComputer Industrial上でターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします。
 
 ```sh
 sudo modprobe mttcan
@@ -959,71 +955,63 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **ステップ 4:** ターミナルで**ifconfig**と入力すると、CANインターフェースが有効になっていることが確認できます。
+- **ステップ 4:** ターミナルで **ifconfig** と入力すると、CAN インターフェースが有効になっていることが確認できます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **ステップ 5:** 事前にインストールしたCANソフトウェアを開きます。この場合、使用しているCANアダプターに対応したソフトウェアを開きます。
+- **ステップ 5:** 以前にインストールした CAN ソフトウェアを開きます。この場合、使用している CAN アダプターに応じてインストールしたソフトウェアを開きます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/42.jpg"/></div>
 
-- **ステップ 6:** USB to CANアダプターをPCに接続し、Windowsの検索バーで「デバイスマネージャー」を検索して開きます。ここで、**ポート (COM & LPT)**の下に接続されたアダプターが表示されます。ここに記載されているシリアルポートをメモします。以下の画像では、シリアルポートは**COM9**です。
+- **ステップ 6:** USB to CAN アダプターを PC に接続し、Windows の検索バーで検索して **デバイス マネージャー** を開きます。接続されたアダプターが **ポート (COM と LPT)** の下に表示されます。ここに表示されているシリアル ポートをメモしてください。下の画像によると、シリアル ポートは **COM9** です
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/43.png"/></div>
 
-- **ステップ 7:** CANソフトウェアを開き、**COM**セクションの横にある**Refresh**をクリックし、ドロップダウンメニューから接続されたアダプターに対応するシリアルポートを選択します。**COM bps**はデフォルトのままにして、**Open**をクリックします。
+- **ステップ 7:** CAN ソフトウェアを開き、**COM** セクションの横にある **Refresh** をクリックし、ドロップダウン メニューをクリックして、接続されたアダプターに応じてシリアル ポートを選択します。**COM bps** はデフォルトのままにして、**Open** をクリックします
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/44.jpg"/></div>
 
-- **ステップ 8:** **Mode**と**CAN bps**をデフォルトのままにし、**Type**を**Standard frame**に変更して、**Set and Start**をクリックします。
+- **ステップ 8:** **Mode** と **CAN bps** はデフォルトのままにし、**Type** を **Standard frame** に変更して、**Set and Start** をクリックします
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/45.png"/></div>
 
-- **ステップ 9:** reComputer Industrial上で以下のコマンドを実行して、PCにCAN信号を送信します。
+- **ステップ 9:** reComputer Industrial で、以下のコマンドを実行して PC に CAN 信号を送信します
 
 ```sh
 cansend can0 123#abcdabcd
 ```
 
-すると、以下のようにソフトウェアで信号が受信されます。
+以下のように、ソフトウェアが受信した上記の信号が表示されます
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/46.png"/></div>
 
-- **ステップ 10:** reComputer Industrial上で以下のコマンドを実行して、PCからのCAN信号を受信する準備をします。
+- **ステップ 10:** reComputer Industrial で、以下のコマンドを実行して PC からの CAN 信号の受信を待機します
 
 ```sh
 candump can0 &
 ```
 
-- **ステップ 11:** CANソフトウェアで**Send a single frame**をクリックします。
+- **ステップ 11:** CANソフトウェアで、**Send a single frame**をクリックします
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/47.png"/></div>
 
-すると、以下のようにreComputer Industrialで信号が受信されます。
+これで、以下のようにreComputer Industrialで受信されることが確認できます
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
-### reTerminal DMを使用した接続概要
+### reTerminal DMとの接続概要
 
-[reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)をお持ちの場合、直接通信が可能です。reTerminal DMもCANインターフェースを備えています。
+[reTerminal DM](https://www.seeedstudio.com/reTerminal-DM-p-5616.html)をお持ちの場合、reTerminal DMにもCANインターフェースがあるため、直接通信することができます。
 
-以下の画像を参照して、reComputer IndustrialとreTerminal DMをCANで接続します。
+reComputer IndustrialとreTerminal DMをCAN経由で接続するには、以下の画像を参照してください
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/49.png"/></div>
 
-### reTerminal DMの使用方法
+### reTerminal DMでの使用方法
 
-- **ステップ 1:** reTerminal DMを使用する前に、[このWiki](https://wiki.seeedstudio.com/ja/reterminal-dm)を参照してreTerminal DMのセットアップを行ってください。
+- **ステップ 1:** reTerminal DMを使用する前に、[このwiki](https://wiki.seeedstudio.com/reterminal-dm)を参照してreTerminal DMの使用を開始してください
 
-- **ステップ 2:** reComputer Industrial上でターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定および有効化します。
-
-```sh
-sudo modprobe mttcan
-sudo ip link set can0 type can bitrate 125000
-sudo ip link set can0 up
-```
-
-- **ステップ 3:** reTerminal DM上でターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定および有効化します。
+- **ステップ 2:** reComputer Industrialでターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し、有効にします
 
 ```sh
 sudo modprobe mttcan
@@ -1031,41 +1019,57 @@ sudo ip link set can0 type can bitrate 125000
 sudo ip link set can0 up
 ```
 
-- **ステップ 4:** 両デバイスで**ifconfig**を入力すると、CANインターフェースが有効になっていることが確認できます。
+- **ステップ 3:** reTerminal DM でターミナルウィンドウを開き、以下のコマンドを実行して CAN インターフェースを設定し、有効にします
+
+```sh
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+```
+
+- **ステップ4:** reTerminal DMでターミナルウィンドウを開き、以下のコマンドを実行してCANインターフェースを設定し有効化します
+
+```sh
+sudo modprobe mttcan
+sudo ip link set can0 type can bitrate 125000
+sudo ip link set can0 up
+```
+
+- **ステップ 5:** 両方のデバイスで **ifconfig** と入力すると、CANインターフェースが有効になっていることが確認できます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/41.png"/></div>
 
-- **ステップ 5:** reTerminal DM上で以下を実行して、reComputer IndustrialからのCAN信号を受信する準備をします。
+- **ステップ 6:** reTerminal DMで、以下を実行してreComputer IndustrialからのCAN信号の受信を待機します
 
 ```sh
 candump can0 &
 ```
 
-- **ステップ 7:** reComputer Industrial 上で以下のコマンドを実行し、reTerminal Industrial に CAN 信号を送信します。
+- **ステップ 7:** reComputer Industrial で、以下のコマンドを実行して reTerminal Industrial に CAN 信号を送信します
 
 ```sh
 cansend can0 123#abcdabcd
 ```
 
-これで、reTerminal DM に受信された内容が以下のように表示されます。
+今度は以下のようにreTerminal DMで受信されることが確認できます
 
 <div align="center"><img width ="750" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/50.png"/></div>
 
-- **ステップ 8:** **ステップ 6 とステップ 7**を繰り返しますが、デバイスを入れ替えてください。reTerminal DM を使用して CAN 信号を送信し、reComputer Industrial を使用してそれを受信します。
+- **ステップ 8:** **ステップ 6とステップ 7**を繰り返しますが、デバイスを入れ替えます。reTerminal DMを使用してCANシグナルを送信し、reComputer IndustrialでCANシグナルを受信します
 
 ## RS232/ RS422/ RS485 インターフェース
 
-reComputer Industrial には RS232、RS422、RS485 通信プロトコルをサポートする DB9 コネクタが搭載されており、オンボードの DIP スイッチパネルで異なるインターフェースオプションを切り替えることができます。
+reComputer IndustrialにはRS232、RS422、RS485通信プロトコルをサポートするDB9コネクタがあり、オンボードにDIPスイッチパネルがあり、異なるインターフェースオプション間を切り替えることができます
 
-以下のように DIP スイッチパネルを見ることができます。
+DIPスイッチパネルは以下のように確認できます：
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/51.png"/></div>
 
 :::note
-DIP スイッチパネルを使用する前に黄色のプラスチックカバーを取り外してください。
+DIPスイッチパネルを使用する前に、黄色のプラスチックカバーを必ず取り外してください
 :::
 
-以下の表は、DIP スイッチの位置に基づく異なるモードを説明しています。
+以下の表は、DIPスイッチの位置に基づく異なるモードを説明しています
 
 <table>
   <thead>
@@ -1084,7 +1088,7 @@ DIP スイッチパネルを使用する前に黄色のプラスチックカバ�
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>RS-422 フルデュプレックス</td>
+      <td>RS-422 全二重</td>
       <td>1T/1R RS-422</td>
     </tr>
     <tr>
@@ -1092,7 +1096,7 @@ DIP スイッチパネルを使用する前に黄色のプラスチックカバ�
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>純 RS-232</td>
+      <td>純粋なRS-232</td>
       <td>3T/5R RS-232</td>
     </tr>
     <tr>
@@ -1100,57 +1104,57 @@ DIP スイッチパネルを使用する前に黄色のプラスチックカバ�
       <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>RS-485 ハーフデュプレックス</td>
-      <td>1T/1R RS-485 ,TX ENABLE 低アクティブ</td>
+      <td>RS-485 半二重</td>
+      <td>1T/1R RS-485 ,TX ENABLE Low Active</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/55.png" alt="Image" width={200} height={127} /></td>
       <td>0</td>
       <td>1</td>
       <td>1</td>
-      <td>RS-485 ハーフデュプレックス</td>
-      <td>1T/1R RS-485 ,TX ENABLE 高アクティブ</td>
+      <td>RS-485 半二重</td>
+      <td>1T/1R RS-485 ,TX ENABLE High Active</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/56.png" alt="Image" width={200} height={127} /></td>
       <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>RS-422 フルデュプレックス</td>
-      <td>1T/1R RS-422 終端抵抗付き</td>
+      <td>RS-422 全二重</td>
+      <td>終端抵抗付き1T/1R RS-422</td>
     </tr>
     <tr>
       <td rowSpan={3}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/57.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={3}>1</td>
       <td rowSpan={3}>0</td>
       <td rowSpan={3}>1</td>
-      <td rowSpan={3}>純 RS-232</td>
-      <td>1T/1R RS-232 が RS485 と共存</td>
+      <td rowSpan={3}>純粋なRS-232</td>
+      <td>RS485と共存する1T/1R RS-232</td>
     </tr>
     <tr>
-      <td>バスを必要としないアプリケーション</td>
+      <td>バススイッチICを必要としない</td>
     </tr>
     <tr>
-      <td>スイッチ IC (特殊用途向け)</td>
+      <td>アプリケーション（特殊用途）。</td>
     </tr>
     <tr>
       <td rowSpan={2}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/58.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>0</td>
-      <td rowSpan={2}>RS-485 ハーフデュプレックス</td>
-      <td>1T/1R RS-485 終端抵抗付き</td>
+      <td rowSpan={2}>RS-485 半二重</td>
+      <td>終端抵抗付き1T/1R RS-485</td>
     </tr>
     <tr>
-      <td>TX ENABLE 低アクティブ</td>
+      <td>TX ENABLE Low Active</td>
     </tr>
     <tr>
       <td rowSpan={2}><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/59.png" alt="Image" width={200} height={127} /></td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
       <td rowSpan={2}>1</td>
-      <td>低消費電力</td>
-      <td rowSpan={2}>すべての I/O ピンは高インピーダンス</td>
+      <td>低電力</td>
+      <td rowSpan={2}>すべてのI/Oピンがハイインピーダンス</td>
     </tr>
     <tr>
       <td>シャットダウン</td>
@@ -1159,53 +1163,53 @@ DIP スイッチパネルを使用する前に黄色のプラスチックカバ�
 </table>
 
 :::note
-出荷時のデフォルト設定では、スイッチは工場出荷時に 010 の RS485 に設定されています。
+工場出荷時、スイッチのデフォルトモードは010でRS485に設定されています
 :::
 
-上記の表は DIP スイッチパネルの最初の 3 つのスイッチを考慮しています。ただし、4 番目のスイッチはスルーレートを切り替える役割を果たし、これはデータレートに直接関係しています。
+上記の表は、DIPスイッチパネルの最初の3つのスイッチを考慮しています。ただし、4番目のスイッチはスルーレートの切り替えを担当しており、これはデータレートに直接関連しています
 
 <table>
   <thead>
     <tr>
       <th />
       <th>ステータス</th>
-      <th>備考</th>
+      <th>注記</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/62.png" alt="Image" width={200} height={127} /></td>
       <td>1</td>
-      <td>SLEW= Vcc<br />この RS232/RS422/RS485 マルチプロトコル トランシーバーは通信速度を以下のように制限します:<br />RS-232: 最大データレートは 1.5Mbps<br />RS-485/RS-422: 最大データレートは 10Mbps<br />実際の最大データレートは使用される Jetson SOM に依存します。</td>
+      <td>SLEW= Vcc<br />このRS232/RS422/RS485マルチプロトコルトランシーバーは、通信レートを以下のように制限します：<br />RS-232: 最大データレートは1.5Mbps<br />RS-485/RS-422: 最大データレートは10Mbps<br />実際の最大データレートは使用するJetson SOによって異なります</td>
     </tr>
     <tr>
       <td><img src="https://files.seeedstudio.com/wiki/reComputer-Industrial/63.png" alt="Image" width={200} height={127} /></td>
       <td>0</td>
-      <td>SLEW = GND<br />RS-232: 最大データレートは 250Kbps<br />RS-485/RS-422: 最大データレートは 250kbps</td>
+      <td>SLEW = GND<br />RS-232: 最大データレートは250Kbps<br />RS-485/RS-422: 最大データレートは250kbps</td>
     </tr>
   </tbody>
 </table>
 
-ここでは、USB から RS232、RS485、RS422 アダプターを使用してインターフェースをテストします。そのため、先に PC にシリアルターミナルアプリケーションをインストールする必要があります。ここでは、セットアップが簡単で使いやすい **Putty** をインストールすることをお勧めします。
+ここでは、インターフェースをテストするためにUSBからRS232、RS485、RS422アダプターを使用します。そのため、先に進む前に、PCにシリアルターミナルアプリケーションをインストールする必要があります。ここでは、セットアップと使用が簡単な**Putty**をインストールすることをお勧めします。
 
-- **ステップ 1:** [このウェブサイト](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) にアクセスし、PC のアーキテクチャに応じて Putty をダウンロードしてください。
+- **ステップ1：** [このウェブサイト](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)にアクセスし、PCのアーキテクチャに応じてPuttyをダウンロードしてください
 
 <div align="center"><img width ="500" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/60.png"/></div>
 
-ここでは、使用した PC が X86 Windows 64 ビットマシンであるため、それに応じて Putty を選択しました。
+ここでは、使用したPCに応じてPuttyを選択しました。これはX86 Windows 64ビットマシンです
 
-- **ステップ 2:** ダウンロードしたセットアップを開き、プロンプトに従ってアプリケーションをインストールします。
+- **ステップ2：** ダウンロードしたセットアップを開き、プロンプトに従ってアプリケーションをインストールしてください
 
 ### 一般的な接続概要
 
-DB9 コネクタのピン番号と接続方法を以下の表で参照してください。
+DB9コネクタのピン番号と表を参照して接続を行うことができます
 
 <div align="center"><img width ="300" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/61.png"/></div>
 
 <table>
   <thead>
     <tr>
-      <th>モード</th>
+      <th>MODE</th>
       <th>001/101</th>
       <th>000/100</th>
       <th>010/011/110</th>
@@ -1213,7 +1217,7 @@ DB9 コネクタのピン番号と接続方法を以下の表で参照してく�
   </thead>
   <tbody>
     <tr>
-      <td>ピン</td>
+      <td>PIN</td>
       <td>RS232</td>
       <td>RS422</td>
       <td>RS485</td>
@@ -1275,44 +1279,44 @@ DB9 コネクタのピン番号と接続方法を以下の表で参照してく�
   </tbody>
 </table>
 
-### RS232 接続概要
+### RS232接続概要
 
-ここでは、USBからRS232へのアダプターを使用してインターフェースをテストできます。私たちはテストに [UGREEN USB to RS232 Adapter](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1) を使用しました。
+ここでは、USB to RS232アダプターを使用してインターフェースをテストできます。テストには[UGREEN USB to RS232アダプター](https://www.amazon.com/UGREEN-Converter-Adapter-Chipset-Windows/dp/B00QUZY4UG?th=1)を使用しました。
 
-**ステップ 1:** ボードの電源をオフにします。
+**ステップ1:** ボードの電源を切る
 
-**ステップ 2:** DIPスイッチを設定するための2つのオプションがあります。001モードまたは101モードのいずれかです。各モードのスイッチ位置は以下の通りです。
+**ステップ2:** ここでは、DIPスイッチを設定するために2つのオプションがあります。001モードまたは101モードのいずれかです。各モードのスイッチ位置を以下に示します
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/64.png"/></div>
 
-**ステップ 3:** USBからRS232へのアダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました。
+**ステップ3:** USB to RS232アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/68.jpg"/></div>
 
-**ステップ 4:** もう一方の端をPCのUSBポートの1つに接続します。
+**ステップ4:** もう一方の端をPCのUSBポートの1つに接続します
 
-**ステップ 5:** ボードの電源をオンにします。
+**ステップ5:** ボードの電源を入れる
 
-### RS232 使用方法
+### RS232の使用方法
 
-**ステップ 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windows検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているか確認します。
+**ステップ1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**デバイスマネージャー**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認します。
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/67.jpg"/></div>
 
-**ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じたドライバーをインストールする必要があります。これらのドライバーは通常、製造元のウェブサイトで見つけることができます。私たちが使用しているアダプターの場合は、[このページ](https://www.ugreen.com/pages/download)で **20201** をモデル番号として検索し、ドライバーをダウンロードしてください。
+**ステップ2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは一般的にメーカーのウェブサイトで見つけることができます。私たちが使用しているアダプターについては、[このページ](https://www.ugreen.com/pages/download)にアクセスし、モデル番号として**20201**を検索し、それに応じてドライバーをダウンロードできます
 
-**ステップ 3:** PCでPuttyを開き、**Terminal** セクションを選択して以下を設定します。
+**ステップ3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-- Local echo: Force on  
-- Local line editing: Force on  
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-**ステップ 4:** **Session** を選択し、**Connection type** の下で **Serial** を選択します。**Device Manager** に表示されているシリアルポート番号を設定し、速度はデフォルト（9600）のままにして **Open** をクリックします。
+**ステップ4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**デバイスマネージャー**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/71.jpg"/></div>
 
-**ステップ 5:** reTerminal Industrial のターミナルウィンドウで以下を入力して、reComputer からPCに信号を送信します。
+**ステップ5:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1334,11 +1338,11 @@ sudo echo "RS232 message from reComputer Industrial" > /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-これで、このメッセージがPuttyに表示されます。
+これで、Puttyにこのメッセージが表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/72.jpg"/></div>
 
-**ステップ 6:** reTerminal Industrial のターミナルウィンドウで以下を入力して、PCからの信号を受信する準備をします。
+**ステップ 6:** reTerminal Industrialのターミナルウィンドウで、以下を入力してPCからの信号の受信を待機します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1358,48 +1362,48 @@ sudo cat /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-Puttyで何かを入力し、**ENTER** を押すと、それが reComputer Industrial のターミナルウィンドウに表示されます。
+Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/73.png"/></div>
 
-### RS422 接続概要
+### RS422接続概要
 
-ここでは、USBからRS422へのアダプターを使用してインターフェースをテストできます。私たちはテストに [DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K) を使用しました。
+ここでは、USB to RS422アダプターを使用してインターフェースをテストできます。テストには[DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)を使用しました。
 
-**ステップ 1:** ボードの電源をオフにします。
+**ステップ1:** ボードの電源を切る
 
-**ステップ 2:** DIPスイッチを設定するための2つのオプションがあります。000モードまたは100モードのいずれかです。各モードのスイッチ位置は以下の通りです。
+**ステップ2:** ここでは、DIPスイッチを設定する2つのオプションがあります。000モードまたは100モードのいずれかです。各モードのスイッチ位置を以下に示します
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/65.png"/></div>
 
-**ステップ 3:** ジャンパーワイヤーを使用して、USBからRS422へのアダプターをDB9コネクターに接続します。以下のように接続しました。
+**ステップ3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/74.png"/></div>
 
-**ステップ 4:** もう一方の端をPCのUSBポートの1つに接続します。
+**ステップ4:** もう一方の端をPCのUSBポートの1つに接続します
 
-**ステップ 5:** ボードの電源をオンにします。
+**ステップ5:** ボードの電源を入れる
 
-### RS422 使用方法
+### RS422の使用方法
 
-**ステップ 1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windows検索で **Device Manager** と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているか確認します。
+**ステップ1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**デバイスマネージャー**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-**ステップ 2:** アダプターが表示されない場合は、使用しているアダプターに応じたドライバーをインストールする必要があります。これらのドライバーは通常、製造元のウェブサイトで見つけることができます。私たちが使用しているアダプターの場合は、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485) を参照してください。
+**ステップ2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
 
-**ステップ 3:** PCでPuttyを開き、**Terminal** セクションを選択して以下を設定します。
+**ステップ3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-- Local echo: Force on  
-- Local line editing: Force on  
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-**ステップ 4:** **Session** を選択し、**Connection type** の下で **Serial** を選択します。**Device Manager** に表示されているシリアルポート番号を設定し、速度はデフォルト（9600）のままにして **Open** をクリックします。
+**ステップ4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**デバイスマネージャー**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-**ステップ 5:** reTerminal Industrial のターミナルウィンドウで以下を入力して、reComputer からPCに信号を送信します。
+**ステップ5:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1421,9 +1425,9 @@ sudo echo "RS422 message from reComputer Industrial" > /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-次に、Putty上で以下のメッセージが表示されるのを確認します。
+これで、Putty にこのメッセージが表示されます
 
-**ステップ 6:** reTerminal インダストリアル端末ウィンドウで、以下のコマンドを入力してPCからの信号を受信する準備をします。
+**ステップ 6:** reTerminal Industrial のターミナルウィンドウで、以下を入力して PC からの信号の受信を待機します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1443,46 +1447,46 @@ sudo cat /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-Putty上で任意の文字を入力し、**ENTER**を押すと、reComputer インダストリアル端末ウィンドウに表示されます。
+Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
 
 ### RS485 接続概要
 
-ここでは、USBからRS422アダプタを使用してインターフェースをテストできます。テストには[DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)を使用しました。
+ここでは、USB to RS422アダプターを使用してインターフェースをテストできます。テストには[DTech USB to RS485 Adapter](https://www.amazon.com/Adapter-Serial-Terminal-Ferrite-Windows/dp/B08SM5MX8K)を使用しました。
 
-**ステップ 1:** ボードの電源をオフにします。
+**ステップ1:** ボードの電源を切る
 
-**ステップ 2:** DIPスイッチを設定するための3つのオプションがあります。010モード、011モード、または110モードのいずれかです。各モードのスイッチ位置は以下の通りです。
+**ステップ2:** ここでは、DIPスイッチを設定する3つのオプションがあります。010モード、011モード、または110モードのいずれかです。各モードのスイッチ位置を以下に示します
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/66.png"/></div>
 
-**ステップ 3:** ジャンパーワイヤーを使用して、USBからRS422アダプタをDB9コネクタに接続します。以下の画像のように、上記で述べたアダプタを接続します。
+**ステップ3:** 以下に示すように、ジャンパーワイヤーを使用してUSB to RS422アダプターをDB9コネクターに接続します。ここでは、上記で言及したアダプターを接続しました
 
 <div align="center"><img width ="650" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/77.png"/></div>
 
-**ステップ 4:** もう一方の端をPCのUSBポートの1つに接続します。
+**ステップ4:** もう一方の端をPCのUSBポートの1つに接続します
 
-**ステップ 5:** ボードの電源をオンにします。
+**ステップ5:** ボードの電源を入れる
 
 ### RS485 使用方法
 
-**ステップ 1:** 使用しているアダプタのドライバをインストールする必要がある場合があります。Windowsが自動的にドライバをインストールすることもあります。Windows検索で**デバイスマネージャー**と入力してデバイスマネージャーを開き、接続されたアダプタがCOMデバイスとして表示されているか確認します。
+**ステップ1:** 使用しているアダプターのドライバーをインストールする必要がある場合があります。または、Windowsが自動的にドライバーをインストールします。Windowsの検索で**Device Manager**と入力してデバイスマネージャーを開き、接続されたアダプターがCOMデバイスとして表示されているかどうかを確認します。
 
 <div align="center"><img width ="450" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/75.png"/></div>
 
-**ステップ 2:** アダプタが表示されない場合は、使用しているアダプタに応じたドライバをインストールする必要があります。これらのドライバは通常、製造元のウェブサイトで見つけることができます。使用しているアダプタの場合は、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください。
+**ステップ2:** アダプターが表示されない場合は、使用しているアダプターに応じてドライバーをインストールする必要があります。これらのドライバーは通常、メーカーのウェブサイトで見つけることができます。使用しているアダプターについては、[このページ](https://www.dtechelectronics.com/front/downloads/downloadssearch/user_downloadscat_id/0/search_value/rs485)を参照してください
 
-**ステップ 3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します。
+**ステップ3:** PCでPuttyを開き、**Terminal**セクションを選択して以下を設定します
 
-  - Local echo: Force on
-  - Local line editing: Force on
+- Local echo: Force on
+- Local line editing: Force on
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/69.png"/></div>
 
-**ステップ 4:** **Session**を選択し、**Connection type**で**Serial**を選択します。**Device Manager**で確認したシリアルポート番号を設定し、速度はデフォルト（9600）のままにして**Open**をクリックします。
+**ステップ4:** **Session**を選択し、**Connection type**で**Serial**を選択し、**Device Manager**で確認したシリアルポート番号を設定し、Speedはデフォルト（9600）のままにして**Open**をクリックします
 
 <div align="center"><img width ="400" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/76.png"/></div>
 
-**ステップ 5:** reTerminal インダストリアル端末ウィンドウで、以下のコマンドを入力してreComputerからPCに信号を送信します。
+**ステップ5:** reTerminal Industrialのターミナルウィンドウで、以下を入力してreComputerからPCに信号を送信します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1510,9 +1514,9 @@ echo "RS485 message from reComputer Industrial" > /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-次に、Putty上でこのメッセージが表示されるのを確認します。
+これで、Putty にこのメッセージが表示されます
 
-**ステップ 6:** reTerminal インダストリアル端末ウィンドウで、以下のコマンドを入力してPCからの信号を受信する準備をします。
+**ステップ 6:** reTerminal Industrial のターミナルウィンドウで、以下を入力して PC からの信号の受信を待機します
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
@@ -1540,43 +1544,44 @@ cat /dev/ttyTHS1
 </TabItem>
 </Tabs>
 
-Putty上で任意の文字を入力し、**ENTER**を押すと、reComputer インダストリアル端末ウィンドウに表示されます。
+Puttyで何かを入力し、**ENTER**を押すと、reComputer Industrialのターミナルウィンドウに表示されます
 
 ## ギガビットイーサネットコネクタ
 
-reComputer Industrialには2つのギガビットイーサネット（10/100/1000M）コネクタがあり、それぞれ異なる機能を持っています。
+reComputer Industrialには2つのギガビットイーサネット（10/100/1000M）コネクタがあり、それぞれ異なる機能を持っています
 
-- 左端のコネクタはJetsonモジュールに直接接続されており、**PSE 802.3 af, 15W**仕様でPoE機能を提供します。これにより、PoE対応のIPカメラやその他のPoEデバイスをこのポートに接続して、接続されたデバイスに電力を供給することができます。
-- もう一方のコネクタは、PCIeからイーサネット（LAN7430-I/Y9X）モジュールを介して接続されています。
+- 左端のコネクタはJetsonモジュールに直接接続されており、**PSE 802.3 af、15W**仕様のPoE機能を提供できます。これは、PoE IPカメラやその他のPoEデバイスをこのポートに接続して、接続されたデバイスに電力を供給できることを意味します。
+- もう一方のコネクタは、PCIeからイーサネット（LAN7430-I/Y9X）モジュール経由で接続されています
 
 <div align="center"><img width ="350" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/36.png"/></div>
 
-各イーサネットポートには2つのLED（緑と黄色）があり、以下を示します。
+各イーサネットポートには2つのLED（緑と黄色）があり、以下を示します
 
-- 緑色LED: 1000Mネットワークに接続されている場合のみ点灯
-- 黄色LED: ネットワークのアクティビティステータスを表示
+- 緑LED：1000Mネットワークに接続されている場合のみ点灯
+- 黄色LED：ネットワークアクティビティステータスを表示
 
 ## USB
 
-reComputer Industrialには3つのUSB3.2コネクタが搭載されており、以下の特徴があります：
-- デュアルスタックUSBコネクタでは、上部と下部のUSBポートが電流制限ICを共有しており、最大出力電流は合計2.1A（単独でも2.1A）です。2.1Aを超えると過電流保護状態になります。
-- デュアルスタックUSBコネクタの隣にある単一USBコネクタでは、最大出力電流は合計2.1Aです。2.1Aを超えると過電流保護状態になります。
-- Orin NXモジュールには3つのUSB3.2が搭載されていますが、reComputerではそのうち1つのみが使用され、3つに分岐されています。（USB3.1 TYPE-A x2 - J4およびUSB3.1 TYPE-A x1 - J3）
-- USBホストモードのみ対応、デバイスモードは非対応
-- 5V 2.1Aを供給
+reComputer Industrialには3つのUSB3.2コネクタがオンボードで搭載されており、以下の機能があります：
+
+- デュアルスタックUSBコネクタでは、上下のUSBポートが電流制限ICを共有し、最大出力電流2.1Aの総電力供給能力を持ちます（単体でも2.1A可能）。2.1Aを超えると、過電流保護状態に入ります。
+- デュアルスタックUSBコネクタの隣にある単体USBコネクタは、最大出力電流2.1Aの総電力供給能力を持ちます。2.1Aを超えると、過電流保護状態に入ります。
+- Orin NXモジュールには3つのUSB3.2が搭載されており、そのうち1つのみがreComputerで使用され、3つに分岐されています（USB3.1 TYPE-A x2 - J4およびUSB3.1 TYPE-A x1 -J3）。
+- USBホストのみサポート、デバイスモードはサポートしません
+- 5V 2.1Aを提供
 - ホットスワップ対応
 
 ### 使用方法
 
-接続されたUSBフラッシュドライブで簡単なベンチマークを行う方法を説明します。
+接続されたUSBフラッシュドライブで簡単なベンチマークを実行する方法を説明します
 
-- **ステップ1:** 以下のコマンドを実行して書き込み速度を確認します。
+- **ステップ1：** 以下のコマンドを実行して書き込み速度を確認します
 
 ```sh
 sudo dd if=/dev/zero of=/dev/$1 bs=100M count=10 conv=fdatasync
 ```
 
-- **ステップ2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度確認後に実行してください。
+- **ステップ2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度の上記コマンドを実行した後に、必ずこれを実行してください。
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -1585,7 +1590,7 @@ sudo dd if=/dev/$1 of=/dev/null bs=100M count=10
 
 ## 設定可能なLED
 
-基板上に緑色のLEDが配置されており、以下の図に示されています。デフォルトでは、このLEDはデバイスが正常に動作していることを示します。ただし、このLEDをプログラムしてシステムによってON/OFFを制御することも可能です。
+基板上には以下に示すように緑色のLEDが配置されています。デフォルトでは、デバイスが正常に動作していることを示すLEDとして機能しています。ただし、このLEDをシステムによってON/OFFするようにプログラムすることも可能です。
 
 <div align="center"><img width ="250" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/21.png"/></div>
 
@@ -1594,7 +1599,7 @@ sudo dd if=/dev/$1 of=/dev/null bs=100M count=10
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
 
-**ステップ1:** 緑色LEDにアクセスするために、以下のコマンドをターミナルウィンドウで入力します。
+**ステップ1:** ターミナルウィンドウで以下のコマンドを入力して、緑色LEDにアクセスします
 
 ```sh
 sudo -i
@@ -1604,19 +1609,19 @@ cd PCC.01
 echo out > direction 
 ```
 
-**ステップ2:** LEDを消灯します。
+**ステップ 2:** LEDをオフにする
 
 ```sh
 echo 0 > value 
 ```
 
-**ステップ3:** LEDを点灯します。
+**Step 3:** Turn ON the LED
 
 ```sh
 echo 1 > value 
 ```
 
-LEDの使用を終了した場合は、以下を実行してください。
+LEDの使用が完了したら、以下を実行できます
 
 ```sh
 cd ..
@@ -1627,13 +1632,13 @@ echo 329 > unexport
 
 <TabItem value="Jetpack6" label="Jetpack6">
 
-LEDを消灯する：
+LEDをオフにする：
 
 ```sh
 sudo gpioset gpiochip1 13=0
 ```
 
-LEDを点灯する：
+LEDをオンにする：
 
 ```bash
 sudo gpioset gpiochip1 13=1
@@ -1644,14 +1649,14 @@ sudo gpioset gpiochip1 13=1
 
 ## システムパフォーマンスの監視
 
-**jetson stats** アプリケーションを使用して、システムコンポーネントの温度を監視し、以下のようなその他のシステム詳細を確認できます。
+**jetson stats** アプリケーションを使用して、システムコンポーネントの温度を監視し、以下のような他のシステム詳細を確認できます
 
-- CPU、GPU、RAMの使用状況を表示
-- 電力モードを変更
-- 最大クロックに設定
-- JetPack情報を確認
+- CPU、GPU、RAM使用率の表示
+- 電源モードの変更
+- 最大クロックの設定
+- JetPack 情報の確認
 
-- **ステップ 1:** reComputer Industrial のターミナルウィンドウで以下を入力してください。
+- **ステップ 1:** reComputer Industrial ターミナルウィンドウで、以下を入力します
 
 ```sh
 sudo apt update
@@ -1659,78 +1664,78 @@ sudo apt install python3-pip -y
 sudo pip3 install jetson-stats
 ```
 
-- **ステップ 2:** ボードを再起動します。
+- **ステップ 2:** ボードを再起動する
 
 ```sh
 sudo reboot
 ```
 
-- **ステップ 3:** ターミナルで以下を入力してください。
+- **Step 3:** Type the following on the terminal
 
 ```sh
 jtop
 ```
 
-これで **jtop** アプリケーションが以下のように開きます。
+**jtop** アプリケーションが以下のように開きます
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/30.png"/></div>
 
-- **ステップ 4:** アプリケーションの異なるページを巡回し、すべての機能を探索してください！
+- **ステップ 4:** ここでアプリケーションの異なるページを循環して、すべての機能を探索できます！
 
-## WiFiとBluetooth
+## WiFi と Bluetooth
 
-reComputer Industrial にはWiFiとBluetoothが標準では搭載されていません。ただし、PCB上にWiFi/Bluetoothモジュールをボードにハンダ付けするための予約スペースがあります。このスペースは **BL-M8723DU1** モジュールをサポートするように設計されています。
+reComputer Industrial は、WiFi と Bluetooth を標準では搭載していません。しかし、PCB 上に予約されたセクションがあり、WiFi/Bluetooth モジュールを基板にはんだ付けできます。ここでは **BL-M8723DU1** モジュールをサポートするためのスペースを予約しています。
 
 ### 接続概要
 
-- **ステップ 1:** **BL-M8723DU1** モジュールを自分でハンダ付けしたい場合は可能です。ただし、プロセス中にボードを損傷した場合、保証が無効になるため、これを推奨しません。推奨するのは、当社のプロフェッショナルサービスを利用してこのモジュールをボードにハンダ付けしてもらうことです。リクエストを order@seeed.cc にメールで送信してください。
+- **ステップ 1:** **BL-M8723DU1** モジュールを自分ではんだ付けしたい場合は、はんだ付けできます。しかし、プロセス中に基板を損傷した場合、保証が無効になるため、これは推奨しません。推奨するのは、このモジュールを基板にはんだ付けするための専門サービスを利用することです。リクエストと共に order@seeed.cc にメールを送信してください。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/31.jpg"/></div>
 
-- **ステップ 2:** WiFiとBluetooth用にボード上の2つのアンテナコネクタにアンテナを接続します。この際、IPEXコネクタを使用する必要があります。
+- **ステップ 2:** WiFi と Bluetooth 用に、基板上の 2 つのアンテナコネクタに 2 つのアンテナを接続します。ここでは IPEX コネクタを使用する必要があります
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/32.png"/></div>
 
 ### 使用方法
 
-- **ステップ 1:** ボードを起動し、デバイスがUbuntu Desktopにブートしたら、右上のドロップダウンメニューをクリックし、`設定 > Wi-Fi` に移動して、タイトルバーのボタンを切り替えてWiFiを有効にします。その後、WiFiネットワークを選択し、必要なパスワードを入力して接続します。
+- **ステップ 1:** 基板の電源を入れ、デバイスが Ubuntu Desktop に起動したら、右上角のドロップダウンメニューをクリックし、`Settings > Wi-Fi` に移動して、タイトルバーのボタンを切り替えて WiFi を有効にします。その後、WiFi ネットワークを選択し、必要なパスワードを入力して接続します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/33.png"/></div>
 
-- **ステップ 2:** 同じウィンドウで **Bluetooth** を選択し、タイトルバーのボタンを切り替えてBluetoothを有効にします。その後、Bluetoothデバイスを選択して接続します。
+- **ステップ 2:** 同じウィンドウで、**Bluetooth** を選択し、タイトルバーのボタンを切り替えて Bluetooth を有効にします。その後、接続する Bluetooth デバイスを選択します
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/34.png"/></div>
 
 ## TPM
 
-reComputer Industrial には外部TPMモジュールを接続するためのTPMインターフェースが搭載されています。ここでは、Infineon SLB9670ベースのTPM2.0モジュールでテストを行いました。
+reComputer Industrial には、外部 TPM モジュールを接続するための TPM インターフェースが付属しています。ここでは Infineon SLB9670 ベースの TPM2.0 モジュールでテストしました。
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/114.jpg"/></div>
 
 ### 接続概要
 
-TPMモジュールを以下のようにTPMコネクタに接続します。
+以下に示すように、TPM モジュールを TPM コネクタに接続します
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/115.jpg"/></div>
 
 ### 使用方法
 
-以下のコマンドを実行してTPMモジュールが正しくロードされているか確認します。
+以下のコマンドを実行して、TPM モジュールが正しく読み込まれているかどうかを確認します
 
 ```sh
 sudo dmesg | grep TPM
 ls /dev/tpm* -l
 ```
 
-以下のような出力が表示されます。
+以下のような出力が表示されます
 
 <div align="center"><img width ="700" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/116.png"/></div>
 
-## reComputer Industrialでの最大パフォーマンス
+## reComputer Industrial での最大パフォーマンス
 
-reComputer Industrialで最大パフォーマンスを有効にするには、以下の手順に従ってください。
+reComputer Industrial で最大パフォーマンスを有効にしたい場合は、以下の手順に従ってください
 
-- **ステップ 1:** 以下のコマンドを入力して最大パワーモードを有効にします。
+- **ステップ 1:** 以下のコマンドを入力して最大パワーモードを有効にします
 
 ```sh
 sudo nvpmodel -m 0
@@ -1738,28 +1743,28 @@ sudo nvpmodel -m 0
 
 <div align="center"><img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/35.jpg"/></div>
 
-ここで、ボードを再起動するために**YES**と入力する必要があります。
+ここで、ボードを再起動するために **YES** と入力するよう求められます
 
-- **ステップ 2:** ボードが起動したら、以下のコマンドを入力してCPUクロックを最大周波数に設定します。
+- **ステップ 2:** ボードが起動したら、以下のコマンドを入力してCPUクロックを最大周波数に設定します
 
 ```sh
 sudo jetson_clocks
 ```
 
-## GPIOテーブル
+## GPIO テーブル
 
-reComputer IndustrialのGPIOテーブルにアクセスして、すべてのピンマッピングを確認できます。
+reComputer IndustrialのGPIOテーブルにアクセスして、すべてのピンマッピングに慣れることができます。
 
 <Tabs>
 <TabItem value="Jetpack5" label="Jetpack5">
 
-ターミナル内で以下を実行してアクセスします。
+アクセスするには、ターミナル内で以下を実行してください
 
 ```bash
 sudo cat /sys/kernel/debug/gpio
 ```
 
-すると、以下のような出力が表示されます。
+And you will see the output as follows
 
 ```bash
 gpiochip2: GPIOs 300-315, parent: i2c/1-0021, 1-0021, can sleep:
@@ -1984,231 +1989,231 @@ gpiochip0: GPIOs 348-511, parent: platform/2200000.gpio, tegra234-gpio:
 
 <TabItem value="Jetpack6" label="Jetpack6">
 
-以下のコマンドをターミナルで実行してアクセスします。
+Execute the following inside a terminal to access it.
 
 ```bash
 gpioinfo
 ```
 
-すると、次のような出力が表示されます。
+And you will see the output as follows
 
 ```bash
 seeed@seeed-desktop:~$ gpioinfo 
-gpiochip0 - 164 行:
-	line   0:      "PA.00" "regulator-vdd-3v3-sd" 出力 active-high [使用中]
-	line   1:      "PA.01"       未使用   入力  active-high 
-	line   2:      "PA.02"       未使用   入力  active-high 
-	line   3:      "PA.03"       未使用   入力  active-high 
-	line   4:      "PA.04"       未使用   入力  active-high 
-	line   5:      "PA.05"       未使用   入力  active-high 
-	line   6:      "PA.06"       未使用   入力  active-high 
-	line   7:      "PA.07"       未使用   入力  active-high 
-	line   8:      "PB.00"       未使用   入力  active-high 
-	line   9:      "PC.00"       未使用   入力  active-high 
-	line  10:      "PC.01"       未使用   入力  active-high 
-	line  11:      "PC.02"       未使用   入力  active-high 
-	line  12:      "PC.03"       未使用   入力  active-high 
-	line  13:      "PC.04"       未使用   入力  active-high 
-	line  14:      "PC.05"       未使用   入力  active-high 
-	line  15:      "PC.06"       未使用   入力  active-high 
-	line  16:      "PC.07"       未使用   入力  active-high 
-	line  17:      "PD.00"       未使用   入力  active-high 
-	line  18:      "PD.01"       未使用   入力  active-high 
-	line  19:      "PD.02"       未使用   入力  active-high 
-	line  20:      "PD.03"       未使用   入力  active-high 
-	line  21:      "PE.00"       未使用   入力  active-high 
-	line  22:      "PE.01"       未使用   入力  active-high 
-	line  23:      "PE.02"       未使用   入力  active-high 
-	line  24:      "PE.03"       未使用   入力  active-high 
-	line  25:      "PE.04"       未使用   入力  active-high 
-	line  26:      "PE.05"       未使用   入力  active-high 
-	line  27:      "PE.06"       未使用   入力  active-high 
-	line  28:      "PE.07"       未使用   入力  active-high 
-	line  29:      "PF.00"       未使用   入力  active-high 
-	line  30:      "PF.01"       未使用   入力  active-high 
-	line  31:      "PF.02"       未使用   入力  active-high 
-	line  32:      "PF.03"       未使用   入力  active-high 
-	line  33:      "PF.04"       未使用   入力  active-high 
-	line  34:      "PF.05"       未使用   入力  active-high 
-	line  35:      "PG.00" "Force Recovery" 入力 active-low [使用中]
-	line  36:      "PG.01"       未使用   入力  active-high 
-	line  37:      "PG.02"    "Suspend"   入力   active-low [使用中]
-	line  38:      "PG.03"       未使用   入力  active-high 
-	line  39:      "PG.04"       未使用   入力  active-high 
-	line  40:      "PG.05"       未使用   入力  active-high 
-	line  41:      "PG.06"       未使用   入力  active-high 
-	line  42:      "PG.07"       未使用   入力  active-high 
-	line  43:      "PH.00"       未使用   入力  active-high 
-	line  44:      "PH.01"       未使用   入力  active-high 
-	line  45:      "PH.02"       未使用   入力  active-high 
-	line  46:      "PH.03" "camera-control-output-low" 出力 active-high [使用中]
-	line  47:      "PH.04"       未使用   入力  active-high 
-	line  48:      "PH.05"       未使用   入力  active-high 
-	line  49:      "PH.06"       未使用  出力  active-high 
-	line  50:      "PH.07"       未使用   入力  active-high 
-	line  51:      "PI.00"       未使用  出力  active-high 
-	line  52:      "PI.01"       未使用   入力  active-high 
-	line  53:      "PI.02"       未使用   入力  active-high 
-	line  54:      "PI.03"       未使用   入力  active-high 
-	line  55:      "PI.04"       未使用   入力  active-high 
-	line  56:      "PI.05"       カーネル   入力  active-high [使用中]
-	line  57:      "PI.06"       未使用   入力  active-high 
-	line  58:      "PJ.00"       未使用   入力  active-high 
-	line  59:      "PJ.01"       未使用   入力  active-high 
-	line  60:      "PJ.02"       未使用   入力  active-high 
-	line  61:      "PJ.03"       未使用   入力  active-high 
-	line  62:      "PJ.04"       未使用   入力  active-high 
-	line  63:      "PJ.05"       未使用   入力  active-high 
-	line  64:      "PK.00"       未使用   入力  active-high 
-	line  65:      "PK.01"       未使用   入力  active-high 
-	line  66:      "PK.02"       未使用   入力  active-high 
-	line  67:      "PK.03"       未使用   入力  active-high 
-	line  68:      "PK.04"       未使用  出力  active-high 
-	line  69:      "PK.05"       未使用  出力  active-high 
-	line  70:      "PK.06"       未使用   入力  active-high 
-	line  71:      "PK.07"       未使用   入力  active-high 
-	line  72:      "PL.00"       未使用   入力  active-high 
-	line  73:      "PL.01"       未使用   入力  active-high 
-	line  74:      "PL.02"       未使用   入力  active-high 
-	line  75:      "PL.03"       未使用   入力  active-high 
-	line  76:      "PM.00"       カーネル   入力  active-high [使用中]
-	line  77:      "PM.01"       未使用   入力  active-high 
-	line  78:      "PM.02"       未使用   入力  active-high 
-	line  79:      "PM.03"       未使用   入力  active-high 
-	line  80:      "PM.04"       未使用   入力  active-high 
-	line  81:      "PM.05"       未使用   入力  active-high 
-	line  82:      "PM.06"       未使用   入力  active-high 
-	line  83:      "PM.07"       未使用   入力  active-high 
-	line  84:      "PN.00"       未使用   入力  active-high 
-	line  85:      "PN.01"  "interrupt"   入力  active-high [使用中]
-	line  86:      "PN.02"       未使用   入力  active-high 
-	line  87:      "PN.03"       未使用   入力  active-high 
-	line  88:      "PN.04"       未使用   入力  active-high 
-	line  89:      "PN.05"       未使用   入力  active-high 
-	line  90:      "PN.06"       未使用   入力  active-high 
-	line  91:      "PN.07"       未使用   入力  active-high 
-	line  92:      "PP.00"       未使用   入力  active-high 
-	line  93:      "PP.01"       未使用   入力  active-high 
-	line  94:      "PP.02"       未使用   入力  active-high 
-	line  95:      "PP.03"       未使用   入力  active-high 
-	line  96:      "PP.04"       未使用   入力  active-high 
-	line  97:      "PP.05"       未使用   入力  active-high 
-	line  98:      "PP.06"       未使用   入力  active-high 
-	line  99:      "PP.07"       未使用   入力  active-high 
-	line 100:      "PQ.00"       未使用   入力  active-high 
-	line 101:      "PQ.01"       未使用   入力  active-high 
-	line 102:      "PQ.02"       未使用   入力  active-high 
-	line 103:      "PQ.03"       未使用  出力  active-high 
-	line 104:      "PQ.04"       未使用   入力  active-high 
-	line 105:      "PQ.05"       未使用   入力  active-high 
-	line 106:      "PQ.06"       未使用   入力  active-high 
-	line 107:      "PQ.07"       未使用   入力  active-high 
-	line 108:      "PR.00"       未使用   入力  active-high 
-	line 109:      "PR.01"       未使用   入力  active-high 
-	line 110:      "PR.02"       未使用   入力  active-high 
-	line 111:      "PR.03"       未使用   入力  active-high 
-	line 112:      "PR.04"       未使用   入力  active-high 
-	line 113:      "PR.05"       未使用   入力  active-high 
-	line 114:      "PX.00"       カーネル   入力  active-high [使用中]
-	line 115:      "PX.01"       カーネル   入力  active-high [使用中]
-	line 116:      "PX.02"       未使用   入力  active-high 
-	line 117:      "PX.03"       未使用   入力  active-high 
-	line 118:      "PX.04"       未使用   入力  active-high 
-	line 119:      "PX.05"       未使用   入力  active-high 
-	line 120:      "PX.06"       未使用   入力  active-high 
-	line 121:      "PX.07"       未使用   入力  active-high 
-	line 122:      "PY.00"       未使用   入力  active-high 
-	line 123:      "PY.01"       未使用   入力  active-high 
-	line 124:      "PY.02"       未使用   入力  active-high 
-	line 125:      "PY.03"       未使用   入力  active-high 
-	line 126:      "PY.04"       未使用   入力  active-high 
-	line 127:      "PY.05"       未使用   入力  active-high 
-	line 128:      "PY.06"       未使用   入力  active-high 
-	line 129:      "PY.07"       未使用   入力  active-high 
-	line 130:      "PZ.00"       未使用   入力  active-high 
-	line 131:      "PZ.01"       "vbus"   入力   active-low [使用中]
-	line 132:      "PZ.02"       未使用   入力  active-high 
-	line 133:      "PZ.03"       未使用   入力  active-high 
-	line 134:      "PZ.04"       未使用   入力  active-high 
-	line 135:      "PZ.05"       未使用   入力  active-high 
-	line 136:      "PZ.06"   "spi0 CS0"  出力   active-low [使用中]
-	line 137:      "PZ.07"       未使用   入力  active-high 
-	line 138:     "PAC.00"       未使用  出力  active-high 
-	line 139:     "PAC.01"       未使用   入力  active-high 
-	line 140:     "PAC.02"       未使用   入力  active-high 
-	line 141:     "PAC.03"       未使用   入力  active-high 
-	line 142:     "PAC.04"       未使用   入力  active-high 
-	line 143:     "PAC.05"       未使用   入力  active-high 
-	line 144:     "PAC.06"       未使用   入力  active-high 
-	line 145:     "PAC.07"       未使用   入力  active-high 
-	line 146:     "PAD.00"       未使用   入力  active-high 
-	line 147:     "PAD.01"       未使用   入力  active-high 
-	line 148:     "PAD.02"       未使用   入力  active-high 
-	line 149:     "PAD.03"       未使用   入力  active-high 
-	line 150:     "PAE.00"       未使用   入力  active-high 
-	line 151:     "PAE.01"       未使用   入力  active-high 
-	line 152:     "PAF.00"       未使用   入力  active-high 
-	line 153:     "PAF.01"       未使用   入力  active-high 
-	line 154:     "PAF.02"       未使用   入力  active-high 
-	line 155:     "PAF.03"       未使用   入力  active-high 
-	line 156:     "PAG.00"       未使用   入力  active-high 
-	line 157:     "PAG.01"       未使用   入力  active-high 
-	line 158:     "PAG.02"       未使用   入力  active-high 
-	line 159:     "PAG.03"       未使用   入力  active-high 
-	line 160:     "PAG.04"       未使用   入力  active-high 
-	line 161:     "PAG.05"       未使用   入力  active-high 
-	line 162:     "PAG.06"       未使用   入力  active-high 
-	line 163:     "PAG.07"       未使用   入力  active-high 
-gpiochip1 - 32 行:
-	line   0:     "PAA.00"       未使用   入力  active-high 
-	line   1:     "PAA.01"       未使用   入力  active-high 
-	line   2:     "PAA.02"       未使用   入力  active-high 
-	line   3:     "PAA.03"       未使用   入力  active-high 
-	line   4:     "PAA.04"       未使用  出力  active-high 
-	line   5:     "PAA.05" "regulator-vdd-3v3-pcie" 出力 active-high [使用中]
-	line   6:     "PAA.06"       未使用   入力  active-high 
-	line   7:     "PAA.07"       未使用   入力  active-high 
-	line   8:     "PBB.00"       未使用   入力  active-high 
-	line   9:     "PBB.01"       未使用   入力  active-high 
-	line  10:     "PBB.02"       未使用   入力  active-high 
-	line  11:     "PBB.03"       未使用  出力  active-high 
-	line  12:     "PCC.00"       未使用  出力  active-high 
-	line  13:     "PCC.01"       未使用  出力  active-high 
-	line  14:     "PCC.02"       未使用  出力  active-high 
-	line  15:     "PCC.03"        "mux"  出力  active-high [使用中]
-	line  16:     "PCC.04"       未使用   入力  active-high 
-	line  17:     "PCC.05"       未使用   入力  active-high 
-	line  18:     "PCC.06"       未使用   入力  active-high 
-	line  19:     "PCC.07"       未使用   入力  active-high 
-	line  20:     "PDD.00"       未使用   入力  active-high 
-	line  21:     "PDD.01"       未使用   入力  active-high 
-	line  22:     "PDD.02"       未使用   入力  active-high 
-	line  23:     "PEE.00"       未使用   入力  active-high 
-	line  24:     "PEE.01"       未使用   入力  active-high 
-	line  25:     "PEE.02"       未使用   入力  active-high 
-	line  26:     "PEE.03"       未使用   入力  active-high 
-	line  27:     "PEE.04"      "Power"   入力   active-low [使用中]
-	line  28:     "PEE.05"       未使用   入力  active-high 
-	line  29:     "PEE.06"       未使用   入力  active-high 
-	line  30:     "PEE.07"       未使用   入力  active-high 
-	line  31:     "PGG.00"       未使用   入力  active-high 
-gpiochip2 - 16 行:
-	line   0:     "wl_dis" "gpio_xten_pin@0" 出力 active-high [使用中]
-	line   1: "hst_wake_wl" "gpio_xten_pin@1" 出力 active-high [使用中]
-	line   2: "wl_wake_hst" "gpio_xten_pin@2" 出力 active-low [使用中]
-	line   3:     "bt_dis" "gpio_xten_pin@3" 出力 active-high [使用中]
-	line   4: "hst_wake_bt" 未使用 入力 active-high 
-	line   5: "bt_wake_hst" 未使用 入力 active-high 
-	line   6: "spi0_rst_3v3" "gpio_xten_pin@6" 出力 active-low [使用中]
-	line   7:  "gpio_pin7" "gpio_xten_pin@7" 出力 active-low [使用中]
-	line   8: "can_120R_en" 未使用 入力 active-high 
-	line   9: "M2B_PCIe_rst" 未使用 入力 active-high 
-	line  10: "USB_HUB_rst" "gpio_xten_pin@10" 出力 active-high [使用中]
-	line  11: "PCIe_ETH_rst" 未使用 入力 active-high 
-	line  12: "M2B_WOWWAN"       未使用   入力  active-high 
-	line  13: "M2B_DPR_3V3" 未使用 入力 active-high 
-	line  14: "SIM_MUX_SEL" 未使用 入力 active-high 
-	line  15: "gpio_pin15"       未使用   入力  active-high 
+gpiochip0 - 164 lines:
+ line   0:      "PA.00" "regulator-vdd-3v3-sd" output active-high [used]
+ line   1:      "PA.01"       unused   input  active-high 
+ line   2:      "PA.02"       unused   input  active-high 
+ line   3:      "PA.03"       unused   input  active-high 
+ line   4:      "PA.04"       unused   input  active-high 
+ line   5:      "PA.05"       unused   input  active-high 
+ line   6:      "PA.06"       unused   input  active-high 
+ line   7:      "PA.07"       unused   input  active-high 
+ line   8:      "PB.00"       unused   input  active-high 
+ line   9:      "PC.00"       unused   input  active-high 
+ line  10:      "PC.01"       unused   input  active-high 
+ line  11:      "PC.02"       unused   input  active-high 
+ line  12:      "PC.03"       unused   input  active-high 
+ line  13:      "PC.04"       unused   input  active-high 
+ line  14:      "PC.05"       unused   input  active-high 
+ line  15:      "PC.06"       unused   input  active-high 
+ line  16:      "PC.07"       unused   input  active-high 
+ line  17:      "PD.00"       unused   input  active-high 
+ line  18:      "PD.01"       unused   input  active-high 
+ line  19:      "PD.02"       unused   input  active-high 
+ line  20:      "PD.03"       unused   input  active-high 
+ line  21:      "PE.00"       unused   input  active-high 
+ line  22:      "PE.01"       unused   input  active-high 
+ line  23:      "PE.02"       unused   input  active-high 
+ line  24:      "PE.03"       unused   input  active-high 
+ line  25:      "PE.04"       unused   input  active-high 
+ line  26:      "PE.05"       unused   input  active-high 
+ line  27:      "PE.06"       unused   input  active-high 
+ line  28:      "PE.07"       unused   input  active-high 
+ line  29:      "PF.00"       unused   input  active-high 
+ line  30:      "PF.01"       unused   input  active-high 
+ line  31:      "PF.02"       unused   input  active-high 
+ line  32:      "PF.03"       unused   input  active-high 
+ line  33:      "PF.04"       unused   input  active-high 
+ line  34:      "PF.05"       unused   input  active-high 
+ line  35:      "PG.00" "Force Recovery" input active-low [used]
+ line  36:      "PG.01"       unused   input  active-high 
+ line  37:      "PG.02"    "Suspend"   input   active-low [used]
+ line  38:      "PG.03"       unused   input  active-high 
+ line  39:      "PG.04"       unused   input  active-high 
+ line  40:      "PG.05"       unused   input  active-high 
+ line  41:      "PG.06"       unused   input  active-high 
+ line  42:      "PG.07"       unused   input  active-high 
+ line  43:      "PH.00"       unused   input  active-high 
+ line  44:      "PH.01"       unused   input  active-high 
+ line  45:      "PH.02"       unused   input  active-high 
+ line  46:      "PH.03" "camera-control-output-low" output active-high [used]
+ line  47:      "PH.04"       unused   input  active-high 
+ line  48:      "PH.05"       unused   input  active-high 
+ line  49:      "PH.06"       unused  output  active-high 
+ line  50:      "PH.07"       unused   input  active-high 
+ line  51:      "PI.00"       unused  output  active-high 
+ line  52:      "PI.01"       unused   input  active-high 
+ line  53:      "PI.02"       unused   input  active-high 
+ line  54:      "PI.03"       unused   input  active-high 
+ line  55:      "PI.04"       unused   input  active-high 
+ line  56:      "PI.05"       kernel   input  active-high [used]
+ line  57:      "PI.06"       unused   input  active-high 
+ line  58:      "PJ.00"       unused   input  active-high 
+ line  59:      "PJ.01"       unused   input  active-high 
+ line  60:      "PJ.02"       unused   input  active-high 
+ line  61:      "PJ.03"       unused   input  active-high 
+ line  62:      "PJ.04"       unused   input  active-high 
+ line  63:      "PJ.05"       unused   input  active-high 
+ line  64:      "PK.00"       unused   input  active-high 
+ line  65:      "PK.01"       unused   input  active-high 
+ line  66:      "PK.02"       unused   input  active-high 
+ line  67:      "PK.03"       unused   input  active-high 
+ line  68:      "PK.04"       unused  output  active-high 
+ line  69:      "PK.05"       unused  output  active-high 
+ line  70:      "PK.06"       unused   input  active-high 
+ line  71:      "PK.07"       unused   input  active-high 
+ line  72:      "PL.00"       unused   input  active-high 
+ line  73:      "PL.01"       unused   input  active-high 
+ line  74:      "PL.02"       unused   input  active-high 
+ line  75:      "PL.03"       unused   input  active-high 
+ line  76:      "PM.00"       kernel   input  active-high [used]
+ line  77:      "PM.01"       unused   input  active-high 
+ line  78:      "PM.02"       unused   input  active-high 
+ line  79:      "PM.03"       unused   input  active-high 
+ line  80:      "PM.04"       unused   input  active-high 
+ line  81:      "PM.05"       unused   input  active-high 
+ line  82:      "PM.06"       unused   input  active-high 
+ line  83:      "PM.07"       unused   input  active-high 
+ line  84:      "PN.00"       unused   input  active-high 
+ line  85:      "PN.01"  "interrupt"   input  active-high [used]
+ line  86:      "PN.02"       unused   input  active-high 
+ line  87:      "PN.03"       unused   input  active-high 
+ line  88:      "PN.04"       unused   input  active-high 
+ line  89:      "PN.05"       unused   input  active-high 
+ line  90:      "PN.06"       unused   input  active-high 
+ line  91:      "PN.07"       unused   input  active-high 
+ line  92:      "PP.00"       unused   input  active-high 
+ line  93:      "PP.01"       unused   input  active-high 
+ line  94:      "PP.02"       unused   input  active-high 
+ line  95:      "PP.03"       unused   input  active-high 
+ line  96:      "PP.04"       unused   input  active-high 
+ line  97:      "PP.05"       unused   input  active-high 
+ line  98:      "PP.06"       unused   input  active-high 
+ line  99:      "PP.07"       unused   input  active-high 
+ line 100:      "PQ.00"       unused   input  active-high 
+ line 101:      "PQ.01"       unused   input  active-high 
+ line 102:      "PQ.02"       unused   input  active-high 
+ line 103:      "PQ.03"       unused  output  active-high 
+ line 104:      "PQ.04"       unused   input  active-high 
+ line 105:      "PQ.05"       unused   input  active-high 
+ line 106:      "PQ.06"       unused   input  active-high 
+ line 107:      "PQ.07"       unused   input  active-high 
+ line 108:      "PR.00"       unused   input  active-high 
+ line 109:      "PR.01"       unused   input  active-high 
+ line 110:      "PR.02"       unused   input  active-high 
+ line 111:      "PR.03"       unused   input  active-high 
+ line 112:      "PR.04"       unused   input  active-high 
+ line 113:      "PR.05"       unused   input  active-high 
+ line 114:      "PX.00"       kernel   input  active-high [used]
+ line 115:      "PX.01"       kernel   input  active-high [used]
+ line 116:      "PX.02"       unused   input  active-high 
+ line 117:      "PX.03"       unused   input  active-high 
+ line 118:      "PX.04"       unused   input  active-high 
+ line 119:      "PX.05"       unused   input  active-high 
+ line 120:      "PX.06"       unused   input  active-high 
+ line 121:      "PX.07"       unused   input  active-high 
+ line 122:      "PY.00"       unused   input  active-high 
+ line 123:      "PY.01"       unused   input  active-high 
+ line 124:      "PY.02"       unused   input  active-high 
+ line 125:      "PY.03"       unused   input  active-high 
+ line 126:      "PY.04"       unused   input  active-high 
+ line 127:      "PY.05"       unused   input  active-high 
+ line 128:      "PY.06"       unused   input  active-high 
+ line 129:      "PY.07"       unused   input  active-high 
+ line 130:      "PZ.00"       unused   input  active-high 
+ line 131:      "PZ.01"       "vbus"   input   active-low [used]
+ line 132:      "PZ.02"       unused   input  active-high 
+ line 133:      "PZ.03"       unused   input  active-high 
+ line 134:      "PZ.04"       unused   input  active-high 
+ line 135:      "PZ.05"       unused   input  active-high 
+ line 136:      "PZ.06"   "spi0 CS0"  output   active-low [used]
+ line 137:      "PZ.07"       unused   input  active-high 
+ line 138:     "PAC.00"       unused  output  active-high 
+ line 139:     "PAC.01"       unused   input  active-high 
+ line 140:     "PAC.02"       unused   input  active-high 
+ line 141:     "PAC.03"       unused   input  active-high 
+ line 142:     "PAC.04"       unused   input  active-high 
+ line 143:     "PAC.05"       unused   input  active-high 
+ line 144:     "PAC.06"       unused   input  active-high 
+ line 145:     "PAC.07"       unused   input  active-high 
+ line 146:     "PAD.00"       unused   input  active-high 
+ line 147:     "PAD.01"       unused   input  active-high 
+ line 148:     "PAD.02"       unused   input  active-high 
+ line 149:     "PAD.03"       unused   input  active-high 
+ line 150:     "PAE.00"       unused   input  active-high 
+ line 151:     "PAE.01"       unused   input  active-high 
+ line 152:     "PAF.00"       unused   input  active-high 
+ line 153:     "PAF.01"       unused   input  active-high 
+ line 154:     "PAF.02"       unused   input  active-high 
+ line 155:     "PAF.03"       unused   input  active-high 
+ line 156:     "PAG.00"       unused   input  active-high 
+ line 157:     "PAG.01"       unused   input  active-high 
+ line 158:     "PAG.02"       unused   input  active-high 
+ line 159:     "PAG.03"       unused   input  active-high 
+ line 160:     "PAG.04"       unused   input  active-high 
+ line 161:     "PAG.05"       unused   input  active-high 
+ line 162:     "PAG.06"       unused   input  active-high 
+ line 163:     "PAG.07"       unused   input  active-high 
+gpiochip1 - 32 lines:
+ line   0:     "PAA.00"       unused   input  active-high 
+ line   1:     "PAA.01"       unused   input  active-high 
+ line   2:     "PAA.02"       unused   input  active-high 
+ line   3:     "PAA.03"       unused   input  active-high 
+ line   4:     "PAA.04"       unused  output  active-high 
+ line   5:     "PAA.05" "regulator-vdd-3v3-pcie" output active-high [used]
+ line   6:     "PAA.06"       unused   input  active-high 
+ line   7:     "PAA.07"       unused   input  active-high 
+ line   8:     "PBB.00"       unused   input  active-high 
+ line   9:     "PBB.01"       unused   input  active-high 
+ line  10:     "PBB.02"       unused   input  active-high 
+ line  11:     "PBB.03"       unused  output  active-high 
+ line  12:     "PCC.00"       unused  output  active-high 
+ line  13:     "PCC.01"       unused  output  active-high 
+ line  14:     "PCC.02"       unused  output  active-high 
+ line  15:     "PCC.03"        "mux"  output  active-high [used]
+ line  16:     "PCC.04"       unused   input  active-high 
+ line  17:     "PCC.05"       unused   input  active-high 
+ line  18:     "PCC.06"       unused   input  active-high 
+ line  19:     "PCC.07"       unused   input  active-high 
+ line  20:     "PDD.00"       unused   input  active-high 
+ line  21:     "PDD.01"       unused   input  active-high 
+ line  22:     "PDD.02"       unused   input  active-high 
+ line  23:     "PEE.00"       unused   input  active-high 
+ line  24:     "PEE.01"       unused   input  active-high 
+ line  25:     "PEE.02"       unused   input  active-high 
+ line  26:     "PEE.03"       unused   input  active-high 
+ line  27:     "PEE.04"      "Power"   input   active-low [used]
+ line  28:     "PEE.05"       unused   input  active-high 
+ line  29:     "PEE.06"       unused   input  active-high 
+ line  30:     "PEE.07"       unused   input  active-high 
+ line  31:     "PGG.00"       unused   input  active-high 
+gpiochip2 - 16 lines:
+ line   0:     "wl_dis" "gpio_xten_pin@0" output active-high [used]
+ line   1: "hst_wake_wl" "gpio_xten_pin@1" output active-high [used]
+ line   2: "wl_wake_hst" "gpio_xten_pin@2" output active-low [used]
+ line   3:     "bt_dis" "gpio_xten_pin@3" output active-high [used]
+ line   4: "hst_wake_bt" unused input active-high 
+ line   5: "bt_wake_hst" unused input active-high 
+ line   6: "spi0_rst_3v3" "gpio_xten_pin@6" output active-low [used]
+ line   7:  "gpio_pin7" "gpio_xten_pin@7" output active-low [used]
+ line   8: "can_120R_en" unused input active-high 
+ line   9: "M2B_PCIe_rst" unused input active-high 
+ line  10: "USB_HUB_rst" "gpio_xten_pin@10" output active-high [used]
+ line  11: "PCIe_ETH_rst" unused input active-high 
+ line  12: "M2B_WOWWAN"       unused   input  active-high 
+ line  13: "M2B_DPR_3V3" unused input active-high 
+ line  14: "SIM_MUX_SEL" unused input active-high 
+ line  15: "gpio_pin15"       unused   input  active-high 
 ```
 
 </TabItem>
@@ -2216,14 +2221,14 @@ gpiochip2 - 16 行:
 
 ## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験を可能な限りスムーズにしていただくため、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

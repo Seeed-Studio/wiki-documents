@@ -1,60 +1,57 @@
 ---
-description: Wio Tracker 1110 を TTN に接続する
-title: TTN に接続する
+description: Wio_Tracker_1110をTTNに接続する
+title: TTNに接続する
 keywords:
-- トラッカー
+- Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/connect_wio_tracker_to_TTN
 sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 10/23/2023
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-[The Things Stack(TTS)](https://www.thethingsnetwork.org/) は、LoRaWAN® ソリューションにおける重要なコンポーネントである LoRaWAN® ネットワークサーバースタックです。本章では、Wio Tracker 1110 開発ボードを The Things Network に接続する方法を説明します。
 
-## 開発ボードの設定
+[The Things Stack(TTS)](https://www.thethingsnetwork.org/)は、LoRaWAN®ネットワークサーバースタックであり、あらゆるLoRaWANソリューションにとって重要なコンポーネントです。この章では、Wio Tracker 1110 Dev BoardをThe Things Networkに接続する方法をユーザーにガイドします。
 
-TTS に接続する前に、SenseCAP Mate アプリでボードの基本パラメータを設定する必要があります。詳細は [Get Started](https://wiki.seeedstudio.com/ja/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway) を参照してください。
+## Dev Boardの設定
 
-* プラットフォームを TTN に設定し、`Device EUI`、`APP EUI`、`APP Key` をコピーします。
+TTSに接続する前に、SenseCAP Mate APPでボードの基本パラメータを設定する必要があります。詳細については[Get Started](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)を確認してください。
+
+- プラットフォームをTTNに設定し、`Device EUI`/`APP EUI`/`APP Key`をコピーします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
 
-## The Things Stack の設定
+## The Things Stackの設定
 
-### ステップ 1: アプリケーションの作成
+### ステップ1: アプリケーションの作成
 
-Applications ページに移動し、"+Create application" をクリックします。
+Applicationsページに移動し、「+Create application」をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application.png" alt="pir" width={800} height="auto" /></p>
 
-Application ID を入力し、Create Application をクリックして変更を保存します。
+Application IDを入力し、Create Applicationをクリックして変更を保存します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application1.png" alt="pir" width={800} height="auto" /></p>
 
-### ステップ 2: デバイスの登録
+### ステップ2: デバイスの登録
 
-`Device EUI`、`APP EUI`、`APP Key` を貼り付け、デバイスに応じた `frequency plan` を選択し、`Register end device` をクリックします。
+`Device EUI`/`APP EUI`/`APP Key`を貼り付け、デバイスに応じて`frequency plan`を選択し、`Register end device`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/register-wio.png" alt="pir" width={800} height="auto" /></p>
 
 :::tip
-`JoinEUI` は以前 `AppEUI` と呼ばれていましたが、同じものです。
+`JoinEUI`は以前`AppEUI`と呼ばれていましたが、同じものです。
 :::
 
-### ステップ 3: デコーダーの設定
+### ステップ3: デコーダーの設定
 
-`Payload formatters` に移動し、Formatter タイプを `Custom Javascript formatter` に設定し、以下のコードをコピーします。
+`Payload formatters`に移動し、Formatter typeを`Custom Javasript formatter`に選択し、以下のコードをコピーします：
 
 <details>
 
-<summary>TTN 用</summary>
+<summary>TTN用</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -99,6 +96,7 @@ function decodeUplink (input) {
             decoded.messages.push(elements)
         }
     }
+    // decoded.messages = measurement
     return { data: decoded }
 }
 
@@ -426,35 +424,35 @@ function getPositingStatus (str) {
     let status = getInt(str)
     switch (status) {
         case 0:
-            return {id:status, statusName:"位置取得成功。"}
+            return {id:status, statusName:"Positioning successful."}
         case 1:
-            return {id:status, statusName:"GNSS スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The GNSS scan timed out and failed to obtain the location."}
         case 2:
-            return {id:status, statusName:"Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Wi-Fi scan timed out and failed to obtain the location."}
         case 3:
-            return {id:status, statusName:"Wi-Fi + GNSS スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 4:
-            return {id:status, statusName:"GNSS + Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The GNSS + Wi-Fi scan timed out and failed to obtain the location."}
         case 5:
-            return {id:status, statusName:"Bluetooth スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Bluetooth scan timed out and failed to obtain the location."}
         case 6:
-            return {id:status, statusName:"Bluetooth + Wi-Fi スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi scan timed out and failed to obtain the location."}
         case 7:
-            return {id:status, statusName:"Bluetooth + GNSS スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Bluetooth + GNSS scan timed out and failed to obtain the location."}
         case 8:
-            return {id:status, statusName:"Bluetooth + Wi-Fi + GNSS スキャンがタイムアウトし、位置取得に失敗しました。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 9:
-            return {id:status, statusName:"Location Server が GNSS 位置を解析できませんでした。"}
+            return {id:status, statusName:"Location Server failed to parse the GNSS location."}
         case 10:
-            return {id:status, statusName:"Location Server が Wi-Fi 位置を解析できませんでした。"}
+            return {id:status, statusName:"Location Server failed to parse the Wi-Fi location."}
         case 11:
-            return {id:status, statusName:"Location Server が Bluetooth 位置を解析できませんでした。"}
+            return {id:status, statusName:"Location Server failed to parse the Bluetooth location."}
         case 12:
-            return {id:status, statusName:"精度が低いため GNSS 位置の解析に失敗しました。"}
+            return {id:status, statusName:"Failed to parse the GNSS location due to the poor accuracy."}
         case 13:
-            return {id:status, statusName:"時間同期に失敗しました。"}
+            return {id:status, statusName:"Time synchronization failed."}
         case 14:
-            return {id:status, statusName:"古いアルマナックのため位置取得に失敗しました。"}
+            return {id:status, statusName:"Failed to obtain location due to the old Almanac."}
     }
     return getInt(str)
 }
@@ -570,6 +568,7 @@ function getInt (str) {
 }
 
 function getEventStatus (str) {
+    // return getInt(str)
     let bitStr = getByteArray(str)
     let bitArr = []
     for (let i = 0; i < bitStr.length; i++) {
@@ -583,28 +582,28 @@ function getEventStatus (str) {
         }
         switch (i){
             case 0:
-                event.push({id:1, eventName:"移動開始イベント。"})
+                event.push({id:1, eventName:"Start moving event."})
                 break
             case 1:
-                event.push({id:2, eventName:"移動終了イベント。"})
+                event.push({id:2, eventName:"End movement event."})
                 break
             case 2:
-                event.push({id:3, eventName:"静止イベント。"})
+                event.push({id:3, eventName:"Motionless event."})
                 break
             case 3:
-                event.push({id:4, eventName:"衝撃イベント。"})
+                event.push({id:4, eventName:"Shock event."})
                 break
             case 4:
-                event.push({id:5, eventName:"温度イベント。"})
+                event.push({id:5, eventName:"Temperature event."})
                 break
             case 5:
-                event.push({id:6, eventName:"光イベント。"})
+                event.push({id:6, eventName:"Light event."})
                 break
             case 6:
-                event.push({id:7, eventName:"SOS イベント。"})
+                event.push({id:7, eventName:"SOS event."})
                 break
             case 7:
-                event.push({id:8, eventName:"1回押下イベント。"})
+                event.push({id:8, eventName:"Press once event."})
                 break
         }
     }
@@ -651,20 +650,19 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/c-decoder.png" alt="pir" width={800} height="auto" /></p>
 
+### ステップ4: データの確認
 
-### ステップ 4: データを確認する
+デバイスがネットワークに接続しようとすると、呼吸ライトが点滅します。デバイスがネットワークに正常に参加すると、呼吸ライトが素早く点滅し、軽やかで陽気なメロディーが流れます。
 
-デバイスがネットワークに接続しようとすると、ブリージングライトが点滅します。デバイスがネットワークに正常に接続されると、ブリージングライトが速く点滅し、軽快で楽しいメロディーが流れます。
-
-その後、TTS コンソールでデータを確認することができます。
+その後、TTSコンソールでデータを確認できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_check.png" alt="pir" width={800} height="auto" /></p>
 
-
 ## リソース
 
-[Wio Tracker 1110 開発ボード用 TTN デコーダー](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/WM1110/TTN/SenseCAP_WM1110_TTN_Decoder.js)
+[TTN decoder for Wio Tracker 1110 Dev Board](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/WM1110/TTN/SenseCAP_WM1110_TTN_Decoder.js)

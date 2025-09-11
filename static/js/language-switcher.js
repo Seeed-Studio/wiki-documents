@@ -1,6 +1,6 @@
 // 语言切换器 - 生产环境优化版本
-// 生成时间: 2025-09-04 10:04:43 (北京时间)
-// 多语言页面: 1995 个
+// 生成时间: 2025-09-08 14:10:38 (北京时间)
+// 多语言页面: 1997 个
 
 (function() {
   'use strict';
@@ -32,286 +32,350 @@
   "/sensecraft-ai/application/application-for-homeassistant": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/overview": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/sensecraft-ai-main": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-output-grove-vision-ai": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-output-gpio-xiao": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-output-mqtt-xiao": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-sscmacore-library": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/workspace/abnormal-vibration-detection": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-training-classification": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-training-object-detection": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-grove-vision-ai-v2": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-deploy-model-to-jetson": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-watcher": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-pretrained-models-for-xiao": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/grove-vision-ai-v2-workspace": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/nvidia-jetson-workspace": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-jetson": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/tutorials/sensecraft-ai-output-libraries-xiao": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-ai/xiao-esp32s3-workspace": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-app/overview": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-app/tutorials/event-management": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/blockchain-dashboard/dashboard-basics": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/blockchain-dashboard/dashboard-registration": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/blockchain-dashboard/hotspot-registration": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/app-settings": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/deeplink_helium_wallet": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/download-app": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/faq": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/forget-wifi-profile": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-management": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/hotspot-onboarding": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/remote-reboot": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/sensecap_hotspot_app": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/update_antenna": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-blockchain/sensecraft-hotspot-app/update_hotspot_location": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform-api/appendix/list_of_device_status_ids": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/appendix/list_of_error_code": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/appendix/list_of_measurement_ids": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/appendix/list_of_sensor_types": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_quickstart": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/data-openstream-api/data_openstream_api_reference": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/http-api/http-api-access-guide": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/api/http-api/quick-start": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/sensecraft-data-platform-api/sensecraft-data-platform-api": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/applications/ai-advisor": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/applications/planting-advice": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-fee/sensecraft-cloud-fee": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-fee/sensecraft-data-platform-api-pricing": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/cloud/sensecraft-data/sensecraft-data-platform/overview": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/tutorials/dashboard": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/tutorials/data-management": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft-data-platform/tutorials/device-management": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_ai_generation": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_canvas": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_gallery": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_overview": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_rss": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/sensecraft_hmi_web": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Embedded-World-Seeed-Studio-Presentation-BeagleBone": [
     "cn",
@@ -1890,6 +1954,12 @@
     "es",
     "ja"
   ],
+  "/install_m2_coral_to_rpi5": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/firearm_detection_with_frigate_nvr_on_r2000": [
     "en",
     "es"
@@ -1905,7 +1975,13 @@
     "es",
     "ja"
   ],
-  "/install_m2_coral_to_rpi5": [
+  "/reterminal-DM-Frigate": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
+  "/reterminal_frigate": [
     "cn",
     "en",
     "es",
@@ -1964,19 +2040,7 @@
     "es",
     "ja"
   ],
-  "/reterminal-DM-Frigate": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
   "/reTerminal-DM-Yolo5": [
-    "cn",
-    "en",
-    "es",
-    "ja"
-  ],
-  "/reterminal_frigate": [
     "cn",
     "en",
     "es",
@@ -2421,8 +2485,10 @@
     "ja"
   ],
   "/reterminal_e10xx_with_arduino": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reterminal_e10xx_with_esphome": [
     "cn",
@@ -2442,12 +2508,14 @@
   "/getting_started_with_reterminal_e1001": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/getting_started_with_reterminal_e1002": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/reterminal_e10xx_firmware": [
     "cn",
@@ -3831,6 +3899,12 @@
     "en",
     "es"
   ],
+  "/recomputer_ethercat_communication": [
+    "cn",
+    "en",
+    "es",
+    "ja"
+  ],
   "/install_isaaclab": [
     "cn",
     "en",
@@ -3839,6 +3913,10 @@
   ],
   "/simulate_soarm101_by_leisaac": [
     "cn",
+    "en",
+    "es"
+  ],
+  "/training_soarm101_policy_with_isaacLab": [
     "en",
     "es"
   ],
@@ -7716,27 +7794,34 @@
     "ja"
   ],
   "/respeaker": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_i2s": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_introduction": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_getting_started": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_edge_impulse": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_gpio": [
     "cn",
@@ -7747,31 +7832,38 @@
   "/respeaker_xvf3800_xiao_home_assistant": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_mqtt_audio_stream": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_record_playback": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_rgb": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_udp_audio_stream": [
+    "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/respeaker_xvf3800_xiao_volume": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/XIAO-Kit-Courses": [
     "cn",
@@ -10573,27 +10665,32 @@
   "/solutions/jetson-crowd-tracking": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/mission_pack_features_v3": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/mission_pack_intro_v3": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/non_invasive_ct_energy_consumption": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/ha_dify_watcher_llms": [
     "cn",
     "en",
-    "es"
+    "es",
+    "ja"
   ],
   "/Solutions": [
     "en",

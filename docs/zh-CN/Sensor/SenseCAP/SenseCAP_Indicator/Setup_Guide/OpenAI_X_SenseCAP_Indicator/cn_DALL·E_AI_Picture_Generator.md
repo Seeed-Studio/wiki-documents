@@ -12,7 +12,7 @@ last_update:
 ---
 # **SenseCAP Indicator X DALL·E**
 
-DALL-E 是由 OpenAI 开发的先进 AI 模型，能够根据文本描述生成图像。DALL-E 已经在包含图像及其对应文本描述的大规模数据集上进行了训练。
+DALL-E 是由 OpenAI 开发的先进 AI 模型，能够根据文本描述生成图像。DALL-E 在包含图像及其对应文本描述的大规模数据集上进行了训练。
 
 给定一个文本提示，DALL-E 可以生成与描述匹配的独特图像。该模型展现了令人印象深刻的能力，例如生成现实世界中不存在的虚构生物、物体和场景的图像。DALL-E 在艺术、设计和广告等各个领域都有潜在的应用。
 
@@ -31,7 +31,7 @@ DALL-E 是由 OpenAI 开发的先进 AI 模型，能够根据文本描述生成�
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/dall2.png"/></div>
 
 
-除了演示的功能外，SenseCAP 还提供完全开源的代码和详细的教程，点击[这里](/cn/SenseCAP_Indicator_ChatGPT)了解更多详情。
+除了演示的功能外，SenseCAP 还提供完全开源的代码和详细的教程，点击[这里](/SenseCAP_Indicator_ChatGPT)了解更多详情。
 
 
 # **常见问题**

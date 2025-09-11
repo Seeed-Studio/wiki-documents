@@ -51,7 +51,7 @@ nRF51822は、ULPワイヤレスアプリケーション向けの強力なマル
 ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Get_started_with_mbed.png)
 
 1.  [このリンク](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE)をクリックして**mbedにログインまたはサインアップ**します。
-2.  mbed\_blinkyプログラムをインポートします。
+2.  mbed_blinkyプログラムをインポートします。
 3.  上部ツールバーの**Compile**アイコンをクリックしてプログラムをコンパイルし、コンパイルされたhexファイルをダウンロードします。
 4.  ダウンロードしたhexファイルをMBEDディスクにドラッグ＆ドロップします。
 
@@ -90,7 +90,7 @@ nRF51822は、ULPワイヤレスアプリケーション向けの強力なマル
 
     *  実行方法
 
-        1.  [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)をダウンロードします。
+        1.  [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)をダウンロードします。
         2.  hexファイルをArch BLEのMBEDディスクにコピーします。
         3.  [Color Pixels Androidアプリ](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)をダウンロードします。
 
@@ -136,7 +136,7 @@ Arch BLEの最新ファームウェアバージョンは、2015年3月2日にビ
 -   Arch BLEのボタンを押しながら電源を入れます。
 -   CRP DISABLDディスクが表示されます。
     -   Windowsの場合、上記のファームウェアでfirmware.binを置き換えます。
-    -   Linux/Macの場合、以下のコマンドを使用します： **dd if=\{new\_firmware.bin\} of=\{firmware.bin\} conv=notrunc**
+    -   Linux/Macの場合、以下のコマンドを使用します： **dd if=\{new_firmware.bin\} of=\{firmware.bin\} conv=notrunc**
 
 ## 回路図オンラインビューア
 

@@ -12,29 +12,29 @@ last_update:
 
 # Watcher 功能模块开发指南
 
-建议您首先阅读 [Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework) 以了解功能模块的工作原理。
+建议您首先阅读 [Watcher 软件框架](https://wiki.seeedstudio.com/watcher_software_framework) 以了解功能模块的工作原理。
 
-在本文档中，我们将展示如何开发新功能模块的分步指南。我们将以 `UART 报警` 模块为例。
+在本文档中，我们将展示如何开发新功能模块的分步指南。我们将以 `UART Alarm` 模块为例。
 
 ## 1. 安装和首次构建
 
-如果您跳过了 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/cn/build_watcher_development_environment) 中的步骤，请先完成这些步骤。
+如果您跳过了 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/build_watcher_development_environment) 中的步骤，请先完成这些步骤。
 
 ```shell
-# 您在 PROJ_ROOT_DIR/examples/factory_firmware/ 目录下
+# you're in PROJ_ROOT_DIR/examples/factory_firmware/
 cd main/task_flow_module
 ```
 
 ## 2. 选择合适的模板
 
-在 [Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework) 中，我们介绍了现有的功能模块（在以下文档中简称为 **FM**）及其用途。当我们开发新的 FM 时，最好从最接近的现有 FM 开始作为参考。在本教程中，我们将开发一个报警器 FM，所以我们选择其中一个报警器 FM，`本地报警器` 是最简单的，我们将使用它。
+在[Watcher软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中，我们介绍了现有的功能模块（在后续文档中简称为**FM**）以及它们的用途。当我们开发新的FM时，最好从最接近的现有FM开始作为参考。在本教程中，我们将开发一个报警器FM，因此我们选择其中一个报警器FM，`local alarmer`是最简单的一个，我们将使用它。
 
 ```shell
 cp tf_module_local_alarm.h tf_module_uart_alarm.h
 cp tf_module_local_alarm.c tf_module_uart_alarm.c
 ```
 
-文件名称并不重要，任何 `.h` 和 `.c` 文件都会被构建系统扫描并纳入编译代码树。但仍建议使用有意义的文件名。
+文件名称并不重要，构建系统会扫描任何 `.h` 和 `.c` 文件并将其纳入编译代码树。但仍然建议使用有意义的文件名。
 
 ## 3. 实现注册
 
@@ -47,15 +47,15 @@ esp_err_t tf_module_register(const char *p_name,
                                 tf_module_mgmt_t *mgmt_handle);
 ```
 
-前三个参数是您的 FM 的名称、描述和版本，它们目前在内部使用，例如从注册表中匹配 FM、日志打印等，但将来当 FM 与本地服务通信时会被使用。
+前三个参数是您的 FM 的名称、描述和版本，它们目前在内部使用，例如从注册表匹配 FM、日志打印等，但将来当 FM 与本地服务通信时会被使用。
 
 ```cpp
-// 在 tf_module_uart_alarm.h 中
+// in tf_module_uart_alarm.h
 #define TF_MODULE_UART_ALARM_NAME "uart alarm"
 #define TF_MODULE_UART_ALARM_VERSION "1.0.0"
 #define TF_MODULE_UART_ALARM_DESC "uart alarm function module"
 
-// 在 tf_module_uart_alarm.c 中
+// in tf_module_uart_alarm.c
 esp_err_t tf_module_uart_alarm_register(void)
 {
     return tf_module_register(TF_MODULE_UART_ALARM_NAME,
@@ -65,17 +65,17 @@ esp_err_t tf_module_uart_alarm_register(void)
 }
 ```
 
-第四个参数是一个结构体，包含管理此 FM 生命周期所需的 API 函数。
+The fourth parameter is a struct that contains necessary API functions to manage the life cycle of this FM.
 
 ```cpp
-// 在 tf_module.h 中
+// in tf_module.h
 typedef struct tf_module_mgmt {
     tf_module_t *(*tf_module_instance)(void);
     void (*tf_module_destroy)(tf_module_t *p_module);
 }tf_module_mgmt_t;
 ```
 
-`tf_module_instance` 是一个函数，当引擎初始化任务流中指定的所有 FM 时，TFE 会调用该函数，基本上这意味着引擎刚刚收到任务流创建请求并正在启动流。`tf_module_destroy` 是当 TFE 停止流时会调用的函数。
+`tf_module_instance` 是一个函数，当引擎初始化任务流中指定的所有 FM 时，TFE 会调用该函数，基本上这意味着引擎刚刚收到任务流创建请求并正在启动流程。`tf_module_destroy` 是一个函数，当 TFE 停止流程时会被调用。
 
 ### 3.1 实例
 
@@ -91,7 +91,7 @@ tf_module_t *tf_module_uart_alarm_instance(void)
     p_module_ins->module_base.ops = &__g_module_ops;
 
     if (atomic_fetch_add(&g_ins_cnt, 1) == 0) {
-        // 第一次实例化，我们应该初始化硬件
+        // the 1st time instance, we should init the hardware
         esp_err_t ret;
         uart_config_t uart_config = {
             .baud_rate = 115200,
@@ -114,20 +114,20 @@ err:
 }
 ```
 
-以上是我们对 `instance` 函数的实现。它为结构体 `tf_module_uart_alarm_t` 分配内存，我们定义该结构体用于保存此 FM 的参数，就像 C++ 类的成员一样。在结构体 `tf_module_uart_alarm_t` 中，第一个字段很重要 - `tf_module_t module_base`，从 C++ 编程的角度来看，`tf_module_t` 是所有 FM 的父类。`instance` 函数只是给 TFE 一个指向 `tf_module_t` 结构体的指针。
+以上是我们对 `instance` 函数的实现。它为结构体 `tf_module_uart_alarm_t` 分配内存，我们定义这个结构体来保存此 FM 的参数，就像 C++ 类的成员一样。在结构体 `tf_module_uart_alarm_t` 中，第一个字段很重要 - `tf_module_t module_base`，从 C++ 编程的角度来看，`tf_module_t` 是所有 FM 的父类。`instance` 函数只是给 TFE 一个指向 `tf_module_t` 结构体的指针。
 
 ```cpp
-// 在 tf_module_uart_alarm.h 中
+// in tf_module_uart_alarm.h
 typedef struct {
     tf_module_t module_base;
-    int input_evt_id;           //这也可以是模块实例 id
-    int output_format;          //默认 0，见上面的注释
-    bool include_big_image;     //默认：false
-    bool include_small_image;   //默认：false
-    bool include_boxes;         //默认：false，即将推出
+    int input_evt_id;           //this can also be the module instance id
+    int output_format;          //default 0, see comment above
+    bool include_big_image;     //default: false
+    bool include_small_image;   //default: false
+    bool include_boxes;         //default: false, coming soon
 } tf_module_uart_alarm_t;
 
-// 在 tf_module_uart_alarm.c 中
+// in tf_module_uart_alarm.c
 tf_module_t *tf_module_uart_alarm_instance(void)
 {
     ...
@@ -136,17 +136,18 @@ tf_module_t *tf_module_uart_alarm_instance(void)
 }
 ```
 
-必须分配 `tf_module_t` 的两个成员。
+Two members of `tf_module_t` must be assigned.
 
 ```cpp
-// 在 tf_module_uart_alarm.c 中
+// in tf_module_uart_alarm.c
 tf_module_t *tf_module_uart_alarm_instance(void)
 {
     ...
     p_module_ins->module_base.p_module = p_module_ins;
     p_module_ins->module_base.ops = &__g_module_ops;
 ```
-`p_module` - 一个指向 FM 实例本身的指针，这用于 `destroy` 函数获取实例的句柄并释放其内存。
+
+`p_module` - 一个指向 FM 实例本身的指针，用于 `destroy` 函数获取实例的句柄并释放其内存。
 `ops` - 一个包含 TFE 操作 FM 的 API 函数的结构体，我们稍后会讨论这个。
 
 实例函数的其余部分是初始化硬件和与您的 FM 逻辑相关的内容。
@@ -173,7 +174,7 @@ if (atomic_fetch_add(&g_ins_cnt, 1) == 0) {
     }
 ```
 
-### 3.2 销毁
+### 3.2 Destroy
 
 ```cpp
 void tf_module_uart_alarm_destroy(tf_module_t *p_module_base)
@@ -214,7 +215,7 @@ struct tf_module_ops
 
 `msgs_sub_set` - 通过向上游 FM 的事件 ID 注册事件处理程序来创建与上游 FM 的连接。输入参数 `evt_id` 由 TFE 通过从任务流 json 中提取来准备。第一个参数 `p_module` 是指向 FM 实例本身的指针。
 
-`msgs_pub_set` - 存储与下游 FM 的连接，如果此 FM 没有输出，我们可以将此函数留空。第一个参数 `p_module` 是指向 FM 实例本身的指针。第二个参数 `output_index` 是端口号，例如此 FM 有 2 个输出，`msgs_pub_set` 将被调用两次，`output_index` 分别为 0 和 1。第三个参数 `p_evt_id` 是指向数组的指针，该数组保存此端口上所有下游 FM 的事件 ID，数组的大小是 `num`，这是最后一个参数。
+`msgs_pub_set` - 存储与下游 FM 的连接，如果此 FM 没有输出，我们可以将此函数留空。第一个参数 `p_module` 是指向 FM 实例本身的指针。第二个参数 `output_index` 是端口号，例如此 FM 有 2 个输出，`msgs_pub_set` 将被调用两次，`output_index` 依次为 0 和 1。第三个参数 `p_evt_id` 是指向数组的指针，该数组保存此端口上所有下游 FM 的事件 ID，数组的大小是 `num`，这是最后一个参数。
 
 `start` 和 `stop` - 就是它们的字面意思。它们都接受 `p_module` 作为参数，这是指向 FM 实例本身的指针。
 
@@ -339,7 +340,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-在上述任务流程中，`uart alarmer` 的 `params` 为
+In the above task flow, the `params` for `uart alarmer` is
 
 ```json
 {
@@ -362,13 +363,13 @@ static int __msgs_sub_set(void *p_module, int evt_id)
 }
 ```
 
-记录上游 FM 的事件 ID 以供将来使用，并为该事件注册一个事件处理程序。
+记录上游 FM 的事件 ID 以备将来使用，并为该事件注册一个事件处理程序。
 
 ### 4.3 事件处理程序
 
-在 [Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework) 中我们了解到数据流由事件循环驱动。基本上，FM 会从其事件处理程序接收数据，然后消费数据，进行计算，得到一些结果。最后需要将结果发布到事件循环中 - 目标是对此 FM 数据感兴趣的下游 FM。
+在[Watcher 软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中我们了解到数据流是由事件循环驱动的。基本上，FM 会从其事件处理程序接收数据，然后消费数据，进行计算，得到一些结果。最后需要将结果发布到事件循环中 - 目标是对该 FM 数据感兴趣的下游 FM。
 
-在这个 `uart alarmer` 示例中，我们从输出数据类型为 `TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE_AUDIO_TEXT` 的报警触发器 FM 消费数据。由于 uart 数据准备很简单，我们在事件循环处理程序中完成所有数据生成。不过这不是推荐的做法，如果您的数据处理耗时或 IO 密集。在这种情况下，您需要创建一个工作任务（线程）来进行后台处理。
+在这个 `uart alarmer` 示例中，我们从一个报警触发 FM 消费数据，该 FM 的输出数据类型为 `TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE_AUDIO_TEXT`。由于 uart 数据准备很简单，我们在事件循环处理程序中完成所有数据生成。不过这并不推荐，如果您的数据处理耗时或 IO 密集。在这种情况下，您需要创建一个工作任务（线程）来进行后台处理。
 
 我们根据输入参数 `output_format` 准备二进制输出缓冲区或 JSON 字符串。最后我们将这些数据写入 UART。我们的 FM 只有一个输出，即硬件，而不是另一个 FM，因此我们的 `msgs_pub_set` 是虚拟的。最后，我们需要释放来自事件循环的数据，原因将在下一节中解释。
 
@@ -403,9 +404,9 @@ static int __msgs_pub_set(void *p_module, int output_index, int *p_evt_id, int n
 }
 ```
 
-这并不复杂，只是将事件 ID 存储到 FM 实例的结构中。这是您需要在 FM 的类型结构中添加成员字段的地方，在这种情况下是 `tf_module_ai_camera_t`。
+这并不复杂，只需将事件 ID 存储到 FM 实例的结构中。这就是你需要在 FM 的类型结构中添加成员字段的地方，在这种情况下是 `tf_module_ai_camera_t`。
 
-我们什么时候使用这些事件 ID？在数据生成并通过时间门控的时刻。在 `ai camera` 的示例中，数据来源于运行本地 AI 推理的 Himax SoC 的 SPI 输出，并通过几个条件门，如果所有条件都满足，数据就到达需要发布到事件循环的时刻。
+我们什么时候会使用这些事件 ID？在数据生成并通过时间门控的时刻。在 `ai camera` 的例子中，数据来源于运行本地 AI 推理的 Himax SoC 的 SPI 输出，并通过几个条件门，如果所有条件都满足，数据就到达需要发布到事件循环的时刻。
 
 ```cpp
 // in tf_module_ai_camera.c
@@ -426,66 +427,67 @@ static int __msgs_pub_set(void *p_module, int output_index, int *p_evt_id, int n
 ...
 ```
 
-我们需要发布给我们输出的每个订阅者。如您所见，我们为每个订阅者制作数据副本。
+我们需要向输出的每个订阅者发布数据。如您所见，我们为每个订阅者制作数据的副本。
 
 **内存分配和释放规则**
+
 - 数据制造者 FM 为每个订阅者进行内存分配
 - 数据消费者 FM 在数据使用完毕后进行内存释放。
 
 ### 4.5 启动和停止
 
-这些是 FM 的运行时控制，以支持将来的流程暂停/恢复。目前您可以在 FM 实例化后让其运行，但我们仍建议将逻辑分为 FM 的生命周期管理和 FM 的运行时控制。
+这些是 FM 的运行时控制，用于支持未来的流程暂停/恢复功能。目前您可以在 FM 实例化后让其运行，但我们仍建议将逻辑分为 FM 的生命周期管理和 FM 的运行时控制。
 
 ## 5. 测试
 
 现在我们有了 `uart alarmer` FM，在提交拉取请求之前，我们如何在本地测试它。
 
-我们实现了一个控制台命令来在本地发起任务流。
+我们实现了一个控制台命令来在本地发起任务流程。
 
 ```shell
 SenseCAP> help taskflow
 taskflow  [-iej] [-f <string>]
-  通过 json 字符串或 SD 文件导入任务流，例如：taskflow -i -f "test.json"。
+  import taskflow by json string or SD file, eg:taskflow -i -f "test.json".
 
-导出任务流到标准输出或 SD 文件，例如：taskflow -e -f "test.json"
-  -i, --import  导入任务流
-  -e, --export  导出任务流
-  -f, --file=<string>  文件路径，通过 SD 导入或导出任务流 json 字符串，例如：test.json
-    -j, --json  通过标准输入导入任务流 json 字符串
+export taskflow to stdout or SD file, eg: taskflow -e -f "test.json"
+  -i, --import  import taskflow
+  -e, --export  export taskflow
+  -f, --file=<string>  File path, import or export taskflow json string by SD, eg: test.json
+    -j, --json  import taskflow json string by stdin
 ```
 
-请参考 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/cn/build_watcher_development_environment) - `5. 监控日志输出` 来获取控制台。准备一个移除了空格和空白字符的任务流，并使用以下命令发起任务流：
+请参考 [构建 Watcher 开发环境](https://wiki.seeedstudio.com/build_watcher_development_environment) - `5. 监控日志输出` 来获取控制台。准备一个去除空格和空白字符的任务流，并使用以下方式发布任务流：
 
 ```shell
 taskflow -i -j<enter>
 Please input taskflow json:
-#<在此粘贴您的任务流 json，例如>
+#<paste your task flow json here, for an example>
 {"tlid":3,"ctd":3,"tn":"Local Human Detection","type":0,"task_flow":[{"id":1,"type":"ai camera","index":0,"version":"1.0.0","params":{"model_type":1,"modes":0,"model":{"arguments":{"iou":45,"conf":50}},"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"silence_duration":5},"output_type":0,"shutter":0},"wires":[[2]]},{"id":2,"type":"alarm trigger","index":1,"version":"1.0.0","params":{"text":"human detected","audio":""},"wires":[[3]]},{"id":3,"type":"uart alarm","index":2,"version":"1.0.0","params":{"output_format":1},"wires":[]}]}
 ```
 
-如何组成任务流？在 [Watcher 软件框架](https://wiki.seeedstudio.com/cn/watcher_software_framework) 中，我们介绍了每个 FM 及其参数。组成任务流很像在 FM 块之间连线，就像 Node-RED 一样。
+如何组成任务流？在[Watcher软件框架](https://wiki.seeedstudio.com/watcher_software_framework)中，我们介绍了每个FM及其参数。组成任务流很像在FM块之间连接线路，就像Node-RED一样。
 
-在我们有用于组成任务流的 GUI 之前，我们可以使用导出命令来收集示例。只需使用移动应用程序发起一个启用了本地报警功能（RGB 灯）的流，当流运行时，使用以下命令导出任务流：
+在我们有用于组成任务流的GUI之前，我们可以使用导出命令来收集示例。只需使用移动应用程序发出一个启用了本地报警功能（RGB灯）的流，当流运行时，使用以下命令导出任务流：
 
 ```shell
 taskflow -e
 ```
 
-此命令将把运行中的任务流导出到控制台。如果任务流超长，其输出可能会被其他日志中断，在这种情况下我们需要一张 TF 卡。将 TF 卡格式化为 FAT/exFAT 文件系统，插入 Watcher。现在我们可以将运行中的任务流导出到 TF 卡：
+这个命令将把正在运行的任务流导出到控制台。如果任务流非常长，其输出可能会被其他日志中断，在这种情况下我们需要一张TF卡。将TF卡格式化为FAT/exFAT文件系统，将其插入Watcher。现在我们可以将正在运行的任务流导出到TF卡中，
 
 ```shell
 taskflow -e -f tf1.json
-# 仅支持根目录中的文件名
-# 请不要在路径中指定前导目录，该命令无法创建目录
+# only support file name in the root dir
+# please don't specify leading dir in the path, the command can't create dir
 ```
 
-现在您有了示例，修改其中一个报警器 FM（通常是最后一个 FM），将其替换为您的 `uart alarmer` FM，向您的 FM 的 JSON 对象添加一些参数，使用 JSON 编辑器移除空白字符，并使用上面的 `taskflow -i -j` 命令导入它。
+现在你有了示例，修改其中一个报警器 FM（通常是最后一个 FM），将其替换为你的 `uart alarmer` FM，向你的 FM 的 JSON 对象添加一些参数，使用 JSON 编辑器删除空白字符，然后使用上面的 `taskflow -i -j` 命令导入它。
 
-就是这样，享受探索的乐趣。
+就是这样，享受探索的乐趣吧。
 
 ## 附录 - 更多任务流示例
 
-这里我们提供了一些您可以开始使用的任务流示例。
+这里我们提供了一些更多的任务流示例，你可以从这些开始。
 
 ```json
 {"tlid":3,"ctd":3,"tn":"Local Human Detection","type":0,"task_flow":[{"id":1,"type":"ai camera","index":0,"version":"1.0.0","params":{"model_type":1,"modes":0,"model":{"arguments":{"iou":45,"conf":50}},"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"silence_duration":5},"output_type":0,"shutter":0},"wires":[[2]]},{"id":2,"type":"alarm trigger","index":1,"version":"1.0.0","params":{"text":"human detected","audio":""},"wires":[[3,4]]},{"id":3,"type":"local alarm","index":2,"version":"1.0.0","params":{"sound":1,"rgb":1,"img":0,"text":0,"duration":1},"wires":[]},{"id":4,"type":"sensecraft alarm","index":3,"version":"1.0.0","params":{"silence_duration":30},"wires":[]}]}
@@ -501,7 +503,7 @@ taskflow -e -f tf1.json
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

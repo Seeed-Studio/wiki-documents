@@ -1,47 +1,45 @@
 ---
-description: Wio Tracker 1110 のパラメータを設定する
+description: Wio_Tracker_1110のパラメータを設定する
 title: ツールチェーンのセットアップ
 keywords:
-- トラッカー
+- Tracker
 - Wio
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/setup_toolchain_for_wio_tracker
 last_update:
-  date: 05/15/2025
+  date: 9/19/2023
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-Wio Tracker 1110 開発ボードは Arduino を活用してコーディング体験を向上させます。開発を始める前に、まずツールチェーンをセットアップする必要があります。
+
+Wio Tracker 1110 Dev Boardは、コーディング体験を向上させるためにArduinoを活用しています。開発を開始する前に、まずツールチェーンをセットアップする必要があります。
 
 ### ツールチェーンのセットアップ
 
-#### Arduino IDE のインストール
+#### Arduino IDEのインストール
 
-Arduino IDE（統合開発環境）はオープンソースのソフトウェアで、主にコードの記述、コンパイル、アップロードをほぼすべての Arduino モジュールに対して行うために使用されます。これは、MAC、Windows、Linux などすべてのオペレーティングシステムで利用可能で、Java プラットフォーム上で動作します。デバッグ、編集、コンパイルに重要な役割を果たす組み込み関数とコマンドが付属しています。
+Arduino IDE（統合開発環境）はオープンソースソフトウェアで、主にほぼすべてのArduinoモジュールへのコードの記述、コンパイル、アップロードに使用されます。
+MAC、Windows、Linuxなど、すべてのオペレーティングシステムで利用可能で、Javaプラットフォーム上で動作し、デバッグ、編集、コードのコンパイルにおいて重要な役割を果たす組み込み関数とコマンドが含まれています。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-wio.png" alt="pir" width={800} height="auto" /></p>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Arduino IDE ダウンロード </font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Arduino IDEダウンロード </font></span></strong>
     </a>
 </div>
 
 :::tip
-Arduino を初めて使用する場合は、[Arduino の始め方](https://wiki.seeedstudio.com/ja/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
+Arduinoを初めて使用する場合は、[Getting Started with Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)を参照することを強くお勧めします。
 :::
 
-#### Seeed ボードの追加
+#### Seeedボードの追加
 
-`Arduino IDE` -> `Preferences` に移動します。
+`Arduino IDE` -> `環境設定`に移動します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/arduino-add.png" alt="pir" width={800} height="auto" /></p>
 
-以下の URL を `Additional boards manager URLs` にコピーし、`OK` をクリックします。
+このURLを`追加のボードマネージャのURL`にコピーし、`OK`をクリックします。
 
 ```cpp
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
@@ -49,37 +47,37 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/copy-urls.png" alt="pir" width={800} height="auto" /></p>
 
-`Board Manager` をクリックします。  
-`Seeed nRF52 Boards` を検索してインストールします。
+`ボードマネージャ`をクリックします。
+`Seeed nRF52 Boards`を検索してインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/install-boa.png" alt="pir" width={800} height="auto" /></p>
 
-次に、ボードとポートを選択する必要があります。  
-`Seeed Wio Tracker 1110` を検索して選択し、ポートを選択して `OK` をクリックします。
+次に、ボードとポートを選択する必要があります。<br/>
+`Seeed Wio Tracker 1110`を検索して選択し、ポートを選択して`OK`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port.png" alt="pir" width={800} height="auto" /></p>
 
 :::info
-ポートは「Serial Port(USB)」のように表示されるはずです。
+ポートは'Serial Port(USB)'のようになっているはずです
 :::
 
-#### Wio Tracker 1110 の例
+#### Wio Tracker 1110の例
 
-SenseCAP は、ユーザーが迅速に開始できるように `Wio Tracker 1110 Examples` を提供しています。
+SenseCAPは、ユーザーが迅速に開始できるように`Wio Tracker 1110 Examples`を提供しています。
 
-`File` タブに移動し、`Example` -> `Wio Tracker 1110 Examples` を選択し、必要なものを選びます。
+`ファイル`タブに移動し、`例`-> `Wio Tracker 1110 Examples`を選択し、必要なものを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/example.png" alt="pir" width={800} height="auto" /></p>
 
 ### ライブラリの追加
 
-Arduino IDE では、`Library Manager` で例えば `Seeed_Arduino_AHT20` を検索してインストールできます。
+Arduino IDEでは、`ライブラリマネージャ`で検索できます。例えば`Seeed_Arduino_AHT20`を検索してインストールします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/install-lib.png" alt="pir" width={800} height="auto" /></p>
 <details>
 <summary>オフラインインストールをプレビューするにはクリック</summary>
 
-オフラインでインストールするには、GitHub からリポジトリの ZIP をダウンロードし、**Sketch** -> **Include Library** -> **Add .ZIP Library** に移動して、ダウンロードしたライブラリを選択します。
+*オフライン*でインストールするには、GitHubから**リポジトリのzipをダウンロード**し、**スケッチ** -> **ライブラリをインクルード** -> **.ZIPライブラリを追加**に移動して、ダウンロードしたライブラリを選択します。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_32.png"/></div>
 

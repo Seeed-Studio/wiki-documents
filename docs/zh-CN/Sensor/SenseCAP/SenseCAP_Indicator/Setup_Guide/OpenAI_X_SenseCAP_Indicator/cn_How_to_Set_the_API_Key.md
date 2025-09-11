@@ -65,7 +65,7 @@ openai_api -k {sk-your apikey}
 您将看到日志显示："`openai_api_key read successful`"，然后您就完成了设置。现在开始享受您的 AI 之旅吧！
 
 # **技术支持**
-**需要 SenseCAP Indicator 的帮助？我们在这里为您提供支持！**
+**需要 SenseCAP Indicator 的帮助？我们随时为您提供协助！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

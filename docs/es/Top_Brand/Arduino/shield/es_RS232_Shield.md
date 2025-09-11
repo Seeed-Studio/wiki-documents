@@ -39,7 +39,7 @@ Primero, podemos probarlo por computadora.
 ### Instalación de Hardware
 
 1. Seeeduino v3.0, Cable Mini USB, RS232 Shield, Cable RS232 a USB.
-2. Haga las conexiones como se muestra abajo. Los puentes pueden usarse para seleccionar el puerto serie por software desde los pines digitales. Puede configurarlos a D7(232\_TX) y D6(232\_RX), y modificar el código a "*SoftwareSerial mySerial(7, 6); // 232\_TX, 232\_RX*"
+2. Haga las conexiones como se muestra abajo. Los puentes pueden usarse para seleccionar el puerto serie por software desde los pines digitales. Puede configurarlos a D7(232_TX) y D6(232_RX), y modificar el código a "*SoftwareSerial mySerial(7, 6); // 232_TX, 232_RX*"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_usage.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -96,7 +96,7 @@ Recursos
 --------
 
 -   [Archivo eagle de RS232 Shield](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.0_Eagle.zip)
--   [RS232\_Shield\_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
+-   [RS232_Shield_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
 -   [Hoja de datos MAX232D.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/MAX232D.pdf)
 
 

@@ -1,37 +1,34 @@
 ---
-description: reComputerでRivaとLlama2をデプロイする
-title: Llama-Factoryでのファインチューニング
+description: Jetson上でRivaとLlama2をデプロイする
+title: Llama-Factoryでファインチューニング
 keywords:
 - reComputer
 - LLM
-- チャットボット
-- ファインチューニング
+- Chatbot
+- Finetune
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Finetune_LLM_on_Jetson
 last_update:
-  date: 05/15/2025
+  date: 07/03/2024
   author: Youjiang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# カスタムローカルLLM: JetsonでLlama-Factoryを使用してLLMをファインチューニング
+
+# カスタムローカルLLM：JetsonでLlama-FactoryによるLLMファインチューニング
 
 
 ## はじめに
 
-🚀JetsonでLlama-Factoryを使用してLLMをファインチューニング！これで、あなたのニーズに合わせたカスタムプライベートローカルLLMを作成できます。
+🚀JetsonでLlama-FactoryによるLLMファインチューニング！これで要件に合わせてカスタムプライベートローカルLLMを調整できます。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run.gif" />
 </div>
 
-Llama-Factoryは、一般的な大規模言語モデル、データセット、ファインチューニング方法をサポートする非常に便利なファインチューニングツールを提供します。このプラットフォームを使用すると、簡単にプライベートな大規模言語モデルをカスタマイズできます。
+Llama-Factoryは、一般的な大規模言語モデル、データセット、ファインチューニング手法をサポートする非常に便利な大規模言語モデルファインチューニングツールを提供します。このプラットフォームを使用することで、プライベート大規模言語モデルを簡単にカスタマイズできます。
 
-このWikiでは、Nvidia JetsonにLlama-Factoryをデプロイし、中国語のQ&Aをサポートする大規模言語モデルをトレーニングする方法を学びます。
+このwikiでは、Nvidia JetsonにLlama-Factoryをデプロイし、Llama-Factoryを使用して中国語Q&Aをサポートする大規模言語モデルを訓練する方法を学びます。
 
 
 ## 前提条件
@@ -40,7 +37,7 @@ Llama-Factoryは、一般的な大規模言語モデル、データセット、�
 - モニター、マウス、キーボード、ネットワーク。（必須ではありません）
 
 :::note
-このWikiの実現可能性は、reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)および[AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html)開発キットで既にテスト済みです。
+このwikiの実現可能性は、reComputer [Orin NX 16GB](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)と[AGX Orin 64GB](https://www.seeedstudio.com/NVIDIArJetson-AGX-Orintm-64GB-Developer-Kit-p-5641.html) Developer Kitですでにテスト済みです。
 :::
 
 <div align="center">
@@ -50,11 +47,11 @@ Llama-Factoryは、一般的な大規模言語モデル、データセット、�
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html?queryID=a07376a957f072a4f755e1832fa0e544&objectID=5569&indexName=bazaar_retailer_products" target="_blank">
-      <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+      <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手 🖱️</font></span></strong>
     </a>
 </div>
 
-## 始める前に
+## はじめに
 
 ### ハードウェア接続
 
@@ -62,22 +59,22 @@ Llama-Factoryは、一般的な大規模言語モデル、データセット、�
 2. マウス、キーボード、モニターをreComputerに接続します。
 3. reComputerの電源を入れます。
 
-<!-- GIFが必要です！ -->
+<!-- Need a GIF here! -->
 
 ### Jetson-Examplesのインストール
 
 :::note
-Seeed Studioの[jetson-examples](https://github.com/Seeed-Projects/jetson-examples)は、NVIDIA JetsonプラットフォームでビジョンAIおよび生成AIモデルをシームレスにワンラインコマンドでデプロイする方法を提供します。
+Seeed Studioの[jetson-examples](https://github.com/Seeed-Projects/jetson-examples)は、NVIDIA Jetsonプラットフォーム上でビジョンAIと生成AIモデルを実行するためのシームレスなワンラインコマンドデプロイメントを提供します。
 :::
 
-パッケージをインストールするには、Jetsonのターミナルを開いて以下を実行してください：
+パッケージをインストールするには、Jetsonでターミナルを開いて以下を実行してください：
 
 ```bash
 pip3 install jetson-examples
 sudo reboot
 ```
 
-### JetsonでLlama-Factoryをインストールして実行
+### JetsonでLlama-Factoryをインストールして実行する
 
 jetson-examplesを使用して`Llama-Factory`をワンラインでデプロイ：
 
@@ -90,22 +87,22 @@ reComputer run llama-factory
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run_llama_factory.png" />
 </div>
 
-その後、Webブラウザを開き、以下のアドレスにアクセスしてWebUIを開きます：
+その後、Webブラウザを開いてアドレスにアクセスし、WebUIを開くことができます：
 ```bash
 # http://<jetson-ip>:7860
 http://127.0.0.1:7860
 ```
 
-### トレーニングを開始
+### トレーニング開始
 
-ここでは、`alpaca_zh`データセットを使用して`Phi-1.5`モデルをファインチューニングし、中国語の会話能力を持たせます。そのため、Web UIではトレーニングの`Model name`と`Dataset`のみを設定し、その他のトレーニングパラメータはデフォルトのままにします。
+ここでは、`alpaca_zh` データセットを使用して `Phi-1.5` モデルをファインチューニングし、中国語での会話能力を持たせます。そのため、Web UI では、トレーニングの `Model name` と `Dataset` のみを設定し、その他のトレーニングパラメータはデフォルトのままにします。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/run_train.png" />
 </div>
 
-最後に、`start`ボタンをクリックしてトレーニングを開始します。
+最後に、`start` ボタンをクリックしてトレーニングを開始します。
 
 <div align="center">
     <img width={800} 
@@ -113,10 +110,10 @@ http://127.0.0.1:7860
 </div>
 
 :::note
-トレーニングプロセスは約18時間かかります。
+トレーニングプロセスには約18時間かかります。
 :::
 
-ファインチューニングが完了すると、保存ディレクトリにファインチューニングされたモデルが見つかります。
+ファインチューニングが完了すると、保存ディレクトリでファインチューニングされたモデルを見つけることができます。
 
 <div align="center">
     <img width={800} 
@@ -126,40 +123,42 @@ http://127.0.0.1:7860
 ### ファインチューニングされたモデルのテスト
 
 
-最後に、Llama-Factoryを使用してファインチューニングされたモデルをテストし、中国語の会話能力を実際に取得しているか確認します。具体的な手順は以下の通りです。
+最後に、ファインチューニングされたモデルでLlama-Factoryを使用して、実際に中国語での会話能力を獲得したかどうかをテストできます。具体的な手順は以下の通りです。
 
 
-**ステップ1.** Llama-Factory WebUIでファインチューニングされたモデルをロードします。
+**Step1.** Llama-Factory WebUIでファインチューニングされたモデルを読み込みます。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/load_model.png" />
 </div>
 
-**ステップ2.** `Input`テキストボックスに中国語のプロンプトを入力し、`Submit`ボタンをクリックして、`Chatbot`テキストボックスに表示される大規模言語モデルの出力結果を確認します。
+**Step2.** `Input` テキストボックスに中国語のプロンプトを入力し、`Submit` ボタンをクリックして、`Chatbot` テキストボックスで大規模言語モデルの出力結果を確認します。
 
 <div align="center">
     <img width={800} 
      src="https://files.seeedstudio.com/wiki/reComputer-Jetson/Llama-Factory/test_model.png" />
 </div>
 
-テスト結果から、ファインチューニングされたモデルが既に中国語で人間と会話する能力を持っていることがわかります。モデルにさらに高度な能力を持たせたい場合は、より多様なファインチューニングデータを使用してモデルをトレーニングしてみてください！
+テスト結果から、ファインチューニングされたモデルがすでに中国語で人間と会話する能力を持っていることがわかります。モデルにより高度な能力を持たせたい場合は、より多様なファインチューニングデータセットを使用してモデルをトレーニングしてみてください！
 
 
 ### デモンストレーション
 
 <div align="center">
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/OaGEn7pVve0" title="JetsonでLlama-Factoryを使用してLLMをファインチューニング" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="800" height="450" src="https://www.youtube.com/embed/OaGEn7pVve0" title="Finetune LLM by Llama-Factory on Jetson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
 
 ## 参考文献
 - [https://github.com/hiyouga/LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory)
-- [https://github.com/dusty-nv/jetson-containers](https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
+- [https://github.com/dusty-nv/jetson-containers](
+https://github.com/dusty-nv/jetson-containers/tree/cb6c847f88df221e705397a1ee98424c2e893243/packages/llm/text-generation-inference)
 - [https://github.com/Seeed-Projects/jetson-examples](https://github.com/Seeed-Projects/jetson-examples/tree/main/reComputer/scripts/llama-factory)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なるニーズやご希望に応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -30,7 +30,7 @@ last_update:
 
 ## 串行命令
 
-系统响应输入到串行监视器中的简单串行命令。按 `+` 键将音量增加一级，而按 `-` 键将降低音量。如果您按 `m` 键，输出模式将 **在耳机输出 (HPLOUT) 和线路输出 (LOP) 之间切换**。这些命令允许实时测试和调整音频输出，无需修改或重新上传代码。
+系统响应输入到串行监视器中的简单串行命令。按 `+` 键将音量增加一级，而按 `-` 键将降低音量。如果按 `m` 键，输出模式将 **在耳机输出 (HPLOUT) 和线路输出 (LOP) 之间切换**。这些命令允许实时测试和调整音频输出，无需修改或重新上传代码。
 
 ## 代码
 
@@ -38,10 +38,10 @@ last_update:
 #include <Wire.h>
 #include "AudioTools.h"
 
-// AIC3104 I2C 地址
+// AIC3104 I2C address
 #define AIC3104_ADDR 0x18
 
-// 寄存器地址
+// Register addresses
 #define AIC3104_PAGE_CTRL        0x00
 #define AIC3104_LEFT_DAC_VOLUME  0x2B
 #define AIC3104_RIGHT_DAC_VOLUME 0x2C
@@ -50,16 +50,16 @@ last_update:
 #define AIC3104_LEFT_LOP_LEVEL   0x56
 #define AIC3104_RIGHT_LOP_LEVEL  0x5D
 
-// 音频：16kHz，立体声，16位
+// Audio: 16kHz, stereo, 16-bit
 AudioInfo info(16000, 2, 16);
 SineWaveGenerator<int16_t> sineWave(32000);
 GeneratedSoundStream<int16_t> sound(sineWave);
 I2SStream out;
 StreamCopy copier(out, sound);
 
-// 音量：范围 0–17（0–8 = DAC，9–17 = 模拟增益）
+// Volume: range 0–17 (0–8 = DAC, 9–17 = analog boost)
 int volume = 8;
-bool useHPOUT = true; // true = 使用 HPLOUT，false = 使用 LOP
+bool useHPOUT = true; // true = use HPLOUT, false = use LOP
 
 void aic3104_reg_write(uint8_t reg, uint8_t val) {
   Wire.beginTransmission(AIC3104_ADDR);
@@ -72,11 +72,11 @@ void setupAIC3104() {
   Wire.begin();
   aic3104_reg_write(AIC3104_PAGE_CTRL, 0x00);
 
-  // 设置默认 0dB DAC 音量
+  // Set default 0dB DAC volume
   aic3104_reg_write(AIC3104_LEFT_DAC_VOLUME, 0x00);
   aic3104_reg_write(AIC3104_RIGHT_DAC_VOLUME, 0x00);
 
-  // 设置输出为 0dB，未静音，已上电
+  // Set output to 0dB, unmuted, powered up
   aic3104_reg_write(AIC3104_HPLOUT_LEVEL, 0x0D);
   aic3104_reg_write(AIC3104_HPROUT_LEVEL, 0x0D);
   aic3104_reg_write(AIC3104_LEFT_LOP_LEVEL, 0x0B);
@@ -88,24 +88,24 @@ void setVolume(int vol) {
   volume = vol;
 
   if (vol <= 8) {
-    // DAC 衰减
-    uint8_t dacVal = vol * 9; // 0dB 到 -72dB
+    // DAC attenuation
+    uint8_t dacVal = vol * 9; // 0dB to -72dB
     aic3104_reg_write(AIC3104_LEFT_DAC_VOLUME, dacVal);
     aic3104_reg_write(AIC3104_RIGHT_DAC_VOLUME, dacVal);
 
-    // 输出电平固定为 0dB
+    // Output level fixed to 0dB
     aic3104_reg_write(AIC3104_HPLOUT_LEVEL, 0x0D);
     aic3104_reg_write(AIC3104_HPROUT_LEVEL, 0x0D);
     aic3104_reg_write(AIC3104_LEFT_LOP_LEVEL, 0x0B);
     aic3104_reg_write(AIC3104_RIGHT_LOP_LEVEL, 0x0B);
   } else {
-    // DAC 设为 0dB
+    // DAC at 0dB
     aic3104_reg_write(AIC3104_LEFT_DAC_VOLUME, 0x00);
     aic3104_reg_write(AIC3104_RIGHT_DAC_VOLUME, 0x00);
 
-    // 通过 HPLOUT 或 LOP 增强输出增益
-    uint8_t gain = (vol - 8); // 从 +1 到 +9 dB
-    uint8_t outVal = (gain << 4) | 0x0B; // 设置增益和电源/静音位
+    // Boost output gain via HPLOUT or LOP
+    uint8_t gain = (vol - 8); // from +1 to +9 dB
+    uint8_t outVal = (gain << 4) | 0x0B; // Set gain and power/mute bits
 
     if (useHPOUT) {
       aic3104_reg_write(AIC3104_HPLOUT_LEVEL, outVal);
@@ -116,8 +116,8 @@ void setVolume(int vol) {
     }
   }
 
-  // 调试信息
-  Serial.print("音量设置为 ");
+  // Debug info
+  Serial.print("Volume set to ");
   Serial.print(volume);
   Serial.print(" (");
   if (vol <= 8) Serial.print("-" + String(volume * 1) + " dB)");
@@ -140,7 +140,7 @@ void setup() {
   config.is_master = true;
 
   out.begin(config);
-  sineWave.begin(info, N_A4); // 440Hz 音调
+  sineWave.begin(info, N_A4); // 440Hz tone
 }
 
 void loop() {
@@ -156,8 +156,8 @@ void loop() {
     } else if (c == 'm') {
       useHPOUT = !useHPOUT;
       setVolume(volume);
-      Serial.print("切换到 ");
-      Serial.println(useHPOUT ? "HPLOUT (耳机)" : "LOP (线路输出)");
+      Serial.print("Switched to ");
+      Serial.println(useHPOUT ? "HPLOUT (headphone)" : "LOP (line out)");
     }
   }
 }

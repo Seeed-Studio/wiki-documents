@@ -12,12 +12,12 @@ last_update:
 
 ## 关于 SenseCAP
 
-作为 Seeed IIoT 产品系列的首批发布产品之一，SenseCAP 专注于无线环境传感应用：智慧农业、精准农业和智慧城市等。它包括硬件产品（传感器、数据记录器和网关等）、软件服务（SenseCAP Mate 应用、SenseCAP Web 门户、开放仪表板）以及用于设备和数据管理的 API。
+作为 Seeed IIoT 产品系列的首批发布产品之一，SenseCAP 专注于无线环境传感应用：智慧农业、精准农业和智慧城市等。它包括硬件产品（传感器、数据记录器和网关等）、软件服务（SenseCAP Mate 应用、SenseCAP Web 门户、开放式仪表板）以及用于设备和数据管理的 API。
 
 ## 关于传感器探头
 
 我们的 SenseCAP 工业传感器探头系列专为承受恶劣环境而设计，如振动以及暴露于化学品和气体中，这在工业应用中很常见。我们的工业传感器系列配备了从 IP66 到 IP68 的严格 IP 等级，以确保产品在相应的恶劣环境中表现良好。
-SenseCAP 传感器探头还具有过程连接功能，确保在被测介质中的安全配合，以及传感器数据发射器，可将信号转换以适应工业仪表系统。
+SenseCAP 传感器探头还具有过程连接功能，确保在被测介质中的安全配合，以及传感器数据发射器，可转换信号以适应工业仪表系统。
 一些 MODBUS RS485 工业传感器有两个版本。主要区别在于电缆连接器。请选择最适合您需求的版本：
 （1）带有连接线的版本建议与 [SenseCAP LoRaWAN® 数据记录器](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=82d7de6ca64b8316686bdfe2c05664d2&objectID=5361&indexName=bazaar_retailer_products) 一起使用，连接到 LoRaWAN® 网络，享受低功耗和长距离通信的优势。
 （2）带有航空连接器的版本已预配置 [SenseCAP 传感器集线器 4G 数据记录器](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html?queryID=b8ef1fa7e141765c30033fc3d8eddf10&objectID=4852&indexName=bazaar_retailer_products)，具有即插即用体验，可通过 3G/4G LTE 收集各种传感器数据。
@@ -64,14 +64,14 @@ SKU [101990863](https://www.seeedstudio.com/RS485-H2S-Sensor-Connector-p-5114.ht
 
 [4] T90＜30s
 
-## SenseCAP CO2、温湿度传感器，带 RS485 & SDI-12，带防水航空连接器
+## SenseCAP CO2、温湿度传感器，带 RS485 & SDI-12，配防水航空连接器
 
 SKU [101991029](https://www.seeedstudio.com/SenseCAP-CO2-Temperature-and-Humidity-Sensor-with-RS485-SDI-12-Connector-p-5719.html)
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture9.png" alt="pir" width={600} height="auto" /></p>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture10.png" alt="pir" width={600} height="auto" /></p>
 
-[1] 传感器上电并准备好通过 Modbus 指令读取测量值所需的准备时间，在每次读取时传感器上电和断电时应注意。
+[1] 传感器上电并准备好通过 Modbus 指令读取测量值所需的准备时间，在每次读取时传感器上电和断电时应注意此参数。
 
 [2] 预热时间 = (寄存器 0x0021 值 + 3)；在预热时间前读取寄存器 0x0000 将得到 0，预热时间后读数每秒更新一次；传感器的 T90 时间为 300 秒，T60 时间为 120 秒。
 
@@ -90,7 +90,7 @@ SKU [101990881](https://www.seeedstudio.com/RS485-Temperature-and-Humidity-Senso
 
 ## 工业级土壤湿度和温度传感器 MODBUS-RTU RS485，0-2V 模拟电压 (S-Soil MT-02A)
 
-带连接线 [101990668](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html?queryID=d56c42134f064eaf1203b9292aaba7c8&objectID=4634&indexName=bazaar_retailer_products)
+带连接线 [101990668](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02-p-4634.html?queryID=d56c42134f064eaf1203b9292aaba7c8&objectID=4634&indexName=bazaar_retailer_products) 
 
 带航空连接器 [314990620](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-Sensor-S-Soil-MT-02B-p-4859.html)
 
@@ -100,7 +100,7 @@ SKU [101990881](https://www.seeedstudio.com/RS485-Temperature-and-Humidity-Senso
 
 ## 工业土壤湿度和温度和EC传感器 MODBUS-RTU RS485 (S-Soil MTEC-02A)
 
-带连接线 [101990667](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html)
+带连接线 [101990667](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02-p-4633.html) 
 
 带航空连接器 [314990621](https://www.seeedstudio.com/RS485-Soil-Moisture-Temperature-EC-Sensor-S-Soil-MTEC-02B-p-4860.html?queryID=ec8fbdf14c91f77c70bd5e0177bb9620&objectID=4860&indexName=bazaar_retailer_products)
 
@@ -206,7 +206,7 @@ SKU  [314990633](https://www.seeedstudio.com/RS485-p-5101.html?queryID=d88035b29
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture38.png" alt="pir" width={600} height="auto" /></p>
 
-## RS485 MODBUS 浊度传感器（S-DTS210-01B)
+## RS485 MODBUS 浊度传感器（S-DTS210-01B）
 
 SKU   [101990793]
 
@@ -238,7 +238,7 @@ SKU   [114992321](https://www.seeedstudio.com/Rain-Gauge-RG-15-p-4648.html)
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Sensor_Probes_Product_Catalogue/Picture46.png" alt="pir" width={600} height="auto" /></p>
 
-## 工业级漏水检测器 IP66 RS485
+## 工业级防水漏水检测器 IP66 RS485
 
 SKU   [314990618](https://www.seeedstudio.com/Water-Leak-Detector-p-4620.html?queryID=912b9a9e1f82a94433a76fb1fbd4e116&objectID=4620&indexName=bazaar_retailer_products)
 

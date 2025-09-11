@@ -1,43 +1,41 @@
 ---
-description: Frigate を reTerminal と統合する
-title: Frigate を reTerminal と統合する
+description: Frigate と reTerminal の統合
+title: Frigate と reTerminal の統合
 keywords:
   - reTerminal
-  - はじめに
+  - Getting started
   - Frigate
-  - Home Assistant
+  - Home assistant
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reterminal_frigate
 last_update:
-  date: 05/15/2025
+  date: 8/22/2023
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 ## はじめに
 
-スマート技術が私たちの日常生活にシームレスに統合される現代において、インテリジェントで安全なホームオートメーションの需要はこれまで以上に高まっています。自宅があなたのニーズを満たすだけでなく、裏庭での不審な活動を即座に検知し、警告してくれるシナリオを想像してみてください。ここで、先進的なハードウェアとオープンソースソフトウェアの組み合わせが重要な役割を果たします。本記事では、Seeed Studio reTerminal、Home Assistant OS、および Coral AI USB TPU を使用した Frigate アドオンのシナジーについて探ります。この3つの組み合わせにより、集中管理型でプライバシーを重視し、AI駆動のホームオートメーションセットアップが実現し、ライフスタイルを向上させながら安全性を確保します。この現代的なスマートライフの最前線での融合の利点と無限の可能性を一緒に探求しましょう。
+スマートテクノロジーが日常生活にシームレスに統合される現代において、インテリジェントで安全なホームオートメーションへの需要はかつてないほど高まっています。あなたの家があなたのニーズを満たすだけでなく、裏庭での不審な活動を迅速に検出し、警告してくれるシナリオを想像してみてください。ここで、先進的なハードウェアとオープンソースソフトウェアの組み合わせが中心的な役割を果たします。この記事では、Seeed Studio reTerminal、Home Assistant OS、そして Coral AI USB TPU を使用した Frigate アドオンの相乗効果について探求します。この三つ組は、ライフスタイルを向上させながら安全性を確保する、集中化された、プライバシーを重視した、AI駆動のホームオートメーションセットアップのユニークな機会を提供します。現代のスマートリビングの最前線にあるこの融合の利点と無限の可能性を掘り下げるために、私たちと一緒に参加してください。
 
 ### Frigate
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate2.png" alt="pir" width="200" height="auto"/></p>
 
-Frigate は、リアルタイムの AI 駆動型オブジェクト検出に特化した、注目すべきオープンソースのネットワークビデオレコーダー (NVR) として登場しました。Frigate の特徴的な点は、ローカルでの処理を行う点にあります。すべての計算が個人のハードウェア上で行われるため、カメラフィードが自宅の外に出ることはありません。このアプローチにより、最大限のプライバシーが保証されます。Frigate を使用することで、データを完全に管理しながら、先進的なオブジェクト認識技術を通じてセキュリティと監視を強化する強力なツールを手に入れることができます。
+Frigate は、リアルタイムAI駆動オブジェクト検出に特化した注目すべきオープンソースネットワークビデオレコーダー（NVR）として登場します。Frigate の特徴的な機能は、ローカライズされた処理にあり、すべての計算があなたの個人的なハードウェア上で行われることを保証します。このアプローチは、カメラフィードがあなたの家の境界を越えることがないため、最高のプライバシーを保証します。Frigate により、データの完全な制御を維持しながら、高度なオブジェクト認識技術を通じてセキュリティと監視を強化する強力なツールを手に入れることができます。
 
-### Home Assistant
+### Home assistant
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/HA.png" alt="pir" width="200" height="auto"/></p>
 
-Home Assistant OS は、オープンソースのホームオートメーションプラットフォームである Home Assistant を実行するために特別に設計されたオペレーティングシステムです。Home Assistant を使用すると、自宅のさまざまなスマートデバイスやサービスを制御および自動化することができます。
-Home Assistant OS は、Home Assistant を実行するための効率的で最適化された環境を提供します。スマートホームデバイスのセットアップと管理、さまざまなプロトコルやプラットフォームとの統合、自動化ルーチンの作成に必要なコンポーネントが事前にインストールされています。
+Home Assistant OS は、オープンソースのホームオートメーションプラットフォームである Home Assistant を実行するために特別に設計されたオペレーティングシステムです。Home Assistant を使用すると、家庭内のさまざまなスマートデバイスやサービスを制御し、自動化することができます。
+Home Assistant OS は、Home Assistant を実行するための合理化され最適化された環境を提供します。スマートホームデバイスのセットアップと管理、さまざまなプロトコルやプラットフォームとの統合、自動化ルーチンの作成に必要なコンポーネントがプリインストールされています。
 
 ## はじめに
-このプロジェクトを開始する前に、ここで説明されているように、ハードウェアとソフトウェアを事前に準備する必要があります。また、このプロジェクトに対応する IP カメラが必要です。対応するカメラについては、Frigate の[公式サイト](https://docs.frigate.video/frigate/hardware)をご覧ください。
+
+このプロジェクトを開始する前に、ここで説明されているように、ハードウェアとソフトウェアを事前に準備する必要があります。また、このプロジェクトをサポートするIPカメラも必要です。サポートされているカメラは、Frigate の[公式サイト](https://docs.frigate.video/frigate/hardware)で確認できます。
 
 ### ハードウェアの準備
+
 <div class="table-center">
   <table align="center">
     <tr>
@@ -51,12 +49,12 @@ Home Assistant OS は、Home Assistant を実行するための効率的で最�
       <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
           <a class="get_one_now_item" href="https://www.seeedstudio.com/Coral-USB-Accelerator-p-2899.html?queryID=852f9c8543fee2db0ee8b47f6d5dbda2&objectID=2899&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a>
       </div></td>
     </tr>
@@ -65,31 +63,32 @@ Home Assistant OS は、Home Assistant を実行するための効率的で最�
 
 :::note
 
-USB Coral アクセラレータの電力要件を考慮すると、高品質な USB 電源ハブへの投資を強くお勧めします。このハブは Coral アクセラレータのニーズを満たす十分な電力を提供し、安定した最適なパフォーマンスを確保します。
+USB Coralアクセラレータの電力要件を考慮すると、高品質なUSB電源ハブへの投資を強く推奨します。このハブはCoralアクセラレータのニーズに対応するのに十分な電力を提供し、安定した最適なパフォーマンスを保証します。
 
 :::
 
 ### ソフトウェアの準備
 
-公式ウェブサイトから最新バージョンの Raspberry Pi 64 ビット OS をインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[ガイド](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
+公式ウェブサイトから最新バージョンのRaspberry Pi 64ビットOSをインストールすることを推奨します。新しいRaspbian OSをインストールしたい場合は、この[ガイド](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
 
-## Raspberry Pi に Home Assistant Supervised OS をインストールする
+## Raspberry piにHome Assistant Supervised OSをインストール
 
-Raspberry Pi 4 に Home Assistant Supervised をインストールするプロセスは、成功するセットアップを確実にするためにいくつかの重要なステップを組み合わせた包括的な手順です。
+Raspberry Pi 4にHome Assistant Supervisedをインストールすることは、成功したセットアップを確実にするためにいくつかの重要なステップを組み合わせた包括的なプロセスです。
 
 :::note
-一部のステップでは、Wi-Fi 経由で接続している場合に接続が切れる可能性があります。LAN 接続を使用することをお勧めします。
+一部のステップでは、Wi-Fi経由で接続している場合、接続が失われる可能性があります。代わりにLAN接続を使用することを推奨します。
+
 :::
 
-### ステップ 1: システムの強化
+### ステップ1：システムの強化
 
-- **以下のコマンドを使用してシステムの更新ログを実行します:**
+- **以下のコマンドを使用してシステムアップデートログを実行することから始めます：**
 
 ```sh
 sudo apt update
 ```
 
-- **次に、以下の依存関係をインストールします:**
+- **続いて、以下の依存関係をインストールしてください：**
 
 ```sh
 sudo apt-get install \
@@ -104,13 +103,13 @@ dbus \
 systemd-journal-remote -y
 ```
 
-- **壊れたインストールを修正します**
+- **破損したインストールを修復**
 
 ```sh
 sudo apt --fix-broken install
 ```
 
-- **reTerminal を再起動します**
+- **reTerminalを再起動する**
 
 ```sh
 sudo reboot
@@ -118,167 +117,174 @@ sudo reboot
 
 ### ステップ 2: Docker の統合
 
-Docker のインストールは重要です。Portainer をインストールしないようにしてください。これは全体のインストールプロセスに悪影響を及ぼす可能性があります。以下のコマンドを実行してください:
+Docker のインストールは重要です。Portainer のインストールは避けることが重要です。これは全体的なインストールプロセスに悪影響を与える可能性があるためです。以下のコマンドを実行してください：
 
 ```sh
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-- **Docker ユーザーをシステムに追加します**
+- **システムにDockerユーザーを追加する**
 
 ```sh
 sudo usermod -aG docker pi
 ```
 
-- **Docker が正常に動作しているか確認します**
+- **Dockerが正常に動作しているかを確認する**
 
 ```sh
 docker --version
 ```
 
-### ステップ 3: CGroup バージョンの対応
+### ステップ3: CGrpoupバージョンへの対応
 
-- **Home Assistant Supervisor の互換性は特定の Docker CGroup v1 に依存しています。この互換性を確保するために、以下の変更を行います:**
+- **Home Assistant SupervisorはDocker CGroup v1との互換性に依存しています。この互換性を確保するために、以下の変更を行う必要があります:**
 
 ```sh
 sudo nano /etc/default/grub
 ```
 
-- **この行を追加して保存します。**
+- **この行を追加して保存してください。**
 
 ```sh
 systemd.unified_cgroup_hierarchy=false
 ```
 
-- **次に、このファイルを開きます**
+- **このファイルを開く**
 
 ```sh
 sudo nano /boot/cmdline.txt
 ```
 
-- **フレーズの末尾に以下の行を追加して保存します。**
+- **この行をフレーズの最後に追加して保存してください。**
 
 ```sh
+
 systemd.unified_cgroup_hierarchy=false apparmor=1 security=apparmor
 ```
 
-### ステップ 4: OS-Agent のインストール (バージョン 1.3)
+### ステップ4: OS-Agent (ver. 1.3) をインストール
 
-CPU アーキテクチャに基づいて適切な OS-Agent をダウンロードし、インストールを進めます。**Raspberry Pi 64 ビット OS の場合、linux aarch64 を選択します。**
+お使いのCPUアーキテクチャに適したOS-Agentをダウンロードし、インストールを進めてください：**Raspberry Pi 64ビットOSの場合はlinux aarch64です**。
 
 ```sh
 wget https://github.com/home-assistant/os-agent/releases/download/1.3.0/os-agent_1.3.0_linux_aarch64.deb
 ```
 
-- **Home Assistant OS Agent をインストールします**
+- **Home Assistant OS Agentをインストール**
 
 ```sh
 sudo dpkg -i os-agent_1.3.0_linux_aarch64.deb
 ```
 
-- **インストールが成功したことを確認するには、以下を実行します**
+- **以下を実行してインストールが成功したことを確認する**
 
 ```sh
 gdbus introspect --system --dest io.hass.os --object-path /io/hass/os
 ```
 
-### ステップ 5: Home Assistant Supervised の取得
+### ステップ 5: Home Assistant Supervised を取得する
 
-- **最新の Home Assistant Supervised パッケージをダウンロードします:**
+- **最新の Home Assistant Supervised パッケージをダウンロードする:**
 
 ```sh
 wget https://github.com/home-assistant/supervised-installer/releases/download/1.3.0/homeassistant-supervised.deb
 ```
 
-### ステップ 6: Home Assistant Supervised のインストール
+### ステップ 6: Home Assistant Supervised インストール
 
-重要: このステップでは、Wi-Fi がプロセス中に中断される可能性があるため、LAN 接続が必要です。
+重要: このステップではLAN接続が必要です。Wi-Fiはプロセス中に中断される可能性があります：
 
 ```sh
 sudo dpkg -i homeassistant-supervised.deb
 ```
 
-### ステップ 7: インストールエラーへの対応
+### ステップ 7: インストールエラーの対処
 
-インストールエラーが発生した場合は、以下を実行して修正します:
+インストールエラーが発生した場合は、以下を実行してエラーを修正してください：
 
 ```sh
 sudo apt --fix-broken install
 ```
 
-修正が成功すると、青い画面が表示され、**Raspberry Pi4 64** モデルを選択できます。
+修正が正常に完了すると、青い画面が表示され、**Raspberry Pi4 64** モデルを選択できるようになります。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/bluescreen.png" /></center>
 
-### ステップ 8: インストールの最終化と Wi-Fi 設定
+### ステップ 8: インストールの完了とWi-Fi設定
 
-数分待つと、Home Assistant に http://[your_raspberry_IP]:8123 でアクセスできるようになります。
-
+数分待つと、Home Assistant が http://[your_raspberry_IP]:8123 でアクセス可能になります。
 :::note
-再起動後に Wi-Fi 接続の問題が発生した場合は、以下の手順に従ってください。
+
+再起動後にWi-Fi接続の問題が発生した場合は、以下の手順に従ってください
+
 :::
 
-- **'dhcpcd' を有効にするには、以下のコマンドを実行します:**
+- 'dhcpcd' を有効にするには、以下のコマンドを実行してください：
 
 ```sh
 sudo systemctl enable dhcpcd
 ```
 
-- **ネットワークサービスを無効にするには、以下のコマンドを実行します:**
+- 次のコマンドでネットワーキングサービスを無効にします：
 
 ```sh
 sudo systemctl disable networking
 ```
 
-- **変更を適用するには、Raspberry Pi を再起動します:**
+- 変更を適用するためにRaspberry Piを再起動します：
 
 ```sh
 sudo reboot
 ```
 
 :::note
-"Network Manager の問題" を解決するには (設定で確認)、Network Manager を開始して有効にすることで状況を修正できます。以下のコマンドを使用してください:
+
+「Network Manager の問題」を解決するには（設定で確認）、Network Manager を開始してから有効化することで状況を修正できます。これを実行するには以下のコマンドを使用してください：
+
 :::
 
 ```sh
 sudo systemctl enable NetworkManager
 ```
 
-## MQTTブローカーのインストール
+## MQTT ブローカーのインストール
 
-- 設定 > アドオン > MQTTブローカーをクリックします。
+- 設定 > アドオン に移動し、MQTT ブローカーをクリックします。
+
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/mqqt.png" /></center>
 
-- インストールを押し、インストール後に起動時に自動開始を有効にします。
+- インストールを押し、インストール後に起動時の開始を有効にします
+
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate1.PNG" /></center>
 
-- 設定 > デバイスとサービス > MQTTブローカーを構成します。
+- 設定 > デバイスとサービス に移動し、MQTT ブローカーを設定します。
 
-## Frigate（フルアクセス）のインストール
+## Frigate のインストール（フルアクセス）
 
-### ステップ 1: リポジトリをクローン
+### ステップ 1: リポジトリのクローン
 
-- 設定 > アドオン > アドオンストア > メニュー > リポジトリに移動します。
+- 設定 > アドオン > アドオンストア > メニュー > リポジトリ に移動します
+
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/step1.png" /></center>
 
-- リポジトリURLを追加します: https://github.com/blakeblackshear/frigate-hass-addons。これで、アドオンストアにFrigateアドオンが表示されます。
+- リポジトリ URL を追加します: https://github.com/blakeblackshear/frigate-hass-addons。その後、アドオンストアで Frigate アドオンを確認できます。
 
-### ステップ 2: フルアクセスFrigate NVRアドオンをインストール
+### ステップ 2: フルアクセス Frigate NVR アドオンのインストール
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate3.PNG" /></center>
 
-### ステップ 3: frigate.ymlを作成
+### ステップ 3: frigate.yml の作成
 
-- このステップを進めるには、ファイルエディタが必要です。ファイルエディタの左上にある「Browse File System」オプションにアクセスします。
+- この手順を進めるには、ファイルエディターが必要です。ファイルエディターの左上にある「ファイルシステムを参照」オプションにアクセスします。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/fileeditor1.png" /></center>
 
-- 新しいファイルを作成し、名前をfrigate.ymlとします。
+- frigate.yml という名前の新しいファイルを作成します
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/fileeditor2.png" /></center>
 
-- 次に、以下のコードスニペットを使用して、IPカメラからRTSPビデオフィードを正常に取得できるかどうかを確認します。提供されたコードをコピーして`frigate.yml`ファイルに貼り付けます。詳細な手順については、[Frigate公式サイト](https://docs.frigate.video/guides/getting_started)のガイドラインに従うことを強くお勧めします。プレースホルダーを特定のカメラ名、解像度、カメラストリームIPに置き換えることを忘れないでください。このカスタマイズにより、カメラ設定との正確な統合が可能になります。
+- 次に、以下のコードスニペットを使用して、IP カメラから RTSP ビデオフィードを正常に取得できるかどうかを評価できます。提供されたコードをコピーして `frigate.yml` ファイルに貼り付けます。包括的な手順については、[Frigate 公式サイト](https://docs.frigate.video/guides/getting_started)で提供されているガイドラインに従うことを強く推奨します。プレースホルダーを特定のカメラ名、解像度、カメラストリーム IP に置き換えることを忘れないでください。このカスタマイズにより、カメラセットアップとの正確な統合が保証されます。
 
 ```sh
 mqtt:
@@ -286,90 +292,90 @@ mqtt:
   
 
 cameras:
-  RPIcam: # <------ カメラの名前
+  RPIcam: # <------ Name the camera
     ffmpeg:
       inputs:
-        - path: rtsp://192.168.8.151:8554/stream # <----- 検出に使用するストリーム
+        - path: rtsp://192.168.8.151:8554/stream # <----- The stream you want to use for detection
           roles:
             - detect
     detect:
-      enabled: False # <---- カメラフィードが動作するまで検出を無効化
-      width: 1280 # <---- カメラの解像度に合わせて更新
-      height: 720 # <---- カメラの解像度に合わせて更新
+      enabled: False # <---- disable detection until you have a working camera feed
+      width: 1280 # <---- update for your camera's resolution
+      height: 720 # <---- update for your camera's resolution
       fps: 5
 ```
 
-### ステップ 4: Frigateを開始
+### ステップ 4: Frigate を開始する
 
-- Frigateを起動する前に、保護モードが無効になっていることを確認してください。
+- Frigate を開始する前に、保護モードが無効になっていることを確認してください。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate4.PNG" /></center>
 
-- Frigateを起動したら、ログを注意深く監視し、問題が発生していないか確認してください。問題がなければ、サイドバーにあるFrigateアイコンをクリックします。この操作でFrigateのインターフェースと機能にアクセスできます。
+- Frigate を開始したら、発生する可能性のある問題についてログを注意深く監視することが重要です。問題が発生していない場合は、サイドバーにある Frigate アイコンをクリックしてください。この操作により、Frigate のインターフェースと機能にアクセスできるようになります。
 
-### ステップ 5: ストリームを確認
+### ステップ 5: ストリームを確認する
 
-すべてが正しく動作していれば、ストリームが表示されます。
+すべてが正常に動作している場合、ストリームが取得できます。
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate5.png" /></center>
 
-### ステップ 6: オブジェクト検出を有効化
+### ステップ 6: オブジェクト検出を有効にする
 
-これを実現するには、Coral USB Accelerator Edge TPUが必要です。USBポートに直接接続することも可能ですが、消費電力が高いため、期待通りに動作しない場合があります。そのため、信頼性の高いUSB電源ハブを使用することを強くお勧めします。これにより、安定した電力供給と最適なパフォーマンスが確保され、Coral USB Acceleratorの互換性と効果が向上します。
+これを実現するには、Coral USB Accelerator Edge TPU が不可欠です。USB ポートに直接接続することもできますが、より高い電力要件のため、期待通りに機能しない場合があります。そのため、信頼性の高い USB 電源ハブの使用を強く推奨します。これにより、安定した電力供給と Coral USB Accelerator の最適なパフォーマンスが確保され、互換性と効果が向上します。
 
-- 以下のソースコードでfrigate.ymlファイルを変更します。
+- frigate.yml ファイルを以下のソースコードで変更してください
 
 ```sh
 mqtt:
   enabled: False
   
-detectors: # <---- 検出器を追加
+detectors: # <---- add detectors
   coral:
     type: edgetpu
     device: usb
 
 cameras:
-  RPIcam: # <------ カメラの名前
+  RPIcam: # <------ Name the camera
     ffmpeg:
       input_args: preset-rtsp-udp
       inputs:
-        - path: rtsp://192.168.8.151:8554/stream # <----- 検出に使用するストリーム
+        - path: rtsp://192.168.8.151:8554/stream # <----- The stream you want to use for detection
           roles:
             - detect
     detect:
-      enabled: True # <---- カメラフィードが動作するまで検出を無効化
-      width: 1280 # <---- カメラの解像度に合わせて更新
-      height: 720 # <---- カメラの解像度に合わせて更新
+      enabled: True # <---- disable detection until you have a working camera feed
+      width: 1280 # <---- update for your camera's resolution
+      height: 720 # <---- update for your camera's resolution
       fps: 5
 ```
 
-- Frigateアドオンを再起動します。その後、サイドバーのFrigateアイコンをクリックします。次にストリームをクリックすると、ストリーム全体が表示されます。デフォルトでは、人を検出し、バウンディングボックスを描画することができます。
+- Frigate アドオンを再起動します。次に、サイドバーの Frigate アイコンをクリックします。次にストリームをクリックすると、ストリームの全体表示が表示されます。デフォルトでは人を検出でき、バウンディングボックスを描画できます。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/ui.jpeg" /></center>
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate_debug.jpg" /></center>
 
-そして、こちらがデモです。
+そして、こちらがデモです
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/frigate2.gif" /></center>
 
-さまざまなオブジェクトを検出し、モバイル電話に通知を送信することも可能です。そのためには、frigate.ymlを変更する必要があります。以下のガイドを一読することを強くお勧めします。
+多くの異なるオブジェクトを検出し、携帯電話に通知を送信することもできます。そのためには frigate.yml を変更する必要があります。そのため、以下のガイドを一度ご覧になることを強くお勧めします。
 
 ## リソース
 
-- **[ウェブページ]** [Frigate公式ドキュメント](https://docs.frigate.video/)
+- **[Web Page]** [Frigate 公式ドキュメント](https://docs.frigate.video/)
 
-- **[ウェブページ]** [Home Assistantフォーラム](https://community.home-assistant.io/)
+- **[Web Page]** [Home assistant フォーラム](https://community.home-assistant.io/)
 
-# 技術サポート
+## 技術サポート
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを用意しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご利用いただけます。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

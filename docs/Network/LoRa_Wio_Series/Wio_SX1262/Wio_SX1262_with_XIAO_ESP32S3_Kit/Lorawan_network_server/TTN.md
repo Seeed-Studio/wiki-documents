@@ -13,12 +13,11 @@ last_update:
 
 ## Overview
 
-LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways. 
+LoRaWAN is a low-power, wide-area networking protocol built on top of the LoRa technique. It wirelessly connects devices to the internet and manages communication between end-node devices and network gateways.
 
 Followed the Get Started for Lora, we configured Wio-SX1262 with XIAO ESP32S3 as one channel hub lora gateway.
 
 This wiki page explains how set up LoraWAN based on Wio-SX1262 with XIAO ESP32S3 kit as single channel gateway exchange data with TTN. And also connect the Sensecap S210x lora sensor node to Wio-SX1262 with XIAO ESP32S3 kit and transmit the sensor data to TTN(The Things Network).
-
 
 ## Add LoRaWAN Gateway
 
@@ -48,9 +47,9 @@ Add new application in TTN
 
 ## Add SenseCAP LoRa Sensor
 
-
 ### Configure LoRa Sensor via Sensecraft APP
-We are going to add a sensecap sensor node to TTN. 
+
+We are going to add a sensecap sensor node to TTN.
 
 **Step 1**. Download and Open the Sensecraft App.
 
@@ -69,13 +68,14 @@ We are going to add a sensecap sensor node to TTN.
 There is a more [detailed instruction](https://files.seeedstudio.com/products/SenseCAP/S210X/How%20to%20Connect%20SenseCAP%20S210X%20to%20The%20Things%20Network.pdf) for connecting sensecap S210x sensor to The Things Network.
 
 ### Register on TTN
+
 Register an end device.
 
 **Step 1**. Select the end device type and fill in JoinEUI(AppEUI from sensecraft). Then click *Confirm*.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/42.png" alt="pir" width={600} height="auto" /></p>
 
-**Step 2**. Fill in DevEUI and AppKey. 
+**Step 2**. Fill in DevEUI and AppKey.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/43.png" alt="pir" width={600} height="auto" /></p>
 
@@ -85,8 +85,8 @@ Register an end device.
 
 ## Resource
 
-* [The Things Network](https://eu1.cloud.thethings.network/)
-* [Instruction of Sensecap sensor to TTN](https://files.seeedstudio.com/products/SenseCAP/S210X/How%20to%20Connect%20SenseCAP%20S210X%20to%20The%20Things%20Network.pdf)
+- [The Things Network](https://eu1.cloud.thethings.network/)
+- [Instruction of Sensecap sensor to TTN](https://files.seeedstudio.com/products/SenseCAP/S210X/How%20to%20Connect%20SenseCAP%20S210X%20to%20The%20Things%20Network.pdf)
 
 ## Tech Support & Product Discussion
 
@@ -101,5 +101,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-
-

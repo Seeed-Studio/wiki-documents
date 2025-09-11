@@ -1,41 +1,37 @@
 ---
-description: Grove モジュールを Builder に追加する方法
-title: Grove モジュールを Builder に追加する方法
+description: Builderにより多くのGroveモジュールを追加する
+title: Builderにより多くのGroveモジュールを追加する
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/list_of_supported_grove_n_adding_more
 last_update:
-  date: 05/15/2025
+  date: 11/24/2023
   author: Matthew
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # 概要
 
-この Wiki では、SenseCAP S2110 Sensor Builder にさらに多くの Grove モジュールを追加する方法と、サポートされているモジュールの一覧を紹介します。
+このwikiでは、SenseCAP S2110 Sensor Builderにより多くのGroveモジュールを追加する方法を紹介し、サポートされているすべてのモジュールをリストアップします。
 
-## Grove - ±5A DC/AC Current Sensor (ACS70331) を Builder に追加して適用する方法
+## Grove - ±5A DC/AC電流センサー（ACS70331）をビルダーに追加して適用する
 
-### 1. GitHub ソースコードを使用して新しいライブラリを構築する
+### 1. GitHubソースコードを使用して新しいライブラリを構築する
 
-内容は [GitHub](https://github.com/Seeed-Studio/Seeed_Arduino_S2110) にあります。ここでコードを管理しています。
+ここでの内容は、コードを維持している[GitHub](https://github.com/Seeed-Studio/Seeed_Arduino_S2110)にあります。
 
-- **ステップ 1:** 新しいセンサー用に `sensorNew.hpp` ファイルを `src\sensor` フォルダーに追加します。
+- **ステップ1:** 新しいセンサー用の`sensorNew.hpp`ファイルを`src\sensor`フォルダに追加します。
 
-- **ステップ 2:** センサークラスを定義し、`init()` および `sample()` 関数を実装します。
+- **ステップ2:** センサークラスを定義し、`init()`と`sample()`関数を実装します。
 
-  センサークラスは `sensorClass` クラスを継承し、`init()` および `sample()` 関数を実装する必要があります。
-  `init()` 関数はセンサーを初期化し、Modbus 通信のためのレジスターオフセット値を返します。
-  `sample()` 関数はセンサーデータを読み取り、データが有効な場合は true を返し、無効な場合は false を返します。
+ センサークラスは`sensorClass`クラスから継承し、`init()`と`sample()`関数を実装する必要があります。
+   `init()`関数はセンサーを初期化するために使用され、Modbus通信用のレジスタオフセット値を返します。
+   `sample()`関数はセンサーデータを読み取るために使用され、データが有効な場合はtrueを返し、データが無効な場合はfalseを返します。
 
-- **ステップ 3:** `sensorNEW.hpp` ファイルをインクルードして呼び出します。
+- **ステップ3:** `sensorNEW.hpp`ファイルをインクルードして呼び出します。
 
-  `src\sensor\sensorBuilder.hpp` ファイルに `#include "sensorNew.hpp"` 行を追加します。
-  `sensorBuilder.ino` ファイルの `setup()` 関数で、新しいセンサークラスオブジェクトを作成し、それを引数として `SensorBuilder.addSensor()` 関数を呼び出します。
+ `src\sensor\sensorBuilder.hpp`ファイルに`#include "sensorNew.hpp"`の行を追加します。
+ `sensorBuilder.ino`ファイルの`setup()`関数で、新しいセンサークラスオブジェクトを作成し、それを引数として`SensorBuilder.addSensor()`関数を呼び出します。
 
 以下のコードを参照してください：
 
@@ -45,11 +41,11 @@ void setup()
   Serial.begin(9600);
   SensorBuilder.check_grove();
  
-  /* センサーリスト */
+  /* sensor list */
   sensorUltrasonic *ultrasonic = new sensorUltrasonic();
   SensorBuilder.addSensor(ultrasonic);
   
-  // 新しいセンサーをセンサーリストに追加
+  // add new sensor to sensor list
   sensorNew *newSensor = new sensorNew();
   SensorBuilder.addSensor(newSensor);
 
@@ -58,31 +54,31 @@ void setup()
 ```
 
 :::note
-新しいセンサーの Modbus レジスターアドレスは `0x0034` から始まります。各測定値のレジスタービット幅は 32 であるため、隣接する測定値間のレジスターアドレスオフセットは 2 です。
+新しいセンサーのModbusレジスタアドレスは`0x0034`から開始され、各測定値のレジスタビット幅は32であるため、隣接する2つの測定値間のレジスタアドレスオフセットは2です。
 :::
 
-### 2. Modbus レジスターテーブルの知識
+### 2. Modbusレジスタテーブルの知識
 
-Modbus レジスターアドレス `0x0000` から `0x0003` はモジュールシステム情報を格納するために予約されています。`0x0000` はデフォルト値が 1、最大値が 247 の Modbus アドレスであり、`0x0001` はデフォルト値が 96（9600 に対応）のシリアルポートボーレートです。`0x0002` から `0x0003` はソフトウェアバージョン用です。
+Modbusレジスタアドレス0x0000から0x0003は、モジュールシステム情報の保存用に予約されています。0x0000はmodbusアドレスでデフォルト値は1、最大値は247です。0x0001はシリアルポートボーレートでデフォルト値は96（9600に対応）です。0x0002から0x0003はソフトウェアバージョン用です。
 
 <table>
   <thead>
     <tr>
-      <th>Grove センサー名</th>
-      <th>レジスター名</th>
-      <th>レジスターアドレス<br />(16進数)</th>
-      <th>レジスターアドレス<br />(10進数)</th>
+      <th>Groveセンサー名</th>
+      <th>レジスタ名</th>
+      <th>レジスタアドレス<br />(16進数)</th>
+      <th>レジスタアドレス<br />(10進数)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowSpan={3}>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</td>
-      <td>温度</td>
+      <td>Temperature</td>
       <td>0x0004</td>
       <td>04</td>
     </tr>
     <tr>
-      <td>湿度</td>
+      <td>Humidity</td>
       <td>0x0006</td>
       <td>06</td>
     </tr>
@@ -93,29 +89,29 @@ Modbus レジスターアドレス `0x0000` から `0x0003` はモジュール�
     </tr>
     <tr>
       <td>Grove - Light Sensor v1.2</td>
-      <td>光</td>
+      <td>Light</td>
       <td>0x000A</td>
       <td>10</td>
     </tr><tr>
       <td>Grove - Flame Sensor</td>
-      <td>炎</td>
+      <td>Flame</td>
       <td>0x000C</td>
       <td>12</td>
     </tr>
     <tr>
       <td>Grove - Oxygen Sensor (MIX8410)</td>
-      <td>酸素</td>
+      <td>Oxygen</td>
       <td>0x000E</td>
       <td>14</td>
     </tr>
     <tr>
       <td rowSpan={3}>Grove - Sunlight sensor (SI1151)</td>
-      <td>光強度</td>
+      <td>Light Intensity</td>
       <td>0x0010</td>
       <td>16</td>
     </tr>
     <tr>
-      <td>可視光</td>
+      <td>Visible Light</td>
       <td>0x0012</td>
       <td>18</td>
     </tr>
@@ -126,38 +122,38 @@ Modbus レジスターアドレス `0x0000` から `0x0003` はモジュール�
     </tr>
     <tr>
       <td rowSpan={3}>Grove Temperature and Barometer Sensor (BMP280)</td>
-      <td>気圧温度</td>
+      <td>Barometric Temperature</td>
       <td>0x0016</td>
       <td>22</td>
     </tr>
     <tr>
-      <td>大気圧</td>
+      <td>Atmospheric Pressure</td>
       <td>0x0018</td>
       <td>24</td>
     </tr>
     <tr>
-      <td>高度</td>
+      <td>Height</td>
       <td>0x001A</td>
       <td>26</td>
     </tr>
     <tr>
       <td rowSpan={4}>Grove - Temperature Humidity Pressure Gas Sensor(BME680)</td>
-      <td>温度</td>
+      <td>Temperature</td>
       <td>0x001C</td>
       <td>28</td>
     </tr>
     <tr>
-      <td>大気圧</td>
+      <td>Atmospheric Pressure</td>
       <td>0x001E</td>
       <td>30</td>
     </tr>
     <tr>
-      <td>湿度</td>
+      <td>Humidity</td>
       <td>0x0020</td>
       <td>32</td>
     </tr>
     <tr>
-      <td>空気質(VOC)</td>
+      <td>Air Quality(VOC)</td>
       <td>0x0022</td>
       <td>34</td>
     </tr>
@@ -183,13 +179,13 @@ Modbus レジスターアドレス `0x0000` から `0x0003` はモジュール�
       <td>42</td>
     </tr><tr>
       <td>Grove - UV Sensor</td>
-      <td>UV 強度</td>
+      <td>UV Intensity</td>
       <td>0x002C</td>
       <td>44</td>
     </tr>
     <tr>
       <td>Grove - Turbidity Sensor Meter V1.0</td>
-      <td>濁度</td>
+      <td>Turbidity</td>
       <td>0x002E</td>
       <td>46</td>
     </tr>
@@ -201,7 +197,7 @@ Modbus レジスターアドレス `0x0000` から `0x0003` はモジュール�
     </tr>
     <tr>
       <td>Grove - Ultrasonic Ranger</td>
-      <td>距離</td>
+      <td>Distance</td>
       <td>0x0032</td>
       <td>50</td>
     </tr>
@@ -210,15 +206,16 @@ Modbus レジスターアドレス `0x0000` から `0x0003` はモジュール�
 
 ### 3. ハードウェア接続の知識
 
-センサーの SIG（信号）ピンを任意のマイクロコントローラーのアナログピンのいずれかに接続し、5V-3.3V を VCC に供給し、GND をマイクロコントローラーのグランドに接続します。
+センサーのSIG（信号）ピンを任意のマイクロコントローラーのアナログピンの1つに接続し、VCCに5V-3.3Vを供給し、マイクロコントローラーのGNDにGroundを接続します。
 
-Grove センサーにはポテンショメーターが取り付けられており、ゲインを微調整することで異なる入力電圧に適応させることができます。これによりセンサーの感度を変更することができます。
+Groveセンサーには、ユーザーがゲインを微調整できるポテンショメーターが搭載されており、異なる入力電圧に合わせて調整可能です。これによりセンサーの感度を変更できます。
 
 <div align="center"><img width={600} src="https://media-cdn.seeedstudio.com/media/wysiwyg/__16696942484712.png"/></div>
 
-### 4. 上記の手順に従って Grove AC センサー用のライブラリを作成する
 
-上記の手順に従って、Grove AC センサーを適用するためのライブラリを作成します。
+### 4. 上記の手順から、Grove ACセンサー用のライブラリを取得できます：
+
+上記の手順に従って、Grove ACセンサーを適用するためのライブラリを取得しました。
 
 ```cpp
 #ifndef _SENSOR_AC_H
@@ -341,17 +338,17 @@ bool sensorAC::connected()
 #endif
 ```
 
-### 5. Arduinoを使用して最初のテストをプログラムする
+### 5. Arduinoを使用してプログラムで最初にテストする
 
-このプログラムはいくつかのパラメータを受け取り、プログラムを実行する前に初期化する必要があります。これにより、センサーと正確な値を得るためにプログラムが正しく動作することが保証されます。
+プログラムはいくつかのパラメータを必要とし、プログラムを実行する前に初期化する必要があります。これにより、プログラムがセンサーと正しく動作し、正確な値を取得できることが保証されます。
 
-まず、プログラムをマイクロコントローラーにフラッシュし、その後、読み取り値に合わせてパラメータをキャリブレーションします。
+まず、プログラムをマイクロコントローラーにフラッシュし、次に読み取り値に合わせてパラメータを校正します。
 
 ```cpp
-#define AC_ADC_PIN A2				//ここではピンA2を使用
-#define ADC_BITS 12					//マイクロコントローラーによって異なる
-#define Calibration_Value 523.56	//キャリブレーション結果に依存
-#define Phase_Shift 1.7 			//キャリブレーション結果に依存
+#define AC_ADC_PIN A2				//here pin A2 is used
+#define ADC_BITS 12					//depends on microcontroller to microcontroller
+#define Calibration_Value 523.56	//depends on the calibration result
+#define Phase_Shift 1.7 			//depends on the calibration result
 
 void setup() {
   Serial.begin(115200);
@@ -361,8 +358,8 @@ void setup() {
 int ADC_COUNTS = (1<<ADC_BITS);
 double voltCal = Calibration_Value;
 double phaseCal = Phase_Shift;
-unsigned int cycles = 10;			//測定したいACサイクルの数
-unsigned int timeout = 500;			//タイムアウト
+unsigned int cycles = 10;			//Number of AC Cycles you want to measure
+unsigned int timeout = 500;			//Timeout 
 int SupplyVoltage = 3300;
 int sampleV;
 double lastFilteredV,filteredV;
@@ -421,58 +418,58 @@ void loop() {
 }
 ```
 
-### 6. キャリブレーション値を取得する
+### 6. キャリブレーション値の取得
 
-初期設定では、アナログピンはA2ピンに設定されていますが、必要に応じてAC_ADC_PINパラメータを使用して変更できます。  
-キャリブレーション値（Calibration_Value）と位相シフト値（Phase_Shift）は、電圧源を変更するたびに変更する必要があります。これは、AC電圧が国や場合によってはコンセントごとに異なるためです。
+初期状態では、アナログピンはA2ピンに設定されていますが、AC_ADC_PINパラメータを使用して要件に応じて変更できます。
+Calibration_ValueとPhase_Shift値は、電圧源を変更するたびに変更する必要があります。AC電圧は国によって、時にはコンセントによっても異なるためです。
 
-プログラムはセンサー値をシリアルモニターに出力します。また、シリアルプロッターを開いて電圧と時間のグラフを表示することもできます。
+プログラムはセンサー値をシリアルモニターに出力します。シリアルプロッターを開いて電圧対時間のグラフを表示することもできます。
 
-- **ステップ1**: マルチメーターを使用してAC電圧を測定し、その値を記録します。
-- **ステップ2**: 同様に、シリアルモニターに表示される電圧を記録します。
+- ステップ1：マルチメーターを使用してAC電圧を測定し、記録します。
+- ステップ2：同様に、シリアルモニターに表示される電圧を記録します。
 
-ここでは、マルチメーターの読み取り値が220V RMS電圧であり、センサーがシリアルモニターに718.87Vを表示している場合、正確なキャリブレーション値を得るために以下の式を使用して簡単な計算を行う必要があります。
+私の場合、マルチメーターからの読み取り値は220V RMS電圧ですが、センサーはシリアルモニターで718.87Vを示しています。正確なキャリブレーション値を得るために、以下の式を使用して簡単な計算を行う必要があります。
 
-![数式: (Mains Voltage)/x = (Sensor voltage)/(Initial Calibration)](https://s0.wp.com/latex.php?latex=+%5Cdfrac%7BMains+Voltage%7D%7Bx%7D+%3D+%5Cdfrac%7BSensor+voltage%7D%7BInitail+Calibration%7D&bg=ffffff&fg=000&s=0&201002)
+![Mains Voltage / x = Sensor voltage / Initial Calibration](https://s0.wp.com/latex.php?latex=+%5Cdfrac%7BMains+Voltage%7D%7Bx%7D+%3D+%5Cdfrac%7BSensor+voltage%7D%7BInitail+Calibration%7D&bg=ffffff&fg=000&s=0&201002)
 
-- **ステップ3**: xの値を求め、プログラム内のCalibration_Valueに置き換え、プログラムをマイクロコントローラーにフラッシュします。
+- ステップ3：xの値を求め、プログラムのCalibration_Valueと置き換えて、プログラムをマイクロコントローラーにフラッシュします。
 
-![数式: x = (mains voltage × initial calibration)/(Sensor voltage)](https://s0.wp.com/latex.php?latex=+x+%3D+%5Cdfrac%7Bmains+voltage+%5Ctimes+initial+calibration%7D%7BSensor+voltage%7D&bg=ffffff&fg=000&s=0&c=20201002)
-
+![x = (mains voltage × initial calibration) / Sensor voltage](https://s0.wp.com/latex.php?latex=+x+%3D+%5Cdfrac%7Bmains+voltage+%5Ctimes+initial+calibration%7D%7BSensor+voltage%7D&bg=ffffff&fg=000&s=0&c=20201002)
 Phase_Shift、ACサイクル数、タイムアウトなどの他のパラメータは、設定に応じて変更するか、デフォルトのままにしておくことができます。
 
-### 参考文献
+### リファレンス
 
 - 詳細については、[Grove AC-Voltage Sensor Library](https://github.com/mcmchris/mcm-grove-voltage-sensor)を参照してください。
-- 計算に関する詳細は[こちら](https://bestengineeringprojects.com/how-to-ac-voltage-measurement-using-arduino-without-transformer/)をご覧ください。
+- 計算の詳細は[こちら](https://bestengineeringprojects.com/how-to-ac-voltage-measurement-using-arduino-without-transformer/)で確認できます。
 
-## SenseCAP S2110 Sensor Builderで対応しているGroveモジュールの一覧
+## SenseCAP S2110 Sensor BuilderでサポートされているGroveモジュールのリスト
 
-現在、SenseCAP S2110 Sensor Builderは以下のGroveモジュールを標準でサポートしており、SenseCAP Data Loggerと通信し、センサーデータをLoRa経由でSenseCAPプラットフォームに送信することができます。
+現在、SenseCAP S2110 Sensor Builderは、SenseCAP Data Loggerと通信し、LoRa経由でSenseCAPプラットフォームにセンサーデータを送信するために、以下のGroveモジュールをすぐに使用できるようサポートしています。
 
-- [Grove - 温度および気圧センサー (BMP280)](https://www.seeedstudio.com/Grove-Barometer-Sensor-BMP280.html)
-- [Grove - 酸素センサー (MIX8410)](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)
-- [Grove - CO2 & 温度 & 湿度センサー - SCD41](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html)
-- [Grove - 日光センサー - SI1151](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
-- [Grove - 光センサー v1.2 - LS06-S フォトトランジスタ](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
-- [Grove - 炎センサー](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
-- [Grove - ガスセンサー(BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
-- [Grove - マルチチャンネルガスセンサー v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html?queryID=e92bca5d79e17a6d5bf1447be36e2ee2&objectID=4569&indexName=bazaar_retailer_products)
-- [Grove - TDSセンサー/水質メーター (総溶解固形分)](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html?queryID=9f138cfc508f141092493577c1ca83bb&objectID=4400&indexName=bazaar_retailer_products)
-- [Grove - UVセンサー](https://www.seeedstudio.com/Grove-UV-Sensor.html?queryID=07ecb93f63b4035df7dfa9aea8b1e498&objectID=1345&indexName=bazaar_retailer_products)
-- [Grove - 超音波距離センサー](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html?queryID=ebe18a5e13611be3b60f176e7bfabde7&objectID=2281&indexName=bazaar_retailer_products)
-- [Grove - 濁度センサー](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html?queryID=42f9c89339bce9fbff617e5c8a0328eb&objectID=4399&indexName=bazaar_retailer_products)
-- [Grove - 雷センサー](https://www.hackster.io/jojang2u/use-the-as3935-to-detect-lightning-to-predict-the-weather-9170e7)
-- [Grove - ±5A DC/AC電流センサー (ACS70331)](https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html)
+- [Grove - Temperature and Barometer Sensor (BMP280)](https://www.seeedstudio.com/Grove-Barometer-Sensor-BMP280.html)
+- [Grove - Oxygen Sensor (MIX8410)](https://www.seeedstudio.com/Grove-Oxygen-Sensor-MIX8410-p-4697.html)
+- [Grove - CO2 & Temperature & Humidity Sensor - SCD41](https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html)
+- [Grove - Sunlight Sensor - SI1151](https://www.seeedstudio.com/Grove-Sunlight-Sensor.html)
+- [Grove - Light Sensor v1.2 - LS06-S phototransistor](https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html)
+- [Grove - Flame Sensor](https://www.seeedstudio.com/Grove-Flame-Sensor.html)
+- [Grove - Gas Sensor(BME680)](https://www.seeedstudio.com/Grove-Temperature-Humidity-Pressure-and-Gas-Sensor-for-Arduino-BME680.html)
+- [Grove - Multichannel Gas Sensor v2](https://www.seeedstudio.com/Grove-Multichannel-Gas-Sensor-v2-p-4569.html?queryID=e92bca5d79e17a6d5bf1447be36e2ee2&objectID=4569&indexName=bazaar_retailer_products)
+- [Grove - TDS Sensor/Meter For Water Quality (Total Dissolved Solids)](https://www.seeedstudio.com/Grove-TDS-Sensor-p-4400.html?queryID=9f138cfc508f141092493577c1ca83bb&objectID=4400&indexName=bazaar_retailer_products)
+- [Grove - UV Sensor](https://www.seeedstudio.com/Grove-UV-Sensor.html?queryID=07ecb93f63b4035df7dfa9aea8b1e498&objectID=1345&indexName=bazaar_retailer_products)
+- [Grove - Ultrasonic Distance Sensor](https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html?queryID=ebe18a5e13611be3b60f176e7bfabde7&objectID=2281&indexName=bazaar_retailer_products)
+- [Grove - Turbidity Sensor](https://www.seeedstudio.com/Grove-Turbidity-Sensor-p-4399.html?queryID=42f9c89339bce9fbff617e5c8a0328eb&objectID=4399&indexName=bazaar_retailer_products)
+- [Grove - Lightning Sensor](https://www.hackster.io/jojang2u/use-the-as3935-to-detect-lightning-to-predict-the-weather-9170e7)
+- [Grove - ±5A DC/AC Current Sensor (ACS70331)](https://www.seeedstudio.com/Grove-5A-DC-AC-Current-Sensor-ACS70331-p-2928.html)
 
 ## ✨ コントリビュータープロジェクト
 
-- このプロジェクトはSeeed Studioの[コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によって支援されています。
-- [Mohammed Adnan Khanの貢献](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)に感謝します。あなたの作業は[展示](https://wiki.seeedstudio.com/ja/Honorary-Contributors/)されます。
+- このプロジェクトは、Seeed Studio [コントリビュータープロジェクト](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)によってサポートされています。
+- [Mohammed Adnan Khanの貢献](https://github.com/orgs/Seeed-Studio/projects/6?pane=issue&itemId=34120904)に感謝し、あなたの作業は[展示](https://wiki.seeedstudio.com/Honorary-Contributors/)されます。
 
-## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験をスムーズにするために、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+## 技術サポート & 製品ディスカッション
+
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

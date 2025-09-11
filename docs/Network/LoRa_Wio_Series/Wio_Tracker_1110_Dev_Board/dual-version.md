@@ -275,7 +275,7 @@ In case your manifest path points to a different file, use the following command
 west config manifest.path nrf
 ```
 
-* Enable the Sidewalk group filter for west.
+- Enable the Sidewalk group filter for west.
 
 ```cpp
 west config manifest.group-filter "+sidewalk"

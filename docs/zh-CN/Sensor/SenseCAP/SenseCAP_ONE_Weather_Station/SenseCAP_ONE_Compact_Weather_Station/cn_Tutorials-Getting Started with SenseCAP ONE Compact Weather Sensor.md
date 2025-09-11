@@ -1,6 +1,6 @@
 ---
-description: SenseCAP ONE 紧凑型气象传感器入门指南
-title: SenseCAP ONE 紧凑型气象传感器入门指南
+description: 开始使用 SenseCAP ONE 紧凑型气象传感器
+title: 开始使用 SenseCAP ONE 紧凑型气象传感器
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
@@ -9,7 +9,7 @@ last_update:
   date: 4/14/2023
   author: Yvonne
 ---
-# SenseCAP ONE 紧凑型气象传感器入门指南
+# 开始使用 SenseCAP ONE 紧凑型气象传感器
 
 # 安装前准备
 
@@ -19,7 +19,6 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image2.png" /></div>
 
-
 # 安装
 
 ### 设备接口介绍
@@ -28,17 +27,17 @@ last_update:
 
 设备底部有两个连接器。
 
--   USB Type-C 接口允许您使用普通的 USB Type-C 数据线将计算机连接到设备进行配置。
+- USB Type-C 接口允许您使用普通的 USB Type-C 线缆将计算机连接到设备进行配置。
 
--   主数据接口可以连接到 M12 8 针电缆，支持多种总线协议
+- 主数据接口可以连接到 M12 8 针线缆，支持多种总线协议
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image4.png" /></div>
 
-### 使用 USB 数据线连接
+### 使用 USB 线缆连接
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image5.png" /></div>
 
-### M12 电缆
+### M12 线缆
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image6.png" /></div>
 
@@ -48,13 +47,13 @@ last_update:
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image7.png" /></div>
 
-插入电缆时，电缆的孔和设备连接器的引脚必须对齐。
+插入线缆时，线缆的孔和设备连接器的引脚必须对齐。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image8.png" /></div>
 
-插入电缆并顺时针拧紧
+插入线缆并顺时针拧紧
 
-注意：在将电缆插入底部之前，电缆应对准底部。否则，引脚偏斜可能导致通信异常。
+注意：在将线缆插入底部之前，线缆应对准底部。否则，引脚偏斜可能导致通信异常。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image9.png" /></div>
 
@@ -64,16 +63,15 @@ last_update:
 
 ### 安装设备
 
-有两种主要的安装方法，要么用套筒安装在杆子上，要么用法兰盘安装在平台上。
+有两种主要的安装方法，可以使用套筒安装在杆上，或者使用法兰盘安装在平台上。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image11.png" /></div>
-
 
 套筒的尺寸如下所示。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image12.png" /></div>
 
-建议杆子的直径应小于或等于 75cm。
+建议杆的直径应小于或等于 75cm。
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image13.png" /></div>
 
@@ -85,8 +83,7 @@ last_update:
 
 安装完成后，您可以为设备通电、配置设备并从设备收集数据。
 
-设备有两种工作模式，**配置模式和**
-**工作模式。**
+设备有两种工作模式：**配置模式和工作模式。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image15.png" /></div>
 
@@ -94,21 +91,19 @@ last_update:
 
 设备底部有一个防水圆形盖子。逆时针转动以取下此盖子，您可以看到一个USB Type-C连接器和一个配置按钮。
 
-使用USB Type-C线缆将设备连接到您的计算机。计算机将自动安装设备驱动程序。驱动程序
-成功安装后，您可以在设备管理器中看到一个串行端口。
+使用USB Type-C线缆将设备连接到您的计算机。计算机将自动安装设备驱动程序。驱动程序成功安装后，您可以在设备管理器中看到一个串行端口。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image16.png" /></div>
 
-如果驱动程序没有自动安装，请点击此链接[手动
-下载](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)并[安装](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)[驱动程序](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)。（版本为CP210x Windows Drivers）
+如果驱动程序没有自动安装，请点击此链接[手动下载](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)并[安装](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)[驱动程序](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)。（版本为CP210x Windows Drivers）
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image17.png" /></div>
 
 **有两种方法配置设备：**
 
--   SenseCAP ONE配置工具
+- SenseCAP ONE配置工具
 
--   串行调试工具
+- 串行调试工具
 
 ## SenseCAP ONE配置工具
 
@@ -116,7 +111,7 @@ SenseCAP ONE配置工具为您提供图形界面来配置设备。您可以从�
 
 &lt;https://github.com/Seeed-Solution/SenseCAP-One-Configuration-Tool/releases&gt;
 
-根据您的需要，选择相应操作系统的软件，Windows、macOS或Linux。
+根据您的需要，选择相应操作系统的软件：Windows、macOS或Linux。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image18.png" /></div>
 
@@ -124,11 +119,11 @@ SenseCAP ONE配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image19.png" /></div>
 
-1.  打开软件，点击串行端口的下拉框，选择设备对应的串行端口。
+1. 打开软件，点击串行端口的下拉框，选择设备对应的串行端口。
 
-2.  将波特率设置为9600。
+2. 将波特率设置为9600。
 
-3.  点击连接，如果连接成功，右侧的传感器数据区域将显示相应的测量值。
+3. 点击连接，如果连接成功，右侧的传感器数据区域将显示相应的测量值。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image20.png" /></div>
 
@@ -136,12 +131,11 @@ SenseCAP ONE配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image21.png" /></div>
 
-1.  选择通信协议。在这个示例中我们选择RS-485 Modbus RTU。
+1. 选择通信协议。在这个示例中，我们选择RS-485 Modbus RTU。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image22.png" /></div>
 
-
-2.  修改Modbus地址：在Modbus地址中写入地址，然后点击"写入设备"。
+2. 修改Modbus地址：在Modbus地址中写入地址，然后点击"写入设备"。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image23.png" /></div>
 
@@ -167,15 +161,15 @@ SenseCAP ONE配置工具为您提供图形界面来配置设备。您可以从�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image28.png" /></div>
 
--   在串口调试助手中，选择对应的COM端口。
+- 在串口调试助手中，选择对应的COM端口。
 
--   勾选"点击回车开始新行"复选框。
+- 勾选"点击回车换行"复选框。
 
--   将波特率设置为9,600。
+- 设置波特率为9,600。
 
--   在发送区域发送。
+- 在发送区域发送。
 
--   如果在串口接收窗口收到相应的0XA消息，则配置成功。如果没有，请检查COM端口和波特率。
+- 如果在串口接收窗口收到相应的0XA消息，则配置成功。如果没有，请检查COM端口和波特率。
 
 请查看下一章节中的详细ASIIC命令。
 
@@ -195,7 +189,6 @@ SenseCAP ONE配置工具为您提供图形界面来配置设备。您可以从�
 
 传感器数据存储在输入寄存器中，为只读。
 
-
 RS-485的设备地址和通信波特率存储在保持寄存器中，可以修改。
 
 每个寄存器为16位，占用2字节。
@@ -214,14 +207,14 @@ RS-485的设备地址和通信波特率存储在保持寄存器中，可以修�
 
 ### Modbus-RTU读取
 
-这里是**Modbus Poll工具**的示例
+以下是**Modbus Poll工具**的示例
 
-（从&lt;https://www.modbustools.com/download.html&gt;下载）。
+(从&lt;https://www.modbustools.com/download.html&gt;下载)。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image35.png" /></div>
 
 配置连接参数：波特率9600bps，8数据位，
-无奇偶校验，1停止位。
+无校验，1停止位。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image36.png" /></div>
 
@@ -229,12 +222,12 @@ RS-485的设备地址和通信波特率存储在保持寄存器中，可以修�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image37.png" /></div>
 
-设置默认从机ID（5合1为10，7合1为20，9合1为38），功能码04，起始地址0，数量（5合1为6，7合1为
-28，9合1为32）；
+设置默认从机ID(5合1为10，7合1为20，9合1为38)，功能码04，起始地址0，数量(5合1为6，7合1为
+28，9合1为32)；
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image38.png" /></div>
 
-现在计算机每1秒读取一次传感器数据，测量值（第0行和第1行）如下图所示，将测量值除以1000后，即为真实温度值，28300/1000 = 28.3 °C
+现在计算机每1秒读取一次传感器数据，测量值(第0行和第1行)如下图所示，测量值除以1000后，即为真实温度值，28300/1000 = 28.3 °C
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image39.png" /></div>
 
@@ -242,25 +235,25 @@ RS-485的设备地址和通信波特率存储在保持寄存器中，可以修�
 
 当温度为正值时：
 
-1.  主机发送 01 04 00 00 00 02 71 CB
+1. 主机发送 01 04 00 00 00 02 71 CB
 
-2.  从机响应 01 04 04 00 00 6E 8C D6 41
+2. 从机响应 01 04 04 00 00 6E 8C D6 41
 
-3.  返回温度数据 0x00006E8C（十六进制），转换为十进制 = 28300，通过除以1000得到相应的空气温度，空气温度 = 28300/1000 = 28.3 °C
+3. 返回温度数据 0x00006E8C (十六进制)，转换为十进制 = 28300，通过除以1000得到相应的空气温度，空气温度 = 28300/1000 = 28.3 °C
 
 **当温度为负值时：**
 
 需要通过补码计算获得温度。
 
-1.  主机发送 01 04 00 00 00 02 71 CB
+1. 主机发送 01 04 00 00 00 02 71 CB
 
-2.  从机响应 01 04 04 FF FF FC 18 D6 41
+2. 从机响应 01 04 04 FF FF FC 18 D6 41
 
-3.  返回温度数据 FFFFFC18H（十六进制补码）。
+3. 返回温度数据 FFFFFC18H (十六进制补码)。
 
-4.  原码为 - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8（十六进制）= -1000（十进制）。
+4. 原码为 - (FF FF FC 18-1 = FF FF FC 17) = 80 00 03 E8(十六进制) = -1000 (十进制)。
 
-5.  然后温度测量值为 -1000/1000 = -1°
+5. 然后温度测量值为 -1000/1000 = -1°
 
 **S500解码：**
 
@@ -276,20 +269,17 @@ RS-485的设备地址和通信波特率存储在保持寄存器中，可以修�
 
 读取寄存器0x0000~0x001F和0x0030~0x0033。
 
-发送命令：14 04 00 00 00 20 F3 06
+发送命令: 14 04 00 00 00 20 F3 06
 
-返回：14 04 40 00 00 70 80（温度） 00 00 95 10（湿度） 06 07 94 40（气压） 00 00 00 00（光照） 00 00 00 00（最小风向） 00 00 00 00（最大风向） 00 00 00 00（平均风向） 00 00 00 00 （最小风速）00 00 00 00（最大风速) 00 00 00 00（平均风速） 00 00 00 00（累计降雨量） 00 00
-00 00（累计降雨持续时间） 00 00 00 00（雨强） 00 00 00 00（最大雨强） 00 00 6A 7C（加热温度） 00 00 00 00（倾倒状态） 99 09（校验码）
+返回: 14 04 40 00 00 70 80（温度） 00 00 95 10（湿度） 06 07 94 40（气压） 00 00 00 00（光照） 00 00 00 00（最小风向） 00 00 00 00（最大风向） 00 00 00 00（平均风向） 00 00 00 00 （最小风速）00 00 00 00（最大风速) 00 00 00 00（平均风速） 00 00 00 00（累计降雨量） 00 00 00 00（累计降雨持续时间） 00 00 00 00（雨强） 00 00 00 00（最大雨强） 00 00 6A 7C（加热温度） 00 00 00 00（倾倒状态） 99 09（校验码）
 
 **S900解码：**
 
 读取寄存器0x0000~0x001F和0x0030~0x0033。
 
-发送命令：26 04 00 00 00 20 F7 05
+发送命令: 26 04 00 00 00 20 F7 05
 
-返回：26 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(气压) 00 00 00 00(光照) 00 00 00 00(最小风向)
-00 00 00 00(最大风向) 00 00 00 00(平均风向) 00 00 00 00 (最小风速) 00 00 00 00(最大风速) 00 00 00 00(平均风
-速) 00 00 00 00(累计降雨量) 00 00 00 00(累计降雨持续时间) 00 00 00 00(雨强) 00 00 00 00(最大雨强)00 00 6A 7C(加热温度) 00 00 00 00(倾倒状态) 99 09(校验码)
+返回: 26 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(气压) 00 00 00 00(光照) 00 00 00 00(最小风向) 00 00 00 00(最大风向) 00 00 00 00(平均风向) 00 00 00 00 (最小风速) 00 00 00 00(最大风速) 00 00 00 00(平均风速) 00 00 00 00(累计降雨量) 00 00 00 00(累计降雨持续时间) 00 00 00 00(雨强) 00 00 00 00(最大雨强)00 00 6A 7C(加热温度) 00 00 00 00(倾倒状态) 99 09(校验码)
 
 PM2.5 和 PM10 需要分别读取：
 
@@ -303,8 +293,7 @@ PM2.5 和 PM10 需要分别读取：
 
 发送命令：2B 04 00 00 00 20 F6 18
 
-返回：2B 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(气压) 00 00 00 00(光照) 00 00 00 00(最小风向)
-00 00 00 00(最大风向) 00 00 00 00(平均风向) 00 00 00 00 (最小风速) 00 00 00 00(最大风速) 00 00 00 00(平均风速) 00 00 00 00(累计降雨量) 00 00 00 00(累计降雨持续时间) 00 00 00 00(降雨强度) 00 00 00 00(最大降雨强度)00 00 6A 7C(加热温度) 00 00 00 00(倾倒状态) 99 09(校验码)
+返回：2B 04 40 00 00 70 80 (温度) 00 00 95 10(湿度) 06 07 94 40(气压) 00 00 00 00(光照) 00 00 00 00(最小风向) 00 00 00 00(最大风向) 00 00 00 00(平均风向) 00 00 00 00 (最小风速) 00 00 00 00(最大风速) 00 00 00 00(平均风速) 00 00 00 00(累计降雨量) 00 00 00 00(累计降雨持续时间) 00 00 00 00(降雨强度) 00 00 00 00(最大降雨强度)00 00 6A 7C(加热温度) 00 00 00 00(倾倒状态) 99 09(校验码)
 
 PM2.5、PM10 和 CO2 需要分别读取：
 
@@ -354,7 +343,7 @@ PM2.5、PM10 和 CO2 需要分别读取：
 
 命令有两种格式：
 
-**1.** **不带 = 的命令**指基本查询方法。
+**1.** **不带 = 的命令** **指基本查询方法。**
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/11.png" /></div>
 
@@ -383,7 +372,7 @@ PM2.5、PM10 和 CO2 需要分别读取：
 
 SDI-12 通信采用三线制，其中两根为传感器电源线，另一根为 SDI-12 信号线。
 
-SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 '0'、'1' ~ '9'、'A' ~ 'Z'、'a' ~ 'z'。SenseCAP ONE 的 SDI-12 地址默认为 '0'。该传感器支持的指令如下一章所示，每个指令都符合 SDI-12 v1.4 标准。
+SDI-12 总线上的每个传感器都有唯一的地址，可以设置为 '0'、'1' ~ '9'、'A' ~ 'Z'、'a' ~ 'z'。SenseCAP ONE 的 SDI-12 地址默认为 '0'。该传感器支持的指令如下一章所示，每个指令都符合 SDI-12 v1.4 标准。
 
 传感器由 3.6~16V 直流电源供电。传感器上电后，会立即进入睡眠模式，等待数据采集设备发出指令。SDI-12 使用 9600bps 波特率，1 个起始位（高电平），7 个数据位（高 0 低 1，反逻辑），1 个偶校验位，1 个停止位。
 
@@ -401,9 +390,7 @@ SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 
 **SDI-12 接线**
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image47.png" /></div>
 
-
 **使用 USB 转 SDI-12 调试器与设备通信**
-
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image48.png" /></div>
 
@@ -417,16 +404,15 @@ SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 
 下载串口调试助手：
 &lt;https://github.com/Neutree/COMTool&gt;，然后打开串口调试工具。
 
--   选择正确的端口号
+- 选择正确的端口号
 
--   将波特率设置为 USB 转 SDI-12 调试器的波特率（注意这不是 SDI-12 协议的波特率）
+- 将波特率设置为 USB 转 SDI-12 调试器的波特率（注意这不是 SDI-12 协议的波特率）
 
--   勾选 "CRLF"
+- 勾选 "CRLF"
 
--   点击打开串口。
+- 点击打开串口。
 
--   发送查询设备地址命令 "?!"，如果能看到响应 "0"，说明连接正常。
-
+- 发送查询设备地址命令 "?!"，如果能看到响应 "0"，说明连接正常。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image50.png" /></div>
 
@@ -461,6 +447,7 @@ SDI-12 总线上的每个传感器都有一个唯一的地址，可以设置为 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image56.png" /></div>
 
 ## ASCII 错误代码
+
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/SenseCAP%20ONE%20Compact%20Weather%20Sensor_/image57.png" /></div>
 
 ## SDI-12 错误代码

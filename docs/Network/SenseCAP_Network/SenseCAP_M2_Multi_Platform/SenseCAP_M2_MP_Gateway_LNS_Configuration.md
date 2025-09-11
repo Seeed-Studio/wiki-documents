@@ -197,12 +197,12 @@ When the object.valid is true, means the data analysis is successful, then you c
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP21.png" alt="pir" width={800} height="auto" /></p>
 
-- `upload\_battery`: Battery
-- `upload\_interval`: upload interval, unit: Second
-- `upload\_version`: Hardware/Firmware Version
-- `report\_telemetry`: Measurement value
+- `upload_battery`: Battery
+- `upload_interval`: upload interval, unit: Second
+- `upload_version`: Hardware/Firmware Version
+- `report_telemetry`: Measurement value
 
-The `measurementId` in the ‘report\_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
+The `measurementId` in the ‘report_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP22.png" alt="pir" width={800} height="auto" /></p>
 
@@ -210,7 +210,7 @@ The `measurementId` in the ‘report\_telemetry’ message please check [SenseCA
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/M2-MP23.png" alt="pir" width={600} height="auto" /></p>
 
-The `measurementId` in the ‘report\_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
+The `measurementId` in the ‘report_telemetry’ message please check [SenseCAP Measurement ID](https://sensecap-statics.seeed.cn/hardware/lorapp/httpserver/src/constants/sensor-name-lang-dictionary.json) for more details.
 
 ### HTTP
 
@@ -240,11 +240,11 @@ The HTTP integration exposes all events as documented by [Event Type](https://ww
 ```cpp
 from http.server import HTTPServer, BaseHTTPRequestHandler 
 
-from urllib.parse import urlparse, parse\_qs 
+from urllib.parse import urlparse, parse_qs 
 
-from chirpstack\_api import integration 
+from chirpstack_api import integration 
 
-from google.protobuf.json\_format import Parse 
+from google.protobuf.json_format import Parse 
 
 class Handler(BaseHTTPRequestHandler): 
 
@@ -254,41 +254,41 @@ class Handler(BaseHTTPRequestHandler):
 
 json = False 
 
-def do\_POST(self): 
+def do_POST(self): 
 
-self.send\_response(200) 
+self.send_response(200) 
 
-self.end\_headers() 
+self.end_headers() 
 
-query\_args = parse\_qs(urlparse(self.path).query) 
+query_args = parse_qs(urlparse(self.path).query) 
 
-content\_len = int(self.headers.get('Content-Length', 0)) 
+content_len = int(self.headers.get('Content-Length', 0)) 
 
-body = self.rfile.read(content\_len) 
+body = self.rfile.read(content_len) 
 
-if query\_args["event"][0] == "up": 
+if query_args["event"][0] == "up": 
 
 self.up(body) 
 
-elif query\_args["event"][0] == "join": 
+elif query_args["event"][0] == "join": 
 
 self.join(body) 
 
 else:
 
-print("handler for event %s is not implemented" % query\_args["event"][0]) 
+print("handler for event %s is not implemented" % query_args["event"][0]) 
 
 def up(self, body): 
 
 up = self.unmarshal(body, integration.UplinkEvent()) 
 
-print("Uplink received from: %s with payload: %s" % (up.device\_info.dev\_eui, up.data.hex())) 
+print("Uplink received from: %s with payload: %s" % (up.device_info.dev_eui, up.data.hex())) 
 
 def join(self, body): 
 
 join = self.unmarshal(body, integration.JoinEvent()) 
 
-print("Device: %s joined with DevAddr: %s" % (join.device\_info.dev\_eui, join.dev\_addr)) 
+print("Device: %s joined with DevAddr: %s" % (join.device_info.dev_eui, join.dev_addr)) 
 
 def unmarshal(self, body, pl): 
 
@@ -302,7 +302,7 @@ return pl
 
 httpd = HTTPServer(('', 8090), Handler) 
 
-httpd.serve\_forever() 
+httpd.serve_forever() 
 ```
 
 </details>
@@ -319,7 +319,7 @@ The default Topic is：`application/APPLICATION_ID/device/DEV_EUI/command/down`
 
 `command`: Please check the downlink command in **Device User Manual** for more details.
 
-|Topic|application/APPLICATION\_ID/device/DEV\_EUI/command/down|
+|Topic|application/APPLICATION_ID/device/DEV_EUI/command/down|
 | - | :- |
 |devEUI|Device EUI|
 |confirmed|true/false(whether the payload must be sent as confirmed data down or not)|

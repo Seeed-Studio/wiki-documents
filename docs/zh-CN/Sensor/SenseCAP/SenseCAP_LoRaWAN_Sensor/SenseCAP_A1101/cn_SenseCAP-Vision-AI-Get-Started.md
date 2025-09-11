@@ -27,7 +27,7 @@ SenseCAP A1101 - LoRaWAN Vision AI 传感器是一款支持 TinyML 边缘 AI 的
 
 - 低功耗和长距离传输：睡眠模式功耗低至 2.3uWh，由 Wio-E5 LoRaWAN 模块供电，数据传输距离可达数英里
 
-- 边缘计算实现高数据安全性：本地图像推理并将最终结果数据传输到云端，适用于需要有限数据传输和高数据隐私的应用
+- 边缘计算实现高数据安全性：本地图像推理并将最终结果数据传输到云端，适用于需要限制数据传输和高数据隐私的应用
 
 - 易于数据可视化：通过 SenseCAP Mate App 和 SenseCAP Dashboard 几次点击即可显示和管理数据，与其他第三方工具广泛兼容
 
@@ -53,25 +53,25 @@ SenseCAP A1101 - LoRaWAN Vision AI 传感器是一款支持 TinyML 边缘 AI 的
 
 2. 如果您想训练自己的 AI 模型，有两种方法。请参考：
 
-**1.[使用 Edge Impulse 进行一站式模型训练](https://wiki.seeedstudio.com/cn/One-Stop-Model-Training-with-Edge-Impulse)** 快速上手。
+**1.[使用 Edge Impulse 进行一站式模型训练](https://wiki.seeedstudio.com/One-Stop-Model-Training-with-Edge-Impulse)** 快速上手。
 
-**2.[使用 Roboflow、YOLOv5、TensorFlow Lite 训练 AI 模型](https://wiki.seeedstudio.com/cn/Train-Deploy-AI-Model-A1101)** 详细教程。
+**2.[使用 Roboflow、YOLOv5、TensorFlow Lite 训练 AI 模型](https://wiki.seeedstudio.com/Train-Deploy-AI-Model-A1101)** 详细教程。
 
 # 连接到 LoraWAN®
-LoRaWAN®（长距离广域网）是一种无线通信协议，专为 IoT（物联网）设备和网关之间的低功耗、长距离通信而设计。它使用工业、科学和医疗（ISM）频段中的免许可无线电频谱，通常在欧洲为 868 MHz，在美国为 915 MHz。LoRaWAN® 为长距离连接 IoT 设备提供了低成本、节能的解决方案。该技术允许设备和网关之间进行双向通信，并支持一系列数据速率以适应不同类型的应用。
+LoRaWAN®（长距离广域网）是一种无线通信协议，专为物联网（IoT）设备和网关之间的低功耗、长距离通信而设计。它使用工业、科学和医疗（ISM）频段的免许可无线电频谱，通常在欧洲为 868 MHz，在美国为 915 MHz。LoRaWAN® 为长距离连接物联网设备提供了低成本、节能的解决方案。该技术允许设备和网关之间进行双向通信，并支持一系列数据速率以适应不同类型的应用。
 
 ## 如何选择网关和 LoraWAN®
 使用传感器时需要 LoRaWAN® 网络覆盖，有两个选项。
 ![p21](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
 
 ## 如何使用传感器
-除了直接连接到计算机查看实时检测数据外，您还可以通过 LoraWAN® 传输这些数据，最终将其上传到 [SenseCAP 云平台](https://sensecap.seeed.cc/) 或第三方云平台。在 SenseCAP 云平台上，您可以循环查看数据，并通过手机或计算机以图形方式显示。SenseCAP 云平台和 SenseCAP Mate App 使用相同的账户系统。
+除了直接连接到计算机查看实时检测数据外，您还可以通过 LoraWAN® 传输这些数据，最终上传到 [SenseCAP 云平台](https://sensecap.seeed.cc/) 或第三方云平台。在 SenseCAP 云平台上，您可以循环查看数据，并通过手机或计算机以图形方式显示。SenseCAP 云平台和 SenseCAP Mate App 使用相同的账户系统。
 
 由于我们这里的重点是描述模型训练过程，我们不会详细介绍云平台数据显示的细节。但如果您感兴趣，您可以随时访问 SenseCAP 云平台尝试添加设备和查看数据。这是更好地了解平台功能的好方法！
 
 ![p22](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
-# 技术支持
+## 技术支持
 
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。

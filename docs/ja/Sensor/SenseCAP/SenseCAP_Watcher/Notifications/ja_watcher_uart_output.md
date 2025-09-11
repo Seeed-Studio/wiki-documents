@@ -1,31 +1,27 @@
 ---
 description: ユーザーは Watcher を Grove システムと統合する方法を学び、その機能を拡張し、幅広いセンサーや周辺機器と接続できるようになります。
-title: UART 出力
+title: UART出力
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg
 slug: /ja/uart_output
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 07/10/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# センサーとして使用 & Grove を活用
+# センサーとして & Groveを使用
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/64.jpg" style={{width:800, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ入手</font></span></strong>
     </a>
 </div><br />
 
-この Wiki では、Watcher がセンサーとして動作し、UART（Universal Asynchronous Receiver/Transmitter）機能を活用することで生まれるエキサイティングな可能性を探ります。UART 通信を有効にすることで、Watcher はキャプチャされた画像や認識結果などの貴重なデータをデバイス背面にある UART インターフェースを通じて送信できます。これにより、Watcher をさまざまなハードウェアプラットフォームと統合し、革新的なアプリケーションを作成するための新たな機会が広がります。
+このwikiでは、センサーとして動作するWatcherがUART（Universal Asynchronous Receiver/Transmitter）機能を活用することで生まれるエキサイティングな可能性を探求します。UART通信を有効にすることで、Watcherはキャプチャした画像や認識結果などの貴重なデータを、デバイス背面にあるUARTインターフェースを通じて送信できます。これにより、Watcherを様々なハードウェアプラットフォームと統合し、革新的なアプリケーションを作成する機会の世界が開かれます。
 
-この Wiki を通じて、Watcher の UART インターフェースからのデータ出力を読み取り、解釈する詳細を掘り下げます。また、XIAO、Arduino、Raspberry Pi、Jetson などの人気のある開発ボードやプラットフォームを使用して、このデータを解析し活用する方法について包括的なチュートリアルを提供します。
+このwiki全体を通して、WatcherのUARTインターフェースからのデータ出力を読み取り、解釈する詳細について詳しく説明します。さらに、XIAO、Arduino、Raspberry Pi、Jetsonなどの人気のある開発ボードやプラットフォームを使用して、このデータを解析し活用する方法について包括的なチュートリアルを提供します。
 
 ## SenseCAP Watcher 高度な設定
 
@@ -33,95 +29,93 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ono_v759R0Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-SenseCAP Watcher は、インテリジェントな場所向けの初の物理 LLM エージェントであり、シーンを監視し、アクションをトリガーし、コマンドに基づいて対話することができます。この動画では、SenseCAP Watcher がタスク分析に基づいてシーントリガーモデルを選択する方法（オンデバイスモデルと LLM モデル）を紹介します。また、RGB ライトの設定、ディスプレイ＆サウンドアラートの設定、通知プッシュモード（APP、UART、HTTP）の設定方法も紹介します。
+SenseCAP Watcherは、インテリジェントな場所のための最初の物理的LLMエージェントで、シーンの監視、アクションのトリガー、コマンドに基づく相互作用が可能です。このビデオでは、SenseCAP Watcherがタスク分析に基づいてシーントリガーモデルを選択する方法を紹介します：オンデバイスモデルとLLMモデル。また、RGBライトとディスプレイ&サウンドアラートの設定方法、および通知プッシュモード：APP、UART、HTTPについても説明します。
 
-## Watcher UART 配線
+## Watcher UART配線
 
-メッセージアラーム用に UART を使用する準備ができたら、以下のように Watcher を MCU に接続してください。
+UARTをメッセージアラームに使用する準備ができたら、以下のようにWatcherをMCUに接続してください。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/58.png" style={{width:800, height:'auto'}}/></div>
 
 :::note
-Watcher と MCU が別々に電源供給されている場合は、Watcher と MCU の **3.3V または 5V** ピンを接続する必要はありません。
+WatcherとMCUが別々に電源供給される場合、WatcherとMCUの**3.3Vまたは5V**ピンを接続する**必要はありません**。
 
-Watcher を使用して MCU に電源を供給する予定の場合は、画像の配線に加えて **3.3V** を使用して MCU に電源を供給できます。（5V ピンは入力専用であるため使用しないでください）
+WatcherでMCUに電源を供給する予定の場合、図の配線に加えて**3.3V**を使用してMCUに電源を供給できます。（5Vピンは使用しないでください。これらは入力専用です）
 
-MCU を使用して Watcher に電源を供給する予定の場合は、**5V** 入力を使用する必要があります。（3.3V では Watcher が正常に動作しない可能性があります）
+MCUでWatcherに電源を供給する予定の場合、**5V**入力を使用する必要があります。（3.3VではWatcherが正常に動作するのに十分でない場合があります）
 :::
 
-## WatcherでのUART機能の有効化
+## WatcherでUART機能を有効にする
 
-WatcherのUART機能を最大限に活用するには、まずデバイス内でUART機能を有効にする必要があります。これは特に、Watcherがアラームシステムとして使用されるシナリオで役立ちます。アラームがトリガーされると、WatcherはUART通信を有効化し、キャプチャした画像や認識結果などの重要な情報を外部デバイスに送信し、さらなる処理や分析を行うことができます。
+WatcherのUART機能の潜在能力を最大限に引き出すために、まずデバイス内でUART機能を有効にする必要があります。これは、Watcherがアラームシステムとして使用される場面で特に有用です。アラームがトリガーされると、WatcherはUART通信を起動し、キャプチャした画像や認識結果などの重要な情報を外部デバイスに送信して、さらなる処理と分析を行うことができます。
 
-UARTアラーム機能を有効にするには、以下の2つの方法があります：
+UARTアラーム機能を有効にするには、2つのオプションがあります：
 
-1. SenseCraft APPを使用してタスクを割り当てる際に、WatcherにUARTを介して通知するよう明示的にリクエストする。
+1. SenseCraft APPを使用してタスクを割り当てる際に、WatcherにUART経由で通知するよう明示的に要求する。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/60.png" style={{width:250, height:'auto'}}/></div>
 
-2. タスクの詳細設定で手動でUARTアラーム機能を有効にする：
+2. タスクの詳細設定でUARTアラーム機能を手動で有効にする：
 
    - 設定したいタスクの**Detail Config**にアクセスします。
    - **Action**セクションを見つけます。
-   - **Serial Port / UART Output**を有効にするチェックボックスをオンにします。
+   - **Serial Port / UART Output**を有効にするためのボックスにチェックを入れます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/86.png" style={{width:250, height:'auto'}}/></div><br />
 
 :::tip
-実際のアプリケーションシナリオに応じて、画像の出力を有効にするかどうかを選択してください。**Include base64 image**が有効になっている場合、MCUには画像をキャッシュするために**少なくとも70kのメモリ**が必要です。
+実際のアプリケーションシナリオに応じて、画像の出力を有効にするかどうかを選択してください。**Include base64 image**が有効になっている場合、MCUは画像をキャッシュするために**少なくとも70kのメモリ**が必要です。
 :::
 
-上記のいずれかの方法でUARTアラーム機能を有効にすると、Watcherは指定されたアラーム内容を検出するたびにUARTを介して必要なアラーム情報を出力します。Watcherが適切な受信デバイス（マイクロコントローラーやシリアルターミナルを備えたコンピューターなど）に接続されていることを確認し、UARTを介して送信されたアラーム情報をキャプチャおよび処理してください。
-
-
+上記のいずれかの方法でUARTアラーム機能を有効にすると、Watcherは指定されたアラームコンテンツを検出するたびに、UART経由で必要なアラーム情報を出力します。UART経由で送信されるアラーム情報をキャプチャして処理するために、Watcherがマイクロコントローラーやシリアルターミナル付きのコンピューターなどの適切な受信デバイスに接続されていることを確認してください。
 
 ## WatcherからのUART出力の読み取り
 
-UART機能が有効になると、WatcherはUARTインターフェースを介してデータの送信を開始します。このセクションでは、WatcherのUART出力から受信したデータを読み取り、解釈する方法について詳しく説明します。必要なハードウェア接続、通信プロトコル、およびデータ形式をカバーし、スムーズで成功したデータ取得プロセスを確保します。
+UART機能が有効になると、WatcherはUARTインターフェース経由でデータの送信を開始します。このセクションでは、WatcherのUART出力から受信したデータを読み取り、解釈する方法について詳細なガイドを提供します。スムーズで成功したデータ取得プロセスを確保するために、必要なハードウェア接続、通信プロトコル、およびデータフォーマットについて説明します。
 
-デフォルトでは、Watcherは以下のUART設定を使用します：**115200のボーレート**、**8データビット**、**パリティなし**、**1ストップビット**、および**ハードウェアフロー制御なし**。WatcherのUARTインターフェースに接続する際は、受信デバイスが同じ設定で構成されていることを確認してください。
+デフォルトでは、Watcherは次のUART設定を使用します：ボーレート**115200**、**8データビット**、**パリティなし**、**1ストップビット**、**ハードウェアフロー制御なし**。WatcherのUARTインターフェースに接続する際は、適切な通信を確保するために、受信デバイスが同じ設定で構成されていることを確認してください。
 
-WatcherがUARTを介してアラーム情報を送信する際、`tf_module_uart_alarm.h`ヘッダーファイルで定義された`tf_module_uart_alarm_t`構造に基づいた特定のプロトコルと形式に従います。WatcherのUARTアラームモジュールのUARTプロトコルと形式は以下の通りです：
+WatcherがUART経由でアラーム情報を送信する際、`tf_module_uart_alarm.h`ヘッダーファイルで定義された`tf_module_uart_alarm_t`構造体に基づく特定のプロトコルとフォーマットに従います。WatcherのUARTアラームモジュールのUARTプロトコルとフォーマットは以下の通りです：
 
-### 出力形式
+### 出力フォーマット
 
-UART出力の形式は、`output_format`フィールドによって制御されます。
+UART出力のフォーマットは`output_format`フィールドによって制御されます。
 
-- `output_format`が0に設定されている場合、出力はバイナリ形式になります。
-- `output_format`が1に設定されている場合、出力はJSON形式になります。
+- `output_format`が0に設定されている場合、出力はバイナリフォーマットです。
+- `output_format`が1に設定されている場合、出力はJSONフォーマットです。
 
 :::note
 `output_format`はデフォルトで1に設定されており、JSON形式で出力されます。
 :::
 
-### バイナリ出力形式
+### バイナリ出力フォーマット
 
 `output_format`が0に設定されている場合、UART出力パケットの構造は以下の通りです：
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/api.png" style={{width:1000, height:'auto'}}/></div><br />
 
-- `PKT_MAGIC_HEADER`: パケットのマジックヘッダーで、固定値は"SEEED"（5バイト）。
-- `Prompt Str Len`: プロンプト文字列の長さ、リトルエンディアンの4バイト符号なし整数。
-- `Prompt Str`: Watcherが実行しているタスクを簡単に説明するためのプロンプト文字列。`text`パラメータが設定されている場合、その値が使用されます。
-- `Big Image Len`: 大きな画像の長さ、リトルエンディアンの4バイト符号なし整数。`include_big_image`が`true`の場合のみ含まれます。
-- `Big Image`: 640*480のJPG画像、Base64エンコード済み、検出されたオブジェクトのボックスなし。`include_big_image`が`true`の場合のみ含まれます。
-- `Small Image Len`: 小さな画像の長さ、リトルエンディアンの4バイト符号なし整数。`include_small_image`が`true`の場合のみ含まれます。
-- `Small Image`: 240*240のJPG画像、Base64エンコード済み、検出されたオブジェクトのボックス付き。`include_small_image`が`true`の場合のみ含まれます。
-- `Boxes Count`: 検出されたオブジェクトボックスの数、リトルエンディアンの4バイト符号なし整数。`include_boxes`が`true`の場合のみ含まれます。
-- `Box Structure`: 検出されたオブジェクトボックスの構造。各ボックスは10バイトを占め、座標、スコア、ターゲットクラスIDを含みます。`include_boxes`が`true`の場合のみ含まれます。
+- `PKT_MAGIC_HEADER`：パケットのマジックヘッダー、"SEEED"として固定（5バイト）。
+- `Prompt Str Len`：プロンプト文字列の長さ、リトルエンディアンの4バイト符号なし整数。
+- `Prompt Str`：プロンプト文字列、Watcherが実行しているタスクを簡潔に説明するために使用。`text`パラメータが設定されている場合、その値が使用されます。
+- `Big Image Len`：大きな画像の長さ、リトルエンディアンの4バイト符号なし整数。`include_big_image`が`true`の場合のみ含まれます。
+- `Big Image`：640*480 JPG画像、base64エンコード、検出されたオブジェクトのボックスなし。`include_big_image`が`true`の場合のみ含まれます。
+- `Small Image Len`：小さな画像の長さ、リトルエンディアンの4バイト符号なし整数。`include_small_image`が`true`の場合のみ含まれます。
+- `Small Image`：240*240 JPG画像、base64エンコード、検出されたオブジェクトのボックスが描画されています。`include_small_image`が`true`の場合のみ含まれます。
+- `Boxes Count`：検出されたオブジェクトボックスの数、リトルエンディアンの4バイト符号なし整数。`include_boxes`が`true`の場合のみ含まれます。
+- `Box Structure`：検出されたオブジェクトボックスの構造、各ボックスは10バイトを占有し、座標、スコア、ターゲットクラスIDを含みます。`include_boxes`が`true`の場合のみ含まれます。
 
 :::note
-認識されたボックス（boxes）メッセージは現時点では受信されません。この機能はWatcherの開発中であり、最新のv1.1リリースではまだ報告されていません。
+認識されたボックス（boxes）メッセージは現時点では受信されません。Watcherの対応機能はまだ開発中であり、最新のv1.1リリースではまだ報告されていないためです。
 :::
 
-### JSON出力形式
+### JSON出力フォーマット
 
 `output_format`が1に設定されている場合、UART出力パケットの構造は以下の通りです：
 
 ```json
 {
       "prompt": "People detected",
-      "big_image": "include_big_imageが有効な場合はBase64エンコードされたJPG画像、それ以外の場合はこのフィールドは省略されます",
+      "big_image": "base64 encoded JPG image, if include_big_image is enabled, otherwise this field is omitted",
       "inference":{
         "boxes": [
             {
@@ -138,65 +132,66 @@ UART出力の形式は、`output_format`フィールドによって制御され�
 
 }
 ```
-ここで、**(x,y)**は認識されたオブジェクトの中心点の位置を示し、**(w,h)**は認識ボックスの高さと幅を示します。以下の図のように、**score**は信頼度、**target_cls_id**は認識されたオブジェクトのIDです。
+
+この中で、**(x,y)** は認識されたオブジェクトの中心点位置であり、**(w,h)** は認識ボックスの高さと幅です。下図に示すとおりです。**score** は信頼度レベル、**target_cls_id** は認識されたオブジェクトIDです。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/xyhw.png" style={{width:400, height:'auto'}}/></div>
 
 ### 設定オプション
 
-- `output_format`: UART出力の形式を制御します。デフォルトは1（JSON形式）。
+- `output_format`: UART出力のフォーマットを制御します。デフォルトは1（JSON形式）です。
 - `text`: 出力パケットの`prompt`フィールドを埋めるために使用されます。
-- `include_big_image`: ブール値（true | false）、出力に大きな画像を含めるかどうかを制御します。デフォルトは`true`。
-- `include_boxes`: ブール値（true | false）、出力にボックスを含めるかどうかを制御します。デフォルトは`true`。
+- `include_big_image`: ブール値（true | false）、出力に大きな画像を含めるかどうかを制御します。デフォルトは`true`です。
+- `include_boxes`: ブール値（true | false）、出力にボックスを含めるかどうかを制御します。デフォルトは`true`です。
 
-注: もし設定フィールドが省略された場合、デフォルト値が適用されます。
+注意：設定フィールドが省略された場合、デフォルト値が適用されます。
 
 :::note
-認識されたボックス（boxes）メッセージは現時点では受信されません。これは、Watcherの対応する機能がまだ開発中であり、最新のv1.1リリースでは報告されていないためです。
+認識されたボックス（boxes）メッセージは現時点では受信されません。Watcherの対応機能はまだ開発中であり、最新のv1.1リリースではまだ報告されていないためです。
 :::
 
 ## XIAO ESP32シリーズ & Watcher
 
-WatcherをXIAO ESP32シリーズボードに接続し、Arduinoを使用してUARTデータを解析する方法を学びます。このセクションでは、WatcherをXIAO ESP32シリーズボードに接続し、Arduinoを使用してUARTデータを解析する方法を説明します。
+WatcherをXIAO ESP32シリーズボードに接続し、Arduinoを使用してUARTデータを解析する方法を学びます。このセクションでは、WatcherをXIAO ESP32シリーズボードに接続し、Arduinoを使用してUARTデータを解析する方法をガイドします。
 
 ### 配線
 
-このチュートリアルは以下のXIAOシリーズをサポートしています：
+このチュートリアルは以下のXIAOシリーズをサポートします：
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>XIAO ESP32C3</th>
-			<th>XIAO ESP32S3</th>
+ <table align="center">
+  <tr>
+   <th>XIAO ESP32C3</th>
+   <th>XIAO ESP32S3</th>
             <th>XIAO ESP32C6</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:110, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32C6/img/xiaoc6.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-p-5884.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 :::tip
-これは他のXIAOシリーズがサポートされていないという意味ではありません。主に、Watcherが報告するメッセージデータが約**100k**（最低でも70k）のメモリを占有するため、Watcher開発のUART部分にはESP32シリーズのXIAOを使用することをお勧めします。画像データを解析する必要がない場合は、他のXIAOのメモリでも十分です。
+これは他のXIAOシリーズがサポートされていないという意味ではありません。主にWatcherが報告するメッセージデータが約**100k**（最低70k）のメモリを占有するため、WatcherのUART部分の開発にはXIAOのESP32シリーズを使用することをお勧めします。画像データを解析する必要がない場合は、他のXIAOのメモリでも十分に対応できます。
 :::
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/63.png" style={{width:700, height:'auto'}}/></div><br />
@@ -207,20 +202,20 @@ WatcherをXIAO ESP32シリーズボードに接続し、Arduinoを使用してUA
 
 - WatcherのGNDピンをXIAOのGNDピンに接続します。
 
-### コードの説明
+### コード説明
 
-以下のプログラムを使用して、WatcherのUARTデータストリームを読み取ることができます。どのXIAO ESP32シリーズ開発ボード、または他のESP32シリーズボードでも使用可能です。
+任意のXIAO ESP32シリーズ開発ボードまたは他のESP32シリーズボードを使用して、以下のプログラムでWatcherのUARTデータストリームを読み取ることができます。
 
 :::note
-現在、JSONデータストリームのみが出力可能であるため、JSONデータストリームを解析するプログラムのみが提供されています。
+現在、JSONデータストリームのみ出力可能なため、JSONデータストリームを解析するプログラムのみ提供されています。
 
-他のXIAOが常にサポートされるわけではありません。主に、JSONストリームを解析するには少なくとも70kのメモリが必要です。
+他のXIAOは常にサポートされているわけではありません。主にJSONストリームの解析には最低70kのメモリが必要なためです。
 :::
 
 ```cpp
 #include <ArduinoJson.h>
 
-long int count = 0;  // アラームの数
+long int count = 0;  // Number of alarms
 
 void setup() {
   Serial.begin(115200);
@@ -228,25 +223,25 @@ void setup() {
   while(!Serial);
   delay(100);
 
-  Serial.println("デバイス準備完了。WatcherのJSONデータを待機中...");
+  Serial.println("Device Ready. Waiting for Watcher's JSON data...");
 }
 
 void loop() {
   if (Serial1.available()) {
-    // 解析されたJSONオブジェクトを格納するための十分なスペースを設定
-    const size_t capacity = 1024 * 100 + 512; // 最低70k、保険として100k
+    // Set up enough space to store the parsed JSON objects
+    const size_t capacity = 1024 * 100 + 512; // At least 70k, insurance 100k
     DynamicJsonDocument doc(capacity);
 
-    // Serial1からのストリーミング解析
+    // Streaming parsing from Serial1
     DeserializationError error = deserializeJson(doc, Serial1);
 
     if (error) {
-      Serial.print("deserializeJson() 失敗: ");
+      Serial.print("deserializeJson() failed: ");
       Serial.println(error.c_str());
       return;
     }
 
-    // 解析されたキーと値のペアを出力
+    // Print the parsed key-value pairs
     if (doc.containsKey("prompt")) {
       Serial.print("prompt: ");
       Serial.println(doc["prompt"].as<String>());
@@ -260,7 +255,7 @@ void loop() {
    if (doc.containsKey("inference")) {
      JsonArray boxes = doc["inference"]["boxes"][0].as<JsonArray>();
       Serial.println();
-      Serial.println("ボックス内の数値を取得できます。");
+      Serial.println("You can get the number inside the boxes.");
       Serial.print("Box -> ");
       Serial.print("x: ");
       Serial.print(boxes[0].as<int>());
@@ -276,115 +271,115 @@ void loop() {
       Serial.println(boxes[5].as<int>());
    }
     
-    // アプリで「Inculde base64 image」ボタンをオンにする必要があります（デフォルトはオフ）。
-    // その後、以下のコードをコメント解除してください。
+    // You need to turn on "Inculde base64 iamge" button in your app, default is off.
+    //And then, uncomment the following code.
     /*
     if (doc.containsKey("big_image")) {
       Serial.print("big_image: ");
       String big_imageData = doc["big_image"].as<String>();
-      // 例として画像データの最初の100文字のみを出力
+      // Print only the first 100 characters of the image data for example
       Serial.println(big_imageData.substring(0, 100) + "...");
     }
     */
 
 
     count++;
-    if(count > 2147483646){  // オーバーフロー防止
+    if(count > 2147483646){  // Spillage prevention
       count = 0;
     }
-    Serial.print("第 ");
+    Serial.print("The ");
     Serial.print(count);
-    Serial.println(" 回目のアラームメッセージ受信完了。次のメッセージを待機中...");
+    Serial.println(" alarm message reception is complete. Wait for the next message...");
     Serial.println("------------------------------------------------------------------");
   }
 }
 ```
 
-提供されたコードは、Arduino IDEとArduinoJsonライブラリを使用してWatcherからJSONデータを受信および解析する方法を示しています。以下はコードの簡単な説明です：
+提供されたコードは、Arduino IDEとArduinoJsonライブラリを使用してWatcherからJSONデータを受信し、解析する方法を示しています。コードの簡単な説明は以下の通りです：
 
-1. 必要なライブラリである **ArduinoJson** が含まれており、JSON の解析を処理します。このライブラリは Arduino のライブラリマネージャーで検索してインストールできます。
+1. JSON解析を処理するために必要なライブラリ **ArduinoJson** がインクルードされています。Arduinoのライブラリマネージャーで検索してインストールできます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://github.com/bblanchon/ArduinoJson" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}>GitHubへ移動 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}>Go To Github 🖱️</font></span></strong>
     </a>
 </div>
 
-2. `setup()` 関数では、USB シリアル（デバッグ用）と UART シリアル（Watcher からデータを受信するため）の両方のシリアル通信が初期化されます。
+2. `setup()` 関数では、USBシリアル（デバッグ用）とUARTシリアル（Watcherからのデータ受信用）の両方でシリアル通信が初期化されます。
 
-3. `loop()` 関数では、UART シリアルに利用可能なデータがあるかどうかを確認します。
+3. `loop()` 関数では、UARTシリアルで利用可能なデータがあるかどうかをチェックします。
 
-4. データが利用可能な場合、指定された容量で `DynamicJsonDocument` が作成され、解析された JSON オブジェクトを格納します。
+4. データが利用可能な場合、解析されたJSONオブジェクトを格納するために指定された容量で `DynamicJsonDocument` が作成されます。
 
-5. JSON データは `deserializeJson()` 関数を使用して解析され、解析エラーが処理されます。
+5. JSONデータは `deserializeJson()` 関数を使用して解析され、解析エラーが処理されます。
 
-6. その後、コードは解析された JSON オブジェクト内に特定のキー（例: "prompt", "big_image", "small_image"）が存在するかどうかを確認します。
+6. コードは解析されたJSONオブジェクト内の特定のキー（"prompt"、"big_image"、"small_image"など）の存在をチェックします。
 
 :::note
-認識されたボックス（boxes）に関する情報の解析は現在利用できません。これは Watcher の対応する機能がまだ開発中であり、最新の v1.0.1 バージョンではこの情報が報告されていないためです。
+認識されたボックス（boxes）に関する情報の解析は現在利用できません。Watcherの対応する機能がまだ開発中であり、この情報は最新のv1.0.1バージョンではまだ報告されていないためです。
 :::
 
-7. キーが見つかった場合、その対応する値がデバッグ目的で USB シリアルに出力されます。
+7. キーが見つかった場合、対応する値がデバッグ目的でUSBシリアルに出力されます。
 
-8. また、コードは `count` 変数を使用して受信したアラームメッセージの数を追跡します。
+8. コードは `count` 変数を使用して受信したアラームメッセージの数も追跡します。
 
-9. 最後に、各アラームメッセージの受信完了を示すメッセージが出力され、次のメッセージを待機します。
+9. 最後に、各アラームメッセージ受信の完了を示すメッセージが出力され、コードは次のメッセージを待機します。
 
-### XIAO ESP32 シリーズへのコードのアップロード
+### XIAO ESP32シリーズへのコードアップロード
 
-XIAO ESP32 シリーズボードにコードをアップロードするには、以下の手順を実行してください：
+XIAO ESP32シリーズボードにコードをアップロードするには、以下の手順に従ってください：
 
-1. USB ケーブルを使用して XIAO ESP32 シリーズボードをコンピュータに接続します。
+1. USBケーブルを使用してXIAO ESP32シリーズボードをコンピューターに接続します。
 
-2. Arduino IDE を開き、XIAO ESP32 シリーズ用の必要なボードサポートパッケージがインストールされていることを確認します。
+2. Arduino IDEを開き、XIAO ESP32シリーズに必要なボードサポートパッケージがインストールされていることを確認します。
 
-   - **Seeed Studio XIAO ESP32C3** を使用する場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32C3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started#software-setup)** を参照して追加を完了してください。
 
-   - **Seeed Studio XIAO ESP32S3** を使用する場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32s3_getting_started#software-preparation)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32S3** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32s3_getting_started#software-preparation)** を参照して追加を完了してください。
 
-   - **Seeed Studio XIAO ESP32C6** を使用する場合は、**[このチュートリアル](https://wiki.seeedstudio.com/ja/xiao_esp32c6_getting_started/)** を参照して追加を完了してください。
+   - ルーチンに **Seeed Studio XIAO ESP32C6** を使用したい場合は、**[このチュートリアル](https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/)** を参照して追加を完了してください。
 
-3. Arduino IDE のツールメニューから適切なボードとポートを選択します。
+3. Arduino IDEのToolsメニューから適切なボードとポートを選択します。
 
-4. Arduino IDE で提供されたコードを開きます。
+4. 提供されたコードをArduino IDEで開きます。
 
-5. **アップロード** ボタンをクリックしてコードをコンパイルし、XIAO ESP32 シリーズボードにアップロードします。
+5. **Upload** ボタンをクリックして、コードをコンパイルしてXIAO ESP32シリーズボードにアップロードします。
 
 ### 期待される結果
 
-コードが XIAO ESP32 シリーズボードにアップロードされ、実行されると、Watcher がターゲットアラームを識別した後、以下の動作が確認できます：
+コードがXIAO ESP32シリーズボードにアップロードされて実行されると、Watcherがターゲットアラームを識別した後、以下の動作が確認できるはずです：
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/62.png" style={{width:800, height:'auto'}}/></div><br />
 
-他の Arduino 開発ボードを使用することもできますが、十分なメモリがあることを確認してください。
+他のArduino開発ボードを使用することもできますが、十分なメモリがあることを確認してください。
 
 ## Raspberry Pi & Watcher
 
-WatcherをRaspberry Piに接続し、Pythonスクリプトを使用してUARTデータを解析および分析するプロセスを探ります。
+Watcherを Raspberry Pi に接続し、Python スクリプトを使用してUARTデータを解析・分析するプロセスを探索します。
 
 ### 配線
 
-このセクションでは、Raspberry Pi 5を例として説明します。必要に応じて、以下のリンクから注文することができます。
+このセクションでは Raspberry Pi 5 を例として説明します。必要であれば、以下のリンクから注文することができます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Raspberry Pi を購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Buy Raspberry Pi 🖱️</font></span></strong>
     </a>
 </div>
 
-他のRaspberry Piシリーズを使用している場合でも、コードや使用方法のチュートリアルは基本的に同じです。
+他の Raspberry Pi シリーズを使用している場合でも、使用方法のコードとチュートリアルは基本的に同じです。
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/65.png" style={{width:800, height:'auto'}}/></div><br />
 
-- WatcherのTXピンをRaspberry PiのRXピン（GPIO 15）に接続します。
+- Watcher の TX ピンを Raspberry Pi の RX ピン（GPIO 15）に接続します。
 
-- WatcherのRXピンをRaspberry PiのTXピン（GPIO 14）に接続します。
+- Watcher の RX ピンを Raspberry Pi の TX ピン（GPIO 14）に接続します。
 
-- WatcherのGNDピンをRaspberry PiのGNDピンに接続します。
+- Watcher の GND ピンを Raspberry Pi の GND ピンに接続します。
 
-### コードの説明
+### コード説明
 
-Pythonスクリプトを実行する前に、必要な依存関係をインストールしてください：
+Python スクリプトを実行する前に、必要な依存関係をインストールしてください：
 
 ```
 sudo apt update
@@ -405,7 +400,7 @@ ls /dev/ttyAMA*
 ```python
 import serial
 
-# シリアルポートの設定
+# Set up the serial port
 ser = serial.Serial('/dev/ttyAMA0', 115200, timeout=1) 
 
 def read_json_from_serial():
@@ -415,19 +410,21 @@ def read_json_from_serial():
             print(data.decode().strip())
 
 if __name__ == "__main__":
-    print("Raspberry PiでシリアルJSONリーダーを開始します...")
+    print("Starting serial JSON reader on Raspberry Pi...")
     read_json_from_serial()
 ```
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/68.png" style={{width:900, height:'auto'}}/></div><br />
 
 :::note
-1. 私のUARTインターフェースは`/dev/ttyAMA0`に対応しています。異なる場合は、自分で修正してください。
 
-2. このスクリプトは、Raspberry Pi/WatcherのUARTが正常に動作しているかを確認するためのテストスクリプトです。
+1. 私のUARTインターフェースは `/dev/ttyAMA0` に対応しています。もしあなたのものが異なる場合は、自分で修正してください。
+
+2. これはテストスクリプトで、Raspberry Pi/WatcherのUARTが正常に動作しているかどうかを確認するために使用できます。
+
 :::
 
-2つ目のPythonスクリプトは、最初のスクリプトを基にしてJSON解析と画像データの保存機能を追加しています：
+2番目のPythonスクリプトは最初のスクリプトをベースに構築され、JSONパースと画像データの保存機能を追加しています：
 
 ```python
 import json
@@ -436,10 +433,10 @@ import base64
 from PIL import Image
 import io
 
-# シリアルポートの設定
+# Set up the serial port
 ser = serial.Serial('/dev/ttyAMA0', 115200, timeout=1)
 
-# 画像カウンターの初期化
+# Initialize image counters
 big_image_counter = 1
 small_image_counter = 1
 
@@ -458,80 +455,80 @@ def read_json_from_serial():
 
                     try:  
                         data = json.loads(json_data)
-                        print("JSONデータを受信しました。処理中...")
+                        print("Received JSON data, processing...")
                         process_json_data(data)
                     except json.JSONDecodeError:
-                        print("JSONのデコードエラー")  
+                        print("Error decoding JSON")  
                         buffer = json_data + buffer
     except Exception as e:
-        print(f"エラーが発生しました: {e}")
+        print(f"An error occurred: {e}")
 
 def process_json_data(data):
-    global big_image_counter, small_image_counter  # グローバル変数の宣言
+    global big_image_counter, small_image_counter  # Declare global variables
 
-    # プロンプト情報の処理
+    # Process prompt info
     if "prompt" in data:  
-        print(f"プロンプト: {data['prompt']}")
+        print(f"Prompt: {data['prompt']}")
     
-    # ボックス情報の処理
+    # Process boxes info
     #if "boxes" in data:
         #for index, box in enumerate(data['boxes']):
-            #print(f"ボックス {index + 1} - x: {box['x']}, y: {box['y']}, w: {box['w']}, h: {box['h']}, スコア: {box['score']}, ターゲットクラスID: {box['target_cls_id']}")
+            #print(f"Box {index + 1} - x: {box['x']}, y: {box['y']}, w: {box['w']}, h: {box['h']}, score: {box['score']}, target_cls_id: {box['target_cls_id']}")
 
     if "big_image" in data:  
         filename = f'big_image_{big_image_counter}.png'
         decode_and_save_image(data['big_image'], filename) 
-        print(f"大きな画像を処理し、{filename}として保存しました。")
-        big_image_counter += 1  # グローバル変数を更新
+        print(f"Big image processed and saved as {filename}.")
+        big_image_counter += 1  # Update global variable 
 
     if "small_image" in data:
         filename = f'small_image_{small_image_counter}.png' 
         decode_and_save_image(data['small_image'], filename)
-        print(f"小さな画像を処理し、{filename}として保存しました。")  
-        small_image_counter += 1  # グローバル変数を更新
+        print(f"Small image processed and saved as {filename}.")  
+        small_image_counter += 1  # Update global variable
 
 def decode_and_save_image(base64_data, filename):
     image_bytes = base64.b64decode(base64_data)
     image = Image.open(io.BytesIO(image_bytes))
-    image.save(filename)  # PNGファイルとして保存
+    image.save(filename)  # Save as PNG file
     return image
 
 if __name__ == "__main__": 
-    print("Raspberry PiでシリアルJSONリーダーを開始します...")
+    print("Starting serial JSON reader on Raspberry Pi...")
     read_json_from_serial()
 ```
 
 :::note
-現在、JSONデータストリームのみが出力可能であるため、JSONデータストリームを解析するプログラムのみが提供されています。
+現在、JSON データストリームのみ出力可能なため、JSON データストリームを解析するプログラムのみが提供されています。
 :::
 
-このスクリプトは以下を行います：
+このスクリプトは以下の処理を行います：
 
-- UARTからJSONデータをループで読み取ります。
+- ループ内で UART から JSON データを読み取り
 
-- JSONデータをデコードし、`process_json_data`を呼び出して処理します。
+- JSON データをデコードし、`process_json_data` を呼び出して処理
 
-- JSONからプロンプト情報と画像データを抽出します。
+- JSON からプロンプト情報と画像データを抽出
 
 :::note
-認識されたボックス（boxes）に関する情報の解析は現在利用できません。Watcherの対応する機能がまだ開発中であり、最新バージョンv1.0.1ではこの情報が報告されていません。
+認識されたボックス（boxes）に関する情報の解析は現在利用できません。これは、Watcher の対応機能がまだ開発中であり、この情報が最新の v1.0.1 バージョンではまだ報告されていないためです。
 :::
 
-- Base64でエンコードされた画像データをデコードし、`decode_and_save_image`を使用してPNGファイルとして保存します。
+- base64 エンコードされた画像データをデコードし、`decode_and_save_image` を使用して PNG ファイルとして保存
 
-- 抽出した情報と保存された画像のファイル名を出力します。
+- 抽出された情報と保存された画像のファイル名を出力
 
-### Raspberry Piでコードを実行する
+### Raspberry Pi でのコード実行
 
-1. Raspberry Pi上で新しいPythonファイルを作成します（例：watcher_uart.py）：
+1. Raspberry Pi で新しい Python ファイルを作成します（例：watcher_uart.py）：
 
 ```
 nano watcher_uart.py
 ```
 
-2. 完全なPythonコードをファイルにコピー＆ペーストします。
+2. 完全なPythonコードをファイルにコピー&ペーストします。
 
-3. Ctrl+Xを押し、次にYを押してEnterを押し、エディタを保存して終了します。
+3. Ctrl+Xを押し、次にYとEnterを押して保存し、エディタを終了します。
 
 4. Pythonスクリプトを実行します：
 
@@ -545,23 +542,23 @@ python watcher_uart.py
 
 スクリプトを実行した後：
 
-- Watcherから受信した解析済みJSONデータは、リアルタイムでターミナルに表示されます。
+- WatcherからのパースされたJSONデータがターミナルにリアルタイムで出力されます。
 
-- 受信した大画像と小画像は、自動的にbig_image_x.pngおよびsmall_image_x.pngファイルとして保存されます。
+- 受信した大きな画像と小さな画像は、big_image_x.pngとsmall_image_x.pngファイルとして自動的に保存されます。
 
-以上です！これでWatcherをRaspberry Piに接続し、PythonでUARTデータを読み取り、JSONを解析し、送信された画像を保存する方法を学びました。さらに実験を行い、例えばRaspberry Piに接続された画面に受信データをリアルタイムで表示することなどを試してみてください。
+以上です！これで、WatcherをRaspberry Piに接続し、PythonでUARTデータを読み取り、JSONをパースし、送信された画像を保存する方法を学びました。Raspberry Piに接続されたスクリーンに受信データをリアルタイムで表示するなど、さらなる実験を自由に行ってください。
 
 ## reComputer Jetson & Watch
 
-WatcherをreComputer（NVIDIA Jetsonベースのデバイス）に接続し、Pythonスクリプトを使用してUARTデータを解析・分析するプロセスを探ります。
+WatcherをreComputer（NVIDIA Jetsonベースのデバイス）に接続し、Pythonスクリプトを使用してUARTデータをパースおよび分析するプロセスを探索します。
 
 ### 配線
 
-このチュートリアルでは、開発者向けに適したJ401 reComputerキャリアボードを例として説明します。reComputerを購入したい場合は、以下のリンクから入手できます。
+このチュートリアルでは、開発者に適したJ401 reComputerキャリアボードを例として説明します。reComputerを購入したい場合は、以下のリンクから入手できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-J4012-w-o-power-adapter-p-5628.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> reComputerを購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Buy reComputer 🖱️</font></span></strong>
     </a>
 </div>
 
@@ -585,7 +582,7 @@ sudo apt-get install python3-serial
 sudo apt-get install python3-pillow
 ```
 
-UARTでシリアルコンソールを使用しない場合は、シリアルコンソールを無効にする必要があります：
+UARTでシリアルコンソールを使用する予定がない場合は、シリアルコンソールを無効にする必要があります：
 
 ```
 systemctl stop nvgetty
@@ -593,9 +590,9 @@ systemctl disable nvgetty
 udevadm trigger
 ```
 
-この時点でreComputerを再起動する必要がある場合があります。
+この時点で変更を有効にするために、reComputerを再起動する必要がある場合があります。
 
-reComputerのUARTインターフェースのデバイス名を確認します：
+reComputer上のUARTインターフェースのデバイス名を確認してください：
 
 ```
 ls /dev/ttyTHS*
@@ -603,12 +600,12 @@ ls /dev/ttyTHS*
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/71.png" style={{width:700, height:'auto'}}/></div><br />
 
-最初のPythonスクリプトは、UART経由でWatcherからJSONデータを読み取り、それを表示します：
+最初のPythonスクリプトは、UART経由でWatcherからJSONデータを読み取り、それを出力します：
 
 ```python
 import serial
 
-# シリアルポートの設定
+# Set up the serial port
 ser = serial.Serial('/dev/ttyTHS0', 115200, timeout=1) 
 
 def read_json_from_serial():
@@ -618,19 +615,21 @@ def read_json_from_serial():
             print(data.decode().strip())
 
 if __name__ == "__main__":
-    print("reComputerでシリアルJSONリーダーを開始します...")
+    print("Starting serial JSON reader on reComputer...")
     read_json_from_serial()
 ```
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/70.png" style={{width:1000, height:'auto'}}/></div><br />
 
 :::note
-1. 私のUARTインターフェースは`/dev/ttyTHS0`に対応しています。異なる場合は、自分で修正してください。
 
-2. これは、reComputer/WatcherのUARTが正常に動作しているかどうかを確認するためのテストスクリプトです。
+1. 私のUARTインターフェースは `/dev/ttyTHS0` に対応しています。もしあなたのものが異なる場合は、自分で修正してください。
+
+2. これはテストスクリプトで、reComputer/WatcherのUARTが正常に動作しているかどうかを確認するために使用できます。
+
 :::
 
-2番目のPythonスクリプトは、最初のスクリプトを基にしてJSON解析と画像データの保存を追加します：
+2番目のPythonスクリプトは最初のスクリプトをベースに構築され、JSONパースと画像データの保存機能を追加しています：
 
 ```python
 import json
@@ -639,10 +638,10 @@ import base64
 from PIL import Image
 import io
 
-# シリアルポートの設定
+# Set up the serial port
 ser = serial.Serial('/dev/ttyTHS0', 115200, timeout=1)
 
-# 画像カウンターの初期化
+# Initialize image counters
 big_image_counter = 1
 small_image_counter = 1
 
@@ -661,78 +660,78 @@ def read_json_from_serial():
 
                     try:  
                         data = json.loads(json_data)
-                        print("JSONデータを受信しました。処理中...")
+                        print("Received JSON data, processing...")
                         process_json_data(data)
                     except json.JSONDecodeError:
-                        print("JSONのデコードエラー")  
+                        print("Error decoding JSON")  
                         buffer = json_data + buffer
     except Exception as e:
-        print(f"エラーが発生しました: {e}")
+        print(f"An error occurred: {e}")
 
 def process_json_data(data):
-    global big_image_counter, small_image_counter  # グローバル変数の宣言
+    global big_image_counter, small_image_counter  # Declare global variables
 
-    # プロンプト情報の処理
+    # Process prompt info
     if "prompt" in data:  
-        print(f"プロンプト: {data['prompt']}")
+        print(f"Prompt: {data['prompt']}")
     
-    # ボックス情報の処理
+    # Process boxes info
     #if "boxes" in data:
         #for index, box in enumerate(data['boxes']):
-            #print(f"ボックス {index + 1} - x: {box['x']}, y: {box['y']}, w: {box['w']}, h: {box['h']}, score: {box['score']}, target_cls_id: {box['target_cls_id']}")
+            #print(f"Box {index + 1} - x: {box['x']}, y: {box['y']}, w: {box['w']}, h: {box['h']}, score: {box['score']}, target_cls_id: {box['target_cls_id']}")
 
     if "big_image" in data:  
         filename = f'big_image_{big_image_counter}.png'
         decode_and_save_image(data['big_image'], filename) 
-        print(f"大画像を処理し、{filename}として保存しました。")
-        big_image_counter += 1  # グローバル変数の更新
+        print(f"Big image processed and saved as {filename}.")
+        big_image_counter += 1  # Update global variable 
 
     if "small_image" in data:
         filename = f'small_image_{small_image_counter}.png' 
         decode_and_save_image(data['small_image'], filename)
-        print(f"小画像を処理し、{filename}として保存しました。")  
-        small_image_counter += 1  # グローバル変数の更新
+        print(f"Small image processed and saved as {filename}.")  
+        small_image_counter += 1  # Update global variable
 
 def decode_and_save_image(base64_data, filename):
     image_bytes = base64.b64decode(base64_data)
     image = Image.open(io.BytesIO(image_bytes))
-    image.save(filename)  # PNGファイルとして保存
+    image.save(filename)  # Save as PNG file
     return image
 
 if __name__ == "__main__": 
-    print("reComputerでシリアルJSONリーダーを開始します...")
+    print("Starting serial JSON reader on reComputer...")
     read_json_from_serial()
 ```
 
 :::note
-現在、JSONデータストリームのみを出力できるため、JSONデータストリームを解析するプログラムのみが提供されています。
+現在、JSON データストリームのみが出力可能なため、JSON データストリームを解析するプログラムのみが提供されています。
 :::
 
-このスクリプトは以下を行います：
+このスクリプトは以下の処理を行います：
 
-- UARTからJSONデータをループで読み取る
+- ループ内で UART から JSON データを読み取り
 
-- JSONデータをデコードし、`process_json_data`を呼び出して処理する
+- JSON データをデコードし、process_json_data を呼び出して処理
 
-- JSONからプロンプト情報と画像データを抽出する
+- JSON からプロンプト情報と画像データを抽出
 
-- Base64でエンコードされた画像データをデコードし、`decode_and_save_image`を使用してPNGファイルとして保存する
+- base64 エンコードされた画像データをデコードし、`decode_and_save_image` を使用して PNG ファイルとして保存
 
 :::note
-認識されたボックス（boxes）に関する情報の解析は現在利用できません。Watcherの対応する機能はまだ開発中であり、最新のv1.0.1バージョンではこの情報はまだ報告されていません。
+認識されたボックス（boxes）に関する情報の解析は現在利用できません。これは、Watcher の対応する機能がまだ開発中であり、この情報が最新の v1.0.1 バージョンではまだ報告されていないためです。
 :::
 
-- 抽出された情報と保存された画像のファイル名を出力します
+- 抽出された情報と保存された画像のファイル名を出力
 
-### reComputerへのコードのアップロード
+### reComputer へのコードのアップロード
 
-reComputer上で新しいPythonファイルを作成します。例: `watcher_uart.py`:
+reComputer 上で新しい Python ファイルを作成します。例：`watcher_uart.py`：
 
 ```
 nano watcher_uart.py
 ```
 
-完全なPythonコードをファイルにコピー＆ペーストします。Ctrl+Xを押し、次にYを押してEnterを押すことで保存してエディタを終了します。Pythonスクリプトを実行します:
+完全なPythonコードをファイルにコピー＆ペーストしてください。Ctrl+Xを押し、次にYとEnterを押して保存し、エディタを終了します。Pythonスクリプトを実行してください：
 
 ```
 sudo python watcher_uart.py
@@ -742,35 +741,33 @@ sudo python watcher_uart.py
 
 <br /><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/72.png" style={{width:1000, height:'auto'}}/></div><br />
 
-スクリプトを実行した後:
+スクリプトを実行した後：
 
-- Watcherから受信した解析済みのJSONデータがリアルタイムでターミナルに表示され、プロンプト情報が含まれます。
+- Watcherから受信した解析済みJSONデータが、プロンプト情報を含めてターミナルにリアルタイムで出力されます。
 
-- 受信した大きな画像と小さな画像は自動的にbig_image_x.pngおよびsmall_image_x.pngファイルとして保存されます。
+- 受信した大きな画像と小さな画像は、big_image_x.pngとsmall_image_x.pngファイルとして自動的に保存されます。
 
-以上です！これでWatcherをreComputerに接続し、PythonでUARTデータを読み取り、JSONを解析し、送信された画像を保存する方法を学びました。さらに実験を行い、コードをreComputerプラットフォーム上の特定のユースケースに適応させてみてください。
-
+以上です！これでWatcherをreComputerに接続し、PythonでUARTデータを読み取り、JSONを解析し、送信された画像を保存する方法を学びました。さらに実験を行い、reComputerプラットフォーム上で特定の用途に合わせてコードを適応させてください。
 
 ## リソース
 
-- [SenseCAP Watcherの使い方](https://wiki.seeedstudio.com/ja/getting_started_with_watcher/)
+- [Getting Started with SenseCAP Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-- [Watcherクイックスタートシリーズ1#: Watcherにタスクを割り当てる方法](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_task/)
+- [Watcher Quick Start Series 1# : How to assign tasks to Watcher](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-- [Watcherクイックスタートシリーズ2#: Watcherの外観とSenseCraftツール](https://wiki.seeedstudio.com/ja/getting_started_with_watcher_look_tool)
+- [Watcher Quick Start Series 2# : Watcher Looks & SenseCraft Tools](https://wiki.seeedstudio.com/integrate_watcher_to_ha/#step-6-place-the-task-and-configure-the-http-message-block)
 
-- [Watcherクイックスタートシリーズ3#: センサーとしての使用 & Groveの利用](https://wiki.seeedstudio.com/ja/watcher_as_grove)
+- [Watcher Quick Start Series 3# : As a sensor & Use Grove](https://wiki.seeedstudio.com/watcher_as_grove)
 
-- [Watcherクイックスタートシリーズ4#: WatcherのAI機能をローカルで展開する](https://wiki.seeedstudio.com/ja/watcher_local_deploy)
+- [Watcher Quick Start Series 4# : Deploy Watcher's AI capabilities locally](https://wiki.seeedstudio.com/watcher_local_deploy)
 
-- Watcherクイックスタートシリーズ5#: Watcher用のモデルをトレーニングする
+- Watcher Quick Start Series 5# : Training a model for Watcher
 
-- [Watcherクイックスタートシリーズ6#: Watcherの機能](https://wiki.seeedstudio.com/ja/what_does_watcher_do)
-
+- [Watcher Quick Start Series 6# : What does Watcher do](https://wiki.seeedstudio.com/what_does_watcher_do)
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

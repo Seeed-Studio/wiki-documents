@@ -11,15 +11,15 @@ last_update:
 ---
 
 
-[Qubitro](https://www.qubitro.com/) 是一个面向开发者的设备数据平台（DDP），提供您快速开发解决方案所需的工具、工作流程和基础设施，无需手动集成多个服务。Qubitro 开箱即用地支持流行的数据源，并提供项目实时协作工具以及可扩展的基础设施。
+[Qubitro](https://www.qubitro.com/) 是一个面向开发者的设备数据平台（DDP），提供您快速开发解决方案所需的工具、工作流程和基础设施，无需手动集成多个服务。Qubitro 开箱即用地支持流行的数据源，并提供实时协作工具和可扩展的基础设施。
 
-本章内容将指导用户如何通过 TTN 将 SenseCAP [T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) 连接到 Qubitro。
+本章内容将指导用户如何通过 TTN 将 SenseCAP [T1000 追踪器](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)连接到 Qubitro。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/qubitro_in1.png" alt="pir" width={800} height="auto" /></p>
 
-在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN)，首先将您的 SenseCAP T1000 Tracker 连接到 TTS。
+在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN)，首先将您的 SenseCAP T1000 追踪器连接到 TTS。
 
-## 配置 Qubitro
+## 配置 Qubitro 
 
 首先，在 [Qubitro](https://portal.qubitro.com/login) 创建一个账户。创建账户后，您将自动获得入门计划。
 

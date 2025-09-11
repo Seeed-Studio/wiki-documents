@@ -7,34 +7,30 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Jetson-Mate
 last_update:
-  date: 05/15/2025
+  date: 01/05/2023
   author: w0x7ce
 
 no_comments: false # for Disqus
 
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Jetson Mate 入門ガイド
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/banner-2.png" /></div>
 
-**Jetson Mate**は、最大**4つのNvidia Jetson Nano/NX SoM**を搭載できるキャリアボードです。オンボードには**5ポートギガビットスイッチがあり、4つのSoMが相互に通信可能**です。3つの周辺SoMは個別に電源をオンまたはオフにすることができます。Jetson Nano SoMには65W 2ポートPD充電器、Jetson NX SoMには90W 2ポートPD充電器、そして1本のイーサネットケーブルを使用することで、開発者は簡単に独自のJetsonクラスターを構築できます。
+**Jetson Mate** は最大 **4台のNvidia Jetson Nano/NX SoM** を搭載できるキャリアボードです。オンボードの **5ポートギガビットスイッチにより、4台のSoM間での相互通信** が可能です。3台の周辺SoMはそれぞれ個別に電源のオン・オフが可能です。Jetson Nano SoM用の65W 2ポートPD充電器、またはJetson NX SoM用の90W 2ポートPD充電器と1本のイーサネットケーブルがあれば、開発者は簡単に独自のJetsonクラスターを構築できます。
 
 ## 特徴
 
-- 簡単に構築および設定可能
-- 強力かつコンパクト
-- 専用ケースとファン付き
+- 構築と設定が簡単
+- パワフルでコンパクト
+- 専用ケースとファンが付属
 
 ## 仕様
 
 |仕様|--|
 |--|--|
-|電源|65W PD|
+|電源|65w PD|
 |寸法|110mm x 110mm|
 |オンボードスイッチ|Microchip KSZ9896CTXC|
 
@@ -44,38 +40,38 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/JetsonMate-2.png" /></div>
 
-## 入門ガイド
+## はじめに
 
-!!!注意
-        このガイドでは、ホストPCにUbuntu 18.04 LTSがインストールされています。現在、NVIDIA SDK Managerを使用したOSのフラッシュはUbuntu 20.04ではサポートされていません。そのため、Ubuntu 18.04または16.04を使用してください。また、仮想マシン上でUbuntuを実行している場合は、[VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)を使用することをお勧めします。これはテスト済みです。Oracle VM VirtualBoxはOSのフラッシュに失敗するため、使用を推奨しません。
+!!!Note
+        このガイドでは、ホストPCにUbuntu 18.04 LTSがインストールされています。現在、NVIDIA SDK Managerを使用したOSフラッシュはUbuntu 20.04ではサポートされていません。そのため、Ubuntu 18.04または16.04を使用してください。また、仮想マシン上でUbuntuを実行している場合は、テスト済みの[VMware Workstation Player](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)の使用を推奨します。Oracle VM VirtualBoxはOSフラッシュに失敗するため、使用は推奨されません。
 
 ### 必要なハードウェア
 
 - Jetson Mate
-- Jetson Nano/ NX モジュール
-- Micro - USB ケーブル
-- 65Wまたは90Wの充電アダプターとUSB Type-Cケーブル
+- Jetson Nano/ NXモジュール
+- Micro - USBケーブル
+- USB Type-Cケーブル付き65Wまたは90W充電アダプター
 - Ubuntu 18.04または16.04がインストールされたホストPC
 
 ### ハードウェアセットアップ
 
-- **ステップ1.** **Jetson Nano/ NX**モジュールを**マスターノード**に挿入します
+- **ステップ 1.** **Jetson Nano/ NX**モジュールを**Master Node**に挿入します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/h-3.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **ステップ2.** Jetson MateからPCに**micro-USB**ケーブルを接続します
+- **ステップ 2.** Jetson MateからPCに**micro-USB**ケーブルを接続します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/micro-usb.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **ステップ3.** **リカバリモード**のために**BOOTとGNDピン**の間にジャンパーを接続します
+- **ステップ 3.** **リカバリーモード**のために**BOOTとGNDピン**の間にジャンパーを接続します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/jumper.jpg" alt="pir" width={800} height="auto" /></p>
 
-- **ステップ4.** Jetson Mateを電源アダプターに接続し、**WAKE**ボタンを押してJetson Mateをオンにします
+- **ステップ 4.** Jetson Mateを電源アダプターに接続し、**WAKE**ボタンを押してJetson Mateの電源を入れます
 
-- **ステップ5.** Jetson Mateがオンになった後、ジャンパーを取り外します
+- **ステップ 5.** Jetson Mateの電源が入った後、ジャンパーを取り外します
 
-- **ステップ6.** ホストPCでターミナルウィンドウを開き、以下を実行します
+- **ステップ 6.** ホストPCでターミナルウィンドウを開き、以下を実行します
 
 ```sh
 lsusb
@@ -83,72 +79,72 @@ lsusb
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/1.png" alt="pir" width={800} height="auto" /></p>
 
-出力に**0955:7f21 NVidia Corp.**が含まれている場合、Jetson Mateはリカバリモードに入っています
+出力に **0955:7f21 NVidia Corp.** が含まれている場合、Jetson Mate はリカバリモードに入っています
 
 ### ソフトウェアセットアップ
 
-> 開発キットのmicro-SDカードを使用している場合は、[Jetson Nanoのこのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)、[Jetson Nano 2GBのこのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)、および[Jetson Xavier NXのこのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit)に従ってシステムをインストールおよび設定することをお勧めします。
+> Developer Kit の micro-SD カードを搭載したモジュールを使用している場合は、[Jetson Nano 用のこちらのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)、[Jetson Nano 2GB 用のこちらのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-2gb-devkit)、[Jetson Xavier NX 用のこちらのガイド](https://developer.nvidia.com/embedded/learn/get-started-jetson-xavier-nx-devkit)に従ってシステムをインストールおよび設定することをお勧めします
 
-eMMCストレージを搭載したモジュールを使用している場合は、NVIDIAの公式SDK Managerを使用し、以下の手順に従ってください。
+eMMC ストレージを搭載したモジュールを使用している場合は、NVIDIA の公式 SDK Manager を使用し、以下の手順に従ってください
 
-- **ステップ1.** [こちらをクリック](https://developer.nvidia.com/nvidia-sdk-manager)して**NVIDIA SDK Manager**をダウンロードします
+- **ステップ 1.** [こちら](https://developer.nvidia.com/nvidia-sdk-manager)をクリックして **NVIDIA SDK Manager** をダウンロードします
 
-**注意:** ホストPCのOSに応じて適切なバージョンを選択してください。このガイドではホストPCがUbuntu 18.04を使用しているため、Ubuntuを選択します。
+**注意:** ホスト PC の OS に応じて関連するバージョンを選択してください。このガイドで使用するホスト PC は Ubuntu 18.04 を実行しているため、ここでは Ubuntu を選択します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/SDK-Manager.png" alt="pir" width={800} height="auto" /></p>
 
-- **ステップ2.** **NVIDIA Developer Program Membership**にアカウントを作成するかログインします
+- **ステップ 2.** **NVIDIA Developer Program Membership** のアカウントを作成するか、ログインします
 
-- **ステップ3.** NVIDIA SDK Managerをインストールします
+- **ステップ 3.** NVIDIA SDK Manager をインストールします
 
 **注意:** ダウンロードしたファイルをダブルクリックしてインストールします
 
-- **ステップ4.** NVIDIA SDK Managerを開くと、接続されたJetson Nano/ NXモジュールが自動的に検出されます
+- **ステップ 4.** NVIDIA SDK Manager を開くと、接続された Jetson Nano/ NX モジュールが自動的に検出されることがわかります
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/2.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ5.** 接続されたモジュールを選択します
+- **ステップ 5.** 接続されたモジュールを選択します
 
-- **ステップ6.** 設定ウィンドウで、**ホストマシン**を**チェック解除**します。
+- **ステップ 6.** 設定ウィンドウで、Host Machine の**チェックを外します**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/3.png" alt="pir" width={1000} height="auto" /></p>
 
-**注意:** ここでは**DeepStream SDK**もチェック解除されています。ただし、これをインストールする予定がある場合はチェックすることができます。ただし、eMMCモジュールの**16GB**ではこのSDKをインストールするには十分ではありません。
+**注意:** ここでは **DeepStream SDK** もチェックが外されています。しかし、これもインストールする予定がある場合は、チェックを入れることができます。ただし、eMMC モジュールの **16GB** では、この SDK をインストールするのに十分ではありません。
 
-- **ステップ7.** **CONTINUE TO STEP 02**をクリックします
+- **ステップ 7.** **CONTINUE TO STEP 02** をクリックします
 
-- **ステップ8.** 必要なコンポーネントを確認し、**ライセンス契約の条件に同意します**をチェックします
+- **ステップ 8.** 必要なコンポーネントを確認し、**I accept the terms and conditions of the license agreements** にチェックを入れます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/5.png" alt="pir" width={1000} height="auto" /></p>
 
-**注意:** **Jetson OS**のみをインストールしたい場合は、**Jetson SDK Components**をチェック解除することができます
+**注意:** **Jetson OS** のみをインストールしたい場合は、**Jetson SDK Components** のチェックを外すことができます
 
-- **ステップ9.** **CONTINUE TO STEP 03**をクリックします
+- **ステップ 9.** **CONTINUE TO STEP 03** をクリックします
 
-- **ステップ10.** 以下のエラーメッセージが表示されたら、**Create**をクリックします
+- **ステップ 10.** 以下のエラーメッセージがポップアップしたら、**Create** をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/6.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ11.** ダウンロードとフラッシュを開始します
+- **ステップ 11.** ダウンロードとフラッシュを開始します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/7.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ12.** OSのダウンロードとフラッシュが完了すると、以下の出力が表示されます
+- **ステップ 12.** OS のダウンロードとフラッシュが完了すると、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/8.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 13.** Jetson Mate を電源オフにします。
+- **ステップ 13.** Jetson Mate の電源を切ります
 
-- **ステップ 14.** ホスト PC でターミナルウィンドウを開き、シリアルターミナルアプリケーションである **minicom** をインストールします。
+- **ステップ 14.** ホスト PC でターミナルウィンドウを開き、シリアルターミナルアプリケーションである **minicom** をインストールします
 
 ```sh
 sudo apt update
 sudo apt install minicom
 ```
 
-**注意:** このアプリケーションを使用して、ホスト PC と Jetson Mate の間でシリアル接続を確立します。
+**注意:** このアプリケーションを使用して、ホストPCとJetson Mate間のシリアル接続を確立します
 
-- **ステップ 15.** Jetson Mate を PC に micro-USB ケーブルで接続した状態で電源をオンにし、以下のコマンドを入力して接続されたシリアルポートを確認します。
+- **ステップ 15.** Jetson MateをmicroUSBケーブルでPCに接続したまま電源を入れ、以下を入力して接続されたシリアルポートを識別します
 
 ```sh
 dmesg | grep tty
@@ -156,72 +152,72 @@ dmesg | grep tty
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/grep_tty.png" alt="pir" width={1000} height="auto" /></p>
 
-**注意:** ここでポート名は **ttyACM0** です。
+**注意:** ここでのポート名は **ttyACM0** です
 
-- **ステップ 16.** minicom を使用して Jetson Mate に接続します。
+- **ステップ 16.** minicomを使用してJetson Mateに接続します
 
 ```sh
 sudo minicom -b 9600 -D /dev/ttyACM0
 ```
 
-**注意:** -b はボーレート、-D はデバイスを指定します。
+**注意:** -b はボーレートで、-D はデバイスです
 
-- **ステップ 17.** Jetson OS の **初期設定** を進めます。
+- **ステップ 17.** Jetson OS の**初期設定**を実行します
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/initial-config-minicom.png" alt="pir" width={800} height="auto" /></p>
 
-- **ステップ 18.** 設定が完了したら、SDK Manager ウィンドウに戻り、Jetson Mate 用に設定した **ユーザー名とパスワード** を入力して **Install** をクリックします。
+- **ステップ 18.** 設定が完了したら、SDK Manager ウィンドウに戻り、Jetson Mate に設定した**ユーザー名とパスワード**を入力して**Install**をクリックします
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/9.png" alt="pir" width={1000} height="auto" /></p>
 
-**注意:** 初期設定で設定したユーザー名とパスワードを使用してください。
+**注意:** 初期設定で設定したユーザー名とパスワードを使用してください
 
-これで SDK コンポーネントのダウンロードとインストールが開始されます。
+これで SDK コンポーネントのダウンロードとインストールが開始されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/10.png" alt="pir" width={1000} height="auto" /></p>
 
-SDK Manager が必要なコンポーネントを正常にダウンロードおよびインストールすると、以下の出力が表示されます。
+SDK マネージャーが必要なコンポーネントを正常にダウンロードしてインストールすると、以下の出力が表示されます
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/11.png" alt="pir" width={1000} height="auto" /></p>
 
-- **ステップ 19.** 残りの Jetson Nano/ NX モジュールをすべてフラッシュします。
+- **ステップ 19.** 残りのすべての Jetson Nano/ NX モジュールをフラッシュします
 
-**注意:** **すべてのモジュールはマスターノードにインストールされている場合のみフラッシュ可能です**。したがって、モジュールを一つずつマスターノードでフラッシュして設定する必要があります。
+**注意:** **すべてのモジュールは、マスターノードにインストールされている場合にのみフラッシュできます**。したがって、マスターノード上でモジュールを一つずつフラッシュして設定する必要があります。
 
-### クラスターを起動する
+### クラスターの起動
 
-- **ステップ 1.** ルーターから Jetson Mate にイーサネットケーブルを接続します。
+- **ステップ 1.** ルーターから Jetson Mate にイーサネットケーブルを接続します
 
-**注意:** PC と Jetson Mate が同じルーターに接続されていることを確認してください。
+**注意:** PC と Jetson Mate が同じルーターに接続されていることを確認してください
 
-- **ステップ 2.** micro-USB をホスト PC に接続した状態で、前述の方法で **minicom** を使用して Jetson Mate にアクセスし、以下のコマンドを入力して Jetson Mate に接続されているモジュールの IP アドレスを取得します。
+- **ステップ 2.** 前述の通り**minicom**を使用して Jetson Mate に入り、micro-USB をホスト PC に接続した状態で、以下を入力して Jetson Mate に接続されているモジュールの IP アドレスを取得します
 
 ```sh
 ifconfig
 ```
 
-- **ステップ 3.** ホスト PC のターミナルで以下を入力して SSH 接続を確立します。
+- **ステップ3.** ホストPCのターミナルで以下を入力してSSH接続を確立します
 
 ```sh
 ssh user@192.xxx.xx.xx
 ```
 
-**注意:** **user** を Jetson Nano/ NX のユーザー名に置き換え、**192.xxx.xx.xx** を Jetson Nano/ NX の IP アドレスに置き換えてください。
+**注意:** **user** を Jetson Nano/ NX のユーザー名に、**192.xxx.xx.xx** を Jetson Nano/ NX の IP アドレスに置き換えてください
 
-**注意:** IP アドレスの代わりにホスト名を使用してノードに接続することもできます。
+**注意:** IP アドレスをホスト名に置き換えることでノードに接続することもできます
 
-## Jetson Mate を使用して Kubernetes クラスターを構築する
+## Jetson Mate で Kubernetes クラスターを構築する
 
-Kubernetes は、クラウドネイティブを前提として設計されたエンタープライズグレードのコンテナオーケストレーションシステムです。クラウドコンテナプラットフォームのデファクトスタンダードとして成長し、コンテナネイティブ仮想化やサーバーレスコンピューティングなどの新技術を取り入れながら拡大を続けています。
+Kubernetes は、最初からクラウドネイティブとして設計されたエンタープライズグレードのコンテナオーケストレーションシステムです。事実上のクラウドコンテナプラットフォームに成長し、コンテナネイティブ仮想化やサーバーレスコンピューティングなどの新しい技術を取り入れながら拡張を続けています。
 
-Kubernetes は、パブリッククラウドおよびプライベートクラウド環境で、エッジのマイクロスケールから大規模スケールまで、コンテナやその他を管理します。「自宅でのプライベートクラウド」プロジェクトに最適な選択肢であり、堅牢なコンテナオーケストレーションを提供するとともに、需要が高く、クラウドに統合された技術について学ぶ機会を提供します。その名前は「クラウドコンピューティング」とほぼ同義語と言えるほどです。
+Kubernetes は、エッジでのマイクロスケールから大規模スケールまで、パブリッククラウドとプライベートクラウドの両方の環境でコンテナなどを管理します。「自宅でのプライベートクラウド」プロジェクトに最適な選択肢であり、堅牢なコンテナオーケストレーションと、需要が高くクラウドに完全に統合されており、その名前が「クラウドコンピューティング」と実質的に同義語となっている技術について学ぶ機会の両方を提供します。
 
-このチュートリアルでは、1つのマスターと3つのワーカーを使用します。以下の手順では、***master***、***worker***、または ***worker and master*** のいずれでソフトウェアが実行されるかを太字で示します。
+このチュートリアルでは、1つのマスターと3つのワーカーを使用します。以下の手順では、ソフトウェアが ***master*** で実行されるか、***worker*** で実行されるか、または ***worker and master*** で実行されるかを太字で示します。
 
 ### Docker の設定
 
-***worker and master***、Docker ランタイムをデフォルトで "nvidia" を使用するように設定する必要があります。
-ファイル `/etc/docker/daemon.json` を修正します。
+***worker and master*** では、docker ランタイムがデフォルトで "nvidia" を使用するように設定する必要があります。
+ファイル `/etc/docker/daemon.json` を変更します
 
 ```json
 {
@@ -235,34 +231,34 @@ Kubernetes は、パブリッククラウドおよびプライベートクラウ
 }
 ```
 
-Docker デーモンを再起動します。
+Dockerデーモンを再起動します：
 
 ```shell
 sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
 
-Docker のデフォルトランタイムが NVIDIA であることを確認します。
+Validate the Docker default runtime as NVIDIA:
 
 ```shell
 sudo docker info | grep -i runtime
 ```
 
-以下はサンプル出力です。
+サンプル出力は以下の通りです：
 
 ```
 Runtimes: nvidia runc
 Default Runtime: nvidia
 ```
 
-### Kubernetes のインストール
+### Kubernetesのインストール
 
-***worker and master***、kubelet、kubeadm、kubectl をインストールします。
+***workerとmaster***、kubelet、kubeadm、kubectlをインストールします：
 
 ```shell
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
-# Kubernetes リポジトリを追加
+# Add the Kubernetes repo
 cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
 deb https://apt.kubernetes.io/ kubernetes-xenial main
 EOF
@@ -270,28 +266,28 @@ sudo apt update && sudo apt install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-スワップを無効化します。再起動するたびにこれをオフにする必要があります。
+Disable the swap, You have to turn this off every time you reboot.
 
 ```
 sudo swapoff -a
 ```
 
-以下の手順で使用するために deviceQuery をコンパイルします。
+deviceQueryをコンパイルします。これは以下の手順で使用します。
 
 ```shell
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery && sudo make 
 cd 
 ```
 
-### Kubernetes の設定
+### Kubernetesの設定
 
-***master***、クラスターを初期化します。
+***master***、クラスターを初期化します：
 
 ```shell
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
-出力には、クラスターにポッドネットワークをデプロイするためのコマンドや、クラスターに参加するためのコマンドが表示されます。すべてが成功すると、出力の最後に以下のようなメッセージが表示されます。
+出力には、クラスターにポッドネットワークをデプロイするためのコマンドと、クラスターに参加するためのコマンドが表示されます。すべてが成功した場合、出力の最後に以下のような内容が表示されるはずです：
 
 ```
 Your Kubernetes control-plane has initialized successfully!
@@ -312,7 +308,7 @@ kubeadm join 192.168.2.114:6443 --token zqqoy7.9oi8dpkfmqkop2p5 \
     --discovery-token-ca-cert-hash sha256:71270ea137214422221319c1bdb9ba6d4b76abfa2506753703ed654a90c4982b
 ```
 
-出力指示に従い、以下のコマンドを実行してください：
+出力された指示に従って、以下のコマンドを実行します：
 
 ```shell
 mkdir -p $HOME/.kube
@@ -320,24 +316,29 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-コントロールプレーンノードにポッドネットワークアドオンをインストールします。ポッドネットワークアドオンとして Calico を使用します：
+コントロールプレーンノードにpod-networkアドオンをインストールします。pod-networkアドオンとしてcalicoを使用します：
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
 
-> 中国国内にいる場合は、以下を使用してください：
-kubectl apply -f `<https://gitee.com/wj204811/wj204811/raw/master/kube-flannel.yml>`
+> 中国にいる場合は、代わりに以下を実行してください：
 
-すべてのポッドが起動していることを確認してください：
+```
+kubectl apply -f https://gitee.com/wj204811/wj204811/raw/master/kube-flannel.yml
+```
+
+すべてのポッドが起動して実行されていることを確認してください：
 
 ```shell
 kubectl get pods --all-namespaces
 ```
 
-以下はサンプル出力です：
+サンプル出力は以下の通りです：
 
 ```
+
+
 NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
 kube-system   kube-flannel-ds-arm64-gz28t                1/1     Running   0          2m8s
 kube-system   coredns-5c98db65d4-d4kgh                   1/1     Running   0          9m8s
@@ -349,25 +350,25 @@ kube-system   kube-proxy-6sh42                           1/1     Running   0    
 kube-system   kube-scheduler-#yourhost                   1/1     Running   0          8m26s
 ```
 
-***ワーカー***、計算ノードをクラスターに参加させます。計算ノードを追加するには、コントロールプレーンノードを初期化するために実行した `kubeadm init` コマンドの最後に提供される `kubeadm join` コマンドを実行するだけです。他の Jetson Nano をクラスターに参加させるには、ホストにログインして以下のコマンドを実行してください：
+***worker***、コンピュートノードをクラスターに参加させます。今度はコンピュートノードをクラスターに追加する時です。コンピュートノードの参加は、Control Planeノードを初期化するために実行したkube initコマンドの最後に提供されたkubeadm joinコマンドを実行するだけです。クラスターに参加させたい他のJetson nanoについて、ホストにログインして、次のコマンドを実行します：
 
 ```shell
-クラスター - トークンと ca-cert-hash は異なります
+ the cluster - your tokens and ca-cert-hash will vary
 $ sudo kubeadm join 192.168.2.114:6443 --token zqqoy7.9oi8dpkfmqkop2p5 \
     --discovery-token-ca-cert-hash sha256:71270ea137214422221319c1bdb9ba6d4b76abfa2506753703ed654a90c4982b
 ```
 
-***マスター***、各ノードで参加プロセスを完了したら、以下のコマンドの出力で新しいノードを確認できるはずです：
+***master***、各ノードでjoinプロセスが完了すると、kubectl get nodesの出力で新しいノードを確認できるはずです：
 
 ```shell
 kubectl get nodes
 ```
 
-以下はサンプル出力です：
+こちらがサンプル出力です：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/Picture1.png" /></div>
 
-ワーカー用にノードをタグ付けします。
+ワーカーのノードとしてタグ付けします。
 
 ```
 kubectl label node se2 node-role.kubernetes.io/worker=worker
@@ -377,17 +378,16 @@ kubectl label node se4 node-role.kubernetes.io/worker=worker
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/Picture2.png" /></div>
 
-## EGX 2.0 インストールの成功を検証する
+## EGX 2.0インストールの成功を検証する
 
-***ワーカーとマスター***、EGX スタックが期待通りに動作することを検証するには、以下の手順に従ってポッド YAML ファイルを作成します。`kubectl get pods` コマンドがポッドのステータスを `Completed` と表示した場合、インストールは成功しています。また、`cuda-samples.yaml` ファイルの実行結果が `Result=PASS` と表示されることを確認してください。
-
-ポッド YAML ファイルを作成し、以下の内容を追加して `samples.yaml` として保存します：
+***worker と master***、EGXスタックが期待通りに動作することを検証するには、以下の手順に従ってpod yamlファイルを作成してください。get podsコマンドでpodのステータスがcompletedと表示されれば、インストールは成功しています。また、出力にResult=PASSと表示されることを確認することで、cuda-samples.yamlファイルの正常な実行を検証することもできます。
+pod yamlファイルを作成し、以下の内容を追加して、samples.yamlとして保存してください：
 
 ```
 nano cuda-samples.yaml
 ```
 
-以下の内容を追加し、`cuda-samples.yaml` として保存します：
+以下の内容を追加し、cuda-samples.yamlとして保存してください：
 
 ```shell
 apiVersion: v1
@@ -403,19 +403,19 @@ spec:
        - /usr/local/cuda/samples/1_Utilities/deviceQuery/deviceQuery
 ```
 
-サンプル GPU ポッドを作成します：
+サンプルGPUポッドを作成します：
 
 ```shell
 sudo kubectl apply -f cuda-samples.yaml
 ```
 
-サンプルポッドが作成されたか確認します：
+サンプルポッドが作成されたかどうかを確認します：
 
 ```
 kubectl get pods
 ```
 
-CUDA ライブラリをサポートするサンプルポッドのログを検証します：
+Validate the sample pod logs to support CUDA libraries:
 
 ```shell
 kubectl logs nvidia-l4t-base
@@ -468,14 +468,15 @@ deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Vers
 Result = PASS
 ```
 
-## Kubernetes 上で Jupyter を設定する
+## Kubernetes上でJupyterを設定する
 
-***worker と master***、以下の内容を追加し、`jupyter.yaml` として保存してください：
+***workerとmaster***、以下の内容を追加してjupyter.yamlとして保存します：
 
 `nano jupyter.yaml`
 
 ```shell
-apiVersion: apps/v1 # バージョン 1.9.0 より前の場合は apps/v1beta2 を使用
+
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: cluster-deployment
@@ -483,7 +484,7 @@ spec:
   selector:
     matchLabels:
       app: cluster
-  replicas: 3 # デプロイメントにテンプレートに一致する 3 つのポッドを実行するよう指示
+  replicas: 3 # tells deployment to run 3 pods matching the template
   template:
     metadata:
       labels:
@@ -496,33 +497,34 @@ spec:
         - containerPort: 8888
 ```
 
-Jupyter GPU ポッドを作成します：
+jupyter GPU ポッドを作成する：
 
-```
-kubectl apply -f jupyter.yml
-```
+ ```
+ kubectl  apply -f jupyter.yml
+ ```
 
-Jupyter ポッドが作成され、実行中であるか確認します：
+ jupyter ポッドが作成され、実行されているかどうかを確認します：
 
-```shell
-kubectl get pod
-```
+ ```shell
+ kubectl get pod
+ ```
 
-外部ロードバランサーを作成します：
+ 外部ロードバランサーを作成する
 
-```
-kubectl expose deployment cluster-deployment --port=8888 --type=LoadBalancer 
-```
+ ```
+ kubectl expose deployment cluster-deployment --port=8888 --type=LoadBalancer 
+ ```
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/Picture3.png" /></div>
 
-ここで、Jupyter クラスターがポート 31262 で外部アクセス可能であることが確認できます。そのため、`http://se1.local:31262` を使用して Jupyter にアクセスします。
+ここで、jupyterクラスターがポート31262で外部アクセスを持っていることがわかります。そのため、`http://se1.local:31262`を使用してjupyterにアクセスします。
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/Jetson-Mate/Picture4.png" /></div>
 
-以下のコードを使用して利用可能な GPU の数を確認できます。今回は 3 つのワーカーしかないため、利用可能な GPU の数は 3 です。
+以下のコードを使用して利用可能なGPUの数を確認できます。ワーカーは3つしかなく、利用可能なGPUの数は3つです。
 
 ```python
+
 from tensorflow.python.client import device_lib
 
 def get_available_gpus():
@@ -532,7 +534,7 @@ def get_available_gpus():
 get_available_gpus()
 ```
 
-これで準備完了です。お楽しみください！
+よし、さあショーの始まりだ。
 
 ## リソース
 
@@ -544,14 +546,14 @@ get_available_gpus()
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しています。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご利用いただけます。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

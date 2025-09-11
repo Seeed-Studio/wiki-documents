@@ -72,6 +72,7 @@ The GNSS scanner of the Wio-WM1110 has two modes of operations: autonomous and a
 **GNSS autonomous mode:** Does not require any assistance location or almanac data, and aims to detect strong satellite signals. Therefore it is suitable for outdoor conditions with good sky visibility.
 
 **GNSS assisted mode**：It allows the most efficient GNSS geolocation. Assistance information can build a list of the satellites in view at the current time and location, in order to reduce the GNSS satellites search space, and therefore optimize the time and energy spent geolocating. The assistance information is tailored to an LPWAN network, limiting the data sent, especially the downlink size and frequency. It consists of:  
+
 - LR1110 approximate position
 - Current time
 - Up-to-date reduced size Almanac information (less than 3 months old)
@@ -106,8 +107,7 @@ If manual mode is selected for assistance position, the following constants defi
 | `GNSS_SCAN_GROUP_PERIOD` | Defines the duration between the end of a scan & send sequence and the start of next sequence | `uint32_t`                | 30                    |
 | `GNSS_SCAN_MODE`         | Defines the GNSS scan mode (static or mobile) to be used for scan & send sequences.           | Value in `gnss_mw_mode_t` | `GNSS_MW_MODE_STATIC` |
 
-The GNSS scan mode selected by default is `GNSS_MW_MODE_STATIC`, meaning that
-this application example targets non-mobile objects.
+The GNSS scan mode selected by default is `GNSS_MW_MODE_STATIC`, meaning that this application example targets non-mobile objects.
 
 ### Wi-Fi
 
@@ -117,8 +117,7 @@ By discovering the Wi-Fi b/g/n access points available in the vicinity of the de
 
 **Geolocation Wi-Fi Example**
 
-This application demonstrates the usage of the Wi-Fi geolocation middleware and
-how the LoRa Basics Modem should be configured to meet the prerequisites for
+This application demonstrates the usage of the Wi-Fi geolocation middleware and how the LoRa Basics Modem should be configured to meet the prerequisites for
 This example illustrates the Wi-Fi scan procedure:
 
 - configuration of the LoRa Basics Modem library; and
@@ -126,8 +125,7 @@ This example illustrates the Wi-Fi scan procedure:
 
 **Wi-Fi demonstration related configuration**
 
-The `main_geolocation_wifi.h` header file defines several constants which can be
-set to define the configurable parameters of the application.
+The `main_geolocation_wifi.h` header file defines several constants which can be set to define the configurable parameters of the application.
 
 | Constant           | Comments                                                                                      | Possible values | Default Value |
 | ------------------ | --------------------------------------------------------------------------------------------- | --------------- | ------------- |
@@ -139,8 +137,7 @@ set to define the configurable parameters of the application.
 This example illustrates the combination of GNSS and Wi-Fi scan procedures:
 
 - configuration of the LoRa Basics Modem library; and
-- concurrent execution of GNSS and Wi-Fi *scan & send* features using the
-*GNSS geolocation middleware* and the *Wi-Fi geolocation middleware*.
+- concurrent execution of GNSS and Wi-Fi *scan & send* features using the *GNSS geolocation middleware* and the *Wi-Fi geolocation middleware*.
 
 **Geolocation demonstration related configuration**
 

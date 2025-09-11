@@ -29,32 +29,34 @@ RS485 750cm 超声波液位传感器采用超声波传感技术来测量距离�
 ## 开始使用
 
 ### 准备工作
+
 #### 硬件
+
 ##### 所需材料
 
 <table align="center">
-	<tr>
-	    <th>SenseCAP S2100 数据记录器</th>
+ <tr>
+     <th>SenseCAP S2100 数据记录器</th>
       <th>750cm 超声波液位传感器</th>
     <th>十字螺丝刀</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/image1.jpeg" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%206.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html?queryID=2bee749eb1a41d36e0d4d5fbdcbfb36f&objectID=5587&indexName=bazaar_retailer_products" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-750cm-Ultrasonic-Level-Sensor-p-5587.html?queryID=2bee749eb1a41d36e0d4d5fbdcbfb36f&objectID=5587&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 ## 1. 准备数据记录器、RS485 750cm 超声波液位传感器、网关和工具。
@@ -66,6 +68,7 @@ RS485 750cm 超声波液位传感器采用超声波传感技术来测量距离�
 3. **十字螺丝刀**：用于组装传感器探头。
 
 4. **网关**：LoRaWAN 传感器将数据传输到 LoRaWAN 网关，然后网关将数据传输到云服务器。如果您没有网关，有两个选择：
+
 - 选项 1：传感器在 Helium 网络覆盖的区域工作（在 [Helium Explorer](https://explorer.helium.com/) 上查看）。只要有 helium 网络覆盖的地方，您就可以使用传感器传输数据而无需购买网关。
 - 选项 2：购买一个[网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)。
 
@@ -86,7 +89,6 @@ RS485 750cm 超声波液位传感器采用超声波传感技术来测量距离�
 
 ### 3. 将 RS485 750cm 超声波液位传感器连接到 SenseCAP 数据记录器
 
-
 - **步骤 1：** 拧下数据记录器上的三颗螺丝
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/70.jpg"/></div>
@@ -95,7 +97,7 @@ RS485 750cm 超声波液位传感器采用超声波传感技术来测量距离�
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/71.jpg"/></div>
 
-- **步骤 3：** 通过逆时针方向拧下螺纹盖
+- **步骤 3：** 通过逆时针方向拧下来移除螺纹盖
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/72.jpg"/></div>
 
@@ -104,7 +106,6 @@ RS485 750cm 超声波液位传感器采用超声波传感技术来测量距离�
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/73.jpg"/></div>
 
 - **步骤 5：** 按如下方式将电缆的导线连接到螺丝端子
-
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/71.jpg"/></div>
 
@@ -130,7 +131,6 @@ RS485 750cm 超声波液位传感器的线序：
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/750cm%20ultrasonic%20sensor/Picture4.png"/></div>
 
-
 ### 4. 配置数据记录器和 RS485 750cm 超声波液位传感器通信设置
 
 - **步骤 1：** 选择 **S2100 数据记录器** 并在配置页面点击 **Setup**。
@@ -151,17 +151,18 @@ RS485 750cm 超声波液位传感器的线序：
 (http://sensecap.seeed.cc/portalapi/template/23ad5050-c24b-11ed-af3d-4b3b31721270)
 
 - **步骤 2：** 点击右上角的"➕"，选择"导入模板"，然后选择下载的文件，模板将被导入。
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2016.png"/></div>
 
 - **步骤 3：** 点击发送并通过点击 **Measure** 测试传感器
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2017.png"/></div>
 
-成功获取传感器的距离和温度！
+成功获取了传感器的距离和温度！
 
 ### 5. 将数据上传到 SenseCAP Portal 和 Mate App
 
-- **步骤 1：** 返回应用主页，数据记录器红色 LED 将开始闪烁几秒钟，然后绿色 LED 短暂闪烁，表示 LoRaWAN 连接成功并发送数据。或者，您可以按一次数据记录器上的按钮来强制发送数据。
+- **步骤 1：** 返回应用主页，数据记录器红色 LED 将开始闪烁几秒钟，然后绿色 LED 短暂闪烁，表示 LoRaWAN 连接成功并且数据已发送。或者，您可以按一次数据记录器上的按钮来强制发送数据。
 在上传数据之前，请确保网关正常工作或有 helium 网络覆盖。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/100.gif"/></div>
@@ -176,14 +177,13 @@ RS485 750cm 超声波液位传感器的线序：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2019.png"/></div>
 
-
 ### 6. 在真实环境中测试传感器。
 
-快速应用到户外真实场景进行长期监测。
+快速应用于户外真实场景进行长期监测。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2020.png"/></div>
 
-目前，已经开发出了一个 LoRaWAN 传感器。
+目前，已经开发出一个 LoRaWAN 传感器。
 
 ## 资源
 
@@ -195,11 +195,11 @@ RS485 750cm 超声波液位传感器的线序：
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

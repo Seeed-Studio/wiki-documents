@@ -9,21 +9,19 @@ on:
   issue_comment:
     types: [created]
 
-# 需要对 PR/评论具备写权限；对内容具备读写（用于在可写情形下推送）。
 permissions:
   contents: write
   pull-requests: write
   issues: write
-
-concurrency:
-  group: pr-translation-${{ github.event_name }}-${{ github.event.pull_request.number || github.event.issue.number }}
-  cancel-in-progress: true
 
 jobs:
   # 检测 PR 中的文档变更
   detect-docs-changes:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    concurrency:
+      group: pr-translation-detect-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
     permissions:
       contents: read
       pull-requests: write
@@ -42,28 +40,17 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
-
             try {
               const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number });
-
-              // 关键：使用“PR 头仓库”的 owner/repo
               const [headOwner, headRepo] = pr.head.repo.full_name.split('/');
               const headSha = pr.head.sha;
-
-              const { data: commit } = await github.rest.repos.getCommit({
-                owner: headOwner,
-                repo: headRepo,
-                ref: headSha
-              });
-
+              const { data: commit } = await github.rest.repos.getCommit({ owner: headOwner, repo: headRepo, ref: headSha });
               const message = commit?.commit?.message || '';
-
               if (
                 message.includes('🌍 自动翻译文档') ||
-                message.includes('🔄 撤回翻译') ||
                 message.includes('[TRANSLATION_COMMIT]: true')
               ) {
-                core.info('检测到翻译/撤回 commit，跳过文档变更检测和评论');
+                core.info('检测到翻译 commit，跳过文档变更检测和评论');
                 core.setOutput('skip', 'true');
                 return;
               }
@@ -144,16 +131,18 @@ jobs:
           echo "total_files=$total_count" >> $GITHUB_OUTPUT
           echo "operation_summary=新增:$added_count 修改:$modified_count 删除:$deleted_count 移动:$renamed_count 移动+修改:$renamed_modified_count" >> $GITHUB_OUTPUT
 
-  # 添加翻译提示评论（只在非翻译/撤回 commit 时添加）
+  # 添加翻译提示评论
   add-translation-comment:
     if: github.event_name == 'pull_request_target' && github.event.action != 'closed'
     runs-on: ubuntu-latest
+    concurrency:
+      group: pr-translation-comment-${{ github.event.pull_request.number }}
+      cancel-in-progress: true
     permissions:
       pull-requests: write
       issues: write
       contents: read
     steps:
-      # 先判断是否需要跳过（如果最近一次提交是"自动翻译/撤回"）
       - name: Check if should skip (via last PR commit message)
         id: check-skip
         uses: actions/github-script@v7
@@ -161,28 +150,17 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
-
             try {
               const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number });
-
-              // 关键：使用“PR 头仓库”的 owner/repo
               const [headOwner, headRepo] = pr.head.repo.full_name.split('/');
               const headSha = pr.head.sha;
-
-              const { data: commit } = await github.rest.repos.getCommit({
-                owner: headOwner,
-                repo: headRepo,
-                ref: headSha
-              });
-
+              const { data: commit } = await github.rest.repos.getCommit({ owner: headOwner, repo: headRepo, ref: headSha });
               const message = commit?.commit?.message || '';
-
               if (
                 message.includes('🌍 自动翻译文档') ||
-                message.includes('🔄 撤回翻译') ||
                 message.includes('[TRANSLATION_COMMIT]: true')
               ) {
-                core.info('检测到翻译/撤回 commit，跳过文档变更检测和评论');
+                core.info('检测到翻译 commit，跳过评论');
                 core.setOutput('skip', 'true');
                 return;
               }
@@ -191,7 +169,6 @@ jobs:
             }
             core.setOutput('skip', 'false');
 
-      # 使用 API 直接统计变更，避免 checkout / git diff
       - name: Analyze docs changes (fast via API)
         id: analyze
         if: steps.check-skip.outputs.skip != 'true'
@@ -200,7 +177,6 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const pr_number = context.payload.pull_request.number;
-
             let page = 1, files = [];
             while (true) {
               const { data } = await github.rest.pulls.listFiles({
@@ -210,14 +186,11 @@ jobs:
               files = files.concat(data);
               page++;
             }
-
             const isDocs = f =>
               /^docs\//.test(f.filename) &&
               !/^docs\/(zh-CN|ja|es)\//.test(f.filename) &&
               (/\.(md|mdx)$/.test(f.filename) || /_category_\.yml$/.test(f.filename));
-
             const picked = files.filter(isDocs);
-
             let added=0, modified=0, deleted=0, renamed=0, renamed_modified=0;
             for (const f of picked) {
               if (f.status === 'added') added++;
@@ -229,8 +202,7 @@ jobs:
             }
             const total = picked.length;
             core.setOutput('total_files', String(total));
-            core.setOutput('operation_summary',
-              `新增:${added} 修改:${modified} 删除:${deleted} 移动:${renamed} 移动+修改:${renamed_modified}`);
+            core.setOutput('operation_summary', `新增:${added} 修改:${modified} 删除:${deleted} 移动:${renamed} 移动+修改:${renamed_modified}`);
 
       - name: Add translation comment
         if: steps.check-skip.outputs.skip != 'true' && steps.analyze.outputs.total_files != '0'
@@ -239,14 +211,11 @@ jobs:
           script: |
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
-
             const totalFiles = '${{ steps.analyze.outputs.total_files }}';
             const operationSummary = '${{ steps.analyze.outputs.operation_summary }}';
-
             let comment = `## 🌍 检测到文档变更 - 可进行多语言翻译\n\n`;
             comment += `**统计信息:** 共 ${totalFiles} 个文件需要处理\n`;
             comment += `**操作类型:** ${operationSummary}\n\n`;
-
             comment += `### 🚀 开始翻译\n`;
             comment += `在此评论回复以下命令之一：\n\n`;
             comment += `- \`/translate all\` - 翻译所有变更到所有语言 (中文、日文、西班牙语)\n`;
@@ -255,23 +224,8 @@ jobs:
             comment += `- \`/translate es\` - 仅翻译到西班牙语\n`;
             comment += `- \`/translate zh ja\` - 翻译到中文和日文\n`;
             comment += `- \`/translate zh es\` - 翻译到中文和西班牙语\n\n`;
-
-            comment += `### 🔄 撤回翻译\n`;
-            comment += `如果对翻译结果不满意，可以使用：\n`;
-            comment += `- \`/rollback translation\` - 撤回最近一次的翻译提交\n\n`;
-
-            comment += `### ⚠️ 注意事项\n`;
-            comment += `- 只有仓库管理员和维护者可以触发翻译和撤回\n`;
-            comment += `- 若 PR 来自 fork，请确保作者勾选 **Allow edits from maintainers**，否则机器人无法把翻译推回 PR 分支\n`;
-            comment += `- 撤回操作会恢复到翻译前的状态\n`;
-            comment += `- 每次操作后会自动触发构建检查\n\n`;
-
-            await github.rest.issues.createComment({
-              owner,
-              repo,
-              issue_number: pull_number,
-              body: comment
-            })
+            comment += `> 译文将提交到 base 仓库分支 \`auto-translate/pr-<PR号>\` 并打开/复用一个翻译 PR，原 PR 不会被翻译提交污染，也不会阻塞合并。`;
+            await github.rest.issues.createComment({ owner, repo, issue_number: pull_number, body: comment });
 
   # —— 手动触发翻译 —— #
   manual-translate:
@@ -280,7 +234,10 @@ jobs:
       github.event.issue.pull_request &&
       startsWith(github.event.comment.body, '/translate')
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 180
+    concurrency:
+      group: pr-translation-run-${{ github.event.issue.number }}
+      cancel-in-progress: false   # ⭐ 不被后续事件打断
     permissions:
       contents: write
       pull-requests: write
@@ -340,30 +297,15 @@ jobs:
             if (!allowed) {
               await github.rest.issues.createComment({
                 owner, repo, issue_number: context.payload.issue.number,
-                body: `## ❌ 权限不足\n\n@${username} 权限不足，只有仓库管理员和维护者可以触发翻译。\n\n**当前权限:** \`${permission.permission}\``
+                body: `## ❌ 权限不足\n\n@${username} 仅管理员/维护者可触发翻译。\n\n**当前权限:** \`${permission.permission}\``
               });
-              core.setFailed('权限不足');
-              return;
+              core.setFailed('权限不足'); return;
             }
             core.setOutput('has_permission','true');
 
-      - name: Ensure fork is editable by maintainers (for forked PR)
-        if: steps.check-permissions.outputs.has_permission == 'true' && steps.pr-info.outputs.is-fork == 'true' && steps.pr-info.outputs.maintainer-can-modify != 'true'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.issue.number;
-            const username = context.payload.comment.user.login;
-            await github.rest.issues.createComment({
-              owner, repo, issue_number,
-              body: `## ⚠️ 无法写入 PR 分支\n\n该 PR 来自 fork，且未开启 **Allow edits from maintainers**。\n\n请 PR 作者进入右侧栏勾选此选项，然后评论 \`/translate ...\` 重新触发。`
-            });
-            core.setFailed('fork 未允许维护者编辑，无法将翻译推回 PR 源分支');
-
-      # 直接检出 PR head（浅克隆 + 稀疏）
+      # 检出 PR head（浅克隆 + 稀疏）
       - name: Checkout PR head (fast)
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
           repository: ${{ steps.pr-info.outputs.head-repo }}
@@ -376,11 +318,11 @@ jobs:
           filter: blob:none
 
       - name: Checkout trusted scripts (base repo)
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
-          ref: ${{ github.sha }}          # 或固定到 main 等受保护分支
+          ref: ${{ github.sha }}
           fetch-depth: 1
           fetch-tags: false
           sparse-checkout: |
@@ -390,25 +332,25 @@ jobs:
           path: _trusted
 
       - name: Record BEFORE SHA
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           BEFORE_TRANSLATION_SHA=$(git rev-parse HEAD)
           echo "BEFORE_TRANSLATION_SHA=$BEFORE_TRANSLATION_SHA" >> $GITHUB_ENV
           echo "📌 记录翻译前的SHA: $BEFORE_TRANSLATION_SHA"
 
       - name: Ensure base SHA is available for diff
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           git fetch --depth=1 origin ${{ steps.pr-info.outputs.base-sha }}
 
       - name: Setup Node.js
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
       - name: Parse translation command
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         id: parse
         run: |
           comment="${{ github.event.comment.body }}"
@@ -426,7 +368,7 @@ jobs:
           echo "🎯 最终翻译语言: $languages"
 
       - name: Cache npm
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         uses: actions/cache@v4
         with:
           path: ~/.npm
@@ -434,13 +376,13 @@ jobs:
           restore-keys: ${{ runner.os }}-npm-
 
       - name: Install dependencies
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         run: |
           echo "📦 安装翻译依赖..."
           npm install @anthropic-ai/sdk --no-save --legacy-peer-deps
 
       - name: Run translation
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+        if: steps.check-permissions.outputs.has_permission == 'true'
         env:
           TRANSLATION_API_KEY: ${{ secrets.TRANSLATION_API_KEY }}
           TARGET_LANGUAGES: ${{ steps.parse.outputs.languages }}
@@ -455,108 +397,132 @@ jobs:
           fi
           node _trusted/.github/scripts/translate.js
 
-      - name: Commit and push changes (push back to PR head repo/ref)
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
+      # ⭐ 将译文推送到 base 仓库的独立分支，并创建/更新翻译 PR
+      - name: Prepare translation branch in base repo
+        if: steps.check-permissions.outputs.has_permission == 'true'
+        id: prep-branch
         env:
           TRANSLATION_PAT: ${{ secrets.TRANSLATION_PAT }}
+          BASE_REPO: ${{ github.repository }}                 # owner/repo
+          BASE_REF: ${{ steps.pr-info.outputs.base-ref }}     # e.g. main
+          PR_NUMBER: ${{ github.event.issue.number }}
           LANGUAGES: ${{ steps.parse.outputs.languages }}
-          TRIGGERED_BY: ${{ github.event.comment.user.login }}
-          HEAD_REPO: ${{ steps.pr-info.outputs.head-repo }}
-          HEAD_REF: ${{ steps.pr-info.outputs.head-ref }}
         run: |
-          echo "🔄 提交翻译结果..."
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
+          set -e
+          echo "🔧 准备在 base 仓库创建/更新翻译分支..."
+          BRANCH="auto-translate/pr-${PR_NUMBER}"
+          echo "BRANCH=$BRANCH" >> $GITHUB_OUTPUT
 
-          echo "📋 当前git状态："
-          git status --short || true
-
-          git checkout -- yarn.lock package-lock.json 2>/dev/null || true
-
-          if [ -n "$(git status --porcelain docs/)" ]; then
-            git add docs/
-            COMMIT_MSG="🌍 自动翻译文档"
-            COMMIT_DETAILS="Translation Languages: ${LANGUAGES}
-          Before Translation SHA: ${BEFORE_TRANSLATION_SHA}
-          Triggered by: @${TRIGGERED_BY}
-          Time: $(date '+%Y-%m-%d %H:%M:%S')"
-            git commit -m "$COMMIT_MSG" -m "$COMMIT_DETAILS"
-
-            # 关键：推送到 PR 的 head 仓库与分支
-            if [ -n "$TRANSLATION_PAT" ]; then
-              remote_url="https://${TRANSLATION_PAT}@github.com/${HEAD_REPO}.git"
-            else
-              # 退化方案：使用 GITHUB_TOKEN；仅当 PR 来自同仓库分支时可用
-              remote_url="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${HEAD_REPO}.git"
-            fi
-
-            echo "➡️ 推送到 ${HEAD_REPO} 的 ${HEAD_REF}"
-            git push "$remote_url" HEAD:"${HEAD_REF}"
-
-            echo "HAS_CHANGES=true" >> $GITHUB_ENV
-            echo "TRANSLATION_COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
-            echo "✅ 翻译结果已提交并推送"
-          else
-            echo "ℹ️ 没有翻译内容需要提交"
+          if [ -z "$(git status --porcelain docs/)" ]; then
+            echo "ℹ️ 没有需要提交的 docs/ 更改"
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            exit 0
+          fi
+          echo "HAS_CHANGES=true" >> $GITHUB_ENV
+
+          WORKDIR=$(mktemp -d)
+          echo "WORKDIR=$WORKDIR"
+          cd "$WORKDIR"
+
+          TOKEN="${TRANSLATION_PAT:-${GITHUB_TOKEN}}"
+          if [ -z "$TOKEN" ]; then
+            echo "❌ 缺少可写凭据"
+            exit 1
+          fi
+          REMOTE_URL="https://${TOKEN}@github.com/${BASE_REPO}.git"
+
+          git config --global init.defaultBranch main
+          git clone --depth=1 "$REMOTE_URL" repo
+          cd repo
+          git fetch --depth=1 origin "$BASE_REF"
+          git checkout "$BASE_REF"
+
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git checkout -B "$BRANCH"
+          else
+            git switch -c "$BRANCH"
           fi
 
-      - name: Trigger Test deployment (Check_PR_Update.yml)
-        if: env.HAS_CHANGES == 'true'
+          rsync -a --delete "$GITHUB_WORKSPACE/docs/" docs/
+
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action Bot"
+          git add docs/
+
+          COMMIT_MSG="🌍 自动翻译文档 for #${PR_NUMBER}"
+          # ✅ 用多条 -m 追加提交说明，避免 YAML/heredoc 解析问题
+          if git diff --cached --quiet; then
+            echo "ℹ️ 同步后无变化"
+          else
+            git commit \
+              -m "$COMMIT_MSG" \
+              -m "Languages: ${LANGUAGES}" \
+              -m "Base: ${BASE_REF}" \
+              -m "Source PR: #${PR_NUMBER}" \
+              -m "[TRANSLATION_COMMIT]: true"
+            git push origin HEAD:"$BRANCH"
+          fi
+
+      - name: Create or update translation PR
+        if: steps.check-permissions.outputs.has_permission == 'true' && env.HAS_CHANGES == 'true'
+        id: create-pr
         uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
-            const workflowFile = '.github/workflows/Check_PR_Update.yml';
-            const prNumber = context.payload.issue?.number || context.payload.pull_request?.number;
-            const baseRef = '${{ steps.pr-info.outputs.base-ref }}';
-            const headRef = '${{ steps.pr-info.outputs.head-ref }}';
-            const headRepo = '${{ steps.pr-info.outputs.head-repo }}';
+            const issue_number = context.payload.issue.number;
+            const base = '${{ steps.pr-info.outputs.base-ref }}';
+            const head = '${{ steps.prep-branch.outputs.BRANCH }}'; // auto-translate/pr-<PR号>
+            const title = `🌍 Docs translations for #${issue_number}`;
+            const body = [
+              `This PR contains machine translations for docs changed in #${issue_number}.`,
+              '',
+              '**Notes**:',
+              '- Independent from the source PR; merge when translations look good.',
+              '- Source PR updates will not interrupt this translation run.',
+              '',
+              `> Created by GitHub Actions (branch: \`${head}\`)`
+            ].join('\n');
 
-            await github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
-              workflow_id: workflowFile,
-              ref: baseRef,
-              inputs: {
-                pr_number: String(prNumber),
-                ref: headRef,
-                head_repo: headRepo,
-                trigger_source: 'translation'
-              }
+            // 复用已存在的翻译 PR，否则新建
+            const list = await github.rest.pulls.list({
+              owner, repo, state: 'open', head: `${owner}:${head}`, base
             });
-            core.info(`Dispatched ${workflowFile} on ${baseRef} for PR #${prNumber} (head=${headRepo}:${headRef})`);
 
-      - name: Save translation metadata
+            let prNumber;
+            if (list.data.length > 0) {
+              const pr = list.data[0];
+              prNumber = pr.number;
+              await github.rest.issues.update({ owner, repo, issue_number: pr.number, title });
+              try { await github.rest.issues.addLabels({ owner, repo, issue_number: pr.number, labels: ['auto-translation'] }); } catch {}
+              core.info(`Updated existing translation PR #${pr.number}`);
+            } else {
+              const pr = await github.rest.pulls.create({ owner, repo, base, head, title, body, maintainer_can_modify: true });
+              prNumber = pr.data.number;
+              try { await github.rest.issues.addLabels({ owner, repo, issue_number: pr.data.number, labels: ['auto-translation'] }); } catch {}
+              core.info(`Created translation PR #${pr.data.number}`);
+            }
+            core.setOutput('pr-number', String(prNumber));
+
+      - name: Save translation metadata to source PR
         if: steps.check-permissions.outputs.has_permission == 'true' && env.HAS_CHANGES == 'true'
         uses: actions/github-script@v7
         with:
           script: |
             const { owner, repo } = context.repo;
             const pr_number = context.payload.issue.number;
-            const metadata = {
-              before_sha: process.env.BEFORE_TRANSLATION_SHA,
-              after_sha: process.env.TRANSLATION_COMMIT_SHA,
+            const body = `<!-- TRANSLATION_METADATA
+            ${JSON.stringify({
+              source_pr: pr_number,
+              translation_branch: '${{ steps.prep-branch.outputs.BRANCH }}',
+              translation_pr: '${{ steps.create-pr.outputs.pr-number }}',
               languages: '${{ steps.parse.outputs.languages }}',
+              before_sha: process.env.BEFORE_TRANSLATION_SHA,
               timestamp: new Date().toISOString(),
               triggered_by: '${{ github.event.comment.user.login }}'
-            };
-            const body = `<!-- TRANSLATION_METADATA
-            ${JSON.stringify(metadata)}
+            })}
             -->`;
             await github.rest.issues.createComment({ owner, repo, issue_number: pr_number, body });
-
-      - name: Check completion status
-        id: check-completion
-        if: always() && steps.check-permissions.outputs.has_permission == 'true'
-        run: |
-          if [ "${{ job.status }}" = "success" ] && [ "$HAS_CHANGES" = "true" ]; then
-            echo "completed=true" >> $GITHUB_OUTPUT
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "completed=false" >> $GITHUB_OUTPUT
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          fi
 
       - name: Update completion comment
         if: always() && steps.check-permissions.outputs.has_permission == 'true'
@@ -569,8 +535,9 @@ jobs:
             const success = '${{ job.status }}' === 'success';
             const languages = '${{ steps.parse.outputs.languages }}';
             const hasChanges = process.env.HAS_CHANGES === 'true';
-            const translationSha = process.env.TRANSLATION_COMMIT_SHA || 'N/A';
+            const prNum = '${{ steps.create-pr.outputs.pr-number }}' || 'N/A';
             const beforeSha = process.env.BEFORE_TRANSLATION_SHA || 'N/A';
+            const branch = '${{ steps.prep-branch.outputs.BRANCH }}' || 'N/A';
 
             let status, icon;
             if (success && hasChanges) { status='翻译完成'; icon='✅'; }
@@ -581,23 +548,16 @@ jobs:
             comment += `**翻译语言:** ${languages || '无'}\n`;
             comment += `**完成时间:** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n`;
             comment += `**触发者:** @${{ github.event.comment.user.login }}\n`;
-            if (success && hasChanges) {
-              comment += `**翻译前SHA:** \`${beforeSha}\`\n`;
-              comment += `**翻译后SHA:** \`${translationSha}\`\n\n`;
-              comment += `### 🎉 翻译成功！\n\n翻译文件已自动提交到当前PR分支。\n\n`;
-              comment += `### 🔄 后续操作\n- 如果对翻译结果不满意，可以使用 \`/rollback translation\` 撤回此次翻译\n- 撤回后可以重新翻译或手动修改\n\n`;
+            comment += `**翻译分支:** \`${branch}\`\n`;
+            if (success && hasChanges && prNum !== 'N/A') {
+              comment += `**翻译 PR:** #${prNum}\n`;
+              comment += `**翻译前SHA:** \`${beforeSha}\`\n\n`;
+              comment += `### 🎉 翻译成功！\n\n译文已提交到独立 PR（见上），可独立审核与合并。\n`;
             } else if (success && !hasChanges) {
-              comment += `### 🔍 没有检测到需要翻译的内容\n\n可能的原因：\n- 目标语言的翻译文件已经是最新的\n- 没有检测到有效的文档变更\n\n`;
+              comment += `### 🔍 没有检测到需要翻译的内容\n\n可能原因：目标语言已最新，或无有效文档变更。\n`;
             } else {
-              comment += `### 💔 翻译失败\n\n请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }})。\n\n`;
+              comment += `### 💔 翻译失败\n\n请查看 [工作流日志](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }})。\n`;
             }
-            try {
-              const fs = require('fs');
-              if (fs.existsSync('/tmp/translation-report.md')) {
-                const report = fs.readFileSync('/tmp/translation-report.md','utf8');
-                comment += `### 📊 详细报告\n\n${report}`;
-              }
-            } catch {}
             comment += `\n---\n> 🤖 由 GitHub Actions 自动生成 | [查看工作流](https://github.com/${owner}/${repo}/actions/runs/${{ github.run_id }})`;
             try {
               await github.rest.issues.updateComment({ owner, repo, comment_id: commentId, body: comment });
@@ -605,192 +565,14 @@ jobs:
               await github.rest.issues.createComment({ owner, repo, issue_number: issue_number, body: comment });
             }
 
-  # —— 撤回翻译 —— #
-  rollback-translation:
-    if: |
-      github.event_name == 'issue_comment' && 
-      github.event.issue.pull_request &&
-      contains(github.event.comment.body, '/rollback translation')
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      issues: write
-      actions: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-          fetch-tags: false
-
-      - name: Get PR context (head repo/ref & permissions)
-        id: pr-info
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.issue.number;
-            const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: issue_number });
-            core.setOutput('head-repo', pr.head.repo.full_name);
-            core.setOutput('head-ref', pr.head.ref);
-            core.setOutput('is-fork', pr.head.repo.fork ? 'true' : 'false');
-            core.setOutput('maintainer-can-modify', pr.maintainer_can_modify ? 'true' : 'false');
-            core.setOutput('base-ref', pr.base.ref);
-
-      - name: Check user permissions
-        id: check-permissions
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const username = context.payload.comment.user.login;
-            const { data: permission } = await github.rest.repos.getCollaboratorPermissionLevel({ owner, repo, username });
-            const allowed = ['admin','maintain'].includes(permission.permission);
-            if (!allowed) {
-              await github.rest.issues.createComment({
-                owner, repo, issue_number: context.payload.issue.number,
-                body: `## ❌ 权限不足\n\n@${username} 没有撤回翻译的权限。`
-              });
-              core.setFailed('权限不足'); return;
-            }
-            core.setOutput('has_permission','true');
-
-      - name: Ensure fork is editable by maintainers (for forked PR)
-        if: steps.check-permissions.outputs.has_permission == 'true' && steps.pr-info.outputs.is-fork == 'true' && steps.pr-info.outputs.maintainer-can-modify != 'true'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.issue.number;
-            await github.rest.issues.createComment({
-              owner, repo, issue_number,
-              body: `## ⚠️ 无法写入 PR 分支\n\n该 PR 来自 fork，且未开启 **Allow edits from maintainers**，无法执行撤回。\n\n请 PR 作者开启该选项后再试。`
-            });
-            core.setFailed('fork 未允许维护者编辑，无法撤回');
-
-      - name: Find translation metadata
-        id: find-metadata
-        if: steps.check-permissions.outputs.has_permission == 'true' && (steps.pr-info.outputs.is-fork != 'true' || steps.pr-info.outputs.maintainer-can-modify == 'true')
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.issue.number;
-            const comments = await github.rest.issues.listComments({ owner, repo, issue_number, per_page: 100 });
-            let latest = null;
-            const re = /<!-- TRANSLATION_METADATA\s+(.*?)\s+-->/s;
-            for (const c of comments.data.reverse()) {
-              const m = c.body.match(re);
-              if (m) { try { latest = JSON.parse(m[1]); break; } catch {} }
-            }
-            if (!latest) {
-              await github.rest.issues.createComment({ owner, repo, issue_number, body: `## ⚠️ 未找到翻译记录` });
-              core.setFailed('未找到翻译元数据'); return;
-            }
-            core.setOutput('before_sha', latest.before_sha);
-            core.setOutput('after_sha', latest.after_sha);
-            core.setOutput('languages', latest.languages);
-            core.setOutput('has_metadata', 'true');
-
-      # 直接检出 PR head（浅克隆 + 稀疏）
-      - name: Checkout PR head (fast)
-        if: steps.find-metadata.outputs.has_metadata == 'true'
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ steps.pr-info.outputs.head-repo }}
-          ref: ${{ steps.pr-info.outputs.head-ref }}
-          fetch-depth: 2
-          fetch-tags: false
-          sparse-checkout: |
-            docs
-          sparse-checkout-cone-mode: true
-          filter: blob:none
-
-      - name: Checkout PR and rollback
-        if: steps.find-metadata.outputs.has_metadata == 'true'
-        env:
-          GITHUB_TOKEN: ${{ secrets.TRANSLATION_PAT || secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.TRANSLATION_PAT || secrets.GITHUB_TOKEN }}
-          TRANSLATION_PAT: ${{ secrets.TRANSLATION_PAT }}
-          HEAD_REPO: ${{ steps.pr-info.outputs.head-repo }}
-          HEAD_REF: ${{ steps.pr-info.outputs.head-ref }}
+      - name: Check completion status
+        id: check-completion
+        if: always() && steps.check-permissions.outputs.has_permission == 'true'
         run: |
-          BEFORE_SHA="${{ steps.find-metadata.outputs.before_sha }}"
-          AFTER_SHA="${{ steps.find-metadata.outputs.after_sha }}"
-          echo "🔄 准备撤回翻译..."
-          echo "  翻译前SHA: $BEFORE_SHA"
-          echo "  翻译后SHA: $AFTER_SHA"
-          echo "  当前SHA: $(git rev-parse HEAD)"
-
-          # 确保目标提交存在于浅克隆中
-          git fetch --depth=1 origin "$BEFORE_SHA" || true
-          git fetch --depth=1 origin "$AFTER_SHA" || true
-
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action Bot"
-
-          git reset --hard "$BEFORE_SHA"
-
-          if [ -n "$TRANSLATION_PAT" ]; then
-            remote_url="https://${TRANSLATION_PAT}@github.com/${HEAD_REPO}.git"
+          if [ "${{ job.status }}" = "success" ] && [ "$HAS_CHANGES" = "true" ]; then
+            echo "completed=true" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           else
-            remote_url="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${HEAD_REPO}.git"
+            echo "completed=false" >> $GITHUB_OUTPUT
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
-          echo "➡️ 强制推送回 ${HEAD_REPO}:${HEAD_REF}"
-          git push --force "$remote_url" HEAD:"${HEAD_REF}"
-          echo "✅ 已撤回到翻译前的状态"
-
-      - name: Trigger Test deployment (Check_PR_Update.yml) after rollback
-        if: steps.find-metadata.outputs.has_metadata == 'true'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const workflowFile = '.github/workflows/Check_PR_Update.yml';
-            const prNumber = context.payload.issue?.number || context.payload.pull_request?.number;
-            const baseRef = '${{ steps.pr-info.outputs.base-ref }}';
-            const headRef = '${{ steps.pr-info.outputs.head-ref }}';
-            const headRepo = '${{ steps.pr-info.outputs.head-repo }}';
-
-            await github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
-              workflow_id: workflowFile,
-              ref: baseRef,
-              inputs: {
-                pr_number: String(prNumber),
-                ref: headRef,
-                head_repo: headRepo,
-                trigger_source: 'rollback'
-              }
-            });
-            core.info(`Dispatched ${workflowFile} on ${baseRef} for PR #${prNumber} (head=${headRepo}:${headRef})`);
-
-      - name: Post rollback comment & cleanup metadata
-        if: steps.find-metadata.outputs.has_metadata == 'true'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const { owner, repo } = context.repo;
-            const issue_number = context.payload.issue.number;
-            const username = context.payload.comment.user.login;
-            const beforeSha = '${{ steps.find-metadata.outputs.before_sha }}';
-            const afterSha = '${{ steps.find-metadata.outputs.after_sha }}';
-            const languages = '${{ steps.find-metadata.outputs.languages }}';
-
-            let body = `## ✅ 翻译已撤回\n\n`;
-            body += `**操作者:** @${username}\n`;
-            body += `**撤回时间:** ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}\n\n`;
-            body += `### 📋 撤回详情\n- **撤回的翻译语言:** ${languages}\n- **恢复到的SHA:** \`${beforeSha}\`\n- **撤回的SHA:** \`${afterSha}\`\n\n`;
-            body += `---\n> 🤖 由 GitHub Actions 自动生成`;
-
-            await github.rest.issues.createComment({ owner, repo, issue_number, body });
-
-            const comments = await github.rest.issues.listComments({ owner, repo, issue_number, per_page: 100 });
-            const re = /<!-- TRANSLATION_METADATA/;
-            for (const c of comments.data) {
-              if (re.test(c.body)) {
-                await github.rest.issues.deleteComment({ owner, repo, comment_id: c.id });
-                break;
-              }
-            }

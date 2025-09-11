@@ -1,5 +1,5 @@
 ---
-description: SenseCAP T1000 追踪器快速入门
+description: Get_Started_with_SenseCAP_T1000_tracker
 title: 快速开始
 keywords:
 - SenseCAP_T1000_tracker
@@ -13,9 +13,7 @@ last_update:
 
 本章将指导您通过 SenseCAP Mate APP 设置 SenseCAP T1000 追踪器。
 
-
 <center><iframe width="666" height="360" src="https://www.youtube.com/embed/NBSr06NXC7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://files.seeedstudio.com/products/SenseCAP/T1000_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide_v1.2.pdf" target="_blank" rel="noopener noreferrer">
@@ -23,45 +21,40 @@ last_update:
     </a>
 </div>
 
-
 ## 设备功能
 
 ### 工作模式
 
-为了适用于不同的场景，SenseCAP T1000 追踪器有几种不同的工作模式，您可以根据需要进行选择。
+为了适应不同的应用场景，SenseCAP T1000 追踪器提供了几种不同的工作模式，您可以根据需要进行选择。
 
 |**工作模式**|**描述**|**场景**|
 | - | - | - |
-|待机模式|<p>仅上传心跳包，只包含电池信息。</p><p>可以使用 LoRa 下行命令获取位置。</p>|如果您需要长时间定位设备，并且设备可以在充电前长时间运行，云平台可以发出位置请求命令来定位设备。|
+|待机模式|<p>仅上传心跳包，只包含电池信息。</p><p>可以使用 LoRa 下行命令获取位置信息。</p>|如果您需要长时间定位设备，并且设备可以在充电前长时间运行，云平台可以发出位置请求命令来定位设备。|
 |周期模式|设置一个间隔，设备定期上传位置和传感器数据。|推荐在大多数场景中使用此模式。|
 |事件模式|根据追踪器的温度、光照和加速度传感器调整上传间隔，包括温度事件、光照事件、运动事件、静止超时和震动事件。|可用于复杂场景，如监控重要物品的运输。但功耗会大大增加。|
-
 
 ### 传感器功能
 
 SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光照传感器和 3 轴加速度计。
 您可以选择启用或禁用这些传感器：
 
-* 关闭所有传感器，但您也可以选择无传感器版本以降低成本。
-* 仅启用温度和光照传感器，以低功耗定期监控数据。
-* 当温度、光照和加速度计用作触发条件时，传感器将始终供电，设备功耗很大。
-
+- 关闭所有传感器，但您也可以选择无传感器版本以降低成本。
+- 仅启用温度和光照传感器，以低功耗定期监控数据。
+- 当温度、光照和加速度计用作触发条件时，传感器将始终供电，设备功耗很大。
 
 |**传感器**|**描述**|
 | - | - |
 |温度|<p>这是一个板载独立温度传感器，**精度为 ±0.5~1℃**。需要注意的是，这里可能存在一些温度测量延迟，因为它与外壳分离。</p><p>范围：-20 到 60℃；精度：± 1℃（最小 0.5℃，最大 1℃）；分辨率：0.1℃</p>|
-|光照|<p>光照传感器监测的不是实际的流明值，而是从暗到亮的光照百分比。主要可用于防拆监控和一些光敏监控。</p><p>范围：0 到 100%，（0% 为暗，100% 为最亮）</p>|
+|光照|<p>光照传感器监测的不是实际的流明值，而是从暗到亮的光照百分比。主要可用于防拆监控和一些光敏监控。</p><p>范围：0 到 100%（0% 为暗，100% 为最亮）</p>|
 |3 轴加速度计|通过设置加速度值，触发运动事件和震动事件。|
 
 ### 数据缓存
 
-设备可以缓存数据，可以通过蓝牙配置启用"GNSS 数据缓存"来启用此功能。设备上传确认包。当 LoRaWAN 信号覆盖较弱或没有网络覆盖时，设备在上传数据时无法接收到 ack。在这种情况下，数据将被保存并进入下一个周期。当设备在某个时刻成功上传数据时，它将发送离线数据。最多可以缓存 1000 条记录。
+设备可以缓存数据，可以通过蓝牙配置启用"GNSS 数据缓存"来开启此功能。设备上传确认包。当 LoRaWAN 信号覆盖较弱或没有网络覆盖时，设备上传数据时无法收到 ack。在这种情况下，数据将被保存并进入下一个周期。当设备在某个时刻成功上传数据时，它将发送离线数据。最多可以缓存 1000 条记录。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/cache.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 按钮功能
-
 
 <table>
 <tr><th colspan="1"><a name="_hlk134103971"></a><b>操作</b></th><th colspan="1"><b>描述</b></th><th colspan="1"><b>LED 状态</b></th><th colspan="1"><b>蜂鸣器</b></th></tr>
@@ -70,33 +63,33 @@ SenseCAP T1000 追踪器配备了 3 个传感器：温度传感器、光照传�
 <tr><td colspan="1">按住按钮 9 秒</td><td colspan="1">关机。</td><td colspan="1">无</td><td colspan="1">下降旋律</td></tr>
 <tr><td colspan="1">加入 LoRa 网络</td><td colspan="1">退出蓝牙设置后，尝试加入 LoRaWAN 网络。</td><td colspan="1">尝试接入网络时呼吸灯闪烁，成功加入网络时快速闪烁</td><td colspan="1">成功加入网络时播放快速欢快的旋律</td></tr>
 <tr><td colspan="1" rowspan="2">按一次</td><td colspan="1">获取位置/传感器数据，上传数据，并立即触发"按一次"事件。</td><td colspan="1">LED 亮 2 秒</td><td colspan="1">数据上传成功时会发出蜂鸣声。</td></tr>
-<tr><td colspan="1">如果蓝牙配对已开启，按一次可以关闭蓝牙。</td><td colspan="1">LED 将关闭</td><td colspan="1">无</td></tr>
+<tr><td colspan="1">如果蓝牙配对已开启，按一次可以关闭蓝牙。</td><td colspan="1">LED 将熄灭</td><td colspan="1">无</td></tr>
 <tr><td colspan="1" rowspan="3">连续按两次</td><td colspan="1">如果 SOS 设置为单次模式，双击按钮将激活单次 SOS 模式，并上传一次位置/传感器数据和 SOS 事件。</td><td colspan="1">随声音闪烁</td><td colspan="1">3 秒报警声</td></tr>
 <tr><td colspan="1">如果 SOS 设置为连续模式，双击按钮激活连续 SOS 模式。位置、传感器数据和 SOS 事件将每分钟上传一次，模式将在 30 次后自动结束。</td><td colspan="1">随声音闪烁</td><td colspan="1">持续报警声</td></tr>
 <tr><td colspan="1">双击两次退出 SOS 模式</td><td colspan="1">无</td><td colspan="1">无</td></tr>
 </table>
 
 :::info 注意
-* 建议在不使用设备时关闭电源。
-* 首次开机时，建议在户外进行测试，因为GPS需要通过卫星更新时间。
-* 请确保频段与您的网关频段匹配。
+
+- 建议在不使用设备时关闭电源。
+- 首次开机时，建议在户外进行测试，因为GPS需要通过卫星更新时间。
+- 请确保频段与您的网关频段匹配。
 :::
 
 ## 开始使用
 
 ### 连接到SenseCAP Mate应用
 
-* **步骤1**：下载SenseCAP Mate应用
+- **步骤1**：下载SenseCAP Mate应用
 
 SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账户并查看设备基本信息。
 
-* 对于iOS，请在App Store中搜索"SenseCAP Mate"并下载。
-* 对于Android，请在Google Store中搜索"SenseCAP Mate"并下载。
+- 对于iOS，请在App Store中搜索"SenseCAP Mate"并下载。
+- 对于Android，请在Google Store中搜索"SenseCAP Mate"并下载。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/app_downlaod.png" alt="pir" width={600} height="auto" /></p>
 
-
-* **步骤2**：添加设备
+- **步骤2**：添加设备
 
 登录SenseCAP Mate应用。
 点击右上角的"添加设备"选项卡，然后扫描设备标签上的二维码。
@@ -107,9 +100,8 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 
 有2种配置模式：
 
-* **快速配置**：为了快速开始，您可以选择快速配置基本参数
-* **高级配置**：要设置更多参数，请查看以下步骤。
-
+- **快速配置**：为了快速开始，您可以选择快速配置基本参数
+- **高级配置**：要设置更多参数，请查看以下步骤。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/setup.png" alt="pir" width={500} height="auto" /></p>
 
@@ -117,8 +109,8 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 
 对于快速配置，您只需要设置以下参数：
 
-* **频率**：应与您的网关相同。
-* **上行间隔**：周期模式（默认模式）的上行间隔，您可以通过"用户"页面上的"设备蓝牙配置"设置其他模式。
+- **频率**：应与您的网关相同。
+- **上行间隔**：周期模式（默认模式）的上行间隔，您可以通过"用户"页面上的"设备蓝牙配置"设置其他模式。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/advanced1.png" alt="pir" width={500} height="auto" /></p>
 
@@ -126,21 +118,19 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 
 ### 高级配置
 
-* 按住按钮3秒钟开机，然后自动开启蓝牙配对，用户可以使用应用扫描并连接。
-* 打开应用并点击"Tracker T1000"。选择"设置"来配置追踪器。
-* 通过S/N选择设备（S/N在设备标签上）。然后，进入后将显示传感器的基本信息。
+- 按住按钮3秒钟开机，然后自动开启蓝牙配对，用户可以使用应用扫描并连接。
+- 打开应用并点击"Tracker T1000"。选择"设置"来配置追踪器。
+- 通过S/N选择设备（S/N在设备标签上）。然后，进入后将显示传感器的基本信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_3.png" alt="pir" width={800} height="auto" /></p>
 
+点击"测量"，然后您将获得传感器数值：
 
-点击"测量"，然后您将获得传感器值：
-
-|温度|范围：-20到60℃；精度：±1℃（最小0.5℃，最大1℃）；分辨率：0.1℃|
+|温度|范围：-20至60℃；精度：±1℃（最小0.5℃，最大1℃）；分辨率：0.1℃|
 | - | - |
-|光照|0到100%，（0%为黑暗，100%为最亮）|
+|光照|0至100%，（0%为黑暗，100%为最亮）|
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_4.png" alt="pir" width={500} height="auto" /></p>
-
 
 #### LoRa参数设置
 
@@ -162,7 +152,7 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
     </tr>
         <tr>
     <td>SenseCAP for Helium</td>
-    <td>当有Helium网络覆盖时，数据可以通过Helium上传。设备在SenseCAP的私有Helium控制台上运行。用户无需在Helium控制台上创建设备，通过SenseCAP Mate应用和门户开箱即用。<br /><a href="https://explorer.helium.com/" target="_blank"><span>Helium覆盖范围</span></a></td>
+    <td>当有Helium网络覆盖时，数据可以通过Helium上传。设备运行在SenseCAP的私有Helium控制台上。用户无需在Helium控制台上创建设备，通过SenseCAP Mate应用和门户开箱即用。<br /><a href="https://explorer.helium.com/" target="_blank"><span>Helium覆盖范围</span></a></td>
     </tr>
         <tr>
     <td>Helium</td>
@@ -178,7 +168,6 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
     </tr>
   </tbody>
 </table>
-
 
 <table align="center">
   <caption> <h2></h2> </caption>
@@ -206,33 +195,31 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
             <tr>
     <td>恢复LoRa配置</td>
     <td>当"平台"从其他平台切换回SenseCAP时，需要恢复LoRa参数（EUI/App EUI/App Key等）</td>
-    <td>当您需要将LoRa参数恢复到出厂默认值时，可以使用此功能</td>
+    <td>当您需要将LoRa参数恢复到出厂默认值时可以使用此功能</td>
     </tr>
   </tbody>
 </table>
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/config_5.png" alt="pir" width={800} height="auto" /></p>
 
-
-传感器支持两种网络接入模式，默认为OTAA。
+传感器支持两种网络接入模式，默认为 OTAA。
 
 |**参数**|**描述**|
 | - | - |
-|OTAA（默认）|空中激活，通过设备EUI、应用EUI和应用密钥加入网络。|
-|ABP|个性化激活，通过DevAddr、NwkSkey和AppSkey加入网络。|
+|OTAA（默认）|空中激活，通过设备 EUI、应用 EUI 和应用密钥加入网络。|
+|ABP|个性化激活，通过设备地址、网络会话密钥和应用会话密钥加入网络。|
 
-设备默认使用 OTAA 加入 LoRaWAN 网络。因此，可以设置设备 EUI、App EUI 和 App Key。
+设备默认使用 OTAA 加入 LoRaWAN 网络。因此，可以设置设备 EUI、应用 EUI 和应用密钥。
 
 |**参数**|**类型**|
 | - | - |
-|设备 EUI|<a name="ole_link10"></a>16位，十六进制 0 ~ F|
-|App EUI|16位，十六进制 0 ~ F|
-|App Key|32位，十六进制 0 ~ F|
+|设备 EUI|<a name="ole_link10"></a>16 位，十六进制 0 ~ F|
+|应用 EUI|16 位，十六进制 0 ~ F|
+|应用密钥|32 位，十六进制 0 ~ F|
 
 :::info 注意
-使用 SenseCAP 平台时，EUI、APP EUI 和 APP Key 是固定的，与传感器标签相同。<br />
-当传感器选择与 Helium 或 TTN 等公共平台一起使用时，EUI 不会改变，传感器将生成新的固定 App EUI 和 App Key 用于网络接入。<br />
+使用 SenseCAP 平台时，EUI、APP EUI 和 APP Key 是固定的，与传感器标签上的相同。<br />
+当传感器选择与 Helium 或 TTN 等公共平台一起使用时，EUI 不会改变，传感器将生成新的固定应用 EUI 和应用密钥用于网络接入。<br />
 如需批量获取 EUI 信息，请联系我们的销售团队。
 :::
 
@@ -251,13 +238,11 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 <tr><td colspan="1">AS923-4</td></tr>
 </table>
 
-
-:::info 注意
-不同国家和 LoRaWAN 网络服务器使用不同的频率计划。<br />
-对于 Helium 网络，请参考：[Helium-frequency-plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)<br />
-对于 The Things Network，请参考：[TTN-frequency-plans](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
+:::info Note
+不同国家和LoRaWAN网络服务器使用不同的频率计划。<br />
+对于Helium网络，请参考：[Helium-frequency-plans](https://docs.helium.com/lorawan-on-helium/frequency-plans)<br />
+对于The Things Network，请参考：[TTN-frequency-plans](https://www.thethingsnetwork.org/docs/lorawan/frequency-plans/)
 :::
-
 
 #### 工作模式设置
 
@@ -265,17 +250,16 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 
 <table>
 <tr><th colspan="1"><b>参数</b></th><th colspan="1"><b>描述</b></th><th colspan="1"></th></tr>
-<tr><td colspan="1">心跳间隔</td><td colspan="1">当设备在心跳间隔内没有上传数据时，将触发心跳包。此包仅包含电池信息。</td><td colspan="1">默认 720 分钟。</td></tr>
+<tr><td colspan="1">心跳间隔</td><td colspan="1">当设备在心跳间隔内没有上传数据时，将触发心跳包。此包仅包含电池信息。</td><td colspan="1">默认720分钟。</td></tr>
 <tr><td colspan="1">启用温度和光照</td><td colspan="1">如果打开此开关，将收集并上传温度和光照数据，但会增加功耗。</td><td colspan="1">默认关闭。</td></tr>
-<tr><td colspan="1" rowspan="2">SOS 报告模式</td><td colspan="1">单次</td><td colspan="1"><a name="ole_link7"></a>如果 SOS 设置为单次模式，双击按钮将启用单次 SOS 模式，并上传一次位置/传感器数据和 SOS 事件</td></tr>
-<tr><td colspan="1">连续</td><td colspan="1"><p>默认使用连续模式。</p><p>如果 SOS 设置为连续模式，双击按钮打开 SOS 连续模式，每 1 分钟上传一次位置、传感器数据和 SOS 事件，30 次后自动结束</p></td></tr>
+<tr><td colspan="1" rowspan="2">SOS报告模式</td><td colspan="1">单次</td><td colspan="1"><a name="ole_link7"></a>如果SOS设置为单次模式，双击按钮将启用单次SOS模式，并上传一次位置/传感器数据和SOS事件</td></tr>
+<tr><td colspan="1">连续</td><td colspan="1"><p>默认使用连续模式。</p><p>如果SOS设置为连续模式，双击按钮打开SOS连续模式，每1分钟上传一次位置、传感器数据和SOS事件，30次后自动结束</p></td></tr>
 <tr><td colspan="1" rowspan="3">工作模式</td><td colspan="1">待机模式</td><td colspan="1">根据心跳间隔上传心跳包（仅电池电量）。</td></tr>
 <tr><td colspan="1">周期模式</td><td colspan="1">根据上传间隔上传位置和传感器数据。</td></tr>
 <tr><td colspan="1">事件模式</td><td colspan="1"><a name="ole_link15"></a>根据温度、光照和运动等测量值设置阈值触发条件，并在触发后调整上传间隔。</td></tr>
-<tr><td colspan="1">上传间隔（分钟）– 周期模式</td><td colspan="1">定期定位并上传数据。</td><td colspan="1"><p>默认 60 分钟。</p><p>频率越高，功耗越高。</p></td></tr>
-<tr><td colspan="1">恢复所有设置</td><td colspan="1">将所有配置参数恢复为出厂设置，包括 LoRa、工作模式和地理定位。</td><td colspan="1"></td></tr>
+<tr><td colspan="1">上传间隔（分钟）– 周期模式</td><td colspan="1">定期定位并上传数据。</td><td colspan="1"><p>默认60分钟。</p><p>频率越高，功耗越高。</p></td></tr>
+<tr><td colspan="1">恢复所有设置</td><td colspan="1">将所有配置参数恢复为出厂设置，包括LoRa、工作模式和地理定位。</td><td colspan="1"></td></tr>
 </table>
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/work_mode.png" alt="pir" width={800} height="auto" /></p>
 
@@ -284,20 +268,20 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 <table>
 <tr><th><b>事件模式</b></th><th><b>描述</b></th><th></th></tr>
 <tr><td>上传间隔 – 非事件（分钟）</td><td><a name="ole_link16"></a>这是未触发事件时的上传间隔。</td><td><p>默认 60 分钟。</p><p>范围：1~10080 分钟。</p></td></tr>
-<tr><td rowspan="2">震动事件</td><td>启用震动事件后，跟踪器的震动将触发数据报告，包括震动事件、位置和传感器数据。</td><td>默认关闭。</td></tr>
-<tr><td>三轴运动阈值（mg）</td><td>默认为 300。当加速度超过 300mg 时，触发震动事件。</td></tr>
-<tr><td rowspan="3">运动事件</td><td>当加速度超过设定值时，设备开始运动，当 2 分钟内没有运动时，设备运动停止。根据开始运动和停止运动设置上传间隔。</td><td>默认关闭。</td></tr>
-<tr><td>三轴运动阈值（mg）</td><td>默认为 30。当加速度超过 30mg 时，判断设备处于运动状态，当低于此值 2 分钟时，判断设备处于静止状态。</td></tr>
-<tr><td>运动时上传间隔（分钟）</td><td>设备运动时当前状态的上传间隔。</td></tr>
+<tr><td rowspan="2">震动事件</td><td>当震动事件启用时，追踪器的震动将触发数据报告，包括震动事件、位置和传感器数据。</td><td>默认关闭。</td></tr>
+<tr><td>3轴运动阈值（mg）</td><td>默认为 300。当加速度超过 300mg 时，触发震动事件。</td></tr>
+<tr><td rowspan="3">运动事件</td><td>当加速度超过设定值时，设备开始移动，当 2 分钟内没有运动时，设备停止移动。根据开始运动和停止运动设置上传间隔。</td><td>默认关闭。</td></tr>
+<tr><td>3轴运动阈值（mg）</td><td>默认为 30。当加速度超过 30mg 时，判定设备处于运动状态，当低于此值 2 分钟时，判定设备处于静止状态。</td></tr>
+<tr><td>运动时上传间隔（分钟）</td><td>设置设备处于运动状态时当前状态的上传间隔。</td></tr>
 <tr><td rowspan="2">静止事件</td><td>当设备在某个位置静止超过一定时间时，触发静止超时事件。</td><td></td></tr>
 <tr><td>静止超时（分钟）</td><td>默认为 360 分钟。</td></tr>
-<tr><td rowspan="4">温度事件</td><td>如果启用温度事件，可以根据温度设置上传间隔。</td><td>例如，上传间隔=10，值≥30，如果温度高于 30°C，设备将以 10 分钟间隔上传位置。</td></tr>
+<tr><td rowspan="4">温度事件</td><td>如果启用温度事件，您可以根据温度设置上传间隔。</td><td>例如，上传间隔=10，数值≥30，如果温度高于 30°C，设备将以 10 分钟间隔上传位置。</td></tr>
 <tr><td>采样间隔（秒）</td><td><p>默认 30 秒。</p><p>每 30 秒检测一次温度。当触发阈值时，上传位置和传感器数据。</p></td></tr>
 <tr><td>上传间隔（分钟）</td><td>当温度超过阈值时，根据此间隔上传位置和传感器数据。</td></tr>
-<tr><td>数值规则</td><td>可以设置四种阈值规则之一。</td></tr>
-<tr><td rowspan="3">光照事件</td><td>如果启用光照事件，可以根据温度设置上传间隔。</td><td>例如，上传间隔=10，值≥30，如果温度高于 30%，设备将以 10 分钟间隔上传位置。</td></tr>
+<tr><td>数值规则</td><td>可以设置四种阈值规则中的一种。</td></tr>
+<tr><td rowspan="3">光照事件</td><td>如果启用光照事件，您可以根据温度设置上传间隔。</td><td>例如，上传间隔=10，数值≥30，如果温度高于 30%，设备将以 10 分钟间隔上传位置。</td></tr>
 <tr><td>上传间隔（分钟）</td><td>当光照超过阈值时，根据此间隔上传位置和传感器数据。</td></tr>
-<tr><td>数值规则</td><td>可以设置四种阈值规则之一。</td></tr>
+<tr><td>数值规则</td><td>可以设置四种阈值规则中的一种。</td></tr>
 </table>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/work_mode2.png" alt="pir" width={800} height="auto" /></p>
@@ -314,11 +298,11 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 <tr><th colspan="1"><b>地理定位</b></th><th colspan="1"><b>描述</b></th><th colspan="1"></th></tr>
 <tr><td colspan="1" rowspan="8">地理定位策略</td><td colspan="1">仅 GNSS</td><td colspan="1"><p>默认使用 GNSS。</p><p>仅使用 GNSS 进行定位。</p></td></tr>
 <tr><td colspan="1">仅 Wi-Fi</td><td colspan="1">仅使用 Wi-Fi 扫描进行定位。</td></tr>
-<tr><td colspan="1">Wi-Fi+GNSS</td><td colspan="1">优先使用 Wi-Fi，再使用 GNSS。如果 Wi-Fi 失败，则在一个地理定位周期内使用 GNSS。</td></tr>
-<tr><td colspan="1">GNSS + Wi-Fi</td><td colspan="1">优先使用 GNSS，再使用 Wi-Fi。如果 GNSS 失败，则在一个地理定位周期内使用 Wi-Fi。</td></tr>
+<tr><td colspan="1">Wi-Fi+GNSS</td><td colspan="1">优先使用 Wi-Fi，然后使用 GNSS。如果 Wi-Fi 失败，则在一个地理定位周期内使用 GNSS。</td></tr>
+<tr><td colspan="1">GNSS + Wi-Fi</td><td colspan="1">优先使用 GNSS，然后使用 Wi-Fi。如果 GNSS 失败，则在一个地理定位周期内使用 Wi-Fi。</td></tr>
 <tr><td colspan="1">仅蓝牙</td><td colspan="1">仅使用蓝牙扫描进行定位。</td></tr>
-<tr><td colspan="1">蓝牙 + Wi-Fi</td><td colspan="1">优先使用蓝牙，再使用 Wi-Fi。如果蓝牙失败，则在一个地理定位周期内使用 Wi-Fi。</td></tr>
-<tr><td colspan="1">蓝牙 + GNSS</td><td colspan="1">优先使用蓝牙，再使用 GNSS。如果蓝牙失败，则在一个地理定位周期内使用 GNSS。</td></tr>
+<tr><td colspan="1">蓝牙 + Wi-Fi</td><td colspan="1">优先使用蓝牙，然后使用 Wi-Fi。如果蓝牙失败，则在一个地理定位周期内使用 Wi-Fi。</td></tr>
+<tr><td colspan="1">蓝牙 + GNSS</td><td colspan="1">优先使用蓝牙，然后使用 GNSS。如果蓝牙失败，则在一个地理定位周期内使用 GNSS。</td></tr>
 <tr><td colspan="1">蓝牙 + Wi-Fi + GNSS </td><td colspan="1">依次使用蓝牙、Wi-Fi 和 GNSS 进行定位（一种定位方式失败后切换到下一种定位方式）</td></tr>
 <tr><td colspan="1">GNSS 超时</td><td colspan="1"><p>等待 GNSS 获取粗略位置定位的</p><p>最大时间</p></td><td colspan="1"><p>默认为 60 秒。</p><p>不建议修改，时间越长，功耗越大。</p></td></tr>
 <tr><td colspan="1"><a name="ole_link17"></a>GNSS 数据缓存</td><td colspan="1">当无法通过 LoRa 上传数据时，数据会保存在本地，并在 LoRa 信号恢复时上传。</td><td colspan="1">默认关闭。</td></tr>
@@ -326,25 +310,22 @@ SenseCAP Mate应用用于配置LoRa参数、间隔、将设备绑定到您的账
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/mode3.png" alt="pir" width={500} height="auto" /></p>
 
-
 配置完所有参数后，点击"发送"。
 如果不需要修改任何参数，退出蓝牙配置，返回主页。此时，设备发起 LoRa 网络接入请求。
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/send.png" alt="pir" width={400} height="auto" /></p>
 
 ### 设备数据查看
 
-#### SenseCAP Mate 应用
+#### SenseCAP Mate App
 
-在应用中查看位置信息。
+在 APP 上查看位置信息。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_view.png" alt="pir" width={800} height="auto" /></p>
 
-
 #### SenseCAP Portal
 
-SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构建在微软安全可靠的云服务 Azure 上。用户可以申请账户并将所有设备绑定到此账户。SenseCAP Portal 提供 Web 门户和 API。Web 门户包括仪表板、设备管理、数据管理和访问密钥管理。API 向用户开放以供进一步开发。
+SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构建在微软安全可靠的云服务 Azure 之上。用户可以申请账户并将所有设备绑定到此账户。SenseCAP Portal 提供 Web 门户和 API。Web 门户包括仪表板、设备管理、数据管理和访问密钥管理。API 向用户开放以供进一步开发。
 
 - **仪表板：** 包括设备概览、公告、场景数据和数据图表等。
 - **设备管理：** 管理 SenseCAP 设备。
@@ -358,14 +339,13 @@ SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构
 
 登录 [SenseCAP Portal](http://sensecap.seeed.cc)
 
-如果您已通过应用创建账户，可以直接登录。
+如果您已通过 APP 创建账户，可以直接登录。
 
-1)  选择注册账户，输入邮箱信息，点击"注册"，注册邮件将发送到用户邮箱
+1) 选择注册账户，输入邮箱信息，点击"注册"，注册邮件将发送到用户邮箱
 
-2)  打开"SenseCAP…"邮件，点击跳转链接，填写相关信息，完成注册
+2) 打开"SenseCAP…"邮件，点击跳转链接，填写相关信息，完成注册
 
-3)  返回登录界面，完成登录
-
+3) 返回登录界面，完成登录
 
 查看 [SenseCAP Portal 用户指南](https://sensecap-docs.seeed.cc/quickstart.html) 了解更多详情。
 
@@ -373,12 +353,13 @@ SenseCAP Portal 的主要功能是管理 SenseCAP 设备和存储数据。它构
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map_view2.png" alt="pir" width={800} height="auto" /></p>
 
-## SenseCAP API 
+## SenseCAP API
 
-SenseCAP API 供用户管理物联网设备和数据。它包括 3 种类型的 API 方法：HTTP 协议、MQTT 协议和 Websocket 协议。
-* 通过 HTTP API，用户可以管理 LoRa 设备，获取原始数据或历史数据。
-* 通过 MQTT API，用户可以通过 MQTT 协议订阅传感器的实时测量数据。
-* 通过 Websocket API，用户可以通过 Websocket 协议获取传感器的实时测量数据。
+SenseCAP API 供用户管理 IoT 设备和数据。它包括 3 种类型的 API 方法：HTTP 协议、MQTT 协议和 Websocket 协议。
+
+- 通过 HTTP API，用户可以管理 LoRa 设备，获取原始数据或历史数据。
+- 通过 MQTT API，用户可以通过 MQTT 协议订阅传感器的实时测量数据。
+- 通过 Websocket API，用户可以通过 Websocket 协议获取传感器的实时测量数据。
 
 请查看 [API 用户指南](https://sensecap-docs.seeed.cc/) 了解更多详情。
 

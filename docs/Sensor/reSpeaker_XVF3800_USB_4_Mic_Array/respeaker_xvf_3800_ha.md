@@ -17,10 +17,9 @@ last_update:
 
 ## Overview
 
-Talk with smart spaces with new **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** switch up the lights, crank up the tunes, or even ask about the weather  using voice 
+Talk with smart spaces with new **ReSpeaker XMOS XVF3800 with XIAO ESP32S3** switch up the lights, crank up the tunes, or even ask about the weather  using voice
 
 This chapter we will use the ReSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice Assistant to connect the Sonoff smart switch to realize voice control of the light switch.
-
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -65,7 +64,6 @@ This chapter we will use the ReSpeaker XMOS XVF3800 with XIAO ESP32S3  HA Voice 
   </tr>
 </table>
 
-
 ## Firmware update
 
 To get the best playback experience, we need to update XMOS firmware to
@@ -78,12 +76,11 @@ The XVF3800 mic array needs a 12.288 MHz MCLK to work, but ESPHome (used in Home
 Our firmware fixes this limitation, so the mic works properly with Home Assistant.
 :::
 
-
-You can download Firmware From [Here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s) 
+You can download Firmware From [Here](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)
 
 The installtion guide is [Here](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
-## Prepare ReSpeaker XMOS XVF3800 with XIAO ESP32S3 
+## Prepare ReSpeaker XMOS XVF3800 with XIAO ESP32S3
 
 Go to **Home Assistant > Settings > Add-ons**.
 
@@ -96,7 +93,6 @@ Click **Add-on Store** (usually at the bottom right)
 Under **Official add-ons**, search for and install **ESPHome Device Builder**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
-
 
 After installation, click **Start** to run the ESPHome add-on.
 
@@ -120,7 +116,7 @@ Select your new device entry and click **EDIT**.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_respeaker_device.PNG" alt="pir" width={800} height="auto" /></p>
 
-Replace the content with your custom **YAML configuration** 
+Replace the content with your custom **YAML configuration**
 
 You can Found the YAML file from [Here](https://github.com/respeaker/reSpeaker_XVF3800_ESPHome_Assistant)
 
@@ -136,9 +132,7 @@ Wait for the firmware to compile.
 
 Download the generated .bin firmware file to your computer.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
-
 
 Connect the **ESP32-S3** board (with XVF3800 connected) to your PC using a **USB Type-C cable**.
 
@@ -172,7 +166,7 @@ Click **CONFIGURE**, then **Submit** to finish setup.
 
 ## Add your smart device
 
-Set up the **Sonoff BASICR2** device according to the manufacturer's user manual. You will need to create eWELink account. 
+Set up the **Sonoff BASICR2** device according to the manufacturer's user manual. You will need to create eWELink account.
 
 ### Install HACS
 
@@ -203,8 +197,7 @@ Once connected successfully, you will see the associated entities listed under:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/respeaker/sonoff-id.png" alt="pir" width={800} height="auto" /></p>
 
-## Voice Assistant with Nabu Cloud 
-
+## Voice Assistant with Nabu Cloud
 
 In this demo, we are showcasing how to connect with **Home Assistant Cloud (Nabu Casa)** using voice. The setup is simple, and you can take advantage of a **one-month free trial** to explore its full capabilities.
 With the built-in **wake word**: “Okay Nabu”, you can effortlessly trigger voice commands and **seamlessly integrate** with devices and services **anywhere, anytime** — all without complex configurations.
@@ -218,12 +211,11 @@ With the built-in **wake word**: “Okay Nabu”, you can effortlessly trigger v
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

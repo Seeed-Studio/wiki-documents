@@ -110,7 +110,7 @@ DFUツールを開き、上記の手順でボードを設定した後、DFUツ�
 
 ![画像説明を入力してください](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
-次に、APPプログラムファイルの列にバイナリファイルを追加する必要があります。バイナリファイルは\TFT_GD32\.pio\build\gd32vf103v-evalのパスにあります。インデックス4を選択し、「OK」をクリックしてコードをボードにダウンロードします。ダウンロード後、「Leave DFU」をクリックしてボードをDFUツールから切断します。その後、LCD上でグラフィック処理の時間をカウントするデモが表示されます。このデモは「TFT_eSPI」ライブラリのすべてのAPIをほぼ含んでいます。
+次に、APPプログラムファイルの列にバイナリファイルを追加する必要があります。バイナリファイルは\TFT_GD32.pio\build\gd32vf103v-evalのパスにあります。インデックス4を選択し、「OK」をクリックしてコードをボードにダウンロードします。ダウンロード後、「Leave DFU」をクリックしてボードをDFUツールから切断します。その後、LCD上でグラフィック処理の時間をカウントするデモが表示されます。このデモは「TFT_eSPI」ライブラリのすべてのAPIをほぼ含んでいます。
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/gd32.gif)
 

@@ -133,7 +133,7 @@ So now you can just type 'screen portname' followed by return, to show StickOS o
 
 After this, you may need to push the enter key again to get the CUI32Stem to send back the welcome message from StickOS...
 
-To quit the screen app, type control-A, then control-\.
+To quit the screen app, type control-A, then control-.
 
 Final note: This same procedure will also work when you have a [GROVE Serial Bluetooth](https://www.seeedstudio.com/depot/grove-serial-bluetooth-p-795.html) element connected to your CUI32Stem.
 The only difference is that the name will instead have 'bluetooth' in it somewhere, of course... if you're not sure, just try them all until you find the right one.

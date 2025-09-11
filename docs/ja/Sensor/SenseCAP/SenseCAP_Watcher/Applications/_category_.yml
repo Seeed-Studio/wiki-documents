@@ -1,10 +1,10 @@
 position: 8 # float position is supported
 label: 'アプリケーション'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: application_with_watcher
 link:
   type: generated-index
   slug: ja/applications_with_watcher_main_page
   title: SenseCAP Watcher アプリケーションシリーズ
-  description: SenseCAP Watcher ウィキの「アプリケーション」セクションは、Watcher をさまざまなプラットフォームやサービスと開発、カスタマイズ、統合することに関連する幅広いトピックを網羅したリソースとガイドの包括的なコレクションです。このセクションは、Watcher のアプリケーションの特定の側面に焦点を当てた複数の部分に分かれています。
+  description: SenseCAP Watcher wikiの「アプリケーション」セクションは、Watcherの開発、カスタマイズ、および様々なプラットフォームやサービスとの統合に関連する幅広いトピックをカバーするリソースとガイドの包括的なコレクションです。このセクションはいくつかの部分に分かれており、それぞれがWatcherアプリケーションの特定の側面に焦点を当てています。

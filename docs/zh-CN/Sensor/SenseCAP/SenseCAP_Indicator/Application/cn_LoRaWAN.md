@@ -34,9 +34,9 @@ categories:
 
 ## LoRaWAN
 
-LoRaWAN 被描述为一种低功耗广域（LPWA）网络协议，可以在大区域或网络中将电池供电的设备无线连接到互联网。它是 LoRa 无线系统的一部分，在免许可频谱中运行，支持有限带宽的长距离通信。其特点是长距离通信（最远 10 英里）、长电池寿命（最长 10 年）、低成本和低功耗，载荷大小根据数据不同从 51 到 241 字节不等[^1]。
+LoRaWAN 被描述为一种低功耗广域（LPWA）网络协议，可在大区域或网络中将电池供电设备无线连接到互联网。它是 LoRa 无线系统的一部分，在免许可频谱中运行，支持带宽有限的长距离通信。其特点是长距离通信（最远 10 英里）、长电池寿命（最长 10 年）、低成本和低功耗，有效载荷大小根据数据不同从 51 到 241 字节不等[^1]。
 
-[^1]: [LoRaWAN 网关和节点的温和介绍
+[^1]: [A Gentle Introduction to LoRaWAN Gateways & Nodes
 ](https://www.seeedstudio.com/blog/2021/04/27/a-gentle-introduction-to-lorawan-gateways-nodes/)
 
 <div style={{ textAlign: 'center' }}>
@@ -48,7 +48,7 @@ LoRaWAN 被描述为一种低功耗广域（LPWA）网络协议，可以在大�
 
 ## 高级感知系统
 
-Seeed Studio 的"高级感知系统"是一个[物联网解决方案](/cn/SenseCAP_introduction)，提供全面的传感、网络、边缘计算工具和云服务阵列，旨在增强各行业的环境感知能力。该系统配备了多样化的模块和设备阵列[^2]，充当数字化的"眼睛和耳朵"，促进对现实世界的变革性理解。
+Seeed Studio 的"高级感知系统"是一个[物联网解决方案](/SenseCAP_introduction)，提供全面的传感、网络、边缘计算工具和云服务阵列，旨在增强各行业的环境感知能力。该系统配备了多样化的模块和设备阵列[^2]，充当数字化的"眼睛和耳朵"，促进对现实世界的变革性理解。
 
 <div style={{ textAlign: 'center' }}>
 
@@ -57,22 +57,22 @@ Seeed Studio 的"高级感知系统"是一个[物联网解决方案](/cn/SenseCA
 <br/>
 </div>
 
-SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级质量和定制化的行业解决方案。他们的工作成果包括创新的[智慧村庄解决方案](https://www.seeedstudio.com/smart-village)等备受赞誉的产品，因其实用性和前瞻性设计而获得好评。
+SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级质量和定制化行业解决方案。他们的工作成果包括创新的[智慧村庄解决方案](https://www.seeedstudio.com/smart-village)等备受赞誉的产品，因其实用性和前瞻性设计而获得好评。
 
 在 Helium 网络领域，该团队的贡献尤其值得注意。SenseCAP M1、M2 和 M4 等设备不仅是高性能的 Helium 热点；它们在使用户能够赚取 HNT 加密货币的同时构建去中心化无线 LoRaWAN® 网络基础设施方面发挥着关键作用。SenseCAP M4 Square 因其运行多个 Web 3.0 应用程序的能力而脱颖而出，从而简化了复杂多应用系统的部署。[^3]
 
 凭借这种深厚的专业知识和与多样化客户群的持续接触，SenseCAP 团队已战略性地决定将 LoRa 功能集成到 SenseCAP Indicator 中。
 
-[^2]: [SenseCAP 产品 - Bazaar](https://www.seeedstudio.com/SenseCAP-c-1825.html)
+[^2]: [SenseCAP Products - Bazaar](https://www.seeedstudio.com/SenseCAP-c-1825.html)
 [^3]: [SenseCAP MX](https://www.sensecapmx.com/)
 
-让我们更仔细地了解 [SenseCAP Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html) 的 LoRaWAN 功能。
+让我们仔细了解一下 [SenseCAP Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html) 的 LoRaWAN 功能。
 
 ## 概述
 
-| 功能                          | 详情                                                      |
+| 功能                          | 详细信息                                                      |
 |:---:|:---:|
-| 无线电收发器               | SX1262                                                       |
+| 无线收发器               | SX1262                                                       |
 | 支持的类别                | Class A/B/C                                                  |
 | 支持的频段        | AS923, AU915, CN779, EU433, EU868, KR920, IN865, US915, RU864, US915 |
 | LoRaWAN Mac 版本              | 1.0.4/1.1.0                                                  |
@@ -83,7 +83,7 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 
 ## 步骤 1. 获取固件 {#flash_firmware}
 
-### 1.1 下载固件：
+### 1.1 下载固件
 
 首先，从 GitHub Release 页面下载适用于 SenseCAP Indicator 的 LoRaWAN 固件 `indicator_lorawan.bin`。
 
@@ -102,10 +102,9 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/en/release-v5.1/esp32/get-started/index.html#ide)(v5.1) 提供了构建自己固件的见解。您可以访问和修改[源代码](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)以满足您的特定需求。
 :::
 
+### 1.2 烧录固件
 
-### 1.2 烧录固件：
-
-要将固件烧录到 SenseCAP Indicator，请先下载固件，然后使用 esptool（或如果您有 ESP-IDF 环境则使用 `esptool.py`）来烧录（有关全面指导，请参考[说明](/cn/SenseCAP_Indicator_Application_LoRaWAN)）。
+要将固件烧录到 SenseCAP Indicator，请先下载固件，然后使用 esptool（或如果您有 ESP-IDF 环境则使用 `esptool.py`）进行烧录（有关全面指导，请参阅[说明](/SenseCAP_Indicator_Application_LoRaWAN)）。
 
 **在 Windows 上使用 esptool 烧录固件：**
 
@@ -115,7 +114,7 @@ SenseCAP 团队主要专注于传感器和网络组件，致力于提供顶级�
 <tool_path>/esptool.exe --chip esp32s3 --baud 921600 write_flash -z 0x0 <firmware_path>/indicator_lorawan.bin 
 ```
 
-例如，如果您的 `flash_bin` 文件夹位于 `D:` 盘并包含以下结构：
+For example, if your `flash_bin` folder is located in drive `D:` and contains the following structure:
 
 ```sh
 flash_bin/
@@ -133,7 +132,7 @@ flash_bin/
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/esptool_nonport_flash.png.png"/>
 </div>
 
-如果您有多个端口并需要指定一个，请使用 `-p` 或 `--port` 参数：
+如果您有多个端口并需要指定其中一个，请使用 `-p` 或 `--port` 参数：
 
 ```sh
 ./esptool.exe --chip esp32s3 -p COM20 --baud 921600 write_flash -z 0x0 ./indicator_lorawan.bin
@@ -146,22 +145,22 @@ flash_bin/
 :::note
 Mac 用户应将 `./esptool.exe` 替换为 `./esptool`。
 
-如果在烧录过程中遇到问题，请考虑降低**波特率**或参考[这些故障排除步骤](https://askubuntu.com/questions/1411463/dev-ttyusb0-file-disappears-from-dev-directory-while-using-device)。
+如果在刷写过程中遇到问题，请考虑降低**波特率**或参考[这些故障排除步骤](https://askubuntu.com/questions/1411463/dev-ttyusb0-file-disappears-from-dev-directory-while-using-device)。
 :::
 
-固件成功烧录后，从后续步骤中从 LoRaWAN 网络服务器获取设备 EUI 和 APPkey 等基本参数。
+固件成功刷写后，从后续步骤中从 LoRaWAN 网络服务器获取设备 EUI 和 APPkey 等关键参数。
 
 ## 步骤 2. 在 LoRaWAN 网络服务器上注册设备 {#HEAD_register_device}
 
 > 开始之前，请确保您的设备在 LoRaWAN 网络的覆盖范围内。
 
-本节将指导您连接到本地 LoRaWAN 网络服务器。我们将使用 [ChirpStack](https://www.chirpstack.io/) 平台作为示例，配合 [SenseCAP M2 多平台 LoRaWAN 室内网关 (EU868)](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)。*如果您使用的是不同的网络服务器，流程将类似*；您需要收集激活所需的基本信息：
+本节将指导您连接到本地 LoRaWAN 网络服务器。我们将以 [ChirpStack](https://www.chirpstack.io/) 平台为例，配合 [SenseCAP M2 多平台 LoRaWAN 室内网关 (EU868)](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html)。*如果您使用不同的网络服务器，流程将类似*；您需要收集激活所需的基本信息：
 
 - OTAA（空中激活）：
   - DevEUI
   - AppKey
   - JoinEUI/AppEUI（需要 Mac 版本 1.1.0）
-- ABP（个性化激活）： 
+- ABP（个性化激活）：
   - DevEUI
   - DevAddr
   - AppSKey
@@ -177,17 +176,17 @@ Mac 用户应将 `./esptool.exe` 替换为 `./esptool`。
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/gateway_config.png"/>
 </div>
 
-调整设置后，点击 `Save & Apply` 提交您的更改。然后您可以使用提供的 URL（例如，`http://192.168.1.102:8080`）访问 ChirpStack 界面。
+调整设置后，点击 `Save & Apply` 提交更改。然后您可以使用提供的 URL（例如 `http://192.168.1.102:8080`）访问 ChirpStack 界面。
 
 使用以下默认凭据登录：
 
 - **用户名：** `admin`
 - **密码：** `admin`
 
-有关更多详细信息和高级配置选项，请访问 [SenseCAP M2 网关 LNS 配置指南](https://wiki.seeedstudio.com/cn/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)。
-
+有关更多详细信息和高级配置选项，请访问 [SenseCAP M2 网关 LNS 配置指南](https://wiki.seeedstudio.com/Network/SenseCAP_Network/SenseCAP_M2_Multi_Platform/SenseCAP_M2_MP_Gateway_LNS_Configuration/)。
 
 ### 2.2 配置本地网络服务器（ChirpStack）
+
 请参考 ChirpStack 文档了解详细功能和 LoRaWAN 版本支持：[ChirpStack 网络服务器文档](https://www.chirpstack.io/network-server/features/lorawan-versions/)。
 
 以下是使用 ChirpStack 配置本地网络服务器的步骤：
@@ -206,7 +205,7 @@ Mac 用户应将 `./esptool.exe` 替换为 `./esptool`。
 
 创建设备配置文件是确保您的设备通过 LoRaWAN 网络有效通信的关键步骤。这涉及选择影响设备性能和兼容性的技术参数。以下是设置方法：
 
-- **MAC 版本：** 这指的是您的设备使用的媒体访问控制（MAC）协议版本。MAC 协议对于管理您的设备如何访问网络至关重要。您可以在版本 v1.0.4 和 v1.1.0 之间选择。
+- **MAC 版本：** 这指的是您的设备使用的媒体访问控制（MAC）协议版本。MAC 协议对于管理您的设备如何访问网络至关重要。您可以在 v1.0.4 和 v1.1.0 版本之间选择。
 - **区域参数修订版：** 这些是需要根据您设备的地理位置配置的特定参数。它们确保设备符合当地法规和网络规范。
 
 **选择 MAC 版本**
@@ -221,8 +220,8 @@ import TabItem from '@theme/TabItem';
 
   您需要以下凭据：
 
-  - **DevEUI：** 这是分配给您设备的唯一标识符，确保全球唯一性。
-  - **AppKey：** 用于加密和保护您设备通信的密钥。
+- **DevEUI：** 这是分配给您设备的唯一标识符，确保全球唯一性。
+- **AppKey：** 用于加密和保护您设备通信的密钥。
 
 </TabItem>
 
@@ -230,32 +229,30 @@ import TabItem from '@theme/TabItem';
 
   您的设备需要这些凭据：
 
-  - **DevEUI：** 您设备的全球唯一标识符。
-  - **AppEUI/JoinEUI：** 您设备连接的应用程序的唯一标识符。
-  - **AppKey：** 用于保护通信的加密密钥。
+- **DevEUI：** 您设备的全球唯一标识符。
+- **AppEUI/JoinEUI：** 您设备连接的应用程序的唯一标识符。
+- **AppKey：** 用于保护通信的加密密钥。
 
 </TabItem>
 </Tabs>
 
-
 **选择区域参数修订版**
 
 在为 LoRaWAN 网络设置设备配置文件的上下文中，您选择的区域参数（RP）版本对于确保您的设备符合特定区域标准和规范运行至关重要。
-
 
 **当前设置**
 
 目前，我们正在设置一个 MAC 版本为 `1.0.4` 和区域参数修订版为 `RP002-1.0.2` 的设备配置文件。
 
 :::info 区域参数修订版
-对于在 LoRaWAN 网络上配置设备配置文件，`RP002-1.0.2` 是满足当前需求的合适选择。根据 `v4.7.0` LoRaMac-node 规范，[代码](https://github.com/Lora-net/LoRaMac-node/blob/v4.7.0/src/mac/region/Region.h) 推荐使用 `RP002-1.0.3`。
+对于在 LoRaWAN 网络上配置设备配置文件，`RP002-1.0.2` 是满足当前需求的合适选择。根据 `v4.7.0` LoRaMac-node 规范，[代码](https://github.com/Lora-net/LoRaMac-node/blob/v4.7.0/src/mac/region/Region.h)推荐使用 `RP002-1.0.3`。
 :::
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_device_profile_check.png"/>
 </div>
 
-正确理解和配置必要元素是确保您的设备通过 LoRaWAN 网络有效且安全通信的关键。
+正确理解和配置必要的元素是确保您的设备在 LoRaWAN 网络上有效且安全通信的关键。
 
 要使用 **Class C** 设备类型，重要的是在您的设备配置文件中专门启用此功能。
 
@@ -263,10 +260,9 @@ import TabItem from '@theme/TabItem';
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_104_classC_enable.png"/>
 </div>
 
-
 **解码器函数**
 
-确实，为了使设备传输的有效载荷数据有意义且可解释，在设备配置文件中实现解码器是必不可少的。此解码器将原始二进制数据转换为可读格式，让您能够理解并有效利用设备发送的信息。
+确实，为了使您的设备传输的载荷数据变得有意义且可解释，在设备配置文件中实现解码器是必不可少的。此解码器将把原始二进制数据转换为可读格式，让您能够理解和有效利用设备发送的信息。
 
 <details>
 
@@ -346,12 +342,11 @@ function encodeDownlink(input) {
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_add_decoder.png"/>
 </div>
 
-创建设备配置文件后，下一步是添加应用程序。
+设备配置文件创建完成后，下一步是添加应用程序。
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_104_profile.png"/>
 </div>
-
 
 #### 2.2.2 添加应用程序 {#add_appication}
 
@@ -363,7 +358,7 @@ function encodeDownlink(input) {
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_app_create.png"/>
 </div>
 
-要提交，请设置名称并可选择提供描述。
+要提交，请设置名称并可选择性地提供描述。
 
 #### 2.2.3 在应用程序下注册设备 {#register_device}
 
@@ -392,13 +387,13 @@ function encodeDownlink(input) {
 - **DevEUI (示例):** `5d61e4648dc926e2`
 - **AppKey (示例):** `ec2b966c2c4bbe94a6ef79d0479db0e5`
 
-使用这些详细信息，我们有以下命令：
+有了这些详细信息，我们有了命令：
 
 ```sh
 lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
 ```
 
-有关其他命令和帮助，请参阅[控制台命令](#commands)部分。
+有关其他命令和帮助，请参考[控制台命令](#commands)部分。
 
 ## 步骤 3. 配置 SenseCAP Indicator 加入网络{#configure_credentials}
 
@@ -433,7 +428,7 @@ lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
 
 ## 步骤 4 **发送和接收消息** {#uplink_and_downlink}
 
-在本节中，我们将引导您完成监控设备与 LoRaWAN 网络之间上行和下行通信的过程。[^4]
+在本节中，我们将引导您完成监控设备与 LoRaWAN 网络之间上行链路和下行链路通信的过程。[^4]
 
 [^4]: [深入了解：使用 LoRaWAN® 发送和接收消息](https://lora-developers.semtech.com/documentation/tech-papers-and-guides/sending-and-receiving-messages-with-lorawan/sending-and-receiving-messages/)
 
@@ -445,13 +440,13 @@ lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
 
 <summary>上行消息的概念</summary>
 
-**LoRaWAN 中的上行：**
+**LoRaWAN 中的上行链路：**
 
 在 LoRaWAN 网络中，上行消息是由终端设备（如 SenseCAP Indicator）发起并通过网关发送到网络服务器的任何通信。这些消息通常用于传输传感器读数或设备状态。
 
 1. **数据收集**：SenseCAP Indicator 从其传感器或内部进程收集数据。这可能包括环境读数、设备状态或其他相关指标。
 
-2. **数据打包**：收集的数据然后被打包成适合传输的*预定义格式*。这可能涉及对数据进行编码以优化有效载荷大小并确保高效传输。
+2. **数据打包**：然后将收集的数据打包成适合传输的*预定义格式*。这可能涉及对数据进行编码以优化有效载荷大小并确保高效传输。
 
 3. **发送消息**：设备通过 LoRaWAN 网络传输上行消息。此传输通常基于特定间隔（例如，每 5 分钟）进行调度或由某些事件（例如，阈值突破）触发。
 
@@ -481,7 +476,7 @@ lorawan --eui 5d61e4648dc926e2 --app_key ec2b966c2c4bbe94a6ef79d0479db0e5
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_frame.png"/>
 </div>
 
-现在，激活解码器功能后，您应该能够在事件部分下看到解析的数据（您可以通过按 `+up` 按钮来显示）。这将允许您更有效地理解和分析来自设备的传入数据。
+现在，激活解码器功能后，您应该能够在事件部分下看到解析的数据（您可以通过按 `+up` 按钮来显示）。这将使您能够更有效地理解和分析来自设备的传入数据。
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_event_view.png"/>
@@ -536,7 +531,7 @@ LoRaWAN网络中的下行链路过程对于双向通信至关重要，它允许�
   - 发送有效载荷`0001`打开灯泡。
   - 发送有效载荷`0000`关闭灯泡。
 
- - 这些有效载荷以SenseCAP Indicator被编程理解和执行的格式进行编码。[^6]
+- 这些有效载荷以SenseCAP Indicator被编程理解和执行的格式进行编码。[^6]
 
 [^6]: [lorawan_rx_data_handle function - GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/11bf6165f0e815a1dc6b83be253972ac320ecdd5/examples/indicator_lorawan/main/lorawan/indicator_lorawan.c#L591C33-L591C33)
 
@@ -546,8 +541,8 @@ LoRaWAN网络中的下行链路过程对于双向通信至关重要，它允许�
 
 **3. 发送下行链路消息：**
 
- - 通过网络服务器的界面，您可以使用相应的有效载荷安排下行链路消息。
- - 然后消息被排队并在SenseCAP Indicator的下一个可用接收窗口期间发送到设备（因此会有延迟）。
+- 通过网络服务器的界面，您可以使用相应的有效载荷安排下行链路消息。
+- 然后消息被排队并在SenseCAP Indicator的下一个可用接收窗口期间发送到设备（因此会有延迟）。
 
 <div align="center">
   <img class='border-radius: 10px;' width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/queue_packet.png"/>
@@ -571,23 +566,23 @@ SenseCAP Indicator 中有大量功能等待探索。在这个演示中，我们�
 
 **1. 命令接收和执行：**
 
- - SenseCAP Indicator 高效接收下行消息。
- - 它处理这些消息，解释诸如打开或关闭虚拟灯泡等命令。
- - 灯泡的状态相应改变，提供设备控制的真实模拟。
+- SenseCAP Indicator 高效接收下行消息。
+- 它处理这些消息，解释诸如打开或关闭虚拟灯泡等命令。
+- 灯泡的状态会相应改变，提供设备控制的真实模拟。
 
 **2. 确认和验证：**
 
- - 命令执行后，SenseCAP Indicator 发送回上行消息作为确认。
- - 这种确认可以通过
+- 命令执行后，SenseCAP Indicator 发送回上行消息作为确认。
+- 这种确认可以通过
 
 网络服务器的界面进行跟踪，确保命令被有效接收和执行。
 
 **3. 实际应用：**
 
- - 这个简单的演示强调了 LoRaWAN 下行消息在操控 IoT 设备方面的实用性。
- - 它展示了 IoT 生态系统的一个关键方面：远程指导和管理设备的能力，展现了其实用价值。
+- 这个简单的演示强调了 LoRaWAN 下行消息在操控 IoT 设备方面的实用性。
+- 它展示了 IoT 生态系统的一个关键方面：远程指导和管理设备的能力，展现了其实用价值。
 
-这个演示只是开始。SenseCAP Indicator 为各种 IoT 应用提供了一个多功能平台，从环境监测到智能自动化。通过深入了解其功能，您可以释放这个强大工具的全部潜力，为您的 IoT 项目中的创新解决方案和增强控制铺平道路。我们鼓励您进行实验并发现 SenseCAP Indicator 增强您的 IoT 努力的多种方式。
+这个演示只是开始。SenseCAP Indicator 为各种 IoT 应用提供了一个多功能平台，从环境监测到智能自动化。通过深入探索其功能，您可以释放这个强大工具的全部潜力，为您的 IoT 项目中的创新解决方案和增强控制铺平道路。我们鼓励您进行实验并发现 SenseCAP Indicator 可以增强您的 IoT 努力的多种方式。
 
 ## 控制台手册页面 {#commands}
 
@@ -600,36 +595,39 @@ SenseCAP Indicator 中有大量功能等待探索。在这个演示中，我们�
 这里是设置 LoRaWAN 网络信息的终端命令介绍，以手册条目的形式呈现：
 
 ### **lorawan**
+
 此命令为设备配置 LoRaWAN 网络信息。它允许您设置 OTAA（空中激活）和 ABP（个性化激活）方法所需的各种参数。
 
-##### 用法：
+##### 用法
+
 ```sh
 lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_key=]
 ```
 
-##### 选项：
-- `--eui=`：设置设备的 EUI（扩展唯一标识符）。需要 8 个十六进制数字，MSB（最高有效位）在前。
+##### 选项
+
+- `--eui=`: 设置设备的 EUI（扩展唯一标识符）。需要 8 个十六进制数字，MSB（最高有效位）在前。
   
-- `--join_eui=`：设置 JOIN EUI（以前称为 APP EUI），这是 OTAA 中的应用程序标识符。需要 8 个十六进制数字，MSB 在前。
+- `--join_eui=`: 设置 JOIN EUI（以前称为 APP EUI），这是 OTAA 中的应用程序标识符。需要 8 个十六进制数字，MSB 在前。
 
-- `--app_key=`：设置 APP KEY，这是在 OTAA 加入过程中使用的加密密钥。需要 16 个十六进制数字，MSB 在前。
+- `--app_key=`: 设置 APP KEY，这是在 OTAA 入网过程中使用的加密密钥。需要 16 个十六进制数字，MSB 在前。
 
-- `--dev_addr=`：设置 ABP 的设备地址。这是一个 4 位十六进制数字标识符，MSB 在前。
+- `--dev_addr=`: 设置 ABP 的设备地址。这是一个 4 位十六进制数字标识符，MSB 在前。
 
-- `--apps_key=`：设置 ABP 的 APPS KEY，用于加密应用程序有效载荷。需要 16 个十六进制数字，MSB 在前。
+- `--apps_key=`: 设置 ABP 的 APPS KEY，用于加密应用程序载荷。需要 16 个十六进制数字，MSB 在前。
 
-- `--nwks_key=`：设置 ABP 的 NWKS KEY，用于加密网络有效载荷和设备认证。需要 16 个十六进制数字，MSB 在前。
+- `--nwks_key=`: 设置 ABP 的 NWKS KEY，用于加密网络载荷和设备认证。需要 16 个十六进制数字，MSB 在前。
 
 ## 常见问题
 
 <details>
-<summary>SenseCAP Indicator 能否作为我的 LoRaWAN 网关使用？</summary>
+<summary>SenseCAP Indicator 能否作为我的 LoRaWAN 网关？</summary>
 
-不能，根据 SX1262 LoRa 收发器的设计，SenseCAP Indicator 并不是设计用来作为 LoRaWAN 网关的。它主要是 LoRaWAN 网络架构中的终端设备。LoRaWAN 网关通常具有不同的硬件和软件功能，专门设计用于将多个终端设备（如 SenseCAP Indicator）连接到网络服务器。如果您正在寻找 LoRaWAN 网关，您应该考虑专门为此目的设计的设备。
+不能，根据 SX1262 lora 收发器的规格，SenseCAP Indicator 并非设计用作 LoRaWAN 网关。它主要是 LoRaWAN 网络架构中的终端设备。LoRaWAN 网关通常具有不同的硬件和软件能力，设计用于将多个终端设备（如 SenseCAP Indicator）连接到网络服务器。如果您正在寻找 LoRaWAN 网关，您应该考虑专门为此目的设计的设备。
 </details>
 
 <details>
-<summary>为什么 The Things Network 服务器没有发送 joinAccept？</summary>
+<summary>为什么 True Network Server 没有发送 joinAccept？</summary>
 
 **注意：** 有几种情况可能导致设备无法从网络服务器接收到 `joinAccept`：
 
@@ -637,7 +635,7 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 
 - **设备闪存已清除：** 如果您已清除设备的闪存但继续使用相同的凭据，这可能导致同步问题。
 
-在这两种情况下，确保 OTAA（空中激活）设备随机数（一次性使用的数字）同步是至关重要的。要解决此问题，请在您的网络服务器上使用 `Flush OTAA device nonces` 功能。此操作将重置随机数并帮助重新建立正确的连接。
+在这两种情况下，确保 OTAA（空中激活）设备随机数（仅使用一次的数字）同步是至关重要的。要解决此问题，请在您的网络服务器上使用 `Flush OTAA device nonces` 功能。此操作将重置随机数并帮助重新建立正确的连接。
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/ns_flush_nonces.png"/>
@@ -645,17 +643,17 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 </details>
 
 <details>
-<summary>应该使用哪个 FPort 发送下行消息？</summary>
+<summary>使用哪个 FPort 发送下行消息？</summary>
 
 在我们当前的 LoRaWAN 演示设置中，没有预定义的端口专门用于发送下行消息。演示代码设计得很灵活，可以根据您的特定需求进行调整。
 
-如果您需要以特定方式处理特定端口上的消息，您可以选择相应地修改代码。这种自定义允许根据不同端口对下行消息进行定制化处理，让您更好地控制设备如何解释和响应这些通信。
+如果您需要以特定方式处理特定端口上的消息，您可以选择相应地修改代码。这种自定义允许根据不同端口对下行消息进行定制处理，让您更好地控制设备如何解释和响应这些通信。
 </details>
 
 <details>
 <summary>如何使用 MAC 版本 1.1.0？</summary>
 
-要使用 LoRaWAN MAC 版本 1.1.0 的功能，需要适当配置加密设置。您可以使用 `idf.py menuconfig` 命令来启用 `USE LRWAN_1_1_X_CRYPTO` 选项。
+要使用 LoRaWAN MAC 版本 1.1.0 的功能，需要适当配置加密设置。您可以通过使用 `idf.py menuconfig` 命令来启用 `USE LRWAN_1_1_X_CRYPTO` 选项。
 
 <div align="center">
   <img class='border-radius: 10px;' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/LoRaWAN_Application/menuconfig_110.png"/>
@@ -664,15 +662,14 @@ lorawan [--eui=] [--join_eui=] [--app_key=] [--dev_addr=] [--apps_key=] [--nwks_
 LoRaWAN 版本 `1.1.0` 的实现需要特定的加密算法来增强安全性。通过设置此选项，您可以确保您的设备与此版本中引入的增强安全功能和协议兼容。
 </details>
 
-
 ## ODM 服务
 
-Seeed Studio 提供全面的一站式 ODM 服务，以满足快速定制和扩展需求的多样化需要。如果您希望为项目定制专门功能或需要帮助高效扩展运营，请联系我们。如需咨询和更详细的信息，请通过 iot@seeed.cc 联系我们。我们在这里帮助将您的独特想法变为现实。
+Seeed Studio 提供全面的一站式 ODM 服务，以满足快速定制和扩展需求的多样化需要。如果您希望为项目定制专门功能或需要帮助高效扩展运营，请联系我们。如需咨询和更详细信息，请通过 iot@seeed.cc 联系我们。我们在此帮助您将独特的想法变为现实。
 
 ## 技术支持
 
-**需要 SenseCAP Indicator 的帮助？我们随时为您提供协助！**
+**需要 SenseCAP Indicator 的帮助？我们在此为您提供协助！**
 
-如果您在学习本教程时遇到任何问题或有任何疑问，请随时联系我们的技术支持。我们随时为您提供帮助！
+如果您在学习本教程时遇到任何问题或有任何疑问，请随时联系我们的技术支持。我们始终在此为您提供帮助！
 
 访问我们的 [Seeed 官方 Discord 频道](https://discord.gg/kpY74apCWj) 提出您的问题，或访问 [GitHub 讨论区](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) 分享您想要的一切！

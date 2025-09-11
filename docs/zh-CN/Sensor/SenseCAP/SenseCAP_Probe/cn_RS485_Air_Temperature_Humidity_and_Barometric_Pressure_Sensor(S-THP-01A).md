@@ -14,12 +14,9 @@ last_update:
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/products/101991101/image1.png"/></div>
 
-
-IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广的工作范围：湿度 0-100% RH，温度 -40 至 125°C，气压 300-1100 hPa。它非常适合智能农业、天气监测、蒸散量计算、防霉等应用。通过将此传感器与 SenseCAP S2100 [数据记录器](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products)集成，用户可以实现无缝的数据收集和管理。
-
+IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广的工作范围：0-100% RH、-40 至 125°C 和 300-1100 hPa。它非常适合智能农业、天气监测、蒸散量计算、防霉等应用。通过将此传感器与 SenseCAP S2100 [数据记录器](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products)集成，用户可以实现无缝的数据收集和管理。
 
 <p style={{textAlign: 'center'}}><a href="https://www.seeedstudio.com/RS485-Air-Temperature-Humidity-and-Pressure-Sensor-p-5801.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%202.png" border="0" /></a></p>
-
 
 ## 可升级为工业传感器
 
@@ -27,38 +24,39 @@ IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广�
 
 # 使用 S2100 LoRaWAN 数据记录器
 
-在本页面中，我们将指导您完成 S2100 LoRaWAN 数据记录器与 RS485 空气温度、湿度和气压传感器的连接过程，让您能够在短短五分钟内创建一个坚固的工业级 LoRaWAN 无线传感器，可用于商业用途。
+在本页面中，我们将指导您完成连接 S2100 LoRaWAN 数据记录器与 RS485 空气温度、湿度和气压传感器的过程，使您能够在短短五分钟内创建一个坚固的工业级 LoRaWAN 无线传感器，可用于商业用途。
 
 ## 开始使用
 
 ### 准备工作
+
 #### 硬件
+
 ##### 所需材料
 
-
 <table align="center">
-	<tr>
-	    <th>SenseCAP S2100 数据记录器</th>
+ <tr>
+     <th>SenseCAP S2100 数据记录器</th>
       <th>RS485 空气温度、湿度和气压传感器</th>
     <th>十字螺丝刀</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/products/101991101/image1.png" style={{width:500, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%205.png" style={{width:500, height:'auto'}}/></div></td>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/products/101991101/image1.png" style={{width:500, height:'auto'}}/></div></td>
       <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%206.png" style={{width:500, height:'auto'}}/></div></td>
-	</tr>
+ </tr>
     <tr>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html?queryID=ec697c44483ad32db968bd7daaf7839d&objectID=5361&indexName=bazaar_retailer_products" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-    		<a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Air-Temperature-Humidity-and-Pressure-Sensor-p-5801.html" target="_blank">
+      </a>
+  </div></td>
+     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+      <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Air-Temperature-Humidity-and-Pressure-Sensor-p-5801.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
-    		</a>
-		</div></td>
-	</tr>
+      </a>
+  </div></td>
+ </tr>
 </table>
 
 ## 1. 准备数据记录器、RS485 空气温度、湿度和气压传感器、网关和工具。
@@ -70,14 +68,15 @@ IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广�
 3. **十字螺丝刀**：用于组装传感器探头。
 
 4. **网关**：LoRaWAN 传感器将数据传输到 LoRaWAN 网关，然后网关将数据传输到云服务器。如果您没有网关，有两个选择：
-- 选项 1：传感器在 Helium 网络覆盖区域内工作（在 [Helium Explorer](https://explorer.helium.com/) 上查看）。只要有 helium 网络覆盖，您就可以使用传感器传输数据而无需购买网关。
+
+- 选项 1：传感器在 Helium 网络覆盖的区域内工作（在 [Helium Explorer](https://explorer.helium.com/) 上查看）。只要有 helium 网络覆盖的地方，您就可以使用传感器传输数据而无需购买网关。
 - 选项 2：购买一个[网关](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)。
 
 5. 下载 SenseCAP Mate 应用程序进行配置：
 
 <div align="center"><img width={250} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%207.png"/></div>
 
-<div align="center">SenseCAP Mate App iOS&Android</div>
+<div align="center">SenseCAP Mate 应用程序 iOS 和 Android</div>
 
 准备工作完成。让我们开始吧！
 
@@ -89,7 +88,6 @@ IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广�
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%208.png"/></div>
 
 ### 3. 连接 RS485 空气温度、湿度和气压传感器
-
 
 - **步骤 1：** 拧下数据记录器上的三颗螺丝
 
@@ -108,7 +106,6 @@ IP56 防护等级的 RS485 空气温度、湿度和气压传感器具有宽广�
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/73.jpg"/></div>
 
 - **步骤 5：** 按如下方式将电缆的导线连接到螺丝端子
-
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/71.jpg"/></div>
 
@@ -134,14 +131,13 @@ RS485 空气温度、湿度和气压传感器的线序：
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/products/101991101/image9.png"/></div>
 
-
 ### 4. 配置数据记录器和 RS485 空气温度、湿度和气压传感器通信设置
 
-- **步骤 1：** 选择 **S2100 Data Logger** 并在配置页面点击 **Setup**。
+- **步骤 1：** 选择 **S2100 数据记录器**并在配置页面点击**设置**。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2014.png"/></div>
 
-- **步骤 2：** 按住按钮 **3** 秒，绿色 LED 将以 1 秒频率闪烁。然后点击 **Scan** 开始扫描数据记录器的蓝牙。
+- **步骤 2：** 按住按钮 **3** 秒，绿色 LED 将以 1 秒频率闪烁。然后点击**扫描**开始扫描数据记录器的蓝牙。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2021.gif"/></div>
 
@@ -154,14 +150,15 @@ RS485 空气温度、湿度和气压传感器的线序：
 - **步骤 1：** 请点击此模板链接并选择您的浏览器下载。
 (http://sensecap.seeed.cc/portalapi/template/23ad5050-c24b-11ed-af3d-4b3b31721270)
 
-- **步骤 2：** 点击右上角的"➕"，选择"import Template"，然后选择下载的文件，模板将被导入。
+- **步骤 2：** 点击右上角的"➕"，选择"导入模板"，然后选择下载的文件，模板将被导入。
+
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2016.png"/></div>
 
-- **步骤 3：** 点击 Send 并通过点击 **Measure** 测试传感器
+- **步骤 3：** 点击发送并通过点击**测量**来测试传感器
 
 成功获取传感器的距离和温度！
 
-### 5. 将数据上传到 SenseCAP Portal 和 Mate App
+### 5. 将数据上传到 SenseCAP Portal 和 Mate 应用程序
 
 - **步骤 1：** 返回应用程序主页，数据记录器红色 LED 将开始闪烁几秒钟，然后绿色 LED 短暂闪烁，表示 LoRaWAN 连接成功并且数据已发送。或者，您可以按一次数据记录器上的按钮来强制发送数据。
 在上传数据之前，请确保网关正常工作或有 helium 网络覆盖。
@@ -177,7 +174,6 @@ RS485 空气温度、湿度和气压传感器的线序：
 - **步骤 3：** 在应用程序和门户网站上查看数据。(https://sensecap.seeed.cc/)
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/RS485_500cm%20ultrasonic_sensor/image%2019.png"/></div>
-
 
 ### 6. 在真实环境中测试传感器。
 
@@ -197,11 +193,11 @@ RS485 空气温度、湿度和气压传感器的线序：
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

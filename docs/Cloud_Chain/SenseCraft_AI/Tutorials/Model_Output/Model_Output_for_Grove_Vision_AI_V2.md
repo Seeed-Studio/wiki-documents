@@ -24,21 +24,21 @@ Before you begin, ensure that you have the following:
 2. USB-C cable for connecting the Grove Vision AI V2 to your computer
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th>Grove Vision AI V2</th>
-		</tr>
-		<tr>
-			<td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
-		</tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+ <table align="center">
+  <tr>
+   <th>Grove Vision AI V2</th>
+  </tr>
+  <tr>
+   <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/visionai-v2-ha/43.jpg" style={{width:250, height:'auto'}}/></div></td>
+  </tr>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## Step 1. Access the SenseCraft AI Vision Workspace and connect the Grove Vision AI V2
@@ -82,11 +82,11 @@ On the right side of the page, click the **Trigger action when event conditions 
 
 A dialog box will appear, prompting you to input various parameters that will serve as the trigger conditions for the desired actions. These parameters include:
 
-   - **Object**: Specify the object that your model should detect to trigger the action. For example, "person" if you want the action to occur when a person is detected.
+- **Object**: Specify the object that your model should detect to trigger the action. For example, "person" if you want the action to occur when a person is detected.
 
-   - **Condition**: Choose the condition that must be met for the trigger to occur. Options include "Greater than", "Less than", "Equal to", etc. For instance, selecting "Greater than" means the action will be triggered when the detected object's confidence level is greater than the specified value.
+- **Condition**: Choose the condition that must be met for the trigger to occur. Options include "Greater than", "Less than", "Equal to", etc. For instance, selecting "Greater than" means the action will be triggered when the detected object's confidence level is greater than the specified value.
 
-   - **Confidence**: Set the minimum confidence level required for the object detection to trigger the action. This value ranges from 1 to 100, with 100 being the highest confidence.
+- **Confidence**: Set the minimum confidence level required for the object detection to trigger the action. This value ranges from 1 to 100, with 100 being the highest confidence.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/51.png" style={{width:600, height:'auto'}}/></div>
 
@@ -96,9 +96,9 @@ After configuring the desired trigger conditions, click the **Confirm** button t
 
 The Grove Vision AI V2 supports two types of trigger actions:
 
-  - **Light up the LED**: When this option is selected, the onboard LED on the Grove Vision AI V2 will light up when the trigger conditions are met.
+- **Light up the LED**: When this option is selected, the onboard LED on the Grove Vision AI V2 will light up when the trigger conditions are met.
 
-  - **Save image to the SD Card**: When this option is selected, the Grove Vision AI V2 will save the captured image to the MicroSD card inserted in the device when the trigger conditions are met.
+- **Save image to the SD Card**: When this option is selected, the Grove Vision AI V2 will save the captured image to the MicroSD card inserted in the device when the trigger conditions are met.
 
 Select the checkbox next to the desired trigger action(s) to enable them.
 
@@ -113,7 +113,6 @@ Finally, click the **Send** button to transmit the trigger configuration to your
 The Grove Vision AI V2 will now execute the configured trigger actions when the specified conditions are met, providing a visual indication of the model's output.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_AI/img2/54.jpg" style={{width:400, height:'auto'}}/></div>
-
 
 :::caution
 Keep in mind that the output functionality relies on the web-based connection between the SenseCraft AI platform and your Grove Vision AI V2 device. If the connection is lost or interrupted, the configured trigger actions will stop working. Ensure a stable connection throughout the process.

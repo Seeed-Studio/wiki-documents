@@ -448,7 +448,7 @@ sudo nano grove_hdc_1000_example.py
 - **[Zip]** [Grove - Sensor de Temperatura y Humedad(HDC1000) v1.0 sch pcb.zip](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch_pcb.zip)
 - **[Pdf]** [Grove - Sensor de Temperatura y Humedad(HDC1000) v1.0 sch.pdf](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/Grove-TemperatureAndHumidity_Sensor-HDC1000-v1.0_sch.pdf)
 - **[Librería]** [Código de demostración](https://github.com/Seeed-Studio/HDC1000)
-- **[Hoja de datos]** [HDC1000\_DataSheet.pdf](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/HDC1000.pdf)
+- **[Hoja de datos]** [HDC1000_DataSheet.pdf](https://files.seeedstudio.com/wiki/Grove-TemperatureAndHumidity_Sensor-HDC1000/res/HDC1000.pdf)
 
 <!-- Este archivo Markdown fue creado desde https://www.seeedstudio.com/wiki/Grove_-_Temperature&Humidity_Sensor_(HDC1000) -->
 

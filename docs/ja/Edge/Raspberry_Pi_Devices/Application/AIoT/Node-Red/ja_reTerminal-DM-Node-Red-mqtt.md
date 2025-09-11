@@ -1,6 +1,6 @@
 ---
-description: reTerminal DM MQTTとNode-RED
-title: reTerminal DM MQTTとNode-RED
+description: reTerminal DM MQTT with Node-RED
+title: reTerminal DM MQTT with Node-RED
 keywords:
   - Edge
   - reTerminal-DM
@@ -8,15 +8,10 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-DM-Node-Red-mqtt
 last_update:
-  date: 05/15/2025
+  date: 04/27/2023
   author: Peter Pan
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
-# reTerminal DM MQTTとNode-RED
+# reTerminal DM MQTT with Node-RED
 
 ## MQTTについての簡単な情報
 
@@ -24,52 +19,48 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 
 <br />
 
-### MQTTとNode-RED
+### MQTT & Node-RED
 
-MQTT（Message Queuing Telemetry Transport）は、マシン間通信（M2M）やモノのインターネット（IoT）の文脈でデバイス間の通信を可能にするために設計された軽量なメッセージングプロトコルです。MQTTは1999年にIBMによって開発され、その後オープンスタンダードとなりました。MQTTは、デバイス間で小さなデータパケットを送信するためのシンプルで効率的な方法として設計されています。このプロトコルは、パブリッシュ/サブスクライブ型のメッセージングパターンを使用しており、メッセージはブローカーに公開され、その後特定のトピックを購読しているすべてのサブスクライバーに配信されます。これにより、デバイスはお互いのIPアドレスやその他のネットワーク詳細を知らなくても通信が可能になります。
+MQTT（Message Queuing Telemetry Transport）は、マシン・ツー・マシン（M2M）やモノのインターネット（IoT）環境でデバイス間の通信を可能にするために設計された軽量メッセージングプロトコルです。MQTTは1999年にIBMによって開発され、後にオープンスタンダードとなりました。MQTTは、デバイス間で小さなデータパケットを送信するシンプルで効率的な方法として設計されています。パブリッシュ/サブスクライブメッセージングパターンを使用し、メッセージがブローカーに公開され、特定のトピックにサブスクライブしたすべてのサブスクライバーに配信されます。これにより、デバイスは互いのIPアドレスやその他のネットワーク詳細を知ることなく、相互に通信することができます。MQTTは、低帯域幅や高遅延ネットワークなどの信頼性の低いネットワークでデバイスが接続されている状況で特に有用です。これは、少ない帯域幅を使用し、オーバーヘッドが低いためです。また、メッセージ配信の異なる信頼性レベルを可能にするサービス品質（QoS）レベルもサポートしています。MQTTは、そのシンプルさと効率性により、IoTおよびM2Mアプリケーションで人気の選択肢となっており、幅広いデバイスとプラットフォームでサポートされています。
 
-MQTTは、低帯域幅や高遅延ネットワークなど、不安定なネットワークで接続されているデバイスに特に有用です。これは、帯域幅の使用量が少なく、オーバーヘッドが低いためです。また、メッセージ配信の信頼性を異なるレベルで保証するQuality of Service（QoS）レベルもサポートしています。そのシンプルさと効率性から、MQTTはIoTやM2Mアプリケーションにおいて人気のある選択肢となっており、幅広いデバイスやプラットフォームでサポートされています。
+MQTTブローカーは、MQTTベースのIoTまたはM2Mネットワーク内のデバイス間でのMQTTメッセージ交換の中心点として機能するサーバーです。デバイスによって公開されたメッセージを受信し、同じトピックにサブスクライブした他のデバイスに配信します。
 
-MQTTブローカーは、MQTTベースのIoTまたはM2Mネットワーク内でデバイス間のMQTTメッセージ交換の中心的な役割を果たすサーバーです。ブローカーはデバイスから公開されたメッセージを受信し、同じトピックを購読している他のデバイスに配信します。
+MQTTは、Node-REDがサポートする多くのプロトコルの1つであり、MQTTベースのIoTアプリケーションを構築するための優れたツールとなっています。Node-REDはMQTT用の組み込みノードを提供し、ユーザーがMQTTブローカーに接続してメッセージを公開またはサブスクライブできるようにします。MQTTノードは、Node-REDインターフェースを使用して簡単に設定でき、ユーザーはブローカーアドレス、ポート、クライアントID、ユーザー名、パスワードを指定できます。ノードはまた、信頼性のあるメッセージ配信を確保するために設定できるMQTT QoSレベルもサポートしています。Node-REDでは、ユーザーは受信MQTTメッセージを処理し、メッセージペイロードに基づいてさまざまなアクションを実行するフローを作成できます。例えば、フローは温度センサーのMQTTトピックにサブスクライブし、温度値を解析し、温度が特定の閾値を超えた場合にアラートを送信することができます。Node-REDはまた、HTTPエンドポイント、データベース、クラウドサービスなど、他のIoTサービスやデバイスとの統合のためのさまざまなノードを提供します。これにより、ユーザーは幅広いデバイスやサービスと通信できる複雑なIoTアプリケーションを簡単に構築できます。
 
-MQTTはNode-REDがサポートする多くのプロトコルの1つであり、MQTTベースのIoTアプリケーションを構築するための優れたツールです。Node-REDはMQTT用の組み込みノードを提供しており、これによりユーザーはMQTTブローカーに接続し、メッセージを公開または購読することができます。MQTTノードはNode-REDのインターフェースを使用して簡単に設定でき、ブローカーのアドレス、ポート、クライアントID、ユーザー名、パスワードを指定することが可能です。また、ノードはMQTT QoSレベルをサポートしており、信頼性の高いメッセージ配信を保証するために設定できます。
+全体的に、Node-REDは、組み込みMQTTノードと他のIoTサービスおよびデバイスのサポートにより、MQTTベースのIoTアプリケーションを構築するためのシンプルで直感的な方法を提供します。
 
-Node-REDでは、受信したMQTTメッセージを処理し、メッセージのペイロードに基づいてさまざまなアクションを実行するフローを作成できます。例えば、温度センサーのMQTTトピックを購読し、温度値を解析し、温度が特定の閾値を超えた場合にアラートを送信するフローを作成することができます。また、Node-REDはHTTPエンドポイント、データベース、クラウドサービスなど、他のIoTサービスやデバイスと統合するためのさまざまなノードも提供しています。これにより、幅広いデバイスやサービスと通信できる複雑なIoTアプリケーションを簡単に構築することができます。
+# reTerminal DMでMQTTノードを始める
 
-全体として、Node-REDは組み込みのMQTTノードと他のIoTサービスやデバイスのサポートにより、MQTTベースのIoTアプリケーションを簡単かつ直感的に構築する方法を提供します。
-
-# MQTTノードをreTerminal DMで始める
-
-MQTTノードはNode-REDに組み込まれているため、ノードをインストールする追加の手順なしで使用できます。ただし、トピックにメッセージを公開または購読するためには、MQTTブローカーが必要です。そのため、以下の手順では、reTerminal DMにローカルMQTTブローカーをインストールし、そのMQTTブローカーを利用してメッセージの送受信を行う方法を説明します。
+MQTTノードはNode-REDに組み込まれているため、ノードをインストールする追加の手順なしでMQTTノードを使用できます。ただし、トピックにメッセージを発行または購読するためにはmqttブローカーが必要です。そのため、以下の手順では、reTerminal DMにローカルMQTTブローカーをインストールし、メッセージの送受信にMQTTブローカーを活用する方法を説明します。
 
 ## 前提条件
 
 ### ハードウェア
 
-* 1 x reTerminal DM
-* 1 x ホストコンピュータ
+- 1 x reTerminal DM
+- 1 x ホストコンピュータ
 
 :::note
-ホストコンピュータは、以下のセットアップ手順を実行するためにreTerminal DMとインターネット接続が可能である必要があります。
+ホストコンピュータは、以下のセットアップ手順を実行するために、reTerminal DMへのインターネット接続が可能である必要があります。
 :::
 
-### ソフトウェア 
+### ソフトウェア
 
-* MQTTブローカー [Eclipse Mosquitto](https://mosquitto.org/)
+- MQTTブローカー [Eclipse Mosquitto](https://mosquitto.org/)
 
 ## MQTTブローカー [Eclipse Mosquitto](https://mosquitto.org/) のインストール
 
-このセクションでは、[Eclipse Mosquitto](https://mosquitto.org/) をインストールします。これは、IoTやM2Mアプリケーションで広く使用されているオープンソースのMQTTブローカーです。Eclipse Foundationによって開発されており、Eclipse Public Licenseの下で利用可能です。Mosquittoは軽量で効率的に設計されており、低消費電力デバイスやネットワーク帯域幅が限られた環境での使用に適しています。最新のMQTT 5.0プロトコルだけでなく、MQTT 3.1.1などの以前のバージョンもサポートしています。
+このセクションでは、IoTおよびM2Mアプリケーションで広く使用されているオープンソースのMQTTブローカーである[Eclipse Mosquitto](https://mosquitto.org/)をインストールします。これはEclipse Foundationによって開発され、Eclipse Public Licenseの下で利用可能です。Mosquittoは軽量で効率的に設計されており、低電力デバイスや限られたネットワーク帯域幅の環境での使用に適しています。最新のMQTT 5.0プロトコルと、MQTT 3.1.1などの以前のバージョンをサポートしています。
 
-まず、SSHを使用してreTerminal DMにアクセスする方法を復習してください。手順は[こちら](/ja/reterminal-dm-flash-OS#install-drivers)をご覧ください。
+まず最初に、SSH経由でreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/reterminal-dm-flash-OS#install-drivers)で確認できます。
 
-SSHでreTerminal DMにアクセスできたら、以下の手順を進めてください：
+SSHでreTerminal DMにアクセスできたら、以下の手順に進むことができます：
 
 STEP 1: 以下のコマンドを実行してパッケージリストを更新します：
 
@@ -77,31 +68,31 @@ STEP 1: 以下のコマンドを実行してパッケージリストを更新し
 sudo apt-get update
 ```
 
-STEP 2: 以下のコマンドを実行してMosquittoをインストールします：
+ステップ2：以下のコマンドを実行してMosquittoをインストールします：
 
 ```sh
 sudo apt-get install mosquitto
 ```
 
-STEP 3: 以下のコマンドを実行してMosquittoクライアントツールをインストールします：
+STEP 3: Install the Mosquitto client tools by running the following command:
 
 ```sh
 sudo apt-get install mosquitto-clients
 ```
 
-STEP 4: インストールが完了したら、以下のコマンドを実行してMosquittoサービスを開始します：
+ステップ4：インストールが完了したら、以下のコマンドを実行してMosquittoサービスを開始できます：
 
 ```sh
 sudo systemctl start mosquitto
 ```
 
-STEP 5: Mosquittoが実行中かどうかを確認するには、以下のコマンドを実行します：
+ステップ5：Mosquittoが実行されているかどうかを確認するには、以下のコマンドを実行します：
 
 ```sh
 sudo systemctl status mosquitto
 ```
 
-デフォルトでは、MosquittoはMQTTトラフィック用に`ポート1883`をリッスンするように設定されています。Mosquittoクライアントツールを使用してトピックを購読することでインストールをテストできます。以下のようにしてください：
+デフォルトでは、MosquittoはMQTTトラフィック用に`ポート1883`でリッスンするように設定されています。Mosquittoクライアントツールを使用してトピックを購読することで、インストールをテストできます：
 
 新しいSSHセッションを開き、以下のコマンドを実行してトピックを購読します：
 
@@ -109,19 +100,19 @@ sudo systemctl status mosquitto
 mosquitto_sub -h localhost -t test
 ```
 
-別のSSHセッションで、以下のコマンドを実行して同じトピックにメッセージを公開します：
+別のSSHセッションで、以下のコマンドを実行して同じトピックにメッセージを発行します：
 
 ```sh
 mosquitto_pub -h localhost -t test -m "Hello, world!"
 ```
 
-最初のSSHセッションウィンドウで`mosquitto_sub`コマンドを実行した場所に、メッセージ"Hello, world!"が表示されるはずです。
+最初のSSHセッションウィンドウでmosquitto_subコマンドを実行した場所に「Hello, world!」というメッセージが表示されるはずです。
 
-これで、reTerminal DMにMosquittoを正常にインストールし、Mosquittoクライアントツールを使用してテストしました。次に、Node-REDを使用したMQTT通信について掘り下げていきます。
+これで完了です！reTerminal DMにMosquittoを正常にインストールし、Mosquittoクライアントツールを使用してテストしました。次に、Node-REDを使用したMQTT通信の方法について詳しく見ていきましょう。
 
 ## reTerminal DMでのMQTTノード
 
-Node-REDでは、MQTT inとMQTT outがあり、それぞれ購読（Subscribe）と公開（Publish）を表します。
+Node-REDには、それぞれSubscribeとPublishを表すMQTT inとMQTT outがあります。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-nodes.png" /></div>
 
@@ -129,111 +120,111 @@ Node-REDでは、MQTT inとMQTT outがあり、それぞれ購読（Subscribe）
 
 :::note
 
-以下の手順はチュートリアル目的のものであり、mqtt-inを使用してmqtt-outが同じトピックに公開したメッセージを購読します。
+以下の手順はチュートリアル目的のためのものです。mqtt-inを使用して、mqtt outが同じトピックに公開したメッセージからメッセージを購読します。
 
 :::
 
-STEP 1: `mqtt in`を`フローエディタ`パネルにドラッグします
+STEP 1: `mqtt in`を`Flow Editor`パネルにドラッグします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-mqtt-in.png" /></div>
 
 STEP 2: `Modbus Server`と`mqtt in`ノードを設定します
 
-STEP 2-1: `mqtt in`をダブルクリックして`ノードエディタパネル`を開きます
+STEP 2-1: `mqtt in`をダブルクリックして`Node editor panel`を開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-node-editor.png" /></div>
 
-STEP 2-2: サーバー設定オプションの`鉛筆アイコン`をクリックします
+STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-node-editor-click.png" /></div>
 
-`鉛筆アイコン`をクリックすると、`新しいmqtt-broker設定ノードを追加`する設定パネルが表示されます
+`鉛筆`アイコンをクリックすると、`Add new mqtt-broker config node`設定パネルが表示されます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-broker-config.png" /></div>
 
-STEP 2-3: `接続`タブで以下のフィールドを適切に設定してください
+STEP 2-3: `Connection`タブで以下のフィールドを適切に設定してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-connection-config.png" /></div>
 
 :::note
 
-現時点では`セキュリティ`と`メッセージ`タブはそのままにしておいてください。
+現在のところ、`Security`と`Messages`タブはそのままにしておくことができます。
 
 :::
 
-STEP 2-4: 購読するトピックを設定します。ここでは`test-mqtt`を使用し、その他の設定はデフォルトのままにして`完了`ボタンをクリックします。
+STEP 2-4: 購読するトピックを設定します。ここでは`test-mqtt`を使用し、その他はすべてデフォルトのままにして、`Done`ボタンをクリックします。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/sub-topic-setup.png" /></div>
 
-STEP 2-5: 次の手順では`debug`ノードを紹介します。この場合、`mqtt in`からの購読トピック出力を表示およびデバッグするために使用されます。以下の画像に示されています。
+STEP 2-5: 以下の手順では`debug`ノードを紹介します。この場合、`mqtt in`から購読したトピック出力を表示およびデバッグするために使用されます。下の画像に示すとおりです
 
-STEP 2-5-1: `debug`ノードを`フローエディタ`パネルにドラッグしてください
+STEP 2-5-1: `debug`ノードを`Flow Editor`パネルにドラッグしてください
 
-STEP 2-5-2: `mqtt in`ノードと`debug`ノードを接続してください
+STEP 2-5-2: `debug`ノードを`mqtt in`ノードに接続します
 
-STEP 2-5-3: `オプションと設定パネル`の`小さなバグボタン`をクリックして`デバッグコンソール`を開きます
+STEP 2-5-3: `Option and Config panel`の`小さなバグボタン`をクリックして、`Option and Config panel`で`debug console`を開きます
 
-STEP 2-5-4: `デプロイ`ボタンをクリックしてフローをデプロイします
+STEP 2-5-4: `Deploy`ボタンをクリックしてフローをデプロイします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-debug-node.png" /></div>
 
 :::note
 
-まだmqttトピックの公開者を設定していないため、`デバッグコンソール`にはメッセージが表示されません。
+まだmqttトピックパブリッシャーを設定していないため、`debug console`にはメッセージが表示されません
 
 :::
 
 STEP 3: `mqtt out`ノードを設定します
 
-STEP 3-1: `mqtt out`ノードをダブルクリックして`ノードエディタパネル`を開きます
+STEP 3-1: `mqtt out`ノードをダブルクリックして`Node editor panel`を開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-mqtt-out.png" /></div>
 
-STEP 3-1: `mqtt out`ノードを以下の画像のように`フローエディタ`パネルにドラッグしてください
+STEP 3-1: 下の画像に示すように、`mqtt out`ノードを`Flow Editor`パネルにドラッグしてください
 
-STEP 3-1-1: `STEP 2-3:`で設定したサーバー（`localhost:1883`）を選択してください
+STEP 3-1-1: `STEP 2-3:`で設定したのと同じサーバー（`localhost:1883`）を選択する必要があります
 
-STEP 3-1-2: `STEP 2-4:`で設定したトピック名（`test-mqtt`）を同じように設定してください。
+STEP 3-1-2: `STEP 2-4:`のトピック設定と同じトピック名（`test-mqtt`）を設定する必要があります。
 
-STEP 3-1-3: 同様に、QoSは`mqtt in`設定と一致するように`2`に設定してください。
+STEP 3-1-3: 同様に、QoSは`mqtt in`設定と同じ`2`に合わせる必要があります
 
-STEP 3-1-4: `Done`をクリックして設定を完了します。
+STEP 3-1-4: `Done`をクリックして設定を完了します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/mqtt-out-setup.png" /></div>
 
-STEP 4: `inject`ノードの設定
+STEP 4: `inject`ノードを設定します
 
-STEP 4-1: `inject`ノードを`Flow Editor`パネルにドラッグします。
+STEP 4-1: `inject`ノードを`Flow Editor`パネルにドラッグします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-inject.png" /></div>
 
-STEP 4-2: `inject`ノードをダブルクリックして`Node editor panel`を開きます。デフォルトの`inject`ノードの設定が表示されます。
+STEP 4-2: `inject`ノードをダブルクリックして`Node editor panel`を開くと、`inject`ノードのデフォルト設定が表示されます
 
-STEP 4-2-1: msg.topic行の`x`をクリックして削除します。
+STEP 4-2-1: msg.topic行の`x`をクリックして削除します
 
-STEP 4-2-2: msg.payload行の`timestamp`オプションをクリックしてドロップダウンリストを開きます。
+STEP 4-2-2: `msg.payload`行の`timestamp`オプションをクリックしてドロップダウンリストを開きます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/inject-node-config.png" /></div>
 
-STEP 4-2-3: ドロップダウンリストから`string`オプションを選択します。
+STEP 4-2-3: ドロップダウンリストで`string`オプションを選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/select-string.png" /></div>
 
-STEP 4-2-4: メッセージボックスに`this is the message`と入力し、これを`test-mqtt`トピックに送信するメッセージとして設定します。その後、`Done`をクリックします。
+STEP 4-2-4: メッセージボックスに`test-mqtt`トピックに送信するメッセージとして`this is the message`と入力し、`Done`をクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/edit-string.png" /></div>
 
-STEP 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をクリックします。
+STEP 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/connect-mqtt-out.png" /></div>
 
 #### 最終結果
 
-おめでとうございます！これでreTerminal DMとNode-REDを使用してMQTTプロトコルを体験し、学ぶことができました。最終結果は以下の画像のようになるはずです。
+おめでとうございます！reTerminal DMとNode-REDでMQTTプロトコルを使用する方法を正常に体験し、学習しました。最終結果は下の画像に示すようになるはずです
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-result-mqtt.png" /></div>
 
-以下のJSONコードをコピーしてノードをインポートできます。
+以下のJSONコードをコピーしてノードをインポートできます
 
 ```json
 [
@@ -353,23 +344,24 @@ STEP 4-2-5: `inject`ノードを`mqtt out`ノードに接続し、`Deploy`をク
         "sessionExpiry": ""
     }
 ]
+
 ```
 
-# reTerminal DMでNode-REDを使用したさらなるノードの探索
+# reTerminal DM で node-RED を使用してより多くのノードを探索する
 
-* [reTerminal DM RS485ポートとNode-RED](/ja/reTerminal-DM-Node-Red-RS485)
-* [reTerminal DM CAN BUSとNode-RED](/ja/reTerminal-DM-Node-Red-canbus)
+- [reTerminal DM RS485 Port with Node-RED](/reTerminal-DM-Node-Red-RS485)
+- [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

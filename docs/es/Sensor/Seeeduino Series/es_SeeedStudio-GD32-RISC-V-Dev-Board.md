@@ -107,7 +107,7 @@ Abre la herramienta DFU, después de que configures la placa con los pasos de ar
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/wiki6.png)
 
-Entonces debes añadir tu archivo binario a la columna de archivo de programa APP. El archivo binario está en la ruta \TFT_GD32\.pio\build\gd32vf103v-eval.
+Entonces debes añadir tu archivo binario a la columna de archivo de programa APP. El archivo binario está en la ruta \TFT_GD32.pio\build\gd32vf103v-eval.
 Elige el Índice 4 y haz clic en "ok" para descargar el código a la placa, después de descargar, haz clic en "Leave DFU" para permitir que la placa se desconecte de la herramienta DFU. Entonces verás una demo de contar el tiempo de procesamiento gráfico en tu LCD. Casi contiene toda la API en la librería "TFT_eSPI".
 
 ![enter image description here](https://files.seeedstudio.com/wiki/GD32VF103/img/gd32.gif)

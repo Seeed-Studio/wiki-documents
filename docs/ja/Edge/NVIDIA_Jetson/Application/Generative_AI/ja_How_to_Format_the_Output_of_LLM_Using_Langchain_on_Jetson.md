@@ -1,6 +1,6 @@
 ---
-description: LLM の出力を Langchain を使用して Jetson 上でフォーマットする方法
-title: Langchain を使用した出力フォーマット
+description: JetsonでLangchainを使用してLLMの出力をフォーマットする方法
+title: Langchainで出力をフォーマット
 keywords:
 - reComputer
 - LLM
@@ -8,45 +8,46 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/How_to_Format_the_Output_of_LLM_Using_Langchain_on_Jetson
 last_update:
-  date: 05/15/2025
+  date: 4/1/2024
   author: Youjiang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 ## はじめに
-現代の家庭では、スマートホームへの移行がますます一般的になっています。スマートデバイス、オートメーション、人工知能技術を接続することで、家庭をよりスマートで便利な生活空間に変えることができます。この目的を達成するために、LLM を HomeAssistant に統合し、よりインテリジェントなホームアシスタントを作成する計画を立てています。この目標を達成するための第一歩は、スマートホームデバイスを管理できる制御信号を LLM が出力できるようにすることです。
+
+現代の家庭では、スマートホームへの傾向がますます一般的になっています。スマートデバイス、自動化、人工知能技術を接続することで、あなたの家をより賢く便利な生活空間に変えることができます。この目的のために、私たちはLLMをHomeAssistantに統合して、より知的なホームアシスタントを作成することを計画しています。この目標を達成するための最初のステップは、LLMがスマートホームデバイスを管理できる制御信号を出力できるようにすることです。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/ai_assistant.png" />
 </div>
 
-この Wiki では、Langchain を使用して大規模言語モデルの出力をフォーマットし、エッジコンピューティングデバイスにデプロイする方法を学びます。具体的には、大規模言語モデルの強力な理解能力を活用してローカルチャットボットを構築し、その後 Langchain ツールを使用して大規模モデルの出力形式を固定します。
+このwikiでは、Langchainを使用して大規模言語モデルの出力をフォーマットし、エッジコンピューティングデバイスにデプロイする方法を学びます。具体的には、大規模言語モデルの強力な理解能力を使用してローカルチャットボットを構築し、その後Langchainツールを利用して大規模モデルの出力フォーマットを固定します。
 
-## LLM とは何ですか？
-大規模言語モデル（LLM）は、深層学習に基づいた人工知能モデルの一種であり、GPT のような自然言語処理タスクに優れています。これらはテキストの理解と生成が可能であり、テキスト生成、翻訳、質問応答システムなど、さまざまなアプリケーションで広く使用されています。
+## LLMとは何ですか？
 
-## なぜ LLM の出力をフォーマットする必要があるのですか？
-大規模言語モデル（LLM）の出力をフォーマットすることは、より理解しやすく、特定のアプリケーションに合わせるために重要です。LLM が生成するテキストには、冗長な情報、不必要な詳細、または一貫性のない形式が含まれることがあります。出力をフォーマットすることで、テキストが特定の基準を満たし、不要な部分を削除し、アプリケーションの要件に合致するようにすることができます。このプロセスは、LLM の出力をさまざまなシステムやアプリケーションに効果的に統合し、生成されたコンテンツが関連性があり有用であることを保証するために重要です。
+大規模言語モデル（LLM）は、GPTなどの深層学習に基づく人工知能モデルの一種で、自然言語処理タスクに優れています。テキストを理解し生成することができるため、テキスト生成、翻訳、質問応答システムなど、さまざまなアプリケーションで広く使用されています。
 
-## LLM の出力をどのようにフォーマットするのですか？
-ここでは、非常に使いやすいツールである Langchain を利用できます。Langchain は、言語モデルを使用したエンドツーエンドのアプリケーションを構築する際に開発者を支援するために設計された強力なフレームワークです。これにより、大規模言語モデルやチャットモデルをサポートするアプリケーションを作成するプロセスが簡素化されるツール、コンポーネント、インターフェースが提供されます。
+## なぜLLMの出力をフォーマットする必要があるのですか？
 
-## エッジデバイスにデプロイする方法
+大規模言語モデル（LLM）の出力をフォーマットすることは、より理解しやすく、特定のアプリケーションに適したものにするために重要です。多くの場合、LLMによって生成されたテキストには、冗長な情報、不要な詳細、または一貫性のないフォーマットのコンテンツが含まれる可能性があります。出力をフォーマットすることで、テキストが特定の基準を満たし、不要な部分を削除し、アプリケーションの要件に合致することを保証できます。このプロセスは、LLMの出力をさまざまなシステムやアプリケーションに効果的に統合し、生成されたコンテンツが関連性があり有用であることを保証するために重要です。
 
-**ステップ 1.** Jetpack 5.0+ オペレーティングシステムを搭載した Jetson デバイス（[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products)）を準備します。
+## LLMの出力をフォーマットする方法は？
 
-**ステップ 2.** ターミナルを開き、対応する依存ソフトウェアをインストールします。
+ここでは、非常にユーザーフレンドリーなツール—Langchainを利用できます。これは、開発者が言語モデルを使用してエンドツーエンドのアプリケーションを構築するのを支援するために設計された強力なフレームワークです。大規模言語モデルとチャットモデルによってサポートされるアプリケーションを作成するプロセスを簡素化する一連のツール、コンポーネント、インターフェースを提供します。
+
+## エッジデバイスにデプロイする方法は？
+
+**ステップ1.** Jetpack 5.0+オペレーティングシステムを搭載したJetsonデバイス（[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html?queryID=3d7dba9378be2accafeaff54420edb6a&objectID=5586&indexName=bazaar_retailer_products)）を準備する必要があります。
+
+**ステップ2.** ターミナルを開き、対応する依存関係ソフトウェアをインストールします。
 
 ```bash
 pip3 install --no-cache-dir --verbose langchain[llm] openai
 pip3 install --no-cache-dir --verbose gradio==3.38.0
 ```
 
-**ステップ 3.** 新しい Python スクリプトを作成し、`format_opt.py` という名前を付け、以下のコードを挿入します。
+**ステップ 3.** 新しいPythonスクリプトを作成し、`format_opt.py`という名前を付けて、以下のコードを挿入してください。
 
 <details>
 
@@ -80,27 +81,30 @@ class ChatBot:
             self.llm = OpenAI(model_name="text-davinci-003")
 
         response_schemas = [
-            ResponseSchema(name="user_input", description="これはユーザーの入力です"),
-            ResponseSchema(name="suggestion", type="string", description="あなたの提案"),
-            ResponseSchema(name="control", description="これはあなたの応答です"),
-            ResponseSchema(name="temperature", type="int", description="エアコンの摂氏温度を示すために使用されます。")
+            ResponseSchema(name="user_input", description="This is the user's input"),
+            ResponseSchema(name="suggestion", type="string", description="your suggestion"),
+            ResponseSchema(name="control", description="This is your response"),
+            ResponseSchema(name="temperature", type="int", description="This is used to indicate the degrees "
+                                                                       "centigrade temperature of the air conditioner.")
         ]
         self.output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
         self.format_instructions = self.output_parser.get_format_instructions()
 
         self.template = """
-            あなたは現在スマートスピーカーであり、ユーザーの入力に基づいてエアコンをオンにするかどうかを判断する必要があります。
-            提案セクションでは、通常の会話で返信してください。
-            制御セクションでは、エアコンをオンにする必要がある場合は <1> と返信し、オフにする必要がある場合は <0> と返信してください。
+            Now you are a smart speaker, and you need to determine whether to turn on the air conditioner based on the
+            user's input.
+            In the suggestion section, please reply normal conversation.
+            In the control section, if you need to turn on the air conditioner, please reply with <1>; if you need to 
+            turn off the air conditioner, please reply with <0>.
             
             {format_instructions}
             
-            コメントを生成しないでください。
+            Please do not generate any comments.
             
-            % ユーザー入力:
+            % USER INPUT:
             {user_input}
 
-            あなたの応答:
+            YOUR RESPONSE:
         """
         self.prompt = PromptTemplate(
             input_variables=["user_input"],
@@ -112,8 +116,8 @@ class ChatBot:
         prompt = ""
         for turn in self.chat_history:
             user_message, bot_message = turn
-            prompt = f"{prompt}\nユーザー: {user_message}\nアシスタント: {bot_message}"
-        prompt = f"{prompt}\nユーザー: {message}\nアシスタント:"
+            prompt = f"{prompt}\nUser: {user_message}\nAssistant: {bot_message}"
+        prompt = f"{prompt}\nUser: {message}\nAssistant:"
         return prompt
 
     def respond(self, message):
@@ -129,11 +133,11 @@ class ChatBot:
 
     def run_webui(self):
         with gr.Blocks() as demo:
-            gr.Markdown("# これは LLM の出力をフォーマットするデモです")
+            gr.Markdown("# This is a demo for format output of LLM")
             chatbot = gr.Chatbot(height=500)
-            msg = gr.Textbox(label="プロンプト")
-            btn = gr.Button("送信")
-            clear = gr.ClearButton(components=[msg, chatbot], value="コンソールをクリア")
+            msg = gr.Textbox(label="Prompt")
+            btn = gr.Button("Submit")
+            clear = gr.ClearButton(components=[msg, chatbot], value="Clear console")
 
             btn.click(self.respond, inputs=[msg], outputs=[msg, chatbot])
             msg.submit(self.respond, inputs=[msg], outputs=[msg, chatbot])
@@ -145,37 +149,35 @@ class ChatBot:
 if __name__ == '__main__':
     chatbot_ins = ChatBot("/home/nvidia/Mirror/llama-2-7b-chat.Q4_0.gguf")
     chatbot_ins.run_webui()
-```
 
+```
 
 </details>
 
-**ステップ 4.** ターミナルで `python3 format_opt.py` を入力してスクリプトを開始し、その後ブラウザで `http://127.0.0.1:7861/` にアクセスして WebUI を開き、効果をテストします。
-
+**ステップ4.** ターミナルでpython3 `format_opt.py`を入力してスクリプトを開始し、ブラウザで`http://127.0.0.1:7861/`にアクセスしてWebUIにアクセスし、効果をテストします。
 
 <div align="center">
-    <img width={800} 
+    <img width={800}
      src="https://files.seeedstudio.com/wiki/reComputer/Application/Format_LLM_Opt/format_llm_opt.gif" />
 </div>
 
+## 次のステップ計画は？
 
-## 次のステップの計画
-- Nvidia Riva と統合し、テキスト入力を音声インタラクションに置き換える。
-- Home Assistant に接続し、LLM の出力を使用してスマートホームデバイスを制御する。
+- Nvidia Rivaと統合して、テキスト入力を音声インタラクションに置き換える。
+- Home Assistantに接続して、LLMの出力を使用してスマートホームデバイスを制御する。
 
+<!-- Code END -->
 
-<!-- コード終了 -->
+## 技術サポート & 製品ディスカッション
 
-## 技術サポートと製品に関する議論
-
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

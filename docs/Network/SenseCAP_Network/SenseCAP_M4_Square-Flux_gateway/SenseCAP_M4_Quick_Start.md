@@ -16,8 +16,8 @@ last_update:
 
 ## Prerequisites
 
-* Network sufficient upload speed to deploy a CUMULUS FluxNode **(25Mbps Upload Minimum)**
-* A new CUMULUS FluxNodes created
+- Network sufficient upload speed to deploy a CUMULUS FluxNode **(25Mbps Upload Minimum)**
+- A new CUMULUS FluxNodes created
 
 ## What You Need
 
@@ -59,13 +59,13 @@ The tutorial takes Binance as an example
 
 3. Input withdraw info and send
 
-* Address: Open Zelcore App, Copy the FLUX BSC receive address, and paste into the Binance
+- Address: Open Zelcore App, Copy the FLUX BSC receive address, and paste into the Binance
 
 <div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_846590_gzvPZu5rXihuT8F5_1672996316?w=1280&h=1268.796498905908" alt="withdraw" width={600} height="auto" /></div>
 
-* Network: Select BB Smart Chain (BEP20)
-* Amount: 1000+ flux
-* Send From: Spot&Funding Wallet
+- Network: Select BB Smart Chain (BEP20)
+- Amount: 1000+ flux
+- Send From: Spot&Funding Wallet
 
 <div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_462161_Dwa_CwJs_TZZu9PS_1672996442?w=1200&h=1200" alt="send" width={600} height="auto" /></div>
 
@@ -77,8 +77,8 @@ The tutorial takes Binance as an example
 
 2. Visit Apps Page, and open Fusion to swap FLUX BSC to Flux(Payments portfolio).
 
-* Sell Asset: Select FLUX BSC
-* Buy Asset: Select FLUX
+- Sell Asset: Select FLUX BSC
+- Buy Asset: Select FLUX
 
 Note: Ensure you have enough BNB to afford the swap fee
 
@@ -126,8 +126,8 @@ Note: Ensure you have enough BNB to afford the swap fee
 
 3. Select Flux and click Setup on SenseCAP Hotspot App
 
-* Scan the device via Bluetooth
-* Select the device to Connect
+- Scan the device via Bluetooth
+- Select the device to Connect
 
 <div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start.jpg" alt="setup3" width={600} height="auto" /></div>
 
@@ -143,21 +143,21 @@ Note: Ensure you have enough BNB to afford the swap fee
 
 **Guide**
 
-* [FluxNode SetUp Guide](https://medium.com/@mmalik4/flux-light-node-setup-as-easy-as-it-gets-833f17c73dbb)
-* [Flux Light Node Setup Video Tutorial Guide (Setup Zelcore& Deposit Flux tutorial is from 8:07 to 12:30)](https://www.youtube.com/watch?v=RT1uaSrurv4)
+- [FluxNode SetUp Guide](https://medium.com/@mmalik4/flux-light-node-setup-as-easy-as-it-gets-833f17c73dbb)
+- [Flux Light Node Setup Video Tutorial Guide (Setup Zelcore& Deposit Flux tutorial is from 8:07 to 12:30)](https://www.youtube.com/watch?v=RT1uaSrurv4)
 
 <div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-8.png" alt="deploy1" width={600} height="auto" /></div>
 
 2. Input Identity Key, Collateral TX ID, Output Index, Zel ID, and Kadena Address from Zelcore APP, please download Zelcore for more information.
 
 > **Identity Key**: click Apps > click FluxNodes on Apps page > click your FluxNode > click edit on the expand menu > click Identity Key to copy it
-> 
+>
 > **Collateral TX ID**: click Apps > click FluxNodes on Apps page > click your FluxNode > click Edit on the expand menu > click Collateral TX ID to copy it
-> 
+>
 > **Output Index**: click Apps > click FluxNodes on Apps page > click your FluxNode > click Edit on the expand menu > click Output Index to copy it
-> 
+>
 > **Zel ID**: click Apps > click Zel ID on Apps page > click QR code to copy Zel ID
-> 
+>
 > **Kadena Address**: NIMBUS and STRATUS can input Kadena address to get additional KDA rewards. if you deploy CUMULUS no need to input it. click Portfolio > click Show Zero Sum on the page > click Kadena > click Details > click Receive action > click QR code to copy Kadena address
 
 3. Click Start Deploy, then SenseCAP M4 will deploy FluxNode automatically. The deployment time depends on the device network, please make sure the device has a good network. Now App can disconnect from the SenseCAP M4 or keep monitoring the deployment progress with App.
@@ -185,18 +185,17 @@ Note: a single external IP address **maximum supports deploy 8 FluxNodes**.
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-16.png)
 
-*   1 SenseCAP M4 Square has deployed FluxNode
-    
-*   2 SenseCAP Hotspot App Connect M4 via Bluetooth
-    
-*   3 Click the setting icon and UPnP Setting
-    
-*   4 Enable UPnP and choose a port that is not used
-    
-*   5 Click confirm and send the config
-    
-*   6 Now the M4 UPnP is enabled the UPnP status is ENABLE
-    
+- 1 SenseCAP M4 Square has deployed FluxNode
+
+- 2 SenseCAP Hotspot App Connect M4 via Bluetooth
+
+- 3 Click the setting icon and UPnP Setting
+
+- 4 Enable UPnP and choose a port that is not used
+
+- 5 Click confirm and send the config
+
+- 6 Now the M4 UPnP is enabled the UPnP status is ENABLE
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-1.jpg)
 
@@ -207,22 +206,22 @@ The Fractus node was born to increase the Flux network storage. A Fractus node i
 
 Minimum requirements for running Fractus nodes：
 
-*   A 1000 Flux collateral.
-*   2 CPU Cores.
-*   4 CPU Threads.
-*   240 CPU Events Per Second.
-*   9250 GB of storage on a single partition (Raid allowed).
-*   80MB/s Disk Write Speed.
-*   100Mb/s Download/Upload.
+- A 1000 Flux collateral.
+- 2 CPU Cores.
+- 4 CPU Threads.
+- 240 CPU Events Per Second.
+- 9250 GB of storage on a single partition (Raid allowed).
+- 80MB/s Disk Write Speed.
+- 100Mb/s Download/Upload.
 
 ![](https://wdcdn.qpic.cn/MTMxMDI3MDEwODc4Njk2MTk_47467_AZXsjpYcOQweNFnJ_1675844077?w=1200&h=654)
 
-*   1 SenseCAP M4 Square has deployed FluxNode
-*   2 Plug a 10TB drive into SenseCAP M4 Square USB3.1
-*   3 SenseCAP Hotspot App Connect M4 via Bluetooth
-*   4 Click the setting icon and Fractus Setting
-*   5 Turn on Fractus and click on Confirm to send the configuration
-*   6 Now the M4 Fractus is open and the Fractus status is True
+- 1 SenseCAP M4 Square has deployed FluxNode
+- 2 Plug a 10TB drive into SenseCAP M4 Square USB3.1
+- 3 SenseCAP Hotspot App Connect M4 via Bluetooth
+- 4 Click the setting icon and Fractus Setting
+- 5 Turn on Fractus and click on Confirm to send the configuration
+- 6 Now the M4 Fractus is open and the Fractus status is True
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/稿定设计导出-20230220-153442.jpg)
 
@@ -231,10 +230,9 @@ Add to Dashboard
 
 For more information about your SenseCAP M4 Square, Please add it to SenseCAP dashboard.
 
-*   Add directly: On FluxNode page, click + icon and input customized name and SN(in device label) to add your device to Dashboard
-    
-*   Add via Bluetooth: if your M4 has deployed FluxNode, connect M4 with SenseCAP Hotspot App via Bluetooth. and then add it to dashboard.
-    
+- Add directly: On FluxNode page, click + icon and input customized name and SN(in device label) to add your device to Dashboard
+
+- Add via Bluetooth: if your M4 has deployed FluxNode, connect M4 with SenseCAP Hotspot App via Bluetooth. and then add it to dashboard.
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-15.png)
 
@@ -256,10 +254,9 @@ Redeploy
 **Decentralized App Supported List**
 ====================================
 
-*   Flux Cumulus Node
-    
-*   Flux Cumulus Fractus (TBD)
-    
+- Flux Cumulus Node
+
+- Flux Cumulus Fractus (TBD)
 
 **Flux Cumulus Node Network Configuration**
 ===========================================
@@ -268,12 +265,11 @@ To ensure proper operation of your Flux Node please be sure to setup your networ
 
 **Requirements**
 
-*   A external IP address, The maximum number of Flux nodes supported on a single external IP address is 8. If you have more than eight devices, you may need more external ip addresses
-    
-*   Stable wired network environment, ≥25 Mbps Bandwidth
-    
-*   Router supports UPNP, and port forwarding functions, to forward ports to the device.
-    
+- A external IP address, The maximum number of Flux nodes supported on a single external IP address is 8. If you have more than eight devices, you may need more external ip addresses
+
+- Stable wired network environment, ≥25 Mbps Bandwidth
+
+- Router supports UPNP, and port forwarding functions, to forward ports to the device.
 
 **Setup Single Node**
 

@@ -9,10 +9,6 @@ last_update:
   date: 05/15/2025
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 SenseCAP decoderは、SenseCAP LoRaWAN®デバイスから送信されるLoRaWANメッセージをデコードするために使用されます。デコード後、ユーザーのアプリケーションはより親しみやすく、読みやすいメッセージを取得できます。
 
@@ -32,7 +28,7 @@ SenseCAP decoderは、SenseCAP LoRaWAN®デバイスから送信されるLoRaWAN
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -849,11 +845,12 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 function Decoder (bytes, port) {
@@ -1671,11 +1668,12 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
 
-<summary>For ChirpStack(V3)</summary>
+<summary>ChirpStack(V3) 向け</summary>
 
 ```cpp
 // Decode decodes an array of bytes into an object.
@@ -2778,7 +2776,7 @@ function loraWANV2PositiveDataFormat(str) {
 
 <details>
 
-<summary>For AWS</summary>
+<summary>AWS 向け</summary>
 
 ```cpp
 const AWS = require('aws-sdk');
@@ -3351,7 +3349,7 @@ exports.handler = async (event) => {
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -3950,11 +3948,12 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 function Decoder (bytes, port) {
@@ -4554,12 +4553,12 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
-</details>
 
+</details>
 
 <details>
 
-<summary>For Chirp Stack</summary>
+<summary>Chirp Stack 向け</summary>
 
 ```cpp
 function Decode(fPort, bytes, variables) {
@@ -5268,6 +5267,7 @@ function loraWANV2PositiveDataFormat(str) {
     return parseInt(str2, 2) / divisor;
 }
 ```
+
 </details>
 
 ### SenseCAP S210X LoRaWANセンサー
@@ -5286,7 +5286,7 @@ function loraWANV2PositiveDataFormat(str) {
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 /**
@@ -5643,7 +5643,7 @@ function decodeUplink (input) {
 
 <details>
 
-<summary>For ChirpStack V3</summary>
+<summary>ChirpStack V3 向け</summary>
 
 ```cpp
 function Decode(fPort, bytes, variables) {
@@ -5941,10 +5941,9 @@ function toBinary(arr) {
 
 </details>
 
-
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 /**
@@ -6615,7 +6614,7 @@ function toBinary (arr) {
 
 <details>
 
-<summary>For AWS</summary>
+<summary>AWS 向け</summary>
 
 ```cpp
 //Lambda function script
@@ -6959,7 +6958,6 @@ exports.handler = async (event) => {
 
 #### デコーダー
 
-
 <!-- Code -->
 
 import Tabs2 from '@theme/Tabs';
@@ -6970,7 +6968,7 @@ import TabItem2 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 /**
@@ -7583,6 +7581,7 @@ function decodeUplink (input, port) {
     return str
   }
 ```
+
 </details>
 
 </TabItem2>
@@ -7590,7 +7589,7 @@ function decodeUplink (input, port) {
 
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 /**
@@ -8198,12 +8197,15 @@ function bytes2HexString (arrBytes) {
   return str
 }
 ```
+
 </details>
 
 </TabItem2>
 </Tabs2>
 
 <!-- Code END -->
+
+---
 
 ### SenseCAP S2120 8-in-1 Weather Sensor
 
@@ -8229,7 +8231,7 @@ import TabItem3 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 /**
@@ -8624,6 +8626,7 @@ function bytes2HexString (arrBytes) {
   return str
 }
 ```
+
 </details>
 
 </TabItem3>
@@ -8631,7 +8634,7 @@ function bytes2HexString (arrBytes) {
 
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 /**
@@ -9239,6 +9242,7 @@ function Decoder (bytes, port) {
     return str
   }
 ```
+
   </details>
 
 </TabItem3>
@@ -9272,7 +9276,7 @@ import TabItem4 from '@theme/TabItem';
 
 <details>
 
-<summary>For TTN(ChirpStack V4)</summary>
+<summary>TTN(ChirpStack V4) 向け</summary>
 
 ```cpp
 /**
@@ -9624,6 +9628,7 @@ function decodeUplink (input) {
   // var sample = Decoder(["01", "01", "00", "01", "01", "00", "01", "01", "02", "00", "6A", "01", "00", "15", "01", "03", "00", "30", "F1", "F7", "2C", "01", "04", "00", "09", "0C", "13", "14", "01", "05", "00", "7F", "4D", "00", "00", "01", "06", "00", "00", "00", "00", "00", "4C", "BE"], null);
   // console.log(sample);
 ```
+
 </details>
 
 </TabItem4>
@@ -9631,7 +9636,7 @@ function decodeUplink (input) {
 
 <details>
 
-<summary>For Helium</summary>
+<summary>Helium 向け</summary>
 
 ```cpp
 /**
@@ -10297,6 +10302,7 @@ function toBinary (arr) {
       .replace(/,/g, '')
 }
 ```
+
 </details>
 
 </TabItem4>
@@ -10333,8 +10339,7 @@ The Things Stackを例として、以下の手順でデコーダーを設定し�
 
 次に、スクリプトの魔法を確認しましょう。`Live Data`タブに移動し、アップロードされたメッセージを展開してペイロード内の`Event Fields`を確認できます。これらのフィールドはスクリプトによって生成されたものです。
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data
-.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/check-data.png" alt="pir" width={800} height="auto" /></p>
 
 TTNのMQTT Data APIでメッセージを購読している場合、解析されたJSONペイロードフィールドも取得できます。
 

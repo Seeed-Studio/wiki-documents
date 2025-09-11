@@ -30,13 +30,16 @@ The firmware provided in this guide may require authentication information. If n
 ## Prerequisites
 
 ### Required Hardware
+
 - SenseCAP Watcher device
 - USB Type-C data cable
 - Windows PC
 
 ### Required Software
+
 - [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6 or later)
 - [Watcher Agent firmware binary file](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+
 :::note
 If you already own a Watcher device and its model is **not -EN**, you will need to manually flash the authentication information after flashing the firmware.  
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
@@ -61,7 +64,6 @@ For details, please check [Flashing Authentication Info](#flashing-authenticatio
 Ensure all path contains no special symbols.
 :::
 
-
 ### Step 3. Connect the Device
 
 1. Connect your Watcher to your computer using the Type-C port on the bottom of the device
@@ -84,10 +86,12 @@ Ensure all path contains no special symbols.
 ### Step 5. Select COM Port and Flash Settings
 
 Configure the following settings:
+
 - SPI SPEED: 80MHz
 - SPI MODE: DIO
 - FLASH SIZE: 32Mbit
 - COM: In Device Manager, find the COM port whose name ends with “B” — select this one for flashing.
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::note
@@ -100,13 +104,11 @@ If flashing doesn’t start after clicking START, click STOP and confirm you hav
 1. Click the `ERASE` button to clear the existing firmware
 2. Wait for the erase process to complete
 
-
 ### Step 7. Flash the Firmware
 
 1. Click the `START` button to begin flashing
 2. You should see progress information in the log window
 3. If no progress appears or failed, try the other COM port
-
 
 ### Step 8. Verify Success
 
@@ -140,19 +142,22 @@ The flashing process is complete when you see the success message in the log win
    - Try erasing before flashing
 
 ### Flashing Authentication Info
+
 If your Watcher model is **not -EN**, you must manually flash the authentication information after flashing the firmware.  
 
 **Steps:**
+
 1. Check your device **MAC address**.  
    - You can find it on the product label or via the serial port.  
    - If you're using the native firmware, you can also find it in the **Settings->About Device->WI-FI Mac** of the device.  
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
 2. Send an email to **sensecap@seeed.cc** with your STA MAC address and request the authentication file and flashing tool. This script will be provided in the package we send to you.
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
 3. Go to the esp-idf terminal and navigate to the folder we send to you, run the **Python flashing script**.
 :::note
-If you haven’t installed esp-idf yet, go to [ESP-IDF Website](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) and follow the official guide to download and install it. 
+If you haven’t installed esp-idf yet, go to [ESP-IDF Website](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html) and follow the official guide to download and install it.
 :::
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash1.jpg" style={{width:500, height:'auto'}}/></div>
 4. Follow the program instructions and enter the corresponding serial port, serialB and enter ""BURN"" to flash.
@@ -164,10 +169,12 @@ If you haven’t installed esp-idf yet, go to [ESP-IDF Website](https://docs.esp
 :::note
 If you encounter the following issue, then go to the esp-idf terminal and navigate to the folder and manually enter the following two commands:
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash4.jpg" style={{width:800, height:'auto'}}/></div>
+
 ```bash
 espefuse.py -p <your_correct_serial_port> burn_block_data BLOCK_USR_DATA serial_number
 espefuse.py -p <your_correct_serial_port> burn_key BLOCK_KEY0 license_key HMAC_UP
 ```
+
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash2.jpg" style={{width:800, height:'auto'}}/></div>
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash3.jpg" style={{width:800, height:'auto'}}/></div>
 :::

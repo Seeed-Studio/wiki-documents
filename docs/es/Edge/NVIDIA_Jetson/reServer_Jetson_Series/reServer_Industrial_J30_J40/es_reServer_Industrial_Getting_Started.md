@@ -604,7 +604,7 @@ sudo ./tools/l4t_flash_prerequisites.sh
   </tbody>
 </table>
 
-- **Paso 2:** Mueve los controladores de periféricos descargados a la misma carpeta donde está el directorio **Linux\_For\_Tegra**
+- **Paso 2:** Mueve los controladores de periféricos descargados a la misma carpeta donde está el directorio **Linux_For_Tegra**
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reServer-Industrial/29.jpg"/></div>
 
@@ -621,7 +621,7 @@ Se te preguntará si deseas reemplazar archivos. Escribe **A** y presiona ENTER 
 
 #### Flashear en Jetson
 
-- **Paso 1:** Navega al directorio **Linux\_for\_Tegra** y ejecuta el comando de flasheo como sigue:
+- **Paso 1:** Navega al directorio **Linux_for_Tegra** y ejecuta el comando de flasheo como sigue:
 
 ```sh
 cd Linux_for_Tegra

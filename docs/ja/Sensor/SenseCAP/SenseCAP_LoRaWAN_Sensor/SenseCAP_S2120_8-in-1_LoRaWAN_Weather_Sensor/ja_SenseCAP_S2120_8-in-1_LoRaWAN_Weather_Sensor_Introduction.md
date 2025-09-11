@@ -1,52 +1,48 @@
 ---
-description: SenseCAP S2120 8-in-1 LoRaWAN 気象センサーの紹介
-title: SenseCAP S2120 8-in-1 LoRaWAN 気象センサーの紹介
+description: SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor 紹介
+title: SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor 紹介
 keywords:
 - SenseCAP
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor/SenseCAP_S2120_8-in-1_LoRaWAN_Weather_Sensor_Introduction
 last_update:
-  date: 05/15/2025
+  date: 3/24/2023
   author: Yvonne
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# SenseCAP S2120 8-in-1 LoRaWAN 気象センサー
+# SenseCAP S2120 8-in-1 LoRaWAN Weather Sensor
 
 [![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction146.png)](https://www.seeedstudio.com/sensecap-s2120-lorawan-8-in-1-weather-sensor-p-5436.html)
 
-SenseCAP S2120はバッテリー駆動の8-in-1 LoRaWAN 気象センサーで、気温、湿度、風速、風向、降雨量、光強度、UV指数、気圧を測定します。このセンサーは超低消費電力、信頼性の高い性能、内蔵Bluetooth、OTA設定およびリモートデバイス管理のためのアプリサービスにより、低メンテナンスコストを実現します。庭、スマート農業、気象学、スマートシティなどの多様なシナリオでの利用をサポートします。SenseCAP S21XXはLoRaWAN® V1.0.3プロトコルに対応しており、[LoRaWAN®ゲートウェイ](https://www.seeedstudio.com/LoRaWAN-Gateway-c-1936.html)と連携して動作します。
+SenseCAP S2120バッテリー駆動8-in-1 LoRaWAN気象センサーは、気温、湿度、風速、風向、降雨量、光強度、UV指数、気圧を測定します。超低消費電力、信頼性の高い性能、内蔵Bluetooth、OTA設定とリモートデバイス管理のためのアプリサービスにより、低メンテナンスコストを実現します。裏庭、庭園、スマート農業、気象学、スマートシティなどのマルチシナリオアプリケーションをサポートします。
+SenseCAP S21XXはLoRaWAN® V1.0.3プロトコルと互換性があり、[LoRaWAN® gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-c-1936.html)と連携できます。
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction914.png)
 
-LoRaWAN®ゲートウェイは、このようなセンサーを使用する際に必要なLoRaWAN®ネットワークカバレッジを提供します。S210Xは異なるLoRaWAN®ゲートウェイに接続可能で、Seeedが提供する製品はシームレスなユーザー体験を提供します。
+LoRaWAN®ゲートウェイは、このようなセンサーを使用する際に必要なLoRaWAN®ネットワークカバレッジを提供できます。S210Xは異なるLoRaWAN®ゲートウェイに接続できますが、Seeedが提供するものはシームレスなユーザーエクスペリエンスを提供します。
 
-Heliumネットワーク：センサーはHeliumネットワークでカバーされている地域で動作します（[Helium Explorer](https://explorer.helium.com/)で確認可能）。[SenseCAP M1](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html)および[SenseCAP M2](https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5342.html)をご覧ください。
+Helium Network: センサーはHelium Networkでカバーされているエリアで動作します（[Helium Explorer](https://explorer.helium.com/)で確認）。[SenseCAP M1](https://www.seeedstudio.com/SenseCAP-M1-LoRaWAN-Indoor-Gateway-US915-p-5023.html)と[SenseCAP M2](https://www.seeedstudio.com/SenseCAP-M2-Data-Only-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5342.html)をご確認ください。
 
-LoRaWANネットワーク：センサーはThe Things Network、Loriot、ChirpstackなどのLoRaWAN®ネットワークで動作します。[SenseCAP Outdoor Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html)および[SenseCAP M2 Multiplatform Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)をご覧ください。
+LoRaWAN Network: センサーはThe Things Network、Loriot、ChirpstackなどのLoRaWAN®ネットワークで動作します。[SenseCAP Outdoor Gateway](https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html)と[SenseCAP M2 Multiplatform Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html)をご確認ください。
 
 # アプリケーション
 
--   庭とガーデン：庭やガーデンで気温、湿度、降雨量、UV指数などを測定し、家族を守ります。
+-   裏庭と庭園: 裏庭と庭園で気温と湿度、降雨量、UV指数などを測定し、ご家族を守ります。
 
--   スマート農業：農家が気候データや情報をタイムリーに取得し、科学的な管理手法を生産に取り入れることで、農業生産能力とレベルを向上させます。
+-   スマート農業: 農家が気候データと情報をタイムリーに取得し、科学的な管理措置を生産に取り入れ、農業生産能力とレベルを向上させることを可能にします。
 
--   気象学：交通や輸送分野での異常気象条件の変化をタイムリーに反映し、交通管理部門にリアルタイムの科学的データを提供します。
+-   気象学: 専門的な気象分野でのアプリケーションをサポートし、例えば、交通・運輸分野における様々な異常気象条件の変化をタイムリーに反映し、交通管理部門にリアルタイムの科学的根拠データを提供します。
 
--   都市の気象：都市広場、公園、観光地、ゴルフコースなどの都市エリアにリアルタイムデータを提供します。
+-   都市気象: 都市広場、公園、景勝地、ゴルフコース、その他の都市エリアにリアルタイムデータを提供します。
 
 # ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3232.png)
-
 
 
 # **フィールド展開**
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3252.png)
 
-写真提供：Ted Urbaniak、Mapping Network、Nibiaa
+写真提供: Ted Urbaniak, Mapping Network, Nibiaa
 
 # 
 
@@ -54,25 +50,25 @@ LoRaWANネットワーク：センサーはThe Things Network、Loriot、Chirpst
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3325.png)
 
-# LoRaWAN 周波数
+# LoRaWAN周波数
 
-*注：周波数制限なし。気象ステーションはいつでも他の周波数プランに切り替えることができます。*
+*注意: 周波数制限なし。気象ステーションはいつでも他の周波数プランに切り替えることができます。*
 
-*S2120は863MHz \~928MHzのユニバーサル周波数プランを1つのSKUでサポートするよう製造されています。つまり、以下の周波数プランをサポートします：*
+*S2120は、1つのSKUで863MHz〜928MHzのユニバーサル周波数プランをサポートするように製造されています。つまり、以下の周波数プランをサポートできます:*
 
-|周波数プラン|一般名称|サブバンド|
+|周波数プラン|一般名|サブバンド|
 | :- | :- | :- |
-|EU863-870|EU868|\_\_\_|
+|EU863-870|EU868|___|
 |US902-928|US915|サブバンド1から8|
 |AU915-928|AU915|サブバンド1から8|
-|AS923|AS923|AS923\_1、AS923\_2、AS923\_3、AS923\_4|
-|IN865-867|IN865|\_\_\_|
-|KR920-923|KR920|\_\_\_|
-|RU864-867|RU864|\_\_\_|
+|AS923|AS923|AS923_1, AS923_2, AS923_3, AS923_4|
+|IN865-867|IN865|___|
+|KR920-923|KR920|___|
+|RU864-867|RU864|___|
 
-周波数プラン設定はデフォルトでは未設定であり、初回の電源投入時にBluetooth経由でアプリによって設定されるまでRF信号を送信しません。また、いつでも他の周波数プランに変更可能です。
+周波数プラン設定はデフォルトでnoneに設定されており、初回電源投入時にBluetooth経由でアプリによって設定されるまでRF信号を送信しません。また、いつでも他の周波数プランに変更できます。
 
-# 部品リスト
+# パーツリスト
 
 ![](https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Introduction.files/Introduction3841.png)
 
@@ -83,7 +79,7 @@ ECCN/HTS
 |USHSCODE|9026104000|
 |UPC||
 |EUHSCODE|8517180000|
-|COO|中国|
+|COO|CHINA|
 
 |CE|1|
 | :- | :- |

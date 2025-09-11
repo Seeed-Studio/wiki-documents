@@ -55,7 +55,7 @@ Get Started
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1. Click [this link](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) to **login or signup to mbed**
-2. Import the mbed\_blinky program
+2. Import the mbed_blinky program
 3. Click the **Compile** icon of the top toolbar to compile the program, then download a compiled hex file.
 4. Drag-n-drop the downloaded hex file into the MBED disk
 
@@ -96,7 +96,7 @@ Applications
 
     - Make it run
 
-        1. Download [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1. Download [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2. Copy the hex file to the MBED disk of your Arch BLE
         3. Download [the Color Pixels Android app](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
@@ -119,11 +119,11 @@ If the BLE device is disconnected frequently, we can improve the stability by ch
 
     - Make it run
 
-        1. Download [Web\_Dashboard\_Arch\_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
+        1. Download [Web_Dashboard_Arch_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
         2. Copy the hex file to the MBED disk of your Arch Link
         3. Connect the Grove - Temperature&Humidity Sensor Pro to I2C Grove connector
         4. Connect the Arch Link to your PC through USB cable
-        5. Open a web browser and visit [http://mbed.org/media/uploads/yihui/web\_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
+        5. Open a web browser and visit [http://mbed.org/media/uploads/yihui/web_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
 
 If you want to change the program, click [this link](https://mbed.org/compiler/#import:/teams/Seeed/code/Web_Dashboard/;platform:Seeed-Arch-Link) to import the Web Dashboard program to mbed online IDE.
 

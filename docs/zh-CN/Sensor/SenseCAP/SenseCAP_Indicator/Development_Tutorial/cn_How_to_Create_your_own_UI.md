@@ -20,7 +20,6 @@ last_update:
 
 我们提供了 UI 界面的演示代码，[lvGL 示例文件](https://docs.lvgl.io/master/examples.html) 中有许多绘制 UI 的示例代码供参考，您可以修改示例代码或自定义您自己的 UI。
 
-
 ```c
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -81,16 +80,13 @@ void app_main(void)
 }
 ```
 
-
 ## **Squareline Studio（可选）**
 
 [Squareline Studio](https://docs.squareline.io/docs/squareline/) 是一个多平台设计工具，使用可视化界面帮助设计师和开发人员快速高效地工作。SquareLine Studio 通过为您的项目创建完美的代码使这成为可能。无论您使用 C 还是 Python，您都可以导出两种语言的代码。
 
 如果您需要创建更复杂或高级的 UI 界面，建议您使用 Squareline Studio 进行开发。
 
-
 [Squareline Studio 安装](https://docs.squareline.io/docs/introduction/install)
-
 
 我们为 UI 页面提供了一个演示项目：
 
@@ -98,8 +94,7 @@ void app_main(void)
 
 ### **替换为您自己的 UI**
 
-
-* 步骤 1：您可以在我们的演示项目中进行更改，或创建新的 UI 页面
+- 步骤 1：您可以在我们的演示项目中进行更改，或创建新的 UI 页面
 
 打开演示项目并进行更改：
 
@@ -109,27 +104,21 @@ void app_main(void)
 
 **注意**：屏幕分辨率为 480*480。
 
-
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/create.png"/></div>
 
-
-* 步骤 2：将您完成的页面导出为 UI 文件
-
+- 步骤 2：将您完成的页面导出为 UI 文件
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/export.png"/></div>
 
-
-* 步骤 3：删除所有原始 UI 文件并将您自己的 UI 文件复制到此目录。
-
+- 步骤 3：删除所有原始 UI 文件，并将您自己的 UI 文件复制到此目录。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/ui.png"/></div>
 
-* 步骤 4：构建并烧录项目
+- 步骤 4：构建并烧录项目
 
 运行以下命令来构建、烧录和监控项目：
 
 `idf.py -p PORT build flash monitor`
-
 
 # **技术支持**
 

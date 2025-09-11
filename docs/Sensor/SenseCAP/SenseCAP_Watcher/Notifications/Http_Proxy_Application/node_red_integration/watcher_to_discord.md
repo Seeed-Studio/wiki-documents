@@ -49,7 +49,8 @@ node.send({ payload: msg.payload.value[0].content });
 
 node.send({ payload: msg.payload.value[0].image_url });
 ```
-## Part 2. Set up Discord Bot 
+
+## Part 2. Set up Discord Bot
 
 ### Step 3. Sign up for Discord
 
@@ -73,7 +74,7 @@ Enter a name for your application, agree to the Discord [**Developer Terms of Se
 You will need a valid email address linked to your Discord account in order to proceed. If you do not have an email associated with your Discord account, please follow these instructions: [How to Change Your Account's Email Address](https://support.discord.com/hc/en-us/articles/4423385681175-How-to-Change-Your-Account-s-Email-Address)
 :::
 
-### Step 5. Configure Bot Settings 
+### Step 5. Configure Bot Settings
 
 Now we will configure the bot settings. To do so, follow these steps:
 
@@ -161,7 +162,7 @@ The Channel ID is a unique identifier for each Discord channel. Make sure to kee
 
 ## Part 3. Integrate Discord with Node-RED
 
-### Step 9. Install Discord module 
+### Step 9. Install Discord module
 
 Click the three bars icon and then click **Manage palette** option. This opens a new window where you can add or remove nodes.
 
@@ -188,6 +189,7 @@ Double-click the **discordMessageManager** node to open its configuration panel.
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Watcher_Discord_Node_Red/Node_RED_5.png" style={{width:700, height:'auto'}}/></div>
 
 In the new window, enter the following information:
+
 - Token: Enter the token you obtained in [**Step 5**](#step-5-configure-bot-settings)
 - Name: Give a name for your token configuration
 
@@ -238,6 +240,7 @@ This error occurs when your bot is trying to use intents that haven't been enabl
 This error suggests that your bot doesn't have the necessary permissions to perform the action. To resolve this:
 
 1. Ensure your bot has been invited to the server with the correct permissions:
+
 - Go to the [**Discord Developer Portal**](https://discord.com/developers/applications).
 - Select your application and go to the **OAuth2** section.
 - In **URL Generator**, select **bot** under **SCOPES**.
@@ -245,15 +248,18 @@ This error suggests that your bot doesn't have the necessary permissions to perf
 - Copy the generated URL and open it in a new tab to invite the bot to your server with these permissions.
 
 2. Check the channel permissions:
+
 - In Discord, right-click on the channel you're trying to send messages to.
 - Click **Edit Channel** > **Permissions**.
 - Ensure your bot role has the necessary permissions, especially **View Channel** and **Send Messages**.
 
 3. Verify the Channel ID:
+
 - Double-check that the Channel ID in your Node-RED configuration is correct.
 - Ensure you're using the ID of a text channel, not a voice channel or category.
 
 4. Check your bot token:
+
 - Ensure the token in your Node-RED configuration is correct and up-to-date.
 - If unsure, you can regenerate the token in the Discord Developer Portal under the **Bot** section.
 
@@ -266,11 +272,11 @@ If you continue to experience issues after trying these steps, consider checking
 Thank you for choosing our products! We are here to provide you with different support to ensure that your experience with our products is as smooth as possible. We offer several communication channels to cater to different preferences and needs.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

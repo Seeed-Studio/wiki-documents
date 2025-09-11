@@ -75,7 +75,7 @@ ReSpeaker Mic Arrayは、ReSpeaker Coreの上に直接積み重ねて（接続�
 
 ## ReSpeaker Coreで音声を抽出する
 
-Mic ArrayがReSpeaker Coreに積み重ねられると、自動的に検出されます（`aplay -l`で確認）。また、[respeaker\_python\_library](https://github.com/respeaker/respeaker_python_library)を使用して音声インタラクションアプリケーションを開発することをお勧めします。このライブラリを使用することで、Mic Arrayがオンかどうかを気にする必要がなくなります。ライブラリがこれをチェックし、Mic Arrayがオンの場合はそれを選択します。
+Mic ArrayがReSpeaker Coreに積み重ねられると、自動的に検出されます（`aplay -l`で確認）。また、[respeaker_python_library](https://github.com/respeaker/respeaker_python_library)を使用して音声インタラクションアプリケーションを開発することをお勧めします。このライブラリを使用することで、Mic Arrayがオンかどうかを気にする必要がなくなります。ライブラリがこれをチェックし、Mic Arrayがオンの場合はそれを選択します。
 
 さらに、このライブラリ内の[*class Microphone*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py)（**Pyaudio**に基づいています）には、音声を抽出するための[*listen*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py#L207)というメソッドがあります。使用方法については、[こちらのサンプルコード](https://github.com/respeaker/respeaker_python_library/blob/master/examples/SpeechRecognition_translator.py)をご覧ください。
 

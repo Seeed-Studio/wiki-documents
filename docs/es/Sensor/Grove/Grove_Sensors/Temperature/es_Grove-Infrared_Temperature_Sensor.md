@@ -91,7 +91,7 @@ Antes de medir la temperatura, necesitas una configuración simple. Sigue las in
 
 - **Paso 2.** Regula el voltaje del sensor
 
-Después de cargar el programa de demostración, mantén el sensor en un ambiente normal por más de 5 minutos para que la temperatura del sensor sea igual a la temperatura del entorno. Luego abre el monitor serie para verificar el voltaje que produce el sensor. Idealmente, cuando la temperatura ambiente es igual a la del sensor de temperatura, la salida del sensor infrarrojo (TP-538U) es 0V. Debemos regular el voltaje de referencia que se desplaza a 0.5V por hardware. Como se muestra a continuación, el voltaje del sensor es 0.014V, solo necesitamos cambiar el valor offset\_vol a 0.014 que obtienes del monitor serie en el programa.
+Después de cargar el programa de demostración, mantén el sensor en un ambiente normal por más de 5 minutos para que la temperatura del sensor sea igual a la temperatura del entorno. Luego abre el monitor serie para verificar el voltaje que produce el sensor. Idealmente, cuando la temperatura ambiente es igual a la del sensor de temperatura, la salida del sensor infrarrojo (TP-538U) es 0V. Debemos regular el voltaje de referencia que se desplaza a 0.5V por hardware. Como se muestra a continuación, el voltaje del sensor es 0.014V, solo necesitamos cambiar el valor offset_vol a 0.014 que obtienes del monitor serie en el programa.
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/Grove-Infrared_Temperature_Sensor/img/Infrared_Temperature_Sensor_code2.jpg" /></div>
 

@@ -228,14 +228,14 @@ alt="Example banner"
 
 # My Markdown page
 
-<a target="\_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
+<a target="_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
 
 or
 
 [Download this docx using Markdown](../assets/docusaurus.png)
 
 ```markdown
-<a target="\_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
+<a target="_blank" href={require('../assets/docusaurus.png').default}> Download this docx </a>
 
 or
 

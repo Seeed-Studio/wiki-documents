@@ -13,7 +13,7 @@ last_update:
 ![](https://seeeddoc.github.io/Xadow_NFC_v2/img/Xadow_NFC_v2.JPG)
 
 
-El Xadow NFC v2 presenta el chipset NFC más popular del mercado: un módulo transceptor altamente integrado PN532\. Este chipset es muy potente y se puede encontrar en la mayoría de los teléfonos inteligentes y dispositivos NFC. Se puede usar para leer y escribir etiquetas y tarjetas, actuando como etiquetas NFC. Actualmente, hemos desarrollado librerías de Arduino para soportar la lectura y escritura de tarjetas MIFARE Class y MIFARE Ultralight. La placa también adopta el nuevo conector Xadow de 11 pines para mejorar la flexibilidad de las conexiones de módulos.
+El Xadow NFC v2 presenta el chipset NFC más popular del mercado: un módulo transceptor altamente integrado PN532. Este chipset es muy potente y se puede encontrar en la mayoría de los teléfonos inteligentes y dispositivos NFC. Se puede usar para leer y escribir etiquetas y tarjetas, actuando como etiquetas NFC. Actualmente, hemos desarrollado librerías de Arduino para soportar la lectura y escritura de tarjetas MIFARE Class y MIFARE Ultralight. La placa también adopta el nuevo conector Xadow de 11 pines para mejorar la flexibilidad de las conexiones de módulos.
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/Xadow-NFC-v2-p-2562.html)
 

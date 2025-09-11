@@ -25,11 +25,9 @@ The device comes two Grove interfaces, which supports ADC and I2C transmission p
 
 SenseCAP Indicator is a fully open source powerful IoT development platform for developers. One-stop ODM Fusion service is also available for customization and quick scale-up.
 
-
 <div align="center">
   <img class='img-responsive' width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_1.png"/>
 </div>
-
 
 ## Features
 
@@ -44,7 +42,6 @@ Leverage the extensive ESP32 and Raspberry Pi open source ecosystem for infinite
 - **Fusion ODM Service Available**
 Seeed Studio also provides one-stop ODM service for quick customization and scale-up to meet various needs.(please contact iot@seeed.cc)
 
-
 ## Hardware Overview
 
 <div align="center"><img width="{600}" src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_2.png"/></div>
@@ -55,8 +52,8 @@ Seeed Studio also provides one-stop ODM service for quick customization and scal
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png"/></div>
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_7.png"/></div>
 
-
 ### Button Function
+
 - **Short Press:** Turn off /Wake up the screen.
 - **Long Press for 3s:** Switch on/Wwitch off the device.
 - **Long Press for 10s:** Factory firmware reset.
@@ -70,16 +67,15 @@ Grove is a modular, standardized connector prototyping system and a strong open 
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_4.png"/></div>
 
-
 ### LoRa®
+
 The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® application and connect your local LoRa sensors to the Cloud via Wi-Fi. For example, you could build a LoRa hub device to connect your LoRa sensors to your smart home ecosystem to implement Matter over Wi-Fi. In this way, the LoRa devices could be connected to the Matter ecosystem via Wi-Fi, without the need to buy a new Matter-compatible device.
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_55.png"/></div>
 
-
 ## Specification
 
-|Screen|3\.95 Inch, Capacitive RGB Touch Screen|
+|Screen|3.95 Inch, Capacitive RGB Touch Screen|
 | :- | :- |
 |**Screen Resolution**|480 x 480 pixels|
 |**Power Supply**|5V-DC, 1A|
@@ -87,7 +83,7 @@ The embedded Semtech SX1262 LoRa® module enables you to build the LoRa® applic
 |**Processor**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit up to 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ up to 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
 |**External Storage**|Support up to 32GB Micro SD Card (not included)|
-|**Wi-Fi**|802\.11b/g/n, 2.4GHz|
+|**Wi-Fi**|802.11b/g/n, 2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|<p>LoRa and FSK Modem</p><p>+21dBm Max Transmitted Power</p> <p>-136dBm@SF12 BW=125KHz RX Sensitivity</p><p>Up to 5km communication distance</p>|
 |**Sensors**(Optional)|<p>**CO2(Sensirion SCD41)**</p><p>Range: 0-40000ppm</p><p>Accuracy: 400ppm-5000ppm ±(50ppm+5% of reading)</p><p>**TVOC (SGP40)**</p><p>Range: 1-500 VOC Index Points</p>**Grove Temperature and Humidity Sensor(AHT20)**<p>Temperature Range: -40 ~ + 85 ℃/± 0.3 ℃; 0 ~ 100% RH/± 2% RH (25 ℃)</p>|

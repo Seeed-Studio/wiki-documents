@@ -959,6 +959,207 @@
   }
 }
 
+:root {
+	--seeed-deep-teal: rgb(0, 58, 74);
+	--seeed-bright-green: rgb(143, 195, 31);
+	
+	/* Light Mode Colors */
+	--card-bg: white;
+	--card-body-bg: #f9fafb;
+	--text-primary: var(--seeed-deep-teal);
+	--text-secondary: rgba(0, 58, 74, 0.8);
+	--card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--border-color: #e5e7eb;
+}
+
+[data-theme='dark'] {
+	/* Dark Mode Colors */
+	--card-bg: #242526; /* Standard Docusaurus card background color */
+	--card-body-bg: #303030;
+	--text-primary: rgba(255, 255, 255, 0.9);
+	--text-secondary: rgba(255, 255, 255, 0.7);
+	--card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+	--border-color: #444;
+}
+
+/* Container and Grid Layout */
+.seeed-features-container {
+	font-family: 'Inter', sans-serif;
+	padding: 1rem 0;
+	box-sizing: border-box;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.seeed-features-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+}
+
+@media (min-width: 768px) {
+	.seeed-features-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 996px) { /* Aligns with Docusaurus breakpoint */
+	.seeed-features-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Individual Card Style */
+.seeed-feature-card {
+	background-color: var(--card-bg);
+	border-radius: 1rem;
+	box-shadow: var(--card-shadow);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.seeed-feature-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+[data-theme='dark'] .seeed-feature-card:hover {
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+}
+
+.card-header {
+	padding: 1.5rem;
+}
+
+.card-header h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	margin: 0;
+	line-height: 2rem;
+}
+
+.card-header p {
+	margin: 0.25rem 0 0 0;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+}
+
+.card-body {
+	background-color: var(--card-body-bg);
+	padding: 1.5rem;
+	flex-grow: 1; 
+}
+
+.features-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.feature-item {
+	display: flex;
+	align-items: flex-start;
+	color: var(--text-primary);
+}
+
+.feature-icon {
+	flex-shrink: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 1rem;
+	margin-top: 0.2rem;
+}
+
+.feature-icon svg {
+	stroke: var(--seeed-bright-green);
+}
+
+.feature-item p {
+	margin: 0;
+	line-height: 1.6;
+}
+
+.feature-item .highlight {
+	font-weight: 600;
+	color: var(--seeed-bright-green);
+}
+
+/* REFACTORED: Generic Section for Use Cases & Benefits */
+.info-section {
+	margin-top: 3rem;
+	background-color: var(--card-bg);
+	border-radius: 1rem;
+	padding: 2rem;
+	box-shadow: var(--card-shadow);
+}
+
+.info-section .section-header h2 {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	margin: 0 0 0.5rem 0;
+	text-align: center;
+}
+
+.info-section .section-header p {
+	text-align: center;
+	color: var(--text-secondary);
+	margin: 0 auto 2.5rem auto;
+	max-width: 80ch;
+}
+
+.info-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.info-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+}
+
+.info-icon {
+	flex-shrink: 0;
+	width: 2rem;
+	height: 2rem;
+	color: var(--seeed-bright-green);
+	margin-top: 0.1rem;
+}
+
+.info-content h3 {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	margin: 0 0 0.25rem 0;
+}
+
+.info-content p {
+	margin: 0;
+	color: var(--text-secondary);
+	line-height: 1.6;
+}
+
+.info-content a {
+	color: var(--seeed-bright-green);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.info-content a:hover {
+	text-decoration: underline;
+}
+
 /********************* Spencer's CSS Ended******************************/
 
 .button2 {

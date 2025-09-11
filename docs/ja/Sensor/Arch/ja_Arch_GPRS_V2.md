@@ -66,8 +66,8 @@ Arch GPRS V2 vs Arch GPRS
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS_V2/img/Get_started_with_arch.png)
 
 1. [こちら](http://www.mbed.org)からmbed環境にログインします。
-2. [mbed\_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS)プログラムをインポートします。
-3. mbedオンラインコンパイラ環境内のmbed\_blinkyフォルダ内のmain.cppにインポートされたコードが、上記のステップ3の図に示されている通りであることを確認します。コードをコンパイルするために選択されたプラットフォームがSeeeduino-Archであることを確認してください。その後、コードをコンパイルします。結果として得られるバイナリファイル（.bin）を保存するよう求められたら、PC上の指定されたフォルダに保存します。
+2. [mbed_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS)プログラムをインポートします。
+3. mbedオンラインコンパイラ環境内のmbed_blinkyフォルダ内のmain.cppにインポートされたコードが、上記のステップ3の図に示されている通りであることを確認します。コードをコンパイルするために選択されたプラットフォームがSeeeduino-Archであることを確認してください。その後、コードをコンパイルします。結果として得られるバイナリファイル（.bin）を保存するよう求められたら、PC上の指定されたフォルダに保存します。
 4. ArchボードをPCに接続し、リセットボタンを長押しします。PCにCRP DISABLDという名前のリムーバブルUSBドライブが自動的に表示されるはずです。CRP DISABLDドライブに移動し、フォルダ内に表示される既存のファームウェアファイルを削除し、ダウンロードしたバイナリファイルをCRP DISABLDにコピーします。リセットボタンを短く押して新しいバイナリを実行します。
 5. Arch GPRS V2ボードを確認してコードが正常に動作していることを確認します。上記のピンアウト図に示されている最右端のLEDが点滅し、その隣の3つのLEDがすべて点灯している場合、コードが正常に動作していることを意味します。
 
@@ -135,12 +135,12 @@ USB ISPモードに入るには、Archをコンピューターに接続し、ボ
 
 - Linuxの場合
 
-    1. ディスクがマウントされていない場合、ディスクを**\{mnt\_dir\}**にマウントします。
-    2. **dd if=\{new\_firmware.bin\} of=\{mnt\_dir\}/firmware.bin conv=notrunc**
+    1. ディスクがマウントされていない場合、ディスクを**\{mnt_dir\}**にマウントします。
+    2. **dd if=\{new_firmware.bin\} of=\{mnt_dir\}/firmware.bin conv=notrunc**
 
 - Mac では、以下のスクリプトをターミナルで実行して、.bin ファイルを Arch にコピーする必要があります。
 
-    1. **dd if=\{new\_firmware.bin\} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
+    1. **dd if=\{new_firmware.bin\} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
 
 もし興味があれば、**Automator** アプリケーションを作成して、ファイルをボードにドラッグ＆ドロップで対応させることもできます。以下のコマンドを使用して "*Run Shell Script*" を作成してください：
 

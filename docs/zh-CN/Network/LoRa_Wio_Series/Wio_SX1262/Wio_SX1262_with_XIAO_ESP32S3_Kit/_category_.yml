@@ -1,5 +1,5 @@
 position: 2 # float position is supported
-label: 'XIAO ESP32S3 与 Wio-SX1262 套件'
+label: 'XIAO ESP32S3 & Wio-SX1262 套件'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default
 className: xiao_esp32s3_&_wio_sx1262_kit

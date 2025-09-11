@@ -99,7 +99,7 @@ Arch V1.1 是一款支持 mbed 的开发板，具有 Arduino 形式的外形和 
 ![输入图片描述](https://files.seeedstudio.com/wiki/Arch_V1.1/img/Get_started_with_arch.png)
 
 1.  点击[此链接](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeeduino-Arch)登录或注册 mbed
-2.  导入 mbed\_blinky 程序
+2.  导入 mbed_blinky 程序
 3.  编写代码！然后您可以编译代码并下载输出的二进制文件。
 4.  现在将 Arch 板连接到您的电脑并长按复位按钮，它会自动显示为名为 CRP DISABLD 的 USB 驱动器。进入 CRP DISABLD，删除固件文件并将下载的二进制文件复制到 CRP DISABLD。快速按下复位按钮以运行新的二进制文件。
 

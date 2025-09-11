@@ -111,7 +111,7 @@ Con la función speed(), puedes controlar un motor a la velocidad que desees.
 
 - **motor_id** representa qué motor usar. Puedes llenar MOTOR1 o MOTOR2.
 
-- **\_speed** representa la velocidad que estableces para el motor. Puedes llenar -100~100 aquí. Cuando \_speed&gt;0, el motor DC gira en sentido horario, mientras que \_speed&lt;0, el motor DC gira en sentido antihorario. Y mientras mayor sea el valor absoluto de \_speed, más rápida será la velocidad del motor DC.
+- **_speed** representa la velocidad que estableces para el motor. Puedes llenar -100~100 aquí. Cuando _speed&gt;0, el motor DC gira en sentido horario, mientras que _speed&lt;0, el motor DC gira en sentido antihorario. Y mientras mayor sea el valor absoluto de _speed, más rápida será la velocidad del motor DC.
 
 Con la función stop(), puedes detener un motor DC en funcionamiento.
 
@@ -128,8 +128,8 @@ void setup() {
     Serial.begin(9600);
     Motor.begin(I2C_ADDRESS);
     // Drive a stepper motor
-    // \\_step: -1024~1024, when \\_step>0, stepper motor runs clockwise; \\_step<0, stepper
-// motor runs anticlockwise; when \\_step is 512, the stepper motor will run a complete
+    // \_step: -1024~1024, when \_step>0, stepper motor runs clockwise; \_step<0, stepper
+// motor runs anticlockwise; when \_step is 512, the stepper motor will run a complete
     // turn; if step is 1024, the stepper motor will run 2 turns.
     Motor.StepperRun(-1024);
     Motor.StepperRun(512);
@@ -153,7 +153,7 @@ La conexión entre el **Motor Paso a Paso 24BYJ48** y el Controlador de Motor I2
 </div>
 
 
-- **\_step** representa los pasos que estableces para que el motor paso a paso funcione. Puedes llenar -1024~1024. Cuando \_step&gt;0, el motor paso a paso gira en sentido horario, mientras que \_step&lt;0, el motor paso a paso gira en sentido antihorario. Cuando \_step es 512/-512, el motor paso a paso dará una vuelta completa y si \_step es 1024/-1024, el motor paso a paso dará 2 vueltas. El motor paso a paso se detendrá automáticamente después de completar sus pasos.
+- **_step** representa los pasos que estableces para que el motor paso a paso funcione. Puedes llenar -1024~1024. Cuando _step&gt;0, el motor paso a paso gira en sentido horario, mientras que _step&lt;0, el motor paso a paso gira en sentido antihorario. Cuando _step es 512/-512, el motor paso a paso dará una vuelta completa y si _step es 1024/-1024, el motor paso a paso dará 2 vueltas. El motor paso a paso se detendrá automáticamente después de completar sus pasos.
 
 :::note
 

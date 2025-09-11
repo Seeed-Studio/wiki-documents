@@ -2,23 +2,20 @@
 description: SenseCAP M2 Light Gateway 概要
 title: SenseCAP M2 Light Gateway 概要
 keywords:
-- SenseCAP ネットワーク
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAP_M2_Light_Gateway/SenseCAP_M2_Light_Gateway_Overview
 last_update:
-  date: 05/15/2025
+  date: 03/17/2023
   author: Yvonne
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-**SenseCAP M2 Light Gateway とは**
 
-SenseCAP M2 Light Hotspotは、高性能なLoRaWANゲートウェイであり、ユーザーが最小限のコストでHeliumネットワークに参加することを可能にします。
+**SenseCAP M2 Light Gatawayとは**
 
-SenseCAP M2用のSenseCAPソフトウェアライセンスは、**1日あたり$0.05**という低価格で利用可能で、必要に応じて支払うことで、PoCとデータ転送のメリットを最小限の投資で享受できます。
+SenseCAP M2 Light Hotspotは、ユーザーが最小限のコストでHeliumネットワークに参加できる高性能LoRaWANゲートウェイです。
+
+SenseCAP M2用のSenseCAP Software Licenceは**1日あたり\$0.05まで**の**必要に応じた支払い**により、最小限の投資でPoCとデータ転送の利益を享受できます。
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-sensecap-m2-light-hotspot-software-license--first_1_.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -30,59 +27,59 @@ SenseCAP M2用のSenseCAPソフトウェアライセンスは、**1日あたり$
 
 **ソフトウェアライセンス**
 
-SenseCAP M2 Light Hotspotは、Helium向けにLoRaWANカバレッジを提供するためにソフトウェアライセンスをアクティベートする必要があります。SenseCAPは、必要に応じて購入できる3つのライセンスプランを提供しています。
+SenseCAP M2 Light HotspotがHelium用のLoRaWANカバレッジを提供するには、アクティベーション用のソフトウェアライセンスが必要です。SenseCAP では、お客様のニーズに応じて購入できる3つのライセンスプランを提供しています。
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image2.png)
 
 **ライセンスパッケージ:**
 
-| **ライセンス有効期間** | 90日間 | 365日間 | 無制限 |
+|**ライセンス有効期間**|90日|365日|無制限|
 | :- | :- | :- | :- |
-| <p></p><p>**パッケージプラン**</p> | \$7.99 (\$0.09/日) | \$19.99 (\$0.05/日) | \$49.99 (無制限ライセンス) |
+|<p></p><p>**パッケージプラン**</p>|\$7.99             1日あたり\$0.09まで|\$19.99            1日あたり\$0.05まで|\$49.99          無制限ライセンス|
 
-**注意:** このライセンスは**SenseCAP M2 Light Hotspot**専用であり、他のホットスポットをアクティベートするためには使用できません。
+**注意：** このライセンスは **SenseCAP** **M2** **Light** **Hotspot** のみに適用され、他のホットスポットのアクティベーションには使用できません。
 
-SenseCAPソフトウェアライセンスは、Heliumオンボーディング料金とは異なり、SenseCAPソフトウェアとクラウドサービスをアクティベートするために必要です。HeliumがホットスポットをHeliumサーバーにオンボードするために課す$50のオンボーディング料金は、SenseCAPホットスポットパッケージに含まれています。
+SenseCAP ソフトウェアライセンスは Helium オンボーディング料金とは異なり、SenseCAP ソフトウェアとクラウドサービスをアクティベートするために必要です。Helium がホットスポットを Helium サーバーにオンボードするために課す $50 の Helium オンボーディング料金は、SenseCAP Hotspot パッケージに含まれています。
 
-**特徴**
+**機能**
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image3.png)
 
-**複数の周波数帯と認証**
+**複数の周波数帯域と認証**
 
-SenseCAP M2は、さまざまな国や地域でのアプリケーション要件を満たすために、異なる周波数帯バージョンと対応する認証を提供します。これには以下が含まれますが、これに限定されません：オーストラリア (RCM)、ブラジル (Anatel)、カナダ (ICES/IC IC)、EU (CE/RoHS/REACH/WEEE/VerpackG)、インド (WPC)、日本 (TELEC/PSE)、韓国 (KC)、フィリピン (NTC)、台湾 (BSMI/NCC)、アメリカ合衆国 (FCC)。
+SenseCAP M2 は、オーストラリア（RCM）、ブラジル（Anatel）、カナダ（ICES/IC IC）、EU（CE/RoHS/REACH/WEEE/VerpackG）、インド（WPC）、日本（TELEC/PSE）、韓国（KC）、フィリピン（NTC）、台湾（BSMI/NCC）、米国（FCC）を含む（ただしこれらに限定されない）様々な国や地域でのアプリケーション要件を満たすため、異なる周波数帯域バージョンと対応する認証を提供しています。
 
 追加の認証も予定されています。
 
-**優れた安定した性能**
+**優れた安定したパフォーマンス**
 
-MediaTek MT7628とSemtech SX1302/SX1303ベースバンドLoRaチップを搭載した成熟したハードウェアにより、SenseCAP M2は優れた安定した性能を提供します。内蔵BLEを備え、Wi-Fiおよびイーサネットインターネット接続をサポートします。
+MediaTek MT7628 と Semtech SX1302/SX1303 ベースバンド LoRa チップを搭載した成熟したハードウェアにより、SenseCAP M2 は BLE を内蔵し、Wi-Fi とイーサネットインターネット接続をサポートする優れた安定したパフォーマンスを提供します。
 
-イーサネットでゲートウェイに電力を供給する必要があるユーザー向けに、PoEをサポートしており、追加の電源ケーブルが不要です。ルーターがPoE機能をサポートしていない場合は、[SenseCAP Injector](https://www.seeedstudio.com/SenseCAP-PoE-Injector-48V-US-p-5462.html)も利用可能です。
+追加の電源供給ケーブルではなくイーサネットでゲートウェイに電力を供給する必要があるユーザーのために、PoE をサポートしているため、追加の [PoE スプリッター](https://www.seeedstudio.com/PoE-Splitter-DC-Jack-12V-p-5427.html) は不要です。ルーターが PoE 機能をサポートしていない場合は、[SenseCAP Injector](https://www.seeedstudio.com/SenseCAP-PoE-Injector-48V-US-p-5462.html) もご利用いただけます。
 
-**広範囲のカバレッジと強力な信号**
+**広範囲カバレッジと強力な信号**
 
-SenseCAP M2のカバレッジと信号強度を向上させるために、高性能な3dBiアンテナが装備されており、LoRaWANネットワーク上で数マイルにわたる広範囲のカバレッジを提供します。さらに、アンテナはより高いdBiの[ファイバーグラスアンテナ](https://www.seeedstudio.com/catalogsearch/result/?q=fiberglass%20antenna)にアップグレードすることができ、さまざまな使用シナリオや環境に対応します。
+SenseCAP M2 のカバレッジと信号強度を向上させるため、高性能 3dBi アンテナを搭載しており、LoRaWAN ネットワークで数マイルの広範囲カバレッジを提供できます。さらに、様々な使用シナリオや環境に適応するため、アンテナをより高い dBi の [ファイバーグラスアンテナ](https://www.seeedstudio.com/catalogsearch/result/?q=fiberglass%20antenna) にアップグレードすることも可能です。
 
-**プロフェッショナルな管理ツールとクラウドサービス**
+**プロフェッショナル管理ツールとクラウドサービス**
 
-SenseCAPホットスポットは、ホットスポットのセットアップと管理を簡単にするソリューションを提供します。ユーザーはSenseCAP Hotspot Appを使用して、簡単な手順でホットスポットをセットアップできます。SenseCAP Hotspot DashboardおよびSenseCAP Local Consoleも開発されており、効率的かつ簡単にホットスポットを監視および管理できます。
+SenseCAP Hotspot は、ホットスポットのセットアップと管理のための手間のかからないソリューションを提供します。ユーザーは SenseCAP Hotspot App を通じて簡単な数ステップでホットスポットを簡単にセットアップできます。SenseCAP Hotspot Dashboard と SenseCAP Local Console も、ユーザーが効率的で簡単な方法でホットスポットを監視・管理できるよう開発されています。
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image4.png)
 
 **安全で信頼性の高い**
 
-大量のデータ伝送を処理するゲートウェイにとって、安全性は非常に重要です。SenseCAP M2はECC608セキュリティチップを利用して、信頼性の高い安全な認証を提供し、People's Networkへの安全で安定した接続を確保します。
+大量のデータ伝送を処理するゲートウェイにとって、安全性は決して軽視できません。SenseCAP M2 は ECC608 セキュリティチップを利用して信頼性の高い安全な認証を提供し、People's Network への安全で安定した接続を確保します。
 
-**効率的で迅速なオンラインサポート**
+**効率的でタイムリーなオンラインサポート**
 
-SenseCAPは、優れた技術サポートで顧客から高い評価を得ています。技術的な問題が発生した場合、SenseCAPの効率的なオンライン技術サポートサービスにより、迅速かつ効果的な支援を受けることができます。SenseCAPの卓越したカスタマーサポートにより、デバイスとサービスをスムーズに運用するための支援を受けることができます。
+SenseCAP は一流の技術サポートで顧客から高い評価を得ています。技術的な問題に遭遇した場合、SenseCAP の効率的なオンライン技術サポートサービスに頼って、タイムリーで効果的な支援を受けることができます。SenseCAP の優れたカスタマーサポートにより、デバイスとサービスをスムーズに稼働させ続けるために必要なヘルプを確実に受けられると信頼できます。
 
-**屋外ホットスポットへの簡単なアップグレード**
+**屋外ホットスポットへの簡単アップグレード**
 
-市場に出回っている一般的なホットスポットに適合する[SenseCAP Outdoor Enclosure](https://www.seeedstudio.com/SenseCAP-Outdoor-Enclosure-p-5353.html)も利用可能で、屋内のSenseCAPホットスポットを屋外用にアップグレードすることができます。これにより、さまざまな屋外LoRaWANアプリケーションシナリオが実現します。
+市場の一般的なホットスポットに適合する [SenseCAP Outdoor Enclosure](https://www.seeedstudio.com/SenseCAP-Outdoor-Enclosure-p-5353.html) も利用可能で、屋内 SenseCAP ホットスポットを屋外用にアップグレードでき、様々な屋外 LoRaWAN アプリケーションシナリオを実現できます。
 
-必要なアクセサリーをすべて揃えた簡単な手順で屋内ゲートウェイを屋外用にアップグレードでき、SenseCAP M1、SenseCAP M2、BobCat、RAK、Heliumホットスポットなど、他のホットスポットにも適しています。
+屋内ゲートウェイを屋外用にアップグレードするために必要なすべてのアクセサリを含む簡単なステップで、SenseCAP M1、SenseCAP M2、BobCat、RAK、Helium ホットスポットなどの他のホットスポットにも適用できます。
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image5.png)
 
@@ -90,49 +87,46 @@ SenseCAPは、優れた技術サポートで顧客から高い評価を得てい
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image7.png)
 
-**注意:**
+**注意：**
 
-MicroSDカードスロットは将来の使用のために予備されています。SenseCAP M2をLoRaWANゲートウェイとして使用する場合、MicroSDカードは必要ありません。
+MicroSD カードスロットは将来の使用のために予約されています。SenseCAP M2 を LoRaWAN ゲートウェイとして使用する場合、Micro SD カードは必要ありません。
 
-Nano SIMカードスロットは4Gバージョンのホットスポットでのみ利用可能です。SIMカードはデバイスに含まれていません。Type-Cインターフェースは高度な開発者管理のために予備されています。このインターフェースをデバイスの電源供給に使用しないでください。
+Nano SIM カードスロットは 4G バージョンのホットスポットでのみ利用可能です。SIM カードはデバイスに含まれていません。Type-C インターフェースは高度な開発者管理のために予約されています。デバイスの電源供給には使用しないでください。
 
----
-
-**インジケーターモード**  
+**インジケーターモード**
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image9.png)
 
 **ボタンモード**
 
 |**モード**|**説明**|
 | :- | :- |
-|ダブルクリック|素早く2回クリックするとソフトウェアの再起動がトリガーされます。|
-|5秒間押す|<p>ボタンを5秒間押し、青いインジケーターがゆっくり点滅するまで離すと、設定モードに入ります。このモードは、5分間操作がない場合に自動的に終了します。</p>|
-|<p></p><p></p><p>30秒間押す</p>|<p>ボタンを30秒間押し続け、青いインジケーターが速く点滅するまで離すと、工場出荷時のリセットとソフトウェアの再起動がトリガーされます。</p><p>**注意:** **この機能は公式の技術サポートからの指示がない限り使用しないでください。**</p>|
-
----
+|ダブルクリック|素早いダブルクリックでソフトウェア再起動がトリガーされます。|
+|5秒間押下|<p>ボタンを5秒間押して、青色インジケーターがゆっくり点滅するまで離すと</p><p>設定モードに入り、アクティビティがない場合は5分で自動的に終了します。</p>|
+|<p></p><p></p><p>30秒間押下</p>|<p>ボタンを30秒間押して、青色インジケーターが高速点滅するまで押すと、工場出荷時設定への</p><p>リセットとソフトウェア再起動がトリガーされます。</p><p>**注意：** **公式技術サポートから推奨されない限り、この機能を使用しないでください**</p>|
 
 **ユニット情報**
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image10.png)
 
-底面のラベルには以下のようなユニットに関する重要な情報が記載されています：
+底面のこれらのラベルは、以下を含むユニットの重要な情報を示しています：
 
-- モデル  
-- デバイスシリアル番号 (S/N)  
-- WiFi MAC  
-- ETH MAC  
-- AP IPアドレス  
-- ローカルコンソールにログインするためのユーザー名とパスワード  
+- モデル
 
-**注意:** **このラベルを第三者と共有しないでください。**
+- デバイスシリアル番号（S/N）
 
----
+- WiFi MAC
+
+- ETH MAC
+
+- AP IPアドレス
+
+- ローカルコンソールにログインするためのユーザー名とパスワード
+
+**注意：** **ラベルを第三者と共有しないでください。**
 
 **システム構造**
 
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image11.jpg)
-
----
 
 **仕様**
 
@@ -143,21 +137,19 @@ Nano SIMカードスロットは4Gバージョンのホットスポットでの�
 |LoRaゲートウェイチップ|SX1302 / SX1303|
 |LoRa感度|-125dBm @125KHz/SF7|
 ||-139dBm @125KHz/SF12|
-|LoRa送信出力|最大26 dBm|
-|アンテナ|<p>LoRa: 3dBi 外部アンテナ（ベース付き）</p><p>Wi-Fi: 内部アンテナ</p><p>BLE: セラミックアンテナ</p>|
-|アンテナインピーダンス|50オーム|
-|Wi-Fi|2.4 GHz 802.11 b/g/n対応|
+|LoRa送信電力|最大26 dBm|
+|アンテナ|<p>LoRa: ベース付き3dBi外部アンテナ</p><p>Wi-Fi: 内蔵アンテナ</p><p>BLE: セラミックアンテナ</p>|
+|アンテナインピーダンス|50 Ohm|
+|Wi-Fi|2.4 GHz 802.11 b/g/nサポート|
 |Bluetooth|デュアルモジュール、Bluetooth V2.1 + EDRおよびV5.2|
-|イーサネット|RJ45 (10M / 100M)|
-|LoRaWAN|クラスA、C対応|
-|入力電圧|<p></p><p>DC 12V - 2A</p><p>PoE (IEEE 802.3 af)、40V-57V DC</p>|
+|イーサネット|RJ45 (10M / 100 M)|
+|LoRaWAN|クラスA、Cサポート|
+|入力電圧|<p></p><p>DC 12V - 2A</p><p>PoE (IEEE 802.3 af), 40V-57V DC</p>|
 |インターフェース|<p>イーサネットRJ45 \* 1</p><p>RP-SMAメスアンテナコネクタ \* 1</p><p>Micro SDカードスロット（将来使用） \* 1</p><p>USB Type-C（コンソール） \* 1</p>|
 |寸法|<p>143.6x135x34mm（コネクタ含まず）</p><p>150.6x135x34mm（コネクタ含む）</p><p>パッケージ: 340\*230\*65mm 約950g</p>|
-|動作温度|-20°C ～ 55°C|
-|相対湿度|0% ～ 85%（結露しないこと）|
-|認証|<p>オーストラリア (RCM)</p><p>ブラジル (Anatel)</p><p>カナダ (ICES/IC IC)</p><p>EU (CE/RoHS/REACH/WEEE/VerpackG)</p><p>インド (WPC)</p><p>日本 (TELEC/PSE)</p><p>韓国 (KC)</p><p>フィリピン (NTC)</p><p>台湾 (BSMI/NCC)</p><p>アメリカ合衆国 (FCC/Verizon OD)</p>|
+|動作温度|-20°C～55°C|
+|相対湿度|0% - 85%（結露なし）|
+|認証|<p>オーストラリア（RCM）</p><p>ブラジル（Anatel）</p><p>カナダ（ICES/IC IC）</p><p>EU（CE/RoHS/REACH/WEEE/VerpackG）</p><p>インド（WPC）</p><p>日本（TELEC/PSE）</p><p>韓国（KC）</p><p>フィリピン（NTC）</p><p>台湾（BSMI/NCC）</p><p>米国（FCC/Verizon OD）</p>|
 
----
-
-**SenseCAP M2 4Gバージョンの場合**  
+**SenseCAP M2 4Gバージョン用**
 ![](https://files.seeedstudio.com/wiki/SenseCAP/LoRaWAN_Gateway/image12.png)

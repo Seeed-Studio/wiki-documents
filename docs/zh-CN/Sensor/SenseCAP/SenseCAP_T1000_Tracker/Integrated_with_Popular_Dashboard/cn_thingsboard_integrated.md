@@ -14,17 +14,13 @@ last_update:
 
 [ThingsBoard](https://thingsboard.io/) 是一个开源的物联网平台，能够快速开发、管理和扩展物联网项目。我们的目标是提供开箱即用的物联网云端或本地解决方案，为您的物联网应用程序提供服务器端基础设施。
 
-
 本章内容将指导用户如何通过 TTN 将 [SenseCAP T1000 追踪器](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) 连接到 ThingsBoard。
-
 
 ## 开始使用
 
-在开始设置之前，请查看 [将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN) 以首先将您的 SenseCAP T1000 追踪器连接到 TTS。
-
+在开始设置之前，请查看[将 SenseCAP T1000 连接到 TTS](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN) 以首先将您的 SenseCAP T1000 追踪器连接到 TTS。
 
 ## 配置 ThingsBoard
-
 
 首先，在 [ThingsBoard](https://thingsboard.cloud/) 创建一个账户。
 
@@ -35,7 +31,6 @@ last_update:
 导航到 `Data converters`，点击 `Create new converter`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/converter.png" alt="pir" width={800} height="auto" /></p>
-
 
 命名转换器，启用 `Debug mode`，复制以下代码并点击 `Add`。
 
@@ -84,13 +79,11 @@ return result;
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/converter2.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 添加集成
 
 导航到 `Integration`，点击 `Add Integration`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/integrate1.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Type**: `The Things Stack Community`<br/>
 **Enable**: `Enable integration`  `Debug mode`  `Allow create devices or assets`
@@ -102,7 +95,6 @@ return result;
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/choose-converter.png" alt="pir" width={800} height="auto" /></p>
 
 跳过 `Downlink data converter`。
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/skip-down.png" alt="pir" width={800} height="auto" /></p>
 
@@ -118,17 +110,14 @@ return result;
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-inte2.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 数据查看
 
 导航到 `Entities` -> `Devices`，在这里您可以看到：
 
-* 在 Thingsboard 中注册了一个新设备
-* 在 `Latest Telemetry` 部分，您将看到来自设备的更新数据。
-
+- 在 Thingsboard 中注册了一个新设备
+- 在 `Latest Telemetry` 部分，您将看到来自设备的更新数据。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/telemetry.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### 添加仪表板
 
@@ -144,7 +133,6 @@ return result;
 选择一个 `map` 小部件。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map1.png" alt="pir" width={800} height="auto" /></p>
-
 
 **Type**: `Device`<br/>
 **Device**: 我们创建的设备。<br/>
@@ -163,12 +151,10 @@ return result;
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-temp.png" alt="pir" width={800} height="auto" /></p>
 
-
 #### 电池
 
 **Device**: 我们创建的设备。<br/>
 **Data key**: `battery`
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-battery.png" alt="pir" width={800} height="auto" /></p>
 

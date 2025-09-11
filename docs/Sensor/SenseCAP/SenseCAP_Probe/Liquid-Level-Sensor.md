@@ -24,23 +24,23 @@ It's small-size and lightweight, easy to install. With a sealed stainless steel 
 
 ## Features
 
-* **High-performance**: anti-interference and long-term stability
-* **Robustness**: anti-corrosion, durable and stable
-* **User-friendly**: anti-blocking design, easy to clean
-* **Widely-applicable**: 0.5~4.5V transmission output, can work with digital displays, PLC, inverters, recorders and other instruments
-* **Industry-grade**: IP68 rating, durable and waterproof, suitable for outdoor severe environments
-* **Certifications**: FCC, CE, and RoHS
+- **High-performance**: anti-interference and long-term stability
+- **Robustness**: anti-corrosion, durable and stable
+- **User-friendly**: anti-blocking design, easy to clean
+- **Widely-applicable**: 0.5~4.5V transmission output, can work with digital displays, PLC, inverters, recorders and other instruments
+- **Industry-grade**: IP68 rating, durable and waterproof, suitable for outdoor severe environments
+- **Certifications**: FCC, CE, and RoHS
 
 ## Applications
 
-* Reservoir detection
-* Pool pump station
-* River monitoring
-* Marine monitoring
-* Lake monitoring
-* Sewage treatment
-* Deep well level monitoring
-* Tank level monitoring
+- Reservoir detection
+- Pool pump station
+- River monitoring
+- Marine monitoring
+- Lake monitoring
+- Sewage treatment
+- Deep well level monitoring
+- Tank level monitoring
 
 ![applications](https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/92d658aefc90480a607588f72f6f138.png)
 
@@ -54,6 +54,7 @@ It's small-size and lightweight, easy to install. With a sealed stainless steel 
 .tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
 .tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
 </style> -->
+
 <table class="tg" data-data-style="undefined;table-layout: fixed; width: 640px;">
 <tbody>
 <tr>
@@ -145,4 +146,4 @@ It's small-size and lightweight, easy to install. With a sealed stainless steel 
 
 ## Sources
 
-* [Liquid Level Sensor Datasheet](https://files.seeedstudio.com/products/314990619/res/Liquid%20Level%20Sensor-Datasheet.pdf)
+- [Liquid Level Sensor Datasheet](https://files.seeedstudio.com/products/314990619/res/Liquid%20Level%20Sensor-Datasheet.pdf)

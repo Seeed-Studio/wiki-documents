@@ -100,7 +100,7 @@ Comenzar
 ![enter image description here](https://files.seeedstudio.com/wiki/Arch_V1.1/img/Get_started_with_arch.png)
 
 1. Haz clic en [este enlace](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeeduino-Arch) para iniciar sesión o registrarte en mbed
-2. Importa el programa mbed\_blinky
+2. Importa el programa mbed_blinky
 3. ¡Programa! Luego puedes compilar el código y descargar el binario de salida.
 4. Ahora conecta tu placa Arch a tu pc y mantén presionado el botón de reset, aparecerá automáticamente como un controlador USB llamado CRP DISABLD. Ve a CRP DISABLD, elimina el archivo de firmware y copia el archivo binario descargado a CRP DISABLD. Presiona rápidamente el botón de reset para ejecutar el nuevo binario.
 

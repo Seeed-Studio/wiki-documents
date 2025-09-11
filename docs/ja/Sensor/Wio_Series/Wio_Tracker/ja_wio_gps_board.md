@@ -326,7 +326,7 @@ MC20モジュールは、GSM/GPRS、GNSS、Bluetoothモジュールと通信す�
 
 ![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/pullsim.jpg)
 
-Arduino IDEを開き、**File > Examples > MC20\_GPS\_Traker > MC20\_GNSS > GNSS\_Show\_Coordinate**をクリックしてスケッチを開くか、以下のコードをコピーしてください：
+Arduino IDEを開き、**File > Examples > MC20_GPS_Traker > MC20_GNSS > GNSS_Show_Coordinate**をクリックしてスケッチを開くか、以下のコードをコピーしてください：
 
 ```c
 #include "MC20_Common.h"
@@ -370,7 +370,7 @@ void loop() {
 
 以下の例では、Wio TrackerでSMSメッセージを読み取る方法を示しています。この例ではNano SIMカードが必要です。
 
-Arduino IDEを開き、**File > Examples > MC20\_GPS\_Traker > MC20\_SMSRead**をクリックしてスケッチを開くか、以下のコードをコピーしてください：
+Arduino IDEを開き、**File > Examples > MC20_GPS_Traker > MC20_SMSRead**をクリックしてスケッチを開くか、以下のコードをコピーしてください：
 
 ```c
 #include "MC20_Common.h"
@@ -429,7 +429,7 @@ void loop() {
 
 ### Bluetooth接続
 
-Wio TrackerでBluetoothデバイスに接続するのも非常に簡単です。Arduino IDEを開き、**File > Examples > MC20\_GPS\_Traker > MC20\_BlueTooth > BT\_FastConnect**をクリックしてスケッチを開くか、以下のコードをコピーしてください。
+Wio TrackerでBluetoothデバイスに接続するのも非常に簡単です。Arduino IDEを開き、**File > Examples > MC20_GPS_Traker > MC20_BlueTooth > BT_FastConnect**をクリックしてスケッチを開くか、以下のコードをコピーしてください。
 
 その後、BluetoothデバイスのdeviceNameを変更すると、Wio Trackerが自動的に接続します。
 

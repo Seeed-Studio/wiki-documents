@@ -47,7 +47,7 @@ Specifications
 | Symbols/Graphics functions supported   | Dot, straight line, circle, char, string, number, emoji, image (you can display these symbols by calling API directly in code) |
 | Supported LED matrix size              | 32(row)×64(column)                                                                                                             |
 | Supported color in each LED matrix dot | Dual LEDs (green and red) and a mixed color(yellow), and you can use only one LED in each LED matrix dot                       |
-| Connector for LED matrix               | DBSTAR\_HUB 08A                                                                                                                |
+| Connector for LED matrix               | DBSTAR_HUB 08A                                                                                                                |
 | Protocol for Grove port                | UART                                                                                                                           |
 | Working temperature                    | -40–80 ℃                                                                                                                       |
 | Dimensions                             | 46.5×44 mm                                                                                                                     |
@@ -70,7 +70,7 @@ Hardware Overview
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
 - **Grove socket**, to connect this product to main control board.
-- **LED matrix port(DBSTAR\_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
+- **LED matrix port(DBSTAR_HUB 08A )**, to connect LED matrix. If you can not find a connector like this, you can user jumper wires as an alternative.
 
 ### **Package includes**(main parts)
 

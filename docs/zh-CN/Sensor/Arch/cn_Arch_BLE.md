@@ -47,7 +47,7 @@ nRF51822 是一个强大的多协议单芯片解决方案，专为超低功耗�
 ![](https://files.seeedstudio.com/wiki/Arch_BLE/img/Get_started_with_mbed.png)
 
 1.  点击 [此链接](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) **登录或注册 mbed**
-2.  导入 mbed\_blinky 程序
+2.  导入 mbed_blinky 程序
 3.  点击顶部工具栏中的 **Compile** 图标编译程序，然后下载编译后的 hex 文件。
 4.  将下载的 hex 文件拖放到 MBED 磁盘中
 
@@ -87,7 +87,7 @@ nRF51822 是一个强大的多协议单芯片解决方案，专为超低功耗�
 
     *  运行步骤
 
-        1.  下载 [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1.  下载 [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2.  将 hex 文件复制到 Arch BLE 的 MBED 磁盘中
         3.  下载 [Color Pixels 安卓应用](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 

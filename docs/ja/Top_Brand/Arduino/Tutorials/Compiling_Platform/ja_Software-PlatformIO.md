@@ -74,7 +74,7 @@ PlatformIOツールバーの下部にある「PlatformIO Home」ボタンをク�
 
       - **Unix**の場合: `~/.platformio`
 
-      - **Windows**の場合: `C:\Users\{username}\.platformio` （`{username}` はユーザー名を指します）
+      - **Windows**の場合: `C:\Users\{username}.platformio` （`{username}` はユーザー名を指します）
 
 2. `platforms` フォルダに移動します。
 

@@ -62,13 +62,13 @@ plans below:*
 
 |Frequency Plan|Common Name|Sub-band|
 | :- | :- | :- |
-|EU863-870|EU868|\_\_\_|
+|EU863-870|EU868|___|
 |US902-928|US915|Sub-band from 1 to 8|
 |AU915-928|AU915|Sub-band from 1 to 8|
-|AS923|AS923|AS923\_1, AS923\_2, AS923\_3, AS923\_4|
-|IN865-867|IN865|\_\_\_|
-|KR920-923|KR920|\_\_\_|
-|RU864-867|RU864|\_\_\_|
+|AS923|AS923|AS923_1, AS923_2, AS923_3, AS923_4|
+|IN865-867|IN865|___|
+|KR920-923|KR920|___|
+|RU864-867|RU864|___|
 
 The frequency plan setting is none by default and it will not transmit RF signal until it has been set by App via Bluetooth at the first power-up. And it can be changed to other frequency plans at any time.
 

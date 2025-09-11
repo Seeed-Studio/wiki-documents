@@ -72,7 +72,7 @@ El ReSpeaker Mic Array puede apilarse (conectarse) directamente en la parte supe
 
 ## Extraer voz con ReSpeaker Core
 
-Cuando el Mic Array está apilado en el ReSpeaker Core, será detectado automáticamente (verificar con `aplay -l`). Y recomendamos que puedas usar nuestra [respeaker\_python\_library](https://github.com/respeaker/respeaker_python_library) para desarrollar tu aplicación de interacción por voz para que no necesites preocuparte por si el Mic Array está encendido o no. Nuestra biblioteca verificará esto y elegirá el Mic Array cuando esté encendido.
+Cuando el Mic Array está apilado en el ReSpeaker Core, será detectado automáticamente (verificar con `aplay -l`). Y recomendamos que puedas usar nuestra [respeaker_python_library](https://github.com/respeaker/respeaker_python_library) para desarrollar tu aplicación de interacción por voz para que no necesites preocuparte por si el Mic Array está encendido o no. Nuestra biblioteca verificará esto y elegirá el Mic Array cuando esté encendido.
 
 También, en esa biblioteca, [*class Microphone*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py), que está basada en **Pyaudio**, tiene un método llamado [*listen*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py#L207), para extraer voz. Ve nuestro [código de ejemplo](https://github.com/respeaker/respeaker_python_library/blob/master/examples/SpeechRecognition_translator.py) aquí para su uso.
 

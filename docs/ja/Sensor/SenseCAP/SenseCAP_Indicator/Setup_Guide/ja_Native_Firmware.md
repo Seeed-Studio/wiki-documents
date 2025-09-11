@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Indicator ネイティブファームウェアの使い方
+description: SenseCAP Indicator ネイティブファームウェアの使用開始
 title: ネイティブファームウェア
 keywords:
 - SenseCAP Indicator
@@ -7,21 +7,17 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_Native_Firmware
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 11/16/2023
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # **ネイティブファームウェア**
 
-SenseCAP Indicator の D1S および D1Pro バージョンには、内蔵の tVOC および CO2 センサーと、正確なデータ読み取りのための外部 Grove TH センサーが搭載されています。SenseCAP ネイティブファームウェアは、センサーのデータを表示する空気品質検出器のUIを提供します。センサーが含まれていない D1 および D1L バージョンでは、データページに「N/A」と表示されます。
+SenseCAP Indicator D1SおよびD1Proバージョンには、内蔵のtVOCおよびCO2センサーと、正確なデータ読み取りのための外部Grove THセンサーが搭載されています。SenseCAPネイティブファームウェアは、センサーデータを表示する空気品質検出器UIを提供します。センサーが含まれていないD1およびD1Lバージョンでは、データページにN/Aが表示されます。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_8.png"/></div>
 
-設定ページで SenseCAP Indicator を簡単に設定する手順。
+設定ページでSenseCAP Indicatorを設定する簡単な手順。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/setting.png"/></div>
 
@@ -36,25 +32,25 @@ Wi-Fi名を選択し、パスワードを入力して接続します。
 
 ## **ディスプレイ設定**
 
-- **明るさ**: 画面の明るさを調整します。
-- **スリープモード**: 設定した間隔に従って画面をオフにします。スリープモード中は画面がオフになり、コンテンツは表示されません。
+- **明度**: 画面の明度を調整します。
+- **スリープモード**: 設定した間隔に従って画面をオフにします。スリープモード中は、画面がオフになり、コンテンツは表示されません。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_15.png"/></div>
 
-## **日付と時刻の設定**
+## **日付と時刻設定**
 
-- **時刻形式**: 24時間形式または12時間形式を設定できます。
-- **時刻自動更新/タイムゾーン自動更新**: デバイスがWi-Fiに接続されている場合、対応するタイムゾーンと日付を自動的に取得します。
+- **時刻フォーマット:** 24時間または12時間フォーマットを設定できます。
+- **時刻自動更新/タイムゾーン自動更新**: デバイスがWiFiに接続されている場合、対応するタイムゾーンと日付を自動的に取得します。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_16.png"/></div>
 
-**手動設定**: タイムゾーンを通じて取得した時刻が冬時間を自動的に識別できない場合やデバイスがオフラインの場合、手動でタイムゾーンを設定できます。
+**手動設定**: タイムゾーンを通じて取得した時刻が冬時間を自動識別できない場合、またはデバイスがオフラインの場合は、手動でタイムゾーンを設定できます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_17.png"/></div>
 
 ## **センサーデータ**
 
-私たちは、D1、D1S、D1L、およびD1Proの4つの異なるバージョンを提供しています。各バージョンは、不要なハードウェアによる追加コストなしで、異なるアプリケーションニーズに対応するよう設計されています。以下は各バージョンの違いです。
+D1、D1S、D1L、D1Proの4つの異なるバージョンを提供しています。各バージョンは、不要なハードウェアによる追加コストなしに、異なるアプリケーションニーズを満たすように設計されています。バージョン間の違いは以下の通りです：
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/version.png"/></div>
 
@@ -63,13 +59,13 @@ Wi-Fi名を選択し、パスワードを入力して接続します。
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_12.png"/></div>
 
 :::caution **注意:**
-SenseCAP Indicator のネイティブファームウェアのUIは、すべてのバージョンで同じです。センサーが内蔵されていない D1 および D1L バージョンでは、センサーデータが「N/A」と表示されます。他の Grove センサーを接続して、独自のカスタマイズされたUIを作成することができます。
+ネイティブファームウェアのUIは、SenseCAP Indicatorのすべてのバージョンで同じです。内蔵センサーがないD1およびD1Lバージョンでは、センサーデータに「N/A」が表示されます。他のGroveセンサーと接続して、独自のカスタマイズされたUIを作成することができます。
 :::
 
-指定されたセンサーをクリックして詳細情報ページに移動すると、過去24時間または1週間の値を表示するオプションを選択できます。データは1週間以内に保持されます。
+指定されたセンサーをクリックして詳細情報ページに入り、過去24時間または1週間の値を表示することを選択できます。データは1週間以内に保持されます。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_13.png"/></div>
 
-:::tip ChatGPT x DALL·E をお探しですか？
-[SenseCAP Indicator X OpenAI](/ja/SenseCAP_Indicator_OpenAI_X_Overview) にアクセスしてください。
+:::tip ChatGPT x DALL·Eをお探しですか？
+[SenseCAP Indicator X OpenAI](/SenseCAP_Indicator_OpenAI_X_Overview)をご覧ください
 :::

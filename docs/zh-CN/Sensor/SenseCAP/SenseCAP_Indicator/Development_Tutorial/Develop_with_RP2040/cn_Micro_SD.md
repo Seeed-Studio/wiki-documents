@@ -21,7 +21,7 @@ SPI RX（如 GPIO12）连接到 SD_MISO
 单个 GPIO 引脚（如 GPIO13）连接到 SD 卡模块上的 CS（片选）引脚
 
 ```cpp
- // 为 SD 卡初始化 SPI 接口
+ // Initialize the SPI interface for the SD card
   const int chipSelect = 13;
   SPI1.setSCK(10);
   SPI1.setTX(11);
@@ -30,8 +30,7 @@ SPI RX（如 GPIO12）连接到 SD_MISO
 
 一旦建立了硬件连接，您可以使用软件库（如 Arduino 的 SD 库）来读取和写入 MicroSD 卡的数据。SD 库提供了初始化 SD 卡、打开和关闭文件、读取和写入文件数据以及执行其他文件系统操作的函数。
 
-**注意**：RP2040 上 MicroSD 卡接口的性能将取决于 SD 卡速度、布线质量和软件效率等因素，支持最大 32GB 的 SD 卡
-
+**注意**：RP2040 上 MicroSD 卡接口的性能将取决于 SD 卡速度、布线质量和软件效率等因素，最大支持 32GB 的 SD 卡
 
 ## **示例代码**
 
@@ -46,21 +45,21 @@ SPI RX（如 GPIO12）连接到 SD_MISO
 
 
 SensirionI2CScd4x scd4x;
-//初始化一个字符串来存储写入 SD 卡的数据
+//Initialize a string to store data for writing to the SD card
 String SDDataString = "";
 
 void sensor_power_on(void) {
   pinMode(18, OUTPUT);
   digitalWrite(18, HIGH);
 }
-// 传感器上电功能
+// Function to power on the sensor
 void sensor_scd4x_init(void) {
   uint16_t error;
   char errorMessage[256];
 
   scd4x.begin(Wire);
 
-  // 停止可能之前启动的测量
+  // stop potentially previously started measurement
   error = scd4x.stopPeriodicMeasurement();
   if (error) {
     Serial.print("Error trying to execute stopPeriodicMeasurement(): ");
@@ -68,7 +67,7 @@ void sensor_scd4x_init(void) {
     Serial.println(errorMessage);
   }
 
-  // 开始测量
+  // Start Measurement
   error = scd4x.startPeriodicMeasurement();
   if (error) {
     Serial.print("Error trying to execute startPeriodicMeasurement(): ");
@@ -82,7 +81,7 @@ void sensor_scd4x_get(void) {
   char errorMessage[256];
 
   Serial.print("sensor scd4x: ");
-  // 读取测量值
+  // Read Measurement
   uint16_t co2;
   float temperature;
   float humidity;
@@ -103,7 +102,7 @@ void sensor_scd4x_get(void) {
     Serial.print("Humidity:");
     Serial.println(humidity);
   }
-  // 将数据添加到 SD 数据字符串
+  // Add data to the SD data string
   SDDataString += "scd4x,";
   if (error) {
     SDDataString += "-,-,-,";
@@ -126,12 +125,12 @@ void setup() {
   Wire.setSDA(20);
   Wire.setSCL(21);
   Wire.begin();
- // 为 SD 卡初始化 SPI 接口
+ // Initialize the SPI interface for the SD card
   const int chipSelect = 13;
   SPI1.setSCK(10);
   SPI1.setTX(11);
   SPI1.setRX(12);
-// 检查 SD 卡是否初始化
+// Check if the SD card is initialized
   if (!SD.begin(chipSelect, 1000000, SPI1)) {
     Serial.println("Card failed, or not present");
   } else {
@@ -144,7 +143,7 @@ void setup() {
 void loop() {
 
   delay(5000);
-  // 清除 SD 数据字符串并向串行监视器打印消息
+  // Clear the SD data string and print a message to the serial monitor
   SDDataString = "";
   Serial.printf("\r\n\r\n--------- start measure %d-------\r\n", cnt);
 
@@ -153,13 +152,13 @@ void loop() {
 
   cnt++;
   sensor_scd4x_get();
-  // 打开 datalog.csv 文件进行写入
+  // Open the datalog.csv file for writing
   File dataFile = SD.open("datalog.csv", FILE_WRITE);
-  // 如果文件可用，写入数据：
+  // if the file is available, write to it:
   if (dataFile) {
     dataFile.println(SDDataString);
     dataFile.close();
-    // 同时打印到串行端口：
+    // print to the serial port too:
     Serial.print("sd write: ");
     Serial.println(SDDataString);
   } else {
@@ -170,7 +169,6 @@ void loop() {
 
 
 ```
-
 
 # **技术支持**
 

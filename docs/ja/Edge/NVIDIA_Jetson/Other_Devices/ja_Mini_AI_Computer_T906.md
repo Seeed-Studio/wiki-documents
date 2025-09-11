@@ -1,21 +1,17 @@
 ---
-description: T906 Mini PCにJetpackをフラッシュする方法
+description: T906 Mini PCにJetpackをフラッシュする
 title: T906 Mini PC
 tags:
-  - Mini PC Jetpack フラッシュ
+  - Mini PC Jetpack Flash
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Mini_AI_Computer_T906
 last_update:
-  date: 05/15/2025
+  date: 01/05/2022
   author: w0x7ce
 
-no_comments: false # Disqus用
+no_comments: false # for Disqus
 
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <!-- ---
 name: Mini AI Computer T906
@@ -25,25 +21,25 @@ wikiurl:
 sku: 
 --- -->
 
-# Mini AI Computer T906の使い方
+# Mini AI Computer T906を始める
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/4/-/4-114110168_-mini-ai-computer-t906-45back.jpg" alt="pir" width={800} height="auto" /></p>
 
-Mini AI Computer T906はJetson AGX Orin 32GBモジュールを搭載しており、最大200TOPSのAI性能を提供し、エッジで最も複雑なAIワークロードに対応します。Jetpack 5.0.2がプリインストールされており、NVIDIA JetPackおよびDeepStream SDK、TensorRT、RIVA、Issacソフトウェアライブラリ、Seeed Edge AIエコシステムの主要なAIプラットフォームツールに対応しているため、製造、配送、小売、スマートシティなどのAIアプリケーションを簡単に開発および展開できます。
+Mini AI Computer T906は、最大200TOPSのAI性能を提供するJetson AGX Orin 32GBモジュールで構築されており、エッジでの最も複雑なAIワークロードに対応できます。Jetpack 5.0.2がプリインストールされ、NVIDIA JetPackおよびDeepStream SDK、TensorRT、RIVA、Issacソフトウェアライブラリ、そしてSeeed Edge AIエコシステムの主要なAIプラットフォームツールによってサポートされているため、製造、配送、小売、スマートシティなどのAIアプリケーションを簡単に開発・展開できます。
 
-Mini AI Computer T906では、10GbEおよび1GbEのイーサネットポートを使用して高速ネットワークアクセスが可能です。最大10ストリームのビデオ分析を有効にすることができます。
+Mini AI Computer T906では、10GbEと1GbEのイーサネットポートによる高速ネットワークアクセスが可能です。ビデオ分析のために最大10ストリームを有効にできます。
 
-内蔵キャリアボードにはGPSモジュール、SSD拡張用のM.2 Key M、Wi-Fiモジュール用のM.2 Key B、5Gモジュール用のM.2 Key E、4Gモジュール用のMini PCIeのインターフェースが用意されています。
+内蔵キャリアボードには、GPSモジュール用のインターフェース、SSD拡張用のM.2 Key M、wifiモジュール用のM.2 Key B、5Gモジュール用のM.2 Key E、4Gモジュール用のMini PCIeも用意されています。
 
-3つのRS232を備え、優れた熱放散と筐体によって保護されているため、T906は省エネ型の自律型マシンを構築するのに最適です。
+3つのRS232と優れた放熱・筐体保護により、T906はエネルギー効率の高い自律機械の構築に最適です。
 
-最大10ギガビットイーサネットと超長MTBF安定動作により、このスーパーコンピュータは高度な分析を可能にし、数十台のIPカメラなどからの複数の同時ストリームを処理する能力を提供します。Wi-Fi無線機能を備え、Bluetooth、4G＆5Gモジュール構成、GPSナビゲーションをサポートします。
+最大10ギガビットイーサネットと超長MTBF安定動作により、この高性能コンピュータは高度な分析を可能にしながら、数十台のIPカメラからの複数の同時ストリームを処理する能力を提供します。Wi-Fi無線機能を搭載し、Bluetooth、4G・5Gモジュール構成、GPSナビゲーションをサポートします。
 
-JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIOがあり、複数のレーダーセンサーを入力できます。また、GMSLカメラコネクタが搭載されており、カメラセンサーハブ、制御ユニット、またはビデオトランスコーディングユニットを構築することができます。このエッジAIボックスは、自律運転、自律移動ロボット（AMR）、または無人地上の遠隔操作を実現できます。
+3つのCAN FDと2つのGPIOを備えたJEG車両レベルコネクタを装備しており、複数のレーダーセンサーを入力できます。また、GMSLカメラコネクタも搭載されており、カメラセンサーハブ、制御ユニット、またはビデオトランスコーディングユニットの構築に活用できます。このエッジAIボックスは、自動運転、自律移動ロボット（AMR）、または無人地上車両の遠隔操作を実装できます。
 
-豊富な産業用インターフェースを備えています：1x標準RS232、1x UART用RS232、1xタイムSYNCトリガー用RS232。
+豊富な産業用インターフェースセットを備えています：標準RS232×1、UART用RS232×1、Time SYNC トリガー用RS232×1。
 
-超強力で軽量なアルミニウム合金で覆われており、高い保護等級のIP55として設計され、2つのオンボードファンによる強力な冷却機能を備えたパッシブ熱放散として設計されています。Jetpack 5.0.2がプリインストールされており、この優れたコンピューティングプラットフォームは無人清掃車、無人配送車、インテリジェント検査、AGV、その他の無人運転分野での展開準備が整っています。
+超強力で軽量なアルミニウム合金で覆われ、高度な保護のためにIP55として設計されており、強力な冷却機能のための2つのオンボードファンを備えたパッシブ放熱として設計されています。Jetpack 5.0.2がプリインストールされたこの優れたコンピューティングプラットフォームは、無人清掃車、無人配送車、インテリジェント検査、AGV、その他の無人運転分野への展開準備が整っています。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Mini-AI-Computer-T906-with-Jetson-AGX-Orin-32GB-p-5508.html" target="_blank">
@@ -51,24 +47,22 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
     </a>
 </div>
 
-## 特徴
+## 機能
 
-* NVIDIA® JETSON AGX ORIN™を搭載
-* M.2 KEY M (PCIEX4 NVME 2280)をサポート
-* M.2 KEY E (PCIEX1 2230)をサポート
-* 8 GMSL2カメラをサポート*（GMSL2アダプターボードは別途購入が必要）
-* 複数のインターフェースをサポート（例：CAN/USB/Ethernet/同期信号/シリアル/GPIOなど）
-* デュアルバンドWi-Fi/Bluetooth/4G/5Gモジュールをサポート
-* 日本JAE車両グレードIOプラグ（1x電源、3xCAN、2xGPIO）
-* ファンとパッシブ冷却設計
-* Ubuntu 20.04システムとJETPACK SDKが内蔵
+- NVIDIA® JETSON AGX ORIN™を搭載
+- M.2 KEY M (PCIEX4 NVME 2280)をサポート
+- M.2 KEY E (PCIEX1 2230)をサポート
+- 8台のGMSL2カメラをサポート* (GMSL2アダプターボードは別途購入が必要)
+- 複数のインターフェースをサポート (例：CAN/USB/Ethernet/同期信号/シリアル/GPIOなど)
+- デュアルバンドWIFI/Bluetooth/4G/5Gモジュールをサポート
+- 日本JAE自動車グレードIOプラグ (1xPOWER、3xCAN、2xGPIO)
+- ファンおよびパッシブ冷却設計
+- ubuntu 20.04システムとJETPACK SDKSを内蔵
 
 ## 仕様
 
 <center>
-  
-
-<table><colgroup><col width="61px" /><col width="420px" /></colgroup>
+  <table><colgroup><col width="61px" /><col width="420px" /></colgroup>
     <tbody>
       <tr>
         <td colSpan={1} rowSpan={1} width={61} valign="middle" align>
@@ -108,7 +102,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1792コア NVIDIA Ampere アーキテクチャ GPU、56 Tensor コア</p>
+          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">1792コア NVIDIA Ampereアーキテクチャ GPU（56 Tensor Core搭載）</p>
         </td>
       </tr>
       <tr>
@@ -118,7 +112,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">32GB 256ビット LPDDR5</p>
+          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">32GB 256-bit LPDDR5</p>
           <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">204.8GB/s</p>
         </td>
       </tr>
@@ -161,7 +155,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
       <tr>
         <td colSpan={1} rowSpan={1} width={61} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオデコード</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ビデオデコーダー</p>
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
@@ -186,14 +180,14 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
       <tr>
         <td colSpan={1} rowSpan={1} width={61} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">WiFi/Bluetooth</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">Wifi/BlueTooth</p>
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x M.2 KEY B (2230) WiFi/Bluetooth対応</p>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x M.2 KEY E 5G対応</p>
-          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1 mini PCIe 4G対応</p>
-          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">(モジュールは含まれていません)</p>
+          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1 mini PCIe 4G用</p>
+          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">（モジュールは含まれません）</p>
         </td>
       </tr>
       <tr>
@@ -203,7 +197,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">GPS対応 (モジュールは含まれていません)</p>
+          <p className="paragraph text-align-type-center pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">GPS対応（モジュールは含まれません）</p>
         </td>
       </tr>
       <tr>
@@ -213,9 +207,9 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">4x USB 3.0 Type A コネクタ;</p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x USB 2.0 TYPE-C ポート (デバイスモード用);</p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x USB 2.0 TYPE-C ポート (デバッグ用)</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">4x USB 3.0 Type Aコネクタ；</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x USB 2.0 TYPE-Cポート（デバイスモード用）；</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">1x USB 2.0 TYPE-Cポート（デバッグ用）</p>
         </td>
       </tr>
       <tr>
@@ -225,7 +219,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">3xCAN (CANチップ付き)</p>
+          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">3xCAN（CANチップ付き）</p>
         </td>
       </tr>
       <tr>
@@ -249,7 +243,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">GMSL 2 カメラコネクタ (GMSL1互換、アダプタボードは別途購入が必要)</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">GMSL 2 カメラコネクタ（GMSL1対応、アダプターボードは別途購入が必要）</p>
         </td>
       </tr>
       <tr>
@@ -265,11 +259,11 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
       <tr>
         <td colSpan={1} rowSpan={1} width={61} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">ファン</p>
+          <p className="paragraph text-align-type-left pap-line-1 pap-line-rule-auto pap-spacing-before-0pt pap-spacing-after-0pt">FAN</p>
         </td>
         <td colSpan={1} rowSpan={1} width={420} valign="middle" align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">2* ファン</p>
+          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">2* FAN</p>
         </td>
       </tr>
       <tr>
@@ -280,7 +274,7 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
         <td colSpan={1} rowSpan={1} width={420} valign align>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
           <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt"> </p>
-          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">2x ステータスインジケータLED</p>
+          <p className="paragraph text-align-type-left pap-line-1.3 pap-line-rule-auto pap-spacing-before-3pt pap-spacing-after-3pt">2x ステータスインジケーターLED</p>
         </td>
       </tr>
       <tr>
@@ -339,23 +333,17 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
   </table>
 </center>
 
-
 ## ハードウェア概要
-
 
 <center>
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/image_3.png" alt="pir" width={600} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_993556_gptApDMPltVJB-Sv_1667353575?w=817&h=407" alt="pir" width={600} height="auto" /></p>
-
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/wysiwyg/image_4.png" alt="pir" width={600} height="auto" /></p>
 
-
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_35550_jEJeygKqw0R2wDo3_1667459768?w=823&h=620" alt="pir" width={600} height="auto" /></p>
-
 
 </center>
 
@@ -363,109 +351,104 @@ JEG車両レベルコネクタを装備しており、3x CAN FDおよび2x GPIO�
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/dimensions.png" /></div>
 
-
-
 ## ハードウェア説明
 
 ### シリアルポート
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/serial.png" /></div>
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/serial_pin.png" /></div>
-
 
 ### 多機能インターフェース
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/multifunc.png" /></div>
 
-
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/multifunc_pin.png" /></div>
 
+## オペレーティングシステムのフラッシュ
 
-## OSのフラッシュ
-
-!!! 注意
-    Mini AI Computer T906は、Jetson AGX OrinモジュールのEMMCに**Jetpack 5.0.2がプリインストール**された状態で提供されます。これにより、すぐに独自のアプリケーション開発を開始できます。[次のセクション](#peripherals)に進むことができます。
-    このデバイスにOSをフラッシュする場合は、このシステムのキャリアボードがカスタマイズ設計されているため、関連するドライバーをダウンロードしてインストールする必要があることに注意してください。
+!!! Note
+    Mini AI Computer T906には、Jetson AGX OrinモジュールのEMMCに**Jetpack 5.0.2がプリインストール**されており、すぐに独自のアプリケーション開発を開始できます。[次のセクション](#peripherals)にスキップできます。
+    このデバイスにOSをフラッシュしたい場合は、このシステムのキャリアボードがカスタム設計されているため、関連するドライバーをダウンロードしてインストールする必要があることにご注意ください。
 
 ### 必要なハードウェア
 
-開始する前に以下のハードウェアを準備してください：
+開始する前に、以下のハードウェアを準備する必要があります
 
 - Ubuntu 18.04 OSまたはUbuntu 20.04 OSを搭載したLinuxホストコンピュータ
 - Mini AI Computer T906
-- 電源アダプタ（提供済み）
+- 電源アダプタ（付属）
 - キーボードとマウス
-- 1本のUSB Type-Cケーブル（提供済み）
+- 1 x USB Type-Cケーブル（付属）
 
-### Mini AI Computer T906をリカバリモードに設定する
+### Mini AI Computer T906をリカバリモードに設定
 
 - **ステップ1.** Mini AI Computer T906をシステム電源に接続します。
 
-- **ステップ2.** Mini AI Computer T906をUSB Type-CケーブルでUbuntuホストに接続します（片方をMini AI Computer T906のOTGポートに、もう片方をUbuntuホストのUSB 3.0ソケットに接続）。
+- **ステップ2.** USB Type-Cケーブルを使用してMini AI Computer T906をubuntuホストに接続します（一端をMini AI Computer T906のOTGポートに、もう一端をubuntuホストのUSB 3.0ソケットに接続）。
 
-- **ステップ3.** Mini AI Computer T906に設定された電源を使用してシステムを起動します。
+- **ステップ3.** Mini AI Computer T906に設定された電源を使用してシステムの電源を入れます。
 
-- **ステップ4.** リカバリボタンを押し、次にMini AI Computer T906の**リセットボタンを押し続けます**。
+- **ステップ4.** リカバリボタンを押してから、Mini AI Computer T906の**リセットボタン**を**押し続けます**。
 
-- **ステップ5.** リセットボタンを2秒後に離し、最後にリカバリボタンを離します。この時点でT906はリカバリモードに入ります（Ubuntuホストで`lsusb`コマンドを実行して`Nvidia Corp`デバイスがあるか確認できます）。
+- **ステップ5.** 2秒後にリセットボタンを離し、最後にリカバリボタンを離します。この時点でT906はリカバリモードに入ります（Ubuntuホストで`lsusb`コマンドを実行して`Nvidia Corp`デバイスがあるかどうかを確認できます）。
 
-!!! 注意
-    USBリカバリモードに入ると、システムは起動せず、シリアルポートからデバッグ情報が出力されません。
+!!! Note
+    USBリカバリモードに入ると、システムは起動せず、シリアルポートからデバッグ情報の出力もありません。
 
-### Mini AI Computer T906にOSをダウンロードしてフラッシュする
+### Mini AI Computer T906にOSをダウンロードしてフラッシュ
 
 - **ステップ1.** [Source Forge Repo](https://sourceforge.net/projects/mini-ai-computer-t906/files/)からシステムイメージファイルをダウンロードします。
 
-- **ステップ2.** Ubuntuホストコンピュータの`Terminal`で以下のコマンドを実行します：
- 
+- **ステップ2.** Ubuntuホストコンピュータの`ターミナル`で以下のコマンドを実行します：
+
 ```shell
-# アーカイブを抽出
+#extract archive 
 sudo tar -zxvf T906_JP5.0.2.tar.gz
 
-# L4Tフォルダに移動
+#Enter the L4T folder
 cd Linux_for_Tegra
 
-# OSのフラッシュを開始
+#Start Flashing OS
 sudo . /flash.sh jetson-agx-orin-devkit mmcblk0p1
 ```
 
-`Terminal`出力で以下のようなメッセージが表示されるはずです。
+`Terminal`の出力で同様のメッセージが表示されるはずです。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/flash_success.png" /></div>
 
 ## 周辺機器
 
-### Wi-Fi 接続
+### Wi-Fi接続
 
-!!! 注意
-    Mini AI Computer T906 には WiFi モジュールが付属していません。
+!!! Note
+    Mini AI Computer T906にはWiFiモジュールが付属していません。
 
-- **ステップ 1.** システムを起動した後、矢印で示されたネットワークアイコンをクリックすると、ネットワーク設定が表示されます。
+- **ステップ 1.** システムが起動した後、矢印で示されているネットワークアイコンをクリックすると、ネットワーク設定が表示されます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/settings.png" /></div>
 
-- **ステップ 2.** Wi-Fi セクションで `Select Network` を選択してクリックしてください。
+- **ステップ 2.** Wi-Fiセクションで`Select Network`を選択してクリックしてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi.png" /></div>
 
-- **ステップ 3.** 表示されたウィンドウで Wi-Fi ネットワークを選択し、`connect` をクリックしてください。
+- **ステップ 3.** プロンプトウィンドウでWi-Fiネットワークを選択し、`connect`をクリックしてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi_select.png" /></div>
 
-- **ステップ 4.** `Authentication required` ウィンドウで Wi-Fi パスワードを入力してください。
+- **ステップ 4.** `Authentication required`ウィンドウでWi-Fiパスワードを入力してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/wifi_pass.png" /></div>
 
-### 4G ダイヤルアップネットワーク
+### 4Gダイヤルアップネットワーク
 
-!!! 注意
-    Mini AI Computer T906 には 4G モジュールが付属していません。以下の手順は Neoway N720 4G モジュールを使用して実行されています。
+!!! Note
+    Mini AI Computer T906には4Gモジュールが付属していません。以下の手順はNeoway N720 4Gモジュールを使用して実行されています。
 
-- **ステップ 1.** 4G モジュールのドライバをダウンロードしてパッケージを解凍し、`Terminal` を使用してドライバを `/etc/ppp/peers` にコピーしてください：
+- **ステップ 1.** 4Gモジュールドライバーをダウンロードしてパッケージを解凍し、`Terminal`を使用してドライバーを`/etc/ppp/peers`にコピーしてください：
 
 ```shell
+
 wget -o- https://files.seeedstudio.com/wiki/AI_Computer_T906/4g_dail.zip
 
 unzip 4g_dail.zip
@@ -473,9 +456,10 @@ unzip 4g_dail.zip
 sudo cp -f 4g_dail_script/* /etc/ppp/peers
 ```
 
-- **ステップ 2.** `/etc/ppp/peers` ディレクトリに移動し、n720-ppp-dial.sh スクリプトを見つけます。初回実行時には実行権限を付与する必要があります。以下のようにしてください：
+- **ステップ 2.** /etc/ppp/peers ディレクトリに移動し、n720-ppp-dial.sh スクリプトを見つけます。初回実行時には、以下のように実行権限を付与する必要があります。
 
 ```shell
+
 cd /etc/ppp/peers
 
 sudo chmod +x n720-ppp-dial.sh
@@ -483,48 +467,56 @@ sudo chmod +x n720-ppp-dial.sh
 sudo ./n720-ppp-dial.sh
 ```
 
-ダイヤルアップを終了する必要がある場合は、ppp-kill.sh スクリプトを実行して終了できます。
+ダイヤルアップを停止する必要がある場合は、ppp-kill.shスクリプトを実行して終了できます。
 
 ```shell
+
 cd /etc/ppp/peers
 
-# ダイヤルアップを終了
+#turn off dial-up
 sudo ./ppp-kill.sh
+
 ```
 
-- **ステップ 3.** 4G 自動接続機能を実装する場合、rc.local スタートアップスクリプトを設定して、システム起動時にアプリケーションを増やす必要があります。
+- **ステップ 3.** 4G自動接続機能を実装したい場合は、システム起動時にアプリケーション数を増やすためにrc.localスタートアップスクリプトを設定する必要があります。
 
-- **ステップ 3-1.** rc-local.service を追加します。
+- **ステップ 3-1.** rc-local.serviceを追加
 
 ```shell
-# システムサービスを作成
+
+#create a system service
 sudo ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service
 
-# サービスファイルを編集
+#edit the service file
 sudo vi /etc/systemd/system/rc-local.service
+
 ```
 
-vi エディタで `i` を押して、以下を入力してください：
+viエディタで、`i`を入力してから以下を入力してください：
 
 ```shell
+
 [Install]
 WantedBy=multi-user.target
 Alias=rc-local.service
+
 ```
 
-その後、`:wq` を入力して保存して終了します。
+その後、`:wq` と入力して保存して終了します。
 
-- **ステップ 3-2.** rc.local スクリプトを作成します。
+- **ステップ 3-2.** rc.local スクリプトを作成する
 
 ```shell
+ 
 sudo touch /etc/rc.local
 
 sudo chmod 755 /etc/rc.local
 
 sudo vi /etc/rc.local
+
 ```
 
-vi エディタで `i` を押して、`control+shift+V` またはペーストを使用して以下のスクリプトを貼り付けてください：
+viエディタで、`i`を入力してから`control+shift+V`を使用するか、以下のスクリプトを貼り付けます：
 
 ```shell
 #!/bin/bash
@@ -532,17 +524,19 @@ vi エディタで `i` を押して、`control+shift+V` またはペーストを
 LOG_DIR=/var/log/4glog
 mkdir -p $LOG_DIR
 
-# 4G 自動ダイヤル（ネットワーク登録時）。4G モジュール準備のため 30 秒待機
+#4g auto dial if register on network. sleep 30s wait for 4g module prepared
 TIME=`date +%Y%m%d%H%M`
 echo $TIME >> $LOG_DIR/ppp-dial.log
 echo "Auto dial" >>  $LOG_DIR/ppp-dial.log
 nohup /etc/ppp/peers/n720-ppp-dial.sh >> $LOG_DIR/ppp-dial.log &
 
 sleep 10
-# デフォルトゲートウェイを設定
+#Set default gateway 
 def_gw=`/sbin/ifconfig ppp0|grep destination|grep -v 127.0.0.1|grep -v inet6 | awk '{print $6}' | tr -d "addr:"`
+#`route -n | grep ppp0 | grep UG | awk '{print $2}'`
 echo $def_gw >> $LOG_DIR/ppp-dial.log
 if [ -n "$def_gw" ]; then
+    #Set default gateway using ppp0/4G
     sudo route add default gw $def_gw
 else
     sleep 10
@@ -551,7 +545,7 @@ else
         sudo route add default gw $def_gw
     fi
 fi
-# ppp0 の IP を取得
+#Get ppp0 IP
 fourg_ip=`/sbin/ifconfig ppp0|grep inet|grep -v 127.0.0.1|grep -v inet6 | awk '{print $2}' | tr -d "addr:"`
 if [ -n "$fourg_ip" ]; then
     echo $fourg_ip >> $LOG_DIR/ppp-dial.log
@@ -565,36 +559,38 @@ else
         nohup /etc/ppp/peers/ppp-kill.sh >> $LOG_DIR/ppp-kill.log &
     fi
 fi
-# 4G 自動ダイヤル終了
+#end 4g auto dial
 
-# maxn モードを実行
+#Running maxn mode
 /usr/bin/jetson_clocks
 
 exit 0
 ```
 
-これでウェブページを開いて 4G ネットワークが接続されているか確認できます。
+Webページを開いてテストし、4Gネットワークが接続されているかどうかを確認できます。
 
 ### GPIO テスト
 
-- **ステップ 1.** GPIO Python ライブラリをインストールします。
-
+- **ステップ 1.** gpio pythonライブラリをインストールします
+  
 ```shell
+
 git clone https://github.com/vitiral/gpio.git
 
 cd gpio/
 
 sudo python3 setup.py install
+
 ```
 
-- **ステップ 2.** テスト用の Python スクリプトを作成します。
+- **ステップ 2.** テスト用のPythonスクリプトを作成する
 
 ```python
 import time
 import gpio
 
-tst_gpio_pin = 326    # 326 は T906 の GPIO2 に対応
-# tst_gpio_pin = 350   # 350 は T906 の GPIO1 に対応
+tst_gpio_pin = 326    #326 correspond to  T906's GPIO2
+#tst_gpio_pin = 350   #350 correspond to  T906's GPIO1
 
 gpio.setup(tst_gpio_pin, gpio.OUT)
 gpio.set(tst_gpio_pin, 0)
@@ -612,88 +608,83 @@ finally:
     gpio.cleanup()
 ```
 
-- **ステップ 3.** GPIO ピンが HI または LO であるかを確認するには、以下を実行します：
+- **Step 3.** you could also check if the GPIO pin is at HI or LO by:
 
 ```shell
+
 sudo cat /sys/kernel/debug/gpio| grep '326'
+
 ```
 
-### GPS 使用
+### GPS使用
 
-!!! 注意
-    これは GPS モジュールを使用したテスト手順です。以下の手順とソフトウェアは HX-26-GN シリーズ GPS モジュール用です。GPS モジュールは標準製品には含まれていないため、別途用意する必要があります。
+!!!Note
+    これはGPSモジュールでテストするためのステップです。以下の手順とソフトウェアはHX-26-GNシリーズGPSモジュール用です。GPSモジュールは標準製品には含まれていないため、ご自身で用意していただく必要があることにご注意ください。
 
-- **ステップ 1.** GPS モジュールを取り付け、GPS アンテナを GPS ポートに接続してください。
+- **ステップ1.** GPSモジュールを取り付け、GPSアンテナをGPSポートに接続してください。
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_antenna.png" /></div>
 
-- **ステップ 2.** システムを起動後、ホームディレクトリにある twork フォルダを見つけ、ダブルクリックして開き、右クリックして `Open in Terminal` を選択してください。
-
+- **ステップ2.** システムを起動した後、ホーム位置にtworkフォルダが見つかります。それをダブルクリックして開き、マウスの右ボタンをクリックして`Open in Terminal`を選択してください。
+  
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_folder.png" /></div>
 
-- **ステップ 3.** `Terminal` ウィンドウで以下のコマンドを入力してください：
+- **ステップ3.** `Terminal`ウィンドウで、以下のコマンドを入力してください：
 
 ```shell
+
 sudo ./bd.gps_serialport
+
 ```
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_script.png" /></div>
 
-正しい結果は以下のようになります：
+正しい結果は以下のようになるはずです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_info.png" /></div>
 
-以下の出力が表示された場合、位置情報の取得が成功していないことを意味します。これは、信号が弱くて位置情報をロックできない可能性があります。ユニットを開けた場所に移動させ、より多くの信号を受信して位置情報をロックしてください。
+以下の出力が表示される場合は、位置情報の取得が成功していないことを意味します。これは信号が弱くて位置をロックできない可能性があります。開けた場所に移動してユニットをより多くの信号にさらし、位置をロックできるようにしてください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/AI_Computer_T906/image/GPS_error.png" /></div>
 
+## NVMe SSDをシステムRootfsドライブとして使用する
 
-
-## NVMe SSDをシステムのRootfsドライブとして使用する
-
-!!!注意
-    これは、NVMe SSDをシステムディスクとして設定し、rootfsのストレージサイズを拡張する手順です。EMMCまたはSDカードをシステムブートパーティションとして使用します。NVMe SSDは標準製品には含まれていないため、別途用意する必要があります。
-
+!!!Note
+    これは、EMMCまたはSDカードをシステムブートパーティションとして使用しながら、NVMe SSDをシステムディスクとして設定してrootfsのストレージサイズを拡張するためのステップです。NVMe SSDは標準製品には含まれていないため、ご自身で用意する必要があります。
 
 - **ステップ 1.** SSDを取り付ける
   
-  [ハードウェア説明書](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputerにSSDを取り付けてください。
+  [ハードウェア説明書](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout/)の手順に従って、reComputer用のSSDを取り付けます。
 
 - **ステップ 2.** SSDを準備する
 
-  ショートカットキー `Ctrl+F` を使用するか、左上隅のUbuntuアイコンをクリックして **Disks** を検索し、Ubuntu 18.04に付属しているDisksツールを開きます。
+  ショートカット`Ctrl+F`を使用するか、左上角のUbuntuアイコンをクリックして**ディスク**を検索し、Ubuntu 18.04に付属のディスクツールを開きます。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/1.png" /></div>
 
-
-  左側でSSDを選択し、右上のメニューバーの下にある **Format Disk** を選択します。
+  左側でSSDを選択し、メニューバーの右上角にある**ディスクのフォーマット**を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd1.jpg" /></div>
 
-
-  SSDをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードを入力します。
+  SSDをGPT形式にフォーマットします。確認を求めるポップアップウィンドウが表示され、ユーザーパスワードの入力が求められます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd3.png" /></div>
 
-
-  次に、中央の **+** をクリックしてディスク文字を追加します。
+  次に、中央の**+**をクリックしてディスク文字を追加します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd6.png" /></div>
-
 
   「次へ」をクリックします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd7.png" /></div>
 
-
-  SSDに名前を付け、タイプで **Ext4** を選択し、「作成」をクリックします。この時点で、拡張要件に従ったSSDの準備が完了しました。
+  SSDに名前を付け、タイプで**Ext4**を選択して「作成」をクリックしてください。この時点で、拡張要件に従ってSSDの準備が完了しました。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/ssd8.png" /></div>
 
+- **ステップ 3.** ルートディレクトリをSSDに構築する
 
-- **ステップ 3.** SSDにルートディレクトリを構築する
-
-  gitコマンドを使用して、reComputerで使用するスクリプトファイルをダウンロードします。
+  gitコマンドを使用して、reComputerで使用する必要があるスクリプトファイルをダウンロードします。
 
 ```shell
 
@@ -703,7 +694,7 @@ cd rootOnNVMe/
 
 ```
 
-  次に、以下のコマンドを実行して、eMMCのルートディレクトリからSSDにファイルを構築します。このステップの待ち時間は、使用しているルートディレクトリのサイズによって異なります。
+  次に、以下のコマンドを実行してeMMCのルートディレクトリからSSDにファイルをビルドします。この手順の待機時間は、使用しているルートディレクトリのサイズによって異なります。
 
 ```shell
 
@@ -711,9 +702,9 @@ cd rootOnNVMe/
 
 ```
 
-- **ステップ 4.** 環境を設定し、拡張を完了する
+- **ステップ 4.** 環境を設定し、展開を完了する
 
-  以下のコマンドを実行して、rootfsの設定を完了します。
+  以下のコマンドを実行してrootfsの設定を完了します。
 
 ```shell
 
@@ -723,35 +714,31 @@ cd rootOnNVMe/
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/9.png" /></div>
 
-
-  reComputerを再起動すると、メインインターフェースでeMMCが外部ストレージデバイスとして表示され、システムのフットプリントが減少していることが確認できます。これにより、拡張が成功したことがわかります。
+  reComputerを再起動すると、メインインターフェースでeMMCが外部ストレージデバイスになっていることがわかり、システムのフットプリントが削減されていることが確認できるため、拡張が成功したことがわかります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/11.png" /></div>
 
-
-!!!注意
-    スクリプトファイル内のデフォルトのSSDパスは `/dev/nvme0n1p1` です。これは、reComputerによってデフォルトで割り当てられるパスでもあります。コマンド `sudo fdisk -l` を使用してSSDパスが一致しない場合、スクリプトファイル **copy-rootfs-ssd.sh**、**data/setssdroot.service**、および **data/setssdroot.sh** 内のすべての `/dev/nvme0n1p1` を、SSDが存在するパスに変更してください。
+!!!Attention
+    スクリプトファイルのデフォルトSSDパスは `/dev/nvme0n1p1` で、これはreComputerによってデフォルトで割り当てられるパスでもあります。`sudo fdisk -l` コマンドでSSDパスがこれと一致しないことがわかった場合は、rootOnNVMeの **copy-rootfs-ssd.sh**、**data/setssdroot.service**、**data/setssdroot.sh** ファイル内のすべての `/dev/nvme0n1p1` のパスを、あなたのSSDが配置されているパスに変更してください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/recomputer-Jetson-20-1-H1/kuorong/21.png" /></div>
 
+上記の拡張では、eMMCから元のルートディレクトリの内容は削除されません。SSDからブートしたくない場合は、SSDを取り外すことができ、システムは依然としてeMMCからブートします。
 
+## Resources
 
-上記の拡張では、eMMCから元のルートディレクトリの内容が削除されることはありません。SSDから起動したくない場合は、SSDを取り外すことで、システムは引き続きeMMCから起動します。
+- **[PDF]** [Mini AI Computer T906 datasheet](https://files.seeedstudio.com/wiki/AI_Computer_T906/Mini_AI_Computer_T906_datasheet.pdf)
 
-## リソース
+## Tech Support & Product Discussion
 
-- **[PDF]** [Mini AI Computer T906 データシート](https://files.seeedstudio.com/wiki/AI_Computer_T906/Mini_AI_Computer_T906_datasheet.pdf)
-
-## 技術サポート & 製品ディスカッション
-
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを用意しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご利用いただけます。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

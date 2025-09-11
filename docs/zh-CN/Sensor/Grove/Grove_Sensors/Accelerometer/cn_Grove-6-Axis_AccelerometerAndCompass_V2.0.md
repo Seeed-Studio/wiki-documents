@@ -345,7 +345,7 @@ except IOError:
 -  **[库文件]** [6-Axis Accelerometer&Compass v2.0 Arduino 库](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
 
 - **[库文件]** [6-Axis Accelerometer&Compass v2.0 树莓派库](https://github.com/DexterInd/GrovePi/blob/master/Software/Python/grove_6axis_acc_compass)
--  **[数据手册]** [LSM303D\_datasheet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
+-  **[数据手册]** [LSM303D_datasheet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
 -  **[Eagle 文件]** [6-Axis Accelerometer&Compass v2.0 Eagle 文件](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- 本 Markdown 文件来源于 https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->

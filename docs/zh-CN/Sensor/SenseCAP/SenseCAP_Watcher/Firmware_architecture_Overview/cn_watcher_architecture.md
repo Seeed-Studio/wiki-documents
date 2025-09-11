@@ -25,7 +25,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
 
 为了满足各种场景的需求，设计了一个类似 Node-RED 的任务流框架，可以灵活地组织设备所拥有的技能，让它们协同工作。
 
-我们将设备拥有的技能抽象为块，这些块可以是数据生产者或消费者，或者两者兼而有之。然后，根据具体任务，提取所需的块并通过生产者-消费者关系连接它们，以实现特定的场景任务。
+我们将设备所拥有的技能抽象为块，这些块可以是数据生产者或消费者，或者两者兼而有之。然后，根据具体任务，提取所需的块并通过生产者-消费者关系连接它们，以实现特定的场景任务。
 
 ### 1.2 任务流引擎
 
@@ -38,7 +38,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
 1. 初始化任务流引擎。
 2. 将每个功能模块注册到任务流引擎，使用链表存储每个模块的管理函数和信息。
 3. 任务流引擎等待接收任务流。
-4. 接收到新任务流后，解析任务流 JSON，提取所需的功能模块，并将它们存储在数组中。
+4. 收到新任务流后，解析任务流 JSON，提取所需的功能模块，并将它们存储在数组中。
 5. 在功能模块数组中，根据模块名称从链表中找到模块的管理函数并对它们进行排序。
 6. 实例化功能模块。
 7. 配置功能模块。
@@ -123,7 +123,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
   - **type**：模块名称。
   - **index**：模块在任务流中的顺序；在流程中位置越靠前，数值越小，用于模块排序。
   - **version**：模块版本。
-  - **params**：模块参数；不同版本可能有不同的参数配置，可以根据版本号进行兼容解析。
+  - **params**：模块参数；不同版本可能有不同的参数配置，可根据版本号进行兼容解析。
   - **wires**：模块之间的连接。详情请参见**任务流功能模块的事件管道**。
 
 以下是火灾监控任务流JSON的示例。
@@ -132,7 +132,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
 {
     "tlid": 1720171506807,
     "ctd": 1720171527631,
-    "tn": "应用程序通知火灾紧急情况",
+    "tn": "App notifies about fire emergency",
     "task_flow": [
         {
             "id": 86464178,
@@ -181,9 +181,9 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
                 "url": "",
                 "header": "",
                 "body": {
-                    "prompt": "有火灾吗？",
+                    "prompt": "Is there a fire?",
                     "type": 1,
-                    "audio_txt": "火灾警报"
+                    "audio_txt": "Fire alert"
                 }
             },
             "wires": [
@@ -201,7 +201,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
             "version": "0.0.1",
             "params": {
                 "silence_duration": 10,
-                "text": "火灾警报"
+                "text": "Fire alert"
             },
             "wires": []
         },
@@ -225,7 +225,7 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
 }
 ```
 
-此任务流使用四个模块：AI 摄像头、图像分析器、本地报警和 SenseCraft 报警。接线拓扑如下所示：
+这个任务流使用四个模块：AI摄像头、图像分析器、本地报警和sensecraft报警。接线拓扑如下所示：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/modules_connection1.png" style={{width:600, height:'auto'}}/></div>
 
@@ -235,19 +235,19 @@ SenseCAP Watcher 的软件架构如下图所示，主要分为三个部分：APP
 
 ### 1.4 模块的事件管道
 
-功能模块之间的连接代表数据传输，前一个模块生成数据并将其发送到下一个模块。消息传输使用事件机制，前者发布事件，后者订阅事件。事件使用 IDF 的 `esp_event` 组件实现，该组件支持队列缓存。
+功能模块之间的连接代表数据传输，前一个模块生成数据并将其发送到下一个模块。消息传输使用事件机制，前者发布事件，后者订阅事件。事件使用IDF的`esp_event`组件实现，支持队列缓存。
 
-每个模块都有一个唯一的 id，它作为模块订阅的事件 id。在 `sub_set` 执行期间，模块订阅具有该 id 的消息；在停止执行期间，它注销该事件 id。一些模块作为激励源，没有上游模块，可以在不订阅该事件 ID 的情况下运行。
+每个模块都有一个唯一的id，它作为模块订阅的事件id。在`sub_set`执行期间，模块订阅具有该id的消息；在停止执行期间，它注销该事件id。一些模块作为激励源，没有上游模块，可以在不订阅该事件ID的情况下运行。
 
-每个模块都有一个 wires 字段，表示下一个模块的 id。在执行 `pub_set` 时，这些 id 被缓存，当数据可用时，数据被发布到这些 id。一些模块的 wires 字段为空，表示没有下游模块，消费数据而不产生数据。
+每个模块都有一个wires字段，表示下一个模块的id。在执行`pub_set`时，这些id被缓存，当数据可用时，数据被发布到这些id。一些模块的wires字段为空，表示没有下游模块，消费数据而不产生数据。
 
-每个模块最多可以有一个输入端子但可以有多个输出端子，表示不同的数据输出，每个输出端子可以输出到多个模块。wires 字段是一个二维数组，第一层表示输出端子的数量，第二层表示端子输出到的模块的 id。
+每个模块最多可以有一个输入端子但可以有多个输出端子，表示不同的数据输出，每个输出端子可以输出到多个模块。wires字段是一个二维数组，第一层表示输出端子的数量，第二层表示端子输出到的模块的id。
 
-如下面的示例所示，模块 1 在事件 ID 2 上发布消息，模块 2 接收并处理消息；模块 2 有两个输出端子，第一个输出端子连接到模块 3 和 4，第二个输出端子连接到模块 5。当输出端子 1 有数据时，它向事件 ID 3 和 4 发布消息，当输出端子 2 有数据时，它向事件 ID 5 发布消息。
+如下面的示例所示，模块1在事件ID 2上发布消息，模块2接收并处理消息；模块2有两个输出端子，第一个输出端子连接到模块3和4，第二个输出端子连接到模块5。当输出端子1有数据时，它向事件ID 3和4发布消息，当输出端子2有数据时，它向事件ID 5发布消息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/modules_connection2.png" style={{width:600, height:'auto'}}/></div>
 
-模块 2 对应的 JSON 描述如下：
+模块2对应的JSON描述如下：
 
 ```json
 {
@@ -287,9 +287,9 @@ esp_err_t tf_event_handler_unregister(int32_t event_id,
 
 #### 1.4.1 事件管道中传输的消息类型
 
-两个模块可以连接在一起，表明它们的数据类型是一致的；我们在 [tf\_module\_data\_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) 文件中定义数据类型和相应的数据结构。通常，数据类型以前缀 **TF\_DATA\_TYPE\_** 定义；数据结构以前缀 **tf\_data\_** 定义。
+两个模块可以连接在一起，表明它们的数据类型是一致的；我们在 [tf_module_data_type.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_data_type.h) 文件中定义数据类型和相应的数据结构。通常，数据类型以前缀 **TF_DATA_TYPE_** 定义；数据结构以前缀 **tf_data_** 定义。
 
-例如，我们在类型枚举结构中定义 **TF\_DATA\_TYPE\_BUFFER** 类型，相应的结构如下。第一个字段 type 表示数据类型，其余字段表示要传输的数据。
+例如，我们在类型枚举结构中定义了 **TF_DATA_TYPE_BUFFER** 类型，相应的结构如下。第一个字段 type 表示数据类型，其余字段表示要传输的数据。
 
 ```cpp
 typedef struct {
@@ -298,7 +298,7 @@ typedef struct {
 } tf_data_buffer_t;
 ```
 
-当模块接收到事件数据时，它首先提取事件数据的第一个字节来获取数据类型，然后判断数据是否是它需要的。如果是，则进一步处理；否则，丢弃它。
+当模块接收到事件数据时，它首先提取事件数据的第一个字节来获取数据类型，然后判断数据是否是它所需要的。如果是，则进一步处理；否则，丢弃该数据。
 
 当前可用的数据类型描述如下：
 
@@ -334,19 +334,19 @@ typedef struct {
   </tbody>
 </table>
 
-- 大图像：从himax获取的640 x 480 jpeg格式图像，使用base64编码存储。
+- 大图像：从 himax 获取的 640 x 480 jpeg 格式图像，使用 base64 编码存储。
 
-- 小图像：从himax获取的416 x 416 jpeg格式图像，使用base64编码存储。
+- 小图像：从 himax 获取的 416 x 416 jpeg 格式图像，使用 base64 编码存储。
 
-- 推理信息：从himax获取的推理结果，包括边界框坐标数组、类别分类信息或点坐标信息，以及类别名称信息。
+- 推理信息：从 himax 获取的推理结果，包括边界框坐标数组、类别分类信息或点坐标信息，以及类别名称信息。
 
-- 音频：从触发块获取的数据，为.mp3格式。
+- 音频：从触发块获取的数据，格式为 .mp3。
 
 #### 1.4.2 事件管道中的高效传输
 
-当使用idf的`esp_event`组件进行消息传输时，在入队过程中会发生内存复制（详情请阅读`esp_event`源代码）；这对于传输大数据（如图像和音频）非常不友好。
+当使用 idf 的 `esp_event` 组件进行消息传输时，在入队过程中会发生内存拷贝（详情请阅读 `esp_event` 源代码）；这对于传输大数据（如图像和音频）来说非常不友好。
 
-因此，我们采用一种高效的传输方法，只传输指针。例如，在**TF\_DATA\_TYPE\_BUFFER**类型中，要传输的数据定义如下。第一个字段`p_buf`是数据缓冲区的起始地址，第二个字段len是数据的长度。
+因此，我们采用一种高效的传输方法，只传输指针。例如，在 **TF_DATA_TYPE_BUFFER** 类型中，要传输的数据定义如下。第一个字段 `p_buf` 是数据缓冲区的起始地址，第二个字段 len 是数据的长度。
 
 ```cpp
 struct tf_data_buf
@@ -357,7 +357,7 @@ struct tf_data_buf
 ```
 
 对于数据生产者模块，它们负责 `p_buf` 的内存分配；下一级数据消费者模块负责在使用后释放内存。
-一些常用的数据复制和释放函数定义在 [tf\_module\_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) 文件中。例如，如果接收到的事件数据类型不是您想要的，您可以直接调用 **tf\_data\_free()** 函数来释放内存（此函数实现了所有数据类型的释放），如下所示：
+一些常用的数据复制和释放函数定义在 [tf_module_util.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_module/common/tf_module_util.h) 文件中。例如，如果接收到的事件数据类型不是您想要的，您可以直接调用 **tf_data_free()** 函数来释放内存（此函数实现了所有数据类型的释放），如下所示：
 
 ```cpp
 static void __event_handler(void *handler_args, esp_event_base_t base, int32_t id, void *p_event_data)
@@ -374,7 +374,7 @@ static void __event_handler(void *handler_args, esp_event_base_t base, int32_t i
 
 ### 1.5 模块基类
 
-我们在 [tf\_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h) 中定义了模块的基类。任务流引擎不关心模型的具体实现，它只需要调用模块的相关接口来操作它们。每个具体的模块只需要实现操作函数和管理函数。
+我们在 [tf_module.h](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/blob/main/examples/factory_firmware/main/task_flow_engine/include/tf_module.h) 中定义了模块的基类。任务流引擎不关心模型的具体实现，它只需要调用模块的相关接口来操作它们。每个具体的模块只需要实现操作函数和管理函数。
 
 ```cpp
 struct tf_module_ops
@@ -392,7 +392,7 @@ typedef struct tf_module_mgmt {
 }tf_module_mgmt_t;
 ```
 
-有关如何编写模块的信息，请参考 [Watcher 功能模块开发指南](https://wiki.seeedstudio.com/cn/watcher_function_module_development_guide)
+有关如何编写模块的信息，请参考 [Watcher 功能模块开发指南](https://wiki.seeedstudio.com/watcher_function_module_development_guide)
 
 ## 2. 功能模块
 
@@ -477,8 +477,8 @@ timer 块是一个激励源模块，主要功能是作为周期性定时器。�
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **period**: 启动定时器的周期。
+- **params**: 包含设备参数的对象。
+  - **period**: 启动定时器的周期。
 
 终端连接描述：
 
@@ -561,41 +561,41 @@ ai camera 块主要负责与 Himax 的通信、模型 OTA、获取图像和推�
 
 params 参数中各字段的含义如下：
 
-* **model\_type**: 模型类型，0 表示云端模型（将从 model 字段中提取模型 URL 进行下载使用），1、2、3 表示 Himax 内置模型。
-* **model**: 模型的具体信息。
-  * **model\_id**: 模型的唯一标识符。
-  * **version**: 模型版本。
-  * **arguments**: 模型参数配置。
-    * **size**: 模型大小。
-    * **url**: 模型下载 URL。
-    * **icon**: 模型图标 URL。
-    * **task**: 模型任务类型，"detect" 表示检测。
-    * **createdAt**: 模型创建时间戳。
-    * **updatedAt**: 模型更新时间戳。
-    * **iou**: IOU（交并比）阈值。
-    * **conf**: 置信度阈值。
-  * **model\_name**: 模型名称，"General Object Detection"。
-  * **model\_format**: 模型格式，"TensorRT"。
-  * **ai\_framework**: 使用的 AI 框架。
-  * **author**: 模型作者，"SenseCraft AI"。
-  * **algorithm**: 算法描述，"Object Detect(TensorRT, SMALL, COCO)"。
-  * **classes**: 模型可检测的类别，包括 "person"。
-  * **checksum**: 模型文件的校验和（MD5），当前为空。
-* **modes**: 工作模式，0 表示推理模式，1 表示采样模式；当为 1 时，设备不解析 model 字段。
-* **conditions**: 检测条件列表。
-  * **class**: 要检测的类别，这里是 "person"。
-  * **mode**: 检测模式，0 表示存在检测，1 表示数值比较，2 表示数量变化。
-  * **type**: 比较类型，0 表示小于，1 表示等于，2 表示大于，3 表示不等于（仅在 mode=1 时有效）。
-  * **num**: 比较值（仅在 mode=1 时有效）。
-* **conditions\_combo**: 多条件检测的关系，0 表示 AND，1 表示 OR。
-* **silent\_period**: 静默期设置。
-  * **time\_period**: 时间段设置。
-    * **repeat**: 从周日到周六的重复时间段，1 表示启用。
-    * **time\_start**: 静默期开始时间。
-    * **time\_end**: 静默期结束时间。
-  * **silence\_duration**: 静默持续时间，单位为秒。
-* **output\_type**: 输出图像类型，0 表示仅小图（412x412），1 表示大图和小图都有（640x480; 412x412）。
-* **shutter**: 快门模式，0 表示持续开启，1 表示由 UI 触发，2 表示由输入事件触发，3 表示快门一次。
+- **model_type**: 模型类型，0 表示云端模型（将从 model 字段中提取模型 URL 进行下载使用），1、2、3 表示 Himax 内置模型。
+- **model**: 模型的具体信息。
+  - **model_id**: 模型的唯一标识符。
+  - **version**: 模型版本。
+  - **arguments**: 模型参数配置。
+    - **size**: 模型大小。
+    - **url**: 模型下载 URL。
+    - **icon**: 模型图标 URL。
+    - **task**: 模型任务类型，"detect" 表示检测。
+    - **createdAt**: 模型创建时间戳。
+    - **updatedAt**: 模型更新时间戳。
+    - **iou**: IOU（交并比）阈值。
+    - **conf**: 置信度阈值。
+  - **model_name**: 模型名称，"General Object Detection"。
+  - **model_format**: 模型格式，"TensorRT"。
+  - **ai_framework**: 使用的 AI 框架。
+  - **author**: 模型作者，"SenseCraft AI"。
+  - **algorithm**: 算法描述，"Object Detect(TensorRT, SMALL, COCO)"。
+  - **classes**: 模型可检测的类别，包括 "person"。
+  - **checksum**: 模型文件的校验和（MD5），当前为空。
+- **modes**: 工作模式，0 表示推理模式，1 表示采样模式；当为 1 时，设备不解析 model 字段。
+- **conditions**: 检测条件列表。
+  - **class**: 要检测的类别，这里是 "person"。
+  - **mode**: 检测模式，0 表示存在性检测，1 表示数值比较，2 表示数量变化。
+  - **type**: 比较类型，0 表示小于，1 表示等于，2 表示大于，3 表示不等于（仅在 mode=1 时有效）。
+  - **num**: 比较值（仅在 mode=1 时有效）。
+- **conditions_combo**: 多条件检测的关系，0 表示 AND，1 表示 OR。
+- **silent_period**: 静默期设置。
+  - **time_period**: 时间段设置。
+    - **repeat**: 从周日到周六的重复时间段，1 表示启用。
+    - **time_start**: 静默期开始时间。
+    - **time_end**: 静默期结束时间。
+  - **silence_duration**: 静默持续时间，单位为秒。
+- **output_type**: 输出图像类型，0 表示仅小图（412x412），1 表示大图和小图都有（640x480; 412x412）。
+- **shutter**: 快门模式，0 表示持续开启，1 表示由 UI 触发，2 表示由输入事件触发，3 表示快门一次。
 
 终端连接说明：
 
@@ -638,9 +638,9 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **text**: 音频文本，用于生成音频内容的信息。
-  * **audio**: Base64编码的音频文件，表示MP3格式的音频内容。
+- **params**: 包含设备参数的对象。
+  - **text**: 音频文本，用于生成音频内容的信息。
+  - **audio**: Base64编码的音频文件，表示MP3格式的音频内容。
 
 终端连接描述：
 
@@ -656,7 +656,7 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
     <tr>
       <td>输入</td>
       <td>TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE</td>
-      <td>来自AI摄像头块的数据输出</td>
+      <td>来自AI摄像头模块的数据输出</td>
     </tr>
     <tr>
       <td>输出</td>
@@ -666,9 +666,9 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
   </tbody>
 </table>
 
-#### 2.2.4 图像分析器
+#### 2.2.4 image analyzer
 
-图像分析器块可能是AI摄像头的下一级块，主要调用LLM来分析图像。当分析请求返回触发报警的结果时，它将向下一级模块输出数据。参数定义如下：
+图像分析器模块可能是AI摄像头的下一级模块，主要调用LLM来分析图像。当分析请求返回触发报警的结果时，它将向下一级模块输出数据。参数定义如下：
 
 ```json
 {
@@ -688,13 +688,13 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **url**: 请求的URL地址，保留字段（通常使用设备上配置的URL）。
-  * **header**: 请求头，保留字段。
-  * **body**: 包含请求体内容的对象。
-    * **prompt**: 请求中包含的提示信息，为图像分析提供额外信息。
-    * **type**: 请求类型，1表示监控。
-    * **audio\_txt**: 请求中包含的音频文本信息。当监控场景被触发时，接口服务会将此字段转换为TTS并在接口中返回。
+- **params**: 包含设备参数的对象。
+  - **url**: 请求的URL地址，保留（通常使用设备上配置的URL）。
+  - **header**: 请求头，保留。
+  - **body**: 包含请求体内容的对象。
+    - **prompt**: 请求中包含的提示，为图像分析提供额外信息。
+    - **type**: 请求类型，1表示监控。
+    - **audio_txt**: 请求中包含的音频文本信息。当监控场景被触发时，接口服务将把此字段转换为TTS并在接口中返回。
 
 终端连接说明：
 
@@ -710,7 +710,7 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
     <tr>
       <td>输入</td>
       <td>TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE</td>
-      <td>来自AI摄像头块的数据输出</td>
+      <td>AI摄像头块输出的数据</td>
     </tr>
     <tr>
       <td>输出</td>
@@ -722,7 +722,7 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
 
 #### 2.2.5 本地报警
 
-本地报警块是一个报警块，主要实现设备报警功能，例如控制RGB闪烁、播放报警音频、在LCD上显示报警文本，以及触发时的报警图像。参数定义如下：
+本地报警块是一个报警块，主要实现设备报警，例如在触发时控制RGB闪烁、播放报警音频、在LCD上显示报警文本和报警图像。参数定义如下：
 
 ```json
 {
@@ -740,12 +740,12 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **sound**: 播放音频的开关，1表示开启，0表示关闭。
-  * **rgb**: RGB报警灯的开关，1表示开启，0表示关闭。
-  * **img**: 显示报警图像的开关，1表示开启，0表示关闭。
-  * **text**: 显示报警文本的开关，1表示开启，0表示关闭。
-  * **duration**: 报警持续时间（秒），这里是10秒。
+- **params**: 包含设备参数的对象。
+  - **sound**: 播放音频的开关，1 表示开启，0 表示关闭。
+  - **rgb**: RGB 报警灯的开关，1 表示开启，0 表示关闭。
+  - **img**: 显示报警图像的开关，1 表示开启，0 表示关闭。
+  - **text**: 显示报警文本的开关，1 表示开启，0 表示关闭。
+  - **duration**: 报警持续时间（秒），这里是 10 秒。
 
 终端连接说明：
 
@@ -773,7 +773,7 @@ alarm trigger 块可能是 ai camera 的下一个块，主要添加一些音频�
 
 #### 2.2.6 sensecraft alarm
 
-sensecraft alarm块是一个报警块，主要用于向SenseCraft平台通知报警信息。参数定义如下：
+sensecraft alarm 块是一个报警块，主要用于向 SenseCraft 平台通知报警信息。参数定义如下：
 
 ```json
 {
@@ -788,9 +788,9 @@ sensecraft alarm块是一个报警块，主要用于向SenseCraft平台通知报
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **silence\_duration**: 静默持续时间（秒），这里是60秒，表示最小报告间隔为60秒。
-  * **text**: 平台报警通知的文本。
+- **params**: 包含设备参数的对象。
+  - **silence_duration**: 静默持续时间（秒），这里是60秒，表示最小报告间隔为60秒。
+  - **text**: 平台报警通知的文本。
 
 终端连接说明：
 
@@ -839,8 +839,8 @@ uart alarm块是一个报警块，主要实现通过串口输出报警信息。�
 - **params**: 包含设备参数的对象。
   - **output_format**: 输出格式。
     - 0: 二进制格式。
-    - 1: JSON格式。
-  - **text**: 报警文本，此文本将填入串口输出数据包的Prompt字段。如果未设置此参数，将填入当前任务流的短名称。
+    - 1: JSON 格式。
+  - **text**: 报警文本，此文本将填入串口输出数据包的 Prompt 字段。如果未设置此参数，将填入当前任务流的短名称。
   - **include_big_image**: 是否包含大图像。
     - 0: 否。
     - 1: 是。
@@ -874,15 +874,15 @@ uart alarm块是一个报警块，主要实现通过串口输出报警信息。�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/image-uart.png" style={{width:500, height:'auto'}}/></div>
 
-uart报警将从SenseCAP Watcher背面的串口输出数据包。接线方法如上图所示。串口参数为：
+uart 报警将从 SenseCAP Watcher 背面的串口输出数据包。接线方法如上图所示。串口参数为：
 
 - 波特率：115200
-- 8位，1停止位
+- 8 位数据位，1 位停止位
 - 无奇偶校验
 
-> 注意：由于ESP32S3引脚IO_19和IO_20在上电时的默认行为，此串口在SenseCAP Watcher初次上电时会输出几个随机字节。请使用有效的数据包检测机制进行过滤。
+> 注意：由于 ESP32S3 引脚 IO_19 和 IO_20 在上电时的默认行为，此串口在 SenseCAP Watcher 初次上电时会输出一些随机字节。请使用有效的数据包检测机制进行过滤。
 
-从串口输出的数据包格式根据`output_format`参数分为两种格式：
+从串口输出的数据包格式根据 `output_format` 参数分为两种格式：
 
 **A. 二进制格式**
 
@@ -890,37 +890,37 @@ uart报警将从SenseCAP Watcher背面的串口输出数据包。接线方法如
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/api.png" style={{width:800, height:'auto'}}/></div>
 
-
 字段：
-- Packet Magic Header - 数据包头，5字节"SEEED"
+
+- Packet Magic Header - 数据包头，5 字节 "SEEED"
 - Prompt Str Len - 提示字符串长度
-- Prompt Str - 提示字符串或报警文本。当设置`text`参数时，它是`text`参数的副本。如果未设置`text`参数，将自动填入描述任务目的的短文本（由云服务的任务编译接口生成）。
-- Big Image Len - 大图像base64编码字符串的字节长度，当`include_big_image=0`时，值为0。
-- Big Image - 大图像JPG的Base64编码字符串
-- Small Image Len - 小图像base64编码字符串的字节长度，当`include_small_image=0`时，值为0。
-- Small Image - 小图像JPG的Base64编码字符串
+- Prompt Str - 提示字符串或报警文本。当设置了 `text` 参数时，它是 `text` 参数的副本。如果未设置 `text` 参数，将自动填充描述任务目的的简短文本（由云服务的任务编译接口生成）。
+- Big Image Len - 大图像 base64 编码字符串的字节长度，当 `include_big_image=0` 时，值为 0。
+- Big Image - 大图像 JPG 的 Base64 编码字符串
+- Small Image Len - 小图像 base64 编码字符串的字节长度，当 `include_small_image=0` 时，值为 0。
+- Small Image - 小图像 JPG 的 Base64 编码字符串
 - Inference type - 推理结果类型；0：表示无推理信息，1：表示输出为框推理，2：表示输出为类推理结果
 - Boxes/classes - 推理结果。
 - Classes name - 类名。
 
-在上述字段中，`Packet Magic Header`、`Prompt Str Len`和`Prompt Str`字段是强制输出字段。其他字段由参数启用控制。例如，如果设置参数`include_big_image: 1`，二进制数据包将追加`Big Image Len`和`Big Image`字段。
+在上述字段中，`Packet Magic Header`、`Prompt Str Len` 和 `Prompt Str` 字段是必须输出的字段。其他字段由参数启用控制。例如，如果设置参数 `include_big_image: 1`，二进制数据包将附加 `Big Image Len` 和 `Big Image` 字段。
 
-**B. JSON格式**
+**B. JSON 格式**
 
-JSON数据包格式如下：
+JSON 数据包格式如下：
 
 ```
 #in the stream of uart output
 .....{packet object}\r\n{packet object}\r\n...
 ```
 
-数据包对象：
+packet object:
 
 ```json
 {
      "prompt": "monitor a cat",
-     "big_image": "base64 编码的 JPG 图像，如果启用了 include_big_image，否则省略此字段",
-     "small_image": "base64 编码的 JPG 图像，如果启用了 include_small_image，否则省略此字段",
+     "big_image": "base64 encoded JPG image, if include_big_image is enabled, otherwise this field is omitted",
+     "small_image": "base64 encoded JPG image, if include_small_image is enabled, otherwise this field is omitted",
      "inference":{
         "boxes": [
             [145, 326, 240, 208, 50, 0]
@@ -937,9 +937,9 @@ JSON数据包格式如下：
 
 同样，"prompt" 字段是一个必需的输出字段。"big_image" 和 "small_image" 字段由参数控制。
 
-#### 2.2.7 http alarm
+#### 2.2.7 http 告警
 
-http alarm 块是一个报警块，主要实现将报警信息转发到 HTTP 服务器；参数定义如下：
+http 告警块是一个告警块，主要实现将告警信息转发到 HTTP 服务器；参数定义如下：
 
 ```json
 {
@@ -959,13 +959,13 @@ http alarm 块是一个报警块，主要实现将报警信息转发到 HTTP 服
 
 配置参数如下：
 
-* **params**: 包含设备参数的对象。
-  * **silence_duration**: 静默时间，单位为秒。
-  * **time_en**: 启用时间戳，1 表示开启，0 表示关闭。
-  * **text_en**: 启用报警文本，1 表示开启，0 表示关闭。
-  * **image_en**: 启用图像，1 表示开启，0 表示关闭。
-  * **sensor_en**: 启用传感器，1 表示开启，0 表示关闭。
-  * **text**: 报警文本。
+- **params**: 包含设备参数的对象。
+  - **silence_duration**: 静音时间，以秒为单位。
+  - **time_en**: 启用时间戳，1 表示开启，0 表示关闭。
+  - **text_en**: 启用报警文本，1 表示开启，0 表示关闭。
+  - **image_en**: 启用图像，1 表示开启，0 表示关闭。
+  - **sensor_en**: 启用传感器，1 表示开启，0 表示关闭。
+  - **text**: 报警文本。
   
 终端连接说明：
 
@@ -991,10 +991,9 @@ http alarm 块是一个报警块，主要实现将报警信息转发到 HTTP 服
   </tbody>
 </table>
 
-
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

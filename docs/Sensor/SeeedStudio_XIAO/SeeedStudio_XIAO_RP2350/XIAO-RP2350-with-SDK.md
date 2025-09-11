@@ -80,7 +80,7 @@ In this example, I'll use the system versions already installed on my Windows ma
 </TabItem>
 </Tabs>
 
-If this is your first time running the setup, when you click `Create`, the extension will download and manage the SDK for you. On Windows, the SDK will typically be placed in `%userprofile%\.pico-sdk`. The time it takes to set up depends on your internet speed. Once completed, a new window will open with your project.
+If this is your first time running the setup, when you click `Create`, the extension will download and manage the SDK for you. On Windows, the SDK will typically be placed in `%userprofile%.pico-sdk`. The time it takes to set up depends on your internet speed. Once completed, a new window will open with your project.
 
 #### Step 4: Build the Project
 

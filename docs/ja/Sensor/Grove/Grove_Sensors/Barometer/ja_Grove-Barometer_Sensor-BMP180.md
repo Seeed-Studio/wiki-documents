@@ -344,7 +344,7 @@ while True :
 
 
 - **[Eagle]**  [Grove - Barometer Sensor(BMP180) Eagle ファイル](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/Barometer_Sensor-BMP180-Eagle_File.zip)
-- **[ライブラリ]**  [Barometer\_Sensor ライブラリ](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
+- **[ライブラリ]**  [Barometer_Sensor ライブラリ](https://github.com/Seeed-Studio/Grove_Barometer_Sensor)
 - **[データシート]**  [BMP180 データシート](https://files.seeedstudio.com/wiki/Grove-Barometer_Sensor-BMP180/res/BMP180.pdf)
 - **[高度と気圧の関係]** 以下は海抜高度と気圧の関係を示す参考グラフです。
 

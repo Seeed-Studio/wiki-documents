@@ -1,10 +1,10 @@
 position: 2 # float position is supported
 label: '開発チュートリアル'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: indicator_dev
 link:
   type: generated-index
   slug: ja/Develop_with_SenseCAP_Indicator
-  title: SenseCAP インジケータで開発する
-  description: このチュートリアルでは、SenseCAP インジケータを使用して開発するプロセスを案内します。
+  title: SenseCAP Indicatorでの開発
+  description: このチュートリアルでは、SenseCAP Indicatorを使用した開発プロセスをガイドします。

@@ -180,7 +180,7 @@ Groveケーブルを使用して、Grove - IR距離インタラプタをGrovePi�
 ターミナルで以下のコマンドを実行します：
 
 ```
-    nano grove\_infrared\_distance\_interrupt.py
+    nano grove_infrared_distance_interrupt.py
 ```
 
 以下のコードをコピーして保存します。
@@ -212,7 +212,7 @@ while True:
 5. デモを実行するには、ターミナルで以下のコマンドを実行します。
 
 ```
-    sudo python grove\_infrared\_distance\_interrupt.py
+    sudo python grove_infrared_distance_interrupt.py
 ```
 
 ## 回路図オンラインビューア

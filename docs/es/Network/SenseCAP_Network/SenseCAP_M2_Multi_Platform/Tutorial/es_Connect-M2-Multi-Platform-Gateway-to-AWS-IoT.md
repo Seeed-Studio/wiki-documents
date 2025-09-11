@@ -93,7 +93,7 @@ Publicar en el broker de mensajes de AWS IoT Core
 **Permisos**: Selecciona un rol de servicio existente > IoT Wireless Gateway Cert Manager Role
 
 :::tip Nota
-Un nombre de destino solo puede tener caracteres alfanuméricos, - (guión) y \_ (guión bajo) y no puede tener espacios.
+Un nombre de destino solo puede tener caracteres alfanuméricos, - (guión) y _ (guión bajo) y no puede tener espacios.
 :::
 
 

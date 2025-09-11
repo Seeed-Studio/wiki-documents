@@ -62,7 +62,7 @@ Press the button for 5s until the blue indicator flashes slowly to enter configu
 
 *   **Step 2**: Connect to the AP hotspot
 
-AP hotspot name is SenseCAP\_XXXXXX (6-figure MAC address), Connect your computer to this AP hotspot.
+AP hotspot name is SenseCAP_XXXXXX (6-figure MAC address), Connect your computer to this AP hotspot.
 
 *   **Step 3**: Get your device Username and Password
 *   **Step 4**: Open the browser on the pc and log in

@@ -1,5 +1,5 @@
 ---
-description: SenseCAP Indicator - Matter 应用开发
+description: SenseCAP Indicator - Matter 应用程序开发
 title: Matter - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
@@ -13,13 +13,13 @@ last_update:
   author: Tim
 ---
 
-# SenseCAP Indicator - Matter 应用开发
+# SenseCAP Indicator - Matter 应用程序开发
 
 <iframe class="youtube-video" src="https://www.youtube.com/embed/LCIWqwmCZ54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## 介绍
 
-这是一个演示如何使用 [Matter SDK](https://project-chip.github.io/connectedhomeip-doc/index.html) 为您的 SenseCAP Indicator 构建丰富应用程序的示例。
+这是一个演示，展示如何使用 [Matter SDK](https://project-chip.github.io/connectedhomeip-doc/index.html) 为您的 SenseCAP Indicator 构建丰富的应用程序。
 
 SenseCAP Indicator 具有触摸屏，这使其能够充当强大的家庭自动化界面。Matter 使这个过程比以往任何时候都更容易，因为它消除了配置的许多复杂方面。借助 Matter SDK 的帮助，用户可以快速扫描二维码并将设备配置到家庭网络中。
 
@@ -46,7 +46,7 @@ Matter SDK 提供了一套标准的设备，并允许访问其数据以及将其
 
 ## 先决条件
 
-在开始之前，请确保您已阅读 SenseCAP Indicator 开发板的[用户指南](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
+在开始之前，请确保您已阅读 SenseCAP Indicator 板的[用户指南](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)，以熟悉其软件和硬件信息。
 
 ## 安装 ESP IDF 和 ESP Matter {#install_sdks}
 
@@ -80,16 +80,15 @@ idf.py build flash monitor
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-1.jpg"/></div>
 
-扫描设备后，我的手机立即开始配置过程。配置过程安全地处理将您的凭据传递给设备，允许它通过 wifi 连接到家庭自动化控制器设备。这样您永远不需要在任何地方实际写入 wifi 凭据。
+扫描设备后，我的手机立即开始配置过程。配置过程安全地处理将您的凭据传递给设备，使其能够通过 wifi 连接到家庭自动化控制器设备。这样您永远不需要在任何地方实际写入 wifi 凭据。
 
-配置完成后，设备将开始以 10 秒的间隔向家庭助手控制器报告其温度和湿度。
+配置完成后，设备将开始以 10 秒的间隔向 home assistant 控制器报告其温度和湿度。
 
 ### 标准功能
 
 <iframe class="youtube-video" src="https://www.youtube.com/embed/mBhrYeyQQeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Indicator Matter 应用程序允许以类似于标准固件的方式浏览传感器数据。加载设备后显示时钟屏幕，该屏幕根据您的位置配置，为您提供准确的时间。屏幕具有检测向右和向左滑动的事件，以在时间、传感器显示和设置屏幕之间循环切换。
-
 
 <div class="table-center">
   <table align="center">
@@ -104,45 +103,45 @@ Indicator Matter 应用程序允许以类似于标准固件的方式浏览传感
   </table>
 </div>
 
-点击传感器进一步显示有关该传感器状态的附加信息，可以通过这种方式查看历史记录。
+点击传感器可以进一步显示该传感器状态的附加信息，并且可以通过这种方式查看历史记录。
 
-设置屏幕允许配置设备功能的几个元素。可以配置 12 或 24 小时时钟，时区是可覆盖的，显示亮度是可调节的。
+设置屏幕允许配置设备功能的多个元素。可以配置12小时或24小时时钟，时区是可覆盖的，显示亮度是可调节的。
 
 ### Matter Home Assistant 仪表板
 
-要访问 Matter Home Assistant 仪表板，请从主时钟屏幕向下滑动。此仪表板具有多个不同的组件，这些组件与 Matter 端的演示设备相关联。在配置过程中，这些设备创建了端点，可用于访问常见功能，如调暗灯光或完全关闭它。
+要访问 Matter Home Assistant 仪表板，请从主时钟屏幕向下滑动。此仪表板具有多个不同的组件，这些组件与 Matter 端的演示设备相关联。在配置过程中，这些设备创建了端点，可用于访问常见功能，如调暗灯光或完全关闭灯光。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-6.jpg"/></div>
 
-在此演示案例中，设置了两个可调光灯和一个门锁。您可以看到当您点击按钮时，家庭助手端也会更新以反映这些更改。滑块可以移动以设置灯光的亮度。
+在此演示案例中，设置了两个可调光灯和一个门锁。您可以看到，当您点击按钮时，home assistant 端也会更新以反映这些更改。可以移动滑块来设置灯光的亮度。
 
-从家庭助手端，设备可以根据需要启用和禁用或修改，SenseCAP Indicator 也会更新以反映它。这样您可以让其他自动化禁用或启用 Indicator 设备上的功能，并让屏幕实时反映它们的状态。
+从 home assistant 端，可以根据需要启用和禁用或修改设备，SenseCAP Indicator 也会更新以反映这些更改。通过这种方式，您可以让其他自动化功能禁用或启用 Indicator 设备上的功能，并让屏幕实时反映其状态。
 
-使用中的家庭控制器的虚拟仪表板和自动化功能允许各种有趣的组合。使用 SenseCAP Indicator，您可以构建自己想象的仪表板来控制整个家庭环境中的设备。
+正在使用的家庭控制器的虚拟仪表板和自动化功能允许各种有趣的组合。使用 SenseCAP Indicator，您可以构建自己想象的仪表板来控制整个家庭环境中的设备。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/indicator-matter-7.jpg"/></div>
 
 ## 进一步配置 Home Assistant UI {#going_beyond}
 
-UI 本身是使用 [LVGL](https://lvgl.io/) 构建的。有关配置 LVGL 的更详细信息，请参阅[以下文章](https://wiki.seeedstudio.com/cn/using_lvgl_and_tft_on_round_display/)。
+UI 本身是使用 [LVGL](https://lvgl.io/) 构建的。有关配置 LVGL 的更详细信息，请参阅[以下文章](https://wiki.seeedstudio.com/using_lvgl_and_tft_on_round_display/)。
 
-仪表板的 UI 由 LGVL 组件组成，并设置了事件回调，使其数据既持久化到本地存储，也持久化到 matter 端点。虚拟仪表板控制器（`indicator_virtual_dashboard_controller.c`）处理更新表单并在底层数据更改时为其他消费者发布相关事件。
+仪表板的 UI 由 LGVL 组件组成，设置了回调事件，使其数据既持久化到本地存储，也持久化到 matter 端点。虚拟仪表板控制器（`indicator_virtual_dashboard_controller.c`）处理更新表单并在底层数据更改时为其他消费者发布相关事件。
 
 对于初始示例，已设置了三个设备，matter 模型中的底层逻辑处理响应来自视图的事件，并将数据持久化到 matter 端点或更新 UI 的状态。
 
 通常，在更新 UI 并持久化到 Matter 时必须考虑以下因素：
-- 在初始化过程中，`indicator_matter.cpp` 模型的 `indicator_matter_setup()` 方法设置任何与 Matter 一起使用的相关设备。此外，还为视图事件设置了回调，以便在更改时更新 matter 端点。
+
+- 在初始化过程中，`indicator_matter.cpp` 模型的 `indicator_matter_setup()` 方法设置任何相关设备以与 Matter 一起使用。此外，还为视图事件设置了回调，以便在更改时更新 matter 端点。
 - `indicator_virtual_dashboard.c` 模型监听与虚拟仪表板相关的视图事件，并将数据持久化到存储中以便在初始化时检索。
 - matter 逻辑订阅围绕修改的 matter 数据的事件（无论是远程还是本地）
-- 虚拟仪表板控制器根据需要处理更新表单状态，以响应通过 `indicator_matter.cpp` Matter 回调在 Matter 控制器更改时发送的事件。
+- 虚拟仪表板控制器处理根据需要更新表单状态，以响应通过 `indicator_matter.cpp` Matter 回调在 Matter 控制器更改时发送的事件。
 
 ## 资源
 
-1. **Demo SDK**：SenseCAP Indicator 的 Demo SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
-2. **用户指南**：用户指南提供了有关 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/cn/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
+1. **演示 SDK**：SenseCAP Indicator 的演示 SDK 可在 [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) 上获取。
+2. **用户指南**：用户指南提供了关于 SenseCAP Indicator 板软件和硬件的详细信息。您可以在[这里](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)阅读。
 3. **ESP-IDF 入门指南**：本指南提供了配置和使用 ESP-IDF 构建项目的完整步骤。您可以在[这里](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)访问。
 4. **Matter 安装指南**：如果您是 ESP-Matter 的新手，本指南将帮助您安装和设置。您可以在[这里](https://docs.espressif.com/projects/esp-matter/en/latest/esp32/developing.html)找到。
-
 
 ## 技术支持
 

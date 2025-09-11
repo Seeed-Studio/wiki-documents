@@ -118,7 +118,7 @@ There are two ways for users to login Luci configuration page.:
 **Access via device AP hotspot**
 
 1. Press the button for 5s until the blue indicator flashes slowly to enter the configuration mode.
-2. AP hotspot name is SenseCAP\_XXXXXX (6-figure MAC address),default password is 12345678; connect your computer to this AP hotspot.
+2. AP hotspot name is SenseCAP_XXXXXX (6-figure MAC address),default password is 12345678; connect your computer to this AP hotspot.
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/12.png" /></div>
 

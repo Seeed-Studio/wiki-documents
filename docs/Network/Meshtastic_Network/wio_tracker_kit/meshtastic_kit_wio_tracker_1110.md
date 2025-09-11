@@ -62,21 +62,21 @@ Featuring a Wio Tracker 1110 Dev Board (based on Nordic nRF52840 for BLE, Semtec
 <tr><td colspan="1"><b>Humidity</b></td><td colspan="1">0&#126;100%RH</td><td colspan="1">±1.8%RH</td></tr>
 <tr><td colspan="3"><b>Onboard Sensors -- 3-Axis Accelerometer( Not used )</b></td></tr>
 <tr><td colspan="1"><b>Range</b></td><td colspan="2">±2g, 4g, 8g, 16g</td></tr>
-<tr><td colspan="1"><b>Bandwidth</b></td><td colspan="2">0\.5Hz &#126; 625Hz</td></tr>
+<tr><td colspan="1"><b>Bandwidth</b></td><td colspan="2">0.5Hz &#126; 625Hz</td></tr>
 <tr><td colspan="1"><b>Sensitivity (LSB/g)</b></td><td colspan="2">1000 (±2g) &#126; 83 (±16g)</td></tr>
 </table>
 
 **Grove - OLED Display 0.96 inch**
 
-|**Power Voltage (VCC)**|3\.3 / 5 V|
+|**Power Voltage (VCC)**|3.3 / 5 V|
 | :- | :- |
 |**Driver IC**|SSD1308Z|
 |**Display Color**|White|
 |**Dot Matrix**|128×64|
-|**Panel Size**|26\.7(W)×19.26(H) mm|
-|**Active Area**|21\.74(W)×11.175 (H) mm|
-|**Dot Pitch**|0\.17(W)×0.175 (H) mm|
-|**Dot Size**|0\.15(W)×0.15 (H) mm|
+|**Panel Size**|26.7(W)×19.26(H) mm|
+|**Active Area**|21.74(W)×11.175 (H) mm|
+|**Dot Pitch**|0.17(W)×0.175 (H) mm|
+|**Dot Size**|0.15(W)×0.15 (H) mm|
 |**Wide range of operating temperature**|-20&#126;70 ℃|
 
 ## Get Started
@@ -219,24 +219,24 @@ Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/regi
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902\.0 - 928.0|100|30|
-|EU\_433|European Union 433MHz|433\.0 - 434.0|10|12|
-|EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
-|CN|China|470\.0 - 510.0|100|19|
-|JP|Japan|920\.8 - 927.8|100|16|
-|ANZ|Australia & New Zealand|915\.0 - 928.0|100|30|
-|KR|Korea|920\.0 - 923.0|100||
-|TW|Taiwan|920\.0 - 925.0|100|27|
-|RU|Russia|868\.7 - 869.2|100|20|
-|IN|India|865\.0 - 867.0|100|30|
-|NZ\_865|New Zealand 865MHz|864\.0 - 868.0|100|36|
-|TH|Thailand|920\.0 - 925.0|100|16|
-|UA\_433|Ukraine 433MHz|433\.0 - 434.7|10|10|
-|UA\_868|Ukraine 868MHz|868\.0 - 868.6|1|14|
-|MY\_433|Malaysia 433MHz|433\.0 - 435.0|100|20|
-|MY\_919|Malaysia 919MHz|919\.0 - 924.0|100|27|
-|SG\_923|Singapore 923MHz|917\.0 - 925.0|100|20|
-|LORA\_24|2\.4 GHz band worldwide|2400\.0 - 2483.5|100|10|
+|US|United States|902.0 - 928.0|100|30|
+|EU_433|European Union 433MHz|433.0 - 434.0|10|12|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
+|CN|China|470.0 - 510.0|100|19|
+|JP|Japan|920.8 - 927.8|100|16|
+|ANZ|Australia & New Zealand|915.0 - 928.0|100|30|
+|KR|Korea|920.0 - 923.0|100||
+|TW|Taiwan|920.0 - 925.0|100|27|
+|RU|Russia|868.7 - 869.2|100|20|
+|IN|India|865.0 - 867.0|100|30|
+|NZ_865|New Zealand 865MHz|864.0 - 868.0|100|36|
+|TH|Thailand|920.0 - 925.0|100|16|
+|UA_433|Ukraine 433MHz|433.0 - 434.7|10|10|
+|UA_868|Ukraine 868MHz|868.0 - 868.6|1|14|
+|MY_433|Malaysia 433MHz|433.0 - 435.0|100|20|
+|MY_919|Malaysia 919MHz|919.0 - 924.0|100|27|
+|SG_923|Singapore 923MHz|917.0 - 925.0|100|20|
+|LORA_24|2.4 GHz band worldwide|2400.0 - 2483.5|100|10|
 
 :::info
 **EU_433** and **EU_868** have to adhere to an hourly duty cycle limitation of 10%, calculated every minute on a rolling 1-hour basis. Your device will stop transmitting if you reach it, until it is allowed again.

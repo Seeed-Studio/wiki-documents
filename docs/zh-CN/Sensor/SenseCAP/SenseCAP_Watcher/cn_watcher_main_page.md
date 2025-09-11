@@ -32,65 +32,65 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Infrastructure.png" style={{width:1000, height:'auto'}}/></div>
 
-### [快速入门指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher/)
+### [快速入门指南](https://wiki.seeedstudio.com/getting_started_with_watcher/)
 
-### [价格和优势](https://wiki.seeedstudio.com/cn/watcher_price/)
+### [价格和优势](https://wiki.seeedstudio.com/watcher_price/)
 
-### [产品概述](https://wiki.seeedstudio.com/cn/product_overview_with_watcher/)
+### [产品概述](https://wiki.seeedstudio.com/product_overview_with_watcher/)
 
-- [硬件概述](https://wiki.seeedstudio.com/cn/watcher_hardware_overview/)
+- [硬件概述](https://wiki.seeedstudio.com/watcher_hardware_overview/)
 
-- [操作指南](https://wiki.seeedstudio.com/cn/watcher_operation_guideline/)
+- [操作指南](https://wiki.seeedstudio.com/watcher_operation_guideline/)
 
-- [任务分配指南](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)
+- [任务分配指南](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)
 
-### [软件框架概述](https://wiki.seeedstudio.com/cn/watcher_software_framework_overview/)
+### [软件框架概述](https://wiki.seeedstudio.com/watcher_software_framework_overview/)
 
-- [SenseCraft APP 介绍](https://wiki.seeedstudio.com/cn/sensecap_app_introduction/)
+- [SenseCraft APP 介绍](https://wiki.seeedstudio.com/sensecap_app_introduction/)
 
-- [Watcher 软件服务介绍](https://wiki.seeedstudio.com/cn/watcher_software_service_framework/)
+- [Watcher 软件服务介绍](https://wiki.seeedstudio.com/watcher_software_service_framework/)
 
-- [本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/cn/watcher_local_deploy/)
+- [本地部署 Watcher 的 AI 功能](https://wiki.seeedstudio.com/watcher_local_deploy/)
 
-### [通知](https://wiki.seeedstudio.com/cn/notifications_with_watcher_main_page/)
+### [通知](https://wiki.seeedstudio.com/notifications_with_watcher_main_page/)
 
-#### [UART 输出](https://wiki.seeedstudio.com/cn/uart_output/)
+#### [UART 输出](https://wiki.seeedstudio.com/uart_output/)
 
-#### [HTTP 代理通知](https://wiki.seeedstudio.com/cn/http_proxy_notification/)
+#### [HTTP 代理通知](https://wiki.seeedstudio.com/http_proxy_notification/)
 
-##### [智能家居](https://wiki.seeedstudio.com/cn/smart_main_page/)
+##### [智能家居](https://wiki.seeedstudio.com/smart_main_page/)
 
-- [将 Watcher 集成到 Home Assistant](https://wiki.seeedstudio.com/cn/integrate_watcher_to_ha/)
+- [将 Watcher 集成到 Home Assistant](https://wiki.seeedstudio.com/integrate_watcher_to_ha/)
 
-##### [Node-RED 集成](https://wiki.seeedstudio.com/cn/notification_with_watcher/)
+##### [Node-RED 集成](https://wiki.seeedstudio.com/notification_with_watcher/)
 
-- [Watcher 到 Node-RED](https://wiki.seeedstudio.com/cn/watcher_to_node_red/)
+- [Watcher 到 Node-RED](https://wiki.seeedstudio.com/watcher_to_node_red/)
 
-- [Watcher & Node-RED 到 IFTTT](https://wiki.seeedstudio.com/cn/watcher_node_red_to_ifttt/)
+- [Watcher & Node-RED 到 IFTTT](https://wiki.seeedstudio.com/watcher_node_red_to_ifttt/)
 
-- [Watcher & Node-RED 到 Kafka](https://wiki.seeedstudio.com/cn/watcher_node_red_to_kafka/)
+- [Watcher & Node-RED 到 Kafka](https://wiki.seeedstudio.com/watcher_node_red_to_kafka/)
 
-- [Watcher & Node-RED 到 Open Interpreter](https://wiki.seeedstudio.com/cn/watcher_node_red_to_open_interpreter/)
+- [Watcher & Node-RED 到 Open Interpreter](https://wiki.seeedstudio.com/watcher_node_red_to_open_interpreter/)
 
-- [Watcher & Node-RED 到 P5JS](https://wiki.seeedstudio.com/cn/watcher_node_red_to_p5js/)
+- [Watcher & Node-RED 到 P5JS](https://wiki.seeedstudio.com/watcher_node_red_to_p5js/)
 
-- [Watcher & Node-RED 到 Telegram](https://wiki.seeedstudio.com/cn/watcher_node_red_to_telegram/)
+- [Watcher & Node-RED 到 Telegram](https://wiki.seeedstudio.com/watcher_node_red_to_telegram/)
 
-- [Watcher & Node-RED 到 Twilio](https://wiki.seeedstudio.com/cn/watcher_node_red_to_twilio/)
+- [Watcher & Node-RED 到 Twilio](https://wiki.seeedstudio.com/watcher_node_red_to_twilio/)
 
-- [Watcher & Node-RED 到 Discord](https://wiki.seeedstudio.com/cn/watcher_node_red_to_discord/)
+- [Watcher & Node-RED 到 Discord](https://wiki.seeedstudio.com/watcher_node_red_to_discord/)
 
-- [Watcher & Node-RED 到 MongoDB](https://wiki.seeedstudio.com/cn/watcher_node_red_to_mongodb/)
+- [Watcher & Node-RED 到 MongoDB](https://wiki.seeedstudio.com/watcher_node_red_to_mongodb/)
 
-- [Watcher & Node-RED 到 WhatsApp](https://wiki.seeedstudio.com/cn/watcher_node_red_to_whatsapp/)
+- [Watcher & Node-RED 到 WhatsApp](https://wiki.seeedstudio.com/watcher_node_red_to_whatsapp/)
 
-### [应用](https://wiki.seeedstudio.com/cn/applications_with_watcher_main_page/)
+### [应用](https://wiki.seeedstudio.com/applications_with_watcher_main_page/)
 
-#### [使用案例](https://wiki.seeedstudio.com/cn/use_case/)
+#### [使用案例](https://wiki.seeedstudio.com/use_case/)
 
-#### [开发](https://wiki.seeedstudio.com/cn/development/)
+#### [开发](https://wiki.seeedstudio.com/development/)
 
-- [为 Watcher 训练模型](https://wiki.seeedstudio.com/cn/training_model_for_watcher/)
+- [为 Watcher 训练模型](https://wiki.seeedstudio.com/training_model_for_watcher/)
 
 
 **准备中...**
@@ -99,7 +99,7 @@ last_update:
 ## ✨ 贡献者项目
 
 - 我们有一个更新此页面的任务列表，该列表归类在我们的[贡献者项目](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479)下，因为我们致力于通过开发我们的 wiki 平台来增强用户体验并提供更好的支持。
-- [您对此页面的贡献](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962909)对我们来说至关重要！我们非常重视您的意见，并将非常感谢您在产生想法方面的帮助。
+- [您对此页面的贡献](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33962909)对我们至关重要！我们非常重视您的意见，并将非常感谢您在产生想法方面的帮助。
 
 ## 技术支持与产品讨论
 

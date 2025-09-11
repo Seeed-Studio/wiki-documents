@@ -22,27 +22,28 @@ RG-9 Solid State Rain Sensor features an open-collector output that emulates a c
 
 ## Features
 
-* Industrial-grade: reliable, accurate, and rugged
-* Easy-installation: on weather station masts, buildings, and other infrastructures
-* Maintenance-free: no debris and no clogging
-* Wide application scenarios
+- Industrial-grade: reliable, accurate, and rugged
+- Easy-installation: on weather station masts, buildings, and other infrastructures
+- Maintenance-free: no debris and no clogging
+- Wide application scenarios
 
 ## Applications
 
 ![Applications](https://files.seeedstudio.com/wiki/Industrial-Grade_Optical_Rain_Gauge_RG-15/applications.png)
 
-* Smart Agriculture
-* Smart City
-* Climate Studies
-* Hydrological Network Monitoring
-* Condensation and Frost Sensing
-* Irrigation Control
-* Drop Detection
-* Wiper Control
-* Process Control
-* Opening and Closing Skylights, Vents, Louvers, or Windows
+- Smart Agriculture
+- Smart City
+- Climate Studies
+- Hydrological Network Monitoring
+- Condensation and Frost Sensing
+- Irrigation Control
+- Drop Detection
+- Wiper Control
+- Process Control
+- Opening and Closing Skylights, Vents, Louvers, or Windows
 
 ## Specifications
+
 <!-- <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin:10px}
 .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
@@ -52,6 +53,7 @@ RG-9 Solid State Rain Sensor features an open-collector output that emulates a c
 .tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
 .tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
 </style> -->
+
 <table class="tg">
 <thead>
 <tr><th class="tg-e2cz">Parameter</th><th class="tg-e2cz">Value</th></tr>
@@ -174,4 +176,4 @@ RG-9 Solid State Rain Sensor features an open-collector output that emulates a c
 
 ## Sources
 
-* [Optical Rain Gauge Datasheet and Specification](https://files.seeedstudio.com/products/317990687/res/2020.11.23-rg-9_instructions.pdf)
+- [Optical Rain Gauge Datasheet and Specification](https://files.seeedstudio.com/products/317990687/res/2020.11.23-rg-9_instructions.pdf)

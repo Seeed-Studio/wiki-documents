@@ -1,5 +1,5 @@
 ---
-description: 介绍如何在 SquareLine Studio 和 LVGL 的帮助下，为 Watcher 开发您自己的 UI 界面。
+description: 介绍如何在 SquareLine Studio 和 LVGL 的帮助下，为 Watcher 开发自己的 UI 界面。
 title: Watcher UI 集成指南
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/ui_framework.webp
 slug: /cn/watcher_ui_integration_guide
@@ -33,31 +33,31 @@ last_update:
 
 ### 2.1 概述
 
-SenseCAP Watcher 支持触摸屏和编码器输入设备。为了同步这些输入设备操作并确保正确性，需要进行组管理以保持对正确对象的焦点并避免事件冲突。
+SenseCAP Watcher 支持触摸屏和编码器输入设备。为了同步这些输入设备的操作并确保正确性，需要进行组管理以保持对正确对象的焦点并避免事件冲突。
 
 组管理功能在以下文件中实现：
 
 - **pm.c**：包含函数实现。
 - **pm.h**：包含函数原型和类型定义。
 
-### 2.2 向组中添加对象
+### 2.2 将对象添加到组
 
 ```cpp
 static void addObjToGroup(GroupInfo *groupInfo, lv_obj_t *objects[], int count);
 ```
 
-这里，`groupInfo` 是指向将要添加对象的 `GroupInfo` 结构的指针，`objects` 是要添加到组中的对象数组，`count` 是数组中对象的数量。
+这里，`groupInfo` 是指向 `GroupInfo` 结构的指针，对象将被添加到该结构中，`objects` 是要添加到组中的对象数组，`count` 是数组中对象的数量。
 
 **用法：**
 
 ```cpp
-// 定义要添加到页面的对象
+// Define the objects to be added to the page
 lv_obj_t *example_objects[] = {example_obj1, example_obj2, ...};
-// 将对象添加到组结构变量中
+// Add the objects to the group structure variable
 addObjToGroup(&group_page_example, example_objects, sizeof(example_objects) / sizeof(example_objects[0]));
 ```
 
-### 2.3 页面导航和对象管理
+### 2.3 Page Navigation and Object Management
 
 ```cpp
 void lv_pm_open_page(lv_group_t *group, 
@@ -71,9 +71,10 @@ void lv_pm_open_page(lv_group_t *group,
 ```
 
 **参数：**
+
 - `group`：指向 LVGL 组的指针。
 - `groupInfo`：指向包含页面对象的 `GroupInfo` 结构的指针。
-- `operation`：要执行的操作（向组添加对象、无操作或清除组）。
+- `operation`：要执行的操作（将对象添加到组、无操作或清除组）。
 - `target`：新页面的目标对象。
 - `fademode`：屏幕加载动画模式。
 - `spd`：屏幕加载动画的速度。
@@ -83,7 +84,7 @@ void lv_pm_open_page(lv_group_t *group,
 **用法：**
 
 ```cpp
-// 将结构变量中的对象添加到组中并导航到相应页面
+// Add the objects from the structure variable to the group and navigate to the corresponding page
 lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_Example, LV_SCR_LOAD_ANIM_NONE, 0, 0, &ui_Page_Example_screen_init);
 ```
 
@@ -94,47 +95,47 @@ lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_E
 ```cpp
 void lv_pm_init(void)
 {
-  // 创建一个组
+  // Create a group
   g_main = lv_group_create();
   cur_drv = NULL;
-  // 循环获取输入设备
+  // Loop to get input devices
   while ((cur_drv = lv_indev_get_next(cur_drv)))
   {
-    // 当输入设备是编码器时，将编码器与组关联
+    // Associate the encoder with the group when the input device is an encoder
     if (cur_drv->driver->type == LV_INDEV_TYPE_ENCODER)
     {
       lv_indev_set_group(cur_drv, g_main);
       break;
     }
   }
-  // 在不同的 GroupInfo 结构变量中定义对象
+  // Define objects in different GroupInfo structure variables
   initGroup();
 }
 ```
 
-**用法：**
+**Usage:**
 
 ```cpp
-// 在 `view_init` 中调用以初始化组并将编码器与组关联
+// Call in `view_init` to initialize the group and associate the encoder with the group
 int view_init(void)
 {
-  // 注意：在 lvgl 任务中对对象的任何操作都必须在线程锁内执行！
+  // Note: Any operations on objects in the lvgl task must be performed within a thread lock!
   lvgl_port_lock(0);
-  // 初始化 UI
+  // Initialize UI
   ui_init();
-  // 初始化组并关联编码器
+  // Initialize the group and associate the encoder
   lv_pm_init();
   lvgl_port_unlock();
 }
 ```
 
-### 2.5 打印 GroupInfo 对象
+### 2.5 Printing GroupInfo Objects
 
 ```cpp
 static void printGroup(GroupInfo *groupInfo);
 ```
 
-这里，`groupInfo` 是指向将要添加对象的 `GroupInfo` 结构的指针。注意，在打印之前，您需要通过使用 `lv_obj_set_user_data(example_obj, "example_obj_print")` 为对象设置 `user_data`。
+这里，`groupInfo` 是指向 `GroupInfo` 结构的指针，对象将被添加到该结构中。请注意，在打印之前，您需要通过使用 `lv_obj_set_user_data(example_obj, "example_obj_print")` 为对象设置 `user_data`。
 
 **用法：**
 
@@ -142,7 +143,7 @@ static void printGroup(GroupInfo *groupInfo);
 printGroup(&group_page_example);
 ```
 
-### 2.6 示例用法
+### 2.6 使用示例
 
 1. 定义一个 `GroupInfo` 变量
 
@@ -150,36 +151,36 @@ printGroup(&group_page_example);
 GroupInfo group_page_example;
 ```
 
-2. 在 `initGroup()` 中初始化对象
+2. Initialize objects in `initGroup()`
 
 ```cpp
 lv_obj_t * example_objects[] = {example_obj1, example_obj2, ...};
 ```
 
-3. 将对象添加到组中
+3. Add objects to the group
 
 ```cpp
 addObjToGroup(&group_page_example, example_objects, sizeof(example_objects) / sizeof(example_objects[0]));
 ```
 
-4. 打开页面并添加组
+4. Open the page and add the group
 
 ```cpp
 lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_Example, LV_SCR_LOAD_ANIM_NONE, 0, 0, &ui_Page_Example_screen_init);
 ```
 
-通过遵循这些步骤，您可以确保触摸屏和编码器输入在您的应用程序中同步且正确地操作。
+通过遵循这些步骤，您可以确保触摸屏和编码器输入在您的应用程序中同步且正确地运行。
 
 ## 3. 设备报警
 
 ### 3.1 概述
 
-本节介绍如何在您的 Watcher 中集成和使用报警 UI 组件。通过理解和使用以下功能，您可以管理设备的 UI 报警行为。
+本节解释如何在您的 Watcher 中集成和使用报警 UI 组件。通过理解和使用以下功能，您可以管理设备的 UI 报警行为。
 
 报警 UI 在以下文件中实现：
 
-- **view_alarm.c**：包含函数实现。
-- **view_alarm.h**：包含函数原型和类型定义。
+- **view_alarm.c**：包含功能实现。
+- **view_alarm.h**：包含功能原型和类型定义。
 
 ### 3.2 初始化报警 UI
 
@@ -187,22 +188,22 @@ lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_E
 int view_alarm_init(lv_obj_t *ui_screen);
 ```
 
-`ui_screen` 是指向用于显示报警 UI 组件的屏幕对象的指针。
+`ui_screen` is a pointer to the screen object used to display the alarm UI components.
 
-**用法：**
+**Usage:**
 
 ```cpp
-// 在顶层创建报警相关的 UI
+// Create alarm-related UI on the top layer
 view_alarm_init(lv_layer_top());
 ```
 
-### 3.3 开启报警 UI
+### 3.3 Turning On Alarm UI
 
 ```cpp
 int view_alarm_on(struct tf_module_local_alarm_info *alarm_st);
 ```
 
-`alarm_st` 是指向 `tf_module_local_alarm_info` 结构体的指针，该结构体包含报警相关信息，如`报警持续时间`、`是否显示文本和图像`以及`文本和图像的具体内容`。
+`alarm_st` 是指向 `tf_module_local_alarm_info` 结构体的指针，该结构体包含与报警相关的信息，如`报警持续时间`、`是否显示文本和图像`以及`文本和图像的具体内容`。
 
 **用法：**
 
@@ -211,19 +212,18 @@ struct tf_module_local_alarm_info info;
 view_alarm_on(&info);
 ```
 
-### 3.4 关闭报警 UI
+### 3.4 Turning Off Alarm UI
 
 ```cpp
 void view_alarm_off();
 ```
 
-**用法：**
+**Usage:**
 
 ```cpp
-// 隐藏报警相关的 UI，设置相应标志，或执行页面转换逻辑
+// Hide the alarm-related UI, set corresponding flags, or execute page transition logic
 view_alarm_off();
 ```
-
 
 ## 4. AI 推理实时图像渲染
 
@@ -232,6 +232,7 @@ view_alarm_off();
 本节介绍如何在设备上解码图像并在 LVGL 中显示它们。
 
 此功能在以下文件中实现：
+
 - **view_image_preview.c**：包含函数实现。
 - **view_image_preview.h**：包含函数原型和类型定义。
 
@@ -241,22 +242,22 @@ view_alarm_off();
 int view_image_preview_init(lv_obj_t *ui_screen);
 ```
 
-`ui_screen` 是指向用于显示实时预览的屏幕对象的指针。此函数初始化 JPEG 解码器，分配内存，并创建一些 UI 对象来渲染 AI 推理结果，如目标检测框和分类名称。
+`ui_screen` 是一个指向屏幕对象的指针，用于显示实时预览。此函数初始化 JPEG 解码器，分配内存，并创建一些 UI 对象来渲染 AI 推理结果，例如目标检测框和分类名称。
 
 **用法：**
 
 ```cpp
-// 在 ViewLive 页面上创建图像预览 UI
+// Create image preview UI on the ViewLive page
 view_image_preview_init(ui_Page_ViewLive);
 ```
 
-### 4.3 刷新预览图像
+### 4.3 Refreshing Preview Image
 
 ```cpp
 int view_image_preview_flush(struct tf_module_ai_camera_preview_info *p_info);
 ```
 
-`p_info` 是指向 `tf_module_ai_camera_preview_info` 结构体的指针，该结构体包含图像和 AI 模型推理信息。
+`p_info` 是指向 `tf_module_ai_camera_preview_info` 结构体的指针，该结构体包含图像和AI模型推理信息。
 
 **用法：**
 
@@ -269,13 +270,13 @@ view_image_preview_flush(&info);
 
 ### 5.1 概述
 
-设备的前端 UI 需要与后端 APP 任务进行交互。通过监听和消费特定事件，可以实现各种 UI 更新和页面转换逻辑。有关 ESP32 事件处理的详细信息，请参考乐鑫官方文档中的`事件循环库`部分。
+设备的前端 UI 需要与后端 APP 任务进行交互。通过监听和消费特定事件，可以实现各种 UI 更新和页面转换逻辑。有关 ESP32 事件处理的详细信息，请参考乐鑫官方文档中的 `Event Loop Library` 部分。
 
 UI 消息事件处理在以下文件中实现：
 
 - **view.c**：包含函数实现。
 - **view.h**：包含函数原型和类型定义。
-- **data_defs.h**：包含各种事件 ID 的枚举声明（前端和后端）。
+- **data_defs.h**：包含各种事件 ID（前端和后端）的枚举声明。
 
 ### 5.2 UI 事件处理函数
 
@@ -289,57 +290,58 @@ esp_err_t esp_event_handler_instance_register_with( esp_event_loop_handle_t even
 ```
 
 **参数：**
-- `event_loop`：注册此处理函数的事件循环；不能为 NULL。
-- `event_base`：要为其注册处理程序的事件的基础 ID。
-- `event_id`：要为其注册处理程序的事件的 ID。
-- `event_handler`：分发事件时要调用的处理函数。
-- `event_handler_arg`：除事件数据外传递给处理函数的参数。
-- `instance`：与注册的处理程序和数据关联的事件处理程序实例对象；可以为 NULL。
 
-### 5.3 用法
+- `event_loop`: 注册此处理函数的事件循环；不能为 NULL。
+- `event_base`: 要为其注册处理程序的事件的基础 ID。
+- `event_id`: 要为其注册处理程序的事件的 ID。
+- `event_handler`: 当事件被分发时调用的处理函数。
+- `event_handler_arg`: 除了事件数据之外传递给处理函数的参数。
+- `instance`: 与已注册的处理程序和数据关联的事件处理程序实例对象；可以为 NULL。
+
+### 5.3 使用方法
 
 #### 1. 声明和定义事件，并将 UI 事件处理程序实例注册到特定循环
 
 ```cpp
-// VIEW 事件基础的声明和定义
+// Declaration and definition of VIEW event base
 ESP_EVENT_DECLARE_BASE(VIEW_EVENT_BASE);
 esp_event_loop_handle_t app_event_loop_handle;
-// 将事件 ID 声明为枚举；在 SenseCAP-Watcher 项目中，这放在 data_defs.h 中
+// Declare event IDs as an enumeration; in the SenseCAP-Watcher project, this is placed in data_defs.h
 enum {
     VIEW_EVENT_EXAMPLE
 }
-// 注册实例
+// Register instance
 ESP_ERROR_CHECK(esp_event_handler_instance_register_with(app_event_loop_handle, 
                                                             VIEW_EVENT_BASE, VIEW_EVENT_EXAMPLE, 
                                                             __view_event_handler, NULL, NULL));
 ```
 
-#### 2. UI 消息事件处理
+#### 2. UI Message Event Handling
 
 ```cpp
 static void __view_event_handler(void* handler_args, esp_event_base_t base, int32_t id, void* event_data)
 {
-  // 获取 lvgl 线程锁
+  // Acquire lvgl thread lock
   lvgl_port_lock(0);
   if (base == VIEW_EVENT_BASE) {
     switch (id) {
-      // 自定义事件
+      // Custom event
       case VIEW_EVENT_EXAMPLE: {
         ESP_LOGI("ui_event", "VIEW_EVENT_EXAMPLE");
-        // 根据接收到的事件执行相应逻辑
+        // Execute corresponding logic based on the received event
         break;
       }
     }
   }
-  // 释放 lvgl 线程锁
+  // Release lvgl thread lock
   lvgl_port_unlock();
 }
 ```
 
-#### 3. 发送 UI 消息事件
+#### 3. Sending UI Message Events
 
 ```cpp
-// 发送事件以触发相应逻辑
+// Send event to trigger corresponding logic
 esp_event_post_to(app_event_loop_handle, VIEW_EVENT_BASE, VIEW_EVENT_EXAMPLE, NULL, 0, pdMS_TO_TICKS(10000));
 ```
 
@@ -353,21 +355,19 @@ esp_event_post_to(app_event_loop_handle, VIEW_EVENT_BASE, VIEW_EVENT_EXAMPLE, NU
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img1.png" style={{width:800, height:'auto'}}/></div>
 
-
 ### 6.2 从Squareline导出`ui`项目
 
-在应用程序中，在导航栏中选择`File` -> `Project Settings`，并将`UI Files Export Path`设置为`project_path/ui`，其中`project_path`是Squareline项目的路径。这设置了UI设计的导出路径。
+在应用程序中，在导航栏中选择`File` -> `Project Settings`，并将`UI Files Export Path`设置为`project_path/ui`，其中`project_path`是Squareline项目的路径。这样设置了UI设计的导出路径。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img2.png" style={{width:600, height:'auto'}}/></div>
 
-接下来，在导航栏中点击`Export` -> `Export UI Files`来导出一个包含所有UI设计的目录文件夹。
+接下来，在导航栏中点击`Export` -> `Export UI Files`，导出一个包含所有UI设计的目录文件夹。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img3.png" style={{width:500, height:'auto'}}/></div>
 
-
 ### 6.3 实现头文件中声明的回调函数
 
-将`ui`文件夹导入到SenseCAP Watcher项目中，打开并参考`ui`文件夹的`ui_events.h`中声明的函数，在`ui_manager`文件夹的`ui_events.c`中实现这些函数，以完成这些回调函数的逻辑。
+将`ui`文件夹导入到SenseCAP Watcher项目中，打开并参考`ui`文件夹中`ui_events.h`中声明的函数，在`ui_manager`文件夹的`ui_events.c`中实现这些函数，以完成这些回调函数的逻辑。
 
 例如，在`ui_events.h`中：
 
@@ -377,93 +377,92 @@ void btn2click_cb(lv_event_t * e);
 void btn3click_cb(lv_event_t * e);
 ```
 
-在`ui_events.c`中的代码将如下所示：
+And the code will be like this in `ui_events.c`:
 
 ```cpp
 void btn1click_cb(lv_event_t * e)
 {
     ESP_LOGI("ui_example", "btn1click_cb");
-    // 定义当点击事件被触发时此对象的逻辑
+    // Define the logic for this object when the clicked event is triggered
 }
 
 void btn2click_cb(lv_event_t * e)
 {
     ESP_LOGI("ui_example", "btn2click_cb");
-    // 定义当点击事件被触发时此对象的逻辑
+    // Define the logic for this object when the clicked event is triggered
 }
 
 void btn3click_cb(lv_event_t * e)
 {
     ESP_LOGI("ui_example", "btn3click_cb");
-    // 定义当点击事件被触发时此对象的逻辑
+    // Define the logic for this object when the clicked event is triggered
 }
 ```
 
-### 6.4 将对象添加到结构变量
+### 6.4 向结构变量添加对象
 
 在这一步中，我们需要管理编码器和创建的组。向组中添加和移除对象将使编码器能够控制这些对象。
 
 ```cpp
-// 定义一个GroupInfo变量
+// Define a GroupInfo variable
 GroupInfo group_page_example;
-// 在initGroup()中初始化对象
+// Initialize objects in initGroup()
 lv_obj_t * example_objects[] = {ui_Button1, ui_Button2, ui_Button3};
-// 将对象添加到结构变量中，以便在不同页面中将对象添加到组中
+// Add objects to the structure variable to facilitate adding objects to the group in different pages
 addObjToGroup(&group_page_example, example_objects, sizeof(example_objects) / sizeof(example_objects[0]));
 ```
 
-### 6.5 UI初始化
+### 6.5 UI 初始化
 
-在`view.c`的`view_init`中，调用`ui_init`来初始化UI。这样，当lvgl任务线程运行时，它可以加载设计的UI。默认加载的页面是在Squareline中设计的第一个页面。
+在 `view.c` 中的 `view_init` 函数中，调用 `ui_init` 来初始化 UI。这样，当 lvgl 任务线程运行时，它可以加载设计的 UI。默认加载的页面是在 Squareline 中设计的第一个页面。
 
 ```cpp
 int view_init(void)
 {
-  // 注意：在lvgl任务中对对象的任何操作都必须在线程锁内执行！
+  // Note: Any operations on objects in the lvgl task must be performed within a thread lock!
   lvgl_port_lock(0);
 
   ui_init();
   lv_pm_init();
-  // 有两种方式将对象添加到组中
-  // 第一种：清除组中的对象并逐个添加到组中
+  // There are two ways to add objects to the group
+  // First: Clear the objects in the group and add them to the group one by one
   lv_group_remove_all_objs(g_example);
   lv_group_add_obj(ui_Button1);
   lv_group_add_obj(ui_Button2);
   lv_group_add_obj(ui_Button3);
 
-  // 第二种：通过页面转换函数将相应的对象添加到组中：
+  // Second: Add the corresponding objects to the group through the page transition function:
   lv_pm_open_page(g_example, &group_page_example, PM_ADD_OBJS_TO_GROUP, &ui_Page_Example, LV_SCR_LOAD_ANIM_NONE, 0, 0, &ui_Page_Example_screen_init);
 
   lvgl_port_unlock();
 
-  // 其他初始化代码
+  // Other initialization code
 }
 ```
 
 ### 6.6 查看运行效果
 
-现在我们已经简单地实现了UI集成到项目中。接下来，我们可以编译代码并烧录到Watcher中查看运行效果！
+现在我们已经简单地将UI集成到项目中。接下来，我们可以编译代码并烧录到Watcher中查看运行效果！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img4.png" style={{width:500, height:'auto'}}/></div>
 
+如上图所示，通过使用触摸屏或滚轮点击页面上的按钮，您可以在串口调试助手中看到相应的对象触发回调事件，表明回调函数正在成功工作！
 
-如上所示，通过使用触摸屏或滚轮点击页面上的按钮，您可以在串口调试助手中看到相应的对象触发回调事件，表明回调函数正在成功工作！
+## 7. SquareLine项目
 
-## 7. SquareLine 项目
-
-SenseCAP-Watcher 中的大部分页面都是使用 Squareline 创建的。Squareline 工具允许轻松快速地修改 Watcher 中各种页面对象的样式。因此，强烈建议使用 Squareline 进行 UI 开发和迭代。
+SenseCAP-Watcher中的大部分页面都是使用Squareline创建的。Squareline工具允许轻松快速地修改Watcher中各种页面对象的样式。因此，强烈推荐使用Squareline进行UI开发和迭代。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_software_framework/ui_img5.png" style={{width:800, height:'auto'}}/></div>
 
-如上图所示，工具中的页面按照导航逻辑排列。相邻页面可以通过按钮或其他可触发对象进行导航。您可以点击相应的页面和对象来查看定义的事件，这使得修改不同页面和对象的样式变得非常简单，可以自定义您的 AI 助手！但是请注意，当前页面中定义的对象和回调事件与 Watcher 的 APP 层功能绑定。修改它们可能会影响 Watcher 的正常运行。建议只修改对象的样式，如颜色和大小，以确保 Watcher 的正常功能。
+如上图所示，工具中的页面按照导航逻辑排列。相邻页面可以通过按钮或其他可触发对象进行导航。您可以点击相应的页面和对象来查看定义的事件，这使得修改不同页面和对象的样式变得非常简单，可以自定义您的AI助手！但是请注意，当前页面中定义的对象和回调事件与Watcher的APP层功能绑定。修改它们可能会影响Watcher的正常运行。建议只修改对象的样式，如颜色和大小，以确保Watcher的正常功能。
 
 ## 8. 文件说明
 
-- [`ui_intergration_demo\SenseCAP-Watcher_example`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/SenseCAP-Watcher_example) 文件夹包含 SenseCAP-Watcher 的完整 Squareline 项目，包括几乎所有的 UI 资源设计。
+- [`ui_intergration_demo\SenseCAP-Watcher_example`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/SenseCAP-Watcher_example) 文件夹包含SenseCAP-Watcher的完整Squareline项目，包括几乎所有的UI资源设计。
 
-- [`ui_intergration_demo\ui_intergration_example`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/ui_intergration_example) 文件夹包含应用章节中示例的 Squareline 项目。
+- [`ui_intergration_demo\ui_intergration_example`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/ui_intergration_example) 文件夹包含应用章节中示例的Squareline项目。
 
-- [`ui_intergration_demo\view`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/view) 文件夹包含应用章节中示例的 `view` 组件。您可以通过直接替换项目中原有的 `view` 来使用该示例。
+- [`ui_intergration_demo\view`](https://github.com/Seeed-Studio/SenseCAP-Watcher-Firmware/tree/factory_fw/examples/factory_firmware/docs/ui_intergration_demo/view) 文件夹包含应用章节中示例的`view`组件。您可以通过直接替换项目中原有的`view`来使用该示例。
 
 ## 技术支持与产品讨论
 

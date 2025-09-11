@@ -1,41 +1,36 @@
 ---
-description: SenseCAP Watcher のハードウェアコンポーネント。
+description: SenseCAP Watcherのハードウェアコンポーネント。
 title: ハードウェア概要
 image: https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview_1.webp
 slug: /ja/watcher_hardware_overview
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 10/18/2024
   author: Citric, Djair
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # SenseCAP Watcher ハードウェア概要
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview.jpg" style={{width:1000, height:'auto'}}/></div>
-
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://www.youtube.com/watch?v=ny22Z0cAIqE" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Watcher のビデオを見る</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Watcherの動画</font></span></strong>
     </a>
     <a class="get_one_now_item" href="https://github.com/Seeed-Studio/OSHW-SenseCAP-Watcher" target="_blank" rel="noopener noreferrer">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Github リポジトリ</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Githubリポジトリ</font></span></strong>
     </a>
 </div><br />
 
-この Wiki のセクションでは、SenseCAP Watcher のハードウェアコンポーネント、その構造、および追加アクセサリの使用について説明します。
+このWikiのセクションでは、SenseCAP Watcherのハードウェアコンポーネント、その構造、および追加アクセサリーの使用に焦点を当てます。
 
 ## 仕様
 
 <div class="table-center">
-	<table align="center">
+<table align="center">
         <tr>
             <th>ハードウェア</th>
             <th>説明</th>
@@ -45,16 +40,16 @@ https://github.com/Seeed-Studio/wiki-documents/issues
             <td align="center">ESP32-S3 @240MHz 8MB PSRAM</td>
         </tr>
         <tr>
-            <td align="center">内蔵 AI プロセッサ</td>
+            <td align="center">内蔵AIプロセッサ</td>
             <td align="center">Himax HX6538 (Cortex M55 + Ethos-U55)</td>
         </tr>
         <tr>
             <td align="center">カメラ</td>
-            <td align="center">OV5647 120° FOV <br /> 固定焦点 3 メートル</td>
+            <td align="center">OV5647 120° FOV <br /> 固定焦点 3メートル</td>
         </tr>
         <tr>
             <td align="center">Wi-Fi</td>
-            <td align="center">IEEE 802.11b/g/n 準拠<br />2.4GHz 帯域<br />無線範囲: 最大 100 メートル (オープンスペーステスト)</td>
+            <td align="center">IEEE 802.11b/g/n準拠<br />2.4GHz帯<br />無線範囲：最大100メートル（開放空間テスト）</td>
         </tr>
         <tr>
             <td align="center">Bluetooth LE</td>
@@ -62,55 +57,55 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         </tr>
         <tr>
             <td align="center">アンテナ</td>
-            <td align="center">内蔵 Wi-Fi および BLE アンテナ</td>
+            <td align="center">内蔵Wi-FiおよびBLEアンテナ</td>
         </tr>
         <tr>
             <td align="center">ディスプレイ</td>
-            <td align="center">1.45 インチ、412×412 解像度のタッチスクリーン</td>
+            <td align="center">1.45インチタッチスクリーン、412×412解像度</td>
         </tr>
         <tr>
-            <td align="center">マイク</td>
-            <td align="center">単一マイク</td>
+            <td align="center">マイクロフォン</td>
+            <td align="center">シングルマイクロフォン</td>
         </tr>
         <tr>
             <td align="center">スピーカー</td>
-            <td align="center">1W スピーカー出力</td>
+            <td align="center">1Wスピーカー出力</td>
         </tr>
         <tr>
             <td align="center">ホイール</td>
-            <td align="center">上下スクロールおよびボタン操作対応</td>
+            <td align="center">上下スクロールとボタンをサポート</td>
         </tr>
         <tr>
             <td align="center">LED</td>
-            <td align="center">1xRGB ライト (インジケーション用)</td>
+            <td align="center">表示用1xRGBライト</td>
         </tr>
         <tr>
-            <td align="center">microSD カードスロット</td>
-            <td align="center">最大 32GB FAT32 microSD カード対応</td>
+            <td align="center">microSDカードスロット</td>
+            <td align="center">最大32GB FAT32 microSDカードをサポート</td>
         </tr>
         <tr>
             <td align="center">フラッシュ</td>
-            <td align="center">ESP32-S3 用 32MB フラッシュ<br />Himax HX6538 用 16MB フラッシュ</td>
+            <td align="center">ESP32-S3用32MBフラッシュ<br />Himax HX6538用16MBフラッシュ</td>
         </tr>
         <tr>
             <td align="center">拡張インターフェース</td>
-            <td align="center">1xGrove IIC インターフェース<br />2x4 メスヘッダー (1xIIC, 2xGPIO, 2xGND, 1x3.3V_OUT, 1x5V_IN)</td>
+            <td align="center">1xGrove IICインターフェース<br />2x4メスヘッダー（1xIIC、2xGPIO、2xGND、1x3.3V_OUT、1x5V_IN）</td>
         </tr>
         <tr>
             <td align="center">USB-C</td>
-            <td align="center">背面に 1x USB-C (電源供給のみ)<br />底面に 1x USB-C (電源供給およびプログラミング対応)</td>
+            <td align="center">背面に1x USB-C（電源供給のみ）<br />底面に1x USB-C（電源供給およびプログラミング）</td>
         </tr>
         <tr>
             <td align="center">リセットボタン</td>
-            <td align="center">底面の穴に 1xRST ボタン</td>
+            <td align="center">底面の穴に1xRSTボタン</td>
         </tr>
         <tr>
             <td align="center">電源供給</td>
-            <td align="center">5V DC 電源</td>
+            <td align="center">5V DC電源</td>
         </tr>
         <tr>
             <td align="center">バッテリー</td>
-            <td align="center">3.7V 400mAh リチウムイオンバッテリー (バックアップ電源)</td>
+            <td align="center">バックアップ電源として3.7V 400mAhリチウムイオンバッテリー</td>
         </tr>
         <tr>
             <td align="center">動作温度</td>
@@ -118,23 +113,23 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         </tr>
         <tr>
             <td align="center">取り付けブラケット</td>
-            <td align="center">壁、デスクトップ、ブラケット設置対応<br />1 x ユニバーサルホイールと接着剤付きベースプレート<br />1 x 1/4 インチ メスアダプターセット</td>
+            <td align="center">壁面、デスクトップ、ブラケット設置をサポート<br />粘着剤付きユニバーサルホイールとベースプレート1個<br />1/4"メスアダプターセット1個</td>
         </tr>
     </table>
 </div>
 
-## 特徴
+## 機能
 
-- デバイス内およびサーバーAI処理を組み合わせた高効率アーキテクチャ
-- 無限モーダルでの拡張性
-- オープンソースおよびオンプレミス展開によるプライバシーの確保
+- デバイス上 + サーバーAI処理による高効率アーキテクチャ
+- 無限モーダルによる拡張性
+- オープンソースとオンプレミス展開によるプライバシー保護
 - カスタマイズ可能な感情応答
 
-## 前面ビュー
+## 正面図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-1.png" style={{width:1000, height:'auto'}}/></div>
 
-## 背面ビュー
+## 背面図
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-2.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -142,27 +137,27 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware-3.png" style={{width:1000, height:'auto'}}/></div>
 
-## 取り付けインターフェース
+## マウントインターフェース
 
-Watcherデバイスの背面には、さまざまな表面やアクセサリーにデバイスを安全に取り付けるための取り付けブラケットがあります。現在、異なる設置ニーズに対応するために、2種類の取り付けブラケットを提供しています：
+Watcherデバイスの背面には、デバイスを様々な表面やアクセサリーに安全に取り付けることができるマウントブラケットがあります。現在、異なる設置ニーズに対応するため、2種類のマウントブラケットを提供しています：
 
 :::tip
-Watcher本体には360°回転ブラケットのみが付属しています。1/4ネジ三脚ブラケットが必要な場合は、[こちら](https://www.seeedstudio.com/Mini-Tripod-p-5978.html)から別途購入してください。
+Watcher本体には360°回転ブラケットのみが付属していることにご注意ください。1/4ネジ三脚ブラケットが必要な場合は、別途[購入](https://www.seeedstudio.com/Mini-Tripod-p-5978.html)してください。
 :::
 
 ### 360°回転ブラケット
 
-   - このブラケットは、壁やその他の垂直面への簡単な取り付けを目的としています。
-   - 360度の回転が可能で、Watcherデバイスの向きを調整して希望の視野角を得ることができます。
-   - 回転ブラケットは、位置の柔軟性を提供し、壁への安全な取り付けを保証します。
+- このブラケットは、壁やその他の垂直面への簡単な設置用に設計されています。
+- 完全な360度回転を提供し、Watcherデバイスの向きを調整して希望する視野角を実現できます。
+- 回転ブラケットは位置決めの柔軟性を提供し、壁への確実な取り付けを保証します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/omni_wheel_bracket.gif" style={{width:650, height:'auto'}}/></div><br />
 
 ### 1/4ネジ三脚ブラケット
 
-   - このブラケットは、机、テーブル、棚などの平らな表面にWatcherを設置するのに最適です。
-   - 標準的な1/4インチネジを備えており、ほとんどの三脚やその他の取り付けアクセサリーと互換性があります。
-   - 三脚ブラケットは安定性を提供し、特定のニーズに応じてWatcherをさまざまな高さや角度に配置することができます。
+- このブラケットは、机、テーブル、棚などの平面にWatcherを設置するのに最適です。
+- 標準の1/4インチネジを備えており、ほとんどの三脚やその他のマウントアクセサリーと互換性があります。
+- 三脚ブラケットは安定性を提供し、特定のニーズに応じて様々な高さと角度でWatcherを配置できます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/threaded_bracket.gif" style={{width:650, height:'auto'}}/></div>
 
@@ -172,25 +167,25 @@ Watcher本体には360°回転ブラケットのみが付属しています。1/
     </a>
 </div>
 
-これらの取り付けブラケットを使用するには、以下の一般的な手順に従ってください：
+これらのマウントブラケットのいずれかを使用するには、以下の一般的な手順に従ってください：
 
-1. 設置場所（壁または平らな表面）に基づいて適切なブラケットを選択します。
+1. 設置予定場所（壁または平面）に基づいて適切なブラケットを選択します。
 
-2. 選択したブラケットをWatcherデバイスの背面にある取り付けブラケットに取り付けます。偶発的な取り外しを防ぐために、しっかりと接続してください。
+2. 選択したブラケットをWatcherデバイス背面のマウントブラケットに取り付けます。偶発的な脱落を防ぐため、確実に接続してください。
 
 3. 360°回転ブラケットの場合：
-   - Watcherを設置したい壁の場所を特定します。
-   - 必要に応じて、付属のネジとアンカーを使用してブラケットを壁にしっかりと取り付けます。
-   - Watcherの向きを調整し、希望の角度に回転させます。
+   - Watcherを設置したい壁上の希望する場所を特定します。
+   - 付属のネジとアンカー（必要に応じて）を使用して、ブラケットを壁に確実に取り付けます。
+   - Watcherを希望する角度に回転させて向きを調整します。
 
 4. 1/4ネジ三脚ブラケットの場合：
-   - Watcherを設置したい安定した平らな表面を選択します。
+   - Watcherを設置したい安定した平面を選択します。
    - 三脚を使用する場合は、1/4インチネジを使用して三脚をブラケットに取り付けます。
-   - 三脚の高さと角度を調整し、Watcherの最適な視野位置を確保します。
+   - Watcherの最適な視野位置を実現するため、三脚の高さと角度を調整します。
 
-5. いずれかのブラケットを使用してWatcherを安全に取り付けたら、電源を接続し、好みに応じて設定を行うことができます。
+5. いずれかのブラケットを使用してWatcherが確実にマウントされたら、電源に接続し、お好みに応じて設定を行うことができます。
 
-これらの2種類の取り付けブラケットオプションを提供することで、Watcherデバイスをさまざまな環境に柔軟かつ便利に統合できるようにしています。壁掛け設置やデスクフレンドリーな配置のいずれを好む場合でも、当社のブラケットは安全で調整可能な取り付けを保証します。
+これら2つのマウントブラケットオプションを提供することで、様々な環境へのWatcherデバイスの統合において柔軟性と利便性を提供することを目指しています。壁掛け設置または机上設置のいずれをお好みでも、当社のブラケットは確実で調整可能な設置を保証します。
 
 :::tip
 Watcher本体には以下のスタンドは付属していませんので、スタンドが必要な場合は別途購入してください。
@@ -198,141 +193,140 @@ Watcher本体には以下のスタンドは付属していませんので、ス�
 
 ## ハードウェア図
 
-Watcher のハードウェアアーキテクチャについて続けて、図に示された詳細を掘り下げていきます。
+Watcherのハードウェアアーキテクチャについて、図で提供された詳細を詳しく見ていきましょう。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/Diagram.png" style={{width:1000, height:'auto'}}/></div>
 
-Watcher の中心部は、**ESP32-S3** チップで構成されたメイン MCU です。この強力なマイクロコントローラーは 240MHz で動作し、効率的な処理とメモリ管理のために 8MB の PSRAM を備えています。
+Watcherの心臓部はメインMCUで、これは**ESP32-S3**チップです。この強力なマイクロコントローラーは240MHzで動作し、効率的な処理とメモリ管理のために8MBのPSRAMを搭載しています。
 
-ESP32-S3 は以下のさまざまな周辺機器やインターフェースと通信します：
+ESP32-S3は様々な周辺機器とインターフェースと通信します：
 
-1. **ディスプレイ**: SPI/I2C インターフェースを介して **1.45インチ 412*412** LCD タッチスクリーンに接続されており、直感的なユーザー操作と鮮やかな視覚出力を可能にします。
+1. **ディスプレイ**: SPI/I2Cインターフェースを介して**1.45インチ 412*412** LCD タッチスクリーンに接続し、直感的なユーザーインタラクションと鮮やかな視覚出力を可能にします。
 
-2. **オーディオ**: I2S インターフェースを使用してスピーカーとマイクに接続され、音声入力および出力機能を提供します。
+2. **オーディオ**: I2Sインターフェースにより、ESP32-S3はスピーカーとマイクロフォンと通信し、音声入出力機能を実現します。
 
-3. **ストレージ**: SPI インターフェースを介して接続された Flash 32M モジュールを搭載しており、ファームウェア、データ、ユーザーファイルの保存に十分な容量を提供します。
+3. **ストレージ**: WatcherにはSPIインターフェース経由で接続されたFlash 32Mモジュールが搭載されており、ファームウェア、データ、ユーザーファイル用の十分なストレージを提供します。
 
-4. **ワイヤレス接続**: ESP32-S3 は Wi-Fi と BLE 機能を統合しており、他のデバイスやネットワークとのシームレスなワイヤレス通信を可能にします。
+4. **ワイヤレス接続**: ESP32-S3はWi-FiとBLE機能を統合し、他のデバイスやネットワークとのシームレスなワイヤレス通信を可能にします。
 
-5. **拡張性**: I2C インターフェースを介して接続された拡張ポートにより、将来のハードウェア追加やカスタマイズが可能です。
+5. **拡張性**: I2Cインターフェース経由で接続された拡張ポートにより、将来のハードウェア追加とカスタマイゼーションが可能です。
 
-6. **ユーザー入力**: GPIO/PWM を介して接続されたダイヤルホイールにより、Watcher の機能を直感的に操作および制御できます。
+6. **ユーザー入力**: GPIO/PWM経由で接続されたダイヤルホイールは、ユーザーがWatcherの機能をナビゲートし制御するための直感的な方法を提供します。
 
-7. **外部ストレージ**: SPI インターフェースを介した Micro SD カードスロットにより、追加のデータやメディアファイルの保存のために Watcher のストレージ容量を拡張できます。
+7. **外部ストレージ**: SPI経由でインターフェースされたMicro SDカードスロットにより、ユーザーは追加のデータとメディアファイル用にWatcherのストレージ容量を拡張できます。
 
-8. **電源とデータ**: USB ポートを使用して 400mAh バッテリーを充電し、Watcher と他のデバイス間でデータを転送できます。
+8. **電源とデータ**: USBポートは400mAhバッテリーの充電とWatcherと他のデバイス間のデータ転送に利用できます。
 
-AI MCU には Cortex M55 と US5 コアを備えた Himax HX6538 チップが採用されており、メイン MCU と連携して AI 関連のタスクや計算を処理し、Watcher のインテリジェントな機能を強化します。
+AI MCUであるHimax HX6538チップは、Cortex M55とUS5コアを搭載し、メインMCUと連携してAI関連のタスクと計算を処理し、Watcherのインテリジェント機能を強化します。
 
-最後に、Watcher には MIPI インターフェースを介して接続される可能性が高い Camera OV5647 モジュールが搭載されており、コンピュータビジョンアプリケーションや視覚センサー機能を提供します。
+最後に、WatcherはCamera OV5647モジュールを搭載しており、おそらくMIPIインターフェース経由で接続され、コンピュータビジョンアプリケーションと視覚センシングを可能にします。
 
-この包括的なハードウェアアーキテクチャにより、Watcher はディスプレイ、オーディオ、ワイヤレス接続、ストレージ、AI 機能をコンパクトで効率的なデザインに統合し、豊富で多用途なユーザー体験を提供します。
+この包括的なハードウェアアーキテクチャにより、Watcherはディスプレイ、オーディオ、ワイヤレス接続、ストレージ、AI機能をコンパクトで効率的な設計に組み合わせ、機能豊富で多用途なユーザーエクスペリエンスを提供できます。
 
-## Watcher の充電
+## Watcherの充電
 
-Watcher には合計 2 つの USB-C ポートが搭載されており、ユーザーは各 Watcher の設置場所に最適な電源を見つけることができます。
+Watcherには合計2つのUSB-Cポートがあり、ユーザーは異なるWatcherの配置に対してそれぞれ最も適切な電源を見つけることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/charging.png" style={{width:1000, height:'auto'}}/></div>
 
-Watcher を充電する際は、通常のメーカー製の電源アダプターを使用してください。Watcher を充電するためには、**5V/1A** の電源仕様を使用することを推奨します。Watcher と通信したい場合は、信号ケーブル付きの適合する USB-C ケーブルを使用する必要があります。
+Watcherを充電する際は、必ず正規メーカーの電源アダプターを使用してください。Watcherの電源には**5V/1A**の電源仕様を使用することをお勧めします。Watcherと通信したい場合は、信号ケーブル付きの準拠したUSB-Cケーブルを使用する必要があります。
 
 :::caution
-Watcher に対応した電源プラグを使用してください。Watcher は 5V の電源で動作する必要があり、非対応の電源アダプターや 5V を超える電圧の電源を使用すると故障する可能性があります！
+Watcherと互換性のある電源プラグを使用してください。Watcherは5V電源で給電する必要があり、非準拠の電源アダプターや5Vを超える電圧の電源を使用すると焼損する可能性があります！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/adapter.jpg" style={{width:350, height:'auto'}}/></div>
 
-上記の図は推奨されるアダプター仕様を示しています。適切なアダプターの購入先がわからない場合は、以下のリンクから直接購入することができます。
+上記の図は推奨アダプター仕様を示しています。適切なアダプターをどこで購入できるかわからない場合は、以下のリンクから直接購入することを選択できます。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     </a>
 </div>
 :::
 
 ## シリアルコンソールへの接続
 
-Watcher を USB 経由で接続すると、Windows は新しいシリアルポートを 2 つ登録します。私の場合、COM23 と COM24 でした。Circuitpython のファンであり、REPL が大好きな私は、シリアルターミナルで何が表示されるか試してみることにしました。このために Putty を使用し、115200 ボーのシリアルポートを設定しました（運よく、最初の COM23 ポートがコマンドコンソールを発見するために必要なものでした）。もう一方の COM24 は、Grove Vision AI V2 と同様に Xmodem プロトコルを使用してファームウェアをアップグレードするために使用されます。
+WatcherをUSB経由で接続すると、Windowsは2つの新しいシリアルポートを登録します。私の場合、COM23とCOM24でした。私はCircuitpythonのファンで、REPLが大好きなので、シリアルターミナルに何が表示されるかを確認する実験をすることにしました！このためにPuttyを使用し、115200ボーレートでシリアルポートを使用するように設定しました（幸運なことに、最初のCOM23ポートがすでにコマンドコンソールを発見するために必要なポートでした）。しかし、もう一方のCOM24は、Grove Vision AI V2と同じ方法でXmodemプロトコルを使用してファームウェアをアップグレードするために使用されます。
 
-すぐに、ターミナルにはデバイスのメモリに関する一連の情報が表示されます。Enter キーを押すと、プロンプトが表示され、以下にリストしたいくつかのコマンドを入力することができます：
+すぐに、ターミナルはデバイスのメモリに関する一連の情報を表示します。Enterキーを押すと、プロンプトが表示され、以下にリストするいくつかのコマンドを入力できます：
 
 ```
 help  [<string>] 
-引数が指定されていない場合は登録されているすべてのコマンドの概要を表示し、指定された場合はそのコマンドの概要を表示します。<string> はコマンド名です。
+Print the summary of all registered commands if no arguments are given, otherwise print summary of given command, where <string> is the name of command
 
 wifi_sta  [-s <ssid>] [-p <password>]
-WiFi をステーションモードに設定し、指定されたソフトAPに接続します。
--s <ssid> AP の SSID
--p <password> AP のパスワード
-
-ota  [-t <int>] [--url=<string>] バージョンチェックを無視して OTA を強制実行します。
--t, --ota_type=<int> 0: AI モデル, 1: Himax, 2: ESP32
--url=<string> AI モデル、Himax または ESP32 ファームウェアの URL
+WiFi is station mode, join specified soft-AP
+s <ssid> SSID of AP
+p <password> password of AP
+ota  [-t <int>] [--url=<string>] force ota, ignoring version check
+-t, --ota_type=<int> 0: ai model, 1: himax, 2: esp32
+-url=<string> url for ai model, himax or esp32 firmware
 
 taskflow  [-iej] [-f <string>]
-i, --import タスクフローをインポート
-e, --export タスクフローをエクスポート
-f, --file=<string> ファイルパス。SD 経由でタスクフロー JSON をインポートまたはエクスポートします。例: test.json
-j, --json 標準入力からタスクフロー JSON をインポート
+i, --import import taskflow
+e, --export export taskflow
+f, --file=<string> File path, import or export taskflow json string by SD, eg: test.json
+j, --json import taskflow json string by stdin
 
-例: JSON 文字列または SD ファイルでタスクフローをインポート: taskflow -i -f "test.json".
-例: 標準出力または SD ファイルにタスクフローをエクスポート: taskflow -e -f "test.json"
+Example: Import taskflow by json string or SD file: taskflow -i -f "test.json".
+Example: Export taskflow to stdout or SD file: taskflow -e -f "test.json"
 
 factory_info
-工場出荷時の情報を取得します。
+Get factory infomation
 
 battery
-バッテリーの残量を取得します。
+Get battery percent
 
 bsp  subcmd [subcmd args] 
-BSP 関数を呼び出します。
+Bsp call bsp functions
 
-例: 指定された I2C バスをスキャン: bsp i2cdetect <0|1>
+Example Scan the specified i2c bus: bsp i2cdetect <0|1>
 
 reboot 
-デバイスを再起動します。
+Reboot the device
 
 factory_reset 
-工場出荷時設定にリセットしてデバイスを再起動します。
+Factory reset and reboot the device
 
 record  [-t <int>] [-f <string>]
-オーディオを録音して SD に保存します。
--t, --time=<int> 録音時間（秒）
--f, --file=<string> ファイルパス。PCM オーディオデータを SD カードに保存します。
+Record audio and save to SD.
+-t, --time=<int> record time, s
+-f, --file=<string> File path, Store PCM audio data in SD card
 
 vi_ctrl  [-sec] [-z <int>] 
-音声インタラクション制御（おそらく Push to Talk 機能と併用されます）
--s, --start ウェイクアップを開始し、録音を開始
--e, --end 録音を終了
--c, --stop 分析または再生中の音声インタラクションを停止し、アイドル状態にします。
--z, --exit=<int> 0: VI を終了, 1: VI を終了して新しいタスクフローを実行
+Voice interaction ctrl (Probably will be used with Push to Talk function)
+-s, --start start wakeup, and start record
+-e, --end end record
+-c, --stop stop voice interaction when analyzing or palying, Put it into idle.
+-z, --exit=<int> 0: exit vi, 1:exit vi then run new taskflow
 
 iperf  [-suVa] [-c <ip>] [-p <port>] [-l <length>] [-i <interval>] [-t <time>] [-b <bandwidth>]
-接続性能を確認します。Linux の iperf コマンドに似ています。
--c, --client=<ip> クライアントモードで実行し、<host> に接続
--s, --server サーバーモードで実行
--u, --udp TCP の代わりに UDP を使用
--V, --ipv6_domain IPv4 の代わりに IPv6 アドレスを使用
--p, --port=<port> サーバーポートをリッスン/接続
--l, --len=<length> 読み書きバッファサイズを設定
--i, --interval=<interval> 定期的な帯域幅レポートの間隔（秒）
--t, --time=<time> 送信時間（秒、デフォルトは 10 秒）
--b, --bandwidth=<bandwidth> 送信帯域幅（Mbits/sec）
--a, --abort 実行中の iperf を中止
+Check conection performance. Similar to iperf linux command.
+-c, --client=<ip> run in client mode, connecting to <host>
+-s, --server run in server mode
+-u, --udp use UDP rather than TCP
+-V, --ipv6_domain use IPV6 address rather than IPV4
+-p, --port=<port> server port to listen on/connect to
+-l, --len=<length> Set read/write buffer size
+-i, --interval=<interval> seconds between periodic bandwidth reports
+-t, --time=<time> time in seconds to transmit for (default 10 secs)
+-b, --bandwidth=<bandwidth> bandwidth to send at in Mbits/sec
+-a, --abort abort running iperf
 
 rgb  [-r <int>] [-g <int>] [-b <int>] [-m <int>] [-v <int>] [-t <int>]
-RGB LED の値を設定します。例: rgb -r 255 -g 0 -b 0 -m 3
--r, --red=<int> 赤の値、0~255
--g, --green=<int> 緑の値、0~255
--b, --blue=<int> 青の値、0~255
--m, --mode=<int> 1: 呼吸, 2: 点滅, 3: 固定（デフォルトは 3）
--v, --step_value=<int> RGB ステップ値（デフォルトは 3）
--t, --step_time_ms=<int> RGB ステップ時間（ミリ秒、デフォルトは 5）
-``` 
+Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
+-r, --red=<int> red value, 0~255
+-g, --green=<int> green value, 0~255
+-b, --blue=<int> blue value, 0~255
+-m, --mode=<int> 1: breath, 2: blink, 3:solid, default 3
+-v, --step_value=<int> RGB step value, default 3
+-t, --step_time_ms=<int> RGB step time(ms), default 5
+```
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

@@ -70,7 +70,7 @@ PlatformIO支持一些最流行的IDE和文本编辑器作为插件。在本wiki
 
       - 对于 **Unix**：`~/.platformio`
 
-      - 对于 **Windows**：`C:\Users\{username}\.platformio`，其中 `{username}` 是您的用户名。
+      - 对于 **Windows**：`C:\Users\{username}.platformio`，其中 `{username}` 是您的用户名。
 
 2. 导航到 `platforms` 文件夹。
 

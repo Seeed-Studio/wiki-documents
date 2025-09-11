@@ -1,43 +1,40 @@
 ---
-description: Watcher機能モジュールの開発方法を説明します。
+description: Watcher機能ブロックの開発方法について説明します。
 title: Watcher機能モジュール開発ガイド
 image: https://files.seeedstudio.com/wiki/watcher_software_framework/watcher_function_module.webp
 slug: /ja/watcher_function_module_development_guide
 sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 11/5/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 # Watcher機能モジュール開発ガイド
 
-まずは[Watcherソフトウェアフレームワーク](https://wiki.seeedstudio.com/ja/watcher_software_framework)を読んで、機能モジュールがどのように動作するかを理解することをお勧めします。
+機能モジュールがどのように動作するかを理解するために、まず[Watcherソフトウェアフレームワーク](https://wiki.seeedstudio.com/watcher_software_framework)を読むことをお勧めします。
 
-このドキュメントでは、新しい機能モジュールを開発するためのステップバイステップガイドを示します。例として`UART Alarm`モジュールを取り上げます。
+このドキュメントでは、新しい機能モジュールを開発する方法について、ステップバイステップのガイドを示します。例として`UART Alarm`モジュールを使用します。
 
 ## 1. インストールと初回ビルド
 
-[Watcher開発環境の構築](https://wiki.seeedstudio.com/ja/build_watcher_development_environment)の手順をスキップした場合は、まずその手順を実行してください。
+スキップした場合は、[Watcher開発環境の構築](https://wiki.seeedstudio.com/build_watcher_development_environment)の手順を実行してください。
 
 ```shell
-# 現在のディレクトリは PROJ_ROOT_DIR/examples/factory_firmware/ です
+# you're in PROJ_ROOT_DIR/examples/factory_firmware/
 cd main/task_flow_module
 ```
 
-## 2. 適切なテンプレートを選択
+## 2. 適切なテンプレートを選択する
 
-[Watcherソフトウェアフレームワーク](https://wiki.seeedstudio.com/ja/watcher_software_framework)では、既存の機能モジュール（以下、**FM**と略します）とその用途について紹介しました。新しいFMを開発する際には、既存のFMの中から最も近いものを参考にするのが良いでしょう。このチュートリアルではアラームFMを開発するので、最もシンプルなアラームFMである`local alarmer`を選択します。
+[Watcher Software Framework](https://wiki.seeedstudio.com/watcher_software_framework)では、既存の機能モジュール（以下のドキュメントでは**FM**と略記）とその用途について紹介しました。新しいFMを開発する際は、参考として最も近い既存のFMから始めるのが良いでしょう。このチュートリアルではアラーマーFMを開発するので、アラーマーFMの中から一つ選択します。`local alarmer`が最もシンプルなので、これを採用します。
 
 ```shell
 cp tf_module_local_alarm.h tf_module_uart_alarm.h
 cp tf_module_local_alarm.c tf_module_uart_alarm.c
 ```
 
-ファイル名は何でも構いませんが、ビルドシステムによって`.h`および`.c`ファイルがスキャンされ、コンパイルコードツリーに取り込まれます。ただし、意味のあるファイル名を付けることをお勧めします。
+ファイル名は何でも構いません。`.h` と `.c` ファイルはすべてビルドシステムによってスキャンされ、コンパイルコードツリーに取り込まれます。ただし、意味のあるファイル名を付けることを推奨します。
 
 ## 3. 登録の実装
 
@@ -50,15 +47,15 @@ esp_err_t tf_module_register(const char *p_name,
                                 tf_module_mgmt_t *mgmt_handle);
 ```
 
-最初の3つのパラメータは、FMの名前、説明、バージョンです。これらは現在内部的に使用されており、例えば登録テーブルからFMを一致させたり、ログを出力したりしますが、将来的にはFMがローカルサービスと通信する際に使用される予定です。
+最初の3つのパラメータは、あなたのFMの名前、説明、バージョンです。これらは現在内部的に使用されています（例：登録テーブルからのFMマッチング、ログ出力など）が、将来的にはFMがローカルサービスと通信する際に使用される予定です。
 
 ```cpp
-// tf_module_uart_alarm.h内
+// in tf_module_uart_alarm.h
 #define TF_MODULE_UART_ALARM_NAME "uart alarm"
 #define TF_MODULE_UART_ALARM_VERSION "1.0.0"
 #define TF_MODULE_UART_ALARM_DESC "uart alarm function module"
 
-// tf_module_uart_alarm.c内
+// in tf_module_uart_alarm.c
 esp_err_t tf_module_uart_alarm_register(void)
 {
     return tf_module_register(TF_MODULE_UART_ALARM_NAME,
@@ -71,16 +68,16 @@ esp_err_t tf_module_uart_alarm_register(void)
 4番目のパラメータは、このFMのライフサイクルを管理するために必要なAPI関数を含む構造体です。
 
 ```cpp
-// tf_module.h内
+// in tf_module.h
 typedef struct tf_module_mgmt {
     tf_module_t *(*tf_module_instance)(void);
     void (*tf_module_destroy)(tf_module_t *p_module);
 }tf_module_mgmt_t;
 ```
 
-`tf_module_instance`は、TFEがタスクフロー内で指定されたすべてのFMを初期化する際に呼び出される関数です。基本的には、エンジンがタスクフロー作成リクエストを受信し、フローを開始していることを意味します。`tf_module_destroy`は、TFEがフローを停止する際に呼び出される関数です。
+`tf_module_instance` は、エンジンがタスクフローで指定されたすべてのFMを初期化する際にTFEによって呼び出される関数です。基本的に、これはエンジンがタスクフロー作成リクエストを受信し、フローを開始したことを意味します。`tf_module_destroy` は、TFEがフローを停止する際に呼び出される関数です。
 
-### 3.1 インスタンス
+### 3.1 Instance
 
 ```cpp
 tf_module_t *tf_module_uart_alarm_instance(void)
@@ -94,7 +91,7 @@ tf_module_t *tf_module_uart_alarm_instance(void)
     p_module_ins->module_base.ops = &__g_module_ops;
 
     if (atomic_fetch_add(&g_ins_cnt, 1) == 0) {
-        // 初回インスタンス化時にハードウェアを初期化する必要があります
+        // the 1st time instance, we should init the hardware
         esp_err_t ret;
         uart_config_t uart_config = {
             .baud_rate = 115200,
@@ -117,20 +114,20 @@ err:
 }
 ```
 
-上記は`instance`関数の実装例です。この関数では、FMのパラメータを保持するために定義された構造体`tf_module_uart_alarm_t`のメモリを割り当てます。これはC++クラスのメンバーのようなものです。構造体`tf_module_uart_alarm_t`の最初のフィールドは重要で、`tf_module_t module_base`です。C++プログラミングの観点から見ると、`tf_module_t`はすべてのFMの親クラスに相当します。この`instance`関数は、TFEに`tf_module_t`構造体へのポインタを提供します。
+上記は `instance` 関数の実装です。この関数は、このFMのパラメータを保持するための構造体 `tf_module_uart_alarm_t` のメモリを割り当てます。これはC++クラスのメンバーのような役割を果たします。構造体 `tf_module_uart_alarm_t` において、最初のフィールドが重要です - `tf_module_t module_base`。C++プログラミングの観点から見ると、`tf_module_t` はすべてのFMの親クラスです。`instance` 関数は単純にTFEに `tf_module_t` 構造体へのポインタを提供します。
 
 ```cpp
-// tf_module_uart_alarm.h内
+// in tf_module_uart_alarm.h
 typedef struct {
     tf_module_t module_base;
-    int input_evt_id;           // これもモジュールインスタンスIDとして使用可能
-    int output_format;          // デフォルトは0、上記コメント参照
-    bool include_big_image;     // デフォルト: false
-    bool include_small_image;   // デフォルト: false
-    bool include_boxes;         // デフォルト: false、近日対応予定
+    int input_evt_id;           //this can also be the module instance id
+    int output_format;          //default 0, see comment above
+    bool include_big_image;     //default: false
+    bool include_small_image;   //default: false
+    bool include_boxes;         //default: false, coming soon
 } tf_module_uart_alarm_t;
 
-// tf_module_uart_alarm.c内
+// in tf_module_uart_alarm.c
 tf_module_t *tf_module_uart_alarm_instance(void)
 {
     ...
@@ -139,10 +136,10 @@ tf_module_t *tf_module_uart_alarm_instance(void)
 }
 ```
 
-`tf_module_t`の2つのメンバーを割り当てる必要があります。
+`tf_module_t` の2つのメンバーを割り当てる必要があります。
 
 ```cpp
-// tf_module_uart_alarm.c内
+// in tf_module_uart_alarm.c
 tf_module_t *tf_module_uart_alarm_instance(void)
 {
     ...
@@ -150,18 +147,18 @@ tf_module_t *tf_module_uart_alarm_instance(void)
     p_module_ins->module_base.ops = &__g_module_ops;
 ```
 
-`p_module` - FMインスタンス自体を参照するポインタ。このポインタは、`destroy`関数がインスタンスのハンドラを取得し、そのメモリを解放するために使用されます。  
-`ops` - TFEがFMを操作するためのAPI関数を含む構造体。これについては後述します。
+`p_module` - FM自体のインスタンスを参照するポインタで、これは`destroy`関数がインスタンスのハンドラを取得し、そのメモリを解放するために使用されます。
+`ops` - TFEがFMを操作するためのAPI関数を含む構造体で、これについては後で説明します。
 
-インスタンス関数の残りの部分は、ハードウェアの初期化と、FM（機能モジュール）のロジックに関連する処理を行います。
+インスタンス関数の残りの部分は、ハードウェアとFMのロジックに関連する要素を初期化することです。
 
-特筆すべき点として、FMは複数回インスタンス化される可能性があります。そのため、`instance`関数の再呼び出しを処理する必要があります。もしFMが複数インスタンスをサポートしていない場合、`instance`関数の2回目以降の呼び出しではNULLポインタを返す必要があります。
+言及すべき点の一つは、FMは複数回インスタンス化される可能性があることです。`instance`関数の再入を処理する必要があり、FMが複数のインスタンスをサポートしない場合は、`instance`関数の2回目の呼び出しに対してNULLポインタを返す必要があります。
 
-この`uart alarmer`の例では、参照カウンタを使用して再呼び出しのロジックを処理します。
+この`uart alarmer`の例では、参照カウンタを使用して再入ロジックを処理します。
 
 ```cpp
 if (atomic_fetch_add(&g_ins_cnt, 1) == 0) {
-        // 初回のインスタンス化時にハードウェアを初期化する必要があります
+        // the 1st time instance, we should init the hardware
         esp_err_t ret;
         uart_config_t uart_config = {
             .baud_rate = 115200,
@@ -177,14 +174,14 @@ if (atomic_fetch_add(&g_ins_cnt, 1) == 0) {
     }
 ```
 
-### 3.2 破棄（Destroy）
+### 3.2 破棄
 
 ```cpp
 void tf_module_uart_alarm_destroy(tf_module_t *p_module_base)
 {
     if (p_module_base) {
         if (atomic_fetch_sub(&g_ins_cnt, 1) <= 1) {
-            // 最後の破棄呼び出し時にUARTを非初期化する
+            // this is the last destroy call, de-init the uart
             uart_driver_delete(UART_NUM_2);
             ESP_LOGI(TAG, "uart driver is deleted.");
         }
@@ -195,11 +192,11 @@ void tf_module_uart_alarm_destroy(tf_module_t *p_module_base)
 }
 ```
 
-`destroy`関数は常にシンプルです 😂 メモリを解放し、必要に応じてハードウェアを非初期化するだけです。
+`destroy` は常にシンプルです 😂 メモリを解放し、必要に応じてハードウェアを初期化解除するだけです。
 
-## 4. 操作の実装
+## 4. 操作を実装する
 
-親クラスの`ops`メンバーは以下のように定義されています。
+親クラスの `ops` メンバーは以下のように定義されています。
 
 ```c
 struct tf_module_ops
@@ -214,10 +211,13 @@ struct tf_module_ops
 
 TFEがFMを初期化する際、以下の順序でこれらの関数を呼び出します：`cfg` -> `msgs_sub_set` -> `msgs_pub_set` -> `start` -> `stop`。
 
-- `cfg` - タスクフローJSONからパラメータを取得し、それらを使用してFMを設定します。
-- `msgs_sub_set` - 上流FMとの接続を作成します。これは、上流FMのイベントIDにイベントハンドラを登録することで行います。入力パラメータ`evt_id`は、タスクフローJSONから抽出されたものをTFEが準備します。最初のパラメータ`p_module`はFMインスタンス自体へのポインタです。
-- `msgs_pub_set` - 下流FMへの接続を保存します。このFMに出力がない場合、この関数は空のままにできます。最初のパラメータ`p_module`はFMインスタンス自体へのポインタです。2番目のパラメータ`output_index`はポート番号を示します。例えば、このFMが2つの出力を持つ場合、`msgs_pub_set`は2回呼び出され、それぞれ`output_index`が0と1になります。3番目のパラメータ`p_evt_id`は、このポート上の下流FMのすべてのイベントIDを保持する配列へのポインタです。この配列のサイズは最後のパラメータ`num`で指定されます。
-- `start`と`stop` - 文字通りの意味です。どちらも`p_module`をパラメータとして受け取り、これはFMインスタンス自体へのポインタです。
+`cfg` - タスクフローjsonからパラメータを取得し、これらのパラメータを使用してFMを設定します
+
+`msgs_sub_set` - 上流FMのイベントIDにイベントハンドラを登録することで、上流FMへの接続を作成します。入力パラメータ`evt_id`は、タスクフローjsonから抽出してTFEによって準備されます。第1パラメータ`p_module`は、FMインスタンス自体へのポインタです。
+
+`msgs_pub_set` - 下流FMへの接続を保存します。このFMに出力がない場合、この関数を空のままにしておくことができます。第1パラメータ`p_module`は、FMインスタンス自体へのポインタです。第2パラメータ`output_index`はポート番号です。例えば、このFMに2つの出力がある場合、`msgs_pub_set`は2回呼び出され、`output_index`は順次0と1になります。第3パラメータ`p_evt_id`は、このポート上の下流FMのすべてのイベントIDを保持する配列へのポインタで、配列のサイズは最後のパラメータである`num`です。
+
+`start`と`stop` - は文字通りの意味です。どちらも`p_module`をパラメータとして受け取り、これはFMインスタンス自体へのポインタです。
 
 ### 4.1 cfg
 
@@ -269,7 +269,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-ご覧の通り、`cfg`関数はタスクフローのFMオブジェクトの`params`フィールドから渡されるcJSONオブジェクトからフィールド値を抽出するだけです。例えば、以下は`uart alarmer` FMを含む簡単なタスクフローです。
+ご覧のとおり、`cfg` 関数は、タスクフローの FM オブジェクトの `params` フィールドから来る cJSON オブジェクトからフィールド値を抽出しているだけです。例えば、以下は `uart alarmer` FM を含むシンプルなタスクフローです。
 
 ```json
 {
@@ -340,7 +340,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-上記のタスクフローにおいて、`uart alarmer` の `params` は以下の通りです：
+In the above task flow, the `params` for `uart alarmer` is
 
 ```json
 {
@@ -350,7 +350,7 @@ static int __cfg(void *p_module, cJSON *p_json)
 }
 ```
 
-cJSON を解析し、必要な値を抽出してモジュールインスタンスに通常保存します。
+通常、cJSONを解析し、必要な値を抽出してモジュールインスタンスに格納します。
 
 ### 4.2 msgs_sub_set
 
@@ -363,19 +363,19 @@ static int __msgs_sub_set(void *p_module, int evt_id)
 }
 ```
 
-上流の FM のイベント ID を記録して将来使用できるようにし、イベントハンドラーをそのイベントに登録します。
+上流FMのイベントIDを将来の使用のためにマークし、そのイベントのイベントハンドラーを登録します。
 
 ### 4.3 イベントハンドラー
 
-[Watcher Software Framework](https://wiki.seeedstudio.com/ja/watcher_software_framework) では、データフローがイベントループによって駆動されることを学びました。基本的に、FM はイベントハンドラーからデータを受け取り、そのデータを消費し、計算を行い、結果を得ます。そして、最終的にその結果をイベントループに投稿する必要があります。ターゲットは、この FM のデータに関心を持つ下流の FM です。
+[Watcher Software Framework](https://wiki.seeedstudio.com/watcher_software_framework)で学んだように、データフローはイベントループによって駆動されます。基本的に、FMはイベントハンドラーからデータを受信し、そのデータを消費し、計算を行い、結果を得ます。最終的に、結果をイベントループに投稿する必要があります - ターゲットは、このFMのデータに興味を持つ下流のFMです。
 
-この `uart alarmer` の例では、`TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE_AUDIO_TEXT` 型の出力データを持つアラームトリガー FM からデータを消費します。UART データ準備が簡単であるため、すべてのデータ生成をイベントループハンドラー内で行います。ただし、これは推奨されません。データ処理が時間を要する場合や IO を多く消費する場合は、バックグラウンド処理を行うワーカータスク（スレッド）を作成する必要があります。
+この`uart alarmer`の例では、出力データタイプが`TF_DATA_TYPE_DUALIMAGE_WITH_INFERENCE_AUDIO_TEXT`のアラームトリガーFMからデータを消費します。UARTデータの準備は簡単なので、イベントループハンドラー内ですべてのデータ生成を行います。ただし、データ処理が時間を要する場合やIO集約的な場合は、これは推奨されません。その場合は、バックグラウンド処理を行うワーカータスク（スレッド）を作成する必要があります。
 
-入力パラメータ `output_format` に応じて、バイナリ出力バッファまたは JSON 文字列を準備します。最終的にこれらのデータを UART に書き込みます。この FM の出力はハードウェアのみであり、他の FM ではないため、`msgs_pub_set` はダミーです。最後に、イベントループから来たデータを解放する必要があります。その理由は次のセクションで説明します。
+入力パラメータ`output_format`に従って、バイナリ出力バッファまたはJSON文字列を準備します。最終的に、これらのデータをUARTに書き込みます。私たちのFMには、別のFMではなくハードウェアという1つの出力しかないため、`msgs_pub_set`はダミーです。最後に、イベントループから来るデータを解放する必要があります。その理由は次のセクションで説明されます。
 
 ### 4.4 msgs_pub_set
 
-この例では、`msgs_pub_set` はダミーです。なぜなら、この FM には下流の消費者がいないからです。`ai camera` FM を例にとってみましょう。
+この例では、FMに下流のコンシューマーがないため、`msgs_pub_set`はダミーです。`ai camera` FMを例に取ってみましょう。
 
 ```cpp
 // in tf_module_ai_camera.c
@@ -404,9 +404,9 @@ static int __msgs_pub_set(void *p_module, int output_index, int *p_evt_id, int n
 }
 ```
 
-これは複雑ではなく、イベント ID を FM インスタンスの構造に保存するだけです。この場合、`tf_module_ai_camera_t` の型構造にメンバーフィールドを追加する必要があります。
+複雑ではありませんが、イベントIDをFMインスタンスの構造体に格納するだけです。ここで、FMの型構造体にメンバーフィールドを追加する必要があります。この場合は `tf_module_ai_camera_t` です。
 
-これらのイベント ID をいつ使用するのでしょうか？データが生成され、時間ゲートを通過する瞬間です。`ai camera` の例では、データはローカル AI 推論を実行する Himax SoC の SPI 出力から発生し、いくつかの条件ゲートを通過します。すべての条件が満たされると、データはイベントループに投稿される必要がある時点に到達します。
+これらのイベントIDをいつ使用するのでしょうか？データが生成され、時間ゲーティングを通過する瞬間です。`ai camera`の例では、データはローカルAI推論を実行するHimax SoCのSPI出力から発生し、いくつかの条件ゲートを通過します。すべての条件が満たされると、データはイベントループに投稿される必要がある時点に到達します。
 
 ```cpp
 // in tf_module_ai_camera.c
@@ -427,66 +427,67 @@ static int __msgs_pub_set(void *p_module, int output_index, int *p_evt_id, int n
 ...
 ```
 
-出力のすべてのサブスクライバーに投稿する必要があります。ご覧の通り、各サブスクライバーのデータをコピーしています。
+出力のすべての購読者に投稿する必要があります。ご覧のとおり、すべての購読者に対してデータのコピーを作成します。
 
 **メモリ割り当てと解放のルール**
-- データ生成 FM は各サブスクライバーのためにメモリを割り当てます。
-- データ消費 FM はデータを使い終わった後にメモリを解放します。
 
-### 4.5 開始と停止
+- データ作成者FMが各購読者に対してメモリ割り当てを行う
+- データ消費者FMがデータ使用後にメモリ解放を行う。
 
-これらは FM のランタイム制御であり、将来的にフローパウズ/再開をサポートするためのものです。現在のところ、FM をインスタンス化した後に実行することができますが、FM のライフサイクル管理と FM のランタイム制御にロジックを分割することを推奨します。
+### 4.5 start and stop
 
-## 5. テスト
+これらはFMのランタイム制御で、将来のフロー一時停止/再開をサポートします。現在、FMはインスタンス化後に実行できますが、FMのライフサイクル管理とFMのランタイム制御にロジックを分離することを推奨します。
 
-現在、`uart alarmer` FM を作成しました。プルリクエストを送る前に、ローカルでどのようにテストできるでしょうか。
+## 5. Test
 
-ローカルでタスクフローを実行するためのコンソールコマンドを実装します。
+これで`uart alarmer` FMができました。プルリクエストを出す前に、ローカルでテストする方法を説明します。
+
+タスクフローをローカルで発行するコンソールコマンドを実装します。
 
 ```shell
 SenseCAP> help taskflow
 taskflow  [-iej] [-f <string>]
-  タスクフローを JSON 文字列または SD ファイルからインポートします。例: taskflow -i -f "test.json"
+  import taskflow by json string or SD file, eg:taskflow -i -f "test.json".
 
-タスクフローを標準出力または SD ファイルにエクスポートします。例: taskflow -e -f "test.json"
-  -i, --import  タスクフローをインポート
-  -e, --export  タスクフローをエクスポート
-  -f, --file=<string>  ファイルパス。SD を使用してタスクフロー JSON 文字列をインポートまたはエクスポートします。例: test.json
-    -j, --json  標準入力からタスクフロー JSON 文字列をインポート
+export taskflow to stdout or SD file, eg: taskflow -e -f "test.json"
+  -i, --import  import taskflow
+  -e, --export  export taskflow
+  -f, --file=<string>  File path, import or export taskflow json string by SD, eg: test.json
+    -j, --json  import taskflow json string by stdin
 ```
 
-[ウォッチャー開発環境の構築](https://wiki.seeedstudio.com/ja/build_watcher_development_environment) - `5. ログ出力の監視` を参照してコンソールを取得してください。スペースや空白文字を削除したタスクフローを準備し、以下のようにタスクフローを実行します。
+[Watcher開発環境の構築](https://wiki.seeedstudio.com/build_watcher_development_environment) - `5. ログ出力の監視`を参照してコンソールを取得してください。スペースと空白文字を削除したタスクフローを準備し、以下でタスクフローを発行してください。
 
 ```shell
 taskflow -i -j<enter>
 Please input taskflow json:
-#<ここにタスクフロー JSON を貼り付けます。例として以下を使用>
+#<paste your task flow json here, for an example>
 {"tlid":3,"ctd":3,"tn":"Local Human Detection","type":0,"task_flow":[{"id":1,"type":"ai camera","index":0,"version":"1.0.0","params":{"model_type":1,"modes":0,"model":{"arguments":{"iou":45,"conf":50}},"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"silence_duration":5},"output_type":0,"shutter":0},"wires":[[2]]},{"id":2,"type":"alarm trigger","index":1,"version":"1.0.0","params":{"text":"human detected","audio":""},"wires":[[3]]},{"id":3,"type":"uart alarm","index":2,"version":"1.0.0","params":{"output_format":1},"wires":[]}]}
 ```
 
-タスクフローをどのように作成するか？[ウォッチャーソフトウェアフレームワーク](https://wiki.seeedstudio.com/ja/watcher_software_framework) では、各 FM とそのパラメータを紹介しています。タスクフローの作成は、Node-RED のように FM ブロック間にワイヤーを引くようなものです。
+タスクフローの作成方法は？[Watcher Software Framework](https://wiki.seeedstudio.com/watcher_software_framework)では、すべてのFMとそのパラメータを紹介しました。タスクフローの作成は、Node-REDのように、FMブロック間にワイヤーを描くようなものです。
 
-タスクフローを作成するための GUI が用意される前に、エクスポートコマンドを使用して例を収集できます。モバイルアプリを使用してローカルアラーム機能（RGB ライト）が有効なフローを実行し、そのフローが実行中に以下のコマンドでタスクフローをエクスポートします。
+タスクフローを作成するためのGUIを用意する前に、exportコマンドを使用してサンプルを収集できます。モバイルアプリを使用してローカルアラーム機能（RGBライト）を有効にしたフローを発行し、フローが実行されているときに、以下のコマンドでタスクフローをエクスポートします。
 
 ```shell
 taskflow -e
 ```
 
-このコマンドは、実行中のタスクフローをコンソールにエクスポートします。タスクフローが非常に長い場合、他のログによって出力が中断される可能性があります。この場合、TF カードが必要です。TF カードを FAT/exFAT ファイルシステムにフォーマットし、ウォッチャーに挿入します。次に、実行中のタスクフローを TF カードにエクスポートします。
+このコマンドは実行中のタスクフローをコンソールにエクスポートします。タスクフローが非常に長い場合、その出力が他のログによって中断される可能性があります。この場合、TFカードが必要です。TFカードをFAT/exFATファイルシステムにフォーマットし、Watcherに挿入します。これで実行中のタスクフローをTFカードにエクスポートできます。
 
 ```shell
 taskflow -e -f tf1.json
-# ルートディレクトリ内のファイル名のみサポート
-# パスに先頭ディレクトリを指定しないでください。このコマンドはディレクトリを作成できません
+# only support file name in the root dir
+# please don't specify leading dir in the path, the command can't create dir
 ```
 
-これで例が手に入りました。アラーマー FM の 1 つ（通常は最後の FM）を変更し、それを `uart alarmer` FM に置き換えます。FM の JSON オブジェクトにいくつかのパラメータを追加し、JSON エディタを使用して空白を削除し、上記の `taskflow -i -j` コマンドでインポートします。
+今、例を見たので、アラーマーFM（通常は最後のFM）の1つを変更し、それをあなたの`uart alarmer` FMに置き換え、あなたのFMのJSONオブジェクトにいくつかのパラメータを追加し、JSONエディタを使用して空白を削除し、上記の`taskflow -i -j`コマンドでインポートしてください。
 
-これで完了です。探索をお楽しみください。
+以上です。探索をお楽しみください。
 
 ## 付録 - その他のタスクフロー例
 
-以下に、開始するためのいくつかのタスクフロー例を提供します。
+ここでは、開始できるいくつかの追加のタスクフロー例を提供します。
 
 ```json
 {"tlid":3,"ctd":3,"tn":"Local Human Detection","type":0,"task_flow":[{"id":1,"type":"ai camera","index":0,"version":"1.0.0","params":{"model_type":1,"modes":0,"model":{"arguments":{"iou":45,"conf":50}},"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"silence_duration":5},"output_type":0,"shutter":0},"wires":[[2]]},{"id":2,"type":"alarm trigger","index":1,"version":"1.0.0","params":{"text":"human detected","audio":""},"wires":[[3,4]]},{"id":3,"type":"local alarm","index":2,"version":"1.0.0","params":{"sound":1,"rgb":1,"img":0,"text":0,"duration":1},"wires":[]},{"id":4,"type":"sensecraft alarm","index":3,"version":"1.0.0","params":{"silence_duration":30},"wires":[]}]}
@@ -500,9 +501,9 @@ taskflow -e -f tf1.json
 {"tlid":1719396404172,"ctd":1719396419707,"tn":"Man with glasses spotted, notify immediately","task_flow":[{"id":753589649,"type":"ai camera","type_id":0,"index":0,"vision":"0.0.1","params":{"model_type":0,"model":{"model_id":"60086","version":"1.0.0","arguments":{"size":1644.08,"url":"https://sensecraft-statics.oss-accelerate.aliyuncs.com/refer/model/1705306215159_jVQf4u_swift_yolo_nano_person_192_int8_vela(2).tflite","icon":"https://sensecraft-statics.oss-accelerate.aliyuncs.com/refer/pic/1705306138275_iykYXV_detection_person.png","task":"detect","createdAt":1705306231,"updatedAt":null},"model_name":"Person Detection--Swift YOLO","model_format":"tfLite","ai_framework":"6","author":"SenseCraft AI","description":"The model is a Swift-YOLO model trained on the person detection dataset. It can detect human body  existence.","task":1,"algorithm":"Object Dectect(TensorRT,SMALL,COCO)","classes":["person"]},"modes":0,"conditions":[{"class":"person","mode":1,"type":2,"num":0}],"conditions_combo":0,"silent_period":{"time_period":{"repeat":[1,1,1,1,1,1,1],"time_start":"00:00:00","time_end":"23:59:59"},"silence_duration":60},"output_type":1,"shutter":0},"wires":[[193818631]]},{"id":193818631,"type":"image analyzer","type_id":3,"index":1,"version":"0.0.1","params":{"url":"","header":"","body":{"prompt":"Is there a man with glasses?","type":1,"audio_txt":"Man with glasses"}},"wires":[[420037647,452707375]]},{"id":452707375,"type_id":99,"type":"sensecraft alarm","index":2,"version":"0.0.1","params":{"silence_duration":10,"text":"Man with glasses"},"wires":[]},{"id":420037647,"type_id":5,"type":"local alarm","index":3,"version":"0.0.1","params":{"sound":1,"rgb":1,"img":1,"text":1,"duration":10},"wires":[]}],"type":0}
 ```
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なるご要望やお好みに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しております。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

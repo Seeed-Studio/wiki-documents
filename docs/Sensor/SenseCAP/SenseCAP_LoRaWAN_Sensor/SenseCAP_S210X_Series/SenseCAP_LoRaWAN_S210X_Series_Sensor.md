@@ -32,17 +32,18 @@ SenseCAP Mate App: SenseCAP Mate APP is a powerful APP for data visualization an
 :::
 
 # How to Select Gateway and LoRaWAN® Network Server
+
 LoRaWAN network coverage is required when using sensors, there are two options.
 ![图片4](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
 
 # How to Use the Sensor
+
 ![图片11](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
 # Architecture
 
 ![图片2](https://media-cdn.seeedstudio.com/media/wysiwyg/222.png)
 
-
 # Application
-![图片3](https://wdcdn.qpic.cn/MTY4ODg1NTg2NjMyNjM0Nw_764306_m5FVYoxTQ-Ayq1fK_1669970097?w=1080&h=584)
 
+![图片3](https://wdcdn.qpic.cn/MTY4ODg1NTg2NjMyNjM0Nw_764306_m5FVYoxTQ-Ayq1fK_1669970097?w=1080&h=584)

@@ -5,21 +5,17 @@ image: https://files.seeedstudio.com/wiki/watcher_getting_started/64.webp
 slug: /ja/build_watcher_development_environment
 sidebar_position: 1
 last_update:
-  date: 05/15/2025
+  date: 11/5/2024
   author: Citric
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Watcher開発環境の構築
 
 ## ESP-IDFのインストール
 
-Espressifの[公式インストールガイド](https://docs.espressif.com/projects/esp-idf/en/v5.2.1/esp32s3/get-started/index.html)を参照してください。
+espressifの[公式インストールガイド](https://docs.espressif.com/projects/esp-idf/en/v5.2.1/esp32s3/get-started/index.html)を参照してください。
 
-`factory_fw`の例は、IDFのバージョンv5.2.1に基づいていることに注意してください。
+`factory_fw`サンプルはIDFのバージョンv5.2.1に基づいていることにご注意ください。
 
 ```
 mkdir -p ~/esp
@@ -27,7 +23,7 @@ cd ~/esp
 git clone --recursive https://github.com/espressif/esp-idf.git
 ```
 
-macOSまたはLinuxを使用している場合は、IDF環境の初期化用にエイリアス`get_idf`を作成することを強くお勧めします。
+macOSまたはLinuxを使用している場合は、IDF環境初期化のために`get_idf`エイリアスを作成することを強く推奨します。
 
 ## 初回ビルド
 
@@ -38,7 +34,7 @@ get_idf
 idf.py
 ```
 
-IDFを正しくインストールしている場合、`idf.py`コマンドの後にidf.pyツールのヘルプ出力が表示されます。
+IDFを正しくインストールした場合、`idf.py`コマンドの後にidf.pyツールのヘルプが表示されます。
 
 ```
 $ idf.py
@@ -72,27 +68,27 @@ idf.py build
 
 ### フラッシュ
 
-SenseCAP Watcherを**USBデータケーブル**を使用してPCまたはノートパソコンに接続します。
+SenseCAP Watcherを**USBデータケーブル**でPCまたはラップトップに接続してください。
 
-**注意!!!**
+**重要な注意事項！！！**
 
-**データ転送が可能なのは側面の底部にあるUSBポートのみです**
+**底面（側面）のUSBポートのみがデータ転送に対応しています**
 
-**背面のUSBポートはデバイスに電力を供給するだけです。**
+**背面のUSBポートはデバイスへの電源供給のみです。**
 
-Watcherを適切なデータケーブルで正しいUSB-Cポートから接続すると、PC上で1つのUSBデバイスエントリと2つのUARTデバイスが表示されます。これらはESP32S3に接続されたUARTとHimax SoCに接続されたUARTです。どのSoCがどのUARTを使用するかについては特定のパターンは観察されていません。そのため、ログ出力が表示されるまで以下のコマンドをすべてのUARTデバイスで試してください。
+適切なデータケーブルと適切なUSB Cポートを使用してWatcherを接続すると、PCに1つのUSBデバイスエントリと2つのUARTデバイスが表示されます。これらはESP32S3に接続されたUARTとHimax SoCに接続されたUARTです。どのSoCがどのUARTを使用するかに観察されたパターンはありません。そのため、ログ出力が表示されるまで、すべてのUARTデバイスで以下のコマンドを試してください。
 
 ```
 idf.py --port /dev/ttyACM0 monitor
 ```
 
-`/dev/ttyACM0`をお使いのオペレーティングシステム上の正しいUARTデバイス名に置き換えてください。例えば、MacOSでは`/dev/tty.wchusbserial56F3067xxxx`のように表示され、Windowsでは`COMx`のように表示されます。ログ出力の進行が見られない場合は、次のUARTを試してください。
+`/dev/ttyACM0`をお使いのオペレーティングシステムの正しいUARTデバイス名に置き換えてください。例えば、macOSでは`/dev/tty.wchusbserial56F3067xxxx`のように見え、Windowsでは`COMx`のように見えます。ログ出力の進行が見えない場合は、次のUARTを試してください。
 
-**注意!!!**
+**重要な注意事項！！！**
 
-`nvsfactory`という名前のパーティションにはデバイスが動作するための重要なファクトリデータが含まれています。このパーティションを消去しないよう注意してください。そのため、フラッシュ操作を行う前にこのパーティションをバックアップすることを強くお勧めします。
+`nvsfactory`という名前のパーティションには、デバイスが動作するための重要なファクトリデータが含まれています。このパーティションを消去しないよう注意してください。そのため、フラッシュ操作を実行する前にこのパーティションをバックアップすることを強く推奨します。
 
-バックアップにはesptool.pyを使用します。このツールはIDFインストールの一部であるため、IDFインストールを完了していればすでに存在しているはずです。
+esptool.pyを使用してバックアップを行います。このツールはIDFインストールの一部なので、IDFインストールを通過していれば既に存在しているはずです。
 
 ```
 # Linux / MacOS
@@ -102,19 +98,19 @@ which esptool.py
 where esptool.py
 ```
 
-では、`nvsfactory`パーティションをバックアップしましょう。
+それでは`nvsfactory`パーティションをバックアップしましょう。
 
 ```
 esptool.py --port /dev/tty.wchusbserial56F3067xxxx --baud 2000000 --chip esp32s3 --before default_reset --after hard_reset --no-stub read_flash 0x9000 204800 nvsfactory.bin
 ```
 
-バックアップが完了したら、ファームウェアをフラッシュする準備が整いました。
+バックアップが完了したら、ファームウェアをフラッシュします。
 
 ```
 idf.py --port /dev/ttyACM0 -b 2000000 app-flash
 ```
 
-サブコマンド`app-flash`を使用してアプリケーションパーティションのみをフラッシュします。これにより`nvsfactory`パーティションを保護し、さらに時間を節約できます。
+サブコマンド`app-flash`を使用してアプリケーションパーティションのみをフラッシュすることで、`nvsfactory`パーティションを保護し、最も重要なことに時間を節約できます。
 
 ### ログ出力の監視
 
@@ -122,11 +118,11 @@ idf.py --port /dev/ttyACM0 -b 2000000 app-flash
 idf.py monitor
 ```
 
-`ctrl + ]`を使用してモニタリングを終了します。
+`ctrl + ]`を使用して監視を終了します。
 
-## 技術サポートと製品に関する議論
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

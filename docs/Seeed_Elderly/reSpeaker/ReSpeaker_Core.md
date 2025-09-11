@@ -86,8 +86,8 @@ ReSpeaker is an open modular voice interface to hack things around you. Let you 
 - GPIO2/I2S_LRCLK: Drive external encoder/decoder, Left/right channel sample clock
 - GPIO3/I2S_BCLK: Drive external encoder/decoder, Bit clock
 - MCLK_OUT: Master clock for external device
-- HP\_SEL: Headphone channel select. If use ReSpeaker Mic Array to output audio, set HP_SEL high
-- HP\_L: Analog audio left channel from ReSpeaker Mic Array
+- HP_SEL: Headphone channel select. If use ReSpeaker Mic Array to output audio, set HP_SEL high
+- HP_L: Analog audio left channel from ReSpeaker Mic Array
 - HP_R: Analog audio right channel from ReSpeaker Mic Array
 - AGND: Analog ground for audio
 
@@ -376,7 +376,7 @@ if __name__ == '__main__':
     main()                  
 ```
 
-After "INFO:mic:Start Detecting" coming out, try to say "ReSpeaker" to wake up the program, and say "play music" to let it play music. Then ReSpeaker will play "Tchaikovsky\_Concerto\_No.1p.mp3" in the current path with **madplay** tool.
+After "INFO:mic:Start Detecting" coming out, try to say "ReSpeaker" to wake up the program, and say "play music" to let it play music. Then ReSpeaker will play "Tchaikovsky_Concerto_No.1p.mp3" in the current path with **madplay** tool.
 
 ![](https://files.seeedstudio.com/wiki/Respeaker_Core/img/bingplaymusic.png)
 
@@ -504,7 +504,7 @@ orangectl passwd root 12345678  //replace 12345678 with the password you want to
 
 **Q9: How to support google speech or other Speach TO Text(STT) Engine?**
 
-- Install speech\_recognition library following the [guide](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
+- Install speech_recognition library following the [guide](https://github.com/respeaker/get_started_with_respeaker/wiki/Use-speech_recognition-python-library)
 
 **Q10: Failed to run Alexa with error "IOError: [Errno -9998] Invalid number of channels"**
 

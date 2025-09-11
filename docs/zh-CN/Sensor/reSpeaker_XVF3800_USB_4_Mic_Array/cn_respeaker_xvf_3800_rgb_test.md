@@ -15,10 +15,9 @@ last_update:
 
 # reSpeaker XVF3800 USB 麦克风阵列与 XIAO ESP32S3 RGB 测试
 
-
 ## 目标
 
-此代码通过 **I2C 通信** 使用 **ESP32S3 微控制器** 控制 **reSpeaker XVF3800 USB 4-Mic Array** 上的彩色 LED 环。它通过发送特定命令来改变 **LED 的效果、颜色、速度和亮度**。ESP32S3 通过 Wire 库（I2C）使用数据字节告诉 XVF3800 要做什么。您可以使用 RGB 值选择自己的颜色，如橙色、红色或蓝色。上传后，LED 将以您选择的效果、颜色和亮度点亮。
+此代码使用 **ESP32S3 微控制器**通过 **I2C 通信**控制 **reSpeaker XVF3800 USB 4-Mic Array** 上的彩色 LED 环。它通过发送特定命令来改变 **LED 的效果、颜色、速度和亮度**。ESP32S3 通过 Wire 库（I2C）使用数据字节告诉 XVF3800 要做什么。您可以使用 RGB 值选择自己的颜色，如橙色、红色或蓝色。上传后，LED 将以您选择的效果、颜色和亮度点亮。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/front-xiao.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -30,7 +29,7 @@ last_update:
 
 ## 工作原理
 
-这个 Arduino 程序旨在使用 **I2C 协议** 控制 ReSpeaker XVF3800 上的 **WS2812 RGB LED 环**。它使用 **Wire.h** 库与 XVF3800 的内部控制器通信，并发送特定指令来调整 **LED 效果、颜色、速度和亮度**。您可以自定义 LED 行为而无需更改 XVF3800 固件——一切都由 ESP32S3 处理！
+这个 Arduino 程序旨在使用 **I2C 协议**控制 ReSpeaker XVF3800 上的 **WS2812 RGB LED 环**。它使用 **Wire.h** 库与 XVF3800 的内部控制器通信，并发送特定指令来调整 **LED 效果、颜色、速度和亮度**。您可以自定义 LED 行为而无需更改 XVF3800 固件——一切都由 ESP32S3 处理！
 
 ## 代码
 
@@ -50,14 +49,14 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
-  setLEDEffect(1);        // LED 效果 ID 1
-  setLEDColor(0xFF8800);  // LED 颜色：橙色（24位 RGB）
-  setLEDSpeed(1);         // 速度：1
-  setLEDBrightness(255);  // 亮度：最大
+  setLEDEffect(1);        // LED effect ID 1
+  setLEDColor(0xFF8800);  // LED color: orange (24-bit RGB)
+  setLEDSpeed(1);         // Speed: 1
+  setLEDBrightness(255);  // Brightness: max
 }
 
 void loop() {
-  // 不需要重复操作
+  // No repeating actions needed
 }
 
 void xmos_write_bytes(uint8_t resid, uint8_t cmd, uint8_t *value, uint8_t write_byte_num) {
@@ -74,45 +73,46 @@ void xmos_write_bytes(uint8_t resid, uint8_t cmd, uint8_t *value, uint8_t write_
 void setLEDEffect(uint8_t effect) {
   uint8_t payload[1] = { effect };
   xmos_write_bytes(GPO_SERVICER_RESID, GPO_SERVICER_RESID_LED_EFFECT, payload, 1);
-  Serial.println("LED 效果已设置。");
+  Serial.println("LED effect set.");
 }
 
 void setLEDColor(uint32_t color) {
   uint8_t payload[4] = {
-    (uint8_t)(color & 0xFF),         // 红色
-    (uint8_t)((color >> 8) & 0xFF),  // 绿色
-    (uint8_t)((color >> 16) & 0xFF), // 蓝色
-    0x00                             // 保留（某些系统可能需要 4 字节）
+    (uint8_t)(color & 0xFF),         // Red
+    (uint8_t)((color >> 8) & 0xFF),  // Green
+    (uint8_t)((color >> 16) & 0xFF), // Blue
+    0x00                             // Reserved (some systems may expect 4 bytes)
   };
   xmos_write_bytes(GPO_SERVICER_RESID, GPO_SERVICER_RESID_LED_COLOR, payload, 4);
-  Serial.println("LED 颜色已设置。");
+  Serial.println("LED color set.");
 }
 
 void setLEDSpeed(uint8_t speed) {
   uint8_t payload[1] = { speed };
   xmos_write_bytes(GPO_SERVICER_RESID, GPO_SERVICER_RESID_LED_SPEED, payload, 1);
-  Serial.println("LED 速度已设置。");
+  Serial.println("LED speed set.");
 }
 
 void setLEDBrightness(uint8_t brightness) {
   uint8_t payload[1] = { brightness };
   xmos_write_bytes(GPO_SERVICER_RESID, GPO_SERVICER_RESID_LED_BRIGHTNESS, payload, 1);
-  Serial.println("LED 亮度已设置。");
+  Serial.println("LED brightness set.");
 }
 
 ```
+
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/led_2.gif" alt="pir" width={600} height="auto"/></p>
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您对我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

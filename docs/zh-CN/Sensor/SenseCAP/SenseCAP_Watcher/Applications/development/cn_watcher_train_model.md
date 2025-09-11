@@ -13,18 +13,18 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/top3.png" style={{width:1000, height:'auto'}}/></div>
 
-本 WiKi 文章将教您如何使用我们的 SenseCraft 来训练您自己的 AI 模型并将其部署在我们的 Watcher 上。这将是一个非常有趣的过程。如果您还不知道什么是 SenseCraft，请点击[这里](https://sensecraft.seeed.cc/)。这是一个允许我们在 Seeed Studio 设备上部署各种开源 AI 模型的平台。
+本 WiKi 文章将教您如何使用我们的 SenseCraft 来训练您自己的 AI 模型并将其部署到我们的 Watcher 上。这将是一个非常有趣的过程。如果您还不知道什么是 SenseCraft，请点击[这里](https://sensecraft.seeed.cc/)。这是一个允许我们在 Seeed Studio 设备上部署各种开源 AI 模型的平台。
 
 ## SenseCraft 网站设置 AI 模型
 
-### 步骤 1. 打开 [SenseCraft](https://sensecraft.seeed.cc/) 网站
+### 步骤 1 . 打开 [SenseCraft](https://sensecraft.seeed.cc/) 网站
 
 点击顶部菜单栏中的"Products"查看下拉选项，然后选择"SenseCraft AI"点击。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/1.png" style={{width:800, height:'auto'}}/></div>
 
 
-### 步骤 2. 设置训练类型
+### 步骤 2 . 设置训练类型
 
 :::tip
 **_我们建议在这里使用 Grove Vision AI (V2) 从摄像头收集训练数据，因为 Watcher 使用与 Grove Vision AI V2 相同的芯片（Arm Cortex-M55），所以选择 Grove Vision AI V2 来训练 Watcher 的模型，用于拍照的最佳设备是要部署到的设备，这将直接影响最终的准确性。_**
@@ -35,7 +35,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/2.png" style={{width:800, height:'auto'}}/></div>
 
-### 步骤 3. 收集数据
+### 步骤 3 . 收集数据
 
 **训练步骤**
 
@@ -56,7 +56,7 @@ last_update:
 
 训练后，您需要点击"Click here"标签下的开始训练。
 
-### 步骤 4. 选择模型
+### 步骤 4 . 选择模型
 
 训练完成后您可以看到您的模型文件
 
@@ -65,7 +65,7 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCraft_Watcher/website/4.png" style={{width:800, height:'auto'}}/></div>
 
-### 步骤 5. 描述模型
+### 步骤 5 . 描述模型
 
 请提供您的**模型名称**、**模型摘要**、**模型介绍**、**模型部署准备**。如果您将模型公开，这些信息将对每个人都非常有帮助。这只是一个测试，所以写得比较匆忙。
 
@@ -76,7 +76,7 @@ last_update:
 在支持的设备中选择 SenseCAP Watcher 和 Grove-Vision AI V2。
 :::
 
-### 步骤 6. 设置模型参数
+### 步骤 6 . 设置模型参数
 
 您可以根据您的模型选择您想要的 AI 框架。
 

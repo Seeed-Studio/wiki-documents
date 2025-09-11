@@ -309,7 +309,7 @@ R2: Seeeduino v4.2 es completamente compatible con Arduino UNO. Las principales 
 R3: Por favor sigue los pasos de abajo para resolver el problema.
 
 - Haz clic en Archivo -> Preferencias
-- Haz clic en la url C:\Users\...\AppData\Local\Arduino15\preferences.txt en la parte inferior de la ventana de Preferencias.
+- Haz clic en la url C:\Users...\AppData\Local\Arduino15\preferences.txt en la parte inferior de la ventana de Preferencias.
 - Elimina todos los archivos excepto preferences.txt, staging y packages.
 - Cierra y reabre una ventana del IDE y debería funcionar.
 

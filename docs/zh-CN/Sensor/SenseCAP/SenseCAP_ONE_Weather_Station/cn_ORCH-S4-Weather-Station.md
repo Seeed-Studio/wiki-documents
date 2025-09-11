@@ -16,29 +16,29 @@ last_update:
 
 ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象仪器，具有稳定性能、超低功耗和易于安装的特点。它集成了4个传感器，监测空气温度、湿度、气压和光照强度参数。凭借强大的鲁棒性，它特别适合在室内外恶劣环境中运行。
 
-该气象仪器支持两种通用标准协议：MODBUS（MODBUS-RTU/MODBUS-ASCII）和SDI-12。具有3.6V至16V的宽电压范围和超低功耗，ORCH S4确保了持久性，能够维持长期气象监测。内置数据预处理功能使用户能够方便地解锁并完成新系统开发和集成。该气象变送器还配备了太阳辐射防护罩，有效减少太阳辐射的影响，从而进一步保证数据准确性。作为工业级产品，其IP66外壳还能保护传感器免受雨水、灰尘和紫外线的影响。
+该气象仪器支持两种通用标准协议：MODBUS（MODBUS-RTU/MODBUS-ASCII）和SDI-12。具有3.6V至16V的宽电压范围和超低功耗，ORCH S4 确保了持久性，能够维持长期气象监测。内置数据预处理功能使用户能够以便捷的方式解锁并完成新系统开发和集成。该气象变送器还配备太阳辐射防护罩，有效减少太阳辐射的影响，从而进一步保证数据准确性。作为工业级产品，其IP66外壳还能保护传感器免受雨水、灰尘和紫外线的影响。
 
 [![](https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/300px-Get_One_Now_Banner-ragular.png)](https://www.seeedstudio.com/ORCH-S4-A1A-p-4810.html)
 
 ## 特性
 
-* **稳定性能：** 高可靠性、卓越稳定性和超低功耗
-* **紧凑尺寸：** 空气温度、湿度、气压和光照四合一
-* **通用协议：** MODBUS RS-485 或 SDI-12
-* **宽范围电源供应：** 3.6V ~ 16V
-* **强鲁棒性：** IP66外壳，适用于户外应用和极其复杂的环境
-* **用户友好：** 内置数据预处理，易于使用、集成和安装
+- **稳定性能：** 高可靠性、卓越稳定性和超低功耗
+- **紧凑尺寸：** 空气温度、湿度、气压和光照四合一
+- **通用协议：** MODBUS RS-485 或 SDI-12
+- **宽范围电源：** 3.6V ~ 16V
+- **强鲁棒性：** IP66外壳，适用于户外应用和极其复杂的环境
+- **用户友好：** 内置数据预处理，易于使用、集成和安装
 
 ## 应用
 
 ![Applications](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/applications.png)
 
-* 智慧农业
-* 温室
-* 智能工业
-* 智慧城市
-* 环境监测
-* 其他物联网传感器应用
+- 智慧农业
+- 温室
+- 智能工业
+- 智慧城市
+- 环境监测
+- 其他物联网传感器应用
 
 ## 规格参数
 
@@ -59,7 +59,7 @@ ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象
 </thead>
 <tbody>
 <tr>
-<td class="tg-855q">电源供应</td>
+<td class="tg-855q">电源</td>
 <td class="tg-855q">3.6V ~ 16V</td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@ ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象
 <tbody>
 <tr>
 <td class="tg-855q">范围</td>
-<td class="tg-855q">-40 °C 到 +85 °C</td>
+<td class="tg-855q">-40 °C 至 +85 °C</td>
 </tr>
 <tr>
 <td class="tg-855q">精度</td>
@@ -224,7 +224,7 @@ ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象
 <tr><th class="tg-qw69" colspan="2">空气湿度</th></tr>
 <tr>
 <td class="tg-855q">范围</td>
-<td class="tg-855q">0 到 100 %RH</td>
+<td class="tg-855q">0 至 100 %RH</td>
 </tr>
 <tr>
 <td class="tg-855q">精度</td>
@@ -241,7 +241,7 @@ ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象
 <tr><th class="tg-qw69" colspan="2">光照强度</th></tr>
 <tr>
 <td class="tg-855q">范围</td>
-<td class="tg-855q">0 到 188000 Lux</td>
+<td class="tg-855q">0 至 188000 Lux</td>
 </tr>
 <tr>
 <td class="tg-855q">精度</td>
@@ -266,6 +266,6 @@ ORCH S4 是一款空气温度/湿度/大气压力/光照四合一紧凑型气象
 
 ## 资源
 
-* [SenseCAP ORCH S4 用户指南](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-User_Guide.pdf)
+- [SenseCAP ORCH S4 用户指南](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-User_Guide.pdf)
 
-* [SenseCAP ORCH S4 规格与数据手册](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-DataSheet.pdf)
+- [SenseCAP ORCH S4 规格与数据表](https://files.seeedstudio.com/wiki/Orch_S4_Weather_Station/SenseCAP_ORCH_S4-DataSheet.pdf)

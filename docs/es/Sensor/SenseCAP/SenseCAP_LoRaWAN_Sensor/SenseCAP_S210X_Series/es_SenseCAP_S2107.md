@@ -42,7 +42,7 @@ La temperatura de contacto directo es un indicador importante en muchos escenari
 | :- | :- |
 |Rango|<p>-50 a 300 ℃ </p><p>(Personalización de otro rango contactar ventas)</p>|
 |Precisión|±0.5℃|
-|Resolución|0\.1℃|
+|Resolución|0.1℃|
 |**Parámetros Generales**||
 |Modelo del Producto|S2107|
 |Microcontrolador|Wio-E5|

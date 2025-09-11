@@ -41,7 +41,7 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 
 ### Especificaciones
 
-|Pantalla|Pantalla Táctil RGB Capacitiva de 3\.95 Pulgadas|
+|Pantalla|Pantalla Táctil RGB Capacitiva de 3.95 Pulgadas|
 | :- | :- |
 |**Resolución de Pantalla**|480 x 480 píxeles|
 |**Fuente de Alimentación**|5V-DC, 1A|
@@ -49,7 +49,7 @@ SenseCAP Indicator es un dispositivo de pantalla táctil de 4 pulgadas diseñado
 |**Procesador**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit hasta 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ hasta 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
 |**Almacenamiento Externo**|Soporta hasta tarjeta Micro SD de 32GB (no incluida)|
-|**Wi-Fi**|802\.11b/g/n, 2.4GHz|
+|**Wi-Fi**|802.11b/g/n, 2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|Soporta 862-930MHz|
 |**Zumbador(Aún no desarrollado)**|MLT-8530, Frecuencia de Resonancia：2700Hz|
@@ -169,8 +169,8 @@ Para comenzar a comunicarse a través de la malla, debes establecer tu región. 
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Sin establecer|N/A|N/A|N/A|
-|US|Estados Unidos|902\.0 - 928.0|100|30|
-|EU\_868|Unión Europea 868MHz|869\.4 - 869.65|10|27|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
 Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/region-by-country/) para una lista más completa.
 

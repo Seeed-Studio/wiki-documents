@@ -23,7 +23,7 @@ last_update:
 **Login**
 =========
 
-**1\. Get your Hotspot's CPU ID and S/N**
+**1. Get your Hotspot's CPU ID and S/N**
 
 *   If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the device label of your SenseCAP M1, and get the S/N and CPU ID
 
@@ -33,7 +33,7 @@ last_update:
 
 ![Local Console Login Details 2](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-1-1.png)
 
-**2\. Get the IP Address of your hotspot**
+**2. Get the IP Address of your hotspot**
 
 *   If you do not have an account of SenseCAP M1 Dashboard, or haven't added your Hotspot to the Dashboard, please find the IP Address of your hotspot in your router admin page, or run diagnostic on your Helium APP to get the IP Address. Then type the IP Address in a browser to enter the Local Console page.
 *   If you already have registered an account of SenseCAP M1 Dashboard and added your Hotspot, you can find your Hotspot's IP Address from the dashboard:
@@ -43,13 +43,13 @@ last_update:
 
 ![Local Console Login Details 3](https://www.sensecapmx.com/wp-content/uploads/2022/07/wifi-name-ts-1.png)
 
-**3\. Use the hotspot CPU ID and the default password (Serial Number, aka S/N) to log in**
+**3. Use the hotspot CPU ID and the default password (Serial Number, aka S/N) to log in**
 
 ![Local Console Login Details 4](https://www.sensecapmx.com/wp-content/uploads/2022/07/login-1.png)
 
 ![Local Console Login Details 5](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-2-1.png)
 
-**4\. Change the default password**
+**4. Change the default password**
 
 ![Local Console Change Password](https://www.sensecapmx.com/wp-content/uploads/2022/07/change-password-1.png)
 
@@ -59,7 +59,7 @@ For security concerns, we do not provide a “**Forget Password**” function ye
 
 For the CLI users, please note that every time the password has been changed, the Local Console device token will be automatically updated as well. Refresh the Local Console webpage and you will see the new device token. Please keep your device token safe and do not share it to any third party in any circumstance.
 
-**5\. Get bind-key and add your Hotspot to SenseCAP Dashboard**
+**5. Get bind-key and add your Hotspot to SenseCAP Dashboard**
 
 ![Local Console Bind Key](https://www.sensecapmx.com/wp-content/uploads/2022/07/image-3-2.png)
 

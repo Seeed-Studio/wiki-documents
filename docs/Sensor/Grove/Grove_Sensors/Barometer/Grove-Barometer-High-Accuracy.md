@@ -588,7 +588,7 @@ if __name__ == "__main__":
 
 - **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle File](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High_Accuracy_ v1.0_sch_pcb.zip)
 - **[Datasheet]** [HP206F Datasheet](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/HP206F_Datasheet.pdf)
-- **[Library]** [Github repository for Grove\_Barometer\_HP20x with arduino](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
+- **[Library]** [Github repository for Grove_Barometer_HP20x with arduino](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
 
 ## Projects
 

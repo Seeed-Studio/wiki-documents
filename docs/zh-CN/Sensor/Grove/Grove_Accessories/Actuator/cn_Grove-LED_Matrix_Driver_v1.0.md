@@ -46,7 +46,7 @@ Grove - LED矩阵驱动器 v1.0 是一个UART（串口）到点阵LED驱动器�
 | 支持的符号/图形功能                    | 点、直线、圆、字符、字符串、数字、表情符号、图像（您可以通过直接在代码中调用API来显示这些符号）                                |
 | 支持的LED矩阵尺寸                      | 32（行）×64（列）                                                                                                             |
 | 每个LED矩阵点支持的颜色                | 双LED（绿色和红色）以及一种混合色（黄色），您也可以在每个LED矩阵点中仅使用一个LED                                              |
-| LED矩阵连接器                          | DBSTAR\_HUB 08A                                                                                                               |
+| LED矩阵连接器                          | DBSTAR_HUB 08A                                                                                                               |
 | Grove端口协议                      | UART                                                                                                                          |
 | 工作温度                               | -40–80 ℃                                                                                                                      |
 | 尺寸                                   | 46.5×44 mm                                                                                                                    |
@@ -69,7 +69,7 @@ Grove - LED矩阵驱动器 v1.0 是一个UART（串口）到点阵LED驱动器�
 ![](https://files.seeedstudio.com/wiki/Grove-LED_Matrix_Driver_v1.0/img/Grove-LED_Matrix_Driver_v1.0_product_components_described_1200_s.jpg)
 
 - **Grove插座**，用于将此产品连接到主控板。
-- **LED矩阵端口（DBSTAR\_HUB 08A）**，用于连接LED矩阵。如果您找不到这样的连接器，可以使用跳线作为替代方案。
+- **LED矩阵端口（DBSTAR_HUB 08A）**，用于连接LED矩阵。如果您找不到这样的连接器，可以使用跳线作为替代方案。
 
 ### **包装内容**（主要部件）
 

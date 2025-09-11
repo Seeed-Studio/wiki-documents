@@ -243,7 +243,7 @@ Con la función speed(), puedes hacer funcionar un motor a la velocidad que dese
 
 - **motor_id** representa qué motor usar. Puedes completar MOTOR1 o MOTOR2.
 
-- **\_speed** representa la velocidad que estableces para el motor. Puedes completar -100~100 aquí. Cuando \_speed&gt;0, el motor DC gira en sentido horario, mientras que \_speed&lt;0, el motor DC gira en sentido antihorario. Y cuanto mayor sea el valor absoluto de \_speed, más rápida será la velocidad del motor DC.
+- **_speed** representa la velocidad que estableces para el motor. Puedes completar -100~100 aquí. Cuando _speed&gt;0, el motor DC gira en sentido horario, mientras que _speed&lt;0, el motor DC gira en sentido antihorario. Y cuanto mayor sea el valor absoluto de _speed, más rápida será la velocidad del motor DC.
 
 Con la función stop(), puedes detener un motor DC en funcionamiento.
 
@@ -266,7 +266,7 @@ La conexión entre el Motor Paso a Paso [24BYJ48](https://www.seeedstudio.com/de
 void StepperRun(int _step);
 ```
 
-- **\_step** representa los pasos que configuras para que el motor paso a paso funcione. Puedes llenar -1024~1024. Cuando \_step&gt;0, el motor paso a paso gira en sentido horario, mientras que \_step&lt;0, el motor paso a paso gira en sentido antihorario. Cuando \_step es 512/-512, el motor paso a paso dará una vuelta completa y si \_step es 1024/-1024, el motor paso a paso dará 2 vueltas. El motor paso a paso se detendrá automáticamente después de completar sus pasos.
+- **_step** representa los pasos que configuras para que el motor paso a paso funcione. Puedes llenar -1024~1024. Cuando _step&gt;0, el motor paso a paso gira en sentido horario, mientras que _step&lt;0, el motor paso a paso gira en sentido antihorario. Cuando _step es 512/-512, el motor paso a paso dará una vuelta completa y si _step es 1024/-1024, el motor paso a paso dará 2 vueltas. El motor paso a paso se detendrá automáticamente después de completar sus pasos.
 
 ### Jugar con Codecraft
 

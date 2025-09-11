@@ -1,6 +1,6 @@
 ---
-description: reComputerでFlowFuseをセットアップおよび構成する方法を学びます。このガイドでは、アカウントの作成、Node.jsのインストール、デバイスの追加と構成、Node-REDフローの作成、クラウドからデバイスへのスナップショットのデプロイをカバーし、シームレスな統合と管理を実現します。
-title: reComputer R1000とFlowFuse
+description: reComputerでFlowFuseをセットアップし設定する方法を学びます。このガイドでは、アカウント作成、Node.jsのインストール、デバイスの追加と設定、Node-REDフローの作成、クラウドからデバイスへのスナップショットのデプロイによるシームレスな統合と管理について説明します。
+title: reComputer R1000 with FlowFuse
 keywords:
   - Flow Fuse
   - reComputer R1000
@@ -9,47 +9,42 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png
 slug: /ja/recomputer_r1000_flow_fuse
 last_update:
-  date: 05/15/2025
+  date: 07/30/2024
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+## はじめに
+
+[FlowFuse](https://flowfuse.com/)は、協調開発、リモートデプロイメントの管理、DevOps配信パイプラインのサポート、Node-REDアプリケーションのホスティング機能を追加することでNode-REDを強化します。Node-REDアプリケーションの開発と配信に特化して設計されたDevOpsプラットフォームとして機能し、チームが協力してプロジェクトを効率的にデプロイすることを容易にします。
 
 ## はじめに
 
-[FlowFuse](https://flowfuse.com/)は、Node-REDを強化し、共同開発、リモートデプロイの管理、DevOpsデリバリーパイプラインのサポート、Node-REDアプリケーションのホスティング機能を追加します。これはNode-REDアプリケーションの開発とデリバリー専用に設計されたDevOpsプラットフォームであり、チームが効率的にプロジェクトを共同で作業し、デプロイするのを容易にします。
-
-## 始める前に
-
-このプロジェクトを開始する前に、以下に記載されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
+このプロジェクトを開始する前に、ここで説明するようにハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reComputer R1000</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/recomputer_r_images/01.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1025-10-p-5895.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ## ソフトウェアの準備
 
 ### reComputerでFlowFuse用のNode.jsをインストールする
 
-FlowFuseを使用するために、reComputerにNode.jsをインストールする必要があります。以下の手順に従ってNode.jsバージョン20をインストールしてください。
+reComputerをFlowFuse用に準備するには、Node.jsをインストールする必要があります。Node.jsバージョン20をインストールするには、以下の手順に従ってください：
 
 1. **Node.jsリポジトリの準備**
 
@@ -62,7 +57,7 @@ sudo apt install -y ca-certificates curl gnupg
 
 2. **NodeSourceリポジトリの設定**
 
-次に、reComputerにNodeSourceリポジトリを設定します：
+次に、reComputer上でNodeSourceリポジトリを設定します：
 
 ```sh
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
@@ -70,114 +65,114 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 
 3. **Node.jsリポジトリの追加**
 
-FlowFuseのドキュメントによると、Node.jsバージョン20をインストールすることが推奨されています。`NODE_MAJOR`変数を20に設定します：
+FlowFuseのドキュメントによると、Node.jsバージョン20のインストールが推奨されています。`NODE_MAJOR`変数を20に設定します：
 
 ```sh
 NODE_MAJOR=20
 ```
 
-Node.jsリポジトリをreComputerのソースリストに追加します：
+Add the Node.js repository to your reComputer’s sources list:
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
 
-再度パッケージリストを更新してNode.jsリポジトリを含めます：
+Update your package list again to include the Node.js repository:
 
 ```sh
 sudo apt update
 ```
 
-4. **Node.jsのインストール**
+4. **Installing Node.js**
 
-最後に、Node.jsをインストールします：
+Finally, install Node.js:
 
 ```sh
 sudo apt install nodejs
 ```
 
-これで、デバイスにNode.jsバージョン20がインストールされました。
+これで、お使いのデバイスにNode.jsバージョン20がインストールされました。
 
-FlowFuseを使用するには、アカウントを作成し、メールを確認する必要があります。以下の簡単な手順に従ってください。
+FlowFuseの使用を開始するには、アカウントを作成してメールアドレスを確認する必要があります。以下の簡単な手順に従ってください：
 
 ## アカウントの作成
 
-1. **登録ページにアクセス**:
-   - [FlowFuse アカウント作成ページ](https://app.flowfuse.com/account/create)にアクセスしてください。
+1. **登録ページにアクセス**：
+   - [FlowFuseアカウント作成](https://app.flowfuse.com/account/create)にアクセスします。
 
-2. **登録フォームに記入**:
-   - **ユーザー名**: ユニークなユーザー名を選択してください。
-   - **フルネーム**: フルネームを入力してください。
-   - **メールアドレス**: 有効なメールアドレスを入力してください。
-   - **パスワード**: 強力なパスワードを作成してください。
+2. **登録フォームに記入**：
+   - **ユーザー名**: 一意のユーザー名を選択します。
+   - **フルネーム**: フルネームを入力します。
+   - **メール**: 有効なメールアドレスを入力します。
+   - **パスワード**: 強力なパスワードを作成します。
 
-3. **フォームを送信**:
-   - 必要な項目をすべて記入したら、「Create Account」ボタンをクリックしてください。
+3. **フォームを送信**：
+   - 必要なフィールドをすべて入力した後、「Create Account」ボタンをクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/signinpage.PNG" /></center>
 
-4. **メールを確認**:
-   - メールボックスを開き、FlowFuseからの確認メールを探してください。
+4. **メールを確認**：
+   - メールの受信箱に移動し、FlowFuseからの確認メールを探します。
 
-5. **確認メールを開く**:
-   - メールを開き、コードを使用してメールを確認してください。
+5. **確認メールを開く**：
+   - メールを開き、コードを使用してメールアドレスを確認します。
 
-6. **FlowFuseのログインページに戻る**:
-   - FlowFuseのログインページにアクセスしてください。
+6. **FlowFuseログインページに戻る**：
+   - FlowFuseログインページに移動します。
 
-7. **認証情報を入力**:
-   - ユーザー名/メールアドレス: 登録時に使用したユーザー名またはメールアドレスを入力してください。
-   - パスワード: パスワードを入力してください。
+7. **認証情報を入力**：
+   - ユーザー名/メール: 登録したユーザー名またはメールアドレスを入力します。
+   - パスワード: パスワードを入力します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/email.PNG" /></center>
 
-8. **ログイン**:
-   - `Login`ボタンをクリックしてFlowFuseアカウントにアクセスします。その後、チームを作成するよう求められる場合があります。
+8. **ログイン**：
+   - `Login`ボタンをクリックしてFlowFuseアカウントにアクセスします。チームの作成を求められる場合があります。
 
-## FlowFuseでアプリケーションを作成する
+## FlowFuseでのアプリケーション作成
 
-Node-REDインスタンスを整理するために、これらはアプリケーション内にグループ化されます。アプリケーション内には、1つ以上のNode-REDインスタンスを含めることができます。インスタンスは、プラットフォームと統合するためのさまざまなFlowFuseプラグインを含むカスタマイズされたNode-REDバージョンです。
+Node-REDインスタンスを整理するために、それらはアプリケーション内でグループ化されます。アプリケーション内では、Node-REDの1つ以上のインスタンスを持つことができます。インスタンスは、プラットフォームと統合するための様々なFlowFuseプラグインを含むNode-REDのカスタマイズされたバージョンです。
 
-1. **アプリケーションセクションに移動**:
-   - FlowFuseダッシュボードで`Create Application`をクリックしてください。
-
+1. **アプリケーションセクションに移動**：
+   - FlowFuseダッシュボードで、`Create Application`をクリックします。
+  
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/application.PNG" /></center>
 
-2. **アプリケーションの詳細を記入**:
-   - **名前**: アプリケーションの名前を入力してください。
-   - **説明**: アプリケーションの簡単な説明を入力してください。
-   - **インスタンス名**: Node-REDインスタンスの名前を選択してください。
-   - **ブループリント**: `Blank Workspace`をブループリントとして選択してください。
-   - **Node-REDバージョン**: ドロップダウンメニューから最新のNode-REDバージョンを選択してください。
+2. **アプリケーションの詳細を入力**：
+   - **名前**: アプリケーションの名前を入力します。
+   - **説明**: アプリケーションの簡単な説明を入力します。
+   - **インスタンス名**: Node-REDインスタンスの名前を選択します。
+   - **ブループリント**: ブループリントとして`Blank Workspace`を選択します。
+   - **Node-REDバージョン**: ドロップダウンメニューから最新のNode-REDバージョンを選択します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/application2.PNG" /></center>
 
-3. **アプリケーションを作成**:
-   - 詳細をすべて記入したら、`Create`ボタンをクリックしてください。
+3. **アプリケーションを作成**：
+   - すべての詳細を入力した後、`Create`ボタンをクリックします。
 
-## FlowFuseでフローを作成する
+## FlowFuseでのフロー作成
 
-Node-REDでランダムな数値を生成し、それをダッシュボードに表示するフローを作成してみましょう。Node-REDを初めて使用する場合は、[Node-RED入門ガイド](https://wiki.seeedstudio.com/ja/recomputer_r1000_getting_started_node_red/)をご覧ください。
+Node-REDでランダムな数値を生成してダッシュボードに表示するフローを作成しましょう。Node-REDが初めての場合は、[Node-RED入門ガイド](https://wiki.seeedstudio.com/recomputer_r1000_getting_started_node_red/)をご覧ください。フロー作成の手順
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/selectin.PNG" /></center>
 
-1. **Node-REDエディタを開く**:
-   - インスタンスに移動し、作成したインスタンスを選択してください。
-   - `Open Editor`をクリックしてNode-REDエディタを起動してください。
+1. **Node-REDエディターを開く**：
+   - インスタンスに移動し、作成したインスタンスを選択します。
+   - `Open Editor`をクリックしてNode-REDエディターを起動します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/openeditor.png" /></center>
 
-2. **必要なノードをインストール**:
-   - デフォルトでは`random`ノードや`gauge`ノードが表示されない場合があります。これらをインストールするには:
-     - 右上のメニューから`Manage palette`を選択してください。
-     - `Install`タブに移動してください。
-     - `Random`および`Dashboard`ノードを検索してインストールしてください。
+2. **必要なノードをインストール**：
+   - デフォルトでは`random`ノードと`gauge`ノードが表示されない場合があります。これらをインストールするには：
+   - 右上のメニューに移動し、`Manage palette`を選択します。
+   - `Install`タブに移動します。
+   - `Random`と`Dashboard`ノードを検索してインストールします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/noderedflow.PNG" /></center>
 
-3. **フローを作成**:
-   - 以下のフローをコピーしてNode-REDエディタにインポートし、時間を節約してください:
-
+3. **フローを作成**：
+   - 時間を節約するために、以下のフローをコピーしてNode-REDエディターにインポートします：
+  
 ```sh
 [
     {
@@ -192,7 +187,7 @@ Node-REDでランダムな数値を生成し、それをダッシュボードに
         "id": "45888468a69bbabb",
         "type": "random",
         "z": "fd017c5f719054f5",
-        "name": "ランダム",
+        "name": "Random",
         "low": 1,
         "high": "100",
         "inte": "true",
@@ -244,8 +239,8 @@ Node-REDでランダムな数値を生成し、それをダッシュボードに
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "ランダム数値",
-        "label": "単位",
+        "title": "Random Number",
+        "label": "units",
         "format": "{{value}}",
         "min": 0,
         "max": "100",
@@ -265,7 +260,7 @@ Node-REDでランダムな数値を生成し、それをダッシュボードに
     {
         "id": "7ac87662e9cf0550",
         "type": "ui_group",
-        "name": "デフォルト",
+        "name": "Default",
         "tab": "0dc7fe4a8add5b68",
         "order": 1,
         "disp": true,
@@ -276,7 +271,7 @@ Node-REDでランダムな数値を生成し、それをダッシュボードに
     {
         "id": "0dc7fe4a8add5b68",
         "type": "ui_tab",
-        "name": "ホーム",
+        "name": "Home",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -284,40 +279,41 @@ Node-REDでランダムな数値を生成し、それをダッシュボードに
 ]
 ```
 
-4. **フローをデプロイ**:
-   - 右上の`Deploy`ボタンをクリックしてフローをデプロイしてください。
+4. **フローをデプロイする**:
+   - 右上角の `Deploy` ボタンをクリックしてフローをデプロイします。
 
 ## FlowFuseでのデバイスの追加と設定
 
-1. **FlowFuseでデバイスを追加および設定する手順**:
- - FlowFuseダッシュボードで、`Devices`セクションに移動します。
- - `Add Device`ボタンをクリックします。
+1. **FlowFuseでデバイスを追加・設定するには、以下の手順に従ってください**:
+
+- FlowFuseダッシュボードで、`Devices` セクションに移動します。
+- `Add Device` ボタンをクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/device.PNG" /></center>
 
- - デバイスの詳細を入力します。
- - `Add`ボタンをクリックしてデバイスを作成します。
+- デバイスの詳細を入力します
+- `Add` ボタンをクリックしてデバイスを作成します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_device.PNG" /></center>
 
-2. **デバイス構成をコピーする**
+2. **デバイス設定をコピーする**
 
-  - デバイスを追加した後、デバイス構成が表示されます。
-  - 手動の指示の下にある提供されたコードスニペットをコピーします。この資格情報はデバイスをFlowFuseクラウドに接続するために必要です。
+- デバイスを追加した後、デバイス設定が表示されます。
+- 手動指示の下で、提供されたコードスニペットをコピーします。デバイスをFlowFuseクラウドに接続するために、これらの認証情報が必要になります。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_device2.PNG" /></center>
 
 ## デバイスエージェントのインストール
 
-reComputerのターミナルで以下のコマンドを実行してFlowFuseデバイスエージェントをインストールします:
+reComputerターミナルで、以下のコマンドを実行してFlowFuseデバイスエージェントをインストールします:
 
 ```sh
 sudo npm install -g @flowfuse/device-agent
 ```
+
 ### デバイスエージェントの設定
 
-1. **構成ディレクトリを作成する**:  
-   - 以下のコマンドを順に実行して構成ディレクトリを作成し、適切な権限を設定します:
+1. **設定ディレクトリの作成**：- 以下のコマンドを順番に実行して、設定ディレクトリを作成し、適切な権限を設定します：
 
 ```sh
    sudo mkdir /opt/flowfuse-device
@@ -326,96 +322,102 @@ sudo npm install -g @flowfuse/device-agent
    cd /
    cd opt/flowfuse-device
 ```
-2. **構成ファイルを作成および編集する**:  
-   - `device.yml`という名前の新しい構成ファイルを開きます:
+
+2. 設定ファイルの作成と編集:** - `device.yml`という名前の新しい設定ファイルを開きます：
 
 ```sh
 nano device.yml
-``` 
-- コピーしたデバイス構成をこのファイルに貼り付け、`Ctrl + X`を押して保存し、次に`Y`、そして`Enter`を押します。
+```
 
-3. **デバイスエージェントを実行する**:  
-   - 以下のコマンドを実行してFlowFuseデバイスエージェントを開始します:
+- コピーしたデバイス設定をこのファイルに貼り付け、`Ctrl + X`、次に`Y`、そして`Enter`を押して保存します。
+
+3. Device Agentを実行する：  - 以下のコマンドを実行してFlowFuse device agentを開始します：
 
 ```sh
 flowfuse-device-agent --port=1881
 ```
-これでデバイスが設定され、FlowFuseクラウドに接続され、使用準備が整いました。
+
+あなたのデバイスは設定され、FlowFuseクラウドに接続されました。使用準備が完了しています。
 
 ## デバイスへのフローのデプロイ
 
-デバイスにフローをデプロイするには、Node-REDインスタンスのスナップショットを作成し、それをreComputerターミナルにプッシュする必要があります。以下の手順に従ってください:
+フローをデバイスにデプロイするには、Node-REDインスタンスのスナップショットを作成し、reComputerターミナルにプッシュする必要があります。以下の手順に従ってください：
 
-### スナップショットを作成する
+### スナップショットの作成
 
-1. **アプリケーションに移動する**:
+1. **アプリケーションに移動**：
    - FlowFuseアプリケーションに移動し、作成したインスタンスを選択します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/snapshot1.PNG" /></center>
 
-2. **'Snapshot'を選択する**:
-   - インスタンスメニューで`Snapshot`オプションをクリックします。
+2. **「Snapshot」を選択**：
+   - インスタンスメニューの`Snapshot`オプションをクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/snapshot2.PNG" /></center>
 
-3. **新しいスナップショットを作成する**:
-   - まだスナップショットがない場合は、新しいスナップショットを作成する必要があります。
+3. **新しいスナップショットを作成**：
+   - まだスナップショットがないため、新しく作成する必要があります。
    - `Create Snapshot`をクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/snapshot3.PNG" /></center>
 
-4. **スナップショットの詳細を入力する**:
-   - `Name`: スナップショットの名前を入力します。
-   - `Description`: スナップショットの簡単な説明を記入します。
-   - `Set as Target`: このスナップショットをターゲットとして設定するチェックボックスをオンにします。
+4. **スナップショットの詳細を入力**：
+   - `Name`：スナップショットの名前を入力します。
+   - `Description`：スナップショットの簡単な説明を入力します。
+   - `Set as Target`：このスナップショットをターゲットとして設定するためにボックスにチェックを入れます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/snapshot4.PNG" /></center>
 
-5. **スナップショットを作成する**:
-   - `Create`ボタンをクリックしてスナップショットを作成します。これにより、Node-REDインスタンスの現在の状態（フロー、資格情報、環境変数、NPMパッケージ（ロックされたバージョン）、ランタイム設定）がキャプチャされます。
+5. **スナップショットを作成**：
+   - `Create`ボタンをクリックしてスナップショットを作成します。これにより、フロー、認証情報、環境変数、NPMパッケージ（バージョン固定）、ランタイム設定を含む、Node-REDインスタンスの現在の状態がキャプチャされます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/snapshot5.PNG" /></center>
 
-## スナップショットをデバイスにプッシュする
+## デバイスへのスナップショットのプッシュ
 
 スナップショットをデバイスにデプロイするには、以下の手順に従ってください：
 
 1. **デバイスセクションに移動**
-   - FlowFuse ダッシュボードで、`Devices` セクションに移動します。
+
+- FlowFuseダッシュボードで、`Devices`セクションに移動します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/device_add_sanp.PNG" /></center>
 
 2. **デバイスを選択**
-   - 以前に作成し設定したデバイスを見つけます。
-   - デバイス名の横にある三点アイコンをクリックします。
-   - `Add Instance` をクリックします。
+
+- 先ほど作成・設定したデバイスを見つけます。
+- デバイス名の横にある3つの点をタップします。
+- `Add Instance`をクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_instance.PNG" /></center>
 
 3. **デバイスにインスタンスを追加**
-   - 以前に作成したアプリケーションとインスタンスを選択します。
-   - `Add` ボタンをクリックします。
+
+- 先ほど作成したアプリケーションとインスタンスを選択します。
+- `Add`ボタンをクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/add_instance2.PNG" /></center>
 
 4. **フローをデプロイ**
-   - フローは数秒以内にデバイスにデプロイされます。スナップショットに記録された設定と構成で実行されます。
+
+- フローは数秒以内にデバイスにデプロイされます。スナップショットでキャプチャされた設定と構成で実行されます。
 
 5. **デバイスにアクセス**
-   - Webブラウザで `<ip_address_recomputer>:1881/ui` に移動してデバイスにアクセスします。
+
+- Webブラウザで`<ip_address_recomputer>:1881/ui`に移動してデバイスにアクセスします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reComputer-R1000/flowfuse/gauge.PNG" /></center>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

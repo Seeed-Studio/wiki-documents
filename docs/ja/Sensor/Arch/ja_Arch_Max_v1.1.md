@@ -77,7 +77,7 @@ Arch Maxは、迅速なプロトタイピングのためのmbed対応開発ボ�
 ![](https://files.seeedstudio.com/wiki/Arch_Max_v1.1/img/Get_started_with_mbed.png)
 
 1.  [こちら](<https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-MAX>)をクリックしてmbedにログインまたはサインアップします。
-2.  mbed\_blinkyプログラムをインポートします。
+2.  mbed_blinkyプログラムをインポートします。
 3.  上部ツールバーの**Compile**アイコンをクリックしてプログラムをコンパイルし、コンパイルされたhexファイルをダウンロードします。
 4.  ダウンロードしたbinファイルをmbedディスクにドラッグ＆ドロップします。
 
@@ -112,7 +112,7 @@ Arch Maxの最新ファームウェアバージョンは、2014年10月8日に�
 -   Arch Maxのボタンを押し続けて電源を入れます。
 -   CRP DISABLDディスクが表示されます。
     -   Windowsの場合、上記のファームウェアでfirmware.binを置き換えます。
-    -   Linux/Macの場合、以下のコマンドを入力します：**dd if=\{new\_firmware.bin\} of=\{firmware.bin\} conv=notrunc**
+    -   Linux/Macの場合、以下のコマンドを入力します：**dd if=\{new_firmware.bin\} of=\{firmware.bin\} conv=notrunc**
 
 ## オンライン回路図ビューア
 

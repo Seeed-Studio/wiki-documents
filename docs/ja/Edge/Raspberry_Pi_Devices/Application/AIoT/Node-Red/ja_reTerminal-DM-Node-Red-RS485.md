@@ -8,17 +8,13 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-DM-Node-Red-RS485
 last_update:
-  date: 05/15/2025
+  date: 04/04/2023
   author: Peter Pan
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # reTerminal DM RS485ポートとNode-RED
 
-## RS485、Modbus、Modbus RTU、Modbus Node-REDノードについての簡単な情報
+## RS485、Modbus、Modbus RTU、およびModbus Node-REDノードについての概要
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/3/-/3--114070201-reterminal-dm---font.jpg" alt="pir" width="600" height="auto"/></p>
 
@@ -32,57 +28,57 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ### RS485
 
-RS485は、デバイス間でデータを送信するために使用されるシリアル通信プロトコルです。RS485はデータのシリアル通信伝送の標準であり、産業用途で一般的に使用されています。差動信号を使用しており、通信には2つのデータライン（AとB）と1つのグランドライン（GND）が必要です。この差動信号により、ノイズ耐性が向上し、最大4,000フィートの長いケーブル長が可能になります。RS485の最大データレートは通常RS232よりも高く、最大10 Mbpsに達します。RS485はマルチポイント通信向けに設計されています。つまり、RS485は同じバス上の複数のデバイス間でデータを送信することができます。要約すると、RS485は産業制御システムなどで複数のデバイス間の長距離通信に一般的に使用されています。
+RS485はデバイス間でデータを送信するために使用されるシリアル通信プロトコルです。RS485は、産業用アプリケーションで一般的に使用されるデータのシリアル通信伝送の標準です。差動信号を使用し、通信用に2つのデータライン（AとB）と1つのグランドライン（GND）があることを意味します。この差動信号により、より優れたノイズ耐性が提供され、最大4,000フィートまでのより長いケーブル長が可能になります。RS485の最大データレートは通常RS232よりも高く、最大10 Mbpsです。RS485はマルチポイント通信用に設計されています。これは、RS485が同じバス上の複数のデバイス間でデータを送信できることを意味します。要約すると、RS485は産業制御システムなど、複数のデバイス間の長距離通信に一般的に使用されます。
 
 ### Modbus RTU
 
-Modbus RTUは、監視制御およびデータ収集（SCADA）システム内でデバイス間のデータ交換に使用される人気のある産業通信プロトコルです。これはRS485またはRS232バス標準の上で動作するシリアル通信プロトコルです。Modbus RTUはマスター-スレーブアーキテクチャを使用しており、マスターデバイスが1つ以上のスレーブデバイスと通信を開始します。マスターはスレーブデバイスにリクエストメッセージを送信し、スレーブデバイスは要求されたデータを含むメッセージで応答します。Modbus RTUメッセージはヘッダー、データ、およびエラーチェックフィールドで構成されています。ヘッダーには、スレーブアドレスや機能コードなどのメッセージに関する情報が含まれています。データフィールドには送信される実際のデータが含まれています。エラーチェックフィールドはメッセージの整合性を確保するために使用されます。Modbus RTUはバイナリ、整数、浮動小数点、文字列などのさまざまなデータ型をサポートしています。また、保持レジスタの読み取り、単一コイルの書き込み、入力レジスタの読み取りなど、さまざまな種類のデータアクセスを可能にする機能コードの範囲もサポートしています。Modbus RTUの利点の1つは、そのシンプルさと実装の容易さです。さまざまなデバイスやソフトウェアで広くサポートされており、産業オートメーションおよび制御システムで人気の選択肢となっています。また、リアルタイムのデータ交換と低遅延通信を必要とするアプリケーションに適しています。
+Modbus RTUは、監視制御およびデータ取得（SCADA）システムにおけるデバイス間のデータ交換に使用される人気の産業通信プロトコルです。これは、RS485またはRS232バス標準の上で動作するシリアル通信プロトコルです。Modbus RTUはマスター・スレーブアーキテクチャを使用し、マスターデバイスが1つ以上のスレーブデバイスとの通信を開始します。マスターはスレーブデバイスに要求メッセージを送信し、スレーブデバイスは要求されたデータを含むメッセージで応答します。Modbus RTUメッセージは、ヘッダー、データ、およびエラーチェックフィールドで構成されます。ヘッダーには、スレーブアドレスやファンクションコードなど、メッセージに関する情報が含まれます。データフィールドには、送信される実際のデータが含まれます。エラーチェックフィールドは、メッセージの整合性を確保するために使用されます。Modbus RTUは、バイナリ、整数、浮動小数点、文字列など、さまざまなデータタイプをサポートします。また、ホールディングレジスタの読み取り、単一コイルの書き込み、入力レジスタの読み取りなど、さまざまなタイプのデータアクセスを可能にするさまざまなファンクションコードもサポートします。Modbus RTUの利点の1つは、その単純さと実装の容易さです。さまざまなデバイスやソフトウェアで広くサポートされており、産業オートメーションおよび制御システムの人気の選択肢となっています。また、リアルタイムデータ交換と低遅延通信を必要とするアプリケーションにも適しています。
 
-Modbus RTUは、以下のようなさまざまな産業用途で使用されています：
+Modbus RTUは、以下のようなさまざまな産業アプリケーションで使用される人気の通信プロトコルです：
 
-  *  建物のオートメーションおよび制御システム：Modbus RTUは、照明、HVAC、その他の建物システムの監視と制御に一般的に使用されています。
+  *  ビルディングオートメーションおよび制御システム：Modbus RTUは、照明、HVAC、およびその他のビルディングシステムの監視と制御に一般的に使用されます。
 
-  *  エネルギー管理システム：Modbus RTUは、商業および産業建物のエネルギー消費を監視および制御するために使用できます。
+  *  エネルギー管理システム：Modbus RTUは、商業および産業ビルでのエネルギー消費の監視と制御に使用できます。
 
-  *  製造およびプロセス制御：Modbus RTUは、組立ライン、コンベアシステム、包装機などの製造プロセスの監視および制御に頻繁に使用されています。
+  *  製造およびプロセス制御：Modbus RTUは、組立ライン、コンベヤシステム、包装機械などの製造プロセスの監視と制御によく使用されます。
 
-  *  水および廃水処理：Modbus RTUは、水および廃水処理施設でポンプ、バルブ、その他の設備の運転を監視および制御するために使用されています。
+  *  上下水道処理：Modbus RTUは、上下水道処理施設でのポンプ、バルブ、およびその他の機器の動作の監視と制御に使用されます。
 
-  *  石油およびガス生産：Modbus RTUは、石油およびガス生産施設でポンプ、コンプレッサー、その他の設備を監視および制御するために使用されています。
+  *  石油・ガス生産：Modbus RTUは、石油・ガス生産施設でポンプ、コンプレッサー、およびその他の機器の監視と制御に使用されます。
 
-  *  再生可能エネルギーシステム：Modbus RTUは、太陽光パネル、風力タービン、その他の再生可能エネルギーシステムを監視および制御するために使用できます。
+  *  再生可能エネルギーシステム：Modbus RTUは、ソーラーパネル、風力タービン、およびその他の再生可能エネルギーシステムの監視と制御に使用できます。
 
-  *  交通システム：Modbus RTUは、交通信号、照明、その他の設備を監視および制御するために使用されています。
+  *  交通システム：Modbus RTUは、交通システムにおける信号機、照明、およびその他の機器の監視と制御に使用されます。
 
-一般的に、産業環境でリアルタイムのデータ交換と低遅延通信を必要とするアプリケーションは、Modbus RTUの使用による恩恵を受けることができます。
+一般的に、産業環境でリアルタイムデータ交換と低遅延通信を必要とするアプリケーションは、Modbus RTUの使用から恩恵を受けることができます。
 
 ### Modbusノード
 
-Node-REDには組み込みのModbusノードがあり、ユーザーがModbusデバイスをNode-REDのワークフローに簡単に統合できるようになっています。このModbusノードは、Modbus TCPおよびModbus RTUプロトコルの両方をサポートしており、Modbusデバイスからデータを読み書きするために使用できます。
+Node-REDには組み込みのModbusノードがあり、ユーザーはModbusデバイスをNode-REDワークフローに簡単に統合できます。ModbusノードはModbus TCPとModbus RTUの両方のプロトコルをサポートし、Modbusデバイスからデータを読み書きするために使用できます。
 
-Node-REDでModbusノードを使用するには、単にキャンバスにドラッグ＆ドロップし、デバイスアドレス、機能コード、データ型などの適切なModbus設定で構成します。構成が完了すると、Modbusノードをワークフロー内の他のノードに接続してデータを処理および表示することができます。
+Node-REDでModbusノードを使用するには、キャンバスにドラッグアンドドロップし、デバイスアドレス、ファンクションコード、データタイプなどの適切なModbus設定で構成するだけです。構成が完了すると、Modbusノードはワークフロー内の他のノードに接続して、データを処理および表示できます。
 
-Node-REDには、その他のノードやプラグインも多数あり、その機能を拡張し、他のシステムやデバイスと統合することができます。例えば、MQTT、HTTPなどの通信プロトコル用のノードや、データ処理、可視化、保存用のノードがあります。
+Node-REDには、その機能を拡張し、他のシステムやデバイスと統合するために使用できる他のノードやプラグインも多数あります。たとえば、MQTT、HTTP、およびその他の通信プロトコル用のノード、ならびにデータ処理、可視化、およびストレージ用のノードがあります。
 
-全体として、Node-REDはIoTおよび産業オートメーションアプリケーションを構築するための強力で柔軟なプラットフォームを提供しており、組み込みのModbusノードにより、これらのワークフローにModbusデバイスを簡単に統合することができます。
+全体的に、Node-REDはIoTおよび産業オートメーションアプリケーションを構築するための強力で柔軟なプラットフォームを提供し、その組み込みModbusノードにより、Modbusデバイスをこれらのワークフローに簡単に統合できます。
 
-# Modbus Nodeを使用したreTerminal DMの開始
+# reTerminal DMでのModbusノードの使用開始
 
-[Modbus Node-RED](https://flows.nodered.org/node/node-red-contrib-modbus)ページでさらに詳しい情報を見つけることができます。
+詳細情報は[Modbus Node-RED](https://flows.nodered.org/node/node-red-contrib-modbus)ページで確認できます。
 
-Senscraft Edge OSを使用している場合は、Modbusノードのインストール手順をスキップして、[reTerminal DMでModbusノードを使用する方法](#how-to-use-modbus-node-with-retermianl-dm)に進んでください。
+Senscraft Edge OSを使用している場合は、modbusノードのインストール手順をスキップして、[reTerminal DMでのModbusノードの使用方法](#how-to-use-modbus-node-with-retermianl-dm)に進むことができます。
 
 ## Modbusノードのインストール
 
-このセクションでは、`node-red-contrib-modbus`ノードをインストールします。ノードの[インストール方法](/ja/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)を確認してください。
+このセクションでは`node-red-contrib-modbus`ノードをインストールします。[ノードのインストール方法](/reTerminal-DM-Getting-Started-with-Node-Red#install-nodes)を確認してください。
 
 ### オプション1: コマンドライン
 
-まず、SSHを使用してreTerminal DMにアクセスする方法を復習してください。手順は[こちら](/ja/reterminal-dm-flash-OS#install-drivers)を確認してください。
+まず、SSHを介してreTerminal DMにアクセスする知識を復習してください。手順は[こちら](/reterminal-dm-flash-OS#install-drivers)で確認できます。
 
-SSHでreTerminal DMにアクセスしたら、以下の手順を進めてください。
+SSHでreTerminal DMにアクセスできたら、以下の手順に進んでください：
 
-STEP 1: Node-REDフォルダに移動してください。
+ステップ1: Node-REDフォルダに移動してください
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-folder.png" /></div><br />
 
@@ -90,7 +86,7 @@ STEP 1: Node-REDフォルダに移動してください。
 cd .node-red/
 ```
 
-STEP 2: Modbusノードをインストールしてください。
+STEP 2: Modbus ノードのインストール
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/npm-install-node.png" /></div><br />
 
@@ -98,7 +94,7 @@ STEP 2: Modbusノードをインストールしてください。
 npm install node-red-contrib-modbus
 ```
 
-STEP 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください。
+STEP 3: ノードがインストールされたら、以下のコマンドでNode-REDサービスを再起動してください：
 
 <div align="center"><img src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-red-restart.png" /></div><br />
 
@@ -106,162 +102,169 @@ STEP 3: ノードがインストールされたら、以下のコマンドでNod
 node-red-restart
 ```
 
-### オプション2: Node-REDエディタ
+### オプション 2: Node-RED エディター
 
-STEP 1: 右上隅にある「三本線」アイコンの`設定`ボタンをクリックし、`パレットの管理`を選択してください。
+ステップ 1: 右上角にある「三本線」アイコンの `Settings` ボタンをクリックし、`Manage palette` を選択します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/manage_palette.png" /></div>
 
-STEP 2: パレットタブで`インストール`タブをクリックしてください。
+ステップ 2: パレットタブで `Install` タブをクリックします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/install-tab.png" /></div>
 
-STEP 3: ノード検索バーでノードを検索し、`インストール`ボタンをクリックしてインストールしてください。
+ステップ 3: ノード検索バーでノードを検索し、`install` ボタンをクリックしてインストールします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/search-install.png" /></div>
 
-STEP 4: ドロップダウン警告ウィンドウで`インストール`ボタンをクリックしてインストールを確認してください。
+ステップ 4: ドロップダウン警告ウィンドウから `Install` ボタンをクリックしてインストールを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/confirm-click.png" /></div>
 
-STEP 5: インストールが完了するまで待機し、`インストール`ボタンが`インストール済み`に変わるのを確認してください。
+ステップ 5: インストールが完了するまで待ち、`install` ボタンが `installed` に変わることを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-installing.png" /></div>
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/node-installed.png" /></div>
 
-STEP 6: サイドバーにModbusノードが表示されるはずです。
+ステップ 6: サイドバーに Modbus ノードが表示されることを確認します
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-nodes.png" /></div>
 
-## reTerminal DMでModbusノードを使用する方法
+
+## reTerminal DM で Modbus ノードを使用する方法
 
 ### 前提条件
 
 #### ハードウェア
 
-* 1 x USB to RS485/RS232アダプタ
+* 1 x USB to RS485/RS232 アダプター
 * 6 x ケーブル
 * 1 x reTerminal DM
-* 1 x ホストコンピュータ
+* 1 x ホストコンピューター
 
-#### ソフトウェア
+#### ソフトウェア 
 
-* ホストマシンにインストールされた[`ModbusMechanic`](https://github.com/SciFiDryer/ModbusMechanic)のようなMODBUS通信GUIツール
+* ホストマシンにインストールされた [`ModbusMechanic`](https://github.com/SciFiDryer/ModbusMechanic) などの MODBUS 通信 GUI ツール
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/ModbusMechanic.png" /></div>
 
-#### 準備
+#### 準備 
 
-STEP 1: 以下のようにハードウェアを接続してください。
+ステップ 1: 以下に示すようにハードウェアを接続してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/rs485.png" /></div>
 
-STEP 2: 以下の手順に従う場合は[`ModbusMechanic`](https://github.com/SciFiDryer/ModbusMechanic)をインストールしてください。
+ステップ 2: 以下の手順に従いたい場合は、[`ModbusMechanic`](https://github.com/SciFiDryer/ModbusMechanic) をインストールしてください。
 
-STEP 2-1: [`ModbusMechanicリリース`](https://github.com/SciFiDryer/ModbusMechanic/releases/download/v2.7/ModbusMechanic.v2.7.zip)のリリースファイルをダウンロードしてください。
+ステップ 2-1: [`ModbusMechanic release`](https://github.com/SciFiDryer/ModbusMechanic/releases/download/v2.7/ModbusMechanic.v2.7.zip) のリリースファイルをダウンロードします
 
 :::note
 
-このWikiを準備した時点での`ModbusMechanic`の最新リリースバージョンはv2.7です。
+この wiki を準備した時点で、`ModbusMechanic` の最新リリースバージョンは v2.7 です。
 
 :::
 
-STEP 2-2: リリースファイルを解凍し、以下のコマンドを使用してLinuxでJava実行可能ファイル`ModbusMechanic.jar`を実行してください。
+ステップ 2-2: リリースファイルを解凍し、Linux で以下のコマンドを使用して Java 実行ファイル `ModbusMechanic.jar` を実行します：
 
 ```sh
+
 java -jar ModbusMechanic.jar
+
 ```
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/ModbusMechanic.png" /></div>
 
-STEP 2-3: 以下のように`ModbusMechanic`の`シリアル設定ポート`を構成してください。
+STEP 2-3: 以下に示すように、`ModbusMechanic`の`Serial Settings Port`を同じように設定してください
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/ModbusMechanic-config.png" /></div>
 
-STEP 3: `Slave Simulator`をセットアップしてください。
+STEP 3: `Slave Simulator`のセットアップ
 
-STEP 3-1: `ModbusMechanic`ツールから`Slave Simulator`を開いてください。
+STEP 3-1: `ModbusMechanic`のToolsから`Slave Simulator`を開く
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim.png" /></div>
 
-STEP 3-2: ポップアップで`RTU`を選択してください。
+STEP 3-2: ポップアップから`RTU`を選択する1 Mbit
 
-STEP 3-4-2: `レジスタ番号`に`1`を入力してください。
+STEP 3-4-2: `Register number`として`1`を入力する
 
-STEP 3-4-3: `データ型`に`U int 16`を選択してください。
+STEP 3-4-3: `Data type`として`U int 16`を選択する
 
-STEP 3-4-4: `値`に`120`を入力してください。
+STEP 3-4-4: `Value`として`120`を入力する
 
-STEP 3-4-5: `ワードスワップ`をチェックしてください。
+STEP 3-4-5: `Word Swap`をチェックする
 
-STEP 3-4-6: `追加`をクリックして確認してください。
+STEP 3-4-6: `Add`をクリックして確定する
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim-settings.png" /></div>
 
-STEP 3-5: 以下の画像のような設定が表示されるはずです。
+STEP 3-5: 以下の画像と同様の設定になっているはずです
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/add-slave-input-data.png" /></div>
 
-STEP 3-6: STEP 4-4を繰り返して、以下のようにさらに2つのレジスタを追加してください。`レジスタ2`には`値12`、`レジスタ3`には`値1`を設定します。
+STEP 3-6: STEPS 4-4を繰り返して、以下に示すように2つのレジスタを追加します。`Register 2`は`Value 12`、`Register 3`は`Value 1`とします
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/slave-sim-sample-setting.png" /></div>
 
+
 #### フローの編集
 
-STEP 1: `Modbus Read`を`フローエディタ`パネルにドラッグしてください。
+STEP 1: `Modbus Read`を`Flow Editor`パネルにドラッグする
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/drag-modbus-read.png" /></div>
 
-STEP 2: Modbusサーバーを構成してください。
+STEP 2: Modbusサーバーの設定
 
-STEP 2-1: `Modbus Read`をダブルクリックして`ノードエディタパネル`を開いてください。
+STEP 2-1: `Modbus Read`をダブルクリックして`Node editor panel`を開く
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-read-node-editor.png" /></div>
 
-STEP 2-2: サーバー構成オプションの`鉛筆`アイコンをクリックしてください。
+STEP 2-2: サーバー設定オプションの`鉛筆`アイコンをクリックする
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-server-config-button.png" /></div>
 
-`鉛筆`アイコンをクリックすると、`新しい modbus-client 設定ノードを追加`するための設定パネルが表示されます。
+`鉛筆`アイコンをクリックすると、`Add new modbus-client config node`設定パネルが表示されます
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-client-config.png" /></div>
 
-STEP 2-3: 以下の手順に従って、画像に示されているようにModbusポートを設定してください。
+STEP 2-3: 以下の画像に示すように、Modbusポートを設定するために以下の手順を注意深く実行してください。
 
-STEP 2-3-1: ドロップダウンリストからタイプを`Serial Expert`に設定します。
+STEP 2-3-1: ドロップダウンリストからタイプをSerial Expertに設定する
 
-STEP 2-3-2: シリアルポートを`/dev/ttyCH343USB1`に選択します。
+STEP 2-3-2: シリアルポート`/dev/ttyCH343USB1`を選択する
 
-STEP 2-3-3: 画像に示されているようにシリアルポートオプションを設定します。
+STEP 2-3-3: 以下の画像に示すようにシリアルポートオプションを設定する
 
-STEP 2-3-4: 画像に示されているように追加のModbusサーバーポートオプションを設定します。
+STEP 2-3-4: 以下の画像に示すように追加のModbusサーバーポートオプションを設定する
 
-STEP 2-3-5: `Add`または`Update`をクリックして変更を適用します。
+STEP 2-3-5: `Add`または`Update`をクリックして変更を適用する。
+
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/config-modbus.png" /></div>
 
-STEP 3: 以下の画像に示されているようにModbus-Readノードを設定し、`Done`をクリックします。
+STEP 3: 以下の画像に示すようにModbus-Readノードを設定し、`Done`をクリックする
 
 :::note
 
-以下の手順は例として示されています。設定はご自身の状況に応じて変更することができます。
+以下の手順は単なる例の手順です。ご自身の状況に応じて設定を変更することができます
 
 :::
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/config-modbus-read.png" /></div>
 
-STEP 4: `debug node`と`Modbus Response node`を見つけてドラッグし、以下の画像のようにノードを接続します。
+
+STEP 4: `debug node`と`Modbus Response node`を見つけてドラッグし、以下に示すようにノードを接続する
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/modbus-responese.gif" /></div>
 
 #### 最終結果
 
-おめでとうございます！これで、Node-REDを使用してreTerminal DMでModbusを利用する方法を体験し、学ぶことができました。最終結果は以下の画像のようになるはずです。
+おめでとうございます！reTerminal DMでnode-REDを使用してModbusを使用する方法を正常に体験し、学習しました。最終結果は以下に示す画像と同様になるはずです
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/node-red/final-results.png" /></div>
 
-以下のJSONコードをコピーしてノードをインポートすることができます。
+
+以下のJSONコードをコピーしてノードをインポートできます
 
 ```json
 [
@@ -363,16 +366,17 @@ STEP 4: `debug node`と`Modbus Response node`を見つけてドラッグし、�
         "wires": []
     }
 ]
-```
 
-# reTerminal DMでNode-REDを使用したさらなるノードの探索
+``` 
 
-* [reTerminal DM MQTTとNode-RED](/ja/reTerminal-DM-Node-Red-mqtt)
-* [reTerminal DM CAN BUSとNode-RED](/ja/reTerminal-DM-Node-Red-canbus)
+# reTerminal DMでNode-REDを使用してより多くのノードを探索する
 
+* [reTerminal DM MQTT with Node-RED](/reTerminal-DM-Node-Red-mqtt)
+* [reTerminal DM CAN BUS with Node-RED](/reTerminal-DM-Node-Red-canbus)
+* 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際の体験がスムーズになるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

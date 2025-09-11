@@ -1,6 +1,6 @@
 ---
-description: 快速入门 Wi-Fi HaLow Mini PCIe 模块
-title: 快速入门 Wi-Fi HaLow Mini PCIe 模块
+description: Wi-Fi HaLow Mini PCIe 模块入门指南
+title: Wi-Fi HaLow Mini PCIe 模块入门指南
 image: https://files.seeedstudio.com/wiki/wifi_halow/pic/0.webp
 slug: /cn/getting_started_with_wifi_halow_mini_pcie_module
 last_update:
@@ -8,77 +8,77 @@ last_update:
   author: Citric
 ---
 
-# 快速入门 Wi-Fi HaLow Mini PCIe 模块
+# Wi-Fi HaLow Mini PCIe 模块入门指南
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/0.jpg" style={{width:600, height:'auto'}}/></div>
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
     </a>
 </div><br />
 
-本指南将引导您设置和使用 Wi-Fi HaLow Mini PCIe 模块来构建 Wi-Fi HaLow 网关。Mini PCIe 形式因其易于集成 Wi-Fi HaLow 连接到现有系统中，使您能够创建 IoT 网关，连接众多低功耗设备并实现远距离通信。
+本指南将引导您设置和使用 Wi-Fi HaLow Mini PCIe 模块来构建 Wi-Fi HaLow 网关。Mini PCIe 外形规格使其易于集成到现有系统中，并创建能够在长距离范围内连接众多低功耗设备的物联网网关。
 
 ## 概述
 
-Wi-Fi HaLow Mini PCIe 模块旨在为 IoT 应用提供远距离无线连接。它具备以下特点：
+Wi-Fi HaLow Mini PCIe 模块专为物联网应用提供长距离无线连接而设计。它提供：
 
 - 标准 Mini PCIe 接口，便于集成
 - 支持 IEEE 802.11ah Wi-Fi HaLow 协议
-- 最远可达 1 公里视距范围
+- 视距范围可达 1 公里
 - 低功耗
-- 能够连接数千个 IoT 设备
+- 能够连接数千个物联网设备
 
 ## 什么是 Wi-Fi HaLow？
 
-Wi-Fi HaLow（IEEE 802.11ah）是一种专为物联网（IoT）应用设计的无线网络技术。它工作在低于 1 GHz 的频段，具有以下关键优势：
+Wi-Fi HaLow（IEEE 802.11ah）是专为物联网（IoT）应用设计的无线网络技术。它工作在 1 GHz 以下频段，具有以下几个关键优势：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/Wi-Fi_HaLow_frequency_band_graphic.png" style={{width:800, height:'auto'}}/></div>
 
-### 关键优势
+### 主要优势
 
 - **扩展范围**：在视距条件下可达 1 公里，远超传统 Wi-Fi
-- **更好的穿透力**：低频信号可以更有效地穿透墙壁和障碍物
-- **节能高效**：针对电池供电的 IoT 设备进行了优化
-- **高扩展性**：每个接入点支持数千个连接设备
+- **更好的穿透性**：较低频率信号能更有效地穿透墙壁和障碍物
+- **能效**：针对电池供电的物联网设备进行优化
+- **高可扩展性**：每个接入点支持数千个连接设备
 - **原生 IP 支持**：与现有 IP 网络无缝集成
 
 ### 应用场景
 
-Wi-Fi HaLow 非常适合以下领域：
+Wi-Fi HaLow 非常适合：
 
 - 智慧农业
 - 工业物联网
 - 智慧城市
 - 楼宇自动化
 - 环境监测
-- 资产追踪
+- 资产跟踪
 
-### 为什么重要
+### 重要意义
 
-Wi-Fi HaLow 解决了 IoT 部署中的关键问题：
+Wi-Fi HaLow 解决了物联网部署中的关键挑战：
 
-1. **覆盖范围差距**：弥补短距离 Wi-Fi 和蜂窝网络之间的空白
-2. **电池寿命**：支持设备多年电池供电运行
-3. **部署成本**：相比蜂窝解决方案降低基础设施成本
-4. **标准化**：基于熟悉的 Wi-Fi 标准，便于采用
-5. **安全性**：集成企业级 WPA3 安全协议
+1. **覆盖缺口**：弥合短距离 Wi-Fi 和蜂窝网络之间的差距
+2. **电池寿命**：使设备能够依靠电池供电运行数年
+3. **部署成本**：与蜂窝解决方案相比降低基础设施成本
+4. **标准化**：基于熟悉的 Wi-Fi 标准，更易于采用
+5. **安全性**：集成企业级 WPA3 安全性
 
-通过结合远距离、低功耗和高设备密度的能力，Wi-Fi HaLow 有望成为各行业大规模 IoT 部署的关键技术。
+通过结合长距离、低功耗和高设备密度能力，Wi-Fi HaLow 有望成为各行业大规模物联网部署的关键技术。
 
 ## OpenWrt 概述
 
-Wi-Fi HaLow Mini PCIe 模块运行在 OpenWrt 上，这是一种高度可扩展的 Linux 操作系统，主要为嵌入式设备（如路由器）设计。以下是 OpenWrt 成为 Wi-Fi HaLow 网关优秀平台的原因：
+Wi-Fi HaLow Mini PCIe 模块运行在 OpenWrt 上，这是一个高度可扩展的 Linux 操作系统，主要为路由器等嵌入式设备设计。以下是 OpenWrt 成为 Wi-Fi HaLow 网关优秀平台的原因：
 
 ### 什么是 OpenWrt？
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/OpenWrt/openwrt-wiki-thumb.png" style={{width:800, height:'auto'}}/></div>
 
-OpenWrt 是一个基于 Linux 的操作系统，提供以下功能：
+OpenWrt 是一个基于 Linux 的操作系统，提供：
 
-- 完全可写的文件系统，支持包管理
-- 高度模块化，允许您自定义功能
+- 具有包管理功能的完全可写文件系统
+- 高模块化，允许您自定义功能
 - 支持广泛的嵌入式设备
 - 活跃的开发社区和定期更新
 - 广泛的网络功能
@@ -87,13 +87,13 @@ OpenWrt 是一个基于 Linux 的操作系统，提供以下功能：
 
 OpenWrt 为 Wi-Fi HaLow 网关提供了理想的平台，因为：
 
-- **稳定性**：基于坚如磐石的 Linux 基础，支持全天候运行
-- **灵活性**：易于根据特定的物联网需求进行定制
-- **性能**：优化的网络堆栈，支持高效的数据处理
+- **稳定性**：坚如磐石的 Linux 基础，支持 24/7 运行
+- **灵活性**：易于针对特定 IoT 需求进行定制
+- **性能**：优化的网络协议栈，实现高效数据处理
 - **安全性**：内置企业级安全功能
-- **社区支持**：庞大的开发者和用户生态系统
+- **社区**：庞大的开发者和用户生态系统
 
-OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安装的强大物联网网络奠定了坚实的基础。
+OpenWrt 和 Wi-Fi HaLow 的结合为构建强大的 IoT 网络创造了强大的基础，可以从小型部署扩展到大型工业安装。
 
 ## 所需材料
 
@@ -103,7 +103,7 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
     <table align="center">
         <tr>
             <th>Raspberry Pi 4 Model B</th>
-            <th>WiFi HaLow Mini PCIe 模块</th>
+            <th>WiFi HaLow Mini PCIe Module</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/raspberrypi4b.png" style={{width:250, height:'auto'}}/></div></td>
@@ -112,12 +112,12 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-4GB-p-4077.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/Wio-WM6180-Wi-Fi-Halow-mini-PCIe-Module-p-6394.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
@@ -127,18 +127,18 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
 此外，您还需要以下物品：
 
 - **[Mini PCIe 转 PCIe 适配器](https://www.seeedstudio.com/WM1302-Pi-Hat-p-4897.html)** - 用于将 Wi-Fi HaLow Mini PCIe 模块连接到 Raspberry Pi。
-- **Raspberry Pi 散热片** - 推荐用于连续运行时的热管理。
+- **Raspberry Pi 散热器** - 建议在连续运行期间进行热管理。
 - **MicroSD 卡（8GB 或更大）** - 用于存储 OpenWrt 固件。
-- **MicroSD 卡读卡器** - 用于读取 MicroSD 卡。
-- **以太网线** - 用于连接主机电脑并配置 Raspberry Pi 的 WiFi-HaLow。
-- **Raspberry Pi 电源** 
-- **电脑** - 用于刷写固件和配置 Raspberry Pi 的 WiFi-HaLow。
+- **MicroSD 读卡器** - 用于读取 MicroSD 卡。
+- **以太网线** - 用于连接到主机并配置 Raspberry Pi 的 WiFi-Halow。
+- **Raspberry Pi 电源**
+- **计算机** - 用于刷写固件和配置 Raspberry Pi 的 WiFi-Halow。
 - **天线** - 用于扩展 Wi-Fi HaLow Mini PCIe 模块的范围。以下是经过验证的推荐天线型号。
 
 <div class="table-center">
     <table align="center">
         <tr>
-            <th>室内长距离天线套件</th>
+            <th>长距离室内天线套件</th>
             <th>2.6dBi 长距离天线</th>
         </tr>
         <tr>
@@ -148,24 +148,24 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/LoRa-Indoor-Antenna-Kit-860-930MHz-3dBi-295mm-p-5434.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/External-Antenna-915MHZ-2-6dBi-SMA-L195mm-p-5047.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> 立即获取 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
     </table>
 </div>
 
-要将天线连接到 WiFi-HaLow 模块，您可能还需要购买 **SMA 转 I-PEX 天线线缆**。
+要将天线连接到WiFi-Halow模块，您可能还需要购买**SMA转I-PEX天线电缆**。
 
 <div class="table-center">
     <table align="center">
         <tr>
-            <th>SMA 转 I-PEX 天线线缆</th>
+            <th>SMA转I-PEX天线电缆</th>
         </tr>
         <tr>
             <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/antenna_cable.png" style={{width:250, height:'auto'}}/></div></td>
@@ -173,26 +173,26 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
         <tr>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
                 <a class="get_one_now_item" href="https://www.seeedstudio.com/UF-L-SMA-K-1-13-120mm-p-5046.html" target="_blank">
-                <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+                <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
                 </a>
             </div></td>
         </tr>
     </table>
 </div>
 
-如果您是首次使用，可以参考以下视频进行天线安装。
+如果您是第一次使用，可以参考以下视频进行天线安装。
 
 <div class="table-center">
 <iframe width="600" height="350" src="https://files.seeedstudio.com/wiki/wifi_halow/pic/install_pcie_wifi_halow_module.mp4?autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 </div>
 
-## 在 OpenWrt 上安装 WiFi HaLow 到树莓派
+## 为树莓派安装 WiFi Halow OpenWrt 系统
 
-本节将指导您如何使用预构建的 OpenWrt 固件镜像，将树莓派 4 设置为 Wi-Fi HaLow 网关。
+本节将指导您使用预构建的 OpenWrt 固件镜像将树莓派 4 设置为 Wi-Fi HaLow 网关。
 
 ### 下载固件
 
-从以下链接下载支持 Wi-Fi HaLow 的预构建 OpenWrt 镜像：
+从以下地址下载支持 Wi-Fi HaLow 的预构建 OpenWrt 镜像：
 
 <div class="github_container" style={{textAlign: 'center'}}>
     <a class="github_item" href="https://github.com/Wvirgil123/openwrt/releases" target="_blank" rel="noopener noreferrer">
@@ -200,68 +200,72 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
     </a>
 </div><br />
 
-### 将固件烧录到 MicroSD 卡
+### 将固件刷写到 MicroSD 卡
 
 1. 下载并安装 **[balenaEtcher](https://www.balena.io/etcher/)**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/balenaEtcher.png" style={{width:1000, height:'auto'}}/></div>
 
-2. 将 MicroSD 卡插入您的电脑。
+2. 将您的 MicroSD 卡插入计算机。
 3. 启动 balenaEtcher。
-4. 点击“Flash from file”，选择下载的 OpenWrt 固件。
+4. 点击"Flash from file"并选择下载的 OpenWrt 固件。
 5. 选择您的 MicroSD 卡作为目标。
-6. 点击“Flash!”并等待烧录完成。
+6. 点击"Flash!"并等待过程完成。
 
-### 设置与首次启动
+### 设置和首次启动
 
-1. 将烧录好的 MicroSD 卡插入树莓派 4。
-2. 使用网线将您的电脑与树莓派连接。
-3. 给树莓派通电。
-4. 等待大约 2-3 分钟，系统启动完成。
+1. 将刷写好的 MicroSD 卡插入您的树莓派 4
+2. 用网线连接您的计算机和树莓派
+3. 给树莓派通电
+4. 等待大约 2-3 分钟让系统启动
 
 ### 访问网关界面
 
-1. 将您的电脑的以太网接口配置为使用 DHCP，或设置一个静态 IP 地址（范围为 10.42.0.x）。
-2. 打开网页浏览器。
-3. 访问：http://10.42.0.1/
-4. 您应该会看到 Morse Micro 登录页面。
+1. 配置您计算机的以太网接口使用 DHCP，或设置静态 IP 在 10.42.0.x 范围内
+2. 打开网页浏览器
+3. 导航到：http://10.42.0.1/
+4. 您应该看到 Morse Micro 登录页面
 
 :::note
 默认登录凭据为：
+
 - 用户名：root
 - 无需输入密码
+
 :::
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/1.png" style={{width:1000, height:'auto'}}/></div>
 
 :::tip
-如果无法访问界面：
-- 检查您的以太网连接
-- 确认您的电脑是否获得了 IP 地址
-- 尝试 ping 10.42.0.1 以验证连接
+如果您无法访问界面：
+
+- 验证您的以太网连接
+- 检查您的计算机是否接收到 IP 地址
+- 尝试 ping 10.42.0.1 来验证连接性
+
 :::
 
 ## 将树莓派配置为接入点
 
-登录 Morse Micro 界面。在欢迎页面中，请按照下图示例配置您的国家。
+登录到 Morse Micro 界面。在欢迎页面上，请按照下图示例配置您的国家。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/2.png" style={{width:1000, height:'auto'}}/></div>
 
 :::caution
-目前该设备仅支持美国，不支持其他国家或地区。
+目前，此设备仅支持美国，不支持其他国家或地区。
 :::
 
-配置国家后，您可以根据实际情况设置 **主机名** 和 **密码**。请妥善保存这些信息，因为您稍后需要使用此密码访问设备（通过 ssh）。然后点击右下角的 **Next** 按钮。
+配置完国家后，您可以根据实际情况设置**主机名**和**密码**。请妥善保管此信息，因为您稍后需要使用此密码访问设备（ssh）。然后点击右下角的**下一步**按钮。
 
-在新页面中，请选择 **Access Point** 选项。
+请在新页面中选择**接入点**选项。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/3.png" style={{width:1000, height:'auto'}}/></div>
 
-然后点击 **Next** 按钮，在新页面中设置 Wi-Fi HaLow 网络凭据。请记住这些信息，因为您的客户端设备需要使用它们进行连接。
+然后点击**下一步**按钮，在新页面上设置 Wi-Fi HaLow 网络凭据。请记住它们，因为您的客户端设备需要这些信息来连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/4.png" style={{width:1000, height:'auto'}}/></div>
 
-点击 **Next** 按钮，然后在新页面中选择 **Ethernet** 并选择 **Bridge**。以这种方式配置网络可以实现以太网设备与 Wi-Fi 网络设备之间的无缝通信，为连接的设备提供统一的网络体验。
+点击**下一步**按钮，然后在新页面上选择**以太网**并选择**桥接**。以这种方式配置网络可以实现以太网和 Wi-Fi 网络上设备之间的无缝通信，为连接的设备提供统一的网络体验。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/5.png" style={{width:1000, height:'auto'}}/></div>
 
@@ -269,24 +273,24 @@ OpenWrt 与 Wi-Fi HaLow 的结合，为构建从小型部署到大型工业安�
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/6.png" style={{width:1000, height:'auto'}}/></div>
 
-当出现以下界面时，您可以断开树莓派与电脑的连接，并将网线连接到路由器与树莓派之间。然后通过路由器的管理页面检查树莓派的 IP 地址。
+当出现以下界面时，您可以断开树莓派与计算机的连接，并在路由器和树莓派之间连接以太网电缆。然后，通过路由器的管理页面查看树莓派的 IP 地址。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/7.png" style={{width:1000, height:'auto'}}/></div>
 
-对于我的设备，IP 地址为：<strong>192.168.1.168</strong>。在浏览器中输入此地址即可访问 Wi-Fi HaLow 网关的后台页面。
+对于我的设备，IP 地址是：<strong>192.168.1.168</strong>。在浏览器中输入此地址将允许您访问 Wi-Fi HaLow 网关的后台页面。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/wifi_halow/pic/8.png" style={{width:1000, height:'auto'}}/></div>
 
 ## 资源
 
-- **[PDF]** [UG MM6108 Eval Kit 用户指南 2.6 - v18](https://files.seeedstudio.com/wiki/wifi_halow/res/UG_MM6108_Eval_Kit_User_Guide_2.6-v18.pdf)
-- **[PDF]** [Quectel_FGH100M-H 短距离模块规格书 V1.0.0](https://files.seeedstudio.com/wiki/wifi_halow/res/Quectel_FGH100M-H_Short-Range_Module_Specification_V1.0.0_Preliminary_20241018.pdf)
-- **[PDF]** [WiFi-Halow Mini PCIe 模块原理图 PDF](https://files.seeedstudio.com/wiki/wifi_halow/res/Wio-WM6108_V30_SCH_20241107.pdf)
-- **[KiCAD]** [WiFi-Halow Mini PCIe 模块 KiCAD PCB 文件](https://files.seeedstudio.com/wiki/wifi_halow/res/Wio-WM6108_V30.kicad_pcb)
+- **[PDF]** [UG MM6108 Eval Kit User Guide 2.6 - v18](https://files.seeedstudio.com/wiki/wifi_halow/res/UG_MM6108_Eval_Kit_User_Guide_2.6-v18.pdf)
+- **[PDF]** [Quectel_FGH100M-H_Short-Range_Module_Specification_V1.0.0](https://files.seeedstudio.com/wiki/wifi_halow/res/Quectel_FGH100M-H_Short-Range_Module_Specification_V1.0.0_Preliminary_20241018.pdf)
+- **[PDF]** [WiFi-Halow Mini PCIe Module SCH PDF](https://files.seeedstudio.com/wiki/wifi_halow/res/Wio-WM6108_V30_SCH_20241107.pdf)
+- **[KiCAD]** [WiFi-Halow Mini PCIe Module KiCAD PCB File](https://files.seeedstudio.com/wiki/wifi_halow/res/Wio-WM6108_V30.kicad_pcb)
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们致力于为您提供多种支持，确保您使用我们的产品时拥有流畅的体验。我们提供多个沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

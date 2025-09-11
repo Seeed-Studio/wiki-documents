@@ -1,5 +1,0 @@
-position: 3 # float position is supported
-label: 'SenseCraft 数据平台'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别打开
-className: sensecraft_data_platform

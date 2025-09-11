@@ -13,51 +13,52 @@ last_update:
   author: shuxu hu
 ---
 
-## HTTP 请求与响应
+## HTTP 请求和响应
 
-  请求通过 HTTP 基本认证进行身份验证。
+  请求使用 HTTP 基本身份验证进行认证。
 
 ### HTTP HOST
 
-- 中国站点: https://sensecap.seeed.cn/openapi
-- 全球站点: https://sensecap.seeed.cc/openapi
+- 中国站：https://sensecap.seeed.cn/openapi
+- 全球站：https://sensecap.seeed.cc/openapi
+
 
 ### HTTP HEADER
  #### 请求
 <table >
 <tr>
-<th> 键 </th>
-<th> 描述 </th>
+<th> key </th>
+<th> description </th>
 </tr>
 <tr>
 <td width="300"> API-VERSION </td>
-<td width="300"> API 版本 </td>
+<td width="300"> api 版本 </td>
 </tr>
 </table>
 
  #### 响应
 <table >
 <tr>
-<th> 键 </th>
-<th> 描述 </th>
+<th> key </th>
+<th> description </th>
 </tr>
 <tr>
 <td width="300"> api-gateway-excute-second </td>
-<td width="300"> 执行 API 所需的时间（秒） </td>
+<td width="300"> 执行 api 的时间（秒） </td>
 </tr>
 <tr>
 <td width="300"> api-gateway-mpuo-consume </td>
-<td width="300"> 执行 API 消耗的配额 </td>
+<td width="300"> 执行 api 消耗的配额 </td>
 </tr>
 </table>
 
- #### HTTP 基本认证
-  [HTTP 基本认证](https://en.wikipedia.org/wiki/Basic_access_authentication) 是 RESTful API 身份验证最常见的方式之一。我们使用 Access ID 作为用户名，Access Key 作为密码。每个 HTTP 客户端库都应内置对基本认证的支持，在本文档中我们使用 curl，通过 –user 选项指定基本认证凭据。
+ #### HTTP 基本身份验证
+  [HTTP 基本身份验证](https://en.wikipedia.org/wiki/Basic_access_authentication)是 RESTfull API 身份验证最常见的方式之一。我们使用 Access ID 作为用户名，Access Key 作为密码。每个 HTTP 客户端库都应该内置支持基本身份验证，在本文档中我们使用 curl，它使用 –user 选项来指定基本身份验证凭据。
 
-  您可以通过 SenseCAP Portal 创建访问密钥。请参考快速入门以了解如何获取访问密钥。
+  您可以通过 SenseCAP Portal 创建访问密钥。请参考快速入门了解如何获取访问密钥。
 
  #### API 响应
- 所有响应键均遵循小写和下划线命名规则。
+ 所有响应键都遵循小写和下划线约定。
 
   #### 成功响应（字符串）
   ```cpp
@@ -95,7 +96,7 @@ last_update:
   ```
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们将为您提供多种支持，以确保您使用我们的产品时体验顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

@@ -24,24 +24,24 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
 
 ## 特性
 
-* **高性能：** 高精度、快速响应、良好的重复性
-* **通用协议：** MODBUS RS-485或4~20mA电流
-* **宽范围电源：** 3.6V ~ 30V
-* **坚固性：** 适合长时间浸入土壤或水中
-* **免维护：** 先进的接界设计，无堵塞
-* **耐用：** 防腐蚀、自动温度补偿
-* **用户友好：** 易于安装和集成
+- **高性能：** 高精度、快速响应、良好的重复性
+- **通用协议：** MODBUS RS-485或4~20mA电流
+- **宽范围电源：** 3.6V ~ 30V
+- **坚固性：** 适合长时间浸泡在土壤或水中
+- **免维护：** 先进的接界设计，不会堵塞
+- **耐用性：** 防腐蚀、自动温度补偿
+- **用户友好：** 易于安装和集成
 
 ## 应用
 
-* 农业：温室、鱼菜共生、水培和作物种植等
-* 畜牧业：牧场、草地和草甸
-* 林业和园艺
-* 污水处理
-* 游泳池和水疗中心
-* 科学实验
-* 教育项目
-* 其他环境监测场景
+- 农业：温室、鱼菜共生、水培和作物种植等
+- 畜牧业：牧场、草地和草甸
+- 林业和园艺
+- 污水处理
+- 游泳池和水疗中心
+- 科学实验
+- 教育项目
+- 其他环境监测场景
 
 ## 规格参数
 
@@ -75,7 +75,8 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
       </tr>
     </tbody>
   </table>
-  <div>
+
+<div>
     <table className="tg" data-data-style="undefined;table-layout: fixed; width: 677px;"><colgroup><col data-data-style="width: 223px;" /><col data-data-style="width: 454px;" /></colgroup>
       <tbody>
         <tr><th className="tg-luhj" colSpan={2}>通用参数</th></tr>
@@ -96,7 +97,7 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
           <td className="tg-vkfu">4 ~ 20 mA</td>
         </tr>
         <tr>
-          <td className="tg-vkfu">电源</td>
+          <td className="tg-vkfu">电源供应</td>
           <td className="tg-vkfu">3.6 ~ 30VDC</td>
         </tr>
         <tr>
@@ -108,7 +109,7 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
           <td className="tg-vkfu">-40℃ ~ 85℃</td>
         </tr>
         <tr>
-          <td className="tg-vkfu">防护等级</td>
+          <td className="tg-vkfu">IP等级</td>
           <td className="tg-vkfu">IP65</td>
         </tr>
         <tr>
@@ -116,8 +117,8 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
           <td className="tg-vkfu">5米</td>
         </tr>
         <tr>
-          <td className="tg-vkfu">安装</td>
-          <td className="tg-vkfu">全埋或探头插入待测介质</td>
+          <td className="tg-vkfu">安装方式</td>
+          <td className="tg-vkfu">全埋式或探头插入待测介质中</td>
         </tr>
         <tr>
           <td className="tg-vkfu">设备重量</td>
@@ -139,5 +140,5 @@ pH计测量水基溶液中的氢离子活度，指示其酸性或碱性，以pH�
 
 ## 资源
 
-* [pH传感器数据手册](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
-* [pH传感器用户手册](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)
+- [pH传感器数据手册](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensor(S-pH-01)-Datasheet.pdf)
+- [pH传感器用户手册](https://files.seeedstudio.com/wiki/Industrial_Grade_ph_Sensor/RS485&4-20mACurrentpHSensorUserManual-S-pH-01.pdf)

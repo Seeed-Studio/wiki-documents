@@ -1,74 +1,69 @@
 ---
-description: IoTアプリケーションにおける効率的な時系列データ収集と分析のために、reTerminal DM上でInfluxDBを展開します。このガイドでは、インストール、設定、使用方法をカバーし、Raspberry Piを搭載したHMIでInfluxDBの力を活用する方法を説明します。ネットワークのエッジでリアルタイムの洞察と堅牢な監視機能を実現します。
+description: IoTアプリケーションにおける効率的な時系列データ収集と分析のために、reTerminal DMにInfluxDBをデプロイします。このガイドでは、Raspberry Pi搭載HMIでInfluxDBの力を活用するためのインストール、設定、使用方法について説明します。ネットワークのエッジで直接リアルタイムインサイトと堅牢な監視機能を実現します。
 
-title: reTerminal DMでのNode-REDとInfluxDB
+title: reTerminal DM with Node Red and InfluxDB
 keywords:
   - Raspberry Pi
   - HMI
-  - Node-RED
+  - Node-Red
   - InfluxDB
 image: https://files.seeedstudio.com/wiki/reTerminalDM/nodered/reterminal-influx.png
 slug: /ja/reterminal_dm_200_node_red_influxdb
 last_update:
-  date: 05/15/2025
+  date: 06/28/2024
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 ## はじめに
 
-[Raspberry Pi](https://www.influxdata.com/)を搭載したHMIであるreTerminal DM上に[InfluxDB](https://www.influxdata.com/)を展開することで、ネットワークのエッジで堅牢な時系列データ収集と分析が可能になります。このセットアップはIoTアプリケーションに最適で、リアルタイムの洞察と監視機能を提供します。軽量でありながら強力なInfluxDBデータベースを活用することで、reTerminal DM上でセンサーデータを効率的に管理および分析できます。本ガイドでは、reTerminal DM上でInfluxDBをインストール、設定、使用する手順を説明し、データインフラストラクチャへのシームレスな統合を実現します。
+Raspberry Pi搭載HMIであるreTerminal DMに[InfluxDB](https://www.influxdata.com/)をデプロイすることで、ネットワークのエッジで堅牢な時系列データ収集と分析が可能になります。このセットアップはIoTアプリケーションに最適で、リアルタイムインサイトと監視機能を提供します。軽量でありながら強力なInfluxDBデータベースを活用することで、reTerminal DM上で直接センサーデータを効率的に管理・分析できます。以下のガイドでは、reTerminal DMでInfluxDBをインストール、設定、使用する手順を説明し、データインフラストラクチャへのシームレスな統合を確実にします。
 
-### ハードウェア準備
+### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
-### ソフトウェア準備
+### ソフトウェアの準備
 
-[Node-REDの入門ガイド](https://wiki.seeedstudio.com/ja/reTerminal-DM-Getting-Started-with-Node-Red/)を用意しています。作業を進める前に、このガイドを確認することをお勧めします。
+[Node-REDの入門ガイド](https://wiki.seeedstudio.com/reTerminal-DM-Getting-Started-with-Node-Red/)を用意しています。このwikiに進む前に、このガイドを確認することをお勧めします。
 
 ## reTerminal DMへのInfluxDBのインストール
 
-このガイドでは、reTerminal DM HMI上でInfluxDBをインストールおよび設定する手順を説明します。
+このガイドでは、reTerminal DM HMIにInfluxDBをインストールして設定する手順について説明します。
 
-**ステップ 1**: システムの更新
+**ステップ1**: システムの更新
 
-まず、以下のコマンドを実行してシステムを最新の状態にします。reTerminal DMにSSHで接続し、以下を実行します。
+まず、以下のコマンドを実行してシステムが最新であることを確認します：reTerminal DMにSSHで接続し、
 
 ```sh
 sudo apt update
 ```
 
-**ステップ 2**: InfluxDBリポジトリの追加
+**Step 2**: Add the InfluxDB Repository
 
-InfluxDBのGPGキーとリポジトリをシステムに追加します。
+Add the InfluxDB GPG key and repository to your system.
 
-GPGキーを追加:
+Add the GPG key:
 
 ```sh
 curl https://repos.influxdata.com/influxdata-archive.key | gpg --dearmor | sudo tee /usr/share/keyrings/influxdb-archive-keyring.gpg >/dev/null
  ```
 
-リポジトリをソースリストに追加:
+リポジトリをソースリストに追加します：
 
 ```sh
 echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://repos.influxdata.com/debian stable main" | sudo tee /etc/apt/sources.list.d/influxdb.list
@@ -76,47 +71,47 @@ echo "deb [signed-by=/usr/share/keyrings/influxdb-archive-keyring.gpg] https://r
 
 **ステップ 3**: パッケージリストの更新
 
-InfluxDBリポジトリを含むようにパッケージリストを更新します。
+InfluxDBリポジトリを含むようにパッケージリストを更新します：
 
 ```sh
 sudo apt update
 ```
 
-**ステップ 4**: InfluxDBのインストール
+**ステップ 4**: InfluxDBをインストールする
 
-InfluxDBバージョン1をインストールします。
+InfluxDB バージョン1をインストールする
 
 ```sh
 sudo apt install influxdb
 ```
 
-## InfluxDB サーバーの起動
+## InfluxDBサーバーの開始
 
-InfluxDB サービスを有効化して起動します。
+InfluxDBサービスを有効化して開始します：
 
-**ステップ 1**. サービスのマスクを解除します：
+**ステップ1**. サービスのマスクを解除します：
 
 ```sh
 sudo systemctl unmask influxdb
  ```
 
-**ステップ 2**. サービスを有効化します：
+**ステップ 2**. サービスを有効にします：
 
 ```sh
 sudo systemctl enable influxdb
 ```
 
-**ステップ 3**. サービスを起動します：
+**ステップ 3**. サービスを開始します：
 
 ```sh
 sudo systemctl start influxdb
 ```
 
-## InfluxDB のテスト
+## InfluxDBのテスト
 
-InfluxDB CLI ツールにアクセスして基本的なデータベース操作を行います。
+InfluxDB CLIツールにアクセスして基本的なデータベース操作を実行します。
 
-**ステップ 1**. ターミナルを開きます：
+**ステップ1**. ターミナルを開く：
 
 ```sh
 influx
@@ -128,7 +123,7 @@ influx
 CREATE DATABASE data
  ```
 
-**ステップ 3**. データベースを使用します：
+**ステップ 3**. データベースを使用する：
 
 ```sh
 USE data
@@ -140,21 +135,21 @@ USE data
 INSERT room,temperature=30.1 humidity=80.2
  ```
 
-**ステップ 5**. 挿入したデータをクエリします：
+**ステップ 5**. 挿入されたデータをクエリします：
 
 ```sh
 SELECT * FROM room
  ```
 
-## InfluxDB に認証を追加
+## InfluxDBに認証を追加する
 
-**ステップ 1**. ターミナルを開きます：
+**ステップ1**. ターミナルを開く：
 
 ```sh
 influx
 ```
 
-**ステップ 2**. 全権限を持つ管理者ユーザーを作成します（`<password>` を安全なパスワードに置き換えてください）：
+**ステップ 2**. すべての権限を持つ管理者ユーザーを作成します（`<password>` を安全なパスワードに置き換えてください）：
 
 ```sh
 CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
@@ -166,13 +161,13 @@ CREATE USER admin WITH PASSWORD '<password>' WITH ALL PRIVILEGES
 exit
 ```
 
-**ステップ 4**. InfluxDB の設定を編集して認証を有効化します：
+**ステップ 4**. 認証を有効にするためにInfluxDBの設定を編集します：
 
 ```sh
 sudo nano /etc/influxdb/influxdb.conf
 ```
 
-`[HTTP]` セクションの下に、以下の行を追加または変更します：
+`[HTTP]` セクションの下に、以下の行を追加または変更してください：
 
 ```
     auth-enabled = true
@@ -183,36 +178,37 @@ sudo nano /etc/influxdb/influxdb.conf
     bind-address=":8086"
 ```
 
-**ステップ 5**. 設定を反映させるために InfluxDB サービスを再起動します：
+**ステップ 5**. 変更を適用するために InfluxDB サービスを再起動します：
 
 ```sh
 sudo systemctl restart influxdb
 ```
 
-**ステップ 6**. 管理者ユーザーで InfluxDB に接続します：
+**Step 6**. Connect to InfluxDB with the admin user:
 
 ```sh
 influx -username admin -password <password>
 ```
 
-`<password>` を管理者ユーザーのパスワードに置き換えてください。
+`<password>` を管理者ユーザーに設定したパスワードに置き換えてください。
 
-## Node-RED を使用して InfluxDB にデータを送信
+## Node-RED経由でInfluxDBにデータを送信する
 
-**ステップ 1**. ブラウザで Node-RED を開きます（通常は `http://<your-reTerminal-DM-ip>:1880`）。
+**ステップ 1**. ブラウザでNode-REDを開きます（通常は `http://<your-reTerminal-DM-ip>:1880`）。
 
-**ステップ 2**. Node-RED の管理パレットを使用して `node-red-contrib-influxdb` をインストールします。
+**ステップ 2**. Node-REDの管理パレットを使用して `node-red-contrib-influxdb` をインストールします。
 
-**ステップ 3**. フローキャンバスに `inject` ノード、`function` ノード、および `influxdb out` ノードをドラッグ＆ドロップし、以下のように接続します：
+**ステップ 3**. `inject` ノード、`function` ノード、`influxdb out` ノードをフローキャンバスにドラッグ&ドロップし、以下のように接続します：
 
 ```
 [Inject Node] -> [Function Node] -> [InfluxDB Out Node]
 ```
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/ifdb-flow.PNG" /></center>
 
 ### Function ノード
 
-このノードは、InfluxDB に送信するデータをフォーマットします。
+このノードは、InfluxDBに送信するデータをフォーマットします。
 
 **ステップ 1**. `function` ノードをダブルクリックします。
 
@@ -229,25 +225,26 @@ msg.payload = [
 ];
 return msg;
 ```
+
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/js-influxdb.PNG" /></center>
 
 **ステップ 4**. 「Done」をクリックします。
 
 ### InfluxDB Out ノード
 
-このノードはフォーマットされたデータを InfluxDB に送信します。
+このノードは、フォーマットされたデータをInfluxDBに送信します。
 
-**ステップ 1**. `influxdb out` ノードをダブルクリックします。
+**ステップ 1**. `influxdb out`ノードをダブルクリックします。
 
 **ステップ 2**. 以下の詳細を入力します：
 
 - **Name**: labdata
-- **Database**: data（以前に作成したもの）
+- **Database**: data（事前に作成済み）
 - **Measurement**: lab
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/influxin.PNG" /></center>
 
-**ステップ 3**. 鉛筆アイコンをクリックして新しい InfluxDB サーバー構成を追加します。
+**ステップ 3**. 鉛筆アイコンをクリックして、新しいInfluxDBサーバー設定を追加します。
 
 **ステップ 4**. 以下の詳細を入力します：
 
@@ -259,15 +256,15 @@ return msg;
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/server-ifdb.PNG" /></center>
 
-**ステップ 5**. 「Add」をクリックし、その後「Done」をクリックします。
+**ステップ 5**. 「Add」をクリックし、次に「Done」をクリックします。
 
-**ステップ 6**. 「Deploy」をクリックしてフローを保存してデプロイします。
+**ステップ 6**. 「Deploy」をクリックしてフローを保存・デプロイします。
 
 ### フローのテスト
 
-1. `inject` ノードのボタンをクリックしてフローを手動でトリガーします。
+1. `inject`ノードのボタンをクリックして、フローを手動でトリガーします。
 
-2. ターミナルで以下のコマンドを実行して、データが InfluxDB データベースに正常に書き込まれたか確認します：
+2. ターミナルで以下のコマンドを実行して、データがInfluxDBデータベースに正常に書き込まれたかどうかを確認します：
 
 ```sh
 influx -username admin -password <password>
@@ -275,20 +272,20 @@ USE data
 SELECT * FROM lab
 ```
 
-`<password>` を管理者ユーザーのパスワードに置き換えてください。
+`<password>` を管理者ユーザーに設定したパスワードに置き換えてください。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/nodered/result-lab.PNG" /></center>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

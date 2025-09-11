@@ -42,9 +42,10 @@ last_update:
       </div></td>
     </tr>
   </table>
+
 </div>
 
-本项目演示如何使用 SenseCAP Indicator 实现单通道 LoRaWAN 网关（LoRaHub），该设备使用 ESP32S3 作为主控 MCU 和 SX1262 LoRa 无线电，并在 The Things Network（TTN）上构建 LoRaWAN 应用程序。升级固件为那些有兴趣深入研究 LoRa 技术并建立与 LNS（LoRa 网络服务器）连接的用户提供了实用的解决方案。
+这个项目演示了如何使用 SenseCAP Indicator 实现单通道 LoRaWAN 网关（LoRaHub），该设备使用 ESP32S3 作为主控 MCU 和 SX1262 LoRa 无线电，并在 The Things Network（TTN）上构建 LoRaWAN 应用程序。升级固件为那些有兴趣深入研究 LoRa 技术并建立与 LNS（LoRa 网络服务器）连接的用户提供了实用的解决方案。
 
 对于单通道网关（称为单通道集线器），这些是低成本工具，使用户能够开始探索 LoRa 领域。这些网关可以在特定的扩频因子和通道上接收 LoRa 数据包，并促进这些数据包与网络的交换。由于其经济实惠，许多用户已经开始构建自己的单通道网关来试验 LoRa。
 
@@ -74,7 +75,7 @@ last_update:
 
 ### 设置环境
 
-本项目基于 Espressif ESP-IDF 开发，请查看此[指南](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation)来设置环境。
+此项目基于 Espressif ESP-IDF 开发，请查看此[指南](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html#installation)来设置环境。
 
 #### 获取 ESP-IDF
 
@@ -84,16 +85,16 @@ cd ~/esp
 git clone -b v5.2.1 --recursive https://github.com/espressif/esp-idf.git
 ```
 
-#### 设置工具
+#### Set up Tools
 
 ```linux
 cd esp-idf/
 ./install.sh
 ```
 
-### 单通道集线器的安装
+### Installation of One Channel Hub
 
-**步骤 1**：将集线器克隆到本地仓库。并导航到项目路径。
+**Step 1**: Clone the hub to local repository. And navigate to the project path.
 
 ```linux
 git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
@@ -101,21 +102,21 @@ git clone https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32.git
 cd ~/this_project_directory/
 ```
 
-**步骤 2**：安装所需驱动程序
+**Step 2**: Install required driver
 
-- 获取无线电驱动程序：
+- Get the radio drivers:
 
 ```
 cd ~/this_project_directory/components/radio_drivers
 ```
 
-- SX126x 驱动程序（sx1261、sx1262、sx1268）：
+- SX126x driver(sx1261, sx1262, sx1268):
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/sx126x_driver.git sx126x_driver
 ```
 
-- llcc68 驱动：
+- llcc68 driver:
 
 ```
 git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
@@ -127,48 +128,48 @@ git clone -b v2.3.2 https://github.com/Lora-net/llcc68_driver.git llcc68_driver
 git clone -b v2.4.1 https://github.com/Lora-net/SWDR001.git lr11xx_driver
 ```
 
-### 构建固件
+### Build Firmware
 
-**步骤 1**：进入 lorahub 目录。
+**Step 1**: Enter the lorahub directory.
 
 ```
 cd ~/this_project_directory/lorahub
 ```
 
-为从命令行使用 ESP-IDF 构建准备您的 Linux/MAC 终端。在 Windows 上可以跳过此步骤，因为已安装的 'ESP-IDF x.x CMD' 工具会自动准备环境。
+为从命令行使用 ESP-IDF 进行构建准备您的 Linux/MAC 终端。在 Windows 上可以跳过此步骤，因为已安装的 'ESP-IDF x.x CMD' 工具会自动准备环境。
 
 ```
 . ~/esp/esp-idf/export.sh
 ```
 
-配置要构建的 ESP32 目标。
+Configure the ESP32 target to build for.
 
 ```
 idf.py set-target esp32s3
 ```
 
-如有必要，自定义构建：
+Customize the build if necessary:
 
 ```
 idf.py menuconfig
 ```
 
-构建项目：
+Build the project:
 
 ```
 idf.py all
 ```
 
-### 使用 esp-idf 烧录
+### 使用 esp-idf 刷写固件
 
-识别要烧录的单通道集线器关联的串行设备。
-对于 linux 和 mac，可以通过以下命令检查串行端口
+识别要刷写固件的单通道集线器关联的串行设备。
+对于 linux 和 mac，可以通过以下方式检查串行端口
 
 ```
 ls /dev/cu*
 ```
 
-然后使用 `idf.py` 进行烧录，替换 **端口**
+then flash using `idf.py`, replace the **port**
 
 ```
 idf.py -p port flash
@@ -180,13 +181,13 @@ idf.py -p port flash
 sudo usermod -a -G dialout $USERNAME
 ```
 
-在 **Windows** 设置中，假设设备挂载为 COM14，上述命令将如下所示：
+On a **Windows** setup, let's suppose that the device is mounted as COM14, the above command would be like:
 
 ```
 idf.py -p COM14 flash
 ```
 
-启动监控控制台查看日志（可选）。
+Launch the monitor console to see logs (optional).
 
 ```
 idf.py -p port monitor
@@ -199,13 +200,13 @@ idf.py -p port monitor
 https://docs.espressif.com/projects/esptool/en/latest/esp32/
 
 ```cpp
-// 合并版本
+// Merged version
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 Indicator_Lorahub_v1.0.0.bin
-// 分离版本
+// Seperated version
 esptool.py --chip esp32s3 -p port -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader.bin 0x10000 indicator_lorahub.bin 0x8000 partition-table.bin
 ```
 
-在 Windows 设置中，用于刷写的 esptool 命令为：
+On a Windows setup the esptool command for flashing would be:
 
 ```cpp
 // Merged version
@@ -216,10 +217,9 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 将 `port` 和 `COM` 替换为所使用的串口名称。如果连接失败，请参阅[故障排除](https://docs.espressif.com/projects/esptool/en/latest/esp32/troubleshooting.html#troubleshooting)。
 
-
 ### 使用 esptool-JS 烧录
 
-推荐使用[在线 esptool](https://espressif.github.io/esptool-js/)进行烧录。
+推荐使用[在线 esptool](https://espressif.github.io/esptool-js/) 进行烧录。
 
 **步骤1**：将波特率设置为 115200 并连接到正确的端口。
 
@@ -233,7 +233,7 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 - 分离版本：
 
-|**烧录地址**|**文件**|
+|**Flash 地址**|**文件**|
 |----|----|
 |0x0|bootloader.bin|
 |0x10000|indicator_lorahub.bin|
@@ -245,13 +245,11 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image.png" style={{width:480, height:'auto'}}/></div>
 
-
-**步骤2**. 在 **LoRa Gateway** 页面配置参数，将 LNS 和端口设置为"1700"，点击"configure"，然后点击"reboot"。
+**步骤2**. 在 **LoRa Gateway** 页面配置参数，将 LNS 和端口设置为 "1700"，点击 "configure"，然后点击 "reboot"。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/62.png" style={{width:480, height:'auto'}}/></div>
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image1.png" style={{width:480, height:'auto'}}/></div>
-
 
 ## 连接到 The Things Network(TTN)
 
@@ -263,11 +261,11 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image3.png" style={{width:600, height:'auto'}}/></div>
 
-**步骤 3：** 填入自定义网关名称后，选择相应的频率计划（必须与 Indicator 上的配置匹配），然后点击 `Register gateway`。此时，Indicator 的单通道网关已添加到 TTN。
+**步骤 3：** 填写自定义网关名称后，选择相应的频率计划（必须与 Indicator 上的配置匹配），然后点击 `Register gateway`。此时，Indicator 的单通道网关已添加到 TTN。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image4.png" style={{width:600, height:'auto'}}/></div>
 
-**步骤 4：** 添加 Indicator 单通道网关后，点击 `Applications` 添加设备。在此示例中，使用 `SenseCAP T1000 Tracker` 作为节点设备。详细连接步骤请参考 Wiki：https://wiki.seeedstudio.com/cn/SenseCAP_T1000_tracker_TTN/。在 `End devices`->`General settings`->`Network layer`->`Advanced MAC settings` 中，需要将 `Adaptive data rate (ADR)` 设置为 **Static mode**，并且 `ADR data rate index` 需要根据 Indicator 上设置的 `spreading factor` 进行配置。例如，如果 `spreading factor` 设置为 9，则 `ADR data rate index` 应设置为 3，其他值同理。
+**步骤 4：** 添加 Indicator 单通道网关后，点击 `Applications` 添加设备。在此示例中，使用 `SenseCAP T1000 Tracker` 作为节点设备。详细连接步骤请参考 Wiki：https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN/。在 `End devices`->`General settings`->`Network layer`->`Advanced MAC settings` 中，您需要将 `Adaptive data rate (ADR)` 设置为 **Static mode**，并且 `ADR data rate index` 需要根据 Indicator 上设置的 `spreading factor` 进行配置。例如，如果 `spreading factor` 设置为 9，则 `ADR data rate index` 应设置为 3，其他值同理。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image5.png" style={{width:600, height:'auto'}}/></div>
 
@@ -277,8 +275,7 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 
 ## 连接到 ChirpStack
 
-**步骤 1：** 参考 <a  href="https://www.chirpstack.io/docs/getting-started/debian-ubuntu.html" target="_blank"><span>在 Ubuntu/Debian 上设置 ChirpStack</span></a> 安装 ChirpStack。
-
+**步骤 1：** 参考 <a  href="https://www.chirpstack.io/docs/getting-started/debian-ubuntu.html" target="_blank"><span> Setup ChirpStack on Ubuntu/Debian</span></a> 安装 ChirpStack。
 
 **步骤 2：** 安装 ChirpStack 后，您需要在 `/etc/chirpstack` 目录中添加单通道区域定义。
 
@@ -287,161 +284,168 @@ py -m esptool --chip esp32s3 -p COM -b 460800 --before=default_reset --after=har
 <summary>region_eu868_1ch.toml</summary>
 
 ```toml
-# 此文件包含一个示例 EU868 配置。
+# This file contains an example EU868 configuration.
 [[regions]]
 
-  # ID 是此区域的用户定义标识符。
+  # ID is an user-defined identifier for this region.
   id="eu868_1ch"
 
-  # Description 是此区域的简短描述。
+  # Description is a short description for this region.
   description="EU868_1CH"
 
-  # Common-name 指的是 LoRa 联盟定义的此区域的通用名称。
+  # Common-name refers to the common-name of this region as defined by
+  # the LoRa Alliance.
   common_name="EU868"
 
 
-  # 网关配置。
+  # Gateway configuration.
   [regions.gateway]
 
-    # 强制网关为私有。
+    # Force gateways as private.
     #
-    # 如果启用，网关只能被同一租户下的设备使用。
+    # If enabled, gateways can only be used by devices under the same tenant.
     force_gws_private=false
 
 
-    # 网关后端配置。
+    # Gateway backend configuration.
     [regions.gateway.backend]
 
-      # 启用的后端类型。
+      # The enabled backend type.
       enabled="mqtt"
 
-      # MQTT 配置。
+      # MQTT configuration.
       [regions.gateway.backend.mqtt]
 
-        # 主题前缀。
+        # Topic prefix.
         #
-        # 主题前缀可用于定义网关的区域。
-        # 注意，无需在前缀后添加尾随 '/'。如果配置了前缀，
-        # 尾随 '/' 会自动添加到前缀后。
+        # The topic prefix can be used to define the region of the gateway.
+        # Note, there is no need to add a trailing '/' to the prefix. The trailing
+        # '/' is automatically added to the prefix if it is configured.
         topic_prefix="eu868"
 
-        # MQTT 服务器（例如 scheme://host:port，其中 scheme 是 tcp、ssl 或 ws）
+        # MQTT server (e.g. scheme://host:port where scheme is tcp, ssl or ws)
         server="tcp://$MQTT_BROKER_HOST:1883"
 
-        # 使用给定的用户名连接（可选）
+        # Connect with the given username (optional)
         username=""
 
-        # 使用给定的密码连接（可选）
+        # Connect with the given password (optional)
         password=""
 
-        # 服务质量级别
+        # Quality of service level
         #
-        # 0: 最多一次
-        # 1: 至少一次
-        # 2: 恰好一次
+        # 0: at most once
+        # 1: at least once
+        # 2: exactly once
         #
-        # 注意：增加此值会降低性能。
-        # 更多信息：https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels
+        # Note: an increase of this value will decrease the performance.
+        # For more information: https://www.hivemq.com/blog/mqtt-essentials-part-6-mqtt-quality-of-service-levels
         qos=0
 
-        # 清理会话
+        # Clean session
         #
-        # 当此客户端连接到 MQTT 代理时，在连接消息中设置"清理会话"标志。
-        # 通过设置此标志，您表示代理为此客户端保存的消息不应被传递。
+        # Set the "clean session" flag in the connect message when this client
+        # connects to an MQTT broker. By setting this flag you are indicating
+        # that no messages saved by the broker for this client should be delivered.
         clean_session=false
 
-        # 客户端 ID
+        # Client ID
         #
-        # 设置此客户端连接到 MQTT 代理时使用的客户端 ID。
-        # 客户端 ID 不得超过 23 个字符。如果留空，
-        # ChirpStack 将生成一个随机 ID。
+        # Set the client id to be used by this client when connecting to the MQTT
+        # broker. A client id must be no longer than 23 characters. If left blank,
+        # a random id will be generated by ChirpStack.
         client_id=""
 
-        # 保持活动间隔。
+        # Keep alive interval.
         #
-        # 这定义了客户端和服务器之间不应超过的最大通信间隔时间。
+        # This defines the maximum time that that should pass without communication
+        # between the client and server.
         keep_alive_interval="30s"
 
-        # CA 证书文件（可选）
+        # CA certificate file (optional)
         #
-        # 在设置安全连接时使用（当服务器使用 ssl://...）
-        # 但服务器使用的证书不被服务器上的任何 CA 证书信任时使用
-        #（例如自生成时）。
+        # Use this when setting up a secure connection (when server uses ssl://...)
+        # but the certificate used by the server is not trusted by any CA certificate
+        # on the server (e.g. when self generated).
         ca_cert=""
 
-        # TLS 证书文件（可选）
+        # TLS certificate file (optional)
         tls_cert=""
 
-        # TLS 密钥文件（可选）
+        # TLS key file (optional)
         tls_key=""
 
-  # 区域特定网络配置。
+  # Region specific network configuration.
   [regions.network]
     
-    # ADR 引擎使用的安装余量（dB）。
+    # Installation margin (dB) used by the ADR engine.
     #
-    # 更高的数值意味着网络服务器将保持更多余量，
-    # 导致更低的数据速率，但降低设备因无法到达
-    # 周围网关之一而断开连接的机会。
+    # A higher number means that the network-server will keep more margin,
+    # resulting in a lower data-rate but decreasing the chance that the
+    # device gets disconnected because it is unable to reach one of the
+    # surrounded gateways.
     installation_margin=10
 
-    # RX 窗口（A 类）。
+    # RX window (Class-A).
     #
-    # 设置为：
+    # Set this to:
     # 0: RX1 / RX2
-    # 1: 仅 RX1
-    # 2: 仅 RX2
+    # 1: RX1 only
+    # 2: RX2 only
     rx_window=0
 
-    # RX1 延迟（1 - 15 秒）。
+    # RX1 delay (1 - 15 seconds).
     rx1_delay=1
 
-    # RX1 数据速率偏移
+    # RX1 data-rate offset
     rx1_dr_offset=0
 
-    # RX2 数据速率
+    # RX2 data-rate
     rx2_dr=0
 
-    # RX2 频率（Hz）
+    # RX2 frequency (Hz)
     rx2_frequency=869525000
 
-    # 在 RX1 数据速率小于时优先选择 RX2。
+    # Prefer RX2 on RX1 data-rate less than.
     #
-    # 基于 RX1 数据速率优先选择 RX2 而不是 RX1。当 RX1 数据速率
-    # 小于配置值时，网络服务器将首先尝试为 RX2 调度下行链路，
-    # 如果失败（例如网关在 RX2 时间已经调度了负载），它将尝试 RX1。
+    # Prefer RX2 over RX1 based on the RX1 data-rate. When the RX1 data-rate
+    # is smaller than the configured value, then the Network Server will
+    # first try to schedule the downlink for RX2, failing that (e.g. the gateway
+    # has already a payload scheduled at the RX2 timing) it will try RX1.
     rx2_prefer_on_rx1_dr_lt=0
 
-    # 基于链路预算优先选择 RX2。
+    # Prefer RX2 on link budget.
     #
-    # 当 RX2 的链路预算比 RX1 更好时，网络服务器将首先
-    # 尝试在 RX2 中调度下行链路，如果失败则尝试 RX1。
+    # When the link-budget is better for RX2 than for RX1, the Network Server will first
+    # try to schedule the downlink in RX2, failing that it will try RX1.
     rx2_prefer_on_link_budget=false
 
-    # 下行链路 TX 功率（dBm）
+    # Downlink TX Power (dBm)
     #
-    # 当设置为 -1 时，将使用配置频段的下行链路 TX 功率。
+    # When set to -1, the downlink TX Power from the configured band will
+    # be used.
     #
-    # 请查阅 LoRaWAN 区域参数和当地法规以了解有效和合法的选项。
-    # 注意配置的 TX 功率必须被您的网关支持。
+    # Please consult the LoRaWAN Regional Parameters and local regulations
+    # for valid and legal options. Note that the configured TX Power must be
+    # supported by your gateway(s).
     downlink_tx_power=-1
 
-    # ADR 已禁用。
+    # ADR is disabled.
     adr_disabled=true
 
-    # 最小数据速率。
+    # Minimum data-rate.
     min_dr=5
 
-    # 最大数据速率。
+    # Maximum data-rate.
     max_dr=5
 
-    # 在 min_dr/max_dr 配置后添加以下内容
+    # Add the following after min_dr/max_dr configuration 
     enabled_uplink_channels=[0] 
 ```
 
 </details>
 
-您还可以自定义您的单通道区域，请参阅 <a  href="https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8" target="_blank"><span> LoRaWAN theory for the One-Channle Hub</span></a>。
+您也可以自定义您的单通道区域，请参阅 <a  href="https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8" target="_blank"><span> LoRaWAN theory for the One-Channle Hub</span></a>。
 
 **步骤 3：** 修改 `/etc/chirpstack/chirpstack.toml` 以启用新定义的区域。
 
@@ -453,7 +457,7 @@ enabled_regions={
 }
 ```
 
-**步骤 4：** 登录到 ChirpStack 控制台并添加单通道网关。
+**步骤 4：** 登录 ChirpStack 控制台并添加单通道网关。
 
 在添加网关之前，检查单通道区域是否已成功启用。
 
@@ -463,7 +467,7 @@ enabled_regions={
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Single_Channel_Gateway/single-channel-2.png" alt="pir" width={600} height="auto" /></p>
 
-**步骤 5：** 在 LoRa Gateway 页面上配置参数，将地址设置为您的 ChirpStack 服务器地址，点击 `configure`，然后点击 `reboot`。
+**步骤 5：** 在 LoRa 网关页面配置参数，将地址设置为您的 ChirpStack 服务器地址，点击 `configure`，然后点击 `reboot`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/pics/image1.png" alt="pir" width={600} height="auto" /></p>
 
@@ -489,20 +493,20 @@ enabled_regions={
 
 ## 资源
 
-* [SenseSAP Indicator 单通道集线器固件](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
-* [Github 仓库](https://github.com/Lora-net/one_channel_hub)
-* [Semtech 应用说明](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
+- [SenseCAP Indicator 单通道集线器固件](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_single_channel_gateway_20241031.zip)
+- [Github 仓库](https://github.com/Lora-net/one_channel_hub)
+- [Semtech 应用笔记](https://semtech.my.salesforce.com/sfc/p/#E0000000JelG/a/RQ000005dqn4/HobR.KifrmqWNy0bUjfceXByxDWzvwtR37OE5EouVu8)
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

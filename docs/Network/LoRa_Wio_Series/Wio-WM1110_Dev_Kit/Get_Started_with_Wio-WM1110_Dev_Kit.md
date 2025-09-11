@@ -237,8 +237,7 @@ We use Node-RED as the application server. Node-RED is a browser-based visual pr
 
 To install Node-RED locally you will need a <a  href="https://nodered.org/docs/faq/node-versions" target="_blank"><span> Supported Node Version </span></a>
 
-Download the latest 16.x LTS version of Node.js from the official <a  href="https://nodejs.org/en/" target="_blank"><span>Node.js</span></a>
- It will offer you the best version for your system.
+Download the latest 16.x LTS version of Node.js from the official <a  href="https://nodejs.org/en/" target="_blank"><span>Node.js</span></a>. It will offer you the best version for your system.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/nodejs_version.png" alt="pir" width={600} height="auto" /></p>
 
@@ -346,6 +345,7 @@ Then you will see the following flows:
 **Configuring the LoRaWAN Network Server (MQTT)**
 All network server connectors are activated by default; however, the MQTT connection must be set up separately.
 Before you begin, get the required data:
+
 - MQTT server address
 - MQTT port
 - MQTT username

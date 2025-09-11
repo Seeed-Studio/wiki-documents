@@ -1,85 +1,81 @@
 ---
-description: このWikiでは、Raspberry Pi 5およびRaspberry Pi Compute Module 4上でのyolov8sポーズ推定と物体検出のベンチマークを示します。
-title: Raspberry Pi AIキットを使用したRPi5およびCM4上でのyolov8sのベンチマーク
+description: このwikiでは、Raspberry Pi5とRaspberry Pi Compute Module 4でyolov8sのポーズ推定と物体検出のベンチマークを実演します。
+title: RPi5とCM4でrpi ai kitを使用してyolov8sを実行するベンチマーク
 keywords:
   - Edge
   - reComputer r1000
-  - 物体検出
+  - Object detecton
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit
 last_update:
-  date: 05/15/2025
+  date: 07/17/2024
   author: Jiahao
 
-no_comments: false # Disqus用
+no_comments: false # for Disqus
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Raspberry Pi AIキットを使用したRPi5およびCM4上でのyolov8sのベンチマーク
+# RPi5とCM4でrpi ai kitを使用してyolov8sを実行するベンチマーク
 
 ## はじめに
 
-[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once バージョン8）は、リアルタイムのポーズ推定と物体検出モデルのYOLOシリーズの中で最も人気のあるバージョンです。速度、精度、柔軟性においていくつかの進歩を導入し、従来のバージョンの強みを活かしています。[Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html)は、Hailo-8Lチップを中心に構築された13 TOPSのニューラルネットワーク推論アクセラレータを備え、推論速度を向上させます。
+[YOLOv8](https://github.com/ultralytics/ultralytics)（You Only Look Once version 8）は、リアルタイムポーズ推定と物体検出モデルの人気のYOLOシリーズです。速度、精度、柔軟性において複数の進歩を導入することで、前身の強みを基盤として構築されています。[Raspberry-pi-AI-kit](https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html)は推論速度を加速するために使用され、Hailo-8Lチップを中心に構築された13 TOPSニューラルネットワーク推論アクセラレータを特徴としています。
 
-このWikiでは、Raspberry Pi 5およびRaspberry Pi Compute Module 4上でのYOLOv8sを使用したポーズ推定と物体検出のベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8s）を使用し、int8に量子化され、入力サイズは640x640の解像度、バッチサイズは1、240 FPSの同じビデオから入力を取得しています。
+このwikiでは、Raspberry Pi 5とRaspberry Pi Compute Module 4でのポーズ推定と物体検出のためのYOLOv8sのベンチマークを紹介します。すべてのテストは同じモデル（YOLOv8s）を使用し、int8に量子化され、入力サイズは640x640解像度、バッチサイズは1に設定され、240 FPSの同じビデオからの入力を使用しています。
 
 ## ハードウェアの準備
 
-### CM4の場合
+### CM4用
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>reComputer r1000</th>
-		<th>Raspberry Pi AIキット</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>reComputer r1000</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-113991274-recomputer-r1025-10-0.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/reComputer-R1000-Series-Optional-Accessories.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
-### Raspberry Pi 5の場合
+### Raspberry Pi 5用
 
 <div class="table-center">
-	<table align="center">
-	<tr>
-		<th>Raspberry Pi5 8GB</th>
-		<th>Raspberry Pi AIキット</th>
-	</tr>
+ <table align="center">
+ <tr>
+  <th>Raspberry Pi5 8GB</th>
+  <th>Raspberry Pi AI Kit</th>
+ </tr>
     <tr>
       <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-102110919-raspberry-pi-5-8gb-font.jpg" style={{width:600, height:'auto'}}/></div></td>
-	  <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
+   <td><div style={{textAlign:'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/2/-/2-113060086-raspberry-pi-ai-kit-all.jpg" style={{width:600, height:'auto'}}/></div></td>
     </tr>
-		<tr>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-			<td><div class="get_one_now_container" style={{textAlign: 'center'}}>
-				<a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
-				<strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
-				</a>
-			</div></td>
-		</tr>
-	</table>
+  <tr>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-5-8GB-p-5810.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+   <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
+    <a class="get_one_now_item" href="https://www.seeedstudio.com/Raspberry-Pi-AI-Kit-p-5900.html" target="_blank">
+    <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
+    </a>
+   </div></td>
+  </tr>
+ </table>
 </div>
 
 ## このプロジェクトを実行する
@@ -89,86 +85,89 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
 
-<TabItem value="Method 1" label="Pi5 ベンチマーク">
+<TabItem value="Method 1" label="Pi5 Benchmark">
 
-### RPi5 に AI キットをインストールする
-[こちら](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)を参照してください。
+### RPi5にAIキットをインストールする
 
-### Hailo ソフトウェアをインストールしてインストールを確認する
+[こちら](https://www.raspberrypi.com/documentation/accessories/ai-kit.html)を参照してください
 
-#### システムを更新する:
+### Hailoソフトウェアのインストールとインストールの確認
+
+#### システムを更新する
 
 ```
 sudo apt update
 sudo apt full-upgrade
 ```
 
-#### PCIe を gen2/gen3 に設定する (gen3 は gen2 より高速です):
+#### PCIeをgen2/gen3に設定する（gen3はgen2より高速）
 
-以下のテキストを ```/boot/firmware/config.txt``` に追加してください。
+以下のテキストを ```/boot/firmware/config.txt``` に追加してください
 
 ```
-# PCIe 外部コネクタを有効化
+#Enable the PCIe external connector
 
 dtparam=pciex1
 
-# Gen 3.0 の速度を強制
+#Force Gen 3.0 speeds
 
 dtparam=pciex1_gen=3
 
 ```
+
 :::note
-gen2 を使用したい場合は、dtparam=pciex1_gen=3 をコメントアウトしてください。
+gen2を使用したい場合は、dtparam=pciex1_gen=3をコメントアウトしてください
 :::
 
-#### hailo-all をインストールして再起動する:
+#### hailo-allをインストールして再起動
 
-Raspberry Pi5 のターミナルを開き、以下のコマンドを入力して Hailo ソフトウェアをインストールします。
+Raspberry Pi5でターミナルを開き、以下のコマンドを入力してHailoソフトウェアをインストールします。
 
 ```
 sudo apt install hailo-all
 sudo reboot
 ```
-#### ソフトウェアとハードウェアを確認する:
 
-Raspberry Pi5 のターミナルを開き、以下のコマンドを入力して hailo-all がインストールされているか確認します。
+#### ソフトウェアとハードウェアの確認
+
+Raspberry Pi5でターミナルを開き、以下のコマンドを入力してhailo-allがインストールされているかを確認します。
 
 ```
 hailortcli fw-control identify
 ```
 
-正しい結果は以下のように表示されます:
+正しい結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_software.png" alt="pir" width={1000} height="auto"/></p>
 
-Raspberry Pi5 のターミナルを開き、以下のコマンドを入力して hailo-8L が接続されているか確認します。
+Raspberry Pi5でターミナルを開き、以下のコマンドを入力してhailo-8Lが接続されているかどうかを確認します。
 
 ```
 lspci | grep Hailo
 ```
 
-正しい結果は以下のように表示されます:
+正しい結果は以下のように表示されます：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/YOLOV8/check_hardware.png" alt="pir" width={1000} height="auto"/></p>
 
-### プロジェクトを実行する
+### プロジェクトの実行
 
 <Tabs>
-<TabItem value="Method 1" label="ポーズ推定を実行する">
+<TabItem value="Method 1" label="ポーズ推定の実行">
 
-#### プロジェクトをインストールする
+#### プロジェクトのインストール
 
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 ```
 
-#### プロジェクトを実行する
+#### プロジェクトの実行
 
 ```
-# AI キットを使用してポーズ推定を実行する
+# run pose estimation with AI kit
 
 bash run.sh pose-estimation-hailo
 
-# AI キットを使用せずにポーズ推定を実行する
+# run pose estimation without AI kit
 
 bash run.sh pose-estimation
 ```
@@ -177,26 +176,25 @@ bash run.sh pose-estimation
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/Mo7AL7AjxwA" title="Raspberry Pi AI: YOLOv8 Pose Estimation - 240fps Video Input, Pi 5 PCIe Gen2 vs Gen3 Benchmark" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
 </TabItem>
 
-<TabItem value="Method 2" label="物体検出を実行する">
+<TabItem value="Method 2" label="オブジェクト検出を実行">
 
-#### プロジェクトをインストールする
+#### プロジェクトのインストール
 
 ```
 git clone https://github.com/Seeed-Projects/Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L.git
 cd Benchmarking-YOLOv8-on-Raspberry-PI-reComputer-r1000-and-AIkit-Hailo-8L
 ```
 
-#### プロジェクトを実行する
+#### プロジェクトの実行
 
 ```
-# AI キットを使用して物体検出を実行する
+# run object detection with AI kit
 
 bash run.sh object-detection-hailo
 
-# AI キットを使用せずに物体検出を実行する
+# run object detection without AI kit
 
 bash run.sh object-detection
 ```
@@ -212,11 +210,11 @@ bash run.sh object-detection
 
 <TabItem value="Method 2" label="CM4 ベンチマーク">
 
-物体検出については以下の Wiki を参照してください:
-[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/ja/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
+物体検出については、以下のwikiを参照してください：
+[yolov8_object_detection_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l/)
 
-ポーズ推定については以下の Wiki を参照してください:
-[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/ja/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
+姿勢推定については、以下のwikiを参照してください：
+[yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l](https://wiki.seeedstudio.com/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l/)
 </TabItem>
 
 </Tabs>
@@ -241,16 +239,16 @@ bash run.sh object-detection
 
 </Tabs>
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

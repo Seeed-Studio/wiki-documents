@@ -1,4 +1,4 @@
-position: 1 # float position is supported
+position: 2 # float position is supported
 label: 'T1000-E トラッカー'
 collapsible: true # make the category collapsible
 collapsed: true # keep the category open by default

@@ -424,7 +424,7 @@ Framework arguments: -product org.eclipse.epp.package.java.product
 Command-line arguments: -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2012-11-16 12:11:54.493
-!MESSAGE Unable to update index for central|[http://repo.maven.apache.org/maven2](http://repo.maven.apache.org/maven2): C:\Users\sgobi\.m2\repository\.cache\m2e\1.2.0\26522e0d83a422eed93329ece7565cfc\nexus-maven-repository-index.zip (The system cannot find the file specified)
+!MESSAGE Unable to update index for central|[http://repo.maven.apache.org/maven2](http://repo.maven.apache.org/maven2): C:\Users\sgobi.m2\repository.cache\m2e\1.2.0\26522e0d83a422eed93329ece7565cfc\nexus-maven-repository-index.zip (The system cannot find the file specified)
 
 !ENTRY org.eclipse.jdt.ui 4 10001 2012-11-16 13:21:21.138
 !MESSAGE Internal Error

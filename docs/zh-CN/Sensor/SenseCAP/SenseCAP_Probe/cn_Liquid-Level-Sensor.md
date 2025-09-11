@@ -24,27 +24,36 @@ last_update:
 
 ## 特性
 
-* **高性能**：抗干扰和长期稳定性
-* **坚固耐用**：防腐蚀、耐用且稳定
-* **用户友好**：防堵塞设计，易于清洁
-* **广泛适用**：0.5~4.5V传输输出，可与数字显示器、PLC、变频器、记录仪和其他仪器配合使用
-* **工业级**：IP68防护等级，耐用防水，适用于户外恶劣环境
-* **认证**：FCC、CE和RoHS
+- **高性能**：抗干扰和长期稳定性
+- **坚固耐用**：防腐蚀、耐用且稳定
+- **用户友好**：防堵塞设计，易于清洁
+- **广泛适用**：0.5~4.5V传输输出，可与数字显示器、PLC、变频器、记录仪和其他仪器配合使用
+- **工业级**：IP68防护等级，耐用防水，适用于户外恶劣环境
+- **认证**：FCC、CE和RoHS认证
 
 ## 应用
 
-* 水库检测
-* 泵站水池
-* 河流监测
-* 海洋监测
-* 湖泊监测
-* 污水处理
-* 深井液位监测
-* 储罐液位监测
+- 水库检测
+- 泵站水池
+- 河流监测
+- 海洋监测
+- 湖泊监测
+- 污水处理
+- 深井液位监测
+- 储罐液位监测
 
 ![应用](https://files.seeedstudio.com/wiki/Liquid_Level_Sensor/img/92d658aefc90480a607588f72f6f138.png)
 
 ## 规格参数
+<!-- <style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-2fdn{border-color:#9b9b9b;text-align:left;vertical-align:top}
+.tg .tg-e2cz{background-color:#9b9b9b;border-color:#9b9b9b;color:#ffffff;text-align:left;vertical-align:top}
+</style> -->
 
 <table class="tg" data-data-style="undefined;table-layout: fixed; width: 640px;">
 <tbody>
@@ -82,10 +91,10 @@ last_update:
 </tr>
 <tr>
 <td class="tg-h2xt"><span data-style="color: #000000;">测量液体 </span></td>
-<td class="tg-h2xt"><span data-style="color: #000000;">轻腐蚀性液体（水、食用油等）</span></td>
+<td class="tg-h2xt"><span data-style="color: #000000;">轻微腐蚀性液体（水、食用油等）</span></td>
 </tr>
 <tr>
-<td class="tg-h2xt"><span data-style="color: #000000;">电源供应</span></td>
+<td class="tg-h2xt"><span data-style="color: #000000;">电源</span></td>
 <td class="tg-h2xt"><span data-style="color: #000000;">5V DC</span></td>
 </tr>
 <tr>
@@ -113,7 +122,7 @@ last_update:
 </td>
 </tr>
 <tr>
-<td class="tg-h2xt"><span data-style="color: #000000;">防护等级</span></td>
+<td class="tg-h2xt"><span data-style="color: #000000;">IP等级</span></td>
 <td class="tg-h2xt"><span data-style="color: #000000;">IP68</span></td>
 </tr>
 <tr>
@@ -122,7 +131,7 @@ last_update:
 </tr>
 <tr>
 <td class="tg-h2xt"><span data-style="color: #000000;">认证 </span></td>
-<td class="tg-h2xt"><span data-style="color: #000000;">CE、FCC、RoHS</span></td>
+<td class="tg-h2xt"><span data-style="color: #000000;">CE, FCC, RoHS</span></td>
 </tr>
 </tbody>
 </table>
@@ -137,4 +146,4 @@ last_update:
 
 ## 资源
 
-* [液位传感器数据手册](https://files.seeedstudio.com/products/314990619/res/Liquid%20Level%20Sensor-Datasheet.pdf)
+- [液位传感器数据手册](https://files.seeedstudio.com/products/314990619/res/Liquid%20Level%20Sensor-Datasheet.pdf)

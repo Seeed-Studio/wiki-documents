@@ -1,154 +1,157 @@
 ---
-description: Google MediaPipe の使い方を始める
-title: Google MediaPipe の使い方を始める
+description: Google MediaPipeを始める
+title: Google MediaPipeを始める
 keywords:
   - Edge
-  - reTerminal アプリケーション
+  - reTerminal Application
   - Embedded_ML
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal_ML_MediaPipe
 last_update:
-  date: 05/15/2025
+  date: 1/10/2024
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reTerminal で MediaPipe を始める
 
-MediaPipe は、Google が提供するオープンソースのフレームワークで、マルチモーダル（例：ビデオ、オーディオ、任意の時系列データ）、クロスプラットフォーム（Android、iOS、Web、エッジデバイスなど）で動作する応用機械学習パイプラインを構築するためのものです。これは、エンドツーエンドのオンデバイス推論を念頭に置いてパフォーマンス最適化されています。MediaPipe は現在も活発に開発が進められており、複数のデモが含まれており、reTerminal に MediaPipe をインストールするだけでそのまま実行できます。
+# reTerminalでMediaPipeを始める
+
+MediaPipeは、マルチモーダル（例：ビデオ、オーディオ、任意の時系列データ）、クロスプラットフォーム（Android、iOS、ウェブ、エッジデバイス）の応用ML パイプラインを構築するためのGoogleのオープンソースフレームワークです。エンドツーエンドのオンデバイス推論を念頭に置いてパフォーマンス最適化されています。Mediapipeは現在活発に開発中で、reTerminalにMediapipeをインストールした後にそのまま実行できる複数のデモが含まれています。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細を見る</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
 
-Raspberry Pi 64 ビット OS の **Bullseye** または **Bookworm** バージョンを公式ウェブサイトからインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この [**ガイド**](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に従ってください。
+公式ウェブサイトから **Bullseye** または **Bookworm** バージョンの Raspberry Pi 64 bit OS をインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
 
 :::note
 
-以前の OS バージョンでは、Python ライブラリを pip（Python パッケージインストーラー）を使用してシステム全体に直接インストールすることができました。しかし、Bookworm リリースでは変更がありました。インストール中の潜在的な問題を軽減するために、現在では venv を使用して Python 仮想環境内にパッケージをインストールする必要があります。
+以前の OS バージョンでは、Python パッケージインストーラーである pip を使用して Python ライブラリを直接システム全体にインストールできました。しかし、Bookworm リリースでは変更が生じました。インストール中の潜在的な問題を軽減するため、現在は venv を使用して Python 仮想環境に pip 経由でパッケージをインストールする必要があります。
 
 :::
 
-以下のコマンドを順番に実行すると、仮想環境が作成されます。
+これらのコマンドを一つずつ実行すると、仮想環境が構築されます。
 
-```sh
+ ```sh
 mkdir my_project
 cd my_project
 python -m venv --system-site-packages env
 source env/bin/activate
-```
+ ```
 
-## MediaPipe における ML ソリューション
+## MediaPipeにおけるMLソリューション
 
-以下のコマンドを使用して、GitHub リポジトリを reTerminal デバイスにクローンしてください：
+以下のコマンドを使用して、GitHubリポジトリをreTerminalデバイスにクローンすることから始めます：
 
  ```sh
  git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
  ```
-必要なリソースが含まれているフォルダに移動します。このディレクトリには、取り上げる4つのトピックが含まれています。
+
+必要なリソースが含まれているフォルダに移動してください。このディレクトリには、これから扱う4つのトピックがあります。
 
 ### 顔検出
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/meadiapipe-faccedetection.gif" /></center>
 
-- **ステップ 1** 最初のトピックでは、顔検出のための依存関係をインストールします。以下のコマンドを使用して顔検出セクションに移動してください。
+- **ステップ 1** 最初のトピックでは、顔検出の依存関係をインストールします。以下のコマンドを使用して顔検出セクションに移動してください
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_detector/raspberry_pi
  ```
-- **ステップ 2** 必要な依存関係をインストールするためにセットアップスクリプトを実行します。
+
+- **ステップ 2** セットアップスクリプトを実行して必要な依存関係をインストールします
 
  ```sh
 sh setup.sh
  ```
 
-- **ステップ 3** セットアップが完了したら、ソースファイルを実行して顔検出を開始できます。
+- **ステップ 3** セットアップが完了したら、ソースファイルを実行して顔検出を開始できます
 
  ```sh
 python3 detect.py
  ```
 
-### 顔ランドマーカー
+### Face Landmarker
+
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/meadiapipe-facelandmarks.gif" /></center>
 
-- **ステップ 1** 依存関係をインストールします。
+- **ステップ 1** 依存関係をインストールする
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/face_landmarker/raspberry_pi
  ```
-- **ステップ 2** 必要な依存関係をインストールするためにセットアップスクリプトを実行します。
+
+- **ステップ 2** セットアップスクリプトを実行して必要な依存関係をインストールします
 
  ```sh
 sh setup.sh
  ```
 
-- **ステップ 3** セットアップが完了したら、ソースファイルを実行して顔ランドマーカーを開始できます。
+- **Step 3** Once the setup is complete, you can execute the source file to initiate face landmaker.
 
  ```sh
 python3 detect.py
  ```
 
-### 手ランドマーカー
+### Hand Landmarker
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe_handlandmarks.gif" /></center>
 
- - **ステップ 1** 依存関係をインストールします。
+- **ステップ 1** 依存関係をインストール
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/hand_landmarker/raspberry_pi
  ```
-- **ステップ 2** 必要な依存関係をインストールするためにセットアップスクリプトを実行します。
+
+- **ステップ 2** セットアップスクリプトを実行して必要な依存関係をインストールします
 
  ```sh
 sh setup.sh
  ```
 
-- **ステップ 3** セットアップが完了したら、ソースファイルを実行して手ランドマーカーを開始できます。
+- **Step 3** Once the setup is complete, you can execute the source file to initiate hand landmaker.
 
  ```sh
 python3 detect.py
  ```
 
-### ポーズランドマーカー
+### Pose Landmarker
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/mediapipe/mediapipe-pose.gif" /></center>
 
- - **ステップ 1** 依存関係をインストールします。
+- **ステップ 1** 依存関係をインストール
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/mediapipe_picam/pose_landmarker/raspberry_pi
  ```
-- **ステップ 2** 必要な依存関係をインストールするためにセットアップスクリプトを実行します。
+
+- **ステップ 2** セットアップスクリプトを実行して必要な依存関係をインストールします
 
  ```sh
 sh setup.sh
  ```
 
-- **ステップ 3** セットアップが完了したら、ソースファイルを実行してポーズランドマーカーを開始できます。
+- **Step 3** Once the setup is complete, you can execute the source file to initiate pose landmaker.
 
  ```sh
 python3 detect.py
@@ -156,20 +159,20 @@ python3 detect.py
 
 ## リソース
 
-- **[ウェブページ]** [MediaPipe 公式ウェブページ](https://mediapipe.dev/)
+- **[Web Page]** [MediaPipe 公式ウェブページ](https://mediapipe.dev/)
 
-- **[ウェブページ]** [MediaPipe 公式ドキュメント](https://google.github.io/mediapipe/)
+- **[Web Page]** [MediaPipe 公式ドキュメント](https://google.github.io/mediapipe/)
 
 ## 技術サポート
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。異なるニーズや好みに対応するため、いくつかのコミュニケーションチャネルを用意しています。
+弊社製品をお選びいただき、ありがとうございます！お客様の製品体験を可能な限りスムーズにするため、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

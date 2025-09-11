@@ -363,8 +363,8 @@ If all goes well, you will see the output message of the model result as shown b
 :::note
 Use the following protocol for SPI communication:
 
-- READ: Send bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN &amp; 0xff
-- WRITE: Send bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN &amp; 0xff
+- READ: Send bytes 0x10, 0x01, LEN &lt;&lt; 8, LEN & 0xff
+- WRITE: Send bytes 0x10, 0x02, LEN &lt;&lt; 8, LEN & 0xff
 - AVAIL (to check data availability): Send bytes 0x10, 0x03
 - RESET (to clear buffer): Send bytes 0x10, 0x06
 

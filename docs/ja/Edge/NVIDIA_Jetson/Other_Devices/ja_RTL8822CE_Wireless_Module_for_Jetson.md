@@ -1,5 +1,5 @@
 ---
-description: このWikiでは、RTL8822CEワイヤレスモジュールの特徴と仕様について紹介します。このデュアルバンドWi-FiおよびBluetooth v5.0 M.2ワイヤレスモジュールは、さまざまな組み込みデバイス（例：reComputer J4012）と互換性があります。この記事では、技術仕様、対応デバイス、ハードウェアのインストール手順、デスクトップインターフェースまたはコマンドラインを使用したワイヤレスネットワークおよびBluetoothの設定方法について詳しく説明します。
+description: このwikiでは、RTL8822CEワイヤレスモジュールの機能と仕様を紹介します。これは、様々な組み込みデバイス（例：reComputer J4012）と互換性のあるデュアルバンドWi-FiおよびBluetooth v5.0 M.2ワイヤレスモジュールです。この記事では、技術仕様、対応デバイス、ハードウェアインストール手順、デスクトップインターフェースまたはコマンドラインを介してワイヤレスネットワークとBluetoothを設定する方法について詳細な情報を提供します。
 title: Jetson用RTL8822CEワイヤレスモジュール
 keywords:
   - Edge
@@ -10,29 +10,26 @@ keywords:
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.webp
 slug: /ja/rtl8822ce_wireless_module_for_jetson
 last_update:
-  date: 05/15/2025
+  date: 12/3/2024
   author: Youjiang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <div align="center">
   <img width ="600" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/RTL8822CE_Wireless_NIC_for_Jetson.png"/>
 </div>
 
-<!-- ジャンプボタンが必要 -->
+<!-- Need to jump button  -->
 
-RTL8822CEは、2T2RデュアルバンドWLANサブシステム（PCI Expressコントローラー付き）とUSB対応のBluetooth v5.0サブシステムを統合したコンパクトなデュアルバンドWLAN+BluetoothコンボM.2カードです。IEEE 802.11 a/b/g/n/ac規格に準拠し、最大PHYレート867 Mbpsを提供し、Bluetoothデュアルモード（v5.0/v4.2/v2.1）をサポートします。[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)などの組み込みデバイスでの高性能なワイヤレスおよびBluetooth接続に最適です。
+RTL8822CEは、PCI Expressコントローラーを搭載した2T2Rデュアルバンド WLANサブシステムと、USBサポートを備えたBluetooth v5.0サブシステムを統合したコンパクトなデュアルバンドWLAN+Bluetoothコンボ M.2カードです。IEEE 802.11 a/b/g/n/ac標準に対応し、最大867MbpsのPHYレートを実現し、Bluetoothデュアルモード（v5.0/v4.2/v2.1）をサポートします。[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)などの組み込みデバイスでの高性能ワイヤレスおよびBluetooth接続に最適です。
 
 ## 特徴
-- 2.4G/5GHzデュアルバンド対応
-- ワイヤレスPHYレートは最大867Mbpsに達する
-- IEEE規格：IEEE 802.11a/b/g/n/ac
+
+- 2.4G/5GHzデュアルバンドをサポート
+- ワイヤレスPHYレートは最大867Mbpsに到達可能
+- IEEE標準：IEEE 802.11a/b/g/n/ac
 - フォームファクター：M.2 2230汎用AキーまたはEキー
-- MHF4コネクタを介して外部アンテナに接続
-- 電源供給：DC3.3V±0.2V
+- MHF4コネクターを通じて外部アンテナに接続
+- 電源供給：DC3.3V±0.2V電源供給
 - Linux、Windows 10/11などをサポート
 
 ## 仕様
@@ -44,20 +41,20 @@ RTL8822CEは、2T2RデュアルバンドWLANサブシステム（PCI Expressコ�
       <td>**TRL8822CE-CG**</td>
     </tr>
     <tr>
-      <td>WLAN規格</td>
+      <td>WLAN標準</td>
       <td>IEEE802.11a/b/g/n/ac</td>
     </tr>
     <tr>
       <td>BT仕様</td>
-      <td>Bluetoothコア仕様 v5.0/4.2/2.1</td>
+      <td>Bluetooth Core Specification v5.0/4.2/2.1</td>
     </tr>
     <tr>
       <td>ホストインターフェース</td>
-      <td>WLAN用PCI Express 2.1 & Bluetooth用USB2.0 FS</td>
+      <td>WLAN用PCI Express 2.1およびBluetooth用USB2.0 FS</td>
     </tr>
     <tr>
       <td>アンテナ</td>
-      <td>MHF4コネクタを介して外部アンテナに接続</td>
+      <td>MHF4コネクターを通じて外部アンテナに接続</td>
     </tr>
     <tr>
       <td>寸法</td>
@@ -69,11 +66,11 @@ RTL8822CEは、2T2RデュアルバンドWLANサブシステム（PCI Expressコ�
     </tr>
     <tr>
       <td>動作温度</td>
-      <td>-20℃ ～ +70℃</td>
+      <td>-20℃から+70℃</td>
     </tr>
     <tr>
       <td>動作湿度</td>
-      <td>10% ～ 95% RH（結露しないこと）</td>
+      <td>10%から95% RH（結露なし）</td>
     </tr>
     </table>
 </div>
@@ -88,15 +85,15 @@ RTL8822CEは、2T2RデュアルバンドWLANサブシステム（PCI Expressコ�
 ## ハードウェア接続
 
 :::danger
-このWikiでは、reComputer J4012を例に、JetsonデバイスにRTL8822CEワイヤレスモジュールをインストールして設定する方法を説明します。
+このwikiでは、reComputer J4012を例として使用し、JetsonデバイスにRTL8822CEワイヤレスモジュールをインストールおよび設定する方法を説明します。
 :::
 
-Step1. 使用するすべての材料を準備します。
+ステップ1. 使用するすべての材料を準備します。
 
 - Jetpack 5.1.2を搭載したreComputer J4012
 - Infineon Wi-Fiモジュール
 
-Step 2. ワイヤレスモジュールをM.2 Key Eポートに挿入します。
+ステップ2. ワイヤレスモジュールをM.2 Key Eポートに挿入します。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/wifi/rtl8822ce.jpg"/>
@@ -104,16 +101,16 @@ Step 2. ワイヤレスモジュールをM.2 Key Eポートに挿入します。
 
 ## ワイヤレスモジュールの設定
 
-Jetsonデスクトップに直接アクセスし、`設定` --> `WiFi`を通じてWi-Fiネットワークに接続できます。
+Jetsonデスクトップに直接アクセスし、`設定` --> `WiFi`を通じてwifiネットワークに接続できます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer/Hard_ware/Infineon_wifi_module/connect_to_wifi.png"/>
 </div>
 
-また、`設定` --> `Bluetooth`を通じてBluetoothを設定することもできます。
+`設定` --> `Bluetooth`を通じてBluetoothも設定できます。
 
 :::info
-さらに、コマンドラインを使用してワイヤレスモジュールを設定することも可能です。例えば、`bluetoothctl`コマンドを使用してBluetoothデバイスを設定できます。
+さらに、`bluetoothctl`コマンドを使用してBluetoothデバイスを設定するなど、コマンドラインを介してワイヤレスモジュールを設定することもできます。
 
 <div align="center">
   <img width ="800" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-bluetooth-test.png"/>
@@ -123,14 +120,14 @@ Jetsonデスクトップに直接アクセスし、`設定` --> `WiFi`を通じ�
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験をスムーズにするために、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

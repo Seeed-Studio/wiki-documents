@@ -14,7 +14,6 @@ last_update:
 
 The Wio Tracker 1110 Dev Board leverages Arduino to enhance your coding experience, before you start development, need to set up your toolchain first.
 
-
 ### Setup your toolchian
 
 #### Install Arduino IDE
@@ -53,19 +52,14 @@ Search `Seeed nRF52 Boards` and install it.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/install-boa.png" alt="pir" width={800} height="auto" /></p>
 
-
 Then need to select the Board and Port.<br/>
 Search `Seeed Wio Tracker 1110` and select it, choose the port and click `OK`.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/port.png" alt="pir" width={800} height="auto" /></p>
 
 :::info
 The port should be like 'Serial Port(USB)'
 :::
-
-
-
 
 #### Wio Tracker 1110 examples
 
@@ -75,10 +69,7 @@ Navigate to the `File` tab, select `Example`-> `Wio Tracker 1110 Examples`, then
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/example.png" alt="pir" width={800} height="auto" /></p>
 
-
-
 ### Add Libraries
-
 
 In the Arduino IDE, you can search for it in the `Library Manager`, e.g. `Seeed_Arduino_AHT20`, and then install it.
 

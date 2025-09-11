@@ -1,55 +1,53 @@
 ---
-description: reTerminal向けのLVGL
-title:  reTerminal向けのLVGL
+description: reTerminal用LVGL
+title: reTerminal用LVGL
 keywords:
   - Edge
-  - reTerminal アプリケーション
+  - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal-build-UI-using-LVGL
 last_update:
-  date: 05/15/2025
+  date: 1/31/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl_banner.jpg" alt="pir" width="800" height="auto"/></p>
 
 ## はじめに
 
-LVGLは、使いやすいグラフィカル要素、美しい視覚効果、そして低メモリ消費で組み込みGUIを作成するために必要なすべてを提供します。LVGLは、リソースが限られたマイクロコントローラーを対象としたグラフィックスライブラリです。しかし、高性能のマイクロプロセッサやLinuxオペレーティングシステムを実行するボードを使用して組み込みGUIを作成することも可能です。現在、これを実現する方法は以下の2つがあります：
+LVGLは、使いやすいグラフィカル要素、美しい視覚効果、低メモリフットプリントで組み込みGUIを作成するために必要なすべてを提供します。LVGLは、限られたリソースを持つマイクロコントローラーを対象としたグラフィックスライブラリです。しかし、Linux オペレーティングシステムを実行する高性能マイクロプロセッサーやボードで組み込みGUIを作成するために使用することも可能です。現在、これを行う方法は2つあります：
 
-- SDL2クロスプラットフォームライブラリを使用したPCシミュレーター
+- SDL 2 クロスプラットフォームライブラリを使用したPCシミュレーター
 - Linuxのフレームバッファデバイス（通常は/dev/fb0）を単純に使用する
 
-このWiki記事では、SDL2を使用したPCシミュレーターの例を使用し、ウィンドウではなくフルスクリーンでUIを表示するように少し修正します。
+このWiki記事では、SDL2を使用したPCシミュレーターの例を使用し、ウィンドウではなくフルスクリーンでUIを表示するように少し変更します。
 
-#### 特徴
+#### 機能
 
-- 強力な[構築ブロック](https://docs.lvgl.io/master/widgets/index.html)：ボタン、チャート、リスト、スライダー、画像など
-- 高度なグラフィックスエンジン：アニメーション、アンチエイリアス、透明度、スムーズスクロール、ブレンディングモードなど
-- [さまざまな入力デバイス](https://docs.lvgl.io/master/overview/indev.html)をサポート：タッチスクリーン、マウス、キーボード、エンコーダー、ボタンなど
-- [複数のディスプレイ](https://docs.lvgl.io/master/overview/display.html)をサポート
-- ハードウェアに依存せず、任意のマイクロコントローラーとディスプレイで使用可能
-- 少ないメモリで動作可能（64 kB Flash、16 kB RAM）
-- UTF-8処理、CJK、双方向およびアラビア文字スクリプトをサポートする多言語対応
-- [CSSのようなスタイル](https://docs.lvgl.io/master/overview/style.html)を使用してグラフィカル要素を完全にカスタマイズ可能
+- 強力な[構成要素](https://docs.lvgl.io/master/widgets/index.html)：ボタン、チャート、リスト、スライダー、画像など
+
+- 高度なグラフィックスエンジン：アニメーション、アンチエイリアシング、不透明度、スムーズスクロール、ブレンドモードなど
+- [様々な入力デバイス](https://docs.lvgl.io/master/overview/indev.html)をサポート：タッチスクリーン、マウス、キーボード、エンコーダー、ボタンなど
+- [複数ディスプレイ](https://docs.lvgl.io/master/overview/display.html)をサポート
+- ハードウェア非依存、任意のマイクロコントローラーとディスプレイで使用可能
+- 少ないメモリで動作するようにスケーラブル（64 kB Flash、16 kB RAM）
+- UTF-8処理、CJK、双方向およびアラビア文字スクリプトサポートによる多言語サポート
+- [CSSライクなスタイル](https://docs.lvgl.io/master/overview/style.html)による完全にカスタマイズ可能なグラフィカル要素
 - CSSにインスパイアされた強力なレイアウト：[Flexbox](https://docs.lvgl.io/master/layouts/flex.html)と[Grid](https://docs.lvgl.io/master/layouts/grid.html)
-- OS、外部メモリ、GPUをサポート（必須ではない）。STM32 DMA2D、NXP PXP、VGLiteの組み込みサポート
+- OS、外部メモリ、GPUはサポートされていますが必須ではありません（STM32 DMA2D、NXP PXPおよびVGLiteの組み込みサポート）
 - [単一フレームバッファ](https://docs.lvgl.io/master/porting/display.html)でもスムーズなレンダリング
-- Cで記述されており、C++と互換性あり
-- Micropythonバインディングにより[LVGL APIをMicropythonで利用可能](https://blog.lvgl.io/2019-02-20/micropython-bindings)
-- 組み込みハードウェアなしでPC上で開発可能な[シミュレーター](https://docs.lvgl.io/master/get-started/pc-simulator.html)
+- Cで記述され、C++と互換性あり
+- Micropython BindingがMicropythonで[LVGL API](https://blog.lvgl.io/2019-02-20/micropython-bindings)を公開
+- 組み込みハードウェアなしでPC上で開発するための[シミュレーター](https://docs.lvgl.io/master/get-started/pc-simulator.html)
 - 100以上のシンプルな[例](https://github.com/lvgl/lvgl/tree/master/examples)
-- [ドキュメント](http://docs.lvgl.io/)とAPIリファレンスがオンラインおよびPDFで利用可能
+- オンラインおよびPDFでの[ドキュメント](http://docs.lvgl.io/)とAPIリファレンス
 
 ## 開発環境の準備
 
 ### reTerminal上で
 
-Raspberry Pi OSでは、ターミナルを使用してSDL2を簡単にインストールできます：
+Rasperry Pi OSでは、ターミナルを使用してSDL2を簡単にインストールできます：
 
 ```bash
 sudo apt-get update && sudo apt-get install build-essential libsdl2-dev cmake  -y
@@ -65,30 +63,30 @@ git clone --recursive https://github.com/littlevgl/pc_simulator.git
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/UrSkzbuuGaw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-EdgeLineはLVGL向けのWYSIWYGエディターであり、ユーザーがインターフェースを作成し、ターゲットデバイスで使用するためのC/Micropythonコードをエクスポートできます。現在、ベータ段階で機能が限定されており、WindowsとLinuxの両方で利用可能です。
+EdgeLineはLVGL用のWYSIWYGエディタで、ユーザーがインターフェースを作成し、ターゲットデバイスで使用するためのC/Micropythonコードをエクスポートできます。現在はベータ段階で機能が限定されており、WindowsとLinuxの両方で利用可能です。
 
-Windows版：[リンク](https://lvgl.io/assets/edgeline/EdgeLine_Setup_v0_3_installer.exe)  
-Linux版：[リンク](https://lvgl.io/assets/edgeline/EdgeLine_v0_3_linux.zip)
+Windows版: [LINK](https://lvgl.io/assets/edgeline/EdgeLine_Setup_v0_3_installer.exe)
+Linux版: [LINK](https://lvgl.io/assets/edgeline/EdgeLine_v0_3_linux.zip)
 
-EdgeLineはベータ段階にあるため、[LVGLフォーラムのEdgeLineサブフォーラム](https://forum.lvgl.io/c/edgeline/15)で新しいバージョンの有無を確認してください。
+EdgeLineはベータ段階にあるため、[LVGLフォーラムのEdgeLineサブフォーラム](https://forum.lvgl.io/c/edgeline/15)で新しいバージョンの存在を確認してください。
 
 Linux版では、Edgeline.x86_64とserver/micropythonが実行可能であることを確認してください。（```chmod +x filename```）
 
-その後、EdgeLineは以下のコマンドで実行できます：
+その後、EdgeLineは以下のコマンドで実行できます
 
 ```bash
 ./Edgeline.x86_64
 ```
 
-エクスポートされたコードはデフォルトでは画面をロードしないため、目的の画面でlv_scr_load(scr_name)を手動で呼び出す必要があります。
+エクスポートされたコードはデフォルトでは画面を読み込まないため、目的の画面で手動で lv_scr_load(scr_name) を呼び出す必要があります。
 
 ## デモの実行
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl.gif" alt="pir" width="800" height="auto"/></p>
 
-以下の手順は、Raspberry Pi OS上でCMakeを使用して実行できます。
+以下の手順は、Raspberry Pi OS で CMake を使用する場合に使用できます。
 
-CMakeがインストールされていることを確認してください。つまり、ターミナルでcmakeコマンドが動作する必要があります。
+CMake がインストールされていることを確認してください。つまり、ターミナルで cmake コマンドが動作することを確認してください。
 
 ```bash
 cd pc_simulator/
@@ -98,30 +96,30 @@ cmake ..
 make -j4
 ```
 
-バイナリはpc_simulator/build/bin/mainに生成され、以下のコマンドで実行できます：
+バイナリは pc_simulator/build/bin/main に生成され、以下のコマンドで実行できます：
 
 ```bash
 DISPLAY=:0 ./bin/main
 ```
 
-これにより、ウィンドウモードでウィジェットデモが表示されます。これをフルスクリーンモードに変更するには、以下のファイルを開きます：
+これによりウィジェットデモがウィンドウモードで表示されます - これをフルスクリーンに変更するには、
 ```pc_simulator/lv_drivers/sdl/sdl.c```
-そして、#L344を以下のように変更します：
+and change #L344 to
 
 ```c
 static void window_create(monitor_t * m)
 {
     m->window = SDL_CreateWindow("TFT Simulator",
                             SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                            1280 , 720 , SDL_WINDOW_FULLSCREEN);       /*最後のパラメータ。SDL_WINDOW_BORDERLESSで境界を非表示にする*/
-}
+                            1280 , 720 , SDL_WINDOW_FULLSCREEN);       /*last param. SDL_WINDOW_BORDERLESS to hide borders*/
+
 ```
 
-さらに、以下のファイルで画面解像度を変更します：pc_simulator/lv_drv_conf.h #L90
+Additionally, change screen resolution in pc_simulator/lv_drv_conf.h #L90
 
 ```conf
 /*-------------------
- *  PCのモニター
+ *  Monitor of PC
  *-------------------*/
 #ifndef USE_MONITOR
 #  define USE_MONITOR         1
@@ -139,15 +137,15 @@ make -j4
 DISPLAY=:0 ./bin/main
 ```
 
-タッチ方向が正しくない場合は、```/boot/config.txt```の89行目を以下のように変更する必要があります：```dtoverlay=reTerminal,tp_rotate=0```
+タッチ方向が正しくない場合は、```/boot/config.txt``` の89行目を ```dtoverlay=reTerminal,tp_rotate=0``` に変更する必要があります。
 
 ## 独自のGUIアプリケーションを構築する
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl_reterminal.gif" alt="pir" width="800" height="auto"/></p>
 
-LVGL 8.0を使用してreTerminal用の独自のUIアプリケーションを構築する方法については、[このGitHubリポジトリ](https://github.com/AIWintermuteAI/Seeed_reTerminal_LVGL_UI_Demo)の例コードを参照してください。
+LVGL 8.0を使用してreTerminal用の独自のUIアプリケーションを構築する方法については、[このGitHubリポジトリ](https://github.com/AIWintermuteAI/Seeed_reTerminal_LVGL_UI_Demo)のサンプルコードをご覧ください。
 
-必要なすべてのコンポーネントはmain.cでインポートおよび初期化され、その後メインUI関数が呼び出されます。UIの記述、コールバック、およびヘルパー関数は**lv_demo_reterminal_UI/lv_demo_reterminal_UI.c**内にあります。
+必要なコンポーネントはすべてmain.cでインポートされ初期化され、その後メインのUI関数が呼び出されます。UI記述、コールバック、ヘルパー関数は **lv_demo_reterminal_UI/lv_demo_reterminal_UI.c** 内に配置されています。
 
 ```cpp
     tv = lv_tabview_create(lv_scr_act(), LV_DIR_TOP, tab_h);
@@ -162,11 +160,11 @@ LVGL 8.0を使用してreTerminal用の独自のUIアプリケーションを構
     lv_obj_t * t3 = lv_tabview_add_tab(tv, "Stats");
 ```
 
-アクティブな画面上にTabviewウィジェットを作成し、Assistant、Debug、Statsの3つのタブを追加します。
+アクティブな画面に Tabview ウィジェットを作成し、「Assistant」「Debug」「Stats」の3つのタブを追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-1.png" alt="pir" width="800" height="auto"/></p>
 
-各タブの内容は対応する関数内で個別に初期化されます：
+各タブのコンテンツは、対応する関数内で個別に初期化されます：
 
 ```cpp
     assistant_create(t1);
@@ -178,7 +176,7 @@ LVGL 8.0を使用してreTerminal用の独自のUIアプリケーションを構
     evdev_lis3dh_init();
 ```
 
-さらに、Tabviewウィジェット上にカラーチェンジャー要素を作成し、内蔵加速度計を初期化します。その後、ダミー入力データを使用して3つのタイマーコールバックを作成します：
+さらに、Tabviewウィジェット上に色変更要素が作成され、内蔵加速度計が初期化されます。その後、ダミー入力データを使用して3つのタイマーコールバックを作成します：
 
 ```cpp
     static uint32_t user_data = 10;
@@ -187,7 +185,7 @@ LVGL 8.0を使用してreTerminal用の独自のUIアプリケーションを構
     lv_timer_t * accelerometer_timer = lv_timer_create(accelerometer_timer_cb, 50,  &user_data);
 ```
 
-これらはそれぞれ、システム時間、システムステータス（CPU、メモリ、ディスクスペース、イーサネットの現在の速度など）、および加速度計の読み取りを取得する役割を果たします。これら3つのコールバック関数はlv_demo_reterminal_UI.cの最後にあります。
+これらはそれぞれシステム時刻、システムステータス（CPU、メモリ、ディスク容量、イーサネット現在速度など）、および加速度センサーの読み取り値を取得する役割を担っています。これら3つのコールバック関数は lv_demo_reterminal_UI.c の最下部で見つけることができます。
 
 ```cpp
 void time_timer_cb(lv_timer_t * timer)
@@ -236,13 +234,13 @@ void accelerometer_timer_cb(lv_timer_t * timer)
 }
 ```
 
-特定のアプリケーションでは、Tabview以外のウィジェットを使用する方が適している場合があります。使用方法や例については、[LVGL 8.0ウィジェットの完全な説明](https://docs.lvgl.io/master/widgets/index.html)を参照してください。
+あなたの特定のアプリケーションでは、Tabviewよりも他のウィジェットを使用する方が適している場合があります。使用方法と例については、[LVGL 8.0ウィジェットの完全な説明](https://docs.lvgl.io/master/widgets/index.html)を参照してください。
 
-LVGLを使用してreTerminal用の最初のUIアプリケーションを作成する際にデモアプリケーションを参考にする場合、以下にこれらの関数の1つ（**assistant_create()**）内で何が行われているかについての詳細情報を示します。新しいアプリケーションを作成する際のワークフローは以下のようになります：
+reTerminal用のLVGLで最初のUIアプリケーションを作成する際に、私たちのデモアプリケーションに密接に従うことを決めた場合、以下でこれらの関数の1つ（**assistant_create()**）の内部で何が起こるかについて、より詳細な情報を見つけることができます。新しいアプリケーションを作成するためのワークフローは似ています：
 
-1) 画面上のウィジェットを初期化する
-2) センサーやシステムからデータを取得するためのタイマーまたはイベントベースのコールバックを作成する
-3) データに基づいてウィジェットの内容を変更する - 通常、コードの先頭で宣言されたグローバル変数を使用して行います
+1) 画面上でウィジェットを初期化する
+2) センサー/システムからデータを取得するためのタイマーベースまたはイベントベースのコールバックを作成する
+3) データに基づいてウィジェットの内容を変更する - 通常これはコードの上部で宣言されたグローバル変数を使用して行われます
 
 **assistant_create**
 タブ用のパネルオブジェクトを作成し、その高さを設定します。
@@ -254,14 +252,14 @@ LVGLを使用してreTerminal用の最初のUIアプリケーションを作成�
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-2.png" alt="pir" width="800" height="auto"/></p>
 
-次に、[LVGL画像変換ツール](https://lvgl.io/tools/imageconverter)を使用して取得したassetsフォルダ内のC配列から画像ボタンオブジェクトを作成します。また、ボタン押下時のスタイル変換を画像ボタンオブジェクトに初期化して割り当てます（ボタンが押されると緑色になります）。さらに、イベントコールバック**speech_event_cb**がボタン押下に割り当てられます。この例では、ターミナルにテキストを出力するだけですが、実際のアプリケーションではインテリジェントアシスタントを開始するために使用できます。
+次に、assetsフォルダにあるC配列から画像ボタンオブジェクトを作成します。これは[LVGL画像変換ツール](https://lvgl.io/tools/imageconverter)で取得したものです。また、画像ボタンオブジェクトにボタン押下時のスタイル変換を初期化して割り当てます（ボタンは押下時に緑色になります）。さらに、ボタン押下時にイベントコールバック**speech_event_cb**が割り当てられます - これは単なるモック例なので、ターミナルにテキストを出力するだけです。しかし、実際のアプリケーションでは、インテリジェントアシスタントを開始するために使用できます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-3.png" alt="pir" height="400" height="auto"/></p>
 
 ```cpp
     LV_IMG_DECLARE(speech_btn_img);
 
-    /*幅の変形とリカラーに関するトランジションアニメーションを作成します。*/
+    /*Create a transition animation on width transformation and recolor.*/
     static lv_style_prop_t tr_prop[] = {LV_STYLE_IMG_RECOLOR_OPA, 0};
     static lv_style_transition_dsc_t tr;
     lv_style_transition_dsc_init(&tr, tr_prop, lv_anim_path_linear, 500, 0, NULL);
@@ -271,13 +269,13 @@ LVGLを使用してreTerminal用の最初のUIアプリケーションを作成�
     lv_style_set_text_color(&style_def, lv_color_white());
     lv_style_set_transition(&style_def, &tr);
 
-    /*ボタンが押されたときに暗くし、幅を広げます*/
+    /*Darken the button when pressed and make it wider*/
     static lv_style_t style_pr;
     lv_style_init(&style_pr);
     lv_style_set_img_recolor_opa(&style_pr, LV_OPA_70);
     lv_style_set_img_recolor(&style_pr, lv_palette_main(LV_PALETTE_GREEN));
 
-    /*画像ボタンを作成します*/
+    /*Create an image button*/
     lv_obj_t * speech_btn = lv_imgbtn_create(panel1);
     lv_imgbtn_set_src(speech_btn, LV_IMGBTN_STATE_RELEASED, NULL, &speech_btn_img, NULL);
     //lv_img_set_zoom(speech_btn, 128);
@@ -287,7 +285,7 @@ LVGLを使用してreTerminal用の最初のUIアプリケーションを作成�
     lv_obj_add_style(speech_btn, &style_pr, LV_STATE_PRESSED);
 ```
 
-次のコードブロックでは、時間、日付、ユーザー挨拶用のテキストラベルを作成します。これらはデフォルトのテキストで初期化され、`time_timer`コールバックで毎秒変更されます。
+次のコードブロックでは、時刻、日付、ユーザー挨拶のテキストラベルを作成します。これらはデフォルトテキストで初期化され、time_timerコールバックで毎秒変更されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/lvgl-4.png" alt="pir" width="600" height="auto"/></p>
 
@@ -310,21 +308,21 @@ LVGLを使用してreTerminal用の最初のUIアプリケーションを作成�
     lv_obj_add_style(date_label, &style_large, 0);
 ```
 
-最後に、このタブに配置したウィジェットをグリッドレイアウトを使用して構造化します。グリッドレイアウトはCSS Flexboxのサブセットです。
+最後に、このタブに配置したウィジェットをGridレイアウトを使用して構造化します。GridレイアウトはCSS Flexboxのサブセットです。
 
-グリッドレイアウトは、行または列（トラック）を持つ2Dの「テーブル」にアイテムを配置できます。アイテムは複数の列または行にまたがることができます。トラックのサイズはピクセル、最大アイテムサイズ（```LV_GRID_CONTENT```）、または「フリーユニット」（FR）で設定して空きスペースを比例配分できます。
+アイテムを行または列（トラック）を持つ2D「テーブル」に配置できます。アイテムは複数の列や行にまたがることができます。トラックのサイズは、ピクセル単位、最大アイテムに合わせて（```LV_GRID_CONTENT```）、または「フリーユニット」（FR）で設定して、空きスペースを比例的に分散できます。
 
 オブジェクトをグリッドコンテナにするには、```lv_obj_set_layout(obj, LV_LAYOUT_GRID)```を呼び出します。
 
-LVGLのグリッドレイアウト機能を使用するには、```lv_conf.h```で```LV_USE_GRID```をグローバルに有効にする必要があります。
+LVGLのグリッドレイアウト機能は、```lv_conf.h```で```LV_USE_GRID```を使用してグローバルに有効にする必要があることに注意してください。
 
-LVGLのレイアウトについての詳細は、[このリンク](https://docs.lvgl.io/master/layouts/grid.html)を参照してください。
+LVGLのレイアウトについて詳しくは、[このリンク](https://docs.lvgl.io/master/layouts/grid.html)をフォローして読むことができます。
 
 ```cpp
     static lv_coord_t grid_main_col_dsc[] = {LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_TEMPLATE_LAST};
     static lv_coord_t grid_main_row_dsc[] = {LV_GRID_CONTENT, LV_GRID_CONTENT, LV_GRID_TEMPLATE_LAST};
 
-    /*トップパネルを作成します*/
+    /*Create the top panel*/
     static lv_coord_t grid_1_col_dsc[] = {400, 50, LV_GRID_CONTENT, LV_GRID_FR(2), LV_GRID_FR(1), LV_GRID_FR(1), LV_GRID_TEMPLATE_LAST};
     static lv_coord_t grid_1_row_dsc[] = {200, 100, 100, LV_GRID_CONTENT, 10, LV_GRID_CONTENT, LV_GRID_CONTENT, LV_GRID_TEMPLATE_LAST};
 
@@ -340,41 +338,41 @@ LVGLのレイアウトについての詳細は、[このリンク](https://docs.
     lv_obj_set_grid_cell(date_label, LV_GRID_ALIGN_START, 3, 1, LV_GRID_ALIGN_CENTER, 3, 1);
 ```
 
-他のタブには異なるウィジェットがありますが、全体的なワークフローは同じです。特定のウィジェットのパラメータや使用方法について詳しく知りたい場合は、LVGLのドキュメントを参照してください。
+残りのタブには異なるウィジェットがありますが、全体的なワークフローは同じです。特定のウィジェットのパラメータや使用方法について詳しく知りたい場合は、LVGLドキュメントを参照してください。
 
-アプリケーションをコンパイルするには、プロジェクトフォルダ（`main.c`ソースファイルを含む）から以下を実行します。
+アプリケーションをコンパイルするには、プロジェクトフォルダ（main.cソースファイルを含む）から
 
 ```bash
 mkdir build
-cd build
+cd build.
 cmake ..
 make -j4
 ```
 
-バイナリは`../bin/main`に生成され、以下のコマンドで実行できます。
+バイナリは ../bin/main に生成され、以下のコマンドを入力することで実行できます：
 
 ```bash
 DISPLAY=:0 ./../bin/main
 ```
 
-プロジェクトに他のフォルダを追加する場合は、`CMakeLists.txt`を適切に変更し、ビルドディレクトリから再度`cmake ..`を実行してください。そうしないとリンクエラーが発生する可能性があります。
+プロジェクトに他のフォルダを追加する場合は、CMakeLists.txtを適切に変更し、buildディレクトリから`cmake ..`を再実行してください。そうしないと、リンクエラーが発生します。
 
 ## リソース
 
 - **[GitHub]** [LVGL](https://lvgl.io/)
-- **[Webページ]** [公式LVGLドキュメント](https://docs.lvgl.io/master/index.html)
+- **[Webpage]** [公式LVGLドキュメント](https://docs.lvgl.io/master/index.html)
 - **[GitHub]** [PCシミュレータソースコード](https://github.com/lvgl/lv_sim_eclipse_sdl)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しています。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

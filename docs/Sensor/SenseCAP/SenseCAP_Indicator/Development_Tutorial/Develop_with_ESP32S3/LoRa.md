@@ -17,8 +17,6 @@ The SenseCAP indicator is embedded with SX1262 LoRa® module, which can realize 
 
 This example code demonstrates a basic example of how to use the LoRa® radio module in transmit mode to send data packets in LoRa® mode. It defines the frequency, bandwidth, spreading factor, coding rate, preamble length, and other parameters of the LoRa® modulation scheme.
 
-
-
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -77,13 +75,9 @@ void demo_lora_tx(void)
 }
 ```
 
-
-
-
 ## **Receive Data Packets**
 
 This example code sets up a LoRa® receiver using the SX126x radio module and logs the received packets to the console. It can be used as a starting point for developing LoRa® applications that require receiving data over long distances with low power consumption.
-
 
 ```c
 #include <stdio.h>
@@ -152,8 +146,6 @@ void demo_lora_rx(void)
 }
 
 ```
-
-
 
 # **Tech Support**
 

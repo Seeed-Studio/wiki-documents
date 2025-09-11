@@ -94,7 +94,7 @@ Use a standard USB Type-C cable to power the device. After startup, the device w
 
 ### Step 2: Enter AP Provisioning Mode
 
-When the network is not configured, the device will automatically create a Wi-Fi hotspot (AP) named **XIAO IR Mate** (or **Seeed\_ir**, depending on what you find).
+When the network is not configured, the device will automatically create a Wi-Fi hotspot (AP) named **XIAO IR Mate** (or **Seeed_ir**, depending on what you find).
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect.png"

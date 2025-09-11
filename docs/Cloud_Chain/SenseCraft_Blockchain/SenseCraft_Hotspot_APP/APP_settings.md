@@ -16,8 +16,6 @@ last_update:
 
 # APP Settings
 
-
 In Settings, `SenseCAP Hotspot App` allows you to enable PIN, get the support documents, open a support ticket on Help Center, switch helium wallet, or exit helium wallet.
 
 ![SenseCAP Hotspot App Settings](https://www.sensecapmx.com/wp-content/uploads/2022/07/8.png)
-

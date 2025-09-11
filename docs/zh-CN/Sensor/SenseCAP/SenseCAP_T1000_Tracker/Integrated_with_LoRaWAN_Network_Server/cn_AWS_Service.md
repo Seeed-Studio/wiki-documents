@@ -21,7 +21,6 @@ last_update:
 如果您没有 AWS 账户，请点击[这里](https://portal.aws.amazon.com/billing/signup)创建一个。
 :::
 
-
 ## 添加网关
 
 导航到 `Internet of Things`，然后点击 `IoT Core`。
@@ -32,12 +31,10 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-gateway.png" alt="pir" width={800} height="auto" /></p>
 
-
 `Gateway's EUI`：您网关的 EUI，您可以在设备标签上找到它。<br/>
 `Frequency`：网关的频段。<br/>
 `Name`：为您的网关命名（可选）<br/>
-`SubBand`：可选地，您还可以指定 LoRaWAN 配置数据，例如您想要使用的子频段和可以控制流量流动的过滤器。更多信息，请参见[使用 AWS IoT Core for LoRaWAN 配置无线资源位置](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html)。
-
+`SubBand`：可选地，您还可以指定 LoRaWAN 配置数据，例如您想要使用的子频段和可以控制流量流动的过滤器。有关更多信息，请参阅[使用 AWS IoT Core for LoRaWAN 配置无线资源位置](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-configure-location.html)。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/gateway-eui.png" alt="pir" width={800} height="auto" /></p>
 
@@ -59,7 +56,6 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/files.png" alt="pir" width={800} height="auto" /></p>
 
-
 ### 网关权限
 
 如果您还没有为您的账户创建 IoTWirelessGatewayCertManagerRole IAM 角色，请在继续添加网关之前创建该角色。
@@ -68,7 +64,6 @@ last_update:
 选择角色：`IoT Wireless Gateway Cert Manager Role`，然后提交配置。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/permissions.png" alt="pir" width={800} height="auto" /></p>
-
 
 复制 CUPS URL，我们将在下一步中使用它。
 
@@ -86,15 +81,13 @@ last_update:
 `URL`：我们之前复制的 CUPS URL<br/>
 `Authentication Mode`：TLS Server and Client Authentication
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS21.PNG" alt="pir" width={800} height="auto" /></p>
 
 复制我们之前下载的证书文件的内容（证书可以以文本形式打开）。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS23.PNG" alt="pir" width={800} height="auto" /></p>
 
-
-导航到网关页面并选择您添加的网关。
+导航到网关页面并选择您已添加的网关。
 
 在网关详情页面的 LoRaWAN 特定详情部分，您将看到连接状态以及接收到最后一次上行链路的日期和时间。
 
@@ -112,7 +105,6 @@ last_update:
 
 提供设备配置文件名称，选择您用于设备和网关的频段（RfRegion），并将其他设置保持为默认值。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/proflie2.png" alt="pir" width={800} height="auto" /></p>
 
 ### 添加服务配置文件
@@ -124,7 +116,6 @@ last_update:
 建议您保持 `AddGWMetaData` 设置启用，这样您将收到每个有效载荷的额外网关元数据，例如数据传输的 RSSI 和 SNR。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/profile4.png" alt="pir" width={800} height="auto" /></p>
-
 
 ### 添加目标
 
@@ -149,7 +140,7 @@ last_update:
 
 `Wireless device specification`：OTAAv1.0x
 
-`DevEUI/APP EUI/APP key`：可以在 SenseCAP Mate APP 中找到，查看 [Get_Started](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker/#get-started) 了解更多详情。
+`DevEUI/APP EUI/APP key`：可以在 SenseCAP Mate APP 中找到，查看 [Get_Started](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/#get-started) 了解更多详情。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS17.PNG" alt="pir" width={800} height="auto" /></p>
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS20.PNG" alt="pir" width={800} height="auto" /></p>
@@ -158,7 +149,6 @@ last_update:
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/device-eui2.png" alt="pir" width={800} height="auto" /></p>
 
-
 导航到设备页面并选择您之前添加的设备。
 
 在无线设备详情页面的详情部分，您将看到接收日期。
@@ -166,7 +156,6 @@ last_update:
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/AWS19.PNG" alt="pir" width={800} height="auto" /></p>
 
 ## 配置解码器
-
 
 ### 创建消息规则
 
@@ -253,4 +242,4 @@ T1000 Tracker 的原始载荷从 `t1000-raw` 发布，解码后的数据从 `tra
 
 ## 资源
 
-[SenseCAP T1000 Tracker Decoder for AWS](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/AWS/SenseCAP_T1000_AWS_Decoder.js)
+[SenseCAP T1000 Tracker AWS 解码器](https://github.com/Seeed-Solution/SenseCAP-Decoder/blob/main/T1000/AWS/SenseCAP_T1000_AWS_Decoder.js)

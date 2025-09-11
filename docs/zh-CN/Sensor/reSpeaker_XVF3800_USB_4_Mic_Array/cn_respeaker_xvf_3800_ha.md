@@ -1,7 +1,7 @@
 ---
 description: 体验 ReSpeaker XVF3800 USB 4-Mic Array 的强大功能——这是一款先进的圆形麦克风阵列，具备 AEC、波束成形、噪声抑制和 360° 语音捕获功能。与紧凑的 XIAO ESP32S3 配对，为智能设备、机器人和物联网应用提供高性能语音控制。加入我们，演示与 Home Assistant 的无缝集成，使用语音命令控制设备。
 
-title: 使用 ReSpeaker XVF3800 和 Home Assistant 的语音控制智能家居
+title: 使用 Home Assistant 的智能家居语音控制
 
 keywords:
 - reSpeaker
@@ -17,10 +17,9 @@ last_update:
 
 ## 概述
 
-使用全新的 **ReSpeaker XMOS XVF3800 与 XIAO ESP32S3** 与智能空间对话，开关灯光、播放音乐，甚至询问天气，全部通过语音控制
+使用全新的 **ReSpeaker XMOS XVF3800 与 XIAO ESP32S3** 与智能空间对话，通过语音开关灯光、播放音乐，甚至询问天气
 
 在本章中，我们将使用 ReSpeaker XMOS XVF3800 与 XIAO ESP32S3 HA 语音助手连接 Sonoff 智能开关，实现语音控制灯光开关。
-
 
 <div class="video-container">
   <iframe width="800" height="400"
@@ -68,7 +67,7 @@ last_update:
 ## 固件更新
 
 为了获得最佳的播放体验，我们需要将 XMOS 固件更新到
-从这里下载固件。在您的计算机上，插入带有 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800，并运行我们指南中的：
+从这里下载固件。在您的计算机上，插入带有 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800，并按照我们指南中的说明运行：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_firmware.PNG" alt="pir" width={800} height="auto" /></p>
 
@@ -77,10 +76,9 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 我们的固件修复了这个限制，因此麦克风可以与 Home Assistant 正常工作。
 :::
 
-
 您可以从[这里](https://github.com/respeaker/reSpeaker_XVF3800_USB_4MIC_ARRAY/tree/master/xmos_firmwares/i2s)下载固件
 
-安装指南在[这里](https://wiki.seeedstudio.com/cn/respeaker_xvf3800_introduction/#update-firmware)
+安装指南在[这里](https://wiki.seeedstudio.com/respeaker_xvf3800_introduction/#update-firmware)
 
 ## 准备带有 XIAO ESP32S3 的 ReSpeaker XMOS XVF3800
 
@@ -95,7 +93,6 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 在 **Official add-ons** 下，搜索并安装 **ESPHome Device Builder**。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome.PNG" alt="pir" width={800} height="auto" /></p>
-
 
 安装后，点击 **Start** 运行 ESPHome 插件。
 
@@ -135,9 +132,7 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 
 将生成的 .bin 固件文件下载到您的计算机。
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/HA/HA_esphome_factory.PNG" alt="pir" width={800} height="auto" /></p>
-
 
 使用 **USB Type-C 线缆**将 **ESP32-S3** 开发板（连接了 XVF3800）连接到您的 PC。
 
@@ -204,7 +199,6 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 
 ## 使用 Nabu Cloud 的语音助手
 
-
 在此演示中，我们展示如何使用语音连接 **Home Assistant Cloud (Nabu Casa)**。设置简单，您可以利用 **一个月免费试用** 来探索其全部功能。
 通过内置的 **唤醒词**："Okay Nabu"，您可以轻松触发语音命令，并与设备和服务 **无缝集成**，**随时随地** — 无需复杂配置。
 
@@ -217,11 +211,11 @@ XVF3800 麦克风阵列需要 12.288 MHz MCLK 才能工作，但 ESPHome（在 H
 感谢您选择我们的产品！我们在此为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

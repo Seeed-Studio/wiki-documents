@@ -110,7 +110,7 @@ The WiFi shield is compatible with any Arduino/Seeeduino development board as it
 
 **5.UART/Serial Select area:** Two jumper rows to let you select which RX and TX pins you want to use to communicate with the Arduino.
 
-**6.Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9\. The voltage VCC is dependent on the power supply of the board.
+**6.Grove connectors:** Analog I2C Grove (if using Arduino UNO or Seeeduino) for pins A4&A5 and Digital Serial Grove for D8&D9. The voltage VCC is dependent on the power supply of the board.
 
 ### Pins Used / Shield Compatibility
 

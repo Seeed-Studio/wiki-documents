@@ -27,7 +27,6 @@ SenseCAP provides an easy-to-use cloud platform. Users can scan the QR code with
     </a>
 </div>
 
-
 **Main Features**
 
 - Gateway: High-performance Cortex A8 1GHz processor

@@ -18,59 +18,60 @@ At Watcher, we believe in providing developers with a clear and transparent pric
 ## Our Pricing Plans
 
 <div class="table-center">
-	<table align="center">
-		<tr>
-			<th> </th>
+ <table align="center">
+  <tr>
+   <th> </th>
       <th>On-Premise</th>
-			<th>SenseCraft Standard</th>
+   <th>SenseCraft Standard</th>
       <th>SenseCraft Pro</th>
-		</tr>
-		<tr>
-			<th>Data Retention</th>
-			<td align="center">Save by user</td>
-			<td align="center">3 Months</td>
-			<td align="center">3 Months</td>
-		</tr>
-		<tr>
-			<th>Data API</th>
-			<td align="center">Local HTTP API</td>
-			<td align="center">MQTT/HTTP API</td>
-			<td align="center">MQTT/HTTP API</td>
-		</tr>
-		<tr>
-			<th>Task Analysis</th>
-			<td align="center">Unlimited</td>
-			<td align="center">Unlimited</td>
-			<td align="center">Unlimited</td>
-		</tr>
-		<tr>
-			<th>Image Analysis</th>
-			<td align="center">Unlimited</td>
-			<td align="center">15 Minutes/Request</td>
-			<td align="center">20000 Requests</td>
-		</tr>
-		<tr>
-			<th>Chat with LLM</th>
-			<td align="center">Unlimited</td>
-			<td align="center">200 Requests/Month</td>
-			<td align="center">1000 Requests</td>
-		</tr>
-		<tr>
-			<th>TinyML Model and Model Training</th>
-			<td align="center">Unlimited</td>
-			<td align="center">Unlimited</td>
-			<td align="center">Unlimited</td>
-		</tr>
+  </tr>
+  <tr>
+   <th>Data Retention</th>
+   <td align="center">Save by user</td>
+   <td align="center">3 Months</td>
+   <td align="center">3 Months</td>
+  </tr>
+  <tr>
+   <th>Data API</th>
+   <td align="center">Local HTTP API</td>
+   <td align="center">MQTT/HTTP API</td>
+   <td align="center">MQTT/HTTP API</td>
+  </tr>
+  <tr>
+   <th>Task Analysis</th>
+   <td align="center">Unlimited</td>
+   <td align="center">Unlimited</td>
+   <td align="center">Unlimited</td>
+  </tr>
+  <tr>
+   <th>Image Analysis</th>
+   <td align="center">Unlimited</td>
+   <td align="center">15 Minutes/Request</td>
+   <td align="center">20000 Requests</td>
+  </tr>
+  <tr>
+   <th>Chat with LLM</th>
+   <td align="center">Unlimited</td>
+   <td align="center">200 Requests/Month</td>
+   <td align="center">1000 Requests</td>
+  </tr>
+  <tr>
+   <th>TinyML Model and Model Training</th>
+   <td align="center">Unlimited</td>
+   <td align="center">Unlimited</td>
+   <td align="center">Unlimited</td>
+  </tr>
     <tr>
-			<th>Price</th>
-			<td align="center">Free</td>
-			<td align="center">Free</td>
-			<td align="center">One free trial & 6.9 USD Plan</td>
-		</tr>
-	</table>
+   <th>Price</th>
+   <td align="center">Free</td>
+   <td align="center">Free</td>
+   <td align="center">One free trial & 6.9 USD Plan</td>
+  </tr>
+ </table>
 </div>
 
 :::caution
+
 1. SenseCraft Pro's paid plans are tied to the EUI of each device. This means that if you have five devices that all want to use SenseCraft Pro, you will need to pay for them separately.
 
 2. SenseCraft Pro's billing service is based on the number of Requests. When you purchase the service, you will get the number of Requests provided by the service, in which there is no expiry date.
@@ -78,6 +79,7 @@ At Watcher, we believe in providing developers with a clear and transparent pric
 3. SenseCraft Pro will automatically activate the trial service when your device is tethered to the SenseCraft APP.
 
 4. SenseCraft Pro activates the trial and accounts for all the Requests in the form at once, and then automatically switches to SenseCraft Standard when you're done using it.
+
 :::
 
 At Watcher, we believe in empowering developers with the flexibility and scalability they need to succeed with AI integration. Our pricing plans are designed to accommodate a wide range of needs, from casual experimentation to large-scale deployment. Choose the plan that best aligns with your AI usage intensity and project requirements, and let Watcher help you unlock the full potential of SenseCraft AI. Get started today and experience the power of AI on your own terms!
@@ -149,4 +151,3 @@ Thank you for choosing our products! We are here to provide you with different s
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
-

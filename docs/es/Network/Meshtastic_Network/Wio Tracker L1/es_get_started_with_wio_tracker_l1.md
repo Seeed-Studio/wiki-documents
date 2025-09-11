@@ -92,8 +92,8 @@ Para comenzar a comunicarse a través de la malla, debes establecer tu región. 
 |**Código de Región**|**Descripción**|**Rango de Frecuencia (MHz)**|**Ciclo de Trabajo (%)**|**Límite de Potencia (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Sin establecer|N/A|N/A|N/A|
-|US|Estados Unidos|902\.0 - 928.0|100|30|
-|EU\_868|Unión Europea 868MHz|869\.4 - 869.65|10|27|
+|US|Estados Unidos|902.0 - 928.0|100|30|
+|EU_868|Unión Europea 868MHz|869.4 - 869.65|10|27|
 
 Consulta [Región LoRa por País](https://meshtastic.org/docs/configuration/region-by-country/) para una lista más completa.
 

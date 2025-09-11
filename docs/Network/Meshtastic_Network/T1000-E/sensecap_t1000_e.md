@@ -98,8 +98,8 @@ In order to start communicating over the mesh, you must set your region. This se
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902\.0 - 928.0|100|30|
-|EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
 Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
 
@@ -351,9 +351,7 @@ pip3 install -r requirements.txt
 python3 setup.py install
 ```
 
-If you get permission errors when running `pip3 install`, your `pip3` is older
-or is set to try to install in the system directories. In that case use the
-`--user` flag:
+If you get permission errors when running `pip3 install`, your `pip3` is older or is set to try to install in the system directories. In that case use the `--user` flag:
 
 ```
 pip3 install -r --user requirements.txt

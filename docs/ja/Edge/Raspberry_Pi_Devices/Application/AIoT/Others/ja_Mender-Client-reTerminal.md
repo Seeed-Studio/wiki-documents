@@ -1,48 +1,44 @@
 ---
-description: reTerminalでのMender Client
-title: reTerminalでのMender Client
+description: reTerminal上のMender Client
+title: reTerminal上のMender Client
 keywords:
   - Edge
-  - reTerminal アプリケーション
+  - reTerminal Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Mender-Client-reTerminal
 last_update:
-  date: 05/15/2025
+  date: 1/31/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reTerminalでのMender Clientのインストール
+# reTerminal上のMender Clientのインストール
 
-reTerminalにMender Clientをセットアップし、HostedまたはSelf-Hosted Mender ServerからOTAアップデートを受信することができます。
+reTerminal上でMender Clientをセットアップし、ホスト型またはセルフホスト型のMender ServerからOTAアップデートを受信することができます。
 
-このガイドでは、Yocto Projectを使用してカスタムLinuxシステムを実行しているreTerminalを使用することに焦点を当てています。
+このガイドでは、Yocto Projectを使用してコンパイルされたカスタムLinuxシステムを実行するreTerminalの使用に焦点を当てています。
 
 ## テスト結果
 
-以下の表に示すYocto Projectリリースは、Menderコミュニティによってテストされています。他の[Yocto Projectリリース](https://wiki.yoctoproject.org/wiki/Releases?target=_blank)でこの統合をテストした場合は更新してください：
+以下の表のYocto Projectリリースは、Menderコミュニティによってテストされています。他の[Yocto Projectリリース](https://wiki.yoctoproject.org/wiki/Releases?target=_blank)でこの統合をテストした場合は、更新してください：
 
-| Yocto Project | ビルド | 実行 |
+| Yocto Project | ビルド | ランタイム |
 |---|---|---|
-| dunfell (3.1 / 5.3.0) | テスト成功 | テスト成功 |
+| dunfell (3.1 / 5.3.0) | テスト動作 | テスト動作 |
 
-**ビルド**は、このMender統合を使用してYocto Projectビルドがエラーなしで完了し、イメージを出力することを意味します。
-**実行**は、Menderがボード上で動作することが確認されたことを意味します。U-Bootベースのボードの場合、[統合チェックリスト](https://docs.mender.io/devices/integrating-with-u-boot/integration-checklist?target=_blank)が確認されています。
+**Build** Yocto Projectがこの Mender 統合を使用したビルドがエラーなしで完了し、イメージを出力することを意味します。
+**Runtime** Mender がボード上で動作することが確認されていることを意味します。U-Boot ベースのボードの場合、[統合チェックリスト](https://docs.mender.io/devices/integrating-with-u-boot/integration-checklist?target=_blank)が検証されています。
 
 ## 前提条件
 
-- ワークステーション/ラップトップにインストールされたサポートされているLinuxディストリビューションと依存関係（[Yocto Mega Manual](https://www.yoctoproject.org/docs/current/mega-manual/mega-manual.html#detailed-supported-distros)に記載）
-  - 注意：使用するYoctoバージョンに応じて指示が異なります。
+- [Yocto Mega Manual](https://www.yoctoproject.org/docs/current/mega-manual/mega-manual.html#detailed-supported-distros) に記載されているように、ワークステーション/ラップトップにサポートされている Linux ディストリビューションと依存関係がインストールされていること
+  - 注意：手順は使用する予定の Yocto バージョンによって異なります。
 - [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)
 
 ## ビルドの設定
 
-### Yocto環境のセットアップ
+### Yocto 環境のセットアップ
 
-`mender-reterminal`セットアップ用のディレクトリを作成し、メタ情報をクローンします。
+`mender-reterminal` セットアップ用のディレクトリを作成し、メタ情報をクローンします。
 
 ```
 mkdir mender-reterminal && cd mender-reterminal
@@ -59,7 +55,7 @@ git clone -b dunfell https://github.com/openembedded/meta-openembedded.git layer
 git clone -b dunfell git://github.com/mendersoftware/meta-mender layers/meta-mender
 ```
 
-meta-raspberrypiと互換性を持たせるために、pokyのgstreamerバージョンを最新に変更します。
+In order to be compatible with meta-raspberrypi, change the gstreamer version of poky to the latest
 
 ```
 cd layers/poky
@@ -70,7 +66,7 @@ cp -r ../gstreamer/ meta/recipes-multimedia/
 rm -r ../gstreamer/
 ```
 
-コンパイルエラーを回避するためにmeta-raspberrypiを修正します。
+コンパイルエラーを回避するためにmeta-raspberrypiを修正する
 
 ```
 cd layers/meta-raspberrypi
@@ -79,7 +75,7 @@ sed -i '/^LAYERSERIES_COMPAT_raspberrypi/s/= .*$/= "honister dunfell"/g' conf/la
 sed -i 's/arm\/armv8a\///g' conf/machine/raspberrypi4-64.conf
 ```
 
-コンパイルエラーを回避するためにmeta-menderを修正します。
+コンパイルエラーを回避するためにmeta-menderを修正する
 
 ```
 cd layers/meta-mender
@@ -88,7 +84,7 @@ sed -i 's/"0x4000"/"0x1f000"/g' meta-mender-raspberrypi/recipes-bsp/u-boot/u-boo
 sed -i 's/bootfiles/rpi-bootfiles/g' meta-mender-core/classes/mender-part-images.bbclass
 ```
 
-コンパイルエラーを回避するためにmeta-seeed-cm4を修正します。
+コンパイルエラーを回避するためにmeta-seeed-cm4を修正する
 
 ```
 cd layers/meta-seeed-cm4
@@ -103,7 +99,7 @@ sed -i 's/eudev/udev/g' recipes-lvgl/lvgl/lvgl_demo_git.bb
 source layers/poky/oe-init-build-env 
 ```
 
-Yoctoプロジェクトのレイヤーを追加します：
+Yoctoプロジェクトレイヤーを追加：
 
 ```
 bitbake-layers add-layer ../layers/meta-raspberrypi
@@ -116,77 +112,79 @@ bitbake-layers add-layer ../layers/meta-mender/meta-mender-raspberrypi
 bitbake-layers add-layer ../layers/meta-mender/meta-mender-demo
 ```
 
-### MenderサーバーURLの設定（オプション）
+### Mender サーバー URL の設定（オプション）
 
-このセクションはビルド成功には必須ではありませんが、デフォルトで生成されるイメージはサーバー設定がないため、[Standalone deployments](https://docs.mender.io/architecture/standalone-deployments?target=_blank)での使用にのみ適しています。
+このセクションはビルドを成功させるために必須ではありませんが、デフォルトで生成される画像は、サーバー設定が不足しているため、[スタンドアロンデプロイメント](https://docs.mender.io/architecture/standalone-deployments?target=_blank)での Mender クライアントでの使用にのみ適しています。
 
-使用しているMenderサーバーに接続するように、生成されたイメージとMenderアーティファクトを設定するために、`conf/local.conf`ファイルを編集できます。生成された`conf/local.conf`ファイルにはすでにコメントアウトされたセクションがあるはずなので、関連する設定オプションを単にコメント解除し、適切な値を割り当てることができます。
+`conf/local.conf` ファイルを編集して Mender サーバー設定を提供することで、生成される画像と Mender Artifacts が使用している Mender サーバーに接続するようにできます。生成された `conf/local.conf` ファイルには既にコメントアウトされたセクションがあるはずで、関連する設定オプションのコメントを外して適切な値を割り当てるだけです。
 
-Hosted Mender用のビルド：
+Hosted Mender 用のビルド：
 
 ```
-# テナントトークンを取得するには：
-#    - https://hosted.mender.io にログイン
-#    - 右上のメールをクリックし、「My organization」を選択
-#    - 「COPY TO CLIPBOARD」を押す
-#    - クリップボードの内容をMENDER_TENANT_TOKENに割り当てる
+# To get your tenant token:
+#    - log in to https://hosted.mender.io
+#    - click your email at the top right and then "My organization"
+#    - press the "COPY TO CLIPBOARD"
+#    - assign content of clipboard to MENDER_TENANT_TOKEN
 #
 MENDER_SERVER_URL = "https://hosted.mender.io"
-MENDER_TENANT_TOKEN = "<ここにトークンをコピー>"
+MENDER_TENANT_TOKEN = "<copy token here>"
 ```
 
-Mender Demo Server用のビルド：
+Mender デモサーバー用にビルド：
 
 ```
 # https://docs.mender.io/administration/demo-installation
 #
-MENDER_DEMO_HOST_IP_ADDRESS = "<MenderデモサーバーのIPアドレス>"
+MENDER_DEMO_HOST_IP_ADDRESS = "<IP address of Mender demo server>"
 ```
 
-Mender Production/ Self-Hosted（オンプレミス）用のビルド：
+Mender本番環境/セルフホスト（オンプレミス）用のビルド：
 
 ```
 # https://docs.mender.io/3.1/system-updates-yocto-project/build-for-production
 #
-# 以下をコメント解除し、設定したドメイン名に一致するURLを更新し、
-# 生成されたserver.crtファイルへのパスを提供してください。
+# Uncomment below and update the URL to match your configured domain
+# name and provide the path to the generated server.crt file.
 #
-# 自己署名証明書を使用している場合のみ、カスタムserver.crtファイルが必要です。
+# Note that a custom server.crt file is only necessary if you are using
+# self-signed certificates.
 #
-# 注意！以下の情報はカスタムYoctoレイヤーに提供することを推奨します。
-# これはデモ目的のみです。追加情報についてはリンクされたドキュメントを参照してください。
-MENDER_SERVER_URL = "<Self-Hosted Mender ServerのURL>"
-FILESEXTRAPATHS_prepend_pn-mender-client := "<server.crtを含むディレクトリ>:"
+# NOTE! It is recommend that you provide below information in your custom
+# Yocto layer and this is only for demo purposes. See linked documentation
+# for additional information.
+MENDER_SERVER_URL = "<URL of Self-Hosted Mender Server>"
+FILESEXTRAPATHS_prepend_pn-mender-client := "<DIRECTORY-CONTAINING-server.crt>:"
 SRC_URI_append_pn-mender-client = " file://server.crt"
 ```
 
 ## イメージのビルド
 
-以下のコマンドを使用してイメージのビルドを進めることができます：
+これでイメージのビルドを進めることができます：
 
 ```
 MACHINE="seeed-reterminal-mender" bitbake rpi-test-image
 ```
 
-`rpi-test-image` をお好みのイメージターゲットに置き換えてください。
+`rpi-test-image` を希望するイメージターゲットに置き換えてください。
 
 ## ビルド出力の使用
 
-ビルドが成功した後、生成されたイメージとビルド成果物は以下の通りです：
+ビルドが成功した後、イメージとビルドアーティファクトは以下の場所にあります：
 
 - `build/tmp/deploy/images/seeed-reterminal-mender/rpi-test-image-seeed-reterminal-mender.sdimg.bz2`
 
-すでにデバイス上で Mender が動作しており、このビルドを使用して rootfs の更新をデプロイしたい場合は、`.mender` 拡張子を持つ [Mender Artifact](https://docs.mender.io/architecture/mender-artifacts?target=_blank) ファイルを使用する必要があります。この Artifact は、Mender サーバーを使用して管理モードでデプロイする（サーバー UI のリリースセクションにアップロード）か、[スタンドアロンデプロイメント](https://docs.mender.io/architecture/standalone-deployments?target=_blank)で Mender クライアントのみを使用してデプロイすることができます。
+デバイスで既にMenderが動作しており、このビルドを使用してrootfsアップデートをデプロイしたい場合は、`.mender` 拡張子を持つ [Mender Artifact](https://docs.mender.io/architecture/mender-artifacts?target=_blank) ファイルを使用する必要があります。このArtifactは、Menderサーバーを使用した管理モード（サーバーUIのReleasesでアップロード）、または [スタンドアロンデプロイメント](https://docs.mender.io/architecture/standalone-deployments?target=_blank) でMenderクライアントのみを使用してデプロイできます。
 
 ## フラッシュ手順
 
-上記のイメージを reTerminal の eMMC にフラッシュする方法については、[この Wiki ガイド](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) を参照してください。
+上記のイメージをreTerminalのeMMCにフラッシュする方法については、[このwikiガイド](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に従ってください。
 
-フラッシュが完了したら、reTerminal を起動すると、コンパイルされたイメージからブートします。
+フラッシュが完了したら、reTerminalの電源を入れると、コンパイルされたイメージから起動します。
 
-## ブート成功
+## 起動成功
 
-UART から以下のログが表示された場合、システムが正常にブートしたことを意味します：
+UARTから以下のログが表示された場合、システムが正常に起動したことを意味します
 
 ```
 [  OK  ] Started Kernel Logging Service.
@@ -219,15 +217,15 @@ root@seeed-reterminal-mender:~#
 
 ## リソース
 
-- **[Webページ]** [Mender公式ドキュメント](https://docs.mender.io)
+- **[Web Page]** [Mender公式ドキュメント](https://docs.mender.io)
 
-- **[Webページ]** [Yocto公式ドキュメント](https://docs.yoctoproject.org)
+- **[Web Page]** [Yocto公式ドキュメント](https://docs.yoctoproject.org)
 
-- **[Webページ]** [Raspberry Pi CM4公式ドキュメント](https://www.raspberrypi.com/documentation/computers/compute-module.html)
+- **[Web Page]** [Raspberry Pi CM4公式ドキュメント](https://www.raspberrypi.com/documentation/computers/compute-module.html)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

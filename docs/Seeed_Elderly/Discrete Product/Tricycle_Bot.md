@@ -44,15 +44,15 @@ Further more, you can fix the Arduino board and breadboard as the heart of the r
 |Top Plate(3rd floor)|160\*158\*3.8mm|1|
 |Front Shore|62\*56\*3.8mm|1      |
 |Side Shore|62\*31\*3.8mm|4       |
-|Rivet\_1  |R3090        |4       |
-|Standoffs\_2|M3\*22     |6       |
-|Standoffs\_3|M3\*55+6   |4       |
-|Screw\_4  |PM3\*8       |14      |
-|Screw\_5  |PM3\*25      |4       |
-|Nut\_6    |M3\*2.3      |6       |
-|Rivet\_7  |R2064        |15      |
-|Screw\_8  |KM2\*10      |15      |
-|Nut\_9    |M2\*1.5      |15      |
+|Rivet_1  |R3090        |4       |
+|Standoffs_2|M3\*22     |6       |
+|Standoffs_3|M3\*55+6   |4       |
+|Screw_4  |PM3\*8       |14      |
+|Screw_5  |PM3\*25      |4       |
+|Nut_6    |M3\*2.3      |6       |
+|Rivet_7  |R2064        |15      |
+|Screw_8  |KM2\*10      |15      |
+|Nut_9    |M2\*1.5      |15      |
 |Wrench    |/            |2       |
 |ScrewDriver|/           |1       |
 

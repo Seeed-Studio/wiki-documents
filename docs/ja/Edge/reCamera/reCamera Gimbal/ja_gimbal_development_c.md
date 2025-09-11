@@ -1,38 +1,34 @@
 ---
-description: reCamera用の基本的なLinuxコマンド
+description: reCamera用の基本的なlinuxコマンド
 title: Cによる深層開発
 keywords:
   - Edge
   - reCamera
   - recamera
-  - linuxコマンド
+  - linux command
   - linux
 image: https://files.seeedstudio.com/wiki/reCamera/OS_upgrade/image-4.png
 slug: /ja/gimbal_development_c
 sidebar_position: 4
 last_update:
-  date: 05/15/2025
+  date: 4/15/2025
   author: Parker Hu & Dawn Yao
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# GimbalのCによる深層開発
+# CによるGimbalの深層開発
 
-reCamera Gimbalの開発には以下の3つのアプローチがあります：
+reCamera Gimbalの開発には3つのアプローチがあります：
 
 1. **Node-REDノードを使用したアプリケーションロジック開発**
-2. **ターミナルコマンドを介したcan-utilsツールを使用したBashスクリプト作成**  
-3. **クロスコンパイル環境のセットアップとバイナリコンパイルを必要とするCプログラミング**
+2. **ターミナルコマンドを介したcan-utilsツールを使用したBashスクリプト**  
+3. **クロスコンパイル環境のセットアップとバイナリコンパイルが必要なCプログラミング**
 
-このドキュメントでは、Cプログラミングを使用してreCamera Gimbalを開発する方法について詳しく説明します。
+このドキュメントでは、Cプログラミングを使用してreCamera Gimbalを開発する方法について包括的なガイドを提供します。
 
 Node-REDベースの開発については、以下を参照してください：  
-[Node-RED開発ドキュメント](https://wiki.seeedstudio.com/ja/recamera_gimbal_node_red/)
+[Node-RED開発ドキュメント](https://wiki.seeedstudio.com/recamera_gimbal_node_red/)
 
-開発を始める前に、クロスコンパイル環境を開発環境にインストールする必要があります。
+開発前に、開発環境にクロスコンパイル環境をインストールする必要があります。
 
 Linux:
 
@@ -53,18 +49,18 @@ export SG200X_SDK_PATH=$HOME/recamera/sg2002_recamera_emmc/
 export PATH=$HOME/recamera/host-tools/gcc/riscv64-linux-musl-x86_64/bin:$PATH
 
 ```
-## サンプルプログラムのダウンロード
+## ケースプログラムのダウンロード
 
 ```bash
 sudo apt-get install unzip
 wget https://files.seeedstudio.com/wiki/reCamera/Gimbal/CAN.zip
 unzip CAN.zip
 ```
-ディレクトリ構造は以下のようになります：
+ディレクトリ構造は以下のとおりです：
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/CAN_Directory.png" /></div>
 
-Makefileを修正して、CC変数を自分のクロスコンパイルツールチェーンに置き換える必要があります。
+Makefileを修正して、CC変数を独自のクロスコンパイルツールチェーンに置き換える必要があります。
 
 ```bash
 CC = $HOME/recamera/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-gcc
@@ -79,13 +75,13 @@ cmake ../
 make
 ```
 
-コンパイルされたバイナリをreCameraにアップロードします
+コンパイルされたバイナリをreCameraにアップロード
 
 ```bash
 scp can_send recamera@ip_address:/home/recamera
 ```
 
-`candump can0`を使用してCANバスデータを表示  
+`candump can0`を使用してCANバスデータを表示
 `sudo ./can_send`を使用してスクリプトをテスト
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/can_send.png" /></div>
@@ -94,30 +90,30 @@ scp can_send recamera@ip_address:/home/recamera
 
 ## プログラム解析
 
-これらのコマンドは、CANバスのレートとインターフェースの状態を設定するために使用され、アプリケーション内で一度だけ初期化する必要があります。
+これらのコマンドはCANバスレートとインターフェースステータスを設定するために使用され、アプリケーションで一度だけ初期化する必要があります。
 
 ```bash
 "sudo ip link set can0 type can bitrate 100000"
 "sudo ifconfig can0 up"
 ```
-can_send.cファイルでは、上記のコマンドがsystem関数を使用して呼び出されています。
+図に示すように、can_send.cファイルでは、上記のコマンドがsystem関数を使用して呼び出されています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/reCamera/Gimbal/Initialization_can0.png" /></div>
 
-CANフレームのID、データ長、データを格納するためのCANフレーム構造体を定義する必要があります。  
-また、memset関数を使用してCANフレーム構造体をゼロにクリアします。
+CANフレームのID、データ長、データを格納するためのCANフレーム構造を定義する必要があります。
+そして、memset関数を使用してCANフレーム構造をゼロにクリアします。
 
 ```c
 struct can_frame frame;
 memset(&frame, 0, sizeof(struct can_frame));
 ```
 
-can_idとcan_dlcを設定して、CANフレームのIDとデータ長を構成できます。  
-これは標準的なCANフレームデータフォーマットです。  
-`nbytes = write(s, &frame, sizeof(frame));`を使用してCANフレームをCANバスに送信し、送信されたバイト数を返します。返された値を期待されるバイト数と比較して、CANフレームが正常に送信されたかどうかを判断できます。
+can_idとcan_dlcを設定して、CANフレームのIDとデータ長を構成できます。
+これは標準的なCANフレームデータ形式です。
+`nbytes = write(s, &frame, sizeof(frame));`を使用してCANフレームをCANバスに送信すると、送信されたバイト数が返されます。返された値を期待されるバイト数と比較して、CANフレームが正常に送信されたかどうかを判断できます。
 
 ```c
- //5.送信データを設定
+ //5.Set send data
     frame.can_id = 0x141;
     frame.can_dlc = 8;
     frame.data[0] = 0x80;
@@ -130,20 +126,21 @@ can_idとcan_dlcを設定して、CANフレームのIDとデータ長を構成�
     frame.data[7] = 0x00
 ```
 
-さらに多くのCプログラムについては、[Githubリポジトリ](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main/reCamera_Gimbal/src)を参照してください。
+私たちの[Githubリポジトリ](https://github.com/Seeed-Studio/OSHW-reCamera-Series/tree/main/reCamera_Gimbal/src)でより多くのCプログラムを参照できます。
 
-なお、Gimbal関連のプログラムはNode-REDコンポーネントに基づいて開発されています。今後はNode-REDプログラムのみを維持するため、Node-REDで直接参照して開発することをお勧めします。
+Gimbal関連のプログラムはNode-REDコンポーネントに基づいて開発されていることに注意してください。今後はNode-REDプログラムのみを維持するため、Node-REDで直接参照して開発できます。
 
-Cプログラムはメンテナンスされていないため、モーターファームウェアの更新に伴い無効になる可能性があります。開発には、[最新のモーターマニュアル](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Gimbal/MotorTools/EN/CAN_Protocol_DescriptionV2.36.pdf)を使用して正しいコマンドをカプセル化してください。
+Cプログラムは維持されていないため、モーターファームウェアの更新に伴い無効になる可能性があります。開発には私たちの[最新モーターマニュアル](https://github.com/Seeed-Studio/OSHW-reCamera-Series/blob/main/reCamera_Gimbal/MotorTools/EN/CAN_Protocol_DescriptionV2.36.pdf)を使用して正しいコマンドをカプセル化してください。
+
 
 ## リソース
 
 - [Github](https://github.com/Seeed-Studio/OSHW-reCamera-Series)
 - [CAN_Script_C](https://files.seeedstudio.com/wiki/reCamera/Gimbal/CAN.zip)
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。以下の複数のコミュニケーションチャネルをご利用いただけます。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

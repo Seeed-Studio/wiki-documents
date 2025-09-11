@@ -1,33 +1,29 @@
 ---
-description: NVIDIA Jetson デバイスでの Roboflow の使い方
-title: Roboflow の使い方
+description: NVIDIA Jetson デバイスでの Roboflow の使用開始
+title: Roboflow の使用開始
 tags:
-  - データラベル
-  - AIモデルのトレーニング
-  - AIモデルのデプロイ
+  - Data Label
+  - AI model train
+  - AI model deploy
   - Roboflow
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Roboflow-Jetson-Getting-Started
 last_update:
-  date: 05/15/2025
+  date: 10/26/2023
   author: Lakshantha
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# NVIDIA® Jetson デバイスでの Roboflow 推論の使い方
+# NVIDIA® Jetson デバイスでの Roboflow Inference の使用開始
 
-このウィキガイドでは、NVIDIA Jetson デバイス上で動作する [Roboflow](https://roboflow.com) 推論サーバーを使用して AI モデルを簡単にデプロイする方法を説明します。ここでは、[Roboflow Universe](https://universe.roboflow.com) を使用して既にトレーニングされたモデルを選択し、そのモデルを Jetson デバイスにデプロイし、ライブウェブカメラストリームで推論を実行します。
+このwikiガイドでは、NVIDIA Jetson デバイス上で動作する [Roboflow](https://roboflow.com) inference サーバーを使用して AI モデルを簡単にデプロイする方法を説明します。ここでは [Roboflow Universe](https://universe.roboflow.com) を使用して既に訓練されたモデルを選択し、そのモデルを Jetson デバイスにデプロイして、ライブウェブカムストリームで推論を実行します！
 
-[Roboflow Inference](https://github.com/roboflow/inference) は、コンピュータビジョンモデルを使用およびデプロイする最も簡単な方法であり、推論を実行するための HTTP Roboflow API を提供します。Roboflow 推論は以下をサポートしています：
+[Roboflow Inference](https://github.com/roboflow/inference) は、コンピュータビジョンモデルを使用およびデプロイする最も簡単な方法で、推論実行に使用される HTTP Roboflow API を提供します。Roboflow inference は以下をサポートしています：
 
 - オブジェクト検出
 - 画像セグメンテーション
 - 画像分類
 
-および CLIP や SAM のような基盤モデル。
+そして CLIP や SAM などの基盤モデル。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/9.gif
 " style={{width:1000, height:'auto'}}/></div>
@@ -38,81 +34,84 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 - [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) またはその他の NVIDIA Jetson デバイス
 
 :::note
-このウィキは、NVIDIA Jetson Orin NX 16GB モジュールを搭載した [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) および [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) でテストおよび検証されています。
+このwikiは [reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) と NVIDIA Jetson Orin NX 16GB モジュールを搭載した [reComputer Industrial J4012](https://www.seeedstudio.com/reComputer-Industrial-J4012-p-5684.html) でテストおよび検証されています
 :::
 
-## Jetson に JetPack をフラッシュする
+## Jetson に JetPack をフラッシュ
 
-まず、Jetson デバイスに [JetPack](https://developer.nvidia.com/embedded/jetpack) システムがフラッシュされていることを確認する必要があります。JetPack をデバイスにフラッシュするには、NVIDIA SDK Manager またはコマンドラインを使用できます。
+次に、Jetson デバイスに [JetPack](https://developer.nvidia.com/embedded/jetpack) システムがフラッシュされていることを確認する必要があります。NVIDIA SDK Manager またはコマンドラインを使用して JetPack をデバイスにフラッシュできます。
 
-Seeed の Jetson 搭載デバイスのフラッシュガイドについては、以下のリンクを参照してください：
-- [reComputer J2021 | J202](https://wiki.seeedstudio.com/ja/reComputer_J2021_J202_Flash_Jetpack)
-- [reComputer J1020 | A206](https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack)
-- [reComputer J4012 | J401](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack)
-- [A203 キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A203_Flash_System)
-- [A205 キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A205_Flash_System)
-- [A206 キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack)
-- [A603 キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A603_Flash_System)
-- [A607 キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A607_Flash_System)
-- [Jetson Xavier AGX H01 キット](https://wiki.seeedstudio.com/ja/Jetson_Xavier_AGX_H01_Driver_Installation)
-- [Jetson AGX Orin 32GB H01 キット](https://wiki.seeedstudio.com/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
-- [reComputer Industrial](https://wiki.seeedstudio.com/ja/reComputer_Industrial_Getting_Started/#flash-jetpack)
-- [reServer Industrial](https://wiki.seeedstudio.com/ja/reServer_Industrial_Getting_Started/#flash-jetpack)
+Seeed Jetson 搭載デバイスのフラッシュガイドについては、以下のリンクを参照してください：
+
+- [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
+- [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
+- [A203 キャリアボード](https://wiki.seeedstudio.com/reComputer_A203_Flash_System)
+- [A205 キャリアボード](https://wiki.seeedstudio.com/reComputer_A205_Flash_System)
+- [A206 キャリアボード](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [A603 キャリアボード](https://wiki.seeedstudio.com/reComputer_A603_Flash_System)
+- [A607 キャリアボード](https://wiki.seeedstudio.com/reComputer_A607_Flash_System)
+- [Jetson Xavier AGX H01 キット](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation)
+- [Jetson AGX Orin 32GB H01 キット](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
+- [reComputer Industrial](https://wiki.seeedstudio.com/reComputer_Industrial_Getting_Started/#flash-jetpack)
+- [reServer Industrial](https://wiki.seeedstudio.com/reServer_Industrial_Getting_Started/#flash-jetpack)
 
 :::note
-JetPack バージョン 5.1.1 をフラッシュしてください。このウィキで検証済みのバージョンです。
+このwikiで検証したバージョンであるため、JetPack バージョン 5.1.1 をフラッシュするようにしてください
 :::
 
-## Roboflow Universeで50,000以上のモデルを活用
+## Roboflow Universe の 50,000 以上のモデルを活用する
 
-Roboflowは、50,000以上のすぐに使用可能なAIモデルを提供しており、誰でも最速でコンピュータビジョンのデプロイを開始できます。[Roboflow Universe](https://universe.roboflow.com)でこれらすべてを探索できます。また、Roboflow Universeでは200,000以上のデータセットも提供されており、これらのデータセットを使用して[モデルをトレーニング](https://docs.roboflow.com/train/train)したり、自分のデータセットを持ち込んで[Roboflowオンライン画像アノテーションツール](https://docs.roboflow.com/annotate/use-roboflow-annotate)を使用してトレーニングを開始することができます。
+Roboflow は、誰もが最速でコンピュータビジョンの展開を開始できるよう、50,000 以上のすぐに使える AI モデルを提供しています。これらのモデルはすべて [Roboflow Universe](https://universe.roboflow.com) で探索できます。Roboflow Universe では 200,000 以上のデータセットも提供されており、これらのデータセットを使用して Roboflow クラウドサーバーで[モデルを訓練](https://docs.roboflow.com/train/train)したり、独自のデータセットを持参して [Roboflow オンライン画像アノテーションツール](https://docs.roboflow.com/annotate/use-roboflow-annotate)を使用して訓練を開始したりできます。
 
-- **ステップ1:** Roboflow Universeから[人検出モデル](https://universe.roboflow.com/mohamed-traore-2ekkp/people-detection-general/model/7)を参照として使用します。
+- **ステップ 1:** 参考として Roboflow Universe の[人物検出モデル](https://universe.roboflow.com/mohamed-traore-2ekkp/people-detection-general/model/7)を使用します
 
-- **ステップ2:** モデル名は「model_name/version」という形式に従います。この場合、**people-detection-general/7**です。このモデル名は、後ほど推論を開始する際に使用します。
+- **ステップ 2:** ここでモデル名は「model_name/version」の形式に従います。この場合は **people-detection-general/7** です。推論を開始する際に、このウィキの後半でこのモデル名を使用します。
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/1.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/1.png
+" style={{width:1000, height:'auto'}}/></div>
 
-## Roboflow APIキーの取得
+## Roboflow API キーの取得
 
-Roboflow推論サーバーを動作させるために、Roboflow APIキーを取得する必要があります。
+Roboflow 推論サーバーが動作するために、Roboflow API キーを取得する必要があります。
 
-- **ステップ1:** [新しいRoboflowアカウントにサインアップ](https://app.roboflow.com)し、資格情報を入力します。
+- **ステップ 1:** 認証情報を入力して新しい Roboflow アカウントに[サインアップ](https://app.roboflow.com)します
 
-- **ステップ2:** アカウントにサインインし、`Projects > Workspaces > <your_workspace_name> > Roboflow API`に移動し、「Private API Key」セクションの横にある**Copy**をクリックします。
+- **ステップ 2:** アカウントにサインインし、`Projects > Workspaces > <your_workspace_name> > Roboflow API` に移動し、「Private API Key」セクションの横にある **Copy** をクリックします
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/2.jpg" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/2.jpg
+" style={{width:1000, height:'auto'}}/></div>
 
-このプライベートキーを保存しておいてください。後で必要になります。
+このプライベートキーは後で必要になるため、保管しておいてください。
 
-## Roboflow推論サーバーの実行
+## Roboflow 推論サーバーの実行
 
-NVIDIA JetsonでRoboflow推論を開始するには、以下の3つの方法があります。
+NVIDIA Jetson で Roboflow 推論を開始するには、3 つの異なる方法があります。
 
-1. **pipパッケージを使用** - pipパッケージを使用するのが最速の方法ですが、JetPackとともにSDKコンポーネント（CUDA、cuDNN、TensorRT）をインストールする必要があります。
-2. **Docker Hubを使用** - Docker Hubを使用する方法は少し遅くなりますが、約19GBのDockerイメージを最初にプルする必要があります。ただし、DockerイメージにはすでにSDKコンポーネントが含まれているため、インストールする必要はありません。
-3. **ローカルDockerビルドを使用** - ローカルDockerビルドを使用する方法は、Docker Hubの方法を拡張したもので、Dockerイメージのソースコードを希望するアプリケーション（例：INT8でTensorRT精度を有効化）に応じて変更できます。
+1. **pip パッケージを使用** - pip パッケージを使用することが開始する最速の方法ですが、JetPack と共に SDK コンポーネント（CUDA、cuDNN、TensorRT）をインストールする必要があります。
+2. **Docker hub を使用** - Docker hub を使用すると、約 19GB の Docker イメージを最初にプルするため少し時間がかかります。ただし、Docker イメージにはすでにそれらが含まれているため、SDK コンポーネントをインストールする必要はありません。
+3. **ローカル Docker ビルドを使用** - ローカル Docker ビルドを使用することは、Docker hub 方法の拡張で、希望するアプリケーションに応じて Docker イメージのソースコードを変更できます（INT8 で TensorRT 精度を有効にするなど）。
 
-Roboflow推論サーバーを実行する前に、推論に使用するAIモデルとRoboflow APIキーを取得する必要があります。まずそれを説明します。
+Roboflow 推論サーバーの実行に進む前に、推論する AI モデルと Roboflow API キーを取得する必要があります。まずそれらについて説明します。
 
-<!-- コード -->
+<!-- Code -->
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="pip Package" label="pipパッケージ">
+<TabItem value="pip Package" label="pip Package">
 
-### pipパッケージを使用
+### pip パッケージを使用
 
-- **ステップ1:** JetsonデバイスをJetson L4Tでフラッシュした場合、最初にSDKコンポーネントをインストールする必要があります。
+- **ステップ 1:** Jetson デバイスに Jetson L4T のみをフラッシュした場合は、最初に SDK コンポーネントをインストールする必要があります
 
 ```sh
 sudo apt update
 sudo apt install nvidia-jetpack -y
 ```
 
-- **ステップ2:** 以下のコマンドをターミナルで実行して、Roboflow推論サーバーのpipパッケージをインストールします。
+- **ステップ 2:** ターミナルで以下のコマンドを実行して、Roboflow inference server pip パッケージをインストールします
 
 ```sh
 sudo apt update
@@ -120,13 +119,13 @@ sudo apt install python3-pip -y
 pip install inference-gpu
 ```
 
-- **ステップ3:** 以下を実行し、取得したRoboflowプライベートAPIキーに置き換えます。
+- **ステップ 3:** 以下を実行し、事前に取得したRoboflowプライベートAPIキーに置き換えてください
 
 ```sh
 export ROBOFLOW_API_KEY=your_key_here
 ```
 
-- **ステップ4:** Jetsonデバイスにウェブカメラを接続し、以下のPythonスクリプトを実行して、オープンソースの人検出モデルをウェブカメラストリームで動作させます。
+- **ステップ 4:** Jetsonデバイスにウェブカメラを接続し、以下のPythonスクリプトを実行して、ウェブカメラストリーム上でオープンソースの人物検出モデルを実行します
 
 <details>
 
@@ -163,34 +162,36 @@ inference.Stream(
 
 </details>
 
-最終的に、以下のような結果が表示されます。
+最終的に、以下のような結果が表示されます
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/11.gif" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/11.gif
+" style={{width:1000, height:'auto'}}/></div>
 
 ---
 
 </TabItem>
 <TabItem value="Docker Hub" label="Docker Hub">
 
-### Docker Hubを使用
+### Docker Hubの使用
 
-この方法を使用するには、デバイスをJetson L4Tでフラッシュするだけで十分です。この方法はクライアント-サーバーアーキテクチャを使用しており、Roboflow推論サーバーがJetson上の特定のネットワークポートで動作し、同じネットワーク上の任意のPCからこの推論サーバーにアクセスすることができます。また、Jetson自体をサーバー兼クライアントとして使用することも可能です。
+この方法を使用するには、デバイスにJetson L4Tをフラッシュするだけで十分です。これはクライアント・サーバーアーキテクチャを使用し、RoboflowインファレンスサーバーがJetson上の特定のネットワークポートで実行され、同じネットワーク上の任意のPCからこのインファレンスサーバーにアクセスしたり、Jetson自体をサーバーとクライアントの両方として使用したりできます。
 
 #### サーバーセットアップ - Jetson
 
-以下を実行して、Roboflow推論サーバーのDockerコンテナをダウンロードして実行します。
+以下を実行して、RoboflowインファレンスサーバーDockerコンテナをダウンロードして実行します
 
 ```sh
 sudo docker run --network=host --runtime=nvidia roboflow/roboflow-inference-server-jetson-5.1.1
 ```
 
-以下の出力が表示された場合、推論サーバーが正常に起動しています。
+以下の出力が表示されれば、推論サーバーが正常に開始されています
 
-<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/3.png" style={{width:1000, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/3.png
+" style={{width:1000, height:'auto'}}/></div>
 
 #### クライアントセットアップ - Jetson/ PC
 
-- **ステップ1:** 必要なパッケージをインストールします。
+- **ステップ 1:** 必要なパッケージをインストールする
 
 ```sh
 sudo apt update
@@ -200,9 +201,9 @@ cd Python/webcam
 pip install -r requirements.txt
 ```
 
-- **ステップ2:** 同じディレクトリにroboflow_config.jsonファイルを作成し、Roboflow APIキーとモデル名を含めます。このGitHubリポジトリ内のroboflow_config.sample.jsonファイルを参照してください。
+- **ステップ 2:** 同じディレクトリに roboflow_config.json ファイルを作成し、Roboflow API キー、モデル名を含めます。この GitHub リポジトリに含まれているサンプル roboflow_config.sample.json ファイルを参照できます
 
-- **ステップ3:** 同じデバイスの別のターミナルウィンドウ、または同じネットワーク上の別のPCで以下のPythonスクリプトを実行して、オープンソースの人検出モデルをウェブカメラストリームで動作させます。
+- **ステップ 3:** 同じデバイスの別のターミナルウィンドウで、または Jetson と同じネットワーク上の別の PC で、以下の Python スクリプトを実行して、ウェブカメラストリームでオープンソースの人物検出モデルを実行します
 
 ```sh
 python infer-simple.py
@@ -211,21 +212,21 @@ python infer-simple.py
 ---
 
 </TabItem>
-<TabItem value="Local Docker Build" label="ローカルDockerビルド">
+<TabItem value="Local Docker Build" label="Local Docker Build">
 
-### ローカルDockerビルドを使用
+### ローカル Docker ビルドの使用
 
 #### サーバーセットアップ - Jetson
 
-この方法を使用するには、Jetson L4T をデバイスにフラッシュするだけで十分です。この方法はクライアント-サーバーアーキテクチャを使用しており、Roboflow 推論サーバーが Jetson 上の特定のネットワークポートで実行されます。同じネットワーク上の任意の PC を使用してこの推論サーバーにアクセスすることができ、Jetson 自体をサーバーとクライアントの両方として使用することも可能です。
+この方法を使用するには、デバイスにJetson L4Tをフラッシュするだけで十分です。これはクライアント・サーバーアーキテクチャを使用し、Roboflow推論サーバーがJetson上の特定のネットワークポートで実行され、同じネットワーク上の任意のPCを使用してこの推論サーバーにアクセスしたり、Jetson自体をサーバーとクライアントの両方として使用したりできます。
 
-- **ステップ 1:** Roboflow 推論サーバーのリポジトリをクローンします
+- **ステップ 1:** Roboflow推論サーバーリポジトリをクローンする
 
 ```sh
 git clone https://github.com/roboflow/inference
 ```
 
-- **ステップ 2:** "inference" ディレクトリに移動し、独自の Docker イメージをコンパイルします
+- **Step 2:** Enter the "inference" directory and start compiling your own Docker image
 
 ```sh
 cd inference
@@ -234,9 +235,9 @@ sudo docker build \
     -t roboflow/roboflow-inference-server-jetson-5.1.1:seeed1 .
 ```
 
-ここで "-t" の後のテキストは、構築するコンテナの名前です。任意の名前を付けることができます。
+ここで "-t" の後のテキストは、構築しているコンテナの名前です。任意の名前を付けることができます。
 
-- **ステップ 3:** 以下のコマンドを実行して、コンパイルした Docker イメージがリストされているか確認します
+- **ステップ 3:** 以下のコマンドを実行して、コンパイルした Docker イメージがリストされているかどうかを確認します
 
 ```sh
 sudo docker ps
@@ -245,20 +246,20 @@ sudo docker ps
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/5.png
 " style={{width:1000, height:'auto'}}/></div>
 
-- **ステップ 4:** コンパイルした Docker イメージに基づいて Docker コンテナを起動します
+- **ステップ 4:** 先ほど構築した Docker イメージを基に Docker コンテナを開始する
 
 ```sh
 docker run --privileged --net=host --runtime=nvidia roboflow/roboflow-inference-server-jetson-5.1.1:seeed1
 ```
 
-以下の出力が表示された場合、推論サーバーが正常に起動しています
+以下の出力が表示されれば、推論サーバーが正常に開始されています
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Roboflow-inference/6.png
 " style={{width:1000, height:'auto'}}/></div>
 
-#### クライアント設定 - Jetson/PC
+#### クライアント設定 - Jetson/ PC
 
-以下の Python スクリプトを実行して、オープンソースの人物検出モデルをウェブカメラストリームで動作させます
+以下のPythonスクリプトを実行して、Webカメラストリーム上でオープンソースの人物検出モデルを実行します
 
 <details>
 
@@ -282,16 +283,16 @@ while True:
 
     ret, img = video.read()
     if ret:
-        # アスペクト比を維持しながらリサイズして速度を向上させ、帯域幅を節約
+        # Resize (while maintaining the aspect ratio) to improve speed and save bandwidth
         height, width, channels = img.shape
         scale = 416 / max(height, width)
         img = cv2.resize(img, (round(scale * width), round(scale * height)))
 
-        # 画像を base64 文字列にエンコード
+        # Encode image to base64 string
         retval, buffer = cv2.imencode('.jpg', img)
         img_str = base64.b64encode(buffer)
 
-        # Roboflow Infer API から予測を取得
+        # Get prediction from Roboflow Infer API
         resp = requests.post(upload_url, data=img_str, headers={
             "Content-Type": "application/x-www-form-urlencoded"
         }, stream=True)
@@ -321,17 +322,17 @@ cv2.destroyAllWindows()
 
 </details>
 
-スクリプト内の `upload_url` に含める必要がある要素は以下の通りです：
+注意：スクリプト内の `upload_url` に含める必要がある要素は以下の通りです：
 
-- Roboflow 推論サーバーの IP アドレス
+- roboflow inference サーバーのIPアドレス
 - 実行したいモデル
-- Roboflow API キー
+- roboflow api key
 
-モデルは Roboflow Universe で選択できます。
+モデルはroboflow universeで選択できます
 
-#### TensorRT を有効化
+#### TensorRTの有効化
 
-デフォルトでは、Roboflow 推論サーバーは CUDA ランタイムを使用しています。ただし、推論速度を向上させるために TensorRT ランタイムに変更したい場合は、以下を "inference/docker/dockerfiles/Dockerfile.onnx.jetson.5.1.1" ファイル内に追加し、Docker イメージを構築します
+デフォルトでは、Roboflow inference サーバーはCUDAランタイムを使用しています。しかし、推論速度を向上させるためにTensorRTランタイムに変更したい場合は、"inference/docker/dockerfiles/Dockerfile.onnx.jetson.5.1.1"ファイル内に以下を追加してDockerイメージをビルドできます
 
 ```sh
 ENV ONNXRUNTIME_EXECUTION_PROVIDERS=TensorrtExecutionProvider
@@ -344,20 +345,20 @@ ENV ONNXRUNTIME_EXECUTION_PROVIDERS=TensorrtExecutionProvider
 
 <!-- Code END -->
 
-## 詳細情報
+## さらに詳しく
 
-Roboflowは非常に詳細で包括的なドキュメントを提供しています。そのため、[こちら](https://docs.roboflow.com)をぜひご確認ください。
+Roboflowは非常に詳細で包括的なドキュメントを提供しています。そのため、[こちら](https://docs.roboflow.com)で確認することを強くお勧めします。
 
-## 技術サポートと製品に関するディスカッション
+## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際にスムーズな体験を提供するため、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

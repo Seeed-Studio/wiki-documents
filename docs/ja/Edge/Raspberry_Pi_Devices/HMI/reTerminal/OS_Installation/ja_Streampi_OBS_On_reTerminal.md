@@ -1,71 +1,68 @@
 ---
-description: Stream-pi & OBS studio を reTerminal で使用する方法
-title: Stream-pi & OBS studio を reTerminal で使用する方法
+description: reTerminal用のStream-pi & OBS studio
+title: reTerminal用のStream-pi & OBS studio
 keywords:
   - Edge
-  - reTerminal OS_インストール
+  - reTerminal OS_Installation
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Streampi_OBS_On_reTerminal
 last_update:
-  date: 05/15/2025
+  date: 2/1/2023
   author: jianjing Huang
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Seeed reTerminal を使用した OBS Studio 制御と便利なコントロールのための streampi
+
+# Seeed reTerminalとstreampiを使用したOBS Studioの制御と便利な操作
 
 ## はじめに
 
-### reTerminal とは 🤔
+### reTerminalとは 🤔
 
-[reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) は、Raspberry Pi Compute Module 4 (CM4) モジュールを搭載したオールインワンボードで、IPSパネルタイプのマルチタッチスクリーンを統合し、デュアルバンド2.4GHz/5GHz Wi-Fi & Bluetooth 5.0を備えています。Raspberry PiベースのLinuxシステムがプリインストールされており、4GB RAMと32GB eMMCのストレージを提供します。モジュール化設計により、複数のアクセス可能なコンポーネントと高速コネクタを備えています。家庭用アシスタントや個人のAI開発アプリケーションに適しており、産業レベルの機能を備えた工業施設としても利用できます。
+[reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html)は、Raspberry Pi Compute Module 4（CM4）モジュールを搭載したRaspberry Pi一体型ボードです。IPSパネル型マルチタッチスクリーンを統合し、デュアルバンド2.4GHz/5GHz Wi-Fi & Bluetooth 5.0を搭載し、Raspberry PiベースのLinuxシステムがプリインストールされ、4GB RAMと32GB eMMCストレージを提供します。モジュール化設計により、ボードには複数のアクセス可能なコンポーネントと高速コネクタが装備されています。ホームアシスタンスや個人AI開発アプリケーションに適用でき、産業レベルの機能も実行して産業設備として適しています。
 
 特徴
 
-- Raspberry Pi オールインワンボード: RPi CM4 32GB 搭載、IPSマルチタッチスクリーン、デュアルバンドWi-Fi & Bluetooth、互換性のあるLinuxシステムがプリインストール
+- Raspberry Pi一体型ボード：RPi CM4 32GBを搭載し、IPSマルチタッチスクリーン、デュアルバンドWi-Fi & Bluetooth、互換性のあるLinuxシステムがプリインストール
 
-- モジュール設計: 産業用高速拡張インターフェースと40ピン Raspberry Pi 互換ヘッダーを備える
+- モジュラー設計：産業用高速拡張インターフェースと40ピンRaspberry Pi互換ヘッダーを搭載
 
-- 豊富なインターフェースとコンポーネント: USB Type-Aポート、ギガビットイーサネット、micro-HDMI、micro-SDカードスロット、MIPIカメラインターフェース、光センサー、加速度計、ブザー、RTC、プログラム可能なボタンを装備
+- 豊富なインターフェースとコンポーネント：USB Type-Aポート、ギガビットイーサネット、micro-HDMI、micro-SDカードスロット、MIPIカメラインターフェース、光センサー、加速度計、ブザー、RTC、プログラマブルボタンを装備
 
-- 個人アシスタントとしての活用: 内蔵センサーとコンポーネントを活用し、Seeedやコミュニティによる複数の興味深いDashboardやAIプロジェクトを楽しむ
+- 便利な個人アシスタント：内蔵センサーとコンポーネントを活用しながら、Seeedとコミュニティによる複数の興味深いダッシュボードやAIプロジェクトをお楽しみください
 
-- 優れた産業施設: 安定したRaspberry Piベースのオペレーティングシステム、複数の拡張産業レベルコネクタ、暗号化コプロセッサ、公式Seeed拡張ボード reTerminal E10-1 を活用
+- 優れた産業設備：安定したRaspberry Piベースのオペレーティングシステム、複数の拡張産業レベルコネクタ、暗号化コプロセッサー、および公式Seeed拡張ボードreTerminal E10-1の恩恵を受けます
 
-### streampi とは 🤔
+### streampiとは 🤔
 
-Stream-Pi は、アーティスト、クリエイター、ゲーマー、そして技術愛好家のための堅牢なマクロキーボードソフトウェアです。
+Stream-Piは、アーティスト、クリエイター、ゲーマー、ギークのための堅牢なマクロキーボードソフトウェアです。
 
-Stream-Pi は適切なオープンソースの代替手段として存在し、CSSを使用してUIシステムの隅々まで個別にカスタマイズできる豊富なテーマシステムを提供します。
+Stream-Piは、ユーザーがCSSでUIシステムの隅々まで個人化できる豊富なテーマシステムを提供する、適切なオープンソース代替品として存在します。
 
-さらに、Stream-Pi は豊富なAPIを提供しており、開発者が独自のカスタムプラグインを作成することができます。これは現在利用可能な有料および独占的なオプションと同様です。大きな違いは、Stream-Pi が完全に無料でオープンソースであることです！
+Stream-Piは豊富なAPIも提供しており、開発者はこれを使用して独自のカスタムプラグインを作成できます - 現在利用可能な有料で独占的なオプションと同様です。ここでの大きな違いは、Stream-Piが完全に無料でオープンソースであることです！
 
-### OBS Studio とは 🤔
+### OBS Studioとは 🤔
 
-OBS Studio は、スクリーンキャストとライブストリーミングのための無料かつオープンソースのアプリです。C/C++で記述され、Qtで構築されたOBS Studioは、リアルタイムキャプチャ、シーン構成、録画、エンコード、そしてリアルタイムメッセージングプロトコル（RTMP）を介した放送を提供します。YouTube、Twitch、Instagram、Facebookなど、RTMPをサポートする任意の宛先に動画をストリームすることができます。
+OBS Studioは、スクリーンキャストとライブストリーミング用の無料でオープンソースのアプリです。C/C++で書かれ、Qtで構築されたOBS Studioは、リアルタイムキャプチャ、シーン構成、録画、エンコード、およびReal Time Messaging Protocol（RTMP）を介したブロードキャストを提供します。YouTube、Twitch、Instagram、FacebookなどのRTMPをサポートする任意の宛先にビデオをストリーミングできます。
 
 ### なぜこれを行うのか 🤨
 
-reTerminal の内蔵ディスプレイ、優れた性能、そしてRaspberry Pi関連エコシステムのサポートにより、生産性ツールとしてのインテリジェントで便利なコントロールを簡単に実現できることが分かりました。
+reterminalの内蔵ディスプレイ、優れた性能、Raspberry Pi関連エコシステムのサポートにより、生産性ツールとしてインテリジェントで便利な制御を簡単に実装できることがわかりました。
 
-それでは、一緒に試してみましょう！ 😊
+それでは、私たちと一緒に試してみましょう！😊
 
 ## インストール 🐱‍🚀
 
-- ハードウェア準備
+- ハードウェアの準備
   - reTerminal
   - PC
 
-本チュートリアルは安定性を考慮し、Ubuntu 18.04 を基準としていますが、Windows、Mac、その他のLinuxディストリビューションでも利用可能です。
+チュートリアルを安定させるため、ubuntu 18.04をベースにしていますが、windows、mac、その他のlinuxディストリビューションなど他のシステムでも利用可能です。
 
-### OBS Studio のインストール ⌛
+### OBS studioのインストール ⌛
 
-これには2つの方法があります。事前にビルドされたパッケージを使用する方法と、自分でコンパイルする方法です。**推奨される方法は、テスト済みで常に利用可能な事前ビルドパッケージを使用することです**。最新機能を試したい場合は、公式のOBSコンパイルプロセスに従うことができますが、多数のパッケージに依存するため、予期しない問題が発生する可能性があります。
+これを行う方法は2つあります。事前にビルドされたパッケージを使用するか、自分でコンパイルするかです。**推奨される方法は事前にビルドされたパッケージを使用すること**で、これはテスト済みで常に利用可能です。最新機能を試したい場合は、公式のobsコンパイルプロセスに従うことができますが、多数のパッケージへの依存関係により予期しない問題が発生する可能性があります。
 
-#### 事前ビルドパッケージを使用する場合
+#### 事前コンパイル済みパッケージの使用
 
 ```bash
 sudo apt update 
@@ -96,7 +93,7 @@ cd build
 cmake -DBUILD_BROWSER=OFF ..
 ```
 
-### OBS Studio 用 WebSocket プラグインのインストール
+### OBS studio用websocketプラグインのインストール
 
 ```bash
 wget https://github.com/obsproject/obs-websocket/releases/download/4.9.0/obs-websocket_4.9.0-1_amd64.deb
@@ -108,7 +105,7 @@ sudo apt install ./obs-websocket_4.9.0-1_amd64.deb
 sudo apt install -f
 ```
 
-### Stream Pi サーバーのインストール（PC上で）
+### Stream Pi サーバーのインストール（ここではPC上で）
 
 [推奨バージョン](https://github.com/stream-pi/server/releases/tag/2.0.0-SNAPSHOT)
 
@@ -120,7 +117,7 @@ wget https://github.com/stream-pi/server/releases/download/2.0.0-SNAPSHOT/stream
 sudo apt install ./stream-pi-server-linux-x64-2.0.0-SNAPSHOT.deb
 ```
 
-### Stream Pi クライアントのインストール（reTerminal上で）
+### stream pi クライアントのインストール（reTerminal での例）
 
 [推奨バージョン](https://github.com/stream-pi/client/releases/tag/2.0.0-SNAPSHOT)
 
@@ -133,7 +130,7 @@ mkdir Stream_pi_client
 unzip stream-pi-server-linux-aarch64-2.0.0-SNAPSHOT-executable.zip -d Stream_pi_client
 ```
 
-## Stream Pi クライアント-サーバー間の相互作用
+## streampiクライアント-サーバー間の相互作用
 
 ### サービスの起動
 
@@ -144,71 +141,71 @@ cd Stream_pi_client
 ./run_desktop
 ```
 
-PC上（Ubuntu）
+PC（Ubuntu）上で
 
-アイコンをクリックするだけです。
+アイコンをクリックするだけです
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/01.jpg"/></div>
 
-### 機能の定義 😏
+### 機能を定義する 😏
 
-1. Stream Pi サーバーを開く
+1. streampi serverを開く
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/02.jpg"/></div>
 
-2. ファイル -> 設定 -> 一般 をクリック
+2. file -> setting -> generalをクリック
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/03.jpg"/></div>
 
-3. Stream Pi サーバーアドレス、ボックスサイズを設定し、保存をクリック
+3. streampi serverアドレス、ボックスサイズを設定し、saveをクリック
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/04.jpg"/></div>
 
-4. OBS サービスへの接続
+4. obsサービスに接続
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/06.jpg"/></div>
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/05.jpg"/></div>
 
-5. ReTerminal クライアントでサーバーアドレスをPCのIPアドレスとして設定し、保存と接続をクリック
+5. reterminalクライアントで、サーバーアドレスをPCのIPアドレスとして設定し、saveとconnectをクリック。
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/09.jpg"/></div>
 
-6. Stream Pi サーバーに戻り、対応するタブを対応するボックスにドラッグして、対応する機能を実現
+6. streampi serverに戻り、対応するタブを対応するボックスにドラッグして、対応する機能を実現
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/07.jpg"/></div>
 
-7. コマンドを直接記述してプログラム呼び出しを実装したり、表示アイコンを変更したり、表示名やボックスサイズを変更して、さらに多くの機能を実現可能
+7. コマンドを直接記述してプログラム呼び出しを実装し、表示アイコンの変更、表示名の変更、ボックスサイズの変更などを行い、より多くの機能を実現することもできます
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/11.jpg"/></div>
 
-8. OBS Studio ソフトウェアに画面ビューと対応する画像ソースを追加
+8. obs studioソフトウェアにスクリーンビューと対応する画像ソースを追加
 
 <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/08.jpg"/></div>
 
-9. 最後に ReTerminal をクリックして対応する制御を完了 👍👍👍
+9. 最後に、reterminalをクリックして対応する制御を完了できます 👍👍👍
 
-    - ReTerminal 上のインターフェース
+    - これはReTerminalで表示されるインターフェースです
 
     <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/10.jpg"/></div>
 
-    - PC 上のインターフェース
+    - これはPCで表示されるインターフェースです
 
     <div align="center"><video width={500} controls><source src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/demo.mkv"/></video></div>
 
-    - reTerminal の外観
+    - reTerminalの外観
 
     <div align="center"><img width={500} src="https://files.seeedstudio.com/wiki/ReTerminal/Streampi/12.jpg"/></div>
 
 ## 技術サポートと製品ディスカッション
 
-私たちの製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するために、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

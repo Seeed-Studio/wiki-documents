@@ -1,72 +1,74 @@
 ---
-description: SenseCAP Watcher Agentのファームウェアをフラッシュするためのガイド
+description: SenseCAP Watcher Agentにファームウェアをフラッシュするためのガイド
 title: Watcher Agentファームウェアのフラッシュ
 sidebar_position: 1
 keywords:
 - SenseCAP
 - Watcher
 - Agent
-- ファームウェア
-- フラッシュ
+- Firmware
+- Flash
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /ja/flash_watcher_agent_firmware
 last_update:
-  date: 05/15/2025
-  author: Zeke
+  date: 2025/09/04
+  author: Twelve
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # Watcher Agentファームウェアのフラッシュ
 
 ## 概要
 
-このプロジェクトを可能にしてくれた[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32)のオープンソースへの貢献に感謝します。
+このプロジェクトを可能にしたオープンソースの貢献に対して、[XiaoZhi AI Chatbot](https://github.com/78/xiaozhi-esp32)に特別な感謝を表します。
 
-このガイドでは、EspressifのFlash Download Toolを使用してSenseCAP WatcherデバイスにWatcher Agentファームウェアをフラッシュする手順を説明します。
+このガイドでは、EspressifのFlash Download Toolを使用して、SenseCAP WatcherデバイスにWatcher Agentファームウェアをフラッシュする手順を説明します。
 
-:::danger 警告
-このファームウェアをフラッシュすると、Watcherの工場情報が消去されます。以下のコマンドを使用してバックアップを取ることができます：
-
-esptool.py --chip esp32s3 --baud 2000000 --before default_reset --after hard_reset --no-stub read_flash 0x9000 204800 nvsfactory.bin
+:::danger 注意
+このガイドで提供されるファームウェアには認証情報が必要な場合があります。必要に応じて、[sensecap@seeed.cc](mailto:sensecap@seeed.cc)にお問い合わせください。
 :::
 
-## 必要条件
+## 前提条件
 
 ### 必要なハードウェア
+
 - SenseCAP Watcherデバイス
 - USB Type-Cデータケーブル
 - Windows PC
 
 ### 必要なソフトウェア
-- [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (バージョン3.9.6以上)
-- [Watcher Agentファームウェアバイナリファイル]
 
-## フラッシュ手順
+- [Flash Download Tool](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip) (3.9.6以降)
+- [Watcher Agentファームウェアバイナリファイル](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)
+
+:::note
+すでにWatcherデバイスをお持ちで、そのモデルが**-ENではない**場合、ファームウェアをフラッシュした後に認証情報を手動でフラッシュする必要があります。
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
+詳細については、[認証情報のフラッシュ](#flashing-authentication-info)をご確認ください。
+:::
+
+## フラッシュプロセス
 
 ### ステップ1. Flash Download Toolのダウンロードとインストール
 
-1. Espressifの公式ウェブサイトからFlash Download Toolをダウンロードします：
+1. EspressifのオフィシャルウェブサイトからFlash Download Toolをダウンロードします：
    [Flash Download Tool v3.9.6](https://www.espressif.com/sites/default/files/tools/flash_download_tool_3.9.6.zip)
-2. ダウンロードしたZIPファイルを任意のディレクトリに解凍します
-3. インストールは不要です。実行可能ファイルをダブルクリックするだけでツールを起動できます
+2. ダウンロードしたzipファイルを任意のディレクトリに展開します
+3. インストールは不要です - 実行ファイルをダブルクリックするだけでツールが起動します
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/flash%20download%20tool.jpg" style={{width:500, height:'auto'}}/></div>
 
 ### ステップ2. ファームウェアファイルの準備
 
-1. Watcher Agentファームウェアの[binaryファイル](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)をダウンロードします
+1. Watcher Agent ファームウェア[バイナリファイル](http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/watcher_agent_firmware.bin)をダウンロードします
 :::caution 注意
 すべてのパスに特殊記号が含まれていないことを確認してください。
 :::
 
 ### ステップ3. デバイスの接続
 
-1. Watcherデバイスを底部のType-Cポートを使用してコンピュータに接続します
+1. デバイス底面のType-Cポートを使用してWatcherをコンピュータに接続します
 2. `flash_download_tool_3.9.7.exe`をダブルクリックしてツールを起動します
-3. 以下の設定を構成します：
+3. 以下の設定を行います：
    - ChipType: `ESP32-S3`を選択
    - WorkMode: `Develop`を選択
    - LoadMode: `UART`を選択
@@ -75,47 +77,49 @@ esptool.py --chip esp32s3 --baud 2000000 --before default_reset --after hard_res
 
 ### ステップ4. ファームウェア設定の構成
 
-1. 最初の行にある「...」ボタンをクリックして、ダウンロードしたファームウェアバイナリファイルを選択します
-2. ファームウェアファイルの横にあるチェックボックスが選択されていることを確認します
-3. ファームウェアファイル選択後のアドレスフィールドに`0x0`を入力します
+1. 最初の行の「...」ボタンをクリックして、ダウンロードしたファームウェアバイナリファイルを参照・選択します
+2. ファームウェアファイルの横のチェックボックスが選択されていることを確認します
+3. ファームウェアファイル選択後のアドレスフィールドに`0x0`と入力します
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting2.jpg" style={{width:600, height:'auto'}}/></div>
 
 ### ステップ5. COMポートとフラッシュ設定の選択
 
-以下の設定を構成します：
+以下の設定を行います：
+
 - SPI SPEED: 80MHz
 - SPI MODE: DIO
 - FLASH SIZE: 32Mbit
-- COM: 適切なCOMポートを選択（注：デバイスは2つのCOMポートを表示します）
+- COM: デバイスマネージャーで、名前が「B」で終わるCOMポートを見つけて選択します — これをフラッシュ用に選択してください。
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting4.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::note
-STARTをクリックしてもフラッシュが開始されない場合は、STOPをクリックして別のCOMポートを試してください。2つのCOMポートのうち、フラッシュに使用できるのは1つだけです。
+STARTをクリックしてもフラッシュが開始されない場合は、STOPをクリックして「B」で終わるCOMポートを選択していることを確認してください。
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
 :::
 
 ### ステップ6. フラッシュの消去
 
-1. `ERASE`ボタンをクリックして既存のファームウェアを消去します
+1. `ERASE`ボタンをクリックして既存のファームウェアをクリアします
 2. 消去プロセスが完了するまで待ちます
 
 ### ステップ7. ファームウェアのフラッシュ
 
 1. `START`ボタンをクリックしてフラッシュを開始します
-2. ログウィンドウに進行状況情報が表示されます
-3. 進行状況が表示されない場合や失敗した場合は、別のCOMポートを試してください
+2. ログウィンドウに進行状況情報が表示されるはずです
+3. 進行状況が表示されない場合や失敗した場合は、他のCOMポートを試してください
 
 ### ステップ8. 成功の確認
 
-ログウィンドウに成功メッセージが表示されたら、フラッシュプロセスが完了です。
+ログウィンドウに成功メッセージが表示されたら、フラッシュプロセスは完了です。
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish1.jpg" style={{width:300, height:'auto'}}/></div>
 
 ### ステップ9. デバイスの再起動
 
-1. Watcherデバイスのリセットホールを探します
-2. ピンを使用してリセットボタンを軽く押します
+1. Watcherデバイスのリセット穴を見つけます
+2. ピンを使ってリセットボタンを軽く押します
 3. デバイスが新しいファームウェアで再起動します
 
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/finish2.jpg" style={{width:500, height:'auto'}}/></div>
@@ -125,7 +129,7 @@ STARTをクリックしてもフラッシュが開始されない場合は、STO
 ### よくある問題
 
 1. **COMポートが検出されない**
-   - 底部のType-Cポートを使用していることを確認してください
+   - 下部のType-Cポートを使用していることを確認してください
    - 別のUSBケーブルを試してください
    - USBドライバーが正しくインストールされているか確認してください
 
@@ -134,8 +138,46 @@ STARTをクリックしてもフラッシュが開始されない場合は、STO
    - アドレス（0x0）が正しく入力されているか確認してください
 
 3. **デバイスが応答しない**
-   - ピンを使用してリセットボタンを軽く押してください
+   - ピンを使ってリセットボタンを軽く押してください
    - フラッシュ前に消去を試してください
+
+### 認証情報のフラッシュ
+
+Watcherモデルが**-ENではない**場合、ファームウェアをフラッシュした後に認証情報を手動でフラッシュする必要があります。
+
+**手順：**
+
+1. デバイスの**MACアドレス**を確認してください。
+   - 製品ラベルまたはシリアルポート経由で確認できます。
+   - ネイティブファームウェアを使用している場合は、デバイスの**設定->デバイス情報->WI-FI Mac**でも確認できます。
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/en_panel.jpg" style={{width:300, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/mac.jpg" style={{width:600, height:'auto'}}/></div>
+2. **sensecap@seeed.cc**にSTA MACアドレスを記載したメールを送信し、認証ファイルとフラッシュツールをリクエストしてください。このスクリプトは、私たちがお送りするパッケージに含まれています。
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools.jpg" style={{width:500, height:'auto'}}/></div>
+3. esp-idfターミナルに移動し、私たちがお送りしたフォルダに移動して、**Pythonフラッシュスクリプト**を実行してください。
+:::note
+esp-idfをまだインストールしていない場合は、[ESP-IDFウェブサイト](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/windows-setup.html)にアクセスし、公式ガイドに従ってダウンロードとインストールを行ってください。
+:::
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash1.jpg" style={{width:500, height:'auto'}}/></div>
+4. プログラムの指示に従い、対応するシリアルポート、serialBを入力し、""BURN""と入力してフラッシュしてください。
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/tools%20setting3.jpg" style={{width:500, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash5.jpg" style={{width:800, height:'auto'}}/></div>
+5. プロセスが完了したら、デバイスのリセットボタンを押してください。
+6. 上記の手順を完了すると、[SenseCraft AI-Watcher Agentプラットフォーム](https://sensecraft.seeed.cc/ai/watcher-agent)で登録できるようになります。
+
+:::note
+以下の問題が発生した場合は、esp-idfターミナルに移動してフォルダに移動し、以下の2つのコマンドを手動で入力してください：
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash4.jpg" style={{width:800, height:'auto'}}/></div>
+
+```bash
+espefuse.py -p <your_correct_serial_port> burn_block_data BLOCK_USR_DATA serial_number
+espefuse.py -p <your_correct_serial_port> burn_key BLOCK_KEY0 license_key HMAC_UP
+```
+
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash2.jpg" style={{width:800, height:'auto'}}/></div>
+<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/Flash/authentication_flash3.jpg" style={{width:800, height:'auto'}}/></div>
+:::
 
 ## 技術サポート
 

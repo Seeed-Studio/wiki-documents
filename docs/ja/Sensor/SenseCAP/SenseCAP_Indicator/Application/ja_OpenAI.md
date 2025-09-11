@@ -2,18 +2,14 @@
 description: ChatGPT & DALL·E with Indicator
 title: ChatGPT - DALL·E - SenseCAP Indicator
 keywords:
-- SenseCAP Indicator ChatGPT DALL·E アプリケーション開発
+- SenseCAP Indicator ChatGPT DALL·E Application Development
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_Application_ChatGPT
 sidebar_position: 9
 last_update:
-  date: 05/15/2025
+  date: 11/16/2023
   author: Spencer
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # SenseCAP Indicator - ChatGPT - DALL·E アプリケーション開発
 
@@ -25,20 +21,21 @@ https://github.com/Seeed-Studio/wiki-documents/issues
     </a>
 </div>
 
-このガイドでは、提供されたBSP（ボードサポートパッケージ）に基づいて、プログラムの迅速な追加、削除、変更を行うためのOpenAIデモの構成方法について説明します。
+このガイドでは、提供されたBSP（Board Support Package）に従って、プログラムの迅速な追加、削除、変更のためのOpenAIデモの構成方法について説明します。
 
 ## 前提条件
 
-- 1つの [SenseCAP Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html)
-- コンピュータにインストールされた [ESP-IDF](https://github.com/espressif/esp-idf) ツールチェーン
+- [SenseCAP Indicator](https://www.seeedstudio.com/SenseCAP-Indicator-D1-p-5643.html) 1台
+- コンピューターにインストールされた[ESP-IDF](https://github.com/espressif/esp-idf)ツールチェーン
 
 :::tip
-ユーザーインターフェース（UI）の変更方法を学びたい場合は、以下のガイドを参照してください: [独自のUIを作成する方法](/ja/SenseCAP_Indicator_How_to_Create_your_own_UI)
+ユーザーインターフェース（UI）の変更方法を学びたい場合は、ガイドを参照してください：[独自のUIを作成する方法](/SenseCAP_Indicator_How_to_Create_your_own_UI)
 
-まだIDFツールチェーンをインストールしていない場合は、以下のガイドに従ってください: [デフォルトファームウェアをフラッシュする方法](/ja/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
+IDFツールチェーンをまだインストールしていない場合は、ガイドの手順に従ってください：[デフォルトファームウェアのフラッシュ方法](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)
 :::
 
-## 始めましょう
+## はじめに
+
 <div class="img-container">
   <img src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_RES_BE_RICH.JPG"/>
 
@@ -46,25 +43,25 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 </div>
 
-OpenAIのスタートアップフローチャートに関連する主なコードは以下の通りです:
+OpenAI起動フローチャートに関連する主要なコードは以下の通りです：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/Indicator_openai_sys.png"/></div>
 
 ### 機能
 
-SenseCAP Indicator x ChatGPT x DALL·E アプリケーションはMVC（モデル-ビュー-コントローラー）アーキテクチャに基づいて開発されています。このプロジェクトのワークフローはMVCアーキテクチャへの依存を示しています。
+SenseCAP Indicator x ChatGPT x DALL·E アプリケーションは、MVC（Model-View-Controller）アーキテクチャに基づいて開発されています。プロジェクトのワークフローは、MVCアーキテクチャへの依存を示しています。
 
-このアーキテクチャでは、コンポーネントは以下のように構成されています:
+このアーキテクチャでは、コンポーネントは以下のように構成されています：
 
-- View（ビュー）: Viewはさまざまなイベントトリガー信号を処理し、LVGL（Light and Versatile Graphics Library）を使用してディスプレイを駆動します。
+- View：Viewは様々なイベントトリガー信号を処理し、ディスプレイの駆動にLVGL（Light and Versatile Graphics Library）を利用します。
 
 :::note
-ユーザーインターフェース（UI）を迅速に構築するには、[SquareLine Studio](https://squareline.io/)を使用できます。このプロジェクトでも使用されています。このガイドに従う際には、SquareLine Studioバージョン1.3.0を使用することをお勧めします。スムーズでシームレスな体験を保証します。
+ユーザーインターフェース（UI）を迅速に構築するために、[SquareLine Studio](https://squareline.io/)を使用できます。これは私たちのプロジェクトでも採用されています。このガイドに従ってスムーズでシームレスな体験を確保するために、SquareLine Studio バージョン1.3.0の使用を推奨します。
 :::
 
-- Model（モデル）: Modelには`indicator_openai.c`ファイルが含まれており、`indicator_openai_init()`関数が含まれています。この関数はModelエントリで実行されると、OpenAIにリクエストを送信し、レスポンスを受信して解析し、Viewを通じて画面に表示します。
+- Model：Modelには`indicator_openai.c`ファイルが含まれており、`indicator_openai_init()`関数が含まれています。Modelエントリで実行されると、この関数はOpenAIにリクエストを送信し、レスポンスを受信し、Viewを通じて画面に表示するためにそれらを解析します。
 
-以下はModelの主要な機能とワークフローです（[APIキー](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)が保存された後）:
+以下は、Modelの主要な機能とワークフローです（[API Key](/Sensor/SenseCAP/SenseCAP_Indicator/Set_An_API_Key)が保存された後）：
 
 #### **ChatGPTフローチャート**
 
@@ -76,30 +73,30 @@ SenseCAP Indicator x ChatGPT x DALL·E アプリケーションはMVC（モデ�
 
 ## サンプルコード
 
-OpenAIサービスを利用するには、OpenAIにリクエストを送信し、レスポンスを受信し、JSONレスポンスを解析する関数を実装する必要があります。以下のコードスニペットは、必要なコード構造を示しています。
+OpenAIサービスを利用するために、OpenAIにリクエストを送信し、レスポンスを受信し、JSONレスポンスを解析できる関数を実装する必要があります。以下のコードスニペットは、必要なコード構造を示しています：
 
-<!-- コード -->
+<!-- Code -->
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="ChatGPT" label="ChatGPT コード">
+<TabItem value="ChatGPT" label="ChatGPT Code">
 
 ```c title="openai.c"
-/* HTTPSリクエストとレスポンス取得 */
+/* HTTPS Request & get Response */
 static int chat_request(struct view_data_openai_request *p_req,
                         struct view_data_openai_response *p_resp);
 
-/* JSON解析 */
+/* Json Prase */
 static int __chat_json_prase(const char *p_str, char *p_answer, char *p_err);
 ```
 
-`indicator_openai.c`内の`chat_request(...)`関数は、OpenAI APIにリクエストを送信し、レスポンスを受信し、JSONレスポンスを解析する役割を担います。この関数は、ユーザーが提供したデータをカプセル化したHTTPリクエストを生成し、`mbedtls_send_then_recv(...)`を使用してサーバーと通信します。
+`indicator_openai.c` の `chat_request(...)` 関数は、OpenAI API にリクエストを送信し、レスポンスを受信し、JSON レスポンスを解析する役割を担っています。この関数は、ユーザーが提供したデータをカプセル化した HTTP リクエストを生成し、`mbedtls_send_then_recv(...)` を使用してサーバーと通信します。
 
-アプリケーションにプロンプトを追加するには、`chat_request(...)`関数内の`data_buf`変数を以下のように変更します。
+アプリケーションにプロンプトを追加するには、`chat_request(...)` 関数の `data_buf` 変数を以下のように変更できます：
 
-**プロンプトの追加:**
+**プロンプトの追加：**
 
 ```c
 data_len += sprintf(data_buf + data_len, "Your are SenseCAP Indicator, developed by Seeed Studio, has been launched on April 20th, 2023.");
@@ -109,44 +106,44 @@ data_len += sprintf(data_buf + data_len, "You are a fully open-source powerful I
 data_len += sprintf(data_buf + data_len, "You are on behalf of Seeed Studio to answer requests.");
 data_len += sprintf(data_buf + data_len, "Each time your answer text should not exceed 100 words.");
 data_len += sprintf(data_buf + data_len, "My first sentence is [");
-data_len += sprintf(data_buf + data_len, "%s", p_req->question); // ユーザー入力
+data_len += sprintf(data_buf + data_len, "%s", p_req->question); // user input
 data_len += sprintf(data_buf + data_len, "]");
 data_len += sprintf(data_buf + data_len, "\"}]}");
 ```
 
-この関数では、`mbedtls_send_then_recv`がリクエストと取得メソッドを実行するために呼び出されます。
+この関数では、`mbedtls_send_then_recv` が呼び出されてリクエストを実行し、メソッドを取得します。
 
 </TabItem>
-<TabItem value="DALL·E" label="DALL·E コード">
+<TabItem value="DALL·E" label="DALL·E Code">
 
 ```c title="openai.c"
-/* HTTPSリクエストとレスポンス取得 */
+/* HTTPS Request & get Response */
 static int image_request(struct view_data_openai_request *p_req,
-					 struct view_data_openai_response *p_resp);
+      struct view_data_openai_response *p_resp);
 
-/* JSON解析 */
+/* Json Prase */
 static int __image_json_prase(const char *p_str, char *p_url, char *p_err);
 
-/* URL解析とダウンロード */
+/* prase URL to download */
 static void url_prase(char *p_url, char *p_host, char *p_path);
 ```
 
-> 原則: リクエストが成功すると、URLアドレスが返されます。このURLリンクから画像をダウンロードしてデコードすることで、画像を表示できます。
+> 原理：リクエストが成功すると、URL アドレスが返されます。この URL リンクから画像をダウンロードしてデコードすることで、表示することができます。
 
-`ChatGPT Code`と同様に、初期リクエストではプロンプトを使用して画像URLを取得します。URLを取得した後、このURLを使用してローカルバッファに画像をダウンロードします。
+`ChatGPT Code` と同様に、初期リクエストでプロンプトを利用して画像 URL を取得します。URL を取得した後、取得した URL を使用して画像をローカルバッファにダウンロードを試みます。
 
 </TabItem>
 </Tabs>
 
-<!-- コード終了 -->
+<!-- Code END -->
 
 ---
 
 <details>
 
-<summary>ChatGPT & DALL·E コード</summary>
+<summary>ChatGPT & DALL·E Code</summary>
 
-詳細で最新のコードについては、[SenseCAP Indicator OpenAI](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_openai)をご参照ください。
+詳細かつ最新のコードについては、[SenseCAP Indicator OpenAI](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/tree/main/examples/indicator_openai) を参照してください。
 
 ```c
 #include "indicator_openai.h"
@@ -302,7 +299,7 @@ static int mbedtls_send_then_recv(char *p_server, char *p_port, char *p_tx,
 
     if ((flags = mbedtls_ssl_get_verify_result(&ssl)) != 0)
     {
-        /* 実際には、ret != 0の場合、接続を閉じることを検討する必要があります */
+        /* In real life, we probably want to close connection if ret != 0 */
         ESP_LOGW(TAG, "Failed to verify peer certificate!");
         bzero(buf, sizeof(buf));
         mbedtls_x509_crt_verify_info(buf, sizeof(buf), "  ! ", flags);
@@ -338,10 +335,10 @@ static int mbedtls_send_then_recv(char *p_server, char *p_port, char *p_tx,
 
     if (delay_ms > 0)
     {
-        vTaskDelay(delay_ms / portTICK_PERIOD_MS); // 待機
+        vTaskDelay(delay_ms / portTICK_PERIOD_MS); // wait
     }
 
-    ESP_LOGI(TAG, "Reading HTTP response..."); // ここで応答を読み取る
+    ESP_LOGI(TAG, "Reading HTTP response..."); // HERE！！！
 
     size_t recv_len = 0;
 
@@ -369,6 +366,12 @@ static int mbedtls_send_then_recv(char *p_server, char *p_port, char *p_tx,
         }
         len = ret;
 
+        // if( recv_len < 512 ) {
+        //     for (int i = 0; (i < len); i++)
+        //     {
+        //         putchar(p_rx[i + recv_len]);
+        //     }
+        // }
         if( p_read_cb != NULL ) {
             p_read_cb(NULL, len);
         }
@@ -417,6 +420,14 @@ static int __chat_json_prase(const char *p_str, char *p_answer, char *p_err)
         return -1;
     }
 
+    // {
+    //     "error": {
+    //         "message": "",
+    //         "type": "invalid_request_error",
+    //         "param": null,
+    //         "code": "invalid_api_key"
+    //     }
+    // }
     cjson_item = cJSON_GetObjectItem(root, "error");
     if (cjson_item != NULL)
     {
@@ -516,7 +527,7 @@ static int chat_request(struct view_data_openai_request *p_req,
 
     p_json += 4;
 
-    p_resp->p_answer = p_recv_buf + recv_buf_max_len / 2; // p_recv_bufメモリを使用
+    p_resp->p_answer = p_recv_buf + recv_buf_max_len / 2; // use p_recv_buf mem
 
     ret = __chat_json_prase(p_json, p_resp->p_answer, p_resp->err_msg);
     if (ret != 0)
@@ -659,7 +670,7 @@ static int image_request(struct view_data_openai_request *p_req,
         return -1;
     }
 
-    // 画像をダウンロード
+    // download image
     ESP_LOGI(TAG, "Download image from (%s)...", data_buf);
 
     char host[64];
@@ -687,7 +698,7 @@ static int image_request(struct view_data_openai_request *p_req,
         return -1;
     }
 
-    // PNG画像の長さを取得
+    // find png image len
     int content_len = 0;
     char *p_content_len_str = strstr(p_recv_buf, "Content-Length");
     if( p_content_len_str == NULL ) {
@@ -700,7 +711,7 @@ static int image_request(struct view_data_openai_request *p_req,
     ESP_LOGI(TAG, "Content-Length: %d", content_len);
 
 
-    // PNG画像の本体を取得
+    // find png image body
     char *p_png = strstr(p_recv_buf, "\r\n\r\n");
     if (p_json == NULL)
     {
@@ -730,7 +741,7 @@ static void __openai_api_key_read(void)
     }
     else
     {
-        // エラーまたは見つからない場合
+        // err or not find
         have_key = false;
         esp_event_post_to(view_event_handle, VIEW_EVENT_BASE, VIEW_EVENT_OPENAI_ST, &have_key, sizeof(have_key), portMAX_DELAY);
         if (ret == ESP_ERR_NVS_NOT_FOUND)
@@ -747,7 +758,7 @@ static void __openai_api_key_read(void)
 static int __openai_init()
 {
     recv_buf_max_len = 1024 * 1024;
-    p_recv_buf = malloc(recv_buf_max_len); // psramから
+    p_recv_buf = malloc(recv_buf_max_len); // from psram
     if (p_recv_buf == NULL)
     {
         ESP_LOGE(TAG, "malloc %s bytes fail!", recv_buf_max_len);
@@ -866,22 +877,23 @@ int indicator_openai_init(void)
     xTaskCreate(&__indicator_openai_task, "__indicator_openai_task", 1024 * 10, NULL, 10, NULL);
 }
 ```
+
 </details>
 
 ## リソース
 
-1. [SenseCAP Indicator X ChatGPT](/ja/SenseCAP_Indicator_ChatGPT)
-2. [SenseCAP Indicator X DALL·E](/ja/SenseCAP_Indicator_DALL·E)
-3. **デモ SDK**: SenseCAP Indicator のデモ SDK は [GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32) で利用可能です。
-4. **SenseCAP Indicator ユーザーガイド**: このユーザーガイドでは、SenseCAP Indicator ボードのソフトウェアとハードウェアに関する詳細情報を提供しています。[こちら](/ja/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)からご覧いただけます。
-5. **Chat completions OpenAI ガイド**: Chat API を初めて使用する場合、このガイドが導入をサポートします。[こちら](https://platform.openai.com/docs/guides/chat/chat-completions-beta)で確認できます。
-6. **`indicator_openai.c` ファイル**: このファイルには、`ChatGPT` および `DALL·E` 統合の主要な関数が含まれています。[こちら](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c)で閲覧できます。
-7. **ESP-IDF の入門ガイド**: このガイドでは、ESP-IDF を構成してプロジェクトを構築するための完全な手順を提供しています。[こちら](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)からアクセスできます。
+1. [SenseCAP Indicator X ChatGPT](/SenseCAP_Indicator_ChatGPT)
+2. [SenseCAP Indicator X DALL·E](/SenseCAP_Indicator_DALL·E)
+3. **Demo SDK**: SenseCAP IndicatorのDemo SDKは[GitHub](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32)で入手できます。
+4. **SenseCAP Indicator ユーザーガイド**: ユーザーガイドでは、SenseCAP Indicatorボードのソフトウェアとハードウェアに関する詳細情報を提供しています。[こちら](/Sensor/SenseCAP/SenseCAP_Indicator/Get_started_with_SenseCAP_Indicator)でお読みいただけます。
+5. **Chat completions OpenAI ガイド**: Chat APIが初めての方は、このガイドが役立ちます。[こちら](https://platform.openai.com/docs/guides/chat/chat-completions-beta)でご確認ください。
+6. **`indicator_openai.c` ファイル**: このファイルには、`ChatGPT`と`DALL·E`統合のメイン関数が含まれています。[こちら](https://raw.githubusercontent.com/Seeed-Solution/SenseCAP_Indicator_ESP32/main/examples/indicator_openai/main/model/indicator_openai.c)でご覧いただけます。
+7. **ESP-IDF入門ガイド**: このガイドでは、ESP-IDFを設定してプロジェクトをビルドするための完全な手順を提供しています。[こちら](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)でアクセスできます。
 
 ## 技術サポート
 
-**SenseCAP Indicator に関するサポートが必要ですか？私たちがサポートします！**
+**SenseCAP Indicatorでお困りですか？私たちがサポートします！**
 
-このチュートリアルを進める中で問題が発生したり質問がある場合は、ぜひ私たちの技術サポートにお問い合わせください。いつでもお手伝いします！
+このチュートリアルに従っている間に問題が発生したり、ご質問がある場合は、お気軽に技術サポートまでお問い合わせください。私たちは常にお手伝いする準備ができています！
 
-[Seeed Official Discord Channel](https://discord.gg/kpY74apCWj) にアクセスして質問をしたり、[GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions) で自由に情報を共有してください！
+質問については[Seeed公式Discordチャンネル](https://discord.gg/kpY74apCWj)にアクセスするか、[GitHub discussions](https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/discussions)で何でもシェアしてください！

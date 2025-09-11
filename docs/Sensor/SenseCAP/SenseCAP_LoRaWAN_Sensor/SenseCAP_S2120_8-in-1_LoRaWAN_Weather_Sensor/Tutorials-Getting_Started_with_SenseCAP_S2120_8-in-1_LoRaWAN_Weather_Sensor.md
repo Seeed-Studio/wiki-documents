@@ -20,8 +20,7 @@ last_update:
 
 ### Install the Rain Gauge
 
-> Install the rain gauge funnel and rotate clockwise to lock the funnel
-> to the weather station.
+> Install the rain gauge funnel and rotate clockwise to lock the funnel to the weather station.
 >
 <div align="center"><img width="{400}" src="https://files.seeedstudio.com/wiki/wiki%20images/S2120%20Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor.files/Tutorials-Getting%20Started%20with%20SenseCAP%20S2120%208-in-1%20LoRaWAN%20Weather%20Sensor220.png" /></div>
 

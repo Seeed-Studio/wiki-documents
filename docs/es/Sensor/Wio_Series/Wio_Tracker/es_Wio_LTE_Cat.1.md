@@ -15,9 +15,9 @@ last_update:
 
 Wio Tracker (Entrada y Salida Inalámbrica) es una puerta de enlace de código abierto que permite soluciones IoT GPS más rápidas. Es una placa de desarrollo compatible con Arduino y Grove que te ayuda a rastrear casi cualquier objeto en movimiento en el planeta y luego cargar esos datos de forma inalámbrica. El Wio LTE es la versión LTE del Wio Tracker, así que ahora tenemos 2 versiones del Wio Tracker y la versión LTE (4G) marcará algunas diferencias.
 
-Hay tres actualizaciones principales al comparar el Wio LTE con la versión 2G. En primer lugar, por su nombre sabemos que el Wio LTE soporta comunicación LTE (4G) que es mucho más rápida y popular que 2G. En segundo lugar, el Wio LTE soporta en total 4 GNSS diferentes – GPS, Beidou, GLONSS y Galileo, el QZSS también es soportado como bonus. Con más soporte GNSS, el posicionamiento será más preciso. En tercer lugar, el MCU del Wio LTE se ha actualizado a STM32, que está basado en Cortex-M4, hace que el Wio LTE sea 5 veces más rápido que la versión 2G. Además, la memoria flash y RAM también se han aumentado a 1Mbytes y 192+4k bytes.
+Hay tres actualizaciones principales comparando el Wio LTE con la versión 2G. Primero, por su nombre sabemos que el Wio LTE soporta comunicación LTE (4G) que es mucho más rápida y popular que 2G. Segundo, el Wio LTE soporta en total 4 GNSS diferentes – GPS, Beidou, GLONSS y Galileo, el QZSS también está soportado como bonus. Con más soporte GNSS, el posicionamiento será más preciso. Tercero, el MCU del Wio LTE está actualizado a STM32, que está basado en Cortex-M4, hace que el Wio LTE sea 5 veces más rápido que la versión 2G. Además, la memoria flash y RAM también se han aumentado a 1Mbytes y 192+4k bytes.
 
-Aparte de las tres actualizaciones principales, la versión LTE es casi igual que la versión 2G. **Si tu proyecto está usando la versión 2G, sería muy fácil actualizar a la versión LTE porque hemos preparado una librería de comandos AT transplantable y expandible.** La compatibilidad con Arduino y Grove permite un desarrollo más rápido a través de numerosas librerías y una comunidad de apoyo. La librería GPS que estará disponible con la placa no está limitada solo a Arduino – puede funcionar igual de bien si eliges desarrollar en C/C++. Con las 6 conexiones Grove integradas, los desarrolladores pueden crear cualquier combinación de nuestros más de 180 sensores y actuadores para construir proyectos y resolver cualquier problema. Simplificar la fase de prototipado y desarrollo es nuestro objetivo.
+Aparte de las tres actualizaciones principales, la versión LTE es casi igual que la versión 2G. **Si tu proyecto está usando la versión 2G, sería muy fácil actualizar a la versión LTE porque hemos preparado una librería de comandos AT transplantable y expansible.** La compatibilidad con Arduino y Grove permite un desarrollo más rápido a través de numerosas librerías y una comunidad de apoyo. La librería GPS que estará disponible con la placa no está limitada solo a Arduino – puede funcionar igual de bien si eliges desarrollar en C/C++. Con las 6 conexiones Grove integradas, los desarrolladores pueden crear cualquier combinación de nuestros más de 180 sensores y actuadores para construir proyectos y resolver cualquier problema. Simplificar la fase de prototipado y desarrollo es nuestro objetivo.
 
 El Wio LTE es muy adecuado para proyectos al aire libre donde el dispositivo puede conectarse a los satélites GPS y proporcionar una ubicación en tiempo real del elemento al que está conectado. El LTE proporciona un ancho de banda amplio que permite una interacción mucho más rápida entre el usuario y el dispositivo. Si vas a construir proyectos como un servicio de bicicletas compartidas, rastrear mascotas o ganado, localizar un vehículo, o incluso hacer seguimiento de un niño, el Wio LTE es la mejor solución.
 
@@ -37,21 +37,21 @@ El Wio LTE es muy adecuado para proyectos al aire libre donde el dispositivo pue
 ## Versión
 
 | Versión del Producto | Cambios                                  | Fecha de Lanzamiento |
-|---------------------|------------------------------------------|---------------------|
-| Wio Lte v1.0        | Inicial                                  | 24 Jul 2017         |
-| Wio Lte v1.1        | Optimización de métodos de producción   | 18 Oct 2017         |
-| Wio Lte v1.3        | Cambio de hardware con mejor fuente de alimentación | 9 Mar 2018 |
-| Wio Lte v1.3b       | Ajuste del diseño                       | 29 Mar 2018         |
+|-----------------|------------------------------------------|---------------|
+| Wio Lte v1.0    | Inicial                                  | Jul 24, 2017  |
+| Wio Lte v1.1    | Optimización de métodos de producción   | Oct 18, 2017  |
+| Wio Lte v1.3    | Cambio de hardware con mejor fuente de alimentación | March 9, 2018 |
+| Wio Lte v1.3b   | Ajustar el diseño                        | March 29, 2018|
 
-**Notas de Lanzamiento de Wio Lte v1.3**
+**Notas de Lanzamiento Wio Lte v1.3**
 
-Desde el lanzamiento de este producto, hemos recibido muchos comentarios y sugerencias de los usuarios. Decidimos mejorar aún más este producto basándonos en los comentarios de los usuarios, así que aquí lo tienes, sale el Wio Lte v1.3.
+Desde el lanzamiento de este producto, hemos recibido mucha retroalimentación y sugerencias de los usuarios. Decidimos mejorar aún más este producto basándonos en la retroalimentación de los usuarios, así que aquí lo ves, sale el Wio Lte v1.3.
 
 Hicimos algunos cambios en el circuito de alimentación:
 
 - Cambiar el PMIC (IC de gestión de energía) por MP2617, que es más estable.
-- Eliminar el módulo DC-DC que alimenta el módulo Lte, en su lugar, en esta versión alimentamos el módulo Lte mediante el circuito principal o la batería Lipo.
-- Agregar dos condensadores de 100uf para hacer la alimentación más estable.
+- Eliminar el módulo DC-DC que alimenta el módulo Lte, en su lugar, en esta versión alimentamos el módulo Lte por el circuito principal o la batería Lipo.
+- Agregar dos capacitores de 100uf para hacer la alimentación más estable.
 
 Como puedes ver en las imágenes a continuación.
 
@@ -68,20 +68,20 @@ LED ENCENDIDO| Cargando
 LED apagado | Carga terminada
 LED Parpadeando | Error de batería.(Incluyendo estados sin batería)
 
-Además, la lógica de la **Tecla de Reset** también cambió.
+Además, la lógica del **Botón de Reset** también cambió.
 
-Operación | Rango de Reinicio
+Operación | Rango de Reset
 ---|---
-Mantener presionado el botón de reset por un tiempo corto(dentro de 2 segundos) | Reinicio del MCU/ El módulo Lte no se reiniciará
-Mantener presionado el botón de reset por un tiempo largo(Más de 10 segundos)| Toda la placa se reiniciará
+Mantener el botón de reset por un tiempo corto(dentro de 2 segundos) | Reset del MCU/ El módulo Lte no se reseteará
+Mantener el botón de reset por un tiempo corto(Más de 10 segundos)| Toda la placa se reseteará
 
 ## Características
 
 - Conectividad LTE de bajo costo y bajo consumo optimizada para aplicaciones IoT de banda ancha
 - LTE mundial y UMTS/HSPA+
-- Unidad de gestión de energía (PMU) integrada con consumo de corriente ultra bajo en modo de suspensión profunda
+- Unidad de gestión de energía (PMU) integrada con consumo de corriente ultra-bajo en modo de sueño profundo
 - GPS/BeiDou/GLONASS/Galileo y QZSS
-- Biblioteca de comandos AT transplantable y expandible para Wio Tracker
+- Librería de comandos AT transplantable y expansible para Wio Tracker
 - Compatible con Arduino IDE
 - 6 conectores Grove
 - Socket 2 en 1 para Nano SIM y tarjeta TF
@@ -96,7 +96,7 @@ Mantener presionado el botón de reset por un tiempo largo(Más de 10 segundos)|
 |                 | Voltaje de Operación   | 3.3V                                                                            |
 |                 | Corriente DC por Pin I/O | 7 mA                                                                            |
 | LTE             | LTE Cat.1              | Comando AT: 3GPP TS27.007 y comandos AT mejorados                              |
-|                 | Datos                  | LTE-FDD Máx 10Mbps(DL) Máx 5Mbps (UL)                                           |
+|                 | Datos                  | LTE-FDD Max 10Mbps(DL) Max 5Mbps (UL)                                           |
 |                 |                        | Protocolo: TCP/UDP/PPP/FTP/HTTP/NTP/PING/QMI/HTTPS*/SMTP*/MMS*/FTPS*/SMTPS*/SSL* |
 |                 | SMS                    | Mensaje Peer to Peer, difusión SMS, modo Texto y PDU                          |
 |                 | Audio                  | Cancelación de eco, Eliminación de ruido                                            |
@@ -106,28 +106,29 @@ Mantener presionado el botón de reset por un tiempo largo(Más de 10 segundos)|
 |                 |                        | 2 x Puerto Analógico                                                                 |
 |                 |                        | 1 x UART                                                                        |
 |                 |                        | 1 x I2C                                                                         |
-|                 | Antena                | 2 x Antena LTE                                                                 |
+|                 | Antena                 | 2 x Antena LTE                                                                 |
 |                 |                        | 1 x Antena GPS                                                                 |
-|                 | Otros                 | USB: Fuente de alimentación y carga de programa                                            |
+|                 | Otros                  | USB: Fuente de alimentación y carga de programa                                            |
 |                 |                        | Conector JST 1.0 para batería                                                   |
 |                 |                        | Jack de Audio de 3.5mm                                                                |
-|                 |                        | Botón de Reset del MCU, Botón Boot(DFU) del MCU，Botón de Encendido EC21                       |
+|                 |                        | Botón de Reset MCU, Botón Boot(DFU) MCU，Botón de Encendido EC21                       |
 |                 |                        | 1 x LED RGB de Usuario SK6812                                                         |
 |                 |                        | Socket 2 en 1 para Nano SIM y tarjeta TF                                              |
-| Tamaño            | Longitud                 | 54.7mm                                                                          |
+| Tamaño          | Longitud               | 54.7mm                                                                          |
 |                 | Ancho                  | 48.2mm                                                                          |
-| Peso                  |                 | 18g                                                                                |  |
+| Peso                    |                 | 18g                                                                                |  |
 
 ## Consumo de Energía
 
 | Estado                                                                                 | Corriente                        |Voltaje                         |
 | -------------------------------------------------------------------------------------- | -------------------------------- |--------------------------------|
-| Arranque normal (momento del arranque)                                                 | 700mA                            |5V                              |
-| Después del arranque (modo IDLE)                                                      | 300mA                            |5V                              |  
+| Arranque normal(momento de arranque)                                                   | 700mA                            |5V                              |
+| Después del arranque(modo IDLE)                                                       | 300mA                            |5V                              |  
 | Después del arranque, estado de comunicación normal (función de transmisión de red)   | 600mA aproximadamente, el pico alcanza 2A |5V                              |  
-| Llamadas y SMS (mejor señal)                                                          | 100-300mA                        |5V                              |  
-| Modo de sueño profundo, apagar todas las funciones, requiere activación externa (activación solo por Reset) | 300uA                            |4.2V                            |  
-| Modo de sueño profundo del MCU, pin de activación conectado al módulo, activación a través del módulo | más de 300uA (requiere pruebas)  |4.2V                            |  
+| Llamada y SMS(señal mejor)                                                            | 100-300mA                        |5V                              |  
+| Modo de sueño profundo, apagar todas las funciones, requiere despertar externo (despertar solo por Reset) | 300uA                            |4.2V                            |  
+| Modo de sueño profundo MCU, pin de despertar conectado al módulo, despertar vía módulo               | más de 300uA (requiere pruebas)    |4.2V                            |
+
 
 :::note
     Hay dos condiciones de funcionamiento. Una es alimentación desde fuente USB de 5V. La otra es desde fuente de batería de 4.2v.   
@@ -147,7 +148,7 @@ Mantener presionado el botón de reset por un tiempo largo(Más de 10 segundos)|
 - Seguridad de propiedades
 
 :::tip
-    Usa módulos Grove para expandir tu aplicación. Hay 6 conectores Grove en la placa. Si es la primera vez que escuchas sobre Grove, por favor visita [Grove System](https://wiki.seeedstudio.com/es/Grove_System/) para más detalles. En resumen, Groves son cientos de sensores en estilo estándar, que consisten en sensores, actuadores, pantallas así como comunicación.
+    Usa módulos Grove para expandir tu aplicación. Hay 6 conectores Grove en la placa. Si es la primera vez que escuchas sobre Grove, por favor consulta [Sistema Grove](https://wiki.seeedstudio.com/es/Grove_System/) para más detalles. En resumen, Grove son cientos de sensores en estilo estándar, que consisten en sensores, actuadores, pantallas así como comunicación.
 :::
 
 ## Descripción General del Hardware
@@ -157,13 +158,13 @@ Mantener presionado el botón de reset por un tiempo largo(Más de 10 segundos)|
 ![](https://files.seeedstudio.com/wiki/Wio_Tracker_LTE/img/wio_tracker_lte_v1_buttom.png)
 
 :::tip
-    Si quieres usar el conector Grove integrado, por favor usa digitalWrite(B10, HIGH) para abrir 3V3_B. excepto D38 que se enciende por defecto. De lo contrario no puedes proporcionar energía a los módulos Grove.
+    Si quieres usar el conector Grove integrado, por favor usa digitalWrite(B10, HIGH) para abrir 3V3_B. excepto D38 que se enciende por defecto. De lo contrario no podrás proporcionar energía a los módulos Grove.
 :::
 **Módulo EC21**
 
-EC21 contiene 9 variantes: EC21-E, EC21-A, EC21-V, EC21-AUT, EC21-AUV, EC21-AU, EC21-KL, EC21-J y EC21-CEL. Esto lo hace retrocompatible con las redes EDGE y GSM/GPRS existentes, asegurando que pueda migrar fácilmente de LTE a redes 2G o 3G.
+EC21 contiene 9 variantes: EC21-E, EC21-A, EC21-V, EC21-AUT, EC21-AUV, EC21-AU, EC21-KL, EC21-J y EC21-CEL. Esto lo hace compatible hacia atrás con las redes EDGE y GSM/GPRS existentes, asegurando que pueda migrar fácilmente de LTE a redes 2G o 3G.
 
-Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas sim de AT&T y T-mobile. Si quieres personalizar el Módulo EC21 para otra región, no dudes en enviarnos un email: fae@seeed.cc
+Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas SIM de AT&T y T-mobile. Si quieres personalizar el Módulo EC21 para otra región, no dudes en enviarnos un email: fae@seeed.cc
 
 <div>
   <style type="text/css" dangerouslySetInnerHTML={{__html: "\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-yw4l{vertical-align:top}\n" }} />
@@ -221,15 +222,15 @@ Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas
       </tr>
       <tr>
         <td className="tg-yw4l" colSpan={2}>Región</td>
-        <td className="tg-yw4l">EMEA, Korea, Thailand, India</td>
-        <td className="tg-yw4l">North America</td>
-        <td className="tg-yw4l">North America</td>
+        <td className="tg-yw4l">EMEA, Corea, Tailandia, India</td>
+        <td className="tg-yw4l">América del Norte</td>
+        <td className="tg-yw4l">América del Norte</td>
         <td className="tg-yw4l">Australia</td>
       </tr>
       <tr>
         <td className="tg-yw4l" colSpan={2}>Certificación</td>
         <td className="tg-yw4l">CE/ GCF/ Vodafone</td>
-        <td className="tg-yw4l">FCC/ PTCRB/ AT&T/ IC/ ROGERS</td>
+        <td className="tg-yw4l">FCC/ PTCRB/ AT&amp;T/ IC/ ROGERS</td>
         <td className="tg-yw4l">FCC/ GCF/ Verizon</td>
         <td className="tg-yw4l">RCM/ Telstra</td>
       </tr>
@@ -301,7 +302,7 @@ Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas
       <tr>
         <td className="tg-yw4l" colSpan={2}>Región</td>
         <td className="tg-yw4l">Vodafone Australia</td>
-        <td className="tg-yw4l">Sudamérica, ANZ, Taiwán</td>
+        <td className="tg-yw4l">América del Sur, ANZ, Taiwán</td>
         <td className="tg-yw4l">Corea</td>
         <td className="tg-yw4l">Japón</td>
         <td className="tg-yw4l">China Telecom</td>
@@ -317,27 +318,27 @@ Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas
     </tbody></table>
 </div>
 
-## Comenzando
+## Primeros Pasos
 
 ### Instalar controlador USB
 
-- **Usuarios de Windows**: La mayoría de versiones de Windows no cargarán automáticamente el controlador integrado para puertos COM USB. Tendrás que descargar el controlador USB de ST [STM32 Virtual COM Port Driver](https://www.st.com/en/development-tools/stsw-stm32102.html#get-software).
+- **Usuarios de Windows**: La mayoría de las versiones de Windows no cargarán automáticamente el controlador integrado para puertos com USB. Tendrás que descargar el controlador USB de ST [Controlador de Puerto COM Virtual STM32](https://www.st.com/en/development-tools/stsw-stm32102.html#get-software).
 
-- **Usuarios de Mac OS X y Chromebook**: La placa simplemente se conectará y funcionará, ¡sin controladores!
+- **Usuarios de Mac OS X y Chromebook**: ¡La placa simplemente se conectará y funcionará, sin controladores!
 
 ### Cambiar controlador DFU
 
 **Para usuarios de Windows**:
 
-- Paso 1. Mantén presionado el botón BOOT y conecta a la computadora, verás **STM32 Device in DFU Mode** en el administrador de dispositivos como se muestra a continuación.
+- Paso 1. Mantén presionado el botón BOOT y conecta a la computadora, verás **Dispositivo STM32 en Modo DFU** en el administrador de dispositivos como se muestra a continuación.
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/before_driver_installation.png)
 
-- Paso 2. Esto indica que necesitas usar [zadig_xx.exe](https://files.seeedstudio.com/wiki/Wio_LTE/res/zadig_2.1.2.exe) para cambiar el controlador DFU de **STTub30** a **WinUSB** como se muestra a continuación. Si no podemos ver ninguna información en Zadig, por favor haz clic en Options--> List All Devices, luego selecciona STM32 Virtual COM Ports.
+- Paso 2. Esto indica que necesitas usar [zadig_xx.exe](https://files.seeedstudio.com/wiki/Wio_LTE/res/zadig_2.1.2.exe) para cambiar el controlador DFU de **STTub30** a **WinUSB** como se muestra a continuación. Si no podemos ver ninguna información en Zadig, por favor haz clic en Opciones--> Listar Todos los Dispositivos, luego selecciona Puertos COM Virtuales STM32.
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/zadig.png)
 
-- Paso 3. Verás el "STMicroelectronics Virtual COM Port" en el administrador de dispositivos como se muestra a continuación.
+- Paso 3. Verás el "Puerto COM Virtual STMicroelectronics" en el administrador de dispositivos como se muestra a continuación.
 
 ![](https://files.seeedstudio.com/wiki/Wio_LTE/img/after_driver_installation.png)
 
@@ -346,12 +347,16 @@ Y **EC21-A** es lo que estamos usando en WIO Tracker - LTE, que soporta tarjetas
 **1. Configuración de Software**
 
 - Paso 1. Instala Arduino IDE, se recomienda versión de IDE superior a 1.8.0.
-- Paso 2. Sigue [Cómo Agregar placas Seeed a Arduino IDE](https://wiki.seeedstudio.com/es/Seeed_Arduino_Boards/) para agregar Wio_LTE al administrador de placas de arduino.
+- Paso 2. Sigue [Cómo Agregar placas Seeed a Arduino IDE](https://wiki.seeedstudio.com/es/Seeed_Arduino_Boards/) para agregar Wio_LTE al administrador de placas de Arduino.
 
-:::note
-Hola, la placa "Wio LTE Cat.1" está almacenada en el paquete "Seeed SAMD Boards" como "Wio Terminal". Puedes referirte a [aquí](https://wiki.seeedstudio.com/es/Wio-Terminal-Getting-Started#software) para instalar el paquete.
-![](https://files.seeedstudio.com/wiki/Wio-Terminal/img/addBoard.png)
-:::
+Copia y pega la URL json a las preferencias de Arduino
+
+```
+https://raw.githubusercontent.com/Seeed-Studio/Seeed_Platform/master/package_seeeduino_boards_index.json
+```
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/Wio_LTE/img/boardManager_stm32.png" style={{width:800, height:'auto'}}/></div>
+
 
 - Paso 3. Descarga la [Librería Wio_LTE](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library) desde Github.
 - Paso 4. Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
@@ -359,12 +364,13 @@ Hola, la placa "Wio LTE Cat.1" está almacenada en el paquete "Seeed SAMD Boards
 **2. Jugar con Envío de SMS**
 
 - Paso 1. Conecta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
+
 - Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->SMSSend sketch.
 - Paso 3. Cambia el número de teléfono y la información.
 - Paso 4. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 5. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
 - Paso 6. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
-- Paso 7. Mantén el Puerto COM en blanco.
+- Paso 7. Deja el Puerto COM en blanco.
 - Paso 8. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
 - Paso 9. Presiona el botón **RST** para habilitar el puerto COM.
 
@@ -419,13 +425,13 @@ Send OK!
 
 **3. Jugar con Lectura de SMS**
 
-- Paso 1. Conecta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
-- Paso 2. Selecciona Archivo--> Ejemplos-->Wio_LTE_Arduino_Library-->sketch SMSRead.
+- Paso 1. Inserta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
+- Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->SMSRead sketch.
 - Paso 3. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 4. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 5. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
-- Paso 6. Mantén el Puerto COM en blanco.
-- Paso 7. Selecciona Sketch-->Subir para cargar el código al Wio_LTE.
+- Paso 5. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
+- Paso 6. Deja el Puerto COM en blanco.
+- Paso 7. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
 - Paso 8. Presiona el botón **RST** para habilitar el puerto COM.
 
 ```cpp
@@ -501,13 +507,13 @@ Waiting for new SMS!
 
 **4. Jugar con GPS**
 
-- Paso 1. Conecta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
-- Paso 2. Selecciona Archivo--> Ejemplos-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_Show_Coordinate sketch.
+- Paso 1. Inserta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
+- Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_Show_Coordinate sketch.
 - Paso 3. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 4. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 5. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
-- Paso 6. Mantén el Puerto COM en blanco.
-- Paso 7. Selecciona Sketch-->Subir para cargar el código al Wio_LTE.
+- Paso 5. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
+- Paso 6. Deja el Puerto COM en blanco.
+- Paso 7. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
 - Paso 8. Presiona el botón **RST** para habilitar el puerto COM.
 
 ```cpp
@@ -557,7 +563,7 @@ void loop() {
 ```
 
 - Paso 9. Usa herramientas de monitor COM para imprimir el mensaje serial. **¡Por favor no uses el monitor COM del IDE de Arduino! Eso puede causar que la próxima descarga falle, pero reabrir el IDE de Arduino puede recuperar ese problema**.
-- Paso 10. Veremos la información de lat, lon impresa en pantalla.
+- Paso 10. Veremos información de lat, lon impresa en pantalla.
 
 ```cpp
 Waitting for module to alvie...
@@ -594,13 +600,13 @@ Data type in string: 113.966248,22.583819
 
 **5. Jugar con GPS en modo NMEA**
 
-- Paso 1. Conecta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
-- Paso 2. Selecciona Archivo--> Ejemplos-->Wio_LTE_Arduino_Library-->GNNS-->sketch GNSS_NMEA.
+- Paso 1. Inserta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
+- Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->GNNS-->GNSS_NMEA sketch.
 - Paso 3. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 4. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 5. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
-- Paso 6. Mantén el Puerto COM en blanco.
-- Paso 7. Selecciona Sketch-->Cargar para subir el código al Wio_LTE.
+- Paso 5. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
+- Paso 6. Deja el Puerto COM en blanco.
+- Paso 7. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
 - Paso 8. Presiona el botón **RST** para habilitar el puerto COM.
 
 ```cpp
@@ -720,19 +726,20 @@ $GPVTG,,T,2.3,M,0.0,N,0.0,K,A*0C
 
 ```
 
-**6. Jugar con Llamada**
+**6. Jugar con Llamada saliente**
 
-- Paso 1. Conecta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
+- Paso 1. Inserta la tarjeta Nano SIM en la ranura Nano SIM, cerca del lado de la placa PCB.
 - Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->Callup sketch.
 - Paso 3. Cambia el número de teléfono.
 - Paso 4. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 5. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
 - Paso 6. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
-- Paso 7. Mantén el Puerto COM en blanco.
+- Paso 7. Deja el Puerto COM en blanco.
 - Paso 8. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
 - Paso 9. Presiona el botón **RST** para habilitar el puerto COM.
 - Paso 10. Usa herramientas de monitor COM para imprimir el mensaje serial. **¡Por favor no uses el monitor COM del IDE de Arduino! Eso puede causar que la próxima descarga falle, pero reabrir el IDE de Arduino puede recuperar ese problema**.
 - Paso 11. El propietario del número de teléfono recibirá la llamada.
+
 
 ```cpp
 #include "wio_tracker.h"
@@ -779,7 +786,7 @@ void loop() {
 - Paso 5. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
 - Paso 6. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
 - Paso 7. Deja el Puerto COM en blanco.
-- Paso 8. Selecciona Boceto-->Subir para cargar el código al Wio_LTE.
+- Paso 8. Selecciona Sketch-->Subir para cargar el código al Wio_LTE.
 
 ```cpp
 #include "ethernet.h"
@@ -870,20 +877,20 @@ Hello world!
 +QIURC: "closed",0
 ```
 
-**8. Jugar con Tarjeta SD**
+**8. Jugar con tarjeta SD**
 
 :::note
-    El firmware de Epruino v1.94 no soporta la unidad de tarjeta SD, por favor usa v1.96 o posterior, la versión más reciente es v1.99.
+    El firmware Epruino v1.94 no soporta la unidad de tarjeta SD, por favor usa v1.96 o posterior, la versión más reciente es v1.99.
 :::
 
-- Paso 1. Conecta la tarjeta micro SD al slot de tarjeta SD.
-- Paso 2. Selecciona File--> Examples-->Wio_LTE_Arduino_Library-->SDCard->CardInfo.
+- Paso 1. Inserta la tarjeta micro SD en la ranura de tarjeta SD.
+- Paso 2. Selecciona Archivo--> Ejemplos-->Wio_LTE_Arduino_Library-->SDCard->CardInfo.
 - Paso 3. Cambia el número de teléfono.
 - Paso 4. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 5. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 6. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
-- Paso 7. Mantén el Puerto COM en blanco.
-- Paso 8. Selecciona Sketch-->Upload para subir el código al Wio_LTE.
+- Paso 6. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
+- Paso 7. Deja el Puerto COM en blanco.
+- Paso 8. Selecciona Sketch-->Subir para cargar el código al Wio_LTE.
 
 ```cpp
  // include the SD library:
@@ -985,19 +992,19 @@ Files found on the card (name, date and size in bytes):
 
 ```
 
-**9. Jugar con el Módulo Grove**
+**9. Jugar con módulo Grove**
 
-**9.1 Jugar con el Módulo Digital Grove**  
+**9.1 Jugar con módulo Grove Digital**  
 
-Usamos [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/es/Grove-TemperatureAndHumidity_Sensor/) como entrada digital y lo conectamos al D20 del Wio LTE.
+Usamos [Grove-TemperatureAndHumidity_Sensor](https://wiki.seeedstudio.com/es/Grove-TemperatureAndHumidity_Sensor/) como entrada digital y lo conectamos a D20 del Wio LTE.
 
-- Paso 1. Presiona y mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
+- Paso 1. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 2. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 3. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
-- Paso 4. Mantén el Puerto COM en blanco.
-- Paso 5. Descarga la [Librería WioLTEforArduino](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) y la [Librería Grove-TemperatureAndHumidity_Sensor](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) desde Github. Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
+- Paso 3. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
+- Paso 4. Deja el Puerto COM en blanco.
+- Paso 5. Descarga [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) y [Grove-TemperatureAndHumidity_Sensor Library](https://github.com/Seeed-Studio/Grove_Temperature_And_Humidity_Sensor/archive/master.zip) desde Github. Consulta [Cómo instalar biblioteca](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar biblioteca para Arduino.
 - Paso 6. Copia el código de abajo al Sketch.
-- Paso 7. Haz clic en Upload para subir el código al Wio_LTE.
+- Paso 7. Haz clic en Subir para cargar el código al Wio_LTE.
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1063,17 +1070,17 @@ Humidity: 40.00 % Temperature: 27.00 *C
 Humidity: 39.00 % Temperature: 27.00 *C
 ```
 
-**9.2 Jugar con el Módulo Analógico Grove**  
+**9.2 Jugar con módulo Grove Analógico**  
 
 Usamos [Grove-Light Sensor](https://wiki.seeedstudio.com/es/Grove-Light_Sensor/) como entrada analógica y lo conectamos a A4 del Wio LTE(ADC de 12 bits).
 
-- Paso 1. Presiona y mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
+- Paso 1. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 2. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
-- Paso 3. Selecciona Tools-->Boards-->Wio_Tracker_LTE.
-- Paso 4. Mantén el Puerto COM en blanco.
-- Paso 5. Descarga la [Librería WioLTEforArduino](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) desde Github. Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
+- Paso 3. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
+- Paso 4. Deja el Puerto COM en blanco.
+- Paso 5. Descarga [WioLTEforArduino Library](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) desde Github. Consulta [Cómo instalar biblioteca](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar biblioteca para Arduino.
 - Paso 6. Copia el código de abajo al Sketch.
-- Paso 7. Haz clic en Upload para subir el código al Wio_LTE.
+- Paso 7. Haz clic en Subir para cargar el código al Wio_LTE.
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1102,6 +1109,7 @@ void loop() {
 - Paso 8. Presiona el botón **RST** para habilitar el puerto COM.
 - Paso 9. Usa herramientas de monitor COM para imprimir el mensaje serial. **¡Por favor no uses el monitor COM del IDE de Arduino! Eso puede causar que la próxima descarga falle, pero reabrir el IDE de Arduino puede recuperar ese problema**.
 
+
 ```
 ### I/O Initialize.
 ### Power supply ON.
@@ -1116,17 +1124,17 @@ void loop() {
 2531
 ```
 
-**9.3 Jugar con el Módulo I2C Grove**  
+**9.3 Jugar con el Módulo Grove I2C**  
 
 Usamos [Grove - Acelerómetro Digital de 3 Ejes(±16g)](https://wiki.seeedstudio.com/es/Grove-3-Axis_Digital_Accelerometer-16g/) como dispositivo I2C y lo conectamos al puerto I2C del Wio LTE.
 
-- Paso 1. Presiona y mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
+- Paso 1. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 2. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
 - Paso 3. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
 - Paso 4. Mantén el Puerto COM en blanco.
 - Paso 5. Descarga la [Librería WioLTEforArduino](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) y [ADXL345](https://github.com/Seeed-Studio/Accelerometer_ADXL345/archive/master.zip) desde Github. Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
 - Paso 6. Copia el código de abajo al Sketch.
-- Paso 7. Haz clic en Subir para subir el código al Wio_LTE.
+- Paso 7. Haz clic en Subir para cargar el código al Wio_LTE.
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1179,17 +1187,17 @@ void loop()
 -229 -39 -90
 ```
 
-**9.4 Jugar con el Módulo UART Grove**  
+**9.4 Jugar con el Módulo Grove UART**  
 
 Usamos [Grove-CO2](https://wiki.seeedstudio.com/es/Grove-CO2_Sensor/) como dispositivo UART y lo conectamos al puerto UART del Wio LTE.
 
-- Paso 1. Presiona y mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
+- Paso 1. Mantén presionado el botón BOOT en la parte trasera del Wio LTE y conecta el USB a la PC.
 - Paso 2. Veremos **STM BOOTLARDER** en el administrador de dispositivos.
 - Paso 3. Selecciona Herramientas-->Placas-->Wio_Tracker_LTE.
 - Paso 4. Mantén el Puerto COM en blanco.
 - Paso 5. Descarga la [Librería WioLTEforArduino](https://github.com/SeeedJP/WioLTEforArduino/archive/master.zip) desde Github. Consulta [Cómo instalar librería](https://wiki.seeedstudio.com/es/How_to_install_Arduino_Library) para instalar la librería para Arduino.
 - Paso 6. Copia el código de abajo al Sketch.
-- Paso 7. Haz clic en Subir para subir el código al Wio_LTE.
+- Paso 7. Haz clic en Subir para cargar el código al Wio_LTE.
 
 ```c
 #include <WioLTEforArduino.h>
@@ -1291,9 +1299,9 @@ Temperature: 22  CO2: 2972
 
 ## FAQ
 
-**P1: No logramos usar Arduino IDE para descargar el programa y vemos la siguiente información de error en la parte inferior de Arduino IDE.**
+**P1: Fallamos al usar el IDE de Arduino para descargar el programa y vemos la siguiente información de error en la parte inferior del IDE de Arduino.**
 
-R3: Es un error. Cuando se usa el puerto serie de Arduino para imprimir información, el Arduino IDE recuerda el número del puerto serie. Por lo tanto, no hay puerto serie disponible para descargar un nuevo programa. Podemos reiniciar el Arduino IDE para resolver el problema como solución temporal. Para la solución preventiva, por favor use otro software monitor COM, como SSCOM. Por favor asegúrese de que vemos la barra de progreso durante la descarga del programa. De lo contrario, veremos la información a continuación y el programa no se descarga.
+R3: Es un error. Cuando se usa el puerto serial de Arduino para imprimir información, el IDE de Arduino recuerda el número del puerto serial. Así que no hay puerto serial disponible para descargar un nuevo programa. Podemos reiniciar el IDE de Arduino para resolver el problema como solución temporal. Para la solución preventiva, por favor usa otro software de monitor COM, como SSCOM. Por favor asegúrate de que vemos la barra de progreso durante la descarga del programa. De lo contrario, veremos la siguiente información y el programa no se descarga.
 
 ```
 Sketch uses 23068 bytes (2%) of program storage space. Maximum is 1048576 bytes.
@@ -1318,7 +1326,7 @@ R5: Por favor presiona el botón RST y veremos el puerto COM en el administrador
 
 **P3: No podemos ver ninguna información en el software Zadig.**
 
-R6: Por favor haz clic en Options--> List All Devices, luego selecciona STM32 Virtual COM Ports.
+R6: Por favor haz clic en Opciones--> Listar Todos los Dispositivos, luego selecciona STM32 Virtual COM Ports.
 
 ## Visor Online del Esquemático Wio LTE AU Versión v1.3b
 
@@ -1332,7 +1340,7 @@ R6: Por favor haz clic en Options--> List All Devices, luego selecciona STM32 Vi
 
 ## Visor Online del Esquemático Wio LTE JP Versión v1.3b
 
-<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
+<div className="altium-ecad-viewer" data-project-src="https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip" style={{borderRadius: '0px 0px 4px 4px', height: 500, borderStyle: 'solid', borderWidth: 1, borderColor: 'rgb(241, 241, 241)', overflow: 'hidden', maxWidth: 1280, maxHeight: 700, boxSizing: 'border-box'}}>
 </div>
 
 ## Visor Online del Esquemático Wio LTE US Versión v1.3b
@@ -1346,13 +1354,13 @@ R6: Por favor haz clic en Options--> List All Devices, luego selecciona STM32 Vi
 
 - **[Eagle&PDF]** [Wio LTE EU Versión v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20EU%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
-- **[Eagle&PDF]** [Wio LTE JP Versión v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20Espruino%20Compatible.zip)
+- **[Eagle&PDF]** [Wio LTE JP Versión v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20JP%20Version%20v1.3b-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
 - **[Eagle&PDF]** [Wio LTE US Versión v1.3b](https://files.seeedstudio.com/wiki/Wio_LTE/res/Wio%20LTE%20US%20Version%20v1.3b%20-%204G%2C%20Cat.1%2C%20GNSS%2C%20Espruino%20Compatible.zip)
 
 - **[Librería]** [Wio_LTE_Arduino_Library](https://github.com/Seeed-Studio/Wio_LTE_Arduino_Library)
 
-- **[Hoja de Datos]** [AT Command](https://files.seeedstudio.com/wiki/Wio_LTE/res/AT_Command.zip)
+- **[Hoja de Datos]** [Comando AT](https://files.seeedstudio.com/wiki/Wio_LTE/res/AT_Command.zip)
 
 ## Proyectos
 
@@ -1364,15 +1372,16 @@ R6: Por favor haz clic en Options--> List All Devices, luego selecciona STM32 Vi
 
 <iframe frameborder='0' height='327.5' scrolling='no' src='https://project.seeedstudio.com/SeeedStudio/atmospheric-pollution-visualization-1940f4/embed' width='350'></iframe>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
-si tienes algún problema técnico. envía el problema a nuestro [foro](http://forum.seeedstudio.com/).
-¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
+ si tienes algún problema técnico. envía el problema a nuestro [foro](http://forum.seeedstudio.com/).
+¡Gracias por elegir nuestros productos! Estamos aquí para brindarte diferentes tipos de soporte para asegurar que tu experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para atender diferentes preferencias y necesidades.
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
+
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>

@@ -1,10 +1,10 @@
 position: 4 # float position is supported
 label: '製品概要'
-collapsible: true # このカテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: 'product_overview_with_watcher'
 link:
   type: generated-index
   slug: ja/product_overview_with_watcher
-  title: ウォッチャー製品概要
-  description: ウォッチャー製品概要では、SenseCAP ウォッチャーのハードウェアおよびソフトウェアの構成要素、機能、および相互作用について詳細に説明します。
+  title: Watcher製品概要
+  description: Watcher製品概要では、SenseCAP Watcherのハードウェアおよびソフトウェアコンポーネント、機能、相互作用について詳しく説明します。

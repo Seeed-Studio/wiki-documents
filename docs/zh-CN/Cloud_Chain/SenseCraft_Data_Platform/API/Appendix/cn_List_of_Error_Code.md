@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-description: 错误代码列表
+description: List_of_Error_Code
 title: 错误代码列表
 keywords:
 - Cloud and Chain
@@ -29,43 +29,43 @@ last_update:
 <tbody>
 <tr>
 <td>10000</td>
-<td>框架分析错误</td>
+<td>Framework analysis error</td>
 <td>系统发生未知错误</td>
 </tr>
 <tr>
 <td>11201</td>
-<td>您没有操作权限</td>
+<td>You have no options permission</td>
 <td>无操作权限</td>
 </tr>
 <tr>
 <td>11202</td>
+<td>Request parameters are invalid</td>
 <td>请求参数无效</td>
-<td>无效的请求参数</td>
 </tr>
 <tr>
 <td>11203</td>
-<td>设备 EUI 无效</td>
-<td>EUI 格式错误</td>
+<td>Invalid device EUI</td>
+<td>EUI格式错误</td>
 </tr>
 <tr>
 <td>11317</td>
-<td>组不存在</td>
+<td>Group not exist</td>
 <td>组不存在</td>
 </tr>
 <tr>
 <td>11327</td>
-<td>组已存在</td>
+<td>Group is exists</td>
 <td>组已存在</td>
 </tr>
 <tr>
 <td>11330</td>
-<td>检查 EUI 错误</td>
-<td>设备 EUI 不存在</td>
+<td>Check eui error</td>
+<td>设备EUI不存在</td>
 </tr>
 <tr>
 <td>11334</td>
-<td>EUI 已绑定</td>
-<td>设备已绑定</td>
+<td>Eui is bonded</td>
+<td>设备已被绑定</td>
 </tr>
 </tbody>
 </table>

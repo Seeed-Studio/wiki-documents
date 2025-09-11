@@ -43,7 +43,7 @@ T1000-E for LoRaWAN comes with fully open-source firmware. To enhance the user e
 |4|P0.03|<p>Digital I/O</p><p>Analog input</p>|Red LED IO|
 |5|P0.04|<p>Digital I/O</p><p>Analog input</p>|VCC voltage dectect|
 |6|P0.05|<p>Digital I/O</p><p>Analog input</p>|Charger insert dectect,must be configured as no pullup or pulldown|
-|7|P0.06|Digital I/O|Key IO, must be configured as input\_pulldown|
+|7|P0.06|Digital I/O|Key IO, must be configured as input_pulldown|
 |8|P0.07|Digital I/O|LR1110 BUSY|
 |9|P0.08|Digital I/O|AG3335 VRTC EN|
 |10|P0.09|NFC input|NC|
@@ -411,6 +411,7 @@ Check [SenseCAP Portal User Guide](https://sensecap-docs.seeed.cc/quickstart.htm
 ## SenseCAP API
 
 SenseCAP API is for users to manage IoT devices and data. It includes 3 types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
+
 - With HTTP API, users can manage LoRa devices, to get raw data or historical data.
 - With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
 - With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.

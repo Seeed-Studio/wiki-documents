@@ -62,7 +62,7 @@ Presiona el botón durante 5s hasta que el indicador azul parpadee lentamente pa
 
 *   **Paso 2**: Conéctate al hotspot AP
 
-El nombre del hotspot AP es SenseCAP\_XXXXXX (dirección MAC de 6 cifras), Conecta tu computadora a este hotspot AP.
+El nombre del hotspot AP es SenseCAP_XXXXXX (dirección MAC de 6 cifras), Conecta tu computadora a este hotspot AP.
 
 *   **Paso 3**: Obtén el nombre de usuario y contraseña de tu dispositivo
 *   **Paso 4**: Abre el navegador en la PC e inicia sesión

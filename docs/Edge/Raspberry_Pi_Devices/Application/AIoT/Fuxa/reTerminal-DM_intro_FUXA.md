@@ -86,12 +86,12 @@ sudo fuxa
 
 ```
 
-FUXA UI will be available using the URL: **http://localhost:1881**.
+FUXA UI will be available using the URL: **`http://localhost:1881`**.
 
 Principally FUXA web server performs two page:
 
-- Visualization for end-user **http://localhost:1881/home**
-- Editor to project and design **http://localhost:1881/editor**
+- Visualization for end-user **`http://localhost:1881/home`**
+- Editor to project and design **`http://localhost:1881/editor`**
 
 ## How To Add the Devices and tags ?
 

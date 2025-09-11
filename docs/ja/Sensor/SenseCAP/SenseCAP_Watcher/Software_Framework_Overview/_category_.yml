@@ -1,10 +1,10 @@
 position: 5 # float position is supported
 label: 'ソフトウェアフレームワーク概要'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: 'watcher_software_framework_overview'
 link:
   type: generated-index
   slug: ja/watcher_software_framework_overview
   title: Watcher ソフトウェアフレームワーク概要
-  description: このセクションでは、Watcher のソフトウェアフレームワークに焦点を当て、Watcher の AI サービスをローカルにデプロイする方法、タスクフローなどについて説明します。
+  description: このセクションでは、WatcherのAIサービスをローカルにデプロイする方法、タスクフロー、その他を含む、Watcherのソフトウェアフレームワークに焦点を当てています。

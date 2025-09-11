@@ -15,61 +15,71 @@ last_update:
 
 # Getting started with StarAI Robot Arm with LeRobot
 
-:::tip
- [LeRobot](https://github.com/huggingface/lerobot/tree/main) is committed to providing models, datasets and tools for real-world robotics in PyTorch. Its aim is to reduce the entry barrier of robotics, enabling everyone to contribute and benefit from sharing datasets and pretrained models. LeRobot integrates cutting-edge methodologies validated for real-world application, centering on imitation learning. It has furnished a suite of pre-trained models, datasets featuring human-gathered demonstrations, and simulation environments, enabling users to commence without the necessity of robot assembly. In the forthcoming weeks, the intention is to augment support for real-world robotics on the most cost-effective and competent robots presently accessible.
-:::
+<div class="video-container">
+<iframe width="900" height="600" src="https://www.youtube.com/embed/IJKTeBYAG7k?si=iS-jqT27fDjeI6yX" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+| **Follower Viola** | **Leader Violin** | **Follower Cello** |
+|:---------:|:---------:|:---------:|
+| ![fig1](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/viola.jpg) | ![fig2](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/violin.jpg) | ![fig3](https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/cello.png) |
+
+<div class="get_one_now_container" style={{textAlign: 'center'}}>
+<a class="get_one_now_item" href="https://www.seeedstudio.com/Fashionstar-Star-Arm-Viola-Violin-p-6497.html" target="_blank" rel="noopener noreferrer">
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now!!! 🖱️</font></span></strong>
+</a></div>
 
 ## Product Introduction
 
 1.  **Open-Source & Easy for Secondary Development**
-    This series of servo motors, provided by [Fashion Robotics](https://fashionrobo.com/), offers an open-source, easily customizable 6+1 degrees of freedom robotic arm solution.
+    This series of servo motors, provided by [Fashion Star Robotics](https://fashionrobo.com/), offers an open-source, easily customizable 6+1 degrees of freedom robotic arm solution.
 
-2.  **LeRobot Platform Integration Support**
+2. **Dual-Arm Systems with Various Payloads** 
+    The Violin serves as the leader robotic arm. When at 70% of its arm span, the follower arm Viola has an operating payload of 300g, while the follower arm Cello has an operating payload of 750g.
+
+3. **Supported ROS2, Moveit2 and Isaac Sim**
+    It supports ROS2 for publishing and subscribing to robotic arm data topics and controlling the robotic arm, and also supports MoveIt2 for inverse kinematics calculation, as well as simulation in Isaac Sim.
+
+4.  **LeRobot Platform Integration Support**
     It's specifically designed for integration with the [LeRobot platform](https://github.com/huggingface/lerobot). This platform provides PyTorch models, datasets, and tools for imitation learning in real-world robotics tasks, including data collection, simulation, training, and deployment.
 
-3.  **Abundant Learning Resources**
+5. **Open-Source SDK**
+     Supports Python and C++ SDK Development
+
+6. **Button Hover**
+    Simulates gravity compensation, allowing the robotic arm to hover at any position via a button.
+
+7. **Modular End Effector** 
+    Enables quick DIY replacement.
+
+8.  **Abundant Learning Resources**
     We offer comprehensive open-source learning resources, including environment setup, installation and debugging guides, and custom grasping task examples to help users quickly get started and develop robotic applications.
+ 
+9.  **Nvidia Platform Compatibility**
+    Deployment is supported via the Nvidia Jetson platform.
 
-4.  **Nvidia Platform Compatibility**
-    Deployment is supported via the reComputer Mini J4012 Orin NX 16GB platform.
 
-<div class="video-container">
-<iframe width="900" height="600" src="https://www.youtube.com/embed/pAKqP_vReNY?si=AaZQ_DBQyY2p0YMf" title="youtube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-## Key Features
-
-- Ready to Go -- No Assembly Required. Just Unbox and Dive into the World of AI.
-- 6+1 Degrees of Freedom and a 470mm Reach -- Built for Versatility and Precision.
-- Powered by Dual Brushless Bus Servos -- Smooth, Silent, and Strong with up to 300g Payload.
-- Parallel Gripper with 66mm Maximum Opening -- Modular Fingertips for Quick-Replace Flexibility.
-- Exclusive Hover Lock Technology -- Instantly Freeze Leader Arm at Any Position with a Single Press.
 
 ## Specifications
 
-  <div align="center">
-      <img width={800}
-      src="https://files.seeedstudio.com/wiki/robotics/projects/lerobot/starai/Specifications.png" />
-  </div>
 
-| Item                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |
-| -------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| Degrees of Freedom   | 6                                                 | 6+1                                               |
-| Reach                | 470mm                                             | 470mm                                             |
-| Span                 | 940mm                                             | 940mm                                             |
-| Repeatability        | 2mm                                               | -                                                 |
-| Working Payload      | 300g (with 70% Reach)                            | -                                                 |
-| Servos               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |
-| Parallel Gripper Ki  | ✅                                                 | -                                                 |
-| Wrist Rotate         | Yes                                               | Yes                                               |
-| Hold at any Position | Yes                                               | Yes (with handle button)                          |
-| Wrist Camera Mount   | ✅                                                 | -                                                 |
-| Works with LeRobot   | ✅                                                 | ✅                                                 |
-| Works with ROS 2     | ✅                                                 | /                                                 |
-| Works with MoveIt    | ✅                                                 | /                                                 |
-| Works with Gazebo    | ✅                                                 | /                                                 |
-| Communication Hub    | UC-01                                             | UC-01                                             |
-| Power Supply         | 12v/120w                                          | 12v/120w                                          |
+| Item                 | Follower Arm \| Viola                             | Leder Arm \|Violin                                |    Follower Arm \|Cello    |
+| -------------------- | ------------------------------------------------- | ------------------------------------------------- |-----------------|
+| Degrees of Freedom   | 6+1                                               | 6+1                                               | 6+1             |
+| Reach                | 470mm                                             | 470mm                                             | 670mm |
+| Span                 | 940mm                                             | 940mm                                             | 1340mm |
+| Repeatability        | 2mm                                               | -                                                 | 1mm  |
+| Working Payload      | 300g (with 70% Reach)                            | -                                                 |  750g (with 70% Reach)   |
+| Servos               | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 | RX8-U50H-M x2<br/>RA8-U25H-M x4<br/>RA8-U26H-M x1 |RX18-U100H-M x3<br/> RX8-U50H-M x3<br/> RX8-U51H-M x1|
+| Parallel Gripper Ki  | ✅                                                 | -                                                 | ✅   |
+| Wrist Rotate         | Yes                                               | Yes                                               | Yes |
+| Hold at any Position | Yes                                               | Yes (with handle button)                          |  Yes|
+| Wrist Camera Mount   |Provides reference 3D printing files | | Provides reference 3D printing files
+| Works with LeRobot   | ✅                                                 | ✅                                                 | ✅|
+| Works with ROS 2     | ✅                                                 | ✅                                                | ✅|
+| Works with MoveIt2    | ✅                                                 | ✅                                               |✅ |
+| Works with Gazebo    | ✅                                                 |✅                                              |✅ |
+| Communication Hub    | UC-01                                             | UC-01                                             |	UC-01 |
+| Power Supply         | 12V10A/120w XT30                                   | 12V10A/120w XT30                                 |12V25A/300w XT60  |
 
 For more information about servo motors, please visit the following link.
 
@@ -78,6 +88,8 @@ For more information about servo motors, please visit the following link.
 [RX18-U100H-M](https://fashionrobo.com/actuator-u100/22853/)
 
 [RX8-U50H-M](https://fashionrobo.com/actuator-u50/136/)
+
+
 
 
 ## Initial environment setup
@@ -226,120 +238,7 @@ sudo chmod 666 /dev/ttyACM0
 sudo chmod 666 /dev/ttyACM1
 ```
 
-Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
-
-Use the Ctrl+F to search for starai and locate the following code. Then, you need to modify the port settings of follower_arms and leader_arms to match the actual port settings.
-
-```python
-@RobotConfig.register_subclass("starai")
-@dataclass
-class StaraiRobotConfig(ManipulatorRobotConfig):
-    calibration_dir: str = ".cache/calibration/starai"
-    max_relative_target: int | None = None
-    
-    leader_arms: dict[str, MotorsBusConfig] = field(
-        default_factory=lambda: {
-            "main": StaraiMotorsBusConfig(
-                port="/dev/ttyUSB1",##### UPDATE HEARE
-                interval = 100,								
-                motors={
-                    # name: (index, model)
-                    "joint1": [0, "rx8-u50"],
-                    "joint2": [1, "rx8-u50"],
-                    "joint3": [2, "rx8-u50"],
-                    "joint4": [3, "rx8-u50"],
-                    "joint5": [4, "rx8-u50"],
-                    "joint6": [5, "rx8-u50"],
-                    "gripper": [6, "rx8-u50"],
-                },
-            ),
-        }
-    )
-
-    follower_arms: dict[str, MotorsBusConfig] = field(
-        default_factory=lambda: {
-            "main": StaraiMotorsBusConfig(
-                port="/dev/ttyUSB0",##### UPDATE HEARE
-                interval = 100,								
-                motors={
-                    # name: (index, model)
-                    "joint1": [0, "rx8-u50"],
-                    "joint2": [1, "rx8-u50"],
-                    "joint3": [2, "rx8-u50"],
-                    "joint4": [3, "rx8-u50"],
-                    "joint5": [4, "rx8-u50"],
-                    "joint6": [5, "rx8-u50"],
-                    "gripper": [6, "rx8-u50"],
-                },
-            ),
-        }
-    )
-```
-
-### Set Runtime Parameters
-
-Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
-
-Use the Ctrl + F to search for starai and locate the following code. Then, you need modify the interval setting of follower_arms.
-
-- Description: The faster the follower responds when the time interval becomes smaller, and more stable the follower runs when the time interval becomes larger.
-- Value Range: Integer, greater than 50 and less than 2000.
-
-It is recommended to set the interval to 100 (default value) during teleoperation for better responsiveness, and to 1000 during autonomous execution in evaluation phases to ensure more stable motion.
-
-```python
-@RobotConfig.register_subclass("starai")
-@dataclass
-class StaraiRobotConfig(ManipulatorRobotConfig):
-    calibration_dir: str = ".cache/calibration/starai"
-    max_relative_target: int | None = None
-
-    leader_arms: dict[str, MotorsBusConfig] = field(
-        default_factory=lambda: {
-            "main": StaraiMotorsBusConfig(
-                port="/dev/ttyUSB1",
-                interval = 100,								
-                motors={
-                    # name: (index, model)
-                    "joint1": [0, "rx8-u50"],
-                    "joint2": [1, "rx8-u50"],
-                    "joint3": [2, "rx8-u50"],
-                    "joint4": [3, "rx8-u50"],
-                    "joint5": [4, "rx8-u50"],
-                    "joint6": [5, "rx8-u50"],
-                    "gripper": [6, "rx8-u50"],
-                },
-            ),
-        }
-    )
-
-    follower_arms: dict[str, MotorsBusConfig] = field(
-        default_factory=lambda: {
-            "main": StaraiMotorsBusConfig(
-                port="/dev/ttyUSB0",
-                interval = 100,	##### UPDATE HEARE
-                motors={
-                    # name: (index, model)
-                    "joint1": [0, "rx8-u50"],
-                    "joint2": [1, "rx8-u50"],
-                    "joint3": [2, "rx8-u50"],
-                    "joint4": [3, "rx8-u50"],
-                    "joint5": [4, "rx8-u50"],
-                    "joint6": [5, "rx8-u50"],
-                    "gripper": [6, "rx8-u50"],
-                },
-            ),
-        }
-    )
-
-```
-
-### Calibrate
-
-Normally, the robotic arm is pre-calibrated in factory and does not require recalibration. If a joint motor is found to remain at a limit position for a long period, please contact us to obtain the calibration file and perform recalibration again.
-
-<details>
-<summary> Note </summary>
+:::tip
 
 If the ttyUSB0 serial port cannot be identified, try the following solutions:
 
@@ -381,7 +280,120 @@ Finally，use chmod command.
 ```sh
 sudo chmod 666 /dev/ttyUSB0
 ```
-</details>
+:::
+
+
+Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
+
+Use the Ctrl+F to search for starai and locate the following code. Then, you need to modify the port settings of follower_arms and leader_arms to match the actual port settings.
+
+```python
+@RobotConfig.register_subclass("starai")
+@dataclass
+class StaraiRobotConfig(ManipulatorRobotConfig):
+    calibration_dir: str = ".cache/calibration/starai"
+    max_relative_target: int | None = None
+    
+    leader_arms: dict[str, MotorsBusConfig] = field(
+        default_factory=lambda: {
+            "main": StaraiMotorsBusConfig(
+                port="/dev/ttyUSB1",  #<-------- UPDATE HEARE
+                interval = 100,								
+                motors={
+                    # name: (index, model)
+                    "joint1": [0, "rx8-u50"],
+                    "joint2": [1, "rx8-u50"],
+                    "joint3": [2, "rx8-u50"],
+                    "joint4": [3, "rx8-u50"],
+                    "joint5": [4, "rx8-u50"],
+                    "joint6": [5, "rx8-u50"],
+                    "gripper": [6, "rx8-u50"],
+                },
+            ),
+        }
+    )
+
+    follower_arms: dict[str, MotorsBusConfig] = field(
+        default_factory=lambda: {
+            "main": StaraiMotorsBusConfig(
+                port="/dev/ttyUSB0",  #<-------- UPDATE HEARE
+                interval = 100,								
+                motors={
+                    # name: (index, model)
+                    "joint1": [0, "rx8-u50"],
+                    "joint2": [1, "rx8-u50"],
+                    "joint3": [2, "rx8-u50"],
+                    "joint4": [3, "rx8-u50"],
+                    "joint5": [4, "rx8-u50"],
+                    "joint6": [5, "rx8-u50"],
+                    "gripper": [6, "rx8-u50"],
+                },
+            ),
+        }
+    )
+```
+
+### Set Runtime Parameters
+
+Open-file `lerobot-starai\lerobot\common\robot_devices\robots\configs.py`
+
+Use the Ctrl + F to search for starai and locate the following code. Then, you need modify the interval setting of follower_arms.
+
+- Description: The faster the follower responds when the time interval becomes smaller, and more stable the follower runs when the time interval becomes larger.
+- Value Range: Integer, greater than 50 and less than 2000.
+
+It is recommended to set the interval to 100 (default value) during teleoperation for better responsiveness, and to 1000 during autonomous execution in evaluation phases to ensure more stable motion.
+
+```python
+@RobotConfig.register_subclass("starai")
+@dataclass
+class StaraiRobotConfig(ManipulatorRobotConfig):
+    calibration_dir: str = ".cache/calibration/starai"
+    max_relative_target: int | None = None
+
+    leader_arms: dict[str, MotorsBusConfig] = field(
+        default_factory=lambda: {
+            "main": StaraiMotorsBusConfig(
+                port="/dev/ttyUSB1",
+                interval = 100, 	#<-------- UPDATE HEARE							
+                motors={
+                    # name: (index, model)
+                    "joint1": [0, "rx8-u50"],
+                    "joint2": [1, "rx8-u50"],
+                    "joint3": [2, "rx8-u50"],
+                    "joint4": [3, "rx8-u50"],
+                    "joint5": [4, "rx8-u50"],
+                    "joint6": [5, "rx8-u50"],
+                    "gripper": [6, "rx8-u50"],
+                },
+            ),
+        }
+    )
+
+    follower_arms: dict[str, MotorsBusConfig] = field(
+        default_factory=lambda: {
+            "main": StaraiMotorsBusConfig(
+                port="/dev/ttyUSB0",
+                interval = 100, 	#<-------- UPDATE HEARE
+                motors={
+                    # name: (index, model)
+                    "joint1": [0, "rx8-u50"],
+                    "joint2": [1, "rx8-u50"],
+                    "joint3": [2, "rx8-u50"],
+                    "joint4": [3, "rx8-u50"],
+                    "joint5": [4, "rx8-u50"],
+                    "joint6": [5, "rx8-u50"],
+                    "gripper": [6, "rx8-u50"],
+                },
+            ),
+        }
+    )
+
+```
+
+### Calibrate
+
+Normally, the robotic arm is pre-calibrated in factory and does not require recalibration. If a joint motor is found to remain at a limit position for a long period, please contact us to obtain the calibration file and perform recalibration again.
 
 
 ## Teleoperate
@@ -459,13 +471,13 @@ class StaraiRobotConfig(ManipulatorRobotConfig):
     cameras: dict[str, CameraConfig] = field(
         default_factory=*lambda*: {
             "laptop": OpenCVCameraConfig(
-                camera_index=2,             ##### UPDATE HEARE
+                camera_index=2,             #<------ UPDATE HEARE
                 fps=30,
                 width=640,
                 height=480,
             ),
             "phone": OpenCVCameraConfig(
-                camera_index=0,             ##### UPDATE HEARE
+                camera_index=0,             #<------ UPDATE HEARE
                 fps=30,
                 width=640,
                 height=480,
@@ -677,7 +689,7 @@ python lerobot/scripts/control_robot.py \
   --control.tags='["tutorial"]' \
   --control.warmup_time_s=5 \
   --control.episode_time_s=30 \
-  --control.reset_time_s=30 \
+  --control.reset_time_s=0 \#Set the reset time to 0 to skip the reset phase and ensure continuous operation.
   --control.num_episodes=10 \
   --control.push_to_hub=false \#Choose don't upload to Hub
   --control.policy.path=outputs/train/act_starai/checkpoints/last/pretrained_model

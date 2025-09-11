@@ -1,33 +1,30 @@
 ---
 description: reServer J2032
-title: reServer J2032にNVIDIA JetPack™ OSをフラッシュする
+title: reServer J2032 Flash NVIDIA JetPack™ OS 
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reServer_J2032_Flash_Jetpack
 last_update:
-  date: 05/15/2025
+  date: 01/03/2023
   author: w0x7ce
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <!-- ---
-name: reServer 2032 Jetpackフラッシュ
-category: reServer 2032 Jetpackフラッシュ
+name: reServer 2032 Flash Jetpack
+category: reServer 2032 Flash Jetpack
 bzurl: 
 wikiurl: 
 sku: 
 --- -->
 
 # はじめに
-このWikiでは、reServer J2032を使用してJetson Xavier NXモジュールにNVIDIA Jetpackオペレーティングシステムをフラッシュする方法を説明します。
 
-以下は参考用のreServer J2030キャリアボードの概要です：
+このwikiでは、reServer J2032を使用してJetson Xavier NXモジュールにNVIDIA Jetpack Operating Systemをフラッシュする方法を説明します。
+
+参考として、reServer J2030キャリアボードの概要を以下に示します：
 
 <div align="center">
   <p style={{fontSize: 'x-large', fontWeight: 'bold'}}>
-    reServer J2030キャリアボードの概要
+    reServer J2030キャリアボード概要
   </p><table>
     <tbody><tr>
       </tr>
@@ -46,35 +43,34 @@ sku:
     </tbody></table>
 </div>
 
-
 ## はじめに
 
-**NVIDIA SDK Manager**を使用してシステムをフラッシュすることができますが、**コマンドラインスクリプト**を使用して簡単に行うこともできます。Linuxの知識がある方には、より多くの機能を提供する**コマンドラインスクリプト**の使用を強くお勧めします。
+**NVIDIA SDK manager** を使用してシステムをフラッシュすることも、**コマンドラインスクリプト** を使用して簡単に実行することもできます。Linux の知識ベースを持つ方には、より多くの機能を提供する **コマンドラインスクリプト** の使用を強くお勧めします。
 
-- [NVIDIA SDK ManagerとLinuxターミナルを使用したJetPack OSのフラッシュ](#flashing-jetpack-os-via-nvidia-sdk-manager)
-- [Linuxターミナルを使用したJetPack OSのフラッシュ](#flashing-jetpack-os-via-command-line)
+- [NVIDIA SDK manager を使用した JetPack OS のフラッシュ](#flashing-jetpack-os-via-nvidia-sdk-manager)
+- [Linux ターミナルを使用した JetPack OS のフラッシュ](#flashing-jetpack-os-via-command-line)
 
-以下の準備が必要です：
+まだいくつかの準備が必要です：
 
 ### ソフトウェアの準備
 
-- <a href="https://developer.nvidia.com/login" target="_blank"><span>NVIDIAアカウント</span></a>
-- Ubuntu 18.04 OS（またはそれ以上）を搭載したLinuxホストコンピュータ
+- <a href="https://developer.nvidia.com/login" target="_blank"><span>NVIDIA アカウント</span></a>
+- Ubuntu 18.04 OS（またはそれ以上）を搭載した Linux ホストコンピュータ
 
 !!!note
-	このチュートリアルでは、Ubuntu 18.04 LTSベースのシステムを使用してインストールを完了します。
+ このチュートリアルでは、Ubuntu 18.04 LTS ベースのシステムを使用してインストールを完了します。
 
-### ハードウェアの準備（フォースリカバリーモード）
+### ハードウェアの準備（強制リカバリモード）
 
-インストール手順に進む前に、reServer J2032がフォースリカバリーモードに設定されていることを確認する必要があります。
+インストール手順に進む前に、reServer J2032 が強制リカバリモードに設定されていることを確認する必要があります。
 
-**ステップ1.** 開始する前に、reServer J2032の電源を切断してください。
+**ステップ 1.** 開始する前に、reServer J2032 の電源を切断する必要があります。
 
-**ステップ2.** リカバリーモードに入るには、ジャンパーを使用して**FC REC**ピンと**GND**ピンを接続する必要があります。ピンの位置は以下の図を参照してください：
+**ステップ 2.** リカバリモードに入るには、ジャンパーを使用して **FC REC** と **GND** ピンを接続する必要があります。ピンの位置は以下に示すとおりです：
 
 <div align="center">
   <p style={{fontSize: 'x-large', fontWeight: 'bold'}}>
-    フォースリカバリージャンパー設定ガイド
+    強制リカバリジャンパー設定ガイド
   </p><table>
     <tbody><tr>
       </tr>
@@ -90,184 +86,181 @@ sku:
     </tbody></table>
 </div>
 
-
-
-**ステップ3.** Type-Cケーブルを使用してLinuxホストPCに接続し、reServer J2032の`NX USB`（以下の画像参照）Type-Cポートに接続します。その後、12V/5A DCケーブルを差し込み、前面の電源ボタンを押してreServer J2032の電源を入れます。
+**ステップ 3.** Type-C ケーブルを使用して、reServer J2032 の `NX USB`（下図参照）USB Type-C ポートで Linux ホスト PC に接続し、12V/5A DC ケーブルを差し込んでから、前面の電源ボタンを押して reServer J2032 の電源を入れます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/back_type_c.png" /></div>
 
+<!-- !!!Attention
+    Before wiring, please pay attention to the power connector and data connector, please do not connect the data connector directly to DC power. -->
 
-<!-- !!!注意
-    配線する前に、電源コネクタとデータコネクタに注意してください。データコネクタを直接DC電源に接続しないでください。 -->
+**ステップ 4.** **ホストコンピュータ（Ubuntu 18.04）** で `Terminal` を開き、コマンド `lsusb` を入力します。返される内容に `ID 0955:7e19 NVidia Corp.` が含まれている場合、reServer J2032 が強制リカバリモードになっており、次のステップに進むことができます。
 
-**ステップ4.** **ホストコンピュータ（Ubuntu 18.04）**で`Terminal`を開き、コマンド`lsusb`を入力します。返された内容に`ID 0955:7e19 NVidia Corp.`が含まれている場合、reServer J2032がフォースリカバリーモードにあることを意味し、次のステップに進むことができます。
-
-- Jetson Xavier NXの場合：**0955:7e19 NVidia Corp**
+- Jetson Xavier NX の場合：**0955:7e19 NVidia Corp**
 
 <div align="center"><img width={700} src="https://files.seeedstudio.com/wiki/A203E/NX_lsusb.png" /></div>
 
 ## NVIDIA SDK Manager を使用した JetPack OS のフラッシュ
 
-次に、NVIDIA SDK Manager を使用してシステムをインストールする手順について説明します。NVIDIA SDK Manager は、開発者向けソフトウェアを一括で提供し、NVIDIA SDK のエンドツーエンドの開発環境セットアップソリューションを提供するオールインワンツールです。そのため、初心者には特に推奨されます。
+次に、NVIDIA SDK Manager を使用してシステムをインストールするチュートリアルを説明します。NVIDIA SDK Manager は、開発者ソフトウェアをバンドルし、NVIDIA SDK のエンドツーエンド開発環境セットアップソリューションを提供するオールインワンツールです。そのため、初心者にお勧めします。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/5_3.png" /></div>
 
-### ステップ 1. Linux ホスト PC に NVIDIA SDK Manager をインストールする
+### ステップ 1. Linux ホスト PC に NVIDIA SDK Manager をインストール
 
-Linux ホスト PC のブラウザを開き、NVIDIA の公式ウェブサイトから <a href="https://developer.nvidia.com/nvidia-sdk-manager" target="_blank"><span>NVIDIA SDK Manager をダウンロード</span></a> します。
+Linux ホスト PC でブラウザを開き、NVIDIA 公式ウェブサイトから <a href="https://developer.nvidia.com/nvidia-sdk-manager" target="_blank"><span>NVIDIA SDK Manager をダウンロード</span></a> する必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputer_Jetson_Series_sdk.png" /></div>
 
-### ステップ 2. NVIDIA SDK Manager を開いてログインする
+### ステップ 2. NVIDIA SDK Manager を開いてログイン
 
-Linux ホスト PC の画面で、マウスを右クリックして `Terminal` を開きます。その後、以下のコマンドを入力して SDK Manager を起動します：
+Linux ホスト PC の画面で、マウスを右クリックして `Terminal` を開きます。次に、以下のコマンドを入力して SDK Manager を起動できます：
 
 `sdkmanager`
 
 <div align="center"><img width={300} src="https://files.seeedstudio.com/wiki/reComputer_flash_system/reComputer_system_installation1.png" /></div>
 
-初めて NVIDIA SDK Manager を使用する場合、登録済みの NVIDIA アカウントでログインするよう促すウェブページが表示されます。
+NVIDIA SDK Manager を初めて使用する場合、以前に登録した NVIDIA アカウントでログインするよう促すウェブページがポップアップします。
 
-### ステップ 3. 対象デバイスを選択する
+### ステップ 3. ターゲットデバイスを選択
 
-ログイン後、インストールの最初のステップに進む画面が表示されます。すでに reServer J2032 を接続している場合、ハードウェアデバイスを選択するウィンドウがポップアップ表示されます。
+ログイン後、インストールの最初のステップである最初の画面に移動します。reServer J2032 をすでに接続しているため、ハードウェアデバイスを選択するウィンドウがポップアップします。
 
-reServer J2032 には **NVIDIA Jetson NX モジュール**が搭載されているため、最初のオプションを選択します。
+reServer J2032 には **NVIDIA Jetson NX モジュール** が搭載されているため、最初のものを選択できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/6.jpg" /></div>
 
-最初の画面では、以下の選択肢があります：
+最初の画面では、さらに多くの選択肢があります：
 
-- **Jetson** を「Product Category」パネルで選択する必要があります。
-- 「Hardware Configuration」パネルでは、**Host Machine を選択しないことを推奨**します。これを選択すると、現在の Ubuntu ホストに NVIDIA コンポーネントをインストールするのに時間がかかります。必要に応じて選択してください。
-- 「Target Operating System」パネルでは、異なる **オペレーティングシステム** と **JetPack バージョン** を選択できます。ただし、JetPack のバージョンには注意が必要です。異なるモジュールは異なるタイプの JetPack をサポートする場合があります。ここでは「JetPack 4.6.1」を推奨します。
-- 「Additional SDKs」では、eMMC のストレージ容量が 16GB しかないため、ここで DeepStream をインストールすると容量不足になる可能性があります。
+- Product Category パネルの **Jetson** を選択する必要があります。
+- Hardware Configuration パネルでは、**Host Machine を選択しない** ことをお勧めします。これにより、現在の Ubuntu ホスト用の NVIDIA コンポーネントのインストールに時間がかかります。必要な場合は選択できます。
+- Target Operating System パネルでは、異なる **オペレーティングシステム** と **JetPack バージョン** を選択できます。ただし、JetPack のバージョンに注意してください。異なるモジュールは異なるタイプの JetPack をサポートする場合があります。ここでは「JetPack 4.6.1」をお勧めします。
+- Additional SDKs では、eMMC のストレージ容量が 16GB のみであるため、ここで DeepStream をインストールするとメモリ不足になります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/7.png" /></div>
 
-「Continue」をクリックして次のステップに進みます。
+Continue をクリックして次のステップに進みます。
 
-### ステップ 4. 必要なコンポーネントを確認する
+### ステップ 4. 必要なコンポーネントを確認
 
-「Details and License」から、ホストコンポーネントとターゲットコンポーネントのパネルを展開して、システムにインストールされるコンポーネントを確認できます。
+**Details and License** から、ホストコンポーネントとターゲットコンポーネントのパネルを展開して、システムにインストールされるコンポーネントを確認できます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/8.png" /></div>
 
-システムのみをインストールする場合は、SDK コンポーネントのチェックを外すことができます。
+システムのインストールのみが必要な場合は、SDK コンポーネントのチェックを外すことができます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/8_1.png" /></div>
 
 !!!Tip
-    インストールするコンポーネントを選択する際には、使用容量に注意してください。内蔵 eMMC のサイズは 16GB しかないため、実際のニーズに応じてこのスペースを賢く割り当てて使用してください。
+    インストールするコンポーネントを選択する際は、使用される容量に注意してください。内蔵 eMMC のサイズは 16GB のみです。実際のニーズに応じて、このスペースを賢く割り当てて使用してください。
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/9.png" /></div>
 
-    実際のテストでは、SDK コンポーネントをフルセットでインストールした後、eMMC の空き容量は約 500MB しか残りません。
+    実際のテストの結果、SDK コンポーネントの完全セットをインストールした後、eMMC スペースは約 500MB しか残りません。
 
     <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/10_1.jpg" /></div>
 
-    容量不足の問題を解決する方法については、[トラブルシューティング](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space) を参照してください。
 
-SDK Manager にすべてのファイルをデフォルトパス以外の場所にダウンロードさせたい場合は、画面下部にある「Download & Install Options」に移動し、使用したいパスを選択します。
+    容量不足の問題を解決する方法を確認したい場合は、[Troubleshooting](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Initiation/#q1-the-remaining-space-in-the-emmc-in-the-received-recomputer-jetson-is-only-about-2gb-how-can-i-solve-the-problem-of-insufficient-space) を参照してください。
+
+SDK Manager にすべてのファイルをデフォルトパス以外の場所にダウンロードさせたい場合は、画面下部にある Download & Install Options に移動し、使用したいパスを選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/11.png" /></div>
 
-「Continue」を選択して次のステップに進みます。
+Continue を選択して次のステップに進みます。
 
-### ステップ 5. システムをインストールする
+### ステップ 5. システムをインストール
 
-インストールを開始する前に、SDK Manager は `sudo` パスワードの入力を求めます。
+インストールが開始される前に、SDK Manager は `sudo` パスワードの入力を求めます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/12.png" /></div>
 
-しばらくすると、新しいシステムを reServer J2032 に設定するよう求められます。手動でリカバリモードに強制的に移行したため、ここでは `Manual setup: set the target to Force Recovery Mode via manual operations` を選択します。同時に、デフォルトの **Pre-Config** を選択します。
+しばらくすると、reServer J2032 の新しいシステムをセットアップするよう求められます。手動で強制的にリカバリモードに入ったため、ここでは `Manual setup: set the target to Force Recovery Mode via manual operations` を選択します。同時に、デフォルトの **Pre-Config** を選択します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/13.png" /></div>
 
-その後、新しい Jetson システムの名前とパスワードを reServer J2032 に入力します。これは自分で設定します。
+その後、reServer J2032の新しいJetsonシステムの名前とパスワードを入力する必要があります。これは自分で設定します。
 
-準備ができたら、`Flash` をクリックして続行します。
+準備ができたら、`Flash`をクリックして続行します。
 
-画面にはソフトウェアのダウンロードとインストールの進行状況が表示されます。インストールが完了するまでしばらくお待ちください。
+ディスプレイにソフトウェアのダウンロードとインストールの進行状況が表示されます。インストールが完了するまで辛抱強くお待ちください。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/14.png" /></div>
 
-### （オプション）ステップ 6. SDK コンポーネントをインストールする
+### （オプション）ステップ6. SDKコンポーネントのインストール
 
-前の **ステップ 4** でコンポーネントのインストールを選択した場合、このステップを実行する必要があります。
+前の**ステップ4**でコンポーネントのインストールをチェックした場合は、このステップを実行する必要があります。
 
-しばらくすると、NVIDIA SDK Manager に新しいウィンドウがポップアップ表示され、IP アドレスを介してデバイスに接続するよう促されます。これはシステムがすでにインストールされており、コンポーネントのインストールが進行中であることを意味します。
+しばらくすると、NVIDIA SDK Managerに新しいウィンドウがポップアップし、IPアドレス経由でデバイスに接続する必要があることを示すプロンプトが表示されます。これは、システムがすでにインストールされており、コンポーネントのインストールが進行されることを意味します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/15.png" /></div>
 
-この場合、**ジャンパーを取り外し**、reServer J2032を再起動します。その後、reServer J2032をHDMI/Display Portを介してモニターに接続し、**ステップ4**で入力したパスワードを入力してメインインターフェースにログインします。
+この場合、**ジャンパーを抜いて**reServer J2032を再起動できます。次に、HDMI/Display Port経由でreServer J2032をモニターに接続し、**ステップ4**で入力したパスワードを入力して、メインインターフェースにログインする必要があります。
 
-次に、reServer J2032をLinuxホストPCと同じLANに接続し、コマンド`ifconfig`を使用してJetsonの**IPアドレス**を確認します。
+この時点で、reServer J2032をLinuxホストPCと同じLANに接続し、`ifconfig`コマンドを使用してJetsonの**IPアドレス**を確認する必要があります。
 
-LinuxホストPCに戻り、取得したIPアドレスを入力します。NVIDIA SDK ManagerがJetsonデバイスに接続を試み、次のSDKコンポーネントのインストールを完了します。
+LinuxホストPCに戻り、先ほど取得したIPアドレスを入力します。NVIDIA SDK ManagerはJetsonデバイスに接続を試み、次のSDKコンポーネントのインストールを完了するために進行します。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/16.png" /></div>
 
-以下のウィンドウが表示されたら、インストールが完了したことを示します。Jetsonを使用開始するか、以下の手順に従って新しいシステムの基本設定を完了することができます。
+以下のウィンドウが表示されると、インストールが完了しています。Jetsonの使用を開始するか、以下の手順に従って新しいシステムの基本設定を完了することができます。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17.png" /></div>
 
-!!!注意
-    ジャンパーを必ず取り外し、強制リカバリモードを終了してからシステムを再電源投入してください。
+!!!Attention
+    システムに再度電源を入れる前に、必ずジャンパーを抜いて強制リカバリモードを終了してください。
 
-## JetPack OSをコマンドラインでフラッシュする
+## コマンドライン経由でのJetPack OSのフラッシュ
 
-BSP（NVIDIA Linux Driver Package）のカスタマイズ自由度のおかげで、Linuxの知識があるユーザーにとってJetPack OSをコマンドラインでフラッシュするのは非常に簡単です。
+BSP（NVIDIA Linux Driver Package）をカスタマイズする自由度のおかげで、コマンドライン経由でのJetPack OSのフラッシュは、Linuxの知識ベースを持つユーザーにとって非常に簡単になります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/17_3.png" /></div>
 
-### ステップ1. 適切なNVIDIA Linux Driver Packageをダウンロードする
+### ステップ1. 適切なNVIDIA Linux Driver Packageのダウンロード
 
-**LinuxホストPC**でブラウザを開き、<a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a>にアクセスします。まず、Jetson LinuxのバージョンがreServer J2032 Jetsonモジュールをサポートしているか確認します。
+**LinuxホストPC**で、ブラウザを開いて<a href="https://developer.nvidia.com/embedded/jetson-linux-archive" target="_blank"><span>Jetson Linux Archive</span></a>にアクセスする必要があります。まず、Jetson LinuxのバージョンがreServer J2032 Jetsonモジュールをサポートしているかどうかを確認する必要があります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/select_L4T.png" /></div>
 
-適切なバージョンを見つけたら、ダウンロードページに進みます。「L4T Driver Package (BSP)」と「Sample Root Filesystem」を見つけてクリックし、ドライバファイルをダウンロードします。ファイル名は以下のようになります：
-`Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2`および`Jetson-210_Linux_Rxx.x.x_aarch64.tbz2`
+適切なバージョンを見つけたら、クリックしてダウンロードページに移動します。「L4T Driver Package (BSP)」と「Sample Root Filesystem」を見つけてクリックし、ドライバーファイルをダウンロードします。ファイル名は`Tegra_Linux_Sample-Root-Filesystem_Rxx.x.x_aarch64.tbz2`と`Jetson-210_Linux_Rxx.x.x_aarch64.tbz2`のようになります。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reServerJ2032/download_file.png" /></div>
 
-例として、JetPack4.6.1の一部として含まれているNVIDIA L4T 32.7.1バージョンを選択し、Jetson Nanoモジュールをサポートしています。ファイル名は以下の通りです：
+例として、JetPack4.6.1の一部として含まれ、Jetson Nanoモジュールをサポートするため、NVIDIA L4T 32.7.1バージョンを選択します。ファイル名は以下の通りです：
 
 - Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
 - Jetson_Linux_R32.7.1_aarch64.tbz2
 
-### ステップ2. パッケージファイルを解凍し、コマンドラインでRootfsを組み立てる
+### ステップ2. コマンドライン経由でのパッケージファイルの解凍とRootfsの組み立て
 
-LinuxホストPCで、ダウンロードしたパッケージファイルを保存するフォルダを見つけます。その後、フォルダでコマンドラインウィンドウ（ターミナル）を開き、以下のコマンドを使用してファイルを解凍し、Rootfsを組み立てます：
-
-```sh
-$ tar xf ${L4T_RELEASE_PACKAGE}
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
-$ cd ..
-$ sudo ./apply_binaries.sh
-```
-
-!!!注意
-    `${}`はファイル名を置く場所です。
-
-**NVIDIA L4T 32.7.1**の例として、ダウンロードしたファイルは`/Desktop/L4T_Drivers`に保存されているため、`/Desktop/L4T_Drivers`パスでコマンドラインウィンドウ（ターミナル）を開き、以下のコマンドを実行します。
+LinuxホストPCで、フォルダを見つけて、以前にダウンロードしたパッケージファイルを保存する必要があります。次に、そのフォルダでコマンドラインウィンドウ（ターミナル）を開き、以下のコマンドラインを使用してファイルを解凍し、rootfsを組み立てます：
 
 ```sh
-$ tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
-$ cd Linux_for_Tegra/rootfs/
-$ sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
-$ cd ..
-$ sudo ./apply_binaries.sh
+tar xf ${L4T_RELEASE_PACKAGE}
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../${SAMPLE_FS_PACKAGE}
+cd ..
+sudo ./apply_binaries.sh
 ```
 
-出力は以下のようになります：
+!!!Note
+    `${}` はファイル名を入力する場所です。
+
+**NVIDIA L4T 32.7.1** の例として、ダウンロードしたファイルは `/Desktop/L4T_Drivers` に保存されているため、'/Desktop/L4T_Drivers' パスでコマンドラインウィンドウ（ターミナル）を開き、以下のコマンドを実行します。
+
+```sh
+tar xf Jetson_Linux_R32.7.1_aarch64.tbz2
+cd Linux_for_Tegra/rootfs/
+sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
+cd ..
+sudo ./apply_binaries.sh
+```
+
+出力は次のようになります：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/18.png" /></div>
 
-### ステップ3. システムをreComputerにフラッシュする
+### ステップ3. reComputerにシステムをフラッシュする
 
-reComputer J1020をすでにリカバリモードに強制的に設定しており、モジュールはJetson Nanoです。以下のコマンドを実行してシステムをreComputerに直接フラッシュできます：
+すでにreComputer J1020をリカバリモードに強制的に移行し、モジュールがJetson Nanoであるため、以下のコマンドを実行してreComputerに直接システムをフラッシュできます：
 
 ```sh
 sudo ./flash.sh -r jetson-xavier-nx-devkit-emmc mmcblk0p1
@@ -275,21 +268,21 @@ sudo ./flash.sh -r jetson-xavier-nx-devkit-emmc mmcblk0p1
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/reComputer-Jetson-Nano/19.png" /></div>
 
-!!!ヒント
-    L4Tのフラッシュには約10分、またはホストコンピュータが遅い場合はそれ以上かかることがあります。
+!!!Tip
+    L4Tのフラッシュには約10分かかります。ホストコンピュータが遅い場合はそれ以上かかることもあります。
 
-この時点でジャンパーを取り外し、reComputerを再度電源投入して使用することができます。
+この時点で、ジャンパーを取り外してからreComputerの電源を再度入れ直して使用することができます。
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するため、さまざまなサポートを提供しております。お客様の好みやニーズに合わせた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます！お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルをご用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

@@ -1,5 +1,5 @@
 ---
-description: 使用 Seeed Studio XIAO ESP32S3 的 WiFi 功能。
+description: Seeed Studio XIAO ESP32S3 的 WiFi 使用方法。
 title: 两个版本的 WiFi 功能
 keywords:
 - esp32s3
@@ -12,7 +12,7 @@ last_update:
   author: Citric
 ---
 
-# 使用 Seeed Studio XIAO ESP32S3 (Sense) 的 WiFi 功能
+# Seeed Studio XIAO ESP32S3 (Sense) 的 WiFi 使用方法
 
 <table align="center">
 	<tr>
@@ -26,18 +26,18 @@ last_update:
     <tr>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     		</a>
 		</div></td>
 	    <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
     		<a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
     		</a>
 		</div></td>
 	</tr>
 </table>
 
-Seeed Studio XIAO ESP32S3 是一款嵌入式开发板，具有出色的射频性能，支持 2.4GHz WiFi - 802.11b/g/n 和蓝牙低功耗 (BLE) 双无线通信。这种能力使 XIAO ESP32S3 能够为广泛的物联网 (IoT) 应用提供可靠和高速的无线连接。此外，该开发板支持 U.FL 天线连接，可以将通信范围扩展到 100 米以上，使其成为需要远程无线连接的项目的理想选择。在本教程中，我们将探索如何利用 XIAO ESP32S3 的 Wi-Fi 功能连接到 Wi-Fi 网络并执行基本的网络任务。
+Seeed Studio XIAO ESP32S3 是一款嵌入式开发板，凭借其对 2.4GHz WiFi - 802.11b/g/n 和蓝牙低功耗 (BLE) 双无线通信的支持，拥有出色的射频性能。这种能力使 XIAO ESP32S3 能够为广泛的物联网 (IoT) 应用提供可靠和高速的无线连接。此外，该开发板支持 U.FL 天线连接，可以将通信范围扩展到 100 米以上，使其成为需要远程无线连接项目的理想选择。在本教程中，我们将探索如何利用 XIAO ESP32S3 的 Wi-Fi 功能连接到 Wi-Fi 网络并执行基本的网络任务。
 
 ## 入门指南
 
@@ -45,106 +45,106 @@ Seeed Studio XIAO ESP32S3 是一款嵌入式开发板，具有出色的射频性
 
 在 XIAO ESP32S3 正面的左下角，有一个独立的"WiFi/BT 天线连接器"。为了获得更好的 WiFi/蓝牙信号，您需要取出包装内的天线并将其安装在连接器上。
 
-天线的安装有一个小技巧，如果您直接用力按压，您会发现很难按下去，而且手指会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按压一下，天线就安装好了。
+天线的安装有一个小技巧，如果您直接用力按压，您会发现很难按下去，手指也会疼！正确的天线安装方法是先将天线连接器的一侧放入连接器块中，然后在另一侧稍微按压一下，天线就会安装好。
 
-拆卸天线也是如此，不要用蛮力直接拉天线，一侧用力向上提，天线就容易取下来了。
+拆卸天线也是如此，不要用蛮力直接拉天线，一侧用力抬起，天线就容易取下。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/5.gif" style={{width:500, height:'auto'}}/></div>
 
 :::note
-如果没有安装天线，可能无法连接到 WiFi 网络。
+如果未安装天线，可能无法连接到 WiFi 网络。
 
 如果您有条件，我建议您使用大棒天线，这将获得更好的体验。
 :::
 
-## WiFi库的常用接口
+## WiFi 库的常用接口
 
-ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内置包中查看WiFi库的功能，并选择相应的功能来实现所需的功能。接下来，我们将列出一些常用的接口并介绍它们的用法。
+ESP32-S3 提供了广泛的 WiFi 网络功能。通常，我们可以在 ESP32 的内置包中查看 WiFi 库的功能，并选择相应的功能来实现所需的功能。接下来，我们将列出一些常用的接口并介绍它们的用法。
 
-### 通用WiFi功能
+### 通用 WiFi 功能
 
-- `WiFiGenericClass::getHostname()` -- 是ESP32 WiFi库中的一个函数，它以字符串形式返回设备的主机名。主机名是在网络上标识设备的唯一名称。此函数检索之前使用`WiFiGenericClass::setHostname()`设置的主机名。如果没有设置主机名，将返回默认主机名。
+- `WiFiGenericClass::getHostname()` -- 是 ESP32 WiFi 库中的一个函数，它以字符串形式返回设备的主机名。主机名是标识网络上设备的唯一名称。此函数检索之前使用 `WiFiGenericClass::setHostname()` 设置的主机名。如果未设置主机名，将返回默认主机名。
 
-- `WiFiGenericClass::persistent(bool persistent)` -- 是一个用于启用或禁用ESP32 WiFi库持久模式的方法。当启用持久模式时，Wi-Fi配置存储在非易失性存储器(NVM)中，即使在断电或重置后也会保留。当禁用持久模式时，配置存储在RAM中，在断电或重置后会丢失。
-
-	- **输入参数**
-		- **persistent**: 如果参数为true，则启用持久模式。如果参数为false，则禁用持久模式。
-
-- `WiFiGenericClass::enableLongRange(bool enable)` -- 该函数用于启用或禁用WiFi模块的长距离(LR)功能。启用时，LR功能允许模块连接到比平常更远的WiFi网络，但数据传输速率较低。
+- `WiFiGenericClass::persistent(bool persistent)` -- 是一个用于启用或禁用 ESP32 WiFi 库持久模式的方法。当启用持久模式时，Wi-Fi 配置存储在非易失性存储器 (NVM) 中，即使在断电或重置后也会保留。当禁用持久模式时，配置存储在 RAM 中，在断电或重置后会丢失。
 
 	- **输入参数**
-		- **enable**: 该参数应设置为true以启用该功能，设置为false以禁用该功能。
+		- **persistent**: 如果参数为 true，则启用持久模式。如果参数为 false，则禁用持久模式。
 
-- `WiFiGenericClass::mode(wifi_mode_t m)` -- 该函数用于设置设备的WiFi模式。
-
-	- **输入参数**
-		- **m**: m参数指定要设置的模式，可以是wifi_mode_t枚举中定义的以下常量之一：
-			- **WIFI_MODE_NULL**: 禁用WiFi站点和接入点模式。
-			- **WIFI_MODE_STA**: 启用WiFi站点模式以连接到现有WiFi网络。
-			- **WIFI_MODE_AP**: 启用接入点模式以创建新的WiFi网络。
-			- **WIFI_MODE_APSTA**: 同时启用WiFi站点和接入点模式。
-
-- `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- 该函数为WiFi模块设置省电模式。
+- `WiFiGenericClass::enableLongRange(bool enable)` -- 该函数用于启用或禁用 WiFi 模块的长距离 (LR) 功能。启用时，LR 功能允许模块连接到比平常更远的 WiFi 网络，但数据速率较低。
 
 	- **输入参数**
-		- **sleepType**: sleepType参数是一个枚举类型，指定要使用的省电模式类型。有三种可能的睡眠类型：
-			- **WIFI_PS_NONE**: 这是默认睡眠模式，WiFi模块不进入省电模式。
-			- **WIFI_PS_MIN_MODEM**: 在此模式下，WiFi模块关闭其调制解调器，同时保持与接入点(AP)的连接。
-			- **WIFI_PS_MAX_MODEM**: 在此模式下，WiFi模块同时关闭调制解调器和站点，这会导致与AP断开连接。
+		- **enable**: 该参数应设置为 true 以启用功能，设置为 false 以禁用功能。
 
-### STA功能
+- `WiFiGenericClass::mode(wifi_mode_t m)` -- 该函数用于设置设备的 WiFi 模式。
+
+	- **输入参数**
+		- **m**: m 参数指定要设置的模式，可以是 wifi_mode_t 枚举中定义的以下常量之一：
+			- **WIFI_MODE_NULL**: 禁用 WiFi 站点和接入点模式。
+			- **WIFI_MODE_STA**: 启用 WiFi 站点模式以连接到现有的 WiFi 网络。
+			- **WIFI_MODE_AP**: 启用接入点模式以创建新的 WiFi 网络。
+			- **WIFI_MODE_APSTA**: 同时启用 WiFi 站点和接入点模式。
+
+- `WiFiGenericClass::setSleep(wifi_ps_type_t sleepType)` -- 该函数为 WiFi 模块设置省电模式。
+
+	- **输入参数**
+		- **sleepType**: sleepType 参数是一个枚举类型，指定要使用的省电模式类型。有三种可能的睡眠类型：
+			- **WIFI_PS_NONE**: 这是默认睡眠模式，WiFi 模块不进入省电模式。
+			- **WIFI_PS_MIN_MODEM**: 在此模式下，WiFi 模块关闭其调制解调器，同时保持与接入点 (AP) 的连接。
+			- **WIFI_PS_MAX_MODEM**: 在此模式下，WiFi 模块同时关闭调制解调器和站点，这会导致与 AP 断开连接。
+
+### STA 功能
 
 - `WiFiSTAClass::status()` -- 返回连接状态。
 
-	- **输出**: wl_status_t中定义的值之一。
-		- **WL_NO_SHIELD**: 此状态码表示Wi-Fi模块不存在。
-    	- **WL_IDLE_STATUS**: 此状态码表示Wi-Fi模块未执行任何操作。
-    	- **WL_NO_SSID_AVAIL**: 此状态码表示在扫描期间未找到Wi-Fi网络。
-    	- **WL_SCAN_COMPLETED**: 此状态码表示Wi-Fi扫描已成功完成。
-    	- **WL_CONNECTED**: 此状态码表示ESP32已成功连接到Wi-Fi网络。
-    	- **WL_CONNECT_FAILED**: 此状态码表示连接到Wi-Fi网络失败。
-    	- **WL_CONNECTION_LOST**: 此状态码表示与Wi-Fi网络的连接已丢失。
-    	- **WL_DISCONNECTED**: 此状态码表示ESP32之前连接到Wi-Fi网络，但当前未连接到任何网络。
+	- **输出**: wl_status_t 中定义的值之一。
+		- **WL_NO_SHIELD**: 此状态码表示 Wi-Fi 模块不存在。
+    	- **WL_IDLE_STATUS**: 此状态码表示 Wi-Fi 模块未执行任何操作。
+    	- **WL_NO_SSID_AVAIL**: 此状态码表示在扫描期间未找到 Wi-Fi 网络。
+    	- **WL_SCAN_COMPLETED**: 此状态码表示 Wi-Fi 扫描已成功完成。
+    	- **WL_CONNECTED**: 此状态码表示 ESP32 已成功连接到 Wi-Fi 网络。
+    	- **WL_CONNECT_FAILED**: 此状态码表示连接到 Wi-Fi 网络失败。
+    	- **WL_CONNECTION_LOST**: 此状态码表示与 Wi-Fi 网络的连接丢失。
+    	- **WL_DISCONNECTED**: 此状态码表示 ESP32 之前连接到 Wi-Fi 网络，但当前未连接到任何网络。
 
-- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- 启动与WPA2企业级AP的Wifi连接。
+- `WiFiSTAClass::begin(const char* wpa2_ssid, wpa2_auth_method_t method, const char* wpa2_identity, const char* wpa2_username, const char *wpa2_password, const char* ca_pem, const char* client_crt, const char* client_key, int32_t channel, const uint8_t* bssid, bool connect)` -- 使用 WPA2 企业级 AP 启动 Wifi 连接。
 
 	- **输入参数** (可选)
-		- **ssid**: 指向SSID字符串的指针。
-		- **method**: WPA2的认证方法 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
+		- **ssid**: 指向 SSID 字符串的指针。
+		- **method**: WPA2 的认证方法 (WPA2_AUTH_TLS, WPA2_AUTH_PEAP, WPA2_AUTH_TTLS)
 		- **wpa2_identity**: 指向实体的指针
 		- **wpa2_username**: 指向用户名的指针
 		- **wpa2_password**: 指向密码的指针。
-		- **ca_pem**: 指向包含CA证书的.pem文件内容的字符串的指针
-		- **client_crt**: 指向包含客户端证书的.crt文件内容的字符串的指针
-		- **client_key**: 指向包含客户端密钥的.key文件内容的字符串的指针
-		- **channel**: 可选。AP的信道
-		- **bssid**: 可选。AP的BSSID / MAC
+		- **ca_pem**: 指向包含 CA 证书的 .pem 文件内容字符串的指针
+		- **client_crt**: 指向包含客户端证书的 .crt 文件内容字符串的指针
+		- **client_key**: 指向包含客户端密钥的 .key 文件内容字符串的指针
+		- **channel**: 可选。AP 的信道
+		- **bssid**: 可选。AP 的 BSSID / MAC
 		- **connect**: 可选。调用连接
 
-- `WiFiSTAClass::reconnect()` -- 将强制断开连接，然后开始重新连接到AP。
+- `WiFiSTAClass::reconnect()` -- 将强制断开连接，然后开始重新连接到 AP。
 
 	- **输出**: True/False。
 
 - `WiFiSTAClass::disconnect(bool wifioff, bool eraseap)` -- 从网络断开连接。
 
 	- **输入参数**
-		- **wifioff**: wifioff `true`表示关闭Wi-Fi无线电。
-		- **eraseap**: eraseap `true`表示从NVS存储器中擦除AP配置。
-	
+		- **wifioff**: wifioff `true` 关闭 Wi-Fi 无线电。
+		- **eraseap**: eraseap `true` 从 NVS 存储器中擦除 AP 配置。
+
 	- **输出**: True/False。
 
-- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- 更改IP配置设置，禁用dhcp客户端。
+- `WiFiSTAClass::config(IPAddress local_ip, IPAddress gateway, IPAddress subnet, IPAddress dns1, IPAddress dns2)` -- 更改 IP 配置设置，禁用 dhcp 客户端。
 
 	- **输入参数**
-		- **local_ip**: 静态ip配置。
+		- **local_ip**: 静态 ip 配置。
 		- **gateway**: 静态网关配置。
 		- **subnet**: 静态子网掩码。
-		- **dns1**: 静态DNS服务器1。
-		- **dns2**: 静态DNS服务器2。
+		- **dns1**: 静态 DNS 服务器 1。
+		- **dns2**: 静态 DNS 服务器 2。
 
-- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 已弃用。设置ESP32站点在上电时是否自动连接到AP（已记录）。默认启用自动连接。
+- `WiFiSTAClass::setAutoConnect(bool autoConnect)` -- 已弃用。设置 ESP32 站点在通电时是否自动连接到 AP（已记录）。默认启用自动连接。
 
-- **输入参数**
+	- **输入参数**
 		- **autoConnect**: autoConnect 布尔值。
 
 	- **输出**: False。
@@ -166,7 +166,6 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 		- **mac** (可选): 指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
 
 	- **输出**: 指向 uint8_t * 的指针。
-
 - `WiFiSTAClass::SSID()` -- 返回与网络关联的当前 SSID。
 
 	- **输出**: SSID。
@@ -175,7 +174,7 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 
 	- **输出**: RSSI。
 
-### AP 函数
+### AP 功能
 
 - `WiFiAPClass::softAP(const char* ssid, const char* passphrase, int channel, int ssid_hidden, int max_connection, bool ftm_responder)` -- 这是 ESP32-S3 WiFi 库中的一个函数。它用于设置 SoftAP（软件接入点），允许其他设备连接到 ESP32-S3 并访问其资源。
 
@@ -208,11 +207,11 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 - `WiFiAPClass::softAPmacAddress(uint8_t* mac)` -- 获取 softAP 接口 MAC 地址。
 
 	- **输入参数**
-		- **mac** (可选):   指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
+		- **mac**（可选）:   指向长度为 WL_MAC_ADDR_LENGTH 的 uint8_t 数组的指针。
 
-	- **输出**: 指向 uint8_t* 的指针或字符串 mac。
+	- **输出**: 指向 uint8_t* 的指针或 String mac。
 
-### WiFi 扫描函数
+### WiFi 扫描功能
 
 - `WiFiScanClass::scanNetworks(bool async, bool show_hidden, bool passive, uint32_t max_ms_per_chan, uint8_t channel, const char * ssid, const uint8_t * bssid)` -- 开始扫描可用的 WiFi 网络。
 
@@ -220,7 +219,7 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 		- **async**: 该参数是一个布尔值，决定是否异步执行扫描。如果设置为 true，函数立即返回，扫描结果可以稍后通过调用 getScanResults() 函数获取。如果设置为 false，函数将阻塞直到扫描完成。
 		- **show_hidden**: 该参数是一个布尔值，决定函数是否应在扫描结果中包含隐藏网络。
 		- **passive**: 该参数是一个布尔值，决定函数是否应执行被动扫描。如果设置为 true，函数在扫描期间不会传输任何数据包，这可能需要更长时间，但在某些情况下很有用。
-		- **max_ms_per_chan**: 该参数是扫描每个信道的最大时间，以毫秒为单位。
+		- **max_ms_per_chan**: 该参数是扫描每个信道的最大时间（毫秒）。
 		- **channel**: 该参数是要扫描的 Wi-Fi 信道。如果设置为 0，函数将扫描所有可用信道。
 		- **ssid**: 该参数是指向包含要扫描网络 SSID 的以空字符结尾的字符串的指针。如果设置为 nullptr，函数将扫描所有可用网络。
 		- **bssid**: 该参数是指向包含要扫描的接入点 MAC 地址的 6 字节数组的指针。如果设置为 nullptr，函数将扫描所有接入点。
@@ -246,65 +245,65 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 
 	- **输出**: 扫描网络列表中指定项目的 SSID 字符串。
 
-- `WiFiScanClass::RSSI(uint8_t i)` -- 返回 scanNetworks 期间发现的网络的 RSSI。
+- `WiFiScanClass::RSSI(uint8_t i)` -- 返回在 scanNetworks 期间发现的网络的 RSSI。
 
 	- **输入参数**
 		- **i**: 指定要从哪个网络项目获取信息。
 
 	- **输出**: 扫描网络列表中指定项目的 RSSI 有符号值。
 
-### WiFi 客户端函数
+### WiFi 客户端功能
 
 - `WiFiClient::connect(IPAddress ip, uint16_t port, int32_t timeout)` -- 此函数在 WiFiClient 库中用于连接到具有指定超时值的远程 IP 地址和端口。
 
 	- **输入参数**
 		- **ip**:   要连接的服务器的 IP 地址。
 		- **port**: 要连接的服务器的端口号。
-		- **timeout** (可选): 等待建立连接的最大时间，以毫秒为单位。如果在此时间内未建立连接，函数将返回错误。如果 timeout 设置为 0，函数将无限期等待建立连接。
+		- **timeout**（可选）: 等待连接建立的最大时间（毫秒）。如果在此时间内未建立连接，函数将返回错误。如果 timeout 设置为 0，函数将无限期等待连接建立。
 
-- `WiFiClient::stop()` -- 该函数用于断开客户端与服务器的连接并释放客户端使用的套接字/端口。一旦调用该函数，客户端将无法再发送或接收数据。
+- `WiFiClient::stop()` -- 该函数用于断开客户端与服务器的连接并释放客户端使用的套接字/端口。一旦调用该函数，客户端就不能再发送或接收数据。
 
-- `WiFiClient::setTimeout(uint32_t seconds)` -- 该函数设置客户端等待建立连接或接收数据的最大秒数。如果连接或数据传输时间超过指定的超时时间，连接将被关闭。
-
-	- **输入参数**
-		- **seconds**:   超时时间的秒数。
-
-- `WiFiClient::write(uint8_t data)` -- 通过 WiFiClient 实例向连接的服务器写入单个字节的数据。或者使用 `WiFiClient::write(const uint8_t *buf, size_t size)`。
+- `WiFiClient::setTimeout(uint32_t seconds)` -- 该函数设置客户端等待连接建立或接收数据的最大秒数。如果连接或数据传输时间超过指定的超时时间，连接将被关闭。
 
 	- **输入参数**
-		- **data**:   需要通过已建立的网络连接发送的单个字节数据。
+		- **seconds**:   超时的秒数。
 
-- `WiFiClient::read()` -- 该函数从连接的服务器读取单个字节的传入数据。它返回读取的字节作为整数值。如果没有可用数据，则返回 -1。或者使用 `read(uint8_t *buf, size_t size)`。
+- `WiFiClient::write(uint8_t data)` -- 通过 WiFiClient 实例向连接的服务器写入单个字节的数据。或者 `WiFiClient::write(const uint8_t *buf, size_t size)`。
 
-	- **输出**: 表示接收字节数的整数值。如果返回值为 0，表示服务器已关闭连接。
+	- **输入参数**
+		- **data**:   是需要通过已建立的网络连接发送的单个字节数据。
+
+- `WiFiClient::read()` -- 该函数从连接的服务器读取单个字节的传入数据。它将读取的字节作为整数值返回。如果没有可用数据，它返回 -1。或者 `read(uint8_t *buf, size_t size)`。
+
+	- **输出**: 一个整数值，表示接收到的字节数。如果返回值为 0，表示服务器已关闭连接。
 
 - `WiFiClient::peek()` -- 该函数用于检查是否有任何数据可从服务器读取，而不实际读取它。
 
-	- **输出**: 它返回下一个传入数据字节，而不从接收缓冲区中移除它。如果没有可用数据，则返回 -1。
+	- **输出**: 它返回下一个传入数据字节，而不从接收缓冲区中删除它。如果没有可用数据，它返回 -1。
 
 - `WiFiClient::available()` -- 该函数用于检查有多少字节的数据可从服务器读取。
 
 	- **输出**: 它返回一个整数值，表示可读取的字节数。
 
-### WiFi Server 函数
+### WiFi 服务器功能
 
-- `WiFiServer::stopAll()` -- 该函数是 Arduino WiFi 库中 WiFiServer 类的一个方法。该方法停止使用 WiFiServer 类创建的所有服务器实例。当您想要一次性停止所有服务器而不是为每个实例单独调用 `stop()` 方法时，这很有用。
+- `WiFiServer::stopAll()` -- 此函数是 Arduino WiFi 库中 WiFiServer 类的一个方法。此方法停止使用 WiFiServer 类创建的所有服务器实例。当您想要一次停止所有服务器而不是为每个实例单独调用 `stop()` 方法时，这很有用。
 
 - `WiFiServer::begin(uint16_t port, int enable)` -- 该函数用于在指定端口上启动服务器。服务器将监听传入的客户端连接。
 
 	- **输入参数**
 		- **port**: 要监听的端口号。
-		- **enable** (可选): 一个标志，指示服务器在启动后是否应立即启用。该标志默认设置为 true。
+		- **enable**（可选）: 一个标志，指示服务器启动后是否应立即启用。此标志默认设置为 true。
 
-- `WiFiServer::hasClient()` -- 该函数用于检查服务器上是否有任何传入的客户端连接可用。该函数可以在循环中使用以持续检查新连接。
+- `WiFiServer::hasClient()` -- 该函数用于检查服务器上是否有任何传入的客户端连接可用。此函数可以在循环中使用以持续检查新连接。
 
-	- **输出**: 如果有客户端已连接，则返回 WiFiClient 对象，如果没有客户端等待连接，则返回 NULL 指针。
+	- **输出**: 如果客户端已连接，它返回一个 WiFiClient 对象，如果没有客户端等待连接，则返回 NULL 指针。
 
-- `WiFiServer::end()` -- 该函数用于停止服务器并释放相关资源。一旦调用，服务器将无法再接受新的客户端连接。任何现有的客户端连接将保持打开状态，直到被客户端或服务器关闭。`WiFiServer::close()` 和 `WiFiServer::stop()` 具有相同的功能。
+- `WiFiServer::end()` -- 该函数用于停止服务器并释放相关资源。一旦调用，服务器就不能再接受新的客户端连接。任何现有的客户端连接将保持打开状态，直到它们被客户端或服务器关闭。`WiFiServer::close()` 和 `WiFiServer::stop()` 具有相同的功能。
 
-### WiFi Multiple 函数
+### WiFi 多重功能
 
-- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- 该函数用于向 WiFiMulti 对象将尝试连接的可用接入点 (AP) 列表中添加新的接入点。
+- `WiFiMulti::addAP(const char* ssid, const char *passphrase)` -- 用于向 WiFiMulti 对象将尝试连接的可用 AP 列表中添加新的接入点（AP）。
 
 	- **输入参数**
 		- **ssid**: 指向 SSID 的指针（最多 63 个字符）。
@@ -313,20 +312,19 @@ ESP32-S3提供了广泛的WiFi网络功能。通常，我们可以在ESP32的内
 	- **输出**: True/False
 
 
-- `WiFiMulti::run(uint32_t connectTimeout)` -- 该函数尝试按顺序连接到已保存的接入点之一，直到成功连接到其中一个。
+- `WiFiMulti::run(uint32_t connectTimeout)` -- 该函数尝试按顺序连接到保存的接入点之一，直到成功连接到其中一个。
 
 	- **输入参数**
-		- **connectTimeout**: 该参数指定等待连接的最大时间（以毫秒为单位）。如果 connectTimeout 设置为 0，函数将不会超时，并将无限期地尝试连接。
+		- **connectTimeout**: 该参数指定等待连接的最大时间（毫秒）。如果 connectTimeout 设置为 0，函数将不会超时，并将无限期尝试连接。
 
 	- **输出**: 状态
 
-## 扫描附近的WiFi网络
+## 扫描附近的 WiFi 网络
 
-以下是一个使用XIAO ESP32S3扫描附近WiFi网络的示例程序。
+以下是使用 XIAO ESP32S3 扫描附近 WiFi 网络的示例程序。
 
-在您的Arduino IDE中，转到**文件 > 示例 > WiFi > WiFiScan**。这将加载一个扫描您的XIAO ESP32S3范围内WiFi网络的程序。
-
-这对于检查您尝试连接的WiFi网络是否在您的开发板范围内或其他应用程序很有用。您的WiFi项目可能经常无法工作，因为它可能由于WiFi信号强度不足而无法连接到您的路由器。
+在您的 Arduino IDE 中，转到 **File > Examples > WiFi > WiFiScan**。这将加载一个扫描 XIAO ESP32S3 范围内 WiFi 网络的示例程序。
+这对于检查您尝试连接的 WiFi 网络是否在您的开发板范围内或其他应用程序非常有用。您的 WiFi 项目可能经常无法工作，因为由于 WiFi 信号强度不足，它可能无法连接到您的路由器。
 
 ```c
 #include "WiFi.h"
@@ -378,23 +376,23 @@ void loop() {
 
 ### 程序注释
 
-要使用 XIAO ESP32S3 WiFi 功能，您需要做的第一件事是在代码中包含 **WiFi.h** 库，如下所示：
+要使用 XIAO ESP32S3 WiFi 功能，您需要做的第一件事是在代码中包含**WiFi.h**库，如下所示：
 
 ```c
 #include <WiFi.h>
 ```
 
-XIAO ESP32S3 可以作为 WiFi 站点、接入点或两者兼而有之。要设置 WiFi 模式，请使用 `WiFi.mode()` 并将所需模式设置为参数。
+XIAO ESP32S3 可以作为 WiFi 站点、接入点或两者兼而有之。要设置 WiFi 模式，请使用`WiFi.mode()`并将所需模式设置为参数。
 
 ```c
 WiFi.mode(WIFI_STA);
 ```
 
-当ESP32设置为Wi-Fi站点模式时，它可以连接到其他网络（如您的路由器）。
+当 ESP32 设置为 Wi-Fi 站点时，它可以连接到其他网络（如您的路由器）。
 
-`WiFi.scanNetworks()`返回找到的网络数量。扫描完成后，您可以访问每个网络的参数。`WiFi.SSID()`打印特定网络的SSID。
+`WiFi.scanNetworks()`返回找到的网络数量。扫描后，您可以访问每个网络的参数。`WiFi.SSID()`打印特定网络的 SSID。
 
-`WiFi.RSSI()`返回该网络的RSSI。RSSI代表接收信号强度指示器。它是RF客户端设备从接入点或路由器接收到的功率级别的估计测量值。
+`WiFi.RSSI()`返回该网络的 RSSI。RSSI 代表接收信号强度指示器。它是 RF 客户端设备从接入点或路由器接收的功率级别的估计测量值。
 
 最后，`WiFi.encryptionType()`返回网络加密类型。该特定示例在开放网络的情况下放置一个*。但是，该函数可以返回以下选项之一（不仅仅是开放网络）：
 - WIFI_AUTH_OPEN
@@ -404,11 +402,11 @@ WiFi.mode(WIFI_STA);
 - WIFI_AUTH_WPA_WPA2_PSK
 - WIFI_AUTH_WPA2_ENTERPRISE
 
-## 连接到WiFi网络
+## 连接到 WiFi 网络
 
-要将ESP32连接到特定的Wi-Fi网络，您必须知道其SSID和密码。此外，该网络必须在ESP32 WiFi范围内（要检查这一点，您可以使用前面的示例来扫描WiFi网络）。
+要将 ESP32 连接到特定的 Wi-Fi 网络，您必须知道其 SSID 和密码。此外，该网络必须在 ESP32 WiFi 范围内（要检查这一点，您可以使用前面的示例来扫描 WiFi 网络）。
 
-以下是使用XIAO ESP32S3连接到指定网络的示例。其中函数`initWiFi()`在程序中起到连接网络的作用。
+以下是使用 XIAO ESP32S3 连接到指定网络的示例。其中函数`initWiFi()`在程序中起到连接网络的作用。
 
 ```c
 #include "WiFi.h"
@@ -441,7 +439,7 @@ void setup() {
 }
 
 void loop() {
-  
+
 }
 ```
 
@@ -459,51 +457,51 @@ void loop() {
 WiFi.mode(WIFI_STA);
 ```
 
-然后，使用 `WiFi.begin()` 连接到网络。您必须将网络 SSID 和密码作为参数传递：
+然后，使用`WiFi.begin()`连接到网络。您必须将网络 SSID 及其密码作为参数传递：
 
 ```c
 WiFi.begin(ssid, password);
 ```
 
-连接到WiFi网络可能需要一些时间，所以我们通常添加一个while循环，通过使用`WiFi.status()`不断检查连接是否已经建立。当连接成功建立时，它返回`WL_CONNECTED`。
+连接到 WiFi 网络可能需要一段时间，因此我们通常添加一个 while 循环，通过使用`WiFi.status()`不断检查连接是否已建立。当连接成功建立时，它返回`WL_CONNECTED`。
 
-如果你想获取WiFi连接强度，你可以在WiFi连接后简单地调用`WiFi.RSSI()`。
+如果您想获取 WiFi 连接强度，您可以在 WiFi 连接后简单地调用`WiFi.RSSI()`。
 
-## softAP使用
+## softAP 使用
 
-如果你将XIAO ESP32S3设置为接入点（热点），你可以使用任何具有WiFi功能的设备连接到ESP32，而无需连接到你的路由器。
+如果您将 XIAO ESP32S3 设置为接入点（热点），您可以使用任何具有 WiFi 功能的设备连接到 ESP32，而无需连接到您的路由器。
 
-简单来说，当你将XIAO ESP32S3设置为接入点时，你创建了它自己的WiFi网络，附近的WiFi设备（站点）可以连接到它（比如你的智能手机或电脑）。
+简单来说，当您将 XIAO ESP32S3 设置为接入点时，您创建了自己的 WiFi 网络，附近的 WiFi 设备（站点）可以连接到它（如您的智能手机或计算机）。
 
-在你的Arduino IDE中，转到**文件 > 示例 > WiFi > WiFiAccessPoint**。这个示例将向你展示如何使用XIAO ESP32S3创建热点，并通过连接到热点的简单网页控制灯的开关。
+在您的 Arduino IDE 中，转到**文件 > 示例 > WiFi > WiFiAccessPoint**。此示例将向您展示如何使用 XIAO ESP32S3 创建热点，并通过连接到热点的简单网页控制灯的开关。
 
 :::note
-1. 我们对示例程序做了一些小的修改，注释掉了LED_BUILTIN，因为XIAO ESP32S3有自己的用户指示灯，我们不需要外部LED。
-2. 只有当XIAO ESP32S3上的用户LED引脚设置为高电平时，LED才会关闭，只有当引脚设置为低电平时，它才会点亮。
-3. 你还需要在程序中将热点名称和密码修改为你想要的。
+1. 我们对示例程序进行了一些小的修改，注释掉了 LED_BUILTIN，因为 XIAO ESP32S3 有自己的用户指示灯，我们不需要外部 LED。
+2. 只有当 XIAO ESP32S3 上的用户 LED 引脚设置为高电平时，LED 才会关闭，只有当引脚设置为低电平时，它才会打开。
+3. 您还需要在程序中将热点名称和密码修改为您想要的。
 :::
 
 ```c
 /*
-  WiFiAccessPoint.ino 创建一个WiFi接入点并在其上提供Web服务器。
+  WiFiAccessPoint.ino creates a WiFi access point and provides a web server on it.
 
-  步骤：
-  1. 连接到接入点 "yourAp"
-  2. 将您的Web浏览器指向 http://192.168.4.1/H 来打开LED或 http://192.168.4.1/L 来关闭LED
-     或者
-     在PuTTY终端上运行原始TCP "GET /H" 和 "GET /L"，IP地址为192.168.4.1，端口为80
+  Steps:
+  1. Connect to the access point "yourAp"
+  2. Point your web browser to http://192.168.4.1/H to turn the LED on or http://192.168.4.1/L to turn it off
+     OR
+     Run raw TCP "GET /H" and "GET /L" on PuTTY terminal with 192.168.4.1 as IP address and 80 as port
 
-  为arduino-esp32创建于2018年7月4日
-  作者：Elochukwu Ifediora (fedy0)
+  Created for arduino-esp32 on 04 July, 2018
+  by Elochukwu Ifediora (fedy0)
 */
 
 #include <WiFi.h>
 #include <WiFiClient.h>
 #include <WiFiAP.h>
 
-//#define LED_BUILTIN 2   // 设置您连接测试LED的GPIO引脚，或者如果您的开发板有内置LED，请注释掉这一行
+//#define LED_BUILTIN 2   // Set the GPIO pin where you connected your test LED or comment this line out if your dev board has a built-in LED
 
-// 将这些设置为您所需的凭据。
+// Set these to your desired credentials.
 const char *ssid = "XIAO_ESP32S3";
 const char *password = "password";
 
@@ -515,83 +513,82 @@ void setup() {
 
   Serial.begin(115200);
   Serial.println();
-  Serial.println("正在配置接入点...");
+  Serial.println("Configuring access point...");
 
-  // 如果您希望AP开放，可以删除密码参数。
+  // You can remove the password parameter if you want the AP to be open.
   WiFi.softAP(ssid, password);
   IPAddress myIP = WiFi.softAPIP();
-  Serial.print("AP IP地址: ");
+  Serial.print("AP IP address: ");
   Serial.println(myIP);
   server.begin();
 
-  Serial.println("服务器已启动");
+  Serial.println("Server started");
 }
 
 void loop() {
-  WiFiClient client = server.available();   // 监听传入的客户端
+  WiFiClient client = server.available();   // listen for incoming clients
 
-  if (client) {                             // 如果有客户端连接，
-    Serial.println("新客户端。");           // 在串口打印消息
-    String currentLine = "";                // 创建一个字符串来保存来自客户端的传入数据
-    while (client.connected()) {            // 当客户端连接时循环
-      if (client.available()) {             // 如果有来自客户端的字节可读，
-        char c = client.read();             // 读取一个字节，然后
-        Serial.write(c);                    // 在串口监视器中打印出来
-        if (c == '\n') {                    // 如果字节是换行符
+  if (client) {                             // if you get a client,
+    Serial.println("New Client.");           // print a message out the serial port
+    String currentLine = "";                // make a String to hold incoming data from the client
+    while (client.connected()) {            // loop while the client's connected
+      if (client.available()) {             // if there's bytes to read from the client,
+        char c = client.read();             // read a byte, then
+        Serial.write(c);                    // print it out the serial monitor
+        if (c == '\n') {                    // if the byte is a newline character
 
-          // 如果当前行为空，您得到了连续两个换行符。
-          // 这是客户端HTTP请求的结束，所以发送响应：
+          // if the current line is blank, you got two newline characters in a row.
+          // that's the end of the client HTTP request, so send a response:
           if (currentLine.length() == 0) {
-            // HTTP头总是以响应代码开始（例如 HTTP/1.1 200 OK）
-            // 和内容类型，以便客户端知道接下来是什么，然后是空行：
+            // HTTP headers always start with a response code (e.g. HTTP/1.1 200 OK)
+            // and a content-type so the client knows what's coming, then a blank line:
             client.println("HTTP/1.1 200 OK");
             client.println("Content-type:text/html");
             client.println();
 
-            // HTTP响应的内容跟在头部之后：
-            client.print("点击<a href=\"/H\">这里</a>打开LED。<br>");
-            client.print("点击<a href=\"/L\">这里</a>关闭LED。<br>");
+            // the content of the HTTP response follows the header:
+            client.print("Click <a href=\"/H\">here</a> to turn ON the LED.<br>");
+            client.print("Click <a href=\"/L\">here</a> to turn OFF the LED.<br>");
 
-            // HTTP响应以另一个空行结束：
+            // The HTTP response ends with another blank line:
             client.println();
-            // 跳出while循环：
+            // break out of the while loop:
             break;
-          } else {    // 如果您得到换行符，则清除currentLine：
+          } else {    // if you got a newline, then clear currentLine:
             currentLine = "";
           }
-        } else if (c != '\r') {  // 如果您得到除回车符之外的任何其他字符，
-          currentLine += c;      // 将其添加到currentLine的末尾
+        } else if (c != '\r') {  // if you got anything else but a carriage return character,
+          currentLine += c;      // add it to the end of the currentLine
         }
 
-        // 检查客户端请求是否为 "GET /H" 或 "GET /L"：
+        // Check to see if the client request was "GET /H" or "GET /L":
         if (currentLine.endsWith("GET /H")) {
-          digitalWrite(LED_BUILTIN, LOW);                 // GET /H 打开LED
+          digitalWrite(LED_BUILTIN, LOW);                 // GET /H turns the LED on
         }
         if (currentLine.endsWith("GET /L")) {
-          digitalWrite(LED_BUILTIN, HIGH);                // GET /L 关闭LED
+          digitalWrite(LED_BUILTIN, HIGH);                // GET /L turns the LED off
         }
       }
     }
-    // 关闭连接：
+    // close the connection:
     client.stop();
-    Serial.println("客户端已断开连接。");
+    Serial.println("Client Disconnected.");
   }
 }
 ```
 
-上传并运行程序后，XIAO ESP32S3 将创建一个名为"XIAO_ESP32S3"的热点。您可以使用计算机或手机连接到此网络，密码为"password"。然后，在浏览器中打开"192.168.4.1"来访问控制LED开关的网页。
-
+上传并运行程序后，XIAO ESP32S3 将创建一个名为"XIAO_ESP32S3"的热点。您可以使用计算机或手机连接到此网络，密码为"password"。然后，在浏览器中打开"192.168.4.1"以访问控制 LED 开关的网页。
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/39.png" style={{width:800, height:'auto'}}/></div>
 
 ### 程序注释
 
-在`setup()`中有一个部分使用`softAP()`方法将ESP32设置为接入点：
+在 `setup()` 中有一个部分使用 `softAP()` 方法将 ESP32 设置为接入点：
 
 ```c
 WiFi.softAP(ssid, password);
 ```
 
-接下来，我们需要使用 softAPIP() 方法获取接入点的 IP 地址，并在串口监视器中打印出来。
+接下来，我们需要使用 softAPIP() 方法获取接入点 IP 地址并在串口监视器中打印它。
 
 ```c
 IPAddress myIP = WiFi.softAPIP();
@@ -600,11 +597,11 @@ Serial.println(myIP);
 server.begin();
 ```
 
-这些是您需要在Web服务器代码中包含的代码片段，用于将XIAO ESP32S3设置为接入点。
+这些是您需要在 Web 服务器程序中包含的代码片段，以将 XIAO ESP32S3 设置为接入点。
 
 ## WiFi & MQTT 使用
 
-XIAO ESP32S3是一个强大的主板，支持MQTT协议，使其成为需要设备间可靠高效通信的物联网项目的绝佳选择。
+XIAO ESP32S3 是一个强大的主板，支持 MQTT 协议，使其成为需要设备间可靠高效通信的物联网项目的绝佳选择。
 
 ```c
 #include <WiFi.h>
@@ -686,7 +683,7 @@ void loop() {
 
 ## WiFi & HTTP/HTTPS 使用
 
-这部分可以参考我们为 XIAO ESP32C3 编写的访问 ChatGPT 的示例，其中详细介绍了 WiFiClient 和 HTTPClient 的使用方法。
+这部分可以参考我们为 XIAO ESP32C3 访问 ChatGPT 编写的示例，其中详细介绍了 WiFiClient 和 HTTPClient 的使用方法。
 
 - [学习在 XIAO ESP32C3 上使用 WiFiClient 和 HTTPClient - XIAO ESP32C3 & ChatGPT 实战](https://wiki.seeedstudio.com/cn/xiaoesp32c3-chatgpt)
 
@@ -694,17 +691,17 @@ void loop() {
 
 根据 [Espressif 文档](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/mesh.html)：
 
-"ESP-MESH 是一个构建在 Wi-Fi 协议之上的网络协议。ESP-MESH 允许分布在大型物理区域（室内和室外）的众多设备（称为节点）在单个 WLAN（无线局域网）下互连。ESP-MESH 具有自组织和自愈能力，意味着网络可以自主构建和维护。"
+"ESP-MESH 是建立在 Wi-Fi 协议之上的网络协议。ESP-MESH 允许分布在大型物理区域（室内和室外）的众多设备（称为节点）在单个 WLAN（无线局域网）下互连。ESP-MESH 具有自组织和自愈能力，意味着网络可以自主构建和维护。"
 
 在传统的 Wi-Fi 网络架构中，单个节点（接入点 - 通常是路由器）连接到所有其他节点（站点）。每个节点都可以使用接入点与其他节点通信。但是，这受限于接入点的 Wi-Fi 覆盖范围。每个站点都必须在范围内才能直接连接到接入点。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/42.png" style={{width:800, height:'auto'}}/></div>
 
-使用 ESP-MESH，节点不需要连接到中央节点。节点负责中继彼此的传输。这允许多个设备分布在大型物理区域内。节点可以自组织并动态地相互通信，以确保数据包到达其最终节点目的地。如果任何节点从网络中移除，它能够自组织以确保数据包到达其目的地。
+使用 ESP-MESH，节点不需要连接到中央节点。节点负责中继彼此的传输。这允许多个设备分布在大型物理区域。节点可以自组织并动态地相互通信，以确保数据包到达其最终节点目的地。如果任何节点从网络中移除，它能够自组织以确保数据包到达其目的地。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/43.png" style={{width:800, height:'auto'}}/></div>
 
-[painlessMesh 库](https://gitlab.com/painlessMesh/painlessMesh) 允许我们以简单的方式使用 ESP32 开发板创建网格网络。
+[painlessMesh 库](https://gitlab.com/painlessMesh/painlessMesh) 允许我们以简单的方式使用 ESP32 开发板创建网状网络。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/44.png" style={{width:800, height:'auto'}}/></div>
 
@@ -712,17 +709,17 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/45.png" style={{width:500, height:'auto'}}/></div>
 
-如果没有显示此窗口，您需要安装以下库依赖项：
+如果此窗口没有显示，您需要安装以下库依赖项：
 
 - [ArduinoJson](https://github.com/bblanchon/ArduinoJson) (by bblanchon)
 - [TaskScheduler](https://github.com/arkhipenko/TaskScheduler)
 - [AsyncTCP](https://github.com/me-no-dev/AsyncTCP) (ESP32)
 
-要开始使用 ESP-MESH，我们首先尝试库的基本示例。此示例创建一个网格网络，其中所有开发板向所有其他开发板广播消息。
+要开始使用 ESP-MESH，我们首先尝试库的基本示例。此示例创建一个网状网络，其中所有开发板向所有其他开发板广播消息。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/46.png" style={{width:700, height:'auto'}}/></div>
 
-在上传代码之前，您可以设置 `MESH_PREFIX`（类似于 MESH 网络的名称）和 `MESH_PASSWORD` 变量（您可以设置为任何您喜欢的值）。
+在上传代码之前，您可以设置 `MESH_PREFIX`（它类似于 MESH 网络的名称）和 `MESH_PASSWORD` 变量（您可以将其设置为任何您喜欢的值）。
 
 然后，我们建议您为每个开发板更改以下行，以便轻松识别发送消息的节点。例如，对于节点 1，按如下方式更改消息：
 
@@ -740,9 +737,9 @@ String msg = "Hi from node 1 ";
 
 ### 程序注释
 
-首先包含 painlessMesh 库。然后，添加网格详细信息。`MESH_PREFIX` 指的是网格的名称。`MESH_PASSWORD`，顾名思义是网格密码。网格中的所有节点都应该使用相同的 `MESH_PREFIX` 和 `MESH_PASSWORD`。`MESH_PORT` 指的是您希望网格服务器运行的 TCP 端口。默认值是 **5555**。
+首先包含 painlessMesh 库。然后，添加网状网络详细信息。`MESH_PREFIX` 指的是网状网络的名称。`MESH_PASSWORD`，顾名思义是网状网络密码。网状网络中的所有节点都应使用相同的 `MESH_PREFIX` 和 `MESH_PASSWORD`。`MESH_PORT` 指的是您希望网状服务器运行的 TCP 端口。默认值是 **5555**。
 
-建议避免在网格网络代码中使用 `delay()`。为了维护网格，需要在后台执行一些任务。使用 `delay()` 会阻止这些任务的执行，并可能导致网格失去稳定性/崩溃。相反，建议使用 `TaskScheduler` 来运行您的任务，这也是 painlessMesh 本身使用的方法。以下行创建了一个名为 `userScheduler` 的新 `Scheduler`。
+建议避免在网状网络代码中使用 `delay()`。为了维护网状网络，需要在后台执行一些任务。使用 `delay()` 会阻止这些任务的执行，并可能导致网状网络失去稳定性/崩溃。相反，建议使用 `TaskScheduler` 来运行您的任务，这在 painlessMesh 本身中使用。以下行创建一个名为 `userScheduler` 的新 `Scheduler`。
 
 ```c
 Scheduler userScheduler; // to control your personal task
@@ -754,7 +751,7 @@ Scheduler userScheduler; // to control your personal task
 painlessMesh  mesh;
 ```
 
-创建一个名为 `taskSendMessage` 的任务，负责在程序运行期间每秒调用一次 `sendMessage()` 函数。
+创建一个名为 `taskSendMessage` 的任务，负责在程序运行期间每秒调用 `sendMessage()` 函数。
 
 ```c
 Task taskSendMessage(TASK_SECOND * 1 , TASK_FOREVER, &sendMessage);
@@ -771,29 +768,28 @@ void sendMessage() {
 }
 ```
 
-消息包含"Hello from node 1"文本，后跟开发板芯片ID。
+消息包含"Hello from node 1"文本，后跟开发板芯片 ID。
 
-要广播消息，只需在mesh对象上使用`sendBroadcast()`方法，并将要发送的消息(msg)作为参数传递。
+要广播消息，只需在 mesh 对象上使用 `sendBroadcast()` 方法，并将要发送的消息 (msg) 作为参数传递。
 
 ```c
 mesh.sendBroadcast(msg);
 ```
 
-每次发送新消息时，代码都会改变消息之间的间隔（一到五秒）。
+每次发送新消息时，代码都会更改消息之间的间隔（一到五秒）。
 
 ```c
 taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5));
 ```
 
-接下来，创建了几个回调函数，当网格上发生特定事件时会调用这些函数。`receivedCallback()` 函数打印消息发送者（from）和消息内容（`msg.c_str()`）。
+接下来，创建几个回调函数，当网状网络上发生特定事件时将调用这些函数。`receivedCallback()` 函数打印消息发送者 (from) 和消息内容 (`msg.c_str()`)。
 
 ```c
 void receivedCallback( uint32_t from, String &msg ) {
   Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
 }
 ```
-
-`newConnectionCallback()` 函数在新节点加入网络时运行。该函数只是打印新节点的芯片 ID。您可以修改该函数来执行任何其他任务。
+`newConnectionCallback()` 函数在新节点加入网络时运行。该函数简单地打印新节点的芯片 ID。您可以修改该函数来执行任何其他任务。
 
 ```c
 void newConnectionCallback(uint32_t nodeId) {
@@ -801,7 +797,7 @@ void newConnectionCallback(uint32_t nodeId) {
 }
 ```
 
-`changedConnectionCallback()` 函数在网络上的连接发生变化时运行（当节点加入或离开网络时）。
+`changedConnectionCallback()` 函数在网络连接发生变化时运行（当节点加入或离开网络时）。
 
 ```c
 void changedConnectionCallback() {
@@ -809,7 +805,7 @@ void changedConnectionCallback() {
 }
 ```
 
-`nodeTimeAdjustedCallback()` 函数在网络调整时间时运行，以便所有节点都同步。它打印偏移量。
+`nodeTimeAdjustedCallback()` 函数在网络调整时间时运行，以便所有节点同步。它打印偏移量。
 
 ```c
 void nodeTimeAdjustedCallback(int32_t offset) {
@@ -840,13 +836,13 @@ mesh.onChangedConnections(&changedConnectionCallback);
 mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
 ```
 
-最后，将 taskSendMessage 函数添加到 userScheduler 中。调度器负责在正确的时间处理和运行任务。
+最后，将 taskSendMessage 函数添加到 userScheduler。调度器负责在正确的时间处理和运行任务。
 
 ```c
 userScheduler.addTask(taskSendMessage);
 ```
 
-最后，启用 taskSendMessage，这样程序就开始向网格发送消息。
+最后，启用 taskSendMessage，以便程序开始向网格发送消息。
 
 ```c
 taskSendMessage.enable();
@@ -863,7 +859,7 @@ void loop() {
 
 ## 故障排除
 
-### Q1: 为什么在使用 softAP 示例时无法连接到 XIAO ESP32S3 热点？
+### Q1：为什么在使用 softAP 示例时无法连接到 XIAO ESP32S3 热点？
 
 这可能是由于 XIAO ESP32S3 的天线强度不足或 XIAO ESP32S3 过热造成的。经过测试，XIAO ESP32S3 的芯片在使用此示例时最高温度可达 50 摄氏度。如果长时间运行，这可能导致网络异常。此时，您可以冷却后重试。
 
@@ -871,13 +867,50 @@ void loop() {
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/40.jpg" style={{width:600, height:'auto'}}/></div>
 
+### Q2：为什么 XIAO ESP32-S3 Plus 的网络信号比 XIAO ESP32-S3 弱？有什么解决方案吗？
+
+:::tip 产品批次
+如果您在 **2025 年 8 月** 之前购买了产品，您可能会遇到网络信号差的问题。在该日期之后购买的产品已经解决了这个问题，不需要软件修复。
+:::
+
+可以在所有使用 WiFi 的代码中添加调整功率的代码段，通过调整发射功率，可以显著改善信号强度。
+
+例如以下代码片段，在 `Setup()` 内添加调整功率的函数。
+
+```cpp
+    // 1. Set WiFi to Station mode
+    WiFi.mode(WIFI_STA);
+
+    // 2. Adjust WiFi transmit power (Key correction)
+    int8_t power_dbm = 15;
+    int8_t power_param = (int8_t)(power_dbm / 0.25);
+    esp_err_t err = esp_wifi_set_max_tx_power(power_param);
+
+    if (err == ESP_OK) {
+        Serial.print("Successfully set WiFi TX Power to: ");
+        Serial.print(power_dbm);
+        Serial.println(" dBm");
+    } else {
+        Serial.println("Failed to set WiFi TX Power.");
+    }
+
+    // 3. Start connecting to WiFi
+    WiFi.begin(ssid, password);
+
+    Serial.print("Connecting to WiFi network: ");
+    Serial.println(ssid);
+```
+
+经过验证，将功率设置为上述代码可获得最佳效果。
+
+
 ## 引用与参考
 
-本文借鉴了 **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** 关于 ESP32 的网络内容，并在 Seeed Studio XIAO ESP32S3 上进行了验证使用。
+本文借鉴了 **[Random Nerd Tutorials](https://randomnerdtutorials.com/)** 关于 ESP32 的网络内容，并在 Seeed Studio XIAO ESP32S3 上进行了验证。
 
 特别感谢 **Random Nerd Tutorials** 的作者们的辛勤工作！
 
-以下是原文的参考链接，欢迎通过以下原文链接了解更多关于 ESP32 网络的内容。
+以下是原文的参考链接，欢迎您通过以下原文链接了解更多关于 ESP32 网络的内容。
 
 - [ESP32 Useful Wi-Fi Library Functions (Arduino IDE)](https://randomnerdtutorials.com/esp32-useful-wi-fi-functions-arduino/)
 - [ESP32 MQTT – Publish and Subscribe with Arduino IDE](https://randomnerdtutorials.com/esp32-mqtt-publish-subscribe-arduino-ide/)
@@ -888,6 +921,8 @@ void loop() {
 - [Random Nerd Tutorials](https://randomnerdtutorials.com/)
 
 ## 技术支持与产品讨论
+
+.
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
@@ -900,3 +935,9 @@ void loop() {
 <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>
+
+
+
+
+
+

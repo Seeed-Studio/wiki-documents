@@ -16,10 +16,8 @@ With a range of products that cater to the needs of different users, from hobbyi
 
 From sensors to gateways, users can build and customize their own solutions for monitoring and controlling various aspects of their environment. The product line also includes industrial-grade devices that can be deployed on a large scale, offering advanced functionality and robust performance.
 
-
-In addition, SenseCAP product line also provides an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services 
+In addition, SenseCAP product line also provides an array of software, cloud services, and APIs, allowing users to collect, store, and analyze data in real-time. The combination of hardware, software, and cloud services
 enables users to quickly respond to changes in their environment and make data-driven decisions.
-
 
 ## Wild IoT
 
@@ -79,7 +77,6 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
     </a>
 </div>
 
-
 #### SenseCAP S2120 8-in-1 Weather Sensor
 
 <p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/f/o/font_5.png" alt="pir" width={600} height="auto" /></p>
@@ -113,8 +110,6 @@ SenseCAP S210X is a series of wireless LoRaWAN® sensors. It can cover a transmi
 ### SenseCAP ONE Weather Sensor
 
 Today, data on localized weather, known as microclimates, is the new frontier for more precise and accurate weather forecasting. As a result, the collection of weather data is becoming increasingly smaller and gridded. In light of this, weather stations, which are the most convenient means of collecting weather data, are seeing a rise in demand. SenseCAP offers all-in-one weather sensors to help you collect and monitor environmental data for various scenarios.
-
-
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NDUzODQzODY1Mw_607717_gJ-z6vK8gbiTsmB3_1681182673?w=960&h=766" alt="pir" width={800} height="auto" /></p>
 
@@ -191,7 +186,6 @@ SenseCAP offers two types of Data logger:
 |------------------|--------------------------|
 |<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-S2100-LoRaWAN-Data-Logger-p-5361.html)</p>|<p style={{textAlign: 'center'}}>[Get One Now!](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html)</p>|
 
-
 ### SenseCAP Decoder
 
 SenseCAP decoder is used for decoding the LoRaWAN messages sent from the SenseCAP LoRaWAN® devices. After decoding, users' applications will get more friendly and readable messages.
@@ -214,12 +208,12 @@ SenseCAP Portal is designed for customers to manage devices, data, and Access Ke
 
 [SenseCAP Mate APP](https://wiki.seeedstudio.com/Cloud_Chain/SenseCAP_Mate_APP/SenseCAP_APP) is a powerful APP for data visualization and remote device management.
 
-* Save time - provides a scan-and-play experience to enable users to complete the whole configuration in 4 steps
-* Works for people with less or no technical background to get started with sensor data easily
-* Acquire and view data on clean user interfaces
-* Set time intervals: improve the battery efficiency
-* Set threshold values: focus on the data you need to take action for - coming soon
-* Send alarms if data is out of the safe range - coming soon
+- Save time - provides a scan-and-play experience to enable users to complete the whole configuration in 4 steps
+- Works for people with less or no technical background to get started with sensor data easily
+- Acquire and view data on clean user interfaces
+- Set time intervals: improve the battery efficiency
+- Set threshold values: focus on the data you need to take action for - coming soon
+- Send alarms if data is out of the safe range - coming soon
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP_AI/1.png" alt="pir" width={400} height="auto" /></p>
 
@@ -235,19 +229,17 @@ Whether you're looking to monitor air quality, optimize crop growth, or improve 
 
 With the use of the SenseCAP Application Programming Interface, you are able to manage your own SenseCAP devices and data to meet your specific demands. There are three types of API methods you can flexibly apply:
 
-* With HTTP API, you can manage LoRa and NB-IoT devices, to get RAW data or historical data.
-* With MQTT API, you can subscribe to the sensor’s real-time measurement data through the MQTT protocol.
-* With WebSocket API, you can get real-time measurement data of sensors through Websocket protocol.
+- With HTTP API, you can manage LoRa and NB-IoT devices, to get RAW data or historical data.
+- With MQTT API, you can subscribe to the sensor’s real-time measurement data through the MQTT protocol.
+- With WebSocket API, you can get real-time measurement data of sensors through Websocket protocol.
 
 To learn more about the guide and references of SenseCAP API, kindly visit [SenseCAP Document Center – API](https://sensecap-docs.seeed.cc/introduction.html).
-
 
 ## Applications
 
 ### 5 Minutes to Develop an Industrial LoRaWAN Sensor
 
 Let's quickly build an industrial-grade LoRaWAN wireless sensor for direct commercial use in 5 minutes.
-
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1519816/_CFY3itZc4v.blob?auto=compress%2Cformat&w=900&h=675&fit=min" alt="pir" width={600} height="auto" /></p>
 
@@ -265,7 +257,6 @@ Today, we can use a wireless LoRa collector, set up sensors to connect to an app
 
 <p style={{textAlign: 'center'}}><img src="https://hackster.imgix.net/uploads/attachments/1527037/image_AC7YowxKbT.png?auto=compress%2Cformat&w=740&h=555&fit=max" alt="pir" width={800} height="auto" /></p>
 
-
 In this series of articles, I will share how I build a decent smart home in Home Assistant and use sensors from Seeed Studio SenseCAP products. And this is the first milestone.
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
@@ -274,14 +265,10 @@ In this series of articles, I will share how I build a decent smart home in Home
     </a>
 </div>
 
-
 ## ✨ Contributor Project
 
 - We have a task list for updating this page, which is categorized under our [contributor project](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=30957479), as we are dedicated to enhancing the user experience and providing better support through the development of our wiki platform.
 - [Your contribution to this page](https://github.com/orgs/Seeed-Studio/projects/6/views/1?pane=issue&itemId=33960915) is essential to us! We really value your input and would greatly appreciate your assistance in generating ideas.
-
-
-
 
 ## SenseCAP Tech Support
 

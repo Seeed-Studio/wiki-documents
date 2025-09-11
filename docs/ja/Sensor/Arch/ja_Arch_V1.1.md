@@ -103,7 +103,7 @@ Arch V1.1は、ArduinoフォームファクターとGroveコネクタを備え�
 ![画像をここに挿入](https://files.seeedstudio.com/wiki/Arch_V1.1/img/Get_started_with_arch.png)
 
 1.  [このリンク](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeeduino-Arch)をクリックして、mbedにログインまたはサインアップします。
-2.  mbed\_blinkyプログラムをインポートします。
+2.  mbed_blinkyプログラムをインポートします。
 3.  コーディングを開始！コードをコンパイルして出力バイナリをダウンロードできます。
 4.  ArchボードをPCに接続し、リセットボタンを長押しすると、USBドライブ「CRP DISABLD」として自動的に認識されます。「CRP DISABLD」に移動し、ファームウェアファイルを削除して、ダウンロードしたバイナリファイルを「CRP DISABLD」にコピーします。リセットボタンを短く押して新しいバイナリを実行します。
 
@@ -135,12 +135,12 @@ USB ISPモードに入るには、Archをコンピュータに接続し、ボタ
     2.  新しいファームウェアをディスクにコピーします。
 
 -   Linuxの場合
-    1.  ディスクがマウントされていない場合、ディスクを**\{mnt\_dir\}**にマウントします。
-    2.  **dd if=\{new\_firmware.bin\} of=\{mnt\_dir\}/firmware.bin conv=notrunc**
+    1.  ディスクがマウントされていない場合、ディスクを**\{mnt_dir\}**にマウントします。
+    2.  **dd if=\{new_firmware.bin\} of=\{mnt_dir\}/firmware.bin conv=notrunc**
 
 -   Macの場合、ターミナルを使用して以下のスクリプトを実行し、.binファイルをArchにコピーします。
 
-    1.  **dd if=\{new\_firmare.bin\} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
+    1.  **dd if=\{new_firmare.bin\} of=/Volumes/CRP\\ DISABLD/firmware.bin conv=notrunc**
 
 また、**Automator**アプリケーションを作成して、ファイルをボードにドラッグ＆ドロップで対応することもできます。「*Run Shell Script*」を作成し、以下のコマンドを使用します：
 

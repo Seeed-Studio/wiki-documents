@@ -107,7 +107,7 @@ sudo cp /path/to/your/folder/ libssl.so1.1 /lib
 
 - **Step 1**: Access N3uron Interface
 
-Go to http://localhost:8003 in your web browser.
+Go to `http://localhost:8003` in your web browser.
 
 - **Step 2**: Navigate to Configuration
 

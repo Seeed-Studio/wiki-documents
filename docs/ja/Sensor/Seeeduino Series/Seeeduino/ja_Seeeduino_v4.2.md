@@ -293,7 +293,7 @@ A2: Seeeduino v4.2はArduino UNOと完全互換性があります。主な違い
 A3: 以下の手順で問題を解決してください。
 
 - 「ファイル」->「環境設定」をクリック
-- 環境設定ウィンドウの下部にあるURL（例：C:\Users\...\AppData\Local\Arduino15\preferences.txt）をクリック
+- 環境設定ウィンドウの下部にあるURL（例：C:\Users...\AppData\Local\Arduino15\preferences.txt）をクリック
 - preferences.txt、staging、packages以外のすべてのファイルを削除
 - IDEウィンドウを閉じて再度開くと動作するはずです。
 

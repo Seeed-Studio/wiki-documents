@@ -13,7 +13,7 @@ last_update:
 ---
 
 
-## What is ReSpeaker? 
+## What is ReSpeaker?
 
 ReSpeaker is an open-source modular voice interface platform developed by Seeed Studio, designed for makers, developers, and enterprises to create intelligent voice interaction products. It integrates microphone arrays, audio processors, and various connectivity options, making it easy to add voice recognition and interaction capabilities to your projects.
 
@@ -22,7 +22,6 @@ ReSpeaker is an open-source modular voice interface platform developed by Seeed 
 ### ReSpeaker Lite
 
 The ReSpeaker Lite series is your gateway to building powerful, high-quality voice-enabled projects with ease. Powered by the XMOS XU316 AI audio chipset and a precision dual-microphone array, it delivers crystal-clear far-field voice capture(up to 3 meters), advanced noise suppression, and echo cancellation—perfect for speech recognition, smart assistants, and interactive devices. Choose from multiple versions to match your needs: the **ReSpeaker Lite 2-Mic Array Voice Kit** with an ESPHome-ready XIAO ESP32S3 pre-soldered for instant setup, or the **ReSpeaker Lite Voice Assistant Kit** with an acrylic enclosure and speaker for a complete, ready-to-use solution. Whether you’re a maker, developer, or innovator, ReSpeaker Lite gives you the performance, flexibility, and open-source freedom to bring your voice projects to life.
-
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/respeakerlite.png" alt="pir" width={600} height="auto" /></p>
 
@@ -112,8 +111,6 @@ The ReSpeaker XMOS XVF3800 series is built for makers, developers, and product d
 
 The ReSpeaker 2-Mics Pi HAT V2.0 transforms your Raspberry Pi into a powerful voice-enabled platform, perfect for building smart assistants, voice-controlled devices, and interactive AI projects. Equipped with the TLV320AIC3104 audio codec, dual analog microphones, and built-in NLU algorithms for VAD, DOA, and KWS, it delivers clear and accurate voice capture for responsive interactions. Its programmable RGB LEDs, user button, and simple plug-and-play design make it easy to prototype and customize, whether you’re integrating Alexa, Google Assistant, or your own voice interface.
 
-
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/hat.png" alt="pir" width={600} height="auto" /></p>
 
 <div className="table-center">
@@ -158,7 +155,6 @@ The ReSpeaker 2-Mics Pi HAT V2.0 transforms your Raspberry Pi into a powerful vo
 
 The ReSpeaker XVF3000 USB Mic Array is a ready-to-use, plug-and-play far-field voice capture solution designed for instant integration into your applications—no bare dev board or complex setup required. Featuring a 4-microphone array, USB Audio Class 1.0 compatibility, and 12 programmable RGB LEDs, it’s perfect for building smart assistants, conference systems, and interactive voice projects. With built-in speech algorithms like VAD, DOA, beamforming, noise suppression, de-reverberation, and acoustic echo cancellation, it delivers crystal-clear voice pickup even in challenging environments. For a polished, deployment-ready setup, you can also choose the version with a sleek protective case, making it ideal for both prototyping and production.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/respeaker_xvf3800_usb/xvf3000.png" alt="pir" width={600} height="auto" /></p>
 
 <div className="table-center">
@@ -199,7 +195,6 @@ The ReSpeaker XVF3000 USB Mic Array is a ready-to-use, plug-and-play far-field v
     </table>
 </div>
 
-
 ## Core Features
 
 **Advanced Microphone Array Technology**
@@ -219,11 +214,11 @@ Supports multiple development platforms and programming languages including Pyth
 Fully open-source hardware design and software stack with an active developer community providing continuous technical support. Freely customize and extend functionality to meet specific application requirements.
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

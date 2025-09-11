@@ -26,11 +26,11 @@ last_update:
     </tr>
     <tr>
       <td>Button</td>
-      <td>打印按钮事件 - 检测按钮状态变化并打印事件信息以供用户交互。</td>
+      <td>打印按钮事件 - 检测按钮状态变化并打印事件信息，用于用户交互。</td>
     </tr>
     <tr>
       <td>Buzzer</td>
-      <td>循环播放声音 - 驱动蜂鸣器产生声音用于提醒或报警。</td>
+      <td>循环播放声音 - 驱动蜂鸣器产生声音，用于提醒或报警。</td>
     </tr>
     <tr>
       <td>Sensor</td>
@@ -38,7 +38,7 @@ last_update:
     </tr>
     <tr>
       <td>Accelerometer</td>
-      <td>打印 ax/ay/az/事件值 - 收集加速度数据用于运动检测和姿态识别。</td>
+      <td>打印 ax/ay/az/事件值 - 收集加速度数据，用于运动检测和姿态识别。</td>
     </tr>
     <tr>
       <td>GNSS</td>
@@ -67,47 +67,41 @@ last_update:
   </table>
 </div>
 
-
 ## 准备工作
 
 ### 硬件准备
 
-* SenseCAP T1000-E x 1
-* USB 线缆 x 1
-* 计算机 x 1
-
+- SenseCAP T1000-E x 1
+- USB 线缆 x 1
+- 计算机 x 1
 
 ### 软件准备
 
 在开始开发之前，需要以下软件工具。
 
-查看这里了解如何 [Arduino 入门指南](https://wiki.seeedstudio.com/cn/Getting_Started_with_Arduino/)。
+查看这里了解如何[开始使用 Arduino](https://wiki.seeedstudio.com/Getting_Started_with_Arduino/)。
 
 :::tip
 版本需要新于 v1.6.12。
 :::
-
 
 ## 开始使用
 
 ### 先决条件
 
 1. 添加 URL
- 
-导航到 `文件` -> `首选项`，并将以下 URL 添加到 `附加开发板管理器网址`： 
+
+导航到 `文件` -> `首选项`，并将以下 URL 添加到 `附加开发板管理器网址`：
 
 ```
 https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 ```
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/LoraWAN_Tracker/add-url.png" alt="pir" width={800} height="auto" /></p>
-
 
 2. 安装开发板
 
-导航到 `开发板管理器`，搜索 `seeed nrf52`，选择最新版本并安装。 
-
+导航到 `Boards Manager`，搜索 `seeed nrf52`，选择最新版本并安装。
 
 ### 构建示例
 
@@ -120,8 +114,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 2. 构建示例
 
-导航到 `文件` -> `示例` -> `Seeed Tracker T1000 E LoRaWAN`，然后打开您选择的示例（在这种情况下是加速度计示例）：
-
+导航到 `File` -> `Examples` -> `Seeed Tracker T1000 E LoRaWAN`，然后打开您选择的示例（在这种情况下是加速度计示例）：
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/example_select.png" alt="pir" width={800} height="auto" /></p>
 
@@ -134,10 +127,10 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/export_binary.png" alt="pir" width={800} height="auto" /></p>
 
-2. 将 `.hex` 文件转换为 `.uf2` 文件。这是使用 python 脚本完成的，可以从[这里](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py)下载。下载并从终端使用以下参数运行脚本：  
+2. 将 `.hex` 文件转换为 `.uf2` 文件。这是使用 Python 脚本完成的，可以从[这里](https://github.com/Seeed-Studio/Adafruit_nRF52_Arduino/blob/1.1.9/tools/uf2conv/uf2conv.py)下载。下载并从终端使用以下参数运行脚本：  
 `python uf2conv.py -f 0xADA52840 -c -o test.uf2 <your_hex_file>.hex`
 
-3. 通过按住设备按钮将设备置于 DFU 模式，然后快速连接充电线缆两次，绿色 LED 将常亮。您现在应该能找到 T1000-E 作为大容量存储设备。
+3. 通过按住设备按钮将设备置于 DFU 模式，然后快速连接充电线两次，绿色 LED 将常亮。您现在应该能找到 T1000-E 作为大容量存储设备。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/e-driver.png" alt="pir" width={600} height="auto" /></p>
 
@@ -145,7 +138,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ## 读取串行消息
 
-使用 `Serial.println` 和 `Serial.printf` 从设备打印出的消息可以通过 Arduino IDE 的集成终端读取。
+使用 `Serial.println` 和 `Serial.printf` 从设备打印出的消息可以使用 Arduino IDE 的集成终端读取。
 确保您已启用并选择了 USB-CDC：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/usb_cdc.png" alt="pir" width={800} height="auto" /></p>
 
@@ -154,7 +147,7 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ## LoRaWAN 示例
 
-包含 LoRaWAN 消息传输的示例需要进一步的两个步骤。
+包含 LoRaWAN 消息传递的示例需要进一步的两个步骤。
 
 ### 设置 LNS
 
@@ -178,9 +171,9 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 设置以下参数：
 
-**Frequency Plan**：为目标区域选择适当的频率计划  
-**LoRaWAN version**：LoRaWAN Specification 1.0.4  
-**Regional Parameters version**：V1.0.3 REV A
+**Frequency Plan**: 为目标区域选择适当的频率计划  
+**LoRaWAN version**: LoRaWAN Specification 1.0.4  
+**Regional Parameters version**: V1.0.3 REV A
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/register_device1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -189,10 +182,10 @@ https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json
 
 ### 调整示例代码
 
-为了使其正常工作，请在示例代码中设置上一步骤中的凭据。同时指定区域，例如 `SMTC_MODEM_REGION_AS_923_GRP1`、`SMTC_MODEM_REGION_EU_868` 或 `SMTC_MODEM_REGION_US_915`。
+为了使其工作，请在示例代码中设置上一步的凭据。还要指定区域，例如 `SMTC_MODEM_REGION_AS_923_GRP1`、`SMTC_MODEM_REGION_EU_868` 或 `SMTC_MODEM_REGION_US_915`。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/lorawan_credentials.png" alt="pir" width={800} height="auto" /></p>
 
-如果您的区域有占空比限制，请确保在重置处理程序中启用该限制：
+如果您的区域有占空比限制，请确保在重置处理程序中启用限制：
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Meshtastic/t1000_e_arduino_examples/duty_cycle_limitation.png" alt="pir" width={800} height="auto" /></p>
 
 ### 运行示例代码

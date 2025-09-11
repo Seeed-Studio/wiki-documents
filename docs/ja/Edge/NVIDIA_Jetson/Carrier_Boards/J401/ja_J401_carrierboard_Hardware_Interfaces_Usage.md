@@ -1,28 +1,23 @@
 ---
-description: J401キャリアボードのハードウェアおよびインターフェースの使用方法
-title: インターフェースの使用
+description: J401キャリアボードのハードウェアとインターフェース使用方法
+title: インターフェース使用方法
 tags:
-  - J401キャリアボード
+  - J401 carrier board
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/J401_carrierboard_Hardware_Interfaces_Usage
 last_update:
-  date: 05/15/2025
+  date: 04/29/2024
   author: Jiahao
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 ## はじめに
 
-**[reComputer J401キャリアボード](https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-p-5636.html)** は、**NVIDIA Jetson Orin Nano/NX（[Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**、**[Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html))** をサポートし、優れたパフォーマンスを提供します。このボードは、エッジコンピューティングの困難なタスクを容易に処理するよう設計されており、産業オートメーションシステムの開発や強力なAIアプリケーションの構築に最適な選択肢です。
+**[reComputer J401キャリアボード](https://www.seeedstudio.com/reComputer-J401-Carrier-Board-for-Jetson-Orin-NX-Orin-Nano-p-5636.html)** は **NVIDIA Jetson Orin Nano/NX([Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**, **[Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html))** をサポートし、優れた性能を提供し、困難なエッジコンピューティングタスクを簡単に処理できるよう設計されています。産業オートメーションシステムの開発や強力なAIアプリケーションの構築などに最適な選択肢です。
 
-このボードは、1つの**ギガビットイーサネットポート**を備えたネットワーキング機能を特徴としています。また、4つの**USB 3.2 Type-A（10Gbps）ポート**、1つの**USB 2.0 Type-Cポート**、および1つの**CANコネクタ**を備え、多様な接続オプションを提供します。この拡張ボードには、SSDカード用の1つの**M.2 Key M 2280**（128GB NVMe 2280 SSDが含まれています）と、LTEワイヤレス接続拡張用の1つの**M.2 Key E**スロットが搭載されています。
+高速ネットワーキング用の1x **ギガビットイーサネットポート** を搭載したネットワーキング機能を備えています。また、多様な接続オプションとして4x **USB 3.2 Type-A（10Gbps）ポート**、1x **USB 2.0 Type-Cポート**、1x **CANコネクタ** を搭載しています。この拡張ボードには、SSDカード用の1x **M.2 Key M 2280**（128GB NVMe 2280 SSD付属）とLTEワイヤレス接続拡張用の1x **M.2 Key E** スロットが搭載されています。
 
-さらに、このボードは複数の周辺機器をサポートしています。2つの**15ピンMIPI-CSI**および1つの**HDMI 2.1**コネクタを使用して、高品質のビデオコンテンツをキャプチャおよび表示できます。また、**5V PWMファンヘッダー**、1つの**RTCソケット**、および**2ピンRTCヘッダー**も含まれています。
+さらに、ボード上では複数の周辺機器がサポートされています。カメラとディスプレイ接続用の2x **15ピンMIPI-CSI** と1x **HDMI 2.1** コネクタにより、高品質なビデオコンテンツのキャプチャと表示が可能です。また、**5V PWMファンヘッダー**、1つの **RTCソケット**、**2ピンRTCヘッダー** も含まれています。
 
-このボードは、**9-19V DC**の広い入力範囲をサポートしており、さまざまなコンピューティングタスクに柔軟に統合できます。動作温度範囲は-10°Cから60°Cです。
+ボードは **9-19V DC** の広い入力範囲をサポートし、様々なコンピューティングタスクへの統合を柔軟に行えます。-10°Cから60°Cの温度範囲で動作を維持します。
 
 <div align="center"><img width ="1000" src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTE1NA_356376_xs4inuEPMdjVeyj__1679475367?w=1200&h=1335"/></div>
 
@@ -35,44 +30,45 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ## 260ピンSODIMM
 
-260ピンSODIMMの主な機能は、キャリアボードを**[NVIDIA Jetson Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[NVIDIA Jetson Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**、**[NVIDIA Jetson Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[NVIDIA Jetson Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)** に接続することです。
+260ピンSODIMMの主な機能は、キャリアボードを **[NVIDIA Jetson Orin Nano 4GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-4GB-Module-p-5553.html?___store=retailer)/[NVIDIA Jetson Orin Nano 8GB](https://www.seeedstudio.com/NVIDIA-JETSON-ORIN-NANO-8GB-Module-p-5551.html)**、**[NVIDIA Jetson Orin NX 8GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-8GB-p-5522.html)/[NVIDIA Jetson Orin NX 16GB](https://www.seeedstudio.com/NVIDIA-Jetson-Orin-NX-Module-16GB-p-5523.html)** と接続することです。
 
 ### 接続概要
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/Jetson-connect-J401.gif"/></div>
 
 :::note
-接続が正しい場合、電源アダプタを接続すると電源インジケータが点灯します。
+接続が正しい場合、電源アダプターを接続すると電源インジケーターが点灯します。
 :::
 
 ## M.2 Key M
 
-M.2 Key Mは、PCIe（Peripheral Component Interconnect Express）インターフェースを使用して高速データ転送をサポートするM.2コネクタの物理的および電気的レイアウトに関する仕様です。M.2 Key Mコネクタは、主にソリッドステートドライブ（SSD）やその他の高性能拡張カードをマザーボードやその他のホストデバイスに接続するために使用されます。「Key M」という名称は、M.2コネクタの特定のピン構成とキーイングを指し、接続可能なデバイスの種類を決定します。
+M.2 Key M は、PCIe（Peripheral Component Interconnect Express）インターフェースを使用した高速データ転送をサポートする M.2 コネクタの物理的および電気的レイアウトの仕様です。M.2 Key M コネクタは、ソリッドステートドライブ（SSD）やその他の高性能拡張カードをマザーボードやその他のホストデバイスに接続するために一般的に使用されます。「Key M」の指定は、M.2 コネクタの特定のピン構成とキーイングを指し、これによって接続できるデバイスの種類が決まります。
 
-### 対応するSSDは以下の通りです：
-- [128GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
-- [256GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
-- [512GB NVMe M.2 PCle Gen3x4 2280 内蔵SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
-- [1TB NVMe M.2 PCle Gen3x4 2280 内蔵SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
-- [2TB NVMe M.2 PCle Gen3x4 2280 内蔵SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
+### サポートされている SSD は以下の通りです：
+
+- [128GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)
+- [256GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-256GB-p-5333.html)
+- [512GB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-512GB-p-5334.html)
+- [1TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-1TB-p-5767.html)
+- [2TB NVMe M.2 PCle Gen3x4 2280 Internal SSD](https://www.seeedstudio.com/NVMe-M-2-2280-SSD-2TB-p-6265.html)
 
 ### 接続概要
 
-付属のSSDを取り外して新しいSSDを取り付けたい場合は、以下の手順に従ってください。
+付属の SSD を取り外して新しいものを取り付けたい場合は、以下の手順に従ってください。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-Install-new-ssd.gif"/></div>
 
 ### 使用方法
 
-接続されたSSDで簡単なベンチマークを行う方法を説明します。
+接続された SSD で簡単なベンチマークを実行する方法を説明します。
 
-- **ステップ1:** 以下のコマンドを実行して書き込み速度を確認します。
+- **ステップ 1:** 以下のコマンドを実行して書き込み速度を確認します。
 
 ```sh
 sudo dd if=/dev/zero of=/home/nvidia/test bs=1M count=512 conv=fdatasync
 ```
 
-- **ステップ2:** 以下のコマンドを実行して読み取り速度を確認します。このコマンドは、書き込み速度を確認するための上記のコマンドを実行した後に実行してください。
+- **ステップ 2:** 以下のコマンドを実行して読み取り速度を確認します。書き込み速度の上記コマンドを実行した後に、必ずこれを実行してください。
 
 ```sh
 sudo sh -c "sync && echo 3 > /proc/sys/vm/drop_caches"
@@ -81,7 +77,7 @@ sudo dd if=/home/nvidia/test of=/dev/null bs=1M count=512
 
 ## M.2 Key E
 
-M.2 Key Eは、Wi-FiやBluetoothカードなどの無線通信モジュールをサポートするM.2コネクタの物理的および電気的レイアウトに関する仕様です。「Key E」という名称は、無線ネットワークデバイスに最適化されたM.2コネクタの特定のピン構成とキーイングを指します。M.2 Key Eコネクタは、無線接続オプションが必要なマザーボードやその他のデバイスで一般的に使用されます。ここでは、[Intel Wi-Fi/Bluetooth](https://www.seeedstudio.com/RTL8822CE-Wireless-NIC-Kits-for-Nvidia-Jetson-Orin.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Ijg4MjIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjozLCJjX3RvdGFsX3Jlc3VsdHMiOjQsImNfc2VhcmNoX3Jlc3VsdF90eXBlIjoiUHJvZHVjdCIsImNfc2VhcmNoX2ZpbHRlcnMiOiJzdG9yZUNvZGU6W3JldGFpbGVyXSJ9)モジュールを推奨します。
+M.2 Key Eは、Wi-FiやBluetoothカードなどの無線通信モジュールをサポートするM.2コネクタの物理的および電気的レイアウトの仕様です。「Key E」の指定は、無線ネットワークデバイス用に最適化されたM.2コネクタの特定のピン構成とキーイングを指します。M.2 Key Eコネクタは、無線接続オプションを必要とするマザーボードやその他のデバイスで一般的に見られます。ここでは[Intel wifi/bluetooth](https://www.seeedstudio.com/RTL8822CE-Wireless-NIC-Kits-for-Nvidia-Jetson-Orin.html?qid=eyJjX3NlYXJjaF9xdWVyeSI6Ijg4MjIiLCJjX3NlYXJjaF9yZXN1bHRfcG9zIjozLCJjX3RvdGFsX3Jlc3VsdHMiOjQsImNfc2VhcmNoX3Jlc3VsdF90eXBlIjoiUHJvZHVjdCIsImNfc2VhcmNoX2ZpbHRlcnMiOiJzdG9yZUNvZGU6W3JldGFpbGVyXSJ9)モジュールを推奨します。
 
 ### 接続概要
 
@@ -89,7 +85,7 @@ M.2 Key Eは、Wi-FiやBluetoothカードなどの無線通信モジュールを
 
 ### 使用方法
 
-Wi-Fi/Bluetoothモジュールをインストールした後、右上隅にWi-Fi/Bluetoothアイコンが表示されます。
+wifi/bluetoothモジュールをインストール後、右上角にwifi/bluetoothアイコンが表示されます。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-wifi-bluetooth-test.gif"/></div>
 
@@ -105,22 +101,22 @@ ifconfig
 
 ```
 bluetoothctl
-power on   # Bluetoothをオンにする
-agent on   # エージェントを登録する
-scan on    # 他のBluetoothデバイスを検索する
-connect xx:xx:xx:xx # 対象のBluetoothデバイスに接続する
-paired-devices # ペアリング済みデバイスを表示する
+power on   #open bluetooth
+agent on   #registe agent
+scan on    #search other bluetooths
+connect xx:xx:xx:xx #connect target bluetooth
+paired-devices #show all paired devices
 ```
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-bluetooth-test.png"/></div>
 
-## CSIカメラ
+## CSI カメラ
 
-CSIはCamera Serial Interface（カメラシリアルインターフェース）の略です。これは、イメージセンサーからホストプロセッサにビデオデータを転送するためのシリアル通信インターフェースを記述する仕様です。CSIは、モバイルデバイス、カメラ、組み込みシステムで一般的に使用されており、高速かつ効率的な画像およびビデオデータの転送を可能にし、処理や分析を行います。
+CSI は Camera Serial Interface の略です。これは、イメージセンサーからホストプロセッサーへビデオデータを転送するためのシリアル通信インターフェースを記述する仕様です。CSI は、モバイルデバイス、カメラ、組み込みシステムで一般的に使用され、処理と分析のための画像およびビデオデータの高速で効率的な転送を可能にします。
 
 ### サポートされているカメラは以下の通りです：
 
-- IMX219カメラ
+- IMX219 カメラ
 
   - [Raspberry Pi Camera V2](https://www.seeedstudio.com/Raspberry-Pi-Camera-Module-V2.html)
   
@@ -134,7 +130,7 @@ CSIはCamera Serial Interface（カメラシリアルインターフェース）
   - [IMX219-77IR 8MP IR Night Vision Camera with 77° FOV](https://www.seeedstudio.com/IMX219-77IR-Camera-77-FOV-Infrared-Applicable-for-Jetson-Nano-p-4607.html)
   - [IMX219-160IR 8MP Camera with 160° FOV](https://www.seeedstudio.com/IMX219-160IR-Camera160-FOV-Infrared-Applicable-for-Jetson-Nano-p-4602.html)
 
-- IMX477カメラ
+- IMX477 カメラ
 
   - [Raspberry Pi High Quality Camera](https://www.seeedstudio.com/Raspberry-Pi-High-Quality-Cam-p-4463.html)
   - [Raspberry Pi HQ Camera - M12 mount](https://www.seeedstudio.com/Raspberry-Pi-HQ-Camera-M12-mount-p-5578.html)
@@ -142,12 +138,13 @@ CSIはCamera Serial Interface（カメラシリアルインターフェース）
 
 ### 接続概要
 
-2つのCSIカメラコネクタは**CAM0とCAM1**としてマークされています。2つのコネクタのいずれかに1台のカメラを接続するか、両方のコネクタに2台のカメラを同時に接続することができます。
+ここでは、2つの CSI カメラコネクタが **CAM0 と CAM1** としてマークされています。2つのコネクタのうちいずれかに1つのカメラを接続するか、両方のコネクタに同時に2つのカメラを接続することができます。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/camera-connect-J401.gif"/></div>
 
 ### 使用方法
-ターミナルを開き（Ctrl+Alt+T）、以下のようにコマンドを入力します：
+
+ターミナルを開き（Ctrl+Alt+T）、以下のようなコマンドを入力してください：
 
 ```sh
 sudo /opt/nvidia/jetson-io/jetson-io.py
@@ -155,69 +152,67 @@ sudo /opt/nvidia/jetson-io/jetson-io.py
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-cameral.gif" /></div>
 
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="Method 1" label="Method 1">
+<TabItem value="Method 1" label="方法1">
 
-
-CAM0ポートの場合
+CAM0ポート用
 
 ```sh
 nvgstcapture-1.0 sensor-id=0 
 ```
 
-CAM1ポートの場合
+CAM1ポート用
 
 ```sh
 nvgstcapture-1.0 sensor-id=1  
 ```
 
 :::note
-カメラの設定をさらに変更したい場合は、**"nvgstcapture-1.0 --help"**と入力して、利用可能なすべての設定オプションにアクセスできます。
+カメラのさらなる設定を変更したい場合は、**"nvgstcapture-1.0 --help"** と入力することで、利用可能なすべての設定可能オプションにアクセスできます。
 :::
 </TabItem>
 
 <TabItem value="Method 2" label="Method 2">
 
-CAM0ポートの場合
+CAM0ポート用
 
 ```sh
 gst-launch-1.0 nvarguscamerasrc sensor-id=0 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
-CAM1ポートの場合
+CAM1ポート用
 
 ```sh
 gst-launch-1.0 nvarguscamerasrc sensor-id=1 sensor-mode=0 ! 'video/x-raw(memory:NVMM),width=1920, height=1080, framerate=20/1, format=NV12' ! nvvidconv ! xvimagesink
 ```
 
 :::note
-カメラの設定をさらに変更したい場合は、**width, height, framerate, format**などの引数を更新することができます。
+カメラのさらなる設定を変更したい場合は、**width、height、framerate、format**などの引数を更新できます。
 :::
 </TabItem>
 </Tabs>
 
 ## RTC
 
-RTCはReal-Time Clock（リアルタイムクロック）の略です。これは、メインシステムクロックとは独立して現在の時刻と日付を追跡する時計です。RTCは、コンピュータ、組み込みシステム、その他の電子機器で広く使用されており、デバイスの電源がオフになっている間でも正確な時刻を維持します。通常、小型のバッテリーで駆動され、電源サイクル中も時刻と日付の情報を保持します。
+RTCはReal-Time Clockの略です。これは、メインシステムクロックとは独立して現在の時刻と日付を追跡するクロックです。RTCは、コンピュータ、組み込みシステム、その他の電子機器で一般的に使用され、デバイスの電源がオフになっていても正確な時刻を維持します。電源サイクル中も継続的に動作し、時刻と日付情報を保持するために、小さなバッテリーで電源供給されることがよくあります。
 
 ### 接続概要
 
 <Tabs>
-<TabItem value="Method 1" label="方法 1">
+<TabItem value="Method 1" label="Method 1">
 
-**3V CR1220 コイン型電池**を以下の図のようにボード上のRTCソケットに接続します。電池の**正極（+）**が上向きになるようにしてください。
+以下に示すように、**3V CR1220コイン電池**をボード上のRTCソケットに接続します。電池の**プラス（+）**端が上向きになるようにしてください。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell-back.gif"/></div>
 
 </TabItem>
 
-<TabItem value="Method 2" label="方法 2">
+<TabItem value="Method 2" label="Method 2">
 
-**JSTコネクタ付き3V CR2302コイン型電池**を以下の図のようにボード上の2ピン1.25mm JSTソケットに接続します。
+以下に示すように、**JSTコネクタ付き3V CR2302コイン電池**をボード上の2ピン1.25mm JSTソケットに接続します：
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-connect-coin-cell.gif"/></div>
 
@@ -226,19 +221,19 @@ RTCはReal-Time Clock（リアルタイムクロック）の略です。これ�
 
 ### 使用方法
 
-- **ステップ 1:** 上記の方法でRTCバッテリーを接続します。
+- **ステップ1：** 上記のようにRTC電池を接続します。
 
-- **ステップ 2:** reComputer Industrial の電源を入れます。
+- **ステップ2：** reComputer Industrialの電源を入れます。
 
-- **ステップ 3:** Ubuntuデスクトップで、右上のドロップダウンメニューをクリックし、`設定 > 日付と時刻`に移動します。Ethernetケーブルを使用してネットワークに接続し、**自動日付と時刻**を選択して日付/時刻を自動的に取得します。
+- **ステップ3：** Ubuntuデスクトップで、右上角のドロップダウンメニューをクリックし、`Settings > Date & Time`に移動し、イーサネットケーブルでネットワークに接続して**Automatic Date & Time**を選択し、日付/時刻を自動的に取得します。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Industrial/13.png"/></div>
 
 :::note
-Ethernetを介してインターネットに接続していない場合は、ここで手動で日付/時刻を設定できます。
+イーサネット経由でインターネットに接続していない場合は、ここで日付/時刻を手動で設定できます。
 :::
 
-- **ステップ 4:** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロックの時刻を確認します。
+- **ステップ4：** ターミナルウィンドウを開き、以下のコマンドを実行してハードウェアクロック時刻を確認します。
 
 ```sh
 sudo hwclock
@@ -248,27 +243,27 @@ sudo hwclock
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-RTC.png"/></div>
 
-- **ステップ 5:** 以下のコマンドを入力して、ハードウェアクロックの時刻を現在のシステムクロックの時刻に変更します。
+- **ステップ 5:** 以下のコマンドを入力して、ハードウェアクロック時刻を現在のシステムクロック時刻に変更します。
 
-```sh 
+```sh
 sudo hwclock --systohc
 ```
 
-- **ステップ 6:** Ethernetケーブルを取り外し、インターネットから時刻を取得しないようにしてボードを再起動します。
+- **ステップ 6:** インターネットから時刻を取得しないようにするため、接続されているイーサネットケーブルをすべて取り外し、ボードを再起動します。
 
 ```sh
 sudo reboot
 ```
 
-- **ステップ 7:** ハードウェアクロックの時刻を確認し、デバイスの電源がオフになっても日付/時刻が保持されていることを確認します。
+- **ステップ 7:** ハードウェアクロック時刻を確認して、デバイスの電源がオフになっても日付/時刻が同じままであることを確認します。
 
-- **ステップ 8:** 任意のテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは**vi**テキストエディタを使用します。
+- **ステップ 8:** お好みのテキストエディタを使用して新しいシェルスクリプトを作成します。ここでは **vi** テキストエディタを使用します。
 
 ```sh
 sudo vi /usr/bin/hwtosys.sh 
 ```
 
-- **ステップ 9:** **i**キーを押して**挿入モード**に入り、以下の内容をファイル内にコピー＆ペーストします。
+- **ステップ 9:** **i** を押して**挿入モード**に入り、以下の内容をファイル内にコピー＆ペーストします。
 
 ```sh
 #!/bin/bash
@@ -276,7 +271,7 @@ sudo vi /usr/bin/hwtosys.sh
 sudo hwclock --hctosys
 ```
 
-- **ステップ 10:** スクリプトを実行可能にします。
+- **Step 10:** Make the script executable.
 
 ```sh
 sudo chmod +x /usr/bin/hwtosys.sh 
@@ -288,7 +283,7 @@ sudo chmod +x /usr/bin/hwtosys.sh
 sudo nano /lib/systemd/system/hwtosys.service 
 ```
 
-- **ステップ 12:** 以下の内容をファイル内に追加します。
+- **ステップ 12:** ファイル内に以下を追加します。
 
 ```sh
 [Unit]
@@ -301,98 +296,102 @@ ExecStart=/usr/bin/hwtosys.sh
 WantedBy=multi-user.target
 ```
 
-- **ステップ 13:** systemctlデーモンをリロードします。
+- **ステップ 13:** systemctl デーモンをリロードします。
 
 ```sh
 sudo systemctl daemon-reload 
 ```
 
-- **ステップ 14:** 新しく作成したサービスをブート時に開始するように有効化し、サービスを開始します。
+- **ステップ 14:** 新しく作成したサービスを起動時に開始するように有効化し、サービスを開始します。
 
 ```sh
 sudo systemctl enable hwtosys.service
 sudo systemctl start hwtosys.service
 ```
 
-- **ステップ 15:** スクリプトがsystemdサービスとして正常に動作していることを確認します。
+- **Step 15:** Verify the script is up and running as a systemd service.
 
 ```sh
 sudo systemctl status hwtosys.service
 ```
 
-- **ステップ 16:** ボードを再起動し、システムクロックがハードウェアクロックと同期していることを確認します。
+- **Step 16:** ボードを再起動すると、システムクロックがハードウェアクロックと同期されていることが確認できます。
 
 ## ファン制御
 
-`nvfancontrol` はユーザースペースのファン速度制御デーモンです。これは、`nvfancontrol` の設定ファイル内の温度とファン速度のマッピングテーブルに基づいてファン速度を管理します。
+nvfancontrolは、ユーザースペースのファン速度制御デーモンです。これは、nvfancontrol設定ファイル内の温度対ファン速度マッピングテーブルに基づいてファン速度を管理します。
 
-`nvfancontrol` サービスには、Tmargin、キックスタートPWM、ファンプロファイル、ファン制御、ファンガバナーなどの基本要素があります。これらはすべて、ユーザーの好みに応じて設定ファイルを介してプログラム可能です。この章では、それぞれについて以下のセクションで説明します。
+nvfancontrolサービスには、Tmargin、キックスタートPWM、ファンプロファイル、ファン制御、ファンガバナーなど、いくつかの基本要素があります。これらはすべて、ユーザーの好みに基づいて設定ファイルを介してプログラムできます。この章では、以下のセクションでそれぞれについて説明します。
 
 :::note
-`nvfancontrol.conf` を変更したい場合は、[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)を必ずお読みください。
+nvfancontrol.confを変更したい場合は、必ず[こちら](https://docs.nvidia.com/jetson/archives/r35.4.1/DeveloperGuide/text/SD/PlatformPowerAndPerformance/JetsonOrinNanoSeriesJetsonOrinNxSeriesAndJetsonAgxOrinSeries.html?highlight=fan#fan-profile-control)を読んでください
 :::
 
 ### 使用方法
 
 <Tabs>
-<TabItem value="Method 1" label="方法 1">
+<TabItem value="Method 1" label="Method 1">
 
-- **ステップ 1:** `nvfancontrol` の systemd サービスを停止します。
+- **Step 1:** nvfancontrol systemdサービスを停止します。
 
 ```
 sudo systemctl stop nvfancontrol
 ```
 
-- **ステップ 2:** `nvfancontrol.conf` を変更します。
+- **ステップ 2:** nvfancontrol.conf を変更します。
 
 ```
 vi /etc/nvfancontrol.conf 
 ```
+
 :::note
-`nvfancontrol.conf` を変更した後、`Esc` を押して `:q` と入力して終了します。
+nvfancontrol.confを変更した後、`Esc`と`:q`を入力して終了してください
 :::
 
-- **ステップ 3:** ステータスファイルを削除します。
+- **ステップ3:** ステータスファイルを削除します。
 
 ```
 sudo rm /var/lib/nvfancontrol/status
 ```
 
-- **ステップ 4:** `nvfancontrol` の systemd サービスを再起動します。
+- **ステップ 4:** nvfancontrol systemd サービスを再起動します。
 
 ```
 sudo systemctl restart nvfancontrol
 ```
+
 </TabItem>
 
-<TabItem value="Method 2" label="方法 2">
+<TabItem value="Method 2" label="Method 2">
 
-- **ステップ 1:** ルートモードに入ります。
+- **ステップ 1:** rootモードに入る。
 
 ```
 sudo -i
 ```
 
-- **ステップ 2:** `nvfancontrol` の systemd サービスを停止します。
+- **ステップ 2:** nvfancontrol systemd サービスを停止します。
 
 ```
 sudo systemctl stop nvfancontrol
 ```
 
-- **ステップ 3:** PWM 値を変更します。
+- **ステップ 3:** PWM値を変更します。
 
 ```
 echo 100 > /sys/devices/platform/pwm-fan/hwmon/hwmon3/pwm1
 ```
+
 :::note
-値が大きいほどファン速度が速くなります。PWM 値は 0 から 255 の間で設定する必要があります。**hwmon3** があなたのパスでない可能性があるため、自分のパスを確認してください。
+値が大きいほど、ファンの速度が速くなります。PWM値は0から255の間である必要があります。**hwmon3**があなたのパスワードではない可能性があるので、自分のパスワードを確認してください
 :::
 
-- **ステップ 4:** RPM を確認します。
+- **ステップ4:** rpmを確認します。
 
 ```
 cat /sys/class/hwmon/hwmon0/rpm
 ```
+
 </TabItem>
 </Tabs>
 
@@ -408,7 +407,7 @@ cat /sys/class/hwmon/hwmon0/rpm
   <th>モジュールピン名</th>
   <th>モジュールピン</th>
   <th>SoCピン名</th>
-  <th>デフォルト使用法</th>
+  <th>デフォルト用途</th>
   <th>代替機能</th>
 </tr>
 </thead>
@@ -418,7 +417,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>メイン 3.3V 電源</td>
+      <td>メイン3.3V電源</td>
       <td>-</td>
     </tr>
     <tr>
@@ -426,7 +425,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>メイン 5.0V 電源</td>
+      <td>メイン5.0V電源</td>
       <td>-</td>
     </tr>
     <tr>
@@ -442,7 +441,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>メイン 5.0V 電源</td>
+      <td>メイン5.0V電源</td>
       <td>-</td>
     </tr>
     <tr>
@@ -458,7 +457,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -482,7 +481,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -507,7 +506,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>199</td>
       <td>DAP5_SCLK</td>
       <td>GPIO</td>
-      <td>オーディオ I2S #0 クロック</td>
+      <td>オーディオI2S #0 クロック</td>
     </tr>
     <tr>
       <td>13</td>
@@ -522,7 +521,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -570,7 +569,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -610,7 +609,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -650,7 +649,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -682,7 +681,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -691,7 +690,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>197</td>
       <td>DAP5_FS</td>
       <td>GPIO</td>
-      <td>オーディオ I2S #0 フィールドセレクト</td>
+      <td>オーディオI2S #0 フィールドセレクト</td>
     </tr>
     <tr>
       <td>36</td>
@@ -699,7 +698,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>209</td>
       <td>UART1_CTS</td>
       <td>GPIO</td>
-      <td>UART #1 送信クリア</td>
+      <td>UART #1 送信許可</td>
     </tr>
     <tr>
       <td>37</td>
@@ -715,14 +714,14 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>195</td>
       <td>DAP5_DIN</td>
       <td>GPIO</td>
-      <td>オーディオ I2S #0 データ入力</td>
+      <td>オーディオI2S #0 データ入力</td>
     </tr>
     <tr>
       <td>39</td>
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>-</td>
     </tr>
     <tr>
@@ -731,7 +730,7 @@ cat /sys/class/hwmon/hwmon0/rpm
       <td>193</td>
       <td>DAP5_DOUT</td>
       <td>GPIO</td>
-      <td>オーディオ I2S #0 データ出力</td>
+      <td>オーディオI2S #0 データ出力</td>
     </tr>
   </tbody>
 </table>
@@ -739,11 +738,11 @@ cat /sys/class/hwmon/hwmon0/rpm
 
 ### UART
 
-UARTはUniversal Asynchronous Receiver/Transmitter（汎用非同期受信送信機）の略です。これは、2つのデバイス間でシリアル通信を行うための通信プロトコルです。UART通信には、データを送信するためのピン（TX）とデータを受信するためのピン（RX）の2つが必要です。非同期通信であるため、デバイス間で共有されるクロック信号なしでデータが送信されます。UARTは、マイクロコントローラー、センサー、異なる電子デバイス間の通信など、さまざまな用途で広く使用されています。
+UARTは、Universal Asynchronous Receiver/Transmitterの略です。これは、2つのデバイス間でのシリアル通信に使用される通信プロトコルです。UART通信には2つのピンが関与します：データを送信するためのピン（TX）とデータを受信するためのピン（RX）です。これは非同期であり、デバイス間で共有クロック信号なしでデータが送信されることを意味します。UARTは、マイクロコントローラー、センサー、および異なる電子デバイス間の通信など、さまざまなアプリケーションで一般的に使用されています。
 
 #### 接続概要
 
-UARTインターフェースは以下のピンを使用します。または、J401上の別のUARTインターフェースを使用することもできます：
+UARTインターフェースは以下のピンを使用しています。または、J401の別のUARTインターフェースを使用することもできます：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -753,7 +752,7 @@ UARTインターフェースは以下のピンを使用します。または、J
       <th>モジュールピン名</th>
       <th>モジュールピン</th>
       <th>SoCピン名</th>
-      <th>デフォルト使用</th>
+      <th>デフォルト用途</th>
       <th>代替機能</th>
     </tr>
   </thead>
@@ -791,10 +790,10 @@ UARTインターフェースは以下のピンを使用します。または、J
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
-      <th>J401ヘッダーピン</th>
-      <th>使用</th>
-      <th>USB TTL変換</th>
-      <th>使用</th>
+      <th>J401 ヘッダーピン</th>
+      <th>用途</th>
+      <th>USB変換TTL</th>
+      <th>用途</th>
     </tr>
   </thead>
   <tbody>
@@ -824,33 +823,33 @@ UARTインターフェースは以下のピンを使用します。または、J
 
 #### 使用方法
 
-- **ステップ1:** [PuTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) をWindowsのラップトップにインストールし、以下のようにPuTTyを設定します：
+- **ステップ 1:** Windows ラップトップに [PuTTy](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) をインストールし、以下のように PuTTy を設定します：
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-windows-uart-set.png"/></div>
 
-- **ステップ2:** JetsonにPuTTyをインストールし、ターミナル（ALT+Ctrl+T）を開いて以下のコマンドを入力します。
+- **ステップ 2:** Jetson に PuTTy をインストールし、ターミナルを開いて（ALT+Ctrl+T）以下のコマンドを入力します。
 
 ```
 sudo apt install putty
 ```
 
-- **ステップ3:** Windows上のPuTTyを使用してJetsonに「hello linux」を送信し、Jetson上のPuTTyを使用してWindowsに「hello windows」を送信します。
+- **ステップ 3:** Windows上のPuTTyを使用してJetsonに'hello linux'を送信し、Jetson上のPuTTyを使用してWindowsに'hello windows'を送信します。
 
 :::note
 ボーレートが115200に設定されていることを確認してください。
 :::
 
-結果は以下のようになります：
+結果は以下の通りです：
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-uart-result.gif"/></div>
 
 ### I2C
 
-I2CはInter-Integrated Circuit（相互集積回路）の略です。これは、システム内の複数の集積回路間で通信を可能にする広く使用されているシリアル通信プロトコルです。I2Cは、データ用（SDA）とクロック用（SCL）の2つの双方向ラインを使用します。I2Cバスに接続されたデバイスは、マスターまたはスレーブとして動作でき、複数のデバイスが互いに通信することができます。I2Cは、そのシンプルさ、柔軟性、およびセンサー、メモリチップ、その他の周辺機器など、さまざまなデバイスを接続できる能力で人気があります。
+I2Cは Inter-Integrated Circuit の略です。これは、システム内の複数の集積回路間の通信を可能にする広く使用されているシリアル通信プロトコルです。I2Cは2つの双方向ライン（データ用のSDAとクロック用のSCL）を使用します。I2Cバスに接続されたデバイスは、マスターまたはスレーブとして動作でき、複数のデバイスが相互に通信することを可能にします。I2Cは、その簡潔性、柔軟性、および組み込みシステムや電子機器において、センサー、メモリチップ、その他の周辺機器などの様々なデバイスを接続する能力で人気があります。
 
 #### 接続概要
 
-I2Cインターフェースは以下のピンを使用します。または、J401上の別のI2Cインターフェースを使用することもできます：
+I2Cインターフェースは以下のピンを使用しています。または、J401上の他のI2Cインターフェースを使用することもできます：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
@@ -860,7 +859,7 @@ I2Cインターフェースは以下のピンを使用します。または、J4
       <th>モジュールピン名</th>
       <th>モジュールピン</th>
       <th>SoCピン名</th>
-      <th>デフォルト使用</th>
+      <th>デフォルト用途</th>
       <th>代替機能</th>
     </tr>
   </thead>
@@ -869,7 +868,7 @@ I2Cインターフェースは以下のピンを使用します。または、J4
       <td>-</td>
       <td>-</td>
       <td>-</td>
-      <td>メイン5.0V供給</td>
+      <td>メイン5.0V電源</td>
       <td>-</td>
     </tr>
     <tr>
@@ -899,21 +898,21 @@ I2Cインターフェースは以下のピンを使用します。または、J4
     </table>
 </div>
 
-以下のようにJ401を[Grove-3-Axis Digital Accelerometer](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-1-5g.html)とI2Cで接続します：
+J401を[Grove-3軸デジタル加速度計](https://www.seeedstudio.com/Grove-3-Axis-Digital-Accelerometer-1-5g.html)にI2Cで以下のように接続します：
 
 <div class="table-center">
 <table style={{textAlign: 'center'}}>
   <thead>
     <tr>
       <th>J401</th>
-      <th>使用</th>
-      <th>Grove-3-Axis Digital Accelerometer</th>
-      <th>使用</th>
+      <th>用途</th>
+      <th>Grove-3軸デジタル加速度計</th>
+      <th>用途</th>
     </tr>
   </thead>
     <tr>
       <td>2</td>
-      <td>5V供給</td>
+      <td>5V電源</td>
       <td>Vcc</td>
       <td>-</td>
     </tr>
@@ -931,9 +930,9 @@ I2Cインターフェースは以下のピンを使用します。または、J4
     </tr>
         <tr>
       <td>6</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
       <td>GND</td>
-      <td>グラウンド</td>
+      <td>グランド</td>
     </tr>
 </table>
 </div>
@@ -942,34 +941,34 @@ I2Cインターフェースは以下のピンを使用します。または、J4
 
 #### テスト
 
-ターミナル（ALT+Ctrl+T）を開き、以下のコマンドを入力します：
+ターミナルを開き（ALT+Ctrl+T）、以下のコマンドを入力します：
 
 ```
 i2cdetect -y -r 7
 ```
 
 :::note
-コマンド内のチャンネル番号```i2cdetect -y -r x```は、環境によって異なる場合があります。
+コマンド ```i2cdetect -y -r x``` では、あなたのチャンネルは私のものと異なる場合があります。
 :::
 
-以下のような結果が表示されます。I2C接続前はチャンネル7にI2Cデバイスが検出されませんでしたが、接続後はアドレス0x19のI2Cデバイスが検出されました。
+以下のような結果が表示されます。I2Cに接続する前は、チャンネル7でI2Cデバイスが検出されませんでしたが、接続後はアドレス0x19のI2Cデバイスが検出されました。:
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/A608/J401-I2C-test.png"/></div>
 
 :::info
-汎用IOピンをロジック制御に使用したい場合は、[このWiki](/ja/reComputer_Jetson_GPIO)を参照してください。
+汎用IOピンをロジック制御に使用したい場合は、[このwiki](/reComputer_Jetson_GPIO)を参照してください。
 :::
 
-## 技術サポートと製品ディスカッション
+## 技術サポート & 製品ディスカッション
 
-弊社の製品をお選びいただき、ありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なる好みやニーズに対応するため、いくつかのコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

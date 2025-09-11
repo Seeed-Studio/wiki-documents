@@ -208,7 +208,7 @@ surveyurl: https://www.research.net/r/Beagle_Bone_Green_and_Grove_IoT_Starter_Ki
 
 ![](https://files.seeedstudio.com/wiki/Beagle_Bone_Green_and_Grove_IoT_Starter_Kit_Powered_by_AWS/img/BbgAWSexamples.png)
 
-创建一个名为 grove\_temperature\_sensor.py 的新文件。
+创建一个名为 grove_temperature_sensor.py 的新文件。
 
     # vim grove_temperature_sensor.py
 
@@ -310,7 +310,7 @@ if __name__ == '__main__':
             print "Error"
 ```
 
-创建一个名为 python\_sensor.py 的新文件。
+创建一个名为 python_sensor.py 的新文件。
 
 将以下代码翻译为简体中文，同时保持原始格式和结构：
 

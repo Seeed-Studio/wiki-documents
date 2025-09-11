@@ -23,9 +23,7 @@ Before connecting to Helium, you need to configure the basic parameters of your 
 
 ## Helium Console Configuration
 
-The Helium console is no longer open for new accounts. The description for how to connect a T1000 to the Helium Console
-remains here for users that already have an account. For new users, please refer to the ChirpStack LNA steps above or determine
-the necessary steps for your particular LNA based on the two existing examples here.
+The Helium console is no longer open for new accounts. The description for how to connect a T1000 to the Helium Console remains here for users that already have an account. For new users, please refer to the ChirpStack LNA steps above or determine the necessary steps for your particular LNA based on the two existing examples here.
 
 ### Add New Device
 
@@ -927,8 +925,7 @@ So if the upload interval you set is less than 4 minutes, real-time data will be
 
 ## ChirpStack LNS
 
-For new users, to receive the data from a device on the Helium network it must be associated with an LNS (LoraWAN Network Server), typically use one of the [public LNSs](https://docs.helium.com/iot/find-a-lns-provider/), many of which use
-**ChirpStack**, but it's also possible to connect one's own LNS to Helium.
+For new users, to receive the data from a device on the Helium network it must be associated with an LNS (LoraWAN Network Server), typically use one of the [public LNSs](https://docs.helium.com/iot/find-a-lns-provider/), many of which use **ChirpStack**, but it's also possible to connect one's own LNS to Helium.
 
 For those familiar with the general process the TL;DR; is:
 
@@ -948,8 +945,7 @@ On the general tab, enter a device profile name you will recognize and select th
 
 LoRaWAN MAC version: `1.0.4`<br/>
 
-The expected uplink interval can be set too, the main thing it controls is when the LNS user interface shows the device
-as active vs. inactive. It has no effect on the delivery of packets through the LNS.
+The expected uplink interval can be set too, the main thing it controls is when the LNS user interface shows the device as active vs. inactive. It has no effect on the delivery of packets through the LNS.
 
 ![image](https://github.com/user-attachments/assets/bb83141f-a447-437b-a29d-27e16a20ce7a)
 
@@ -994,8 +990,7 @@ Once this happens, you should see something like this:
 
 ![image](https://github.com/user-attachments/assets/060873cb-c1d8-40bd-9ad3-7333966d3558)
 
-Once the join process has been performed the T1000 sends data. The LNS responds back with some information about the network
-frequencies and such, but subsequent to that there should only be uplinks with data.
+Once the join process has been performed the T1000 sends data. The LNS responds back with some information about the network frequencies and such, but subsequent to that there should only be uplinks with data.
 
 ## Resource
 

@@ -1,65 +1,61 @@
 ---
-description: Dockerの使い方を始める
-title: Dockerの使い方を始める
+description: Dockerを始める
+title: Dockerを始める
 keywords:
   - Edge
-  - reComputer アプリケーション
+  - reComputer Application
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/jetson-docker-getting-started
 last_update:
-  date: 05/15/2025
+  date: 01/04/2023
   author: w0x7ce
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# Dockerの使い方を始める
+# Dockerを始める
 
-> これは、[Ajeet](https://collabnix.com/author/ajeetraina)による[collabnix.com](https://collabnix.com)の[ブログ](https://collabnix.com/getting-started-with-docker-on-seeed-studios-recomputer-powered-by-nvidia-jetson)を再投稿したものです。すべてのクレジットは彼に帰属します。
+> これは[collabnix.com](https://collabnix.com)の[Ajeet](https://collabnix.com/author/ajeetraina)によって書かれた[ブログ](https://collabnix.com/getting-started-with-docker-on-seeed-studios-recomputer-powered-by-nvidia-jetson)の再投稿です。すべてのクレジットは彼に帰属します。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/1.jpeg" /></div>
 
-先週、私は幸運にも最新のSeeed Studio [reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html)エッジAIデバイスに初めてアクセスすることができました。reComputer J1020はJetson Nano開発キットを搭載しています。この小型で手のひらサイズの強力なコンピュータは、組み込み開発者向けに現代のAIの力をもたらします。この259ドルの小型デバイスは、NVIDIA Jetson Nanoシステムオンモジュールを中心に構築されており、エッジAIアプリケーション向けに設計されています。このデバイスは、画像分類、物体検出、セグメンテーション、音声処理などのアプリケーション向けに複数のニューラルネットワークを並列で実行することができます。豊富な拡張モジュール、産業用周辺機器、熱管理機能を備えたreComputer J1020は、人気のあるDNNモデルやMLフレームワークをエッジにデプロイし、高性能で推論を行うことで、リアルタイム分類や物体検出、ポーズ推定、セマンティックセグメンテーション、自然言語処理（NLP）などの次世代AI製品を加速・スケールする準備が整っています。
+先週、私は初めてSeeed Studioの最新[reComputer J1020](https://www.seeedstudio.com/Jetson-10-1-H0-p-5335.html)エッジAIデバイスにアクセスする幸運に恵まれました。reComputer J1020はJetson Nano開発キットによって駆動されています。これは小さく、手のひらサイズの強力なコンピューターで、組み込み開発者に現代AIの力をもたらします。この259ドルの小さなデバイスは、NVIDIA Jetson Nanoシステムオンモジュールを中心に構築され、エッジAIアプリケーション向けに設計されています。このデバイスでは、画像分類、物体検出、セグメンテーション、音声処理などのアプリケーション向けに複数のニューラルネットワークを並列実行できます。豊富な拡張モジュール、産業用周辺機器、熱管理により、reComputer J1020は人気のDNNモデルとMLフレームワークをエッジに展開し、リアルタイム分類と物体検出、姿勢推定、セマンティックセグメンテーション、自然言語処理（NLP）などのタスクに対して高性能で推論を行うことで、次世代AI製品の加速とスケールを支援する準備が整っています。
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/2.jpg" /></div>
 
-## reComputer J1020のユニークな点は？
+## reComputer J1020の独自性とは？
 
-[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Introduction/#recomputer-j1020)は、AIベースのアプリケーションを構築するために必要なすべてを備えています。NVIDIAが提供するJetson Nano開発キットと比較して、SDカードにオペレーティングシステムをゼロからフラッシュする必要がありません。Ubuntu OSが16GB eMMCにすでにプリインストールされています。reComputerにプリインストールされているJetpack 4.6には、ボードサポートパッケージ（BSP）、Linux OS、NVIDIA CUDA、cuDNN、TensorRTソフトウェアライブラリ（ディープラーニング、コンピュータビジョン、GPUコンピューティング、マルチメディア処理用）が含まれています。これは、[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)全体と、Seeed Edge AIパートナーが提供する[高速で堅牢なAIアプリケーションを構築するための](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools)[さまざまな開発者ツール](https://wiki.seeedstudio.com/ja/Jetson-AI-developer-tools)をサポートしています。
+[Seeed Studio reComputer J1020](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Introduction/#recomputer-j1020)は、AIベースのアプリケーションの構築を開始するために必要なすべてを備えています。NVIDIAが提供するJetson Nano開発キットと比較して、SDカードにオペレーティングシステムを一から書き込む必要がありません。16GB eMMCにUbuntu OSが既にプリインストールされています。reComputerにプリインストールされたJetpack 4.6には、ボードサポートパッケージ（BSP）、Linux OS、NVIDIA CUDA、cuDNN、および深層学習、コンピュータビジョン、GPU計算、マルチメディア処理などのためのTensorRTソフトウェアライブラリが含まれています。全体の[Jetsonソフトウェアスタック](https://developer.nvidia.com/embedded/develop/software)と、Seeed Edge AIパートナーが提供する[高速で堅牢なAIアプリケーションの構築](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)のための様々な[開発者ツール](https://wiki.seeedstudio.com/Jetson-AI-developer-tools)をサポートしています。
 
-## 主な特徴
+## 注目すべき機能
 
-- 128 NVIDIA CUDA®コア – 0.5 TFLOPs（FP16）を提供し、画像分類、物体検出、セグメンテーション、音声処理などのアプリケーション向けにAIフレームワークとモデルを実行可能
-- Armv8プロセッサ搭載
-- NVIDIA Tegra X1(nvgpu)/統合型
-- ディスクサイズ16GB
-- メモリ4GB
+- 128個のNVIDIA CUDA®コア – 0.5 TFLOPS（FP16）を提供し、画像分類、物体検出、セグメンテーション、音声処理などのアプリケーション向けのAIフレームワークとモデルを実行します。
+- Armv8プロセッサを搭載
+- NVIDIA Tegra X1（nvgpu）/統合型を搭載
+- 16GBのディスクサイズ
+- 4GBメモリ
 - 64ビットOSタイプ
 - Ubuntu 18.04.5
-- Seeed Studio reComputerにはJetPack 4.6システムがすでにインストール済み
-- SDカードをフラッシュする必要なし、オペレーティングシステムがすでにインストール済み
-- CUDA 10.2.300対応
-- CUDAアーキテクチャ: 5.3
-- OpenCVバージョン: 4.1.1
+- Seeed Studio reComputerにはJetPack 4.6システムが既にインストール済み
+- SDカードを書き込む必要がなく、オペレーティングシステムが既にインストール済み
+- CUDA 10.2.300をサポート
+- CUDAアーキテクチャ：5.3
+- OpenCVバージョン：4.1.1
 
-[reComputerのハードウェアレイアウトについてさらに学ぶ](https://wiki.seeedstudio.com/ja/reComputer_Jetson_Series_Hardware_Layout)
+[reComputerのハードウェアレイアウトについて詳しく学ぶ](https://wiki.seeedstudio.com/reComputer_Jetson_Series_Hardware_Layout)
 
-## reComputer の構成部品
+## reComputerのコンポーネント
 
-以下の部品リストが含まれています：
+以下の部品リストが付属しています：
 
 - NVIDIA Jetson Nano x1
-- Seed Reference Carrier Board x1
+- Seed リファレンスキャリアボード x1
 - パッシブアルミニウムヒートシンク x1
 - アルミニウムケース x1
 - 12V電源アダプター x1
-- USB 3.0ポート x4
-- HDMIポート x2
-- MIPI-CSIカメラコネクタ
-- コントロールおよびUARTヘッダー
-- 40ピン拡張ヘッダー(GPIO, I2C, ヘッダー)
+- 4x USB 3.0ポート
+- 2x HDMIポート
+- MIPI-CSIカメラコネクター
+- 制御およびUARTヘッダー
+- 40ピン拡張ヘッダー（GPIO、I2C、ヘッダー）
 - 260ピンSODIMM
 - MicroUSB
 - ギガビットイーサネットポート
@@ -67,16 +63,16 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 ## ハードウェアセットアップ
 
-開始するには、以下の最小限の接続が必要です：
+開始するには、以下の最小限のコネクターが必要です：
 
 - 電源ケーブル
-- WiFiモジュール / ギガビットイーサネットケーブル
-- WiFiキーボードとマウス用のUSBレシーバー
+- Wifiモジュール / ギガビットイーサネットケーブル
+- WiFiキーボードとマウス用USBレシーバー
 - ディスプレイへのHDMI接続
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/3.jpg" /></div>
 
-## CUDA deviceQuery の実行
+## CUDA deviceQueryの実行
 
 ```sh
 cd /usr/local/cuda/samples/1_Utilities/deviceQuery
@@ -84,7 +80,7 @@ sudo make
 ./deviceQuery
 ```
 
-以下は結果です：
+結果は以下の通りです：
 
 ```sh
 ./deviceQuery Starting...
@@ -132,15 +128,15 @@ deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 10.2, CUDA Runtime Vers
 Result = PASS
 ```
 
-## reComputer Jetson NanoでのDockerの実行
+## reComputer Jetson Nano での Docker の実行
 
 <div align="center"><img width={600} src="https://files.seeedstudio.com/wiki/jetson-docker/4.png" /></div>
 
-[Docker](https://www.docker.com) は、個々のコンテナを作成、共有、実行するためのソフトウェア開発ツールのスイートです。これは、アプリケーションとそのすべての依存関係をDockerコンテナの形でパッケージ化し、どの環境でもアプリケーションがシームレスに動作することを保証するコンテナ化プラットフォームです。Dockerコンテナは、特定のアプリケーションや環境をデプロイするために即座に作成できる標準化されたユニットです。
+[Docker](https://www.docker.com) は、個別のコンテナを作成、共有、実行するためのソフトウェア開発ツールスイートです。これは、アプリケーションとそのすべての依存関係を Docker コンテナの形でパッケージ化するコンテナ化プラットフォームであり、アプリケーションがあらゆる環境でシームレスに動作することを保証します。Docker Container は、特定のアプリケーションや環境をデプロイするために即座に作成できる標準化されたユニットです。
 
-今日では、どのような種類のアプリケーションを開発する場合でも複雑です。単にコードを書く以上のことが必要です。プログラミング言語、ウェブフレームワーク、複雑なアーキテクチャ、各ライフサイクル段階のツール間の不連続なインターフェースなど、多くの要素が絡み合い、膨大な複雑さを生み出します。Dockerはワークフローを簡素化し、加速させるとともに、開発者にツール、アプリケーションスタック、各プロジェクトのデプロイメント環境を自由に選択する権利を与えます。これにより、アプリケーションをインフラストラクチャから分離し、迅速にソフトウェアを提供することが可能になります。
+今日、あらゆる種類のアプリケーションを開発することは複雑です。それはコードを書くことよりもはるかに多くのことを含みます。多数のプログラミング言語、Web フレームワーク、複雑なアーキテクチャ、そして各ライフサイクル段階のツール間の不連続なインターフェースがあり、それが膨大な複雑さを生み出しています。Docker はワークフローを簡素化し、加速させる一方で、開発者に各プロジェクトのツール、アプリケーションスタック、デプロイメント環境の選択の自由を与えます。これにより、アプリケーションをインフラストラクチャから分離し、ソフトウェアを迅速に提供できるようになります。
 
-Dockerは公式にreComputer J1020、Jetson Nanoを搭載した開発キットでサポートされています。このキットには最新バージョンのDockerがデフォルトでプリインストールされています。以下のコマンドを実行してDockerのバージョンを確認できます：
+Docker は、Jetson Nano を搭載した開発キットである reComputer J1020 で公式にサポートされています。このキットには、デフォルトで最新バージョンの Docker がプリインストールされています。以下のコマンドを実行することで、Docker のバージョンを確認できます：
 
 ```sh
 sudo docker version
@@ -177,9 +173,9 @@ Server: Docker Engine - Community
   GitCommit:        de40ad0
 ```
 
-## Docker Composeのインストール
+## Docker Compose のインストール
 
-reComputer Jetson にはDocker Composeがプリインストールされていません。以下の手順に従ってシステムにDocker Composeをインストールできます：
+reComputer Jetson には Docker Compose がインストールされていません。以下の手順に従って、システムに Docker Compose をインストールできます：
 
 ```sh
 export DOCKER_COMPOSE_VERSION=2.6.0
@@ -191,7 +187,7 @@ apt install python3-pip
 pip install docker-compose
 ```
 
-## 最新バージョンのCUDAツールキットをインストールする
+## Install the latest version of CUDA toolkit
 
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/sbsa/cuda-ubuntu1804.pin
@@ -203,7 +199,7 @@ sudo apt-get update
 sudo apt-get -y install cuda
 ```
 
-## Docker ランタイムの確認
+## Verify Docker runtime
 
 ```sh
 docker info | grep runtime
@@ -211,19 +207,19 @@ docker info | grep runtime
  Runtimes: nvidia runc io.containerd.runc.v2 io.containerd.runtime.v1.linuxs
 ```
 
-## 初めての Python コンテナの実行
+## 初回のPythonコンテナの実行
 
-以下のコマンドを実行して、Arm ベースのシンプルな Python Docker イメージを試してみましょう：
+以下のコマンドを実行して、シンプルなArmベースのPython Docker イメージをテスト実行してみましょう：
 
 ```sh
 sudo docker run arm64v8/python:slim ls
 ```
 
-## JTOP Docker コンテナを使用した CPU、GPU、メモリの監視
+## JTOP Docker コンテナを使用したCPU、GPU、メモリの監視
 
-このセクションでは、CPU、RAM、GPU を監視するためのシステム監視ユーティリティを設定する方法を説明します。ここでは JTOP ユーティリティを使用します。JTOP はターミナル上で動作するシステム監視ユーティリティで、reComputer Jetson Nano キットの CPU、RAM、GPU のステータスや周波数をリアルタイムで確認および制御できます。このユーティリティをコンテナ化する方法を見ていきましょう。それでは始めましょう –
+このセクションでは、CPU、RAM、GPUを監視するためのシステム監視ユーティリティの設定方法を説明します。JTOPユーティリティを使用します。Jtopは、ターミナル上で動作するシステム監視ユーティリティで、reComputer Jetson Nanoキットの状態、CPU、RAM、GPUの状態と周波数をリアルタイムで確認・制御できます。このユーティリティをコンテナ化する方法を説明します。それでは始めましょう –
 
-まず、以下の内容で Dockerfile を作成します：
+まず、以下の内容でDockerfileを作成します：
 
 ```sh
 FROM python:3-alpine
@@ -237,11 +233,11 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 ```
 
-最初の行では、python:3-alpine をベースイメージとして選択しています。2 行目では jetson-stats とその依存パッケージをインストールしています。
+最初の行では、ベースイメージとして python:3-alpine を選択していることが示されています。2行目では jetson-stats と依存パッケージをインストールしています。
 
 ## JTOP Docker イメージのビルド
 
-Docker build CLI を使用して Docker イメージをビルドします。
+docker build CLI を使用して Docker イメージをビルドします
 
 ```sh
 docker build -t ajeetraina/jetson-stats-nano .
@@ -249,29 +245,29 @@ docker build -t ajeetraina/jetson-stats-nano .
 
 ## JTOP Docker コンテナの実行
 
-次に、–gpus パラメータを渡し、jtop ソケットにマウントして Docker コンテナを実行します。
+–gpus をパラメータとして渡し、jtop ソケットにマウントして Docker コンテナを実行する時が来ました。
 
 ```sh
 docker run --rm -it --gpus all -v /run/jtop.sock:/run/jtop.sock ajeetraina/jetson-stats-nano jtop
 ```
 
-以下のような結果が表示されます：
+次の結果が表示されます：
 
 <div align="center"><img width={1000} src="https://files.seeedstudio.com/wiki/jetson-docker/5.png" /></div>
 
-次回のブログ記事では、Docker コンテナ内で OpenDatacam を使用して車両識別を実装する方法を紹介します。お楽しみに！
+次のブログ投稿では、Dockerコンテナ内で動作するOpenDatacamを使用して車両識別を実装する方法を紹介します。お楽しみに！
 
-以下のアプリケーション例とチュートリアルもぜひご覧ください！
+以下のチュートリアル付きアプリケーション例もぜひご確認ください！
 
-- [Edge Impulse による歩行者検出](https://www.edgeimpulse.com/blog/recognizing-your-blind-spots-pedestrian-detection-system-with-nvidia-jetson-nano)
-- [ヘルメット検出](https://www.seeedstudio.com/blog/2022/03/03/deploy-hard-hat-detection-for-enforcing-workplace-safety) とカスタム PPE 検出の構築
-- [alwaysAI を使用したポーズ推定](https://alwaysai.co/blog/using-pose-estimation-on-the-jetson-nano-with-alwaysai)
-- [NVIDIA Deepstream IoT を使用した視覚的異常検出](https://developer.nvidia.com/gtc/2020/video/s22675-vid)
-- [小売店の商品検出](https://www.seeedstudio.com/blog/2022/06/08/retail-store-items-detection-using-yolov5-roboflow-and-node-red)
+- [Edge Impulseによる歩行者検出](https://www.edgeimpulse.com/blog/recognizing-your-blind-spots-pedestrian-detection-system-with-nvidia-jetson-nano)
+- [ヘルメット検出](https://www.seeedstudio.com/blog/2022/03/03/deploy-hard-hat-detection-for-enforcing-workplace-safety)とカスタムPPE検出の構築
+- [alwaysAIによる姿勢推定](https://alwaysai.co/blog/using-pose-estimation-on-the-jetson-nano-with-alwaysai)
+- [NVIDIA Deepstream IoTを使用した視覚的異常検出](https://developer.nvidia.com/gtc/2020/video/s22675-vid)
+- [小売店商品検出](https://www.seeedstudio.com/blog/2022/06/08/retail-store-items-detection-using-yolov5-roboflow-and-node-red)
 - [山火事検出](https://github.com/Seeed-Studio/node-red-contrib-ml)
 - [動物検出](https://github.com/Seeed-Studio/node-red-contrib-ml)
 
-Ajeet をフォローする：
+Ajeetをフォローする：
 
 - [Twitter](https://twitter.com/ajeetsraina)
 - [LinkedIn](https://www.linkedin.com/in/ajeetsraina)
@@ -279,14 +275,14 @@ Ajeet をフォローする：
 
 ## 技術サポート & 製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品のご利用がスムーズに進むよう、さまざまなサポートをご提供しています。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

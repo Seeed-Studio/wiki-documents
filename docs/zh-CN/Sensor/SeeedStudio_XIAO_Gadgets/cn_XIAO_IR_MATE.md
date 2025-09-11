@@ -92,7 +92,7 @@ last_update:
 
 ### 步骤2：进入AP配网模式
 
-当网络未配置时，设备将自动创建一个名为**XIAO IR Mate**（或**Seeed\_ir**，取决于您找到的名称）的Wi-Fi热点（AP）。
+当网络未配置时，设备将自动创建一个名为**XIAO IR Mate**（或**Seeed_ir**，取决于您找到的名称）的Wi-Fi热点（AP）。
 
 <img
   src="https://files.seeedstudio.com/wiki/XIAO_IR_MATE/ap_mode_network_connect.png"

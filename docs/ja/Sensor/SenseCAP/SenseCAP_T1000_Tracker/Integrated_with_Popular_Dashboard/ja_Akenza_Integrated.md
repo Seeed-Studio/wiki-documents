@@ -1,26 +1,22 @@
 ---
-description: SenseCAP T1000 トラッカーを Akenza に接続する
-title: Akenza 統合 (TTS 経由)
+description: SenseCAP T1000 TrackerをAkenzaに接続する
+title: Akenza統合（TTS経由）
 keywords:
-- トラッカー
+- Tracker
 - Akenza
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_T1000_Tracker_Akenza
 last_update:
-  date: 05/15/2025
+  date: 8/25/2023
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-[Akenza](https://akenza.io/) は IoT アプリケーションの有効化プラットフォームであり、価値ある IoT 製品やサービスを構築することを可能にします。Akenza は IoT デバイスを接続し、制御し、管理する機能を一つの場所で提供します。
+[Akenza](https://akenza.io/)は、価値のある優れたIoT製品とサービスの構築を可能にするIoTアプリケーション実現プラットフォームです。IoTデバイスの接続、制御、管理をすべて一箇所で行えます。
 
-このチュートリアルでは、Seeed の [SenseCAP T1000 トラッカー](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) を Akenza 上で TTN を使用して統合する方法を学びます。
+このチュートリアルでは、SeeedのSenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)をAkenza上でTTNと統合する方法を学習します。
 ​
 <div align="right">
-Akenza チームによる執筆
+Akenzaチーム執筆
 </div>
 
 [ソース](https://docs.akenza.io/akenza.io/tutorials/add-devices/how-to-integrate-the-seeed-sensecap-t1000-tracker-on-akenza)
@@ -30,118 +26,117 @@ Akenza チームによる執筆
 
 :::info
 **アプリケーション**:
-屋内外の資産追跡におけるさまざまなユースケース: <br/>
+様々な用途での屋内/屋外資産追跡: <br/>
 国際的な資産追跡<br/>
-設備監視<br/>
-共有設備の追跡など<br/>
-SOS ボタンと内蔵ブザーにより、個人の安全ケース (介護施設、捜索救助) にも対応<br/>
+機器監視<br/>
+共有機器の追跡など。<br/>
+SOSボタンと内蔵ブザーによる個人安全用途（老人ホーム、捜索救助）。<br/>
 
 **製品特徴**: <br/>
-屋内外で使用可能な 3 つの位置特定技術: GNSS、Bluetooth、Wi-Fi<br/>
-温度、光、動作センサー<br/>
-SOS ボタン & ブザー<br/>
-厚さわずか 6.5mm のカードサイズデバイス
+屋内外両方対応の3つの測位技術：GNSS、Bluetooth、Wi-Fi<br/>
+温度、光、モーションセンサー<br/>
+SOSボタン＆ブザー<br/>
+わずか6.5mmの厚さのカードサイズデバイス
 :::
 
 
 ### はじめに
 
-このチュートリアルでは、Seeed の T1000 トラッカーを Akenza 上で The Things Network (TTN) を使用して登録する方法を学びます。
+このチュートリアルでは、接続プロバイダーThe Things Network（TTN）を使用してakenza上でSeeedのT1000トラッカーを登録する方法を学習します。
 
 :::info
-ここでは、既存の TTN アカウントを持っていないことを前提とし、Akenza の [Connectivity-as-a-Service](https://docs.akenza.io/akenza.io/get-started/your-integration) を使用してデバイスを接続します。
+ここでは既存のTTNアカウントをお持ちでないことを前提とし、akenzaの[Connectivity-as-a-Service](https://docs.akenza.io/akenza.io/get-started/your-integration)を使用してデバイスを接続します。
 
-既に TTN アカウントをお持ちの場合は、[統合](https://docs.akenza.io/akenza.io/get-started/your-integration#2.-integrations)パネルを使用して直接同期することができます。
+すでにTTNのアカウントをお持ちの場合は、もちろん[統合](https://docs.akenza.io/akenza.io/get-started/your-integration#2.-integrations)パネルを使用して直接同期できます。
 :::
 
-プラットフォームに新しいデバイスを登録するには、Akenza 内でデータ処理チェーンを定義する `Data Flow` を作成する必要があります。
+プラットフォームに新しいデバイスを登録するには、akenzaでのデータ処理チェーンを定義する`Data Flow`を作成する必要があります。
 
-### データフローの作成
+### Data Flowの作成
 
-#### デバイスコネクタ
+#### Device Connector
 
-**Data Flow** を作成するには、`Data Flow` に移動して `Create Data Flow` を選択します。
+**Data Flow**を作成するには、`Data Flow`に移動して`Create Data Flow`を選択します。
 
-デバイスコネクタとして `LoRa` を選択します。TTN アカウントを統合している場合は、ここにリストされます。独自のアカウントを持っていない場合は、Akenza の [Connectivity-as-a-Service](https://docs.akenza.io/akenza.io/get-started/your-integration) を利用することができます。
+Device Connectorとして`LoRa`を選択します。TTNアカウントを統合している場合は、ここにリストされます。独自のアカウントをお持ちでない場合は、akenzaの[Connectivity-as-a-Service](https://docs.akenza.io/akenza.io/get-started/your-integration)を利用できます。
 
-The Things Network を選択します。
+The Things Networkを選択します。
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FBNwN5xlVesDpVxHQ3H4d%2FT1000-DF.png?alt=media&token=540e39fd-bea3-46dd-84a7-6af601e772f7" alt="pir" width={800} height="auto" /></p>
 
-#### デバイスタイプ
+#### Device Type
 
-**Device Type** は、デバイスからのデータをデコードするために使用されるペイロードデコーダを指定します。
+**Device Type**は、デバイスからのデータをデコードするために使用するペイロードデコーダーを指定します。
 
-検索フィールドを使用して **T1000** デバイスを見つけ、適切なデバイスタイプを選択します。その後、出力コネクタに進みます。
+検索フィールドを使用して**T1000**デバイスを見つけ、それに応じてDevice Typeを選択します。Output connectorsに進みます。
 
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FUuglz0pXA3SEsX59cdxJ%2FT1000-DF-2.png?alt=media&token=16c0dd80-f402-4477-857b-b0de9601b27b" alt="pir" width={800} height="auto" /></p>
 
-#### 出力コネクタ
+#### Output Connector
 
-データフローの出力コネクタを一つまたは複数選択します。**Output Connectors** は、デバイスからのデータが保存される場所や処理される場所を定義します。
+Data Flow用に1つまたは複数のOutput connectorsを選択します。**Output Connectors**は、デバイスからのデータをどこに保存および/または処理するかを定義します。
 
-**Akenza DB** を選択して続行します。
+**Akenza DB**を選択して進みます。
 
-Akenza DB への接続により、このデータフローを通過するすべてのデータが Akenza データベースに保存され、アクセス可能になります。**Data Flow** を保存し、名前を付けます。
+Akenza DBへの接続により、このデータフローを通過するすべてのデータがAkenzaデータベースに保存され、アクセス可能になることを保証します。**Data Flow**を保存して名前を付けます。
 
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FSOGhuXN5SrmIMjchCCJP%2FT1000-DF-3.png?alt=media&token=7e43e9ab-1a9a-4609-b1c7-36ceeaf71635" alt="pir" width={800} height="auto" /></p>
 
 
-### Seeed の T1000 デバイスを接続する
+### SeeedのT1000デバイスの接続
 
-新しいデバイスを作成するには、`Assets Inventory` メニュー内で `Create Device` を選択します。デバイス名を追加し、必要に応じて説明、[タグ](https://docs.akenza.io/akenza.io/get-started/create-new-device/how-to-use-tags-on-akenza) または [カスタムフィールド](https://docs.akenza.io/akenza.io/get-started/create-new-device/how-to-use-custom-fields-on-akenza) を追加します。
+新しいデバイスを作成するには、Assets Inventoryのメニュー内で`Create Device`を選択します。デバイス名と、オプションで説明、[タグ](https://docs.akenza.io/akenza.io/get-started/create-new-device/how-to-use-tags-on-akenza)または[カスタムフィールド](https://docs.akenza.io/akenza.io/get-started/create-new-device/how-to-use-custom-fields-on-akenza)を追加します。
 
 <p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FI6gtMgKsAlazzNMO2Umz%2FT1000-CD-1.png?alt=media&token=ef5c5b56-1409-4b89-8893-66ca3bdb5822" alt="pir" width={800} height="auto" /></p>
 
-次のステップでは、先ほど作成した **Data Flow** を選択します。
+次のステップで、以前に作成した**Data Flow**を選択します。
 ​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FVPZ35a4DKdujIqlP84gR%2FT1000-CD-2.png?alt=media&token=73ced82f-ea7b-436c-a42d-36dc44ec3f12" alt="pir" width={800} height="auto" /></p>
 
-次に、T1000 トラッカーに関するすべての **Connectivity Parameters** を入力します。これらはデバイスの製造元から提供されます。
+T1000トラッカーに関するすべての**Connectivity Parameters**を入力します。これらはデバイスの製造元から提供されます。
 
-作成ボタンをクリックしてプロセスを完了します。
+Create Deviceをクリックしてプロセスを完了します。
 
-作成した T1000 トラッカーは **Asset Inventory Overview** に表示されます。
+T1000トラッカーデバイスが**Asset Inventory Overview**に表示されます。
 
-デバイスの受信データを確認するには、リストからデバイスを選択し、**Data Overview** でステータスを確認してください。
+デバイスの受信データを確認するには、リストからデバイスを選択し、**Data Overview**でステータスを確認します。
 
-<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2Fllgd7HtP8VBZbAgeNU4M%2FT1000-Asset.png?alt=media&token=2665b736-aed6-4533-b7bb-aaa5542f5d67" alt="pir" width={800} height="auto" /></p>
+​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2Fllgd7HtP8VBZbAgeNU4M%2FT1000-Asset.png?alt=media&token=2665b736-aed6-4533-b7bb-aaa5542f5d67" alt="pir" width={800} height="auto" /></p>
 
-**おめでとうございます！**  
-Seeed SenseCAP T1000-A トラッカーを TTN LoRaWAN ネットワーク経由で akenza に正常に接続しました！
+**おめでとうございます**。TTN LoRaWANネットワーク経由でSeeed SenseCAP T1000-Aトラッカーをakenzaに正常に接続しました！
 
-### Bluetooth を使用したトラッカーの設定方法
+### Bluetooth経由でトラッカーを設定する方法
 
-Seeed の SenseCAP Mate アプリを使用すると、トラッカーのさまざまな動作モードやその他の設定を構成できます。<br/> 
-iOS の場合は、App Store で「SenseCAP Mate」を検索してダウンロードしてください。<br/>
-Android の場合は、Google Store で「SenseCAP Mate」を検索してダウンロードしてください。<br/>
-デバイスのさまざまな動作モードや設定の詳細については、[ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide.pdf) を参照してください。
+SeeedのSenseCAP Mateアプリを使用すると、トラッカーの異なる動作モードやその他の設定を構成できます。<br/> 
+iOSの場合は、App Storeで「SenseCAP Mate」を検索してダウンロードしてください。<br/>
+Androidの場合は、Google Storeで「SenseCAP Mate」を検索してダウンロードしてください。<br/>
+異なる動作モードと設定の詳細な説明については、デバイスの[ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide.pdf)を参照してください。
 
-### LoRa ダウンリンクを使用したトラッカーの設定方法
+### LoRaダウンリンク経由でトラッカーを設定する方法
 
-モバイルアプリの代わりに、[ダウンリンク](https://docs.akenza.io/akenza.io/get-started/connectors/downlink) パケットを使用して T1000 トラッカーを直接設定することもできます。<br/>
-そのためには、トラッカーのデバイス詳細ページに移動し、ダウンリンクタブを選択します。<br/>
-正しい HEX ペイロードとポート番号を入力し、「Send message」をクリックして送信します。<br/>
-デバイスのさまざまな動作モードや設定の詳細については、[ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide.pdf) を参照してください。
+モバイルアプリの代替として、[ダウンリンク](https://docs.akenza.io/akenza.io/get-started/connectors/downlink)パケットを使用してT1000トラッカーを直接設定できます。<br/>
+そのためには、トラッカーのデバイス詳細ページに移動し、Downlinkタブを選択してください。<br/>
+正しいHEXペイロードとポート番号を入力し、Send messageをクリックして続行してください。<br/>
+異なる動作モードと設定の詳細な説明については、デバイスの[ユーザーガイド](https://files.seeedstudio.com/products/SenseCAP/SenseCAP_Tracker/SenseCAP_Tracker_T1000-AB_User_Guide.pdf)を参照してください。
+​
+​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2F5KtoZmSstaZQ7vMLevdo%2FT1000-downlink.png?alt=media&token=e8d29de7-9b7a-4c57-8376-443ceb8c9ee1" alt="pir" width={800} height="auto" /></p>
 
-<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2F5KtoZmSstaZQ7vMLevdo%2FT1000-downlink.png?alt=media&token=e8d29de7-9b7a-4c57-8376-443ceb8c9ee1" alt="pir" width={800} height="auto" /></p>
+### 🚀ジオフェンスとマップビューでさらに活用する
 
-### 🚀ジオフェンスとマップビューを活用する
-
-デバイスから位置データを受信できるようになったら、akenza の他の資産追跡機能、つまりジオフェンスロジックブロックとダッシュボードビルダーを活用できます。
+デバイスから位置データを受信できるようになったので、akenzaの他のアセットトラッキング機能、すなわちジオフェンスロジックブロックとダッシュボードビルダーを活用できます。
 
 #### ジオフェンスロジックブロック
 
-コード不要のジオフェンスブロックを使用して、デバイスの位置に基づいてアクションや通知を作成できます。
+ノーコードジオフェンスブロックを使用して、デバイスの位置に基づいてアクションと通知を作成します。
 
-データ入力（この場合は T1000 トラッカー）を指定し、ジオフェンスブロックを追加してカスタムフェンスを作成します。最後に、デバイスがフェンスに入るまたは出るときにトリガーされるアクションを定義します。
+データ入力（この場合はT1000トラッカー）を指定し、ジオフェンスブロックを追加し、カスタムフェンスを作成し、最後にデバイスがフェンスに入るか出るときにトリガーされる結果アクションを定義するだけです。
 
-<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FhlQoCpjhK7JyUYmUTGSg%2FT1000-geofense.png?alt=media&token=835f6423-4474-44d6-8712-cd6c500e6f7f" alt="pir" width={800} height="auto" /></p>
+​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FhlQoCpjhK7JyUYmUTGSg%2FT1000-geofense.png?alt=media&token=835f6423-4474-44d6-8712-cd6c500e6f7f" alt="pir" width={800} height="auto" /></p>
 
-#### ダッシュボード ビルダーのマップビュー
+#### ダッシュボードビルダーのマップビュー
 
-ダッシュボードビルダーのマップコンポーネントを使用して、T1000 トラッカーの位置をリアルタイムで表示します。
+ダッシュボードビルダーのマップコンポーネントを使用して、T1000トラッカーの位置をリアルタイムで表示します。
 
-ダッシュボード ビルダーに移動して新しいダッシュボードを作成するだけです。または、資産追跡テンプレートを開始点として使用することもできます。マップコンポーネントを追加し、データソースとして T1000 トラッカーを選択します。センサーの緯度と経度の読み取り値を選択し、必要に応じて追加のマーカーデータポイント（例：バッテリー残量）を追加します。
+ダッシュボードビルダーに移動して新しいダッシュボードを作成するだけです。または、出発点としてAsset Trackingテンプレートを使用することもできます。Mapコンポーネントを追加し、データのソースとしてT1000トラッカーを選択します。センサーの緯度と経度の読み取り値を選択し、必要に応じて追加のマーカーデータポイント（例：バッテリー充電量）を追加します。
 
-これで、マップ上で資産をリアルタイムで追跡でき、デバイスアイコンの横にある「Track」をクリックすると、その経路を表示することもできます。
+これで、マップ上でアセットをリアルタイムで追跡でき、デバイスアイコンの横にあるTrackをクリックしてパスを表示することもできます。
 
-<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FaCi1AyERgs0q0L1Gidjq%2FT1000-map.png?alt=media&token=5d461816-1e73-48ab-bbd8-3edb8bc139f8" alt="pir" width={800} height="auto" /></p>
+​<p style={{textAlign: 'center'}}><img src="https://3656276971-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MMKXTFIN5ZlLOjBlfC4%2Fuploads%2FaCi1AyERgs0q0L1Gidjq%2FT1000-map.png?alt=media&token=5d461816-1e73-48ab-bbd8-3edb8bc139f8" alt="pir" width={800} height="auto" /></p>

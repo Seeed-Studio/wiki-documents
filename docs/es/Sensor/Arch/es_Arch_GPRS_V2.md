@@ -63,8 +63,8 @@ Primeros Pasos
 ![](https://files.seeedstudio.com/wiki/Arch_GPRS_V2/img/Get_started_with_arch.png)
 
 1. Inicia sesión en el entorno mbed desde [aquí](http://www.mbed.org)
-2. Importa el programa [mbed\_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS)
-3. Verifica que el código importado en main.cpp en la carpeta mbed\_blinky en el entorno del Compilador en línea de mbed sea como se indica en la figura anterior bajo el Paso 3. Asegúrate de que la plataforma seleccionada para compilar el código sea el Seeeduino-Arch. Ahora procede a compilar el código. Cuando se te pida guardar el archivo binario resultante (.bin), guárdalo en una carpeta designada en tu PC.
+2. Importa el programa [mbed_blinky](https://mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-GPRS)
+3. Verifica que el código importado en main.cpp en la carpeta mbed_blinky en el entorno del Compilador en línea de mbed sea como se indica en la figura anterior bajo el Paso 3. Asegúrate de que la plataforma seleccionada para compilar el código sea el Seeeduino-Arch. Ahora procede a compilar el código. Cuando se te pida guardar el archivo binario resultante (.bin), guárdalo en una carpeta designada en tu PC.
 4. Ahora conecta tu placa Arch a tu PC y mantén presionado el botón de reset. Una unidad USB extraíble llamada CRP DISABLD debería aparecer automáticamente en tu PC. Ve a la unidad CRP DISABLD, elimina el archivo de firmware existente que ves en la carpeta y copia el archivo binario descargado a CRP DISABLD. Presiona rápidamente el botón de reset para ejecutar el nuevo binario.
 5. Verifica que tu código se esté ejecutando exitosamente observando la placa Arch GPRS V2. Si el LED más a la derecha del Pinout mostrado arriba está parpadeando y los otros 3 LEDs junto a él están todos ENCENDIDOS, esto implica que tu código está funcionando.
 

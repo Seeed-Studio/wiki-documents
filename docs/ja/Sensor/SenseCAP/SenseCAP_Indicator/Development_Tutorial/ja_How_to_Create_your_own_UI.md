@@ -2,28 +2,23 @@
 description: LVGLコーディングまたはSquareline Studioを使用して独自のUIを作成する
 title: 独自のUIを作成する方法
 keywords:
-- インジケータ開発チュートリアル
+- Indicator Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_How_to_Create_your_own_UI
 sidebar_position: 4
 last_update:
-  date: 05/15/2025
+  date: 5/31/2023
   author: Thomas
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 # **独自のUIを作成する方法**
 
 ## **LvGL**
 
-[LvGL](https://docs.lvgl.io/master/intro/index.html) は、使いやすいグラフィカル要素、美しい視覚効果、低メモリフットプリントを備えた組み込みGUIを作成するために必要なすべてを提供するオープンソースのグラフィックスライブラリです。
+[LvGL](https://docs.lvgl.io/master/intro/index.html)は、使いやすいグラフィカル要素、美しい視覚効果、低メモリフットプリントで組み込みGUIを作成するために必要なすべてを提供するオープンソースのグラフィックスライブラリです。
 
 ### **サンプルコード**
 
-UIインターフェースのデモコードを提供しています。また、[lvGLサンプルファイル](https://docs.lvgl.io/master/examples.html)には、UIを描画するための多くのサンプルコードが含まれており、これを参考にしてサンプルコードを変更したり、独自のUIをカスタマイズすることができます。
+UIインターフェースのデモコードを提供しており、[lvGLサンプルファイル](https://docs.lvgl.io/master/examples.html)には参考用のUI描画サンプルコードが多数あります。サンプルコードを修正したり、独自のUIをカスタマイズしたりできます。
 
 ```c
 #include "freertos/FreeRTOS.h"
@@ -41,34 +36,34 @@ static const char *TAG = "app_main";
 
 void app_main(void)
 {
-    ESP_LOGI("TAG", "システム開始");
+    ESP_LOGI("TAG", "system start");
 
     ESP_ERROR_CHECK(bsp_board_init());
     lv_port_init();
 
 #if CONFIG_LCD_AVOID_TEAR
-    ESP_LOGI(TAG, "LCDのティアリング効果を回避");
+    ESP_LOGI(TAG, "Avoid lcd tearing effect");
 #if CONFIG_LCD_LVGL_FULL_REFRESH
-    ESP_LOGI(TAG, "LVGLフルリフレッシュ");
+    ESP_LOGI(TAG, "LVGL full-refresh");
 #elif CONFIG_LCD_LVGL_DIRECT_MODE
-    ESP_LOGI(TAG, "LVGLダイレクトモード");
+    ESP_LOGI(TAG, "LVGL direct-mode");
 #endif
 #endif
 
     lv_port_sem_take();
-    lv_demo_widgets();      /* ウィジェットの例。これがデフォルトで提供されるものです */
-    //lv_demo_music();        /* モダンなスマートフォン風の音楽プレイヤーデモ。 */
-    //lv_demo_stress();       /* LVGLのストレステスト。 */
-    //lv_demo_benchmark();    /* LVGLのパフォーマンスを測定したり、異なる設定を比較するためのデモ。 */
-    // ui_demo1_init();         /* 仮想プリンターを表示するデモ（800*480が必要）*/
-    //ui_demo2_init();         /* 仮想チューナーを表示するデモ
-                                /* （480*800が必要、menuconfigでLCD_EVB_SCREEN_ROTATION_90を設定）*/
+    lv_demo_widgets();      /* A widgets example. This is what you get out of the box */
+    //lv_demo_music();        /* A modern, smartphone-like music player demo. */
+    //lv_demo_stress();       /* A stress test for LVGL. */
+    //lv_demo_benchmark();    /* A demo to measure the performance of LVGL or to compare different settings. */
+    // ui_demo1_init();         /* A demo to show virtual printer (must be 800*480)*/
+    //ui_demo2_init();         /* A demo to show virtual tuner
+                                /* (must be 480*800, set LCD_EVB_SCREEN_ROTATION_90 in menuconfig)*/
     lv_port_sem_give();
 
 #if LOG_MEM_INFO
-    static char buffer[128];    /* `sprintf`用にバッファが十分であることを確認してください */
+    static char buffer[128];    /* Make sure buffer is enough for `sprintf` */
     while (1) {
-        sprintf(buffer, "   最大 /     空き /    合計\n"
+        sprintf(buffer, "   Biggest /     Free /    Total\n"
                 "\t  DRAM : [%8d / %8d / %8d]\n"
                 "\t PSRAM : [%8d / %8d / %8d]",
                 heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL),
@@ -87,11 +82,11 @@ void app_main(void)
 
 ## **Squareline Studio（オプション）**
 
-[Squareline Studio](https://docs.squareline.io/docs/squareline/) は、視覚的なインターフェースを使用してデザイナーや開発者が迅速かつ効率的に作業できるようにするマルチプラットフォームのデザインツールです。SquareLine Studioは、プロジェクトに最適なコードを生成することでこれを可能にします。CまたはPythonを使用する場合、どちらのコードもエクスポートできます。
+[Squareline Studio](https://docs.squareline.io/docs/squareline/)は、ビジュアルインターフェースを使用してデザイナーと開発者が迅速かつ効率的に作業できるマルチプラットフォーム設計ツールです。SquareLine Studioは、プロジェクトに最適なコードを作成することでこれを可能にします。CまたはPythonを使用する場合でも、両方のコードをエクスポートできます。
 
-より複雑または高度なUIインターフェースを作成する必要がある場合は、Squareline Studioを使用することをお勧めします。
+より複雑または高度なUIインターフェースを作成する必要がある場合は、Squareline Studioを使用した開発をお勧めします。
 
-[Squareline Studioのインストール](https://docs.squareline.io/docs/introduction/install)
+[Squareline Studioインストール](https://docs.squareline.io/docs/introduction/install)
 
 UIページのデモプロジェクトを提供しています：
 
@@ -99,27 +94,27 @@ UIページのデモプロジェクトを提供しています：
 
 ### **独自のUIに置き換える**
 
-* ステップ1: デモプロジェクトを変更するか、新しいUIページを作成します
+- ステップ1：デモプロジェクトで変更を加えるか、新しいUIページを作成できます
 
-デモプロジェクトを開いて変更します：
+デモプロジェクトを開いて変更を加える：
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/squareline.png"/></div>
 
-新しいプロジェクトを作成します：
+新しいプロジェクトを作成する：
 
-**注意**: 画面の解像度は480*480です。
+**注意**：画面の解像度は480*480です。
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/create.png"/></div>
 
-* ステップ2: 完成したページをUIファイルとしてエクスポートします
+- ステップ2：完成したページをUIファイルとしてエクスポートする
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/export.png"/></div>
 
-* ステップ3: 元のUIファイルをすべて削除し、独自のUIファイルをこのディレクトリにコピーします
+- ステップ3：元のUIファイルをすべて削除し、独自のUIファイルをこのディレクトリにコピーする
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/ui.png"/></div>
 
-* ステップ4: プロジェクトをビルドしてフラッシュします
+- ステップ4：プロジェクトをビルドしてフラッシュする
 
 以下のコマンドを実行してプロジェクトをビルド、フラッシュ、モニターします：
 
@@ -127,7 +122,7 @@ UIページのデモプロジェクトを提供しています：
 
 # **技術サポート**
 
-**SenseCAP Indicatorに関するサポートが必要ですか？お手伝いします！**
+**SenseCAP Indicatorでお困りですか？サポートいたします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

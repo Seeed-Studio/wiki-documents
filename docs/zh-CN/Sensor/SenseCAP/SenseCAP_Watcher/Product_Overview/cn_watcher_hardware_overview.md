@@ -13,7 +13,6 @@ last_update:
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/hardware_overview.jpg" style={{width:1000, height:'auto'}}/></div>
 
-
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/SenseCAP-Watcher-W1-A-p-5979.html" target="_blank">
             <strong><span><font color={'FFFFFF'} size={"4"}> 立即购买</font></span></strong>
@@ -26,12 +25,12 @@ last_update:
     </a>
 </div><br />
 
-在 Wiki 的这一部分，我们将重点介绍 SenseCAP Watcher 的硬件组件、其构造以及附加配件的使用。
+在 Wiki 的这一部分中，我们将重点介绍 SenseCAP Watcher 的硬件组件、其构造以及附加配件的使用。
 
 ## 规格参数
 
 <div class="table-center">
-	<table align="center">
+    <table align="center">
         <tr>
             <th>硬件</th>
             <th>描述</th>
@@ -41,28 +40,28 @@ last_update:
             <td align="center">ESP32-S3 @240MHz 8MB PSRAM</td>
         </tr>
         <tr>
-            <td align="center">内置 AI 处理器</td>
+            <td align="center">内置AI处理器</td>
             <td align="center">Himax HX6538 (Cortex M55 + Ethos-U55)</td>
         </tr>
         <tr>
             <td align="center">摄像头</td>
-            <td align="center">OV5647 120° FOV <br /> 固定焦距 3 米</td>
+            <td align="center">OV5647 120° FOV <br /> 固定焦距3米</td>
         </tr>
         <tr>
             <td align="center">Wi-Fi</td>
-            <td align="center">符合 IEEE 802.11b/g/n 标准<br />2.4GHz 频段<br />无线范围：最远 100 米（开放空间测试）</td>
+            <td align="center">符合IEEE 802.11b/g/n标准<br />2.4GHz频段<br />无线范围：最远100米（开放空间测试）</td>
         </tr>
         <tr>
-            <td align="center">蓝牙 LE</td>
-            <td align="center">蓝牙 5</td>
+            <td align="center">蓝牙LE</td>
+            <td align="center">蓝牙5</td>
         </tr>
         <tr>
             <td align="center">天线</td>
-            <td align="center">内置 Wi-Fi 和 BLE 天线</td>
+            <td align="center">内置Wi-Fi和BLE天线</td>
         </tr>
         <tr>
             <td align="center">显示屏</td>
-            <td align="center">1.45 英寸触摸屏，412×412 分辨率</td>
+            <td align="center">1.45英寸触摸屏，412×412分辨率</td>
         </tr>
         <tr>
             <td align="center">麦克风</td>
@@ -70,7 +69,7 @@ last_update:
         </tr>
         <tr>
             <td align="center">扬声器</td>
-            <td align="center">1W 扬声器输出</td>
+            <td align="center">1W扬声器输出</td>
         </tr>
         <tr>
             <td align="center">滚轮</td>
@@ -78,35 +77,35 @@ last_update:
         </tr>
         <tr>
             <td align="center">LED</td>
-            <td align="center">1x RGB 指示灯</td>
+            <td align="center">1个RGB指示灯</td>
         </tr>
         <tr>
-            <td align="center">microSD 卡槽</td>
-            <td align="center">支持最大 32GB FAT32 microSD 卡</td>
+            <td align="center">microSD卡槽</td>
+            <td align="center">支持最大32GB FAT32 microSD卡</td>
         </tr>
         <tr>
             <td align="center">闪存</td>
-            <td align="center">ESP32-S3 32MB 闪存<br />Himax HX6538 16MB 闪存</td>
+            <td align="center">ESP32-S3的32MB闪存<br />Himax HX6538的16MB闪存</td>
         </tr>
         <tr>
             <td align="center">扩展接口</td>
-            <td align="center">1x Grove IIC 接口<br />2x4 母头排针（1x IIC，2x GPIO，2x GND，1x 3.3V_OUT，1x 5V_IN）</td>
+            <td align="center">1个Grove IIC接口<br />2x4母头排针（1个IIC，2个GPIO，2个GND，1个3.3V_OUT，1个5V_IN）</td>
         </tr>
         <tr>
             <td align="center">USB-C</td>
-            <td align="center">背面 1x USB-C（仅供电）<br />底部 1x USB-C（供电和编程）</td>
+            <td align="center">背面1个USB-C（仅供电）<br />底部1个USB-C（供电和编程）</td>
         </tr>
         <tr>
             <td align="center">复位按钮</td>
-            <td align="center">底部孔内 1x RST 按钮</td>
+            <td align="center">底部孔内1个RST按钮</td>
         </tr>
         <tr>
-            <td align="center">电源</td>
-            <td align="center">5V DC 供电</td>
+            <td align="center">电源供应</td>
+            <td align="center">5V直流电源</td>
         </tr>
         <tr>
             <td align="center">电池</td>
-            <td align="center">3.7V 400mAh 锂离子电池作为备用电源</td>
+            <td align="center">3.7V 400mAh锂离子电池作为备用电源</td>
         </tr>
         <tr>
             <td align="center">工作温度</td>
@@ -114,18 +113,17 @@ last_update:
         </tr>
         <tr>
             <td align="center">安装支架</td>
-            <td align="center">支持壁挂、桌面和支架安装<br />1x 万向轮和带胶底板<br />1x 1/4" 母头适配器套装</td>
+            <td align="center">支持壁挂、桌面和支架安装<br />1个万向轮和带胶粘剂的底板<br />1套1/4"母头适配器</td>
         </tr>
     </table>
 </div>
 
-## 功能特性
+## 特性
 
 - 高效架构，结合设备端 + 服务器端 AI 处理
 - 无限模态扩展
 - 开源和本地部署确保隐私保护
 - 可定制的情感响应
-
 
 ## 正面视图
 
@@ -149,17 +147,17 @@ last_update:
 
 ### 360° 旋转支架
 
-   - 此支架专为在墙壁或其他垂直表面上轻松安装而设计。
-   - 它提供完整的 360 度旋转，让您可以调整 Watcher 设备的方向以获得所需的观看角度。
-   - 旋转支架在定位方面提供灵活性，并确保牢固地固定在墙上。
+- 此支架专为在墙壁或其他垂直表面上轻松安装而设计。
+- 它提供完整的 360 度旋转，让您可以调整 Watcher 设备的方向以获得所需的观看角度。
+- 旋转支架在定位方面提供灵活性，并确保牢固地固定在墙上。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/omni_wheel_bracket.gif" style={{width:650, height:'auto'}}/></div><br />
 
 ### 1/4 螺纹三脚架支架
 
-   - 此支架非常适合将您的 Watcher 放置在平坦表面上，如桌子、台面或架子。
-   - 它采用标准 1/4 英寸螺纹，与大多数三脚架和其他安装配件兼容。
-   - 三脚架支架提供稳定性，让您可以根据具体需求将 Watcher 定位在各种高度和角度。
+- 此支架非常适合将您的 Watcher 放置在平坦表面上，如桌子、台面或架子。
+- 它采用标准 1/4 英寸螺纹，与大多数三脚架和其他安装配件兼容。
+- 三脚架支架提供稳定性，让您可以根据具体需求将 Watcher 定位在各种高度和角度。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/threaded_bracket.gif" style={{width:650, height:'auto'}}/></div>
 
@@ -217,7 +215,7 @@ ESP32-S3 与各种外设和接口通信：
 
 7. **外部存储**：通过 SPI 接口的 Micro SD 卡插槽，使用户能够扩展 Watcher 的存储容量，用于额外的数据和媒体文件。
 
-8. **电源和数据**：USB 端口可用于为 400mAh 电池充电，以及在 Watcher 和其他设备之间传输数据。
+8. **电源和数据**：USB 端口可用于为 400mAh 电池充电，并在 Watcher 和其他设备之间传输数据。
 
 AI MCU，一个配备 Cortex M55 和 US5 内核的 Himax HX6538 芯片，与主 MCU 协同工作，处理 AI 相关的任务和计算，增强 Watcher 的智能功能。
 
@@ -234,11 +232,11 @@ Watcher 上总共有两个 USB-C 端口，允许用户为不同的 Watcher 放�
 为 Watcher 充电时，请确保使用正规制造商的电源适配器，我们建议使用 **5V/1A** 电源规格为 Watcher 供电。如果您想与 Watcher 通信，您可能需要使用带有信号线的合规 USB-C 线缆。
 
 :::caution
-请使用与 Watcher 兼容的电源插头；Watcher 必须由 5V 电源供电，如果您使用不合规的电源适配器或电压大于 5V 的电源，可能会烧坏！
+请使用与 Watcher 兼容的电源插头；Watcher 必须使用 5V 电源供电，如果您使用不合规的电源适配器或电压大于 5V 的电源，可能会烧坏设备！
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_getting_started/adapter.jpg" style={{width:350, height:'auto'}}/></div>
 
-上图显示了推荐的适配器规格。如果您不知道在哪里可以购买合适的适配器，您可以选择直接在下面的链接购买。
+上图显示了推荐的适配器规格。如果您不知道在哪里可以购买合适的适配器，您可以选择通过下面的链接直接购买。
 
 <div class="get_one_now_container" style={{textAlign: 'center'}}>
     <a class="get_one_now_item" href="https://www.seeedstudio.com/USB-Power-Adapter-for-Raspberry-Pi-4-5V-3A-p-4089.html" target="_blank">
@@ -247,88 +245,88 @@ Watcher 上总共有两个 USB-C 端口，允许用户为不同的 Watcher 放�
 </div>
 :::
 
-## 连接到串行控制台
+## 连接到串口控制台
 
-当您通过 USB 连接 Watcher 时，Windows 会注册两个新的串行端口。在我的情况下是 COM23 和 COM24。我决定做一个实验，看看串行终端上会出现什么，因为我是 Circuitpython 的粉丝，我喜欢 REPL！为此我使用了 Putty 并将其配置为使用 115200 波特率的串行端口（我很幸运，第一个 COM23 端口就是我需要发现命令控制台的端口）。但另一个端口 COM24 用于使用 Xmodem 协议升级固件，方式与 Grove Vision AI V2 相同。
+当您通过 USB 连接 Watcher 时，Windows 会注册两个新的串口。在我的情况下是 COM23 和 COM24。我决定做一个实验，看看串口终端上会出现什么，因为我是 Circuitpython 的粉丝，我喜欢 REPL！为此我使用了 Putty 并将其配置为使用 115200 波特率的串口（我很幸运，第一个 COM23 端口就是我需要用来发现命令控制台的端口）。但另一个端口 COM24 用于使用 Xmodem 协议升级固件，方式与 Grove Vision AI V2 相同。
 
-终端立即显示一系列关于设备内存的信息。如果您按回车键，会出现一个提示符，您可以输入一些命令，我在下面列出：
+终端立即显示一系列关于设备内存的信息。如果您按回车键，会出现一个提示符，您可以输入一些命令，我在下面列出了这些命令：
 
 ```
 help  [<string>] 
-如果没有给出参数，打印所有已注册命令的摘要，否则打印给定命令的摘要，其中 <string> 是命令的名称
+Print the summary of all registered commands if no arguments are given, otherwise print summary of given command, where <string> is the name of command
 
 wifi_sta  [-s <ssid>] [-p <password>]
-WiFi 为站点模式，加入指定的软接入点
-s <ssid> 接入点的 SSID
-p <password> 接入点的密码
-ota  [-t <int>] [--url=<string>] 强制 ota，忽略版本检查
--t, --ota_type=<int> 0: ai 模型, 1: himax, 2: esp32
--url=<string> ai 模型、himax 或 esp32 固件的 url
+WiFi is station mode, join specified soft-AP
+s <ssid> SSID of AP
+p <password> password of AP
+ota  [-t <int>] [--url=<string>] force ota, ignoring version check
+-t, --ota_type=<int> 0: ai model, 1: himax, 2: esp32
+-url=<string> url for ai model, himax or esp32 firmware
 
 taskflow  [-iej] [-f <string>]
-i, --import 导入任务流
-e, --export 导出任务流
-f, --file=<string> 文件路径，通过 SD 卡导入或导出任务流 json 字符串，例如：test.json
-j, --json 通过标准输入导入任务流 json 字符串
+i, --import import taskflow
+e, --export export taskflow
+f, --file=<string> File path, import or export taskflow json string by SD, eg: test.json
+j, --json import taskflow json string by stdin
 
-示例：通过 json 字符串或 SD 文件导入任务流：taskflow -i -f "test.json"。
-示例：将任务流导出到标准输出或 SD 文件：taskflow -e -f "test.json"
+Example: Import taskflow by json string or SD file: taskflow -i -f "test.json".
+Example: Export taskflow to stdout or SD file: taskflow -e -f "test.json"
 
 factory_info
-获取工厂信息
+Get factory infomation
 
 battery
-获取电池百分比
+Get battery percent
 
 bsp  subcmd [subcmd args] 
-Bsp 调用 bsp 函数
+Bsp call bsp functions
 
-示例 扫描指定的 i2c 总线：bsp i2cdetect <0|1>
+Example Scan the specified i2c bus: bsp i2cdetect <0|1>
 
 reboot 
-重启设备
+Reboot the device
 
 factory_reset 
-恢复出厂设置并重启设备
+Factory reset and reboot the device
 
 record  [-t <int>] [-f <string>]
-录制音频并保存到 SD 卡。
--t, --time=<int> 录制时间，秒
--f, --file=<string> 文件路径，将 PCM 音频数据存储在 SD 卡中
+Record audio and save to SD.
+-t, --time=<int> record time, s
+-f, --file=<string> File path, Store PCM audio data in SD card
 
 vi_ctrl  [-sec] [-z <int>] 
-语音交互控制（可能与按键通话功能一起使用）
--s, --start 开始唤醒，并开始录制
--e, --end 结束录制
--c, --stop 在分析或播放时停止语音交互，将其置于空闲状态。
--z, --exit=<int> 0: 退出 vi, 1:退出 vi 然后运行新的任务流
+Voice interaction ctrl (Probably will be used with Push to Talk function)
+-s, --start start wakeup, and start record
+-e, --end end record
+-c, --stop stop voice interaction when analyzing or palying, Put it into idle.
+-z, --exit=<int> 0: exit vi, 1:exit vi then run new taskflow
 
 iperf  [-suVa] [-c <ip>] [-p <port>] [-l <length>] [-i <interval>] [-t <time>] [-b <bandwidth>]
-检查连接性能。类似于 iperf linux 命令。
--c, --client=<ip> 以客户端模式运行，连接到 <host>
--s, --server 以服务器模式运行
--u, --udp 使用 UDP 而不是 TCP
--V, --ipv6_domain 使用 IPV6 地址而不是 IPV4
--p, --port=<port> 要监听/连接的服务器端口
--l, --len=<length> 设置读/写缓冲区大小
--i, --interval=<interval> 定期带宽报告之间的秒数
--t, --time=<time> 传输时间（秒）（默认 10 秒）
--b, --bandwidth=<bandwidth> 发送带宽，单位为 Mbits/sec
--a, --abort 中止正在运行的 iperf
+Check conection performance. Similar to iperf linux command.
+-c, --client=<ip> run in client mode, connecting to <host>
+-s, --server run in server mode
+-u, --udp use UDP rather than TCP
+-V, --ipv6_domain use IPV6 address rather than IPV4
+-p, --port=<port> server port to listen on/connect to
+-l, --len=<length> Set read/write buffer size
+-i, --interval=<interval> seconds between periodic bandwidth reports
+-t, --time=<time> time in seconds to transmit for (default 10 secs)
+-b, --bandwidth=<bandwidth> bandwidth to send at in Mbits/sec
+-a, --abort abort running iperf
 
 rgb  [-r <int>] [-g <int>] [-b <int>] [-m <int>] [-v <int>] [-t <int>]
-设置 rgb LED 值。例如：rgb -r 255 -g 0 -b 0 -m 3
--r, --red=<int> 红色值，0~255
--g, --green=<int> 绿色值，0~255
--b, --blue=<int> 蓝色值，0~255
--m, --mode=<int> 1: 呼吸, 2: 闪烁, 3:常亮, 默认 3
--v, --step_value=<int> RGB 步进值，默认 3
--t, --step_time_ms=<int> RGB 步进时间（毫秒），默认 5
+Set the rgb LED value. eg: rgb -r 255 -g 0 -b 0 -m 3
+-r, --red=<int> red value, 0~255
+-g, --green=<int> green value, 0~255
+-b, --blue=<int> blue value, 0~255
+-m, --mode=<int> 1: breath, 2: blink, 3:solid, default 3
+-v, --step_value=<int> RGB step value, default 3
+-t, --step_time_ms=<int> RGB step time(ms), default 5
 ```
 
 ## 技术支持与产品讨论
 
-感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
+感谢您选择我们的产品！我们在这里为您提供不同的支持，确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

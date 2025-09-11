@@ -1,32 +1,35 @@
 ---
-description: Vision AI V2からRS485を介して認識データを転送する方法に関するガイド
-title: Vision AI V2データのRS485送信
+description: Vision AI V2からRS485経由で認識データを転送する方法のガイド
+title: Vision AI V2データのRS485伝送
 keywords:
 - RS485
 - Vision AI
 image: https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.webp
 slug: /ja/grove_vision_ai_v2_rs485
 last_update:
-  date: 05/15/2025
+  date: 12/19/2024
   author: Jason
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
+
+
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.jpg" style={{width:500, height:'auto'}}/></div>
 
+:::tip
+
+Vision AI V2と組み合わせてRS485拡張ボードを使用する場合は、RS485拡張ボードの裏面に新しいヘッダーピンを再はんだ付けする必要があります。
+
+:::
+
 
 ### ハードウェア準備
-
 
 <table align="center">
     <tr>
         <th>Seeed Studio XIAO ESP32S3</th>
         <th>Grove Vision AI V2</th>
-        <th>OV5647-62 FOV カメラモジュール<br />Raspberry Pi 3B+4B用</th>
-        <th>Seeed Studio XIAO RS485-拡張ボード</th>
+        <th>OV5647-62 FOV Camera Module<br />for Raspberry Pi 3B+4B</th>
+        <th>Seeed Studio XIAO RS485-Expansion-Board</th>
     </tr>
     <tr>
         <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiaoesp32s3.jpg" style={{width:250, height:'auto'}}/></div></td>
@@ -37,56 +40,50 @@ https://github.com/Seeed-Studio/wiki-documents/issues
         <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
 </table>
 
-
 ### 接続方法
 
-まず、2つの拡張ボード、2つのXIAOシリーズ開発ボード、および1つのVision AI V2を準備し、図に従って対応するピンを接続します。このルーチンではXIAO ESP32C3をデモとして使用します。
+まず、2つの拡張ボード、2つのXIAOシリーズ開発ボード、1つのVision AI V2を準備し、図に従って対応するピンを接続します。このルーチンではXIAO ESP32C3をデモとして使用します。
 
 **ステップ1. 2つのRS485拡張ボードと2つのXIAOシリーズ開発ボードを準備し、以下の図に従ってピンを接続します**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connect_modifg.png" style={{width:700, height:'auto'}}/></div>
 
-**ステップ2. Vision AI V2を準備し、2つのRS485拡張ボードのうち1つの裏側に送信機として取り付けます**
+**ステップ2. Vision AI V2を準備し、2つのRS485拡張ボードのうち1つの裏面に送信機として取り付けます**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/11.jpg" style={{width:500, height:'auto'}}/></div>
 
-
-
-
 :::tip
-RS485拡張ボードを初めて使用する場合で配線方法がわからない場合は、このリンクをクリックしてください(https://wiki.seeedstudio.com/ja/XIAO-RS485-Expansion-Board/)
+RS485拡張ボードを初めて使用する場合で、配線方法がわからない場合は、このリンクをクリックしてください(https://wiki.seeedstudio.com/ja/XIAO-RS485-Expansion-Board/)
 
-モデルの書き込み方法やモデル出力コードの追加方法がわからない場合は、このリンクをクリックしてください(https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_software_support/)。各ステップを詳細に説明しています。
+モデルの書き込み方法やモデル出力コードの追加方法がわからない場合は、このリンクをクリックしてください(https://wiki.seeedstudio.com/ja/grove_vision_ai_v2_software_support/)。各ステップが詳細に説明されています
 
-後の使用をスムーズにするために、これら2つのステップをスキップしないでください！
+より良い後続の使用のために、これら2つのステップをスキップしないでください！
 :::
-
-
 
 ## ソフトウェア準備
 
-### 送信側コード
+### 送信機コード
 
 ```cpp
 #include <Seeed_Arduino_SSCMA.h>
@@ -96,34 +93,34 @@ RS485拡張ボードを初めて使用する場合で配線方法がわからな
 
 HardwareSerial Serial3(1); 
 
-// 2つの内部UARTにマッピングされた2つのシリアルデバイスを定義
+// Define two Serial devices mapped to the two internal UARTs
 HardwareSerial atSerial(0);
 
 #else
 #define atSerial Serial1
 #endif
 
-#define enable_pin D2 // 有効化ピンをD2として定義
+#define enable_pin D2 // Define the enable pin as D2
 
 SSCMA AI;
 
 void setup()
 {
-    Serial3.begin(115200, SERIAL_8N1, 7, 6); // 115200ボーレート、8データビット、パリティなし、1ストップビットでSerial3を初期化
-    Serial.begin(9600); // デバッグ出力用にSerialを初期化
-    AI.begin(&atSerial); // ATシリアルでAIモジュールを初期化
+    Serial3.begin(115200, SERIAL_8N1, 7, 6); // Initialize Serial3 with 115200 baud rate, 8 data bits, no parity, 1 stop bit
+    Serial.begin(9600); // Initialize Serial for debugging output
+    AI.begin(&atSerial); // Initialize the AI module with the AT serial
 
-    pinMode(enable_pin, OUTPUT); // 有効化ピンを出力として設定
-    digitalWrite(enable_pin, HIGH); // 有効化ピンをHIGHに設定してAIモジュールを有効化
+    pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
+    digitalWrite(enable_pin, HIGH); // Set the enable pin to high to enable the AI module
 }
 
 void loop()
 {
-    if (!AI.invoke(1, false, true)) { // AIを呼び出して処理を開始
+    if (!AI.invoke(1, false, true)) { // Invoke the AI to start processing
 
-        Serial.println("invoke success"); // 成功メッセージを出力
+        Serial.println("invoke success"); // Print success message
 
-        // パフォーマンス指標を出力
+        // Print performance metrics
         Serial.print("perf: prepocess=");
         Serial.print(AI.perf().prepocess);
         Serial.print(", inference=");
@@ -131,7 +128,7 @@ void loop()
         Serial.print(", postpocess=");
         Serial.println(AI.perf().postprocess);
 
-        // 検出されたボックスをループ処理
+        // Loop through detected boxes
         for (int i = 0; i < AI.boxes().size(); i++) {
             Serial.print("Box[");
             Serial.print(i);
@@ -149,61 +146,69 @@ void loop()
             Serial.println(AI.boxes()[i].h);
         }
 
-        // 検出されたクラスをループ処理
+        // Loop through detected classes
         for (int i = 0; i < AI.classes().size(); i++) {
             Serial.print("Class[");
             Serial.print(i);
             Serial.print("] target=");
             Serial.println(AI.classes()[i].target);
 
-            // ターゲットクラスを確認し、対応するステータスを送信
+            // Check the target class and send corresponding status
             if (AI.classes()[i].target == 0) {
-                String status_a = "no people detected"; // 人が検出されなかった場合のステータスを定義
-                Serial3.println(status_a); // ステータスをSerial3に送信
-                Serial.println(status_a); // ステータスをシリアルモニタに出力
+                String status_a = "no people detected"; // Define status for no people detected
+                Serial3.println(status_a); // Send status to Serial3
+                Serial.println(status_a); // Print status to Serial monitor
             } else if (AI.classes()[i].target == 1) {
-                String status_b = "people detected"; // 人が検出された場合のステータスを定義
-                Serial3.println(status_b); // ステータスをSerial3に送信
-                Serial.println(status_b); // ステータスをシリアルモニタに出力
+                String status_b = "people detected"; // Define status for people detected
+                Serial3.println(status_b); // Send status to Serial3
+                Serial.println(status_b); // Print status to Serial monitor
             }
         }
-        delay(1000); // 次のループまで1秒待機
+        delay(1000); // Wait for 1 second before the next loop iteration
     }
 }
 ```
 
-### コードの詳細な機能
+### コード詳細機能
 
-- **ライブラリのインクルード**
-    - `HardwareSerial`ライブラリをインクルードしてハードウェアシリアル機能を使用。
-    - `Seeed_Arduino_SSCMA`ライブラリをインクルードしてAIモジュールを制御。
+- **ライブラリインクルード**
+  - ハードウェアシリアル機能を使用するために`HardwareSerial`ライブラリをインクルードします。
+  - AIモジュール制御のために`Seeed_Arduino_SSCMA`ライブラリをインクルードします。
 
-- **シリアルオブジェクトの作成** 
+- **シリアルオブジェクト作成**
+
     ```cpp
     HardwareSerial Serial3(1); 
     HardwareSerial atSerial(0);
     ```
-    シリアル通信用にSerial3とatSerialオブジェクトを作成。
 
-- **AIオブジェクトの作成** 
+    シリアル通信用にSerial3とatSerialオブジェクトを作成します。
+
+- **AIオブジェクト作成**
+
     ```cpp
     SSCMA AI;
     ```
-    AI処理用にSSCMAクラスのインスタンスを作成。
 
-- **パフォーマンス指標**
+    AI処理用にSSCMAクラスのインスタンスを作成します。
+
+- **パフォーマンスメトリクス**
+
     ```cpp
     Serial.print("perf: prepocess=");
-    Serial.print(AI.perf().prepocess);
-    Serial.print(", inference=");
-    Serial.print(AI.perf().inference);
-    Serial.print(", postpocess=");
-    Serial.println(AI.perf().postprocess);
+   Serial.print(AI.perf().prepocess);
+   Serial.print(", inference=");
+   Serial.print(AI.perf().inference);
+   Serial.print(", postpocess=");
+   Serial.println(AI.perf().postprocess);
     ```
-    AI処理の各段階（前処理、推論、後処理）のパフォーマンス指標を出力。
 
-- **検出されたボックスのループ処理**
+    AI処理段階のパフォーマンスメトリクスを出力します：前処理、推論、後処理。
+
+- **検出ボックスループ**
+
     ```cpp
+
     for (int i = 0; i < AI.boxes().size(); i++) {
         Serial.print("Box[");
         Serial.print(i);
@@ -221,9 +226,11 @@ void loop()
         Serial.println(AI.boxes()[i].h);
     }
     ```
-    検出されたボックスをループ処理し、ターゲット、スコア、バウンディングボックスの座標を出力。
 
-- **検出されたクラスのループ処理**
+    検出されたボックスをループし、ターゲット、スコア、バウンディングボックス座標を含む詳細を出力します。
+
+- **検出クラスループ**
+
     ```cpp
     for (int i = 0; i < AI.classes().size(); i++) {
        Serial.print("Class[");
@@ -231,111 +238,119 @@ void loop()
        Serial.print("] target=");
        Serial.println(AI.classes()[i].target);
     ```
-    検出されたクラスをループ処理し、ターゲットを出力。
 
-- **マクロ定義** 
+    検出されたクラスをループし、そのターゲットを出力します。
+
+- **マクロ定義**
+
     ```cpp
-    pinMode(enable_pin, OUTPUT); // 有効化ピンを出力として設定
+    pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
     digitalWrite(enable_pin, LOW);
     ```
-    有効化ピンをD2として定義。
+
+    イネーブルピンをD2として定義します。
 
 - **メッセージ送信**
+
     ```cpp
-    // ターゲットクラスを確認し、対応するステータスを送信
+    // Check the target class and send corresponding status
     if (AI.classes()[i].target == 0) {
-        String status_a = "no people detected"; // 人が検出されなかった場合のステータスを定義
-        Serial3.println(status_a); // ステータスをSerial3に送信
-        Serial.println(status_a); // ステータスをシリアルモニタに出力
+        String status_a = "no people detected"; // Define status for no people detected
+        Serial3.println(status_a); // Send status to Serial3
+        Serial.println(status_a); // Print status to Serial monitor
     } else if (AI.classes()[i].target == 1) {
-        String status_b = "people detected"; // 人が検出された場合のステータスを定義
-        Serial3.println(status_b); // ステータスをSerial3に送信
-        Serial.println(status_b); // ステータスをシリアルモニタに出力
+        String status_b = "people detected"; // Define status for people detected
+        Serial3.println(status_b); // Send status to Serial3
+        Serial.println(status_b); // Print status to Serial monitor
     }
     ```
 
-    人が検出された場合は「PEOPLE DETECTED」を受信側に送信し、検出されなかった場合は「NO PEOPLE DETECTED」を送信。
+    人が検出されたかどうかを判定し、人が検出された場合は受信機にPEOPLE DETECTEDを送信し、人が検出されなかった場合は受信機にNO PEOPLE DETECTEDを送信します。
 
-### 受信側コード
+### 受信機コード
 
 ```cpp
 #include <HardwareSerial.h>
 
-HardwareSerial Serial3(1); // UART2を使用
-#define enable_pin D2 // 有効化ピンをD2として定義
+HardwareSerial Serial3(1); // Use UART2
+#define enable_pin D2 // Define the enable pin as D2
+
 
 void setup() {
-  Serial.begin(115200); // ハードウェアシリアルを115200ボーレートで初期化
-  Serial3.begin(115200, SERIAL_8N1, 7, 6); // 115200ボーレート、8データビット、パリティなし、1ストップビットでSerial3を初期化 (RX=D4(GPIO4), TX=D5(GPIO5))
-  
-  // ハードウェアシリアルが準備完了するまで待機
-  while(!Serial3);
-  while(!Serial); // この行は通常不要。Serial.begin()は即座に準備完了するため
+  Serial.begin(115200); // Initialize the hardware serial with a baud rate of 115200
+  Serial3.begin(115200, SERIAL_8N1, 7, 6); // Initialize Serial3 with 115200 baud rate, 8 data bits, no parity, 1 stop bit (RX=D4(GPIO4), TX=D5(GPIO5))
 
-  pinMode(enable_pin, OUTPUT); // 有効化ピンを出力として設定
-  digitalWrite(enable_pin, LOW); // 有効化ピンをLOWに設定してデバイスを有効化
+  // Wait for the hardware serial to be ready
+  while(!Serial3);
+  while(!Serial); // This line is generally unnecessary as Serial.begin() is ready immediately
+
+  pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
+  digitalWrite(enable_pin, LOW); // Set the enable pin to low to enable the device
 }
 
 void loop() {
-    delay(100); // 100ミリ秒待機
-    // ハードウェアシリアルからデータが利用可能か確認
+    delay(100); // Delay for 100 milliseconds
+    // Check if there is data available from the hardware serial
     if (Serial3.available()) {
-        String receivedData = Serial3.readStringUntil('\n'); // 改行文字までの文字列を読み取る
-        Serial.print("Received data: "); // 受信データのラベルを出力
-        Serial.println(receivedData); // 受信データを直接出力
+        String receivedData = Serial3.readStringUntil('\n'); // Read string until newline character
+        Serial.print("Received data: "); // Print label for received data
+        Serial.println(receivedData); // Directly print the received data
     }
-}
-```
+}```
 
-### コードの詳細な機能
+### コード詳細機能
 
 - **ライブラリのインクルード**
-    - ハードウェアシリアル機能を使用するために `HardwareSerial` ライブラリをインクルードします。
+  - ハードウェアシリアル機能を使用するために`HardwareSerial`ライブラリをインクルードします。
 
 - **シリアルオブジェクトの作成**
-    - UART2 を使用して `Serial3` オブジェクトを作成します。
+  - UART2を使用して`Serial3`オブジェクトを作成します。
 
-- **マクロ定義** 
+- **マクロ定義**
+
     ```cpp
-    pinMode(enable_pin, OUTPUT); // enable ピンを出力として設定
+    pinMode(enable_pin, OUTPUT); // Set the enable pin as an output
     digitalWrite(enable_pin, LOW);
     ```
-    enable ピンを D2 として定義します。
 
-- **セットアップ関数** 
+    イネーブルピンをD2として定義します。
+
+- **セットアップ関数**
+
     ```cpp
     Serial3.begin(115200, SERIAL_8N1, 7, 6);
     ```
 
-    メインシリアルと Serial3 を初期化し、ボーレート、データビットなどを設定します。これは Vision AI V2 と通信してデータを転送するためのシリアルポートです。
+    メインシリアルとSerial3を初期化し、ボーレート、データビットなどを設定します。これはvision ai v2と通信してデータを転送するシリアルポートです。
 
     ```cpp
     while(!Serial3);
     while(!Serial); 
     ```
-    すべてのシリアルポートが準備完了になるまで待機し、enable ピンを出力として設定し、デバイスを有効にするために LOW に設定します。
+
+    すべてのシリアルポートが準備完了するまで待機し、イネーブルピンを出力として設定し、ローに引いてデバイスを有効にします。
 
 - **ループ関数**
-    - `if (Serial3.available());`: Serial3 にデータが利用可能かどうかを 100 ミリ秒ごとに確認します。
-    - `String receivedData = Serial3.readStringUntil('\n');`: データが利用可能な場合、改行文字まで読み取り、受信したデータをメインシリアルに出力します。
-
+  - `if (Serial3.available());`: 100ミリ秒ごとにSerial3でデータが利用可能かどうかをチェックします。
+  - `String receivedData = Serial3.readStringUntil('\n');`: データが利用可能な場合、改行文字まで読み取り、受信したデータをメインシリアルに出力します。
 - **結果の出力**
+
     ```cpp
     Serial.print("Received data: "); 
     Serial.println(receivedData); 
     ```
-    送信者のメッセージを出力します。
+
+    送信者のメッセージを出力します
 
 ### 結果チャート
 
-カメラは人を認識すると **「people detected」** を送信し、人を認識しない場合は **「no people detected」** を送信します。受信側は送信者の認識結果をシリアルポートに表示します。
+ただし、カメラは人を認識すると**「people detected」**を送信し、人を認識しないと**「no people detected」**を送信し、受信者は送信者の認識結果をシリアルポートに表示します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/result.png" style={{width:1000, height:'auto'}}/></div>
 
+## 技術サポート & 製品ディスカッション
 
-## 技術サポートと製品ディスカッション
-
-弊社製品をお選びいただきありがとうございます！製品をスムーズにご利用いただけるよう、さまざまなサポートを提供しています。お客様のご希望やニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただきありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供いたします。さまざまな好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a>

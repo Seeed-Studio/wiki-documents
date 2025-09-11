@@ -383,8 +383,8 @@ GPS 在户外使用效果更好。建议将您的树莓派放在窗外或任何�
 - **[数据手册]** [E-1612-UB 数据手册](https://files.seeedstudio.com/wiki/Grove-GPS/res/E-1612-UB_Datasheets_Sheet.pdf)
 - **[数据手册]** [U-Blox6 接收器描述协议规范](https://files.seeedstudio.com/wiki/Grove-GPS/res/U-blox-6-Receiver-Description-Including-Protocol-Specification.zip)
 - **[软件]** [U-Blox u-center GPS 评估软件](https://www.u-blox.com/en/product/u-center-windows)
-- **[文档]**  [SIM28\_DATA\_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
-- **[文档]** [SIMCom\_GPS\_DEMO\_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
+- **[文档]**  [SIM28_DATA_File](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIM28_DATA_File.zip)
+- **[文档]** [SIMCom_GPS_DEMO_V1.07](https://files.seeedstudio.com/wiki/Grove-GPS/res/SIMCom_GPS_DEMO_V1.07.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_GPS -->
 

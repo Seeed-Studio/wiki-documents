@@ -177,7 +177,7 @@ Different from other boards, there is an User LED SK6812 on Wio Tracker, which i
 
 First, we have to install [Adafruit NeoPixel Library](https://github.com/adafruit/Adafruit_NeoPixel/archive/master.zip)(for ws2812b LED) and import it into Arduino IDE.
 
-Then open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > Blink** to open the sketch or copy the blow code:
+Then open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > Blink** to open the sketch or copy the blow code:
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -226,7 +226,7 @@ Wio Tracker is designed for tracking moving things outdoor. So you can power the
 :::
 Battery status pin had beed connect to A4, which allow you to measure voltage of the battery via coding.
 
-Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > Check_Battery** to open the sketch or copy the blow code:
+Open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > Check_Battery** to open the sketch or copy the blow code:
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -250,11 +250,11 @@ void loop() {
 
 ### Use Grove modules to expand your application
 
-To use 6 Grove connectors on Wio Tracker, we have to use `digitalWrite(12, HIGH)` to open 3V3\_B to power the Grove modules(D12 defaults to LOW in order to reduce consumption).
+To use 6 Grove connectors on Wio Tracker, we have to use `digitalWrite(12, HIGH)` to open 3V3_B to power the Grove modules(D12 defaults to LOW in order to reduce consumption).
 
 - The following code shows how to use Analog and Digital Grove modules:
 
-Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > Button\_LightSensor** to open the sketch or copy the blow code:
+Open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > Button_LightSensor** to open the sketch or copy the blow code:
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -320,7 +320,7 @@ The following example shows how to read longitude and latitude and print them ou
 
 ![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/pullsim.jpg)
 
-Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > MC20\_GNSS > GNSS\_Show\_Coordinate** to open the sketch or copy the blow code:
+Open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > MC20_GNSS > GNSS_Show_Coordinate** to open the sketch or copy the blow code:
 
 ```c
 #include "MC20_Common.h"
@@ -364,7 +364,7 @@ void loop() {
 
 The following example shows how to read sms messages on Wio Tracker. Nano SIM card is needed in this example.
 
-Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > MC20\_SMSRead** to open the sketch or copy the blow code:
+Open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > MC20_SMSRead** to open the sketch or copy the blow code:
 
 ```c
 #include "MC20_Common.h"
@@ -423,7 +423,7 @@ void loop() {
 
 ### Bluetooth Connection
 
-It is also very easy to connect to your Bluetooth device on Wio Tracker. Open your Arduino IDE and click on **File > Examples > MC20\_GPS\_Traker > MC20\_BlueTooth > BT\_FastConnect** to open the sketch or copy the blow code.
+It is also very easy to connect to your Bluetooth device on Wio Tracker. Open your Arduino IDE and click on **File > Examples > MC20_GPS_Traker > MC20_BlueTooth > BT_FastConnect** to open the sketch or copy the blow code.
 
 Then change the deviceName of your Bluetooth device, Wio Tracker will connect it automatically.
 

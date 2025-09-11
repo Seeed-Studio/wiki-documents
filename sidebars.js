@@ -1099,7 +1099,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-by-Nanase',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/Seeeduino-XIAO-CircuitPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/XIAO-SAMD21-MicroPython',
-
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_SAMD21/MicroBlocks_XIAO_SAMD21',
               ],
             },
             {
@@ -1153,6 +1153,7 @@ const sidebars = {
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-Arduino',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-MicroPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/XIAO-RP2040-with-CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_RP2040/MicroBlocks_XIAO_RP2040',
               ],
             },
             {
@@ -1201,6 +1202,7 @@ const sidebars = {
               label: 'Programming Language',
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO-BLE_CircutPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/MicroBlocks_XIAO_nRF52840',
               ],
             },
             {
@@ -1300,8 +1302,9 @@ const sidebars = {
               type: 'category',
               label: 'Programming Language',
               items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_with_CircuitPython',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_with_MicroPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_with_CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/XIAO_ESP32C3_with_MicroPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32C3/MicroBlocks_XIAO_ESP32_C3',
               ],
             },
             {
@@ -1382,9 +1385,9 @@ const sidebars = {
           type: 'category',
           label: 'XIAO ESP32S3 Series',
           items: [
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
-            'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Sense_Consumption',
+              'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Getting_Started',
+              'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Pin_Multiplexing',
+              'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Sense_Consumption',
             {
               type: 'category',
               label: 'Wireless Connection',
@@ -1399,6 +1402,7 @@ const sidebars = {
               items: [
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_with_MicroPython',
                 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_CircuitPython',
+                'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/MicroBlocks_XIAO_ESP32_S3',
                 // 'Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_ESP32S3/XIAO_ESP32S3_Micropython',
               ],
             },
@@ -3271,15 +3275,31 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/BalenaOS/recomputer_r1000_balena',
                 ]
               },
+              
+
               {
                 type: 'category',
                 label: 'Cloud Solution',
                 items: [
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/recomputer_r1000_aws',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/reTerminal-DM_AWS_first',
+
+
+
+                    {
+                      type: 'category',
+                      label: 'AWS IoT Core Integration (R1000 / reTerminal DM)',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/recomputer_r1000_aws',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/AWS_IoT_Core_Integration_(R1000_reTerminal-DM)/reTerminal-DM_AWS_first',
+                      ]
+                    },
+
+
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Cloud_Solution/reTerminal-DM_Azure_IoT',
                 ]
               },
+
+
+
               {
                 type: 'category',
                 label: 'Fin',
@@ -3371,20 +3391,56 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/UI_design/weather-dashboard-with-Grafana-reTerminal',
                 ]
               },
+
+              {
+                type: 'category',
+                label: 'Edge Impulse Object Detection',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/reTerminal_ML_Edgeimpulse',
+                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Edge_Impulse_Object_Detection/reTerminal-DM-edgeimpulse',
+                ]
+              },
+
+
+              {
+                    type: 'category',
+                    label: 'Ignition Edge (reComputer R1000 / reTerminal DM)',
+                    items: [
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/Edgebox-rpi-200-ignition-edge',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/reTerminal-DM-Getting-Started-with-Ignition-Edge',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/Ignition_Edge_(reComputer-R1000_reTerminal DM)/reTerminal-DM-Ignition-Edge-Panel-Builder',
+                    ]
+              },
+
+
+
+              {
+                    type: 'category',
+                    label: 'ThingsBoard Integration',
+                    items: [
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_ce',
+                        'Edge/Raspberry_Pi_Devices/Application/AIoT/ThingsBoard_Integration/recomputer_r1000_thingsboard_dashboard',
+                    ]
+              },
+
+
+              {
+                type: 'category',
+                label: 'CODESYS with Modbus on R1000',
+                items: [
+                     'Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/recomputer_r1000_install_codesys',
+                     'Edge/Raspberry_Pi_Devices/Application/AIoT/CODESYS_with_Modbus_on_R1000/recomputer_r1000_with_codesys_use_modbus_rtu',
+                ]
+              },
+
+
               {
                 type: 'category',
                 label: 'Others',
                 items: [
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/Edgebox-rpi-200-ignition-edge',
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/Mender-Client-reTerminal',
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_flowfuse_getting_start',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_install_codesys',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_thingsboard_ce',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_thingsboard_dashboard',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_r1000_with_codesys_use_modbus_rtu',
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM_intro_machinechat_jedi',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM-Getting-Started-with-Ignition-Edge',
-                  'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reTerminal-DM-Ignition-Edge-Panel-Builder',
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/reterminal-dm-sensecraft-edge-os-intro',
                   'Edge/Raspberry_Pi_Devices/Application/AIoT/Others/recomputer_use_ups'
                 ]
@@ -3403,18 +3459,49 @@ const sidebars = {
                   'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Benchmark/benchmark_on_rpi5_and_cm4_running_yolov8s_with_rpi_ai_kit',
                 ]
               },
+            
+
+              {
+                    type: 'category',
+                    label: 'OpenCV Demos (reTerminal & Pi Camera)',
+                    items: [
+
+
+                    {
+                      type: 'category',
+                      label: 'Object/Face/Color/Shape Detection',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Color_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Face_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Object_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/Object_Face_Color_Shape-Detection/reTerminal_DM_Shape_detection',
+                      ]
+                    },
+
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM_opencv',
+                      'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV_Demos_(reTerminal_&_Pi-Camera)/reTerminal_DM-tracking',
+                    ]
+              },
+
+
               {
                 type: 'category',
-                label: 'OpenCV',
+                label: 'YOLO-based Applications',
                 items: [
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM_Color_detection',
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM_Face_detection',
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM_Object_detection',
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM_opencv',
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM_Shape_detection',
-                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/OpenCV/reTerminal_DM-tracking',
-                ]
+                  
+                        {
+                      type: 'category',
+                      label: 'YOLOv8  Object Detection (Pi 5 / R1000 / AI Box)',
+                      items: [
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection',
+                        'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/YOLOv8_Object_Detection_(Pi-5_R1000_AI-Box)/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
+                      ]
+                    },
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/reTerminal-DM-Yolo5',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/YOLO-based_Applications/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
+                 ]
               },
+
               {
                 type: 'category',
                 label: 'NVR',
@@ -3424,21 +3511,25 @@ const sidebars = {
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/frigate_nvr_with_raspberrypi_5',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal_frigate',
                     'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/reterminal-DM-Frigate',
+                    'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/NVR/zoneminder_on_recomputer'
                 ]
               },
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/clip_application_on_rpi_with_ai_kit',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/convert_model_to_edge_tpu_tflite_format_for_google_coral',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/install_m.2_coral_to_rpi5',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/pose_based_light_control_with_nodered_and_rpi_with_aikit',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/reTerminal_ML_Edgeimpulse', 
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/reTerminal_ML_TFLite',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/reTerminal-DM-edgeimpulse',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/reTerminal-DM-Yolo5',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/yolov8_object_detection_on_recomputer_r1000_with_hailo_8l',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/yolov8_pose_estimation_on_recomputer_r1000_with_hailo_8l',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/real-time-ocr',
-              'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Using_YOLOv8_and_AI_Box_for_fall_climbing_and_tracking_detection'
+
+
+              {
+                type: 'category',
+                label: 'Other AI Applications',
+                items: [
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/clip_application_on_rpi_with_ai_kit',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/convert_model_to_edge_tpu_tflite_format_for_google_coral',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/install_m.2_coral_to_rpi5',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/pose_based_light_control_with_nodered_and_rpi_with_aikit',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/real-time-ocr',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/reTerminal_ML_TFLite',
+                  'Edge/Raspberry_Pi_Devices/Application/Computer_Vision/Other_AI_Applications/tutorial_of_ai_kit_with_raspberrypi5_about_yolov8n_object_detection',
+                 ]
+              },
+
             ]
           },
           {
@@ -4068,6 +4159,7 @@ const sidebars = {
                   //'Robotics/Robot_Kits/Lerobot/Lerobot_SO100Arm',
                   'Robotics/Robot_Kits/Lerobot/Lerobot_Lekiwi',
                   'Robotics/Robot_Kits/Lerobot/Sound_Follow_Robot_Powered_by_reSpeaker_and_Lekiwi',
+                  'Robotics/Robot_Kits/Lerobot/Lerobot_AmazingHand',
                     ]},
 
           ]
@@ -4163,6 +4255,7 @@ const sidebars = {
                 items: [
                   'Robotics/Robot_Software/Isaac_Lab/Install_Isaac_lab',
                   'Robotics/Robot_Software/Isaac_Lab/Simulate_SoArm101_by_LeIsaac',
+                  'Robotics/Robot_Software/Isaac_Lab/Training_SoARM101_Policy_with_IsaacLab',
                     ]},
 
             {
@@ -4178,6 +4271,7 @@ const sidebars = {
                     ]},
             'Robotics/Robot_Software/VLA/control_robotic_arm_via_gr00t',
             'Robotics/Robot_Software/control_robotic_arm_via_phospho',
+            'Robotics/Robot_Software/Implement_Ethercat_communication_on_reComputer',
           ]
 
     },
@@ -4318,6 +4412,7 @@ const sidebars = {
       ],
     },
     'Solutions/jetson-crowd-tracking',
+    'Solutions/Frigate_on_Jetson_NodeRED_Gun_Alerts',
     // END OF Solution
 
     {
@@ -8862,7 +8957,7 @@ const sidebars = {
         }
       ],
     },
-    'zh-CN/Solutions/jetson-crowd-tracking',
+    'zh-CN/Solutions/cn_jetson-crowd-tracking',
     // END OF Solutions
 
     {
@@ -13879,7 +13974,7 @@ const sidebars = {
         }
       ],
     },
-    'Solutions/jetson-crowd-tracking',
+    'es/Solutions/es_jetson-crowd-tracking',
     // END OF Solution
 
     {
@@ -15331,7 +15426,7 @@ const sidebars = {
               'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_Get_Started',
               'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_Payload',
            'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_Tracker_WiFi_Geolocation',
-           'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_E5_Bluetooth_Location_Beacon',
+           'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_BC01_Indoor_Bluetooth_Beacon',
            'ja/Sensor/SenseCAP/SenseCAP_T1000_Tracker/User_Guide/ja_Indoor_Positioning_Guide',
                    ],
           },
@@ -18187,98 +18282,62 @@ const sidebars = {
       label: 'SenseCraft AI',
       collapsed: true,
       collapsible: true,
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'ja/Cloud_Chain/SenseCraft_AI',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'SenseCraft APP',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'ja/Cloud_Chain/SenseCraft_APP',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'SenseCraft Data Platform',
+      collapsed: true,
+      collapsible: true,
+      items: [
+        {
+          type: 'autogenerated',
+          dirName: 'ja/Cloud_Chain/SenseCraft_Data_Platform',
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'SenseCraft HMI',
+      collapsed: true,
+      collapsible: true,
       link: {
         type: "doc",
-        id: 'ja/Cloud_Chain/SenseCraft/SenseCraft_AI/ja_SenseCraft_AI_main_page',
+        id: 'ja/Cloud_Chain/SenseCraft_HMI/ja_sensecraft_hmi_overview',
       },
       items: [
         {
           type: 'autogenerated',
-          dirName: 'ja/Cloud_Chain/SenseCraft/SenseCraft_AI',
-        },
-      ]
-    },
-    {
-      type: 'category',
-      label: 'SenseCAP ダッシュボード',
-      items: [
-        'ja/Cloud_Chain/SenseCAP_Dashboard/ja_Dashboard_Basics',
-        'ja/Cloud_Chain/SenseCAP_Dashboard/ja_Dashboard_Registration',
-        'ja/Cloud_Chain/SenseCAP_Dashboard/ja_Hotspot_Registration',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'SenseCAP ポータル',
-      items: [
-        'ja/Cloud_Chain/SenseCAP_Portal/ja_QuickStart',
-        {
-          type: 'category',
-          label: '管理',
-          items: [
-            'ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/ja_Dashboard',
-            'ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/ja_Data_Management',
-            'ja/Cloud_Chain/SenseCAP_Portal/Detail_Introduction/ja_Device_Management',
-          ],
+          dirName: 'ja/Cloud_Chain/SenseCraft_HMI',
         },
       ],
     },
-
     {
       type: 'category',
-      label: 'SenseCAP Hotspot アプリ',
+      label: 'SenseCraft Blockchain',
+      collapsed: true,
+      collapsible: true,
       items: [
-        'ja/Cloud_Chain/SenseCAP_Hotspot_APP/ja_Introduction',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'SenseCraft アプリ',
-      items: [
-        'ja/Cloud_Chain/SenseCAP_Mate_APP/ja_sensecraft_app',
-    //    'Cloud_Chain/SenseCAP_Mate_APP/sensecap_mate_app_event',
-         'ja/Cloud_Chain/SenseCAP_Mate_APP/ja_sensecraft_cloud_fee',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'SenseCAP AI',
-      items: [
-        'ja/Cloud_Chain/SenseCAP_AI/ja_How_to_Use SenseCAP_AI_on_SenseCAP_Portal_and_SenseCAP_Mate_APP',
-        'ja/Cloud_Chain/SenseCAP_AI/ja_xiao-esp32c3-sensecapai',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'SenseCAP API',
-      items: [
-        'ja/Cloud_Chain/SenseCAP_API/ja_SenseCAP_API_Introduction',
-        'ja/Cloud_Chain/SenseCAP_API/ja_API_pricing',
         {
-          type: 'category',
-          label: 'HTTP API',
-          items: [
-            'ja/Cloud_Chain/SenseCAP_API/HTTP_API/ja_Quick_Start',
-            'ja/Cloud_Chain/SenseCAP_API/HTTP_API/ja_HTTP_API_Access_Guide',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'データ OpenStream API',
-          items: [
-            'ja/Cloud_Chain/SenseCAP_API/Data_OpenStream_API/ja_Data_OpenStream_API_Quickstart',
-            'ja/Cloud_Chain/SenseCAP_API/Data_OpenStream_API/ja_Data_OpenStream_API_Reference',
-          ],
-        },
-        {
-          type: 'category',
-          label: '付録',
-          items: [
-            'ja/Cloud_Chain/SenseCAP_API/Appendix/ja_List_of_Sensor_Types',
-            'ja/Cloud_Chain/SenseCAP_API/Appendix/ja_List_of_Measurement_IDs',
-            'ja/Cloud_Chain/SenseCAP_API/Appendix/ja_List_of_Device_Status_IDs',
-            'ja/Cloud_Chain/SenseCAP_API/Appendix/ja_List_of_Error_Code',
-          ],
+          type: 'autogenerated',
+          dirName: 'ja/Cloud_Chain/SenseCraft_Blockchain',
         },
       ],
     },

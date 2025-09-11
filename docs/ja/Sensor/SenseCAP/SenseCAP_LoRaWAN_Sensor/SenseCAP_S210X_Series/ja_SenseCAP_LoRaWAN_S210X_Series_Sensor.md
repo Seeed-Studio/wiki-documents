@@ -1,49 +1,49 @@
 ---
-description: SenseCAP LoRaWAN S210Xシリーズセンサーの紹介
-title: SenseCAP LoRaWAN S210Xシリーズセンサーの紹介
+description: SenseCAP LoRaWAN S210X シリーズセンサー紹介
+title: SenseCAP LoRaWAN S210X シリーズセンサー紹介
 keywords:
 - SenseCAP Sensor_Probe&Accessories
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Sensor/SenseCAP/SenseCAP_LoRaWAN_Sensor/SenseCAP_S210X_Series/SenseCAP_LoRaWAN_S210X_Series_Sensor
 last_update:
-  date: 05/15/2025
+  date: 3/30/2023
   author: Yvonne
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# SenseCAP LoRaWAN S210Xシリーズセンサー
 
-SenseCAP S210Xは、ワイヤレスLoRaWAN®センサーのシリーズです。都市部では2km、見通しの良い環境では10kmの通信範囲をカバーし、通信プロセス中の消費電力を抑えます。交換可能なバッテリーを搭載しており、最大10年間の使用が可能で、工業用IP66エンクロージャを備えています。-40 ~ 85℃の動作温度をサポートし、過酷な環境でも設置可能です。SenseCAP S210XはLoRaWAN® V1.0.3プロトコルに対応しており、LoRaWAN®ゲートウェイと連携して動作します。ユーザーはデバイスを設置し、QRコードを使用してバインドし、ネットワークを構成することで、SenseCAPポータルからデータを確認できます。このポータルはHTTPやMQTTなどの一般的なIoTプロトコルをサポートしています。
+# SenseCAP LoRaWAN S210X シリーズセンサー
 
-![画像1](https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png)
+SenseCAP S210X は、ワイヤレス LoRaWAN® センサーのシリーズです。都市部では 2km、見通しの良い環境では 10km の伝送範囲をカバーしながら、伝送プロセス中の消費電力を低く抑えることができます。最大 10 年間の使用をサポートする交換可能なバッテリーと、産業用 IP66 エンクロージャーを組み合わせています。-40 ~ 85℃ の動作温度をサポートし、過酷な環境での展開が可能です。SenseCAP S210X は LoRaWAN® V1.0.3 プロトコルと互換性があり、LoRaWAN® ゲートウェイと連携できます。ユーザーはデバイスを設置し、QR コードを使用してバインドし、ネットワークを設定すると、HTTP や MQTT などの人気の IoT プロトコルをサポートする SenseCAP ポータルからデータを表示できます。
+
+![図片1](https://media-cdn.seeedstudio.com/media/wysiwyg/111_1.png)
 <p style={{textAlign: 'center' }}><a href="https://www.seeedstudio.com/SenseCAP-S2101-LoRaWAN-Air-Temperature-and-Humidity-Sensor-p-5354.html" target="_blank"><img src="https://files.seeedstudio.com/wiki/Seeed-WiKi/docs/images/get_one_now.png" border={0} /></a></p>
 
 # 特徴
 
-- 世界中のLoRaWAN®ネットワークに対応: 様々なタイプのLoRaWAN®ゲートウェイに対応しており、LoRaWAN®ネットワークへの迅速な接続を可能にします（863MHz ~ 928MHzのユニバーサル周波数プランをサポート）。
-- 長距離通信 & バッテリー駆動: 都市部で2km、見通しの良い環境で10kmの超広範囲通信を実現。簡単に交換可能な標準Li-SOCl2バッテリー（タイプ: ER34615）で最大10年間のバッテリー寿命を提供。
-- 過酷な環境での使用に対応: -40℃ ~ 85℃の動作温度とIP66規格のエンクロージャを備え、屋外使用、高UV暴露、豪雨、埃っぽい環境などに適しています。
-- 簡単な設定: SenseCAPはコード不要の体験を提供し、SenseCAP Mate APPを使用して4ステップで設定を完了できます。
+- 世界中の LoRaWAN® ネットワークと互換性：さまざまなタイプの LoRaWAN® ゲートウェイと互換性があり、LoRaWAN® ネットワークとの高速接続を可能にします（863MHz ～ 928MHz のユニバーサル周波数プランをサポート）。
+- 長距離 & バッテリー駆動：都市部で 2km、見通しの良い環境で 10km の超広域伝送範囲。簡単に交換可能な標準 Li-SOCl2 バッテリー（タイプ：ER34615）で駆動し、最大 10 年のバッテリー寿命を実現。
+- 過酷な環境での使用を想定した設計：-40℃ ～ 85℃ の動作温度と IP66 定格エンクロージャーにより、屋外使用、高 UV 暴露、大雨、埃っぽい条件などに適しています。
+- 簡単な設定：SenseCAP は、ユーザーが SenseCAP Mate APP を通じて 4 つのステップで設定を完了できるノーコード体験を提供します。
 
 :::tip
-IP 66: IP等級（Ingress Protection RatingまたはInternational Protection Ratingとも呼ばれる）は、電気エンクロージャが埃、湿気、液体、偶発的な接触などの異物を遮断する効果を示す方法です。
+IP 66：IP 定格（侵入保護定格または国際保護定格とも呼ばれる）は、埃、湿気、液体、偶発的な接触などの異物を遮断する電気エンクロージャーの有効性を示す方法です。
 
-SenseCAP Mate App: SenseCAP Mate APPは、データの可視化とリモートデバイス管理のための強力なアプリです。
+SenseCAP Mate App：SenseCAP Mate APP は、データ可視化とリモートデバイス管理のための強力な APP です。
 :::
 
-# ゲートウェイとLoRaWAN®ネットワークサーバーの選択方法
-センサーを使用する際にはLoRaWANネットワークのカバレッジが必要です。選択肢は2つあります。
-![画像4](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
+# ゲートウェイと LoRaWAN® ネットワークサーバーの選択方法
+
+センサーを使用する際は LoRaWAN ネットワークカバレッジが必要で、2 つのオプションがあります。
+![図片4](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/4.png)
 
 # センサーの使用方法
-![画像11](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
+
+![図片11](https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_S210X_Series/11.png)
 
 # アーキテクチャ
 
-![画像2](https://media-cdn.seeedstudio.com/media/wysiwyg/222.png)
+![図片2](https://media-cdn.seeedstudio.com/media/wysiwyg/222.png)
 
 # アプリケーション
-![画像3](https://wdcdn.qpic.cn/MTY4ODg1NTg2NjMyNjM0Nw_764306_m5FVYoxTQ-Ayq1fK_1669970097?w=1080&h=584)
+
+![図片3](https://wdcdn.qpic.cn/MTY4ODg1NTg2NjMyNjM0Nw_764306_m5FVYoxTQ-Ayq1fK_1669970097?w=1080&h=584)

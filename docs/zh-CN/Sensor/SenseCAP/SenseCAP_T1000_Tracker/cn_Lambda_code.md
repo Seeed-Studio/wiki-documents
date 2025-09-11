@@ -1,5 +1,5 @@
 ---
-description: Lambda location code 
+description: Lambda 位置代码
 keywords:
 - Tracker
 - Wio

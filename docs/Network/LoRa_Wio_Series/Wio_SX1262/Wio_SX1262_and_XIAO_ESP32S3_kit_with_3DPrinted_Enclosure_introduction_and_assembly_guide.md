@@ -23,13 +23,12 @@ This device is based on XIAO ESP32S3 and Wio-SX1262 LoRa module. Coupled with an
 
 ## Features
 
-* **High RF performance**: Supports LoRa (862 - 930MHz), 2.4GHz Wi - Fi, and BLE 5.0 dual - wireless communication. When connected to an external antenna, it enables remote communication over a distance of 2.5km (LoRa) and 100m + (Wi - Fi / BLE).
-* **LoRaWAN Hub**: Pre-flashed with Single channel LoRaWAN firmware, it is ready to work once powered on.
-* **3D casing Design**: Measuring 22x23x57mm, this device features a black ABS material with an extensive temperature range (- 40℃ ~ 100℃), making it ideal for outdoor and space - constrained projects.
-* **Powerful MCU Board**: Incorporate the ESP32S3 32-bit, dual-core, Xtensa processor running at up to 240MHz, mounted multiple development ports, Arduino / MicroPython supported.
-* **Elaborate Power Design**: Includes a Type-C USB interface, multiple GPIO/I2C/UART interface and lithium battery charge management.
-* **Versatile Hardware for Multiple Applications**: Can be developed into a node or router for [Meshtastic](https://meshtastic.org/), a device for [Single Channel LoRaWAN Gateway](https://github.com/Lora-net/one_channel_hub), or a LoRa & LoRaWAN sensor.
-
+- **High RF performance**: Supports LoRa (862 - 930MHz), 2.4GHz Wi - Fi, and BLE 5.0 dual - wireless communication. When connected to an external antenna, it enables remote communication over a distance of 2.5km (LoRa) and 100m + (Wi - Fi / BLE).
+- **LoRaWAN Hub**: Pre-flashed with Single channel LoRaWAN firmware, it is ready to work once powered on.
+- **3D casing Design**: Measuring 22x23x57mm, this device features a black ABS material with an extensive temperature range (- 40℃ ~ 100℃), making it ideal for outdoor and space - constrained projects.
+- **Powerful MCU Board**: Incorporate the ESP32S3 32-bit, dual-core, Xtensa processor running at up to 240MHz, mounted multiple development ports, Arduino / MicroPython supported.
+- **Elaborate Power Design**: Includes a Type-C USB interface, multiple GPIO/I2C/UART interface and lithium battery charge management.
+- **Versatile Hardware for Multiple Applications**: Can be developed into a node or router for [Meshtastic](https://meshtastic.org/), a device for [Single Channel LoRaWAN Gateway](https://github.com/Lora-net/one_channel_hub), or a LoRa & LoRaWAN sensor.
 
 ## Specification
 
@@ -40,7 +39,7 @@ This device is based on XIAO ESP32S3 and Wio-SX1262 LoRa module. Coupled with an
 | Wireless | Complete 2.4GHz Wi-Fi subsystem<br/>BLE: Bluetooth 5.0, Bluetooth mesh,<br/>LoRa: Single Channel Gateway |
 | Interface | 1x UART, 1x IIC, 1x IIS, 1x SPI, 11x GPIOs (PWM), 9x ADC, 1x User LED, 1x Charge LED<br/>1x Reset button, 1x Boot button |
 | Power | Input voltage (Type-C): 5V<br/>Input voltage (BAT): 4.2V<br/>Charging battery current: 100mA |
-| Operating Temperature | -40 ~ 65°C | 
+| Operating Temperature | -40 ~ 65°C |
 | **Antenna** |
 | Type | SMA to I-PEX External Antenna |
 | Max Gain | 2 dBi |
@@ -57,32 +56,33 @@ This device is based on XIAO ESP32S3 and Wio-SX1262 LoRa module. Coupled with an
 
 <table align="center">
   <tr>
-	    <th>Wio-SX1262 extension board diagram</th>
-	</tr>
+     <th>Wio-SX1262 extension board diagram</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/10.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
-	<tr>
-	    <th>XIAO ESP32S3 front indication diagram</th>
-	</tr>
-	<tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/10.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
+ <tr>
+     <th>XIAO ESP32S3 front indication diagram</th>
+ </tr>
+ <tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/front-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3 back indication diagram</th>
-	</tr>
+     <th>XIAO ESP32S3 back indication diagram</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/back-indication.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
     <tr>
-	    <th>XIAO ESP32S3 Pin List</th>
-	</tr>
+     <th>XIAO ESP32S3 Pin List</th>
+ </tr>
     <tr>
-	    <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/13.png" style={{width:700, height:'auto'}}/></div></td>
-	</tr>
+     <td><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/13.png" style={{width:700, height:'auto'}}/></div></td>
+ </tr>
 </table>
 
 ### Part List
+
 | Item | Quantity |
 | ---- | ---- |
 | XIAO ESP32S3 & Wio-SX1262 Kit with 3D case | x1 |
@@ -117,12 +117,10 @@ This device is based on XIAO ESP32S3 and Wio-SX1262 LoRa module. Coupled with an
 - Configuring as LoRaWAN gateway(pre-flashed), please follow [LoRaWAN Gateway Configuration](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_single_channel_gateway/) and [the instruction for LNS connection](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_LNS_TTN/)
 - Using Meshtastic for network communication, please follow [the meshtastic instruction](https://wiki.seeedstudio.com/wio_sx1262_xiao_esp32s3_for_meshtastic/)
 
-
-
 ## Resource
 
-* [Wio-SX1262 for XIAO 3D file](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
-* [Schematic Diagram Wio-SX1262 for XIAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
-* [Wio-SX1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
-* [Github One-Channel Hub project](https://github.com/Lora-net/one_channel_hub)
-* [casing 3D file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/XIAO_ESP32S3_Meshtastic%26LoRa_24.11.20.zip)
+- [Wio-SX1262 for XIAO 3D file](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_for_XIAO_3D_file.rar)
+- [Schematic Diagram Wio-SX1262 for XIAO](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Schematic_Diagram_Wio-SX1262_for_XIAO.pdf)
+- [Wio-SX1262 Module Datasheet](https://files.seeedstudio.com/products/SenseCAP/Wio_SX1262/Wio-SX1262_Module_Datasheet.pdf)
+- [Github One-Channel Hub project](https://github.com/Lora-net/one_channel_hub)
+- [casing 3D file](https://files.seeedstudio.com/wiki/XIAO_ESP32S3_for_Meshtastic_LoRa/XIAO_ESP32S3_Meshtastic%26LoRa_24.11.20.zip)

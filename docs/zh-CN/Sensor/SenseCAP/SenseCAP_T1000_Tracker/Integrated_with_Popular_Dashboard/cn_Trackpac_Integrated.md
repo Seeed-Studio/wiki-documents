@@ -17,7 +17,7 @@ last_update:
 
 ## 配置设备
 
-请查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker/)以正确设置您的设备。
+请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker/)以正确设置您的设备。
 
 选择平台为 `Other Platform`，将 `APP EUI` 配置为推荐值：
 ```cpp 
@@ -25,7 +25,7 @@ last_update:
 ```
 
 :::tip
-如果您想要更改回来，`reset` 将恢复原始密钥。
+如果您想要更改回来，执行 `reset` 将恢复原始密钥。
 :::
 
 然后复制 `Device EUI`、`APP EUI` 和 `APP key`。
@@ -98,17 +98,17 @@ last_update:
 
 **配置警报**：开启或关闭是否要在跨越地理围栏边界时接收警报。
 
-* Out of Hours：指定是否只想在特定时间之外接收警报。
+* Out of Hours：指定是否只在特定时间之外接收警报。
 
 * Start and End Time：如果选择了"Out of Hours"，输入您不想接收警报的时间范围。
 
 **选择警报联系人**：
 
-通过输入姓名或点击框并从列表中选择，选择哪些已保存的联系人应接收地理围栏警报。
+通过输入姓名或点击框并从列表中选择，选择哪些已保存的联系人应该接收地理围栏警报。
 
 **设置地理围栏中心**：
 
-* Click on the Map：使用鼠标点击您想要设置地理围栏中心的位置。
+* Click on the Map：使用鼠标点击您想要设置为地理围栏中心的位置。
 
 * Use Geolocate：或者，您可以使用地理定位功能（通常表示为指南针或位置图标）缩放到您的当前位置并将其设置为地理围栏中心。
 

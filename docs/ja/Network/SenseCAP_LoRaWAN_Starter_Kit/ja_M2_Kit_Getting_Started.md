@@ -126,7 +126,7 @@ SenseCAP Mate APPをダウンロードするためにスキャン
 **デバイスのAPホットスポット経由でアクセス**
 
 1. ボタンを5秒間押し続け、青色のインジケーターがゆっくり点滅するまで待ち、設定モードに入ります。
-2. APホットスポット名はSenseCAP\_XXXXXX（6桁のMACアドレス）、デフォルトのパスワードは12345678です。コンピュータをこのAPホットスポットに接続します。
+2. APホットスポット名はSenseCAP_XXXXXX（6桁のMACアドレス）、デフォルトのパスワードは12345678です。コンピュータをこのAPホットスポットに接続します。
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/12.png" /></div>
 

@@ -2,7 +2,7 @@
 description: 蜂鸣器
 title: 蜂鸣器
 keywords:
-- SenseCAP Indicator RP2040 开发教程
+- SenseCAP Indicator RP2040 Development Tutorial
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/SenseCAP_Indicator_RP2040_Buzzer
 last_update:
@@ -122,7 +122,7 @@ void sensor_scd4x_init(void) {
   // 停止可能之前启动的测量
   error = scd4x.stopPeriodicMeasurement();
   if (error) {
-    Serial.print("尝试执行stopPeriodicMeasurement()时出错: ");
+    Serial.print("Error trying to execute stopPeriodicMeasurement(): ");
     errorToString(error, errorMessage, 256);
     Serial.println(errorMessage);
   }
@@ -130,7 +130,7 @@ void sensor_scd4x_init(void) {
   // 开始测量
   error = scd4x.startPeriodicMeasurement();
   if (error) {
-    Serial.print("尝试执行startPeriodicMeasurement()时出错: ");
+    Serial.print("Error trying to execute startPeriodicMeasurement(): ");
     errorToString(error, errorMessage, 256);
     Serial.println(errorMessage);
   }
@@ -140,18 +140,18 @@ void sensor_scd4x_get(void) {
   uint16_t error;
   char errorMessage[256];
 
-  Serial.print("传感器 scd4x: ");
+  Serial.print("sensor scd4x: ");
   // 读取测量值
   uint16_t co2;
   float temperature;
   float humidity;
   error = scd4x.readMeasurement(co2, temperature, humidity);
   if (error) {
-    Serial.print("尝试执行readMeasurement()时出错: ");
+    Serial.print("Error trying to execute readMeasurement(): ");
     errorToString(error, errorMessage, 256);
     Serial.println(errorMessage);
   } else if (co2 == 0) {
-    Serial.println("检测到无效样本，跳过。");
+    Serial.println("Invalid sample detected, skipping.");
   } else {
     Serial.print("Co2:");
     Serial.print(co2);
@@ -197,6 +197,6 @@ void loop() {
 
 # **技术支持**
 
-别担心，我们为您提供支持！请访问我们的 [Seeed 官方 Discord 频道](https://discord.com/invite/QqMgVwHT3X) 提出您的问题！
+别担心，我们为您提供支持！请访问我们的 [Seeed 官方 Discord 频道](https://discord.com/invite/QqMgVwHT3X) 来提出您的问题！
 
 如果您有大批量订单或定制需求，请联系 iot@seeed.cc

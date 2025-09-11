@@ -1,157 +1,164 @@
 ---
-description: このガイドでは、reComputer J3011でシステムをバックアップおよび復元する方法を説明します。これにより、設定済みの環境やソフトウェアを新しいデバイスに移行できます。バックアッププロセスには、リカバリモードへの移行、JetPack BSPのダウンロード、バックアップスクリプトを使用したデータのコピーが含まれます。復元時には、新しいSSDを挿入し、再度リカバリモードに入り、復元コマンドを実行します。このプロセスにより、設定済みのシステム環境を効率的に複製できます。
+description: このガイドでは、reComputer J3011でシステムのバックアップと復元を行い、設定済みの環境とソフトウェアを新しいデバイスに転送する方法を説明します。バックアッププロセスには、リカバリモードへの移行、JetPack BSPのダウンロード、バックアップスクリプトを使用したデータのコピーが含まれます。復元時には、新しいSSDを挿入し、再度リカバリモードに入り、復元コマンドを実行します。このプロセスにより、設定済みのシステム環境を効率的に複製できます。
 title: reComputerでのバックアップと復元の作成
 keywords:
 - jetson
 - BSP
 - L4T
-- バックアップ
-- 復元
+- Backup
+- Restore
 image: https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.webp
 slug: /ja/create_backup_and_restore_on_recomputer
 last_update:
-  date: 05/15/2025
+  date: 04/11/2025
   author: Zibo
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 # reComputerでのバックアップと復元の作成
 
 ## はじめに
-reComputerは、最大275TOPSの最新AI性能をエッジに提供する強力でコンパクトなインテリジェントエッジボックスです。ビジネスに必要なソフトウェアや環境をreComputerに設定・インストールした後、新しいreComputerにプロジェクトを複製する必要がある場合、ソフトウェアを再インストールするのは効率的ではありません。このWikiページでは、[reComputer J3011](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html)を使用して、既存のソフトウェアと環境をバックアップし、新しいreComputerに復元・移植する方法を紹介します。
+
+reComputerは、エッジに最大275TOPSの最新AI性能をもたらす強力でコンパクトなインテリジェントエッジボックスです。recomputerでビジネスに必要なソフトウェアと環境を設定・インストールし、別の新しいrecomputerからプロジェクトを複製する必要がある場合、ソフトウェアの再インストールは効率的ではありません。そのため、このwikiページでは[reComputer J3011](https://www.seeedstudio.com/reComputer-J3011B-p-6405.html)を使用して、recomputerシリーズで既存のソフトウェアと環境をバックアップし、新しいrecomputerに復元・移植を便利に行う方法を紹介します。
 
 :::note
-テストプラットフォームはreComputer J3011であり、JetPack 5.1.3を参考として提供しています。
+私たちのテストプラットフォームはreComputer J3011で、JetPack 5.1.3を参考として提供しています。
 :::
 
 ## 前提条件
-- Ubuntuホストコンピュータ
-- USB Type-Cデータ転送ケーブル
-- reComputer J3011 (JetPack 5.1.3 OS搭載)
+
+- Ubuntu ホストコンピュータ
+- USB Type-C データ転送ケーブル
+- reComputer J3011（JetPack 5.1.3 OS搭載）
 
 :::info
-reComputerに必要なソフトウェアとアプリケーションをインストールおよび設定済みであること。これらの変更がデバイスの起動機能を損なわないことを確認してください。変更後にデバイスを再起動して安定性を確認することを推奨します。
+reComputerに必要なソフトウェアとアプリケーションをインストール・設定してください。これらの変更がデバイスの起動機能を損なわないことを確認してください。変更後はデバイスを再起動して安定性を確認することをお勧めします。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop.png"/></div>
-上記のスクリーンショットのように、jtopソフトウェアをインストールしており、ターミナルでこれらのコマンドを直接使用できます。
+上のスクリーンショットのように、jtopソフトウェアをインストールしました。ここでは、ターミナルでこれらのコマンドを直接使用できます。
 <a id="Recovery"></a>
 :::
 
 ## システムのバックアップ
 
-**ステップ1.** デバイスをリカバリモードに設定する方法については、この[Wikiページ](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)を参照してください。
+**ステップ 1.** デバイスをリカバリモードに設定します。この[wikiページ](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/#enter-force-recovery-mode)を参照してください。
 
-**ステップ2.** Jetsonモジュールに対応するJetPack BSPを取得します。JetPack 5.1.3の場合、[NVIDIA公式サイト](https://developer.nvidia.com/embedded/jetson-linux-r3550)からJetson Linux R35.5.0 BSPをダウンロードしてください。
+**ステップ 2.** Jetsonモジュールに対応するJetPack BSPを取得します。JetPack 5.1.3の場合、[NVIDIAの公式サイト](https://developer.nvidia.com/embedded/jetson-linux-r3550)からJetson Linux R35.5.0 BSPをダウンロードしてください。
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/download_bsp.jpg"/></div>
 
-**ステップ3.** BSPファイルを解凍してLinux_for_Tegraディレクトリにアクセスします。
+**ステップ 3.** BSPファイルを展開してLinux_for_Tegraディレクトリにアクセスします。
 
 ```bash
 tar -xvzf jetson-linux-*.tbz2
-# JetPack 5.1.3の場合: tar -xvzf Jetson_Linux_R35.5.0_aarch64.tbz2
+# For Jetpack 5.1.3: tar -xvzf Jetson_Linux_R35.5.0_aarch64.tbz2
 ```
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/zip.jpg"/></div>
   
-
-**ステップ4.** Linux_for_Tegraの内容をJetPackフラッシュパッケージディレクトリ（例: mfi_recomputer-orin）にコピーします。
+**ステップ 4.** Linux_for_Tegra の内容を JetPack フラッシュパッケージディレクトリ（例：mfi_recomputer-orin）にコピーします。
 :::note
-「フラッシュパッケージディレクトリ」は、システムをフラッシュするプロセスで使用されるディレクトリファイルです。
+「フラッシュパッケージディレクトリ」は、システムをフラッシュする過程で使用されるディレクトリファイルです。
 :::
 
-既存のファイルを保持するために`-rn`オプションを使用します:
+既存のファイルを保持するために `-rn` オプションを使用します：
+
 ```bash
 sudo cp -rn Linux_for_Tegra/* mfi_recomputer-orin
 ```
 
-**ステップ5.** JetPackフラッシュパッケージディレクトリに移動します:
+**ステップ 5.** JetPackフラッシュパッケージディレクトリに移動します：
 
 ```bash
 cd /path/to/mfi_recomputer-orin
 ```
-**ステップ6.** ストレージデバイスと希望するバックアップ名を指定してバックアップスクリプトを実行します:
+
+**ステップ 6.** バックアップスクリプトを実行し、ストレージデバイスと希望するバックアップ名を指定します：
+
 ```bash
 sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -b recomputer-orin
 ```
+
 :::info
--b `<target_board>` をデバイス名に置き換えてください。
+-b `<target_board>` をあなたのデバイスに置き換えてください
+
 :::
 
 :::note
-JetPackフラッシュパッケージディレクトリに移動し、`xxx.conf`ファイルを見つけることができます。
-`xxx`は`<target_board>`です。
+Jetpackフラッシュパッケージディレクトリに移動して、`xxx.conf`ファイルを見つけることができます。
+`xxx`はあなたの`<target_board>`です
+
 ```bash
 ls | grep *.conf
 ```
+
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/conf_file1.jpg"/></div>
 :::
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/backup_start.png"/></div>
 
-完了するまでしばらくお待ちください。
-すべてが正常に進行すると、以下のスクリーンショットのような内容がターミナルに表示されます:
+完了するまで辛抱強く待ちます。
+すべてが順調に進めば、ターミナルで以下のスクリーンショットと似たようなものが表示されます：
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/success_back1.png"/></div>
 
-
 :::note
-このプロセス中、デバイスはフラッシュプロセスのように何度も再起動する可能性があります。仮想マシンやWSLの使用は推奨されません。接続が失われ、バックアップ/復元プロセスが失敗する可能性があるためです。欠損ファイルが発生する場合がありますが、`recomputer-orin.conf`を開いて存在しないファイルを削除できます。通常、これらは一時的なデバイスツリーオーバーレイオブジェクトファイルであり、バックアップおよび復元結果には影響しません。ただし、BSPに変更を加えた場合は、オーバーレイファイルを統合する必要があります。
+このプロセス中、デバイスはフラッシュプロセスのように何度も再起動する可能性があります。仮想マシンやWSLの使用は推奨されません。接続が失われ、バックアップ/復元プロセスが失敗する可能性があるためです。一部のファイルが見つからない場合があります。その場合は `recomputer-orin.conf` を開いて、存在しないファイルを削除できます。
+通常、これらは一時的なデバイスツリーオーバーレイオブジェクトファイルであり、バックアップと復元の結果には影響しません。ただし、BSPに変更を加えた場合は、オーバーレイファイルをマージする必要があります。
 :::
 
 ## システムの復元
 
-**ステップ 1.** 新しい空の [SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html) を reComputer に挿入します。
+**ステップ 1.** 新しい空の[SSD](https://www.seeedstudio.com/M-2-2280-SSD-128GB-p-5332.html)をreComputerに挿入します。
 
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/new_ssd.jpg"/></div>
 
-**ステップ 2.** [以前説明した](#Recovery) 強制リカバリーモードに入ります。
+**ステップ 2.** [前述の通り](#Recovery)強制リカバリモードに入ります。
 
-**ステップ 3.** ホストシステムで JetPack フラッシングパッケージのディレクトリに移動し、以下のコマンドをホストで実行します：
+**ステップ 3.** ホストシステムで、JetPackフラッシュパッケージディレクトリに移動し、ホストで復元コマンドを実行します：  
 
 ```bash
 sudo ./tools/backup_restore/l4t_backup_restore.sh -e nvme0n1 -r recomputer-orin
 ```
 
-すべてが正常に進むと、以下のスクリーンショットのような出力がターミナルに表示されます：
+すべてが正常に進むと、ターミナルで以下のスクリーンショットと同様のものが表示されます：
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/finish_store1.png"/></div>
 
-**ステップ 4.** Jetson デバイスの電源を入れ、以前設定したユーザー名とパスワードを使用します。そして、以前インストールしたソフトウェアをいくつかテストします。これが正常に動作すれば、復元は成功です。
+**ステップ 4.** Jetsonデバイスの電源を入れ、以前に設定したユーザー名とパスワードを使用します。そして、以前にインストールしたソフトウェアをテストします。動作すれば、復元は成功です。
 <div align="center"><img width ="1000" src="https://files.seeedstudio.com/wiki/reComputer-Jetson/reComputer_backup/jtop2.png"/></div>
-以前のシステムで jtop をインストールしていたため、新しいシステムのターミナルで直接 jtop を起動できます。
+以前のシステムでjtopをインストールしていたため、新しいシステムのターミナルで直接jtopを起動できます。
 
 :::info
-さらに、以下のケースでバックアップと復元がテストされています：  
-- 元の SSD にバックアップを復元する。  
-- 別の SSD にバックアップを復元する。  
-- 同じキャリアボードで、同じバッチの Jetson モジュールを使用し、異なる SSD にバックアップを復元する。
+さらに、以下のケースでバックアップと復元がテストされています：
+
+- 元のSSDへのバックアップの復元
+- 異なるSSDへのバックアップの復元
+- 同じキャリアボード、同じバッチのJetsonモジュール、異なるSSDへのバックアップの復元
+
 :::
 
 ## リソース
-- [J401 キャリアボードに JetPack OS をフラッシュする](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack/)
+
+- [J401キャリアボードにJetPack OSをフラッシュ](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack/)
 - [reComputer J30x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J301x-datasheet.pdf)
 - [reComputer J40x データシート](https://files.seeedstudio.com/products/NVIDIA/reComputer-J401x-datasheet.pdf)
 - [reComputer J30/J40 回路図](https://files.seeedstudio.com/wiki/J401/reComputer_J401_SCH_V1.0.pdf)
-- [reComputer J30/J40 3D ファイル](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
-- [Seeed Jetson シリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
-- [Seeed Studio エッジ AI 成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
-- [Seeed Jetson シリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
-- [Seeed Jetson デバイス ワンページ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
-- [Jetson サンプル](https://github.com/Seeed-Projects/jetson-examples)
-- [reComputer-Jetson-初心者向けガイド](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
+- [reComputer J30/J40 3Dファイル](https://files.seeedstudio.com/wiki/reComputer-J4012/reComputer-J4012.stp)
+- [Seeed Jetsonシリーズカタログ](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-NVIDIA_Jetson_Catalog_V1.4.pdf)
+- [Seeed Studio Edge AI成功事例](https://www.seeedstudio.com/blog/wp-content/uploads/2023/07/Seeed_NVIDIA_Jetson_Success_Cases_and_Examples.pdf)
+- [Seeed Jetsonシリーズ比較](https://www.seeedstudio.com/blog/nvidia-jetson-comparison-nano-tx2-nx-xavier-nx-agx-orin/)
+- [Seeed Jetsonデバイス一覧](https://files.seeedstudio.com/wiki/Seeed_Jetson/Seeed-Jetson-one-pager.pdf)
+- [Jetsonサンプル](https://github.com/Seeed-Projects/jetson-examples)
+- [reComputer-Jetson-for-Beginners](https://github.com/Seeed-Projects/reComputer-Jetson-for-Beginners)
 
 ## 技術サポート & 製品ディスカッション
 
-当社の製品をお選びいただきありがとうございます！製品の使用体験がスムーズになるよう、さまざまなサポートを提供しています。お客様の好みやニーズに応じた複数のコミュニケーションチャネルをご用意しています。
+弊社製品をお選びいただき、ありがとうございます！弊社製品での体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

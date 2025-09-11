@@ -194,8 +194,7 @@ idf.py -p port monitor
 
 ### Flash with esptool
 
-If not using the complete ESP-IDF environment, it is also possible to flash the
-provided binary files using the `esptool` utility.
+If not using the complete ESP-IDF environment, it is also possible to flash the provided binary files using the `esptool` utility.
 
 https://docs.espressif.com/projects/esptool/en/latest/esp32/
 

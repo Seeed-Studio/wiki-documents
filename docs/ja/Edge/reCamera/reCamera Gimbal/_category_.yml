@@ -1,7 +1,7 @@
 position: 2 # float position is supported
 label: 'reCamera ジンバル'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
+collapsible: true # make the category collapsible
+collapsed: true # keep the category open by default
 className: recamera_gimbal
 link:
   type: generated-index

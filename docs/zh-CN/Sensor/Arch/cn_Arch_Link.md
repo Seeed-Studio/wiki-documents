@@ -55,7 +55,7 @@ last_update:
 ![](https://files.seeedstudio.com/wiki/Arch_Link/img/Get_started_with_mbed.png)
 
 1. 点击 [此链接](https://developer.mbed.org/compiler/#import:/teams/mbed/code/mbed_blinky/;platform:Seeed-Arch-BLE) **登录或注册 mbed**
-2. 导入 mbed\_blinky 程序
+2. 导入 mbed_blinky 程序
 3. 点击顶部工具栏中的 **Compile** 图标编译程序，然后下载编译后的 hex 文件。
 4. 将下载的 hex 文件拖放到 MBED 磁盘中
 
@@ -96,7 +96,7 @@ int main()
 
     - 运行步骤
 
-        1. 下载 [BLE\_Color\_Pixels\_Arch\_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
+        1. 下载 [BLE_Color_Pixels_Arch_BLE.hex](http://tangram.qiniudn.com/BLE_Color_Pixels_ARCH_BLE.hex)
         2. 将 hex 文件复制到 Arch BLE 的 MBED 磁盘中
         3. 下载 [Color Pixels 安卓应用](http://tangram.qiniudn.com/seeed_ble_color_pixels.apk)
 
@@ -119,11 +119,11 @@ int main()
 
     - 运行步骤
 
-        1. 下载 [Web\_Dashboard\_Arch\_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
+        1. 下载 [Web_Dashboard_Arch_Link.hex](http://tangram.qiniudn.com/Web_Dashboard_Arch_Link.hex)
         2. 将 hex 文件复制到 Arch Link 的 MBED 磁盘中
         3. 将 Grove - 温湿度传感器 Pro 连接到 I2C Grove 接口
         4. 通过 USB 数据线将 Arch Link 连接到您的电脑
-        5. 打开网页浏览器并访问 [http://mbed.org/media/uploads/yihui/web\_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
+        5. 打开网页浏览器并访问 [http://mbed.org/media/uploads/yihui/web_dashboard.html](http://mbed.org/media/uploads/yihui/web_dashboard.html)
 
 如果您想修改程序，请点击 [此链接](https://mbed.org/compiler/#import:/teams/Seeed/code/Web_Dashboard/;platform:Seeed-Arch-Link) 将 Web Dashboard 程序导入 mbed 在线 IDE。
 

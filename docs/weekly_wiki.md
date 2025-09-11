@@ -5,7 +5,7 @@ keywords:
 - weeely wiki
 image: https://files.seeedstudio.com/wiki/IndexWiki/logo_image.jpg
 last_update:
-  date: 09/01/2025
+  date: 09/08/2025
   author: Frank
 ---
 
@@ -17,21 +17,27 @@ This is Frank in Seeed Studio and welcome to the Seeed Studio weekly wiki! Each 
 
 ✨ For each week, when a collaborator contributes a project or fixes something important, we put the stars at the end of title of "Weekly Wiki" for more people be able to see their efforts👍.
 
-Today is September 1st, and a brand new week has begun! Check out what Seeed Studio did last week!
+Today is September 8th, and a brand new week has begun! Check out what Seeed Studio did last week!
 
 ## Latest Wiki Launched
 
-### [Use uv on reComputer](https://wiki.seeedstudio.com/use_uv_to_build_package_on_recomputer/)
+### [Training SoArm101 Policy with IsaacLab](https://wiki.seeedstudio.com/training_soarm101_policy_with_isaacLab/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/uv/uv_result.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-Jetson/isaaclab_rl/cube_play.gif" alt="pir" width={800} height="auto" /></p>
 
-This wiki explains how to use the [uv](https://github.com/astral-sh/uv) on reComputer box. uv is a fast, modern, and lightweight package manager and resolver for Python. It is designed to be a drop-in replacement for traditional Python package management tools like ```pip``` and ```pip-tools```, offering significant improvements in speed, efficiency, and usability.
+This wiki introduces how to use Isaac Lab to train and test SO-ARM100/101 robotic arm policies with reinforcement learning.
 
-### [Use docker on reComputer](https://wiki.seeedstudio.com/use_docekr_on_recomputer/)
+### [Implement Ethercat Communication on reComputer](https://wiki.seeedstudio.com/recomputer_ethercat_communication/)
 
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/00_AI_Sensing/Application/docker/docker_result.png" alt="pir" width={800} height="auto" /></p>
+<p style={{textAlign: 'center'}}><img src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/1/-/1-100001302_recomputer_robotics_j3011_with_gmsl_extension.jpg" alt="pir" width={800} height="auto" /></p>
 
-This wiki explains how to use the [docker](https://www.docker.com) on reComputer box. Docker is an open-source platform used to automate the deployment, scaling, and management of applications inside lightweight, portable containers. Containers allow developers to package applications and their dependencies together in a consistent environment, ensuring that they run smoothly across different computing environments.
+EtherCAT (Ethernet for Control Automation Technology) is a high-performance, open-source industrial Ethernet protocol designed for real-time automation control in automation, robotics, and motion systems. This wiki will show you how to conduct EtherCat communication on the reComputer Jetson Series.
+
+### [Frigate on Jetson with Node-RED Gun Alerts](https://wiki.seeedstudio.com/solutions/nodered-gun-alerts/)
+
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/solution/crowd_tracking/homepage%20demo.png" alt="pir" width={800} height="auto" /></p>
+
+This project provides real-time gun detection capabilities via Frigate-on-Jetson, combined with Node-RED to build a visual alert and notification system, enabling automatic threat detection, event alerts, and historical traceability in secured areas.  
 
 <!-- ## Existing Wiki Updated
 
@@ -180,5 +186,6 @@ This wiki introduces setting up NuttX RTOS on the Seeed Studio XIAO ESP32C6 boar
 - [weekly wiki on 2025.8.11th](/Seeed_Elderly/weekly_wiki/wiki250811)
 - [weekly wiki on 2025.8.18th](/Seeed_Elderly/weekly_wiki/wiki250818)
 - [weekly wiki on 2025.8.25th](/Seeed_Elderly/weekly_wiki/wiki250825)
+- [weekly wiki on 2025.9.01st](/Seeed_Elderly/weekly_wiki/wiki250901)
 
 </details>

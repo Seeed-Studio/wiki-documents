@@ -1,6 +1,6 @@
 ---
-description: reTerminal と Pi カメラを使用した OpenCV による色検出
-title: reTerminal と Pi カメラを使用した OpenCV による色検出
+description: reTerminalとPiカメラを使用したOpenCVによる色検出
+title: reTerminalとPiカメラを使用したOpenCVによる色検出
 keywords:
   - Edge
   - reTerminal 
@@ -10,109 +10,110 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminal_DM_Color_detection
 last_update:
-  date: 05/15/2025
+  date: 11/28/2023
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colordetect.gif" /></center>
 
 ## はじめに
 
-色検出はコンピュータビジョンの重要な要素であり、デジタル画像や動画内の色を識別・分析するプロセスを指します。幅広い産業で応用されており、**ロボット工学における物体認識、製造業での品質管理、さらには芸術作品の修復**にも役立っています。色検出のアルゴリズムは技術の進歩に寄与し、**自動運転車、医療画像処理、映画や写真の視覚美学**などの分野に影響を与えています。つまり、色検出は視覚的な世界を解釈し、意味のある方法で相互作用する能力を向上させる多用途なツールです。
+コンピュータビジョンの中核要素である色検出は、デジタル画像や動画における色の識別と分析を行います。産業界で広く応用されており、**ロボティクスにおけるオブジェクト認識、製造業における品質管理、さらには芸術作品の修復**などのタスクを可能にします。色検出の背後にあるアルゴリズムは技術の進歩に貢献し、**自動運転車、医療画像、映画や写真における視覚的美学**などの分野に影響を与えています。本質的に、色検出は視覚的世界を解釈し、多くの意味のある方法で相互作用する能力を向上させる多用途なツールです。
 
-## 始める前に
+## はじめに
 
-このプロジェクトを開始する前に、以下に記載されているようにハードウェアとソフトウェアを事前に準備する必要があります。
+このプロジェクトを開始する前に、ここで説明するようにハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal</th>
       <th class="table-trnobg">PiCam</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/frigate/reterminal.png" style={{width:300, height:'auto'}}/></div></td>
       <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/ReTerminal/Picam/picam2.jpg" style={{width:300, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html?queryID=26220f25bcce77bc420c9c03059787c0&objectID=4904&indexName=bazaar_retailer_products" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
-      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/ja/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 詳細を見る</font></span></strong></a></div></td>
+      <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/reTerminal-piCam/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
 
-公式ウェブサイトから Raspberry Pi 64 ビット OS の **Bullseye** または **Bookworm** バージョンをインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この [**ガイド**](https://wiki.seeedstudio.com/ja/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc) に従ってください。
+公式ウェブサイトから **Bullseye** または **Bookworm** バージョンの Raspberry Pi 64 bit OS をインストールすることをお勧めします。新しい Raspbian OS をインストールしたい場合は、この[**ガイド**](https://wiki.seeedstudio.com/reTerminal/#flash-raspberry-pi-os-64-bit-ubuntu-os-or-other-os-to-emmc)に記載されている手順に従ってください。
 
 :::note
 
-このチュートリアルはシリーズの続編として提供されているため、[**OpenCV の使い方**](https://wiki.seeedstudio.com/ja/reTerminal_DM_opencv/) に関する以前のチュートリアルをぜひご覧ください。
+このチュートリアルは私たちのシリーズの続編として機能するため、[**OpenCV入門**](https://wiki.seeedstudio.com/reTerminal_DM_opencv/)に関する以前のチュートリアルをぜひご確認いただくことを強くお勧めします。
 
 :::
 
-## OpenCVでの色空間の探求
+## OpenCVにおける色空間の探索
 
-色空間は画像処理の基本であり、OpenCVはさまざまな色空間をサポートしています。それぞれが独自の目的を持っています。ここでは、OpenCVで一般的に使用される3つの色空間、CMYK、BGR、HSVについて詳しく見ていきます。
+色空間は画像処理において基本的な要素であり、OpenCVはそれぞれ独自の目的を持つ複数の色空間をサポートしています。OpenCVの3つの一般的な色空間：CMYK、BGR、HSVについて詳しく見てみましょう。
 
 ### CMYK色空間
-CMYK（シアン、マゼンタ、イエロー、キー/ブラック）は、減法混色の色空間で、主にカラープリントで使用されます。
-色は、白色光からシアン、マゼンタ、イエロー、ブラックの割合を引くことで生成されます。
+
+CMYK（シアン、マゼンタ、イエロー、キー/ブラック）は、カラー印刷で使用される減法混色の色空間です。
+色は、白色光からシアン、マゼンタ、イエロー、ブラックの様々な割合を減算することによって作成されます。
 
 ### BGR色空間
 
-OpenCVのデフォルトの色空間はRGBですが、内部的にはBGR（ブルー、グリーン、レッド）として色を格納します。
-BGRは加法混色モデルであり、ブルー、グリーン、レッドの強度を組み合わせることでさまざまな色合いを形成します。
+OpenCVのデフォルト色空間はRGBですが、内部的にはBGR（ブルー、グリーン、レッド）で色を格納します。
+BGRは加法混色モデルで、青、緑、赤の様々な強度が組み合わさって異なる色合いを形成します。
 
-**コンポーネントの範囲:**
+**成分の範囲：**
 
-- ブルー (0-255): 青色の強度。
-- グリーン (0-255): 緑色の強度。
-- レッド (0-255): 赤色の強度。
+- ブルー（0-255）：青色の強度。
+- グリーン（0-255）：緑色の強度。
+- レッド（0-255）：赤色の強度。
 
 ### HSV色空間
-HSV（色相、彩度、明度）は、RGBの色点から派生した円筒モデルで色を表現します。
-これは人間の色の知覚を模倣しており、色相、彩度、明度のコンポーネントで構成されています。
 
-**コンポーネントの範囲:**
+HSV（色相、彩度、明度）は、RGBカラーポイントから派生した円筒モデルで色を表現します。
+色相、彩度、明度の成分を持つ、人間の色の知覚を模倣します。
 
-- 色相 (0-179): 色の種類（度数）。
-- 彩度 (0-255): 色の鮮やかさや強度。
-- 明度 (0-255): 色の明るさ。
+**成分の範囲：**
 
-## なぜHSVが色検出問題で重要なのか？
+- 色相（0-179）：度数で表される色の種類。
+- 彩度（0-255）：色の強度または鮮やかさ。
+- 明度（0-255）：色の明るさ。
 
-HSV（色相、彩度、明度）は、色情報を効果的に分離できるため、色検出タスクにおいて重要です。RGBやBGRとは異なり、HSVは色の種類（色相）をその強度（彩度）や明るさ（明度）から分離します。これにより、より直感的な表現が可能になります。この分離は照明の変化に対して堅牢であり、色に基づくセグメンテーションが照明条件の変化に対して影響を受けにくくなります。さらに、HSVでの自然な色の表現は、色の閾値を定義するプロセスを簡素化し、画像内の特定のオブジェクトや領域を識別するための正確な基準を提供します。色に基づくオブジェクト追跡やセグメンテーションなどのコンピュータビジョンタスクで広く使用されており、正確で信頼性の高い結果を達成するための重要性が際立っています。
+## 色検出問題においてHSVが重要な理由
+
+HSV（色相、彩度、明度）は、色情報を効果的に分離する能力により、色検出タスクにおいて重要です。RGBやBGRとは異なり、HSVは色の種類（色相）をその強度（彩度）と明るさ（明度）から分離し、より直感的な表現を提供します。この分離は照明の変化に対して堅牢性を示し、色ベースのセグメンテーションを様々な照明条件の変化に対してより敏感でなくします。さらに、HSVにおける色の自然な表現は色閾値の定義プロセスを簡素化し、画像内の特定のオブジェクトや領域を識別するための正確な基準を促進します。色ベースのオブジェクト追跡やセグメンテーションなどのコンピュータビジョンタスクでの広範囲な使用は、正確で信頼性の高い結果を達成する上でのその重要性を強調しています。
 
 ## コードスニペットの使用方法
 
-最初のコードでは、トラックバーをインタラクティブに調整することで、最適な色の閾値を視覚的に特定する柔軟性があります。これらのトラックバーを操作することで、興味のある特定の色を特定し、対応するHSVの最小値と最大値を記録できます。このハンズオンアプローチは、色のパラメータを微調整するための直感的な方法を提供し、より個別化された正確な色識別体験を保証します。
+最初のコードでは、トラックバーを対話的に調整する柔軟性があり、最適な色閾値を視覚的に識別することができます。これらのトラックバーを実験することで、興味のある特定の色を特定し、対応するHSVの最小値と最大値をメモすることができます。このハンズオンアプローチは、個人が色パラメータを微調整するための直感的な方法を提供し、よりパーソナライズされた正確な色識別体験を保証します。
 
  ```sh
 cd Seeed_Python_ReTerminal/samples/Opencv_and_piCam
+
  ```
 
-次に以下を実行します：
+次に
+
  ```sh
 python hsvtest.py
  ```
+
 Thonny IDEを使用してPythonスクリプトを実行することもできます。
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/colortrack.PNG" /></center>
 
-以下はHSV調整用のコードです：
+以下はHSV調整のコードです
 
-```python
+  ```sh
 import cv2
 import numpy as np
 
@@ -126,9 +127,9 @@ def stackImages(scale,imgArray):
     width = imgArray[0][0].shape[1]
     height = imgArray[0][0].shape[0]
     if rowsAvailable:
-        for x in range (0, rows):
+        for x in range ( 0, rows):
             for y in range(0, cols):
-                if imgArray[x][y].shape[:2] == imgArray[0][0].shape[:2]:
+                if imgArray[x][y].shape[:2] == imgArray[0][0].shape [:2]:
                     imgArray[x][y] = cv2.resize(imgArray[x][y], (0, 0), None, scale, scale)
                 else:
                     imgArray[x][y] = cv2.resize(imgArray[x][y], (imgArray[0][0].shape[1], imgArray[0][0].shape[0]), None, scale, scale)
@@ -149,6 +150,7 @@ def stackImages(scale,imgArray):
         hor= np.hstack(imgArray)
         ver = hor
     return ver
+
 
 path = 'captured_image.jpg'
 cv2.namedWindow("TrackBars")
@@ -176,6 +178,7 @@ while True:
     mask = cv2.inRange(imgHSV,lower,upper)
     imgResult = cv2.bitwise_and(img,img,mask=mask)
 
+
     cv2.imshow("Original",img)
     cv2.imshow("HSV",imgHSV)
     cv2.imshow("Mask", mask)
@@ -185,17 +188,17 @@ while True:
     #cv2.imshow("Stacked Images", imgStack)
 
     cv2.waitKey(1)
-```
+ ```
 
-トラックバーを使用してHSVの最小値と最大値を特定したら、これらの数値を2番目のスニペット内で対応する**色名**とその識別範囲に置き換えることができます。
+HSVの最小値と最大値をトラックバーを使用して最初のコードスニペットで決定したら、これらの数値を対応する**色名**とその識別された範囲で2番目のスニペットにシームレスに**置き換える**ことができます。
 
  ```sh
 python colordetector.py
  ```
 
-以下は色検出用の完全なコードです：
+以下は色検出の完全なコードです
 
-```python
+```sh
 import cv2
 import numpy as np
 from picamera2 import Picamera2
@@ -246,26 +249,25 @@ while True:
         picam2.stop()
         cv2.destroyAllWindows()
         break
-```
 
+ ```
 
-## 応用
+## アプリケーション
 
-色検出は、コンピュータビジョンや製造業から**医療画像処理**や芸術まで、多岐にわたる応用分野で重要な役割を果たしています。コンピュータビジョンでは、物体認識や追跡を可能にし、**ロボットのナビゲーションや監視**といったタスクに貢献します。産業界では、**製品の基準を満たすための仕分けや品質管理**に色検出を活用しています。医療画像処理では、正確な分析のために色ベースのセグメンテーションが利用され、エンターテインメント業界では映画の色補正や芸術作品の修復に使用されています。**交通標識の認識や生体認証、環境モニタリング**に至るまで、色を検出し解釈する能力は、技術、オートメーション、さまざまな分野の進歩を形作る基盤となっています。OpenCVコンピュータビジョンライブラリの色検出や形状検出といったシンプルな技術を使用することで、駐車スペースの数を簡単にカウントしたり、異常な駐車状況を検出することが可能です。
+色検出は、コンピュータビジョンや製造業から**医療画像処理**やアートまで、多様なアプリケーションにおいて重要な役割を果たしています。コンピュータビジョンでは、物体認識と追跡を可能にし、**ロボットナビゲーションや監視**などのタスクに貢献しています。産業界では色検出を**仕分けや品質管理**に活用し、製品が基準を満たすことを保証しています。医療画像処理では、精密な分析のために色ベースのセグメンテーションに依存し、エンターテインメント業界では映画の色調補正やアート修復に使用されています。**交通標識認識からバイオメトリクス識別、環境モニタリング**まで、色を検出し解釈する能力は基本的なものであり、技術、自動化、そして様々な分野の進歩を形作っています。OpenCV Computer Vision Libraryの色検出や形状検出などのシンプルな技術を使用することで、駐車スロットを簡単にカウントし、異常な駐車シナリオを検出することができます。
 
 <center><img width={800} src="https://files.seeedstudio.com/wiki/ReTerminal/opencv/carpark.gif" /></center>
 
-
 ## 技術サポート
 
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご用意しております。異なるご要望やニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+弊社製品をお選びいただき、ありがとうございます！弊社では、お客様の製品体験が可能な限りスムーズになるよう、様々なサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

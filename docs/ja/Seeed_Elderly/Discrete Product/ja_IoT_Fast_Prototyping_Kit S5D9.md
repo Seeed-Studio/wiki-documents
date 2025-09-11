@@ -170,16 +170,16 @@ S5D9 MCUボードは1つのPMODコネクタを提供します。このコネク�
 
 | ピン番号 | PMOD D |
 | --- | --- |
-| 1 | SSLB0/CTS9 – P2\_5 |
-| 2 | MOSI/TXD9 – P2\_3 |
-| 3 | MISO/RXD9 – P2\_2 |
-| 4 | RSPCK/SCK9 – P2\_4 |
+| 1 | SSLB0/CTS9 – P2_5 |
+| 2 | MOSI/TXD9 – P2_3 |
+| 3 | MISO/RXD9 – P2_2 |
+| 4 | RSPCK/SCK9 – P2_4 |
 | 5 | GND |
 | 6 | J6定義 3.3/5V |
-| 7 | GPIO – P7\_8/IRQ11 |
-| 8 | GPIO – P2\_6/SSLB1\_A |
-| 9 | GPIO – P2\_7/SSLB2\_A |
-| 10 | GPIO – P8\_1 |
+| 7 | GPIO – P7_8/IRQ11 |
+| 8 | GPIO – P2_6/SSLB1_A |
+| 9 | GPIO – P2_7/SSLB2_A |
+| 10 | GPIO – P8_1 |
 | 11 | GND |
 | 12 | VCC (3.3Vまたは5V) |
 
@@ -203,8 +203,8 @@ Groveコネクタは以下のインターフェースを提供します：
 
 | ピン | Grove AUART | Grove BI2C |
 | --- | --- | --- |
-| 1 | P4\_10/RXD0 | P1\_0/SCL1 |
-| 2 | P4\_11/TXD0 | P1\_1/SDA1 |
+| 1 | P4_10/RXD0 | P1_0/SCL1 |
+| 2 | P4_11/TXD0 | P1_1/SDA1 |
 | 3 | 3.3V | 3.3V |
 | 4 | GND | GND |
 
@@ -251,14 +251,14 @@ S5D9ボードには、デジタル入力用の24V耐性インターフェース�
 | 0 | 電源 +5V |   |
 | 1 | グランド |   |
 | 2 | 赤 |   |
-| 3 | 入力 – INP1 | P1\_11 |
+| 3 | 入力 – INP1 | P1_11 |
 | 4 | グランド |   |
-| 5 | 入力 – INP2 | P4\_9 |
+| 5 | 入力 – INP2 | P4_9 |
 | 6 | グランド |   |
 | 7 | 電源 +24V |   |
-| 8 | 出力 – OUT1 | P0\_8 |
+| 8 | 出力 – OUT1 | P0_8 |
 | 9 | 電源 +24V |   |
-| 10 | 出力 – OUT2 | P0\_9 |
+| 10 | 出力 – OUT2 | P0_9 |
 | 11 | 電源 +24V |   |
 | 12 | グランド |   |
 
@@ -272,9 +272,9 @@ S5D9ボードには、ユーザー定義の機能用に3つのオンボードLED
 
 | LED番号 | 色 | 設計者 | デバイスポート/ピン |
 | --- | --- | --- | --- |
-| 0 | 緑 | LED1 | P1\_2 |
-| 1 | 黄 | LED2 | P1\_3 |
-| 2 | 赤 | LED3 | P1\_13 |
+| 0 | 緑 | LED1 | P1_2 |
+| 1 | 黄 | LED2 | P1_3 |
+| 2 | 赤 | LED3 | P1_13 |
 
 ![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Mapping%20between%20LEDs%2C%20ports.png)
 
@@ -290,11 +290,11 @@ S5D9 ボードはデュアル RS232 インターフェーストランシーバ�
 | --- | --- | --- |
 | 1 | 電源 +5V |   |
 | 2 | グラウンド |   |
-| 3 | TX1 | P3\_2/TXD2 |
-| 4 | RX1 | P3\_1/RXD2 |
+| 3 | TX1 | P3_2/TXD2 |
+| 4 | RX1 | P3_1/RXD2 |
 | 5 | グラウンド |   |
-| 6 | TX2 | P6\_13/TXD7 |
-| 7 | RX2 | P6\_14/RXD7 |
+| 6 | TX2 | P6_13/TXD7 |
+| 7 | RX2 | P6_14/RXD7 |
 | 8 | グラウンド |   |
 
 ![](https://files.seeedstudio.com/wiki/IoT_Fast_Prototyping_Kit_S5D9_User_Manual/img/Dual%20RS232%20Ports.png)

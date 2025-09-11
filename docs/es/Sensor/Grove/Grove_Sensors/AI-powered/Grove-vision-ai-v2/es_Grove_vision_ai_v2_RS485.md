@@ -12,7 +12,15 @@ last_update:
 ---
 
 
+
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connectv2.jpg" style={{width:500, height:'auto'}}/></div>
+
+:::tip
+
+Si necesitas usar la placa de expansión RS485 junto con Vision AI V2, necesitarás volver a soldar nuevos pines de cabecera en la parte posterior de la placa de expansión RS485.
+
+:::
+
 
 ### Preparación de Hardware
 
@@ -32,22 +40,22 @@ last_update:
         <tr>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
             </a>
         </div></td>
         <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/Grove-Vision-AI-Module-V2-p-5851.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
             </a>
         </div></td>
     <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/OV5647-69-1-FOV-Camera-module-for-Raspberry-Pi-3B-4B-p-5484.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
             </a>
         </div></td>
             <td><div class="get_one_now_container" style={{textAlign: 'center'}}>
             <a class="get_one_now_item" href="https://www.seeedstudio.com/RS485-Breakout-Board-for-XIAO-p-6306.html" target="_blank">
-            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Ahora 🖱️</font></span></strong>
+            <strong><span><font color={'FFFFFF'} size={"4"}> Obtener Uno Ahora 🖱️</font></span></strong>
             </a>
         </div></td>
     </tr>
@@ -55,25 +63,25 @@ last_update:
 
 ### Método de conexión
 
-En primer lugar, prepara dos placas de expansión, dos placas de desarrollo de la serie XIAO y una Vision AI V2, y conecta los pines correspondientes según el diagrama. Esta rutina utiliza el XIAO ESP32C3 como demostración.
+En primer lugar, prepara dos placas de expansión, dos placas de desarrollo de la serie XIAO y un Vision AI V2, y conecta los pines correspondientes según el diagrama. Esta rutina utiliza el XIAO ESP32C3 como demostración.
 
 **Paso 1. Prepara dos placas de expansión RS485 y dos placas de desarrollo de la serie XIAO y conecta los pines según la siguiente figura**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/connect_modifg.png" style={{width:700, height:'auto'}}/></div>
 
-**Paso 2. Prepara la Vision AI V2 para montarla en la parte posterior de una de las dos placas de expansión RS485 como emisor**
+**Paso 2. Prepara Vision AI V2 para montarlo en el lado reverso de una de las dos placas de expansión RS485 como emisor**
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/11.jpg" style={{width:500, height:'auto'}}/></div>
 
 :::tip
 Si estás usando una placa de expansión RS485 por primera vez y no estás seguro de cómo cablearla, haz clic en este enlace(https://wiki.seeedstudio.com/es/XIAO-RS485-Expansion-Board/)
 
-Si no sabes cómo grabar el modelo y añadir el código de salida del modelo, haz clic en este enlace(https://wiki.seeedstudio.com/es/grove_vision_ai_v2_software_support/), que te explicará cada paso en detalle
+Si no sabes cómo grabar el modelo y agregar el código de salida del modelo, haz clic en este enlace(https://wiki.seeedstudio.com/es/grove_vision_ai_v2_software_support/), que te dirá cada paso en detalle
 
-¡Para un mejor uso posterior, no te saltes estos dos pasos!
+Para un mejor uso posterior, ¡no te saltes estos dos pasos!
 :::
 
-## Preparación del Software
+## Preparación de Software
 
 ### Código del Emisor
 
@@ -164,25 +172,25 @@ void loop()
 ### Funciones Detalladas del Código
 
 - **Inclusión de Librerías**
-  - Incluir la librería `HardwareSerial` para usar la funcionalidad de serie por hardware.
-  - Incluir la librería `Seeed_Arduino_SSCMA` para el control del módulo de IA.
+  - Incluye la librería `HardwareSerial` para usar la funcionalidad de serie por hardware.
+  - Incluye la librería `Seeed_Arduino_SSCMA` para el control del módulo AI.
 
-- **Creación de Objetos Serie**
+- **Creación de Objeto Serial**
 
     ```cpp
     HardwareSerial Serial3(1); 
     HardwareSerial atSerial(0);
     ```
 
-    Crear objetos Serial3 y atSerial para comunicación serie.
+    Crea objetos Serial3 y atSerial para comunicación serie.
 
-- **Creación de Objeto IA**
+- **Creación de Objeto AI**
 
     ```cpp
     SSCMA AI;
     ```
 
-    Crear una instancia de la clase SSCMA para procesamiento de IA.
+    Crea una instancia de la clase SSCMA para procesamiento AI.
 
 - **Métricas de Rendimiento**
 
@@ -195,7 +203,7 @@ void loop()
    Serial.println(AI.perf().postprocess);
     ```
 
-    Imprimir métricas de rendimiento de las etapas de procesamiento de IA: preprocesamiento, inferencia y postprocesamiento.
+    Imprime las métricas de rendimiento de las etapas de procesamiento AI: preprocesamiento, inferencia y postprocesamiento.
 
 - **Bucle de Cajas Detectadas**
 
@@ -219,7 +227,7 @@ void loop()
     }
     ```
 
-    Recorrer las cajas detectadas e imprimir sus detalles, incluyendo objetivo, puntuación y coordenadas del cuadro delimitador.
+    Recorre las cajas detectadas e imprime sus detalles, incluyendo objetivo, puntuación y coordenadas del cuadro delimitador.
 
 - **Bucle de Clases Detectadas**
 
@@ -231,7 +239,7 @@ void loop()
        Serial.println(AI.classes()[i].target);
     ```
 
-    Recorrer las clases detectadas e imprimir sus objetivos.
+    Recorre las clases detectadas e imprime sus objetivos.
 
 - **Definición de Macro**
 
@@ -240,7 +248,7 @@ void loop()
     digitalWrite(enable_pin, LOW);
     ```
 
-    Definir el pin de habilitación como D2.
+    Define el pin de habilitación como D2.
 
 - **Enviar Mensaje**
 
@@ -257,7 +265,7 @@ void loop()
     }
     ```
 
-    Determinar si se detecta una persona, si se detecta una persona se envía al receptor PEOPLE DETECTED, si no se detecta ninguna persona se envía al receptor NO PEOPLE DETECTED.
+    Determina si se detecta una persona, si se detecta una persona se envía al receptor PEOPLE DETECTED, si no se detecta ninguna persona se envía al receptor NO PEOPLE DETECTED.
 
 ### Código del Receptor
 
@@ -271,7 +279,7 @@ HardwareSerial Serial3(1); // Use UART2
 void setup() {
   Serial.begin(115200); // Initialize the hardware serial with a baud rate of 115200
   Serial3.begin(115200, SERIAL_8N1, 7, 6); // Initialize Serial3 with 115200 baud rate, 8 data bits, no parity, 1 stop bit (RX=D4(GPIO4), TX=D5(GPIO5))
-  
+
   // Wait for the hardware serial to be ready
   while(!Serial3);
   while(!Serial); // This line is generally unnecessary as Serial.begin() is ready immediately
@@ -288,8 +296,7 @@ void loop() {
         Serial.print("Received data: "); // Print label for received data
         Serial.println(receivedData); // Directly print the received data
     }
-}
-```
+}```
 
 ### Funciones Detalladas del Código
 
@@ -321,7 +328,7 @@ void loop() {
     while(!Serial); 
     ```
 
-    Esperar a que todos los puertos serie estén listos, configurar el pin de habilitación como salida, y ponerlo en bajo para habilitar el dispositivo.
+    Esperar a que todos los puertos serie estén listos, configurar el pin de habilitación como salida y ponerlo en bajo para habilitar el dispositivo.
 
 - **Función Loop**
   - `if (Serial3.available());`: Verificar cada 100 milisegundos si hay datos disponibles en Serial3.
@@ -333,15 +340,15 @@ void loop() {
     Serial.println(receivedData); 
     ```
 
-    Imprimir el mensaje del emisor
+    Imprimir el mensaje del remitente
 
 ### Gráfico de Resultados
 
-Sin embargo, la cámara enviará **"people detected"** cuando reconozca a una persona y **"no people detected"** cuando no reconozca a una persona, y el receptor mostrará el resultado del reconocimiento del emisor en el puerto serie.
+Sin embargo, la cámara enviará **"people detected"** cuando reconozca a una persona y **"no people detected"** cuando no reconozca a una persona, y el receptor mostrará el resultado del reconocimiento del remitente en el puerto serie.
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/RS485_V2AI/photo/result.png" style={{width:1000, height:'auto'}}/></div>
 
-## Soporte Técnico y Discusión de Productos
+## Soporte Técnico y Discusión del Producto
 
 ¡Gracias por elegir nuestros productos! Estamos aquí para brindarle diferentes tipos de soporte para asegurar que su experiencia con nuestros productos sea lo más fluida posible. Ofrecemos varios canales de comunicación para satisfacer diferentes preferencias y necesidades.
 

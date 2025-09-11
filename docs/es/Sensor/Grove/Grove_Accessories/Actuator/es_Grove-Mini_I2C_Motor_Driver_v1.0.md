@@ -430,7 +430,7 @@ Recursos
 --------
 
 - [Hoja de Datos DRV8830](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/DRV8830.pdf)
-- [Grove - Mini I2C Motor Driver\_Archivo\_Eagle](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH_PCB.zip)
+- [Grove - Mini I2C Motor Driver_Archivo_Eagle](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH_PCB.zip)
 - [Grove - Documento de Esquema Mini I2C Motor Driver](https://files.seeedstudio.com/wiki/Grove-Mini_I2C_Motor_Driver_v1.0/res/Grove-Mini_I2C_Motor_Driver_v1.0_SCH.pdf)
 - [Grove - Librería Fuente Mini I2C Motor Driver](https://github.com/Seeed-Studio/Drv8830_Motor_Driver)
 

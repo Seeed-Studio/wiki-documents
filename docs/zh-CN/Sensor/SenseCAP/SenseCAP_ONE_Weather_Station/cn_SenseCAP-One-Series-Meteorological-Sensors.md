@@ -22,7 +22,7 @@ last_update:
 
 SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下参数：空气温度和湿度、大气压力、光照、降水、风速、风向、PM2.5 和 PM10。通过采用模块化设计，SenseCAP ONE 使您能够根据实际应用需求，方便地将不同传感器组合集成到一个紧凑型气象站中。
 
-产品按照行业标准设计，IP66 防护等级，具有高精度、高可靠性和稳定性，以及强大的鲁棒性。SenseCAP ONE 系列支持 RS485/RS422 (Modbus) 和 SDI-12 接口，可轻松扩展其他相应接口的传感器。SenseCAP ONE 易于部署，在户外恶劣环境中可长期稳定运行，非常适合智慧城市、电网、发电厂、道路气象站、机场和智慧农业等场景的应用。
+产品按照行业标准设计，IP66 防护等级，具有高精度、高可靠性和稳定性，以及强大的鲁棒性。SenseCAP ONE 系列支持 RS485/RS422 (Modbus) 和 SDI-12 接口，可轻松扩展其他相应接口的传感器。SenseCAP ONE 易于部署，适用于户外恶劣环境中的长期运行，非常适合智慧城市、电网、发电厂、道路气象站、机场和智慧农业等场景的应用。
 
 ![sensecap one catagories](https://files.seeedstudio.com/products/113990896/wiki/sensecap%20one/overall.png)
 
@@ -32,15 +32,15 @@ SenseCAP ONE 紧凑型气象站由多个气象传感器组成，可测量以下�
 
 SenseCAP ONE S700 7合1紧凑型气象传感器可以帮助您收集和监测环境和天气数据，这些数据在智慧城市项目等不同应用场景中至关重要。SenseCAP ONE S700 配备传感器来测量以下七个参数：空气温度、相对湿度、大气压力、光照强度、降雨量、风速和风向。
 
-SenseCAP ONE 通过了 IP66 认证，具有强大的鲁棒性，能够承受最恶劣的户外环境。测量风速和风向的传感器使用超声波而不是传统的机械三杯式或叶片式风速计。使用超声波传感器的优势在于减少可动部件可以使传感器不易损坏，从而更容易维护，且不会牺牲精度或人力。
+SenseCAP ONE 通过了 IP66 认证，具有强大的鲁棒性，能够承受最恶劣的户外环境。测量风速和风向的传感器使用超声波而不是传统的机械三杯式或叶片式风速计。使用超声波传感器的优势在于减少可动部件可以使传感器不易损坏，从而更容易维护，而不会在精度或人力方面做出任何牺牲。
 
-SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通信协议。因此，SenseCAP ONE 紧凑型气象传感器可以与任何支持 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 的数据记录器配合使用。
+SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通信协议。因此，SenseCAP ONE 紧凑型气象传感器可以与任何支持 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 的数据记录器一起使用。
 
-我们还提供 SenseCAP [传感器集线器 4G 数据记录器](https://solution.seeedstudio.com/product/sensor-hub-4g-data-logger/)（支持太阳能供电和直流墙式电源），可与 SenseCAP ONE 系列气象传感器配合使用。数据可以传输到传感器集线器，然后传输到 SenseCAP 服务器或私有服务器。如果您选择使用 SenseCAP 服务器，我们还提供 API，让您轻松制作自己的应用程序。
+我们还提供 SenseCAP [传感器集线器 4G 数据记录器](https://solution.seeedstudio.com/product/sensor-hub-4g-data-logger/)（支持太阳能供电和直流墙式电源），可与 SenseCAP ONE 系列气象传感器一起使用。数据可以传输到传感器集线器，然后传输到 SenseCAP 服务器或私有服务器。如果您选择使用 SenseCAP 服务器，我们还提供 API，让您轻松制作自己的应用程序。
 
 ![](https://sensecap-solution-upload.cdn.seeed.cn/cc/2020/05/Picture16.png?x-oss-process=image%2Fformat,webp)
 
-## 特性
+## 功能特性
 
 - **一体化多种天气参数测量**：雨量强度、空气温度、相对湿度、大气压力、光照强度、降水强度、风速和风向等。
 
@@ -70,7 +70,7 @@ SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通�
 
 ## 演示
 
-在这里我们向您展示如何使用[SenseCAP ONE S700](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html)和[Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)创建您自己的气象站！通过最少的设置和易于使用的代码，这是一个很好的初学者教程，让您能够立即开始。
+在这里我们将向您展示如何使用[SenseCAP ONE S700](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html)和[Raspberry Pi](https://www.seeedstudio.com/Raspberry-Pi-4-Computer-Model-B-8GB-p-4595.html)创建您自己的气象站！通过最少的设置和易于使用的代码，这是一个很好的初学者教程，让您能够快速上手。
 
 ![](https://lh4.googleusercontent.com/CFwdaJ3jBZHVROiCzg1Mfu2dF5pNJwH3DAt7dloC4IKyKO_nFwISY_J-3JpZIqiZCazf9Y5DAxB7OxwNwhnwot3BY_I4Wx3CBdWrZNUwJMoDe9bCSzLmS4yxLVz0JYrm9HhjZl7N)
 
@@ -80,7 +80,7 @@ SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通�
 
 如果我告诉您，由于新的应用，天气数据所蕴含的潜力及其相关性只会变得更大，您会怎么想？
 
-在服装行业，约35%的年收入损失是由于不准确的销售预测和关于服装销售与时间、季节和天气变化、假期等因素关系的统计数据造成的。
+在服装行业，约35%的年收入损失是由于不准确的销售预测和关于服装销售与时间、季节和天气变化、假期等因素之间关系的统计数据造成的。
 
 为了缓解这种情况，如何使用准确的天气预报数据来规划给定区域的库存分配？例如，我们可以根据天气的未来变化来估计羽绒服需求的上升或下降。
 
@@ -106,7 +106,7 @@ SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通�
 
 ![](https://lh4.googleusercontent.com/h4i69Ct7UV4euxBaw8dLj09gJGfhTm4mo2hXmlq2hDKmANg116M79P_U1P50W8B_1-3h1ckTUjew8NsUALx8-CDoiisaYnyq_fwyekfAffY6ZMf5vVL6WEn02xZoRlw_uSZw2G46)
 
-然后，通过RS-485连接将SenseCAP ONE S700连接到RS-485扩展板。就是这样！
+然后，使用RS-485连接将SenseCAP ONE S700连接到RS-485扩展板。就这样！
 
 ### 软件设置
 
@@ -124,14 +124,14 @@ SenseCAP ONE 系列使用 RS 485 (MODBUS-RTU) / 232 / 422 (Modbus) / SDI-12 通�
 
 本教程假设在已设置互联网连接的Raspberry Pi上运行Raspberry Pi OS。如果您是Raspberry Pi的新手，可以在[这里](https://www.seeedstudio.com/blog/2021/01/25/three-methods-to-configure-raspberry-pi-wifi/)学习如何启动和运行WiFi。
 
-首先，确保您的树莓派上安装了 Node.JS v10.22.x。否则，运行下面的脚本来安装它。
+首先，确保您的Raspberry Pi上安装了Node.JS v10.22.x。否则，运行下面的脚本来安装它。
 
 ```
 curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
 bash n 10
 ```
 
-下一步是在 /dev/ttyS0 上启用硬件串口。在您的终端窗口中，使用以下命令运行 Raspi Config 工具：
+The next step is to enable hardware serial on /dev/ttyS0. In your terminal window, run the Raspi Config tool with:
 
 ```
 sudo raspi-config
@@ -139,7 +139,7 @@ sudo raspi-config
 
 ### 运行气象站
 
-设置完成后，启动和运行气象站就很简单了。在您的树莓派上，执行以下命令来安装和运行气象站服务器和网站。
+设置完成后，启动和运行气象站就很简单了。在您的树莓派上，执行以下命令来安装并运行气象站服务器和网站。
 
 ```
 git@github.com:Seeed-Solution/SenseCAP-WeatherStation-Raspberry-Pi-Visualization.git
@@ -157,13 +157,13 @@ pm2 save
 pm2 ls
 ```
 
-在您的PC和树莓派处于同一局域网下，通过浏览器中的以下URL访问气象站数据。
+在您的PC和树莓派处于同一局域网下，通过浏览器访问以下URL来获取气象站数据。
 
 ```
 http://{Raspberry Pi IP}:8080
 ```
 
-如果您不确定树莓派的IP地址，可以运行下面的命令并记下 inet 旁边的IP。
+如果您不确定树莓派的IP地址，可以运行以下命令并记下inet旁边的IP。
 
 ```
 ifconfig wlan0
@@ -173,17 +173,17 @@ ifconfig wlan0
 
 ### 完成
 
-一旦您完成了所有设置并成功访问了URL，您应该能看到气象数据如下所示实时可视化。SenseCAP ONE S700 是一个一体化平台，不仅允许我们获取温度和湿度等基本数据，我们还可以查看包括风向和风速、气压、降雨量甚至光照量在内的高级信息。
+一旦您完成了所有设置并成功访问了URL，您应该能看到天气数据如下所示实时可视化。SenseCAP ONE S700是一个一体化平台，不仅允许我们获取温度和湿度等基本数据，我们还可以查看高级信息，包括风向和风速、气压、降雨量甚至光照量。
 
 ![](https://lh6.googleusercontent.com/SGQuzJr3kZIRojr79-Iu1-onBBQoCDNH6gFFPTh7eFJy7yYYlO97Y6uvtEgSvMmt68q1LBUlMJSgOUn7kFK3Meu2d1mv6oAovEiKlCwNkJaOmhEwBBeDVNDZMTrggOiZsHh2JHEq)
 
-通过这种方式，我们不仅在几分钟内拥有了一个功能齐全的气象站，还可以扩展它来远程可视化数据。或者，我们也可以存储气象数据用于强大的数据分析和预测。
+通过这种方式，我们不仅在几分钟内拥有了一个功能齐全的气象站，还可以扩展它来远程可视化数据。或者，我们也可以存储天气数据用于强大的数据分析和预测。
 
 ### 总结
 
-我们希望您喜欢这个演示，展示了如何使用树莓派和 [SenseCAP ONE S700](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.htmlhttps://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html) 在几个步骤内创建气象站！虽然这个项目很简单，但它所带来的可能性只受您想象力的限制。
+我们希望您喜欢这个演示，展示了如何使用树莓派和[SenseCAP ONE S700](https://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.htmlhttps://www.seeedstudio.com/SenseCAPONE-S700-7in1-Compact-Weather-Sensor.html)在几个步骤内创建气象站！虽然这个项目很简单，但它所带来的可能性只受您想象力的限制。
 
-除了与树莓派 4 8GB 配合使用外，SenseCAP ONE 系列产品还可以轻松部署并与我们的 [SenseCAP Sensor Hub 4G Data Logger](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html) 配合使用。作为一个易于部署的工业级4G蜂窝站，Sensor Hub 使用 MODBUS-RTU RS485 协议与传感器通信，能够同时收集各种传感器数据。IP66级防水防尘的 Sensor Hub 4G Data Logger 适用于长期可靠的户外应用，如智慧农业、智能气象站和智慧城市等。
+除了与树莓派4 8GB配合使用外，SenseCAP ONE系列产品还可以轻松部署并与我们的[SenseCAP Sensor Hub 4G数据记录器](https://www.seeedstudio.com/SenseCAP-Sensor-Hub-4G-Data-Logger-with-builtin-battery-p-4852.html)配合使用。作为一个易于部署的工业级4G蜂窝站，Sensor Hub使用MODBUS-RTU RS485协议与传感器通信，能够同时收集各种传感器数据。IP66级防水防尘的Sensor Hub 4G数据记录器适用于长期、可靠的户外应用，如智慧农业、智能气象站和智慧城市等。
 
 现在，您将如何使用您自己的气象站呢？
 

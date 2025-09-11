@@ -218,8 +218,8 @@ void loop()
 资源
 ----
 
--   [MH-Z16\_CO2 datasheet\_ZH\_CN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2.pdf)
--   [MH-Z16\_CO2 datasheet\_EN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2_datasheet_EN.pdf)
+-   [MH-Z16_CO2 datasheet_ZH_CN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2.pdf)
+-   [MH-Z16_CO2 datasheet_EN.pdf](https://files.seeedstudio.com/wiki/Grove-CO2_Sensor/res/MH-Z16_CO2_datasheet_EN.pdf)
 -   [二氧化碳健康风险评估](http://www.blm.gov/style/medialib/blm/wy/information/NEPA/cfodocs/howell.Par.2800.File.dat/25apxC.pdf)
 
 

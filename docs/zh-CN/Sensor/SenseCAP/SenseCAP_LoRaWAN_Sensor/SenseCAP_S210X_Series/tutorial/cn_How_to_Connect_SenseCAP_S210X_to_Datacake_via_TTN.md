@@ -93,7 +93,7 @@ Datacake 是一个多功能的低代码物联网平台。它使任何人都能�
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Datacake/image14.png)
 
 (9)配置下行链路  
-为了能够在您的 TTI 应用程序上排队下行链路，您需要在 Datacake 设备上提供额外的详细信息。要设置配置，请进入相应设备上的 LoRaWAN 设置。
+为了能够在您的 TTI 应用程序上排队下行链路，您需要在 Datacake 设备上提供额外的详细信息。要设置配置，请进入相应设备的 LoRaWAN 设置。
 -   切换回 Datacake
 -   选择"configuration"并向下滚动一点
 
@@ -103,7 +103,7 @@ Datacake 是一个多功能的低代码物联网平台。它使任何人都能�
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Datacake/image16.png)
 
--   在这里您需要用在 TTN 控制台上找到的信息填写 4 个文本框。
+-   在这里您需要用在 TTN 控制台中找到的信息填写 4 个文本框。
 
 ![](https://files.seeedstudio.com/wiki/SenseCAPS210X/Datacake/image17.png)
 

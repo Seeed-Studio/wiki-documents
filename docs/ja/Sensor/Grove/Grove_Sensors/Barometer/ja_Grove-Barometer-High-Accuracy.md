@@ -579,7 +579,7 @@ if __name__ == "__main__":
 
 -  **[Eagle]** [Grove_Barometer_High-Accuracy_v1.0_sch_pcb Eagle ファイル](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/Grove_Barometer_High_Accuracy_ v1.0_sch_pcb.zip)
 -  **[データシート]** [HP206F データシート](https://files.seeedstudio.com/wiki/Grove-Barometer-High-Accuracy/res/HP206F_Datasheet.pdf)
--  **[ライブラリ]** [Arduino 用 Grove\_Barometer\_HP20x の Github リポジトリ](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
+-  **[ライブラリ]** [Arduino 用 Grove_Barometer_HP20x の Github リポジトリ](https://github.com/Carla-Guo/Grove_Barometer_HP20x)
 
 ## プロジェクト
 

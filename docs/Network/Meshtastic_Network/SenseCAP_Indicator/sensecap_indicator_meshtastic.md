@@ -41,7 +41,7 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 
 ### Specification
 
-|Screen|3\.95 Inch, Capacitive RGB Touch Screen|
+|Screen|3.95 Inch, Capacitive RGB Touch Screen|
 | :- | :- |
 |**Screen Resolution**|480 x 480 pixels|
 |**Power Supply**|5V-DC, 1A|
@@ -49,7 +49,7 @@ SenseCAP Indicator is a 4-inch touchscreen device designed for Meshtastic®, pow
 |**Processor**|<p>**ESP32-S3:** Xtensa® dual-core 32-bit up to 240 MHz</p><p>**RP2040:** Dual ARM Cortex-M0+ up to 133MHz</p>|
 |**Flash**|<p>**ESP32-S3:** 8MB</p><p>**RP2040:** 2MB</p>|
 |**External Storage**|Support up to 32GB Micro SD Card (not included)|
-|**Wi-Fi**|802\.11b/g/n, 2.4GHz|
+|**Wi-Fi**|802.11b/g/n, 2.4GHz|
 |**Bluetooth**|Bluetooth 5.0 LE|
 |**LoRa(SX1262**)|Support 862-930MHz|
 |**Buzzer(Not developed yet)**|MLT-8530, Resonant Frequency：2700Hz|
@@ -169,8 +169,8 @@ In order to start communicating over the mesh, you must set your region. This se
 |**Region Code**|**Description**|**Frequency Range (MHz)**|**Duty Cycle (%)**|**Power Limit (dBm)**|
 | :-: | :-: | :-: | :-: | :-: |
 |UNSET|Unset|N/A|N/A|N/A|
-|US|United States|902\.0 - 928.0|100|30|
-|EU\_868|European Union 868MHz|869\.4 - 869.65|10|27|
+|US|United States|902.0 - 928.0|100|30|
+|EU_868|European Union 868MHz|869.4 - 869.65|10|27|
 
 Refer to [LoRa Region by Country](https://meshtastic.org/docs/configuration/region-by-country/) for a more comprehensive list.
 

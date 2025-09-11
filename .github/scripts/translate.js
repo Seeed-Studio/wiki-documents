@@ -69,41 +69,61 @@ const translationStatus = {
 };
 
 // 预处理文档，添加行号标记（保留缩进）
-function preprocessDocument(content) {
+// PATCH: 新增 startsInsideCodeBlock/endsInsideCodeBlock，用于跨分块延续代码块状态
+function preprocessDocument(content, startsInsideCodeBlock = false) {
   const lines = content.split('\n');
   const processedLines = [];
   const lineMetadata = [];
-  
+
+  let inCodeBlock = startsInsideCodeBlock;
+
   lines.forEach((line, index) => {
     // 计算缩进（空格和制表符）
     const indentMatch = line.match(/^(\s*)/);
     const indent = indentMatch ? indentMatch[1] : '';
     const trimmedContent = line.slice(indent.length);
-    
+
+    // 是否为围栏行（```、```js 等）
+    const isFence = trimmedContent.trim().startsWith('```');
     // 保存每行的元数据
-    lineMetadata.push({
+    const meta = {
       originalLine: line,
       indent: indent,
       content: trimmedContent,
-      isEmpty: line.trim() === ''
-    });
-    
+      isEmpty: line.trim() === '',
+      inCodeBlockLine: false, // 新增：标记该行是否属于代码块（含围栏行）
+    };
+
+    // 根据围栏切换代码块状态，并标记当前行
+    if (isFence) {
+      meta.inCodeBlockLine = true;
+      inCodeBlock = !inCodeBlock;
+    } else if (inCodeBlock) {
+      meta.inCodeBlockLine = true;
+    }
+
     // 为每行添加唯一标识符，保留缩进
     const lineId = `[LINE_${index}]`;
-    
-    if (line.trim() === '') {
+
+    if (meta.isEmpty) {
       // 空行
       processedLines.push(`${lineId}[EMPTY_LINE]`);
+    } else if (meta.inCodeBlockLine) {
+      // 代码块内行：用占位符顶替真实内容，保持行数/位置
+      processedLines.push(`${lineId}__CODE_LINE_PLH__`);
     } else {
-      // 保留缩进在标记后面
+      // 普通行：原样（含缩进）送给模型
       processedLines.push(`${lineId}${indent}${trimmedContent}`);
     }
+
+    lineMetadata.push(meta);
   });
-  
+
   return {
     processed: processedLines.join('\n'),
     lineMetadata: lineMetadata,
-    totalLines: lines.length
+    totalLines: lines.length,
+    endsInsideCodeBlock: inCodeBlock // PATCH: 返回块末状态
   };
 }
 
@@ -111,28 +131,34 @@ function preprocessDocument(content) {
 function postprocessDocument(translatedContent, lineMetadata, totalLines) {
   const translatedLines = translatedContent.split('\n');
   const finalLines = [];
-  
+
   for (let i = 0; i < totalLines; i++) {
     const metadata = lineMetadata[i];
-    
+
     if (i >= translatedLines.length) {
       // 如果译文行数不够，使用原文
       console.log(`⚠️ 第${i+1}行缺失，使用原文`);
       finalLines.push(metadata.originalLine);
       continue;
     }
-    
+
     let translatedLine = translatedLines[i];
-    
+
     // 移除行号标记
     translatedLine = translatedLine.replace(/^\[LINE_\d+\]/, '');
-    
+
     // 处理空行
     if (translatedLine.includes('[EMPTY_LINE]')) {
       finalLines.push('');
       continue;
     }
-    
+
+    // 代码块内的行：无条件使用原文整行
+    if (metadata.inCodeBlockLine) {
+      finalLines.push(metadata.originalLine);
+      continue;
+    }
+
     // 恢复原始缩进
     if (metadata.indent) {
       // 移除译文中可能存在的缩进（避免双重缩进）
@@ -143,24 +169,24 @@ function postprocessDocument(translatedContent, lineMetadata, totalLines) {
       finalLines.push(translatedLine);
     }
   }
-  
+
   // 确保行数完全一致
   if (finalLines.length !== totalLines) {
     console.log(`⚠️ 行数修复: 期望 ${totalLines} 行，实际 ${finalLines.length} 行`);
-    
+
     // 强制修正行数
     while (finalLines.length < totalLines) {
       const missingIndex = finalLines.length;
       const metadata = lineMetadata[missingIndex];
       finalLines.push(metadata ? metadata.originalLine : '');
     }
-    
+
     // 如果行数过多，截断
     if (finalLines.length > totalLines) {
       finalLines.length = totalLines;
     }
   }
-  
+
   return finalLines.join('\n');
 }
 
@@ -226,9 +252,13 @@ function intelligentSplit(lines, maxSize) {
   let inTable = false;
   let lastHeaderIndex = -1;
   
+  // PATCH: 将换行字节也计入阈值，避免边界误差
+  const NL_BYTES = Buffer.byteLength('\n', 'utf8');
+  
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    const lineSize = Buffer.byteLength(line, 'utf8');
+    // PATCH: 统计“行+换行”的字节数
+    const lineSize = Buffer.byteLength(line, 'utf8') + NL_BYTES;
     
     // 检测代码块
     if (line.trim().startsWith('```')) {
@@ -249,10 +279,10 @@ function intelligentSplit(lines, maxSize) {
     
     // 决定是否分割
     let shouldSplit = false;
+    // 仅在不处于代码块/表格时考虑切割（原逻辑保留）
     if (currentSize + lineSize > maxSize && !inCodeBlock && !inTable) {
-      // 寻找最佳分割点
+      // 空行是理想分割点
       if (line.trim() === '') {
-        // 空行是理想的分割点
         shouldSplit = true;
       } else if (lastHeaderIndex > 0 && currentChunk.length - lastHeaderIndex > 10) {
         // 在最近的标题处分割（但要确保标题后有足够内容）
@@ -372,12 +402,13 @@ function generateEnhancedPrompt(targetLang, pathPrefix, isChunk = false, chunkIn
 }
 
 // 验证翻译结果
+// ——改动点：自动识别原文中的代码块行，并在逐行校验时跳过这些行的格式检查
 function validateTranslation(original, translated) {
   const originalLines = original.split('\n');
   const translatedLines = translated.split('\n');
-  
+
   const issues = [];
-  
+
   // 检查行数
   if (originalLines.length !== translatedLines.length) {
     issues.push({
@@ -385,18 +416,32 @@ function validateTranslation(original, translated) {
       message: `行数不匹配: 原文${originalLines.length}行，译文${translatedLines.length}行`
     });
   }
-  
+
   // 检查代码块标记
   const originalCodeBlocks = (original.match(/```/g) || []).length;
   const translatedCodeBlocks = (translated.match(/```/g) || []).length;
-  
+
   if (originalCodeBlocks !== translatedCodeBlocks) {
     issues.push({
       type: 'code_blocks',
       message: `代码块标记不匹配: 原文${originalCodeBlocks}个，译文${translatedCodeBlocks}个`
     });
   }
-  
+
+  // 预先计算：原文哪些行属于代码块（含围栏行）
+  const inCodeFlags = [];
+  let inCode = false;
+  for (let i = 0; i < originalLines.length; i++) {
+    const trimmed = originalLines[i].replace(/^\s*/, '');
+    const isFence = trimmed.startsWith('```');
+    if (isFence) {
+      inCodeFlags[i] = true;
+      inCode = !inCode;
+    } else {
+      inCodeFlags[i] = inCode;
+    }
+  }
+
   // 检查锚点链接中的空格（不应该有空格）
   const anchorWithSpaces = translated.match(/\[[^\]]*\]\(#[^)]*\s[^)]*\)/g);
   if (anchorWithSpaces) {
@@ -406,16 +451,18 @@ function validateTranslation(original, translated) {
       autofix: true
     });
   }
-  
-  // 检查关键格式和缩进
+
+  // 检查关键格式和缩进（跳过代码块行）
   for (let i = 0; i < Math.min(originalLines.length, translatedLines.length); i++) {
+    if (inCodeFlags[i]) continue; // 代码块行跳过格式检查
+
     const origLine = originalLines[i];
     const transLine = translatedLines[i];
-    
+
     // 检查缩进级别
     const origIndent = origLine.match(/^(\s*)/)[1].length;
     const transIndent = transLine.match(/^(\s*)/)[1].length;
-    
+
     if (origIndent !== transIndent && origLine.trim() !== '' && transLine.trim() !== '') {
       issues.push({
         type: 'indent',
@@ -423,11 +470,11 @@ function validateTranslation(original, translated) {
         message: `缩进不一致: 第${i + 1}行，原文${origIndent}个空格，译文${transIndent}个空格`
       });
     }
-    
+
     // 检查标题级别
     const origHeader = origLine.match(/^(\s*)(#{1,6})\s/);
     const transHeader = transLine.match(/^(\s*)(#{1,6})\s/);
-    
+
     if (origHeader && (!transHeader || origHeader[2] !== transHeader[2])) {
       issues.push({
         type: 'header',
@@ -435,11 +482,11 @@ function validateTranslation(original, translated) {
         message: `标题格式不一致: 第${i + 1}行`
       });
     }
-    
+
     // 检查列表标记（保持缩进后的列表标记）
     const origList = origLine.match(/^(\s*)[-*+]\s/);
     const transList = transLine.match(/^(\s*)[-*+]\s/);
-    
+
     if (origList && !transList) {
       issues.push({
         type: 'list',
@@ -447,7 +494,7 @@ function validateTranslation(original, translated) {
         message: `列表格式丢失: 第${i + 1}行`
       });
     }
-    
+
     // 检查表格分隔符
     if (origLine.includes('|') && origLine.trim().startsWith('|')) {
       if (!transLine.includes('|')) {
@@ -459,21 +506,22 @@ function validateTranslation(original, translated) {
       }
     }
   }
-  
+
   return issues;
 }
 
 // Claude翻译函数
-async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false) {
+// PATCH: 新增 startsInsideCodeBlock 形参，并在 markdown 路径返回 { text, endsInsideCodeBlock }
+async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = false, chunkInfo = null, isCategory = false, startsInsideCodeBlock = false) {
   const langConfig = LANGUAGE_CONFIG[targetLang];
   if (!langConfig) {
     throw new Error(`不支持的语言: ${targetLang}`);
   }
-  
+
   // 对于category文件，使用原有逻辑
   if (isCategory) {
     const systemPrompt = generateCategoryPrompt(targetLang, langConfig.pathPrefix);
-    
+
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const response = await anthropic.messages.create({
@@ -485,8 +533,9 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
             { role: 'user', content: text }
           ]
         });
-        
-        return response.content[0].text;
+
+        // 为了保持调用点一致，这里也返回对象
+        return { text: response.content[0].text, endsInsideCodeBlock: false };
       } catch (error) {
         console.error(`❌ Category翻译失败 (尝试 ${attempt}/${maxRetries}): ${error.message}`);
         if (attempt === maxRetries) throw error;
@@ -494,15 +543,15 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
       }
     }
   }
-  
+
   // 对于markdown文件，使用改进的流程
-  const { processed, lineMetadata, totalLines } = preprocessDocument(text);
+  const { processed, lineMetadata, totalLines, endsInsideCodeBlock: preEnd } = preprocessDocument(text, startsInsideCodeBlock);
   const systemPrompt = generateEnhancedPrompt(targetLang, langConfig.pathPrefix, isChunk, chunkInfo);
-  
+
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
       console.log(`📡 调用Claude API (尝试 ${attempt}/${maxRetries})...`);
-      
+
       const response = await anthropic.messages.create({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 20000,
@@ -512,34 +561,38 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
           { role: 'user', content: processed }
         ]
       });
-      
+
       let translatedContent = response.content[0].text;
-      
-      // 后处理：移除标记并恢复缩进
-      translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
-      
-      // 先修复锚点链接（在验证之前）
+
+      // ✅ 先做链接/排版修复（此时代码块仍是占位符，不会被改动）
       translatedContent = fixAnchorLinks(translatedContent);
-      
-      // 验证翻译结果
+      translatedContent = processInternalLinks(translatedContent, targetLang);
+      if (targetLang === 'zh-CN') {
+        translatedContent = addChineseEnglishSpacing(translatedContent);
+      }
+
+      // ✅ 最后一步再恢复行号/缩进，并把代码块整行原样回写
+      translatedContent = postprocessDocument(translatedContent, lineMetadata, totalLines);
+
+      // 验证翻译结果（针对最终文本）
       const issues = validateTranslation(text, translatedContent);
-      
+
       // 过滤掉已自动修复的问题
       const unresolved = issues.filter(issue => !issue.autofix);
-      
+
       if (unresolved.length > 0) {
         console.log(`⚠️ 发现${unresolved.length}个格式问题:`);
         unresolved.forEach(issue => {
           console.log(`  - ${issue.message}`);
         });
-        
+
         // 如果问题太多且还有重试机会，重新翻译
         if (unresolved.length > 3 && attempt < maxRetries) {
           console.log(`🔄 问题较多，重新翻译...`);
           continue;
         }
       }
-      
+
       // 如果有自动修复的问题，记录日志
       const autofixed = issues.filter(issue => issue.autofix);
       if (autofixed.length > 0) {
@@ -548,25 +601,17 @@ async function translateWithClaude(text, targetLang, maxRetries = 2, isChunk = f
           console.log(`  - ${issue.message}`);
         });
       }
-      
-      // 处理链接（这会再次调用fixAnchorLinks，但这是为了确保）
-      translatedContent = processInternalLinks(translatedContent, targetLang);
-      
-      // 中英文混排处理
-      if (targetLang === 'zh-CN') {
-        translatedContent = addChineseEnglishSpacing(translatedContent);
-      }
-      
+
       console.log(`✅ 翻译成功 (尝试 ${attempt})`);
-      return translatedContent;
-      
+      return { text: translatedContent, endsInsideCodeBlock: preEnd };
+
     } catch (error) {
       console.error(`❌ 翻译失败 (尝试 ${attempt}/${maxRetries}): ${error.message}`);
-      
+
       if (attempt === maxRetries) {
         throw error;
       }
-      
+
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
   }
@@ -756,7 +801,7 @@ async function translateCategoryFile(filePath, targetLang) {
     
     const content = await fs.readFile(filePath, 'utf8');
     
-    const translatedContent = await translateWithClaude(
+    const translatedObj = await translateWithClaude(
       content, 
       targetLang, 
       3, 
@@ -764,6 +809,7 @@ async function translateCategoryFile(filePath, targetLang) {
       null, 
       true
     );
+    const translatedContent = translatedObj.text || translatedObj; // 向后兼容
     
     const targetPath = generateTargetPath(filePath, targetLang);
     
@@ -788,6 +834,9 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
   
   console.log(`📚 开始翻译文档 ${filePath} 到 ${langConfig.name} (共${chunks.length}块)`);
   
+  // PATCH: 跨块延续代码块状态
+  let carryInCode = false;
+  
   for (let i = 0; i < chunks.length; i++) {
     const chunk = chunks[i];
     const chunkInfo = { index: i, total: chunks.length };
@@ -803,15 +852,19 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
         contentToTranslate = chunk.content;
       }
       
-      const translatedContent = await translateWithClaude(
+      const translatedResult = await translateWithClaude(
         contentToTranslate, 
         targetLang, 
         3, 
         chunks.length > 1, 
-        chunkInfo
+        chunkInfo,
+        false,
+        carryInCode
       );
       
-      translatedChunks.push(translatedContent);
+      translatedChunks.push(translatedResult.text);
+      // 将本块结束时的代码块状态传给下一块
+      carryInCode = translatedResult.endsInsideCodeBlock;
       
       // API限流延迟
       if (i < chunks.length - 1) {
@@ -836,14 +889,17 @@ async function translateDocumentChunks(chunks, targetLang, filePath) {
     
     if (frontMatterMatch) {
       const frontMatter = frontMatterMatch[0];
-      const firstContent = firstChunk.replace(frontMatterMatch[0], '').trim();
+      // PATCH: 不再 trim，避免吞掉空行导致行号错位
+      const firstContent = firstChunk.replace(frontMatterMatch[0], '');
       
-      finalContent = frontMatter + '\n' + firstContent;
+      // PATCH: 直接拼接，不额外插入空行，保持逐行对齐
+      finalContent = frontMatter + firstContent;
       if (otherChunks.length > 0) {
-        finalContent += '\n\n' + otherChunks.join('\n\n');
+        finalContent += otherChunks.join('');
       }
     } else {
-      finalContent = translatedChunks.join('\n\n');
+      // PATCH: 多块直接无缝拼接，避免 \n\n 造成偏移
+      finalContent = translatedChunks.join('');
     }
   }
   
@@ -885,7 +941,7 @@ async function translateFile(filePath, targetLang) {
     return { success: true, path: targetPath };
     
   } catch (error) {
-    console.error(`❌ 文件翻译失败 ${filePath}:`, error.message);
+    console.error(`❌ 文件翻译失败 ${filePath}: ${error.message}`);
     translationStatus.failed++;
     return { success: false, error: error.message, path: filePath };
   }

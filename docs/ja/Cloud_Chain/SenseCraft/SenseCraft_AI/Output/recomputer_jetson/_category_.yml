@@ -1,5 +1,0 @@
-position: 3 # 浮動小数点の位置がサポートされています
-label: 'reComputer Jetson ワークスペース'
-collapsible: true # このカテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
-className: sensecraft_ai_workspace_recomputer

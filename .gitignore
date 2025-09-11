@@ -141,4 +141,6 @@ yarn.lock
 frontmatter.json
 taxonomyDb.json
 
-XIAO_ESP32C6_Swift_Matter.md
+# Ignore AI Agents.md
+CLAUDE.md
+GEMINI.md

@@ -11,7 +11,7 @@ last_update:
 
 # S2100 和 12V RS485 传感器入门指南
 
-本指南将帮助您开始使用 S2100 和 12V RS485 传感器。完成本指南后，您将了解如何在将来连接自己的定制传感器。
+本指南将帮助您开始使用 S2100 和 12V RS485 传感器。完成本指南后，您将了解如何在未来连接自己的定制传感器。
 
 ## 步骤 1：准备必要物品
 
@@ -29,7 +29,7 @@ last_update:
 
 按照以下步骤完成接线过程。
 
-### 步骤 2.1：拆卸数据记录器
+### 步骤 2.1：拆解数据记录器
 
 1. 拧下三颗螺丝。
 
@@ -39,7 +39,7 @@ last_update:
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/4.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-3. 取下螺纹盖，将传感器电缆穿过盖子和底盖，然后连接到接线端子。
+3. 取下螺纹帽，将传感器电缆穿过帽子和底盖，然后连接到接线端子。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/5.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -62,12 +62,12 @@ last_update:
 
 ### 步骤 2.3：传感器供电选项
 
-数据记录器支持两种供电模式。我们将在这里使用外部 12V 直流模式：
+数据记录器支持两种供电模式。我们将在这里使用外部 12V DC 模式：
 
 | **模式** | **描述** |
 | - | - |
 | 内置电池 | 数据记录器和传感器由电池供电。在这种情况下，数据记录器可以连接到 5V 传感器。 |
-| 外部 12V 直流 | 通过外部 12V 电源为数据记录器和传感器供电。如果外部 12V 断开，系统会切换到电池供电。使用外部 12V 电源时，请与接线盒一起使用以确保设备的防水性能。 |
+| 外部 12V DC | 通过外部 12V 电源为数据记录器和传感器供电。如果外部 12V 断开，系统会切换到电池供电。使用外部 12V 电源时，请与接线盒一起使用以确保设备的防水性能。 |
 
 ### 步骤 2.4：连接到接线盒
 
@@ -77,12 +77,12 @@ M12 电缆的接线顺序：
 
 当您的传感器需要 12V 电源时，仅靠电池无法驱动传感器。因此，需要外部 12V 电源。
 
-1. 准备以下物品：12V 直流适配器、接线盒和 8 芯线（只需要 4 芯）。
+1. 准备以下物品：12V 直流适配器、接线盒和 8 芯线（仅需要 4 芯）。
 2. 连接数据记录器的端子。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/7.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-   依次安装盖子、橡胶圈和螺纹盖。
+   依次安装盖子、橡胶圈和螺帽。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/8.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/9.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
@@ -91,7 +91,7 @@ M12 电缆的接线顺序：
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/10.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-4. 将 M12 传感器线连接到接线盒。
+4. 将 M12 传感器线缆连接到接线盒。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/11.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -101,13 +101,13 @@ M12 电缆的接线顺序：
 
 现在您已经成功将接线盒连接到 S2100，我们将继续连接传感器。
 
-### 步骤 3.1：了解 ONE 紧凑型气象站传感器的线序
+### 步骤 3.1：了解 ONE 紧凑型气象站传感器的接线顺序
 
-该设备使用 M12 8 针连接器。不同颜色的引脚提供电源和数据通信，如下所示。
+该设备使用 M12 8 芯连接器。不同颜色的引脚提供电源和数据通信，如下所示。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/12.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-使用 RS-485 时，您只需连接 4 根线（不使用加热功能）。其余的应单独用胶带包裹以防止短路。
+使用 RS-485 时，您只需连接 4 根线（不使用加热功能）。其余的应该用胶带单独包裹以防止短路。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/13.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -123,11 +123,11 @@ M12 电缆的接线顺序：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/16.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-**拧紧螺丝和螺丝帽**以确保防水。如果线径太细，请添加防水胶带进行缠绕。
+**拧紧螺丝和螺帽**以确保防水。如果线径太细，请添加防水胶带进行缠绕。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/17.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-**\*注意：** 组装设备时，确保数据记录器和适配器盒的防水垫已安装，螺丝帽和螺丝已拧紧。否则，设备的防水性能可能会受到影响。如果线径太小，请用防水胶带包裹，如下所示：
+**\*注意：** 组装设备时，确保数据记录器和适配器盒的防水垫已安装，螺帽和螺丝已拧紧。否则，设备的防水性能可能会受到影响。如果线径太小，请用防水胶带包裹，如下所示：
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/18.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -135,9 +135,9 @@ M12 电缆的接线顺序：
 
 ## 步骤 4：设置 S2100
 
-### 步骤 4.1：通过应用程序连接到传感器
+### 步骤 4.1：通过应用程序连接传感器
 
-1. 按住按钮**3 秒钟**。LED 将以 1 秒频率闪烁。在 1 分钟内使用应用程序连接到传感器；否则，设备将关机或重启。
+1. 按住按钮 **3 秒钟**。LED 将以 1 秒频率闪烁。在 1 分钟内使用应用程序连接传感器；否则，设备将关机或重启。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/19.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -148,7 +148,7 @@ M12 电缆的接线顺序：
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/20.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/21.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-3. 通过 S/N 选择传感器（S/N 在传感器前面标签上）。将显示传感器的基本信息。
+3. 通过 S/N 选择传感器（S/N 在传感器正面标签上）。将显示传感器的基本信息。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/22.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/23.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
@@ -165,7 +165,7 @@ S210x 传感器支持从 863MHz 到 928MHz 的通用频率计划。每个设备�
 
 **\*注意：** 当附近有 Helium 网络时，数据记录器可以上传数据。它运行在 SenseCAP 的私有 Helium Console 上，因此用户无需在 Helium Console 上创建设备。
 
-SenseCAP for TTN 平台需要与 [SenseCAP LoRaWAN 室外网关](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)一起使用。
+SenseCAP for TTN 平台需要与 [SenseCAP LoRaWAN 室外网关](https://www.seeedstudio.com/LoRaWAN-Gateway-EU868-p-4305.html)配合使用。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/25.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -189,11 +189,11 @@ SenseCAP for TTN 平台需要与 [SenseCAP LoRaWAN 室外网关](https://www.see
 
 #### 恢复出厂设置
 
-如果您要从其他平台切换回 SenseCAP 平台，请恢复出厂设置。这会重置设备的基本设置。
+如果您要从其他平台切换回 SenseCAP 平台，请恢复出厂设置。这将重置设备的基本设置。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/28.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-### 步骤 4.3：通过应用程序配置 RS485 Modbus-RTU 传感器
+### 步骤 4.3：通过 App 配置 RS485 Modbus-RTU 传感器
 
 选择"协议"为"RS485 Modbus RTU"，并依次设置以下参数。
 
@@ -201,89 +201,89 @@ SenseCAP for TTN 平台需要与 [SenseCAP LoRaWAN 室外网关](https://www.see
 
 | **波特率** | 与传感器通信的波特率。选择 **9600**。 |
 | - | - |
-| **Modbus 地址** | 五合一的默认地址是 10，七合一是 20，九合一是 38，十合一是 43。传感器的从机地址范围是 1 到 247。这里输入 **20**。 |
+| **Modbus 地址** | Five in ONE 的默认地址是 10，Seven in ONE 是 20，Nine in ONE 是 38，Ten in ONE 是 43。传感器的从机地址范围为 1 到 247。这里输入 **20**。 |
 | **电源类型** | 选择 **始终开启**。周期性供电通过仅在数据采集前为传感器供电来降低功耗并延长电池寿命。 |
 | **电源电压** | 选择向传感器提供 **12V** 电压。 |
 | **传感器预热时间** | 传感器在通电后达到最高精度或性能水平所需的时间。输入 **200ms**。 |
 | **响应超时** | 数据记录器向传感器发送数据读取请求后等待响应的时间。如果超时，命令将重新发送。**5(\*100ms)** 是合适的。 |
 | **启动时间** | 传感器通电后开始与 Modbus 通信的时间。**10\*(100ms)** 是合适的。 |
-| **测量数量** | 在 RS485 模式下收集 0 到 10 个测量值。由于传感器有七种传感器寄存器，选择 **7**。 |
-| **工作模式** | 选择 **周期性采集** 模式：周期性采集和上传数据。 |
+| **测量数量** | 在 RS485 模式下采集 0 到 10 个测量值。由于传感器有七种传感器寄存器，选择 **7**。 |
+| **工作模式** | 选择 **周期采集** 模式：周期性采集和上传数据。 |
 | **测量设置** | 设置测量值的寄存器和其他配置。 |
 
 #### 测量设置
 
-依次设置每个测量。测量1（**空气温度**）
+依次设置每个测量项。测量1（**空气温度**）
 
-|寄存器地址|传感器中测量值的寄存器地址，是一个整数。空气温度寄存器地址是 0。这里输入 **0**。|
+|寄存器地址|传感器中测量值的寄存器地址，为整数。空气温度寄存器地址为0。在此输入**0**。|
 | - | - |
-|功能码|Modbus 功能码，这里选择 **03**。|
-|数据类型|<p>数据类型决定从传感器读取的寄存器数量以及数据应如何解析值。</p><p>这里选择 **有符号 32 位整数，0xABCD**。</p>|
-|精度|<p>值的精度。您可以选择测量值的小数位数。如果选择 1，则保留一位小数。</p><p>这里选择 **2, #.##**。</p>|
-|Y= Ax + B|<p>"Y"：这是数据记录器将上传的值。</p><p>"x"：这是原始当前值。</p><p>工厂 A：可以按"x"的倍数放大或缩小的自定义值。</p><p>工厂 B：增加或减少"x"值的自定义值。</p><p>通过设置 A 和 B 的值，您可以计算出所需的值。如果只上传原始值，设置 A=1 和 B=0。</p><p>**工厂 A 是 0.001，工厂 B 是 0。**</p>|
-|写入策略|<p>此功能仅对某些特殊传感器启用，通常默认禁用</p><p>读取寄存器值后，可以向传感器发出特殊指令，例如读取寄存器 0 后清空寄存器的指令。</p><p>无：默认关闭。</p><p>读取后：读取寄存器后向传感器发送 RS485 命令。</p><p>新数据时：每 24 小时向传感器发送一次 RS485 命令。</p><p>我们不需要写入策略，所以这里选择 **无**。</p>|
+|功能码|Modbus功能码，在此选择**03**。|
+|数据类型|<p>数据类型决定从传感器读取的寄存器数量以及数据应如何解析值。</p><p>在此选择**有符号32位整数，0xABCD**。</p>|
+|精度|<p>值的精度。您可以选择测量值的小数位数。如果选择1，则保留一位小数。</p><p>在此选择**2, #.##**。</p>|
+|Y= Ax + B|<p>"Y"：这是数据记录器将上传的值。</p><p>"x"：这是原始当前值。</p><p>系数A：可以按"x"的倍数放大或缩小的自定义值。</p><p>系数B：增加或减少"x"值的自定义值。</p><p>通过设置A和B的值，您可以计算出所需的值。如果只上传原始值，请设置A=1和B=0。</p><p>**系数A为0.001，系数B为0。**</p>|
+|写入策略|<p>此功能仅对某些特殊传感器启用，通常默认禁用</p><p>读取寄存器值后，可以向传感器发出特殊指令，例如读取寄存器0后清空寄存器的指令。</p><p>无：默认关闭。</p><p>读取后：读取寄存器后向传感器发送RS485命令。</p><p>新数据时：每24小时向传感器发送一次RS485命令。</p><p>我们不需要写入策略，所以在此选择**无**。</p>|
 
 测量2（**空气湿度**）
 
-|寄存器地址|这里输入 **2**。|
+|寄存器地址|在此输入 **2**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **2, #.##**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **2, #.##**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
 测量3（**大气压力**）
 
-|寄存器地址|这里输入 **4**。|
+|寄存器地址|在此输入 **4**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **0, #**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **0, #**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
 测量4（**光照强度**）
 
-|寄存器地址|这里输入 **6**。|
+|寄存器地址|在此输入 **6**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **0, #**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **0, #**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
 测量5（**平均风向**）
 
-|寄存器地址|这里输入 **12**。|
+|寄存器地址|在此输入 **12**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **1, #.#**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **1, #.#**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
 测量6（**平均风速**）
 
-|寄存器地址|这里输入 **18**。|
+|寄存器地址|在此输入 **18**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **1, #.#**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **1, #.#**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
-测量7（**降雨强度**）
+测量7（**雨强**）
 
-|寄存器地址|这里输入 **24**。|
+|寄存器地址|在此输入 **24**。|
 | - | - |
-|功能码|这里选择 **03**。|
-|数据类型|这里选择 **有符号 32 位整数，0xABCD**。|
-|精度|这里选择 **1, #.#**。|
-|Y= Ax + B|**工厂 A 是 0.001，工厂 B 是 0。**|
-|写入策略|我们不需要写入策略，所以这里选择 **无**。|
+|功能码|在此选择 **03**。|
+|数据类型|在此选择 **有符号32位整数，0xABCD**。|
+|精度|在此选择 **1, #.#**。|
+|Y= Ax + B|**出厂A值为0.001，出厂B值为0。**|
+|写入策略|我们不需要写入策略，所以在此选择 **无**。|
 
-配置这些测量参数后，点击**"返回主页"**。节点和应用程序蓝牙将自动断开连接。数据记录器将尝试连接到网络。LED指示灯在尝试连接时会缓慢闪烁红色，网络连接成功后会快速闪烁绿色。
+配置这些测量参数后，点击**"Back to Home"**。节点和应用程序蓝牙将自动断开连接。数据记录器将尝试连接到网络。LED指示灯在尝试连接时会缓慢闪烁红色，网络连接成功后会快速闪烁绿色。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/30.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
@@ -293,15 +293,15 @@ SenseCAP for TTN 平台需要与 [SenseCAP LoRaWAN 室外网关](https://www.see
 
 打开SenseCAP Mate应用程序。
 
-1. **扫描二维码**：点击设备页面右上角的**"添加设备"**进入设备绑定页面。
+1. **扫描二维码**：点击设备页面右上角的**"Add device"**进入设备绑定页面。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/31.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-2. 扫描设备上的二维码将其绑定到您的账户。如果您没有将其设置到指定组，设备将被放入**"默认"**组。
+2. 扫描设备上的二维码将其绑定到您的账户。如果您没有将其设置到指定组，设备将被放入**"default"**组。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/32.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
 
-3. **手动填写EUI**：如果二维码贴纸损坏，您可以手动填写设备的EUI将其绑定到您的账户。确保EUI按照系统建议的格式输入，然后点击**"确认"**。
+3. **手动填写EUI**：如果二维码贴纸损坏，您可以手动填写设备的EUI将其绑定到您的账户。确保EUI按照系统建议的格式输入，然后点击**"confirm"**。
 
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/33.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>
    <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/12V_RS485_Sensor/34.png" style={{width:400, height:'auto', "border-radius": '6.66px' }}/></div>

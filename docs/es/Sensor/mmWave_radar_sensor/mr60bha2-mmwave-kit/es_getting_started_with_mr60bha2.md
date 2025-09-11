@@ -634,6 +634,10 @@ Si en los pasos anteriores has operado incorrectamente causando que ocurra una a
 
 Para más información sobre la generación de datos de nube de puntos 3D y configuración de zona de interferencia al personalizar módulos mmWave. Seeed proporciona servicios de personalización de I+D y fabricación integral para desarrollo rápido desde concepto hasta producción. Contáctanos en [iot@seeed.cc](mailto:iot@seeed.cc) para obtener más información.
 
+:::danger Descripción del Servicio Personalizado
+El firmware y los algoritmos del radar no son de código abierto, y parámetros complejos del radar como la nube de puntos 3D, la distancia de detección, el alcance, etc., requieren servicios personalizados, lo que puede implicar tarifas de personalización adicionales y MOQ.
+:::
+
 ## Recursos
 
 - **STL**: [Carcasa 3D mmWave](https://files.seeedstudio.com/wiki/mmwave-for-xiao/Seeed_Studio_60GHz_mmWave_Human_Fall_Breating_and_Heartbeat_Detection_Sensor-MR60FDA2_MR60BHA2_Enclosure.stl)

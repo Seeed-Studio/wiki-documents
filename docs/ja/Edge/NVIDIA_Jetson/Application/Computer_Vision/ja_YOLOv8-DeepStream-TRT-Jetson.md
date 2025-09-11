@@ -1,36 +1,32 @@
 ---
-description: TensorRTとDeepStream SDKを使用してNVIDIA Jetson上でYOLOv8をデプロイする - データラベル、AIモデルのトレーニング、AIモデルのデプロイ
+description: TensorRTとDeepStream SDKを使用してNVIDIA JetsonにYOLOv8をデプロイ - データラベル、AIモデル訓練、AIモデルデプロイ
 title: TensorRTとDeepStream SDKを使用したYOLOv8のデプロイ
 tags:
-  - データラベル
-  - AIモデルのトレーニング
-  - AIモデルのデプロイ
+  - Data Label
+  - AI model train
+  - AI model deploy
   - Yolov8
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/YOLOv8-DeepStream-TRT-Jetson
 last_update:
-  date: 05/15/2025
+  date: 04/21/2023
   author: Lakshantha
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# TensorRTとDeepStream SDKを使用してNVIDIA Jetson上でYOLOv8をデプロイする
+# TensorRTとDeepStream SDKサポートを使用してNVIDIA JetsonにYOLOv8をデプロイ
 
-このガイドでは、トレーニング済みのAIモデルをNVIDIA Jetsonプラットフォームにデプロイし、TensorRTとDeepStream SDKを使用して推論を実行する方法を説明します。ここでは、Jetsonプラットフォーム上で推論性能を最大化するためにTensorRTを使用します。
+このガイドでは、訓練されたAIモデルをNVIDIA Jetsonプラットフォームにデプロイし、TensorRTとDeepStream SDKを使用して推論を実行する方法について説明します。ここでは、Jetsonプラットフォームでの推論性能を最大化するためにTensorRTを使用します。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/car.gif" style={{width:1000, height:'auto'}}/></div>
 
 ## 前提条件
 
-- UbuntuホストPC（ネイティブまたはVMware Workstation Playerを使用した仮想マシン）
-- [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html) またはJetPack 4.6以上を実行しているその他のNVIDIA Jetsonデバイス
+- Ubuntu ホストPC（ネイティブまたはVMware Workstation Playerを使用したVM）
+- [reComputer Jetson](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)またはJetPack 4.6以上を実行するその他のNVIDIA Jetsonデバイス
 
 ## JetPackバージョンに対応するDeepStreamバージョン
 
-YOLOv8をDeepStreamと連携させるために、この[DeepStream-YOLO](https://github.com/marcoslucianops/DeepStream-Yolo)リポジトリを使用します。このリポジトリはDeepStreamの異なるバージョンをサポートしているため、正しいDeepStreamバージョンに対応するJetPackバージョンを使用してください。
+YOLOv8をDeepStreamと連携させるために、この[DeepStram-YOLO](https://github.com/marcoslucianops/DeepStream-Yolo)リポジトリを使用しており、これは異なるバージョンのDeepStreamをサポートしています。そのため、正しいバージョンのDeepStreamに応じて正しいバージョンのJetPackを使用するようにしてください。
 
 <table>
   <thead>
@@ -72,27 +68,27 @@ YOLOv8をDeepStreamと連携させるために、この[DeepStream-YOLO](https:/
   </tbody>
 </table>
 
-このWikiを検証するために、**DeepStream SDK 6.2**を**JetPack 5.1.1**システムにインストールし、[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)上で実行しました。
+このwikiを検証するために、[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)上で動作する**JetPack 5.1.1**システムに**DeepStream SDK 6.2**をインストールしました。
 
 ## JetsonにJetPackをフラッシュする
 
-JetsonデバイスがCUDA、TensorRT、cuDNNなどのSDKコンポーネントを含む[JetPack](https://developer.nvidia.com/embedded/jetpack)システムでフラッシュされていることを確認する必要があります。JetPackをデバイスにフラッシュするには、NVIDIA SDK Managerまたはコマンドラインを使用できます。
+Jetsonデバイスに、CUDA、TensorRT、cuDNNなどのSDKコンポーネントを含む[JetPack](https://developer.nvidia.com/embedded/jetpack)システムがフラッシュされていることを確認する必要があります。NVIDIA SDK Managerまたはコマンドラインを使用してJetPackをデバイスにフラッシュできます。
 
 Seeed Jetson搭載デバイスのフラッシュガイドについては、以下のリンクを参照してください：
-- [reComputer J1010 | J101](https://wiki.seeedstudio.com/ja/reComputer_J1010_J101_Flash_Jetpack)
-- [reComputer J2021 | J202](https://wiki.seeedstudio.com/ja/reComputer_J2021_J202_Flash_Jetpack)
-- [reComputer J1020 | A206](https://wiki.seeedstudio.com/ja/reComputer_J1020_A206_Flash_JetPack)
-- [reComputer J4012 | J401](https://wiki.seeedstudio.com/ja/reComputer_J4012_Flash_Jetpack)
-- [A203キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A203_Flash_System)
-- [A205キャリアボード](https://wiki.seeedstudio.com/ja/reComputer_A205_Flash_System)
-- [Jetson Xavier AGX H01キット](https://wiki.seeedstudio.com/ja/Jetson_Xavier_AGX_H01_Driver_Installation)
-- [Jetson AGX Orin 32GB H01キット](https://wiki.seeedstudio.com/ja/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
+- [reComputer J1010 | J101](https://wiki.seeedstudio.com/reComputer_J1010_J101_Flash_Jetpack)
+- [reComputer J2021 | J202](https://wiki.seeedstudio.com/reComputer_J2021_J202_Flash_Jetpack)
+- [reComputer J1020 | A206](https://wiki.seeedstudio.com/reComputer_J1020_A206_Flash_JetPack)
+- [reComputer J4012 | J401](https://wiki.seeedstudio.com/reComputer_J4012_Flash_Jetpack)
+- [A203 Carrier Board](https://wiki.seeedstudio.com/reComputer_A203_Flash_System)
+- [A205 Carrier Board](https://wiki.seeedstudio.com/reComputer_A205_Flash_System)
+- [Jetson Xavier AGX H01 Kit](https://wiki.seeedstudio.com/Jetson_Xavier_AGX_H01_Driver_Installation)
+- [Jetson AGX Orin 32GB H01 Kit](https://wiki.seeedstudio.com/Jetson_AGX_Orin_32GB_H01_Flash_Jetpack)
 
-## DeepStreamのインストール
+## DeepStreamをインストールする
 
-JetsonデバイスにDeepStreamをインストールする方法はいくつかあります。[このガイド](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html)を参照して詳細を確認できます。ただし、インストールの成功と簡便さを保証するために、SDK Managerを使用してDeepStreamをインストールすることをお勧めします。
+JetsonデバイスにDeepStreamをインストールする方法は複数あります。詳細については[このガイド](https://docs.nvidia.com/metropolis/deepstream/dev-guide/text/DS_Quickstart.html)を参照してください。ただし、成功かつ簡単なインストールを保証できるため、SDK Managerを使用してDeepStreamをインストールすることをお勧めします。
 
-SDK Managerを使用してDeepStreamをインストールした場合、システム起動後に以下のコマンドを実行して、DeepStreamの追加依存関係をインストールする必要があります。
+SDK managerを使用してDeepStreamをインストールする場合、システム起動後にDeepStreamの追加依存関係である以下のコマンドを実行する必要があります
 
 ```sh
 sudo apt install \
@@ -111,7 +107,7 @@ libyaml-cpp-dev
 
 ## 必要なパッケージのインストール
 
-- **ステップ 1.** Jetsonデバイスのターミナルにアクセスし、pipをインストールしてアップグレードします。
+- **ステップ 1.** Jetsonデバイスのターミナルにアクセスし、pipをインストールしてアップグレードします
 
 ```sh
 sudo apt update
@@ -119,35 +115,35 @@ sudo apt install -y python3-pip
 pip3 install --upgrade pip
 ```
 
-- **ステップ 2.** 以下のリポジトリをクローンします。
+- **ステップ2.** 以下のリポジトリをクローンします
 
 ```sh
 git clone https://github.com/ultralytics/ultralytics.git
 ```
 
-- **ステップ 3.** `requirements.txt`を開きます。
+- **ステップ3.** requirements.txtを開く
 
 ```sh
 cd ultralytics
 vi requirements.txt
 ```
 
-- **ステップ 4.** 以下の行を編集します。この際、編集モードに入るために最初に`i`を押してください。編集後、`ESC`を押して`:wq`と入力し、保存して終了します。
+- **ステップ 4.** 以下の行を編集します。ここでは、まず `i` を押して編集モードに入る必要があります。`ESC` を押してから `:wq` と入力して保存して終了します
 
 ```sh
 # torch>=1.7.0
 # torchvision>=0.8.1
 ```
 
-**注意:** 現時点ではtorchとtorchvisionは除外されています。これらは後でインストールします。
+**注意:** torch と torchvision は後でインストールされるため、現在は除外されています。
 
-- **ステップ 5.** 必要なパッケージをインストールします。
+- **ステップ 5.** 必要なパッケージをインストールする
 
 ```sh
 pip3 install -r requirements.txt
 ```
 
-インストーラーが**python-dateutil**パッケージの古いバージョンについて警告する場合は、以下のコマンドでアップグレードしてください。
+インストーラーが古い **python-dateutil** パッケージについて警告する場合は、以下のコマンドでアップグレードしてください
 
 ```sh
 pip3 install python-dateutil --upgrade
@@ -155,34 +151,34 @@ pip3 install python-dateutil --upgrade
 
 ## PyTorchとTorchvisionのインストール
 
-PyTorchとTorchvisionはpipからインストールすることができません。なぜなら、これらは**ARM aarch64アーキテクチャ**に基づくJetsonプラットフォームでは互換性がないためです。そのため、事前にビルドされたPyTorchのpipホイールを手動でインストールし、Torchvisionをソースからコンパイル/インストールする必要があります。
+Jetsonプラットフォームは**ARM aarch64アーキテクチャ**をベースとしているため、pipからPyTorchとTorchvisionをインストールすることはできません。そのため、事前にビルドされたPyTorch pipホイールを手動でインストールし、Torchvisionをソースからコンパイル/インストールする必要があります。
 
-[このページ](https://forums.developer.nvidia.com/t/pytorch-for-jetson)を訪問して、すべてのPyTorchとTorchvisionのリンクにアクセスしてください。
+すべてのPyTorchとTorchvisionのリンクにアクセスするには、[このページ](https://forums.developer.nvidia.com/t/pytorch-for-jetson)をご覧ください。
 
-以下は、JetPack 5.0以降でサポートされているバージョンの一部です。
+以下はJetPack 5.0以降でサポートされているバージョンの一部です。
 
 **PyTorch v1.11.0**
 
-JetPack 5.0 (L4T R34.1.0) / JetPack 5.0.1 (L4T R34.1.1) / JetPack 5.0.2 (L4T R35.1.0)でPython 3.8をサポート
+Python 3.8を使用したJetPack 5.0 (L4T R34.1.0) / JetPack 5.0.1 (L4T R34.1.1) / JetPack 5.0.2 (L4T R35.1.0)でサポート
 
-**ファイル名:** torch-1.11.0-cp38-cp38-linux_aarch64.whl  
+**file_name:** torch-1.11.0-cp38-cp38-linux_aarch64.whl
 **URL:** https://nvidia.box.com/shared/static/ssf2v7pf5i245fk4i0q926hy4imzs2ph.whl
 
 **PyTorch v1.12.0**
 
-JetPack 5.0 (L4T R34.1.0) / JetPack 5.0.1 (L4T R34.1.1) / JetPack 5.0.2 (L4T R35.1.0)でPython 3.8をサポート
+Python 3.8を使用したJetPack 5.0 (L4T R34.1.0) / JetPack 5.0.1 (L4T R34.1.1) / JetPack 5.0.2 (L4T R35.1.0)でサポート
 
-**ファイル名:** torch-1.12.0a0+2c916ef.nv22.3-cp38-cp38-linux_aarch64.whl  
+**file_name:** torch-1.12.0a0+2c916ef.nv22.3-cp38-cp38-linux_aarch64.whl
 **URL:** https://developer.download.nvidia.com/compute/redist/jp/v50/pytorch/torch-1.12.0a0+2c916ef.nv22.3-cp38-cp38-linux_aarch64.whl
 
-- **ステップ 1.** 以下の形式で、JetPackバージョンに応じてtorchをインストールします。
+- **ステップ 1.** お使いのJetPackバージョンに応じて、以下の形式でtorchをインストールします
 
 ```sh
 wget <URL> -O <file_name>
 pip3 install <file_name>
 ```
 
-例えば、ここでは**JP5.0.2**を使用しているため、**PyTorch v1.12.0**を選択します。
+例えば、ここでは**JP5.0.2**を実行しているため、**PyTorch v1.12.0**を選択します
 
 ```sh
 sudo apt-get install -y libopenblas-base libopenmpi-dev
@@ -190,7 +186,7 @@ wget https://developer.download.nvidia.com/compute/redist/jp/v50/pytorch/torch-1
 pip3 install torch-1.12.0a0+2c916ef.nv22.3-cp38-cp38-linux_aarch64.whl
 ```
 
-- **ステップ 2.** インストールしたPyTorchのバージョンに応じてtorchvisionをインストールします。例えば、PyTorch v1.12.0を選択した場合、Torchvision v0.13.0を選択する必要があります。
+- **ステップ 2.** インストールしたPyTorchのバージョンに応じてtorchvisionをインストールします。例えば、PyTorch v1.12.0を選択した場合、Torchvision v0.13.0を選択する必要があります
 
 ```sh
 sudo apt install -y libjpeg-dev zlib1g-dev
@@ -199,14 +195,14 @@ cd torchvision
 python3 setup.py install --user
 ```
 
-以下は、PyTorchバージョンに応じてインストールする必要があるtorchvisionバージョンのリストです：
+PyTorchのバージョンに応じてインストールする必要があるtorchvisionの対応バージョンのリストは以下の通りです：
 
 - PyTorch v1.11 - torchvision v0.12.0
 - PyTorch v1.12 - torchvision v0.13.0
 
-より詳細なリストについては、[こちらのリンク](https://github.com/pytorch/vision/blob/main/README.rst)を確認してください。
+より詳細なリストが必要な場合は、[このリンク](https://github.com/pytorch/vision/blob/main/README.rst)をご確認ください。
 
-## YOLOv8 用 DeepStream 設定
+## DeepStream YOLOv8の設定
 
 - **ステップ 1.** 以下のリポジトリをクローンします
 
@@ -215,34 +211,34 @@ cd ~
 git clone https://github.com/marcoslucianops/DeepStream-Yolo
 ```
 
-- **ステップ 2.** リポジトリを以下のコミットにチェックアウトします
+- **Step 2.** Checkout the repo to the following commit
 
 ```sh
 cd DeepStream-Yolo
 git checkout 68f762d5bdeae7ac3458529bfe6fed72714336ca
 ```
 
-- **ステップ 3.** **DeepStream-Yolo/utils** 内の **gen_wts_yoloV8.py** を **ultralytics** ディレクトリにコピーします
+- **ステップ 3.** **DeepStream-Yolo/utils** から **gen_wts_yoloV8.py** を **ultralytics** ディレクトリにコピーします
 
 ```sh
 cp utils/gen_wts_yoloV8.py ~/ultralytics
 ```
 
-- **ステップ 4.** ultralytics リポジトリ内で、[YOLOv8 リリース](https://github.com/ultralytics/assets/releases/) から **pt ファイル**をダウンロードします（例：YOLOv8s）
+- **ステップ 4.** ultralytics リポジトリ内で、[YOLOv8 releases](https://github.com/ultralytics/assets/releases/) から **pt ファイル** をダウンロードします（YOLOv8s の例）
 
 ```sh
 wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8s.pt
 ```
 
-**注意:** カスタムモデルを使用することも可能ですが、エンジンを正しく生成するために **cfg** および **weights/wts** ファイル名に YOLO モデル参照 **(yolov8_)** を含めることが重要です。
+**注意:** カスタムモデルを使用することができますが、エンジンを正しく生成するために、**cfg** および **weights/wts** ファイル名に YOLO モデル参照 **(yolov8_)** を保持することが重要です。
 
-- **ステップ 5.** cfg、wts、labels.txt（利用可能な場合）ファイルを生成します（例：YOLOv8s）
+- **ステップ 5.** cfg、wts、および labels.txt（利用可能な場合）ファイルを生成します（YOLOv8s の例）
 
 ```sh
 python3 gen_wts_yoloV8.py -w yolov8s.pt
 ```
 
-**注意:** 推論サイズを変更する場合（デフォルト: 640）
+**注意:** 推論サイズを変更するには（デフォルト: 640）
 
 ```sh
 -s SIZE
@@ -250,10 +246,10 @@ python3 gen_wts_yoloV8.py -w yolov8s.pt
 -s HEIGHT WIDTH
 --size HEIGHT WIDTH
 
-例：1280の場合
+Example for 1280:
 
 -s 1280
-または
+or
 -s 1280 1280
 ```
 
@@ -269,11 +265,11 @@ cp labels.txt ~/DeepStream-Yolo
 
 ```sh
 cd ~/DeepStream-Yolo
-CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # DeepStream 6.2/ 6.1.1 / 6.1 用
-CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo  # DeepStream 6.0.1 / 6.0 用
+CUDA_VER=11.4 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/ 6.1.1 / 6.1
+CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
-- **ステップ 8.** モデルに応じて **config_infer_primary_yoloV8.txt** ファイルを編集します（例：80クラスの YOLOv8s）
+- **ステップ 8.** あなたのモデルに応じて **config_infer_primary_yoloV8.txt** ファイルを編集します（80クラスのYOLOv8sの例）
 
 ```sh
 [property]
@@ -285,7 +281,7 @@ num-detected-classes=80
 ...
 ```
 
-- **ステップ 9.** **deepstream_app_config.txt** ファイルを編集します
+- **Step 9.** Edit the **deepstream_app_config.txt** file
 
 ```sh
 ...
@@ -294,7 +290,7 @@ num-detected-classes=80
 config-file=config_infer_primary_yoloV8.txt
 ```
 
-- **ステップ 10.** **deepstream_app_config.txt** ファイル内のビデオソースを変更します。以下のようにデフォルトのビデオファイルがロードされます
+- **ステップ 10.** **deepstream_app_config.txt** ファイル内のビデオソースを変更します。以下に示すように、デフォルトのビデオファイルが読み込まれています
 
 ```sh
 ...
@@ -311,41 +307,41 @@ deepstream-app -c deepstream_app_config.txt
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/FP32-1.gif" style={{width:1000, height:'auto'}}/></div>
 
-上記の結果は、Jetson AGX Orin 32GB H01 キットで FP32 と YOLOv8s 640x640 を使用して実行されています。FPS は約 60 ですが、これは実際の FPS ではありません。**deepstream_app_config.txt** ファイル内の **[sink0]** セクションで **type=2** を設定すると、FPS はモニターのリフレッシュレート（今回使用したモニターは 60Hz）に制限されます。ただし、この値を **type=1** に変更すると、最大 FPS を取得できますが、ライブ検出出力は表示されません。
+上記の結果は、Jetson AGX Orin 32GB H01 KitでFP32とYOLOv8s 640x640を使用して実行されています。FPSは約60であることがわかりますが、これは真のFPSではありません。なぜなら、**deepstream_app_config.txt**ファイルの**[sink0]**の下で**type=2**を設定すると、FPSはモニターのfpsに制限され、このテストで使用したモニターは60Hzモニターだからです。ただし、この値を**type=1**に変更すると、最大FPSを取得できますが、ライブ検出出力はありません。
 
-同じビデオソースと上記と同じモデルを使用し、**[sink0]** 内の **type=1** に変更した後、以下の結果が得られます。
+上記で使用したのと同じビデオソースと同じモデルについて、**[sink0]**の下で**type=1**に変更した後、以下の結果を得ることができます。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/FP32-no-screen.gif" style={{width:1000, height:'auto'}}/></div>
 
-ご覧の通り、約 139 FPS を取得でき、これが実際の FPS 値に相当します。
+ご覧のように、実際のfps値に関連する約139のfpsを得ることができます。
 
-## INT8 キャリブレーション
+## INT8キャリブレーション
 
-推論に INT8 精度を使用したい場合は、以下の手順に従ってください。
+推論にINT8精度を使用したい場合は、以下の手順に従う必要があります
 
-- **ステップ 1.** OpenCV をインストールします
+- **ステップ1.** OpenCVをインストール
 
 ```sh
 sudo apt-get install libopencv-dev
 ```
 
-- **ステップ 2.** OpenCV サポートを有効にして **nvdsinfer_custom_impl_Yolo** ライブラリをコンパイル/再コンパイルします
+- **Step 2.** Compile/recompile the **nvdsinfer_custom_impl_Yolo** library with OpenCV support
 
 ```sh
 cd ~/DeepStream-Yolo
-CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # DeepStream 6.2/ 6.1.1 / 6.1 用
-CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # DeepStream 6.0.1 / 6.0 用
+CUDA_VER=11.4 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.2/ 6.1.1 / 6.1
+CUDA_VER=10.2 OPENCV=1 make -C nvdsinfer_custom_impl_Yolo  # for DeepStream 6.0.1 / 6.0
 ```
 
-- **ステップ 3.** COCO データセットの場合、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing) をダウンロードして解凍し、**DeepStream-Yolo** フォルダに移動します
+- **Step 3.** COCOデータセットについて、[val2017](https://drive.google.com/file/d/1gbvfn7mcsGDRZ_luJwtITL-ru2kK99aK/view?usp=sharing)をダウンロードし、展開して**DeepStream-Yolo**フォルダに移動します
 
-- **ステップ 4.** キャリブレーション画像用の新しいディレクトリを作成します
+- **Step 4.** キャリブレーション画像用の新しいディレクトリを作成します
 
 ```sh
 mkdir calibration
 ```
 
-- **ステップ 5.** 以下を実行して、COCO データセットからランダムに 1000 枚の画像を選択し、キャリブレーションを実行します
+- **ステップ 5.** 以下を実行して、COCOデータセットから1000枚のランダムな画像を選択してキャリブレーションを実行します
 
 ```sh
 for jpg in $(ls -1 val2017/*.jpg | sort -R | head -1000); do \
@@ -353,24 +349,24 @@ for jpg in $(ls -1 val2017/*.jpg | sort -R | head -1000); do \
 done
 ```
 
-**注意:** NVIDIA は、良好な精度を得るために少なくとも 500 枚の画像を推奨しています。この例では、より高い精度を得るために 1000 枚の画像を選択しています（画像が多いほど精度が向上します）。INT8_CALIB_BATCH_SIZE の値を大きくすると、精度が向上し、キャリブレーション速度が速くなります。GPU メモリに応じて設定してください。たとえば、2000 枚の画像の場合は `head -2000` を使用します。このプロセスには時間がかかる場合があります。
+**注意:** NVIDIAは良好な精度を得るために少なくとも500枚の画像を推奨しています。この例では、より良い精度を得るために1000枚の画像が選択されています（画像数が多いほど精度が向上します）。INT8_CALIB_BATCH_SIZEの値を高くすると、より高い精度とより高速なキャリブレーション速度が得られます。GPUメモリに応じて設定してください。head -1000から設定できます。例えば、2000枚の画像の場合、head -2000とします。このプロセスには長時間かかる場合があります。
 
-- **ステップ 6.** 選択したすべての画像を含む **calibration.txt** ファイルを作成します
+- **ステップ 6.** 選択されたすべての画像で**calibration.txt**ファイルを作成する
 
 ```sh
 realpath calibration/*jpg > calibration.txt
 ```
 
-- **ステップ 7.** 環境変数を設定します
+- **ステップ 7.** 環境変数を設定する
 
 ```sh
 export INT8_CALIB_IMG_PATH=calibration.txt
 export INT8_CALIB_BATCH_SIZE=1
 ```
 
-- **ステップ 8.** **config_infer_primary_yoloV8.txt** ファイルを更新します
+- **ステップ 8.** **config_infer_primary_yoloV8.txt** ファイルを更新する
 
-以下を
+変更前 
 
 ```sh
 ...
@@ -381,7 +377,7 @@ network-mode=0
 ...
 ```
 
-次のように変更します
+から 
 
 ```sh
 ...
@@ -392,7 +388,7 @@ network-mode=1
 ...
 ```
 
-- **ステップ 9.** 推論を実行する前に、**deepstream_app_config.txt** ファイルの **[sink0]** セクションで **type=2** を設定して、最大 FPS パフォーマンスを得るようにします。
+- **ステップ 9.** 推論を実行する前に、前述のように **deepstream_app_config.txt** ファイルの **[sink0]** の下で **type=2** を設定して、最大fps性能を得ます。
 
 - **ステップ 10.** 推論を実行します
 
@@ -402,15 +398,15 @@ deepstream-app -c deepstream_app_config.txt
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/2.png" style={{width:1000, height:'auto'}}/></div>
 
-ここでは、約 350 FPS の値を得ることができます！
+ここで約350のFPS値を取得しました！
 
 ## マルチストリーム設定
 
-NVIDIA DeepStream を使用すると、単一の設定ファイルで簡単に複数のストリームを設定し、マルチストリームのビデオ分析アプリケーションを構築できます。この wiki の後半では、高 FPS パフォーマンスを持つモデルがマルチストリームアプリケーションでどのように役立つか、いくつかのベンチマークとともに説明します。
+NVIDIA DeepStream では、単一の設定ファイルで複数のストリームを簡単にセットアップして、マルチストリーム映像解析アプリケーションを構築できます。このwikiの後半では、高いFPSパフォーマンスを持つモデルがマルチストリームアプリケーションにどのように役立つかを、いくつかのベンチマークとともに実演します。
 
-ここでは、9 ストリームを例として取り上げます。**deepstream_app_config.txt** ファイルを変更します。
+ここでは9つのストリームを例に取り上げます。**deepstream_app_config.txt** ファイルを変更します。
 
-- **ステップ 1.** **[tiled-display]** セクション内で、行と列を 3 と 3 に変更し、3x3 グリッドで 9 ストリームを表示できるようにします
+- **ステップ 1.** **[tiled-display]** セクション内で、行と列を3と3に変更して、9つのストリームで3x3グリッドを作成できるようにします
 
 ```sh
 [tiled-display]
@@ -418,7 +414,7 @@ rows=3
 columns=3
 ```
 
-- **ステップ 2.** **[source0]** セクション内で **num-sources=9** を設定し、さらに **uri** を追加します。ここでは、現在のサンプルビデオファイルを 8 回複製して合計 9 ストリームを作成します。ただし、アプリケーションに応じて異なるビデオストリームに変更することもできます
+- **ステップ 2.** **[source0]** セクション内で、**num-sources=9** を設定し、さらに **uri** を追加します。ここでは、現在のサンプル動画ファイルを8回複製して、合計9つのストリームを作成します。ただし、アプリケーションに応じて異なる動画ストリームに変更することができます
 
 ```sh
 [source0]
@@ -436,27 +432,27 @@ uri=file:///opt/nvidia/deepstream/deepstream/samples/streams/sample_1080p_h264.m
 num-sources=9
 ```
 
-次に、**deepstream-app -c deepstream_app_config.txt** コマンドでアプリケーションを再実行すると、以下の出力が表示されます
+**deepstream-app -c deepstream_app_config.txt** コマンドでアプリケーションを再度実行すると、以下の出力が表示されます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/7.jpg" style={{width:1000, height:'auto'}}/></div>
 
 ## trtexec ツール
 
-サンプルディレクトリには、[trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec) というコマンドラインラッパーツールが含まれています。trtexec は、独自のアプリケーションを開発することなく TensorRT を使用するためのツールです。trtexec ツールには以下の3つの主な目的があります：
+samples ディレクトリには、[trtexec](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html#trtexec) と呼ばれるコマンドラインラッパーツールが含まれています。trtexec は、独自のアプリケーションを開発することなく TensorRT を使用するためのツールです。trtexec ツールには主に3つの目的があります：
 
-- ランダムまたはユーザー提供の入力データを使用してネットワークをベンチマークする。
-- モデルからシリアライズされたエンジンを生成する。
-- ビルダーからシリアライズされたタイミングキャッシュを生成する。
+- ランダムまたはユーザー提供の入力データでネットワークをベンチマークする
+- モデルからシリアル化されたエンジンを生成する
+- ビルダーからシリアル化されたタイミングキャッシュを生成する
 
-ここでは、trtexec ツールを使用して、異なるパラメータでモデルを迅速にベンチマークすることができます。しかし、まず最初に ONNX モデルが必要です。この ONNX モデルは ultralytics yolov8 を使用して生成できます。
+ここでは、trtexec ツールを使用して、異なるパラメータでモデルを迅速にベンチマークできます。しかし、まず最初に onnx モデルが必要で、この onnx モデルは ultralytics yolov8 を使用して生成できます。
 
-- **ステップ 1.** 次のコマンドで ONNX を構築します：
+- **Step 1.** 以下を使用して ONNX をビルドします：
 
 ```sh
 yolo mode=export model=yolov8s.pt format=onnx
 ```
 
-- **ステップ 2.** 次のように trtexec を使用してエンジンファイルを構築します：
+- **ステップ1.** 以下のようにtrtexecを使用してエンジンファイルをビルドします：
 
 ```sh
 cd /usr/src/tensorrt/bin
@@ -469,13 +465,13 @@ cd /usr/src/tensorrt/bin
 ./trtexec --onnx=/home/nvidia/yolov8s.onnx --saveEngine=/home/nvidia/yolov8s.engine
 ```
 
-これにより、以下のようなパフォーマンス結果が出力され、**.engine** ファイルが生成されます。デフォルトでは、ONNX を **FP32** 精度の TensorRT 最適化ファイルに変換し、以下のような出力が得られます。
+これにより、生成された**.engine**ファイルと共に以下のようなパフォーマンス結果が出力されます。デフォルトでは、ONNXを**FP32**精度でTensorRT最適化ファイルに変換し、以下のような出力を確認できます
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/3.png" style={{width:1000, height:'auto'}}/></div>
 
-ここでは、平均レイテンシを 7.2ms として計算し、これは 139FPS に相当します。これは、以前の DeepStream デモで得られたパフォーマンスと同じです。
+ここで平均レイテンシを7.2msとして取得でき、これは139FPSに相当します。これは前回のDeepStreamデモで得られたのと同じパフォーマンスです。
 
-しかし、より高いパフォーマンスを提供する **INT8** 精度が必要な場合は、以下のように上記のコマンドを実行できます：
+ただし、より良いパフォーマンスを提供する**INT8**精度が必要な場合は、上記のコマンドを以下のように実行できます
 
 ```sh
 ./trtexec --onnx=/home/nvidia/yolov8s.onnx --int8 --saveEngine=/home/nvidia/yolov8s.engine 
@@ -483,46 +479,46 @@ cd /usr/src/tensorrt/bin
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/4.jpg" style={{width:1000, height:'auto'}}/></div>
 
-ここでは、平均レイテンシを 3.2ms として計算し、これは 313FPS に相当します。
+ここでは平均レイテンシを3.2msとして取ることができ、これは313FPSに相当します。
 
-## YOLOv8 ベンチマーク結果
+## YOLOv8ベンチマーク結果
 
-[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)、[AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html)、および [reComputer J2021](https://www.seeedstudio.com/reComputer-J2021-p-5438.html) 上で動作する異なる YOLOv8 モデルのパフォーマンスベンチマークを実施しました。
+[reComputer J4012](https://www.seeedstudio.com/reComputer-J4012-p-5586.html)、[AGX Orin 32GB H01 Kit](https://www.seeedstudio.com/AGX-Orin-32GB-H01-Kit-p-5569.html)、[reComputer J2021](https://www.seeedstudio.com/reComputer-J2021-p-5438.html)で動作する異なるYOLOv8モデルのパフォーマンスベンチマークを実施しました。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/YOLOV8/14.png" style={{width:1000, height:'auto'}}/></div>
 
-YOLOv8 モデルを使用したパフォーマンスベンチマークの詳細については、[こちらのブログ](https://www.seeedstudio.com/blog/2023/03/30/yolov8-performance-benchmarks-on-nvidia-jetson-devices)をご覧ください。
+YOLOv8モデルを使用して実施したより多くのパフォーマンスベンチマークについて詳しく知りたい場合は、[私たちのブログ](https://www.seeedstudio.com/blog/2023/03/30/yolov8-performance-benchmarks-on-nvidia-jetson-devices)をご確認ください。
 
 ## マルチストリームモデルベンチマーク
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer/Application/YOLOv8-DeepStream-TRT-Jetson/1.jpg" style={{width:1000, height:'auto'}}/></div>
 
-reComputer Jetson Orin シリーズ製品で複数の DeepStream アプリケーションを実行した後、YOLOv8s モデルを使用してベンチマークを行いました。
+reComputer Jetson Orinシリーズ製品でいくつかのdeepstreamアプリケーションを実行した後、YOLOv8sモデルでベンチマークを実施しました。
 
-- 最初に、単一の AI モデルを使用し、同じ AI モデルで複数のストリームを実行しました。
-- 次に、複数の AI モデルを使用し、複数のストリームを複数の AI モデルで実行しました。
+- まず、単一のAIモデルを使用し、同じAIモデルで複数のストリームを実行しました
+- 次に、複数のAIモデルを使用し、複数のAIモデルで複数のストリームを実行しました
 
-これらのベンチマークは以下の条件下で実施されました：
+これらのベンチマークはすべて以下の条件下で実施されました：
 
-- YOLOv8s 640x640 画像入力
-- UI を無効化
-- 最大電力および最大パフォーマンスモードを有効化
+- YOLOv8s 640x640画像入力
+- UIを無効化
+- 最大電力と最大パフォーマンスモードをオン
 
 <iframe src="https://jetson-camera-selection-tool.seeedstudio.com/" width="100%" height="690px"></iframe>
 
-これらのベンチマークから、INT8 精度の単一 YOLOv8s モデルを使用した場合、最高性能の Orin NX 16GB デバイスでは約 40 台のカメラを約 5fps で使用できることがわかります。一方、各ストリームに対して複数の YOLOv8s モデルを使用した場合、約 11 台のカメラを約 15fps で使用できます。マルチモデルアプリケーションでは、デバイスの RAM 制限によりカメラの数が減少します。各モデルが大量の RAM を消費するためです。
+これらのベンチマークから、最高性能のOrin NX 16GBデバイスでは、INT8の単一YOLOv8sモデルで約5fpsで約40台のカメラを使用でき、各ストリームにINT8の複数YOLOv8sモデルを使用する場合は約15fpsで約11台のカメラを使用できることがわかります。マルチモデルアプリケーションでは、デバイスのRAM制限により、また各モデルが相当量のRAMを消費するため、カメラの数は少なくなります。
 
-まとめると、YOLOv8 モデルのみを使用してアプリケーションを実行しない場合、<strong> Jetson Orin Nano 8GB は 4～6 ストリームをサポートでき、Jetson Orin NX 16GB は最大 16～18 ストリームを管理できます。</strong> ただし、実際のアプリケーションでは RAM リソースが使用されるため、これらの数値は減少する可能性があります。そのため、これらの数値をガイドラインとして使用し、特定の条件下で独自のテストを実施することをお勧めします。
+要約すると、YOLOv8モデルのみでアプリケーションを実行せずにエッジデバイスを動作させる場合、<strong>Jetson Orin Nano 8GBは4-6ストリームをサポートでき、Jetson Orin NX 16GBは最大容量で16-18ストリームを管理できます。</strong>ただし、実際のアプリケーションでRAMリソースが使用されると、これらの数値は減少する可能性があります。したがって、これらの数値をガイドラインとして使用し、特定の条件下で独自のテストを実施することをお勧めします。
 
 ## リソース
 
-- [YOLOv8 ドキュメント](https://docs.ultralytics.com)
-- [TensorRT ドキュメント](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html)
-- [DeepStream SDK ドキュメント](https://docs.nvidia.com/metropolis/deepstream/dev-guide)
+- [YOLOv8ドキュメント](https://docs.ultralytics.com)
+- [TensorRTドキュメント](https://docs.nvidia.com/deeplearning/tensorrt/developer-guide/index.html)
+- [DeepStream SDKドキュメント](https://docs.nvidia.com/metropolis/deepstream/dev-guide)
 
 ## 技術サポートと製品ディスカッション
 
-弊社製品をお選びいただきありがとうございます！製品をご利用いただく際に、できる限りスムーズな体験を提供するために、さまざまなサポートをご用意しております。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを提供しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちの製品での体験ができるだけスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャンネルを提供しています。
 
 <div class="button_tech_support_container">
 <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 

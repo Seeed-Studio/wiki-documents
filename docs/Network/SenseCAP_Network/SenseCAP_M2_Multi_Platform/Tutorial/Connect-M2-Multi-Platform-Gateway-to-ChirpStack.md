@@ -54,7 +54,7 @@ Navigate to **Device profile> Add device profile**
 **ADR algorithm**: Default ADR algorithm( LoRa only)
 
 :::note
-Select MAC version/Regional parameters revision/ADR algorithm according to your device. For details, please refer to:https://lora-alliance.org/resource\_hub/
+Select MAC version/Regional parameters revision/ADR algorithm according to your device. For details, please refer to:https://lora-alliance.org/resource_hub/
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/M2_Multi-Platform/wps_doc_4.png" alt="pir" width={800} height="auto" /></p>

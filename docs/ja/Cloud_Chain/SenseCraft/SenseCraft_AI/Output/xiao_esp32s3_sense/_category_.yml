@@ -1,5 +1,0 @@
-position: 2 # 浮動小数点の位置がサポートされています
-label: 'XIAO ESP32S3 センスモデル出力'
-collapsible: true # カテゴリを折りたたみ可能にする
-collapsed: true # デフォルトでカテゴリを開いた状態にする
-className: sensecraft_ai_output_xiao

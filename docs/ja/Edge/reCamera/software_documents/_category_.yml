@@ -7,4 +7,4 @@ link:
   type: generated-index
   slug: ja/recamera_software_docs
   title: reCamera ソフトウェア開発ドキュメント
-  description: reCameraは起動後すぐに使用可能なデバイスです。安定したreCamera OSが搭載されており、ファームウェアのOTAアップデートをサポートしています。さらに、Node-REDとSensecraft AIプラットフォームがデバイスに統合されており、より簡単な展開体験を提供します。この統合により、初心者の開発者はNode-REDノードに基づいたモジュール型プログラミング体験を得ることができます。上級開発者向けには、Linuxベースの詳細な開発環境やPythonを使用した柔軟な開発も可能です。JavaScript、C/C++、Python、Linux OS、buildrootに精通した開発者、さらに技術愛好家、学生、初心者の方々がさらなる開発やアプリケーションの探求に参加することを心より歓迎します。
+  description: reCameraは起動後すぐに使用できるデバイスです。ファームウェアOTAアップデートをサポートする安定したreCamera OSが搭載されています。さらに、より簡単な展開体験のために、Node-REDとSensecraft AIプラットフォームがデバイスに統合されています。この統合により、初心者の開発者にはNode-REDノードベースのモジュラープログラミング体験を提供します。上級開発者には、深いLinuxベースの開発とPythonも利用可能で、自由に調整や実験ができます。JavaScript、C/C++、Python、Linux OS、buildrootに精通した開発者、そしてギーク、学生、初心者の皆様に、さらなる開発とアプリケーションの探求に参加していただくことを心より歓迎いたします。

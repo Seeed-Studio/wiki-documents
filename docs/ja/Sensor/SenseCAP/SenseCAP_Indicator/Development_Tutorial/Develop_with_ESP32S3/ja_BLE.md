@@ -6,49 +6,44 @@ keywords:
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_ESP32_BLE
 last_update:
-  date: 05/15/2025
+  date: 5/23/2023
   author: Thomas
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 # **BLE**
 
-[**例**](https://github.com/espressif/esp-idf/tree/master/examples/bluetooth)
+[**Examples**](https://github.com/espressif/esp-idf/tree/master/examples/bluetooth)
 
-この[ディレクトリ](https://github.com/espressif/esp-idf/tree/master/examples/bluetooth)には、Bluetooth機能を示す一連のプロジェクト例が含まれており、独自のプロジェクトにコピーして適応できるコードが提供されています。
+この[ディレクトリ](https://github.com/espressif/esp-idf/tree/master/examples/bluetooth)には、Bluetooth機能を実演し、あなた自身のプロジェクトにコピーして適用できるコードを提供する一連のプロジェクト例が含まれています。
 
 **例の使用方法**
 
-例をビルドする前に、ESP-IDF Getting Started Guideに従って必要な開発環境を準備してください。
+例をビルドする前に、必要な開発環境を確保するためにESP-IDF Getting Started Guideに従ってください。
 
-例をビルドする手順は、他のプロジェクトをビルドする手順と同じです：
+例をビルドすることは、他のプロジェクトをビルドすることと同じです：
 
-- ステップ1: ビルドしたい新しい例のディレクトリに移動します。
+- ステップ1：ビルドしたい新しい例のディレクトリに移動します。
 
-プロジェクト構成メニューを開く前に、正しいチップターゲットを選択するために以下のコマンドを実行してください：
+プロジェクト設定メニューを開く前に、ビルドする正しいチップターゲットを選択するために以下のコマンドを実行します：
 
 `idf.py set-target esp32s3`
 
-（デフォルトではターゲットはesp32です。すべてのオプションについては、`idf.py set-target --help`を参照してください）
+（デフォルトではターゲットはesp32です。すべてのオプションについてはidf.py set-target --helpを参照してください）
 
-- ステップ2: 以下のコマンドを実行してプロジェクト構成メニューを開きます：
+- ステップ2：プロジェクト設定メニューを開くために以下のコマンドを実行します：
 
 `idf.py menuconfig`
 
-ほとんどの例には、ここにプロジェクト固有の「例の設定」セクションがあります（例えば、使用するWiFi SSIDとパスワードを設定するなど）。
+ほとんどの例には、ここにプロジェクト固有の「Example Configuration」セクションがあります（例えば、使用するWiFi SSIDとパスワードを設定するため）
 
-- ステップ3: 例をビルドします：
+- ステップ3：例をビルドします：
 
 `idf.py build`
 
-印刷された指示に従ってフラッシュするか、以下のコマンドを実行してください：
+フラッシュするために印刷された指示に従うか、以下を実行します
 `idf.py -p PORT flash`
 
 # **技術サポート**
 
-心配しないでください、私たちがサポートします！質問がある場合は、[Seeed公式Discordチャンネル](https://discord.com/invite/QqMgVwHT3X)をご訪問ください。
+ご心配なく、私たちがサポートします！質問については、[Seeed公式Discordチャンネル](https://discord.com/invite/QqMgVwHT3X)をご訪問ください！
 
-大量注文やカスタマイズの要件がある場合は、iot@seeed.ccまでお問い合わせください。
+大量注文やカスタマイズ要件がある場合は、iot@seeed.ccまでお問い合わせください

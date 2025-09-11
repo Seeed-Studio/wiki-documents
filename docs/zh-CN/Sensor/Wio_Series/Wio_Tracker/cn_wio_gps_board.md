@@ -182,7 +182,7 @@ last_update:
 
 首先，我们必须安装 [Adafruit NeoPixel Library](https://github.com/adafruit/Adafruit_NeoPixel/archive/master.zip)（用于 ws2812b LED）并将其导入到 Arduino IDE 中。
 
-然后打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > Blink** 打开示例程序，或复制以下代码：
+然后打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > Blink** 打开示例程序，或复制以下代码：
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -234,7 +234,7 @@ Wio Tracker 专为户外移动物体跟踪而设计。因此您可以通过带�
 :::
 电池状态引脚已连接到 A4，这允许您通过编程测量电池电压。
 
-打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > Check_Battery** 打开示例程序，或复制以下代码：
+打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > Check_Battery** 打开示例程序，或复制以下代码：
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -258,11 +258,11 @@ void loop() {
 
 ### 使用 Grove 模块扩展您的应用
 
-要使用 Wio Tracker 上的 6 个 Grove 连接器，我们必须使用 `digitalWrite(12, HIGH)` 打开 3V3\_B 为 Grove 模块供电（D12 默认为 LOW 以减少功耗）。
+要使用 Wio Tracker 上的 6 个 Grove 连接器，我们必须使用 `digitalWrite(12, HIGH)` 打开 3V3_B 为 Grove 模块供电（D12 默认为 LOW 以减少功耗）。
 
 * 以下代码显示如何使用模拟和数字 Grove 模块：
 
-打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > Button\_LightSensor** 打开示例程序，或复制以下代码：
+打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > Button_LightSensor** 打开示例程序，或复制以下代码：
 
 ```c
 #include "MC20_Arduino_Interface.h"
@@ -327,7 +327,7 @@ MC20 模块为 MCU 提供 AT 命令集，用于与其 GSM/GPRS、GNSS 和蓝牙�
 
 ![](https://files.seeedstudio.com/wiki/Wio_GPS_Board/images/pullsim.jpg)
 
-打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > MC20\_GNSS > GNSS\_Show\_Coordinate** 打开示例代码，或复制以下代码：
+打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > MC20_GNSS > GNSS_Show_Coordinate** 打开示例代码，或复制以下代码：
 
 ```c
 #include "MC20_Common.h"
@@ -372,7 +372,7 @@ void loop() {
 
 以下示例展示了如何在 Wio Tracker 上读取短信。此示例需要 Nano SIM 卡。
 
-打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > MC20\_SMSRead** 打开示例代码，或复制以下代码：
+打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > MC20_SMSRead** 打开示例代码，或复制以下代码：
 
 ```c
 #include "MC20_Common.h"
@@ -431,7 +431,7 @@ void loop() {
 
 ### 蓝牙连接
 
-在 Wio Tracker 上连接蓝牙设备也非常简单。打开您的 Arduino IDE，点击 **File > Examples > MC20\_GPS\_Traker > MC20\_BlueTooth > BT\_FastConnect** 打开示例代码，或复制以下代码。
+在 Wio Tracker 上连接蓝牙设备也非常简单。打开您的 Arduino IDE，点击 **File > Examples > MC20_GPS_Traker > MC20_BlueTooth > BT_FastConnect** 打开示例代码，或复制以下代码。
 
 然后更改您蓝牙设备的 deviceName，Wio Tracker 将自动连接它。
 

@@ -129,7 +129,7 @@ Raspberry Piでシステムを構成するためにシリアルCOMポートを�
 リソース
 --------
 
-- [Raspberry\_Pi\_RS232\_Board\_v1.0\_sch\_pcb](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/Raspberry_Pi_RS232_Board_v1.0_sch_pcb.zip)
+- [Raspberry_Pi_RS232_Board_v1.0_sch_pcb](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/Raspberry_Pi_RS232_Board_v1.0_sch_pcb.zip)
 - [MAX3232](https://files.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0/res/MAX3232.pdf)
 
 <!-- このMarkdownファイルは https://www.seeedstudio.com/wiki/Raspberry_Pi_R232_Board_v1.0 から作成されました -->

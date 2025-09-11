@@ -72,7 +72,7 @@ ReSpeaker 麦克风阵列可以直接堆叠（连接）到 ReSpeaker Core 的顶
 
 ## 使用 ReSpeaker Core 提取语音
 
-当麦克风阵列堆叠在 ReSpeaker Core 上时，它会被自动检测到（通过 `aplay -l` 检查）。我们建议您使用我们的 [respeaker\_python\_library](https://github.com/respeaker/respeaker_python_library) 来开发语音交互应用程序，这样您无需担心麦克风阵列是否已连接。我们的库会自动检查并在麦克风阵列连接时选择它。
+当麦克风阵列堆叠在 ReSpeaker Core 上时，它会被自动检测到（通过 `aplay -l` 检查）。我们建议您使用我们的 [respeaker_python_library](https://github.com/respeaker/respeaker_python_library) 来开发语音交互应用程序，这样您无需担心麦克风阵列是否已连接。我们的库会自动检查并在麦克风阵列连接时选择它。
 
 此外，在该库中，基于 **Pyaudio** 的 [*Microphone 类*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py) 提供了一个名为 [*listen*](https://github.com/respeaker/respeaker_python_library/blob/master/respeaker/microphone.py#L207) 的方法，用于提取语音。请参阅我们的 [示例代码](https://github.com/respeaker/respeaker_python_library/blob/master/examples/SpeechRecognition_translator.py) 了解使用方法。
 

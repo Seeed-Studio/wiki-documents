@@ -364,7 +364,7 @@ Haz clic [aquí](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAn
 - **[Librería]** [Librería del Acelerómetro y Brújula de 6 Ejes v2.0 para arduino](https://github.com/Seeed-Studio/6Axis_Accelerometer_And_Compass_v2)
 
 - **[Librería]** [Librería del Acelerómetro y Brújula de 6 Ejes v2.0 para raspberry pi](https://github.com/DexterInd/GrovePi/blob/master/Software/Python/grove_6axis_acc_compass)
-- **[Hoja de datos]** [LSM303D\_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
+- **[Hoja de datos]** [LSM303D_datashet](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/LSM303D_datasheet.pdf)
 - **[Eagle]** [Archivo eagle del Acelerómetro y Brújula de 6 Ejes v2.0](https://files.seeedstudio.com/wiki/Grove-6-Axis_AccelerometerAndCompass_V2.0/res/Grove-6-Axis_AccelerometerAndCompass_v2.0_sch_pcb.zip)
 
 <!-- This Markdown file was created from https://www.seeedstudio.com/wiki/Grove_-_6-Axis_Accelerometer&Compass_V2.0 -->

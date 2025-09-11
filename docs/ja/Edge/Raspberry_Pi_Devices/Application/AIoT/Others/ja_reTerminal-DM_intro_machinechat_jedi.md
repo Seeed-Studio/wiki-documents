@@ -1,91 +1,87 @@
 ---
-description: Machinechat JEDI の使い方
-title: Machinechat JEDI の使い方
+description: Machinechat JEDI を始める
+title: Machinechat JEDI を始める
 keywords:
   - reTerminal DM
-  - 初めての使用
+  - Getting started
   - IIoT
-  - 産業用
+  - Industrial 
   - Jedi MachineChat
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/reTerminalDM_Introduction_Jedi_MachineChat
 last_update:
-  date: 05/15/2025
+  date: 3/28/2024
   author: Kasun Thushara
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-# reTerminal DM & Machinechat JEDI: 産業用 IoT の強力なツール
+# reTerminal DM & Machinechat JEDI: あなたの産業用IoTパワーハウス
 
 ## はじめに
 
-[Machinechat JEDI](https://www.machinechat.io/jedi) は、強力で多用途な IoT (Internet of Things) データ管理ソフトウェアです。さまざまなデバイス、センサー、機械からリアルタイムデータを収集、可視化、監視し、対応するプロセスを簡素化するよう設計されています。Seeed の reTerminal DM と Machinechat JEDI ソフトウェアを使用すれば、30 分以内にカスタムダッシュボードを構築できます。運用状況を追跡し、トレンドを分析し、効率を向上させ、コストのかかる障害を防ぐためのタイムリーなアラートを受け取ることができます。
+[Machinechat JEDI](https://www.machinechat.io/jedi) は、強力で多用途なIoT（Internet of Things）データ管理ソフトウェアです。幅広いデバイス、センサー、機械からのリアルタイムデータの収集、可視化、監視、および応答のプロセスを合理化するように設計されています。SeeedのreTerminal DMとMachinechat JEDIソフトウェアを使用すると、30分以内にカスタムダッシュボードを構築できます。運用を追跡し、トレンドを分析し、効率を向上させ、コストのかかる中断を防ぐためのタイムリーなアラートを受信できます。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot1.PNG" /></center>
 
-## 始める前に
+## はじめに
 
-このプロジェクトを開始する前に、以下に記載されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
+このプロジェクトを開始する前に、ここで説明されているように、ハードウェアとソフトウェアを事前に準備する必要があります。
 
 ### ハードウェアの準備
 
 <div class="table-center">
-	<table class="table-nobg">
+ <table class="table-nobg">
     <tr class="table-trnobg">
       <th class="table-trnobg">reTerminal DM</th>
       <th class="table-trnobg">XIAO ESP32C3</th>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reTerminalDM/ML/edgeimpulse/reterminaldm.png" style={{width:300, height:'auto'}}/></div></td>
             <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/XIAO_WiFi/board-pic.png" style={{width:100, height:'auto'}}/></div></td>
-		</tr>
+  </tr>
     <tr class="table-trnobg"></tr>
-		<tr class="table-trnobg">
-			<td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+  <tr class="table-trnobg">
+   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/reTerminal-DM-p-5616.html" target="_blank">
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
           <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://www.seeedstudio.com/seeed-xiao-esp32c3-p-5431.html" target="_blank">
-              <strong><span><font color={'FFFFFF'} size={"4"}> 今すぐ購入 🖱️</font></span></strong>
+              <strong><span><font color={'FFFFFF'} size={"4"}> Get One Now 🖱️</font></span></strong>
           </a></div></td>
         </tr>
     </table>
-    </div>
+</div>
 
 ### ソフトウェアの準備
 
-Raspberry Pi 64 ビット OS の **Bullseye** バージョンを公式ウェブサイトからインストールすることをお勧めします。
+公式ウェブサイトから Raspberry Pi 64 bit OS の **Bullseye** バージョンをインストールすることをお勧めします。
 
-## reTerminal DM に Machinechat JEDI をインストールする
+## reTerminal DM に Machinechat JEDI をインストール
 
 ### JEDI のダウンロード
 
 Machinechat のウェブサイトにアクセスし、JEDI Free Edition または JEDI Lite Trial Edition のいずれかを選択してください。
 
-メールアドレスを入力すると、ライセンス情報とすべての対応 OS 用のダウンロードリンクが記載されたメールが届きます。使用している OS に適したダウンロードリンクをクリックしてください。**この場合は 64 ビット Raspberry Pi**
+メールアドレスを入力してください。ライセンス情報とサポートされているすべてのオペレーティングシステム用のダウンロードリンクが記載されたメールが届きます。お使いのオペレーティングシステムに適したダウンロードリンクをクリックしてください。**このケースでは 64bit Raspberry pi**
 
 ### 解凍と起動
 
-ダウンロードしたファイルは ZIP アーカイブ形式です。内容を reTerminal DM の任意の場所に解凍してください。
+ダウンロードしたファイルは ZIP アーカイブです。reTerminal DM の任意の場所にコンテンツを展開してください。
 
-ターミナルを開き、以下を実行します。**/path/to/jedi/folder** をフォルダの場所に置き換えてください。
+ターミナルを開いて実行してください。この **/path/to/jedi/folder** をフォルダの場所に置き換えてください。
 
 ```sh
 cd /path/to/jedi/folder
 ```
 
-JEDI を起動します。
+JEDIを起動
 
 ```sh
 ./mcjedi.bin
 ```
 
-### JEDI のウェブインターフェースへのアクセス
+### JEDIのWebインターフェースへのアクセス
 
-reTerminal DM でウェブブラウザを開き、以下を入力します。
+reTerminal DMでWebブラウザを開き、以下を入力してください
 
 ```sh
 http://localhost:9123
@@ -93,29 +89,29 @@ http://localhost:9123
 
 ### セットアップとアクティベーション
 
-EULA を読み、同意してください。フォームにユーザー名、パスワード、チャレンジ質問（パスワード回復に使用）を入力します。
+EULAを読んで同意し、フォームに記入してください。ユーザー名、パスワード、およびチャレンジ質問への回答（パスワード回復に使用）を提供してください。
 
-新しく作成した資格情報を使用してください。
+新しく作成した認証情報を使用してください。
 
-ダウンロードメールで提供されたライセンスキーを入力します。JEDI はインターネットに一時的に接続し、ライセンスを検証してアクティベートします。
+ダウンロードメールで提供されたライセンスキーを入力してください。JEDIは一時的にインターネットに接続してライセンスを検証し、アクティベートします。
 
 ## クイックテスト
 
 ### データパイプラインの作成
 
-お使いのノートパソコンでお気に入りのPython IDEを開きます。（例：PyCharm、VS Code）  
-以下のコードをコピーして貼り付けてください。
+ラップトップでお気に入りのPython IDE（pycharm/Vs codeなど）を開いてください。
+コピーして貼り付けてください。
 
 ```sh
 import requests
 import json
 
-url = 'http://<jedi_ip>:8100/v1/data/mc'  # <jedi_ip> を reTerminal DM IPアドレスに置き換えてください
+url = 'http://<jedi_ip>:8100/v1/data/mc'  # Replace <jedi_ip> with your reTerminal DM IP address
 
 payload = {
     "context": {
         "target_id": "my_PC",
-        "target_ip": "192.168.1.10"  # PCのIPアドレス
+        "target_ip": "192.168.1.10"  #PC IP
     },
     "data": {
         "temperature": 25.5,
@@ -127,23 +123,24 @@ headers = {'Content-Type': 'application/json'}
 response = requests.post(url, data=json.dumps(payload), headers=headers)
 
 if response.status_code == 200:
-    print('データが正常に送信されました')
+    print('Data sent successfully')
 else:
-    print('データ送信エラー:', response.text)
+    print('Error sending data:', response.text)
+
 ```
 
 ### 可視化と探索
 
-Dashboard の時間です！ナビゲーションパネルで「Data Dashboard」をクリックしてください。このダッシュボードは事前に作成されています。次に、このダッシュボードにゲージチャートを追加します。
+ダッシュボードの時間です！ナビゲーションパネルでData Dashboardをクリックしてください。このダッシュボードは事前に作成されています。今度はこのダッシュボードにゲージチャートを追加します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/webinterface1.PNG" /></center>
 
-- **ADD CHART** をクリックして **Data Dashboard** に新しいチャートを追加します。
-- **Name** をクリックしてチャートの名前を入力します。
-- **Chart Type** をクリックして **Gauge** を選択します。
-- **Source** をクリックして、データと一緒に送信された **target_id** を選択します。上記のサンプルコードまたはペイロードを使用した場合、リストに **my_PC** が表示されます。
-- **Property** をクリックしてプロパティ（例：温度または湿度）を選択します。
-- **ADD** をクリックして設定を保存し、ダッシュボードにチャートを追加します。
+- **ADD CHART**をクリックして、**Data Dashboard**に新しいチャートを追加します。
+- **Name**をクリックして、チャートの名前を入力します。
+- **Chart Type**をクリックして、**Gauge**を選択します。
+- **Source**をクリックして、データと一緒に送信された**target_id**を選択します。上記のサンプルコードまたはペイロードを使用した場合、リストに**my_PC**が表示されます。
+- **Property**をクリックして、プロパティ（例：temperature または humidity）を選択します。
+- **ADD**をクリックして設定を保存し、チャートをダッシュボードに追加します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/Gaugeconfig.PNG" /></center>
 
@@ -153,20 +150,18 @@ Dashboard の時間です！ナビゲーションパネルで「Data Dashboard�
 
 ## MQTTデータコレクター
 
-JEDIは、すぐに使用可能な事前設定済みのデータコレクターを豊富に提供しています。これらのコレクターは一般的なIoTの状況に対応しており、以下を含みます：
+JEDIは、即座に使用できる事前設定されたデータコレクターの堅牢な配列を提供します。これらのコレクターは典型的なIoT状況に対応し、以下を含みます：
 
-- **HTTP**: デバイス、スクリプト、その他のアプリケーションからHTTP APIを介してデータを受信します。
-- **MQTT Broker**: IoTで広く利用されているメッセージングプロトコルMQTTを通じて、センサーやデバイスからデータを取得します。
-- **TCP**: 生のTCP接続を介して通信するデバイスからデータを取得します。
-- **Serial**: シリアルポートを介してデータを送信するデバイス（例：Arduinoボード、GPS受信機など）と接続します。
+- **HTTP**: HTTP APIを介してデバイス、スクリプト、その他のアプリケーションからデータを受信できます。
+- **MQTTブローカー**: 広く利用されているIoTメッセージングプロトコルであるMQTTを通じて、センサーやデバイスからデータを取得できます。
+- **TCP**: 生のTCP接続を介して通信するデバイスからデータを取得できます。
+- **Serial**: シリアルポート経由でデータを送信するデバイス（例：Arduinoボード、GPS受信機など）との接続を確立します。
 
-ここでは、最も人気のあるMQTTプロトコルについて説明します。
+そこで、最も人気のあるMQTTプロトコルについて説明します。
 
 ### Xiaoの準備
 
-コードをアップロードする前に、以下を設定してください：  
-**SSID**、**WiFiパスワード**、**MQTTサーバーIP（JEDI IP）**、**MQTTユーザー名**、**MQTTパスワード**。  
-この例では、ダミーデータをMachine Chat JEDIに送信します。
+コードをアップロードする前に、**SSID** **WiFiパスワード** **MQTTサーバーIP（JEDI IP）** **MQTTユーザー名** **MQTTパスワード**を設定してください。この例では、Machine Chat JEDIにダミーデータを送信します。
 
 ```sh
 #include <WiFi.h>
@@ -174,8 +169,8 @@ JEDIは、すぐに使用可能な事前設定済みのデータコレクター�
 
 const char* ssid = "ABC";
 const char* password = "XXXXX";
-const char* mqtt_server = "192.XXX.X.XXX";  // MQTTブローカーのIPに置き換えてください
-const int mqtt_port = 1883;  // デフォルトのMQTTポート
+const char* mqtt_server = "192.XXX.X.XXX";  // Replace with your MQTT broker's IP
+const int mqtt_port = 1883;  // Default MQTT port
 const char* mqtt_username = "ABC";
 const char* mqtt_password = "ABC123";
 
@@ -188,10 +183,10 @@ void setup() {
   client.setCallback(callback);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.println("WiFiに接続中...");
+    Serial.println("Connecting to WiFi...");
   }
 
-  Serial.println("WiFiに接続しました");
+  Serial.println("Connected to WiFi");
   client.setServer(mqtt_server, mqtt_port);
 }
 
@@ -201,51 +196,51 @@ void loop() {
   }
   client.loop();
 
-  // 各ラボのVOC、人の存在、温度、湿度のランダム値を生成
+  // Generate random values for each lab: VOC, human presence, temperature, and humidity
   for (int lab = 1; lab <= 3; lab++) {
     int voc = random(60, 80);
-    int presence = random(0, 3); // 人の存在をブール値（0: 存在なし、1: 存在あり）として仮定
-    bool acState = false; // デフォルトのエアコン状態はオフ
-    float temperature = random(18, 30); // 温度は摂氏と仮定
-    int humidity = random(30, 70); // 湿度はパーセンテージと仮定
+    int presence = random(0, 3); // Assuming presence is represented as a boolean (0 for no presence, 1 for presence)
+    bool acState = false; // Default A/C state is off
+    float temperature = random(18, 30); // Assuming temperature is in Celsius
+    int humidity = random(30, 70); // Assuming humidity is a percentage
     bool fire = false;
 
-    // 温度が25を超え、人の存在がある場合
+    // Check if temperature is greater than 25 and human presence is true
     if (temperature > 25 && presence) {
-      acState = true; // エアコンをオンにする
+      acState = true; // Turn on the A/C
     }
 
-    // ペイロードを構築
+    // Construct payload
     String payload = "{\"lab\":" + String(lab) + ",\"voc\":" + String(voc) + ",\"presence\":" + String(presence) + ",\"acState\":" + String(acState) + ",\"temperature\":" + String(temperature) + ",\"humidity\":" + String(humidity) +",\"fire\":" + String(fire) + "}";
 
-    // 現在のラボのペイロードを公開
+    // Publish payload for the current lab
     client.publish(("Lab" + String(lab) + "/data").c_str(), payload.c_str());
   }
 
-  delay(10000); // 次のデータ送信まで10秒待機
+  delay(10000); // Wait for 10 seconds before sending next data
 }
 
 void reconnect() {
   while (!client.connected()) {
-    Serial.println("MQTT接続を試みています...");
+    Serial.println("Attempting MQTT connection...");
     if (client.connect("ESP32Client", mqtt_username, mqtt_password)) {
-      Serial.println("接続しました");
-      // 必要に応じてトピックを購読
+      Serial.println("connected");
+      // Subscribe to topics if needed
        client.subscribe("rpi/data");
     } else {
-      Serial.print("失敗しました, rc=");
+      Serial.print("failed, rc=");
       Serial.print(client.state());
-      Serial.println(" 5秒後に再試行します");
+      Serial.println(" try again in 5 seconds");
       delay(5000);
     }
   }
 }
 
 void callback(char* topic, byte* payload, unsigned int length) {
-    Serial.print("トピックにメッセージが到着しました: ");
+    Serial.print("Message arrived in topic: ");
     Serial.println(topic);
 
-    Serial.print("メッセージ:");
+    Serial.print("Message:");
     for (int i = 0; i < length; i++) {
         Serial.print((char)payload[i]);
     }
@@ -253,11 +248,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 ```
 
-### MQTTブローカーの有効化
+### MQTTブローカーを有効にする
 
-- **Settings** -> **Data Collectors** に移動します。
+- **Settings** -> **Data Collectors**に移動します。
 
-- **ADD CONNECTOR** ボタンをクリックして新しいコレクターを追加します。
+- **ADD CONNECTOR**ボタンをクリックして新しいコレクターを追加します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/mqtt1.PNG" /></center>
 
@@ -265,80 +260,77 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 - 高度な設定オプション：
 
-- Listen IP: MQTTブローカーがリッスンするIPアドレス。Jedi IPアドレス。
+- Listen IP：MQTTブローカーがリッスンするIPアドレス。JediのIPアドレス。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/mqtt2.PNG" /></center>
 
 :::note
 
-**ユーザー名/パスワード**: このオプションを有効にして、クライアント認証のためにユーザー名とパスワードを設定します。クライアントはMQTTブローカーに接続するために有効な資格情報を提供する必要があります。これをArduinoコードに置き換えてください。
+**Username/Password**：このオプションを有効にして、クライアント認証用のユーザー名とパスワードを設定します。クライアントはMQTTブローカーに接続するために有効な認証情報を提供する必要があります。そのため、Arduinoコードで置き換える必要があります。
 
 :::
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/mqtt3.PNG" /></center>
 
-デバイスダッシュボードでは、MQTTデバイス（ESP32Client）が追加されていることが確認できます。
+デバイスダッシュボードで、MQTTデバイス（ESP32Client）が追加されていることが確認できます。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/devicedashboard.PNG" /></center>
 
-## ダッシュボード 準備
+## ダッシュボードの準備
 
-### カスタムデータ ダッシュボード の作成
+### カスタムデータダッシュボードの作成
 
-Machinechat JEDIのダッシュボードは、生のIoTデータを洞察に満ちた視覚化に変換するための強力で柔軟な方法を提供します。直感的なドラッグ＆ドロップインターフェースを通じて、ユーザーは独自の要件に合わせたパーソナライズされたダッシュボードを簡単に作成し、データのストーリーを効果的に実現できます。
+Machinechat JEDIのダッシュボードは、生のIoTデータを洞察に満ちた視覚化に変換するための堅牢で適応性のある方法を提供します。直感的なドラッグアンドドロップインターフェースを通じて、ユーザーは独自の要件に合わせてパーソナライズされたダッシュボードを簡単に作成し、データの物語を効果的に実現できます。
 
-これらのダッシュボードには、以下の種類があります：
-- **データダッシュボード**：カスタマイズ可能なグリッドベースのレイアウト。
-- **デバイスダッシュボード**：リアルタイムのデバイスおよびセンサーのデータ表示。
-- **システムダッシュボード**：背景画像にデータをオーバーレイすることで、プロセス図やHMIスタイルのインターフェースを作成するのに最適。
+これらのダッシュボードには、カスタマイズ可能なグリッドベースのレイアウト用の**データダッシュボード**、リアルタイムデバイスとセンサーデータ表示用の**デバイスダッシュボード**、背景画像上にデータをオーバーレイする**システムダッシュボード**など、さまざまなタイプがあり、プロセス図やHMIスタイルのインターフェースの作成に最適です。
 
-- JEDIウェブインターフェースの**ダッシュボード マネージャー**セクションに移動します。
+- JEDI Webインターフェースの**Dashboard Manager**セクションに移動します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/dashboard1.PNG" /></center>
 
-- 次に、**ADD DASHBOARD**をクリックします。
+- 次に**ADD DASHBOARD**をクリックします。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/dashboard2.PNG" /></center>
 
-- ダッシュボードの種類を選択します（この場合はデータビュー）。名前と説明を入力して保存します。
+- ダッシュボードタイプ（この場合はData view）、名前、説明を選択して保存します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/dashboard3.PNG" /></center>
 
-その後、新しいダッシュボードがサイドバーに追加されていることが確認できます。次にウィジェットを追加します。まず、折れ線グラフを追加します。
+その後、サイドバーに新しいダッシュボードが追加されたことがわかります。いくつかのウィジェットを追加しましょう。まず、折れ線グラフを追加します。
 
 ### 折れ線グラフの追加
 
 - **ADD CHART**をクリックします。
 
-- 任意の名前を入力し、**Chart type**を**Line**に選択します。そして、**プラスマーク**をクリックしてデータソースを追加します。
+- 任意の名前を付け、**Chart type**として**Line**を選択します。**プラスマーク**をクリックしてデータソースを追加します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/dashboard8.PNG" /></center>
 
-- ソースを追加し、プロパティタグを設定して、適切な名前と単位を入力します。
+- ソース、プロパティタグを追加し、適切な名前と単位を指定します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/linecjhart.PNG" /></center>
 
-- **ADD**をクリックすると、データソースウィンドウと新しいチャートウィンドウが表示され、きれいな折れ線グラフを見ることができます。
+- **ADD**をクリックした後、データソース追加ウィンドウと新しいチャートウィンドウで、美しい折れ線グラフを見ることができます。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/chart1.PNG" /></center>
 
-### 積み上げ折れ線グラフの追加
+### 積み重ね折れ線グラフの追加
 
-- 再度**Add graph**をクリックします。
+- 再び**Add graph**をクリックします。
 
-- 任意の名前を入力し、**Chart type**を**Line**に選択します。また、**Multiple Y axis mode**を有効にします。ここでは「温度」と「湿度」を使用します。そして、**プラスマーク**をクリックしてデータソースを追加します。
+- 任意の**名前**を付け、**Chart type**として**Line**を選択します。また、**Multiple Y axis mode**を有効にします。一つは「Temperature」用、もう一つは「Humidity」用に使用します。**プラスマーク**をクリックしてデータソースを追加します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline.PNG" /></center>
 
-- **ソースを追加**し、**プロパティタグ**を設定して、適切な名前と単位を入力し、**Add**ボタンをクリックします。
+- **ソース**、**プロパティタグ**を追加し、適切な名前と単位を指定して**Add**ボタンをクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline2.PNG" /></center>
 
-- 2つ目のメトリックを追加する：同じ折れ線グラフに別のメトリックを追加するために**プラスアイコン**をクリックします。
+- 2番目のメトリックの追加：**プラス**アイコンをクリックして、同じ折れ線グラフに別のメトリックを追加します。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline3.PNG" /></center>
 
-- 再度**ソースを追加**し、**プロパティタグ**を設定して、適切な名前と単位を入力します。また、**Y Axis on Right**を選択します。そして**Add**をクリックします。
+- 再び**ソース**、**プロパティタグ**を追加し、適切な名前と単位を指定し、**Y Axis on Right**を選択します。次に**Add**をクリックします。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline4.PNG" /></center>
 
@@ -346,29 +338,28 @@ Machinechat JEDIのダッシュボードは、生のIoTデータを洞察に満�
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline5.PNG" /></center>
 
-これで完了です！積み上げ折れ線グラフを作成することができます。
+これで完了です！積み重ね折れ線グラフを取得できます。
 
 <center><img width={600} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/multiline6.PNG" /></center>
 
-結論として、Machinechat JEDIとreTerminal DMは、産業運用とスマートインフラ管理の分野を変革するソリューションとして位置付けられています。IIoT機能をシームレスに統合することで、接続されたデバイスからリアルタイムデータを活用し、製造プロセス、サプライチェーンロジスティクス、運用効率に関する比類のない洞察を提供します。
+結論として、reTerminal DMを搭載したMachinechat JEDIは、産業運営とスマートインフラ管理の状況を革命的に変える変革的なソリューションとして立っています。IIoT機能をシームレスに統合することで、ユーザーは接続されたデバイスからのリアルタイムデータを活用し、製造プロセス、サプライチェーンロジスティクス、運用効率に関する比類のない洞察を提供します。
 
 <center><img width={1000} src="https://files.seeedstudio.com/wiki/reTerminalDM/JEDI/screenshot2.PNG" /></center>
 
-## リソース
+## Resources
 
-- **[ウェブページ]** [Machinechat 公式ドキュメント](https://docs.machinechat.io/)
+- **[Web Page]** [Machinechat Official Documentation](https://docs.machinechat.io/)
 
+## Tech Support
 
-# 技術サポート
-
-弊社製品をお選びいただきありがとうございます！お客様が弊社製品をスムーズにご利用いただけるよう、さまざまなサポートをご提供しております。異なるご要望やお好みに応じた複数のコミュニケーションチャネルをご用意しています。
+私たちの製品をお選びいただき、ありがとうございます！私たちは、お客様の製品体験が可能な限りスムーズになるよう、さまざまなサポートを提供しています。異なる好みやニーズに対応するため、複数のコミュニケーションチャネルを用意しています。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

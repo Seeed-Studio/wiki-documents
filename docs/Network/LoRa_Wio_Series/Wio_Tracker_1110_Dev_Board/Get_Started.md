@@ -26,7 +26,6 @@ Download the SenseCAP Mate APP.
 Please select the **Global** version when registering.
 :::
 
-
 Click `+` -> `Add Device`.
 
 Then scan the QR code on the board label.
@@ -41,15 +40,13 @@ Name your device and select the `Device Group`(optional), then click `Bind to ac
 
 Go back to the `Device` page, then you will see the dev board has been bound.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/bind-done.png" alt="pir" width={300} height="auto" /></p>
-
 
 Click `Configuration Now`.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/1.jpeg" alt="pir" width={300} height="auto" /></p>
 
-Click `Ready, go to the next step`, which is entering the device search. 
+Click `Ready, go to the next step`, which is entering the device search.
 
 :::info Note
 The device needs to be powered on first.
@@ -71,38 +68,38 @@ You can choose others as well, but in that case, you cannot use SenseCAP platfor
 
 <div style={{textAlign: 'center'}}>
 <h2>Platform</h2>
-<table>
-  <tbody>
-    <tr>
-      <td><h4>Platform</h4></td>
-      <td><h4>Description</h4></td>
-    </tr>
-    <tr>
-      <td>SenseCAP for The Things Network</td>
-      <td>Default platform.
-It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server that enables sensors to be used out of the box when paired with an SenseCAP gateway.<br />
-      <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP Outdoor Gateway</span></a><br />
-      <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP Indoor Gateway</span></a></td>
-    </tr>
-    <tr>
-      <td>SenseCAP for Helium</td>
-      <td>When there is the Helium network coverage, data can upload via Helium. Devices run on a private Helium console of SenseCAP. Users do not need to create devices on Helium console, out of the box with SenseCAP Mate App and Portal.<br />
-      <a href="https://explorer.helium.com/" target="_blank"><span>Helium Coverage</span></a></td>
-    </tr>
-    <tr>
-      <td>Helium</td>
-      <td>Connect device to your public Helium console</td>
-    </tr>
-    <tr>
-      <td>The Things Network</td>
-      <td>Connect device to your TTN(TTS) server</td>
-    </tr>
-    <tr>
-      <td>Other Platform</td>
-      <td>Other LoRaWAN Network Server</td>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <tbody>
+      <tr>
+        <td><h4>Platform</h4></td>
+        <td><h4>Description</h4></td>
+      </tr>
+      <tr>
+        <td>SenseCAP for The Things Network</td>
+        <td>Default platform.
+  It must be used with SenseCAP Gateway. SenseCAP builds a proprietary TTN server that enables sensors to be used out of the box when paired with an SenseCAP gateway.<br />
+        <a href="https://www.seeedstudio.com/LoRaWAN-Gateway-US915-p-4306.html" target="_blank"><span>SenseCAP Outdoor Gateway</span></a><br />
+        <a href="https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-US915-p-5472.html" target="_blank"><span>SenseCAP Indoor Gateway</span></a></td>
+      </tr>
+      <tr>
+        <td>SenseCAP for Helium</td>
+        <td>When there is the Helium network coverage, data can upload via Helium. Devices run on a private Helium console of SenseCAP. Users do not need to create devices on Helium console, out of the box with SenseCAP Mate App and Portal.<br />
+        <a href="https://explorer.helium.com/" target="_blank"><span>Helium Coverage</span></a></td>
+      </tr>
+      <tr>
+        <td>Helium</td>
+        <td>Connect device to your public Helium console</td>
+      </tr>
+      <tr>
+        <td>The Things Network</td>
+        <td>Connect device to your TTN(TTS) server</td>
+      </tr>
+      <tr>
+        <td>Other Platform</td>
+        <td>Other LoRaWAN Network Server</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 Choose the `Frequency Plan`.
@@ -126,7 +123,6 @@ Go to `Measure` page, click the `Measure`, then you will get the sensor values.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/8.jpeg" alt="pir" width={500} height="auto" /></p>
 
-
 ### Check the data
 
 Power on the dev board, and please make sure you have network coverage nearby，when the dev board is successfully connected to the network, it will show `online` on the `Device` page.
@@ -136,7 +132,6 @@ Power on the dev board, and please make sure you have network coverage nearby，
 If your area suffers from poor signal, just simply install a LoRaWAN gateway - it's as simple as setting up a Wi-Fi router. The beauty of LoRa lies in its flexibility and ease of network expansion. This reliable solution is also cost-effective. For instance, the [SenseCAP M2 Indoor LoRaWAN Gateway](https://www.seeedstudio.com/SenseCAP-Multi-Platform-LoRaWAN-Indoor-Gateway-SX1302-EU868-p-5471.html),it can extend your coverage up to 10km!
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTI1MQ_873855_RPfBjpKfW2xWddri_1693817031?w=680&h=446&type=image/png" alt="pir" width={600} height="auto" /></p>
-
 
 :::tip
 Please put your dev board by the window or in an unobstructed place, so that there will be a better GPS signal, and then the board can successfully obtain the location data.
@@ -161,7 +156,7 @@ Navigate to your device page, click `Data` to check.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/portal-da.png" alt="pir" width={800} height="auto" /></p>
 
-### How to upload data immediately 
+### How to upload data immediately
 
 1、When the development board is shaken, causing vibrations, it triggers **the three-axis accelerometer sensor** to immediately collect and upload data.
 
@@ -187,13 +182,9 @@ The SenseCAP Mate app interface will display SOS signals and data packets.
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/products/SenseCAP/Wio-Tracker/Wio-1110getstart/sos-app.JPG" alt="pir" width={300} height="auto" /></p>
 
-
 ### Add Grove Sensor(optional)
 
-
 In addition to the onboard sensors, the possibilities are endless with the Wio tracker 1110 dev board. In the factory firmware, the following Grove sensors are also allowed to access this board and be recognized automatically.
-
-
 
 <table align="center">
   <caption> <h2>Grove Modules</h2> </caption>
@@ -237,12 +228,11 @@ Connect the Grove sensor to the corresponding Grove port on the Wio Tracker dev 
 
 You can also use a [Grove-I2C Hub](https://www.seeedstudio.com/Grove-I2C-Hub.html) to connect multiply I2C sensors to the board.
 
-
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/WM1110-A-Grove.jpg" alt="pir" width={800} height="auto" /></p>
 
-## Flash Firmware 
+## Flash Firmware
 
-* [Latest Firmware](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_app_release_sw_0.5_2024-06-06.uf2)
+- [Latest Firmware](https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/wio_tracker_app_release_sw_0.5_2024-06-06.uf2)
 
 Double click the `Reset` button, there should be a `WM1110_BOOT` driver on your PC.
 
@@ -250,13 +240,12 @@ Double click the `Reset` button, there should be a `WM1110_BOOT` driver on your 
 
 Drag the `.uf2` file to the driver. The download will run automatically, then the driver will log out.
 
-
-## SenseCAP API 
+## SenseCAP API
 
 SenseCAP API is for users to manage IoT devices and data. It includes 3 types of API methods: HTTP protocol, MQTT protocol, and Websocket protocol.
-* With HTTP API, users can manage LoRa devices, to get raw data or historical data.
-* With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
-* With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
+- With HTTP API, users can manage LoRa devices, to get raw data or historical data.
+- With MQTT API, users can subscribe to the sensor's real-time measurement data through the MQTT protocol.
+- With Websocket API, users can get real-time measurement data of sensors through Websocket protocol.
 
 Please check [API User Guide](https://sensecap-docs.seeed.cc/) for more details.
 

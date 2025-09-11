@@ -1,5 +1,5 @@
 ---
-description: LoRa 演示使用方法
+description: LoRa 演示使用
 title: LoRa 通信 - SenseCAP Indicator
 keywords:
 - SenseCAP Indicator
@@ -26,7 +26,7 @@ Seeed Studio 的 SenseCAP Indicator（版本 D1L 和 D1Pro）包含内置的 LoR
 
 ### 概述
 
-这个[演示](https://github.com/Seeed-Solution/indicator_lora_commu)展示了如何在 SenseCAP Indicator 和 XIAO 板之间建立基本的 LoRa 通信，使用 Wio-E5 作为中介。SenseCAP Indicator 从 XIAO 获取传感器数据，然后通过 Wio-E5 传输。传输的有效载荷随后被 SenseCAP Indicator 接收，解密并输出结果，并在其屏幕上显示数据。
+这个[演示](https://github.com/Seeed-Solution/indicator_lora_commu)展示了如何使用 Wio-E5 作为中介，在 SenseCAP Indicator 和 XIAO 板之间建立基本的 LoRa 通信。SenseCAP Indicator 从 XIAO 获取传感器数据，然后通过 Wio-E5 传输。传输的有效载荷随后被 SenseCAP Indicator 接收，解码并输出结果，并在其屏幕上显示数据。
 
 无 LVGL 代码：[代码 · GitHub](https://github.com/Seeed-Solution/indicator_lora_commu/tree/29624d10643a41ae5e1e24124b81e93b5e3cd3bb)
 
@@ -34,16 +34,17 @@ Seeed Studio 的 SenseCAP Indicator（版本 D1L 和 D1Pro）包含内置的 LoR
 
 ### SenseCAP Indicator
 
-从页面 [深入了解硬件](/cn/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) 中，我们可以看到 LoRa 收发器通过 SPI 接口连接到 ESP32-S3 MCU。
+从页面 [深入了解硬件](/SenseCAP_Indicator_Dive_into_the_Hardware/#hardware-diagram) 中，我们可以看到 LoRa 收发器通过 SPI 接口连接到 ESP32-S3 MCU。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/SenseCAP_Indicator_6.png
 "/></div>
 
 关键组件包括：
+
 - Semtech SX1262 射频前端
 - ESP32-S3 MCU
 
-LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使用 ESP32-S3 的 SPI 接口与其通信。
+LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以通过 ESP32-S3 的 SPI 接口与其通信。
 
 ### XIAO
 
@@ -55,7 +56,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
 
 ## 软件
 
-由于 [SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK 已经提供了 LoRa 库，我们可以直接使用它，您可以快速查看页面 [LoRa®](/cn/SenseCAP_Indicator_ESP32_LoRa) 了解如何使用 LoRa 库。
+由于 [SenseCAP_Indicator_ESP32](https://github.com/Seeed-Solution/sensecap_indicator_esp32) SDK 已经提供了 LoRa 库，我们可以直接使用它，您可以快速查看页面 [LoRa®](/SenseCAP_Indicator_ESP32_LoRa) 了解如何使用 LoRa 库。
 
 ## 入门指南
 
@@ -63,7 +64,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
 
 ### 先决条件
 
-请按照[说明](/cn/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)设置开发环境。
+请按照[说明](/SenseCAP_Indicator_How_To_Flash_The_Default_Firmware)设置开发环境。
 
 ### 步骤 1：下载演示代码
 
@@ -77,18 +78,18 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
 
   <TabItem value="XIAO/include/Frame.h">
 
-```cpp
+  ```cpp
   #ifndef _FRAME_H
   #define _FRAME_H
   #include <Arduino.h>
   #include <vector>
 
-  /** 载荷格式
-  * | 主题 | 数据长度 | 数据载荷 | CRC |
-  * | 1字节 | 1字节      | n字节       | 2字节 |
-  * 示例:
-  * | 0x01 | 0x0E | 14字节 | 2字节 | 用于 SEN54
-  * | 0x01 | 0x10 | 16字节 | 2字节 | 用于 SEN55
+  /** payload format
+  * | topic | dataLength | Data Payload | CRC |
+  * | 1byte | 1byte      | n byte       | 2byte |
+  * example:
+  * | 0x01 | 0x0E | 14 bytes | 2byte | for SEN54
+  * | 0x01 | 0x10 | 16 bytes | 2byte | for SEN55
   */
 
   #pragma pack(1)
@@ -102,9 +103,9 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
   /* highlight-start */
   typedef struct
   {
-      enum topics topic;         /*消息类型*/
+      enum topics topic;         /*msg type*/
       uint8_t dataLength;
-      std::vector<uint8_t> data; /*载荷的实际数据*/
+      std::vector<uint8_t> data; /*actual data of payload*/
       uint16_t crc;
   } Frame_t;
   /* highlight-end */
@@ -113,6 +114,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
   uint16_t crc16_ccitt(const uint8_t *data, size_t length);
   #endif
   ```
+
   </TabItem>
 
   <TabItem value="XIAO/include/Frame.cpp">
@@ -122,28 +124,28 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
   String packFrame(Frame_t frame) {
       uint8_t *packedData = (uint8_t *)malloc(2 + frame.dataLength + 2);
       if (packedData == NULL) {
-          return String(); // 如果内存分配失败，返回空字符串
+          return String(); // Return an empty string if memory allocation fails
       }
-      // 打包帧主题
+      // Pack the frame topic
       packedData[0] = frame.topic;
       packedData[1] = frame.dataLength;
       // highlight-start
-      // 打包数据载荷
+      // Pack the data payload
       for (size_t i = 0; i < frame.dataLength; i++) {
           packedData[2 + i] = frame.data[i];
       }
       // highlight-end
-      // 计算CRC（为简单起见，我们假设CRC只是所有字节的总和）
+      // Calculate CRC (for simplicity, we assume CRC is just the sum of all bytes)
       frame.crc = crc16_ccitt(packedData, 2 + frame.dataLength);
 
-      // 打包CRC
+      // Pack the CRC
       packedData[2 + frame.dataLength]     = (frame.crc & 0xFF00) >> 8;
       packedData[2 + frame.dataLength + 1] = frame.crc & 0x00FF;
       // highlight-start
-      // String packedFrame; 将打包的数据序列化为字符串
+      // String packedFrame; serialize the packed data into a string
       char packedFrameBuffer[(2 + frame.dataLength + 2) * 2];
       for (size_t i = 0; i < 2 + frame.dataLength + 2; i++) {
-          snprintf(&packedFrameBuffer[i * 2], 3, "%02X", packedData[i]); // 3 包含空终止符
+          snprintf(&packedFrameBuffer[i * 2], 3, "%02X", packedData[i]); // 3 to include null terminator
       }
       // highlight-end
       free(packedData);
@@ -172,11 +174,12 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
       return crc & 0xFFFF;
   }
   ```
+
   </TabItem>
 </Tabs>
 
+#### 步骤 2.2：实现传感器数据结构并适配到载荷编码器
 
-#### 步骤 2.2: 实现传感器数据结构并适配载荷编码器
 <Tabs>
   <TabItem value="XIAO/include/sensor_sen5x.h">
 
@@ -192,7 +195,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
   #if defined(DEVICE_SEN54)
   #elif defined(DEVICE_SEN55)
   #else
-  #error "请在编译器选项中定义设备。"
+  #error "Please define a device in the compiler options."
   #endif
 
   class PayloadSEN5x : public SensorPayload<SensirionI2CSen5x> {
@@ -211,13 +214,14 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
       int16_t ambientTemperature;
       int16_t vocIndex;
   #ifdef DEVICE_SEN55
-  // int16_t noxIndex; // 传感器 SEN54 不支持 NOx
+  // int16_t noxIndex; // Sensor SEN54 does not support NOx
   #endif
       //highlight-end
       SensirionI2CSen5x _sen5x;
   };
   #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="XIAO/src/sensor_sen5x.cpp">
 
@@ -227,36 +231,36 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
 
   PayloadSEN5x::PayloadSEN5x(SensirionI2CSen5x handler)
       : SensorPayload<SensirionI2CSen5x>(handler), _sen5x(handler) {
-      // 在此处初始化 SEN5X 的特定数据成员（如果需要）
+      // Initialize specific data members for SEN5X here (if needed)
       _sen5x.begin(Wire);
   }
 
   uint16_t PayloadSEN5x::init() {
-      // 在此处实现 SEN5X 的初始化逻辑
+      // Implement the initialization logic for SEN5X here
       uint16_t error;
       char errorMessage[256];
       error = _sen5x.deviceReset();
       if (error) {
-          Serial.print("尝试执行 deviceReset() 时出错: ");
+          Serial.print("Error trying to execute deviceReset(): ");
           errorToString(error, errorMessage, 256);
           Serial.println(errorMessage);
       }
       float tempOffset = 0.0;
       error            = _sen5x.setTemperatureOffsetSimple(tempOffset);
       if (error) {
-          Serial.print("尝试执行 setTemperatureOffsetSimple() 时出错: ");
+          Serial.print("Error trying to execute setTemperatureOffsetSimple(): ");
           errorToString(error, errorMessage, 256);
           Serial.println(errorMessage);
       } else {
-          Serial.print("温度偏移设置为 ");
+          Serial.print("Temperature Offset set to ");
           Serial.print(tempOffset);
-          Serial.println(" 摄氏度 (仅限 SEN54/SEN55)");
+          Serial.println(" deg. Celsius (SEN54/SEN55 only)");
       }
 
-      // 开始测量
+      // Start Measurement
       error = _sen5x.startMeasurement();
       if (error) {
-          Serial.print("尝试执行 startMeasurement() 时出错: ");
+          Serial.print("Error trying to execute startMeasurement(): ");
           errorToString(error, errorMessage, 256);
           Serial.println(errorMessage);
       }
@@ -264,7 +268,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
   }
 
   String PayloadSEN5x::toPayloadString() {
-  // 在此处添加将数据转换为载荷字符串的代码
+  // Add your code to convert data to payload string here
   #ifdef DEVICE_SEN55
       _sen5x.readMeasuredValuesAsIntegers(massConcentrationPm1p0, massConcentrationPm2p5, massConcentrationPm4p0, massConcentrationPm10p0, ambientHumidity, ambientTemperature, vocIndex, noxIndex);
       _frame.dataLength = 16;
@@ -276,10 +280,10 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
 
       _frame.topic = TOPICS_SEN5x;
 
-      // 清空数据向量
+      // empty the data vector
       _frame.data.clear();
       //highlight-start
-      // 将值转换为十六进制载荷字符串
+      // make the value into hex payload string
       _frame.data.push_back((uint8_t)(massConcentrationPm1p0 >> 8));
       _frame.data.push_back((uint8_t)(massConcentrationPm1p0 & 0xFF));
       _frame.data.push_back((uint8_t)(massConcentrationPm2p5 >> 8));
@@ -301,7 +305,7 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
       //highlight-end
       char data[256];
       sprintf(data, "%d,%d,%d,%d,%d,%d,%d", massConcentrationPm1p0, massConcentrationPm2p5, massConcentrationPm4p0, massConcentrationPm10p0, ambientHumidity, ambientTemperature, vocIndex);
-      Serial.println("字符串: " + String(data));
+      Serial.println("String: " + String(data));
 
       for (int i = 0; i < _frame.dataLength; i++) {
           Serial.print(_frame.data[i], HEX);
@@ -312,12 +316,13 @@ LoRa 收发器处理所有 LoRa 信号的低级调制和解调。我们可以使
       return packFrame(_frame);
   }
   ```
+
   </TabItem>
 </Tabs>
 
 函数 `toPayloadString` 将把数据序列化为字符串，该字符串将通过 Wio-E5 发送到 SenseCAP Indicator。
 
-#### 步骤 2.3: 编译代码并上传到 XIAO
+#### 步骤 2.3：编译代码并上传到 XIAO
 
 ```cpp
 #include "sensor_sen5x.h"
@@ -334,14 +339,14 @@ PayloadSEN5x payloadSEN5x( sen5x );
 void setup() {
     delay( 2000 );
     wait_serial();
-    Serial.println( "启动中..." );
+    Serial.println( "Starting..." );
 
     radio.begin();
 
     Wire.begin();
     payloadSEN5x.init();
 
-    Serial.println( "应用程序开始" );
+    Serial.println( "APP begin" );
 }
 
 void loop() {
@@ -354,14 +359,14 @@ void loop() {
 
         radio.sendPayload( payloadSEN5x.toPayloadString() );
 
-        Serial.printf( "发送数据 %d\r\n", count++ );
+        Serial.printf( "Send data %d\r\n", count++ );
     }
 }
 ```
 
-完成载荷后，现在我们将深入 SenseCAP Indicator 来编程载荷解码器。
+完成载荷后，现在我们将深入了解 SenseCAP Indicator 来编程载荷解码器。
 
-### 步骤 3：实现载荷解码器（SenseCAP Indicator；ESP-IDF）
+### 步骤 3：实现载荷解码器（SenseCAP Indicator;ESP-IDF）
 
 > 载荷解码器是一个将从 LoRa 收发器接收到的二进制载荷转换为人类可读格式的函数。载荷解码器特定于您的应用程序，必须由您实现。此演示的载荷解码器在演示代码中提供。
 
@@ -377,12 +382,12 @@ void loop() {
     #include <stdio.h>
     #include <stdlib.h>
 
-    /** 载荷格式
-    * | 主题 | 数据长度 | 数据载荷 | CRC |
-    * | 1字节 | 1字节      | n 字节       | 2字节 |
-    * 示例:
-    * | 0x01 | 0x0E | 14 字节 | 2字节 | 用于 SEN54
-    * | 0x01 | 0x10 | 16 字节 | 2字节 | 用于 SEN55
+    /** payload format
+    * | topic | dataLength | Data Payload | CRC |
+    * | 1byte | 1byte      | n byte       | 2byte |
+    * example:
+    * | 0x01 | 0x0E | 14 bytes | 2byte | for SEN54
+    * | 0x01 | 0x10 | 16 bytes | 2byte | for SEN55
     */
 
     #pragma pack(1)
@@ -393,10 +398,10 @@ void loop() {
     };
     typedef struct
     {
-        enum topics topic; /*消息类型或数据ID*/
+        enum topics topic; /*msg type or DataId*/
         uint8_t dataLength;
     /* highlight-start */
-        uint8_t *data;     /*载荷的实际数据*/
+        uint8_t *data;     /*actual data of payload*/
     /* highlight-end */
         uint16_t crc;
     } Frame_t;
@@ -417,7 +422,7 @@ void loop() {
     {
         Frame_t *frame = (Frame_t *)malloc( sizeof( Frame_t ) );
         if ( frame == NULL ) {
-            ESP_LOGE( "parsePayload", "为帧分配内存失败" );
+            ESP_LOGE( "parsePayload", "Failed to allocate memory for frame" );
             return NULL;
         }
 
@@ -427,8 +432,8 @@ void loop() {
         /* highlight-start */
         frame->data = (uint8_t *)malloc( frame->dataLength );
         if ( frame->data == NULL ) {
-            ESP_LOGE( "parsePayload", "为帧数据分配内存失败" );
-            free( frame ); // 清理之前分配的内存
+            ESP_LOGE( "parsePayload", "Failed to allocate memory for frame data" );
+            free( frame ); // Clean up previously allocated memory
             return NULL;
         }
         /* highlight-end */
@@ -437,7 +442,7 @@ void loop() {
         frame->crc = (uint16_t)payload[length - 2] << 8 | (uint16_t)payload[length - 1];
 
         if ( frame->crc != crc16_ccitt( payload, length - 2 ) ) {
-            ESP_LOGE( "parsePayload", "CRC 不匹配" );
+            ESP_LOGE( "parsePayload", "CRC mismatch" );
             free( frame->data );
             free( frame );
             return NULL;
@@ -470,6 +475,7 @@ void loop() {
         return crc & 0xFFFF;
     }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -488,7 +494,7 @@ void loop() {
     #if defined( DEVICE_SEN54 )
     #elif defined( DEVICE_SEN55 )
     #else
-    #error "请在编译器选项中定义设备。"
+    #error "Please define a device in the compiler options."
     #endif
     // highlight-start
     #pragma pack(push, 1)
@@ -519,6 +525,7 @@ void loop() {
     void prinSEN5xData( const SEN5xData_t *SEN5x );
     #endif // PAYLOAD_SEN5X_H
   ```
+
   </TabItem>
   <TabItem value="Indicator/main/Sensors/sen5x.c">
 
@@ -548,6 +555,7 @@ void loop() {
     #endif
     }
   ```
+
   </TabItem>
 </Tabs>
 
@@ -568,7 +576,7 @@ void loop() {
 #define LORA_IQ_INVERSION_ON       false
 ```
 
-##### 设置 LoRa 收发器接收器
+##### Set up the LoRa Transceiver Reciever
 
 ```cpp
 void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
@@ -596,7 +604,7 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 }
 ```
 
-##### 初始化 LoRa 收发器
+##### Initinzie the LoRa Transceiver
 
 ```cpp
 RadioEvents.RxDone = OnRxDone;
@@ -611,10 +619,9 @@ Radio.SetRxConfig( MODEM_LORA, LORA_BANDWIDTH, LORA_SPREADING_FACTOR,
 Radio.SetMaxPayloadLength( MODEM_LORA, 255 );
 
 Radio.Rx( 0 ); // Continuous Rx
-
 ```
 
-#### 步骤 3.4：编译代码并烧录到 SenseCAP Indicator
+#### Step 3.4: Compile and Flash the Code to the SenseCAP Indicator
 
 ```cpp
 /**
@@ -633,9 +640,9 @@ static const char *TAG = "app_main";
 #define SENSECAP "\n\
    _____                      _________    ____         \n\
   / ___/___  ____  ________  / ____/   |  / __ \\       \n\
-  \\__ \\/ _ \\/ __ \\/ ___/ _ \\/ /   / /| | / /_/ /   \n\
+  \__ \\/ _ \\/ __ \\/ ___/ _ \\/ /   / /| | / /_/ /   \n\
  ___/ /  __/ / / (__  )  __/ /___/ ___ |/ ____/         \n\
-/____/\\___/_/ /_/____/\\___/\\____/_/  |_/_/           \n\
+/____/\___/_/ /_/____/\___/\____/_/  |_/_/           \n\
 --------------------------------------------------------\n\
  Version: %s %s %s\n\
 --------------------------------------------------------\n\
@@ -706,14 +713,13 @@ void app_main( void ) {
         vTaskDelay( pdMS_TO_TICKS( 10000 ) );
     }
 }
-
 ```
 
 ### 步骤 4：测试通信
 
-给两个 SenseCAP Indicator 开发板上电并打开串口监视器。您应该能看到两个开发板之间发送和接收的消息。恭喜！您已经成功使用 SenseCAP Indicator 建立了 LoRa 通信。
+给两块 SenseCAP Indicator 板子上电并打开串口监视器。您应该能看到两块板子之间发送和接收的消息。恭喜！您已经成功使用 SenseCAP Indicator 建立了 LoRa 通信。
 
-```sh title="XIAO 串口监视器"
+```sh title="Serial Monitor of XIAO"
 String: 76,80,81,81,5389,5990,980
 0 4C 0 50 0 51 0 51 15 D 17 66 3 D4
 CRC: 629
@@ -723,10 +729,9 @@ CRC: 629
 
 Send payload successfully
 Send data 1
-
 ```
 
-```sh title="SenseCAP Indicator 串口监视器"
+```sh title="Serial Monitor of SenseCAP Indicator"
 I (95490) app_main: rssi:-22 dBm, snr:5 dB, len:18, payload:
 0x1 0xe 0x0 0x4c 0x0 0x50 0x0 0x51 0x0 0x51 0x15 0xd 0x17 0x66 0x3 0xd4 0x6 0x29
 W (95541) parsePayload: topic: 1
@@ -765,7 +770,7 @@ I (95641) sen5x_: vocIndex: 980
   </tr>
   <tr>
     <td> <a href="https://github.com/Seeed-Solution/SenseCAP_Indicator_ESP32/blob/main/examples/indicator_lora/main/demo/beep.c"><span> 蜂鸣器控制 </span></a> </td>
-    <td> 接收字符串 "ON" 或 "OFF"，可以执行相应的功能</td>
+    <td> 接收字符串"ON"或"OFF"，可以执行相应的功能</td>
   </tr>
   <tr>
     <td> <a href="https://github.com/Seeed-Solution/indicator_lora_commu"><span> PingPong </span></a></td>
@@ -782,7 +787,7 @@ I (95641) sen5x_: vocIndex: 980
 
 ## 技术支持
 
-**需要 SenseCAP Indicator 的帮助？我们随时为您提供协助！**
+**需要 SenseCAP Indicator 的帮助？我们随时为您提供支持！**
 
 如果您在学习本教程时遇到任何问题或有任何疑问，请随时联系我们的技术支持。我们随时为您提供帮助！
 

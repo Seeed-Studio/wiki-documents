@@ -16,7 +16,7 @@ The Things Stack(TTS) 是一个 LoRaWAN® 网络服务器堆栈，是任何 LoRa
 
 ## 设备配置
 
-在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置设备的基本参数，查看[快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_SenseCAP_T1000_tracker)了解更多详情。
+在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置设备的基本参数，查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_SenseCAP_T1000_tracker)了解更多详情。
 
 * 将平台设置为 TTN，然后复制 Device EUI/APP EUI/APP Key。
 
@@ -72,7 +72,7 @@ The Things Stack(TTS) 是一个企业级 LoRaWAN 网络服务器，基于开源�
 
 当设备尝试连接到网络时，呼吸灯会闪烁。如果设备成功加入网络，呼吸灯会快速闪烁，并会有轻快愉悦的旋律。
 
-然后您可以在 TTS 控制台上检查数据。
+然后您可以在 TTS 控制台上查看数据。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_check.png" alt="pir" width={800} height="auto" /></p>
 

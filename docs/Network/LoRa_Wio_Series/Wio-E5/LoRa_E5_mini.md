@@ -125,6 +125,7 @@ If you are unfamiliar with LoRa® and LoRaWAN® technology, please check out thi
 </tr>
 </tbody>
 </table>
+
 <div></div>
 <div></div>
 <div></div>

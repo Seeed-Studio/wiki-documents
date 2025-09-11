@@ -2,7 +2,7 @@
 description: Wio-WM1110 开发套件硬件概述
 title: 硬件概述
 keywords:
-- Wio-WM1110 开发套件
+- Wio-WM1110 Dev Kit
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/Wio-WM1110_Dev_Kit_Hardware_Overview
 last_update:
@@ -11,264 +11,254 @@ last_update:
 ---
 
 
-
-Wio WM1110 开发套件是一个用于构建物联网项目的开源平台。它提供低功耗的 LoRa 网络连接以及全面的定位覆盖服务。该套件还包括一系列传感器和外设，使其成为构建物联网项目的多功能平台。
+Wio WM1110 开发套件是一个用于构建物联网项目的开源平台。它提供低功耗 LoRa 网络连接和全方位的定位覆盖服务。该套件还包含一系列传感器和外设，使其成为构建物联网项目的多功能平台。
 
 在本教程中，我们将介绍硬件概述以及如何开发您自己的应用程序！
 
-
 ## 硬件概述
 
-Wio-WM1110 开发套件基于 [Wio-WM1110 模块](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)，集成了 Semtech 的 LoRa® 收发器和用于定位的多功能无线电前端。该板内置了温湿度传感器和三轴加速度计，同时还提供了多种外设的连接选项。
+Wio-WM1110 开发套件基于 [Wio-WM1110 模块](https://www.seeedstudio.com/Wio-WM1110-Module-LR1110-and-nRF52840-p-5676.html)，集成了 Semtech 的 LoRa® 收发器和用于地理定位的多用途射频前端，该板载有内置的温湿度传感器和 3 轴加速度计，还为各种外设提供连接选项。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/hardware_overview1.png" alt="pir" width={800} height="auto" /></p>
-
-
 
 ## 引脚图
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/PIN.png" alt="pir" width={800} height="auto" /></p>
 
-
-
-
 ## LoRaWAN® 通信
 
 ### 设置密钥
 
-在设备通过网络服务器 (NS) 通信之前，我们需要用三个密钥注册设备。
+在设备可以通过网络服务器进行通信之前，我们需要使用 3 个密钥将其注册。
 
-Wio-WM1110 DK 允许用户设置 DevEUI、AppEUI 和 AppKey，因此您可以在 'lorawan_key_config.h' 文件中设置自己的参数，然后将其烧录到开发套件中。
+Wio-WM1110 DK 允许用户设置 DevEUI、AppEUI 和 AppKey，因此您可以在 'lorawan_key_config.h' 文件中设置我们自己的参数，然后将其烧录到 DK 上。
 
 ```cpp
 ...\Seeed_Wio_WM1110_Dev_Board\apps\common\lorawan_key_config.h
 ```
-<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/keys.png" alt="pir" width={800} height="auto" /></p>
 
+<p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/keys.png" alt="pir" width={800} height="auto" /></p>
 
 **LoRa Basics Modem LoRaWAN® Class A/C 示例**
 
-应用程序将自动启动加入 LoRaWAN 网络的过程，请参阅 **lorawan_key_config.h**。
+应用程序将自动启动加入 LoRaWAN 网络的流程，请参见 **lorawan_key_config.h**
 
-一旦网络加入成功（即触发相应事件时），上行消息会定期发送。此定期操作基于 LoRa Basics Modem 的报警功能。每次触发与报警相关的事件时，应用程序都会请求发送上行消息。
+一旦加入网络（即触发相应事件时），将定期发送上行链路。此定期操作基于 LoRa Basics Modem 的闹钟功能。每次触发闹钟相关事件时，应用程序都会请求上行链路。
 
-上行消息的内容是通过调用 `smtc_modem_get_charge()` 从充电计数器读取的值。
+上行链路的内容是通过调用 `smtc_modem_get_charge()` 从电荷计数器读取的值。
 
-应用程序还能够显示接收到的下行消息的数据和元数据。
+应用程序还能够显示接收到的下行链路的数据和元数据。
 
 **配置**
 
-可以在 `main_lorawan.h` 头文件中更新多个参数：
+可以在 `main_lorawan.h` 头文件中更新几个参数：
 
-| 常量                       | 描述                                                                           |
+| 常量                       | 描述                                                                          |
 | -------------------------- | ----------------------------------------------------------------------------- |
-| `LORAWAN_APP_PORT`         | 用于上行消息的 LoRaWAN® FPort                                                 |
-| `LORAWAN_CONFIRMED_MSG_ON` | 请求网络服务器确认已接收到上行消息                                             |
-| `APP_TX_DUTYCYCLE`         | 两次上行消息之间的延迟时间（以秒为单位）                                       |
+| `LORAWAN_APP_PORT`         | 用于上行链路消息的 LoRaWAN® FPort                                              |
+| `LORAWAN_CONFIRMED_MSG_ON` | 请求 LNS 确认已收到上行链路消息                                                |
+| `APP_TX_DUTYCYCLE`         | 两次上行链路之间的延迟（秒）                                                   |
 
 ## 定位
 
 ### GNSS
 
-通过捕获由 GNSS 卫星广播的一小段信号，并提取计算设备位置所需的信息——伪距。这些信息被聚合到一个 NAV 消息中，可以发送到后端系统以计算设备位置。
+通过捕获GNSS卫星广播信号的短片段，并提取计算设备位置所需的信息——伪距。这些信息被聚合到NAV消息中，可以发送到后端系统来计算设备位置。
 
 <p style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTY4ODg1NTkyNTI4NTI1MQ_47857_JbH8r_MU_X1uz1V7_1687329215?w=1265&h=592&type=image/jpeg" alt="pir" width={800} height="auto" /></p>
 
-Wio-WM1110 的 GNSS 扫描器有两种操作模式：自主模式和辅助模式。
+Wio-WM1110的GNSS扫描器有两种操作模式：自主模式和辅助模式。
 
-**GNSS 自主模式：** 不需要任何辅助位置信息或星历数据，旨在检测强卫星信号。因此，它适合在具有良好天空可见性的户外条件下使用。
+**GNSS自主模式：** 不需要任何辅助位置或历书数据，旨在检测强卫星信号。因此适用于天空可见度良好的室外条件。
 
-**GNSS 辅助模式：** 它允许最有效的 GNSS 定位。辅助信息可以生成当前时间和位置可见卫星的列表，从而减少 GNSS 卫星的搜索空间，并优化定位所需的时间和能量。辅助信息专为 LPWAN 网络设计，限制了发送的数据量，尤其是下行数据的大小和频率。辅助信息包括：
-* LR1110 近似位置
-* 当前时间
-* 最新的精简星历信息（少于 3 个月）
+**GNSS辅助模式：** 它允许最高效的GNSS地理定位。辅助信息可以构建当前时间和位置可见卫星的列表，以减少GNSS卫星搜索空间，从而优化地理定位所花费的时间和能量。辅助信息针对LPWAN网络进行了定制，限制了发送的数据，特别是下行链路的大小和频率。它包括：
 
-**GNSS 定位示例**
+- LR1110近似位置
+- 当前时间
+- 最新的缩减尺寸历书信息（少于3个月）
 
-此示例说明了 GNSS 扫描过程：
+**地理定位GNSS示例**
 
-- 配置 LoRa Basics Modem 库；以及
-- 使用 *GNSS 定位中间件* 执行 GNSS *扫描与发送* 功能。
+此示例说明了GNSS扫描程序：
 
-**GNSS 演示相关配置**
+- LoRa Basics Modem库的配置；以及
+- 使用*GNSS地理定位中间件*执行GNSS *扫描和发送*功能。
 
-`main_geolocation_gnss.h` 头文件定义了几个常量，用于配置定位参数。
+**GNSS演示相关配置**
 
-| 常量                                     | 说明                                                                                  | 可能的值         | 默认值        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------- | ---------------- | ------------- |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_AUTO` | 如果设置为 `true`：配置应用程序自动获取辅助位置                                       | {`true`,`false`} | `true`        |
+`main_geolocation_gnss.h`头文件定义了几个常量来配置地理定位参数。
 
-如果为辅助位置选择手动模式，则以下常量定义要使用的位置。
+| 常量                                     | 注释                                                                                    | 可能的值         | 默认值        |
+| ---------------------------------------- | --------------------------------------------------------------------------------------- | ---------------- | ------------- |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_AUTO` | 如果设置为`true`：配置应用程序自主获取辅助位置                                          | {`true`,`false`} | `true`        |
 
-| 常量                                     | 说明                                                                        | 可能的值                | 默认值          |
-| ---------------------------------------- | --------------------------------------------------------------------------- | ----------------------- | --------------- |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LAT`  | GNSS 辅助扫描使用的纬度（十进制度数）                                       | [-90, 90] 范围内的任意 `float` | 45.181454       |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LONG` | GNSS 辅助扫描使用的经度（十进制度数）                                       | [-180, 180] 范围内的任意 `float` | 5.720893        |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_TEXT` | 辅助位置的文本表示，仅用于信息打印                                          | 任意常量 c-string       | "Grenoble, FRANCE" |
+如果为辅助位置选择了手动模式，以下常量定义了要使用的位置。
 
-***注意***：预定义的辅助位置必须在实际位置的 150 公里范围内。
+| 常量                                     | 注释                                                                        | 可能的值                   | 默认值             |
+| ---------------------------------------- | ------------------------------------------------------------------------------- | -------------------------- | ------------------ |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LAT`  | 用于GNSS辅助扫描的纬度（十进制度数）                     | 任何在[-90, 90]范围内的`float`   | 45.181454          |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LONG` | 用于GNSS辅助扫描的经度（十进制度数）                    | 任何在[-180, 180]范围内的`float` | 5.720893           |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_TEXT` | 辅助位置的文本表示，仅用于信息打印 | 任何常量c字符串      | "Grenoble, FRANCE" |
 
-| 常量                     | 说明                                                                                      | 可能的值               | 默认值           |
-| ------------------------ | ----------------------------------------------------------------------------------------- | ---------------------- | ---------------- |
-| `GNSS_SCAN_GROUP_PERIOD` | 定义扫描与发送序列结束与下一次序列开始之间的时间间隔                                      | `uint32_t`            | 30               |
-| `GNSS_SCAN_MODE`         | 定义用于扫描与发送序列的 GNSS 扫描模式（静态或移动）。                                    | `gnss_mw_mode_t` 中的值 | `GNSS_MW_MODE_STATIC` |
+***注意***：预定义的辅助位置必须在实际位置的150公里范围内。
 
-默认选择的 GNSS 扫描模式是 `GNSS_MW_MODE_STATIC`，这意味着此应用示例针对非移动对象。
+| 常量                     | 注释                                                                                      | 可能的值                  | 默认值                |
+| ------------------------ | --------------------------------------------------------------------------------------------- | ------------------------- | --------------------- |
+| `GNSS_SCAN_GROUP_PERIOD` | 定义扫描和发送序列结束与下一个序列开始之间的持续时间 | `uint32_t`                | 30                    |
+| `GNSS_SCAN_MODE`         | 定义用于扫描和发送序列的GNSS扫描模式（静态或移动）。           | `gnss_mw_mode_t`中的值 | `GNSS_MW_MODE_STATIC` |
+
+默认选择的GNSS扫描模式是 `GNSS_MW_MODE_STATIC`，这意味着此应用示例针对非移动对象。
 
 ### Wi-Fi
 
-通过发现设备附近可用的 Wi-Fi b/g/n 接入点，并提取 MAC 地址以实现设备定位。目标是获取至少 2 个 MAC 地址，这些地址在发送到在线 Wi-Fi 查询服务后可用于定位设备。
+通过发现设备附近可用的Wi-Fi b/g/n接入点，并提取允许对设备进行地理定位的MAC地址。目标是获得至少2个MAC地址，这些地址可以用于定位设备，在它们被发送到在线Wi-Fi查找服务之后
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Schematic02.png" alt="pir" width={800} height="auto" /></p>
 
-**Wi-Fi 定位示例**
+**地理定位Wi-Fi示例**
 
-此应用程序演示了 Wi-Fi 定位中间件的使用，以及如何配置 LoRa Basics Modem 以满足前提条件。此示例说明了 Wi-Fi 扫描过程：
+此应用演示了Wi-Fi地理定位中间件的使用以及如何配置LoRa Basics Modem以满足先决条件
+此示例说明了Wi-Fi扫描过程：
 
-- 配置 LoRa Basics Modem 库；以及
-- 使用 *Wi-Fi 定位中间件* 执行 Wi-Fi *扫描与发送* 功能。
+- LoRa Basics Modem库的配置；以及
+- 使用*Wi-Fi地理定位中间件*执行Wi-Fi *扫描和发送*功能。
 
-**Wi-Fi 演示相关配置**
+**Wi-Fi演示相关配置**
 
-`main_geolocation_wifi.h` 头文件定义了几个常量，这些常量可以设置以定义应用程序的可配置参数。
+`main_geolocation_wifi.h` 头文件定义了几个常量，可以设置这些常量来定义应用程序的可配置参数。
 
-| 常量               | 说明                                                                                      | 可能的值   | 默认值        |
-| ------------------ | ----------------------------------------------------------------------------------------- | ---------- | ------------- |
-| `WIFI_SCAN_PERIOD` | 定义扫描与发送序列结束与下一次序列开始之间的时间间隔                                      | `uint32_t` | 30            |
+| 常量               | 注释                                                                                          | 可能的值        | 默认值        |
+| ------------------ | --------------------------------------------------------------------------------------------- | --------------- | ------------- |
+| `WIFI_SCAN_PERIOD` | 定义扫描和发送序列结束与下一个序列开始之间的持续时间                                          | `uint32_t`      | 30            |
 
 ### GNSS 和 Wi-Fi
 
-**GNSS 和 Wi-Fi 定位示例**
+**地理定位 GNSS 和 Wi-Fi 示例**
+此示例演示了 GNSS 和 Wi-Fi 扫描程序的组合：
 
-此示例说明了 GNSS 和 Wi-Fi 扫描过程的结合：
+- LoRa Basics Modem 库的配置；以及
+- 使用 *GNSS 地理定位中间件* 和 *Wi-Fi 地理定位中间件* 并发执行 GNSS 和 Wi-Fi *扫描和发送* 功能。
 
-- 配置 LoRa Basics Modem 库；以及
-- 使用 *GNSS 定位中间件* 和 *Wi-Fi 定位中间件* 并发执行 GNSS 和 Wi-Fi *扫描与发送* 功能。
+**地理定位演示相关配置**
 
-**与地理定位演示相关的配置**
+`main_geolocation_gnss_wifi.h` 头文件定义了几个常量来配置地理定位参数。
 
-`main_geolocation_gnss_wifi.h` 头文件定义了若干常量，用于配置地理定位参数。
+| 常量                                     | 注释                                                                                    | 可能的值         | 默认值        |
+| ---------------------------------------- | --------------------------------------------------------------------------------------- | ---------------- | ------------- |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_AUTO` | 如果设置为 `true`：配置应用程序自主获取辅助位置                                         | {`true`,`false`} | `false`       |
 
-| 常量                                     | 注释                                                                                  | 可能的值         | 默认值        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------- | ---------------- | ------------- |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_AUTO` | 如果设置为 `true`：配置应用程序自动获取辅助位置                                       | {`true`,`false`} | `false`       |
+如果为辅助位置选择了手动模式，以下常量定义了要使用的位置。
 
-如果为辅助位置选择了手动模式，则以下常量定义了要使用的位置。
+| 常量                                     | 注释                                                                        | 可能的值                   | 默认值             |
+| ---------------------------------------- | ------------------------------------------------------------------------------- | -------------------------- | ------------------ |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LAT`  | 用于 GNSS 辅助扫描的纬度（十进制度数）                     | 任何在 [-90, 90] 范围内的 `float`   | 45.181454          |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LONG` | 用于 GNSS 辅助扫描的经度（十进制度数）                    | 任何在 [-180, 180] 范围内的 `float` | 5.720893           |
+| `MODEM_EXAMPLE_ASSISTANCE_POSITION_TEXT` | 辅助位置的文本表示，仅用于信息打印 | 任何常量 c 字符串      | "Grenoble, FRANCE" |
 
-| 常量                                     | 注释                                                                            | 可能的值                | 默认值            |
-| ---------------------------------------- | ------------------------------------------------------------------------------- | ----------------------- | ----------------- |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LAT`  | GNSS 辅助扫描使用的纬度（十进制度数）                                           | [-90, 90] 范围内的任意 `float` | 45.181454         |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_LONG` | GNSS 辅助扫描使用的经度（十进制度数）                                           | [-180, 180] 范围内的任意 `float` | 5.720893          |
-| `MODEM_EXAMPLE_ASSISTANCE_POSITION_TEXT` | 辅助位置的文本表示，仅用于信息打印                                              | 任意常量 c-string        | "Grenoble, FRANCE" |
+***注意***：预定义的辅助位置必须在实际位置的150公里范围内。
 
-***注意***：预定义的辅助位置必须在实际位置的 150 公里范围内。
+| 常量                     | 注释                                                                                      | 可能的值                  | 默认值                |
+| ------------------------ | --------------------------------------------------------------------------------------------- | ------------------------- | --------------------- |
+| `GNSS_SCAN_GROUP_PERIOD` | 定义扫描和发送序列结束与下一个序列开始之间的持续时间 | `uint32_t`                | 30                    |
+| `GNSS_SCAN_MODE`         | 定义用于扫描和发送序列的GNSS扫描模式（静态或移动）。           | `gnss_mw_mode_t`中的值 | `GNSS_MW_MODE_MOBILE` |
 
-| 常量                     | 注释                                                                                          | 可能的值               | 默认值             |
-| ------------------------ | --------------------------------------------------------------------------------------------- | ---------------------- | ------------------ |
-| `GNSS_SCAN_GROUP_PERIOD` | 定义扫描和发送序列结束与下一次序列开始之间的时间间隔                                          | `uint32_t`             | 30                 |
-| `GNSS_SCAN_MODE`         | 定义用于扫描和发送序列的 GNSS 扫描模式（静态或移动）。                                        | `gnss_mw_mode_t` 中的值 | `GNSS_MW_MODE_MOBILE` |
-
-默认选择的 GNSS 扫描模式是 `GNSS_MW_MODE_MOBILE`，这意味着该应用示例面向移动对象。
-
+默认选择的GNSS扫描模式是`GNSS_MW_MODE_MOBILE`，意味着此应用示例针对移动对象。
 
 ## BLE
 
-低功耗蓝牙（BLE），也称为蓝牙低功耗，是一种无线通信技术，旨在为需要长期供电、低数据传输速率和短通信距离的设备提供低功耗和低复杂度的通信方法。基于蓝牙技术优化，BLE 具有更低的功耗和更简单的协议栈，使其适用于低功耗和物联网（IoT）应用。
+低功耗蓝牙（BLE），也称为蓝牙低功耗，是一种无线通信技术，旨在为需要长期供电、低数据传输速率和短通信距离的设备提供低功耗和低复杂度的通信方法。BLE基于蓝牙技术进行优化，具有更低的功耗和更简单的协议栈，使其适用于低功耗和物联网（IoT）应用。
 
-Wio-WM1110 的低功耗蓝牙基于 nRF52840 芯片。
-
+Wio-WM1110具有基于nRF52840芯片的低功耗蓝牙。
 
 **使用蓝牙例程进行测试**
 
-SDK 中有一个“蓝牙：外围 UART”示例。测试要求您已连接到该示例并打开了连接的终端仿真器。
+SDK中有一个'Bluetooth: Peripheral UART'示例。测试需要您已连接到示例并打开已连接的终端仿真器。
 
-BLE 演示位于：
+BLE演示位于：
 `nRF5_SDK_17.1.0_ddde560/examples/ble_peripheral/ble_app_uart/pca10056/s140/ses/`
 
+- [使用移动设备进行测试](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_mobile.html)
 
-* [使用移动设备进行测试](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_mobile.html)
-
-* [使用计算机进行测试](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_desktop.html)
+- [使用计算机进行测试](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_gsg_ses%2FUG%2Fgsg%2Ftest_desktop.html)
 
 ## 板载传感器
 
-### 温湿度传感器 (SHT41)
+### 温湿度传感器(SHT41)
 
-SHT41 是一款数字湿度和温度传感器，通过 I2C 接口与微控制器或其他数字设备通信。
+SHT41是一个数字湿度和温度传感器，它通过I2C接口与微控制器或其他数字设备通信。
 
-SHT41 传感器广泛应用于各种场景，包括 HVAC 系统、气象站、室内空气质量监测和工业过程控制。其小巧的尺寸、低功耗和高精度使其成为许多不同类型项目的热门选择。
+SHT41传感器通常用于广泛的应用中，包括HVAC系统、气象站、室内空气质量监测和工业过程控制。其小尺寸、低功耗和高精度使其成为许多不同类型项目的热门选择。
 
 |  | 范围 | 精度 |
 | -------- | -------- | -------- |
-| 温度 | -40~125°C | 0.2°C |
-| 湿度 | 0~100%RH | 1.8%RH |
+|温度  | -40~125°C |0.2°C|
+| 湿度 | 0~100%RH |1.8%RH|
 
 **代码：**
 
-以下示例提供了初始化传感器、读取温度和湿度值以及设置温度单位的功能。
+此示例提供了用于初始化传感器、读取温度和湿度值以及设置温度单位的函数。
 
-以下是代码中定义的功能的简要总结：
+以下是此代码中定义的函数的简要总结：
 
-**SHT41Init**：一个初始化传感器的函数，通过重置传感器并等待 1 毫秒后继续操作。
+**SHT41Init**：一个通过重置传感器并等待1ms后再继续的函数来初始化传感器。
 
-**SHT41GetTemperature、SHT41GetHumidity 和 SHT41GetTempAndHumi**：用于从传感器读取温度和/或湿度值的函数。这些函数将原始传感器值转换为以摄氏度或华氏度为单位的浮点值，具体取决于当前的温度单位设置。
+**SHT41GetTemperature、SHT41GetHumidity 和 SHT41GetTempAndHumi**：用于从传感器读取温度和/或湿度值的函数。这些函数将原始传感器值转换为摄氏度或华氏度的浮点值，具体取决于当前的温度单位设置。
 
 **SHT41SetTemperatureUnit 和 SHT41GetTemperatureUnit**：用于设置和获取温度单位的函数。
+crc8：一个计算字节数组CRC-8校验和的内部函数。
 
-**crc8**：一个内部函数，用于计算字节数组的 CRC-8 校验和。
+### 3轴加速度计(LIS3DHTR)
 
-### 三轴加速度计 (LIS3DHTR)
+LIS3DHTR是一款高性能传感器，可测量三个维度的加速度并提供准确可靠的读数。
 
-LIS3DHTR 是一款高性能传感器，可测量三维加速度并提供准确可靠的读数。
+LIS3DHTR传感器通过I2C或SPI接口与微控制器或其他数字设备通信。它还包括可编程中断和广泛的省电模式等高级功能，以帮助最小化功耗。
 
-LIS3DHTR 传感器通过 I2C 或 SPI 接口与微控制器或其他数字设备通信。它还包括可编程中断和多种省电模式等高级功能，以帮助最大限度地减少功耗。
-
-| 范围 | 带宽 | 灵敏度 (LSB/g) |
-| -------- | -------- | -------- | 
-| ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz | 1000 (±2g) ~ 83 (±16g) |
+| 量程 | 带宽 | 灵敏度(LSB/g) |
+| -------- | -------- | -------- |
+| ±2g, 4g, 8g, 16g | 0.5Hz ~ 625Hz |1000 (±2g) ~ 83 (±16g)
 
 ## Grove
 
-开发套件 (DK) 中有 3 个 Grove 接口，可连接 400 多种 Grove 模块，并支持 ADC/UART 和 IIC 传输协议。
+DK中有3个Grove接口，可以连接400多个Grove模块，支持ADC/UART和IIC传输协议。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/grove_pins.png" alt="pir" width={600} height="auto" /></p>
 
 ### Grove IIC
 
-开发套件中有一个 Grove IIC 接口，其中 `SDA` 位于引脚 27，`SCL` 位于引脚 26。
+DK上有一个Grove IIC端口，`SDA`在引脚27上，`SCL`在引脚26上。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_iic.png" alt="pir" width={300} height="auto" /></p>
 
-要连接到 Grove IIC 模块，必须启用传感器电源：`I2C_PWR`（引脚 7）。此引脚控制 IIC 信号线上的上拉电压：
+要连接到Grove IIC模块，必须启用传感器电源：`I2C_PWR`（引脚7）。此引脚控制IIC信号线上的上拉电压：
 
 ```cpp
 #define IIC_POWER          7
 ```
 
-在使用前需要在 `sdk_config.h` 文件中启用 TWI。
+TWI needs to be enabled in the `sdk_config.h` file before usage.
 
 ```cpp
-// <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM 外设驱动 - 传统层
+// <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer
 //==========================================================
 #ifndef TWI_ENABLED
 #define TWI_ENABLED 1
 #endif
-// <e> TWI0_ENABLED - 启用 TWI0 实例
+// <e> TWI0_ENABLED - Enable TWI0 instance
 //==========================================================
 #ifndef TWI0_ENABLED
 #define TWI0_ENABLED 1
 #endif
-// <q> TWI0_USE_EASY_DMA  - 使用 EasyDMA（如果存在）
+// <q> TWI0_USE_EASY_DMA  - Use EasyDMA (if present)
 #ifndef TWI0_USE_EASY_DMA
 #define TWI0_USE_EASY_DMA 1
 #endif
 // </e>
-// <e> TWI1_ENABLED - 启用 TWI1 实例
+// <e> TWI1_ENABLED - Enable TWI1 instance
 //==========================================================
 #ifndef TWI1_ENABLED
 #define TWI1_ENABLED 1
 #endif
-// <q> TWI1_USE_EASY_DMA  - 使用 EasyDMA（如果存在）
+// <q> TWI1_USE_EASY_DMA  - Use EasyDMA (if present)
  #ifndef TWI1_USE_EASY_DMA
 #define TWI1_USE_EASY_DMA 1
 #endif
@@ -276,7 +266,7 @@ LIS3DHTR 传感器通过 I2C 或 SPI 接口与微控制器或其他数字设备�
 
 **示例代码**
 
-以下示例通过 IIC 接口读取 [SHT41 温湿度传感器](https://wiki.seeedstudio.com/cn/Grove-SHT4x/) 的值，并将其打印到串行监视器。
+此示例通过 IIC 接口读取 [SHT41 温湿度传感器](https://wiki.seeedstudio.com/Grove-SHT4x/) 的值，并将其打印到串口监视器。
 
 ```cpp
 #include "nrf_gpio.h"
@@ -312,11 +302,11 @@ int main(void)
 
 ### Grove UART
 
-Wio-WM1110 开发套件具有两个 UART 外设，分别为 `uart0` 和 `uart1`。`uart0` 引脚连接到 CH340C 用于调试，而 `uart1` 用作 Grove UART 接口。
+Wio-WM1110 DK 有两个 UART 外设，分别是 `uart0` 和 `uart1`。`uart0` 引脚连接到 CH340C 用于调试目的，而 `uart1` 作为 Grove UART 端口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_uart.png" alt="pir" width={300} height="auto" /></p>
 
-根据原理图，TXD 位于引脚 8，RXD 位于引脚 6。
+参考原理图，TXD 位于引脚 8，RXD 位于引脚 6。
 
 ```cpp
 #define     LED1                      13
@@ -326,29 +316,29 @@ Wio-WM1110 开发套件具有两个 UART 外设，分别为 `uart0` 和 `uart1`�
 #define     UART_TX_RX_BUF_SIZE       256
 ```
 
-:::提示
-除了 ADC 等模拟接口外，nRF52840 芯片的其他数字外设具有固定引脚。然而，其他数字外设可以重新映射到任意引脚。例如，可以交换 RXD 和 TXD 引脚配置。
+:::tip 注意
+除了像ADC这样的模拟接口外，nRF52840芯片的其他数字外设都有固定的引脚。但是，其他数字外设可以重新映射到任何引脚。例如，RXD和TXD引脚配置可以交换。
 :::
 
-在使用前需要在 `sdk_config.h` 文件中启用 UART：
+在使用前需要在`sdk_config.h`文件中启用UART：
 
 ```cpp
-/ <e> NRFX_UARTE_ENABLED - nrfx_uarte - UARTE 外设驱动
+/ <e> NRFX_UARTE_ENABLED - nrfx_uarte - UARTE peripheral driver
 //==========================================================
 #ifndef NRFX_UARTE_ENABLED
 #define NRFX_UARTE_ENABLED 1
 #endif
-// <o> NRFX_UARTE0_ENABLED - 启用 UARTE0 实例 
+// <o> NRFX_UARTE0_ENABLED - Enable UARTE0 instance 
 #ifndef NRFX_UARTE0_ENABLED
 #define NRFX_UARTE0_ENABLED 1
 #endif
 
-// <o> NRFX_UARTE1_ENABLED - 启用 UARTE1 实例 
+// <o> NRFX_UARTE1_ENABLED - Enable UARTE1 instance 
 #ifndef NRFX_UARTE1_ENABLED
 #define NRFX_UARTE1_ENABLED 1
 #endif
 
-// <e> UART_ENABLED - nrf_drv_uart - UART/UARTE 外设驱动 - 传统层
+// <e> UART_ENABLED - nrf_drv_uart - UART/UARTE peripheral driver - legacy layer
 //==========================================================
 #ifndef UART_ENABLED
 #define UART_ENABLED 1
@@ -357,7 +347,7 @@ Wio-WM1110 开发套件具有两个 UART 外设，分别为 `uart0` 和 `uart1`�
 
 **示例代码**
 
-以下示例代码实现了串口传输和接收带反馈的功能。
+以下示例代码实现了带反馈的串口发送和接收功能。
 
 ```cpp
 #include "nrf_gpio.h"
@@ -416,7 +406,7 @@ int main(void)
             
 void uart_handleEvent(app_uart_evt_t * p_event)
 {
-	uint8_t dat;
+ uint8_t dat;
     if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
     {
         APP_ERROR_HANDLER(p_event->data.error_communication);
@@ -425,36 +415,36 @@ void uart_handleEvent(app_uart_evt_t * p_event)
     {
         APP_ERROR_HANDLER(p_event->data.error_code);
     }
-	
+ 
     else if (p_event->evt_type == APP_UART_DATA_READY)
-	{
-		app_uart_get(&uart,&dat); 
-		app_uart_put(&uart,dat); 
-	}
+ {
+  app_uart_get(&uart,&dat); 
+  app_uart_put(&uart,dat); 
+ }
     else if (p_event->evt_type == APP_UART_TX_EMPTY) 
-	{
-		nrf_gpio_pin_toggle(LED1);
-	}
+ {
+  nrf_gpio_pin_toggle(LED1);
+ }
 }
 ```
 
 ### Grove ADC
 
-开发套件（DK）上有八个ADC外设（0~7），其中`ADC6`和`ADC7`被用作Grove ADC端口。
+DK 上有八个 ADC 外设（0~7），`ADC6` 和 `ADC7` 用作 Grove ADC 端口。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/Grove_adc.png" alt="pir" width={300} height="auto" /></p>
 
 :::tip 注意
-ADC引脚是固定的，不能重新映射。
+ADC 引脚是固定的，无法重新映射。
 :::
 
-ADC引脚的对应关系如下表所示：
+ADC 引脚的对应关系如下表所示：
 
 |ADC0|ADC1|ADC2|ADC3|ADC4|ADC5|ADC6|ADC7|
 |:-------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 |2|3|4|5|28|29|30|31
 
-在使用之前，需要在`sdk_config.h`文件中启用SAADC：
+在使用之前，需要在 `sdk_config.h` 文件中启用 SAADC：
 
 ```cpp
 // <e> SAADC_ENABLED - nrf_drv_saadc - SAADC peripheral driver - legacy layer
@@ -481,7 +471,7 @@ ADC引脚的对应关系如下表所示：
 
 **示例代码**
 
-以下是一个针对ADC6的示例程序，实现了读取ADC6引脚单通道模拟输入值的功能，并通过UART输出测量的ADC值：
+这是一个 ADC6 的示例程序，实现了读取 ADC6 引脚单通道模拟输入值的功能，并通过 UART 输出测量的 ADC 值：
 
 ```cpp
 #include "nrf_gpio.h"
@@ -528,7 +518,7 @@ void ADC_Interrupt(nrfx_saadc_evt_t const *p_event){
 
 void uart_handleEvent(app_uart_evt_t * p_event)
 {
-	uint8_t dat;
+ uint8_t dat;
     if (p_event->evt_type == APP_UART_COMMUNICATION_ERROR)
     {
         APP_ERROR_HANDLER(p_event->data.error_communication);
@@ -537,16 +527,16 @@ void uart_handleEvent(app_uart_evt_t * p_event)
     {
         APP_ERROR_HANDLER(p_event->data.error_code);
     }
-	
+ 
     else if (p_event->evt_type == APP_UART_DATA_READY)
-	{
-		app_uart_get(&uart,&dat); 
-		//app_uart_put(&uart,dat); 
-	}
+ {
+  app_uart_get(&uart,&dat); 
+  //app_uart_put(&uart,dat); 
+ }
     else if (p_event->evt_type == APP_UART_TX_EMPTY) 
-	{
-		//nrf_gpio_pin_toggle(LED1);
-	}
+ {
+  //nrf_gpio_pin_toggle(LED1);
+ }
 }
 
 int main(void)
@@ -582,6 +572,7 @@ int main(void)
         nrf_gpio_pin_toggle(LED2);
     }
 }
+
 ```
 
 ## 资源
@@ -590,13 +581,9 @@ int main(void)
 
 [nRF5-SDK](https://www.nordicsemi.com/Products/Development-software/nRF5-SDK/Download#infotabs)
 
-
 ## 技术支持
 
-**需要帮助解决 Wio-WM1110 开发套件的问题吗？我们随时为您提供支持！**
-
-
-
+**需要 Wio-WM1110 开发套件的帮助？我们随时为您提供协助！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.gg/sensecap" class="button_tech_support_sensecap"></a>

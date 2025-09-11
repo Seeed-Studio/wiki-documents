@@ -39,7 +39,7 @@ First,we can test it by computer.
 ### Hardware Installation
 
 1. Seeeduino v3.0,Mini usb Cable,RS232 Shield,RS232 to USB Cable.
-2. Make the connections as below. The jumper hats can be used to select the software serial port from the digital pins. You can set them to D7(232\_TX) and D6(232\_RX), and modify the code to "*SoftwareSerial mySerial(7, 6); // 232\_TX, 232\_RX*"
+2. Make the connections as below. The jumper hats can be used to select the software serial port from the digital pins. You can set them to D7(232_TX) and D6(232_RX), and modify the code to "*SoftwareSerial mySerial(7, 6); // 232_TX, 232_RX*"
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/RS232_Shield/img/RS232_Shield_usage.jpg" alt="pir" width={600} height="auto" /></p>
 
@@ -97,7 +97,7 @@ Resources
 --------
 
 -   [RS232 Shield eagle file](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.0_Eagle.zip)
--   [RS232\_Shield\_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
+-   [RS232_Shield_v1.0.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/RS232_Shield_v1.pdf)
 -   [Datasheet MAX232D.pdf](https://files.seeedstudio.com/wiki/RS232_Shield/res/MAX232D.pdf)
 
 

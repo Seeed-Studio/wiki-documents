@@ -16,7 +16,7 @@ https://github.com/Seeed-Studio/wiki-documents/issues
 
 # Seeed Studio XIAO SAMD21 を Nanase とともに始める
 
-本ドキュメントは、[@nanase\_coder](https://twitter.com/nanase_coder) 氏による以下の記事を参考に作成しました：
+本ドキュメントは、[@nanase_coder](https://twitter.com/nanase_coder) 氏による以下の記事を参考に作成しました：
 [コインサイズ Arduino互換機 Seeed Studio XIAO SAMD21 を使ってみた](https://qiita.com/nanase/items/0fed598975c49b1d707e#spi-microsd%E3%82%AB%E3%83%BC%E3%83%89)
 Nanase さん、素晴らしい情報をありがとうございます！
 

@@ -89,7 +89,6 @@ Go to **Tools > Board > ESP32 Arduino** and select **XIAO_ESP32S3**.
 
 **Step 6.** Select the correct port from **Tools > Port**.
 
-
 ## ePaper Display Programming
 
 The **reTerminal E1001 features a 7.5-inch black and white ePaper display**, while the **reTerminal E1002 is equipped with a 7.3-inch full color ePaper display**. Both displays provide excellent visibility in various lighting conditions with ultra-low power consumption, making them ideal for industrial applications that require always-on displays with minimal power usage.
@@ -373,6 +372,7 @@ void helloWorld()
 
 void loop() {};
 ```
+
 </TabItem>
 </Tabs>
 
@@ -609,11 +609,13 @@ void loop() {
 ```
 
 **Buzzer Functions:**
+
 - `digitalWrite()`: Simple ON/OFF control for basic beeps
 - `tone(pin, frequency, duration)`: Generate specific frequencies for melodies or alerts
 - `noTone(pin)`: Stop tone generation
 
 **Common Alert Patterns:**
+
 - Single beep: Confirmation
 - Double beep: Warning
 - Triple beep: Error
@@ -624,6 +626,7 @@ void loop() {
 The reTerminal E Series features three user-programmable buttons that can be used for various control purposes. This section demonstrates how to read button states and respond to button presses using Arduino.
 
 The reTerminal E Series has three buttons connected to the ESP32-S3:
+
 - **KEY0** (GPIO3): Right button (Green Button)
 - **KEY1** (GPIO4): Middle button
 - **KEY2** (GPIO5): Left button
@@ -847,12 +850,14 @@ void loop() {
 ```
 
 **Setup Function:**
+
 1. **Serial Initialization**: Uses `Serial1` with pins 44 (RX) and 43 (TX) specific to reTerminal E Series
 2. **I2C Initialization**: Configures I2C with pins 19 (SDA) and 20 (SCL)
 3. **Sensor Initialization**: Calls `sht4x.begin(Wire, 0x44)` to initialize the SHT4x sensor at address 0x44
 4. **Serial Number Reading**: Reads and displays the sensor's unique serial number for verification
 
 **Loop Function:**
+
 1. **Delay**: Waits 5 seconds between measurements to avoid oversampling
 2. **Measurement**: Uses `measureHighPrecision()` for accurate readings (takes ~8.3ms)
 3. **Error Handling**: Checks for errors and converts them to readable messages using `errorToString()`
@@ -864,11 +869,10 @@ void loop() {
 SHT4x Basic Example
 Serial Number: 331937553
 
-Temperature: 27.39°C	Humidity: 53.68%
-Temperature: 27.40°C	Humidity: 53.51%
-Temperature: 27.38°C	Humidity: 53.37%
+Temperature: 27.39°C Humidity: 53.68%
+Temperature: 27.40°C Humidity: 53.51%
+Temperature: 27.38°C Humidity: 53.37%
 ```
-
 
 ### Battery Management System
 
@@ -931,6 +935,7 @@ void loop() {
 ```
 
 **Code Explanation:**
+
 - GPIO1 reads the divided battery voltage through ADC
 - GPIO21 enables the battery monitoring circuit
 - The actual battery voltage is twice the measured voltage due to the voltage divider
@@ -1132,24 +1137,25 @@ void loop() {
 
 ##### Code Explanation
 
-*   **Pin Definitions:** The code begins by defining the GPIO pins used for the MicroSD card slot. Note that the SPI pins (`MOSI`, `SCK`) are shared with the e-paper display, but a separate Chip Select (`SD_CS_PIN`) and a dedicated SPI instance (`spiSD`) ensure they can be used independently.
-*   **SPI Initialization:** We instantiate a new SPI object, `spiSD(HSPI)`, to use the ESP32's second hardware SPI controller (HSPI). This is best practice to avoid conflicts with other SPI devices.
-*   **Card Detection:** The `isCardInserted()` function reads the `SD_DET_PIN`. On the reTerminal hardware, this pin is pulled LOW when a card is present.
-*   **Mount/Unmount:** The `mountSD()` function enables power to the card, configures the HSPI bus with the correct pins, and calls `SD.begin()` to initialize the file system. `unmountSD()` releases the resources.
-*   **File Listing:** `listRoot()` opens the root directory (`/`), and `listDir()` is a recursive function that traverses the file system, printing the names of all files and directories.
-*   **`setup()`:** Initializes `Serial1` for output, configures the card detection pin, and performs an initial check to see if a card is already inserted when the device powers on.
-*   **`loop()`:** Instead of constantly checking the card, the code uses a non-blocking timer (`millis()`) to check for a change in the card's status once per second. If a change is detected (card inserted or removed), it mounts or unmounts the card and prints the status to the serial monitor.
+- **Pin Definitions:** The code begins by defining the GPIO pins used for the MicroSD card slot. Note that the SPI pins (`MOSI`, `SCK`) are shared with the e-paper display, but a separate Chip Select (`SD_CS_PIN`) and a dedicated SPI instance (`spiSD`) ensure they can be used independently.
+- **SPI Initialization:** We instantiate a new SPI object, `spiSD(HSPI)`, to use the ESP32's second hardware SPI controller (HSPI). This is best practice to avoid conflicts with other SPI devices.
+- **Card Detection:** The `isCardInserted()` function reads the `SD_DET_PIN`. On the reTerminal hardware, this pin is pulled LOW when a card is present.
+- **Mount/Unmount:** The `mountSD()` function enables power to the card, configures the HSPI bus with the correct pins, and calls `SD.begin()` to initialize the file system. `unmountSD()` releases the resources.
+- **File Listing:** `listRoot()` opens the root directory (`/`), and `listDir()` is a recursive function that traverses the file system, printing the names of all files and directories.
+- **`setup()`:** Initializes `Serial1` for output, configures the card detection pin, and performs an initial check to see if a card is already inserted when the device powers on.
+- **`loop()`:** Instead of constantly checking the card, the code uses a non-blocking timer (`millis()`) to check for a change in the card's status once per second. If a change is detected (card inserted or removed), it mounts or unmounts the card and prints the status to the serial monitor.
 
 ##### Expected Results
 
-1.  Upload the code to your reTerminal.
-2.  Open the Arduino IDE's Serial Monitor (**Tools > Serial Monitor**).
-3.  Make sure the baud rate is set to **115200**.
+1. Upload the code to your reTerminal.
+2. Open the Arduino IDE's Serial Monitor (**Tools > Serial Monitor**).
+3. Make sure the baud rate is set to **115200**.
 
 You will see output corresponding to the following actions:
-*   **On startup with no card:** The monitor will print `[SD] No card detected at startup...`
-*   **When you insert a card:** The monitor will print `[SD] Card inserted.`, followed by a full listing of all files and directories on the card.
-*   **When you remove the card:** The monitor will print `[SD] Card removed.`
+
+- **On startup with no card:** The monitor will print `[SD] No card detected at startup...`
+- **When you insert a card:** The monitor will print `[SD] Card inserted.`, followed by a full listing of all files and directories on the card.
+- **When you remove the card:** The monitor will print `[SD] Card removed.`
 
 ```
 [FILE] live.0.shadowIndexGroups  6 bytes
@@ -1189,41 +1195,39 @@ The method for preparing the image differs slightly depending on your reTerminal
 
 The black and white screen can only display black and white pixels. While our code can convert a color image to grayscale in real-time, you will get much better contrast and detail by **pre-converting the image to a high-quality grayscale image on your computer**.
 
-1.  **Resize the Image:** Resize your picture to **800x480 pixels**.
+1. **Resize the Image:** Resize your picture to **800x480 pixels**.
 
-2.  **Convert to Grayscale (Recommended):** In your image editor, convert the image to grayscale first. In **GIMP**:
-    *   Go to the menu **Colors > Desaturate > Desaturate...**. Choose a mode like "Luminosity" for the best results.
+2. **Convert to Grayscale (Recommended):** In your image editor, convert the image to grayscale first. In **GIMP**:
+    - Go to the menu **Colors > Desaturate > Desaturate...**. Choose a mode like "Luminosity" for the best results.
 
-3.  **Save as a Standard BMP:** Follow the same steps as the color screen guide to save the file. Even though the image is grayscale, saving it as a 24-bit BMP ensures maximum compatibility with the code.
-    *   Go to **File > Export As...**, name it `test.bmp`.
-    *   In the export dialog, under **Advanced Options**, select **"24 bits: R8 G8 B8"**.
-    *   Click **Export**.
+3. **Save as a Standard BMP:** Follow the same steps as the color screen guide to save the file. Even though the image is grayscale, saving it as a 24-bit BMP ensures maximum compatibility with the code.
+    - Go to **File > Export As...**, name it `test.bmp`.
+    - In the export dialog, under **Advanced Options**, select **"24 bits: R8 G8 B8"**.
+    - Click **Export**.
 
-4.  **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
+4. **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
 
 </TabItem>
 <TabItem value="For reTerminal E1002 (Color Screen)" label="For reTerminal E1002 (Color Screen)">
 
 The color screen can display 6 colors: Black, White, Red, Yellow, Blue, and Green. The provided code includes a "nearest color" algorithm that intelligently maps any color from your source image to the best available color on the screen. For optimal results, follow these steps:
 
-1.  **Resize the Image:** Using any image editor, resize your picture to **800x480 pixels**.
+1. **Resize the Image:** Using any image editor, resize your picture to **800x480 pixels**.
 
-2.  **Save as a Standard BMP:** The code is designed to read **uncompressed** 24-bit or 32-bit BMP files. Using a professional image editor is the best way to ensure the format is correct. We recommend the free and open-source software **GIMP**:
-    *   Open your resized image in GIMP.
-    *   Go to the menu **File > Export As...**.
-    *   Name the file `test.bmp` and click **Export**.
-    *   In the "Export Image as BMP" dialog that appears, expand the **Advanced Options**.
-    *   Select **"24 bits: R8 G8 B8"**. This is the most compatible, uncompressed format.
-    *   Click **Export**.
+2. **Save as a Standard BMP:** The code is designed to read **uncompressed** 24-bit or 32-bit BMP files. Using a professional image editor is the best way to ensure the format is correct. We recommend the free and open-source software **GIMP**:
+    - Open your resized image in GIMP.
+    - Go to the menu **File > Export As...**.
+    - Name the file `test.bmp` and click **Export**.
+    - In the "Export Image as BMP" dialog that appears, expand the **Advanced Options**.
+    - Select **"24 bits: R8 G8 B8"**. This is the most compatible, uncompressed format.
+    - Click **Export**.
 
-3.  **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
+3. **Copy to SD Card:** Copy the final `test.bmp` file to the root directory of your MicroSD card.
 
 </TabItem>
 </Tabs>
 
-
 If you want to use ready-made images for testing, you can use the [example images](https://github.com/ZinggJM/GxEPD2/tree/master/examples/GxEPD2_SD_Example/bitmaps) provided by GxEPD2.
-
 
 #### The Code
 
@@ -1509,8 +1513,6 @@ void loop() {
 </TabItem>
 <TabItem value="For reTerminal E1002 (Color Screen)" label="For reTerminal E1002 (Color Screen)">
 
-
-
 ```cpp
 #include <SD.h>
 #include <SPI.h>
@@ -1790,24 +1792,51 @@ void loop() {
 
 #### How It Works
 
-*   **`setup()`**: The `setup` function initializes all necessary hardware in sequence: the Serial port for debugging, the shared SPI bus, the e-paper display, and finally the SD card. If all initializations are successful, it makes a single call to `drawBmp()` to perform the main task.
-*   **`drawBmp()`**: This is the core function. It opens the BMP file, parses the header to read its dimensions and properties, and performs crucial validation checks. It specifically checks for unsupported compression types and provides a helpful error message if it finds one.
-*   **Drawing Loop**: The function reads the image from the SD card one row at a time. For each pixel in the row, it extracts the Red, Green, and Blue color values.
-*   **Color Handling**: This is where the logic splits based on the `EPD_SELECT` macro:
-    *   **For Color (E1002)**: It calls `findNearestColor(r, g, b)`. This function calculates the "distance" between the pixel's color and each of the 6 colors in the screen's palette. It returns the palette color with the smallest distance, ensuring the most accurate possible color representation.
-    *   **For B&W (E1001)**: It uses a standard luminance formula (`r * 0.299 + g * 0.587 + b * 0.114`) to convert the RGB color to a single brightness value. If this value is below a threshold (128), the pixel is drawn as black; otherwise, it's drawn as white.
+- **`setup()`**: The `setup` function initializes all necessary hardware in sequence: the Serial port for debugging, the shared SPI bus, the e-paper display, and finally the SD card. If all initializations are successful, it makes a single call to `drawBmp()` to perform the main task.
+- **`drawBmp()`**: This is the core function. It opens the BMP file, parses the header to read its dimensions and properties, and performs crucial validation checks. It specifically checks for unsupported compression types and provides a helpful error message if it finds one.
+- **Drawing Loop**: The function reads the image from the SD card one row at a time. For each pixel in the row, it extracts the Red, Green, and Blue color values.
+- **Color Handling**: This is where the logic splits based on the `EPD_SELECT` macro:
+  - **For Color (E1002)**: It calls `findNearestColor(r, g, b)`. This function calculates the "distance" between the pixel's color and each of the 6 colors in the screen's palette. It returns the palette color with the smallest distance, ensuring the most accurate possible color representation.
+  - **For B&W (E1001)**: It uses a standard luminance formula (`r * 0.299 + g * 0.587 + b * 0.114`) to convert the RGB color to a single brightness value. If this value is below a threshold (128), the pixel is drawn as black; otherwise, it's drawn as white.
 
 #### Upload and Run
 
-1.  In the Arduino IDE, make sure you have the correct board selected (`XIAO_ESP32S3`).
-2.  Set the `EPD_SELECT` macro at the top of the code to `1` for the reTerminal E1002 or `0` for the E1001.
-3.  Insert your prepared MicroSD card into the reTerminal.
-4.  Upload the code.
-5.  Open the Serial Monitor at a baud rate of `115200`. You will see the progress logs, and after a few moments, the image will be rendered on the e-paper display.
+1. In the Arduino IDE, make sure you have the correct board selected (`XIAO_ESP32S3`).
+2. Set the `EPD_SELECT` macro at the top of the code to `1` for the reTerminal E1002 or `0` for the E1001.
+3. Insert your prepared MicroSD card into the reTerminal.
+4. Upload the code.
+5. Open the Serial Monitor at a baud rate of `115200`. You will see the progress logs, and after a few moments, the image will be rendered on the e-paper display.
 
 :::tip About Refresh Speed
 The screen refresh speed may be slow, sometimes the screen will not respond until 2~3 minutes after uploading the program.
 :::
+
+## Troubleshooting
+
+### Q1: Why does the reTerminal's ePaper display not show anything or refresh when running the code above?
+
+This issue may occur if you have inserted a MicroSD card into the reTerminal. The reason is that the MicroSD card and the ePaper display share the same SPI bus on the reTerminal. If a MicroSD card is inserted but its enable (chip select) pin is not properly managed, it can cause a conflict on the SPI bus. Specifically, the MicroSD card may hold the BUSY line high, which prevents the ePaper display from functioning correctly—resulting in no display updates or refreshes.
+
+```cpp
+// Initialize SD Card
+pinMode(SD_EN_PIN, OUTPUT);
+digitalWrite(SD_EN_PIN, HIGH);
+pinMode(SD_DET_PIN, INPUT_PULLUP);
+```
+
+To resolve this, you must ensure that the MicroSD card is properly enabled using the code provided above. The code initializes and enables the MicroSD card by setting the correct pin states, which prevents SPI bus conflicts and allows both the SD card and the ePaper display to work together. Always use the recommended initialization code when using a MicroSD card with the reTerminal to avoid such issues.
+
+If the MicroSD card is not used inside your project, we recommend powering down the device and removing the card before running the display program. If the card has been inserted into the reTerminal, you will need to add the above code to ensure that you can get the screen to display properly, regardless of whether you are using a MicroSD card or not.
+
+### Q2: Why can't I upload programs to reTerminal?
+
+If you encounter the following error when uploading a program to reTerminal.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/158.png" style={{width:1000, height:'auto'}}/></div>
+
+Then, it's likely that your Arduino IDE is set to an excessively high upload speed. Please change it to 115200 baud to resolve this issue.
+
+<div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reterminal_e10xx/img/159.png" style={{width:400, height:'auto'}}/></div>
 
 ## Tech Support & Product Discussion
 
@@ -1815,14 +1844,12 @@ Thank you for choosing our products! We are here to provide you with different s
 
 <div class="table-center">
   <div class="button_tech_support_container">
-  <a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+  <a href="https://forum.seeedstudio.com/" class="button_forum"></a>
   <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
   </div>
 
   <div class="button_tech_support_container">
-  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+  <a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
   <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
   </div>
 </div>
-
-

@@ -21,24 +21,23 @@ SenseCAP Sensor Hub is a compact solution for remote environmental monitoring. I
 
 [SesneCAP Mobile APP](https://solution.seeedstudio.com/product/software-cloud-sensecap-app/),[SenseCAP web-based portal](https://solution.seeedstudio.com/product/software-cloud-sensecap-portal/), [SenseCAP API](https://sensecap-docs.seeed.cc/introduction.html), and [SenseCAP Dashboard](https://solution.seeedstudio.com/product/software-cloud-sensecap-dashboard/) are also available for quick configuration and devices + data management.
 
-
 # Features
 
-* Fit in applications need downlink command for remote control
-* On-board memory can store data if there is an internet outage
-* GSM900/1800MHz， LTE version is coming soon
-* Rapid installation and deployment, High reliability and stability
-* Can connect up to 40 sensors and actuators
-* Industrial grade protection: IP66 enclosure, temperature -40℃~70℃, suitable for outdoor applications and harsh environment
-* APP, Web-based portal, Open API are available for quick provisioning and data management
-* Easy maintenance, OTA upgrade
+- Fit in applications need downlink command for remote control
+- On-board memory can store data if there is an internet outage
+- GSM900/1800MHz， LTE version is coming soon
+- Rapid installation and deployment, High reliability and stability
+- Can connect up to 40 sensors and actuators
+- Industrial grade protection: IP66 enclosure, temperature -40℃~70℃, suitable for outdoor applications and harsh environment
+- APP, Web-based portal, Open API are available for quick provisioning and data management
+- Easy maintenance, OTA upgrade
 
 # Specification
 
 Please refer to this document: https://files.seeedstudio.com/products/114992170/SenseCAP%20SensorHub%20Catalog-v3.1%2020210702.pdf
 
-
 # Architecture
+
 ![architecture](https://files.seeedstudio.com/products/102991154/wiki%20images/sensor%20hub%20architecture%20.png)
 
 Sensor Hub Data logger is an easy-to-deploy cellular station, 2 power source options are available: Solar power with a rechargeable battery and power adapter power.
@@ -49,8 +48,6 @@ Compares with SenseCAP LoRa, this data logger fits for higher-power-consumption 
 
 Design for easy-to-deploy, the enclosure is fit for pole and wall mount.
 
-
 # Applications
 
 <div align="center"><img width="{800}" src="https://www.sensecapmx.com/wp-content/uploads/2023/02/Pasted-into-1-1.png"/></div>
-

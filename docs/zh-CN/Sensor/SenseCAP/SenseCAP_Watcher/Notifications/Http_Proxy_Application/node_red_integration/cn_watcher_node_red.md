@@ -55,13 +55,13 @@ last_update:
 npm install -g npm@2.x
 ```
 
-安装完成后，打开命令提示符并运行以下命令以确保 Node.js 和 npm 正确安装。
+Once installed, open a command prompt and run the following command to ensure Node.js and npm are installed correctly.
 
 ```sh
 node --version && npm --version
 ```
 
-您应该收到类似以下的输出：
+You should receive back output that looks similar to:
 
 ```sh
 > v16.17.0
@@ -70,13 +70,13 @@ node --version && npm --version
 
 ## 第二部分. 安装 Node-RED
 
-将 Node-RED 安装为全局模块会将命令 `node-red` 添加到您的系统路径中。在命令提示符下执行以下命令：
+将 Node-RED 作为全局模块安装会将命令 `node-red` 添加到您的系统路径中。在命令提示符下执行以下命令：
 
 ```sh
 npm install -g --unsafe-perm node-red
 ```
 
-如果 Node-RED 作为全局 npm 包安装，则直接执行命令 node-red：
+If Node-RED is installed as a global npm package, then execute the command node-red directly:
 
 ```sh
 node-red
@@ -90,21 +90,21 @@ node-red
 
 <div align="center"><img width={800} src="https://files.seeedstudio.com/wiki/k1100-nodered/4.png" /></div>
 
-## 第三部分. 在 Watcher 中运行任务
+## 第三部分：在 Watcher 中运行任务
 
-告诉 Watcher 您希望它帮助您做什么。您只需要在输入框中输入一些命令。例如，**检测到人时通知我** 或 **如果有火灾请告诉我**，等等。如果您想了解更多，[**请跳转到这里**](https://wiki.seeedstudio.com/cn/getting_started_with_watcher_task/)。
+告诉 Watcher 您希望它帮助您做什么。您只需要在输入框中输入一些命令。例如，**检测到人时通知我** 或 **如果有火灾请告诉我** 等。如果您想了解更多，[**请跳转到这里**](https://wiki.seeedstudio.com/getting_started_with_watcher_task/)。
 
 因此，当 Watcher 检测到火灾时，它将通过 SenseCraft APP 以及音频警报和闪烁的 RGB 灯通知您。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/svg10.svg" style={{width:600, height:'auto'}}/></div>
 
-## 第四部分. Watcher 向 Node-RED 发送消息
+## 第四部分：Watcher 向 Node-RED 发送消息
 
-我们提供两种方法将消息从 watcher 发送到 Node-RED，SenseCAP 节点和 HTTP 协议。您可以选择任何您喜欢的方法。
+我们提供两种方法将消息从 watcher 发送到 Node-RED：SenseCAP 节点和 HTTP 协议。您可以选择任何您喜欢的方法。
 
 ### 方法 1：使用 SenseCAP 节点
 
-#### 步骤 1. 获取 Watcher API 密钥
+#### 步骤 1：获取 Watcher API 密钥
 
 打开您的 SenseCraft APP 并按照以下步骤获取 **组织 ID** 和 **API 密钥**。我们稍后会使用它们。
 
@@ -135,31 +135,31 @@ node-red
 
 #### 步骤 2. 安装 SenseCAP 节点
 
-点击三条横线图标，然后点击 **管理调色板** 选项。
+点击三条横线图标，然后点击 **Manage palette** 选项。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/1.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **安装** 选项，输入 **sensecap** 进行搜索，然后 **安装** 它。
+点击 **Install** 选项，输入 **sensecap** 进行搜索，然后 **安装** 它。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/2.png" style={{width:600, height:'auto'}}/></div>
 
-将 **OpenStream** 和 **debug** 模块拖到工作区域，然后用线 **连接** 它们。
+将 **OpenStream** 和 **debug** 模块拖拽到工作区域，然后用线 **连接** 它们。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/3.png" style={{width:800, height:'auto'}}/></div>
 
-**双击** OpenStram 模块，然后它将打开一个侧窗口。给它一个名称并创建一个新账户。
+**双击** OpenStram 模块，然后会打开一个侧边窗口。给它命名并创建一个新账户。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/4.png" style={{width:800, height:'auto'}}/></div>
 
-命名您的账户并输入您刚才获得的 **组织 ID** 和 **API 密钥**。
+为您的账户命名，并输入您刚才获得的 **Organization ID** 和 **API key**。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/5.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **完成** 按钮以获取平台的所有消息，或者您可以选择您想要接收的指定消息。例如，如果您只想接收您的 Watcher 消息，您可以填入可以在设备 **设置** -> **关于设备** 或 **步骤 6** 中的消息中找到的 **EUI** 代码。
+点击 **Done** 按钮以获取平台的所有消息，或者您可以选择您想要接收的特定消息。例如，如果您只想接收您的 Watcher 消息，您可以填入 **EUI** 代码，该代码可以在设备 **Setting** -> **About Device** 中找到，或者在 **步骤 6** 的消息中找到。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/6.png" style={{width:800, height:'auto'}}/></div>
 
-点击 **部署** 按钮。这个按钮就像编译和运行按钮。无论您更改什么，都需要点击这个按钮。
+点击 **Deploy** 按钮。这个按钮就像编译和运行按钮。无论您做什么更改，都需要点击这个按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/7.png" style={{width:800, height:'auto'}}/></div>
 
@@ -169,9 +169,9 @@ node-red
 
 ### 方法 2：使用 HTTP 协议
 
-#### 步骤 1. 打开 HTTP 块功能
+#### 步骤 1. 开启 HTTP 块功能
 
-当您运行任务时，点击 **详细配置** 按钮，然后打开 **HTTP 推送通知** 并点击 **去设置**。您需要填入 **您的计算机 IP 地址** 和 **Node-RED 访问端口**（默认端口是 1880）。然后点击 **立即更新** 和 **运行任务**。
+当您运行任务时，点击 **Detail Configs** 按钮，然后开启 **HTTP Push Notification** 并点击 **Go Setup**。您需要填入 **您的计算机 IP 地址** 和 **Node-RED 访问端口**（默认端口是 1880）。然后点击 **Update Now** 和 **Run Task**。
 
 <div class="table-center">
   <table align="center">
@@ -196,7 +196,7 @@ node-red
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/24.png" style={{width:600, height:'auto'}}/></div>
 
-将以下代码粘贴到其中，然后点击 **Import** 按钮。
+将以下代码粘贴到其中并点击 **Import** 按钮。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/25.png" style={{width:600, height:'auto'}}/></div>
 
@@ -289,27 +289,26 @@ node-red
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n1.png" style={{width:800, height:'auto'}}/></div>
 
-安装后，您可以在 **output part** 中找到它，将其拖拽到您想要预览图像的位置并连接。
+安装后，您可以在**输出部分**找到它，将其拖拽到您想要预览图像的位置并连接。
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n3.png" style={{width:800, height:'auto'}}/></div>
 
-这一步非常重要。您需要 **双击图像预览节点** 并 **在此节点中填写 base64 url**。不要忘记 **点击右上角的 Done 和 Deploy 按钮**。之后，当 Watcher 消息再次到来时，我们将预览图像~
+这一步非常重要。您需要**双击图像预览节点**并**在此节点中填写 base64 url**。不要忘记**点击右上角的 Done 和 Deploy 按钮**。之后，当 Watcher 消息再次到来时，我们将预览图像~
 
 <div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/watcher_nodered_setup/n2.png" style={{width:800, height:'auto'}}/></div>
 
-
-恭喜！现在数据已成功从 Watcher 传输到 Node-RED。下一个教程我们将指导您如何将数据从 Watcher 传输到其他平台，欢迎尝试~
+恭喜！现在数据已成功从 Watcher 传输到 Node-RED。下一个 wiki 我们将引导您了解如何将数据从 Watcher 传输到其他平台，欢迎尝试~
 
 ## 技术支持与产品讨论
 
 感谢您选择我们的产品！我们在这里为您提供不同的支持，以确保您使用我们产品的体验尽可能顺畅。我们提供多种沟通渠道，以满足不同的偏好和需求。
 
 <div class="button_tech_support_container">
-<a href="https://forum.seeedstudio.com/" class="button_forum"></a> 
+<a href="https://forum.seeedstudio.com/" class="button_forum"></a>
 <a href="https://www.seeedstudio.com/contacts" class="button_email"></a>
 </div>
 
 <div class="button_tech_support_container">
-<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a> 
+<a href="https://discord.gg/eWkprNDMU7" class="button_discord"></a>
 <a href="https://github.com/Seeed-Studio/wiki-documents/discussions/69" class="button_discussion"></a>
 </div>

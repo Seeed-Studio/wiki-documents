@@ -163,27 +163,27 @@ The reComputer R1000 edge IoT controller, powered by Raspberry Pi CM4, features 
 <strong><span><font color={'4ec354'} size={"5"}>N3uron</font></span></strong>
 
 <div class="table-center">
- <table class="table-nobg">
+  <table class="table-nobg">
     <tr class="table-trnobg">
-      <th class="table-trnobg"><font size={"4"}>reComputer R1000 with N3uron</font></th>
-      <th class="table-trnobg"><font size={"4"}>reComputer R1000 Connect AWS IoT Core with N3uron</font></th>
-  </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" style={{width:300, height:'auto'}}/></div></td>
-   <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_AWS/AWS_recomputer_n3uron.png" style={{width:300, height:'auto'}}/></div></td>
-  </tr>
-    <tr class="table-trnobg"></tr>
-    <tr class="table-trnobg">
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Easily create bidirectional data pipelines between OT and IT systems with N3uron, consolidating and visualizing operational data in a single source. Learn to install and access N3uron using reComputer R1000</font></td>
-      <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.</font></td>
+        <th class="table-trnobg"><font size={"4"}>reComputer R1000 with N3uron</font></th>
+        <th class="table-trnobg"><font size={"4"}>reComputer R1000 Connect AWS IoT Core with N3uron</font></th>
     </tr>
-    <tr class="table-trnobg"></tr>
-  <tr class="table-trnobg">
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_n3uron/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-   <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_n3uron_aws/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
-  </tr>
- </table>
+      <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/n3uron/n3uron1.png" style={{width:300, height:'auto'}}/></div></td>
+    <td class="table-trnobg"><div style={{textAlign:'center'}}><img src="https://files.seeedstudio.com/wiki/reComputer-R1000/N3uron_AWS/AWS_recomputer_n3uron.png" style={{width:300, height:'auto'}}/></div></td>
+    </tr>
+      <tr class="table-trnobg"></tr>
+      <tr class="table-trnobg">
+        <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}> Easily create bidirectional data pipelines between OT and IT systems with N3uron, consolidating and visualizing operational data in a single source. Learn to install and access N3uron using reComputer R1000</font></td>
+        <td className="table-trnobg" style={{ textAlign: 'justify' }}><font size={"2"}>  In this tutorial, we will delve into the intricacies of interfacing between the N3uron Edge IIoT platform and AWS IoT Core.</font></td>
+      </tr>
+      <tr class="table-trnobg"></tr>
+    <tr class="table-trnobg">
+    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_n3uron/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    <td class="table-trnobg"><div class="get_one_now_container" style={{textAlign: 'center'}}><a class="get_one_now_item" href="https://wiki.seeedstudio.com/recomputer_r1000_n3uron_aws/" target="_blank" rel="noopener noreferrer"><strong><span><font color={'FFFFFF'} size={"4"}>📚 Learn More</font></span></strong></a></div></td>
+    </tr>
+  </table>
 </div>
 
 <div class="table-center">

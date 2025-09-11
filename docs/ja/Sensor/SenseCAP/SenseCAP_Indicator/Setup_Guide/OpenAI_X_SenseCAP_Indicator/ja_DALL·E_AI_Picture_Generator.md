@@ -2,66 +2,58 @@
 description: DALL·E AI画像生成器
 title: DALL·E AI画像生成器
 keywords:
-- SenseCAP Indicatorの使い方
+- Get Started with SenseCAP Indicator
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/SenseCAP_Indicator_DALL·E
 sidebar_position: 3
 last_update:
-  date: 05/15/2025
+  date: 5/31/2023
   author: Thomas
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
-
 # **SenseCAP Indicator X DALL·E**
 
-DALL-Eは、OpenAIによって開発された高度なAIモデルで、テキストによる説明から画像を生成することができます。DALL-Eは、膨大な画像データセットとそれに対応するテキスト説明でトレーニングされています。
+DALL-Eは、OpenAIが開発した高度なAIモデルで、テキストの説明から画像を生成することができます。DALL-Eは、画像とそれに対応するテキスト説明の膨大なデータセットで訓練されています。
 
-テキストプロンプトを与えると、DALL-Eはその説明に一致するユニークな画像を生成することができます。このモデルは、実在しない架空の生物、物体、シーンなどの画像を生成するという驚くべき能力を示しています。DALL-Eは、アート、デザイン、広告などのさまざまな分野での応用が期待されています。
+テキストプロンプトが与えられると、DALL-Eはその説明に一致するユニークな画像を生成することができます。このモデルは、現実世界には存在しない架空の生き物、物体、シーンの画像を生成するなど、印象的な能力を実証しています。DALL-Eは、アート、デザイン、広告など、さまざまな分野での応用が期待されています。
 
-Wi-FiとAPIキーを設定するには、ステップ1とステップ2に従ってください。
+Wi-FiとAPIキーを設定するために、ステップ1とステップ2に従ってください。
 
 
-**テキスト説明を入力して、自分だけの画像を作成しましょう！**
+**テキストの説明を与えて、あなただけの画像を作成しましょう！**
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL1.png"/></div>
 
 
-
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/DALL2.png"/></div>
 
-画像をクリックすると全画面表示になり、再度クリックすると戻ります。
+画像をクリックすると全体表示され、もう一度クリックすると戻ります。
 
 <div align="center"><img width={480} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/dall2.png"/></div>
 
 
-デモンストレーションされた機能に加えて、SenseCAPは完全にオープンソースのコードと詳細なチュートリアルを提供しています。詳細については[こちらをクリック](/ja/SenseCAP_Indicator_ChatGPT)してください。
-
+実証された機能に加えて、SenseCAPは完全にオープンソースのコードと詳細なチュートリアルを提供しています。詳細については[こちら](/SenseCAP_Indicator_ChatGPT)をクリックしてください。
 
 
 # **FAQ**
 
 
-
-**デバイスがWi-Fiに接続されているのに「Wi-Fi接続を確認してください」と表示される**
+**デバイスはWiFiに接続されているが、「wifi接続を確認してください」と表示される**
 
 - 別のWi-Fiに接続してみるか、ルーターの設定を確認してください。
 
 
-**Open AI APIキーを最初に設定してください**
+**最初にOpen AI APIキーを設定してください**
 
-- APIキーが設定されていないか、設定が失敗しています。再度設定してください。
+- APIキーが設定されていないか、設定に失敗しています。再度設定してください。
 
 
-**リクエスト失敗**
+**リクエストが失敗しました**
 
-- APIキーが正しいか確認してください。
+- APIキーが正しいかどうか確認してください。
 
 # **技術サポート**
 
-**SenseCAP Indicatorに関するサポートが必要ですか？私たちがサポートします！**
+**SenseCAP Indicatorでお困りですか？サポートいたします！**
 
 <div class="button_tech_support_container">
 <a href="https://discord.com/invite/QqMgVwHT3X" class="button_tech_support_sensecap"></a>

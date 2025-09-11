@@ -118,7 +118,7 @@ Hay dos formas para que los usuarios inicien sesión en la página de configurac
 **Acceso vía hotspot AP del dispositivo**
 
 1. Presiona el botón por 5s hasta que el indicador azul parpadee lentamente para entrar al modo de configuración.
-2. El nombre del hotspot AP es SenseCAP\_XXXXXX (dirección MAC de 6 cifras), la contraseña por defecto es 12345678; conecta tu computadora a este hotspot AP.
+2. El nombre del hotspot AP es SenseCAP_XXXXXX (dirección MAC de 6 cifras), la contraseña por defecto es 12345678; conecta tu computadora a este hotspot AP.
 
 <div align="center"><img width={200} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_LoRaWAN_Starter_Kit/Getting_Started/12.png" /></div>
 

@@ -23,7 +23,7 @@ last_update:
 
 SenseCAP Indicator 是一个强大的工具，通过 API 集成利用 OpenAI 的 ChatGPT 和 DALL·E 模型的功能。由人工智能领域的知名公司 OpenAI 开发，SenseCAP Indicator 让用户能够在各种场景中体验 AI 的迷人潜力。
 
-SenseCAP Indicator 集成了 [ChatGPT](https://platform.openai.com/docs/guides/chat) 和 [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI 服务。它作为一个多功能的智能助手，支持无缝交互，如实时对话、语言学习和翻译，以及引人入胜的文本游戏。
+SenseCAP Indicator 集成了 [ChatGPT](https://platform.openai.com/docs/guides/chat) 和 [DALL·E](https://platform.openai.com/docs/guides/images/introduction) AI 服务。它作为一个多功能智能助手，支持无缝交互，如实时对话、语言学习和翻译，以及引人入胜的文本游戏。
 
 开发者还可以利用 SenseCAP Indicator 将 AI 集成到他们的应用程序中，涵盖**智能家居控制**和 **IFTTT 自动化到传感器数据分析**等各种场景。
 
@@ -52,7 +52,7 @@ OpenAI 的 ChatGPT 和 DALL·E 模型与 SenseCAP Indicator 的集成提供以�
 1. 在界面上按下"ChatGPT"按钮。
 2. 在输入字段中输入您的文本提示，例如"什么是骆驼？"。
 3. 隐藏键盘（按 `√`）并点击"Generate"按钮。
-4. 等待响应，响应将显示在屏幕上。
+4. 等待响应，它将显示在屏幕上。
 
 <div align="center"><img width={680} src="https://files.seeedstudio.com/wiki/SenseCAP/SenseCAP_Indicator/GPT_REQ_WHAT_IS_CAM.JPG"/></div>
 
@@ -70,8 +70,8 @@ OpenAI 的 ChatGPT 和 DALL·E 模型与 SenseCAP Indicator 的集成提供以�
 
 需要更详细的信息来了解如何使用 ChatGPT 和 DALL·E 模型？
 
-- [SenseCAP_Indicator_ChatGPT 聊天完成](/cn/SenseCAP_Indicator_ChatGPT)
-- [SenseCAP_Indicator_DALL·E 图像生成](/cn/SenseCAP_Indicator_DALL·E)
+- [SenseCAP_Indicator_ChatGPT 聊天完成](/SenseCAP_Indicator_ChatGPT)
+- [SenseCAP_Indicator_DALL·E 图像生成](/SenseCAP_Indicator_DALL·E)
 
 # **技术支持**
 **需要 SenseCAP Indicator 的帮助？我们在这里为您提供支持！**

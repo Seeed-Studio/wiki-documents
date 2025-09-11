@@ -402,14 +402,14 @@ pip install python-can numpy
 mkdir -p ~/damiao/scripts
 ```
 
-- **Crea el archivo damiao\_motor.py**
+- **Crea el archivo damiao_motor.py**
 
 ```bash
 cd ~/damiao/scripts
 touch damiao_motor.py
 ```
 
-Copia el siguiente código en damiao\_motor.py
+Copia el siguiente código en damiao_motor.py
 
 <details>
 
@@ -1263,9 +1263,9 @@ class DamiaoPort:
 
 </details>
 
-- **Crea el archivo damiao\_test.py**
+- **Crea el archivo damiao_test.py**
 
-Copia el siguiente código en damiao\_test.py
+Copia el siguiente código en damiao_test.py
 
 <details>
 
@@ -1341,7 +1341,7 @@ if __name__ == "__main__":
 
 </details>
 
-- **Ejecuta damiao\_test.py**
+- **Ejecuta damiao_test.py**
 
 ```bash
 python damiao_test.py

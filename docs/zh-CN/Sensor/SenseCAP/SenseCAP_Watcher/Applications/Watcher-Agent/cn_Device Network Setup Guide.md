@@ -11,8 +11,8 @@ keywords:
 image: http://files.seeedstudio.com/wiki/Watcher_Agent/Watcher_Agent.webp
 slug: /cn/device_network_setup
 last_update:
-  date: 04/25/2024
-  author: Zeke
+  date: 08/20/2025
+  author: Twelve
 ---
 
 # 设备网络设置指南
@@ -58,8 +58,6 @@ last_update:
 - 输入所选 WiFi 网络的密码
 - 点击"Connect"按钮提交
 
-<div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/wifi%20config.jpg" style={{width:500, height:'auto'}}/></div> 
-
 :::note
 仅支持 2.4GHz 网络
 如果使用 iPhone 热点，请启用"最大兼容性"选项
@@ -82,23 +80,23 @@ WiFi 扫描页面可能需要大约 5 秒钟加载 - 请不要关闭或取消页
 <div style={{textAlign:'center'}}><img src="http://files.seeedstudio.com/wiki/Watcher_Agent/firmware/activation.jpg" style={{width:300, height:'auto'}}/></div> 
 
 步骤 2. 注册设备
-- 访问 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/home)
-- 根据此 [WiKi](https://wiki.seeedstudio.com/cn/Web_Control_Panel/) 配置您的 Agent
+- 访问 [SenseCraft AI-Watcher Agent 平台](https://sensecraft.seeed.cc/ai/watcher-agent)
+- 根据此 [WiKi](https://wiki.seeedstudio.com/Web_Control_Panel/) 配置您的 Agent
 
 ### 基本操作
 
 1. 开机
-   - 按住滚轮 3-5 秒，然后松开
+   - 按住滚轮 3-5 秒钟，然后松开
 
 2. 关机
    - 拔掉电源
-   - 按住滚轮 3 秒，然后松开
+   - 按住滚轮 3 秒钟，然后松开
 
 3. 重启
    - 使用针轻轻按下重置按钮
 
 4. 恢复出厂设置
-   - 按住滚轮 10 秒
+   - 按住滚轮 10 秒钟
 
 5. 重新进入网络配置模式
    - 当设备显示"Scanning Wi-Fi"状态时

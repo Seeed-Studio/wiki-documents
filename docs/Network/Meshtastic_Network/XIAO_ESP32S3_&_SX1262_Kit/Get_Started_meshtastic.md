@@ -44,8 +44,7 @@ Before using Meshtastic, the device needs to be connected first. There are two c
 
 ### Method 1: Connected to Expansion board
 
-After flashing firmware and downloading Meshtastic app, Expansion board would be a good tool
- for connection and additional application such as adding grove sensors and modules easily.
+After flashing firmware and downloading Meshtastic app, Expansion board would be a good tool for connection and additional application such as adding grove sensors and modules easily.
 
 **Step 1**: Ensure that the device to be connected (such as "device") is turned on and in a discoverable state. And open the Meshtastic app on your mobile phone.
 

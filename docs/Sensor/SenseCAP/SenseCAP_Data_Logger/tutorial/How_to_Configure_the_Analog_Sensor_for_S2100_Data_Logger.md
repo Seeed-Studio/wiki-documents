@@ -11,7 +11,9 @@ last_update:
 ---
 
 # Getting S2100 started with Analog Input Sensor
-Let's get started on learning how to use the S2100 with an analog input sensor. Once we've got that down, we'll move on to the basics of S2100's application. This will give you a good idea of how to connect your own customized sensor in the future. 
+
+Let's get started on learning how to use the S2100 with an analog input sensor. Once we've got that down, we'll move on to the basics of S2100's application. This will give you a good idea of how to connect your own customized sensor in the future.
+
 ## Get these items ready
 
 - Data logger
@@ -22,6 +24,7 @@ Let's get started on learning how to use the S2100 with an analog input sensor. 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/2.png"/></div>
 
 # Connect the Sensor Probe
+
 First, we need to do the wiring. Please follow the below steps.
 
 ## Disassemble the Data Logger
@@ -76,14 +79,13 @@ Wire sequence of Datalogger:
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/6.png"/></div>
 
-
 2. Connect the upper cover, rubber ring and screw cap in sequence
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/7.png"/></div>
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/8.png"/></div>
 
-3. **Tighten the screws and screw caps**** to check the waterproofing**. If the wire diameter is too thin, add waterproof tape for winding.
+3. **Tighten the screws and screw caps****to check the waterproofing**. If the wire diameter is too thin, add waterproof tape for winding.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/9.png"/></div>
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/10.png"/></div>
@@ -95,6 +97,7 @@ If the wire diameter is too small, it can be wrapped with waterproof tape, as sh
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/11.png"/></div>
 
 We've finished the wiring at this point. Now, let's set up the S2100 and configure it on our APP.
+
 # Setup the S2100
 
 ## Connect to Sensor to App
@@ -162,6 +165,7 @@ When we make a mistake or want to reset everything, we can click the button. The
 **\*Note:** The "Restore Factory" function can only reset the Basic Setting.
 
 ## Configure Analog Sensor via App
+
 Select the “Protocol” as “Analog Input”. Then set the following parameters in turn.
 
 <div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/21.png"/></div>
@@ -211,7 +215,6 @@ Finally, On the SenseCAP App or the website [http://sensecap.seeed.cc/](http://s
 
 Also, you can check the date on SenseCAP Mate APP.
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/28.png"/></div> 
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/28.png"/></div>
 
-<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/1.png"/></div> 
-
+<div align="center"><img width={400} src="https://files.seeedstudio.com/wiki/SenseCAP-S2110/Analog_Sensor/1.png"/></div>

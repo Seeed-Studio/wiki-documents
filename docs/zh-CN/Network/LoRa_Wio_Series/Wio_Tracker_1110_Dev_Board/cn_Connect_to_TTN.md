@@ -8,35 +8,34 @@ image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /cn/connect_wio_tracker_to_TTN
 sidebar_position: 3
 last_update:
-  date: 2023/10/23
+  date: 10/23/2023
   author: Jessie
 ---
 
 
-
-[The Things Stack(TTS)](https://www.thethingsnetwork.org/) 是一个 LoRaWAN® 网络服务器堆栈，是任何 LoRaWAN 解决方案的关键组件。在本章节中，我们将指导用户将 Wio Tracker 1110 开发板连接到 The Things Network。
+[The Things Stack(TTS)](https://www.thethingsnetwork.org/) 是一个 LoRaWAN® 网络服务器堆栈，是任何 LoRaWAN 解决方案的关键组件。在本章中，我们将指导用户将 Wio Tracker 1110 开发板连接到 The Things Network。
 
 ## 配置开发板
 
-在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置开发板的基本参数，详细信息请参考 [快速入门](https://wiki.seeedstudio.com/cn/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)。
+在连接到 TTS 之前，您需要在 SenseCAP Mate APP 上配置开发板的基本参数，详情请查看[快速入门](https://wiki.seeedstudio.com/Get_Started_with_Wio-Trakcer_1110/#configure-the-frequency-and-connect-to-the-gateway)。
 
-* 将平台设置为 TTN，然后复制 `Device EUI`/`APP EUI`/`APP Key`。
+- 将平台设置为 TTN，然后复制 `Device EUI`/`APP EUI`/`APP Key`。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tracker_appconfig.png" alt="pir" width={300} height="auto" /></p>
 
 ## 配置 The Things Stack
 
-### 第 1 步：创建应用程序
+### 步骤 1：创建应用程序
 
-导航到 Applications 页面，点击 "+Create application"。
+导航到应用程序页面，点击"+Create application"。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application.png" alt="pir" width={800} height="auto" /></p>
 
-输入一个 Application ID，点击 Create Application 保存更改。
+输入应用程序 ID，点击 Create Application 保存更改。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Wio-WM1110%20Dev%20Kit/create_application1.png" alt="pir" width={800} height="auto" /></p>
 
-### 第 2 步：注册设备
+### 步骤 2：注册设备
 
 粘贴 `Device EUI`/`APP EUI`/`APP Key`，根据您的设备选择 `frequency plan`，然后点击 `Register end device`。
 
@@ -46,13 +45,13 @@ last_update:
 `JoinEUI` 以前称为 `AppEUI`，它们是相同的。
 :::
 
-### 第 3 步：配置解码器
+### 步骤 3：配置解码器
 
-导航到 `Payload formatters`，选择 Formatter 类型为 `Custom Javasript formatter`，然后复制以下代码：
+导航到 `Payload formatters`，选择 Formatter type 为 `Custom Javasript formatter`，然后复制以下代码：
 
 <details>
 
-<summary>适用于 TTN</summary>
+<summary>For TTN</summary>
 
 ```cpp
 function decodeUplink (input) {
@@ -425,35 +424,35 @@ function getPositingStatus (str) {
     let status = getInt(str)
     switch (status) {
         case 0:
-            return {id:status, statusName:"定位成功。"}
+            return {id:status, statusName:"Positioning successful."}
         case 1:
-            return {id:status, statusName:"GNSS 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The GNSS scan timed out and failed to obtain the location."}
         case 2:
-            return {id:status, statusName:"Wi-Fi 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Wi-Fi scan timed out and failed to obtain the location."}
         case 3:
-            return {id:status, statusName:"Wi-Fi + GNSS 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 4:
-            return {id:status, statusName:"GNSS + Wi-Fi 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The GNSS + Wi-Fi scan timed out and failed to obtain the location."}
         case 5:
-            return {id:status, statusName:"蓝牙扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Bluetooth scan timed out and failed to obtain the location."}
         case 6:
-            return {id:status, statusName:"蓝牙 + Wi-Fi 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi scan timed out and failed to obtain the location."}
         case 7:
-            return {id:status, statusName:"蓝牙 + GNSS 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Bluetooth + GNSS scan timed out and failed to obtain the location."}
         case 8:
-            return {id:status, statusName:"蓝牙 + Wi-Fi + GNSS 扫描超时，未能获取位置。"}
+            return {id:status, statusName:"The Bluetooth + Wi-Fi + GNSS scan timed out and failed to obtain the location."}
         case 9:
-            return {id:status, statusName:"位置服务器解析 GNSS 位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the GNSS location."}
         case 10:
-            return {id:status, statusName:"位置服务器解析 Wi-Fi 位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the Wi-Fi location."}
         case 11:
-            return {id:status, statusName:"位置服务器解析蓝牙位置失败。"}
+            return {id:status, statusName:"Location Server failed to parse the Bluetooth location."}
         case 12:
-            return {id:status, statusName:"由于精度较差，解析 GNSS 位置失败。"}
+            return {id:status, statusName:"Failed to parse the GNSS location due to the poor accuracy."}
         case 13:
-            return {id:status, statusName:"时间同步失败。"}
+            return {id:status, statusName:"Time synchronization failed."}
         case 14:
-            return {id:status, statusName:"由于旧的星历表，未能获取位置。"}
+            return {id:status, statusName:"Failed to obtain location due to the old Almanac."}
     }
     return getInt(str)
 }
@@ -583,28 +582,28 @@ function getEventStatus (str) {
         }
         switch (i){
             case 0:
-                event.push({id:1, eventName:"开始移动事件。"})
+                event.push({id:1, eventName:"Start moving event."})
                 break
             case 1:
-                event.push({id:2, eventName:"结束移动事件。"})
+                event.push({id:2, eventName:"End movement event."})
                 break
             case 2:
-                event.push({id:3, eventName:"静止事件。"})
+                event.push({id:3, eventName:"Motionless event."})
                 break
             case 3:
-                event.push({id:4, eventName:"震动事件。"})
+                event.push({id:4, eventName:"Shock event."})
                 break
             case 4:
-                event.push({id:5, eventName:"温度事件。"})
+                event.push({id:5, eventName:"Temperature event."})
                 break
             case 5:
-                event.push({id:6, eventName:"光线事件。"})
+                event.push({id:6, eventName:"Light event."})
                 break
             case 6:
-                event.push({id:7, eventName:"SOS 事件。"})
+                event.push({id:7, eventName:"SOS event."})
                 break
             case 7:
-                event.push({id:8, eventName:"单击事件。"})
+                event.push({id:8, eventName:"Press once event."})
                 break
         }
     }
@@ -651,19 +650,18 @@ function loraWANV2PositiveDataFormat (str, divisor = 1) {
     return parseInt(str2, 2) / divisor
 }
 ```
+
 </details>
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/wio_tracker/c-decoder.png" alt="pir" width={800} height="auto" /></p>
 
+### 步骤 4：检查数据
 
-### 第4步：检查数据
+当设备尝试连接网络时，呼吸灯会闪烁。如果设备成功加入网络，呼吸灯会快速闪烁，并会发出轻快愉悦的旋律。
 
-当设备尝试连接到网络时，呼吸灯会闪烁。如果设备成功加入网络，呼吸灯会快速闪烁，并伴随一段轻快的旋律。
-
-然后，您可以在 TTS 控制台上检查数据。
+然后您可以在 TTS 控制台上检查数据。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/data_check.png" alt="pir" width={800} height="auto" /></p>
-
 
 ## 资源
 

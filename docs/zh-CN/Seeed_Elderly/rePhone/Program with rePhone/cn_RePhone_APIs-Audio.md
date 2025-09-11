@@ -86,7 +86,7 @@ LAudio.playFile(StorageEnum drv, wchar_t* songName)
 
 -   ***参数***
     -   *drv* - 存储类型，可以是 `storageSD`（SD 卡）或 `storageFlash`（闪存）
-    -   *songName* - 音频文件路径，编码可以是 ascii (char\*) 或 unicode (wchar\_t\*)
+    -   *songName* - 音频文件路径，编码可以是 ascii (char\*) 或 unicode (wchar_t\*)
 
 
 -   ***返回值***

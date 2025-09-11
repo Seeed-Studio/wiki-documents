@@ -1,41 +1,38 @@
 ---
-description: SenseCAP T1000 トラッカーと ThingsBoard の統合
-title: ThingsBoard 統合 (via TTS)
+description: SenseCAP T1000 tracker と Thingsboard の統合
+title: ThingsBoard統合（TTS経由）
 keywords:
 - ThingsBoard
 - SenseCAP_T1000_tracker
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/thingsboard_integrated
 last_update:
-  date: 05/15/2025
+  date: 8/20/2024
   author: Jessie
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-[ThingsBoard](https://thingsboard.io/) は、IoT プロジェクトの迅速な開発、管理、スケーリングを可能にするオープンソースの IoT プラットフォームです。私たちの目標は、IoT アプリケーションのサーバーサイドインフラストラクチャを提供する、すぐに使える IoT クラウドまたはオンプレミスソリューションを提供することです。
 
-この章の内容では、[SenseCAP T1000 トラッカー](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html) を TTN を介して ThingsBoard に接続する方法をユーザーに案内します。
+[ThingsBoard](https://thingsboard.io/)は、IoTプロジェクトの迅速な開発、管理、スケーリングを可能にするオープンソースのIoTプラットフォームです。私たちの目標は、IoTアプリケーション用のサーバーサイドインフラストラクチャを提供する、すぐに使えるIoTクラウドまたはオンプremisesソリューションを提供することです。
+
+この章の内容では、[SenseCAP T1000 Tracker](https://www.seeedstudio.com/SenseCAP-Card-Tracker-T1000-A-p-5697.html)をTTN経由でThingsBoardに接続する方法をユーザーに案内します。
 
 ## はじめに
 
-セットアップを開始する前に、まず [SenseCAP T1000 を TTS に接続する](https://wiki.seeedstudio.com/ja/SenseCAP_T1000_tracker_TTN) を確認して、SenseCAP T1000 トラッカーを TTS に接続してください。
+セットアップを開始する前に、[SenseCAP T1000をTTSに接続](https://wiki.seeedstudio.com/SenseCAP_T1000_tracker_TTN)を確認して、まずSenseCAP T1000 TrackerをTTSに接続してください。
 
-## ThingsBoard の設定
+## ThingsBoardの設定
 
-まず、[ThingsBoard](https://thingsboard.cloud/) にアカウントを作成してください。
+開始するには、[ThingsBoard](https://thingsboard.cloud/)でアカウントを作成してください。
 
 ### コンバーターの作成
 
-最初に、TTS からメッセージを受信するために使用される Uplink Data Converter を作成する必要があります。
+まず、TTSからメッセージを受信するために使用されるUplink Data Converterを作成する必要があります。
 
-`Data converters` に移動し、`Create new converter` をクリックします。
+`Data converters`に移動し、`Create new converter`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/converter.png" alt="pir" width={800} height="auto" /></p>
 
-コンバーターに名前を付け、`Debug mode` を有効にし、以下のコードをコピーして `Add` をクリックします。
+コンバーターに名前を付け、`Debug mode`を有効にし、以下のコードをコピーして`Add`をクリックします。
 
 ```cpp
 var data = decodeToJson(payload);
@@ -84,7 +81,7 @@ return result;
 
 ### 統合の追加
 
-`Integration` に移動し、`Add Integration` をクリックします。
+`Integration`に移動し、`Add Integration`をクリックします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/integrate1.png" alt="pir" width={800} height="auto" /></p>
 
@@ -93,52 +90,52 @@ return result;
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/tts-inte.png" alt="pir" width={800} height="auto" /></p>
 
-`Select existing` を選択し、先ほど作成したものを選択します。
+`Select existing`を選択し、先ほど作成したものを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/choose-converter.png" alt="pir" width={800} height="auto" /></p>
 
-`Downlink data converter` はスキップします。
+`Downlink data converter`をスキップします。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/skip-down.png" alt="pir" width={800} height="auto" /></p>
 
-**Region**: TTS 内でアプリケーションが登録された地域<br/>
-**Username**: TTS のユーザー名<br/>
-**Password**: TTS のパスワード<br/>
-**Use API v3**: `Enable` に設定
+**Region**: TTSでアプリケーションが登録された地域<br/>
+**Username**: TTSからのユーザー名<br/>
+**Password**: TTSからのパスワード<br/>
+**Use API v3**: `Enable`に設定
 
 :::tip
-情報は TTS MQTT 統合で確認できます。
+情報はTTSのMQTT統合で確認できます。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/createNEW.png" alt="pir" width={800} height="auto" /></p>
 :::
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-inte2.png" alt="pir" width={800} height="auto" /></p>
 
-### データビュー
+### データ表示
 
-`Entities` -> `Devices` に移動すると以下が確認できます：
+`Entities` -> `Devices`に移動すると、以下が確認できます：
 
-* 新しいデバイスが ThingsBoard に登録されている
-* `Latest Telemetry` セクションでデバイスからの更新データが確認できる
+- 新しいデバイスがThingsBoardに登録されました
+- `Latest Telemetry`セクションでデバイスからの更新データが表示されます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/telemetry.png" alt="pir" width={800} height="auto" /></p>
 
-### Dashboard の追加
+### ダッシュボードの追加
 
-`Dashboards` に移動し、`Create new dashboard` をクリックします。
+`Dashboards`に移動し、`Create new dashboard`をクリックします。
 
-ダッシュボードのタイトルを入力し、`Next` をクリックします。
+ダッシュボードのタイトルを入力し、`Next`をクリックします。
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-dash.png" alt="pir" width={800} height="auto" /></p>
 
-`widget` を追加し、追加するウィジェットを選択します。
+`widget`を追加し、追加するウィジェットを選択します。
 
-### ロケーションマップ
+### 位置マップ
 
-`map` ウィジェットを選択します。
+`map`ウィジェットを選択します。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/map1.png" alt="pir" width={800} height="auto" /></p>
 
 **Type**: `Device`<br/>
-**Device**: 作成したデバイス<br/>
+**Device**: 作成したデバイス。<br/>
 **Data key**: `latitude`, `longitude`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-map.png" alt="pir" width={800} height="auto" /></p>
@@ -149,18 +146,18 @@ return result;
 
 #### 温度
 
-**Device**: 作成したデバイス<br/>
+**Device**: 作成したデバイス。<br/>
 **Data key**: `air_temperature`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-temp.png" alt="pir" width={800} height="auto" /></p>
 
 #### バッテリー
 
-**Device**: 作成したデバイス<br/>
+**Device**: 作成したデバイス。<br/>
 **Data key**: `battery`
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/add-battery.png" alt="pir" width={800} height="auto" /></p>
 
-以下は基本的な例です。独自のダッシュボードをカスタマイズすることができます。
+これは基本的な例です。独自のダッシュボードをカスタマイズできます。
 
 <p style={{textAlign: 'center'}}><img src="https://files.seeedstudio.com/wiki/SenseCAP/Tracker/dashboard3.png" alt="pir" width={800} height="auto" /></p>

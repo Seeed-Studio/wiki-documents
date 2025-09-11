@@ -2,301 +2,279 @@
 description: SenseCAP M4 クイックスタート
 title: SenseCAP M4 クイックスタート
 keywords:
-- SenseCAP ネットワーク
+- SenseCAP Network
 image: https://files.seeedstudio.com/wiki/wiki-platform/S-tempor.png
 slug: /ja/Network/SenseCAP_Network/SenseCAP_M4_Square-Flux_gateway/SenseCAP_M4_Quick_Start
 last_update:
-  date: 05/15/2025
+  date: 02/14/2023
   author: Matthew
 ---
-:::note
-この文書は AI によって翻訳されています。内容に不正確な点や改善すべき点がございましたら、文書下部のコメント欄または以下の Issue ページにてご報告ください。  
-https://github.com/Seeed-Studio/wiki-documents/issues
-:::
 
-**SenseCAP M4 Square クイックスタート**
-==================================
+# SenseCAP M4 Square クイックスタート
 
-**SenseCAP M4 Square** は、次世代計算ネットワーク（FluxNode）を最も簡単に展開する方法を提供します。Linuxコマンド不要、環境構築不要、わずか4ステップで展開が完了します。
+**SenseCAP M4 Square** は、次世代計算ネットワーク（FluxNode）をデプロイする最も簡単な方法を提供します。Linuxコマンドは不要、環境構築も不要で、わずか4ステップでデプロイメントが完了します。
 
-**前提条件**
+## 前提条件
 
-*   CUMULUS FluxNode を展開するための十分なアップロード速度のネットワーク **(最低25Mbpsのアップロード速度)**
-    
-*   新しい CUMULUS FluxNode が作成されていること
-    
+- CUMULUS FluxNodeをデプロイするのに十分なネットワークアップロード速度 **（最低25Mbpsアップロード）**
+- 新しいCUMULUS FluxNodesが作成済み
 
-必要なもの
-=============
+## 必要なもの
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start.png" alt="quick-start" width={600} height="auto" /></div>
 
-Flux CUMULUS ノードのステーキング
-=======================
+## Flux CUMULUSノードのステーキング
 
-このチュートリアルでは Binance を例に説明します。
+このチュートリアルではBinanceを例に説明します
 
-ステップ1 取引所で Flux を購入する
-------------------------------------
+### ステップ1 取引所でFluxを購入する
 
-1 [Binance アプリ](https://www.binance.com/zh-CN/download) をダウンロードし、アカウントを登録します。
+1. [Binance App](https://www.binance.com/zh-CN/download)をダウンロードしてアカウントを登録します
 
-2 Flux は法定通貨で購入できません。まず USDT を購入し、次に USDT を Flux に変換してください。
+2. Fluxは法定通貨で直接購入できません。まずUSDTを購入し、その後USDTをFluxに変換してください
 
-4 取引ページで、スポットを選択し、市場で FLUX/USDT を選択します。
+3. トレードページで、現物を選択し、マーケットでFLUX/USDTを選択します
 
-5 USDT の数量を入力し、変換された Flux が 1000 を超えることを確認します。
+4. USDTの数量を入力し、変換されるFluxが1000を超えることを確認します
 
-6 購入ボタンをクリックします。これで Flux の購入が成功しました。
+5. 購入ボタンをクリックします。これでfluxの購入が完了しました
 
-![](https://www.sensecapmx.com/wp-content/uploads/2023/01/Pasted-into-Stake-Flux-CUMULUS-Node.jpg)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/01/Pasted-into-Stake-Flux-CUMULUS-Node.jpg" alt="stake-flux" width={600} height="auto" /></div>
 
-ステップ2 Zelcore アプリをダウンロードしてアカウントを登録する
---------------------------------------------------------
+### ステップ2 Zelcore Appをダウンロードしてアカウントを登録する
 
-1 [Zelcore アプリ](https://zelcore.io/) をダウンロードし、Zelcore アカウントにログインします。
+1. [Zelcore App](https://zelcore.io/)をダウンロードしてZelcoreアカウントにログインします
 
-2 ポートフォリオページで、「資産を追加」ボタンをクリックして FLUX BSC 資産を追加します（支払いポートフォリオ）。
+2. ポートフォリオページで、Add AssetsボタンをクリックしてFLUX BSCアセット（Paymentsポートフォリオ）を追加します
 
-![](https://www.sensecapmx.com/wp-content/uploads/2023/01/Pasted-into-Stake-Flux-CUMULUS-Node-1.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2023/01/Pasted-into-Stake-Flux-CUMULUS-Node-1.png" alt="zelcore" width={600} height="auto" /></div>
 
-ステップ3 Binance から Zelcore ウォレットに Flux を送金する
---------------------------------------------------
+### ステップ3 BinanceからZelcoreウォレットにFluxを出金する
 
-1 Binance アプリを開き、ウォレットページにアクセスします。
+1. Binance Appを開いてウォレットページにアクセスします
 
-2 Flux を選択し、「出金」をクリックして「暗号ネットワーク経由で送信」を選択します。
+2. Fluxにアクセスし、Withdrawをクリックして「Send via Crypto Network」を選択します
 
-![](https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_342796_dUNV1mJGFQqnbdUX_1672995944?w=1200&h=1200)
+<div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_342796_dUNV1mJGFQqnbdUX_1672995944?w=1200&h=1200" alt="binance" width={600} height="auto" /></div>
 
-3 出金情報を入力して送信します。
+3. 出金情報を入力して送信します
 
-*   アドレス: Zelcore アプリを開き、FLUX BSC の受信アドレスをコピーして Binance に貼り付けます。
-    
+- アドレス：Zelcore Appを開き、FLUX BSC受信アドレスをコピーしてBinanceに貼り付けます
 
-![](https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_846590_gzvPZu5rXihuT8F5_1672996316?w=1280&h=1268.796498905908)
+<div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_846590_gzvPZu5rXihuT8F5_1672996316?w=1280&h=1268.796498905908" alt="withdraw" width={600} height="auto" /></div>
 
-*   ネットワーク: BB スマートチェーン (BEP20) を選択します。
-    
-*   金額: 1000+ Flux
-    
-*   送信元: スポット＆ファンディングウォレット
-    
+- ネットワーク：BB Smart Chain (BEP20)を選択します
+- 数量：1000+ flux
+- 送信元：Spot&Funding Wallet
 
-![](https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_462161_Dwa_CwJs_TZZu9PS_1672996442?w=1200&h=1200)
+<div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_462161_Dwa_CwJs_TZZu9PS_1672996442?w=1200&h=1200" alt="send" width={600} height="auto" /></div>
 
-4 出金情報を確認し、Zelcore に送信します。
+4. 出金情報を確認してZelcoreに送信します
 
-ステップ4 新しい Flux Cumulus ノードを作成する
-------------------------------------
+### ステップ4 新しいFlux Cumulusノードを作成する
 
-1 Zelcore アプリを開き、FLUX BSC 資産（支払いポートフォリオ）に Flux が送信されていることを確認します。
+1. Zelcore Appを開き、FluxがFLUX BSCアセット（Paymentsポートフォリオ）に送信されたことを確認します
 
-2 アプリページにアクセスし、Fusion を開いて FLUX BSC を Flux（支払いポートフォリオ）にスワップします。
+2. Appsページにアクセスし、FusionでFLUX BSCをFlux（Paymentsポートフォリオ）にスワップします。
 
-*   売却資産: FLUX BSC を選択
-    
-*   購入資産: FLUX を選択
-    
+- 売却アセット：FLUX BSCを選択
+- 購入アセット：FLUXを選択
 
-注意: スワップ手数料を支払うために十分な BNB を確保してください。
+注意：スワップ手数料を支払うのに十分なBNBがあることを確認してください
 
-![](https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_153450_KYFKcuB_o6xATDxg_1672996615?w=1200&h=1200)
+<div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_153450_KYFKcuB_o6xATDxg_1672996615?w=1200&h=1200" alt="swap" width={600} height="auto" /></div>
 
-3 支払いポートフォリオから別のポートフォリオ（例: マイニングの Flux 資産）に Flux を送信します。
+3. PaymentsポートフォリオからMiningのFluxアセットなど、他のポートフォリオにFluxを送信します
 
-4 これで、SenseCAP M4 Square 上で新しい Flux Cumulus ノードを展開できます！
+4. これでSenseCAP M4 Sqaureで新しいFlux Cumulusノードをデプロイできます！
 
-![](https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_337290_CDU9M2a95R8QqPsg_1672997135?w=1280&h=1277.1806167400882)
+<div style={{textAlign: 'center'}}><img src="https://wdcdn.qpic.cn/MTMxMDI3MDIxMzUyMTM0NjA_337290_CDU9M2a95R8QqPsg_1672997135?w=1280&h=1277.1806167400882" alt="deploy" width={600} height="auto" /></div>
 
-SenseCAP M4 Square 上で FluxNode を展開する
-=====================================
+## SenseCAP M4 Square に FluxNode をデプロイする
 
-**ステップ1 電源を入れてインターネットに接続する**
-------------------------------------------
+### ステップ1 電源投入とインターネット接続
 
-1 付属の 12V/2A 電源アダプターを DC-IN 電源コネクターに接続します。
+1. 付属の12V/2A電源アダプターをDC-IN電源コネクターに接続します。
 
-2 ネットワークケーブルを Ethernet2 に接続します。
+2. ネットワークケーブルをEthernet2に接続します。
 
-3 デバイスは自動的にセットアップを行います。L3 がオレンジ色で点灯している場合、セットアップとインターネット接続が成功しています。
+3. デバイスは自動的にセットアップを行います。L3が安定したオレンジ色に点灯すると、セットアップとインターネット接続が成功したことを示します。
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-1.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-1.png" alt="power" width={600} height="auto" /></div>
 
-**ステップ2 SenseCAP Hotspot アプリと Zelcore アプリをインストールする**
-------------------------------------------------------
+### ステップ2 SenseCAP Hotspot App と Zelcore App のインストール
 
-1 SenseCAP Hotspot アプリはデバイスのセットアップと管理用に設計されています。以下の QR コードをスキャンして SenseCAP Hotspot アプリをインストールしてください。
+1. SenseCAP Hotspot App はデバイスのセットアップと管理用に設計されています。以下のQRコードをスキャンしてSenseCAP Hotspot App をインストールしてください。
 
-2 メールで SenseCAP アカウントを登録するか、直接ログインしてください。
+2. メールアドレスでSenseCAPアカウントにサインアップするか、直接ログインしてください。
 
-[![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-2.png)](https://app.sensecapmx.com/)
+<div style={{textAlign: 'center'}}><a href="https://app.sensecapmx.com/"><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-2.png" alt="app" width={600} height="auto" /></a></div>
 
-3 Zelcore アプリは Flux によってリリースされ、デジタル資産、**FluxNode**、および情報を見つけ、管理し、取引し、真に所有するためのものです。以下の画像をクリックして Zelcore アプリをインストールしてください。
+3. Zelcore App は Flux によってリリースされ、デジタル資産、**FluxNode**、情報の検索、管理、取引、真の所有を可能にします。以下の画像をクリックしてZelcore App をインストールしてください。
 
-[![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-3.png)](https://zelcore.io/)
+<div style={{textAlign: 'center'}}><a href="https://zelcore.io/"><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-3.png" alt="zelcore" width={600} height="auto" /></a></div>
 
-**ステップ3 SenseCAP M4 をセットアップする**
-----------------------------
+### ステップ3 SenseCAP M4 のセットアップ
 
-1 デバイスの左下にあるピンを押し、エンドキャップを持ち上げて取り外します。
+1. デバイス左下のシンブルを押すと、エンドキャップが持ち上がるので取り外します。
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-4.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-4.png" alt="setup1" width={600} height="auto" /></div>
 
-2 B1 ボタンを 5 秒間押し続け、L2 インジケーターが青く点滅するまで待ち、Bluetooth 設定モードをオンにします。
+2. B1ボタンを5秒間押し、L2インジケーターが青色に点滅するまで待ち、Bluetooth設定モードをオンにします。
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-5.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-5.png" alt="setup2" width={600} height="auto" /></div>
 
-3 SenseCAP Hotspot アプリで Flux を選択し、セットアップをクリックします。
+3. SenseCAP Hotspot App でFluxを選択し、Setupをクリックします
 
-*   Bluetooth 経由でデバイスをスキャン
-    
-*   デバイスを選択して接続
-    
+- Bluetooth経由でデバイスをスキャン
+- 接続するデバイスを選択
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start.jpg)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start.jpg" alt="setup3" width={600} height="auto" /></div>
 
-4 アプリがデバイスに正常に接続されました。次に、インストールボタンをクリックしてデバイスに Flux dApp をインストールします。
+4. アプリがデバイスに正常に接続されました。installボタンをクリックしてデバイスにflux dAppをインストールします。
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-7.png)
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-7.png" alt="setup4" width={600} height="auto" /></div>
 
-**ステップ4 Flux ノードを展開する**
---------------------------
+### ステップ4 Flux Node のデプロイ
 
-1 Flux dApp のインストールが完了したら、[開く] ボタンをクリックして CUMULUS FluxNode の展開を開始します。
+1. Flux dApp のインストールが完了しました。Openボタンをクリックして、CUMULUS FluxNodeのデプロイを開始します。
 
-**注意: CUMULUS FluxNode のセットアップには担保として 1000 Flux を購入し、Zelcore Flux ウォレットに転送してください。**
+**注意：CUMULUS FluxNodeのセットアップには、担保として1000 Fluxを購入し、Zelcore Fluxウォレットに転送してください。**
 
 **ガイド**
 
-*   [FluxNode セットアップガイド](https://medium.com/@mmalik4/flux-light-node-setup-as-easy-as-it-gets-833f17c73dbb)
-    
-*   [Flux Light Node セットアップビデオチュートリアルガイド（Zelcore のセットアップと Flux の入金チュートリアルは 8:07 から 12:30 まで）](https://www.youtube.com/watch?v=RT1uaSrurv4)
+- [FluxNode SetUp Guide](https://medium.com/@mmalik4/flux-light-node-setup-as-easy-as-it-gets-833f17c73dbb)
+- [Flux Light Node Setup Video Tutorial Guide (Setup Zelcore& Deposit Flux tutorial is from 8:07 to 12:30)](https://www.youtube.com/watch?v=RT1uaSrurv4)
 
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-8.png" alt="deploy1" width={600} height="auto" /></div>
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-8.png)
+2. Zelcore APP からIdentity Key、Collateral TX ID、Output Index、Zel ID、Kadena Addressを入力してください。詳細についてはZelcoreをダウンロードしてください。
 
-2 ZelcoreアプリからIdentity Key、Collateral TX ID、Output Index、Zel ID、Kadena Addressを入力してください。詳細についてはZelcoreをダウンロードしてください。
+> **Identity Key**: Apps をクリック > Apps ページで FluxNodes をクリック > あなたの FluxNode をクリック > 展開メニューで edit をクリック > Identity Key をクリックしてコピー
+>
+> **Collateral TX ID**: Apps をクリック > Apps ページで FluxNodes をクリック > あなたの FluxNode をクリック > 展開メニューで Edit をクリック > Collateral TX ID をクリックしてコピー
+>
+> **Output Index**: Apps をクリック > Apps ページで FluxNodes をクリック > あなたの FluxNode をクリック > 展開メニューで Edit をクリック > Output Index をクリックしてコピー
+>
+> **Zel ID**: Apps をクリック > Apps ページで Zel ID をクリック > QR コードをクリックして Zel ID をコピー
+>
+> **Kadena Address**: NIMBUS と STRATUS は追加の KDA 報酬を得るために Kadena アドレスを入力できます。CUMULUS をデプロイする場合は入力不要です。Portfolio をクリック > ページで Show Zero Sum をクリック > Kadena をクリック > Details をクリック > Receive アクションをクリック > QR コードをクリックして Kadena アドレスをコピー
 
->     **Identity Key**：Appsをクリック > AppsページでFluxNodesをクリック > あなたのFluxNodeをクリック > 展開メニューで編集をクリック > Identity Keyをクリックしてコピー
-> 
->     **Collateral TX ID**：Appsをクリック > AppsページでFluxNodesをクリック > あなたのFluxNodeをクリック > 展開メニューで編集をクリック > Collateral TX IDをクリックしてコピー
-> 
->     **Output Index**：Appsをクリック > AppsページでFluxNodesをクリック > あなたのFluxNodeをクリック > 展開メニューで編集をクリック > Output Indexをクリックしてコピー
-> 
->     **Zel ID**：Appsをクリック > AppsページでZel IDをクリック > QRコードをクリックしてZel IDをコピー
-> 
->     **Kadena Address**：NIMBUSおよびSTRATUSは追加のKDA報酬を得るためにKadenaアドレスを入力できます。CUMULUSをデプロイする場合は入力不要です。Portfolioをクリック > ページでShow Zero Sumをクリック > Kadenaをクリック > Detailsをクリック > Receiveアクションをクリック > QRコードをクリックしてKadenaアドレスをコピー
+3. Start Deployをクリックすると、SenseCAP M4が自動的にFluxNodeをデプロイします。デプロイ時間はデバイスのネットワークに依存するため、デバイスが良好なネットワークを持っていることを確認してください。アプリはSenseCAP M4から切断するか、アプリでデプロイの進行状況を監視し続けることができます。
 
-3 「Start Deploy」をクリックすると、SenseCAP M4が自動的にFluxNodeをデプロイします。デプロイ時間はデバイスのネットワークに依存します。デバイスが良好なネットワークを持っていることを確認してください。アプリはSenseCAP M4から切断するか、アプリでデプロイ進行状況を監視し続けることができます。
+**注意：デバイスのネットワークがパブリックIPを持ち、ダウンロード速度 >= 25 Mb/s、アップロード速度 >= 25 Mb/s であることを確認してください。そうでなければ、Fluxベンチマークが失敗します。**
 
-**注意：デバイスネットワークがパブリックIPを持ち、DownloadSpeed >= 25 Mb/sおよびUploadSpeed >= 25 Mb/sであることを確認してください。そうでない場合、Fluxベンチマークは失敗します。**
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-13.png" alt="deploy2" width={600} height="auto" /></div>
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-13.png)
+4. Fluxチェーンの同期が開始されたら、Zelcore Appに移動し、FluxNodeにパブリックIPと名前を入力してください。その後、Startボタンをクリックして FluxNode を開始します。
 
-4 Fluxチェーンの同期を開始するとき、Zelcoreアプリに移動し、FluxNodeにパブリックIPと名前を入力してください。その後、StartボタンをクリックしてFluxNodeを開始します。
+FluxNodeが正常に動作し、ベンチマークに合格している場合、FluxNodeのステータスがStartedに変更されるまで1ブロックのマイニングが必要で、Confirmedになるまで1-10ブロック（2〜20分）かかります。Confirmedが最終ステータスです。ノードがConfirmedになったかどうかは、ホームページを更新してFluxOSで確認できます。Statusページに表示されます。
 
-FluxNodeが正常に動作し、ベンチマークを通過している場合、FluxNodeのステータスが「Started」に変わるまで1ブロックがマイニングされ、最終的なステータス「Confirmed」になるまで1〜10ブロック（2〜20分）が必要です。Confirmedは最終ステータスです。FluxOSのホームページを更新してノードがConfirmedになったかを確認できます。ステータスページに表示されます。
+<div style={{textAlign: 'center'}}><img src="https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-14.png" alt="deploy3" width={600} height="auto" /></div>
 
-![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-14.png)
-
-**高度な機能**
-=====================
+## 高度な機能
 
 UPnP設定
-------------
+-------
 
-UPnP（Universal Plug and Play）は、ネットワーク上のデバイスがルーターに対して着信トラフィック用のポートを開くようリクエストすることを可能にします。ルーターがUPnPをサポートし、適切なUPnP標準に準拠している場合、UPnPは簡単な解決策となります。
+UPnPはユニバーサルプラグアンドプレイの略で、基本的にネットワーク上のデバイスがルーターに対して受信トラフィック用のポートを開くよう要求することを可能にします。UPnPは、ルーターがサポートされており、適切なUPnP標準に準拠している場合、より簡単なソリューションとなります。
 
-単一の外部IPアドレスで複数のSenseCAP M4 Squaresをデプロイしたい場合、**デバイスが接続されているルーターがUPnPをサポートし、UPnPをオンにすることを確認してください。**
+単一の外部IPアドレスに複数のSenseCAP M4 Squareをデプロイしたい場合は、**デバイスが接続されているルーターがUPnPをサポートし、それを有効にしていることを確認してください。**
 
-注意：単一の外部IPアドレスは**最大8つのFluxNodesをデプロイ可能**です。
+注意：単一の外部IPアドレスは**最大8つのFluxNodeのデプロイをサポート**します。
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-16.png)
 
-*   1つのSenseCAP M4 SquareがFluxNodeをデプロイ済み
-*   2 SenseCAP HotspotアプリでBluetooth経由でM4に接続
-*   3 設定アイコンをクリックし、UPnP設定を選択
-*   4 UPnPを有効にし、使用されていないポートを選択
-*   5 確認をクリックして設定を送信
-*   6 M4のUPnPが有効になり、UPnPステータスが「ENABLE」と表示される
+- 1 SenseCAP M4 SquareにFluxNodeがデプロイされています
+
+- 2 SenseCAP Hotspot AppでBluetoothを介してM4に接続
+
+- 3 設定アイコンをクリックしてUPnP設定
+
+- 4 UPnPを有効にし、使用されていないポートを選択
+
+- 5 確認をクリックして設定を送信
+
+- 6 これでM4のUPnPが有効になり、UPnPステータスがENABLEになります
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-1.jpg)
 
 Fractus設定
----------------
+----------
 
-FractusノードはFluxネットワークストレージを増加させるために生まれました。Fractusノードは、少なくとも10TBのストレージを提供するCumulus階層のノードです。Fractusノードは、ネイティブのFluxブロック報酬に加えて15%の追加Fluxを獲得します。
+FractusノードはFluxネットワークストレージを増加させるために生まれました。Fractusノードは少なくとも10TBのストレージを提供するCumulusティアノードです。Fractusノードは、ネイティブFluxブロック報酬に加えて追加で15%のFluxを獲得します。
 
-Fractusノードを実行するための最低要件：
+Fractusノードを実行するための最小要件：
 
-*   1000 Fluxの担保。
-*   2つのCPUコア。
-*   4つのCPUスレッド。
-*   240 CPUイベント/秒。
-*   単一パーティションで9250 GBのストレージ（RAID許可）。
-*   80MB/sのディスク書き込み速度。
-*   100Mb/sのダウンロード/アップロード速度。
+- 1000 Fluxの担保。
+- 2 CPUコア。
+- 4 CPUスレッド。
+- 240 CPUイベント/秒。
+- 単一パーティションに9250 GBのストレージ（Raid許可）。
+- 80MB/sのディスク書き込み速度。
+- 100Mb/sのダウンロード/アップロード。
 
 ![](https://wdcdn.qpic.cn/MTMxMDI3MDEwODc4Njk2MTk_47467_AZXsjpYcOQweNFnJ_1675844077?w=1200&h=654)
 
-*   1つのSenseCAP M4 SquareがFluxNodeをデプロイ済み
-*   2 10TBのドライブをSenseCAP M4 SquareのUSB3.1に接続
-*   3 SenseCAP HotspotアプリでBluetooth経由でM4に接続
-*   4 設定アイコンをクリックし、Fractus設定を選択
-*   5 Fractusをオンにして、確認をクリックして設定を送信
-*   6 M4のFractusが有効になり、Fractusステータスが「True」と表示される
+- 1 SenseCAP M4 SquareにFluxNodeがデプロイされています
+- 2 10TBドライブをSenseCAP M4 SquareのUSB3.1に接続
+- 3 SenseCAP Hotspot AppでBluetoothを介してM4に接続
+- 4 設定アイコンをクリックしてFractus設定
+- 5 Fractusをオンにし、確認をクリックして設定を送信
+- 6 これでM4のFractusが開き、FractusステータスがTrueになります
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/稿定设计导出-20230220-153442.jpg)
 
-Dashboardに追加
-----------------
+ダッシュボードに追加
+-----------
 
-SenseCAP M4 Squareに関する詳細情報については、SenseCAPダッシュボードに追加してください。
+SenseCAP M4 Squareの詳細情報については、SenseCAPダッシュボードに追加してください。
 
-*   直接追加：FluxNodeページで+アイコンをクリックし、カスタマイズされた名前とSN（デバイスラベル内）を入力してダッシュボードにデバイスを追加
-*   Bluetooth経由で追加：M4がFluxNodeをデプロイ済みの場合、SenseCAP HotspotアプリでBluetooth経由でM4に接続し、ダッシュボードに追加
+- 直接追加：FluxNodeページで、+アイコンをクリックし、カスタマイズした名前とSN（デバイスラベル内）を入力してデバイスをダッシュボードに追加
+
+- Bluetooth経由で追加：M4にFluxNodeがデプロイされている場合、SenseCAP Hotspot AppでBluetoothを介してM4に接続し、ダッシュボードに追加します。
 
 ![](https://www.sensecapmx.com/wp-content/uploads/2022/12/Pasted-into-Quick-Start-15.png)
 
-ブロックの復元
--------------
+ブロック復元
+-------
 
-M4をSenseCAP HotspotアプリでBluetooth経由で接続し、Fluxアプリを開いて「Restore Block」ボタンをクリックします。M4は自動的にブロックを復元し、他の手順は不要です。復元時間はデバイスのネットワークに依存します。デバイスが良好なネットワークを持っていることを確認してください。
+SenseCAP Hotspot AppでBluetoothを介してM4に接続し、Fluxアプリを開いてRestore Blockボタンをクリックします。M4は自動的にブロックを復元し、他の手順は必要ありません。復元時間はデバイスのネットワークに依存するため、デバイスが良好なネットワークを持っていることを確認してください。
 
 削除
-------
+--
 
-**慎重に操作してください！** SenseCAP M4にデプロイされたCUMULUS FluxNodeを削除します。M4をSenseCAP HotspotアプリでBluetooth経由で接続し、Fluxアプリを開いて「Delete」ボタンをクリックしてFluxNodeを削除します。
+**慎重に操作してください！** SenseCAP M4にデプロイされたCUMULUS FluxNodeを削除します。SenseCAP Hotspot AppでBluetoothを介してM4に接続し、Fluxアプリを開いてDeleteボタンをクリックしてFluxNodeを削除します。
 
 再デプロイ
---------
+-----
 
-**慎重に操作してください！** 再デプロイは、最初にデプロイ済みのFluxNodeを自動的に削除します。M4をSenseCAP HotspotアプリでBluetooth経由で接続し、Fluxアプリを開いて「Redeploy」ボタンをクリックし、新しいFluxNode情報を入力して再デプロイします。
+**慎重に操作してください！** 再デプロイは最初にデプロイされたFluxNodeを自動的に削除します。SenseCAP Hotspot AppでBluetoothを介してM4に接続し、Fluxアプリを開いてRedeployボタンをクリックし、新しいFluxNode情報を入力して再デプロイします。
 
-**分散型アプリ対応リスト**
-====================================
+**分散アプリサポートリスト**
+================
 
-*   Flux Cumulus Node
-*   Flux Cumulus Fractus (TBD)
+- Flux Cumulus Node
 
-**Flux Cumulus Nodeネットワーク構成**
-===========================================
+- Flux Cumulus Fractus (TBD)
 
-Flux Nodeの適切な動作を確保するために、ネットワーク設定を適切に行ってください。以下では、単一および複数ノードのネットワーク要件について説明します。
+**Flux Cumulus Nodeネットワーク設定**
+=============================
+
+Flux Nodeの適切な動作を確保するため、ネットワークを適切に設定してください。以下では、単一ノードと複数ノードのネットワーク要件について説明します。
 
 **要件**
 
-* 外部IPアドレス：1つの外部IPアドレスでサポートされるFluxノードの最大数は8です。8台以上のデバイスがある場合は、追加の外部IPアドレスが必要になる場合があります。
+- 外部IPアドレス。単一の外部IPアドレスでサポートされるFluxノードの最大数は8です。8台を超えるデバイスがある場合は、より多くの外部IPアドレスが必要になる場合があります
 
-* 安定した有線ネットワーク環境：帯域幅が25 Mbps以上であること。
+- 安定した有線ネットワーク環境、≥25 Mbps帯域幅
 
-* ルーターがUPNPおよびポートフォワーディング機能をサポートしていること。これにより、ポートをデバイスに転送できます。
+- UPnPとポートフォワーディング機能をサポートするルーター。デバイスにポートを転送します。
 
-**単一ノードのセットアップ**
+**単一ノードの設定**
 
-[Flux公式ドキュメントを参照してください](https://support.runonflux.io/support/solutions/articles/151000021293-flux-node-network-setup)
+[Flux公式ドキュメントを参照](https://support.runonflux.io/support/solutions/articles/151000021293-flux-node-network-setup)
 
-**複数ノードのセットアップ**
+**マルチノードの設定**
 
-SenseCAP M4 Squareは複数のFluxノードをサポートしていません。
+SenseCAP M4 Squareは複数のFluxNodeをサポートしていません

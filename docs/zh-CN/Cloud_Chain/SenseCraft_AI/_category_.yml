@@ -1,5 +1,0 @@
-position: 1 # 支持浮动位置
-label: 'SenseCraft AI'
-collapsible: true # 使类别可折叠
-collapsed: true # 默认保持类别展开
-className: sensecraft_ai
