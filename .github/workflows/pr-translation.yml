@@ -402,16 +402,9 @@ jobs:
         id: collect-changes
         run: |
           set -e
-          # 只收集当前工作区真实存在的改动文件：
-          #  - 新增（others）
-          #  - 已修改（modified）
-          # 不包含：已删除、已重命名的“旧路径”
-          git ls-files -z --others --modified --exclude-standard -- \
-            docs/zh-CN docs/ja docs/es \
-            | tr '\0' '\n' \
-            > /tmp/translation_changed_files.txt || true
-
-          COUNT=$(wc -l < /tmp/translation_changed_files.txt | tr -d ' ')
+          CHANGED="$(git status --porcelain | awk '{print $2}' | grep -E '^docs/(zh-CN|ja|es)/' || true)"
+          echo "$CHANGED" | tr '\n' ' ' > /tmp/translation_changed_files.txt
+          COUNT=$(echo "$CHANGED" | wc -w | tr -d ' ')
           echo "count=$COUNT" >> $GITHUB_OUTPUT
           if [ "${COUNT:-0}" -eq 0 ]; then
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
@@ -439,8 +432,8 @@ jobs:
             exit 0
           fi
 
-          CHANGED_FILES=/tmp/translation_changed_files.txt
-          if [ ! -s "$CHANGED_FILES" ]; then
+          CHANGED_FILES=$(cat /tmp/translation_changed_files.txt || true)
+          if [ -z "$CHANGED_FILES" ]; then
             echo "ℹ️ 未发现改动文件"
             exit 0
           fi
@@ -466,20 +459,15 @@ jobs:
             git switch -c "$BRANCH"
           fi
 
-          # 逐行复制改动文件，安全处理含空格路径；缺文件则跳过避免失败
-          while IFS= read -r p; do
-            [ -z "$p" ] && continue
-            if [ -f "$GITHUB_WORKSPACE/$p" ]; then
-              mkdir -p "$(dirname "$p")"
-              cp -f "$GITHUB_WORKSPACE/$p" "$p"
-            else
-              echo "⚠️ 跳过不存在的文件: $p"
-            fi
-          done < "$CHANGED_FILES"
+          # 只复制改动文件，避免全量覆盖/删除
+          for p in $CHANGED_FILES; do
+            mkdir -p "$(dirname "$p")"
+            cp -f "$GITHUB_WORKSPACE/$p" "$p"
+          done
 
           git config user.email "action@github.com"
           git config user.name "GitHub Action Bot"
-          git add --all
+          git add -- $CHANGED_FILES || true
 
           if git diff --cached --quiet; then
             echo "ℹ️ 同步后无变化"
